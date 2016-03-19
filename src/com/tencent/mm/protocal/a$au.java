@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$au
-  extends a.c
+  extends a.e
 {
   public a$au()
   {
-    super("jumpToInstallUrl", "", 26, false);
+    super("getInstallState", "get_install_state", 25, false);
   }
 }
 

@@ -2,8 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class b$a
 {
-  public String atQ;
-  public int atR;
+  public String arT;
+  public int arU = 0;
 }
 
 /* Location:

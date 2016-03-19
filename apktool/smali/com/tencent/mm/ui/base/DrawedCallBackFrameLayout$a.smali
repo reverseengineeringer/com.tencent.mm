@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract lb()V
+.method public abstract kw()V
 .end method

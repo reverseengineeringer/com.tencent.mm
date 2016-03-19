@@ -1,17 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class by
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avr = new a();
+  public b avs = new b();
   
   public by()
   {
-    id = "ExtRequestAccountSync";
-    hXT = atO;
+    id = "ExDeviceIBeaconRanging";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public boolean avq = false;
+    public String avt;
+  }
+  
+  public static final class b
+  {
+    public boolean avu = false;
   }
 }
 

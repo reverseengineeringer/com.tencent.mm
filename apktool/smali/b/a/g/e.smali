@@ -4,14 +4,14 @@
 
 
 # direct methods
-.method public static l(Ljava/io/InputStream;)Ljava/lang/String;
+.method public static k(Ljava/io/InputStream;)Ljava/lang/String;
     .locals 5
 
     .prologue
     .line 20
     const-string/jumbo v0, "Cannot get String from a null object"
 
-    invoke-static {p0, v0}, Lb/a/g/d;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p0, v0}, Lb/a/g/d;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 23
     const/high16 v0, 0x10000

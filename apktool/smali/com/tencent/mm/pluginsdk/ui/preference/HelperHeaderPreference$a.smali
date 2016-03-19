@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field public beS:Ljava/lang/String;
+.field public aEV:Ljava/lang/String;
 
-.field public gYe:Ljava/lang/String;
+.field public bpe:Ljava/lang/String;
+
+.field public iOw:Ljava/lang/String;
 
 .field public status:I
-
-.field public user:Ljava/lang/String;
 
 
 # direct methods

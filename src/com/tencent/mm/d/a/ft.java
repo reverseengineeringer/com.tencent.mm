@@ -1,31 +1,36 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.storage.ag;
 
 public final class ft
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aCI = new a();
-  public b aCJ = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aAD = new a();
+  public b aAE = new b();
   
   public ft()
   {
-    id = "RadarSayHiMsg";
-    hXT = atO;
+    id = "GetStaticMap";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aqX;
-    public String axR;
+    public ImageView aAF;
+    public ImageView aAG;
+    public ProgressBar aAH;
+    public int aAI;
+    public ag ask;
+    public int h;
+    public int w;
   }
   
-  public static final class b
-  {
-    public boolean auM = false;
-  }
+  public static final class b {}
 }
 
 /* Location:

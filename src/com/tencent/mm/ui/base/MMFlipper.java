@@ -10,30 +10,30 @@ import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
 import android.widget.Scroller;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MMFlipper
   extends ViewGroup
 {
-  private Interpolator dtY;
-  private int fR;
-  private Scroller gC;
-  private int gRb = 0;
-  private float gT;
-  private float gU;
-  private VelocityTracker gW;
-  protected int iDd;
-  protected int iDe;
-  private boolean iDg = true;
-  protected int iEt;
-  private int iEu = 0;
-  private boolean iEv = false;
-  private b iEw;
-  private a iEx;
-  int iEy = -123454321;
-  int iEz = -123454321;
+  private int drs = 0;
+  private int eY;
+  private Interpolator elA;
+  private Scroller fK;
+  private float gb;
+  private float gc;
+  private VelocityTracker ge;
+  protected int kCu;
+  protected int kCv;
+  private boolean kCx = true;
+  protected int kDD;
+  private int kDE = 0;
+  private boolean kDF = false;
+  private b kDG;
+  private a kDH;
+  int kDI = -123454321;
+  int kDJ = -123454321;
   
   public MMFlipper(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -49,39 +49,39 @@ public class MMFlipper
   
   private void init(Context paramContext)
   {
-    dtY = getInterpolator();
-    gC = new Scroller(paramContext, dtY);
-    iDe = -1;
-    int i = iEu;
-    iDd = i;
-    iEt = i;
-    fR = ViewConfiguration.get(getContext()).getScaledTouchSlop();
+    elA = getInterpolator();
+    fK = new Scroller(paramContext, elA);
+    kCv = -1;
+    int i = kDE;
+    kCu = i;
+    kDD = i;
+    eY = ViewConfiguration.get(getContext()).getScaledTouchSlop();
   }
   
-  private void nC(int paramInt)
+  private void qw(int paramInt)
   {
     paramInt = Math.max(0, Math.min(paramInt, getChildCount() - 1));
     if (getScrollX() != getWidth() * paramInt)
     {
       int i = getWidth() * paramInt - getScrollX();
-      gC.startScroll(getScrollX(), 0, i, 0, a.x(getContext(), (int)(Math.abs(i) * 1.3F)));
-      if (iDd != paramInt)
+      fK.startScroll(getScrollX(), 0, i, 0, a.B(getContext(), (int)(Math.abs(i) * 1.3F)));
+      if (kCu != paramInt)
       {
-        iEv = true;
-        iEt += paramInt - iDd;
+        kDF = true;
+        kDD += paramInt - kCu;
       }
-      iDe = iDd;
-      iDd = paramInt;
+      kCv = kCu;
+      kCu = paramInt;
       invalidate();
     }
   }
   
   public void computeScroll()
   {
-    gC.getCurrX();
-    if (gC.computeScrollOffset())
+    fK.getCurrX();
+    if (fK.computeScrollOffset())
     {
-      scrollTo(gC.getCurrX(), gC.getCurrY());
+      scrollTo(fK.getCurrX(), fK.getCurrY());
       postInvalidate();
     }
     do
@@ -89,16 +89,16 @@ public class MMFlipper
       do
       {
         return;
-      } while (!iEv);
-      iEv = false;
-    } while (iEw == null);
-    iEw.it(iEt);
+      } while (!kDF);
+      kDF = false;
+    } while (kDG == null);
+    kDG.kk(kDD);
   }
   
   public int getCurScreen()
   {
-    t.d("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "cur screen is %d", new Object[] { Integer.valueOf(iDd) });
-    return iDd;
+    u.d("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "cur screen is %d", new Object[] { Integer.valueOf(kCu) });
+    return kCu;
   }
   
   protected Interpolator getInterpolator()
@@ -106,28 +106,11 @@ public class MMFlipper
     return new c();
   }
   
-  public final void nJ(int paramInt)
-  {
-    paramInt = Math.max(0, Math.min(paramInt, getChildCount() - 1));
-    iEv = false;
-    if (!gC.isFinished()) {
-      gC.abortAnimation();
-    }
-    iDe = iDd;
-    iDd = paramInt;
-    scrollTo(paramInt * getWidth(), 0);
-  }
-  
-  public final void nK(int paramInt)
-  {
-    iEt = paramInt;
-  }
-  
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
     boolean bool2 = true;
     boolean bool1;
-    if (!iDg) {
+    if (!kCx) {
       bool1 = super.onInterceptTouchEvent(paramMotionEvent);
     }
     int i;
@@ -142,7 +125,7 @@ public class MMFlipper
         break;
       }
       bool1 = bool2;
-    } while (gRb != 0);
+    } while (drs != 0);
     float f1 = paramMotionEvent.getX();
     float f2 = paramMotionEvent.getY();
     switch (i)
@@ -151,40 +134,40 @@ public class MMFlipper
     for (;;)
     {
       bool1 = bool2;
-      if (gRb != 0) {
+      if (drs != 0) {
         break;
       }
       return false;
-      i = (int)Math.abs(gT - f1);
-      int j = (int)Math.abs(gU - f2);
-      t.v("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "xDif = " + i + ", yDif = " + j);
-      if ((i > fR) && (j < fR)) {}
+      i = (int)Math.abs(gb - f1);
+      int j = (int)Math.abs(gc - f2);
+      u.v("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "xDif = " + i + ", yDif = " + j);
+      if ((i > eY) && (j < eY)) {}
       for (i = 1;; i = 0)
       {
         if (i == 0) {
           break label209;
         }
-        gRb = 1;
+        drs = 1;
         break;
       }
       label209:
-      gRb = 0;
+      drs = 0;
       continue;
-      gT = f1;
-      gU = f2;
-      if (gC.isFinished()) {}
+      gb = f1;
+      gc = f2;
+      if (fK.isFinished()) {}
       for (i = 0;; i = 1)
       {
-        gRb = i;
+        drs = i;
         break;
       }
-      gRb = 0;
+      drs = 0;
     }
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    long l = bn.DN();
+    long l = ay.FT();
     int m = getChildCount();
     int j = 0;
     int i = 0;
@@ -195,27 +178,27 @@ public class MMFlipper
       if (localView.getVisibility() != 8)
       {
         k = localView.getMeasuredWidth();
-        t.v("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "flipper onLayout childWidth:" + k);
+        u.v("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "flipper onLayout childWidth:" + k);
         localView.layout(j, 0, j + k, localView.getMeasuredHeight());
         k = j + k;
       }
       i += 1;
       j = k;
     }
-    t.v("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "use " + bn.Z(l) + " ms, flipper onLayout changed:" + paramBoolean + " Left,Top,Right,Bottom:" + paramInt1 + "," + paramInt2 + "," + paramInt3 + "," + paramInt4);
+    u.v("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "use " + ay.ao(l) + " ms, flipper onLayout changed:" + paramBoolean + " Left,Top,Right,Bottom:" + paramInt1 + "," + paramInt2 + "," + paramInt3 + "," + paramInt4);
   }
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
-    long l = bn.DN();
+    long l = ay.FT();
     super.onMeasure(paramInt1, paramInt2);
     int j = View.MeasureSpec.getSize(paramInt1);
     int i = View.MeasureSpec.getSize(paramInt2);
-    if (iEx != null) {
-      iEx.aD(j, i);
+    if (kDH != null) {
+      kDH.aT(j, i);
     }
-    iEy = j;
-    iEz = i;
+    kDI = j;
+    kDJ = i;
     int k = getChildCount();
     i = 0;
     while (i < k)
@@ -223,8 +206,8 @@ public class MMFlipper
       getChildAt(i).measure(paramInt1, paramInt2);
       i += 1;
     }
-    scrollTo(iDd * j, 0);
-    t.v("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "flipper onMeasure:" + j + "," + View.MeasureSpec.getSize(paramInt2) + " childCount:" + k + ", use " + bn.Z(l));
+    scrollTo(kCu * j, 0);
+    u.v("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "flipper onMeasure:" + j + "," + View.MeasureSpec.getSize(paramInt2) + " childCount:" + k + ", use " + ay.ao(l));
   }
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
@@ -232,10 +215,10 @@ public class MMFlipper
     if (getChildCount() == 1) {
       return super.onTouchEvent(paramMotionEvent);
     }
-    if (gW == null) {
-      gW = VelocityTracker.obtain();
+    if (ge == null) {
+      ge = VelocityTracker.obtain();
     }
-    gW.addMovement(paramMotionEvent);
+    ge.addMovement(paramMotionEvent);
     int i = paramMotionEvent.getAction();
     float f = paramMotionEvent.getX();
     paramMotionEvent.getY();
@@ -244,91 +227,108 @@ public class MMFlipper
     default: 
       return true;
     case 0: 
-      if (!gC.isFinished()) {
-        gC.abortAnimation();
+      if (!fK.isFinished()) {
+        fK.abortAnimation();
       }
-      gT = f;
+      gb = f;
       return true;
     case 2: 
-      i = (int)(gT - f);
-      gT = f;
+      i = (int)(gb - f);
+      gb = f;
       scrollBy(i, 0);
       return true;
     }
-    paramMotionEvent = gW;
+    paramMotionEvent = ge;
     paramMotionEvent.computeCurrentVelocity(1000);
     i = (int)paramMotionEvent.getXVelocity();
-    if ((i > 600) && (iDd > 0)) {
-      nC(iDd - 1);
+    if ((i > 600) && (kCu > 0)) {
+      qw(kCu - 1);
     }
     for (;;)
     {
-      if (gW != null)
+      if (ge != null)
       {
-        gW.recycle();
-        gW = null;
+        ge.recycle();
+        ge = null;
       }
-      gRb = 0;
-      gT = 0.0F;
-      gU = 0.0F;
+      drs = 0;
+      gb = 0.0F;
+      gc = 0.0F;
       return true;
-      if ((i < 64936) && (iDd < getChildCount() - 1))
+      if ((i < 64936) && (kCu < getChildCount() - 1))
       {
-        nC(iDd + 1);
+        qw(kCu + 1);
       }
       else
       {
         i = getWidth();
-        nC((getScrollX() + i / 2) / i);
+        qw((getScrollX() + i / 2) / i);
       }
     }
   }
   
+  public final void qE(int paramInt)
+  {
+    paramInt = Math.max(0, Math.min(paramInt, getChildCount() - 1));
+    kDF = false;
+    if (!fK.isFinished()) {
+      fK.abortAnimation();
+    }
+    kCv = kCu;
+    kCu = paramInt;
+    scrollTo(paramInt * getWidth(), 0);
+  }
+  
+  public final void qF(int paramInt)
+  {
+    kDD = paramInt;
+  }
+  
   public void setOnMeasureListener(a parama)
   {
-    iEx = parama;
+    kDH = parama;
   }
   
   public void setOnScreenChangedListener(b paramb)
   {
-    iEw = paramb;
+    kDG = paramb;
   }
   
   public void setScrollEnable(boolean paramBoolean)
   {
-    iDg = paramBoolean;
+    kCx = paramBoolean;
   }
   
   public void setToScreen(int paramInt)
   {
     paramInt = Math.max(0, Math.min(paramInt, getChildCount() - 1));
-    iEv = false;
-    if (!gC.isFinished()) {
-      gC.abortAnimation();
+    kDF = false;
+    if (!fK.isFinished()) {
+      fK.abortAnimation();
     }
-    if (iEw != null) {
-      iEw.it(paramInt);
+    if (kDG != null) {
+      kDG.kk(paramInt);
     }
-    iDe = iDd;
-    iDd = paramInt;
-    iEt = paramInt;
+    kCv = kCu;
+    kCu = paramInt;
+    kDD = paramInt;
     scrollTo(paramInt * getWidth(), 0);
   }
   
   public static abstract interface a
   {
-    public abstract void aD(int paramInt1, int paramInt2);
+    public abstract void aT(int paramInt1, int paramInt2);
   }
   
   public static abstract interface b
   {
-    public abstract void it(int paramInt);
+    public abstract void kk(int paramInt);
   }
   
   private static final class c
     implements Interpolator
   {
-    private float eBN = 1.3F;
+    private float fLa = 1.3F;
     
     public final float getInterpolation(float paramFloat)
     {

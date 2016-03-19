@@ -7,10 +7,10 @@
 
 
 # virtual methods
-.method public abstract a(Landroid/support/v4/view/h;)Landroid/support/v4/a/a/b;
+.method public abstract a(Landroid/support/v4/view/d;)Landroid/support/v4/a/a/b;
 .end method
 
-.method public abstract a(Landroid/support/v4/view/k$e;)Landroid/support/v4/a/a/b;
+.method public abstract a(Landroid/support/v4/view/g$e;)Landroid/support/v4/a/a/b;
 .end method
 
 .method public abstract collapseActionView()Z

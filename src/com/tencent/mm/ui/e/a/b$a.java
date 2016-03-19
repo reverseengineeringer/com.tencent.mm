@@ -6,9 +6,9 @@ import android.widget.TextView;
 public final class b$a
   extends a.a
 {
-  public TextView cEY;
-  public View cvG;
-  public View jnU;
+  public View cMt;
+  public TextView dcT;
+  public View fdW;
   
   public b$a(b paramb)
   {

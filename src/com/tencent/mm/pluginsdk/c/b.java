@@ -1,15 +1,15 @@
 package com.tencent.mm.pluginsdk.c;
 
-import com.tencent.mm.d.a.eo;
-import com.tencent.mm.d.a.eo.a;
+import com.tencent.mm.d.a.ha;
+import com.tencent.mm.d.a.ha.a;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.c;
 import java.util.ArrayList;
 
 public abstract class b
-  extends com.tencent.mm.sdk.c.e
+  extends c
 {
-  protected ArrayList gKP = new ArrayList(3);
+  protected ArrayList izz = new ArrayList(3);
   
   public b(int paramInt)
   {
@@ -18,31 +18,31 @@ public abstract class b
   
   public static void a(String paramString, b paramb)
   {
-    if (!gKP.contains(paramString)) {
-      gKP.add(paramString);
+    if (!izz.contains(paramString)) {
+      izz.add(paramString);
     }
-    a.hXQ.a("NetSceneResponse", paramb);
-    e.tZ(paramString);
+    a.jUF.b("NetSceneResponse", paramb);
+    e.zz(paramString);
   }
   
   public static void b(String paramString, b paramb)
   {
-    e.ua(paramString);
-    a.hXQ.b("NetSceneResponse", paramb);
-    if (gKP.contains(paramString)) {
-      gKP.remove(paramString);
+    e.zA(paramString);
+    a.jUF.c("NetSceneResponse", paramb);
+    if (izz.contains(paramString)) {
+      izz.remove(paramString);
     }
   }
   
-  public abstract void a(int paramInt1, int paramInt2, String paramString, d paramd);
+  public abstract void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.sdk.c.b paramb);
   
-  public final boolean a(d paramd)
+  public final boolean a(com.tencent.mm.sdk.c.b paramb)
   {
-    if ((paramd instanceof eo))
+    if ((paramb instanceof ha))
     {
-      paramd = (eo)paramd;
-      if ((aBi.aBj != null) && (gKP.contains(aBi.aBj.id))) {
-        a(aBi.errType, aBi.errCode, aBi.ayr, aBi.aBj);
+      paramb = (ha)paramb;
+      if ((aCD.aCF != null) && (izz.contains(aCD.aCF.id))) {
+        a(aCD.errType, aCD.errCode, aCD.aCE, aCD.aCF);
       }
     }
     return false;

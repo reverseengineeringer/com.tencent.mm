@@ -13,11 +13,11 @@
 
 
 # instance fields
-.field private dGk:Landroid/widget/ListView;
+.field private eIe:Landroid/widget/ListView;
 
-.field private jig:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
+.field private lmF:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
 
-.field private jih:Ljava/util/List;
+.field private lmG:Ljava/util/List;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->jih:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->lmG:Ljava/util/List;
 
     .line 284
     return-void
@@ -44,28 +44,30 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->jig:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->lmF:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final DV()V
-    .locals 7
+.method protected final Gb()V
+    .locals 8
 
     .prologue
+    const v7, 0x7f08017c
+
     const/16 v6, 0x8
 
     const/4 v1, 0x0
 
     .line 63
-    sget v0, Lcom/tencent/mm/a$n;->sns_tag_see:I
+    const v0, 0x7f0b16b8
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->qb(I)V
 
     .line 64
-    sget v0, Lcom/tencent/mm/a$i;->loading_tips_area:I
+    const v0, 0x7f07108c
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->findViewById(I)Landroid/view/View;
 
@@ -74,7 +76,7 @@
     invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
 
     .line 65
-    sget v0, Lcom/tencent/mm/a$i;->address_contactlist:I
+    const v0, 0x7f070166
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->findViewById(I)Landroid/view/View;
 
@@ -82,7 +84,7 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->dGk:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->eIe:Landroid/widget/ListView;
 
     .line 68
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->getIntent()Landroid/content/Intent;
@@ -115,7 +117,7 @@
     if-ge v0, v3, :cond_1
 
     .line 74
-    iget-object v3, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->jih:Ljava/util/List;
+    iget-object v3, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->lmG:Ljava/util/List;
 
     aget-wide v4, v2, v0
 
@@ -132,7 +134,7 @@
 
     .line 77
     :cond_1
-    sget v0, Lcom/tencent/mm/a$i;->empty_blacklist_tip_tv:I
+    const v0, 0x7f0701f0
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->findViewById(I)Landroid/view/View;
 
@@ -144,7 +146,7 @@
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 80
-    sget v0, Lcom/tencent/mm/a$i;->address_scrollbar:I
+    const v0, 0x7f070169
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->findViewById(I)Landroid/view/View;
 
@@ -153,22 +155,20 @@
     invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
 
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->dGk:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->eIe:Landroid/widget/ListView;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    sget v3, Lcom/tencent/mm/a$f;->white:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setBackgroundColor(I)V
 
     .line 82
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->dGk:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->eIe:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->getParent()Landroid/view/ViewParent;
 
@@ -180,9 +180,7 @@
 
     move-result-object v2
 
-    sget v3, Lcom/tencent/mm/a$f;->white:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getColor(I)I
+    invoke-virtual {v2, v7}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v2
 
@@ -191,42 +189,42 @@
     .line 83
     new-instance v0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->jih:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->lmG:Ljava/util/List;
 
     invoke-direct {v0, p0, v2}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;-><init>(Landroid/content/Context;Ljava/util/List;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->jig:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->lmF:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
 
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->dGk:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->eIe:Landroid/widget/ListView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->jig:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->lmF:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->dGk:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->eIe:Landroid/widget/ListView;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setVisibility(I)V
 
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->dGk:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->eIe:Landroid/widget/ListView;
 
-    new-instance v2, Lcom/tencent/mm/ui/contact/eo;
+    new-instance v2, Lcom/tencent/mm/ui/contact/SnsTagContactListUI$1;
 
-    invoke-direct {v2, p0}, Lcom/tencent/mm/ui/contact/eo;-><init>(Lcom/tencent/mm/ui/contact/SnsTagContactListUI;)V
+    invoke-direct {v2, p0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI$1;-><init>(Lcom/tencent/mm/ui/contact/SnsTagContactListUI;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 113
-    new-instance v0, Lcom/tencent/mm/ui/contact/ep;
+    new-instance v0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/ep;-><init>(Lcom/tencent/mm/ui/contact/SnsTagContactListUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI$2;-><init>(Lcom/tencent/mm/ui/contact/SnsTagContactListUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 124
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->ff(Z)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->hh(Z)V
 
     goto :goto_0
 .end method
@@ -236,7 +234,7 @@
 
     .prologue
     .line 143
-    sget v0, Lcom/tencent/mm/a$k;->address:I
+    const v0, 0x7f0a00a0
 
     return v0
 .end method
@@ -249,7 +247,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 58
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->Gb()V
 
     .line 59
     return-void
@@ -274,12 +272,12 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
     .line 131
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->jig:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->lmF:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
 
     if-eqz v0, :cond_0
 
     .line 132
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->jig:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SnsTagContactListUI;->lmF:Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/SnsTagContactListUI$a;->notifyDataSetChanged()V
 

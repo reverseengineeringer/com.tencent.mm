@@ -11,20 +11,20 @@ final class InviteLinkedInFriendUI$a
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    int i = InviteLinkedInFriendUI.a(iOI).getText().length();
-    int j = InviteLinkedInFriendUI.b(iOI).getText().length();
+    int i = InviteLinkedInFriendUI.a(kNW).getText().length();
+    int j = InviteLinkedInFriendUI.b(kNW).getText().length();
     if (i == 0) {
-      InviteLinkedInFriendUI.a(iOI).setHint("");
+      InviteLinkedInFriendUI.a(kNW).setHint("");
     }
     if (j == 0) {
-      InviteLinkedInFriendUI.b(iOI).setHint("");
+      InviteLinkedInFriendUI.b(kNW).setHint("");
     }
     if ((i == 0) || (j == 0))
     {
-      iOI.fe(false);
+      kNW.bC(false);
       return;
     }
-    iOI.fe(true);
+    kNW.bC(true);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

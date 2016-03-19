@@ -1,44 +1,109 @@
 package com.tencent.mm.c.b;
 
-import android.media.AudioRecord;
-import android.media.AudioRecord.OnRecordPositionUpdateListener;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.Arrays;
+import com.tencent.mm.compatible.util.a;
+import com.tencent.mm.compatible.util.f.a;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
-final class j
-  implements AudioRecord.OnRecordPositionUpdateListener
+public final class j
 {
-  j(i parami) {}
+  private static int aoE = 100;
+  String anC = "";
+  private a apl = new a(y.getContext());
+  private b arw = new b(com.tencent.mm.compatible.b.b.a.bpo);
+  public a arx = null;
+  private int status = 0;
   
-  public final void onMarkerReached(AudioRecord paramAudioRecord) {}
-  
-  public final void onPeriodicNotification(AudioRecord paramAudioRecord)
+  public final boolean bq(String paramString)
   {
-    if (asB.asQ) {}
-    int i;
-    do
+    f.a locala = new f.a();
+    if (anC.length() > 0)
     {
-      do
+      u.e("!44@/B4Tb64lLpIfoY3B/8f1JSRs2jdo+wRyFb+w/ZYBe8A=", "Duplicate Call startRecord , maybe Stop Fail Before");
+      return false;
+    }
+    anC = paramString;
+    try
+    {
+      apl.requestFocus();
+      arw.a(new b.a()
       {
-        return;
-      } while (asB.asn == null);
-      if ((asB.arZ) || (asB.asw == null)) {
-        asB.asw = new byte[asB.asy];
+        public final void onError()
+        {
+          j.a(j.this).oV();
+          if (j.b(j.this) != null) {
+            j.b(j.this).onError();
+          }
+          try
+          {
+            j.c(j.this).release();
+            j.d(j.this);
+            return;
+          }
+          catch (Exception localException)
+          {
+            u.e("!44@/B4Tb64lLpIfoY3B/8f1JSRs2jdo+wRyFb+w/ZYBe8A=", "setErrorListener File[" + anC + "] ErrMsg[" + localException.getStackTrace() + "]");
+          }
+        }
+      });
+      arw.lK();
+      arw.lL();
+      arw.lJ();
+      arw.setOutputFile(anC);
+      arw.setMaxDuration(3600010);
+      arw.prepare();
+      arw.start();
+      u.d("!44@/B4Tb64lLpIfoY3B/8f1JSRs2jdo+wRyFb+w/ZYBe8A=", "StartRecord File[" + anC + "] start time:" + locala.pa());
+      status = 1;
+      return true;
+    }
+    catch (Exception paramString)
+    {
+      apl.oV();
+      u.e("!44@/B4Tb64lLpIfoY3B/8f1JSRs2jdo+wRyFb+w/ZYBe8A=", "StartRecord File[" + anC + "] ErrMsg[" + paramString.getMessage() + "]");
+      status = -1;
+    }
+    return false;
+  }
+  
+  public final int getMaxAmplitude()
+  {
+    if (status == 1)
+    {
+      int i = arw.getMaxAmplitude();
+      if (i > aoE) {
+        aoE = i;
       }
-      int j = asB.asn.read(asB.asw, 0, asB.asy);
-      t.d("!56@/B4Tb64lLpLd7hlw6y+1ySBfLlWWvoJ8IrbIM/Of1OSEqUpWJTRUbg==", "OnRecordPositionUpdateListener, read ret: " + j);
-      if (asB.asu != null) {
-        asB.asu.a(j, asB.asw);
-      }
-      i = j;
-      if (j > asB.asw.length) {
-        i = asB.asw.length;
-      }
-      if ((asB.asz) && (i > 0)) {
-        Arrays.fill(asB.asw, 0, i, (byte)0);
-      }
-    } while ((asB.aso == null) || (i <= 0));
-    asB.aso.d(asB.asw, i);
+      return i * 100 / aoE;
+    }
+    return 0;
+  }
+  
+  public final boolean lH()
+  {
+    apl.oV();
+    if (arw == null) {
+      return true;
+    }
+    try
+    {
+      arw.lv();
+      arw.release();
+      anC = "";
+      status = 0;
+      return true;
+    }
+    catch (Exception localException)
+    {
+      u.e("!44@/B4Tb64lLpIfoY3B/8f1JSRs2jdo+wRyFb+w/ZYBe8A=", "StopRecord File[" + anC + "] ErrMsg[" + localException.getMessage() + "]");
+      status = -1;
+    }
+    return false;
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void onError();
   }
 }
 

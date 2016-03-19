@@ -8,25 +8,25 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.TranslateAnimation;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import com.tencent.mm.compatible.util.e;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.compatible.util.c;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MainSightContainerBottomView
   extends FrameLayout
   implements Animation.AnimationListener, MainContentImageView.a
 {
-  private static final boolean fkR = e.bV(10);
+  private static final boolean gBP = c.bW(10);
   private final String TAG = "!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==";
-  private MainContentImageView fkL;
-  private int fkM = 0;
-  private float fkN;
-  private Animation fkO;
-  public int fkP;
-  private MainSightContainerView fkQ;
-  private boolean fkS = false;
-  private int fkT;
-  private boolean fkU = false;
-  private float gU;
+  private boolean dDY = false;
+  private MainContentImageView gBJ;
+  private int gBK = 0;
+  private float gBL;
+  private Animation gBM;
+  public int gBN;
+  private MainSightContainerView gBO;
+  private int gBQ;
+  private boolean gBR = false;
+  private float gc;
   
   public MainSightContainerBottomView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -38,25 +38,36 @@ public class MainSightContainerBottomView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  private void aki()
+  private void awM()
   {
-    fkO = new TranslateAnimation(0.0F, 0.0F, 0.0F, fkT);
-    fkO.setDuration(300L);
-    fkO.setAnimationListener(this);
-    fkL.startAnimation(fkO);
+    gBM = new TranslateAnimation(0.0F, 0.0F, 0.0F, gBQ);
+    gBM.setDuration(300L);
+    gBM.setAnimationListener(this);
+    gBJ.startAnimation(gBM);
   }
   
-  public final void iQ(int paramInt)
+  public final void lb(final int paramInt)
   {
-    t.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "top : %d", new Object[] { Integer.valueOf(paramInt) });
-    if ((fkS) && (paramInt != 0) && (fkL.getVisibility() != 0)) {
-      postDelayed(new m(this, paramInt), 50L);
+    u.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "top : %d", new Object[] { Integer.valueOf(paramInt) });
+    if ((dDY) && (paramInt != 0) && (gBJ.getVisibility() != 0)) {
+      postDelayed(new Runnable()
+      {
+        public final void run()
+        {
+          if ((MainSightContainerBottomView.a(MainSightContainerBottomView.this)) && (paramInt != 0) && (MainSightContainerBottomView.b(MainSightContainerBottomView.this).getVisibility() != 0))
+          {
+            u.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "change layout");
+            MainSightContainerBottomView.b(MainSightContainerBottomView.this).setIsTouchShow(true);
+            MainSightContainerBottomView.b(MainSightContainerBottomView.this).setVisibility(0);
+          }
+        }
+      }, 50L);
     }
   }
   
   public void onAnimationEnd(Animation paramAnimation)
   {
-    fkL.setVisibility(4);
+    gBJ.setVisibility(4);
   }
   
   public void onAnimationRepeat(Animation paramAnimation) {}
@@ -65,8 +76,8 @@ public class MainSightContainerBottomView
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
-    t.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "ontouch: %s, x: %f y: %f", new Object[] { Integer.valueOf(paramMotionEvent.getAction()), Float.valueOf(paramMotionEvent.getRawX()), Float.valueOf(paramMotionEvent.getRawY()) });
-    if (fkL == null) {
+    u.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "ontouch: %s, x: %f y: %f", new Object[] { Integer.valueOf(paramMotionEvent.getAction()), Float.valueOf(paramMotionEvent.getRawX()), Float.valueOf(paramMotionEvent.getRawY()) });
+    if (gBJ == null) {
       return super.onTouchEvent(paramMotionEvent);
     }
     switch (paramMotionEvent.getAction())
@@ -75,72 +86,72 @@ public class MainSightContainerBottomView
     for (;;)
     {
       return super.onTouchEvent(paramMotionEvent);
-      gU = paramMotionEvent.getRawY();
-      fkS = false;
-      fkU = false;
-      fkN = 0.0F;
-      fkL.setIsTouchShow(false);
+      gc = paramMotionEvent.getRawY();
+      dDY = false;
+      gBR = false;
+      gBL = 0.0F;
+      gBJ.setIsTouchShow(false);
       continue;
       float f = paramMotionEvent.getRawY();
-      if (gU == 0.0F) {
-        gU = f;
+      if (gc == 0.0F) {
+        gc = f;
       }
-      int i = (int)(gU - f);
+      int i = (int)(gc - f);
       if (i >= 3) {}
       for (boolean bool = true;; bool = false)
       {
-        fkU = bool;
-        if ((fkU) || ((i <= -5) && (fkS) && (fkL.getTop() != 0)))
+        gBR = bool;
+        if ((gBR) || ((i <= -5) && (dDY) && (gBJ.getTop() != 0)))
         {
-          if (!fkS)
+          if (!dDY)
           {
-            fkS = true;
-            fkN = f;
+            dDY = true;
+            gBL = f;
           }
-          i = (int)((int)(f - fkN) / 2.0F);
-          int j = fkP + i;
-          int k = getBottom() + i + fkP;
-          fkM = i;
-          t.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "mDeltaY: %d, top: %d, bottom: %d", new Object[] { Integer.valueOf(fkM), Integer.valueOf(j), Integer.valueOf(k) });
-          fkT = j;
-          fkL.layout(fkL.getLeft(), j, fkL.getRight(), k);
+          i = (int)((int)(f - gBL) / 2.0F);
+          int j = gBN + i;
+          int k = getBottom() + i + gBN;
+          gBK = i;
+          u.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "mDeltaY: %d, top: %d, bottom: %d", new Object[] { Integer.valueOf(gBK), Integer.valueOf(j), Integer.valueOf(k) });
+          gBQ = j;
+          gBJ.layout(gBJ.getLeft(), j, gBJ.getRight(), k);
         }
-        gU = paramMotionEvent.getRawY();
+        gc = paramMotionEvent.getRawY();
         break;
       }
-      t.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "mDeltaY: %d, isScrollUp: %B, ACTION_UP", new Object[] { Integer.valueOf(fkM), Boolean.valueOf(fkU) });
-      if ((fkU) && (fkM < 65336)) {
-        fkQ.m(true, true);
+      u.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "mDeltaY: %d, isScrollUp: %B, ACTION_UP", new Object[] { Integer.valueOf(gBK), Boolean.valueOf(gBR) });
+      if ((gBR) && (gBK < 65336)) {
+        gBO.n(true, true);
       }
       for (;;)
       {
-        fkS = false;
-        fkN = 0.0F;
-        fkL.setIsTouchShow(false);
+        dDY = false;
+        gBL = 0.0F;
+        gBJ.setIsTouchShow(false);
         break;
-        if (fkL.getVisibility() == 0) {
-          aki();
+        if (gBJ.getVisibility() == 0) {
+          awM();
         }
       }
-      t.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "mDeltaY: %d, isScrollUp: %B, ACTION_CANCEL", new Object[] { Integer.valueOf(fkM), Boolean.valueOf(fkU) });
-      if (fkL.getVisibility() == 0) {
-        aki();
+      u.d("!56@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVn2U9ljI4aZRiYFDVPO9gEg==", "mDeltaY: %d, isScrollUp: %B, ACTION_CANCEL", new Object[] { Integer.valueOf(gBK), Boolean.valueOf(gBR) });
+      if (gBJ.getVisibility() == 0) {
+        awM();
       }
-      fkS = false;
-      fkN = 0.0F;
-      fkL.setIsTouchShow(false);
+      dDY = false;
+      gBL = 0.0F;
+      gBJ.setIsTouchShow(false);
     }
   }
   
   public void setContentImageView(ImageView paramImageView)
   {
-    fkL = ((MainContentImageView)paramImageView);
-    fkL.fkK = this;
+    gBJ = ((MainContentImageView)paramImageView);
+    gBJ.gBI = this;
   }
   
   public void setMainSightContainerView(MainSightContainerView paramMainSightContainerView)
   {
-    fkQ = paramMainSightContainerView;
+    gBO = paramMainSightContainerView;
   }
 }
 

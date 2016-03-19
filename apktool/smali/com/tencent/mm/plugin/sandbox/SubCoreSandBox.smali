@@ -3,14 +3,14 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/model/au;
-.implements Lcom/tencent/mm/pluginsdk/l$ab;
+.implements Lcom/tencent/mm/model/ae;
+.implements Lcom/tencent/mm/pluginsdk/i$ad;
 
 
 # static fields
-.field public static eKX:Z
+.field public static fVJ:Z
 
-.field public static eKY:Z
+.field public static fVK:Z
 
 
 # direct methods
@@ -21,10 +21,10 @@
     const/4 v0, 0x0
 
     .line 108
-    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->eKX:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->fVJ:Z
 
     .line 109
-    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->eKY:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->fVK:Z
 
     return-void
 .end method
@@ -57,7 +57,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 27
     return-void
@@ -65,7 +65,7 @@
 
 
 # virtual methods
-.method public final a(Landroid/content/Context;Landroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/pluginsdk/l$z;
+.method public final a(Landroid/content/Context;Landroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/pluginsdk/i$ab;
     .locals 1
 
     .prologue
@@ -77,7 +77,7 @@
     return-object v0
 .end method
 
-.method public final aJ(I)V
+.method public final aN(I)V
     .locals 4
 
     .prologue
@@ -102,36 +102,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 39
-    return-void
-.end method
-
-.method public final afA()Lcom/tencent/mm/pluginsdk/l$aa;
-    .locals 2
-
-    .prologue
-    .line 92
-    new-instance v0, Lcom/tencent/mm/sandbox/a/a;
-
-    const/4 v1, 0x2
-
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sandbox/a/a;-><init>(I)V
-
-    return-object v0
-.end method
-
-.method public final afz()V
-    .locals 1
-
-    .prologue
-    .line 62
-    const/16 v0, 0x10
-
-    invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/Updater;->mp(I)V
-
-    .line 63
     return-void
 .end method
 
@@ -160,7 +133,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 46
     return-void
@@ -191,13 +164,40 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 52
     return-void
 .end method
 
-.method public final b(Landroid/content/Context;Landroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/pluginsdk/l$z;
+.method public final aqH()V
+    .locals 1
+
+    .prologue
+    .line 62
+    const/16 v0, 0x10
+
+    invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/Updater;->pj(I)V
+
+    .line 63
+    return-void
+.end method
+
+.method public final aqI()Lcom/tencent/mm/pluginsdk/i$ac;
+    .locals 2
+
+    .prologue
+    .line 92
+    new-instance v0, Lcom/tencent/mm/sandbox/a/a;
+
+    const/4 v1, 0x2
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sandbox/a/a;-><init>(I)V
+
+    return-object v0
+.end method
+
+.method public final b(Landroid/content/Context;Landroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/pluginsdk/i$ab;
     .locals 1
 
     .prologue
@@ -209,57 +209,57 @@
     return-object v0
 .end method
 
-.method public final b(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 87
-    invoke-static {p1, p2, p3, p4}, Lcom/tencent/mm/sandbox/updater/Updater;->b(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    .line 88
-    return-void
-.end method
-
-.method public final bK(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/l$z;
+.method public final bY(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/i$ab;
     .locals 1
 
     .prologue
     .line 77
-    invoke-static {p1}, Lcom/tencent/mm/sandbox/updater/Updater;->cG(Landroid/content/Context;)Lcom/tencent/mm/sandbox/updater/Updater;
+    invoke-static {p1}, Lcom/tencent/mm/sandbox/updater/Updater;->di(Landroid/content/Context;)Lcom/tencent/mm/sandbox/updater/Updater;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final bL(Landroid/content/Context;)V
+.method public final bZ(Landroid/content/Context;)V
     .locals 0
 
     .prologue
     .line 82
-    invoke-static {p1}, Lcom/tencent/mm/sandbox/updater/Updater;->bL(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/tencent/mm/sandbox/updater/Updater;->bZ(Landroid/content/Context;)V
 
     .line 83
     return-void
 .end method
 
-.method public final cH(Z)V
+.method public final c(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 87
+    invoke-static {p1, p2, p3, p4}, Lcom/tencent/mm/sandbox/updater/Updater;->c(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
+
+    .line 88
+    return-void
+.end method
+
+.method public final dX(Z)V
     .locals 1
 
     .prologue
     .line 112
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->eKX:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->fVJ:Z
 
     .line 113
-    sput-boolean p1, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->eKY:Z
+    sput-boolean p1, Lcom/tencent/mm/plugin/sandbox/SubCoreSandBox;->fVK:Z
 
     .line 114
     return-void
 .end method
 
-.method public final lT()Ljava/util/HashMap;
+.method public final lo()Ljava/util/HashMap;
     .locals 4
 
     .prologue
@@ -284,7 +284,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 32
     const/4 v0, 0x0
@@ -292,7 +292,7 @@
     return-object v0
 .end method
 
-.method public final lU()V
+.method public final lp()V
     .locals 4
 
     .prologue
@@ -317,13 +317,13 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 58
     return-void
 .end method
 
-.method public final o(Landroid/content/Context;Landroid/content/Intent;)V
+.method public final q(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 1
 
     .prologue
@@ -336,7 +336,7 @@
     invoke-virtual {p2, p1, v0}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
 
     .line 104
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -347,12 +347,12 @@
     return-void
 .end method
 
-.method public final ph(Ljava/lang/String;)Ljava/lang/String;
+.method public final sM(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 97
-    invoke-static {p1}, Lcom/tencent/mm/sandbox/monitor/g;->ph(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sandbox/monitor/c;->sM(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

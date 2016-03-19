@@ -3,7 +3,7 @@ package com.tencent.mm.sdk.modelmsg;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.ByteArrayOutputStream;
 
 public final class WXMediaMessage
@@ -39,42 +39,42 @@ public final class WXMediaMessage
   {
     if ((getType() == 8) && ((thumbData == null) || (thumbData.length == 0)))
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, thumbData should not be null when send emoji");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, thumbData should not be null when send emoji");
       return false;
     }
     if ((thumbData != null) && (thumbData.length > 32768))
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, thumbData is invalid");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, thumbData is invalid");
       return false;
     }
     if ((title != null) && (title.length() > 512))
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, title is invalid");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, title is invalid");
       return false;
     }
     if ((description != null) && (description.length() > 1024))
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, description is invalid");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, description is invalid");
       return false;
     }
     if (mediaObject == null)
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, mediaObject is null");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, mediaObject is null");
       return false;
     }
     if ((mediaTagName != null) && (mediaTagName.length() > 64))
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, mediaTagName is too long");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, mediaTagName is too long");
       return false;
     }
     if ((messageAction != null) && (messageAction.length() > 2048))
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, messageAction is too long");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, messageAction is too long");
       return false;
     }
     if ((messageExt != null) && (messageExt.length() > 2048))
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, messageExt is too long");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "checkArgs fail, messageExt is too long");
       return false;
     }
     return mediaObject.checkArgs();
@@ -100,13 +100,13 @@ public final class WXMediaMessage
     }
     catch (Exception paramBitmap)
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "put thumb failed");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "put thumb failed");
     }
   }
   
   public static final class a
   {
-    public static WXMediaMessage G(Bundle paramBundle)
+    public static WXMediaMessage J(Bundle paramBundle)
     {
       WXMediaMessage localWXMediaMessage = new WXMediaMessage();
       sdkVer = paramBundle.getInt("_wxobject_sdkVer");
@@ -118,7 +118,7 @@ public final class WXMediaMessage
       messageExt = paramBundle.getString("_wxobject_message_ext");
       String str = paramBundle.getString("_wxobject_identifier_");
       if ((str == null) || (str.length() == 0)) {
-        t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "pathOldToNew fail, oldPath is null");
+        u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "pathOldToNew fail, oldPath is null");
       }
       while ((str == null) || (str.length() <= 0))
       {
@@ -133,7 +133,7 @@ public final class WXMediaMessage
       }
       catch (Exception paramBundle)
       {
-        t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "get media object from bundle failed: unknown ident " + str + ", ex = " + paramBundle.getMessage());
+        u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "get media object from bundle failed: unknown ident " + str + ", ex = " + paramBundle.getMessage());
       }
       return localWXMediaMessage;
     }
@@ -152,7 +152,7 @@ public final class WXMediaMessage
         if ((str != null) && (str.length() != 0)) {
           break label133;
         }
-        t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "pathNewToOld fail, newPath is null");
+        u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "pathNewToOld fail, newPath is null");
       }
       for (;;)
       {

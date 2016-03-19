@@ -3,13 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/pluginsdk/k;
+.implements Lcom/tencent/mm/pluginsdk/h;
 
 
 # static fields
-.field public static bWW:Lcom/tencent/mm/pluginsdk/j;
+.field public static coa:Lcom/tencent/mm/pluginsdk/g;
 
-.field private static bWX:Lcom/tencent/mm/pluginsdk/i;
+.field private static cob:Lcom/tencent/mm/pluginsdk/f;
 
 
 # direct methods
@@ -28,9 +28,9 @@
 
     .prologue
     .line 30
-    sget-object v0, Lcom/tencent/mm/plugin/safedevice/a;->bWW:Lcom/tencent/mm/pluginsdk/j;
+    sget-object v0, Lcom/tencent/mm/plugin/safedevice/a;->coa:Lcom/tencent/mm/pluginsdk/g;
 
-    invoke-interface {v0, p0, p1, p2}, Lcom/tencent/mm/pluginsdk/j;->a(Landroid/content/Context;Landroid/content/Intent;Landroid/content/Intent;)V
+    invoke-interface {v0, p0, p1, p2}, Lcom/tencent/mm/pluginsdk/g;->a(Landroid/content/Context;Landroid/content/Intent;Landroid/content/Intent;)V
 
     .line 31
     return-void
@@ -38,23 +38,23 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/pluginsdk/i;)V
+.method public final a(Lcom/tencent/mm/pluginsdk/f;)V
     .locals 0
 
     .prologue
     .line 22
-    sput-object p1, Lcom/tencent/mm/plugin/safedevice/a;->bWX:Lcom/tencent/mm/pluginsdk/i;
+    sput-object p1, Lcom/tencent/mm/plugin/safedevice/a;->cob:Lcom/tencent/mm/pluginsdk/f;
 
     .line 23
     return-void
 .end method
 
-.method public final a(Lcom/tencent/mm/pluginsdk/j;)V
+.method public final a(Lcom/tencent/mm/pluginsdk/g;)V
     .locals 0
 
     .prologue
     .line 17
-    sput-object p1, Lcom/tencent/mm/plugin/safedevice/a;->bWW:Lcom/tencent/mm/pluginsdk/j;
+    sput-object p1, Lcom/tencent/mm/plugin/safedevice/a;->coa:Lcom/tencent/mm/pluginsdk/g;
 
     .line 18
     return-void

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d;
+.implements Lcom/tencent/mm/r/d;
 
 
 # annotations
@@ -25,13 +25,13 @@
 
 
 # static fields
-.field private static bKE:Landroid/accounts/Account;
+.field private static caG:Landroid/accounts/Account;
 
 
 # instance fields
-.field private bXo:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;
+.field private cox:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;
 
-.field private bXp:Landroid/os/Looper;
+.field private coy:Landroid/os/Looper;
 
 
 # direct methods
@@ -39,36 +39,36 @@
     .locals 2
 
     .prologue
-    .line 53
+    .line 55
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 48
+    .line 50
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->bXo:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->cox:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;
 
-    .line 54
+    .line 56
     const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
 
     const-string/jumbo v1, "ContactsSyncService construction"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 55
+    .line 57
     return-void
 .end method
 
-.method private DU()V
+.method private Ga()V
     .locals 1
 
     .prologue
     .line 179
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->bXp:Landroid/os/Looper;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->coy:Landroid/os/Looper;
 
     if-eqz v0, :cond_0
 
     .line 180
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->bXp:Landroid/os/Looper;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->coy:Landroid/os/Looper;
 
     invoke-virtual {v0}, Landroid/os/Looper;->quit()V
 
@@ -81,8 +81,8 @@
     .locals 0
 
     .prologue
-    .line 36
-    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->bXp:Landroid/os/Looper;
+    .line 38
+    iput-object p1, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->coy:Landroid/os/Looper;
 
     return-object p1
 .end method
@@ -91,8 +91,8 @@
     .locals 0
 
     .prologue
-    .line 36
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->DU()V
+    .line 38
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->Ga()V
 
     return-void
 .end method
@@ -101,22 +101,22 @@
     .locals 2
 
     .prologue
-    .line 36
-    sput-object p1, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->bKE:Landroid/accounts/Account;
+    .line 38
+    sput-object p1, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->caG:Landroid/accounts/Account;
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tq()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tI()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tu()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/modelfriend/w;->xK()Z
+    invoke-static {}, Lcom/tencent/mm/modelfriend/m;->yB()Z
 
     move-result v0
 
@@ -126,9 +126,9 @@
 
     const-string/jumbo v1, "this user has not agreed to upload address book"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->DU()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->Ga()V
 
     :cond_0
     :goto_0
@@ -139,43 +139,43 @@
 
     const-string/jumbo v1, "performSync start"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v0, Lcom/tencent/mm/plugin/accountsync/model/b;
+    new-instance v0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/accountsync/model/b;-><init>(Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$1;-><init>(Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/modelfriend/c;->a(Lcom/tencent/mm/modelfriend/c$b;)Z
+    invoke-static {v0}, Lcom/tencent/mm/modelfriend/a;->a(Lcom/tencent/mm/modelfriend/a$b;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->DU()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->Ga()V
 
     const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
 
     const-string/jumbo v1, "performSync result false"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_2
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->DU()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->Ga()V
 
     const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
 
     const-string/jumbo v1, "performSync error: no user login"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
     .locals 9
 
     .prologue
@@ -224,7 +224,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p4}, Lcom/tencent/mm/q/j;->getType()I
+    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
 
     move-result v2
 
@@ -236,21 +236,21 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 148
-    invoke-virtual {p4}, Lcom/tencent/mm/q/j;->getType()I
+    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
 
     move-result v0
 
     if-ne v0, v3, :cond_2
 
     .line 149
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v3, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 150
     const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
@@ -279,14 +279,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 152
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -338,7 +338,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 155
     if-eqz p2, :cond_1
@@ -352,14 +352,14 @@
     if-gez v0, :cond_1
 
     .line 156
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->DU()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->Ga()V
 
     .line 157
     const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
 
     const-string/jumbo v1, "uploadmcontact list null, do not do getmfriend."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 176
     :cond_0
@@ -368,11 +368,11 @@
 
     .line 161
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -383,47 +383,47 @@
     invoke-virtual {v0, v8, v1}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
     .line 162
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v7, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v7, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     move-object v0, p4
 
     .line 163
-    check-cast v0, Lcom/tencent/mm/modelfriend/at;
+    check-cast v0, Lcom/tencent/mm/modelfriend/ac;
 
     .line 164
-    new-instance v1, Lcom/tencent/mm/modelfriend/al;
+    new-instance v1, Lcom/tencent/mm/modelfriend/x;
 
-    iget-object v2, v0, Lcom/tencent/mm/modelfriend/at;->bzS:Ljava/util/List;
+    iget-object v2, v0, Lcom/tencent/mm/modelfriend/ac;->bMX:Ljava/util/List;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/at;->bzT:Ljava/util/List;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ac;->bMY:Ljava/util/List;
 
-    invoke-direct {v1, v2, v0}, Lcom/tencent/mm/modelfriend/al;-><init>(Ljava/util/List;Ljava/util/List;)V
+    invoke-direct {v1, v2, v0}, Lcom/tencent/mm/modelfriend/x;-><init>(Ljava/util/List;Ljava/util/List;)V
 
     .line 165
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/q/l;->d(Lcom/tencent/mm/q/j;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
     .line 168
     :cond_2
-    invoke-virtual {p4}, Lcom/tencent/mm/q/j;->getType()I
+    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
 
     move-result v0
 
     if-ne v0, v7, :cond_0
 
     .line 169
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v7, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v7, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 170
     const-string/jumbo v0, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
@@ -452,7 +452,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 171
     if-nez p1, :cond_3
@@ -460,15 +460,15 @@
     if-nez p2, :cond_3
 
     .line 172
-    new-instance v0, Lcom/tencent/mm/modelsimple/c;
+    new-instance v0, Lcom/tencent/mm/modelsimple/b;
 
-    sget-object v1, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->bKE:Landroid/accounts/Account;
+    sget-object v1, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->caG:Landroid/accounts/Account;
 
-    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/modelsimple/c;-><init>(Landroid/content/Context;Landroid/accounts/Account;)V
+    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/modelsimple/b;-><init>(Landroid/content/Context;Landroid/accounts/Account;)V
 
     const-string/jumbo v1, "MMAccountManager_updateLocalContacts"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/h/e;->c(Ljava/lang/Runnable;Ljava/lang/String;)Ljava/lang/Thread;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/i/e;->c(Ljava/lang/Runnable;Ljava/lang/String;)Ljava/lang/Thread;
 
     move-result-object v0
 
@@ -476,17 +476,29 @@
 
     .line 174
     :cond_3
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->DU()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->Ga()V
 
     goto :goto_0
 .end method
 
 .method public onBind(Landroid/content/Intent;)Landroid/os/IBinder;
-    .locals 2
+    .locals 5
 
     .prologue
-    .line 86
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->bXo:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;
+    .line 90
+    const/4 v0, 0x0
+
+    .line 91
+    const-string/jumbo v1, "android.permission.READ_CONTACTS"
+
+    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 92
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->cox:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;
 
     if-nez v0, :cond_0
 
@@ -498,17 +510,43 @@
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;-><init>(Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->bXo:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->cox:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->bXo:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService;->cox:Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/accountsync/model/ContactsSyncService$a;->getSyncAdapterBinder()Landroid/os/IBinder;
 
     move-result-object v0
 
-    .line 88
+    .line 96
+    :goto_0
+    const-string/jumbo v1, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
+
+    const-string/jumbo v2, "ContactsSyncService onBind ret[%s]"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    aput-object v0, v3, v4
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 97
     return-object v0
+
+    .line 94
+    :cond_1
+    const-string/jumbo v1, "!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw="
+
+    const-string/jumbo v2, "ContactsSyncService onBind no permission"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method
 
 .method public onDestroy()V
@@ -520,7 +558,7 @@
 
     const-string/jumbo v1, "contacts sync service destory"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 192
     invoke-super {p0}, Landroid/app/Service;->onDestroy()V

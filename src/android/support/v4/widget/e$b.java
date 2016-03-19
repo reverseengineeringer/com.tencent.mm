@@ -1,48 +1,58 @@
 package android.support.v4.widget;
 
 import android.content.Context;
-import android.graphics.Canvas;
-import android.widget.EdgeEffect;
+import android.view.animation.Interpolator;
+import android.widget.Scroller;
 
 final class e$b
-  implements e.c
+  implements e.a
 {
-  public final void a(Object paramObject, int paramInt1, int paramInt2)
+  public final boolean A(Object paramObject)
   {
-    ((EdgeEffect)paramObject).setSize(paramInt1, paramInt2);
+    return ((Scroller)paramObject).isFinished();
   }
   
-  public final boolean a(Object paramObject, float paramFloat)
+  public final int D(Object paramObject)
   {
-    ((EdgeEffect)paramObject).onPull(paramFloat);
-    return true;
+    return ((Scroller)paramObject).getCurrX();
   }
   
-  public final boolean a(Object paramObject, Canvas paramCanvas)
+  public final int E(Object paramObject)
   {
-    return ((EdgeEffect)paramObject).draw(paramCanvas);
+    return ((Scroller)paramObject).getCurrY();
   }
   
-  public final Object e(Context paramContext)
+  public final boolean F(Object paramObject)
   {
-    return new EdgeEffect(paramContext);
+    return ((Scroller)paramObject).computeScrollOffset();
   }
   
-  public final boolean x(Object paramObject)
+  public final void G(Object paramObject)
   {
-    return ((EdgeEffect)paramObject).isFinished();
+    ((Scroller)paramObject).abortAnimation();
   }
   
-  public final void y(Object paramObject)
+  public final int H(Object paramObject)
   {
-    ((EdgeEffect)paramObject).finish();
+    return ((Scroller)paramObject).getFinalX();
   }
   
-  public final boolean z(Object paramObject)
+  public final int I(Object paramObject)
   {
-    paramObject = (EdgeEffect)paramObject;
-    ((EdgeEffect)paramObject).onRelease();
-    return ((EdgeEffect)paramObject).isFinished();
+    return ((Scroller)paramObject).getFinalY();
+  }
+  
+  public final void a(Object paramObject, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
+  {
+    ((Scroller)paramObject).startScroll(paramInt1, paramInt2, paramInt3, paramInt4, paramInt5);
+  }
+  
+  public final Object b(Context paramContext, Interpolator paramInterpolator)
+  {
+    if (paramInterpolator != null) {
+      return new Scroller(paramContext, paramInterpolator);
+    }
+    return new Scroller(paramContext);
   }
 }
 

@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field public bkO:Landroid/util/SparseArray;
+.field public bvr:Landroid/util/SparseArray;
 
-.field public bkP:I
+.field public bvs:I
 
-.field public bkQ:I
+.field public bvt:I
 
 .field public final columnCount:I
 
@@ -34,7 +34,7 @@
     .line 36
     const/16 v0, 0xbb8
 
-    iput v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkP:I
+    iput v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvs:I
 
     .line 47
     iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->columnNames:[Ljava/lang/String;
@@ -49,7 +49,7 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkO:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvr:Landroid/util/SparseArray;
 
     .line 55
     return-void
@@ -132,7 +132,7 @@
     :cond_2
     iget v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->mPos:I
 
-    iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkQ:I
+    iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvt:I
 
     if-lt v0, v1, :cond_3
 
@@ -149,14 +149,14 @@
     :cond_3
     iget v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->mPos:I
 
-    iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkP:I
+    iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvs:I
 
     div-int/2addr v0, v1
 
     .line 83
     iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->mPos:I
 
-    iget v2, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkP:I
+    iget v2, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvs:I
 
     rem-int/2addr v1, v2
 
@@ -165,7 +165,7 @@
     mul-int/2addr v1, v2
 
     .line 84
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkO:Landroid/util/SparseArray;
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvr:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -229,7 +229,7 @@
 
     .prologue
     .line 156
-    iget v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bkQ:I
+    iget v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d;->bvt:I
 
     return v0
 .end method

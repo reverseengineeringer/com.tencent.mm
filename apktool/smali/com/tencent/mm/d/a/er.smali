@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/er;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aBr:Lcom/tencent/mm/d/a/er$a;
+.field public azp:Lcom/tencent/mm/d/a/er$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/er;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/er;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/er;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/er;->arR:Z
 
     return-void
 .end method
@@ -41,24 +41,24 @@
     .locals 1
 
     .prologue
-    .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    .line 11
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    .line 13
+    .line 16
     new-instance v0, Lcom/tencent/mm/d/a/er$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/er$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/er;->aBr:Lcom/tencent/mm/d/a/er$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/er;->azp:Lcom/tencent/mm/d/a/er$a;
 
-    .line 8
-    const-string/jumbo v0, "NewYearDisasterTest"
+    .line 11
+    const-string/jumbo v0, "GameCenterOperation"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/er;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/er;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/er;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/er;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/er;->jUI:Z
 
     return-void
 .end method

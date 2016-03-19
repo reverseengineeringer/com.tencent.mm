@@ -1,9 +1,12 @@
 package com.tencent.mm.d.a;
 
+import android.content.Intent;
+
 public final class bf$a
 {
-  public boolean Kr = false;
-  public String mac;
+  public int arU;
+  public int auo;
+  public Intent aup;
 }
 
 /* Location:

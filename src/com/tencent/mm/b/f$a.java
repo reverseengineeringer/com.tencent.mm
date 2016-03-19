@@ -2,17 +2,17 @@ package com.tencent.mm.b;
 
 public final class f$a
 {
-  String ani;
-  public String anj;
-  public String ank;
+  String akU;
+  public String akV;
+  public String akW;
   public int size;
   public String url;
   
   public f$a(String paramString1, String paramString2, String paramString3, String paramString4, int paramInt)
   {
-    ani = paramString1;
-    anj = paramString2;
-    ank = paramString3;
+    akU = paramString1;
+    akV = paramString2;
+    akW = paramString3;
     size = paramInt;
     url = paramString4;
   }

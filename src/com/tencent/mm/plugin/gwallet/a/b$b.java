@@ -4,7 +4,7 @@ import android.content.Intent;
 
 public abstract interface b$b
 {
-  public abstract void b(h paramh, Intent paramIntent);
+  public abstract void b(c paramc, Intent paramIntent);
 }
 
 /* Location:

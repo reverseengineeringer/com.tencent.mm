@@ -1,39 +1,39 @@
 package com.tencent.mm.pluginsdk.ui.musicplayer;
 
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class LyricView$a
   implements Runnable
 {
-  long gWF;
-  long gWG;
+  long iMW;
+  long iMX;
   
   public LyricView$a(LyricView paramLyricView, long paramLong1, long paramLong2)
   {
-    gWF = paramLong1;
-    gWG = paramLong2;
+    iMW = paramLong1;
+    iMX = paramLong2;
   }
   
   public final void run()
   {
     boolean bool = false;
-    if (gWF < gWG)
+    if (iMW < iMX)
     {
-      gWF += 80L;
-      gWH.n(gWF, gWG);
-      if (LyricView.a(gWH) != null)
+      iMW += 80L;
+      iMY.p(iMW, iMX);
+      if (LyricView.a(iMY) != null)
       {
-        LyricView.a(gWH).postDelayed(this, 80L);
+        LyricView.a(iMY).postDelayed(this, 80L);
         return;
       }
     }
-    gWH.setKeepScreenOn(false);
-    long l = gWG;
-    if (LyricView.a(gWH) == null) {
+    iMY.setKeepScreenOn(false);
+    long l = iMX;
+    if (LyricView.a(iMY) == null) {
       bool = true;
     }
-    t.d("!32@/B4Tb64lLpKLTg+RhqEt7h8agXSu+Fyh", "auto play job finish length[%d], uiHandler is null[%B]", new Object[] { Long.valueOf(l), Boolean.valueOf(bool) });
+    u.d("!32@/B4Tb64lLpKLTg+RhqEt7h8agXSu+Fyh", "auto play job finish length[%d], uiHandler is null[%B]", new Object[] { Long.valueOf(l), Boolean.valueOf(bool) });
   }
 }
 

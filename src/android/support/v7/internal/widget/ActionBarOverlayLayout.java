@@ -7,27 +7,26 @@ import android.graphics.Rect;
 import android.support.v7.app.ActionBar;
 import android.util.AttributeSet;
 import android.widget.FrameLayout;
-import com.tencent.mm.a.d;
 
 public class ActionBarOverlayLayout
   extends FrameLayout
 {
-  static final int[] oB = { a.d.actionBarSize };
-  private ActionBar jA;
-  private final Rect oA = new Rect(0, 0, 0, 0);
-  private int oz;
+  static final int[] nC = { 2130772116 };
+  private ActionBar iH;
+  private int nA;
+  private final Rect nB = new Rect(0, 0, 0, 0);
   
   public ActionBarOverlayLayout(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    paramContext = getContext().getTheme().obtainStyledAttributes(oB);
-    oz = paramContext.getDimensionPixelSize(0, 0);
+    paramContext = getContext().getTheme().obtainStyledAttributes(nC);
+    nA = paramContext.getDimensionPixelSize(0, 0);
     paramContext.recycle();
   }
   
   public void setActionBar(ActionBar paramActionBar)
   {
-    jA = paramActionBar;
+    iH = paramActionBar;
   }
 }
 

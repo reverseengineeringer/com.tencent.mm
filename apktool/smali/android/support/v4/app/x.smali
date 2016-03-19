@@ -1,82 +1,95 @@
 .class final Landroid/support/v4/app/x;
-.super Landroid/widget/FrameLayout;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;)V
-    .locals 0
+.method static a([Landroid/support/v4/app/y$a;)[Landroid/app/RemoteInput;
+    .locals 5
 
     .prologue
-    .line 45
-    invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
-
-    .line 46
-    return-void
-.end method
-
-.method static c(Landroid/view/View;)Landroid/view/ViewGroup;
-    .locals 3
-
-    .prologue
-    const/4 v2, -0x1
-
-    .line 32
-    new-instance v0, Landroid/support/v4/app/x;
-
-    invoke-virtual {p0}, Landroid/view/View;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Landroid/support/v4/app/x;-><init>(Landroid/content/Context;)V
-
-    .line 33
-    invoke-virtual {p0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v1
-
-    .line 34
-    if-eqz v1, :cond_0
-
-    .line 35
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/x;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 37
-    :cond_0
-    new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-direct {v1, v2, v2}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
     .line 39
-    invoke-virtual {p0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+    if-nez p0, :cond_0
 
     .line 40
-    invoke-virtual {v0, p0}, Landroid/support/v4/app/x;->addView(Landroid/view/View;)V
+    const/4 v0, 0x0
 
-    .line 41
+    .line 52
+    :goto_0
     return-object v0
-.end method
 
+    .line 42
+    :cond_0
+    array-length v0, p0
 
-# virtual methods
-.method protected final dispatchRestoreInstanceState(Landroid/util/SparseArray;)V
-    .locals 0
+    new-array v1, v0, [Landroid/app/RemoteInput;
 
-    .prologue
-    .line 61
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/x;->dispatchThawSelfOnly(Landroid/util/SparseArray;)V
+    .line 43
+    const/4 v0, 0x0
 
-    .line 62
-    return-void
-.end method
+    :goto_1
+    array-length v2, p0
 
-.method protected final dispatchSaveInstanceState(Landroid/util/SparseArray;)V
-    .locals 0
+    if-ge v0, v2, :cond_1
 
-    .prologue
-    .line 53
-    invoke-virtual {p0, p1}, Landroid/support/v4/app/x;->dispatchFreezeSelfOnly(Landroid/util/SparseArray;)V
+    .line 44
+    aget-object v2, p0, v0
 
-    .line 54
-    return-void
+    .line 45
+    new-instance v3, Landroid/app/RemoteInput$Builder;
+
+    invoke-virtual {v2}, Landroid/support/v4/app/y$a;->getResultKey()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-direct {v3, v4}, Landroid/app/RemoteInput$Builder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Landroid/support/v4/app/y$a;->getLabel()Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/app/RemoteInput$Builder;->setLabel(Ljava/lang/CharSequence;)Landroid/app/RemoteInput$Builder;
+
+    move-result-object v3
+
+    invoke-virtual {v2}, Landroid/support/v4/app/y$a;->getChoices()[Ljava/lang/CharSequence;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Landroid/app/RemoteInput$Builder;->setChoices([Ljava/lang/CharSequence;)Landroid/app/RemoteInput$Builder;
+
+    move-result-object v3
+
+    invoke-virtual {v2}, Landroid/support/v4/app/y$a;->getAllowFreeFormInput()Z
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Landroid/app/RemoteInput$Builder;->setAllowFreeFormInput(Z)Landroid/app/RemoteInput$Builder;
+
+    move-result-object v3
+
+    invoke-virtual {v2}, Landroid/support/v4/app/y$a;->getExtras()Landroid/os/Bundle;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2}, Landroid/app/RemoteInput$Builder;->addExtras(Landroid/os/Bundle;)Landroid/app/RemoteInput$Builder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/app/RemoteInput$Builder;->build()Landroid/app/RemoteInput;
+
+    move-result-object v2
+
+    aput-object v2, v1, v0
+
+    .line 43
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    :cond_1
+    move-object v0, v1
+
+    .line 52
+    goto :goto_0
 .end method

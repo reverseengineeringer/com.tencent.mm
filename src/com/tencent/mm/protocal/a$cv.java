@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cv
-  extends a.c
+  extends a.e
 {
   public a$cv()
   {
-    super("shareTimeline", "share_timeline", 4, true);
+    super("openEnterpriseChat", "openEnterpriseChat", 165, false);
   }
 }
 

@@ -1,39 +1,73 @@
 package com.tencent.mm.ui.friend;
 
-import android.app.ProgressDialog;
-import android.content.Intent;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.ui.MMWizardActivity;
+import android.content.Context;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.h.a;
+import com.tencent.mm.model.bb;
+import com.tencent.mm.model.c;
+import com.tencent.mm.modelfriend.af;
+import com.tencent.mm.modelfriend.ag;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.k;
+import com.tencent.mm.storage.q;
 
-final class d
-  implements com.tencent.mm.q.d
+public abstract class d
+  extends com.tencent.mm.ui.i
+  implements com.tencent.mm.q.d.a
 {
-  d(FindMContactAddUI paramFindMContactAddUI) {}
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public d(Context paramContext, af paramaf)
   {
-    if (FindMContactAddUI.a(jmc) != null)
-    {
-      FindMContactAddUI.a(jmc).dismiss();
-      FindMContactAddUI.b(jmc);
+    super(paramContext, paramaf);
+  }
+  
+  public static void Ht(String paramString)
+  {
+    if (ay.kz(paramString)) {
+      u.w("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZT42gNrLj7hQ=", "deal add friend failed. username is null.");
     }
-    if (FindMContactAddUI.o(jmc) != null)
+    Object localObject;
+    do
     {
-      ax.tm().b(30, FindMContactAddUI.o(jmc));
-      FindMContactAddUI.p(jmc);
-    }
-    if ((FindMContactAddUI.k(jmc) != null) && (FindMContactAddUI.k(jmc).contains("2")))
+      return;
+      localObject = com.tencent.mm.modelfriend.ah.zv().hC(paramString);
+      if (localObject != null)
+      {
+        bNl = 2;
+        com.tencent.mm.modelfriend.ah.zv().a(bNk, (af)localObject);
+      }
+      localObject = com.tencent.mm.model.ah.tD().rq().Ep(paramString);
+      if (localObject == null)
+      {
+        u.w("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZT42gNrLj7hQ=", "[cpan] dealAddFriend failed. contact is null.");
+        return;
+      }
+      if (ay.kz(field_username)) {
+        ((k)localObject).setUsername(paramString);
+      }
+      paramString = (String)localObject;
+      if ((int)bvi != 0) {
+        break;
+      }
+      com.tencent.mm.model.ah.tD().rq().N((k)localObject);
+    } while (ay.kz(field_username));
+    paramString = com.tencent.mm.model.ah.tD().rq().Ep(field_username);
+    if ((int)bvi <= 0)
     {
-      paramString = new Intent(jmc, FindMContactInviteUI.class);
-      paramString.putExtra("regsetinfo_ticket", FindMContactAddUI.l(jmc));
-      paramString.putExtra("login_type", FindMContactAddUI.m(jmc));
-      paramString.putExtra("regsetinfo_NextStyle", FindMContactAddUI.e(jmc));
-      MMWizardActivity.q(jmc, paramString);
+      u.e("!44@/B4Tb64lLpJnI9lwkJyeeAeaeS3baC7ZT42gNrLj7hQ=", "addContact : insert contact failed");
       return;
     }
-    FindMContactAddUI.n(jmc);
+    com.tencent.mm.model.i.n(paramString);
+    bb.uE().b(26, new Object[0]);
+  }
+  
+  public void a(a parama) {}
+  
+  public void pH(String paramString) {}
+  
+  public static abstract interface a
+  {
+    public abstract void qm(int paramInt);
   }
 }
 

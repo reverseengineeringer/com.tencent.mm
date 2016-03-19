@@ -3,11 +3,11 @@ package oicq.wlogin_sdk.a;
 public final class am
   extends a
 {
-  int jON = 0;
+  int mcZ = 0;
   
   public am()
   {
-    jNs = 362;
+    mbE = 362;
   }
 }
 

@@ -1,35 +1,23 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import android.database.Cursor;
-import android.net.Uri;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class jx
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aHf = new a();
-  public b aHg = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGt = new a();
   
   public jx()
   {
-    id = "WatchAppIdReg";
-    hXT = atO;
+    id = "ResendSns";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aHh;
-    public int awH = 0;
-    public Context context;
-    public Uri uri;
-  }
-  
-  public static final class b
-  {
-    public Cursor cursor;
+    public int aGu = -1;
   }
 }
 

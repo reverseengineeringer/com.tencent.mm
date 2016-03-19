@@ -22,9 +22,9 @@
 
 
 # instance fields
-.field bsn:I
+.field bEq:I
 
-.field jcv:I
+.field ldk:I
 
 .field path:Ljava/lang/String;
 
@@ -37,9 +37,9 @@
 
     .prologue
     .line 366
-    new-instance v0, Lcom/tencent/mm/ui/chatting/oc;
+    new-instance v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData$1;
 
-    invoke-direct {v0}, Lcom/tencent/mm/ui/chatting/oc;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData$1;-><init>()V
 
     sput-object v0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -88,12 +88,12 @@
 
     .prologue
     .line 353
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->bsn:I
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->bEq:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 354
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->jcv:I
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/QQMailHistoryExporter$ImageSpanData;->ldk:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

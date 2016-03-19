@@ -1,73 +1,178 @@
 package com.tencent.mm.app;
 
-import android.app.Application;
 import android.content.Context;
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.os.Build;
-import android.util.Base64;
-import android.util.StringBuilderPrinter;
-import com.tencent.mm.compatible.util.f;
-import com.tencent.mm.crash.CrashUploaderService;
-import com.tencent.mm.model.aw;
-import com.tencent.mm.protocal.b;
+import android.os.Build.VERSION;
+import android.os.Looper;
+import android.os.Message;
+import android.support.v4.app.Fragment;
+import android.util.LongSparseArray;
+import android.util.SparseArray;
+import android.view.View;
+import android.widget.Button;
+import com.tencent.mm.ab.n;
+import com.tencent.mm.model.ae;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.bc;
+import com.tencent.mm.pluginsdk.i.ai;
+import com.tencent.mm.pluginsdk.i.o.c;
+import com.tencent.mm.pluginsdk.ui.VoiceSearchLayout;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ai.b;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.g;
-import com.tencent.mm.storage.j;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.ui.LauncherUI;
+import com.tencent.mm.ui.conversation.e;
+import com.tencent.mm.ui.g.a;
+import com.tencent.mm.ui.g.a.4;
+import com.tencent.mm.ui.g.b;
+import com.tencent.mm.ui.g.b.2;
+import com.tencent.mm.ui.g.c.1;
+import com.tencent.mm.ui.h;
+import java.lang.reflect.Field;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Iterator;
 
-final class i
-  implements ai.b
+public final class i
 {
-  i(String paramString, Application paramApplication) {}
-  
-  public final void a(String paramString, Throwable paramThrowable)
+  public static i alU;
+  public boolean alV;
+  public aa alW = new aa(Looper.getMainLooper())
   {
-    try
+    public final void handleMessage(Message paramAnonymousMessage)
     {
-      StringBuilder localStringBuilder = new StringBuilder(2560);
-      StringBuilderPrinter localStringBuilderPrinter = new StringBuilderPrinter(localStringBuilder);
-      localStringBuilderPrinter.println("#client.version=" + b.hgo);
-      localStringBuilderPrinter.println("#accinfo.revision=1169949");
-      Object localObject = aw.boE.y("last_login_uin", "0");
-      if (localObject != null)
-      {
-        paramThrowable = (Throwable)localObject;
-        if (!((String)localObject).equals("0")) {}
+      super.handleMessage(paramAnonymousMessage);
+      Object localObject3;
+      if (what == 63537) {
+        if (!alV)
+        {
+          paramAnonymousMessage = LauncherUI.bat();
+          if ((paramAnonymousMessage != null) && (klL))
+          {
+            paramAnonymousMessage.Gi("tab_main");
+            if (klL)
+            {
+              klR = true;
+              kmt.setBackgroundDrawable(null);
+              localObject1 = kmt;
+              iHA.setBackgroundDrawable(null);
+              iHE.setBackgroundDrawable(null);
+              iHF = null;
+            }
+            for (;;)
+            {
+              try
+              {
+                localObject1 = y.getContext().getResources();
+                if (localObject1 != null) {}
+              }
+              catch (Exception localException1)
+              {
+                continue;
+                localObject3 = localException1.getClass().getDeclaredField("mColorStateListCache");
+                ((Field)localObject3).setAccessible(true);
+                localObject2 = ((Field)localObject3).get(localException1);
+                if ((localObject2 instanceof SparseArray))
+                {
+                  ((SparseArray)localObject2).clear();
+                  continue;
+                }
+                ((LongSparseArray)localObject2).clear();
+                continue;
+                localObject3 = localObject2.getClass().getDeclaredField("mColorDrawableCache");
+                ((Field)localObject3).setAccessible(true);
+                ((LongSparseArray)((Field)localObject3).get(localObject2)).clear();
+                localObject3 = localObject2.getClass().getDeclaredField("sPreloadedColorDrawables");
+                ((Field)localObject3).setAccessible(true);
+                ((LongSparseArray)((Field)localObject3).get(localObject2)).clear();
+                continue;
+              }
+              try
+              {
+                localObject1 = y.getContext().getResources();
+                if (localObject1 != null) {
+                  break;
+                }
+              }
+              catch (Exception localException3)
+              {
+                a locala;
+                continue;
+              }
+              try
+              {
+                if (Build.VERSION.SDK_INT >= 16)
+                {
+                  localObject1 = y.getContext().getResources();
+                  if (localObject1 != null) {
+                    continue;
+                  }
+                }
+              }
+              catch (Exception localException2)
+              {
+                continue;
+              }
+              localObject1 = i.ai.iza;
+              if (localObject1 != null) {
+                ((i.o.c)localObject1).ayA();
+              }
+              paramAnonymousMessage = kmT.values().iterator();
+              if (!paramAnonymousMessage.hasNext()) {
+                break label338;
+              }
+              localObject1 = (Fragment)paramAnonymousMessage.next();
+              if (!(localObject1 instanceof e))
+              {
+                ((h)localObject1).aZs();
+                continue;
+                localObject3 = localObject1.getClass().getDeclaredField("mDrawableCache");
+                ((Field)localObject3).setAccessible(true);
+                ((LongSparseArray)((Field)localObject3).get(localObject1)).clear();
+              }
+            }
+          }
+          label338:
+          System.gc();
+        }
       }
-      else
+      while ((what != 62537) || (alV))
       {
-        paramThrowable = Integer.toString((Build.DEVICE + Build.FINGERPRINT + Build.MANUFACTURER + Build.MODEL).hashCode());
+        Object localObject1;
+        Object localObject2;
+        return;
       }
-      localStringBuilderPrinter.println("#accinfo.uin=" + paramThrowable);
-      localStringBuilderPrinter.println("#accinfo.runtime=" + (bn.DM() - MMApplication.anK) + "(" + bn.iV(anv) + ") by cup");
-      localStringBuilderPrinter.println("#accinfo.build=06/02/2015 10:28 PM:amm-dev:" + g.amP);
-      paramThrowable = new Date();
-      localObject = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ", Locale.getDefault());
-      localStringBuilderPrinter.println("#accinfo.crashTime=" + ((SimpleDateFormat)localObject).format(paramThrowable));
-      localStringBuilderPrinter.println("#crashContent=");
-      localStringBuilderPrinter.println(paramString);
-      paramString = new Intent();
-      paramString.setAction("INTENT_ACTION_UNCATCH");
-      paramString.putExtra("INTENT_EXTRA_USER_NAME", aw.boE.y("login_user_name", "never_login_crash"));
-      paramString.putExtra("INTENT_EXTRA_EXCEPTION_MSG", Base64.encodeToString(localStringBuilder.toString().getBytes(), 2));
-      paramString.putExtra("INTENT_EXTRA_DATA_PATH", j.bjE + "crash/");
-      paramString.putExtra("INTENT_EXTRA_SDCARD_PATH", f.bjR);
-      paramString.putExtra("INTENT_EXTRA_UIN", aw.boE.y("last_login_uin", "0"));
-      paramString.putExtra("INTENT_EXTRA_CLIENT_VERSION", b.hgo);
-      paramString.putExtra("INTENT_EXTRA_DEVICE_TYPE", b.hgg);
-      paramString.putExtra("INTENT_EXTRA_TAG", "exception");
-      paramThrowable = anw.getSharedPreferences("system_config_prefs", 0);
-      paramString.putExtra("INTENT_EXTRA_HOST", "http://" + paramThrowable.getString("support.weixin.qq.com", "support.weixin.qq.com"));
-      paramString.setClass(anw, CrashUploaderService.class);
-      aa.getContext().startService(paramString);
-      return;
+      paramAnonymousMessage = LauncherUI.bat();
+      if ((paramAnonymousMessage != null) && (kmT.containsKey(Integer.valueOf(0)))) {
+        ((h)kmT.get(Integer.valueOf(0))).aZs();
+      }
+      if (tDuin != 0)
+      {
+        paramAnonymousMessage = ah.tk().fu("plugin.emoji");
+        if (paramAnonymousMessage != null) {
+          paramAnonymousMessage.aN(0);
+        }
+        if ((n)ah.tk().fu(n.class.getName()) != null) {
+          n.Au();
+        }
+        paramAnonymousMessage = b.bjc();
+        locala = a.biX();
+        localObject3 = com.tencent.mm.ui.g.c.bjg();
+        ah.tv().r(new b.2(paramAnonymousMessage));
+        ah.tv().r(new a.4(locala));
+        ((com.tencent.mm.ui.g.c)localObject3).a(paramAnonymousMessage);
+        ((com.tencent.mm.ui.g.c)localObject3).a(locala);
+        ah.tv().r(new c.1((com.tencent.mm.ui.g.c)localObject3));
+      }
+      System.gc();
     }
-    catch (Exception paramString) {}
+  };
+  
+  public static i kD()
+  {
+    if (alU == null) {
+      alU = new i();
+    }
+    return alU;
   }
 }
 

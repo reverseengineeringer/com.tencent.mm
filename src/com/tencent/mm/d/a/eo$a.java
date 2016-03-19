@@ -1,13 +1,8 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-
 public final class eo$a
 {
-  public d aBj;
-  public String ayr;
-  public int errCode = 0;
-  public int errType = 0;
+  public String data;
 }
 
 /* Location:

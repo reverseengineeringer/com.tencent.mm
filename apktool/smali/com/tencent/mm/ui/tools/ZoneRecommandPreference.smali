@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field private eod:Landroid/widget/TextView;
+.field private eEo:Landroid/widget/TextView;
 
-.field jvO:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+.field lyF:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
-.field jvP:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+.field lyG:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
-.field jvQ:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+.field lyH:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
-.field private jvR:Landroid/widget/TextView;
+.field private lyI:Landroid/widget/TextView;
 
-.field private jvS:Landroid/widget/ImageView;
+.field private lyJ:Landroid/widget/ImageView;
 
 .field status:I
 
@@ -59,7 +59,7 @@
     iput v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->status:I
 
     .line 44
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference:I
+    const v0, 0x7f0a05d6
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->setLayoutResource(I)V
 
@@ -69,10 +69,12 @@
 
 
 # virtual methods
-.method final aSw()V
-    .locals 4
+.method final biR()V
+    .locals 5
 
     .prologue
+    const v4, 0x7f030018
+
     const/4 v3, 0x1
 
     const/16 v1, 0x8
@@ -80,11 +82,11 @@
     const/4 v2, 0x0
 
     .line 77
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvR:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyI:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eod:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eEo:Landroid/widget/TextView;
 
     if-nez v0, :cond_1
 
@@ -103,28 +105,26 @@
 
     .line 83
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvR:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyI:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 84
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eod:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eEo:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eod:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eEo:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->setting_zone_getting_location:I
+    const v1, 0x7f0b03d4
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 86
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvS:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyJ:Landroid/widget/ImageView;
 
-    sget v1, Lcom/tencent/mm/a$h;->get_location_icon:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 87
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->setEnabled(Z)V
@@ -136,26 +136,26 @@
 
     .line 91
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvR:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyI:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 92
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eod:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eEo:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 93
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eod:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eEo:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->setting_zone_cannot_get_location:I
+    const v1, 0x7f0b03d5
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 94
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvS:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyJ:Landroid/widget/ImageView;
 
-    sget v1, Lcom/tencent/mm/a$h;->get_location_failed_icon:I
+    const v1, 0x7f030012
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -169,37 +169,35 @@
 
     .line 101
     :pswitch_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvR:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyI:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eod:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eEo:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 103
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvS:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyJ:Landroid/widget/ImageView;
 
-    sget v1, Lcom/tencent/mm/a$h;->get_location_icon:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+    invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 105
     const-string/jumbo v0, ""
 
     .line 107
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvO:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyF:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvO:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyF:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     invoke-virtual {v1}, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -214,7 +212,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvO:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyF:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     invoke-virtual {v1}, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->getName()Ljava/lang/String;
 
@@ -230,17 +228,17 @@
 
     .line 110
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvP:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyG:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvP:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyG:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     invoke-virtual {v1}, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -261,7 +259,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvP:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyG:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     invoke-virtual {v1}, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->getName()Ljava/lang/String;
 
@@ -277,17 +275,17 @@
 
     .line 113
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvQ:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyH:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     if-eqz v1, :cond_4
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvQ:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyH:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     invoke-virtual {v1}, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->getName()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -308,7 +306,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvQ:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyH:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     invoke-virtual {v1}, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->getName()Ljava/lang/String;
 
@@ -324,7 +322,7 @@
 
     .line 117
     :cond_4
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvR:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyI:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -347,7 +345,7 @@
     .end packed-switch
 .end method
 
-.method public final aSx()V
+.method public final biS()V
     .locals 1
 
     .prologue
@@ -357,7 +355,7 @@
     iput v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->status:I
 
     .line 143
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->aSw()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->biR()V
 
     .line 144
     return-void
@@ -371,7 +369,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 72
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->aSw()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->biR()V
 
     .line 73
     return-void
@@ -398,7 +396,7 @@
     check-cast v0, Landroid/view/LayoutInflater;
 
     .line 56
-    sget v1, Lcom/tencent/mm/a$i;->content:I
+    const v1, 0x7f0700c1
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -410,12 +408,12 @@
     invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 59
-    sget v3, Lcom/tencent/mm/a$k;->mm_preference_content_zone_recommand:I
+    const v3, 0x7f0a0021
 
     invoke-virtual {v0, v3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 61
-    sget v0, Lcom/tencent/mm/a$i;->zonename:I
+    const v0, 0x7f0700bb
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -423,10 +421,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvR:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyI:Landroid/widget/TextView;
 
     .line 62
-    sget v0, Lcom/tencent/mm/a$i;->status:I
+    const v0, 0x7f0700bc
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -434,10 +432,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eod:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->eEo:Landroid/widget/TextView;
 
     .line 63
-    sget v0, Lcom/tencent/mm/a$i;->status_image:I
+    const v0, 0x7f0700ba
 
     invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -445,7 +443,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvS:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyJ:Landroid/widget/ImageView;
 
     .line 65
     return-object v2

@@ -1,26 +1,12 @@
 package com.tencent.mm.ui.contact;
 
-import android.view.MenuItem;
-import com.tencent.mm.ui.base.bk.d;
+import com.tencent.mm.storage.k;
+import com.tencent.mm.storage.r;
 
-final class f
-  implements bk.d
+public final class f
 {
-  f(AddressUI.a parama) {}
-  
-  public final void d(MenuItem paramMenuItem, int paramInt)
-  {
-    switch (paramMenuItem.getItemId())
-    {
-    default: 
-      return;
-    case 1: 
-    case 2: 
-      AddressUI.a.a(jet, AddressUI.a.i(jet));
-      return;
-    }
-    AddressUI.a.c(jet, AddressUI.a.i(jet));
-  }
+  public k cId = new k();
+  public r ljj = new r();
 }
 
 /* Location:

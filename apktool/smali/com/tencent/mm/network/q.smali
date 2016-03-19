@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tencent/mm/network/x;IILjava/lang/String;)V
+.method public abstract ks()Z
 .end method

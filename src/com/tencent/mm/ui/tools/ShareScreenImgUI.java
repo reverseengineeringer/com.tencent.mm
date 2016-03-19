@@ -1,55 +1,71 @@
 package com.tencent.mm.ui.tools;
 
 import android.app.ProgressDialog;
-import android.content.ContentResolver;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Message;
 import android.widget.Toast;
 import com.jg.JgClassChecked;
-import com.tencent.mm.a.n;
 import com.tencent.mm.booter.NotifyReceiver;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.o;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.sdk.platformtools.MMBitmapFactory.DecodeResultLogger;
+import com.tencent.mm.sdk.platformtools.MMBitmapFactory.KVStatHelper;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.n;
+import com.tencent.mm.sdk.platformtools.p;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.account.SimpleLoginUI;
-import com.tencent.mm.ui.base.h;
+import com.tencent.mm.ui.base.a;
+import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.transmit.MsgRetransmitUI;
+import java.io.File;
 
+@a(3)
 @JgClassChecked(author=12, fComment="checked", lastDate="20141031", reviewer=20, vComment={com.jg.EType.ACTIVITYCHECK})
 public class ShareScreenImgUI
   extends MMActivity
 {
-  private ProgressDialog bXB = null;
+  private ProgressDialog coM = null;
   String filePath = null;
-  private ac handler = new fy(this);
+  private aa handler = new aa()
+  {
+    public final void handleMessage(Message paramAnonymousMessage)
+    {
+      ShareScreenImgUI.a(ShareScreenImgUI.this);
+      if (ay.kz(filePath))
+      {
+        u.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "launch : fail, filePath is null");
+        ShareScreenImgUI.b(ShareScreenImgUI.this);
+        finish();
+        return;
+      }
+      ShareScreenImgUI.c(ShareScreenImgUI.this);
+    }
+  };
   private Intent intent = null;
   Uri uri = null;
   
-  private void aRr()
+  private void biN()
   {
-    Toast.makeText(this, a.n.shareimg_get_res_fail, 1).show();
-  }
-  
-  private void aSs()
-  {
-    t.i("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "filepath:[%s]", new Object[] { filePath });
+    u.i("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "filepath:[%s]", new Object[] { filePath });
     Intent localIntent = getIntent();
     String str = localIntent.resolveType(this);
     int i;
     if ((str == null) || (str.length() == 0))
     {
-      t.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "map : mimeType is null");
+      u.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "map : mimeType is null");
       i = -1;
     }
     while (i == -1)
     {
-      t.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "launch, msgType is invalid");
+      u.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "launch, msgType is invalid");
       finish();
       return;
       if (str.toLowerCase().contains("image"))
@@ -58,11 +74,11 @@ public class ShareScreenImgUI
       }
       else
       {
-        t.d("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "map : unknown mimetype, send as file");
+        u.d("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "map : unknown mimetype, send as file");
         i = 3;
       }
     }
-    if ((!o.a(getIntent(), "Intro_Switch", false)) && (ax.tq()) && (!ax.tu()))
+    if ((!p.a(getIntent(), "Intro_Switch", false)) && (ah.tI()) && (!ah.tM()))
     {
       localIntent.setData(uri);
       localIntent.setClass(this, MsgRetransmitUI.class);
@@ -77,101 +93,86 @@ public class ShareScreenImgUI
     {
       finish();
       return;
-      localIntent.putExtras(getIntent());
-      localIntent.addFlags(67108864);
-      localIntent.setType(getIntent().getType());
-      localIntent.setData(uri);
-      MMWizardActivity.b(this, new Intent(this, SimpleLoginUI.class), localIntent);
+      if (!ay.kz(filePath))
+      {
+        localIntent = new Intent(this, ShareImgUI.class);
+        localIntent.putExtra("android.intent.extra.STREAM", Uri.fromFile(new File(filePath)));
+        localIntent.addFlags(67108864);
+        localIntent.setType("image/*");
+        localIntent.setAction("android.intent.action.SEND");
+        MMWizardActivity.b(this, new Intent(this, SimpleLoginUI.class).addFlags(32768).addFlags(268435456), localIntent);
+      }
+      else
+      {
+        biq();
+      }
     }
   }
   
-  protected final void DV()
+  private void biq()
   {
-    String str1 = null;
+    Toast.makeText(this, 2131428911, 1).show();
+  }
+  
+  protected final void Gb()
+  {
     intent = getIntent();
     if (intent == null)
     {
-      t.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "launch : fail, intent is null");
-      aRr();
+      u.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "launch : fail, intent is null");
+      biq();
       finish();
       return;
     }
-    t.i("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "intent = " + intent);
-    Object localObject = intent.getAction();
+    u.i("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "intent = " + intent);
+    String str = intent.getAction();
     uri = intent.getData();
-    if (bn.iW((String)localObject))
+    if (ay.kz(str))
     {
-      t.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "launch : fail, action is null");
-      aRr();
+      u.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "launch : fail, action is null");
+      biq();
       finish();
       return;
     }
-    if (((String)localObject).equals("android.intent.action.VIEW"))
+    if (str.equals("android.intent.action.VIEW"))
     {
-      t.i("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "send signal: " + (String)localObject);
+      u.i("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "send signal: " + str);
       if (uri == null)
       {
-        aRr();
+        biq();
         finish();
         return;
       }
-      getString(a.n.app_tip);
-      bXB = h.a(this, getString(a.n.app_waiting), true, new fz(this));
-      localObject = uri;
-      String str2 = ((Uri)localObject).getScheme();
-      if ("file".equalsIgnoreCase(str2))
+      getString(2131430877);
+      coM = g.a(this, getString(2131430941), true, new DialogInterface.OnCancelListener()
       {
-        t.i("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "getFilePath : scheme is SCHEME_FILE");
-        str1 = ((Uri)localObject).getPath();
-      }
-      for (;;)
+        public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
+      });
+      filePath = ay.d(this, uri);
+      if (!ay.kz(filePath))
       {
-        filePath = str1;
-        if (!bn.iW(filePath)) {
-          break;
+        str = filePath;
+        MMBitmapFactory.DecodeResultLogger localDecodeResultLogger = new MMBitmapFactory.DecodeResultLogger();
+        boolean bool = n.a(str, localDecodeResultLogger);
+        if ((!bool) && (localDecodeResultLogger.getDecodeResult() >= 2000))
+        {
+          str = MMBitmapFactory.KVStatHelper.getKVStatString(str, 3, localDecodeResultLogger);
+          h.fUJ.O(12712, str);
         }
-        t.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "launch : fail, filePath is null");
-        aRr();
+        if (bool) {}
+      }
+      else
+      {
+        u.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "launch : fail, filePath is null");
+        biq();
         finish();
         return;
-        if ("content".equalsIgnoreCase(str2))
-        {
-          t.i("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "getFilePath : scheme is SCHEME_CONTENT: " + ((Uri)localObject).toString());
-          localObject = getContentResolver().query((Uri)localObject, null, null, null, null);
-          if (localObject == null)
-          {
-            t.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "getFilePath : fail, cursor is null");
-          }
-          else if ((((Cursor)localObject).getCount() <= 0) || (!((Cursor)localObject).moveToFirst()))
-          {
-            ((Cursor)localObject).close();
-            t.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "getFilePath : fail, cursor getCount is 0 or moveToFirst fail");
-          }
-          else
-          {
-            int i = ((Cursor)localObject).getColumnIndex("_data");
-            if (i == -1)
-            {
-              ((Cursor)localObject).close();
-              t.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "getFilePath : columnIdx is -1, column with columnName = _data does not exist");
-            }
-            else
-            {
-              str1 = ((Cursor)localObject).getString(i);
-              ((Cursor)localObject).close();
-            }
-          }
-        }
-        else
-        {
-          t.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "unknown scheme");
-        }
       }
-      aSs();
+      biN();
       return;
     }
-    t.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "launch : fail, uri is null");
-    aRr();
+    u.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "launch : fail, uri is null");
+    biq();
     finish();
   }
   
@@ -183,20 +184,20 @@ public class ShareScreenImgUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    At("");
-    int i = o.a(getIntent(), "wizard_activity_result_code", 0);
+    Gj("");
+    int i = p.a(getIntent(), "wizard_activity_result_code", 0);
     switch (i)
     {
     default: 
-      t.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "onCreate, should not reach here, resultCode = " + i);
+      u.e("!44@/B4Tb64lLpLyOza9Seegn+vpKKgIOZRyYpZJ6yri7tM=", "onCreate, should not reach here, resultCode = " + i);
       finish();
       return;
     case 1: 
       finish();
       return;
     }
-    NotifyReceiver.nw();
-    DV();
+    NotifyReceiver.mS();
+    Gb();
   }
 }
 

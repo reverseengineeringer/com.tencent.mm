@@ -3,108 +3,108 @@ package com.tencent.mm.plugin.sandbox;
 import android.content.Context;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
-import com.tencent.mm.model.au;
-import com.tencent.mm.pluginsdk.l.aa;
-import com.tencent.mm.pluginsdk.l.ab;
-import com.tencent.mm.pluginsdk.l.z;
+import com.tencent.mm.model.ae;
+import com.tencent.mm.pluginsdk.i.ab;
+import com.tencent.mm.pluginsdk.i.ac;
+import com.tencent.mm.pluginsdk.i.ad;
 import com.tencent.mm.sandbox.a.a;
 import com.tencent.mm.sandbox.monitor.ExceptionMonitorService;
-import com.tencent.mm.sandbox.monitor.g;
+import com.tencent.mm.sandbox.monitor.c;
 import com.tencent.mm.sandbox.updater.Updater;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 import java.util.HashMap;
 
 public class SubCoreSandBox
-  implements au, l.ab
+  implements ae, i.ad
 {
-  public static boolean eKX = false;
-  public static boolean eKY = false;
+  public static boolean fVJ = false;
+  public static boolean fVK = false;
   
   public SubCoreSandBox()
   {
-    t.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox constructor at: " + System.currentTimeMillis());
+    u.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox constructor at: " + System.currentTimeMillis());
   }
   
-  public final l.z a(Context paramContext, DialogInterface.OnCancelListener paramOnCancelListener)
+  public final i.ab a(Context paramContext, DialogInterface.OnCancelListener paramOnCancelListener)
   {
     return Updater.c(paramContext, paramOnCancelListener);
   }
   
-  public final void aJ(int paramInt)
+  public final void aN(int paramInt)
   {
-    t.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox clearPluginData at: " + System.currentTimeMillis());
-  }
-  
-  public final l.aa afA()
-  {
-    return new a(2);
-  }
-  
-  public final void afz()
-  {
-    Updater.mp(16);
+    u.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox clearPluginData at: " + System.currentTimeMillis());
   }
   
   public final void ai(boolean paramBoolean)
   {
-    t.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox onAccountPostReset at: " + System.currentTimeMillis());
+    u.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox onAccountPostReset at: " + System.currentTimeMillis());
   }
   
   public final void aj(boolean paramBoolean)
   {
-    t.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox onSdcardMount at: " + System.currentTimeMillis());
+    u.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox onSdcardMount at: " + System.currentTimeMillis());
   }
   
-  public final l.z b(Context paramContext, DialogInterface.OnCancelListener paramOnCancelListener)
+  public final void aqH()
+  {
+    Updater.pj(16);
+  }
+  
+  public final i.ac aqI()
+  {
+    return new a(2);
+  }
+  
+  public final i.ab b(Context paramContext, DialogInterface.OnCancelListener paramOnCancelListener)
   {
     return Updater.d(paramContext, paramOnCancelListener);
   }
   
-  public final void b(String paramString1, int paramInt, String paramString2, String paramString3)
+  public final i.ab bY(Context paramContext)
   {
-    Updater.b(paramString1, paramInt, paramString2, paramString3);
+    return Updater.di(paramContext);
   }
   
-  public final l.z bK(Context paramContext)
+  public final void bZ(Context paramContext)
   {
-    return Updater.cG(paramContext);
+    Updater.bZ(paramContext);
   }
   
-  public final void bL(Context paramContext)
+  public final void c(String paramString1, int paramInt, String paramString2, String paramString3)
   {
-    Updater.bL(paramContext);
+    Updater.c(paramString1, paramInt, paramString2, paramString3);
   }
   
-  public final void cH(boolean paramBoolean)
+  public final void dX(boolean paramBoolean)
   {
-    eKX = true;
-    eKY = paramBoolean;
+    fVJ = true;
+    fVK = paramBoolean;
   }
   
-  public final HashMap lT()
+  public final HashMap lo()
   {
-    t.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox getBaseDBFactories at: " + System.currentTimeMillis());
+    u.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox getBaseDBFactories at: " + System.currentTimeMillis());
     return null;
   }
   
-  public final void lU()
+  public final void lp()
   {
-    t.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox onAccountRelease at: " + System.currentTimeMillis());
+    u.i("!32@/B4Tb64lLpIAhUt0Bg2QTjJe839Cfv5c", "SubCoreSandBox onAccountRelease at: " + System.currentTimeMillis());
   }
   
-  public final void o(Context paramContext, Intent paramIntent)
+  public final void q(Context paramContext, Intent paramIntent)
   {
     if (paramContext != null)
     {
       paramIntent.setClass(paramContext, ExceptionMonitorService.class);
-      aa.getContext().startService(paramIntent);
+      y.getContext().startService(paramIntent);
     }
   }
   
-  public final String ph(String paramString)
+  public final String sM(String paramString)
   {
-    return g.ph(paramString);
+    return c.sM(paramString);
   }
 }
 

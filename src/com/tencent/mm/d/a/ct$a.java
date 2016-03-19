@@ -2,7 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class ct$a
 {
-  public long ayC = 0L;
+  public String awo;
+  public long awp;
+  public String mac;
 }
 
 /* Location:

@@ -5,7 +5,7 @@ import android.view.MenuItem;
 
 public abstract class a
 {
-  private boolean sd;
+  private boolean rg;
   
   public abstract void finish();
   
@@ -13,7 +13,7 @@ public abstract class a
   
   public void setTitleOptionalHint(boolean paramBoolean)
   {
-    sd = paramBoolean;
+    rg = paramBoolean;
   }
   
   public static abstract interface a

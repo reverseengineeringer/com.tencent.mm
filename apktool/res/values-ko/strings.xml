@@ -1,99 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="aum">WeChat</string>
-    <string name="aun">WeChat</string>
-    <string name="auo">WeChat</string>
-    <string name="aup">모멘트에 보내기</string>
-    <string name="auq">WeChat 즐겨찾기</string>
-    <string name="bji">지문 결제</string>
-    <string name="bjj">휴대폰 설정에서 지문을 설정하면 WeChat 결제에 사용할 수 있습니다. 지금 설정하시겠습니까?</string>
-    <string name="bjk">지문 암호가 지원되었습니다. WeChat 결제에 사용하시겠습니까?</string>
-    <string name="bjl">지문 확인</string>
-    <string name="bjm">"확인할 수 없습니다. 다시 시도하세요!
-지문을 설정했는지 확인하세요!"</string>
-    <string name="bjn">성공적으로 열림</string>
-    <string name="bjo">지문 결제를 활성화할 수 없습니다!</string>
-    <string name="bjp">지문 결제를 비활성화하시겠습니까?</string>
-    <string name="bjq">비활성화할 수 없습니다. 다시 시도하세요.</string>
-    <string name="bjr">Disable fingerprint payment</string>
-    <string name="bjs">설정됨</string>
-    <string name="bjt">사용</string>
-    <string name="bju">Fingerprint set and can now be used for WeChat Payments.</string>
-    <string name="bjv">Fingerprint payment enabled and can be used to authorize payments.</string>
-    <string name="bjw">다시 시도해 보세요!</string>
-    <string name="btw">file:///android_asset/doc/en/network_warning.htm</string>
-    <string name="btx">file:///android_asset/doc/default/oauth_network_error.html</string>
-    <string name="bty">file:///android_asset/doc/en/qqsync_intro.htm</string>
-    <string name="btz">file:///android_asset/doc/en/qqsync_privacy.htm</string>
-    <string name="bu0">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_msgtrans_agreement&amp;lang=en</string>
-    <string name="bu1">http://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/record_sync__course&amp;lang=zh_CN</string>
-    <string name="bu2">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_chat_migration_faq&amp;lang=zh_CN</string>
-    <string name="bu3">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_contract_agreement&amp;lang=en</string>
-    <string name="bu4">\?hl=en</string>
-    <string name="bu5">http://weixin.qq.com/agreement?lang=en</string>
-    <string name="bu6">http://weixin.qq.com/cgi-bin/readtemplate?lang=en_US&amp;check=false&amp;t=weixin_agreement&amp;s=terms</string>
-    <string name="bu7">http://weixin.qq.com/cgi-bin/readtemplate?lang=en_US&amp;check=false&amp;t=weixin_agreement&amp;s=privacy</string>
-    <string name="bu8">http://support.wechat.com/getpassword?lang=en</string>
-    <string name="bu9">https://account.qq.com/cgi-bin/en/index</string>
-    <string name="bu_">http://open.weixin.qq.com/emoticon#wechat_redirect</string>
-    <string name="bua">http://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/payment_security__intro</string>
-    <string name="bub">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_small_pay</string>
-    <string name="buc">http://action.weixin.qq.com/payact/readtemplate?t=mobile/shuaka/help_tmpl</string>
-    <string name="bud">sound/play_completed.mp3</string>
-    <string name="bue">sound/time_limit.mp3</string>
-    <string name="buf">sound/after_upload_voice.mp3</string>
-    <string name="bug">sound/qrcode_completed.mp3</string>
-    <string name="buh">sound/talkroom_begin.mp3</string>
-    <string name="bui">sound/talkroom_press.mp3</string>
-    <string name="buj">sound/talkroom_sasasa.mp3</string>
-    <string name="buk">sound/talkroom_othersbegin.mp3</string>
-    <string name="bul">sound/talkroom_up.mp3</string>
-    <string name="bum">sound/shake_sound_male.mp3</string>
-    <string name="bun">sound/shake_nomatch.mp3</string>
-    <string name="buo">sound/shake_match.mp3</string>
-    <string name="bup">sound/shakelucky_firework_sound.mp3</string>
-    <string name="buq">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_business_pay&amp;lang=%s</string>
-    <string name="bur">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_business_agreement&amp;lang=%s</string>
-    <string name="bus" formatted="false">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_business_bank&amp;lang=%s&amp;banktype=%s</string>
-    <string name="but" formatted="false">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_person_pay&amp;lang=%s&amp;banktype=%s</string>
-    <string name="buu" formatted="false">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_bank_wxcredit&amp;lang=%s&amp;banktype=%s</string>
-    <string name="buv">http://weixin.qq.com/cgi-bin/readtemplate?&amp;lang=en&amp;check=false&amp;t=weixin_agreement&amp;s=pay#point</string>
-    <string name="buw">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_emoji_agreement&amp;lang=</string>
-    <string name="bux">http://weixin.qq.com/cgi-bin/readtemplate?lang=%s&amp;t=weixin_groupOwnerResponsibility</string>
-    <string name="buy">http://weixin.qq.com/cgi-bin/readtemplate?lang=%s&amp;t=weixin_howToAdjustGroupNum</string>
-    <string name="buz">http://weixin110.qq.com/?lang=</string>
-    <string name="bv0" formatted="false">https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx10583a7e974992ec&amp;redirect_uri=http%3A%2F%2Fkf.qq.com%2Ftouch%2Fproduct%2Fwechat_platform_app.html%3FADTAG%3Dveda.wechat.app%26tj_src%3Dapp&amp;response_type=code&amp;scope=snsapi_base&amp;state=123#wechat_redirect</string>
-    <string name="bv1" formatted="false">https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx10583a7e974992ec&amp;redirect_uri=http%3A%2F%2Fkf.qq.com%2Ftouch%2Fproduct%2Fwechat_cht_platform_app.html%3FADTAG%3Dveda.wechat.app%26tj_src%3Dapp&amp;response_type=code&amp;scope=snsapi_base&amp;state=123#wechat_redirect</string>
-    <string name="bv2" formatted="false">https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx10583a7e974992ec&amp;redirect_uri=http%3A%2F%2Fkf.qq.com%2Ftouch%2Fproduct%2Fwechat_en_platform_app.html%3FADTAG%3Dveda.wechat.app%26tj_src%3Dapp&amp;response_type=code&amp;scope=snsapi_base&amp;state=123#wechat_redirect</string>
-    <string name="bv3">file:///android_asset/doc/default/wx_wifi_faq.html</string>
-    <string name="bv4">file:///android_asset/doc/default/wx_wifi_service_terms_chs.html</string>
-    <string name="bv5">file:///android_asset/doc/default/mig_wifi_service_terms_chs.html</string>
-    <string name="bv6">file:///android_asset/doc/default/wx_feedback_index.html</string>
-    <string name="bv7">https://support.weixin.qq.com/security/readtemplate?t=page/login_optimized__w_index&amp;lang=</string>
-    <string name="bv8">https://support.weixin.qq.com/getpassword?lang=</string>
-    <string name="cwu">Google Play 서비스 오류</string>
-    <string name="cwv">Google Play 서비스를 설치해야 하는 애플리케이션입니다.</string>
-    <string name="cww">Google Play 서비스를 업데이트해야 하는 애플리케이션입니다.</string>
-    <string name="cwx">Google Play 서비스를 사용 설정해야 하는 애플리케이션입니다.</string>
-    <string name="cwy">%1$s에서 요청</string>
-    <string name="cwz">Google Play 서비스 설치</string>
-    <string name="cx0">휴대전화에 Google Play 서비스가 설치되어 있어야 이 앱이 실행됩니다.</string>
-    <string name="cx1">태블릿에 Google Play 서비스가 설치되어 있어야 이 앱이 실행됩니다.</string>
-    <string name="cx2">Google Play 서비스 설치</string>
-    <string name="cx3">Google Play 서비스 사용</string>
-    <string name="cx4">Google Play 서비스를 사용하도록 설정해야 이 앱이 작동합니다.</string>
-    <string name="cx5">Google Play 서비스 사용</string>
-    <string name="cx6">Google Play 서비스 업데이트</string>
-    <string name="cx7">Google Play 서비스를 업데이트해야만 이 앱이 실행됩니다.</string>
-    <string name="cx8">네트워크 오류</string>
-    <string name="cx9">Google Play 서비스에 연결하려면 데이터 연결이 필요합니다.</string>
-    <string name="cx_">올바르지 않은 계정</string>
-    <string name="cxa">지정한 계정이 이 기기에 존재하지 않습니다. 다른 계정을 선택하세요.</string>
-    <string name="cxb">Google Play 서비스에 알 수 없는 문제가 발생했습니다.</string>
-    <string name="cxc">Google Play 서비스</string>
-    <string name="cxd">일부 사용자 애플리케이션에 필요한 Google Play 서비스가 사용자 기기에서 지원되지 않습니다. 기기 제조업체에 문의하시기 바랍니다.</string>
-    <string name="cxe">기기의 날짜가 잘못된 것 같습니다. 기기의 날짜를 확인해 주세요.</string>
-    <string name="cxf">업데이트</string>
-    <string name="cxg">로그인</string>
-    <string name="cxh">Google 계정으로 로그인</string>
+    <string name="w">Google Play 서비스 설치</string>
+    <string name="x">휴대전화에 Google Play 서비스가 설치되어 있어야 이 앱이 실행됩니다.</string>
+    <string name="y">태블릿에 Google Play 서비스가 설치되어 있어야 이 앱이 실행됩니다.</string>
+    <string name="z">Google Play 서비스 설치</string>
+    <string name="a0">Google Play 서비스 사용</string>
+    <string name="a1">Google Play 서비스를 사용하도록 설정해야 이 앱이 작동합니다.</string>
+    <string name="a2">Google Play 서비스 사용</string>
+    <string name="a3">Google Play 서비스 업데이트</string>
+    <string name="a4">Google Play 서비스를 업데이트해야만 이 앱이 실행됩니다.</string>
+    <string name="a5">Google Play 서비스에 알 수 없는 문제가 발생했습니다.</string>
+    <string name="a6">Google Play 서비스</string>
+    <string name="a7">일부 사용자 애플리케이션에 필요한 Google Play 서비스가 사용자 기기에서 지원되지 않습니다. 기기 제조업체에 문의하시기 바랍니다.</string>
+    <string name="a8">업데이트</string>
+    <string name="a9">로그인</string>
+    <string name="a_">Google 계정으로 로그인</string>
+    <string name="aa">Google Play 서비스 오류</string>
+    <string name="ab">Google Play 서비스를 설치해야 하는 애플리케이션입니다.</string>
+    <string name="ac">Google Play 서비스를 업데이트해야 하는 애플리케이션입니다.</string>
+    <string name="ad">Google Play 서비스를 사용 설정해야 하는 애플리케이션입니다.</string>
+    <string name="ae">%1$s에서 요청</string>
+    <string name="af">네트워크 오류</string>
+    <string name="ag">Google Play 서비스에 연결하려면 데이터 연결이 필요합니다.</string>
+    <string name="ah">올바르지 않은 계정</string>
+    <string name="ai">지정한 계정이 이 기기에 존재하지 않습니다. 다른 계정을 선택하세요.</string>
+    <string name="aj">기기의 날짜가 잘못된 것 같습니다. 기기의 날짜를 확인해 주세요.</string>
+    <string name="chb">WeChat</string>
+    <string name="chc">WeChat</string>
+    <string name="chd">WeChat</string>
+    <string name="che">모멘트에 보내기</string>
+    <string name="chf">WeChat 즐겨찾기</string>
+    <string name="cuv">file:///android_asset/doc/en/network_warning.htm</string>
+    <string name="cuw">file:///android_asset/doc/default/oauth_network_error.html</string>
+    <string name="cux">file:///android_asset/doc/en/qqsync_intro.htm</string>
+    <string name="cuy">file:///android_asset/doc/en/qqsync_privacy.htm</string>
+    <string name="cuz">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_msgtrans_agreement&amp;lang=en</string>
+    <string name="cv0">http://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/record_sync__course&amp;lang=zh_CN</string>
+    <string name="cv1">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_chat_migration_faq&amp;lang=zh_CN</string>
+    <string name="cv2">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_contract_agreement&amp;lang=en</string>
+    <string name="cv3">\?hl=en</string>
+    <string name="cv4">http://weixin.qq.com/agreement?lang=en</string>
+    <string name="cv5">http://weixin.qq.com/cgi-bin/readtemplate?lang=en_US&amp;check=false&amp;t=weixin_agreement&amp;s=terms</string>
+    <string name="cv6">http://weixin.qq.com/cgi-bin/readtemplate?lang=en_US&amp;check=false&amp;t=weixin_agreement&amp;s=privacy</string>
+    <string name="cv7">http://support.wechat.com/getpassword?lang=en</string>
+    <string name="cv8">https://account.qq.com/cgi-bin/en/index</string>
+    <string name="cv9">http://open.weixin.qq.com/emoticon#wechat_redirect</string>
+    <string name="cv_">http://support.weixin.qq.com/cgi-bin/mmsupport-bin/readtemplate?t=page/payment_security__intro</string>
+    <string name="cva">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_small_pay</string>
+    <string name="cvb">http://action.weixin.qq.com/payact/readtemplate?t=mobile/shuaka/help_tmpl</string>
+    <string name="cvc">sound/play_completed.mp3</string>
+    <string name="cvd">sound/time_limit.mp3</string>
+    <string name="cve">sound/after_upload_voice.mp3</string>
+    <string name="cvf">sound/qrcode_completed.mp3</string>
+    <string name="cvg">sound/talkroom_begin.mp3</string>
+    <string name="cvh">sound/talkroom_press.mp3</string>
+    <string name="cvi">sound/talkroom_sasasa.mp3</string>
+    <string name="cvj">sound/talkroom_othersbegin.mp3</string>
+    <string name="cvk">sound/talkroom_up.mp3</string>
+    <string name="cvl">sound/shake_sound_male.mp3</string>
+    <string name="cvm">sound/shake_nomatch.mp3</string>
+    <string name="cvn">sound/shake_match.mp3</string>
+    <string name="cvo">sound/shakelucky_firework_sound.mp3</string>
+    <string name="cvp">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_business_pay&amp;lang=%s</string>
+    <string name="cvq">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_business_agreement&amp;lang=%s</string>
+    <string name="cvr" formatted="false">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_business_bank&amp;lang=%s&amp;banktype=%s</string>
+    <string name="cvs" formatted="false">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_person_pay&amp;lang=%s&amp;banktype=%s</string>
+    <string name="cvt" formatted="false">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_bank_wxcredit&amp;lang=%s&amp;banktype=%s</string>
+    <string name="cvu">http://weixin.qq.com/cgi-bin/readtemplate?&amp;lang=en&amp;check=false&amp;t=weixin_agreement&amp;s=pay#point</string>
+    <string name="cvv">http://weixin.qq.com/cgi-bin/readtemplate?t=weixin_emoji_agreement&amp;lang=</string>
+    <string name="cvw">http://weixin.qq.com/cgi-bin/readtemplate?lang=%s&amp;t=weixin_groupOwnerResponsibility</string>
+    <string name="cvx">http://weixin.qq.com/cgi-bin/readtemplate?lang=%s&amp;t=weixin_howToAdjustGroupNum</string>
+    <string name="cvy">http://weixin110.qq.com/?lang=</string>
+    <string name="cvz" formatted="false">https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx10583a7e974992ec&amp;redirect_uri=http%3A%2F%2Fkf.qq.com%2Ftouch%2Fscene_product.html%3Fscene_id%3Dkf338&amp;response_type=code&amp;scope=snsapi_base&amp;state=123#wechat_redirect</string>
+    <string name="cw0" formatted="false">https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx10583a7e974992ec&amp;redirect_uri=http%3A%2F%2Fkf.qq.com%2Ftouch%2Fscene_product.html%3Fscene_id%3Dkf348&amp;response_type=code&amp;scope=snsapi_base&amp;state=123#wechat_redirect</string>
+    <string name="cw1" formatted="false">https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx10583a7e974992ec&amp;redirect_uri=http%3A%2F%2Fkf.qq.com%2Ftouch%2Fscene_product.html%3Fscene_id%3Dkf350&amp;response_type=code&amp;scope=snsapi_base&amp;state=123#wechat_redirect</string>
+    <string name="cw2">file:///android_asset/doc/default/wx_wifi_faq.html</string>
+    <string name="cw3">file:///android_asset/doc/default/wx_wifi_service_terms_chs.html</string>
+    <string name="cw4">file:///android_asset/doc/default/mig_wifi_service_terms_chs.html</string>
+    <string name="cw5">file:///android_asset/doc/default/wx_feedback_index.html</string>
+    <string name="cw6">https://support.weixin.qq.com/security/readtemplate?t=page/login_optimized__w_index&amp;lang=</string>
+    <string name="cw7">https://support.weixin.qq.com/getpassword?lang=</string>
+    <string name="cw8">http://weixin.qq.com/cgi-bin/readtemplate?t=emotion/wap/complain/msg_tmpl&amp;lang=</string>
 </resources>

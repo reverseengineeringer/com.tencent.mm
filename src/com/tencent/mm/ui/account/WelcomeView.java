@@ -4,6 +4,8 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
 import android.view.animation.LinearInterpolator;
 import android.widget.LinearLayout;
 
@@ -20,16 +22,23 @@ public abstract class WelcomeView
     super(paramContext, paramAttributeSet);
   }
   
-  public abstract void aMj();
-  
-  public final void an(View paramView)
+  public final void ao(View paramView)
   {
     AlphaAnimation localAlphaAnimation = new AlphaAnimation(0.0F, 1.0F);
     localAlphaAnimation.setInterpolator(new LinearInterpolator());
     localAlphaAnimation.setDuration(300L);
-    localAlphaAnimation.setAnimationListener(new jq(this));
+    localAlphaAnimation.setAnimationListener(new Animation.AnimationListener()
+    {
+      public final void onAnimationEnd(Animation paramAnonymousAnimation) {}
+      
+      public final void onAnimationRepeat(Animation paramAnonymousAnimation) {}
+      
+      public final void onAnimationStart(Animation paramAnonymousAnimation) {}
+    });
     paramView.startAnimation(localAlphaAnimation);
   }
+  
+  public abstract void bca();
   
   public abstract void onResume();
 }

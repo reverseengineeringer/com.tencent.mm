@@ -1,8 +1,12 @@
 package com.tencent.mm.d.a;
 
+import android.content.Context;
+
 public final class ir$a
 {
-  public boolean aFS = false;
+  public String aEI;
+  public int auE = 0;
+  public Context context;
 }
 
 /* Location:

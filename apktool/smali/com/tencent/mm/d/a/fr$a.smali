@@ -15,7 +15,9 @@
 
 
 # instance fields
-.field public axP:I
+.field public aAy:Ljava/lang/String;
+
+.field public context:Landroid/content/Context;
 
 
 # direct methods

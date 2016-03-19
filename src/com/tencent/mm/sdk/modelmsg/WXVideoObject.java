@@ -1,7 +1,7 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class WXVideoObject
   implements WXMediaMessage.b
@@ -15,17 +15,17 @@ public class WXVideoObject
   {
     if (((videoUrl == null) || (videoUrl.length() == 0)) && ((videoLowBandUrl == null) || (videoLowBandUrl.length() == 0)))
     {
-      t.e("!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc=", "both arguments are null");
+      u.e("!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc=", "both arguments are null");
       return false;
     }
     if ((videoUrl != null) && (videoUrl.length() > 10240))
     {
-      t.e("!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc=", "checkArgs fail, videoUrl is too long");
+      u.e("!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc=", "checkArgs fail, videoUrl is too long");
       return false;
     }
     if ((videoLowBandUrl != null) && (videoLowBandUrl.length() > 10240))
     {
-      t.e("!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc=", "checkArgs fail, videoLowBandUrl is too long");
+      u.e("!44@/B4Tb64lLpJzNFkXfnMUR98Xd/IsQLrYLUyRWBhcjoc=", "checkArgs fail, videoLowBandUrl is too long");
       return false;
     }
     return true;

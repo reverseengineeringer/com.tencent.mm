@@ -1,11 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-
 public final class ar$a
 {
-  public String avt;
-  public Context context;
+  public int arU = 0;
 }
 
 /* Location:

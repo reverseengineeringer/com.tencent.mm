@@ -1,14 +1,34 @@
 package android.support.v4.view.a;
 
-import java.util.List;
+import android.view.accessibility.AccessibilityRecord;
 
-abstract interface d$a
+class d$a
+  extends d.e
 {
-  public abstract boolean aL();
+  public final Object ax()
+  {
+    return AccessibilityRecord.obtain();
+  }
   
-  public abstract List aM();
+  public final void d(Object paramObject, int paramInt)
+  {
+    ((AccessibilityRecord)paramObject).setFromIndex(paramInt);
+  }
   
-  public abstract Object aN();
+  public final void e(Object paramObject, int paramInt)
+  {
+    ((AccessibilityRecord)paramObject).setItemCount(paramInt);
+  }
+  
+  public final void f(Object paramObject, int paramInt)
+  {
+    ((AccessibilityRecord)paramObject).setToIndex(paramInt);
+  }
+  
+  public final void f(Object paramObject, boolean paramBoolean)
+  {
+    ((AccessibilityRecord)paramObject).setScrollable(paramBoolean);
+  }
 }
 
 /* Location:

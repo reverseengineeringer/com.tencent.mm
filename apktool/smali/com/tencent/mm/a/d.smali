@@ -1,157 +1,169 @@
 .class public final Lcom/tencent/mm/a/d;
-.super Lcom/tencent/mm/sdk/platformtools/w;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/a/d$a;
-    }
-.end annotation
-
-
 # instance fields
-.field private amH:Lcom/tencent/mm/a/d$a;
+.field private aks:Ljavax/crypto/Cipher;
+
+.field private akt:Ljavax/crypto/Cipher;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
-
-    .prologue
-    .line 13
-    invoke-direct {p0, p1}, Lcom/tencent/mm/sdk/platformtools/w;-><init>(I)V
-
-    .line 16
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/a/d;->amH:Lcom/tencent/mm/a/d$a;
-
-    .line 14
-    return-void
-.end method
-
-.method public constructor <init>(ILcom/tencent/mm/a/d$a;)V
-    .locals 1
-
-    .prologue
-    .line 34
-    invoke-direct {p0, p1}, Lcom/tencent/mm/sdk/platformtools/w;-><init>(I)V
-
-    .line 16
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/a/d;->amH:Lcom/tencent/mm/a/d$a;
-
-    .line 35
-    iput-object p2, p0, Lcom/tencent/mm/a/d;->amH:Lcom/tencent/mm/a/d$a;
-
-    .line 37
-    return-void
-.end method
-
-
-# virtual methods
-.method public final clear()V
-    .locals 1
-
-    .prologue
-    .line 26
-    const/4 v0, -0x1
-
-    invoke-super {p0, v0}, Lcom/tencent/mm/sdk/platformtools/w;->trimToSize(I)V
-
-    .line 27
-    return-void
-.end method
-
-.method protected final create(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 51
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/w;->create(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected final entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
-
-    .prologue
-    .line 56
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/tencent/mm/sdk/platformtools/w;->entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/a/d;->amH:Lcom/tencent/mm/a/d$a;
-
-    if-eqz v0, :cond_0
-
-    if-nez p4, :cond_0
-
-    .line 58
-    iget-object v0, p0, Lcom/tencent/mm/a/d;->amH:Lcom/tencent/mm/a/d$a;
-
-    invoke-interface {v0, p2, p3}, Lcom/tencent/mm/a/d$a;->g(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 60
-    :cond_0
-    return-void
-.end method
-
-.method public final f(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
+.method public constructor <init>(Ljava/lang/String;)V
+    .locals 4
 
     .prologue
     .line 19
-    if-nez p2, :cond_0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 21
+    :try_start_0
+    new-instance v0, Ljavax/crypto/spec/DESKeySpec;
+
+    const-string/jumbo v1, "UTF8"
+
+    invoke-virtual {p1, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljavax/crypto/spec/DESKeySpec;-><init>([B)V
+
+    .line 22
+    const-string/jumbo v1, "DES"
+
+    invoke-static {v1}, Ljavax/crypto/SecretKeyFactory;->getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Ljavax/crypto/SecretKeyFactory;->generateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
+
+    move-result-object v0
 
     .line 23
+    new-instance v1, Ljavax/crypto/spec/IvParameterSpec;
+
+    const-string/jumbo v2, "manifest"
+
+    const-string/jumbo v3, "UTF8"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object v2
+
+    invoke-direct {v1, v2}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
+
+    .line 25
+    const-string/jumbo v2, "DES/CBC/PKCS5Padding"
+
+    invoke-static {v2}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/tencent/mm/a/d;->aks:Ljavax/crypto/Cipher;
+
+    .line 26
+    iget-object v2, p0, Lcom/tencent/mm/a/d;->aks:Ljavax/crypto/Cipher;
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3, v0, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+
+    .line 28
+    const-string/jumbo v2, "DES/CBC/PKCS5Padding"
+
+    invoke-static {v2}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/tencent/mm/a/d;->akt:Ljavax/crypto/Cipher;
+
+    .line 29
+    iget-object v2, p0, Lcom/tencent/mm/a/d;->akt:Ljavax/crypto/Cipher;
+
+    const/4 v3, 0x2
+
+    invoke-virtual {v2, v3, v0, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 33
     :goto_0
     return-void
 
-    .line 22
-    :cond_0
-    invoke-virtual {p0, p1, p2}, Lcom/tencent/mm/a/d;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    .line 32
+    :catch_0
+    move-exception v0
 
     goto :goto_0
 .end method
 
-.method public final kQ()V
-    .locals 1
+
+# virtual methods
+.method public final av(Ljava/lang/String;)Ljava/lang/String;
+    .locals 3
 
     .prologue
-    .line 74
-    const/4 v0, -0x1
+    .line 56
+    const/4 v0, 0x0
 
-    invoke-super {p0, v0}, Lcom/tencent/mm/sdk/platformtools/w;->trimToSize(I)V
+    :try_start_0
+    invoke-static {p1, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
 
-    .line 75
-    return-void
-.end method
+    move-result-object v0
 
-.method protected final sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
+    .line 57
+    iget-object v1, p0, Lcom/tencent/mm/a/d;->akt:Ljavax/crypto/Cipher;
 
-    .prologue
-    .line 64
-    invoke-super {p0, p1, p2}, Lcom/tencent/mm/sdk/platformtools/w;->sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
+    invoke-virtual {v1, v0}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
-    move-result v0
+    move-result-object v1
 
-    return v0
-.end method
+    .line 58
+    new-instance v0, Ljava/lang/String;
 
-.method public final trimToSize(I)V
-    .locals 0
+    const-string/jumbo v2, "UTF8"
 
-    .prologue
-    .line 46
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/w;->trimToSize(I)V
+    invoke-direct {v0, v1, v2}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 47
-    return-void
+    .line 63
+    :goto_0
+    return-object v0
+
+    .line 59
+    :catch_0
+    move-exception v0
+
+    .line 61
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "[des]"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "|"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
 .end method

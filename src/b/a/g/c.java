@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 public final class c
 {
   private static String CHARSET = "UTF-8";
-  private static final Map jQf;
+  private static final Map meq;
   
   static
   {
@@ -23,12 +23,12 @@ public final class c
     localHashMap.put("*", "%2A");
     localHashMap.put("+", "%20");
     localHashMap.put("%7E", "~");
-    jQf = Collections.unmodifiableMap(localHashMap);
+    meq = Collections.unmodifiableMap(localHashMap);
   }
   
   public static String decode(String paramString)
   {
-    d.d(paramString, "Cannot decode null object");
+    d.c(paramString, "Cannot decode null object");
     try
     {
       paramString = URLDecoder.decode(paramString, CHARSET);
@@ -42,14 +42,14 @@ public final class c
   
   public static String encode(String paramString)
   {
-    d.d(paramString, "Cannot encode null object");
+    d.c(paramString, "Cannot encode null object");
     for (;;)
     {
       Iterator localIterator;
       try
       {
         paramString = URLEncoder.encode(paramString, CHARSET);
-        localIterator = jQf.entrySet().iterator();
+        localIterator = meq.entrySet().iterator();
         if (!localIterator.hasNext()) {
           return paramString;
         }

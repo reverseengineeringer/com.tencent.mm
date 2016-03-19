@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/x;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public auI:Lcom/tencent/mm/d/a/x$a;
+.field public atg:Lcom/tencent/mm/d/a/x$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/x;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/x;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/x;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/x;->arR:Z
 
     return-void
 .end method
@@ -42,23 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/x$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/x$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/x;->auI:Lcom/tencent/mm/d/a/x$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/x;->atg:Lcom/tencent/mm/d/a/x$a;
 
     .line 8
-    const-string/jumbo v0, "CloseFingerPrint"
+    const-string/jumbo v0, "ChatroomMemberDataUpdated"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/x;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/x;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/x;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/x;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/x;->jUI:Z
 
     return-void
 .end method

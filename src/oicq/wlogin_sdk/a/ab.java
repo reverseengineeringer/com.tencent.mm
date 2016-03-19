@@ -5,20 +5,20 @@ import oicq.wlogin_sdk.tools.util;
 public final class ab
   extends a
 {
-  public int jOD = 0;
+  public int mcP = 0;
   
   public ab()
   {
-    jNs = 306;
+    mbE = 306;
   }
   
-  public final Boolean aVE()
+  public final Boolean bot()
   {
-    if (jOc < 2) {
+    if (mco < 2) {
       return Boolean.valueOf(false);
     }
-    jOD = util.A(jNm, jOb);
-    if (jOD + 2 > jOc) {
+    mcP = util.E(mby, mcn);
+    if (mcP + 2 > mco) {
       return Boolean.valueOf(false);
     }
     return Boolean.valueOf(true);

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final irT:Ljava/util/Map;
+.field public static final kqN:Ljava/util/Map;
 
 
 # direct methods
@@ -17,7 +17,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->irT:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
 
     return-void
 .end method
@@ -44,7 +44,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DN()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
 
     move-result-wide v2
 
@@ -71,7 +71,7 @@
     move-result-object v2
 
     .line 79
-    sget-object v1, Lcom/tencent/mm/ui/MMWizardActivity;->irT:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
 
     invoke-interface {v1, v2, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -103,7 +103,7 @@
 
     .line 85
     :cond_0
-    invoke-static {p0, p1}, Lcom/tencent/mm/ui/MMWizardActivity;->q(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {p0, p1}, Lcom/tencent/mm/ui/MMWizardActivity;->v(Landroid/content/Context;Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -126,18 +126,18 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v1
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public static q(Landroid/content/Context;Landroid/content/Intent;)V
+.method public static v(Landroid/content/Context;Landroid/content/Intent;)V
     .locals 4
 
     .prologue
@@ -148,7 +148,7 @@
 
     const-string/jumbo v2, "startWizardActivity()"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 48
     new-instance v0, Ljava/lang/StringBuilder;
@@ -203,7 +203,7 @@
 
     .line 60
     :goto_0
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -244,7 +244,7 @@
 
     move-result-object v2
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -283,7 +283,7 @@
 
 
 # virtual methods
-.method public final aLy()V
+.method public final bbm()V
     .locals 5
 
     .prologue
@@ -294,7 +294,7 @@
 
     const-string/jumbo v1, "finishWizard()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->getIntent()Landroid/content/Intent;
 
@@ -330,7 +330,7 @@
 
     move-result-object v1
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -399,7 +399,7 @@
 
     const-string/jumbo v1, "cancel()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 106
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->getIntent()Landroid/content/Intent;
@@ -413,7 +413,7 @@
     move-result-object v1
 
     .line 107
-    sget-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->irT:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -422,7 +422,7 @@
     check-cast v0, Landroid/content/Intent;
 
     .line 108
-    sget-object v2, Lcom/tencent/mm/ui/MMWizardActivity;->irT:Ljava/util/Map;
+    sget-object v2, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -456,7 +456,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 112
     :cond_0
@@ -472,7 +472,7 @@
 
     const-string/jumbo v1, "exit()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 94
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->getIntent()Landroid/content/Intent;
@@ -486,7 +486,7 @@
     move-result-object v1
 
     .line 95
-    sget-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->irT:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -495,7 +495,7 @@
     check-cast v0, Landroid/content/Intent;
 
     .line 96
-    sget-object v2, Lcom/tencent/mm/ui/MMWizardActivity;->irT:Ljava/util/Map;
+    sget-object v2, Lcom/tencent/mm/ui/MMWizardActivity;->kqN:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -529,7 +529,7 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 99
     const-string/jumbo v1, "wizard_activity_result_code"
@@ -553,7 +553,7 @@
 
     const-string/jumbo v1, "finish()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 143
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->getIntent()Landroid/content/Intent;
@@ -587,7 +587,7 @@
 
     const-string/jumbo v1, "root wizard activity"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 147
     const/4 v0, -0x1
@@ -614,7 +614,7 @@
 
     const-string/jumbo v1, "onCreate()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 34
     const-string/jumbo v0, "MMWizardActivity Should Start By startWizardActivity or startWizardNextStep"
@@ -633,7 +633,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -686,7 +686,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 40
     invoke-virtual {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->getIntent()Landroid/content/Intent;

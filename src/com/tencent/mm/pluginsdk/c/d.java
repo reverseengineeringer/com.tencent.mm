@@ -1,53 +1,54 @@
 package com.tencent.mm.pluginsdk.c;
 
-import com.tencent.mm.d.a.ef;
+import com.tencent.mm.d.a.gm;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.g.ai;
-import com.tencent.mm.sdk.g.ai.a;
-import com.tencent.mm.sdk.g.an;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.h.g;
+import com.tencent.mm.sdk.h.g.a;
+import com.tencent.mm.sdk.h.i;
 
 public abstract class d
-  implements ai.a
+  implements g.a
 {
-  public int gKQ = 0;
+  public int izA = 0;
   
-  public abstract ai Uy();
-  
-  public final void a(String paramString, an paraman)
+  public final void a(String paramString, i parami)
   {
-    paraman = new ef();
-    aAu.aAv = mE(paramString);
-    a.hXQ.g(paraman);
+    parami = new gm();
+    aBD.aBE = pg(paramString);
+    a.jUF.j(parami);
   }
   
-  public final void ayF()
+  public final void aPh()
   {
-    if (gKQ == 0)
+    if (izA == 0)
     {
-      ai localai = Uy();
-      if (localai != null) {
-        localai.g(this);
+      g localg = abx();
+      if (localg != null) {
+        localg.c(this);
       }
     }
-    gKQ += 1;
+    izA += 1;
   }
   
-  public abstract com.tencent.mm.sdk.c.d mE(String paramString);
+  public abstract g abx();
+  
+  public abstract b pg(String paramString);
   
   public final void unregister()
   {
-    if (gKQ == 0) {}
-    ai localai;
+    if (izA == 0) {}
+    g localg;
     do
     {
       do
       {
         return;
-        gKQ -= 1;
-      } while (gKQ != 0);
-      localai = Uy();
-    } while (localai == null);
-    localai.h(this);
+        izA -= 1;
+      } while (izA != 0);
+      localg = abx();
+    } while (localg == null);
+    localg.d(this);
   }
 }
 

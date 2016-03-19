@@ -1,11 +1,9 @@
 package com.tencent.mm.d.a;
 
-import java.util.LinkedList;
-
 public final class hl$a
 {
-  public String aDK;
-  public LinkedList aEL;
+  public int aDg = 0;
+  public int aDh = 0;
 }
 
 /* Location:

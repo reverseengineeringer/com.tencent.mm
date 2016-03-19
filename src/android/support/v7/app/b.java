@@ -4,12 +4,12 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.support.v7.internal.view.menu.ExpandedMenuView;
+import android.support.v7.internal.view.menu.e.a;
+import android.support.v7.internal.view.menu.f;
 import android.support.v7.internal.view.menu.f.a;
-import android.support.v7.internal.view.menu.g;
-import android.support.v7.internal.view.menu.g.a;
-import android.support.v7.internal.view.menu.i;
-import android.support.v7.internal.view.menu.o.a;
-import android.support.v7.internal.view.menu.q;
+import android.support.v7.internal.view.menu.h;
+import android.support.v7.internal.view.menu.l.a;
+import android.support.v7.internal.view.menu.n;
 import android.support.v7.internal.widget.ActionBarContainer;
 import android.support.v7.internal.widget.ActionBarContextView;
 import android.support.v7.internal.widget.ActionBarView;
@@ -23,151 +23,145 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.widget.FrameLayout;
-import com.tencent.mm.a.d;
-import com.tencent.mm.a.e;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.o;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 
 class b
   extends a
-  implements g.a, o.a
+  implements f.a, l.a
 {
-  private static final int[] jE = { a.d.homeAsUpIndicator };
-  private ActionBarView jF;
-  private android.support.v7.internal.view.menu.f jG;
-  private g jH;
-  private android.support.v7.a.a jI;
-  private boolean jJ;
-  private boolean jK;
-  private boolean jL;
-  private boolean jM;
-  private final Runnable jN = new c(this);
+  private static final int[] iL = { 2130772121 };
+  private ActionBarView iM;
+  private android.support.v7.internal.view.menu.e iN;
+  private f iO;
+  private android.support.v7.a.a iP;
+  private boolean iQ;
+  private boolean iR;
+  private boolean iS;
+  private boolean iT;
+  private final Runnable iU = new Runnable()
+  {
+    public final void run()
+    {
+      f localf = b.a(b.this);
+      if ((iG.a(0, localf)) && (iG.a(0, null, localf))) {
+        b.a(b.this, localf);
+      }
+      for (;;)
+      {
+        b.b(b.this);
+        return;
+        b.a(b.this, null);
+      }
+    }
+  };
   
   b(ActionBarActivity paramActionBarActivity)
   {
     super(paramActionBarActivity);
   }
   
-  private g bl()
+  private f aV()
   {
-    g localg = new g(bj());
-    localg.a(this);
-    return localg;
+    f localf = new f(aT());
+    localf.a(this);
+    return localf;
   }
   
-  private void c(g paramg)
+  private void c(f paramf)
   {
-    if (paramg == jH) {}
+    if (paramf == iO) {}
     do
     {
       return;
-      if (jH != null) {
-        jH.b(jG);
+      if (iO != null) {
+        iO.b(iN);
       }
-      jH = paramg;
-      if ((paramg != null) && (jG != null)) {
-        paramg.a(jG);
+      iO = paramf;
+      if ((paramf != null) && (iN != null)) {
+        paramf.a(iN);
       }
-    } while (jF == null);
-    jF.a(paramg, this);
+    } while (iM == null);
+    iM.a(paramf, this);
   }
   
-  public final void L()
+  public final void G()
   {
-    if (!jM)
+    if (!iT)
     {
-      jM = true;
-      jz.getWindow().getDecorView().post(jN);
+      iT = true;
+      iG.getWindow().getDecorView().post(iU);
     }
   }
   
-  public final void a(g paramg)
+  public final void a(f paramf)
   {
-    if ((jF != null) && (jF.bZ()))
+    if ((iM != null) && (iM.bJ()))
     {
-      if (!jF.isOverflowMenuShowing())
+      if (!iM.isOverflowMenuShowing())
       {
-        if (jF.getVisibility() == 0) {
-          jF.showOverflowMenu();
+        if (iM.getVisibility() == 0) {
+          iM.showOverflowMenu();
         }
         return;
       }
-      jF.hideOverflowMenu();
+      iM.hideOverflowMenu();
       return;
     }
-    paramg.close();
+    paramf.close();
   }
   
-  public final void a(g paramg, boolean paramBoolean)
+  public final void a(f paramf, boolean paramBoolean)
   {
-    jz.closeOptionsMenu();
+    iG.closeOptionsMenu();
   }
   
-  public final void addContentView(View paramView, ViewGroup.LayoutParams paramLayoutParams)
+  public ActionBar aO()
   {
-    bk();
-    if (jC)
+    aU();
+    return new e(iG, iG);
+  }
+  
+  public final void aQ()
+  {
+    if ((iJ) && (iQ))
     {
-      ((ViewGroup)jz.findViewById(a.i.action_bar_activity_content)).addView(paramView, paramLayoutParams);
-      return;
-    }
-    jz.a(paramView, paramLayoutParams);
-  }
-  
-  public final boolean b(g paramg)
-  {
-    return false;
-  }
-  
-  public ActionBar be()
-  {
-    bk();
-    return new f(jz, jz);
-  }
-  
-  public final void bg()
-  {
-    if ((jC) && (jJ))
-    {
-      f localf = (f)bf();
-      localf.o(android.support.v7.internal.view.a.f(mContext).bo());
+      e locale = (e)aP();
+      locale.o(android.support.v7.internal.view.a.m(mContext).aY());
     }
   }
   
-  public final boolean bh()
+  public final boolean aR()
   {
-    if (jI != null) {
-      jI.finish();
+    if (iP != null) {
+      iP.finish();
     }
     label81:
     label90:
     for (;;)
     {
       return true;
-      if (jF == null) {
+      if (iM == null) {
         break;
       }
-      Object localObject = jF;
+      Object localObject = iM;
       int i;
-      if ((pa != null) && (pa.ph != null))
+      if ((ob != null) && (ob.oi != null))
       {
         i = 1;
         if (i == 0) {
           break;
         }
-        localObject = jF;
-        if (pa != null) {
+        localObject = iM;
+        if (ob != null) {
           break label81;
         }
       }
-      for (localObject = null;; localObject = pa.ph)
+      for (localObject = null;; localObject = ob.oi)
       {
         if (localObject == null) {
           break label90;
         }
-        ((i)localObject).collapseActionView();
+        ((h)localObject).collapseActionView();
         return true;
         i = 0;
         break;
@@ -176,84 +170,100 @@ class b
     return false;
   }
   
-  final void bk()
+  final void aU()
   {
     Object localObject;
     boolean bool2;
     boolean bool1;
-    if ((jC) && (!jJ))
+    if ((iJ) && (!iQ))
     {
-      if (!jD) {
-        break label299;
+      if (!iK) {
+        break label294;
       }
-      jz.w(a.k.abc_action_bar_decor_overlay);
-      jF = ((ActionBarView)jz.findViewById(a.i.action_bar));
-      jF.setWindowCallback(jz);
-      if (jK)
+      iG.x(2131363318);
+      iM = ((ActionBarView)iG.findViewById(2131169535));
+      iM.setWindowCallback(iG);
+      if (iR)
       {
-        localObject = jF;
-        oL = new ProgressBarICS(mContext, oP);
-        oL.setId(a.i.progress_horizontal);
-        oL.setMax(10000);
-        oL.setVisibility(8);
-        ((ActionBarView)localObject).addView(oL);
+        localObject = iM;
+        nM = new ProgressBarICS(mContext, nQ);
+        nM.setId(2131169551);
+        nM.setMax(10000);
+        nM.setVisibility(8);
+        ((ActionBarView)localObject).addView(nM);
       }
-      if (jL)
+      if (iS)
       {
-        localObject = jF;
-        oM = new ProgressBarICS(mContext, oQ);
-        oM.setId(a.i.progress_circular);
-        oM.setVisibility(8);
-        ((ActionBarView)localObject).addView(oM);
+        localObject = iM;
+        nN = new ProgressBarICS(mContext, nR);
+        nN.setId(2131169550);
+        nN.setVisibility(8);
+        ((ActionBarView)localObject).addView(nN);
       }
-      bool2 = "splitActionBarWhenNarrow".equals(bi());
+      bool2 = "splitActionBarWhenNarrow".equals(aS());
       if (!bool2) {
-        break label312;
+        break label307;
       }
-      bool1 = jz.getResources().getBoolean(a.e.abc_split_action_bar_is_narrow);
+      bool1 = iG.getResources().getBoolean(2131689474);
     }
     for (;;)
     {
-      localObject = (ActionBarContainer)jz.findViewById(a.i.split_action_bar);
+      localObject = (ActionBarContainer)iG.findViewById(2131169537);
       if (localObject != null)
       {
-        jF.setSplitView((ActionBarContainer)localObject);
-        jF.setSplitActionBar(bool1);
-        jF.setSplitWhenNarrow(bool2);
-        ActionBarContextView localActionBarContextView = (ActionBarContextView)jz.findViewById(a.i.action_context_bar);
+        iM.setSplitView((ActionBarContainer)localObject);
+        iM.setSplitActionBar(bool1);
+        iM.setSplitWhenNarrow(bool2);
+        ActionBarContextView localActionBarContextView = (ActionBarContextView)iG.findViewById(2131169536);
         localActionBarContextView.setSplitView((ActionBarContainer)localObject);
         localActionBarContextView.setSplitActionBar(bool1);
         localActionBarContextView.setSplitWhenNarrow(bool2);
       }
-      jJ = true;
-      L();
+      iQ = true;
+      G();
       return;
-      label299:
-      jz.w(a.k.abc_action_bar_decor);
+      label294:
+      iG.x(2131363301);
       break;
-      label312:
-      localObject = jz.obtainStyledAttributes(a.p.ActionBarWindow);
+      label307:
+      localObject = iG.obtainStyledAttributes(R.b.ActionBarWindow);
       bool1 = ((TypedArray)localObject).getBoolean(2, false);
       ((TypedArray)localObject).recycle();
     }
   }
   
-  public final void e(CharSequence paramCharSequence)
+  public final void addContentView(View paramView, ViewGroup.LayoutParams paramLayoutParams)
   {
-    if (jF != null) {
-      jF.setWindowTitle(paramCharSequence);
+    aU();
+    if (iJ)
+    {
+      ((ViewGroup)iG.findViewById(2131165234)).addView(paramView, paramLayoutParams);
+      return;
     }
+    iG.a(paramView, paramLayoutParams);
   }
   
-  public final boolean f(MenuItem paramMenuItem)
+  public final boolean b(f paramf)
   {
-    return jz.onMenuItemSelected(0, paramMenuItem);
+    return false;
+  }
+  
+  public final boolean d(MenuItem paramMenuItem)
+  {
+    return iG.onMenuItemSelected(0, paramMenuItem);
+  }
+  
+  public final void e(CharSequence paramCharSequence)
+  {
+    if (iM != null) {
+      iM.setWindowTitle(paramCharSequence);
+    }
   }
   
   public final boolean onCreatePanelMenu(int paramInt, Menu paramMenu)
   {
     if (paramInt != 0) {
-      return jz.a(paramInt, paramMenu);
+      return iG.a(paramInt, paramMenu);
     }
     return false;
   }
@@ -268,70 +278,70 @@ class b
     {
       boolean bool1 = true;
       boolean bool2 = true;
-      localObject3 = jH;
+      localObject3 = iO;
       localObject2 = localObject3;
-      if (jI == null)
+      if (iP == null)
       {
         localObject1 = localObject3;
         if (localObject3 == null)
         {
-          localObject1 = bl();
-          c((g)localObject1);
-          ((g)localObject1).bH();
-          bool2 = jz.a(0, (Menu)localObject1);
+          localObject1 = aV();
+          c((f)localObject1);
+          ((f)localObject1).br();
+          bool2 = iG.a(0, (Menu)localObject1);
         }
         localObject2 = localObject1;
         bool1 = bool2;
         if (bool2)
         {
-          ((g)localObject1).bH();
-          bool1 = jz.a(0, null, (Menu)localObject1);
+          ((f)localObject1).br();
+          bool1 = iG.a(0, null, (Menu)localObject1);
           localObject2 = localObject1;
         }
       }
       if (!bool1) {
-        break label326;
+        break label323;
       }
-      localObject3 = jz;
+      localObject3 = iG;
       localObject1 = localObject4;
-      if (jH != null)
+      if (iO != null)
       {
-        if (jG != null) {
-          break label315;
+        if (iN != null) {
+          break label312;
         }
-        localObject1 = ((Context)localObject3).obtainStyledAttributes(a.p.Theme);
-        paramInt = ((TypedArray)localObject1).getResourceId(4, a.o.Theme_AppCompat_CompactMenu);
+        localObject1 = ((Context)localObject3).obtainStyledAttributes(R.b.Theme);
+        paramInt = ((TypedArray)localObject1).getResourceId(4, 2131100198);
         ((TypedArray)localObject1).recycle();
-        jG = new android.support.v7.internal.view.menu.f(a.k.abc_list_menu_item_layout, paramInt);
-        jG.mg = this;
-        jH.a(jG);
+        iN = new android.support.v7.internal.view.menu.e(paramInt);
+        iN.ll = this;
+        iO.a(iN);
       }
     }
     for (;;)
     {
-      android.support.v7.internal.view.menu.f localf = jG;
+      android.support.v7.internal.view.menu.e locale = iN;
       localObject3 = new FrameLayout((Context)localObject3);
-      if (mC == null) {
-        mC = new f.a(localf);
+      if (lH == null) {
+        lH = new e.a(locale);
       }
       localObject1 = localObject4;
-      if (!mC.isEmpty())
+      if (!lH.isEmpty())
       {
-        if (mz == null)
+        if (lE == null)
         {
-          mz = ((ExpandedMenuView)iE.inflate(a.k.abc_expanded_menu_layout, (ViewGroup)localObject3, false));
-          mz.setAdapter(mC);
-          mz.setOnItemClickListener(localf);
+          lE = ((ExpandedMenuView)hI.inflate(2131363321, (ViewGroup)localObject3, false));
+          lE.setAdapter(lH);
+          lE.setOnItemClickListener(locale);
         }
-        localObject1 = mz;
+        localObject1 = lE;
       }
       localObject1 = (View)localObject1;
-      ((g)localObject2).bI();
+      ((f)localObject2).bs();
       return (View)localObject1;
-      label315:
-      jG.q(false);
+      label312:
+      iN.q(false);
     }
-    label326:
+    label323:
     c(null);
     return null;
   }
@@ -340,77 +350,77 @@ class b
   {
     MenuItem localMenuItem = paramMenuItem;
     if (paramInt == 0) {
-      localMenuItem = q.i(paramMenuItem);
+      localMenuItem = n.g(paramMenuItem);
     }
-    return jz.a(paramInt, localMenuItem);
+    return iG.a(paramInt, localMenuItem);
   }
   
   public final void onPostResume()
   {
-    f localf = (f)bf();
-    if (localf != null) {
-      localf.p(true);
+    e locale = (e)aP();
+    if (locale != null) {
+      locale.p(true);
     }
   }
   
   public final boolean onPreparePanel(int paramInt, View paramView, Menu paramMenu)
   {
     if (paramInt != 0) {
-      return jz.a(paramInt, paramView, paramMenu);
+      return iG.a(paramInt, paramView, paramMenu);
     }
     return false;
   }
   
   public final void onStop()
   {
-    f localf = (f)bf();
-    if (localf != null) {
-      localf.p(false);
+    e locale = (e)aP();
+    if (locale != null) {
+      locale.p(false);
     }
   }
   
   public final void setContentView(int paramInt)
   {
-    bk();
-    if (jC)
+    aU();
+    if (iJ)
     {
-      ViewGroup localViewGroup = (ViewGroup)jz.findViewById(a.i.action_bar_activity_content);
+      ViewGroup localViewGroup = (ViewGroup)iG.findViewById(2131165234);
       localViewGroup.removeAllViews();
-      jz.getLayoutInflater().inflate(paramInt, localViewGroup);
+      iG.getLayoutInflater().inflate(paramInt, localViewGroup);
       return;
     }
-    jz.w(paramInt);
+    iG.x(paramInt);
   }
   
   public final void setContentView(View paramView)
   {
-    bk();
-    if (jC)
+    aU();
+    if (iJ)
     {
-      ViewGroup localViewGroup = (ViewGroup)jz.findViewById(a.i.action_bar_activity_content);
+      ViewGroup localViewGroup = (ViewGroup)iG.findViewById(2131165234);
       localViewGroup.removeAllViews();
       localViewGroup.addView(paramView);
       return;
     }
-    jz.D(paramView);
+    iG.D(paramView);
   }
   
   public final void setContentView(View paramView, ViewGroup.LayoutParams paramLayoutParams)
   {
-    bk();
-    if (jC)
+    aU();
+    if (iJ)
     {
-      ViewGroup localViewGroup = (ViewGroup)jz.findViewById(a.i.action_bar_activity_content);
+      ViewGroup localViewGroup = (ViewGroup)iG.findViewById(2131165234);
       localViewGroup.removeAllViews();
       localViewGroup.addView(paramView, paramLayoutParams);
       return;
     }
-    jz.a(paramView, paramLayoutParams);
+    iG.a(paramView, paramLayoutParams);
   }
   
-  public final boolean x(int paramInt)
+  public final boolean y(int paramInt)
   {
-    jL = true;
+    iS = true;
     return true;
   }
 }

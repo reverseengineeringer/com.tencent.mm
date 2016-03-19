@@ -6,41 +6,46 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
 import com.tencent.mm.platformtools.c;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.File;
+import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
 final class FileExplorerUI$a
   extends BaseAdapter
 {
-  String fqn;
-  private File hdZ;
-  private File hea;
-  private File[] heb;
+  String gME;
+  private File iRR;
+  private File iRS;
+  private File[] iRT;
   
   private FileExplorerUI$a(FileExplorerUI paramFileExplorerUI) {}
   
   public final void a(File paramFile1, File paramFile2)
   {
-    hdZ = paramFile1;
-    if (paramFile2.getAbsolutePath().equalsIgnoreCase(fqn)) {
-      hdZ = null;
+    iRR = paramFile1;
+    if (paramFile2.getAbsolutePath().equalsIgnoreCase(gME)) {
+      iRR = null;
     }
-    hea = paramFile2;
-    if (hea.canRead())
+    iRS = paramFile2;
+    if (iRS.canRead())
     {
-      heb = hea.listFiles(new o(this));
-      if (heb.length > 0)
+      iRT = iRS.listFiles(new FileFilter()
       {
-        paramFile1 = heb;
+        public final boolean accept(File paramAnonymousFile)
+        {
+          return !paramAnonymousFile.isHidden();
+        }
+      });
+      if (iRT.length > 0)
+      {
+        paramFile1 = iRT;
         if ((paramFile1 != null) && (paramFile1.length != 0)) {
           break label81;
         }
@@ -56,9 +61,9 @@ final class FileExplorerUI$a
         if (i < j)
         {
           File localFile = paramFile1[i];
-          FileExplorerUI.b localb = new FileExplorerUI.b(hdW, (byte)0);
+          FileExplorerUI.b localb = new FileExplorerUI.b(iRO, (byte)0);
           file = localFile;
-          hed = c.iN(localFile.getName()).toUpperCase();
+          iRV = c.kr(localFile.getName()).toUpperCase();
           if (localFile.isDirectory()) {
             ((List)localObject).add(localb);
           }
@@ -69,8 +74,8 @@ final class FileExplorerUI$a
             paramFile2.add(localb);
           }
         }
-        Collections.sort((List)localObject, new p(this));
-        Collections.sort(paramFile2, new q(this));
+        Collections.sort((List)localObject, new Comparator() {});
+        Collections.sort(paramFile2, new Comparator() {});
         localObject = ((List)localObject).iterator();
         i = 0;
         while (((Iterator)localObject).hasNext())
@@ -86,17 +91,17 @@ final class FileExplorerUI$a
         }
       }
     }
-    heb = new File[0];
+    iRT = new File[0];
   }
   
   public final int getCount()
   {
     int i = 0;
-    if (heb == null) {
+    if (iRT == null) {
       return 0;
     }
-    int j = heb.length;
-    if (hdZ != null) {
+    int j = iRT.length;
+    if (iRR != null) {
       i = 1;
     }
     return i + j;
@@ -104,12 +109,12 @@ final class FileExplorerUI$a
   
   public final Object getItem(int paramInt)
   {
-    if ((hdZ != null) && (paramInt == 0)) {
-      return hdZ;
+    if ((iRR != null) && (paramInt == 0)) {
+      return iRR;
     }
-    t.d("FileExplorer", "pos:" + paramInt + ", subFile length:" + heb.length);
-    File[] arrayOfFile = heb;
-    if (hdZ == null) {}
+    u.d("FileExplorer", "pos:" + paramInt + ", subFile length:" + iRT.length);
+    File[] arrayOfFile = iRT;
+    if (iRR == null) {}
     for (;;)
     {
       return arrayOfFile[paramInt];
@@ -127,28 +132,28 @@ final class FileExplorerUI$a
     paramViewGroup = paramView;
     if (paramView == null)
     {
-      paramViewGroup = View.inflate(hdW, a.k.mail_file_explorer_item, null);
-      paramView = new FileExplorerUI.c(hdW, (byte)0);
-      cwg = ((ImageView)paramViewGroup.findViewById(a.i.file_icon_iv));
-      cFf = ((TextView)paramViewGroup.findViewById(a.i.file_name_tv));
-      hee = ((TextView)paramViewGroup.findViewById(a.i.file_summary_tv));
+      paramViewGroup = View.inflate(iRO, 2131363042, null);
+      paramView = new FileExplorerUI.c(iRO, (byte)0);
+      cNV = ((ImageView)paramViewGroup.findViewById(2131165873));
+      dda = ((TextView)paramViewGroup.findViewById(2131165768));
+      iRW = ((TextView)paramViewGroup.findViewById(2131169058));
       paramViewGroup.setTag(paramView);
     }
     Object localObject = (FileExplorerUI.c)paramViewGroup.getTag();
     paramView = (File)getItem(paramInt);
-    if (paramView == hdZ)
+    if (paramView == iRR)
     {
-      cFf.setText(paramView.getName());
-      cwg.setImageResource(a.h.qqmail_attach_back);
-      hee.setVisibility(0);
+      dda.setText(paramView.getName());
+      cNV.setImageResource(2130970138);
+      iRW.setVisibility(0);
       return paramViewGroup;
     }
-    cwg.setImageResource(FileExplorerUI.i(paramView));
-    cFf.setText(paramView.getName());
-    localObject = hee;
+    cNV.setImageResource(FileExplorerUI.l(paramView));
+    dda.setText(paramView.getName());
+    localObject = iRW;
     StringBuilder localStringBuilder = new StringBuilder().append(DateFormat.format("yyyy-MM-dd hh:mm:ss", paramView.lastModified()).toString());
     if (paramView.isDirectory()) {}
-    for (paramView = "";; paramView = "  " + bn.W(paramView.length()))
+    for (paramView = "";; paramView = "  " + ay.al(paramView.length()))
     {
       ((TextView)localObject).setText(paramView);
       return paramViewGroup;

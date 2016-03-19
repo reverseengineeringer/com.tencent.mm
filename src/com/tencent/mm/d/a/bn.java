@@ -1,23 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class bn
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awy = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auL = new a();
+  public b auM = new b();
   
   public bn()
   {
-    id = "ExitTrackRoom";
-    hXT = atO;
+    id = "ExDeviceCheckDeviceIsBound";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String username;
+    public String alN;
+    public String auJ;
+  }
+  
+  public static final class b
+  {
+    public boolean auN;
   }
 }
 

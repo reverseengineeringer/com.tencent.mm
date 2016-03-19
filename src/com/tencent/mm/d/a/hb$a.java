@@ -2,9 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class hb$a
 {
-  public boolean aEp;
-  public int height;
-  public int width;
+  public boolean aBY = false;
+  public String aCI;
+  public String aCm;
 }
 
 /* Location:

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$be
-  extends a.c
+  extends a.e
 {
   public a$be()
   {
-    super("openTimelineCheckInList", "open_timeline_checkin_list", 62, false);
+    super("getSearchSnsImage", "", 10000, false);
   }
 }
 

@@ -2,9 +2,9 @@ package com.tencent.mm.ui.c;
 
 public abstract interface a$a
 {
-  public abstract void AG(String paramString);
+  public abstract void Gv(String paramString);
   
-  public abstract void bK(String paramString1, String paramString2);
+  public abstract void cy(String paramString1, String paramString2);
 }
 
 /* Location:

@@ -1,38 +1,93 @@
 package com.tencent.mm.ui.contact.a;
 
 import android.content.Context;
-import com.tencent.mm.a.g;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.w;
-import com.tencent.mm.pluginsdk.ui.d.i;
-import com.tencent.mm.storage.q;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+import com.tencent.mm.ab.n;
+import com.tencent.mm.modelsearch.f;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class b
-  extends e
+  extends a
 {
-  private boolean jiq;
+  private static Map lmQ = new HashMap();
+  public CharSequence cKS;
+  public long cYx = -1L;
+  public String lmP;
+  private b lmR = new b();
+  a lmS = new a();
+  public String username;
   
   public b(int paramInt)
   {
-    super(paramInt);
+    super(3, paramInt);
   }
   
-  public final void dK(Context paramContext)
+  public final a.b ajt()
   {
-    com.tencent.mm.storage.k localk = cqE;
-    if (!jiq)
+    return lmR;
+  }
+  
+  protected final a.a awR()
+  {
+    return lmS;
+  }
+  
+  public final void er(Context paramContext)
+  {
+    cKS = e.a(paramContext, cKS, com.tencent.mm.aw.a.z(paramContext, 2131034564));
+  }
+  
+  public final class a
+    extends a.a
+  {
+    public TextView cHk;
+    public TextView cOd;
+    public ImageView czS;
+    
+    public a()
     {
-      localk = ax.tl().ri().yM(username);
-      cqE = localk;
-      jiq = true;
+      super();
     }
-    if (localk == null)
+  }
+  
+  public final class b
+    extends a.b
+  {
+    public b()
     {
-      ctu = "";
-      return;
+      super();
     }
-    ctu = i.a(paramContext, w.d(localk), com.tencent.mm.ao.a.v(paramContext, a.g.NormalTextSize));
-    username = field_username;
+    
+    public final View a(Context paramContext, ViewGroup paramViewGroup)
+    {
+      paramContext = LayoutInflater.from(paramContext).inflate(2131363057, paramViewGroup, false);
+      paramViewGroup = (b.a)lmS;
+      czS = ((ImageView)paramContext.findViewById(2131165293));
+      cHk = ((TextView)paramContext.findViewById(2131165340));
+      cOd = ((TextView)paramContext.findViewById(2131165341));
+      cOd.setVisibility(8);
+      paramContext.setTag(paramViewGroup);
+      return paramContext;
+    }
+    
+    public final void a(Context paramContext, a.a parama, a parama1, boolean paramBoolean1, boolean paramBoolean2)
+    {
+      paramContext = (b)parama1;
+      parama = (b.a)parama;
+      f.a(cKS, cHk);
+      n.As().a(lmP, czS, b.Hk(username));
+    }
+    
+    public final boolean bhz()
+    {
+      return false;
+    }
   }
 }
 

@@ -1,30 +1,38 @@
 package com.tencent.mm.modelgeo;
 
-import java.lang.ref.WeakReference;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import com.tencent.map.geolocation.TencentLocation;
+import com.tencent.map.geolocation.TencentLocationListener;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.HashMap;
+import java.util.Map;
 
-final class f
-  implements Runnable
+public abstract class f
+  implements TencentLocationListener
 {
-  f(e parame, boolean paramBoolean, double paramDouble1, double paramDouble2, int paramInt, double paramDouble3, double paramDouble4) {}
+  private final Map bOH = new HashMap();
   
-  public final void run()
+  public f()
   {
-    Object localObject = new LinkedList();
-    Iterator localIterator = bBs.bBl.bAZ.iterator();
-    while (localIterator.hasNext())
+    bOH.put("gps", Integer.valueOf(0));
+    bOH.put("network", Integer.valueOf(1));
+  }
+  
+  public void a(boolean paramBoolean, double paramDouble1, double paramDouble2, int paramInt, double paramDouble3, double paramDouble4) {}
+  
+  public void onLocationChanged(TencentLocation paramTencentLocation, int paramInt, String paramString)
+  {
+    u.i("!44@/B4Tb64lLpJfn8anhv+Gj4lPDE5/r0LjV8acCqgU1Wc=", "lat=%f, lng=%f, accuracy=%f errcode=%d, areastat=%d, speed=%f, bearing=%f, reason=%s, provider=%s", new Object[] { Double.valueOf(paramTencentLocation.getLatitude()), Double.valueOf(paramTencentLocation.getLongitude()), Float.valueOf(paramTencentLocation.getAccuracy()), Integer.valueOf(paramInt), paramTencentLocation.getAreaStat(), Float.valueOf(paramTencentLocation.getSpeed()), Float.valueOf(paramTencentLocation.getBearing()), paramString, paramTencentLocation.getProvider() });
+    if (paramInt == 0)
     {
-      WeakReference localWeakReference = (WeakReference)localIterator.next();
-      if ((localWeakReference != null) && (localWeakReference.get() != null)) {
-        ((List)localObject).add((b.a)localWeakReference.get());
-      }
+      a(true, paramTencentLocation.getLatitude(), paramTencentLocation.getLongitude(), ((Integer)bOH.get(paramTencentLocation.getProvider())).intValue(), paramTencentLocation.getSpeed(), paramTencentLocation.getAccuracy());
+      return;
     }
-    localObject = ((List)localObject).iterator();
-    while (((Iterator)localObject).hasNext()) {
-      ((b.a)((Iterator)localObject).next()).a(bBm, (float)bBn, (float)bBo, bBp, (float)bBq, bBr);
-    }
+    a(false, paramTencentLocation.getLatitude(), paramTencentLocation.getLongitude(), ((Integer)bOH.get(paramTencentLocation.getProvider())).intValue(), paramTencentLocation.getSpeed(), paramTencentLocation.getAccuracy());
+  }
+  
+  public void onStatusUpdate(String paramString1, int paramInt, String paramString2)
+  {
+    u.d("!44@/B4Tb64lLpJfn8anhv+Gj4lPDE5/r0LjV8acCqgU1Wc=", "onStatusUpdate, name=%s, status=%d, desc=%s", new Object[] { paramString1, Integer.valueOf(paramInt), paramString2 });
   }
 }
 

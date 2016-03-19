@@ -1,38 +1,38 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.d.a;
+import com.tencent.mm.sdk.e.a;
 
 public final class c$a
   extends a
 {
-  public String bvA;
-  public String hDq;
+  public int asc;
+  public WXMediaMessage jUS;
   
   public c$a() {}
   
   public c$a(Bundle paramBundle)
   {
-    n(paramBundle);
+    m(paramBundle);
   }
   
   public final int getType()
   {
-    return 1;
+    return 2;
+  }
+  
+  public final void l(Bundle paramBundle)
+  {
+    super.l(paramBundle);
+    paramBundle.putAll(WXMediaMessage.a.b(jUS));
+    paramBundle.putInt("_wxapi_sendmessagetowx_req_scene", asc);
   }
   
   public final void m(Bundle paramBundle)
   {
     super.m(paramBundle);
-    paramBundle.putString("_wxapi_sendauth_req_scope", hDq);
-    paramBundle.putString("_wxapi_sendauth_req_state", bvA);
-  }
-  
-  public final void n(Bundle paramBundle)
-  {
-    super.n(paramBundle);
-    hDq = paramBundle.getString("_wxapi_sendauth_req_scope");
-    bvA = paramBundle.getString("_wxapi_sendauth_req_state");
+    jUS = WXMediaMessage.a.J(paramBundle);
+    asc = paramBundle.getInt("_wxapi_sendmessagetowx_req_scene");
   }
 }
 

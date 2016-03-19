@@ -1,108 +1,52 @@
-.class final Lcom/tencent/mm/sdk/platformtools/au;
-.super Landroid/telephony/PhoneStateListener;
+.class public final Lcom/tencent/mm/sdk/platformtools/au;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic iau:Lcom/tencent/mm/sdk/platformtools/at;
+# static fields
+.field private static final jXR:Ljava/util/HashMap;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/sdk/platformtools/at;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 207
-    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/au;->iau:Lcom/tencent/mm/sdk/platformtools/at;
+    .line 7
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/au;->jXR:Ljava/util/HashMap;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final onSignalStrengthsChanged(Landroid/telephony/SignalStrength;)V
-    .locals 3
+.method public static getProperty(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
     .prologue
-    .line 210
-    invoke-super {p0, p1}, Landroid/telephony/PhoneStateListener;->onSignalStrengthsChanged(Landroid/telephony/SignalStrength;)V
+    .line 14
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/au;->jXR:Ljava/util/HashMap;
 
-    .line 211
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/au;->iau:Lcom/tencent/mm/sdk/platformtools/at;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/at;->a(Lcom/tencent/mm/sdk/platformtools/at;)I
-
-    move-result v0
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    .line 212
-    invoke-virtual {p1}, Landroid/telephony/SignalStrength;->getCdmaDbm()I
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/at;->iY(I)I
-
-    .line 214
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/au;->iau:Lcom/tencent/mm/sdk/platformtools/at;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/at;->a(Lcom/tencent/mm/sdk/platformtools/at;)I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_1
-
-    .line 216
-    invoke-virtual {p1}, Landroid/telephony/SignalStrength;->getGsmSignalStrength()I
-
-    move-result v0
-
-    mul-int/lit8 v0, v0, 0x2
-
-    add-int/lit8 v0, v0, -0x71
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/at;->iY(I)I
-
-    .line 218
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/au;->iau:Lcom/tencent/mm/sdk/platformtools/at;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/at;)Landroid/telephony/TelephonyManager;
+    invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
+    check-cast v0, Ljava/lang/String;
 
-    .line 219
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/au;->iau:Lcom/tencent/mm/sdk/platformtools/at;
+    return-object v0
+.end method
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/at;->b(Lcom/tencent/mm/sdk/platformtools/at;)Landroid/telephony/TelephonyManager;
+.method public static setProperty(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
 
-    move-result-object v0
+    .prologue
+    .line 18
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/au;->jXR:Ljava/util/HashMap;
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/au;->iau:Lcom/tencent/mm/sdk/platformtools/at;
+    invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/at;->c(Lcom/tencent/mm/sdk/platformtools/at;)Landroid/telephony/PhoneStateListener;
-
-    move-result-object v1
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/telephony/TelephonyManager;->listen(Landroid/telephony/PhoneStateListener;I)V
-
-    .line 221
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/au;->iau:Lcom/tencent/mm/sdk/platformtools/at;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/at;->d(Lcom/tencent/mm/sdk/platformtools/at;)Landroid/telephony/TelephonyManager;
-
-    .line 222
+    .line 19
     return-void
 .end method

@@ -265,8 +265,8 @@ public final class c
     //   531: aload 16
     //   533: aload 5
     //   535: aload_2
-    //   536: invokestatic 192	com/tencent/mm/dbsupport/newcursor/c:do	(Ljava/lang/String;)Ljava/util/ArrayList;
-    //   539: invokestatic 196	com/tencent/mm/dbsupport/newcursor/c:f	(Ljava/util/ArrayList;)Ljava/lang/String;
+    //   536: invokestatic 192	com/tencent/mm/dbsupport/newcursor/c:du	(Ljava/lang/String;)Ljava/util/ArrayList;
+    //   539: invokestatic 196	com/tencent/mm/dbsupport/newcursor/c:e	(Ljava/util/ArrayList;)Ljava/lang/String;
     //   542: invokevirtual 200	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     //   545: pop
     //   546: aload 6
@@ -525,7 +525,7 @@ public final class c
     //   616	628	816	java/lang/Exception
   }
   
-  private static ArrayList jdMethod_do(String paramString)
+  private static ArrayList du(String paramString)
   {
     ArrayList localArrayList = new ArrayList();
     paramString = paramString.substring(paramString.indexOf("(") + 1, paramString.lastIndexOf(")")).trim().split(",");
@@ -542,7 +542,7 @@ public final class c
     }
   }
   
-  private static String f(ArrayList paramArrayList)
+  private static String e(ArrayList paramArrayList)
   {
     if ((paramArrayList == null) || (paramArrayList.size() == 0)) {
       return "";
@@ -569,7 +569,7 @@ public final class c
   
   public static abstract interface a
   {
-    public abstract String qJ();
+    public abstract String qF();
   }
 }
 

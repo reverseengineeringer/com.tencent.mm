@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field public aFt:J
+.field public aDW:I
 
-.field public aFu:Ljava/lang/String;
+.field public context:Landroid/content/Context;
 
-.field public axw:I
+.field public extraInfo:Ljava/lang/String;
 
-.field public funcName:Ljava/lang/String;
+.field public jumpType:I
 
 
 # direct methods

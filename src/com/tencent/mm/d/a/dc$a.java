@@ -2,8 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class dc$a
 {
-  public int avp = 0;
-  public byte[] azc;
+  public boolean awe;
 }
 
 /* Location:

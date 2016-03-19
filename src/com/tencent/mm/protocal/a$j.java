@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$j
-  extends a.c
+  extends a.e
 {
   public a$j()
   {
-    super("cancelAddEmoticon", "cancel_add_emoticon", 10, false);
+    super("batchAddCard", "batch_add_card", 82, true);
   }
 }
 

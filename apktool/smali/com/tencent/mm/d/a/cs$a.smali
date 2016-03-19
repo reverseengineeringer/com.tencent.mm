@@ -15,21 +15,16 @@
 
 
 # instance fields
-.field public ayC:J
+.field public auR:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 0
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/tencent/mm/d/a/cs$a;->ayC:J
 
     return-void
 .end method

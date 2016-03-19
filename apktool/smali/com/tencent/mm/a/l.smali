@@ -1,201 +1,161 @@
 .class public final Lcom/tencent/mm/a/l;
-.super Ljava/lang/Number;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field private uin:I
-
-
 # direct methods
-.method public constructor <init>(I)V
-    .locals 1
-
-    .prologue
-    .line 13
-    invoke-direct {p0}, Ljava/lang/Number;-><init>()V
-
-    .line 11
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/tencent/mm/a/l;->uin:I
-
-    .line 14
-    iput p1, p0, Lcom/tencent/mm/a/l;->uin:I
-
-    .line 15
-    return-void
-.end method
-
-.method public constructor <init>(J)V
+.method public static a([BLjava/security/PublicKey;)[B
     .locals 2
 
     .prologue
-    .line 17
-    invoke-direct {p0}, Ljava/lang/Number;-><init>()V
+    .line 209
+    const-string/jumbo v0, "RSA/ECB/PKCS1Padding"
 
-    .line 11
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/tencent/mm/a/l;->uin:I
-
-    .line 18
-    const-wide/16 v0, -0x1
-
-    and-long/2addr v0, p1
-
-    long-to-int v0, v0
-
-    iput v0, p0, Lcom/tencent/mm/a/l;->uin:I
-
-    .line 19
-    return-void
-.end method
-
-.method public static aH(Ljava/lang/String;)I
-    .locals 4
-
-    .prologue
-    .line 27
-    :try_start_0
-    invoke-static {p0}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
+    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
 
     move-result-object v0
 
-    .line 28
-    new-instance v1, Lcom/tencent/mm/a/l;
+    .line 210
+    const/4 v1, 0x2
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    invoke-virtual {v0, v1, p1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
-    move-result-wide v2
+    .line 211
+    invoke-virtual {v0, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
 
-    invoke-direct {v1, v2, v3}, Lcom/tencent/mm/a/l;-><init>(J)V
+    move-result-object v0
 
-    invoke-virtual {v1}, Lcom/tencent/mm/a/l;->intValue()I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    return-object v0
+.end method
+
+.method public static k(Landroid/content/Context;Ljava/lang/String;)Ljava/security/PublicKey;
+    .locals 3
+
+    .prologue
+    .line 154
+    const/4 v1, 0x0
+
+    .line 157
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getAssets()Landroid/content/res/AssetManager;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p1}, Landroid/content/res/AssetManager;->open(Ljava/lang/String;)Ljava/io/InputStream;
+
+    move-result-object v1
+
+    .line 158
+    invoke-virtual {v1}, Ljava/io/InputStream;->available()I
 
     move-result v0
 
-    .line 33
-    :goto_0
-    return v0
+    .line 159
+    new-array v0, v0, [B
 
-    :catch_0
+    .line 160
+    invoke-virtual {v1, v0}, Ljava/io/InputStream;->read([B)I
+
+    .line 161
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 163
+    if-eqz v1, :cond_0
+
+    .line 165
+    :try_start_1
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_1
+    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 171
+    :cond_0
+    :goto_0
+    new-instance v1, Ljava/lang/String;
+
+    invoke-direct {v1, v0}, Ljava/lang/String;-><init>([B)V
+
+    .line 174
+    const-string/jumbo v0, "\n"
+
+    const-string/jumbo v2, ""
+
+    invoke-virtual {v1, v0, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "-----BEGIN PUBLIC KEY-----"
+
+    const-string/jumbo v2, ""
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "-----END PUBLIC KEY-----"
+
+    const-string/jumbo v2, ""
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 178
+    const/4 v1, 0x0
+
+    invoke-static {v0, v1}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+
+    move-result-object v0
+
+    .line 179
+    new-instance v1, Ljava/security/spec/X509EncodedKeySpec;
+
+    invoke-direct {v1, v0}, Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V
+
+    .line 180
+    const-string/jumbo v0, "RSA"
+
+    invoke-static {v0}, Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;
+
+    move-result-object v0
+
+    .line 181
+    invoke-virtual {v0, v1}, Ljava/security/KeyFactory;->generatePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;
+
+    move-result-object v0
+
+    return-object v0
+
+    .line 163
+    :catchall_0
     move-exception v0
 
-    const/4 v0, 0x0
+    if-eqz v1, :cond_1
+
+    .line 165
+    :try_start_2
+    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_1
+
+    .line 168
+    :cond_1
+    :goto_1
+    throw v0
+
+    :catch_0
+    move-exception v1
 
     goto :goto_0
-.end method
 
-.method public static getString(I)Ljava/lang/String;
-    .locals 1
+    :catch_1
+    move-exception v1
 
-    .prologue
-    .line 64
-    new-instance v0, Lcom/tencent/mm/a/l;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/a/l;-><init>(I)V
-
-    invoke-virtual {v0}, Lcom/tencent/mm/a/l;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-
-# virtual methods
-.method public final doubleValue()D
-    .locals 4
-
-    .prologue
-    .line 38
-    iget v0, p0, Lcom/tencent/mm/a/l;->uin:I
-
-    int-to-long v0, v0
-
-    const-wide/16 v2, 0x0
-
-    or-long/2addr v0, v2
-
-    long-to-double v0, v0
-
-    const-wide/16 v2, 0x0
-
-    add-double/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final floatValue()F
-    .locals 4
-
-    .prologue
-    .line 43
-    iget v0, p0, Lcom/tencent/mm/a/l;->uin:I
-
-    int-to-long v0, v0
-
-    const-wide/16 v2, 0x0
-
-    or-long/2addr v0, v2
-
-    long-to-double v0, v0
-
-    const-wide/16 v2, 0x0
-
-    add-double/2addr v0, v2
-
-    double-to-float v0, v0
-
-    return v0
-.end method
-
-.method public final intValue()I
-    .locals 1
-
-    .prologue
-    .line 48
-    iget v0, p0, Lcom/tencent/mm/a/l;->uin:I
-
-    return v0
-.end method
-
-.method public final longValue()J
-    .locals 4
-
-    .prologue
-    .line 53
-    iget v0, p0, Lcom/tencent/mm/a/l;->uin:I
-
-    int-to-long v0, v0
-
-    const-wide v2, 0xffffffffL
-
-    and-long/2addr v0, v2
-
-    return-wide v0
-.end method
-
-.method public final toString()Ljava/lang/String;
-    .locals 4
-
-    .prologue
-    .line 58
-    iget v0, p0, Lcom/tencent/mm/a/l;->uin:I
-
-    int-to-long v0, v0
-
-    const-wide v2, 0xffffffffL
-
-    and-long/2addr v0, v2
-
-    .line 59
-    invoke-static {v0, v1}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    goto :goto_1
 .end method

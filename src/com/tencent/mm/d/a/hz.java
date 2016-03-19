@@ -1,24 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import java.util.ArrayList;
 
 public final class hz
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFh = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDM = new a();
   
   public hz()
   {
-    id = "SnsTranslateStart";
-    hXT = atO;
+    id = "OmitAllResendSns";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String id;
-    public int type = 0;
+    public ArrayList azP;
   }
 }
 

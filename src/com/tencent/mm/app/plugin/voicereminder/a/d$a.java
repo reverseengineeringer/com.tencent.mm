@@ -1,11 +1,8 @@
 package com.tencent.mm.app.plugin.voicereminder.a;
 
-public final class d$a
+public abstract interface d$a
 {
-  public int apM = 0;
-  public int apR = 0;
-  public byte[] buf = null;
-  public int ret = 0;
+  public abstract void a(String paramString, long paramLong);
 }
 
 /* Location:

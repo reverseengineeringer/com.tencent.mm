@@ -1,137 +1,144 @@
 package com.tencent.mm.plugin.sight.decode.a;
 
-import android.graphics.Bitmap;
-import android.graphics.Bitmap.Config;
-import android.view.Surface;
-import android.view.View;
-import com.tencent.mm.plugin.sight.base.SightVideoJNI;
-import com.tencent.mm.sdk.platformtools.t;
-import java.lang.ref.WeakReference;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnErrorListener;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 final class b$i
   implements Runnable
 {
-  WeakReference fhJ = new WeakReference(null);
+  double gxF = -1.0D;
+  MediaPlayer gxV;
+  int type;
   
   private b$i(b paramb) {}
   
+  private void avS()
+  {
+    u.i("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "stopPlayer");
+    try
+    {
+      if (gxV != null)
+      {
+        gxV.stop();
+        gxV.release();
+        gxV = null;
+      }
+      return;
+    }
+    catch (Exception localException)
+    {
+      u.printErrStackTrace("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", localException, "stop play sound error: %s", new Object[] { localException.getMessage() });
+      gxV = null;
+    }
+  }
+  
   public final void run()
   {
-    boolean bool1 = true;
-    label63:
-    label76:
-    label89:
-    label193:
-    label209:
-    label215:
-    label221:
-    label227:
-    label233:
-    label252:
-    View localView2;
-    if ((b.n(fhz) == null) || (!b.n(fhz).isValid()))
+    String str;
+    switch (type)
     {
-      i = fhz.hashCode();
-      j = hashCode();
-      boolean bool2;
-      boolean bool3;
-      boolean bool4;
-      Bitmap localBitmap;
-      View localView1;
-      if (b.n(fhz) == null)
+    default: 
+      str = "unknown";
+      u.i("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "do play sound, operation %s", new Object[] { str });
+      switch (type)
       {
-        bool1 = true;
-        if (b.o(fhz) != null) {
-          break label209;
-        }
-        bool2 = true;
-        if (fhJ.get() != null) {
-          break label215;
-        }
-        bool3 = true;
-        if (b.p(fhz) != null) {
-          break label221;
-        }
-        bool4 = true;
-        t.w("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "#0x%x-#0x%x want draw thumb, but surface status error, surface null ? %B, thumb bgView null ? %B, thumb null ? %B, mask null ? %B", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Boolean.valueOf(bool1), Boolean.valueOf(bool2), Boolean.valueOf(bool3), Boolean.valueOf(bool4) });
-        if (b.p(fhz) != null) {
-          break label252;
-        }
-        localBitmap = (Bitmap)fhJ.get();
-        if (b.o(fhz) == null) {
-          break label227;
-        }
-        localView1 = (View)b.o(fhz).get();
-        if ((localView1 != null) && (localBitmap != null)) {
-          break label233;
-        }
       }
-      for (;;)
-      {
-        return;
-        bool1 = false;
-        break;
-        bool2 = false;
-        break label63;
-        bool3 = false;
-        break label76;
-        bool4 = false;
-        break label89;
-        localView1 = null;
-        break label193;
-        localView1.post(new g(this, localView1, localBitmap));
-        return;
-        if ((b.q(fhz) == null) || (b.q(fhz).getWidth() != b.p(fhz).getWidth()) || (b.q(fhz).getHeight() != b.p(fhz).getHeight())) {}
-        try
-        {
-          b.a(fhz, Bitmap.createBitmap(b.p(fhz).getWidth(), b.p(fhz).getHeight(), Bitmap.Config.ARGB_8888));
-          long l = System.nanoTime();
-          SightVideoJNI.handleThumb((Bitmap)fhJ.get(), b.q(fhz), b.p(fhz));
-          t.i("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "handle thumb use %d us", new Object[] { Long.valueOf((System.nanoTime() - l) / 1000L) });
-          localBitmap = b.q(fhz);
-          if (b.o(fhz) != null)
-          {
-            localView1 = (View)b.o(fhz).get();
-            if ((localView1 == null) || (localBitmap == null)) {
-              continue;
-            }
-            localView1.post(new h(this, localView1, localBitmap));
-            b.a(fhz, null);
-          }
-        }
-        catch (Exception localException)
-        {
-          for (;;)
-          {
-            t.printErrStackTrace("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", localException, "try to create thumb bmp error:%s", new Object[] { localException.getMessage() });
-            b.a(fhz, null);
-            continue;
-            localView2 = null;
-          }
-        }
-      }
+      break;
     }
-    int i = fhz.hashCode();
-    int j = hashCode();
-    if (fhJ.get() == null) {}
     for (;;)
     {
-      t.d("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "#0x%x-#0x%x draw thumb, thumb empty ? %B", new Object[] { Integer.valueOf(i), Integer.valueOf(j), Boolean.valueOf(bool1) });
-      if (b.o(fhz) != null)
+      return;
+      str = "start";
+      break;
+      str = "stop";
+      break;
+      str = "pause";
+      break;
+      str = "resume";
+      break;
+      str = "seek";
+      break;
+      avS();
+      if (!ay.kz(b.a(gxL)))
       {
-        localView2 = (View)b.o(fhz).get();
-        if (localView2 != null) {
-          localView2.post(new i(this, localView2));
+        try
+        {
+          gxV = new MediaPlayer();
+          gxV.setDisplay(null);
+          gxV.reset();
+          gxV.setDataSource(b.a(gxL));
+          gxV.setAudioStreamType(3);
+          gxV.setOnErrorListener(new MediaPlayer.OnErrorListener()
+          {
+            public final boolean onError(MediaPlayer paramAnonymousMediaPlayer, int paramAnonymousInt1, int paramAnonymousInt2)
+            {
+              u.e("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "on error: play %s ERROR!! %d %d", new Object[] { b.a(gxL), Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) });
+              gxL.clear();
+              if (b.b(gxL) != null) {
+                b.b(gxL).a(gxL, -1);
+              }
+              return true;
+            }
+          });
+          gxV.prepare();
+          gxV.start();
+          return;
+        }
+        catch (Exception localException1)
+        {
+          u.printErrStackTrace("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", localException1, "play sound error: %s", new Object[] { localException1.getMessage() });
+          u.e("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "on Exception: play %s ERROR!!", new Object[] { b.a(gxL) });
+          gxL.clear();
+        }
+        if (b.b(gxL) != null)
+        {
+          b.b(gxL).a(gxL, -1);
+          return;
+          avS();
+          return;
+          try
+          {
+            if ((gxV == null) || (!gxV.isPlaying())) {
+              continue;
+            }
+            gxV.pause();
+            return;
+          }
+          catch (Exception localException2)
+          {
+            u.printErrStackTrace("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", localException2, "pause sound error: %s", new Object[] { localException2.getMessage() });
+            avS();
+            return;
+          }
+          try
+          {
+            if (gxV != null)
+            {
+              gxV.start();
+              return;
+            }
+          }
+          catch (Exception localException3)
+          {
+            u.printErrStackTrace("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", localException3, "pause sound error: %s", new Object[] { localException3.getMessage() });
+            avS();
+            return;
+          }
         }
       }
-      if (fhJ.get() != null) {
-        break;
-      }
-      SightVideoJNI.drawSurfaceColor(b.n(fhz), 0);
-      return;
-      bool1 = false;
     }
-    SightVideoJNI.drawSurfaceThumb(b.n(fhz), (Bitmap)fhJ.get(), b.p(fhz));
+    try
+    {
+      u.i("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "soundplayer seek %f", new Object[] { Double.valueOf(gxF) });
+      gxV.seekTo((int)(gxF * 1000.0D));
+      return;
+    }
+    catch (Exception localException4)
+    {
+      u.printErrStackTrace("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", localException4, "seek sound error: %s", new Object[] { localException4.getMessage() });
+    }
   }
 }
 

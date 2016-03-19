@@ -1,9 +1,6 @@
 package com.tencent.mm.d.a;
 
-public final class ka$a
-{
-  public int ave;
-}
+public final class ka$a {}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.d.a.ka.a

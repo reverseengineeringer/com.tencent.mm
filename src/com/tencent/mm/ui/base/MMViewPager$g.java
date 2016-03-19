@@ -1,18 +1,18 @@
 package com.tencent.mm.ui.base;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.aa;
 import java.lang.ref.WeakReference;
 
 public final class MMViewPager$g
-  extends ac
+  extends aa
 {
-  WeakReference iJb;
-  long iJc;
+  WeakReference kIn;
+  long kIo;
   
   public MMViewPager$g(WeakReference paramWeakReference)
   {
-    iJb = paramWeakReference;
+    kIn = paramWeakReference;
   }
   
   public final void handleMessage(Message paramMessage)
@@ -20,16 +20,16 @@ public final class MMViewPager$g
     super.handleMessage(paramMessage);
     removeMessages(what);
     MMViewPager localMMViewPager;
-    if (iJb != null)
+    if (kIn != null)
     {
-      localMMViewPager = (MMViewPager)iJb.get();
+      localMMViewPager = (MMViewPager)kIn.get();
       if ((localMMViewPager != null) && (what == 1))
       {
-        if ((MMViewPager.k(localMMViewPager) == null) || (MMViewPager.k(localMMViewPager).ayV())) {
+        if ((MMViewPager.k(localMMViewPager) == null) || (MMViewPager.k(localMMViewPager).aPA())) {
           break label81;
         }
         MMViewPager.k(localMMViewPager).play();
-        sendEmptyMessageDelayed(what, iJc);
+        sendEmptyMessageDelayed(what, kIo);
       }
     }
     return;

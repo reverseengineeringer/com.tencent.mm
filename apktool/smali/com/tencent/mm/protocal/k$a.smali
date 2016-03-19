@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field public final hgU:[I
+.field public final iUR:[I
 
-.field public final hgV:[I
+.field public final iUS:[I
 
-.field public final hgW:I
+.field public final iUT:I
 
-.field public final hgX:I
+.field public final iUU:I
 
 
 # direct methods
@@ -35,16 +35,16 @@
     .line 197
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/k$a;->hgU:[I
+    iput-object v0, p0, Lcom/tencent/mm/protocal/k$a;->iUR:[I
 
     .line 198
-    iput-object p1, p0, Lcom/tencent/mm/protocal/k$a;->hgV:[I
+    iput-object p1, p0, Lcom/tencent/mm/protocal/k$a;->iUS:[I
 
     .line 199
-    iput p2, p0, Lcom/tencent/mm/protocal/k$a;->hgW:I
+    iput p2, p0, Lcom/tencent/mm/protocal/k$a;->iUT:I
 
     .line 200
-    iput p3, p0, Lcom/tencent/mm/protocal/k$a;->hgX:I
+    iput p3, p0, Lcom/tencent/mm/protocal/k$a;->iUU:I
 
     .line 201
     return-void

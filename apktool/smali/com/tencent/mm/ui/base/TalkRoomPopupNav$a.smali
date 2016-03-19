@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract aNu()V
+.method public abstract bdl()V
 .end method
 
-.method public abstract aNv()V
+.method public abstract bdm()V
 .end method

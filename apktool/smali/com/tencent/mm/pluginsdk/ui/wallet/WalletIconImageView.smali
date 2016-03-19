@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private hfH:I
+.field private iTw:I
 
-.field private hfI:I
+.field private iTx:I
 
-.field private hfJ:Landroid/view/View$OnClickListener;
+.field private iTy:Landroid/view/View$OnClickListener;
 
 
 # direct methods
@@ -35,17 +35,17 @@
     .line 18
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->hfH:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->iTw:I
 
     .line 19
     const/4 v0, 0x4
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->hfI:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->iTx:I
 
     .line 20
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->hfJ:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->iTy:Landroid/view/View$OnClickListener;
 
     .line 24
     return-void
@@ -53,22 +53,22 @@
 
 
 # virtual methods
-.method public final aCY()V
+.method public final aSX()V
     .locals 1
 
     .prologue
     .line 60
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->hfI:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->iTx:I
 
     invoke-super {p0, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 61
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->hfH:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->iTw:I
 
     invoke-super {p0, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 62
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->hfJ:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->iTy:Landroid/view/View$OnClickListener;
 
     invoke-super {p0, v0}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -81,7 +81,7 @@
 
     .prologue
     .line 36
-    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->hfH:I
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->iTw:I
 
     .line 37
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
@@ -95,7 +95,7 @@
 
     .prologue
     .line 48
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->hfJ:Landroid/view/View$OnClickListener;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->iTy:Landroid/view/View$OnClickListener;
 
     .line 50
     return-void
@@ -111,7 +111,7 @@
     invoke-super {p0, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 54
-    sget v0, Lcom/tencent/mm/a$h;->search_clear:I
+    const v0, 0x7f0406c3
 
     invoke-super {p0, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -120,7 +120,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$n;->clear_btn:I
+    const v1, 0x7f0b08e4
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -140,7 +140,7 @@
 
     .prologue
     .line 42
-    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->hfI:I
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/wallet/WalletIconImageView;->iTx:I
 
     .line 43
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setVisibility(I)V

@@ -1,20 +1,24 @@
 package com.tencent.mm.app;
 
-import com.tencent.mm.model.am;
-import com.tencent.mm.model.ax;
+import android.app.Application;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.os.Build;
+import android.util.Base64;
+import android.util.StringBuilderPrinter;
+import com.tencent.mm.loader.stub.BaseBuildInfo;
+import com.tencent.mm.loader.stub.a;
+import com.tencent.mm.loader.stub.c;
+import com.tencent.mm.sdk.platformtools.ae;
+import com.tencent.mm.sdk.platformtools.ae.a;
+import com.tencent.mm.sdk.platformtools.ae.c;
+import com.tencent.mm.sdk.platformtools.y;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
-final class f
-  implements Runnable
-{
-  f(e parame, int paramInt) {}
-  
-  public final void run()
-  {
-    if (ax.sQ() != null) {
-      ax.sQ().cc(anr);
-    }
-  }
-}
+public final class f {}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.app.f

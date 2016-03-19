@@ -13,15 +13,15 @@
 
 
 # static fields
-.field private static bPX:Ljava/lang/reflect/Method;
+.field private static cgO:Ljava/lang/reflect/Method;
 
-.field private static bPY:Ljava/lang/reflect/Method;
+.field private static cgP:Ljava/lang/reflect/Method;
 
 
 # instance fields
-.field private bPV:Landroid/media/AudioManager;
+.field private cgM:Landroid/media/AudioManager;
 
-.field private bPW:Landroid/content/ComponentName;
+.field private cgN:Landroid/content/ComponentName;
 
 
 # direct methods
@@ -31,7 +31,7 @@
     .prologue
     .line 31
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->bPX:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->cgO:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_0
 
@@ -53,10 +53,10 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->bPX:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->cgO:Ljava/lang/reflect/Method;
 
     :cond_0
-    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->bPY:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->cgP:Ljava/lang/reflect/Method;
 
     if-nez v0, :cond_1
 
@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->bPY:Ljava/lang/reflect/Method;
+    sput-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->cgP:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -101,7 +101,7 @@
     .prologue
     .line 174
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->bPY:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->cgP:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/reflect/InvocationTargetException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalAccessException; {:try_start_0 .. :try_end_0} :catch_1
@@ -118,9 +118,9 @@
     .line 174
     :cond_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->bPY:Ljava/lang/reflect/Method;
+    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController;->cgP:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/tencent/mm/modelvoice/RemoteController;->bPV:Landroid/media/AudioManager;
+    iget-object v1, p0, Lcom/tencent/mm/modelvoice/RemoteController;->cgM:Landroid/media/AudioManager;
 
     const/4 v2, 0x1
 
@@ -128,7 +128,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/modelvoice/RemoteController;->bPW:Landroid/content/ComponentName;
+    iget-object v4, p0, Lcom/tencent/mm/modelvoice/RemoteController;->cgN:Landroid/content/ComponentName;
 
     aput-object v4, v2, v3
 
@@ -138,7 +138,7 @@
     .catch Ljava/lang/IllegalAccessException; {:try_start_1 .. :try_end_1} :catch_1
 
     :goto_1
-    invoke-static {}, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->Cj()V
+    invoke-static {}, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->Eq()V
 
     goto :goto_0
 
@@ -194,7 +194,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 .end method

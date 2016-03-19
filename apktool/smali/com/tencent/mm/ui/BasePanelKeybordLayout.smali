@@ -3,8 +3,18 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/ui/BasePanelKeybordLayout$a;
+    }
+.end annotation
+
+
 # instance fields
-.field private gVE:I
+.field private iLY:I
+
+.field private kju:Lcom/tencent/mm/ui/BasePanelKeybordLayout$a;
 
 
 # direct methods
@@ -12,15 +22,20 @@
     .locals 1
 
     .prologue
-    .line 26
+    .line 32
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/KeyboardLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 32
+    .line 25
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->kju:Lcom/tencent/mm/ui/BasePanelKeybordLayout$a;
+
+    .line 38
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->gVE:I
+    iput v0, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->iLY:I
 
-    .line 27
+    .line 33
     return-void
 .end method
 
@@ -28,15 +43,20 @@
     .locals 1
 
     .prologue
-    .line 30
+    .line 36
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/KeyboardLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 32
+    .line 25
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->kju:Lcom/tencent/mm/ui/BasePanelKeybordLayout$a;
+
+    .line 38
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->gVE:I
+    iput v0, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->iLY:I
 
-    .line 31
+    .line 37
     return-void
 .end method
 
@@ -55,17 +75,17 @@
 
     const/4 v2, 0x0
 
-    .line 38
+    .line 48
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 39
+    .line 49
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v4
 
-    .line 41
+    .line 51
     const-string/jumbo v1, "!44@/B4Tb64lLpJsVdmH+NTxJtbiDDQ2LHTrqCpSsv0IxKQ="
 
     const-string/jumbo v3, "onMeasure, width: %d, height: %d"
@@ -84,97 +104,97 @@
 
     aput-object v0, v5, v10
 
-    invoke-static {v1, v3, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 42
+    .line 52
     if-ltz v4, :cond_0
 
-    .line 43
-    iget v0, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->gVE:I
+    .line 53
+    iget v0, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->iLY:I
 
     if-gez v0, :cond_1
 
-    .line 47
-    iput v4, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->gVE:I
+    .line 57
+    iput v4, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->iLY:I
 
-    .line 102
+    .line 110
     :cond_0
     :goto_0
     invoke-super {p0, p1, p2}, Lcom/tencent/mm/ui/KeyboardLinearLayout;->onMeasure(II)V
 
-    .line 104
+    .line 118
     return-void
 
-    .line 51
+    .line 61
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->gVE:I
+    iget v0, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->iLY:I
 
     sub-int v5, v0, v4
 
-    .line 52
-    iput v4, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->gVE:I
+    .line 62
+    iput v4, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->iLY:I
 
-    .line 54
+    .line 64
     if-eqz v5, :cond_0
 
-    .line 55
+    .line 65
     invoke-virtual {p0}, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->getPanelView()Landroid/view/View;
 
     move-result-object v6
 
-    .line 60
+    .line 70
     if-eqz v6, :cond_0
 
-    .line 61
+    .line 71
     invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 66
+    .line 76
     if-eqz v0, :cond_0
 
-    .line 67
+    .line 77
     iget v1, v0, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
     if-gez v1, :cond_7
 
     move v1, v2
 
-    .line 71
+    .line 81
     :goto_1
     if-gez v1, :cond_2
 
     move v1, v2
 
-    .line 72
+    .line 82
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/compatible/util/l;->as(Landroid/content/Context;)I
+    invoke-static {v3}, Lcom/tencent/mm/compatible/util/h;->az(Landroid/content/Context;)I
 
     move-result v7
 
-    .line 73
+    .line 83
     invoke-virtual {p0}, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/compatible/util/l;->at(Landroid/content/Context;)I
+    invoke-static {v3}, Lcom/tencent/mm/compatible/util/h;->aC(Landroid/content/Context;)I
 
     move-result v3
 
-    .line 76
-    invoke-static {}, Lcom/tencent/mm/compatible/util/l;->pk()I
+    .line 86
+    invoke-static {}, Lcom/tencent/mm/compatible/util/h;->pc()I
 
     move-result v8
 
     if-lez v8, :cond_3
 
-    invoke-static {}, Lcom/tencent/mm/compatible/util/l;->pk()I
+    invoke-static {}, Lcom/tencent/mm/compatible/util/h;->pc()I
 
     move-result v8
 
@@ -182,7 +202,7 @@
 
     move v1, v3
 
-    .line 80
+    .line 90
     :cond_3
     if-lez v1, :cond_4
 
@@ -196,13 +216,13 @@
 
     move v1, v2
 
-    .line 84
+    .line 94
     :cond_4
     if-le v1, v3, :cond_5
 
     move v1, v3
 
-    .line 88
+    .line 98
     :cond_5
     if-lez v1, :cond_6
 
@@ -210,7 +230,7 @@
 
     move v1, v3
 
-    .line 96
+    .line 106
     :cond_6
     const-string/jumbo v4, "!44@/B4Tb64lLpJsVdmH+NTxJtbiDDQ2LHTrqCpSsv0IxKQ="
 
@@ -248,21 +268,32 @@
 
     aput-object v3, v8, v2
 
-    invoke-static {v4, v7, v8}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 97
+    .line 107
     iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 98
+    .line 108
     invoke-virtual {v6, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     goto :goto_0
 
-    .line 67
+    .line 77
     :cond_7
     iget v1, v0, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
     sub-int/2addr v1, v5
 
     goto :goto_1
+.end method
+
+.method public setOnMeasureListener(Lcom/tencent/mm/ui/BasePanelKeybordLayout$a;)V
+    .locals 0
+
+    .prologue
+    .line 41
+    iput-object p1, p0, Lcom/tencent/mm/ui/BasePanelKeybordLayout;->kju:Lcom/tencent/mm/ui/BasePanelKeybordLayout$a;
+
+    .line 42
+    return-void
 .end method

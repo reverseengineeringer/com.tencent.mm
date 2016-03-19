@@ -4,23 +4,23 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class MMEditText$c
   implements TextWatcher
 {
-  private final int bto;
-  private EditText euS;
-  private TextView jAE;
-  public MMEditText.b jAF = null;
-  private boolean jAG = false;
+  private final int aiH;
+  private EditText fEO;
+  private TextView lFd;
+  public MMEditText.b lFe = null;
+  private boolean lFf = false;
   
   public MMEditText$c(EditText paramEditText, TextView paramTextView, int paramInt)
   {
-    euS = paramEditText;
-    jAE = paramTextView;
-    bto = paramInt;
+    fEO = paramEditText;
+    lFd = paramTextView;
+    aiH = paramInt;
   }
   
   public final void afterTextChanged(Editable paramEditable)
@@ -33,13 +33,13 @@ public final class MMEditText$c
     int k = i;
     if (j < str1.length())
     {
-      if (bn.f(str1.charAt(j))) {
+      if (ay.e(str1.charAt(j))) {
         i += 2;
       }
       for (;;)
       {
         k = i;
-        if (i > bto) {
+        if (i > aiH) {
           break label93;
         }
         paramEditable = paramEditable + str1.charAt(j);
@@ -49,39 +49,39 @@ public final class MMEditText$c
       }
     }
     label93:
-    if (k > bto) {}
+    if (k > aiH) {}
     for (;;)
     {
       try
       {
-        euS.setText(paramEditable);
-        if (jAG) {
+        fEO.setText(paramEditable);
+        if (lFf) {
           continue;
         }
-        i = euS.getText().toString().length();
-        euS.setSelection(i);
-        jAG = false;
+        i = fEO.getText().toString().length();
+        fEO.setSelection(i);
+        lFf = false;
       }
       catch (Exception localException)
       {
-        jAG = true;
+        lFf = true;
         String str2 = localException.getMessage();
-        t.e("!32@/B4Tb64lLpKIBwYy27eZfJEyh0MS+Du5", "error " + str2);
-        euS.setText(paramEditable);
-        euS.setSelection(0);
+        u.e("!32@/B4Tb64lLpKIBwYy27eZfJEyh0MS+Du5", "error " + str2);
+        fEO.setText(paramEditable);
+        fEO.setSelection(0);
         continue;
         continue;
       }
-      i = bto - k;
+      i = aiH - k;
       if (i >= 0) {
         continue;
       }
       i = m;
-      if (jAE != null) {
-        jAE.setText(i / 2);
+      if (lFd != null) {
+        lFd.setText(i / 2);
       }
       return;
-      euS.setSelection(0);
+      fEO.setSelection(0);
     }
   }
   
@@ -89,8 +89,8 @@ public final class MMEditText$c
   
   public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    if (jAF != null) {
-      jAF.afv();
+    if (lFe != null) {
+      lFe.aqD();
     }
   }
 }

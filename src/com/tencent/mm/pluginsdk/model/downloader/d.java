@@ -1,24 +1,54 @@
 package com.tencent.mm.pluginsdk.model.downloader;
 
-import java.util.Iterator;
-import java.util.Vector;
-
-final class d
-  implements Runnable
+public final class d
 {
-  d(a parama, long paramLong, String paramString) {}
+  public String ehh = "";
+  String elm = "";
+  public String iCq = "";
+  String iCr = "";
+  int iCs = 1;
+  boolean iCt = false;
+  public boolean iCu = true;
+  public boolean iCv = false;
+  String mFileName = "";
   
-  public final void run()
+  public static final class a
   {
-    if (a.azs() != null)
+    public d iCw = new d((byte)0);
+    
+    public final void Ac(String paramString)
     {
-      Iterator localIterator = a.azs().iterator();
-      while (localIterator.hasNext()) {
-        ((r)localIterator.next()).c(ftb, evG);
-      }
+      iCw.iCq = paramString;
     }
-    if (a.azt() != null) {
-      a.azt().c(ftb, evG);
+    
+    public final void Ad(String paramString)
+    {
+      iCw.mFileName = paramString;
+    }
+    
+    public final void Ae(String paramString)
+    {
+      iCw.iCr = paramString;
+    }
+    
+    public final void Af(String paramString)
+    {
+      iCw.elm = paramString;
+    }
+    
+    public final void gj(boolean paramBoolean)
+    {
+      iCw.iCt = paramBoolean;
+    }
+    
+    public final void oh(int paramInt)
+    {
+      iCw.iCs = paramInt;
+    }
+    
+    public final void setAppId(String paramString)
+    {
+      iCw.ehh = paramString;
     }
   }
 }

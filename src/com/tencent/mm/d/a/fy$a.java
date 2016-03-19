@@ -2,7 +2,11 @@ package com.tencent.mm.d.a;
 
 public final class fy$a
 {
-  public String username;
+  public Boolean aAW;
+  public int aAX;
+  public Boolean aAY;
+  public String ayw;
+  public String imagePath;
 }
 
 /* Location:

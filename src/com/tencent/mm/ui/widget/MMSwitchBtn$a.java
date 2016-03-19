@@ -2,7 +2,7 @@ package com.tencent.mm.ui.widget;
 
 public abstract interface MMSwitchBtn$a
 {
-  public abstract void dr(boolean paramBoolean);
+  public abstract void fg(boolean paramBoolean);
 }
 
 /* Location:

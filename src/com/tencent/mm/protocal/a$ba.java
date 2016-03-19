@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ba
-  extends a.c
+  extends a.e
 {
   public a$ba()
   {
-    super("log", "", 0, false);
+    super("getSearchData", "", 10000, false);
   }
 }
 

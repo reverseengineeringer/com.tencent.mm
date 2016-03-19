@@ -5,11 +5,11 @@ import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.plugin.report.service.j;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
 import com.tencent.mm.ui.LauncherUI;
 
 @URISpanHandlerSet.a
@@ -21,12 +21,12 @@ class URISpanHandlerSet$JumpActivityUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     if (paramString.toLowerCase().startsWith("weixin://jump/"))
     {
@@ -34,27 +34,27 @@ class URISpanHandlerSet$JumpActivityUriSpanHandler
       paramString = paramString[(paramString.length - 1)];
       if ("mainframe".equalsIgnoreCase(paramString))
       {
-        paramString = new Intent(URISpanHandlerSet.a(apd), LauncherUI.class);
-        if ((URISpanHandlerSet.a(apd) instanceof Service)) {
+        paramString = new Intent(URISpanHandlerSet.a(ang), LauncherUI.class);
+        if ((URISpanHandlerSet.a(ang) instanceof Service)) {
           paramString.addFlags(268435456);
         }
         paramString.addFlags(67108864);
-        URISpanHandlerSet.a(apd).startActivity(paramString);
+        URISpanHandlerSet.a(ang).startActivity(paramString);
       }
       for (;;)
       {
         return true;
         if ("shake".equalsIgnoreCase(paramString))
         {
-          j.eJZ.y(10221, "1");
+          h.fUJ.O(10221, "1");
           paramString = new Intent();
           paramString.addFlags(67108864);
-          if ((URISpanHandlerSet.a(apd) instanceof Service)) {
+          if ((URISpanHandlerSet.a(ang) instanceof Service)) {
             paramString.addFlags(268435456);
           }
-          c.c(URISpanHandlerSet.a(apd), "shake", ".ui.ShakeReportUI", paramString);
-          if ((URISpanHandlerSet.a(apd) != null) && ((URISpanHandlerSet.a(apd) instanceof Activity))) {
-            ((Activity)URISpanHandlerSet.a(apd)).finish();
+          c.c(URISpanHandlerSet.a(ang), "shake", ".ui.ShakeReportUI", paramString);
+          if ((URISpanHandlerSet.a(ang) != null) && ((URISpanHandlerSet.a(ang) instanceof Activity))) {
+            ((Activity)URISpanHandlerSet.a(ang)).finish();
           }
         }
         else if ("scanqrcode".equalsIgnoreCase(paramString))
@@ -64,22 +64,22 @@ class URISpanHandlerSet$JumpActivityUriSpanHandler
           paramString.putExtra("GetFriendQRCodeUI.INTENT_FROM_ACTIVITY", 2);
           paramString.setFlags(65536);
           paramString.addFlags(67108864);
-          if ((URISpanHandlerSet.a(apd) instanceof Service)) {
+          if ((URISpanHandlerSet.a(ang) instanceof Service)) {
             paramString.addFlags(268435456);
           }
-          c.c(URISpanHandlerSet.a(apd), "scanner", ".ui.BaseScanUI", paramString);
+          c.c(URISpanHandlerSet.a(ang), "scanner", ".ui.BaseScanUI", paramString);
         }
       }
     }
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[0];
   }

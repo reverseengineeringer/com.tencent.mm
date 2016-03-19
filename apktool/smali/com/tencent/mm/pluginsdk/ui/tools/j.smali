@@ -2,335 +2,328 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/platformtools/j;
 
+# static fields
+.field private static iSP:Ljava/lang/String;
 
-# instance fields
-.field private ddD:Ljava/lang/String;
-
-.field private height:I
-
-.field private url:Ljava/lang/String;
-
-.field private width:I
+.field private static final iSQ:[Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;II)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 32
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 33
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->ddD:Ljava/lang/String;
-
-    .line 34
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->url:Ljava/lang/String;
-
-    .line 35
-    iput p3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->width:I
-
-    .line 36
-    iput p4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->height:I
-
-    .line 37
-    return-void
-.end method
-
-
-# virtual methods
-.method public final DA()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 51
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->ddD:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final DB()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 56
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->ddD:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final DC()Z
-    .locals 1
-
-    .prologue
-    .line 61
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final DD()Z
-    .locals 1
-
-    .prologue
-    .line 66
+    .line 50
     const/4 v0, 0x0
 
-    return v0
-.end method
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSP:Ljava/lang/String;
 
-.method public final DE()Landroid/graphics/Bitmap;
-    .locals 2
+    .line 74
+    const/16 v0, 0x8
 
-    .prologue
-    .line 71
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    new-array v0, v0, [Ljava/lang/String;
 
-    move-result-object v0
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    const-string/jumbo v2, ""
 
-    move-result-object v0
+    aput-object v2, v0, v1
 
-    sget v1, Lcom/tencent/mm/a$h;->nosdcard_headimg:I
+    const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Landroid/graphics/BitmapFactory;->decodeResource(Landroid/content/res/Resources;I)Landroid/graphics/Bitmap;
+    const-string/jumbo v2, "dynamic_config_recv"
 
-    move-result-object v0
+    aput-object v2, v0, v1
 
-    return-object v0
-.end method
+    const/4 v1, 0x2
 
-.method public final DF()V
-    .locals 0
+    const-string/jumbo v2, "trigger_download"
 
-    .prologue
-    .line 112
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x3
+
+    const-string/jumbo v2, "start_download"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x4
+
+    const-string/jumbo v2, "stop_download"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x5
+
+    const-string/jumbo v2, "download_finish"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x6
+
+    const-string/jumbo v2, "install_finish"
+
+    aput-object v2, v0, v1
+
+    const/4 v1, 0x7
+
+    const-string/jumbo v2, "use"
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSQ:[Ljava/lang/String;
+
     return-void
 .end method
 
-.method public final Dy()Ljava/lang/String;
-    .locals 2
+.method public static be(II)V
+    .locals 13
 
     .prologue
-    .line 41
-    new-instance v0, Ljava/lang/StringBuilder;
+    const/4 v12, 0x3
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    const/4 v11, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    const/4 v10, 0x1
 
-    move-result-object v1
+    const/4 v9, 0x0
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rp()Ljava/lang/String;
+    .line 33
+    if-lez p0, :cond_0
 
-    move-result-object v1
+    const/4 v0, 0x7
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    if-le p0, v0, :cond_1
 
-    move-result-object v0
-
-    const-string/jumbo v1, "/"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->url:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/tencent/mm/a/e;->n([B)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final Dz()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 46
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->url:Ljava/lang/String;
-
-    return-object v0
-.end method
-
-.method public final a(Landroid/graphics/Bitmap;Lcom/tencent/mm/platformtools/j$a;)Landroid/graphics/Bitmap;
-    .locals 6
-
-    .prologue
-    .line 76
-    sget-object v0, Lcom/tencent/mm/platformtools/j$a;->bUY:Lcom/tencent/mm/platformtools/j$a;
-
-    if-ne v0, p2, :cond_1
-
-    .line 79
-    :try_start_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpIRP68/fkv681wCRsNVVS8L+8gbT60B8L0="
-
-    const-string/jumbo v1, "handlerBitmap get from net url:%s"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->url:Ljava/lang/String;
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 81
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->width:I
-
-    if-lez v0, :cond_0
-
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->height:I
-
-    if-lez v0, :cond_0
-
-    .line 82
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->width:I
-
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->height:I
-
-    invoke-static {p1, v0, v1}, Lcom/tencent/mm/sdk/platformtools/e;->b(Landroid/graphics/Bitmap;II)Landroid/graphics/Bitmap;
-
-    move-result-object p1
-
-    .line 85
+    .line 34
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/j;->Dy()Ljava/lang/String;
+    const-string/jumbo v0, "!32@/B4Tb64lLpISxnUMUi4flWrSvvOSsz//"
+
+    const-string/jumbo v1, "report invalid scene = %d"
+
+    new-array v2, v10, [Ljava/lang/Object;
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v9
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 47
+    :goto_0
+    return-void
+
+    .line 38
+    :cond_1
+    const-string/jumbo v0, "!32@/B4Tb64lLpISxnUMUi4flWrSvvOSsz//"
+
+    const-string/jumbo v1, "logSceneDetail, scene = %d_%s, errcode = %d"
+
+    new-array v2, v12, [Ljava/lang/Object;
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v9
+
+    sget-object v3, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSQ:[Ljava/lang/String;
+
+    aget-object v3, v3, p0
+
+    aput-object v3, v2, v10
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v11
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 40
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 86
-    new-instance v2, Ljava/io/File;
+    .line 41
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/WebView;->getTbsCoreVersion(Landroid/content/Context;)I
 
-    invoke-direct {v2, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    move-result v1
 
-    .line 87
-    invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_1
+    .line 42
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/WebView;->getTbsSDKVersion(Landroid/content/Context;)I
 
-    .line 88
-    const/4 v1, 0x0
+    move-result v2
 
-    .line 90
-    :try_start_1
-    new-instance v0, Ljava/io/FileOutputStream;
+    .line 43
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/j;->cT(Landroid/content/Context;)Ljava/lang/String;
 
-    invoke-direct {v0, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-    :try_end_1
-    .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    move-result-object v0
 
-    .line 91
-    :try_start_2
-    sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->PNG:Landroid/graphics/Bitmap$CompressFormat;
+    .line 45
+    sget-object v3, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
-    const/16 v2, 0x64
+    const/16 v3, 0x2d71
 
-    invoke-virtual {p1, v1, v2, v0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
+    const/4 v4, 0x6
 
-    .line 92
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->flush()V
-    :try_end_2
-    .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    new-array v4, v4, [Ljava/lang/Object;
 
-    .line 98
-    :try_start_3
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 103
-    :cond_1
+    move-result-object v5
+
+    aput-object v5, v4, v9
+
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v5
+
+    const-wide/16 v7, 0x3e8
+
+    div-long/2addr v5, v7
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v5
+
+    aput-object v5, v4, v10
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v4, v11
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v4, v12
+
+    const/4 v1, 0x4
+
+    aput-object v0, v4, v1
+
+    const/4 v0, 0x5
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v4, v0
+
+    invoke-static {v3, v9, v10, v4}, Lcom/tencent/mm/plugin/report/service/h;->a(IZZ[Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method private static cT(Landroid/content/Context;)Ljava/lang/String;
+    .locals 5
+
+    .prologue
+    .line 53
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSP:Ljava/lang/String;
+
+    if-eqz v0, :cond_0
+
+    .line 54
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSP:Ljava/lang/String;
+
+    .line 70
     :goto_0
-    return-object p1
+    return-object v0
 
-    .line 95
+    .line 58
+    :cond_0
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
+
+    move-result-object v0
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
+
+    move-result-object v1
+
+    const/16 v2, 0x80
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/pm/PackageManager;->getApplicationInfo(Ljava/lang/String;I)Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+
+    .line 59
+    if-eqz v0, :cond_1
+
+    iget-object v1, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    if-eqz v1, :cond_1
+
+    .line 60
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->metaData:Landroid/os/Bundle;
+
+    const-string/jumbo v1, "com.tencent.mtt.TBS_CODE"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 61
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 62
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/j;->iSP:Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 67
     :catch_0
     move-exception v0
 
-    move-object v0, v1
+    .line 68
+    const-string/jumbo v1, "!32@/B4Tb64lLpISxnUMUi4flWrSvvOSsz//"
 
-    :goto_1
-    if-eqz v0, :cond_1
+    const-string/jumbo v2, "getMetaTbsCode, ex = %s"
 
-    .line 99
-    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v4
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 70
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_0
-
-    .line 98
-    :catchall_0
-    move-exception v0
-
-    :goto_2
-    if-eqz v1, :cond_2
-
-    .line 99
-    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
-
-    :cond_2
-    throw v0
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
-
-    .line 98
-    :catchall_1
-    move-exception v1
-
-    move-object v5, v1
-
-    move-object v1, v0
-
-    move-object v0, v5
-
-    goto :goto_2
-
-    .line 95
-    :catch_2
-    move-exception v1
-
-    goto :goto_1
 .end method
 
-.method public final a(Lcom/tencent/mm/platformtools/j$a;Ljava/lang/String;)V
-    .locals 0
+.method public static lp(I)V
+    .locals 1
 
     .prologue
-    .line 122
-    return-void
-.end method
+    .line 29
+    const/4 v0, 0x0
 
-.method public final r(Ljava/lang/String;Z)V
-    .locals 0
+    invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/j;->be(II)V
 
-    .prologue
-    .line 117
+    .line 30
     return-void
 .end method

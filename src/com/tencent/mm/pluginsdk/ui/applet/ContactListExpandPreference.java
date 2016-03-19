@@ -4,34 +4,34 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tencent.mm.a.k;
-import com.tencent.mm.pluginsdk.ui.d;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.storage.k;
+import com.tencent.mm.t.j;
 import com.tencent.mm.ui.base.preference.Preference;
-import com.tencent.mm.ui.base.preference.l;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ContactListExpandPreference
   extends Preference
 {
-  private int gSX = -1;
-  public x gSY;
-  public ad gSZ;
+  private int iJg = -1;
+  public d iJh;
+  public f iJi;
   
   public ContactListExpandPreference(Context paramContext, int paramInt)
   {
     super(paramContext);
     if (paramInt == 0) {
-      aAx();
+      aRo();
     }
     for (;;)
     {
-      setLayoutResource(a.k.mm_preference_contact_list_row);
+      setLayoutResource(2131363062);
       return;
       if (paramInt == 1)
       {
-        gSX = 1;
-        gSZ = new ad();
+        iJg = 1;
+        iJi = new f();
       }
     }
   }
@@ -39,212 +39,212 @@ public class ContactListExpandPreference
   public ContactListExpandPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    aAx();
-    setLayoutResource(a.k.mm_preference_contact_list_row);
+    aRo();
+    setLayoutResource(2131363062);
   }
   
   public ContactListExpandPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    aAx();
-    setLayoutResource(a.k.mm_preference_contact_list_row);
+    aRo();
+    setLayoutResource(2131363062);
   }
   
-  private void aAx()
+  private void aRo()
   {
-    gSX = 0;
-    gSY = new x(mContext);
+    iJg = 0;
+    iJh = new d(mContext);
   }
   
-  public final void I(ArrayList paramArrayList)
+  public final void AF(String paramString)
   {
-    if (gSY != null)
-    {
-      x localx = gSY;
-      gSn.H(paramArrayList);
-      localx.nr(null);
+    if (iJh != null) {
+      iJh.iIp.iIS = paramString;
     }
   }
   
-  public final void X(List paramList)
+  public final void L(ArrayList paramArrayList)
   {
-    if (gSY != null)
+    if (iJh != null)
     {
-      ab localab = gSY.gSn;
-      localab.aD(paramList);
-      localab.notifyChanged();
+      d locald = iJh;
+      iIp.K(paramArrayList);
+      locald.qF(null);
     }
   }
   
   public final void a(a parama)
   {
-    if (gSY != null) {
-      gSY.gSp = parama;
+    if (iJh != null) {
+      iJh.iIr = parama;
     }
   }
   
-  public final void a(ad.b paramb)
+  public final void a(f.b paramb)
   {
-    if (gSY != null) {
-      gSY.gSo = paramb;
+    if (iJh != null) {
+      iJh.iIq = paramb;
     }
   }
   
-  public final void a(d paramd)
+  public final void a(com.tencent.mm.pluginsdk.ui.d paramd)
   {
-    if (gSY != null) {
-      gSY.gSn.gSD = paramd;
+    if (iJh != null) {
+      iJh.iIp.iIJ = paramd;
     }
   }
   
-  public final void a(l paraml, String paramString)
+  public final void a(com.tencent.mm.ui.base.preference.f paramf, String paramString)
   {
-    x localx;
-    if (gSY != null)
+    d locald;
+    if (iJh != null)
     {
-      localx = gSY;
-      if ((paraml != null) && (paramString != null)) {}
+      locald = iJh;
+      if ((paramf != null) && (paramString != null)) {}
     }
     else
     {
       return;
     }
-    bXQ = paraml;
-    gSj = paramString;
-    paraml.af(paramString, true);
+    cpb = paramf;
+    iIl = paramString;
+    paramf.at(paramString, true);
   }
   
-  public final void aAA()
+  public final void aRp()
   {
-    if (gSY != null)
-    {
-      ab localab = gSY.gSn;
-      fqU = false;
-      localab.notifyChanged();
+    if (iJh != null) {
+      iJh.iIp.iJa = false;
     }
   }
   
-  public final void aAB()
+  public final void aRq()
+  {
+    if (iJh != null) {
+      iJh.iIp.iIR = true;
+    }
+  }
+  
+  public final void aRr()
+  {
+    if (iJh != null)
+    {
+      e locale = iJh.iIp;
+      daN = false;
+      locale.notifyChanged();
+    }
+  }
+  
+  public final ContactListExpandPreference aRs()
+  {
+    if (iJh != null) {
+      iJh.iIp.iIM = false;
+    }
+    return this;
+  }
+  
+  public final void aRt()
   {
     boolean bool = false;
-    if (gSY != null)
+    if (iJh != null)
     {
-      x localx = gSY;
-      gSl = false;
-      if (gSl) {
+      d locald = iJh;
+      iIn = false;
+      if (iIn) {
         bool = true;
       }
-      gSm = bool;
+      iIo = bool;
     }
   }
   
-  public final void aAy()
+  public final void al(List paramList)
   {
-    if (gSY != null) {
-      gSY.gSn.gSS = false;
-    }
-  }
-  
-  public final void aAz()
-  {
-    if (gSY != null) {
-      gSY.gSn.gSK = true;
-    }
-  }
-  
-  public final ContactListExpandPreference en(boolean paramBoolean)
-  {
-    if (gSY != null) {
-      gSY.gSn.gSF = paramBoolean;
-    }
-    return this;
-  }
-  
-  public final ContactListExpandPreference eo(boolean paramBoolean)
-  {
-    if (gSY != null) {
-      gSY.gSn.gSE = paramBoolean;
-    }
-    return this;
-  }
-  
-  public final void j(String paramString, List paramList)
-  {
-    if (gSY != null)
+    if (iJh != null)
     {
-      x localx = gSY;
+      e locale = iJh.iIp;
+      locale.aX(paramList);
+      locale.notifyChanged();
+    }
+  }
+  
+  public final ContactListExpandPreference gn(boolean paramBoolean)
+  {
+    if (iJh != null) {
+      iJh.iIp.iIL = paramBoolean;
+    }
+    return this;
+  }
+  
+  public final ContactListExpandPreference go(boolean paramBoolean)
+  {
+    if (iJh != null) {
+      iJh.iIp.iIK = paramBoolean;
+    }
+    return this;
+  }
+  
+  public final void n(String paramString, List paramList)
+  {
+    if (iJh != null)
+    {
+      d locald = iJh;
+      username = paramString;
       Object localObject = paramList;
       if (paramList == null) {
         localObject = new ArrayList(0);
       }
-      gSn.aD((List)localObject);
-      localx.nr(paramString);
+      iIp.aX((List)localObject);
+      locald.qF(paramString);
     }
-  }
-  
-  public final String lA(int paramInt)
-  {
-    if ((gSY != null) && (gSY.gSn.lx(paramInt))) {
-      return gSY.gSn.getItem(paramInt)).field_conRemark;
-    }
-    return "";
-  }
-  
-  public final boolean lx(int paramInt)
-  {
-    if (gSY != null) {
-      return gSY.gSn.lx(paramInt);
-    }
-    return false;
-  }
-  
-  public final String ly(int paramInt)
-  {
-    if ((gSY != null) && (gSY.gSn.lx(paramInt))) {
-      return gSY.gSn.getItem(paramInt)).field_username;
-    }
-    return "";
-  }
-  
-  public final String lz(int paramInt)
-  {
-    if ((gSY != null) && (gSY.gSn.lx(paramInt))) {
-      return gSY.gSn.getItem(paramInt)).field_nickname;
-    }
-    return "";
   }
   
   public final void notifyChanged()
   {
-    if (gSY != null) {
-      gSY.aed();
+    if (iJh != null) {
+      iJh.aoV();
     }
   }
   
   public final void onBindView(View paramView)
   {
-    if (gSX == 1)
+    int i = 0;
+    if (iJg == 1)
     {
-      ad localad = gSZ;
-      ViewGroup localViewGroup = (ViewGroup)paramView;
-      if (gSn != null)
+      f localf = iJi;
+      ViewGroup localViewGroup;
+      if (paramView.getId() == 2131169102)
       {
-        localViewGroup.setOnTouchListener(gSV);
-        int i = 0;
-        while (i < gSv)
+        localViewGroup = (ViewGroup)paramView;
+        if (iIp.getCount() / 4 != row + 1) {
+          break label195;
+        }
+        paramView.findViewById(2131167226).setVisibility(0);
+      }
+      for (;;)
+      {
+        if (iIp == null) {
+          break label209;
+        }
+        localViewGroup.setOnClickListener(fSm);
+        while (i < iIz)
         {
           View localView = localViewGroup.getChildAt(i);
-          int j = row * gSv + i;
-          gSn.getView(j, localView, localViewGroup);
-          if (gSt != null) {
-            localView.setOnClickListener(new af(localad, localViewGroup, j));
+          int j = row * iIz + i;
+          iIp.getView(j, localView, localViewGroup);
+          if (iIw != null) {
+            localView.setOnClickListener(new f.3(localf, localViewGroup, j));
           }
-          if (gTa != null) {
-            localView.setOnLongClickListener(new ag(localad, localViewGroup, j));
+          if (iJj != null) {
+            localView.setOnLongClickListener(new f.4(localf, localViewGroup, j));
           }
           i += 1;
         }
+        localViewGroup = (ViewGroup)paramView.findViewById(2131169102);
+        break;
+        label195:
+        paramView.findViewById(2131167226).setVisibility(8);
       }
+      label209:
       if (background >= 0) {
         paramView.setBackgroundResource(background);
       }
@@ -252,22 +252,67 @@ public class ContactListExpandPreference
     super.onBindView(paramView);
   }
   
-  public final void uO(String paramString)
+  public final boolean ov(int paramInt)
   {
-    if (gSY != null) {
-      gSY.gSn.gSL = paramString;
+    if (iJh != null) {
+      return iJh.iIp.ov(paramInt);
     }
+    return false;
+  }
+  
+  public final j ow(int paramInt)
+  {
+    Object localObject2 = null;
+    Object localObject1 = localObject2;
+    if (iJh != null)
+    {
+      localObject1 = localObject2;
+      if (iJh.iIp.ov(paramInt))
+      {
+        localObject1 = localObject2;
+        if ((iJh.iIp.getItem(paramInt) instanceof j)) {
+          localObject1 = (j)iJh.iIp.getItem(paramInt);
+        }
+      }
+    }
+    return (j)localObject1;
+  }
+  
+  public final String ox(int paramInt)
+  {
+    if ((iJh != null) && (iJh.iIp.ov(paramInt))) {
+      return iJh.iIp.getItem(paramInt)).field_username;
+    }
+    return "";
+  }
+  
+  public final String oy(int paramInt)
+  {
+    if ((iJh != null) && (iJh.iIp.ov(paramInt))) {
+      return iJh.iIp.getItem(paramInt)).field_nickname;
+    }
+    return "";
+  }
+  
+  public final String oz(int paramInt)
+  {
+    if ((iJh != null) && (iJh.iIp.ov(paramInt))) {
+      return iJh.iIp.getItem(paramInt)).field_conRemark;
+    }
+    return "";
   }
   
   public static abstract interface a
   {
-    public abstract void KC();
+    public abstract void Oa();
     
-    public abstract void eZ(int paramInt);
+    public abstract void Ob();
     
-    public abstract void fa(int paramInt);
+    public abstract void fH(int paramInt);
     
-    public abstract void fb(int paramInt);
+    public abstract void fI(int paramInt);
+    
+    public abstract void fJ(int paramInt);
   }
 }
 

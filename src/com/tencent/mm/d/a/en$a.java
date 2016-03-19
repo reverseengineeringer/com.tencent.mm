@@ -2,8 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class en$a
 {
-  public boolean aAC = false;
-  public String aAg;
+  public boolean azk = false;
+  public long azl = 0L;
 }
 
 /* Location:

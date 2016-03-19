@@ -1,11 +1,15 @@
 package com.tencent.mm.d.a;
 
-import android.graphics.Bitmap;
-
 public final class gy$a
 {
-  public String aEg;
-  public Bitmap aEh;
+  public boolean aBY = false;
+  public float aBn = 0.0F;
+  public float aCs = 0.0F;
+  public int aCt = 0;
+  public int aCu = 0;
+  public String aCv;
+  public String aCw;
+  public int axD = 0;
 }
 
 /* Location:

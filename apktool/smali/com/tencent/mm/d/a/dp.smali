@@ -1,24 +1,12 @@
 .class public final Lcom/tencent/mm/d/a/dp;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/d/a/dp$a;
-    }
-.end annotation
-
-
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
-
-
-# instance fields
-.field public azH:Lcom/tencent/mm/d/a/dp$a;
+.field public static arR:Z
 
 
 # direct methods
@@ -29,10 +17,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/dp;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/dp;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/dp;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/dp;->arR:Z
 
     return-void
 .end method
@@ -42,23 +30,15 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    .line 13
-    new-instance v0, Lcom/tencent/mm/d/a/dp$a;
-
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/dp$a;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/d/a/dp;->azH:Lcom/tencent/mm/d/a/dp$a;
-
-    .line 8
-    const-string/jumbo v0, "GetSafeDeviceType"
+    const-string/jumbo v0, "ExtRequestAccountSync"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/dp;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/dp;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/dp;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/dp;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/dp;->jUI:Z
 
     return-void
 .end method

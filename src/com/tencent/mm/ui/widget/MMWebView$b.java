@@ -1,20 +1,20 @@
 package com.tencent.mm.ui.widget;
 
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.ArrayList;
 
 final class MMWebView$b
 {
-  ArrayList jBt = new ArrayList();
-  ArrayList jBu = new ArrayList();
+  ArrayList lFS = new ArrayList();
+  ArrayList lFT = new ArrayList();
   
-  public static b BU(String paramString)
+  public static b HP(String paramString)
   {
     b localb = new b();
-    if (bn.iW(paramString))
+    if (ay.kz(paramString))
     {
-      t.e("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse fail, section is null");
+      u.e("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse fail, section is null");
       return localb;
     }
     for (;;)
@@ -26,31 +26,31 @@ final class MMWebView$b
         if (paramString == null) {
           break;
         }
-        t.d("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse items array length = %d", new Object[] { Integer.valueOf(paramString.length) });
+        u.d("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse items array length = %d", new Object[] { Integer.valueOf(paramString.length) });
         int j = paramString.length;
         i = 0;
         if (i < j)
         {
           Object localObject = paramString[i];
-          if (!bn.iW((String)localObject))
+          if (!ay.kz((String)localObject))
           {
             localObject = ((String)localObject).split(",");
             if ((localObject != null) && (localObject.length == 2))
             {
-              jBt.add(Integer.valueOf(bn.getInt(localObject[0], 0)));
-              jBu.add(Integer.valueOf(bn.getInt(localObject[1], 0)));
+              lFS.add(Integer.valueOf(ay.getInt(localObject[0], 0)));
+              lFT.add(Integer.valueOf(ay.getInt(localObject[1], 0)));
             }
           }
         }
         else
         {
-          t.d("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse items list size = %d", new Object[] { Integer.valueOf(jBt.size()) });
+          u.d("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse items list size = %d", new Object[] { Integer.valueOf(lFS.size()) });
           return localb;
         }
       }
       catch (Exception paramString)
       {
-        t.e("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse ex = %s", new Object[] { paramString.getMessage() });
+        u.e("!56@/B4Tb64lLpLUa7oZpyRLqij3W7tXskNBXnuaPQThJwsm2AtcGko5rg==", "parse ex = %s", new Object[] { paramString.getMessage() });
         return localb;
       }
       i += 1;

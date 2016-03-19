@@ -1,36 +1,36 @@
 package com.tencent.mm.app.plugin.b;
 
-import com.tencent.mm.d.a.bp;
-import com.tencent.mm.d.a.bp.a;
+import com.tencent.mm.d.a.dg;
+import com.tencent.mm.d.a.dg.a;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class a$a
-  extends e
+  extends c
 {
-  a.i app;
-  a.e apq;
-  a.f apr;
-  a.d aps;
-  a.h apt;
-  a.g apu;
-  a.c apv;
-  a.b apw;
+  a.b anA;
+  a.i ant;
+  a.e anu;
+  a.f anv;
+  a.d anw;
+  a.h anx;
+  a.g any;
+  a.c anz;
   
   public a$a()
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(b paramb)
   {
     boolean bool2 = true;
     boolean bool1;
-    if (!(paramd instanceof bp))
+    if (!(paramb instanceof dg))
     {
-      t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+      u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
       bool1 = false;
     }
     do
@@ -38,54 +38,54 @@ public final class a$a
       do
       {
         return bool1;
-        paramd = (bp)paramd;
-        if (awC.op == 1)
+        paramb = (dg)paramb;
+        if (awI.op == 1)
         {
-          t.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "ExtAgentLifeEventListener init");
-          app = new a.i();
-          apq = new a.e();
-          apr = new a.f();
-          aps = new a.d();
-          apt = new a.h();
-          apu = new a.g();
-          apv = new a.c();
-          apw = new a.b();
-          a.hXQ.a("ExtRequestAccountSync", app);
-          a.hXQ.a("ExtRecord", apq);
-          a.hXQ.a("ExtSimpleRecord", apr);
-          a.hXQ.a("ExtPlayer", aps);
-          a.hXQ.a("ExtVoiceMsgIdToFileName", apt);
-          a.hXQ.a("ExtVoiceFileNameToMsgId", apu);
-          a.hXQ.a("ExtNetSceneSendMsg", apv);
-          a.hXQ.a("ExtCursorForTimeLine", apw);
+          u.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "ExtAgentLifeEventListener init");
+          ant = new a.i();
+          anu = new a.e();
+          anv = new a.f();
+          anw = new a.d();
+          anx = new a.h();
+          any = new a.g();
+          anz = new a.c();
+          anA = new a.b();
+          a.jUF.b("ExtRequestAccountSync", ant);
+          a.jUF.b("ExtRecord", anu);
+          a.jUF.b("ExtSimpleRecord", anv);
+          a.jUF.b("ExtPlayer", anw);
+          a.jUF.b("ExtVoiceMsgIdToFileName", anx);
+          a.jUF.b("ExtVoiceFileNameToMsgId", any);
+          a.jUF.b("ExtNetSceneSendMsg", anz);
+          a.jUF.b("ExtCursorForTimeLine", anA);
           return true;
         }
         bool1 = bool2;
-      } while (awC.op != 2);
-      if (app != null) {
-        a.hXQ.b("ExtRequestAccountSync", app);
+      } while (awI.op != 2);
+      if (ant != null) {
+        a.jUF.c("ExtRequestAccountSync", ant);
       }
-      if (apq != null) {
-        a.hXQ.b("ExtRecord", apq);
+      if (anu != null) {
+        a.jUF.c("ExtRecord", anu);
       }
-      if (apr != null) {
-        a.hXQ.b("ExtSimpleRecord", apr);
+      if (anv != null) {
+        a.jUF.c("ExtSimpleRecord", anv);
       }
-      if (aps != null) {
-        a.hXQ.b("ExtPlayer", aps);
+      if (anw != null) {
+        a.jUF.c("ExtPlayer", anw);
       }
-      if (apt != null) {
-        a.hXQ.b("ExtVoiceMsgIdToFileName", apt);
+      if (anx != null) {
+        a.jUF.c("ExtVoiceMsgIdToFileName", anx);
       }
-      if (apu != null) {
-        a.hXQ.b("ExtVoiceFileNameToMsgId", apu);
+      if (any != null) {
+        a.jUF.c("ExtVoiceFileNameToMsgId", any);
       }
-      if (apv != null) {
-        a.hXQ.b("ExtNetSceneSendMsg", apv);
+      if (anz != null) {
+        a.jUF.c("ExtNetSceneSendMsg", anz);
       }
       bool1 = bool2;
-    } while (apw == null);
-    a.hXQ.b("ExtCursorForTimeLine", apw);
+    } while (anA == null);
+    a.jUF.c("ExtCursorForTimeLine", anA);
     return true;
   }
 }

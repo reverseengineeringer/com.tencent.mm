@@ -7,36 +7,36 @@ import android.view.accessibility.AccessibilityNodeInfo;
 
 public final class a
 {
-  public static final b hC = new e();
-  public final Object hD;
+  public static final b gK = new e();
+  public final Object gL;
   
   static
   {
     if ("JellyBeanMR2".equals(Build.VERSION.CODENAME))
     {
-      hC = new d();
+      gK = new d();
       return;
     }
     if (Build.VERSION.SDK_INT >= 16)
     {
-      hC = new c();
+      gK = new c();
       return;
     }
     if (Build.VERSION.SDK_INT >= 14)
     {
-      hC = new a();
+      gK = new a();
       return;
     }
   }
   
   public a(Object paramObject)
   {
-    hD = paramObject;
+    gL = paramObject;
   }
   
   public static a a(a parama)
   {
-    parama = hC.c(hD);
+    parama = gK.f(gL);
     if (parama != null) {
       return new a(parama);
     }
@@ -45,12 +45,12 @@ public final class a
   
   public final void addAction(int paramInt)
   {
-    hC.a(hD, paramInt);
+    gK.b(gL, paramInt);
   }
   
   public final void addChild(View paramView)
   {
-    hC.b(hD, paramView);
+    gK.b(gL, paramView);
   }
   
   public final boolean equals(Object paramObject)
@@ -68,171 +68,171 @@ public final class a
           return false;
         }
         paramObject = (a)paramObject;
-        if (hD != null) {
+        if (gL != null) {
           break;
         }
-      } while (hD == null);
+      } while (gL == null);
       return false;
-    } while (hD.equals(hD));
+    } while (gL.equals(gL));
     return false;
   }
   
   public final int getActions()
   {
-    return hC.d(hD);
+    return gK.g(gL);
   }
   
   public final void getBoundsInParent(Rect paramRect)
   {
-    hC.a(hD, paramRect);
+    gK.a(gL, paramRect);
   }
   
   public final void getBoundsInScreen(Rect paramRect)
   {
-    hC.b(hD, paramRect);
+    gK.b(gL, paramRect);
   }
   
   public final CharSequence getClassName()
   {
-    return hC.e(hD);
+    return gK.h(gL);
   }
   
   public final CharSequence getContentDescription()
   {
-    return hC.f(hD);
+    return gK.i(gL);
   }
   
   public final CharSequence getPackageName()
   {
-    return hC.g(hD);
+    return gK.j(gL);
   }
   
   public final int hashCode()
   {
-    if (hD == null) {
+    if (gL == null) {
       return 0;
     }
-    return hD.hashCode();
+    return gL.hashCode();
   }
   
   public final boolean isAccessibilityFocused()
   {
-    return hC.v(hD);
+    return gK.y(gL);
   }
   
   public final boolean isClickable()
   {
-    return hC.k(hD);
+    return gK.n(gL);
   }
   
   public final boolean isEnabled()
   {
-    return hC.l(hD);
+    return gK.o(gL);
   }
   
   public final boolean isFocusable()
   {
-    return hC.m(hD);
+    return gK.p(gL);
   }
   
   public final boolean isFocused()
   {
-    return hC.n(hD);
+    return gK.q(gL);
   }
   
   public final boolean isLongClickable()
   {
-    return hC.o(hD);
+    return gK.r(gL);
   }
   
   public final boolean isSelected()
   {
-    return hC.r(hD);
+    return gK.u(gL);
   }
   
   public final boolean isVisibleToUser()
   {
-    return hC.u(hD);
+    return gK.x(gL);
   }
   
   public final void recycle()
   {
-    hC.s(hD);
+    gK.v(gL);
   }
   
   public final void setAccessibilityFocused(boolean paramBoolean)
   {
-    hC.i(hD, paramBoolean);
+    gK.i(gL, paramBoolean);
   }
   
   public final void setBoundsInParent(Rect paramRect)
   {
-    hC.c(hD, paramRect);
+    gK.c(gL, paramRect);
   }
   
   public final void setBoundsInScreen(Rect paramRect)
   {
-    hC.d(hD, paramRect);
+    gK.d(gL, paramRect);
   }
   
   public final void setClassName(CharSequence paramCharSequence)
   {
-    hC.a(hD, paramCharSequence);
+    gK.a(gL, paramCharSequence);
   }
   
   public final void setClickable(boolean paramBoolean)
   {
-    hC.a(hD, paramBoolean);
+    gK.a(gL, paramBoolean);
   }
   
   public final void setContentDescription(CharSequence paramCharSequence)
   {
-    hC.b(hD, paramCharSequence);
+    gK.b(gL, paramCharSequence);
   }
   
   public final void setEnabled(boolean paramBoolean)
   {
-    hC.b(hD, paramBoolean);
+    gK.b(gL, paramBoolean);
   }
   
   public final void setFocusable(boolean paramBoolean)
   {
-    hC.c(hD, paramBoolean);
+    gK.c(gL, paramBoolean);
   }
   
   public final void setFocused(boolean paramBoolean)
   {
-    hC.d(hD, paramBoolean);
+    gK.d(gL, paramBoolean);
   }
   
   public final void setLongClickable(boolean paramBoolean)
   {
-    hC.e(hD, paramBoolean);
+    gK.e(gL, paramBoolean);
   }
   
   public final void setPackageName(CharSequence paramCharSequence)
   {
-    hC.c(hD, paramCharSequence);
+    gK.c(gL, paramCharSequence);
   }
   
   public final void setParent(View paramView)
   {
-    hC.c(hD, paramView);
+    gK.c(gL, paramView);
   }
   
   public final void setSelected(boolean paramBoolean)
   {
-    hC.g(hD, paramBoolean);
+    gK.g(gL, paramBoolean);
   }
   
   public final void setSource(View paramView)
   {
-    hC.d(hD, paramView);
+    gK.d(gL, paramView);
   }
   
   public final void setVisibleToUser(boolean paramBoolean)
   {
-    hC.h(hD, paramBoolean);
+    gK.h(gL, paramBoolean);
   }
   
   public final String toString()
@@ -246,19 +246,19 @@ public final class a
     localStringBuilder.append("; boundsInScreen: " + localObject);
     localStringBuilder.append("; packageName: ").append(getPackageName());
     localStringBuilder.append("; className: ").append(getClassName());
-    localStringBuilder.append("; text: ").append(hC.h(hD));
+    localStringBuilder.append("; text: ").append(gK.k(gL));
     localStringBuilder.append("; contentDescription: ").append(getContentDescription());
-    localStringBuilder.append("; viewId: ").append(hC.w(hD));
-    localStringBuilder.append("; checkable: ").append(hC.i(hD));
-    localStringBuilder.append("; checked: ").append(hC.j(hD));
+    localStringBuilder.append("; viewId: ").append(gK.z(gL));
+    localStringBuilder.append("; checkable: ").append(gK.l(gL));
+    localStringBuilder.append("; checked: ").append(gK.m(gL));
     localStringBuilder.append("; focusable: ").append(isFocusable());
     localStringBuilder.append("; focused: ").append(isFocused());
     localStringBuilder.append("; selected: ").append(isSelected());
     localStringBuilder.append("; clickable: ").append(isClickable());
     localStringBuilder.append("; longClickable: ").append(isLongClickable());
     localStringBuilder.append("; enabled: ").append(isEnabled());
-    localStringBuilder.append("; password: ").append(hC.p(hD));
-    localStringBuilder.append("; scrollable: " + hC.q(hD));
+    localStringBuilder.append("; password: ").append(gK.s(gL));
+    localStringBuilder.append("; scrollable: " + gK.t(gL));
     localStringBuilder.append("; [");
     int i = getActions();
     if (i != 0)
@@ -321,11 +321,6 @@ public final class a
   static class a
     extends a.e
   {
-    public final void a(Object paramObject, int paramInt)
-    {
-      ((AccessibilityNodeInfo)paramObject).addAction(paramInt);
-    }
-    
     public final void a(Object paramObject, Rect paramRect)
     {
       ((AccessibilityNodeInfo)paramObject).getBoundsInParent(paramRect);
@@ -339,6 +334,11 @@ public final class a
     public final void a(Object paramObject, boolean paramBoolean)
     {
       ((AccessibilityNodeInfo)paramObject).setClickable(paramBoolean);
+    }
+    
+    public final void b(Object paramObject, int paramInt)
+    {
+      ((AccessibilityNodeInfo)paramObject).addAction(paramInt);
     }
     
     public final void b(Object paramObject, Rect paramRect)
@@ -361,11 +361,6 @@ public final class a
       ((AccessibilityNodeInfo)paramObject).setEnabled(paramBoolean);
     }
     
-    public final Object c(Object paramObject)
-    {
-      return AccessibilityNodeInfo.obtain((AccessibilityNodeInfo)paramObject);
-    }
-    
     public final void c(Object paramObject, Rect paramRect)
     {
       ((AccessibilityNodeInfo)paramObject).setBoundsInParent(paramRect);
@@ -384,11 +379,6 @@ public final class a
     public final void c(Object paramObject, boolean paramBoolean)
     {
       ((AccessibilityNodeInfo)paramObject).setFocusable(paramBoolean);
-    }
-    
-    public final int d(Object paramObject)
-    {
-      return ((AccessibilityNodeInfo)paramObject).getActions();
     }
     
     public final void d(Object paramObject, Rect paramRect)
@@ -411,19 +401,14 @@ public final class a
       ((AccessibilityNodeInfo)paramObject).setFocused(paramBoolean);
     }
     
-    public final CharSequence e(Object paramObject)
-    {
-      return ((AccessibilityNodeInfo)paramObject).getClassName();
-    }
-    
     public final void e(Object paramObject, boolean paramBoolean)
     {
       ((AccessibilityNodeInfo)paramObject).setLongClickable(paramBoolean);
     }
     
-    public final CharSequence f(Object paramObject)
+    public final Object f(Object paramObject)
     {
-      return ((AccessibilityNodeInfo)paramObject).getContentDescription();
+      return AccessibilityNodeInfo.obtain((AccessibilityNodeInfo)paramObject);
     }
     
     public final void f(Object paramObject, boolean paramBoolean)
@@ -431,9 +416,9 @@ public final class a
       ((AccessibilityNodeInfo)paramObject).setScrollable(paramBoolean);
     }
     
-    public final CharSequence g(Object paramObject)
+    public final int g(Object paramObject)
     {
-      return ((AccessibilityNodeInfo)paramObject).getPackageName();
+      return ((AccessibilityNodeInfo)paramObject).getActions();
     }
     
     public final void g(Object paramObject, boolean paramBoolean)
@@ -443,60 +428,75 @@ public final class a
     
     public final CharSequence h(Object paramObject)
     {
+      return ((AccessibilityNodeInfo)paramObject).getClassName();
+    }
+    
+    public final CharSequence i(Object paramObject)
+    {
+      return ((AccessibilityNodeInfo)paramObject).getContentDescription();
+    }
+    
+    public final CharSequence j(Object paramObject)
+    {
+      return ((AccessibilityNodeInfo)paramObject).getPackageName();
+    }
+    
+    public final CharSequence k(Object paramObject)
+    {
       return ((AccessibilityNodeInfo)paramObject).getText();
-    }
-    
-    public final boolean i(Object paramObject)
-    {
-      return ((AccessibilityNodeInfo)paramObject).isCheckable();
-    }
-    
-    public final boolean j(Object paramObject)
-    {
-      return ((AccessibilityNodeInfo)paramObject).isChecked();
-    }
-    
-    public final boolean k(Object paramObject)
-    {
-      return ((AccessibilityNodeInfo)paramObject).isClickable();
     }
     
     public final boolean l(Object paramObject)
     {
-      return ((AccessibilityNodeInfo)paramObject).isEnabled();
+      return ((AccessibilityNodeInfo)paramObject).isCheckable();
     }
     
     public final boolean m(Object paramObject)
     {
-      return ((AccessibilityNodeInfo)paramObject).isFocusable();
+      return ((AccessibilityNodeInfo)paramObject).isChecked();
     }
     
     public final boolean n(Object paramObject)
     {
-      return ((AccessibilityNodeInfo)paramObject).isFocused();
+      return ((AccessibilityNodeInfo)paramObject).isClickable();
     }
     
     public final boolean o(Object paramObject)
     {
-      return ((AccessibilityNodeInfo)paramObject).isLongClickable();
+      return ((AccessibilityNodeInfo)paramObject).isEnabled();
     }
     
     public final boolean p(Object paramObject)
     {
-      return ((AccessibilityNodeInfo)paramObject).isPassword();
+      return ((AccessibilityNodeInfo)paramObject).isFocusable();
     }
     
     public final boolean q(Object paramObject)
     {
-      return ((AccessibilityNodeInfo)paramObject).isScrollable();
+      return ((AccessibilityNodeInfo)paramObject).isFocused();
     }
     
     public final boolean r(Object paramObject)
     {
+      return ((AccessibilityNodeInfo)paramObject).isLongClickable();
+    }
+    
+    public final boolean s(Object paramObject)
+    {
+      return ((AccessibilityNodeInfo)paramObject).isPassword();
+    }
+    
+    public final boolean t(Object paramObject)
+    {
+      return ((AccessibilityNodeInfo)paramObject).isScrollable();
+    }
+    
+    public final boolean u(Object paramObject)
+    {
       return ((AccessibilityNodeInfo)paramObject).isSelected();
     }
     
-    public final void s(Object paramObject)
+    public final void v(Object paramObject)
     {
       ((AccessibilityNodeInfo)paramObject).recycle();
     }
@@ -504,8 +504,6 @@ public final class a
   
   public static abstract interface b
   {
-    public abstract void a(Object paramObject, int paramInt);
-    
     public abstract void a(Object paramObject, Rect paramRect);
     
     public abstract void a(Object paramObject, CharSequence paramCharSequence);
@@ -522,7 +520,7 @@ public final class a
     
     public abstract void b(Object paramObject, boolean paramBoolean);
     
-    public abstract Object c(Object paramObject);
+    public abstract void c(Object paramObject, int paramInt);
     
     public abstract void c(Object paramObject, Rect paramRect);
     
@@ -532,8 +530,6 @@ public final class a
     
     public abstract void c(Object paramObject, boolean paramBoolean);
     
-    public abstract int d(Object paramObject);
-    
     public abstract void d(Object paramObject, Rect paramRect);
     
     public abstract void d(Object paramObject, View paramView);
@@ -542,15 +538,13 @@ public final class a
     
     public abstract void d(Object paramObject, boolean paramBoolean);
     
-    public abstract CharSequence e(Object paramObject);
-    
     public abstract void e(Object paramObject, boolean paramBoolean);
     
-    public abstract CharSequence f(Object paramObject);
+    public abstract Object f(Object paramObject);
     
     public abstract void f(Object paramObject, boolean paramBoolean);
     
-    public abstract CharSequence g(Object paramObject);
+    public abstract int g(Object paramObject);
     
     public abstract void g(Object paramObject, boolean paramBoolean);
     
@@ -558,13 +552,13 @@ public final class a
     
     public abstract void h(Object paramObject, boolean paramBoolean);
     
+    public abstract CharSequence i(Object paramObject);
+    
     public abstract void i(Object paramObject, boolean paramBoolean);
     
-    public abstract boolean i(Object paramObject);
+    public abstract CharSequence j(Object paramObject);
     
-    public abstract boolean j(Object paramObject);
-    
-    public abstract boolean k(Object paramObject);
+    public abstract CharSequence k(Object paramObject);
     
     public abstract boolean l(Object paramObject);
     
@@ -580,21 +574,27 @@ public final class a
     
     public abstract boolean r(Object paramObject);
     
-    public abstract void s(Object paramObject);
+    public abstract boolean s(Object paramObject);
     
-    public abstract int t(Object paramObject);
+    public abstract boolean t(Object paramObject);
     
     public abstract boolean u(Object paramObject);
     
-    public abstract boolean v(Object paramObject);
+    public abstract void v(Object paramObject);
     
-    public abstract String w(Object paramObject);
+    public abstract int w(Object paramObject);
+    
+    public abstract boolean x(Object paramObject);
+    
+    public abstract boolean y(Object paramObject);
+    
+    public abstract String z(Object paramObject);
   }
   
   static class c
     extends a.a
   {
-    public final void b(Object paramObject, int paramInt)
+    public final void c(Object paramObject, int paramInt)
     {
       ((AccessibilityNodeInfo)paramObject).setMovementGranularities(paramInt);
     }
@@ -609,17 +609,17 @@ public final class a
       ((AccessibilityNodeInfo)paramObject).setAccessibilityFocused(paramBoolean);
     }
     
-    public final int t(Object paramObject)
+    public final int w(Object paramObject)
     {
       return ((AccessibilityNodeInfo)paramObject).getMovementGranularities();
     }
     
-    public final boolean u(Object paramObject)
+    public final boolean x(Object paramObject)
     {
       return ((AccessibilityNodeInfo)paramObject).isVisibleToUser();
     }
     
-    public final boolean v(Object paramObject)
+    public final boolean y(Object paramObject)
     {
       return ((AccessibilityNodeInfo)paramObject).isAccessibilityFocused();
     }
@@ -628,7 +628,7 @@ public final class a
   static final class d
     extends a.c
   {
-    public final String w(Object paramObject)
+    public final String z(Object paramObject)
     {
       return ((AccessibilityNodeInfo)paramObject).getViewIdResourceName();
     }
@@ -637,8 +637,6 @@ public final class a
   static class e
     implements a.b
   {
-    public void a(Object paramObject, int paramInt) {}
-    
     public void a(Object paramObject, Rect paramRect) {}
     
     public void a(Object paramObject, CharSequence paramCharSequence) {}
@@ -655,10 +653,7 @@ public final class a
     
     public void b(Object paramObject, boolean paramBoolean) {}
     
-    public Object c(Object paramObject)
-    {
-      return null;
-    }
+    public void c(Object paramObject, int paramInt) {}
     
     public void c(Object paramObject, Rect paramRect) {}
     
@@ -668,11 +663,6 @@ public final class a
     
     public void c(Object paramObject, boolean paramBoolean) {}
     
-    public int d(Object paramObject)
-    {
-      return 0;
-    }
-    
     public void d(Object paramObject, Rect paramRect) {}
     
     public void d(Object paramObject, View paramView) {}
@@ -681,23 +671,18 @@ public final class a
     
     public void d(Object paramObject, boolean paramBoolean) {}
     
-    public CharSequence e(Object paramObject)
-    {
-      return null;
-    }
-    
     public void e(Object paramObject, boolean paramBoolean) {}
     
-    public CharSequence f(Object paramObject)
+    public Object f(Object paramObject)
     {
       return null;
     }
     
     public void f(Object paramObject, boolean paramBoolean) {}
     
-    public CharSequence g(Object paramObject)
+    public int g(Object paramObject)
     {
-      return null;
+      return 0;
     }
     
     public void g(Object paramObject, boolean paramBoolean) {}
@@ -709,21 +694,21 @@ public final class a
     
     public void h(Object paramObject, boolean paramBoolean) {}
     
+    public CharSequence i(Object paramObject)
+    {
+      return null;
+    }
+    
     public void i(Object paramObject, boolean paramBoolean) {}
     
-    public boolean i(Object paramObject)
+    public CharSequence j(Object paramObject)
     {
-      return false;
+      return null;
     }
     
-    public boolean j(Object paramObject)
+    public CharSequence k(Object paramObject)
     {
-      return false;
-    }
-    
-    public boolean k(Object paramObject)
-    {
-      return false;
+      return null;
     }
     
     public boolean l(Object paramObject)
@@ -761,11 +746,14 @@ public final class a
       return false;
     }
     
-    public void s(Object paramObject) {}
-    
-    public int t(Object paramObject)
+    public boolean s(Object paramObject)
     {
-      return 0;
+      return false;
+    }
+    
+    public boolean t(Object paramObject)
+    {
+      return false;
     }
     
     public boolean u(Object paramObject)
@@ -773,12 +761,24 @@ public final class a
       return false;
     }
     
-    public boolean v(Object paramObject)
+    public void v(Object paramObject) {}
+    
+    public int w(Object paramObject)
+    {
+      return 0;
+    }
+    
+    public boolean x(Object paramObject)
     {
       return false;
     }
     
-    public String w(Object paramObject)
+    public boolean y(Object paramObject)
+    {
+      return false;
+    }
+    
+    public String z(Object paramObject)
     {
       return null;
     }

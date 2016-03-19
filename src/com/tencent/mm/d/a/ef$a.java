@@ -1,10 +1,8 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-
 public final class ef$a
 {
-  public d aAv;
+  public long aua = -1L;
 }
 
 /* Location:

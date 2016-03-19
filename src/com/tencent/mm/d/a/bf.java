@@ -1,30 +1,26 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Intent;
+import com.tencent.mm.sdk.c.b;
 
 public final class bf
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awl = new a();
-  public b awm = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aun = new a();
   
   public bf()
   {
-    id = "ExDeviceSimpleBTConnectDevice";
-    hXT = atO;
+    id = "EmojiOnActivityResult";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean Kr = false;
-    public String mac;
-  }
-  
-  public static final class b
-  {
-    public boolean avu;
+    public int arU;
+    public int auo;
+    public Intent aup;
   }
 }
 

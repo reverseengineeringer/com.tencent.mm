@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/sdk/modelmsg/d$b;
-.super Lcom/tencent/mm/sdk/d/b;
+.super Lcom/tencent/mm/sdk/e/b;
 .source "SourceFile"
 
 
@@ -19,10 +19,24 @@
     .locals 0
 
     .prologue
-    .line 134
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/d/b;-><init>()V
+    .line 103
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/e/b;-><init>()V
 
-    .line 136
+    .line 105
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/os/Bundle;)V
+    .locals 0
+
+    .prologue
+    .line 115
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/e/b;-><init>()V
+
+    .line 116
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/sdk/modelmsg/d$b;->m(Landroid/os/Bundle;)V
+
+    .line 117
     return-void
 .end method
 
@@ -32,30 +46,8 @@
     .locals 1
 
     .prologue
-    .line 152
-    const/4 v0, 0x2
+    .line 121
+    const/4 v0, 0x4
 
     return v0
-.end method
-
-.method public final m(Landroid/os/Bundle;)V
-    .locals 0
-
-    .prologue
-    .line 162
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/d/b;->m(Landroid/os/Bundle;)V
-
-    .line 163
-    return-void
-.end method
-
-.method public final n(Landroid/os/Bundle;)V
-    .locals 0
-
-    .prologue
-    .line 157
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/d/b;->n(Landroid/os/Bundle;)V
-
-    .line 158
-    return-void
 .end method

@@ -2,9 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class el$a
 {
-  public boolean aAC = false;
-  public String aAQ;
-  public int aAT;
+  public long ayW = 0L;
 }
 
 /* Location:

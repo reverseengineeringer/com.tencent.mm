@@ -1,64 +1,115 @@
-.class final Lcom/tencent/mm/network/f;
+.class public interface abstract Lcom/tencent/mm/network/f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/os/IInterface;
 
 
-# instance fields
-.field final synthetic bRF:Ljava/lang/String;
-
-
-# direct methods
-.method constructor <init>(Ljava/lang/String;)V
-    .locals 0
-
-    .prologue
-    .line 244
-    iput-object p1, p0, Lcom/tencent/mm/network/f;->bRF:Ljava/lang/String;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/network/f$a;
+    }
+.end annotation
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public abstract EJ()Lcom/tencent/mm/network/d;
+.end method
 
-    .prologue
-    .line 247
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Db()Lcom/tencent/mm/network/au;
+.method public abstract EK()V
+.end method
 
-    move-result-object v1
+.method public abstract EL()Lcom/tencent/mm/network/h;
+.end method
 
-    const v2, 0xfff0003
+.method public abstract a(Lcom/tencent/mm/network/p;Lcom/tencent/mm/network/k;)I
+.end method
 
-    iget-object v0, p0, Lcom/tencent/mm/network/f;->bRF:Ljava/lang/String;
+.method public abstract a(ZLjava/util/List;)I
+.end method
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+.method public abstract a(ILjava/lang/String;IZ)V
+.end method
 
-    move-result v0
+.method public abstract a(Lcom/tencent/mm/network/a/b;)V
+.end method
 
-    if-eqz v0, :cond_0
+.method public abstract a(Lcom/tencent/mm/network/g;)V
+.end method
 
-    const/4 v0, 0x0
+.method public abstract a(Lcom/tencent/mm/network/n;)V
+.end method
 
-    :goto_0
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/network/au;->d(I[B)V
+.method public abstract a(Lcom/tencent/mm/network/q;)V
+.end method
 
-    .line 248
-    return-void
+.method public abstract a(Lcom/tencent/mm/protocal/y;)V
+.end method
 
-    .line 247
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/network/f;->bRF:Ljava/lang/String;
+.method public abstract a(ZLjava/lang/String;Ljava/lang/String;[I[IIILjava/lang/String;Ljava/lang/String;)V
+.end method
 
-    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+.method public abstract aO(Z)V
+.end method
 
-    move-result-object v0
+.method public abstract aP(Z)V
+.end method
 
-    goto :goto_0
+.method public abstract aQ(Z)V
+.end method
+
+.method public abstract c(Ljava/lang/String;Ljava/util/List;)I
+.end method
+
+.method public abstract c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+.end method
+
+.method public abstract cancel(I)V
+.end method
+
+.method public abstract f(I[B)I
+.end method
+
+.method public abstract getIPsString(Z)[Ljava/lang/String;
+.end method
+
+.method public abstract getIspId()Ljava/lang/String;
+.end method
+
+.method public abstract getNetworkServerIp()Ljava/lang/String;
+.end method
+
+.method public abstract gg(Ljava/lang/String;)V
+.end method
+
+.method public abstract gh(Ljava/lang/String;)V
+.end method
+
+.method public abstract keepSignalling()V
+.end method
+
+.method public abstract reportFailIp(Ljava/lang/String;)V
+.end method
+
+.method public abstract reset()V
+.end method
+
+.method public abstract setHostInfo([Ljava/lang/String;[Ljava/lang/String;[I)V
+.end method
+
+.method public abstract setNewDnsDebugHost(Ljava/lang/String;Ljava/lang/String;)V
+.end method
+
+.method public abstract setSignallingStrategy(JJ)V
+.end method
+
+.method public abstract stopSignalling()V
+.end method
+
+.method public abstract vM()Z
+.end method
+
+.method public abstract vY()V
 .end method

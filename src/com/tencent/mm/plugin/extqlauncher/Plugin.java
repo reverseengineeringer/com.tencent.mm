@@ -1,18 +1,18 @@
 package com.tencent.mm.plugin.extqlauncher;
 
-import com.tencent.mm.model.au;
+import com.tencent.mm.model.ae;
 import com.tencent.mm.pluginsdk.b.c;
-import com.tencent.mm.pluginsdk.k;
+import com.tencent.mm.pluginsdk.h;
 
 public class Plugin
   implements c
 {
-  public k createApplication()
+  public h createApplication()
   {
     return new a();
   }
   
-  public au createSubCore()
+  public ae createSubCore()
   {
     return new b();
   }

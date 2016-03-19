@@ -1,23 +1,35 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import android.os.Bundle;
+import com.tencent.mm.sdk.c.b;
 
 public final class h
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aud = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a asd = new a();
+  public b ase = new b();
   
   public h()
   {
-    id = "AutoGetBigImgOccChanged";
-    hXT = atO;
+    id = "ApduEngineFunc";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int mode;
+    public int actionCode;
+    public String asf;
+    public boolean asg;
+    public boolean ash;
+    public Context context;
+  }
+  
+  public static final class b
+  {
+    public Bundle asi;
   }
 }
 

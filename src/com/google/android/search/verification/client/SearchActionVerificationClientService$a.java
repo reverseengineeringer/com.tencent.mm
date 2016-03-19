@@ -12,12 +12,12 @@ final class SearchActionVerificationClientService$a
   
   public final void onServiceConnected(ComponentName paramComponentName, IBinder paramIBinder)
   {
-    SearchActionVerificationClientService.a(ajT, a.a.S(paramIBinder));
+    SearchActionVerificationClientService.a(aix, a.a.S(paramIBinder));
   }
   
   public final void onServiceDisconnected(ComponentName paramComponentName)
   {
-    SearchActionVerificationClientService.a(ajT, null);
+    SearchActionVerificationClientService.a(aix, null);
   }
 }
 

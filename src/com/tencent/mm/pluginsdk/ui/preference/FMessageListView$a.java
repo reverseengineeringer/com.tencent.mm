@@ -11,7 +11,6 @@ final class FMessageListView$a
   {
     super(paramContext);
     setLayoutParams(new LinearLayout.LayoutParams(-1, 1));
-    setBackgroundColor(-2171170);
   }
 }
 

@@ -3,12 +3,12 @@ package b.a.d;
 public final class d
   implements Comparable
 {
-  final String beZ;
+  final String buL;
   final String value;
   
   public d(String paramString1, String paramString2)
   {
-    beZ = paramString1;
+    buL = paramString1;
     value = paramString2;
   }
   
@@ -25,13 +25,13 @@ public final class d
         }
       } while (!(paramObject instanceof d));
       paramObject = (d)paramObject;
-    } while ((!beZ.equals(beZ)) || (!value.equals(value)));
+    } while ((!buL.equals(buL)) || (!value.equals(value)));
     return true;
   }
   
   public final int hashCode()
   {
-    return beZ.hashCode() + value.hashCode();
+    return buL.hashCode() + value.hashCode();
   }
 }
 

@@ -1,70 +1,67 @@
 package com.tencent.mm.ad;
 
-import android.content.ContentValues;
-import android.database.Cursor;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.sdk.g.ai;
-import com.tencent.mm.sdk.platformtools.bn;
-import junit.framework.Assert;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.zl;
+import com.tencent.mm.protocal.b.zm;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j.b;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class b
-  extends ai
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  public static final String[] aqU = { "CREATE TABLE IF NOT EXISTS chattingbginfo ( username text  PRIMARY KEY , bgflag int  , path text  , reserved1 text  , reserved2 text  , reserved3 int  , reserved4 int  ) " };
-  public g bqt;
+  private d anM;
+  private final a bUv;
   
-  public b(g paramg)
+  public b(String paramString1, String paramString2, String paramString3)
   {
-    bqt = paramg;
+    Object localObject = new a.a();
+    bFa = new zl();
+    bFb = new zm();
+    uri = "/cgi-bin/micromsg-bin/invitelinkedinfriend";
+    bEY = 677;
+    bFc = 0;
+    bFd = 0;
+    bUv = ((a.a)localObject).vy();
+    localObject = (zl)bUv.bEW.bFf;
+    jwj = paramString1;
+    jwl = paramString2;
+    jwk = paramString3;
   }
   
-  public final boolean a(a parama)
+  public final int a(e parame, d paramd)
   {
-    aqq = -1;
-    ContentValues localContentValues = parama.mA();
-    if ((int)bqt.insert("chattingbginfo", "username", localContentValues) != -1)
-    {
-      yh(parama.getUsername());
-      return true;
-    }
-    return false;
+    anM = paramd;
+    return a(parame, bUv, this);
   }
   
-  public final boolean b(a parama)
+  protected final int a(o paramo)
   {
-    if (parama != null) {}
-    for (boolean bool = true;; bool = false)
-    {
-      Assert.assertTrue(bool);
-      ContentValues localContentValues = parama.mA();
-      if (localContentValues.size() <= 0) {
-        break;
-      }
-      if (bqt.update("chattingbginfo", localContentValues, "username= ?", new String[] { parama.getUsername() }) <= 0) {
-        break;
-      }
-      yh(parama.getUsername());
-      return true;
-    }
-    return false;
+    return j.b.bFI;
   }
   
-  public final a hf(String paramString)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    Object localObject = null;
-    paramString = "select chattingbginfo.username,chattingbginfo.bgflag,chattingbginfo.path,chattingbginfo.reserved1,chattingbginfo.reserved2,chattingbginfo.reserved3,chattingbginfo.reserved4 from chattingbginfo   where chattingbginfo.username = \"" + bn.iU(paramString) + "\"";
-    Cursor localCursor = bqt.rawQuery(paramString, null);
-    if (localCursor == null) {
-      return null;
+    u.d("!56@/B4Tb64lLpK+IBX8XDgnvhaozS6gV+K/39XkuZsYAsZ7cIpacrC6MQ==", "[oneliang][NetSceneInviteLinkedInFriend]:netId:%s,errType:%s,errCode:%s,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
+    if ((paramInt2 == 0) && (paramInt3 == 0)) {
+      u.d("!56@/B4Tb64lLpK+IBX8XDgnvhaozS6gV+K/39XkuZsYAsZ7cIpacrC6MQ==", "[oneliang][NetSceneInviteLinkedInFriend]:net end ok");
     }
-    paramString = (String)localObject;
-    if (localCursor.moveToFirst())
-    {
-      paramString = new a();
-      paramString.c(localCursor);
-    }
-    localCursor.close();
-    return paramString;
+    anM.a(paramInt2, paramInt3, paramString, this);
+  }
+  
+  public final int getType()
+  {
+    return 677;
+  }
+  
+  protected final int lk()
+  {
+    return 10;
   }
 }
 

@@ -2,46 +2,93 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
-
-
-# instance fields
-.field final synthetic iRi:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
-
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
-    .locals 0
+.method static a(Landroid/content/Context;Lcom/tencent/mm/n/a$a;)Z
+    .locals 3
 
     .prologue
-    .line 238
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/b;->iRi:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 2
-
-    .prologue
-    .line 242
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/b;->iRi:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/b;->iRi:Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->b(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Z
-
-    move-result v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->a(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;Z)V
-
-    .line 243
     const/4 v0, 0x0
 
+    .line 2176
+    if-eqz p1, :cond_0
+
+    if-nez p0, :cond_1
+
+    .line 2195
+    :cond_0
+    :goto_0
     return v0
+
+    .line 2179
+    :cond_1
+    iget v1, p1, Lcom/tencent/mm/n/a$a;->type:I
+
+    const/4 v2, 0x3
+
+    if-ne v1, v2, :cond_2
+
+    .line 2180
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/g;->aPF()Z
+
+    move-result v0
+
+    goto :goto_0
+
+    .line 2182
+    :cond_2
+    iget v1, p1, Lcom/tencent/mm/n/a$a;->type:I
+
+    const/4 v2, 0x4
+
+    if-ne v1, v2, :cond_3
+
+    .line 2183
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/g;->aPF()Z
+
+    move-result v0
+
+    goto :goto_0
+
+    .line 2185
+    :cond_3
+    iget v1, p1, Lcom/tencent/mm/n/a$a;->type:I
+
+    const/4 v2, 0x5
+
+    if-ne v1, v2, :cond_4
+
+    .line 2186
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/g;->aPF()Z
+
+    move-result v0
+
+    goto :goto_0
+
+    .line 2188
+    :cond_4
+    iget v1, p1, Lcom/tencent/mm/n/a$a;->type:I
+
+    const/4 v2, 0x6
+
+    if-ne v1, v2, :cond_0
+
+    .line 2189
+    iget-object v1, p1, Lcom/tencent/mm/n/a$a;->aos:Ljava/lang/String;
+
+    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/b$a;->zp(Ljava/lang/String;)Ljava/lang/Long;
+
+    move-result-object v1
+
+    .line 2190
+    if-eqz v1, :cond_0
+
+    .line 2193
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/g;->aPF()Z
+
+    move-result v0
+
+    goto :goto_0
 .end method

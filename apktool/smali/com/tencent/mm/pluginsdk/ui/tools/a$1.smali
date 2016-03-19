@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic hcM:[I
+.field static final synthetic iQD:[I
 
 
 # direct methods
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$1;->hcM:[I
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$1;->iQD:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$1;->hcM:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$1;->iQD:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcN:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQE:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$1;->hcM:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$1;->iQD:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcO:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQF:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$1;->hcM:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$1;->iQD:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcP:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQG:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->ordinal()I
 
@@ -83,9 +83,9 @@
 
     :goto_2
     :try_start_3
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$1;->hcM:[I
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$1;->iQD:[I
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcQ:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQH:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->ordinal()I
 

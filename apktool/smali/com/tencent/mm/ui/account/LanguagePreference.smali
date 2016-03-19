@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field public itJ:Lcom/tencent/mm/ui/account/LanguagePreference$a;
+.field public ksB:Lcom/tencent/mm/ui/account/LanguagePreference$a;
 
 
 # direct methods
@@ -50,7 +50,7 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 77
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference:I
+    const v0, 0x7f0a05d6
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/LanguagePreference;->setLayoutResource(I)V
 
@@ -67,9 +67,9 @@
     .line 82
     if-eqz p1, :cond_0
 
-    iget-object v0, p1, Lcom/tencent/mm/ui/account/LanguagePreference$a;->itM:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/ui/account/LanguagePreference$a;->ksE:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -81,7 +81,7 @@
 
     const-string/jumbo v1, "setInfo info error"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 90
     :goto_0
@@ -89,10 +89,10 @@
 
     .line 87
     :cond_1
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LanguagePreference;->itJ:Lcom/tencent/mm/ui/account/LanguagePreference$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LanguagePreference;->ksB:Lcom/tencent/mm/ui/account/LanguagePreference$a;
 
     .line 89
-    iget-object v0, p1, Lcom/tencent/mm/ui/account/LanguagePreference$a;->itM:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/ui/account/LanguagePreference$a;->ksE:Ljava/lang/String;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/LanguagePreference;->setKey(Ljava/lang/String;)V
 
@@ -111,7 +111,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 112
-    sget v0, Lcom/tencent/mm/a$i;->languagename:I
+    const v0, 0x7f07073f
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -120,7 +120,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 113
-    sget v1, Lcom/tencent/mm/a$i;->state_icon:I
+    const v1, 0x7f070775
 
     invoke-virtual {p1, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -142,16 +142,16 @@
     if-eqz v2, :cond_0
 
     .line 116
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/LanguagePreference;->itJ:Lcom/tencent/mm/ui/account/LanguagePreference$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/LanguagePreference;->ksB:Lcom/tencent/mm/ui/account/LanguagePreference$a;
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/account/LanguagePreference$a;->itK:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/ui/account/LanguagePreference$a;->ksC:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 118
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LanguagePreference;->itJ:Lcom/tencent/mm/ui/account/LanguagePreference$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LanguagePreference;->ksB:Lcom/tencent/mm/ui/account/LanguagePreference$a;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/account/LanguagePreference$a;->itN:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/account/LanguagePreference$a;->ksF:Z
 
     invoke-virtual {v1, v0}, Landroid/widget/CheckBox;->setChecked(Z)V
 
@@ -192,7 +192,7 @@
     check-cast v0, Landroid/view/LayoutInflater;
 
     .line 101
-    sget v1, Lcom/tencent/mm/a$i;->content:I
+    const v1, 0x7f0700c1
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -204,7 +204,7 @@
     invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 104
-    sget v3, Lcom/tencent/mm/a$k;->mm_preference_content_language:I
+    const v3, 0x7f0a028c
 
     invoke-virtual {v0, v3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 

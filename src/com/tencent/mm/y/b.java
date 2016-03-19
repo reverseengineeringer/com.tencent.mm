@@ -1,33 +1,24 @@
 package com.tencent.mm.y;
 
-import android.net.TrafficStats;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.aj.a;
-import com.tencent.mm.sdk.platformtools.t;
-
-final class b
-  implements aj.a
+public final class b
+  extends com.tencent.mm.sdk.h.g
 {
-  b(a parama) {}
+  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS getcontactinfov2 ( username text  PRIMARY KEY , inserttime long  , type int  , lastgettime int  , reserved1 int  , reserved2 int  , reserved3 text  , reserved4 text  ) " };
+  com.tencent.mm.az.g bCw;
   
-  public final boolean lO()
+  public b(com.tencent.mm.az.g paramg)
   {
-    long l1 = TrafficStats.getUidRxBytes(bCz.bCw);
-    long l2 = TrafficStats.getUidTxBytes(bCz.bCw);
-    long l3 = l1 - bCz.bCu + (l2 - bCz.bCv);
-    t.d("!44@/B4Tb64lLpIIg7zAXvxzP2DKDVA2S8s32QCNeB5uDSg=", "delta of data: " + l3 / 1024L);
-    if (l3 <= 20480L)
+    bCw = paramg;
+  }
+  
+  public final boolean hD(String paramString)
+  {
+    if (bCw.delete("getcontactinfov2", "username= ?", new String[] { paramString }) > 0)
     {
-      bCz.bCt = false;
-      bCz.start();
-    }
-    for (;;)
-    {
+      DI(paramString);
       return true;
-      bCz.bCu = l1;
-      bCz.bCv = l2;
-      bCz.bCy.cA(1000L);
     }
+    return false;
   }
 }
 

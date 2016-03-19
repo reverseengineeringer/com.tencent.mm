@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aMH()V
+.method public abstract bcw()V
 .end method

@@ -1,37 +1,61 @@
 package com.tencent.mm.ui;
 
 import android.content.Intent;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.chatting.ChattingUI.a;
 
 final class LauncherUI$b
   implements Runnable
 {
-  Intent aAa;
-  int atR;
-  int azZ;
-  int ioH = 0;
+  int arU;
+  int auo;
+  Intent aup;
+  int knB = 0;
   
   private LauncherUI$b(LauncherUI paramLauncherUI) {}
   
   public final void run()
   {
-    if ((ax.qZ()) && (LauncherUI.d(iox)))
+    if ((ah.rh()) && (LauncherUI.f(knl)))
     {
-      t.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on post select image job, acc has ready, retry count %d", new Object[] { Integer.valueOf(ioH) });
-      iox.a(LauncherUI.e(iox), null, false);
-      ad.g(new cd(this));
+      u.i("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on post select image job, acc has ready, retry count %d", new Object[] { Integer.valueOf(knB) });
+      knl.a(LauncherUI.g(knl), null, false);
+      ab.j(new Runnable()
+      {
+        public final void run()
+        {
+          boolean bool = true;
+          if (LauncherUI.h(knl) == null) {}
+          for (;;)
+          {
+            u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on select image ActivityResult. after creat chattingUI, chatting fragment is null? %B", new Object[] { Boolean.valueOf(bool) });
+            if (LauncherUI.h(knl) != null)
+            {
+              u.d("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on select image ActivityResult. do post activity result");
+              LauncherUI.h(knl).onActivityResult(auo & 0xFFFF, arU, aup);
+            }
+            return;
+            bool = false;
+          }
+        }
+        
+        public final String toString()
+        {
+          return super.toString() + "|PostSelectImageJob_onActivityResult";
+        }
+      });
       return;
     }
-    if (ioH >= 3)
+    if (knB >= 3)
     {
-      t.w("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on post select image job, match max retry count");
+      u.w("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on post select image job, match max retry count");
       return;
     }
-    t.w("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on post select image job, acc not ready or view init(%B), cur retry count %d", new Object[] { Boolean.valueOf(LauncherUI.d(iox)), Integer.valueOf(ioH) });
-    ioH += 1;
-    ad.c(this, 300L);
+    u.w("!32@/B4Tb64lLpKf6BwZaHy6XqYgvUDwrgQ2", "on post select image job, acc not ready or view init(%B), cur retry count %d", new Object[] { Boolean.valueOf(LauncherUI.f(knl)), Integer.valueOf(knB) });
+    knB += 1;
+    ab.e(this, 300L);
   }
   
   public final String toString()

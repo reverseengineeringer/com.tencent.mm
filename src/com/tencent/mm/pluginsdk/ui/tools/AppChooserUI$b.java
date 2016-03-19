@@ -4,23 +4,22 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
 
 final class AppChooserUI$b
 {
-  ImageView dAV;
-  TextView dAW;
-  TextView dAY;
-  TextView hds;
-  RadioButton hdt;
+  ImageView esD;
+  TextView esE;
+  TextView esG;
+  TextView iRk;
+  RadioButton iRl;
   
   public AppChooserUI$b(AppChooserUI paramAppChooserUI, View paramView)
   {
-    dAV = ((ImageView)paramView.findViewById(a.i.app_icon));
-    dAW = ((TextView)paramView.findViewById(a.i.app_name));
-    dAY = ((TextView)paramView.findViewById(a.i.app_desc));
-    hds = ((TextView)paramView.findViewById(a.i.app_status));
-    hdt = ((RadioButton)paramView.findViewById(a.i.app_radio));
+    esD = ((ImageView)paramView.findViewById(2131169035));
+    esE = ((TextView)paramView.findViewById(2131167381));
+    esG = ((TextView)paramView.findViewById(2131169036));
+    iRk = ((TextView)paramView.findViewById(2131169037));
+    iRl = ((RadioButton)paramView.findViewById(2131169038));
   }
 }
 

@@ -3,84 +3,119 @@ package com.tencent.mm.ui.contact;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.ae.c;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.platformtools.ad;
-import com.tencent.mm.pluginsdk.ui.d.i;
+import com.tencent.mm.aj.c.a;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.platformtools.t;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.base.g;
+import com.tencent.mm.ui.j;
 
 public class ContactRemarkInfoViewUI
   extends MMActivity
 {
-  private String aNh;
-  private String bIz;
-  private com.tencent.mm.storage.k cqE;
-  private int elX;
-  private boolean jfB = false;
-  private View jfO;
-  private View jfP;
-  private TextView jfp;
-  private TextView jfq;
-  private ImageView jft;
-  private String jfz;
+  private String aSO;
+  private String ajj;
+  private String bYj;
+  private k cId;
+  private int fvF;
+  private boolean ljF = false;
+  private View ljZ;
+  private TextView lju;
+  private TextView ljv;
+  private ImageView ljy;
+  private View lka;
   private String username;
   
-  private void aQi()
+  private void Ou()
   {
-    Bitmap localBitmap = c.Ab().hn(username);
+    cId = ah.tD().rq().Ep(username);
+    ajj = cId.qz();
+    aSO = cId.aSO;
+    bYj = cId.aSP;
+  }
+  
+  private void bhd()
+  {
+    Bitmap localBitmap = com.tencent.mm.aj.c.BE().iw(username);
     if (localBitmap != null)
     {
-      jft.setImageBitmap(localBitmap);
-      jfB = true;
+      ljy.setImageBitmap(localBitmap);
+      ljF = true;
     }
   }
   
-  private void initData()
+  protected final void Gb()
   {
-    cqE = ax.tl().ri().yM(username);
-    jfz = cqE.qD();
-    aNh = cqE.aNh;
-    bIz = cqE.aNi;
-  }
-  
-  protected final void DV()
-  {
-    jfp = ((TextView)findViewById(a.i.contact_info_remark_name_tv));
-    jfq = ((TextView)findViewById(a.i.contact_info_remark_desc_tv));
-    jft = ((ImageView)findViewById(a.i.remark_pic_display));
-    jfO = findViewById(a.i.contact_remark_desc_container);
-    jfP = findViewById(a.i.contact_remark_image_container);
-    nh(a.n.contact_info_mod_remarkinfo);
-    jft.setOnClickListener(new bv(this));
-    a(0, getString(a.n.app_edit), new bw(this));
-    a(new bx(this));
+    lju = ((TextView)findViewById(2131165321));
+    ljv = ((TextView)findViewById(2131165332));
+    ljy = ((ImageView)findViewById(2131165335));
+    ljZ = findViewById(2131165438);
+    lka = findViewById(2131165439);
+    qb(2131428413);
+    ljy.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        if (!ContactRemarkInfoViewUI.a(ContactRemarkInfoViewUI.this)) {
+          return;
+        }
+        paramAnonymousView = new Intent(ContactRemarkInfoViewUI.this, ContactRemarkImagePreviewUI.class);
+        paramAnonymousView.putExtra("Contact_User", ContactRemarkInfoViewUI.b(ContactRemarkInfoViewUI.this));
+        com.tencent.mm.aj.c.BE();
+        paramAnonymousView.putExtra("remark_image_path", com.tencent.mm.aj.c.it(ContactRemarkInfoViewUI.b(ContactRemarkInfoViewUI.this)));
+        paramAnonymousView.putExtra("view_only", true);
+        startActivity(paramAnonymousView);
+      }
+    });
+    a(0, getString(2131430898), new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        paramAnonymousMenuItem = new Intent();
+        paramAnonymousMenuItem.setClass(koJ.kpc, ContactRemarkInfoModUI.class);
+        paramAnonymousMenuItem.putExtra("Contact_Scene", ContactRemarkInfoViewUI.c(ContactRemarkInfoViewUI.this));
+        paramAnonymousMenuItem.putExtra("Contact_User", dfield_username);
+        startActivity(paramAnonymousMenuItem);
+        return false;
+      }
+    });
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        finish();
+        return true;
+      }
+    });
   }
   
   protected final int getLayoutId()
   {
-    return a.k.contact_remark_info_view;
+    return 2131361846;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    elX = getIntent().getIntExtra("Contact_Scene", 9);
+    fvF = getIntent().getIntExtra("Contact_Scene", 9);
     username = getIntent().getStringExtra("Contact_User");
-    if (ad.iW(username))
+    if (t.kz(username))
     {
       finish();
       return;
     }
-    initData();
-    DV();
+    Ou();
+    Gb();
   }
   
   public void onDestroy()
@@ -91,30 +126,47 @@ public class ContactRemarkInfoViewUI
   public void onResume()
   {
     super.onResume();
-    initData();
-    jfp.setText(i.a(this, ad.iV(jfz), jfp.getTextSize()));
-    if (!ad.iW(aNh))
+    Ou();
+    lju.setText(e.a(this, t.ky(ajj), lju.getTextSize()));
+    if (!t.kz(aSO))
     {
-      jfO.setVisibility(0);
-      jfq.setText(ad.iV(aNh));
+      ljZ.setVisibility(0);
+      ljv.setText(t.ky(aSO));
     }
-    while (!ad.iW(bIz))
+    while (!t.kz(bYj))
     {
-      jfP.setVisibility(0);
-      c.Ab();
-      if (!c.hl(username))
+      lka.setVisibility(0);
+      com.tencent.mm.aj.c.BE();
+      if (!com.tencent.mm.aj.c.iu(username))
       {
-        c.Ab().a(username, bIz, new by(this));
+        com.tencent.mm.aj.c.BE().a(username, bYj, new c.a()
+        {
+          public final void ba(final boolean paramAnonymousBoolean)
+          {
+            ContactRemarkInfoViewUI.f(ContactRemarkInfoViewUI.this).post(new Runnable()
+            {
+              public final void run()
+              {
+                if (!paramAnonymousBoolean)
+                {
+                  g.ba(ContactRemarkInfoViewUI.this, getString(2131427526));
+                  return;
+                }
+                ContactRemarkInfoViewUI.e(ContactRemarkInfoViewUI.this);
+              }
+            });
+          }
+        });
         return;
-        jfO.setVisibility(8);
+        ljZ.setVisibility(8);
       }
       else
       {
-        aQi();
+        bhd();
         return;
       }
     }
-    jfP.setVisibility(8);
+    lka.setVisibility(8);
   }
 }
 

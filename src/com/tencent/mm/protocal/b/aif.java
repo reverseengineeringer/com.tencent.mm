@@ -1,67 +1,83 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
+
 public final class aif
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public int byR;
-  public String byS;
-  public long byT;
-  public int hOX;
+  public String jEW;
+  public int jEX;
+  public String jiH;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.bM(1, byR);
-      if (byS != null) {
-        paramVarArgs.U(2, byS);
+      if (jEW == null) {
+        throw new b("Not all required fields were included: FileId");
       }
-      paramVarArgs.r(3, byT);
-      paramVarArgs.bM(4, hOX);
+      if (jiH == null) {
+        throw new b("Not all required fields were included: AesKey");
+      }
+      if (jEW != null) {
+        paramVarArgs.d(1, jEW);
+      }
+      if (jiH != null) {
+        paramVarArgs.d(2, jiH);
+      }
+      paramVarArgs.ci(3, jEX);
       return 0;
     }
-    if (paramInt == 1)
-    {
-      int i = a.a.a.a.bI(1, byR) + 0;
-      paramInt = i;
-      if (byS != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, byS);
+    if (paramInt == 1) {
+      if (jEW == null) {
+        break label337;
       }
-      return paramInt + a.a.a.a.q(3, byT) + a.a.a.a.bI(4, hOX);
     }
-    if (paramInt == 2)
+    label337:
+    for (paramInt = a.a.a.b.b.a.e(1, jEW) + 0;; paramInt = 0)
     {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
-        }
+      int i = paramInt;
+      if (jiH != null) {
+        i = paramInt + a.a.a.b.b.a.e(2, jiH);
       }
-      return 0;
-    }
-    if (paramInt == 3)
-    {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      aif localaif = (aif)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      return i + a.a.a.a.cg(3, jEX);
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
-      case 1: 
-        byR = jMD.aVp();
-        return 0;
-      case 2: 
-        byS = jMD.readString();
-        return 0;
-      case 3: 
-        byT = jMD.aVq();
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        if (jEW == null) {
+          throw new b("Not all required fields were included: FileId");
+        }
+        if (jiH != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: AesKey");
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        aif localaif = (aif)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          jEW = maU.readString();
+          return 0;
+        case 2: 
+          jiH = maU.readString();
+          return 0;
+        }
+        jEX = maU.jC();
         return 0;
       }
-      hOX = jMD.aVp();
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

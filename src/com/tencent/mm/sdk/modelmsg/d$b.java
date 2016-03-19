@@ -1,24 +1,21 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.d.b;
+import com.tencent.mm.sdk.e.b;
 
 public final class d$b
   extends b
 {
+  public d$b() {}
+  
+  public d$b(Bundle paramBundle)
+  {
+    m(paramBundle);
+  }
+  
   public final int getType()
   {
-    return 2;
-  }
-  
-  public final void m(Bundle paramBundle)
-  {
-    super.m(paramBundle);
-  }
-  
-  public final void n(Bundle paramBundle)
-  {
-    super.n(paramBundle);
+    return 4;
   }
 }
 

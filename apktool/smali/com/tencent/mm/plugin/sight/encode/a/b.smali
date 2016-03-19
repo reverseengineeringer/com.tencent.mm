@@ -13,37 +13,34 @@
 
 
 # virtual methods
-.method public abstract SA()V
-.end method
-
 .method public abstract a(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
 .end method
 
 .method public abstract a(Lcom/tencent/mm/plugin/sight/encode/a/b$b;)V
 .end method
 
-.method public abstract aI(Ljava/lang/String;Ljava/lang/String;)V
+.method public abstract awo()Z
 .end method
 
-.method public abstract ajI()Z
+.method public abstract awp()J
 .end method
 
-.method public abstract ajJ()J
+.method public abstract awq()Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 .end method
 
-.method public abstract ajK()Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+.method public abstract awr()V
 .end method
 
-.method public abstract ajL()V
+.method public abstract aws()F
 .end method
 
-.method public abstract ajM()F
-.end method
-
-.method public abstract ajN()Landroid/hardware/Camera$PreviewCallback;
+.method public abstract awt()Landroid/hardware/Camera$PreviewCallback;
 .end method
 
 .method public abstract b(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
+.end method
+
+.method public abstract bk(Ljava/lang/String;Ljava/lang/String;)V
 .end method
 
 .method public abstract cancel()V
@@ -52,10 +49,16 @@
 .method public abstract getDuration()I
 .end method
 
+.method public abstract getFrameCount()I
+.end method
+
 .method public abstract getRecordPath()Ljava/lang/String;
 .end method
 
-.method public abstract h(Ljava/lang/Runnable;)V
+.method public abstract initialize(I)V
+.end method
+
+.method public abstract m(Ljava/lang/Runnable;)V
 .end method
 
 .method public abstract reset()V

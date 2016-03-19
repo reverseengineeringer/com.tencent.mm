@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static final fGq:Ljava/util/Set;
+.field public static final hfY:Ljava/util/Set;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$d;->fGq:Ljava/util/Set;
+    sput-object v0, Lcom/tencent/mm/ui/base/MMSlideDelView$d;->hfY:Ljava/util/Set;
 
     return-void
 .end method
@@ -38,11 +38,11 @@
 .method public abstract a(Lcom/tencent/mm/ui/base/MMSlideDelView;Z)V
 .end method
 
-.method public abstract aot()Z
+.method public abstract aCe()Z
 .end method
 
-.method public abstract aou()V
+.method public abstract aCf()V
 .end method
 
-.method public abstract aov()V
+.method public abstract aCg()V
 .end method

@@ -1,24 +1,24 @@
 package com.tencent.mm.network.a;
 
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.n;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.o;
+import com.tencent.mm.sdk.platformtools.u;
 import java.net.InetAddress;
 
 public final class c
 {
-  private InetAddress bTv;
+  private InetAddress ckr;
   private int port;
   private int type;
   
   private c(InetAddress paramInetAddress, int paramInt1, int paramInt2)
   {
-    bTv = paramInetAddress;
+    ckr = paramInetAddress;
     port = paramInt1;
     type = paramInt2;
   }
   
-  public static c iH(String paramString)
+  public static c kl(String paramString)
   {
     if (paramString == null) {}
     do
@@ -28,12 +28,12 @@ public final class c
     } while ((paramString == null) || (paramString.length != 3));
     try
     {
-      paramString = new c(n.xi(paramString[0]), Integer.parseInt(paramString[1]), Integer.parseInt(paramString[2]));
+      paramString = new c(o.CJ(paramString[0]), Integer.parseInt(paramString[1]), Integer.parseInt(paramString[2]));
       return paramString;
     }
     catch (Exception paramString)
     {
-      t.e("!32@/B4Tb64lLpIJHjSdjj7mIt5a6vKEglja", "exception:%s", new Object[] { bn.a(paramString) });
+      u.e("!32@/B4Tb64lLpIJHjSdjj7mIt5a6vKEglja", "exception:%s", new Object[] { ay.b(paramString) });
     }
     return null;
   }
@@ -46,7 +46,7 @@ public final class c
     }
     for (;;)
     {
-      return bTv.getHostAddress() + ":" + port + "(" + str + ")";
+      return ckr.getHostAddress() + ":" + port + "(" + str + ")";
       if (type == 3) {
         str = "svrdns";
       } else if (type == 4) {

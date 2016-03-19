@@ -2,40 +2,43 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
-import com.tencent.mm.sdk.g.ae.a;
-import java.lang.reflect.Field;
-import java.util.Map;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class x
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aRu = "configId".hashCode();
-  private static final int aRv = "value".hashCode();
-  private boolean aRs = true;
-  private boolean aRt = true;
-  public int field_configId;
-  public String field_value;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int aUW;
+  private static final int aVA;
+  private static final int aVi;
+  private static final int aVw = "md5_lang".hashCode();
+  private static final int aVx;
+  private static final int aVy;
+  private static final int aVz;
+  private boolean aUB = true;
+  private boolean aUN = true;
+  private boolean aVr = true;
+  private boolean aVs = true;
+  private boolean aVt = true;
+  private boolean aVu = true;
+  private boolean aVv = true;
+  public int field_click_flag;
+  public String field_desc;
+  public int field_download_flag;
+  public String field_groupId;
+  public String field_lang;
+  public String field_md5;
+  public String field_md5_lang;
   
-  public static ae.a mB()
+  static
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[2];
-    bbY = new String[3];
-    StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "configId";
-    ibX.put("configId", "INTEGER PRIMARY KEY ");
-    localStringBuilder.append(" configId INTEGER PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    ibW = "configId";
-    bbY[1] = "value";
-    ibX.put("value", "TEXT");
-    localStringBuilder.append(" value TEXT");
-    bbY[2] = "rowid";
-    ibY = localStringBuilder.toString();
-    return locala;
+    aUW = "md5".hashCode();
+    aVx = "lang".hashCode();
+    aVy = "desc".hashCode();
+    aVi = "groupId".hashCode();
+    aVz = "click_flag".hashCode();
+    aVA = "download_flag".hashCode();
   }
   
   public final void c(Cursor paramCursor)
@@ -51,11 +54,11 @@ public abstract class x
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aRu != k) {
+      if (aVw != k) {
         break label65;
       }
-      field_configId = paramCursor.getInt(i);
-      aRs = true;
+      field_md5_lang = paramCursor.getString(i);
+      aVr = true;
     }
     for (;;)
     {
@@ -63,25 +66,53 @@ public abstract class x
       break label20;
       break;
       label65:
-      if (aRv == k) {
-        field_value = paramCursor.getString(i);
-      } else if (aHH == k) {
-        ibV = paramCursor.getLong(i);
+      if (aUW == k) {
+        field_md5 = paramCursor.getString(i);
+      } else if (aVx == k) {
+        field_lang = paramCursor.getString(i);
+      } else if (aVy == k) {
+        field_desc = paramCursor.getString(i);
+      } else if (aVi == k) {
+        field_groupId = paramCursor.getString(i);
+      } else if (aVz == k) {
+        field_click_flag = paramCursor.getInt(i);
+      } else if (aVA == k) {
+        field_download_flag = paramCursor.getInt(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aRs) {
-      localContentValues.put("configId", Integer.valueOf(field_configId));
+    if (aVr) {
+      localContentValues.put("md5_lang", field_md5_lang);
     }
-    if (aRt) {
-      localContentValues.put("value", field_value);
+    if (aUB) {
+      localContentValues.put("md5", field_md5);
     }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (aVs) {
+      localContentValues.put("lang", field_lang);
+    }
+    if (aVt) {
+      localContentValues.put("desc", field_desc);
+    }
+    if (field_groupId == null) {
+      field_groupId = "";
+    }
+    if (aUN) {
+      localContentValues.put("groupId", field_groupId);
+    }
+    if (aVu) {
+      localContentValues.put("click_flag", Integer.valueOf(field_click_flag));
+    }
+    if (aVv) {
+      localContentValues.put("download_flag", Integer.valueOf(field_download_flag));
+    }
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

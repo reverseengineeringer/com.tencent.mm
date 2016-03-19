@@ -1,40 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import java.util.List;
+import com.tencent.mm.sdk.c.b;
 
 public final class em
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aAU = new a();
-  public b aAV = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azh = new a();
+  public b azi = new b();
   
   public em()
   {
-    id = "NetSceneLbsFind";
-    hXT = atO;
+    id = "FileDownloadResume";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aAC = false;
-    public float aAW = 0.0F;
-    public float aAX = 0.0F;
-    public int aAY = 0;
-    public int aAZ = 0;
-    public String aBa;
-    public String aBb;
-    public int axw = 0;
+    public long ayW = 0L;
   }
   
   public static final class b
   {
-    public boolean aBc = false;
-    public List aBd;
-    public int aBe = -1;
-    public int axw = 0;
+    public boolean atf = false;
   }
 }
 

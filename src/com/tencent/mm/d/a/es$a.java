@@ -2,7 +2,10 @@ package com.tencent.mm.d.a;
 
 public final class es$a
 {
-  public int type;
+  public String appId;
+  public String aut;
+  public String extInfo;
+  public String url;
 }
 
 /* Location:

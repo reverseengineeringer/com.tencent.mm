@@ -1,93 +1,76 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.d.b.ap;
-import com.tencent.mm.sdk.g.ae.a;
-import java.lang.reflect.Field;
-import java.util.Map;
+import android.content.ContentValues;
+import android.database.Cursor;
 
 public final class ad
-  extends ap
 {
-  protected static ae.a aqp;
+  int aou = -1;
+  int bNc = 0;
+  int bNd = 0;
+  int bNe = 0;
+  int bNf = 0;
+  int bNg = 0;
+  int bNh = 0;
+  String bNi = "";
+  String bNj = "";
   
-  static
+  public final void c(Cursor paramCursor)
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[12];
-    bbY = new String[13];
-    StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "wechatId";
-    ibX.put("wechatId", "TEXT");
-    localStringBuilder.append(" wechatId TEXT");
-    localStringBuilder.append(", ");
-    bbY[1] = "linkedInId";
-    ibX.put("linkedInId", "TEXT");
-    localStringBuilder.append(" linkedInId TEXT");
-    localStringBuilder.append(", ");
-    bbY[2] = "name";
-    ibX.put("name", "TEXT");
-    localStringBuilder.append(" name TEXT");
-    localStringBuilder.append(", ");
-    bbY[3] = "position";
-    ibX.put("position", "TEXT");
-    localStringBuilder.append(" position TEXT");
-    localStringBuilder.append(", ");
-    bbY[4] = "picUrl";
-    ibX.put("picUrl", "TEXT");
-    localStringBuilder.append(" picUrl TEXT");
-    localStringBuilder.append(", ");
-    bbY[5] = "wechatUsername";
-    ibX.put("wechatUsername", "TEXT");
-    localStringBuilder.append(" wechatUsername TEXT");
-    localStringBuilder.append(", ");
-    bbY[6] = "wechatSmallHead";
-    ibX.put("wechatSmallHead", "TEXT");
-    localStringBuilder.append(" wechatSmallHead TEXT");
-    localStringBuilder.append(", ");
-    bbY[7] = "wechatBigHead";
-    ibX.put("wechatBigHead", "TEXT");
-    localStringBuilder.append(" wechatBigHead TEXT");
-    localStringBuilder.append(", ");
-    bbY[8] = "linkedInProfileUrl";
-    ibX.put("linkedInProfileUrl", "TEXT");
-    localStringBuilder.append(" linkedInProfileUrl TEXT");
-    localStringBuilder.append(", ");
-    bbY[9] = "status";
-    ibX.put("status", "INTEGER");
-    localStringBuilder.append(" status INTEGER");
-    localStringBuilder.append(", ");
-    bbY[10] = "userOpStatus";
-    ibX.put("userOpStatus", "INTEGER default '0' ");
-    localStringBuilder.append(" userOpStatus INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[11] = "nickname";
-    ibX.put("nickname", "TEXT");
-    localStringBuilder.append(" nickname TEXT");
-    bbY[12] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    bNc = paramCursor.getInt(0);
+    bNd = paramCursor.getInt(1);
+    bNe = paramCursor.getInt(2);
+    bNf = paramCursor.getInt(3);
+    bNg = paramCursor.getInt(4);
+    bNh = paramCursor.getInt(5);
+    bNi = paramCursor.getString(6);
+    bNj = paramCursor.getString(7);
   }
   
-  protected final ae.a lX()
+  public final ContentValues zd()
   {
-    return aqp;
+    ContentValues localContentValues = new ContentValues();
+    if ((aou & 0x1) != 0) {
+      localContentValues.put("grouopid", Integer.valueOf(bNc));
+    }
+    if ((aou & 0x2) != 0) {
+      localContentValues.put("membernum", Integer.valueOf(bNd));
+    }
+    if ((aou & 0x4) != 0) {
+      localContentValues.put("weixinnum", Integer.valueOf(bNe));
+    }
+    if ((aou & 0x8) != 0) {
+      localContentValues.put("insert_time", Integer.valueOf(bNf));
+    }
+    if ((aou & 0x10) != 0) {
+      localContentValues.put("lastupdate_time", Integer.valueOf(bNg));
+    }
+    if ((aou & 0x20) != 0) {
+      localContentValues.put("needupdate", Integer.valueOf(bNh));
+    }
+    if ((aou & 0x40) != 0) {
+      localContentValues.put("updatekey", ze());
+    }
+    if ((aou & 0x80) != 0) {
+      localContentValues.put("groupname", zf());
+    }
+    return localContentValues;
   }
   
-  public final String toString()
+  public final String ze()
   {
-    StringBuffer localStringBuffer = new StringBuffer();
-    localStringBuffer.append("wechatIdwechatId\n");
-    localStringBuffer.append("linkedInIdlinkedInId\n");
-    localStringBuffer.append("namename\n");
-    localStringBuffer.append("positionposition\n");
-    localStringBuffer.append("picUrlpicUrl\n");
-    localStringBuffer.append("wechatUsernamewechatUsername\n");
-    localStringBuffer.append("wechatBigHeadwechatSmallHead\n");
-    localStringBuffer.append("wechatUsernamewechatBigHead\n");
-    localStringBuffer.append("linkedInProfileUrllinkedInProfileUrl\n");
-    localStringBuffer.append("statusstatus\n");
-    localStringBuffer.append("userOpStatusstatus\n");
-    return localStringBuffer.toString();
+    if (bNi == null) {
+      return "";
+    }
+    return bNi;
+  }
+  
+  public final String zf()
+  {
+    if (bNj == null) {
+      return "";
+    }
+    return bNj;
   }
 }
 

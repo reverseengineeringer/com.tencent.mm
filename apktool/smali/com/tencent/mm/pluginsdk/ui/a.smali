@@ -1,9 +1,9 @@
 .class public final Lcom/tencent/mm/pluginsdk/ui/a;
-.super Lcom/tencent/mm/pluginsdk/ui/r;
+.super Lcom/tencent/mm/pluginsdk/ui/h;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/p/i$a;
+.implements Lcom/tencent/mm/q/d$a;
 
 
 # annotations
@@ -21,9 +21,9 @@
 
     .prologue
     .line 14
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/a$b;->epj:Lcom/tencent/mm/pluginsdk/ui/r$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/a$b;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
-    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/pluginsdk/ui/r;-><init>(Lcom/tencent/mm/pluginsdk/ui/r$a;Ljava/lang/String;)V
+    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/pluginsdk/ui/h;-><init>(Lcom/tencent/mm/pluginsdk/ui/h$a;Ljava/lang/String;)V
 
     .line 15
     return-void
@@ -34,11 +34,11 @@
 
     .prologue
     .line 20
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/a$b;->epj:Lcom/tencent/mm/pluginsdk/ui/r$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/a$b;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     const/4 v1, 0x0
 
-    invoke-direct {p0, v0, p1, v1}, Lcom/tencent/mm/pluginsdk/ui/r;-><init>(Lcom/tencent/mm/pluginsdk/ui/r$a;Ljava/lang/String;Z)V
+    invoke-direct {p0, v0, p1, v1}, Lcom/tencent/mm/pluginsdk/ui/h;-><init>(Lcom/tencent/mm/pluginsdk/ui/h$a;Ljava/lang/String;Z)V
 
     .line 22
     return-void
@@ -68,12 +68,12 @@
 
 
 # virtual methods
-.method public final fF(Ljava/lang/String;)V
+.method public final fZ(Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 26
-    invoke-super {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/r;->fF(Ljava/lang/String;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/h;->fZ(Ljava/lang/String;)V
 
     .line 27
     return-void

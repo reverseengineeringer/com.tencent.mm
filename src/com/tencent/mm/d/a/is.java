@@ -1,24 +1,34 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class is
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFT = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aEK = new a();
+  public b aEL = new b();
   
   public is()
   {
-    id = "TraceOperation";
-    hXT = atO;
+    id = "PublishLocation";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aFU = -1;
-    public String className;
+    public int aBp = 10;
+    public String aEM;
+    public int aou = 0;
+    public String label;
+    public double lat = -1.0D;
+    public double lng = -1.0D;
+  }
+  
+  public static final class b
+  {
+    public int ret = 0;
   }
 }
 

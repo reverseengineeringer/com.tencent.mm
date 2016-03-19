@@ -1,10 +1,11 @@
 package android.support.v4.app;
 
-import android.os.Parcelable.Creator;
+import android.app.Notification.Builder;
 
-final class o
-  implements Parcelable.Creator
-{}
+abstract interface o
+{
+  public abstract Notification.Builder V();
+}
 
 /* Location:
  * Qualified Name:     android.support.v4.app.o

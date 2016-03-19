@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field private gm:Ljava/util/Locale;
+.field private fu:Ljava/util/Locale;
 
-.field final synthetic lw:Landroid/support/v7/internal/view/menu/ActionMenuItemView;
+.field final synthetic kB:Landroid/support/v7/internal/view/menu/ActionMenuItemView;
 
 
 # direct methods
@@ -29,7 +29,7 @@
 
     .prologue
     .line 241
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/ActionMenuItemView$a;->lw:Landroid/support/v7/internal/view/menu/ActionMenuItemView;
+    iput-object p1, p0, Landroid/support/v7/internal/view/menu/ActionMenuItemView$a;->kB:Landroid/support/v7/internal/view/menu/ActionMenuItemView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -48,7 +48,7 @@
 
     iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
 
-    iput-object v0, p0, Landroid/support/v7/internal/view/menu/ActionMenuItemView$a;->gm:Ljava/util/Locale;
+    iput-object v0, p0, Landroid/support/v7/internal/view/menu/ActionMenuItemView$a;->fu:Ljava/util/Locale;
 
     .line 243
     return-void
@@ -67,7 +67,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/internal/view/menu/ActionMenuItemView$a;->gm:Ljava/util/Locale;
+    iget-object v1, p0, Landroid/support/v7/internal/view/menu/ActionMenuItemView$a;->fu:Ljava/util/Locale;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 

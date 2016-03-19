@@ -67,7 +67,7 @@
     mul-float/2addr v0, p1
 
     .line 63
-    invoke-static {p0, p1, p2, p3}, Lcom/tencent/mm/sdk/platformtools/e;->a(Ljava/io/InputStream;FII)Landroid/graphics/Bitmap;
+    invoke-static {p0, p1, p2, p3}, Lcom/tencent/mm/sdk/platformtools/d;->a(Ljava/io/InputStream;FII)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
@@ -94,7 +94,7 @@
     mul-float/2addr v0, p1
 
     .line 38
-    invoke-static {p0, p1}, Lcom/tencent/mm/sdk/platformtools/e;->c(Ljava/lang/String;F)Landroid/graphics/Bitmap;
+    invoke-static {p0, p1}, Lcom/tencent/mm/sdk/platformtools/d;->c(Ljava/lang/String;F)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
@@ -111,7 +111,7 @@
     return-object v1
 .end method
 
-.method public static cI(Landroid/content/Context;)Ljava/lang/String;
+.method public static dk(Landroid/content/Context;)Ljava/lang/String;
     .locals 5
 
     .prologue
@@ -252,93 +252,4 @@
     const-string/jumbo v0, "_P"
 
     goto :goto_1
-.end method
-
-.method public static xb(Ljava/lang/String;)Landroid/graphics/Bitmap;
-    .locals 3
-
-    .prologue
-    .line 89
-    :try_start_0
-    const-string/jumbo v0, "!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw=="
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "get bitmap from url:"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 92
-    new-instance v0, Ljava/net/URL;
-
-    invoke-direct {v0, p0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
-
-    .line 93
-    invoke-virtual {v0}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/net/HttpURLConnection;
-
-    .line 94
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setDoInput(Z)V
-
-    .line 95
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->connect()V
-
-    .line 96
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v1
-
-    .line 97
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/e;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    .line 98
-    invoke-virtual {v1}, Ljava/io/InputStream;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 111
-    :goto_0
-    return-object v0
-
-    .line 103
-    :catch_0
-    move-exception v0
-
-    :try_start_1
-    const-string/jumbo v0, "!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw=="
-
-    const-string/jumbo v1, "get bitmap from url failed"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 111
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 107
-    :catchall_0
-    move-exception v0
-
-    throw v0
 .end method

@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field jOw:I
+.field mcI:I
 
-.field jOx:I
+.field mcJ:I
 
 
 # direct methods
@@ -20,15 +20,15 @@
     invoke-direct {p0}, Loicq/wlogin_sdk/a/a;-><init>()V
 
     .line 7
-    iput v0, p0, Loicq/wlogin_sdk/a/r;->jOw:I
+    iput v0, p0, Loicq/wlogin_sdk/a/r;->mcI:I
 
     .line 8
-    iput v0, p0, Loicq/wlogin_sdk/a/r;->jOx:I
+    iput v0, p0, Loicq/wlogin_sdk/a/r;->mcJ:I
 
     .line 10
     const/16 v0, 0x116
 
-    iput v0, p0, Loicq/wlogin_sdk/a/r;->jNs:I
+    iput v0, p0, Loicq/wlogin_sdk/a/r;->mbE:I
 
     .line 11
     return-void
@@ -45,15 +45,15 @@
     .line 15
     const/16 v0, 0xa
 
-    iput v0, p0, Loicq/wlogin_sdk/a/r;->jOw:I
+    iput v0, p0, Loicq/wlogin_sdk/a/r;->mcI:I
 
     .line 24
-    iget v0, p0, Loicq/wlogin_sdk/a/r;->jOw:I
+    iget v0, p0, Loicq/wlogin_sdk/a/r;->mcI:I
 
     new-array v0, v0, [B
 
     .line 26
-    iget v1, p0, Loicq/wlogin_sdk/a/r;->jOx:I
+    iget v1, p0, Loicq/wlogin_sdk/a/r;->mcJ:I
 
     invoke-static {v0, v2, v1}, Loicq/wlogin_sdk/tools/util;->l([BII)V
 
@@ -73,20 +73,20 @@
     invoke-static {v0, v1, v2}, Loicq/wlogin_sdk/tools/util;->l([BII)V
 
     .line 33
-    iget v1, p0, Loicq/wlogin_sdk/a/r;->jNs:I
+    iget v1, p0, Loicq/wlogin_sdk/a/r;->mbE:I
 
-    invoke-super {p0, v1}, Loicq/wlogin_sdk/a/a;->pV(I)V
+    invoke-super {p0, v1}, Loicq/wlogin_sdk/a/a;->sL(I)V
 
     .line 41
-    iget v1, p0, Loicq/wlogin_sdk/a/r;->jOw:I
+    iget v1, p0, Loicq/wlogin_sdk/a/r;->mcI:I
 
-    invoke-super {p0, v0, v1}, Loicq/wlogin_sdk/a/a;->w([BI)V
+    invoke-super {p0, v0, v1}, Loicq/wlogin_sdk/a/a;->A([BI)V
 
     .line 42
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->aVD()V
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->bos()V
 
     .line 44
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->aVz()[B
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->boo()[B
 
     move-result-object v0
 

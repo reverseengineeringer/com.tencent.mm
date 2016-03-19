@@ -1,29 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ad
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a auS = new a();
-  public b auT = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public ad()
   {
-    id = "DeleteFavorite";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public long auU = 0L;
-  }
-  
-  public static final class b
-  {
-    public boolean auM = false;
+    id = "CheckGcmRegister";
+    jUI = arR;
   }
 }
 

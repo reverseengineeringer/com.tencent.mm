@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field hZZ:Ljava/lang/String;
+.field public iSE:Ljava/lang/Object;
 
-.field iaa:Ljava/lang/String;
+.field public jXq:I
 
-.field iab:Ljava/lang/String;
+.field public values:Ljava/lang/Object;
 
 
 # direct methods
@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 4277
+    .line 296
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

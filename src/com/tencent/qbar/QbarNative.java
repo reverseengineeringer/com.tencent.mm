@@ -2,22 +2,22 @@ package com.tencent.qbar;
 
 import android.graphics.Bitmap;
 import android.graphics.Point;
-import com.tencent.mm.compatible.util.m;
+import com.tencent.mm.compatible.util.i;
 import java.io.UnsupportedEncodingException;
 
 public class QbarNative
 {
   public static byte[] data;
-  public static byte[] jIm = new byte[100];
-  public static byte[] jIn;
-  public static int[] jIo;
+  public static byte[] lQH = new byte[100];
+  public static byte[] lQI;
+  public static int[] lQJ;
   
   static
   {
     data = new byte['ஸ'];
-    jIn = new byte[100];
-    jIo = new int[4];
-    m.a("wechatQrMod", QbarNative.class.getClassLoader());
+    lQI = new byte[100];
+    lQJ = new int[4];
+    i.b("wechatQrMod", QbarNative.class.getClassLoader());
   }
   
   public static native int Encode(byte[] paramArrayOfByte, int[] paramArrayOfInt, String paramString1, int paramInt1, int paramInt2, String paramString2, int paramInt3);
@@ -48,25 +48,25 @@ public class QbarNative
   
   public static int a(StringBuilder paramStringBuilder1, StringBuilder paramStringBuilder2)
   {
-    int i = GetOneResult(jIm, data, jIn, jIo);
+    int i = GetOneResult(lQH, data, lQI, lQJ);
     try
     {
-      String str = new String(jIn, 0, jIo[2], "UTF-8");
+      String str = new String(lQI, 0, lQJ[2], "UTF-8");
       if (str.equals("ANY"))
       {
-        paramStringBuilder1.append(new String(jIm, 0, jIo[0], "UTF-8"));
-        paramStringBuilder2.append(new String(data, 0, jIo[1], "UTF-8"));
+        paramStringBuilder1.append(new String(lQH, 0, lQJ[0], "UTF-8"));
+        paramStringBuilder2.append(new String(data, 0, lQJ[1], "UTF-8"));
         if (paramStringBuilder2.length() == 0)
         {
-          paramStringBuilder1.append(new String(jIm, 0, jIo[0], "ASCII"));
-          paramStringBuilder2.append(new String(data, 0, jIo[1], "ASCII"));
+          paramStringBuilder1.append(new String(lQH, 0, lQJ[0], "ASCII"));
+          paramStringBuilder2.append(new String(data, 0, lQJ[1], "ASCII"));
           return i;
         }
       }
       else
       {
-        paramStringBuilder1.append(new String(jIm, 0, jIo[0], str));
-        paramStringBuilder2.append(new String(data, 0, jIo[1], str));
+        paramStringBuilder1.append(new String(lQH, 0, lQJ[0], str));
+        paramStringBuilder2.append(new String(data, 0, lQJ[1], str));
         return i;
       }
     }

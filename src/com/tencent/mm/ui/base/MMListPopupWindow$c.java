@@ -9,14 +9,14 @@ final class MMListPopupWindow$c
   
   public final void onChanged()
   {
-    if (iGe.cAu.isShowing()) {
-      iGe.show();
+    if (kFn.cWm.isShowing()) {
+      kFn.show();
     }
   }
   
   public final void onInvalidated()
   {
-    iGe.dismiss();
+    kFn.dismiss();
   }
 }
 

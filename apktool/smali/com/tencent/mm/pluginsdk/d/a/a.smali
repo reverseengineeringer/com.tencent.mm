@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private gKS:Ljava/util/concurrent/CountDownLatch;
+.field private izC:Ljava/util/concurrent/CountDownLatch;
 
 
 # direct methods
@@ -18,7 +18,7 @@
     .line 15
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->gKS:Ljava/util/concurrent/CountDownLatch;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->izC:Ljava/util/concurrent/CountDownLatch;
 
     return-void
 .end method
@@ -30,7 +30,7 @@
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->gKS:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->izC:Ljava/util/concurrent/CountDownLatch;
 
     if-nez v0, :cond_0
 
@@ -41,20 +41,20 @@
 
     invoke-direct {v0, v1}, Ljava/util/concurrent/CountDownLatch;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->gKS:Ljava/util/concurrent/CountDownLatch;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->izC:Ljava/util/concurrent/CountDownLatch;
 
     .line 34
     :cond_0
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ad;->g(Ljava/lang/Runnable;)V
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
 
     .line 36
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->gKS:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->izC:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_1
 
     .line 38
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->gKS:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->izC:Ljava/util/concurrent/CountDownLatch;
 
     sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -88,19 +88,19 @@
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->gKS:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->izC:Ljava/util/concurrent/CountDownLatch;
 
     if-eqz v0, :cond_0
 
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->gKS:Ljava/util/concurrent/CountDownLatch;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->izC:Ljava/util/concurrent/CountDownLatch;
 
     invoke-virtual {v0}, Ljava/util/concurrent/CountDownLatch;->countDown()V
 
     .line 20
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->gKS:Ljava/util/concurrent/CountDownLatch;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/d/a/a;->izC:Ljava/util/concurrent/CountDownLatch;
 
     .line 22
     :cond_0

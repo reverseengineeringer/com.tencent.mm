@@ -1,70 +1,83 @@
 package com.tencent.mm.aa;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.dq;
-import com.tencent.mm.protocal.b.dr;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.h;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.eh;
+import com.tencent.mm.protocal.b.ei;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class a
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private d apI;
-  private final com.tencent.mm.q.a apJ;
+  public static int bPg = 0;
+  public static int bPh = 1;
+  public static int bPi = -85;
+  private d anM;
+  private final com.tencent.mm.r.a anN;
+  private int bPj = -1;
+  private String bPk;
+  private int bPl = 0;
   
-  public a(int paramInt, String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6, String paramString7)
+  public a(int paramInt1, String paramString, int paramInt2)
   {
-    Object localObject = new a.a();
-    bsW = new dq();
-    bsX = new dr();
-    uri = "/cgi-bin/micromsg-bin/bindlinkedincontact";
-    bsV = 549;
-    bsY = 0;
-    bsZ = 0;
-    apJ = ((a.a)localObject).vh();
-    localObject = (dq)apJ.bsT.btb;
-    hkO = 1;
-    hmn = paramInt;
-    hmo = paramString1;
-    hmp = paramString2;
-    hmq = paramString3;
-    hmr = paramString4;
-    hms = paramString5;
-    hmt = paramString6;
-    hmu = paramString7;
-  }
-  
-  public final int a(m paramm, d paramd)
-  {
-    apI = paramd;
-    return a(paramm, apJ, this);
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
-  {
-    t.d("!56@/B4Tb64lLpK+IBX8XDgnvihe6RohiUOGxVSl0wgxswW3W6yCgdumpg==", "onGYNetEnd errType:" + paramInt2 + " errCode:" + paramInt3);
-    paramw = (dq)apJ.bsT.btb;
-    if ((paramInt2 == 0) && (paramInt3 == 0))
+    switch (1.bPm[(paramInt1 - 1)])
     {
-      ax.tl().rf().set(286722, hmp);
-      ax.tl().rf().set(286721, hmo);
-      ax.tl().rf().set(286723, hmq);
     }
-    apI.a(paramInt2, paramInt3, paramString, this);
+    for (;;)
+    {
+      bPk = paramString;
+      bPl = paramInt2;
+      paramString = new com.tencent.mm.r.a.a();
+      bFa = new eh();
+      bFb = new ei();
+      uri = "/cgi-bin/micromsg-bin/bindgooglecontact";
+      bEY = 487;
+      bFc = 0;
+      bFd = 0;
+      anN = paramString.vy();
+      return;
+      bPj = 1;
+      continue;
+      bPj = 2;
+    }
+  }
+  
+  public final int a(e parame, d paramd)
+  {
+    u.i("!76@/B4Tb64lLpKHrGLZvbPyiBIPb+9i/+Gz73fnVukCcLy0RLMamaPrhe9Iy/jdhpZSEYm54712ix4=", "doScene");
+    anM = paramd;
+    paramd = (eh)anN.bEW.bFf;
+    iZE = bPj;
+    jbd = bPk;
+    jbe = bPl;
+    return a(parame, anN, this);
+  }
+  
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  {
+    u.i("!76@/B4Tb64lLpKHrGLZvbPyiBIPb+9i/+Gz73fnVukCcLy0RLMamaPrhe9Iy/jdhpZSEYm54712ix4=", "NetId:%d, ErrType:%d, ErrCode:%d, errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
+    if ((paramInt2 != 0) || (paramInt3 != 0))
+    {
+      anM.a(paramInt2, paramInt3, paramString, this);
+      return;
+    }
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
   {
-    return 549;
+    return 487;
+  }
+  
+  public static enum a
+  {
+    public static int[] zN()
+    {
+      return (int[])bPp.clone();
+    }
   }
 }
 

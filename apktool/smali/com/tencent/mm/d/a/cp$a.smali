@@ -15,7 +15,15 @@
 
 
 # instance fields
-.field public aub:Lcom/tencent/mm/storage/ar;
+.field public alN:Ljava/lang/String;
+
+.field public auJ:Ljava/lang/String;
+
+.field public avg:J
+
+.field public awd:Ljava/lang/String;
+
+.field public data:Ljava/lang/String;
 
 
 # direct methods

@@ -1,40 +1,11 @@
 package com.tencent.mm.protocal;
 
-public abstract class a$c
+public final class a$c
+  extends a.e
 {
-  protected String NAME = "noName";
-  protected String hgc = "";
-  protected int hgd = -1;
-  protected boolean hge = false;
-  
-  public a$c() {}
-  
-  public a$c(String paramString1, String paramString2, int paramInt, boolean paramBoolean)
+  public a$c()
   {
-    NAME = paramString1;
-    hgc = paramString2;
-    hgd = paramInt;
-    hge = paramBoolean;
-  }
-  
-  public final String aDj()
-  {
-    return hgc;
-  }
-  
-  public final int aDk()
-  {
-    return hgd;
-  }
-  
-  public final boolean aDl()
-  {
-    return hge;
-  }
-  
-  public final String getName()
-  {
-    return NAME;
+    super("getWXAccountId", "getWXAccountId", 10002, true);
   }
 }
 

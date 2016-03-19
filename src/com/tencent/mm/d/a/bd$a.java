@@ -1,10 +1,13 @@
 package com.tencent.mm.d.a;
 
+import android.content.Context;
+import com.tencent.mm.storage.a.c;
+
 public final class bd$a
 {
-  public String anZ;
-  public boolean awg;
-  public int direction;
+  public int asc;
+  public c aul;
+  public Context context;
 }
 
 /* Location:

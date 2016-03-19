@@ -4,25 +4,68 @@ import android.media.ExifInterface;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import com.tencent.mm.a.c;
+import com.tencent.mm.a.e;
 import java.io.IOException;
 
 public final class BackwardSupportUtil$ExifHelper
 {
-  public static int iM(String paramString)
+  public static LatLongData CA(String paramString)
   {
-    if (!BackwardSupportUtil.bUQ) {}
+    if (!BackwardSupportUtil.clN) {}
+    for (;;)
+    {
+      return null;
+      if (ay.kz(paramString))
+      {
+        u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "filepath is null or nil");
+        return null;
+      }
+      if (!e.ax(paramString))
+      {
+        u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "file not exist:[%s]", new Object[] { paramString });
+        return null;
+      }
+      try
+      {
+        paramString = new ExifInterface(paramString);
+        if (paramString == null) {
+          continue;
+        }
+        float[] arrayOfFloat = new float[2];
+        if (!paramString.getLatLong(arrayOfFloat)) {
+          continue;
+        }
+        paramString = new LatLongData();
+        aBn = arrayOfFloat[0];
+        bRR = arrayOfFloat[1];
+        u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "exif info, latitude:%f, longtitude:%f", new Object[] { Float.valueOf(aBn), Float.valueOf(bRR) });
+        return paramString;
+      }
+      catch (IOException paramString)
+      {
+        for (;;)
+        {
+          u.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "cannot read exif" + paramString);
+          paramString = null;
+        }
+      }
+    }
+  }
+  
+  public static int kq(String paramString)
+  {
+    if (!BackwardSupportUtil.clN) {}
     for (;;)
     {
       return 0;
-      if (bn.iW(paramString))
+      if (ay.kz(paramString))
       {
-        t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "filepath is null or nil");
+        u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "filepath is null or nil");
         return 0;
       }
-      if (!c.az(paramString))
+      if (!e.ax(paramString))
       {
-        t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "file not exist:[%s]", new Object[] { paramString });
+        u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "file not exist:[%s]", new Object[] { paramString });
         return 0;
       }
       try
@@ -49,7 +92,7 @@ public final class BackwardSupportUtil$ExifHelper
       {
         for (;;)
         {
-          t.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "cannot read exif" + paramString);
+          u.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "cannot read exif" + paramString);
           paramString = null;
         }
         return 90;
@@ -58,66 +101,23 @@ public final class BackwardSupportUtil$ExifHelper
     return 270;
   }
   
-  public static LatLongData xc(String paramString)
-  {
-    if (!BackwardSupportUtil.bUQ) {}
-    for (;;)
-    {
-      return null;
-      if (bn.iW(paramString))
-      {
-        t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "filepath is null or nil");
-        return null;
-      }
-      if (!c.az(paramString))
-      {
-        t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "file not exist:[%s]", new Object[] { paramString });
-        return null;
-      }
-      try
-      {
-        paramString = new ExifInterface(paramString);
-        if (paramString == null) {
-          continue;
-        }
-        float[] arrayOfFloat = new float[2];
-        if (!paramString.getLatLong(arrayOfFloat)) {
-          continue;
-        }
-        paramString = new LatLongData();
-        aAX = arrayOfFloat[0];
-        bEh = arrayOfFloat[1];
-        t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "exif info, latitude:%f, longtitude:%f", new Object[] { Float.valueOf(aAX), Float.valueOf(bEh) });
-        return paramString;
-      }
-      catch (IOException paramString)
-      {
-        for (;;)
-        {
-          t.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "cannot read exif" + paramString);
-          paramString = null;
-        }
-      }
-    }
-  }
-  
   public static class LatLongData
     implements Parcelable
   {
-    public static final Parcelable.Creator CREATOR = new d();
-    public float aAX;
-    public float bEh;
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+    public float aBn;
+    public float bRR;
     
     public LatLongData()
     {
-      aAX = 0.0F;
-      bEh = 0.0F;
+      aBn = 0.0F;
+      bRR = 0.0F;
     }
     
     public LatLongData(float paramFloat1, float paramFloat2)
     {
-      aAX = paramFloat1;
-      bEh = paramFloat2;
+      aBn = paramFloat1;
+      bRR = paramFloat2;
     }
     
     public int describeContents()
@@ -132,19 +132,19 @@ public final class BackwardSupportUtil$ExifHelper
       {
         return false;
         paramObject = (LatLongData)paramObject;
-      } while ((Math.abs(aAX - aAX) >= 1.0E-6F) || (Math.abs(bEh - bEh) >= 1.0E-6F));
+      } while ((Math.abs(aBn - aBn) >= 1.0E-6F) || (Math.abs(bRR - bRR) >= 1.0E-6F));
       return true;
     }
     
     public int hashCode()
     {
-      return (int)(aAX * 10000.0F) + (int)(bEh * 10000.0F);
+      return (int)(aBn * 10000.0F) + (int)(bRR * 10000.0F);
     }
     
     public void writeToParcel(Parcel paramParcel, int paramInt)
     {
-      paramParcel.writeFloat(aAX);
-      paramParcel.writeFloat(bEh);
+      paramParcel.writeFloat(aBn);
+      paramParcel.writeFloat(bRR);
     }
   }
 }

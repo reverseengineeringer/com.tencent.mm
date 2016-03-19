@@ -4,10 +4,10 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tencent/mm/q/g$a;)V
+.method public abstract a(Lcom/tencent/mm/r/g$a;)V
 .end method
 
-.method public abstract bn(Ljava/lang/String;)Z
+.method public abstract bp(Ljava/lang/String;)Z
 .end method
 
 .method public abstract getMaxAmplitude()I
@@ -16,8 +16,8 @@
 .method public abstract getStatus()I
 .end method
 
-.method public abstract ml()Z
+.method public abstract lH()Z
 .end method
 
-.method public abstract mm()I
+.method public abstract lI()I
 .end method

@@ -1,9 +1,9 @@
 .class public final Lcom/tencent/mm/protocal/u$a;
-.super Lcom/tencent/mm/protocal/i$c;
+.super Lcom/tencent/mm/protocal/h$c;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/protocal/i$a;
+.implements Lcom/tencent/mm/protocal/h$a;
 
 
 # annotations
@@ -18,26 +18,30 @@
 
 
 # instance fields
-.field public hgF:[B
+.field public ayo:[B
 
-.field public hho:Lcom/tencent/mm/protocal/b/yv;
+.field public bWJ:J
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 14
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/i$c;-><init>()V
+    .line 22
+    invoke-direct {p0}, Lcom/tencent/mm/protocal/h$c;-><init>()V
 
-    .line 18
-    new-instance v0, Lcom/tencent/mm/protocal/b/yv;
+    .line 10
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/yv;-><init>()V
+    iput-object v0, p0, Lcom/tencent/mm/protocal/u$a;->ayo:[B
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/u$a;->hho:Lcom/tencent/mm/protocal/b/yv;
+    .line 11
+    const-wide/16 v0, -0x1
 
+    iput-wide v0, p0, Lcom/tencent/mm/protocal/u$a;->bWJ:J
+
+    .line 23
     return-void
 .end method
 
@@ -47,217 +51,170 @@
     .locals 1
 
     .prologue
-    .line 70
-    const/4 v0, 0x0
+    .line 49
+    const v0, 0x3b9acabe
 
     return v0
 .end method
 
-.method public final tH()[B
-    .locals 10
+.method public final tY()[B
+    .locals 6
 
     .prologue
-    const/4 v9, 0x0
+    const/4 v5, 0x0
 
-    const/4 v2, -0x1
+    .line 27
+    iget-object v0, p0, Lcom/tencent/mm/protocal/u$a;->ayo:[B
+
+    array-length v0, v0
+
+    add-int/lit8 v0, v0, 0x8
+
+    new-array v0, v0, [B
+
+    .line 28
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
+
+    move-result-wide v1
+
+    iget-wide v3, p0, Lcom/tencent/mm/protocal/u$a;->bWJ:J
+
+    sub-long/2addr v1, v3
+
+    long-to-int v1, v1
+
+    .line 30
+    shr-int/lit8 v2, v1, 0x18
+
+    and-int/lit16 v2, v2, 0xff
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v5
+
+    .line 31
+    const/4 v2, 0x1
+
+    shr-int/lit8 v3, v1, 0x10
+
+    and-int/lit16 v3, v3, 0xff
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v0, v2
+
+    .line 32
+    const/4 v2, 0x2
+
+    shr-int/lit8 v3, v1, 0x8
+
+    and-int/lit16 v3, v3, 0xff
+
+    int-to-byte v3, v3
+
+    aput-byte v3, v0, v2
+
+    .line 33
+    const/4 v2, 0x3
+
+    and-int/lit16 v1, v1, 0xff
+
+    int-to-byte v1, v1
+
+    aput-byte v1, v0, v2
 
     .line 35
-    invoke-static {}, Lcom/tencent/mm/protocal/y;->aDu()Lcom/tencent/mm/protocal/y;
+    const/4 v1, 0x4
 
-    move-result-object v0
+    iget-object v2, p0, Lcom/tencent/mm/protocal/u$a;->ayo:[B
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/i$c;->hgO:Lcom/tencent/mm/protocal/y;
+    array-length v2, v2
+
+    shr-int/lit8 v2, v2, 0x18
+
+    and-int/lit16 v2, v2, 0xff
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
 
     .line 36
-    iget-object v0, p0, Lcom/tencent/mm/protocal/u$a;->hho:Lcom/tencent/mm/protocal/b/yv;
+    const/4 v1, 0x5
 
-    new-instance v1, Lcom/tencent/mm/protocal/b/adt;
+    iget-object v2, p0, Lcom/tencent/mm/protocal/u$a;->ayo:[B
 
-    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/adt;-><init>()V
+    array-length v2, v2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->aFz()[B
+    shr-int/lit8 v2, v2, 0x10
 
-    move-result-object v3
+    and-int/lit16 v2, v2, 0xff
 
-    invoke-virtual {v1, v3}, Lcom/tencent/mm/protocal/b/adt;->aA([B)Lcom/tencent/mm/protocal/b/adt;
+    int-to-byte v2, v2
 
-    move-result-object v1
+    aput-byte v2, v0, v1
 
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/yv;->hmC:Lcom/tencent/mm/protocal/b/adt;
+    .line 37
+    const/4 v1, 0x6
+
+    iget-object v2, p0, Lcom/tencent/mm/protocal/u$a;->ayo:[B
+
+    array-length v2, v2
+
+    shr-int/lit8 v2, v2, 0x8
+
+    and-int/lit16 v2, v2, 0xff
+
+    int-to-byte v2, v2
+
+    aput-byte v2, v0, v1
 
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/protocal/u$a;->hho:Lcom/tencent/mm/protocal/b/yv;
+    const/4 v1, 0x7
 
-    invoke-static {p0}, Lcom/tencent/mm/protocal/i;->a(Lcom/tencent/mm/protocal/i$c;)Lcom/tencent/mm/protocal/b/cj;
+    iget-object v2, p0, Lcom/tencent/mm/protocal/u$a;->ayo:[B
 
-    move-result-object v1
+    array-length v2, v2
 
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/adk;->hLO:Lcom/tencent/mm/protocal/b/cj;
+    and-int/lit16 v2, v2, 0xff
 
-    .line 39
-    iget-object v0, p0, Lcom/tencent/mm/protocal/u$a;->hho:Lcom/tencent/mm/protocal/b/yv;
+    int-to-byte v2, v2
 
-    sget v1, Lcom/tencent/mm/sdk/platformtools/g;->amP:I
+    aput-byte v2, v0, v1
 
-    iput v1, v0, Lcom/tencent/mm/protocal/b/yv;->hIl:I
+    .line 40
+    iget-object v1, p0, Lcom/tencent/mm/protocal/u$a;->ayo:[B
 
-    .line 41
-    new-instance v3, Lcom/tencent/mm/protocal/b/iu;
+    const/16 v2, 0x8
 
-    invoke-direct {v3}, Lcom/tencent/mm/protocal/b/iu;-><init>()V
+    iget-object v3, p0, Lcom/tencent/mm/protocal/u$a;->ayo:[B
+
+    array-length v3, v3
+
+    invoke-static {v1, v5, v0, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 42
-    const/16 v0, 0x2c9
-
-    iput v0, v3, Lcom/tencent/mm/protocal/b/iu;->hsp:I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->I([B)Ljava/lang/String;
 
     .line 44
-    new-instance v0, Lcom/tencent/mm/pointers/PByteArray;
-
-    invoke-direct {v0}, Lcom/tencent/mm/pointers/PByteArray;-><init>()V
-
-    .line 45
-    new-instance v1, Lcom/tencent/mm/pointers/PByteArray;
-
-    invoke-direct {v1}, Lcom/tencent/mm/pointers/PByteArray;-><init>()V
-
-    .line 47
-    iget v4, v3, Lcom/tencent/mm/protocal/b/iu;->hsp:I
-
-    invoke-static {v4, v0, v1}, Lcom/tencent/mm/protocal/MMProtocalJni;->generateECKey(ILcom/tencent/mm/pointers/PByteArray;Lcom/tencent/mm/pointers/PByteArray;)I
-
-    move-result v4
-
-    .line 49
-    iget-object v5, v0, Lcom/tencent/mm/pointers/PByteArray;->value:[B
-
-    .line 50
-    iget-object v1, v1, Lcom/tencent/mm/pointers/PByteArray;->value:[B
-
-    .line 52
-    if-eqz v1, :cond_0
-
-    move-object v0, v1
-
-    :goto_0
-    iput-object v0, p0, Lcom/tencent/mm/protocal/u$a;->hgF:[B
-
-    .line 54
-    const-string/jumbo v6, "!32@/B4Tb64lLpIaQaX9ldlBuCApwi7M0jiA"
-
-    const-string/jumbo v7, "summerecdh nid:%d ret:%d, pub len: %d, pri len:%d, pub:%s, pri:%s"
-
-    const/4 v0, 0x6
-
-    new-array v8, v0, [Ljava/lang/Object;
-
-    iget v0, v3, Lcom/tencent/mm/protocal/b/iu;->hsp:I
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v8, v9
-
-    const/4 v0, 0x1
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v8, v0
-
-    const/4 v4, 0x2
-
-    if-nez v5, :cond_1
-
-    move v0, v2
-
-    :goto_1
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v8, v4
-
-    const/4 v0, 0x3
-
-    if-nez v1, :cond_2
-
-    :goto_2
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v8, v0
-
-    const/4 v0, 0x4
-
-    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/bn;->aG([B)Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v8, v0
-
-    const/4 v0, 0x5
-
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->aG([B)Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v8, v0
-
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 57
-    new-instance v0, Lcom/tencent/mm/protocal/b/adt;
-
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/adt;-><init>()V
-
-    invoke-virtual {v0, v5}, Lcom/tencent/mm/protocal/b/adt;->aA([B)Lcom/tencent/mm/protocal/b/adt;
-
-    move-result-object v0
-
-    iput-object v0, v3, Lcom/tencent/mm/protocal/b/iu;->hkI:Lcom/tencent/mm/protocal/b/adt;
-
-    .line 58
-    iget-object v0, p0, Lcom/tencent/mm/protocal/u$a;->hho:Lcom/tencent/mm/protocal/b/yv;
-
-    iput-object v3, v0, Lcom/tencent/mm/protocal/b/yv;->hkM:Lcom/tencent/mm/protocal/b/iu;
-
-    .line 60
-    iget-object v0, p0, Lcom/tencent/mm/protocal/u$a;->hho:Lcom/tencent/mm/protocal/b/yv;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/protocal/b/yv;->toByteArray()[B
-
-    move-result-object v0
-
     return-object v0
-
-    .line 52
-    :cond_0
-    new-array v0, v9, [B
-
-    goto :goto_0
-
-    .line 54
-    :cond_1
-    array-length v0, v5
-
-    goto :goto_1
-
-    :cond_2
-    array-length v2, v1
-
-    goto :goto_2
 .end method
 
-.method public final tI()I
+.method public final tZ()I
     .locals 1
 
     .prologue
-    .line 65
-    const/16 v0, 0x7e
+    .line 54
+    const v0, 0xfff0002
+
+    return v0
+.end method
+
+.method public final we()Z
+    .locals 1
+
+    .prologue
+    .line 59
+    const/4 v0, 0x0
 
     return v0
 .end method

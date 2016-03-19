@@ -7,11 +7,9 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Gallery.LayoutParams;
 import android.widget.LinearLayout.LayoutParams;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.ao.a;
+import com.tencent.mm.aw.a;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 
 final class ContactRemarkImagePreviewUI$a
@@ -38,29 +36,29 @@ final class ContactRemarkImagePreviewUI$a
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    paramView = View.inflate(jfk, a.k.contact_remark_image_preview_item, null);
-    paramViewGroup = (MultiTouchImageView)paramView.findViewById(a.i.image);
+    paramView = View.inflate(ljp, 2131361821, null);
+    paramViewGroup = (MultiTouchImageView)paramView.findViewById(2131165228);
     paramView.setLayoutParams(new Gallery.LayoutParams(-1, -1));
     paramViewGroup.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
-    Bitmap localBitmap = BackwardSupportUtil.b.b(imagePath, a.getDensity(jfk));
+    Bitmap localBitmap = BackwardSupportUtil.b.b(imagePath, a.getDensity(ljp));
     int i;
     Matrix localMatrix;
     if (localBitmap != null)
     {
-      paramInt = ContactRemarkImagePreviewUI.e(jfk).getWidth();
-      i = ContactRemarkImagePreviewUI.e(jfk).getHeight();
+      paramInt = ContactRemarkImagePreviewUI.e(ljp).getWidth();
+      i = ContactRemarkImagePreviewUI.e(ljp).getHeight();
       localMatrix = new Matrix();
       localMatrix.reset();
       f1 = localBitmap.getWidth() / localBitmap.getHeight();
       f2 = localBitmap.getHeight() / localBitmap.getWidth();
-      t.v("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", "whDiv is " + f1 + " hwDiv is " + f2);
+      u.v("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", "whDiv is " + f1 + " hwDiv is " + f2);
       if ((f2 < 2.0F) || (localBitmap.getHeight() < 480)) {
-        break label310;
+        break label308;
       }
       f1 = localBitmap.getWidth() / paramInt;
       f2 = paramInt / localBitmap.getWidth();
       if (f1 <= 1.0D) {
-        break label282;
+        break label280;
       }
       localMatrix.postScale(f2, f2);
       localBitmap.getHeight();
@@ -69,14 +67,14 @@ final class ContactRemarkImagePreviewUI$a
     for (;;)
     {
       paramViewGroup.setImageMatrix(localMatrix);
-      paramViewGroup.bx(localBitmap.getWidth(), localBitmap.getHeight());
+      paramViewGroup.bN(localBitmap.getWidth(), localBitmap.getHeight());
       paramViewGroup.setImageBitmap(localBitmap);
       return paramView;
-      label282:
+      label280:
       localMatrix.postScale(1.0F, 1.0F);
       localMatrix.postTranslate((paramInt - localBitmap.getWidth()) / 2, 0.0F);
       continue;
-      label310:
+      label308:
       if ((f1 < 2.0F) || (localBitmap.getWidth() < 480)) {
         break;
       }
@@ -91,24 +89,24 @@ final class ContactRemarkImagePreviewUI$a
       {
         localMatrix.postScale(1.0F, 1.0F);
         f1 = (i - localBitmap.getHeight()) / 2;
-        t.d("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", " offsety " + f1);
+        u.d("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", " offsety " + f1);
         localMatrix.postTranslate(0.0F, f1);
       }
     }
     float f1 = paramInt / localBitmap.getWidth();
     float f2 = i / localBitmap.getHeight();
-    label473:
+    label471:
     float f3;
     if (f1 < f2)
     {
       f2 = localBitmap.getWidth() / paramInt;
       f3 = localBitmap.getHeight() / i;
       if (f2 <= f3) {
-        break label567;
+        break label565;
       }
-      label504:
+      label502:
       if (f2 <= 1.0D) {
-        break label574;
+        break label572;
       }
       localMatrix.postScale(f1, f1);
     }
@@ -117,11 +115,11 @@ final class ContactRemarkImagePreviewUI$a
       localMatrix.postTranslate((paramInt - localBitmap.getWidth() * f1) / 2.0F, (i - f1 * localBitmap.getHeight()) / 2.0F);
       break;
       f1 = f2;
-      break label473;
-      label567:
+      break label471;
+      label565:
       f2 = f3;
-      break label504;
-      label574:
+      break label502;
+      label572:
       f1 = 1.0F;
     }
   }

@@ -1,53 +1,50 @@
-.class final Lcom/tencent/mm/network/c;
+.class public interface abstract Lcom/tencent/mm/network/c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic bRC:I
-
-.field final synthetic bRD:I
-
-.field final synthetic bRE:[B
-
-
-# direct methods
-.method constructor <init>(II[B)V
-    .locals 0
-
-    .prologue
-    .line 179
-    iput p1, p0, Lcom/tencent/mm/network/c;->bRC:I
-
-    iput p2, p0, Lcom/tencent/mm/network/c;->bRD:I
-
-    iput-object p3, p0, Lcom/tencent/mm/network/c;->bRE:[B
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public abstract A([B)I
+.end method
 
-    .prologue
-    .line 182
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Db()Lcom/tencent/mm/network/au;
+.method public abstract aN(Z)V
+.end method
 
-    move-result-object v0
+.method public abstract ba(I)V
+.end method
 
-    iget v1, p0, Lcom/tencent/mm/network/c;->bRD:I
+.method public abstract gf(Ljava/lang/String;)[B
+.end method
 
-    iget-object v2, p0, Lcom/tencent/mm/network/c;->bRE:[B
+.method public abstract h(Ljava/lang/String;[B)V
+.end method
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/network/au;->d(I[B)V
+.method public abstract i([BI)V
+.end method
 
-    .line 183
-    return-void
+.method public abstract reset()V
+.end method
+
+.method public abstract rg()I
+.end method
+
+.method public abstract setUsername(Ljava/lang/String;)V
+.end method
+
+.method public abstract tq()[B
+.end method
+
+.method public abstract vR()[B
+.end method
+
+.method public abstract vS()Z
+.end method
+
+.method public abstract vT()[B
+.end method
+
+.method public abstract vU()Z
+.end method
+
+.method public abstract vV()[B
 .end method

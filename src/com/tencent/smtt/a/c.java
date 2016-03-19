@@ -7,7 +7,7 @@ import android.content.pm.PackageManager;
 public final class c
 {
   /* Error */
-  public static String ba(Context paramContext, String paramString)
+  public static String bn(Context paramContext, String paramString)
   {
     // Byte code:
     //   0: aload_0
@@ -47,18 +47,6 @@ public final class c
     //   27	38	43	java/lang/Exception
   }
   
-  public static String eQ(Context paramContext)
-  {
-    try
-    {
-      String str = paramContext.getPackageName();
-      paramContext = getPackageManagergetPackageInfo0versionName;
-      return paramContext;
-    }
-    catch (Exception paramContext) {}
-    return null;
-  }
-  
   public static int getAppVersionCode(Context paramContext)
   {
     try
@@ -69,6 +57,18 @@ public final class c
     }
     catch (Exception paramContext) {}
     return 0;
+  }
+  
+  public static String getAppVersionName(Context paramContext)
+  {
+    try
+    {
+      String str = paramContext.getPackageName();
+      paramContext = getPackageManagergetPackageInfo0versionName;
+      return paramContext;
+    }
+    catch (Exception paramContext) {}
+    return null;
   }
 }
 

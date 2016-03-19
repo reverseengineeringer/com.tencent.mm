@@ -1,18 +1,11 @@
 package com.tencent.mm.ui.account;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import com.tencent.mm.ui.base.s;
 
-final class i
-  implements MenuItem.OnMenuItemClickListener
+public final class i
 {
-  i(BindFacebookUI paramBindFacebookUI) {}
-  
-  public final boolean onMenuItemClick(MenuItem paramMenuItem)
-  {
-    BindFacebookUI.b(isM);
-    return true;
-  }
+  s kui;
+  String text;
 }
 
 /* Location:

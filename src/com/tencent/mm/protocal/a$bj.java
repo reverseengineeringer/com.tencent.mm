@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bj
-  extends a.c
+  extends a.e
 {
   public a$bj()
   {
-    super("nfcIsConnect", "nfcIsConnect", 139, true);
+    super("getWCPayRealnameVerify", "getWCPayRealnameVerify", 194, true);
   }
 }
 

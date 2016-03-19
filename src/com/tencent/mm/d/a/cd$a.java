@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class cd$a
 {
-  public long axb;
+  public boolean avJ;
 }
 
 /* Location:

@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class ck$a
 {
-  public byte[] axY;
+  public boolean Jq = false;
 }
 
 /* Location:

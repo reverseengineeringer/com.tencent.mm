@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field ht:Ljava/lang/Object;
+.field gB:Ljava/lang/Object;
 
-.field hu:Z
+.field gC:Z
 
-.field hv:F
+.field gD:F
 
-.field hw:F
+.field gE:F
 
 .field position:I
 

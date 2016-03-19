@@ -5,31 +5,30 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.tencent.mm.a.k;
 
 public class TextPreference
   extends Preference
 {
   private Context context;
-  private String dGU;
-  private int ga;
-  private TextView rR;
+  private String eut;
+  private int fh;
+  private TextView qU;
   
   public TextPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     context = paramContext;
-    setLayoutResource(a.k.mm_preference_info);
+    setLayoutResource(2131363247);
   }
   
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    rR = ((TextView)paramView.findViewById(16908310));
-    if (rR != null)
+    qU = ((TextView)paramView.findViewById(16908310));
+    if (qU != null)
     {
-      rR.setText(dGU);
-      rR.setGravity(ga);
+      qU.setText(eut);
+      qU.setGravity(fh);
     }
   }
   

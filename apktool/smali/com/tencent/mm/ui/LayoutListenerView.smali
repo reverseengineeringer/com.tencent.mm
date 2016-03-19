@@ -16,13 +16,11 @@
 # instance fields
 .field private TAG:Ljava/lang/String;
 
-.field private ipC:Lcom/tencent/mm/ui/LayoutListenerView$a;
+.field private kow:Lcom/tencent/mm/ui/LayoutListenerView$a;
 
-.field private ipD:Lcom/tencent/mm/ui/LayoutListenerView$b;
+.field private kox:Lcom/tencent/mm/ui/LayoutListenerView$c;
 
-.field private ipE:Z
-
-.field private ipF:Lcom/tencent/mm/ui/LayoutListenerView$c;
+.field private koy:Lcom/tencent/mm/ui/LayoutListenerView$b;
 
 
 # direct methods
@@ -30,85 +28,20 @@
     .locals 1
 
     .prologue
-    .line 38
+    .line 48
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 16
+    .line 17
     const-string/jumbo v0, "!44@/B4Tb64lLpL0Cktwymcv9cIfkKLSV6BYF/X1AKLzBN8="
 
     iput-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->TAG:Ljava/lang/String;
 
-    .line 67
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->ipE:Z
-
-    .line 39
+    .line 49
     return-void
 .end method
 
 
 # virtual methods
-.method public draw(Landroid/graphics/Canvas;)V
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x0
-
-    .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v1, "draw, myContext is %s"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/LayoutListenerView;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    aput-object v3, v2, v4
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 71
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    .line 72
-    invoke-super {p0, p1}, Landroid/widget/FrameLayout;->draw(Landroid/graphics/Canvas;)V
-
-    .line 73
-    iget-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->ipF:Lcom/tencent/mm/ui/LayoutListenerView$c;
-
-    if-eqz v0, :cond_0
-
-    .line 74
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    .line 75
-    iget-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->ipF:Lcom/tencent/mm/ui/LayoutListenerView$c;
-
-    invoke-interface {v0}, Lcom/tencent/mm/ui/LayoutListenerView$c;->aKU()V
-
-    .line 77
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->ipE:Z
-
-    if-eqz v0, :cond_0
-
-    .line 78
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/LayoutListenerView;->ipE:Z
-
-    .line 79
-    iget-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->ipF:Lcom/tencent/mm/ui/LayoutListenerView$c;
-
-    invoke-interface {v0}, Lcom/tencent/mm/ui/LayoutListenerView$c;->aKV()V
-
-    .line 83
-    :cond_0
-    return-void
-.end method
-
 .method public onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
     .locals 2
     .annotation build Landroid/annotation/TargetApi;
@@ -116,17 +49,17 @@
     .end annotation
 
     .prologue
-    .line 128
+    .line 142
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 130
+    .line 144
     iget-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "jacks onInitializeAccessibilityEvent"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 131
+    .line 145
     return-void
 .end method
 
@@ -137,33 +70,28 @@
     .end annotation
 
     .prologue
-    .line 102
+    .line 116
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 113
+    .line 127
     iget-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "jacks onInitializeAccessibilityNodeInfo"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 115
+    .line 129
     return-void
 .end method
 
 .method protected onLayout(ZIIII)V
     .locals 0
-    .annotation build Landroid/annotation/SuppressLint;
-        value = {
-            "WrongCall"
-        }
-    .end annotation
 
     .prologue
-    .line 53
+    .line 62
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 54
+    .line 66
     return-void
 .end method
 
@@ -174,17 +102,17 @@
     .end annotation
 
     .prologue
-    .line 120
+    .line 134
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 122
+    .line 136
     iget-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "jacks onPopulateAccessibilityEvent"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 123
+    .line 137
     return-void
 .end method
 
@@ -192,20 +120,20 @@
     .locals 1
 
     .prologue
-    .line 61
+    .line 73
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->onSizeChanged(IIII)V
 
-    .line 62
-    iget-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->ipD:Lcom/tencent/mm/ui/LayoutListenerView$b;
+    .line 74
+    iget-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->kox:Lcom/tencent/mm/ui/LayoutListenerView$c;
 
     if-eqz v0, :cond_0
 
-    .line 63
-    iget-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->ipD:Lcom/tencent/mm/ui/LayoutListenerView$b;
+    .line 75
+    iget-object v0, p0, Lcom/tencent/mm/ui/LayoutListenerView;->kox:Lcom/tencent/mm/ui/LayoutListenerView$c;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/tencent/mm/ui/LayoutListenerView$b;->onSizeChanged(IIII)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/tencent/mm/ui/LayoutListenerView$c;->onSizeChanged(IIII)V
 
-    .line 65
+    .line 77
     :cond_0
     return-void
 .end method
@@ -214,31 +142,31 @@
     .locals 0
 
     .prologue
-    .line 30
-    iput-object p1, p0, Lcom/tencent/mm/ui/LayoutListenerView;->ipC:Lcom/tencent/mm/ui/LayoutListenerView$a;
+    .line 36
+    iput-object p1, p0, Lcom/tencent/mm/ui/LayoutListenerView;->kow:Lcom/tencent/mm/ui/LayoutListenerView$a;
 
-    .line 31
+    .line 37
     return-void
 .end method
 
-.method public setOnResizedListener(Lcom/tencent/mm/ui/LayoutListenerView$b;)V
+.method public setOnPreLayoutListener(Lcom/tencent/mm/ui/LayoutListenerView$b;)V
     .locals 0
 
     .prologue
-    .line 34
-    iput-object p1, p0, Lcom/tencent/mm/ui/LayoutListenerView;->ipD:Lcom/tencent/mm/ui/LayoutListenerView$b;
+    .line 44
+    iput-object p1, p0, Lcom/tencent/mm/ui/LayoutListenerView;->koy:Lcom/tencent/mm/ui/LayoutListenerView$b;
 
-    .line 35
+    .line 45
     return-void
 .end method
 
-.method public setRootConsumeWatcher(Lcom/tencent/mm/ui/LayoutListenerView$c;)V
+.method public setOnResizedListener(Lcom/tencent/mm/ui/LayoutListenerView$c;)V
     .locals 0
 
     .prologue
-    .line 88
-    iput-object p1, p0, Lcom/tencent/mm/ui/LayoutListenerView;->ipF:Lcom/tencent/mm/ui/LayoutListenerView$c;
+    .line 40
+    iput-object p1, p0, Lcom/tencent/mm/ui/LayoutListenerView;->kox:Lcom/tencent/mm/ui/LayoutListenerView$c;
 
-    .line 89
+    .line 41
     return-void
 .end method

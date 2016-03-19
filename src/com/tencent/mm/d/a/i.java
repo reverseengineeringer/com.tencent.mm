@@ -1,26 +1,26 @@
 package com.tencent.mm.d.a;
 
-import android.support.v4.app.aa.f;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.n.a.a;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.storage.ag;
 
 public final class i
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aue = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a asj = new a();
   
   public i()
   {
-    id = "AutoNewMessage";
-    hXT = atO;
+    id = "AppMsgInsert";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public aa.f auf;
-    public String title;
-    public String username;
+    public ag ask;
+    public a.a asl;
   }
 }
 

@@ -15,13 +15,13 @@
 
 
 # static fields
-.field public static final enum iYk:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+.field public static final enum kXN:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
-.field public static final enum iYl:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+.field public static final enum kXO:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
-.field public static final enum iYm:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+.field public static final enum kXP:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
-.field private static final synthetic iYn:[Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+.field private static final synthetic kXQ:[Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
 
 # direct methods
@@ -35,14 +35,14 @@
 
     const/4 v2, 0x0
 
-    .line 30
+    .line 27
     new-instance v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     const-string/jumbo v1, "NoTranslate"
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYk:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXN:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     new-instance v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
@@ -50,7 +50,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYl:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXO:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     new-instance v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
@@ -58,26 +58,26 @@
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYm:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXP:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
-    .line 29
+    .line 26
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYk:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXN:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYl:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXO:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYm:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXP:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYn:[Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXQ:[Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     return-void
 .end method
@@ -86,7 +86,7 @@
     .locals 0
 
     .prologue
-    .line 29
+    .line 26
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +96,7 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 26
     const-class v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,8 +112,8 @@
     .locals 1
 
     .prologue
-    .line 29
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYn:[Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    .line 26
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXQ:[Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->clone()Ljava/lang/Object;
 

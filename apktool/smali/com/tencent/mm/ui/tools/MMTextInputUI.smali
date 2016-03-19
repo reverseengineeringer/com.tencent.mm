@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field private beP:I
+.field private bpb:I
 
-.field private crT:I
+.field private cJr:I
 
-.field private iLT:Landroid/widget/EditText;
+.field private kLd:Landroid/widget/EditText;
 
-.field private jup:Landroid/widget/TextView;
+.field private lwU:Landroid/widget/TextView;
 
-.field private juq:I
+.field private lwV:I
 
-.field private jur:Z
+.field private lwW:Z
 
 
 # direct methods
@@ -33,11 +33,11 @@
 
     .prologue
     .line 22
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->crT:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->cJr:I
 
     add-int/2addr v0, p1
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->crT:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->cJr:I
 
     return v0
 .end method
@@ -57,7 +57,7 @@
 
     .prologue
     .line 22
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->iLT:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->kLd:Landroid/widget/EditText;
 
     return-object v0
 .end method
@@ -67,7 +67,7 @@
 
     .prologue
     .line 22
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->jur:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->lwW:Z
 
     return v0
 .end method
@@ -77,7 +77,7 @@
 
     .prologue
     .line 22
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->beP:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->bpb:I
 
     return v0
 .end method
@@ -89,7 +89,7 @@
     .line 22
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->crT:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->cJr:I
 
     return v0
 .end method
@@ -99,7 +99,7 @@
 
     .prologue
     .line 22
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->crT:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->cJr:I
 
     return v0
 .end method
@@ -109,7 +109,7 @@
 
     .prologue
     .line 22
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->juq:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->lwV:I
 
     return v0
 .end method
@@ -134,11 +134,11 @@
     if-eqz v0, :cond_0
 
     .line 43
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
-    sget v1, Lcom/tencent/mm/a$n;->quit_confirm_tips:I
+    const v1, 0x7f0b0ec4
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->getString(I)Ljava/lang/String;
 
@@ -146,13 +146,13 @@
 
     const-string/jumbo v2, ""
 
-    new-instance v3, Lcom/tencent/mm/ui/tools/eg;
+    new-instance v3, Lcom/tencent/mm/ui/tools/MMTextInputUI$1;
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/tools/eg;-><init>(Lcom/tencent/mm/ui/tools/MMTextInputUI;)V
+    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/tools/MMTextInputUI$1;-><init>(Lcom/tencent/mm/ui/tools/MMTextInputUI;)V
 
     const/4 v4, 0x0
 
-    invoke-static {v0, v1, v2, v3, v4}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
     .line 57
     :goto_0
@@ -160,7 +160,7 @@
 
     .line 53
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->Xh()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->age()V
 
     .line 54
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->setResult(I)V
@@ -176,7 +176,7 @@
 
     .prologue
     .line 22
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->jup:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->lwU:Landroid/widget/TextView;
 
     return-object v0
 .end method
@@ -188,7 +188,7 @@
 
     .prologue
     .line 36
-    sget v0, Lcom/tencent/mm/a$k;->input_text_ui:I
+    const v0, 0x7f0a05d0
 
     return v0
 .end method
@@ -211,7 +211,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 73
-    sget v0, Lcom/tencent/mm/a$i;->text_edit:I
+    const v0, 0x7f0703b3
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->findViewById(I)Landroid/view/View;
 
@@ -219,10 +219,10 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->iLT:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->kLd:Landroid/widget/EditText;
 
     .line 74
-    sget v0, Lcom/tencent/mm/a$i;->state_tv:I
+    const v0, 0x7f0703b4
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->findViewById(I)Landroid/view/View;
 
@@ -230,10 +230,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->jup:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->lwU:Landroid/widget/TextView;
 
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->iLT:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->kLd:Landroid/widget/EditText;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->getIntent()Landroid/content/Intent;
 
@@ -247,14 +247,14 @@
 
     const-string/jumbo v2, ""
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
     .line 77
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->iLT:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->kLd:Landroid/widget/EditText;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->getIntent()Landroid/content/Intent;
 
@@ -268,7 +268,7 @@
 
     const-string/jumbo v2, ""
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -289,17 +289,17 @@
 
     shl-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->beP:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->bpb:I
 
     .line 81
-    iput v3, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->crT:I
+    iput v3, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->cJr:I
 
     .line 82
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->beP:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->bpb:I
 
     add-int/lit8 v0, v0, -0x78
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->beP:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->bpb:I
 
     mul-int/lit8 v1, v1, 0x9
 
@@ -309,7 +309,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->juq:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->lwV:I
 
     .line 83
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->getIntent()Landroid/content/Intent;
@@ -322,51 +322,51 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->jur:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->lwW:Z
 
     .line 84
-    new-instance v0, Lcom/tencent/mm/ui/tools/eh;
+    new-instance v0, Lcom/tencent/mm/ui/tools/MMTextInputUI$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/eh;-><init>(Lcom/tencent/mm/ui/tools/MMTextInputUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/MMTextInputUI$2;-><init>(Lcom/tencent/mm/ui/tools/MMTextInputUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 93
-    sget v0, Lcom/tencent/mm/a$n;->app_finish:I
+    const v0, 0x7f0b0df0
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/ui/tools/ei;
+    new-instance v1, Lcom/tencent/mm/ui/tools/MMTextInputUI$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/ei;-><init>(Lcom/tencent/mm/ui/tools/MMTextInputUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/MMTextInputUI$3;-><init>(Lcom/tencent/mm/ui/tools/MMTextInputUI;)V
 
-    sget v2, Lcom/tencent/mm/ui/cn$b;->iqR:I
+    sget v2, Lcom/tencent/mm/ui/j$b;->kpJ:I
 
     invoke-virtual {p0, v3, v0, v1, v2}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
 
     .line 108
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->jur:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->lwW:Z
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->fe(Z)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->bC(Z)V
 
     .line 112
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->jur:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->lwW:Z
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->beP:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->bpb:I
 
     if-lez v0, :cond_1
 
     .line 113
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->iLT:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMTextInputUI;->kLd:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/tencent/mm/ui/tools/ej;
+    new-instance v1, Lcom/tencent/mm/ui/tools/MMTextInputUI$4;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/ej;-><init>(Lcom/tencent/mm/ui/tools/MMTextInputUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/MMTextInputUI$4;-><init>(Lcom/tencent/mm/ui/tools/MMTextInputUI;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -400,7 +400,7 @@
 
     const-string/jumbo v1, "on back key down"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 63
     invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMTextInputUI;->goBack()V

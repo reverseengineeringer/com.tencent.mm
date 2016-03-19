@@ -14,19 +14,19 @@
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field private gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+.field private final eqa:Landroid/widget/LinearLayout$LayoutParams;
 
-.field private gXP:Lcom/tencent/mm/pluginsdk/c/a;
+.field private iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
-.field private gXQ:Lcom/tencent/mm/sdk/g/ai$a;
+.field private iOi:Lcom/tencent/mm/pluginsdk/c/a;
 
-.field private gXR:Lcom/tencent/mm/sdk/g/ai$a;
+.field private iOj:Lcom/tencent/mm/sdk/h/g$a;
 
-.field private final gXS:Landroid/widget/LinearLayout$LayoutParams;
+.field private iOk:Lcom/tencent/mm/sdk/h/g$a;
 
-.field private gXT:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
+.field private iOl:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
 
-.field private gXU:Lcom/tencent/mm/pluginsdk/ui/preference/b;
+.field private iOm:Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
 
 # direct methods
@@ -34,12 +34,12 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 48
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 53
+    .line 49
     return-void
 .end method
 
@@ -47,31 +47,31 @@
     .locals 3
 
     .prologue
-    .line 56
+    .line 52
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 34
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/preference/h;
+    .line 30
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/preference/h;-><init>(Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXP:Lcom/tencent/mm/pluginsdk/c/a;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOi:Lcom/tencent/mm/pluginsdk/c/a;
 
-    .line 67
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/preference/i;
+    .line 63
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/preference/i;-><init>(Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$2;-><init>(Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXQ:Lcom/tencent/mm/sdk/g/ai$a;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOj:Lcom/tencent/mm/sdk/h/g$a;
 
-    .line 83
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/preference/j;
+    .line 79
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$3;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/preference/j;-><init>(Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$3;-><init>(Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXR:Lcom/tencent/mm/sdk/g/ai$a;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOk:Lcom/tencent/mm/sdk/h/g$a;
 
-    .line 93
+    .line 89
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v1, -0x1
@@ -80,37 +80,37 @@
 
     invoke-direct {v0, v1, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXS:Landroid/widget/LinearLayout$LayoutParams;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->eqa:Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 57
+    .line 53
     iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->context:Landroid/content/Context;
 
-    .line 61
-    invoke-static {}, Lcom/tencent/mm/ag/m;->BK()Lcom/tencent/mm/ag/h;
+    .line 57
+    invoke-static {}, Lcom/tencent/mm/am/l;->DK()Lcom/tencent/mm/am/g;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXQ:Lcom/tencent/mm/sdk/g/ai$a;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOj:Lcom/tencent/mm/sdk/h/g$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ag/h;->g(Lcom/tencent/mm/sdk/g/ai$a;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/am/g;->c(Lcom/tencent/mm/sdk/h/g$a;)V
 
-    .line 62
+    .line 58
     const-string/jumbo v0, "LBSVerifyStorageNotify"
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXP:Lcom/tencent/mm/pluginsdk/c/a;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOi:Lcom/tencent/mm/pluginsdk/c/a;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/c/a;->a(Ljava/lang/String;Lcom/tencent/mm/pluginsdk/c/a;)V
 
-    .line 64
-    invoke-static {}, Lcom/tencent/mm/ag/m;->BN()Lcom/tencent/mm/ag/l;
+    .line 60
+    invoke-static {}, Lcom/tencent/mm/am/l;->DN()Lcom/tencent/mm/am/k;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXR:Lcom/tencent/mm/sdk/g/ai$a;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOk:Lcom/tencent/mm/sdk/h/g$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ag/l;->g(Lcom/tencent/mm/sdk/g/ai$a;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/am/k;->c(Lcom/tencent/mm/sdk/h/g$a;)V
 
-    .line 65
+    .line 61
     return-void
 .end method
 
@@ -120,7 +120,7 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 28
+    .line 24
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -134,7 +134,7 @@
 
     const-string/jumbo v1, "updateLbs, id is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -156,7 +156,7 @@
 
     const-string/jumbo v1, "updateLbs fail, sysRowId is invalid"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -193,7 +193,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-wide v0, v2
 
@@ -216,17 +216,17 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/tencent/mm/ag/i;
+    new-instance v2, Lcom/tencent/mm/am/h;
 
-    invoke-direct {v2}, Lcom/tencent/mm/ag/i;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/am/h;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/ag/m;->BM()Lcom/tencent/mm/ag/j;
+    invoke-static {}, Lcom/tencent/mm/am/l;->DM()Lcom/tencent/mm/am/i;
 
     move-result-object v3
 
-    invoke-virtual {v3, v0, v1, v2}, Lcom/tencent/mm/ag/j;->b(JLcom/tencent/mm/sdk/g/ae;)Z
+    invoke-virtual {v3, v0, v1, v2}, Lcom/tencent/mm/am/i;->b(JLcom/tencent/mm/sdk/h/c;)Z
 
     move-result v3
 
@@ -248,20 +248,20 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b$a;->aqX:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a$a;->apb:Ljava/lang/String;
 
-    iget-object v1, v2, Lcom/tencent/mm/ag/i;->field_sayhiuser:Ljava/lang/String;
+    iget-object v1, v2, Lcom/tencent/mm/am/h;->field_sayhiuser:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -274,20 +274,20 @@
 
     const-string/jumbo v1, "updateLbs, other talker, no need to process"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b$a;->elY:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a$a;->fvG:Ljava/lang/String;
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b$a;->elY:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a$a;->fvG:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -302,11 +302,11 @@
     :cond_6
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->context:Landroid/content/Context;
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/pluginsdk/ui/preference/m;->a(Landroid/content/Context;Lcom/tencent/mm/d/b/ao;)Lcom/tencent/mm/pluginsdk/ui/preference/m;
+    invoke-static {v0, v2}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->a(Landroid/content/Context;Lcom/tencent/mm/d/b/bd;)Lcom/tencent/mm/pluginsdk/ui/preference/b;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->a(Lcom/tencent/mm/pluginsdk/ui/preference/m;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->a(Lcom/tencent/mm/pluginsdk/ui/preference/b;)V
 
     goto/16 :goto_0
 .end method
@@ -317,7 +317,7 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 28
+    .line 24
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -331,7 +331,7 @@
 
     const-string/jumbo v1, "updateFMsg, id is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -353,7 +353,7 @@
 
     const-string/jumbo v1, "updateFMsg fail, sysRowId is invalid"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -390,7 +390,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-wide v0, v2
 
@@ -413,17 +413,17 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/tencent/mm/ag/g;
+    new-instance v2, Lcom/tencent/mm/am/f;
 
-    invoke-direct {v2}, Lcom/tencent/mm/ag/g;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/am/f;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/ag/m;->BK()Lcom/tencent/mm/ag/h;
+    invoke-static {}, Lcom/tencent/mm/am/l;->DK()Lcom/tencent/mm/am/g;
 
     move-result-object v3
 
-    invoke-virtual {v3, v0, v1, v2}, Lcom/tencent/mm/ag/h;->b(JLcom/tencent/mm/sdk/g/ae;)Z
+    invoke-virtual {v3, v0, v1, v2}, Lcom/tencent/mm/am/g;->b(JLcom/tencent/mm/sdk/h/c;)Z
 
     move-result v3
 
@@ -445,20 +445,20 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b$a;->aqX:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a$a;->apb:Ljava/lang/String;
 
-    iget-object v1, v2, Lcom/tencent/mm/ag/g;->field_talker:Ljava/lang/String;
+    iget-object v1, v2, Lcom/tencent/mm/am/f;->field_talker:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -471,20 +471,20 @@
 
     const-string/jumbo v1, "updateFMsg, other talker, no need to process"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b$a;->elY:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a$a;->fvG:Ljava/lang/String;
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b$a;->elY:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a$a;->fvG:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -499,11 +499,11 @@
     :cond_6
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->context:Landroid/content/Context;
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/pluginsdk/ui/preference/m;->a(Landroid/content/Context;Lcom/tencent/mm/ag/g;)Lcom/tencent/mm/pluginsdk/ui/preference/m;
+    invoke-static {v0, v2}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->a(Landroid/content/Context;Lcom/tencent/mm/am/f;)Lcom/tencent/mm/pluginsdk/ui/preference/b;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->a(Lcom/tencent/mm/pluginsdk/ui/preference/m;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->a(Lcom/tencent/mm/pluginsdk/ui/preference/b;)V
 
     goto/16 :goto_0
 .end method
@@ -514,7 +514,7 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 28
+    .line 24
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -528,7 +528,7 @@
 
     const-string/jumbo v1, "updateShake, id is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -550,7 +550,7 @@
 
     const-string/jumbo v1, "updateShake fail, sysRowId is invalid"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -587,7 +587,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-wide v0, v2
 
@@ -610,17 +610,17 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/tencent/mm/ag/k;
+    new-instance v2, Lcom/tencent/mm/am/j;
 
-    invoke-direct {v2}, Lcom/tencent/mm/ag/k;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/am/j;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/ag/m;->BN()Lcom/tencent/mm/ag/l;
+    invoke-static {}, Lcom/tencent/mm/am/l;->DN()Lcom/tencent/mm/am/k;
 
     move-result-object v3
 
-    invoke-virtual {v3, v0, v1, v2}, Lcom/tencent/mm/ag/l;->b(JLcom/tencent/mm/sdk/g/ae;)Z
+    invoke-virtual {v3, v0, v1, v2}, Lcom/tencent/mm/am/k;->b(JLcom/tencent/mm/sdk/h/c;)Z
 
     move-result v3
 
@@ -642,20 +642,20 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b$a;->aqX:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a$a;->apb:Ljava/lang/String;
 
-    iget-object v1, v2, Lcom/tencent/mm/ag/k;->field_sayhiuser:Ljava/lang/String;
+    iget-object v1, v2, Lcom/tencent/mm/am/j;->field_sayhiuser:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -668,20 +668,20 @@
 
     const-string/jumbo v1, "updateShake, other talker, no need to process"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b$a;->elY:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a$a;->fvG:Ljava/lang/String;
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b$a;->elY:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a$a;->fvG:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -696,18 +696,18 @@
     :cond_6
     iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->context:Landroid/content/Context;
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/pluginsdk/ui/preference/m;->a(Landroid/content/Context;Lcom/tencent/mm/ag/k;)Lcom/tencent/mm/pluginsdk/ui/preference/m;
+    invoke-static {v0, v2}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->a(Landroid/content/Context;Lcom/tencent/mm/am/j;)Lcom/tencent/mm/pluginsdk/ui/preference/b;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->a(Lcom/tencent/mm/pluginsdk/ui/preference/m;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->a(Lcom/tencent/mm/pluginsdk/ui/preference/b;)V
 
     goto/16 :goto_0
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/pluginsdk/ui/preference/m;)V
+.method public final a(Lcom/tencent/mm/pluginsdk/ui/preference/b;)V
     .locals 9
 
     .prologue
@@ -717,23 +717,23 @@
 
     const/4 v0, 0x0
 
-    .line 121
+    .line 117
     if-nez p1, :cond_0
 
-    .line 122
+    .line 118
     const-string/jumbo v0, "!44@/B4Tb64lLpISOYcLaKm7W9VXCtUsfbzmlSwz61ihIus="
 
     const-string/jumbo v1, "addItem fail, provider is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 233
+    .line 229
     :goto_0
     return-void
 
-    .line 126
+    .line 122
     :cond_0
-    iget-wide v2, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->id:J
+    iget-wide v2, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->id:J
 
     const-wide/16 v4, 0x0
 
@@ -741,7 +741,7 @@
 
     if-gtz v2, :cond_1
 
-    .line 127
+    .line 123
     const-string/jumbo v0, "!44@/B4Tb64lLpISOYcLaKm7W9VXCtUsfbzmlSwz61ihIus="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -750,7 +750,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v2, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->id:J
+    iget-wide v2, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->id:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -760,11 +760,11 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 132
+    .line 128
     :cond_1
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->getChildCount()I
 
@@ -772,21 +772,21 @@
 
     move v2, v0
 
-    .line 133
+    .line 129
     :goto_1
     if-ge v2, v3, :cond_3
 
-    .line 134
+    .line 130
     invoke-virtual {p0, v2}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 135
-    instance-of v5, v4, Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    .line 131
+    instance-of v5, v4, Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
     if-eqz v5, :cond_2
 
-    .line 136
+    .line 132
     invoke-virtual {v4}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v5
@@ -797,7 +797,7 @@
 
     move-result-object v4
 
-    iget-wide v5, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->id:J
+    iget-wide v5, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->id:J
 
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -809,7 +809,7 @@
 
     if-eqz v4, :cond_2
 
-    .line 137
+    .line 133
     const-string/jumbo v0, "!44@/B4Tb64lLpISOYcLaKm7W9VXCtUsfbzmlSwz61ihIus="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -818,7 +818,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v2, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->id:J
+    iget-wide v2, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->id:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -828,17 +828,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 133
+    .line 129
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 143
+    .line 139
     :cond_3
     const-string/jumbo v2, "!44@/B4Tb64lLpISOYcLaKm7W9VXCtUsfbzmlSwz61ihIus="
 
@@ -860,9 +860,9 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 145
+    .line 141
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->getChildCount()I
 
     move-result v2
@@ -871,17 +871,17 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 146
+    .line 142
     const-string/jumbo v2, "!44@/B4Tb64lLpISOYcLaKm7W9VXCtUsfbzmlSwz61ihIus="
 
     const-string/jumbo v3, "addItem, most 3 FMessageItemView, remove earliest"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 147
+    .line 143
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->removeViewAt(I)V
 
-    .line 150
+    .line 146
     :cond_4
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->getChildCount()I
 
@@ -889,82 +889,82 @@
 
     if-nez v2, :cond_6
 
-    .line 151
+    .line 147
     const-string/jumbo v2, "!44@/B4Tb64lLpISOYcLaKm7W9VXCtUsfbzmlSwz61ihIus="
 
     const-string/jumbo v3, "addItem, current child count is 0, add two child view"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 152
+    .line 148
     new-instance v2, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
 
     iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->context:Landroid/content/Context;
 
     invoke-direct {v2, v3}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXT:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
+    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOl:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
 
-    .line 153
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXT:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
+    .line 149
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOl:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->addView(Landroid/view/View;)V
 
-    .line 155
-    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    .line 151
+    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
     iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->context:Landroid/content/Context;
 
-    invoke-direct {v2, v3}, Lcom/tencent/mm/pluginsdk/ui/preference/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v3}, Lcom/tencent/mm/pluginsdk/ui/preference/a;-><init>(Landroid/content/Context;)V
 
-    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXU:Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOm:Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
-    .line 156
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXU:Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    .line 152
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOm:Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
     const-string/jumbo v3, ""
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->setContentText(Ljava/lang/String;)V
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/pluginsdk/ui/preference/a;->setContentText(Ljava/lang/String;)V
 
-    .line 157
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXU:Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    .line 153
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOm:Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->setBtnVisibility(I)V
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/a;->setBtnVisibility(I)V
 
-    .line 158
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXU:Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    .line 154
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOm:Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXS:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->eqa:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {p0, v2, v3}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 160
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    .line 156
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/b;->ri()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
 
     move-result-object v2
 
-    iget-object v3, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->username:Ljava/lang/String;
+    iget-object v3, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->username:Ljava/lang/String;
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/storage/q;->yM(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v2
 
-    .line 161
+    .line 157
     if-eqz v2, :cond_5
 
-    iget v2, v2, Lcom/tencent/mm/d/b/k;->field_type:I
+    iget v2, v2, Lcom/tencent/mm/d/b/p;->field_type:I
 
-    invoke-static {v2}, Lcom/tencent/mm/h/a;->cd(I)Z
+    invoke-static {v2}, Lcom/tencent/mm/h/a;->ce(I)Z
 
     move-result v2
 
     if-nez v2, :cond_8
 
-    .line 162
+    .line 158
     :cond_5
     const-string/jumbo v2, "!44@/B4Tb64lLpISOYcLaKm7W9VXCtUsfbzmlSwz61ihIus="
 
@@ -974,7 +974,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->username:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->username:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -984,33 +984,33 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXT:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
+    .line 159
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOl:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
 
     invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;->setVisibility(I)V
 
-    .line 164
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXU:Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    .line 160
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOm:Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->setVisibility(I)V
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/a;->setVisibility(I)V
 
-    .line 180
+    .line 176
     :cond_6
     :goto_2
-    iget-boolean v2, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->bxY:Z
+    iget-boolean v2, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->bLg:Z
 
     if-eqz v2, :cond_9
 
-    .line 181
+    .line 177
     iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->context:Landroid/content/Context;
 
-    sget v3, Lcom/tencent/mm/a$n;->fmessage_reply:I
+    const v3, 0x7f0b0408
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    iget-object v4, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->bnx:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->bze:Ljava/lang/String;
 
     aput-object v4, v1, v0
 
@@ -1018,40 +1018,40 @@
 
     move-result-object v1
 
-    .line 202
+    .line 198
     :goto_3
-    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
     iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->context:Landroid/content/Context;
 
-    invoke-direct {v2, v3}, Lcom/tencent/mm/pluginsdk/ui/preference/b;-><init>(Landroid/content/Context;)V
+    invoke-direct {v2, v3}, Lcom/tencent/mm/pluginsdk/ui/preference/a;-><init>(Landroid/content/Context;)V
 
-    .line 203
-    iget-wide v3, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->id:J
+    .line 199
+    iget-wide v3, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->id:J
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->setTag(Ljava/lang/Object;)V
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/pluginsdk/ui/preference/a;->setTag(Ljava/lang/Object;)V
 
-    .line 204
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->setContentText(Ljava/lang/String;)V
+    .line 200
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/pluginsdk/ui/preference/a;->setContentText(Ljava/lang/String;)V
 
-    .line 205
-    invoke-virtual {v2, v7}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->setBtnVisibility(I)V
+    .line 201
+    invoke-virtual {v2, v7}, Lcom/tencent/mm/pluginsdk/ui/preference/a;->setBtnVisibility(I)V
 
-    .line 206
+    .line 202
     if-eqz v0, :cond_7
 
-    .line 207
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/preference/k;
+    .line 203
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$4;
 
-    invoke-direct {v0, p0, p1}, Lcom/tencent/mm/pluginsdk/ui/preference/k;-><init>(Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;Lcom/tencent/mm/pluginsdk/ui/preference/m;)V
+    invoke-direct {v0, p0, p1}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$4;-><init>(Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;Lcom/tencent/mm/pluginsdk/ui/preference/b;)V
 
-    invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/a;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 232
+    .line 228
     :cond_7
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->getChildCount()I
 
@@ -1059,13 +1059,13 @@
 
     add-int/lit8 v0, v0, -0x2
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXS:Landroid/widget/LinearLayout$LayoutParams;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->eqa:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {p0, v2, v0, v1}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
     goto/16 :goto_0
 
-    .line 166
+    .line 162
     :cond_8
     const-string/jumbo v2, "!44@/B4Tb64lLpISOYcLaKm7W9VXCtUsfbzmlSwz61ihIus="
 
@@ -1075,7 +1075,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->username:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->username:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1085,27 +1085,27 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 167
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXT:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
+    .line 163
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOl:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
 
     invoke-virtual {v2, v7}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;->setVisibility(I)V
 
-    .line 168
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXU:Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    .line 164
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOm:Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
-    invoke-virtual {v2, v7}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->setVisibility(I)V
+    invoke-virtual {v2, v7}, Lcom/tencent/mm/pluginsdk/ui/preference/a;->setVisibility(I)V
 
     goto :goto_2
 
-    .line 183
+    .line 179
     :cond_9
-    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->bAi:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->bNn:Ljava/lang/String;
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->bAi:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->bNn:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -1113,10 +1113,10 @@
 
     if-lez v0, :cond_b
 
-    .line 185
-    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->bAi:Ljava/lang/String;
+    .line 181
+    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->bNn:Ljava/lang/String;
 
-    .line 198
+    .line 194
     :cond_a
     :goto_4
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1133,7 +1133,7 @@
 
     move-result-object v0
 
-    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->bnx:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->bze:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1151,36 +1151,36 @@
 
     goto :goto_3
 
-    .line 187
+    .line 183
     :cond_b
-    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->username:Ljava/lang/String;
+    iget-object v0, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->username:Ljava/lang/String;
 
-    .line 188
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Lcom/tencent/mm/model/b;->ri()Lcom/tencent/mm/storage/q;
+    .line 184
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    iget-object v3, p1, Lcom/tencent/mm/pluginsdk/ui/preference/m;->username:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/storage/q;->yM(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
 
     move-result-object v2
 
-    .line 189
+    iget-object v3, p1, Lcom/tencent/mm/pluginsdk/ui/preference/b;->username:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+
+    move-result-object v2
+
+    .line 185
     if-eqz v2, :cond_a
 
-    iget-wide v3, v2, Lcom/tencent/mm/h/a;->bkE:J
+    iget-wide v3, v2, Lcom/tencent/mm/h/a;->bvi:J
 
     long-to-int v3, v3
 
     if-lez v3, :cond_a
 
-    .line 190
-    invoke-virtual {v2}, Lcom/tencent/mm/storage/k;->qD()Ljava/lang/String;
+    .line 186
+    invoke-virtual {v2}, Lcom/tencent/mm/storage/k;->qz()Ljava/lang/String;
 
     move-result-object v0
 
@@ -1193,37 +1193,37 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 104
-    invoke-static {}, Lcom/tencent/mm/ag/m;->BK()Lcom/tencent/mm/ag/h;
+    .line 100
+    invoke-static {}, Lcom/tencent/mm/am/l;->DK()Lcom/tencent/mm/am/g;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXQ:Lcom/tencent/mm/sdk/g/ai$a;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOj:Lcom/tencent/mm/sdk/h/g$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ag/h;->h(Lcom/tencent/mm/sdk/g/ai$a;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/am/g;->d(Lcom/tencent/mm/sdk/h/g$a;)V
 
-    .line 105
+    .line 101
     const-string/jumbo v0, "LBSVerifyStorageNotify"
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXP:Lcom/tencent/mm/pluginsdk/c/a;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOi:Lcom/tencent/mm/pluginsdk/c/a;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/pluginsdk/c/a;)V
 
-    .line 106
-    invoke-static {}, Lcom/tencent/mm/ag/m;->BN()Lcom/tencent/mm/ag/l;
+    .line 102
+    invoke-static {}, Lcom/tencent/mm/am/l;->DN()Lcom/tencent/mm/am/k;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXR:Lcom/tencent/mm/sdk/g/ai$a;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOk:Lcom/tencent/mm/sdk/h/g$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ag/l;->h(Lcom/tencent/mm/sdk/g/ai$a;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/am/k;->d(Lcom/tencent/mm/sdk/h/g$a;)V
 
-    .line 108
+    .line 104
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->getChildCount()I
 
     move-result v2
 
-    .line 109
+    .line 105
     const/4 v0, 0x0
 
     move v1, v0
@@ -1231,44 +1231,44 @@
     :goto_0
     if-ge v1, v2, :cond_1
 
-    .line 110
+    .line 106
     invoke-virtual {p0, v1}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 111
-    instance-of v3, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    .line 107
+    instance-of v3, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
     if-eqz v3, :cond_0
 
-    .line 112
-    check-cast v0, Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    .line 108
+    check-cast v0, Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v3
 
     const/16 v4, 0x1e
 
-    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v3, v4, v0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
-    iget-object v3, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b;->bWY:Lcom/tencent/mm/ui/base/bn;
+    iget-object v3, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a;->coc:Lcom/tencent/mm/ui/base/p;
 
     if-eqz v3, :cond_0
 
-    iget-object v3, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b;->bWY:Lcom/tencent/mm/ui/base/bn;
+    iget-object v3, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a;->coc:Lcom/tencent/mm/ui/base/p;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/base/bn;->isShowing()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/ui/base/p;->isShowing()Z
 
     move-result v3
 
     if-eqz v3, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/b;->bWY:Lcom/tencent/mm/ui/base/bn;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/preference/a;->coc:Lcom/tencent/mm/ui/base/p;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/bn;->dismiss()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
 
-    .line 109
+    .line 105
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -1276,28 +1276,28 @@
 
     goto :goto_0
 
-    .line 116
+    .line 112
     :cond_1
-    iput-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXT:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
+    iput-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOl:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
 
-    .line 117
-    iput-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXU:Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    .line 113
+    iput-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOm:Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
-    .line 118
+    .line 114
     return-void
 .end method
 
-.method public setFMessageArgs(Lcom/tencent/mm/pluginsdk/ui/preference/b$a;)V
+.method public setFMessageArgs(Lcom/tencent/mm/pluginsdk/ui/preference/a$a;)V
     .locals 0
 
     .prologue
-    .line 99
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXJ:Lcom/tencent/mm/pluginsdk/ui/preference/b$a;
+    .line 95
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOc:Lcom/tencent/mm/pluginsdk/ui/preference/a$a;
 
-    .line 100
-    invoke-static {p1}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->setFMessageArgs(Lcom/tencent/mm/pluginsdk/ui/preference/b$a;)V
+    .line 96
+    invoke-static {p1}, Lcom/tencent/mm/pluginsdk/ui/preference/a;->setFMessageArgs(Lcom/tencent/mm/pluginsdk/ui/preference/a$a;)V
 
-    .line 101
+    .line 97
     return-void
 .end method
 
@@ -1309,12 +1309,12 @@
 
     const/4 v1, 0x0
 
-    .line 236
+    .line 232
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->getChildCount()I
 
     move-result v0
 
-    .line 237
+    .line 233
     const-string/jumbo v3, "!44@/B4Tb64lLpISOYcLaKm7W9VXCtUsfbzmlSwz61ihIus="
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1341,14 +1341,14 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 239
+    .line 235
     const/4 v3, 0x2
 
     if-gt v0, v3, :cond_1
 
-    .line 240
+    .line 236
     const-string/jumbo v1, "!44@/B4Tb64lLpISOYcLaKm7W9VXCtUsfbzmlSwz61ihIus="
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1365,21 +1365,21 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 250
+    .line 246
     :cond_0
     :goto_0
     return-void
 
-    .line 244
+    .line 240
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXT:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOl:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
 
     if-eqz v0, :cond_2
 
-    .line 245
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXT:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
+    .line 241
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOl:Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;
 
     if-eqz p1, :cond_3
 
@@ -1388,31 +1388,31 @@
     :goto_1
     invoke-virtual {v3, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView$a;->setVisibility(I)V
 
-    .line 247
+    .line 243
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXU:Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOm:Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
     if-eqz v0, :cond_0
 
-    .line 248
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->gXU:Lcom/tencent/mm/pluginsdk/ui/preference/b;
+    .line 244
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/FMessageListView;->iOm:Lcom/tencent/mm/pluginsdk/ui/preference/a;
 
     if-eqz p1, :cond_4
 
     :goto_2
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/preference/b;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/preference/a;->setVisibility(I)V
 
     goto :goto_0
 
     :cond_3
     move v0, v2
 
-    .line 245
+    .line 241
     goto :goto_1
 
     :cond_4
     move v1, v2
 
-    .line 248
+    .line 244
     goto :goto_2
 .end method

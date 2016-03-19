@@ -23,21 +23,25 @@
     const/4 v1, 0x0
 
     .line 46
-    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
     .line 48
     if-eqz v0, :cond_0
 
-    iget-boolean v2, v0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+
+    move-result v2
 
     if-eqz v2, :cond_0
 
     .line 50
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/aa;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
 
     const-string/jumbo v2, "com.tencent.tbs.tbsshell.WebCoreProxy"
 
@@ -67,7 +71,7 @@
 
     const-string/jumbo v2, "cacheDisabled"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->bU(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->cL(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -95,21 +99,25 @@
     const/4 v0, 0x0
 
     .line 103
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
     .line 105
     if-eqz v0, :cond_0
 
-    iget-boolean v1, v0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+
+    move-result v1
 
     if-eqz v1, :cond_0
 
     .line 108
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/aa;->getCachFileBaseDir()Ljava/lang/Object;
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/t;->getCachFileBaseDir()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -156,7 +164,7 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -182,21 +190,25 @@
     .line 25
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
     .line 26
     if-eqz v0, :cond_0
 
-    iget-boolean v1, v0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+
+    move-result v1
 
     if-eqz v1, :cond_0
 
     .line 28
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/aa;->getCachFileBaseDir()Ljava/lang/Object;
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/t;->getCachFileBaseDir()Ljava/lang/Object;
 
     move-result-object v0
 
@@ -211,7 +223,7 @@
 
     const-string/jumbo v1, "getCacheFileBaseDir"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->bU(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->cL(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 

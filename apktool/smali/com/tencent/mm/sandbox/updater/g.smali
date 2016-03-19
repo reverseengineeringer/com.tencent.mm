@@ -1,66 +1,66 @@
-.class final Lcom/tencent/mm/sandbox/updater/g;
-.super Ljava/lang/Object;
+.class public final Lcom/tencent/mm/sandbox/updater/g;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
-
-
-# instance fields
-.field final synthetic hWp:Lcom/tencent/mm/sandbox/updater/f;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/sandbox/updater/f;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 117
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/g;->hWp:Lcom/tencent/mm/sandbox/updater/f;
+    .line 13
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
 
+    .line 14
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 3
+.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 4
 
     .prologue
-    .line 121
-    const-string/jumbo v0, "!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/"
+    const/4 v3, 0x0
 
-    const-string/jumbo v1, "go to WebView"
+    .line 18
+    instance-of v0, p1, Lcom/tencent/mm/d/a/no;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    if-nez v0, :cond_1
 
-    .line 122
-    new-instance v0, Landroid/content/Intent;
+    .line 31
+    :cond_0
+    :goto_0
+    return v3
 
-    const-string/jumbo v1, "android.intent.action.VIEW"
+    .line 22
+    :cond_1
+    check-cast p1, Lcom/tencent/mm/d/a/no;
 
-    const-string/jumbo v2, "http://weixin.qq.com/m"
+    .line 23
+    iget-object v0, p1, Lcom/tencent/mm/d/a/no;->aJS:Lcom/tencent/mm/d/a/no$a;
 
-    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    iget-object v0, v0, Lcom/tencent/mm/d/a/no$a;->context:Landroid/content/Context;
 
-    move-result-object v2
+    const/4 v1, 0x0
 
-    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sandbox/updater/Updater;->c(Landroid/content/Context;Landroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/sandbox/updater/Updater;
 
-    .line 123
-    const/high16 v1, 0x10000000
+    move-result-object v0
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+    .line 24
+    if-eqz v0, :cond_0
 
-    .line 124
-    iget-object v1, p0, Lcom/tencent/mm/sandbox/updater/g;->hWp:Lcom/tencent/mm/sandbox/updater/f;
+    .line 29
+    iget-object v1, p1, Lcom/tencent/mm/d/a/no;->aJS:Lcom/tencent/mm/d/a/no$a;
 
-    iget-object v1, v1, Lcom/tencent/mm/sandbox/updater/f;->hWo:Lcom/tencent/mm/sandbox/updater/AppUpdaterUI;
+    iget v1, v1, Lcom/tencent/mm/d/a/no$a;->type:I
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sandbox/updater/AppUpdaterUI;->startActivity(Landroid/content/Intent;)V
+    const/4 v2, 0x1
 
-    .line 125
-    return-void
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sandbox/updater/Updater;->K(IZ)V
+
+    goto :goto_0
 .end method

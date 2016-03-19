@@ -1,51 +1,59 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.abr;
-import com.tencent.mm.protocal.b.abs;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.aag;
+import com.tencent.mm.protocal.b.aah;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.a.c;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class x
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private d apI;
-  private a apJ;
-  public int bLr = 1;
+  private d anM;
+  private final a bUv;
   
-  public x(int paramInt)
+  public x(String paramString)
   {
     a.a locala = new a.a();
-    bsW = new abr();
-    bsX = new abs();
-    uri = "/cgi-bin/micromsg-bin/queryhaspasswd";
-    bsV = 255;
-    bsY = 132;
-    bsZ = 1000000132;
-    apJ = locala.vh();
-    apJ.bsT.btb).hih = paramInt;
+    bFa = new aag();
+    bFb = new aah();
+    uri = "/cgi-bin/micromsg-bin/jumpemotiondetail";
+    bEY = 666;
+    bFc = 0;
+    bFd = 0;
+    bUv = locala.vy();
+    bUv.bEW.bFf).eiq = paramString;
   }
   
-  public final int a(m paramm, d paramd)
+  public final aah CJ()
   {
-    apI = paramd;
-    return a(paramm, apJ, this);
+    return (aah)bUv.bEX.bFf;
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public final int a(e parame, d paramd)
   {
-    apI.a(paramInt2, paramInt3, paramString, this);
+    anM = paramd;
+    return a(parame, bUv, this);
+  }
+  
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  {
+    u.d("!44@/B4Tb64lLpK+IBX8XDgnvnQejfDcCRgTHdjqFJ3ccXQ=", "[oneliang][NetSceneScanEmoji]:netId:%s,errType:%s,errCode:%s,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
+    if ((paramInt2 == 0) && (paramInt3 == 0)) {
+      u.d("!44@/B4Tb64lLpK+IBX8XDgnvnQejfDcCRgTHdjqFJ3ccXQ=", "[oneliang][NetSceneScanEmoji]:net end ok");
+    }
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
   {
-    return 255;
+    return 666;
   }
 }
 

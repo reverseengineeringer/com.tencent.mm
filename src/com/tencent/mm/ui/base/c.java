@@ -9,25 +9,25 @@ import android.view.ViewGroup.LayoutParams;
 
 public final class c
 {
-  boolean fdj = true;
-  View gDW;
-  public int gNI = 0;
-  DialogInterface.OnCancelListener guJ;
-  DialogInterface.OnDismissListener hdo;
-  Drawable iCk;
-  Drawable iCl;
-  CharSequence iCm;
-  CharSequence iCn;
-  CharSequence iCo;
-  CharSequence iCp;
-  boolean iCq = false;
-  DialogInterface.OnClickListener iCr;
-  DialogInterface.OnClickListener iCs;
-  View iCt;
-  int iCu;
-  public int iCv = 0;
-  ViewGroup.LayoutParams iCw;
-  boolean iCx = true;
+  boolean goQ = true;
+  public int iFa = 0;
+  DialogInterface.OnDismissListener iRg;
+  DialogInterface.OnCancelListener ial;
+  View inG;
+  ViewGroup.LayoutParams kBA;
+  boolean kBB = true;
+  Drawable kBo;
+  Drawable kBp;
+  CharSequence kBq;
+  CharSequence kBr;
+  CharSequence kBs;
+  CharSequence kBt;
+  boolean kBu = false;
+  DialogInterface.OnClickListener kBv;
+  DialogInterface.OnClickListener kBw;
+  View kBx;
+  int kBy;
+  public int kBz = 0;
   public int maxLines = 0;
   CharSequence title;
 }

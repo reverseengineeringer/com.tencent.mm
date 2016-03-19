@@ -2,89 +2,68 @@ package com.tencent.mm.modelsearch.a;
 
 import android.database.Cursor;
 import com.tencent.kingkong.database.SQLiteStatement;
-import com.tencent.mm.a.e;
+import com.tencent.mm.a.g;
 import com.tencent.mm.modelsearch.FTSUtils;
-import com.tencent.mm.modelsearch.d;
-import com.tencent.mm.modelsearch.l;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.modelsearch.b;
+import com.tencent.mm.modelsearch.j;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public final class a
-  extends d
+  extends b
 {
-  public SQLiteStatement bKd;
-  public SQLiteStatement bKe;
-  private SQLiteStatement bKf;
-  private SQLiteStatement bKg;
-  public SQLiteStatement bKh;
+  public SQLiteStatement bZZ;
+  public SQLiteStatement caa;
+  private SQLiteStatement cab;
+  private SQLiteStatement cac;
+  public SQLiteStatement cad;
   
-  protected final boolean Ac()
+  protected final boolean BF()
   {
-    super.Ac();
-    bKd.close();
-    bKe.close();
-    bKf.close();
-    bKg.close();
-    bKh.close();
+    super.BF();
+    bZZ.close();
+    caa.close();
+    cab.close();
+    cac.close();
+    cad.close();
     return true;
   }
   
-  protected final void Ad()
+  protected final void BG()
   {
-    if (O(-4, 3))
+    if (X(-4, 3))
     {
-      bIQ.execSQL("DROP TABLE IF EXISTS ContactTopHits2;");
-      bIQ.d(-4L, 3L);
+      bYA.execSQL("DROP TABLE IF EXISTS ContactTopHits2;");
+      bYA.e(-4L, 3L);
     }
-    bIQ.execSQL(String.format("CREATE INDEX IF NOT EXISTS %s_query ON %s(query);", new Object[] { Ae(), Ae() }));
-    bIQ.execSQL(String.format("CREATE INDEX IF NOT EXISTS %s_score ON %s(score);", new Object[] { Ae(), Ae() }));
-    bIQ.execSQL(String.format("CREATE INDEX IF NOT EXISTS %s_md5 ON %s(md5);", new Object[] { Ae(), Ae() }));
-    String str = String.format("INSERT INTO %s (content) VALUES (?);", new Object[] { Af() });
-    bKd = bIQ.compileStatement(str);
-    str = String.format("INSERT INTO %s (docid, type, subtype, entity_id, aux_index, timestamp, query, score, scene, md5) VALUES (last_insert_rowid(), ?, ?, ?, ?, ?, ?, ?, ?, ?);", new Object[] { Ae() });
-    bKe = bIQ.compileStatement(str);
-    str = String.format("UPDATE %s SET content=? WHERE docid=?", new Object[] { Af() });
-    bKf = bIQ.compileStatement(str);
-    str = String.format("UPDATE %s SET md5=? WHERE docid=?", new Object[] { Ae() });
-    bKg = bIQ.compileStatement(str);
-    bKh = bIQ.compileStatement("SELECT changes();");
+    bYA.execSQL(String.format("CREATE INDEX IF NOT EXISTS %s_query ON %s(query);", new Object[] { BH(), BH() }));
+    bYA.execSQL(String.format("CREATE INDEX IF NOT EXISTS %s_score ON %s(score);", new Object[] { BH(), BH() }));
+    bYA.execSQL(String.format("CREATE INDEX IF NOT EXISTS %s_md5 ON %s(md5);", new Object[] { BH(), BH() }));
+    String str = String.format("INSERT INTO %s (content) VALUES (?);", new Object[] { BI() });
+    bZZ = bYA.compileStatement(str);
+    str = String.format("INSERT INTO %s (docid, type, subtype, entity_id, aux_index, timestamp, query, score, scene, md5) VALUES (last_insert_rowid(), ?, ?, ?, ?, ?, ?, ?, ?, ?);", new Object[] { BH() });
+    caa = bYA.compileStatement(str);
+    str = String.format("UPDATE %s SET content=? WHERE docid=?", new Object[] { BI() });
+    cab = bYA.compileStatement(str);
+    str = String.format("UPDATE %s SET md5=? WHERE docid=?", new Object[] { BH() });
+    cac = bYA.compileStatement(str);
+    cad = bYA.compileStatement("SELECT changes();");
   }
   
-  public final String Ag()
+  public final String BJ()
   {
-    return String.format("INSERT INTO %s(%s) VALUES ('optimize');", new Object[] { Af(), Af() });
+    return String.format("INSERT INTO %s(%s) VALUES ('optimize');", new Object[] { BI(), BI() });
   }
   
-  protected final String Ah()
+  protected final String BK()
   {
-    return String.format("CREATE TABLE IF NOT EXISTS %s (docid INTEGER PRIMARY KEY, type INT, subtype INT DEFAULT 0, entity_id INTEGER, aux_index TEXT, timestamp INTEGER, status INT DEFAULT 0, query TEXT COLLATE NOCASE, score INT, scene INT, md5 TEXT);", new Object[] { Ae() });
+    return String.format("CREATE TABLE IF NOT EXISTS %s (docid INTEGER PRIMARY KEY, type INT, subtype INT DEFAULT 0, entity_id INTEGER, aux_index TEXT, timestamp INTEGER, status INT DEFAULT 0, query TEXT COLLATE NOCASE, score INT, scene INT, md5 TEXT);", new Object[] { BH() });
   }
   
-  protected final boolean Ai()
+  protected final boolean BL()
   {
-    return O(-4, 3);
-  }
-  
-  public void Ar()
-  {
-    Object localObject = String.format("Select docid, aux_index, query, score, scene from %s", new Object[] { Ae() });
-    localObject = bIQ.rawQuery((String)localObject, null);
-    while (((Cursor)localObject).moveToNext()) {
-      t.d("!44@/B4Tb64lLpKLxeMowbLUcOi8KUhVohsx/l8+ioGoNoA=", "docid=%d aux_index=%s, query=%s, score=%d, scene=%d", new Object[] { Long.valueOf(((Cursor)localObject).getLong(0)), ((Cursor)localObject).getString(1), ((Cursor)localObject).getString(2), Long.valueOf(((Cursor)localObject).getLong(3)), Long.valueOf(((Cursor)localObject).getLong(4)) });
-    }
-    ((Cursor)localObject).close();
-  }
-  
-  public void As()
-  {
-    Object localObject = String.format("Select docid, content from %s", new Object[] { Af() });
-    localObject = bIQ.rawQuery((String)localObject, null);
-    while (((Cursor)localObject).moveToNext()) {
-      t.d("!44@/B4Tb64lLpKLxeMowbLUcOi8KUhVohsx/l8+ioGoNoA=", "docid=%d, content=%s", new Object[] { Long.valueOf(((Cursor)localObject).getLong(0)), ((Cursor)localObject).getString(1) });
-    }
-    ((Cursor)localObject).close();
+    return X(-4, 3);
   }
   
   public final Cursor a(String paramString, String[] paramArrayOfString, int[] paramArrayOfInt, int paramInt1, int paramInt2)
@@ -102,62 +81,60 @@ public final class a
     }
     paramArrayOfString = paramString.trim() + '%';
     localObject = ((StringBuilder)localObject).toString();
-    paramArrayOfInt = "AND type IN " + FTSUtils.c(paramArrayOfInt);
+    paramArrayOfInt = "AND type IN " + FTSUtils.f(paramArrayOfInt);
     if (paramInt2 > 0) {}
     for (paramString = "LIMIT " + paramInt2;; paramString = "")
     {
-      paramString = String.format("SELECT type, subtype, entity_id, aux_index, timestamp, content, offsets(%s) FROM %s, %s WHERE %s %s %s %s %s AND %s.docid = %s.docid ORDER BY score desc %s;", new Object[] { Af(), Af(), Ae(), "query LIKE ?", "AND content MATCH ?", paramArrayOfInt, "AND scene=?", "AND status >= 0", Af(), Ae(), paramString });
-      return bIQ.rawQuery(paramString, new String[] { paramArrayOfString, localObject, String.valueOf(paramInt1) });
+      paramString = String.format("SELECT type, subtype, entity_id, aux_index, timestamp, content, offsets(%s) FROM %s, %s WHERE %s %s %s %s %s AND %s.docid = %s.docid ORDER BY score desc %s;", new Object[] { BI(), BI(), BH(), "query LIKE ?", "AND content MATCH ?", paramArrayOfInt, "AND scene=?", "AND status >= 0", BI(), BH(), paramString });
+      return bYA.rawQuery(paramString, new String[] { paramArrayOfString, localObject, String.valueOf(paramInt1) });
     }
   }
   
   public final void b(int paramInt1, int paramInt2, long paramLong1, String paramString1, long paramLong2, String paramString2)
   {
-    String str = e.n(paramString2.getBytes());
-    Object localObject1 = String.format("SELECT docid, query, score, scene from %s WHERE aux_index=? AND type=? AND subtype=? AND entity_id=? AND md5<>?", new Object[] { Ae() });
-    localObject1 = bIQ.rawQuery((String)localObject1, new String[] { paramString1, String.valueOf(paramInt1), String.valueOf(paramInt2), String.valueOf(paramLong1), str });
+    String str = g.m(paramString2.getBytes());
+    Object localObject1 = String.format("SELECT docid, query, score, scene from %s WHERE aux_index=? AND type=? AND subtype=? AND entity_id=? AND md5<>?", new Object[] { BH() });
+    localObject1 = bYA.rawQuery((String)localObject1, new String[] { paramString1, String.valueOf(paramInt1), String.valueOf(paramInt2), String.valueOf(paramLong1), str });
     Object localObject2 = new LinkedList();
     LinkedList localLinkedList = new LinkedList();
     while (((Cursor)localObject1).moveToNext())
     {
       a locala = new a((byte)0);
-      bKi = ((Cursor)localObject1).getLong(0);
-      bII = ((Cursor)localObject1).getString(1);
-      bKj = ((Cursor)localObject1).getLong(2);
-      brm = ((Cursor)localObject1).getLong(3);
+      cae = ((Cursor)localObject1).getLong(0);
+      aEy = ((Cursor)localObject1).getString(1);
+      caf = ((Cursor)localObject1).getLong(2);
+      bDq = ((Cursor)localObject1).getLong(3);
       localLinkedList.add(locala);
-      ((LinkedList)localObject2).add(Long.valueOf(bKi));
+      ((LinkedList)localObject2).add(Long.valueOf(cae));
     }
     ((Cursor)localObject1).close();
     if (localLinkedList.size() > 0)
     {
-      y((List)localObject2);
-      boolean bool = bIQ.inTransaction();
+      boolean bool = bYA.inTransaction();
       if (!bool) {
-        bIQ.beginTransaction();
+        bYA.beginTransaction();
       }
+      C((List)localObject2);
       localObject1 = localLinkedList.iterator();
       while (((Iterator)localObject1).hasNext())
       {
         localObject2 = (a)((Iterator)localObject1).next();
-        bKd.bindString(1, paramString2);
-        bKd.execute();
-        bKe.bindLong(1, paramInt1);
-        bKe.bindLong(2, paramInt2);
-        bKe.bindLong(3, paramLong1);
-        bKe.bindString(4, paramString1);
-        bKe.bindLong(5, paramLong2);
-        bKe.bindString(6, bII);
-        bKe.bindLong(7, bKj);
-        bKe.bindLong(8, brm);
-        bKe.bindString(9, str);
-        bKe.execute();
+        bZZ.bindString(1, paramString2);
+        bZZ.execute();
+        caa.bindLong(1, paramInt1);
+        caa.bindLong(2, paramInt2);
+        caa.bindLong(3, paramLong1);
+        caa.bindString(4, paramString1);
+        caa.bindLong(5, paramLong2);
+        caa.bindString(6, aEy);
+        caa.bindLong(7, caf);
+        caa.bindLong(8, bDq);
+        caa.bindString(9, str);
+        caa.execute();
       }
       if (!bool) {
         commit();
       }
-      Ar();
-      As();
     }
   }
   
@@ -183,10 +160,10 @@ public final class a
   
   private final class a
   {
-    String bII;
-    long bKi;
-    long bKj;
-    long brm;
+    String aEy;
+    long bDq;
+    long cae;
+    long caf;
     
     private a() {}
   }

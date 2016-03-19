@@ -1,11 +1,9 @@
 package com.tencent.mm.d.a;
 
-import java.util.List;
-
 public final class jg$a
 {
-  public List aGu;
-  public int auW = -1;
+  public String azM;
+  public String filePath;
 }
 
 /* Location:

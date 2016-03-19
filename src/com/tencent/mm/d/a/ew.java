@@ -1,25 +1,17 @@
 package com.tencent.mm.d.a;
 
-import android.os.Bundle;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ew
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aBB = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public ew()
   {
-    id = "NotifyStartWebViewParams";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public String aBC;
-    public Bundle aBD;
+    id = "GcmLogout";
+    jUI = arR;
   }
 }
 

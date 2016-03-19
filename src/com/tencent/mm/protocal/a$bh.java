@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bh
-  extends a.c
+  extends a.e
 {
   public a$bh()
   {
-    super("nfcGetId", "nfcGetId", 143, false);
+    super("getTeachSearchData", "", 10000, false);
   }
 }
 

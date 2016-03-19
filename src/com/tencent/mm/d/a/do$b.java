@@ -2,7 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class do$b
 {
-  public String azG;
+  public String anC;
+  public boolean atR = false;
 }
 
 /* Location:

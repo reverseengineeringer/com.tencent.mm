@@ -16,11 +16,11 @@
 
 
 # static fields
-.field public static blL:Lcom/tencent/mm/jni/platformcomm/PlatformComm$a;
+.field public static bwq:Lcom/tencent/mm/jni/platformcomm/PlatformComm$a;
 
 .field private static context:Landroid/content/Context;
 
-.field private static handler:Lcom/tencent/mm/sdk/platformtools/ac;
+.field private static handler:Lcom/tencent/mm/sdk/platformtools/aa;
 
 
 # direct methods
@@ -31,18 +31,18 @@
     const/4 v0, 0x0
 
     .line 40
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->blL:Lcom/tencent/mm/jni/platformcomm/PlatformComm$a;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->bwq:Lcom/tencent/mm/jni/platformcomm/PlatformComm$a;
 
     .line 41
     sput-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
 
     .line 42
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
 
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Lcom/tencent/mm/sdk/platformtools/ac;)V
+.method public static a(Landroid/content/Context;Lcom/tencent/mm/sdk/platformtools/aa;)V
     .locals 0
 
     .prologue
@@ -50,10 +50,10 @@
     sput-object p0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
 
     .line 77
-    sput-object p1, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+    sput-object p1, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
 
     .line 78
-    invoke-static {p0}, Lcom/tencent/mm/jni/platformcomm/a;->ay(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/tencent/mm/jni/platformcomm/a;->aI(Landroid/content/Context;)V
 
     .line 79
     return-void
@@ -69,12 +69,12 @@
     return-object v0
 .end method
 
-.method static synthetic qW()Lcom/tencent/mm/sdk/platformtools/ac;
+.method static synthetic qS()Lcom/tencent/mm/sdk/platformtools/aa;
     .locals 1
 
     .prologue
     .line 16
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
 
     return-object v0
 .end method

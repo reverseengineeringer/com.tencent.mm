@@ -1,4 +1,4 @@
-.class public interface abstract Landroid/support/v4/view/h$b;
+.class interface abstract Landroid/support/v4/view/h$b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -9,6 +9,14 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x608
     name = "b"
 .end annotation
+
+
+# virtual methods
+.method public abstract af()Z
+.end method
+
+.method public abstract ag()Z
+.end method

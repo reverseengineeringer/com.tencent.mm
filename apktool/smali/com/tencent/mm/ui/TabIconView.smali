@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field private crB:Landroid/graphics/Paint;
+.field private cIZ:Landroid/graphics/Paint;
 
-.field private isp:Landroid/graphics/Bitmap;
+.field private krs:Landroid/graphics/Bitmap;
 
-.field private isq:Landroid/graphics/Bitmap;
+.field private krt:Landroid/graphics/Bitmap;
 
-.field private isr:Landroid/graphics/Rect;
+.field private kru:Landroid/graphics/Rect;
 
-.field private iss:Landroid/graphics/Rect;
+.field private krv:Landroid/graphics/Rect;
 
-.field private ist:I
+.field private krw:I
 
 
 # direct methods
@@ -28,7 +28,7 @@
     .line 22
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/TabIconView;->ist:I
+    iput v0, p0, Lcom/tencent/mm/ui/TabIconView;->krw:I
 
     .line 30
     return-void
@@ -44,7 +44,7 @@
     .line 22
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/TabIconView;->ist:I
+    iput v0, p0, Lcom/tencent/mm/ui/TabIconView;->krw:I
 
     .line 26
     return-void
@@ -52,47 +52,40 @@
 
 
 # virtual methods
-.method public final bs(II)V
+.method public final i(IIZ)V
     .locals 4
 
     .prologue
     const/4 v3, 0x0
 
     .line 37
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/e;->mq(I)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->isp:Landroid/graphics/Bitmap;
+    if-eqz p3, :cond_0
 
     .line 38
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/e;->mq(I)Landroid/graphics/Bitmap;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/d;->pl(I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->isq:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->krs:Landroid/graphics/Bitmap;
 
     .line 39
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/TabIconView;->getContext()Landroid/content/Context;
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/d;->pl(I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ao/a;->cB(Landroid/content/Context;)Z
+    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->krt:Landroid/graphics/Bitmap;
 
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 40
+    .line 44
+    :goto_0
     new-instance v0, Landroid/graphics/Rect;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/TabIconView;->isp:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/TabIconView;->krs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/TabIconView;->isp:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/TabIconView;->krs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -100,18 +93,18 @@
 
     invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->isr:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->kru:Landroid/graphics/Rect;
 
-    .line 41
+    .line 45
     new-instance v0, Landroid/graphics/Rect;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/TabIconView;->isq:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/TabIconView;->krt:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/TabIconView;->isq:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/TabIconView;->krt:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -119,59 +112,34 @@
 
     invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->iss:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->krv:Landroid/graphics/Rect;
 
     .line 46
-    :goto_0
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->crB:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->cIZ:Landroid/graphics/Paint;
 
     .line 47
     return-void
 
-    .line 43
+    .line 41
     :cond_0
-    new-instance v0, Landroid/graphics/Rect;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/d;->pk(I)Landroid/graphics/Bitmap;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/TabIconView;->isp:Landroid/graphics/Bitmap;
+    move-result-object v0
 
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
+    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->krs:Landroid/graphics/Bitmap;
 
-    move-result v1
+    .line 42
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/d;->pk(I)Landroid/graphics/Bitmap;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/TabIconView;->isp:Landroid/graphics/Bitmap;
+    move-result-object v0
 
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v2
-
-    invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->isr:Landroid/graphics/Rect;
-
-    .line 44
-    new-instance v0, Landroid/graphics/Rect;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/TabIconView;->isq:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v1
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/TabIconView;->isq:Landroid/graphics/Bitmap;
-
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v2
-
-    invoke-direct {v0, v3, v3, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->iss:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->krt:Landroid/graphics/Bitmap;
 
     goto :goto_0
 .end method
@@ -186,7 +154,7 @@
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->crB:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->cIZ:Landroid/graphics/Paint;
 
     if-nez v0, :cond_0
 
@@ -196,36 +164,36 @@
 
     .line 60
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->crB:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->cIZ:Landroid/graphics/Paint;
 
-    iget v1, p0, Lcom/tencent/mm/ui/TabIconView;->ist:I
+    iget v1, p0, Lcom/tencent/mm/ui/TabIconView;->krw:I
 
     rsub-int v1, v1, 0xff
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 61
-    iget-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->isq:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->krt:Landroid/graphics/Bitmap;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/TabIconView;->iss:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/ui/TabIconView;->krv:Landroid/graphics/Rect;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/TabIconView;->crB:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/ui/TabIconView;->cIZ:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v3, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     .line 62
-    iget-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->crB:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->cIZ:Landroid/graphics/Paint;
 
-    iget v1, p0, Lcom/tencent/mm/ui/TabIconView;->ist:I
+    iget v1, p0, Lcom/tencent/mm/ui/TabIconView;->krw:I
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 63
-    iget-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->isp:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/TabIconView;->krs:Landroid/graphics/Bitmap;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/TabIconView;->isr:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/ui/TabIconView;->kru:Landroid/graphics/Rect;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/TabIconView;->crB:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/ui/TabIconView;->cIZ:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v3, v1, v2}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
@@ -237,7 +205,7 @@
 
     .prologue
     .line 50
-    iput p1, p0, Lcom/tencent/mm/ui/TabIconView;->ist:I
+    iput p1, p0, Lcom/tencent/mm/ui/TabIconView;->krw:I
 
     .line 51
     invoke-virtual {p0}, Lcom/tencent/mm/ui/TabIconView;->invalidate()V

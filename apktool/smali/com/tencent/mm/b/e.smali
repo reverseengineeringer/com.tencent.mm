@@ -117,7 +117,7 @@
     move-result-object v1
 
     .line 47
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 49
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
@@ -129,21 +129,21 @@
 
     .line 54
     :cond_3
-    invoke-static {p0}, Lcom/tencent/mm/b/a;->aI(Ljava/lang/String;)Lcom/tencent/mm/b/a;
+    invoke-static {p0}, Lcom/tencent/mm/b/a;->aG(Ljava/lang/String;)Lcom/tencent/mm/b/a;
 
     move-result-object v1
 
     .line 56
     if-eqz v1, :cond_8
 
-    iget-object v2, v1, Lcom/tencent/mm/b/a;->amK:Lcom/tencent/mm/b/a$a;
+    iget-object v2, v1, Lcom/tencent/mm/b/a;->akx:Lcom/tencent/mm/b/a$a;
 
     if-eqz v2, :cond_8
 
     .line 57
-    iget-object v1, v1, Lcom/tencent/mm/b/a;->amK:Lcom/tencent/mm/b/a$a;
+    iget-object v1, v1, Lcom/tencent/mm/b/a;->akx:Lcom/tencent/mm/b/a$a;
 
-    iget v1, v1, Lcom/tencent/mm/b/a$a;->amN:I
+    iget v1, v1, Lcom/tencent/mm/b/a$a;->akA:I
 
     add-int/lit8 v5, v1, 0x8
 
@@ -164,7 +164,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 60
     :goto_1
@@ -188,7 +188,7 @@
 
     const-string/jumbo v2, "merge failed in patchLessMemory()"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 62
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
@@ -225,9 +225,11 @@
 
     invoke-direct {v1, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    array-length v3, v2
+    const/4 v3, 0x0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/b/d;->a(Ljava/io/InputStream;[BI)Z
+    array-length v8, v2
+
+    invoke-static {v1, v2, v3, v8}, Lcom/tencent/mm/b/d;->a(Ljava/io/InputStream;[BII)Z
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->length()J
 
@@ -248,7 +250,7 @@
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
 
     .line 70
-    invoke-static {p2}, Lcom/tencent/mm/a/e;->aE(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2}, Lcom/tencent/mm/a/g;->aC(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -270,7 +272,7 @@
     invoke-direct {v0}, Lcom/tencent/mm/b/b;-><init>()V
 
     .line 75
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/b/b;->aK(Ljava/lang/String;)Lcom/tencent/mm/b/b;
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/b/b;->aI(Ljava/lang/String;)Lcom/tencent/mm/b/b;
 
     .line 76
     new-instance v1, Lcom/tencent/mm/b/a;
@@ -278,7 +280,7 @@
     invoke-direct {v1, v0}, Lcom/tencent/mm/b/a;-><init>(Lcom/tencent/mm/b/b;)V
 
     .line 77
-    invoke-virtual {v1, v4}, Lcom/tencent/mm/b/a;->f(Ljava/io/File;)I
+    invoke-virtual {v1, v4}, Lcom/tencent/mm/b/a;->h(Ljava/io/File;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -295,7 +297,7 @@
 
     const-string/jumbo v1, "Exception in merge()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v6
 

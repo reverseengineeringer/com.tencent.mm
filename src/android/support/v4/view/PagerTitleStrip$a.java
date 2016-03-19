@@ -6,7 +6,7 @@ final class PagerTitleStrip$a
   extends DataSetObserver
   implements ViewPager.d, ViewPager.e
 {
-  private int gk;
+  private int fs;
   
   private PagerTitleStrip$a(PagerTitleStrip paramPagerTitleStrip) {}
   
@@ -16,40 +16,40 @@ final class PagerTitleStrip$a
     if (paramFloat > 0.5F) {
       paramInt2 = paramInt1 + 1;
     }
-    gl.a(paramInt2, paramFloat, false);
+    ft.a(paramInt2, paramFloat, false);
   }
   
-  public final void b(o paramo1, o paramo2)
+  public final void b(j paramj1, j paramj2)
   {
-    gl.a(paramo1, paramo2);
-  }
-  
-  public final void m(int paramInt)
-  {
-    float f = 0.0F;
-    if (gk == 0)
-    {
-      gl.a(gl.fT.getCurrentItem(), gl.fT.getAdapter());
-      if (PagerTitleStrip.a(gl) >= 0.0F) {
-        f = PagerTitleStrip.a(gl);
-      }
-      gl.a(gl.fT.getCurrentItem(), f, true);
-    }
+    ft.a(paramj1, paramj2);
   }
   
   public final void n(int paramInt)
   {
-    gk = paramInt;
+    float f = 0.0F;
+    if (fs == 0)
+    {
+      ft.a(ft.fa.getCurrentItem(), ft.fa.getAdapter());
+      if (PagerTitleStrip.a(ft) >= 0.0F) {
+        f = PagerTitleStrip.a(ft);
+      }
+      ft.a(ft.fa.getCurrentItem(), f, true);
+    }
+  }
+  
+  public final void o(int paramInt)
+  {
+    fs = paramInt;
   }
   
   public final void onChanged()
   {
     float f = 0.0F;
-    gl.a(gl.fT.getCurrentItem(), gl.fT.getAdapter());
-    if (PagerTitleStrip.a(gl) >= 0.0F) {
-      f = PagerTitleStrip.a(gl);
+    ft.a(ft.fa.getCurrentItem(), ft.fa.getAdapter());
+    if (PagerTitleStrip.a(ft) >= 0.0F) {
+      f = PagerTitleStrip.a(ft);
     }
-    gl.a(gl.fT.getCurrentItem(), f, true);
+    ft.a(ft.fa.getCurrentItem(), f, true);
   }
 }
 

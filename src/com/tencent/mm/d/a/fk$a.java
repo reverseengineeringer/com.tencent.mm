@@ -2,6 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class fk$a
 {
+  public int aAk;
   public int type;
 }
 

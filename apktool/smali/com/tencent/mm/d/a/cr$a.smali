@@ -15,25 +15,20 @@
 
 
 # instance fields
-.field public ayE:I
+.field public alN:Ljava/lang/String;
 
-.field public id:J
+.field public awk:Z
 
-.field public path:Ljava/lang/String;
+.field public direction:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 0
 
     .prologue
-    .line 20
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 22
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/tencent/mm/d/a/cr$a;->id:J
 
     return-void
 .end method

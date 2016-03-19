@@ -1,8 +1,15 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.r.f.a;
+import com.tencent.mm.r.f.b;
+
 public final class dn$a
 {
-  public String url;
+  public String anC;
+  public boolean apj;
+  public f.a axo;
+  public f.b axp;
+  public int op;
 }
 
 /* Location:

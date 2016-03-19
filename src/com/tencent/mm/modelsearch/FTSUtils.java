@@ -2,11 +2,25 @@ package com.tencent.mm.modelsearch;
 
 import com.tencent.kingkong.database.SQLiteDatabase;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 public class FTSUtils
 {
+  public static String D(List paramList)
+  {
+    StringBuilder localStringBuilder = new StringBuilder(32);
+    localStringBuilder.append('(');
+    paramList = paramList.iterator();
+    while (paramList.hasNext()) {
+      localStringBuilder.append((Long)paramList.next()).append(',');
+    }
+    localStringBuilder.setCharAt(localStringBuilder.length() - 1, ')');
+    return localStringBuilder.toString();
+  }
+  
   public static int a(Map paramMap, int paramInt1, int paramInt2)
   {
     int i = Integer.MAX_VALUE;
@@ -33,8 +47,8 @@ public class FTSUtils
   
   public static List a(List paramList, Map paramMap, int paramInt1, int paramInt2)
   {
-    paramMap = new k(paramMap);
-    o.g localg = new o.g();
+    paramMap = new Comparator() {};
+    m.g localg = new m.g();
     type = paramInt1;
     int j = Collections.binarySearch(paramList, localg, paramMap);
     int i;
@@ -97,7 +111,9 @@ public class FTSUtils
     }
   }
   
-  public static String c(int[] paramArrayOfInt)
+  static native int countTokens(String paramString);
+  
+  public static String f(int[] paramArrayOfInt)
   {
     StringBuilder localStringBuilder = new StringBuilder(32);
     localStringBuilder.append('(');
@@ -112,9 +128,7 @@ public class FTSUtils
     return localStringBuilder.toString();
   }
   
-  static native int countTokens(String paramString);
-  
-  public static int[] f(String[] paramArrayOfString)
+  public static int[] g(String[] paramArrayOfString)
   {
     int[] arrayOfInt = new int[paramArrayOfString.length];
     if (paramArrayOfString.length > 0)
@@ -130,7 +144,7 @@ public class FTSUtils
     return arrayOfInt;
   }
   
-  public static String hp(String paramString)
+  public static String iA(String paramString)
   {
     if (paramString != null) {
       return paramString.replace('*', ' ').trim();

@@ -7,9 +7,9 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
 import com.jg.JgClassChecked;
-import com.tencent.mm.network.aw;
-import com.tencent.mm.network.aw.a;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.network.z;
+import com.tencent.mm.network.z.a;
+import com.tencent.mm.sdk.platformtools.u;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140819", reviewer=20, vComment={com.jg.EType.RECEIVERCHECK})
 public class MMReceivers$ConnectionReceiver
@@ -21,22 +21,22 @@ public class MMReceivers$ConnectionReceiver
     do
     {
       return;
-      t.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "onReceive threadID: " + Thread.currentThread().getId());
-      if (!f.p(paramContext, "connection"))
+      u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "onReceive threadID: " + Thread.currentThread().getId());
+      if (!b.q(paramContext, "connection"))
       {
-        MMReceivers.AlarmReceiver.aj(paramContext);
-        t.appenderFlush();
+        MMReceivers.AlarmReceiver.as(paramContext);
+        u.appenderFlush();
         return;
       }
-    } while (aw.CY() == null);
+    } while (z.Ff() == null);
     paramContext = (ConnectivityManager)paramContext.getSystemService("connectivity");
     try
     {
       paramContext = paramContext.getActiveNetworkInfo();
       if ((paramContext == null) || (paramContext.getState() != NetworkInfo.State.CONNECTED))
       {
-        t.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "NetworkAvailable: false");
-        paramIntent = aw.CY();
+        u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "NetworkAvailable: false");
+        paramIntent = z.Ff();
         if (paramContext != null) {
           paramContext.getTypeName();
         }
@@ -51,11 +51,11 @@ public class MMReceivers$ConnectionReceiver
     {
       for (;;)
       {
-        t.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "getActiveNetworkInfo failed.");
+        u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "getActiveNetworkInfo failed.");
         paramContext = null;
       }
-      t.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "NetworkAvailable: true");
-      paramIntent = aw.CY();
+      u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "NetworkAvailable: true");
+      paramIntent = z.Ff();
       paramContext.getTypeName();
       paramContext.getSubtypeName();
       paramIntent.ao(true);

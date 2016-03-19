@@ -1,698 +1,350 @@
-.class public Lcom/tencent/mm/sdk/platformtools/w;
+.class public final Lcom/tencent/mm/sdk/platformtools/w;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/sdk/platformtools/w$b;,
+        Lcom/tencent/mm/sdk/platformtools/w$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static blH:Lcom/tencent/mm/sdk/platformtools/w$b;
+
+.field private static jVp:I
+
+.field public static jVt:Ljava/util/Map;
+
+.field private static jVv:Z
+
+.field public static jVw:Z
+
+
 # instance fields
-.field private createCount:I
+.field public hNj:J
 
-.field private evictionCount:I
+.field public final jVq:I
 
-.field private hitCount:I
+.field private final jVr:Z
 
-.field private final map:Ljava/util/LinkedHashMap;
+.field public jVs:J
 
-.field private maxSize:I
-
-.field private missCount:I
-
-.field private putCount:I
-
-.field private size:I
+.field private final jVu:Lcom/tencent/mm/sdk/platformtools/w$a;
 
 
 # direct methods
-.method public constructor <init>(I)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 47
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 24
+    new-instance v0, Ljava/util/HashMap;
 
-    .line 48
-    if-gtz p1, :cond_0
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 49
-    new-instance v0, Ljava/lang/IllegalArgumentException;
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/w;->jVt:Ljava/util/Map;
 
-    const-string/jumbo v1, "maxSize <= 0"
+    .line 39
+    const/4 v0, 0x0
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/w;->jVv:Z
 
-    throw v0
-
-    .line 51
-    :cond_0
-    iput p1, p0, Lcom/tencent/mm/sdk/platformtools/w;->maxSize:I
-
-    .line 52
-    new-instance v0, Ljava/util/LinkedHashMap;
-
-    const/4 v1, 0x0
-
-    const/high16 v2, 0x3f400000    # 0.75f
-
-    const/4 v3, 0x1
-
-    invoke-direct {v0, v1, v2, v3}, Ljava/util/LinkedHashMap;-><init>(IFZ)V
-
-    iput-object v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
-
-    .line 53
     return-void
 .end method
 
-.method private safeSizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 3
-
-    .prologue
-    .line 255
-    invoke-virtual {p0, p1, p2}, Lcom/tencent/mm/sdk/platformtools/w;->sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result v0
-
-    .line 256
-    if-gez v0, :cond_0
-
-    .line 257
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "Negative size: "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "="
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 259
-    :cond_0
-    return v0
-.end method
-
-
-# virtual methods
-.method public final declared-synchronized aa(Ljava/lang/Object;)Z
-    .locals 1
-
-    .prologue
-    .line 57
-    monitor-enter p0
-
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->containsKey(Ljava/lang/Object;)Z
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result v0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public create(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 251
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 0
-
-    .prologue
-    .line 233
-    return-void
-.end method
-
-.method public final get(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 4
-
-    .prologue
-    .line 84
-    if-nez p1, :cond_0
-
-    .line 85
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string/jumbo v1, "key == null"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 89
-    :cond_0
-    monitor-enter p0
-
-    .line 90
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 91
-    if-eqz v0, :cond_1
-
-    .line 92
-    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/w;->hitCount:I
-
-    add-int/lit8 v1, v1, 0x1
-
-    iput v1, p0, Lcom/tencent/mm/sdk/platformtools/w;->hitCount:I
-
-    .line 93
-    monitor-exit p0
-
-    .line 127
-    :goto_0
-    return-object v0
-
-    .line 95
-    :cond_1
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->missCount:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->missCount:I
-
-    .line 96
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 105
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/sdk/platformtools/w;->create(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    .line 106
-    if-nez v1, :cond_2
-
-    .line 107
-    const/4 v0, 0x0
-
-    goto :goto_0
-
-    .line 96
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-
-    .line 110
-    :cond_2
-    monitor-enter p0
-
-    .line 111
-    :try_start_2
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->createCount:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->createCount:I
-
-    .line 112
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, p1, v1}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 114
-    if-eqz v0, :cond_3
-
-    .line 116
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v2, p1, v0}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 120
-    :goto_1
-    monitor-exit p0
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 122
-    if-eqz v0, :cond_4
-
-    .line 123
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v2, p1, v1, v0}, Lcom/tencent/mm/sdk/platformtools/w;->entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 118
-    :cond_3
-    :try_start_3
-    iget v2, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
-
-    invoke-direct {p0, p1, v1}, Lcom/tencent/mm/sdk/platformtools/w;->safeSizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result v3
-
-    add-int/2addr v2, v3
-
-    iput v2, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
-
-    goto :goto_1
-
-    .line 120
-    :catchall_1
-    move-exception v0
-
-    monitor-exit p0
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    throw v0
-
-    .line 126
-    :cond_4
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->maxSize:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/sdk/platformtools/w;->trimToSize(I)V
-
-    move-object v0, v1
-
-    .line 127
-    goto :goto_0
-.end method
-
-.method public final put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    .prologue
-    .line 138
-    if-eqz p1, :cond_0
-
-    if-nez p2, :cond_1
-
-    .line 139
-    :cond_0
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string/jumbo v1, "key == null || value == null"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 143
-    :cond_1
-    monitor-enter p0
-
-    .line 144
-    :try_start_0
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->putCount:I
-
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->putCount:I
-
-    .line 145
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
-
-    invoke-direct {p0, p1, p2}, Lcom/tencent/mm/sdk/platformtools/w;->safeSizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
-
-    .line 146
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, p1, p2}, Ljava/util/LinkedHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 147
-    if-eqz v0, :cond_2
-
-    .line 148
-    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
-
-    invoke-direct {p0, p1, v0}, Lcom/tencent/mm/sdk/platformtools/w;->safeSizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    iput v1, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
-
-    .line 150
-    :cond_2
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 152
-    if-eqz v0, :cond_3
-
-    .line 153
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, v1, p1, v0, p2}, Lcom/tencent/mm/sdk/platformtools/w;->entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 156
-    :cond_3
-    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/w;->maxSize:I
-
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/sdk/platformtools/w;->trimToSize(I)V
-
-    .line 157
-    return-object v0
-
-    .line 150
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final remove(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 3
-
-    .prologue
-    .line 199
-    if-nez p1, :cond_0
-
-    .line 200
-    new-instance v0, Ljava/lang/NullPointerException;
-
-    const-string/jumbo v1, "key == null"
-
-    invoke-direct {v0, v1}, Ljava/lang/NullPointerException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 204
-    :cond_0
-    monitor-enter p0
-
-    .line 205
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    .line 206
-    if-eqz v0, :cond_1
-
-    .line 207
-    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
-
-    invoke-direct {p0, p1, v0}, Lcom/tencent/mm/sdk/platformtools/w;->safeSizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    iput v1, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
-
-    .line 209
-    :cond_1
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 211
-    if-eqz v0, :cond_2
-
-    .line 212
-    const/4 v1, 0x0
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v1, p1, v0, v2}, Lcom/tencent/mm/sdk/platformtools/w;->entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 215
-    :cond_2
-    return-object v0
-
-    .line 209
-    :catchall_0
-    move-exception v0
-
-    :try_start_1
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    throw v0
-.end method
-
-.method public final declared-synchronized size()I
-    .locals 1
-
-    .prologue
-    .line 286
-    monitor-enter p0
-
-    :try_start_0
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    monitor-exit p0
-
-    return v0
-
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
-.end method
-
-.method public sizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 1
-
-    .prologue
-    .line 270
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final declared-synchronized snapshot()Ljava/util/Map;
+.method public constructor <init>(Lcom/tencent/mm/sdk/platformtools/w$a;)V
     .locals 2
 
     .prologue
-    .line 339
-    monitor-enter p0
+    const-wide/16 v0, 0x0
 
-    :try_start_0
-    new-instance v0, Ljava/util/LinkedHashMap;
+    .line 54
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
+    .line 21
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->jVs:J
 
-    invoke-direct {v0, v1}, Ljava/util/LinkedHashMap;-><init>(Ljava/util/Map;)V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 22
+    iput-wide v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->hNj:J
 
-    monitor-exit p0
+    .line 55
+    const-string/jumbo v0, "bumper not initialized"
 
-    return-object v0
+    sget-boolean v1, Lcom/tencent/mm/sdk/platformtools/w;->jVv:Z
 
-    :catchall_0
-    move-exception v0
+    invoke-static {v0, v1}, Ljunit/framework/Assert;->assertTrue(Ljava/lang/String;Z)V
 
-    monitor-exit p0
+    .line 57
+    iput-object p1, p0, Lcom/tencent/mm/sdk/platformtools/w;->jVu:Lcom/tencent/mm/sdk/platformtools/w$a;
 
-    throw v0
-.end method
+    .line 58
+    const/4 v0, 0x1
 
-.method public final declared-synchronized toString()Ljava/lang/String;
-    .locals 5
+    iput-boolean v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->jVr:Z
 
-    .prologue
+    .line 59
+    sget v0, Lcom/tencent/mm/sdk/platformtools/w;->jVp:I
+
+    const/16 v1, 0x2000
+
+    if-lt v0, v1, :cond_0
+
     const/4 v0, 0x0
 
-    .line 343
-    monitor-enter p0
+    sput v0, Lcom/tencent/mm/sdk/platformtools/w;->jVp:I
 
-    :try_start_0
-    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/w;->hitCount:I
-
-    iget v2, p0, Lcom/tencent/mm/sdk/platformtools/w;->missCount:I
-
-    add-int/2addr v1, v2
-
-    .line 344
-    if-eqz v1, :cond_0
-
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->hitCount:I
-
-    mul-int/lit8 v0, v0, 0x64
-
-    div-int/2addr v0, v1
-
-    .line 345
     :cond_0
-    const-string/jumbo v1, "LruCache[maxSize=%d,hits=%d,misses=%d,hitRate=%d%%]"
+    sget v0, Lcom/tencent/mm/sdk/platformtools/w;->jVp:I
 
-    const/4 v2, 0x4
+    add-int/lit8 v0, v0, 0x1
 
-    new-array v2, v2, [Ljava/lang/Object;
+    sput v0, Lcom/tencent/mm/sdk/platformtools/w;->jVp:I
 
-    const/4 v3, 0x0
+    iput v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->jVq:I
 
-    iget v4, p0, Lcom/tencent/mm/sdk/platformtools/w;->maxSize:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    iget v4, p0, Lcom/tencent/mm/sdk/platformtools/w;->hitCount:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x2
-
-    iget v4, p0, Lcom/tencent/mm/sdk/platformtools/w;->missCount:I
-
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x3
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v2, v3
-
-    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    move-result-object v0
-
-    monitor-exit p0
-
-    return-object v0
-
-    .line 343
-    :catchall_0
-    move-exception v0
-
-    monitor-exit p0
-
-    throw v0
+    .line 60
+    return-void
 .end method
 
-.method public trimToSize(I)V
-    .locals 4
+.method public static a(Lcom/tencent/mm/sdk/platformtools/w$b;)V
+    .locals 1
 
     .prologue
-    .line 171
-    :goto_0
-    monitor-enter p0
+    .line 44
+    const/4 v0, 0x1
 
-    .line 172
-    :try_start_0
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
+    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/w;->jVv:Z
 
-    if-ltz v0, :cond_0
+    .line 45
+    sput-object p0, Lcom/tencent/mm/sdk/platformtools/w;->blH:Lcom/tencent/mm/sdk/platformtools/w$b;
 
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
+    .line 46
+    return-void
+.end method
 
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->isEmpty()Z
+.method public static aUE()J
+    .locals 15
 
-    move-result v0
+    .prologue
+    const-wide v4, 0x7fffffffffffffffL
 
-    if-eqz v0, :cond_1
+    const-wide/16 v8, 0x0
 
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
+    const/4 v10, 0x0
 
-    if-eqz v0, :cond_1
+    .line 74
+    sput-boolean v10, Lcom/tencent/mm/sdk/platformtools/w;->jVw:Z
 
-    .line 173
-    :cond_0
-    new-instance v0, Ljava/lang/IllegalStateException;
+    .line 76
+    new-instance v11, Ljava/util/LinkedList;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    invoke-direct {v11}, Ljava/util/LinkedList;-><init>()V
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+    .line 79
+    new-instance v0, Ljava/util/HashSet;
 
-    invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    move-result-object v2
+    .line 80
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/w;->jVt:Ljava/util/Map;
 
-    invoke-virtual {v2}, Ljava/lang/Class;->getName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
     move-result-object v1
 
-    const-string/jumbo v2, ".sizeOf() is reporting inconsistent results!"
+    invoke-interface {v0, v1}, Ljava/util/Set;->addAll(Ljava/util/Collection;)Z
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 83
+    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+
+    move-result-object v12
+
+    move-wide v2, v4
+
+    :goto_0
+    invoke-interface {v12}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    invoke-interface {v12}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    .line 84
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/w;->jVt:Ljava/util/Map;
+
+    invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v1
+
+    check-cast v1, Lcom/tencent/mm/sdk/platformtools/w;
+
+    .line 85
+    if-eqz v1, :cond_7
+
+    .line 86
+    iget-wide v6, v1, Lcom/tencent/mm/sdk/platformtools/w;->jVs:J
+
+    invoke-static {v6, v7}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
+
+    move-result-wide v6
+
+    .line 87
+    cmp-long v13, v6, v8
+
+    if-gez v13, :cond_0
+
+    move-wide v6, v8
+
+    .line 91
+    :cond_0
+    iget-wide v13, v1, Lcom/tencent/mm/sdk/platformtools/w;->hNj:J
+
+    cmp-long v13, v6, v13
+
+    if-lez v13, :cond_3
+
+    .line 92
+    iget-object v6, v1, Lcom/tencent/mm/sdk/platformtools/w;->jVu:Lcom/tencent/mm/sdk/platformtools/w$a;
+
+    invoke-interface {v6}, Lcom/tencent/mm/sdk/platformtools/w$a;->lj()Z
+
+    move-result v6
+
+    if-eqz v6, :cond_1
+
+    iget-boolean v6, v1, Lcom/tencent/mm/sdk/platformtools/w;->jVr:Z
+
+    if-nez v6, :cond_2
+
+    .line 93
+    :cond_1
+    invoke-interface {v11, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 97
+    :goto_1
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
+
+    move-result-wide v6
+
+    iput-wide v6, v1, Lcom/tencent/mm/sdk/platformtools/w;->jVs:J
+
+    goto :goto_0
+
+    .line 95
+    :cond_2
+    iget-wide v2, v1, Lcom/tencent/mm/sdk/platformtools/w;->hNj:J
+
+    goto :goto_1
+
+    .line 100
+    :cond_3
+    iget-wide v13, v1, Lcom/tencent/mm/sdk/platformtools/w;->hNj:J
+
+    sub-long/2addr v13, v6
+
+    cmp-long v0, v13, v2
+
+    if-gez v0, :cond_7
+
+    .line 101
+    iget-wide v0, v1, Lcom/tencent/mm/sdk/platformtools/w;->hNj:J
+
+    sub-long v2, v0, v6
+
+    move-wide v0, v2
+
+    :goto_2
+    move-wide v2, v0
+
+    .line 105
+    goto :goto_0
+
+    :cond_4
+    move v0, v10
+
+    .line 107
+    :goto_3
+    invoke-interface {v11}, Ljava/util/List;->size()I
+
+    move-result v1
+
+    if-ge v0, v1, :cond_5
+
+    .line 108
+    sget-object v1, Lcom/tencent/mm/sdk/platformtools/w;->jVt:Ljava/util/Map;
+
+    invoke-interface {v11, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v6
+
+    invoke-interface {v1, v6}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 107
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_3
+
+    .line 111
+    :cond_5
+    sget-boolean v0, Lcom/tencent/mm/sdk/platformtools/w;->jVw:Z
+
+    if-nez v0, :cond_6
+
+    cmp-long v0, v2, v4
+
+    if-nez v0, :cond_6
+
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/w;->blH:Lcom/tencent/mm/sdk/platformtools/w$b;
+
+    if-eqz v0, :cond_6
+
+    .line 112
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/w;->blH:Lcom/tencent/mm/sdk/platformtools/w$b;
+
+    invoke-interface {v0}, Lcom/tencent/mm/sdk/platformtools/w$b;->cancel()V
+
+    .line 113
+    const-string/jumbo v0, "!32@/B4Tb64lLpIraIIYhljH18U8Zao9ShTz"
+
+    const-string/jumbo v1, "cancel bumper for no more handler"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 116
+    :cond_6
+    return-wide v2
+
+    :cond_7
+    move-wide v0, v2
+
+    goto :goto_2
+.end method
+
+.method public static dr(J)Z
+    .locals 10
+
+    .prologue
+    const-wide/16 v5, 0x0
+
+    .line 146
+    const-string/jumbo v0, "!32@/B4Tb64lLpIraIIYhljH18U8Zao9ShTz"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "check need prepare: check="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -700,103 +352,154 @@
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    throw v0
+    .line 147
+    const-wide v0, 0x7fffffffffffffffL
 
-    .line 187
-    :catchall_0
-    move-exception v0
+    .line 148
+    sget-object v2, Lcom/tencent/mm/sdk/platformtools/w;->jVt:Ljava/util/Map;
 
-    monitor-exit p0
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
-    throw v0
+    move-result-object v2
 
-    .line 177
-    :cond_1
-    :try_start_1
-    iget v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
+    invoke-interface {v2}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
-    if-le v0, p1, :cond_2
+    move-result-object v7
 
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
+    move-wide v1, v0
 
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->isEmpty()Z
+    .line 149
+    :goto_0
+    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_2
 
-    .line 178
-    :cond_2
-    monitor-exit p0
-
-    return-void
-
-    .line 181
-    :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
-
-    invoke-virtual {v0}, Ljava/util/LinkedHashMap;->entrySet()Ljava/util/Set;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 150
+    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 182
-    invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
-
-    move-result-object v1
-
-    .line 183
+    .line 151
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 184
-    iget-object v2, p0, Lcom/tencent/mm/sdk/platformtools/w;->map:Ljava/util/LinkedHashMap;
+    check-cast v0, Lcom/tencent/mm/sdk/platformtools/w;
 
-    invoke-virtual {v2, v1}, Ljava/util/LinkedHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+    .line 152
+    if-eqz v0, :cond_4
 
-    .line 185
-    iget v2, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
+    .line 153
+    iget-wide v3, v0, Lcom/tencent/mm/sdk/platformtools/w;->jVs:J
 
-    invoke-direct {p0, v1, v0}, Lcom/tencent/mm/sdk/platformtools/w;->safeSizeOf(Ljava/lang/Object;Ljava/lang/Object;)I
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
 
-    move-result v3
+    move-result-wide v3
 
-    sub-int/2addr v2, v3
+    .line 154
+    cmp-long v8, v3, v5
 
-    iput v2, p0, Lcom/tencent/mm/sdk/platformtools/w;->size:I
+    if-gez v8, :cond_0
 
-    .line 186
-    iget v2, p0, Lcom/tencent/mm/sdk/platformtools/w;->evictionCount:I
+    move-wide v3, v5
 
-    add-int/lit8 v2, v2, 0x1
+    .line 158
+    :cond_0
+    iget-wide v8, v0, Lcom/tencent/mm/sdk/platformtools/w;->hNj:J
 
-    iput v2, p0, Lcom/tencent/mm/sdk/platformtools/w;->evictionCount:I
+    cmp-long v8, v3, v8
 
-    .line 187
-    monitor-exit p0
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    if-lez v8, :cond_1
 
-    .line 189
-    const/4 v2, 0x1
+    .line 159
+    iget-wide v0, v0, Lcom/tencent/mm/sdk/platformtools/w;->hNj:J
 
-    const/4 v3, 0x0
-
-    invoke-virtual {p0, v2, v1, v0, v3}, Lcom/tencent/mm/sdk/platformtools/w;->entryRemoved(ZLjava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)V
+    move-wide v1, v0
 
     goto :goto_0
+
+    .line 162
+    :cond_1
+    iget-wide v8, v0, Lcom/tencent/mm/sdk/platformtools/w;->hNj:J
+
+    sub-long/2addr v8, v3
+
+    cmp-long v8, v8, v1
+
+    if-gez v8, :cond_4
+
+    .line 163
+    iget-wide v0, v0, Lcom/tencent/mm/sdk/platformtools/w;->hNj:J
+
+    sub-long v1, v0, v3
+
+    move-wide v0, v1
+
+    :goto_1
+    move-wide v1, v0
+
+    .line 167
+    goto :goto_0
+
+    .line 169
+    :cond_2
+    cmp-long v0, v1, p0
+
+    if-lez v0, :cond_3
+
+    const/4 v0, 0x1
+
+    :goto_2
+    return v0
+
+    :cond_3
+    const/4 v0, 0x0
+
+    goto :goto_2
+
+    :cond_4
+    move-wide v0, v1
+
+    goto :goto_1
+.end method
+
+
+# virtual methods
+.method public final aUF()V
+    .locals 2
+
+    .prologue
+    .line 138
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/w;->jVt:Ljava/util/Map;
+
+    iget v1, p0, Lcom/tencent/mm/sdk/platformtools/w;->jVq:I
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 139
+    return-void
+.end method
+
+.method protected final finalize()V
+    .locals 0
+
+    .prologue
+    .line 50
+    invoke-virtual {p0}, Lcom/tencent/mm/sdk/platformtools/w;->aUF()V
+
+    .line 51
+    invoke-super {p0}, Ljava/lang/Object;->finalize()V
+
+    .line 52
+    return-void
 .end method

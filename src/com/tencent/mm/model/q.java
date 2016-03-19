@@ -1,15 +1,14 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.ac.b;
-import com.tencent.mm.ar.g.b;
-
-final class q
-  implements g.b
+public abstract interface q
 {
-  public final String[] lW()
-  {
-    return b.aqU;
-  }
+  public abstract void a(r paramr);
+  
+  public abstract void b(r paramr);
+  
+  public abstract void mr();
+  
+  public abstract void ms();
 }
 
 /* Location:

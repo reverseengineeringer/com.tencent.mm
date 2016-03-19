@@ -2,34 +2,35 @@ package com.tencent.mm.compatible.d;
 
 public final class b
 {
-  public boolean bgA;
-  public a bgB = new a();
-  public boolean bgC;
-  public boolean bgD;
-  public int bgE;
-  public int bgF;
-  public int bgG;
-  public int bgH;
-  public int bgI;
-  public boolean bgJ;
-  public int bgK;
-  public int bgL;
-  public int bgM;
-  public int bgN;
-  public int bgO;
-  public int bgP;
-  public int bgQ;
-  public int bgR;
-  public int bgS;
-  public int bgT;
-  public int bgU;
-  public int bgt;
-  public boolean bgu;
-  public int bgv;
-  public boolean bgw;
-  public int bgx;
-  public boolean bgy;
-  public a bgz = new a();
+  public int bqQ;
+  public boolean bqR;
+  public int bqS;
+  public boolean bqT;
+  public int bqU;
+  public boolean bqV;
+  public a bqW = new a();
+  public boolean bqX;
+  public a bqY = new a();
+  public boolean bqZ;
+  public boolean bra;
+  public int brb;
+  public int brc;
+  public int brd;
+  public int bre;
+  public int brf;
+  public boolean brg;
+  public int brh;
+  public int bri;
+  public int brj;
+  public int brk;
+  public int brl;
+  public int brm;
+  public int brn;
+  public int bro;
+  public int brp;
+  public int brq;
+  public int brr;
+  public int brs;
   
   public b()
   {
@@ -38,47 +39,48 @@ public final class b
   
   public final void reset()
   {
-    bgu = false;
-    bgt = 0;
-    bgw = false;
-    bgv = 0;
-    bgy = false;
-    bgx = 0;
-    bgA = false;
-    bgz.reset();
-    bgC = false;
-    bgB.reset();
-    bgD = false;
-    bgE = -1;
-    bgF = -1;
-    bgG = -1;
-    bgH = -1;
-    bgK = -1;
-    bgI = -1;
-    bgJ = false;
-    bgK = -1;
-    bgI = -1;
-    bgJ = false;
-    bgL = -1;
-    bgL = -1;
-    bgM = -1;
-    bgN = -1;
-    bgO = 0;
-    bgP = 1;
-    bgQ = 1;
-    bgR = 1;
-    bgS = 1;
-    bgT = -1;
-    bgU = 0;
+    bqR = false;
+    bqQ = 0;
+    bqT = false;
+    bqS = 0;
+    bqV = false;
+    bqU = 0;
+    bqX = false;
+    bqW.reset();
+    bqZ = false;
+    bqY.reset();
+    bra = false;
+    brb = -1;
+    brc = -1;
+    brd = -1;
+    bre = -1;
+    brh = -1;
+    brf = -1;
+    brg = false;
+    brh = -1;
+    brf = -1;
+    brg = false;
+    bri = -1;
+    bri = -1;
+    brj = -1;
+    brk = -1;
+    brl = 0;
+    brm = 1;
+    brn = 1;
+    bro = 1;
+    brp = 1;
+    brq = -1;
+    brr = 0;
+    brs = 0;
   }
   
   public final class a
   {
-    public int bgV;
-    public int bgW;
-    public int bgX;
-    public int bgY;
-    public int bgZ;
+    public int brt;
+    public int bru;
+    public int brv;
+    public int brw;
+    public int brx;
     public int height;
     public int width;
     
@@ -86,11 +88,11 @@ public final class b
     
     public final void reset()
     {
-      bgV = 0;
-      bgW = 0;
-      bgX = 0;
-      bgY = 0;
-      bgZ = 0;
+      brt = 0;
+      bru = 0;
+      brv = 0;
+      brw = 0;
+      brx = 0;
       width = 0;
       height = 0;
     }

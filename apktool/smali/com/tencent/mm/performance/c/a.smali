@@ -16,17 +16,17 @@
 
 
 # instance fields
-.field public bTD:Ljava/util/HashSet;
+.field public ckN:J
 
-.field public bTR:J
+.field public ckO:J
 
-.field public bTS:J
+.field public ckP:J
 
-.field public bTT:J
+.field public ckQ:J
 
-.field public bTU:J
+.field public ckR:Z
 
-.field public bTV:Z
+.field public ckz:Ljava/util/HashSet;
 
 
 # direct methods
@@ -52,21 +52,21 @@
     invoke-direct {p0}, Lcom/tencent/mm/performance/e/a;-><init>()V
 
     .line 12
-    iput-wide v0, p0, Lcom/tencent/mm/performance/c/a;->bTR:J
+    iput-wide v0, p0, Lcom/tencent/mm/performance/c/a;->ckN:J
 
     .line 13
-    iput-wide v0, p0, Lcom/tencent/mm/performance/c/a;->bTS:J
+    iput-wide v0, p0, Lcom/tencent/mm/performance/c/a;->ckO:J
 
     .line 14
-    iput-wide v0, p0, Lcom/tencent/mm/performance/c/a;->bTT:J
+    iput-wide v0, p0, Lcom/tencent/mm/performance/c/a;->ckP:J
 
     .line 15
-    iput-wide v0, p0, Lcom/tencent/mm/performance/c/a;->bTU:J
+    iput-wide v0, p0, Lcom/tencent/mm/performance/c/a;->ckQ:J
 
     .line 16
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/performance/c/a;->bTV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/performance/c/a;->ckR:Z
 
     .line 22
     invoke-static {}, Ljava/lang/Runtime;->getRuntime()Ljava/lang/Runtime;
@@ -77,7 +77,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/performance/c/a;->bTR:J
+    iput-wide v0, p0, Lcom/tencent/mm/performance/c/a;->ckN:J
 
     .line 24
     return-void
@@ -88,13 +88,13 @@
 
     .prologue
     .line 56
-    iget-object v7, p0, Lcom/tencent/mm/performance/c/a;->bTD:Ljava/util/HashSet;
+    iget-object v7, p0, Lcom/tencent/mm/performance/c/a;->ckz:Ljava/util/HashSet;
 
     monitor-enter v7
 
     .line 57
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/c/a;->bTD:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/performance/c/a;->ckz:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -188,7 +188,7 @@
 
 
 # virtual methods
-.method public final Dk()Ljava/lang/String;
+.method public final Fs()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -198,7 +198,7 @@
     return-object v0
 .end method
 
-.method public final Dl()V
+.method public final Ft()V
     .locals 12
 
     .prologue
@@ -209,7 +209,7 @@
     const/4 v10, 0x0
 
     .line 107
-    iget-boolean v0, p0, Lcom/tencent/mm/performance/c/a;->bTV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/performance/c/a;->ckR:Z
 
     if-nez v0, :cond_1
 
@@ -239,7 +239,7 @@
     sub-long v6, v2, v4
 
     .line 111
-    iget-wide v2, p0, Lcom/tencent/mm/performance/c/a;->bTR:J
+    iget-wide v2, p0, Lcom/tencent/mm/performance/c/a;->ckN:J
 
     div-long v2, v6, v2
 
@@ -256,7 +256,7 @@
 
     aput-object v8, v5, v10
 
-    iget-wide v8, p0, Lcom/tencent/mm/performance/c/a;->bTR:J
+    iget-wide v8, p0, Lcom/tencent/mm/performance/c/a;->ckN:J
 
     invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -264,17 +264,17 @@
 
     aput-object v8, v5, v11
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 113
-    iget-wide v4, p0, Lcom/tencent/mm/performance/c/a;->bTU:J
+    iget-wide v4, p0, Lcom/tencent/mm/performance/c/a;->ckQ:J
 
     cmp-long v0, v2, v4
 
     if-ltz v0, :cond_2
 
     .line 114
-    iget-wide v4, p0, Lcom/tencent/mm/performance/c/a;->bTR:J
+    iget-wide v4, p0, Lcom/tencent/mm/performance/c/a;->ckN:J
 
     move-object v0, p0
 
@@ -284,14 +284,14 @@
 
     .line 115
     :cond_2
-    iget-wide v0, p0, Lcom/tencent/mm/performance/c/a;->bTT:J
+    iget-wide v0, p0, Lcom/tencent/mm/performance/c/a;->ckP:J
 
     cmp-long v0, v2, v0
 
     if-ltz v0, :cond_3
 
     .line 116
-    iget-wide v4, p0, Lcom/tencent/mm/performance/c/a;->bTR:J
+    iget-wide v4, p0, Lcom/tencent/mm/performance/c/a;->ckN:J
 
     move-object v0, p0
 
@@ -303,14 +303,14 @@
 
     .line 117
     :cond_3
-    iget-wide v0, p0, Lcom/tencent/mm/performance/c/a;->bTS:J
+    iget-wide v0, p0, Lcom/tencent/mm/performance/c/a;->ckO:J
 
     cmp-long v0, v2, v0
 
     if-ltz v0, :cond_0
 
     .line 118
-    iget-wide v4, p0, Lcom/tencent/mm/performance/c/a;->bTR:J
+    iget-wide v4, p0, Lcom/tencent/mm/performance/c/a;->ckN:J
 
     move-object v0, p0
 

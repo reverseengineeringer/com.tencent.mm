@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$x
-  extends a.c
+  extends a.e
 {
   public a$x()
   {
-    super("geoLocation", "geo_location", 57, true);
+    super("closeWXDeviceLib", "closeWXDeviceLib", 118, false);
   }
 }
 

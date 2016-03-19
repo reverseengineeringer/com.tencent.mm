@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public final fqJ:Ljava/io/OutputStream;
+.field public final bEF:Ljava/io/OutputStream;
 
-.field public final jMO:[B
+.field public final mba:[B
 
-.field private final jMP:La/a/a/b/b/a;
+.field private final mbb:La/a/a/b/b/a;
 
 
 # direct methods
@@ -20,12 +20,12 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 21
-    iput-object p1, p0, La/a/a/c/a;->jMO:[B
+    iput-object p1, p0, La/a/a/c/a;->mba:[B
 
     .line 22
     const/4 v0, 0x0
 
-    iput-object v0, p0, La/a/a/c/a;->fqJ:Ljava/io/OutputStream;
+    iput-object v0, p0, La/a/a/c/a;->bEF:Ljava/io/OutputStream;
 
     .line 24
     array-length v0, p1
@@ -36,7 +36,7 @@
 
     invoke-direct {v1, p1, v2, v0}, La/a/a/b/b/a;-><init>([BII)V
 
-    iput-object v1, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
+    iput-object v1, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
 
     .line 25
     return-void
@@ -44,55 +44,42 @@
 
 
 # virtual methods
-.method public final F(IZ)V
+.method public final A(IJ)V
+    .locals 2
+
+    .prologue
+    .line 59
+    iget-object v0, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->w(II)V
+
+    invoke-virtual {v0, p2, p3}, La/a/a/b/b/a;->k(J)V
+
+    .line 60
+    return-void
+.end method
+
+.method public final R(IZ)V
     .locals 2
 
     .prologue
     const/4 v0, 0x0
 
     .line 35
-    iget-object v1, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
+    iget-object v1, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
 
-    invoke-virtual {v1, p1, v0}, La/a/a/b/b/a;->bL(II)V
+    invoke-virtual {v1, p1, v0}, La/a/a/b/b/a;->w(II)V
 
     if-eqz p2, :cond_0
 
     const/4 v0, 0x1
 
     :cond_0
-    invoke-virtual {v1, v0}, La/a/a/b/b/a;->pR(I)V
+    invoke-virtual {v1, v0}, La/a/a/b/b/a;->ax(I)V
 
     .line 36
-    return-void
-.end method
-
-.method public final U(ILjava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 63
-    iget-object v0, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
-
-    if-eqz p2, :cond_0
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->bL(II)V
-
-    const-string/jumbo v1, "UTF-8"
-
-    invoke-virtual {p2, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    array-length v2, v1
-
-    invoke-virtual {v0, v2}, La/a/a/b/b/a;->pT(I)V
-
-    invoke-virtual {v0, v1}, La/a/a/b/b/a;->aR([B)V
-
-    .line 64
-    :cond_0
     return-void
 .end method
 
@@ -101,11 +88,11 @@
 
     .prologue
     .line 43
-    iget-object v0, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
+    iget-object v0, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->bL(II)V
+    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->w(II)V
 
     invoke-static {p2, p3}, Ljava/lang/Double;->doubleToLongBits(D)J
 
@@ -115,7 +102,7 @@
 
     and-int/lit16 v3, v3, 0xff
 
-    invoke-virtual {v0, v3}, La/a/a/b/b/a;->pR(I)V
+    invoke-virtual {v0, v3}, La/a/a/b/b/a;->ax(I)V
 
     const/16 v3, 0x8
 
@@ -125,7 +112,7 @@
 
     and-int/lit16 v3, v3, 0xff
 
-    invoke-virtual {v0, v3}, La/a/a/b/b/a;->pR(I)V
+    invoke-virtual {v0, v3}, La/a/a/b/b/a;->ax(I)V
 
     const/16 v3, 0x10
 
@@ -135,7 +122,7 @@
 
     and-int/lit16 v3, v3, 0xff
 
-    invoke-virtual {v0, v3}, La/a/a/b/b/a;->pR(I)V
+    invoke-virtual {v0, v3}, La/a/a/b/b/a;->ax(I)V
 
     const/16 v3, 0x18
 
@@ -145,7 +132,7 @@
 
     and-int/lit16 v3, v3, 0xff
 
-    invoke-virtual {v0, v3}, La/a/a/b/b/a;->pR(I)V
+    invoke-virtual {v0, v3}, La/a/a/b/b/a;->ax(I)V
 
     const/16 v3, 0x20
 
@@ -155,7 +142,7 @@
 
     and-int/lit16 v3, v3, 0xff
 
-    invoke-virtual {v0, v3}, La/a/a/b/b/a;->pR(I)V
+    invoke-virtual {v0, v3}, La/a/a/b/b/a;->ax(I)V
 
     const/16 v3, 0x28
 
@@ -165,7 +152,7 @@
 
     and-int/lit16 v3, v3, 0xff
 
-    invoke-virtual {v0, v3}, La/a/a/b/b/a;->pR(I)V
+    invoke-virtual {v0, v3}, La/a/a/b/b/a;->ax(I)V
 
     const/16 v3, 0x30
 
@@ -175,7 +162,7 @@
 
     and-int/lit16 v3, v3, 0xff
 
-    invoke-virtual {v0, v3}, La/a/a/b/b/a;->pR(I)V
+    invoke-virtual {v0, v3}, La/a/a/b/b/a;->ax(I)V
 
     const/16 v3, 0x38
 
@@ -185,82 +172,37 @@
 
     and-int/lit16 v1, v1, 0xff
 
-    invoke-virtual {v0, v1}, La/a/a/b/b/a;->pR(I)V
+    invoke-virtual {v0, v1}, La/a/a/b/b/a;->ax(I)V
 
     .line 44
     return-void
 .end method
 
-.method public final b(ILcom/tencent/mm/al/b;)V
+.method public final b(ILcom/tencent/mm/at/b;)V
     .locals 3
 
     .prologue
     .line 39
-    iget-object v0, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
+    iget-object v0, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
 
     if-eqz p2, :cond_0
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->bL(II)V
+    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->w(II)V
 
-    invoke-virtual {p2}, Lcom/tencent/mm/al/b;->toByteArray()[B
+    invoke-virtual {p2}, Lcom/tencent/mm/at/b;->toByteArray()[B
 
     move-result-object v1
 
     array-length v2, v1
 
-    invoke-virtual {v0, v2}, La/a/a/b/b/a;->pT(I)V
+    invoke-virtual {v0, v2}, La/a/a/b/b/a;->az(I)V
 
-    invoke-virtual {v0, v1}, La/a/a/b/b/a;->aR([B)V
+    invoke-virtual {v0, v1}, La/a/a/b/b/a;->l([B)V
 
     .line 40
     :cond_0
-    return-void
-.end method
-
-.method public final bM(II)V
-    .locals 3
-
-    .prologue
-    .line 51
-    iget-object v0, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
-
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->bL(II)V
-
-    if-ltz p2, :cond_0
-
-    invoke-virtual {v0, p2}, La/a/a/b/b/a;->pT(I)V
-
-    .line 52
-    :goto_0
-    return-void
-
-    .line 51
-    :cond_0
-    int-to-long v1, p2
-
-    invoke-virtual {v0, v1, v2}, La/a/a/b/b/a;->da(J)V
-
-    goto :goto_0
-.end method
-
-.method public final bN(II)V
-    .locals 2
-
-    .prologue
-    .line 71
-    iget-object v0, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
-
-    const/4 v1, 0x2
-
-    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->bL(II)V
-
-    invoke-virtual {v0, p2}, La/a/a/b/b/a;->pT(I)V
-
-    .line 72
     return-void
 .end method
 
@@ -281,14 +223,14 @@
     if-lez v0, :cond_0
 
     .line 139
-    iget-object v0, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
+    iget-object v0, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->bL(II)V
+    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->w(II)V
 
     .line 140
-    iget-object v4, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
+    iget-object v4, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
 
     if-eqz p2, :cond_3
 
@@ -310,7 +252,7 @@
     if-lt v3, v0, :cond_1
 
     :goto_1
-    invoke-virtual {v4, v1}, La/a/a/b/b/a;->pT(I)V
+    invoke-virtual {v4, v1}, La/a/a/b/b/a;->az(I)V
 
     .line 141
     :goto_2
@@ -336,7 +278,7 @@
 
     move-result v0
 
-    invoke-static {v0}, La/a/a/b/b/a;->pU(I)I
+    invoke-static {v0}, La/a/a/b/b/a;->aA(I)I
 
     move-result v0
 
@@ -352,7 +294,7 @@
 
     .line 142
     :cond_2
-    iget-object v1, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
+    iget-object v1, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
 
     invoke-virtual {p2, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -364,7 +306,7 @@
 
     move-result v0
 
-    invoke-virtual {v1, v0}, La/a/a/b/b/a;->pT(I)V
+    invoke-virtual {v1, v0}, La/a/a/b/b/a;->az(I)V
 
     .line 141
     add-int/lit8 v2, v2, 0x1
@@ -377,44 +319,48 @@
     goto :goto_1
 .end method
 
-.method public final d(IF)V
+.method public final ci(II)V
     .locals 3
 
     .prologue
-    .line 47
-    iget-object v0, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
+    .line 51
+    iget-object v0, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
 
-    const/4 v1, 0x5
+    const/4 v1, 0x0
 
-    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->bL(II)V
+    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->w(II)V
 
-    invoke-static {p2}, Ljava/lang/Float;->floatToIntBits(F)I
+    if-ltz p2, :cond_0
 
-    move-result v1
+    invoke-virtual {v0, p2}, La/a/a/b/b/a;->az(I)V
 
-    and-int/lit16 v2, v1, 0xff
+    .line 52
+    :goto_0
+    return-void
 
-    invoke-virtual {v0, v2}, La/a/a/b/b/a;->pR(I)V
+    .line 51
+    :cond_0
+    int-to-long v1, p2
 
-    shr-int/lit8 v2, v1, 0x8
+    invoke-virtual {v0, v1, v2}, La/a/a/b/b/a;->k(J)V
 
-    and-int/lit16 v2, v2, 0xff
+    goto :goto_0
+.end method
 
-    invoke-virtual {v0, v2}, La/a/a/b/b/a;->pR(I)V
+.method public final cj(II)V
+    .locals 2
 
-    shr-int/lit8 v2, v1, 0x10
+    .prologue
+    .line 71
+    iget-object v0, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
 
-    and-int/lit16 v2, v2, 0xff
+    const/4 v1, 0x2
 
-    invoke-virtual {v0, v2}, La/a/a/b/b/a;->pR(I)V
+    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->w(II)V
 
-    shr-int/lit8 v1, v1, 0x18
+    invoke-virtual {v0, p2}, La/a/a/b/b/a;->az(I)V
 
-    and-int/lit16 v1, v1, 0xff
-
-    invoke-virtual {v0, v1}, La/a/a/b/b/a;->pR(I)V
-
-    .line 48
+    .line 72
     return-void
 .end method
 
@@ -472,9 +418,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/al/b;
+    check-cast v0, Lcom/tencent/mm/at/b;
 
-    invoke-virtual {p0, p1, v0}, La/a/a/c/a;->b(ILcom/tencent/mm/al/b;)V
+    invoke-virtual {p0, p1, v0}, La/a/a/c/a;->b(ILcom/tencent/mm/at/b;)V
 
     .line 87
     add-int/lit8 v0, v1, 0x1
@@ -536,7 +482,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, p1, v0}, La/a/a/c/a;->d(IF)V
+    invoke-virtual {p0, p1, v0}, La/a/a/c/a;->f(IF)V
 
     .line 97
     add-int/lit8 v0, v1, 0x1
@@ -567,7 +513,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, p1, v0}, La/a/a/c/a;->bM(II)V
+    invoke-virtual {p0, p1, v0}, La/a/a/c/a;->ci(II)V
 
     .line 102
     add-int/lit8 v0, v1, 0x1
@@ -598,7 +544,7 @@
 
     move-result-wide v2
 
-    invoke-virtual {p0, p1, v2, v3}, La/a/a/c/a;->r(IJ)V
+    invoke-virtual {p0, p1, v2, v3}, La/a/a/c/a;->A(IJ)V
 
     .line 107
     add-int/lit8 v0, v1, 0x1
@@ -625,7 +571,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {p0, p1, v0}, La/a/a/c/a;->U(ILjava/lang/String;)V
+    invoke-virtual {p0, p1, v0}, La/a/a/c/a;->d(ILjava/lang/String;)V
 
     .line 112
     add-int/lit8 v0, v1, 0x1
@@ -656,7 +602,7 @@
 
     move-result v0
 
-    invoke-virtual {p0, p1, v0}, La/a/a/c/a;->F(IZ)V
+    invoke-virtual {p0, p1, v0}, La/a/a/c/a;->R(IZ)V
 
     .line 117
     add-int/lit8 v0, v1, 0x1
@@ -681,17 +627,17 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/al/a;
+    check-cast v0, Lcom/tencent/mm/at/a;
 
     .line 124
-    invoke-virtual {v0}, Lcom/tencent/mm/al/a;->kS()I
+    invoke-virtual {v0}, Lcom/tencent/mm/at/a;->kn()I
 
     move-result v2
 
-    invoke-virtual {p0, p1, v2}, La/a/a/c/a;->bN(II)V
+    invoke-virtual {p0, p1, v2}, La/a/a/c/a;->cj(II)V
 
     .line 125
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/al/a;->a(La/a/a/c/a;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/at/a;->a(La/a/a/c/a;)V
 
     .line 122
     add-int/lit8 v0, v1, 0x1
@@ -714,19 +660,73 @@
     .end packed-switch
 .end method
 
-.method public final r(IJ)V
-    .locals 2
+.method public final d(ILjava/lang/String;)V
+    .locals 3
 
     .prologue
-    .line 59
-    iget-object v0, p0, La/a/a/c/a;->jMP:La/a/a/b/b/a;
+    .line 63
+    iget-object v0, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
 
-    const/4 v1, 0x0
+    if-eqz p2, :cond_0
 
-    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->bL(II)V
+    const/4 v1, 0x2
 
-    invoke-virtual {v0, p2, p3}, La/a/a/b/b/a;->da(J)V
+    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->w(II)V
 
-    .line 60
+    const-string/jumbo v1, "UTF-8"
+
+    invoke-virtual {p2, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    array-length v2, v1
+
+    invoke-virtual {v0, v2}, La/a/a/b/b/a;->az(I)V
+
+    invoke-virtual {v0, v1}, La/a/a/b/b/a;->l([B)V
+
+    .line 64
+    :cond_0
+    return-void
+.end method
+
+.method public final f(IF)V
+    .locals 3
+
+    .prologue
+    .line 47
+    iget-object v0, p0, La/a/a/c/a;->mbb:La/a/a/b/b/a;
+
+    const/4 v1, 0x5
+
+    invoke-virtual {v0, p1, v1}, La/a/a/b/b/a;->w(II)V
+
+    invoke-static {p2}, Ljava/lang/Float;->floatToIntBits(F)I
+
+    move-result v1
+
+    and-int/lit16 v2, v1, 0xff
+
+    invoke-virtual {v0, v2}, La/a/a/b/b/a;->ax(I)V
+
+    shr-int/lit8 v2, v1, 0x8
+
+    and-int/lit16 v2, v2, 0xff
+
+    invoke-virtual {v0, v2}, La/a/a/b/b/a;->ax(I)V
+
+    shr-int/lit8 v2, v1, 0x10
+
+    and-int/lit16 v2, v2, 0xff
+
+    invoke-virtual {v0, v2}, La/a/a/b/b/a;->ax(I)V
+
+    shr-int/lit8 v1, v1, 0x18
+
+    and-int/lit16 v1, v1, 0xff
+
+    invoke-virtual {v0, v1}, La/a/a/b/b/a;->ax(I)V
+
+    .line 48
     return-void
 .end method

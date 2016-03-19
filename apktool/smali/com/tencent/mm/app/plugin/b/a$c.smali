@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/app/plugin/b/a$c;
-.super Lcom/tencent/mm/sdk/c/e;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
 
 
@@ -22,7 +22,7 @@
     .line 199
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/e;-><init>(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
 
     .line 200
     return-void
@@ -30,12 +30,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/d;)Z
+.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 4
 
     .prologue
     .line 204
-    instance-of v0, p1, Lcom/tencent/mm/d/a/bu;
+    instance-of v0, p1, Lcom/tencent/mm/d/a/dl;
 
     if-nez v0, :cond_0
 
@@ -44,7 +44,7 @@
 
     const-string/jumbo v1, "mismatched event"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 206
     const/4 v0, 0x0
@@ -55,36 +55,36 @@
 
     .line 208
     :cond_0
-    check-cast p1, Lcom/tencent/mm/d/a/bu;
+    check-cast p1, Lcom/tencent/mm/d/a/dl;
 
     .line 209
-    new-instance v0, Lcom/tencent/mm/ab/h;
+    new-instance v0, Lcom/tencent/mm/modelmulti/h;
 
-    iget-object v1, p1, Lcom/tencent/mm/d/a/bu;->awY:Lcom/tencent/mm/d/a/bu$a;
+    iget-object v1, p1, Lcom/tencent/mm/d/a/dl;->axg:Lcom/tencent/mm/d/a/dl$a;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/a/bu$a;->axa:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/d/a/dl$a;->axi:Ljava/lang/String;
 
-    iget-object v2, p1, Lcom/tencent/mm/d/a/bu;->awY:Lcom/tencent/mm/d/a/bu$a;
+    iget-object v2, p1, Lcom/tencent/mm/d/a/dl;->axg:Lcom/tencent/mm/d/a/dl$a;
 
-    iget-object v2, v2, Lcom/tencent/mm/d/a/bu$a;->content:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/d/a/dl$a;->content:Ljava/lang/String;
 
-    iget-object v3, p1, Lcom/tencent/mm/d/a/bu;->awY:Lcom/tencent/mm/d/a/bu$a;
+    iget-object v3, p1, Lcom/tencent/mm/d/a/dl;->axg:Lcom/tencent/mm/d/a/dl$a;
 
-    iget v3, v3, Lcom/tencent/mm/d/a/bu$a;->type:I
+    iget v3, v3, Lcom/tencent/mm/d/a/dl$a;->type:I
 
-    invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/ab/h;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/modelmulti/h;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 210
-    iget-object v1, p1, Lcom/tencent/mm/d/a/bu;->awZ:Lcom/tencent/mm/d/a/bu$b;
+    iget-object v1, p1, Lcom/tencent/mm/d/a/dl;->axh:Lcom/tencent/mm/d/a/dl$b;
 
-    iput-object v0, v1, Lcom/tencent/mm/d/a/bu$b;->axc:Lcom/tencent/mm/q/j;
+    iput-object v0, v1, Lcom/tencent/mm/d/a/dl$b;->axj:Lcom/tencent/mm/r/j;
 
     .line 211
-    iget-object v1, p1, Lcom/tencent/mm/d/a/bu;->awZ:Lcom/tencent/mm/d/a/bu$b;
+    iget-object v1, p1, Lcom/tencent/mm/d/a/dl;->axh:Lcom/tencent/mm/d/a/dl$b;
 
-    iget-wide v2, v0, Lcom/tencent/mm/ab/h;->axb:J
+    iget-wide v2, v0, Lcom/tencent/mm/modelmulti/h;->avg:J
 
-    iput-wide v2, v1, Lcom/tencent/mm/d/a/bu$b;->axb:J
+    iput-wide v2, v1, Lcom/tencent/mm/d/a/dl$b;->avg:J
 
     .line 212
     const/4 v0, 0x1

@@ -1,87 +1,250 @@
-.class final Lcom/tencent/mm/plugin/report/b/e;
-.super Lcom/tencent/mm/q/h;
+.class public final Lcom/tencent/mm/plugin/report/b/e;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field eJp:Lcom/tencent/mm/plugin/report/b/a$a;
-
-.field eJq:Lcom/tencent/mm/plugin/report/b/a$b;
-
-
 # direct methods
-.method constructor <init>()V
-    .locals 1
+.method public static sJ(Ljava/lang/String;)Z
+    .locals 6
 
     .prologue
-    .line 157
-    invoke-direct {p0}, Lcom/tencent/mm/q/h;-><init>()V
+    const/4 v2, 0x0
 
-    .line 159
-    new-instance v0, Lcom/tencent/mm/plugin/report/b/a$a;
+    .line 31
+    new-instance v3, Ljava/io/File;
 
-    invoke-direct {v0}, Lcom/tencent/mm/plugin/report/b/a$a;-><init>()V
+    const-string/jumbo v0, "/sdcard/cov.txt"
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/b/e;->eJp:Lcom/tencent/mm/plugin/report/b/a$a;
+    invoke-direct {v3, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 160
-    new-instance v0, Lcom/tencent/mm/plugin/report/b/a$b;
+    .line 32
+    invoke-virtual {v3}, Ljava/io/File;->exists()Z
 
-    invoke-direct {v0}, Lcom/tencent/mm/plugin/report/b/a$b;-><init>()V
+    move-result v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/report/b/e;->eJq:Lcom/tencent/mm/plugin/report/b/a$b;
+    if-nez v0, :cond_0
 
-    return-void
-.end method
+    .line 33
+    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvklqRB2dT0TuJY35uR698qNAQ+vAl+Ie1Q=="
 
+    const-string/jumbo v1, "codecoverage checkUpload dir never create ?"
 
-# virtual methods
-.method public final getType()I
-    .locals 1
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .prologue
-    .line 164
-    const/16 v0, 0x2b6
+    .line 59
+    :goto_0
+    return v2
 
-    return v0
-.end method
+    .line 36
+    :cond_0
+    sget-object v0, Lcom/tencent/mm/model/ag;->bAw:Lcom/tencent/mm/model/ag;
 
-.method public final getUri()Ljava/lang/String;
-    .locals 1
+    const-string/jumbo v1, "login_user_name"
 
-    .prologue
-    .line 169
-    const-string/jumbo v0, "/cgi-bin/micromsg-bin/reportidkeyrsa"
+    const-string/jumbo v4, "never_login_crash"
 
-    return-object v0
-.end method
+    invoke-virtual {v0, v1, v4}, Lcom/tencent/mm/model/ag;->A(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-.method protected final tF()Lcom/tencent/mm/protocal/i$c;
-    .locals 1
+    move-result-object v1
 
-    .prologue
-    .line 179
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/e;->eJp:Lcom/tencent/mm/plugin/report/b/a$a;
+    .line 38
+    new-instance v0, Ljava/lang/StringBuffer;
 
-    return-object v0
-.end method
+    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
-.method public final tG()Lcom/tencent/mm/protocal/i$d;
-    .locals 1
+    new-instance v4, Ljava/lang/StringBuilder;
 
-    .prologue
-    .line 174
-    iget-object v0, p0, Lcom/tencent/mm/plugin/report/b/e;->eJq:Lcom/tencent/mm/plugin/report/b/a$b;
+    const-string/jumbo v5, "#username="
 
-    return-object v0
-.end method
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-.method public final vk()I
-    .locals 1
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .prologue
-    .line 184
-    const/4 v0, 0x1
+    move-result-object v4
 
-    return v0
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string/jumbo v4, "\n"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "#rev="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v5, Lcom/tencent/mm/sdk/platformtools/e;->btx:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string/jumbo v4, "\n"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "#path="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    sget-object v5, Lcom/tencent/mm/sdk/platformtools/e;->bwX:Ljava/lang/String;
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string/jumbo v4, "\n"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v4
+
+    if-lez v4, :cond_1
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "#startrev="
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    const-string/jumbo v4, "\n"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+
+    :cond_1
+    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Lcom/tencent/mm/a/e;->e(Ljava/lang/String;[B)I
+
+    .line 40
+    new-instance v0, Ljava/text/SimpleDateFormat;
+
+    const-string/jumbo v4, "yyyy_MM_dd_HH_mm_ss"
+
+    invoke-direct {v0, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    .line 41
+    new-instance v4, Ljava/util/Date;
+
+    invoke-direct {v4}, Ljava/util/Date;-><init>()V
+
+    invoke-virtual {v0, v4}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 43
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "/sdcard/cov/cov_"
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v4, ".zip"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 45
+    invoke-static {v3, v2, v0}, Lcom/tencent/mm/a/p;->a(Ljava/io/File;ZLjava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 48
+    if-nez v0, :cond_2
+
+    .line 49
+    const-string/jumbo v0, "!56@/B4Tb64lLpK+IBX8XDgnvklqRB2dT0TuJY35uR698qNAQ+vAl+Ie1Q=="
+
+    const-string/jumbo v1, "zip file failed"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto/16 :goto_0
+
+    .line 52
+    :cond_2
+    invoke-virtual {v3}, Ljava/io/File;->delete()Z
+
+    .line 55
+    const-string/jumbo v3, "!56@/B4Tb64lLpK+IBX8XDgnvklqRB2dT0TuJY35uR698qNAQ+vAl+Ie1Q=="
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "code coverage try upload :"
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 57
+    const/16 v4, 0xa
+
+    const/16 v5, 0x4e24
+
+    move v3, v2
+
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/platformtools/q;->a(Ljava/lang/String;Ljava/lang/String;ZZII)Z
+
+    .line 59
+    const/4 v2, 0x1
+
+    goto/16 :goto_0
 .end method

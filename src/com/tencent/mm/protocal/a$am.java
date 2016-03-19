@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$am
-  extends a.c
+  extends a.e
 {
   public a$am()
   {
-    super("getWXDeviceInfos", "getWXDeviceInfos", 119, true);
+    super("getActionInfo", "getActionInfo", 130, true);
   }
 }
 

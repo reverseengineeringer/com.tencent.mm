@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static ah(Landroid/view/View;)V
+.method public static ak(Landroid/view/View;)V
     .locals 8
     .annotation build Landroid/annotation/TargetApi;
         value = 0x11
@@ -260,7 +260,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/a;->ah(Landroid/view/View;)V
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/a;->ak(Landroid/view/View;)V
 
     .line 254
     add-int/lit8 v2, v4, 0x1
@@ -280,7 +280,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 132
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -310,7 +310,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 140
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -340,7 +340,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 148
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -370,7 +370,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 156
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -400,7 +400,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 164
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -430,7 +430,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 172
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -460,7 +460,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 180
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -578,7 +578,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/a;->ah(Landroid/view/View;)V
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/a;->ak(Landroid/view/View;)V
 
     .line 316
     add-int/lit8 v1, v2, 0x1
@@ -598,7 +598,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 261
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -628,7 +628,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 272
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -658,7 +658,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 280
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -688,7 +688,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 288
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -718,7 +718,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 296
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -748,7 +748,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 304
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -790,7 +790,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v1, v4, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 323
     new-instance v2, Ljava/lang/IncompatibleClassChangeError;
@@ -891,7 +891,7 @@
     goto/16 :goto_8
 .end method
 
-.method public static cH(Landroid/content/Context;)V
+.method public static dj(Landroid/content/Context;)V
     .locals 8
 
     .prologue
@@ -1039,7 +1039,7 @@
 
     move-result-object v1
 
-    invoke-static {v4, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 

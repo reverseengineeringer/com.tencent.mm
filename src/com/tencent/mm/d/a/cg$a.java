@@ -2,8 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class cg$a
 {
-  public String axH;
-  public String axI;
+  public String alN;
+  public boolean auN;
 }
 
 /* Location:

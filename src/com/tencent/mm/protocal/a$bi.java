@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bi
-  extends a.c
+  extends a.e
 {
   public a$bi()
   {
-    super("nfcGetInfo", "nfcGetInfo", 148, false);
+    super("getTransferMoneyRequest", "get_transfer_money_request", 74, true);
   }
 }
 

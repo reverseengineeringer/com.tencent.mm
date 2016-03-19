@@ -2,10 +2,10 @@ package com.tencent.mm.pluginsdk.ui.preference;
 
 public final class HelperHeaderPreference$a
 {
-  public String beS;
-  public String gYe;
+  public String aEV;
+  public String bpe;
+  public String iOw;
   public int status;
-  public String user;
 }
 
 /* Location:

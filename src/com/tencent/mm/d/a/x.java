@@ -1,23 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class x
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a auI = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atg = new a();
   
   public x()
   {
-    id = "CloseFingerPrint";
-    hXT = atO;
+    id = "ChatroomMemberDataUpdated";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int apL = 0;
+    public String username;
   }
 }
 

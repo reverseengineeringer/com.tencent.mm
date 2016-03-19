@@ -16,8 +16,8 @@
 
 
 # virtual methods
-.method public abstract aBw()I
+.method public abstract aSq()I
 .end method
 
-.method public abstract aBx()V
+.method public abstract aSr()V
 .end method

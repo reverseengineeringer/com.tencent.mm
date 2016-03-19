@@ -1,8 +1,8 @@
 package com.tencent.mm.ui;
 
-public abstract interface d$a
+public final class d$a
 {
-  public abstract void mY(int paramInt);
+  public static int kjJ = 0;
 }
 
 /* Location:

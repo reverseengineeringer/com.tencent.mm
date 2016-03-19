@@ -15,24 +15,21 @@
 
 
 # instance fields
-.field public actionCode:I
-
-.field public appId:Ljava/lang/String;
-
-.field public atZ:I
-
-.field public ayV:Ljava/lang/String;
-
-.field public context:Landroid/content/Context;
+.field public Jq:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 18
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/cy$a;->Jq:Z
 
     return-void
 .end method

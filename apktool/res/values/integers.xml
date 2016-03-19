@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <integer name="a">5089000</integer>
+    <integer name="a">7887000</integer>
     <integer name="b">2</integer>
+    <integer name="c">5089000</integer>
 </resources>

@@ -2,7 +2,7 @@ package com.tencent.mm.ui.widget;
 
 public abstract interface MMEditText$a
 {
-  public abstract void XV();
+  public abstract void ahl();
 }
 
 /* Location:

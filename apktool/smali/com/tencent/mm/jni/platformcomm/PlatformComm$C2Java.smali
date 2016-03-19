@@ -215,7 +215,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 218
     new-instance v2, Ljava/lang/StringBuilder;
@@ -327,7 +327,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 407
     new-instance v2, Ljava/lang/StringBuilder;
@@ -411,7 +411,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/al;->cQ(Landroid/content/Context;)I
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ah;->du(Landroid/content/Context;)I
 
     move-result v2
 
@@ -445,7 +445,7 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 325
     # getter for: Lcom/tencent/mm/jni/platformcomm/PlatformComm;->context:Landroid/content/Context;
@@ -453,7 +453,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/al;->cR(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ah;->dv(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -554,7 +554,7 @@
 
     const-string/jumbo v2, "getActiveNetworkInfo failed."
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -771,7 +771,7 @@
     if-eqz p0, :cond_1
 
     .line 367
-    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/a;->qV()J
+    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/a;->qR()J
 
     move-result-wide v0
 
@@ -779,7 +779,7 @@
 
     .line 369
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/a;->qU()J
+    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/a;->qQ()J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -824,7 +824,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/al;->bS(Landroid/content/Context;)I
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ah;->cn(Landroid/content/Context;)I
 
     move-result v3
 
@@ -843,7 +843,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/al;->cT(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ah;->dx(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -861,7 +861,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/al;->cW(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ah;->dA(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -879,7 +879,7 @@
 
     move-result-object v4
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/al;->cU(Landroid/content/Context;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ah;->dy(Landroid/content/Context;)Z
 
     move-result v4
 
@@ -892,7 +892,7 @@
 
     .line 186
     :cond_4
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/al;->my(I)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ah;->ps(I)Z
 
     move-result v4
 
@@ -905,7 +905,7 @@
 
     .line 188
     :cond_5
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/al;->mx(I)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ah;->pr(I)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -935,7 +935,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 196
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1016,7 +1016,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/al;->cZ(Landroid/content/Context;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ah;->dD(Landroid/content/Context;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1035,7 +1035,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 387
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1094,7 +1094,7 @@
 
     .prologue
     .line 261
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->blL:Lcom/tencent/mm/jni/platformcomm/PlatformComm$a;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->bwq:Lcom/tencent/mm/jni/platformcomm/PlatformComm$a;
 
     if-nez v0, :cond_0
 
@@ -1105,15 +1105,15 @@
     .line 266
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->qW()Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {}, Lcom/tencent/mm/jni/platformcomm/PlatformComm;->qS()Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/jni/platformcomm/c;
+    new-instance v1, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java$1;
 
-    invoke-direct {v1}, Lcom/tencent/mm/jni/platformcomm/c;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/jni/platformcomm/PlatformComm$C2Java$1;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1173,7 +1173,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 236
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1274,7 +1274,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 254
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1375,7 +1375,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 426
     new-instance v2, Ljava/lang/StringBuilder;

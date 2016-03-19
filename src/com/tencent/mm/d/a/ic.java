@@ -1,31 +1,28 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.ajx;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ic
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFn = new a();
-  public b aFo = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDN = new a();
   
   public ic()
   {
-    id = "SnsfillEventMedia";
-    hXT = atO;
+    id = "OpFromExDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public ag aFm;
-    public ajx aFp;
-  }
-  
-  public static final class b
-  {
-    public boolean auM = false;
+    public String aBB;
+    public int aBw;
+    public String alN;
+    public int avD;
+    public int op = 0;
+    public String url;
   }
 }
 

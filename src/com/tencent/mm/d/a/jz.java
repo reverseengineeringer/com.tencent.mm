@@ -1,27 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.storage.ag;
 
 public final class jz
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aHk = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGw = new a();
   
   public jz()
   {
-    id = "WearHardDevice";
-    hXT = atO;
+    id = "ResendVoiceRemindMsg";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aHl;
-    public String anZ;
-    public int ave;
-    public boolean azi;
-    public byte[] data;
+    public ag ask;
   }
 }
 

@@ -94,23 +94,23 @@
 .end method
 
 .method public onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
-    .locals 8
+    .locals 9
 
     .prologue
-    const/4 v7, 0x0
+    const/4 v8, 0x0
 
-    const/4 v6, 0x1
+    const/4 v7, 0x1
 
     .line 38
     sparse-switch p1, :sswitch_data_0
 
-    .line 222
+    .line 224
     invoke-super {p0, p1, p2, p3, p4}, Landroid/os/Binder;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z
 
-    move-result v6
+    move-result v7
 
     :goto_0
-    return v6
+    return v7
 
     .line 42
     :sswitch_0
@@ -151,400 +151,409 @@
 
     move-result v5
 
-    move-object v0, p0
-
-    .line 58
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/protocal/e$a;->a(I[B[B[BI)Z
+    .line 59
+    invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 59
-    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+    if-eqz v0, :cond_1
 
-    .line 60
-    if-eqz v0, :cond_0
-
-    move v0, v6
+    move v6, v7
 
     :goto_1
-    invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
+    move-object v0, p0
+
+    .line 60
+    invoke-virtual/range {v0 .. v6}, Lcom/tencent/mm/protocal/e$a;->a(I[B[B[BIZ)Z
+
+    move-result v0
+
+    .line 61
+    invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
+
+    .line 62
+    if-eqz v0, :cond_0
+
+    move v8, v7
+
+    :cond_0
+    invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto :goto_0
 
-    :cond_0
-    move v0, v7
+    :cond_1
+    move v6, v8
 
+    .line 59
     goto :goto_1
 
-    .line 65
+    .line 67
     :sswitch_2
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 66
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->vC()[B
+    .line 68
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->vZ()[B
 
     move-result-object v0
 
-    .line 67
+    .line 69
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 68
+    .line 70
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto :goto_0
 
-    .line 73
+    .line 75
     :sswitch_3
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 75
+    .line 77
     invoke-virtual {p2}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
-    .line 76
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->C([B)V
+    .line 78
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->B([B)V
 
-    .line 77
+    .line 79
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 82
+    .line 84
     :sswitch_4
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 83
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->sY()[B
+    .line 85
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->tq()[B
 
     move-result-object v0
 
-    .line 84
+    .line 86
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 85
+    .line 87
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto :goto_0
 
-    .line 90
+    .line 92
     :sswitch_5
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 92
+    .line 94
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 93
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->aX(I)V
+    .line 95
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->ba(I)V
 
-    .line 94
+    .line 96
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto :goto_0
 
-    .line 99
+    .line 101
     :sswitch_6
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 100
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->qY()I
+    .line 102
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->rg()I
 
     move-result v0
 
-    .line 101
+    .line 103
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 102
+    .line 104
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 107
+    .line 109
     :sswitch_7
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 109
+    .line 111
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 110
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->cQ(I)V
+    .line 112
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->cR(I)V
 
-    .line 111
+    .line 113
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 116
+    .line 118
     :sswitch_8
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 117
+    .line 119
     invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->getClientVersion()I
 
     move-result v0
 
-    .line 118
+    .line 120
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 119
+    .line 121
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 124
+    .line 126
     :sswitch_9
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 126
+    .line 128
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 127
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->fP(Ljava/lang/String;)V
+    .line 129
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->gi(Ljava/lang/String;)V
 
-    .line 128
+    .line 130
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 133
+    .line 135
     :sswitch_a
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 134
+    .line 136
     invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->getDeviceType()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 135
+    .line 137
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 136
+    .line 138
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 141
+    .line 143
     :sswitch_b
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 142
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->vD()Ljava/lang/String;
+    .line 144
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->wa()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 143
+    .line 145
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 144
+    .line 146
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 149
+    .line 151
     :sswitch_c
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 151
+    .line 153
     invoke-virtual {p2}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 152
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->fQ(Ljava/lang/String;)V
+    .line 154
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->gj(Ljava/lang/String;)V
 
-    .line 153
+    .line 155
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 158
+    .line 160
     :sswitch_d
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 160
+    .line 162
     invoke-virtual {p2}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 161
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->cR(I)V
+    .line 163
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/e$a;->cS(I)V
 
-    .line 162
+    .line 164
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
     goto/16 :goto_0
 
-    .line 167
+    .line 169
     :sswitch_e
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 168
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->vE()I
+    .line 170
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->wb()I
 
     move-result v0
 
-    .line 169
+    .line 171
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 170
+    .line 172
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 175
+    .line 177
     :sswitch_f
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 176
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->vF()[B
+    .line 178
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->wc()[B
 
     move-result-object v0
 
-    .line 177
+    .line 179
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 178
+    .line 180
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
     goto/16 :goto_0
 
-    .line 183
+    .line 185
     :sswitch_10
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 184
+    .line 186
     invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->getUserName()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 185
+    .line 187
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 186
+    .line 188
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 191
+    .line 193
     :sswitch_11
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 192
+    .line 194
     invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->getPassword()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 193
+    .line 195
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 194
+    .line 196
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 199
+    .line 201
     :sswitch_12
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 200
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->vG()Ljava/lang/String;
+    .line 202
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->wd()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 201
+    .line 203
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 202
+    .line 204
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 207
+    .line 209
     :sswitch_13
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 208
+    .line 210
     invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->getCmdId()I
 
     move-result v0
 
-    .line 209
+    .line 211
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 210
+    .line 212
     invoke-virtual {p3, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
-    .line 215
+    .line 217
     :sswitch_14
     const-string/jumbo v0, "com.tencent.mm.protocal.IMMBaseReq_AIDL"
 
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
-    .line 216
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->vH()Z
+    .line 218
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/e$a;->we()Z
 
     move-result v0
 
-    .line 217
+    .line 219
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
 
-    .line 218
-    if-eqz v0, :cond_1
+    .line 220
+    if-eqz v0, :cond_2
 
-    move v7, v6
+    move v8, v7
 
-    :cond_1
-    invoke-virtual {p3, v7}, Landroid/os/Parcel;->writeInt(I)V
+    :cond_2
+    invoke-virtual {p3, v8}, Landroid/os/Parcel;->writeInt(I)V
 
     goto/16 :goto_0
 
     .line 38
-    nop
-
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1

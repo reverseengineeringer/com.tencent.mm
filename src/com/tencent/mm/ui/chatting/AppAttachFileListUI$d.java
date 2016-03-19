@@ -5,10 +5,10 @@ import com.tencent.mm.ui.MMImageView;
 
 final class AppAttachFileListUI$d
 {
-  public MMImageView iRr;
-  public TextView iRs;
-  public TextView iRt;
-  public TextView iRu;
+  public MMImageView kQl;
+  public TextView kQm;
+  public TextView kQn;
+  public TextView kQo;
   
   private AppAttachFileListUI$d(AppAttachFileListUI paramAppAttachFileListUI) {}
 }

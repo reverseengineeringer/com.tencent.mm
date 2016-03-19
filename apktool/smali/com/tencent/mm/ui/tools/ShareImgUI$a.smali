@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic jvm:Lcom/tencent/mm/ui/tools/ShareImgUI;
+.field final synthetic lxP:Lcom/tencent/mm/ui/tools/ShareImgUI;
 
-.field private jvn:Lcom/tencent/mm/ui/tools/ShareImgUI$b;
+.field private lxQ:Lcom/tencent/mm/ui/tools/ShareImgUI$b;
 
 .field private mUri:Landroid/net/Uri;
 
@@ -30,18 +30,18 @@
     .locals 0
 
     .prologue
-    .line 493
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->jvm:Lcom/tencent/mm/ui/tools/ShareImgUI;
+    .line 506
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->lxP:Lcom/tencent/mm/ui/tools/ShareImgUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 494
+    .line 507
     iput-object p2, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->mUri:Landroid/net/Uri;
 
-    .line 495
-    iput-object p3, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->jvn:Lcom/tencent/mm/ui/tools/ShareImgUI$b;
+    .line 508
+    iput-object p3, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->lxQ:Lcom/tencent/mm/ui/tools/ShareImgUI$b;
 
-    .line 496
+    .line 509
     return-void
 .end method
 
@@ -51,10 +51,10 @@
     .locals 3
 
     .prologue
-    .line 500
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->jvm:Lcom/tencent/mm/ui/tools/ShareImgUI;
+    .line 513
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->lxP:Lcom/tencent/mm/ui/tools/ShareImgUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->jvm:Lcom/tencent/mm/ui/tools/ShareImgUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->lxP:Lcom/tencent/mm/ui/tools/ShareImgUI;
 
     iget-object v2, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->mUri:Landroid/net/Uri;
 
@@ -64,17 +64,17 @@
 
     iput-object v1, v0, Lcom/tencent/mm/ui/tools/ShareImgUI;->filePath:Ljava/lang/String;
 
-    .line 501
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->jvn:Lcom/tencent/mm/ui/tools/ShareImgUI$b;
+    .line 514
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->lxQ:Lcom/tencent/mm/ui/tools/ShareImgUI$b;
 
     if-eqz v0, :cond_0
 
-    .line 502
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->jvn:Lcom/tencent/mm/ui/tools/ShareImgUI$b;
+    .line 515
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$a;->lxQ:Lcom/tencent/mm/ui/tools/ShareImgUI$b;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/ShareImgUI$b;->aRs()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/ShareImgUI$b;->bir()V
 
-    .line 504
+    .line 517
     :cond_0
     return-void
 .end method

@@ -13,30 +13,29 @@ import android.os.Build.VERSION;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
+import android.view.animation.Animation.AnimationListener;
 import android.widget.RelativeLayout.LayoutParams;
-import com.tencent.mm.a.h;
-import com.tencent.mm.sdk.platformtools.e;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.d;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MainSightIconView
   extends View
 {
-  private int cIw;
-  private int cnL;
-  private Paint dnc = new Paint();
-  private Rect eBK;
-  private Canvas fnG = new Canvas();
-  private Bitmap fnH;
-  private int fnI;
-  private int fnJ;
-  private int fnK;
-  private int fnL;
-  private Bitmap fnM;
-  private final float fnN = 0.4F;
-  private int fnO;
-  private int fnP;
-  private Animation fnQ;
+  private int cFj;
+  private Paint cZX = new Paint();
+  private int ewY;
+  private Rect fKX;
+  private Canvas gEB = new Canvas();
+  private Bitmap gEC;
+  private int gED;
+  private int gEE;
+  private int gEF;
+  private int gEG;
+  private Bitmap gEH;
+  private final float gEI = 0.4F;
+  public int gEJ;
+  public int gEK;
+  public Animation gEL;
   
   public MainSightIconView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -51,7 +50,7 @@ public class MainSightIconView
   @TargetApi(11)
   public final void a(float paramFloat, boolean paramBoolean)
   {
-    fnK = ((int)(fnJ * paramFloat));
+    gEF = ((int)(gEE * paramFloat));
     if ((paramFloat < 1.0F) || (!paramBoolean)) {
       paramFloat = 0.4F;
     }
@@ -61,98 +60,83 @@ public class MainSightIconView
     invalidate();
   }
   
-  public final void aL(int paramInt1, int paramInt2)
-  {
-    fnO = paramInt1;
-    fnP = paramInt2;
-  }
-  
-  public final void akJ()
-  {
-    fnQ = new TranslateAnimation(0.0F, 0.0F, 0.0F, fnO - getTop() - getHeight() / 2);
-    fnQ.setFillAfter(true);
-    fnQ.setDuration(fnP);
-    fnQ.setAnimationListener(new a(this));
-    startAnimation(fnQ);
-  }
-  
   public void draw(Canvas paramCanvas)
   {
-    dnc.reset();
-    dnc.setAntiAlias(true);
-    if ((fnH == null) || (fnH.isRecycled()))
+    cZX.reset();
+    cZX.setAntiAlias(true);
+    if ((gEC == null) || (gEC.isRecycled()))
     {
-      t.e("!44@/B4Tb64lLpKAfMIFnYlds+qJ5gHvUJOo2DngW8iViHE=", "MainSightIconView error, mEysBmp is null or recycled");
+      u.e("!44@/B4Tb64lLpKAfMIFnYlds+qJ5gHvUJOo2DngW8iViHE=", "MainSightIconView error, mEysBmp is null or recycled");
       return;
     }
-    if (fnK == 0)
+    if (gEF == 0)
     {
       paramCanvas.drawARGB(0, 0, 0, 0);
       return;
     }
-    if (fnK == fnJ)
+    if (gEF == gEE)
     {
-      paramCanvas.drawBitmap(fnH, eBK, eBK, dnc);
+      paramCanvas.drawBitmap(gEC, fKX, fKX, cZX);
       return;
     }
-    if ((fnK == fnL) && (fnM != null) && (!fnM.isRecycled()))
+    if ((gEF == gEG) && (gEH != null) && (!gEH.isRecycled()))
     {
-      paramCanvas.drawBitmap(fnM, eBK, eBK, dnc);
+      paramCanvas.drawBitmap(gEH, fKX, fKX, cZX);
       return;
     }
-    if ((fnM == null) || (fnM.isRecycled())) {
-      fnM = Bitmap.createBitmap(cIw, cnL, Bitmap.Config.ARGB_4444);
+    if ((gEH == null) || (gEH.isRecycled())) {
+      gEH = Bitmap.createBitmap(ewY, cFj, Bitmap.Config.ARGB_4444);
     }
     for (;;)
     {
-      fnG.setBitmap(fnM);
-      fnG.drawCircle(cIw / 2, cnL / 2, fnK, dnc);
-      dnc.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
-      fnG.drawBitmap(fnH, eBK, eBK, dnc);
-      dnc.setXfermode(null);
-      paramCanvas.drawBitmap(fnM, eBK, eBK, dnc);
+      gEB.setBitmap(gEH);
+      gEB.drawCircle(ewY / 2, cFj / 2, gEF, cZX);
+      cZX.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.SRC_IN));
+      gEB.drawBitmap(gEC, fKX, fKX, cZX);
+      cZX.setXfermode(null);
+      paramCanvas.drawBitmap(gEH, fKX, fKX, cZX);
       return;
-      fnM.eraseColor(0);
+      gEH.eraseColor(0);
     }
   }
   
-  public final void fY(int paramInt)
+  public final void gV(int paramInt)
   {
-    if ((fnH == null) || (fnH.isRecycled())) {
-      fnH = e.mq(a.h.icon_sight_capture_mask);
+    if ((gEC == null) || (gEC.isRecycled())) {
+      gEC = d.pk(2130903359);
     }
     RelativeLayout.LayoutParams localLayoutParams = (RelativeLayout.LayoutParams)getLayoutParams();
-    if ((localLayoutParams != null) && (fnH != null))
+    if ((localLayoutParams != null) && (gEC != null))
     {
-      width = fnH.getWidth();
-      height = fnH.getHeight();
+      width = gEC.getWidth();
+      height = gEC.getHeight();
     }
-    if (fnH != null)
+    if (gEC != null)
     {
-      cIw = fnH.getWidth();
-      cnL = fnH.getHeight();
-      fnJ = (fnH.getWidth() / 2);
+      ewY = gEC.getWidth();
+      cFj = gEC.getHeight();
+      gEE = (gEC.getWidth() / 2);
     }
-    eBK = new Rect(0, 0, cIw, cnL);
-    fnI = paramInt;
-    topMargin = (fnI - cnL / 2);
+    fKX = new Rect(0, 0, ewY, cFj);
+    gED = paramInt;
+    topMargin = (gED - cFj / 2);
     setLayoutParams(localLayoutParams);
   }
   
   public int getIconHeight()
   {
-    return cnL;
+    return cFj;
   }
   
   public int getIconWidth()
   {
-    return cIw;
+    return ewY;
   }
   
   public void setMarginTop(int paramInt)
   {
     RelativeLayout.LayoutParams localLayoutParams = (RelativeLayout.LayoutParams)getLayoutParams();
-    topMargin = (fnI + paramInt - cnL / 2);
+    topMargin = (gED + paramInt - cFj / 2);
     setLayoutParams(localLayoutParams);
   }
   

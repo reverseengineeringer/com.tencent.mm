@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cb
-  extends a.c
+  extends a.e
 {
   public a$cb()
   {
-    super("sendAppMessage", "send_app_msg", 6, true);
+    super("log", "", 0, false);
   }
 }
 

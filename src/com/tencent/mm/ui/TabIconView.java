@@ -7,18 +7,17 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.widget.ImageView;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.sdk.platformtools.e;
+import com.tencent.mm.sdk.platformtools.d;
 
 public class TabIconView
   extends ImageView
 {
-  private Paint crB;
-  private Bitmap isp;
-  private Bitmap isq;
-  private Rect isr;
-  private Rect iss;
-  private int ist = 0;
+  private Paint cIZ;
+  private Bitmap krs;
+  private Bitmap krt;
+  private Rect kru;
+  private Rect krv;
+  private int krw = 0;
   
   public TabIconView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -30,36 +29,36 @@ public class TabIconView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  public final void bs(int paramInt1, int paramInt2)
+  public final void i(int paramInt1, int paramInt2, boolean paramBoolean)
   {
-    isp = e.mq(paramInt1);
-    isq = e.mq(paramInt2);
-    if (a.cB(getContext())) {
-      isr = new Rect(0, 0, isp.getWidth(), isp.getHeight());
+    if (paramBoolean) {
+      krs = d.pl(paramInt1);
     }
-    for (iss = new Rect(0, 0, isq.getWidth(), isq.getHeight());; iss = new Rect(0, 0, isq.getWidth(), isq.getHeight()))
+    for (krt = d.pl(paramInt2);; krt = d.pk(paramInt2))
     {
-      crB = new Paint(1);
+      kru = new Rect(0, 0, krs.getWidth(), krs.getHeight());
+      krv = new Rect(0, 0, krt.getWidth(), krt.getHeight());
+      cIZ = new Paint(1);
       return;
-      isr = new Rect(0, 0, isp.getWidth(), isp.getHeight());
+      krs = d.pk(paramInt1);
     }
   }
   
   protected void onDraw(Canvas paramCanvas)
   {
     super.onDraw(paramCanvas);
-    if (crB == null) {
+    if (cIZ == null) {
       return;
     }
-    crB.setAlpha(255 - ist);
-    paramCanvas.drawBitmap(isq, null, iss, crB);
-    crB.setAlpha(ist);
-    paramCanvas.drawBitmap(isp, null, isr, crB);
+    cIZ.setAlpha(255 - krw);
+    paramCanvas.drawBitmap(krt, null, krv, cIZ);
+    cIZ.setAlpha(krw);
+    paramCanvas.drawBitmap(krs, null, kru, cIZ);
   }
   
   public void setFocusAlpha(int paramInt)
   {
-    ist = paramInt;
+    krw = paramInt;
     invalidate();
   }
 }

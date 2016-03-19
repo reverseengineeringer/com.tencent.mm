@@ -1,25 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class hq
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aES = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDo = new a();
   
   public hq()
   {
-    id = "ShareCouponCard";
-    hXT = atO;
+    id = "NotifyNewFriendRequest";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String azV;
-    public long azW;
-    public String azX;
+    public String ajh;
+    public String aji;
+    public int type;
   }
 }
 

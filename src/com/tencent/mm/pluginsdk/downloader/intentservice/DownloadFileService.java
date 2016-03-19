@@ -5,17 +5,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.ResultReceiver;
-import android.support.v4.app.aa.d;
-import com.tencent.mm.a.h;
+import android.support.v4.app.p.d;
 import java.io.File;
 
 public class DownloadFileService
   extends IntentService
 {
   private static final String TAG = DownloadFileService.class.getSimpleName();
-  private int cjo;
-  private ResultReceiver gKK;
-  private int gKL;
+  private int cAx;
+  private ResultReceiver izu;
+  private int izv;
   
   public DownloadFileService()
   {
@@ -150,9 +149,9 @@ public class DownloadFileService
     //   226: aload_0
     //   227: iload 4
     //   229: aload_0
-    //   230: getfield 101	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:gKL	I
+    //   230: getfield 101	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:izv	I
     //   233: iadd
-    //   234: putfield 101	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:gKL	I
+    //   234: putfield 101	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:izv	I
     //   237: aload_1
     //   238: astore_2
     //   239: aload_1
@@ -170,7 +169,7 @@ public class DownloadFileService
     //   259: aload_1
     //   260: astore 6
     //   262: aload_0
-    //   263: getfield 101	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:gKL	I
+    //   263: getfield 101	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:izv	I
     //   266: i2l
     //   267: ldc2_w 106
     //   270: lmul
@@ -187,7 +186,7 @@ public class DownloadFileService
     //   283: astore 6
     //   285: iload 4
     //   287: aload_0
-    //   288: getfield 109	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:cjo	I
+    //   288: getfield 109	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:cAx	I
     //   291: if_icmple -113 -> 178
     //   294: aload_1
     //   295: astore_2
@@ -206,7 +205,7 @@ public class DownloadFileService
     //   316: aload_1
     //   317: astore 6
     //   319: aload_0
-    //   320: getfield 117	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:gKK	Landroid/os/ResultReceiver;
+    //   320: getfield 117	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:izu	Landroid/os/ResultReceiver;
     //   323: sipush 4657
     //   326: aload 8
     //   328: invokevirtual 123	android/os/ResultReceiver:send	(ILandroid/os/Bundle;)V
@@ -218,7 +217,7 @@ public class DownloadFileService
     //   337: astore 6
     //   339: aload_0
     //   340: iload 4
-    //   342: putfield 109	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:cjo	I
+    //   342: putfield 109	com/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService:cAx	I
     //   345: goto -167 -> 178
     //   348: astore_2
     //   349: aload 10
@@ -411,15 +410,15 @@ public class DownloadFileService
   public void onCreate()
   {
     super.onCreate();
-    aa.d locald = new aa.d(this);
-    locald.a("Something Download").b("Download in progress").k(a.h.icon);
+    p.d locald = new p.d(this);
+    locald.a("Something Download").b("Download in progress").l(2130970216);
     startForeground(4657, locald.build());
   }
   
   protected void onHandleIntent(Intent paramIntent)
   {
     String str = paramIntent.getExtras().getString("url");
-    gKK = ((ResultReceiver)paramIntent.getParcelableExtra("receiver"));
+    izu = ((ResultReceiver)paramIntent.getParcelableExtra("receiver"));
     paramIntent = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Download");
     if (!paramIntent.exists()) {
       paramIntent.mkdirs();

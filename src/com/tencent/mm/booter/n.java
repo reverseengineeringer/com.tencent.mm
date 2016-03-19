@@ -1,13 +1,23 @@
 package com.tencent.mm.booter;
 
-final class n
-  implements Runnable
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.os.Process;
+import com.tencent.mm.compatible.d.p;
+import com.tencent.mm.network.s;
+import com.tencent.mm.sdk.platformtools.f;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import java.net.HttpURLConnection;
+
+public final class n
 {
-  n(h paramh, String paramString, boolean paramBoolean) {}
+  Context context;
   
-  public final void run()
+  public n(Context paramContext)
   {
-    h.a(bcD, h.f(bcD), h.g(bcD), h.h(bcD), bcE, bcF);
+    context = paramContext;
   }
 }
 

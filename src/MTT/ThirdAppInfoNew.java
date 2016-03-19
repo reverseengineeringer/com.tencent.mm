@@ -6,6 +6,8 @@ public final class ThirdAppInfoNew
   public int iCoreType = 0;
   public long iPv = 0L;
   public String sAppName = "";
+  public String sAppSignature = "";
+  public String sAppVersionName = "";
   public String sGuid = "";
   public String sImei = "";
   public String sImsi = "";

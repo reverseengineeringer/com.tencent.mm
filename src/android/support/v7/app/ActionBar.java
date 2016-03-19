@@ -6,13 +6,17 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup.MarginLayoutParams;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 
 public abstract class ActionBar
 {
-  public abstract void bb();
+  public abstract void aJ();
   
-  public abstract void bc();
+  public abstract void aK();
+  
+  public abstract void aL();
+  
+  public abstract void aM();
   
   public abstract View getCustomView();
   
@@ -25,13 +29,13 @@ public abstract class ActionBar
     return null;
   }
   
+  public abstract CharSequence getTitle();
+  
   public abstract void hide();
   
   public abstract boolean isShowing();
   
   public abstract void setBackgroundDrawable(Drawable paramDrawable);
-  
-  public abstract void setCustomView(int paramInt);
   
   public abstract void setCustomView(View paramView);
   
@@ -42,8 +46,6 @@ public abstract class ActionBar
   public abstract void setDisplayShowTitleEnabled(boolean paramBoolean);
   
   public void setHomeButtonEnabled(boolean paramBoolean) {}
-  
-  public abstract void setIcon(int paramInt);
   
   public abstract void setLogo(Drawable paramDrawable);
   
@@ -68,7 +70,7 @@ public abstract class ActionBar
     public LayoutParams(Context paramContext, AttributeSet paramAttributeSet)
     {
       super(paramAttributeSet);
-      paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.ActionBarLayout);
+      paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.ActionBarLayout);
       gravity = paramContext.getInt(0, -1);
       paramContext.recycle();
     }

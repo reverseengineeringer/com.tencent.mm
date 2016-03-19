@@ -5,20 +5,20 @@ import android.net.Uri;
 final class ShareImgUI$a
   implements Runnable
 {
-  private ShareImgUI.b jvn;
+  private ShareImgUI.b lxQ;
   private Uri mUri;
   
   public ShareImgUI$a(ShareImgUI paramShareImgUI, Uri paramUri, ShareImgUI.b paramb)
   {
     mUri = paramUri;
-    jvn = paramb;
+    lxQ = paramb;
   }
   
   public final void run()
   {
-    jvm.filePath = ShareImgUI.a(jvm, mUri);
-    if (jvn != null) {
-      jvn.aRs();
+    lxP.filePath = ShareImgUI.a(lxP, mUri);
+    if (lxQ != null) {
+      lxQ.bir();
     }
   }
 }

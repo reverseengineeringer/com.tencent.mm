@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.report.service;
 
 public class KVReportJni$KVReportJava2C
 {
-  public static native void ackKvStrategy(boolean paramBoolean, byte[] paramArrayOfByte, int paramInt);
+  public static native void ackKvStrategy(int paramInt1, int paramInt2, byte[] paramArrayOfByte, int paramInt3);
   
   public static native void onCreate();
   
@@ -11,6 +11,10 @@ public class KVReportJni$KVReportJava2C
   public static native void onExitAppOrAppCrash();
   
   public static native void onForeground(boolean paramBoolean);
+  
+  public static native void onKVPluginMsg(long paramLong1, long paramLong2, long paramLong3, long paramLong4, long paramLong5, long paramLong6, long paramLong7);
+  
+  public static native void onReportStrategyResp(int paramInt1, int paramInt2, byte[] paramArrayOfByte);
   
   public static native void reportIDKey(long paramLong1, long paramLong2, long paramLong3, boolean paramBoolean);
   

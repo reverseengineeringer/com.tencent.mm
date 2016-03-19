@@ -1,115 +1,64 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.os.Debug;
-import android.os.Handler;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import android.content.Context;
+import android.telephony.PhoneStateListener;
+import android.telephony.TelephonyManager;
+import java.util.LinkedList;
+import java.util.List;
 
-final class ak
-  implements Runnable
+public final class ak
 {
-  private static final String hZP;
-  private static final String hZQ;
-  final Thread byk;
-  final Runnable hZF;
-  final String hZG;
-  final Object hZH;
-  String hZI;
-  long hZJ;
-  final a hZK;
-  long hZL;
-  long hZM;
-  long hZN;
-  long hZO;
-  final Handler handler;
-  int priority;
-  boolean started = false;
+  public static boolean aKi;
+  private PhoneStateListener eGL;
+  private TelephonyManager jWU;
+  List jWV = new LinkedList();
   
-  static
+  public final void a(a parama)
   {
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append("taskName = %s");
-    localStringBuilder.append("|token = %s");
-    localStringBuilder.append("|handler = %s");
-    localStringBuilder.append("|threadName = %s");
-    localStringBuilder.append("|threadId = %d");
-    localStringBuilder.append("|priority = %d");
-    localStringBuilder.append("|addTime = %d");
-    localStringBuilder.append("|delayTime = %d");
-    localStringBuilder.append("|usedTime = %d");
-    localStringBuilder.append("|cpuTime = %d");
-    localStringBuilder.append("|started = %b");
-    hZP = localStringBuilder.toString();
-    localStringBuilder = new StringBuilder();
-    localStringBuilder.append("taskName = %s");
-    localStringBuilder.append("|threadName = %s");
-    localStringBuilder.append("|threadId = %d");
-    localStringBuilder.append("|priority = %d");
-    localStringBuilder.append("|addTime = %d(%s)");
-    localStringBuilder.append("|delayTime = %d");
-    localStringBuilder.append("|usedTime = %d");
-    localStringBuilder.append("|cpuTime = %d");
-    localStringBuilder.append("|started = %b");
-    hZQ = localStringBuilder.toString();
+    jWV.add(parama);
   }
   
-  ak(Runnable paramRunnable, Object paramObject, Handler paramHandler, Thread paramThread, a parama)
+  public final void dJ(Context paramContext)
   {
-    hZF = paramRunnable;
-    String str1 = paramRunnable.getClass().getName();
-    String str2 = paramRunnable.toString();
-    paramRunnable = str1;
-    if (!bn.iW(str2))
-    {
-      int i = str2.indexOf('|');
-      paramRunnable = str1;
-      if (i > 0) {
-        paramRunnable = str1 + "_" + str2.substring(i + 1);
-      }
+    if (jWU == null) {
+      jWU = ((TelephonyManager)paramContext.getSystemService("phone"));
     }
-    hZG = paramRunnable;
-    hZH = paramObject;
-    handler = paramHandler;
-    byk = paramThread;
-    if (paramThread != null)
-    {
-      hZI = paramThread.getName();
-      hZJ = paramThread.getId();
-      priority = paramThread.getPriority();
+    if (eGL == null) {
+      eGL = new PhoneStateListener()
+      {
+        public final void onCallStateChanged(int paramAnonymousInt, String paramAnonymousString)
+        {
+          if (jWV.size() > 0)
+          {
+            ak.a[] arrayOfa = new ak.a[jWV.size()];
+            arrayOfa = (ak.a[])jWV.toArray(arrayOfa);
+            int j = arrayOfa.length;
+            int i = 0;
+            while (i < j)
+            {
+              arrayOfa[i].bx(paramAnonymousInt);
+              i += 1;
+            }
+          }
+          super.onCallStateChanged(paramAnonymousInt, paramAnonymousString);
+          switch (paramAnonymousInt)
+          {
+          default: 
+            return;
+          case 0: 
+            ak.aKi = false;
+            return;
+          }
+          ak.aKi = true;
+        }
+      };
     }
-    hZK = parama;
-    hZL = System.currentTimeMillis();
-  }
-  
-  public final String dump(boolean paramBoolean)
-  {
-    if (paramBoolean) {
-      return String.format(hZP, new Object[] { hZG, hZH, handler, hZI, Long.valueOf(hZJ), Integer.valueOf(priority), Long.valueOf(hZL), Long.valueOf(hZM), Long.valueOf(hZN), Long.valueOf(hZO), Boolean.valueOf(started) });
-    }
-    return String.format(hZQ, new Object[] { hZG, hZI, Long.valueOf(hZJ), Integer.valueOf(priority), Long.valueOf(hZL), new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSSZ", Locale.getDefault()).format(new Date(hZL)), Long.valueOf(hZM), Long.valueOf(hZN), Long.valueOf(hZO), Boolean.valueOf(started) });
-  }
-  
-  public final void run()
-  {
-    hZN = System.currentTimeMillis();
-    hZO = Debug.threadCpuTimeNanos();
-    started = true;
-    hZF.run();
-    hZN = (System.currentTimeMillis() - hZN);
-    hZO = (Debug.threadCpuTimeNanos() - hZO);
-    if (hZK != null)
-    {
-      hZK.a(hZF, this);
-      hZK.a(this, byk, hZN, hZO);
-    }
+    jWU.listen(eGL, 32);
   }
   
   public static abstract interface a
   {
-    public abstract void a(Runnable paramRunnable, ak paramak);
-    
-    public abstract boolean a(Runnable paramRunnable, Thread paramThread, long paramLong1, long paramLong2);
+    public abstract void bx(int paramInt);
   }
 }
 

@@ -1,25 +1,29 @@
 package com.tencent.mm.d.a;
 
-import android.app.Activity;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class q
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a auB = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a asx = new a();
+  public b asy = new b();
   
   public q()
   {
-    id = "CancelDealQBarStr";
-    hXT = atO;
+    id = "BindQQ";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String auC;
-    public Activity auD;
+    public int asz = 0;
+  }
+  
+  public static final class b
+  {
+    public int ret = 0;
   }
 }
 

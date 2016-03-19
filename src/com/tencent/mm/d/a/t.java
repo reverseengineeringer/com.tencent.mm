@@ -1,17 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class t
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a asR = new a();
   
   public t()
   {
-    id = "CheckGcmRegister";
-    hXT = atO;
+    id = "C2CNYPredownloadImg";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public String asS;
+    public String asT;
+    public int asU;
   }
 }
 

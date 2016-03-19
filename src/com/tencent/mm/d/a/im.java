@@ -1,30 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class im
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFC = new a();
-  public b aFD = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aEu = new a();
+  public b aEv = new b();
   
   public im()
   {
-    id = "TMessageOperation";
-    hXT = atO;
+    id = "PermissionShowDlg";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aCx = 0;
-    public int aCy = 0;
-    public int avp = 0;
-    public String user;
+    public int type;
   }
   
-  public static final class b {}
+  public static final class b
+  {
+    public boolean aEt = false;
+  }
 }
 
 /* Location:

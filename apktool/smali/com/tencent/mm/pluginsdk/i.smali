@@ -4,106 +4,47 @@
 
 
 # annotations
-.annotation runtime Ljava/lang/Deprecated;
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/pluginsdk/i$i;,
+        Lcom/tencent/mm/pluginsdk/i$b;,
+        Lcom/tencent/mm/pluginsdk/i$g;,
+        Lcom/tencent/mm/pluginsdk/i$aj;,
+        Lcom/tencent/mm/pluginsdk/i$q;,
+        Lcom/tencent/mm/pluginsdk/i$h;,
+        Lcom/tencent/mm/pluginsdk/i$ag;,
+        Lcom/tencent/mm/pluginsdk/i$ad;,
+        Lcom/tencent/mm/pluginsdk/i$ac;,
+        Lcom/tencent/mm/pluginsdk/i$ab;,
+        Lcom/tencent/mm/pluginsdk/i$ah;,
+        Lcom/tencent/mm/pluginsdk/i$s;,
+        Lcom/tencent/mm/pluginsdk/i$n;,
+        Lcom/tencent/mm/pluginsdk/i$ai;,
+        Lcom/tencent/mm/pluginsdk/i$ak;,
+        Lcom/tencent/mm/pluginsdk/i$a;,
+        Lcom/tencent/mm/pluginsdk/i$e;,
+        Lcom/tencent/mm/pluginsdk/i$x;,
+        Lcom/tencent/mm/pluginsdk/i$y;,
+        Lcom/tencent/mm/pluginsdk/i$w;,
+        Lcom/tencent/mm/pluginsdk/i$l;,
+        Lcom/tencent/mm/pluginsdk/i$f;,
+        Lcom/tencent/mm/pluginsdk/i$d;,
+        Lcom/tencent/mm/pluginsdk/i$m;,
+        Lcom/tencent/mm/pluginsdk/i$o;,
+        Lcom/tencent/mm/pluginsdk/i$af;,
+        Lcom/tencent/mm/pluginsdk/i$p;,
+        Lcom/tencent/mm/pluginsdk/i$r;,
+        Lcom/tencent/mm/pluginsdk/i$j;,
+        Lcom/tencent/mm/pluginsdk/i$v;,
+        Lcom/tencent/mm/pluginsdk/i$aa;,
+        Lcom/tencent/mm/pluginsdk/i$z;,
+        Lcom/tencent/mm/pluginsdk/i$u;,
+        Lcom/tencent/mm/pluginsdk/i$t;,
+        Lcom/tencent/mm/pluginsdk/i$c;,
+        Lcom/tencent/mm/pluginsdk/i$k;,
+        Lcom/tencent/mm/pluginsdk/i$ae;
+    }
 .end annotation
 
-
-# virtual methods
-.method public abstract Y(Landroid/content/Context;)V
-.end method
-
-.method public abstract a(Landroid/app/Activity;IILandroid/content/Intent;)Landroid/graphics/Bitmap;
-.end method
-
-.method public abstract a(Lcom/tencent/mm/q/e;)Lcom/tencent/mm/q/j;
-.end method
-
-.method public abstract a(Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
-.end method
-
-.method public abstract a(Landroid/content/Context;Lcom/tencent/mm/storage/ar$b;Landroid/os/Bundle;)V
-.end method
-
-.method public abstract a(Landroid/content/Context;Lcom/tencent/mm/storage/k;Lcom/tencent/mm/storage/ar$b;Landroid/os/Bundle;Ljava/lang/String;)V
-.end method
-
-.method public abstract a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILjava/lang/String;)V
-.end method
-
-.method public abstract a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)V
-.end method
-
-.method public abstract a(Landroid/content/Intent;Lcom/tencent/mm/protocal/b/aed;I)V
-.end method
-
-.method public abstract a(Landroid/content/Intent;Ljava/lang/String;)V
-.end method
-
-.method public abstract a(Lcom/tencent/mm/s/a;Landroid/app/Activity;Lcom/tencent/mm/storage/k;Ljava/lang/Runnable;)V
-.end method
-
-.method public abstract a(Landroid/content/Context;IILjava/lang/String;)Z
-.end method
-
-.method public abstract a(Lcom/tencent/mm/storage/k;)Z
-.end method
-
-.method public abstract aF(I)V
-.end method
-
-.method public abstract aT(Ljava/lang/String;)Ljava/lang/String;
-.end method
-
-.method public abstract aU(Ljava/lang/String;)Z
-.end method
-
-.method public abstract aV(Ljava/lang/String;)Z
-.end method
-
-.method public abstract af(Z)Lcom/tencent/mm/q/j;
-.end method
-
-.method public abstract b(Landroid/content/Context;IILjava/lang/String;)Z
-.end method
-
-.method public abstract d(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-.end method
-
-.method public abstract g(Landroid/app/Activity;)Z
-.end method
-
-.method public abstract h(Landroid/app/Activity;)V
-.end method
-
-.method public abstract k(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-.end method
-
-.method public abstract l(Landroid/content/Context;Ljava/lang/String;)Z
-.end method
-
-.method public abstract ll()V
-.end method
-
-.method public abstract lm()Lcom/tencent/mm/q/f;
-.end method
-
-.method public abstract ln()V
-.end method
-
-.method public abstract lo()V
-.end method
-
-.method public abstract lp()V
-.end method
-
-.method public abstract lq()V
-.end method
-
-.method public abstract lr()Landroid/content/Intent;
-.end method
-
-.method public abstract ls()Z
-.end method
-
-.method public abstract lt()V
-.end method
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation

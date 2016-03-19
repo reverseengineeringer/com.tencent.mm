@@ -51,6 +51,54 @@
     return-void
 .end method
 
+.method private static C([BI)J
+    .locals 5
+
+    .prologue
+    .line 95
+    const-wide/16 v0, 0x0
+
+    .line 96
+    add-int/lit8 v2, p1, 0x4
+
+    .line 101
+    :goto_0
+    if-lt p1, v2, :cond_0
+
+    .line 105
+    const-wide v2, 0xffffffffL
+
+    and-long/2addr v2, v0
+
+    const/16 v4, 0x20
+
+    ushr-long/2addr v0, v4
+
+    or-long/2addr v0, v2
+
+    return-wide v0
+
+    .line 102
+    :cond_0
+    const/16 v3, 0x8
+
+    shl-long/2addr v0, v3
+
+    .line 103
+    aget-byte v3, p0, p1
+
+    and-int/lit16 v3, v3, 0xff
+
+    int-to-long v3, v3
+
+    or-long/2addr v0, v3
+
+    .line 101
+    add-int/lit8 p1, p1, 0x1
+
+    goto :goto_0
+.end method
+
 .method private encipher([B)[B
     .locals 21
 
@@ -64,7 +112,7 @@
     :try_start_0
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v5
 
@@ -73,7 +121,7 @@
 
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v3
 
@@ -84,7 +132,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v9
 
@@ -95,7 +143,7 @@
 
     const/4 v2, 0x4
 
-    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v11
 
@@ -106,7 +154,7 @@
 
     const/16 v2, 0x8
 
-    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v13
 
@@ -117,7 +165,7 @@
 
     const/16 v2, 0xc
 
-    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v15
 
@@ -242,54 +290,6 @@
     goto :goto_1
 .end method
 
-.method private static y([BI)J
-    .locals 5
-
-    .prologue
-    .line 95
-    const-wide/16 v0, 0x0
-
-    .line 96
-    add-int/lit8 v2, p1, 0x4
-
-    .line 101
-    :goto_0
-    if-lt p1, v2, :cond_0
-
-    .line 105
-    const-wide v2, 0xffffffffL
-
-    and-long/2addr v2, v0
-
-    const/16 v4, 0x20
-
-    ushr-long/2addr v0, v4
-
-    or-long/2addr v0, v2
-
-    return-wide v0
-
-    .line 102
-    :cond_0
-    const/16 v3, 0x8
-
-    shl-long/2addr v0, v3
-
-    .line 103
-    aget-byte v3, p0, p1
-
-    and-int/lit16 v3, v3, 0xff
-
-    int-to-long v3, v3
-
-    or-long/2addr v0, v3
-
-    .line 101
-    add-int/lit8 p1, p1, 0x1
-
-    goto :goto_0
-.end method
-
 
 # virtual methods
 .method decipher([BI)[B
@@ -305,7 +305,7 @@
     :try_start_0
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v5
 
@@ -314,7 +314,7 @@
 
     move-object/from16 v0, p1
 
-    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v3
 
@@ -325,7 +325,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v9
 
@@ -336,7 +336,7 @@
 
     const/4 v2, 0x4
 
-    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v11
 
@@ -347,7 +347,7 @@
 
     const/16 v2, 0x8
 
-    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v13
 
@@ -358,7 +358,7 @@
 
     const/16 v2, 0xc
 
-    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->y([BI)J
+    invoke-static {v1, v2}, Loicq/wlogin_sdk/tools/a;->C([BI)J
 
     move-result-wide v15
 

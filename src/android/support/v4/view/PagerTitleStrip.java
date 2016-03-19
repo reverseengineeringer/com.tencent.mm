@@ -19,29 +19,29 @@ public class PagerTitleStrip
   extends ViewGroup
   implements ViewPager.a
 {
-  private static final int[] gf = { 16842804, 16842901, 16842904, 16842927 };
-  private static final int[] gg = { 16843660 };
-  private static final b gj = new c();
-  ViewPager fT;
-  TextView fU;
-  TextView fV;
-  TextView fW;
-  private int fX = -1;
-  private float fY = -1.0F;
-  private int fZ;
-  private int ga;
-  private boolean gb;
-  private boolean gc;
-  private final a gd = new a((byte)0);
-  private WeakReference ge;
-  private int gh;
-  int gi;
+  private static final int[] fn = { 16842804, 16842901, 16842904, 16842927 };
+  private static final int[] fo = { 16843660 };
+  private static final b fr = new c();
+  ViewPager fa;
+  TextView fb;
+  TextView fc;
+  TextView fd;
+  private int fe = -1;
+  private float ff = -1.0F;
+  private int fg;
+  private int fh;
+  private boolean fi;
+  private boolean fj;
+  private final a fk = new a((byte)0);
+  private WeakReference fl;
+  private int fp;
+  int fq;
   
   static
   {
     if (Build.VERSION.SDK_INT >= 14)
     {
-      gj = new d();
+      fr = new d();
       return;
     }
   }
@@ -50,69 +50,69 @@ public class PagerTitleStrip
   {
     super(paramContext, paramAttributeSet);
     TextView localTextView = new TextView(paramContext);
-    fU = localTextView;
+    fb = localTextView;
     addView(localTextView);
     localTextView = new TextView(paramContext);
-    fV = localTextView;
+    fc = localTextView;
     addView(localTextView);
     localTextView = new TextView(paramContext);
-    fW = localTextView;
+    fd = localTextView;
     addView(localTextView);
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, gf);
+    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, fn);
     int i = paramAttributeSet.getResourceId(0, 0);
     if (i != 0)
     {
-      fU.setTextAppearance(paramContext, i);
-      fV.setTextAppearance(paramContext, i);
-      fW.setTextAppearance(paramContext, i);
+      fb.setTextAppearance(paramContext, i);
+      fc.setTextAppearance(paramContext, i);
+      fd.setTextAppearance(paramContext, i);
     }
     int j = paramAttributeSet.getDimensionPixelSize(1, 0);
     if (j != 0)
     {
       float f = j;
-      fU.setTextSize(0, f);
-      fV.setTextSize(0, f);
-      fW.setTextSize(0, f);
+      fb.setTextSize(0, f);
+      fc.setTextSize(0, f);
+      fd.setTextSize(0, f);
     }
     if (paramAttributeSet.hasValue(2))
     {
       j = paramAttributeSet.getColor(2, 0);
-      fU.setTextColor(j);
-      fV.setTextColor(j);
-      fW.setTextColor(j);
+      fb.setTextColor(j);
+      fc.setTextColor(j);
+      fd.setTextColor(j);
     }
-    ga = paramAttributeSet.getInteger(3, 80);
+    fh = paramAttributeSet.getInteger(3, 80);
     paramAttributeSet.recycle();
-    gi = fV.getTextColors().getDefaultColor();
+    fq = fc.getTextColors().getDefaultColor();
     setNonPrimaryAlpha(0.6F);
-    fU.setEllipsize(TextUtils.TruncateAt.END);
-    fV.setEllipsize(TextUtils.TruncateAt.END);
-    fW.setEllipsize(TextUtils.TruncateAt.END);
+    fb.setEllipsize(TextUtils.TruncateAt.END);
+    fc.setEllipsize(TextUtils.TruncateAt.END);
+    fd.setEllipsize(TextUtils.TruncateAt.END);
     if (i != 0)
     {
-      paramAttributeSet = paramContext.obtainStyledAttributes(i, gg);
+      paramAttributeSet = paramContext.obtainStyledAttributes(i, fo);
       bool = paramAttributeSet.getBoolean(0, false);
       paramAttributeSet.recycle();
     }
     if (bool)
     {
-      setSingleLineAllCaps(fU);
-      setSingleLineAllCaps(fV);
-      setSingleLineAllCaps(fW);
+      setSingleLineAllCaps(fb);
+      setSingleLineAllCaps(fc);
+      setSingleLineAllCaps(fd);
     }
     for (;;)
     {
-      fZ = ((int)(getResourcesgetDisplayMetricsdensity * 16.0F));
+      fg = ((int)(getResourcesgetDisplayMetricsdensity * 16.0F));
       return;
-      fU.setSingleLine();
-      fV.setSingleLine();
-      fW.setSingleLine();
+      fb.setSingleLine();
+      fc.setSingleLine();
+      fd.setSingleLine();
     }
   }
   
   private static void setSingleLineAllCaps(TextView paramTextView)
   {
-    gj.setSingleLineAllCaps(paramTextView);
+    fr.setSingleLineAllCaps(paramTextView);
   }
   
   void a(int paramInt, float paramFloat, boolean paramBoolean)
@@ -130,13 +130,13 @@ public class PagerTitleStrip
     int i7;
     int i6;
     int i8;
-    if (paramInt != fX)
+    if (paramInt != fe)
     {
-      a(paramInt, fT.getAdapter());
-      gc = true;
-      m = fU.getMeasuredWidth();
-      i4 = fV.getMeasuredWidth();
-      k = fW.getMeasuredWidth();
+      a(paramInt, fa.getAdapter());
+      fj = true;
+      m = fb.getMeasuredWidth();
+      i4 = fc.getMeasuredWidth();
+      k = fd.getMeasuredWidth();
       i3 = i4 / 2;
       n = getWidth();
       i = getHeight();
@@ -152,18 +152,18 @@ public class PagerTitleStrip
       }
       i3 = n - i5 - (int)(f1 * (n - (i2 + i3) - i5)) - i3;
       i4 = i3 + i4;
-      i7 = fU.getBaseline();
-      i6 = fV.getBaseline();
-      i5 = fW.getBaseline();
+      i7 = fb.getBaseline();
+      i6 = fc.getBaseline();
+      i5 = fd.getBaseline();
       i8 = Math.max(Math.max(i7, i6), i5);
       i7 = i8 - i7;
       i6 = i8 - i6;
       i5 = i8 - i5;
-      i8 = fU.getMeasuredHeight();
-      int i9 = fV.getMeasuredHeight();
-      int i10 = fW.getMeasuredHeight();
+      i8 = fb.getMeasuredHeight();
+      int i9 = fc.getMeasuredHeight();
+      int i10 = fd.getMeasuredHeight();
       i8 = Math.max(Math.max(i8 + i7, i9 + i6), i10 + i5);
-      switch (ga & 0x70)
+      switch (fh & 0x70)
       {
       default: 
         j = paramInt + i7;
@@ -173,15 +173,15 @@ public class PagerTitleStrip
     }
     for (;;)
     {
-      fV.layout(i3, i, i4, fV.getMeasuredHeight() + i);
-      i = Math.min(i2, i3 - fZ - m);
-      fU.layout(i, j, m + i, fU.getMeasuredHeight() + j);
-      i = Math.max(n - i1 - k, fZ + i4);
-      fW.layout(i, paramInt, i + k, fW.getMeasuredHeight() + paramInt);
-      fY = paramFloat;
-      gc = false;
+      fc.layout(i3, i, i4, fc.getMeasuredHeight() + i);
+      i = Math.min(i2, i3 - fg - m);
+      fb.layout(i, j, m + i, fb.getMeasuredHeight() + j);
+      i = Math.max(n - i1 - k, fg + i4);
+      fd.layout(i, paramInt, i + k, fd.getMeasuredHeight() + paramInt);
+      ff = paramFloat;
+      fj = false;
       return;
-      if ((paramBoolean) || (paramFloat != fY)) {
+      if ((paramBoolean) || (paramFloat != ff)) {
         break;
       }
       return;
@@ -197,15 +197,15 @@ public class PagerTitleStrip
     }
   }
   
-  final void a(int paramInt, o paramo)
+  final void a(int paramInt, j paramj)
   {
-    if (paramo != null) {
-      paramo.getCount();
+    if (paramj != null) {
+      paramj.getCount();
     }
-    gb = true;
-    fU.setText(null);
-    fV.setText(null);
-    fW.setText(null);
+    fi = true;
+    fb.setText(null);
+    fc.setText(null);
+    fd.setText(null);
     int m = getWidth();
     int n = getPaddingLeft();
     int i1 = getPaddingRight();
@@ -214,33 +214,33 @@ public class PagerTitleStrip
     int k = getPaddingBottom();
     m = View.MeasureSpec.makeMeasureSpec((int)((m - n - i1) * 0.8F), Integer.MIN_VALUE);
     i = View.MeasureSpec.makeMeasureSpec(i - j - k, Integer.MIN_VALUE);
-    fU.measure(m, i);
-    fV.measure(m, i);
-    fW.measure(m, i);
-    fX = paramInt;
-    if (!gc) {
-      a(paramInt, fY, false);
+    fb.measure(m, i);
+    fc.measure(m, i);
+    fd.measure(m, i);
+    fe = paramInt;
+    if (!fj) {
+      a(paramInt, ff, false);
     }
-    gb = false;
+    fi = false;
   }
   
-  final void a(o paramo1, o paramo2)
+  final void a(j paramj1, j paramj2)
   {
-    if (paramo1 != null)
+    if (paramj1 != null)
     {
-      paramo1.unregisterDataSetObserver(gd);
-      ge = null;
+      paramj1.unregisterDataSetObserver(fk);
+      fl = null;
     }
-    if (paramo2 != null)
+    if (paramj2 != null)
     {
-      paramo2.registerDataSetObserver(gd);
-      ge = new WeakReference(paramo2);
+      paramj2.registerDataSetObserver(fk);
+      fl = new WeakReference(paramj2);
     }
-    if (fT != null)
+    if (fa != null)
     {
-      fX = -1;
-      fY = -1.0F;
-      a(fT.getCurrentItem(), paramo2);
+      fe = -1;
+      ff = -1.0F;
+      a(fa.getCurrentItem(), paramj2);
       requestLayout();
     }
   }
@@ -257,7 +257,7 @@ public class PagerTitleStrip
   
   public int getTextSpacing()
   {
-    return fZ;
+    return fg;
   }
   
   protected void onAttachedToWindow()
@@ -268,14 +268,14 @@ public class PagerTitleStrip
       throw new IllegalStateException("PagerTitleStrip must be a direct child of a ViewPager.");
     }
     localObject = (ViewPager)localObject;
-    o localo = ((ViewPager)localObject).getAdapter();
-    ((ViewPager)localObject).a(gd);
-    ((ViewPager)localObject).setOnAdapterChangeListener(gd);
-    fT = ((ViewPager)localObject);
-    if (ge != null) {}
-    for (localObject = (o)ge.get();; localObject = null)
+    j localj = ((ViewPager)localObject).getAdapter();
+    ((ViewPager)localObject).a(fk);
+    ((ViewPager)localObject).setOnAdapterChangeListener(fk);
+    fa = ((ViewPager)localObject);
+    if (fl != null) {}
+    for (localObject = (j)fl.get();; localObject = null)
     {
-      a((o)localObject, localo);
+      a((j)localObject, localj);
       return;
     }
   }
@@ -283,24 +283,24 @@ public class PagerTitleStrip
   protected void onDetachedFromWindow()
   {
     super.onDetachedFromWindow();
-    if (fT != null)
+    if (fa != null)
     {
-      a(fT.getAdapter(), null);
-      fT.a(null);
-      fT.setOnAdapterChangeListener(null);
-      fT = null;
+      a(fa.getAdapter(), null);
+      fa.a(null);
+      fa.setOnAdapterChangeListener(null);
+      fa = null;
     }
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     float f = 0.0F;
-    if (fT != null)
+    if (fa != null)
     {
-      if (fY >= 0.0F) {
-        f = fY;
+      if (ff >= 0.0F) {
+        f = ff;
       }
-      a(fX, f, true);
+      a(fe, f, true);
     }
   }
   
@@ -317,50 +317,50 @@ public class PagerTitleStrip
     int k = getPaddingTop() + getPaddingBottom();
     int m = View.MeasureSpec.makeMeasureSpec((int)(paramInt1 * 0.8F), Integer.MIN_VALUE);
     int n = View.MeasureSpec.makeMeasureSpec(paramInt2 - k, Integer.MIN_VALUE);
-    fU.measure(m, n);
-    fV.measure(m, n);
-    fW.measure(m, n);
+    fb.measure(m, n);
+    fc.measure(m, n);
+    fd.measure(m, n);
     if (i == 1073741824)
     {
       setMeasuredDimension(paramInt1, paramInt2);
       return;
     }
-    setMeasuredDimension(paramInt1, Math.max(j, fV.getMeasuredHeight() + k));
+    setMeasuredDimension(paramInt1, Math.max(j, fc.getMeasuredHeight() + k));
   }
   
   public void requestLayout()
   {
-    if (!gb) {
+    if (!fi) {
       super.requestLayout();
     }
   }
   
   public void setGravity(int paramInt)
   {
-    ga = paramInt;
+    fh = paramInt;
     requestLayout();
   }
   
   public void setNonPrimaryAlpha(float paramFloat)
   {
-    gh = ((int)(255.0F * paramFloat) & 0xFF);
-    int i = gh << 24 | gi & 0xFFFFFF;
-    fU.setTextColor(i);
-    fW.setTextColor(i);
+    fp = ((int)(255.0F * paramFloat) & 0xFF);
+    int i = fp << 24 | fq & 0xFFFFFF;
+    fb.setTextColor(i);
+    fd.setTextColor(i);
   }
   
   public void setTextColor(int paramInt)
   {
-    gi = paramInt;
-    fV.setTextColor(paramInt);
-    paramInt = gh << 24 | gi & 0xFFFFFF;
-    fU.setTextColor(paramInt);
-    fW.setTextColor(paramInt);
+    fq = paramInt;
+    fc.setTextColor(paramInt);
+    paramInt = fp << 24 | fq & 0xFFFFFF;
+    fb.setTextColor(paramInt);
+    fd.setTextColor(paramInt);
   }
   
   public void setTextSpacing(int paramInt)
   {
-    fZ = paramInt;
+    fg = paramInt;
     requestLayout();
   }
   
@@ -368,7 +368,7 @@ public class PagerTitleStrip
     extends DataSetObserver
     implements ViewPager.d, ViewPager.e
   {
-    private int gk;
+    private int fs;
     
     private a() {}
     
@@ -381,37 +381,37 @@ public class PagerTitleStrip
       a(paramInt2, paramFloat, false);
     }
     
-    public final void b(o paramo1, o paramo2)
+    public final void b(j paramj1, j paramj2)
     {
-      a(paramo1, paramo2);
-    }
-    
-    public final void m(int paramInt)
-    {
-      float f = 0.0F;
-      if (gk == 0)
-      {
-        a(fT.getCurrentItem(), fT.getAdapter());
-        if (PagerTitleStrip.a(PagerTitleStrip.this) >= 0.0F) {
-          f = PagerTitleStrip.a(PagerTitleStrip.this);
-        }
-        a(fT.getCurrentItem(), f, true);
-      }
+      a(paramj1, paramj2);
     }
     
     public final void n(int paramInt)
     {
-      gk = paramInt;
+      float f = 0.0F;
+      if (fs == 0)
+      {
+        a(fa.getCurrentItem(), fa.getAdapter());
+        if (PagerTitleStrip.a(PagerTitleStrip.this) >= 0.0F) {
+          f = PagerTitleStrip.a(PagerTitleStrip.this);
+        }
+        a(fa.getCurrentItem(), f, true);
+      }
+    }
+    
+    public final void o(int paramInt)
+    {
+      fs = paramInt;
     }
     
     public final void onChanged()
     {
       float f = 0.0F;
-      a(fT.getCurrentItem(), fT.getAdapter());
+      a(fa.getCurrentItem(), fa.getAdapter());
       if (PagerTitleStrip.a(PagerTitleStrip.this) >= 0.0F) {
         f = PagerTitleStrip.a(PagerTitleStrip.this);
       }
-      a(fT.getCurrentItem(), f, true);
+      a(fa.getCurrentItem(), f, true);
     }
   }
   
@@ -434,7 +434,7 @@ public class PagerTitleStrip
   {
     public final void setSingleLineAllCaps(TextView paramTextView)
     {
-      paramTextView.setTransformationMethod(new r.a(paramTextView.getContext()));
+      paramTextView.setTransformationMethod(new k.a(paramTextView.getContext()));
     }
   }
 }

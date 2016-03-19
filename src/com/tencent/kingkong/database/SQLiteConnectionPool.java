@@ -2,9 +2,10 @@ package com.tencent.kingkong.database;
 
 import android.os.SystemClock;
 import com.tencent.kingkong.support.CancellationSignal;
+import com.tencent.kingkong.support.CancellationSignal.OnCancelListener;
 import com.tencent.kingkong.support.Log;
 import com.tencent.kingkong.support.OperationCanceledException;
-import com.tencent.mm.dbsupport.newcursor.i;
+import com.tencent.mm.dbsupport.newcursor.h;
 import java.io.Closeable;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -359,7 +360,7 @@ public final class SQLiteConnectionPool
     int k = mArithmetic;
     boolean bool = mIsInitWaited;
     String str2 = path;
-    return SQLiteConnection.open(this, paramSQLiteDatabaseConfiguration, i, paramBoolean, j, str1, k, bool, i.qN());
+    return SQLiteConnection.open(this, paramSQLiteDatabaseConfiguration, i, paramBoolean, j, str1, k, bool, h.qJ());
   }
   
   private void reconfigureAllConnectionsLocked()
@@ -537,16 +538,16 @@ public final class SQLiteConnectionPool
     //   6: iconst_1
     //   7: istore 5
     //   9: aload_0
-    //   10: getfield 68	com/tencent/kingkong/database/SQLiteConnectionPool:mLock	Ljava/lang/Object;
+    //   10: getfield 70	com/tencent/kingkong/database/SQLiteConnectionPool:mLock	Ljava/lang/Object;
     //   13: astore 16
     //   15: aload 16
     //   17: monitorenter
     //   18: aload_0
-    //   19: invokespecial 202	com/tencent/kingkong/database/SQLiteConnectionPool:throwIfClosedLocked	()V
+    //   19: invokespecial 204	com/tencent/kingkong/database/SQLiteConnectionPool:throwIfClosedLocked	()V
     //   22: aload_3
     //   23: ifnull +7 -> 30
     //   26: aload_3
-    //   27: invokevirtual 481	com/tencent/kingkong/support/CancellationSignal:throwIfCanceled	()V
+    //   27: invokevirtual 483	com/tencent/kingkong/support/CancellationSignal:throwIfCanceled	()V
     //   30: aconst_null
     //   31: astore 14
     //   33: iload 5
@@ -554,7 +555,7 @@ public final class SQLiteConnectionPool
     //   38: aload_0
     //   39: aload_1
     //   40: iload_2
-    //   41: invokespecial 483	com/tencent/kingkong/database/SQLiteConnectionPool:tryAcquireNonPrimaryConnectionLocked	(Ljava/lang/String;I)Lcom/tencent/kingkong/database/SQLiteConnection;
+    //   41: invokespecial 485	com/tencent/kingkong/database/SQLiteConnectionPool:tryAcquireNonPrimaryConnectionLocked	(Ljava/lang/String;I)Lcom/tencent/kingkong/database/SQLiteConnection;
     //   44: astore 14
     //   46: aload 14
     //   48: astore 15
@@ -562,7 +563,7 @@ public final class SQLiteConnectionPool
     //   52: ifnonnull +10 -> 62
     //   55: aload_0
     //   56: iload_2
-    //   57: invokespecial 485	com/tencent/kingkong/database/SQLiteConnectionPool:tryAcquirePrimaryConnectionLocked	(I)Lcom/tencent/kingkong/database/SQLiteConnection;
+    //   57: invokespecial 487	com/tencent/kingkong/database/SQLiteConnectionPool:tryAcquirePrimaryConnectionLocked	(I)Lcom/tencent/kingkong/database/SQLiteConnection;
     //   60: astore 15
     //   62: aload 15
     //   64: ifnull +9 -> 73
@@ -571,39 +572,39 @@ public final class SQLiteConnectionPool
     //   70: aload 15
     //   72: areturn
     //   73: iload_2
-    //   74: invokestatic 250	com/tencent/kingkong/database/SQLiteConnectionPool:getPriority	(I)I
+    //   74: invokestatic 252	com/tencent/kingkong/database/SQLiteConnectionPool:getPriority	(I)I
     //   77: istore 4
-    //   79: invokestatic 490	android/os/SystemClock:uptimeMillis	()J
+    //   79: invokestatic 492	android/os/SystemClock:uptimeMillis	()J
     //   82: lstore 6
     //   84: aload_0
-    //   85: invokestatic 265	java/lang/Thread:currentThread	()Ljava/lang/Thread;
+    //   85: invokestatic 267	java/lang/Thread:currentThread	()Ljava/lang/Thread;
     //   88: lload 6
     //   90: iload 4
     //   92: iload 5
     //   94: aload_1
     //   95: iload_2
-    //   96: invokespecial 492	com/tencent/kingkong/database/SQLiteConnectionPool:obtainConnectionWaiterLocked	(Ljava/lang/Thread;JIZLjava/lang/String;I)Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
+    //   96: invokespecial 494	com/tencent/kingkong/database/SQLiteConnectionPool:obtainConnectionWaiterLocked	(Ljava/lang/Thread;JIZLjava/lang/String;I)Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
     //   99: astore 17
     //   101: aconst_null
     //   102: astore 14
     //   104: aload_0
-    //   105: getfield 111	com/tencent/kingkong/database/SQLiteConnectionPool:mConnectionWaiterQueue	Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
+    //   105: getfield 113	com/tencent/kingkong/database/SQLiteConnectionPool:mConnectionWaiterQueue	Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
     //   108: astore_1
     //   109: goto +311 -> 420
     //   112: aload 14
     //   114: ifnull +197 -> 311
     //   117: aload 14
     //   119: aload 17
-    //   121: putfield 114	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mNext	Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
+    //   121: putfield 116	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mNext	Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
     //   124: aload 17
-    //   126: getfield 442	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mNonce	I
+    //   126: getfield 444	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mNonce	I
     //   129: istore 4
     //   131: aload 16
     //   133: monitorexit
     //   134: aload_3
     //   135: ifnull +19 -> 154
     //   138: aload_3
-    //   139: new 494	com/tencent/kingkong/database/SQLiteConnectionPool$1
+    //   139: new 8	com/tencent/kingkong/database/SQLiteConnectionPool$1
     //   142: dup
     //   143: aload_0
     //   144: aload 17
@@ -611,27 +612,27 @@ public final class SQLiteConnectionPool
     //   148: invokespecial 497	com/tencent/kingkong/database/SQLiteConnectionPool$1:<init>	(Lcom/tencent/kingkong/database/SQLiteConnectionPool;Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;I)V
     //   151: invokevirtual 501	com/tencent/kingkong/support/CancellationSignal:setOnCancelListener	(Lcom/tencent/kingkong/support/CancellationSignal$OnCancelListener;)V
     //   154: aload 17
-    //   156: getfield 369	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mStartTime	J
+    //   156: getfield 371	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mStartTime	J
     //   159: lstore 6
-    //   161: ldc2_w 24
+    //   161: ldc2_w 26
     //   164: lstore 8
     //   166: lload 6
-    //   168: ldc2_w 24
+    //   168: ldc2_w 26
     //   171: ladd
     //   172: lstore 6
     //   174: aload_0
-    //   175: getfield 73	com/tencent/kingkong/database/SQLiteConnectionPool:mConnectionLeaked	Ljava/util/concurrent/atomic/AtomicBoolean;
+    //   175: getfield 75	com/tencent/kingkong/database/SQLiteConnectionPool:mConnectionLeaked	Ljava/util/concurrent/atomic/AtomicBoolean;
     //   178: iconst_1
     //   179: iconst_0
     //   180: invokevirtual 505	java/util/concurrent/atomic/AtomicBoolean:compareAndSet	(ZZ)Z
     //   183: ifeq +16 -> 199
     //   186: aload_0
-    //   187: getfield 68	com/tencent/kingkong/database/SQLiteConnectionPool:mLock	Ljava/lang/Object;
+    //   187: getfield 70	com/tencent/kingkong/database/SQLiteConnectionPool:mLock	Ljava/lang/Object;
     //   190: astore_1
     //   191: aload_1
     //   192: monitorenter
     //   193: aload_0
-    //   194: invokespecial 130	com/tencent/kingkong/database/SQLiteConnectionPool:wakeConnectionWaitersLocked	()V
+    //   194: invokespecial 132	com/tencent/kingkong/database/SQLiteConnectionPool:wakeConnectionWaitersLocked	()V
     //   197: aload_1
     //   198: monitorexit
     //   199: lload 8
@@ -641,17 +642,17 @@ public final class SQLiteConnectionPool
     //   208: invokestatic 514	java/lang/Thread:interrupted	()Z
     //   211: pop
     //   212: aload_0
-    //   213: getfield 68	com/tencent/kingkong/database/SQLiteConnectionPool:mLock	Ljava/lang/Object;
+    //   213: getfield 70	com/tencent/kingkong/database/SQLiteConnectionPool:mLock	Ljava/lang/Object;
     //   216: astore_1
     //   217: aload_1
     //   218: monitorenter
     //   219: aload_0
-    //   220: invokespecial 202	com/tencent/kingkong/database/SQLiteConnectionPool:throwIfClosedLocked	()V
+    //   220: invokespecial 204	com/tencent/kingkong/database/SQLiteConnectionPool:throwIfClosedLocked	()V
     //   223: aload 17
-    //   225: getfield 105	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mAssignedConnection	Lcom/tencent/kingkong/database/SQLiteConnection;
+    //   225: getfield 107	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mAssignedConnection	Lcom/tencent/kingkong/database/SQLiteConnection;
     //   228: astore 14
     //   230: aload 17
-    //   232: getfield 109	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mException	Ljava/lang/RuntimeException;
+    //   232: getfield 111	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mException	Ljava/lang/RuntimeException;
     //   235: astore 15
     //   237: aload 14
     //   239: ifnonnull +8 -> 247
@@ -673,11 +674,11 @@ public final class SQLiteConnectionPool
     //   271: areturn
     //   272: iload 4
     //   274: aload_1
-    //   275: getfield 253	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mPriority	I
+    //   275: getfield 255	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mPriority	I
     //   278: if_icmple +18 -> 296
     //   281: aload 17
     //   283: aload_1
-    //   284: putfield 114	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mNext	Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
+    //   284: putfield 116	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mNext	Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
     //   287: goto -175 -> 112
     //   290: astore_1
     //   291: aload 16
@@ -685,7 +686,7 @@ public final class SQLiteConnectionPool
     //   294: aload_1
     //   295: athrow
     //   296: aload_1
-    //   297: getfield 114	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mNext	Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
+    //   297: getfield 116	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mNext	Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
     //   300: astore 15
     //   302: aload_1
     //   303: astore 14
@@ -694,7 +695,7 @@ public final class SQLiteConnectionPool
     //   308: goto +112 -> 420
     //   311: aload_0
     //   312: aload 17
-    //   314: putfield 111	com/tencent/kingkong/database/SQLiteConnectionPool:mConnectionWaiterQueue	Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
+    //   314: putfield 113	com/tencent/kingkong/database/SQLiteConnectionPool:mConnectionWaiterQueue	Lcom/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter;
     //   317: goto -193 -> 124
     //   320: astore 14
     //   322: aload_1
@@ -716,7 +717,7 @@ public final class SQLiteConnectionPool
     //   345: monitorexit
     //   346: aload 14
     //   348: athrow
-    //   349: invokestatic 490	android/os/SystemClock:uptimeMillis	()J
+    //   349: invokestatic 492	android/os/SystemClock:uptimeMillis	()J
     //   352: lstore 12
     //   354: lload 12
     //   356: lload 6
@@ -736,13 +737,13 @@ public final class SQLiteConnectionPool
     //   382: aload_0
     //   383: lload 12
     //   385: aload 17
-    //   387: getfield 369	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mStartTime	J
+    //   387: getfield 371	com/tencent/kingkong/database/SQLiteConnectionPool$ConnectionWaiter:mStartTime	J
     //   390: lsub
     //   391: iload_2
     //   392: invokespecial 518	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusyLocked	(JI)V
-    //   395: ldc2_w 24
+    //   395: ldc2_w 26
     //   398: lstore 8
-    //   400: ldc2_w 24
+    //   400: ldc2_w 26
     //   403: lload 12
     //   405: ladd
     //   406: lstore 6

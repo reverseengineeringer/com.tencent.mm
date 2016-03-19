@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field jwE:Z
+.field lzv:Z
 
 
 # direct methods
@@ -28,9 +28,9 @@
 
     .prologue
     .line 880
-    new-instance v0, Lcom/tencent/mm/ui/tools/gridviewheaders/g;
+    new-instance v0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$SavedState$1;
 
-    invoke-direct {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/g;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$SavedState$1;-><init>()V
 
     sput-object v0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -54,7 +54,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$SavedState;->jwE:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$SavedState;->lzv:Z
 
     .line 904
     return-void
@@ -118,7 +118,7 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$SavedState;->jwE:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$SavedState;->lzv:Z
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -145,7 +145,7 @@
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 914
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$SavedState;->jwE:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$SavedState;->lzv:Z
 
     if-eqz v0, :cond_0
 

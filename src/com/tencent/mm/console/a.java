@@ -1,25 +1,24 @@
 package com.tencent.mm.console;
 
-import com.tencent.mm.d.a.z;
-import com.tencent.mm.d.a.z.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
+import com.tencent.mm.d.a.aq;
+import com.tencent.mm.d.a.aq.a;
+import com.tencent.mm.sdk.c.c;
 
 public final class a
-  extends e
+  extends c
 {
   public a()
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(com.tencent.mm.sdk.c.b paramb)
   {
-    if (!(paramd instanceof z)) {
+    if (!(paramb instanceof aq)) {
       return false;
     }
-    paramd = (z)paramd;
-    auK.auM = b.r(auJ.context, auJ.auL);
+    paramb = (aq)paramb;
+    atP.atR = b.u(atO.context, atO.atQ);
     return false;
   }
 }

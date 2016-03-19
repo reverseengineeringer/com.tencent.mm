@@ -17,7 +17,7 @@
 
 
 # virtual methods
-.method public IQ()V
+.method public Ld()V
     .locals 3
 
     .prologue
@@ -200,17 +200,17 @@
 
     aput-object v2, v0, v1
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->iLk:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->eEz:[Ljava/lang/String;
 
     .line 20
     const v0, 0x3fa66666    # 1.3f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->iLi:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->eEx:F
 
     .line 21
     const/16 v0, 0x4f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->iLj:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/AlphabetScrollBar;->eEy:I
 
     .line 22
     return-void
@@ -221,7 +221,7 @@
 
     .prologue
     .line 34
-    sget v0, Lcom/tencent/mm/a$k;->show_head_toast:I
+    const v0, 0x7f0a0570
 
     return v0
 .end method

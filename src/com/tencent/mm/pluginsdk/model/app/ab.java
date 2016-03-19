@@ -1,87 +1,56 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import com.tencent.mm.modelcdntran.CdnTransportEngine;
-import com.tencent.mm.modelcdntran.h;
-import com.tencent.mm.modelcdntran.keep_ProgressInfo;
-import com.tencent.mm.modelcdntran.keep_SceneResult;
-import com.tencent.mm.modelcdntran.m.a;
-import com.tencent.mm.plugin.report.service.j;
-import com.tencent.mm.q.d;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.ace;
+import com.tencent.mm.protocal.b.acf;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class ab
-  implements m.a
+public final class ab
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  ab(aa paramaa) {}
+  private d anM;
+  public a anN;
   
-  public final int a(String paramString, int paramInt, keep_ProgressInfo paramkeep_ProgressInfo, keep_SceneResult paramkeep_SceneResult)
+  public ab(int paramInt, String paramString)
   {
-    if (paramInt == 44530) {
-      t.d("!56@/B4Tb64lLpK+IBX8XDgnvjP7O0awxQNTH9G9i94EUpoxL9lRt5QCng==", "cdntra  ERR_CNDCOM_MEDIA_IS_DOWNLOADING clientid:%s", new Object[] { gMk.bDP });
-    }
-    do
-    {
-      return 0;
-      if (paramInt != 0)
-      {
-        p.ce(gMk.gMf.ibV);
-        j.eJZ.f(10421, new Object[] { Integer.valueOf(paramInt), Integer.valueOf(2), Long.valueOf(gMk.startTime), Long.valueOf(bn.DM()), Integer.valueOf(h.aB(com.tencent.mm.sdk.platformtools.aa.getContext())), Integer.valueOf(CdnTransportEngine.bwS), Integer.valueOf(0), "" });
-        gMk.apI.a(3, paramInt, "", gMk);
-        return 0;
-      }
-      if (paramkeep_ProgressInfo != null)
-      {
-        if (field_finishedLength == gMk.gMf.field_totalLen)
-        {
-          t.d("!56@/B4Tb64lLpK+IBX8XDgnvjP7O0awxQNTH9G9i94EUpoxL9lRt5QCng==", "cdntra ignore progress 100%");
-          return 0;
-        }
-        if (gMk.gMf.field_offset > field_finishedLength)
-        {
-          t.e("!56@/B4Tb64lLpK+IBX8XDgnvjP7O0awxQNTH9G9i94EUpoxL9lRt5QCng==", "cdnEndProc error oldpos:%d newpos:%d", new Object[] { Long.valueOf(gMk.gMf.field_offset), Integer.valueOf(field_finishedLength) });
-          p.ce(gMk.gMf.ibV);
-          gMk.apI.a(3, paramInt, "", gMk);
-          return 0;
-        }
-        gMk.gMf.field_offset = field_finishedLength;
-        ay.GA().a(gMk.gMf, new String[0]);
-        if (gMk.bDK != null) {
-          com.tencent.mm.sdk.platformtools.ad.g(new ac(this));
-        }
-        t.d("!56@/B4Tb64lLpK+IBX8XDgnvjP7O0awxQNTH9G9i94EUpoxL9lRt5QCng==", "cdntra progresscallback id:%s finish:%d total:%d", new Object[] { gMk.bDP, Integer.valueOf(field_finishedLength), Integer.valueOf(field_toltalLength) });
-        return 0;
-      }
-    } while (paramkeep_SceneResult == null);
-    if (field_retCode != 0)
-    {
-      p.ce(gMk.gMf.ibV);
-      t.e("!56@/B4Tb64lLpK+IBX8XDgnvjP7O0awxQNTH9G9i94EUpoxL9lRt5QCng==", "cdntra sceneResult.retCode :%d", new Object[] { Integer.valueOf(field_retCode) });
-      gMk.apI.a(3, field_retCode, "", gMk);
-    }
-    for (;;)
-    {
-      j.eJZ.f(10421, new Object[] { Integer.valueOf(field_retCode), Integer.valueOf(2), Long.valueOf(gMk.startTime), Long.valueOf(bn.DM()), Integer.valueOf(h.aB(com.tencent.mm.sdk.platformtools.aa.getContext())), Integer.valueOf(CdnTransportEngine.bwS), Long.valueOf(gMk.gMf.field_totalLen), field_transInfo, "", "", "", "", "", "", "", report_Part2 });
-      if (gMk.bDK == null) {
-        break;
-      }
-      com.tencent.mm.sdk.platformtools.ad.g(new ad(this));
-      return 0;
-      new File(gMk.gMh).renameTo(new File(gMk.gMf.field_fileFullPath));
-      gMk.gMf.field_status = 199L;
-      gMk.gMf.field_offset = gMk.gMf.field_totalLen;
-      ay.GA().a(gMk.gMf, new String[0]);
-      gMk.apI.a(0, 0, "", gMk);
+    Object localObject = new a.a();
+    bFa = new ace();
+    bFb = new acf();
+    uri = "/cgi-bin/mmbiz-bin/usrmsg/getserviceapplist";
+    bEY = 1060;
+    bFc = 0;
+    bFd = 0;
+    anN = ((a.a)localObject).vy();
+    localObject = (ace)anN.bEW.bFf;
+    offset = paramInt;
+    aiH = 20;
+    bXM = paramString;
+  }
+  
+  public final int a(e parame, d paramd)
+  {
+    anM = paramd;
+    u.i("!56@/B4Tb64lLpK+IBX8XDgnvvsJGPpivDLw2hUYb3eiJqTXVZj/QSd20A==", "do scene");
+    return a(parame, anN, this);
+  }
+  
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  {
+    u.d("!56@/B4Tb64lLpK+IBX8XDgnvvsJGPpivDLw2hUYb3eiJqTXVZj/QSd20A==", "onGYNetEnd code(%d, %d)", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
+    if (anM != null) {
+      anM.a(paramInt2, paramInt3, paramString, this);
     }
   }
   
-  public final void a(String paramString, ByteArrayOutputStream paramByteArrayOutputStream) {}
-  
-  public final byte[] f(String paramString, byte[] paramArrayOfByte)
+  public final int getType()
   {
-    return null;
+    return 1060;
   }
 }
 

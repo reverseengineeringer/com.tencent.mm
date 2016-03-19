@@ -1,85 +1,130 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.d.b.ac;
-import com.tencent.mm.sdk.g.ae.a;
-import java.lang.reflect.Field;
-import java.util.Map;
+import android.content.ContentValues;
+import android.database.Cursor;
+import com.tencent.mm.az.f;
+import com.tencent.mm.az.f.a;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import junit.framework.Assert;
 
 public final class al
-  extends ac
+  extends com.tencent.mm.sdk.h.g
+  implements f.a
 {
-  protected static ae.a aqp;
+  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS role_info ( id TEXT PRIMARY KEY, name TEXT, status INT, text_reserved1 TEXT, text_reserved2 TEXT, text_reserved3 TEXT, text_reserved4 TEXT, int_reserved1 INT, int_reserved2 INT, int_reserved3 INT, int_reserved4 INT )" };
+  public d aoX = null;
   
-  static
+  public al(com.tencent.mm.az.g paramg)
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[14];
-    bbY = new String[15];
-    StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "downloadId";
-    ibX.put("downloadId", "LONG default '-1'  PRIMARY KEY ");
-    localStringBuilder.append(" downloadId LONG default '-1'  PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    ibW = "downloadId";
-    bbY[1] = "downloadUrl";
-    ibX.put("downloadUrl", "TEXT default '' ");
-    localStringBuilder.append(" downloadUrl TEXT default '' ");
-    localStringBuilder.append(", ");
-    bbY[2] = "fileName";
-    ibX.put("fileName", "TEXT default '' ");
-    localStringBuilder.append(" fileName TEXT default '' ");
-    localStringBuilder.append(", ");
-    bbY[3] = "filePath";
-    ibX.put("filePath", "TEXT default '' ");
-    localStringBuilder.append(" filePath TEXT default '' ");
-    localStringBuilder.append(", ");
-    bbY[4] = "fileType";
-    ibX.put("fileType", "INTEGER default '0' ");
-    localStringBuilder.append(" fileType INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[5] = "status";
-    ibX.put("status", "INTEGER default '0' ");
-    localStringBuilder.append(" status INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[6] = "md5";
-    ibX.put("md5", "TEXT default '' ");
-    localStringBuilder.append(" md5 TEXT default '' ");
-    localStringBuilder.append(", ");
-    bbY[7] = "autoInstall";
-    ibX.put("autoInstall", "INTEGER default 'false' ");
-    localStringBuilder.append(" autoInstall INTEGER default 'false' ");
-    localStringBuilder.append(", ");
-    bbY[8] = "showNotification";
-    ibX.put("showNotification", "INTEGER default 'false' ");
-    localStringBuilder.append(" showNotification INTEGER default 'false' ");
-    localStringBuilder.append(", ");
-    bbY[9] = "sysDownloadId";
-    ibX.put("sysDownloadId", "LONG default '-1' ");
-    localStringBuilder.append(" sysDownloadId LONG default '-1' ");
-    localStringBuilder.append(", ");
-    bbY[10] = "downloaderType";
-    ibX.put("downloaderType", "INTEGER default '0' ");
-    localStringBuilder.append(" downloaderType INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[11] = "appId";
-    ibX.put("appId", "TEXT default '' ");
-    localStringBuilder.append(" appId TEXT default '' ");
-    localStringBuilder.append(", ");
-    bbY[12] = "downloadUrlHashCode";
-    ibX.put("downloadUrlHashCode", "INTEGER default '0' ");
-    localStringBuilder.append(" downloadUrlHashCode INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[13] = "packageName";
-    ibX.put("packageName", "TEXT default '' ");
-    localStringBuilder.append(" packageName TEXT default '' ");
-    bbY[14] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    aoX = paramg;
   }
   
-  protected final ae.a lX()
+  public final ak FD(String paramString)
   {
-    return aqp;
+    Object localObject = null;
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      return null;
+    }
+    ak localak = new ak();
+    Cursor localCursor = aoX.query("role_info", null, "name LIKE ?", new String[] { "%" + paramString }, null, null, null);
+    paramString = (String)localObject;
+    if (localCursor.moveToFirst())
+    {
+      localak.c(localCursor);
+      paramString = localak;
+    }
+    localCursor.close();
+    return paramString;
+  }
+  
+  public final ak FE(String paramString)
+  {
+    Object localObject = null;
+    if ((paramString != null) && (paramString.length() > 0)) {}
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      ak localak = new ak();
+      Cursor localCursor = aoX.query("role_info", null, "name= ?", new String[] { paramString }, null, null, null);
+      paramString = (String)localObject;
+      if (localCursor.moveToFirst())
+      {
+        localak.c(localCursor);
+        paramString = localak;
+      }
+      localCursor.close();
+      return paramString;
+    }
+  }
+  
+  public final int a(f paramf)
+  {
+    if (paramf != null) {
+      aoX = paramf;
+    }
+    return 0;
+  }
+  
+  public final void a(ak paramak)
+  {
+    aou = 135;
+    paramak = paramak.lX();
+    if ((paramak.size() > 0) && (aoX.insert("role_info", "id", paramak) != 0L)) {
+      Ep();
+    }
+  }
+  
+  public final void aU(String paramString, int paramInt)
+  {
+    if (ay.kz(paramString)) {
+      u.e("!32@/B4Tb64lLpI04WR7gCeMEW65frrKe7kY", "insert role info failed: empty user");
+    }
+    while (FE(paramString) != null) {
+      return;
+    }
+    a(new ak(paramString, true, paramInt));
+    u.d("!32@/B4Tb64lLpI04WR7gCeMEW65frrKe7kY", "insert new role, user=" + paramString);
+  }
+  
+  public final void b(ak paramak)
+  {
+    ContentValues localContentValues = paramak.lX();
+    if (localContentValues.size() > 0)
+    {
+      int i = aoX.update("role_info", localContentValues, "name like ?", new String[] { name });
+      u.d("!32@/B4Tb64lLpI04WR7gCeMEW65frrKe7kY", "update role info, name=" + name + ", res:" + i);
+      if (i > 0) {
+        Ep();
+      }
+    }
+  }
+  
+  public final void gL(String paramString)
+  {
+    if (paramString.length() > 0) {}
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      int i = aoX.delete("role_info", "name=?", new String[] { paramString });
+      u.d("!32@/B4Tb64lLpI04WR7gCeMEW65frrKe7kY", "delete name name :" + paramString + ", res:" + i);
+      if (i > 0) {
+        Ep();
+      }
+      return;
+    }
+  }
+  
+  public final String getTableName()
+  {
+    return "role_info";
+  }
+  
+  public final boolean has(String paramString)
+  {
+    ak localak = FD(new ak.a(paramString).FC(""));
+    return (localak != null) && (paramString.equals(name));
   }
 }
 

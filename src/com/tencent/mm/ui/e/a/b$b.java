@@ -5,10 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.modelsearch.h;
+import com.tencent.mm.modelsearch.f;
 
 public final class b$b
   extends a.b
@@ -20,11 +17,11 @@ public final class b$b
   
   public final View a(Context paramContext, ViewGroup paramViewGroup)
   {
-    paramContext = LayoutInflater.from(paramContext).inflate(a.k.fts_header_item, paramViewGroup, false);
-    paramViewGroup = (b.a)jnV.jnT;
-    cEY = ((TextView)paramContext.findViewById(a.i.header_tv));
-    jnU = paramContext.findViewById(a.i.padding_view);
-    cvG = paramContext.findViewById(a.i.search_item_content_layout);
+    paramContext = LayoutInflater.from(paramContext).inflate(2131363003, paramViewGroup, false);
+    paramViewGroup = (b.a)ltm.ltl;
+    dcT = ((TextView)paramContext.findViewById(2131167263));
+    fdW = paramContext.findViewById(2131166015);
+    cMt = paramContext.findViewById(2131166159);
     paramContext.setTag(paramViewGroup);
     return paramContext;
   }
@@ -32,15 +29,15 @@ public final class b$b
   public final void a(Context paramContext, a.a parama, a paramVarArgs)
   {
     paramContext = (b.a)parama;
-    h.b(jnV.jiB, cEY);
-    if (jnV.position == 0) {
-      jnU.setVisibility(8);
+    f.b(ltm.lnf, dcT);
+    if (ltm.position == 0) {
+      fdW.setVisibility(8);
     }
     for (;;)
     {
-      cvG.setBackgroundResource(a.h.list_thicklinecell_bg);
+      cMt.setBackgroundResource(2130970212);
       return;
-      jnU.setVisibility(0);
+      fdW.setVisibility(0);
     }
   }
   

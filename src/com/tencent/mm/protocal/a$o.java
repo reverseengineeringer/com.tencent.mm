@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$o
-  extends a.c
+  extends a.e
 {
   public a$o()
   {
-    super("closeWXDeviceLib", "closeWXDeviceLib", 118, false);
+    super("checkJsApi", "checkJsApi", 84, false);
   }
 }
 

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cy
-  extends a.c
+  extends a.e
 {
   public a$cy()
   {
-    super("uploadVoice", "uploadVoice", 102, true);
+    super("openGameDetail", "openGameDetail", 131, true);
   }
 }
 

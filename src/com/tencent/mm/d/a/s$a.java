@@ -2,7 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class s$a
 {
-  public String username;
+  public String asJ;
+  public int type;
 }
 
 /* Location:

@@ -5,8 +5,6 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import com.tencent.mm.a.a;
-import com.tencent.mm.a.h;
 
 public class SightBreathingTipsView
   extends View
@@ -27,8 +25,8 @@ public class SightBreathingTipsView
   
   private void init()
   {
-    mAnimation = AnimationUtils.loadAnimation(getContext(), a.a.sight_breathing_tips_anim);
-    setBackgroundResource(a.h.sight_breathing_tips);
+    mAnimation = AnimationUtils.loadAnimation(getContext(), 2130837566);
+    setBackgroundResource(2130970024);
   }
 }
 

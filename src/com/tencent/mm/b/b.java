@@ -1,42 +1,42 @@
 package com.tencent.mm.b;
 
 public final class b
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  private boolean amO;
-  public int amP;
-  public boolean amQ;
-  public String amR;
-  public boolean amS;
-  public int amT;
-  public boolean amU;
-  public String amV;
-  public boolean amW;
-  public String amX;
-  public boolean amY;
-  public boolean amZ;
-  public boolean ana;
-  public int anb;
-  public boolean anc;
-  public boolean ane;
-  public boolean anf;
+  private boolean akB;
+  public int akC;
+  public boolean akD;
+  public String akE;
+  public boolean akF;
+  public int akG;
+  public boolean akH;
+  public String akI;
+  public boolean akJ;
+  public String akK;
+  public boolean akL;
+  public boolean akM;
+  public boolean akN;
+  public int akO;
+  public boolean akP;
+  public boolean akQ;
+  public boolean akR;
   public String apkMd5;
   
-  private b kR()
+  private b km()
   {
-    if (!amO) {
-      throw new a.a.a.b("Not all required fields were included (false = not included in message),  apkMd5:" + amO);
+    if (!akB) {
+      throw new a.a.a.b("Not all required fields were included (false = not included in message),  apkMd5:" + akB);
     }
     return this;
   }
   
-  public static b t(byte[] paramArrayOfByte)
+  public static b u(byte[] paramArrayOfByte)
   {
-    paramArrayOfByte = new a.a.a.a.a(paramArrayOfByte, hfZ);
+    paramArrayOfByte = new a.a.a.a.a(paramArrayOfByte, iTR);
     int i = a(paramArrayOfByte);
     b localb = new b();
     if (i <= 0) {
-      return localb.kR();
+      return localb.km();
     }
     switch (i)
     {
@@ -46,124 +46,124 @@ public final class b
     for (;;)
     {
       if (i == 0) {
-        paramArrayOfByte.aVo();
+        paramArrayOfByte.bog();
       }
       i = a(paramArrayOfByte);
       break;
-      localb.aK(paramArrayOfByte.aVl());
+      localb.aI(paramArrayOfByte.bod());
       i = 1;
       continue;
-      amP = paramArrayOfByte.aVj();
-      amQ = true;
+      akC = paramArrayOfByte.bob();
+      akD = true;
       i = 1;
       continue;
-      amR = paramArrayOfByte.aVl();
-      amS = true;
+      akE = paramArrayOfByte.bod();
+      akF = true;
       i = 1;
       continue;
-      amT = paramArrayOfByte.aVj();
-      amU = true;
+      akG = paramArrayOfByte.bob();
+      akH = true;
       i = 1;
       continue;
-      amV = paramArrayOfByte.aVl();
-      amW = true;
+      akI = paramArrayOfByte.bod();
+      akJ = true;
       i = 1;
       continue;
-      amX = paramArrayOfByte.aVl();
-      amY = true;
+      akK = paramArrayOfByte.bod();
+      akL = true;
       i = 1;
       continue;
-      amZ = paramArrayOfByte.aVm();
-      ana = true;
+      akM = paramArrayOfByte.boe();
+      akN = true;
       i = 1;
       continue;
-      anb = paramArrayOfByte.aVj();
-      anc = true;
+      akO = paramArrayOfByte.bob();
+      akP = true;
       i = 1;
       continue;
-      ane = paramArrayOfByte.aVm();
-      anf = true;
+      akQ = paramArrayOfByte.boe();
+      akR = true;
       i = 1;
     }
   }
   
   public final void a(a.a.a.c.a parama)
   {
-    parama.U(1, apkMd5);
-    if (amQ) {
-      parama.bM(2, amP);
+    parama.d(1, apkMd5);
+    if (akD) {
+      parama.ci(2, akC);
     }
-    if (amS) {
-      parama.U(3, amR);
+    if (akF) {
+      parama.d(3, akE);
     }
-    if (amU) {
-      parama.bM(4, amT);
+    if (akH) {
+      parama.ci(4, akG);
     }
-    if (amW) {
-      parama.U(5, amV);
+    if (akJ) {
+      parama.d(5, akI);
     }
-    if (amY) {
-      parama.U(6, amX);
+    if (akL) {
+      parama.d(6, akK);
     }
-    if (ana) {
-      parama.F(7, amZ);
+    if (akN) {
+      parama.R(7, akM);
     }
-    if (anc) {
-      parama.bM(8, anb);
+    if (akP) {
+      parama.ci(8, akO);
     }
-    if (anf) {
-      parama.F(9, ane);
+    if (akR) {
+      parama.R(9, akQ);
     }
   }
   
-  public final b aK(String paramString)
+  public final b aI(String paramString)
   {
     apkMd5 = paramString;
-    amO = true;
+    akB = true;
     return this;
   }
   
-  public final int kS()
+  public final int kn()
   {
-    int j = a.a.a.a.T(1, apkMd5) + 0;
+    int j = a.a.a.a.e(1, apkMd5) + 0;
     int i = j;
-    if (amQ) {
-      i = j + a.a.a.a.bI(2, amP);
+    if (akD) {
+      i = j + a.a.a.a.cg(2, akC);
     }
     j = i;
-    if (amS) {
-      j = i + a.a.a.a.T(3, amR);
+    if (akF) {
+      j = i + a.a.a.a.e(3, akE);
     }
     i = j;
-    if (amU) {
-      i = j + a.a.a.a.bI(4, amT);
+    if (akH) {
+      i = j + a.a.a.a.cg(4, akG);
     }
     j = i;
-    if (amW) {
-      j = i + a.a.a.a.T(5, amV);
+    if (akJ) {
+      j = i + a.a.a.a.e(5, akI);
     }
     i = j;
-    if (amY) {
-      i = j + a.a.a.a.T(6, amX);
+    if (akL) {
+      i = j + a.a.a.a.e(6, akK);
     }
     j = i;
-    if (ana) {
-      j = i + a.a.a.a.pK(7);
+    if (akN) {
+      j = i + a.a.a.a.sI(7);
     }
     i = j;
-    if (anc) {
-      i = j + a.a.a.a.bI(8, anb);
+    if (akP) {
+      i = j + a.a.a.a.cg(8, akO);
     }
     j = i;
-    if (anf) {
-      j = i + a.a.a.a.pK(9);
+    if (akR) {
+      j = i + a.a.a.a.sI(9);
     }
     return j + 0;
   }
   
   public final byte[] toByteArray()
   {
-    kR();
+    km();
     return super.toByteArray();
   }
   
@@ -171,36 +171,36 @@ public final class b
   {
     Object localObject2 = new StringBuilder(String.valueOf("")).append(getClass().getName()).append("(").toString() + "apkMd5 = " + apkMd5 + "   ";
     Object localObject1 = localObject2;
-    if (amQ) {
-      localObject1 = localObject2 + "channelId = " + amP + "   ";
+    if (akD) {
+      localObject1 = localObject2 + "channelId = " + akC + "   ";
     }
     localObject2 = localObject1;
-    if (amS) {
-      localObject2 = localObject1 + "profileDeviceType = " + amR + "   ";
+    if (akF) {
+      localObject2 = localObject1 + "profileDeviceType = " + akE + "   ";
     }
     localObject1 = localObject2;
-    if (amU) {
-      localObject1 = localObject2 + "updateMode = " + amT + "   ";
+    if (akH) {
+      localObject1 = localObject2 + "updateMode = " + akG + "   ";
     }
     localObject2 = localObject1;
-    if (amW) {
-      localObject2 = localObject1 + "buildVersion = " + amV + "   ";
+    if (akJ) {
+      localObject2 = localObject1 + "buildVersion = " + akI + "   ";
     }
     localObject1 = localObject2;
-    if (amY) {
-      localObject1 = localObject2 + "marketUrl = " + amX + "   ";
+    if (akL) {
+      localObject1 = localObject2 + "marketUrl = " + akK + "   ";
     }
     localObject2 = localObject1;
-    if (ana) {
-      localObject2 = localObject1 + "gprsAlert = " + amZ + "   ";
+    if (akN) {
+      localObject2 = localObject1 + "gprsAlert = " + akM + "   ";
     }
     localObject1 = localObject2;
-    if (anc) {
-      localObject1 = localObject2 + "autoAddAccount = " + anb + "   ";
+    if (akP) {
+      localObject1 = localObject2 + "autoAddAccount = " + akO + "   ";
     }
     localObject2 = localObject1;
-    if (anf) {
-      localObject2 = localObject1 + "nokiaAol = " + ane + "   ";
+    if (akR) {
+      localObject2 = localObject1 + "nokiaAol = " + akQ + "   ";
     }
     return localObject2 + ")";
   }

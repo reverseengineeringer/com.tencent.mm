@@ -8,10 +8,13 @@
     .locals 0
 
     .prologue
-    .line 17
+    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
+.end method
+
+.method public static native checkIntegrity(Ljava/lang/String;)Z
 .end method
 
 .method public static native compressByQuality(Landroid/graphics/Bitmap;IZLjava/lang/String;)I

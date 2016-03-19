@@ -2,7 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class ci$a
 {
-  public int state = -1;
+  public String alN;
+  public byte[] avG;
+  public boolean avH;
 }
 
 /* Location:

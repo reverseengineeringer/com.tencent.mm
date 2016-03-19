@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract DS()V
+.method public abstract FY()V
 .end method

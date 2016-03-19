@@ -2,35 +2,78 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class h
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aJH = "openId".hashCode();
-  private static final int aKS;
-  private static final int aLc = "brandUsername".hashCode();
-  private static final int aLd = "headImgUrl".hashCode();
-  private static final int aLe = "nickname".hashCode();
-  private static final int aLf = "kfType".hashCode();
-  private boolean aJm = true;
-  private boolean aKE = true;
-  private boolean aKY = true;
-  private boolean aKZ = true;
-  private boolean aLa = true;
-  private boolean aLb = true;
-  public String field_brandUsername;
-  public String field_headImgUrl;
-  public int field_kfType;
-  public String field_nickname;
-  public String field_openId;
-  public long field_updateTime;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int aMQ;
+  private static final int aMk;
+  private static final int aOB;
+  private static final int aOR = "bizChatId".hashCode();
+  private static final int aOS = "brandUserName".hashCode();
+  private static final int aOT = "unReadCount".hashCode();
+  private static final int aOU = "newUnReadCount".hashCode();
+  private static final int aOV = "lastMsgID".hashCode();
+  private static final int aOW = "lastMsgTime".hashCode();
+  private static final int aOX;
+  private static final int aOY;
+  private static final int aOZ;
+  private static final int aPa;
+  private static final int aPb;
+  private static final int aPc;
+  private static final int aPd;
+  private static final int aPe;
+  private boolean aLS = true;
+  private boolean aMC = true;
+  private boolean aOD = true;
+  private boolean aOE = true;
+  private boolean aOF = true;
+  private boolean aOG = true;
+  private boolean aOH = true;
+  private boolean aOI = true;
+  private boolean aOJ = true;
+  private boolean aOK = true;
+  private boolean aOL = true;
+  private boolean aOM = true;
+  private boolean aON = true;
+  private boolean aOO = true;
+  private boolean aOP = true;
+  private boolean aOQ = true;
+  private boolean aOz = true;
+  public int field_atCount;
+  public long field_bizChatId;
+  public String field_brandUserName;
+  public int field_chatType;
+  public String field_content;
+  public String field_digest;
+  public String field_digestUser;
+  public String field_editingMsg;
+  public long field_flag;
+  public int field_isSend;
+  public long field_lastMsgID;
+  public long field_lastMsgTime;
+  public int field_msgCount;
+  public String field_msgType;
+  public int field_newUnReadCount;
+  public int field_status;
+  public int field_unReadCount;
   
   static
   {
-    aKS = "updateTime".hashCode();
+    aMk = "content".hashCode();
+    aOX = "digest".hashCode();
+    aOY = "digestUser".hashCode();
+    aOZ = "atCount".hashCode();
+    aPa = "editingMsg".hashCode();
+    aPb = "chatType".hashCode();
+    aMQ = "status".hashCode();
+    aPc = "isSend".hashCode();
+    aPd = "msgType".hashCode();
+    aPe = "msgCount".hashCode();
+    aOB = "flag".hashCode();
   }
   
   public final void c(Cursor paramCursor)
@@ -46,11 +89,11 @@ public abstract class h
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aJH != k) {
+      if (aOR != k) {
         break label65;
       }
-      field_openId = paramCursor.getString(i);
-      aJm = true;
+      field_bizChatId = paramCursor.getLong(i);
+      aOD = true;
     }
     for (;;)
     {
@@ -58,48 +101,109 @@ public abstract class h
       break label20;
       break;
       label65:
-      if (aLc == k) {
-        field_brandUsername = paramCursor.getString(i);
-      } else if (aLd == k) {
-        field_headImgUrl = paramCursor.getString(i);
-      } else if (aLe == k) {
-        field_nickname = paramCursor.getString(i);
-      } else if (aLf == k) {
-        field_kfType = paramCursor.getInt(i);
-      } else if (aKS == k) {
-        field_updateTime = paramCursor.getLong(i);
-      } else if (aHH == k) {
-        ibV = paramCursor.getLong(i);
+      if (aOS == k) {
+        field_brandUserName = paramCursor.getString(i);
+      } else if (aOT == k) {
+        field_unReadCount = paramCursor.getInt(i);
+      } else if (aOU == k) {
+        field_newUnReadCount = paramCursor.getInt(i);
+      } else if (aOV == k) {
+        field_lastMsgID = paramCursor.getLong(i);
+      } else if (aOW == k) {
+        field_lastMsgTime = paramCursor.getLong(i);
+      } else if (aMk == k) {
+        field_content = paramCursor.getString(i);
+      } else if (aOX == k) {
+        field_digest = paramCursor.getString(i);
+      } else if (aOY == k) {
+        field_digestUser = paramCursor.getString(i);
+      } else if (aOZ == k) {
+        field_atCount = paramCursor.getInt(i);
+      } else if (aPa == k) {
+        field_editingMsg = paramCursor.getString(i);
+      } else if (aPb == k) {
+        field_chatType = paramCursor.getInt(i);
+      } else if (aMQ == k) {
+        field_status = paramCursor.getInt(i);
+      } else if (aPc == k) {
+        field_isSend = paramCursor.getInt(i);
+      } else if (aPd == k) {
+        field_msgType = paramCursor.getString(i);
+      } else if (aPe == k) {
+        field_msgCount = paramCursor.getInt(i);
+      } else if (aOB == k) {
+        field_flag = paramCursor.getLong(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aJm) {
-      localContentValues.put("openId", field_openId);
+    if (aOD) {
+      localContentValues.put("bizChatId", Long.valueOf(field_bizChatId));
     }
-    if (field_brandUsername == null) {
-      field_brandUsername = "";
+    if (aOE) {
+      localContentValues.put("brandUserName", field_brandUserName);
     }
-    if (aKY) {
-      localContentValues.put("brandUsername", field_brandUsername);
+    if (aOF) {
+      localContentValues.put("unReadCount", Integer.valueOf(field_unReadCount));
     }
-    if (aKZ) {
-      localContentValues.put("headImgUrl", field_headImgUrl);
+    if (aOG) {
+      localContentValues.put("newUnReadCount", Integer.valueOf(field_newUnReadCount));
     }
-    if (aLa) {
-      localContentValues.put("nickname", field_nickname);
+    if (aOH) {
+      localContentValues.put("lastMsgID", Long.valueOf(field_lastMsgID));
     }
-    if (aLb) {
-      localContentValues.put("kfType", Integer.valueOf(field_kfType));
+    if (aOI) {
+      localContentValues.put("lastMsgTime", Long.valueOf(field_lastMsgTime));
     }
-    if (aKE) {
-      localContentValues.put("updateTime", Long.valueOf(field_updateTime));
+    if (aLS) {
+      localContentValues.put("content", field_content);
     }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (field_digest == null) {
+      field_digest = "";
+    }
+    if (aOJ) {
+      localContentValues.put("digest", field_digest);
+    }
+    if (field_digestUser == null) {
+      field_digestUser = "";
+    }
+    if (aOK) {
+      localContentValues.put("digestUser", field_digestUser);
+    }
+    if (aOL) {
+      localContentValues.put("atCount", Integer.valueOf(field_atCount));
+    }
+    if (aOM) {
+      localContentValues.put("editingMsg", field_editingMsg);
+    }
+    if (aON) {
+      localContentValues.put("chatType", Integer.valueOf(field_chatType));
+    }
+    if (aMC) {
+      localContentValues.put("status", Integer.valueOf(field_status));
+    }
+    if (aOO) {
+      localContentValues.put("isSend", Integer.valueOf(field_isSend));
+    }
+    if (field_msgType == null) {
+      field_msgType = "";
+    }
+    if (aOP) {
+      localContentValues.put("msgType", field_msgType);
+    }
+    if (aOQ) {
+      localContentValues.put("msgCount", Integer.valueOf(field_msgCount));
+    }
+    if (aOz) {
+      localContentValues.put("flag", Long.valueOf(field_flag));
+    }
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

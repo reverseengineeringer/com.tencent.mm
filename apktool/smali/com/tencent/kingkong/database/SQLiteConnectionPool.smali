@@ -80,10 +80,8 @@
     :goto_0
     sput-boolean v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool;->$assertionsDisabled:Z
 
-    .line 142
     return-void
 
-    .line 70
     :cond_0
     const/4 v0, 0x0
 
@@ -365,9 +363,9 @@
 
     const/4 v4, 0x0
 
+    .line 565
     aput-object v0, v3, v4
 
-    .line 565
     invoke-static {v1, v2, v3}, Lcom/tencent/kingkong/support/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
@@ -552,7 +550,6 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 954
     return-void
 
     .line 950
@@ -923,7 +920,6 @@
 
     move v2, v0
 
-    .line 798
     goto :goto_0
 
     .line 799
@@ -1217,10 +1213,12 @@
     .line 211
     iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnectionPool;->mConfiguration:Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;
 
+    .line 212
     invoke-direct {p0, v0, v1}, Lcom/tencent/kingkong/database/SQLiteConnectionPool;->openConnectionLocked(Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;Z)Lcom/tencent/kingkong/database/SQLiteConnection;
 
     move-result-object v0
 
+    .line 211
     iput-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnectionPool;->mAvailablePrimaryConnection:Lcom/tencent/kingkong/database/SQLiteConnection;
 
     .line 215
@@ -1252,7 +1250,7 @@
 
     iget-object v0, p1, Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;->path:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/i;->qN()Z
+    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/h;->qJ()Z
 
     move-result v8
 
@@ -1342,9 +1340,9 @@
 
     new-array v3, v8, [Ljava/lang/Object;
 
+    .line 581
     aput-object v0, v3, v4
 
-    .line 581
     invoke-static {v1, v2, v3}, Lcom/tencent/kingkong/support/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 583
@@ -1415,9 +1413,9 @@
 
     new-array v7, v8, [Ljava/lang/Object;
 
+    .line 594
     aput-object v3, v7, v4
 
-    .line 594
     invoke-static {v5, v6, v7}, Lcom/tencent/kingkong/support/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 596
@@ -1495,9 +1493,9 @@
 
     new-array v5, v1, [Ljava/lang/Object;
 
+    .line 416
     aput-object v2, v5, v0
 
-    .line 416
     invoke-static {v3, v4, v5}, Lcom/tencent/kingkong/support/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 418
@@ -2361,9 +2359,10 @@
 
     move v2, v3
 
-    .line 854
+    .line 853
     goto :goto_1
 
+    .line 854
     :cond_5
     if-eqz v2, :cond_6
 

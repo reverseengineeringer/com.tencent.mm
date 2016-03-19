@@ -7,18 +7,18 @@ import java.lang.reflect.Method;
 final class SlidingPaneLayout$g
   extends SlidingPaneLayout.f
 {
-  private Method jc;
-  private Field jd;
+  private Method ih;
+  private Field ii;
   
   SlidingPaneLayout$g()
   {
     try
     {
-      jc = View.class.getDeclaredMethod("getDisplayList", null);
+      ih = View.class.getDeclaredMethod("getDisplayList", null);
       try
       {
-        jd = View.class.getDeclaredField("mRecreateDisplayList");
-        jd.setAccessible(true);
+        ii = View.class.getDeclaredField("mRecreateDisplayList");
+        ii.setAccessible(true);
         return;
       }
       catch (NoSuchFieldException localNoSuchFieldException) {}
@@ -31,11 +31,11 @@ final class SlidingPaneLayout$g
   
   public final void b(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
   {
-    if ((jc != null) && (jd != null)) {}
+    if ((ih != null) && (ii != null)) {}
     try
     {
-      jd.setBoolean(paramView, true);
-      jc.invoke(paramView, null);
+      ii.setBoolean(paramView, true);
+      ih.invoke(paramView, null);
       super.b(paramSlidingPaneLayout, paramView);
       return;
       paramView.invalidate();

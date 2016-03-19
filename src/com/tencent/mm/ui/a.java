@@ -2,88 +2,88 @@ package com.tencent.mm.ui;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.preference.w;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.base.preference.i;
 
 public abstract class a
-  extends w
-  implements ak
+  extends i
+  implements h
 {
-  private boolean ikY;
-  private boolean ikZ;
-  private boolean ila;
-  private boolean ilb;
-  protected boolean ilc = false;
-  protected boolean ild = false;
-  protected boolean ile;
-  private Bundle ilf;
+  private boolean kjf;
+  private boolean kjg;
+  private boolean kjh;
+  private boolean kji;
+  protected boolean kjj = false;
+  protected boolean kjk = false;
+  protected boolean kjl;
+  private Bundle kjm;
   
-  protected abstract void aJA();
+  protected abstract void aZj();
   
-  protected abstract void aJB();
+  protected abstract void aZk();
   
-  protected abstract void aJC();
+  protected abstract void aZl();
   
-  public final void aJG()
+  protected abstract void aZm();
+  
+  protected abstract void aZn();
+  
+  protected abstract void aZo();
+  
+  public final void aZs()
   {
-    aJE();
-    ila = true;
+    aZq();
+    kjh = true;
   }
   
-  public final void aJI()
+  public final void aZu()
   {
-    ild = true;
+    kjk = true;
   }
   
-  public final void aJJ()
+  public final void aZv()
   {
-    if (!ilc) {
+    if (!kjj) {
       return;
     }
-    if (ikZ)
+    if (kjg)
     {
-      aJx();
-      ikZ = false;
+      aZj();
+      kjg = false;
     }
     for (;;)
     {
       long l = System.currentTimeMillis();
-      if (ila)
+      if (kjh)
       {
-        aJF();
-        ila = false;
+        aZr();
+        kjh = false;
       }
-      aJy();
-      t.d("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN " + toString() + " OnTabResume last : " + (System.currentTimeMillis() - l));
-      ilb = true;
-      ilc = false;
+      aZk();
+      u.d("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN " + toString() + " OnTabResume last : " + (System.currentTimeMillis() - l));
+      kji = true;
+      kjj = false;
       return;
-      if (ikY)
+      if (kjf)
       {
-        aJC();
-        aJx();
-        t.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN tab onRecreate ");
-        ikY = false;
+        aZo();
+        aZj();
+        u.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN tab onRecreate ");
+        kjf = false;
       }
     }
   }
   
-  protected abstract void aJx();
-  
-  protected abstract void aJy();
-  
-  protected abstract void aJz();
-  
   public void onActivityCreated(Bundle paramBundle)
   {
     super.onActivityCreated(paramBundle);
-    ilf = paramBundle;
-    ikZ = true;
+    kjm = paramBundle;
+    kjg = true;
   }
   
   public void onDestroy()
   {
-    aJC();
+    aZo();
     super.onDestroy();
   }
   
@@ -95,55 +95,55 @@ public abstract class a
     return super.onKeyDown(paramInt, paramKeyEvent);
   }
   
-  public final void onPause()
+  public void onPause()
   {
     super.onPause();
-    ile = true;
-    if (ile)
+    kjl = true;
+    if (kjl)
     {
-      if (!ilb) {
-        ile = false;
+      if (!kji) {
+        kjl = false;
       }
     }
     else {
       return;
     }
     long l = System.currentTimeMillis();
-    aJA();
-    t.d("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN " + toString() + " onTabPause last : " + (System.currentTimeMillis() - l));
-    ilb = false;
-    ile = false;
+    aZm();
+    u.d("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN " + toString() + " onTabPause last : " + (System.currentTimeMillis() - l));
+    kji = false;
+    kjl = false;
   }
   
-  public final void onResume()
+  public void onResume()
   {
     super.onResume();
-    aJH();
-    LauncherUI localLauncherUI = LauncherUI.aKD();
-    if ((localLauncherUI == null) || (!imZ)) {}
+    aZt();
+    LauncherUI localLauncherUI = LauncherUI.bat();
+    if ((localLauncherUI == null) || (!klI)) {}
     do
     {
       return;
-      ilc = true;
-    } while (!ild);
-    aJJ();
-    ild = false;
+      kjj = true;
+    } while (!kjk);
+    aZv();
+    kjk = false;
   }
   
-  public final void onStart()
+  public void onStart()
   {
     super.onStart();
-    LauncherUI localLauncherUI = LauncherUI.aKD();
-    if ((localLauncherUI == null) || (!imZ)) {
+    LauncherUI localLauncherUI = LauncherUI.bat();
+    if ((localLauncherUI == null) || (!klI)) {
       return;
     }
-    aJz();
+    aZl();
   }
   
-  public final void onStop()
+  public void onStop()
   {
     super.onStop();
-    aJB();
+    aZn();
   }
 }
 

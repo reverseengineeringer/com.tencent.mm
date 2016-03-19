@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private jQc:Lb/a/f/d$a;
+.field private men:Lb/a/f/d$a;
 
 
 # direct methods
@@ -31,13 +31,13 @@
 
     invoke-direct {v0}, Lb/a/f/d$a;-><init>()V
 
-    iput-object v0, p0, Lb/a/f/d;->jQc:Lb/a/f/d$a;
+    iput-object v0, p0, Lb/a/f/d;->men:Lb/a/f/d$a;
 
     .line 20
     return-void
 .end method
 
-.method private static aWe()Ljava/lang/Long;
+.method private static boS()Ljava/lang/Long;
     .locals 4
 
     .prologue
@@ -67,12 +67,12 @@
 
 
 # virtual methods
-.method public final aWc()Ljava/lang/String;
+.method public final boR()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 36
-    invoke-static {}, Lb/a/f/d;->aWe()Ljava/lang/Long;
+    invoke-static {}, Lb/a/f/d;->boS()Ljava/lang/Long;
 
     move-result-object v0
 
@@ -83,12 +83,12 @@
     return-object v0
 .end method
 
-.method public final aWd()Ljava/lang/String;
+.method public final getNonce()Ljava/lang/String;
     .locals 4
 
     .prologue
     .line 27
-    invoke-static {}, Lb/a/f/d;->aWe()Ljava/lang/Long;
+    invoke-static {}, Lb/a/f/d;->boS()Ljava/lang/Long;
 
     move-result-object v0
 

@@ -14,13 +14,13 @@
     .line 7
     const/16 v0, 0x147
 
-    iput v0, p0, Loicq/wlogin_sdk/a/aj;->jNs:I
+    iput v0, p0, Loicq/wlogin_sdk/a/aj;->mbE:I
 
     .line 8
     return-void
 .end method
 
-.method private static ba([B)I
+.method private static bt([B)I
     .locals 2
 
     .prologue
@@ -60,12 +60,12 @@
     const/4 v4, 0x0
 
     .line 24
-    invoke-static {p3}, Loicq/wlogin_sdk/a/aj;->ba([B)I
+    invoke-static {p3}, Loicq/wlogin_sdk/a/aj;->bt([B)I
 
     move-result v0
 
     .line 25
-    invoke-static {p4}, Loicq/wlogin_sdk/a/aj;->ba([B)I
+    invoke-static {p4}, Loicq/wlogin_sdk/a/aj;->bt([B)I
 
     move-result v1
 
@@ -104,20 +104,20 @@
     invoke-static {p4, v4, v2, v0, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 39
-    iget v0, p0, Loicq/wlogin_sdk/a/aj;->jNs:I
+    iget v0, p0, Loicq/wlogin_sdk/a/aj;->mbE:I
 
-    invoke-super {p0, v0}, Loicq/wlogin_sdk/a/a;->pV(I)V
+    invoke-super {p0, v0}, Loicq/wlogin_sdk/a/a;->sL(I)V
 
     .line 42
     array-length v0, v2
 
-    invoke-super {p0, v2, v0}, Loicq/wlogin_sdk/a/a;->w([BI)V
+    invoke-super {p0, v2, v0}, Loicq/wlogin_sdk/a/a;->A([BI)V
 
     .line 43
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->aVD()V
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->bos()V
 
     .line 45
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->aVz()[B
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->boo()[B
 
     move-result-object v0
 

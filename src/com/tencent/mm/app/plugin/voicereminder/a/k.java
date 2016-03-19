@@ -1,72 +1,69 @@
 package com.tencent.mm.app.plugin.voicereminder.a;
 
-import com.tencent.mm.a.d;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.d.b.cf;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.sdk.h.f;
+import com.tencent.mm.sdk.platformtools.u;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.Map;
+import junit.framework.Assert;
 
 public final class k
+  extends f
 {
-  private static final d aqe = new d(100);
-  public int aqf;
-  public int aqg;
-  public String aqh;
-  public int aqi;
-  public int aqj;
-  public int aqk;
-  public int aql;
-  public String aqm;
-  public int aqn;
-  public String aqo;
+  public static final String[] aoY = { f.a(g.aot, "VoiceRemindInfo") };
+  private static long aoZ = 0L;
+  d aoX;
+  Map apa = new HashMap();
   
-  public static k bd(String paramString)
+  public k(d paramd)
   {
-    if (bn.iW(paramString)) {
-      paramString = null;
-    }
-    int i;
-    Object localObject;
-    k localk;
-    do
+    super(paramd, g.aot, "VoiceRemindInfo", cf.aLn);
+    aoX = paramd;
+  }
+  
+  public static String bn(String paramString)
+  {
+    long l = System.currentTimeMillis();
+    String str2 = new SimpleDateFormat("ssHHmmMMddyy").format(new Date(l));
+    String str1 = str2;
+    if (paramString != null)
     {
-      return paramString;
-      i = paramString.indexOf('<');
-      localObject = paramString;
-      if (i > 0) {
-        localObject = paramString.substring(i);
+      str1 = str2;
+      if (paramString.length() > 1) {
+        str1 = str2 + com.tencent.mm.a.g.m(paramString.getBytes()).substring(0, 7);
       }
-      i = ((String)localObject).hashCode();
-      localk = (k)aqe.get(Integer.valueOf(i));
-      paramString = localk;
-    } while (localk != null);
-    paramString = p.z((String)localObject, "msg", null);
-    if (paramString == null)
-    {
-      t.e("!56@/B4Tb64lLpLcQwGQMRj/JcCiXnqe7QDw59ljz32/TwrYqce0E1yKAg==", "parse msg failed");
-      return null;
     }
-    try
+    paramString = str1 + l % 10000L;
+    paramString = new StringBuilder().append(paramString);
+    l = aoZ;
+    aoZ = 1L + l;
+    return l;
+  }
+  
+  public final void bh(String paramString)
+  {
+    c localc = (c)apa.get(paramString);
+    if (localc != null)
     {
-      localObject = new k();
-      aqn = bn.getInt((String)paramString.get(".msg.appmsg.appattach.totallen"), 0);
-      aqm = ((String)paramString.get(".msg.appmsg.appattach.attachid"));
-      aqo = ((String)paramString.get(".msg.appmsg.appattach.fileext"));
-      aqf = bn.getInt((String)paramString.get(".msg.appmsg.voicecmd.reminder.$remindtime"), 0);
-      aqg = bn.getInt((String)paramString.get(".msg.appmsg.voicecmd.reminder.$remindid"), 0);
-      aqh = ((String)paramString.get(".msg.appmsg.voicecmd.reminder.$remindattachid"));
-      aqi = bn.getInt((String)paramString.get(".msg.appmsg.voicecmd.reminder.$remindattachtotallen"), 0);
-      aqj = bn.getInt((String)paramString.get(".msg.appmsg.voicecmd.reminder.$remindformat"), 0);
-      aqk = bn.getInt((String)paramString.get(".msg.appmsg.voicecmd.reminder.$originformat"), 0);
-      aql = bn.getInt((String)paramString.get(".msg.appmsg.voicecmd.reminder.$msgsvrid"), 0);
-      aqe.f(Integer.valueOf(i), localObject);
-      return (k)localObject;
+      localc.ll();
+      apa.remove(paramString);
     }
-    catch (Exception paramString)
+  }
+  
+  public final boolean bo(String paramString)
+  {
+    if (paramString.length() > 0) {}
+    for (boolean bool = true;; bool = false)
     {
-      t.e("!56@/B4Tb64lLpLcQwGQMRj/JcCiXnqe7QDw59ljz32/TwrYqce0E1yKAg==", "parse amessage xml failed");
+      Assert.assertTrue(bool);
+      if (aoX.delete("VoiceRemindInfo", "filename= ?", new String[] { paramString }) <= 0) {
+        u.w("!44@/B4Tb64lLpLcQwGQMRj/JQyXo4WsPXM8QEvnYyPx268=", "delete failed, no such file:" + paramString);
+      }
+      return true;
     }
-    return null;
   }
 }
 

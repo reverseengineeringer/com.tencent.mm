@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cq
-  extends a.c
+  extends a.e
 {
   public a$cq()
   {
-    super("startScanWXDevice", "startScanWXDevice", 121, true);
+    super("nfcTransceive", "nfcTransceive", 141, false);
   }
 }
 

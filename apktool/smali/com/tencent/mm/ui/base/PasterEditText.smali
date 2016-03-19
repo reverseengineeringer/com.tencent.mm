@@ -6,9 +6,9 @@
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field private fEA:Landroid/text/ClipboardManager;
+.field private hdU:Landroid/text/ClipboardManager;
 
-.field private fEB:I
+.field private hdV:I
 
 
 # direct methods
@@ -22,12 +22,12 @@
     .line 12
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->fEA:Landroid/text/ClipboardManager;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->hdU:Landroid/text/ClipboardManager;
 
     .line 14
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->fEB:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->hdV:I
 
     .line 24
     iput-object p1, p0, Lcom/tencent/mm/ui/base/PasterEditText;->context:Landroid/content/Context;
@@ -43,7 +43,7 @@
 
     check-cast v0, Landroid/text/ClipboardManager;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->fEA:Landroid/text/ClipboardManager;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->hdU:Landroid/text/ClipboardManager;
 
     .line 26
     return-void
@@ -56,7 +56,7 @@
 
     .prologue
     .line 29
-    iget v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->fEB:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->hdV:I
 
     return v0
 .end method
@@ -71,11 +71,11 @@
     if-ne p1, v0, :cond_1
 
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->fEA:Landroid/text/ClipboardManager;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->hdU:Landroid/text/ClipboardManager;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->fEA:Landroid/text/ClipboardManager;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->hdU:Landroid/text/ClipboardManager;
 
     invoke-virtual {v0}, Landroid/text/ClipboardManager;->getText()Ljava/lang/CharSequence;
 
@@ -83,7 +83,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->fEA:Landroid/text/ClipboardManager;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->hdU:Landroid/text/ClipboardManager;
 
     invoke-virtual {v0}, Landroid/text/ClipboardManager;->getText()Ljava/lang/CharSequence;
 
@@ -93,7 +93,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->fEA:Landroid/text/ClipboardManager;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->hdU:Landroid/text/ClipboardManager;
 
     invoke-virtual {v0}, Landroid/text/ClipboardManager;->getText()Ljava/lang/CharSequence;
 
@@ -101,16 +101,16 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 41
-    iget v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->fEB:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->hdV:I
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/PasterEditText;->fEA:Landroid/text/ClipboardManager;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/PasterEditText;->hdU:Landroid/text/ClipboardManager;
 
     invoke-virtual {v1}, Landroid/text/ClipboardManager;->getText()Ljava/lang/CharSequence;
 
@@ -122,7 +122,7 @@
 
     add-int/2addr v0, v1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->fEB:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/PasterEditText;->hdV:I
 
     .line 43
     :cond_0

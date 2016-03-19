@@ -1,31 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class hb
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEn = new a();
-  public b aEo = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aCG = new a();
+  public b aCH = new b();
   
   public hb()
   {
-    id = "ScanBankcardStart";
-    hXT = atO;
+    id = "NetSceneRevokeChatRoomQRCode";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aEp;
-    public int height;
-    public int width;
+    public boolean aBY = false;
+    public String aCI;
+    public String aCm;
   }
   
   public static final class b
   {
-    public int apL = 0;
+    public int errCode;
   }
 }
 

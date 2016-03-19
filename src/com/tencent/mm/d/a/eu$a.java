@@ -1,14 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.app.Activity;
-import android.os.Bundle;
-
 public final class eu$a
 {
-  public int aBv = 0;
-  public Bundle aBy;
-  public String auC;
-  public Activity auD;
+  public String asJ;
 }
 
 /* Location:

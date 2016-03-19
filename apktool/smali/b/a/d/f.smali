@@ -4,27 +4,27 @@
 
 
 # instance fields
-.field private bSE:Ljava/net/HttpURLConnection;
+.field private charset:Ljava/lang/String;
 
-.field private jPA:Lb/a/d/j;
+.field private cjv:Ljava/net/HttpURLConnection;
 
-.field private jPB:Lb/a/d/e;
+.field private mdM:Lb/a/d/j;
 
-.field private jPC:Lb/a/d/e;
+.field private mdN:Lb/a/d/e;
 
-.field private jPD:Ljava/util/Map;
+.field private mdO:Lb/a/d/e;
 
-.field private jPE:Ljava/lang/String;
+.field private mdP:Ljava/util/Map;
 
-.field private jPF:Ljava/lang/String;
+.field private mdQ:Ljava/lang/String;
 
-.field private jPG:[B
+.field private mdR:[B
 
-.field private jPH:Z
+.field private mdS:Z
 
-.field private jPI:Ljava/lang/Long;
+.field private mdT:Ljava/lang/Long;
 
-.field private jPJ:Ljava/lang/Long;
+.field private mdU:Ljava/lang/Long;
 
 .field private url:Ljava/lang/String;
 
@@ -40,24 +40,24 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 27
-    iput-object v1, p0, Lb/a/d/f;->jPE:Ljava/lang/String;
+    iput-object v1, p0, Lb/a/d/f;->mdQ:Ljava/lang/String;
 
     .line 30
-    iput-object v1, p0, Lb/a/d/f;->jPG:[B
+    iput-object v1, p0, Lb/a/d/f;->mdR:[B
 
     .line 31
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lb/a/d/f;->jPH:Z
+    iput-boolean v0, p0, Lb/a/d/f;->mdS:Z
 
     .line 32
-    iput-object v1, p0, Lb/a/d/f;->jPI:Ljava/lang/Long;
+    iput-object v1, p0, Lb/a/d/f;->mdT:Ljava/lang/Long;
 
     .line 33
-    iput-object v1, p0, Lb/a/d/f;->jPJ:Ljava/lang/Long;
+    iput-object v1, p0, Lb/a/d/f;->mdU:Ljava/lang/Long;
 
     .line 43
-    iput-object p1, p0, Lb/a/d/f;->jPA:Lb/a/d/j;
+    iput-object p1, p0, Lb/a/d/f;->mdM:Lb/a/d/j;
 
     .line 44
     iput-object p2, p0, Lb/a/d/f;->url:Ljava/lang/String;
@@ -67,102 +67,24 @@
 
     invoke-direct {v0}, Lb/a/d/e;-><init>()V
 
-    iput-object v0, p0, Lb/a/d/f;->jPB:Lb/a/d/e;
+    iput-object v0, p0, Lb/a/d/f;->mdN:Lb/a/d/e;
 
     .line 46
     new-instance v0, Lb/a/d/e;
 
     invoke-direct {v0}, Lb/a/d/e;-><init>()V
 
-    iput-object v0, p0, Lb/a/d/f;->jPC:Lb/a/d/e;
+    iput-object v0, p0, Lb/a/d/f;->mdO:Lb/a/d/e;
 
     .line 47
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lb/a/d/f;->jPD:Ljava/util/Map;
+    iput-object v0, p0, Lb/a/d/f;->mdP:Ljava/util/Map;
 
     .line 48
     return-void
-.end method
-
-.method private aVY()[B
-    .locals 4
-
-    .prologue
-    .line 258
-    iget-object v0, p0, Lb/a/d/f;->jPG:[B
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lb/a/d/f;->jPG:[B
-
-    .line 262
-    :goto_0
-    return-object v0
-
-    .line 259
-    :cond_0
-    iget-object v0, p0, Lb/a/d/f;->jPE:Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lb/a/d/f;->jPE:Ljava/lang/String;
-
-    .line 262
-    :goto_1
-    :try_start_0
-    invoke-virtual {p0}, Lb/a/d/f;->aVT()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 259
-    :cond_1
-    iget-object v0, p0, Lb/a/d/f;->jPC:Lb/a/d/e;
-
-    invoke-virtual {v0}, Lb/a/d/e;->aVX()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_1
-
-    .line 264
-    :catch_0
-    move-exception v0
-
-    .line 266
-    new-instance v1, Lb/a/b/b;
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "Unsupported Charset: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p0}, Lb/a/d/f;->aVT()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2, v0}, Lb/a/b/b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
-
-    throw v1
 .end method
 
 .method private b(Ljava/net/HttpURLConnection;)V
@@ -170,7 +92,7 @@
 
     .prologue
     .line 111
-    iget-object v0, p0, Lb/a/d/f;->jPD:Ljava/util/Map;
+    iget-object v0, p0, Lb/a/d/f;->mdP:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->keySet()Ljava/util/Set;
 
@@ -199,7 +121,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 112
-    iget-object v1, p0, Lb/a/d/f;->jPD:Ljava/util/Map;
+    iget-object v1, p0, Lb/a/d/f;->mdP:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -212,9 +134,100 @@
     goto :goto_0
 .end method
 
+.method private boN()[B
+    .locals 4
+
+    .prologue
+    .line 258
+    iget-object v0, p0, Lb/a/d/f;->mdR:[B
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lb/a/d/f;->mdR:[B
+
+    .line 262
+    :goto_0
+    return-object v0
+
+    .line 259
+    :cond_0
+    iget-object v0, p0, Lb/a/d/f;->mdQ:Ljava/lang/String;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lb/a/d/f;->mdQ:Ljava/lang/String;
+
+    .line 262
+    :goto_1
+    :try_start_0
+    invoke-virtual {p0}, Lb/a/d/f;->boI()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 259
+    :cond_1
+    iget-object v0, p0, Lb/a/d/f;->mdO:Lb/a/d/e;
+
+    invoke-virtual {v0}, Lb/a/d/e;->boM()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
+
+    .line 264
+    :catch_0
+    move-exception v0
+
+    .line 266
+    new-instance v1, Lb/a/b/b;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "Unsupported Charset: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {p0}, Lb/a/d/f;->boI()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-direct {v1, v2, v0}, Lb/a/b/b;-><init>(Ljava/lang/String;Ljava/lang/Exception;)V
+
+    throw v1
+.end method
+
 
 # virtual methods
-.method public aVQ()Lb/a/d/e;
+.method public addHeader(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 136
+    iget-object v0, p0, Lb/a/d/f;->mdP:Ljava/util/Map;
+
+    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 137
+    return-void
+.end method
+
+.method public boF()Lb/a/d/e;
     .locals 3
 
     .prologue
@@ -236,10 +249,10 @@
     move-result-object v1
 
     .line 198
-    invoke-virtual {v0, v1}, Lb/a/d/e;->Cv(Ljava/lang/String;)V
+    invoke-virtual {v0, v1}, Lb/a/d/e;->IP(Ljava/lang/String;)V
 
     .line 199
-    iget-object v1, p0, Lb/a/d/f;->jPB:Lb/a/d/e;
+    iget-object v1, p0, Lb/a/d/f;->mdN:Lb/a/d/e;
 
     invoke-virtual {v0, v1}, Lb/a/d/e;->a(Lb/a/d/e;)V
     :try_end_0
@@ -262,32 +275,32 @@
     throw v1
 .end method
 
-.method public aVR()Lb/a/d/j;
+.method public boG()Lb/a/d/j;
     .locals 1
 
     .prologue
     .line 277
-    iget-object v0, p0, Lb/a/d/f;->jPA:Lb/a/d/j;
+    iget-object v0, p0, Lb/a/d/f;->mdM:Lb/a/d/j;
 
     return-object v0
 .end method
 
-.method public aVS()Ljava/lang/String;
+.method public boH()Ljava/lang/String;
     .locals 5
 
     .prologue
     const/16 v4, 0x3f
 
     .line 87
-    iget-object v1, p0, Lb/a/d/f;->jPB:Lb/a/d/e;
+    iget-object v1, p0, Lb/a/d/f;->mdN:Lb/a/d/e;
 
     iget-object v0, p0, Lb/a/d/f;->url:Ljava/lang/String;
 
     const-string/jumbo v2, "Cannot append to null URL"
 
-    invoke-static {v0, v2}, Lb/a/g/d;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lb/a/g/d;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v1}, Lb/a/d/e;->aVX()Ljava/lang/String;
+    invoke-virtual {v1}, Lb/a/d/e;->boM()Ljava/lang/String;
 
     move-result-object v1
 
@@ -356,12 +369,12 @@
     goto :goto_1
 .end method
 
-.method public aVT()Ljava/lang/String;
+.method public boI()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 297
-    iget-object v0, p0, Lb/a/d/f;->jPF:Ljava/lang/String;
+    iget-object v0, p0, Lb/a/d/f;->charset:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -377,28 +390,28 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lb/a/d/f;->jPF:Ljava/lang/String;
+    iget-object v0, p0, Lb/a/d/f;->charset:Ljava/lang/String;
 
     goto :goto_0
 .end method
 
-.method public aVU()Lb/a/d/g;
+.method public boJ()Lb/a/d/g;
     .locals 4
 
     .prologue
     .line 61
     :try_start_0
-    invoke-virtual {p0}, Lb/a/d/f;->aVS()Ljava/lang/String;
+    invoke-virtual {p0}, Lb/a/d/f;->boH()Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v0, p0, Lb/a/d/f;->bSE:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lb/a/d/f;->cjv:Ljava/net/HttpURLConnection;
 
     if-nez v0, :cond_0
 
     const-string/jumbo v2, "http.keepAlive"
 
-    iget-boolean v0, p0, Lb/a/d/f;->jPH:Z
+    iget-boolean v0, p0, Lb/a/d/f;->mdS:Z
 
     if-eqz v0, :cond_6
 
@@ -417,13 +430,13 @@
 
     check-cast v0, Ljava/net/HttpURLConnection;
 
-    iput-object v0, p0, Lb/a/d/f;->bSE:Ljava/net/HttpURLConnection;
+    iput-object v0, p0, Lb/a/d/f;->cjv:Ljava/net/HttpURLConnection;
 
     .line 62
     :cond_0
-    iget-object v0, p0, Lb/a/d/f;->bSE:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lb/a/d/f;->cjv:Ljava/net/HttpURLConnection;
 
-    iget-object v1, p0, Lb/a/d/f;->jPA:Lb/a/d/j;
+    iget-object v1, p0, Lb/a/d/f;->mdM:Lb/a/d/j;
 
     invoke-virtual {v1}, Lb/a/d/j;->name()Ljava/lang/String;
 
@@ -431,13 +444,13 @@
 
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    iget-object v0, p0, Lb/a/d/f;->jPI:Ljava/lang/Long;
+    iget-object v0, p0, Lb/a/d/f;->mdT:Ljava/lang/Long;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lb/a/d/f;->bSE:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lb/a/d/f;->cjv:Ljava/net/HttpURLConnection;
 
-    iget-object v1, p0, Lb/a/d/f;->jPI:Ljava/lang/Long;
+    iget-object v1, p0, Lb/a/d/f;->mdT:Ljava/lang/Long;
 
     invoke-virtual {v1}, Ljava/lang/Long;->intValue()I
 
@@ -446,13 +459,13 @@
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
     :cond_1
-    iget-object v0, p0, Lb/a/d/f;->jPJ:Ljava/lang/Long;
+    iget-object v0, p0, Lb/a/d/f;->mdU:Ljava/lang/Long;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lb/a/d/f;->bSE:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lb/a/d/f;->cjv:Ljava/net/HttpURLConnection;
 
-    iget-object v1, p0, Lb/a/d/f;->jPJ:Ljava/lang/Long;
+    iget-object v1, p0, Lb/a/d/f;->mdU:Ljava/lang/Long;
 
     invoke-virtual {v1}, Ljava/lang/Long;->intValue()I
 
@@ -461,13 +474,13 @@
     invoke-virtual {v0, v1}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
     :cond_2
-    iget-object v0, p0, Lb/a/d/f;->bSE:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lb/a/d/f;->cjv:Ljava/net/HttpURLConnection;
 
     invoke-direct {p0, v0}, Lb/a/d/f;->b(Ljava/net/HttpURLConnection;)V
 
-    iget-object v0, p0, Lb/a/d/f;->jPA:Lb/a/d/j;
+    iget-object v0, p0, Lb/a/d/f;->mdM:Lb/a/d/j;
 
-    sget-object v1, Lb/a/d/j;->jPS:Lb/a/d/j;
+    sget-object v1, Lb/a/d/j;->med:Lb/a/d/j;
 
     invoke-virtual {v0, v1}, Lb/a/d/j;->equals(Ljava/lang/Object;)Z
 
@@ -475,9 +488,9 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lb/a/d/f;->jPA:Lb/a/d/j;
+    iget-object v0, p0, Lb/a/d/f;->mdM:Lb/a/d/j;
 
-    sget-object v1, Lb/a/d/j;->jPR:Lb/a/d/j;
+    sget-object v1, Lb/a/d/j;->mec:Lb/a/d/j;
 
     invoke-virtual {v0, v1}, Lb/a/d/j;->equals(Ljava/lang/Object;)Z
 
@@ -486,9 +499,9 @@
     if-eqz v0, :cond_5
 
     :cond_3
-    iget-object v0, p0, Lb/a/d/f;->bSE:Ljava/net/HttpURLConnection;
+    iget-object v0, p0, Lb/a/d/f;->cjv:Ljava/net/HttpURLConnection;
 
-    invoke-direct {p0}, Lb/a/d/f;->aVY()[B
+    invoke-direct {p0}, Lb/a/d/f;->boN()[B
 
     move-result-object v1
 
@@ -530,7 +543,7 @@
     :cond_5
     new-instance v0, Lb/a/d/g;
 
-    iget-object v1, p0, Lb/a/d/f;->bSE:Ljava/net/HttpURLConnection;
+    iget-object v1, p0, Lb/a/d/f;->cjv:Ljava/net/HttpURLConnection;
 
     invoke-direct {v0, v1}, Lb/a/d/g;-><init>(Ljava/net/HttpURLConnection;)V
 
@@ -556,17 +569,17 @@
     throw v1
 .end method
 
-.method public aVV()Lb/a/d/e;
+.method public boK()Lb/a/d/e;
     .locals 1
 
     .prologue
     .line 215
-    iget-object v0, p0, Lb/a/d/f;->jPC:Lb/a/d/e;
+    iget-object v0, p0, Lb/a/d/f;->mdO:Lb/a/d/e;
 
     return-object v0
 .end method
 
-.method public aVW()Ljava/lang/String;
+.method public boL()Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -592,27 +605,14 @@
     return-object v0
 .end method
 
-.method public addHeader(Ljava/lang/String;Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 136
-    iget-object v0, p0, Lb/a/d/f;->jPD:Ljava/util/Map;
-
-    invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 137
-    return-void
-.end method
-
-.method public bY(Ljava/lang/String;Ljava/lang/String;)V
+.method public cS(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
     .prologue
     .line 158
-    iget-object v0, p0, Lb/a/d/f;->jPB:Lb/a/d/e;
+    iget-object v0, p0, Lb/a/d/f;->mdN:Lb/a/d/e;
 
-    iget-object v0, v0, Lb/a/d/e;->jPz:Ljava/util/List;
+    iget-object v0, v0, Lb/a/d/e;->mdL:Ljava/util/List;
 
     new-instance v1, Lb/a/d/d;
 
@@ -647,7 +647,7 @@
 
     const/4 v2, 0x0
 
-    invoke-virtual {p0}, Lb/a/d/f;->aVR()Lb/a/d/j;
+    invoke-virtual {p0}, Lb/a/d/f;->boG()Lb/a/d/j;
 
     move-result-object v3
 

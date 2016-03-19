@@ -13,37 +13,37 @@
 
 
 # instance fields
-.field private aMQ:Ljava/lang/String;
+.field private aBH:Ljava/lang/String;
 
-.field private cgr:Landroid/widget/ProgressBar;
+.field private cxD:Landroid/widget/ProgressBar;
 
-.field private eIa:Landroid/widget/ListView;
+.field private dby:Landroid/widget/ListView;
 
-.field private eKK:Ljava/lang/String;
+.field private fVw:Ljava/lang/String;
 
-.field private ivJ:Lcom/tencent/mm/ui/account/jk;
+.field private kuL:Lcom/tencent/mm/ui/account/j;
 
-.field private ivK:Z
+.field private kuM:Z
 
-.field private ivL:Lcom/tencent/mm/ui/account/jk$a;
+.field private kuN:Lcom/tencent/mm/ui/account/j$a;
 
-.field private iwp:Landroid/widget/TextView;
+.field private kvA:Z
 
-.field private iwq:Landroid/os/CountDownTimer;
+.field private kvs:Landroid/widget/TextView;
 
-.field private iwr:I
+.field private kvt:Landroid/os/CountDownTimer;
 
-.field private iws:Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$a;
+.field private kvu:I
 
-.field private iwt:Ljava/util/List;
+.field private kvv:Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$a;
 
-.field iwu:[Ljava/lang/String;
+.field private kvw:Ljava/util/List;
 
-.field private iwv:Landroid/graphics/drawable/Drawable;
+.field kvx:[Ljava/lang/String;
 
-.field private iww:Ljava/util/List;
+.field private kvy:Landroid/graphics/drawable/Drawable;
 
-.field private iwx:Z
+.field private kvz:Ljava/util/List;
 
 
 # direct methods
@@ -53,22 +53,22 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 41
+    .line 44
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
-    .line 58
+    .line 61
     const/16 v0, 0x1e
 
-    iput v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwr:I
+    iput v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvu:I
 
-    .line 63
+    .line 66
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwt:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvw:Ljava/util/List;
 
-    .line 65
+    .line 68
     const/16 v0, 0x10
 
     new-array v0, v0, [Ljava/lang/String;
@@ -167,94 +167,94 @@
 
     aput-object v2, v0, v1
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwu:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvx:[Ljava/lang/String;
 
-    .line 71
+    .line 74
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iww:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvz:Ljava/util/List;
 
-    .line 73
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwx:Z
+    .line 76
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvA:Z
 
-    .line 169
-    new-instance v0, Lcom/tencent/mm/ui/account/gw;
+    .line 172
+    new-instance v0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/gw;-><init>(Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$2;-><init>(Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivL:Lcom/tencent/mm/ui/account/jk$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuN:Lcom/tencent/mm/ui/account/j$a;
 
-    .line 307
+    .line 310
     return-void
 .end method
 
-.method private declared-synchronized AB(Ljava/lang/String;)V
+.method private declared-synchronized Gq(Ljava/lang/String;)V
     .locals 3
 
     .prologue
-    .line 282
+    .line 285
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivJ:Lcom/tencent/mm/ui/account/jk;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuL:Lcom/tencent/mm/ui/account/j;
 
     if-eqz v0, :cond_0
 
-    .line 283
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivJ:Lcom/tencent/mm/ui/account/jk;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/jk;->aMi()V
-
-    .line 284
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivJ:Lcom/tencent/mm/ui/account/jk;
-
     .line 286
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwq:Landroid/os/CountDownTimer;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuL:Lcom/tencent/mm/ui/account/j;
 
-    if-eqz v0, :cond_1
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/j;->bbY()V
 
     .line 287
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwq:Landroid/os/CountDownTimer;
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuL:Lcom/tencent/mm/ui/account/j;
+
+    .line 289
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvt:Landroid/os/CountDownTimer;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwq:Landroid/os/CountDownTimer;
+    .line 290
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvt:Landroid/os/CountDownTimer;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvt:Landroid/os/CountDownTimer;
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->cancel()V
 
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwq:Landroid/os/CountDownTimer;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvt:Landroid/os/CountDownTimer;
 
-    .line 289
+    .line 292
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuM:Z
 
     if-nez v0, :cond_3
 
-    .line 290
+    .line 293
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivK:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuM:Z
 
-    .line 292
+    .line 295
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 293
+    .line 296
     const-string/jumbo v1, "mobile_verify_purpose"
 
     const/4 v2, 0x2
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 294
+    .line 297
     if-eqz p1, :cond_2
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -263,29 +263,29 @@
 
     if-lez v1, :cond_2
 
-    .line 295
+    .line 298
     const-string/jumbo v1, "!32@/B4Tb64lLpKNhhU94SG29vC9zoVXGkMMIntent_sms_code"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 297
+    .line 300
     :cond_2
     const-class v1, Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;
 
     invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->a(Ljava/lang/Class;Landroid/content/Intent;)V
 
-    .line 298
+    .line 301
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->finish()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 300
+    .line 303
     :cond_3
     monitor-exit p0
 
     return-void
 
-    .line 282
+    .line 285
     :catchall_0
     move-exception v0
 
@@ -298,7 +298,7 @@
     .locals 0
 
     .prologue
-    .line 41
+    .line 44
     invoke-direct {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->goBack()V
 
     return-void
@@ -308,8 +308,8 @@
     .locals 0
 
     .prologue
-    .line 41
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->AB(Ljava/lang/String;)V
+    .line 44
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->Gq(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -318,10 +318,10 @@
     .locals 1
 
     .prologue
-    .line 41
+    .line 44
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->AB(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->Gq(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -330,8 +330,8 @@
     .locals 1
 
     .prologue
-    .line 41
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwr:I
+    .line 44
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvu:I
 
     return v0
 .end method
@@ -340,8 +340,8 @@
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->cgr:Landroid/widget/ProgressBar;
+    .line 44
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->cxD:Landroid/widget/ProgressBar;
 
     return-object v0
 .end method
@@ -350,8 +350,8 @@
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iws:Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$a;
+    .line 44
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvv:Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$a;
 
     return-object v0
 .end method
@@ -360,8 +360,8 @@
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->eIa:Landroid/widget/ListView;
+    .line 44
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->dby:Landroid/widget/ListView;
 
     return-object v0
 .end method
@@ -370,10 +370,10 @@
     .locals 1
 
     .prologue
-    .line 41
+    .line 44
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwx:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvA:Z
 
     return v0
 .end method
@@ -382,8 +382,8 @@
     .locals 7
 
     .prologue
-    .line 258
-    sget v0, Lcom/tencent/mm/a$n;->mobile_verify_cancel_tip:I
+    .line 261
+    const v0, 0x7f0b0189
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getString(I)Ljava/lang/String;
 
@@ -391,31 +391,31 @@
 
     const-string/jumbo v2, ""
 
-    sget v0, Lcom/tencent/mm/a$n;->mobile_verify_cancel_tip_back:I
+    const v0, 0x7f0b018b
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    sget v0, Lcom/tencent/mm/a$n;->mobile_verify_cancel_tip_wait:I
+    const v0, 0x7f0b018a
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getString(I)Ljava/lang/String;
 
     move-result-object v4
 
-    new-instance v5, Lcom/tencent/mm/ui/account/gz;
+    new-instance v5, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$4;
 
-    invoke-direct {v5, p0}, Lcom/tencent/mm/ui/account/gz;-><init>(Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;)V
+    invoke-direct {v5, p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$4;-><init>(Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;)V
 
-    new-instance v6, Lcom/tencent/mm/ui/account/ha;
+    new-instance v6, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$5;
 
-    invoke-direct {v6, p0}, Lcom/tencent/mm/ui/account/ha;-><init>(Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;)V
+    invoke-direct {v6, p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$5;-><init>(Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;)V
 
     move-object v0, p0
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/aa;
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
-    .line 274
+    .line 277
     return-void
 .end method
 
@@ -423,8 +423,8 @@
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwt:Ljava/util/List;
+    .line 44
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvw:Ljava/util/List;
 
     return-object v0
 .end method
@@ -433,8 +433,8 @@
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iww:Ljava/util/List;
+    .line 44
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvz:Ljava/util/List;
 
     return-object v0
 .end method
@@ -443,15 +443,15 @@
     .locals 1
 
     .prologue
-    .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwv:Landroid/graphics/drawable/Drawable;
+    .line 44
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvy:Landroid/graphics/drawable/Drawable;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 5
 
     .prologue
@@ -459,8 +459,8 @@
 
     const/4 v1, 0x0
 
-    .line 127
-    sget v0, Lcom/tencent/mm/a$i;->waiting_sms_mobile_number:I
+    .line 130
+    const v0, 0x7f070790
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->findViewById(I)Landroid/view/View;
 
@@ -468,10 +468,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwp:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvs:Landroid/widget/TextView;
 
-    .line 128
-    sget v0, Lcom/tencent/mm/a$i;->waitting_sms_progress_bar:I
+    .line 131
+    const v0, 0x7f070791
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->findViewById(I)Landroid/view/View;
 
@@ -479,10 +479,10 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->cgr:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->cxD:Landroid/widget/ProgressBar;
 
-    .line 129
-    sget v0, Lcom/tencent/mm/a$i;->waitting_sms_chatting_animation_list:I
+    .line 132
+    const v0, 0x7f070792
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->findViewById(I)Landroid/view/View;
 
@@ -490,19 +490,19 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->eIa:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->dby:Landroid/widget/ListView;
 
-    .line 130
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivK:Z
+    .line 133
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuM:Z
 
-    .line 131
-    sget v0, Lcom/tencent/mm/a$n;->bind_mcontact_title_verify:I
+    .line 134
+    const v0, 0x7f0b0501
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    sget-boolean v2, Lcom/tencent/mm/protocal/b;->hgp:Z
+    sget-boolean v2, Lcom/tencent/mm/protocal/b;->iUg:Z
 
     if-eqz v2, :cond_0
 
@@ -510,7 +510,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget v2, Lcom/tencent/mm/a$n;->app_name:I
+    const v2, 0x7f0b1137
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getString(I)Ljava/lang/String;
 
@@ -520,7 +520,7 @@
 
     move-result-object v0
 
-    sget v2, Lcom/tencent/mm/a$n;->alpha_version_alpha:I
+    const v2, 0x7f0b01bb
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getString(I)Ljava/lang/String;
 
@@ -535,7 +535,7 @@
     move-result-object v0
 
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->At(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->Gj(Ljava/lang/String;)V
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getIntent()Landroid/content/Intent;
 
@@ -551,15 +551,15 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aMQ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aBH:Ljava/lang/String;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aMQ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aBH:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/am;->xx(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ai;->CX(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aMQ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aBH:Ljava/lang/String;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getIntent()Landroid/content/Intent;
 
@@ -567,13 +567,13 @@
 
     const-string/jumbo v2, "mobileverify_countdownsec"
 
-    iget v3, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwr:I
+    iget v3, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvu:I
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwr:I
+    iput v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvu:I
 
     new-instance v2, Ljava/util/Random;
 
@@ -582,11 +582,11 @@
     move v0, v1
 
     :goto_0
-    iget v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwr:I
+    iget v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvu:I
 
     if-ge v0, v1, :cond_1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwt:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvw:Ljava/util/List;
 
     invoke-virtual {v2, v4}, Ljava/util/Random;->nextInt(I)I
 
@@ -607,7 +607,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iww:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvz:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
 
@@ -615,7 +615,7 @@
 
     rem-int v1, v0, v1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iww:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvz:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -623,29 +623,29 @@
 
     check-cast v0, Landroid/graphics/drawable/Drawable;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwv:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvy:Landroid/graphics/drawable/Drawable;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iww:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvz:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 133
-    new-instance v0, Lcom/tencent/mm/ui/account/gv;
+    .line 136
+    new-instance v0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/gv;-><init>(Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$1;-><init>(Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
-
-    .line 140
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/am;
-
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/am;-><init>()V
-
-    .line 142
-    const-string/jumbo v0, "86"
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 143
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aMQ:Ljava/lang/String;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ai;
+
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ai;-><init>()V
+
+    .line 145
+    const-string/jumbo v0, "86"
+
+    .line 146
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aBH:Ljava/lang/String;
 
     const-string/jumbo v2, "+"
 
@@ -655,8 +655,8 @@
 
     if-eqz v1, :cond_2
 
-    .line 144
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aMQ:Ljava/lang/String;
+    .line 147
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aBH:Ljava/lang/String;
 
     const-string/jumbo v1, "+"
 
@@ -666,20 +666,20 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aMQ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aBH:Ljava/lang/String;
 
-    .line 145
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aMQ:Ljava/lang/String;
+    .line 148
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aBH:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/am;->xv(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ai;->pW(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 146
+    .line 149
     if-eqz v0, :cond_2
 
-    .line 147
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aMQ:Ljava/lang/String;
+    .line 150
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aBH:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -689,17 +689,17 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aMQ:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aBH:Ljava/lang/String;
 
-    .line 150
+    .line 153
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aMQ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->aBH:Ljava/lang/String;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/am;->formatNumber(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ai;->formatNumber(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 151
+    .line 154
     if-eqz v0, :cond_4
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -708,8 +708,8 @@
 
     if-lez v2, :cond_4
 
-    .line 152
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwp:Landroid/widget/TextView;
+    .line 155
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvs:Landroid/widget/TextView;
 
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -737,48 +737,48 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 158
+    .line 161
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->eIa:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->dby:Landroid/widget/ListView;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setVisibility(I)V
 
-    .line 159
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwq:Landroid/os/CountDownTimer;
+    .line 162
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvt:Landroid/os/CountDownTimer;
 
     if-nez v0, :cond_3
 
-    new-instance v0, Lcom/tencent/mm/ui/account/gx;
+    new-instance v0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$3;
 
-    iget v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwr:I
+    iget v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvu:I
 
     mul-int/lit16 v1, v1, 0x3e8
 
     int-to-long v1, v1
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/tencent/mm/ui/account/gx;-><init>(Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;J)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$3;-><init>(Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;J)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwq:Landroid/os/CountDownTimer;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvt:Landroid/os/CountDownTimer;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->cgr:Landroid/widget/ProgressBar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->cxD:Landroid/widget/ProgressBar;
 
-    iget v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwr:I
+    iget v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvu:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ProgressBar;->setMax(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwq:Landroid/os/CountDownTimer;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvt:Landroid/os/CountDownTimer;
 
     invoke-virtual {v0}, Landroid/os/CountDownTimer;->start()Landroid/os/CountDownTimer;
 
-    .line 167
+    .line 170
     :cond_3
     return-void
 
-    .line 154
+    .line 157
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwp:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvs:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -789,8 +789,8 @@
     .locals 1
 
     .prologue
-    .line 203
-    sget v0, Lcom/tencent/mm/a$k;->mobile_waiting_sms_ui:I
+    .line 206
+    const v0, 0x7f0a0291
 
     return v0
 .end method
@@ -799,62 +799,17 @@
     .locals 3
 
     .prologue
-    .line 77
+    .line 80
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 78
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iww:Ljava/util/List;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/tencent/mm/a$h;->headshow1:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 79
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iww:Ljava/util/List;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/tencent/mm/a$h;->headshow2:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 80
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iww:Ljava/util/List;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v1
-
-    sget v2, Lcom/tencent/mm/a$h;->headshow3:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iww:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvz:Ljava/util/List;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$h;->headshow4:I
+    const v2, 0x7f04027f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -863,13 +818,13 @@
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 82
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iww:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvz:Ljava/util/List;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$h;->headshow5:I
+    const v2, 0x7f040281
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -878,13 +833,28 @@
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iww:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvz:Ljava/util/List;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$h;->headshow6:I
+    const v2, 0x7f040279
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 84
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvz:Ljava/util/List;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f040289
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -893,30 +863,60 @@
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 85
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->DV()V
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvz:Ljava/util/List;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f04027a
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 86
-    new-instance v0, Lcom/tencent/mm/ui/account/jk;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvz:Ljava/util/List;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivL:Lcom/tencent/mm/ui/account/jk$a;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->getResources()Landroid/content/res/Resources;
 
-    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/ui/account/jk;-><init>(Landroid/content/Context;Lcom/tencent/mm/ui/account/jk$a;)V
+    move-result-object v1
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivJ:Lcom/tencent/mm/ui/account/jk;
+    const v2, 0x7f04027b
 
-    .line 87
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivJ:Lcom/tencent/mm/ui/account/jk;
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/jk;->aMh()V
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 88
-    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->DR()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->Gb()V
+
+    .line 89
+    new-instance v0, Lcom/tencent/mm/ui/account/j;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuN:Lcom/tencent/mm/ui/account/j$a;
+
+    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/ui/account/j;-><init>(Landroid/content/Context;Lcom/tencent/mm/ui/account/j$a;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuL:Lcom/tencent/mm/ui/account/j;
+
+    .line 90
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuL:Lcom/tencent/mm/ui/account/j;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/j;->bbX()V
+
+    .line 91
+    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->FX()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->eKK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->fVw:Ljava/lang/String;
 
-    .line 89
+    .line 92
     return-void
 .end method
 
@@ -924,26 +924,26 @@
     .locals 1
 
     .prologue
-    .line 93
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivJ:Lcom/tencent/mm/ui/account/jk;
+    .line 96
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuL:Lcom/tencent/mm/ui/account/j;
 
     if-eqz v0, :cond_0
 
-    .line 94
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivJ:Lcom/tencent/mm/ui/account/jk;
+    .line 97
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuL:Lcom/tencent/mm/ui/account/j;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/jk;->aMi()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/j;->bbY()V
 
-    .line 95
+    .line 98
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->ivJ:Lcom/tencent/mm/ui/account/jk;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuL:Lcom/tencent/mm/ui/account/j;
 
-    .line 97
+    .line 100
     :cond_0
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
 
-    .line 98
+    .line 101
     return-void
 .end method
 
@@ -951,18 +951,18 @@
     .locals 1
 
     .prologue
-    .line 250
+    .line 253
     const/4 v0, 0x4
 
     if-ne p1, v0, :cond_0
 
-    .line 251
+    .line 254
     invoke-direct {p0}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->goBack()V
 
-    .line 252
+    .line 255
     const/4 v0, 0x1
 
-    .line 254
+    .line 257
     :goto_0
     return v0
 
@@ -978,25 +978,25 @@
     .locals 3
 
     .prologue
-    .line 110
+    .line 113
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
-    .line 111
+    .line 114
     const-string/jumbo v0, "RE200_250"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->iY(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kB(Ljava/lang/String;)V
 
-    .line 112
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->iwx:Z
+    .line 115
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kvA:Z
 
     if-eqz v0, :cond_0
 
-    .line 113
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->eKK:Ljava/lang/String;
+    .line 116
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->fVw:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->iZ(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
 
-    .line 117
+    .line 120
     :goto_0
     const/4 v0, 0x0
 
@@ -1004,7 +1004,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1038,7 +1038,7 @@
 
     const-string/jumbo v2, "RE200_250"
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v2
 
@@ -1058,33 +1058,117 @@
 
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/a/b;->b(ZLjava/lang/String;)V
 
-    .line 122
+    .line 125
     return-void
 
-    .line 115
+    .line 118
     :cond_0
     const-string/jumbo v0, "RE200_300"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->iZ(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
 
     goto :goto_0
+.end method
+
+.method public onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+    .locals 7
+
+    .prologue
+    const/4 v6, 0x0
+
+    .line 399
+    const-string/jumbo v0, "!56@/B4Tb64lLpLrFBPJPItazcNtCTs8RBF8eXGwHyiAlBJ3RQishZ+a/Q=="
+
+    const-string/jumbo v1, "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v6
+
+    const/4 v3, 0x1
+
+    aget v4, p3, v6
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Thread;->getId()J
+
+    move-result-wide v4
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 400
+    packed-switch p1, :pswitch_data_0
+
+    .line 413
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 402
+    :pswitch_0
+    aget v0, p3, v6
+
+    if-nez v0, :cond_0
+
+    .line 403
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuL:Lcom/tencent/mm/ui/account/j;
+
+    if-eqz v0, :cond_0
+
+    .line 404
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;->kuL:Lcom/tencent/mm/ui/account/j;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/account/j;->bbZ()V
+
+    goto :goto_0
+
+    .line 400
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x800
+        :pswitch_0
+    .end packed-switch
 .end method
 
 .method protected onResume()V
     .locals 3
 
     .prologue
-    .line 101
+    .line 104
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
-    .line 102
+    .line 105
     const/4 v0, 0x1
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1118,7 +1202,7 @@
 
     const-string/jumbo v2, "RE200_250"
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v2
 
@@ -1138,6 +1222,6 @@
 
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/a/b;->b(ZLjava/lang/String;)V
 
-    .line 107
+    .line 110
     return-void
 .end method

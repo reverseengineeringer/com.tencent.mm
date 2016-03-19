@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field jOC:I
+.field mcO:I
 
 
 # direct methods
@@ -18,18 +18,18 @@
     .line 10
     const/4 v0, 0x0
 
-    iput v0, p0, Loicq/wlogin_sdk/a/aa;->jOC:I
+    iput v0, p0, Loicq/wlogin_sdk/a/aa;->mcO:I
 
     .line 12
     const/16 v0, 0x128
 
-    iput v0, p0, Loicq/wlogin_sdk/a/aa;->jNs:I
+    iput v0, p0, Loicq/wlogin_sdk/a/aa;->mbE:I
 
     .line 13
     return-void
 .end method
 
-.method private static x([BI)I
+.method private static B([BI)I
     .locals 1
 
     .prologue
@@ -69,14 +69,14 @@
     .line 29
     const/16 v0, 0x20
 
-    invoke-static {p4, v0}, Loicq/wlogin_sdk/a/aa;->x([BI)I
+    invoke-static {p4, v0}, Loicq/wlogin_sdk/a/aa;->B([BI)I
 
     move-result v0
 
     .line 30
     const/16 v1, 0x10
 
-    invoke-static {p5, v1}, Loicq/wlogin_sdk/a/aa;->x([BI)I
+    invoke-static {p5, v1}, Loicq/wlogin_sdk/a/aa;->B([BI)I
 
     move-result v1
 
@@ -89,10 +89,10 @@
 
     add-int/lit8 v2, v2, 0x2
 
-    iput v2, p0, Loicq/wlogin_sdk/a/aa;->jOC:I
+    iput v2, p0, Loicq/wlogin_sdk/a/aa;->mcO:I
 
     .line 33
-    iget v2, p0, Loicq/wlogin_sdk/a/aa;->jOC:I
+    iget v2, p0, Loicq/wlogin_sdk/a/aa;->mcO:I
 
     new-array v2, v2, [B
 
@@ -148,20 +148,20 @@
     invoke-static {v2, v0, v4}, Loicq/wlogin_sdk/tools/util;->m([BII)V
 
     .line 61
-    iget v0, p0, Loicq/wlogin_sdk/a/aa;->jNs:I
+    iget v0, p0, Loicq/wlogin_sdk/a/aa;->mbE:I
 
-    invoke-super {p0, v0}, Loicq/wlogin_sdk/a/a;->pV(I)V
+    invoke-super {p0, v0}, Loicq/wlogin_sdk/a/a;->sL(I)V
 
     .line 64
-    iget v0, p0, Loicq/wlogin_sdk/a/aa;->jOC:I
+    iget v0, p0, Loicq/wlogin_sdk/a/aa;->mcO:I
 
-    invoke-super {p0, v2, v0}, Loicq/wlogin_sdk/a/a;->w([BI)V
+    invoke-super {p0, v2, v0}, Loicq/wlogin_sdk/a/a;->A([BI)V
 
     .line 65
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->aVD()V
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->bos()V
 
     .line 67
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->aVz()[B
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->boo()[B
 
     move-result-object v0
 

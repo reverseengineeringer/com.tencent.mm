@@ -2,10 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class im$a
 {
-  public int aCx = 0;
-  public int aCy = 0;
-  public int avp = 0;
-  public String user;
+  public int type;
 }
 
 /* Location:

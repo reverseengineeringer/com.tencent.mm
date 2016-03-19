@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.tools;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.aa;
 import java.util.TimerTask;
 
 final class CropImageView$b
@@ -10,10 +10,10 @@ final class CropImageView$b
   public final void run()
   {
     Message localMessage = new Message();
-    if ((CropImageView.p(jpL)) || (CropImageView.q(jpL)) || (CropImageView.r(jpL)) || (CropImageView.s(jpL))) {}
+    if ((CropImageView.p(luU)) || (CropImageView.q(luU)) || (CropImageView.r(luU)) || (CropImageView.s(luU))) {}
     for (what = 4654;; what = 4653)
     {
-      CropImageView.t(jpL).sendMessage(localMessage);
+      CropImageView.t(luU).sendMessage(localMessage);
       return;
     }
   }

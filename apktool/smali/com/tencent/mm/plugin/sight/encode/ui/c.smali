@@ -1,88 +1,392 @@
-.class final Lcom/tencent/mm/plugin/sight/encode/ui/c;
-.super Ljava/lang/Object;
+.class public final Lcom/tencent/mm/plugin/sight/encode/ui/c;
+.super Lcom/tencent/mm/ui/contact/n;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/ah/n$a;
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/plugin/sight/encode/ui/c$a;
+    }
+.end annotation
+
+
+# static fields
+.field public static gCM:Z
+
+.field public static gCN:Z
 
 
 # instance fields
-.field final synthetic fkI:Lcom/tencent/mm/plugin/sight/encode/ui/b;
+.field gCK:Ljava/util/List;
+
+.field gCL:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/plugin/sight/encode/ui/b;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 154
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->fkI:Lcom/tencent/mm/plugin/sight/encode/ui/b;
+    .line 273
+    const/4 v0, 0x1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCM:Z
+
+    .line 274
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCN:Z
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final dE(I)V
-    .locals 5
+.method public constructor <init>(Lcom/tencent/mm/ui/contact/l;)V
+    .locals 2
 
     .prologue
-    .line 158
-    const-string/jumbo v0, "!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ=="
+    const/4 v1, 0x1
 
-    const-string/jumbo v1, "send sight result %d"
+    .line 43
+    new-instance v0, Ljava/util/ArrayList;
 
-    const/4 v2, 0x1
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    new-array v2, v2, [Ljava/lang/Object;
+    invoke-direct {p0, p1, v0, v1, v1}, Lcom/tencent/mm/ui/contact/n;-><init>(Lcom/tencent/mm/ui/contact/l;Ljava/util/List;ZZ)V
 
-    const/4 v3, 0x0
+    .line 262
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCL:Z
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 44
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCL:Z
 
-    move-result-object v4
+    .line 45
+    const/4 v0, 0x0
 
-    aput-object v4, v2, v3
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCK:Ljava/util/List;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 46
+    return-void
+.end method
 
-    .line 159
-    packed-switch p1, :pswitch_data_0
+.method static synthetic c(Landroid/content/Context;Landroid/view/View;)V
+    .locals 4
 
-    .line 163
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->fkI:Lcom/tencent/mm/plugin/sight/encode/ui/b;
+    .prologue
+    const/16 v3, 0xa
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/b;->fkH:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
+    const/4 v2, 0x0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getContext()Landroid/content/Context;
+    .line 34
+    if-eqz p1, :cond_0
+
+    if-nez p0, :cond_1
+
+    :cond_0
+    :goto_0
+    return-void
+
+    :cond_1
+    invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->fkI:Lcom/tencent/mm/plugin/sight/encode/ui/b;
+    check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/b;->fkH:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;
+    const v1, 0x7f0501a8
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getResources()Landroid/content/res/Resources;
+    invoke-static {p0, v1}, Lcom/tencent/mm/aw/a;->z(Landroid/content/Context;I)I
 
-    move-result-object v1
+    move-result v1
 
-    sget v2, Lcom/tencent/mm/a$n;->sight_draft_send_error:I
+    iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    iput v2, v0, Landroid/widget/RelativeLayout$LayoutParams;->rightMargin:I
 
-    move-result-object v1
+    iput v2, v0, Landroid/widget/RelativeLayout$LayoutParams;->leftMargin:I
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/h;->aN(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-virtual {p1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 166
-    :pswitch_0
-    return-void
+    invoke-static {p0, v3}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
-    .line 159
-    :pswitch_data_0
-    .packed-switch 0x0
-        :pswitch_0
-    .end packed-switch
+    move-result v0
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v1
+
+    invoke-static {p0, v3}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+
+    move-result v2
+
+    invoke-virtual {p1}, Landroid/view/View;->getPaddingTop()I
+
+    move-result v3
+
+    invoke-virtual {p1, v0, v1, v2, v3}, Landroid/view/View;->setPadding(IIII)V
+
+    goto :goto_0
+.end method
+
+.method public static tZ(Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 247
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const-string/jumbo v0, "@sns.tencent"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public static ua(Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 251
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const-string/jumbo v0, "@search.tencent"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public static ub(Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 255
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const-string/jumbo v0, "@draft.tencent"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+
+# virtual methods
+.method public final awQ()Z
+    .locals 1
+
+    .prologue
+    .line 266
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCL:Z
+
+    return v0
+.end method
+
+.method public final getCount()I
+    .locals 1
+
+    .prologue
+    .line 50
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCK:Ljava/util/List;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCK:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method protected final iH(I)Lcom/tencent/mm/ui/contact/a/a;
+    .locals 6
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 66
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCK:Ljava/util/List;
+
+    if-nez v1, :cond_0
+
+    .line 91
+    :goto_0
+    return-object v0
+
+    .line 70
+    :cond_0
+    if-ltz p1, :cond_1
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->getCount()I
+
+    move-result v1
+
+    if-lt p1, v1, :cond_2
+
+    .line 72
+    :cond_1
+    const-string/jumbo v1, "!56@/B4Tb64lLpKAfMIFnYlds00cglACgHwhMBCaf3WDTDLGkMalR3RjnQ=="
+
+    const-string/jumbo v2, "create Data Item Error position=%d"
+
+    const/4 v3, 0x1
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 76
+    :cond_2
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/c$a;
+
+    invoke-direct {v1, p0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/c$a;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/c;I)V
+
+    .line 78
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCK:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    .line 79
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->tZ(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_3
+
+    .line 81
+    new-instance v0, Lcom/tencent/mm/storage/k;
+
+    const-string/jumbo v2, "@sns.tencent"
+
+    invoke-direct {v0, v2}, Lcom/tencent/mm/storage/k;-><init>(Ljava/lang/String;)V
+
+    .line 89
+    :goto_1
+    iput-object v0, v1, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
+
+    .line 90
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCL:Z
+
+    iput-boolean v0, v1, Lcom/tencent/mm/ui/contact/a/a;->lkT:Z
+
+    move-object v0, v1
+
+    .line 91
+    goto :goto_0
+
+    .line 82
+    :cond_3
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->ua(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4
+
+    .line 83
+    new-instance v0, Lcom/tencent/mm/storage/k;
+
+    const-string/jumbo v2, "@search.tencent"
+
+    invoke-direct {v0, v2}, Lcom/tencent/mm/storage/k;-><init>(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 84
+    :cond_4
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->ub(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 85
+    new-instance v0, Lcom/tencent/mm/storage/k;
+
+    const-string/jumbo v2, "@draft.tencent"
+
+    invoke-direct {v0, v2}, Lcom/tencent/mm/storage/k;-><init>(Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 87
+    :cond_5
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
+
+    move-result-object v2
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCK:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+
+    move-result-object v0
+
+    goto :goto_1
 .end method

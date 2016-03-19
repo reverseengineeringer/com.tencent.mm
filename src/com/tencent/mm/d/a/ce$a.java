@@ -2,9 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class ce$a
 {
-  public String aqX;
-  public int axE = 0;
-  public int state = -1;
+  public int op = 0;
 }
 
 /* Location:

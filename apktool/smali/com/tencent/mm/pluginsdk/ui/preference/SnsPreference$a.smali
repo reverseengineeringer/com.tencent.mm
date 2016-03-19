@@ -19,11 +19,11 @@
     .locals 1
 
     .prologue
-    .line 54
+    .line 58
     const v0, -0x777778
 
     invoke-direct {p0, v0}, Landroid/graphics/drawable/ColorDrawable;-><init>(I)V
 
-    .line 55
+    .line 59
     return-void
 .end method

@@ -1,54 +1,64 @@
 package com.tencent.mm.protocal.b;
 
-import com.tencent.mm.al.b;
-import java.util.LinkedList;
-
 public final class ez
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public int hoU;
-  public LinkedList hoV = new LinkedList();
+  public String fUt;
+  public String jct;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.bM(1, hoU);
-      paramVarArgs.c(2, hoV);
+      if (jct != null) {
+        paramVarArgs.d(1, jct);
+      }
+      if (fUt != null) {
+        paramVarArgs.d(2, fUt);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.bI(1, hoU) + 0 + a.a.a.a.b(2, hoV);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = (byte[])paramVarArgs[0];
-      hoV.clear();
-      paramVarArgs = new a.a.a.a.a(paramVarArgs, hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
-        }
+      if (jct == null) {
+        break label234;
       }
-      return 0;
     }
-    if (paramInt == 3)
+    label234:
+    for (paramInt = a.a.a.b.b.a.e(1, jct) + 0;; paramInt = 0)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      ez localez = (ez)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      int i = paramInt;
+      if (fUt != null) {
+        i = paramInt + a.a.a.b.b.a.e(2, fUt);
+      }
+      return i;
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
-      case 1: 
-        hoU = jMD.aVp();
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        ez localez = (ez)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          jct = maU.readString();
+          return 0;
+        }
+        fUt = maU.readString();
         return 0;
       }
-      hoV = new a.a.a.a.a(aVnhga, hfZ).aVk();
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

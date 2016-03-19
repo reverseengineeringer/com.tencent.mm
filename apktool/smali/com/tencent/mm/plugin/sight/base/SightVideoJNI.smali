@@ -22,13 +22,13 @@
     return-void
 .end method
 
-.method public static native drawFrame(ILandroid/graphics/Bitmap;ILandroid/graphics/Bitmap;Z)I
+.method public static native drawFrame(ILandroid/graphics/Bitmap;ILandroid/graphics/Bitmap;ZZ)I
 .end method
 
 .method public static native drawSurfaceColor(Landroid/view/Surface;I)I
 .end method
 
-.method public static native drawSurfaceFrame(ILandroid/view/Surface;ILandroid/graphics/Bitmap;)I
+.method public static native drawSurfaceFrame(ILandroid/view/Surface;ILandroid/graphics/Bitmap;Z)I
 .end method
 
 .method public static native drawSurfaceThumb(Landroid/view/Surface;Landroid/graphics/Bitmap;Landroid/graphics/Bitmap;)I
@@ -61,6 +61,9 @@
 .method public static native getVideoInfo(I)Ljava/lang/String;
 .end method
 
+.method public static native getVideoPlayTime(I)D
+.end method
+
 .method public static native getVideoRate(I)D
 .end method
 
@@ -86,12 +89,12 @@
     .locals 6
 
     .prologue
-    .line 55
+    .line 57
     invoke-static/range {p0 .. p13}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->initDataBuffer(IIIIIIIFIIIIFI)I
 
     move-result v0
 
-    .line 58
+    .line 60
     const-string/jumbo v1, "!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF"
 
     const-string/jumbo v2, "ashutest::call initDataBuffer, ret %d"
@@ -108,9 +111,9 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 59
+    .line 61
     return v0
 .end method
 
@@ -136,7 +139,7 @@
     .locals 5
 
     .prologue
-    .line 68
+    .line 70
     const-string/jumbo v0, "!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF"
 
     const-string/jumbo v1, "ashutest::call release dataBufferRef %d"
@@ -153,12 +156,12 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 69
+    .line 71
     invoke-static {p0}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->releaseDataBuffer(I)V
 
-    .line 70
+    .line 72
     return-void
 .end method
 
@@ -169,7 +172,7 @@
     .locals 4
 
     .prologue
-    .line 63
+    .line 65
     const-string/jumbo v0, "!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF"
 
     const-string/jumbo v1, "ashutest::call release recorder buffer, %s"
@@ -182,16 +185,19 @@
 
     aput-object p0, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 64
+    .line 66
     invoke-static {}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->releaseRecorderBuffer()I
 
-    .line 65
+    .line 67
     return-void
 .end method
 
 .method public static native remuxing(Ljava/lang/String;Ljava/lang/String;IIIIIIF)I
+.end method
+
+.method public static native seekStream(DI)I
 .end method
 
 .method public static native shouldRemuxing(Ljava/lang/String;IIIDI)I

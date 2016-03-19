@@ -14,6 +14,10 @@
 .end annotation
 
 
+# instance fields
+.field public ask:Lcom/tencent/mm/storage/ag;
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0

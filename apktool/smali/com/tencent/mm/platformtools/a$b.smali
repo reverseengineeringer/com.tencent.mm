@@ -15,23 +15,23 @@
 
 
 # direct methods
-.method public static iM(Ljava/lang/String;)I
+.method public static kq(Ljava/lang/String;)I
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
-    .line 216
-    sget-boolean v1, Lcom/tencent/mm/platformtools/a;->bUQ:Z
+    .line 217
+    sget-boolean v1, Lcom/tencent/mm/platformtools/a;->clN:Z
 
     if-nez v1, :cond_1
 
-    .line 223
+    .line 224
     :cond_0
     :goto_0
     return v0
 
-    .line 219
+    .line 220
     :cond_1
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -39,16 +39,16 @@
 
     if-lt v1, v2, :cond_0
 
-    sget-boolean v1, Lcom/tencent/mm/platformtools/a;->bUQ:Z
+    sget-boolean v1, Lcom/tencent/mm/platformtools/a;->clN:Z
 
     if-eqz v1, :cond_0
 
-    .line 220
+    .line 221
     new-instance v0, Lcom/tencent/mm/platformtools/d;
 
     invoke-direct {v0}, Lcom/tencent/mm/platformtools/d;-><init>()V
 
-    invoke-static {p0}, Lcom/tencent/mm/platformtools/d;->iM(Ljava/lang/String;)I
+    invoke-static {p0}, Lcom/tencent/mm/platformtools/d;->kq(Ljava/lang/String;)I
 
     move-result v0
 

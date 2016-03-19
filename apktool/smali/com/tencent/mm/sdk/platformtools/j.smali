@@ -228,7 +228,7 @@
     goto :goto_1
 .end method
 
-.method public static bs(Ljava/lang/String;Ljava/lang/String;)Z
+.method public static ce(Ljava/lang/String;Ljava/lang/String;)Z
     .locals 6
 
     .prologue
@@ -499,7 +499,7 @@
 
     .line 81
     :cond_2
-    invoke-static {p0, p1}, Lcom/tencent/mm/sdk/platformtools/j;->bs(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p0, p1}, Lcom/tencent/mm/sdk/platformtools/j;->ce(Ljava/lang/String;Ljava/lang/String;)Z
 
     .line 82
     if-eqz p2, :cond_3
@@ -607,7 +607,7 @@
     goto :goto_1
 .end method
 
-.method public static v(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
+.method public static w(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
     .locals 7
 
     .prologue
@@ -654,7 +654,7 @@
 
     aput-object p2, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 121
     :goto_1
@@ -719,7 +719,7 @@
 
     aput-object v2, v5, v6
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_1
 

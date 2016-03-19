@@ -1,7 +1,7 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.File;
 
 public class WXAppExtendObject
@@ -44,27 +44,27 @@ public class WXAppExtendObject
   {
     if (((extInfo == null) || (extInfo.length() == 0)) && ((filePath == null) || (filePath.length() == 0)) && ((fileData == null) || (fileData.length == 0)))
     {
-      t.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, all arguments is null");
+      u.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, all arguments is null");
       return false;
     }
     if ((extInfo != null) && (extInfo.length() > 2048))
     {
-      t.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, extInfo is invalid");
+      u.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, extInfo is invalid");
       return false;
     }
     if ((filePath != null) && (filePath.length() > 10240))
     {
-      t.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, filePath is invalid");
+      u.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, filePath is invalid");
       return false;
     }
     if ((filePath != null) && (getFileSize(filePath) > 10485760))
     {
-      t.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, fileSize is too large");
+      u.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, fileSize is too large");
       return false;
     }
     if ((fileData != null) && (fileData.length > 10485760))
     {
-      t.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, fileData is too large");
+      u.e("!44@/B4Tb64lLpKAJT9Dy02QpkEMwHvIJwTozDg5bJjC4PI=", "checkArgs fail, fileData is too large");
       return false;
     }
     return true;

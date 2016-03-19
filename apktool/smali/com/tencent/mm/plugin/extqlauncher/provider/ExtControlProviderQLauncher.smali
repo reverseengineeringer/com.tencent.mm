@@ -4,19 +4,19 @@
 
 
 # static fields
-.field private static final dbj:[Ljava/lang/String;
+.field private static final dKS:Landroid/content/UriMatcher;
 
-.field private static final dby:Landroid/content/UriMatcher;
+.field private static final dKx:[Ljava/lang/String;
 
-.field private static final dcU:[Ljava/lang/String;
+.field private static final dMs:[Ljava/lang/String;
 
 
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field private dbn:[Ljava/lang/String;
+.field private dKH:[Ljava/lang/String;
 
-.field private dcV:I
+.field private dMt:I
 
 
 # direct methods
@@ -36,7 +36,7 @@
     invoke-direct {v0, v1}, Landroid/content/UriMatcher;-><init>(I)V
 
     .line 44
-    sput-object v0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dby:Landroid/content/UriMatcher;
+    sput-object v0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dKS:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.extqlauncher"
 
@@ -47,7 +47,7 @@
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 45
-    sget-object v0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dby:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dKS:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.extqlauncher"
 
@@ -58,7 +58,7 @@
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/UriMatcher;->addURI(Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 46
-    sget-object v0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dby:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dKS:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.extqlauncher"
 
@@ -75,7 +75,7 @@
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dbj:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dKx:[Ljava/lang/String;
 
     .line 51
     const/4 v0, 0x2
@@ -90,7 +90,7 @@
 
     aput-object v1, v0, v5
 
-    sput-object v0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dcU:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dMs:[Ljava/lang/String;
 
     return-void
 .end method
@@ -105,7 +105,7 @@
     .line 54
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dcV:I
+    iput v0, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dMt:I
 
     .line 66
     return-void
@@ -121,13 +121,13 @@
     .line 54
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dcV:I
+    iput v0, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dMt:I
 
     .line 59
-    iput-object p1, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dbn:[Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dKH:[Ljava/lang/String;
 
     .line 60
-    iput p2, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dcV:I
+    iput p2, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dMt:I
 
     .line 61
     iput-object p3, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->context:Landroid/content/Context;
@@ -136,7 +136,7 @@
     return-void
 .end method
 
-.method private q([Ljava/lang/String;)Landroid/database/Cursor;
+.method private r([Ljava/lang/String;)Landroid/database/Cursor;
     .locals 10
 
     .prologue
@@ -153,7 +153,7 @@
 
     const-string/jumbo v2, "getUnreadCount"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 168
     iget-object v1, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->context:Landroid/content/Context;
@@ -161,7 +161,7 @@
     if-nez v1, :cond_0
 
     .line 169
-    invoke-virtual {p0, v9}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v9}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     .line 209
     :goto_0
@@ -181,12 +181,12 @@
 
     const-string/jumbo v2, "wrong args"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 174
     const/4 v1, 0x3
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     goto :goto_0
 
@@ -194,7 +194,7 @@
     :cond_2
     new-instance v1, Landroid/database/MatrixCursor;
 
-    sget-object v2, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dcU:[Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dMs:[Ljava/lang/String;
 
     invoke-direct {v1, v2}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
@@ -214,7 +214,7 @@
     .line 180
     aget-object v4, p1, v2
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v4
 
@@ -244,9 +244,9 @@
 
     const/4 v5, 0x1
 
-    invoke-static {}, Lcom/tencent/mm/plugin/extqlauncher/b;->PN()Lcom/tencent/mm/plugin/extqlauncher/b;
+    invoke-static {}, Lcom/tencent/mm/plugin/extqlauncher/b;->VD()Lcom/tencent/mm/plugin/extqlauncher/b;
 
-    invoke-static {}, Lcom/tencent/mm/plugin/extqlauncher/b;->PO()I
+    invoke-static {}, Lcom/tencent/mm/plugin/extqlauncher/b;->VE()I
 
     move-result v6
 
@@ -269,27 +269,27 @@
     :cond_4
     aget-object v4, p1, v2
 
-    invoke-static {v4}, Lcom/tencent/mm/plugin/base/a/a;->jE(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/tencent/mm/plugin/base/a/a;->lh(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     .line 188
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v5
 
     if-nez v5, :cond_3
 
     .line 189
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/tencent/mm/model/b;->rl()Lcom/tencent/mm/storage/t;
+    invoke-virtual {v5}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
 
     move-result-object v5
 
-    invoke-virtual {v5, v4}, Lcom/tencent/mm/storage/t;->yW(Ljava/lang/String;)Lcom/tencent/mm/storage/s;
+    invoke-virtual {v5, v4}, Lcom/tencent/mm/storage/s;->EA(Ljava/lang/String;)Lcom/tencent/mm/storage/r;
 
     move-result-object v4
 
@@ -309,7 +309,7 @@
 
     const/4 v6, 0x1
 
-    iget v4, v4, Lcom/tencent/mm/d/b/o;->field_unReadCount:I
+    iget v4, v4, Lcom/tencent/mm/d/b/t;->field_unReadCount:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -340,10 +340,10 @@
 
     aput-object v2, v6, v3
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 201
-    invoke-virtual {p0, v9}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v9}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     .line 202
     invoke-virtual {v1}, Landroid/database/MatrixCursor;->close()V
@@ -381,7 +381,7 @@
 
     .line 208
     :cond_6
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     move-object v0, v1
 
@@ -450,14 +450,14 @@
 
     const-string/jumbo v2, "query()"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 81
     iget-object v1, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->context:Landroid/content/Context;
 
-    iget v2, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dcV:I
+    iget v2, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dMt:I
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dbn:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dKH:[Ljava/lang/String;
 
     invoke-virtual {p0, p1, v1, v2, v3}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->a(Landroid/net/Uri;Landroid/content/Context;I[Ljava/lang/String;)V
 
@@ -465,7 +465,7 @@
     if-nez p1, :cond_0
 
     .line 83
-    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     .line 112
     :goto_0
@@ -473,19 +473,19 @@
 
     .line 86
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->PI()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->Vw()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -493,23 +493,23 @@
 
     .line 87
     :cond_1
-    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     goto :goto_0
 
     .line 91
     :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->Hq()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->Vx()Z
 
     move-result v1
 
     if-nez v1, :cond_3
 
     .line 92
-    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     .line 93
-    iget-object v0, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->cjW:Landroid/database/MatrixCursor;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->cBg:Landroid/database/MatrixCursor;
 
     goto :goto_0
 
@@ -517,7 +517,7 @@
     :cond_3
     iget-object v1, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->context:Landroid/content/Context;
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->bh(Landroid/content/Context;)Z
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->bx(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -528,23 +528,23 @@
 
     const-string/jumbo v2, "invalid appid ! return null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 98
     const/4 v1, 0x2
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     goto :goto_0
 
     .line 101
     :cond_4
-    iget v1, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dcV:I
+    iget v1, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dMt:I
 
     packed-switch v1, :pswitch_data_0
 
     .line 111
-    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     goto :goto_0
 
@@ -554,13 +554,13 @@
 
     const-string/jumbo v2, "toScanQRCode"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->context:Landroid/content/Context;
 
     if-nez v1, :cond_5
 
-    invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     goto :goto_0
 
@@ -583,11 +583,11 @@
 
     const-string/jumbo v3, ".ui.BaseScanUI"
 
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/aj/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     new-instance v0, Landroid/database/MatrixCursor;
 
-    sget-object v1, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dbj:[Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dKx:[Ljava/lang/String;
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
@@ -601,7 +601,7 @@
 
     invoke-virtual {v0, v1}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
-    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     goto/16 :goto_0
 
@@ -611,13 +611,13 @@
 
     const-string/jumbo v2, "toCreateShortcut"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     iget-object v1, p0, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->context:Landroid/content/Context;
 
     if-nez v1, :cond_6
 
-    invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v7}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     goto/16 :goto_0
 
@@ -632,11 +632,11 @@
 
     const-string/jumbo v3, ".ui.QLauncherCreateShortcutUI"
 
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/aj/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     new-instance v0, Landroid/database/MatrixCursor;
 
-    sget-object v1, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dbj:[Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->dKx:[Ljava/lang/String;
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
@@ -650,13 +650,13 @@
 
     invoke-virtual {v0, v1}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
 
-    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->fN(I)V
+    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->gK(I)V
 
     goto/16 :goto_0
 
     .line 109
     :pswitch_2
-    invoke-direct {p0, p4}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->q([Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-direct {p0, p4}, Lcom/tencent/mm/plugin/extqlauncher/provider/ExtControlProviderQLauncher;->r([Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 

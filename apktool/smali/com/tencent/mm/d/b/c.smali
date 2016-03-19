@@ -1,26 +1,26 @@
 .class public abstract Lcom/tencent/mm/d/b/c;
-.super Lcom/tencent/mm/sdk/g/ae;
+.super Lcom/tencent/mm/sdk/h/c;
 .source "SourceFile"
 
 
 # static fields
-.field private static final aHH:I
+.field private static final aLG:I
 
-.field public static final aHq:[Ljava/lang/String;
+.field public static final aLn:[Ljava/lang/String;
 
-.field private static final aIb:I
+.field private static final aMa:I
 
-.field private static final aIu:I
+.field private static final aMt:I
 
-.field private static final aIv:I
+.field private static final aMu:I
 
 
 # instance fields
-.field private aHJ:Z
+.field private aLI:Z
 
-.field private aIs:Z
+.field private aMr:Z
 
-.field private aIt:Z
+.field private aMs:Z
 
 .field public field_scene:I
 
@@ -39,7 +39,7 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/mm/d/b/c;->aHq:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/d/b/c;->aLn:[Ljava/lang/String;
 
     .line 42
     const-string/jumbo v0, "userName"
@@ -48,7 +48,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/c;->aIb:I
+    sput v0, Lcom/tencent/mm/d/b/c;->aMa:I
 
     .line 43
     const-string/jumbo v0, "scene"
@@ -57,7 +57,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/c;->aIu:I
+    sput v0, Lcom/tencent/mm/d/b/c;->aMt:I
 
     .line 44
     const-string/jumbo v0, "ticket"
@@ -66,7 +66,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/c;->aIv:I
+    sput v0, Lcom/tencent/mm/d/b/c;->aMu:I
 
     .line 45
     const-string/jumbo v0, "rowid"
@@ -75,7 +75,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/c;->aHH:I
+    sput v0, Lcom/tencent/mm/d/b/c;->aLG:I
 
     return-void
 .end method
@@ -87,42 +87,42 @@
     const/4 v0, 0x1
 
     .line 7
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/g/ae;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/c;-><init>()V
 
     .line 16
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/c;->aHJ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/c;->aLI:Z
 
     .line 18
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/c;->aIs:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/c;->aMr:Z
 
     .line 20
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/c;->aIt:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/c;->aMs:Z
 
     return-void
 .end method
 
-.method public static mB()Lcom/tencent/mm/sdk/g/ae$a;
+.method public static lY()Lcom/tencent/mm/sdk/h/c$a;
     .locals 6
 
     .prologue
     const/4 v5, 0x3
 
     .line 22
-    new-instance v0, Lcom/tencent/mm/sdk/g/ae$a;
+    new-instance v0, Lcom/tencent/mm/sdk/h/c$a;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/g/ae$a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/h/c$a;-><init>()V
 
     .line 23
     new-array v1, v5, [Ljava/lang/reflect/Field;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->bNX:[Ljava/lang/reflect/Field;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
 
     .line 24
     const/4 v1, 0x4
 
     new-array v1, v1, [Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     .line 25
     new-instance v1, Ljava/lang/StringBuilder;
@@ -130,7 +130,7 @@
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
     .line 26
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -139,7 +139,7 @@
     aput-object v4, v2, v3
 
     .line 27
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "userName"
 
@@ -158,7 +158,7 @@
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 30
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x1
 
@@ -167,7 +167,7 @@
     aput-object v4, v2, v3
 
     .line 31
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "scene"
 
@@ -186,7 +186,7 @@
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 34
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x2
 
@@ -195,7 +195,7 @@
     aput-object v4, v2, v3
 
     .line 35
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "ticket"
 
@@ -209,7 +209,7 @@
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 37
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const-string/jumbo v3, "rowid"
 
@@ -220,7 +220,7 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibY:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->jYy:Ljava/lang/String;
 
     .line 40
     return-object v0
@@ -261,7 +261,7 @@
     move-result v3
 
     .line 52
-    sget v4, Lcom/tencent/mm/d/b/c;->aIb:I
+    sget v4, Lcom/tencent/mm/d/b/c;->aMa:I
 
     if-ne v4, v3, :cond_3
 
@@ -281,7 +281,7 @@
 
     .line 55
     :cond_3
-    sget v4, Lcom/tencent/mm/d/b/c;->aIu:I
+    sget v4, Lcom/tencent/mm/d/b/c;->aMt:I
 
     if-ne v4, v3, :cond_4
 
@@ -296,7 +296,7 @@
 
     .line 58
     :cond_4
-    sget v4, Lcom/tencent/mm/d/b/c;->aIv:I
+    sget v4, Lcom/tencent/mm/d/b/c;->aMu:I
 
     if-ne v4, v3, :cond_5
 
@@ -311,7 +311,7 @@
 
     .line 61
     :cond_5
-    sget v4, Lcom/tencent/mm/d/b/c;->aHH:I
+    sget v4, Lcom/tencent/mm/d/b/c;->aLG:I
 
     if-ne v4, v3, :cond_2
 
@@ -320,12 +320,12 @@
 
     move-result-wide v3
 
-    iput-wide v3, p0, Lcom/tencent/mm/d/b/c;->ibV:J
+    iput-wide v3, p0, Lcom/tencent/mm/d/b/c;->jYv:J
 
     goto :goto_1
 .end method
 
-.method public final mA()Landroid/content/ContentValues;
+.method public final lX()Landroid/content/ContentValues;
     .locals 5
 
     .prologue
@@ -335,7 +335,7 @@
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     .line 70
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/c;->aHJ:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/c;->aLI:Z
 
     if-eqz v1, :cond_0
 
@@ -348,7 +348,7 @@
 
     .line 74
     :cond_0
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/c;->aIs:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/c;->aMr:Z
 
     if-eqz v1, :cond_1
 
@@ -365,7 +365,7 @@
 
     .line 78
     :cond_1
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/c;->aIt:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/c;->aMs:Z
 
     if-eqz v1, :cond_2
 
@@ -378,7 +378,7 @@
 
     .line 82
     :cond_2
-    iget-wide v1, p0, Lcom/tencent/mm/d/b/c;->ibV:J
+    iget-wide v1, p0, Lcom/tencent/mm/d/b/c;->jYv:J
 
     const-wide/16 v3, 0x0
 
@@ -389,7 +389,7 @@
     .line 83
     const-string/jumbo v1, "rowid"
 
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/c;->ibV:J
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/c;->jYv:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 

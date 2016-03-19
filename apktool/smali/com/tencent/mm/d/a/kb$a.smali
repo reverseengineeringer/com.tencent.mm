@@ -15,9 +15,15 @@
 
 
 # instance fields
-.field public aHo:Ljava/lang/String;
+.field public aGA:Z
 
-.field public aHp:Ljava/lang/String;
+.field public atB:I
+
+.field public key:I
+
+.field public type:I
+
+.field public value:I
 
 
 # direct methods

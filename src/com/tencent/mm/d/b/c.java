@@ -2,45 +2,44 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
-import com.tencent.mm.sdk.g.ae.a;
+import com.tencent.mm.sdk.h.c.a;
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public abstract class c
-  extends ae
+  extends com.tencent.mm.sdk.h.c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aIb = "userName".hashCode();
-  private static final int aIu = "scene".hashCode();
-  private static final int aIv = "ticket".hashCode();
-  private boolean aHJ = true;
-  private boolean aIs = true;
-  private boolean aIt = true;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int aMa = "userName".hashCode();
+  private static final int aMt = "scene".hashCode();
+  private static final int aMu = "ticket".hashCode();
+  private boolean aLI = true;
+  private boolean aMr = true;
+  private boolean aMs = true;
   public int field_scene;
   public String field_ticket;
   public String field_userName;
   
-  public static ae.a mB()
+  public static c.a lY()
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[3];
-    bbY = new String[4];
+    c.a locala = new c.a();
+    ceD = new Field[3];
+    blR = new String[4];
     StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "userName";
-    ibX.put("userName", "TEXT");
+    blR[0] = "userName";
+    jYx.put("userName", "TEXT");
     localStringBuilder.append(" userName TEXT");
     localStringBuilder.append(", ");
-    bbY[1] = "scene";
-    ibX.put("scene", "INTEGER");
+    blR[1] = "scene";
+    jYx.put("scene", "INTEGER");
     localStringBuilder.append(" scene INTEGER");
     localStringBuilder.append(", ");
-    bbY[2] = "ticket";
-    ibX.put("ticket", "TEXT");
+    blR[2] = "ticket";
+    jYx.put("ticket", "TEXT");
     localStringBuilder.append(" ticket TEXT");
-    bbY[3] = "rowid";
-    ibY = localStringBuilder.toString();
+    blR[3] = "rowid";
+    jYy = localStringBuilder.toString();
     return locala;
   }
   
@@ -57,7 +56,7 @@ public abstract class c
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aIb != k) {
+      if (aMa != k) {
         break label60;
       }
       field_userName = paramCursor.getString(i);
@@ -68,30 +67,30 @@ public abstract class c
       break label20;
       break;
       label60:
-      if (aIu == k) {
+      if (aMt == k) {
         field_scene = paramCursor.getInt(i);
-      } else if (aIv == k) {
+      } else if (aMu == k) {
         field_ticket = paramCursor.getString(i);
-      } else if (aHH == k) {
-        ibV = paramCursor.getLong(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aHJ) {
+    if (aLI) {
       localContentValues.put("userName", field_userName);
     }
-    if (aIs) {
+    if (aMr) {
       localContentValues.put("scene", Integer.valueOf(field_scene));
     }
-    if (aIt) {
+    if (aMs) {
       localContentValues.put("ticket", field_ticket);
     }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

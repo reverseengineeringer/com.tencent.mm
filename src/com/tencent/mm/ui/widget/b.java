@@ -1,28 +1,76 @@
 package com.tencent.mm.ui.widget;
 
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.Context;
+import android.view.View;
+import android.view.View.MeasureSpec;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.AbsListView.LayoutParams;
 
-final class b
-  implements Runnable
+public class b
+  extends ViewGroup
 {
-  b(MMPinProgressBtn paramMMPinProgressBtn) {}
+  private int fh = 48;
   
-  public final void run()
+  public b(Context paramContext)
   {
-    if (jAM.getVisibility() != 0)
-    {
-      t.i("!44@/B4Tb64lLpKIBJ9Tuq9FD5Dg5gDMesCqWRQeWfcTBvw=", "cur progress bar not visiable, stop auto pregress");
+    super(paramContext);
+    setLayoutParams(new AbsListView.LayoutParams(-1, -2));
+  }
+  
+  public int getGravity()
+  {
+    return fh;
+  }
+  
+  protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  {
+    View localView = getChildAt(0);
+    if (localView == null) {
       return;
     }
-    MMPinProgressBtn.a(jAM);
-    if (MMPinProgressBtn.b(jAM) >= MMPinProgressBtn.c(jAM))
+    if (fh == 48)
     {
-      MMPinProgressBtn.d(jAM);
-      t.i("!44@/B4Tb64lLpKIBJ9Tuq9FD5Dg5gDMesCqWRQeWfcTBvw=", "match auto progress max, return");
+      localView.layout(0, 0, getMeasuredWidth(), localView.getMeasuredHeight());
       return;
     }
-    jAM.invalidate();
-    jAM.postDelayed(MMPinProgressBtn.e(jAM), 200L);
+    localView.layout(0, getMeasuredHeight() - localView.getMeasuredHeight(), getMeasuredWidth(), getMeasuredHeight());
+  }
+  
+  protected void onMeasure(int paramInt1, int paramInt2)
+  {
+    int i = View.MeasureSpec.getSize(paramInt2);
+    int j = View.MeasureSpec.getSize(paramInt1);
+    paramInt2 = View.MeasureSpec.getMode(paramInt2);
+    View localView = getChildAt(0);
+    if (localView == null)
+    {
+      setMeasuredDimension(0, j);
+      return;
+    }
+    if (localView.isLayoutRequested()) {
+      measureChild(localView, paramInt1, View.MeasureSpec.makeMeasureSpec(0, 0));
+    }
+    paramInt1 = i;
+    ViewGroup.LayoutParams localLayoutParams;
+    if (paramInt2 == 0)
+    {
+      localLayoutParams = getLayoutParams();
+      if (height <= 0) {
+        break label90;
+      }
+    }
+    label90:
+    for (paramInt1 = height;; paramInt1 = localView.getMeasuredHeight())
+    {
+      setMeasuredDimension(j, paramInt1);
+      return;
+    }
+  }
+  
+  public void setGravity(int paramInt)
+  {
+    fh = paramInt;
   }
 }
 

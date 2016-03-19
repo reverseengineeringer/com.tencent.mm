@@ -1,31 +1,23 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class z
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a auJ = new a();
-  public b auK = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atn = new a();
   
   public z()
   {
-    id = "CommandProcessor";
-    hXT = atO;
+    id = "ChattingUIScrollState";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String auL;
-    public Context context;
-  }
-  
-  public static final class b
-  {
-    public boolean auM = false;
+    public int ato;
   }
 }
 

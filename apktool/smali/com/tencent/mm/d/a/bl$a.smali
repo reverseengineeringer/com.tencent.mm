@@ -15,11 +15,7 @@
 
 
 # instance fields
-.field public avt:Ljava/lang/String;
-
-.field public data:[B
-
-.field public mac:Ljava/lang/String;
+.field public alN:Ljava/lang/String;
 
 
 # direct methods

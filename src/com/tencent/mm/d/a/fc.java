@@ -1,17 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class fc
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azR = new a();
   
   public fc()
   {
-    id = "OnAuthSync";
-    hXT = atO;
+    id = "GetCardCount";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public boolean azS = false;
   }
 }
 

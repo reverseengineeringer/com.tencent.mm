@@ -8,25 +8,23 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.f;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.n;
-import com.tencent.mm.pluginsdk.l.l;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.pluginsdk.i.n;
 import com.tencent.mm.pluginsdk.ui.a.b;
 import com.tencent.mm.ui.base.NoMeasuredTextView;
 import com.tencent.mm.ui.base.preference.Preference;
-import com.tencent.mm.ui.tools.gh;
+import com.tencent.mm.ui.tools.u;
 
 public class AccountInfoPreference
   extends Preference
 {
-  public String accountName;
-  public String avY;
-  public l.l fRp = null;
-  public SpannableString gXF;
-  private int gXG;
-  private View.OnClickListener gXH = null;
+  public String ajh;
+  public i.n htk = null;
+  public SpannableString iNX;
+  public String iNY;
+  private int iNZ;
+  private View.OnClickListener iOa = null;
   
   public AccountInfoPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -41,57 +39,67 @@ public class AccountInfoPreference
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    Object localObject = (ImageView)paramView.findViewById(a.i.avatar_iv);
-    if ((avY != null) && (localObject != null)) {
-      a.b.b((ImageView)localObject, avY);
+    Object localObject = (ImageView)paramView.findViewById(2131165293);
+    if ((ajh != null) && (localObject != null)) {
+      a.b.b((ImageView)localObject, ajh);
     }
-    NoMeasuredTextView localNoMeasuredTextView = (NoMeasuredTextView)paramView.findViewById(a.i.nick_name_tv);
-    if ((avY != null) && (localNoMeasuredTextView != null))
+    NoMeasuredTextView localNoMeasuredTextView = (NoMeasuredTextView)paramView.findViewById(2131169011);
+    if ((ajh != null) && (localNoMeasuredTextView != null))
     {
       localNoMeasuredTextView.setShouldEllipsize(true);
-      localNoMeasuredTextView.setTextSize(0, com.tencent.mm.ao.a.v(mContext, a.g.NormalTextSize));
-      localNoMeasuredTextView.setTextColor(com.tencent.mm.ao.a.t(mContext, a.f.normal_text_color));
-      if (gXF == null)
+      localNoMeasuredTextView.setTextSize(0, a.z(mContext, 2131034564));
+      localNoMeasuredTextView.setTextColor(a.x(mContext, 2131231135));
+      if (iNX == null)
       {
-        localObject = avY;
+        localObject = ajh;
         localNoMeasuredTextView.setText((CharSequence)localObject);
       }
     }
     else
     {
-      localObject = (TextView)paramView.findViewById(a.i.user_name_tv);
-      if ((accountName == null) || (localObject == null)) {
-        break label240;
+      localObject = (TextView)paramView.findViewById(2131169012);
+      if ((iNY == null) || (localObject == null)) {
+        break label231;
       }
-      ((TextView)localObject).setText(paramView.getResources().getString(a.n.app_account, new Object[] { accountName }));
-      label156:
-      localObject = (TextView)paramView.findViewById(a.i.right_prospect);
+      ((TextView)localObject).setText(paramView.getResources().getString(2131431007, new Object[] { iNY }));
+      label150:
+      localObject = (TextView)paramView.findViewById(2131166961);
       if (localObject != null)
       {
-        if (gXG <= 99) {
-          break label253;
+        if (iNZ <= 99) {
+          break label244;
         }
-        ((TextView)localObject).setText(mContext.getString(a.n.wallet_tip_over));
-        ((TextView)localObject).setBackgroundResource(gh.dU(mContext));
+        ((TextView)localObject).setText(mContext.getString(2131430112));
+        ((TextView)localObject).setBackgroundResource(u.eB(mContext));
         ((TextView)localObject).setVisibility(0);
       }
     }
     for (;;)
     {
-      ((ImageView)paramView.findViewById(a.i.account_info_qr_code)).setOnClickListener(new a(this));
+      ((ImageView)paramView.findViewById(2131169013)).setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          if (AccountInfoPreference.a(AccountInfoPreference.this) != null)
+          {
+            h.fUJ.g(11264, new Object[] { Integer.valueOf(1) });
+            AccountInfoPreference.a(AccountInfoPreference.this).show();
+          }
+        }
+      });
       return;
-      localObject = gXF;
+      localObject = iNX;
       break;
-      label240:
+      label231:
       if (localObject == null) {
-        break label156;
+        break label150;
       }
       ((TextView)localObject).setVisibility(8);
-      break label156;
-      label253:
-      if (gXG > 0)
+      break label150;
+      label244:
+      if (iNZ > 0)
       {
-        ((TextView)localObject).setText(gXG);
+        ((TextView)localObject).setText(iNZ);
         ((TextView)localObject).setVisibility(0);
       }
       else

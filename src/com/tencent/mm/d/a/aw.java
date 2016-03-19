@@ -1,23 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class aw
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avP = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aub = new a();
   
   public aw()
   {
-    id = "ExDeviceOnBluetoothStateChange";
-    hXT = atO;
+    id = "DeletePackage";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int avQ = -1;
+    public int auc = -1;
   }
 }
 

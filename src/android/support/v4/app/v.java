@@ -1,486 +1,481 @@
 package android.support.v4.app;
 
-import android.os.Bundle;
-import android.support.v4.c.a;
-import android.support.v4.c.c;
-import android.support.v4.content.b;
-import android.support.v4.content.b.a;
-import java.io.FileDescriptor;
-import java.io.PrintWriter;
-import java.lang.reflect.Modifier;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.content.pm.ServiceInfo;
+import android.os.Build.VERSION;
+import android.os.DeadObjectException;
+import android.os.Handler;
+import android.os.Handler.Callback;
+import android.os.HandlerThread;
+import android.os.IBinder;
+import android.os.Message;
+import android.os.RemoteException;
+import android.provider.Settings.Secure;
+import android.util.Log;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
-final class v
-  extends u
+public final class v
 {
-  static boolean DEBUG = false;
-  final String ba;
-  FragmentActivity bn;
-  boolean bx;
-  final c cW;
-  final c cX;
-  boolean cY;
+  private static final int dC;
+  private static final Object dD = new Object();
+  private static String dE;
+  private static Set dF = new HashSet();
+  private static h dH;
+  public static final b dI;
+  private static final Object sLock = new Object();
+  public final NotificationManager dG;
+  public final Context mContext;
   
-  public final boolean aa()
+  static
   {
-    int j = cW.size();
-    int i = 0;
-    boolean bool2 = false;
-    if (i < j)
-    {
-      a locala = (a)cW.valueAt(i);
-      if ((cY) && (!dg)) {}
-      for (boolean bool1 = true;; bool1 = false)
-      {
-        bool2 |= bool1;
-        i += 1;
-        break;
-      }
-    }
-    return bool2;
-  }
-  
-  final void ac()
-  {
-    if (DEBUG) {
-      new StringBuilder("Starting in ").append(this);
-    }
-    if (cY)
-    {
-      new RuntimeException("here").fillInStackTrace();
-      new StringBuilder("Called doStart when already started: ").append(this);
-      return;
-    }
-    cY = true;
-    int i = cW.size() - 1;
-    label70:
-    Object localObject;
-    if (i >= 0)
-    {
-      localObject = (a)cW.valueAt(i);
-      if ((!bx) || (!dh)) {
-        break label112;
-      }
-      cY = true;
+    if (Build.VERSION.SDK_INT >= 14) {
+      dI = new e();
     }
     for (;;)
     {
-      i -= 1;
-      break label70;
-      break;
-      label112:
-      if (!cY)
-      {
-        cY = true;
-        if (DEBUG) {
-          new StringBuilder("  Starting: ").append(localObject);
-        }
-        if ((dd == null) && (dc != null)) {
-          dd = dc.ab();
-        }
-        if (dd != null)
-        {
-          if ((dd.getClass().isMemberClass()) && (!Modifier.isStatic(dd.getClass().getModifiers()))) {
-            throw new IllegalArgumentException("Object returned from onCreateLoader must not be a non-static inner member class: " + dd);
-          }
-          if (!dj)
-          {
-            b localb = dd;
-            int j = cZ;
-            if (eV != null) {
-              throw new IllegalStateException("There is already a listener registered");
-            }
-            eV = ((b.a)localObject);
-            cZ = j;
-            dj = true;
-          }
-          localObject = dd;
-          cY = true;
-          eX = false;
-          eW = false;
-        }
-      }
-    }
-  }
-  
-  final void ad()
-  {
-    if (DEBUG) {
-      new StringBuilder("Stopping in ").append(this);
-    }
-    if (!cY)
-    {
-      new RuntimeException("here").fillInStackTrace();
-      new StringBuilder("Called doStop when not started: ").append(this);
+      dC = dI.ab();
       return;
+      if (Build.VERSION.SDK_INT >= 5) {
+        dI = new d();
+      } else {
+        dI = new c();
+      }
     }
-    int i = cW.size() - 1;
-    while (i >= 0)
-    {
-      ((a)cW.valueAt(i)).stop();
-      i -= 1;
-    }
-    cY = false;
   }
   
-  final void ae()
+  private v(Context paramContext)
   {
-    if (DEBUG) {
-      new StringBuilder("Retaining in ").append(this);
-    }
-    if (!cY)
+    mContext = paramContext;
+    dG = ((NotificationManager)mContext.getSystemService("notification"));
+  }
+  
+  public static v i(Context paramContext)
+  {
+    return new v(paramContext);
+  }
+  
+  public static Set j(Context paramContext)
+  {
+    paramContext = Settings.Secure.getString(paramContext.getContentResolver(), "enabled_notification_listeners");
+    HashSet localHashSet;
+    if ((paramContext != null) && (!paramContext.equals(dE)))
     {
-      new RuntimeException("here").fillInStackTrace();
-      new StringBuilder("Called doRetain when not started: ").append(this);
-    }
-    for (;;)
-    {
-      return;
-      bx = true;
-      cY = false;
-      int i = cW.size() - 1;
-      while (i >= 0)
+      ??? = paramContext.split(":");
+      localHashSet = new HashSet(???.length);
+      int j = ???.length;
+      int i = 0;
+      while (i < j)
       {
-        a locala = (a)cW.valueAt(i);
-        if (DEBUG) {
-          new StringBuilder("  Retaining: ").append(locala);
+        ComponentName localComponentName = ComponentName.unflattenFromString(???[i]);
+        if (localComponentName != null) {
+          localHashSet.add(localComponentName.getPackageName());
         }
-        bx = true;
-        dh = cY;
-        cY = false;
-        dc = null;
-        i -= 1;
-      }
-    }
-  }
-  
-  final void af()
-  {
-    int i = cW.size() - 1;
-    while (i >= 0)
-    {
-      cW.valueAt(i)).di = true;
-      i -= 1;
-    }
-  }
-  
-  final void ag()
-  {
-    int i = cW.size() - 1;
-    while (i >= 0)
-    {
-      a locala = (a)cW.valueAt(i);
-      if ((cY) && (di))
-      {
-        di = false;
-        if (de) {
-          locala.a(dd, mData);
-        }
-      }
-      i -= 1;
-    }
-  }
-  
-  final void ah()
-  {
-    if (!bx)
-    {
-      if (DEBUG) {
-        new StringBuilder("Destroying Active in ").append(this);
-      }
-      i = cW.size() - 1;
-      while (i >= 0)
-      {
-        ((a)cW.valueAt(i)).destroy();
-        i -= 1;
-      }
-      cW.clear();
-    }
-    if (DEBUG) {
-      new StringBuilder("Destroying Inactive in ").append(this);
-    }
-    int i = cX.size() - 1;
-    while (i >= 0)
-    {
-      ((a)cX.valueAt(i)).destroy();
-      i -= 1;
-    }
-    cX.clear();
-  }
-  
-  public final void dump(String paramString, FileDescriptor paramFileDescriptor, PrintWriter paramPrintWriter, String[] paramArrayOfString)
-  {
-    int j = 0;
-    int i;
-    a locala;
-    if (cW.size() > 0)
-    {
-      paramPrintWriter.print(paramString);
-      paramPrintWriter.println("Active Loaders:");
-      paramArrayOfString = paramString + "    ";
-      i = 0;
-      while (i < cW.size())
-      {
-        locala = (a)cW.valueAt(i);
-        paramPrintWriter.print(paramString);
-        paramPrintWriter.print("  #");
-        paramPrintWriter.print(cW.keyAt(i));
-        paramPrintWriter.print(": ");
-        paramPrintWriter.println(locala.toString());
-        locala.a(paramArrayOfString, paramFileDescriptor, paramPrintWriter);
         i += 1;
       }
     }
-    if (cX.size() > 0)
+    synchronized (dD)
     {
-      paramPrintWriter.print(paramString);
-      paramPrintWriter.println("Inactive Loaders:");
-      paramArrayOfString = paramString + "    ";
-      i = j;
-      while (i < cX.size())
-      {
-        locala = (a)cX.valueAt(i);
-        paramPrintWriter.print(paramString);
-        paramPrintWriter.print("  #");
-        paramPrintWriter.print(cX.keyAt(i));
-        paramPrintWriter.print(": ");
-        paramPrintWriter.println(locala.toString());
-        locala.a(paramArrayOfString, paramFileDescriptor, paramPrintWriter);
-        i += 1;
-      }
+      dF = localHashSet;
+      dE = paramContext;
+      return dF;
     }
   }
   
-  public final String toString()
+  public final void a(i parami)
   {
-    StringBuilder localStringBuilder = new StringBuilder(128);
-    localStringBuilder.append("LoaderManager{");
-    localStringBuilder.append(Integer.toHexString(System.identityHashCode(this)));
-    localStringBuilder.append(" in ");
-    a.a(bn, localStringBuilder);
-    localStringBuilder.append("}}");
-    return localStringBuilder.toString();
+    synchronized (sLock)
+    {
+      if (dH == null) {
+        dH = new h(mContext.getApplicationContext());
+      }
+      dHmHandler.obtainMessage(0, parami).sendToTarget();
+      return;
+    }
   }
   
-  final class a
-    implements b.a
+  private static final class a
+    implements v.i
   {
-    boolean bx;
-    boolean cY;
-    final int cZ;
-    boolean cp;
-    final Bundle da;
-    u.a dc;
-    b dd;
-    boolean de;
-    boolean dg;
-    boolean dh;
-    boolean di;
-    boolean dj;
-    a dk;
-    Object mData;
+    final boolean dJ;
+    final int id;
+    final String packageName;
+    final String tag;
     
-    final void a(b paramb, Object paramObject)
+    public a(String paramString1, int paramInt, String paramString2)
     {
-      String str;
-      if (dc != null)
-      {
-        if (dl.bn == null) {
-          break label163;
-        }
-        str = dl.bn.bL.cq;
-        dl.bn.bL.cq = "onLoadFinished";
-      }
-      for (;;)
-      {
-        try
-        {
-          if (v.DEBUG)
-          {
-            paramb = new StringBuilder("  onLoadFinished in ").append(paramb).append(": ");
-            StringBuilder localStringBuilder = new StringBuilder(64);
-            a.a(paramObject, localStringBuilder);
-            localStringBuilder.append("}");
-            paramb.append(localStringBuilder.toString());
-          }
-          if (dl.bn != null) {
-            dl.bn.bL.cq = str;
-          }
-          dg = true;
-          return;
-        }
-        finally
-        {
-          if (dl.bn != null) {
-            dl.bn.bL.cq = str;
-          }
-        }
-        label163:
-        str = null;
-      }
+      packageName = paramString1;
+      id = paramInt;
+      tag = null;
+      dJ = false;
     }
     
-    public final void a(String paramString, FileDescriptor paramFileDescriptor, PrintWriter paramPrintWriter)
+    public final void a(i parami)
     {
-      paramFileDescriptor = paramString;
-      paramString = this;
-      for (;;)
+      if (dJ)
       {
-        paramPrintWriter.print(paramFileDescriptor);
-        paramPrintWriter.print("mId=");
-        paramPrintWriter.print(cZ);
-        paramPrintWriter.print(" mArgs=");
-        paramPrintWriter.println(da);
-        paramPrintWriter.print(paramFileDescriptor);
-        paramPrintWriter.print("mCallbacks=");
-        paramPrintWriter.println(dc);
-        paramPrintWriter.print(paramFileDescriptor);
-        paramPrintWriter.print("mLoader=");
-        paramPrintWriter.println(dd);
-        if (dd != null)
-        {
-          b localb = dd;
-          String str = paramFileDescriptor + "  ";
-          paramPrintWriter.print(str);
-          paramPrintWriter.print("mId=");
-          paramPrintWriter.print(cZ);
-          paramPrintWriter.print(" mListener=");
-          paramPrintWriter.println(eV);
-          if ((cY) || (eY) || (eZ))
-          {
-            paramPrintWriter.print(str);
-            paramPrintWriter.print("mStarted=");
-            paramPrintWriter.print(cY);
-            paramPrintWriter.print(" mContentChanged=");
-            paramPrintWriter.print(eY);
-            paramPrintWriter.print(" mProcessingChange=");
-            paramPrintWriter.println(eZ);
-          }
-          if ((eW) || (eX))
-          {
-            paramPrintWriter.print(str);
-            paramPrintWriter.print("mAbandoned=");
-            paramPrintWriter.print(eW);
-            paramPrintWriter.print(" mReset=");
-            paramPrintWriter.println(eX);
-          }
-        }
-        if ((de) || (dg))
-        {
-          paramPrintWriter.print(paramFileDescriptor);
-          paramPrintWriter.print("mHaveData=");
-          paramPrintWriter.print(de);
-          paramPrintWriter.print("  mDeliveredData=");
-          paramPrintWriter.println(dg);
-          paramPrintWriter.print(paramFileDescriptor);
-          paramPrintWriter.print("mData=");
-          paramPrintWriter.println(mData);
-        }
-        paramPrintWriter.print(paramFileDescriptor);
-        paramPrintWriter.print("mStarted=");
-        paramPrintWriter.print(cY);
-        paramPrintWriter.print(" mReportNextStart=");
-        paramPrintWriter.print(di);
-        paramPrintWriter.print(" mDestroyed=");
-        paramPrintWriter.println(cp);
-        paramPrintWriter.print(paramFileDescriptor);
-        paramPrintWriter.print("mRetaining=");
-        paramPrintWriter.print(bx);
-        paramPrintWriter.print(" mRetainingStarted=");
-        paramPrintWriter.print(dh);
-        paramPrintWriter.print(" mListenerRegistered=");
-        paramPrintWriter.println(dj);
-        if (dk == null) {
-          break;
-        }
-        paramPrintWriter.print(paramFileDescriptor);
-        paramPrintWriter.println("Pending Loader ");
-        paramPrintWriter.print(dk);
-        paramPrintWriter.println(":");
-        paramString = dk;
-        paramFileDescriptor = paramFileDescriptor + "  ";
-      }
-    }
-    
-    final void destroy()
-    {
-      a locala = this;
-      if (v.DEBUG) {
-        new StringBuilder("  Destroying: ").append(locala);
-      }
-      cp = true;
-      boolean bool = dg;
-      dg = false;
-      Object localObject;
-      if ((dc != null) && (dd != null) && (de) && (bool))
-      {
-        if (v.DEBUG) {
-          new StringBuilder("  Reseting: ").append(locala);
-        }
-        if (dl.bn == null) {
-          break label233;
-        }
-        localObject = dl.bn.bL.cq;
-        dl.bn.bL.cq = "onLoaderReset";
-      }
-      for (;;)
-      {
-        if (dl.bn != null) {
-          dl.bn.bL.cq = ((String)localObject);
-        }
-        dc = null;
-        mData = null;
-        de = false;
-        if (dd != null)
-        {
-          if (dj)
-          {
-            dj = false;
-            dd.a(locala);
-          }
-          localObject = dd;
-          eX = true;
-          cY = false;
-          eW = false;
-          eY = false;
-          eZ = false;
-        }
-        if (dk != null)
-        {
-          locala = dk;
-          break;
-        }
+        parami.i(packageName);
         return;
-        label233:
-        localObject = null;
       }
-    }
-    
-    final void stop()
-    {
-      if (v.DEBUG) {
-        new StringBuilder("  Stopping: ").append(this);
-      }
-      cY = false;
-      if ((!bx) && (dd != null) && (dj))
-      {
-        dj = false;
-        dd.a(this);
-        dd.cY = false;
-      }
+      parami.b(packageName, id, tag);
     }
     
     public final String toString()
     {
-      StringBuilder localStringBuilder = new StringBuilder(64);
-      localStringBuilder.append("LoaderInfo{");
-      localStringBuilder.append(Integer.toHexString(System.identityHashCode(this)));
-      localStringBuilder.append(" #");
-      localStringBuilder.append(cZ);
-      localStringBuilder.append(" : ");
-      a.a(dd, localStringBuilder);
-      localStringBuilder.append("}}");
+      StringBuilder localStringBuilder = new StringBuilder("CancelTask[");
+      localStringBuilder.append("packageName:").append(packageName);
+      localStringBuilder.append(", id:").append(id);
+      localStringBuilder.append(", tag:").append(tag);
+      localStringBuilder.append(", all:").append(dJ);
+      localStringBuilder.append("]");
       return localStringBuilder.toString();
     }
+  }
+  
+  public static abstract interface b
+  {
+    public abstract void a(NotificationManager paramNotificationManager, String paramString, int paramInt);
+    
+    public abstract void a(NotificationManager paramNotificationManager, String paramString, int paramInt, Notification paramNotification);
+    
+    public abstract int ab();
+  }
+  
+  static class c
+    implements v.b
+  {
+    public void a(NotificationManager paramNotificationManager, String paramString, int paramInt)
+    {
+      paramNotificationManager.cancel(paramInt);
+    }
+    
+    public void a(NotificationManager paramNotificationManager, String paramString, int paramInt, Notification paramNotification)
+    {
+      paramNotificationManager.notify(paramInt, paramNotification);
+    }
+    
+    public int ab()
+    {
+      return 1;
+    }
+  }
+  
+  static class d
+    extends v.c
+  {
+    public final void a(NotificationManager paramNotificationManager, String paramString, int paramInt)
+    {
+      paramNotificationManager.cancel(null, paramInt);
+    }
+    
+    public final void a(NotificationManager paramNotificationManager, String paramString, int paramInt, Notification paramNotification)
+    {
+      paramNotificationManager.notify(null, paramInt, paramNotification);
+    }
+  }
+  
+  static final class e
+    extends v.d
+  {
+    public final int ab()
+    {
+      return 33;
+    }
+  }
+  
+  private static final class f
+    implements v.i
+  {
+    final Notification dK;
+    final int id;
+    final String packageName;
+    final String tag;
+    
+    public f(String paramString1, int paramInt, String paramString2, Notification paramNotification)
+    {
+      packageName = paramString1;
+      id = paramInt;
+      tag = null;
+      dK = paramNotification;
+    }
+    
+    public final void a(i parami)
+    {
+      parami.a(packageName, id, tag, dK);
+    }
+    
+    public final String toString()
+    {
+      StringBuilder localStringBuilder = new StringBuilder("NotifyTask[");
+      localStringBuilder.append("packageName:").append(packageName);
+      localStringBuilder.append(", id:").append(id);
+      localStringBuilder.append(", tag:").append(tag);
+      localStringBuilder.append("]");
+      return localStringBuilder.toString();
+    }
+  }
+  
+  private static final class g
+  {
+    final ComponentName dL;
+    final IBinder dM;
+    
+    public g(ComponentName paramComponentName, IBinder paramIBinder)
+    {
+      dL = paramComponentName;
+      dM = paramIBinder;
+    }
+  }
+  
+  private static final class h
+    implements ServiceConnection, Handler.Callback
+  {
+    private final HandlerThread dN;
+    private final Map dO = new HashMap();
+    private Set dP = new HashSet();
+    private final Context mContext;
+    final Handler mHandler;
+    
+    public h(Context paramContext)
+    {
+      mContext = paramContext;
+      dN = new HandlerThread("NotificationManagerCompat");
+      dN.start();
+      mHandler = new Handler(dN.getLooper(), this);
+    }
+    
+    private void a(a parama)
+    {
+      if (dQ)
+      {
+        mContext.unbindService(this);
+        dQ = false;
+      }
+      dR = null;
+    }
+    
+    private void b(a parama)
+    {
+      if (mHandler.hasMessages(3, dL)) {
+        return;
+      }
+      retryCount += 1;
+      if (retryCount > 6)
+      {
+        new StringBuilder("Giving up on delivering ").append(dS.size()).append(" tasks to ").append(dL).append(" after ").append(retryCount).append(" retries");
+        dS.clear();
+        return;
+      }
+      int i = (1 << retryCount - 1) * 1000;
+      if (Log.isLoggable("NotifManCompat", 3)) {
+        new StringBuilder("Scheduling retry for ").append(i).append(" ms");
+      }
+      parama = mHandler.obtainMessage(3, dL);
+      mHandler.sendMessageDelayed(parama, i);
+    }
+    
+    private void c(a parama)
+    {
+      if (Log.isLoggable("NotifManCompat", 3)) {
+        new StringBuilder("Processing component ").append(dL).append(", ").append(dS.size()).append(" queued tasks");
+      }
+      if (dS.isEmpty()) {}
+      for (;;)
+      {
+        return;
+        boolean bool;
+        if (dQ)
+        {
+          bool = true;
+          if ((!bool) || (dR == null)) {
+            b(parama);
+          }
+        }
+        else
+        {
+          localObject = new Intent("android.support.BIND_NOTIFICATION_SIDE_CHANNEL").setComponent(dL);
+          dQ = mContext.bindService((Intent)localObject, this, v.aa());
+          if (dQ) {
+            retryCount = 0;
+          }
+          for (;;)
+          {
+            bool = dQ;
+            break;
+            new StringBuilder("Unable to bind to listener ").append(dL);
+            mContext.unbindService(this);
+          }
+        }
+        Object localObject = (v.i)dS.peek();
+        if (localObject != null) {}
+        try
+        {
+          if (Log.isLoggable("NotifManCompat", 3)) {
+            new StringBuilder("Sending task ").append(localObject);
+          }
+          ((v.i)localObject).a(dR);
+          dS.remove();
+        }
+        catch (DeadObjectException localDeadObjectException)
+        {
+          if (Log.isLoggable("NotifManCompat", 3)) {
+            new StringBuilder("Remote service has died: ").append(dL);
+          }
+          if (dS.isEmpty()) {
+            continue;
+          }
+          b(parama);
+          return;
+        }
+        catch (RemoteException localRemoteException)
+        {
+          for (;;)
+          {
+            new StringBuilder("RemoteException communicating with ").append(dL);
+          }
+        }
+      }
+    }
+    
+    public final boolean handleMessage(Message paramMessage)
+    {
+      Object localObject1;
+      switch (what)
+      {
+      default: 
+        return false;
+      case 0: 
+        paramMessage = (v.i)obj;
+        Object localObject2 = v.j(mContext);
+        if (!((Set)localObject2).equals(dP))
+        {
+          dP = ((Set)localObject2);
+          Object localObject3 = mContext.getPackageManager().queryIntentServices(new Intent().setAction("android.support.BIND_NOTIFICATION_SIDE_CHANNEL"), 4);
+          localObject1 = new HashSet();
+          localObject3 = ((List)localObject3).iterator();
+          while (((Iterator)localObject3).hasNext())
+          {
+            ResolveInfo localResolveInfo = (ResolveInfo)((Iterator)localObject3).next();
+            if (((Set)localObject2).contains(serviceInfo.packageName))
+            {
+              ComponentName localComponentName = new ComponentName(serviceInfo.packageName, serviceInfo.name);
+              if (serviceInfo.permission != null) {
+                new StringBuilder("Permission present on component ").append(localComponentName).append(", not adding listener record.");
+              } else {
+                ((Set)localObject1).add(localComponentName);
+              }
+            }
+          }
+          localObject2 = ((Set)localObject1).iterator();
+          while (((Iterator)localObject2).hasNext())
+          {
+            localObject3 = (ComponentName)((Iterator)localObject2).next();
+            if (!dO.containsKey(localObject3))
+            {
+              if (Log.isLoggable("NotifManCompat", 3)) {
+                new StringBuilder("Adding listener record for ").append(localObject3);
+              }
+              dO.put(localObject3, new a((ComponentName)localObject3));
+            }
+          }
+          localObject2 = dO.entrySet().iterator();
+          while (((Iterator)localObject2).hasNext())
+          {
+            localObject3 = (Map.Entry)((Iterator)localObject2).next();
+            if (!((Set)localObject1).contains(((Map.Entry)localObject3).getKey()))
+            {
+              if (Log.isLoggable("NotifManCompat", 3)) {
+                new StringBuilder("Removing listener record for ").append(((Map.Entry)localObject3).getKey());
+              }
+              a((a)((Map.Entry)localObject3).getValue());
+              ((Iterator)localObject2).remove();
+            }
+          }
+        }
+        localObject1 = dO.values().iterator();
+        while (((Iterator)localObject1).hasNext())
+        {
+          localObject2 = (a)((Iterator)localObject1).next();
+          dS.add(paramMessage);
+          c((a)localObject2);
+        }
+        return true;
+      case 1: 
+        localObject1 = (v.g)obj;
+        paramMessage = dL;
+        localObject1 = dM;
+        paramMessage = (a)dO.get(paramMessage);
+        if (paramMessage != null)
+        {
+          dR = i.a.a((IBinder)localObject1);
+          retryCount = 0;
+          c(paramMessage);
+        }
+        return true;
+      case 2: 
+        paramMessage = (ComponentName)obj;
+        paramMessage = (a)dO.get(paramMessage);
+        if (paramMessage != null) {
+          a(paramMessage);
+        }
+        return true;
+      }
+      paramMessage = (ComponentName)obj;
+      paramMessage = (a)dO.get(paramMessage);
+      if (paramMessage != null) {
+        c(paramMessage);
+      }
+      return true;
+    }
+    
+    public final void onServiceConnected(ComponentName paramComponentName, IBinder paramIBinder)
+    {
+      if (Log.isLoggable("NotifManCompat", 3)) {
+        new StringBuilder("Connected to service ").append(paramComponentName);
+      }
+      mHandler.obtainMessage(1, new v.g(paramComponentName, paramIBinder)).sendToTarget();
+    }
+    
+    public final void onServiceDisconnected(ComponentName paramComponentName)
+    {
+      if (Log.isLoggable("NotifManCompat", 3)) {
+        new StringBuilder("Disconnected from service ").append(paramComponentName);
+      }
+      mHandler.obtainMessage(2, paramComponentName).sendToTarget();
+    }
+    
+    private static final class a
+    {
+      public final ComponentName dL;
+      public boolean dQ = false;
+      public i dR;
+      public LinkedList dS = new LinkedList();
+      public int retryCount = 0;
+      
+      public a(ComponentName paramComponentName)
+      {
+        dL = paramComponentName;
+      }
+    }
+  }
+  
+  private static abstract interface i
+  {
+    public abstract void a(i parami);
   }
 }
 

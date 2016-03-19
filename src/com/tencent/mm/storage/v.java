@@ -1,11 +1,15 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.sdk.g.al;
-
-final class v
-  extends al
+public final class v
+  extends com.tencent.mm.sdk.h.g
 {
-  v(t paramt) {}
+  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS DeletedConversationInfo ( userName TEXT  PRIMARY KEY , lastSeq LONG  , reserved1 INT  , reserved2 LONG  , reserved3 TEXT  ) " };
+  public com.tencent.mm.az.g bCw;
+  
+  public v(com.tencent.mm.az.g paramg)
+  {
+    bCw = paramg;
+  }
 }
 
 /* Location:

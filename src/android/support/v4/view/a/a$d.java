@@ -5,7 +5,7 @@ import android.view.accessibility.AccessibilityNodeInfo;
 final class a$d
   extends a.c
 {
-  public final String w(Object paramObject)
+  public final String z(Object paramObject)
   {
     return ((AccessibilityNodeInfo)paramObject).getViewIdResourceName();
   }

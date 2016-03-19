@@ -1,5 +1,5 @@
 .class public final Landroid/support/v4/app/w;
-.super Ljava/lang/Object;
+.super Landroid/support/v4/app/y$a;
 .source "SourceFile"
 
 
@@ -7,6 +7,8 @@
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
         Landroid/support/v4/app/w$c;,
+        Landroid/support/v4/app/w$e;,
+        Landroid/support/v4/app/w$d;,
         Landroid/support/v4/app/w$b;,
         Landroid/support/v4/app/w$a;
     }
@@ -14,7 +16,21 @@
 
 
 # static fields
-.field private static final dm:Landroid/support/v4/app/w$a;
+.field private static final dX:Landroid/support/v4/app/w$b;
+
+.field public static final dY:Landroid/support/v4/app/y$a$a;
+
+
+# instance fields
+.field private final dT:Ljava/lang/String;
+
+.field private final dU:Ljava/lang/CharSequence;
+
+.field private final dV:[Ljava/lang/CharSequence;
+
+.field private final dW:Z
+
+.field private final mExtras:Landroid/os/Bundle;
 
 
 # direct methods
@@ -22,184 +38,146 @@
     .locals 2
 
     .prologue
-    .line 135
+    .line 253
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    .line 136
-    const/16 v1, 0x10
+    const/16 v1, 0x14
 
     if-lt v0, v1, :cond_0
 
-    .line 137
+    .line 254
     new-instance v0, Landroid/support/v4/app/w$c;
 
     invoke-direct {v0}, Landroid/support/v4/app/w$c;-><init>()V
 
-    sput-object v0, Landroid/support/v4/app/w;->dm:Landroid/support/v4/app/w$a;
+    sput-object v0, Landroid/support/v4/app/w;->dX:Landroid/support/v4/app/w$b;
 
-    .line 141
+    .line 263
     :goto_0
+    new-instance v0, Landroid/support/v4/app/w$1;
+
+    invoke-direct {v0}, Landroid/support/v4/app/w$1;-><init>()V
+
+    sput-object v0, Landroid/support/v4/app/w;->dY:Landroid/support/v4/app/y$a$a;
+
     return-void
 
-    .line 139
-    :cond_0
-    new-instance v0, Landroid/support/v4/app/w$b;
-
-    invoke-direct {v0}, Landroid/support/v4/app/w$b;-><init>()V
-
-    sput-object v0, Landroid/support/v4/app/w;->dm:Landroid/support/v4/app/w$a;
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/app/Activity;)Landroid/content/Intent;
-    .locals 1
-
-    .prologue
-    .line 215
-    sget-object v0, Landroid/support/v4/app/w;->dm:Landroid/support/v4/app/w$a;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/app/w$a;->a(Landroid/app/Activity;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Landroid/content/Context;Landroid/content/ComponentName;)Landroid/content/Intent;
-    .locals 3
-
-    .prologue
     .line 255
-    invoke-static {p0, p1}, Landroid/support/v4/app/w;->b(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
+    :cond_0
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    move-result-object v0
+    const/16 v1, 0x10
+
+    if-lt v0, v1, :cond_1
 
     .line 256
-    if-nez v0, :cond_0
+    new-instance v0, Landroid/support/v4/app/w$e;
 
-    const/4 v0, 0x0
+    invoke-direct {v0}, Landroid/support/v4/app/w$e;-><init>()V
 
-    .line 265
-    :goto_0
-    return-object v0
-
-    .line 259
-    :cond_0
-    new-instance v1, Landroid/content/ComponentName;
-
-    invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v1, v2, v0}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 261
-    invoke-static {p0, v1}, Landroid/support/v4/app/w;->b(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 262
-    if-nez v0, :cond_1
-
-    invoke-static {v1}, Landroid/support/v4/content/a;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    move-result-object v0
+    sput-object v0, Landroid/support/v4/app/w;->dX:Landroid/support/v4/app/w$b;
 
     goto :goto_0
 
+    .line 258
     :cond_1
-    new-instance v0, Landroid/content/Intent;
+    new-instance v0, Landroid/support/v4/app/w$d;
 
-    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/app/w$d;-><init>()V
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setComponent(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    move-result-object v0
+    sput-object v0, Landroid/support/v4/app/w;->dX:Landroid/support/v4/app/w$b;
 
     goto :goto_0
 .end method
 
-.method public static a(Landroid/app/Activity;Landroid/content/Intent;)Z
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/CharSequence;[Ljava/lang/CharSequence;ZLandroid/os/Bundle;)V
+    .locals 0
+
+    .prologue
+    .line 44
+    invoke-direct {p0}, Landroid/support/v4/app/y$a;-><init>()V
+
+    .line 45
+    iput-object p1, p0, Landroid/support/v4/app/w;->dT:Ljava/lang/String;
+
+    .line 46
+    iput-object p2, p0, Landroid/support/v4/app/w;->dU:Ljava/lang/CharSequence;
+
+    .line 47
+    iput-object p3, p0, Landroid/support/v4/app/w;->dV:[Ljava/lang/CharSequence;
+
+    .line 48
+    iput-boolean p4, p0, Landroid/support/v4/app/w;->dW:Z
+
+    .line 49
+    iput-object p5, p0, Landroid/support/v4/app/w;->mExtras:Landroid/os/Bundle;
+
+    .line 50
+    return-void
+.end method
+
+.method public static getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;
     .locals 1
 
     .prologue
-    .line 158
-    sget-object v0, Landroid/support/v4/app/w;->dm:Landroid/support/v4/app/w$a;
+    .line 188
+    sget-object v0, Landroid/support/v4/app/w;->dX:Landroid/support/v4/app/w$b;
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/app/w$a;->a(Landroid/app/Activity;Landroid/content/Intent;)Z
+    invoke-interface {v0, p0}, Landroid/support/v4/app/w$b;->getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;
 
-    move-result v0
+    move-result-object v0
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final getAllowFreeFormInput()Z
+    .locals 1
+
+    .prologue
+    .line 81
+    iget-boolean v0, p0, Landroid/support/v4/app/w;->dW:Z
 
     return v0
 .end method
 
-.method public static b(Landroid/app/Activity;)Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 279
-    :try_start_0
-    invoke-virtual {p0}, Landroid/app/Activity;->getComponentName()Landroid/content/ComponentName;
-
-    move-result-object v0
-
-    invoke-static {p0, v0}, Landroid/support/v4/app/w;->b(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
-    :try_end_0
-    .catch Landroid/content/pm/PackageManager$NameNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    return-object v0
-
-    .line 280
-    :catch_0
-    move-exception v0
-
-    .line 282
-    new-instance v1, Ljava/lang/IllegalArgumentException;
-
-    invoke-direct {v1, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/Throwable;)V
-
-    throw v1
-.end method
-
-.method public static b(Landroid/content/Context;Landroid/content/ComponentName;)Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 297
-    invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
-
-    move-result-object v0
-
-    .line 298
-    const/16 v1, 0x80
-
-    invoke-virtual {v0, p1, v1}, Landroid/content/pm/PackageManager;->getActivityInfo(Landroid/content/ComponentName;I)Landroid/content/pm/ActivityInfo;
-
-    move-result-object v0
-
-    .line 299
-    sget-object v1, Landroid/support/v4/app/w;->dm:Landroid/support/v4/app/w$a;
-
-    invoke-interface {v1, p0, v0}, Landroid/support/v4/app/w$a;->a(Landroid/content/Context;Landroid/content/pm/ActivityInfo;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 300
-    return-object v0
-.end method
-
-.method public static b(Landroid/app/Activity;Landroid/content/Intent;)V
+.method public final getChoices()[Ljava/lang/CharSequence;
     .locals 1
 
     .prologue
-    .line 201
-    sget-object v0, Landroid/support/v4/app/w;->dm:Landroid/support/v4/app/w$a;
+    .line 71
+    iget-object v0, p0, Landroid/support/v4/app/w;->dV:[Ljava/lang/CharSequence;
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/app/w$a;->b(Landroid/app/Activity;Landroid/content/Intent;)V
+    return-object v0
+.end method
 
-    .line 202
-    return-void
+.method public final getExtras()Landroid/os/Bundle;
+    .locals 1
+
+    .prologue
+    .line 88
+    iget-object v0, p0, Landroid/support/v4/app/w;->mExtras:Landroid/os/Bundle;
+
+    return-object v0
+.end method
+
+.method public final getLabel()Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 64
+    iget-object v0, p0, Landroid/support/v4/app/w;->dU:Ljava/lang/CharSequence;
+
+    return-object v0
+.end method
+
+.method public final getResultKey()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 57
+    iget-object v0, p0, Landroid/support/v4/app/w;->dT:Ljava/lang/String;
+
+    return-object v0
 .end method

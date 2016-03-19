@@ -1,33 +1,34 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import java.util.LinkedList;
+import com.tencent.mm.sdk.c.b;
 
 public final class ek
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aAO = new a();
-  public b aAP = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azb = new a();
+  public b azc = new b();
   
   public ek()
   {
-    id = "NetSceneDelChatRoomMember";
-    hXT = atO;
+    id = "FileDownloadQuery";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aAC = false;
-    public String aAQ;
-    public LinkedList aAR;
-    public int atZ = 0;
+    public long ayW = 0L;
   }
   
   public static final class b
   {
-    public int errCode;
+    public String aut;
+    public long azd = 0L;
+    public long aze = 0L;
+    public String path;
+    public int status = 0;
+    public String url;
   }
 }
 

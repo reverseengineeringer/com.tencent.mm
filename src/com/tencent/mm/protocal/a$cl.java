@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cl
-  extends a.c
+  extends a.e
 {
   public a$cl()
   {
-    super("shareWeiboApp", "shareWeiboApp", 107, false);
+    super("nfcCheckState", "nfcCheckState", 155, true);
   }
 }
 

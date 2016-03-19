@@ -1,9 +1,6 @@
 .class final Landroid/support/v4/view/k$a;
-.super Ljava/lang/Object;
+.super Landroid/text/method/SingleLineTransformationMethod;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/support/v4/view/k$d;
 
 
 # annotations
@@ -12,82 +9,69 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0xa
     name = "a"
 .end annotation
 
 
+# instance fields
+.field private fu:Ljava/util/Locale;
+
+
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
     .prologue
-    .line 114
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 36
+    invoke-direct {p0}, Landroid/text/method/SingleLineTransformationMethod;-><init>()V
 
+    .line 37
+    invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget-object v0, v0, Landroid/content/res/Configuration;->locale:Ljava/util/Locale;
+
+    iput-object v0, p0, Landroid/support/v4/view/k$a;->fu:Ljava/util/Locale;
+
+    .line 38
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Landroid/view/MenuItem;Landroid/support/v4/view/k$e;)Landroid/view/MenuItem;
-    .locals 0
+.method public final getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
+    .locals 2
 
     .prologue
-    .line 151
-    return-object p1
-.end method
+    .line 42
+    invoke-super {p0, p1, p2}, Landroid/text/method/SingleLineTransformationMethod;->getTransformation(Ljava/lang/CharSequence;Landroid/view/View;)Ljava/lang/CharSequence;
 
-.method public final a(Landroid/view/MenuItem;Landroid/view/View;)Landroid/view/MenuItem;
-    .locals 0
+    move-result-object v0
 
-    .prologue
-    .line 121
-    return-object p1
-.end method
+    .line 43
+    if-eqz v0, :cond_0
 
-.method public final a(Landroid/view/MenuItem;I)V
-    .locals 0
+    invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    .prologue
-    .line 117
-    return-void
-.end method
+    move-result-object v0
 
-.method public final b(Landroid/view/MenuItem;I)Landroid/view/MenuItem;
-    .locals 0
+    iget-object v1, p0, Landroid/support/v4/view/k$a;->fu:Ljava/util/Locale;
 
-    .prologue
-    .line 126
-    return-object p1
-.end method
+    invoke-virtual {v0, v1}, Ljava/lang/String;->toUpperCase(Ljava/util/Locale;)Ljava/lang/String;
 
-.method public final c(Landroid/view/MenuItem;)Landroid/view/View;
-    .locals 1
+    move-result-object v0
 
-    .prologue
-    .line 131
-    const/4 v0, 0x0
-
+    :goto_0
     return-object v0
-.end method
 
-.method public final d(Landroid/view/MenuItem;)Z
-    .locals 1
-
-    .prologue
-    .line 136
+    :cond_0
     const/4 v0, 0x0
 
-    return v0
-.end method
-
-.method public final e(Landroid/view/MenuItem;)Z
-    .locals 1
-
-    .prologue
-    .line 141
-    const/4 v0, 0x0
-
-    return v0
+    goto :goto_0
 .end method

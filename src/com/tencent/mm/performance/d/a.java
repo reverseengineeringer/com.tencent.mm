@@ -3,8 +3,9 @@ package com.tencent.mm.performance.d;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Looper;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import android.os.Message;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,13 +17,27 @@ public final class a
   extends com.tencent.mm.performance.e.a
 {
   public static String TYPE = "MemoryLeakController";
-  public HashSet bTD;
-  private long bTW = -1L;
-  public HashMap bTX;
-  public HashSet bTY;
-  long bTZ = 0L;
-  public boolean bUa = true;
-  private ac bUb = new b(this, Looper.getMainLooper());
+  private long ckS = -1L;
+  public HashMap ckT;
+  public HashSet ckU;
+  long ckV = 0L;
+  public boolean ckW = true;
+  private aa ckX = new aa(Looper.getMainLooper())
+  {
+    public final void handleMessage(Message paramAnonymousMessage)
+    {
+      super.handleMessage(paramAnonymousMessage);
+      switch (what)
+      {
+      default: 
+        return;
+      }
+      u.d("!32@/B4Tb64lLpJDy+XtaqVVAmxMdLX9z03q", "gc==" + Thread.currentThread().getName());
+      System.gc();
+      a.a(a.this, System.currentTimeMillis());
+    }
+  };
+  public HashSet ckz;
   
   private void a(WeakReference paramWeakReference)
   {
@@ -31,25 +46,25 @@ public final class a
       return;
     }
     boolean bool = ??? instanceof Activity;
-    synchronized (bTD)
+    synchronized (ckz)
     {
-      Iterator localIterator = bTD.iterator();
+      Iterator localIterator = ckz.iterator();
       if (localIterator.hasNext()) {
         ((c)localIterator.next()).a(paramWeakReference, bool);
       }
     }
   }
   
-  public final String Dk()
+  public final String Fs()
   {
     return TYPE;
   }
   
-  public final void Dl()
+  public final void Ft()
   {
     a locala = null;
     int i = 0;
-    if ((bTY == null) || (bTY.isEmpty())) {
+    if ((ckU == null) || (ckU.isEmpty())) {
       return;
     }
     long l1 = System.currentTimeMillis();
@@ -57,9 +72,9 @@ public final class a
     Object localObject3;
     try
     {
-      if (!bTX.isEmpty())
+      if (!ckT.isEmpty())
       {
-        localIterator2 = bTX.keySet().iterator();
+        localIterator2 = ckT.keySet().iterator();
         Iterator localIterator1 = null;
         if (localIterator2.hasNext())
         {
@@ -81,11 +96,11 @@ public final class a
           while (localIterator1.hasNext())
           {
             localObject3 = (WeakReference)localIterator1.next();
-            bTX.remove(localObject3);
+            ckT.remove(localObject3);
           }
         }
       }
-      localIterator2 = bTY.iterator();
+      localIterator2 = ckU.iterator();
     }
     finally {}
     int j = 0;
@@ -96,11 +111,11 @@ public final class a
       if (localIterator2.hasNext())
       {
         locala = (a)localIterator2.next();
-        long l2 = bUg;
-        if (bUe.get() != null) {
+        long l2 = clc;
+        if (cla.get() != null) {
           break label582;
         }
-        if (bUd.get() == null)
+        if (ckZ.get() == null)
         {
           localObject3 = localObject2;
           if (localObject2 == null) {
@@ -110,16 +125,16 @@ public final class a
           localObject2 = localObject3;
           continue;
         }
-        if ((bTZ - l2 <= 8L) || (l1 - bUf < 180000L)) {
+        if ((ckV - l2 <= 8L) || (l1 - clb < 180000L)) {
           break label567;
         }
-        if (bTX.containsKey(bUd))
+        if (ckT.containsKey(ckZ))
         {
-          k = ((Integer)bTX.get(bUd)).intValue();
+          k = ((Integer)ckT.get(ckZ)).intValue();
           if (k >= 3)
           {
-            a(bUd);
-            t.d("!32@/B4Tb64lLpJDy+XtaqVVAmxMdLX9z03q", "memoryleak activity ===" + bUd.get());
+            a(ckZ);
+            u.d("!32@/B4Tb64lLpJDy+XtaqVVAmxMdLX9z03q", "memoryleak activity ===" + ckZ.get());
             if (localObject2 != null) {
               break label564;
             }
@@ -133,13 +148,13 @@ public final class a
       {
         ((ArrayList)localObject2).add(locala);
         break;
-        bTX.put(bUd, Integer.valueOf(k + 1));
+        ckT.put(ckZ, Integer.valueOf(k + 1));
         i = 1;
         break;
-        if (bUf >= bTW - 5000L) {
+        if (clb >= ckS - 5000L) {
           break label577;
         }
-        bTX.put(bUd, Integer.valueOf(1));
+        ckT.put(ckZ, Integer.valueOf(1));
         break;
         if (localObject2 != null)
         {
@@ -147,21 +162,21 @@ public final class a
           while (((Iterator)localObject2).hasNext())
           {
             localObject3 = (a)((Iterator)localObject2).next();
-            bTY.remove(localObject3);
+            ckU.remove(localObject3);
           }
         }
-        if (bUa)
+        if (ckW)
         {
           if (i == 0) {
             break label534;
           }
-          bUb.sendEmptyMessage(1);
+          ckX.sendEmptyMessage(1);
         }
         for (;;)
         {
           return;
-          if ((j != 0) && (l1 - bTW > 30000L)) {
-            bUb.sendEmptyMessage(1);
+          if ((j != 0) && (l1 - ckS > 30000L)) {
+            ckX.sendEmptyMessage(1);
           }
         }
       }
@@ -181,10 +196,10 @@ public final class a
   
   private final class a
   {
-    public WeakReference bUd;
-    public WeakReference bUe;
-    public long bUf;
-    public long bUg = 0L;
+    public WeakReference ckZ;
+    public WeakReference cla;
+    public long clb;
+    public long clc = 0L;
     
     private a() {}
   }
@@ -212,11 +227,11 @@ public final class a
       try
       {
         a.a locala1 = new a.a(locala, (byte)0);
-        bUd = paramActivity;
-        bUe = localWeakReference;
-        bUf = System.currentTimeMillis();
-        bUg = bTZ;
-        bTY.add(locala1);
+        ckZ = paramActivity;
+        cla = localWeakReference;
+        clb = System.currentTimeMillis();
+        clc = ckV;
+        ckU.add(locala1);
         return;
       }
       finally {}

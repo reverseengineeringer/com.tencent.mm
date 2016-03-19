@@ -3,7 +3,6 @@ package android.support.v7.internal.view;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.res.Resources;
-import com.tencent.mm.a.e;
 
 public final class a
 {
@@ -14,17 +13,17 @@ public final class a
     mContext = paramContext;
   }
   
-  public static a f(Context paramContext)
+  public static a m(Context paramContext)
   {
     return new a(paramContext);
   }
   
-  public final boolean bo()
+  public final boolean aY()
   {
-    return mContext.getResources().getBoolean(a.e.abc_action_bar_embed_tabs_pre_jb);
+    return mContext.getResources().getBoolean(2131689473);
   }
   
-  public final boolean bp()
+  public final boolean aZ()
   {
     return mContext.getApplicationInfo().targetSdkVersion < 14;
   }

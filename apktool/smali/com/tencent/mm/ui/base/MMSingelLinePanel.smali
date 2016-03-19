@@ -8,19 +8,19 @@
 
 
 # instance fields
-.field private iCT:I
+.field private kBW:I
 
-.field private iCU:I
+.field private kBX:I
 
-.field private iCV:Ljava/util/LinkedList;
+.field private kBY:Ljava/util/LinkedList;
 
-.field private iHr:Z
+.field private kGE:Z
 
-.field private iHs:Landroid/widget/TextView;
+.field private kGF:Landroid/widget/TextView;
 
-.field private iHt:I
+.field private kGG:I
 
-.field private iHu:I
+.field private kGH:I
 
 
 # direct methods
@@ -79,25 +79,25 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCV:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBY:Ljava/util/LinkedList;
 
     .line 19
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCT:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBW:I
 
     .line 20
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCU:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBX:I
 
     .line 22
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHr:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGE:Z
 
     .line 25
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHt:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGG:I
 
     .line 26
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHu:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGH:I
 
     .line 38
-    sget-object v0, Lcom/tencent/mm/a$p;->FlowLayout:[I
+    sget-object v0, Lcom/tencent/mm/R$b;->FlowLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -112,7 +112,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCT:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBW:I
 
     const/4 v0, 0x1
 
@@ -122,7 +122,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCU:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBX:I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -140,12 +140,12 @@
 
 
 # virtual methods
-.method public final aMW()V
+.method public final bcM()V
     .locals 3
 
     .prologue
     .line 54
-    invoke-super {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->aMW()V
+    invoke-super {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->bcM()V
 
     .line 55
     new-instance v0, Landroid/widget/TextView;
@@ -156,23 +156,23 @@
 
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     const-string/jumbo v1, "..."
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$f;->wechat_green:I
+    const v2, 0x7f0801b9
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -181,7 +181,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
     .line 58
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -190,7 +190,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 59
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->addView(Landroid/view/View;)V
 
@@ -223,7 +223,7 @@
 
     .prologue
     .line 140
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHr:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGE:Z
 
     if-eqz v0, :cond_3
 
@@ -234,7 +234,7 @@
 
     sub-int v0, p4, p2
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHt:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGG:I
 
     sub-int v8, v0, v1
 
@@ -273,7 +273,7 @@
 
     if-eq v5, v10, :cond_8
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     if-eq v9, v5, :cond_8
 
@@ -299,7 +299,7 @@
 
     move-result v5
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBY:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -311,7 +311,7 @@
 
     move-result v0
 
-    iget v12, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCU:I
+    iget v12, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBX:I
 
     add-int/2addr v0, v12
 
@@ -336,7 +336,7 @@
 
     invoke-virtual {v9, v4, v2, v3, v5}, Landroid/view/View;->layout(IIII)V
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCT:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBW:I
 
     add-int/2addr v2, v10
 
@@ -366,19 +366,19 @@
     goto :goto_0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     if-eqz v0, :cond_1
 
     if-lez v1, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHt:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGG:I
 
     add-int/2addr v1, v3
 
-    iget v4, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHu:I
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGH:I
 
     add-int/2addr v4, v2
 
@@ -391,7 +391,7 @@
 
     .line 141
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
@@ -450,7 +450,7 @@
 
     if-eq v3, v8, :cond_4
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     if-eq v7, v3, :cond_4
 
@@ -481,7 +481,7 @@
     move-result v3
 
     .line 158
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBY:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -493,7 +493,7 @@
 
     move-result v0
 
-    iget v10, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCU:I
+    iget v10, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBX:I
 
     add-int/2addr v0, v10
 
@@ -506,7 +506,7 @@
 
     .line 162
     :goto_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBY:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
 
@@ -534,7 +534,7 @@
     invoke-virtual {v7, v3, v10, v11, v0}, Landroid/view/View;->layout(IIII)V
 
     .line 164
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCT:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBW:I
 
     add-int/2addr v0, v8
 
@@ -653,7 +653,7 @@
     move-result v8
 
     .line 79
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBY:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
@@ -684,16 +684,16 @@
 
     .line 92
     :goto_0
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHr:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGE:Z
 
     if-eqz v2, :cond_1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     if-eqz v2, :cond_1
 
     .line 93
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     const/high16 v5, -0x80000000
 
@@ -704,22 +704,22 @@
     invoke-virtual {v2, v5, v0}, Landroid/widget/TextView;->measure(II)V
 
     .line 94
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getMeasuredWidth()I
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHt:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGG:I
 
     .line 95
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getMeasuredHeight()I
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHu:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGH:I
 
     .line 96
     const-string/jumbo v2, "!44@/B4Tb64lLpIWTT1+V73NGcOwBivXqfVq8PGFAIyQgGU="
@@ -732,7 +732,7 @@
 
     const/4 v10, 0x0
 
-    iget v11, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHt:I
+    iget v11, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGG:I
 
     invoke-static {v11}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -740,16 +740,16 @@
 
     aput-object v11, v9, v10
 
-    invoke-static {v2, v5, v9}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v5, v9}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 98
     :cond_1
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHr:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGE:Z
 
     if-eqz v2, :cond_2
 
     .line 99
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHt:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGG:I
 
     sub-int/2addr v1, v2
 
@@ -815,14 +815,14 @@
     const/4 v4, 0x0
 
     .line 113
-    iget v11, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCU:I
+    iget v11, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBX:I
 
     add-int/2addr v11, v2
 
     add-int/2addr v3, v11
 
     .line 114
-    iget-object v11, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCV:Ljava/util/LinkedList;
+    iget-object v11, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBY:Ljava/util/LinkedList;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -844,7 +844,7 @@
     move-result v2
 
     .line 118
-    iget v9, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCT:I
+    iget v9, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBW:I
 
     add-int/2addr v9, v10
 
@@ -890,7 +890,7 @@
 
     .line 121
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iCV:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kBY:Ljava/util/LinkedList;
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -899,7 +899,7 @@
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     .line 122
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHr:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGE:Z
 
     if-eqz v0, :cond_7
 
@@ -976,7 +976,7 @@
 
     .prologue
     .line 64
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHr:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGE:Z
 
     .line 65
     new-instance v0, Landroid/widget/TextView;
@@ -987,17 +987,17 @@
 
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     const-string/jumbo v1, "..."
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 67
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->generateDefaultLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -1006,7 +1006,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->iHs:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->kGF:Landroid/widget/TextView;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMSingelLinePanel;->addView(Landroid/view/View;)V
 

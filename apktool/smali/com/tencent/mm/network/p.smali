@@ -15,17 +15,38 @@
 
 
 # virtual methods
-.method public abstract CF()I
+.method public abstract a(Lcom/tencent/mm/network/d;Lcom/tencent/mm/network/i;II)V
 .end method
 
-.method public abstract CG()V
+.method public abstract a(Lcom/tencent/mm/network/i;II)V
 .end method
 
-.method public abstract CH()J
+.method public abstract a(Lcom/tencent/mm/network/i;IILjava/lang/String;)V
 .end method
 
-.method public abstract c(Lcom/tencent/mm/network/u;)Z
+.method public abstract getType()I
 .end method
 
-.method public abstract d(Lcom/tencent/mm/network/u;)Z
+.method public abstract getUri()Ljava/lang/String;
+.end method
+
+.method public abstract gk(Ljava/lang/String;)V
+.end method
+
+.method public abstract vB()Z
+.end method
+
+.method public abstract vF()I
+.end method
+
+.method public abstract vx()I
+.end method
+
+.method public abstract wf()Lcom/tencent/mm/protocal/e;
+.end method
+
+.method public abstract wg()Lcom/tencent/mm/protocal/f;
+.end method
+
+.method public abstract wh()I
 .end method

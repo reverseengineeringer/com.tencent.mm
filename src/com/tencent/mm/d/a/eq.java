@@ -1,26 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class eq
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aBn = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azo = new a();
   
   public eq()
   {
-    id = "NewNotification";
-    hXT = atO;
+    id = "GCMDoSync";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aBo;
-    public boolean aBp;
-    public boolean aBq;
-    public String aqX;
+    public int type = 15;
   }
 }
 

@@ -4,101 +4,101 @@
 
 
 # instance fields
-.field public SG:I
+.field public RF:I
 
-.field public bhA:I
+.field public brA:I
 
-.field public bhB:I
+.field public brB:I
 
-.field public bhC:I
+.field public brC:I
 
-.field public bhD:I
+.field public brD:I
 
-.field public bhE:I
+.field public brE:I
 
-.field public bhF:I
+.field public brF:I
 
-.field public bhG:Ljava/lang/String;
+.field public brG:I
 
-.field public bhH:Ljava/lang/String;
+.field public brH:Z
 
-.field public bhI:Ljava/lang/String;
+.field public brI:I
 
-.field public bhJ:Ljava/lang/String;
+.field public brJ:I
 
-.field public bhK:Ljava/lang/String;
+.field public brK:I
 
-.field public bhL:Ljava/lang/String;
+.field public brL:I
 
-.field public bhM:Ljava/lang/String;
+.field public brM:I
 
-.field public bhN:Ljava/lang/String;
+.field public brN:I
 
-.field public bhO:Ljava/lang/String;
+.field public brO:I
 
-.field public bhP:Ljava/lang/String;
+.field public brP:I
 
-.field public bhQ:Ljava/lang/String;
+.field public brQ:I
 
-.field public bhR:Ljava/lang/String;
+.field public brR:I
 
-.field public bhS:Ljava/lang/String;
+.field public brS:I
 
-.field public bhT:I
+.field public brT:I
 
-.field public bhU:I
+.field public brU:I
 
-.field public bhV:I
+.field public brV:I
 
-.field public bhW:I
+.field public brW:I
 
-.field public bhc:I
+.field public brX:I
 
-.field public bhd:I
+.field public brY:I
 
-.field public bhe:I
+.field public brZ:I
 
-.field public bhf:I
+.field public bsa:I
 
-.field public bhg:I
+.field public bsb:I
 
-.field public bhh:I
+.field public bsc:I
 
-.field public bhi:I
+.field public bsd:I
 
-.field public bhj:Z
+.field public bse:Ljava/lang/String;
 
-.field public bhk:I
+.field public bsf:Ljava/lang/String;
 
-.field public bhl:I
+.field public bsg:Ljava/lang/String;
 
-.field public bhm:I
+.field public bsh:Ljava/lang/String;
 
-.field public bhn:I
+.field public bsi:Ljava/lang/String;
 
-.field public bho:I
+.field public bsj:Ljava/lang/String;
 
-.field public bhp:I
+.field public bsk:Ljava/lang/String;
 
-.field public bhq:I
+.field public bsl:Ljava/lang/String;
 
-.field public bhr:I
+.field public bsm:Ljava/lang/String;
 
-.field public bhs:I
+.field public bsn:Ljava/lang/String;
 
-.field public bht:I
+.field public bso:Ljava/lang/String;
 
-.field public bhu:I
+.field public bsp:Ljava/lang/String;
 
-.field public bhv:I
+.field public bsq:Ljava/lang/String;
 
-.field public bhw:I
+.field public bsr:I
 
-.field public bhx:I
+.field public bss:I
 
-.field public bhy:I
+.field public bst:I
 
-.field public bhz:I
+.field public bsu:I
 
 
 # direct methods
@@ -116,152 +116,152 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 8
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->SG:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->RF:I
 
     .line 9
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhc:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brA:I
 
     .line 10
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhd:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brB:I
 
     .line 11
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhe:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brC:I
 
     .line 12
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhf:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brD:I
 
     .line 13
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhg:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brE:I
 
     .line 14
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhh:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brF:I
 
     .line 16
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhi:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brG:I
 
     .line 17
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/compatible/d/j;->bhj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/compatible/d/j;->brH:Z
 
     .line 18
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhk:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brI:I
 
     .line 19
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhl:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brJ:I
 
     .line 20
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhm:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brK:I
 
     .line 21
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhn:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brL:I
 
     .line 22
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bho:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brM:I
 
     .line 23
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhp:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brN:I
 
     .line 24
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhq:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brO:I
 
     .line 25
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhr:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brP:I
 
     .line 26
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhs:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brQ:I
 
     .line 27
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bht:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brR:I
 
     .line 28
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhu:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brS:I
 
     .line 29
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhv:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brT:I
 
     .line 30
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhw:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brU:I
 
     .line 31
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhx:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brV:I
 
     .line 32
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhy:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brW:I
 
     .line 33
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhz:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brX:I
 
     .line 34
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhA:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brY:I
 
     .line 35
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhB:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brZ:I
 
     .line 37
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhC:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bsa:I
 
     .line 38
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhD:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bsb:I
 
     .line 39
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhE:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bsc:I
 
     .line 40
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhF:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bsd:I
 
     .line 42
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhG:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bse:Ljava/lang/String;
 
     .line 43
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhH:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsf:Ljava/lang/String;
 
     .line 44
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhI:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsg:Ljava/lang/String;
 
     .line 45
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhJ:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsh:Ljava/lang/String;
 
     .line 46
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhK:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsi:Ljava/lang/String;
 
     .line 47
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhL:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsj:Ljava/lang/String;
 
     .line 48
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhM:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsk:Ljava/lang/String;
 
     .line 49
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhN:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsl:Ljava/lang/String;
 
     .line 50
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhO:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsm:Ljava/lang/String;
 
     .line 51
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhP:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsn:Ljava/lang/String;
 
     .line 52
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhQ:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bso:Ljava/lang/String;
 
     .line 53
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhR:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsp:Ljava/lang/String;
 
     .line 54
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhS:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsq:Ljava/lang/String;
 
     .line 55
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhT:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bsr:I
 
     .line 56
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/j;->bhU:I
+    iput v0, p0, Lcom/tencent/mm/compatible/d/j;->bss:I
 
     .line 58
-    iput v3, p0, Lcom/tencent/mm/compatible/d/j;->bhV:I
+    iput v3, p0, Lcom/tencent/mm/compatible/d/j;->bst:I
 
     .line 60
-    iput v3, p0, Lcom/tencent/mm/compatible/d/j;->bhW:I
+    iput v3, p0, Lcom/tencent/mm/compatible/d/j;->bsu:I
 
     .line 63
     invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/j;->reset()V
@@ -283,158 +283,158 @@
     const/4 v1, -0x1
 
     .line 68
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->SG:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->RF:I
 
     .line 69
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhc:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brA:I
 
     .line 70
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhd:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brB:I
 
     .line 71
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhe:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brC:I
 
     .line 72
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhf:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brD:I
 
     .line 73
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhg:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brE:I
 
     .line 74
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhi:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brG:I
 
     .line 75
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhh:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brF:I
 
     .line 76
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhl:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brJ:I
 
     .line 77
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhm:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brK:I
 
     .line 78
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhn:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brL:I
 
     .line 79
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bho:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brM:I
 
     .line 80
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/compatible/d/j;->bhj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/compatible/d/j;->brH:Z
 
     .line 81
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhk:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brI:I
 
     .line 82
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhp:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brN:I
 
     .line 83
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhq:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brO:I
 
     .line 84
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhr:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brP:I
 
     .line 85
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhs:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brQ:I
 
     .line 86
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bht:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brR:I
 
     .line 87
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhw:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brU:I
 
     .line 88
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhv:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brT:I
 
     .line 89
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhx:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brV:I
 
     .line 90
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhy:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brW:I
 
     .line 91
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhu:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brS:I
 
     .line 92
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhx:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brV:I
 
     .line 93
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhy:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brW:I
 
     .line 94
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhB:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brZ:I
 
     .line 96
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhC:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bsa:I
 
     .line 97
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhD:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bsb:I
 
     .line 98
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhE:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bsc:I
 
     .line 99
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhF:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bsd:I
 
     .line 101
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhG:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bse:Ljava/lang/String;
 
     .line 102
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhH:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsf:Ljava/lang/String;
 
     .line 103
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhI:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsg:Ljava/lang/String;
 
     .line 104
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhJ:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsh:Ljava/lang/String;
 
     .line 105
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhz:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brX:I
 
     .line 106
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhK:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsi:Ljava/lang/String;
 
     .line 107
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhL:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsj:Ljava/lang/String;
 
     .line 108
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhM:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsk:Ljava/lang/String;
 
     .line 109
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhN:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsl:Ljava/lang/String;
 
     .line 110
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhO:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsm:Ljava/lang/String;
 
     .line 111
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhP:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsn:Ljava/lang/String;
 
     .line 112
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhA:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->brY:I
 
     .line 113
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhQ:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bso:Ljava/lang/String;
 
     .line 114
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhR:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsp:Ljava/lang/String;
 
     .line 115
-    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bhS:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/compatible/d/j;->bsq:Ljava/lang/String;
 
     .line 116
-    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bhT:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/j;->bsr:I
 
     .line 117
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/j;->bhU:I
+    iput v0, p0, Lcom/tencent/mm/compatible/d/j;->bss:I
 
     .line 119
-    iput v3, p0, Lcom/tencent/mm/compatible/d/j;->bhV:I
+    iput v3, p0, Lcom/tencent/mm/compatible/d/j;->bst:I
 
     .line 120
-    iput v3, p0, Lcom/tencent/mm/compatible/d/j;->bhW:I
+    iput v3, p0, Lcom/tencent/mm/compatible/d/j;->bsu:I
 
     .line 121
     return-void

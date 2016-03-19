@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract onCallback(Ljava/lang/String;Landroid/os/Bundle;Z)V
+.method public abstract a(Ljava/lang/String;Ljava/lang/String;Landroid/os/Bundle;Lcom/tencent/mm/remoteservice/b;)V
 .end method

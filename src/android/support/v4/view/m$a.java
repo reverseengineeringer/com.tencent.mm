@@ -1,26 +1,84 @@
 package android.support.v4.view;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnActionExpandListener;
+import android.graphics.Paint;
+import android.graphics.drawable.Drawable;
+import android.view.View;
+import android.view.ViewParent;
 
-final class m$a
-  implements MenuItem.OnActionExpandListener
+class m$a
+  implements m.h
 {
-  private m.b fz;
-  
-  public m$a(m.b paramb)
+  public void a(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    fz = paramb;
+    paramView.postInvalidateDelayed(ah(), paramInt1, paramInt2, paramInt3, paramInt4);
   }
   
-  public final boolean onMenuItemActionCollapse(MenuItem paramMenuItem)
+  public void a(View paramView, int paramInt, Paint paramPaint) {}
+  
+  public void a(View paramView, Paint paramPaint) {}
+  
+  public void a(View paramView, a parama) {}
+  
+  public void a(View paramView, Runnable paramRunnable)
   {
-    return fz.ay();
+    paramView.postDelayed(paramRunnable, ah());
   }
   
-  public final boolean onMenuItemActionExpand(MenuItem paramMenuItem)
+  public boolean a(View paramView, int paramInt)
   {
-    return fz.ax();
+    return false;
+  }
+  
+  long ah()
+  {
+    return 10L;
+  }
+  
+  public void b(View paramView, int paramInt) {}
+  
+  public int f(View paramView)
+  {
+    return 2;
+  }
+  
+  public void g(View paramView)
+  {
+    paramView.postInvalidateDelayed(ah());
+  }
+  
+  public int h(View paramView)
+  {
+    return 0;
+  }
+  
+  public int j(View paramView)
+  {
+    return 0;
+  }
+  
+  public int k(View paramView)
+  {
+    return 0;
+  }
+  
+  public ViewParent l(View paramView)
+  {
+    return paramView.getParent();
+  }
+  
+  public boolean m(View paramView)
+  {
+    boolean bool2 = false;
+    paramView = paramView.getBackground();
+    boolean bool1 = bool2;
+    if (paramView != null)
+    {
+      bool1 = bool2;
+      if (paramView.getOpacity() == -1) {
+        bool1 = true;
+      }
+    }
+    return bool1;
   }
 }
 

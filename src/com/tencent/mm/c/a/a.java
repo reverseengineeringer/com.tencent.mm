@@ -1,32 +1,39 @@
 package com.tencent.mm.c.a;
 
 import android.content.Context;
-import com.tencent.mm.c.b.m.b;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelvoice.ac;
-import com.tencent.mm.modelvoice.ae;
-import com.tencent.mm.modelvoice.ah;
-import com.tencent.mm.modelvoice.d.a;
+import com.tencent.mm.c.b.g.b;
+import com.tencent.mm.compatible.d.p;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.modelvoice.d.b;
-import com.tencent.mm.modelvoice.m;
+import com.tencent.mm.modelvoice.i;
+import com.tencent.mm.modelvoice.j;
+import com.tencent.mm.modelvoice.o;
 import com.tencent.mm.modelvoice.q;
-import com.tencent.mm.q.f;
-import com.tencent.mm.q.f.a;
-import com.tencent.mm.q.f.b;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.modelvoice.s;
+import com.tencent.mm.r.f;
+import com.tencent.mm.r.f.a;
+import com.tencent.mm.r.f.b;
+import com.tencent.mm.sdk.i.e;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.al;
+import com.tencent.mm.sdk.platformtools.al.a;
+import com.tencent.mm.sdk.platformtools.al.b;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import junit.framework.Assert;
 
 public final class a
-  implements f
+  implements com.tencent.mm.compatible.b.d.a, f
 {
-  private com.tencent.mm.modelvoice.d are = null;
-  boolean arf = false;
-  private boolean arg = false;
-  com.tencent.mm.compatible.util.a arh;
-  private int ari = 0;
-  public f.b arj = null;
-  public f.a ark;
+  private com.tencent.mm.modelvoice.d api = null;
+  boolean apj = false;
+  private boolean apk = false;
+  com.tencent.mm.compatible.util.a apl;
+  private int apm = 0;
+  private boolean apn = false;
+  boolean apo = false;
+  public f.b app = null;
+  public f.a apq;
   Context context = null;
   
   public a(Context paramContext)
@@ -37,136 +44,293 @@ public final class a
   public a(Context paramContext, int paramInt)
   {
     context = paramContext;
-    arh = new com.tencent.mm.compatible.util.a(paramContext);
-    ari = paramInt;
-    new m.b();
+    apl = new com.tencent.mm.compatible.util.a(paramContext);
+    apm = paramInt;
+    new g.b();
+  }
+  
+  private void lD()
+  {
+    com.tencent.mm.modelvoice.d.a local2 = new com.tencent.mm.modelvoice.d.a()
+    {
+      public final void lG()
+      {
+        e.a(new Runnable()
+        {
+          public final void run()
+          {
+            try
+            {
+              if (bsLbpQ == 1) {
+                Thread.sleep(300L);
+              }
+              if (apq != null) {
+                ab.j(new Runnable()
+                {
+                  public final void run()
+                  {
+                    ah.tF().b(apj, false);
+                    Context localContext = context;
+                    boolean bool = apj;
+                    al.a local1 = new al.a()
+                    {
+                      public final void lG()
+                      {
+                        if (!isPlaying())
+                        {
+                          ah.tF().b(a.this);
+                          ah.tF().nM();
+                          apo = false;
+                          apl.oV();
+                          ah.tF().setMode(0);
+                          u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "onCompletion() resetSpeaker");
+                        }
+                        apq.lG();
+                      }
+                    };
+                    if (bool) {}
+                    for (al.b localb = al.b.jXa;; localb = al.b.jXb)
+                    {
+                      al.a(localContext, 2131432253, localb, false, local1);
+                      return;
+                    }
+                  }
+                });
+              }
+              return;
+            }
+            catch (InterruptedException localInterruptedException)
+            {
+              u.e("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "exception:%s", new Object[] { ay.b(localInterruptedException) });
+            }
+          }
+        }, "SceneVoice_onCompletion");
+      }
+    };
+    if (api != null) {
+      api.a(local2);
+    }
+  }
+  
+  private void setError()
+  {
+    d.b local1 = new d.b()
+    {
+      public final void onError()
+      {
+        apl.oV();
+        ah.tF().b(a.this);
+        if (apo)
+        {
+          ah.tF().nM();
+          apo = false;
+        }
+        ah.tF().setMode(0);
+        if (app != null) {
+          ab.j(new Runnable()
+          {
+            public final void run()
+            {
+              app.onError();
+            }
+          });
+        }
+      }
+    };
+    if (api != null) {
+      api.a(local1);
+    }
   }
   
   public final void a(f.a parama)
   {
-    ark = parama;
+    apq = parama;
   }
   
   public final void a(f.b paramb)
   {
-    arj = paramb;
+    app = paramb;
   }
   
-  public final boolean a(String paramString, boolean paramBoolean1, boolean paramBoolean2, int paramInt)
+  public final boolean a(String paramString, boolean paramBoolean, int paramInt1, int paramInt2)
   {
-    t.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "start file name:[%s] speakerOn:[%b]", new Object[] { paramString, Boolean.valueOf(paramBoolean1) });
-    ax.tn().ob();
+    u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "start file name:[%s] speakerOn:[%b]", new Object[] { paramString, Boolean.valueOf(paramBoolean) });
+    ah.tF().a(this);
+    ah.tF().nL();
     boolean bool;
+    int i;
     if (paramString.length() > 0)
     {
       bool = true;
       Assert.assertTrue(bool);
-      if (paramInt != -1) {
-        break label419;
+      i = paramInt1;
+      if (paramInt1 == -1) {
+        i = o.b(paramString, apm, true);
       }
-      paramInt = ari;
-      if (!bn.iW(paramString)) {
-        break label230;
+      if (i != 0) {
+        break label216;
       }
-      paramInt = -1;
+      if (context == null) {
+        break label202;
+      }
+      api = new s((byte)0);
     }
-    label66:
-    label90:
-    label230:
-    label393:
-    label409:
-    label419:
     for (;;)
     {
-      Object localObject;
-      if (paramInt == 0) {
-        if (context != null)
-        {
-          are = new ah((byte)0);
-          if (ax.tn().od()) {
-            paramBoolean1 = false;
-          }
-          arf = paramBoolean1;
-          localObject = new d(this);
-          if (are != null) {
-            are.a((d.a)localObject);
-          }
-          localObject = new b(this);
-          if (are != null) {
-            are.a((d.b)localObject);
-          }
-          localObject = null;
-          if (!paramBoolean2) {
-            break label393;
-          }
-          localObject = paramString;
-        }
+      apj = paramBoolean;
+      apn = paramBoolean;
+      if ((ah.tF().nS()) || (ah.tF().nN())) {
+        apj = false;
       }
-      for (;;)
+      ak(apj);
+      lD();
+      setError();
+      if (api.c(paramString, paramBoolean, paramInt2)) {
+        break label306;
+      }
+      u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "Start Record PlayError fileName[" + paramString + "], [" + paramBoolean + "]");
+      return false;
+      bool = false;
+      break;
+      label202:
+      api = new s();
+      continue;
+      label216:
+      if (i == 1)
       {
-        if (are.o((String)localObject, paramBoolean1)) {
-          break label409;
-        }
-        t.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "Start Record PlayError fileName[" + paramString + "], [" + paramBoolean1 + "]");
-        return false;
-        bool = false;
-        break;
-        t.d("!32@/B4Tb64lLpLz7JvmHlUIfrN9/jVx6uz4", "fileName " + paramString);
-        if (ac.a(paramString, paramInt, paramBoolean2))
-        {
-          paramInt = 0;
-          break label66;
-        }
-        if (ac.b(paramString, paramInt, paramBoolean2))
-        {
-          paramInt = 2;
-          break label66;
-        }
-        paramInt = 1;
-        break label66;
-        are = new ah();
-        break label90;
-        if (paramInt == 1)
-        {
-          if (context != null)
-          {
-            are = new q(context);
-            break label90;
-          }
-          are = new q();
-          break label90;
-        }
-        if (paramInt != 2) {
-          break label90;
-        }
-        if (context != null)
-        {
-          are = new m(context);
-          break label90;
-        }
-        are = new m();
-        break label90;
-        if (ari == 0) {
-          localObject = ae.gJ(paramString);
+        if (context != null) {
+          api = new j(context);
+        } else {
+          api = new j();
         }
       }
-      arh.requestFocus();
-      return true;
+      else if (i == 2) {
+        if (context != null) {
+          api = new i(context);
+        } else {
+          api = new i();
+        }
+      }
     }
+    label306:
+    apl.requestFocus();
+    return true;
+  }
+  
+  public final boolean a(String paramString, boolean paramBoolean1, boolean paramBoolean2, int paramInt)
+  {
+    u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "start file name:[%s] speakerOn:[%b]", new Object[] { paramString, Boolean.valueOf(paramBoolean1) });
+    ah.tF().a(this);
+    ah.tF().nL();
+    apo = true;
+    boolean bool;
+    int i;
+    label101:
+    String str;
+    if (paramString.length() > 0)
+    {
+      bool = true;
+      Assert.assertTrue(bool);
+      i = paramInt;
+      if (paramInt == -1) {
+        i = o.b(paramString, apm, paramBoolean2);
+      }
+      if (i != 0) {
+        break label274;
+      }
+      if (context == null) {
+        break label260;
+      }
+      api = new s((byte)0);
+      apj = paramBoolean1;
+      apn = paramBoolean1;
+      if ((ah.tF().nS()) || (ah.tF().nN()))
+      {
+        u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "headset plugged: %b, bluetoothon: %b", new Object[] { Boolean.valueOf(ah.tF().nS()), Boolean.valueOf(ah.tF().nN()) });
+        apj = false;
+      }
+      ah.tF().b(apj, false);
+      lD();
+      setError();
+      str = null;
+      if (!paramBoolean2) {
+        break label364;
+      }
+      str = paramString;
+    }
+    for (;;)
+    {
+      if (api.s(str, apj)) {
+        break label380;
+      }
+      u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "Start Record PlayError fileName[" + paramString + "], [" + paramBoolean1 + "]");
+      return false;
+      bool = false;
+      break;
+      label260:
+      api = new s();
+      break label101;
+      label274:
+      if (i == 1)
+      {
+        if (context != null)
+        {
+          api = new j(context);
+          break label101;
+        }
+        api = new j();
+        break label101;
+      }
+      if (i != 2) {
+        break label101;
+      }
+      if (context != null)
+      {
+        api = new i(context);
+        break label101;
+      }
+      api = new i();
+      break label101;
+      label364:
+      if (apm == 0) {
+        str = q.hK(paramString);
+      }
+    }
+    label380:
+    apl.requestFocus();
+    return true;
+  }
+  
+  public final void aO(int paramInt)
+  {
+    u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "onBluetoothHeadsetStateChange, status: %d, currentSpeaker: %b, bluetoothResumeSpeaker: %b, isRequestStartBluetooth: %b", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(apj), Boolean.valueOf(apn), Boolean.valueOf(apo) });
+    switch (paramInt)
+    {
+    default: 
+      return;
+    case 1: 
+      ak(false);
+      return;
+    }
+    ak(apn);
+    if (apo)
+    {
+      ah.tF().nM();
+      apo = false;
+    }
+    ah.tF().b(this);
   }
   
   public final void ak(boolean paramBoolean)
   {
-    if (ax.tn().od()) {
-      paramBoolean = false;
-    }
-    if (arf == paramBoolean) {}
-    do
-    {
+    if (apj == paramBoolean) {
       return;
-      arf = paramBoolean;
-    } while ((are == null) || (!are.isPlaying()));
-    are.ak(paramBoolean);
+    }
+    apj = paramBoolean;
+    if ((api != null) && (api.isPlaying())) {
+      api.ak(paramBoolean);
+    }
+    ah.tF().b(paramBoolean, false);
   }
   
   public final boolean c(String paramString, boolean paramBoolean)
@@ -176,43 +340,44 @@ public final class a
   
   public final boolean isPlaying()
   {
-    if (are == null) {
+    if (api == null) {
       return false;
     }
-    return are.isPlaying();
+    return api.isPlaying();
   }
   
-  public final boolean mg()
+  public final boolean lB()
   {
-    if (are == null) {
+    if (api == null) {
       return false;
     }
-    ax.tn().ob();
-    if (ax.tn().od()) {
-      arf = false;
+    ah.tF().nL();
+    apo = true;
+    if (ah.tF().nN()) {
+      apj = false;
     }
-    boolean bool = are.mg();
-    arh.requestFocus();
+    boolean bool = api.lB();
+    apl.requestFocus();
     return bool;
   }
   
-  public final boolean mh()
+  public final boolean lC()
   {
-    return arg;
+    return apk;
   }
   
-  public final double mi()
+  public final double lE()
   {
-    if (are == null) {
+    if (api == null) {
       return 0.0D;
     }
-    return are.mi();
+    return api.lE();
   }
   
-  public final boolean mj()
+  public final boolean lF()
   {
-    if (are == null) {}
-    while (are.getStatus() != 2) {
+    if (api == null) {}
+    while (api.getStatus() != 2) {
       return false;
     }
     return true;
@@ -220,28 +385,37 @@ public final class a
   
   public final boolean pause()
   {
-    if (are == null) {
+    if (api == null) {
       return false;
     }
-    if (are.isPlaying()) {}
-    for (boolean bool = are.pause();; bool = false)
+    if (api.isPlaying()) {}
+    for (boolean bool = api.pause();; bool = false)
     {
-      ax.tn().oc();
-      ax.tn().b(true, false);
-      arh.pd();
+      if (apo)
+      {
+        ah.tF().nM();
+        apo = false;
+      }
+      ah.tF().setMode(0);
+      apl.oV();
       return bool;
     }
   }
   
   public final void stop()
   {
-    if (are == null) {
+    if (api == null) {
       return;
     }
-    are.ma();
-    ax.tn().oc();
-    ax.tn().b(true, false);
-    arh.pd();
+    u.d("!44@/B4Tb64lLpJjyqE6YDnAp0BPIXPZxq7XWKCjPimYJ3A=", "stop, isRequestStartBluetooth: %b, player.isPlaying: %b", new Object[] { Boolean.valueOf(apo), Boolean.valueOf(api.isPlaying()) });
+    apl.oV();
+    api.lv();
+    ah.tF().b(this);
+    if (apo) {
+      ah.tF().nM();
+    }
+    apo = false;
+    ah.tF().setMode(0);
   }
 }
 

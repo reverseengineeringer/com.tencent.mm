@@ -1,15 +1,14 @@
 package com.tencent.mm.ui.base.preference;
 
-import com.tencent.mm.ui.widget.MMSwitchBtn.a;
-
 final class c
-  implements MMSwitchBtn.a
 {
-  c(CheckBoxPreference paramCheckBoxPreference) {}
+  int id;
+  CharSequence text;
   
-  public final void dr(boolean paramBoolean)
+  public c(CharSequence paramCharSequence, int paramInt)
   {
-    iLJ.callChangeListener(Boolean.valueOf(paramBoolean));
+    text = paramCharSequence;
+    id = paramInt;
   }
 }
 

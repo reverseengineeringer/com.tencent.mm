@@ -1,54 +1,53 @@
 package com.tencent.mm.protocal.b;
 
-import com.tencent.mm.al.b;
-import java.util.LinkedList;
-
 public final class zn
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public int eJB;
-  public LinkedList hza = new LinkedList();
+  public String jqb;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.bM(1, eJB);
-      paramVarArgs.c(2, hza);
+      if (jqb != null) {
+        paramVarArgs.d(1, jqb);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.bI(1, eJB) + 0 + a.a.a.a.b(2, hza);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = (byte[])paramVarArgs[0];
-      hza.clear();
-      paramVarArgs = new a.a.a.a.a(paramVarArgs, hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
-        }
+      if (jqb == null) {
+        break label174;
       }
-      return 0;
     }
-    if (paramInt == 3)
+    label174:
+    for (paramInt = a.a.a.b.b.a.e(1, jqb) + 0;; paramInt = 0)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      zn localzn = (zn)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      return paramInt;
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
-      case 1: 
-        eJB = jMD.aVp();
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        zn localzn = (zn)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        }
+        jqb = maU.readString();
         return 0;
       }
-      hza = new a.a.a.a.a(aVnhga, hfZ).aVk();
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

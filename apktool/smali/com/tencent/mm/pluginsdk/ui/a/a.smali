@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract uN(Ljava/lang/String;)V
+.method public abstract AE(Ljava/lang/String;)V
 .end method

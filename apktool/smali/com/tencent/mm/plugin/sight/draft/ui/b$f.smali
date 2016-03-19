@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field fiC:Ljava/util/List;
+.field gzC:Ljava/util/List;
 
 
 # direct methods
@@ -31,7 +31,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$f;->fiC:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$f;->gzC:Ljava/util/List;
 
     return-void
 .end method

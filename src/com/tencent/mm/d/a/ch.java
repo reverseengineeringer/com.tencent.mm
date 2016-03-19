@@ -1,35 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ch
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a axN = new a();
-  public b axO = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avO = new a();
   
   public ch()
   {
-    id = "FMsgInfoQuery";
-    hXT = atO;
+    id = "ExDeviceOnRecvDataFromDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int axP = -1;
-    public long axQ = 0L;
-    public String username;
-  }
-  
-  public static final class b
-  {
-    public String aqX;
-    public long axQ = 0L;
-    public String axR;
-    public int axS = -1;
-    public int type = -1;
+    public String alN;
+    public String auQ;
+    public byte[] data;
   }
 }
 

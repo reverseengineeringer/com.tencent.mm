@@ -1,23 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ae
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a auV = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a att = new a();
   
   public ae()
   {
-    id = "DeletePackage";
-    hXT = atO;
+    id = "CheckIPCallIsStarted";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int auW = -1;
+    public boolean atu = false;
   }
 }
 

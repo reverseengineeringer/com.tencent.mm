@@ -1,52 +1,63 @@
 package com.tencent.mm.model;
 
-import android.app.Notification;
-import android.app.PendingIntent;
-import android.graphics.Bitmap;
+import com.tencent.mm.protocal.b.alq;
+import com.tencent.mm.protocal.b.alx;
+import com.tencent.mm.protocal.b.axk;
+import com.tencent.mm.protocal.b.axl;
+import com.tencent.mm.protocal.b.dd;
+import com.tencent.mm.protocal.h;
+import com.tencent.mm.protocal.h.a;
+import com.tencent.mm.protocal.h.b;
+import com.tencent.mm.protocal.h.c;
+import com.tencent.mm.protocal.h.d;
+import com.tencent.mm.protocal.z;
+import com.tencent.mm.sdk.platformtools.ay;
 
-public abstract interface ao
+public final class ao
 {
-  public abstract int a(Notification paramNotification, boolean paramBoolean);
+  public static final class a
+    extends h.c
+    implements h.a
+  {
+    public axk bBx = new axk();
+    
+    public final int getCmdId()
+    {
+      return 0;
+    }
+    
+    public final byte[] tY()
+    {
+      iUJ = z.aTv();
+      bBx.jbx = new alx().aO(ay.aVA());
+      bBx.jGS = h.a(this);
+      return bBx.toByteArray();
+    }
+    
+    public final int tZ()
+    {
+      return 617;
+    }
+  }
   
-  public abstract Notification a(Notification paramNotification, int paramInt1, int paramInt2, PendingIntent paramPendingIntent, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, String paramString4);
-  
-  public abstract Notification a(Notification paramNotification, int paramInt1, PendingIntent paramPendingIntent1, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, int paramInt2, String paramString4, PendingIntent paramPendingIntent2, int paramInt3, String paramString5, PendingIntent paramPendingIntent3, String paramString6);
-  
-  public abstract Notification a(PendingIntent paramPendingIntent, String paramString1, String paramString2, String paramString3, Bitmap paramBitmap, String paramString4);
-  
-  public abstract void a(int paramInt, Notification paramNotification, boolean paramBoolean);
-  
-  public abstract int b(Notification paramNotification);
-  
-  public abstract void bv(int paramInt);
-  
-  public abstract void bw(int paramInt);
-  
-  public abstract void bx(int paramInt);
-  
-  public abstract void cA(String paramString);
-  
-  public abstract void cB(String paramString);
-  
-  public abstract void cancel(int paramInt);
-  
-  public abstract void cancelNotification(String paramString);
-  
-  public abstract void f(int paramInt, String paramString);
-  
-  public abstract void lq();
-  
-  public abstract void notify(int paramInt, Notification paramNotification);
-  
-  public abstract String np();
-  
-  public abstract void nq();
-  
-  public abstract boolean nr();
-  
-  public abstract void ns();
-  
-  public abstract void nt();
+  public static final class b
+    extends h.d
+    implements h.b
+  {
+    public axl bBy = new axl();
+    
+    public final int getCmdId()
+    {
+      return 0;
+    }
+    
+    public final int y(byte[] paramArrayOfByte)
+    {
+      bBy = ((axl)new axl().am(paramArrayOfByte));
+      h.a(this, bBy.jHj);
+      return bBy.jHj.iZL;
+    }
+  }
 }
 
 /* Location:

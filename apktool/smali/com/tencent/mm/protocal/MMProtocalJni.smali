@@ -21,6 +21,9 @@
 .method public static native computerKeyWithAllStr(I[B[BLcom/tencent/mm/pointers/PByteArray;I)I
 .end method
 
+.method public static native decodeSecureNotifyData([BIIIIIII[B)[B
+.end method
+
 .method public static native genClientCheckKVRes(ILjava/lang/String;[B[B[BLcom/tencent/mm/pointers/PByteArray;)V
 .end method
 
@@ -30,13 +33,13 @@
 .method public static native mergeSyncKey([B[BLcom/tencent/mm/pointers/PByteArray;)Z
 .end method
 
-.method public static native pack([BLcom/tencent/mm/pointers/PByteArray;[B[BLjava/lang/String;III[B[B[B)Z
+.method public static native pack([BLcom/tencent/mm/pointers/PByteArray;[B[BLjava/lang/String;III[B[B[BZ)Z
 .end method
 
-.method public static native packDoubleHybrid(Lcom/tencent/mm/pointers/PByteArray;[BLjava/lang/String;III[B[B[B[B[B)Z
+.method public static native packDoubleHybrid(Lcom/tencent/mm/pointers/PByteArray;[BLjava/lang/String;III[B[B[B[B[BZ)Z
 .end method
 
-.method public static native packHybrid(Lcom/tencent/mm/pointers/PByteArray;[BLjava/lang/String;III[B[B[B[B[B)Z
+.method public static native packHybrid(Lcom/tencent/mm/pointers/PByteArray;[BLjava/lang/String;III[B[B[B[B[BZ)Z
 .end method
 
 .method public static native rsaPublicEncrypt([BLcom/tencent/mm/pointers/PByteArray;[B[B)Z
@@ -51,7 +54,7 @@
 .method public static native setProtocalJniLogLevel(I)Z
 .end method
 
-.method public static native unpack(Lcom/tencent/mm/pointers/PByteArray;[B[BLcom/tencent/mm/pointers/PByteArray;Lcom/tencent/mm/pointers/PInt;)Z
+.method public static native unpack(Lcom/tencent/mm/pointers/PByteArray;[B[BLcom/tencent/mm/pointers/PByteArray;Lcom/tencent/mm/pointers/PInt;Lcom/tencent/mm/pointers/PInt;)Z
 .end method
 
 .method public static native verifySyncKey([B)Z

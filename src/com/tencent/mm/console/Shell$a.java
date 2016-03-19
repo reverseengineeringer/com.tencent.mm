@@ -4,7 +4,7 @@ import android.content.Intent;
 
 public abstract interface Shell$a
 {
-  public abstract void j(Intent paramIntent);
+  public abstract void i(Intent paramIntent);
 }
 
 /* Location:

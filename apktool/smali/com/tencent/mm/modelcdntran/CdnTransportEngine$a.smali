@@ -21,5 +21,5 @@
 .method public abstract a(Ljava/lang/String;Ljava/io/ByteArrayOutputStream;)V
 .end method
 
-.method public abstract f(Ljava/lang/String;[B)[B
+.method public abstract i(Ljava/lang/String;[B)[B
 .end method

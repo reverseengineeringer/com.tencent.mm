@@ -1,7 +1,7 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.File;
 
 public class WXEmojiObject
@@ -43,17 +43,17 @@ public class WXEmojiObject
   {
     if (((emojiData == null) || (emojiData.length == 0)) && ((emojiPath == null) || (emojiPath.length() == 0)))
     {
-      t.e("!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM=", "checkArgs fail, both arguments is null");
+      u.e("!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM=", "checkArgs fail, both arguments is null");
       return false;
     }
     if ((emojiData != null) && (emojiData.length > 10485760))
     {
-      t.e("!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM=", "checkArgs fail, emojiData is too large");
+      u.e("!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM=", "checkArgs fail, emojiData is too large");
       return false;
     }
     if ((emojiPath != null) && (getFileSize(emojiPath) > 10485760))
     {
-      t.e("!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM=", "checkArgs fail, emojiSize is too large");
+      u.e("!44@/B4Tb64lLpKbvaoYwgBifwJtObW4pYnf2Gs+DAkLhRM=", "checkArgs fail, emojiSize is too large");
       return false;
     }
     return true;

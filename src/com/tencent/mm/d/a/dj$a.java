@@ -1,6 +1,9 @@
 package com.tencent.mm.d.a;
 
-public final class dj$a {}
+public final class dj$a
+{
+  public String awS;
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.d.a.dj.a

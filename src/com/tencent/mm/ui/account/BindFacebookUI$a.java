@@ -2,56 +2,53 @@ package com.tencent.mm.ui.account;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.modelsimple.g;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.d.a.c;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.h;
+import com.tencent.mm.ui.d.a.b;
+import com.tencent.mm.ui.d.a.c.a;
 import com.tencent.mm.ui.d.a.d;
-import com.tencent.mm.ui.d.a.d.a;
-import com.tencent.mm.ui.d.a.f;
 
 final class BindFacebookUI$a
-  implements d.a
+  implements c.a
 {
   private BindFacebookUI$a(BindFacebookUI paramBindFacebookUI) {}
   
-  public final void a(c paramc)
+  public final void a(b paramb)
   {
-    t.d("!32@/B4Tb64lLpJSlrS0DPG1QdbGPockUxOH", "onError:" + paramc.getMessage());
-    com.tencent.mm.ui.base.h.x(isM, paramc.getMessage(), isM.getString(a.n.contact_info_facebookapp_bind_fail));
-    BindFacebookUI.fl(false);
+    u.d("!32@/B4Tb64lLpJSlrS0DPG1QdbGPockUxOH", "onError:" + paramb.getMessage());
+    com.tencent.mm.ui.base.g.y(krS, paramb.getMessage(), krS.getString(2131429143));
+    BindFacebookUI.ho(false);
   }
   
-  public final void a(f paramf)
+  public final void a(d paramd)
   {
-    t.d("!32@/B4Tb64lLpJSlrS0DPG1QdbGPockUxOH", "onFacebookError:" + jlG);
-    com.tencent.mm.ui.base.h.x(isM, paramf.getMessage(), isM.getString(a.n.contact_info_facebookapp_bind_fail));
-    BindFacebookUI.fl(false);
+    u.d("!32@/B4Tb64lLpJSlrS0DPG1QdbGPockUxOH", "onFacebookError:" + lqX);
+    com.tencent.mm.ui.base.g.y(krS, paramd.getMessage(), krS.getString(2131429143));
+    BindFacebookUI.ho(false);
   }
   
-  public final void j(Bundle paramBundle)
+  public final void g(Bundle paramBundle)
   {
-    t.d("!32@/B4Tb64lLpJSlrS0DPG1QdbGPockUxOH", "token:" + cisM).iNF);
-    ax.tl().rf().set(65830, cisM).iNF);
-    if (cisM).jlz != 0L) {
-      ax.tl().rf().set(65832, Long.valueOf(cisM).jlz));
+    u.d("!32@/B4Tb64lLpJSlrS0DPG1QdbGPockUxOH", "token:" + ckrS).kMS);
+    ah.tD().rn().set(65830, ckrS).kMS);
+    if (ckrS).lqQ != 0L) {
+      ah.tD().rn().set(65832, Long.valueOf(ckrS).lqQ));
     }
-    paramBundle = isM.getString(a.n.app_tip);
-    String str = isM.getString(a.n.facebook_auth_binding);
-    BindFacebookUI.a(isM, ProgressDialog.show(isM, paramBundle, str, true));
-    BindFacebookUI.e(isM).setOnCancelListener(BindFacebookUI.d(isM));
-    BindFacebookUI.a(isM, new g(1, cisM).iNF));
-    ax.tm().d(BindFacebookUI.a(isM));
-    BindFacebookUI.fl(true);
+    paramBundle = krS.getString(2131430877);
+    String str = krS.getString(2131429154);
+    BindFacebookUI.a(krS, ProgressDialog.show(krS, paramBundle, str, true));
+    BindFacebookUI.e(krS).setOnCancelListener(BindFacebookUI.d(krS));
+    BindFacebookUI.a(krS, new com.tencent.mm.modelsimple.g(1, ckrS).kMS));
+    ah.tE().d(BindFacebookUI.a(krS));
+    BindFacebookUI.ho(true);
   }
   
   public final void onCancel()
   {
-    t.d("!32@/B4Tb64lLpJSlrS0DPG1QdbGPockUxOH", "onCancel");
-    BindFacebookUI.fl(false);
+    u.d("!32@/B4Tb64lLpJSlrS0DPG1QdbGPockUxOH", "onCancel");
+    BindFacebookUI.ho(false);
   }
 }
 

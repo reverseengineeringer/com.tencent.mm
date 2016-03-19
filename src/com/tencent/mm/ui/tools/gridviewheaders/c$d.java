@@ -10,10 +10,10 @@ import android.widget.FrameLayout.LayoutParams;
 public final class c$d
   extends FrameLayout
 {
-  private int cHs;
-  private int cOq;
-  private View[] jwb;
-  private boolean jwg;
+  private int dfq;
+  private int dgj;
+  private View[] lyS;
+  private boolean lyX;
   
   public c$d(c paramc, Context paramContext)
   {
@@ -43,17 +43,17 @@ public final class c$d
   protected final void onMeasure(int paramInt1, int paramInt2)
   {
     super.onMeasure(paramInt1, paramInt2);
-    if ((cOq == 1) || (c.b(jwc) == null)) {}
+    if ((dgj == 1) || (c.b(lyT) == null)) {}
     int i;
     int k;
     do
     {
       return;
       int j;
-      if ((cHs % cOq == 0) && (!jwg))
+      if ((dfq % dgj == 0) && (!lyX))
       {
-        jwg = true;
-        arrayOfView = jwb;
+        lyX = true;
+        arrayOfView = lyS;
         j = arrayOfView.length;
         i = 0;
         while (i < j)
@@ -61,10 +61,10 @@ public final class c$d
           arrayOfView[i].measure(paramInt1, paramInt2);
           i += 1;
         }
-        jwg = false;
+        lyX = false;
       }
       k = getMeasuredHeight();
-      View[] arrayOfView = jwb;
+      View[] arrayOfView = lyS;
       int m = arrayOfView.length;
       paramInt2 = 0;
       for (i = k; paramInt2 < m; i = j)
@@ -82,18 +82,18 @@ public final class c$d
   
   public final void setNumColumns(int paramInt)
   {
-    cOq = paramInt;
+    dgj = paramInt;
   }
   
   public final void setPosition(int paramInt)
   {
-    cHs = paramInt;
+    dfq = paramInt;
   }
   
   @SuppressLint({"NewApi"})
   public final void setRowSiblings(View[] paramArrayOfView)
   {
-    jwb = paramArrayOfView;
+    lyS = paramArrayOfView;
   }
   
   public final void setTag(int paramInt, Object paramObject)

@@ -3,10 +3,18 @@
 .source "SourceFile"
 
 
-# static fields
-.field public static idd:I
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/storage/i$a;
+    }
+.end annotation
 
-.field public static ide:I
+
+# static fields
+.field public static kaj:I
+
+.field public static kak:I
 
 
 # direct methods
@@ -17,12 +25,12 @@
     .line 42
     const/4 v0, 0x3
 
-    sput v0, Lcom/tencent/mm/storage/i;->idd:I
+    sput v0, Lcom/tencent/mm/storage/i;->kaj:I
 
-    .line 341
+    .line 356
     const/16 v0, 0xa
 
-    sput v0, Lcom/tencent/mm/storage/i;->ide:I
+    sput v0, Lcom/tencent/mm/storage/i;->kak:I
 
     return-void
 .end method

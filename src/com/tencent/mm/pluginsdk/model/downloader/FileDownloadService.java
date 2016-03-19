@@ -4,30 +4,31 @@ import android.app.IntentService;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import com.tencent.mm.a.n;
-import com.tencent.mm.a.c;
 import com.tencent.mm.a.e;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.al;
+import com.tencent.mm.a.g;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.storage.z;
 import java.io.File;
 
 public class FileDownloadService
   extends IntentService
 {
   public static final String EXTRA_ID;
-  public static final String EXTRA_PACKAGE_NAME = gNp + "package_name";
-  private static final String gNp = FileDownloadService.class.getSimpleName() + "_extra_";
-  public static final String gNq;
-  public static final String gNr = gNp + "file_path";
-  public static final String gNs = gNp + "md5";
+  public static final String EXTRA_PACKAGE_NAME;
+  public static final String iCA = iCx + "md5";
+  private static final String iCx = FileDownloadService.class.getSimpleName() + "_extra_";
+  public static final String iCy;
+  public static final String iCz;
   
   static
   {
-    EXTRA_ID = gNp + "id";
-    gNq = gNp + "action_type";
+    EXTRA_ID = iCx + "id";
+    iCy = iCx + "action_type";
+    EXTRA_PACKAGE_NAME = iCx + "package_name";
+    iCz = iCx + "file_path";
   }
   
   public FileDownloadService()
@@ -35,20 +36,20 @@ public class FileDownloadService
     super("FileDownloadService");
   }
   
-  private static boolean bg(String paramString1, String paramString2)
+  private static boolean bS(String paramString1, String paramString2)
   {
     File localFile = new File(paramString1);
-    t.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "MD5 Check: %s, File Exists: %b", new Object[] { paramString1, Boolean.valueOf(localFile.exists()) });
+    u.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "MD5 Check: %s, File Exists: %b", new Object[] { paramString1, Boolean.valueOf(localFile.exists()) });
     long l = System.currentTimeMillis();
-    paramString1 = e.e(localFile);
-    t.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "MD5 Check Time: %d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
-    t.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "Original MD5: %s, Calculated MD5: %s", new Object[] { paramString2, paramString1 });
-    if (bn.iW(paramString2)) {
+    paramString1 = g.g(localFile);
+    u.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "MD5 Check Time: %d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    u.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "Original MD5: %s, Calculated MD5: %s", new Object[] { paramString2, paramString1 });
+    if (ay.kz(paramString2)) {
       return localFile.exists();
     }
-    if (bn.iW(paramString1))
+    if (ay.kz(paramString1))
     {
-      t.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "check from file failed, may caused by low memory while checking md5");
+      u.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "check from file failed, may caused by low memory while checking md5");
       return localFile.exists();
     }
     return paramString2.equalsIgnoreCase(paramString1);
@@ -66,8 +67,8 @@ public class FileDownloadService
         do
         {
           return;
-          int i = paramIntent.getIntExtra(gNq, 0);
-          t.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "handle intent type : %d", new Object[] { Integer.valueOf(i) });
+          int i = paramIntent.getIntExtra(iCy, 0);
+          u.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "handle intent type : %d", new Object[] { Integer.valueOf(i) });
           switch (i)
           {
           case 2: 
@@ -77,62 +78,62 @@ public class FileDownloadService
             l = paramIntent.getLongExtra(EXTRA_ID, -1L);
             if (l < 0L)
             {
-              t.e("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "Invalid id");
+              u.e("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "Invalid id");
               return;
             }
-            if ((!ax.qZ()) || (ax.tu()))
+            if ((!ah.rh()) || (ah.tM()))
             {
-              t.d("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "no user login");
+              u.d("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "no user login");
               return;
             }
-            paramIntent = g.ci(l);
+            paramIntent = b.cZ(l);
           }
         } while (paramIntent == null);
-        if (bn.iW(field_md5))
+        if (ay.kz(field_md5))
         {
-          t.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "Invalid original md5, abort checking");
+          u.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "Invalid original md5, abort checking");
           field_status = 3;
-          g.b(paramIntent);
-          h.azu().cn(l);
+          b.b(paramIntent);
+          c.aQc().de(l);
           return;
         }
-        if (bg(field_filePath, field_md5))
+        if (bS(field_filePath, field_md5))
         {
           field_status = 3;
-          g.b(paramIntent);
-          h.azu().cn(l);
+          b.b(paramIntent);
+          c.aQc().de(l);
           return;
         }
-        c.deleteFile(field_filePath);
+        com.tencent.mm.loader.stub.b.deleteFile(field_filePath);
         field_status = 4;
-        g.b(paramIntent);
-        paramIntent = h.azu();
-        localObject2 = g.ci(l);
+        b.b(paramIntent);
+        paramIntent = c.aQc();
+        localObject2 = b.cZ(l);
       } while (localObject2 == null);
-      localObject1 = aa.getContext();
-      if ((field_showNotification) && (bn.iW(field_fileName)))
+      localObject1 = y.getContext();
+      if ((field_showNotification) && (ay.kz(field_fileName)))
       {
         localObject2 = field_downloadUrl;
-        h.a(((Context)localObject1).getString(a.n.file_downloader_md5check_failed), "", null);
+        c.a(((Context)localObject1).getString(2131429561), "", null);
       }
       for (;;)
       {
-        gNg.ch(l);
+        iCo.cY(l);
         return;
-        if ((field_showNotification) && (!bn.iW(field_fileName)))
+        if ((field_showNotification) && (!ay.kz(field_fileName)))
         {
           String str = field_downloadUrl;
-          h.a(field_fileName, ((Context)localObject1).getString(a.n.file_downloader_md5check_failed), null);
+          c.a(field_fileName, ((Context)localObject1).getString(2131429561), null);
         }
       }
-      localObject1 = paramIntent.getStringExtra(gNr);
-      paramIntent = paramIntent.getStringExtra(gNs);
-      if ((bn.iW((String)localObject1)) || (!c.az((String)localObject1)))
+      localObject1 = paramIntent.getStringExtra(iCz);
+      paramIntent = paramIntent.getStringExtra(iCA);
+      if ((ay.kz((String)localObject1)) || (!e.ax((String)localObject1)))
       {
-        t.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "Invalid file path, ignored");
+        u.i("!44@/B4Tb64lLpKVQlIh1YRBX64FNPvMa6moiRmEMqimpyI=", "Invalid file path, ignored");
         return;
       }
-    } while ((!bn.iW(paramIntent)) && (!bg((String)localObject1, paramIntent)));
+    } while ((!ay.kz(paramIntent)) && (!bS((String)localObject1, paramIntent)));
     paramIntent = Uri.fromFile(new File((String)localObject1));
     Object localObject1 = new Intent("android.intent.action.VIEW");
     ((Intent)localObject1).setDataAndType(paramIntent, "application/vnd.android.package-archive");

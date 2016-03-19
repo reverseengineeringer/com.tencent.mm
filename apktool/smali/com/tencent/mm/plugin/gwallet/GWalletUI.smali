@@ -17,9 +17,9 @@
 
 
 # instance fields
-.field cnV:Landroid/content/BroadcastReceiver;
+.field cFt:Landroid/content/BroadcastReceiver;
 
-.field private dEC:Lcom/tencent/mm/plugin/gwallet/a/b;
+.field private exq:Lcom/tencent/mm/plugin/gwallet/a/b;
 
 
 # direct methods
@@ -27,20 +27,20 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 36
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 43
+    .line 44
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->dEC:Lcom/tencent/mm/plugin/gwallet/a/b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->exq:Lcom/tencent/mm/plugin/gwallet/a/b;
 
-    .line 114
-    new-instance v0, Lcom/tencent/mm/plugin/gwallet/f;
+    .line 115
+    new-instance v0, Lcom/tencent/mm/plugin/gwallet/GWalletUI$3;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/gwallet/f;-><init>(Lcom/tencent/mm/plugin/gwallet/GWalletUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/gwallet/GWalletUI$3;-><init>(Lcom/tencent/mm/plugin/gwallet/GWalletUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->cnV:Landroid/content/BroadcastReceiver;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->cFt:Landroid/content/BroadcastReceiver;
 
     return-void
 .end method
@@ -51,7 +51,7 @@
     .prologue
     const/4 v12, 0x0
 
-    .line 35
+    .line 36
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -68,17 +68,17 @@
 
     move-result-object v5
 
-    iget-object v6, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->dEC:Lcom/tencent/mm/plugin/gwallet/a/b;
+    iget-object v6, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->exq:Lcom/tencent/mm/plugin/gwallet/a/b;
 
     const-string/jumbo v4, "inapp"
 
-    new-instance v11, Lcom/tencent/mm/plugin/gwallet/e;
+    new-instance v11, Lcom/tencent/mm/plugin/gwallet/GWalletUI$2;
 
-    invoke-direct {v11, p0}, Lcom/tencent/mm/plugin/gwallet/e;-><init>(Lcom/tencent/mm/plugin/gwallet/GWalletUI;)V
+    invoke-direct {v11, p0}, Lcom/tencent/mm/plugin/gwallet/GWalletUI$2;-><init>(Lcom/tencent/mm/plugin/gwallet/GWalletUI;)V
 
     const-string/jumbo v0, "launchPurchaseFlow"
 
-    invoke-virtual {v6, v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->mO(Ljava/lang/String;)V
+    invoke-virtual {v6, v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->pt(Ljava/lang/String;)V
 
     const-string/jumbo v0, "subs"
 
@@ -88,19 +88,19 @@
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, v6, Lcom/tencent/mm/plugin/gwallet/a/b;->dER:Z
+    iget-boolean v0, v6, Lcom/tencent/mm/plugin/gwallet/a/b;->exG:Z
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/h;
+    new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/c;
 
     const/16 v1, -0x3f1
 
     const-string/jumbo v2, "Subscriptions are not available."
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/plugin/gwallet/a/h;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/plugin/gwallet/a/c;-><init>(ILjava/lang/String;)V
 
-    invoke-interface {v11, v0, v12}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/h;Landroid/content/Intent;)V
+    invoke-interface {v11, v0, v12}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/c;Landroid/content/Intent;)V
 
     :goto_0
     return-void
@@ -143,9 +143,9 @@
 
     const-string/jumbo v1, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, v6, Lcom/tencent/mm/plugin/gwallet/a/b;->dEO:Lcom/android/a/a/a;
+    iget-object v0, v6, Lcom/tencent/mm/plugin/gwallet/a/b;->exD:Lcom/a/a/a/a;
 
     const/4 v1, 0x3
 
@@ -155,25 +155,25 @@
 
     move-result-object v2
 
-    invoke-interface/range {v0 .. v5}, Lcom/android/a/a/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
+    invoke-interface/range {v0 .. v5}, Lcom/a/a/a/a;->a(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Landroid/os/Bundle;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->l(Landroid/os/Bundle;)I
+    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->j(Landroid/os/Bundle;)I
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/h;
+    new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/c;
 
     const-string/jumbo v2, "Unable to buy item"
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/plugin/gwallet/a/h;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/plugin/gwallet/a/c;-><init>(ILjava/lang/String;)V
 
     const/4 v1, 0x0
 
-    invoke-interface {v11, v0, v1}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/h;Landroid/content/Intent;)V
+    invoke-interface {v11, v0, v1}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/c;Landroid/content/Intent;)V
     :try_end_0
     .catch Landroid/content/IntentSender$SendIntentException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_1
@@ -197,17 +197,17 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->mP(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->pu(Ljava/lang/String;)V
 
-    new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/h;
+    new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/c;
 
     const/16 v1, -0x3ec
 
     const-string/jumbo v2, "Failed to send intent."
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/plugin/gwallet/a/h;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/plugin/gwallet/a/c;-><init>(ILjava/lang/String;)V
 
-    invoke-interface {v11, v0, v12}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/h;Landroid/content/Intent;)V
+    invoke-interface {v11, v0, v12}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/c;Landroid/content/Intent;)V
 
     goto :goto_0
 
@@ -243,15 +243,15 @@
 
     const-string/jumbo v2, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v1, 0x2711
 
-    iput v1, v6, Lcom/tencent/mm/plugin/gwallet/a/b;->dES:I
+    iput v1, v6, Lcom/tencent/mm/plugin/gwallet/a/b;->exH:I
 
-    iput-object v11, v6, Lcom/tencent/mm/plugin/gwallet/a/b;->dET:Lcom/tencent/mm/plugin/gwallet/a/b$b;
+    iput-object v11, v6, Lcom/tencent/mm/plugin/gwallet/a/b;->exI:Lcom/tencent/mm/plugin/gwallet/a/b$b;
 
-    iput-object v4, v6, Lcom/tencent/mm/plugin/gwallet/a/b;->dEU:Ljava/lang/String;
+    iput-object v4, v6, Lcom/tencent/mm/plugin/gwallet/a/b;->exJ:Ljava/lang/String;
 
     invoke-virtual {v0}, Landroid/app/PendingIntent;->getIntentSender()Landroid/content/IntentSender;
 
@@ -319,17 +319,17 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->mP(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->pu(Ljava/lang/String;)V
 
-    new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/h;
+    new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/c;
 
     const/16 v1, -0x3e9
 
     const-string/jumbo v2, "Remote exception while starting purchase flow"
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/plugin/gwallet/a/h;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/plugin/gwallet/a/c;-><init>(ILjava/lang/String;)V
 
-    invoke-interface {v11, v0, v12}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/h;Landroid/content/Intent;)V
+    invoke-interface {v11, v0, v12}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/c;Landroid/content/Intent;)V
 
     goto/16 :goto_0
 .end method
@@ -338,7 +338,7 @@
     .locals 3
 
     .prologue
-    .line 35
+    .line 36
     const-string/jumbo v0, "!32@/B4Tb64lLpJlq3g3dssAocibZs9nb5Th"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -355,7 +355,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {p0, p1, p2}, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->setResult(ILandroid/content/Intent;)V
 
@@ -368,44 +368,44 @@
     .locals 1
 
     .prologue
-    .line 35
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->dEC:Lcom/tencent/mm/plugin/gwallet/a/b;
+    .line 36
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->exq:Lcom/tencent/mm/plugin/gwallet/a/b;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final cc(Z)V
+.method public final cJ(Z)V
     .locals 5
 
     .prologue
-    .line 143
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->dEC:Lcom/tencent/mm/plugin/gwallet/a/b;
+    .line 150
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->exq:Lcom/tencent/mm/plugin/gwallet/a/b;
 
     const-string/jumbo v1, "inapp"
 
-    new-instance v2, Lcom/tencent/mm/plugin/gwallet/h;
+    new-instance v2, Lcom/tencent/mm/plugin/gwallet/GWalletUI$4;
 
-    invoke-direct {v2, p0, p1}, Lcom/tencent/mm/plugin/gwallet/h;-><init>(Lcom/tencent/mm/plugin/gwallet/GWalletUI;Z)V
+    invoke-direct {v2, p0, p1}, Lcom/tencent/mm/plugin/gwallet/GWalletUI$4;-><init>(Lcom/tencent/mm/plugin/gwallet/GWalletUI;Z)V
 
-    new-instance v3, Lcom/tencent/mm/sdk/platformtools/ac;
+    new-instance v3, Lcom/tencent/mm/sdk/platformtools/aa;
 
-    invoke-direct {v3}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
+    invoke-direct {v3}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
 
     const-string/jumbo v4, "queryInventory"
 
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/gwallet/a/b;->mO(Ljava/lang/String;)V
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/gwallet/a/b;->pt(Ljava/lang/String;)V
 
-    new-instance v4, Lcom/tencent/mm/plugin/gwallet/a/f;
+    new-instance v4, Lcom/tencent/mm/plugin/gwallet/a/b$3;
 
-    invoke-direct {v4, v0, v1, v3, v2}, Lcom/tencent/mm/plugin/gwallet/a/f;-><init>(Lcom/tencent/mm/plugin/gwallet/a/b;Ljava/lang/String;Lcom/tencent/mm/sdk/platformtools/ac;Lcom/tencent/mm/plugin/gwallet/a/b$b;)V
+    invoke-direct {v4, v0, v1, v3, v2}, Lcom/tencent/mm/plugin/gwallet/a/b$3;-><init>(Lcom/tencent/mm/plugin/gwallet/a/b;Ljava/lang/String;Lcom/tencent/mm/sdk/platformtools/aa;Lcom/tencent/mm/plugin/gwallet/a/b$b;)V
 
     const-string/jumbo v0, "IabHelper_queryInventoryAsync"
 
-    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/h/e;->a(Ljava/lang/Runnable;Ljava/lang/String;)V
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/i/e;->a(Ljava/lang/Runnable;Ljava/lang/String;)V
 
-    .line 159
+    .line 166
     return-void
 .end method
 
@@ -413,47 +413,47 @@
     .locals 6
 
     .prologue
-    .line 186
-    iget-object v1, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->dEC:Lcom/tencent/mm/plugin/gwallet/a/b;
+    .line 193
+    iget-object v1, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->exq:Lcom/tencent/mm/plugin/gwallet/a/b;
 
-    iget v0, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->dES:I
+    iget v0, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->exH:I
 
     if-ne p1, v0, :cond_0
 
     const-string/jumbo v0, "handleActivityResult"
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->mO(Ljava/lang/String;)V
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->pt(Ljava/lang/String;)V
 
     if-nez p3, :cond_1
 
     const-string/jumbo v0, "Null data in IAB activity result."
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->mP(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->pu(Ljava/lang/String;)V
 
-    new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/h;
+    new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/c;
 
     const/16 v2, -0x3ea
 
     const-string/jumbo v3, "Null data in IAB result"
 
-    invoke-direct {v0, v2, v3}, Lcom/tencent/mm/plugin/gwallet/a/h;-><init>(ILjava/lang/String;)V
+    invoke-direct {v0, v2, v3}, Lcom/tencent/mm/plugin/gwallet/a/c;-><init>(ILjava/lang/String;)V
 
-    iget-object v2, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->dET:Lcom/tencent/mm/plugin/gwallet/a/b$b;
+    iget-object v2, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->exI:Lcom/tencent/mm/plugin/gwallet/a/b$b;
 
     if-eqz v2, :cond_0
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->dET:Lcom/tencent/mm/plugin/gwallet/a/b$b;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->exI:Lcom/tencent/mm/plugin/gwallet/a/b$b;
 
     const/4 v2, 0x0
 
-    invoke-interface {v1, v0, v2}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/h;Landroid/content/Intent;)V
+    invoke-interface {v1, v0, v2}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/c;Landroid/content/Intent;)V
 
-    .line 187
+    .line 194
     :cond_0
     :goto_0
     return-void
 
-    .line 186
+    .line 193
     :cond_1
     invoke-virtual {p3}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
 
@@ -469,7 +469,7 @@
 
     const-string/jumbo v0, "Intent with no response code, assuming OK (known issue)"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->mP(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->pu(Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -502,7 +502,7 @@
 
     const-string/jumbo v4, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
 
-    invoke-static {v4, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -520,7 +520,7 @@
 
     const-string/jumbo v3, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
 
-    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -542,7 +542,7 @@
 
     const-string/jumbo v3, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
 
-    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -550,7 +550,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->dEU:Ljava/lang/String;
+    iget-object v3, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->exJ:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -562,21 +562,21 @@
 
     const-string/jumbo v3, "!32@/B4Tb64lLpKw9oSUpbeF6PlG5rCG0j68"
 
-    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v2, Lcom/tencent/mm/plugin/gwallet/a/h;
+    new-instance v2, Lcom/tencent/mm/plugin/gwallet/a/c;
 
     const-string/jumbo v3, "Null data in IAB result"
 
-    invoke-direct {v2, v0, v3}, Lcom/tencent/mm/plugin/gwallet/a/h;-><init>(ILjava/lang/String;)V
+    invoke-direct {v2, v0, v3}, Lcom/tencent/mm/plugin/gwallet/a/c;-><init>(ILjava/lang/String;)V
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->dET:Lcom/tencent/mm/plugin/gwallet/a/b$b;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->exI:Lcom/tencent/mm/plugin/gwallet/a/b$b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->dET:Lcom/tencent/mm/plugin/gwallet/a/b$b;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/gwallet/a/b;->exI:Lcom/tencent/mm/plugin/gwallet/a/b$b;
 
-    invoke-interface {v0, v2, p3}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/h;Landroid/content/Intent;)V
+    invoke-interface {v0, v2, p3}, Lcom/tencent/mm/plugin/gwallet/a/b$b;->b(Lcom/tencent/mm/plugin/gwallet/a/c;Landroid/content/Intent;)V
 
     goto/16 :goto_0
 
@@ -611,7 +611,7 @@
     :cond_4
     const-string/jumbo v1, "Unexpected type for intent response code."
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/gwallet/a/b;->mP(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/tencent/mm/plugin/gwallet/a/b;->pu(Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -621,7 +621,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/plugin/gwallet/a/b;->mP(Ljava/lang/String;)V
+    invoke-static {v1}, Lcom/tencent/mm/plugin/gwallet/a/b;->pu(Ljava/lang/String;)V
 
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -656,45 +656,45 @@
     .locals 2
 
     .prologue
-    .line 47
+    .line 48
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 48
+    .line 49
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->requestWindowFeature(I)Z
 
-    .line 51
+    .line 52
     const-string/jumbo v0, "!32@/B4Tb64lLpJlq3g3dssAocibZs9nb5Th"
 
     const-string/jumbo v1, "Creating IAB helper."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 52
+    .line 53
     new-instance v0, Lcom/tencent/mm/plugin/gwallet/a/b;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/gwallet/a/b;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->dEC:Lcom/tencent/mm/plugin/gwallet/a/b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->exq:Lcom/tencent/mm/plugin/gwallet/a/b;
 
-    .line 56
+    .line 57
     const-string/jumbo v0, "!32@/B4Tb64lLpJlq3g3dssAocibZs9nb5Th"
 
     const-string/jumbo v1, "Starting setup."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->dEC:Lcom/tencent/mm/plugin/gwallet/a/b;
+    .line 58
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->exq:Lcom/tencent/mm/plugin/gwallet/a/b;
 
-    new-instance v1, Lcom/tencent/mm/plugin/gwallet/d;
+    new-instance v1, Lcom/tencent/mm/plugin/gwallet/GWalletUI$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/gwallet/d;-><init>(Lcom/tencent/mm/plugin/gwallet/GWalletUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/gwallet/GWalletUI$1;-><init>(Lcom/tencent/mm/plugin/gwallet/GWalletUI;)V
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/gwallet/a/b;->a(Lcom/tencent/mm/plugin/gwallet/a/b$a;)V
 
-    .line 83
+    .line 84
     return-void
 .end method
 
@@ -702,33 +702,33 @@
     .locals 2
 
     .prologue
-    .line 192
+    .line 199
     const-string/jumbo v0, "!32@/B4Tb64lLpJlq3g3dssAocibZs9nb5Th"
 
     const-string/jumbo v1, "Destroying helper."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 193
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->dEC:Lcom/tencent/mm/plugin/gwallet/a/b;
+    .line 200
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->exq:Lcom/tencent/mm/plugin/gwallet/a/b;
 
     if-eqz v0, :cond_0
 
-    .line 194
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->dEC:Lcom/tencent/mm/plugin/gwallet/a/b;
+    .line 201
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->exq:Lcom/tencent/mm/plugin/gwallet/a/b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/gwallet/a/b;->dispose()V
 
-    .line 195
+    .line 202
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->dEC:Lcom/tencent/mm/plugin/gwallet/a/b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->exq:Lcom/tencent/mm/plugin/gwallet/a/b;
 
-    .line 196
+    .line 203
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 197
+    .line 204
     return-void
 .end method
 
@@ -736,7 +736,7 @@
     .locals 2
 
     .prologue
-    .line 163
+    .line 170
     const-string/jumbo v0, "com.tencent.mm.gwallet.ACTION_QUERY_REQUEST"
 
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -749,7 +749,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 164
+    .line 171
     const-string/jumbo v0, "is_direct"
 
     const/4 v1, 0x1
@@ -758,14 +758,14 @@
 
     move-result v0
 
-    .line 165
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->cc(Z)V
+    .line 172
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->cJ(Z)V
 
-    .line 167
+    .line 174
     :cond_0
     invoke-super {p0, p1}, Landroid/app/Activity;->onNewIntent(Landroid/content/Intent;)V
 
-    .line 168
+    .line 175
     return-void
 .end method
 
@@ -773,25 +773,25 @@
     .locals 2
 
     .prologue
-    .line 172
+    .line 179
     invoke-super {p0}, Landroid/app/Activity;->onStart()V
 
-    .line 173
+    .line 180
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    .line 174
+    .line 181
     const-string/jumbo v1, "com.tencent.mm.gwallet.ACTION_CONSUME_REQUEST"
 
     invoke-virtual {v0, v1}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 175
-    iget-object v1, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->cnV:Landroid/content/BroadcastReceiver;
+    .line 182
+    iget-object v1, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->cFt:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
-    .line 176
+    .line 183
     return-void
 .end method
 
@@ -799,14 +799,14 @@
     .locals 1
 
     .prologue
-    .line 180
+    .line 187
     invoke-super {p0}, Landroid/app/Activity;->onStop()V
 
-    .line 181
-    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->cnV:Landroid/content/BroadcastReceiver;
+    .line 188
+    iget-object v0, p0, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->cFt:Landroid/content/BroadcastReceiver;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/gwallet/GWalletUI;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
-    .line 182
+    .line 189
     return-void
 .end method

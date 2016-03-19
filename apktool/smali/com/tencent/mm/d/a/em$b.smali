@@ -15,13 +15,7 @@
 
 
 # instance fields
-.field public aBc:Z
-
-.field public aBd:Ljava/util/List;
-
-.field public aBe:I
-
-.field public axw:I
+.field public atf:Z
 
 
 # direct methods
@@ -29,21 +23,13 @@
     .locals 1
 
     .prologue
-    const/4 v0, 0x0
-
-    .line 29
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
-    iput v0, p0, Lcom/tencent/mm/d/a/em$b;->axw:I
+    .line 19
+    const/4 v0, 0x0
 
-    .line 31
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/em$b;->aBc:Z
-
-    .line 33
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/tencent/mm/d/a/em$b;->aBe:I
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/em$b;->atf:Z
 
     return-void
 .end method

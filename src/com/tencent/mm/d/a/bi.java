@@ -1,25 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class bi
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awq = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auv = new a();
   
   public bi()
   {
-    id = "ExDeviceSimpleBTOnScanResult";
-    hXT = atO;
+    id = "EmojiUnicodeConfUpdate";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean avW;
-    public String awj;
-    public String mac;
+    public int auw = 0;
   }
 }
 

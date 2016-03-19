@@ -7,17 +7,17 @@ final class MMRadioGroupView$a
   
   public final void a(MMRadioImageButton paramMMRadioImageButton)
   {
-    if (MMRadioGroupView.a(iHk) != -1) {
-      MMRadioGroupView.c(iHk, MMRadioGroupView.a(iHk));
+    if (MMRadioGroupView.a(kGx) != -1) {
+      MMRadioGroupView.c(kGx, MMRadioGroupView.a(kGx));
     }
     int i = paramMMRadioImageButton.getId();
-    MMRadioGroupView.a(iHk, paramMMRadioImageButton);
-    MMRadioGroupView.d(iHk, i);
+    MMRadioGroupView.a(kGx, paramMMRadioImageButton);
+    MMRadioGroupView.d(kGx, i);
   }
   
   public final void b(MMRadioImageButton paramMMRadioImageButton)
   {
-    MMRadioGroupView.e(iHk, paramMMRadioImageButton.getId());
+    MMRadioGroupView.e(kGx, paramMMRadioImageButton.getId());
   }
 }
 

@@ -3,12 +3,12 @@ package com.tencent.mm.ui.base;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.LinearLayout;
+import com.tencent.mm.ui.widget.DrawedCallBackLinearLayout;
 
 public class OnLayoutChangedLinearLayout
-  extends LinearLayout
+  extends DrawedCallBackLinearLayout
 {
-  public a iKS;
+  public a kKf;
   
   public OnLayoutChangedLinearLayout(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -24,19 +24,19 @@ public class OnLayoutChangedLinearLayout
   public void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    if (iKS != null) {
-      iKS.aKP();
+    if (kKf != null) {
+      kKf.baH();
     }
   }
   
   public void setOnChattingLayoutChangedListener(a parama)
   {
-    iKS = parama;
+    kKf = parama;
   }
   
   public static abstract interface a
   {
-    public abstract void aKP();
+    public abstract void baH();
   }
 }
 

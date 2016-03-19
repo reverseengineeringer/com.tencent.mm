@@ -1,36 +1,37 @@
 package com.tencent.mm.plugin.sight.decode.a;
 
-import com.tencent.mm.ah.v;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.an.j;
+import com.tencent.mm.sdk.platformtools.u;
 
 final class b$c
   implements Runnable
 {
-  volatile boolean fhD = false;
-  b.b fhG;
+  volatile boolean gxQ = false;
+  int gxT;
+  b.b gxU;
   
   private b$c(b paramb) {}
   
   public final void run()
   {
-    if (fhD)
+    if (gxQ)
     {
-      t.e("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "#0x%x-#0x%x match stop draw", new Object[] { Integer.valueOf(fhz.hashCode()), Integer.valueOf(hashCode()) });
+      u.e("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "#0x%x-#0x%x match stop draw", new Object[] { Integer.valueOf(gxL.hashCode()), Integer.valueOf(hashCode()) });
       return;
     }
-    fhz.l(b.x(fhz));
-    if (b.r(fhz) == 0L)
+    gxL.l(b.C(gxL));
+    if (b.s(gxL) == 0L)
     {
-      v.a(fhG, 0L);
+      j.b(gxU, 0L);
       return;
     }
-    long l = b.t(fhz) - (System.currentTimeMillis() - b.r(fhz));
+    long l = b.v(gxL) - (System.currentTimeMillis() - b.s(gxL));
     if (l > 0L)
     {
-      v.a(fhG, l);
+      j.b(gxU, l);
       return;
     }
-    v.a(fhG, 0L);
+    j.b(gxU, 0L);
   }
 }
 

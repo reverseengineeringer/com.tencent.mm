@@ -3,33 +3,33 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d;
+.implements Lcom/tencent/mm/r/d;
 
 
 # instance fields
-.field private bXB:Landroid/app/ProgressDialog;
+.field private coM:Landroid/app/ProgressDialog;
 
-.field private eKK:Ljava/lang/String;
+.field private fVw:Ljava/lang/String;
 
-.field private isN:Landroid/widget/TextView;
+.field private krT:Landroid/widget/TextView;
 
-.field private isO:Landroid/widget/TextView;
+.field private krU:Landroid/widget/TextView;
 
-.field private isP:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+.field private krV:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
-.field private isQ:Landroid/widget/Button;
+.field private krW:Landroid/widget/Button;
 
-.field private isR:Landroid/widget/Button;
+.field private krX:Landroid/widget/Button;
 
-.field private isS:Ljava/lang/String;
+.field private krY:Ljava/lang/String;
 
-.field private isT:Ljava/lang/String;
+.field private krZ:Ljava/lang/String;
 
-.field private isU:Ljava/lang/String;
+.field private ksa:Ljava/lang/String;
 
-.field private isV:Z
+.field private ksb:Ljava/lang/String;
 
-.field private verifyCode:Ljava/lang/String;
+.field private ksc:Z
 
 
 # direct methods
@@ -43,12 +43,12 @@
     .line 43
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->coM:Landroid/app/ProgressDialog;
 
     .line 52
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->ksc:Z
 
     return-void
 .end method
@@ -58,7 +58,7 @@
 
     .prologue
     .line 34
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->coM:Landroid/app/ProgressDialog;
 
     return-object p1
 .end method
@@ -68,7 +68,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isS:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krY:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -80,7 +80,7 @@
     const/4 v3, 0x1
 
     .line 34
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->ksc:Z
 
     if-eqz v0, :cond_0
 
@@ -88,47 +88,47 @@
 
     const-string/jumbo v1, "is verifying, wait a minute"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
 
     :cond_0
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isV:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->ksc:Z
 
-    new-instance v0, Lcom/tencent/mm/modelfriend/ak;
+    new-instance v0, Lcom/tencent/mm/modelfriend/w;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isS:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krY:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isU:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->ksa:Ljava/lang/String;
 
-    invoke-direct {v0, v1, v2, p1}, Lcom/tencent/mm/modelfriend/ak;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0, v1, v2, p1}, Lcom/tencent/mm/modelfriend/w;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/q/l;->d(Lcom/tencent/mm/q/j;)Z
-
-    sget v1, Lcom/tencent/mm/a$n;->app_tip:I
-
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->getString(I)Ljava/lang/String;
-
-    sget v1, Lcom/tencent/mm/a$n;->regby_email_verifing:I
-
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->getString(I)Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v1
 
-    new-instance v2, Lcom/tencent/mm/ui/account/s;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
-    invoke-direct {v2, p0, v0}, Lcom/tencent/mm/ui/account/s;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;Lcom/tencent/mm/modelfriend/ak;)V
+    const v1, 0x7f0b0ddd
 
-    invoke-static {p0, v1, v3, v2}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/bn;
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->getString(I)Ljava/lang/String;
+
+    const v1, 0x7f0b016b
+
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    new-instance v2, Lcom/tencent/mm/ui/account/EmailVerifyUI$7;
+
+    invoke-direct {v2, p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI$7;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;Lcom/tencent/mm/modelfriend/w;)V
+
+    invoke-static {p0, v1, v3, v2}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/p;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->coM:Landroid/app/ProgressDialog;
 
     goto :goto_0
 .end method
@@ -138,7 +138,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isU:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->ksa:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -148,7 +148,7 @@
 
     .prologue
     .line 34
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->verifyCode:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->ksb:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -158,7 +158,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isT:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krZ:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -178,7 +178,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isP:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krV:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     return-object v0
 .end method
@@ -188,7 +188,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->verifyCode:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->ksb:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -198,9 +198,9 @@
 
     .prologue
     .line 257
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->eKK:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->fVw:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->iZ(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
 
     .line 258
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->finish()V
@@ -211,19 +211,19 @@
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 6
 
     .prologue
     const/4 v5, 0x0
 
     .line 86
-    sget v0, Lcom/tencent/mm/a$n;->regby_email_verify_email:I
+    const v0, 0x7f0b0159
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->qb(I)V
 
     .line 88
-    sget v0, Lcom/tencent/mm/a$i;->verify_email_hint:I
+    const v0, 0x7f070752
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->findViewById(I)Landroid/view/View;
 
@@ -231,17 +231,17 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isN:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krT:Landroid/widget/TextView;
 
     .line 89
-    sget v0, Lcom/tencent/mm/a$n;->regby_email_input_verify_tip:I
+    const v0, 0x7f0b015c
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     .line 90
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isN:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krT:Landroid/widget/TextView;
 
     invoke-static {v0}, Landroid/text/Html;->fromHtml(Ljava/lang/String;)Landroid/text/Spanned;
 
@@ -250,7 +250,7 @@
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 91
-    sget v0, Lcom/tencent/mm/a$i;->email_address:I
+    const v0, 0x7f070753
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->findViewById(I)Landroid/view/View;
 
@@ -258,7 +258,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isO:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krU:Landroid/widget/TextView;
 
     .line 92
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->getIntent()Landroid/content/Intent;
@@ -271,21 +271,21 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isS:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krY:Ljava/lang/String;
 
     .line 93
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isS:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krY:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 94
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isO:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krU:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isS:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krY:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -301,7 +301,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isU:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->ksa:Ljava/lang/String;
 
     .line 99
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->getIntent()Landroid/content/Intent;
@@ -314,7 +314,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isT:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krZ:Ljava/lang/String;
 
     .line 100
     const-string/jumbo v0, "!32@/B4Tb64lLpIOS9lfUKA2PejJbq3tJ/Tl"
@@ -325,20 +325,20 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isS:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krY:Ljava/lang/String;
 
     aput-object v3, v2, v5
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isT:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krZ:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 102
-    sget v0, Lcom/tencent/mm/a$i;->auto_switch_ll:I
+    const v0, 0x7f070754
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->findViewById(I)Landroid/view/View;
 
@@ -346,28 +346,28 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isP:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krV:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
     .line 103
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isP:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krV:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
-    new-instance v1, Lcom/tencent/mm/ui/account/k;
+    new-instance v1, Lcom/tencent/mm/ui/account/EmailVerifyUI$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/k;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/EmailVerifyUI$1;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->setOnInputFinished(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$a;)V
 
     .line 112
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isP:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krV:Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;
 
-    new-instance v1, Lcom/tencent/mm/ui/account/l;
+    new-instance v1, Lcom/tencent/mm/ui/account/EmailVerifyUI$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/l;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/EmailVerifyUI$2;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView;->setOnTextChanged(Lcom/tencent/mm/ui/base/MMAutoSwitchEditTextView$b;)V
 
     .line 121
-    sget v0, Lcom/tencent/mm/a$i;->re_send_verify_code_btn:I
+    const v0, 0x7f070756
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->findViewById(I)Landroid/view/View;
 
@@ -375,19 +375,19 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isR:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krX:Landroid/widget/Button;
 
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isR:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krX:Landroid/widget/Button;
 
-    new-instance v1, Lcom/tencent/mm/ui/account/m;
+    new-instance v1, Lcom/tencent/mm/ui/account/EmailVerifyUI$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/m;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/EmailVerifyUI$3;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 150
-    sget v0, Lcom/tencent/mm/a$i;->open_browser_btn:I
+    const v0, 0x7f070755
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->findViewById(I)Landroid/view/View;
 
@@ -395,20 +395,20 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isQ:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krW:Landroid/widget/Button;
 
     .line 151
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isT:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krZ:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isS:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krY:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -416,7 +416,7 @@
 
     .line 152
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isQ:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krW:Landroid/widget/Button;
 
     const/16 v1, 0x8
 
@@ -424,27 +424,27 @@
 
     .line 164
     :goto_1
-    new-instance v0, Lcom/tencent/mm/ui/account/q;
+    new-instance v0, Lcom/tencent/mm/ui/account/EmailVerifyUI$5;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/q;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/EmailVerifyUI$5;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 174
-    sget v0, Lcom/tencent/mm/a$n;->app_nextstep:I
+    const v0, 0x7f0b0def
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/ui/account/r;
+    new-instance v1, Lcom/tencent/mm/ui/account/EmailVerifyUI$6;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/r;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/EmailVerifyUI$6;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
 
     invoke-virtual {p0, v5, v0, v1}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 190
-    invoke-virtual {p0, v5}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->fe(Z)V
+    invoke-virtual {p0, v5}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->bC(Z)V
 
     .line 192
     return-void
@@ -455,32 +455,34 @@
 
     const-string/jumbo v1, "email add is null or nill"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 154
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isQ:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krW:Landroid/widget/Button;
 
     invoke-virtual {v0, v5}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 155
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isQ:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krW:Landroid/widget/Button;
 
-    new-instance v1, Lcom/tencent/mm/ui/account/p;
+    new-instance v1, Lcom/tencent/mm/ui/account/EmailVerifyUI$4;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/p;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/EmailVerifyUI$4;-><init>(Lcom/tencent/mm/ui/account/EmailVerifyUI;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     goto :goto_1
 .end method
 
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
-    .locals 7
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    .locals 8
 
     .prologue
+    const v7, 0x7f0b0163
+
     const/4 v6, 0x0
 
     const/4 v5, 0x2
@@ -526,17 +528,17 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 264
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isV:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->ksc:Z
 
     .line 265
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->coM:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->coM:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -545,16 +547,16 @@
     if-eqz v0, :cond_0
 
     .line 266
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->coM:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 267
-    iput-object v6, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object v6, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->coM:Landroid/app/ProgressDialog;
 
     .line 269
     :cond_0
-    invoke-virtual {p4}, Lcom/tencent/mm/q/j;->getType()I
+    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
 
     move-result v0
 
@@ -569,7 +571,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-virtual {p4}, Lcom/tencent/mm/q/j;->getType()I
+    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
 
     move-result v4
 
@@ -579,7 +581,7 @@
 
     aput-object v4, v1, v2
 
-    invoke-static {v0, v3, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 307
     :cond_1
@@ -590,19 +592,19 @@
     move-object v0, p4
 
     .line 274
-    check-cast v0, Lcom/tencent/mm/modelfriend/ak;
+    check-cast v0, Lcom/tencent/mm/modelfriend/w;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ak;->btU:Lcom/tencent/mm/network/w;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/w;->bGh:Lcom/tencent/mm/network/o;
 
-    invoke-interface {v0}, Lcom/tencent/mm/network/w;->vj()Lcom/tencent/mm/protocal/i$c;
+    invoke-interface {v0}, Lcom/tencent/mm/network/o;->vA()Lcom/tencent/mm/protocal/h$c;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/protocal/m$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/m$a;->hhb:Lcom/tencent/mm/protocal/b/iv;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/m$a;->iUX:Lcom/tencent/mm/protocal/b/kv;
 
-    iget v3, v0, Lcom/tencent/mm/protocal/b/iv;->hkO:I
+    iget v3, v0, Lcom/tencent/mm/protocal/b/kv;->iZE:I
 
     .line 275
     if-nez p1, :cond_5
@@ -615,7 +617,7 @@
     .line 277
     const-string/jumbo v0, "R200_900_email"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->iZ(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
 
     .line 278
     new-instance v1, Landroid/content/Intent;
@@ -627,19 +629,19 @@
     move-object v0, p4
 
     .line 279
-    check-cast v0, Lcom/tencent/mm/modelfriend/ak;
+    check-cast v0, Lcom/tencent/mm/modelfriend/w;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelfriend/ak;->btU:Lcom/tencent/mm/network/w;
+    iget-object v0, v0, Lcom/tencent/mm/modelfriend/w;->bGh:Lcom/tencent/mm/network/o;
 
-    invoke-interface {v0}, Lcom/tencent/mm/network/w;->tG()Lcom/tencent/mm/protocal/i$d;
+    invoke-interface {v0}, Lcom/tencent/mm/network/o;->tX()Lcom/tencent/mm/protocal/h$d;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/protocal/m$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/m$b;->hhc:Lcom/tencent/mm/protocal/b/iw;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/m$b;->iUY:Lcom/tencent/mm/protocal/b/kw;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/iw;->hst:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/kw;->jiB:Ljava/lang/String;
 
     .line 280
     const-string/jumbo v2, "regsetinfo_ticket"
@@ -649,7 +651,7 @@
     .line 281
     const-string/jumbo v0, "regsetinfo_user"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isS:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krY:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -663,9 +665,9 @@
     .line 283
     const-string/jumbo v0, "regsetinfo_NextStyle"
 
-    check-cast p4, Lcom/tencent/mm/modelfriend/ak;
+    check-cast p4, Lcom/tencent/mm/modelfriend/w;
 
-    invoke-virtual {p4}, Lcom/tencent/mm/modelfriend/ak;->yd()I
+    invoke-virtual {p4}, Lcom/tencent/mm/modelfriend/w;->yU()I
 
     move-result v2
 
@@ -674,14 +676,14 @@
     .line 284
     const-string/jumbo v0, "regsetinfo_pwd"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isU:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->ksa:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 285
     const-string/jumbo v0, "regsetinfo_bind_email"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->isS:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->krY:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -699,7 +701,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v1
 
@@ -733,7 +735,7 @@
 
     const-string/jumbo v1, "R22_resend_email_code_alert"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v1
 
@@ -751,16 +753,16 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ja(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
 
     .line 291
-    sget v0, Lcom/tencent/mm/a$n;->regby_email_send_verify_code_ok:I
+    const v0, 0x7f0b0161
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/ui/base/h;->aN(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {p0, v0}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
     goto/16 :goto_0
 
@@ -770,15 +772,15 @@
 
     const-string/jumbo v1, "err opcode"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
     .line 297
     :cond_5
-    sget-object v0, Lcom/tencent/mm/plugin/a/a;->bWX:Lcom/tencent/mm/pluginsdk/i;
+    sget-object v0, Lcom/tencent/mm/plugin/a/a;->cob:Lcom/tencent/mm/pluginsdk/f;
 
-    invoke-interface {v0, p0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/i;->a(Landroid/content/Context;IILjava/lang/String;)Z
+    invoke-interface {v0, p0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/f;->a(Landroid/content/Context;IILjava/lang/String;)Z
 
     move-result v0
 
@@ -793,7 +795,7 @@
     if-ne v3, v5, :cond_7
 
     .line 301
-    sget v0, Lcom/tencent/mm/a$n;->regby_email_verify_failed:I
+    const v0, 0x7f0b0162
 
     new-array v3, v5, [Ljava/lang/Object;
 
@@ -830,17 +832,15 @@
     goto :goto_1
 
     :pswitch_0
-    sget v0, Lcom/tencent/mm/a$n;->regby_email_err_unmatch_content:I
+    const v0, 0x7f0b0168
 
-    sget v4, Lcom/tencent/mm/a$n;->regby_email_err_tip_title:I
-
-    invoke-static {p0, v0, v4, v6}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {p0, v0, v7, v6}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v4
 
@@ -874,7 +874,7 @@
 
     const-string/jumbo v4, "R500_260"
 
-    invoke-static {v4}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v4}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v4
 
@@ -892,25 +892,23 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ja(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
 
     move v0, v1
 
     goto :goto_1
 
     :pswitch_1
-    sget v0, Lcom/tencent/mm/a$n;->regby_email_err_time_out_content:I
+    const v0, 0x7f0b0169
 
-    sget v4, Lcom/tencent/mm/a$n;->regby_email_err_tip_title:I
-
-    invoke-static {p0, v0, v4, v6}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {p0, v0, v7, v6}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
     move v0, v1
 
     goto :goto_1
 
     :pswitch_2
-    sget v0, Lcom/tencent/mm/a$n;->regby_email_err_freq_limit:I
+    const v0, 0x7f0b016a
 
     invoke-static {p0, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -927,7 +925,7 @@
     if-ne v3, v1, :cond_1
 
     .line 303
-    sget v0, Lcom/tencent/mm/a$n;->regby_email_send_verify_code_failed:I
+    const v0, 0x7f0b0160
 
     new-array v3, v5, [Ljava/lang/Object;
 
@@ -956,8 +954,6 @@
     goto/16 :goto_0
 
     .line 297
-    nop
-
     :pswitch_data_0
     .packed-switch -0x22
         :pswitch_2
@@ -971,7 +967,7 @@
 
     .prologue
     .line 81
-    sget v0, Lcom/tencent/mm/a$k;->verify_email_address:I
+    const v0, 0x7f0a027e
 
     return v0
 .end method
@@ -984,14 +980,14 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 57
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/EmailVerifyUI;->Gb()V
 
     .line 58
-    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->DR()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->FX()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->eKK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/EmailVerifyUI;->fVw:Ljava/lang/String;
 
     .line 59
     return-void
@@ -1038,13 +1034,13 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
     .line 74
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x1e1
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 75
     const/4 v0, 0x0
@@ -1053,7 +1049,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1087,7 +1083,7 @@
 
     const-string/jumbo v2, "R500_200"
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v2
 
@@ -1119,13 +1115,13 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
     .line 64
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x1e1
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     .line 65
     const/4 v0, 0x1
@@ -1134,7 +1130,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1168,7 +1164,7 @@
 
     const-string/jumbo v2, "R500_200"
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v2
 
@@ -1191,7 +1187,7 @@
     .line 67
     const-string/jumbo v0, "R500_200"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->iY(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kB(Ljava/lang/String;)V
 
     .line 69
     return-void

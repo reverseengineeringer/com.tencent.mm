@@ -1,8 +1,18 @@
 package com.tencent.mm.d.a;
 
+import android.content.Context;
+
 public final class r$a
 {
-  public String filePath;
+  public int action = 0;
+  public String asC;
+  public long asD = 0L;
+  public boolean asE = false;
+  public Runnable asF;
+  public Context context;
+  public int fromScene = 0;
+  public int offset = 0;
+  public String title;
 }
 
 /* Location:

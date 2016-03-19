@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field protected jY:Landroid/support/v7/internal/widget/ActionBarContainer;
+.field protected jf:Landroid/support/v7/internal/widget/ActionBarContainer;
 
-.field protected nN:Landroid/support/v7/internal/view/menu/ActionMenuView;
+.field protected mR:Landroid/support/v7/internal/view/menu/ActionMenuView;
 
-.field protected nO:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+.field protected mS:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
-.field protected nP:Z
+.field protected mT:Z
 
-.field protected nQ:Z
+.field protected mU:Z
 
-.field protected nR:I
+.field protected mV:I
 
 
 # direct methods
@@ -139,7 +139,7 @@
 
 
 # virtual methods
-.method public B(I)V
+.method public C(I)V
     .locals 2
 
     .prologue
@@ -160,7 +160,7 @@
 
     if-nez p1, :cond_1
 
-    sget v0, Lcom/tencent/mm/a$a;->abc_fade_in:I
+    const v0, 0x7f020069
 
     :goto_0
     invoke-static {v1, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
@@ -174,21 +174,21 @@
     invoke-virtual {p0, p1}, Landroid/support/v7/internal/widget/a;->setVisibility(I)V
 
     .line 129
-    iget-object v1, p0, Landroid/support/v7/internal/widget/a;->jY:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/a;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/a;->nN:Landroid/support/v7/internal/view/menu/ActionMenuView;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/a;->mR:Landroid/support/v7/internal/view/menu/ActionMenuView;
 
     if-eqz v1, :cond_0
 
     .line 130
-    iget-object v1, p0, Landroid/support/v7/internal/widget/a;->nN:Landroid/support/v7/internal/view/menu/ActionMenuView;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/a;->mR:Landroid/support/v7/internal/view/menu/ActionMenuView;
 
     invoke-virtual {v1, v0}, Landroid/support/v7/internal/view/menu/ActionMenuView;->startAnimation(Landroid/view/animation/Animation;)V
 
     .line 131
-    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->nN:Landroid/support/v7/internal/view/menu/ActionMenuView;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->mR:Landroid/support/v7/internal/view/menu/ActionMenuView;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/internal/view/menu/ActionMenuView;->setVisibility(I)V
 
@@ -198,19 +198,19 @@
 
     .line 123
     :cond_1
-    sget v0, Lcom/tencent/mm/a$a;->abc_fade_out:I
+    const v0, 0x7f02006a
 
     goto :goto_0
 .end method
 
-.method public bY()V
+.method public bI()V
     .locals 1
 
     .prologue
     .line 151
-    new-instance v0, Landroid/support/v7/internal/widget/b;
+    new-instance v0, Landroid/support/v7/internal/widget/a$1;
 
-    invoke-direct {v0, p0}, Landroid/support/v7/internal/widget/b;-><init>(Landroid/support/v7/internal/widget/a;)V
+    invoke-direct {v0, p0}, Landroid/support/v7/internal/widget/a$1;-><init>(Landroid/support/v7/internal/widget/a;)V
 
     invoke-virtual {p0, v0}, Landroid/support/v7/internal/widget/a;->post(Ljava/lang/Runnable;)Z
 
@@ -218,18 +218,18 @@
     return-void
 .end method
 
-.method public bZ()Z
+.method public bJ()Z
     .locals 1
 
     .prologue
     .line 173
-    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->nO:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->mS:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->nO:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->mS:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
-    iget-boolean v0, v0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter;->ly:Z
+    iget-boolean v0, v0, Landroid/support/v7/internal/view/menu/ActionMenuPresenter;->kD:Z
 
     if-eqz v0, :cond_0
 
@@ -261,7 +261,7 @@
 
     .prologue
     .line 105
-    iget v0, p0, Landroid/support/v7/internal/widget/a;->nR:I
+    iget v0, p0, Landroid/support/v7/internal/widget/a;->mV:I
 
     return v0
 .end method
@@ -271,12 +271,12 @@
 
     .prologue
     .line 159
-    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->nO:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->mS:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
     if-eqz v0, :cond_0
 
     .line 160
-    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->nO:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->mS:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/ActionMenuPresenter;->hideOverflowMenu()Z
 
@@ -297,12 +297,12 @@
 
     .prologue
     .line 166
-    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->nO:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->mS:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
     if-eqz v0, :cond_0
 
     .line 167
-    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->nO:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->mS:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/ActionMenuPresenter;->isOverflowMenuShowing()Z
 
@@ -342,16 +342,16 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Lcom/tencent/mm/a$p;->ActionBar:[I
+    sget-object v2, Lcom/tencent/mm/R$b;->ActionBar:[I
 
-    sget v3, Lcom/tencent/mm/a$d;->actionBarStyle:I
+    const v3, 0x7f010091
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
     .line 70
-    const/4 v1, 0x1
+    const/4 v1, 0x2
 
     invoke-virtual {v0, v1, v4}, Landroid/content/res/TypedArray;->getLayoutDimension(II)I
 
@@ -363,7 +363,7 @@
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 72
-    iget-boolean v0, p0, Landroid/support/v7/internal/widget/a;->nQ:Z
+    iget-boolean v0, p0, Landroid/support/v7/internal/widget/a;->mU:Z
 
     if-eqz v0, :cond_1
 
@@ -376,7 +376,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$e;->abc_split_action_bar_is_narrow:I
+    const v1, 0x7f0f0002
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -386,14 +386,14 @@
 
     .line 76
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->nO:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->mS:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
     if-eqz v0, :cond_2
 
     .line 77
-    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->nO:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->mS:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
-    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/ActionMenuPresenter;->bg()V
+    invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/ActionMenuPresenter;->aQ()V
 
     .line 79
     :cond_2
@@ -405,7 +405,7 @@
 
     .prologue
     .line 100
-    iput p1, p0, Landroid/support/v7/internal/widget/a;->nR:I
+    iput p1, p0, Landroid/support/v7/internal/widget/a;->mV:I
 
     .line 101
     invoke-virtual {p0}, Landroid/support/v7/internal/widget/a;->requestLayout()V
@@ -419,7 +419,7 @@
 
     .prologue
     .line 87
-    iput-boolean p1, p0, Landroid/support/v7/internal/widget/a;->nP:Z
+    iput-boolean p1, p0, Landroid/support/v7/internal/widget/a;->mT:Z
 
     .line 88
     return-void
@@ -430,7 +430,7 @@
 
     .prologue
     .line 109
-    iput-object p1, p0, Landroid/support/v7/internal/widget/a;->jY:Landroid/support/v7/internal/widget/ActionBarContainer;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/a;->jf:Landroid/support/v7/internal/widget/ActionBarContainer;
 
     .line 110
     return-void
@@ -441,7 +441,7 @@
 
     .prologue
     .line 96
-    iput-boolean p1, p0, Landroid/support/v7/internal/widget/a;->nQ:Z
+    iput-boolean p1, p0, Landroid/support/v7/internal/widget/a;->mU:Z
 
     .line 97
     return-void
@@ -471,12 +471,12 @@
 
     .prologue
     .line 144
-    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->nO:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->mS:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
     if-eqz v0, :cond_0
 
     .line 145
-    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->nO:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/a;->mS:Landroid/support/v7/internal/view/menu/ActionMenuPresenter;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/view/menu/ActionMenuPresenter;->showOverflowMenu()Z
 

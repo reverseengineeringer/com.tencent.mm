@@ -2,7 +2,7 @@ package com.tencent.mm.booter.notification.a;
 
 final class f$a
 {
-  private static final f bej = new f((byte)0);
+  private static final f bos = new f((byte)0);
 }
 
 /* Location:

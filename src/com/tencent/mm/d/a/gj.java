@@ -1,17 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class gj
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBx = new a();
   
   public gj()
   {
-    id = "ResendAllFailNormalMsg";
-    hXT = atO;
+    id = "LuckSightRecorder";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public String aBy;
+    public String imagePath;
   }
 }
 

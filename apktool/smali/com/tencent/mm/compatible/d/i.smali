@@ -17,7 +17,7 @@
     return-void
 .end method
 
-.method public static os()Lcom/tencent/mm/compatible/d/c$a$a;
+.method public static oh()Lcom/tencent/mm/compatible/d/c$a$a;
     .locals 6
 
     .prologue
@@ -40,17 +40,17 @@
 
     move-result-object v3
 
-    iput-object v3, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bhb:Landroid/hardware/Camera;
+    iput-object v3, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
 
     .line 145
     const/4 v3, 0x0
 
-    iput v3, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bgY:I
+    iput v3, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brw:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 150
-    iget-object v3, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bhb:Landroid/hardware/Camera;
+    iget-object v3, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
 
     if-nez v3, :cond_0
 
@@ -71,10 +71,10 @@
     if-eqz v0, :cond_2
 
     .line 155
-    iput v5, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bgY:I
+    iput v5, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brw:I
 
     .line 156
-    iget-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bhb:Landroid/hardware/Camera;
+    iget-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
 
     invoke-virtual {v0, v5}, Landroid/hardware/Camera;->setDisplayOrientation(I)V
 
@@ -105,10 +105,10 @@
     if-lt v0, v2, :cond_1
 
     .line 158
-    iput v5, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bgY:I
+    iput v5, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brw:I
 
     .line 159
-    iget-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->bhb:Landroid/hardware/Camera;
+    iget-object v0, v1, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
 
     const/16 v2, 0xb4
 

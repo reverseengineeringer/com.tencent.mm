@@ -2,7 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class cu$a
 {
-  public long ayC = 0L;
+  public boolean Jq = false;
+  public String mac;
 }
 
 /* Location:

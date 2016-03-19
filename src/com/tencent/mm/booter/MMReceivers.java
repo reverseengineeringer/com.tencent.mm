@@ -5,33 +5,30 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.NetworkInfo.State;
 import android.os.Process;
 import com.jg.JgClassChecked;
-import com.tencent.mm.network.aw;
-import com.tencent.mm.network.aw.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.sdk.platformtools.x;
-import com.tencent.smtt.sdk.CookieManager;
-import com.tencent.smtt.sdk.CookieSyncManager;
+import com.tencent.mm.compatible.d.r;
+import com.tencent.mm.network.z;
+import com.tencent.mm.network.z.a;
+import com.tencent.mm.pluginsdk.k;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.w;
+import com.tencent.mm.sdk.platformtools.y;
 import com.tencent.smtt.sdk.QbSdk;
-import com.tencent.smtt.sdk.WebView;
 
 public final class MMReceivers
 {
   public static class AlarmReceiver
     extends BroadcastReceiver
   {
-    public static void ag(Context paramContext)
+    public static void ap(Context paramContext)
     {
-      long l = x.aEM();
-      t.d("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "bumper comes, next=" + l);
+      long l = w.aUE();
+      u.d("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "bumper comes, next=" + l);
       if (l > 1860000L) {
         return;
       }
@@ -40,11 +37,11 @@ public final class MMReceivers
       }
       for (;;)
       {
-        t.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "reset bumper, interval=" + l);
+        u.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "reset bumper, interval=" + l);
         AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
         if (localAlarmManager == null)
         {
-          t.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep bumper failed, null am");
+          u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep bumper failed, null am");
           return;
         }
         paramContext = PendingIntent.getBroadcast(paramContext, 1, new Intent(paramContext, AlarmReceiver.class).putExtra("MMBoot_Bump", true), 268435456);
@@ -53,11 +50,11 @@ public final class MMReceivers
       }
     }
     
-    public static void ah(Context paramContext)
+    public static void aq(Context paramContext)
     {
       AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
       if (localAlarmManager == null) {
-        t.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "stop bumper failed, null am");
+        u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "stop bumper failed, null am");
       }
       do
       {
@@ -68,16 +65,16 @@ public final class MMReceivers
       paramContext.cancel();
     }
     
-    public static void ai(Context paramContext)
+    public static void ar(Context paramContext)
     {
-      t.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker");
+      u.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker");
       AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
       if (localAlarmManager == null)
       {
-        t.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker failed, null am");
+        u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker failed, null am");
         return;
       }
-      if (aw.CU()) {}
+      if (z.Fb()) {}
       for (int i = 300000;; i = 900000)
       {
         paramContext = PendingIntent.getBroadcast(paramContext, 0, new Intent(paramContext, AlarmReceiver.class), 268435456);
@@ -86,12 +83,12 @@ public final class MMReceivers
       }
     }
     
-    public static void aj(Context paramContext)
+    public static void as(Context paramContext)
     {
-      t.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "stop awaker");
+      u.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "stop awaker");
       AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
       if (localAlarmManager == null) {
-        t.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker failed, null am");
+        u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker failed, null am");
       }
       do
       {
@@ -109,15 +106,15 @@ public final class MMReceivers
       {
         return;
         boolean bool = paramIntent.getBooleanExtra("MMBoot_Bump", false);
-        t.i("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "[ALARM NOTIFICATION] bump:" + bool);
+        u.i("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "[ALARM NOTIFICATION] bump:" + bool);
         if (bool)
         {
-          ag(paramContext);
+          ap(paramContext);
           return;
         }
-      } while (f.p(paramContext, "alarm"));
-      aj(paramContext);
-      t.appenderFlush();
+      } while (b.q(paramContext, "alarm"));
+      as(paramContext);
+      u.appenderFlush();
     }
   }
   
@@ -132,9 +129,9 @@ public final class MMReceivers
       {
         return;
         new StringBuilder("system booted, pid=").append(Process.myPid());
-      } while (f.p(paramContext, "auto"));
-      MMReceivers.AlarmReceiver.aj(paramContext);
-      t.appenderFlush();
+      } while (b.q(paramContext, "auto"));
+      MMReceivers.AlarmReceiver.as(paramContext);
+      u.appenderFlush();
     }
   }
   
@@ -148,22 +145,22 @@ public final class MMReceivers
       do
       {
         return;
-        t.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "onReceive threadID: " + Thread.currentThread().getId());
-        if (!f.p(paramContext, "connection"))
+        u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "onReceive threadID: " + Thread.currentThread().getId());
+        if (!b.q(paramContext, "connection"))
         {
-          MMReceivers.AlarmReceiver.aj(paramContext);
-          t.appenderFlush();
+          MMReceivers.AlarmReceiver.as(paramContext);
+          u.appenderFlush();
           return;
         }
-      } while (aw.CY() == null);
+      } while (z.Ff() == null);
       paramContext = (ConnectivityManager)paramContext.getSystemService("connectivity");
       try
       {
         paramContext = paramContext.getActiveNetworkInfo();
         if ((paramContext == null) || (paramContext.getState() != NetworkInfo.State.CONNECTED))
         {
-          t.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "NetworkAvailable: false");
-          paramIntent = aw.CY();
+          u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "NetworkAvailable: false");
+          paramIntent = z.Ff();
           if (paramContext != null) {
             paramContext.getTypeName();
           }
@@ -178,11 +175,11 @@ public final class MMReceivers
       {
         for (;;)
         {
-          t.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "getActiveNetworkInfo failed.");
+          u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "getActiveNetworkInfo failed.");
           paramContext = null;
         }
-        t.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "NetworkAvailable: true");
-        paramIntent = aw.CY();
+        u.i("!44@/B4Tb64lLpLXcj0G0yuGG2G/QCZiipuK9xCOJSuDUew=", "NetworkAvailable: true");
+        paramIntent = z.Ff();
         paramContext.getTypeName();
         paramContext.getSubtypeName();
         paramIntent.ao(true);
@@ -196,10 +193,9 @@ public final class MMReceivers
     public void onReceive(Context paramContext, Intent paramIntent)
     {
       long l = System.currentTimeMillis();
-      t.i("!56@/B4Tb64lLpLiQ7OrT4MAaceQRK/W0iihqAiu47he09l2tvBb7e03Xw==", "[hakon][Step] onReceive, save rebootTime = %s", new Object[] { Long.valueOf(l) });
-      paramContext = aa.aEW().edit();
-      paramContext.putLong("com.tencent.mm_device_reboot_time", l);
-      paramContext.commit();
+      u.i("!56@/B4Tb64lLpLiQ7OrT4MAaceQRK/W0iihqAiu47he09l2tvBb7e03Xw==", "[hakon][Step] onReceive, save rebootTime = %s", new Object[] { Long.valueOf(l) });
+      y.aUO();
+      r.j(205, l);
     }
   }
   
@@ -211,9 +207,15 @@ public final class MMReceivers
       if ((paramContext == null) || (paramIntent == null)) {
         return;
       }
-      t.i("!44@/B4Tb64lLpIbcv7LUFwb8fO6LC9lzg/XujQa6ypc0dU=", "onReceive");
+      u.i("!44@/B4Tb64lLpIbcv7LUFwb8fO6LC9lzg/XujQa6ypc0dU=", "onReceive");
       QbSdk.reset(paramContext);
-      ad.c(new w(this), 5000L);
+      ab.e(new Runnable()
+      {
+        public final void run()
+        {
+          Process.killProcess(Process.myPid());
+        }
+      }, 5000L);
     }
   }
   
@@ -227,45 +229,60 @@ public final class MMReceivers
       {
         do
         {
-          boolean bool;
+          boolean bool1;
+          boolean bool2;
           do
           {
             return;
             paramIntent = paramIntent.getStringExtra("tools_process_action_code_key");
-            t.i("!44@/B4Tb64lLpIkgs39Nqw599wY74g+r90QyBDOg2LtLsI=", "onReceive, action = " + paramIntent);
+            u.i("!44@/B4Tb64lLpIkgs39Nqw599wY74g+r90QyBDOg2LtLsI=", "onReceive, action = " + paramIntent);
             if (!paramIntent.equals("com.tencent.mm.intent.ACTION_KILL_TOOLS_PROCESS")) {
               break;
             }
-            t.appenderFlushSync();
-            bool = QbSdk.isSdkVideoServiceFg(paramContext);
-            t.i("!44@/B4Tb64lLpIkgs39Nqw599wY74g+r90QyBDOg2LtLsI=", "onReceive, ACTION_KILL_TOOLS_PROCESS, x5 kernel video fg = %b", new Object[] { Boolean.valueOf(bool) });
-          } while (bool);
+            u.appenderFlushSync();
+            bool1 = QbSdk.isSdkVideoServiceFg(paramContext);
+            bool2 = k.isLocked();
+            u.i("!44@/B4Tb64lLpIkgs39Nqw599wY74g+r90QyBDOg2LtLsI=", "onReceive, ACTION_KILL_TOOLS_PROCESS, x5 kernel video fg = %b, isLocked = %b", new Object[] { Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
+          } while ((bool1) || (bool2));
           Process.killProcess(Process.myPid());
           return;
           if (paramIntent.equals("com.tencent.mm.intent.ACTION_TOOLS_REMOVE_COOKIE")) {
             try
             {
-              CookieSyncManager.createInstance(paramContext.getApplicationContext());
-              CookieManager.getInstance().removeAllCookie();
-              CookieSyncManager.getInstance().sync();
+              QbSdk.clearAllWebViewCache(paramContext);
               return;
             }
             catch (Exception paramContext)
             {
-              t.i("!44@/B4Tb64lLpIkgs39Nqw599wY74g+r90QyBDOg2LtLsI=", "clear cookie faild : " + paramContext.getMessage());
+              u.i("!44@/B4Tb64lLpIkgs39Nqw599wY74g+r90QyBDOg2LtLsI=", "clear cookie faild : " + paramContext.getMessage());
               return;
             }
           }
         } while (paramIntent.equals("com.tencent.mm.intent.ACIONT_TOOLS_LOAD_DEX"));
         if (paramIntent.equals("com.tencent.mm.intent.ACTION_CLEAR_WEBVIEW_CACHE"))
         {
-          t.i("!44@/B4Tb64lLpIkgs39Nqw599wY74g+r90QyBDOg2LtLsI=", "WebViewCacheClearTask, clearAllWebViewCache");
+          u.i("!44@/B4Tb64lLpIkgs39Nqw599wY74g+r90QyBDOg2LtLsI=", "WebViewCacheClearTask, clearAllWebViewCache");
           QbSdk.clearAllWebViewCache(paramContext.getApplicationContext());
           return;
         }
-      } while (!paramIntent.equals("com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS"));
-      t.i("!44@/B4Tb64lLpIkgs39Nqw599wY74g+r90QyBDOg2LtLsI=", "start tools process task, try to pre load tbs");
-      new WebView(aa.getContext());
+        if (paramIntent.equals("com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS"))
+        {
+          u.i("!44@/B4Tb64lLpIkgs39Nqw599wY74g+r90QyBDOg2LtLsI=", "start tools process task, try to pre load tbs");
+          QbSdk.preInit(y.getContext(), null);
+          return;
+        }
+        if (paramIntent.equals("com.tencent.mm.intent.ACTION_LOCK_TOOLS_PROCESS"))
+        {
+          k.lock();
+          return;
+        }
+        if (paramIntent.equals("com.tencent.mm.intent.ACTION_UNLOCK_TOOLS_PROCESS"))
+        {
+          k.unlock();
+          return;
+        }
+      } while (!paramIntent.equals("com.tencent.mm.intent.ACTION_START_TOOLS_PROCESS_DO_NOTHING"));
+      u.i("!44@/B4Tb64lLpIkgs39Nqw599wY74g+r90QyBDOg2LtLsI=", "start tools process and do nothing");
     }
   }
 }

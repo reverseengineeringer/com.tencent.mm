@@ -15,16 +15,28 @@
 
 
 # instance fields
-.field public aFB:Z
+.field public aEr:Z
+
+.field public aEs:Z
+
+.field public type:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
+    const/4 v0, 0x0
+
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/il$a;->aEr:Z
+
+    .line 17
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/il$a;->aEs:Z
 
     return-void
 .end method

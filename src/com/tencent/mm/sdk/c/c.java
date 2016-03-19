@@ -1,11 +1,20 @@
 package com.tencent.mm.sdk.c;
 
-import java.util.Comparator;
-
-final class c
-  implements Comparator
+public abstract class c
 {
-  c(a parama) {}
+  private final int priority;
+  
+  public c(int paramInt)
+  {
+    priority = paramInt;
+  }
+  
+  public abstract boolean a(b paramb);
+  
+  public int getPriority()
+  {
+    return priority;
+  }
 }
 
 /* Location:

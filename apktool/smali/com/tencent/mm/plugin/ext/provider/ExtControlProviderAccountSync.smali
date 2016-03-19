@@ -16,7 +16,7 @@
 
 
 # static fields
-.field private static final dby:Landroid/content/UriMatcher;
+.field private static final dKS:Landroid/content/UriMatcher;
 
 
 # direct methods
@@ -32,7 +32,7 @@
     invoke-direct {v0, v1}, Landroid/content/UriMatcher;-><init>(I)V
 
     .line 31
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->dby:Landroid/content/UriMatcher;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->dKS:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.plugin.ext.AccountSync"
 
@@ -111,14 +111,14 @@
 
     const-string/jumbo v2, "query()"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 47
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget-object v2, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->dby:Landroid/content/UriMatcher;
+    sget-object v2, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->dKS:Landroid/content/UriMatcher;
 
     invoke-virtual {p0, p1, v1, v2}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->a(Landroid/net/Uri;Landroid/content/Context;Landroid/content/UriMatcher;)V
 
@@ -126,7 +126,7 @@
     if-nez p1, :cond_0
 
     .line 49
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->fN(I)V
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->gK(I)V
 
     .line 72
     :goto_0
@@ -134,19 +134,19 @@
 
     .line 52
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->PI()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->Vw()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -154,13 +154,13 @@
 
     .line 53
     :cond_1
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->fN(I)V
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->gK(I)V
 
     goto :goto_0
 
     .line 56
     :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->Hq()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->Vx()Z
 
     move-result v1
 
@@ -169,10 +169,10 @@
     .line 57
     const/4 v0, 0x1
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->fN(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->gK(I)V
 
     .line 58
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->cjW:Landroid/database/MatrixCursor;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->cBg:Landroid/database/MatrixCursor;
 
     goto :goto_0
 
@@ -182,7 +182,7 @@
 
     move-result-object v1
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->bh(Landroid/content/Context;)Z
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->bx(Landroid/content/Context;)Z
 
     move-result v1
 
@@ -193,18 +193,18 @@
 
     const-string/jumbo v2, "invalid appid ! return null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 63
     const/4 v1, 0x2
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->fN(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->gK(I)V
 
     goto :goto_0
 
     .line 67
     :cond_4
-    sget-object v1, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->dby:Landroid/content/UriMatcher;
+    sget-object v1, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->dKS:Landroid/content/UriMatcher;
 
     invoke-virtual {v1, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -213,7 +213,7 @@
     packed-switch v1, :pswitch_data_0
 
     .line 71
-    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->fN(I)V
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->gK(I)V
 
     goto :goto_0
 
@@ -223,15 +223,15 @@
 
     const-string/jumbo v2, "startContactSync()"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v1, Lcom/tencent/mm/d/a/by;
+    new-instance v1, Lcom/tencent/mm/d/a/dp;
 
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/by;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/d/a/dp;-><init>()V
 
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->g(Lcom/tencent/mm/sdk/c/d;)Z
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
 
     move-result v1
 
@@ -239,7 +239,7 @@
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->fN(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->gK(I)V
 
     goto :goto_0
 
@@ -248,11 +248,11 @@
 
     const-string/jumbo v2, "AccountHelper == null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v1, 0x4
 
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->fN(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtControlProviderAccountSync;->gK(I)V
 
     goto :goto_0
 

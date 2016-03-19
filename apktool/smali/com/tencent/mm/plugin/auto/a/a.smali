@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field bZC:Lcom/tencent/mm/sdk/c/e;
+.field cqO:Lcom/tencent/mm/sdk/c/c;
 
 
 # direct methods
@@ -16,17 +16,17 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 103
-    new-instance v0, Lcom/tencent/mm/plugin/auto/a/b;
+    new-instance v0, Lcom/tencent/mm/plugin/auto/a/a$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/auto/a/b;-><init>(Lcom/tencent/mm/plugin/auto/a/a;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/auto/a/a$1;-><init>(Lcom/tencent/mm/plugin/auto/a/a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/auto/a/a;->bZC:Lcom/tencent/mm/sdk/c/e;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/auto/a/a;->cqO:Lcom/tencent/mm/sdk/c/c;
 
     .line 41
     return-void
 .end method
 
-.method static Es()Z
+.method static GD()Z
     .locals 6
 
     .prologue
@@ -34,8 +34,8 @@
 
     const/4 v1, 0x1
 
-    .line 264
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    .line 268
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -43,7 +43,7 @@
 
     move-result-object v0
 
-    .line 267
+    .line 271
     :try_start_0
     const-string/jumbo v3, "com.google.android.projection.gearhead"
 
@@ -55,7 +55,7 @@
 
     move v0, v1
 
-    .line 272
+    .line 276
     :goto_0
     const-string/jumbo v3, "!32@/B4Tb64lLpL1jymZqb7KX3286k1aWPRx"
 
@@ -69,12 +69,12 @@
 
     aput-object v5, v1, v2
 
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 273
+    .line 277
     return v0
 
-    .line 270
+    .line 274
     :catch_0
     move-exception v0
 

@@ -1,47 +1,79 @@
 package com.tencent.mm.sdk.platformtools;
 
 import android.content.Context;
-import android.os.Build.VERSION;
+import android.hardware.SensorListener;
+import android.hardware.SensorManager;
 import java.util.List;
 
 public final class aq
 {
-  private static final int iag = 17;
+  private SensorManager iFG;
+  private a jXN;
   
-  public static List de(Context paramContext)
+  public aq(Context paramContext)
   {
-    if (Build.VERSION.SDK_INT >= 5)
-    {
-      new at();
-      return at.de(paramContext);
-    }
-    new ar();
-    return ar.de(paramContext);
+    iFG = ((SensorManager)paramContext.getSystemService("sensor"));
   }
   
-  public static final class a
+  public final void aVr()
   {
-    public String iah;
-    public String iai;
-    public String iaj;
-    public String iak;
-    public String ial;
-    public String iam;
-    public String ian;
-    public String systemId;
-    public String type;
-    
-    public a(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6, String paramString7, String paramString8, String paramString9)
+    if ((iFG != null) && (jXN != null)) {
+      iFG.unregisterListener(jXN, 2);
+    }
+  }
+  
+  public final boolean v(Runnable paramRunnable)
+  {
+    if (iFG == null) {}
+    List localList;
+    do
     {
-      iah = paramString1;
-      iai = paramString2;
-      iaj = paramString3;
-      type = paramString6;
-      iak = paramString4;
-      ial = paramString7;
-      iam = paramString8;
-      systemId = paramString9;
-      ian = paramString5;
+      return false;
+      localList = iFG.getSensorList(1);
+    } while ((localList == null) || (localList.size() <= 0));
+    jXN = new a(paramRunnable);
+    iFG.registerListener(jXN, 2, 3);
+    return true;
+  }
+  
+  static final class a
+    implements SensorListener
+  {
+    private Runnable aID;
+    private float[] iFJ = { 0.0F, 0.0F, 0.0F };
+    
+    public a(Runnable paramRunnable)
+    {
+      aID = paramRunnable;
+    }
+    
+    public final void onAccuracyChanged(int paramInt1, int paramInt2) {}
+    
+    public final void onSensorChanged(int paramInt, float[] paramArrayOfFloat)
+    {
+      int i = 0;
+      float[] arrayOfFloat = new float[3];
+      paramInt = 0;
+      while (paramInt < 3)
+      {
+        arrayOfFloat[paramInt] = Math.abs(paramArrayOfFloat[paramInt] - iFJ[paramInt]);
+        int j = i;
+        if (iFJ[paramInt] != 0.0F)
+        {
+          j = i;
+          if (arrayOfFloat[paramInt] > 1.0F)
+          {
+            j = 1;
+            u.d("!32@/B4Tb64lLpKvYOkSzPmwxJaUdxCq9g2m", "isONShake:" + arrayOfFloat[paramInt]);
+          }
+        }
+        iFJ[paramInt] = paramArrayOfFloat[paramInt];
+        paramInt += 1;
+        i = j;
+      }
+      if (i != 0) {
+        aID.run();
+      }
     }
   }
 }

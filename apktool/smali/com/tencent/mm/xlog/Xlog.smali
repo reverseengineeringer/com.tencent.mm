@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/t$a;
+.implements Lcom/tencent/mm/sdk/platformtools/u$a;
 
 
 # annotations
@@ -15,7 +15,9 @@
 
 
 # static fields
-.field static jIl:Z
+.field static lIx:Z
+
+.field public static lIy:Lcom/tencent/mm/sdk/platformtools/av;
 
 
 # direct methods
@@ -23,18 +25,18 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 33
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/xlog/Xlog;->jIl:Z
+    sput-boolean v0, Lcom/tencent/mm/xlog/Xlog;->lIx:Z
 
-    .line 38
+    .line 36
     invoke-static {}, Lcom/tencent/mm/xlog/Xlog;->init()V
 
-    .line 39
+    .line 37
     invoke-static {}, Lcom/tencent/mm/xlog/Xlog;->onCreate()V
 
-    .line 40
+    .line 38
     return-void
 .end method
 
@@ -42,11 +44,32 @@
     .locals 0
 
     .prologue
-    .line 9
+    .line 8
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
+    .line 22
     return-void
+.end method
+
+.method private static CZ(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 56
+    sget-object v0, Lcom/tencent/mm/xlog/Xlog;->lIy:Lcom/tencent/mm/sdk/platformtools/av;
+
+    if-eqz v0, :cond_0
+
+    .line 57
+    sget-object v0, Lcom/tencent/mm/xlog/Xlog;->lIy:Lcom/tencent/mm/sdk/platformtools/av;
+
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/sdk/platformtools/av;->CZ(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    .line 59
+    :cond_0
+    return-object p0
 .end method
 
 .method public static native appenderOpen(Ljava/lang/String;Ljava/lang/String;I)V
@@ -65,24 +88,24 @@
     .locals 2
 
     .prologue
-    .line 43
-    sget-boolean v0, Lcom/tencent/mm/xlog/Xlog;->jIl:Z
+    .line 41
+    sget-boolean v0, Lcom/tencent/mm/xlog/Xlog;->lIx:Z
 
     if-eqz v0, :cond_0
 
-    .line 52
+    .line 50
     :goto_0
     return-void
 
-    .line 46
+    .line 44
     :cond_0
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/xlog/Xlog;->jIl:Z
+    sput-boolean v0, Lcom/tencent/mm/xlog/Xlog;->lIx:Z
 
-    .line 48
+    .line 46
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/sdk/a;->hXH:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/sdk/a;->jUv:Ljava/lang/String;
 
     const-class v1, Lcom/tencent/mm/xlog/Xlog;
 
@@ -90,17 +113,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/compatible/util/m;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/compatible/util/i;->b(Ljava/lang/String;Ljava/lang/ClassLoader;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 50
+    .line 48
     :catch_0
     move-exception v0
 
-    sget-object v0, Lcom/tencent/mm/sdk/a;->hXH:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/sdk/a;->jUv:Ljava/lang/String;
 
     invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
 
@@ -143,10 +166,12 @@
     .locals 11
 
     .prologue
-    .line 61
+    .line 69
     const/4 v0, 0x1
 
-    move-object v1, p1
+    invoke-static {p1}, Lcom/tencent/mm/xlog/Xlog;->CZ(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
 
     move-object v2, p2
 
@@ -164,7 +189,7 @@
 
     invoke-static/range {v0 .. v10}, Lcom/tencent/mm/xlog/Xlog;->logWrite2(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 62
+    .line 70
     return-void
 .end method
 
@@ -172,10 +197,12 @@
     .locals 11
 
     .prologue
-    .line 76
+    .line 84
     const/4 v0, 0x4
 
-    move-object v1, p1
+    invoke-static {p1}, Lcom/tencent/mm/xlog/Xlog;->CZ(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
 
     move-object v2, p2
 
@@ -193,7 +220,7 @@
 
     invoke-static/range {v0 .. v10}, Lcom/tencent/mm/xlog/Xlog;->logWrite2(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 77
+    .line 85
     return-void
 .end method
 
@@ -201,10 +228,12 @@
     .locals 11
 
     .prologue
-    .line 81
+    .line 89
     const/4 v0, 0x5
 
-    move-object v1, p1
+    invoke-static {p1}, Lcom/tencent/mm/xlog/Xlog;->CZ(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
 
     move-object v2, p2
 
@@ -222,7 +251,7 @@
 
     invoke-static/range {v0 .. v10}, Lcom/tencent/mm/xlog/Xlog;->logWrite2(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 82
+    .line 90
     return-void
 .end method
 
@@ -230,10 +259,12 @@
     .locals 11
 
     .prologue
-    .line 66
+    .line 74
     const/4 v0, 0x2
 
-    move-object v1, p1
+    invoke-static {p1}, Lcom/tencent/mm/xlog/Xlog;->CZ(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
 
     move-object v2, p2
 
@@ -251,7 +282,7 @@
 
     invoke-static/range {v0 .. v10}, Lcom/tencent/mm/xlog/Xlog;->logWrite2(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 67
+    .line 75
     return-void
 .end method
 
@@ -259,10 +290,12 @@
     .locals 11
 
     .prologue
-    .line 56
+    .line 64
     const/4 v0, 0x0
 
-    move-object v1, p1
+    invoke-static {p1}, Lcom/tencent/mm/xlog/Xlog;->CZ(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
 
     move-object v2, p2
 
@@ -280,7 +313,7 @@
 
     invoke-static/range {v0 .. v10}, Lcom/tencent/mm/xlog/Xlog;->logWrite2(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 57
+    .line 65
     return-void
 .end method
 
@@ -288,10 +321,12 @@
     .locals 11
 
     .prologue
-    .line 71
+    .line 79
     const/4 v0, 0x3
 
-    move-object v1, p1
+    invoke-static {p1}, Lcom/tencent/mm/xlog/Xlog;->CZ(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
 
     move-object v2, p2
 
@@ -309,6 +344,6 @@
 
     invoke-static/range {v0 .. v10}, Lcom/tencent/mm/xlog/Xlog;->logWrite2(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
 
-    .line 72
+    .line 80
     return-void
 .end method

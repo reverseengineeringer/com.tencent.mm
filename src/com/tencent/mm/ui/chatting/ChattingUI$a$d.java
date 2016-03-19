@@ -1,6 +1,8 @@
 package com.tencent.mm.ui.chatting;
 
-abstract interface ChattingUI$a$d {}
+final class ChattingUI$a$d
+  extends Enum
+{}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.ui.chatting.ChattingUI.a.d

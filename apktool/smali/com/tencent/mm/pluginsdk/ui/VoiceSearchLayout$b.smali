@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract em(Z)V
+.method public abstract gm(Z)V
 .end method

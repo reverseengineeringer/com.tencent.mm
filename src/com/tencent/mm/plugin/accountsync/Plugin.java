@@ -1,23 +1,21 @@
 package com.tencent.mm.plugin.accountsync;
 
-import com.tencent.mm.model.au;
+import com.tencent.mm.model.ae;
 import com.tencent.mm.plugin.a.a;
-import com.tencent.mm.plugin.accountsync.a.e;
 import com.tencent.mm.pluginsdk.b.b;
-import com.tencent.mm.pluginsdk.b.c;
-import com.tencent.mm.pluginsdk.k;
+import com.tencent.mm.pluginsdk.h;
 
 public final class Plugin
-  implements c
+  implements com.tencent.mm.pluginsdk.b.c
 {
-  public final k createApplication()
+  public final h createApplication()
   {
     return new a();
   }
   
-  public final au createSubCore()
+  public final ae createSubCore()
   {
-    return new e();
+    return new com.tencent.mm.plugin.accountsync.a.c();
   }
   
   public final b getContactWidgetFactory()

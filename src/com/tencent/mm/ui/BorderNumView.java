@@ -11,12 +11,12 @@ import com.tencent.mm.platformtools.a.a;
 public class BorderNumView
   extends View
 {
-  private static int ilo = 22;
-  private static int ilp = 105;
-  private static int ilq = 100;
+  private static int kjw = 22;
+  private static int kjx = 105;
+  private static int kjy = 100;
+  private Paint cZX;
   private Context context = null;
-  private Paint dnc;
-  private int iln = 100;
+  private int kjv = 100;
   
   public BorderNumView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -34,37 +34,37 @@ public class BorderNumView
   
   private void init()
   {
-    dnc = new Paint();
+    cZX = new Paint();
   }
   
   public void onDraw(Canvas paramCanvas)
   {
     super.onDraw(paramCanvas);
-    if (iln < 100) {
-      ilo += 15;
+    if (kjv < 100) {
+      kjw += 15;
     }
-    if (iln >= 1000) {
-      ilq -= 20;
+    if (kjv >= 1000) {
+      kjy -= 20;
     }
-    float f1 = a.a.a(context, ilo);
-    float f2 = a.a.a(context, ilp);
-    String str = iln;
-    dnc.setAntiAlias(true);
-    dnc.setTextSize(ilq);
-    dnc.setColor(-11491572);
-    dnc.setStyle(Paint.Style.STROKE);
-    dnc.setStrokeWidth(8.0F);
-    paramCanvas.drawText(str, f1, f2, dnc);
-    dnc.setTextSize(ilq);
-    dnc.setColor(-1770573);
-    dnc.setStyle(Paint.Style.FILL);
-    dnc.setStrokeWidth(8.0F);
-    paramCanvas.drawText(str, f1, f2, dnc);
+    float f1 = a.a.a(context, kjw);
+    float f2 = a.a.a(context, kjx);
+    String str = kjv;
+    cZX.setAntiAlias(true);
+    cZX.setTextSize(kjy);
+    cZX.setColor(-11491572);
+    cZX.setStyle(Paint.Style.STROKE);
+    cZX.setStrokeWidth(8.0F);
+    paramCanvas.drawText(str, f1, f2, cZX);
+    cZX.setTextSize(kjy);
+    cZX.setColor(-1770573);
+    cZX.setStyle(Paint.Style.FILL);
+    cZX.setStrokeWidth(8.0F);
+    paramCanvas.drawText(str, f1, f2, cZX);
   }
   
   public void setPaintNum(int paramInt)
   {
-    iln = paramInt;
+    kjv = paramInt;
   }
 }
 

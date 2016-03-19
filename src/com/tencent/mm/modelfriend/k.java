@@ -1,39 +1,73 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.d.a.cf;
-import com.tencent.mm.d.a.cf.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.ContentValues;
 
 public final class k
-  extends e
 {
-  public k()
+  int aSD = 0;
+  String aSE = "";
+  String aSF = "";
+  String aSG = "";
+  public int aSu = 0;
+  int aou = -1;
+  String username = "";
+  
+  public final String getUsername()
   {
-    super(0);
+    if (username == null) {
+      return "";
+    }
+    return username;
   }
   
-  public final boolean a(d paramd)
+  public final ContentValues lX()
   {
-    if (!(paramd instanceof cf)) {
-      return false;
+    ContentValues localContentValues = new ContentValues();
+    if ((aou & 0x1) != 0) {
+      localContentValues.put("username", getUsername());
     }
-    paramd = (cf)paramd;
-    axG.axJ = true;
-    if (!bn.iW(w.gB(axF.axH)))
+    if ((aou & 0x2) != 0) {
+      localContentValues.put("sex", Integer.valueOf(aSu));
+    }
+    if ((aou & 0x4) != 0) {
+      localContentValues.put("personalcard", Integer.valueOf(aSD));
+    }
+    if ((aou & 0x8) != 0)
     {
-      axG.axJ = false;
-      return false;
+      if (aSF == null)
+      {
+        str = "";
+        localContentValues.put("province", str);
+      }
     }
-    if (!bn.iW(w.gB(axF.axI)))
+    else
     {
-      axG.axJ = false;
-      return false;
+      if ((aou & 0x10) != 0)
+      {
+        if (aSG != null) {
+          break label162;
+        }
+        str = "";
+        label118:
+        localContentValues.put("city", str);
+      }
+      if ((aou & 0x20) != 0) {
+        if (aSE != null) {
+          break label170;
+        }
+      }
     }
-    t.i("!64@/B4Tb64lLpISOYcLaKm7W1QqXzG1JnWL1rmNsLE7dnhsNrZV5csiI8CQhN3SjA2j", "mobile fmessage not found by phonemd5 or fullphonemd5");
-    return false;
+    label162:
+    label170:
+    for (String str = "";; str = aSE)
+    {
+      localContentValues.put("signature", str);
+      return localContentValues;
+      str = aSF;
+      break;
+      str = aSG;
+      break label118;
+    }
   }
 }
 

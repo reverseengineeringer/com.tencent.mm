@@ -6,11 +6,11 @@
 # instance fields
 .field defaultHeight:I
 
-.field iva:Landroid/view/View;
+.field kuc:Landroid/view/View;
 
-.field ivb:Ljava/lang/Runnable;
+.field kud:Ljava/lang/Runnable;
 
-.field ivc:Ljava/lang/Runnable;
+.field kue:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -27,18 +27,18 @@
     iput v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->defaultHeight:I
 
     .line 15
-    new-instance v0, Lcom/tencent/mm/ui/account/eb;
+    new-instance v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/eb;-><init>(Lcom/tencent/mm/ui/account/MMKeyboardUperView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/MMKeyboardUperView$1;-><init>(Lcom/tencent/mm/ui/account/MMKeyboardUperView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->ivb:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kud:Ljava/lang/Runnable;
 
     .line 24
-    new-instance v0, Lcom/tencent/mm/ui/account/ec;
+    new-instance v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/ec;-><init>(Lcom/tencent/mm/ui/account/MMKeyboardUperView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/MMKeyboardUperView$2;-><init>(Lcom/tencent/mm/ui/account/MMKeyboardUperView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->ivc:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kue:Ljava/lang/Runnable;
 
     .line 39
     return-void
@@ -57,18 +57,18 @@
     iput v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->defaultHeight:I
 
     .line 15
-    new-instance v0, Lcom/tencent/mm/ui/account/eb;
+    new-instance v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/eb;-><init>(Lcom/tencent/mm/ui/account/MMKeyboardUperView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/MMKeyboardUperView$1;-><init>(Lcom/tencent/mm/ui/account/MMKeyboardUperView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->ivb:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kud:Ljava/lang/Runnable;
 
     .line 24
-    new-instance v0, Lcom/tencent/mm/ui/account/ec;
+    new-instance v0, Lcom/tencent/mm/ui/account/MMKeyboardUperView$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/ec;-><init>(Lcom/tencent/mm/ui/account/MMKeyboardUperView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/MMKeyboardUperView$2;-><init>(Lcom/tencent/mm/ui/account/MMKeyboardUperView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->ivc:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kue:Ljava/lang/Runnable;
 
     .line 35
     return-void
@@ -79,7 +79,7 @@
 
     .prologue
     .line 10
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->iva:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kuc:Landroid/view/View;
 
     return-object v0
 .end method
@@ -91,7 +91,7 @@
 
     .prologue
     .line 46
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->iva:Landroid/view/View;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/MMKeyboardUperView;->kuc:Landroid/view/View;
 
     .line 47
     const/4 v0, -0x1

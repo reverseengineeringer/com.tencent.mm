@@ -1,20 +1,22 @@
 package com.tencent.mm.compatible.d;
 
 import android.os.Build.VERSION;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.File;
+import java.io.FileFilter;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public final class m
 {
-  private static Map bib = null;
+  private static Map bsz = null;
   
-  private static boolean c(char paramChar)
+  private static boolean b(char paramChar)
   {
     return (paramChar >= '0') && (paramChar <= '9');
   }
   
-  private static String cU(String paramString)
+  private static String cY(String paramString)
   {
     localObject = paramString;
     if (paramString != null)
@@ -28,7 +30,7 @@ public final class m
           {
             str = paramString;
             localObject = paramString;
-            if (c(paramString.charAt(0))) {
+            if (b(paramString.charAt(0))) {
               break;
             }
             str = paramString;
@@ -48,7 +50,7 @@ public final class m
     }
   }
   
-  private static String cV(String paramString)
+  private static String cZ(String paramString)
   {
     int j;
     for (int i = 0;; i = j)
@@ -56,7 +58,7 @@ public final class m
       j = i + 1;
       try
       {
-        if ((!c(paramString.charAt(i))) || (paramString.length() <= j))
+        if ((!b(paramString.charAt(i))) || (paramString.length() <= j))
         {
           i = j - 1;
           String str = paramString;
@@ -82,33 +84,41 @@ public final class m
     return (String)paramMap.get(paramString);
   }
   
-  public static String oA()
+  public static Map oo()
   {
-    if (bib == null) {
-      bib = oF();
+    if (bsz == null) {
+      bsz = ou();
+    }
+    return bsz;
+  }
+  
+  public static String op()
+  {
+    if (bsz == null) {
+      bsz = ou();
     }
     StringBuilder localStringBuilder = new StringBuilder();
     localStringBuilder.append(": ");
-    localStringBuilder.append(d(bib, "Features"));
+    localStringBuilder.append(d(bsz, "Features"));
     localStringBuilder.append(": ");
-    localStringBuilder.append(d(bib, "Processor"));
+    localStringBuilder.append(d(bsz, "Processor"));
     localStringBuilder.append(": ");
-    localStringBuilder.append(d(bib, "CPU architecture"));
+    localStringBuilder.append(d(bsz, "CPU architecture"));
     localStringBuilder.append(": ");
-    localStringBuilder.append(d(bib, "Hardware"));
+    localStringBuilder.append(d(bsz, "Hardware"));
     localStringBuilder.append(": ");
-    localStringBuilder.append(d(bib, "Serial"));
+    localStringBuilder.append(d(bsz, "Serial"));
     return localStringBuilder.toString();
   }
   
-  public static boolean oB()
+  public static boolean oq()
   {
-    if (bib == null) {
-      bib = oF();
+    if (bsz == null) {
+      bsz = ou();
     }
-    if (bib != null)
+    if (bsz != null)
     {
-      String str = d(bib, "Features");
+      String str = d(bsz, "Features");
       if ((str != null) && (str.contains("neon"))) {}
       while ((str != null) && (str.contains("asimd"))) {
         return true;
@@ -117,14 +127,14 @@ public final class m
     return false;
   }
   
-  public static boolean oC()
+  public static boolean or()
   {
     try
     {
       if (Build.VERSION.SDK_INT >= 4) {}
       for (int i = 1; i != 0; i = 0)
       {
-        boolean bool = oB();
+        boolean bool = oq();
         if (!bool) {
           break;
         }
@@ -134,29 +144,29 @@ public final class m
     }
     catch (IncompatibleClassChangeError localIncompatibleClassChangeError)
     {
-      t.printErrStackTrace("MicroMsg.Crash", localIncompatibleClassChangeError, "May cause dvmFindCatchBlock crash!", new Object[0]);
+      u.printErrStackTrace("MicroMsg.Crash", localIncompatibleClassChangeError, "May cause dvmFindCatchBlock crash!", new Object[0]);
       throw ((IncompatibleClassChangeError)new IncompatibleClassChangeError("May cause dvmFindCatchBlock crash!").initCause(localIncompatibleClassChangeError));
     }
     catch (Throwable localThrowable) {}
     return false;
   }
   
-  public static boolean oD()
+  public static boolean os()
   {
-    if (bib == null) {
-      bib = oF();
+    if (bsz == null) {
+      bsz = ou();
     }
-    if (bib != null)
+    if (bsz != null)
     {
-      String str = d(bib, "CPU architecture");
-      t.d("!24@L1cC8s87OdiHYjVaLdwXjw==", "arch " + str);
+      String str = d(bsz, "CPU architecture");
+      u.d("!24@L1cC8s87OdiHYjVaLdwXjw==", "arch " + str);
       if (str != null) {
         try
         {
           if (str.length() > 0)
           {
-            int i = Integer.parseInt(cV(cU(str)));
-            t.d("!24@L1cC8s87OdiHYjVaLdwXjw==", "armarch " + i);
+            int i = Integer.parseInt(cZ(cY(str)));
+            u.d("!24@L1cC8s87OdiHYjVaLdwXjw==", "armarch " + i);
             if (i >= 6) {
               return true;
             }
@@ -168,11 +178,11 @@ public final class m
     return false;
   }
   
-  public static int oE()
+  public static int ot()
   {
     try
     {
-      int i = new File("/sys/devices/system/cpu/").listFiles(new n()).length;
+      int i = new File("/sys/devices/system/cpu/").listFiles(new a()).length;
       return i;
     }
     catch (Exception localException) {}
@@ -180,51 +190,51 @@ public final class m
   }
   
   /* Error */
-  public static java.util.HashMap oF()
+  public static java.util.HashMap ou()
   {
     // Byte code:
-    //   0: new 158	java/util/HashMap
+    //   0: new 161	java/util/HashMap
     //   3: dup
-    //   4: invokespecial 159	java/util/HashMap:<init>	()V
+    //   4: invokespecial 162	java/util/HashMap:<init>	()V
     //   7: astore_3
     //   8: aconst_null
     //   9: astore_1
     //   10: aconst_null
     //   11: astore_0
-    //   12: new 161	java/lang/ProcessBuilder
+    //   12: new 164	java/lang/ProcessBuilder
     //   15: dup
     //   16: iconst_2
-    //   17: anewarray 19	java/lang/String
+    //   17: anewarray 22	java/lang/String
     //   20: dup
     //   21: iconst_0
-    //   22: ldc -93
+    //   22: ldc -90
     //   24: aastore
     //   25: dup
     //   26: iconst_1
-    //   27: ldc -91
+    //   27: ldc -88
     //   29: aastore
-    //   30: invokespecial 168	java/lang/ProcessBuilder:<init>	([Ljava/lang/String;)V
-    //   33: invokevirtual 172	java/lang/ProcessBuilder:start	()Ljava/lang/Process;
-    //   36: invokevirtual 178	java/lang/Process:getInputStream	()Ljava/io/InputStream;
+    //   30: invokespecial 171	java/lang/ProcessBuilder:<init>	([Ljava/lang/String;)V
+    //   33: invokevirtual 175	java/lang/ProcessBuilder:start	()Ljava/lang/Process;
+    //   36: invokevirtual 181	java/lang/Process:getInputStream	()Ljava/io/InputStream;
     //   39: astore_2
     //   40: aload_2
     //   41: astore_0
     //   42: aload_2
     //   43: astore_1
-    //   44: new 180	java/io/BufferedReader
+    //   44: new 183	java/io/BufferedReader
     //   47: dup
-    //   48: new 182	java/io/InputStreamReader
+    //   48: new 185	java/io/InputStreamReader
     //   51: dup
     //   52: aload_2
-    //   53: invokespecial 185	java/io/InputStreamReader:<init>	(Ljava/io/InputStream;)V
-    //   56: invokespecial 188	java/io/BufferedReader:<init>	(Ljava/io/Reader;)V
+    //   53: invokespecial 188	java/io/InputStreamReader:<init>	(Ljava/io/InputStream;)V
+    //   56: invokespecial 191	java/io/BufferedReader:<init>	(Ljava/io/Reader;)V
     //   59: astore 4
     //   61: aload_2
     //   62: astore_0
     //   63: aload_2
     //   64: astore_1
     //   65: aload 4
-    //   67: invokevirtual 191	java/io/BufferedReader:readLine	()Ljava/lang/String;
+    //   67: invokevirtual 194	java/io/BufferedReader:readLine	()Ljava/lang/String;
     //   70: astore 5
     //   72: aload 5
     //   74: ifnull +113 -> 187
@@ -233,9 +243,9 @@ public final class m
     //   79: aload_2
     //   80: astore_1
     //   81: aload 5
-    //   83: ldc -63
+    //   83: ldc -60
     //   85: iconst_2
-    //   86: invokevirtual 197	java/lang/String:split	(Ljava/lang/String;I)[Ljava/lang/String;
+    //   86: invokevirtual 200	java/lang/String:split	(Ljava/lang/String;I)[Ljava/lang/String;
     //   89: astore 6
     //   91: aload 6
     //   93: ifnull -32 -> 61
@@ -254,7 +264,7 @@ public final class m
     //   111: aload 6
     //   113: iconst_0
     //   114: aaload
-    //   115: invokevirtual 200	java/lang/String:trim	()Ljava/lang/String;
+    //   115: invokevirtual 203	java/lang/String:trim	()Ljava/lang/String;
     //   118: astore 5
     //   120: aload_2
     //   121: astore_0
@@ -263,7 +273,7 @@ public final class m
     //   124: aload 6
     //   126: iconst_1
     //   127: aaload
-    //   128: invokevirtual 200	java/lang/String:trim	()Ljava/lang/String;
+    //   128: invokevirtual 203	java/lang/String:trim	()Ljava/lang/String;
     //   131: astore 6
     //   133: aload_2
     //   134: astore_0
@@ -271,7 +281,7 @@ public final class m
     //   136: astore_1
     //   137: aload_3
     //   138: aload 5
-    //   140: invokevirtual 201	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
+    //   140: invokevirtual 204	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
     //   143: ifnonnull -82 -> 61
     //   146: aload_2
     //   147: astore_0
@@ -280,28 +290,28 @@ public final class m
     //   150: aload_3
     //   151: aload 5
     //   153: aload 6
-    //   155: invokevirtual 205	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+    //   155: invokevirtual 208	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
     //   158: pop
     //   159: goto -98 -> 61
     //   162: astore_2
     //   163: aload_0
     //   164: astore_1
-    //   165: ldc 120
+    //   165: ldc 125
     //   167: aload_2
-    //   168: ldc -49
+    //   168: ldc -46
     //   170: iconst_0
     //   171: anewarray 4	java/lang/Object
-    //   174: invokestatic 110	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   174: invokestatic 115	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   177: aload_0
     //   178: ifnull +7 -> 185
     //   181: aload_0
-    //   182: invokevirtual 212	java/io/InputStream:close	()V
+    //   182: invokevirtual 215	java/io/InputStream:close	()V
     //   185: aload_3
     //   186: areturn
     //   187: aload_2
     //   188: ifnull -3 -> 185
     //   191: aload_2
-    //   192: invokevirtual 212	java/io/InputStream:close	()V
+    //   192: invokevirtual 215	java/io/InputStream:close	()V
     //   195: aload_3
     //   196: areturn
     //   197: astore_0
@@ -311,7 +321,7 @@ public final class m
     //   201: aload_1
     //   202: ifnull +7 -> 209
     //   205: aload_1
-    //   206: invokevirtual 212	java/io/InputStream:close	()V
+    //   206: invokevirtual 215	java/io/InputStream:close	()V
     //   209: aload_0
     //   210: athrow
     //   211: astore_0
@@ -359,12 +369,13 @@ public final class m
     //   205	209	214	java/io/IOException
   }
   
-  public static Map oz()
+  final class a
+    implements FileFilter
   {
-    if (bib == null) {
-      bib = oF();
+    public final boolean accept(File paramFile)
+    {
+      return Pattern.matches("cpu[0-9]", paramFile.getName());
     }
-    return bib;
   }
 }
 

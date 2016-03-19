@@ -1,23 +1,26 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class hc
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEq = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aCJ = new a();
   
   public hc()
   {
-    id = "ScanQRCodeOpration";
-    hXT = atO;
+    id = "NewNotification";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aqq = 0;
+    public int aCK;
+    public boolean aCL;
+    public boolean aCM;
+    public String apb;
   }
 }
 

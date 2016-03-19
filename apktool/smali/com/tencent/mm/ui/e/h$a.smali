@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field public cvm:Ljava/util/List;
+.field public cNf:Ljava/util/List;
 
-.field public fWT:Ljava/util/List;
+.field public gho:Ljava/util/List;
 
-.field public jnC:I
+.field public ihI:I
 
-.field public jnD:Z
+.field public lsV:I
 
-.field public jnE:I
+.field public lsW:Z
 
-.field public jnF:Z
+.field public lsX:I
 
-.field public jnG:I
+.field public lsY:Z
 
-.field public jnH:I
+.field public lsZ:I
 
 
 # direct methods
@@ -45,36 +45,36 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 46
-    iput v2, p0, Lcom/tencent/mm/ui/e/h$a;->jnC:I
+    iput v2, p0, Lcom/tencent/mm/ui/e/h$a;->lsV:I
 
     .line 47
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/e/h$a;->jnD:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/e/h$a;->lsW:Z
 
     .line 48
-    iput v2, p0, Lcom/tencent/mm/ui/e/h$a;->jnE:I
+    iput v2, p0, Lcom/tencent/mm/ui/e/h$a;->lsX:I
 
     .line 49
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/e/h$a;->jnF:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/e/h$a;->lsY:Z
 
     .line 50
-    iput v1, p0, Lcom/tencent/mm/ui/e/h$a;->jnG:I
+    iput v1, p0, Lcom/tencent/mm/ui/e/h$a;->ihI:I
 
     .line 51
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e/h$a;->fWT:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e/h$a;->gho:Ljava/util/List;
 
     .line 52
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e/h$a;->cvm:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e/h$a;->cNf:Ljava/util/List;
 
     .line 56
-    iput v1, p0, Lcom/tencent/mm/ui/e/h$a;->jnH:I
+    iput v1, p0, Lcom/tencent/mm/ui/e/h$a;->lsZ:I
 
     return-void
 .end method

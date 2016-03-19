@@ -1,6 +1,6 @@
 package android.support.v4.widget;
 
-import android.support.v4.view.t;
+import android.support.v4.view.m;
 import android.view.View;
 
 final class SlidingPaneLayout$h
@@ -8,7 +8,7 @@ final class SlidingPaneLayout$h
 {
   public final void b(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
   {
-    t.a(paramView, getLayoutParamsja);
+    m.a(paramView, getLayoutParamsjdField_if);
   }
 }
 

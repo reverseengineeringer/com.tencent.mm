@@ -12,7 +12,7 @@ public abstract class a$b
   
   public abstract void a(Context paramContext, a.a parama, a parama1, boolean paramBoolean1, boolean paramBoolean2);
   
-  public abstract boolean aQF();
+  public abstract boolean bhz();
 }
 
 /* Location:

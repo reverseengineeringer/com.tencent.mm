@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+.field final synthetic qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 1380
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
 
     .prologue
     .line 1383
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->a(Landroid/support/v7/internal/widget/ListPopupWindow;)Landroid/support/v7/internal/widget/ListPopupWindow$a;
 
@@ -59,7 +59,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->a(Landroid/support/v7/internal/widget/ListPopupWindow;)Landroid/support/v7/internal/widget/ListPopupWindow$a;
 
@@ -69,7 +69,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-static {v1}, Landroid/support/v7/internal/widget/ListPopupWindow;->a(Landroid/support/v7/internal/widget/ListPopupWindow;)Landroid/support/v7/internal/widget/ListPopupWindow$a;
 
@@ -81,7 +81,7 @@
 
     if-le v0, v1, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->a(Landroid/support/v7/internal/widget/ListPopupWindow;)Landroid/support/v7/internal/widget/ListPopupWindow$a;
 
@@ -91,14 +91,14 @@
 
     move-result v0
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
-    iget v1, v1, Landroid/support/v7/internal/widget/ListPopupWindow;->qR:I
+    iget v1, v1, Landroid/support/v7/internal/widget/ListPopupWindow;->pU:I
 
     if-gt v0, v1, :cond_0
 
     .line 1385
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->b(Landroid/support/v7/internal/widget/ListPopupWindow;)Landroid/widget/PopupWindow;
 
@@ -109,7 +109,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/PopupWindow;->setInputMethodMode(I)V
 
     .line 1386
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$f;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->show()V
 

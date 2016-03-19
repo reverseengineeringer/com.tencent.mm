@@ -5,36 +5,41 @@ import android.graphics.Bitmap;
 import android.graphics.Matrix;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Gallery.LayoutParams;
 import android.widget.LinearLayout.LayoutParams;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.ao.a;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.aw.a;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.k;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MultiTouchImageView;
+import com.tencent.mm.ui.base.l;
+import com.tencent.mm.ui.base.n.c;
+import com.tencent.mm.ui.base.n.d;
 import com.tencent.mm.ui.tools.MMGestureGallery;
+import com.tencent.mm.ui.tools.n;
+import java.io.File;
 
 public class ContactRemarkImagePreviewUI
   extends MMActivity
 {
-  private MMGestureGallery dfB;
-  private View jff;
-  private String jfg;
-  private boolean jfh;
-  private boolean jfi;
-  private a jfj;
+  private MMGestureGallery dQq;
+  private View ljk;
+  private String ljl;
+  private boolean ljm;
+  private boolean ljn;
+  private a ljo;
   private String username;
   
-  private void fO(boolean paramBoolean)
+  private void hV(boolean paramBoolean)
   {
     if (paramBoolean)
     {
@@ -45,40 +50,103 @@ public class ContactRemarkImagePreviewUI
     finish();
   }
   
-  protected final void DV()
+  protected final void Gb()
   {
-    jff = findViewById(a.i.container_ll);
-    dfB = ((MMGestureGallery)findViewById(a.i.gallery));
-    nh(a.n.mod_remark_preview_image_title);
-    dfB.setVerticalFadingEdgeEnabled(false);
-    dfB.setHorizontalFadingEdgeEnabled(false);
-    k.H(dfB);
-    jfj = new a();
-    jfj.imagePath = jfg;
-    dfB.setAdapter(jfj);
-    dfB.setOnItemClickListener(new bc(this));
-    a(0, a.h.actionbar_more_icon, new ay(this));
-    a(new bb(this));
+    ljk = findViewById(2131165619);
+    dQq = ((MMGestureGallery)findViewById(2131165381));
+    qb(2131428457);
+    dQq.setVerticalFadingEdgeEnabled(false);
+    dQq.setHorizontalFadingEdgeEnabled(false);
+    com.tencent.mm.sdk.platformtools.k.H(dQq);
+    ljo = new a();
+    ljo.imagePath = ljl;
+    dQq.setAdapter(ljo);
+    dQq.setOnItemClickListener(new AdapterView.OnItemClickListener()
+    {
+      public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+      {
+        if (!baV())
+        {
+          baU();
+          return;
+        }
+        baT();
+      }
+    });
+    a(0, 2130903464, new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        paramAnonymousMenuItem = new n(ContactRemarkImagePreviewUI.this);
+        hle = new n.c()
+        {
+          public final void a(l paramAnonymous2l)
+          {
+            if (!ContactRemarkImagePreviewUI.a(ContactRemarkImagePreviewUI.this)) {
+              paramAnonymous2l.b(0, getString(2131430890));
+            }
+            paramAnonymous2l.b(1, getString(2131427823));
+            if (c.yf("favorite")) {
+              paramAnonymous2l.b(2, getString(2131431054));
+            }
+          }
+        };
+        hlf = new n.d()
+        {
+          public final void d(MenuItem paramAnonymous2MenuItem, int paramAnonymous2Int)
+          {
+            switch (paramAnonymous2MenuItem.getItemId())
+            {
+            default: 
+              return;
+            case 0: 
+              if (!ContactRemarkImagePreviewUI.b(ContactRemarkImagePreviewUI.this))
+              {
+                ContactRemarkImagePreviewUI.a(ContactRemarkImagePreviewUI.this, true);
+                return;
+              }
+              new File(ContactRemarkImagePreviewUI.c(ContactRemarkImagePreviewUI.this)).delete();
+              ContactRemarkImagePreviewUI.a(ContactRemarkImagePreviewUI.this, true);
+              return;
+            case 1: 
+              com.tencent.mm.pluginsdk.ui.tools.k.h(ContactRemarkImagePreviewUI.c(ContactRemarkImagePreviewUI.this), ContactRemarkImagePreviewUI.this);
+              return;
+            }
+            ContactRemarkImagePreviewUI.d(ContactRemarkImagePreviewUI.this);
+          }
+        };
+        paramAnonymousMenuItem.bH();
+        return true;
+      }
+    });
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        ContactRemarkImagePreviewUI.a(ContactRemarkImagePreviewUI.this, false);
+        return false;
+      }
+    });
   }
   
   protected final int getLayoutId()
   {
-    return a.k.contact_remark_image_preview;
+    return 2131361916;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
     username = getIntent().getStringExtra("Contact_User");
-    jfg = getIntent().getStringExtra("remark_image_path");
-    jfh = getIntent().getBooleanExtra("view_temp_remark_image", false);
-    jfi = getIntent().getBooleanExtra("view_only", false);
-    if (bn.iW(username))
+    ljl = getIntent().getStringExtra("remark_image_path");
+    ljm = getIntent().getBooleanExtra("view_temp_remark_image", false);
+    ljn = getIntent().getBooleanExtra("view_only", false);
+    if (ay.kz(username))
     {
       finish();
       return;
     }
-    DV();
+    Gb();
   }
   
   protected void onDestroy()
@@ -90,7 +158,7 @@ public class ContactRemarkImagePreviewUI
   {
     if ((paramInt == 4) && (paramKeyEvent.getRepeatCount() == 0))
     {
-      fO(false);
+      hV(false);
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);
@@ -125,8 +193,8 @@ public class ContactRemarkImagePreviewUI
     
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
-      paramView = View.inflate(ContactRemarkImagePreviewUI.this, a.k.contact_remark_image_preview_item, null);
-      paramViewGroup = (MultiTouchImageView)paramView.findViewById(a.i.image);
+      paramView = View.inflate(ContactRemarkImagePreviewUI.this, 2131361821, null);
+      paramViewGroup = (MultiTouchImageView)paramView.findViewById(2131165228);
       paramView.setLayoutParams(new Gallery.LayoutParams(-1, -1));
       paramViewGroup.setLayoutParams(new LinearLayout.LayoutParams(-1, -1));
       Bitmap localBitmap = BackwardSupportUtil.b.b(imagePath, a.getDensity(ContactRemarkImagePreviewUI.this));
@@ -140,14 +208,14 @@ public class ContactRemarkImagePreviewUI
         localMatrix.reset();
         f1 = localBitmap.getWidth() / localBitmap.getHeight();
         f2 = localBitmap.getHeight() / localBitmap.getWidth();
-        t.v("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", "whDiv is " + f1 + " hwDiv is " + f2);
+        u.v("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", "whDiv is " + f1 + " hwDiv is " + f2);
         if ((f2 < 2.0F) || (localBitmap.getHeight() < 480)) {
-          break label310;
+          break label308;
         }
         f1 = localBitmap.getWidth() / paramInt;
         f2 = paramInt / localBitmap.getWidth();
         if (f1 <= 1.0D) {
-          break label282;
+          break label280;
         }
         localMatrix.postScale(f2, f2);
         localBitmap.getHeight();
@@ -156,14 +224,14 @@ public class ContactRemarkImagePreviewUI
       for (;;)
       {
         paramViewGroup.setImageMatrix(localMatrix);
-        paramViewGroup.bx(localBitmap.getWidth(), localBitmap.getHeight());
+        paramViewGroup.bN(localBitmap.getWidth(), localBitmap.getHeight());
         paramViewGroup.setImageBitmap(localBitmap);
         return paramView;
-        label282:
+        label280:
         localMatrix.postScale(1.0F, 1.0F);
         localMatrix.postTranslate((paramInt - localBitmap.getWidth()) / 2, 0.0F);
         continue;
-        label310:
+        label308:
         if ((f1 < 2.0F) || (localBitmap.getWidth() < 480)) {
           break;
         }
@@ -178,24 +246,24 @@ public class ContactRemarkImagePreviewUI
         {
           localMatrix.postScale(1.0F, 1.0F);
           f1 = (i - localBitmap.getHeight()) / 2;
-          t.d("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", " offsety " + f1);
+          u.d("!32@/B4Tb64lLpJ8SVyOn6WIBnf/iMnAMEhc", " offsety " + f1);
           localMatrix.postTranslate(0.0F, f1);
         }
       }
       float f1 = paramInt / localBitmap.getWidth();
       float f2 = i / localBitmap.getHeight();
-      label473:
+      label471:
       float f3;
       if (f1 < f2)
       {
         f2 = localBitmap.getWidth() / paramInt;
         f3 = localBitmap.getHeight() / i;
         if (f2 <= f3) {
-          break label567;
+          break label565;
         }
-        label504:
+        label502:
         if (f2 <= 1.0D) {
-          break label574;
+          break label572;
         }
         localMatrix.postScale(f1, f1);
       }
@@ -204,11 +272,11 @@ public class ContactRemarkImagePreviewUI
         localMatrix.postTranslate((paramInt - localBitmap.getWidth() * f1) / 2.0F, (i - f1 * localBitmap.getHeight()) / 2.0F);
         break;
         f1 = f2;
-        break label473;
-        label567:
+        break label471;
+        label565:
         f2 = f3;
-        break label504;
-        label574:
+        break label502;
+        label572:
         f1 = 1.0F;
       }
     }

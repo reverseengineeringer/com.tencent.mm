@@ -4,39 +4,39 @@
 
 
 # static fields
-.field protected static jNo:I
+.field protected static mbA:I
 
 
 # instance fields
-.field jNg:I
+.field protected mbB:I
 
-.field jNh:I
+.field protected mbC:I
 
-.field jNi:I
+.field protected mbD:I
 
-.field jNj:I
+.field protected mbE:I
 
-.field public jNk:I
+.field protected mbF:I
 
-.field protected jNl:I
+.field mbG:B
 
-.field protected jNm:[B
+.field protected mbH:Loicq/wlogin_sdk/request/i;
 
-.field protected jNn:I
+.field mbs:I
 
-.field protected jNp:I
+.field mbt:I
 
-.field protected jNq:I
+.field mbu:I
 
-.field protected jNr:I
+.field mbv:I
 
-.field protected jNs:I
+.field public mbw:I
 
-.field protected jNt:I
+.field protected mbx:I
 
-.field jNu:B
+.field protected mby:[B
 
-.field protected jNv:Loicq/wlogin_sdk/request/i;
+.field protected mbz:I
 
 
 # direct methods
@@ -47,7 +47,7 @@
     .line 60
     const/4 v0, 0x0
 
-    sput v0, Loicq/wlogin_sdk/request/d;->jNo:I
+    sput v0, Loicq/wlogin_sdk/request/d;->mbA:I
 
     return-void
 .end method
@@ -64,53 +64,53 @@
     .line 51
     const/16 v0, 0x1000
 
-    iput v0, p0, Loicq/wlogin_sdk/request/d;->jNg:I
+    iput v0, p0, Loicq/wlogin_sdk/request/d;->mbs:I
 
     .line 52
-    iput v1, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v1, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     .line 53
     const/16 v0, 0x1b
 
-    iput v0, p0, Loicq/wlogin_sdk/request/d;->jNi:I
+    iput v0, p0, Loicq/wlogin_sdk/request/d;->mbu:I
 
     .line 54
-    iput v1, p0, Loicq/wlogin_sdk/request/d;->jNj:I
+    iput v1, p0, Loicq/wlogin_sdk/request/d;->mbv:I
 
     .line 55
     const/16 v0, 0xf
 
-    iput v0, p0, Loicq/wlogin_sdk/request/d;->jNk:I
+    iput v0, p0, Loicq/wlogin_sdk/request/d;->mbw:I
 
     .line 56
-    iput v1, p0, Loicq/wlogin_sdk/request/d;->jNl:I
+    iput v1, p0, Loicq/wlogin_sdk/request/d;->mbx:I
 
     .line 57
-    iget v0, p0, Loicq/wlogin_sdk/request/d;->jNg:I
+    iget v0, p0, Loicq/wlogin_sdk/request/d;->mbs:I
 
     new-array v0, v0, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
     .line 59
     const/16 v0, 0x1f41
 
-    iput v0, p0, Loicq/wlogin_sdk/request/d;->jNn:I
+    iput v0, p0, Loicq/wlogin_sdk/request/d;->mbz:I
 
     .line 61
-    iput v1, p0, Loicq/wlogin_sdk/request/d;->jNp:I
+    iput v1, p0, Loicq/wlogin_sdk/request/d;->mbB:I
 
     .line 62
-    iput v1, p0, Loicq/wlogin_sdk/request/d;->jNq:I
+    iput v1, p0, Loicq/wlogin_sdk/request/d;->mbC:I
 
     .line 63
-    iput v1, p0, Loicq/wlogin_sdk/request/d;->jNr:I
+    iput v1, p0, Loicq/wlogin_sdk/request/d;->mbD:I
 
     .line 65
-    iput v1, p0, Loicq/wlogin_sdk/request/d;->jNs:I
+    iput v1, p0, Loicq/wlogin_sdk/request/d;->mbE:I
 
     .line 66
-    iput v1, p0, Loicq/wlogin_sdk/request/d;->jNt:I
+    iput v1, p0, Loicq/wlogin_sdk/request/d;->mbF:I
 
     .line 72
     return-void
@@ -273,7 +273,7 @@
     invoke-direct/range {v43 .. v43}, Loicq/wlogin_sdk/a/ac;-><init>()V
 
     .line 340
-    invoke-virtual/range {p1 .. p1}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {p1 .. p1}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v44
 
@@ -364,7 +364,7 @@
     if-ltz v5, :cond_1
 
     .line 355
-    invoke-virtual {v12}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual {v12}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v26
 
@@ -388,11 +388,11 @@
     .line 360
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v5, v5, Loicq/wlogin_sdk/request/i;->jNe:Landroid/content/Context;
+    iget-object v5, v5, Loicq/wlogin_sdk/request/i;->mbq:Landroid/content/Context;
 
-    invoke-virtual/range {v18 .. v18}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v18 .. v18}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v12
 
@@ -414,7 +414,7 @@
     if-ltz v5, :cond_3
 
     .line 366
-    invoke-virtual {v13}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual {v13}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v28
 
@@ -434,7 +434,7 @@
     if-ltz v5, :cond_4
 
     .line 371
-    invoke-virtual {v14}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual {v14}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v27
 
@@ -454,7 +454,7 @@
     if-ltz v5, :cond_5
 
     .line 377
-    invoke-virtual {v15}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual {v15}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v29
 
@@ -476,7 +476,7 @@
     if-ltz v5, :cond_6
 
     .line 382
-    invoke-virtual/range {v16 .. v16}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v16 .. v16}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v30
 
@@ -498,7 +498,7 @@
     if-ltz v5, :cond_7
 
     .line 388
-    invoke-virtual/range {v17 .. v17}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v17 .. v17}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v31
 
@@ -522,7 +522,7 @@
     .line 394
     move-object/from16 v0, v21
 
-    iget v5, v0, Loicq/wlogin_sdk/a/z;->jOA:I
+    iget v5, v0, Loicq/wlogin_sdk/a/z;->mcM:I
 
     new-array v0, v5, [B
 
@@ -530,11 +530,11 @@
 
     move-object/from16 v0, v21
 
-    iget-object v5, v0, Loicq/wlogin_sdk/a/z;->jNm:[B
+    iget-object v5, v0, Loicq/wlogin_sdk/a/z;->mby:[B
 
     move-object/from16 v0, v21
 
-    iget v12, v0, Loicq/wlogin_sdk/a/z;->jOb:I
+    iget v12, v0, Loicq/wlogin_sdk/a/z;->mcn:I
 
     add-int/lit8 v12, v12, 0x2
 
@@ -551,7 +551,7 @@
     .line 395
     move-object/from16 v0, v21
 
-    iget v5, v0, Loicq/wlogin_sdk/a/z;->jOB:I
+    iget v5, v0, Loicq/wlogin_sdk/a/z;->mcN:I
 
     new-array v0, v5, [B
 
@@ -559,17 +559,17 @@
 
     move-object/from16 v0, v21
 
-    iget-object v5, v0, Loicq/wlogin_sdk/a/z;->jNm:[B
+    iget-object v5, v0, Loicq/wlogin_sdk/a/z;->mby:[B
 
     move-object/from16 v0, v21
 
-    iget v12, v0, Loicq/wlogin_sdk/a/z;->jOb:I
+    iget v12, v0, Loicq/wlogin_sdk/a/z;->mcn:I
 
     add-int/lit8 v12, v12, 0x2
 
     move-object/from16 v0, v21
 
-    iget v13, v0, Loicq/wlogin_sdk/a/z;->jOA:I
+    iget v13, v0, Loicq/wlogin_sdk/a/z;->mcM:I
 
     add-int/2addr v12, v13
 
@@ -619,7 +619,7 @@
 
     invoke-direct {v14}, Loicq/wlogin_sdk/a/ah;-><init>()V
 
-    invoke-virtual/range {v34 .. v34}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v34 .. v34}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v15
 
@@ -654,7 +654,7 @@
     .line 403
     move-object/from16 v0, p0
 
-    iget-object v13, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v13, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
     invoke-virtual {v12}, [B->clone()Ljava/lang/Object;
 
@@ -662,16 +662,16 @@
 
     check-cast v5, [B
 
-    iput-object v5, v13, Loicq/wlogin_sdk/request/i;->jNY:[B
+    iput-object v5, v13, Loicq/wlogin_sdk/request/i;->mck:[B
 
     .line 404
     const-string/jumbo v5, "fast data:"
 
-    invoke-static {v12}, Loicq/wlogin_sdk/tools/util;->bd([B)Ljava/lang/String;
+    invoke-static {v12}, Loicq/wlogin_sdk/tools/util;->bw([B)Ljava/lang/String;
 
     move-result-object v12
 
-    invoke-static {v5, v12}, Loicq/wlogin_sdk/tools/util;->bV(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v5, v12}, Loicq/wlogin_sdk/tools/util;->cP(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 410
     :cond_9
@@ -711,7 +711,7 @@
     .line 415
     const/4 v5, 0x0
 
-    invoke-virtual/range {v43 .. v43}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v43 .. v43}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v12
 
@@ -752,39 +752,39 @@
     .line 424
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    invoke-virtual/range {v20 .. v20}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v20 .. v20}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v12
 
-    iput-object v12, v5, Loicq/wlogin_sdk/request/i;->jNx:[B
+    iput-object v12, v5, Loicq/wlogin_sdk/request/i;->mbJ:[B
 
     .line 425
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    invoke-virtual/range {v19 .. v19}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v19 .. v19}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v12
 
     move-object/from16 v0, p0
 
-    invoke-virtual {v0, v12}, Loicq/wlogin_sdk/request/d;->aS([B)[B
+    invoke-virtual {v0, v12}, Loicq/wlogin_sdk/request/d;->bl([B)[B
 
     move-result-object v12
 
-    iput-object v12, v5, Loicq/wlogin_sdk/request/i;->jNW:[B
+    iput-object v12, v5, Loicq/wlogin_sdk/request/i;->mci:[B
 
     .line 427
     const/4 v12, 0x1
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v5, v5, Loicq/wlogin_sdk/request/i;->jNW:[B
+    iget-object v5, v5, Loicq/wlogin_sdk/request/i;->mci:[B
 
     invoke-virtual {v5}, [B->clone()Ljava/lang/Object;
 
@@ -816,17 +816,17 @@
 
     move-object/from16 v0, v38
 
-    iget v12, v0, Loicq/wlogin_sdk/a/ab;->jOD:I
+    iget v12, v0, Loicq/wlogin_sdk/a/ab;->mcP:I
 
     new-array v12, v12, [B
 
     move-object/from16 v0, v38
 
-    iget-object v13, v0, Loicq/wlogin_sdk/a/ab;->jNm:[B
+    iget-object v13, v0, Loicq/wlogin_sdk/a/ab;->mby:[B
 
     move-object/from16 v0, v38
 
-    iget v14, v0, Loicq/wlogin_sdk/a/ab;->jOb:I
+    iget v14, v0, Loicq/wlogin_sdk/a/ab;->mcn:I
 
     add-int/lit8 v14, v14, 0x2
 
@@ -862,7 +862,7 @@
     .line 440
     const/4 v5, 0x3
 
-    invoke-virtual/range {v39 .. v39}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v39 .. v39}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v12
 
@@ -888,7 +888,7 @@
     .line 445
     const/4 v5, 0x4
 
-    invoke-virtual/range {v40 .. v40}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v40 .. v40}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v12
 
@@ -914,7 +914,7 @@
     .line 450
     const/4 v5, 0x5
 
-    invoke-virtual/range {v41 .. v41}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v41 .. v41}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v12
 
@@ -940,7 +940,7 @@
     .line 455
     const/4 v5, 0x6
 
-    invoke-virtual/range {v42 .. v42}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v42 .. v42}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v12
 
@@ -966,9 +966,9 @@
     .line 461
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-wide v5, v5, Loicq/wlogin_sdk/request/i;->jNE:J
+    iget-wide v5, v5, Loicq/wlogin_sdk/request/i;->mbQ:J
 
     const-wide/16 v10, -0x1
 
@@ -979,13 +979,13 @@
     .line 462
     move-object/from16 v0, v36
 
-    iget-object v5, v0, Loicq/wlogin_sdk/a/v;->jNm:[B
+    iget-object v5, v0, Loicq/wlogin_sdk/a/v;->mby:[B
 
     move-object/from16 v0, v36
 
-    iget v6, v0, Loicq/wlogin_sdk/a/v;->jOb:I
+    iget v6, v0, Loicq/wlogin_sdk/a/v;->mcn:I
 
-    invoke-static {v5, v6}, Loicq/wlogin_sdk/tools/util;->B([BI)I
+    invoke-static {v5, v6}, Loicq/wlogin_sdk/tools/util;->F([BI)I
 
     move-result v5
 
@@ -995,15 +995,15 @@
     :goto_3
     move-object/from16 v0, v36
 
-    iget-object v7, v0, Loicq/wlogin_sdk/a/v;->jNm:[B
+    iget-object v7, v0, Loicq/wlogin_sdk/a/v;->mby:[B
 
     move-object/from16 v0, v36
 
-    iget v10, v0, Loicq/wlogin_sdk/a/v;->jOb:I
+    iget v10, v0, Loicq/wlogin_sdk/a/v;->mcn:I
 
     add-int/lit8 v10, v10, 0x4
 
-    invoke-static {v7, v10}, Loicq/wlogin_sdk/tools/util;->B([BI)I
+    invoke-static {v7, v10}, Loicq/wlogin_sdk/tools/util;->F([BI)I
 
     move-result v7
 
@@ -1032,14 +1032,14 @@
     .line 469
     if-ltz v5, :cond_17
 
-    invoke-virtual/range {v37 .. v37}, Loicq/wlogin_sdk/a/ad;->aVF()I
+    invoke-virtual/range {v37 .. v37}, Loicq/wlogin_sdk/a/ad;->bou()I
 
     move-result v5
 
     if-eqz v5, :cond_17
 
     .line 470
-    invoke-virtual/range {v37 .. v37}, Loicq/wlogin_sdk/a/ad;->aVF()I
+    invoke-virtual/range {v37 .. v37}, Loicq/wlogin_sdk/a/ad;->bou()I
 
     move-result v5
 
@@ -1057,33 +1057,33 @@
     :goto_6
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v6, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
     iget-wide v6, v6, Loicq/wlogin_sdk/request/i;->_uin:J
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v8, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-wide v8, v8, Loicq/wlogin_sdk/request/i;->jNC:J
+    iget-wide v8, v8, Loicq/wlogin_sdk/request/i;->mbO:J
 
     .line 477
-    invoke-static {}, Loicq/wlogin_sdk/request/i;->aVB()J
+    invoke-static {}, Loicq/wlogin_sdk/request/i;->boq()J
 
     move-result-wide v12
 
-    invoke-static {}, Loicq/wlogin_sdk/request/i;->aVB()J
+    invoke-static {}, Loicq/wlogin_sdk/request/i;->boq()J
 
     move-result-wide v18
 
     .line 478
     add-long v14, v14, v18
 
-    invoke-static {}, Loicq/wlogin_sdk/request/i;->aVB()J
+    invoke-static {}, Loicq/wlogin_sdk/request/i;->boq()J
 
     move-result-wide v18
 
@@ -1100,13 +1100,13 @@
 
     move-object/from16 v0, v35
 
-    iget-object v0, v0, Loicq/wlogin_sdk/a/t;->jNm:[B
+    iget-object v0, v0, Loicq/wlogin_sdk/a/t;->mby:[B
 
     move-object/from16 v19, v0
 
     move-object/from16 v0, v35
 
-    iget v0, v0, Loicq/wlogin_sdk/a/t;->jOb:I
+    iget v0, v0, Loicq/wlogin_sdk/a/t;->mcn:I
 
     move/from16 v20, v0
 
@@ -1136,13 +1136,13 @@
 
     move-object/from16 v0, v35
 
-    iget-object v0, v0, Loicq/wlogin_sdk/a/t;->jNm:[B
+    iget-object v0, v0, Loicq/wlogin_sdk/a/t;->mby:[B
 
     move-object/from16 v20, v0
 
     move-object/from16 v0, v35
 
-    iget v0, v0, Loicq/wlogin_sdk/a/t;->jOb:I
+    iget v0, v0, Loicq/wlogin_sdk/a/t;->mcn:I
 
     move/from16 v21, v0
 
@@ -1175,13 +1175,13 @@
 
     move-object/from16 v0, v35
 
-    iget-object v0, v0, Loicq/wlogin_sdk/a/t;->jNm:[B
+    iget-object v0, v0, Loicq/wlogin_sdk/a/t;->mby:[B
 
     move-object/from16 v21, v0
 
     move-object/from16 v0, v35
 
-    iget v0, v0, Loicq/wlogin_sdk/a/t;->jOb:I
+    iget v0, v0, Loicq/wlogin_sdk/a/t;->mcn:I
 
     move/from16 v36, v0
 
@@ -1207,7 +1207,7 @@
 
     move-object/from16 v0, v35
 
-    iget v0, v0, Loicq/wlogin_sdk/a/t;->jOy:I
+    iget v0, v0, Loicq/wlogin_sdk/a/t;->mcK:I
 
     move/from16 v21, v0
 
@@ -1219,13 +1219,13 @@
 
     move-object/from16 v0, v35
 
-    iget-object v0, v0, Loicq/wlogin_sdk/a/t;->jNm:[B
+    iget-object v0, v0, Loicq/wlogin_sdk/a/t;->mby:[B
 
     move-object/from16 v36, v0
 
     move-object/from16 v0, v35
 
-    iget v0, v0, Loicq/wlogin_sdk/a/t;->jOb:I
+    iget v0, v0, Loicq/wlogin_sdk/a/t;->mcn:I
 
     move/from16 v37, v0
 
@@ -1241,7 +1241,7 @@
 
     move-object/from16 v0, v35
 
-    iget v0, v0, Loicq/wlogin_sdk/a/t;->jOy:I
+    iget v0, v0, Loicq/wlogin_sdk/a/t;->mcK:I
 
     move/from16 v35, v0
 
@@ -1257,20 +1257,20 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    invoke-virtual/range {v22 .. v22}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v22 .. v22}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v22
 
     .line 481
-    invoke-virtual/range {v23 .. v23}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v23 .. v23}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v23
 
-    invoke-virtual/range {v24 .. v24}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v24 .. v24}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v24
 
-    invoke-virtual/range {v25 .. v25}, Loicq/wlogin_sdk/a/a;->aVC()[B
+    invoke-virtual/range {v25 .. v25}, Loicq/wlogin_sdk/a/a;->bor()[B
 
     move-result-object v25
 
@@ -1322,25 +1322,25 @@
     goto/16 :goto_1
 
     :cond_13
-    invoke-virtual {v5}, Loicq/wlogin_sdk/a/a;->aVz()[B
+    invoke-virtual {v5}, Loicq/wlogin_sdk/a/a;->boo()[B
 
     move-result-object v15
 
-    invoke-virtual {v12}, Loicq/wlogin_sdk/a/a;->aVz()[B
+    invoke-virtual {v12}, Loicq/wlogin_sdk/a/a;->boo()[B
 
     move-result-object v12
 
-    invoke-virtual {v13}, Loicq/wlogin_sdk/a/a;->aVz()[B
+    invoke-virtual {v13}, Loicq/wlogin_sdk/a/a;->boo()[B
 
     move-result-object v13
 
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v5, v5, Loicq/wlogin_sdk/request/i;->jNG:[B
+    iget-object v5, v5, Loicq/wlogin_sdk/request/i;->mbS:[B
 
-    invoke-virtual {v14, v5}, Loicq/wlogin_sdk/a/ah;->aZ([B)[B
+    invoke-virtual {v14, v5}, Loicq/wlogin_sdk/a/ah;->bs([B)[B
 
     move-result-object v14
 
@@ -1448,13 +1448,13 @@
     :cond_14
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
     const/4 v12, 0x0
 
     new-array v12, v12, [B
 
-    iput-object v12, v5, Loicq/wlogin_sdk/request/i;->jNY:[B
+    iput-object v12, v5, Loicq/wlogin_sdk/request/i;->mck:[B
 
     goto/16 :goto_2
 
@@ -1462,9 +1462,9 @@
     :cond_15
     move-object/from16 v0, p0
 
-    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v5, v0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-wide v5, v5, Loicq/wlogin_sdk/request/i;->jNE:J
+    iget-wide v5, v5, Loicq/wlogin_sdk/request/i;->mbQ:J
 
     goto/16 :goto_3
 
@@ -1497,35 +1497,35 @@
     array-length v1, v0
 
     .line 133
-    sget v2, Loicq/wlogin_sdk/request/d;->jNo:I
+    sget v2, Loicq/wlogin_sdk/request/d;->mbA:I
 
     add-int/lit8 v2, v2, 0x1
 
-    sput v2, Loicq/wlogin_sdk/request/d;->jNo:I
+    sput v2, Loicq/wlogin_sdk/request/d;->mbA:I
 
     const/4 v3, 0x0
 
-    iput v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v4, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v4, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     const/4 v5, 0x2
 
     invoke-static {v3, v4, v5}, Loicq/wlogin_sdk/tools/util;->l([BII)V
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v3, v3, 0x1
 
-    iput v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v4, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v4, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget v5, p0, Loicq/wlogin_sdk/request/d;->jNi:I
+    iget v5, p0, Loicq/wlogin_sdk/request/d;->mbu:I
 
     add-int/lit8 v5, v5, 0x2
 
@@ -1533,151 +1533,151 @@
 
     invoke-static {v3, v4, v5}, Loicq/wlogin_sdk/tools/util;->m([BII)V
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v3, v3, 0x2
 
-    iput v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v4, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v4, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     invoke-static {v3, v4, p1}, Loicq/wlogin_sdk/tools/util;->m([BII)V
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v3, v3, 0x2
 
-    iput v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v4, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v4, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     invoke-static {v3, v4, p2}, Loicq/wlogin_sdk/tools/util;->m([BII)V
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v3, v3, 0x2
 
-    iput v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v4, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v4, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     invoke-static {v3, v4, v2}, Loicq/wlogin_sdk/tools/util;->m([BII)V
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v2, v2, 0x2
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     long-to-int v4, p4
 
     invoke-static {v2, v3, v4}, Loicq/wlogin_sdk/tools/util;->n([BII)V
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v2, v2, 0x4
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     const/4 v4, 0x3
 
     invoke-static {v2, v3, v4}, Loicq/wlogin_sdk/tools/util;->l([BII)V
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     const/4 v4, 0x0
 
     invoke-static {v2, v3, v4}, Loicq/wlogin_sdk/tools/util;->l([BII)V
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     invoke-static {v2, v3, p6}, Loicq/wlogin_sdk/tools/util;->l([BII)V
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v2, v2, 0x1
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     invoke-static {v2, v3, p7}, Loicq/wlogin_sdk/tools/util;->n([BII)V
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v2, v2, 0x4
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     invoke-static {v2, v3, p8}, Loicq/wlogin_sdk/tools/util;->n([BII)V
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v2, v2, 0x4
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     move/from16 v0, p9
 
     invoke-static {v2, v3, v0}, Loicq/wlogin_sdk/tools/util;->n([BII)V
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v2, v2, 0x4
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/2addr v2, v1
 
     add-int/lit8 v2, v2, 0x1
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNg:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbs:I
 
     if-le v2, v3, :cond_0
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/2addr v2, v1
 
@@ -1685,60 +1685,60 @@
 
     add-int/lit16 v2, v2, 0x80
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNg:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbs:I
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNg:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbs:I
 
     new-array v2, v2, [B
 
-    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
     const/4 v4, 0x0
 
     const/4 v5, 0x0
 
-    iget v6, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v6, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     invoke-static {v3, v4, v2, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iput-object v2, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
     :cond_0
     const/4 v2, 0x0
 
-    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v4, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v4, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     move-object/from16 v0, p10
 
     invoke-static {v0, v2, v3, v4, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/2addr v1, v2
 
-    iput v1, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v1, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     const/4 v3, 0x3
 
     invoke-static {v1, v2, v3}, Loicq/wlogin_sdk/tools/util;->l([BII)V
 
-    iget v1, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v1, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     add-int/lit8 v1, v1, 0x1
 
-    iput v1, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v1, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     .line 135
     return-void
 .end method
 
-.method public final aS([B)[B
+.method public final bl([B)[B
     .locals 5
 
     .prologue
@@ -1758,9 +1758,9 @@
     :cond_0
     array-length v0, p1
 
-    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v1, v1, Loicq/wlogin_sdk/request/i;->jNx:[B
+    iget-object v1, v1, Loicq/wlogin_sdk/request/i;->mbJ:[B
 
     array-length v1, v1
 
@@ -1774,15 +1774,15 @@
     invoke-static {p1, v4, v0, v4, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 277
-    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v1, v1, Loicq/wlogin_sdk/request/i;->jNx:[B
+    iget-object v1, v1, Loicq/wlogin_sdk/request/i;->mbJ:[B
 
     array-length v2, p1
 
-    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v3, v3, Loicq/wlogin_sdk/request/i;->jNx:[B
+    iget-object v3, v3, Loicq/wlogin_sdk/request/i;->mbJ:[B
 
     array-length v3, v3
 
@@ -1791,7 +1791,7 @@
     goto :goto_0
 .end method
 
-.method public final aT([B)[B
+.method public final bm([B)[B
     .locals 7
 
     .prologue
@@ -1834,16 +1834,16 @@
     invoke-static {v0, v5, v1, v5, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 292
-    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
     new-array v4, v6, [B
 
-    iput-object v4, v3, Loicq/wlogin_sdk/request/i;->jNx:[B
+    iput-object v4, v3, Loicq/wlogin_sdk/request/i;->mbJ:[B
 
     .line 293
-    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v3, v3, Loicq/wlogin_sdk/request/i;->jNx:[B
+    iget-object v3, v3, Loicq/wlogin_sdk/request/i;->mbJ:[B
 
     invoke-static {v0, v2, v3, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -1853,41 +1853,41 @@
     goto :goto_0
 .end method
 
-.method public final aVA()V
-    .locals 1
-
-    .prologue
-    .line 248
-    iget-object v0, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
-
-    iget-object v0, v0, Loicq/wlogin_sdk/request/i;->jNV:Loicq/wlogin_sdk/tools/ErrMsg;
-
-    invoke-virtual {v0}, Loicq/wlogin_sdk/tools/ErrMsg;->aVG()V
-
-    .line 250
-    return-void
-.end method
-
-.method public final aVz()[B
+.method public final boo()[B
     .locals 4
 
     .prologue
     const/4 v3, 0x0
 
     .line 167
-    iget v0, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v0, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     new-array v0, v0, [B
 
     .line 168
-    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     invoke-static {v1, v3, v0, v3, v2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 169
     return-object v0
+.end method
+
+.method public final bop()V
+    .locals 1
+
+    .prologue
+    .line 248
+    iget-object v0, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
+
+    iget-object v0, v0, Loicq/wlogin_sdk/request/i;->mch:Loicq/wlogin_sdk/tools/ErrMsg;
+
+    invoke-virtual {v0}, Loicq/wlogin_sdk/tools/ErrMsg;->bov()V
+
+    .line 250
+    return-void
 .end method
 
 .method final g([BII)[B
@@ -1921,20 +1921,20 @@
     .line 200
     array-length v1, v0
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->jNz:[B
+    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->mbL:[B
 
-    invoke-static {v0, v1, v2}, Loicq/wlogin_sdk/tools/e;->b([BI[B)[B
+    invoke-static {v0, v1, v2}, Loicq/wlogin_sdk/tools/d;->b([BI[B)[B
 
     move-result-object v0
 
     .line 202
     array-length v1, v0
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->jNz:[B
+    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->mbL:[B
 
     array-length v2, v2
 
@@ -1943,22 +1943,22 @@
     new-array v1, v1, [B
 
     .line 203
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->jNz:[B
+    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->mbL:[B
 
-    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v3, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v3, v3, Loicq/wlogin_sdk/request/i;->jNz:[B
+    iget-object v3, v3, Loicq/wlogin_sdk/request/i;->mbL:[B
 
     array-length v3, v3
 
     invoke-static {v2, v4, v1, v4, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 204
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->jNz:[B
+    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->mbL:[B
 
     array-length v2, v2
 
@@ -1990,23 +1990,23 @@
     if-ltz v1, :cond_0
 
     .line 236
-    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v1, v1, Loicq/wlogin_sdk/request/i;->jNV:Loicq/wlogin_sdk/tools/ErrMsg;
+    iget-object v1, v1, Loicq/wlogin_sdk/request/i;->mch:Loicq/wlogin_sdk/tools/ErrMsg;
 
     new-instance v2, Ljava/lang/String;
 
-    iget v3, v0, Loicq/wlogin_sdk/a/ai;->jOK:I
+    iget v3, v0, Loicq/wlogin_sdk/a/ai;->mcW:I
 
     new-array v3, v3, [B
 
-    iget-object v4, v0, Loicq/wlogin_sdk/a/ai;->jNm:[B
+    iget-object v4, v0, Loicq/wlogin_sdk/a/ai;->mby:[B
 
-    iget v5, v0, Loicq/wlogin_sdk/a/ai;->jOb:I
+    iget v5, v0, Loicq/wlogin_sdk/a/ai;->mcn:I
 
     add-int/lit8 v5, v5, 0x6
 
-    iget v6, v0, Loicq/wlogin_sdk/a/ai;->jOK:I
+    iget v6, v0, Loicq/wlogin_sdk/a/ai;->mcW:I
 
     invoke-static {v4, v5, v3, v7, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
@@ -2015,66 +2015,66 @@
     iput-object v2, v1, Loicq/wlogin_sdk/tools/ErrMsg;->title:Ljava/lang/String;
 
     .line 237
-    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v1, v1, Loicq/wlogin_sdk/request/i;->jNV:Loicq/wlogin_sdk/tools/ErrMsg;
+    iget-object v1, v1, Loicq/wlogin_sdk/request/i;->mch:Loicq/wlogin_sdk/tools/ErrMsg;
 
     new-instance v2, Ljava/lang/String;
 
-    iget v3, v0, Loicq/wlogin_sdk/a/ai;->jOL:I
+    iget v3, v0, Loicq/wlogin_sdk/a/ai;->mcX:I
 
     new-array v3, v3, [B
 
-    iget-object v4, v0, Loicq/wlogin_sdk/a/ai;->jNm:[B
+    iget-object v4, v0, Loicq/wlogin_sdk/a/ai;->mby:[B
 
-    iget v5, v0, Loicq/wlogin_sdk/a/ai;->jOb:I
+    iget v5, v0, Loicq/wlogin_sdk/a/ai;->mcn:I
 
     add-int/lit8 v5, v5, 0x8
 
-    iget v6, v0, Loicq/wlogin_sdk/a/ai;->jOK:I
+    iget v6, v0, Loicq/wlogin_sdk/a/ai;->mcW:I
 
     add-int/2addr v5, v6
 
-    iget v6, v0, Loicq/wlogin_sdk/a/ai;->jOL:I
+    iget v6, v0, Loicq/wlogin_sdk/a/ai;->mcX:I
 
     invoke-static {v4, v5, v3, v7, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     invoke-direct {v2, v3}, Ljava/lang/String;-><init>([B)V
 
-    iput-object v2, v1, Loicq/wlogin_sdk/tools/ErrMsg;->message:Ljava/lang/String;
+    iput-object v2, v1, Loicq/wlogin_sdk/tools/ErrMsg;->epN:Ljava/lang/String;
 
     .line 238
-    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v1, v1, Loicq/wlogin_sdk/request/i;->jNV:Loicq/wlogin_sdk/tools/ErrMsg;
+    iget-object v1, v1, Loicq/wlogin_sdk/request/i;->mch:Loicq/wlogin_sdk/tools/ErrMsg;
 
     new-instance v2, Ljava/lang/String;
 
-    iget v3, v0, Loicq/wlogin_sdk/a/ai;->jOM:I
+    iget v3, v0, Loicq/wlogin_sdk/a/ai;->mcY:I
 
     new-array v3, v3, [B
 
-    iget-object v4, v0, Loicq/wlogin_sdk/a/ai;->jNm:[B
+    iget-object v4, v0, Loicq/wlogin_sdk/a/ai;->mby:[B
 
-    iget v5, v0, Loicq/wlogin_sdk/a/ai;->jOb:I
+    iget v5, v0, Loicq/wlogin_sdk/a/ai;->mcn:I
 
     add-int/lit8 v5, v5, 0xc
 
-    iget v6, v0, Loicq/wlogin_sdk/a/ai;->jOK:I
+    iget v6, v0, Loicq/wlogin_sdk/a/ai;->mcW:I
 
     add-int/2addr v5, v6
 
-    iget v6, v0, Loicq/wlogin_sdk/a/ai;->jOL:I
+    iget v6, v0, Loicq/wlogin_sdk/a/ai;->mcX:I
 
     add-int/2addr v5, v6
 
-    iget v0, v0, Loicq/wlogin_sdk/a/ai;->jOM:I
+    iget v0, v0, Loicq/wlogin_sdk/a/ai;->mcY:I
 
     invoke-static {v4, v5, v3, v7, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     invoke-direct {v2, v3}, Ljava/lang/String;-><init>([B)V
 
-    iput-object v2, v1, Loicq/wlogin_sdk/tools/ErrMsg;->jOT:Ljava/lang/String;
+    iput-object v2, v1, Loicq/wlogin_sdk/tools/ErrMsg;->mdf:Ljava/lang/String;
 
     .line 242
     :goto_0
@@ -2082,11 +2082,11 @@
 
     .line 240
     :cond_0
-    iget-object v0, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v0, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v0, v0, Loicq/wlogin_sdk/request/i;->jNV:Loicq/wlogin_sdk/tools/ErrMsg;
+    iget-object v0, v0, Loicq/wlogin_sdk/request/i;->mch:Loicq/wlogin_sdk/tools/ErrMsg;
 
-    invoke-virtual {v0}, Loicq/wlogin_sdk/tools/ErrMsg;->aVG()V
+    invoke-virtual {v0}, Loicq/wlogin_sdk/tools/ErrMsg;->bov()V
 
     goto :goto_0
 .end method
@@ -2119,11 +2119,11 @@
     invoke-direct {v6}, Loicq/wlogin_sdk/a/s;-><init>()V
 
     .line 561
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNs:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbE:I
 
     if-ne v2, v8, :cond_0
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNt:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbF:I
 
     const/16 v7, 0x9
 
@@ -2146,11 +2146,11 @@
 
     .line 566
     :cond_0
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNs:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbE:I
 
     if-ne v2, v8, :cond_1
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNt:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbF:I
 
     const/16 v7, 0xa
 
@@ -2162,11 +2162,11 @@
     goto :goto_0
 
     :cond_1
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNs:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbE:I
 
     if-ne v2, v8, :cond_2
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNt:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbF:I
 
     if-ne v2, v0, :cond_2
 
@@ -2176,11 +2176,11 @@
     goto :goto_0
 
     :cond_2
-    iget v0, p0, Loicq/wlogin_sdk/request/d;->jNs:I
+    iget v0, p0, Loicq/wlogin_sdk/request/d;->mbE:I
 
     if-ne v0, v8, :cond_3
 
-    iget v0, p0, Loicq/wlogin_sdk/request/d;->jNt:I
+    iget v0, p0, Loicq/wlogin_sdk/request/d;->mbF:I
 
     const/16 v2, 0xd
 
@@ -2204,12 +2204,12 @@
     :cond_4
     add-int/lit8 v0, p2, 0x2
 
-    invoke-virtual {p0, p1, v0}, Loicq/wlogin_sdk/request/d;->v([BI)I
+    invoke-virtual {p0, p1, v0}, Loicq/wlogin_sdk/request/d;->z([BI)I
 
     move-result v0
 
     .line 581
-    invoke-virtual {p0}, Loicq/wlogin_sdk/request/d;->aVA()V
+    invoke-virtual {p0}, Loicq/wlogin_sdk/request/d;->bop()V
 
     .line 582
     add-int/lit8 v7, p2, 0x5
@@ -2218,7 +2218,7 @@
     packed-switch v0, :pswitch_data_0
 
     .line 633
-    iget v1, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v1, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     sub-int/2addr v1, v7
 
@@ -2233,9 +2233,9 @@
     if-ne v2, v3, :cond_6
 
     .line 588
-    iget-object v0, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v0, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v0, v0, Loicq/wlogin_sdk/request/i;->jNy:[B
+    iget-object v0, v0, Loicq/wlogin_sdk/request/i;->mbK:[B
 
     if-nez v0, :cond_5
 
@@ -2246,15 +2246,15 @@
 
     .line 591
     :cond_5
-    iget v0, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v0, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     sub-int/2addr v0, v7
 
     add-int/lit8 v0, v0, -0x1
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->jNy:[B
+    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->mbK:[B
 
     invoke-virtual {v6, p1, v7, v0, v2}, Loicq/wlogin_sdk/a/a;->a([BII[B)I
 
@@ -2279,21 +2279,21 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->Ct(Ljava/lang/String;)V
+    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->IN(Ljava/lang/String;)V
 
     goto :goto_1
 
     .line 593
     :cond_6
-    iget v0, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v0, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     sub-int/2addr v0, v7
 
     add-int/lit8 v0, v0, -0x1
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->jNx:[B
+    iget-object v2, v2, Loicq/wlogin_sdk/request/i;->mbJ:[B
 
     invoke-virtual {v6, p1, v7, v0, v2}, Loicq/wlogin_sdk/a/a;->a([BII[B)I
 
@@ -2325,7 +2325,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->Ct(Ljava/lang/String;)V
+    invoke-static {v1}, Loicq/wlogin_sdk/tools/util;->IN(Ljava/lang/String;)V
 
     goto/16 :goto_1
 
@@ -2337,7 +2337,7 @@
 
     .line 613
     :pswitch_1
-    iget v1, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v1, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     sub-int/2addr v1, v7
 
@@ -2349,7 +2349,7 @@
 
     .line 619
     :pswitch_2
-    iget v1, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v1, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     sub-int/2addr v1, v7
 
@@ -2363,12 +2363,12 @@
     if-ltz v1, :cond_9
 
     .line 621
-    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iput-object v4, v1, Loicq/wlogin_sdk/request/i;->jNA:Loicq/wlogin_sdk/a/f;
+    iput-object v4, v1, Loicq/wlogin_sdk/request/i;->mbM:Loicq/wlogin_sdk/a/f;
 
     .line 624
-    iget v1, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v1, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     sub-int/2addr v1, v7
 
@@ -2382,9 +2382,9 @@
     if-ltz v1, :cond_9
 
     .line 626
-    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v1, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iput-object v5, v1, Loicq/wlogin_sdk/request/i;->jNB:Loicq/wlogin_sdk/a/g;
+    iput-object v5, v1, Loicq/wlogin_sdk/request/i;->mbN:Loicq/wlogin_sdk/a/g;
 
     goto/16 :goto_1
 
@@ -2404,7 +2404,7 @@
     .end packed-switch
 .end method
 
-.method public final u([BI)I
+.method public final y([BI)I
     .locals 7
 
     .prologue
@@ -2413,7 +2413,7 @@
     const/4 v1, 0x0
 
     .line 138
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNk:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbw:I
 
     add-int/lit8 v2, v2, 0x2
 
@@ -2429,52 +2429,52 @@
 
     .line 143
     :cond_1
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNk:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbw:I
 
     sub-int v2, p2, v2
 
     add-int/lit8 v2, v2, -0x2
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNl:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbx:I
 
     .line 144
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNg:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbs:I
 
     if-le p2, v2, :cond_2
 
     add-int/lit16 v2, p2, 0x80
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNg:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbs:I
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNg:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbs:I
 
     new-array v2, v2, [B
 
-    iput-object v2, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iput-object v2, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
     :cond_2
-    iput p2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput p2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
     invoke-static {p1, v1, v2, v1, p2}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 146
-    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v2, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNk:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbw:I
 
     add-int/lit8 v3, v3, 0x1
 
-    iget v4, p0, Loicq/wlogin_sdk/request/d;->jNl:I
+    iget v4, p0, Loicq/wlogin_sdk/request/d;->mbx:I
 
     .line 147
-    iget-object v5, p0, Loicq/wlogin_sdk/request/d;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v5, p0, Loicq/wlogin_sdk/request/d;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iget-object v5, v5, Loicq/wlogin_sdk/request/i;->jNz:[B
+    iget-object v5, v5, Loicq/wlogin_sdk/request/i;->mbL:[B
 
     .line 146
-    invoke-static {v2, v3, v4, v5}, Loicq/wlogin_sdk/tools/e;->decrypt([BII[B)[B
+    invoke-static {v2, v3, v4, v5}, Loicq/wlogin_sdk/tools/d;->decrypt([BII[B)[B
 
     move-result-object v2
 
@@ -2486,13 +2486,13 @@
     if-ltz v1, :cond_0
 
     .line 151
-    iget-object v0, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v0, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v1, p0, Loicq/wlogin_sdk/request/d;->jNk:I
+    iget v1, p0, Loicq/wlogin_sdk/request/d;->mbw:I
 
     add-int/lit8 v1, v1, 0x1
 
-    iget v2, p0, Loicq/wlogin_sdk/request/d;->jNl:I
+    iget v2, p0, Loicq/wlogin_sdk/request/d;->mbx:I
 
     invoke-virtual {p0, v0, v1, v2}, Loicq/wlogin_sdk/request/d;->i([BII)I
 
@@ -2504,54 +2504,54 @@
     :cond_3
     array-length v4, v2
 
-    iput v4, p0, Loicq/wlogin_sdk/request/d;->jNl:I
+    iput v4, p0, Loicq/wlogin_sdk/request/d;->mbx:I
 
     array-length v4, v2
 
-    iget v5, p0, Loicq/wlogin_sdk/request/d;->jNk:I
+    iget v5, p0, Loicq/wlogin_sdk/request/d;->mbw:I
 
     add-int/2addr v4, v5
 
     add-int/lit8 v4, v4, 0x2
 
-    iget v5, p0, Loicq/wlogin_sdk/request/d;->jNg:I
+    iget v5, p0, Loicq/wlogin_sdk/request/d;->mbs:I
 
     if-le v4, v5, :cond_4
 
     array-length v4, v2
 
-    iget v5, p0, Loicq/wlogin_sdk/request/d;->jNk:I
+    iget v5, p0, Loicq/wlogin_sdk/request/d;->mbw:I
 
     add-int/2addr v4, v5
 
     add-int/lit8 v4, v4, 0x2
 
-    iput v4, p0, Loicq/wlogin_sdk/request/d;->jNg:I
+    iput v4, p0, Loicq/wlogin_sdk/request/d;->mbs:I
 
-    iget v4, p0, Loicq/wlogin_sdk/request/d;->jNg:I
+    iget v4, p0, Loicq/wlogin_sdk/request/d;->mbs:I
 
     new-array v4, v4, [B
 
-    iget-object v5, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v5, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
-    iget v6, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v6, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     invoke-static {v5, v1, v4, v1, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iput-object v4, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iput-object v4, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
     :cond_4
-    iput v1, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v1, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget-object v4, p0, Loicq/wlogin_sdk/request/d;->jNm:[B
+    iget-object v4, p0, Loicq/wlogin_sdk/request/d;->mby:[B
 
     array-length v5, v2
 
     invoke-static {v2, v1, v4, v3, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    iget v3, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iget v3, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
-    iget v4, p0, Loicq/wlogin_sdk/request/d;->jNk:I
+    iget v4, p0, Loicq/wlogin_sdk/request/d;->mbw:I
 
     add-int/lit8 v4, v4, 0x2
 
@@ -2561,19 +2561,19 @@
 
     add-int/2addr v2, v3
 
-    iput v2, p0, Loicq/wlogin_sdk/request/d;->jNh:I
+    iput v2, p0, Loicq/wlogin_sdk/request/d;->mbt:I
 
     goto :goto_1
 .end method
 
-.method public final v([BI)I
+.method public final z([BI)I
     .locals 1
 
     .prologue
     .line 223
     aget-byte v0, p1, p2
 
-    iput-byte v0, p0, Loicq/wlogin_sdk/request/d;->jNu:B
+    iput-byte v0, p0, Loicq/wlogin_sdk/request/d;->mbG:B
 
     .line 224
     aget-byte v0, p1, p2

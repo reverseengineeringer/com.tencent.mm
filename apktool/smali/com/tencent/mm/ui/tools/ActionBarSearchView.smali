@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/tools/bo;
+.implements Lcom/tencent/mm/ui/tools/g;
 
 
 # annotations
@@ -18,27 +18,29 @@
 
 
 # instance fields
-.field private gVB:Landroid/text/TextWatcher;
+.field private iLV:Landroid/text/TextWatcher;
 
-.field private jog:Landroid/view/View;
+.field private ltA:Z
 
-.field private joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+.field private ltB:Lcom/tencent/mm/ui/tools/v;
 
-.field private joi:Landroid/widget/ImageButton;
+.field private ltC:Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;
 
-.field private joj:I
+.field private ltD:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
 
-.field private jok:Z
+.field private ltE:Landroid/view/View$OnFocusChangeListener;
 
-.field private jol:Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;
+.field private ltF:Landroid/view/View$OnClickListener;
 
-.field private jom:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
+.field private ltG:Landroid/view/View$OnClickListener;
 
-.field private jon:Landroid/view/View$OnFocusChangeListener;
+.field private ltw:Landroid/view/View;
 
-.field private joo:Landroid/view/View$OnClickListener;
+.field private ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
-.field private jop:Landroid/view/View$OnClickListener;
+.field private lty:Landroid/widget/ImageButton;
+
+.field private ltz:I
 
 
 # direct methods
@@ -46,51 +48,51 @@
     .locals 1
 
     .prologue
-    .line 119
+    .line 135
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 34
-    sget v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$c;->jos:I
+    .line 39
+    sget v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$c;->ltJ:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joj:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltz:I
 
-    .line 35
+    .line 40
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jok:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltA:Z
 
-    .line 52
-    new-instance v0, Lcom/tencent/mm/ui/tools/c;
+    .line 63
+    new-instance v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/c;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$1;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->gVB:Landroid/text/TextWatcher;
-
-    .line 74
-    new-instance v0, Lcom/tencent/mm/ui/tools/d;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/d;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jon:Landroid/view/View$OnFocusChangeListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->iLV:Landroid/text/TextWatcher;
 
     .line 87
-    new-instance v0, Lcom/tencent/mm/ui/tools/e;
+    new-instance v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/e;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$2;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joo:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltE:Landroid/view/View$OnFocusChangeListener;
 
-    .line 103
-    new-instance v0, Lcom/tencent/mm/ui/tools/f;
+    .line 100
+    new-instance v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$3;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/f;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$3;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jop:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltF:Landroid/view/View$OnClickListener;
 
-    .line 120
+    .line 119
+    new-instance v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$4;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$4;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltG:Landroid/view/View$OnClickListener;
+
+    .line 136
     invoke-direct {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->init()V
 
-    .line 121
+    .line 137
     return-void
 .end method
 
@@ -98,51 +100,51 @@
     .locals 1
 
     .prologue
-    .line 114
+    .line 130
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 34
-    sget v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$c;->jos:I
+    .line 39
+    sget v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$c;->ltJ:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joj:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltz:I
 
-    .line 35
+    .line 40
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jok:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltA:Z
 
-    .line 52
-    new-instance v0, Lcom/tencent/mm/ui/tools/c;
+    .line 63
+    new-instance v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/c;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$1;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->gVB:Landroid/text/TextWatcher;
-
-    .line 74
-    new-instance v0, Lcom/tencent/mm/ui/tools/d;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/d;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jon:Landroid/view/View$OnFocusChangeListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->iLV:Landroid/text/TextWatcher;
 
     .line 87
-    new-instance v0, Lcom/tencent/mm/ui/tools/e;
+    new-instance v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/e;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$2;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joo:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltE:Landroid/view/View$OnFocusChangeListener;
 
-    .line 103
-    new-instance v0, Lcom/tencent/mm/ui/tools/f;
+    .line 100
+    new-instance v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$3;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/f;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$3;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jop:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltF:Landroid/view/View$OnClickListener;
 
-    .line 115
+    .line 119
+    new-instance v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$4;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$4;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltG:Landroid/view/View$OnClickListener;
+
+    .line 131
     invoke-direct {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->init()V
 
-    .line 116
+    .line 132
     return-void
 .end method
 
@@ -150,20 +152,106 @@
     .locals 0
 
     .prologue
-    .line 23
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->aRl()V
+    .line 28
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->bih()V
 
     return-void
 .end method
 
-.method private aRl()V
-    .locals 4
+.method static synthetic b(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/v;
+    .locals 1
 
     .prologue
-    const/4 v3, 0x0
+    .line 28
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltB:Lcom/tencent/mm/ui/tools/v;
 
-    .line 204
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    return-object v0
+.end method
+
+.method private bS(II)V
+    .locals 3
+
+    .prologue
+    .line 228
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->lty:Landroid/widget/ImageButton;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setImageResource(I)V
+
+    .line 229
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->lty:Landroid/widget/ImageButton;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
+
+    .line 230
+    const v0, 0x7f0406cf
+
+    if-ne p1, v0, :cond_0
+
+    .line 231
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->lty:Landroid/widget/ImageButton;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const v2, 0x7f0b08e2
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 235
+    :goto_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->lty:Landroid/widget/ImageButton;
+
+    invoke-virtual {v0}, Landroid/widget/ImageButton;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    .line 236
+    iput p2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
+
+    .line 237
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->lty:Landroid/widget/ImageButton;
+
+    invoke-virtual {v1, v0}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 238
+    return-void
+
+    .line 233
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->lty:Landroid/widget/ImageButton;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const v2, 0x7f0b08e4
+
+    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+.end method
+
+.method private bih()V
+    .locals 3
+
+    .prologue
+    const v2, 0x7f0501eb
+
+    const/4 v1, 0x0
+
+    .line 241
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->getEditableText()Landroid/text/Editable;
 
@@ -171,7 +259,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->getEditableText()Landroid/text/Editable;
 
@@ -181,114 +269,98 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 205
-    sget v0, Lcom/tencent/mm/a$h;->search_clear:I
+    .line 242
+    const v0, 0x7f040685
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$g;->NormalIconSize:I
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v1
+
+    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->bS(II)V
+
+    .line 243
+    sget v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$c;->ltJ:I
+
+    iput v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltz:I
+
+    .line 251
+    :goto_0
+    return-void
+
+    .line 244
+    :cond_0
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltA:Z
+
+    if-eqz v0, :cond_1
+
+    .line 245
+    const v0, 0x7f0406cf
+
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v1
 
-    invoke-direct {p0, v0, v3, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->v(III)V
+    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->bS(II)V
 
-    .line 206
-    sget v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$c;->jos:I
+    .line 246
+    sget v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$c;->ltK:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joj:I
-
-    .line 214
-    :goto_0
-    return-void
-
-    .line 207
-    :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jok:Z
-
-    if-eqz v0, :cond_1
-
-    .line 208
-    sget v0, Lcom/tencent/mm/a$h;->voicesearch_enter_btn:I
-
-    sget v1, Lcom/tencent/mm/a$h;->input_bar_bg_active:I
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    sget v3, Lcom/tencent/mm/a$g;->BigIconSize:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    invoke-direct {p0, v0, v1, v2}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->v(III)V
-
-    .line 209
-    sget v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$c;->jot:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joj:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltz:I
 
     goto :goto_0
 
-    .line 211
+    .line 248
     :cond_1
-    invoke-direct {p0, v3, v3, v3}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->v(III)V
+    invoke-direct {p0, v1, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->bS(II)V
 
-    .line 212
-    sget v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$c;->jos:I
+    .line 249
+    sget v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$c;->ltJ:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joj:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltz:I
 
     goto :goto_0
 .end method
 
-.method static synthetic b(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;
+.method static synthetic c(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;
     .locals 1
 
     .prologue
-    .line 23
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jol:Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;
+    .line 28
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltC:Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)I
+.method static synthetic d(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)I
     .locals 1
 
     .prologue
-    .line 23
-    iget v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joj:I
+    .line 28
+    iget v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltz:I
 
     return v0
 .end method
 
-.method static synthetic d(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
+.method static synthetic e(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
     .locals 1
 
     .prologue
-    .line 23
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jom:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
-
-    return-object v0
-.end method
-
-.method static synthetic e(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Landroid/text/TextWatcher;
-    .locals 1
-
-    .prologue
-    .line 23
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->gVB:Landroid/text/TextWatcher;
+    .line 28
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltD:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
 
     return-object v0
 .end method
@@ -297,8 +369,8 @@
     .locals 1
 
     .prologue
-    .line 23
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 28
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     return-object v0
 .end method
@@ -307,7 +379,7 @@
     .locals 3
 
     .prologue
-    .line 125
+    .line 141
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -320,31 +392,31 @@
 
     check-cast v0, Landroid/view/LayoutInflater;
 
-    .line 126
-    sget v1, Lcom/tencent/mm/a$k;->actionbar_searchview:I
+    .line 142
+    const v1, 0x7f0a057d
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 127
-    sget v0, Lcom/tencent/mm/a$i;->ab_back_container:I
+    .line 143
+    const v0, 0x7f0704e3
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jog:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltw:Landroid/view/View;
 
-    .line 128
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jog:Landroid/view/View;
+    .line 144
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltw:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jop:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltG:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 129
-    sget v0, Lcom/tencent/mm/a$i;->edittext:I
+    .line 145
+    const v0, 0x7f0704d4
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->findViewById(I)Landroid/view/View;
 
@@ -352,24 +424,33 @@
 
     check-cast v0, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
-    .line 130
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 146
+    new-instance v0, Lcom/tencent/mm/ui/tools/v;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/ui/tools/v;-><init>(Landroid/widget/EditText;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltB:Lcom/tencent/mm/ui/tools/v;
+
+    .line 147
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setSearchView(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
 
-    .line 131
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 148
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
-    new-instance v1, Lcom/tencent/mm/ui/tools/g;
+    new-instance v1, Lcom/tencent/mm/ui/tools/ActionBarSearchView$5;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/g;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$5;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->post(Ljava/lang/Runnable;)Z
 
-    .line 139
-    sget v0, Lcom/tencent/mm/a$i;->status_btn:I
+    .line 157
+    const v0, 0x7f070cf5
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->findViewById(I)Landroid/view/View;
 
@@ -377,24 +458,42 @@
 
     check-cast v0, Landroid/widget/ImageButton;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joi:Landroid/widget/ImageButton;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->lty:Landroid/widget/ImageButton;
 
-    .line 141
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 159
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->gVB:Landroid/text/TextWatcher;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->iLV:Landroid/text/TextWatcher;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 142
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 160
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jon:Landroid/view/View$OnFocusChangeListener;
+    new-instance v1, Lcom/tencent/mm/ui/tools/ActionBarSearchView$6;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$6;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
+
+    .line 171
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    new-instance v1, Lcom/tencent/mm/ui/tools/ActionBarSearchView$7;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$7;-><init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setOnSelectionChangeListener(Lcom/tencent/mm/ui/widget/AutoMatchKeywordEditText$a;)V
+
+    .line 179
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltE:Landroid/view/View$OnFocusChangeListener;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 144
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 181
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/a/c;->a(Landroid/widget/EditText;)Lcom/tencent/mm/ui/tools/a/c;
 
@@ -402,7 +501,7 @@
 
     const/16 v1, 0x64
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->oZ(I)Lcom/tencent/mm/ui/tools/a/c;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->rZ(I)Lcom/tencent/mm/ui/tools/a/c;
 
     move-result-object v0
 
@@ -410,121 +509,49 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->a(Lcom/tencent/mm/ui/tools/a/c$a;)V
 
-    .line 148
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joi:Landroid/widget/ImageButton;
+    .line 185
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->lty:Landroid/widget/ImageButton;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joo:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltF:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 149
+    .line 186
     return-void
-.end method
-
-.method private v(III)V
-    .locals 3
-
-    .prologue
-    .line 191
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joi:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setImageResource(I)V
-
-    .line 192
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joi:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0, p2}, Landroid/widget/ImageButton;->setBackgroundResource(I)V
-
-    .line 193
-    sget v0, Lcom/tencent/mm/a$h;->voicesearch_enter_btn:I
-
-    if-ne p1, v0, :cond_0
-
-    .line 194
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joi:Landroid/widget/ImageButton;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget v2, Lcom/tencent/mm/a$n;->voice_Input:I
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
-
-    .line 198
-    :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joi:Landroid/widget/ImageButton;
-
-    invoke-virtual {v0}, Landroid/widget/ImageButton;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    .line 199
-    iput p3, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
-
-    .line 200
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joi:Landroid/widget/ImageButton;
-
-    invoke-virtual {v1, v0}, Landroid/widget/ImageButton;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 201
-    return-void
-
-    .line 196
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joi:Landroid/widget/ImageButton;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    sget v2, Lcom/tencent/mm/a$n;->clear_btn:I
-
-    invoke-virtual {v1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setContentDescription(Ljava/lang/CharSequence;)V
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final aRm()V
+.method public final bii()V
     .locals 1
 
     .prologue
-    .line 231
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 268
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->clearFocus()V
 
-    .line 232
+    .line 269
     return-void
 .end method
 
-.method public final aRn()Z
+.method public final bij()Z
     .locals 1
 
     .prologue
-    .line 297
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 334
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     if-eqz v0, :cond_0
 
-    .line 298
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 335
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->hasFocus()Z
 
     move-result v0
 
-    .line 300
+    .line 337
     :goto_0
     return v0
 
@@ -534,85 +561,28 @@
     goto :goto_0
 .end method
 
-.method public final aRo()Z
+.method public final bik()Z
     .locals 1
 
     .prologue
-    .line 306
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 343
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     if-eqz v0, :cond_0
 
-    .line 307
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 344
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->requestFocus()Z
 
     move-result v0
 
-    .line 309
+    .line 346
     :goto_0
     return v0
 
     :cond_0
     const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final fW(Z)V
-    .locals 0
-
-    .prologue
-    .line 178
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jok:Z
-
-    .line 179
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->aRl()V
-
-    .line 180
-    return-void
-.end method
-
-.method public final fX(Z)V
-    .locals 2
-
-    .prologue
-    .line 221
-    if-nez p1, :cond_0
-
-    .line 222
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->gVB:Landroid/text/TextWatcher;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
-
-    .line 223
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
-
-    const-string/jumbo v1, ""
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 224
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->gVB:Landroid/text/TextWatcher;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    .line 228
-    :goto_0
-    return-void
-
-    .line 226
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
-
-    const-string/jumbo v1, ""
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 .end method
@@ -621,8 +591,8 @@
     .locals 1
 
     .prologue
-    .line 152
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 189
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->getEditableText()Landroid/text/Editable;
 
@@ -630,8 +600,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 153
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 190
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->getEditableText()Landroid/text/Editable;
 
@@ -641,7 +611,7 @@
 
     move-result-object v0
 
-    .line 155
+    .line 192
     :goto_0
     return-object v0
 
@@ -651,14 +621,90 @@
     goto :goto_0
 .end method
 
+.method public final id(Z)V
+    .locals 0
+
+    .prologue
+    .line 215
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltA:Z
+
+    .line 216
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->bih()V
+
+    .line 217
+    return-void
+.end method
+
+.method public final ie(Z)V
+    .locals 2
+
+    .prologue
+    .line 258
+    if-nez p1, :cond_0
+
+    .line 259
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->iLV:Landroid/text/TextWatcher;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+
+    .line 260
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    const-string/jumbo v1, ""
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setText(Ljava/lang/CharSequence;)V
+
+    .line 261
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->iLV:Landroid/text/TextWatcher;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+
+    .line 265
+    :goto_0
+    return-void
+
+    .line 263
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    const-string/jumbo v1, ""
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setText(Ljava/lang/CharSequence;)V
+
+    goto :goto_0
+.end method
+
+.method public setAutoMatchKeywords(Z)V
+    .locals 1
+
+    .prologue
+    .line 366
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltB:Lcom/tencent/mm/ui/tools/v;
+
+    if-eqz v0, :cond_0
+
+    .line 367
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltB:Lcom/tencent/mm/ui/tools/v;
+
+    iput-boolean p1, v0, Lcom/tencent/mm/ui/tools/v;->lys:Z
+
+    .line 369
+    :cond_0
+    return-void
+.end method
+
 .method public setBackClickCallback(Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;)V
     .locals 0
 
     .prologue
-    .line 164
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jom:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
+    .line 201
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltD:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
 
-    .line 165
+    .line 202
     return-void
 .end method
 
@@ -666,10 +712,36 @@
     .locals 0
 
     .prologue
-    .line 160
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->jol:Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;
+    .line 197
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltC:Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;
 
-    .line 161
+    .line 198
+    return-void
+.end method
+
+.method public setEditTextClickListener(Landroid/view/View$OnClickListener;)V
+    .locals 2
+
+    .prologue
+    .line 351
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    if-eqz v0, :cond_0
+
+    .line 352
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setFocusable(Z)V
+
+    .line 353
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 355
+    :cond_0
     return-void
 .end method
 
@@ -677,12 +749,12 @@
     .locals 1
 
     .prologue
-    .line 183
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 220
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setEnabled(Z)V
 
-    .line 184
+    .line 221
     return-void
 .end method
 
@@ -690,12 +762,49 @@
     .locals 1
 
     .prologue
-    .line 174
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 211
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 175
+    .line 212
+    return-void
+.end method
+
+.method public setKeywords(Ljava/util/ArrayList;)V
+    .locals 2
+
+    .prologue
+    .line 359
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltB:Lcom/tencent/mm/ui/tools/v;
+
+    if-eqz v0, :cond_0
+
+    .line 360
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltB:Lcom/tencent/mm/ui/tools/v;
+
+    iput-object p1, v1, Lcom/tencent/mm/ui/tools/v;->lyr:Ljava/util/ArrayList;
+
+    iget-boolean v0, v1, Lcom/tencent/mm/ui/tools/v;->lys:Z
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, v1, Lcom/tencent/mm/ui/tools/v;->lyq:Ljava/lang/ref/WeakReference;
+
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/EditText;
+
+    if-eqz v0, :cond_0
+
+    iget-object v1, v1, Lcom/tencent/mm/ui/tools/v;->lyr:Ljava/util/ArrayList;
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/v;->a(Landroid/widget/EditText;Ljava/util/ArrayList;)Z
+
+    .line 362
+    :cond_0
     return-void
 .end method
 
@@ -703,7 +812,7 @@
     .locals 0
 
     .prologue
-    .line 293
+    .line 330
     return-void
 .end method
 
@@ -711,12 +820,12 @@
     .locals 1
 
     .prologue
-    .line 217
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 254
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    .line 218
+    .line 255
     return-void
 .end method
 
@@ -724,19 +833,19 @@
     .locals 2
 
     .prologue
-    .line 168
+    .line 205
     if-nez p1, :cond_0
 
     const-string/jumbo p1, ""
 
-    .line 169
+    .line 206
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 170
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joh:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+    .line 207
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -744,7 +853,36 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setSelection(I)V
 
-    .line 171
+    .line 208
+    return-void
+.end method
+
+.method public setSearchTipIcon(I)V
+    .locals 3
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 373
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    if-eqz v0, :cond_0
+
+    .line 374
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->ltx:Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1, p1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1, v2, v2, v2}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
+
+    .line 376
+    :cond_0
     return-void
 .end method
 
@@ -752,11 +890,11 @@
     .locals 1
 
     .prologue
-    .line 187
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->joi:Landroid/widget/ImageButton;
+    .line 224
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->lty:Landroid/widget/ImageButton;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageButton;->setEnabled(Z)V
 
-    .line 188
+    .line 225
     return-void
 .end method

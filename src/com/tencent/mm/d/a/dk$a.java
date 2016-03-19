@@ -1,8 +1,10 @@
 package com.tencent.mm.d.a;
 
+import android.database.Cursor;
+
 public final class dk$a
 {
-  public int avi = 0;
+  public Cursor awV;
 }
 
 /* Location:

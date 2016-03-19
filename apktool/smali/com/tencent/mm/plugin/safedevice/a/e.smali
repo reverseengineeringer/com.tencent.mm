@@ -4,19 +4,19 @@
 
 
 # direct methods
-.method static a(Lcom/tencent/mm/protocal/b/adx;)V
+.method static a(Lcom/tencent/mm/protocal/b/amb;)V
     .locals 4
 
     .prologue
     .line 83
     if-eqz p0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/protocal/b/adx;->hlu:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/b/amb;->jak:Ljava/util/LinkedList;
 
     if-eqz v0, :cond_0
 
     .line 84
-    iget-object v0, p0, Lcom/tencent/mm/protocal/b/adx;->hlu:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/b/amb;->jak:Ljava/util/LinkedList;
 
     if-eqz v0, :cond_0
 
@@ -26,11 +26,11 @@
 
     if-ltz v1, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->afu()Lcom/tencent/mm/plugin/safedevice/a/d;
+    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->aqC()Lcom/tencent/mm/plugin/safedevice/a/d;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/safedevice/a/d;->afr()V
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/safedevice/a/d;->aqz()V
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -47,15 +47,15 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/adw;
+    check-cast v0, Lcom/tencent/mm/protocal/b/ama;
 
-    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->afu()Lcom/tencent/mm/plugin/safedevice/a/d;
+    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->aqC()Lcom/tencent/mm/plugin/safedevice/a/d;
 
     move-result-object v2
 
     new-instance v3, Lcom/tencent/mm/plugin/safedevice/a/c;
 
-    invoke-direct {v3, v0}, Lcom/tencent/mm/plugin/safedevice/a/c;-><init>(Lcom/tencent/mm/protocal/b/adw;)V
+    invoke-direct {v3, v0}, Lcom/tencent/mm/plugin/safedevice/a/c;-><init>(Lcom/tencent/mm/protocal/b/ama;)V
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/plugin/safedevice/a/d;->a(Lcom/tencent/mm/plugin/safedevice/a/c;)Z
 
@@ -66,7 +66,7 @@
     return-void
 .end method
 
-.method public static afs()Ljava/lang/String;
+.method public static aqA()Ljava/lang/String;
     .locals 2
 
     .prologue
@@ -100,25 +100,27 @@
     return-object v0
 .end method
 
-.method public static bJ(Landroid/content/Context;)Ljava/lang/String;
-    .locals 2
+.method public static bX(Landroid/content/Context;)Ljava/lang/String;
+    .locals 3
 
     .prologue
+    const v2, 0x7f0b07b1
+
+    const v1, 0x7f0b07b0
+
     .line 98
     if-nez p0, :cond_1
 
     .line 99
-    sget-boolean v0, Lcom/tencent/mm/sdk/platformtools/g;->hYj:Z
+    sget-boolean v0, Lcom/tencent/mm/sdk/platformtools/f;->jVf:Z
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$n;->safe_device_android_device_nm:I
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -128,11 +130,9 @@
 
     .line 99
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
-
-    sget v1, Lcom/tencent/mm/a$n;->safe_device_android_device:I
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -142,34 +142,30 @@
 
     .line 101
     :cond_1
-    sget-boolean v0, Lcom/tencent/mm/sdk/platformtools/g;->hYj:Z
+    sget-boolean v0, Lcom/tencent/mm/sdk/platformtools/f;->jVf:Z
 
     if-eqz v0, :cond_2
 
-    sget v0, Lcom/tencent/mm/a$n;->safe_device_android_device_nm:I
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_2
-    sget v0, Lcom/tencent/mm/a$n;->safe_device_android_device:I
-
-    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+    invoke-virtual {p0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public static k(ZZ)V
+.method public static l(ZZ)V
     .locals 4
 
     .prologue
     .line 30
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v0
 
@@ -182,7 +178,7 @@
 
     .line 34
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/v;->rX()I
+    invoke-static {}, Lcom/tencent/mm/model/h;->sh()I
 
     move-result v0
 
@@ -194,11 +190,11 @@
 
     .line 42
     :goto_1
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -214,14 +210,14 @@
     if-eqz p1, :cond_0
 
     .line 45
-    new-instance v1, Lcom/tencent/mm/protocal/b/lu;
+    new-instance v1, Lcom/tencent/mm/protocal/b/ok;
 
-    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/lu;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/ok;-><init>()V
 
     .line 46
     const/16 v0, 0x1c
 
-    iput v0, v1, Lcom/tencent/mm/protocal/b/lu;->hxg:I
+    iput v0, v1, Lcom/tencent/mm/protocal/b/ok;->joh:I
 
     .line 47
     if-eqz p0, :cond_3
@@ -229,29 +225,29 @@
     const/4 v0, 0x1
 
     :goto_2
-    iput v0, v1, Lcom/tencent/mm/protocal/b/lu;->hxh:I
+    iput v0, v1, Lcom/tencent/mm/protocal/b/ok;->joi:I
 
     .line 49
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rh()Lcom/tencent/mm/ac/c;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rp()Lcom/tencent/mm/ag/c;
 
     move-result-object v0
 
-    new-instance v2, Lcom/tencent/mm/ac/b$a;
+    new-instance v2, Lcom/tencent/mm/ag/b$a;
 
     const/16 v3, 0x17
 
-    invoke-direct {v2, v3, v1}, Lcom/tencent/mm/ac/b$a;-><init>(ILcom/tencent/mm/al/a;)V
+    invoke-direct {v2, v3, v1}, Lcom/tencent/mm/ag/b$a;-><init>(ILcom/tencent/mm/at/a;)V
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/ac/c;->a(Lcom/tencent/mm/ac/b$p;)V
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/ag/c;->b(Lcom/tencent/mm/ag/b$q;)V
 
     .line 50
-    sget-object v0, Lcom/tencent/mm/plugin/a/a;->bWX:Lcom/tencent/mm/pluginsdk/i;
+    sget-object v0, Lcom/tencent/mm/plugin/a/a;->cob:Lcom/tencent/mm/pluginsdk/f;
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/i;->ll()V
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/f;->kG()V
 
     goto :goto_0
 

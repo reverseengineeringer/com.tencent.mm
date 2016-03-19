@@ -1,42 +1,42 @@
 .class public Lcom/tencent/mm/remoteservice/a;
-.super Lcom/tencent/mm/remoteservice/c$a;
+.super Lcom/tencent/mm/remoteservice/b$a;
 .source "SourceFile"
 
 
 # instance fields
-.field private final dOS:Lcom/tencent/mm/remoteservice/f;
+.field private final eRe:Lcom/tencent/mm/remoteservice/d;
 
-.field protected hVi:Lcom/tencent/mm/remoteservice/RemoteService;
+.field protected jRR:Lcom/tencent/mm/remoteservice/RemoteService;
 
-.field public hVj:Lcom/tencent/mm/remoteservice/c;
+.field public jRS:Lcom/tencent/mm/remoteservice/b;
 
 
 # direct methods
-.method public constructor <init>(Lcom/tencent/mm/remoteservice/f;)V
+.method public constructor <init>(Lcom/tencent/mm/remoteservice/d;)V
     .locals 0
 
     .prologue
     .line 20
-    invoke-direct {p0}, Lcom/tencent/mm/remoteservice/c$a;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/remoteservice/b$a;-><init>()V
 
     .line 21
-    iput-object p1, p0, Lcom/tencent/mm/remoteservice/a;->dOS:Lcom/tencent/mm/remoteservice/f;
+    iput-object p1, p0, Lcom/tencent/mm/remoteservice/a;->eRe:Lcom/tencent/mm/remoteservice/d;
 
     .line 22
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/remoteservice/a;)Lcom/tencent/mm/remoteservice/f;
+.method static synthetic a(Lcom/tencent/mm/remoteservice/a;)Lcom/tencent/mm/remoteservice/d;
     .locals 1
 
     .prologue
     .line 13
-    iget-object v0, p0, Lcom/tencent/mm/remoteservice/a;->dOS:Lcom/tencent/mm/remoteservice/f;
+    iget-object v0, p0, Lcom/tencent/mm/remoteservice/a;->eRe:Lcom/tencent/mm/remoteservice/d;
 
     return-object v0
 .end method
 
-.method private static varargs h([Ljava/lang/Object;)Landroid/os/Bundle;
+.method private static varargs l([Ljava/lang/Object;)Landroid/os/Bundle;
     .locals 5
 
     .prologue
@@ -121,12 +121,12 @@
     return-object v2
 .end method
 
-.method static synthetic i([Ljava/lang/Object;)Landroid/os/Bundle;
+.method static synthetic m([Ljava/lang/Object;)Landroid/os/Bundle;
     .locals 1
 
     .prologue
     .line 13
-    invoke-static {p0}, Lcom/tencent/mm/remoteservice/a;->h([Ljava/lang/Object;)Landroid/os/Bundle;
+    invoke-static {p0}, Lcom/tencent/mm/remoteservice/a;->l([Ljava/lang/Object;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -142,17 +142,17 @@
     const/4 v4, 0x1
 
     .line 70
-    invoke-static {p2}, Lcom/tencent/mm/remoteservice/a;->h([Ljava/lang/Object;)Landroid/os/Bundle;
+    invoke-static {p2}, Lcom/tencent/mm/remoteservice/a;->l([Ljava/lang/Object;)Landroid/os/Bundle;
 
     move-result-object v1
 
     .line 73
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/remoteservice/a;->hVj:Lcom/tencent/mm/remoteservice/c;
+    iget-object v0, p0, Lcom/tencent/mm/remoteservice/a;->jRS:Lcom/tencent/mm/remoteservice/b;
 
     const/4 v2, 0x1
 
-    invoke-interface {v0, p1, v1, v2}, Lcom/tencent/mm/remoteservice/c;->onCallback(Ljava/lang/String;Landroid/os/Bundle;Z)V
+    invoke-interface {v0, p1, v1, v2}, Lcom/tencent/mm/remoteservice/b;->onCallback(Ljava/lang/String;Landroid/os/Bundle;Z)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -179,13 +179,13 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -195,23 +195,23 @@
 
     .prologue
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/remoteservice/a;->dOS:Lcom/tencent/mm/remoteservice/f;
+    iget-object v0, p0, Lcom/tencent/mm/remoteservice/a;->eRe:Lcom/tencent/mm/remoteservice/d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/remoteservice/f;->isConnected()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/remoteservice/d;->isConnected()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 51
-    invoke-static {p2}, Lcom/tencent/mm/remoteservice/a;->h([Ljava/lang/Object;)Landroid/os/Bundle;
+    invoke-static {p2}, Lcom/tencent/mm/remoteservice/a;->l([Ljava/lang/Object;)Landroid/os/Bundle;
 
     move-result-object v0
 
     .line 52
-    iget-object v1, p0, Lcom/tencent/mm/remoteservice/a;->dOS:Lcom/tencent/mm/remoteservice/f;
+    iget-object v1, p0, Lcom/tencent/mm/remoteservice/a;->eRe:Lcom/tencent/mm/remoteservice/d;
 
-    invoke-virtual {v1, p0, p1, v0}, Lcom/tencent/mm/remoteservice/f;->a(Lcom/tencent/mm/remoteservice/c;Ljava/lang/String;Landroid/os/Bundle;)V
+    invoke-virtual {v1, p0, p1, v0}, Lcom/tencent/mm/remoteservice/d;->a(Lcom/tencent/mm/remoteservice/b;Ljava/lang/String;Landroid/os/Bundle;)V
 
     .line 53
     const-string/jumbo v1, "result_key"
@@ -226,13 +226,13 @@
 
     .line 56
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/remoteservice/a;->dOS:Lcom/tencent/mm/remoteservice/f;
+    iget-object v0, p0, Lcom/tencent/mm/remoteservice/a;->eRe:Lcom/tencent/mm/remoteservice/d;
 
-    new-instance v1, Lcom/tencent/mm/remoteservice/b;
+    new-instance v1, Lcom/tencent/mm/remoteservice/a$1;
 
-    invoke-direct {v1, p0, p2, p1}, Lcom/tencent/mm/remoteservice/b;-><init>(Lcom/tencent/mm/remoteservice/a;[Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-direct {v1, p0, p2, p1}, Lcom/tencent/mm/remoteservice/a$1;-><init>(Lcom/tencent/mm/remoteservice/a;[Ljava/lang/Object;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/remoteservice/f;->j(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/remoteservice/d;->q(Ljava/lang/Runnable;)V
 
     .line 65
     const/4 v0, 0x0
@@ -277,7 +277,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 29
     const/4 v2, 0x0
@@ -321,7 +321,7 @@
 
     if-eqz p3, :cond_3
 
-    const-class v0, Lcom/tencent/mm/remoteservice/h;
+    const-class v0, Lcom/tencent/mm/remoteservice/e;
 
     :goto_1
     invoke-virtual {v2, v0}, Ljava/lang/reflect/Method;->isAnnotationPresent(Ljava/lang/Class;)Z
@@ -375,7 +375,7 @@
 
     .line 37
     :cond_3
-    const-class v0, Lcom/tencent/mm/remoteservice/i;
+    const-class v0, Lcom/tencent/mm/remoteservice/f;
 
     goto :goto_1
 
@@ -423,13 +423,13 @@
 
     new-array v4, v7, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 .end method

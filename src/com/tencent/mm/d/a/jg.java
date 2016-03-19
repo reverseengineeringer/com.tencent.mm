@@ -1,25 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import java.util.List;
+import com.tencent.mm.sdk.c.b;
 
 public final class jg
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGt = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aFL = new a();
   
   public jg()
   {
-    id = "UpdatePackage";
-    hXT = atO;
+    id = "RecogQBarOfImageFileResult";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public List aGu;
-    public int auW = -1;
+    public String azM;
+    public String filePath;
   }
 }
 

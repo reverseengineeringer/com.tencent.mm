@@ -1,23 +1,36 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import android.database.Cursor;
+import android.net.Uri;
+import com.tencent.mm.sdk.c.b;
 
 public final class di
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azt = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awM = new a();
+  public b awN = new b();
   
   public di()
   {
-    id = "GetAppSetting";
-    hXT = atO;
+    id = "ExtCall";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String appId;
+    public String[] asa;
+    public int awO = 0;
+    public Context context;
+    public String[] selectionArgs;
+    public Uri uri;
+  }
+  
+  public static final class b
+  {
+    public Cursor awP;
   }
 }
 

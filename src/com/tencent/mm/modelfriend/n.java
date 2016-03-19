@@ -1,73 +1,55 @@
 package com.tencent.mm.modelfriend;
 
-import android.content.ContentValues;
-import android.database.Cursor;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.sdk.g.ai;
-import com.tencent.mm.sdk.platformtools.bn;
-import junit.framework.Assert;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build.VERSION;
+import android.text.TextUtils;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.storage.h;
+import java.net.URLEncoder;
+import java.util.List;
+import org.apache.http.NameValuePair;
 
 public final class n
-  extends ai
 {
-  public static final String[] aqU = { "CREATE TABLE IF NOT EXISTS facebookfriend ( fbid long  PRIMARY KEY , fbname text  , fbimgkey int  , status int  , username text  , nickname text  , nicknamepyinitial text  , nicknamequanpin text  , sex int  , personalcard int  , province text  , city text  , signature text  , alias text  , type int  , email text  ) " };
-  public g bqt;
-  
-  public n(g paramg)
+  public static boolean aM(Context paramContext)
   {
-    bqt = paramg;
+    Intent localIntent1 = new Intent("com.google.android.gms.common.account.CHOOSE_ACCOUNT");
+    Intent localIntent2 = new Intent("com.tencent.mm.gms.ACTION_CHOOSE_ACCOUNT");
+    return (paramContext.getPackageManager().resolveActivity(localIntent2, 0) != null) && (paramContext.getPackageManager().resolveActivity(localIntent1, 0) != null) && (Build.VERSION.SDK_INT >= 8) && (!paramContext.getSharedPreferences(y.aUK(), 0).getBoolean("googleauth", false));
   }
   
-  public final boolean a(m paramm)
+  public static String w(List paramList)
   {
-    boolean bool;
-    Object localObject;
-    int i;
-    if (aqq == -1)
+    StringBuilder localStringBuilder = new StringBuilder();
+    int j = paramList.size();
+    int i = 0;
+    while (i < j)
     {
-      bool = true;
-      Assert.assertTrue("Func Set always conv_flag == flag_all", bool);
-      long l = aMO;
-      localObject = "select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend   where facebookfriend.fbid = \"" + bn.iU(String.valueOf(l)) + "\"";
-      localObject = bqt.rawQuery((String)localObject, null);
-      if (((Cursor)localObject).getCount() <= 0) {
-        break label121;
+      NameValuePair localNameValuePair = (NameValuePair)paramList.get(i);
+      if (!TextUtils.isEmpty(localNameValuePair.getName()))
+      {
+        if (i != 0) {
+          localStringBuilder.append("&");
+        }
+        localStringBuilder.append(URLEncoder.encode(localNameValuePair.getName(), "UTF-8"));
+        localStringBuilder.append("=");
+        if (!TextUtils.isEmpty(localNameValuePair.getValue())) {
+          localStringBuilder.append(URLEncoder.encode(localNameValuePair.getValue(), "UTF-8"));
+        }
       }
-      i = 1;
-      label76:
-      ((Cursor)localObject).close();
-      if (i != 0) {
-        break label128;
-      }
-      aqq = -1;
-      paramm = paramm.mA();
-      if ((int)bqt.insert("facebookfriend", "fbid", paramm) == -1) {
-        break label126;
-      }
+      i += 1;
     }
-    label121:
-    label126:
-    label128:
-    do
-    {
-      return true;
-      bool = false;
-      break;
-      i = 0;
-      break label76;
-      return false;
-      localObject = paramm.mA();
-      i = bqt.update("facebookfriend", (ContentValues)localObject, "fbid=?", new String[] { aMO });
-      if (i > 0) {
-        Ci();
-      }
-    } while (i > 0);
-    return false;
+    return localStringBuilder.toString();
   }
   
-  public final boolean xF()
+  public static boolean yL()
   {
-    return bqt.bx("facebookfriend", "delete from facebookfriend");
+    return !TextUtils.isEmpty((String)ah.tD().rn().get(208903, null));
   }
 }
 

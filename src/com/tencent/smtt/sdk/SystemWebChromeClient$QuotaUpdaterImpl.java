@@ -3,7 +3,7 @@ package com.tencent.smtt.sdk;
 import android.webkit.WebStorage.QuotaUpdater;
 
 class SystemWebChromeClient$QuotaUpdaterImpl
-  implements ac.a
+  implements w.a
 {
   WebStorage.QuotaUpdater mQuotaUpdater;
   

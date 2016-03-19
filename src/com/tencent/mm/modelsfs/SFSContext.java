@@ -7,6 +7,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -15,11 +17,11 @@ import java.util.Set;
 
 public class SFSContext
 {
-  long bKB;
+  long mNativePtr;
   
   private SFSContext(Builder paramBuilder)
   {
-    Iterator localIterator = bKC.entrySet().iterator();
+    Iterator localIterator = mConf.entrySet().iterator();
     while (localIterator.hasNext())
     {
       Object localObject = (Map.Entry)localIterator.next();
@@ -37,10 +39,10 @@ public class SFSContext
     if (l == 0L) {
       throw new RuntimeException(nativeErrorMessage());
     }
-    bKB = l;
+    mNativePtr = l;
   }
   
-  private static native int nativeClear(long paramLong);
+  static native int nativeClear(long paramLong);
   
   static native String nativeErrorMessage();
   
@@ -48,7 +50,7 @@ public class SFSContext
   
   private static native long nativeInit(String paramString);
   
-  static native int nativeList(long paramLong, String paramString, List paramList);
+  private static native int nativeList(long paramLong, String paramString, List paramList);
   
   private static native long nativeOpenRead(long paramLong, String paramString);
   
@@ -64,79 +66,142 @@ public class SFSContext
   
   private static native FileEntry nativeStat(long paramLong, String paramString);
   
+  static native Statistics nativeStatistics(long paramLong);
+  
   private static native boolean nativeUnlink(long paramLong, String paramString);
   
-  public final boolean bm(String paramString)
+  public final boolean bo(String paramString)
   {
-    if (bKB == 0L) {
+    if (mNativePtr == 0L) {
       throw new IllegalArgumentException("Reuse already released SFSContext.");
     }
-    return nativeUnlink(bKB, paramString);
+    String str = paramString;
+    if (f.iT(paramString))
+    {
+      f.iV(paramString);
+      str = f.iU(paramString);
+    }
+    return nativeUnlink(mNativePtr, str);
   }
   
   protected void finalize()
   {
-    if (bKB != 0L) {
+    if (mNativePtr != 0L) {
       release();
     }
     super.finalize();
   }
   
-  public final FileEntry hD(String paramString)
+  public final OutputStream iI(String paramString)
   {
-    if (bKB == 0L) {
+    if (mNativePtr == 0L) {
       throw new IllegalArgumentException("Reuse already released SFSContext.");
     }
-    return nativeStat(bKB, paramString);
+    long l1;
+    if (f.iT(paramString))
+    {
+      l1 = f.iV(paramString);
+      paramString = f.iU(paramString);
+    }
+    for (;;)
+    {
+      long l2 = nativeOpenWrite(mNativePtr, paramString);
+      if (l2 == 0L) {
+        throw new IOException(paramString + ": " + nativeErrorMessage());
+      }
+      if (l1 != 0L) {
+        return new e(l2, l1);
+      }
+      return new SFSOutputStream(l2);
+      l1 = 0L;
+    }
   }
   
-  public final OutputStream hx(String paramString)
+  public final List iW(String paramString)
   {
-    if (bKB == 0L) {
+    if (mNativePtr == 0L) {
       throw new IllegalArgumentException("Reuse already released SFSContext.");
     }
-    long l = nativeOpenWrite(bKB, paramString);
-    if (l == 0L) {
-      throw new IOException(paramString + ": " + nativeErrorMessage());
+    ArrayList localArrayList = new ArrayList();
+    if (nativeList(mNativePtr, paramString, localArrayList) != 0) {
+      throw new IOException(nativeErrorMessage());
     }
-    return new SFSOutputStream(l);
+    return localArrayList;
+  }
+  
+  public final FileEntry iX(String paramString)
+  {
+    if (mNativePtr == 0L) {
+      throw new IllegalArgumentException("Reuse already released SFSContext.");
+    }
+    String str = paramString;
+    if (f.iT(paramString))
+    {
+      f.iV(paramString);
+      str = f.iU(paramString);
+    }
+    return nativeStat(mNativePtr, str);
   }
   
   public final InputStream openRead(String paramString)
   {
-    if (bKB == 0L) {
+    if (mNativePtr == 0L) {
       throw new IllegalArgumentException("Reuse already released SFSContext.");
     }
-    long l = nativeOpenRead(bKB, paramString);
-    if (l == 0L) {
-      throw new FileNotFoundException(paramString + ": " + nativeErrorMessage());
+    long l1;
+    if (f.iT(paramString))
+    {
+      l1 = f.iV(paramString);
+      paramString = f.iU(paramString);
     }
-    return new SFSInputStream(l);
+    for (;;)
+    {
+      long l2 = nativeOpenRead(mNativePtr, paramString);
+      if (l2 == 0L) {
+        throw new FileNotFoundException(paramString + ": " + nativeErrorMessage());
+      }
+      if (l1 != 0L) {
+        return new d(l2, l1);
+      }
+      return new SFSInputStream(l2);
+      l1 = 0L;
+    }
   }
   
   public final void release()
   {
-    nativeRelease(bKB);
-    bKB = 0L;
+    nativeRelease(mNativePtr);
+    mNativePtr = 0L;
   }
   
   public static class Builder
     implements Parcelable
   {
-    public static final Parcelable.Creator CREATOR = new d();
-    public HashMap bKC;
-    public String mName;
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator()
+    {
+      public final SFSContext.Builder createFromParcel(Parcel paramAnonymousParcel)
+      {
+        return new SFSContext.Builder(paramAnonymousParcel, null);
+      }
+      
+      public final SFSContext.Builder[] newArray(int paramAnonymousInt)
+      {
+        return new SFSContext.Builder[paramAnonymousInt];
+      }
+    };
+    HashMap mConf;
+    String mName;
     
     public Builder()
     {
       mName = null;
-      bKC = new HashMap();
+      mConf = new HashMap();
     }
     
     private Builder(Parcel paramParcel)
     {
       mName = paramParcel.readString();
-      bKC = new HashMap();
+      mConf = new HashMap();
       paramParcel = paramParcel.readArray(Builder.class.getClassLoader());
       if (paramParcel != null)
       {
@@ -144,11 +209,16 @@ public class SFSContext
         while (i < paramParcel.length)
         {
           if (paramParcel[i] != null) {
-            bKC.put(Integer.valueOf(i), paramParcel[i]);
+            mConf.put(Integer.valueOf(i), paramParcel[i]);
           }
           i += 1;
         }
       }
+    }
+    
+    public SFSContext create()
+    {
+      return new SFSContext(this, (byte)0);
     }
     
     public int describeContents()
@@ -156,11 +226,92 @@ public class SFSContext
       return 0;
     }
     
+    public Builder setBlockFileMaxSize(int paramInt)
+    {
+      mConf.put(Integer.valueOf(4), Integer.valueOf(paramInt));
+      return this;
+    }
+    
+    public Builder setBlockFilePrefix(String paramString)
+    {
+      mConf.put(Integer.valueOf(2), paramString);
+      return this;
+    }
+    
+    public Builder setBlockSizeArray(int[] paramArrayOfInt)
+    {
+      mConf.put(Integer.valueOf(5), paramArrayOfInt);
+      return this;
+    }
+    
+    public Builder setConnectionPool(int paramInt)
+    {
+      mConf.put(Integer.valueOf(7), Integer.valueOf(paramInt));
+      return this;
+    }
+    
+    public Builder setDBDirectory(String paramString)
+    {
+      String str = paramString;
+      if (paramString.endsWith("/")) {
+        str = paramString.substring(0, paramString.length() - 1);
+      }
+      mConf.put(Integer.valueOf(1), str + "/%s.index");
+      return this;
+    }
+    
+    public Builder setIOMode(int paramInt)
+    {
+      mConf.put(Integer.valueOf(9), Integer.valueOf(paramInt));
+      return this;
+    }
+    
+    public Builder setIndexDBPath(String paramString)
+    {
+      mConf.put(Integer.valueOf(1), paramString);
+      return this;
+    }
+    
+    public Builder setMaxConcurrentIO(int paramInt)
+    {
+      mConf.put(Integer.valueOf(10), Integer.valueOf(paramInt));
+      return this;
+    }
+    
+    public Builder setName(String paramString)
+    {
+      mName = paramString;
+      return this;
+    }
+    
+    public Builder setOverflowPrefix(String paramString)
+    {
+      mConf.put(Integer.valueOf(3), paramString);
+      return this;
+    }
+    
+    public Builder setStoragePath(String paramString)
+    {
+      String str = paramString;
+      if (paramString.endsWith("/")) {
+        str = paramString.substring(0, paramString.length() - 1);
+      }
+      mConf.put(Integer.valueOf(2), str + "/%s.block");
+      mConf.put(Integer.valueOf(3), str + "/%s/");
+      return this;
+    }
+    
+    public Builder setSyncMode(int paramInt)
+    {
+      mConf.put(Integer.valueOf(11), Integer.valueOf(paramInt));
+      return this;
+    }
+    
     public void writeToParcel(Parcel paramParcel, int paramInt)
     {
       paramParcel.writeString(mName);
       Object[] arrayOfObject = new Object[12];
-      Iterator localIterator = bKC.entrySet().iterator();
+      Iterator localIterator = mConf.entrySet().iterator();
       while (localIterator.hasNext())
       {
         Map.Entry localEntry = (Map.Entry)localIterator.next();
@@ -178,6 +329,66 @@ public class SFSContext
     public String name;
     public long size;
     public long timestamp;
+  }
+  
+  public static class Statistics
+    implements Serializable
+  {
+    private static final long serialVersionUID = 1L;
+    public BlockFile[] blockFiles;
+    public long blockSizeEmpty;
+    public long blockSizeUsed;
+    public BlockType[] blockTypes;
+    public long overflowActualSize;
+    public long totalActualSize;
+    
+    public String toString()
+    {
+      int k = 0;
+      StringBuilder localStringBuilder = new StringBuilder(4096);
+      localStringBuilder.append("Total:\n\tActualSize: ").append(totalActualSize).append('\n').append("\tUsedBlockSize: ").append(blockSizeUsed).append('\n').append("\tEmptyBlockSize: ").append(blockSizeEmpty).append('\n').append("\tOverflowSize: ").append(overflowActualSize).append('\n');
+      int i = 0;
+      int j;
+      Object localObject;
+      for (;;)
+      {
+        j = k;
+        if (i >= blockTypes.length) {
+          break;
+        }
+        localObject = blockTypes[i];
+        localStringBuilder.append("BlockType: ").append(blockSize).append('\n').append("\tUsedCount: ").append(usedCount).append('\n').append("\tEmptyCount: ").append(emptyCount).append('\n').append("\tActualSize: ").append(actualSize).append('\n');
+        i += 1;
+      }
+      while (j < blockFiles.length)
+      {
+        localObject = blockFiles[j];
+        localStringBuilder.append("BlockFile: ").append(j).append('\n').append("\tFileSize: ").append(fileSize).append('\n').append("\tUsedBlockCount: ").append(blockCount).append('\n').append("\tEmptyBlockCount: ").append(emptyCount).append('\n').append("\tTimestamp: ").append(timestamp).append('\n').append("\tDeleted: ").append(deleted).append('\n');
+        j += 1;
+      }
+      return localStringBuilder.toString();
+    }
+    
+    public static class BlockFile
+      implements Serializable
+    {
+      private static final long serialVersionUID = 1L;
+      public int blockCount;
+      public boolean deleted;
+      public int emptyCount;
+      public long fileSize;
+      public long timestamp;
+    }
+    
+    public static class BlockType
+      implements Serializable
+    {
+      private static final long serialVersionUID = 1L;
+      public long actualSize;
+      public int blockSize;
+      public int emptyCount;
+      public int usedCount;
+    }
   }
 }
 

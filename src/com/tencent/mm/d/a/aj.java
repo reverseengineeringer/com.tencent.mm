@@ -1,17 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class aj
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atH = new a();
   
   public aj()
   {
-    id = "DumpSnsTableInfo";
-    hXT = atO;
+    id = "CheckWechatFreeWifi";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public String atI;
+    public String atJ;
+    public String atK;
+    public String atL;
+    public String atM;
+    public String bssid;
+    public String ssid;
   }
 }
 

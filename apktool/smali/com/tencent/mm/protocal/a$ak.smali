@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$ak;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 976
-    const-string/jumbo v0, "getTransferMoneyRequest"
+    .line 2106
+    const-string/jumbo v0, "openEmotionUrl"
 
-    const-string/jumbo v1, "get_transfer_money_request"
+    const-string/jumbo v1, "openEmotionUrl"
 
-    const/16 v2, 0x4a
+    const/16 v2, 0x4e20
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 977
+    .line 2107
     return-void
 .end method

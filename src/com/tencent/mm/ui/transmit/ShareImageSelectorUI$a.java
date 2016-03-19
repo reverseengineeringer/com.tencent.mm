@@ -5,18 +5,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.m;
-import com.tencent.mm.a.n;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMImageView;
-import com.tencent.mm.ui.cn;
+import com.tencent.mm.ui.j;
 
 final class ShareImageSelectorUI$a
   extends BaseAdapter
 {
-  public a[] jzz = { new a(a.n.cropimg_share_to_friend, a.h.share_to_friend_icon), new a(a.n.cropimg_share_to_sns, a.m.find_more_friend_photograph_icon), new a(a.n.cropimg_share_to_fav, a.m.more_my_favorite) };
+  public a[] lBD = { new a(2131428853, 2130903581), new a(2131428852, 2130903724), new a(2131428854, 2130903693) };
   
   ShareImageSelectorUI$a(ShareImageSelectorUI paramShareImageSelectorUI) {}
   
@@ -33,15 +29,15 @@ final class ShareImageSelectorUI$a
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
     if ((paramView == null) || (paramView.getTag() == null)) {
-      paramView = LayoutInflater.from(jzy.ipQ.iqj).inflate(a.k.share_image_selector_item, null);
+      paramView = LayoutInflater.from(lBC.koJ.kpc).inflate(2131361871, null);
     }
-    for (paramViewGroup = new ShareImageSelectorUI.b(jzy, paramView);; paramViewGroup = (ShareImageSelectorUI.b)paramView.getTag())
+    for (paramViewGroup = new ShareImageSelectorUI.b(lBC, paramView);; paramViewGroup = (ShareImageSelectorUI.b)paramView.getTag())
     {
-      a locala = jzz[paramInt];
+      a locala = lBD[paramInt];
       if (locala != null)
       {
-        jzD.setText(jzA);
-        dja.setImageResource(jzB);
+        lBH.setText(lBE);
+        dTv.setImageResource(lBF);
       }
       return paramView;
     }
@@ -49,13 +45,13 @@ final class ShareImageSelectorUI$a
   
   final class a
   {
-    int jzA;
-    int jzB;
+    int lBE;
+    int lBF;
     
     public a(int paramInt1, int paramInt2)
     {
-      jzA = paramInt1;
-      jzB = paramInt2;
+      lBE = paramInt1;
+      lBF = paramInt2;
     }
   }
 }

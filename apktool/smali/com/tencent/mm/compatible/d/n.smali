@@ -1,50 +1,53 @@
-.class final Lcom/tencent/mm/compatible/d/n;
+.class public final Lcom/tencent/mm/compatible/d/n;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/FileFilter;
+
+# instance fields
+.field public bsA:Z
+
+.field public bsB:I
+
+.field public bsC:I
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 119
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 4
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/compatible/d/n;->bsA:Z
+
+    .line 10
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/n;->reset()V
+
+    .line 11
     return-void
 .end method
 
 
 # virtual methods
-.method public final accept(Ljava/io/File;)Z
-    .locals 2
+.method public final reset()V
+    .locals 1
 
     .prologue
-    .line 123
-    const-string/jumbo v0, "cpu[0-9]"
-
-    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Ljava/util/regex/Pattern;->matches(Ljava/lang/String;Ljava/lang/CharSequence;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 124
-    const/4 v0, 0x1
-
-    .line 126
-    :goto_0
-    return v0
-
-    :cond_0
     const/4 v0, 0x0
 
-    goto :goto_0
+    .line 14
+    iput-boolean v0, p0, Lcom/tencent/mm/compatible/d/n;->bsA:Z
+
+    .line 15
+    iput v0, p0, Lcom/tencent/mm/compatible/d/n;->bsB:I
+
+    .line 16
+    iput v0, p0, Lcom/tencent/mm/compatible/d/n;->bsC:I
+
+    .line 17
+    return-void
 .end method

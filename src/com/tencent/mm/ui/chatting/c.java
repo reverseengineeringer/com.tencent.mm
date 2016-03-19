@@ -1,27 +1,35 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.ui.base.h.d;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 final class c
-  implements h.d
+  extends aa.a
 {
-  c(AppAttachDownloadUI paramAppAttachDownloadUI) {}
+  public ImageView kQr;
+  public TextView kQs;
+  public TextView kQt;
+  public TextView kQu;
   
-  public final void af(int paramInt1, int paramInt2)
+  public c(int paramInt)
   {
-    switch (paramInt2)
-    {
-    case 1: 
-    default: 
-      return;
-    case 0: 
-      AppAttachDownloadUI.c(iRi);
-      return;
-    case 2: 
-      AppAttachDownloadUI.d(iRi);
-      return;
-    }
-    AppAttachDownloadUI.e(iRi);
+    super(paramInt);
+  }
+  
+  public final c au(View paramView)
+  {
+    super.aC(paramView);
+    dUV = ((TextView)hnE.findViewById(2131165184));
+    edK = ((CheckBox)hnE.findViewById(2131165186));
+    dMC = hnE.findViewById(2131165187);
+    gjr = ((TextView)hnE.findViewById(2131165268));
+    kQr = ((ImageView)hnE.findViewById(2131165360));
+    kQs = ((TextView)hnE.findViewById(2131165361));
+    kQt = ((TextView)hnE.findViewById(2131165362));
+    kQu = ((TextView)hnE.findViewById(2131165363));
+    return this;
   }
 }
 

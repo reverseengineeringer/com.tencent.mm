@@ -18,11 +18,11 @@
 
 
 # instance fields
-.field gWF:J
+.field iMW:J
 
-.field gWG:J
+.field iMX:J
 
-.field final synthetic gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+.field final synthetic iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
 
 # direct methods
@@ -31,15 +31,15 @@
 
     .prologue
     .line 56
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 57
-    iput-wide p2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWF:J
+    iput-wide p2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMW:J
 
     .line 58
-    iput-wide p4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWG:J
+    iput-wide p4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMX:J
 
     .line 60
     return-void
@@ -58,47 +58,47 @@
     const/4 v0, 0x0
 
     .line 64
-    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWF:J
+    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMW:J
 
-    iget-wide v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWG:J
+    iget-wide v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMX:J
 
     cmp-long v2, v2, v4
 
     if-gez v2, :cond_0
 
     .line 65
-    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWF:J
+    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMW:J
 
     add-long/2addr v2, v7
 
-    iput-wide v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWF:J
+    iput-wide v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMW:J
 
     .line 66
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
-    iget-wide v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWF:J
+    iget-wide v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMW:J
 
-    iget-wide v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWG:J
+    iget-wide v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMX:J
 
-    invoke-virtual {v2, v3, v4, v5, v6}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->n(JJ)V
+    invoke-virtual {v2, v3, v4, v5, v6}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->p(JJ)V
 
     .line 67
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
-    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->a(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->a(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v2
 
     if-eqz v2, :cond_0
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->a(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->a(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0, v7, v8}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, p0, v7, v8}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 74
     :goto_0
@@ -106,7 +106,7 @@
 
     .line 72
     :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->setKeepScreenOn(Z)V
 
@@ -119,7 +119,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget-wide v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWG:J
+    iget-wide v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMX:J
 
     invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -127,9 +127,9 @@
 
     aput-object v5, v4, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$a;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
-    invoke-static {v5}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->a(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {v5}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->a(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v5
 
@@ -144,7 +144,7 @@
 
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

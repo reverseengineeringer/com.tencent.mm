@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field jnA:Z
+.field lsS:Lcom/tencent/mm/ui/e/f;
 
-.field jnB:Ljava/util/LinkedList;
+.field lsT:Z
 
-.field jnz:Lcom/tencent/mm/ui/e/f;
+.field lsU:Ljava/util/LinkedList;
 
 
 # direct methods
@@ -35,7 +35,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e/g$a;->jnB:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e/g$a;->lsU:Ljava/util/LinkedList;
 
     return-void
 .end method

@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui;
 
 public abstract interface VoiceSearchLayout$b
 {
-  public abstract void em(boolean paramBoolean);
+  public abstract void gm(boolean paramBoolean);
 }
 
 /* Location:

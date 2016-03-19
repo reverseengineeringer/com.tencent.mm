@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bk
-  extends a.c
+  extends a.e
 {
   public a$bk()
   {
-    super("nfcTransceive", "nfcTransceive", 141, false);
+    super("getWechatVerifyTicket", "getWechatVerifyTicket", 112, false);
   }
 }
 

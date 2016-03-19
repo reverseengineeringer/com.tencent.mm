@@ -15,38 +15,21 @@
 
 
 # instance fields
-.field public aBN:Ljava/lang/String;
-
-.field public aBO:Ljava/lang/String;
-
-.field public aBP:Ljava/lang/String;
-
-.field public aBQ:Ljava/lang/String;
-
-.field public aBR:Ljava/lang/String;
-
-.field public aBS:Ljava/lang/String;
-
-.field public aBT:Ljava/lang/String;
-
-.field public aBU:I
-
-.field public aBV:I
-
-.field public aBW:I
-
-.field public appId:Ljava/lang/String;
-
-.field public url:Ljava/lang/String;
+.field public asc:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/tencent/mm/d/a/fi$a;->asc:I
 
     return-void
 .end method

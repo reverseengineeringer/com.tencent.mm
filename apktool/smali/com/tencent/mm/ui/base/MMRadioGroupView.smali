@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field private iHd:I
+.field public kGq:I
 
-.field private iHe:I
+.field private kGr:I
 
-.field private iHf:Lcom/tencent/mm/ui/base/MMRadioImageButton$a;
+.field private kGs:Lcom/tencent/mm/ui/base/MMRadioImageButton$a;
 
-.field private iHg:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
+.field private kGt:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
 
-.field private iHh:Lcom/tencent/mm/ui/base/MMRadioGroupView$c;
+.field private kGu:Lcom/tencent/mm/ui/base/MMRadioGroupView$c;
 
-.field private iHi:Lcom/tencent/mm/ui/base/MMRadioImageButton;
+.field private kGv:Lcom/tencent/mm/ui/base/MMRadioImageButton;
 
-.field private iHj:Lcom/tencent/mm/ui/base/MMRadioGroupView$d;
+.field private kGw:Lcom/tencent/mm/ui/base/MMRadioGroupView$d;
 
 
 # direct methods
@@ -41,17 +41,17 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 18
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHd:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGq:I
 
     .line 19
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHe:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGr:I
 
     .line 31
     new-instance v0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;-><init>(Lcom/tencent/mm/ui/base/MMRadioGroupView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHf:Lcom/tencent/mm/ui/base/MMRadioImageButton$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGs:Lcom/tencent/mm/ui/base/MMRadioImageButton$a;
 
     new-instance v0, Lcom/tencent/mm/ui/base/MMRadioGroupView$c;
 
@@ -59,9 +59,9 @@
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/ui/base/MMRadioGroupView$c;-><init>(Lcom/tencent/mm/ui/base/MMRadioGroupView;B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHh:Lcom/tencent/mm/ui/base/MMRadioGroupView$c;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGu:Lcom/tencent/mm/ui/base/MMRadioGroupView$c;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHh:Lcom/tencent/mm/ui/base/MMRadioGroupView$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGu:Lcom/tencent/mm/ui/base/MMRadioGroupView$c;
 
     invoke-super {p0, v0}, Landroid/widget/LinearLayout;->setOnHierarchyChangeListener(Landroid/view/ViewGroup$OnHierarchyChangeListener;)V
 
@@ -69,7 +69,106 @@
     return-void
 .end method
 
-.method private C(IZ)V
+.method static synthetic a(Lcom/tencent/mm/ui/base/MMRadioGroupView;)I
+    .locals 1
+
+    .prologue
+    .line 16
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGq:I
+
+    return v0
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/ui/base/MMRadioGroupView;Lcom/tencent/mm/ui/base/MMRadioImageButton;)V
+    .locals 0
+
+    .prologue
+    .line 16
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->setCheckedButton(Lcom/tencent/mm/ui/base/MMRadioImageButton;)V
+
+    return-void
+.end method
+
+.method static synthetic b(Lcom/tencent/mm/ui/base/MMRadioGroupView;)Lcom/tencent/mm/ui/base/MMRadioImageButton$a;
+    .locals 1
+
+    .prologue
+    .line 16
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGs:Lcom/tencent/mm/ui/base/MMRadioImageButton$a;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/tencent/mm/ui/base/MMRadioGroupView;I)V
+    .locals 1
+
+    .prologue
+    .line 16
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, p1, v0}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->O(IZ)V
+
+    return-void
+.end method
+
+.method static synthetic d(Lcom/tencent/mm/ui/base/MMRadioGroupView;I)V
+    .locals 0
+
+    .prologue
+    .line 16
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->setCheckedId(I)V
+
+    return-void
+.end method
+
+.method static synthetic e(Lcom/tencent/mm/ui/base/MMRadioGroupView;I)V
+    .locals 0
+
+    .prologue
+    .line 16
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->setClickedId(I)V
+
+    return-void
+.end method
+
+.method private setCheckedButton(Lcom/tencent/mm/ui/base/MMRadioImageButton;)V
+    .locals 0
+
+    .prologue
+    .line 86
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGv:Lcom/tencent/mm/ui/base/MMRadioImageButton;
+
+    .line 87
+    return-void
+.end method
+
+.method private setClickedId(I)V
+    .locals 2
+
+    .prologue
+    .line 79
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGr:I
+
+    .line 80
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGt:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
+
+    if-eqz v0, :cond_0
+
+    .line 81
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGt:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGr:I
+
+    invoke-interface {v0, p0, v1}, Lcom/tencent/mm/ui/base/MMRadioGroupView$b;->b(Lcom/tencent/mm/ui/base/MMRadioGroupView;I)V
+
+    .line 83
+    :cond_0
+    return-void
+.end method
+
+
+# virtual methods
+.method public final O(IZ)V
     .locals 2
 
     .prologue
@@ -95,129 +194,6 @@
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/base/MMRadioGroupView;)I
-    .locals 1
-
-    .prologue
-    .line 16
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHd:I
-
-    return v0
-.end method
-
-.method static synthetic a(Lcom/tencent/mm/ui/base/MMRadioGroupView;Lcom/tencent/mm/ui/base/MMRadioImageButton;)V
-    .locals 0
-
-    .prologue
-    .line 16
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->setCheckedButton(Lcom/tencent/mm/ui/base/MMRadioImageButton;)V
-
-    return-void
-.end method
-
-.method static synthetic b(Lcom/tencent/mm/ui/base/MMRadioGroupView;)Lcom/tencent/mm/ui/base/MMRadioImageButton$a;
-    .locals 1
-
-    .prologue
-    .line 16
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHf:Lcom/tencent/mm/ui/base/MMRadioImageButton$a;
-
-    return-object v0
-.end method
-
-.method static synthetic c(Lcom/tencent/mm/ui/base/MMRadioGroupView;I)V
-    .locals 1
-
-    .prologue
-    .line 16
-    const/4 v0, 0x0
-
-    invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->C(IZ)V
-
-    return-void
-.end method
-
-.method static synthetic d(Lcom/tencent/mm/ui/base/MMRadioGroupView;I)V
-    .locals 0
-
-    .prologue
-    .line 16
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->setCheckedId(I)V
-
-    return-void
-.end method
-
-.method static synthetic e(Lcom/tencent/mm/ui/base/MMRadioGroupView;I)V
-    .locals 0
-
-    .prologue
-    .line 16
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->setClickedId(I)V
-
-    return-void
-.end method
-
-.method private setCheckedButton(Lcom/tencent/mm/ui/base/MMRadioImageButton;)V
-    .locals 0
-
-    .prologue
-    .line 86
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHi:Lcom/tencent/mm/ui/base/MMRadioImageButton;
-
-    .line 87
-    return-void
-.end method
-
-.method private setCheckedId(I)V
-    .locals 2
-
-    .prologue
-    .line 72
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHd:I
-
-    .line 73
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHg:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
-
-    if-eqz v0, :cond_0
-
-    .line 74
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHg:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHd:I
-
-    invoke-interface {v0, p0, v1}, Lcom/tencent/mm/ui/base/MMRadioGroupView$b;->a(Lcom/tencent/mm/ui/base/MMRadioGroupView;I)V
-
-    .line 76
-    :cond_0
-    return-void
-.end method
-
-.method private setClickedId(I)V
-    .locals 2
-
-    .prologue
-    .line 79
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHe:I
-
-    .line 80
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHg:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
-
-    if-eqz v0, :cond_0
-
-    .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHg:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHe:I
-
-    invoke-interface {v0, p0, v1}, Lcom/tencent/mm/ui/base/MMRadioGroupView$b;->b(Lcom/tencent/mm/ui/base/MMRadioGroupView;I)V
-
-    .line 83
-    :cond_0
-    return-void
-.end method
-
-
-# virtual methods
 .method public addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
     .locals 3
 
@@ -240,18 +216,18 @@
     if-eqz v1, :cond_1
 
     .line 54
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHd:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGq:I
 
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_0
 
     .line 55
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHd:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGq:I
 
     const/4 v2, 0x0
 
-    invoke-direct {p0, v1, v2}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->C(IZ)V
+    invoke-virtual {p0, v1, v2}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->O(IZ)V
 
     .line 57
     :cond_0
@@ -259,7 +235,7 @@
 
     move-result v1
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->setCheckedId(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->setCheckedId(I)V
 
     .line 58
     invoke-direct {p0, v0}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->setCheckedButton(Lcom/tencent/mm/ui/base/MMRadioImageButton;)V
@@ -277,7 +253,7 @@
 
     .prologue
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHi:Lcom/tencent/mm/ui/base/MMRadioImageButton;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGv:Lcom/tencent/mm/ui/base/MMRadioImageButton;
 
     return-object v0
 .end method
@@ -287,7 +263,7 @@
 
     .prologue
     .line 94
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHd:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGq:I
 
     return v0
 .end method
@@ -297,7 +273,7 @@
 
     .prologue
     .line 98
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHe:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGr:I
 
     return v0
 .end method
@@ -310,23 +286,23 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 43
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHd:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGq:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
     .line 44
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHd:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGq:I
 
     const/4 v1, 0x1
 
-    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->C(IZ)V
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->O(IZ)V
 
     .line 45
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHd:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGq:I
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->setCheckedId(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->setCheckedId(I)V
 
     .line 47
     :cond_0
@@ -346,17 +322,41 @@
     if-lez p2, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHj:Lcom/tencent/mm/ui/base/MMRadioGroupView$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGw:Lcom/tencent/mm/ui/base/MMRadioGroupView$d;
 
     if-eqz v0, :cond_1
 
     .line 208
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHj:Lcom/tencent/mm/ui/base/MMRadioGroupView$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGw:Lcom/tencent/mm/ui/base/MMRadioGroupView$d;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/base/MMRadioGroupView$d;->lP(I)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/base/MMRadioGroupView$d;->gl(I)V
 
     .line 210
     :cond_1
+    return-void
+.end method
+
+.method public setCheckedId(I)V
+    .locals 2
+
+    .prologue
+    .line 72
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGq:I
+
+    .line 73
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGt:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
+
+    if-eqz v0, :cond_0
+
+    .line 74
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGt:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGq:I
+
+    invoke-interface {v0, p0, v1}, Lcom/tencent/mm/ui/base/MMRadioGroupView$b;->a(Lcom/tencent/mm/ui/base/MMRadioGroupView;I)V
+
+    .line 76
+    :cond_0
     return-void
 .end method
 
@@ -365,7 +365,7 @@
 
     .prologue
     .line 90
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHg:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGt:Lcom/tencent/mm/ui/base/MMRadioGroupView$b;
 
     .line 91
     return-void
@@ -376,7 +376,7 @@
 
     .prologue
     .line 189
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->iHj:Lcom/tencent/mm/ui/base/MMRadioGroupView$d;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView;->kGw:Lcom/tencent/mm/ui/base/MMRadioGroupView$d;
 
     .line 190
     return-void

@@ -1,4 +1,4 @@
-.class final Lcom/tencent/mm/ui/base/HeaderGridView$c;
+.class public final Lcom/tencent/mm/ui/base/HeaderGridView$c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -19,17 +19,17 @@
 
 
 # instance fields
-.field cOq:I
+.field dgj:I
 
-.field iCW:Ljava/util/ArrayList;
+.field kBZ:Ljava/util/ArrayList;
 
-.field final iCZ:Landroid/database/DataSetObservable;
+.field public final kCc:Landroid/database/DataSetObservable;
 
-.field iDa:Z
+.field kCd:Z
 
-.field private final iDb:Z
+.field private final kCe:Z
 
-.field private final qI:Landroid/widget/ListAdapter;
+.field private final pL:Landroid/widget/ListAdapter;
 
 
 # direct methods
@@ -45,20 +45,20 @@
 
     invoke-direct {v0}, Landroid/database/DataSetObservable;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCZ:Landroid/database/DataSetObservable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kCc:Landroid/database/DataSetObservable;
 
     .line 211
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     .line 217
-    iput-object p2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iput-object p2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     .line 218
     instance-of v0, p2, Landroid/widget/Filterable;
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iDb:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kCe:Z
 
     .line 219
     if-nez p1, :cond_0
@@ -74,22 +74,22 @@
 
     .line 222
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
     .line 223
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/HeaderGridView$c;->L(Ljava/util/ArrayList;)Z
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/HeaderGridView$c;->O(Ljava/util/ArrayList;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iDa:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kCd:Z
 
     .line 224
     return-void
 .end method
 
-.method private static L(Ljava/util/ArrayList;)Z
+.method private static O(Ljava/util/ArrayList;)Z
     .locals 2
 
     .prologue
@@ -141,16 +141,16 @@
     const/4 v0, 0x1
 
     .line 274
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v1, :cond_0
 
     .line 275
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iDa:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kCd:Z
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v1}, Landroid/widget/ListAdapter;->areAllItemsEnabled()Z
 
@@ -175,22 +175,22 @@
 
     .prologue
     .line 266
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
 
     .line 267
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     mul-int/2addr v0, v1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v1}, Landroid/widget/ListAdapter;->getCount()I
 
@@ -203,13 +203,13 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     mul-int/2addr v0, v1
 
@@ -221,12 +221,12 @@
 
     .prologue
     .line 420
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iDb:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kCe:Z
 
     if-eqz v0, :cond_0
 
     .line 421
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     check-cast v0, Landroid/widget/Filterable;
 
@@ -251,13 +251,13 @@
     const/4 v0, 0x0
 
     .line 303
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     mul-int/2addr v1, v2
 
@@ -265,16 +265,16 @@
     if-ge p1, v1, :cond_1
 
     .line 305
-    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     rem-int v1, p1, v1
 
     if-nez v1, :cond_0
 
     .line 306
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     div-int v1, p1, v1
 
@@ -296,12 +296,12 @@
     sub-int v1, p1, v1
 
     .line 312
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v2, :cond_0
 
     .line 314
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v2}, Landroid/widget/ListAdapter;->getCount()I
 
@@ -311,7 +311,7 @@
     if-ge v1, v2, :cond_0
 
     .line 316
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v0, v1}, Landroid/widget/ListAdapter;->getItem(I)Ljava/lang/Object;
 
@@ -325,18 +325,18 @@
 
     .prologue
     .line 324
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     mul-int/2addr v0, v1
 
     .line 325
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v1, :cond_0
 
@@ -346,7 +346,7 @@
     sub-int v0, p1, v0
 
     .line 327
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v1}, Landroid/widget/ListAdapter;->getCount()I
 
@@ -356,7 +356,7 @@
     if-ge v0, v1, :cond_0
 
     .line 329
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v1, v0}, Landroid/widget/ListAdapter;->getItemId(I)J
 
@@ -377,31 +377,31 @@
 
     .prologue
     .line 383
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     mul-int/2addr v0, v1
 
     .line 384
     if-ge p1, v0, :cond_1
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     rem-int v1, p1, v1
 
     if-eqz v1, :cond_1
 
     .line 386
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v0}, Landroid/widget/ListAdapter;->getViewTypeCount()I
 
@@ -419,7 +419,7 @@
 
     .line 388
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v1, :cond_2
 
@@ -429,7 +429,7 @@
     sub-int v0, p1, v0
 
     .line 390
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v1}, Landroid/widget/ListAdapter;->getCount()I
 
@@ -439,7 +439,7 @@
     if-ge v0, v1, :cond_2
 
     .line 392
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v1, v0}, Landroid/widget/ListAdapter;->getItemViewType(I)I
 
@@ -461,13 +461,13 @@
     const/4 v2, 0x4
 
     .line 344
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     mul-int/2addr v0, v1
 
@@ -475,9 +475,9 @@
     if-ge p1, v0, :cond_2
 
     .line 346
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     div-int v1, p1, v1
 
@@ -487,10 +487,10 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/HeaderGridView$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/HeaderGridView$a;->iCX:Landroid/view/ViewGroup;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/HeaderGridView$a;->kCa:Landroid/view/ViewGroup;
 
     .line 348
-    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     rem-int v1, p1, v1
 
@@ -533,12 +533,12 @@
     sub-int v0, p1, v0
 
     .line 363
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v1, :cond_3
 
     .line 365
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v1}, Landroid/widget/ListAdapter;->getCount()I
 
@@ -548,7 +548,7 @@
     if-ge v0, v1, :cond_3
 
     .line 367
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v1, v0, p2, p3}, Landroid/widget/ListAdapter;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
@@ -581,12 +581,12 @@
 
     .prologue
     .line 399
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
 
     .line 400
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v0}, Landroid/widget/ListAdapter;->getViewTypeCount()I
 
@@ -609,7 +609,7 @@
 
     .prologue
     .line 427
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     return-object v0
 .end method
@@ -619,12 +619,12 @@
 
     .prologue
     .line 336
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
 
     .line 337
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v0}, Landroid/widget/ListAdapter;->hasStableIds()Z
 
@@ -645,11 +645,11 @@
 
     .prologue
     .line 230
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v0}, Landroid/widget/ListAdapter;->isEmpty()Z
 
@@ -658,7 +658,7 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -684,13 +684,13 @@
     const/4 v1, 0x0
 
     .line 283
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     mul-int/2addr v0, v2
 
@@ -698,15 +698,15 @@
     if-ge p1, v0, :cond_1
 
     .line 285
-    iget v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     rem-int v0, p1, v0
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCW:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kBZ:Ljava/util/ArrayList;
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->cOq:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->dgj:I
 
     div-int v2, p1, v2
 
@@ -737,12 +737,12 @@
     sub-int v0, p1, v0
 
     .line 290
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v2, :cond_2
 
     .line 292
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v2}, Landroid/widget/ListAdapter;->getCount()I
 
@@ -752,7 +752,7 @@
     if-ge v0, v2, :cond_2
 
     .line 294
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v1, v0}, Landroid/widget/ListAdapter;->isEnabled(I)Z
 
@@ -772,17 +772,17 @@
 
     .prologue
     .line 406
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCZ:Landroid/database/DataSetObservable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kCc:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->registerObserver(Ljava/lang/Object;)V
 
     .line 407
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
 
     .line 408
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
@@ -796,17 +796,17 @@
 
     .prologue
     .line 413
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->iCZ:Landroid/database/DataSetObservable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->kCc:Landroid/database/DataSetObservable;
 
     invoke-virtual {v0, p1}, Landroid/database/DataSetObservable;->unregisterObserver(Ljava/lang/Object;)V
 
     .line 414
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     if-eqz v0, :cond_0
 
     .line 415
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->qI:Landroid/widget/ListAdapter;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$c;->pL:Landroid/widget/ListAdapter;
 
     invoke-interface {v0, p1}, Landroid/widget/ListAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 

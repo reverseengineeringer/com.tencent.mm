@@ -1,25 +1,25 @@
 package com.tencent.mm.compatible.g;
 
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class a
 {
-  public String bjs = null;
-  public long bjt = -1L;
-  public int bju = -1;
-  public int bjv = -1;
+  public String btV = null;
+  public long btW = -1L;
+  public int btX = -1;
+  public int btY = -1;
   
-  public final String pb()
+  public final String oT()
   {
     StringBuffer localStringBuffer = new StringBuffer();
-    localStringBuffer.append(bjs);
+    localStringBuffer.append(btV);
     localStringBuffer.append(",");
-    localStringBuffer.append(bjt);
+    localStringBuffer.append(btW);
     localStringBuffer.append(",");
-    localStringBuffer.append(bju);
+    localStringBuffer.append(btX);
     localStringBuffer.append(",");
-    localStringBuffer.append(bjv);
-    t.d("!44@/B4Tb64lLpJiDhxS2T+FNRuIiIcxQpzWPZs/WhJTVOg=", " getStatInfo " + localStringBuffer.toString());
+    localStringBuffer.append(btY);
+    u.d("!44@/B4Tb64lLpJiDhxS2T+FNRuIiIcxQpzWPZs/WhJTVOg=", " getStatInfo " + localStringBuffer.toString());
     return localStringBuffer.toString();
   }
 }

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract qJ()Ljava/lang/String;
+.method public abstract qF()Ljava/lang/String;
 .end method

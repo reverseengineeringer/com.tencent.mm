@@ -9,37 +9,37 @@ import com.tencent.mm.ui.base.MMTagPanelScrollView;
 public class LabelContainerView
   extends MMTagPanelScrollView
 {
-  float jgA;
-  float jgB;
-  private a jgC;
-  boolean jgp = true;
-  boolean jgq = false;
-  float jgr;
-  float jgs;
-  float jgt;
-  float jgu;
-  private int jgv;
-  boolean jgw = true;
-  boolean jgx = false;
-  float jgy;
-  float jgz;
+  boolean lkE = true;
+  boolean lkF = false;
+  float lkG;
+  float lkH;
+  float lkI;
+  float lkJ;
+  private int lkK;
+  boolean lkL = true;
+  boolean lkM = false;
+  float lkN;
+  float lkO;
+  float lkP;
+  float lkQ;
+  private a lkR;
   
   public LabelContainerView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    aQr();
+    bho();
   }
   
   public LabelContainerView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    aQr();
+    bho();
   }
   
-  private void aQr()
+  private void bho()
   {
     int i = ViewConfiguration.get(getContext()).getScaledTouchSlop();
-    jgv = (i * i);
+    lkK = (i * i);
   }
   
   public boolean dispatchTouchEvent(MotionEvent paramMotionEvent)
@@ -96,21 +96,21 @@ public class LabelContainerView
       return super.onInterceptTouchEvent(paramMotionEvent);
       i = m;
       break;
-      jgw = true;
-      jgz = f2;
-      jgy = f2;
-      jgB = f1;
-      jgA = f1;
-      jgx = true;
+      lkL = true;
+      lkO = f2;
+      lkN = f2;
+      lkQ = f1;
+      lkP = f1;
+      lkM = true;
       continue;
-      i = (int)(f2 - jgy);
-      j = (int)(f1 - jgA);
-      if (j * j + i * i > jgv)
+      i = (int)(f2 - lkN);
+      j = (int)(f1 - lkP);
+      if (j * j + i * i > lkK)
       {
-        jgw = false;
+        lkL = false;
         return true;
-        jgw = true;
-        jgx = false;
+        lkL = true;
+        lkM = false;
       }
     }
   }
@@ -164,50 +164,50 @@ public class LabelContainerView
       return super.onTouchEvent(paramMotionEvent);
       i = m;
       break;
-      jgp = true;
-      jgs = f2;
-      jgr = f2;
-      jgu = f1;
-      jgt = f1;
-      jgq = true;
+      lkE = true;
+      lkH = f2;
+      lkG = f2;
+      lkJ = f1;
+      lkI = f1;
+      lkF = true;
       continue;
-      if (!jgq)
+      if (!lkF)
       {
-        jgp = true;
-        jgs = f2;
-        jgr = f2;
-        jgu = f1;
-        jgt = f1;
-        jgq = true;
+        lkE = true;
+        lkH = f2;
+        lkG = f2;
+        lkJ = f1;
+        lkI = f1;
+        lkF = true;
       }
-      if (jgC != null) {
-        jgC.aQs();
+      if (lkR != null) {
+        lkR.SR();
       }
-      i = (int)(f2 - jgr);
-      j = (int)(f1 - jgt);
-      if (j * j + i * i > jgv)
+      i = (int)(f2 - lkG);
+      j = (int)(f1 - lkI);
+      if (j * j + i * i > lkK)
       {
-        jgp = false;
+        lkE = false;
         continue;
-        if (((jgp) || (!jgq)) && (jgC != null)) {
-          jgC.aQt();
+        if (((lkE) || (!lkF)) && (lkR != null)) {
+          lkR.SQ();
         }
-        jgp = true;
-        jgq = false;
+        lkE = true;
+        lkF = false;
       }
     }
   }
   
   public void setOnLabelContainerListener(a parama)
   {
-    jgC = parama;
+    lkR = parama;
   }
   
   public static abstract interface a
   {
-    public abstract void aQs();
+    public abstract void SQ();
     
-    public abstract void aQt();
+    public abstract void SR();
   }
 }
 

@@ -1,176 +1,137 @@
 package com.tencent.mm.pluginsdk.ui.d;
 
 import android.content.Context;
-import android.text.SpannableString;
-import android.widget.TextView;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.res.Resources;
+import android.text.TextPaint;
+import android.text.style.ClickableSpan;
+import android.view.View;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.c;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import java.lang.ref.WeakReference;
 import java.util.LinkedList;
 
-public final class i
+public class i
+  extends ClickableSpan
 {
-  static LinkedList hbl = new LinkedList();
+  private int frQ;
+  boolean fxe = true;
+  String gZd;
+  public boolean iQe = false;
+  private int iQf;
+  c iQg = null;
+  private g iQh = null;
+  private WeakReference iQi = null;
   
-  public static SpannableString a(Context paramContext, CharSequence paramCharSequence)
-  {
-    return b(paramContext, paramCharSequence, 0);
-  }
+  public i() {}
   
-  public static SpannableString a(Context paramContext, CharSequence paramCharSequence, float paramFloat)
+  public i(int paramInt, g paramg)
   {
-    return b(paramContext, paramCharSequence, (int)paramFloat);
-  }
-  
-  public static SpannableString a(Context paramContext, CharSequence paramCharSequence, int paramInt)
-  {
-    return b(paramContext, paramCharSequence, paramInt);
-  }
-  
-  public static SpannableString a(TextView paramTextView, int paramInt)
-  {
-    if (paramTextView == null)
+    int j;
+    if (paramg != null)
     {
-      t.e("!32@/B4Tb64lLpI8edxndlo/LZHlIfZcNjMb", "spanForTextView, textView cannot be null!");
-      return new SpannableString("");
-    }
-    Object localObject = paramTextView.getContext();
-    int i = (int)paramTextView.getTextSize();
-    localObject = new ac((Context)localObject);
-    hct = true;
-    hcs = true;
-    hcB = paramInt;
-    hcu = true;
-    hcw = false;
-    hcD = true;
-    localObject = ((ac)localObject).c(paramTextView);
-    if (paramInt == 1)
-    {
-      hcv = true;
-      hcx = true;
+      j = linkColor;
+      i = backgroundColor;
     }
     for (;;)
     {
-      return ((ac)localObject).a(paramTextView.getText(), i, true);
-      if (paramInt == 2)
-      {
-        hcv = false;
-        hcx = false;
+      if ((j == 0) && (i == 0)) {
+        oK(paramInt);
       }
+      for (;;)
+      {
+        iQg = new c();
+        iQh = paramg;
+        return;
+        bE(j, i);
+      }
+      j = 0;
     }
   }
   
-  public static void a(f paramf)
+  private void bE(int paramInt1, int paramInt2)
   {
-    hbl.add(paramf);
+    iQf = paramInt1;
+    frQ = paramInt2;
   }
   
-  public static void aCF()
+  public final void aOI()
   {
-    com.tencent.mm.aq.b.a.icM = new z();
-    b.init();
-    w.init();
+    iQg.mContext = null;
   }
   
-  public static void aCG() {}
-  
-  public static void aCH() {}
-  
-  private static SpannableString b(Context paramContext, CharSequence paramCharSequence, int paramInt)
+  protected final void oK(int paramInt)
   {
-    paramContext = new ac(paramContext);
-    hcu = false;
-    hcv = false;
-    hcs = false;
-    hcw = false;
-    hct = false;
-    hcD = false;
-    paramContext = paramContext.a(paramCharSequence, paramInt, true);
-    z.a(paramContext);
-    return paramContext;
-  }
-  
-  public static SpannableString b(TextView paramTextView)
-  {
-    if (paramTextView == null)
+    Context localContext = y.getContext();
+    switch (paramInt)
     {
-      t.e("!32@/B4Tb64lLpI8edxndlo/LZHlIfZcNjMb", "spanForTextView, textView cannot be null!");
-      return new SpannableString("");
+    default: 
+      return;
+    case 1: 
+      bE(localContext.getResources().getColor(2131231129), -5908174);
+      return;
+    case 2: 
+      bE(localContext.getResources().getColor(2131231118), localContext.getResources().getColor(2131230724));
+      return;
     }
-    Object localObject = paramTextView.getContext();
-    int i = (int)paramTextView.getTextSize();
-    localObject = new ac((Context)localObject);
-    hct = true;
-    hcs = true;
-    hcy = true;
-    hcA = true;
-    hcB = 1;
-    hcu = true;
-    hcw = false;
-    hcD = true;
-    localObject = ((ac)localObject).c(paramTextView);
-    hcv = true;
-    hcx = true;
-    return ((ac)localObject).a(paramTextView.getText(), i, true);
+    bE(localContext.getResources().getColor(2131231240), localContext.getResources().getColor(2131230724));
   }
   
-  public static void b(f paramf)
+  public void onClick(View paramView)
   {
-    hbl.remove(paramf);
-  }
-  
-  public static String bk(String paramString1, String paramString2)
-  {
-    return d.bj(w.bj(paramString1, paramString2), paramString2);
-  }
-  
-  public static SpannableString c(Context paramContext, CharSequence paramCharSequence, int paramInt)
-  {
-    paramContext = new ac(paramContext);
-    hct = false;
-    hcs = true;
-    hcy = true;
-    hcz = true;
-    hcA = true;
-    hcB = 1;
-    hcu = false;
-    hcw = false;
-    hcv = false;
-    hcx = false;
-    hcD = false;
-    return paramContext.a(paramCharSequence, paramInt, true);
-  }
-  
-  public static void clearCache()
-  {
-    t.i("!32@/B4Tb64lLpI8edxndlo/LZHlIfZcNjMb", "clear MMSpanManager cache");
-    ac.clearCache();
-    z.clearCache();
-  }
-  
-  public static String vl(String paramString)
-  {
-    return d.aA(aa.getContext(), paramString);
-  }
-  
-  public static String vm(String paramString)
-  {
-    if (bn.iW(paramString)) {
-      return paramString;
+    c localc;
+    g localg;
+    if ((iQg != null) && (iQh != null) && (fxe))
+    {
+      iQg.mContext = paramView.getContext();
+      localc = iQg;
+      localg = iQh;
+      if (localg != null) {
+        break label69;
+      }
+      u.e("!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w=", "onClick error, hrefInfo is null!");
     }
-    ac localac = new ac(aa.getContext());
-    hct = false;
-    hcs = true;
-    hcy = true;
-    hcz = true;
-    hcA = true;
-    hcB = 1;
-    hcu = false;
-    hcw = false;
-    hcv = false;
-    hcx = false;
-    hcD = false;
-    return localac.a(paramString, 0, false).toString();
+    for (;;)
+    {
+      iQg.mContext = null;
+      fxe = false;
+      return;
+      label69:
+      u.d("!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w=", "MMSpanClickListener.onClick, hrefInfo type = %d", new Object[] { Integer.valueOf(type) });
+      if (mContext != null) {
+        break;
+      }
+      u.e("!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w=", "onClick error, context is null!");
+    }
+    if ((e.iPI != null) && (e.iPI.size() > 0))
+    {
+      int i = e.iPI.size();
+      paramView = (b)e.iPI.getLast();
+      u.d("!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w=", "spanCallbackList.size:%d, get the last callback", new Object[] { Integer.valueOf(i) });
+    }
+    for (;;)
+    {
+      gZd = gZd;
+      i.a.iyS.a(mContext, localg, paramView);
+      gZd = null;
+      break;
+      paramView = null;
+    }
+  }
+  
+  public void updateDrawState(TextPaint paramTextPaint)
+  {
+    super.updateDrawState(paramTextPaint);
+    paramTextPaint.setColor(iQf);
+    paramTextPaint.setUnderlineText(false);
+    if (iQe)
+    {
+      bgColor = frQ;
+      return;
+    }
+    bgColor = 0;
   }
 }
 

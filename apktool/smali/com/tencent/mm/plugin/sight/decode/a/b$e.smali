@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract iN(I)V
+.method public abstract a(Lcom/tencent/mm/plugin/sight/decode/a/b;I)V
 .end method

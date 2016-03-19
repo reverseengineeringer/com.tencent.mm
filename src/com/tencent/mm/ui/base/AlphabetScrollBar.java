@@ -2,7 +2,6 @@ package com.tencent.mm.ui.base;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import com.tencent.mm.a.k;
 
 public class AlphabetScrollBar
   extends VerticalScrollBar
@@ -12,16 +11,16 @@ public class AlphabetScrollBar
     super(paramContext, paramAttributeSet);
   }
   
-  public void IQ()
+  public void Ld()
   {
-    iLk = new String[] { "↑", "☆", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#" };
-    iLi = 1.3F;
-    iLj = 79;
+    eEz = new String[] { "↑", "☆", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#" };
+    eEx = 1.3F;
+    eEy = 79;
   }
   
   protected int getToastLayoutId()
   {
-    return a.k.show_head_toast;
+    return 2131363184;
   }
 }
 

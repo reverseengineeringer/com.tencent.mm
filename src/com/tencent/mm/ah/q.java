@@ -1,45 +1,33 @@
 package com.tencent.mm.ah;
 
-import com.tencent.mm.compatible.util.i.a;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.Map;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.h;
 
-final class q
-  implements Runnable
+public final class q
+  extends com.tencent.mm.sdk.c.c
 {
-  q(p paramp, long paramLong) {}
+  private static long bnd = 86400000L;
   
-  public final void run()
+  public q()
   {
-    long l2 = 0L;
-    p.BV();
-    p.c(bOR);
-    p.a(bOR, "");
-    long l1 = l2;
-    if (bOQ > 0L)
-    {
-      l1 = l2;
-      if (p.d(bOR).get(Long.valueOf(bOQ)) != null) {
-        l1 = ((i.a)p.d(bOR).get(Long.valueOf(bOQ))).pi();
-      }
-    }
-    t.d("!44@/B4Tb64lLpKIJLpjkjSKvZ2rzKwYNDBZvPT4PZJQ7Z0=", "onJobEnd ok massSendId:" + bOQ + " time:" + l1 + " inCnt:" + p.nA() + " stop:" + p.e(bOR) + " running:" + p.f(bOR) + " sending:" + p.g(bOR));
-    if (p.e(bOR) > 0) {
-      p.h(bOR);
-    }
-    for (;;)
-    {
-      p.BW();
-      return;
-      if (!p.g(bOR)) {
-        p.i(bOR);
-      }
-    }
+    super(0);
   }
   
-  public final String toString()
+  private static boolean nb()
   {
-    return super.toString() + "|onSceneEnd";
+    return ay.am(Long.valueOf(ay.c((Long)ah.tD().rn().get(81938, null))).longValue()) * 1000L > bnd;
+  }
+  
+  public final boolean a(b paramb)
+  {
+    u.d("!64@/B4Tb64lLpIuznxMDiXSbBa88WdSZ7LyzgWb9yHmxfTVKu9hM7P5arz68R/5voSX", "callback expired : " + nb());
+    if (nb()) {
+      c.Bt().update();
+    }
+    return false;
   }
 }
 

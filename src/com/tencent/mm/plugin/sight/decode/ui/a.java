@@ -1,46 +1,22 @@
 package com.tencent.mm.plugin.sight.decode.ui;
 
-import android.graphics.SurfaceTexture;
-import android.view.Surface;
-import android.view.TextureView.SurfaceTextureListener;
-import com.tencent.mm.ah.v;
-import com.tencent.mm.plugin.sight.decode.a.b;
-import com.tencent.mm.sdk.platformtools.t;
+import android.view.View.OnClickListener;
 
-final class a
-  implements TextureView.SurfaceTextureListener
+public abstract interface a
 {
-  a(SightPlayTextureView paramSightPlayTextureView) {}
+  public abstract void avT();
   
-  public final void onSurfaceTextureAvailable(SurfaceTexture paramSurfaceTexture, int paramInt1, int paramInt2)
-  {
-    t.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "on surface texture available, width %d height %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    SightPlayTextureView.a locala = new SightPlayTextureView.a((byte)0);
-    fhW = SightPlayTextureView.d(fhU);
-    v.a(locala, 0L);
-    SightPlayTextureView.a(fhU, new Surface(paramSurfaceTexture));
-    SightPlayTextureView.c(fhU).a(SightPlayTextureView.d(fhU));
-    fhU.aNi();
-  }
+  public abstract int getVideoTotalTime();
   
-  public final boolean onSurfaceTextureDestroyed(SurfaceTexture paramSurfaceTexture)
-  {
-    t.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "on surface texture destroyed");
-    SightPlayTextureView.c(fhU).a(null);
-    SightPlayTextureView.c(fhU).clear();
-    paramSurfaceTexture = new SightPlayTextureView.a((byte)0);
-    fhW = SightPlayTextureView.d(fhU);
-    v.a(paramSurfaceTexture, 0L);
-    SightPlayTextureView.a(fhU, null);
-    return false;
-  }
+  public abstract void kU(int paramInt);
   
-  public final void onSurfaceTextureSizeChanged(SurfaceTexture paramSurfaceTexture, int paramInt1, int paramInt2)
-  {
-    t.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "on surface texture size changed, width " + paramInt1 + " height " + paramInt2);
-  }
+  public abstract void setIplaySeekCallback(b paramb);
   
-  public final void onSurfaceTextureUpdated(SurfaceTexture paramSurfaceTexture) {}
+  public abstract void setIsPlay(boolean paramBoolean);
+  
+  public abstract void setOnPlayButtonClickListener(View.OnClickListener paramOnClickListener);
+  
+  public abstract void setVideoTotalTime(int paramInt);
 }
 
 /* Location:

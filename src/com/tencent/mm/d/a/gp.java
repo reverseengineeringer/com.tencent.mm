@@ -1,24 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class gp
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDQ = new a();
-  public b aDR = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBG = new a();
   
   public gp()
   {
-    id = "ResetCardRetryCounter";
-    hXT = atO;
+    id = "ModNewContact";
+    jUI = arR;
   }
   
-  public static final class a {}
-  
-  public static final class b {}
+  public static final class a
+  {
+    public String aBH;
+    public String username;
+  }
 }
 
 /* Location:

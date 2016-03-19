@@ -1,62 +1,60 @@
 package com.tencent.mm.plugin.safedevice.a;
 
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.ala;
-import com.tencent.mm.protocal.b.alb;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.ava;
+import com.tencent.mm.protocal.b.avb;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class b
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  public String aHl;
-  public String anZ;
-  private d apI;
-  private a apJ;
+  public String alN;
+  private d anM;
+  private a anN;
+  public String auJ;
   public String deviceName;
   
   public b(String paramString1, String paramString2, String paramString3)
   {
     Object localObject = new a.a();
-    bsW = new ala();
-    bsX = new alb();
+    bFa = new ava();
+    bFb = new avb();
     uri = "/cgi-bin/micromsg-bin/updatesafedevice";
-    bsV = 361;
-    bsY = 0;
-    bsZ = 0;
-    apJ = ((a.a)localObject).vh();
-    anZ = paramString1;
+    bEY = 361;
+    bFc = 0;
+    bFd = 0;
+    anN = ((a.a)localObject).vy();
+    alN = paramString1;
     deviceName = paramString2;
-    aHl = paramString3;
-    localObject = (ala)apJ.bsT.btb;
-    hrS = paramString1;
-    akv = paramString2;
-    hkG = paramString3;
+    auJ = paramString3;
+    localObject = (ava)anN.bEW.bFf;
+    jhZ = paramString1;
+    ehZ = paramString2;
+    iZt = paramString3;
   }
   
-  public final int a(m paramm, d paramd)
+  public final int a(e parame, d paramd)
   {
-    if ((bn.iW(anZ)) || (bn.iW(deviceName)) || (bn.iW(aHl)))
+    if ((ay.kz(alN)) || (ay.kz(deviceName)) || (ay.kz(auJ)))
     {
-      t.e("!56@/B4Tb64lLpIBiqvmtdi3uYj9JP/EPRUUMEFhQtqL6vQVsUYiCWsNGA==", "null device is or device name or device type");
+      u.e("!56@/B4Tb64lLpIBiqvmtdi3uYj9JP/EPRUUMEFhQtqL6vQVsUYiCWsNGA==", "null device is or device name or device type");
       return -1;
     }
-    apI = paramd;
-    return a(paramm, apJ, this);
+    anM = paramd;
+    return a(parame, anN, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    t.i("!56@/B4Tb64lLpIBiqvmtdi3uYj9JP/EPRUUMEFhQtqL6vQVsUYiCWsNGA==", "errType = " + paramInt2 + ", errCode = " + paramInt3);
-    apI.a(paramInt2, paramInt3, paramString, this);
+    u.i("!56@/B4Tb64lLpIBiqvmtdi3uYj9JP/EPRUUMEFhQtqL6vQVsUYiCWsNGA==", "errType = " + paramInt2 + ", errCode = " + paramInt3);
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()

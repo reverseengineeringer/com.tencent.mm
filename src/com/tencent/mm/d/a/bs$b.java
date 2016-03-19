@@ -1,10 +1,11 @@
 package com.tencent.mm.d.a;
 
-import android.database.Cursor;
+import org.json.JSONArray;
 
 public final class bs$b
 {
-  public Cursor cursor;
+  public boolean auR;
+  public JSONArray avb;
 }
 
 /* Location:

@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private ixr:Lcom/tencent/mm/ui/account/ResizeLayout$a;
+.field private kwv:Lcom/tencent/mm/ui/account/ResizeLayout$a;
 
 
 # direct methods
@@ -26,7 +26,7 @@
     .line 9
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/ResizeLayout;->ixr:Lcom/tencent/mm/ui/account/ResizeLayout$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/ResizeLayout;->kwv:Lcom/tencent/mm/ui/account/ResizeLayout$a;
 
     .line 16
     return-void
@@ -39,14 +39,14 @@
 
     .prologue
     .line 23
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/ResizeLayout;->ixr:Lcom/tencent/mm/ui/account/ResizeLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/ResizeLayout;->kwv:Lcom/tencent/mm/ui/account/ResizeLayout$a;
 
     if-eqz v0, :cond_0
 
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/ResizeLayout;->ixr:Lcom/tencent/mm/ui/account/ResizeLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/ResizeLayout;->kwv:Lcom/tencent/mm/ui/account/ResizeLayout$a;
 
-    invoke-interface {v0, p2, p4}, Lcom/tencent/mm/ui/account/ResizeLayout$a;->bt(II)V
+    invoke-interface {v0, p2, p4}, Lcom/tencent/mm/ui/account/ResizeLayout$a;->bJ(II)V
 
     .line 26
     :cond_0
@@ -61,7 +61,7 @@
 
     .prologue
     .line 19
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/ResizeLayout;->ixr:Lcom/tencent/mm/ui/account/ResizeLayout$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/ResizeLayout;->kwv:Lcom/tencent/mm/ui/account/ResizeLayout$a;
 
     .line 20
     return-void

@@ -2,11 +2,13 @@ package com.tencent.smtt.sdk;
 
 import android.annotation.TargetApi;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Message;
 import android.view.View;
 import android.webkit.GeolocationPermissions.Callback;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient.CustomViewCallback;
+import android.webkit.WebChromeClient.FileChooserParams;
 import android.webkit.WebStorage.QuotaUpdater;
 import com.tencent.smtt.export.external.interfaces.GeolocationPermissionsCallback;
 import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient.CustomViewCallback;
@@ -14,162 +16,191 @@ import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient.CustomView
 class SystemWebChromeClient
   extends android.webkit.WebChromeClient
 {
-  private WebView iNx;
-  private WebChromeClient jJu;
+  private WebView kMK;
+  private WebChromeClient lRJ;
   
   SystemWebChromeClient(WebView paramWebView, WebChromeClient paramWebChromeClient)
   {
-    iNx = paramWebView;
-    jJu = paramWebChromeClient;
+    kMK = paramWebView;
+    lRJ = paramWebChromeClient;
   }
   
   @TargetApi(7)
   public Bitmap getDefaultVideoPoster()
   {
-    return jJu.getDefaultVideoPoster();
+    return lRJ.getDefaultVideoPoster();
   }
   
   @TargetApi(7)
   public View getVideoLoadingProgressView()
   {
-    return jJu.getVideoLoadingProgressView();
+    return lRJ.getVideoLoadingProgressView();
   }
   
-  public void getVisitedHistory(ValueCallback paramValueCallback)
+  public void getVisitedHistory(final ValueCallback paramValueCallback)
   {
-    jJu.getVisitedHistory(new SystemWebChromeClient.1(this, paramValueCallback));
+    lRJ.getVisitedHistory(new u()
+    {
+      public void onReceiveValue(String[] paramAnonymousArrayOfString)
+      {
+        paramValueCallback.onReceiveValue(paramAnonymousArrayOfString);
+      }
+    });
   }
   
   public void onCloseWindow(android.webkit.WebView paramWebView)
   {
-    iNx.setSysWebView(paramWebView);
-    jJu.onCloseWindow(iNx);
+    kMK.setSysWebView(paramWebView);
+    lRJ.onCloseWindow(kMK);
   }
   
   public void onConsoleMessage(String paramString1, int paramInt, String paramString2)
   {
-    jJu.onConsoleMessage(new ConsoleMessageImpl(paramString1, paramString2, paramInt));
+    lRJ.onConsoleMessage(new ConsoleMessageImpl(paramString1, paramString2, paramInt));
   }
   
   public boolean onConsoleMessage(android.webkit.ConsoleMessage paramConsoleMessage)
   {
-    return jJu.onConsoleMessage(new ConsoleMessageImpl(paramConsoleMessage));
+    return lRJ.onConsoleMessage(new ConsoleMessageImpl(paramConsoleMessage));
   }
   
-  public boolean onCreateWindow(android.webkit.WebView paramWebView, boolean paramBoolean1, boolean paramBoolean2, Message paramMessage)
+  public boolean onCreateWindow(final android.webkit.WebView paramWebView, boolean paramBoolean1, boolean paramBoolean2, final Message paramMessage)
   {
-    paramWebView = iNx;
+    paramWebView = kMK;
     paramWebView.getClass();
     paramWebView = new WebView.WebViewTransport(paramWebView);
-    paramMessage = Message.obtain(paramMessage.getTarget(), new SystemWebChromeClient.2(this, paramWebView, paramMessage));
+    paramMessage = Message.obtain(paramMessage.getTarget(), new Runnable()
+    {
+      public void run()
+      {
+        WebView localWebView = paramWebView.getWebView();
+        if (localWebView != null) {
+          ((android.webkit.WebView.WebViewTransport)paramMessageobj).setWebView(localWebView.getSysWebView());
+        }
+        paramMessage.sendToTarget();
+      }
+    });
     obj = paramWebView;
-    return jJu.onCreateWindow(iNx, paramBoolean1, paramBoolean2, paramMessage);
+    return lRJ.onCreateWindow(kMK, paramBoolean1, paramBoolean2, paramMessage);
   }
   
   @Deprecated
   @TargetApi(5)
   public void onExceededDatabaseQuota(String paramString1, String paramString2, long paramLong1, long paramLong2, long paramLong3, WebStorage.QuotaUpdater paramQuotaUpdater)
   {
-    jJu.onExceededDatabaseQuota(paramString1, paramString2, paramLong1, paramLong2, paramLong3, new QuotaUpdaterImpl(paramQuotaUpdater));
+    lRJ.onExceededDatabaseQuota(paramString1, paramString2, paramLong1, paramLong2, paramLong3, new QuotaUpdaterImpl(paramQuotaUpdater));
   }
   
   @TargetApi(5)
   public void onGeolocationPermissionsHidePrompt()
   {
-    jJu.onGeolocationPermissionsHidePrompt();
+    lRJ.onGeolocationPermissionsHidePrompt();
   }
   
   @TargetApi(5)
   public void onGeolocationPermissionsShowPrompt(String paramString, GeolocationPermissions.Callback paramCallback)
   {
-    jJu.onGeolocationPermissionsShowPrompt(paramString, new GeolocationPermissionsCallbackImpl(paramCallback));
+    lRJ.onGeolocationPermissionsShowPrompt(paramString, new GeolocationPermissionsCallbackImpl(paramCallback));
   }
   
   @TargetApi(7)
   public void onHideCustomView()
   {
-    jJu.onHideCustomView();
+    lRJ.onHideCustomView();
   }
   
   public boolean onJsAlert(android.webkit.WebView paramWebView, String paramString1, String paramString2, android.webkit.JsResult paramJsResult)
   {
-    iNx.setSysWebView(paramWebView);
-    return jJu.onJsAlert(iNx, paramString1, paramString2, new JsResultImpl(paramJsResult));
+    kMK.setSysWebView(paramWebView);
+    return lRJ.onJsAlert(kMK, paramString1, paramString2, new JsResultImpl(paramJsResult));
   }
   
   public boolean onJsBeforeUnload(android.webkit.WebView paramWebView, String paramString1, String paramString2, android.webkit.JsResult paramJsResult)
   {
-    iNx.setSysWebView(paramWebView);
-    return jJu.onJsBeforeUnload(iNx, paramString1, paramString2, new JsResultImpl(paramJsResult));
+    kMK.setSysWebView(paramWebView);
+    return lRJ.onJsBeforeUnload(kMK, paramString1, paramString2, new JsResultImpl(paramJsResult));
   }
   
   public boolean onJsConfirm(android.webkit.WebView paramWebView, String paramString1, String paramString2, android.webkit.JsResult paramJsResult)
   {
-    iNx.setSysWebView(paramWebView);
-    return jJu.onJsConfirm(iNx, paramString1, paramString2, new JsResultImpl(paramJsResult));
+    kMK.setSysWebView(paramWebView);
+    return lRJ.onJsConfirm(kMK, paramString1, paramString2, new JsResultImpl(paramJsResult));
   }
   
   public boolean onJsPrompt(android.webkit.WebView paramWebView, String paramString1, String paramString2, String paramString3, android.webkit.JsPromptResult paramJsPromptResult)
   {
-    iNx.setSysWebView(paramWebView);
-    return jJu.onJsPrompt(iNx, paramString1, paramString2, paramString3, new JsPromptResultImpl(paramJsPromptResult));
+    kMK.setSysWebView(paramWebView);
+    return lRJ.onJsPrompt(kMK, paramString1, paramString2, paramString3, new JsPromptResultImpl(paramJsPromptResult));
   }
   
   @TargetApi(7)
   public boolean onJsTimeout()
   {
-    return jJu.onJsTimeout();
+    return lRJ.onJsTimeout();
   }
   
   public void onProgressChanged(android.webkit.WebView paramWebView, int paramInt)
   {
-    iNx.setSysWebView(paramWebView);
-    jJu.onProgressChanged(iNx, paramInt);
+    kMK.setSysWebView(paramWebView);
+    lRJ.onProgressChanged(kMK, paramInt);
   }
   
   @Deprecated
   @TargetApi(7)
   public void onReachedMaxAppCacheSize(long paramLong1, long paramLong2, WebStorage.QuotaUpdater paramQuotaUpdater)
   {
-    jJu.onReachedMaxAppCacheSize(paramLong1, paramLong2, new QuotaUpdaterImpl(paramQuotaUpdater));
+    lRJ.onReachedMaxAppCacheSize(paramLong1, paramLong2, new QuotaUpdaterImpl(paramQuotaUpdater));
   }
   
   public void onReceivedIcon(android.webkit.WebView paramWebView, Bitmap paramBitmap)
   {
-    iNx.setSysWebView(paramWebView);
-    jJu.onReceivedIcon(iNx, paramBitmap);
+    kMK.setSysWebView(paramWebView);
+    lRJ.onReceivedIcon(kMK, paramBitmap);
   }
   
   public void onReceivedTitle(android.webkit.WebView paramWebView, String paramString)
   {
-    iNx.setSysWebView(paramWebView);
-    jJu.onReceivedTitle(iNx, paramString);
+    kMK.setSysWebView(paramWebView);
+    lRJ.onReceivedTitle(kMK, paramString);
   }
   
   @TargetApi(7)
   public void onReceivedTouchIconUrl(android.webkit.WebView paramWebView, String paramString, boolean paramBoolean)
   {
-    iNx.setSysWebView(paramWebView);
-    jJu.onReceivedTouchIconUrl(iNx, paramString, paramBoolean);
+    kMK.setSysWebView(paramWebView);
+    lRJ.onReceivedTouchIconUrl(kMK, paramString, paramBoolean);
   }
   
   public void onRequestFocus(android.webkit.WebView paramWebView)
   {
-    iNx.setSysWebView(paramWebView);
-    jJu.onRequestFocus(iNx);
+    kMK.setSysWebView(paramWebView);
+    lRJ.onRequestFocus(kMK);
   }
   
   @Deprecated
   @TargetApi(14)
   public void onShowCustomView(View paramView, int paramInt, WebChromeClient.CustomViewCallback paramCustomViewCallback)
   {
-    jJu.onShowCustomView(paramView, paramInt, new CustomViewCallbackImpl(paramCustomViewCallback));
+    lRJ.onShowCustomView(paramView, paramInt, new CustomViewCallbackImpl(paramCustomViewCallback));
   }
   
   @TargetApi(7)
   public void onShowCustomView(View paramView, WebChromeClient.CustomViewCallback paramCustomViewCallback)
   {
-    jJu.onShowCustomView(paramView, new CustomViewCallbackImpl(paramCustomViewCallback));
+    lRJ.onShowCustomView(paramView, new CustomViewCallbackImpl(paramCustomViewCallback));
+  }
+  
+  public boolean onShowFileChooser(android.webkit.WebView paramWebView, final ValueCallback paramValueCallback, WebChromeClient.FileChooserParams paramFileChooserParams)
+  {
+    paramValueCallback = new u()
+    {
+      public void onReceiveValue(Uri[] paramAnonymousArrayOfUri)
+      {
+        paramValueCallback.onReceiveValue(paramAnonymousArrayOfUri);
+      }
+    };
+    kMK.setSysWebView(paramWebView);
+    return lRJ.onShowFileChooser(kMK, paramValueCallback, paramFileChooserParams);
   }
   
   public void openFileChooser(ValueCallback paramValueCallback)
@@ -182,9 +213,15 @@ class SystemWebChromeClient
     openFileChooser(paramValueCallback, paramString, null);
   }
   
-  public void openFileChooser(ValueCallback paramValueCallback, String paramString1, String paramString2)
+  public void openFileChooser(final ValueCallback paramValueCallback, String paramString1, String paramString2)
   {
-    jJu.openFileChooser(new SystemWebChromeClient.3(this, paramValueCallback), paramString1, paramString2);
+    lRJ.openFileChooser(new u()
+    {
+      public void onReceiveValue(Uri paramAnonymousUri)
+      {
+        paramValueCallback.onReceiveValue(paramAnonymousUri);
+      }
+    }, paramString1, paramString2);
   }
   
   public void setupAutoFill(Message paramMessage) {}
@@ -314,7 +351,7 @@ class SystemWebChromeClient
   }
   
   class QuotaUpdaterImpl
-    implements ac.a
+    implements w.a
   {
     WebStorage.QuotaUpdater mQuotaUpdater;
     

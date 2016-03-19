@@ -3,24 +3,23 @@ package com.tencent.mm.ui.base;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.a.a;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 
 public final class b
 {
-  public static int AH(String paramString)
+  public static int Gw(String paramString)
   {
-    paramString = AI(paramString);
+    paramString = Gx(paramString);
     if (paramString != null) {
-      return g(paramString);
+      return h(paramString);
     }
     return 0;
   }
   
-  private static Class AI(String paramString)
+  private static Class Gx(String paramString)
   {
     try
     {
@@ -29,36 +28,51 @@ public final class b
     }
     catch (ClassNotFoundException localClassNotFoundException)
     {
-      t.e("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "Class %s not found in dex", new Object[] { paramString });
+      u.e("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "Class %s not found in dex", new Object[] { paramString });
     }
     return null;
   }
   
-  public static void dB(Context paramContext)
+  public static void W(Activity paramActivity)
+  {
+    try
+    {
+      Method localMethod = Activity.class.getDeclaredMethod("convertFromTranslucent", new Class[0]);
+      localMethod.setAccessible(true);
+      localMethod.invoke(paramActivity, new Object[0]);
+      return;
+    }
+    catch (Throwable paramActivity)
+    {
+      u.printErrStackTrace("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", paramActivity, "call convertActivityFromTranslucent Fail: %s", new Object[] { paramActivity.getMessage() });
+    }
+  }
+  
+  public static void ei(Context paramContext)
   {
     if ((paramContext == null) || (!(paramContext instanceof Activity))) {
       return;
     }
-    ((Activity)paramContext).overridePendingTransition(a.a.pop_in, a.a.anim_not_change);
+    ((Activity)paramContext).overridePendingTransition(2130837592, 2130837587);
   }
   
-  public static void dC(Context paramContext)
+  public static void ej(Context paramContext)
   {
     if ((paramContext == null) || (!(paramContext instanceof Activity))) {
       return;
     }
-    ((Activity)paramContext).overridePendingTransition(a.a.anim_not_change, a.a.pop_out);
+    ((Activity)paramContext).overridePendingTransition(2130837587, 2130837600);
   }
   
-  public static void dD(Context paramContext)
+  public static void ek(Context paramContext)
   {
     if ((paramContext == null) || (!(paramContext instanceof Activity))) {
       return;
     }
-    ((Activity)paramContext).overridePendingTransition(a.a.anim_not_change, a.a.anim_not_change);
+    ((Activity)paramContext).overridePendingTransition(2130837587, 2130837587);
   }
   
-  public static int g(Class paramClass)
+  public static int h(Class paramClass)
   {
     Object localObject;
     do
@@ -73,37 +87,42 @@ public final class b
     return 0;
   }
   
-  public static void r(Context paramContext, Intent paramIntent)
+  public static boolean i(Class paramClass)
+  {
+    return (h(paramClass) & 0x1) == 0;
+  }
+  
+  public static void w(Context paramContext, Intent paramIntent)
   {
     if ((paramIntent == null) || (paramContext == null) || (!(paramContext instanceof Activity))) {}
     while (!paramIntent.getBooleanExtra("animation_pop_in", false)) {
       return;
     }
-    ((Activity)paramContext).overridePendingTransition(a.a.pop_in, a.a.anim_not_change);
+    ((Activity)paramContext).overridePendingTransition(2130837592, 2130837587);
   }
   
   public static abstract interface a
   {
-    public abstract void fr(boolean paramBoolean);
+    public abstract void hu(boolean paramBoolean);
   }
   
   private static final class b
     implements InvocationHandler
   {
-    public WeakReference iCj;
+    public WeakReference kBn;
     
     public final Object invoke(Object paramObject, Method paramMethod, Object[] paramArrayOfObject)
     {
       boolean bool2 = false;
-      if (iCj == null)
+      if (kBn == null)
       {
-        t.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callbackRef NULL!");
+        u.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callbackRef NULL!");
         return null;
       }
-      paramObject = (b.a)iCj.get();
+      paramObject = (b.a)kBn.get();
       if (paramObject == null)
       {
-        t.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callback NULL!");
+        u.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callback NULL!");
         return null;
       }
       boolean bool1 = bool2;
@@ -118,7 +137,7 @@ public final class b
           }
         }
       }
-      ((b.a)paramObject).fr(bool1);
+      ((b.a)paramObject).hu(bool1);
       return null;
     }
   }

@@ -1,15 +1,11 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.pluginsdk.ui.chat.ChatFooter;
-
-final class cc
-  implements Runnable
+abstract class cc
+  extends aa.c
 {
-  cc(bz parambz) {}
-  
-  public final void run()
+  public cc(int paramInt)
   {
-    bq.d(iTU.iTR).setBottomPanelVisibility(8);
+    super(paramInt);
   }
 }
 

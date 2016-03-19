@@ -1,8 +1,46 @@
 package com.tencent.mm.network;
 
-public abstract interface t
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import javax.net.ssl.HttpsURLConnection;
+
+public final class t
 {
-  public abstract boolean b(int paramInt, byte[] paramArrayOfByte);
+  public HttpsURLConnection cjx = null;
+  
+  public t(String paramString)
+  {
+    this(new URL(paramString));
+  }
+  
+  private t(URL paramURL)
+  {
+    try
+    {
+      cjx = ((HttpsURLConnection)paramURL.openConnection());
+      return;
+    }
+    catch (MalformedURLException paramURL)
+    {
+      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "MalformedURLException : %s", new Object[] { paramURL.getMessage() });
+      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "exception:%s", new Object[] { ay.b(paramURL) });
+      return;
+    }
+    catch (IOException paramURL)
+    {
+      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "IOException : %s", new Object[] { paramURL.getMessage() });
+      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "exception:%s", new Object[] { ay.b(paramURL) });
+      return;
+    }
+    catch (Exception paramURL)
+    {
+      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "Exception :" + paramURL.getMessage());
+      u.e("!44@/B4Tb64lLpItFYLAoHJ8bg0Xl+6QlhW5VHbm1Z2uYrw=", "exception:%s", new Object[] { ay.b(paramURL) });
+    }
+  }
 }
 
 /* Location:

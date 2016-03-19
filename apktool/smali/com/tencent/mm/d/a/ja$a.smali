@@ -15,26 +15,16 @@
 
 
 # instance fields
-.field public aGl:J
-
-.field public aGm:J
+.field public auy:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 0
 
     .prologue
-    const-wide/16 v0, -0x1
-
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    iput-wide v0, p0, Lcom/tencent/mm/d/a/ja$a;->aGl:J
-
-    .line 16
-    iput-wide v0, p0, Lcom/tencent/mm/d/a/ja$a;->aGm:J
 
     return-void
 .end method

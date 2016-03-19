@@ -1,429 +1,347 @@
 .class public final Lcom/tencent/mm/modelfriend/ad;
-.super Lcom/tencent/mm/d/b/ap;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field protected static aqp:Lcom/tencent/mm/sdk/g/ae$a;
+# instance fields
+.field aou:I
+
+.field bNc:I
+
+.field bNd:I
+
+.field bNe:I
+
+.field bNf:I
+
+.field bNg:I
+
+.field bNh:I
+
+.field bNi:Ljava/lang/String;
+
+.field bNj:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 6
-
-    .prologue
-    const/16 v5, 0xc
-
-    .line 8
-    new-instance v0, Lcom/tencent/mm/sdk/g/ae$a;
-
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/g/ae$a;-><init>()V
-
-    new-array v1, v5, [Ljava/lang/reflect/Field;
-
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->bNX:[Ljava/lang/reflect/Field;
-
-    const/16 v1, 0xd
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/4 v3, 0x0
-
-    const-string/jumbo v4, "wechatId"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "wechatId"
-
-    const-string/jumbo v4, "TEXT"
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " wechatId TEXT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/4 v3, 0x1
-
-    const-string/jumbo v4, "linkedInId"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "linkedInId"
-
-    const-string/jumbo v4, "TEXT"
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " linkedInId TEXT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/4 v3, 0x2
-
-    const-string/jumbo v4, "name"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "name"
-
-    const-string/jumbo v4, "TEXT"
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " name TEXT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/4 v3, 0x3
-
-    const-string/jumbo v4, "position"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "position"
-
-    const-string/jumbo v4, "TEXT"
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " position TEXT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/4 v3, 0x4
-
-    const-string/jumbo v4, "picUrl"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "picUrl"
-
-    const-string/jumbo v4, "TEXT"
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " picUrl TEXT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/4 v3, 0x5
-
-    const-string/jumbo v4, "wechatUsername"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "wechatUsername"
-
-    const-string/jumbo v4, "TEXT"
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " wechatUsername TEXT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/4 v3, 0x6
-
-    const-string/jumbo v4, "wechatSmallHead"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "wechatSmallHead"
-
-    const-string/jumbo v4, "TEXT"
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " wechatSmallHead TEXT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/4 v3, 0x7
-
-    const-string/jumbo v4, "wechatBigHead"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "wechatBigHead"
-
-    const-string/jumbo v4, "TEXT"
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " wechatBigHead TEXT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/16 v3, 0x8
-
-    const-string/jumbo v4, "linkedInProfileUrl"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "linkedInProfileUrl"
-
-    const-string/jumbo v4, "TEXT"
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " linkedInProfileUrl TEXT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/16 v3, 0x9
-
-    const-string/jumbo v4, "status"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "status"
-
-    const-string/jumbo v4, "INTEGER"
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " status INTEGER"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/16 v3, 0xa
-
-    const-string/jumbo v4, "userOpStatus"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "userOpStatus"
-
-    const-string/jumbo v4, "INTEGER default \'0\' "
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " userOpStatus INTEGER default \'0\' "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, ", "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const/16 v3, 0xb
-
-    const-string/jumbo v4, "nickname"
-
-    aput-object v4, v2, v3
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
-
-    const-string/jumbo v3, "nickname"
-
-    const-string/jumbo v4, "TEXT"
-
-    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    const-string/jumbo v2, " nickname TEXT"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
-
-    const-string/jumbo v3, "rowid"
-
-    aput-object v3, v2, v5
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibY:Ljava/lang/String;
-
-    sput-object v0, Lcom/tencent/mm/modelfriend/ad;->aqp:Lcom/tencent/mm/sdk/g/ae$a;
-
-    return-void
-.end method
-
 .method public constructor <init>()V
-    .locals 0
+    .locals 2
 
     .prologue
-    .line 5
-    invoke-direct {p0}, Lcom/tencent/mm/d/b/ap;-><init>()V
+    const/4 v1, 0x0
 
+    .line 64
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 20
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/tencent/mm/modelfriend/ad;->aou:I
+
+    .line 65
+    iput v1, p0, Lcom/tencent/mm/modelfriend/ad;->bNc:I
+
+    iput v1, p0, Lcom/tencent/mm/modelfriend/ad;->bNd:I
+
+    iput v1, p0, Lcom/tencent/mm/modelfriend/ad;->bNe:I
+
+    iput v1, p0, Lcom/tencent/mm/modelfriend/ad;->bNf:I
+
+    iput v1, p0, Lcom/tencent/mm/modelfriend/ad;->bNg:I
+
+    iput v1, p0, Lcom/tencent/mm/modelfriend/ad;->bNh:I
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNi:Ljava/lang/String;
+
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNj:Ljava/lang/String;
+
+    .line 66
     return-void
 .end method
 
 
 # virtual methods
-.method protected final lX()Lcom/tencent/mm/sdk/g/ae$a;
+.method public final c(Landroid/database/Cursor;)V
     .locals 1
 
     .prologue
-    .line 18
-    sget-object v0, Lcom/tencent/mm/modelfriend/ad;->aqp:Lcom/tencent/mm/sdk/g/ae$a;
+    .line 84
+    const/4 v0, 0x0
 
-    return-object v0
-.end method
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+    move-result v0
 
-    .prologue
-    .line 23
-    new-instance v0, Ljava/lang/StringBuffer;
+    iput v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNc:I
 
-    invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
+    .line 85
+    const/4 v0, 0x1
 
-    .line 24
-    const-string/jumbo v1, "wechatIdwechatId\n"
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    move-result v0
 
-    .line 25
-    const-string/jumbo v1, "linkedInIdlinkedInId\n"
+    iput v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNd:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    .line 86
+    const/4 v0, 0x2
 
-    .line 26
-    const-string/jumbo v1, "namename\n"
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    move-result v0
 
-    .line 27
-    const-string/jumbo v1, "positionposition\n"
+    iput v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNe:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    .line 87
+    const/4 v0, 0x3
 
-    .line 28
-    const-string/jumbo v1, "picUrlpicUrl\n"
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    move-result v0
 
-    .line 29
-    const-string/jumbo v1, "wechatUsernamewechatUsername\n"
+    iput v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNf:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    .line 88
+    const/4 v0, 0x4
 
-    .line 30
-    const-string/jumbo v1, "wechatBigHeadwechatSmallHead\n"
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    move-result v0
 
-    .line 31
-    const-string/jumbo v1, "wechatUsernamewechatBigHead\n"
+    iput v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNg:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    .line 89
+    const/4 v0, 0x5
 
-    .line 32
-    const-string/jumbo v1, "linkedInProfileUrllinkedInProfileUrl\n"
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    move-result v0
 
-    .line 33
-    const-string/jumbo v1, "statusstatus\n"
+    iput v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNh:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
+    .line 90
+    const/4 v0, 0x6
 
-    .line 34
-    const-string/jumbo v1, "userOpStatusstatus\n"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    .line 35
-    invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNi:Ljava/lang/String;
+
+    .line 91
+    const/4 v0, 0x7
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNj:Ljava/lang/String;
+
+    .line 96
+    return-void
+.end method
+
+.method public final zd()Landroid/content/ContentValues;
+    .locals 3
+
+    .prologue
+    .line 99
+    new-instance v0, Landroid/content/ContentValues;
+
+    invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
+
+    .line 100
+    iget v1, p0, Lcom/tencent/mm/modelfriend/ad;->aou:I
+
+    and-int/lit8 v1, v1, 0x1
+
+    if-eqz v1, :cond_0
+
+    .line 101
+    const-string/jumbo v1, "grouopid"
+
+    iget v2, p0, Lcom/tencent/mm/modelfriend/ad;->bNc:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 103
+    :cond_0
+    iget v1, p0, Lcom/tencent/mm/modelfriend/ad;->aou:I
+
+    and-int/lit8 v1, v1, 0x2
+
+    if-eqz v1, :cond_1
+
+    .line 104
+    const-string/jumbo v1, "membernum"
+
+    iget v2, p0, Lcom/tencent/mm/modelfriend/ad;->bNd:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 106
+    :cond_1
+    iget v1, p0, Lcom/tencent/mm/modelfriend/ad;->aou:I
+
+    and-int/lit8 v1, v1, 0x4
+
+    if-eqz v1, :cond_2
+
+    .line 107
+    const-string/jumbo v1, "weixinnum"
+
+    iget v2, p0, Lcom/tencent/mm/modelfriend/ad;->bNe:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 109
+    :cond_2
+    iget v1, p0, Lcom/tencent/mm/modelfriend/ad;->aou:I
+
+    and-int/lit8 v1, v1, 0x8
+
+    if-eqz v1, :cond_3
+
+    .line 110
+    const-string/jumbo v1, "insert_time"
+
+    iget v2, p0, Lcom/tencent/mm/modelfriend/ad;->bNf:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 112
+    :cond_3
+    iget v1, p0, Lcom/tencent/mm/modelfriend/ad;->aou:I
+
+    and-int/lit8 v1, v1, 0x10
+
+    if-eqz v1, :cond_4
+
+    .line 113
+    const-string/jumbo v1, "lastupdate_time"
+
+    iget v2, p0, Lcom/tencent/mm/modelfriend/ad;->bNg:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 115
+    :cond_4
+    iget v1, p0, Lcom/tencent/mm/modelfriend/ad;->aou:I
+
+    and-int/lit8 v1, v1, 0x20
+
+    if-eqz v1, :cond_5
+
+    .line 116
+    const-string/jumbo v1, "needupdate"
+
+    iget v2, p0, Lcom/tencent/mm/modelfriend/ad;->bNh:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 118
+    :cond_5
+    iget v1, p0, Lcom/tencent/mm/modelfriend/ad;->aou:I
+
+    and-int/lit8 v1, v1, 0x40
+
+    if-eqz v1, :cond_6
+
+    .line 119
+    const-string/jumbo v1, "updatekey"
+
+    invoke-virtual {p0}, Lcom/tencent/mm/modelfriend/ad;->ze()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 121
+    :cond_6
+    iget v1, p0, Lcom/tencent/mm/modelfriend/ad;->aou:I
+
+    and-int/lit16 v1, v1, 0x80
+
+    if-eqz v1, :cond_7
+
+    .line 122
+    const-string/jumbo v1, "groupname"
+
+    invoke-virtual {p0}, Lcom/tencent/mm/modelfriend/ad;->zf()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 136
+    :cond_7
     return-object v0
+.end method
+
+.method public final ze()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 196
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNi:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const-string/jumbo v0, ""
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNi:Ljava/lang/String;
+
+    goto :goto_0
+.end method
+
+.method public final zf()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 204
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNj:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const-string/jumbo v0, ""
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/ad;->bNj:Ljava/lang/String;
+
+    goto :goto_0
 .end method

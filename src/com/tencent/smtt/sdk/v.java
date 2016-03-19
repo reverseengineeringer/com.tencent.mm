@@ -1,28 +1,40 @@
 package com.tencent.smtt.sdk;
 
+import android.app.Activity;
 import android.content.Context;
-import com.tencent.smtt.a.e;
-import com.tencent.smtt.a.u;
-import java.io.File;
+import android.os.Bundle;
+import android.widget.FrameLayout;
+import com.tencent.smtt.export.external.DexLoader;
+import dalvik.system.DexClassLoader;
 
 final class v
-  extends Thread
 {
-  v(s params, Context paramContext1, Context paramContext2) {}
+  protected DexLoader mDexLoader = null;
   
-  public final void run()
+  public v(DexLoader paramDexLoader)
   {
-    u.i("TbsInstaller", "TbsInstaller--quickDexOptForThirdPartyApp thread start");
-    try
-    {
-      File localFile1 = s.ez(jKL);
-      File localFile2 = s.ez(jKM);
-      e.a(localFile1, localFile2, new w(this));
-      e.a(localFile1, localFile2, new x(this));
-      u.i("TbsInstaller", "TbsInstaller--quickDexOptForThirdPartyApp thread done");
-      return;
+    mDexLoader = paramDexLoader;
+  }
+  
+  public final void a(Object paramObject, Activity paramActivity, int paramInt)
+  {
+    mDexLoader.invokeMethod(paramObject, "com.tencent.tbs.player.TbsPlayerProxy", "onActivity", new Class[] { Activity.class, Integer.TYPE }, new Object[] { paramActivity, Integer.valueOf(paramInt) });
+  }
+  
+  public final boolean a(Object paramObject1, Bundle paramBundle, FrameLayout paramFrameLayout, Object paramObject2)
+  {
+    paramObject1 = mDexLoader.invokeMethod(paramObject1, "com.tencent.tbs.player.TbsPlayerProxy", "play", new Class[] { Bundle.class, FrameLayout.class }, new Object[] { paramBundle, paramFrameLayout });
+    if ((paramObject1 instanceof Boolean)) {
+      return ((Boolean)paramObject1).booleanValue();
     }
-    catch (Exception localException) {}
+    return false;
+  }
+  
+  public final Object fD(Context paramContext)
+  {
+    DexLoader localDexLoader = mDexLoader;
+    DexClassLoader localDexClassLoader = mDexLoader.getClassLoader();
+    return localDexLoader.newInstance("com.tencent.tbs.player.TbsPlayerProxy", new Class[] { Context.class, DexClassLoader.class }, new Object[] { paramContext, localDexClassLoader });
   }
 }
 

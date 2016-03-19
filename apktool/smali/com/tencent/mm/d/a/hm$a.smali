@@ -15,11 +15,13 @@
 
 
 # instance fields
-.field public aEO:Ljava/lang/String;
+.field public aDg:I
 
-.field public aEP:Ljava/lang/String;
+.field public aDj:Landroid/os/Bundle;
 
-.field public aEQ:I
+.field public asW:Ljava/lang/String;
+
+.field public asX:Landroid/app/Activity;
 
 
 # direct methods
@@ -33,7 +35,7 @@
     .line 17
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/d/a/hm$a;->aEQ:I
+    iput v0, p0, Lcom/tencent/mm/d/a/hm$a;->aDg:I
 
     return-void
 .end method

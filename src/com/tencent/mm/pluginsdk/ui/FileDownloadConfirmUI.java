@@ -1,41 +1,59 @@
 package com.tencent.mm.pluginsdk.ui;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.pluginsdk.model.downloader.c;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMBaseActivity;
-import com.tencent.mm.ui.base.aa;
-import com.tencent.mm.ui.base.aa.a;
+import com.tencent.mm.ui.base.h;
+import com.tencent.mm.ui.base.h.a;
 
 public class FileDownloadConfirmUI
   extends MMBaseActivity
 {
-  private aa bUq = null;
+  private h clm = null;
   
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(a.k.empty);
-    paramBundle = new k(this, getIntent().getLongExtra("extra_download_id", -1L));
-    l locall = new l(this);
-    m localm = new m(this);
-    aa.a locala = new aa.a(this);
-    locala.AJ("");
-    locala.nG(a.n.file_downloader_confirm_title);
-    locala.a(a.n.app_yes, paramBundle);
-    locala.b(a.n.app_no, locall);
-    locala.a(localm);
-    bUq = locala.aMD();
-    bUq.show();
-    t.i("!44@/B4Tb64lLpKVQlIh1YRBXwihd2X+6LLYtuibyMW2tj4=", "Confirm Dialog");
+    setContentView(2131363284);
+    paramBundle = new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        c.aQc().cG(gPj);
+        u.i("!44@/B4Tb64lLpKVQlIh1YRBXwihd2X+6LLYtuibyMW2tj4=", "Remove task: %d", new Object[] { Long.valueOf(gPj) });
+      }
+    };
+    DialogInterface.OnClickListener local2 = new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
+    };
+    DialogInterface.OnDismissListener local3 = new DialogInterface.OnDismissListener()
+    {
+      public final void onDismiss(DialogInterface paramAnonymousDialogInterface)
+      {
+        finish();
+      }
+    };
+    h.a locala = new h.a(this);
+    locala.Gy("");
+    locala.qA(2131429562);
+    locala.b(2131430901, paramBundle);
+    locala.c(2131430902, local2);
+    locala.a(local3);
+    clm = locala.bcu();
+    clm.show();
+    u.i("!44@/B4Tb64lLpKVQlIh1YRBXwihd2X+6LLYtuibyMW2tj4=", "Confirm Dialog");
   }
   
   protected void onStop()
   {
     super.onStop();
-    bUq.dismiss();
+    clm.dismiss();
   }
 }
 

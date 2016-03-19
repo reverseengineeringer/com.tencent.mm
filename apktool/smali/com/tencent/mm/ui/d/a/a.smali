@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field jln:Lcom/tencent/mm/ui/d/a/d;
+.field lqE:Lcom/tencent/mm/ui/d/a/c;
 
 
 # direct methods
-.method public constructor <init>(Lcom/tencent/mm/ui/d/a/d;)V
+.method public constructor <init>(Lcom/tencent/mm/ui/d/a/c;)V
     .locals 0
 
     .prologue
@@ -24,7 +24,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 54
-    iput-object p1, p0, Lcom/tencent/mm/ui/d/a/a;->jln:Lcom/tencent/mm/ui/d/a/d;
+    iput-object p1, p0, Lcom/tencent/mm/ui/d/a/a;->lqE:Lcom/tencent/mm/ui/d/a/c;
 
     .line 55
     return-void

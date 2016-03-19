@@ -7,37 +7,24 @@ public abstract class b
   implements h
 {
   public Context context;
-  private int eVC;
-  public h.c jnu;
+  private int ggI;
+  public h.c lsN;
   
   public b(Context paramContext, h.c paramc, int paramInt)
   {
     context = paramContext;
-    jnu = paramc;
-    eVC = paramInt;
+    lsN = paramc;
+    ggI = paramInt;
   }
   
-  public static boolean bq(List paramList)
+  public static boolean bY(List paramList)
   {
     return (paramList != null) && (paramList.size() > 0);
   }
   
-  public static List br(List paramList)
+  public int bid()
   {
-    List localList = paramList;
-    if (bq(paramList))
-    {
-      localList = paramList;
-      if (paramList.size() > 3) {
-        localList = paramList.subList(0, 3);
-      }
-    }
-    return localList;
-  }
-  
-  public int aRh()
-  {
-    return eVC;
+    return ggI;
   }
 }
 

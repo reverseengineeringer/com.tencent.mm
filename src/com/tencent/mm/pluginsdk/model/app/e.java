@@ -1,132 +1,163 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.bn;
+import android.os.Message;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.List;
 import java.util.Map;
 
 public final class e
 {
-  List fbc = null;
-  List gLO = null;
-  Map gLP = null;
-  private aj gLQ = new aj(new f(this), false);
-  private ac handler = new g(this);
+  List gmw = null;
+  private aa handler = new aa()
+  {
+    public final void handleMessage(Message paramAnonymousMessage)
+    {
+      paramAnonymousMessage = (t)obj;
+      q localq = new q(appId, cbf);
+      if (iAP.contains(localq))
+      {
+        iAP.remove(localq);
+        if (!aj.aPR().d(appId, data, cbf)) {
+          u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "handleMessage, saveIcon fail");
+        }
+      }
+      while (gmw.size() > 0)
+      {
+        paramAnonymousMessage = (q)gmw.remove(0);
+        if (a(paramAnonymousMessage)) {
+          iAP.add(paramAnonymousMessage);
+        }
+      }
+    }
+  };
+  List iAP = null;
+  Map iAQ = null;
+  private af iAR = new af(new af.a()
+  {
+    public final boolean lj()
+    {
+      iAQ.clear();
+      return false;
+    }
+  }, false);
   
   public e()
   {
-    gLQ.cA(600000L);
+    iAR.ds(600000L);
   }
   
-  final boolean a(s params)
+  final boolean a(q paramq)
   {
-    if (params == null)
+    if (paramq == null)
     {
-      com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "startDownload fail, geticoninfo is null");
+      u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "startDownload fail, geticoninfo is null");
       return false;
     }
     int i;
-    if (params == null)
+    if (paramq == null)
     {
-      com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "increaseCounter fail, info is null");
+      u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "increaseCounter fail, info is null");
       i = 0;
     }
     while (i == 0)
     {
-      com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "increaseCounter fail");
+      u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "increaseCounter fail");
       return false;
-      localObject = Integer.valueOf(bn.b((Integer)gLP.get(params.toString()), 0));
+      localObject = Integer.valueOf(ay.b((Integer)iAQ.get(paramq.toString()), 0));
       if (((Integer)localObject).intValue() >= 5)
       {
-        com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "increaseCounter fail, has reached the max try count");
+        u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "increaseCounter fail, has reached the max try count");
         i = 0;
       }
       else
       {
-        gLP.put(params.toString(), Integer.valueOf(((Integer)localObject).intValue() + 1));
+        iAQ.put(paramq.toString(), Integer.valueOf(((Integer)localObject).intValue() + 1));
         i = 1;
       }
     }
-    Object localObject = ay.azk().up(appId);
+    Object localObject = aj.aPR().zP(appId);
     if (localObject == null)
     {
-      com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, appinfo does not exist, appId = " + appId);
+      u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, appinfo does not exist, appId = " + appId);
       return false;
     }
-    switch (bLd)
+    switch (cbf)
     {
     default: 
-      com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, unknown iconType = " + bLd);
+      u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, unknown iconType = " + cbf);
       return false;
     case 1: 
       if ((field_appIconUrl == null) || (field_appIconUrl.length() == 0))
       {
-        com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, appIconUrl is null, appId = " + appId);
+        u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, appIconUrl is null, appId = " + appId);
         return false;
       }
       localObject = field_appIconUrl;
     }
     for (;;)
     {
-      com.tencent.mm.sdk.h.e.a(new t(handler, appId, bLd, (String)localObject), "AppIconService_getIcon");
+      com.tencent.mm.sdk.i.e.a(new r(handler, appId, cbf, (String)localObject), "AppIconService_getIcon");
       return true;
       if ((field_appWatermarkUrl == null) || (field_appWatermarkUrl.length() == 0))
       {
-        com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, appWatermarkUrl is null, appId = " + appId);
+        u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, appWatermarkUrl is null, appId = " + appId);
         return false;
       }
       localObject = field_appWatermarkUrl;
       continue;
-      if ((aJX == null) || (aJX.length() == 0))
+      if ((aOa == null) || (aOa.length() == 0))
       {
-        com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, appSuggestionIconUrl is null, appId = " + appId);
+        u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, appSuggestionIconUrl is null, appId = " + appId);
         return false;
       }
-      localObject = aJX;
+      localObject = aOa;
       continue;
-      if ((aKi == null) || (aKi.length() == 0))
+      if ((aOl == null) || (aOl.length() == 0))
       {
-        com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, servicePanelIconUrl is null, appId = " + appId);
+        u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, servicePanelIconUrl is null, appId = " + appId);
         return false;
       }
-      localObject = aKi;
+      localObject = aOl;
       continue;
-      if ((aKj == null) || (aKj.length() == 0))
+      if ((aOm == null) || (aOm.length() == 0))
       {
-        com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, serviceListIconUrl is null, appId = " + appId);
+        u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, serviceListIconUrl is null, appId = " + appId);
         return false;
       }
-      localObject = aKj;
+      localObject = aOm;
     }
   }
   
-  public final void ap(String paramString, int paramInt)
+  public final void aE(String paramString, int paramInt)
   {
     if ((paramString == null) || (paramString.length() == 0)) {
-      com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push fail, appId is null");
+      u.e("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push fail, appId is null");
     }
-    s locals;
+    q localq;
     do
     {
       do
       {
         return;
-        locals = new s(paramString, paramInt);
-        if (gLO.contains(locals))
+        localq = new q(paramString, paramInt);
+        if (iAP.contains(localq))
         {
-          com.tencent.mm.sdk.platformtools.t.i("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, appId = " + paramString + ", iconType = " + paramInt + " already in running list");
+          u.i("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "push, appId = " + paramString + ", iconType = " + paramInt + " already in running list");
           return;
         }
-        if (gLO.size() < 5) {
+        if (iAP.size() < 5) {
           break;
         }
-        com.tencent.mm.sdk.platformtools.t.i("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "running list has reached the max count");
-      } while (fbc.contains(locals));
-      fbc.add(locals);
+        u.i("!32@/B4Tb64lLpLMN5rZgw2Mb59nLZg7Js/O", "running list has reached the max count");
+      } while (gmw.contains(localq));
+      gmw.add(localq);
       return;
-    } while (!a(locals));
-    gLO.add(locals);
+    } while (!a(localq));
+    iAP.add(localq);
   }
 }
 

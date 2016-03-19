@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$aa
-  extends a.c
+  extends a.e
 {
   public a$aa()
   {
-    super("getBrandWCPayRequest", "get_brand_wcpay_request", 28, true);
+    super("connectToWiFi", "connecttowifi", 71, false);
   }
 }
 

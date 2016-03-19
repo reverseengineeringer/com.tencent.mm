@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$l
-  extends a.c
+  extends a.e
 {
   public a$l()
   {
-    super("chooseCard", "choose_card", 70, true);
+    super("cancelDownloadTask", "cancel_download_task", 39, false);
   }
 }
 

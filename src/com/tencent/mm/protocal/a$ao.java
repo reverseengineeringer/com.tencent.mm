@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ao
-  extends a.c
+  extends a.e
 {
   public a$ao()
   {
-    super("hasEmoticon", "has_emoticon", 9, false);
+    super("getBrandWCPayRequest", "get_brand_wcpay_request", 28, true);
   }
 }
 

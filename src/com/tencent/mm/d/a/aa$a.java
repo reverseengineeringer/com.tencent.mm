@@ -1,10 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-
 public final class aa$a
 {
-  public Context context;
+  public boolean atf = false;
 }
 
 /* Location:

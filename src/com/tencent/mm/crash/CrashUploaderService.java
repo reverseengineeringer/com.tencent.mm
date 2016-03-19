@@ -3,13 +3,13 @@ package com.tencent.mm.crash;
 import android.app.IntentService;
 import android.content.Intent;
 import android.os.Build;
-import com.tencent.mm.a.a;
 import com.tencent.mm.a.c;
 import com.tencent.mm.a.e;
-import com.tencent.mm.a.n;
+import com.tencent.mm.a.g;
+import com.tencent.mm.a.q;
 import com.tencent.mm.pointers.PByteArray;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.File;
 import java.io.PrintStream;
 import java.text.SimpleDateFormat;
@@ -26,17 +26,17 @@ import org.apache.http.impl.client.DefaultHttpClient;
 public class CrashUploaderService
   extends IntentService
 {
-  static final HashMap bkI;
+  static final HashMap bvl;
   
   static
   {
     HashMap localHashMap = new HashMap(16);
-    bkI = localHashMap;
+    bvl = localHashMap;
     localHashMap.put("exception", Integer.valueOf(10001));
-    bkI.put("anr", Integer.valueOf(10002));
-    bkI.put("handler", Integer.valueOf(10003));
-    bkI.put("sql", Integer.valueOf(10004));
-    bkI.put("permission", Integer.valueOf(10005));
+    bvl.put("anr", Integer.valueOf(10002));
+    bvl.put("handler", Integer.valueOf(10003));
+    bvl.put("sql", Integer.valueOf(10004));
+    bvl.put("permission", Integer.valueOf(10005));
   }
   
   public CrashUploaderService()
@@ -47,11 +47,11 @@ public class CrashUploaderService
   private static boolean a(String paramString1, byte[] paramArrayOfByte, int paramInt, String paramString2, String paramString3, String paramString4)
   {
     int i = paramArrayOfByte.length;
-    String str = e.n(String.format("weixin#$()%d%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(i) }).getBytes()).toLowerCase();
-    byte[] arrayOfByte = n.q(paramArrayOfByte);
+    String str = g.m(String.format("weixin#$()%d%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(i) }).getBytes()).toLowerCase();
+    byte[] arrayOfByte = q.q(paramArrayOfByte);
     paramArrayOfByte = new PByteArray();
-    a.a(paramArrayOfByte, arrayOfByte, str.getBytes());
-    paramString2 = new StringBuilder().append(paramString3).append("/cgi-bin/mmsupport-bin/stackreport?version=").append(Integer.toHexString(paramInt)).append("&devicetype=").append(paramString2).append("&filelength=").append(i).append("&sum=").append(str).append("&reporttype=1&NewReportType=").append(bn.c((Integer)bkI.get(paramString4)));
+    c.a(paramArrayOfByte, arrayOfByte, str.getBytes());
+    paramString2 = new StringBuilder().append(paramString3).append("/cgi-bin/mmsupport-bin/stackreport?version=").append(Integer.toHexString(paramInt)).append("&devicetype=").append(paramString2).append("&filelength=").append(i).append("&sum=").append(str).append("&reporttype=1&NewReportType=").append(ay.d((Integer)bvl.get(paramString4)));
     if ((paramString1 != null) && (!paramString1.equals(""))) {
       paramString2.append("&username=").append(paramString1);
     }
@@ -62,7 +62,7 @@ public class CrashUploaderService
       paramArrayOfByte = new ByteArrayEntity(value);
       paramArrayOfByte.setContentType("binary/octet-stream");
       paramString2.setEntity(paramArrayOfByte);
-      paramString1 = bn.e(paramString1.execute(paramString2).getEntity().getContent());
+      paramString1 = ay.d(paramString1.execute(paramString2).getEntity().getContent());
       System.out.println(paramString1);
       return true;
     }
@@ -70,13 +70,13 @@ public class CrashUploaderService
     return false;
   }
   
-  private static void f(String paramString1, String paramString2, String paramString3)
+  private static void i(String paramString1, String paramString2, String paramString3)
   {
     StringBuilder localStringBuilder;
     if (!new File(paramString1).exists())
     {
       localStringBuilder = new StringBuilder();
-      if ((!bn.iW(paramString3)) && (!paramString3.equals("0"))) {
+      if ((!ay.kz(paramString3)) && (!paramString3.equals("0"))) {
         break label188;
       }
       paramString3 = Build.DEVICE + Build.FINGERPRINT + Build.MANUFACTURER + Build.MODEL;
@@ -84,11 +84,11 @@ public class CrashUploaderService
     }
     for (;;)
     {
-      localStringBuilder.append(t.aEL());
+      localStringBuilder.append(u.aUD());
       localStringBuilder.append(" BRAND:[" + Build.BRAND + "] ");
       localStringBuilder.append("\n");
-      c.c(paramString1, localStringBuilder.toString().getBytes());
-      c.c(paramString1, (paramString2 + "\n").getBytes());
+      e.e(paramString1, localStringBuilder.toString().getBytes());
+      e.e(paramString1, (paramString2 + "\n").getBytes());
       return;
       label188:
       localStringBuilder.append("uin[" + paramString3 + "] ");
@@ -104,11 +104,24 @@ public class CrashUploaderService
     String str1 = paramIntent.getStringExtra("INTENT_EXTRA_USER_NAME");
     Object localObject3 = paramIntent.getStringExtra("INTENT_EXTRA_SDCARD_PATH");
     Object localObject2 = paramIntent.getStringExtra("INTENT_EXTRA_DATA_PATH");
-    String str4 = paramIntent.getStringExtra("INTENT_EXTRA_UIN");
-    int j = paramIntent.getIntExtra("INTENT_EXTRA_CLIENT_VERSION", 0);
-    String str2 = paramIntent.getStringExtra("INTENT_EXTRA_DEVICE_TYPE");
-    String str3 = paramIntent.getStringExtra("INTENT_EXTRA_HOST");
-    Object localObject1 = paramIntent.getStringExtra("INTENT_EXTRA_TAG");
+    String str2 = paramIntent.getStringExtra("INTENT_EXTRA_UIN");
+    int i = 0;
+    try
+    {
+      j = Integer.decode(paramIntent.getStringExtra("INTENT_EXTRA_CLIENT_VERSION")).intValue();
+      i = j;
+    }
+    catch (Error localError)
+    {
+      int j;
+      String str3;
+      String str4;
+      Object localObject1;
+      for (;;) {}
+    }
+    str3 = paramIntent.getStringExtra("INTENT_EXTRA_DEVICE_TYPE");
+    str4 = paramIntent.getStringExtra("INTENT_EXTRA_HOST");
+    localObject1 = paramIntent.getStringExtra("INTENT_EXTRA_TAG");
     if (localObject1 != null)
     {
       paramIntent = (Intent)localObject1;
@@ -118,8 +131,8 @@ public class CrashUploaderService
     {
       paramIntent = "exception";
     }
-    localObject1 = str1 + "," + str2 + "_" + j + "_" + Build.CPU_ABI + ",";
-    localObject1 = (String)localObject1 + "exception,time_" + bn.DL() + ",error_" + (String)localObject4;
+    localObject1 = str1 + "," + str3 + "_" + i + "_" + Build.CPU_ABI + ",";
+    localObject1 = (String)localObject1 + "exception,time_" + ay.FR() + ",error_" + (String)localObject4;
     for (;;)
     {
       try
@@ -131,27 +144,26 @@ public class CrashUploaderService
         ((File)localObject4).mkdirs();
         localObject4 = new Date();
         localSimpleDateFormat = new SimpleDateFormat("yyyyMMdd", Locale.getDefault());
-        f((String)localObject3 + "crash_" + localSimpleDateFormat.format((Date)localObject4) + ".txt", (String)localObject1, str4);
+        i((String)localObject3 + "crash_" + localSimpleDateFormat.format((Date)localObject4) + ".txt", (String)localObject1, str2);
       }
       catch (Exception localException)
       {
         SimpleDateFormat localSimpleDateFormat;
         int k;
-        int i;
         continue;
       }
       localObject3 = new File((String)localObject2);
       if (!((File)localObject3).exists()) {
         ((File)localObject3).mkdir();
       }
-      localObject3 = (String)localObject2 + str4;
+      localObject3 = (String)localObject2 + str2;
       localObject2 = new File((String)localObject3);
       if (((File)localObject2).length() > 262144L) {
         ((File)localObject2).delete();
       }
-      f((String)localObject3, (String)localObject1, str4);
-      localObject1 = c.d((String)localObject3, 0, -1);
-      if ((bn.J((byte[])localObject1)) || (!a(str1, (byte[])localObject1, j, str2, str3, paramIntent))) {
+      i((String)localObject3, (String)localObject1, str2);
+      localObject1 = e.d((String)localObject3, 0, -1);
+      if ((ay.J((byte[])localObject1)) || (!a(str1, (byte[])localObject1, i, str3, str4, paramIntent))) {
         break;
       }
       ((File)localObject2).delete();
@@ -160,14 +172,14 @@ public class CrashUploaderService
       if (localObject4 != null)
       {
         k = localObject4.length;
-        i = 0;
-        if (i < k)
+        j = 0;
+        if (j < k)
         {
-          localSimpleDateFormat = localObject4[i];
-          if (bn.Y(localSimpleDateFormat.lastModified()) > 2592000000L) {
+          localSimpleDateFormat = localObject4[j];
+          if (ay.an(localSimpleDateFormat.lastModified()) > 2592000000L) {
             localSimpleDateFormat.delete();
           }
-          i += 1;
+          j += 1;
         }
       }
     }

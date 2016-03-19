@@ -7,17 +7,17 @@ import android.view.animation.Transformation;
 final class AnimatedExpandableListView$c
   extends Animation
 {
-  private int iCL;
-  private int iCM;
-  private AnimatedExpandableListView.d iCN;
+  private int kBN;
+  private int kBO;
+  private AnimatedExpandableListView.d kBP;
   private View view;
   
   private AnimatedExpandableListView$c(View paramView, int paramInt1, int paramInt2, AnimatedExpandableListView.d paramd)
   {
-    iCL = paramInt1;
-    iCM = (paramInt2 - paramInt1);
+    kBN = paramInt1;
+    kBO = (paramInt2 - paramInt1);
     view = paramView;
-    iCN = paramd;
+    kBP = paramd;
     view.getLayoutParams().height = paramInt1;
     view.requestLayout();
   }
@@ -27,15 +27,15 @@ final class AnimatedExpandableListView$c
     super.applyTransformation(paramFloat, paramTransformation);
     if (paramFloat < 1.0F)
     {
-      i = iCL + (int)(iCM * paramFloat);
+      i = kBN + (int)(kBO * paramFloat);
       view.getLayoutParams().height = i;
-      iCN.iCQ = i;
+      kBP.kBS = i;
       view.requestLayout();
       return;
     }
-    int i = iCL + iCM;
+    int i = kBN + kBO;
     view.getLayoutParams().height = i;
-    iCN.iCQ = i;
+    kBP.kBS = i;
     view.requestLayout();
   }
 }

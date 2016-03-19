@@ -13,11 +13,11 @@
 
 
 # static fields
-.field private static blD:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+.field private static bwi:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-.field private static blE:Lcom/tencent/mm/jni/platformcomm/Alarm;
+.field private static bwj:Lcom/tencent/mm/jni/platformcomm/Alarm;
 
-.field private static blF:Ljava/util/TreeSet;
+.field private static bwk:Ljava/util/TreeSet;
 
 
 # direct methods
@@ -28,10 +28,10 @@
     const/4 v0, 0x0
 
     .line 30
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blD:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwi:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     .line 31
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blE:Lcom/tencent/mm/jni/platformcomm/Alarm;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwj:Lcom/tencent/mm/jni/platformcomm/Alarm;
 
     .line 42
     new-instance v0, Ljava/util/TreeSet;
@@ -44,7 +44,7 @@
 
     invoke-direct {v0, v1}, Ljava/util/TreeSet;-><init>(Ljava/util/Comparator;)V
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     return-void
 .end method
@@ -97,7 +97,7 @@
 
     aput-object v5, v4, v2
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -128,7 +128,7 @@
 
     aput-object v5, v4, v2
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -137,13 +137,13 @@
 
     .line 71
     :cond_1
-    sget-object v6, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sget-object v6, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     monitor-enter v6
 
     .line 72
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blD:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwi:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     if-nez v0, :cond_2
 
@@ -152,18 +152,18 @@
 
     invoke-direct {v0, p3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blD:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwi:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     .line 74
     const-string/jumbo v0, "!24@/B4Tb64lLpJgcLwqaN0ERg=="
 
     const-string/jumbo v5, "start new wakerlock"
 
-    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 77
     :cond_2
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blE:Lcom/tencent/mm/jni/platformcomm/Alarm;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwj:Lcom/tencent/mm/jni/platformcomm/Alarm;
 
     if-nez v0, :cond_3
 
@@ -172,10 +172,10 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/jni/platformcomm/Alarm;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blE:Lcom/tencent/mm/jni/platformcomm/Alarm;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwj:Lcom/tencent/mm/jni/platformcomm/Alarm;
 
     .line 79
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blE:Lcom/tencent/mm/jni/platformcomm/Alarm;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwj:Lcom/tencent/mm/jni/platformcomm/Alarm;
 
     new-instance v5, Landroid/content/IntentFilter;
 
@@ -213,7 +213,7 @@
 
     .line 82
     :cond_3
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->iterator()Ljava/util/Iterator;
 
@@ -234,7 +234,7 @@
 
     check-cast v0, [Ljava/lang/Object;
 
-    sget v7, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->blG:I
+    sget v7, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->bwl:I
 
     add-int/lit8 v7, v7, -0x1
 
@@ -269,7 +269,7 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 86
     monitor-exit v6
@@ -304,7 +304,7 @@
 
     const-string/jumbo v3, "am == null"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
@@ -390,7 +390,7 @@
 
     .line 95
     :cond_8
-    sget-object v1, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sget-object v1, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     const/4 v3, 0x3
 
@@ -451,7 +451,7 @@
 
     const-string/jumbo v1, "context==null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v2
 
@@ -461,13 +461,13 @@
 
     .line 107
     :cond_0
-    sget-object v3, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sget-object v3, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     monitor-enter v3
 
     .line 108
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blD:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwi:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     if-nez v0, :cond_1
 
@@ -476,18 +476,18 @@
 
     invoke-direct {v0, p2}, Lcom/tencent/mm/jni/platformcomm/WakerLock;-><init>(Landroid/content/Context;)V
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blD:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwi:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     .line 110
     const-string/jumbo v0, "!24@/B4Tb64lLpJgcLwqaN0ERg=="
 
     const-string/jumbo v1, "stop new wakerlock"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 113
     :cond_1
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blE:Lcom/tencent/mm/jni/platformcomm/Alarm;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwj:Lcom/tencent/mm/jni/platformcomm/Alarm;
 
     if-nez v0, :cond_2
 
@@ -496,7 +496,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/jni/platformcomm/Alarm;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blE:Lcom/tencent/mm/jni/platformcomm/Alarm;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwj:Lcom/tencent/mm/jni/platformcomm/Alarm;
 
     .line 115
     new-instance v0, Landroid/content/IntentFilter;
@@ -504,7 +504,7 @@
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
     .line 116
-    sget-object v1, Lcom/tencent/mm/jni/platformcomm/Alarm;->blE:Lcom/tencent/mm/jni/platformcomm/Alarm;
+    sget-object v1, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwj:Lcom/tencent/mm/jni/platformcomm/Alarm;
 
     invoke-virtual {p2, v1, v0}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
@@ -513,11 +513,11 @@
 
     const-string/jumbo v1, "stop new Alarm"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 120
     :cond_2
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->iterator()Ljava/util/Iterator;
 
@@ -539,7 +539,7 @@
     check-cast v0, [Ljava/lang/Object;
 
     .line 124
-    sget v1, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->blG:I
+    sget v1, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->bwl:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -558,7 +558,7 @@
     if-nez v1, :cond_3
 
     .line 125
-    sget v1, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->blI:I
+    sget v1, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->bwn:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -625,7 +625,7 @@
 
     const-string/jumbo v2, "am == null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -642,7 +642,7 @@
 
     const-string/jumbo v2, "pendingIntent == null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
@@ -662,18 +662,18 @@
     goto :goto_0
 .end method
 
-.method public static ax(Landroid/content/Context;)V
+.method public static aH(Landroid/content/Context;)V
     .locals 4
 
     .prologue
     .line 45
-    sget-object v1, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sget-object v1, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     monitor-enter v1
 
     .line 46
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->iterator()Ljava/util/Iterator;
 
@@ -694,7 +694,7 @@
 
     check-cast v0, [Ljava/lang/Object;
 
-    sget v3, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->blI:I
+    sget v3, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->bwn:I
 
     add-int/lit8 v3, v3, -0x1
 
@@ -721,24 +721,24 @@
     .line 50
     :cond_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->clear()V
 
     .line 51
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blE:Lcom/tencent/mm/jni/platformcomm/Alarm;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwj:Lcom/tencent/mm/jni/platformcomm/Alarm;
 
     if-eqz v0, :cond_1
 
     .line 52
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blE:Lcom/tencent/mm/jni/platformcomm/Alarm;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwj:Lcom/tencent/mm/jni/platformcomm/Alarm;
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->unregisterReceiver(Landroid/content/BroadcastReceiver;)V
 
     .line 53
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blE:Lcom/tencent/mm/jni/platformcomm/Alarm;
+    sput-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwj:Lcom/tencent/mm/jni/platformcomm/Alarm;
 
     .line 55
     :cond_1
@@ -852,7 +852,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -861,13 +861,13 @@
     const/4 v2, 0x0
 
     .line 184
-    sget-object v5, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sget-object v5, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     monitor-enter v5
 
     .line 185
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sget-object v0, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     invoke-virtual {v0}, Ljava/util/TreeSet;->iterator()Ljava/util/Iterator;
 
@@ -889,7 +889,7 @@
     check-cast v0, [Ljava/lang/Object;
 
     .line 188
-    sget v1, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->blG:I
+    sget v1, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->bwl:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -914,7 +914,7 @@
 
     aput-object v1, v9, v10
 
-    invoke-static {v7, v8, v9}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v7, v8, v9}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 190
     invoke-virtual {v1, v3}, Ljava/lang/Long;->equals(Ljava/lang/Object;)Z
@@ -946,7 +946,7 @@
 
     move-result-wide v9
 
-    sget v11, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->blH:I
+    sget v11, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->bwm:I
 
     add-int/lit8 v11, v11, -0x1
 
@@ -966,7 +966,7 @@
 
     aput-object v0, v7, v8
 
-    invoke-static {v1, v2, v7}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 193
     invoke-interface {v6}, Ljava/util/Iterator;->remove()V
@@ -996,7 +996,7 @@
 
     const/4 v4, 0x2
 
-    sget-object v7, Lcom/tencent/mm/jni/platformcomm/Alarm;->blF:Ljava/util/TreeSet;
+    sget-object v7, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwk:Ljava/util/TreeSet;
 
     invoke-virtual {v7}, Ljava/util/TreeSet;->size()I
 
@@ -1008,7 +1008,7 @@
 
     aput-object v7, v6, v4
 
-    invoke-static {v1, v2, v6}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 199
     :cond_4
@@ -1017,15 +1017,17 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 201
-    sget-object v1, Lcom/tencent/mm/jni/platformcomm/Alarm;->blD:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    sget-object v1, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwi:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     if-eqz v1, :cond_5
 
-    sget-object v1, Lcom/tencent/mm/jni/platformcomm/Alarm;->blD:Lcom/tencent/mm/jni/platformcomm/WakerLock;
+    sget-object v1, Lcom/tencent/mm/jni/platformcomm/Alarm;->bwi:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     const-wide/16 v4, 0xc8
 
-    invoke-virtual {v1, v4, v5}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(J)V
+    const-string/jumbo v2, "Alarm.onReceive"
+
+    invoke-virtual {v1, v4, v5, v2}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
 
     .line 202
     :cond_5

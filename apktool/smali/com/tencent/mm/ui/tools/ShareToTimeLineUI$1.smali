@@ -1,6 +1,9 @@
-.class final synthetic Lcom/tencent/mm/ui/tools/ShareToTimeLineUI$1;
+.class final Lcom/tencent/mm/ui/tools/ShareToTimeLineUI$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # annotations
@@ -9,51 +12,39 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic cjT:[I
+# instance fields
+.field final synthetic lxT:Lcom/tencent/mm/ui/tools/ShareToTimeLineUI;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/tencent/mm/ui/tools/ShareToTimeLineUI;)V
+    .locals 0
 
     .prologue
-    .line 342
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->values()[Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    .line 314
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShareToTimeLineUI$1;->lxT:Lcom/tencent/mm/ui/tools/ShareToTimeLineUI;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/tencent/mm/ui/tools/ShareToTimeLineUI$1;->cjT:[I
-
-    :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/tools/ShareToTimeLineUI$1;->cjT:[I
-
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOz:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
 
-    goto :goto_0
+# virtual methods
+.method public final onCancel(Landroid/content/DialogInterface;)V
+    .locals 1
+
+    .prologue
+    .line 318
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareToTimeLineUI$1;->lxT:Lcom/tencent/mm/ui/tools/ShareToTimeLineUI;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ShareToTimeLineUI;->finish()V
+
+    .line 319
+    return-void
 .end method

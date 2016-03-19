@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public bgY:I
+.field public brw:I
 
-.field public bhb:Landroid/hardware/Camera;
+.field public brz:Landroid/hardware/Camera;
 
 
 # direct methods

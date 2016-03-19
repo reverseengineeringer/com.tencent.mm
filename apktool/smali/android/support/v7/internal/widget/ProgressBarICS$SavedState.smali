@@ -30,9 +30,9 @@
 
     .prologue
     .line 865
-    new-instance v0, Landroid/support/v7/internal/widget/p;
+    new-instance v0, Landroid/support/v7/internal/widget/ProgressBarICS$SavedState$1;
 
-    invoke-direct {v0}, Landroid/support/v7/internal/widget/p;-><init>()V
+    invoke-direct {v0}, Landroid/support/v7/internal/widget/ProgressBarICS$SavedState$1;-><init>()V
 
     sput-object v0, Landroid/support/v7/internal/widget/ProgressBarICS$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 

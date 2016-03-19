@@ -2,11 +2,11 @@ package com.tencent.mm.compatible.loader;
 
 public final class c
 {
-  static final Object fe = new Object();
-  long[] biX;
-  boolean ff;
-  Object[] fh;
-  int fi;
+  static final Object en = new Object();
+  long[] btu;
+  boolean eo;
+  Object[] eq;
+  int mSize;
   
   static int a(long[] paramArrayOfLong, int paramInt, long paramLong)
   {
@@ -34,37 +34,37 @@ public final class c
   
   public final void put(long paramLong, Object paramObject)
   {
-    int i = a(biX, fi, paramLong);
+    int i = a(btu, mSize, paramLong);
     if (i >= 0)
     {
-      fh[i] = paramObject;
+      eq[i] = paramObject;
       return;
     }
     int j = i ^ 0xFFFFFFFF;
-    if ((j < fi) && (fh[j] == fe))
+    if ((j < mSize) && (eq[j] == en))
     {
-      biX[j] = paramLong;
-      fh[j] = paramObject;
+      btu[j] = paramLong;
+      eq[j] = paramObject;
       return;
     }
     i = j;
     long[] arrayOfLong;
     Object[] arrayOfObject;
-    if (ff)
+    if (eo)
     {
       i = j;
-      if (fi >= biX.length)
+      if (mSize >= btu.length)
       {
-        int m = fi;
-        arrayOfLong = biX;
-        arrayOfObject = fh;
+        int m = mSize;
+        arrayOfLong = btu;
+        arrayOfObject = eq;
         i = 0;
         int k;
         for (j = 0; i < m; j = k)
         {
           Object localObject = arrayOfObject[i];
           k = j;
-          if (localObject != fe)
+          if (localObject != en)
           {
             if (i != j)
             {
@@ -75,29 +75,29 @@ public final class c
           }
           i += 1;
         }
-        ff = false;
-        fi = j;
-        i = a(biX, fi, paramLong) ^ 0xFFFFFFFF;
+        eo = false;
+        mSize = j;
+        i = a(btu, mSize, paramLong) ^ 0xFFFFFFFF;
       }
     }
-    if (fi >= biX.length)
+    if (mSize >= btu.length)
     {
-      j = a.l(fi + 1);
+      j = a.m(mSize + 1);
       arrayOfLong = new long[j];
       arrayOfObject = new Object[j];
-      System.arraycopy(biX, 0, arrayOfLong, 0, biX.length);
-      System.arraycopy(fh, 0, arrayOfObject, 0, fh.length);
-      biX = arrayOfLong;
-      fh = arrayOfObject;
+      System.arraycopy(btu, 0, arrayOfLong, 0, btu.length);
+      System.arraycopy(eq, 0, arrayOfObject, 0, eq.length);
+      btu = arrayOfLong;
+      eq = arrayOfObject;
     }
-    if (fi - i != 0)
+    if (mSize - i != 0)
     {
-      System.arraycopy(biX, i, biX, i + 1, fi - i);
-      System.arraycopy(fh, i, fh, i + 1, fi - i);
+      System.arraycopy(btu, i, btu, i + 1, mSize - i);
+      System.arraycopy(eq, i, eq, i + 1, mSize - i);
     }
-    biX[i] = paramLong;
-    fh[i] = paramObject;
-    fi += 1;
+    btu[i] = paramLong;
+    eq[i] = paramObject;
+    mSize += 1;
   }
 }
 

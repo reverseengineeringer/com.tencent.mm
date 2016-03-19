@@ -1,27 +1,27 @@
 package android.support.v4.widget;
 
-import android.support.v4.view.t;
+import android.support.v4.view.m;
 import android.view.View;
 import java.util.ArrayList;
 
 final class SlidingPaneLayout$b
   implements Runnable
 {
-  final View iX;
+  final View ib;
   
   SlidingPaneLayout$b(SlidingPaneLayout paramSlidingPaneLayout, View paramView)
   {
-    iX = paramView;
+    ib = paramView;
   }
   
   public final void run()
   {
-    if (iX.getParent() == iW)
+    if (ib.getParent() == ia)
     {
-      t.a(iX, 0, null);
-      SlidingPaneLayout.a(iW, iX);
+      m.a(ib, 0, null);
+      SlidingPaneLayout.a(ia, ib);
     }
-    SlidingPaneLayout.f(iW).remove(this);
+    SlidingPaneLayout.f(ia).remove(this);
   }
 }
 

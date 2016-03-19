@@ -22,7 +22,7 @@
     return-void
 .end method
 
-.method public static f(Landroid/content/Context;)Landroid/support/v7/internal/view/a;
+.method public static m(Landroid/content/Context;)Landroid/support/v7/internal/view/a;
     .locals 1
 
     .prologue
@@ -36,7 +36,7 @@
 
 
 # virtual methods
-.method public final bo()Z
+.method public final aY()Z
     .locals 2
 
     .prologue
@@ -47,7 +47,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$e;->abc_action_bar_embed_tabs_pre_jb:I
+    const v1, 0x7f0f0001
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getBoolean(I)Z
 
@@ -56,7 +56,7 @@
     return v0
 .end method
 
-.method public final bp()Z
+.method public final aZ()Z
     .locals 2
 
     .prologue

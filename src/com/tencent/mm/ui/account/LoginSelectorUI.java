@@ -7,80 +7,82 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
-import com.tencent.mm.a.c;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.cf;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.aw;
 import com.tencent.mm.plugin.a.a;
-import com.tencent.mm.pluginsdk.i;
-import com.tencent.mm.pluginsdk.j;
+import com.tencent.mm.pluginsdk.g;
 import com.tencent.mm.protocal.GeneralControlWrapper;
 import com.tencent.mm.protocal.JsapiPermissionWrapper;
-import com.tencent.mm.sdk.platformtools.g;
-import com.tencent.mm.sdk.platformtools.s;
+import com.tencent.mm.sdk.platformtools.t;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.account.mobile.MobileInputUI;
-import com.tencent.mm.ui.cn;
+import com.tencent.mm.ui.j;
 
 @Deprecated
 public class LoginSelectorUI
   extends MMActivity
   implements View.OnClickListener
 {
-  private TextView iuO;
-  private View iuP;
+  private TextView ktQ;
+  private View ktR;
   
-  protected final void DV()
+  protected final void Gb()
   {
-    Button localButton1 = (Button)findViewById(a.i.select_login_btn);
-    Button localButton2 = (Button)findViewById(a.i.select_register_btn);
-    iuO = ((TextView)findViewById(a.i.select_country));
-    iuP = findViewById(a.i.select_country_ly);
+    Button localButton1 = (Button)findViewById(2131167034);
+    Button localButton2 = (Button)findViewById(2131167035);
+    ktQ = ((TextView)findViewById(2131167083));
+    ktR = findViewById(2131167082);
     localButton1.setOnClickListener(this);
     localButton2.setOnClickListener(this);
-    iuO.setText(s.f(ipQ.iqj, a.c.language_setting, a.n.app_lang_sys));
-    iuP.setOnClickListener(new df(this));
-    if (g.hYi)
+    ktQ.setText(t.jdMethod_do(koJ.kpc));
+    ktR.setOnClickListener(new View.OnClickListener()
     {
-      a.bWX.h(this);
+      public final void onClick(View paramAnonymousView)
+      {
+        paramAnonymousView = new Intent();
+        paramAnonymousView.putExtra("not_auth_setting", true);
+        a.coa.s(paramAnonymousView, koJ.kpc);
+      }
+    });
+    if (com.tencent.mm.sdk.platformtools.f.jVe)
+    {
+      a.cob.h(this);
       return;
     }
-    a.bWX.Y(this);
+    a.cob.ah(this);
   }
   
   protected final int getLayoutId()
   {
-    return a.k.select_login_reg;
+    return 2131362442;
   }
   
   public void onClick(View paramView)
   {
-    if (a.i.select_login_btn == paramView.getId())
+    if (2131167034 == paramView.getId())
     {
       paramView = new Intent(this, MobileInputUI.class);
       paramView.putExtra("mobile_input_purpose", 5);
       startActivity(paramView);
     }
-    while (a.i.select_register_btn != paramView.getId()) {
+    while (2131167035 != paramView.getId()) {
       return;
     }
-    if (com.tencent.mm.protocal.b.hgp)
+    if (com.tencent.mm.protocal.b.iUg)
     {
-      paramView = getString(a.n.create_forbiden_uri, new Object[] { "0x" + Integer.toHexString(com.tencent.mm.protocal.b.hgo), s.aEJ() });
+      paramView = getString(2131427756, new Object[] { "0x" + Integer.toHexString(com.tencent.mm.protocal.b.iUf), t.aUB() });
       Intent localIntent = new Intent();
       localIntent.putExtra("rawUrl", paramView);
       localIntent.putExtra("showShare", false);
       localIntent.putExtra("show_bottom", false);
       localIntent.putExtra("needRedirect", false);
       localIntent.putExtra("neverGetA8Key", true);
-      localIntent.putExtra("hardcode_jspermission", JsapiPermissionWrapper.hgy);
-      localIntent.putExtra("hardcode_general_ctrl", GeneralControlWrapper.hgv);
-      a.bWW.k(localIntent, this);
+      localIntent.putExtra("hardcode_jspermission", JsapiPermissionWrapper.iUp);
+      localIntent.putExtra("hardcode_general_ctrl", GeneralControlWrapper.iUm);
+      a.coa.j(localIntent, this);
       return;
     }
-    cf.um();
+    aw.uB();
     paramView = new Intent(this, RegByMobileRegAIOUI.class);
     paramView.putExtra("login_type", 0);
     startActivity(paramView);
@@ -89,22 +91,22 @@ public class LoginSelectorUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    ng(8);
-    a.bWX.lq();
-    ax.tg();
-    DV();
+    qa(8);
+    a.cob.kL();
+    ah.ty();
+    Gb();
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
     if ((paramKeyEvent.getKeyCode() == 4) && (paramKeyEvent.getAction() == 0))
     {
-      Intent localIntent = a.bWW.ab(this);
+      Intent localIntent = a.coa.ak(this);
       localIntent.addFlags(67108864);
       localIntent.putExtra("can_finish", true);
       startActivity(localIntent);
       finish();
-      com.tencent.mm.ui.base.b.dC(this);
+      com.tencent.mm.ui.base.b.ej(this);
     }
     return super.onKeyDown(paramInt, paramKeyEvent);
   }
@@ -112,7 +114,7 @@ public class LoginSelectorUI
   public void onResume()
   {
     super.onResume();
-    ax.tg();
+    ah.ty();
   }
 }
 

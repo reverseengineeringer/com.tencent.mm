@@ -4,6 +4,8 @@ public class UtilsJni
 {
   public static native byte[] cryptGenRandom(int paramInt);
   
+  public static native int doEcdsaSHAVerify(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2, byte[] paramArrayOfByte3);
+  
   public static native int doEcdsaVerify(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2, byte[] paramArrayOfByte3);
 }
 

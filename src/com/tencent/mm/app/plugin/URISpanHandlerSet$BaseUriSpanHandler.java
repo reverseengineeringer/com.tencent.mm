@@ -1,21 +1,21 @@
 package com.tencent.mm.app.plugin;
 
 import android.os.Bundle;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
 
 abstract class URISpanHandlerSet$BaseUriSpanHandler
 {
   public URISpanHandlerSet$BaseUriSpanHandler(URISpanHandlerSet paramURISpanHandlerSet) {}
   
-  abstract boolean a(ah paramah, f paramf);
+  abstract boolean a(g paramg, b paramb);
   
-  abstract boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle);
+  abstract boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle);
   
-  abstract ah aZ(String paramString);
+  abstract g bb(String paramString);
   
-  abstract int[] lL();
+  abstract int[] lg();
 }
 
 /* Location:

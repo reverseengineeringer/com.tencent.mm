@@ -1,26 +1,48 @@
 package com.tencent.mm.compatible.b;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import com.tencent.mm.compatible.c.a;
-import com.tencent.mm.compatible.d.j;
-import com.tencent.mm.compatible.d.q;
-import com.tencent.mm.sdk.platformtools.t;
+import android.annotation.TargetApi;
+import android.media.AudioRecord;
+import android.media.audiofx.NoiseSuppressor;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class g
-  extends BroadcastReceiver
+public final class g
+  implements e.a
 {
-  g(d paramd) {}
+  private NoiseSuppressor bpG = null;
   
-  public final void onReceive(Context paramContext, Intent paramIntent)
+  @TargetApi(16)
+  public g(AudioRecord paramAudioRecord)
   {
-    t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[ BluetoothDevice.ACTION_ACL_DISCONNECTED ] ");
-    d.at(false);
-    if (bisbhc == 1) {
-      a.a(d.a(bfu));
+    boolean bool = NoiseSuppressor.isAvailable();
+    u.d("!44@/B4Tb64lLpIF0puzW1Oq16BT4ojg3TONtPZ4sG974Xc=", "available  " + bool);
+    if (bool) {
+      bpG = NoiseSuppressor.create(paramAudioRecord.getAudioSessionId());
     }
-    bfu.bO(4);
+  }
+  
+  @TargetApi(16)
+  public final boolean isAvailable()
+  {
+    return NoiseSuppressor.isAvailable();
+  }
+  
+  @TargetApi(16)
+  public final boolean nK()
+  {
+    if (bpG != null) {}
+    try
+    {
+      int i = bpG.setEnabled(true);
+      if (i == 0) {
+        return true;
+      }
+      u.d("!44@/B4Tb64lLpIF0puzW1Oq16BT4ojg3TONtPZ4sG974Xc=", "setEnabled failed " + i);
+    }
+    catch (Exception localException)
+    {
+      for (;;) {}
+    }
+    return false;
   }
 }
 

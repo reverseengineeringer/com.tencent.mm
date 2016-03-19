@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract cY(I)Ljava/lang/String;
+.method public abstract dd(I)Ljava/lang/String;
 .end method
 
-.method public abstract xI()I
+.method public abstract yz()I
 .end method

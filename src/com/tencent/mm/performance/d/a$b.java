@@ -13,26 +13,26 @@ public final class a$b
   public final void b(Activity paramActivity, Bundle paramBundle)
   {
     super.b(paramActivity, paramBundle);
-    a.a(bUc);
-    if (a.b(bUc) < 0L) {
-      a.c(bUc);
+    a.a(ckY);
+    if (a.b(ckY) < 0L) {
+      a.c(ckY);
     }
   }
   
   public final void s(Activity paramActivity)
   {
     super.s(paramActivity);
-    a locala = bUc;
+    a locala = ckY;
     WeakReference localWeakReference = new WeakReference(new Object());
     paramActivity = new WeakReference(paramActivity);
     try
     {
       a.a locala1 = new a.a(locala, (byte)0);
-      bUd = paramActivity;
-      bUe = localWeakReference;
-      bUf = System.currentTimeMillis();
-      bUg = bTZ;
-      bTY.add(locala1);
+      ckZ = paramActivity;
+      cla = localWeakReference;
+      clb = System.currentTimeMillis();
+      clc = ckV;
+      ckU.add(locala1);
       return;
     }
     finally {}

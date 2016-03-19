@@ -27,7 +27,7 @@
     .line 22
     const-string/jumbo v0, "key_username"
 
-    invoke-static {p2, v0}, Lcom/tencent/mm/sdk/platformtools/o;->c(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v0}, Lcom/tencent/mm/sdk/platformtools/p;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -40,7 +40,7 @@
 
     .line 26
     :cond_0
-    invoke-static {p2}, Landroid/support/v4/app/aj;->getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;
+    invoke-static {p2}, Landroid/support/v4/app/w;->getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;
 
     move-result-object v0
 
@@ -65,7 +65,7 @@
 
     aput-object v1, v3, v5
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -93,10 +93,10 @@
 
     aput-object v5, v4, v6
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 32
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/l$a;->ayt()Lcom/tencent/mm/pluginsdk/l$j;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOV()Lcom/tencent/mm/pluginsdk/i$l;
 
     move-result-object v2
 
@@ -104,11 +104,11 @@
 
     move-result-object v0
 
-    invoke-static {v1}, Lcom/tencent/mm/model/w;->ey(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/i;->eK(Ljava/lang/String;)I
 
     move-result v3
 
-    invoke-interface {v2, v1, v0, v3}, Lcom/tencent/mm/pluginsdk/l$j;->i(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-interface {v2, v1, v0, v3}, Lcom/tencent/mm/pluginsdk/i$l;->u(Ljava/lang/String;Ljava/lang/String;I)V
 
     goto :goto_0
 .end method

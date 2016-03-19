@@ -13,13 +13,13 @@
 
 
 # instance fields
-.field private fEJ:Landroid/app/Dialog;
+.field private elG:Landroid/app/Dialog;
 
-.field private imj:Landroid/widget/EditText;
+.field private kkq:Landroid/widget/EditText;
 
-.field private imk:Landroid/widget/TextView;
+.field private kkr:Landroid/widget/TextView;
 
-.field private iml:Ljava/lang/String;
+.field private kks:Ljava/lang/String;
 
 
 # direct methods
@@ -33,22 +33,84 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
     .line 31
-    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->fEJ:Landroid/app/Dialog;
+    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->elG:Landroid/app/Dialog;
 
     .line 32
-    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imj:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkq:Landroid/widget/EditText;
 
     .line 33
-    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imk:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkr:Landroid/widget/TextView;
 
     .line 34
-    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->iml:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kks:Ljava/lang/String;
 
     .line 119
     return-void
 .end method
 
-.method private static A(Ljava/lang/CharSequence;)F
+.method static synthetic A(Ljava/lang/CharSequence;)F
+    .locals 1
+
+    .prologue
+    .line 24
+    invoke-static {p0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->z(Ljava/lang/CharSequence;)F
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/ui/ExposeSupplementUI;Ljava/lang/CharSequence;)I
+    .locals 1
+
+    .prologue
+    .line 24
+    invoke-static {p1}, Lcom/tencent/mm/ui/ExposeSupplementUI;->y(Ljava/lang/CharSequence;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/ui/ExposeSupplementUI;)Landroid/widget/EditText;
+    .locals 1
+
+    .prologue
+    .line 24
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkq:Landroid/widget/EditText;
+
+    return-object v0
+.end method
+
+.method static synthetic b(Lcom/tencent/mm/ui/ExposeSupplementUI;)Landroid/widget/TextView;
+    .locals 1
+
+    .prologue
+    .line 24
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkr:Landroid/widget/TextView;
+
+    return-object v0
+.end method
+
+.method private static y(Ljava/lang/CharSequence;)I
+    .locals 1
+
+    .prologue
+    .line 92
+    invoke-static {p0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->z(Ljava/lang/CharSequence;)F
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/Math;->round(F)I
+
+    move-result v0
+
+    rsub-int/lit8 v0, v0, 0x32
+
+    return v0
+.end method
+
+.method private static z(Ljava/lang/CharSequence;)F
     .locals 3
 
     .prologue
@@ -70,7 +132,7 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/bn;->f(C)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->e(C)Z
 
     move-result v2
 
@@ -100,82 +162,20 @@
     return v1
 .end method
 
-.method static synthetic B(Ljava/lang/CharSequence;)F
-    .locals 1
-
-    .prologue
-    .line 24
-    invoke-static {p0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->A(Ljava/lang/CharSequence;)F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic a(Lcom/tencent/mm/ui/ExposeSupplementUI;Ljava/lang/CharSequence;)I
-    .locals 1
-
-    .prologue
-    .line 24
-    invoke-static {p1}, Lcom/tencent/mm/ui/ExposeSupplementUI;->z(Ljava/lang/CharSequence;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method static synthetic a(Lcom/tencent/mm/ui/ExposeSupplementUI;)Landroid/widget/EditText;
-    .locals 1
-
-    .prologue
-    .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imj:Landroid/widget/EditText;
-
-    return-object v0
-.end method
-
-.method static synthetic b(Lcom/tencent/mm/ui/ExposeSupplementUI;)Landroid/widget/TextView;
-    .locals 1
-
-    .prologue
-    .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imk:Landroid/widget/TextView;
-
-    return-object v0
-.end method
-
-.method private static z(Ljava/lang/CharSequence;)I
-    .locals 1
-
-    .prologue
-    .line 92
-    invoke-static {p0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->A(Ljava/lang/CharSequence;)F
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Math;->round(F)I
-
-    move-result v0
-
-    rsub-int/lit8 v0, v0, 0x32
-
-    return v0
-.end method
-
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 5
 
     .prologue
     const/4 v3, 0x0
 
     .line 43
-    new-instance v0, Lcom/tencent/mm/ui/m;
+    new-instance v0, Lcom/tencent/mm/ui/ExposeSupplementUI$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/m;-><init>(Lcom/tencent/mm/ui/ExposeSupplementUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/ExposeSupplementUI$1;-><init>(Lcom/tencent/mm/ui/ExposeSupplementUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 49
     invoke-virtual {p0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->getIntent()Landroid/content/Intent;
@@ -188,10 +188,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->iml:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kks:Ljava/lang/String;
 
     .line 50
-    sget v0, Lcom/tencent/mm/a$i;->supplement_edit_text:I
+    const v0, 0x7f07019f
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->findViewById(I)Landroid/view/View;
 
@@ -199,10 +199,10 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imj:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkq:Landroid/widget/EditText;
 
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imj:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkq:Landroid/widget/EditText;
 
     const/4 v1, 0x1
 
@@ -222,29 +222,29 @@
     invoke-direct {v1, p0, v3}, Lcom/tencent/mm/ui/ExposeSupplementUI$a;-><init>(Lcom/tencent/mm/ui/ExposeSupplementUI;B)V
 
     .line 53
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imj:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkq:Landroid/widget/EditText;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 54
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->iml:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kks:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imj:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkq:Landroid/widget/EditText;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->iml:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kks:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 57
     :cond_0
-    sget v0, Lcom/tencent/mm/a$i;->wordcount:I
+    const v0, 0x7f070093
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->findViewById(I)Landroid/view/View;
 
@@ -252,38 +252,38 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imk:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkr:Landroid/widget/TextView;
 
     .line 58
-    sget v0, Lcom/tencent/mm/a$i;->supplement_container:I
+    const v0, 0x7f07019e
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     .line 59
-    iget-object v2, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imj:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkq:Landroid/widget/EditText;
 
-    new-instance v3, Lcom/tencent/mm/ui/n;
+    new-instance v3, Lcom/tencent/mm/ui/ExposeSupplementUI$2;
 
-    invoke-direct {v3, p0, v0}, Lcom/tencent/mm/ui/n;-><init>(Lcom/tencent/mm/ui/ExposeSupplementUI;Landroid/view/View;)V
+    invoke-direct {v3, p0, v0}, Lcom/tencent/mm/ui/ExposeSupplementUI$2;-><init>(Lcom/tencent/mm/ui/ExposeSupplementUI;Landroid/view/View;)V
 
     invoke-virtual {v2, v3}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imk:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkr:Landroid/widget/TextView;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imj:Landroid/widget/EditText;
+    iget-object v3, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkq:Landroid/widget/EditText;
 
     invoke-virtual {v3}, Landroid/widget/EditText;->getEditableText()Landroid/text/Editable;
 
     move-result-object v3
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/ExposeSupplementUI;->z(Ljava/lang/CharSequence;)I
+    invoke-static {v3}, Lcom/tencent/mm/ui/ExposeSupplementUI;->y(Ljava/lang/CharSequence;)I
 
     move-result v3
 
@@ -300,25 +300,25 @@
     .line 69
     const/4 v0, 0x2
 
-    sget v2, Lcom/tencent/mm/a$n;->expose_confirm:I
+    const v2, 0x7f0b0881
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/ExposeSupplementUI;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    new-instance v3, Lcom/tencent/mm/ui/o;
+    new-instance v3, Lcom/tencent/mm/ui/ExposeSupplementUI$3;
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/o;-><init>(Lcom/tencent/mm/ui/ExposeSupplementUI;)V
+    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/ExposeSupplementUI$3;-><init>(Lcom/tencent/mm/ui/ExposeSupplementUI;)V
 
-    sget v4, Lcom/tencent/mm/ui/cn$b;->iqR:I
+    sget v4, Lcom/tencent/mm/ui/j$b;->kpJ:I
 
     invoke-virtual {p0, v0, v2, v3, v4}, Lcom/tencent/mm/ui/ExposeSupplementUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
 
     .line 78
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->Xh()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->age()V
 
     .line 79
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->imj:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI;->kkq:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getEditableText()Landroid/text/Editable;
 
@@ -335,7 +335,7 @@
 
     .prologue
     .line 88
-    sget v0, Lcom/tencent/mm/a$k;->expose_supplement:I
+    const v0, 0x7f0a0071
 
     return v0
 .end method
@@ -348,12 +348,12 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 38
-    sget v0, Lcom/tencent/mm/a$n;->expose_supplement:I
+    const v0, 0x7f0b0880
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->qb(I)V
 
     .line 39
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->Gb()V
 
     .line 40
     return-void

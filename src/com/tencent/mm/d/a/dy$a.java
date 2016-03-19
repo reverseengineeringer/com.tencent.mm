@@ -2,7 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class dy$a
 {
-  public String auu;
+  public int axW = -1;
+  public long axX = 0L;
+  public String username;
 }
 
 /* Location:

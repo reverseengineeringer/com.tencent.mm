@@ -2,10 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class eq$a
 {
-  public int aBo;
-  public boolean aBp;
-  public boolean aBq;
-  public String aqX;
+  public int type = 15;
 }
 
 /* Location:

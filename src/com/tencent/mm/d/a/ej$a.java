@@ -1,12 +1,8 @@
 package com.tencent.mm.d.a;
 
-import java.util.List;
-
 public final class ej$a
 {
-  public boolean aAC = false;
-  public String aAF;
-  public List aAG;
+  public long ayW = 0L;
 }
 
 /* Location:

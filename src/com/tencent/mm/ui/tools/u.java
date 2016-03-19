@@ -1,23 +1,16 @@
 package com.tencent.mm.ui.tools;
 
-import com.tencent.mm.model.br.a;
-import com.tencent.mm.ui.base.bn;
+import android.content.Context;
+import com.tencent.mm.aw.a;
 
-final class u
-  implements br.a
+public final class u
 {
-  public final void tQ()
+  public static int eB(Context paramContext)
   {
-    if (r.aRv() != null)
-    {
-      r.aRv().dismiss();
-      r.aRw();
+    if (Float.compare(a.cY(paramContext), 1.125F) > 0) {
+      return 2130970269;
     }
-  }
-  
-  public final boolean tR()
-  {
-    return r.aRu();
+    return 2130970267;
   }
 }
 

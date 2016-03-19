@@ -2,7 +2,7 @@ package com.tencent.mm.ui;
 
 public abstract interface KeyboardLinearLayout$a
 {
-  public abstract void gR(int paramInt);
+  public abstract void in(int paramInt);
 }
 
 /* Location:

@@ -6,19 +6,20 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/support/v4/widget/e$d;,
+        Landroid/support/v4/widget/e$c;,
         Landroid/support/v4/widget/e$b;,
-        Landroid/support/v4/widget/e$a;,
-        Landroid/support/v4/widget/e$c;
+        Landroid/support/v4/widget/e$a;
     }
 .end annotation
 
 
 # static fields
-.field private static final iB:Landroid/support/v4/widget/e$c;
+.field static final hK:Landroid/support/v4/widget/e$a;
 
 
 # instance fields
-.field private iA:Ljava/lang/Object;
+.field hJ:Ljava/lang/Object;
 
 
 # direct methods
@@ -26,147 +27,128 @@
     .locals 2
 
     .prologue
-    .line 37
+    .line 240
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
+    .line 241
     const/16 v1, 0xe
 
     if-lt v0, v1, :cond_0
 
-    .line 38
+    .line 242
+    new-instance v0, Landroid/support/v4/widget/e$d;
+
+    invoke-direct {v0}, Landroid/support/v4/widget/e$d;-><init>()V
+
+    sput-object v0, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
+
+    .line 248
+    :goto_0
+    return-void
+
+    .line 243
+    :cond_0
+    const/16 v1, 0x9
+
+    if-lt v0, v1, :cond_1
+
+    .line 244
+    new-instance v0, Landroid/support/v4/widget/e$c;
+
+    invoke-direct {v0}, Landroid/support/v4/widget/e$c;-><init>()V
+
+    sput-object v0, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
+
+    goto :goto_0
+
+    .line 246
+    :cond_1
     new-instance v0, Landroid/support/v4/widget/e$b;
 
     invoke-direct {v0}, Landroid/support/v4/widget/e$b;-><init>()V
 
-    sput-object v0, Landroid/support/v4/widget/e;->iB:Landroid/support/v4/widget/e$c;
-
-    .line 42
-    :goto_0
-    return-void
-
-    .line 40
-    :cond_0
-    new-instance v0, Landroid/support/v4/widget/e$a;
-
-    invoke-direct {v0}, Landroid/support/v4/widget/e$a;-><init>()V
-
-    sput-object v0, Landroid/support/v4/widget/e;->iB:Landroid/support/v4/widget/e$c;
+    sput-object v0, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
 
     goto :goto_0
 .end method
 
-.method public constructor <init>(Landroid/content/Context;)V
+.method private constructor <init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
     .locals 1
 
     .prologue
-    .line 132
+    .line 258
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 133
-    sget-object v0, Landroid/support/v4/widget/e;->iB:Landroid/support/v4/widget/e$c;
+    .line 259
+    sget-object v0, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
 
-    invoke-interface {v0, p1}, Landroid/support/v4/widget/e$c;->e(Landroid/content/Context;)Ljava/lang/Object;
+    invoke-interface {v0, p1, p2}, Landroid/support/v4/widget/e$a;->b(Landroid/content/Context;Landroid/view/animation/Interpolator;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/widget/e;->iA:Ljava/lang/Object;
+    iput-object v0, p0, Landroid/support/v4/widget/e;->hJ:Ljava/lang/Object;
 
-    .line 134
+    .line 260
     return-void
+.end method
+
+.method public static a(Landroid/content/Context;Landroid/view/animation/Interpolator;)Landroid/support/v4/widget/e;
+    .locals 1
+
+    .prologue
+    .line 255
+    new-instance v0, Landroid/support/v4/widget/e;
+
+    invoke-direct {v0, p0, p1}, Landroid/support/v4/widget/e;-><init>(Landroid/content/Context;Landroid/view/animation/Interpolator;)V
+
+    return-object v0
 .end method
 
 
 # virtual methods
-.method public final aW()Z
+.method public final abortAnimation()V
     .locals 2
 
     .prologue
-    .line 189
-    sget-object v0, Landroid/support/v4/widget/e;->iB:Landroid/support/v4/widget/e$c;
+    .line 419
+    sget-object v0, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
 
-    iget-object v1, p0, Landroid/support/v4/widget/e;->iA:Ljava/lang/Object;
+    iget-object v1, p0, Landroid/support/v4/widget/e;->hJ:Ljava/lang/Object;
 
-    invoke-interface {v0, v1}, Landroid/support/v4/widget/e$c;->z(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Landroid/support/v4/widget/e$a;->G(Ljava/lang/Object;)V
 
-    move-result v0
-
-    return v0
-.end method
-
-.method public final draw(Landroid/graphics/Canvas;)Z
-    .locals 2
-
-    .prologue
-    .line 218
-    sget-object v0, Landroid/support/v4/widget/e;->iB:Landroid/support/v4/widget/e$c;
-
-    iget-object v1, p0, Landroid/support/v4/widget/e;->iA:Ljava/lang/Object;
-
-    invoke-interface {v0, v1, p1}, Landroid/support/v4/widget/e$c;->a(Ljava/lang/Object;Landroid/graphics/Canvas;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final f(F)Z
-    .locals 2
-
-    .prologue
-    .line 177
-    sget-object v0, Landroid/support/v4/widget/e;->iB:Landroid/support/v4/widget/e$c;
-
-    iget-object v1, p0, Landroid/support/v4/widget/e;->iA:Ljava/lang/Object;
-
-    invoke-interface {v0, v1, p1}, Landroid/support/v4/widget/e$c;->a(Ljava/lang/Object;F)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final finish()V
-    .locals 2
-
-    .prologue
-    .line 162
-    sget-object v0, Landroid/support/v4/widget/e;->iB:Landroid/support/v4/widget/e$c;
-
-    iget-object v1, p0, Landroid/support/v4/widget/e;->iA:Ljava/lang/Object;
-
-    invoke-interface {v0, v1}, Landroid/support/v4/widget/e$c;->y(Ljava/lang/Object;)V
-
-    .line 163
+    .line 420
     return-void
 .end method
 
-.method public final isFinished()Z
+.method public final getCurrX()I
     .locals 2
 
     .prologue
-    .line 154
-    sget-object v0, Landroid/support/v4/widget/e;->iB:Landroid/support/v4/widget/e$c;
+    .line 277
+    sget-object v0, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
 
-    iget-object v1, p0, Landroid/support/v4/widget/e;->iA:Ljava/lang/Object;
+    iget-object v1, p0, Landroid/support/v4/widget/e;->hJ:Ljava/lang/Object;
 
-    invoke-interface {v0, v1}, Landroid/support/v4/widget/e$c;->x(Ljava/lang/Object;)Z
+    invoke-interface {v0, v1}, Landroid/support/v4/widget/e$a;->D(Ljava/lang/Object;)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public final setSize(II)V
+.method public final getCurrY()I
     .locals 2
 
     .prologue
-    .line 143
-    sget-object v0, Landroid/support/v4/widget/e;->iB:Landroid/support/v4/widget/e$c;
+    .line 286
+    sget-object v0, Landroid/support/v4/widget/e;->hK:Landroid/support/v4/widget/e$a;
 
-    iget-object v1, p0, Landroid/support/v4/widget/e;->iA:Ljava/lang/Object;
+    iget-object v1, p0, Landroid/support/v4/widget/e;->hJ:Ljava/lang/Object;
 
-    invoke-interface {v0, v1, p1, p2}, Landroid/support/v4/widget/e$c;->a(Ljava/lang/Object;II)V
+    invoke-interface {v0, v1}, Landroid/support/v4/widget/e$a;->E(Ljava/lang/Object;)I
 
-    .line 144
-    return-void
+    move-result v0
+
+    return v0
 .end method

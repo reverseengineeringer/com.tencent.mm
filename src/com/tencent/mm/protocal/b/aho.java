@@ -1,54 +1,46 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
+
 public final class aho
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public String hjB;
-  public String hjC;
-  public String hjD;
+  public String jEt;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hjB != null) {
-        paramVarArgs.U(1, hjB);
+      if (jEt == null) {
+        throw new b("Not all required fields were included: PhoneNum");
       }
-      if (hjC != null) {
-        paramVarArgs.U(2, hjC);
-      }
-      if (hjD != null) {
-        paramVarArgs.U(3, hjD);
+      if (jEt != null) {
+        paramVarArgs.d(1, jEt);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (hjB == null) {
-        break label289;
+      if (jEt == null) {
+        break label210;
       }
     }
-    label289:
-    for (int i = a.a.a.b.b.a.T(1, hjB) + 0;; i = 0)
+    label210:
+    for (paramInt = a.a.a.b.b.a.e(1, jEt) + 0;; paramInt = 0)
     {
-      paramInt = i;
-      if (hjC != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, hjC);
-      }
-      i = paramInt;
-      if (hjD != null) {
-        i = paramInt + a.a.a.b.b.a.T(3, hjD);
-      }
-      return i;
+      return paramInt;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
-        break;
+        if (jEt != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: PhoneNum");
       }
       if (paramInt == 3)
       {
@@ -58,14 +50,8 @@ public final class aho
         {
         default: 
           return -1;
-        case 1: 
-          hjB = jMD.readString();
-          return 0;
-        case 2: 
-          hjC = jMD.readString();
-          return 0;
         }
-        hjD = jMD.readString();
+        jEt = maU.readString();
         return 0;
       }
       return -1;

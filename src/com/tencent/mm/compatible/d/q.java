@@ -1,498 +1,770 @@
 package com.tencent.mm.compatible.d;
 
-import android.annotation.SuppressLint;
-import android.bluetooth.BluetoothAdapter;
-import android.content.Context;
-import android.net.wifi.WifiInfo;
-import android.net.wifi.WifiManager;
-import android.os.Build;
-import android.os.Build.VERSION;
-import android.provider.Settings.Secure;
-import android.telephony.TelephonyManager;
-import com.tencent.mm.a.e;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.HashMap;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.Map;
-import java.util.Random;
 
-public final class q
+final class q
 {
-  public static o bim = new o();
-  public static b bin = new b();
-  public static a bio = new a();
-  public static t bip = new t();
-  public static w biq = new w();
-  private static int bir = -1;
-  public static j bis = new j();
-  public static p bit = new p();
-  public static u biu = new u();
-  private static String biv = null;
-  
-  public static String ap(Context paramContext)
-  {
-    if (paramContext == null) {
-      return null;
-    }
-    try
-    {
-      paramContext = (TelephonyManager)paramContext.getSystemService("phone");
-      if (paramContext == null) {
-        return null;
-      }
-      paramContext = paramContext.getDeviceId();
-      if (paramContext == null) {
-        return null;
-      }
-      paramContext = paramContext.trim();
-      return paramContext;
-    }
-    catch (SecurityException paramContext)
-    {
-      com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "getDeviceId failed, security exception");
-      return null;
-    }
-    catch (Exception paramContext)
-    {
-      for (;;) {}
-    }
-  }
-  
-  public static String aq(Context paramContext)
+  public static boolean a(String paramString, n paramn, b paramb, a parama, j paramj, t paramt, x paramx, v paramv, s params)
   {
     try
     {
-      paramContext = ((TelephonyManager)paramContext.getSystemService("phone")).getSimOperatorName();
-      return paramContext;
-    }
-    catch (Exception paramContext)
-    {
-      com.tencent.mm.sdk.platformtools.t.printErrStackTrace("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", paramContext, "getMobileSPType", new Object[0]);
-    }
-    return "";
-  }
-  
-  public static void cW(String paramString)
-  {
-    if ((paramString == null) || (paramString.length() <= 0)) {}
-    do
-    {
-      do
+      u.d("!44@/B4Tb64lLpJY56KQK+mokZeI1tOI9wHFRm7dcJohlOw=", "xml: " + paramString);
+      paramString = com.tencent.mm.sdk.platformtools.q.J(paramString, "deviceinfoconfig", null);
+      if (paramString == null)
       {
-        return;
-      } while (paramString.hashCode() == bir);
-      bir = paramString.hashCode();
-      bim.reset();
-      bin.reset();
-      bio.reset();
-      bis.reset();
-      bip.reset();
-      biq.reset();
-      biu.reset();
-      new s();
-    } while (!s.a(paramString, bim, bin, bio, bis, bip, biq, biu));
-    com.tencent.mm.sdk.platformtools.t.d("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "steve: mCameraInfo.mNeedEnhance = " + binbgU);
-  }
-  
-  public static String getAndroidId()
-  {
-    String str = Settings.Secure.getString(aa.getContext().getContentResolver(), "android_id");
-    com.tencent.mm.sdk.platformtools.t.i("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "androidid:[%s]", new Object[] { str });
-    return str;
-  }
-  
-  public static String getSimCountryIso()
-  {
-    Object localObject = (TelephonyManager)aa.getContext().getSystemService("phone");
-    if (localObject != null)
-    {
-      localObject = ((TelephonyManager)localObject).getSimCountryIso();
-      com.tencent.mm.sdk.platformtools.t.i("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "get isoCode:[%s]", new Object[] { localObject });
-      return (String)localObject;
-    }
-    return null;
-  }
-  
-  public static String oH()
-  {
-    Object localObject = (String)k.ot().get(258);
-    if (localObject != null) {
-      return (String)localObject;
-    }
-    String str = ap(aa.getContext());
-    localObject = str;
-    if (str == null) {
-      localObject = "1234567890ABCDEF";
-    }
-    k.ot().set(258, localObject);
-    return (String)localObject;
-  }
-  
-  public static String oI()
-  {
-    StringBuilder localStringBuilder;
-    String str;
-    if (biv == null)
-    {
-      localStringBuilder = new StringBuilder();
-      localStringBuilder.append(Settings.Secure.getString(aa.getContext().getContentResolver(), "android_id"));
-      str = (String)k.ot().get(256);
-      if (str == null) {
-        break label158;
+        u.i("!44@/B4Tb64lLpJY56KQK+mokZeI1tOI9wHFRm7dcJohlOw=", "hy: null device config");
+        return false;
       }
-      localStringBuilder.append(str);
-      str = (String)k.ot().get(259);
-      if (str == null) {
-        break label175;
-      }
-      com.tencent.mm.sdk.platformtools.t.d("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "getHardWareId from file " + str);
-    }
-    for (;;)
-    {
-      localStringBuilder.append(str);
-      str = localStringBuilder.toString();
-      biv = "A" + e.n(str.getBytes()).substring(0, 15);
-      com.tencent.mm.sdk.platformtools.t.w("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "guid:%s, dev=%s", new Object[] { biv, str });
-      return biv;
-      label158:
-      str = oL();
-      k.ot().set(256, str);
-      break;
-      label175:
-      str = Build.MANUFACTURER + Build.MODEL + m.oA();
-      k.ot().set(259, str);
-      com.tencent.mm.sdk.platformtools.t.d("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "getHardWareId " + str);
-    }
-  }
-  
-  public static String oJ()
-  {
-    Object localObject = (WifiManager)aa.getContext().getSystemService("wifi");
-    if (localObject == null) {}
-    for (localObject = null; localObject != null; localObject = ((WifiManager)localObject).getConnectionInfo()) {
-      return ((WifiInfo)localObject).getMacAddress();
-    }
-    return null;
-  }
-  
-  public static String oK()
-  {
-    String str = null;
-    BluetoothAdapter localBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-    if (localBluetoothAdapter != null) {
-      str = localBluetoothAdapter.getAddress();
-    }
-    return str;
-  }
-  
-  private static String oL()
-  {
-    String str1 = bn.dg(aa.getContext());
-    String str2;
-    if ((str1 != null) && (str1.length() > 0))
-    {
-      str2 = ("A" + str1 + "123456789ABCDEF").substring(0, 15);
-      com.tencent.mm.sdk.platformtools.t.w("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "generated deviceId=" + str2);
-      return str2;
-    }
-    Random localRandom = new Random();
-    localRandom.setSeed(System.currentTimeMillis());
-    str1 = "A";
-    int i = 0;
-    for (;;)
-    {
-      str2 = str1;
-      if (i >= 15) {
-        break;
-      }
-      str1 = str1 + (char)(localRandom.nextInt(25) + 65);
-      i += 1;
-    }
-  }
-  
-  public static String oM()
-  {
-    return Build.MODEL;
-  }
-  
-  /* Error */
-  public static String[] oN()
-  {
-    // Byte code:
-    //   0: iconst_2
-    //   1: anewarray 95	java/lang/String
-    //   4: astore_3
-    //   5: aload_3
-    //   6: iconst_0
-    //   7: ldc 120
-    //   9: aastore
-    //   10: aload_3
-    //   11: iconst_1
-    //   12: ldc_w 321
-    //   15: aastore
-    //   16: aconst_null
-    //   17: astore_2
-    //   18: new 323	java/io/BufferedReader
-    //   21: dup
-    //   22: new 325	java/io/FileReader
-    //   25: dup
-    //   26: ldc_w 327
-    //   29: invokespecial 328	java/io/FileReader:<init>	(Ljava/lang/String;)V
-    //   32: sipush 8192
-    //   35: invokespecial 331	java/io/BufferedReader:<init>	(Ljava/io/Reader;I)V
-    //   38: astore_1
-    //   39: aload_1
-    //   40: invokevirtual 334	java/io/BufferedReader:readLine	()Ljava/lang/String;
-    //   43: invokestatic 338	com/tencent/mm/sdk/platformtools/bn:iV	(Ljava/lang/String;)Ljava/lang/String;
-    //   46: ldc_w 340
-    //   49: invokevirtual 344	java/lang/String:split	(Ljava/lang/String;)[Ljava/lang/String;
-    //   52: astore_2
-    //   53: iconst_2
-    //   54: istore_0
-    //   55: iload_0
-    //   56: aload_2
-    //   57: arraylength
-    //   58: if_icmpge +41 -> 99
-    //   61: aload_3
-    //   62: iconst_0
-    //   63: new 147	java/lang/StringBuilder
-    //   66: dup
-    //   67: invokespecial 215	java/lang/StringBuilder:<init>	()V
-    //   70: aload_3
-    //   71: iconst_0
-    //   72: aaload
-    //   73: invokevirtual 218	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   76: aload_2
-    //   77: iload_0
-    //   78: aaload
-    //   79: invokevirtual 218	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   82: ldc_w 346
-    //   85: invokevirtual 218	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   88: invokevirtual 161	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   91: aastore
-    //   92: iload_0
-    //   93: iconst_1
-    //   94: iadd
-    //   95: istore_0
-    //   96: goto -41 -> 55
-    //   99: aload_3
-    //   100: iconst_1
-    //   101: aload_1
-    //   102: invokevirtual 334	java/io/BufferedReader:readLine	()Ljava/lang/String;
-    //   105: invokestatic 338	com/tencent/mm/sdk/platformtools/bn:iV	(Ljava/lang/String;)Ljava/lang/String;
-    //   108: ldc_w 340
-    //   111: invokevirtual 344	java/lang/String:split	(Ljava/lang/String;)[Ljava/lang/String;
-    //   114: iconst_2
-    //   115: aaload
-    //   116: aastore
-    //   117: aload_1
-    //   118: invokevirtual 349	java/io/BufferedReader:close	()V
-    //   121: aload_3
-    //   122: areturn
-    //   123: astore_1
-    //   124: aconst_null
-    //   125: astore_1
-    //   126: aload_1
-    //   127: ifnull -6 -> 121
-    //   130: aload_1
-    //   131: invokevirtual 349	java/io/BufferedReader:close	()V
-    //   134: aload_3
-    //   135: areturn
-    //   136: astore_1
-    //   137: aload_3
-    //   138: areturn
-    //   139: astore_1
-    //   140: aload_2
-    //   141: ifnull +7 -> 148
-    //   144: aload_2
-    //   145: invokevirtual 349	java/io/BufferedReader:close	()V
-    //   148: aload_1
-    //   149: athrow
-    //   150: astore_1
-    //   151: aload_3
-    //   152: areturn
-    //   153: astore_2
-    //   154: goto -6 -> 148
-    //   157: astore_3
-    //   158: aload_1
-    //   159: astore_2
-    //   160: aload_3
-    //   161: astore_1
-    //   162: goto -22 -> 140
-    //   165: astore_2
-    //   166: goto -40 -> 126
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   54	42	0	i	int
-    //   38	80	1	localBufferedReader	BufferedReader
-    //   123	1	1	localIOException1	IOException
-    //   125	6	1	localObject1	Object
-    //   136	1	1	localException1	Exception
-    //   139	10	1	localObject2	Object
-    //   150	9	1	localException2	Exception
-    //   161	1	1	localObject3	Object
-    //   17	128	2	arrayOfString1	String[]
-    //   153	1	2	localException3	Exception
-    //   159	1	2	localObject4	Object
-    //   165	1	2	localIOException2	IOException
-    //   4	148	3	arrayOfString2	String[]
-    //   157	4	3	localObject5	Object
-    // Exception table:
-    //   from	to	target	type
-    //   18	39	123	java/io/IOException
-    //   130	134	136	java/lang/Exception
-    //   18	39	139	finally
-    //   117	121	150	java/lang/Exception
-    //   144	148	153	java/lang/Exception
-    //   39	53	157	finally
-    //   55	92	157	finally
-    //   99	117	157	finally
-    //   39	53	165	java/io/IOException
-    //   55	92	165	java/io/IOException
-    //   99	117	165	java/io/IOException
-  }
-  
-  public static String oO()
-  {
-    Object localObject2 = null;
-    try
-    {
-      BluetoothAdapter localBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-      Object localObject1 = localObject2;
-      if (localBluetoothAdapter != null)
+      if (paramString.get(".deviceinfoconfig.voip.cpu.armv7") != null)
       {
-        localObject1 = localObject2;
-        if (localBluetoothAdapter.isEnabled()) {
-          localObject1 = localBluetoothAdapter.getAddress();
-        }
+        bsB = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.cpu.armv7"));
+        bsA = true;
       }
-      localObject1 = bn.iV((String)localObject1);
-      return (String)localObject1;
-    }
-    catch (Exception localException)
-    {
-      com.tencent.mm.sdk.platformtools.t.e("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", "getBlueToothAddress failed: %s", new Object[] { bn.a(localException) });
-    }
-    return "";
-  }
-  
-  @SuppressLint({"NewApi"})
-  public static String oP()
-  {
-    for (Object localObject = null;; localObject = str)
-    {
-      try
+      if (paramString.get(".deviceinfoconfig.voip.cpu.armv6") != null)
       {
-        if (Build.VERSION.SDK_INT < 14) {
-          break label21;
-        }
-        str = Build.getRadioVersion();
-        localObject = str;
+        bsC = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.cpu.armv6"));
+        bsA = true;
       }
-      catch (IncompatibleClassChangeError localIncompatibleClassChangeError)
+      if (paramString.get(".deviceinfoconfig.voip.camera.num") != null)
       {
-        String str;
-        com.tencent.mm.sdk.platformtools.t.printErrStackTrace("MicroMsg.Crash", localIncompatibleClassChangeError, "May cause dvmFindCatchBlock crash!", new Object[0]);
-        throw ((IncompatibleClassChangeError)new IncompatibleClassChangeError("May cause dvmFindCatchBlock crash!").initCause(localIncompatibleClassChangeError));
+        bqQ = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.num"));
+        bqR = true;
       }
-      catch (Throwable localThrowable)
+      if (paramString.get(".deviceinfoconfig.voip.camera.surface") != null)
       {
-        label21:
-        for (;;) {}
+        bqS = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.surface"));
+        bqT = true;
       }
-      return bn.iV((String)localObject);
-      str = Build.RADIO;
-    }
-  }
-  
-  public static String oQ()
-  {
-    return Build.VERSION.RELEASE;
-  }
-  
-  public static String oR()
-  {
-    try
-    {
-      String str = bn.iV(((TelephonyManager)aa.getContext().getSystemService("phone")).getSubscriberId());
-      return str;
-    }
-    catch (Exception localException)
-    {
-      com.tencent.mm.sdk.platformtools.t.printErrStackTrace("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", localException, "getPhoneIMSI", new Object[0]);
-    }
-    return "";
-  }
-  
-  public static String oS()
-  {
-    try
-    {
-      String str = bn.iV(((TelephonyManager)aa.getContext().getSystemService("phone")).getSimSerialNumber());
-      return str;
-    }
-    catch (Exception localException)
-    {
-      com.tencent.mm.sdk.platformtools.t.printErrStackTrace("!32@/B4Tb64lLpJY56KQK+mokb3FPD+69fiF", localException, "getPhoneICCID", new Object[0]);
-    }
-    return "";
-  }
-  
-  @SuppressLint({"NewApi"})
-  public static String oT()
-  {
-    String str = null;
-    if (Build.VERSION.SDK_INT >= 9) {
-      str = Build.SERIAL;
-    }
-    return bn.iV(str);
-  }
-  
-  public static Map oU()
-  {
-    HashMap localHashMap = new HashMap();
-    try
-    {
-      BufferedReader localBufferedReader = new BufferedReader(new InputStreamReader(new ProcessBuilder(new String[] { "/system/bin/cat", "/proc/cpuinfo" }).start().getInputStream()));
-      for (;;)
+      if (paramString.get(".deviceinfoconfig.voip.camera.format") != null)
       {
-        Object localObject = localBufferedReader.readLine();
-        if (localObject == null) {
-          break;
-        }
-        if (!((String)localObject).trim().equals(""))
+        bqU = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.format"));
+        bqV = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.back.enable") != null)
+      {
+        bqY.brt = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.back.enable"));
+        bqZ = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.back.fps") != null)
+      {
+        bqY.bru = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.back.fps"));
+        bqZ = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.back.orien") != null)
+      {
+        bqY.brv = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.back.orien"));
+        bqZ = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.back.rotate") != null)
+      {
+        bqY.brw = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.back.rotate"));
+        bqZ = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.back.isleft") != null)
+      {
+        bqY.brx = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.back.isleft"));
+        bqZ = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.back.width") != null)
+      {
+        bqY.width = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.back.width"));
+        bqZ = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.back.height") != null)
+      {
+        bqY.height = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.back.height"));
+        bqZ = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.front.enable") != null)
+      {
+        bqW.brt = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.front.enable"));
+        bqX = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.front.fps") != null)
+      {
+        bqW.bru = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.front.fps"));
+        bqX = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.front.orien") != null)
+      {
+        bqW.brv = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.front.orien"));
+        bqX = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.front.rotate") != null)
+      {
+        bqW.brw = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.front.rotate"));
+        bqX = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.front.isleft") != null)
+      {
+        bqW.brx = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.front.isleft"));
+        bqX = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.front.width") != null)
+      {
+        bqW.width = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.front.width"));
+        bqX = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.front.height") != null)
+      {
+        bqW.height = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.front.height"));
+        bqX = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.videorecord.frotate") != null)
+      {
+        brb = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.videorecord.frotate"));
+        bra = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.videorecord.forientation") != null)
+      {
+        brc = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.videorecord.forientation"));
+        bra = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.videorecord.brotate") != null)
+      {
+        brd = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.videorecord.brotate"));
+        bra = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.videorecord.borientation") != null)
+      {
+        bre = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.videorecord.borientation"));
+        bra = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.videorecord.num") != null)
+      {
+        brf = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.videorecord.num"));
+        brg = true;
+        bra = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.videorecord.api20") != null) {
+        bri = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.videorecord.api20"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.setframerate") != null) {
+        brh = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.setframerate"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.scannerFocusThreshold") != null) {
+        brj = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.scannerFocusThreshold"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.scannerImageQuality") != null) {
+        brk = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.scannerImageQuality"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.videorecord.num") != null)
+      {
+        brf = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.videorecord.num"));
+        brg = true;
+        bra = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.videorecord.api20") != null) {
+        bri = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.videorecord.api20"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.setframerate") != null) {
+        brh = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.setframerate"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.useFixFPSMode") != null) {
+        brl = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.useFixFPSMode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.useRangeFPSMode") != null) {
+        brm = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.useRangeFPSMode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.setYUV420SPFormat") != null) {
+        brn = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.setYUV420SPFormat"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.useMeteringMode") != null) {
+        bro = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.useMeteringMode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.useContinueVideoFocusMode") != null) {
+        brp = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.useContinueVideoFocusMode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.sightCameraID") != null) {
+        brq = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.sightCameraID"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.needEnhance") != null) {
+        brr = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.needEnhance"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.camera.support480enc") != null) {
+        brs = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.camera.support480enc"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.streamtype") != null)
+      {
+        bpI = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.streamtype"));
+        bpH = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.smode") != null)
+      {
+        bpJ = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.smode"));
+        bpH = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.omode") != null)
+      {
+        bpK = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.omode"));
+        bpH = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.ospeaker") != null)
+      {
+        bpL = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.ospeaker"));
+        bpH = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.operating") != null)
+      {
+        bpM = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.operating"));
+        bpH = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.moperating") != null)
+      {
+        bpN = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.moperating"));
+        bpH = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.mstreamtype") != null)
+      {
+        bpO = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.mstreamtype"));
+        bpH = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.recordmode") != null) {
+        bpP = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.recordmode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.playenddelay") != null) {
+        bpQ = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.playenddelay"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.aecmode") != null) {
+        bpR = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.aecmode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.nsmode") != null) {
+        bpS = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.nsmode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.volummode") != null) {
+        bpT = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.volummode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.sourcemode") != null) {
+        bqf = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.sourcemode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.micmode") != null) {
+        bqe = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.micmode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.speakerMode") != null) {
+        bqg = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.speakerMode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.phoneMode") != null) {
+        bqh = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.phoneMode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.deviceinfo.voipstreamType") != null) {
+        bqi = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.deviceinfo.voipstreamType"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.speakerstreamtype") != null) {
+        bqj = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.speakerstreamtype"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.phonestreamtype") != null) {
+        bqk = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.phonestreamtype"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.ringphonestream") != null) {
+        bqm = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.ringphonestream"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.ringphonemode") != null) {
+        bqn = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.ringphonemode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.ringspeakerstream") != null) {
+        bqo = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.ringspeakerstream"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.ringspeakermode") != null) {
+        bqp = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.ringspeakermode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.aecmodenew") != null) {
+        bqq = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.aecmodenew"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.nsmodenew") != null) {
+        bqr = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.nsmodenew"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.agcmodenew") != null) {
+        bqs = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.agcmodenew"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.agcmode") != null) {
+        bqt = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.agcmode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.agctargetdb") != null) {
+        bqu = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.agctargetdb"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.agcgaindb") != null) {
+        bqv = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.agcgaindb"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.agcflag") != null) {
+        bqw = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.agcflag"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.agclimiter") != null) {
+        bqx = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.agclimiter"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.inputvolumescale") != null) {
+        bpU = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.inputvolumescale"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.outputvolumescale") != null) {
+        bpV = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.outputvolumescale"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.inputvolumescaleforspeaker") != null) {
+        bpW = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.inputvolumescaleforspeaker"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.outputvolumescaleforspeaker") != null) {
+        bpX = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.outputvolumescaleforspeaker"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.ehanceheadsetec") != null) {
+        bqa = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.ehanceheadsetec"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.setecmodelevelforheadset") != null) {
+        bqb = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.setecmodelevelforheadset"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.setecmodelevelforspeaker") != null) {
+        bqc = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.setecmodelevelforspeaker"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.enablespeakerenhanceec") != null) {
+        bqd = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.enablespeakerenhanceec"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.enablerectimer") != null) {
+        bqy = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.enablerectimer"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.enablePlayTimer") != null) {
+        bqz = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.enablePlayTimer"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof0") != null)
+      {
+        bqB[0] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof0")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof1") != null)
+      {
+        bqB[1] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof1")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof2") != null)
+      {
+        bqB[2] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof2")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof3") != null)
+      {
+        bqB[3] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof3")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof4") != null)
+      {
+        bqB[4] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof4")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof5") != null)
+      {
+        bqB[5] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof5")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof6") != null)
+      {
+        bqB[6] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof6")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof7") != null)
+      {
+        bqB[7] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof7")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof8") != null)
+      {
+        bqB[8] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof8")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof9") != null)
+      {
+        bqB[9] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof9")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof10") != null)
+      {
+        bqB[10] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof10")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof11") != null)
+      {
+        bqB[11] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof11")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof12") != null)
+      {
+        bqB[12] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof12")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof13") != null)
+      {
+        bqB[13] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof13")));
+        bqA = 1;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof14") != null)
+      {
+        bqB[14] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctcof.cof14")));
+        bqA = 1;
+      }
+      if ((paramString.get(".deviceinfoconfig.voip.audio.correctoff") != null) && (Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.correctoff")) == 1)) {
+        bqA = 0;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.outputvolumegainforphone") != null) {
+        bpY = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.outputvolumegainforphone"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.outputvolumegainforspeaker") != null) {
+        bpZ = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.outputvolumegainforspeaker"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.noisegatestrength.cof0") != null) {
+        bqC[0] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.noisegatestrength.cof0")));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.noisegatestrength.cof1") != null) {
+        bqC[1] = ((short)Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.noisegatestrength.cof1")));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.agcrxflag") != null) {
+        bqM = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.agcrxflag"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.agcrxtargetdb") != null) {
+        bqN = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.agcrxtargetdb"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.agcrxgaindb") != null) {
+        bqO = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.agcrxgaindb"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.agcrxlimiter") != null) {
+        bqP = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.agcrxlimiter"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.spkecenable") != null) {
+        bqE = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.spkecenable"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.audio.playenddelay") != null) {
+        bpQ = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.audio.playenddelay"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.ipcall.speakermode") != null)
+      {
+        bqG = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.ipcall.speakermode"));
+        bqF = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.ipcall.phonemode") != null)
+      {
+        bqH = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.ipcall.phonemode"));
+        bqF = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.ipcall.sourcemode") != null)
+      {
+        bqI = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.ipcall.sourcemode"));
+        bqF = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.ipcall.streamtype") != null)
+      {
+        bqJ = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.ipcall.streamtype"));
+        bqF = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.ipcall.speakerstreamtype") != null)
+      {
+        bqK = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.ipcall.speakerstreamtype"));
+        bqF = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.ipcall.phonestreamtype") != null)
+      {
+        bqL = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.ipcall.phonestreamtype"));
+        bqF = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.js") != null)
+      {
+        brH = true;
+        brI = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.js"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.js") != null) {
+        RF = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.js"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.stopbluetoothbr") != null) {
+        brA = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.stopbluetoothbr"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.stopbluetoothbu") != null) {
+        brB = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.stopbluetoothbu"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.setbluetoothscoon") != null) {
+        brD = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.setbluetoothscoon"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.startbluetoothsco") != null) {
+        brC = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.startbluetoothsco"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.voicesearchfastmode") != null) {
+        brE = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.voicesearchfastmode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.pcmreadmode") != null) {
+        brG = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.pcmreadmode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.pcmbufferrate") != null) {
+        brF = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.pcmbufferrate"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.app") != null) {
+        brJ = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.app"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.deviceinfo.voipapp") != null) {
+        bsa = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.deviceinfo.voipapp"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.deviceinfo.voipappns") != null) {
+        bsb = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.deviceinfo.voipappns"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.deviceinfo.voipappaec") != null) {
+        bsc = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.deviceinfo.voipappaec"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.deviceinfo.voipappagc") != null) {
+        bsd = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.deviceinfo.voipappagc"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.vmfd") != null) {
+        brK = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.vmfd"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.htcvoicemode") != null) {
+        brL = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.htcvoicemode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.samsungvoicemode") != null) {
+        brM = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.samsungvoicemode"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.speexbufferrate") != null) {
+        brN = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.speexbufferrate"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.linespe") != null) {
+        brO = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.linespe"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.fixspan") != null) {
+        brZ = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.fixspan"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.extvideo") != null) {
+        brP = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.extvideo"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.extvideosam") != null) {
+        brQ = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.extvideosam"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.sysvideodegree") != null) {
+        brR = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.sysvideodegree"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.mmnotify") != null) {
+        brU = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.mmnotify"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.extsharevcard") != null) {
+        brT = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.extsharevcard"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.audioformat") != null) {
+        brV = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.audioformat"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.qrcam") != null) {
+        brW = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.qrcam"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.sysvideofdegree") != null) {
+        brS = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.sysvideofdegree"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.audioformat") != null) {
+        brV = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.audioformat"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.qrcam") != null) {
+        brW = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.qrcam"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.base") != null) {
+        bse = ((String)paramString.get(".deviceinfoconfig.voip.common.base"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.packageinfo") != null) {
+        bsf = ((String)paramString.get(".deviceinfoconfig.voip.common.packageinfo"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.classloader") != null) {
+        bsg = ((String)paramString.get(".deviceinfoconfig.voip.common.classloader"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.resources") != null) {
+        bsh = ((String)paramString.get(".deviceinfoconfig.voip.common.resources"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.sysvideofp") != null) {
+        brX = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.sysvideofp"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.extstoragedir") != null) {
+        bsi = ((String)paramString.get(".deviceinfoconfig.voip.common.extstoragedir"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.extpubdir") != null) {
+        bsj = ((String)paramString.get(".deviceinfoconfig.voip.common.extpubdir"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.extdatadir") != null) {
+        bsk = ((String)paramString.get(".deviceinfoconfig.voip.common.extdatadir"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.extrootdir") != null) {
+        bsl = ((String)paramString.get(".deviceinfoconfig.voip.common.extrootdir"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.extstoragestate") != null) {
+        bsm = ((String)paramString.get(".deviceinfoconfig.voip.common.extstoragestate"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.extcachedir") != null) {
+        bsn = ((String)paramString.get(".deviceinfoconfig.voip.common.extcachedir"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.extvideoplayer") != null) {
+        brY = ay.getInt((String)paramString.get(".deviceinfoconfig.voip.common.extvideoplayer"), -1);
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.loadDrawable") != null) {
+        bso = ((String)paramString.get(".deviceinfoconfig.voip.common.loadDrawable"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.loadXmlResourceParser") != null) {
+        bsp = ((String)paramString.get(".deviceinfoconfig.voip.common.loadXmlResourceParser"));
+      }
+      if ((paramString.get(".deviceinfoconfig.voip.common.sensorNearFar") != null) && (1 == Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.common.sensorNearFar")))) {
+        com.tencent.mm.sdk.platformtools.SensorController.jXM = true;
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.sightFullType") != null) {
+        bsq = ((String)paramString.get(".deviceinfoconfig.voip.common.sightFullType"));
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.slyTextureView") != null) {
+        bsr = ay.getInt((String)paramString.get(".deviceinfoconfig.voip.common.slyTextureView"), -1);
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.checkSightDraftMd5") != null) {
+        bss = ay.getInt((String)paramString.get(".deviceinfoconfig.voip.common.checkSightDraftMd5"), 1);
+      }
+      if (paramString.get(".deviceinfoconfig.voip.common.swipeBackConfig") != null)
+      {
+        bst = ay.getInt((String)paramString.get(".deviceinfoconfig.voip.common.swipeBackConfig"), 1);
+        if (bst == 1)
         {
-          localObject = ((String)localObject).split(":");
-          if (localObject.length > 1) {
-            localHashMap.put(localObject[0].trim().toLowerCase(), localObject[1].trim());
+          bool = true;
+          com.tencent.mm.compatible.h.b.az(bool);
+        }
+      }
+      else
+      {
+        if (paramString.get(".deviceinfoconfig.voip.common.canDecodeWebp") != null) {
+          bsu = ay.getInt((String)paramString.get(".deviceinfoconfig.voip.common.canDecodeWebp"), 1);
+        }
+        if (paramString.get(".deviceinfoconfig.voip.mediaRecorder.useThisInfo") != null)
+        {
+          if (Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.mediaRecorder.useThisInfo")) != 1) {
+            break label7290;
+          }
+          bool = true;
+          label5446:
+          bsX = bool;
+        }
+        if (paramString.get(".deviceinfoconfig.voip.mediaRecorder.width") != null) {
+          bsY = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.mediaRecorder.width"));
+        }
+        if (paramString.get(".deviceinfoconfig.voip.mediaRecorder.height") != null) {
+          bsZ = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.mediaRecorder.height"));
+        }
+        if (paramString.get(".deviceinfoconfig.voip.mediaRecorder.frameRate") != null) {
+          bta = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.mediaRecorder.frameRate"));
+        }
+        if (paramString.get(".deviceinfoconfig.voip.mediaRecorder.encodingBitRate") != null) {
+          btb = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.mediaRecorder.encodingBitRate"));
+        }
+        if (paramString.get(".deviceinfoconfig.voip.mediaRecorder.useSystem") != null) {
+          btc = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.mediaRecorder.useSystem"));
+        }
+        if (paramString.get(".deviceinfoconfig.voip.mediaRecorder.yuv420SPSeek") != null) {
+          btd = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.mediaRecorder.yuv420SPSeek"));
+        }
+        if (paramString.get(".deviceinfoconfig.voip.mediaRecorder.useMediaCodecEncodeAAC") != null) {
+          bte = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.mediaRecorder.useMediaCodecEncodeAAC"));
+        }
+        if (paramString.get(".deviceinfoconfig.voip.mediaRecorder.AACSampleRate") != null) {
+          btf = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.mediaRecorder.AACSampleRate"));
+        }
+        if (paramString.get(".deviceinfoconfig.voip.mediaRecorder.useTextureViewForCamera") != null) {
+          btg = Integer.parseInt((String)paramString.get(".deviceinfoconfig.voip.mediaRecorder.useTextureViewForCamera"));
+        }
+        if (paramString.get(".deviceinfoconfig.voip.webview.notifythread") != null)
+        {
+          if (ay.getInt((String)paramString.get(".deviceinfoconfig.voip.webview.notifythread"), 0) != 1) {
+            break label7296;
+          }
+          bool = true;
+          label5776:
+          btq = bool;
+        }
+        if (paramString.get(".deviceinfoconfig.voip.webview.forceUseSysWebView") != null) {
+          if (ay.getInt((String)paramString.get(".deviceinfoconfig.voip.webview.forceUseSysWebView"), 0) != 1) {
+            break label7302;
           }
         }
       }
-      localBufferedReader.close();
-      return localHashMap;
+      label7290:
+      label7296:
+      label7302:
+      for (boolean bool = true;; bool = false)
+      {
+        btr = bool;
+        paramn = (String)paramString.get(".deviceinfoconfig.voip.sensor.stepCounterRateUs");
+        if (paramn != null)
+        {
+          bti = ay.getInt(paramn, 800000);
+          r.A(100, bti);
+          u.i("!44@/B4Tb64lLpJY56KQK+mokZeI1tOI9wHFRm7dcJohlOw=", "setSensoInfo(rateUs : %d).", new Object[] { Integer.valueOf(bti) });
+        }
+        paramn = (String)paramString.get(".deviceinfoconfig.voip.sensor.stepCounterSaveInterval");
+        if (paramn != null)
+        {
+          btj = ay.getInt(paramn, 60000);
+          r.A(101, btj);
+          u.i("!44@/B4Tb64lLpJY56KQK+mokZeI1tOI9wHFRm7dcJohlOw=", "setSensoInfo(saveInterval : %d).", new Object[] { Integer.valueOf(btj) });
+        }
+        paramn = (String)paramString.get(".deviceinfoconfig.voip.sensor.stepCounterMaxStep5m");
+        if (paramn != null)
+        {
+          btl = ay.getInt(paramn, 1000);
+          r.A(102, btl);
+          u.i("!44@/B4Tb64lLpJY56KQK+mokZeI1tOI9wHFRm7dcJohlOw=", "setSensoInfo(maxStep5m : %d).", new Object[] { Integer.valueOf(btl) });
+        }
+        paramn = (String)paramString.get(".deviceinfoconfig.voip.sensor.stepCounterSwitch");
+        if (paramn != null)
+        {
+          btm = ay.getInt(paramn, 0);
+          r.A(103, btm);
+          u.i("!44@/B4Tb64lLpJY56KQK+mokZeI1tOI9wHFRm7dcJohlOw=", "setSensoInfo(switch : %d).", new Object[] { Integer.valueOf(btm) });
+        }
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "js " + RF);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "stopBluetoothInBR " + brA);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "stopBluetoothInBU " + brB);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "setBluetoothScoOn " + brD);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "startBluetoothSco " + brC);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "voiceSearchFastMode " + brE);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "pcmReadMode " + brG);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "pcmBufferRate " + brF);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "audioPrePro " + brJ);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "voicemsgfd " + brK);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "htcvoicemode " + brL);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "samsungvoicemode " + brM);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "speexBufferRate " + brN);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "linespe " + brO);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "fixspan " + brZ);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "extvideo " + brP);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "extvideosam " + brQ);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "sysvideodegree " + brR);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "mmnotify " + brU);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "extsharevcard " + brT);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "audioformat " + brV);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "qrcam " + brW);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "mBase " + bse);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "mPackageInfo " + bsf);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "mClassLoader " + bsg);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "mResources " + bsh);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "sysvideofp " + brX);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "extstoragedir " + bsi);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "extpubdir " + bsj);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "extdatadir " + bsk);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "extrootdir " + bsl);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "extstoragestate " + bsm);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "extcachedir " + bsn);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "extvideoplayer " + brY);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "loadDrawable " + bso);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "loadXmlResourceParser " + bsp);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "voipAudioPrePro " + bsa);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "voipAudioPreProNS " + bsb);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "voipAudioPreProAEC " + bsc);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "voipAudioPreProAGC " + bsd);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "sight full screen type " + bsq);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "checkSightDraftMd5 " + bss);
+        u.d("!32@/B4Tb64lLpJWTxNXGYb2tlQ7HVzoZlVu", "swipeBackConfig " + bst);
+        int i = ay.getInt((String)paramString.get(".deviceinfoconfig.fingerprint.forceFingerprintStatus"), 0);
+        u.i("!44@/B4Tb64lLpJY56KQK+mokZeI1tOI9wHFRm7dcJohlOw=", "hy: got fingerprint force status: %d", new Object[] { Integer.valueOf(i) });
+        if (params != null) {
+          bsW = i;
+        }
+        return true;
+        bool = false;
+        break;
+        bool = false;
+        break label5446;
+        bool = false;
+        break label5776;
+      }
+      return false;
     }
-    catch (IOException localIOException) {}
-    return localHashMap;
-  }
-  
-  public static int oV()
-  {
-    try
-    {
-      int i = new File("/sys/devices/system/cpu").listFiles(new r()).length;
-      return i;
-    }
-    catch (Exception localException) {}
-    return 1;
-  }
-  
-  public static String oW()
-  {
-    return "android-" + Build.MODEL + "-" + Build.VERSION.SDK_INT;
+    catch (Exception paramString) {}
   }
 }
 

@@ -1,17 +1,78 @@
 package com.tencent.mm.ui.base;
 
-import android.view.MenuItem;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
+import android.widget.ListView;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class k
-  implements bk.d
+public final class k
+  extends AlertDialog
 {
-  k(h.d paramd) {}
+  private View cRn;
+  public BaseAdapter cTk;
+  private ListView cUz;
+  public AdapterView.OnItemClickListener iRx;
+  private CharSequence km;
+  private Context mContext;
   
-  public final void d(MenuItem paramMenuItem, int paramInt)
+  public k(Context paramContext)
   {
-    if (iDj != null) {
-      iDj.af(paramInt, paramMenuItem.getItemId());
+    super(paramContext, 2131100061);
+    mContext = paramContext;
+    if (a.da(mContext)) {}
+    for (cRn = View.inflate(mContext, 2131363212, null);; cRn = View.inflate(mContext, 2131363261, null))
+    {
+      cUz = ((ListView)cRn.findViewById(2131165441));
+      return;
     }
+  }
+  
+  public final void dismiss()
+  {
+    try
+    {
+      super.dismiss();
+      return;
+    }
+    catch (Exception localException)
+    {
+      u.e("!32@/B4Tb64lLpL18YAaU+LIVl5n0KRiRLyV", "dismiss exception, e = " + localException.getMessage());
+    }
+  }
+  
+  protected final void onCreate(Bundle paramBundle)
+  {
+    super.onCreate(paramBundle);
+    setContentView(cRn);
+  }
+  
+  public final void setTitle(CharSequence paramCharSequence)
+  {
+    if (paramCharSequence != null)
+    {
+      km = paramCharSequence;
+      return;
+    }
+    km = null;
+  }
+  
+  public final void show()
+  {
+    if (km != null) {
+      km.length();
+    }
+    if (iRx != null) {
+      cUz.setOnItemClickListener(iRx);
+    }
+    if (cTk != null) {
+      cUz.setAdapter(cTk);
+    }
+    super.show();
   }
 }
 

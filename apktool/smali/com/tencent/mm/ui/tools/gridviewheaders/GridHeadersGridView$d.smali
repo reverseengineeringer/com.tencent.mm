@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aSB()Z
+.method public abstract biW()Z
 .end method

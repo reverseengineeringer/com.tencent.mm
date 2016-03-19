@@ -1,23 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class gq
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDS = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBI = new a();
+  public b aBJ = new b();
   
   public gq()
   {
-    id = "ResumeOrPauseTrackRoom";
-    hXT = atO;
+    id = "MultiTalkAction";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aDT;
+    public int action;
+  }
+  
+  public static final class b
+  {
+    public boolean aBK;
   }
 }
 

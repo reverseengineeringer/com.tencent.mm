@@ -1,8 +1,15 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.model.as.a;
+
 public final class dr$a
 {
-  public boolean azN = false;
+  public boolean axw;
+  public boolean axx;
+  public int axy;
+  public as.a axz;
+  public int type;
+  public String username;
 }
 
 /* Location:

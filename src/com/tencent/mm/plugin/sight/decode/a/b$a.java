@@ -1,50 +1,49 @@
 package com.tencent.mm.plugin.sight.decode.a;
 
-import com.tencent.mm.d.a.iy;
-import com.tencent.mm.d.a.iy.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.d.a.nd;
+import com.tencent.mm.d.a.nd.a;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.ref.WeakReference;
 
 final class b$a
-  extends e
+  extends c
 {
-  int dfA = 0;
-  int fhA = 0;
-  int fhB = 0;
-  WeakReference fhC;
+  int dQp = 0;
+  int gxN = 0;
+  int gxO = 0;
+  WeakReference gxP;
   
   public b$a(b paramb)
   {
     super(0);
-    fhC = new WeakReference(paramb);
+    gxP = new WeakReference(paramb);
   }
   
-  private void a(iy paramiy)
+  private void a(nd paramnd)
   {
-    fhA = aGg.aGj;
-    fhB = aGg.aGh;
-    dfA = aGg.aGi;
+    gxN = aJy.aJB;
+    gxO = aJy.aJz;
+    dQp = aJy.aJA;
   }
   
-  private boolean ajs()
+  private boolean avO()
   {
-    if (fhC.get() == null) {
+    if (gxP.get() == null) {
       return false;
     }
-    int i = b.y((b)fhC.get()) + fhA;
-    return (i >= fhB) && (i <= dfA);
+    int i = b.E((b)gxP.get()) + gxN;
+    return (i >= gxO) && (i <= dQp);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(com.tencent.mm.sdk.c.b paramb)
   {
-    if (fhC.get() == null) {
+    if (gxP.get() == null) {
       return false;
     }
-    paramd = (iy)paramd;
-    t.d("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "#0x%x on chatting status callback, type %d, selfPos %d, visiblePos[%d, %d], headerCount %d recording %B", new Object[] { Integer.valueOf(((b)fhC.get()).hashCode()), Integer.valueOf(aGg.type), Integer.valueOf(b.y((b)fhC.get())), Integer.valueOf(aGg.aGh), Integer.valueOf(aGg.aGi), Integer.valueOf(aGg.aGj), Boolean.valueOf(b.z((b)fhC.get())) });
-    switch (aGg.type)
+    paramb = (nd)paramb;
+    u.d("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "#0x%x on chatting status callback, type %d, selfPos %d, visiblePos[%d, %d], headerCount %d recording %B", new Object[] { Integer.valueOf(((b)gxP.get()).hashCode()), Integer.valueOf(aJy.type), Integer.valueOf(b.E((b)gxP.get())), Integer.valueOf(aJy.aJz), Integer.valueOf(aJy.aJA), Integer.valueOf(aJy.aJB), Boolean.valueOf(b.F((b)gxP.get())) });
+    switch (aJy.type)
     {
     case 2: 
     case 4: 
@@ -57,44 +56,44 @@ final class b$a
     case 7: 
       for (;;)
       {
-        a(paramd);
-        if ((!ajs()) || (b.z((b)fhC.get()))) {
+        a(paramb);
+        if ((!avO()) || (b.F((b)gxP.get()))) {
           break;
         }
-        ((b)fhC.get()).restart();
+        ((b)gxP.get()).restart();
         return false;
-        ((b)fhC.get()).clear();
+        ((b)gxP.get()).clear();
         return false;
-        b.a((b)fhC.get(), true);
-        ((b)fhC.get()).cW(false);
+        b.a((b)gxP.get(), true);
+        ((b)gxP.get()).eE(false);
         return false;
-        if (!b.z((b)fhC.get())) {
+        if (!b.F((b)gxP.get())) {
           break;
         }
-        b.a((b)fhC.get(), false);
+        b.a((b)gxP.get(), false);
       }
     }
-    a(paramd);
-    if ((ajs()) && (!b.z((b)fhC.get())))
+    a(paramb);
+    if ((avO()) && (!b.F((b)gxP.get())))
     {
-      if ((!"ERROR#PATH".equals(b.A((b)fhC.get()))) && (!b.a((b)fhC.get()).equals(b.A((b)fhC.get()))))
+      if ((!"ERROR#PATH".equals(b.G((b)gxP.get()))) && (!b.a((b)gxP.get()).equals(b.G((b)gxP.get()))))
       {
-        t.d("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "match diff path, change %s to %s", new Object[] { b.a((b)fhC.get()), b.A((b)fhC.get()) });
-        if (b.A((b)fhC.get()) != null) {
+        u.d("!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss=", "match diff path, change %s to %s", new Object[] { b.a((b)gxP.get()), b.G((b)gxP.get()) });
+        if (b.G((b)gxP.get()) != null) {
           break label519;
         }
       }
       label519:
-      for (paramd = "";; paramd = b.A((b)fhC.get()))
+      for (paramb = "";; paramb = b.G((b)gxP.get()))
       {
-        ((b)fhC.get()).clear();
-        b.a((b)fhC.get(), paramd);
-        b.b((b)fhC.get(), "ERROR#PATH");
-        ((b)fhC.get()).restart();
+        ((b)gxP.get()).clear();
+        b.a((b)gxP.get(), paramb);
+        b.b((b)gxP.get(), "ERROR#PATH");
+        ((b)gxP.get()).restart();
         return false;
       }
     }
-    ((b)fhC.get()).clear();
+    ((b)gxP.get()).clear();
     return false;
   }
 }

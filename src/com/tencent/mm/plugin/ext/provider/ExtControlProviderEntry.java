@@ -6,64 +6,63 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.UriMatcher;
 import android.database.Cursor;
-import android.database.MatrixCursor;
 import android.net.Uri;
 import com.jg.JgClassChecked;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.d.b.k;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.bc;
-import com.tencent.mm.storage.bd;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.ext.b;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.ap;
+import com.tencent.mm.storage.aq;
 import com.tencent.mm.storage.q;
 
 @JgClassChecked(author=32, fComment="checked", lastDate="20141016", reviewer=20, vComment={com.jg.EType.PROVIDERCHECK})
 public class ExtControlProviderEntry
   extends ExtContentProviderBase
 {
-  private static final String[] dbj = { "retCode" };
-  private static final UriMatcher dby;
-  private Context dbA;
-  private String[] dbn = null;
-  private int dbo = -1;
-  private boolean dbz = false;
+  private static final UriMatcher dKS;
+  private String[] dKH = null;
+  private int dKI = -1;
+  private boolean dKT = false;
+  private Context dKU;
   
   static
   {
     UriMatcher localUriMatcher = new UriMatcher(-1);
-    dby = localUriMatcher;
+    dKS = localUriMatcher;
     localUriMatcher.addURI("com.tencent.mm.plugin.ext.entry", "view_profile", 2);
-    dby.addURI("com.tencent.mm.plugin.ext.entry", "to_chatting", 3);
-    dby.addURI("com.tencent.mm.plugin.ext.entry", "to_nearby", 4);
-    dby.addURI("com.tencent.mm.plugin.ext.entry", "sns_comment_detail", 5);
-    dby.addURI("com.tencent.mm.plugin.ext.entry", "share_time_line", 6);
+    dKS.addURI("com.tencent.mm.plugin.ext.entry", "to_chatting", 3);
+    dKS.addURI("com.tencent.mm.plugin.ext.entry", "to_nearby", 4);
+    dKS.addURI("com.tencent.mm.plugin.ext.entry", "sns_comment_detail", 5);
+    dKS.addURI("com.tencent.mm.plugin.ext.entry", "share_time_line", 6);
   }
   
   public ExtControlProviderEntry() {}
   
   public ExtControlProviderEntry(String[] paramArrayOfString, int paramInt, Context paramContext)
   {
-    dbz = true;
-    dbn = paramArrayOfString;
-    dbo = paramInt;
-    dbA = paramContext;
+    dKT = true;
+    dKH = paramArrayOfString;
+    dKI = paramInt;
+    dKU = paramContext;
   }
   
   private Cursor a(String[] paramArrayOfString, String paramString)
   {
-    if ((paramArrayOfString == null) || (paramArrayOfString.length <= 0))
+    u.i("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "toChattingUI");
+    if ((paramArrayOfString == null) || (paramArrayOfString.length <= 0) || (ay.kz(paramString)))
     {
-      t.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args");
-      fN(3);
-      return null;
+      u.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args");
+      gK(3);
+      return gL(3);
     }
     paramArrayOfString = paramArrayOfString[0];
     if ((paramArrayOfString == null) || (paramArrayOfString.length() <= 0))
     {
-      t.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "contactId == null");
-      fN(3);
-      return null;
+      u.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "contactId == null");
+      gK(3);
+      return gL(3);
     }
     if ((paramString != null) && (paramString.equalsIgnoreCase("openapi"))) {}
     for (int i = 1;; i = 0)
@@ -73,27 +72,28 @@ public class ExtControlProviderEntry
       {
         try
         {
-          paramArrayOfString = com.tencent.mm.plugin.ext.b.PD().Ak(paramArrayOfString);
-          if ((paramArrayOfString == null) || (bn.iW(field_openId)) || (bn.iW(field_username)))
+          paramArrayOfString = b.Vq().FJ(paramArrayOfString);
+          if ((paramArrayOfString == null) || (ay.kz(field_openId)) || (ay.kz(field_username)))
           {
-            t.e("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "openidInApp is null");
-            fN(4);
-            return null;
+            u.e("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "openidInApp is null");
+            gK(3);
+            return gL(3);
           }
-          paramArrayOfString = ax.tl().ri().yM(field_username);
-          if ((paramArrayOfString != null) && ((int)bkE > 0) && (dbA != null)) {
+          paramArrayOfString = ah.tD().rq().Ep(field_username);
+          if ((paramArrayOfString != null) && ((int)bvi > 0) && (dKU != null)) {
             break;
           }
-          fN(3);
-          return null;
+          u.e("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args ct");
+          gK(3);
+          return gL(3);
         }
         catch (Exception paramArrayOfString)
         {
-          t.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", paramArrayOfString.getMessage());
-          fN(3);
-          return null;
+          u.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", paramArrayOfString.getMessage());
+          gK(4);
+          return gL(3);
         }
-        paramArrayOfString = ax.tl().ri().cD(com.tencent.mm.plugin.ext.a.a.lr(paramArrayOfString));
+        paramArrayOfString = ah.tD().rq().dv(com.tencent.mm.plugin.ext.a.a.nS(paramArrayOfString));
       }
       paramString = new Intent();
       paramString.setComponent(new ComponentName("com.tencent.mm", "com.tencent.mm.ui.chatting.ChattingUI"));
@@ -101,88 +101,84 @@ public class ExtControlProviderEntry
       paramString.putExtra("finish_direct", true);
       paramString.addFlags(268435456);
       paramString.addFlags(67108864);
-      dbA.startActivity(paramString);
-      paramArrayOfString = new MatrixCursor(dbj);
-      paramArrayOfString.addRow(new Object[] { Integer.valueOf(1) });
-      fN(0);
-      return paramArrayOfString;
+      dKU.startActivity(paramString);
+      gK(0);
+      return gL(1);
     }
-  }
-  
-  private Cursor j(String[] paramArrayOfString)
-  {
-    if ((paramArrayOfString == null) || (paramArrayOfString.length <= 0))
-    {
-      t.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args");
-      fN(3);
-      return null;
-    }
-    paramArrayOfString = paramArrayOfString[0];
-    if ((paramArrayOfString == null) || (paramArrayOfString.length() <= 0))
-    {
-      t.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "contactId == null");
-      fN(3);
-      return null;
-    }
-    try
-    {
-      paramArrayOfString = ax.tl().ri().cD(com.tencent.mm.plugin.ext.a.a.lr(paramArrayOfString));
-      if ((paramArrayOfString == null) || ((int)bkE <= 0) || (dbA == null))
-      {
-        fN(3);
-        return null;
-      }
-    }
-    catch (Exception paramArrayOfString)
-    {
-      t.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", paramArrayOfString.getMessage());
-      fN(3);
-      return null;
-    }
-    Intent localIntent = new Intent();
-    localIntent.addFlags(268435456);
-    localIntent.putExtra("Contact_User", field_username);
-    c.c(dbA, "profile", ".ui.ContactInfoUI", localIntent);
-    paramArrayOfString = new MatrixCursor(dbj);
-    paramArrayOfString.addRow(new Object[] { Integer.valueOf(1) });
-    fN(0);
-    return paramArrayOfString;
   }
   
   private Cursor k(String[] paramArrayOfString)
   {
     if ((paramArrayOfString == null) || (paramArrayOfString.length <= 0))
     {
-      t.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args");
-      fN(3);
+      u.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args");
+      gK(3);
       return null;
     }
     paramArrayOfString = paramArrayOfString[0];
     if ((paramArrayOfString == null) || (paramArrayOfString.length() <= 0))
     {
-      t.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args");
-      fN(3);
+      u.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "contactId == null");
+      gK(3);
       return null;
     }
-    long l;
     try
     {
-      l = com.tencent.mm.plugin.ext.a.a.lr(paramArrayOfString);
-      if (l <= 0L)
+      paramArrayOfString = ah.tD().rq().dv(com.tencent.mm.plugin.ext.a.a.nS(paramArrayOfString));
+      if ((paramArrayOfString == null) || ((int)bvi <= 0) || (dKU == null))
       {
-        fN(3);
+        gK(3);
         return null;
       }
     }
     catch (Exception paramArrayOfString)
     {
-      t.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", paramArrayOfString.getMessage());
-      fN(3);
+      u.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", paramArrayOfString.getMessage());
+      gK(3);
       return null;
     }
-    if (dbA == null)
+    Intent localIntent = new Intent();
+    localIntent.addFlags(268435456);
+    localIntent.putExtra("Contact_User", field_username);
+    com.tencent.mm.ar.c.c(dKU, "profile", ".ui.ContactInfoUI", localIntent);
+    gK(0);
+    return gL(1);
+  }
+  
+  private Cursor l(String[] paramArrayOfString)
+  {
+    if ((paramArrayOfString == null) || (paramArrayOfString.length <= 0))
     {
-      fN(4);
+      u.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args");
+      gK(3);
+      return null;
+    }
+    paramArrayOfString = paramArrayOfString[0];
+    if ((paramArrayOfString == null) || (paramArrayOfString.length() <= 0))
+    {
+      u.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args");
+      gK(3);
+      return null;
+    }
+    long l;
+    try
+    {
+      l = com.tencent.mm.plugin.ext.a.a.nS(paramArrayOfString);
+      if (l <= 0L)
+      {
+        gK(3);
+        return null;
+      }
+    }
+    catch (Exception paramArrayOfString)
+    {
+      u.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", paramArrayOfString.getMessage());
+      gK(3);
+      return null;
+    }
+    if (dKU == null)
+    {
+      gK(4);
       return null;
     }
     paramArrayOfString = new Intent();
@@ -190,11 +186,9 @@ public class ExtControlProviderEntry
     paramArrayOfString.putExtra("INTENT_SNS_LOCAL_ID", (int)l);
     paramArrayOfString.addCategory("android.intent.category.DEFAULT");
     paramArrayOfString.addFlags(268435456);
-    dbA.startActivity(paramArrayOfString);
-    fN(0);
-    paramArrayOfString = new MatrixCursor(dbj);
-    paramArrayOfString.addRow(new Object[] { Integer.valueOf(1) });
-    return paramArrayOfString;
+    dKU.startActivity(paramArrayOfString);
+    gK(0);
+    return gL(1);
   }
   
   public int delete(Uri paramUri, String paramString, String[] paramArrayOfString)
@@ -219,81 +213,80 @@ public class ExtControlProviderEntry
   
   public Cursor query(Uri paramUri, String[] paramArrayOfString1, String paramString1, String[] paramArrayOfString2, String paramString2)
   {
-    t.d("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "ExtControlProviderEntry query()");
-    if (dbz)
+    u.i("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "ExtControlProviderEntry query() mIsLocalUsed :" + dKT);
+    if (dKT)
     {
-      a(paramUri, dbA, dbo, dbn);
-      if ((bn.iW(dbr)) || (bn.iW(PI())))
+      a(paramUri, dKU, dKI, dKH);
+      if ((ay.kz(dKL)) || (ay.kz(Vw())))
       {
-        fN(3);
-        return null;
+        u.e("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args");
+        gK(3);
+        return gL(3);
       }
     }
     else
     {
-      dbA = getContext();
-      a(paramUri, dbA, dby);
+      dKU = getContext();
+      a(paramUri, dKU, dKS);
       if (paramUri == null)
       {
-        fN(3);
-        return null;
+        gK(3);
+        return gL(3);
       }
-      if ((bn.iW(dbr)) || (bn.iW(PI())))
+      if ((ay.kz(dKL)) || (ay.kz(Vw())))
       {
-        fN(3);
-        return null;
+        gK(3);
+        return gL(3);
       }
-      if (!Hq())
+      if (!Vx())
       {
-        fN(1);
-        return cjW;
+        gK(1);
+        return gL(1);
       }
     }
-    if (!bh(dbA))
+    if (!bx(dKU))
     {
-      t.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "invalid appid ! return null");
-      fN(2);
+      u.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "invalid appid ! return null");
+      gK(2);
       return null;
     }
-    paramArrayOfString1 = bn.iV(paramUri.getQueryParameter("source"));
-    if (!dbz) {
-      dbo = dby.match(paramUri);
+    paramArrayOfString1 = ay.ky(paramUri.getQueryParameter("source"));
+    if (!dKT) {
+      dKI = dKS.match(paramUri);
     }
-    switch (dbo)
+    switch (dKI)
     {
     default: 
-      fN(3);
+      gK(3);
       return null;
     case 2: 
-      return j(paramArrayOfString2);
+      return k(paramArrayOfString2);
     case 3: 
       return a(paramArrayOfString2, paramArrayOfString1);
     case 4: 
-      if (dbA == null)
+      if (dKU == null)
       {
-        fN(4);
+        gK(4);
         return null;
       }
       paramUri = new Intent();
       paramUri.setComponent(new ComponentName("com.tencent.mm", "com.tencent.mm.plugin.nearby.ui.NearbyFriendsUI"));
       paramUri.addFlags(268435456);
-      dbA.startActivity(paramUri);
-      paramUri = new MatrixCursor(dbj);
-      paramUri.addRow(new Object[] { Integer.valueOf(1) });
-      fN(0);
-      return paramUri;
+      dKU.startActivity(paramUri);
+      gK(0);
+      return gL(1);
     case 5: 
-      return k(paramArrayOfString2);
+      return l(paramArrayOfString2);
     }
     if ((paramArrayOfString2 == null) || (paramArrayOfString2.length <= 0))
     {
-      t.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args");
-      fN(3);
+      u.w("!56@/B4Tb64lLpKAQbqlkU5I8spTWKXAC4eP9VBikFHaEUyYz0LzCAxhfQ==", "wrong args");
+      gK(3);
       return null;
     }
-    if (dbA == null)
+    if (dKU == null)
     {
-      fN(4);
+      gK(4);
       return null;
     }
     paramArrayOfString1 = new Intent();
@@ -310,11 +303,9 @@ public class ExtControlProviderEntry
       }
       paramArrayOfString1.putExtra("Ksnsupload_empty_img", true);
       paramArrayOfString1.setType("image/*");
-      dbA.startActivity(paramArrayOfString1);
-      fN(0);
-      paramUri = new MatrixCursor(dbj);
-      paramUri.addRow(new Object[] { Integer.valueOf(1) });
-      return paramUri;
+      dKU.startActivity(paramArrayOfString1);
+      gK(0);
+      return gL(1);
     }
   }
   

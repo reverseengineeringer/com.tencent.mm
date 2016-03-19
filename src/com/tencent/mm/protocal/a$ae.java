@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ae
-  extends a.c
+  extends a.e
 {
   public a$ae()
   {
-    super("getH5TransactionRequest", "getH5TransactionRequest", 138, true);
+    super("disableBounceScroll", "disableBounceScroll", 188, false);
   }
 }
 

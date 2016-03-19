@@ -1,13 +1,40 @@
 package com.tencent.smtt.a;
 
-import java.io.File;
+import java.security.MessageDigest;
 
-final class g
-  implements e.a
+public final class g
 {
-  public final boolean e(File paramFile1, File paramFile2)
+  public static String aC(String paramString)
   {
-    return (paramFile1.length() == paramFile2.length()) && (paramFile1.lastModified() == paramFile2.lastModified());
+    if (paramString == null) {}
+    for (;;)
+    {
+      return null;
+      try
+      {
+        paramString = paramString.getBytes();
+        Object localObject = MessageDigest.getInstance("MD5");
+        ((MessageDigest)localObject).update(paramString);
+        paramString = ((MessageDigest)localObject).digest();
+        if ((paramString != null) && (paramString.length > 0))
+        {
+          localObject = new StringBuffer(paramString.length * 2);
+          int i = 0;
+          while (i < paramString.length)
+          {
+            if ((paramString[i] & 0xFF) < 16) {
+              ((StringBuffer)localObject).append("0");
+            }
+            ((StringBuffer)localObject).append(Long.toString(paramString[i] & 0xFF, 16));
+            i += 1;
+          }
+          paramString = ((StringBuffer)localObject).toString();
+          return paramString;
+        }
+      }
+      catch (Exception paramString) {}
+    }
+    return null;
   }
 }
 

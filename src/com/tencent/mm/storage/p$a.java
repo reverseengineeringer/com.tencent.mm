@@ -3,9 +3,9 @@ package com.tencent.mm.storage;
 public final class p$a
   extends Enum
 {
-  public static int[] aGu()
+  public static int[] aWz()
   {
-    return (int[])ieF.clone();
+    return (int[])keT.clone();
   }
 }
 

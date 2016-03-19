@@ -3,11 +3,11 @@ package com.tencent.mm.app.plugin;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.model.v;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.model.h;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
 import com.tencent.mm.ui.LauncherUI;
 
 @URISpanHandlerSet.a
@@ -19,48 +19,48 @@ class URISpanHandlerSet$SettingHeadImgUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     if (type == 6)
     {
-      if (paramf != null) {
-        paramf.a(paramah);
+      if (paramb != null) {
+        paramb.a(paramg);
       }
-      paramah = LauncherUI.aKD();
-      if (paramah != null) {
-        paramah.As("tab_settings");
+      paramg = LauncherUI.bat();
+      if (paramg != null) {
+        paramg.Gi("tab_settings");
       }
       return true;
     }
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     if (paramString.equals("weixin://setting/setheadimage"))
     {
       paramString = new Intent();
-      paramString.putExtra("Contact_User", v.rS());
-      paramString.putExtra("Contact_Nick", v.rU());
+      paramString.putExtra("Contact_User", h.sc());
+      paramString.putExtra("Contact_Nick", h.se());
       paramString.putExtra("User_Avatar", true);
-      if ((URISpanHandlerSet.a(apd) instanceof Service)) {
+      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
         paramString.addFlags(268435456);
       }
-      c.c(URISpanHandlerSet.a(apd), "profile", ".ui.ContactInfoUI", paramString);
+      c.c(URISpanHandlerSet.a(ang), "profile", ".ui.ContactInfoUI", paramString);
       return true;
     }
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     if (paramString.trim().startsWith("weixin://setting/setheadimage")) {
-      return new ah(paramString, 6, null);
+      return new g(paramString, 6, null);
     }
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[] { 6 };
   }

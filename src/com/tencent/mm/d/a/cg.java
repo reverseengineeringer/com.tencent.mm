@@ -1,30 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class cg
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a axK = new a();
-  public b axL = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avN = new a();
   
   public cg()
   {
-    id = "FMsgGetName";
-    hXT = atO;
+    id = "ExDeviceOnDeviceBindStateChange";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String axH;
-    public String axI;
-  }
-  
-  public static final class b
-  {
-    public String axM;
+    public String alN;
+    public boolean auN;
   }
 }
 

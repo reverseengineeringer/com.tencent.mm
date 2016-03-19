@@ -1,19 +1,19 @@
 package com.tencent.kingkong.database;
 
-import com.tencent.mm.dbsupport.newcursor.h;
+import com.tencent.mm.dbsupport.newcursor.g;
 
 public class SQLiteFullException
   extends SQLiteException
 {
   public SQLiteFullException()
   {
-    h.qM();
+    g.qI();
   }
   
   public SQLiteFullException(String paramString)
   {
     super(paramString);
-    h.qM();
+    g.qI();
   }
 }
 

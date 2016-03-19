@@ -1,14 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import android.net.Uri;
-
 public final class jx$a
 {
-  public String aHh;
-  public int awH = 0;
-  public Context context;
-  public Uri uri;
+  public int aGu = -1;
 }
 
 /* Location:

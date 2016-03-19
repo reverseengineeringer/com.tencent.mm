@@ -4,10 +4,10 @@
 
 
 # virtual methods
-.method public abstract createApplication()Lcom/tencent/mm/pluginsdk/k;
+.method public abstract createApplication()Lcom/tencent/mm/pluginsdk/h;
 .end method
 
-.method public abstract createSubCore()Lcom/tencent/mm/model/au;
+.method public abstract createSubCore()Lcom/tencent/mm/model/ae;
 .end method
 
 .method public abstract getContactWidgetFactory()Lcom/tencent/mm/pluginsdk/b/b;

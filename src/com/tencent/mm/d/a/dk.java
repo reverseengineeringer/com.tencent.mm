@@ -1,23 +1,40 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.database.Cursor;
+import com.tencent.mm.sdk.c.b;
+import java.util.List;
 
 public final class dk
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azv = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awT = new a();
+  public b awU = new b();
   
   public dk()
   {
-    id = "GetEmojiIsUseUnicode";
-    hXT = atO;
+    id = "ExtGetSnsData";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int avi = 0;
+    public Cursor awV;
+  }
+  
+  public static final class b
+  {
+    public String awW;
+    public int awX;
+    public String awY;
+    public long awZ;
+    public int axa;
+    public int axb;
+    public List axc;
+    public List axd;
+    public int axe;
+    public int axf;
   }
 }
 

@@ -1,422 +1,337 @@
 package android.support.v7.internal.view.menu;
 
-import android.content.Intent;
-import android.graphics.drawable.Drawable;
-import android.support.v4.view.h;
-import android.support.v4.view.k.e;
-import android.view.ActionProvider;
-import android.view.CollapsibleActionView;
-import android.view.ContextMenu.ContextMenuInfo;
+import android.content.Context;
+import android.content.res.Resources;
+import android.support.v7.internal.widget.ListPopupWindow;
+import android.util.DisplayMetrics;
+import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.MenuItem.OnActionExpandListener;
-import android.view.MenuItem.OnMenuItemClickListener;
-import android.view.SubMenu;
 import android.view.View;
+import android.view.View.MeasureSpec;
+import android.view.View.OnKeyListener;
+import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
+import android.view.ViewTreeObserver.OnGlobalLayoutListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
+import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.PopupWindow;
+import android.widget.PopupWindow.OnDismissListener;
+import java.util.ArrayList;
 
-class k
-  extends d
-  implements android.support.v4.a.a.b
+public class k
+  implements l, View.OnKeyListener, ViewTreeObserver.OnGlobalLayoutListener, AdapterView.OnItemClickListener, PopupWindow.OnDismissListener
 {
-  private final boolean nr;
-  private boolean ns;
-  MenuItem nt;
+  private LayoutInflater hI;
+  private f iO;
+  boolean lD;
+  private Context mContext;
+  private ListPopupWindow mG;
+  private int mH;
+  private View mI;
+  private boolean mJ;
+  private ViewTreeObserver mK;
+  private a mL;
+  private ViewGroup mM;
+  l.a mi;
   
-  k(MenuItem paramMenuItem)
+  public k(Context paramContext, f paramf, View paramView, boolean paramBoolean)
   {
-    this(paramMenuItem, true);
+    mContext = paramContext;
+    hI = LayoutInflater.from(paramContext);
+    iO = paramf;
+    mJ = paramBoolean;
+    paramContext = paramContext.getResources();
+    mH = Math.max(getDisplayMetricswidthPixels / 2, paramContext.getDimensionPixelSize(2131034685));
+    mI = paramView;
+    paramf.a(this);
   }
   
-  k(MenuItem paramMenuItem, boolean paramBoolean)
-  {
-    super(paramMenuItem);
-    nt = paramMenuItem;
-    ns = paramMenuItem.isVisible();
-    nr = paramBoolean;
-  }
+  public final void a(Context paramContext, f paramf) {}
   
-  public final android.support.v4.a.a.b a(h paramh)
+  public final void a(f paramf, boolean paramBoolean)
   {
-    MenuItem localMenuItem = nt;
-    if (paramh != null) {}
-    for (paramh = b(paramh);; paramh = null)
+    if (paramf != iO) {}
+    do
     {
-      localMenuItem.setActionProvider(paramh);
-      return this;
+      return;
+      dismiss();
+    } while (mi == null);
+    mi.a(paramf, paramBoolean);
+  }
+  
+  public final boolean a(p paramp)
+  {
+    k localk;
+    int i;
+    if (paramp.hasVisibleItems())
+    {
+      localk = new k(mContext, paramp, mI, false);
+      mi = mi;
+      int j = paramp.size();
+      i = 0;
+      if (i >= j) {
+        break label121;
+      }
+      MenuItem localMenuItem = paramp.getItem(i);
+      if ((!localMenuItem.isVisible()) || (localMenuItem.getIcon() == null)) {}
+    }
+    label121:
+    for (boolean bool = true;; bool = false)
+    {
+      lD = bool;
+      if (localk.bH())
+      {
+        if (mi != null) {
+          mi.b(paramp);
+        }
+        return true;
+        i += 1;
+        break;
+      }
+      return false;
     }
   }
   
-  public final android.support.v4.a.a.b a(k.e parame)
+  public final boolean bH()
   {
-    MenuItem localMenuItem = nt;
-    if (parame != null) {}
-    for (parame = new c(parame);; parame = null)
+    int m = 0;
+    mG = new ListPopupWindow(mContext, null, 2130772173);
+    mG.setOnDismissListener(this);
+    mG.qa = this;
+    mL = new a(iO);
+    mG.setAdapter(mL);
+    mG.ce();
+    View localView = mI;
+    int i;
+    ListPopupWindow localListPopupWindow;
+    a locala;
+    int n;
+    int i1;
+    int j;
+    int k;
+    if (localView != null) {
+      if (mK == null)
+      {
+        i = 1;
+        mK = localView.getViewTreeObserver();
+        if (i != 0) {
+          mK.addOnGlobalLayoutListener(this);
+        }
+        mG.pY = localView;
+        localListPopupWindow = mG;
+        locala = mL;
+        n = View.MeasureSpec.makeMeasureSpec(0, 0);
+        i1 = View.MeasureSpec.makeMeasureSpec(0, 0);
+        int i2 = locala.getCount();
+        j = 0;
+        localView = null;
+        k = 0;
+        i = m;
+        label166:
+        if (j >= i2) {
+          break label265;
+        }
+        m = locala.getItemViewType(j);
+        if (m == i) {
+          break label305;
+        }
+        localView = null;
+        i = m;
+      }
+    }
+    label265:
+    label305:
+    for (;;)
     {
-      localMenuItem.setOnActionExpandListener(parame);
-      return null;
+      if (mM == null) {
+        mM = new FrameLayout(mContext);
+      }
+      localView = locala.getView(j, localView, mM);
+      localView.measure(n, i1);
+      k = Math.max(k, localView.getMeasuredWidth());
+      j += 1;
+      break label166;
+      i = 0;
+      break;
+      return false;
+      localListPopupWindow.setContentWidth(Math.min(k, mH));
+      mG.cf();
+      mG.show();
+      mG.pM.setOnKeyListener(this);
+      return true;
     }
   }
   
-  a b(h paramh)
+  public final boolean bj()
   {
-    return new a(paramh);
+    return false;
   }
   
-  final boolean bW()
+  public final boolean d(h paramh)
   {
-    if (ns) {
-      nt.getActionProvider();
+    return false;
+  }
+  
+  public final void dismiss()
+  {
+    if (isShowing()) {
+      mG.dismiss();
+    }
+  }
+  
+  public final boolean e(h paramh)
+  {
+    return false;
+  }
+  
+  public final boolean isShowing()
+  {
+    return (mG != null) && (mG.pK.isShowing());
+  }
+  
+  public void onDismiss()
+  {
+    mG = null;
+    iO.close();
+    if (mK != null)
+    {
+      if (!mK.isAlive()) {
+        mK = mI.getViewTreeObserver();
+      }
+      mK.removeGlobalOnLayoutListener(this);
+      mK = null;
+    }
+  }
+  
+  public void onGlobalLayout()
+  {
+    if (isShowing())
+    {
+      View localView = mI;
+      if ((localView != null) && (localView.isShown())) {
+        break label28;
+      }
+      dismiss();
+    }
+    label28:
+    while (!isShowing()) {
+      return;
+    }
+    mG.show();
+  }
+  
+  public void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  {
+    paramAdapterView = mL;
+    a.a(paramAdapterView).c(paramAdapterView.B(paramInt), 0);
+  }
+  
+  public boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
+  {
+    if ((paramKeyEvent.getAction() == 1) && (paramInt == 82))
+    {
+      dismiss();
+      return true;
     }
     return false;
   }
   
-  public boolean collapseActionView()
+  public final void q(boolean paramBoolean)
   {
-    return nt.collapseActionView();
-  }
-  
-  public boolean expandActionView()
-  {
-    return nt.expandActionView();
-  }
-  
-  public ActionProvider getActionProvider()
-  {
-    return nt.getActionProvider();
-  }
-  
-  public View getActionView()
-  {
-    View localView2 = nt.getActionView();
-    View localView1 = localView2;
-    if ((localView2 instanceof b)) {
-      localView1 = (View)ny;
-    }
-    return localView1;
-  }
-  
-  public char getAlphabeticShortcut()
-  {
-    return nt.getAlphabeticShortcut();
-  }
-  
-  public int getGroupId()
-  {
-    return nt.getGroupId();
-  }
-  
-  public Drawable getIcon()
-  {
-    return nt.getIcon();
-  }
-  
-  public Intent getIntent()
-  {
-    return nt.getIntent();
-  }
-  
-  public int getItemId()
-  {
-    return nt.getItemId();
-  }
-  
-  public ContextMenu.ContextMenuInfo getMenuInfo()
-  {
-    return nt.getMenuInfo();
-  }
-  
-  public char getNumericShortcut()
-  {
-    return nt.getNumericShortcut();
-  }
-  
-  public int getOrder()
-  {
-    return nt.getOrder();
-  }
-  
-  public SubMenu getSubMenu()
-  {
-    return a(nt.getSubMenu());
-  }
-  
-  public CharSequence getTitle()
-  {
-    return nt.getTitle();
-  }
-  
-  public CharSequence getTitleCondensed()
-  {
-    return nt.getTitleCondensed();
-  }
-  
-  public boolean hasSubMenu()
-  {
-    return nt.hasSubMenu();
-  }
-  
-  public boolean isActionViewExpanded()
-  {
-    return nt.isActionViewExpanded();
-  }
-  
-  public boolean isCheckable()
-  {
-    return nt.isCheckable();
-  }
-  
-  public boolean isChecked()
-  {
-    return nt.isChecked();
-  }
-  
-  public boolean isEnabled()
-  {
-    return nt.isEnabled();
-  }
-  
-  public boolean isVisible()
-  {
-    return nt.isVisible();
-  }
-  
-  public MenuItem setActionProvider(ActionProvider paramActionProvider)
-  {
-    nt.setActionProvider(paramActionProvider);
-    if ((paramActionProvider != null) && (nr)) {
-      bW();
-    }
-    return this;
-  }
-  
-  public MenuItem setActionView(int paramInt)
-  {
-    nt.setActionView(paramInt);
-    View localView = nt.getActionView();
-    if ((localView instanceof android.support.v7.a.b)) {
-      nt.setActionView(new b(localView));
-    }
-    return this;
-  }
-  
-  public MenuItem setActionView(View paramView)
-  {
-    Object localObject = paramView;
-    if ((paramView instanceof android.support.v7.a.b)) {
-      localObject = new b(paramView);
-    }
-    nt.setActionView((View)localObject);
-    return this;
-  }
-  
-  public MenuItem setAlphabeticShortcut(char paramChar)
-  {
-    nt.setAlphabeticShortcut(paramChar);
-    return this;
-  }
-  
-  public MenuItem setCheckable(boolean paramBoolean)
-  {
-    nt.setCheckable(paramBoolean);
-    return this;
-  }
-  
-  public MenuItem setChecked(boolean paramBoolean)
-  {
-    nt.setChecked(paramBoolean);
-    return this;
-  }
-  
-  public MenuItem setEnabled(boolean paramBoolean)
-  {
-    nt.setEnabled(paramBoolean);
-    return this;
-  }
-  
-  public MenuItem setIcon(int paramInt)
-  {
-    nt.setIcon(paramInt);
-    return this;
-  }
-  
-  public MenuItem setIcon(Drawable paramDrawable)
-  {
-    nt.setIcon(paramDrawable);
-    return this;
-  }
-  
-  public MenuItem setIntent(Intent paramIntent)
-  {
-    nt.setIntent(paramIntent);
-    return this;
-  }
-  
-  public MenuItem setNumericShortcut(char paramChar)
-  {
-    nt.setNumericShortcut(paramChar);
-    return this;
-  }
-  
-  public MenuItem setOnActionExpandListener(MenuItem.OnActionExpandListener paramOnActionExpandListener)
-  {
-    nt.setOnActionExpandListener(paramOnActionExpandListener);
-    return this;
-  }
-  
-  public MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
-  {
-    MenuItem localMenuItem = nt;
-    if (paramOnMenuItemClickListener != null) {}
-    for (paramOnMenuItemClickListener = new d(paramOnMenuItemClickListener);; paramOnMenuItemClickListener = null)
-    {
-      localMenuItem.setOnMenuItemClickListener(paramOnMenuItemClickListener);
-      return this;
+    if (mL != null) {
+      mL.notifyDataSetChanged();
     }
   }
   
-  public MenuItem setShortcut(char paramChar1, char paramChar2)
+  private final class a
+    extends BaseAdapter
   {
-    nt.setShortcut(paramChar1, paramChar2);
-    return this;
-  }
-  
-  public void setShowAsAction(int paramInt)
-  {
-    nt.setShowAsAction(paramInt);
-  }
-  
-  public MenuItem setShowAsActionFlags(int paramInt)
-  {
-    nt.setShowAsActionFlags(paramInt);
-    return this;
-  }
-  
-  public MenuItem setTitle(int paramInt)
-  {
-    nt.setTitle(paramInt);
-    return this;
-  }
-  
-  public MenuItem setTitle(CharSequence paramCharSequence)
-  {
-    nt.setTitle(paramCharSequence);
-    return this;
-  }
-  
-  public MenuItem setTitleCondensed(CharSequence paramCharSequence)
-  {
-    nt.setTitleCondensed(paramCharSequence);
-    return this;
-  }
-  
-  public MenuItem setVisible(boolean paramBoolean)
-  {
-    if (nr)
-    {
-      ns = paramBoolean;
-      bW();
-    }
-    return nt.setVisible(paramBoolean);
-  }
-  
-  class a
-    extends ActionProvider
-  {
-    final h nu;
+    private int lI = -1;
+    private f mN;
     
-    public a(h paramh)
+    public a(f paramf)
     {
-      super();
-      nu = paramh;
-      if (k.a(k.this)) {
-        nu.a(new l(this, k.this));
+      mN = paramf;
+      bo();
+    }
+    
+    private void bo()
+    {
+      h localh = cmf;
+      if (localh != null)
+      {
+        ArrayList localArrayList = k.c(k.this).bw();
+        int j = localArrayList.size();
+        int i = 0;
+        while (i < j)
+        {
+          if ((h)localArrayList.get(i) == localh)
+          {
+            lI = i;
+            return;
+          }
+          i += 1;
+        }
+      }
+      lI = -1;
+    }
+    
+    public final h B(int paramInt)
+    {
+      if (k.a(k.this)) {}
+      for (ArrayList localArrayList = mN.bw();; localArrayList = mN.bu())
+      {
+        int i = paramInt;
+        if (lI >= 0)
+        {
+          i = paramInt;
+          if (paramInt >= lI) {
+            i = paramInt + 1;
+          }
+        }
+        return (h)localArrayList.get(i);
       }
     }
     
-    public boolean hasSubMenu()
+    public final int getCount()
     {
-      return false;
-    }
-    
-    public View onCreateActionView()
-    {
-      if (k.a(k.this)) {
-        bW();
+      if (k.a(k.this)) {}
+      for (ArrayList localArrayList = mN.bw(); lI < 0; localArrayList = mN.bu()) {
+        return localArrayList.size();
       }
-      return nu.onCreateActionView();
+      return localArrayList.size() - 1;
     }
     
-    public boolean onPerformDefaultAction()
+    public final long getItemId(int paramInt)
     {
-      return false;
+      return paramInt;
     }
     
-    public void onPrepareSubMenu(SubMenu paramSubMenu)
+    public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
-      a(paramSubMenu);
-    }
-  }
-  
-  static final class b
-    extends FrameLayout
-    implements CollapsibleActionView
-  {
-    final android.support.v7.a.b ny;
-    
-    b(View paramView)
-    {
-      super();
-      ny = ((android.support.v7.a.b)paramView);
-      addView(paramView);
+      if (paramView == null) {
+        paramView = k.b(k.this).inflate(2131363314, paramViewGroup, false);
+      }
+      for (;;)
+      {
+        paramViewGroup = (m.a)paramView;
+        if (lD) {
+          ((ListMenuItemView)paramView).setForceShowIcon(true);
+        }
+        paramViewGroup.a(B(paramInt));
+        return paramView;
+      }
     }
     
-    public final void onActionViewCollapsed()
+    public final void notifyDataSetChanged()
     {
-      ny.onActionViewCollapsed();
-    }
-    
-    public final void onActionViewExpanded()
-    {
-      ny.onActionViewExpanded();
-    }
-  }
-  
-  private final class c
-    extends e
-    implements MenuItem.OnActionExpandListener
-  {
-    c(k.e parame)
-    {
-      super();
-    }
-    
-    public final boolean onMenuItemActionCollapse(MenuItem paramMenuItem)
-    {
-      k.e locale = (k.e)mm;
-      h(paramMenuItem);
-      return locale.ay();
-    }
-    
-    public final boolean onMenuItemActionExpand(MenuItem paramMenuItem)
-    {
-      k.e locale = (k.e)mm;
-      h(paramMenuItem);
-      return locale.ax();
-    }
-  }
-  
-  private final class d
-    extends e
-    implements MenuItem.OnMenuItemClickListener
-  {
-    d(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
-    {
-      super();
-    }
-    
-    public final boolean onMenuItemClick(MenuItem paramMenuItem)
-    {
-      return ((MenuItem.OnMenuItemClickListener)mm).onMenuItemClick(h(paramMenuItem));
+      bo();
+      super.notifyDataSetChanged();
     }
   }
 }

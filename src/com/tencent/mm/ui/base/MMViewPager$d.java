@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface MMViewPager$d
 {
-  public abstract void Tj();
+  public abstract void aap();
 }
 
 /* Location:

@@ -15,24 +15,37 @@
 
 
 # instance fields
-.field public aFX:Ljava/lang/String;
+.field public aET:Ljava/lang/String;
 
-.field public aFY:Ljava/lang/String;
+.field public aEU:Ljava/lang/String;
 
-.field public aFZ:Z
+.field public aEV:Ljava/lang/String;
 
-.field public id:Ljava/lang/String;
+.field public aEW:I
 
-.field public type:I
+.field public aEX:I
+
+.field public auE:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 18
+    const/4 v0, 0x0
+
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 18
+    iput v0, p0, Lcom/tencent/mm/d/a/iu$a;->auE:I
+
+    .line 22
+    iput v0, p0, Lcom/tencent/mm/d/a/iu$a;->aEW:I
+
+    .line 23
+    iput v0, p0, Lcom/tencent/mm/d/a/iu$a;->aEX:I
 
     return-void
 .end method

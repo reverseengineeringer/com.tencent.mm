@@ -1,40 +1,33 @@
 package com.tencent.mm.d.a;
 
-import android.database.Cursor;
-import com.tencent.mm.sdk.c.d;
-import java.util.List;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
+import org.json.JSONArray;
 
 public final class bt
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awL = new a();
-  public b awM = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avc = new a();
+  public b avd = new b();
   
   public bt()
   {
-    id = "ExtGetSnsData";
-    hXT = atO;
+    id = "ExDeviceGetLanDeviceInfos";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public Cursor awN;
+    public String auQ;
+    public Context context;
   }
   
   public static final class b
   {
-    public String awO;
-    public int awP;
-    public String awQ;
-    public long awR;
-    public int awS;
-    public int awT;
-    public List awU;
-    public List awV;
-    public int awW;
-    public int awX;
+    public boolean auR;
+    public JSONArray avb;
   }
 }
 

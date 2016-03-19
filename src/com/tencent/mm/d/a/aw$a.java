@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class aw$a
 {
-  public int avQ = -1;
+  public int auc = -1;
 }
 
 /* Location:

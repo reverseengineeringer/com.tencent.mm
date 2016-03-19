@@ -15,30 +15,20 @@
 
 
 # instance fields
-.field public axP:I
+.field public alN:Ljava/lang/String;
 
-.field public axQ:J
+.field public auQ:Ljava/lang/String;
 
-.field public username:Ljava/lang/String;
+.field public data:[B
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 0
 
     .prologue
-    .line 22
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 23
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/tencent/mm/d/a/ch$a;->axP:I
-
-    .line 25
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/tencent/mm/d/a/ch$a;->axQ:J
 
     return-void
 .end method

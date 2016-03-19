@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bp
-  extends a.c
+  extends a.e
 {
   public a$bp()
   {
-    super("openSpecificView", "specific_view", 48, true);
+    super("hideMenuItems", "hideMenuItems", 85, false);
   }
 }
 

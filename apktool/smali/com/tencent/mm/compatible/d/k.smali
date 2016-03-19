@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static bhY:Lcom/tencent/mm/compatible/d/k;
+.field private static bsw:Lcom/tencent/mm/compatible/d/k;
 
 
 # instance fields
-.field private bhX:Z
+.field private bsv:Z
 
 .field private filePath:Ljava/lang/String;
 
@@ -23,7 +23,7 @@
     .line 20
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/compatible/d/k;->bhY:Lcom/tencent/mm/compatible/d/k;
+    sput-object v0, Lcom/tencent/mm/compatible/d/k;->bsw:Lcom/tencent/mm/compatible/d/k;
 
     return-void
 .end method
@@ -38,7 +38,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 17
-    iput-boolean v5, p0, Lcom/tencent/mm/compatible/d/k;->bhX:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/compatible/d/k;->bsv:Z
 
     .line 18
     const-string/jumbo v0, ""
@@ -85,7 +85,7 @@
 
     .line 32
     :goto_0
-    iput-boolean v5, p0, Lcom/tencent/mm/compatible/d/k;->bhX:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/compatible/d/k;->bsv:Z
 
     .line 33
     return-void
@@ -129,7 +129,7 @@
     goto :goto_0
 .end method
 
-.method public static declared-synchronized ot()Lcom/tencent/mm/compatible/d/k;
+.method public static declared-synchronized oi()Lcom/tencent/mm/compatible/d/k;
     .locals 4
 
     .prologue
@@ -139,7 +139,7 @@
     monitor-enter v1
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/compatible/d/k;->bhY:Lcom/tencent/mm/compatible/d/k;
+    sget-object v0, Lcom/tencent/mm/compatible/d/k;->bsw:Lcom/tencent/mm/compatible/d/k;
 
     if-nez v0, :cond_0
 
@@ -150,7 +150,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v3, Lcom/tencent/mm/compatible/util/f;->bjE:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/compatible/util/d;->bxa:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -168,11 +168,11 @@
 
     invoke-direct {v0, v2}, Lcom/tencent/mm/compatible/d/k;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/d/k;->bhY:Lcom/tencent/mm/compatible/d/k;
+    sput-object v0, Lcom/tencent/mm/compatible/d/k;->bsw:Lcom/tencent/mm/compatible/d/k;
 
     .line 26
     :cond_0
-    sget-object v0, Lcom/tencent/mm/compatible/d/k;->bhY:Lcom/tencent/mm/compatible/d/k;
+    sget-object v0, Lcom/tencent/mm/compatible/d/k;->bsw:Lcom/tencent/mm/compatible/d/k;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -189,7 +189,7 @@
     throw v0
 .end method
 
-.method private declared-synchronized ou()V
+.method private declared-synchronized oj()V
     .locals 3
 
     .prologue
@@ -248,7 +248,7 @@
 
 
 # virtual methods
-.method public final bQ(I)Ljava/lang/Object;
+.method public final bR(I)Ljava/lang/Object;
     .locals 2
 
     .prologue
@@ -309,12 +309,12 @@
     invoke-interface {v0, v1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 37
-    iget-boolean v0, p0, Lcom/tencent/mm/compatible/d/k;->bhX:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/compatible/d/k;->bsv:Z
 
     if-nez v0, :cond_0
 
     .line 38
-    invoke-direct {p0}, Lcom/tencent/mm/compatible/d/k;->ou()V
+    invoke-direct {p0}, Lcom/tencent/mm/compatible/d/k;->oj()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

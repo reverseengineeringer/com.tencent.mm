@@ -1,13 +1,13 @@
 package com.tencent.mm.ui.e;
 
 import android.content.Context;
-import com.tencent.mm.modelsearch.o;
-import com.tencent.mm.modelsearch.o.g;
-import com.tencent.mm.modelsearch.o.i;
-import com.tencent.mm.modelsearch.o.j;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.modelsearch.m;
+import com.tencent.mm.modelsearch.m.g;
+import com.tencent.mm.modelsearch.m.j;
+import com.tencent.mm.modelsearch.m.k;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.e.a.a;
 import java.util.Collections;
 import java.util.HashSet;
@@ -16,160 +16,157 @@ import java.util.List;
 
 public abstract class c
   extends b
-  implements o.i
+  implements m.j
 {
-  public String bII;
-  public HashSet bIJ = new HashSet();
-  public List cvm = new LinkedList();
-  private o.j jgX;
-  public List jnv = Collections.synchronizedList(new LinkedList());
+  public String aEy;
+  public HashSet bYt = new HashSet();
+  public List cNf = new LinkedList();
+  private m.k iht;
+  public List lsO = Collections.synchronizedList(new LinkedList());
   
   public c(Context paramContext, h.c paramc, int paramInt)
   {
     super(paramContext, paramc, paramInt);
   }
   
-  public abstract o.j a(ac paramac, HashSet paramHashSet);
+  public abstract m.k a(aa paramaa, HashSet paramHashSet);
   
-  public a a(int paramInt, o.g paramg, List paramList)
+  public a a(int paramInt, m.g paramg, List paramList)
   {
     return null;
   }
   
   public abstract a a(int paramInt, h.a parama);
   
-  public final void a(o.j paramj, List paramList, HashSet paramHashSet, String[] paramArrayOfString, String paramString)
+  public final void a(m.k paramk, List paramList, HashSet paramHashSet, String[] paramArrayOfString, String paramString)
   {
-    t.i("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "search type %d | result %d", new Object[] { Integer.valueOf(getType()), Integer.valueOf(paramList.size()) });
-    if ((bII == null) || (!bII.equals(paramString)))
+    u.i("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "search type %d | result %d", new Object[] { Integer.valueOf(getType()), Integer.valueOf(paramList.size()) });
+    if ((aEy == null) || (!aEy.equals(paramString)))
     {
-      t.i("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "Native Search: Not Same query origin:%s current:%s", new Object[] { paramString, bII });
+      u.i("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "Native Search: Not Same query origin:%s current:%s", new Object[] { paramString, aEy });
       return;
     }
-    cvm = bn.g(paramArrayOfString);
+    cNf = ay.h(paramArrayOfString);
     a(paramList, paramHashSet);
-    bIJ = paramHashSet;
-    jnu.a(this, paramString);
+    bYt = paramHashSet;
+    lsN.a(this, paramString);
   }
   
-  public final void a(String paramString, ac paramac, HashSet paramHashSet)
+  public final void a(String paramString, aa paramaa, HashSet paramHashSet)
   {
-    ahf();
-    qI();
-    bII = paramString;
-    jgX = a(paramac, paramHashSet);
+    ass();
+    qE();
+    aEy = paramString;
+    iht = a(paramaa, paramHashSet);
   }
   
   public abstract void a(List paramList, HashSet paramHashSet);
   
-  public final void ahf()
+  public final void ass()
   {
-    if (jgX != null)
+    if (iht != null)
     {
-      o.a(jgX);
-      jgX = null;
+      m.a(iht);
+      iht = null;
     }
   }
   
-  public final LinkedList ahg()
+  public final LinkedList ast()
   {
     LinkedList localLinkedList = new LinkedList();
-    int j = jnv.size();
+    int j = lsO.size();
     int i = 0;
     while (i < j)
     {
-      h.a locala = (h.a)jnv.get(i);
-      if (jnC != Integer.MAX_VALUE) {
-        localLinkedList.add(Integer.valueOf(jnC));
+      h.a locala = (h.a)lsO.get(i);
+      if (lsV != Integer.MAX_VALUE) {
+        localLinkedList.add(Integer.valueOf(lsV));
       }
       i += 1;
     }
     return localLinkedList;
   }
   
-  public final void hs(String paramString)
+  public final void iD(String paramString)
   {
-    t.i("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "onSearchError: type=%d | errorCode=%d | originQuery=%s", new Object[] { Integer.valueOf(getType()), Integer.valueOf(-1), paramString });
-    if (!paramString.equals(bII))
+    u.i("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "onSearchError: type=%d | errorCode=%d | originQuery=%s", new Object[] { Integer.valueOf(getType()), Integer.valueOf(-1), paramString });
+    if (!paramString.equals(aEy))
     {
-      t.i("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "Native Search: Not Same Query");
+      u.i("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "Native Search: Not Same Query");
       return;
     }
-    jnu.a(this, paramString);
+    lsN.a(this, paramString);
   }
   
-  public final a iw(int paramInt)
+  public final a kn(int paramInt)
   {
-    int j = jnv.size();
+    int j = lsO.size();
     int i = 0;
     while (i < j)
     {
-      h.a locala = (h.a)jnv.get(i);
+      h.a locala = (h.a)lsO.get(i);
       Object localObject;
-      if ((jnC == paramInt) && (jnD)) {
+      if ((lsV == paramInt) && (lsW)) {
         localObject = new com.tencent.mm.ui.e.a.b(paramInt);
       }
       while (localObject != null)
       {
-        if ((!jnF) && (position == jnE)) {
-          jnL = true;
+        if ((!lsY) && (position == lsX)) {
+          ltd = true;
         }
-        eVC = aRh();
-        bII = bII;
-        eVv = jnG;
+        ggI = bid();
+        aEy = aEy;
+        ggB = ihI;
         return (a)localObject;
-        if ((jnE == paramInt) && (jnF))
+        if ((lsX == paramInt) && (lsY))
         {
           localObject = new com.tencent.mm.ui.e.a.c(paramInt);
-          jnN = (jnE - jnC);
+          ltf = (lsX - lsV);
         }
         else
         {
-          t.d("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "create Native Item: %d %d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(fWT.size()) });
+          u.d("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "create Native Item: %d %d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(gho.size()) });
           localObject = a(paramInt, locala);
         }
       }
       i += 1;
     }
-    t.v("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "createDataItem is null, position=%d | type=%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(getType()) });
     return null;
   }
   
-  public final int iy(int paramInt)
+  public final int kq(int paramInt)
   {
-    int m = jnv.size();
-    int j = 0;
-    int i = paramInt;
-    if (j < m)
+    int k = lsO.size();
+    int i = 0;
+    if (i < k)
     {
-      h.a locala = (h.a)jnv.get(j);
-      jnC = i;
-      int k = i;
-      if (jnD) {
-        k = i + 1;
+      h.a locala = (h.a)lsO.get(i);
+      lsV = paramInt;
+      int j = paramInt;
+      if (lsW) {
+        j = paramInt + 1;
       }
-      i = k + (fWT.size() + jnH);
-      jnE = i;
-      if (!jnF) {
-        break label140;
+      paramInt = j + (gho.size() + lsZ);
+      lsX = paramInt;
+      if (!lsY) {
+        break label100;
       }
-      i += 1;
+      paramInt += 1;
     }
-    label140:
+    label100:
     for (;;)
     {
-      j += 1;
+      i += 1;
       break;
-      t.v("!56@/B4Tb64lLpKcfpdNe8eelrxjo6ZioEq8g2hAIRVSPZc+lUuloFM/VQ==", "updateHeaderPosition type=%d | origin=%d | return=%d", new Object[] { Integer.valueOf(getType()), Integer.valueOf(paramInt), Integer.valueOf(i) });
-      return i;
+      return paramInt;
     }
   }
   
-  public final void qI()
+  public final void qE()
   {
-    bII = null;
-    bIJ.clear();
-    jnv.clear();
+    aEy = null;
+    bYt.clear();
+    lsO.clear();
   }
 }
 

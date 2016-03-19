@@ -6,11 +6,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Gallery.LayoutParams;
 import android.widget.ImageView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
 import com.tencent.mm.platformtools.k;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.base.MultiTouchImageView;
 
 final class ShowImageUI$a
@@ -35,10 +32,10 @@ final class ShowImageUI$a
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    Object localObject = k.iQ(imagePath);
+    Object localObject = k.ku(imagePath);
     if (localObject == null)
     {
-      t.w("!32@/B4Tb64lLpL/S4mvETx9l9B/T4NcFgMX", "get image fail");
+      u.w("!32@/B4Tb64lLpL/S4mvETx9l9B/T4NcFgMX", "get image fail");
       if (paramView != null)
       {
         localObject = paramView;
@@ -46,9 +43,9 @@ final class ShowImageUI$a
       }
       else
       {
-        localObject = View.inflate(paramViewGroup.getContext(), a.k.show_image_ui_item, null);
+        localObject = View.inflate(paramViewGroup.getContext(), 2131363026, null);
       }
-      ((ImageView)((View)localObject).findViewById(a.i.image_iv)).setImageResource(a.h.download_image_icon);
+      ((ImageView)((View)localObject).findViewById(2131166875)).setImageResource(2130903595);
       ((View)localObject).setLayoutParams(new Gallery.LayoutParams(-1, -1));
       return (View)localObject;
     }
@@ -63,7 +60,7 @@ final class ShowImageUI$a
       paramView.setMaxZoomDoubleTab(true);
       return paramView;
       paramView = (MultiTouchImageView)paramView;
-      paramView.bx(((Bitmap)localObject).getWidth(), ((Bitmap)localObject).getHeight());
+      paramView.bN(((Bitmap)localObject).getWidth(), ((Bitmap)localObject).getHeight());
     }
   }
 }

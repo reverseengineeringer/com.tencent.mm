@@ -1,13 +1,8 @@
 package com.tencent.mm.d.a;
 
-import java.util.LinkedList;
-
 public final class ek$a
 {
-  public boolean aAC = false;
-  public String aAQ;
-  public LinkedList aAR;
-  public int atZ = 0;
+  public long ayW = 0L;
 }
 
 /* Location:

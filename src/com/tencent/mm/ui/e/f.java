@@ -11,21 +11,21 @@ public abstract interface f
 {
   public abstract Bitmap a(String paramString1, String paramString2, boolean paramBoolean, int paramInt1, int paramInt2);
   
+  public abstract String a(ImageView paramImageView, String paramString1, String paramString2, boolean paramBoolean, int paramInt1, int paramInt2);
+  
   public abstract void a(Context paramContext, ImageView paramImageView, String paramString1, String paramString2, boolean paramBoolean, int paramInt1, int paramInt2);
   
-  public abstract void a(ImageView paramImageView, String paramString1, String paramString2, boolean paramBoolean, int paramInt1, int paramInt2);
+  public abstract void asj();
   
-  public abstract void agX();
+  public abstract void ask();
   
-  public abstract void agY();
+  public abstract boolean asl();
   
-  public abstract boolean agZ();
+  public abstract void asm();
   
-  public abstract void aha();
+  public abstract void asn();
   
-  public abstract void ahb();
-  
-  public abstract void ahc();
+  public abstract void aso();
   
   public static final class a
     extends BitmapDrawable

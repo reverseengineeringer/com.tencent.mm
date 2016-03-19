@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ac
-  extends a.c
+  extends a.e
 {
   public a$ac()
   {
-    super("getHeadingAndPitch", "get_heading_and_pitch", 33, false);
+    super("consumedShareCard", "consumedShareCard", 177, true);
   }
 }
 

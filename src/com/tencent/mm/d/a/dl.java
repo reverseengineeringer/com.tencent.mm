@@ -1,24 +1,34 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.r.j;
+import com.tencent.mm.sdk.c.b;
 
 public final class dl
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azw = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a axg = new a();
+  public b axh = new b();
   
   public dl()
   {
-    id = "GetFTFNecessaryElements";
-    hXT = atO;
+    id = "ExtNetSceneSendMsg";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String azx;
-    public String azy;
+    public String axi;
+    public String content;
+    public int flags;
+    public int type;
+  }
+  
+  public static final class b
+  {
+    public long avg = 0L;
+    public j axj;
   }
 }
 

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract b(Lcom/tencent/mm/plugin/gwallet/a/h;Landroid/content/Intent;)V
+.method public abstract b(Lcom/tencent/mm/plugin/gwallet/a/c;Landroid/content/Intent;)V
 .end method

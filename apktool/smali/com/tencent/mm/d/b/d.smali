@@ -1,78 +1,78 @@
 .class public abstract Lcom/tencent/mm/d/b/d;
-.super Lcom/tencent/mm/sdk/g/ae;
+.super Lcom/tencent/mm/sdk/h/c;
 .source "SourceFile"
 
 
 # static fields
-.field private static final aHH:I
+.field private static final aLG:I
 
-.field public static final aHq:[Ljava/lang/String;
+.field public static final aLn:[Ljava/lang/String;
 
-.field private static final aIK:I
+.field private static final aMJ:I
 
-.field private static final aIL:I
+.field private static final aMK:I
 
-.field private static final aIM:I
+.field private static final aML:I
 
-.field private static final aIN:I
+.field private static final aMM:I
 
-.field private static final aIO:I
+.field private static final aMN:I
 
-.field private static final aIP:I
+.field private static final aMO:I
 
-.field private static final aIQ:I
+.field private static final aMP:I
 
-.field private static final aIR:I
+.field private static final aMQ:I
 
-.field private static final aIS:I
+.field private static final aMR:I
 
-.field private static final aIT:I
+.field private static final aMS:I
 
-.field private static final aIU:I
+.field private static final aMT:I
 
-.field private static final aIV:I
+.field private static final aMU:I
 
-.field private static final aIW:I
+.field private static final aMV:I
 
-.field private static final aIX:I
+.field private static final aMW:I
 
-.field private static final aId:I
+.field private static final aMc:I
 
-.field private static final aIg:I
+.field private static final aMf:I
 
 
 # instance fields
-.field private aHL:Z
+.field private aLK:Z
 
-.field private aHO:Z
+.field private aLN:Z
 
-.field private aIA:Z
+.field private aMA:Z
 
-.field private aIB:Z
+.field private aMB:Z
 
-.field private aIC:Z
+.field private aMC:Z
 
-.field private aID:Z
+.field private aMD:Z
 
-.field private aIE:Z
+.field private aME:Z
 
-.field private aIF:Z
+.field private aMF:Z
 
-.field private aIG:Z
+.field private aMG:Z
 
-.field private aIH:Z
+.field private aMH:Z
 
-.field private aII:Z
+.field private aMI:Z
 
-.field private aIJ:Z
+.field private aMv:Z
 
-.field private aIw:Z
+.field private aMw:Z
 
-.field private aIx:Z
+.field private aMx:Z
 
-.field private aIy:Z
+.field private aMy:Z
 
-.field private aIz:Z
+.field private aMz:Z
 
 .field public field_appId:Ljava/lang/String;
 
@@ -117,7 +117,7 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/mm/d/b/d;->aHq:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/d/b/d;->aLn:[Ljava/lang/String;
 
     .line 133
     const-string/jumbo v0, "appId"
@@ -126,7 +126,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIK:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMJ:I
 
     .line 134
     const-string/jumbo v0, "sdkVer"
@@ -135,7 +135,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIL:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMK:I
 
     .line 135
     const-string/jumbo v0, "mediaSvrId"
@@ -144,7 +144,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIM:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aML:I
 
     .line 136
     const-string/jumbo v0, "mediaId"
@@ -153,7 +153,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIN:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMM:I
 
     .line 137
     const-string/jumbo v0, "clientAppDataId"
@@ -162,7 +162,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIO:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMN:I
 
     .line 138
     const-string/jumbo v0, "type"
@@ -171,7 +171,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIg:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMf:I
 
     .line 139
     const-string/jumbo v0, "totalLen"
@@ -180,7 +180,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIP:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMO:I
 
     .line 140
     const-string/jumbo v0, "offset"
@@ -189,7 +189,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIQ:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMP:I
 
     .line 141
     const-string/jumbo v0, "status"
@@ -198,7 +198,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIR:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMQ:I
 
     .line 142
     const-string/jumbo v0, "isUpload"
@@ -207,7 +207,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIS:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMR:I
 
     .line 143
     const-string/jumbo v0, "createTime"
@@ -216,7 +216,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aId:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMc:I
 
     .line 144
     const-string/jumbo v0, "lastModifyTime"
@@ -225,7 +225,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIT:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMS:I
 
     .line 145
     const-string/jumbo v0, "fileFullPath"
@@ -234,7 +234,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIU:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMT:I
 
     .line 146
     const-string/jumbo v0, "msgInfoId"
@@ -243,7 +243,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIV:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMU:I
 
     .line 147
     const-string/jumbo v0, "netTimes"
@@ -252,7 +252,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIW:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMV:I
 
     .line 148
     const-string/jumbo v0, "isUseCdn"
@@ -261,7 +261,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aIX:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aMW:I
 
     .line 149
     const-string/jumbo v0, "rowid"
@@ -270,7 +270,7 @@
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/d;->aHH:I
+    sput v0, Lcom/tencent/mm/d/b/d;->aLG:I
 
     return-void
 .end method
@@ -282,55 +282,55 @@
     const/4 v0, 0x1
 
     .line 7
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/g/ae;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/c;-><init>()V
 
     .line 29
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIw:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMv:Z
 
     .line 31
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIx:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMw:Z
 
     .line 33
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIy:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMx:Z
 
     .line 35
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIz:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMy:Z
 
     .line 37
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIA:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMz:Z
 
     .line 39
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aHO:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aLN:Z
 
     .line 41
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIB:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMA:Z
 
     .line 43
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMB:Z
 
     .line 45
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aID:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMC:Z
 
     .line 47
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIE:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMD:Z
 
     .line 49
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aHL:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aLK:Z
 
     .line 51
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIF:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aME:Z
 
     .line 53
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIG:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMF:Z
 
     .line 55
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMG:Z
 
     .line 57
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aII:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMH:Z
 
     .line 59
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aIJ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/d;->aMI:Z
 
     return-void
 .end method
@@ -372,7 +372,7 @@
     move-result v0
 
     .line 156
-    sget v5, Lcom/tencent/mm/d/b/d;->aIK:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMJ:I
 
     if-ne v5, v0, :cond_3
 
@@ -394,7 +394,7 @@
 
     .line 159
     :cond_3
-    sget v5, Lcom/tencent/mm/d/b/d;->aIL:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMK:I
 
     if-ne v5, v0, :cond_4
 
@@ -409,7 +409,7 @@
 
     .line 162
     :cond_4
-    sget v5, Lcom/tencent/mm/d/b/d;->aIM:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aML:I
 
     if-ne v5, v0, :cond_5
 
@@ -424,7 +424,7 @@
 
     .line 165
     :cond_5
-    sget v5, Lcom/tencent/mm/d/b/d;->aIN:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMM:I
 
     if-ne v5, v0, :cond_6
 
@@ -439,7 +439,7 @@
 
     .line 168
     :cond_6
-    sget v5, Lcom/tencent/mm/d/b/d;->aIO:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMN:I
 
     if-ne v5, v0, :cond_7
 
@@ -454,7 +454,7 @@
 
     .line 171
     :cond_7
-    sget v5, Lcom/tencent/mm/d/b/d;->aIg:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMf:I
 
     if-ne v5, v0, :cond_8
 
@@ -469,7 +469,7 @@
 
     .line 174
     :cond_8
-    sget v5, Lcom/tencent/mm/d/b/d;->aIP:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMO:I
 
     if-ne v5, v0, :cond_9
 
@@ -484,7 +484,7 @@
 
     .line 177
     :cond_9
-    sget v5, Lcom/tencent/mm/d/b/d;->aIQ:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMP:I
 
     if-ne v5, v0, :cond_a
 
@@ -499,7 +499,7 @@
 
     .line 180
     :cond_a
-    sget v5, Lcom/tencent/mm/d/b/d;->aIR:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMQ:I
 
     if-ne v5, v0, :cond_b
 
@@ -514,7 +514,7 @@
 
     .line 183
     :cond_b
-    sget v5, Lcom/tencent/mm/d/b/d;->aIS:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMR:I
 
     if-ne v5, v0, :cond_d
 
@@ -539,7 +539,7 @@
 
     .line 186
     :cond_d
-    sget v5, Lcom/tencent/mm/d/b/d;->aId:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMc:I
 
     if-ne v5, v0, :cond_e
 
@@ -554,7 +554,7 @@
 
     .line 189
     :cond_e
-    sget v5, Lcom/tencent/mm/d/b/d;->aIT:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMS:I
 
     if-ne v5, v0, :cond_f
 
@@ -569,7 +569,7 @@
 
     .line 192
     :cond_f
-    sget v5, Lcom/tencent/mm/d/b/d;->aIU:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMT:I
 
     if-ne v5, v0, :cond_10
 
@@ -584,7 +584,7 @@
 
     .line 195
     :cond_10
-    sget v5, Lcom/tencent/mm/d/b/d;->aIV:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMU:I
 
     if-ne v5, v0, :cond_11
 
@@ -599,7 +599,7 @@
 
     .line 198
     :cond_11
-    sget v5, Lcom/tencent/mm/d/b/d;->aIW:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMV:I
 
     if-ne v5, v0, :cond_12
 
@@ -614,7 +614,7 @@
 
     .line 201
     :cond_12
-    sget v5, Lcom/tencent/mm/d/b/d;->aIX:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aMW:I
 
     if-ne v5, v0, :cond_13
 
@@ -629,7 +629,7 @@
 
     .line 204
     :cond_13
-    sget v5, Lcom/tencent/mm/d/b/d;->aHH:I
+    sget v5, Lcom/tencent/mm/d/b/d;->aLG:I
 
     if-ne v5, v0, :cond_2
 
@@ -638,12 +638,12 @@
 
     move-result-wide v5
 
-    iput-wide v5, p0, Lcom/tencent/mm/d/b/d;->ibV:J
+    iput-wide v5, p0, Lcom/tencent/mm/d/b/d;->jYv:J
 
     goto/16 :goto_1
 .end method
 
-.method public final mA()Landroid/content/ContentValues;
+.method public final lX()Landroid/content/ContentValues;
     .locals 5
 
     .prologue
@@ -653,7 +653,7 @@
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
     .line 213
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIw:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMv:Z
 
     if-eqz v1, :cond_0
 
@@ -666,7 +666,7 @@
 
     .line 217
     :cond_0
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIx:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMw:Z
 
     if-eqz v1, :cond_1
 
@@ -683,7 +683,7 @@
 
     .line 221
     :cond_1
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIy:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMx:Z
 
     if-eqz v1, :cond_2
 
@@ -696,7 +696,7 @@
 
     .line 225
     :cond_2
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIz:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMy:Z
 
     if-eqz v1, :cond_3
 
@@ -709,7 +709,7 @@
 
     .line 229
     :cond_3
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIA:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMz:Z
 
     if-eqz v1, :cond_4
 
@@ -722,7 +722,7 @@
 
     .line 233
     :cond_4
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aHO:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aLN:Z
 
     if-eqz v1, :cond_5
 
@@ -739,7 +739,7 @@
 
     .line 237
     :cond_5
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIB:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMA:Z
 
     if-eqz v1, :cond_6
 
@@ -756,7 +756,7 @@
 
     .line 241
     :cond_6
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIC:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMB:Z
 
     if-eqz v1, :cond_7
 
@@ -773,7 +773,7 @@
 
     .line 245
     :cond_7
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aID:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMC:Z
 
     if-eqz v1, :cond_8
 
@@ -790,7 +790,7 @@
 
     .line 249
     :cond_8
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIE:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMD:Z
 
     if-eqz v1, :cond_9
 
@@ -807,7 +807,7 @@
 
     .line 253
     :cond_9
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aHL:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aLK:Z
 
     if-eqz v1, :cond_a
 
@@ -824,7 +824,7 @@
 
     .line 257
     :cond_a
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIF:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aME:Z
 
     if-eqz v1, :cond_b
 
@@ -841,7 +841,7 @@
 
     .line 261
     :cond_b
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIG:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMF:Z
 
     if-eqz v1, :cond_c
 
@@ -854,7 +854,7 @@
 
     .line 265
     :cond_c
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIH:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMG:Z
 
     if-eqz v1, :cond_d
 
@@ -871,7 +871,7 @@
 
     .line 269
     :cond_d
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aII:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMH:Z
 
     if-eqz v1, :cond_e
 
@@ -888,7 +888,7 @@
 
     .line 273
     :cond_e
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aIJ:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/d;->aMI:Z
 
     if-eqz v1, :cond_f
 
@@ -905,7 +905,7 @@
 
     .line 277
     :cond_f
-    iget-wide v1, p0, Lcom/tencent/mm/d/b/d;->ibV:J
+    iget-wide v1, p0, Lcom/tencent/mm/d/b/d;->jYv:J
 
     const-wide/16 v3, 0x0
 
@@ -916,7 +916,7 @@
     .line 278
     const-string/jumbo v1, "rowid"
 
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/d;->ibV:J
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/d;->jYv:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 

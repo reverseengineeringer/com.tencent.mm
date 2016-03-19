@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract D(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/b/a;
+.method public abstract G(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/b/a;
 .end method

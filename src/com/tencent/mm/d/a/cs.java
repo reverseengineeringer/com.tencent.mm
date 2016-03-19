@@ -1,29 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class cs
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ayF = new a();
-  public b ayG = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awl = new a();
   
   public cs()
   {
-    id = "FileDownloadPause";
-    hXT = atO;
+    id = "ExDeviceSettingShow";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public long ayC = 0L;
-  }
-  
-  public static final class b
-  {
-    public boolean ayH = false;
+    public boolean auR;
   }
 }
 

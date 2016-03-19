@@ -2,10 +2,10 @@ package com.tencent.mm.compatible.loader;
 
 public final class a
 {
-  private static Object[] biQ = new Object[0];
-  private static Object[] biR = new Object[73];
+  private static Object[] bts = new Object[0];
+  private static Object[] btt = new Object[73];
   
-  public static int l(int paramInt)
+  public static int m(int paramInt)
   {
     int j = paramInt * 4;
     paramInt = 4;

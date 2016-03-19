@@ -1,4 +1,4 @@
-.class public interface abstract Lcom/tencent/mm/ui/d$a;
+.class public final Lcom/tencent/mm/ui/d$a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -9,11 +9,24 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x609
+    accessFlags = 0x19
     name = "a"
 .end annotation
 
 
-# virtual methods
-.method public abstract mY(I)V
+# static fields
+.field public static kjJ:I
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 3601
+    const/4 v0, 0x0
+
+    sput v0, Lcom/tencent/mm/ui/d$a;->kjJ:I
+
+    return-void
 .end method

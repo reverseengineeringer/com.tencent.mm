@@ -1,28 +1,20 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.sdk.platformtools.aa;
-
-public final class h
+public abstract interface h
 {
-  public static final class a
-  {
-    public static int ilB = 0;
-  }
+  public abstract void aZq();
   
-  public static final class b {}
+  public abstract void aZr();
   
-  public static final class c
-  {
-    public static final String bke = null;
-  }
+  public abstract void aZs();
   
-  public static abstract interface d
-  {
-    public static final String ilC = ;
-    public static final String ilD = aa.getPackageName() + ":tools";
-  }
+  public abstract void aZt();
   
-  public static final class e {}
+  public abstract void aZu();
+  
+  public abstract void aZv();
+  
+  public abstract void bad();
 }
 
 /* Location:

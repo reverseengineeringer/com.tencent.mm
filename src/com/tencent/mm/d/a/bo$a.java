@@ -2,8 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class bo$a
 {
-  public long awA = 0L;
-  public boolean awB = false;
+  public boolean Jq = false;
+  public String alN;
+  public String auQ;
 }
 
 /* Location:

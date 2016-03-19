@@ -2,83 +2,82 @@ package com.tencent.mm.g;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.tencent.mm.compatible.util.j;
-import com.tencent.mm.network.aw;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.network.z;
+import com.tencent.mm.sdk.platformtools.y;
 
 public class a
 {
-  public static final String bke = null;
-  private static SharedPreferences bkf = null;
-  private static SharedPreferences bkg = null;
+  public static final String buD = null;
+  private static SharedPreferences buE = null;
+  private static SharedPreferences buF = null;
   
-  public static int pA()
+  protected static SharedPreferences pe()
   {
-    return po().getInt("settings_active_end_time_min", 0);
-  }
-  
-  protected static SharedPreferences po()
-  {
-    SharedPreferences localSharedPreferences = aa.getContext().getSharedPreferences("notify_key_pref_settings", j.pj());
-    bkf = localSharedPreferences;
+    SharedPreferences localSharedPreferences = y.getContext().getSharedPreferences("notify_key_pref_settings", 4);
+    buE = localSharedPreferences;
     return localSharedPreferences;
   }
   
-  public static SharedPreferences pp()
+  public static SharedPreferences pf()
   {
-    SharedPreferences localSharedPreferences = aw.CS();
-    bkg = localSharedPreferences;
+    SharedPreferences localSharedPreferences = z.EZ();
+    buF = localSharedPreferences;
     return localSharedPreferences;
   }
   
-  public static boolean pq()
+  public static boolean pg()
   {
-    return po().getBoolean("command_notification_status", false);
+    return pe().getBoolean("command_notification_status", false);
   }
   
-  public static boolean pr()
+  public static boolean ph()
   {
-    return po().getBoolean("settings_new_msg_notification", true);
+    return pe().getBoolean("settings_new_msg_notification", true);
   }
   
-  public static boolean ps()
+  public static boolean pi()
   {
-    return po().getBoolean("settings_show_detail", true);
+    return pe().getBoolean("settings_show_detail", true);
   }
   
-  public static boolean pt()
+  public static boolean pj()
   {
-    return po().getBoolean("settings_sound", true);
+    return pe().getBoolean("settings_sound", true);
   }
   
-  public static String pu()
+  public static String pk()
   {
-    return po().getString("settings.ringtone", bke);
+    return pe().getString("settings.ringtone", buD);
   }
   
-  public static boolean pv()
+  public static boolean pl()
   {
-    return po().getBoolean("settings_shake", true);
+    return pe().getBoolean("settings_shake", true);
   }
   
-  public static boolean pw()
+  public static boolean pm()
   {
-    return po().getBoolean("settings_active_time_full", true);
+    return pe().getBoolean("settings_active_time_full", true);
   }
   
-  public static int px()
+  public static int pn()
   {
-    return po().getInt("settings_active_begin_time_hour", 8);
+    return pe().getInt("settings_active_begin_time_hour", 8);
   }
   
-  public static int py()
+  public static int po()
   {
-    return po().getInt("settings_active_end_time_hour", 23);
+    return pe().getInt("settings_active_end_time_hour", 23);
   }
   
-  public static int pz()
+  public static int pp()
   {
-    return po().getInt("settings_active_begin_time_min", 0);
+    return pe().getInt("settings_active_begin_time_min", 0);
+  }
+  
+  public static int pq()
+  {
+    return pe().getInt("settings_active_end_time_min", 0);
   }
 }
 

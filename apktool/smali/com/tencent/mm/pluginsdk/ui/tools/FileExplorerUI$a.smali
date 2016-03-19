@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field fqn:Ljava/lang/String;
+.field gME:Ljava/lang/String;
 
-.field final synthetic hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+.field final synthetic iRO:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
 
-.field private hdZ:Ljava/io/File;
+.field private iRR:Ljava/io/File;
 
-.field private hea:Ljava/io/File;
+.field private iRS:Ljava/io/File;
 
-.field private heb:[Ljava/io/File;
+.field private iRT:[Ljava/io/File;
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     .prologue
     .line 332
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRO:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
@@ -54,7 +54,7 @@
 
     .prologue
     .line 332
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdZ:Ljava/io/File;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRR:Ljava/io/File;
 
     return-object v0
 .end method
@@ -64,7 +64,7 @@
 
     .prologue
     .line 332
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hea:Ljava/io/File;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRS:Ljava/io/File;
 
     return-object v0
 .end method
@@ -78,14 +78,14 @@
     const/4 v0, 0x0
 
     .line 343
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdZ:Ljava/io/File;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRR:Ljava/io/File;
 
     .line 345
     invoke-virtual {p2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->fqn:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->gME:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
 
@@ -96,14 +96,14 @@
     .line 346
     const/4 v1, 0x0
 
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdZ:Ljava/io/File;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRR:Ljava/io/File;
 
     .line 349
     :cond_0
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hea:Ljava/io/File;
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRS:Ljava/io/File;
 
     .line 350
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hea:Ljava/io/File;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRS:Ljava/io/File;
 
     invoke-virtual {v1}, Ljava/io/File;->canRead()Z
 
@@ -112,27 +112,27 @@
     if-eqz v1, :cond_6
 
     .line 351
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hea:Ljava/io/File;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRS:Ljava/io/File;
 
-    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/tools/o;
+    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a$1;
 
-    invoke-direct {v2, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/o;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;)V
+    invoke-direct {v2, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;)V
 
     invoke-virtual {v1, v2}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->heb:[Ljava/io/File;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRT:[Ljava/io/File;
 
     .line 363
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->heb:[Ljava/io/File;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRT:[Ljava/io/File;
 
     array-length v1, v1
 
     if-lez v1, :cond_1
 
     .line 364
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->heb:[Ljava/io/File;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRT:[Ljava/io/File;
 
     if-eqz v2, :cond_1
 
@@ -166,7 +166,7 @@
 
     new-instance v7, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$b;
 
-    iget-object v8, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+    iget-object v8, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRO:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
 
     invoke-direct {v7, v8, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$b;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;B)V
 
@@ -176,7 +176,7 @@
 
     move-result-object v8
 
-    invoke-static {v8}, Lcom/tencent/mm/platformtools/c;->iN(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v8}, Lcom/tencent/mm/platformtools/c;->kr(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
@@ -184,7 +184,7 @@
 
     move-result-object v8
 
-    iput-object v8, v7, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$b;->hed:Ljava/lang/String;
+    iput-object v8, v7, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$b;->iRV:Ljava/lang/String;
 
     invoke-virtual {v6}, Ljava/io/File;->isDirectory()Z
 
@@ -205,15 +205,15 @@
     goto :goto_2
 
     :cond_4
-    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/tools/p;
+    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/p;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a$2;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;)V
 
     invoke-static {v3, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/tools/q;
+    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/q;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a$3;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;)V
 
     invoke-static {v4, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -276,7 +276,7 @@
     :cond_6
     new-array v0, v0, [Ljava/io/File;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->heb:[Ljava/io/File;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRT:[Ljava/io/File;
 
     goto :goto_0
 .end method
@@ -288,7 +288,7 @@
     const/4 v0, 0x0
 
     .line 374
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->heb:[Ljava/io/File;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRT:[Ljava/io/File;
 
     if-nez v1, :cond_0
 
@@ -297,11 +297,11 @@
     return v0
 
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->heb:[Ljava/io/File;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRT:[Ljava/io/File;
 
     array-length v1, v1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdZ:Ljava/io/File;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRR:Ljava/io/File;
 
     if-eqz v2, :cond_1
 
@@ -318,14 +318,14 @@
 
     .prologue
     .line 383
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdZ:Ljava/io/File;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRR:Ljava/io/File;
 
     if-eqz v0, :cond_0
 
     if-nez p1, :cond_0
 
     .line 384
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdZ:Ljava/io/File;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRR:Ljava/io/File;
 
     .line 388
     :goto_0
@@ -351,7 +351,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->heb:[Ljava/io/File;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRT:[Ljava/io/File;
 
     array-length v2, v2
 
@@ -363,12 +363,12 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 388
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->heb:[Ljava/io/File;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRT:[Ljava/io/File;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdZ:Ljava/io/File;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRR:Ljava/io/File;
 
     if-nez v1, :cond_1
 
@@ -403,9 +403,9 @@
     if-nez p2, :cond_0
 
     .line 400
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRO:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
 
-    sget v1, Lcom/tencent/mm/a$k;->mail_file_explorer_item:I
+    const v1, 0x7f0a04e2
 
     const/4 v2, 0x0
 
@@ -416,12 +416,12 @@
     .line 401
     new-instance v1, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRO:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
 
     invoke-direct {v1, v0, v3}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;B)V
 
     .line 402
-    sget v0, Lcom/tencent/mm/a$i;->file_icon_iv:I
+    const v0, 0x7f0702b1
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -429,10 +429,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->cwg:Landroid/widget/ImageView;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->cNV:Landroid/widget/ImageView;
 
     .line 403
-    sget v0, Lcom/tencent/mm/a$i;->file_name_tv:I
+    const v0, 0x7f070248
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -440,10 +440,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->cFf:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->dda:Landroid/widget/TextView;
 
     .line 404
-    sget v0, Lcom/tencent/mm/a$i;->file_summary_tv:I
+    const v0, 0x7f070f22
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -451,7 +451,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->hee:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->iRW:Landroid/widget/TextView;
 
     .line 406
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -472,12 +472,12 @@
     check-cast v1, Ljava/io/File;
 
     .line 413
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->hdZ:Ljava/io/File;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->iRR:Ljava/io/File;
 
     if-ne v1, v2, :cond_1
 
     .line 414
-    iget-object v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->cFf:Landroid/widget/TextView;
+    iget-object v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->dda:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
 
@@ -486,14 +486,14 @@
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 415
-    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->cwg:Landroid/widget/ImageView;
+    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->cNV:Landroid/widget/ImageView;
 
-    sget v2, Lcom/tencent/mm/a$h;->qqmail_attach_back:I
+    const v2, 0x7f04061a
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 416
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->hee:Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->iRW:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -503,16 +503,16 @@
 
     .line 419
     :cond_1
-    iget-object v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->cwg:Landroid/widget/ImageView;
+    iget-object v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->cNV:Landroid/widget/ImageView;
 
-    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;->i(Ljava/io/File;)I
+    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;->l(Ljava/io/File;)I
 
     move-result v3
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 420
-    iget-object v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->cFf:Landroid/widget/TextView;
+    iget-object v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->dda:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Ljava/io/File;->getName()Ljava/lang/String;
 
@@ -521,7 +521,7 @@
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 421
-    iget-object v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->hee:Landroid/widget/TextView;
+    iget-object v2, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->iRW:Landroid/widget/TextView;
 
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -577,7 +577,7 @@
 
     move-result-wide v4
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/bn;->W(J)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->al(J)Ljava/lang/String;
 
     move-result-object v1
 

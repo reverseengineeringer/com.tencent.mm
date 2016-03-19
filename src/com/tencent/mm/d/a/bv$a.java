@@ -1,15 +1,11 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import android.net.Uri;
-
 public final class bv$a
 {
-  public String[] atX;
-  public int awH = 0;
-  public Context context;
-  public String[] selectionArgs;
-  public Uri uri;
+  public String alN;
+  public String auQ;
+  public String avk;
+  public int type;
 }
 
 /* Location:

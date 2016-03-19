@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public ciK:Landroid/widget/TextView;
+.field public czU:Landroid/widget/TextView;
 
-.field public iSk:Lcom/tencent/mm/ui/base/MaskLayout;
+.field public dbN:Lcom/tencent/mm/ui/base/MaskLayout;
 
 
 # direct methods
@@ -25,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 306
+    .line 323
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,7 +35,7 @@
     .locals 0
 
     .prologue
-    .line 306
+    .line 323
     invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AtSomeoneUI$b;-><init>()V
 
     return-void

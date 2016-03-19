@@ -7,14 +7,13 @@ import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.f;
-import com.tencent.mm.ao.a;
+import com.tencent.mm.aw.a;
 
 public class MMImageButton
   extends FrameLayout
 {
-  private ImageView azQ;
-  private TextView ekd;
+  private ImageView aAF;
+  private TextView ftN;
   
   public MMImageButton(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -26,51 +25,51 @@ public class MMImageButton
     super(paramContext, paramAttributeSet, paramInt);
     paramAttributeSet = new FrameLayout.LayoutParams(-2, -2);
     gravity = 17;
-    azQ = new ImageView(paramContext);
-    azQ.setLayoutParams(paramAttributeSet);
-    addView(azQ);
+    aAF = new ImageView(paramContext);
+    aAF.setLayoutParams(paramAttributeSet);
+    addView(aAF);
     paramAttributeSet = new FrameLayout.LayoutParams(-2, -2);
     gravity = 17;
-    ekd = new TextView(paramContext);
-    ekd.setLayoutParams(paramAttributeSet);
-    ekd.setClickable(false);
-    ekd.setFocusable(false);
-    ekd.setFocusableInTouchMode(false);
-    ekd.setTextColor(a.t(paramContext, a.f.mm_title_btn_text));
-    addView(ekd);
+    ftN = new TextView(paramContext);
+    ftN.setLayoutParams(paramAttributeSet);
+    ftN.setClickable(false);
+    ftN.setFocusable(false);
+    ftN.setFocusableInTouchMode(false);
+    ftN.setTextColor(a.x(paramContext, 2131231259));
+    addView(ftN);
   }
   
   public void setEnabled(boolean paramBoolean)
   {
     super.setEnabled(paramBoolean);
-    ekd.setEnabled(paramBoolean);
-    azQ.setEnabled(paramBoolean);
+    ftN.setEnabled(paramBoolean);
+    aAF.setEnabled(paramBoolean);
   }
   
   public void setImageDrawable(Drawable paramDrawable)
   {
-    azQ.setImageDrawable(paramDrawable);
-    azQ.setVisibility(0);
-    ekd.setVisibility(8);
+    aAF.setImageDrawable(paramDrawable);
+    aAF.setVisibility(0);
+    ftN.setVisibility(8);
   }
   
   public void setImageRsource(int paramInt)
   {
-    setImageDrawable(a.u(getContext(), paramInt));
+    setImageDrawable(a.y(getContext(), paramInt));
   }
   
   public void setText(int paramInt)
   {
-    ekd.setText(paramInt);
-    ekd.setVisibility(0);
-    azQ.setVisibility(8);
+    ftN.setText(paramInt);
+    ftN.setVisibility(0);
+    aAF.setVisibility(8);
   }
   
   public void setText(String paramString)
   {
-    ekd.setText(paramString);
-    ekd.setVisibility(0);
-    azQ.setVisibility(8);
+    ftN.setText(paramString);
+    ftN.setVisibility(0);
+    aAF.setVisibility(8);
   }
 }
 

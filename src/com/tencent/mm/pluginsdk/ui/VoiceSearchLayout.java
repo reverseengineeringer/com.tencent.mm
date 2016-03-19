@@ -1,56 +1,107 @@
 package com.tencent.mm.pluginsdk.ui;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.AnimationDrawable;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
+import android.media.MediaPlayer.OnErrorListener;
 import android.net.Uri;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import com.tencent.mm.a.a;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.m;
-import com.tencent.mm.ai.f;
-import com.tencent.mm.ai.f.a;
-import com.tencent.mm.compatible.b.d;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.h.e;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.ao.d.a;
+import com.tencent.mm.ao.d.b;
+import com.tencent.mm.sdk.i.e;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 public class VoiceSearchLayout
   extends LinearLayout
 {
-  private static final int[] csp = { a.h.voicesearch_silence_check001, a.h.voicesearch_silence_check002, a.h.voicesearch_silence_check003, a.h.voicesearch_silence_check004, a.h.voicesearch_feedback005, a.h.voicesearch_feedback006, a.h.voicesearch_feedback007, a.h.voicesearch_feedback008, a.h.voicesearch_feedback009, a.h.voicesearch_feedback010, a.h.voicesearch_feedback011, a.h.voicesearch_feedback012, a.h.voicesearch_feedback013, a.h.voicesearch_feedback014 };
-  private static final int[] gRL = { a.h.voicesearch_silence_check001, a.h.voicesearch_silence_check001, a.h.voicesearch_silence_check001, a.h.voicesearch_silence_check002, a.h.voicesearch_silence_check003, a.h.voicesearch_silence_check002, a.h.voicesearch_silence_check001, a.h.voicesearch_silence_check004, a.h.voicesearch_silence_check001, a.h.voicesearch_silence_check001 };
-  private static final int[] gRM = { a.h.voicesearch_loading001, a.h.voicesearch_loading010, a.h.voicesearch_loading010, a.h.voicesearch_loading010, a.h.voicesearch_loading001 };
-  private int bFJ = 0;
-  public View cAV = null;
-  private final aj csL = new aj(new al(this), true);
-  private boolean dIB = false;
-  private a gRC = null;
-  public Button gRD;
-  private boolean gRE = false;
-  private int gRF = 0;
-  private b gRG;
-  public View gRH;
-  public AnimationDrawable gRI;
-  f gRJ;
-  public boolean gRK = false;
-  private int gRN = 0;
-  private int gRO = 0;
-  private int us = 0;
+  private static final int[] cJN = { 2130970126, 2130970150, 2130970120, 2130970098, 2130970128, 2130970107, 2130970112, 2130970111, 2130970105, 2130970143, 2130970117, 2130970135, 2130970090, 2130970080 };
+  private static final int[] iHI = { 2130970126, 2130970126, 2130970126, 2130970150, 2130970120, 2130970150, 2130970126, 2130970098, 2130970126, 2130970126 };
+  private static final int[] iHJ = { 2130970097, 2130970145, 2130970145, 2130970145, 2130970097 };
+  private boolean aBK = false;
+  private int bUf = 0;
+  private final af cKj = new af(new af.a()
+  {
+    public final boolean lj()
+    {
+      if (VoiceSearchLayout.d(VoiceSearchLayout.this) == null) {
+        return true;
+      }
+      if (VoiceSearchLayout.e(VoiceSearchLayout.this) < VoiceSearchLayout.aRh().length)
+      {
+        VoiceSearchLayout.a(VoiceSearchLayout.this, VoiceSearchLayout.aRh()[VoiceSearchLayout.f(VoiceSearchLayout.this)]);
+        return true;
+      }
+      com.tencent.mm.ao.d locald = VoiceSearchLayout.d(VoiceSearchLayout.this);
+      u.d("!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t", "cAmplitude " + cid);
+      int i = cid;
+      cid = 0;
+      if (i > com.tencent.mm.ao.d.aoE) {
+        com.tencent.mm.ao.d.aoE = i;
+      }
+      u.d("getMaxAmplitude", " map: " + i + " max:" + com.tencent.mm.ao.d.aoE + " per:" + i * 100 / com.tencent.mm.ao.d.aoE);
+      i = i * 100 / com.tencent.mm.ao.d.aoE;
+      u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "addr vol:" + i);
+      int k = VoiceSearchLayout.g(VoiceSearchLayout.this);
+      if (VoiceSearchLayout.g(VoiceSearchLayout.this) == VoiceSearchLayout.h(VoiceSearchLayout.this))
+      {
+        if (i <= 10)
+        {
+          VoiceSearchLayout.i(VoiceSearchLayout.this);
+          if (VoiceSearchLayout.j(VoiceSearchLayout.this) >= VoiceSearchLayout.aRi().length) {
+            VoiceSearchLayout.k(VoiceSearchLayout.this);
+          }
+          VoiceSearchLayout.a(VoiceSearchLayout.this, VoiceSearchLayout.aRi()[VoiceSearchLayout.j(VoiceSearchLayout.this)]);
+          return true;
+        }
+        int j = i / 5;
+        i = j;
+        if (j >= VoiceSearchLayout.aRj().length) {
+          i = VoiceSearchLayout.aRj().length - 1;
+        }
+        u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "addr mvol:" + i);
+        VoiceSearchLayout.b(VoiceSearchLayout.this, i);
+      }
+      for (;;)
+      {
+        VoiceSearchLayout.a(VoiceSearchLayout.this, VoiceSearchLayout.aRj()[k]);
+        return true;
+        if (VoiceSearchLayout.g(VoiceSearchLayout.this) > VoiceSearchLayout.h(VoiceSearchLayout.this)) {
+          VoiceSearchLayout.l(VoiceSearchLayout.this);
+        } else {
+          VoiceSearchLayout.m(VoiceSearchLayout.this);
+        }
+      }
+    }
+  }, true);
+  public View cTx = null;
+  public Button iHA;
+  private boolean iHB = false;
+  private int iHC = 0;
+  private b iHD;
+  public View iHE;
+  public AnimationDrawable iHF;
+  com.tencent.mm.ao.d iHG;
+  public boolean iHH = false;
+  private int iHK = 0;
+  private int iHL = 0;
+  private a iHz = null;
+  private int ts = 0;
   
   public VoiceSearchLayout(Context paramContext)
   {
@@ -71,63 +122,75 @@ public class VoiceSearchLayout
     init(paramContext);
   }
   
-  private void a(boolean paramBoolean, q paramq)
+  private static void Bq()
+  {
+    u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "resumeMusic");
+    com.tencent.mm.compatible.b.d locald = com.tencent.mm.model.ah.tF();
+    if (bpu != null) {
+      bpu.setStreamMute(3, false);
+    }
+  }
+  
+  private void a(boolean paramBoolean, g paramg)
   {
     if (paramBoolean)
     {
-      t.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "pauseMusic");
-      paramq = ax.tn();
-      if (bfo != null) {
-        bfo.setStreamMute(3, true);
+      u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "pauseMusic");
+      paramg = com.tencent.mm.model.ah.tF();
+      if (bpu != null) {
+        bpu.setStreamMute(3, true);
       }
-      paramq = new MediaPlayer();
+      paramg = new MediaPlayer();
       if (!paramBoolean) {
-        break label138;
+        break label132;
       }
     }
     for (;;)
     {
-      label138:
+      label132:
       try
       {
-        paramq.setDataSource(getContext(), Uri.parse("android.resource://" + getContext().getPackageName() + "/" + a.m.on));
-        paramq.setAudioStreamType(5);
-        paramq.setOnCompletionListener(new am(this, null));
-        paramq.setOnErrorListener(new an(this, null));
-        paramq.prepare();
-        paramq.setLooping(false);
-        paramq.start();
+        paramg.setDataSource(getContext(), Uri.parse("android.resource://" + getContext().getPackageName() + "/2130903379"));
+        paramg.setAudioStreamType(5);
+        paramg.setOnCompletionListener(new MediaPlayer.OnCompletionListener()
+        {
+          public final void onCompletion(MediaPlayer paramAnonymousMediaPlayer)
+          {
+            paramAnonymousMediaPlayer.release();
+          }
+        });
+        paramg.setOnErrorListener(new MediaPlayer.OnErrorListener()
+        {
+          public final boolean onError(MediaPlayer paramAnonymousMediaPlayer, int paramAnonymousInt1, int paramAnonymousInt2)
+          {
+            return false;
+          }
+        });
+        paramg.prepare();
+        paramg.setLooping(false);
+        paramg.start();
         return;
       }
-      catch (Exception paramq) {}
-      aAp();
+      catch (Exception paramg) {}
+      Bq();
       break;
-      paramq.setDataSource(getContext(), Uri.parse("android.resource://" + getContext().getPackageName() + "/" + a.m.off));
-    }
-  }
-  
-  private static void aAp()
-  {
-    t.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "resumeMusic");
-    d locald = ax.tn();
-    if (bfo != null) {
-      bfo.setStreamMute(3, false);
+      paramg.setDataSource(getContext(), Uri.parse("android.resource://" + getContext().getPackageName() + "/2130903392"));
     }
   }
   
   private void init(Context paramContext)
   {
-    cAV = inflate(paramContext, a.k.voice_search_layout, this);
-    gRD = ((Button)cAV.findViewById(a.i.voice_search_start_btn));
-    gRH = cAV.findViewById(a.i.voice_search_field);
+    cTx = inflate(paramContext, 2131363045, this);
+    iHA = ((Button)cTx.findViewById(2131169064));
+    iHE = cTx.findViewById(2131169063);
     setSearchStartBtnView(false);
     reset();
   }
   
   private void setAmpImage(int paramInt)
   {
-    if (gRD != null) {
-      gRD.setBackgroundResource(paramInt);
+    if (iHA != null) {
+      iHA.setBackgroundResource(paramInt);
     }
   }
   
@@ -135,130 +198,181 @@ public class VoiceSearchLayout
   {
     if (paramBoolean)
     {
-      gRD.setBackgroundResource(a.h.voice_search_start_anim);
-      gRI = ((AnimationDrawable)gRD.getBackground());
-      if (gRI != null) {
-        gRI.start();
+      iHA.setBackgroundResource(2130968587);
+      iHF = ((AnimationDrawable)iHA.getBackground());
+      if (iHF != null) {
+        iHF.start();
       }
       return;
     }
-    gRD.setBackgroundResource(a.h.voicesearch_btn_normal);
+    iHA.setBackgroundResource(2130970078);
   }
   
-  public final void aAn()
+  public final void aRf()
   {
-    t.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "checkStop " + dIB);
-    if (dIB)
+    u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "checkStop " + aBK);
+    if (aBK)
     {
-      aAo();
-      dIB = false;
+      aRg();
+      aBK = false;
     }
   }
   
-  public final void aAo()
+  public final void aRg()
   {
-    t.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "doCancel " + dIB);
-    if (dIB)
+    u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "doCancel " + aBK);
+    if (aBK)
     {
-      dIB = false;
-      if (gRC != null) {
-        gRC.aAu();
+      aBK = false;
+      if (iHz != null) {
+        iHz.aRl();
       }
     }
     reset();
     if (getVisibility() == 0)
     {
       setVisibility(8);
-      if (gRG != null) {
-        gRG.em(false);
+      if (iHD != null) {
+        iHD.gm(false);
       }
     }
-    aAp();
-    if (gRJ != null) {
-      gRJ.cancel();
+    Bq();
+    if (iHG != null) {
+      iHG.cancel();
     }
-    if (csL != null) {
-      csL.aEN();
-    }
-  }
-  
-  public final void lt(int paramInt)
-  {
-    boolean bool = true;
-    t.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "doStart " + dIB);
-    gRF = paramInt;
-    dIB = true;
-    gRE = false;
-    if (gRC != null) {
-      gRC.aAt();
-    }
-    setVisibility(0);
-    csL.cA(50L);
-    a(true, null);
-    gRO = 0;
-    gRJ = new f(new ao(this), paramInt);
-    f localf = gRJ;
-    t.i("!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t", "start record");
-    if ((bRf == 0) && (com.tencent.mm.sdk.platformtools.al.cT(aa.getContext()))) {}
-    for (;;)
-    {
-      bRq = bool;
-      e.a(new f.a(localf), "SceneVoiceAddr_record");
-      return;
-      bool = false;
+    if (cKj != null) {
+      cKj.aUF();
     }
   }
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
-    if (!gRE) {
-      aAn();
+    if (!iHB) {
+      aRf();
     }
     return true;
   }
   
+  public final void or(int paramInt)
+  {
+    boolean bool = com.tencent.mm.pluginsdk.g.a.aL(getContext(), "android.permission.RECORD_AUDIO");
+    u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "summerper checkPermission checkMicrophone[%b]", new Object[] { Boolean.valueOf(bool) });
+    if (bool)
+    {
+      u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "doStart " + aBK);
+      iHC = paramInt;
+      aBK = true;
+      iHB = false;
+      if (iHz != null) {
+        iHz.aRk();
+      }
+      setVisibility(0);
+      cKj.ds(50L);
+      a(true, null);
+      iHL = 0;
+      iHG = new com.tencent.mm.ao.d(new d.b()
+      {
+        public final void EF()
+        {
+          reset();
+          VoiceSearchLayout.q(VoiceSearchLayout.this).a(false, null, -1L);
+        }
+        
+        public final void EG()
+        {
+          VoiceSearchLayout.n(VoiceSearchLayout.this);
+          VoiceSearchLayout.o(VoiceSearchLayout.this);
+          if (VoiceSearchLayout.p(VoiceSearchLayout.this) != null) {
+            VoiceSearchLayout.p(VoiceSearchLayout.this).aUF();
+          }
+        }
+        
+        public final void a(String[] paramAnonymousArrayOfString, long paramAnonymousLong)
+        {
+          try
+          {
+            u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "dkaddr onRes ");
+            if (paramAnonymousArrayOfString != null)
+            {
+              u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "dkaddr onRes size:" + paramAnonymousArrayOfString.length + " " + paramAnonymousArrayOfString.toString());
+              int j = paramAnonymousArrayOfString.length;
+              int i = 0;
+              while (i < j)
+              {
+                String str = paramAnonymousArrayOfString[i];
+                u.d("!44@/B4Tb64lLpKCGRi+LcyHSNJSF5OOP5LMoXistc7C4wY=", "search username  :" + str);
+                i += 1;
+              }
+            }
+            reset();
+            VoiceSearchLayout.q(VoiceSearchLayout.this).a(true, paramAnonymousArrayOfString, paramAnonymousLong);
+            return;
+          }
+          catch (Exception paramAnonymousArrayOfString) {}
+        }
+      }, paramInt);
+      locald = iHG;
+      u.i("!32@/B4Tb64lLpJjyqE6YDnAp3o91K/Zm7/t", "start record");
+      if ((chW == 0) && (com.tencent.mm.sdk.platformtools.ah.dx(y.getContext())))
+      {
+        bool = true;
+        cih = bool;
+        e.a(new d.a(locald), "SceneVoiceAddr_record");
+      }
+    }
+    while (!(getContext() instanceof Activity)) {
+      for (;;)
+      {
+        com.tencent.mm.ao.d locald;
+        return;
+        bool = false;
+      }
+    }
+    android.support.v4.app.a.a((Activity)getContext(), new String[] { "android.permission.RECORD_AUDIO" }, 1280);
+  }
+  
   public final void reset()
   {
-    dIB = false;
-    gRE = false;
+    aBK = false;
+    iHB = false;
     setSearchStartBtnView(false);
-    dIB = false;
-    gRE = false;
-    gRD.setBackgroundResource(a.h.voicesearch_btn_normal);
-    gRH.setBackgroundDrawable(getResources().getDrawable(a.h.voicesearch_bg_btn));
+    aBK = false;
+    iHB = false;
+    iHA.setBackgroundResource(2130970078);
+    iHE.setBackgroundDrawable(getResources().getDrawable(2130968596));
   }
   
   public void setOnSearchListener(a parama)
   {
-    gRC = parama;
+    iHz = parama;
   }
   
   public void setOnVisibleChangeListener(b paramb)
   {
-    gRG = paramb;
+    iHD = paramb;
   }
   
   public void setTopMargin(int paramInt)
   {
-    LinearLayout.LayoutParams localLayoutParams = (LinearLayout.LayoutParams)gRH.getLayoutParams();
+    LinearLayout.LayoutParams localLayoutParams = (LinearLayout.LayoutParams)iHE.getLayoutParams();
     topMargin = paramInt;
-    gRH.setLayoutParams(localLayoutParams);
+    iHE.setLayoutParams(localLayoutParams);
   }
   
   public void setVisibility(int paramInt)
   {
     Object localObject;
-    if ((super.getVisibility() != paramInt) && (!gRK))
+    if ((super.getVisibility() != paramInt) && (!iHH))
     {
       if (paramInt != 8) {
         break label68;
       }
-      localObject = AnimationUtils.loadAnimation(getContext(), a.a.fast_faded_out);
+      localObject = AnimationUtils.loadAnimation(getContext(), 2130837603);
       startAnimation((Animation)localObject);
       super.setVisibility(paramInt);
-      if (gRG != null)
+      if (iHD != null)
       {
-        localObject = gRG;
+        localObject = iHD;
         if (paramInt != 0) {
           break label82;
         }
@@ -268,9 +382,9 @@ public class VoiceSearchLayout
     label82:
     for (boolean bool = true;; bool = false)
     {
-      ((b)localObject).em(bool);
+      ((b)localObject).gm(bool);
       return;
-      localObject = AnimationUtils.loadAnimation(getContext(), a.a.fast_faded_in);
+      localObject = AnimationUtils.loadAnimation(getContext(), 2130837575);
       break;
     }
   }
@@ -279,14 +393,14 @@ public class VoiceSearchLayout
   {
     public abstract void a(boolean paramBoolean, String[] paramArrayOfString, long paramLong);
     
-    public abstract void aAt();
+    public abstract void aRk();
     
-    public abstract void aAu();
+    public abstract void aRl();
   }
   
   public static abstract interface b
   {
-    public abstract void em(boolean paramBoolean);
+    public abstract void gm(boolean paramBoolean);
   }
 }
 

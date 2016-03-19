@@ -1,17 +1,32 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import java.util.LinkedList;
 
 public final class gz
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aCA = new a();
+  public b aCB = new b();
   
   public gz()
   {
-    id = "ScanBankcardEnd";
-    hXT = atO;
+    id = "NetSceneLbsRoomGetMember";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public boolean aBY = false;
+    public String aBh;
+  }
+  
+  public static final class b
+  {
+    public int aCC = 0;
+    public LinkedList aCn;
   }
 }
 

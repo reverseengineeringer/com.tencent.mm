@@ -11,7 +11,7 @@ public class NotificationQueue$ParcelNotificationQueue
   extends LinkedList
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new b();
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
   
   public int describeContents()
   {

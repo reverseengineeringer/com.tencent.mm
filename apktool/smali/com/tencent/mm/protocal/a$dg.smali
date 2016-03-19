@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$dg;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 1119
-    const-string/jumbo v0, "menu:share:timeline"
+    .line 1902
+    const-string/jumbo v0, "openUrlWithExtraWebview"
 
-    const-string/jumbo v1, ""
+    const-string/jumbo v1, "openUrlWithExtraWebview"
 
-    const/16 v2, 0x58
+    const/16 v2, 0xad
 
     const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 1120
+    .line 1903
     return-void
 .end method

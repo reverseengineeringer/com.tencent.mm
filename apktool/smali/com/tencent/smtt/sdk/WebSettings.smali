@@ -119,28 +119,30 @@
 
     const/4 v5, 0x0
 
-    .line 1434
-    invoke-static {v5}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    .line 1746
+    invoke-static {v5}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {v5}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v5}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    iget-boolean v0, v0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+
+    move-result v0
 
     if-ne v0, v6, :cond_0
 
     move-object v0, v1
 
-    .line 1446
+    .line 1758
     :goto_0
     return-object v0
 
-    .line 1439
+    .line 1751
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -150,10 +152,10 @@
 
     move-object v0, v1
 
-    .line 1440
+    .line 1752
     goto :goto_0
 
-    .line 1442
+    .line 1754
     :cond_1
     const-class v0, Landroid/webkit/WebSettings;
 
@@ -169,11 +171,11 @@
 
     aput-object p0, v4, v5
 
-    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Class;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1446
+    .line 1758
     if-nez v0, :cond_2
 
     move-object v0, v1
@@ -196,7 +198,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 396
+    .line 465
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -205,18 +207,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 397
+    .line 466
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->enableSmoothTransition()Z
 
     move-result v0
 
-    .line 410
+    .line 479
     :goto_0
     return v0
 
-    .line 399
+    .line 468
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -226,23 +228,23 @@
 
     if-eqz v0, :cond_3
 
-    .line 400
+    .line 469
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xb
 
     if-lt v0, v2, :cond_2
 
-    .line 401
+    .line 470
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v2, "enableSmoothTransition"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 402
+    .line 471
     if-nez v0, :cond_1
 
     move v0, v1
@@ -261,13 +263,13 @@
     :cond_2
     move v0, v1
 
-    .line 405
+    .line 474
     goto :goto_0
 
     :cond_3
     move v0, v1
 
-    .line 410
+    .line 479
     goto :goto_0
 .end method
 
@@ -280,7 +282,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 332
+    .line 388
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -289,18 +291,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 333
+    .line 389
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getAllowContentAccess()Z
 
     move-result v0
 
-    .line 344
+    .line 400
     :goto_0
     return v0
 
-    .line 335
+    .line 391
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -310,23 +312,23 @@
 
     if-eqz v0, :cond_3
 
-    .line 336
+    .line 392
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xb
 
     if-lt v0, v2, :cond_2
 
-    .line 337
+    .line 393
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v2, "getAllowContentAccess"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 338
+    .line 394
     if-nez v0, :cond_1
 
     move v0, v1
@@ -345,13 +347,13 @@
     :cond_2
     move v0, v1
 
-    .line 340
+    .line 396
     goto :goto_0
 
     :cond_3
     move v0, v1
 
-    .line 344
+    .line 400
     goto :goto_0
 .end method
 
@@ -362,7 +364,7 @@
     .end annotation
 
     .prologue
-    .line 297
+    .line 323
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -371,18 +373,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 298
+    .line 324
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getAllowFileAccess()Z
 
     move-result v0
 
-    .line 305
+    .line 331
     :goto_0
     return v0
 
-    .line 299
+    .line 325
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -392,7 +394,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 301
+    .line 327
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getAllowFileAccess()Z
@@ -401,7 +403,7 @@
 
     goto :goto_0
 
-    .line 305
+    .line 331
     :cond_1
     const/4 v0, 0x0
 
@@ -412,7 +414,7 @@
     .locals 1
 
     .prologue
-    .line 997
+    .line 1207
     monitor-enter p0
 
     :try_start_0
@@ -424,7 +426,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 998
+    .line 1208
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getBlockNetworkImage()Z
@@ -433,13 +435,13 @@
 
     move-result v0
 
-    .line 1003
+    .line 1213
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 999
+    .line 1209
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -450,7 +452,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1000
+    .line 1210
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getBlockNetworkImage()Z
@@ -461,13 +463,13 @@
 
     goto :goto_0
 
-    .line 1003
+    .line 1213
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 997
+    .line 1207
     :catchall_0
     move-exception v0
 
@@ -485,7 +487,7 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1024
+    .line 1241
     monitor-enter p0
 
     :try_start_0
@@ -497,7 +499,7 @@
 
     if-eqz v1, :cond_1
 
-    .line 1025
+    .line 1242
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getBlockNetworkLoads()Z
@@ -506,14 +508,14 @@
 
     move-result v0
 
-    .line 1034
+    .line 1251
     :cond_0
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 1027
+    .line 1244
     :cond_1
     :try_start_1
     iget-boolean v1, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -524,14 +526,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 1028
+    .line 1245
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x8
 
     if-lt v1, v2, :cond_0
 
-    .line 1029
+    .line 1246
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getBlockNetworkLoads()Z
@@ -542,7 +544,7 @@
 
     goto :goto_0
 
-    .line 1024
+    .line 1241
     :catchall_0
     move-exception v0
 
@@ -558,7 +560,7 @@
     .end annotation
 
     .prologue
-    .line 233
+    .line 247
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -567,18 +569,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 234
+    .line 248
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getBuiltInZoomControls()Z
 
     move-result v0
 
-    .line 239
+    .line 253
     :goto_0
     return v0
 
-    .line 235
+    .line 249
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -588,7 +590,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 236
+    .line 250
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getBuiltInZoomControls()Z
@@ -597,7 +599,7 @@
 
     goto :goto_0
 
-    .line 239
+    .line 253
     :cond_1
     const/4 v0, 0x0
 
@@ -608,7 +610,7 @@
     .locals 1
 
     .prologue
-    .line 1535
+    .line 1881
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -617,18 +619,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 1536
+    .line 1882
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getCacheMode()I
 
     move-result v0
 
-    .line 1541
+    .line 1887
     :goto_0
     return v0
 
-    .line 1537
+    .line 1883
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -638,7 +640,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1538
+    .line 1884
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getCacheMode()I
@@ -647,7 +649,7 @@
 
     goto :goto_0
 
-    .line 1541
+    .line 1887
     :cond_1
     const/4 v0, 0x0
 
@@ -658,7 +660,7 @@
     .locals 1
 
     .prologue
-    .line 828
+    .line 996
     monitor-enter p0
 
     :try_start_0
@@ -670,7 +672,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 829
+    .line 997
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getCursiveFontFamily()Ljava/lang/String;
@@ -679,13 +681,13 @@
 
     move-result-object v0
 
-    .line 834
+    .line 1002
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 830
+    .line 998
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -696,7 +698,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 831
+    .line 999
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getCursiveFontFamily()Ljava/lang/String;
@@ -705,7 +707,7 @@
 
     goto :goto_0
 
-    .line 834
+    .line 1002
     :cond_1
     const-string/jumbo v0, ""
     :try_end_1
@@ -713,7 +715,7 @@
 
     goto :goto_0
 
-    .line 828
+    .line 996
     :catchall_0
     move-exception v0
 
@@ -729,7 +731,7 @@
     .end annotation
 
     .prologue
-    .line 1269
+    .line 1540
     monitor-enter p0
 
     :try_start_0
@@ -741,7 +743,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1270
+    .line 1541
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getDatabaseEnabled()Z
@@ -750,13 +752,13 @@
 
     move-result v0
 
-    .line 1275
+    .line 1546
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 1271
+    .line 1542
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -767,7 +769,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1272
+    .line 1543
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getDatabaseEnabled()Z
@@ -778,13 +780,13 @@
 
     goto :goto_0
 
-    .line 1275
+    .line 1546
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1269
+    .line 1540
     :catchall_0
     move-exception v0
 
@@ -800,7 +802,7 @@
     .end annotation
 
     .prologue
-    .line 1256
+    .line 1524
     monitor-enter p0
 
     :try_start_0
@@ -812,7 +814,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1257
+    .line 1525
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getDatabasePath()Ljava/lang/String;
@@ -821,13 +823,13 @@
 
     move-result-object v0
 
-    .line 1262
+    .line 1530
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 1258
+    .line 1526
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -838,7 +840,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1259
+    .line 1527
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getDatabasePath()Ljava/lang/String;
@@ -847,7 +849,7 @@
 
     goto :goto_0
 
-    .line 1262
+    .line 1530
     :cond_1
     const-string/jumbo v0, ""
     :try_end_1
@@ -855,7 +857,7 @@
 
     goto :goto_0
 
-    .line 1256
+    .line 1524
     :catchall_0
     move-exception v0
 
@@ -868,7 +870,7 @@
     .locals 1
 
     .prologue
-    .line 949
+    .line 1147
     monitor-enter p0
 
     :try_start_0
@@ -880,7 +882,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 950
+    .line 1148
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getDefaultFixedFontSize()I
@@ -889,13 +891,13 @@
 
     move-result v0
 
-    .line 955
+    .line 1153
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 951
+    .line 1149
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -906,7 +908,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 952
+    .line 1150
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getDefaultFixedFontSize()I
@@ -917,13 +919,13 @@
 
     goto :goto_0
 
-    .line 955
+    .line 1153
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 949
+    .line 1147
     :catchall_0
     move-exception v0
 
@@ -936,7 +938,7 @@
     .locals 1
 
     .prologue
-    .line 925
+    .line 1117
     monitor-enter p0
 
     :try_start_0
@@ -948,7 +950,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 926
+    .line 1118
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getDefaultFontSize()I
@@ -957,13 +959,13 @@
 
     move-result v0
 
-    .line 931
+    .line 1123
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 927
+    .line 1119
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -974,7 +976,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 928
+    .line 1120
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getDefaultFontSize()I
@@ -985,13 +987,13 @@
 
     goto :goto_0
 
-    .line 931
+    .line 1123
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 925
+    .line 1117
     :catchall_0
     move-exception v0
 
@@ -1004,7 +1006,7 @@
     .locals 1
 
     .prologue
-    .line 1417
+    .line 1724
     monitor-enter p0
 
     :try_start_0
@@ -1016,7 +1018,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1418
+    .line 1725
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getDefaultTextEncodingName()Ljava/lang/String;
@@ -1025,13 +1027,13 @@
 
     move-result-object v0
 
-    .line 1423
+    .line 1730
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 1419
+    .line 1726
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -1042,7 +1044,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1420
+    .line 1727
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getDefaultTextEncodingName()Ljava/lang/String;
@@ -1051,7 +1053,7 @@
 
     goto :goto_0
 
-    .line 1423
+    .line 1730
     :cond_1
     const-string/jumbo v0, ""
     :try_end_1
@@ -1059,7 +1061,7 @@
 
     goto :goto_0
 
-    .line 1417
+    .line 1724
     :catchall_0
     move-exception v0
 
@@ -1075,7 +1077,7 @@
     .end annotation
 
     .prologue
-    .line 575
+    .line 680
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -1084,7 +1086,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 576
+    .line 681
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getDefaultZoom()Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings$ZoomDensity;
@@ -1099,11 +1101,11 @@
 
     move-result-object v0
 
-    .line 581
+    .line 686
     :goto_0
     return-object v0
 
-    .line 577
+    .line 682
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -1113,7 +1115,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 578
+    .line 683
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getDefaultZoom()Landroid/webkit/WebSettings$ZoomDensity;
@@ -1130,7 +1132,7 @@
 
     goto :goto_0
 
-    .line 581
+    .line 686
     :cond_1
     const/4 v0, 0x0
 
@@ -1146,7 +1148,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 265
+    .line 285
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -1155,18 +1157,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 266
+    .line 286
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getDisplayZoomControls()Z
 
     move-result v0
 
-    .line 277
+    .line 297
     :goto_0
     return v0
 
-    .line 268
+    .line 288
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -1176,23 +1178,23 @@
 
     if-eqz v0, :cond_3
 
-    .line 269
+    .line 289
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xb
 
     if-lt v0, v2, :cond_2
 
-    .line 270
+    .line 290
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v2, "getDisplayZoomControls"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 271
+    .line 291
     if-nez v0, :cond_1
 
     move v0, v1
@@ -1211,13 +1213,13 @@
     :cond_2
     move v0, v1
 
-    .line 273
+    .line 293
     goto :goto_0
 
     :cond_3
     move v0, v1
 
-    .line 277
+    .line 297
     goto :goto_0
 .end method
 
@@ -1228,7 +1230,7 @@
     .end annotation
 
     .prologue
-    .line 1243
+    .line 1508
     monitor-enter p0
 
     :try_start_0
@@ -1240,7 +1242,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1244
+    .line 1509
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getDomStorageEnabled()Z
@@ -1249,13 +1251,13 @@
 
     move-result v0
 
-    .line 1249
+    .line 1514
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 1245
+    .line 1510
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -1266,7 +1268,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1246
+    .line 1511
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getDomStorageEnabled()Z
@@ -1277,13 +1279,13 @@
 
     goto :goto_0
 
-    .line 1249
+    .line 1514
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1243
+    .line 1508
     :catchall_0
     move-exception v0
 
@@ -1296,7 +1298,7 @@
     .locals 1
 
     .prologue
-    .line 853
+    .line 1027
     monitor-enter p0
 
     :try_start_0
@@ -1308,7 +1310,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 854
+    .line 1028
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getFantasyFontFamily()Ljava/lang/String;
@@ -1317,13 +1319,13 @@
 
     move-result-object v0
 
-    .line 859
+    .line 1033
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 855
+    .line 1029
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -1334,7 +1336,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 856
+    .line 1030
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getFantasyFontFamily()Ljava/lang/String;
@@ -1343,7 +1345,7 @@
 
     goto :goto_0
 
-    .line 859
+    .line 1033
     :cond_1
     const-string/jumbo v0, ""
     :try_end_1
@@ -1351,7 +1353,7 @@
 
     goto :goto_0
 
-    .line 853
+    .line 1027
     :catchall_0
     move-exception v0
 
@@ -1364,7 +1366,7 @@
     .locals 1
 
     .prologue
-    .line 756
+    .line 906
     monitor-enter p0
 
     :try_start_0
@@ -1376,7 +1378,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 757
+    .line 907
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getFixedFontFamily()Ljava/lang/String;
@@ -1385,13 +1387,13 @@
 
     move-result-object v0
 
-    .line 762
+    .line 912
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 758
+    .line 908
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -1402,7 +1404,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 759
+    .line 909
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getFixedFontFamily()Ljava/lang/String;
@@ -1411,7 +1413,7 @@
 
     goto :goto_0
 
-    .line 762
+    .line 912
     :cond_1
     const-string/jumbo v0, ""
     :try_end_1
@@ -1419,7 +1421,7 @@
 
     goto :goto_0
 
-    .line 756
+    .line 906
     :catchall_0
     move-exception v0
 
@@ -1432,7 +1434,7 @@
     .locals 1
 
     .prologue
-    .line 1393
+    .line 1694
     monitor-enter p0
 
     :try_start_0
@@ -1444,7 +1446,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1394
+    .line 1695
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getJavaScriptCanOpenWindowsAutomatically()Z
@@ -1453,13 +1455,13 @@
 
     move-result v0
 
-    .line 1399
+    .line 1700
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 1395
+    .line 1696
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -1470,7 +1472,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1396
+    .line 1697
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getJavaScriptCanOpenWindowsAutomatically()Z
@@ -1481,13 +1483,13 @@
 
     goto :goto_0
 
-    .line 1399
+    .line 1700
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1393
+    .line 1694
     :catchall_0
     move-exception v0
 
@@ -1500,7 +1502,7 @@
     .locals 1
 
     .prologue
-    .line 1295
+    .line 1575
     monitor-enter p0
 
     :try_start_0
@@ -1512,7 +1514,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1296
+    .line 1576
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getJavaScriptEnabled()Z
@@ -1521,13 +1523,13 @@
 
     move-result v0
 
-    .line 1301
+    .line 1581
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 1297
+    .line 1577
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -1538,7 +1540,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1298
+    .line 1578
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getJavaScriptEnabled()Z
@@ -1549,13 +1551,13 @@
 
     goto :goto_0
 
-    .line 1301
+    .line 1581
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1295
+    .line 1575
     :catchall_0
     move-exception v0
 
@@ -1568,7 +1570,7 @@
     .locals 1
 
     .prologue
-    .line 708
+    .line 846
     monitor-enter p0
 
     :try_start_0
@@ -1580,7 +1582,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 709
+    .line 847
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getLayoutAlgorithm()Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings$LayoutAlgorithm;
@@ -1597,13 +1599,13 @@
 
     move-result-object v0
 
-    .line 714
+    .line 852
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 710
+    .line 848
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -1614,7 +1616,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 711
+    .line 849
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getLayoutAlgorithm()Landroid/webkit/WebSettings$LayoutAlgorithm;
@@ -1633,13 +1635,13 @@
 
     goto :goto_0
 
-    .line 714
+    .line 852
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 708
+    .line 846
     :catchall_0
     move-exception v0
 
@@ -1652,7 +1654,7 @@
     .locals 1
 
     .prologue
-    .line 599
+    .line 710
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -1661,18 +1663,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 600
+    .line 711
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getLightTouchEnabled()Z
 
     move-result v0
 
-    .line 605
+    .line 716
     :goto_0
     return v0
 
-    .line 601
+    .line 712
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -1682,7 +1684,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 602
+    .line 713
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getLightTouchEnabled()Z
@@ -1691,7 +1693,7 @@
 
     goto :goto_0
 
-    .line 605
+    .line 716
     :cond_1
     const/4 v0, 0x0
 
@@ -1705,7 +1707,7 @@
     .end annotation
 
     .prologue
-    .line 364
+    .line 426
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -1714,18 +1716,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 365
+    .line 427
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getLoadWithOverviewMode()Z
 
     move-result v0
 
-    .line 370
+    .line 432
     :goto_0
     return v0
 
-    .line 366
+    .line 428
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -1735,7 +1737,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 367
+    .line 429
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getLoadWithOverviewMode()Z
@@ -1744,7 +1746,7 @@
 
     goto :goto_0
 
-    .line 370
+    .line 432
     :cond_1
     const/4 v0, 0x0
 
@@ -1755,7 +1757,7 @@
     .locals 1
 
     .prologue
-    .line 973
+    .line 1177
     monitor-enter p0
 
     :try_start_0
@@ -1767,7 +1769,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 974
+    .line 1178
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getLoadsImagesAutomatically()Z
@@ -1776,13 +1778,13 @@
 
     move-result v0
 
-    .line 979
+    .line 1183
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 975
+    .line 1179
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -1793,7 +1795,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 976
+    .line 1180
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getLoadsImagesAutomatically()Z
@@ -1804,13 +1806,13 @@
 
     goto :goto_0
 
-    .line 979
+    .line 1183
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 973
+    .line 1177
     :catchall_0
     move-exception v0
 
@@ -1828,7 +1830,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1454
+    .line 1769
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -1837,18 +1839,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 1455
+    .line 1770
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getMediaPlaybackRequiresUserGesture()Z
 
     move-result v0
 
-    .line 1467
+    .line 1782
     :goto_0
     return v0
 
-    .line 1457
+    .line 1772
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -1858,7 +1860,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 1458
+    .line 1773
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x11
@@ -1867,20 +1869,20 @@
 
     move v0, v1
 
-    .line 1459
+    .line 1774
     goto :goto_0
 
-    .line 1462
+    .line 1777
     :cond_1
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v2, "getMediaPlaybackRequiresUserGesture"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1463
+    .line 1778
     if-nez v0, :cond_2
 
     move v0, v1
@@ -1899,7 +1901,7 @@
     :cond_3
     move v0, v1
 
-    .line 1467
+    .line 1782
     goto :goto_0
 .end method
 
@@ -1907,7 +1909,7 @@
     .locals 1
 
     .prologue
-    .line 877
+    .line 1057
     monitor-enter p0
 
     :try_start_0
@@ -1919,7 +1921,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 878
+    .line 1058
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getMinimumFontSize()I
@@ -1928,13 +1930,13 @@
 
     move-result v0
 
-    .line 883
+    .line 1063
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 879
+    .line 1059
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -1945,7 +1947,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 880
+    .line 1060
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getMinimumFontSize()I
@@ -1956,13 +1958,13 @@
 
     goto :goto_0
 
-    .line 883
+    .line 1063
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 877
+    .line 1057
     :catchall_0
     move-exception v0
 
@@ -1975,7 +1977,7 @@
     .locals 1
 
     .prologue
-    .line 901
+    .line 1087
     monitor-enter p0
 
     :try_start_0
@@ -1987,7 +1989,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 902
+    .line 1088
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getMinimumLogicalFontSize()I
@@ -1996,13 +1998,13 @@
 
     move-result v0
 
-    .line 907
+    .line 1093
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 903
+    .line 1089
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -2013,7 +2015,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 904
+    .line 1090
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getMinimumLogicalFontSize()I
@@ -2024,13 +2026,13 @@
 
     goto :goto_0
 
-    .line 907
+    .line 1093
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 901
+    .line 1087
     :catchall_0
     move-exception v0
 
@@ -2080,7 +2082,7 @@
 
     const-string/jumbo v2, "getNavDump"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -2119,7 +2121,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1339
+    .line 1628
     monitor-enter p0
 
     :try_start_0
@@ -2131,7 +2133,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1340
+    .line 1629
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getPluginState()Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings$PluginState;
@@ -2148,13 +2150,13 @@
 
     move-result-object v0
 
-    .line 1353
+    .line 1642
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 1342
+    .line 1631
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -2165,30 +2167,30 @@
 
     if-eqz v0, :cond_3
 
-    .line 1343
+    .line 1632
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x8
 
     if-lt v0, v2, :cond_2
 
-    .line 1345
+    .line 1634
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v2, "getPluginState"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1346
+    .line 1635
     if-nez v0, :cond_1
 
     move-object v0, v1
 
     goto :goto_0
 
-    .line 1347
+    .line 1636
     :cond_1
     check-cast v0, Landroid/webkit/WebSettings$PluginState;
 
@@ -2207,16 +2209,16 @@
     :cond_2
     move-object v0, v1
 
-    .line 1349
+    .line 1638
     goto :goto_0
 
     :cond_3
     move-object v0, v1
 
-    .line 1353
+    .line 1642
     goto :goto_0
 
-    .line 1339
+    .line 1628
     :catchall_0
     move-exception v0
 
@@ -2237,7 +2239,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1313
+    .line 1598
     monitor-enter p0
 
     :try_start_0
@@ -2249,7 +2251,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1314
+    .line 1599
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getPluginsEnabled()Z
@@ -2258,13 +2260,13 @@
 
     move-result v0
 
-    .line 1330
+    .line 1615
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 1315
+    .line 1600
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -2275,23 +2277,23 @@
 
     if-eqz v0, :cond_5
 
-    .line 1316
+    .line 1601
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x11
 
     if-gt v0, v2, :cond_2
 
-    .line 1317
+    .line 1602
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v2, "getPluginsEnabled"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1318
+    .line 1603
     if-nez v0, :cond_1
 
     move v0, v1
@@ -2307,7 +2309,7 @@
 
     goto :goto_0
 
-    .line 1320
+    .line 1605
     :cond_2
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -2315,14 +2317,14 @@
 
     if-ne v0, v2, :cond_4
 
-    .line 1321
+    .line 1606
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getPluginState()Landroid/webkit/WebSettings$PluginState;
 
     move-result-object v0
 
-    .line 1322
+    .line 1607
     sget-object v2, Landroid/webkit/WebSettings$PluginState;->ON:Landroid/webkit/WebSettings$PluginState;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
@@ -2341,16 +2343,16 @@
     :cond_4
     move v0, v1
 
-    .line 1325
+    .line 1610
     goto :goto_0
 
     :cond_5
     move v0, v1
 
-    .line 1330
+    .line 1615
     goto :goto_0
 
-    .line 1313
+    .line 1598
     :catchall_0
     move-exception v0
 
@@ -2365,7 +2367,7 @@
     .end annotation
 
     .prologue
-    .line 1360
+    .line 1652
     monitor-enter p0
 
     :try_start_0
@@ -2377,7 +2379,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1363
+    .line 1655
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getPluginsPath()Ljava/lang/String;
@@ -2386,13 +2388,13 @@
 
     move-result-object v0
 
-    .line 1375
+    .line 1667
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 1364
+    .line 1656
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -2403,23 +2405,23 @@
 
     if-eqz v0, :cond_3
 
-    .line 1365
+    .line 1657
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x11
 
     if-gt v0, v1, :cond_2
 
-    .line 1366
+    .line 1658
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "getPluginsPath"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1367
+    .line 1659
     if-nez v0, :cond_1
 
     const/4 v0, 0x0
@@ -2431,13 +2433,13 @@
 
     goto :goto_0
 
-    .line 1370
+    .line 1662
     :cond_2
     const-string/jumbo v0, ""
 
     goto :goto_0
 
-    .line 1375
+    .line 1667
     :cond_3
     const-string/jumbo v0, ""
     :try_end_1
@@ -2445,7 +2447,7 @@
 
     goto :goto_0
 
-    .line 1360
+    .line 1652
     :catchall_0
     move-exception v0
 
@@ -2458,7 +2460,7 @@
     .locals 1
 
     .prologue
-    .line 780
+    .line 936
     monitor-enter p0
 
     :try_start_0
@@ -2470,7 +2472,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 781
+    .line 937
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getSansSerifFontFamily()Ljava/lang/String;
@@ -2479,13 +2481,13 @@
 
     move-result-object v0
 
-    .line 786
+    .line 942
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 782
+    .line 938
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -2496,7 +2498,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 783
+    .line 939
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getSansSerifFontFamily()Ljava/lang/String;
@@ -2505,7 +2507,7 @@
 
     goto :goto_0
 
-    .line 786
+    .line 942
     :cond_1
     const-string/jumbo v0, ""
     :try_end_1
@@ -2513,7 +2515,7 @@
 
     goto :goto_0
 
-    .line 780
+    .line 936
     :catchall_0
     move-exception v0
 
@@ -2526,7 +2528,7 @@
     .locals 1
 
     .prologue
-    .line 460
+    .line 541
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -2535,18 +2537,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 461
+    .line 542
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getSaveFormData()Z
 
     move-result v0
 
-    .line 465
+    .line 546
     :goto_0
     return v0
 
-    .line 462
+    .line 543
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -2556,7 +2558,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 463
+    .line 544
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getSaveFormData()Z
@@ -2565,7 +2567,7 @@
 
     goto :goto_0
 
-    .line 465
+    .line 546
     :cond_1
     const/4 v0, 0x0
 
@@ -2576,7 +2578,7 @@
     .locals 1
 
     .prologue
-    .line 483
+    .line 570
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -2585,18 +2587,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 484
+    .line 571
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getSavePassword()Z
 
     move-result v0
 
-    .line 489
+    .line 576
     :goto_0
     return v0
 
-    .line 485
+    .line 572
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -2606,7 +2608,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 486
+    .line 573
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getSavePassword()Z
@@ -2615,7 +2617,7 @@
 
     goto :goto_0
 
-    .line 489
+    .line 576
     :cond_1
     const/4 v0, 0x0
 
@@ -2626,7 +2628,7 @@
     .locals 1
 
     .prologue
-    .line 804
+    .line 966
     monitor-enter p0
 
     :try_start_0
@@ -2638,7 +2640,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 805
+    .line 967
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getSerifFontFamily()Ljava/lang/String;
@@ -2647,13 +2649,13 @@
 
     move-result-object v0
 
-    .line 810
+    .line 972
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 806
+    .line 968
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -2664,7 +2666,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 807
+    .line 969
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getSerifFontFamily()Ljava/lang/String;
@@ -2673,7 +2675,7 @@
 
     goto :goto_0
 
-    .line 810
+    .line 972
     :cond_1
     const-string/jumbo v0, ""
     :try_end_1
@@ -2681,7 +2683,7 @@
 
     goto :goto_0
 
-    .line 804
+    .line 966
     :catchall_0
     move-exception v0
 
@@ -2694,7 +2696,7 @@
     .locals 1
 
     .prologue
-    .line 732
+    .line 876
     monitor-enter p0
 
     :try_start_0
@@ -2706,7 +2708,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 733
+    .line 877
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getStandardFontFamily()Ljava/lang/String;
@@ -2715,13 +2717,13 @@
 
     move-result-object v0
 
-    .line 738
+    .line 882
     :goto_0
     monitor-exit p0
 
     return-object v0
 
-    .line 734
+    .line 878
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -2732,7 +2734,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 735
+    .line 879
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getStandardFontFamily()Ljava/lang/String;
@@ -2741,7 +2743,7 @@
 
     goto :goto_0
 
-    .line 738
+    .line 882
     :cond_1
     const-string/jumbo v0, ""
     :try_end_1
@@ -2749,7 +2751,7 @@
 
     goto :goto_0
 
-    .line 732
+    .line 876
     :catchall_0
     move-exception v0
 
@@ -2762,7 +2764,7 @@
     .locals 1
 
     .prologue
-    .line 548
+    .line 647
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -2771,7 +2773,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 549
+    .line 648
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getTextSize()Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings$TextSize;
@@ -2786,11 +2788,11 @@
 
     move-result-object v0
 
-    .line 554
+    .line 653
     :goto_0
     return-object v0
 
-    .line 550
+    .line 649
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -2800,7 +2802,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 551
+    .line 650
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getTextSize()Landroid/webkit/WebSettings$TextSize;
@@ -2817,7 +2819,7 @@
 
     goto :goto_0
 
-    .line 554
+    .line 653
     :cond_1
     const/4 v0, 0x0
 
@@ -2833,7 +2835,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 517
+    .line 610
     monitor-enter p0
 
     :try_start_0
@@ -2845,7 +2847,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 518
+    .line 611
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getTextZoom()I
@@ -2854,13 +2856,13 @@
 
     move-result v0
 
-    .line 530
+    .line 623
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 520
+    .line 613
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -2871,7 +2873,7 @@
 
     if-eqz v0, :cond_3
 
-    .line 521
+    .line 614
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xe
@@ -2880,20 +2882,20 @@
 
     move v0, v1
 
-    .line 522
+    .line 615
     goto :goto_0
 
-    .line 525
+    .line 618
     :cond_1
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v2, "getTextZoom"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 526
+    .line 619
     if-nez v0, :cond_2
 
     move v0, v1
@@ -2914,10 +2916,10 @@
     :cond_3
     move v0, v1
 
-    .line 530
+    .line 623
     goto :goto_0
 
-    .line 517
+    .line 610
     :catchall_0
     move-exception v0
 
@@ -2934,7 +2936,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 434
+    .line 509
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -2943,18 +2945,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 435
+    .line 510
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getUseWebViewBackgroundForOverscrollBackground()Z
 
     move-result v0
 
-    .line 443
+    .line 518
     :goto_0
     return v0
 
-    .line 437
+    .line 512
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -2964,16 +2966,16 @@
 
     if-eqz v0, :cond_2
 
-    .line 438
+    .line 513
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v2, "getUseWebViewBackgroundForOverscrollBackground"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 439
+    .line 514
     if-nez v0, :cond_1
 
     move v0, v1
@@ -2992,7 +2994,7 @@
     :cond_2
     move v0, v1
 
-    .line 443
+    .line 518
     goto :goto_0
 .end method
 
@@ -3000,7 +3002,7 @@
     .locals 1
 
     .prologue
-    .line 659
+    .line 785
     monitor-enter p0
 
     :try_start_0
@@ -3012,7 +3014,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 660
+    .line 786
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getUseWideViewPort()Z
@@ -3021,13 +3023,13 @@
 
     move-result v0
 
-    .line 665
+    .line 791
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 661
+    .line 787
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -3038,7 +3040,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 662
+    .line 788
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getUseWideViewPort()Z
@@ -3049,13 +3051,13 @@
 
     goto :goto_0
 
-    .line 665
+    .line 791
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 659
+    .line 785
     :catchall_0
     move-exception v0
 
@@ -3071,7 +3073,7 @@
     .end annotation
 
     .prologue
-    .line 624
+    .line 741
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -3080,18 +3082,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 625
+    .line 742
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->getUserAgentString()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 629
+    .line 746
     :goto_0
     return-object v0
 
-    .line 626
+    .line 743
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3101,7 +3103,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 627
+    .line 744
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->getUserAgentString()Ljava/lang/String;
@@ -3110,7 +3112,7 @@
 
     goto :goto_0
 
-    .line 629
+    .line 746
     :cond_1
     const-string/jumbo v0, ""
 
@@ -3128,7 +3130,7 @@
 
     const/4 v5, 0x0
 
-    .line 312
+    .line 341
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3137,17 +3139,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 313
+    .line 342
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setAllowContentAccess(Z)V
 
-    .line 325
+    .line 354
     :cond_0
     :goto_0
     return-void
 
-    .line 315
+    .line 344
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3157,14 +3159,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 316
+    .line 345
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
 
-    .line 320
+    .line 349
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "setAllowContentAccess"
@@ -3183,7 +3185,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -3195,7 +3197,7 @@
     .end annotation
 
     .prologue
-    .line 284
+    .line 307
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3204,17 +3206,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 285
+    .line 308
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setAllowFileAccess(Z)V
 
-    .line 290
+    .line 313
     :cond_0
     :goto_0
     return-void
 
-    .line 286
+    .line 309
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3224,7 +3226,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 287
+    .line 310
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setAllowFileAccess(Z)V
@@ -3243,7 +3245,7 @@
 
     const/4 v5, 0x0
 
-    .line 1078
+    .line 1307
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3252,17 +3254,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1079
+    .line 1308
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setAllowFileAccessFromFileURLs(Z)V
 
-    .line 1087
+    .line 1316
     :cond_0
     :goto_0
     return-void
 
-    .line 1081
+    .line 1310
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3272,7 +3274,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1082
+    .line 1311
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "setAllowFileAccessFromFileURLs"
@@ -3291,7 +3293,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -3307,7 +3309,7 @@
 
     const/4 v5, 0x0
 
-    .line 1062
+    .line 1287
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3316,17 +3318,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1063
+    .line 1288
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setAllowUniversalAccessFromFileURLs(Z)V
 
-    .line 1071
+    .line 1296
     :cond_0
     :goto_0
     return-void
 
-    .line 1065
+    .line 1290
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3336,7 +3338,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1066
+    .line 1291
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "setAllowUniversalAccessFromFileURLs"
@@ -3355,7 +3357,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -3367,7 +3369,7 @@
     .end annotation
 
     .prologue
-    .line 1178
+    .line 1428
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3376,17 +3378,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1179
+    .line 1429
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setAppCacheEnabled(Z)V
 
-    .line 1184
+    .line 1434
     :cond_0
     :goto_0
     return-void
 
-    .line 1180
+    .line 1430
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3396,7 +3398,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1181
+    .line 1431
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setAppCacheEnabled(Z)V
@@ -3411,7 +3413,7 @@
     .end annotation
 
     .prologue
-    .line 1204
+    .line 1460
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3420,17 +3422,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1205
+    .line 1461
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setAppCacheMaxSize(J)V
 
-    .line 1210
+    .line 1466
     :cond_0
     :goto_0
     return-void
 
-    .line 1206
+    .line 1462
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3440,7 +3442,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1207
+    .line 1463
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1, p2}, Landroid/webkit/WebSettings;->setAppCacheMaxSize(J)V
@@ -3455,7 +3457,7 @@
     .end annotation
 
     .prologue
-    .line 1191
+    .line 1444
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3464,17 +3466,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1192
+    .line 1445
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setAppCachePath(Ljava/lang/String;)V
 
-    .line 1197
+    .line 1450
     :cond_0
     :goto_0
     return-void
 
-    .line 1193
+    .line 1446
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3484,7 +3486,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1194
+    .line 1447
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setAppCachePath(Ljava/lang/String;)V
@@ -3496,7 +3498,7 @@
     .locals 1
 
     .prologue
-    .line 985
+    .line 1192
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3505,17 +3507,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 986
+    .line 1193
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setBlockNetworkImage(Z)V
 
-    .line 991
+    .line 1198
     :cond_0
     :goto_0
     return-void
 
-    .line 987
+    .line 1194
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3525,7 +3527,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 988
+    .line 1195
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setBlockNetworkImage(Z)V
@@ -3540,7 +3542,7 @@
     .end annotation
 
     .prologue
-    .line 1010
+    .line 1223
     monitor-enter p0
 
     :try_start_0
@@ -3552,21 +3554,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 1011
+    .line 1224
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setBlockNetworkLoads(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1020
+    .line 1233
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1013
+    .line 1226
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -3577,14 +3579,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1014
+    .line 1227
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x8
 
     if-lt v0, v1, :cond_0
 
-    .line 1015
+    .line 1228
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setBlockNetworkLoads(Z)V
@@ -3593,7 +3595,7 @@
 
     goto :goto_0
 
-    .line 1010
+    .line 1223
     :catchall_0
     move-exception v0
 
@@ -3609,7 +3611,7 @@
     .end annotation
 
     .prologue
-    .line 221
+    .line 231
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3618,17 +3620,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 222
+    .line 232
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setBuiltInZoomControls(Z)V
 
-    .line 227
+    .line 237
     :cond_0
     :goto_0
     return-void
 
-    .line 223
+    .line 233
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3638,7 +3640,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 224
+    .line 234
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setBuiltInZoomControls(Z)V
@@ -3650,7 +3652,7 @@
     .locals 1
 
     .prologue
-    .line 1524
+    .line 1861
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3659,17 +3661,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1525
+    .line 1862
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setCacheMode(I)V
 
-    .line 1531
+    .line 1868
     :cond_0
     :goto_0
     return-void
 
-    .line 1526
+    .line 1863
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3679,7 +3681,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1527
+    .line 1864
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setCacheMode(I)V
@@ -3691,7 +3693,7 @@
     .locals 1
 
     .prologue
-    .line 816
+    .line 981
     monitor-enter p0
 
     :try_start_0
@@ -3703,21 +3705,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 817
+    .line 982
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setCursiveFontFamily(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 822
+    .line 987
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 818
+    .line 983
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -3728,7 +3730,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 819
+    .line 984
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setCursiveFontFamily(Ljava/lang/String;)V
@@ -3737,7 +3739,7 @@
 
     goto :goto_0
 
-    .line 816
+    .line 981
     :catchall_0
     move-exception v0
 
@@ -3753,7 +3755,7 @@
     .end annotation
 
     .prologue
-    .line 1217
+    .line 1476
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3762,17 +3764,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1218
+    .line 1477
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setDatabaseEnabled(Z)V
 
-    .line 1223
+    .line 1482
     :cond_0
     :goto_0
     return-void
 
-    .line 1219
+    .line 1478
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3782,7 +3784,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1220
+    .line 1479
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setDatabaseEnabled(Z)V
@@ -3804,7 +3806,7 @@
 
     const/4 v4, 0x0
 
-    .line 1148
+    .line 1392
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -3813,17 +3815,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1149
+    .line 1393
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setDatabasePath(Ljava/lang/String;)V
 
-    .line 1158
+    .line 1402
     :cond_0
     :goto_0
     return-void
 
-    .line 1150
+    .line 1394
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -3833,7 +3835,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1154
+    .line 1398
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "setDatabasePath"
@@ -3848,7 +3850,7 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -3857,7 +3859,7 @@
     .locals 1
 
     .prologue
-    .line 937
+    .line 1132
     monitor-enter p0
 
     :try_start_0
@@ -3869,21 +3871,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 938
+    .line 1133
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setDefaultFixedFontSize(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 943
+    .line 1138
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 939
+    .line 1134
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -3894,7 +3896,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 940
+    .line 1135
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setDefaultFixedFontSize(I)V
@@ -3903,7 +3905,7 @@
 
     goto :goto_0
 
-    .line 937
+    .line 1132
     :catchall_0
     move-exception v0
 
@@ -3916,7 +3918,7 @@
     .locals 1
 
     .prologue
-    .line 913
+    .line 1102
     monitor-enter p0
 
     :try_start_0
@@ -3928,21 +3930,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 914
+    .line 1103
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setDefaultFontSize(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 919
+    .line 1108
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 915
+    .line 1104
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -3953,7 +3955,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 916
+    .line 1105
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setDefaultFontSize(I)V
@@ -3962,7 +3964,7 @@
 
     goto :goto_0
 
-    .line 913
+    .line 1102
     :catchall_0
     move-exception v0
 
@@ -3975,7 +3977,7 @@
     .locals 1
 
     .prologue
-    .line 1405
+    .line 1709
     monitor-enter p0
 
     :try_start_0
@@ -3987,21 +3989,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 1406
+    .line 1710
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setDefaultTextEncodingName(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1411
+    .line 1715
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1407
+    .line 1711
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -4012,7 +4014,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1408
+    .line 1712
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setDefaultTextEncodingName(Ljava/lang/String;)V
@@ -4021,7 +4023,7 @@
 
     goto :goto_0
 
-    .line 1405
+    .line 1709
     :catchall_0
     move-exception v0
 
@@ -4037,7 +4039,7 @@
     .end annotation
 
     .prologue
-    .line 562
+    .line 664
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -4046,7 +4048,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 563
+    .line 665
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-virtual {p1}, Lcom/tencent/smtt/sdk/WebSettings$ZoomDensity;->name()Ljava/lang/String;
@@ -4059,12 +4061,12 @@
 
     invoke-interface {v0, v1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setDefaultZoom(Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings$ZoomDensity;)V
 
-    .line 568
+    .line 670
     :cond_0
     :goto_0
     return-void
 
-    .line 564
+    .line 666
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4074,7 +4076,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 565
+    .line 667
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {p1}, Lcom/tencent/smtt/sdk/WebSettings$ZoomDensity;->name()Ljava/lang/String;
@@ -4101,7 +4103,7 @@
 
     const/4 v5, 0x0
 
-    .line 246
+    .line 263
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -4110,17 +4112,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 247
+    .line 264
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setDisplayZoomControls(Z)V
 
-    .line 258
+    .line 275
     :cond_0
     :goto_0
     return-void
 
-    .line 249
+    .line 266
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4130,14 +4132,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 250
+    .line 267
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
 
-    .line 253
+    .line 270
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "setDisplayZoomControls"
@@ -4156,7 +4158,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -4168,7 +4170,7 @@
     .end annotation
 
     .prologue
-    .line 1230
+    .line 1492
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -4177,17 +4179,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1231
+    .line 1493
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setDomStorageEnabled(Z)V
 
-    .line 1236
+    .line 1498
     :cond_0
     :goto_0
     return-void
 
-    .line 1232
+    .line 1494
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4197,7 +4199,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1233
+    .line 1495
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
@@ -4219,7 +4221,7 @@
 
     const/4 v5, 0x0
 
-    .line 378
+    .line 443
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -4228,17 +4230,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 379
+    .line 444
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setEnableSmoothTransition(Z)V
 
-    .line 391
+    .line 456
     :cond_0
     :goto_0
     return-void
 
-    .line 381
+    .line 446
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4248,14 +4250,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 382
+    .line 447
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
 
-    .line 384
+    .line 449
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "setEnableSmoothTransition"
@@ -4274,7 +4276,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -4283,7 +4285,7 @@
     .locals 1
 
     .prologue
-    .line 840
+    .line 1011
     monitor-enter p0
 
     :try_start_0
@@ -4295,21 +4297,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 841
+    .line 1012
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setFantasyFontFamily(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 846
+    .line 1017
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 842
+    .line 1013
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -4320,7 +4322,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 843
+    .line 1014
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setFantasyFontFamily(Ljava/lang/String;)V
@@ -4329,7 +4331,7 @@
 
     goto :goto_0
 
-    .line 840
+    .line 1011
     :catchall_0
     move-exception v0
 
@@ -4342,7 +4344,7 @@
     .locals 1
 
     .prologue
-    .line 744
+    .line 891
     monitor-enter p0
 
     :try_start_0
@@ -4354,21 +4356,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 745
+    .line 892
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setFixedFontFamily(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 750
+    .line 897
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 746
+    .line 893
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -4379,7 +4381,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 747
+    .line 894
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setFixedFontFamily(Ljava/lang/String;)V
@@ -4388,7 +4390,7 @@
 
     goto :goto_0
 
-    .line 744
+    .line 891
     :catchall_0
     move-exception v0
 
@@ -4404,7 +4406,7 @@
     .end annotation
 
     .prologue
-    .line 1165
+    .line 1412
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -4413,17 +4415,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1166
+    .line 1413
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setGeolocationDatabasePath(Ljava/lang/String;)V
 
-    .line 1171
+    .line 1418
     :cond_0
     :goto_0
     return-void
 
-    .line 1167
+    .line 1414
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4433,7 +4435,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1168
+    .line 1415
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setGeolocationDatabasePath(Ljava/lang/String;)V
@@ -4448,7 +4450,7 @@
     .end annotation
 
     .prologue
-    .line 1282
+    .line 1559
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -4457,17 +4459,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1283
+    .line 1560
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setGeolocationEnabled(Z)V
 
-    .line 1288
+    .line 1565
     :cond_0
     :goto_0
     return-void
 
-    .line 1284
+    .line 1561
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4477,7 +4479,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1285
+    .line 1562
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setGeolocationEnabled(Z)V
@@ -4489,7 +4491,7 @@
     .locals 1
 
     .prologue
-    .line 1381
+    .line 1678
     monitor-enter p0
 
     :try_start_0
@@ -4501,21 +4503,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 1382
+    .line 1679
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setJavaScriptCanOpenWindowsAutomatically(Z)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1387
+    .line 1684
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1383
+    .line 1680
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -4526,7 +4528,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1384
+    .line 1681
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setJavaScriptCanOpenWindowsAutomatically(Z)V
@@ -4535,7 +4537,7 @@
 
     goto :goto_0
 
-    .line 1381
+    .line 1678
     :catchall_0
     move-exception v0
 
@@ -4550,7 +4552,7 @@
     .end annotation
 
     .prologue
-    .line 1043
+    .line 1263
     :try_start_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4560,17 +4562,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1044
+    .line 1264
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 1054
+    .line 1274
     :cond_0
     :goto_0
     return-void
 
-    .line 1045
+    .line 1265
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4580,7 +4582,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1046
+    .line 1266
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
@@ -4589,7 +4591,7 @@
 
     goto :goto_0
 
-    .line 1054
+    .line 1274
     :catch_0
     move-exception v0
 
@@ -4600,7 +4602,7 @@
     .locals 2
 
     .prologue
-    .line 695
+    .line 830
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -4609,7 +4611,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 696
+    .line 831
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-virtual {p1}, Lcom/tencent/smtt/sdk/WebSettings$LayoutAlgorithm;->name()Ljava/lang/String;
@@ -4622,12 +4624,12 @@
 
     invoke-interface {v0, v1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setLayoutAlgorithm(Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings$LayoutAlgorithm;)V
 
-    .line 702
+    .line 837
     :cond_0
     :goto_0
     return-void
 
-    .line 697
+    .line 832
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4637,7 +4639,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 698
+    .line 833
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {p1}, Lcom/tencent/smtt/sdk/WebSettings$LayoutAlgorithm;->name()Ljava/lang/String;
@@ -4657,7 +4659,7 @@
     .locals 1
 
     .prologue
-    .line 587
+    .line 695
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -4666,17 +4668,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 588
+    .line 696
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setLightTouchEnabled(Z)V
 
-    .line 593
+    .line 701
     :cond_0
     :goto_0
     return-void
 
-    .line 589
+    .line 697
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4686,7 +4688,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 590
+    .line 698
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setLightTouchEnabled(Z)V
@@ -4701,7 +4703,7 @@
     .end annotation
 
     .prologue
-    .line 351
+    .line 410
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -4710,17 +4712,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 352
+    .line 411
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setLoadWithOverviewMode(Z)V
 
-    .line 357
+    .line 416
     :cond_0
     :goto_0
     return-void
 
-    .line 353
+    .line 412
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4730,7 +4732,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 354
+    .line 413
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setLoadWithOverviewMode(Z)V
@@ -4742,7 +4744,7 @@
     .locals 1
 
     .prologue
-    .line 961
+    .line 1162
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -4751,17 +4753,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 962
+    .line 1163
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setLoadsImagesAutomatically(Z)V
 
-    .line 967
+    .line 1168
     :cond_0
     :goto_0
     return-void
 
-    .line 963
+    .line 1164
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4771,7 +4773,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 964
+    .line 1165
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setLoadsImagesAutomatically(Z)V
@@ -4790,7 +4792,7 @@
 
     const/4 v5, 0x0
 
-    .line 1474
+    .line 1793
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -4799,17 +4801,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1475
+    .line 1794
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setMediaPlaybackRequiresUserGesture(Z)V
 
-    .line 1487
+    .line 1806
     :cond_0
     :goto_0
     return-void
 
-    .line 1477
+    .line 1796
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -4819,14 +4821,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1478
+    .line 1797
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x11
 
     if-lt v0, v1, :cond_0
 
-    .line 1482
+    .line 1801
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "setMediaPlaybackRequiresUserGesture"
@@ -4845,7 +4847,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -4854,7 +4856,7 @@
     .locals 1
 
     .prologue
-    .line 865
+    .line 1042
     monitor-enter p0
 
     :try_start_0
@@ -4866,21 +4868,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 866
+    .line 1043
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setMinimumFontSize(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 871
+    .line 1048
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 867
+    .line 1044
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -4891,7 +4893,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 868
+    .line 1045
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setMinimumFontSize(I)V
@@ -4900,7 +4902,7 @@
 
     goto :goto_0
 
-    .line 865
+    .line 1042
     :catchall_0
     move-exception v0
 
@@ -4913,7 +4915,7 @@
     .locals 1
 
     .prologue
-    .line 889
+    .line 1072
     monitor-enter p0
 
     :try_start_0
@@ -4925,21 +4927,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 890
+    .line 1073
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setMinimumLogicalFontSize(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 895
+    .line 1078
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 891
+    .line 1074
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -4950,7 +4952,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 892
+    .line 1075
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setMinimumLogicalFontSize(I)V
@@ -4959,13 +4961,79 @@
 
     goto :goto_0
 
-    .line 889
+    .line 1072
     :catchall_0
     move-exception v0
 
     monitor-exit p0
 
     throw v0
+.end method
+
+.method public setMixedContentMode(I)V
+    .locals 6
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x15
+    .end annotation
+
+    .prologue
+    const/4 v4, 0x1
+
+    const/4 v5, 0x0
+
+    .line 365
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
+
+    if-eqz v0, :cond_1
+
+    .line 378
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 368
+    :cond_1
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
+
+    if-eqz v0, :cond_0
+
+    .line 369
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_0
+
+    .line 373
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
+
+    const-string/jumbo v1, "setMixedContentMode"
+
+    new-array v2, v4, [Ljava/lang/Class;
+
+    sget-object v3, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v3, v2, v5
+
+    new-array v3, v4, [Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v3, v5
+
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
 .end method
 
 .method public setNavDump(Z)V
@@ -5024,7 +5092,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -5033,7 +5101,7 @@
     .locals 1
 
     .prologue
-    .line 1500
+    .line 1823
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -5042,17 +5110,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1501
+    .line 1824
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setNeedInitialFocus(Z)V
 
-    .line 1506
+    .line 1829
     :cond_0
     :goto_0
     return-void
 
-    .line 1502
+    .line 1825
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -5062,7 +5130,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1503
+    .line 1826
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setNeedInitialFocus(Z)V
@@ -5080,7 +5148,7 @@
     .end annotation
 
     .prologue
-    .line 1110
+    .line 1347
     monitor-enter p0
 
     :try_start_0
@@ -5092,7 +5160,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1111
+    .line 1348
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-virtual {p1}, Lcom/tencent/smtt/sdk/WebSettings$PluginState;->name()Ljava/lang/String;
@@ -5107,14 +5175,14 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1125
+    .line 1362
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1113
+    .line 1350
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -5125,14 +5193,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1114
+    .line 1351
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x8
 
     if-lt v0, v1, :cond_0
 
-    .line 1116
+    .line 1353
     invoke-virtual {p1}, Lcom/tencent/smtt/sdk/WebSettings$PluginState;->name()Ljava/lang/String;
 
     move-result-object v0
@@ -5141,7 +5209,7 @@
 
     move-result-object v0
 
-    .line 1117
+    .line 1354
     iget-object v1, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v2, "setPluginState"
@@ -5164,13 +5232,13 @@
 
     aput-object v0, v4, v5
 
-    invoke-static {v1, v2, v3, v4}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v1, v2, v3, v4}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 1110
+    .line 1347
     :catchall_0
     move-exception v0
 
@@ -5189,7 +5257,7 @@
 
     const/4 v5, 0x0
 
-    .line 1094
+    .line 1326
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -5198,17 +5266,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 1095
+    .line 1327
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setPluginsEnabled(Z)V
 
-    .line 1101
+    .line 1333
     :cond_0
     :goto_0
     return-void
 
-    .line 1096
+    .line 1328
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -5218,7 +5286,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1097
+    .line 1329
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "setPluginsEnabled"
@@ -5237,7 +5305,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -5248,7 +5316,7 @@
     .end annotation
 
     .prologue
-    .line 1131
+    .line 1371
     monitor-enter p0
 
     :try_start_0
@@ -5260,21 +5328,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 1132
+    .line 1372
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setPluginsPath(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 1139
+    .line 1379
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 1134
+    .line 1374
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -5285,7 +5353,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1135
+    .line 1375
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "setPluginsPath"
@@ -5308,13 +5376,13 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 1131
+    .line 1371
     :catchall_0
     move-exception v0
 
@@ -5327,7 +5395,7 @@
     .locals 2
 
     .prologue
-    .line 1512
+    .line 1839
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -5336,7 +5404,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1513
+    .line 1840
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-virtual {p1}, Lcom/tencent/smtt/sdk/WebSettings$RenderPriority;->name()Ljava/lang/String;
@@ -5349,12 +5417,12 @@
 
     invoke-interface {v0, v1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setRenderPriority(Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings$RenderPriority;)V
 
-    .line 1518
+    .line 1845
     :cond_0
     :goto_0
     return-void
 
-    .line 1514
+    .line 1841
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -5364,7 +5432,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 1515
+    .line 1842
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {p1}, Lcom/tencent/smtt/sdk/WebSettings$RenderPriority;->name()Ljava/lang/String;
@@ -5384,7 +5452,7 @@
     .locals 1
 
     .prologue
-    .line 768
+    .line 921
     monitor-enter p0
 
     :try_start_0
@@ -5396,21 +5464,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 769
+    .line 922
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setSansSerifFontFamily(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 774
+    .line 927
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 770
+    .line 923
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -5421,7 +5489,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 771
+    .line 924
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setSansSerifFontFamily(Ljava/lang/String;)V
@@ -5430,7 +5498,7 @@
 
     goto :goto_0
 
-    .line 768
+    .line 921
     :catchall_0
     move-exception v0
 
@@ -5443,7 +5511,7 @@
     .locals 1
 
     .prologue
-    .line 449
+    .line 527
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -5452,17 +5520,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 450
+    .line 528
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setSaveFormData(Z)V
 
-    .line 456
+    .line 534
     :cond_0
     :goto_0
     return-void
 
-    .line 451
+    .line 529
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -5472,7 +5540,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 452
+    .line 530
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setSaveFormData(Z)V
@@ -5484,7 +5552,7 @@
     .locals 1
 
     .prologue
-    .line 472
+    .line 556
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -5493,17 +5561,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 473
+    .line 557
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setSavePassword(Z)V
 
-    .line 479
+    .line 563
     :cond_0
     :goto_0
     return-void
 
-    .line 474
+    .line 558
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -5513,7 +5581,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 475
+    .line 559
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setSavePassword(Z)V
@@ -5525,7 +5593,7 @@
     .locals 1
 
     .prologue
-    .line 792
+    .line 951
     monitor-enter p0
 
     :try_start_0
@@ -5537,21 +5605,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 793
+    .line 952
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setSerifFontFamily(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 798
+    .line 957
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 794
+    .line 953
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -5562,7 +5630,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 795
+    .line 954
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setSerifFontFamily(Ljava/lang/String;)V
@@ -5571,7 +5639,7 @@
 
     goto :goto_0
 
-    .line 792
+    .line 951
     :catchall_0
     move-exception v0
 
@@ -5584,7 +5652,7 @@
     .locals 1
 
     .prologue
-    .line 720
+    .line 861
     monitor-enter p0
 
     :try_start_0
@@ -5596,21 +5664,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 721
+    .line 862
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setStandardFontFamily(Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 726
+    .line 867
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 722
+    .line 863
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -5621,7 +5689,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 723
+    .line 864
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setStandardFontFamily(Ljava/lang/String;)V
@@ -5630,7 +5698,7 @@
 
     goto :goto_0
 
-    .line 720
+    .line 861
     :catchall_0
     move-exception v0
 
@@ -5643,7 +5711,7 @@
     .locals 1
 
     .prologue
-    .line 671
+    .line 800
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -5652,17 +5720,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 672
+    .line 801
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setSupportMultipleWindows(Z)V
 
-    .line 677
+    .line 806
     :cond_0
     :goto_0
     return-void
 
-    .line 673
+    .line 802
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -5672,7 +5740,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 674
+    .line 803
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setSupportMultipleWindows(Z)V
@@ -5684,7 +5752,7 @@
     .locals 1
 
     .prologue
-    .line 186
+    .line 189
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -5693,17 +5761,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 187
+    .line 190
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setSupportZoom(Z)V
 
-    .line 192
+    .line 195
     :cond_0
     :goto_0
     return-void
 
-    .line 188
+    .line 191
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -5713,7 +5781,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 189
+    .line 192
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setSupportZoom(Z)V
@@ -5725,7 +5793,7 @@
     .locals 2
 
     .prologue
-    .line 536
+    .line 632
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -5734,7 +5802,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 537
+    .line 633
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-virtual {p1}, Lcom/tencent/smtt/sdk/WebSettings$TextSize;->name()Ljava/lang/String;
@@ -5747,12 +5815,12 @@
 
     invoke-interface {v0, v1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setTextSize(Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings$TextSize;)V
 
-    .line 543
+    .line 639
     :cond_0
     :goto_0
     return-void
 
-    .line 538
+    .line 634
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -5762,7 +5830,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 539
+    .line 635
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {p1}, Lcom/tencent/smtt/sdk/WebSettings$TextSize;->name()Ljava/lang/String;
@@ -5785,7 +5853,7 @@
     .end annotation
 
     .prologue
-    .line 497
+    .line 587
     monitor-enter p0
 
     :try_start_0
@@ -5797,21 +5865,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 498
+    .line 588
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setTextZoom(I)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 511
+    .line 601
     :cond_0
     :goto_0
     monitor-exit p0
 
     return-void
 
-    .line 500
+    .line 590
     :cond_1
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -5822,14 +5890,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 501
+    .line 591
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xe
 
     if-lt v0, v1, :cond_0
 
-    .line 505
+    .line 595
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "setTextZoom"
@@ -5856,13 +5924,13 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     goto :goto_0
 
-    .line 497
+    .line 587
     :catchall_0
     move-exception v0
 
@@ -5881,7 +5949,7 @@
 
     const/4 v5, 0x0
 
-    .line 417
+    .line 489
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -5890,17 +5958,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 418
+    .line 490
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setUseWebViewBackgroundForOverscrollBackground(Z)V
 
-    .line 426
+    .line 498
     :cond_0
     :goto_0
     return-void
 
-    .line 420
+    .line 492
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -5910,7 +5978,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 421
+    .line 493
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     const-string/jumbo v1, "setUseWebViewBackgroundForOverscrollBackground"
@@ -5929,7 +5997,7 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     goto :goto_0
 .end method
@@ -5938,7 +6006,7 @@
     .locals 1
 
     .prologue
-    .line 648
+    .line 771
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -5947,17 +6015,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 649
+    .line 772
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setUseWideViewPort(Z)V
 
-    .line 655
+    .line 778
     :cond_0
     :goto_0
     return-void
 
-    .line 650
+    .line 773
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -5967,7 +6035,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 651
+    .line 774
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setUseWideViewPort(Z)V
@@ -5979,7 +6047,7 @@
     .locals 1
 
     .prologue
-    .line 612
+    .line 726
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -5988,17 +6056,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 613
+    .line 727
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setUserAgent(Ljava/lang/String;)V
 
-    .line 619
+    .line 733
     :cond_0
     :goto_0
     return-void
 
-    .line 614
+    .line 728
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -6008,7 +6076,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 615
+    .line 729
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
@@ -6023,7 +6091,7 @@
     .end annotation
 
     .prologue
-    .line 636
+    .line 756
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_1
@@ -6032,17 +6100,17 @@
 
     if-eqz v0, :cond_1
 
-    .line 637
+    .line 757
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->setUserAgentString(Ljava/lang/String;)V
 
-    .line 644
+    .line 764
     :cond_0
     :goto_0
     return-void
 
-    .line 638
+    .line 758
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -6052,7 +6120,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 639
+    .line 759
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0, p1}, Landroid/webkit/WebSettings;->setUserAgentString(Ljava/lang/String;)V
@@ -6064,7 +6132,7 @@
     .locals 1
 
     .prologue
-    .line 683
+    .line 815
     monitor-enter p0
 
     :try_start_0
@@ -6076,7 +6144,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 684
+    .line 816
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->supportMultipleWindows()Z
@@ -6085,13 +6153,13 @@
 
     move-result v0
 
-    .line 689
+    .line 821
     :goto_0
     monitor-exit p0
 
     return v0
 
-    .line 685
+    .line 817
     :cond_0
     :try_start_1
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
@@ -6102,7 +6170,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 686
+    .line 818
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->supportMultipleWindows()Z
@@ -6113,13 +6181,13 @@
 
     goto :goto_0
 
-    .line 689
+    .line 821
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 683
+    .line 815
     :catchall_0
     move-exception v0
 
@@ -6132,7 +6200,7 @@
     .locals 1
 
     .prologue
-    .line 198
+    .line 204
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
     if-eqz v0, :cond_0
@@ -6141,18 +6209,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 199
+    .line 205
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mWebSettingsImpl:Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;->supportZoom()Z
 
     move-result v0
 
-    .line 204
+    .line 210
     :goto_0
     return v0
 
-    .line 200
+    .line 206
     :cond_0
     iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->isUseX5:Z
 
@@ -6162,7 +6230,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 201
+    .line 207
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebSettings;->mSystemWebSettings:Landroid/webkit/WebSettings;
 
     invoke-virtual {v0}, Landroid/webkit/WebSettings;->supportZoom()Z
@@ -6171,7 +6239,7 @@
 
     goto :goto_0
 
-    .line 204
+    .line 210
     :cond_1
     const/4 v0, 0x0
 

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/io/Serializable;
+.implements Landroid/os/Parcelable;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # static fields
-.field private static final serialVersionUID:J = 0x1L
+.field public static final CREATOR:Landroid/os/Parcelable$Creator;
 
 
 # instance fields
@@ -30,25 +30,39 @@
 
 
 # direct methods
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 62
+    new-instance v0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo$1;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo$1;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->CREATOR:Landroid/os/Parcelable$Creator;
+
+    return-void
+.end method
+
 .method public constructor <init>()V
     .locals 2
 
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 39
+    .line 50
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
+    .line 51
     iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->id:J
 
-    .line 41
+    .line 52
     iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->key:J
 
-    .line 42
+    .line 53
     iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->value:J
 
-    .line 43
+    .line 54
     return-void
 .end method
 
@@ -56,25 +70,57 @@
     .locals 2
 
     .prologue
-    .line 32
+    .line 43
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
+    .line 44
     int-to-long v0, p1
 
     iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->id:J
 
-    .line 34
+    .line 45
     int-to-long v0, p2
 
     iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->key:J
 
-    .line 35
+    .line 46
     int-to-long v0, p3
 
     iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->value:J
 
-    .line 36
+    .line 47
+    return-void
+.end method
+
+.method protected constructor <init>(Landroid/os/Parcel;)V
+    .locals 2
+
+    .prologue
+    .line 56
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 57
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->id:J
+
+    .line 58
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->key:J
+
+    .line 59
+    invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->value:J
+
+    .line 60
     return-void
 .end method
 
@@ -84,7 +130,7 @@
     .locals 2
 
     .prologue
-    .line 47
+    .line 76
     iget-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->id:J
 
     return-wide v0
@@ -94,7 +140,7 @@
     .locals 2
 
     .prologue
-    .line 57
+    .line 86
     iget-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->key:J
 
     return-wide v0
@@ -104,7 +150,7 @@
     .locals 2
 
     .prologue
-    .line 67
+    .line 96
     iget-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->value:J
 
     return-wide v0
@@ -114,12 +160,12 @@
     .locals 2
 
     .prologue
-    .line 52
+    .line 81
     int-to-long v0, p1
 
     iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->id:J
 
-    .line 53
+    .line 82
     return-void
 .end method
 
@@ -127,12 +173,12 @@
     .locals 2
 
     .prologue
-    .line 62
+    .line 91
     int-to-long v0, p1
 
     iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->key:J
 
-    .line 63
+    .line 92
     return-void
 .end method
 
@@ -140,11 +186,44 @@
     .locals 2
 
     .prologue
-    .line 72
+    .line 101
     int-to-long v0, p1
 
     iput-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->value:J
 
-    .line 73
+    .line 102
+    return-void
+.end method
+
+.method public describeContents()I
+    .locals 1
+
+    .prologue
+    .line 106
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public writeToParcel(Landroid/os/Parcel;I)V
+    .locals 2
+
+    .prologue
+    .line 111
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->id:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 112
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->key:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 113
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->value:J
+
+    invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
+
+    .line 114
     return-void
 .end method

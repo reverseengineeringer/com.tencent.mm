@@ -19,13 +19,13 @@
     .locals 0
 
     .prologue
-    .line 78
+    .line 119
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static native ackKvStrategy(Z[BI)V
+.method public static native ackKvStrategy(II[BI)V
 .end method
 
 .method public static native onCreate()V
@@ -38,6 +38,12 @@
 .end method
 
 .method public static native onForeground(Z)V
+.end method
+
+.method public static native onKVPluginMsg(JJJJJJJ)V
+.end method
+
+.method public static native onReportStrategyResp(II[B)V
 .end method
 
 .method public static native reportIDKey(JJJZ)V

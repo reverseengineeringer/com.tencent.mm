@@ -10,12 +10,13 @@ import android.widget.BaseAdapter;
 import android.widget.Gallery.LayoutParams;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
-import com.tencent.mm.a.c;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
+import android.widget.Toast;
+import com.tencent.mm.compatible.util.d;
+import com.tencent.mm.modelsfs.FileOp;
+import com.tencent.mm.platformtools.e;
 import com.tencent.mm.ui.base.MultiTouchImageView;
-import com.tencent.mm.ui.base.bl;
-import com.tencent.mm.ui.base.h;
+import com.tencent.mm.ui.base.g.c;
+import com.tencent.mm.ui.base.o;
 import com.tencent.mm.ui.tools.MMGestureGallery;
 import com.tencent.mm.ui.tools.MMGestureGallery.b;
 import com.tencent.mm.ui.tools.MMGestureGallery.e;
@@ -23,11 +24,11 @@ import com.tencent.mm.ui.tools.MMGestureGallery.e;
 public class GetHdHeadImageGalleryView
   extends MMGestureGallery
 {
-  private bl gPD;
-  private Bitmap gPE;
-  private Bitmap gPF;
-  private a gPG;
-  private String gPH;
+  private String gjC;
+  private o iGm;
+  private Bitmap iGn;
+  private Bitmap iGo;
+  private a iGp;
   private String username;
   
   public GetHdHeadImageGalleryView(Context paramContext, AttributeSet paramAttributeSet)
@@ -44,10 +45,10 @@ public class GetHdHeadImageGalleryView
   
   private void init()
   {
-    gPG = new a((byte)0);
+    iGp = new a((byte)0);
     setVerticalFadingEdgeEnabled(false);
     setHorizontalFadingEdgeEnabled(false);
-    setAdapter(gPG);
+    setAdapter(iGp);
     setSelection(0);
     setSingleClickOverListener(new c((byte)0));
     setLongClickOverListener(new b((byte)0));
@@ -55,24 +56,24 @@ public class GetHdHeadImageGalleryView
   
   public void setHdHeadImage(Bitmap paramBitmap)
   {
-    gPF = paramBitmap;
-    gPG.notifyDataSetChanged();
+    iGo = paramBitmap;
+    iGp.notifyDataSetChanged();
   }
   
   public void setHdHeadImagePath(String paramString)
   {
-    gPH = paramString;
+    gjC = paramString;
   }
   
-  public void setParentWindow(bl parambl)
+  public void setParentWindow(o paramo)
   {
-    gPD = parambl;
+    iGm = paramo;
   }
   
   public void setThumbImage(Bitmap paramBitmap)
   {
-    gPE = paramBitmap;
-    gPG.notifyDataSetChanged();
+    iGn = paramBitmap;
+    iGp.notifyDataSetChanged();
   }
   
   public void setUsername(String paramString)
@@ -106,10 +107,10 @@ public class GetHdHeadImageGalleryView
       if (paramView == null)
       {
         paramView = new a();
-        localView = View.inflate(getContext(), a.k.view_get_hd_avatar_dialogview, null);
-        dxH = ((ProgressBar)localView.findViewById(a.i.hd_avatar_laoding_pb));
-        azQ = ((ImageView)localView.findViewById(a.i.hd_avatar_iv));
-        gPJ = localView.findViewById(a.i.hd_avatar_mask_view);
+        localView = View.inflate(getContext(), 2131363189, null);
+        epr = ((ProgressBar)localView.findViewById(2131169430));
+        aAF = ((ImageView)localView.findViewById(2131169428));
+        iGr = localView.findViewById(2131169429);
         localView.setTag(paramView);
         paramViewGroup = paramView;
       }
@@ -119,9 +120,9 @@ public class GetHdHeadImageGalleryView
         if (GetHdHeadImageGalleryView.d(GetHdHeadImageGalleryView.this) == null) {
           break;
         }
-        dxH.setVisibility(8);
-        azQ.setVisibility(8);
-        gPJ.setVisibility(8);
+        epr.setVisibility(8);
+        aAF.setVisibility(8);
+        iGr.setVisibility(8);
         paramView = new MultiTouchImageView(getContext(), GetHdHeadImageGalleryView.d(GetHdHeadImageGalleryView.this).getWidth(), GetHdHeadImageGalleryView.d(GetHdHeadImageGalleryView.this).getHeight());
         paramView.setLayoutParams(new Gallery.LayoutParams(-1, -1));
         paramView.setImageBitmap(GetHdHeadImageGalleryView.d(GetHdHeadImageGalleryView.this));
@@ -131,23 +132,23 @@ public class GetHdHeadImageGalleryView
         paramViewGroup = (a)paramView.getTag();
         localView = paramView;
       }
-      dxH.setVisibility(0);
-      gPJ.setVisibility(0);
+      epr.setVisibility(0);
+      iGr.setVisibility(0);
       if (GetHdHeadImageGalleryView.e(GetHdHeadImageGalleryView.this) != null)
       {
-        azQ.setVisibility(0);
-        azQ.setImageBitmap(GetHdHeadImageGalleryView.e(GetHdHeadImageGalleryView.this));
+        aAF.setVisibility(0);
+        aAF.setImageBitmap(GetHdHeadImageGalleryView.e(GetHdHeadImageGalleryView.this));
         return localView;
       }
-      azQ.setVisibility(8);
+      aAF.setVisibility(8);
       return localView;
     }
     
     final class a
     {
-      ImageView azQ;
-      ProgressBar dxH;
-      View gPJ;
+      ImageView aAF;
+      ProgressBar epr;
+      View iGr;
       
       a() {}
     }
@@ -158,12 +159,27 @@ public class GetHdHeadImageGalleryView
   {
     private b() {}
     
-    public final void aAb()
+    public final void ahv()
     {
       if ((GetHdHeadImageGalleryView.b(GetHdHeadImageGalleryView.this) != null) && (GetHdHeadImageGalleryView.c(GetHdHeadImageGalleryView.this) != null))
       {
-        String[] arrayOfString = getContext().getResources().getStringArray(a.c.get_hd_head_img_alert);
-        h.a(getContext(), null, arrayOfString, "", new n(this));
+        String[] arrayOfString = getContext().getResources().getStringArray(2131558421);
+        com.tencent.mm.ui.base.g.a(getContext(), null, arrayOfString, "", new g.c()
+        {
+          public final void eu(int paramAnonymousInt)
+          {
+            switch (paramAnonymousInt)
+            {
+            default: 
+              return;
+            }
+            String str = d.buk + "hdImg_" + com.tencent.mm.a.g.m(GetHdHeadImageGalleryView.c(GetHdHeadImageGalleryView.this).getBytes()) + System.currentTimeMillis() + ".jpg";
+            FileOp.deleteFile(str);
+            FileOp.o(GetHdHeadImageGalleryView.b(GetHdHeadImageGalleryView.this), str);
+            e.d(str, getContext());
+            Toast.makeText(getContext(), getContext().getString(2131431079, new Object[] { d.buk }), 1).show();
+          }
+        });
       }
     }
   }
@@ -173,7 +189,7 @@ public class GetHdHeadImageGalleryView
   {
     private c() {}
     
-    public final void Tj()
+    public final void aap()
     {
       if (GetHdHeadImageGalleryView.a(GetHdHeadImageGalleryView.this) != null) {
         GetHdHeadImageGalleryView.a(GetHdHeadImageGalleryView.this).dismiss();

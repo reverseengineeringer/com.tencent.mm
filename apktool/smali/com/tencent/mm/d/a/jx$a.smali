@@ -15,13 +15,7 @@
 
 
 # instance fields
-.field public aHh:Ljava/lang/String;
-
-.field public awH:I
-
-.field public context:Landroid/content/Context;
-
-.field public uri:Landroid/net/Uri;
+.field public aGu:I
 
 
 # direct methods
@@ -33,9 +27,9 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 15
-    const/4 v0, 0x0
+    const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/d/a/jx$a;->awH:I
+    iput v0, p0, Lcom/tencent/mm/d/a/jx$a;->aGu:I
 
     return-void
 .end method

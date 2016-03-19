@@ -15,21 +15,21 @@
 
 
 # static fields
-.field private static jvX:Z
+.field private static lyO:Z
 
 
 # instance fields
-.field cOq:I
+.field dgj:I
 
-.field private hQ:Landroid/database/DataSetObserver;
+.field private gY:Landroid/database/DataSetObserver;
 
-.field final jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+.field final lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-.field private jvZ:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
+.field private lyQ:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
 
-.field private final jwa:Ljava/util/List;
+.field private final lyR:Ljava/util/List;
 
-.field private jwb:[Landroid/view/View;
+.field private lyS:[Landroid/view/View;
 
 .field private final mContext:Landroid/content/Context;
 
@@ -45,35 +45,35 @@
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
     .line 38
-    new-instance v0, Lcom/tencent/mm/ui/tools/gridviewheaders/d;
+    new-instance v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/gridviewheaders/d;-><init>(Lcom/tencent/mm/ui/tools/gridviewheaders/c;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/gridviewheaders/c$1;-><init>(Lcom/tencent/mm/ui/tools/gridviewheaders/c;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->hQ:Landroid/database/DataSetObserver;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->gY:Landroid/database/DataSetObserver;
 
     .line 54
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jwa:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyR:Ljava/util/List;
 
     .line 55
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     .line 61
     iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->mContext:Landroid/content/Context;
 
     .line 62
-    iput-object p3, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iput-object p3, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
     .line 63
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvZ:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyQ:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
 
     .line 64
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->hQ:Landroid/database/DataSetObserver;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->gY:Landroid/database/DataSetObserver;
 
     invoke-interface {p3, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
@@ -86,7 +86,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jwa:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyR:Ljava/util/List;
 
     return-object v0
 .end method
@@ -96,22 +96,22 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jwb:[Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyS:[Landroid/view/View;
 
     return-object v0
 .end method
 
-.method private oU(I)V
+.method private rU(I)V
     .locals 2
 
     .prologue
     .line 263
     new-array v0, p1, [Landroid/view/View;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jwb:[Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyS:[Landroid/view/View;
 
     .line 264
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jwb:[Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyS:[Landroid/view/View;
 
     const/4 v1, 0x0
 
@@ -121,18 +121,18 @@
     return-void
 .end method
 
-.method private oV(I)I
+.method private rV(I)I
     .locals 2
 
     .prologue
     .line 275
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->oT(I)I
+    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->rT(I)I
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     rem-int/2addr v0, v1
 
@@ -145,7 +145,7 @@
     return v0
 
     :cond_0
-    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     sub-int v0, v1, v0
 
@@ -159,9 +159,9 @@
 
     .prologue
     .line 285
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->aSz()I
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->biU()I
 
     move-result v0
 
@@ -175,13 +175,13 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->oW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->rW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
 
     move-result-object v1
 
-    iget v1, v1, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->jwf:I
+    iget v1, v1, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->lyW:I
 
     invoke-interface {v0, v1, p2, p3}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
@@ -200,16 +200,16 @@
     return v0
 .end method
 
-.method protected final ff(I)J
+.method protected final fO(I)J
     .locals 2
 
     .prologue
     .line 280
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->oW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->rW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
 
     move-result-object v0
 
-    iget v0, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->jwf:I
+    iget v0, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->lyW:I
 
     int-to-long v0, v0
 
@@ -226,9 +226,9 @@
     iput v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->mCount:I
 
     .line 75
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    invoke-interface {v1}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->aSz()I
+    invoke-interface {v1}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->biU()I
 
     move-result v1
 
@@ -236,7 +236,7 @@
     if-nez v1, :cond_0
 
     .line 77
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->getCount()I
 
@@ -254,19 +254,19 @@
     .line 83
     iget v2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->mCount:I
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    invoke-interface {v3, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->oT(I)I
+    invoke-interface {v3, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->rT(I)I
 
     move-result v3
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->oV(I)I
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->rV(I)I
 
     move-result v4
 
     add-int/2addr v3, v4
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     add-int/2addr v3, v4
 
@@ -291,18 +291,18 @@
 
     .prologue
     .line 103
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->oW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->rW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
 
     move-result-object v0
 
     .line 104
-    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_0
 
-    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     const/4 v2, -0x2
 
@@ -317,9 +317,9 @@
     return-object v0
 
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    iget v0, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v0, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     invoke-interface {v1, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->getItem(I)Ljava/lang/Object;
 
@@ -333,12 +333,12 @@
 
     .prologue
     .line 115
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->oW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->rW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
 
     move-result-object v0
 
     .line 116
-    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     const/4 v2, -0x2
 
@@ -353,7 +353,7 @@
 
     .line 119
     :cond_0
-    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     const/4 v2, -0x1
 
@@ -366,9 +366,9 @@
 
     .line 122
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    iget v0, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v0, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     invoke-interface {v1, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->getItemId(I)J
 
@@ -384,12 +384,12 @@
     const/4 v3, -0x1
 
     .line 127
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->oW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->rW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
 
     move-result-object v0
 
     .line 128
-    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     const/4 v2, -0x2
 
@@ -405,7 +405,7 @@
 
     .line 131
     :cond_1
-    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     if-ne v1, v3, :cond_2
 
@@ -416,9 +416,9 @@
 
     .line 134
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    iget v0, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v0, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     invoke-interface {v1, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->getItemViewType(I)I
 
@@ -459,12 +459,12 @@
 
     .line 150
     :goto_0
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->oW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->rW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
 
     move-result-object v4
 
     .line 151
-    iget v1, v4, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v1, v4, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     const/4 v5, -0x2
 
@@ -477,7 +477,7 @@
 
     invoke-direct {v1, p0, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;-><init>(Lcom/tencent/mm/ui/tools/gridviewheaders/c;Landroid/content/Context;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvZ:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyQ:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;->getWidth()I
 
@@ -490,7 +490,7 @@
     .line 154
     check-cast v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;
 
-    iget v5, v4, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->jwf:I
+    iget v5, v4, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->lyW:I
 
     invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;->setHeaderId(I)V
 
@@ -502,9 +502,9 @@
     check-cast v0, Landroid/view/View;
 
     .line 156
-    iget-object v5, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v5, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    iget v4, v4, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->jwf:I
+    iget v4, v4, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->lyW:I
 
     invoke-interface {v5, v4, v0, p3}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->a(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
@@ -535,41 +535,41 @@
     invoke-virtual {p2, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->setPosition(I)V
 
     .line 175
-    iget v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     invoke-virtual {p2, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->setNumColumns(I)V
 
     .line 177
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jwb:[Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyS:[Landroid/view/View;
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     rem-int v1, p1, v1
 
     aput-object p2, v0, v1
 
     .line 178
-    iget v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     rem-int v0, p1, v0
 
     if-nez v0, :cond_5
 
     .line 179
-    sput-boolean v3, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvX:Z
+    sput-boolean v3, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyO:Z
 
     move v0, v3
 
     .line 180
     :goto_2
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jwb:[Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyS:[Landroid/view/View;
 
     array-length v1, v1
 
     if-ge v0, v1, :cond_4
 
     .line 181
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jwb:[Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyS:[Landroid/view/View;
 
     add-int v3, p1, v0
 
@@ -586,7 +586,7 @@
 
     .line 160
     :cond_1
-    iget v1, v4, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v1, v4, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     const/4 v5, -0x1
 
@@ -610,9 +610,9 @@
 
     .line 163
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    iget v4, v4, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v4, v4, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     invoke-interface {v1, v4, v0, p3}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
@@ -622,24 +622,24 @@
 
     .line 183
     :cond_4
-    sput-boolean v6, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvX:Z
+    sput-boolean v6, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyO:Z
 
     .line 186
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jwb:[Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyS:[Landroid/view/View;
 
     invoke-virtual {p2, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->setRowSiblings([Landroid/view/View;)V
 
     .line 187
-    sget-boolean v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvX:Z
+    sget-boolean v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyO:Z
 
     if-nez v0, :cond_7
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     rem-int v0, p1, v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     add-int/lit8 v1, v1, -0x1
 
@@ -655,9 +655,9 @@
 
     .line 190
     :cond_6
-    iget v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->oU(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->rU(I)V
 
     .line 192
     :cond_7
@@ -676,7 +676,7 @@
 
     .prologue
     .line 204
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->getViewTypeCount()I
 
@@ -692,7 +692,7 @@
 
     .prologue
     .line 209
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->hasStableIds()Z
 
@@ -706,7 +706,7 @@
 
     .prologue
     .line 214
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->isEmpty()Z
 
@@ -720,18 +720,18 @@
 
     .prologue
     .line 219
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->oW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->rW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
 
     move-result-object v0
 
     .line 220
-    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     const/4 v2, -0x1
 
     if-eq v1, v2, :cond_0
 
-    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v1, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     const/4 v2, -0x2
 
@@ -746,9 +746,9 @@
     return v0
 
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    iget v0, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iget v0, v0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     invoke-interface {v1, v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->isEnabled(I)Z
 
@@ -757,7 +757,7 @@
     goto :goto_0
 .end method
 
-.method protected final oW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
+.method protected final rW(I)Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;
     .locals 7
 
     .prologue
@@ -766,9 +766,9 @@
     const/4 v6, -0x1
 
     .line 294
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->aSz()I
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->biU()I
 
     move-result v3
 
@@ -776,7 +776,7 @@
     if-nez v3, :cond_1
 
     .line 296
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
     invoke-interface {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->getCount()I
 
@@ -809,9 +809,9 @@
     if-ge v1, v3, :cond_5
 
     .line 308
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
-    invoke-interface {v2, v1}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->oT(I)I
+    invoke-interface {v2, v1}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->rT(I)I
 
     move-result v2
 
@@ -829,7 +829,7 @@
 
     .line 316
     :cond_2
-    iget v4, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     sub-int/2addr v0, v4
 
@@ -845,7 +845,7 @@
 
     .line 321
     :cond_3
-    iget v4, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     sub-int v4, p1, v4
 
@@ -861,7 +861,7 @@
 
     .line 328
     :cond_4
-    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->oV(I)I
+    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->rV(I)I
 
     move-result v5
 
@@ -896,7 +896,7 @@
 
     .prologue
     .line 230
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->registerDataSetObserver(Landroid/database/DataSetObserver;)V
 
@@ -909,10 +909,10 @@
 
     .prologue
     .line 234
-    iput p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->cOq:I
+    iput p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->dgj:I
 
     .line 235
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->oU(I)V
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->rU(I)V
 
     .line 237
     return-void
@@ -923,7 +923,7 @@
 
     .prologue
     .line 241
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->jvY:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->lyP:Lcom/tencent/mm/ui/tools/gridviewheaders/b;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/ui/tools/gridviewheaders/b;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 

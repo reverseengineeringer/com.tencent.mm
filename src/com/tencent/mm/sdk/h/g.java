@@ -1,61 +1,60 @@
 package com.tencent.mm.sdk.h;
 
-import android.os.Debug;
-import junit.framework.Assert;
+import android.os.Looper;
 
-final class g
-  implements Comparable, Runnable
+public abstract class g
 {
-  private static final String bNh;
-  private static int icI = 1000;
-  final Runnable hZF;
-  final String hZG;
-  long hZL;
-  long hZN;
-  long hZO;
-  final boolean icJ;
-  e.b icK;
-  final int priority;
-  boolean started = false;
+  public final h jYB = new h() {};
+  private final h jYC = new h() {};
   
-  static
+  public final void DI(String paramString)
   {
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append("taskName = %s");
-    localStringBuilder.append("|priority = %d");
-    localStringBuilder.append("|pooled = %b");
-    localStringBuilder.append("|addTime = %d");
-    localStringBuilder.append("|usedTime = %d");
-    localStringBuilder.append("|cpuTime = %d");
-    localStringBuilder.append("|started = %b");
-    bNh = localStringBuilder.toString();
+    paramString = new i(paramString);
+    jYB.aw(paramString);
+    jYB.Ep();
   }
   
-  g(Runnable paramRunnable, String paramString, int paramInt, boolean paramBoolean, e.b paramb)
+  public final void Ep()
   {
-    Assert.assertNotNull("ThreadTask arg task is null!", paramRunnable);
-    Assert.assertNotNull("ThreadTask arg name is null!", paramString);
-    hZF = paramRunnable;
-    hZG = paramString;
-    priority = paramInt;
-    icJ = paramBoolean;
-    hZL = System.currentTimeMillis();
-    icK = paramb;
+    i locali = new i("*");
+    jYB.aw(locali);
+    jYB.Ep();
   }
   
-  public final void run()
+  public final void a(String paramString, int paramInt, Object paramObject)
   {
-    hZN = System.currentTimeMillis();
-    hZO = Debug.threadCpuTimeNanos();
-    started = true;
-    hZF.run();
-    hZN = (System.currentTimeMillis() - hZN);
-    hZO = (Debug.threadCpuTimeNanos() - hZO);
+    i locali = new i();
+    asJ = paramString;
+    jYK = paramInt;
+    obj = paramObject;
+    jYL = this;
+    jYB.aw(locali);
+    jYB.Ep();
   }
   
-  public final String toString()
+  public final void c(a parama)
   {
-    return String.format(bNh, new Object[] { hZG, Integer.valueOf(priority), Boolean.valueOf(icJ), Long.valueOf(hZL), Long.valueOf(hZN), Long.valueOf(hZO), Boolean.valueOf(started) });
+    jYB.a(parama, Looper.getMainLooper());
+  }
+  
+  public final void d(a parama)
+  {
+    jYB.remove(parama);
+  }
+  
+  public void lock()
+  {
+    jYB.lock();
+  }
+  
+  public void unlock()
+  {
+    jYB.unlock();
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void a(String paramString, i parami);
   }
 }
 

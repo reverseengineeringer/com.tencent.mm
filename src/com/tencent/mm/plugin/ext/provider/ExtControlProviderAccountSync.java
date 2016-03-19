@@ -5,21 +5,21 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
 import com.jg.JgClassChecked;
-import com.tencent.mm.d.a.by;
+import com.tencent.mm.d.a.dp;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 @JgClassChecked(author=32, fComment="checked", lastDate="20141016", reviewer=20, vComment={com.jg.EType.PROVIDERCHECK})
 public class ExtControlProviderAccountSync
   extends ExtContentProviderBase
 {
-  private static final UriMatcher dby;
+  private static final UriMatcher dKS;
   
   static
   {
     UriMatcher localUriMatcher = new UriMatcher(-1);
-    dby = localUriMatcher;
+    dKS = localUriMatcher;
     localUriMatcher.addURI("com.tencent.mm.plugin.ext.AccountSync", "accountSync", 1);
   }
   
@@ -45,44 +45,44 @@ public class ExtControlProviderAccountSync
   
   public Cursor query(Uri paramUri, String[] paramArrayOfString1, String paramString1, String[] paramArrayOfString2, String paramString2)
   {
-    t.d("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "query()");
-    a(paramUri, getContext(), dby);
+    u.d("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "query()");
+    a(paramUri, getContext(), dKS);
     if (paramUri == null)
     {
-      fN(3);
+      gK(3);
       return null;
     }
-    if ((bn.iW(dbr)) || (bn.iW(PI())))
+    if ((ay.kz(dKL)) || (ay.kz(Vw())))
     {
-      fN(3);
+      gK(3);
       return null;
     }
-    if (!Hq())
+    if (!Vx())
     {
-      fN(1);
-      return cjW;
+      gK(1);
+      return cBg;
     }
-    if (!bh(getContext()))
+    if (!bx(getContext()))
     {
-      t.w("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "invalid appid ! return null");
-      fN(2);
+      u.w("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "invalid appid ! return null");
+      gK(2);
       return null;
     }
-    switch (dby.match(paramUri))
+    switch (dKS.match(paramUri))
     {
     default: 
-      fN(3);
+      gK(3);
       return null;
     }
-    t.i("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "startContactSync()");
-    paramUri = new by();
-    if (a.hXQ.g(paramUri))
+    u.i("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "startContactSync()");
+    paramUri = new dp();
+    if (a.jUF.j(paramUri))
     {
-      fN(0);
+      gK(0);
       return null;
     }
-    t.e("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "AccountHelper == null");
-    fN(4);
+    u.e("!56@/B4Tb64lLpKAQbqlkU5I8g2Hz7jQ3a3mNolTgwNhfsh5cEwcQwk2+A==", "AccountHelper == null");
+    gK(4);
     return null;
   }
   

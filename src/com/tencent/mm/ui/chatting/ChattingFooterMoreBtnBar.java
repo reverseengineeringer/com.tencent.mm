@@ -8,73 +8,67 @@ import android.widget.ImageButton;
 import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.n;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.aw.a;
 import java.util.List;
 
 public class ChattingFooterMoreBtnBar
   extends LinearLayout
 {
-  private ImageButton dii;
-  private ImageButton iTV;
-  private ImageButton iTW;
-  private ImageButton iTX;
-  private ImageButton iTY;
+  private ImageButton dSD;
+  private LinearLayout.LayoutParams eqa;
+  private ImageButton kSS;
+  private ImageButton kST;
+  private ImageButton kSU;
+  private ImageButton kSV;
   
   public ChattingFooterMoreBtnBar(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     setOrientation(0);
     setGravity(16);
-    setBackgroundResource(a.h.bottombar_bg);
-    int i = getResources().getDimensionPixelSize(a.g.SmallListHeight);
-    paramAttributeSet = new LinearLayout.LayoutParams(0, i, 1.0F);
-    topMargin = a.fromDPToPix(getContext(), 0);
-    iTV = new ImageButton(getContext());
-    iTV.setImageResource(a.h.chat_more_tran_btn);
-    iTV.setScaleType(ImageView.ScaleType.CENTER);
-    iTV.setBackgroundResource(0);
-    iTV.setContentDescription(paramContext.getString(a.n.chatting_more_share));
-    addView(iTV, paramAttributeSet);
-    paramAttributeSet = new LinearLayout.LayoutParams(0, i, 1.0F);
-    topMargin = a.fromDPToPix(getContext(), 0);
-    iTY = new ImageButton(getContext());
-    iTY.setImageResource(a.h.chat_more_fav_btn);
-    iTY.setScaleType(ImageView.ScaleType.CENTER);
-    iTY.setBackgroundResource(0);
-    iTY.setContentDescription(paramContext.getString(a.n.chatting_more_favorite));
-    addView(iTY, paramAttributeSet);
-    paramAttributeSet = new LinearLayout.LayoutParams(0, i, 1.0F);
-    topMargin = a.fromDPToPix(getContext(), 0);
-    dii = new ImageButton(getContext());
-    dii.setImageResource(a.h.chat_more_del_btn);
-    dii.setScaleType(ImageView.ScaleType.CENTER);
-    dii.setBackgroundResource(0);
-    dii.setContentDescription(paramContext.getString(a.n.chatting_more_delete));
-    addView(dii, paramAttributeSet);
-    if (au.aOj().size() > 0)
+    setBackgroundResource(2130970217);
+    eqa = new LinearLayout.LayoutParams(0, getResources().getDimensionPixelSize(2131034596), 1.0F);
+    eqa.topMargin = a.fromDPToPix(getContext(), 0);
+    kSS = new ImageButton(getContext());
+    kSS.setImageResource(2130970014);
+    kSS.setScaleType(ImageView.ScaleType.CENTER);
+    kSS.setBackgroundResource(0);
+    kSS.setContentDescription(paramContext.getString(2131429636));
+    kSV = new ImageButton(getContext());
+    kSV.setImageResource(2130970005);
+    kSV.setScaleType(ImageView.ScaleType.CENTER);
+    kSV.setBackgroundResource(0);
+    kSV.setContentDescription(paramContext.getString(2131429637));
+    dSD = new ImageButton(getContext());
+    dSD.setImageResource(2130970012);
+    dSD.setScaleType(ImageView.ScaleType.CENTER);
+    dSD.setBackgroundResource(0);
+    dSD.setContentDescription(paramContext.getString(2131429638));
+    kSU = new ImageButton(getContext());
+    kSU.setImageResource(2130970029);
+    kSU.setScaleType(ImageView.ScaleType.CENTER);
+    kSU.setBackgroundResource(0);
+    kSU.setContentDescription(paramContext.getString(2131429640));
+    kST = new ImageButton(getContext());
+    kST.setImageResource(2130970037);
+    kST.setScaleType(ImageView.ScaleType.CENTER);
+    kST.setBackgroundResource(0);
+    kST.setContentDescription(paramContext.getString(2131429639));
+    ben();
+  }
+  
+  public final void ben()
+  {
+    removeAllViews();
+    addView(kSS, eqa);
+    addView(kSV, eqa);
+    addView(dSD, eqa);
+    if (u.bea().size() > 0)
     {
-      paramAttributeSet = new LinearLayout.LayoutParams(0, i, 1.0F);
-      topMargin = a.fromDPToPix(getContext(), 0);
-      iTX = new ImageButton(getContext());
-      iTX.setImageResource(a.h.chat_more_more_btn);
-      iTX.setScaleType(ImageView.ScaleType.CENTER);
-      iTX.setBackgroundResource(0);
-      iTX.setContentDescription(paramContext.getString(a.n.chatting_more));
-      addView(iTX, paramAttributeSet);
+      addView(kSU, eqa);
       return;
     }
-    paramAttributeSet = new LinearLayout.LayoutParams(0, i, 1.0F);
-    topMargin = a.fromDPToPix(getContext(), 0);
-    iTW = new ImageButton(getContext());
-    iTW.setImageResource(a.h.chat_more_email_btn);
-    iTW.setScaleType(ImageView.ScaleType.CENTER);
-    iTW.setBackgroundResource(0);
-    iTW.setContentDescription(paramContext.getString(a.n.chatting_more_email));
-    addView(iTW, paramAttributeSet);
+    addView(kST, eqa);
   }
   
   public final void c(int paramInt, View.OnClickListener paramOnClickListener)
@@ -82,50 +76,50 @@ public class ChattingFooterMoreBtnBar
     switch (paramInt)
     {
     default: 
-      t.w("!44@ZzDoKFw9tuqbSG6bBKzSwwI3A00x1rQTiVfD2QYTczE=", "set button listener error button index %d", new Object[] { Integer.valueOf(paramInt) });
+      com.tencent.mm.sdk.platformtools.u.w("!44@ZzDoKFw9tuqbSG6bBKzSwwI3A00x1rQTiVfD2QYTczE=", "set button listener error button index %d", new Object[] { Integer.valueOf(paramInt) });
       return;
     case 2: 
-      iTX.setOnClickListener(paramOnClickListener);
+      kSU.setOnClickListener(paramOnClickListener);
       return;
     case 3: 
-      dii.setOnClickListener(paramOnClickListener);
+      dSD.setOnClickListener(paramOnClickListener);
       return;
     case 1: 
-      iTW.setOnClickListener(paramOnClickListener);
+      kST.setOnClickListener(paramOnClickListener);
       return;
     case 0: 
-      iTV.setOnClickListener(paramOnClickListener);
+      kSS.setOnClickListener(paramOnClickListener);
       return;
     }
-    iTY.setOnClickListener(paramOnClickListener);
+    kSV.setOnClickListener(paramOnClickListener);
   }
   
-  public final void ob(int paramInt)
+  public final void ra(int paramInt)
   {
     boolean bool;
     if (paramInt > 0)
     {
       bool = true;
-      iTV.setClickable(bool);
-      iTV.setEnabled(bool);
-      if (au.aOj().size() <= 0) {
+      kSS.setClickable(bool);
+      kSS.setEnabled(bool);
+      if (u.bea().size() <= 0) {
         break label87;
       }
-      iTX.setClickable(bool);
-      iTX.setEnabled(bool);
+      kSU.setClickable(bool);
+      kSU.setEnabled(bool);
     }
     for (;;)
     {
-      dii.setClickable(bool);
-      dii.setEnabled(bool);
-      iTY.setClickable(bool);
-      iTY.setEnabled(bool);
+      dSD.setClickable(bool);
+      dSD.setEnabled(bool);
+      kSV.setClickable(bool);
+      kSV.setEnabled(bool);
       return;
       bool = false;
       break;
       label87:
-      iTW.setClickable(bool);
-      iTW.setEnabled(bool);
+      kST.setClickable(bool);
+      kST.setEnabled(bool);
     }
   }
 }

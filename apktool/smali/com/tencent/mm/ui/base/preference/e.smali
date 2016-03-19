@@ -1,109 +1,81 @@
-.class final Lcom/tencent/mm/ui/base/preference/e;
+.class public final Lcom/tencent/mm/ui/base/preference/e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/widget/RadioGroup$OnCheckedChangeListener;
-
 
 # instance fields
-.field final synthetic iLO:Lcom/tencent/mm/ui/base/preference/ChoicePreference;
+.field bitmap:Landroid/graphics/Bitmap;
+
+.field gtF:I
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/base/preference/ChoicePreference;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 93
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/e;->iLO:Lcom/tencent/mm/ui/base/preference/ChoicePreference;
-
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 16
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/e;->bitmap:Landroid/graphics/Bitmap;
+
+    .line 17
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/e;->gtF:I
+
+    .line 21
     return-void
 .end method
 
 
 # virtual methods
-.method public final onCheckedChanged(Landroid/widget/RadioGroup;I)V
-    .locals 4
+.method public final d(Landroid/widget/ImageView;)V
+    .locals 2
 
     .prologue
-    .line 97
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/e;->iLO:Lcom/tencent/mm/ui/base/preference/ChoicePreference;
+    .line 34
+    if-nez p1, :cond_1
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/preference/ChoicePreference;->a(Lcom/tencent/mm/ui/base/preference/ChoicePreference;)Lcom/tencent/mm/ui/base/preference/Preference$a;
+    .line 47
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 39
+    :cond_1
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/e;->gtF:I
+
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_2
+
+    .line 40
+    invoke-virtual {p1}, Landroid/widget/ImageView;->getContext()Landroid/content/Context;
 
     move-result-object v0
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/e;->gtF:I
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 44
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/e;->bitmap:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    .line 98
-    const/4 v0, -0x1
+    .line 45
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/e;->bitmap:Landroid/graphics/Bitmap;
 
-    if-eq p2, v0, :cond_1
-
-    .line 99
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/e;->iLO:Lcom/tencent/mm/ui/base/preference/ChoicePreference;
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/e;->iLO:Lcom/tencent/mm/ui/base/preference/ChoicePreference;
-
-    invoke-static {v2}, Lcom/tencent/mm/ui/base/preference/ChoicePreference;->b(Lcom/tencent/mm/ui/base/preference/ChoicePreference;)[Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    const/high16 v3, 0x100000
-
-    sub-int v3, p2, v3
-
-    aget-object v2, v2, v3
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/preference/ChoicePreference;->a(Lcom/tencent/mm/ui/base/preference/ChoicePreference;Ljava/lang/String;)Ljava/lang/String;
-
-    .line 104
-    :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/e;->iLO:Lcom/tencent/mm/ui/base/preference/ChoicePreference;
-
-    invoke-static {v0, p2}, Lcom/tencent/mm/ui/base/preference/ChoicePreference;->a(Lcom/tencent/mm/ui/base/preference/ChoicePreference;I)I
-
-    .line 105
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/e;->iLO:Lcom/tencent/mm/ui/base/preference/ChoicePreference;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/preference/ChoicePreference;->a(Lcom/tencent/mm/ui/base/preference/ChoicePreference;)Lcom/tencent/mm/ui/base/preference/Preference$a;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/e;->iLO:Lcom/tencent/mm/ui/base/preference/ChoicePreference;
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/e;->iLO:Lcom/tencent/mm/ui/base/preference/ChoicePreference;
-
-    iget-object v2, v2, Lcom/tencent/mm/ui/base/preference/ChoicePreference;->value:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/ui/base/preference/Preference$a;->a(Lcom/tencent/mm/ui/base/preference/Preference;Ljava/lang/Object;)Z
-
-    .line 107
-    :cond_0
-    return-void
-
-    .line 102
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/e;->iLO:Lcom/tencent/mm/ui/base/preference/ChoicePreference;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/preference/ChoicePreference;->a(Lcom/tencent/mm/ui/base/preference/ChoicePreference;Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {p1, v0}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     goto :goto_0
 .end method

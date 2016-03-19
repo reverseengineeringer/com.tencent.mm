@@ -35,34 +35,31 @@
 
     const/4 v2, 0x0
 
-    .line 59
+    .line 60
     new-instance v0, Lcom/tencent/kingkong/CursorJoiner$Result;
 
     const-string/jumbo v1, "RIGHT"
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/kingkong/CursorJoiner$Result;-><init>(Ljava/lang/String;I)V
 
-    .line 60
     sput-object v0, Lcom/tencent/kingkong/CursorJoiner$Result;->RIGHT:Lcom/tencent/kingkong/CursorJoiner$Result;
 
-    .line 61
+    .line 62
     new-instance v0, Lcom/tencent/kingkong/CursorJoiner$Result;
 
     const-string/jumbo v1, "LEFT"
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/kingkong/CursorJoiner$Result;-><init>(Ljava/lang/String;I)V
 
-    .line 62
     sput-object v0, Lcom/tencent/kingkong/CursorJoiner$Result;->LEFT:Lcom/tencent/kingkong/CursorJoiner$Result;
 
-    .line 63
+    .line 64
     new-instance v0, Lcom/tencent/kingkong/CursorJoiner$Result;
 
     const-string/jumbo v1, "BOTH"
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/kingkong/CursorJoiner$Result;-><init>(Ljava/lang/String;I)V
 
-    .line 64
     sput-object v0, Lcom/tencent/kingkong/CursorJoiner$Result;->BOTH:Lcom/tencent/kingkong/CursorJoiner$Result;
 
     .line 58

@@ -1,26 +1,17 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ba
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avX = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public ba()
   {
-    id = "ExDeviceOpInChattingUI";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public String avY;
-    public Context context;
-    public int op = 0;
+    id = "DumpSns";
+    jUI = arR;
   }
 }
 

@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private jut:Z
+.field private lwY:Z
 
-.field private juu:Z
+.field private lwZ:Z
 
 
 # direct methods
@@ -20,10 +20,10 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 16
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->jut:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->lwY:Z
 
     .line 17
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->juu:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->lwZ:Z
 
     .line 25
     return-void
@@ -39,10 +39,10 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 16
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->jut:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->lwY:Z
 
     .line 17
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->juu:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->lwZ:Z
 
     .line 21
     return-void
@@ -58,7 +58,7 @@
     invoke-super/range {p0 .. p5}, Landroid/widget/TextView;->onLayout(ZIIII)V
 
     .line 36
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->jut:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->lwY:Z
 
     if-nez v0, :cond_1
 
@@ -81,7 +81,7 @@
     .line 46
     const/4 v1, 0x1
 
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->juu:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->lwZ:Z
 
     .line 47
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MMTruncTextView;->getPaint()Landroid/text/TextPaint;
@@ -117,7 +117,7 @@
     .line 48
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->juu:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->lwZ:Z
 
     goto :goto_0
 .end method
@@ -130,14 +130,14 @@
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->onTextChanged(Ljava/lang/CharSequence;III)V
 
     .line 54
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->juu:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->lwZ:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->jut:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMTruncTextView;->lwY:Z
 
     .line 55
     return-void

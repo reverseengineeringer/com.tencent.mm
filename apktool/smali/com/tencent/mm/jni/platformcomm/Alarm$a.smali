@@ -49,7 +49,7 @@
 
     check-cast p2, [Ljava/lang/Object;
 
-    sget v0, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->blG:I
+    sget v0, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->bwl:I
 
     add-int/lit8 v0, v0, -0x1
 
@@ -63,7 +63,7 @@
 
     move-result-wide v1
 
-    sget v0, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->blG:I
+    sget v0, Lcom/tencent/mm/jni/platformcomm/Alarm$b;->bwl:I
 
     add-int/lit8 v0, v0, -0x1
 

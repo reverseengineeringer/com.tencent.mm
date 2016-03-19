@@ -1,328 +1,292 @@
 .class public final Lcom/tencent/mm/app/plugin/voicereminder/a/k;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/sdk/h/f;
 .source "SourceFile"
 
 
 # static fields
-.field private static final aqe:Lcom/tencent/mm/a/d;
+.field public static final aoY:[Ljava/lang/String;
+
+.field private static aoZ:J
 
 
 # instance fields
-.field public aqf:I
+.field aoX:Lcom/tencent/mm/sdk/h/d;
 
-.field public aqg:I
-
-.field public aqh:Ljava/lang/String;
-
-.field public aqi:I
-
-.field public aqj:I
-
-.field public aqk:I
-
-.field public aql:I
-
-.field public aqm:Ljava/lang/String;
-
-.field public aqn:I
-
-.field public aqo:Ljava/lang/String;
+.field apa:Ljava/util/Map;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 13
-    new-instance v0, Lcom/tencent/mm/a/d;
+    .line 23
+    const/4 v0, 0x1
 
-    const/16 v1, 0x64
+    new-array v0, v0, [Ljava/lang/String;
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/a/d;-><init>(I)V
-
-    sput-object v0, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqe:Lcom/tencent/mm/a/d;
-
-    return-void
-.end method
-
-.method public constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 11
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public static bd(Ljava/lang/String;)Lcom/tencent/mm/app/plugin/voicereminder/a/k;
-    .locals 6
-
-    .prologue
     const/4 v1, 0x0
 
-    .line 29
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    sget-object v2, Lcom/tencent/mm/app/plugin/voicereminder/a/g;->aot:Lcom/tencent/mm/sdk/h/c$a;
 
-    move-result v0
+    const-string/jumbo v3, "VoiceRemindInfo"
 
-    if-eqz v0, :cond_1
-
-    move-object v0, v1
-
-    .line 70
-    :cond_0
-    :goto_0
-    return-object v0
-
-    .line 34
-    :cond_1
-    const/16 v0, 0x3c
-
-    invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(I)I
-
-    move-result v0
-
-    .line 35
-    if-lez v0, :cond_2
-
-    .line 36
-    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object p0
-
-    .line 38
-    :cond_2
-    invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
-
-    move-result v3
-
-    .line 39
-    sget-object v0, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqe:Lcom/tencent/mm/a/d;
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/h/f;->a(Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/a/d;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    aput-object v2, v0, v1
 
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/app/plugin/voicereminder/a/k;
-
-    .line 40
-    if-nez v0, :cond_0
-
-    .line 44
-    const-string/jumbo v0, "msg"
-
-    invoke-static {p0, v0, v1}, Lcom/tencent/mm/sdk/platformtools/p;->z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
-
-    move-result-object v4
-
-    .line 45
-    if-nez v4, :cond_3
-
-    .line 46
-    const-string/jumbo v0, "!56@/B4Tb64lLpLcQwGQMRj/JcCiXnqe7QDw59ljz32/TwrYqce0E1yKAg=="
-
-    const-string/jumbo v2, "parse msg failed"
-
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    move-object v0, v1
-
-    .line 47
-    goto :goto_0
-
-    .line 51
-    :cond_3
-    :try_start_0
-    new-instance v2, Lcom/tencent/mm/app/plugin/voicereminder/a/k;
-
-    invoke-direct {v2}, Lcom/tencent/mm/app/plugin/voicereminder/a/k;-><init>()V
-
-    .line 52
-    const-string/jumbo v0, ".msg.appmsg.appattach.totallen"
-
-    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    const/4 v5, 0x0
-
-    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    iput v0, v2, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqn:I
-
-    .line 53
-    const-string/jumbo v0, ".msg.appmsg.appattach.attachid"
-
-    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, v2, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqm:Ljava/lang/String;
-
-    .line 54
-    const-string/jumbo v0, ".msg.appmsg.appattach.fileext"
-
-    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, v2, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqo:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aoY:[Ljava/lang/String;
 
     .line 55
-    const-string/jumbo v0, ".msg.appmsg.voicecmd.reminder.$remindtime"
+    const-wide/16 v0, 0x0
 
-    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    sput-wide v0, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aoZ:J
 
-    move-result-object v0
+    return-void
+.end method
 
-    check-cast v0, Ljava/lang/String;
+.method public constructor <init>(Lcom/tencent/mm/sdk/h/d;)V
+    .locals 3
 
-    const/4 v5, 0x0
+    .prologue
+    .line 46
+    sget-object v0, Lcom/tencent/mm/app/plugin/voicereminder/a/g;->aot:Lcom/tencent/mm/sdk/h/c$a;
 
-    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+    const-string/jumbo v1, "VoiceRemindInfo"
 
-    move-result v0
+    sget-object v2, Lcom/tencent/mm/d/b/cf;->aLn:[Ljava/lang/String;
 
-    iput v0, v2, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqf:I
+    invoke-direct {p0, p1, v0, v1, v2}, Lcom/tencent/mm/sdk/h/f;-><init>(Lcom/tencent/mm/sdk/h/d;Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;[Ljava/lang/String;)V
 
-    .line 56
-    const-string/jumbo v0, ".msg.appmsg.voicecmd.reminder.$remindid"
+    .line 91
+    new-instance v0, Ljava/util/HashMap;
 
-    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    move-result-object v0
+    iput-object v0, p0, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->apa:Ljava/util/Map;
 
-    check-cast v0, Ljava/lang/String;
+    .line 47
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aoX:Lcom/tencent/mm/sdk/h/d;
 
-    const/4 v5, 0x0
+    .line 48
+    return-void
+.end method
 
-    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+.method public static bn(Ljava/lang/String;)Ljava/lang/String;
+    .locals 6
 
-    move-result v0
-
-    iput v0, v2, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqg:I
-
-    .line 57
-    const-string/jumbo v0, ".msg.appmsg.voicecmd.reminder.$remindattachid"
-
-    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    iput-object v0, v2, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqh:Ljava/lang/String;
-
-    .line 58
-    const-string/jumbo v0, ".msg.appmsg.voicecmd.reminder.$remindattachtotallen"
-
-    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    const/4 v5, 0x0
-
-    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    iput v0, v2, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqi:I
-
-    .line 59
-    const-string/jumbo v0, ".msg.appmsg.voicecmd.reminder.$remindformat"
-
-    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    const/4 v5, 0x0
-
-    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    iput v0, v2, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqj:I
-
+    .prologue
     .line 60
-    const-string/jumbo v0, ".msg.appmsg.voicecmd.reminder.$originformat"
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
-    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-
-    const/4 v5, 0x0
-
-    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    iput v0, v2, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqk:I
+    move-result-wide v1
 
     .line 61
-    const-string/jumbo v0, ".msg.appmsg.voicecmd.reminder.$msgsvrid"
+    new-instance v0, Ljava/text/SimpleDateFormat;
 
-    invoke-interface {v4, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const-string/jumbo v3, "ssHHmmMMddyy"
+
+    invoke-direct {v0, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    new-instance v3, Ljava/util/Date;
+
+    invoke-direct {v3, v1, v2}, Ljava/util/Date;-><init>(J)V
+
+    invoke-virtual {v0, v3}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    .line 62
+    if-eqz p0, :cond_0
 
-    const/4 v4, 0x0
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+    move-result v3
 
-    move-result v0
+    const/4 v4, 0x1
 
-    iput v0, v2, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aql:I
+    if-le v3, v4, :cond_0
 
     .line 63
-    sget-object v0, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aqe:Lcom/tencent/mm/a/d;
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
 
     move-result-object v3
 
-    invoke-virtual {v0, v3, v2}, Lcom/tencent/mm/a/d;->f(Ljava/lang/Object;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v3}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
 
-    move-object v0, v2
+    move-result-object v3
 
-    .line 70
-    goto/16 :goto_0
+    const/4 v4, 0x0
+
+    const/4 v5, 0x7
+
+    invoke-virtual {v3, v4, v5}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 65
+    :cond_0
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-wide/16 v3, 0x2710
+
+    rem-long/2addr v1, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     .line 66
-    :catch_0
-    move-exception v0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v0, "!56@/B4Tb64lLpLcQwGQMRj/JcCiXnqe7QDw59ljz32/TwrYqce0E1yKAg=="
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v2, "parse amessage xml failed"
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v0
 
-    move-object v0, v1
+    sget-wide v1, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aoZ:J
+
+    const-wide/16 v3, 0x1
+
+    add-long/2addr v3, v1
+
+    sput-wide v3, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aoZ:J
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
 
     .line 67
-    goto/16 :goto_0
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final bh(Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 100
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->apa:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/app/plugin/voicereminder/a/c;
+
+    .line 101
+    if-eqz v0, :cond_0
+
+    .line 102
+    invoke-virtual {v0}, Lcom/tencent/mm/app/plugin/voicereminder/a/c;->ll()V
+
+    .line 103
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->apa:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 106
+    :cond_0
+    return-void
+.end method
+
+.method public final bo(Ljava/lang/String;)Z
+    .locals 6
+
+    .prologue
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    .line 82
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
+
+    .line 84
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/voicereminder/a/k;->aoX:Lcom/tencent/mm/sdk/h/d;
+
+    const-string/jumbo v3, "VoiceRemindInfo"
+
+    const-string/jumbo v4, "filename= ?"
+
+    new-array v5, v1, [Ljava/lang/String;
+
+    aput-object p1, v5, v2
+
+    invoke-interface {v0, v3, v4, v5}, Lcom/tencent/mm/sdk/h/d;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    .line 85
+    const-string/jumbo v0, "!44@/B4Tb64lLpLcQwGQMRj/JQyXo4WsPXM8QEvnYyPx268="
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "delete failed, no such file:"
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 88
+    :cond_0
+    return v1
+
+    :cond_1
+    move v0, v2
+
+    .line 82
+    goto :goto_0
 .end method

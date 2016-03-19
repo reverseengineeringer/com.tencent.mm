@@ -3,22 +3,40 @@ package com.tencent.mm.modelsns;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import com.tencent.mm.d.a.gg;
+import com.tencent.mm.d.a.jn;
+import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public class SnsAdClick
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new a();
-  public int atZ = 0;
-  public String bLP = "";
-  public int bLQ = 0;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  public int asc = 0;
+  public String cbR = "";
+  public long cbS = 0L;
+  public String cbT = "";
+  public int cbU = 0;
+  public long cbV = 0L;
+  public int cbW = 0;
   
   public SnsAdClick() {}
   
-  public SnsAdClick(String paramString, int paramInt)
+  public SnsAdClick(String paramString1, int paramInt1, long paramLong, String paramString2, int paramInt2)
   {
-    bLP = paramString;
-    atZ = paramInt;
+    cbR = paramString1;
+    asc = paramInt1;
+    cbS = paramLong;
+    cbT = paramString2;
+    cbW = paramInt2;
+    cbV = System.currentTimeMillis();
+  }
+  
+  public final void dP(int paramInt)
+  {
+    jn localjn = new jn();
+    cbU = paramInt;
+    aGf.aGg = this;
+    a.jUF.j(localjn);
   }
   
   public int describeContents()
@@ -26,19 +44,14 @@ public class SnsAdClick
     return 0;
   }
   
-  public final void dw(int paramInt)
-  {
-    gg localgg = new gg();
-    bLQ = paramInt;
-    aDG.aDH = this;
-    com.tencent.mm.sdk.c.a.hXQ.g(localgg);
-  }
-  
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeString(bLP);
-    paramParcel.writeInt(atZ);
-    paramParcel.writeInt(bLQ);
+    paramParcel.writeString(cbR);
+    paramParcel.writeInt(asc);
+    paramParcel.writeInt(cbU);
+    paramParcel.writeLong(cbS);
+    paramParcel.writeString(ay.ad(cbT, ""));
+    paramParcel.writeLong(cbV);
   }
 }
 

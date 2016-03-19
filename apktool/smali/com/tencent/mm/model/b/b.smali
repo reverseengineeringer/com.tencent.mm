@@ -17,7 +17,7 @@
 
 
 # virtual methods
-.method public final uC()Ljava/lang/String;
+.method public final uQ()Ljava/lang/String;
     .locals 1
 
     .prologue

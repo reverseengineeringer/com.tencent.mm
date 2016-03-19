@@ -4,17 +4,17 @@
 
 
 # static fields
-.field static final fe:Ljava/lang/Object;
+.field static final en:Ljava/lang/Object;
 
 
 # instance fields
-.field biX:[J
+.field btu:[J
 
-.field ff:Z
+.field eo:Z
 
-.field fh:[Ljava/lang/Object;
+.field eq:[Ljava/lang/Object;
 
-.field fi:I
+.field mSize:I
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/compatible/loader/c;->fe:Ljava/lang/Object;
+    sput-object v0, Lcom/tencent/mm/compatible/loader/c;->en:Ljava/lang/Object;
 
     return-void
 .end method
@@ -115,9 +115,9 @@
     const/4 v2, 0x0
 
     .line 137
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     invoke-static {v0, v1, p1, p2}, Lcom/tencent/mm/compatible/loader/c;->a([JIJ)I
 
@@ -127,7 +127,7 @@
     if-ltz v0, :cond_0
 
     .line 140
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
     aput-object p3, v1, v0
 
@@ -140,25 +140,25 @@
     xor-int/lit8 v0, v0, -0x1
 
     .line 144
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     if-ge v0, v1, :cond_1
 
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
     aget-object v1, v1, v0
 
-    sget-object v3, Lcom/tencent/mm/compatible/loader/c;->fe:Ljava/lang/Object;
+    sget-object v3, Lcom/tencent/mm/compatible/loader/c;->en:Ljava/lang/Object;
 
     if-ne v1, v3, :cond_1
 
     .line 145
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
     aput-wide p1, v1, v0
 
     .line 146
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
     aput-object p3, v1, v0
 
@@ -166,24 +166,24 @@
 
     .line 150
     :cond_1
-    iget-boolean v1, p0, Lcom/tencent/mm/compatible/loader/c;->ff:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/compatible/loader/c;->eo:Z
 
     if-eqz v1, :cond_5
 
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
-    iget-object v3, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v3, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
     array-length v3, v3
 
     if-lt v1, v3, :cond_5
 
     .line 151
-    iget v3, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v3, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
-    iget-object v4, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v4, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
-    iget-object v5, p0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v5, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
     move v1, v2
 
@@ -194,7 +194,7 @@
 
     aget-object v6, v5, v1
 
-    sget-object v7, Lcom/tencent/mm/compatible/loader/c;->fe:Ljava/lang/Object;
+    sget-object v7, Lcom/tencent/mm/compatible/loader/c;->en:Ljava/lang/Object;
 
     if-eq v6, v7, :cond_3
 
@@ -215,14 +215,14 @@
     goto :goto_1
 
     :cond_4
-    iput-boolean v2, p0, Lcom/tencent/mm/compatible/loader/c;->ff:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/compatible/loader/c;->eo:Z
 
-    iput v0, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iput v0, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     .line 155
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     invoke-static {v0, v1, p1, p2}, Lcom/tencent/mm/compatible/loader/c;->a([JIJ)I
 
@@ -232,20 +232,20 @@
 
     .line 158
     :cond_5
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
-    iget-object v3, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v3, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
     array-length v3, v3
 
     if-lt v1, v3, :cond_6
 
     .line 159
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     add-int/lit8 v1, v1, 0x1
 
-    invoke-static {v1}, Lcom/tencent/mm/compatible/loader/a;->l(I)I
+    invoke-static {v1}, Lcom/tencent/mm/compatible/loader/a;->m(I)I
 
     move-result v1
 
@@ -256,58 +256,58 @@
     new-array v1, v1, [Ljava/lang/Object;
 
     .line 166
-    iget-object v4, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v4, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
-    iget-object v5, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v5, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
     array-length v5, v5
 
     invoke-static {v4, v2, v3, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 167
-    iget-object v4, p0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v4, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v5, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
     array-length v5, v5
 
     invoke-static {v4, v2, v1, v2, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 169
-    iput-object v3, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iput-object v3, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
     .line 170
-    iput-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iput-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
     .line 173
     :cond_6
-    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v1, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     sub-int/2addr v1, v0
 
     if-eqz v1, :cond_7
 
     .line 175
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
-    iget-object v2, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v2, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
     add-int/lit8 v3, v0, 0x1
 
-    iget v4, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v4, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     sub-int/2addr v4, v0
 
     invoke-static {v1, v0, v2, v3, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 176
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
-    iget-object v2, p0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v2, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
     add-int/lit8 v3, v0, 0x1
 
-    iget v4, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v4, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     sub-int/2addr v4, v0
 
@@ -315,21 +315,21 @@
 
     .line 179
     :cond_7
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
     aput-wide p1, v1, v0
 
     .line 180
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
     aput-object p3, v1, v0
 
     .line 181
-    iget v0, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v0, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iput v0, p0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     goto/16 :goto_0
 .end method

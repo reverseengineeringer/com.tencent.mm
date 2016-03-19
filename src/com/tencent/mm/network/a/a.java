@@ -4,18 +4,18 @@ public abstract interface a
 {
   public static final class a
   {
-    public long bMD = 0L;
-    public c bTl;
-    public boolean bTm = false;
-    public long bTn = 0L;
-    public long bTo = 0L;
-    public long bTp = 0L;
-    public int bTq = 0;
-    public int bTr = 0;
-    public long bTs = 0L;
-    public long bTt = 0L;
-    public long bTu = 0L;
     public long beginTime = 0L;
+    public long cdi = 0L;
+    public c ckh;
+    public boolean cki = false;
+    public long ckj = 0L;
+    public long ckk = 0L;
+    public long ckl = 0L;
+    public int ckm = 0;
+    public int ckn = 0;
+    public long cko = 0L;
+    public long ckp = 0L;
+    public long ckq = 0L;
     public String clientIp = "";
     public long endTime = 0L;
     public int errCode = 0;
@@ -34,11 +34,11 @@ public abstract interface a
       long l3 = endTime;
       long l4 = endTime;
       long l5 = beginTime;
-      long l6 = bMD;
-      long l7 = bTp;
-      if (bTl == null) {}
-      for (String str = "null";; str = bTl.toString()) {
-        return String.format("rtType:%d begin:%d, end:%d time:%d cost:%d count:%d ipInfo:%s socket:%b netType:%d err:(%d,%d) tx:%d rx:%d", new Object[] { Long.valueOf(l1), Long.valueOf(l2), Long.valueOf(l3), Long.valueOf(l4 - l5), Long.valueOf(l6), Long.valueOf(l7), str, Boolean.valueOf(bTm), Integer.valueOf(netType), Integer.valueOf(errType), Integer.valueOf(errCode), Long.valueOf(bTn), Long.valueOf(bTo) });
+      long l6 = cdi;
+      long l7 = ckl;
+      if (ckh == null) {}
+      for (String str = "null";; str = ckh.toString()) {
+        return String.format("rtType:%d begin:%d, end:%d time:%d cost:%d count:%d ipInfo:%s socket:%b netType:%d err:(%d,%d) tx:%d rx:%d", new Object[] { Long.valueOf(l1), Long.valueOf(l2), Long.valueOf(l3), Long.valueOf(l4 - l5), Long.valueOf(l6), Long.valueOf(l7), str, Boolean.valueOf(cki), Integer.valueOf(netType), Integer.valueOf(errType), Integer.valueOf(errCode), Long.valueOf(ckj), Long.valueOf(ckk) });
       }
     }
   }

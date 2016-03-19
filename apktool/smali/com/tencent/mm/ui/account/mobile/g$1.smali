@@ -1,6 +1,9 @@
-.class final synthetic Lcom/tencent/mm/ui/account/mobile/g$1;
+.class final Lcom/tencent/mm/ui/account/mobile/g$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/content/DialogInterface$OnCancelListener;
 
 
 # annotations
@@ -9,49 +12,58 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic iyK:[I
+# instance fields
+.field final synthetic ktH:Lcom/tencent/mm/modelfriend/u;
+
+.field final synthetic kyD:Lcom/tencent/mm/ui/account/mobile/g;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method constructor <init>(Lcom/tencent/mm/ui/account/mobile/g;Lcom/tencent/mm/modelfriend/u;)V
+    .locals 0
+
+    .prologue
+    .line 106
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->kyD:Lcom/tencent/mm/ui/account/mobile/g;
+
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->ktH:Lcom/tencent/mm/modelfriend/u;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onCancel(Landroid/content/DialogInterface;)V
     .locals 3
 
     .prologue
-    .line 78
-    invoke-static {}, Lcom/tencent/mm/ui/account/mobile/MobileInputUI$a;->aMo()[I
+    .line 110
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    array-length v0, v0
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->ktH:Lcom/tencent/mm/modelfriend/u;
 
-    new-array v0, v0, [I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->c(Lcom/tencent/mm/r/j;)V
 
-    sput-object v0, Lcom/tencent/mm/ui/account/mobile/g$1;->iyK:[I
+    .line 111
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
-    :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/account/mobile/g$1;->iyK:[I
+    move-result-object v0
 
-    sget v1, Lcom/tencent/mm/ui/account/mobile/MobileInputUI$a;->iza:I
+    const/16 v1, 0x91
 
-    add-int/lit8 v1, v1, -0x1
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/mobile/g$1;->kyD:Lcom/tencent/mm/ui/account/mobile/g;
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
+    .line 112
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
 .end method

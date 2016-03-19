@@ -1,39 +1,54 @@
-.class final Lcom/tencent/mm/ui/tools/b;
+.class public final Lcom/tencent/mm/ui/tools/b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
-
-
-# instance fields
-.field final synthetic jof:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
-
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;)V
-    .locals 0
+.method public static A(Landroid/view/View;I)V
+    .locals 5
 
     .prologue
-    .line 50
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/b;->jof:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+    .line 10
+    if-nez p0, :cond_1
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
+    .line 17
+    :cond_0
+    :goto_0
     return-void
-.end method
 
+    .line 14
+    :cond_1
+    new-instance v0, Lcom/tencent/mm/ui/tools/p;
 
-# virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/p;-><init>(Landroid/view/View;)V
 
-    .prologue
-    .line 53
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/b;->jof:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+    .line 15
+    invoke-virtual {p0, p1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->a(Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;)V
+    .line 16
+    iget-object v1, v0, Lcom/tencent/mm/ui/tools/p;->view:Landroid/view/View;
 
-    .line 54
-    return-void
+    if-eqz v1, :cond_0
+
+    iget-object v1, v0, Lcom/tencent/mm/ui/tools/p;->view:Landroid/view/View;
+
+    iget-object v2, v0, Lcom/tencent/mm/ui/tools/p;->lxn:Landroid/graphics/Rect;
+
+    iget v2, v2, Landroid/graphics/Rect;->left:I
+
+    iget-object v3, v0, Lcom/tencent/mm/ui/tools/p;->lxn:Landroid/graphics/Rect;
+
+    iget v3, v3, Landroid/graphics/Rect;->top:I
+
+    iget-object v4, v0, Lcom/tencent/mm/ui/tools/p;->lxn:Landroid/graphics/Rect;
+
+    iget v4, v4, Landroid/graphics/Rect;->right:I
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/p;->lxn:Landroid/graphics/Rect;
+
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
+
+    invoke-virtual {v1, v2, v3, v4, v0}, Landroid/view/View;->setPadding(IIII)V
+
+    goto :goto_0
 .end method

@@ -15,19 +15,9 @@
 
 
 # instance fields
-.field public aFX:Ljava/lang/String;
+.field public aAL:J
 
-.field public aFY:Ljava/lang/String;
-
-.field public aFg:Ljava/lang/String;
-
-.field public aGe:Ljava/lang/String;
-
-.field public id:Ljava/lang/String;
-
-.field public ret:I
-
-.field public type:I
+.field public aFf:Ljava/lang/String;
 
 
 # direct methods
@@ -35,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 16
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

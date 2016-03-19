@@ -50,6 +50,8 @@
 
 .field public static final SRC_IMAGE_ANCHOR_TYPE:I = 0x8
 
+.field public static final TEXT_TYPE:I = 0xb
+
 .field public static final UNKNOWN_TYPE:I
 
 
@@ -72,16 +74,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 774
+    .line 776
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 749
+    .line 751
     iput-boolean v0, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mIsFromSinglePress:Z
 
-    .line 775
+    .line 777
     iput v0, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mType:I
 
-    .line 776
+    .line 778
     return-void
 .end method
 
@@ -91,7 +93,7 @@
     .locals 1
 
     .prologue
-    .line 795
+    .line 797
     iget-object v0, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mData:Ljava/lang/Object;
 
     return-object v0
@@ -101,7 +103,7 @@
     .locals 1
 
     .prologue
-    .line 815
+    .line 817
     iget-object v0, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mExtra:Ljava/lang/String;
 
     return-object v0
@@ -111,7 +113,7 @@
     .locals 1
 
     .prologue
-    .line 805
+    .line 807
     iget-object v0, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mPoint:Landroid/graphics/Point;
 
     return-object v0
@@ -121,7 +123,7 @@
     .locals 1
 
     .prologue
-    .line 790
+    .line 792
     iget v0, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mType:I
 
     return v0
@@ -131,7 +133,7 @@
     .locals 1
 
     .prologue
-    .line 753
+    .line 755
     iget-boolean v0, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mIsFromSinglePress:Z
 
     return v0
@@ -141,10 +143,10 @@
     .locals 0
 
     .prologue
-    .line 785
+    .line 787
     iput-object p1, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mData:Ljava/lang/Object;
 
-    .line 786
+    .line 788
     return-void
 .end method
 
@@ -152,10 +154,10 @@
     .locals 0
 
     .prologue
-    .line 811
+    .line 813
     iput-object p1, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mExtra:Ljava/lang/String;
 
-    .line 812
+    .line 814
     return-void
 .end method
 
@@ -163,10 +165,10 @@
     .locals 0
 
     .prologue
-    .line 800
+    .line 802
     iput-object p1, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mPoint:Landroid/graphics/Point;
 
-    .line 801
+    .line 803
     return-void
 .end method
 
@@ -174,10 +176,10 @@
     .locals 0
 
     .prologue
-    .line 758
+    .line 760
     iput-boolean p1, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mIsFromSinglePress:Z
 
-    .line 759
+    .line 761
     return-void
 .end method
 
@@ -185,9 +187,9 @@
     .locals 0
 
     .prologue
-    .line 780
+    .line 782
     iput p1, p0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;->mType:I
 
-    .line 781
+    .line 783
     return-void
 .end method

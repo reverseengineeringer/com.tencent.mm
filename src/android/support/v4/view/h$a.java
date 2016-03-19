@@ -1,8 +1,27 @@
 package android.support.v4.view;
 
-public abstract interface h$a
+import android.view.MenuItem;
+import android.view.MenuItem.OnActionExpandListener;
+
+final class h$a
+  implements MenuItem.OnActionExpandListener
 {
-  public abstract void l(boolean paramBoolean);
+  private h.b eG;
+  
+  public h$a(h.b paramb)
+  {
+    eG = paramb;
+  }
+  
+  public final boolean onMenuItemActionCollapse(MenuItem paramMenuItem)
+  {
+    return eG.ag();
+  }
+  
+  public final boolean onMenuItemActionExpand(MenuItem paramMenuItem)
+  {
+    return eG.af();
+  }
 }
 
 /* Location:

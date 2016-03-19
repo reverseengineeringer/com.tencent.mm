@@ -1,75 +1,105 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
+
 public final class lp
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public String ayg;
-  public String desc;
-  public boolean huq = false;
-  public boolean hur = false;
-  public String hwR;
-  public boolean hwS = false;
-  public int hwT;
-  public boolean hwU = false;
-  public boolean hwm = false;
-  public String title;
+  public int iXh;
+  public String jjC;
+  public String jjD;
+  public String jjE;
+  public String jjF;
+  public String jjG;
+  public int jjH;
+  public int jjI;
+  public String jjJ;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (title != null) {
-        paramVarArgs.U(1, title);
+      if (jjC == null) {
+        throw new b("Not all required fields were included: BegWord");
       }
-      if (desc != null) {
-        paramVarArgs.U(2, desc);
+      if (jjD == null) {
+        throw new b("Not all required fields were included: BegPicUrl");
       }
-      if (hwR != null) {
-        paramVarArgs.U(3, hwR);
+      if (jjE == null) {
+        throw new b("Not all required fields were included: ThanksPicUrl");
       }
-      if (ayg != null) {
-        paramVarArgs.U(4, ayg);
+      if (jjC != null) {
+        paramVarArgs.d(1, jjC);
       }
-      if (hwU == true) {
-        paramVarArgs.bM(5, hwT);
+      if (jjD != null) {
+        paramVarArgs.d(2, jjD);
       }
+      if (jjE != null) {
+        paramVarArgs.d(3, jjE);
+      }
+      if (jjF != null) {
+        paramVarArgs.d(4, jjF);
+      }
+      if (jjG != null) {
+        paramVarArgs.d(5, jjG);
+      }
+      paramVarArgs.ci(6, jjH);
+      paramVarArgs.ci(7, jjI);
+      if (jjJ != null) {
+        paramVarArgs.d(8, jjJ);
+      }
+      paramVarArgs.ci(9, iXh);
       return 0;
     }
     if (paramInt == 1) {
-      if (title == null) {
-        break label429;
+      if (jjC == null) {
+        break label675;
       }
     }
-    label429:
-    for (int i = a.a.a.b.b.a.T(1, title) + 0;; i = 0)
+    label675:
+    for (int i = a.a.a.b.b.a.e(1, jjC) + 0;; i = 0)
     {
       paramInt = i;
-      if (desc != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, desc);
+      if (jjD != null) {
+        paramInt = i + a.a.a.b.b.a.e(2, jjD);
       }
       i = paramInt;
-      if (hwR != null) {
-        i = paramInt + a.a.a.b.b.a.T(3, hwR);
+      if (jjE != null) {
+        i = paramInt + a.a.a.b.b.a.e(3, jjE);
       }
       paramInt = i;
-      if (ayg != null) {
-        paramInt = i + a.a.a.b.b.a.T(4, ayg);
+      if (jjF != null) {
+        paramInt = i + a.a.a.b.b.a.e(4, jjF);
       }
       i = paramInt;
-      if (hwU == true) {
-        i = paramInt + a.a.a.a.bI(5, hwT);
+      if (jjG != null) {
+        i = paramInt + a.a.a.b.b.a.e(5, jjG);
       }
-      return i;
+      i = i + a.a.a.a.cg(6, jjH) + a.a.a.a.cg(7, jjI);
+      paramInt = i;
+      if (jjJ != null) {
+        paramInt = i + a.a.a.b.b.a.e(8, jjJ);
+      }
+      return paramInt + a.a.a.a.cg(9, iXh);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
-        break;
+        if (jjC == null) {
+          throw new b("Not all required fields were included: BegWord");
+        }
+        if (jjD == null) {
+          throw new b("Not all required fields were included: BegPicUrl");
+        }
+        if (jjE != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: ThanksPicUrl");
       }
       if (paramInt == 3)
       {
@@ -80,63 +110,35 @@ public final class lp
         default: 
           return -1;
         case 1: 
-          title = jMD.readString();
-          huq = true;
+          jjC = maU.readString();
           return 0;
         case 2: 
-          desc = jMD.readString();
-          hur = true;
+          jjD = maU.readString();
           return 0;
         case 3: 
-          hwR = jMD.readString();
-          hwS = true;
+          jjE = maU.readString();
           return 0;
         case 4: 
-          ayg = jMD.readString();
-          hwm = true;
+          jjF = maU.readString();
+          return 0;
+        case 5: 
+          jjG = maU.readString();
+          return 0;
+        case 6: 
+          jjH = maU.jC();
+          return 0;
+        case 7: 
+          jjI = maU.jC();
+          return 0;
+        case 8: 
+          jjJ = maU.readString();
           return 0;
         }
-        hwT = jMD.aVp();
-        hwU = true;
+        iXh = maU.jC();
         return 0;
       }
       return -1;
     }
-  }
-  
-  public final lp mj(int paramInt)
-  {
-    hwT = paramInt;
-    hwU = true;
-    return this;
-  }
-  
-  public final lp wP(String paramString)
-  {
-    title = paramString;
-    huq = true;
-    return this;
-  }
-  
-  public final lp wQ(String paramString)
-  {
-    desc = paramString;
-    hur = true;
-    return this;
-  }
-  
-  public final lp wR(String paramString)
-  {
-    hwR = paramString;
-    hwS = true;
-    return this;
-  }
-  
-  public final lp wS(String paramString)
-  {
-    ayg = paramString;
-    hwm = true;
-    return this;
   }
 }
 

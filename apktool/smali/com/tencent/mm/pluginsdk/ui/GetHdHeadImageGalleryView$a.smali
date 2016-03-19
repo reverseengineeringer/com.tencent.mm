@@ -21,7 +21,7 @@
 
 
 # instance fields
-.field final synthetic gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+.field final synthetic iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     .prologue
     .line 138
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
@@ -101,13 +101,13 @@
     invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;-><init>(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;)V
 
     .line 164
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v2, Lcom/tencent/mm/a$k;->view_get_hd_avatar_dialogview:I
+    const v2, 0x7f0a0575
 
     const/4 v3, 0x0
 
@@ -116,7 +116,7 @@
     move-result-object p2
 
     .line 165
-    sget v0, Lcom/tencent/mm/a$i;->hd_avatar_laoding_pb:I
+    const v0, 0x7f071096
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -124,10 +124,10 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->dxH:Landroid/widget/ProgressBar;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->epr:Landroid/widget/ProgressBar;
 
     .line 166
-    sget v0, Lcom/tencent/mm/a$i;->hd_avatar_iv:I
+    const v0, 0x7f071094
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -135,16 +135,16 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->azQ:Landroid/widget/ImageView;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->aAF:Landroid/widget/ImageView;
 
     .line 167
-    sget v0, Lcom/tencent/mm/a$i;->hd_avatar_mask_view:I
+    const v0, 0x7f071095
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->gPJ:Landroid/view/View;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->iGr:Landroid/view/View;
 
     .line 168
     invoke-virtual {p2, v1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -160,7 +160,7 @@
     invoke-virtual {p2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 174
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->d(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;)Landroid/graphics/Bitmap;
 
@@ -169,30 +169,30 @@
     if-eqz v1, :cond_1
 
     .line 178
-    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->dxH:Landroid/widget/ProgressBar;
+    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->epr:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1, v5}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
     .line 179
-    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->azQ:Landroid/widget/ImageView;
+    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->aAF:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 180
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->gPJ:Landroid/view/View;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->iGr:Landroid/view/View;
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setVisibility(I)V
 
     .line 181
     new-instance p2, Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->d(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;)Landroid/graphics/Bitmap;
 
@@ -202,7 +202,7 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->d(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;)Landroid/graphics/Bitmap;
 
@@ -222,7 +222,7 @@
     invoke-virtual {p2, v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
     .line 183
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->d(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;)Landroid/graphics/Bitmap;
 
@@ -256,17 +256,17 @@
 
     .line 191
     :cond_1
-    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->dxH:Landroid/widget/ProgressBar;
+    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->epr:Landroid/widget/ProgressBar;
 
     invoke-virtual {v1, v6}, Landroid/widget/ProgressBar;->setVisibility(I)V
 
     .line 192
-    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->gPJ:Landroid/view/View;
+    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->iGr:Landroid/view/View;
 
     invoke-virtual {v1, v6}, Landroid/view/View;->setVisibility(I)V
 
     .line 193
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->e(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;)Landroid/graphics/Bitmap;
 
@@ -275,14 +275,14 @@
     if-eqz v1, :cond_2
 
     .line 194
-    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->azQ:Landroid/widget/ImageView;
+    iget-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->aAF:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 195
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->azQ:Landroid/widget/ImageView;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->aAF:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->e(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;)Landroid/graphics/Bitmap;
 
@@ -294,7 +294,7 @@
 
     .line 197
     :cond_2
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->azQ:Landroid/widget/ImageView;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->aAF:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 

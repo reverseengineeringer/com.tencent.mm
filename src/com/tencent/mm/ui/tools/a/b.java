@@ -2,48 +2,48 @@ package com.tencent.mm.ui.tools.a;
 
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapFactory.Options;
-import com.tencent.mm.a.c;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.a.e;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class b
   extends a
 {
-  public int cIw = 2048;
-  public int cnL = 2048;
-  public int fi = 104857600;
-  private String jwL;
-  public int jwM = 0;
-  public int jwN = 0;
-  public int jwO = 0;
-  private a jwP;
+  public int cFj = 2048;
+  private String eXB;
+  public int ewY = 2048;
+  public int lzC = 0;
+  public int lzD = 0;
+  public int lzE = 0;
+  private a lzF;
+  public int mSize = 104857600;
   
   public b(String paramString)
   {
-    jwL = paramString;
+    eXB = paramString;
   }
   
   public final void a(a parama)
   {
-    jwP = parama;
-    aBx();
+    lzF = parama;
+    aSr();
   }
   
-  protected final int aBw()
+  protected final int aSq()
   {
-    if (bn.iW(jwL)) {
-      t.w("!44@/B4Tb64lLpIlu2Ztgzg9y/TE0geichy3oWDor3HedcE=", "dz[check image but path is null or nil]");
+    if (ay.kz(eXB)) {
+      u.w("!44@/B4Tb64lLpIlu2Ztgzg9y/TE0geichy3oWDor3HedcE=", "dz[check image but path is null or nil]");
     }
-    jwM = c.ay(jwL);
-    String str = jwL;
+    lzC = e.aw(eXB);
+    String str = eXB;
     BitmapFactory.Options localOptions = new BitmapFactory.Options();
     inJustDecodeBounds = true;
     BitmapFactory.decodeFile(str, localOptions);
-    jwN = outWidth;
-    jwO = outHeight;
-    if (jwM <= fi)
+    lzD = outWidth;
+    lzE = outHeight;
+    if (lzC <= mSize)
     {
-      if (jwM < 0)
+      if (lzC < 0)
       {
         i = 1;
         if (i == 0) {
@@ -52,19 +52,19 @@ public final class b
       }
     }
     else {
-      t.d("!44@/B4Tb64lLpIlu2Ztgzg9y/TE0geichy3oWDor3HedcE=", "dz[over size] size = %d", new Object[] { Integer.valueOf(jwM) });
+      u.d("!44@/B4Tb64lLpIlu2Ztgzg9y/TE0geichy3oWDor3HedcE=", "dz[over size] size = %d", new Object[] { Integer.valueOf(lzC) });
     }
     label190:
     for (int i = 0;; i = 1)
     {
-      if ((jwN > cIw) || (jwO > cnL))
+      if ((lzD > ewY) || (lzE > cFj))
       {
-        t.d("!44@/B4Tb64lLpIlu2Ztgzg9y/TE0geichy3oWDor3HedcE=", "dz[over width or height] width = %d, height = %d", new Object[] { Integer.valueOf(jwN), Integer.valueOf(jwO) });
+        u.d("!44@/B4Tb64lLpIlu2Ztgzg9y/TE0geichy3oWDor3HedcE=", "dz[over width or height] width = %d, height = %d", new Object[] { Integer.valueOf(lzD), Integer.valueOf(lzE) });
         i = 0;
       }
       if (i != 0)
       {
-        t.i("!44@/B4Tb64lLpIlu2Ztgzg9y/TE0geichy3oWDor3HedcE=", "dz[status ok]");
+        u.i("!44@/B4Tb64lLpIlu2Ztgzg9y/TE0geichy3oWDor3HedcE=", "dz[status ok]");
         return 0;
         i = 0;
         break;
@@ -73,27 +73,27 @@ public final class b
     }
   }
   
-  protected final void aBx()
+  protected final void aSr()
   {
-    if (jwP == null)
+    if (lzF == null)
     {
-      t.w("!44@/B4Tb64lLpIlu2Ztgzg9y/TE0geichy3oWDor3HedcE=", "dz[callback is null]");
+      u.w("!44@/B4Tb64lLpIlu2Ztgzg9y/TE0geichy3oWDor3HedcE=", "dz[callback is null]");
       return;
     }
-    switch (aBw())
+    switch (aSq())
     {
     default: 
       return;
     case 0: 
-      jwP.a(this);
+      lzF.a(this);
       return;
     }
-    jwP.Ni();
+    lzF.Rs();
   }
   
   public static abstract interface a
   {
-    public abstract void Ni();
+    public abstract void Rs();
     
     public abstract void a(b paramb);
   }

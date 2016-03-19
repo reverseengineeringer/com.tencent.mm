@@ -1,29 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class iw
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGd = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aFd = new a();
+  public b aFe = new b();
   
   public iw()
   {
-    id = "TranslateMessageResult";
-    hXT = atO;
+    id = "QueryRecordMsgMediaList";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aFX;
-    public String aFY;
+    public long aAL;
+    public String aFf;
+  }
+  
+  public static final class b
+  {
     public String aFg;
-    public String aGe;
-    public String id;
-    public int ret;
-    public int type;
   }
 }
 

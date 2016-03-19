@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bw
-  extends a.c
+  extends a.e
 {
   public a$bw()
   {
-    super("preVerifyJSAPI", "pre_verify_jsapi", -3, false);
+    super("jumpToWXWallet", "jumpToWXWallet", 147, true);
   }
 }
 

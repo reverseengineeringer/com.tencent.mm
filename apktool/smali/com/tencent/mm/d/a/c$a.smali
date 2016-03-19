@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public atT:Lcom/tencent/mm/ui/MMActivity;
+.field public arW:Lcom/tencent/mm/ui/MMActivity;
 
 .field public errCode:I
 

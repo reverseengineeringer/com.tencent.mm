@@ -3,11 +3,11 @@ package com.tencent.mm.app.plugin;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
+import com.tencent.mm.sdk.platformtools.u;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$ScanQrCodeUriSpanHandler
@@ -18,19 +18,19 @@ class URISpanHandlerSet$ScanQrCodeUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     int j = 0;
     if (paramString.equals("weixin://scanqrcode/"))
     {
       if (!paramBoolean)
       {
-        t.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "jumpToActivity, scan qrcode permission fail");
+        u.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "jumpToActivity, scan qrcode permission fail");
         return true;
       }
       paramString = new Intent();
@@ -46,26 +46,26 @@ class URISpanHandlerSet$ScanQrCodeUriSpanHandler
       if (i == 0) {
         paramString.addFlags(67108864);
       }
-      if ((URISpanHandlerSet.a(apd) instanceof Service)) {
+      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
         paramString.addFlags(268435456);
       }
       if (i != 0)
       {
-        c.c(URISpanHandlerSet.a(apd), "scanner", ".ui.SingleTopScanUI", paramString);
+        c.c(URISpanHandlerSet.a(ang), "scanner", ".ui.SingleTopScanUI", paramString);
         return true;
       }
-      c.c(URISpanHandlerSet.a(apd), "scanner", ".ui.BaseScanUI", paramString);
+      c.c(URISpanHandlerSet.a(ang), "scanner", ".ui.BaseScanUI", paramString);
       return true;
     }
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[0];
   }

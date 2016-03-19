@@ -3,20 +3,20 @@ package com.tencent.mm.compatible.b;
 import android.annotation.TargetApi;
 import android.media.AudioRecord;
 import android.media.audiofx.AcousticEchoCanceler;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class c
-  implements i.a
+  implements e.a
 {
-  private AcousticEchoCanceler bfn = null;
+  private AcousticEchoCanceler bpt = null;
   
   @TargetApi(16)
   public c(AudioRecord paramAudioRecord)
   {
     boolean bool = AcousticEchoCanceler.isAvailable();
-    t.d("!44@/B4Tb64lLpL5ajg1luquwxbRxlpfDxTzO5sucSMwiuU=", "available  " + bool);
+    u.d("!44@/B4Tb64lLpL5ajg1luquwxbRxlpfDxTzO5sucSMwiuU=", "available  " + bool);
     if (bool) {
-      bfn = AcousticEchoCanceler.create(paramAudioRecord.getAudioSessionId());
+      bpt = AcousticEchoCanceler.create(paramAudioRecord.getAudioSessionId());
     }
   }
   
@@ -27,16 +27,16 @@ public final class c
   }
   
   @TargetApi(16)
-  public final boolean oa()
+  public final boolean nK()
   {
-    if (bfn != null) {}
+    if (bpt != null) {}
     try
     {
-      int i = bfn.setEnabled(true);
+      int i = bpt.setEnabled(true);
       if (i == 0) {
         return true;
       }
-      t.d("!44@/B4Tb64lLpL5ajg1luquwxbRxlpfDxTzO5sucSMwiuU=", "setEnabled failed " + i);
+      u.d("!44@/B4Tb64lLpL5ajg1luquwxbRxlpfDxTzO5sucSMwiuU=", "setEnabled failed " + i);
     }
     catch (Exception localException)
     {

@@ -15,15 +15,7 @@
 
 
 # instance fields
-.field public aHl:Ljava/lang/String;
-
-.field public anZ:Ljava/lang/String;
-
-.field public ave:I
-
-.field public azi:Z
-
-.field public data:[B
+.field public ask:Lcom/tencent/mm/storage/ag;
 
 
 # direct methods
@@ -31,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 24
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

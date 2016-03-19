@@ -8,38 +8,38 @@ import junit.framework.Assert;
 final class ChattingAnimFrame$b
   extends ChattingAnimFrame.a
 {
-  private int coY;
-  private int coZ;
-  private float feF;
-  private float feG;
-  private float feH;
-  private float feI;
-  private float feJ = 0.01F;
-  private float feK = 0.02F;
-  private float feL;
-  private float feM;
-  private float feN;
-  private float feO;
+  private int cGx;
+  private int cGy;
+  private float gqq;
+  private float gqr;
+  private float gqs;
+  private float gqt;
+  private float gqu = 0.01F;
+  private float gqv = 0.02F;
+  private float gqw;
+  private float gqx;
+  private float gqy;
+  private float gqz;
   
   public ChattingAnimFrame$b(ChattingAnimFrame paramChattingAnimFrame, int paramInt1, int paramInt2)
   {
     super(paramChattingAnimFrame);
-    coY = paramInt1;
-    coZ = paramInt2;
-    feF = ChattingAnimFrame.g(0.1F, 0.9F);
-    feG = feF;
-    feI = ChattingAnimFrame.g(-0.3F, -0.1F);
+    cGx = paramInt1;
+    cGy = paramInt2;
+    gqq = ChattingAnimFrame.g(0.1F, 0.9F);
+    gqr = gqq;
+    gqt = ChattingAnimFrame.g(-0.3F, -0.1F);
     restart();
   }
   
   private void restart()
   {
-    if (feI > 0.0F) {
-      feK += feJ;
+    if (gqt > 0.0F) {
+      gqv += gqu;
     }
-    feH = feI;
-    feI += feK;
-    if (feH > 1.1F) {
+    gqs = gqt;
+    gqt += gqv;
+    if (gqs > 1.1F) {
       if (targetView == null) {
         break label139;
       }
@@ -48,24 +48,24 @@ final class ChattingAnimFrame$b
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue(bool);
-      targetView.post(new as(this));
-      feL = (feF * coY);
-      feM = (feG * coY);
-      feN = (feH * coZ);
-      feO = (feI * coZ);
+      targetView.post(new ChattingAnimFrame.a.1(this));
+      gqw = (gqq * cGx);
+      gqx = (gqr * cGx);
+      gqy = (gqs * cGy);
+      gqz = (gqt * cGy);
       return;
     }
   }
   
   protected final void applyTransformation(float paramFloat, Transformation paramTransformation)
   {
-    float f1 = feL;
-    float f2 = feN;
-    if (feL != feM) {
-      f1 = feL + (feM - feL) * paramFloat;
+    float f1 = gqw;
+    float f2 = gqy;
+    if (gqw != gqx) {
+      f1 = gqw + (gqx - gqw) * paramFloat;
     }
-    if (feN != feO) {
-      f2 = feN + (feO - feN) * paramFloat;
+    if (gqy != gqz) {
+      f2 = gqy + (gqz - gqy) * paramFloat;
     }
     paramTransformation.getMatrix().setTranslate(f1, f2);
     if (paramFloat == 1.0F) {

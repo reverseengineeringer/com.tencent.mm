@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public aBv:I
+.field public aI:I
 
-.field public aBw:I
+.field public azu:Ljava/lang/String;
 
 
 # direct methods
@@ -25,16 +25,13 @@
     .locals 1
 
     .prologue
-    const/4 v0, 0x0
-
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 15
-    iput v0, p0, Lcom/tencent/mm/d/a/et$a;->aBv:I
+    const/4 v0, 0x0
 
-    .line 16
-    iput v0, p0, Lcom/tencent/mm/d/a/et$a;->aBw:I
+    iput v0, p0, Lcom/tencent/mm/d/a/et$a;->aI:I
 
     return-void
 .end method

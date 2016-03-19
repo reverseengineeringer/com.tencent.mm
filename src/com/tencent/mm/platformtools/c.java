@@ -2,7 +2,7 @@ package com.tencent.mm.platformtools;
 
 public final class c
 {
-  public static String iN(String paramString)
+  public static String kr(String paramString)
   {
     if ((paramString == null) || ("".equals(paramString.trim()))) {
       return paramString;
@@ -13,7 +13,7 @@ public final class c
     int j = paramString.length;
     while (i < j)
     {
-      String str = SpellMap.d(paramString[i]);
+      String str = SpellMap.c(paramString[i]);
       if (str != null) {
         localStringBuffer.append(str);
       }
@@ -22,7 +22,7 @@ public final class c
     return localStringBuffer.toString();
   }
   
-  public static String iO(String paramString)
+  public static String ks(String paramString)
   {
     if ((paramString == null) || ("".equals(paramString.trim()))) {
       return paramString;
@@ -35,7 +35,7 @@ public final class c
     {
       if (!Character.isSpace(paramString[i]))
       {
-        String str = SpellMap.d(paramString[i]);
+        String str = SpellMap.c(paramString[i]);
         if ((str != null) && (str.length() > 0)) {
           localStringBuffer.append(str.charAt(0));
         }

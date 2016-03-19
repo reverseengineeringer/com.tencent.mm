@@ -15,19 +15,11 @@
 
 
 # instance fields
-.field public auU:J
+.field public Jq:Z
 
-.field public ayb:Lcom/tencent/mm/protocal/b/kx;
+.field public auQ:Ljava/lang/String;
 
-.field public ayc:Landroid/content/Intent;
-
-.field public ayd:Lcom/tencent/mm/sdk/g/ai$a;
-
-.field public context:Landroid/content/Context;
-
-.field public handler:Lcom/tencent/mm/sdk/platformtools/ac;
-
-.field public type:I
+.field public avU:I
 
 
 # direct methods
@@ -35,13 +27,18 @@
     .locals 1
 
     .prologue
-    .line 25
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 26
+    .line 16
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/d/a/cl$a;->type:I
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/cl$a;->Jq:Z
+
+    .line 17
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/tencent/mm/d/a/cl$a;->avU:I
 
     return-void
 .end method

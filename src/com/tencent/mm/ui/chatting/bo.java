@@ -1,48 +1,78 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Intent;
-import android.support.v4.app.FragmentActivity;
+import android.content.Context;
+import android.view.ContextMenu;
+import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import android.view.View;
+import com.tencent.mm.an.j;
+import com.tencent.mm.an.m;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.storage.ag;
 
 final class bo
-  implements MenuItem.OnMenuItemClickListener
+  extends aa
 {
-  bo(bn parambn) {}
+  private ChattingUI.a kTe;
   
-  public final boolean onMenuItemClick(MenuItem paramMenuItem)
+  public bo()
   {
-    iTE.iTz.iWS.size();
-    paramMenuItem = new Intent();
-    Object localObject2 = iTE.iTz.iWS;
-    if (localObject2 != null)
+    super(55);
+  }
+  
+  public final View a(LayoutInflater paramLayoutInflater, View paramView)
+  {
+    Object localObject;
+    if ((paramView != null) && (paramView.getTag() != null))
     {
-      Object localObject1 = new ArrayList();
-      localObject2 = ((Set)localObject2).iterator();
-      while (((Iterator)localObject2).hasNext())
+      localObject = paramView;
+      if (getTagtype == eLV) {}
+    }
+    else
+    {
+      localObject = new ax(paramLayoutInflater, 2131361936);
+      ((View)localObject).setTag(new du(eLV).e((View)localObject, true));
+    }
+    return (View)localObject;
+  }
+  
+  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  {
+    kTe = parama1;
+    du.a((du)parama, paramag, true, paramInt, parama1, 2130970400);
+  }
+  
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  {
+    if (ah.tD().isSDCardAvailable())
+    {
+      int i = getTagposition;
+      paramag = j.Ea().jJ(field_imgPath);
+      if ((paramag != null) && ((status == 199) || (status == 199)))
       {
-        Long localLong = (Long)((Iterator)localObject2).next();
-        if (localLong != null) {
-          ((List)localObject1).add(localLong);
+        paramContextMenu.add(i, 107, 0, paramView.getContext().getString(2131427822));
+        if (com.tencent.mm.ar.c.yf("favorite")) {
+          paramContextMenu.add(i, 116, 0, paramView.getContext().getString(2131431054));
+        }
+        if ((com.tencent.mm.t.n.xi()) && (!kTe.bfD())) {
+          paramContextMenu.add(i, 114, 0, paramView.getContext().getString(2131427998));
         }
       }
-      localObject2 = new long[((List)localObject1).size()];
-      localObject1 = ((List)localObject1).iterator();
-      int i = 0;
-      while (((Iterator)localObject1).hasNext())
-      {
-        localObject2[i] = ((Long)((Iterator)localObject1).next()).longValue();
-        i += 1;
+      if (!kTe.bfD()) {
+        paramContextMenu.add(i, 100, 0, paramView.getContext().getString(2131427852));
       }
-      paramMenuItem.putExtra("selected_message_ids", (long[])localObject2);
-      iTE.iTy.G().setResult(-1, paramMenuItem);
-      iTE.iTy.finish();
     }
+    return true;
+  }
+  
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  {
+    return false;
+  }
+  
+  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  {
     return false;
   }
 }

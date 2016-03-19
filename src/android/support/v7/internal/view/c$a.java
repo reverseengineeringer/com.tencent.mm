@@ -8,17 +8,17 @@ import java.lang.reflect.Method;
 final class c$a
   implements MenuItem.OnMenuItemClickListener
 {
-  private static final Class[] kA = { MenuItem.class };
-  private Method kB;
-  private Object kz;
+  private static final Class[] jH = { MenuItem.class };
+  private Object jG;
+  private Method jI;
   
   public c$a(Object paramObject, String paramString)
   {
-    kz = paramObject;
+    jG = paramObject;
     Class localClass = paramObject.getClass();
     try
     {
-      kB = localClass.getMethod(paramString, kA);
+      jI = localClass.getMethod(paramString, jH);
       return;
     }
     catch (Exception paramObject)
@@ -33,10 +33,10 @@ final class c$a
   {
     try
     {
-      if (kB.getReturnType() == Boolean.TYPE) {
-        return ((Boolean)kB.invoke(kz, new Object[] { paramMenuItem })).booleanValue();
+      if (jI.getReturnType() == Boolean.TYPE) {
+        return ((Boolean)jI.invoke(jG, new Object[] { paramMenuItem })).booleanValue();
       }
-      kB.invoke(kz, new Object[] { paramMenuItem });
+      jI.invoke(jG, new Object[] { paramMenuItem });
       return true;
     }
     catch (Exception paramMenuItem)

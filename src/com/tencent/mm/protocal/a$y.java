@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$y
-  extends a.c
+  extends a.e
 {
   public a$y()
   {
-    super("getActionInfo", "getActionInfo", 130, true);
+    super("configWXDeviceWiFi", "configWXDeviceWiFi", 126, true);
   }
 }
 

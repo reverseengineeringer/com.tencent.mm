@@ -1,123 +1,86 @@
-.class final Lcom/tencent/mm/ui/widget/d;
-.super Ljava/lang/Object;
+.class public final Lcom/tencent/mm/ui/widget/d;
+.super Landroid/text/style/ImageSpan;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/animation/Animation$AnimationListener;
 
 
 # instance fields
-.field final synthetic jBm:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
-
-.field final synthetic jBn:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+.field public lEY:I
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;Lcom/tencent/mm/ui/widget/MMSwitchBtn;)V
-    .locals 0
+.method public constructor <init>(Landroid/graphics/drawable/Drawable;)V
+    .locals 1
 
     .prologue
-    .line 196
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/d;->jBn:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    .line 13
+    const/4 v0, 0x1
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/widget/d;->jBm:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    invoke-direct {p0, p1, v0}, Landroid/text/style/ImageSpan;-><init>(Landroid/graphics/drawable/Drawable;I)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 10
+    const/4 v0, 0x0
 
+    iput v0, p0, Lcom/tencent/mm/ui/widget/d;->lEY:I
+
+    .line 14
     return-void
 .end method
 
 
 # virtual methods
-.method public final onAnimationEnd(Landroid/view/animation/Animation;)V
+.method public final draw(Landroid/graphics/Canvas;Ljava/lang/CharSequence;IIFIIILandroid/graphics/Paint;)V
     .locals 4
 
     .prologue
-    const/4 v1, 0x0
+    .line 22
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/d;->getDrawable()Landroid/graphics/drawable/Drawable;
 
-    const/4 v0, 0x1
+    move-result-object v1
 
-    .line 213
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/d;->jBn:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    .line 23
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBl:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    .line 25
+    invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
-    invoke-static {v2}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->a(Lcom/tencent/mm/ui/widget/MMSwitchBtn;)Z
+    move-result-object v0
 
-    move-result v3
+    iget v0, v0, Landroid/graphics/Rect;->bottom:I
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/d;->jBn:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    sub-int v0, p8, v0
 
-    iget v2, v2, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->direction:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/d;->lEY:I
 
-    if-ne v2, v0, :cond_1
+    add-int/2addr v0, v2
 
-    move v2, v0
+    .line 26
+    iget v2, p0, Lcom/tencent/mm/ui/widget/d;->mVerticalAlignment:I
 
-    :goto_0
-    if-eq v3, v2, :cond_0
+    const/4 v3, 0x1
 
-    .line 214
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/d;->jBn:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    if-ne v2, v3, :cond_0
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBl:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    .line 27
+    invoke-virtual {p9}, Landroid/graphics/Paint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/d;->jBn:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    move-result-object v2
 
-    iget v3, v3, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->direction:I
+    iget v2, v2, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    if-ne v3, v0, :cond_2
+    sub-int/2addr v0, v2
 
-    :goto_1
-    invoke-static {v2, v0}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->a(Lcom/tencent/mm/ui/widget/MMSwitchBtn;Z)Z
-
-    .line 215
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/d;->jBn:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBl:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
-
-    new-instance v1, Lcom/tencent/mm/ui/widget/e;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/widget/e;-><init>(Lcom/tencent/mm/ui/widget/d;)V
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->post(Ljava/lang/Runnable;)Z
-
-    .line 225
+    .line 37
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/d;->jBn:Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;
+    int-to-float v0, v0
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBl:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    invoke-virtual {p1, p5, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->c(Lcom/tencent/mm/ui/widget/MMSwitchBtn;)Z
+    .line 38
+    invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 226
-    return-void
+    .line 39
+    invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    :cond_1
-    move v2, v1
-
-    .line 213
-    goto :goto_0
-
-    :cond_2
-    move v0, v1
-
-    .line 214
-    goto :goto_1
-.end method
-
-.method public final onAnimationRepeat(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    .prologue
-    .line 208
-    return-void
-.end method
-
-.method public final onAnimationStart(Landroid/view/animation/Animation;)V
-    .locals 0
-
-    .prologue
-    .line 202
+    .line 40
     return-void
 .end method

@@ -2,8 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class bx$a
 {
-  public int op;
-  public String username;
+  public boolean avq = false;
 }
 
 /* Location:

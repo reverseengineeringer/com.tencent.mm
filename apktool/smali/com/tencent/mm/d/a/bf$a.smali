@@ -15,23 +15,20 @@
 
 
 # instance fields
-.field public Kr:Z
+.field public arU:I
 
-.field public mac:Ljava/lang/String;
+.field public auo:I
+
+.field public aup:Landroid/content/Intent;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 16
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bf$a;->Kr:Z
 
     return-void
 .end method

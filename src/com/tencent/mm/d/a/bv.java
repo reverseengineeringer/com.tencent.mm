@@ -1,36 +1,33 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import android.database.Cursor;
-import android.net.Uri;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class bv
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a axd = new a();
-  public b axe = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avi = new a();
+  public b avj = new b();
   
   public bv()
   {
-    id = "ExtOpenApiCall";
-    hXT = atO;
+    id = "ExDeviceGetTicket";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String[] atX;
-    public int awH = 0;
-    public Context context;
-    public String[] selectionArgs;
-    public Uri uri;
+    public String alN;
+    public String auQ;
+    public String avk;
+    public int type;
   }
   
   public static final class b
   {
-    public Cursor cursor;
+    public boolean avl;
+    public String avm;
   }
 }
 

@@ -12,29 +12,30 @@
 
 
 # static fields
-.field private static final gJT:Ljava/util/Map;
+.field private static final iyA:Ljava/util/Map;
+
+.field public static iyz:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 12
+    .locals 6
 
     .prologue
-    const-wide/32 v10, 0x40000000
-
-    const-wide/32 v8, 0x20000000
-
-    const-wide/32 v6, 0x10000000
-
     const-wide/32 v4, 0x8000000
 
-    .line 150
+    .line 209
+    const-string/jumbo v0, ""
+
+    sput-object v0, Lcom/tencent/mm/pluginsdk/d;->iyz:Ljava/lang/String;
+
+    .line 212
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 152
-    sput-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 214
+    sput-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://"
 
@@ -46,8 +47,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 153
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 215
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/stickers"
 
@@ -59,8 +60,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 154
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 216
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/games"
 
@@ -72,8 +73,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 155
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 217
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/moments"
 
@@ -85,8 +86,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 156
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 218
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/add"
 
@@ -98,8 +99,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 157
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 219
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/shopping"
 
@@ -111,8 +112,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 158
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 220
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/groupchat"
 
@@ -124,8 +125,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 159
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 221
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/scan"
 
@@ -137,8 +138,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 160
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 222
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/profile"
 
@@ -150,8 +151,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 161
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 223
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/settings"
 
@@ -163,8 +164,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 162
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 224
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/general"
 
@@ -176,8 +177,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 163
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 225
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/help"
 
@@ -189,8 +190,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 164
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 226
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/notifications"
 
@@ -202,8 +203,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 165
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 227
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/terms"
 
@@ -215,8 +216,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 166
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 228
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/chat"
 
@@ -228,8 +229,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 167
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 229
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/features"
 
@@ -241,8 +242,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 168
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 230
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/clear"
 
@@ -254,8 +255,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 169
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 231
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/feedback"
 
@@ -267,8 +268,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 170
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 232
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/faq"
 
@@ -280,8 +281,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 171
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 233
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/recommendation"
 
@@ -293,8 +294,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 172
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 234
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/groups"
 
@@ -306,8 +307,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 173
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 235
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/tags"
 
@@ -319,8 +320,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 174
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 236
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/officialaccounts"
 
@@ -332,8 +333,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 175
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 237
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/posts"
 
@@ -345,8 +346,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 176
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 238
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/favorites"
 
@@ -358,8 +359,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 239
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/privacy"
 
@@ -371,8 +372,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 240
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/security"
 
@@ -384,8 +385,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 179
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 241
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/wallet"
 
@@ -397,8 +398,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 180
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 242
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/businessPay"
 
@@ -408,8 +409,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 181
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 243
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     const-string/jumbo v1, "weixin://dl/businessPay/"
 
@@ -419,73 +420,319 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 182
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 250
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
-    const-string/jumbo v1, "weixin://dl/businessGame/detail"
+    const-string/jumbo v1, "weixin://dl/wechatout"
 
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-wide/32 v2, 0x10000000
 
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 183
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
-
-    const-string/jumbo v1, "weixin://dl/businessGame/detail/"
-
-    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 184
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 252
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
-    const-string/jumbo v1, "weixin://dl/businessGame/library"
+    const-string/jumbo v1, "weixin://dl/protection"
 
-    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-wide/32 v2, 0x40000000
 
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 185
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
-
-    const-string/jumbo v1, "weixin://dl/businessGame/library/"
-
-    invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 186
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 253
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
-    const-string/jumbo v1, "weixin://dl/businessWebview/link"
+    const-string/jumbo v1, "weixin://dl/card"
 
-    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const-wide v2, 0x80000000L
 
-    move-result-object v2
-
-    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 187
-    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
-
-    const-string/jumbo v1, "weixin://dl/businessWebview/link/"
-
-    invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 188
+    .line 254
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/about"
+
+    const-wide/high16 v2, 0x4000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 255
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/blacklist"
+
+    const-wide v2, 0x100000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 256
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/textsize"
+
+    const-wide v2, 0x200000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 257
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/sight"
+
+    const-wide v2, 0x400000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 258
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/languages"
+
+    const-wide v2, 0x800000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 259
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/chathistory"
+
+    const-wide v2, 0x1000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 260
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/bindqq"
+
+    const-wide v2, 0x2000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 261
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/bindmobile"
+
+    const-wide v2, 0x4000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 262
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/bindemail"
+
+    const-wide v2, 0x8000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 263
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/securityassistant"
+
+    const-wide v2, 0x10000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 264
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/broadcastmessage"
+
+    const-wide v2, 0x20000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 265
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/setname"
+
+    const-wide v2, 0x40000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 266
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/myQRcode"
+
+    const-wide v2, 0x80000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 267
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/myaddress"
+
+    const-wide v2, 0x100000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 268
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/hidemoments"
+
+    const-wide v2, 0x200000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 269
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/blockmoments"
+
+    const-wide v2, 0x400000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 270
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/stickersetting"
+
+    const-wide v2, 0x800000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 271
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/log"
+
+    const-wide/high16 v2, 0x1000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 272
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/wechatoutcoupon"
+
+    const-wide/high16 v2, 0x2000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 274
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/personalemoticon"
+
+    const-wide/high16 v2, 0x10000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 275
+    sget-object v0, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
+
+    const-string/jumbo v1, "weixin://dl/designeremoji"
+
+    const-wide/high16 v2, 0x20000000000000L
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 277
     return-void
 .end method
 
@@ -495,7 +742,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 385
+    .line 495
     move-object v0, p0
 
     move-object v1, p1
@@ -508,7 +755,7 @@
 
     invoke-static/range {v0 .. v5}, Lcom/tencent/mm/pluginsdk/d;->a(Landroid/content/Context;Ljava/lang/String;ILcom/tencent/mm/pluginsdk/d$a;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 386
+    .line 496
     return-void
 .end method
 
@@ -516,30 +763,30 @@
     .locals 6
 
     .prologue
-    .line 326
+    .line 433
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    .line 327
-    new-instance v1, Lcom/tencent/mm/protocal/b/ah;
+    .line 434
+    new-instance v1, Lcom/tencent/mm/protocal/b/au;
 
-    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/ah;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/au;-><init>()V
 
-    .line 328
-    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    invoke-static {p5}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 435
+    invoke-static {p4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 329
+    invoke-static {p5}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_0
+
+    .line 436
     const-string/jumbo v2, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
     const-string/jumbo v3, "package name = %s, package signature = %s"
@@ -556,54 +803,65 @@
 
     aput-object p5, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 330
-    iput-object p4, v1, Lcom/tencent/mm/protocal/b/ah;->hje:Ljava/lang/String;
+    .line 437
+    iput-object p4, v1, Lcom/tencent/mm/protocal/b/au;->iXP:Ljava/lang/String;
 
-    .line 331
-    iput-object p5, v1, Lcom/tencent/mm/protocal/b/ah;->aMX:Ljava/lang/String;
+    .line 438
+    iput-object p5, v1, Lcom/tencent/mm/protocal/b/au;->aSE:Ljava/lang/String;
 
-    .line 332
+    .line 439
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 334
+    .line 441
     :cond_0
-    new-instance v1, Lcom/tencent/mm/modelsimple/am;
+    invoke-static {p1}, Lcom/tencent/mm/pluginsdk/d;->zt(Ljava/lang/String;)Z
 
-    invoke-direct {v1, p1, p2, v0}, Lcom/tencent/mm/modelsimple/am;-><init>(Ljava/lang/String;ILjava/util/LinkedList;)V
+    move-result v1
 
-    .line 335
-    new-instance v0, Lcom/tencent/mm/pluginsdk/f;
+    if-eqz v1, :cond_1
 
-    invoke-direct {v0, p0, p2, p1, p3}, Lcom/tencent/mm/pluginsdk/f;-><init>(Landroid/content/Context;ILjava/lang/String;Lcom/tencent/mm/pluginsdk/d$a;)V
+    .line 489
+    :goto_0
+    return-void
 
-    .line 377
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    .line 444
+    :cond_1
+    new-instance v1, Lcom/tencent/mm/modelsimple/ag;
+
+    invoke-direct {v1, p1, p2, v0}, Lcom/tencent/mm/modelsimple/ag;-><init>(Ljava/lang/String;ILjava/util/LinkedList;)V
+
+    .line 445
+    new-instance v0, Lcom/tencent/mm/pluginsdk/d$2;
+
+    invoke-direct {v0, p0, p2, p1, p3}, Lcom/tencent/mm/pluginsdk/d$2;-><init>(Landroid/content/Context;ILjava/lang/String;Lcom/tencent/mm/pluginsdk/d$a;)V
+
+    .line 487
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v2
 
     const/16 v3, 0x4b0
 
-    invoke-virtual {v2, v3, v0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v2, v3, v0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
-    .line 378
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    .line 488
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/q/l;->d(Lcom/tencent/mm/q/j;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
-    .line 379
-    return-void
+    goto :goto_0
 .end method
 
 .method public static a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lcom/tencent/mm/pluginsdk/d$a;)V
     .locals 7
 
     .prologue
-    .line 281
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 385
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -611,14 +869,32 @@
 
     move-object v4, p4
 
-    .line 282
+    .line 386
     :goto_0
-    new-instance v6, Lcom/tencent/mm/modelsimple/l;
+    invoke-static {v4}, Lcom/tencent/mm/pluginsdk/d;->zt(Ljava/lang/String;)Z
 
-    invoke-direct {v6, v4, p2, p3}, Lcom/tencent/mm/modelsimple/l;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+    move-result v0
 
-    .line 283
-    new-instance v0, Lcom/tencent/mm/pluginsdk/e;
+    if-eqz v0, :cond_1
+
+    .line 430
+    :goto_1
+    return-void
+
+    :cond_0
+    move-object v4, p1
+
+    .line 385
+    goto :goto_0
+
+    .line 389
+    :cond_1
+    new-instance v6, Lcom/tencent/mm/modelsimple/m;
+
+    invoke-direct {v6, v4, p2, p3}, Lcom/tencent/mm/modelsimple/m;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+
+    .line 390
+    new-instance v0, Lcom/tencent/mm/pluginsdk/d$1;
 
     move-object v1, p0
 
@@ -628,49 +904,42 @@
 
     move-object v5, p5
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/pluginsdk/e;-><init>(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Lcom/tencent/mm/pluginsdk/d$a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/pluginsdk/d$1;-><init>(Landroid/content/Context;ILjava/lang/String;Ljava/lang/String;Lcom/tencent/mm/pluginsdk/d$a;)V
 
-    .line 321
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    .line 428
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v1
 
     const/16 v2, 0xe9
 
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
-    .line 322
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    .line 429
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/q/l;->d(Lcom/tencent/mm/q/j;)Z
+    invoke-virtual {v0, v6}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
-    .line 323
-    return-void
-
-    :cond_0
-    move-object v4, p1
-
-    .line 281
-    goto :goto_0
+    goto :goto_1
 .end method
 
-.method public static as(Landroid/content/Context;Ljava/lang/String;)Z
+.method public static aF(Landroid/content/Context;Ljava/lang/String;)Z
     .locals 1
 
     .prologue
-    .line 402
+    .line 512
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, v0}, Lcom/tencent/mm/pluginsdk/d;->f(Landroid/content/Context;Ljava/lang/String;I)Z
+    invoke-static {p0, p1, v0}, Lcom/tencent/mm/pluginsdk/d;->g(Landroid/content/Context;Ljava/lang/String;I)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public static at(Landroid/content/Context;Ljava/lang/String;)V
+.method public static aG(Landroid/content/Context;Ljava/lang/String;)V
     .locals 8
 
     .prologue
@@ -680,25 +949,25 @@
 
     const/4 v5, 0x1
 
-    .line 842
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 1123
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 843
+    .line 1124
     const-string/jumbo v0, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
     const-string/jumbo v1, "cpan gotoLoginUI url is null. finish"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 875
+    .line 1156
     :goto_0
     return-void
 
-    .line 848
+    .line 1129
     :cond_0
     const-string/jumbo v0, "weixin://dl/login/phone_view"
 
@@ -708,26 +977,26 @@
 
     if-eqz v0, :cond_1
 
-    .line 849
+    .line 1130
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 850
+    .line 1131
     const-string/jumbo v1, "cc"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 851
+    .line 1132
     const-string/jumbo v2, "num"
 
     invoke-virtual {v0, v2}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 852
+    .line 1133
     const-string/jumbo v2, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
     const-string/jumbo v3, "cpan gotoLoginUI cc:%s num:%s"
@@ -740,46 +1009,46 @@
 
     aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 853
+    .line 1134
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 854
+    .line 1135
     const-string/jumbo v3, "mobile_cc"
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 855
+    .line 1136
     const-string/jumbo v1, "mobile_number"
 
     invoke-virtual {v2, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 856
+    .line 1137
     const-string/jumbo v0, "from_deep_link"
 
     invoke-virtual {v2, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 857
+    .line 1138
     const-string/jumbo v0, "mobile_input_purpose"
 
     invoke-virtual {v2, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 858
+    .line 1139
     invoke-virtual {v2, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 859
+    .line 1140
     const-string/jumbo v0, "accountsync"
 
     const-string/jumbo v1, "com.tencent.mm.ui.account.mobile.MobileInputUI"
 
-    invoke-static {p0, v0, v1, v2}, Lcom/tencent/mm/aj/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p0, v0, v1, v2}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 861
+    .line 1142
     :cond_1
     const-string/jumbo v0, "weixin://dl/login/common_view"
 
@@ -789,19 +1058,19 @@
 
     if-eqz v0, :cond_2
 
-    .line 862
+    .line 1143
     invoke-static {p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 863
+    .line 1144
     const-string/jumbo v1, "username"
 
     invoke-virtual {v0, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 864
+    .line 1145
     const-string/jumbo v1, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
     const-string/jumbo v2, "cpan gotoLoginUI  username:%s"
@@ -810,36 +1079,36 @@
 
     aput-object v0, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 865
+    .line 1146
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 866
+    .line 1147
     const-string/jumbo v2, "login_username"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 867
+    .line 1148
     const-string/jumbo v0, "from_deep_link"
 
     invoke-virtual {v1, v0, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 868
+    .line 1149
     invoke-virtual {v1, v7}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 869
+    .line 1150
     const-string/jumbo v0, "accountsync"
 
     const-string/jumbo v2, "com.tencent.mm.ui.account.LoginUI"
 
-    invoke-static {p0, v0, v2, v1}, Lcom/tencent/mm/aj/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p0, v0, v2, v1}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
     goto/16 :goto_0
 
-    .line 872
+    .line 1153
     :cond_2
     const-string/jumbo v0, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
@@ -849,21 +1118,21 @@
 
     aput-object p1, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 .end method
 
-.method public static cj(Landroid/content/Context;)V
+.method public static cH(Landroid/content/Context;)V
     .locals 3
 
     .prologue
-    .line 761
-    sget-boolean v0, Lcom/tencent/mm/sdk/platformtools/g;->hYj:Z
+    .line 1037
+    sget-boolean v0, Lcom/tencent/mm/sdk/platformtools/f;->jVf:Z
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/s;->aEJ()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
 
     move-result-object v0
 
@@ -875,58 +1144,64 @@
 
     if-eqz v0, :cond_0
 
-    .line 763
-    sget v0, Lcom/tencent/mm/a$n;->wechat_faq_url:I
+    .line 1039
+    const v0, 0x7f0b1354
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 769
+    .line 1047
     :goto_0
     const-string/jumbo v1, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
     const-string/jumbo v2, "using faq webpage"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 770
+    .line 1048
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 772
+    .line 1050
     const-string/jumbo v2, "rawUrl"
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 774
+    .line 1052
     const-string/jumbo v0, "show_feedback"
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 775
+    .line 1053
     const-string/jumbo v0, "webview"
 
     const-string/jumbo v2, ".ui.tools.WebViewUI"
 
-    invoke-static {p0, v0, v2, v1}, Lcom/tencent/mm/aj/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p0, v0, v2, v1}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 776
+    .line 1054
     return-void
 
-    .line 764
+    .line 1040
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/s;->aEH()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "zh_HK"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 765
-    sget v0, Lcom/tencent/mm/a$n;->wechat_faq_url_cht:I
+    .line 1041
+    const v0, 0x7f0b1355
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -934,9 +1209,32 @@
 
     goto :goto_0
 
-    .line 767
+    .line 1042
     :cond_1
-    sget v0, Lcom/tencent/mm/a$n;->wechat_faq_url_en:I
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "zh_TW"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 1043
+    const v0, 0x7f0b171d
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 1045
+    :cond_2
+    const v0, 0x7f0b1356
 
     invoke-virtual {p0, v0}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -945,38 +1243,53 @@
     goto :goto_0
 .end method
 
-.method public static e(Landroid/content/Context;Ljava/lang/String;I)Z
+.method public static f(Landroid/content/Context;Ljava/lang/String;I)Z
     .locals 1
 
     .prologue
-    .line 411
-    invoke-static {p0, p1, p2}, Lcom/tencent/mm/pluginsdk/d;->f(Landroid/content/Context;Ljava/lang/String;I)Z
+    .line 521
+    invoke-static {p0, p1, p2}, Lcom/tencent/mm/pluginsdk/d;->g(Landroid/content/Context;Ljava/lang/String;I)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method private static f(Landroid/content/Context;Ljava/lang/String;I)Z
+.method private static g(Landroid/content/Context;Ljava/lang/String;I)Z
     .locals 15
 
     .prologue
-    .line 423
-    invoke-static/range {p1 .. p1}, Lcom/tencent/mm/pluginsdk/d;->tV(Ljava/lang/String;)Ljava/lang/String;
+    .line 533
+    invoke-static/range {p1 .. p1}, Lcom/tencent/mm/pluginsdk/d;->zv(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 424
-    sget-object v2, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 534
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 535
+    const/4 v1, 0x0
+
+    .line 995
+    :goto_0
+    return v1
+
+    .line 537
+    :cond_0
+    sget-object v2, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
     move-result v2
 
-    if-eqz v2, :cond_28
+    if-eqz v2, :cond_3e
 
-    .line 425
-    sget-object v2, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 538
+    sget-object v2, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     invoke-interface {v2, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -988,105 +1301,131 @@
 
     move-result-wide v3
 
-    .line 426
+    .line 539
     const/4 v1, 0x0
 
-    .line 427
+    .line 540
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 428
+    .line 541
     const/high16 v5, 0x10000000
 
     invoke-virtual {v2, v5}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 435
+    .line 548
     const-wide/16 v5, 0x0
-
-    cmp-long v5, v3, v5
-
-    if-nez v5, :cond_1
-
-    .line 436
-    const-string/jumbo v1, "com.tencent.mm.ui.LauncherUI"
-
-    .line 639
-    :cond_0
-    :goto_0
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
-
-    move-result v3
-
-    if-nez v3, :cond_27
-
-    .line 640
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 642
-    if-eqz p0, :cond_26
-
-    .line 643
-    :try_start_0
-    invoke-virtual {p0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
-
-    .line 651
-    :goto_1
-    const/4 v1, 0x1
-
-    .line 719
-    :goto_2
-    return v1
-
-    .line 437
-    :cond_1
-    const-wide/16 v5, 0x1
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_2
 
-    .line 438
-    const-string/jumbo v1, "entrance_scence"
+    .line 549
+    const-string/jumbo v1, "com.tencent.mm.ui.LauncherUI"
 
-    const/16 v3, 0xc
+    .line 822
+    :cond_1
+    :goto_1
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
-    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    move-result v3
 
-    .line 439
-    const-string/jumbo v1, "com.tencent.mm.plugin.emoji.ui.EmojiStoreUI"
+    if-nez v3, :cond_3d
+
+    .line 823
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 825
+    if-eqz p0, :cond_3c
+
+    .line 826
+    :try_start_0
+    invoke-virtual {p0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
+
+    .line 834
+    :goto_2
+    const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 441
+    .line 550
     :cond_2
-    const-wide/16 v5, 0x2
+    const-wide/16 v5, 0x1
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_3
 
-    .line 443
+    .line 551
+    const-string/jumbo v1, "com.tencent.mm.plugin.emoji.ui.v2.EmojiStoreV2UI"
+
+    .line 552
+    sget-object v3, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+
+    const/16 v4, 0x2f21
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x7
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v5, v6
+
+    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+
+    goto :goto_1
+
+    .line 553
+    :cond_3
+    const-wide/16 v5, 0x2
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_4
+
+    .line 554
+    const-string/jumbo v1, "from_deeplink"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 555
+    const-string/jumbo v1, "game_report_from_scene"
+
+    const/4 v3, 0x6
+
+    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 557
     const-string/jumbo v1, "com.tencent.mm.plugin.game.ui.GameCenterUI"
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 445
-    :cond_3
+    .line 559
+    :cond_4
     const-wide/16 v5, 0x4
 
     cmp-long v5, v3, v5
 
-    if-nez v5, :cond_5
+    if-nez v5, :cond_6
 
-    .line 447
-    invoke-static {}, Lcom/tencent/mm/model/v;->sb()I
+    .line 561
+    invoke-static {}, Lcom/tencent/mm/model/h;->sm()I
 
     move-result v3
 
@@ -1094,108 +1433,115 @@
 
     and-int/2addr v3, v4
 
-    if-nez v3, :cond_4
+    if-nez v3, :cond_5
 
     const/4 v3, 0x1
 
-    .line 448
+    .line 562
     :goto_3
-    if-eqz v3, :cond_0
+    if-eqz v3, :cond_1
 
-    .line 449
+    .line 563
     const-string/jumbo v1, "com.tencent.mm.plugin.sns.ui.SnsTimeLineUI"
 
-    goto :goto_0
+    .line 564
+    const-string/jumbo v3, "sns_timeline_NeedFirstLoadint"
 
-    .line 447
-    :cond_4
+    const/4 v4, 0x1
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    goto :goto_1
+
+    .line 561
+    :cond_5
     const/4 v3, 0x0
 
     goto :goto_3
 
-    .line 452
-    :cond_5
-    const-wide/16 v5, 0x8
-
-    cmp-long v5, v3, v5
-
-    if-nez v5, :cond_6
-
-    .line 454
-    const-string/jumbo v1, "com.tencent.mm.plugin.subapp.ui.pluginapp.AddMoreFriendsUI"
-
-    goto :goto_0
-
-    .line 456
+    .line 567
     :cond_6
-    const-wide/16 v5, 0x10
+    const-wide/16 v5, 0x8
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_7
 
-    .line 458
-    new-instance v3, Lcom/tencent/mm/d/a/dn;
+    .line 569
+    const-string/jumbo v1, "com.tencent.mm.plugin.subapp.ui.pluginapp.AddMoreFriendsUI"
 
-    invoke-direct {v3}, Lcom/tencent/mm/d/a/dn;-><init>()V
+    goto :goto_1
 
-    .line 459
-    sget-object v4, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    .line 571
+    :cond_7
+    const-wide/16 v5, 0x10
 
-    invoke-virtual {v4, v3}, Lcom/tencent/mm/sdk/c/a;->g(Lcom/tencent/mm/sdk/c/d;)Z
+    cmp-long v5, v3, v5
 
-    .line 460
-    iget-object v3, v3, Lcom/tencent/mm/d/a/dn;->azD:Lcom/tencent/mm/d/a/dn$a;
+    if-nez v5, :cond_8
 
-    iget-object v3, v3, Lcom/tencent/mm/d/a/dn$a;->url:Ljava/lang/String;
+    .line 573
+    new-instance v3, Lcom/tencent/mm/d/a/fh;
 
-    .line 461
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-direct {v3}, Lcom/tencent/mm/d/a/fh;-><init>()V
+
+    .line 574
+    sget-object v4, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v4, v3}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 575
+    iget-object v3, v3, Lcom/tencent/mm/d/a/fh;->aAf:Lcom/tencent/mm/d/a/fh$a;
+
+    iget-object v3, v3, Lcom/tencent/mm/d/a/fh$a;->url:Ljava/lang/String;
+
+    .line 576
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-nez v4, :cond_0
+    if-nez v4, :cond_1
 
-    .line 462
+    .line 577
     const-string/jumbo v1, "rawUrl"
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 463
+    .line 578
     const-string/jumbo v1, "useJs"
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 464
+    .line 579
     const-string/jumbo v1, "vertical_scroll"
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 465
+    .line 580
     const-string/jumbo v1, "com.tencent.mm.plugin.webview.ui.tools.WebViewUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 468
-    :cond_7
+    .line 583
+    :cond_8
     const-wide/16 v5, 0x20
 
     cmp-long v5, v3, v5
 
-    if-nez v5, :cond_8
+    if-nez v5, :cond_9
 
-    .line 469
+    .line 584
     const-string/jumbo v1, "titile"
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    sget v4, Lcom/tencent/mm/a$n;->address_title_launch_chatting:I
+    const v4, 0x7f0b03dc
 
     invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1203,14 +1549,14 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 470
+    .line 585
     const-string/jumbo v1, "list_type"
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 471
+    .line 586
     const-string/jumbo v1, "list_attr"
 
     const/4 v3, 0x3
@@ -1219,7 +1565,7 @@
 
     const/4 v4, 0x0
 
-    sget v5, Lcom/tencent/mm/ui/contact/de;->jhg:I
+    sget v5, Lcom/tencent/mm/ui/contact/r;->llA:I
 
     aput v5, v3, v4
 
@@ -1235,118 +1581,118 @@
 
     aput v5, v3, v4
 
-    invoke-static {v3}, Lcom/tencent/mm/ui/contact/de;->h([I)I
+    invoke-static {v3}, Lcom/tencent/mm/ui/contact/r;->n([I)I
 
     move-result v3
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 473
+    .line 588
     const-string/jumbo v1, "com.tencent.mm.ui.contact.SelectContactUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 475
-    :cond_8
+    .line 590
+    :cond_9
     const-wide/16 v5, 0x40
 
     cmp-long v5, v3, v5
 
-    if-nez v5, :cond_9
+    if-nez v5, :cond_a
 
-    .line 477
+    .line 592
     const-string/jumbo v1, "com.tencent.mm.plugin.scanner.ui.BaseScanUI"
 
-    .line 478
+    .line 593
     const-string/jumbo v3, "animation_pop_in"
 
     const/4 v4, 0x1
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 480
-    :cond_9
-    const-wide/16 v5, 0x80
-
-    cmp-long v5, v3, v5
-
-    if-nez v5, :cond_a
-
-    .line 482
-    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsPersonalInfoUI"
-
-    goto/16 :goto_0
-
-    .line 484
+    .line 595
     :cond_a
-    const-wide/16 v5, 0x100
+    const-wide/16 v5, 0x80
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_b
 
-    .line 486
-    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsUI"
+    .line 597
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsPersonalInfoUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 488
+    .line 599
     :cond_b
-    const-wide/16 v5, 0x200
+    const-wide/16 v5, 0x100
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_c
 
-    .line 490
-    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsAboutSystemUI"
+    .line 601
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 492
+    .line 603
     :cond_c
-    const-wide/16 v5, 0x400
+    const-wide/16 v5, 0x200
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_d
 
-    .line 494
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    .line 605
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsAboutSystemUI"
 
-    move-result-object v3
+    goto/16 :goto_1
 
-    invoke-static {v3}, Lcom/tencent/mm/pluginsdk/d;->cj(Landroid/content/Context;)V
-
-    goto/16 :goto_0
-
-    .line 496
+    .line 607
     :cond_d
-    const-wide/16 v5, 0x800
+    const-wide/16 v5, 0x400
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_e
 
-    .line 498
-    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsNotificationUI"
+    .line 609
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
-    goto/16 :goto_0
+    move-result-object v3
 
-    .line 500
+    invoke-static {v3}, Lcom/tencent/mm/pluginsdk/d;->cH(Landroid/content/Context;)V
+
+    goto/16 :goto_1
+
+    .line 611
     :cond_e
-    const-wide/16 v5, 0x1000
+    const-wide/16 v5, 0x800
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_f
 
-    .line 502
+    .line 613
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsNotificationUI"
+
+    goto/16 :goto_1
+
+    .line 615
+    :cond_f
+    const-wide/16 v5, 0x1000
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_10
+
+    .line 617
     const-string/jumbo v1, "title"
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -1354,7 +1700,7 @@
 
     move-result-object v3
 
-    sget v4, Lcom/tencent/mm/a$n;->privacy_tip:I
+    const v4, 0x7f0b0772
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1362,10 +1708,10 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 503
+    .line 618
     const-string/jumbo v1, "rawUrl"
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -1373,7 +1719,7 @@
 
     move-result-object v3
 
-    sget v4, Lcom/tencent/mm/a$n;->url_agreement:I
+    const v4, 0x7f0b1334
 
     invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
@@ -1381,70 +1727,70 @@
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 504
+    .line 619
     const-string/jumbo v1, "showShare"
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 505
+    .line 620
     const-string/jumbo v1, "com.tencent.mm.plugin.webview.ui.tools.WebViewUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 507
-    :cond_f
-    const-wide/16 v5, 0x2000
-
-    cmp-long v5, v3, v5
-
-    if-nez v5, :cond_10
-
-    .line 509
-    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsChattingUI"
-
-    goto/16 :goto_0
-
-    .line 511
+    .line 622
     :cond_10
-    const-wide/16 v5, 0x4000
+    const-wide/16 v5, 0x2000
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_11
 
-    .line 513
-    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsPluginsUI"
+    .line 624
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsChattingUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 515
+    .line 626
     :cond_11
-    const-wide/32 v5, 0x8000
+    const-wide/16 v5, 0x4000
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_12
 
-    .line 517
+    .line 628
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsPluginsUI"
+
+    goto/16 :goto_1
+
+    .line 630
+    :cond_12
+    const-wide/32 v5, 0x8000
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_13
+
+    .line 632
     const-string/jumbo v1, "com.tencent.mm.plugin.clean.ui.CleanUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 519
-    :cond_12
+    .line 634
+    :cond_13
     const-wide/32 v5, 0x10000
 
     cmp-long v5, v3, v5
 
-    if-nez v5, :cond_14
+    if-nez v5, :cond_15
 
-    .line 523
+    .line 638
     :try_start_1
     const-string/jumbo v3, ""
 
-    .line 524
+    .line 639
     const-string/jumbo v4, "?"
 
     move-object/from16 v0, p1
@@ -1453,10 +1799,10 @@
 
     move-result v4
 
-    .line 525
-    if-lez v4, :cond_2f
+    .line 640
+    if-lez v4, :cond_54
 
-    .line 526
+    .line 641
     add-int/lit8 v3, v4, 0x1
 
     move-object/from16 v0, p1
@@ -1467,14 +1813,14 @@
 
     move-object v4, v3
 
-    .line 529
+    .line 644
     :goto_4
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tp()I
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tH()I
 
     move-result v3
 
-    .line 530
-    sget-object v5, Lcom/tencent/mm/protocal/b;->hgm:Ljava/lang/String;
+    .line 645
+    sget-object v5, Lcom/tencent/mm/protocal/b;->iUd:Ljava/lang/String;
 
     const-string/jumbo v6, "utf-8"
 
@@ -1482,12 +1828,12 @@
 
     move-result-object v5
 
-    .line 531
+    .line 646
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->aFB()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVC()Ljava/lang/String;
 
     move-result-object v7
 
@@ -1505,8 +1851,8 @@
 
     move-result-object v6
 
-    .line 532
-    invoke-static {}, Lcom/tencent/mm/compatible/d/q;->oH()Ljava/lang/String;
+    .line 647
+    invoke-static {}, Lcom/tencent/mm/compatible/d/p;->ow()Ljava/lang/String;
 
     move-result-object v7
 
@@ -1516,8 +1862,8 @@
 
     move-result-object v7
 
-    .line 533
-    sget-object v8, Lcom/tencent/mm/protocal/b;->hgh:Ljava/lang/String;
+    .line 648
+    sget-object v8, Lcom/tencent/mm/protocal/b;->iTY:Ljava/lang/String;
 
     const-string/jumbo v9, "utf-8"
 
@@ -1525,8 +1871,8 @@
 
     move-result-object v8
 
-    .line 534
-    sget-object v9, Lcom/tencent/mm/protocal/b;->hgi:Ljava/lang/String;
+    .line 649
+    sget-object v9, Lcom/tencent/mm/protocal/b;->iTZ:Ljava/lang/String;
 
     const-string/jumbo v10, "utf-8"
 
@@ -1534,8 +1880,8 @@
 
     move-result-object v9
 
-    .line 535
-    sget-object v10, Lcom/tencent/mm/protocal/b;->hgj:Ljava/lang/String;
+    .line 650
+    sget-object v10, Lcom/tencent/mm/protocal/b;->iUa:Ljava/lang/String;
 
     const-string/jumbo v11, "utf-8"
 
@@ -1543,8 +1889,8 @@
 
     move-result-object v10
 
-    .line 537
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    .line 652
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v11
 
@@ -1554,8 +1900,8 @@
 
     move-result-object v11
 
-    .line 538
-    invoke-static {}, Lcom/tencent/mm/model/ca;->tV()Ljava/lang/String;
+    .line 653
+    invoke-static {}, Lcom/tencent/mm/model/at;->ul()Ljava/lang/String;
 
     move-result-object v12
 
@@ -1565,7 +1911,7 @@
 
     move-result-object v12
 
-    .line 540
+    .line 655
     new-instance v13, Ljava/lang/StringBuilder;
 
     const-string/jumbo v14, "&uin="
@@ -1662,11 +2008,11 @@
 
     move-result-object v5
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v3
 
-    if-eqz v3, :cond_13
+    if-eqz v3, :cond_14
 
     const/4 v3, 0x0
 
@@ -1679,18 +2025,18 @@
 
     move-result-object v3
 
-    .line 542
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    .line 657
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v5
 
-    sget v6, Lcom/tencent/mm/a$n;->feedback_index_doc:I
+    const v6, 0x7f0b135a
 
     invoke-virtual {v5, v6}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 543
+    .line 658
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1705,7 +2051,7 @@
 
     move-result-object v5
 
-    sget v6, Lcom/tencent/mm/protocal/b;->hgo:I
+    sget v6, Lcom/tencent/mm/protocal/b;->iUf:I
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1717,11 +2063,11 @@
 
     move-result-object v5
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
-    invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/s;->cL(Landroid/content/Context;)Ljava/lang/String;
+    invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/t;->dn(Landroid/content/Context;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -1735,7 +2081,7 @@
 
     move-result-object v5
 
-    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/bn;->iV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v4}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1751,50 +2097,57 @@
 
     move-result-object v3
 
-    .line 545
+    .line 660
     const-string/jumbo v4, "showShare"
 
     const/4 v5, 0x0
 
     invoke-virtual {v2, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 546
+    .line 661
     const-string/jumbo v4, "rawUrl"
 
     invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 547
+    .line 662
     const-string/jumbo v3, "neverGetA8Key"
 
     const/4 v4, 0x1
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 548
+    .line 663
     const-string/jumbo v3, "hardcode_jspermission"
 
-    sget-object v4, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->hgy:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
+    sget-object v4, Lcom/tencent/mm/protocal/JsapiPermissionWrapper;->iUp:Lcom/tencent/mm/protocal/JsapiPermissionWrapper;
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 549
+    .line 664
+    const-string/jumbo v3, "hardcode_general_ctrl"
+
+    sget-object v4, Lcom/tencent/mm/protocal/GeneralControlWrapper;->iUm:Lcom/tencent/mm/protocal/GeneralControlWrapper;
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
+
+    .line 665
     const-string/jumbo v1, "com.tencent.mm.plugin.webview.ui.tools.WebViewUI"
     :try_end_1
     .catch Ljava/io/UnsupportedEncodingException; {:try_start_1 .. :try_end_1} :catch_0
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 540
-    :cond_13
+    .line 655
+    :cond_14
     const/4 v3, 0x1
 
     goto :goto_5
 
-    .line 550
+    .line 666
     :catch_0
     move-exception v3
 
-    .line 551
+    .line 667
     const-string/jumbo v4, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
     const-string/jumbo v5, "[oneliang]UnsupportedEncodingException:%s"
@@ -1811,29 +2164,29 @@
 
     aput-object v3, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 554
-    :cond_14
+    .line 670
+    :cond_15
     const-wide/32 v5, 0x20000
 
     cmp-long v5, v3, v5
 
-    if-nez v5, :cond_15
+    if-nez v5, :cond_16
 
-    .line 556
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tp()I
+    .line 672
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tH()I
 
     move-result v3
 
-    .line 557
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    .line 673
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -1847,16 +2200,16 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->c(Ljava/lang/Integer;)I
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/lang/Integer;)I
 
     move-result v1
 
-    .line 558
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    .line 674
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v4
 
-    sget v5, Lcom/tencent/mm/a$n;->settings_system_notice_url:I
+    const v5, 0x7f0b0370
 
     const/4 v6, 0x2
 
@@ -1882,89 +2235,114 @@
 
     move-result-object v1
 
-    .line 560
+    .line 676
     const-string/jumbo v3, "showShare"
 
     const/4 v4, 0x0
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 561
+    .line 677
     const-string/jumbo v3, "rawUrl"
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 562
+    .line 678
     const-string/jumbo v1, "com.tencent.mm.plugin.webview.ui.tools.WebViewUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 564
-    :cond_15
-    const-wide/32 v5, 0x40000
-
-    cmp-long v5, v3, v5
-
-    if-nez v5, :cond_16
-
-    .line 566
-    const-string/jumbo v1, "com.tencent.mm.plugin.subapp.ui.friend.FMessageConversationUI"
-
-    goto/16 :goto_0
-
-    .line 568
+    .line 680
     :cond_16
-    const-wide/32 v5, 0x80000
+    const-wide/32 v5, 0x40000
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_17
 
-    .line 570
-    const-string/jumbo v1, "com.tencent.mm.ui.contact.ChatroomContactUI"
+    .line 682
+    const-string/jumbo v1, "com.tencent.mm.plugin.subapp.ui.friend.FMessageConversationUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 572
+    .line 684
     :cond_17
-    const-wide/32 v5, 0x100000
+    const-wide/32 v5, 0x80000
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_18
 
-    .line 574
-    const-string/jumbo v1, "com.tencent.mm.plugin.label.ui.ContactLabelManagerUI"
+    .line 686
+    const-string/jumbo v1, "com.tencent.mm.ui.contact.ChatroomContactUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 576
+    .line 688
     :cond_18
-    const-wide/32 v5, 0x200000
+    const-wide/32 v5, 0x100000
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_19
 
-    .line 578
-    const-string/jumbo v1, "com.tencent.mm.plugin.brandservice.ui.BrandServiceIndexUI"
+    .line 690
+    const-string/jumbo v1, "com.tencent.mm.plugin.label.ui.ContactLabelManagerUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 580
+    .line 692
     :cond_19
-    const-wide/32 v5, 0x400000
+    const-wide/32 v5, 0x200000
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_1a
 
-    .line 582
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    .line 694
+    const-string/jumbo v1, "com.tencent.mm.plugin.brandservice.ui.BrandServiceIndexUI"
+
+    goto/16 :goto_1
+
+    .line 696
+    :cond_1a
+    const-wide/32 v5, 0x10000000
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_1b
+
+    .line 697
+    const-string/jumbo v1, "com.tencent.mm.plugin.ipcall.ui.IPCallAddressUI"
+
+    .line 699
+    const/high16 v3, 0x4000000
+
+    invoke-virtual {v2, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 700
+    const-string/jumbo v3, "IPCallAddressUI_KFrom"
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    goto/16 :goto_1
+
+    .line 702
+    :cond_1b
+    const-wide/32 v5, 0x400000
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_1c
+
+    .line 704
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -1978,22 +2356,22 @@
 
     check-cast v1, Ljava/lang/String;
 
-    .line 583
+    .line 705
     const-string/jumbo v3, "sns_userName"
 
     invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 584
+    .line 706
     const/high16 v1, 0x4000000
 
     invoke-virtual {v2, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 585
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    .line 707
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -2009,16 +2387,16 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/bn;->b(Ljava/lang/Integer;I)I
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Integer;I)I
 
     move-result v1
 
-    .line 586
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    .line 708
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v3}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v3
 
@@ -2032,79 +2410,79 @@
 
     invoke-virtual {v3, v4, v1}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    .line 587
+    .line 709
     const-string/jumbo v1, "com.tencent.mm.plugin.sns.ui.SnsUserUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 589
-    :cond_1a
-    const-wide/32 v5, 0x800000
-
-    cmp-long v5, v3, v5
-
-    if-nez v5, :cond_1b
-
-    .line 591
-    const-string/jumbo v1, "com.tencent.mm.plugin.favorite.ui.FavoriteIndexUI"
-
-    goto/16 :goto_0
-
-    .line 593
-    :cond_1b
-    const-wide/32 v5, 0x1000000
-
-    cmp-long v5, v3, v5
-
-    if-nez v5, :cond_1c
-
-    .line 595
-    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsPrivacyUI"
-
-    goto/16 :goto_0
-
-    .line 597
+    .line 711
     :cond_1c
-    const-wide/32 v5, 0x2000000
+    const-wide/32 v5, 0x800000
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_1d
 
-    .line 599
-    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsAccountInfoUI"
+    .line 712
+    const-string/jumbo v1, "com.tencent.mm.plugin.favorite.ui.FavoriteIndexUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 601
+    .line 714
     :cond_1d
-    const-wide/32 v5, 0x4000000
+    const-wide/32 v5, 0x1000000
 
     cmp-long v5, v3, v5
 
     if-nez v5, :cond_1e
 
-    .line 603
+    .line 715
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsPrivacyUI"
+
+    goto/16 :goto_1
+
+    .line 717
+    :cond_1e
+    const-wide/32 v5, 0x2000000
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_1f
+
+    .line 718
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsAccountInfoUI"
+
+    goto/16 :goto_1
+
+    .line 720
+    :cond_1f
+    const-wide/32 v5, 0x4000000
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_20
+
+    .line 721
     const-string/jumbo v1, "com.tencent.mm.plugin.mall.ui.MallIndexUI"
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    .line 605
-    :cond_1e
+    .line 723
+    :cond_20
     const-wide/32 v5, 0x8000000
 
     cmp-long v5, v3, v5
 
-    if-nez v5, :cond_23
+    if-nez v5, :cond_25
 
-    .line 606
-    if-eqz p0, :cond_21
+    .line 724
+    if-eqz p0, :cond_23
 
-    invoke-static/range {p1 .. p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static/range {p1 .. p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v2
 
-    if-nez v2, :cond_21
+    if-nez v2, :cond_23
 
     const-string/jumbo v2, "weixin://dl/businessPay"
 
@@ -2114,13 +2492,13 @@
 
     move-result v2
 
-    if-eqz v2, :cond_21
+    if-eqz v2, :cond_23
 
     invoke-static/range {p1 .. p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
-    if-eqz v2, :cond_22
+    if-eqz v2, :cond_24
 
     const-string/jumbo v3, "reqkey"
 
@@ -2134,27 +2512,27 @@
 
     move-result-object v2
 
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v4
 
-    if-nez v4, :cond_20
+    if-nez v4, :cond_22
 
     new-instance v4, Lcom/tencent/mm/pluginsdk/wallet/PayInfo;
 
     invoke-direct {v4}, Lcom/tencent/mm/pluginsdk/wallet/PayInfo;-><init>()V
 
-    iput-object v3, v4, Lcom/tencent/mm/pluginsdk/wallet/PayInfo;->dlx:Ljava/lang/String;
+    iput-object v3, v4, Lcom/tencent/mm/pluginsdk/wallet/PayInfo;->dWm:Ljava/lang/String;
 
     iput-object v2, v4, Lcom/tencent/mm/pluginsdk/wallet/PayInfo;->appId:Ljava/lang/String;
 
     const/16 v2, 0x24
 
-    iput v2, v4, Lcom/tencent/mm/pluginsdk/wallet/PayInfo;->aBU:I
+    iput v2, v4, Lcom/tencent/mm/pluginsdk/wallet/PayInfo;->aEm:I
 
     const/4 v2, 0x0
 
-    iput-boolean v2, v4, Lcom/tencent/mm/pluginsdk/wallet/PayInfo;->hfK:Z
+    iput-boolean v2, v4, Lcom/tencent/mm/pluginsdk/wallet/PayInfo;->iTA:Z
 
     new-instance v2, Landroid/content/Intent;
 
@@ -2164,11 +2542,11 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    invoke-static {}, Lcom/tencent/mm/model/v;->se()Z
+    invoke-static {}, Lcom/tencent/mm/model/h;->sp()Z
 
     move-result v3
 
-    if-eqz v3, :cond_1f
+    if-eqz v3, :cond_21
 
     const-string/jumbo v3, "wallet_payu"
 
@@ -2176,175 +2554,585 @@
 
     const/4 v5, 0x1
 
-    invoke-static {p0, v3, v4, v2, v5}, Lcom/tencent/mm/aj/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {p0, v3, v4, v2, v5}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
-    goto/16 :goto_0
+    goto/16 :goto_1
 
-    :cond_1f
+    :cond_21
     const-string/jumbo v3, "wallet"
 
     const-string/jumbo v4, ".pay.ui.WalletPayUI"
 
     const/4 v5, 0x1
 
-    invoke-static {p0, v3, v4, v2, v5}, Lcom/tencent/mm/aj/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {p0, v3, v4, v2, v5}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
-    goto/16 :goto_0
-
-    :cond_20
-    const-string/jumbo v2, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
-
-    const-string/jumbo v3, "reqkey null"
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_21
-    :goto_6
-    const/4 v2, 0x0
-
-    goto/16 :goto_0
+    goto/16 :goto_1
 
     :cond_22
     const-string/jumbo v2, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
+    const-string/jumbo v3, "reqkey null"
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    :cond_23
+    :goto_6
+    const/4 v2, 0x0
+
+    goto/16 :goto_1
+
+    :cond_24
+    const-string/jumbo v2, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
+
     const-string/jumbo v3, "payUri null"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_6
 
-    .line 607
-    :cond_23
-    const-wide/32 v5, 0x10000000
-
-    cmp-long v5, v3, v5
-
-    if-nez v5, :cond_24
-
-    .line 609
-    invoke-static/range {p1 .. p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v3
-
-    .line 610
-    if-eqz v3, :cond_0
-
-    .line 611
-    const-string/jumbo v1, "appid"
-
-    invoke-virtual {v3, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 612
-    const-string/jumbo v1, "com.tencent.mm.plugin.game.ui.GameDetailUI"
-
-    .line 613
-    const-string/jumbo v4, "game_app_id"
-
-    invoke-virtual {v2, v4, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 614
-    const-string/jumbo v3, "game_report_from_scene"
-
-    const/16 v4, 0x63
-
-    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    goto/16 :goto_0
-
-    .line 617
-    :cond_24
-    const-wide/32 v5, 0x20000000
-
-    cmp-long v5, v3, v5
-
-    if-nez v5, :cond_25
-
-    .line 619
-    const-string/jumbo v1, "com.tencent.mm.plugin.game.ui.GameLibraryUI"
-
-    goto/16 :goto_0
-
-    .line 621
+    .line 726
     :cond_25
     const-wide/32 v5, 0x40000000
 
-    cmp-long v3, v3, v5
+    cmp-long v5, v3, v5
 
-    if-nez v3, :cond_0
+    if-nez v5, :cond_26
 
-    .line 623
-    invoke-static/range {p1 .. p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+    .line 727
+    const-string/jumbo v1, "com.tencent.mm.plugin.safedevice.ui.MySafeDeviceListUI"
+
+    goto/16 :goto_1
+
+    .line 729
+    :cond_26
+    const-wide v5, 0x80000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_27
+
+    .line 730
+    const-string/jumbo v1, "com.tencent.mm.plugin.card.ui.CardIndexUI"
+
+    goto/16 :goto_1
+
+    .line 732
+    :cond_27
+    const-wide v5, 0x100000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_28
+
+    .line 733
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const v3, 0x7f0b0046
+
+    invoke-virtual {v1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/tencent/mm/model/n;->eX(Ljava/lang/String;)Lcom/tencent/mm/storage/ad;
+
+    move-result-object v1
+
+    .line 734
+    const-string/jumbo v3, "filter_type"
+
+    invoke-virtual {v1}, Lcom/tencent/mm/storage/ad;->getType()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 735
+    const-string/jumbo v1, "titile"
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
-    .line 624
-    if-eqz v3, :cond_0
+    const v4, 0x7f0b02ef
 
-    .line 625
-    const-string/jumbo v1, "url"
+    invoke-virtual {v3, v4}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v3, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    move-result-object v3
+
+    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 736
+    const-string/jumbo v1, "list_attr"
+
+    const v3, 0x8000
+
+    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 737
+    const-string/jumbo v1, "com.tencent.mm.ui.contact.SelectSpecialContactUI"
+
+    goto/16 :goto_1
+
+    .line 739
+    :cond_28
+    const-wide v5, 0x200000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_29
+
+    .line 740
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsFontUI"
+
+    goto/16 :goto_1
+
+    .line 742
+    :cond_29
+    const-wide v5, 0x400000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_2a
+
+    .line 743
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsAboutSystemUI"
+
+    goto/16 :goto_1
+
+    .line 745
+    :cond_2a
+    const-wide v5, 0x800000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_2b
+
+    .line 746
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsLanguageUI"
+
+    goto/16 :goto_1
+
+    .line 748
+    :cond_2b
+    const-wide v5, 0x1000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_2c
+
+    .line 749
+    const-string/jumbo v1, "com.tencent.mm.plugin.backup.moveui.BakMoveUI"
+
+    goto/16 :goto_1
+
+    .line 751
+    :cond_2c
+    const-wide v5, 0x2000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_2d
+
+    .line 752
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    .line 628
-    :try_start_2
-    const-string/jumbo v3, "utf-8"
+    const-string/jumbo v3, "com.tencent.mm.ui.bindqq.BindQQUI"
 
-    invoke-static {v1, v3}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    :try_end_2
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_2 .. :try_end_2} :catch_1
+    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
 
-    move-result-object v1
+    .line 753
+    invoke-static {p0, v2}, Lcom/tencent/mm/ui/MMWizardActivity;->v(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 633
-    :goto_7
-    const-string/jumbo v3, "com.tencent.mm.plugin.webview.ui.tools.WebViewUI"
-
-    .line 635
-    const-string/jumbo v4, "rawUrl"
-
-    invoke-virtual {v2, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    move-object v1, v3
+    .line 754
+    const/4 v1, 0x1
 
     goto/16 :goto_0
 
-    .line 631
-    :catch_1
-    move-exception v1
+    .line 756
+    :cond_2d
+    const-wide v5, 0x4000000000L
 
-    const-string/jumbo v1, "http://support.weixin.qq.com/deeplink/noaccess#wechat_redirect"
+    cmp-long v5, v3, v5
 
-    goto :goto_7
+    if-nez v5, :cond_2e
 
-    .line 645
-    :cond_26
-    :try_start_3
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    .line 757
+    const-string/jumbo v1, "com.tencent.mm.ui.bindmobile.BindMContactIntroUI"
+
+    .line 758
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 759
+    invoke-static {p0, v2}, Lcom/tencent/mm/ui/MMWizardActivity;->v(Landroid/content/Context;Landroid/content/Intent;)V
+
+    .line 760
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 762
+    :cond_2e
+    const-wide v5, 0x8000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_2f
+
+    .line 763
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsModifyEmailAddrUI"
+
+    goto/16 :goto_1
+
+    .line 765
+    :cond_2f
+    const-wide v5, 0x10000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_30
+
+    .line 766
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string/jumbo v3, "profile"
+
+    const-string/jumbo v4, ".ui.ContactInfoUI"
+
+    const-string/jumbo v5, "Contact_User"
+
+    const-string/jumbo v6, "qqsync"
+
+    invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-result-object v2
+
+    invoke-static {v1, v3, v4, v2}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+
+    .line 767
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 769
+    :cond_30
+    const-wide v5, 0x20000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_31
+
+    .line 770
+    const-string/jumbo v1, "com.tencent.mm.plugin.masssend.ui.MassSendHistoryUI"
+
+    goto/16 :goto_1
+
+    .line 772
+    :cond_31
+    const-wide v5, 0x40000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_32
+
+    .line 773
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsModifyNameUI"
+
+    goto/16 :goto_1
+
+    .line 775
+    :cond_32
+    const-wide v5, 0x80000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_33
+
+    .line 776
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SelfQRCodeUI"
+
+    goto/16 :goto_1
+
+    .line 778
+    :cond_33
+    const-wide v5, 0x100000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_34
+
+    .line 779
+    const-string/jumbo v1, "launch_from_webview"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 780
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string/jumbo v3, "address"
+
+    const-string/jumbo v4, ".ui.WalletSelectAddrUI"
+
+    const/4 v5, 0x1
+
+    invoke-static {v1, v3, v4, v2, v5}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Z)V
+
+    .line 781
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 783
+    :cond_34
+    const-wide v5, 0x200000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_35
+
+    .line 784
+    const-string/jumbo v1, "k_sns_tag_id"
+
+    const-wide/16 v3, 0x4
+
+    invoke-virtual {v2, v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    .line 785
+    const-string/jumbo v1, "k_sns_from_settings_about_sns"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 788
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string/jumbo v3, "sns"
+
+    const-string/jumbo v4, ".ui.SnsBlackDetailUI"
+
+    invoke-static {v1, v3, v4, v2}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+
+    .line 789
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 791
+    :cond_35
+    const-wide v5, 0x400000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_36
+
+    .line 792
+    const-string/jumbo v3, "k_sns_tag_id"
+
+    const-wide/16 v4, 0x5
+
+    invoke-virtual {v2, v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    .line 793
+    const-string/jumbo v3, "k_sns_from_settings_about_sns"
+
+    const/4 v4, 0x2
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 794
+    const-string/jumbo v3, "k_tag_detail_sns_block_scene"
+
+    const/16 v4, 0x8
+
+    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 796
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    const-string/jumbo v4, "sns"
+
+    const-string/jumbo v5, ".ui.SnsTagDetailUI"
+
+    invoke-static {v3, v4, v5, v2}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+
+    goto/16 :goto_1
+
+    .line 798
+    :cond_36
+    const-wide v5, 0x800000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_37
+
+    .line 799
+    const-string/jumbo v1, "com.tencent.mm.plugin.emoji.ui.EmojiMineUI"
+
+    goto/16 :goto_1
+
+    .line 801
+    :cond_37
+    const-wide/high16 v5, 0x1000000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_38
+
+    .line 802
+    new-instance v1, Lcom/tencent/mm/d/a/aq;
+
+    invoke-direct {v1}, Lcom/tencent/mm/d/a/aq;-><init>()V
+
+    .line 803
+    iget-object v2, v1, Lcom/tencent/mm/d/a/aq;->atO:Lcom/tencent/mm/d/a/aq$a;
+
+    const-string/jumbo v3, "//uplog"
+
+    iput-object v3, v2, Lcom/tencent/mm/d/a/aq$a;->atQ:Ljava/lang/String;
+
+    .line 804
+    iget-object v2, v1, Lcom/tencent/mm/d/a/aq;->atO:Lcom/tencent/mm/d/a/aq$a;
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    iput-object v3, v2, Lcom/tencent/mm/d/a/aq$a;->context:Landroid/content/Context;
+
+    .line 805
+    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 806
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 808
+    :cond_38
+    const-wide/high16 v5, 0x2000000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_39
+
+    .line 809
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsAboutMicroMsgUI"
+
+    goto/16 :goto_1
+
+    .line 811
+    :cond_39
+    const-wide/high16 v5, 0x4000000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_3a
+
+    .line 812
+    const-string/jumbo v1, "com.tencent.mm.plugin.setting.ui.setting.SettingsAboutMicroMsgUI"
+
+    goto/16 :goto_1
+
+    .line 813
+    :cond_3a
+    const-wide/high16 v5, 0x10000000000000L
+
+    cmp-long v5, v3, v5
+
+    if-nez v5, :cond_3b
+
+    .line 814
+    const-string/jumbo v1, "emoji_tab"
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 815
+    const-string/jumbo v1, "com.tencent.mm.plugin.emoji.ui.v2.EmojiStoreV2UI"
+
+    .line 816
+    sget-object v3, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+
+    const/16 v4, 0x2f21
+
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x7
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v7
+
+    aput-object v7, v5, v6
+
+    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+
+    goto/16 :goto_1
+
+    .line 817
+    :cond_3b
+    const-wide/high16 v5, 0x20000000000000L
+
+    cmp-long v3, v3, v5
+
+    if-nez v3, :cond_1
+
+    .line 818
+    const-string/jumbo v1, "com.tencent.mm.plugin.emoji.ui.v2.EmojiStoreV2SingleProductUI"
+
+    goto/16 :goto_1
+
+    .line 828
+    :cond_3c
+    :try_start_2
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
     invoke-virtual {v1, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 646
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    .line 829
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/ui/base/b;->r(Landroid/content/Context;Landroid/content/Intent;)V
-    :try_end_3
-    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+    invoke-static {v1, v2}, Lcom/tencent/mm/ui/base/b;->w(Landroid/content/Context;Landroid/content/Intent;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    .line 648
-    :catch_2
+    .line 831
+    :catch_1
     move-exception v1
 
-    .line 649
+    .line 832
     const-string/jumbo v2, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
     const-string/jumbo v3, ""
@@ -2359,115 +3147,163 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto/16 :goto_1
-
-    .line 653
-    :cond_27
-    const/4 v1, 0x0
+    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_2
 
-    .line 655
-    :cond_28
+    .line 836
+    :cond_3d
+    const/4 v1, 0x0
+
+    goto/16 :goto_0
+
+    .line 838
+    :cond_3e
     const-string/jumbo v2, "weixin://dl/businessTempSession/"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result v1
+    move-result v2
 
-    if-eqz v1, :cond_2e
+    if-eqz v2, :cond_45
 
-    .line 657
-    new-instance v2, Landroid/content/Intent;
+    .line 840
+    new-instance v3, Landroid/content/Intent;
 
-    invoke-direct {v2}, Landroid/content/Intent;-><init>()V
+    invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 658
+    .line 841
     const/high16 v1, 0x10000000
 
-    invoke-virtual {v2, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+    invoke-virtual {v3, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 666
+    .line 849
     invoke-static/range {p1 .. p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
-    move-result-object v3
+    move-result-object v2
 
-    .line 667
-    if-nez v3, :cond_29
+    .line 850
+    if-nez v2, :cond_3f
 
-    .line 668
+    .line 851
     const-string/jumbo v1, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
     const-string/jumbo v2, "tempsession uri is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 669
+    .line 852
     const/4 v1, 0x0
 
-    goto/16 :goto_2
+    goto/16 :goto_0
 
-    .line 671
-    :cond_29
+    .line 854
+    :cond_3f
     const-string/jumbo v1, "sessionFrom"
 
-    invoke-virtual {v3, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 672
+    .line 855
     const-string/jumbo v1, "showtype"
 
-    invoke-virtual {v3, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 673
+    .line 856
     const-string/jumbo v1, "username"
 
-    invoke-virtual {v3, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 674
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 857
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v6
 
-    if-eqz v6, :cond_2a
+    if-eqz v6, :cond_40
 
-    .line 675
+    .line 858
     const-string/jumbo v1, "userName"
 
-    invoke-virtual {v3, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 677
-    :cond_2a
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 860
+    :cond_40
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
-    move-result v3
+    move-result v6
 
-    if-eqz v3, :cond_2b
+    if-eqz v6, :cond_41
 
-    .line 678
+    .line 861
     const-string/jumbo v1, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
     const-string/jumbo v2, "tempsession user is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 679
+    .line 862
     const/4 v1, 0x0
 
-    goto/16 :goto_2
+    goto/16 :goto_0
 
-    .line 681
-    :cond_2b
-    const-string/jumbo v3, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
+    .line 864
+    :cond_41
+    const-string/jumbo v6, "scene"
+
+    invoke-virtual {v2, v6}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v6, 0x0
+
+    invoke-static {v2, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+
+    move-result v2
+
+    .line 865
+    if-eqz v2, :cond_42
+
+    const/4 v6, 0x4
+
+    move/from16 v0, p2
+
+    if-ne v0, v6, :cond_42
+
+    .line 866
+    const-string/jumbo v6, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v8, "Jsapi assign scene to "
+
+    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-static {v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    move/from16 p2, v2
+
+    .line 870
+    :cond_42
+    const-string/jumbo v2, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
 
     const-string/jumbo v6, "tempsession jump, %s, %s, %s, %s, %s."
 
@@ -2499,132 +3335,531 @@
 
     aput-object v5, v7, v8
 
-    invoke-static {v3, v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 683
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    .line 872
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
-    move-result-object v3
+    move-result-object v2
 
     const-string/jumbo v6, "com.tencent.mm.ui.chatting.ChattingUI"
 
-    invoke-virtual {v2, v3, v6}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v3, v2, v6}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 684
-    const-string/jumbo v3, "Chat_User"
+    .line 873
+    const-string/jumbo v2, "Chat_User"
 
-    invoke-virtual {v2, v3, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v3, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 686
-    const-string/jumbo v3, "finish_direct"
-
-    const/4 v6, 0x1
-
-    invoke-virtual {v2, v3, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 687
-    const-string/jumbo v3, "key_is_temp_session"
+    .line 875
+    const-string/jumbo v2, "finish_direct"
 
     const/4 v6, 0x1
 
-    invoke-virtual {v2, v3, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+    invoke-virtual {v3, v2, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 688
-    const-string/jumbo v3, "key_temp_session_from"
+    .line 876
+    const-string/jumbo v2, "key_is_temp_session"
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    const/4 v6, 0x1
 
-    .line 689
-    const-string/jumbo v3, "key_temp_session_scene"
+    invoke-virtual {v3, v2, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 877
+    const-string/jumbo v2, "key_temp_session_from"
+
+    invoke-virtual {v3, v2, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 878
+    const-string/jumbo v2, "key_temp_session_scene"
 
     move/from16 v0, p2
 
-    invoke-virtual {v2, v3, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v3, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 690
-    const-string/jumbo v3, "key_temp_session_show_type"
+    .line 879
+    const-string/jumbo v2, "key_temp_session_show_type"
 
     const/4 v4, 0x0
 
-    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+    invoke-static {v5, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
 
     move-result v4
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+    invoke-virtual {v3, v2, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 692
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    .line 881
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3}, Lcom/tencent/mm/model/b;->ri()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
 
-    move-result-object v3
+    move-result-object v2
 
-    invoke-virtual {v3, v1}, Lcom/tencent/mm/storage/q;->yM(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
-    move-result-object v3
+    move-result-object v2
 
-    .line 693
-    if-eqz v3, :cond_2c
+    .line 882
+    if-eqz v2, :cond_43
 
-    iget-wide v3, v3, Lcom/tencent/mm/h/a;->bkE:J
+    iget-wide v4, v2, Lcom/tencent/mm/h/a;->bvi:J
 
-    long-to-int v3, v3
+    long-to-int v2, v4
 
-    if-gtz v3, :cond_2d
+    if-gtz v2, :cond_44
 
-    .line 694
-    :cond_2c
-    sget-object v3, Lcom/tencent/mm/model/ap$a;->boA:Lcom/tencent/mm/model/ap$c;
+    .line 883
+    :cond_43
+    sget-object v2, Lcom/tencent/mm/model/z$a;->bAs:Lcom/tencent/mm/model/z$c;
 
     const-string/jumbo v4, ""
 
-    new-instance v5, Lcom/tencent/mm/pluginsdk/g;
+    new-instance v5, Lcom/tencent/mm/pluginsdk/d$3;
 
-    invoke-direct {v5, v2, p0}, Lcom/tencent/mm/pluginsdk/g;-><init>(Landroid/content/Intent;Landroid/content/Context;)V
+    invoke-direct {v5, v3, p0}, Lcom/tencent/mm/pluginsdk/d$3;-><init>(Landroid/content/Intent;Landroid/content/Context;)V
 
-    invoke-interface {v3, v1, v4, v5}, Lcom/tencent/mm/model/ap$c;->a(Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/model/ap$c$a;)V
+    invoke-interface {v2, v1, v4, v5}, Lcom/tencent/mm/model/z$c;->a(Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/model/z$c$a;)V
 
-    .line 717
+    .line 906
+    :goto_7
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 904
+    :cond_44
+    invoke-virtual {p0, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    goto :goto_7
+
+    .line 907
+    :cond_45
+    const-string/jumbo v2, "weixin://dl/businessGame/detail/"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_46
+
+    const-string/jumbo v2, "weixin://dl/businessGame/detail"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4a
+
+    .line 909
+    :cond_46
+    invoke-static/range {p1 .. p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    .line 910
+    const/4 v1, 0x0
+
+    .line 911
+    new-instance v3, Landroid/content/Intent;
+
+    invoke-direct {v3}, Landroid/content/Intent;-><init>()V
+
+    .line 912
+    if-eqz v2, :cond_47
+
+    .line 913
+    const-string/jumbo v1, "appid"
+
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 914
+    const-string/jumbo v1, "com.tencent.mm.plugin.game.ui.GameDetailUI"
+
+    .line 915
+    const-string/jumbo v4, "game_app_id"
+
+    invoke-virtual {v3, v4, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 916
+    const-string/jumbo v2, "game_report_from_scene"
+
+    const/4 v4, 0x6
+
+    invoke-virtual {v3, v2, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 919
+    :cond_47
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_49
+
+    .line 920
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2, v1}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 922
+    if-eqz p0, :cond_48
+
+    .line 923
+    :try_start_3
+    invoke-virtual {p0, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 931
     :goto_8
     const/4 v1, 0x1
 
-    goto/16 :goto_2
+    goto/16 :goto_0
 
-    .line 715
-    :cond_2d
-    invoke-virtual {p0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    .line 925
+    :cond_48
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 926
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v3}, Lcom/tencent/mm/ui/base/b;->w(Landroid/content/Context;Landroid/content/Intent;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
     goto :goto_8
 
-    .line 719
-    :cond_2e
+    .line 928
+    :catch_2
+    move-exception v1
+
+    .line 929
+    const-string/jumbo v2, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
+
+    const-string/jumbo v3, ""
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    const-string/jumbo v6, ""
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_8
+
+    .line 933
+    :cond_49
     const/4 v1, 0x0
 
-    goto/16 :goto_2
+    goto/16 :goto_0
 
-    :cond_2f
+    .line 937
+    :cond_4a
+    const-string/jumbo v2, "weixin://dl/businessGame/library/"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4b
+
+    const-string/jumbo v2, "weixin://dl/businessGame/library"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_4e
+
+    .line 938
+    :cond_4b
+    new-instance v1, Landroid/content/Intent;
+
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+
+    .line 939
+    const-string/jumbo v2, "com.tencent.mm.plugin.game.ui.GameLibraryUI"
+
+    .line 940
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_4d
+
+    .line 941
+    const-string/jumbo v3, "game_report_from_scene"
+
+    const/4 v4, 0x6
+
+    invoke-virtual {v1, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 943
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3, v2}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 945
+    if-eqz p0, :cond_4c
+
+    .line 946
+    :try_start_4
+    invoke-virtual {p0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 954
+    :goto_9
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 948
+    :cond_4c
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 949
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-static {v2, v1}, Lcom/tencent/mm/ui/base/b;->w(Landroid/content/Context;Landroid/content/Intent;)V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_3
+
+    goto :goto_9
+
+    .line 951
+    :catch_3
+    move-exception v1
+
+    .line 952
+    const-string/jumbo v2, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
+
+    const-string/jumbo v3, ""
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    const-string/jumbo v6, ""
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_9
+
+    .line 956
+    :cond_4d
+    const/4 v1, 0x0
+
+    goto/16 :goto_0
+
+    .line 959
+    :cond_4e
+    const-string/jumbo v2, "weixin://dl/businessWebview/link/"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4f
+
+    const-string/jumbo v2, "weixin://dl/businessWebview/link"
+
+    invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_53
+
+    .line 961
+    :cond_4f
+    invoke-static/range {p1 .. p1}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    .line 962
+    new-instance v3, Landroid/content/Intent;
+
+    invoke-direct {v3}, Landroid/content/Intent;-><init>()V
+
+    .line 963
+    const/4 v1, 0x0
+
+    .line 964
+    if-eqz v2, :cond_50
+
+    .line 965
+    const-string/jumbo v1, "url"
+
+    invoke-virtual {v2, v1}, Landroid/net/Uri;->getQueryParameter(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 968
+    :try_start_5
+    const-string/jumbo v2, "utf-8"
+
+    invoke-static {v1, v2}, Ljava/net/URLDecoder;->decode(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    :try_end_5
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_5 .. :try_end_5} :catch_4
+
+    move-result-object v1
+
+    .line 973
+    :goto_a
+    const-string/jumbo v2, "com.tencent.mm.plugin.webview.ui.tools.WebViewUI"
+
+    .line 975
+    const-string/jumbo v4, "rawUrl"
+
+    invoke-virtual {v3, v4, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 976
+    const-string/jumbo v1, "transaction_for_openapi_openwebview"
+
+    sget-object v4, Lcom/tencent/mm/pluginsdk/d;->iyz:Ljava/lang/String;
+
+    invoke-virtual {v3, v1, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    move-object v1, v2
+
+    .line 978
+    :cond_50
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_52
+
+    .line 979
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v3, v2, v1}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 981
+    if-eqz p0, :cond_51
+
+    .line 982
+    :try_start_6
+    invoke-virtual {p0, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_5
+
+    .line 990
+    :goto_b
+    const/4 v1, 0x1
+
+    goto/16 :goto_0
+
+    .line 971
+    :catch_4
+    move-exception v1
+
+    const-string/jumbo v1, "https://support.weixin.qq.com/deeplink/noaccess#wechat_redirect"
+
+    goto :goto_a
+
+    .line 984
+    :cond_51
+    :try_start_7
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 985
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-static {v1, v3}, Lcom/tencent/mm/ui/base/b;->w(Landroid/content/Context;Landroid/content/Intent;)V
+    :try_end_7
+    .catch Ljava/lang/Exception; {:try_start_7 .. :try_end_7} :catch_5
+
+    goto :goto_b
+
+    .line 987
+    :catch_5
+    move-exception v1
+
+    .line 988
+    const-string/jumbo v2, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
+
+    const-string/jumbo v3, ""
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    const-string/jumbo v6, ""
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_b
+
+    .line 992
+    :cond_52
+    const/4 v1, 0x0
+
+    goto/16 :goto_0
+
+    .line 995
+    :cond_53
+    const/4 v1, 0x0
+
+    goto/16 :goto_0
+
+    :cond_54
     move-object v4, v3
 
     goto/16 :goto_4
 .end method
 
-.method public static k(Landroid/net/Uri;)Z
+.method public static m(Landroid/net/Uri;)Z
     .locals 1
 
     .prologue
-    .line 224
+    .line 313
     if-nez p0, :cond_0
 
-    .line 225
+    .line 314
     const/4 v0, 0x0
 
-    .line 232
+    .line 321
     :goto_0
     return v0
 
-    .line 228
+    .line 317
     :cond_0
     const-string/jumbo v0, "ticket"
 
@@ -2632,42 +3867,42 @@
 
     move-result-object v0
 
-    .line 229
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 318
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 230
+    .line 319
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 232
+    .line 321
     :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/d;->l(Landroid/net/Uri;)Z
+    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/d;->n(Landroid/net/Uri;)Z
 
     move-result v0
 
     goto :goto_0
 .end method
 
-.method public static l(Landroid/net/Uri;)Z
+.method public static n(Landroid/net/Uri;)Z
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
-    .line 236
+    .line 325
     if-nez p0, :cond_1
 
-    .line 242
+    .line 331
     :cond_0
     :goto_0
     return v0
 
-    .line 239
+    .line 328
     :cond_1
     invoke-virtual {p0}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
@@ -2693,45 +3928,115 @@
 
     if-eqz v1, :cond_0
 
-    .line 240
+    .line 329
     :cond_2
     const/4 v0, 0x1
 
     goto :goto_0
 .end method
 
-.method public static m(Ljava/lang/String;J)Z
-    .locals 7
+.method public static q(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 3
 
     .prologue
-    const-wide/16 v5, 0x0
-
-    .line 198
-    const/4 v1, 0x0
-
-    .line 199
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 1089
+    invoke-static {p2}, Lcom/tencent/mm/pluginsdk/d;->zt(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-eqz v0, :cond_0
 
-    .line 200
-    const-wide/16 v2, -0x1
+    .line 1115
+    :goto_0
+    return-void
 
-    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/d;->tV(Ljava/lang/String;)Ljava/lang/String;
+    .line 1092
+    :cond_0
+    const-string/jumbo v0, ""
+
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    invoke-static {p0, v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/p;
+
+    move-result-object v1
+
+    .line 1093
+    const/4 v0, 0x6
+
+    .line 1094
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    .line 1095
+    invoke-static {p1}, Lcom/tencent/mm/model/i;->dn(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 1096
+    const/4 v0, 0x7
+
+    .line 1101
+    :cond_1
+    :goto_1
+    new-instance v2, Lcom/tencent/mm/pluginsdk/d$4;
+
+    invoke-direct {v2, v1, p0}, Lcom/tencent/mm/pluginsdk/d$4;-><init>(Landroid/app/ProgressDialog;Landroid/content/Context;)V
+
+    invoke-static {p0, p2, v0, v2}, Lcom/tencent/mm/pluginsdk/d;->a(Landroid/content/Context;Ljava/lang/String;ILcom/tencent/mm/pluginsdk/d$a;)V
+
+    goto :goto_0
+
+    .line 1097
+    :cond_2
+    invoke-static {p1}, Lcom/tencent/mm/model/i;->ea(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 1098
+    const/16 v0, 0x9
+
+    goto :goto_1
+.end method
+
+.method public static t(Ljava/lang/String;J)Z
+    .locals 6
+
+    .prologue
+    const-wide/16 v4, -0x1
+
+    .line 287
+    const/4 v1, 0x0
+
+    .line 288
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 289
+    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/d;->zv(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    sget-object v4, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    sget-object v2, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
-    invoke-interface {v4, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+    invoke-interface {v2, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
-    move-result v4
+    move-result v2
 
-    if-eqz v4, :cond_0
+    if-eqz v2, :cond_2
 
-    sget-object v2, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    sget-object v2, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     invoke-interface {v2, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -2743,109 +4048,55 @@
 
     move-result-wide v2
 
-    .line 201
-    :cond_0
-    cmp-long v0, v2, v5
-
-    if-ltz v0, :cond_2
-
-    .line 202
-    cmp-long v0, v2, v5
+    .line 290
+    :goto_0
+    cmp-long v0, v2, v4
 
     if-eqz v0, :cond_1
+
+    .line 291
+    const-wide/16 v4, 0x0
+
+    cmp-long v0, v2, v4
+
+    if-eqz v0, :cond_0
 
     and-long v4, v2, p1
 
     cmp-long v0, v4, v2
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_1
 
-    .line 203
-    :cond_1
+    .line 292
+    :cond_0
     const/4 v0, 0x1
 
-    .line 207
-    :goto_0
+    .line 296
+    :goto_1
     return v0
 
-    :cond_2
+    :cond_1
     move v0, v1
 
-    goto :goto_0
-.end method
+    goto :goto_1
 
-.method public static p(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 811
-    const-string/jumbo v0, ""
-
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    invoke-static {p0, v0, v1, v2}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/bn;
-
-    move-result-object v1
-
-    .line 812
-    const/4 v0, 0x6
-
-    .line 813
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 814
-    invoke-static {p1}, Lcom/tencent/mm/model/w;->dh(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 815
-    const/4 v0, 0x7
-
-    .line 820
-    :cond_0
-    :goto_0
-    new-instance v2, Lcom/tencent/mm/pluginsdk/h;
-
-    invoke-direct {v2, v1, p0}, Lcom/tencent/mm/pluginsdk/h;-><init>(Landroid/app/ProgressDialog;Landroid/content/Context;)V
-
-    invoke-static {p0, p2, v0, v2}, Lcom/tencent/mm/pluginsdk/d;->a(Landroid/content/Context;Ljava/lang/String;ILcom/tencent/mm/pluginsdk/d$a;)V
-
-    .line 834
-    return-void
-
-    .line 816
-    :cond_1
-    invoke-static {p1}, Lcom/tencent/mm/model/w;->dP(Ljava/lang/String;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 817
-    const/16 v0, 0x9
+    :cond_2
+    move-wide v2, v4
 
     goto :goto_0
 .end method
 
-.method public static tS(Ljava/lang/String;)Z
+.method public static zr(Ljava/lang/String;)Z
     .locals 2
 
     .prologue
-    .line 211
-    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/d;->tV(Ljava/lang/String;)Ljava/lang/String;
+    .line 300
+    invoke-static {p0}, Lcom/tencent/mm/pluginsdk/d;->zv(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 212
-    sget-object v1, Lcom/tencent/mm/pluginsdk/d;->gJT:Ljava/util/Map;
+    .line 301
+    sget-object v1, Lcom/tencent/mm/pluginsdk/d;->iyA:Ljava/util/Map;
 
     invoke-interface {v1, v0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -2853,7 +4104,7 @@
 
     if-nez v1, :cond_0
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/d;->tT(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/d;->zs(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2871,12 +4122,12 @@
     goto :goto_0
 .end method
 
-.method public static tT(Ljava/lang/String;)Z
+.method public static zs(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
-    .line 216
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 305
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -2901,42 +4152,131 @@
     goto :goto_0
 .end method
 
-.method public static tU(Ljava/lang/String;)Z
+.method private static zt(Ljava/lang/String;)Z
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 361
+    const-string/jumbo v0, "weixin://dl/wechatout"
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 362
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    sget-object v2, Lcom/tencent/mm/storage/j$a;->kcy:Lcom/tencent/mm/storage/j$a;
+
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/storage/h;->a(Lcom/tencent/mm/storage/j$a;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    .line 363
+    if-nez v0, :cond_0
+
+    .line 364
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    .line 365
+    const/high16 v1, 0x10000000
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
+
+    .line 366
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "com.tencent.mm.plugin.webview.ui.tools.WebViewUI"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setClassName(Landroid/content/Context;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 367
+    const-string/jumbo v1, "rawUrl"
+
+    const-string/jumbo v2, "https://support.weixin.qq.com/deeplink/noaccess#wechat_redirect"
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 368
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+
+    .line 369
+    const/4 v0, 0x1
+
+    .line 372
+    :goto_0
+    return v0
+
+    :cond_0
+    move v0, v1
+
+    goto :goto_0
+.end method
+
+.method public static zu(Ljava/lang/String;)Z
     .locals 2
 
     .prologue
-    .line 393
+    .line 503
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
-    invoke-static {v0, p0, v1}, Lcom/tencent/mm/pluginsdk/d;->f(Landroid/content/Context;Ljava/lang/String;I)Z
+    invoke-static {v0, p0, v1}, Lcom/tencent/mm/pluginsdk/d;->g(Landroid/content/Context;Ljava/lang/String;I)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method private static tV(Ljava/lang/String;)Ljava/lang/String;
+.method private static zv(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     .prologue
-    .line 784
+    .line 1062
     const/4 v0, 0x0
 
-    .line 785
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 1063
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 786
+    .line 1064
     invoke-static {p0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v0
 
-    .line 787
+    .line 1065
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2975,7 +4315,7 @@
 
     move-result-object v0
 
-    .line 789
+    .line 1067
     :cond_0
     return-object v0
 .end method

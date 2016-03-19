@@ -1,97 +1,101 @@
 package com.tencent.mm.pluginsdk.g;
 
 import android.app.Activity;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.Iterator;
-import java.util.Set;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.os.Build.VERSION;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.base.g;
 
 public final class a
 {
-  private h gNA;
-  private f gNB;
-  private i gNw;
-  private j gNx;
-  private k gNy;
-  private g gNz;
-  
-  private static void a(b paramb)
+  public static boolean a(Activity paramActivity, final String paramString1, final int paramInt, String paramString2, String paramString3)
   {
-    if (paramb != null)
-    {
-      Iterator localIterator = gNC.iterator();
-      while (localIterator.hasNext())
-      {
-        Integer localInteger = (Integer)localIterator.next();
-        ax.tm().b(localInteger.intValue(), paramb);
-      }
-      auD = null;
-    }
-  }
-  
-  public final boolean a(Activity paramActivity, n paramn)
-  {
-    if ((type == 0) || (action == 0)) {
-      return false;
-    }
-    if (gNB == null) {
-      gNB = new f(paramActivity);
-    }
-    if (gNB.a(paramn)) {
+    if ((Build.VERSION.SDK_INT < 23) && (!"MNC".equals(Build.VERSION.CODENAME))) {
       return true;
     }
-    switch (type)
+    for (;;)
     {
-    default: 
-      t.e("!44@/B4Tb64lLpI82FDEKU4MMswDBO/xZgZna735fRAmfMs=", "Unkown error type");
-      return false;
-    case 1: 
-      if (gNw == null) {
-        gNw = new i(paramActivity);
+      try
+      {
+        int i = android.support.v4.content.a.b(paramActivity, paramString1);
+        if (i == 0) {
+          break;
+        }
+        if (!ay.kz(paramString3))
+        {
+          g.a(paramActivity, paramString3, paramString2, false, new DialogInterface.OnClickListener()
+          {
+            public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+            {
+              paramAnonymousDialogInterface.dismiss();
+              paramAnonymousDialogInterface = an;
+              String str = paramString1;
+              paramAnonymousInt = paramInt;
+              android.support.v4.app.a.a(paramAnonymousDialogInterface, new String[] { str }, paramAnonymousInt);
+            }
+          });
+          return false;
+        }
       }
-      gNw.a(paramn);
-      return false;
-    case 2: 
-      if (gNx == null) {
-        gNx = new j(paramActivity);
+      catch (Exception paramActivity)
+      {
+        u.e("!44@/B4Tb64lLpKRWbkIOVEIGWRz/ZgL8rDZ506X222/Mts=", "check mpermission exception:%s.", new Object[] { paramActivity });
+        return true;
       }
-      gNx.a(paramn);
-      return false;
-    case 3: 
-      if (gNy == null) {
-        gNy = new k(paramActivity);
-      }
-      gNy.a(paramn);
-      return false;
-    case 4: 
-      if (gNz == null) {
-        gNz = new g(paramActivity);
-      }
-      gNz.a(paramn);
-      return false;
-    case 5: 
-      if (gNA == null) {
-        gNA = new h(paramActivity);
-      }
-      gNA.a(paramn);
-      return false;
+      android.support.v4.app.a.a(paramActivity, new String[] { paramString1 }, paramInt);
     }
-    if (gNB == null) {
-      gNB = new f(paramActivity);
-    }
-    gNB.a(paramn);
-    return false;
   }
   
-  public final void close()
+  public static boolean aL(Context paramContext, String paramString)
   {
-    a(gNw);
-    a(gNx);
-    a(gNy);
-    a(gNz);
-    a(gNA);
-    a(gNB);
+    int i;
+    try
+    {
+      i = android.support.v4.content.a.b(paramContext, paramString);
+      if (i != 0) {
+        return false;
+      }
+    }
+    catch (Exception paramContext)
+    {
+      u.e("!44@/B4Tb64lLpKRWbkIOVEIGWRz/ZgL8rDZ506X222/Mts=", "check mpermission exception:%s.", new Object[] { paramContext });
+      return false;
+    }
+    String str = null;
+    if (paramString.equals("android.permission.READ_CONTACTS"))
+    {
+      str = "android.permission.WRITE_CONTACTS";
+      if (ay.kz(str)) {
+        break label98;
+      }
+    }
+    label96:
+    label98:
+    for (;;)
+    {
+      try
+      {
+        i = android.support.v4.content.a.b(paramContext, str);
+        if (i != 0) {
+          break label96;
+        }
+        return true;
+      }
+      catch (Exception paramContext)
+      {
+        u.e("!44@/B4Tb64lLpKRWbkIOVEIGWRz/ZgL8rDZ506X222/Mts=", "check mpermission otherPermisson exception:%s.", new Object[] { paramContext });
+        return false;
+      }
+      if (!paramString.equals("android.permission.WRITE_CONTACTS")) {
+        break;
+      }
+      str = "android.permission.READ_CONTACTS";
+      break;
+      return false;
+    }
   }
 }
 

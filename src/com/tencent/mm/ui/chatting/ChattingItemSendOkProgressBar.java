@@ -12,28 +12,28 @@ import android.graphics.Rect;
 import android.graphics.RectF;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.sdk.platformtools.y;
 import java.lang.ref.SoftReference;
 
 public class ChattingItemSendOkProgressBar
   extends ProgressBar
 {
-  private static SoftReference iVH = null;
-  private static SoftReference iVI = null;
-  private static SoftReference iVJ = null;
-  private static int iVP = a.fromDPToPix(aa.getContext(), 1);
-  private static int iVQ = a.fromDPToPix(aa.getContext(), 6);
-  private boolean dMd = false;
-  private int iVD = 0;
-  private int iVE = 0;
-  private boolean iVF = false;
-  private boolean iVG = false;
-  private Bitmap iVK = null;
-  private Bitmap iVL = null;
-  private Bitmap iVM = null;
-  private boolean iVN = false;
-  private a iVO = null;
+  private static SoftReference kUI = null;
+  private static SoftReference kUJ = null;
+  private static SoftReference kUK = null;
+  private static int kUQ = a.fromDPToPix(y.getContext(), 1);
+  private static int kUR = a.fromDPToPix(y.getContext(), 6);
+  private boolean eNY = false;
+  private int kUE = 0;
+  private int kUF = 0;
+  private boolean kUG = false;
+  private boolean kUH = false;
+  private Bitmap kUL = null;
+  private Bitmap kUM = null;
+  private Bitmap kUN = null;
+  private boolean kUO = false;
+  private a kUP = null;
   private float rotation = 0.0F;
   
   public ChattingItemSendOkProgressBar(Context paramContext, AttributeSet paramAttributeSet)
@@ -48,40 +48,40 @@ public class ChattingItemSendOkProgressBar
   
   public a getDrawListener()
   {
-    return iVO;
+    return kUP;
   }
   
   @SuppressLint({"DrawAllocation"})
   protected void onDraw(Canvas paramCanvas)
   {
-    if (!iVN)
+    if (!kUO)
     {
       super.onDraw(paramCanvas);
       return;
     }
-    paramCanvas.saveLayerAlpha(new RectF(0.0F, 0.0F, iVK.getWidth(), iVK.getHeight()), 255, 31);
-    if (dMd)
+    paramCanvas.saveLayerAlpha(new RectF(0.0F, 0.0F, kUL.getWidth(), kUL.getHeight()), 255, 31);
+    if (eNY)
     {
-      if (!iVF)
+      if (!kUG)
       {
-        if (((int)(rotation - 270.0F) % 360 == 0) && (iVG))
+        if (((int)(rotation - 270.0F) % 360 == 0) && (kUH))
         {
-          iVF = true;
+          kUG = true;
           invalidate();
           return;
         }
         localObject1 = new Matrix();
-        ((Matrix)localObject1).setRotate(rotation, iVK.getWidth() / 2, iVK.getHeight() / 2);
-        paramCanvas.drawBitmap(iVK, (Matrix)localObject1, null);
+        ((Matrix)localObject1).setRotate(rotation, kUL.getWidth() / 2, kUL.getHeight() / 2);
+        paramCanvas.drawBitmap(kUL, (Matrix)localObject1, null);
         rotation += 6.0F;
         invalidate();
         return;
       }
-      if (iVD <= iVL.getWidth())
+      if (kUE <= kUM.getWidth())
       {
         localObject1 = new Matrix();
         rotation += 6.0F;
-        ((Matrix)localObject1).setRotate(rotation, iVK.getWidth() / 2, iVK.getHeight() / 2);
+        ((Matrix)localObject1).setRotate(rotation, kUL.getWidth() / 2, kUL.getHeight() / 2);
         int j = (int)rotation % 360;
         int i = j;
         if (j < 270) {
@@ -91,46 +91,46 @@ public class ChattingItemSendOkProgressBar
         {
           localObject2 = new Paint();
           ((Paint)localObject2).setColor(-16776961);
-          paramCanvas.drawBitmap(iVK, (Matrix)localObject1, (Paint)localObject2);
+          paramCanvas.drawBitmap(kUL, (Matrix)localObject1, (Paint)localObject2);
           ((Paint)localObject2).setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));
-          paramCanvas.drawRect(0.0F, 0.0F, iVK.getWidth(), iVK.getHeight() / 2, (Paint)localObject2);
+          paramCanvas.drawRect(0.0F, 0.0F, kUL.getWidth(), kUL.getHeight() / 2, (Paint)localObject2);
         }
-        localObject1 = new Rect(0, 0, iVD, iVL.getHeight());
-        localObject2 = new Rect(iVP, iVQ, iVD + iVP, iVL.getHeight() + iVQ);
-        paramCanvas.drawBitmap(iVL, (Rect)localObject1, (Rect)localObject2, null);
-        iVD += 2;
+        localObject1 = new Rect(0, 0, kUE, kUM.getHeight());
+        localObject2 = new Rect(kUQ, kUR, kUE + kUQ, kUM.getHeight() + kUR);
+        paramCanvas.drawBitmap(kUM, (Rect)localObject1, (Rect)localObject2, null);
+        kUE += 2;
         invalidate();
         return;
       }
-      localObject1 = new Rect(0, 0, iVL.getWidth(), iVL.getHeight());
-      localObject2 = new Rect(iVP, iVQ, iVL.getWidth() + iVP, iVL.getHeight() + iVQ);
-      paramCanvas.drawBitmap(iVL, (Rect)localObject1, (Rect)localObject2, null);
-      if (iVE < 255)
+      localObject1 = new Rect(0, 0, kUM.getWidth(), kUM.getHeight());
+      localObject2 = new Rect(kUQ, kUR, kUM.getWidth() + kUQ, kUM.getHeight() + kUR);
+      paramCanvas.drawBitmap(kUM, (Rect)localObject1, (Rect)localObject2, null);
+      if (kUF < 255)
       {
         Paint localPaint = new Paint();
-        localPaint.setAlpha(iVE);
-        paramCanvas.drawBitmap(iVM, (Rect)localObject1, (Rect)localObject2, localPaint);
-        iVE += 20;
+        localPaint.setAlpha(kUF);
+        paramCanvas.drawBitmap(kUN, (Rect)localObject1, (Rect)localObject2, localPaint);
+        kUF += 20;
         invalidate();
         return;
       }
-      paramCanvas.drawBitmap(iVM, (Rect)localObject1, (Rect)localObject2, null);
-      dMd = false;
+      paramCanvas.drawBitmap(kUN, (Rect)localObject1, (Rect)localObject2, null);
+      eNY = false;
       rotation = 0.0F;
-      iVD = 0;
-      iVE = 0;
-      iVG = false;
-      iVF = false;
+      kUE = 0;
+      kUF = 0;
+      kUH = false;
+      kUG = false;
       return;
     }
-    Object localObject1 = new Rect(0, 0, iVM.getWidth(), iVM.getHeight());
-    Object localObject2 = new Rect(iVP, iVQ, iVM.getWidth() + iVP, iVM.getHeight() + iVQ);
-    paramCanvas.drawBitmap(iVM, (Rect)localObject1, (Rect)localObject2, null);
+    Object localObject1 = new Rect(0, 0, kUN.getWidth(), kUN.getHeight());
+    Object localObject2 = new Rect(kUQ, kUR, kUN.getWidth() + kUQ, kUN.getHeight() + kUR);
+    paramCanvas.drawBitmap(kUN, (Rect)localObject1, (Rect)localObject2, null);
   }
   
   public void setDrawListener(a parama)
   {
-    iVO = parama;
+    kUP = parama;
   }
   
   public static abstract interface a {}

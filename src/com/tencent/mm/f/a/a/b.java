@@ -1,45 +1,45 @@
 package com.tencent.mm.f.a.a;
 
 public final class b
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public String avY;
-  public String beS;
-  public int beT;
+  public String ajh;
+  public String bpe;
+  public int bpf;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (avY != null) {
-        paramVarArgs.U(1, avY);
+      if (ajh != null) {
+        paramVarArgs.d(1, ajh);
       }
-      if (beS != null) {
-        paramVarArgs.U(2, beS);
+      if (bpe != null) {
+        paramVarArgs.d(2, bpe);
       }
-      paramVarArgs.bM(3, beT);
+      paramVarArgs.ci(3, bpf);
       return 0;
     }
     if (paramInt == 1) {
-      if (avY == null) {
+      if (ajh == null) {
         break label269;
       }
     }
     label269:
-    for (paramInt = a.a.a.b.b.a.T(1, avY) + 0;; paramInt = 0)
+    for (paramInt = a.a.a.b.b.a.e(1, ajh) + 0;; paramInt = 0)
     {
       int i = paramInt;
-      if (beS != null) {
-        i = paramInt + a.a.a.b.b.a.T(2, beS);
+      if (bpe != null) {
+        i = paramInt + a.a.a.b.b.a.e(2, bpe);
       }
-      return i + a.a.a.a.bI(3, beT);
+      return i + a.a.a.a.cg(3, bpf);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
         break;
@@ -53,13 +53,13 @@ public final class b
         default: 
           return -1;
         case 1: 
-          avY = jMD.readString();
+          ajh = maU.readString();
           return 0;
         case 2: 
-          beS = jMD.readString();
+          bpe = maU.readString();
           return 0;
         }
-        beT = jMD.aVp();
+        bpf = maU.jC();
         return 0;
       }
       return -1;

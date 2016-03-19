@@ -19,9 +19,9 @@
 
 
 # instance fields
-.field private dH:I
+.field private cU:I
 
-.field private rp:I
+.field private qs:I
 
 
 # direct methods
@@ -30,9 +30,9 @@
 
     .prologue
     .line 183
-    new-instance v0, Lcom/tencent/mm/ui/widget/c;
+    new-instance v0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState$1;
 
-    invoke-direct {v0}, Lcom/tencent/mm/ui/widget/c;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState$1;-><init>()V
 
     sput-object v0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -51,14 +51,14 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->dH:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->cU:I
 
     .line 173
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->rp:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->qs:I
 
     .line 174
     return-void
@@ -90,7 +90,7 @@
 
     .prologue
     .line 162
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->rp:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->qs:I
 
     return v0
 .end method
@@ -100,7 +100,7 @@
 
     .prologue
     .line 162
-    iput p1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->rp:I
+    iput p1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->qs:I
 
     return p1
 .end method
@@ -110,7 +110,7 @@
 
     .prologue
     .line 162
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->dH:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->cU:I
 
     return v0
 .end method
@@ -120,7 +120,7 @@
 
     .prologue
     .line 162
-    iput p1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->dH:I
+    iput p1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->cU:I
 
     return p1
 .end method
@@ -135,12 +135,12 @@
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 179
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->dH:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->cU:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 180
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->rp:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->qs:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

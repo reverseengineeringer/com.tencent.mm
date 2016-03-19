@@ -25,7 +25,7 @@
     return-void
 .end method
 
-.method public static ag(Landroid/content/Context;)V
+.method public static ap(Landroid/content/Context;)V
     .locals 8
 
     .prologue
@@ -34,7 +34,7 @@
     const/4 v7, 0x1
 
     .line 105
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/x;->aEM()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/w;->aUE()J
 
     move-result-wide v2
 
@@ -55,7 +55,7 @@
 
     move-result-object v5
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 109
     const-wide/32 v4, 0x1c61a0
@@ -94,7 +94,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     const-string/jumbo v0, "alarm"
 
@@ -110,7 +110,7 @@
 
     const-string/jumbo v1, "keep bumper failed, null am"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -151,7 +151,7 @@
     goto :goto_1
 .end method
 
-.method public static ah(Landroid/content/Context;)V
+.method public static aq(Landroid/content/Context;)V
     .locals 4
 
     .prologue
@@ -174,7 +174,7 @@
 
     const-string/jumbo v1, "stop bumper failed, null am"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 143
     :cond_0
@@ -213,7 +213,7 @@
     goto :goto_0
 .end method
 
-.method public static ai(Landroid/content/Context;)V
+.method public static ar(Landroid/content/Context;)V
     .locals 9
 
     .prologue
@@ -224,7 +224,7 @@
 
     const-string/jumbo v2, "keep awaker"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 147
     const-string/jumbo v0, "alarm"
@@ -243,7 +243,7 @@
 
     const-string/jumbo v1, "keep awaker failed, null am"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 155
     :goto_0
@@ -251,7 +251,7 @@
 
     .line 152
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CU()Z
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fb()Z
 
     move-result v2
 
@@ -299,7 +299,7 @@
     goto :goto_1
 .end method
 
-.method public static aj(Landroid/content/Context;)V
+.method public static as(Landroid/content/Context;)V
     .locals 4
 
     .prologue
@@ -308,7 +308,7 @@
 
     const-string/jumbo v1, "stop awaker"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 159
     const-string/jumbo v0, "alarm"
@@ -327,7 +327,7 @@
 
     const-string/jumbo v1, "keep awaker failed, null am"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 169
     :cond_0
@@ -405,13 +405,13 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 92
     if-eqz v0, :cond_2
 
     .line 93
-    invoke-static {p1}, Lcom/tencent/mm/booter/MMReceivers$AlarmReceiver;->ag(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/tencent/mm/booter/MMReceivers$AlarmReceiver;->ap(Landroid/content/Context;)V
 
     goto :goto_0
 
@@ -419,17 +419,17 @@
     :cond_2
     const-string/jumbo v0, "alarm"
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/booter/f;->p(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {p1, v0}, Lcom/tencent/mm/booter/b;->q(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 98
-    invoke-static {p1}, Lcom/tencent/mm/booter/MMReceivers$AlarmReceiver;->aj(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/tencent/mm/booter/MMReceivers$AlarmReceiver;->as(Landroid/content/Context;)V
 
     .line 99
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->appenderFlush()V
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlush()V
 
     goto :goto_0
 .end method

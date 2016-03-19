@@ -1,16 +1,8 @@
 package com.tencent.mm.d.a;
 
-import java.util.List;
-
 public final class ej$b
 {
-  public int aAH;
-  public String aAI;
-  public List aAJ;
-  public List aAK;
-  public List aAL;
-  public List aAM;
-  public List aAN;
+  public boolean atf = false;
 }
 
 /* Location:

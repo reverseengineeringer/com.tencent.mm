@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cg
-  extends a.c
+  extends a.e
 {
   public a$cg()
   {
-    super("setFontSizeCallback", "", -2, false);
+    super("newyearAddCard", "newyearAddCard", 10001, false);
   }
 }
 

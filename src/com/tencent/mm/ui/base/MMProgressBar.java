@@ -4,33 +4,57 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.aj;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
 
 public class MMProgressBar
   extends LinearLayout
 {
-  private aj ecI = new aj(new bm(this), false);
-  private TextView fhZ;
-  private int iGr = 0;
-  private int iGs = 0;
-  private TextView iGt;
-  private a iGu;
+  private af fml = new af(new af.a()
+  {
+    public final boolean lj()
+    {
+      int j = MMProgressBar.a(MMProgressBar.this) - MMProgressBar.b(MMProgressBar.this);
+      int i;
+      MMProgressBar localMMProgressBar;
+      if (j > 0)
+      {
+        i = (int)(j * 0.6D);
+        localMMProgressBar = MMProgressBar.this;
+        if (i <= 0) {
+          break label90;
+        }
+      }
+      for (;;)
+      {
+        MMProgressBar.a(localMMProgressBar, i);
+        MMProgressBar.b(MMProgressBar.this, MMProgressBar.b(MMProgressBar.this));
+        MMProgressBar.d(MMProgressBar.this).ds((MMProgressBar.c(MMProgressBar.this) - j) * 40 / MMProgressBar.c(MMProgressBar.this));
+        return false;
+        label90:
+        i = 1;
+      }
+    }
+  }, false);
+  private TextView gyF;
+  private int kFB = 0;
+  private int kFC = 0;
+  private TextView kFD;
+  private a kFE;
   private int max = 100;
   
   public MMProgressBar(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    inflate(getContext(), a.k.mm_progress_bar, this);
-    iGt = ((TextView)findViewById(a.i.mm_progress_bar_progress));
-    fhZ = ((TextView)findViewById(a.i.mm_progress_bar_tips));
+    inflate(getContext(), 2131363204, this);
+    kFD = ((TextView)findViewById(2131169439));
+    gyF = ((TextView)findViewById(2131169438));
   }
   
   private int getProgressLength()
   {
-    int j = getWidth() * iGr / max;
+    int j = getWidth() * kFB / max;
     int i = j;
     if (j < BackwardSupportUtil.b.a(getContext(), 20.0F)) {
       i = BackwardSupportUtil.b.a(getContext(), 20.0F);
@@ -45,17 +69,17 @@ public class MMProgressBar
   
   public int getProgress()
   {
-    return iGs;
+    return kFC;
   }
   
   public void setAutoProgress(boolean paramBoolean)
   {
     if (paramBoolean)
     {
-      ecI.cA(40L);
+      fml.ds(40L);
       return;
     }
-    ecI.aEN();
+    fml.aUF();
   }
   
   public void setMax(int paramInt)
@@ -65,7 +89,7 @@ public class MMProgressBar
   
   public void setOnProgressChangedListener(a parama)
   {
-    iGu = parama;
+    kFE = parama;
   }
   
   public void setProgress(int paramInt)
@@ -74,20 +98,20 @@ public class MMProgressBar
     if (paramInt > max) {
       i = max;
     }
-    iGs = i;
-    if (ecI.aFk()) {
+    kFC = i;
+    if (fml.aVf()) {
       setAutoProgress(true);
     }
   }
   
   public void setTips(CharSequence paramCharSequence)
   {
-    fhZ.setText(paramCharSequence);
+    gyF.setText(paramCharSequence);
   }
   
   public static abstract interface a
   {
-    public abstract void ke(int paramInt);
+    public abstract void mv(int paramInt);
   }
 }
 

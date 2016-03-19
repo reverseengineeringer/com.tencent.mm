@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/pluginsdk/l$i;
+.implements Lcom/tencent/mm/pluginsdk/i$k;
 
 
 # direct methods
@@ -22,13 +22,13 @@
 
     .prologue
     .line 105
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {p3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -98,7 +98,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 121
     const-string/jumbo p0, ""
@@ -125,10 +125,10 @@
 
     aput-object p2, v4, v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 127
-    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {p2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -161,7 +161,7 @@
     move-result-object v0
 
     .line 134
-    invoke-static {p1, v0, p3}, Lcom/tencent/mm/pluginsdk/ui/d/k;->b(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnDismissListener;)V
+    invoke-static {p1, v0, p3}, Lcom/tencent/mm/pluginsdk/ui/d/g;->b(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnDismissListener;)V
 
     :goto_1
     move v0, v1
@@ -203,12 +203,12 @@
     invoke-virtual {v2, v3, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     .line 139
-    invoke-static {p1, v0, p3, v2}, Lcom/tencent/mm/pluginsdk/ui/d/k;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnDismissListener;Landroid/os/Bundle;)V
+    invoke-static {p1, v0, p3, v2}, Lcom/tencent/mm/pluginsdk/ui/d/g;->a(Landroid/content/Context;Ljava/lang/String;Landroid/content/DialogInterface$OnDismissListener;Landroid/os/Bundle;)V
 
     goto :goto_1
 .end method
 
-.method public final aY(Ljava/lang/String;)Z
+.method public final ba(Ljava/lang/String;)Z
     .locals 2
 
     .prologue
@@ -251,7 +251,7 @@
     goto :goto_0
 .end method
 
-.method public final n(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.method public final o(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 12
 
     .prologue
@@ -263,7 +263,7 @@
 
     .line 26
     .line 28
-    invoke-static {p1, p2}, Lcom/tencent/mm/pluginsdk/ui/d/a;->az(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-static {p1, p2}, Lcom/tencent/mm/pluginsdk/ui/d/a;->aP(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v0
 
@@ -280,9 +280,9 @@
 
     .line 33
     :cond_0
-    new-instance v1, Lcom/tencent/mm/app/plugin/e;
+    new-instance v1, Lcom/tencent/mm/app/plugin/d$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/app/plugin/e;-><init>(Lcom/tencent/mm/app/plugin/d;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/app/plugin/d$1;-><init>(Lcom/tencent/mm/app/plugin/d;)V
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -304,24 +304,24 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;
+    check-cast v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/4 v2, 0x0
 
-    iget v4, v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;->start:I
+    iget v4, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
 
-    iget v5, v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;->end:I
+    iget v5, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
 
-    iget v6, v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;->type:I
+    iget v6, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
     sparse-switch v6, :sswitch_data_0
 
     :goto_2
     if-eqz v2, :cond_2
 
-    iget-object v6, v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;->url:Ljava/lang/String;
+    iget-object v6, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->url:Ljava/lang/String;
 
-    iget v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;->type:I
+    iget v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
     if-ne v0, v9, :cond_1
 
@@ -386,7 +386,7 @@
 
     aput-object p2, v2, v10
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 

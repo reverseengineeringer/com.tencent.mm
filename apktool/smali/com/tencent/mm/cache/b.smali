@@ -18,10 +18,10 @@
 .method public abstract a(Ljava/lang/String;Landroid/graphics/Bitmap;)V
 .end method
 
-.method public abstract cG(Ljava/lang/String;)Lcom/tencent/mm/cache/MCacheItem;
+.method public abstract cI(Ljava/lang/String;)Lcom/tencent/mm/cache/MCacheItem;
 .end method
 
-.method public abstract cH(Ljava/lang/String;)V
+.method public abstract cJ(Ljava/lang/String;)V
 .end method
 
 .method public abstract getBitmap(Ljava/lang/String;)Landroid/graphics/Bitmap;

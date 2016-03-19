@@ -3,14 +3,14 @@ package android.support.v4.widget;
 import android.view.View;
 
 final class SlidingPaneLayout$c
-  extends i.a
+  extends f.a
 {
   private SlidingPaneLayout$c(SlidingPaneLayout paramSlidingPaneLayout) {}
   
   public final void a(View paramView, float paramFloat1, float paramFloat2)
   {
     SlidingPaneLayout.LayoutParams localLayoutParams = (SlidingPaneLayout.LayoutParams)paramView.getLayoutParams();
-    int i = iW.getPaddingLeft();
+    int i = ia.getPaddingLeft();
     int j = leftMargin + i;
     if (paramFloat1 <= 0.0F)
     {
@@ -18,75 +18,75 @@ final class SlidingPaneLayout$c
       if (paramFloat1 == 0.0F)
       {
         i = j;
-        if (SlidingPaneLayout.c(iW) <= 0.5F) {}
+        if (SlidingPaneLayout.c(ia) <= 0.5F) {}
       }
     }
     else
     {
-      i = j + SlidingPaneLayout.e(iW);
+      i = j + SlidingPaneLayout.e(ia);
     }
-    SlidingPaneLayout.b(iW).i(i, paramView.getTop());
-    iW.invalidate();
+    SlidingPaneLayout.b(ia).i(i, paramView.getTop());
+    ia.invalidate();
   }
   
   public final void a(View paramView, int paramInt1, int paramInt2)
   {
-    SlidingPaneLayout.a(iW, paramInt1);
-    iW.invalidate();
+    SlidingPaneLayout.a(ia, paramInt1);
+    ia.invalidate();
   }
   
   public final boolean d(View paramView, int paramInt)
   {
-    if (SlidingPaneLayout.a(iW)) {
+    if (SlidingPaneLayout.a(ia)) {
       return false;
     }
-    return getLayoutParamsiY;
+    return getLayoutParamsic;
   }
   
   public final int e(View paramView, int paramInt)
   {
-    paramView = (SlidingPaneLayout.LayoutParams)SlidingPaneLayout.d(iW).getLayoutParams();
-    int i = iW.getPaddingLeft();
+    paramView = (SlidingPaneLayout.LayoutParams)SlidingPaneLayout.d(ia).getLayoutParams();
+    int i = ia.getPaddingLeft();
     i = leftMargin + i;
-    int j = SlidingPaneLayout.e(iW);
+    int j = SlidingPaneLayout.e(ia);
     return Math.min(Math.max(paramInt, i), j + i);
   }
   
   public final void h(int paramInt1, int paramInt2)
   {
-    SlidingPaneLayout.b(iW).f(SlidingPaneLayout.d(iW), paramInt2);
+    SlidingPaneLayout.b(ia).f(SlidingPaneLayout.d(ia), paramInt2);
   }
   
-  public final void s(int paramInt)
+  public final void t(int paramInt)
   {
-    if (biW).je == 0)
+    if (bia).ij == 0)
     {
-      if (SlidingPaneLayout.c(iW) == 0.0F)
+      if (SlidingPaneLayout.c(ia) == 0.0F)
       {
-        iW.A(SlidingPaneLayout.d(iW));
-        localSlidingPaneLayout = iW;
-        SlidingPaneLayout.d(iW);
+        ia.A(SlidingPaneLayout.d(ia));
+        localSlidingPaneLayout = ia;
+        SlidingPaneLayout.d(ia);
         localSlidingPaneLayout.sendAccessibilityEvent(32);
-        SlidingPaneLayout.a(iW, false);
+        SlidingPaneLayout.a(ia, false);
       }
     }
     else {
       return;
     }
-    SlidingPaneLayout localSlidingPaneLayout = iW;
-    SlidingPaneLayout.d(iW);
+    SlidingPaneLayout localSlidingPaneLayout = ia;
+    SlidingPaneLayout.d(ia);
     localSlidingPaneLayout.sendAccessibilityEvent(32);
-    SlidingPaneLayout.a(iW, true);
+    SlidingPaneLayout.a(ia, true);
   }
   
   public final void x(View paramView)
   {
-    iW.aX();
+    ia.aF();
   }
   
   public final int y(View paramView)
   {
-    return SlidingPaneLayout.e(iW);
+    return SlidingPaneLayout.e(ia);
   }
 }
 

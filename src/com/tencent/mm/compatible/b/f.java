@@ -1,20 +1,48 @@
 package com.tencent.mm.compatible.b;
 
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.t;
+import android.annotation.TargetApi;
+import android.media.AudioRecord;
+import android.media.audiofx.AutomaticGainControl;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class f
-  extends BroadcastReceiver
+public final class f
+  implements e.a
 {
-  f(d paramd) {}
+  private AutomaticGainControl bpF = null;
   
-  public final void onReceive(Context paramContext, Intent paramIntent)
+  @TargetApi(16)
+  public f(AudioRecord paramAudioRecord)
   {
-    t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[ BluetoothDevice.ACTION_ACL_CONNECTED ] ");
-    d.at(true);
-    bfu.bO(3);
+    boolean bool = AutomaticGainControl.isAvailable();
+    u.d("!44@/B4Tb64lLpLYS3DXP6UDjQVQTaMUfdr0rqi8WFW27Wc=", "available  " + bool);
+    if (bool) {
+      bpF = AutomaticGainControl.create(paramAudioRecord.getAudioSessionId());
+    }
+  }
+  
+  @TargetApi(16)
+  public final boolean isAvailable()
+  {
+    return AutomaticGainControl.isAvailable();
+  }
+  
+  @TargetApi(16)
+  public final boolean nK()
+  {
+    if (bpF != null) {}
+    try
+    {
+      int i = bpF.setEnabled(true);
+      if (i == 0) {
+        return true;
+      }
+      u.d("!44@/B4Tb64lLpLYS3DXP6UDjQVQTaMUfdr0rqi8WFW27Wc=", "setEnabled failed " + i);
+    }
+    catch (Exception localException)
+    {
+      for (;;) {}
+    }
+    return false;
   }
 }
 

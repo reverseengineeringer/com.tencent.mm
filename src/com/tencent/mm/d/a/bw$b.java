@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class bw$b
 {
-  public boolean auM = false;
+  public boolean auR;
 }
 
 /* Location:

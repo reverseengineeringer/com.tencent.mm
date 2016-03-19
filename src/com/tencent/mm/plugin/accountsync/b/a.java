@@ -2,37 +2,37 @@ package com.tencent.mm.plugin.accountsync.b;
 
 import android.content.Context;
 import android.content.res.AssetManager;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.HashMap;
 import java.util.Map;
 
 public final class a
 {
-  public static a bXk = new a();
-  private Map bXl;
+  public static a cop = new a();
+  private Map coq;
   
-  public final Map aW(Context paramContext)
+  public final Map bm(Context paramContext)
   {
     for (;;)
     {
       int i;
       try
       {
-        paramContext = bn.g(paramContext.getAssets().open("config/EmailAddress.xml"));
-        if (bn.iW(paramContext)) {
+        paramContext = ay.g(paramContext.getAssets().open("config/EmailAddress.xml"));
+        if (ay.kz(paramContext)) {
           return null;
         }
-        Map localMap = p.z(paramContext, "config", null);
+        Map localMap = q.J(paramContext, "config", null);
         if ((localMap == null) || (localMap.isEmpty()))
         {
-          t.d("!32@/B4Tb64lLpJwOMBN3Ft5hVOpzvJV0XFH", "values null");
+          u.d("!32@/B4Tb64lLpJwOMBN3Ft5hVOpzvJV0XFH", "values null");
           return null;
         }
-        if (bXl == null)
+        if (coq == null)
         {
-          bXl = new HashMap();
+          coq = new HashMap();
           i = 0;
           Object localObject = new StringBuilder(".config.format");
           if (i == 0)
@@ -46,25 +46,25 @@ public final class a
             localObject = (String)localObject + ".loginpage";
             paramContext = (String)localMap.get(paramContext);
             localObject = (String)localMap.get(localObject);
-            if ((bn.iW(paramContext)) || (bn.iW((String)localObject))) {
+            if ((ay.kz(paramContext)) || (ay.kz((String)localObject))) {
               break label251;
             }
-            bXl.put(paramContext, localObject);
+            coq.put(paramContext, localObject);
             break label251;
           }
         }
         else
         {
-          return bXl;
+          return coq;
         }
         paramContext = Integer.valueOf(i);
         continue;
-        paramContext = bXl;
+        paramContext = coq;
         return paramContext;
       }
       catch (Exception paramContext)
       {
-        t.e("!32@/B4Tb64lLpJwOMBN3Ft5hVOpzvJV0XFH", "parse email failed:[%s]", new Object[] { paramContext.getMessage() });
+        u.e("!32@/B4Tb64lLpJwOMBN3Ft5hVOpzvJV0XFH", "parse email failed:[%s]", new Object[] { paramContext.getMessage() });
         return null;
       }
       label251:

@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract G(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+.method public abstract Q(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 .end method
 
-.method public abstract aWb()Ljava/lang/String;
+.method public abstract boQ()Ljava/lang/String;
 .end method

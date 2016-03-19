@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$t
-  extends a.c
+  extends a.e
 {
   public a$t()
   {
-    super("disconnectWXDevice", "disconnectWXDevice", 124, true);
+    super("clearBounceBackground", "clearBounceBackground", 189, false);
   }
 }
 

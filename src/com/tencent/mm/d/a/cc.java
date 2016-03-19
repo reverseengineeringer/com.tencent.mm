@@ -1,29 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class cc
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a axy = new a();
-  public b axz = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avF = new a();
   
   public cc()
   {
-    id = "ExtVoiceFileNameToMsgId";
-    hXT = atO;
+    id = "ExDeviceLanDeviceScanResult";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String apy;
-  }
-  
-  public static final class b
-  {
-    public long axb = 0L;
+    public String alN;
+    public byte[] avG;
+    public boolean avH;
   }
 }
 

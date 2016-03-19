@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface MMRadioGroupView$d
 {
-  public abstract void lP(int paramInt);
+  public abstract void gl(int paramInt);
 }
 
 /* Location:

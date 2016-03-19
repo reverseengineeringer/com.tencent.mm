@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface MMLoadMoreListView$a
 {
-  public abstract void Xl();
+  public abstract void agj();
 }
 
 /* Location:

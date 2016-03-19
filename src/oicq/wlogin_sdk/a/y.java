@@ -5,14 +5,14 @@ import oicq.wlogin_sdk.tools.util;
 public final class y
   extends a
 {
-  int jOz = 0;
+  int mcL = 0;
   
   public y()
   {
-    jNs = 292;
+    mbE = 292;
   }
   
-  private static int x(byte[] paramArrayOfByte, int paramInt)
+  private static int B(byte[] paramArrayOfByte, int paramInt)
   {
     if (paramArrayOfByte != null)
     {
@@ -26,13 +26,13 @@ public final class y
   
   public final byte[] a(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2, int paramInt, byte[] paramArrayOfByte3, byte[] paramArrayOfByte4, byte[] paramArrayOfByte5)
   {
-    int n = x(paramArrayOfByte1, 16);
-    int m = x(paramArrayOfByte2, 16);
-    int k = x(paramArrayOfByte3, 16);
-    int j = x(paramArrayOfByte4, 32);
-    int i = x(paramArrayOfByte5, 16);
-    jOz = (n + 2 + 2 + m + 2 + 2 + k + 2 + j + 2 + i);
-    byte[] arrayOfByte = new byte[jOz];
+    int n = B(paramArrayOfByte1, 16);
+    int m = B(paramArrayOfByte2, 16);
+    int k = B(paramArrayOfByte3, 16);
+    int j = B(paramArrayOfByte4, 32);
+    int i = B(paramArrayOfByte5, 16);
+    mcL = (n + 2 + 2 + m + 2 + 2 + k + 2 + j + 2 + i);
+    byte[] arrayOfByte = new byte[mcL];
     util.m(arrayOfByte, 0, n);
     System.arraycopy(paramArrayOfByte1, 0, arrayOfByte, 2, n);
     n += 2;
@@ -52,10 +52,10 @@ public final class y
     paramInt += j;
     util.m(arrayOfByte, paramInt, i);
     System.arraycopy(paramArrayOfByte5, 0, arrayOfByte, paramInt + 2, i);
-    super.pV(jNs);
-    super.w(arrayOfByte, jOz);
-    super.aVD();
-    return super.aVz();
+    super.sL(mbE);
+    super.A(arrayOfByte, mcL);
+    super.bos();
+    return super.boo();
   }
 }
 

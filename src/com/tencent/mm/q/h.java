@@ -1,42 +1,96 @@
 package com.tencent.mm.q;
 
-import com.tencent.mm.compatible.d.q;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b;
-import com.tencent.mm.protocal.h.c;
-import com.tencent.mm.protocal.h.c.a;
-import com.tencent.mm.protocal.i.c;
+import android.content.ContentValues;
+import android.database.Cursor;
+import com.tencent.mm.sdk.platformtools.ay;
 
-public abstract class h
-  implements w
+public final class h
 {
-  private i.c btg;
-  public boolean bth = false;
+  public int aSt = 0;
+  public int aou = -1;
+  int bEA = 0;
+  int bEw = 0;
+  public String bEx = "";
+  public String bEy = "";
+  private int bEz = 0;
+  public String username = "";
   
-  public abstract i.c tF();
-  
-  public final i.c vj()
+  public final void aK(boolean paramBoolean)
   {
-    if (btg == null)
+    if (paramBoolean) {}
+    for (int i = 1;; i = 0)
     {
-      btg = tF();
-      i.c localc = btg;
-      hgM = q.oI();
-      hgL = b.hgg;
-      hgK = b.hgo;
-      localc.aX(h.c.a.hgD.tE());
+      bEz = i;
+      return;
     }
-    return btg;
   }
   
-  public int vk()
+  public final void c(Cursor paramCursor)
   {
-    return 0;
+    username = paramCursor.getString(0);
+    aSt = paramCursor.getInt(1);
+    bEw = paramCursor.getInt(2);
+    bEy = paramCursor.getString(3);
+    bEx = paramCursor.getString(4);
+    bEz = paramCursor.getInt(5);
+    bEA = paramCursor.getInt(6);
   }
   
-  public final boolean vl()
+  public final String getUsername()
   {
-    return bth;
+    if (username == null) {
+      return "";
+    }
+    return username;
+  }
+  
+  public final ContentValues vh()
+  {
+    ContentValues localContentValues = new ContentValues();
+    if ((aou & 0x1) != 0) {
+      localContentValues.put("username", getUsername());
+    }
+    if ((aou & 0x2) != 0) {
+      localContentValues.put("imgflag", Integer.valueOf(aSt));
+    }
+    if ((aou & 0x4) != 0) {
+      localContentValues.put("lastupdatetime", Integer.valueOf(bEw));
+    }
+    if ((aou & 0x8) != 0) {
+      localContentValues.put("reserved1", vi());
+    }
+    if ((aou & 0x10) != 0) {
+      localContentValues.put("reserved2", vj());
+    }
+    if ((aou & 0x20) != 0) {
+      localContentValues.put("reserved3", Integer.valueOf(bEz));
+    }
+    if ((aou & 0x40) != 0) {
+      localContentValues.put("reserved4", Integer.valueOf(bEA));
+    }
+    return localContentValues;
+  }
+  
+  public final String vi()
+  {
+    if (bEy == null) {
+      return "";
+    }
+    return bEy;
+  }
+  
+  public final String vj()
+  {
+    if (bEx == null) {
+      return "";
+    }
+    return bEx;
+  }
+  
+  public final void vk()
+  {
+    bEA = ((int)(ay.FR() / 60L));
+    aou |= 0x40;
   }
 }
 

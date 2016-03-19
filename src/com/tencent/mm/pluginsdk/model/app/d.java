@@ -1,8 +1,8 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -10,25 +10,25 @@ import java.util.Map;
 import java.util.Set;
 
 public final class d
-  implements com.tencent.mm.q.d
+  implements com.tencent.mm.r.d
 {
-  Map btG = new HashMap();
+  Map bFR = new HashMap();
   
   public d()
   {
-    ax.tm().a(452, this);
+    ah.tE().a(452, this);
   }
   
-  public static void a(int paramInt, y paramy)
+  public static void a(int paramInt, v paramv)
   {
-    paramy = new z(paramInt, paramy);
-    ax.tm().d(paramy);
+    paramv = new w(paramInt, paramv);
+    ah.tE().d(paramv);
   }
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    paramj = (z)paramj;
-    Set localSet = (Set)btG.get(Integer.valueOf(gMd));
+    paramj = (w)paramj;
+    Set localSet = (Set)bFR.get(Integer.valueOf(iBe));
     if ((localSet != null) && (localSet.size() > 0))
     {
       Object localObject = new HashSet();
@@ -36,28 +36,28 @@ public final class d
       localObject = ((Set)localObject).iterator();
       while (((Iterator)localObject).hasNext())
       {
-        u localu = (u)((Iterator)localObject).next();
-        if ((localu != null) && (localSet.contains(localu))) {
-          localu.a(paramInt1, paramInt2, paramString, gMe);
+        s locals = (s)((Iterator)localObject).next();
+        if ((locals != null) && (localSet.contains(locals))) {
+          locals.a(paramInt1, paramInt2, paramString, iBf);
         }
       }
     }
   }
   
-  public final void a(int paramInt, u paramu)
+  public final void a(int paramInt, s params)
   {
-    if (!btG.containsKey(Integer.valueOf(paramInt))) {
-      btG.put(Integer.valueOf(paramInt), new HashSet());
+    if (!bFR.containsKey(Integer.valueOf(paramInt))) {
+      bFR.put(Integer.valueOf(paramInt), new HashSet());
     }
-    if (!((Set)btG.get(Integer.valueOf(paramInt))).contains(paramu)) {
-      ((Set)btG.get(Integer.valueOf(paramInt))).add(paramu);
+    if (!((Set)bFR.get(Integer.valueOf(paramInt))).contains(params)) {
+      ((Set)bFR.get(Integer.valueOf(paramInt))).add(params);
     }
   }
   
-  public final void b(int paramInt, u paramu)
+  public final void b(int paramInt, s params)
   {
-    if (btG.get(Integer.valueOf(paramInt)) != null) {
-      ((Set)btG.get(Integer.valueOf(paramInt))).remove(paramu);
+    if (bFR.get(Integer.valueOf(paramInt)) != null) {
+      ((Set)bFR.get(Integer.valueOf(paramInt))).remove(params);
     }
   }
 }

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/pluginsdk/l$k;
+.implements Lcom/tencent/mm/pluginsdk/i$m;
 
 
 # direct methods
@@ -27,7 +27,7 @@
     return-void
 .end method
 
-.method public final ahT()I
+.method public final atl()I
     .locals 1
 
     .prologue
@@ -37,7 +37,7 @@
     return v0
 .end method
 
-.method public final ahU()I
+.method public final atm()I
     .locals 1
 
     .prologue
@@ -47,7 +47,7 @@
     return v0
 .end method
 
-.method public final ahV()V
+.method public final atn()V
     .locals 0
 
     .prologue
@@ -55,7 +55,7 @@
     return-void
 .end method
 
-.method public final ahW()Z
+.method public final ato()Z
     .locals 1
 
     .prologue
@@ -65,7 +65,7 @@
     return v0
 .end method
 
-.method public final ahX()V
+.method public final atp()V
     .locals 0
 
     .prologue
@@ -73,7 +73,7 @@
     return-void
 .end method
 
-.method public final ahY()V
+.method public final atq()V
     .locals 0
 
     .prologue
@@ -81,7 +81,7 @@
     return-void
 .end method
 
-.method public final pM(Ljava/lang/String;)Ljava/lang/String;
+.method public final tn(Ljava/lang/String;)Ljava/lang/String;
     .locals 1
 
     .prologue

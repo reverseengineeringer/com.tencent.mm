@@ -8,11 +8,11 @@ public class TRSpeexNative
   
   public native int nativeTRSpeexDecodeRelease(int paramInt);
   
-  public native int nativeTRSpeexEncode(int paramInt1, byte[] paramArrayOfByte1, int paramInt2, int paramInt3, byte[] paramArrayOfByte2);
+  native int nativeTRSpeexEncode(int paramInt1, byte[] paramArrayOfByte1, int paramInt2, int paramInt3, byte[] paramArrayOfByte2);
   
-  public native int nativeTRSpeexInit();
+  native int nativeTRSpeexInit();
   
-  public native int nativeTRSpeexRelease(int paramInt);
+  native int nativeTRSpeexRelease(int paramInt);
 }
 
 /* Location:

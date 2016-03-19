@@ -1,36 +1,37 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.sdk.g.ae.a;
+import com.tencent.mm.d.b.q;
+import com.tencent.mm.sdk.h.c.a;
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public final class l
-  extends com.tencent.mm.d.b.l
+  extends q
 {
-  protected static ae.a aqp;
+  protected static c.a aot;
   
   static
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[2];
-    bbY = new String[3];
+    c.a locala = new c.a();
+    ceD = new Field[2];
+    blR = new String[3];
     StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "username";
-    ibX.put("username", "TEXT default ''  PRIMARY KEY ");
+    blR[0] = "username";
+    jYx.put("username", "TEXT default ''  PRIMARY KEY ");
     localStringBuilder.append(" username TEXT default ''  PRIMARY KEY ");
     localStringBuilder.append(", ");
-    ibW = "username";
-    bbY[1] = "cmdbuf";
-    ibX.put("cmdbuf", "BLOB default '' ");
+    jYw = "username";
+    blR[1] = "cmdbuf";
+    jYx.put("cmdbuf", "BLOB default '' ");
     localStringBuilder.append(" cmdbuf BLOB default '' ");
-    bbY[2] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    blR[2] = "rowid";
+    jYy = localStringBuilder.toString();
+    aot = locala;
   }
   
-  protected final ae.a lX()
+  protected final c.a ls()
   {
-    return aqp;
+    return aot;
   }
 }
 

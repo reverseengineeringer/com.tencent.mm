@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field jb:Z
+.field ig:Z
 
 
 # direct methods
@@ -28,9 +28,9 @@
 
     .prologue
     .line 1321
-    new-instance v0, Landroid/support/v4/widget/h;
+    new-instance v0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState$1;
 
-    invoke-direct {v0}, Landroid/support/v4/widget/h;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/widget/SlidingPaneLayout$SavedState$1;-><init>()V
 
     sput-object v0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -54,7 +54,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->jb:Z
+    iput-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->ig:Z
 
     .line 1313
     return-void
@@ -97,7 +97,7 @@
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 1318
-    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->jb:Z
+    iget-boolean v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$SavedState;->ig:Z
 
     if-eqz v0, :cond_0
 

@@ -1,25 +1,38 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.protocal.b.no;
+import com.tencent.mm.protocal.b.nx;
+import com.tencent.mm.sdk.c.b;
 
 public final class ay
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avT = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aud = new a();
+  public b aue = new b();
   
   public ay()
   {
-    id = "ExDeviceOnRecvDataFromDevice";
-    hXT = atO;
+    id = "DoFavorite";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String anZ;
-    public String avt;
-    public byte[] data;
+    public String asL;
+    public no auf;
+    public nx aug;
+    public String auh;
+    public int aui = 0;
+    public String auj;
+    public String title;
+    public int type = 0;
+  }
+  
+  public static final class b
+  {
+    public int ret = 0;
   }
 }
 

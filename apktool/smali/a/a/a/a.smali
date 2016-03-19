@@ -4,19 +4,7 @@
 
 
 # direct methods
-.method public static T(ILjava/lang/String;)I
-    .locals 1
-
-    .prologue
-    .line 29
-    invoke-static {p0, p1}, La/a/a/b/b/a;->T(ILjava/lang/String;)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static a(ILcom/tencent/mm/al/b;)I
+.method public static a(ILcom/tencent/mm/at/b;)I
     .locals 2
 
     .prologue
@@ -29,21 +17,21 @@
     return v0
 
     :cond_0
-    invoke-static {p0}, La/a/a/b/b/a;->pS(I)I
+    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
 
     move-result v0
 
-    iget-object v1, p1, Lcom/tencent/mm/al/b;->hga:[B
+    iget-object v1, p1, Lcom/tencent/mm/at/b;->iTS:[B
 
     array-length v1, v1
 
-    invoke-static {v1}, La/a/a/b/b/a;->pU(I)I
+    invoke-static {v1}, La/a/a/b/b/a;->aA(I)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    iget-object v1, p1, Lcom/tencent/mm/al/b;->hga:[B
+    iget-object v1, p1, Lcom/tencent/mm/at/b;->iTS:[B
 
     array-length v1, v1
 
@@ -82,14 +70,14 @@
     if-lt v1, v0, :cond_1
 
     .line 119
-    invoke-static {v2}, La/a/a/b/b/a;->pU(I)I
+    invoke-static {v2}, La/a/a/b/b/a;->aA(I)I
 
     move-result v0
 
     add-int/2addr v0, v2
 
     .line 120
-    invoke-static {p0}, La/a/a/b/b/a;->pS(I)I
+    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
 
     move-result v1
 
@@ -111,7 +99,7 @@
 
     move-result v0
 
-    invoke-static {v0}, La/a/a/b/b/a;->pU(I)I
+    invoke-static {v0}, La/a/a/b/b/a;->aA(I)I
 
     move-result v0
 
@@ -123,56 +111,6 @@
     move v1, v0
 
     goto :goto_0
-.end method
-
-.method public static bI(II)I
-    .locals 2
-
-    .prologue
-    .line 21
-    if-ltz p1, :cond_0
-
-    invoke-static {p0}, La/a/a/b/b/a;->pS(I)I
-
-    move-result v0
-
-    invoke-static {p1}, La/a/a/b/b/a;->pU(I)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    invoke-static {p0}, La/a/a/b/b/a;->pS(I)I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0xa
-
-    goto :goto_0
-.end method
-
-.method public static bJ(II)I
-    .locals 2
-
-    .prologue
-    .line 53
-    invoke-static {p0}, La/a/a/b/b/a;->pS(I)I
-
-    move-result v0
-
-    invoke-static {p1}, La/a/a/b/b/a;->pU(I)I
-
-    move-result v1
-
-    add-int/2addr v0, v1
-
-    add-int/2addr v0, p1
-
-    return v0
 .end method
 
 .method public static c(IILjava/util/LinkedList;)I
@@ -233,9 +171,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/al/b;
+    check-cast v0, Lcom/tencent/mm/at/b;
 
-    invoke-static {p0, v0}, La/a/a/a;->a(ILcom/tencent/mm/al/b;)I
+    invoke-static {p0, v0}, La/a/a/a;->a(ILcom/tencent/mm/at/b;)I
 
     move-result v0
 
@@ -272,7 +210,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Double;->doubleValue()D
 
-    invoke-static {p0}, La/a/a/b/b/a;->pS(I)I
+    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
 
     move-result v0
 
@@ -311,7 +249,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
-    invoke-static {p0}, La/a/a/b/b/a;->pS(I)I
+    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
 
     move-result v0
 
@@ -352,7 +290,7 @@
 
     move-result v0
 
-    invoke-static {p0, v0}, La/a/a/a;->bI(II)I
+    invoke-static {p0, v0}, La/a/a/a;->cg(II)I
 
     move-result v0
 
@@ -391,7 +329,7 @@
 
     move-result-wide v3
 
-    invoke-static {p0, v3, v4}, La/a/a/a;->q(IJ)I
+    invoke-static {p0, v3, v4}, La/a/a/a;->z(IJ)I
 
     move-result v0
 
@@ -426,7 +364,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {p0, v0}, La/a/a/b/b/a;->T(ILjava/lang/String;)I
+    invoke-static {p0, v0}, La/a/a/b/b/a;->e(ILjava/lang/String;)I
 
     move-result v0
 
@@ -463,7 +401,7 @@
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
-    invoke-static {p0}, La/a/a/b/b/a;->pS(I)I
+    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
 
     move-result v0
 
@@ -498,13 +436,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/al/a;
+    check-cast v0, Lcom/tencent/mm/at/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/al/a;->kS()I
+    invoke-virtual {v0}, Lcom/tencent/mm/at/a;->kn()I
 
     move-result v0
 
-    invoke-static {p0, v0}, La/a/a/a;->bJ(II)I
+    invoke-static {p0, v0}, La/a/a/a;->ch(II)I
 
     move-result v0
 
@@ -540,12 +478,74 @@
     .end packed-switch
 .end method
 
-.method public static pK(I)I
+.method public static cg(II)I
+    .locals 2
+
+    .prologue
+    .line 21
+    if-ltz p1, :cond_0
+
+    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
+
+    move-result v0
+
+    invoke-static {p1}, La/a/a/b/b/a;->aA(I)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0xa
+
+    goto :goto_0
+.end method
+
+.method public static ch(II)I
+    .locals 2
+
+    .prologue
+    .line 53
+    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
+
+    move-result v0
+
+    invoke-static {p1}, La/a/a/b/b/a;->aA(I)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    add-int/2addr v0, p1
+
+    return v0
+.end method
+
+.method public static e(ILjava/lang/String;)I
+    .locals 1
+
+    .prologue
+    .line 29
+    invoke-static {p0, p1}, La/a/a/b/b/a;->e(ILjava/lang/String;)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static sI(I)I
     .locals 1
 
     .prologue
     .line 33
-    invoke-static {p0}, La/a/a/b/b/a;->pS(I)I
+    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
 
     move-result v0
 
@@ -554,14 +554,14 @@
     return v0
 .end method
 
-.method public static q(IJ)I
+.method public static z(IJ)I
     .locals 6
 
     .prologue
     const-wide/16 v4, 0x0
 
     .line 45
-    invoke-static {p0}, La/a/a/b/b/a;->pS(I)I
+    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
 
     move-result v1
 

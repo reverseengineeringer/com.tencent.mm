@@ -1,69 +1,59 @@
-.class final Lcom/tencent/mm/ui/applet/c;
+.class public final Lcom/tencent/mm/ui/applet/c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/MessageQueue$IdleHandler;
 
-
-# instance fields
-.field final synthetic iAB:Lcom/tencent/mm/ui/applet/b;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/ui/applet/c$a;
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/applet/b;)V
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 47
-    iput-object p1, p0, Lcom/tencent/mm/ui/applet/c;->iAB:Lcom/tencent/mm/ui/applet/b;
-
+    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 35
     return-void
 .end method
 
-
-# virtual methods
-.method public final queueIdle()Z
-    .locals 2
+.method public static ef(Landroid/content/Context;)V
+    .locals 3
 
     .prologue
-    .line 54
-    :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/c;->iAB:Lcom/tencent/mm/ui/applet/b;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/applet/b;->iAy:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    .line 55
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/c;->iAB:Lcom/tencent/mm/ui/applet/b;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/applet/b;->iAy:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
+    .line 30
+    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/String;
+    const v1, 0x7f0a0089
 
-    .line 58
-    iget-object v1, p0, Lcom/tencent/mm/ui/applet/c;->iAB:Lcom/tencent/mm/ui/applet/b;
+    const/4 v2, 0x0
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/applet/b;->iAz:Lcom/tencent/mm/ui/applet/b$a;
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/applet/b$a;->gz(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    move-result-object v0
 
-    goto :goto_0
+    .line 31
+    new-instance v1, Lcom/tencent/mm/ui/applet/c$a;
 
-    .line 60
-    :cond_0
-    const/4 v0, 0x1
+    invoke-direct {v1, p0, v0}, Lcom/tencent/mm/ui/applet/c$a;-><init>(Landroid/content/Context;Landroid/view/View;)V
 
-    return v0
+    .line 32
+    iget-object v0, v1, Lcom/tencent/mm/ui/applet/c$a;->all:Landroid/view/WindowManager;
+
+    iget-object v2, v1, Lcom/tencent/mm/ui/applet/c$a;->alk:Landroid/widget/FrameLayout;
+
+    iget-object v1, v1, Lcom/tencent/mm/ui/applet/c$a;->alm:Landroid/view/WindowManager$LayoutParams;
+
+    invoke-interface {v0, v2, v1}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 33
+    return-void
 .end method

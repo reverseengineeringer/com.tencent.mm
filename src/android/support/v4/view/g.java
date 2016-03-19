@@ -1,61 +1,226 @@
 package android.support.v4.view;
 
-import android.os.Bundle;
+import android.os.Build.VERSION;
+import android.support.v4.a.a.b;
+import android.view.MenuItem;
 import android.view.View;
-import android.view.View.AccessibilityDelegate;
-import android.view.ViewGroup;
-import android.view.accessibility.AccessibilityEvent;
-import android.view.accessibility.AccessibilityNodeInfo;
-import android.view.accessibility.AccessibilityNodeProvider;
 
-final class g
-  extends View.AccessibilityDelegate
+public final class g
 {
-  g(f.a parama) {}
+  static final d eD = new a();
   
-  public final boolean dispatchPopulateAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  static
   {
-    return fr.dispatchPopulateAccessibilityEvent(paramView, paramAccessibilityEvent);
+    int i = Build.VERSION.SDK_INT;
+    if (i >= 14)
+    {
+      eD = new c();
+      return;
+    }
+    if (i >= 11)
+    {
+      eD = new b();
+      return;
+    }
   }
   
-  public final AccessibilityNodeProvider getAccessibilityNodeProvider(View paramView)
+  public static MenuItem a(MenuItem paramMenuItem, d paramd)
   {
-    return (AccessibilityNodeProvider)fr.e(paramView);
+    Object localObject = paramMenuItem;
+    if ((paramMenuItem instanceof b)) {
+      localObject = ((b)paramMenuItem).a(paramd);
+    }
+    return (MenuItem)localObject;
   }
   
-  public final void onInitializeAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  public static MenuItem a(MenuItem paramMenuItem, e parame)
   {
-    fr.onInitializeAccessibilityEvent(paramView, paramAccessibilityEvent);
+    if ((paramMenuItem instanceof b)) {
+      return ((b)paramMenuItem).a(parame);
+    }
+    return eD.a(paramMenuItem, parame);
   }
   
-  public final void onInitializeAccessibilityNodeInfo(View paramView, AccessibilityNodeInfo paramAccessibilityNodeInfo)
+  public static MenuItem a(MenuItem paramMenuItem, View paramView)
   {
-    fr.b(paramView, paramAccessibilityNodeInfo);
+    if ((paramMenuItem instanceof b)) {
+      return ((b)paramMenuItem).setActionView(paramView);
+    }
+    return eD.a(paramMenuItem, paramView);
   }
   
-  public final void onPopulateAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  public static View a(MenuItem paramMenuItem)
   {
-    fr.onPopulateAccessibilityEvent(paramView, paramAccessibilityEvent);
+    if ((paramMenuItem instanceof b)) {
+      return ((b)paramMenuItem).getActionView();
+    }
+    return eD.a(paramMenuItem);
   }
   
-  public final boolean onRequestSendAccessibilityEvent(ViewGroup paramViewGroup, View paramView, AccessibilityEvent paramAccessibilityEvent)
+  public static void a(MenuItem paramMenuItem, int paramInt)
   {
-    return fr.onRequestSendAccessibilityEvent(paramViewGroup, paramView, paramAccessibilityEvent);
+    if ((paramMenuItem instanceof b))
+    {
+      ((b)paramMenuItem).setShowAsAction(paramInt);
+      return;
+    }
+    eD.a(paramMenuItem, paramInt);
   }
   
-  public final boolean performAccessibilityAction(View paramView, int paramInt, Bundle paramBundle)
+  public static MenuItem b(MenuItem paramMenuItem, int paramInt)
   {
-    return fr.performAccessibilityAction(paramView, paramInt, paramBundle);
+    if ((paramMenuItem instanceof b)) {
+      return ((b)paramMenuItem).setActionView(paramInt);
+    }
+    return eD.b(paramMenuItem, paramInt);
   }
   
-  public final void sendAccessibilityEvent(View paramView, int paramInt)
+  public static boolean b(MenuItem paramMenuItem)
   {
-    fr.sendAccessibilityEvent(paramView, paramInt);
+    if ((paramMenuItem instanceof b)) {
+      return ((b)paramMenuItem).expandActionView();
+    }
+    return eD.b(paramMenuItem);
   }
   
-  public final void sendAccessibilityEventUnchecked(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  public static boolean c(MenuItem paramMenuItem)
   {
-    fr.sendAccessibilityEventUnchecked(paramView, paramAccessibilityEvent);
+    if ((paramMenuItem instanceof b)) {
+      return ((b)paramMenuItem).collapseActionView();
+    }
+    return eD.c(paramMenuItem);
+  }
+  
+  static final class a
+    implements g.d
+  {
+    public final MenuItem a(MenuItem paramMenuItem, g.e parame)
+    {
+      return paramMenuItem;
+    }
+    
+    public final MenuItem a(MenuItem paramMenuItem, View paramView)
+    {
+      return paramMenuItem;
+    }
+    
+    public final View a(MenuItem paramMenuItem)
+    {
+      return null;
+    }
+    
+    public final void a(MenuItem paramMenuItem, int paramInt) {}
+    
+    public final MenuItem b(MenuItem paramMenuItem, int paramInt)
+    {
+      return paramMenuItem;
+    }
+    
+    public final boolean b(MenuItem paramMenuItem)
+    {
+      return false;
+    }
+    
+    public final boolean c(MenuItem paramMenuItem)
+    {
+      return false;
+    }
+  }
+  
+  static class b
+    implements g.d
+  {
+    public MenuItem a(MenuItem paramMenuItem, g.e parame)
+    {
+      return paramMenuItem;
+    }
+    
+    public final MenuItem a(MenuItem paramMenuItem, View paramView)
+    {
+      return paramMenuItem.setActionView(paramView);
+    }
+    
+    public final View a(MenuItem paramMenuItem)
+    {
+      return paramMenuItem.getActionView();
+    }
+    
+    public final void a(MenuItem paramMenuItem, int paramInt)
+    {
+      paramMenuItem.setShowAsAction(paramInt);
+    }
+    
+    public final MenuItem b(MenuItem paramMenuItem, int paramInt)
+    {
+      return paramMenuItem.setActionView(paramInt);
+    }
+    
+    public boolean b(MenuItem paramMenuItem)
+    {
+      return false;
+    }
+    
+    public boolean c(MenuItem paramMenuItem)
+    {
+      return false;
+    }
+  }
+  
+  static final class c
+    extends g.b
+  {
+    public final MenuItem a(MenuItem paramMenuItem, final g.e parame)
+    {
+      if (parame == null) {
+        return h.a(paramMenuItem, null);
+      }
+      h.a(paramMenuItem, new h.b()
+      {
+        public final boolean af()
+        {
+          return parame.af();
+        }
+        
+        public final boolean ag()
+        {
+          return parame.ag();
+        }
+      });
+    }
+    
+    public final boolean b(MenuItem paramMenuItem)
+    {
+      return paramMenuItem.expandActionView();
+    }
+    
+    public final boolean c(MenuItem paramMenuItem)
+    {
+      return paramMenuItem.collapseActionView();
+    }
+  }
+  
+  static abstract interface d
+  {
+    public abstract MenuItem a(MenuItem paramMenuItem, g.e parame);
+    
+    public abstract MenuItem a(MenuItem paramMenuItem, View paramView);
+    
+    public abstract View a(MenuItem paramMenuItem);
+    
+    public abstract void a(MenuItem paramMenuItem, int paramInt);
+    
+    public abstract MenuItem b(MenuItem paramMenuItem, int paramInt);
+    
+    public abstract boolean b(MenuItem paramMenuItem);
+    
+    public abstract boolean c(MenuItem paramMenuItem);
+  }
+  
+  public static abstract interface e
+  {
+    public abstract boolean af();
+    
+    public abstract boolean ag();
   }
 }
 

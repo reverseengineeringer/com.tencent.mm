@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ap
-  extends a.c
+  extends a.e
 {
   public a$ap()
   {
-    super("hideAllNonBaseMenuItem", "hideAllNonBaseMenuItem", 93, false);
+    super("getCurrentSSID", "getCurrentSSID", 176, true);
   }
 }
 

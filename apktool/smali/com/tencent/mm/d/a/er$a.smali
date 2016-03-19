@@ -15,7 +15,19 @@
 
 
 # instance fields
-.field public aBs:I
+.field public actionCode:I
+
+.field public appId:Ljava/lang/String;
+
+.field public asc:I
+
+.field public azq:Ljava/lang/String;
+
+.field public context:Landroid/content/Context;
+
+.field public messageAction:Ljava/lang/String;
+
+.field public messageExt:Ljava/lang/String;
 
 
 # direct methods
@@ -23,7 +35,7 @@
     .locals 0
 
     .prologue
-    .line 14
+    .line 17
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

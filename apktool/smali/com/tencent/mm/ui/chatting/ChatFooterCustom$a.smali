@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;
-.super Lcom/tencent/mm/sdk/c/e;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic iSU:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+.field final synthetic kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
 
 # direct methods
@@ -23,43 +23,43 @@
     .locals 1
 
     .prologue
-    .line 835
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->iSU:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    .line 844
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
-    .line 836
+    .line 845
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/e;-><init>(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
 
-    .line 837
+    .line 846
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/d;)Z
+.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 2
 
     .prologue
-    .line 841
-    check-cast p1, Lcom/tencent/mm/d/a/fo;
+    .line 850
+    check-cast p1, Lcom/tencent/mm/d/a/is;
 
-    .line 842
-    iget-object v0, p1, Lcom/tencent/mm/d/a/fo;->aCj:Lcom/tencent/mm/d/a/fo$a;
+    .line 851
+    iget-object v0, p1, Lcom/tencent/mm/d/a/is;->aEK:Lcom/tencent/mm/d/a/is$a;
 
-    iget v0, v0, Lcom/tencent/mm/d/a/fo$a;->aqq:I
+    iget v0, v0, Lcom/tencent/mm/d/a/is$a;->aou:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 849
+    .line 858
     :goto_0
     const/4 v0, 0x0
 
     return v0
 
-    .line 844
+    .line 853
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->iSU:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
     const/16 v1, 0x3ed
 
@@ -67,9 +67,9 @@
 
     goto :goto_0
 
-    .line 848
+    .line 857
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->iSU:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChatFooterCustom$a;->kRP:Lcom/tencent/mm/ui/chatting/ChatFooterCustom;
 
     const/16 v1, 0x3ee
 
@@ -77,7 +77,7 @@
 
     goto :goto_0
 
-    .line 842
+    .line 851
     nop
 
     :pswitch_data_0

@@ -4,13 +4,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.modelsearch.h;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.modelsearch.f;
+import com.tencent.mm.modelsearch.m;
 
-public final class e$b
+public class e$b
   extends a.b
 {
   public e$b(e parame)
@@ -18,28 +19,77 @@ public final class e$b
     super(parame);
   }
   
-  public final View a(Context paramContext, ViewGroup paramViewGroup)
+  public View a(Context paramContext, ViewGroup paramViewGroup)
   {
-    paramContext = LayoutInflater.from(paramContext).inflate(a.k.select_ui_listcontactitem, paramViewGroup, false);
-    paramViewGroup = (e.a)jiA.jiz;
-    ciI = ((ImageView)paramContext.findViewById(a.i.avatar_iv));
-    cpL = ((TextView)paramContext.findViewById(a.i.title_tv));
-    cwo = ((TextView)paramContext.findViewById(a.i.desc_tv));
-    cwo.setVisibility(8);
-    paramContext.setTag(paramViewGroup);
-    return paramContext;
+    if (com.tencent.mm.aw.a.da(paramContext)) {}
+    for (paramContext = LayoutInflater.from(paramContext).inflate(2131363040, paramViewGroup, false);; paramContext = LayoutInflater.from(paramContext).inflate(2131363057, paramViewGroup, false))
+    {
+      paramViewGroup = (e.a)lnb.awR();
+      czS = ((ImageView)paramContext.findViewById(2131165293));
+      cNT = ((TextView)paramContext.findViewById(2131165340));
+      cOd = ((TextView)paramContext.findViewById(2131165341));
+      cMt = paramContext.findViewById(2131167176);
+      czW = ((CheckBox)paramContext.findViewById(2131165695));
+      paramContext.setTag(paramViewGroup);
+      return paramContext;
+    }
   }
   
-  public final void a(Context paramContext, a.a parama, a parama1, boolean paramBoolean1, boolean paramBoolean2)
+  public void a(Context paramContext, a.a parama, a parama1, boolean paramBoolean1, boolean paramBoolean2)
   {
-    paramContext = (e)parama1;
     parama = (e.a)parama;
-    h.a(ctu, cpL);
-    com.tencent.mm.pluginsdk.ui.a.b.b(ciI, username);
+    parama1 = (e)parama1;
+    if ((username != null) && (username.length() > 0))
+    {
+      com.tencent.mm.pluginsdk.ui.a.b.b(czS, username);
+      f.a(cKS, cNT);
+      f.a(ghW, cOd);
+      if (!lnb.lkT) {
+        break label213;
+      }
+      if (!paramBoolean1) {
+        break label193;
+      }
+      czW.setChecked(true);
+      czW.setEnabled(false);
+      label93:
+      czW.setVisibility(0);
+      label101:
+      if (!lnb.cLD) {
+        break label225;
+      }
+      cMt.setBackgroundResource(2130970303);
+    }
+    for (;;)
+    {
+      if (cId.field_deleteFlag == 1)
+      {
+        cOd.setVisibility(0);
+        cOd.setText(paramContext.getString(2131428346));
+      }
+      if (lnb.cNY != null) {
+        m.b(lnb.aEy, lnb.cNY, 1);
+      }
+      return;
+      czS.setImageResource(2130970523);
+      break;
+      label193:
+      czW.setChecked(paramBoolean2);
+      czW.setEnabled(true);
+      break label93;
+      label213:
+      czW.setVisibility(8);
+      break label101;
+      label225:
+      cMt.setBackgroundResource(2130970354);
+    }
   }
   
-  public final boolean aQF()
+  public final boolean bhz()
   {
+    if (lnb.cNY != null) {
+      m.b(lnb.aEy, lnb.cNY, 1);
+    }
     return false;
   }
 }

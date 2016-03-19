@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ad
-  extends a.c
+  extends a.e
 {
   public a$ad()
   {
-    super("getH5PrepayRequest", "getH5PrepayRequest", 137, true);
+    super("deleteAccountSuccess", "deleteAccountSuccess", 144, false);
   }
 }
 

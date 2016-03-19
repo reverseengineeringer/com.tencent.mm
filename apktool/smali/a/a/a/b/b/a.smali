@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private final bto:I
+.field private final aiH:I
 
 .field private final buffer:[B
 
@@ -30,88 +30,13 @@
     .line 63
     add-int/lit8 v0, p3, 0x0
 
-    iput v0, p0, La/a/a/b/b/a;->bto:I
+    iput v0, p0, La/a/a/b/b/a;->aiH:I
 
     .line 64
     return-void
 .end method
 
-.method public static T(ILjava/lang/String;)I
-    .locals 3
-
-    .prologue
-    .line 216
-    if-nez p1, :cond_0
-
-    .line 217
-    const/4 v0, 0x0
-
-    .line 221
-    :goto_0
-    return v0
-
-    .line 220
-    :cond_0
-    :try_start_0
-    const-string/jumbo v0, "UTF-8"
-
-    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object v0
-
-    .line 221
-    invoke-static {p0}, La/a/a/b/b/a;->pS(I)I
-
-    move-result v1
-
-    array-length v2, v0
-
-    invoke-static {v2}, La/a/a/b/b/a;->pU(I)I
-
-    move-result v2
-
-    add-int/2addr v1, v2
-
-    array-length v0, v0
-    :try_end_0
-    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
-
-    add-int/2addr v0, v1
-
-    goto :goto_0
-
-    .line 223
-    :catch_0
-    move-exception v0
-
-    new-instance v0, Ljava/lang/IllegalStateException;
-
-    const-string/jumbo v1, "UTF-8 not supported."
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-.end method
-
-.method public static pS(I)I
-    .locals 1
-
-    .prologue
-    .line 315
-    const/4 v0, 0x0
-
-    invoke-static {p0, v0}, La/a/a/b/a;->bK(II)I
-
-    move-result v0
-
-    invoke-static {v0}, La/a/a/b/b/a;->pU(I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static pU(I)I
+.method public static aA(I)I
     .locals 1
 
     .prologue
@@ -171,9 +96,179 @@
     goto :goto_0
 .end method
 
+.method public static ay(I)I
+    .locals 1
+
+    .prologue
+    .line 315
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, La/a/a/b/a;->x(II)I
+
+    move-result v0
+
+    invoke-static {v0}, La/a/a/b/b/a;->aA(I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static e(ILjava/lang/String;)I
+    .locals 3
+
+    .prologue
+    .line 216
+    if-nez p1, :cond_0
+
+    .line 217
+    const/4 v0, 0x0
+
+    .line 221
+    :goto_0
+    return v0
+
+    .line 220
+    :cond_0
+    :try_start_0
+    const-string/jumbo v0, "UTF-8"
+
+    invoke-virtual {p1, v0}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object v0
+
+    .line 221
+    invoke-static {p0}, La/a/a/b/b/a;->ay(I)I
+
+    move-result v1
+
+    array-length v2, v0
+
+    invoke-static {v2}, La/a/a/b/b/a;->aA(I)I
+
+    move-result v2
+
+    add-int/2addr v1, v2
+
+    array-length v0, v0
+    :try_end_0
+    .catch Ljava/io/UnsupportedEncodingException; {:try_start_0 .. :try_end_0} :catch_0
+
+    add-int/2addr v0, v1
+
+    goto :goto_0
+
+    .line 223
+    :catch_0
+    move-exception v0
+
+    new-instance v0, Ljava/lang/IllegalStateException;
+
+    const-string/jumbo v1, "UTF-8 not supported."
+
+    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+.end method
+
 
 # virtual methods
-.method public final aR([B)V
+.method public final ax(I)V
+    .locals 4
+
+    .prologue
+    .line 267
+    int-to-byte v0, p1
+
+    iget-object v1, p0, La/a/a/b/b/a;->buffer:[B
+
+    iget v2, p0, La/a/a/b/b/a;->position:I
+
+    add-int/lit8 v3, v2, 0x1
+
+    iput v3, p0, La/a/a/b/b/a;->position:I
+
+    aput-byte v0, v1, v2
+
+    .line 268
+    return-void
+.end method
+
+.method public final az(I)V
+    .locals 1
+
+    .prologue
+    .line 324
+    :goto_0
+    and-int/lit8 v0, p1, -0x80
+
+    if-nez v0, :cond_0
+
+    .line 325
+    invoke-virtual {p0, p1}, La/a/a/b/b/a;->ax(I)V
+
+    .line 326
+    return-void
+
+    .line 328
+    :cond_0
+    and-int/lit8 v0, p1, 0x7f
+
+    or-int/lit16 v0, v0, 0x80
+
+    invoke-virtual {p0, v0}, La/a/a/b/b/a;->ax(I)V
+
+    .line 329
+    ushr-int/lit8 p1, p1, 0x7
+
+    .line 323
+    goto :goto_0
+.end method
+
+.method public final k(J)V
+    .locals 4
+
+    .prologue
+    .line 354
+    :goto_0
+    const-wide/16 v0, -0x80
+
+    and-long/2addr v0, p1
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-nez v0, :cond_0
+
+    .line 355
+    long-to-int v0, p1
+
+    invoke-virtual {p0, v0}, La/a/a/b/b/a;->ax(I)V
+
+    .line 356
+    return-void
+
+    .line 358
+    :cond_0
+    long-to-int v0, p1
+
+    and-int/lit8 v0, v0, 0x7f
+
+    or-int/lit16 v0, v0, 0x80
+
+    invoke-virtual {p0, v0}, La/a/a/b/b/a;->ax(I)V
+
+    .line 359
+    const/4 v0, 0x7
+
+    ushr-long/2addr p1, v0
+
+    .line 353
+    goto :goto_0
+.end method
+
+.method public final l([B)V
     .locals 5
 
     .prologue
@@ -193,7 +288,7 @@
 
     if-eqz p1, :cond_0
 
-    iget v1, p0, La/a/a/b/b/a;->bto:I
+    iget v1, p0, La/a/a/b/b/a;->aiH:I
 
     iget v2, p0, La/a/a/b/b/a;->position:I
 
@@ -216,7 +311,7 @@
     goto :goto_0
 
     :cond_2
-    iget v1, p0, La/a/a/b/b/a;->bto:I
+    iget v1, p0, La/a/a/b/b/a;->aiH:I
 
     iget v2, p0, La/a/a/b/b/a;->position:I
 
@@ -232,11 +327,11 @@
 
     sub-int/2addr v0, v1
 
-    iget v1, p0, La/a/a/b/b/a;->bto:I
+    iget v1, p0, La/a/a/b/b/a;->aiH:I
 
     iput v1, p0, La/a/a/b/b/a;->position:I
 
-    iget v1, p0, La/a/a/b/b/a;->bto:I
+    iget v1, p0, La/a/a/b/b/a;->aiH:I
 
     if-gt v0, v1, :cond_0
 
@@ -249,112 +344,17 @@
     goto :goto_0
 .end method
 
-.method public final bL(II)V
+.method public final w(II)V
     .locals 1
 
     .prologue
     .line 310
-    invoke-static {p1, p2}, La/a/a/b/a;->bK(II)I
+    invoke-static {p1, p2}, La/a/a/b/a;->x(II)I
 
     move-result v0
 
-    invoke-virtual {p0, v0}, La/a/a/b/b/a;->pT(I)V
+    invoke-virtual {p0, v0}, La/a/a/b/b/a;->az(I)V
 
     .line 311
     return-void
-.end method
-
-.method public final da(J)V
-    .locals 4
-
-    .prologue
-    .line 354
-    :goto_0
-    const-wide/16 v0, -0x80
-
-    and-long/2addr v0, p1
-
-    const-wide/16 v2, 0x0
-
-    cmp-long v0, v0, v2
-
-    if-nez v0, :cond_0
-
-    .line 355
-    long-to-int v0, p1
-
-    invoke-virtual {p0, v0}, La/a/a/b/b/a;->pR(I)V
-
-    .line 356
-    return-void
-
-    .line 358
-    :cond_0
-    long-to-int v0, p1
-
-    and-int/lit8 v0, v0, 0x7f
-
-    or-int/lit16 v0, v0, 0x80
-
-    invoke-virtual {p0, v0}, La/a/a/b/b/a;->pR(I)V
-
-    .line 359
-    const/4 v0, 0x7
-
-    ushr-long/2addr p1, v0
-
-    .line 353
-    goto :goto_0
-.end method
-
-.method public final pR(I)V
-    .locals 4
-
-    .prologue
-    .line 267
-    int-to-byte v0, p1
-
-    iget-object v1, p0, La/a/a/b/b/a;->buffer:[B
-
-    iget v2, p0, La/a/a/b/b/a;->position:I
-
-    add-int/lit8 v3, v2, 0x1
-
-    iput v3, p0, La/a/a/b/b/a;->position:I
-
-    aput-byte v0, v1, v2
-
-    .line 268
-    return-void
-.end method
-
-.method public final pT(I)V
-    .locals 1
-
-    .prologue
-    .line 324
-    :goto_0
-    and-int/lit8 v0, p1, -0x80
-
-    if-nez v0, :cond_0
-
-    .line 325
-    invoke-virtual {p0, p1}, La/a/a/b/b/a;->pR(I)V
-
-    .line 326
-    return-void
-
-    .line 328
-    :cond_0
-    and-int/lit8 v0, p1, 0x7f
-
-    or-int/lit16 v0, v0, 0x80
-
-    invoke-virtual {p0, v0}, La/a/a/b/b/a;->pR(I)V
-
-    .line 329
-    ushr-int/lit8 p1, p1, 0x7
-
-    .line 323
-    goto :goto_0
 .end method

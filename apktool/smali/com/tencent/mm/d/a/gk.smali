@@ -1,12 +1,24 @@
 .class public final Lcom/tencent/mm/d/a/gk;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
-# static fields
-.field public static atN:Z
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/d/a/gk$a;
+    }
+.end annotation
 
-.field public static atO:Z
+
+# static fields
+.field public static arQ:Z
+
+.field public static arR:Z
+
+
+# instance fields
+.field public aBz:Lcom/tencent/mm/d/a/gk$a;
 
 
 # direct methods
@@ -17,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/gk;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/gk;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/gk;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/gk;->arR:Z
 
     return-void
 .end method
@@ -30,15 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    const-string/jumbo v0, "ResendAllFailSnsMsg"
+    .line 13
+    new-instance v0, Lcom/tencent/mm/d/a/gk$a;
+
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/gk$a;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/d/a/gk;->aBz:Lcom/tencent/mm/d/a/gk$a;
+
+    .line 8
+    const-string/jumbo v0, "MMSwitchBackgroundPush"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/gk;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/gk;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/gk;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/gk;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/gk;->jUI:Z
 
     return-void
 .end method

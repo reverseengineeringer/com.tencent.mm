@@ -1,10 +1,12 @@
 package com.tencent.mm.protocal;
 
-import java.util.Set;
-
 public final class a$di
+  extends a.e
 {
-  public static Set hgf;
+  public a$di()
+  {
+    super("getBrandWCPayCreateCreditCardRequest", "get_wcpay_create_credit_card_request", 65, true);
+  }
 }
 
 /* Location:

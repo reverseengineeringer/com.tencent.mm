@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private gVE:I
+.field private iLY:I
 
-.field private gVF:I
+.field private iLZ:I
 
 
 # direct methods
@@ -20,12 +20,12 @@
     .line 31
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingContent;->gVE:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingContent;->iLY:I
 
     .line 60
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingContent;->gVF:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingContent;->iLZ:I
 
     .line 25
     return-void
@@ -41,12 +41,12 @@
     .line 31
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingContent;->gVE:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingContent;->iLY:I
 
     .line 60
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingContent;->gVF:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingContent;->iLZ:I
 
     .line 29
     return-void
@@ -107,7 +107,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 71
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
@@ -153,7 +153,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 56
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V

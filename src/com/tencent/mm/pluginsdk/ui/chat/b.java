@@ -1,22 +1,26 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemLongClickListener;
-
-final class b
-  implements AdapterView.OnItemLongClickListener
+public abstract interface b
 {
-  b(AppGrid paramAppGrid) {}
+  public abstract boolean aii();
   
-  public final boolean onItemLongClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
-  {
-    paramAdapterView = AppGrid.c(gTt);
-    int i = AppGrid.c(gTt).lB(AppGrid.a(gTt) * AppGrid.b(gTt) + paramInt);
-    AppGrid.d(gTt).jW(paramInt);
-    paramAdapterView.lC(i);
-    return true;
-  }
+  public abstract boolean aik();
+  
+  public abstract boolean ail();
+  
+  public abstract void aim();
+  
+  public abstract void ain();
+  
+  public abstract void aio();
+  
+  public abstract void ds(boolean paramBoolean);
+  
+  public abstract void onPause();
+  
+  public abstract boolean qW(String paramString);
+  
+  public abstract void release();
 }
 
 /* Location:

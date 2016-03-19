@@ -1,68 +1,64 @@
 package com.tencent.mm.protocal.b;
 
-import java.util.LinkedList;
-
 public final class yq
-  extends adk
+  extends com.tencent.mm.at.a
 {
-  public int hDd;
+  public String ehC;
+  public double gpJ;
+  public int major;
+  public int minor;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLO != null)
-      {
-        paramVarArgs.bN(1, hLO.kS());
-        hLO.a(paramVarArgs);
+      if (ehC != null) {
+        paramVarArgs.d(1, ehC);
       }
-      paramVarArgs.bM(2, hDd);
+      paramVarArgs.ci(2, major);
+      paramVarArgs.ci(3, minor);
+      paramVarArgs.a(4, gpJ);
       return 0;
     }
     if (paramInt == 1) {
-      if (hLO == null) {
-        break label308;
+      if (ehC == null) {
+        break label284;
       }
     }
-    label308:
-    for (paramInt = a.a.a.a.bJ(1, hLO.kS()) + 0;; paramInt = 0)
+    label284:
+    for (paramInt = a.a.a.b.b.a.e(1, ehC) + 0;; paramInt = 0)
     {
-      return paramInt + a.a.a.a.bI(2, hDd);
+      return paramInt + a.a.a.a.cg(2, major) + a.a.a.a.cg(3, minor) + (a.a.a.b.b.a.ay(4) + 8);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = adk.a(paramVarArgs); paramInt > 0; paramInt = adk.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
         break;
       }
       if (paramInt == 3)
       {
-        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
         yq localyq = (yq)paramVarArgs[1];
-        paramInt = ((Integer)paramVarArgs[2]).intValue();
-        switch (paramInt)
+        switch (((Integer)paramVarArgs[2]).intValue())
         {
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
-          int i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new cj();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (boolean bool = true; bool; bool = ((cj)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adk.a((a.a.a.a.a)localObject2))) {}
-            hLO = ((cj)localObject1);
-            paramInt += 1;
-          }
+          ehC = maU.readString();
+          return 0;
+        case 2: 
+          major = maU.jC();
+          return 0;
+        case 3: 
+          minor = maU.jC();
+          return 0;
         }
-        hDd = jMD.aVp();
+        gpJ = maU.readDouble();
         return 0;
       }
       return -1;

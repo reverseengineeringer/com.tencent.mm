@@ -8,10 +8,10 @@
     .locals 0
 
     .prologue
-    .line 31
+    .line 24
     invoke-static/range {p0 .. p6}, Lcom/tencent/mm/plugin/report/service/KVReportJni$KVReportJava2C;->reportIDKey(JJJZ)V
 
-    .line 32
+    .line 25
     return-void
 .end method
 
@@ -47,13 +47,13 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
@@ -68,7 +68,10 @@
     .locals 1
 
     .prologue
-    .line 35
+    .line 28
+    if-eqz p0, :cond_0
+
+    .line 29
     invoke-virtual {p0}, Ljava/util/ArrayList;->size()I
 
     move-result v0
@@ -83,6 +86,7 @@
 
     invoke-static {v0, p1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$KVReportJava2C;->reportListIDKey([Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;Z)V
 
-    .line 36
+    .line 31
+    :cond_0
     return-void
 .end method

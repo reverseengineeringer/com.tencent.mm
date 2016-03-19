@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field final synthetic jwc:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
+.field final synthetic lyT:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
 
-.field private jwd:I
+.field private lyU:I
 
-.field private jwe:I
+.field private lyV:I
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     .prologue
     .line 411
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;->jwc:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;->lyT:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
 
     .line 412
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -70,7 +70,7 @@
 
     .prologue
     .line 425
-    iget v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;->jwd:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;->lyU:I
 
     return v0
 .end method
@@ -121,7 +121,7 @@
     if-nez v1, :cond_1
 
     .line 448
-    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;->jwe:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;->lyV:I
 
     const/high16 v2, 0x40000000    # 2.0f
 
@@ -156,7 +156,7 @@
 
     .prologue
     .line 432
-    iput p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;->jwd:I
+    iput p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;->lyU:I
 
     .line 433
     return-void
@@ -167,7 +167,7 @@
 
     .prologue
     .line 436
-    iput p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;->jwe:I
+    iput p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$b;->lyV:I
 
     .line 437
     return-void

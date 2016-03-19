@@ -1,37 +1,42 @@
 package com.tencent.mm.g;
 
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class b
 {
-  public static int pB()
+  public static int pr()
   {
-    return bn.getInt(h.qa().getValue("InputLimitSessionTextMsg"), 8192) * 2;
+    return ay.getInt(h.pS().getValue("InputLimitSessionTextMsg"), 8192) * 2;
   }
   
-  public static int pC()
+  public static int ps()
   {
-    return bn.getInt(h.qa().getValue("InputLimitSNSObjectText"), 2000) * 2;
+    return ay.getInt(h.pS().getValue("InputLimitSNSObjectText"), 2000) * 2;
   }
   
-  public static int pD()
+  public static int pt()
   {
-    return bn.getInt(h.qa().getValue("SnsCommentMaxSize"), 1000) * 2;
+    return ay.getInt(h.pS().getValue("SnsCommentMaxSize"), 1000) * 2;
   }
   
-  public static int pE()
+  public static int pu()
   {
-    return bn.getInt(h.qa().getValue("InputLimitFavText"), 100000) * 2;
+    return ay.getInt(h.pS().getValue("InputLimitFavText"), 100000) * 2;
   }
   
-  public static int pF()
+  public static int pv()
   {
-    return bn.getInt(h.qa().getValue("InputLimitFavImageSize"), 26214400);
+    return ay.getInt(h.pS().getValue("InputLimitSendEmotionWidth"), 1024);
   }
   
-  public static String pG()
+  public static int pw()
   {
-    return h.qa().getValue("InputLimitForbiddenChar");
+    return ay.getInt(h.pS().getValue("InputLimitFavImageSize"), 26214400);
+  }
+  
+  public static String px()
+  {
+    return h.pS().getValue("InputLimitForbiddenChar");
   }
 }
 

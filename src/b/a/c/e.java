@@ -9,11 +9,11 @@ public final class e
 {
   public final String a(b.a.d.c paramc)
   {
-    b.a.g.d.d(paramc, "Cannot extract a header from a null object");
-    if ((jPy == null) || (jPy.size() <= 0)) {
+    b.a.g.d.c(paramc, "Cannot extract a header from a null object");
+    if ((mdK == null) || (mdK.size() <= 0)) {
       throw new b.a.b.c(paramc);
     }
-    paramc = jPy;
+    paramc = mdK;
     StringBuffer localStringBuffer = new StringBuffer(paramc.size() * 20);
     localStringBuffer.append("OAuth ");
     Iterator localIterator = paramc.keySet().iterator();

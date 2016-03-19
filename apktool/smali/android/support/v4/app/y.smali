@@ -1,8 +1,11 @@
-.class interface abstract Landroid/support/v4/app/y;
+.class final Landroid/support/v4/app/y;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract a(Landroid/support/v4/app/af$a;)V
-.end method
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/support/v4/app/y$a;
+    }
+.end annotation

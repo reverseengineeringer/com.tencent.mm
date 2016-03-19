@@ -1,28 +1,23 @@
 package com.tencent.mm.d.a;
 
-import android.app.Activity;
-import android.os.Bundle;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class eu
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aBx = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azw = new a();
   
   public eu()
   {
-    id = "NotifyDealQBarStrResult";
-    hXT = atO;
+    id = "GameMessageStorageNotify";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aBv = 0;
-    public Bundle aBy;
-    public String auC;
-    public Activity auD;
+    public String asJ;
   }
 }
 

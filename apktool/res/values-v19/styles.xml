@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="ec" parent="@style/eb">
+    <style name="hy" parent="@style/hx">
         <item name="android:windowIsTranslucent">true</item>
     </style>
-    <style name="ef" parent="@android:style/Animation">
-        <item name="android:activityOpenEnterAnimation">@anim/al</item>
-        <item name="android:activityOpenExitAnimation">@anim/i</item>
-        <item name="android:activityCloseEnterAnimation">@anim/i</item>
-        <item name="android:activityCloseExitAnimation">@anim/am</item>
+    <style name="hz" parent="@android:style/Animation">
+        <item name="android:activityOpenEnterAnimation">@anim/bo</item>
+        <item name="android:activityOpenExitAnimation">@anim/bj</item>
+        <item name="android:activityCloseEnterAnimation">@anim/bj</item>
+        <item name="android:activityCloseExitAnimation">@anim/bw</item>
     </style>
-    <style name="f7" parent="@style/eb">
+    <style name="i4" parent="@style/hx">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsTranslucent">true</item>

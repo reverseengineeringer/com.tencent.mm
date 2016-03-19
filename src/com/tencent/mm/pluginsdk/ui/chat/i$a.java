@@ -1,11 +1,8 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
-public final class i$a
+public abstract interface i$a
 {
-  private boolean gUu = true;
-  public boolean value = true;
-  
-  public i$a(i parami) {}
+  public abstract void AI(String paramString);
 }
 
 /* Location:

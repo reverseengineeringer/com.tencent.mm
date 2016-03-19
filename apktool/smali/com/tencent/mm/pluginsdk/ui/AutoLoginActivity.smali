@@ -20,39 +20,44 @@
     .locals 0
 
     .prologue
-    .line 18
+    .line 19
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
-    .line 22
+    .line 23
     return-void
 .end method
 
-.method private axj()Z
+
+# virtual methods
+.method public abstract a(Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;Landroid/content/Intent;)V
+.end method
+
+.method public akx()Z
     .locals 3
 
     .prologue
-    .line 89
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tq()Z
+    .line 92
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tI()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tu()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 90
+    .line 93
     :cond_0
     const-string/jumbo v0, "!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM="
 
     const-string/jumbo v1, "not login"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 92
+    .line 95
     new-instance v0, Landroid/content/Intent;
 
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -61,19 +66,19 @@
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 93
+    .line 96
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->putExtras(Landroid/content/Intent;)Landroid/content/Intent;
 
-    .line 94
+    .line 97
     const/high16 v1, 0x4000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 95
+    .line 98
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -82,20 +87,17 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
-
-    .line 96
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->getIntent()Landroid/content/Intent;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v1}, Landroid/content/Intent;->getType()Ljava/lang/String;
+    invoke-virtual {v2}, Landroid/content/Intent;->getType()Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v2
 
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 97
+    .line 99
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -106,17 +108,17 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 99
+    .line 101
     const-string/jumbo v1, "accountsync"
 
     const-string/jumbo v2, "com.tencent.mm.ui.account.SimpleLoginUI"
 
-    invoke-static {p0, v1, v2, v0}, Lcom/tencent/mm/aj/c;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {p0, v1, v2, v0}, Lcom/tencent/mm/ar/c;->b(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 100
+    .line 102
     const/4 v0, 0x1
 
-    .line 103
+    .line 105
     :goto_0
     return v0
 
@@ -126,16 +128,11 @@
     goto :goto_0
 .end method
 
-
-# virtual methods
-.method public abstract a(Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;Landroid/content/Intent;)V
-.end method
-
 .method public getLayoutId()I
     .locals 1
 
     .prologue
-    .line 108
+    .line 110
     const/4 v0, -0x1
 
     return v0
@@ -148,36 +145,41 @@
     .locals 4
 
     .prologue
-    .line 28
+    .line 29
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 30
+    .line 31
+    const/16 v0, 0x8
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->qa(I)V
+
+    .line 33
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 31
+    .line 34
     if-nez v0, :cond_0
 
-    .line 32
+    .line 35
     const-string/jumbo v0, "!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM="
 
     const-string/jumbo v1, "onCreate intent is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 33
+    .line 36
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->finish()V
 
-    .line 57
+    .line 60
     :goto_0
     return-void
 
-    .line 37
+    .line 40
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/aj/c;->aCZ()Z
+    invoke-static {}, Lcom/tencent/mm/ar/c;->aSY()Z
 
-    .line 38
+    .line 41
     const-string/jumbo v1, "!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM="
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -198,50 +200,50 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 45
+    .line 48
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->m(Landroid/content/Intent;)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 46
+    .line 49
     const-string/jumbo v0, "!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM="
 
     const-string/jumbo v1, "preLogin fail, no need to process"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 50
+    .line 53
     :cond_1
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->axj()Z
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->akx()Z
 
     move-result v1
 
     if-eqz v1, :cond_2
 
-    .line 51
+    .line 54
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->finish()V
 
-    .line 52
+    .line 55
     const-string/jumbo v0, "!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM="
 
     const-string/jumbo v1, "not login, go to SimpleLogin"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 55
+    .line 58
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tr()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tJ()Z
 
-    .line 56
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOz:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    .line 59
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFR:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->a(Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;Landroid/content/Intent;)V
 
@@ -252,30 +254,30 @@
     .locals 4
 
     .prologue
-    .line 61
+    .line 64
     if-nez p1, :cond_0
 
-    .line 84
+    .line 87
     :goto_0
     return-void
 
-    .line 65
+    .line 68
     :cond_0
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onNewIntent(Landroid/content/Intent;)V
 
-    .line 66
+    .line 69
     invoke-virtual {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->setIntent(Landroid/content/Intent;)V
 
-    .line 68
+    .line 71
     const-string/jumbo v0, "wizard_activity_result_code"
 
     const/4 v1, 0x0
 
-    invoke-static {p1, v0, v1}, Lcom/tencent/mm/sdk/platformtools/o;->a(Landroid/content/Intent;Ljava/lang/String;I)I
+    invoke-static {p1, v0, v1}, Lcom/tencent/mm/sdk/platformtools/p;->a(Landroid/content/Intent;Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 69
+    .line 72
     const-string/jumbo v1, "!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM="
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -292,12 +294,12 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 71
+    .line 74
     packed-switch v0, :pswitch_data_0
 
-    .line 82
+    .line 85
     const-string/jumbo v1, "!44@/B4Tb64lLpI/xOSY/Qa0zpFqn1CXTwg8ruffkMqdYiM="
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -314,38 +316,38 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOA:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
-
-    invoke-virtual {p0, v0, p1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->a(Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;Landroid/content/Intent;)V
-
-    goto :goto_0
-
-    .line 73
-    :pswitch_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOz:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    .line 86
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFS:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     invoke-virtual {p0, v0, p1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->a(Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;Landroid/content/Intent;)V
 
     goto :goto_0
 
     .line 76
-    :pswitch_1
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->axj()Z
-
-    goto :goto_0
-
-    .line 79
-    :pswitch_2
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOB:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    :pswitch_0
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFR:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     invoke-virtual {p0, v0, p1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->a(Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;Landroid/content/Intent;)V
 
     goto :goto_0
 
-    .line 71
+    .line 79
+    :pswitch_1
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->akx()Z
+
+    goto :goto_0
+
+    .line 82
+    :pswitch_2
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFT:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+
+    invoke-virtual {p0, v0, p1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity;->a(Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;Landroid/content/Intent;)V
+
+    goto :goto_0
+
+    .line 74
     :pswitch_data_0
     .packed-switch -0x1
         :pswitch_0

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic apd:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 448
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->apd:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 478
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)V
 
@@ -36,26 +36,26 @@
 
 
 # virtual methods
-.method final a(Lcom/tencent/mm/pluginsdk/ui/applet/ah;Lcom/tencent/mm/pluginsdk/ui/d/f;)Z
+.method final a(Lcom/tencent/mm/pluginsdk/ui/applet/g;Lcom/tencent/mm/pluginsdk/ui/d/b;)Z
     .locals 4
 
     .prologue
-    .line 471
-    iget v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/ah;->type:I
+    .line 501
+    iget v0, p1, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
 
     const/4 v1, 0x5
 
     if-ne v0, v1, :cond_1
 
-    .line 472
+    .line 502
     if-eqz p2, :cond_0
 
-    .line 473
-    invoke-interface {p2, p1}, Lcom/tencent/mm/pluginsdk/ui/d/f;->a(Lcom/tencent/mm/pluginsdk/ui/applet/ah;)Ljava/lang/Object;
+    .line 503
+    invoke-interface {p2, p1}, Lcom/tencent/mm/pluginsdk/ui/d/b;->a(Lcom/tencent/mm/pluginsdk/ui/applet/g;)Ljava/lang/Object;
 
-    .line 475
+    .line 505
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->apd:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v0, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v0}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -63,7 +63,7 @@
 
     new-instance v1, Landroid/content/Intent;
 
-    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->apd:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v2, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v2}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -73,12 +73,12 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/MMWizardActivity;->q(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/MMWizardActivity;->v(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 476
+    .line 506
     const/4 v0, 0x1
 
-    .line 481
+    .line 511
     :goto_0
     return v0
 
@@ -88,11 +88,11 @@
     goto :goto_0
 .end method
 
-.method final a(Ljava/lang/String;ZLcom/tencent/mm/pluginsdk/n;Landroid/os/Bundle;)Z
+.method final a(Ljava/lang/String;ZLcom/tencent/mm/pluginsdk/l;Landroid/os/Bundle;)Z
     .locals 3
 
     .prologue
-    .line 486
+    .line 516
     const-string/jumbo v0, "weixin://setting/bindphone"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -101,10 +101,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 487
+    .line 517
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->apd:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -114,8 +114,8 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 489
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->apd:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 519
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -125,25 +125,25 @@
 
     if-eqz v1, :cond_0
 
-    .line 490
+    .line 520
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 492
+    .line 522
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->apd:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BindMobileUrilSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/ui/MMWizardActivity;->q(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/ui/MMWizardActivity;->v(Landroid/content/Context;Landroid/content/Intent;)V
 
-    .line 493
+    .line 523
     const/4 v0, 0x1
 
-    .line 495
+    .line 525
     :goto_0
     return v0
 
@@ -153,13 +153,13 @@
     goto :goto_0
 .end method
 
-.method final aZ(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/ah;
+.method final bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 3
 
     .prologue
     const/4 v1, 0x0
 
-    .line 452
+    .line 482
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -172,14 +172,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 453
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;
+    .line 483
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/4 v2, 0x5
 
-    invoke-direct {v0, p1, v2, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/ah;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v2, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 456
+    .line 486
     :goto_0
     return-object v0
 
@@ -189,11 +189,11 @@
     goto :goto_0
 .end method
 
-.method final lL()[I
+.method final lg()[I
     .locals 3
 
     .prologue
-    .line 466
+    .line 496
     const/4 v0, 0x1
 
     new-array v0, v0, [I

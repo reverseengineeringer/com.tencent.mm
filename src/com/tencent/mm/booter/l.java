@@ -1,29 +1,37 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.model.al;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.Iterator;
-import java.util.List;
+import com.tencent.mm.ah.k;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.platformtools.t;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.storage.h;
 
-final class l
-  implements Runnable
+public final class l
 {
-  l(h paramh) {}
+  private static long bnd = 86400000L;
   
-  public final void run()
+  public static void run()
   {
-    Iterator localIterator = h.c(bcD).iterator();
-    while (localIterator.hasNext())
+    if (t.am(Long.valueOf(t.c((Long)ah.tD().rn().get(81944, null))).longValue()) * 1000L > bnd) {}
+    for (int i = 1;; i = 0)
     {
-      al localal = (al)localIterator.next();
-      if (localal != null)
+      if (i != 0)
       {
-        t.i("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", "on resume call back: %s", new Object[] { localal.toString() });
-        localal.onResume();
+        Object localObject = com.tencent.mm.al.c.Dd();
+        com.tencent.mm.al.c.De();
+        if ((!bXC) && (ah.tD().isSDCardAvailable()))
+        {
+          ((com.tencent.mm.al.c)localObject).release();
+          bXC = true;
+          ah.tE().a(159, (d)localObject);
+          localObject = new k(9);
+          ah.tE().d((j)localObject);
+        }
       }
+      return;
     }
-    h.d(bcD).cA(50L);
   }
 }
 

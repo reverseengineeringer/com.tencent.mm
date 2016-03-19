@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field bMB:J
-
-.field bMC:J
-
-.field bMD:J
+.field bLg:Z
 
 .field beginTime:J
 
-.field bxY:Z
+.field cdg:J
+
+.field cdh:J
+
+.field cdi:J
 
 .field endTime:J
 
@@ -42,15 +42,15 @@
     iput p1, p0, Lcom/tencent/mm/modelstat/b;->rtType:I
 
     .line 23
-    iput-boolean p2, p0, Lcom/tencent/mm/modelstat/b;->bxY:Z
+    iput-boolean p2, p0, Lcom/tencent/mm/modelstat/b;->bLg:Z
 
     .line 24
-    iput-wide p3, p0, Lcom/tencent/mm/modelstat/b;->bMB:J
+    iput-wide p3, p0, Lcom/tencent/mm/modelstat/b;->cdg:J
 
     .line 25
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/modelstat/b;->bMC:J
+    iput-wide v0, p0, Lcom/tencent/mm/modelstat/b;->cdh:J
 
     .line 26
     return-void
@@ -58,12 +58,12 @@
 
 
 # virtual methods
-.method public final Bn()V
+.method public final Dn()V
     .locals 4
 
     .prologue
     .line 29
-    iget-wide v0, p0, Lcom/tencent/mm/modelstat/b;->bMC:J
+    iget-wide v0, p0, Lcom/tencent/mm/modelstat/b;->cdh:J
 
     const-wide/16 v2, 0x0
 
@@ -72,39 +72,39 @@
     if-nez v0, :cond_0
 
     .line 30
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DM()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/tencent/mm/modelstat/b;->beginTime:J
 
     .line 31
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DN()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/modelstat/b;->bMD:J
+    iput-wide v0, p0, Lcom/tencent/mm/modelstat/b;->cdi:J
 
     .line 33
     :cond_0
-    iget-wide v0, p0, Lcom/tencent/mm/modelstat/b;->bMC:J
+    iget-wide v0, p0, Lcom/tencent/mm/modelstat/b;->cdh:J
 
     const-wide/16 v2, 0x1
 
     add-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/tencent/mm/modelstat/b;->bMC:J
+    iput-wide v0, p0, Lcom/tencent/mm/modelstat/b;->cdh:J
 
     .line 34
     return-void
 .end method
 
-.method public final Q(J)V
+.method public final ae(J)V
     .locals 6
 
     .prologue
     .line 37
-    iget-wide v0, p0, Lcom/tencent/mm/modelstat/b;->bMB:J
+    iget-wide v0, p0, Lcom/tencent/mm/modelstat/b;->cdg:J
 
     const-wide/16 v2, 0x0
 
@@ -113,22 +113,22 @@
     if-nez v0, :cond_0
 
     .line 42
-    iput-wide p1, p0, Lcom/tencent/mm/modelstat/b;->bMB:J
+    iput-wide p1, p0, Lcom/tencent/mm/modelstat/b;->cdg:J
 
     .line 45
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DN()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
 
     move-result-wide v0
 
-    iget-wide v2, p0, Lcom/tencent/mm/modelstat/b;->bMD:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelstat/b;->cdi:J
 
     sub-long/2addr v0, v2
 
-    iput-wide v0, p0, Lcom/tencent/mm/modelstat/b;->bMD:J
+    iput-wide v0, p0, Lcom/tencent/mm/modelstat/b;->cdi:J
 
     .line 46
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DM()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
 
     move-result-wide v0
 
@@ -159,7 +159,7 @@
 
     move-result-object v1
 
-    iget-wide v2, p0, Lcom/tencent/mm/modelstat/b;->bMB:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelstat/b;->cdg:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -171,7 +171,7 @@
 
     move-result-object v1
 
-    iget-wide v2, p0, Lcom/tencent/mm/modelstat/b;->bMC:J
+    iget-wide v2, p0, Lcom/tencent/mm/modelstat/b;->cdh:J
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -193,7 +193,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 48
     invoke-static {p0}, Lcom/tencent/mm/modelstat/WatchDogPushReceiver;->a(Lcom/tencent/mm/modelstat/b;)V

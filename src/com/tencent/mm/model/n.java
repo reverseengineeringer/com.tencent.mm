@@ -1,14 +1,52 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.ar.g.b;
-import com.tencent.mm.storage.h;
+import com.tencent.mm.storage.ad;
+import com.tencent.mm.storage.ak;
+import com.tencent.mm.storage.ak.a;
+import com.tencent.mm.storage.al;
 
-final class n
-  implements g.b
+public final class n
 {
-  public final String[] lW()
+  public static ad F(String paramString1, String paramString2)
   {
-    return h.aqU;
+    if ((paramString1 == null) || (paramString1.length() <= 0)) {}
+    for (;;)
+    {
+      return null;
+      ak localak = ah.tD().rv().FD(paramString1);
+      if (localak != null)
+      {
+        if (kgA == 1) {}
+        for (int i = 1; i != 0; i = 0)
+        {
+          String str2 = name;
+          String str1 = kgz.FC("");
+          paramString1 = "";
+          if (str1 != null) {
+            paramString1 = "" + str1.replace("@", "");
+          }
+          str1 = paramString1;
+          if (paramString2 != null) {
+            str1 = paramString1 + paramString2;
+          }
+          return new ad("@domain.android", str2, str1, kgz.FC(""), localak.PN(), true);
+        }
+      }
+    }
+  }
+  
+  public static ad eX(String paramString)
+  {
+    return new ad("@black.android", null, paramString, null, true, true);
+  }
+  
+  public static ad eY(String paramString)
+  {
+    ak localak = ah.tD().rv().FD("@t.qq.com");
+    if (localak == null) {
+      return null;
+    }
+    return new ad("@t.qq.com", null, paramString, null, localak.PN(), localak.aXX());
   }
 }
 

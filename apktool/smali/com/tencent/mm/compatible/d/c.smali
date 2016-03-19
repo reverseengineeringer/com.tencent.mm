@@ -19,9 +19,9 @@
     const/4 v2, 0x1
 
     .line 86
-    sget-object v0, Lcom/tencent/mm/compatible/d/q;->bin:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bgL:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/b;->bri:I
 
     if-ne v0, v2, :cond_0
 
@@ -42,14 +42,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 88
     new-instance v0, Lcom/tencent/mm/compatible/d/d;
 
     invoke-direct {v0}, Lcom/tencent/mm/compatible/d/d;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/compatible/d/d;->os()Lcom/tencent/mm/compatible/d/c$a$a;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/d;->oh()Lcom/tencent/mm/compatible/d/c$a$a;
 
     move-result-object v0
 
@@ -59,9 +59,9 @@
 
     .line 90
     :cond_0
-    sget-object v0, Lcom/tencent/mm/compatible/d/q;->bin:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bgD:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bra:Z
 
     if-eqz v0, :cond_1
 
@@ -82,14 +82,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 92
     new-instance v0, Lcom/tencent/mm/compatible/d/h;
 
     invoke-direct {v0}, Lcom/tencent/mm/compatible/d/h;-><init>()V
 
-    invoke-static {p1}, Lcom/tencent/mm/compatible/d/h;->bP(I)Lcom/tencent/mm/compatible/d/c$a$a;
+    invoke-static {p1}, Lcom/tencent/mm/compatible/d/h;->bQ(I)Lcom/tencent/mm/compatible/d/c$a$a;
 
     move-result-object v0
 
@@ -112,7 +112,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/compatible/d/i;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/compatible/d/i;->os()Lcom/tencent/mm/compatible/d/c$a$a;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/i;->oh()Lcom/tencent/mm/compatible/d/c$a$a;
 
     move-result-object v0
 
@@ -143,7 +143,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 99
     new-instance v0, Lcom/tencent/mm/compatible/d/f;
@@ -162,7 +162,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/compatible/d/e;-><init>()V
 
-    invoke-static {p1}, Lcom/tencent/mm/compatible/d/e;->bP(I)Lcom/tencent/mm/compatible/d/c$a$a;
+    invoke-static {p1}, Lcom/tencent/mm/compatible/d/e;->bQ(I)Lcom/tencent/mm/compatible/d/c$a$a;
 
     move-result-object v0
 
@@ -220,15 +220,15 @@
 
     .prologue
     .line 47
-    sget-object v0, Lcom/tencent/mm/compatible/d/q;->bin:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bgD:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bra:Z
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/tencent/mm/compatible/d/q;->bin:Lcom/tencent/mm/compatible/d/b;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->bgJ:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/compatible/d/b;->brg:Z
 
     if-eqz v0, :cond_0
 
@@ -257,7 +257,7 @@
     goto :goto_0
 .end method
 
-.method public static oq()I
+.method public static of()I
     .locals 7
 
     .prologue
@@ -266,9 +266,9 @@
     const/4 v1, 0x0
 
     .line 54
-    sget-object v0, Lcom/tencent/mm/compatible/d/q;->bis:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bhy:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->brW:I
 
     if-ne v0, v6, :cond_0
 
@@ -314,7 +314,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 70
     :goto_2
@@ -330,7 +330,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v1, v0
 
@@ -349,16 +349,16 @@
     goto :goto_2
 .end method
 
-.method public static or()Z
+.method public static og()Z
     .locals 3
 
     .prologue
     const/4 v0, 0x1
 
     .line 75
-    sget-object v1, Lcom/tencent/mm/compatible/d/q;->bin:Lcom/tencent/mm/compatible/d/b;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsK:Lcom/tencent/mm/compatible/d/b;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/b;->bgL:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/b;->bri:I
 
     if-ne v1, v0, :cond_1
 

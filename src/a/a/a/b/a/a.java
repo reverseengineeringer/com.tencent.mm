@@ -5,36 +5,68 @@ import java.util.LinkedList;
 
 public final class a
 {
+  private int aiA = 0;
+  public int aiB;
+  public int aiC = 0;
+  private int aiD = Integer.MAX_VALUE;
+  private int aiG = 67108864;
+  public int aiz;
   public byte[] buffer;
-  public int fTs;
-  private int jMH = 0;
-  public int jMI;
-  private InputStream jMJ;
-  public int jMK = 0;
-  private int jML = 0;
-  private int jMM = Integer.MAX_VALUE;
-  private int jMN = 67108864;
+  private InputStream maY;
+  private int maZ = 0;
   
   public a(byte[] paramArrayOfByte, int paramInt)
   {
     buffer = paramArrayOfByte;
-    fTs = (paramInt + 0);
-    jMI = 0;
-    jMJ = null;
+    aiz = (paramInt + 0);
+    aiB = 0;
+    maY = null;
   }
   
-  private byte aVr()
+  private void av(int paramInt)
   {
-    if (jMI == fTs) {
-      gt(true);
+    if (paramInt < 0) {
+      throw b.boi();
+    }
+    if (maZ + aiB + paramInt > aiD)
+    {
+      av(aiD - maZ - aiB);
+      throw b.boh();
+    }
+    if (paramInt < aiz - aiB) {
+      aiB += paramInt;
+    }
+    for (;;)
+    {
+      return;
+      int i = aiz - aiB;
+      maZ += i;
+      aiB = 0;
+      aiz = 0;
+      while (i < paramInt)
+      {
+        if (maY == null) {}
+        for (int j = -1; j <= 0; j = (int)maY.skip(paramInt - i)) {
+          throw b.boh();
+        }
+        i += j;
+        maZ = (j + maZ);
+      }
+    }
+  }
+  
+  private byte jG()
+  {
+    if (aiB == aiz) {
+      iD(true);
     }
     byte[] arrayOfByte = buffer;
-    int i = jMI;
-    jMI = (i + 1);
+    int i = aiB;
+    aiB = (i + 1);
     return arrayOfByte[i];
   }
   
-  private int[] pO(int paramInt)
+  private int[] sK(int paramInt)
   {
     int j = buffer[paramInt];
     int i = paramInt + 1;
@@ -81,7 +113,7 @@ public final class a
     for (;;)
     {
       if (paramInt >= 5) {
-        throw b.aVu();
+        throw b.boj();
       }
       if (buffer[j] >= 0) {
         return new int[] { k, j + 1 };
@@ -90,225 +122,49 @@ public final class a
     }
   }
   
-  private void pQ(int paramInt)
+  public final byte[] au(int paramInt)
   {
     if (paramInt < 0) {
-      throw b.aVt();
+      throw b.boi();
     }
-    if (jML + jMI + paramInt > jMM)
+    if (maZ + aiB + paramInt > aiD)
     {
-      pQ(jMM - jML - jMI);
-      throw b.aVs();
+      av(aiD - maZ - aiB);
+      throw b.boh();
     }
-    if (paramInt < fTs - jMI) {
-      jMI += paramInt;
-    }
-    for (;;)
-    {
-      return;
-      int i = fTs - jMI;
-      jML += i;
-      jMI = 0;
-      fTs = 0;
-      while (i < paramInt)
-      {
-        if (jMJ == null) {}
-        for (int j = -1; j <= 0; j = (int)jMJ.skip(paramInt - i)) {
-          throw b.aVs();
-        }
-        i += j;
-        jML = (j + jML);
-      }
-    }
-  }
-  
-  public final int aVp()
-  {
-    int i = aVr();
-    if (i >= 0) {}
-    int k;
-    do
-    {
-      return i;
-      i &= 0x7F;
-      j = aVr();
-      if (j >= 0) {
-        return i | j << 7;
-      }
-      i |= (j & 0x7F) << 7;
-      j = aVr();
-      if (j >= 0) {
-        return i | j << 14;
-      }
-      i |= (j & 0x7F) << 14;
-      k = aVr();
-      if (k >= 0) {
-        return i | k << 21;
-      }
-      j = aVr();
-      k = i | (k & 0x7F) << 21 | j << 28;
-      i = k;
-    } while (j >= 0);
-    int j = 0;
-    for (;;)
-    {
-      if (j >= 5) {
-        throw b.aVu();
-      }
-      i = k;
-      if (aVr() >= 0) {
-        break;
-      }
-      j += 1;
-    }
-  }
-  
-  public final long aVq()
-  {
-    int i = 0;
-    long l = 0L;
-    for (;;)
-    {
-      if (i >= 64) {
-        throw b.aVu();
-      }
-      int j = aVr();
-      l |= (j & 0x7F) << i;
-      if ((j & 0x80) == 0) {
-        return l;
-      }
-      i += 7;
-    }
-  }
-  
-  public final boolean gt(boolean paramBoolean)
-  {
-    if (jMI < fTs) {
-      throw new IllegalStateException("refillBuffer() called when buffer wasn't empty.");
-    }
-    if (jML + fTs == jMM)
-    {
-      if (paramBoolean) {
-        throw b.aVs();
-      }
-      return false;
-    }
-    jML += fTs;
-    jMI = 0;
-    if (jMJ == null) {}
-    for (int i = -1;; i = jMJ.read(buffer))
-    {
-      fTs = i;
-      if (fTs != -1) {
-        break label117;
-      }
-      fTs = 0;
-      if (!paramBoolean) {
-        break;
-      }
-      throw b.aVs();
-    }
-    return false;
-    label117:
-    fTs += jMH;
-    i = jML + fTs;
-    if (i > jMM)
-    {
-      jMH = (i - jMM);
-      fTs -= jMH;
-    }
-    for (;;)
-    {
-      i = jML + fTs + jMH;
-      if ((i <= jMN) && (i >= 0)) {
-        break;
-      }
-      throw b.aVw();
-      jMH = 0;
-    }
-    return true;
-  }
-  
-  public final LinkedList pL(int paramInt)
-  {
-    LinkedList localLinkedList = new LinkedList();
-    int i = aVp();
-    try
-    {
-      byte[] arrayOfByte = new byte[i];
-      System.arraycopy(buffer, jMI, arrayOfByte, 0, i);
-      localLinkedList.add(arrayOfByte);
-      jMI = (i + jMI);
-      i = jMI;
-      if (jMI == fTs) {
-        return localLinkedList;
-      }
-    }
-    catch (OutOfMemoryError localOutOfMemoryError)
-    {
-      throw new OutOfMemoryError("alloc bytes:" + i);
-    }
-    Object localObject = pO(i);
-    for (i = localObject[0];; i = localObject[0])
-    {
-      if (a.a.a.b.a.pN(i) != paramInt) {}
-      do
-      {
-        return localLinkedList;
-        jMI = localObject[1];
-        i = aVp();
-        localObject = new byte[i];
-        System.arraycopy(buffer, jMI, localObject, 0, i);
-        localLinkedList.add(localObject);
-        jMI = (i + jMI);
-      } while (jMI == fTs);
-      localObject = pO(jMI);
-    }
-  }
-  
-  public final byte[] pP(int paramInt)
-  {
-    if (paramInt < 0) {
-      throw b.aVt();
-    }
-    if (jML + jMI + paramInt > jMM)
-    {
-      pQ(jMM - jML - jMI);
-      throw b.aVs();
-    }
-    if (paramInt <= fTs - jMI)
+    if (paramInt <= aiz - aiB)
     {
       localObject = new byte[paramInt];
-      System.arraycopy(buffer, jMI, localObject, 0, paramInt);
-      jMI += paramInt;
+      System.arraycopy(buffer, aiB, localObject, 0, paramInt);
+      aiB += paramInt;
       return (byte[])localObject;
     }
     if (paramInt < 2048)
     {
       localObject = new byte[paramInt];
-      i = fTs - jMI;
-      System.arraycopy(buffer, jMI, localObject, 0, i);
-      jMI = fTs;
-      gt(true);
+      i = aiz - aiB;
+      System.arraycopy(buffer, aiB, localObject, 0, i);
+      aiB = aiz;
+      iD(true);
       for (;;)
       {
-        if (paramInt - i <= fTs)
+        if (paramInt - i <= aiz)
         {
           System.arraycopy(buffer, 0, localObject, i, paramInt - i);
-          jMI = (paramInt - i);
+          aiB = (paramInt - i);
           return (byte[])localObject;
         }
-        System.arraycopy(buffer, 0, localObject, i, fTs);
-        i += fTs;
-        jMI = fTs;
-        gt(true);
+        System.arraycopy(buffer, 0, localObject, i, aiz);
+        i += aiz;
+        aiB = aiz;
+        iD(true);
       }
     }
-    int m = jMI;
-    int n = fTs;
-    jML += fTs;
-    jMI = 0;
-    fTs = 0;
+    int m = aiB;
+    int n = aiz;
+    maZ += aiz;
+    aiB = 0;
+    aiz = 0;
     Object localObject = new LinkedList();
     int i = paramInt - (n - m);
     byte[] arrayOfByte1;
@@ -335,11 +191,11 @@ public final class a
             i -= j;
             break;
           }
-          if (jMJ == null) {}
-          for (int k = -1; k == -1; k = jMJ.read(arrayOfByte1, j, arrayOfByte1.length - j)) {
-            throw b.aVs();
+          if (maY == null) {}
+          for (int k = -1; k == -1; k = maY.read(arrayOfByte1, j, arrayOfByte1.length - j)) {
+            throw b.boh();
           }
-          jML += k;
+          maZ += k;
           j += k;
         }
       }
@@ -350,35 +206,179 @@ public final class a
     }
   }
   
+  public final boolean iD(boolean paramBoolean)
+  {
+    if (aiB < aiz) {
+      throw new IllegalStateException("refillBuffer() called when buffer wasn't empty.");
+    }
+    if (maZ + aiz == aiD)
+    {
+      if (paramBoolean) {
+        throw b.boh();
+      }
+      return false;
+    }
+    maZ += aiz;
+    aiB = 0;
+    if (maY == null) {}
+    for (int i = -1;; i = maY.read(buffer))
+    {
+      aiz = i;
+      if (aiz != -1) {
+        break label117;
+      }
+      aiz = 0;
+      if (!paramBoolean) {
+        break;
+      }
+      throw b.boh();
+    }
+    return false;
+    label117:
+    aiz += aiA;
+    i = maZ + aiz;
+    if (i > aiD)
+    {
+      aiA = (i - aiD);
+      aiz -= aiA;
+    }
+    for (;;)
+    {
+      i = maZ + aiz + aiA;
+      if ((i <= aiG) && (i >= 0)) {
+        break;
+      }
+      throw b.bol();
+      aiA = 0;
+    }
+    return true;
+  }
+  
+  public final int jC()
+  {
+    int i = jG();
+    if (i >= 0) {}
+    int k;
+    do
+    {
+      return i;
+      i &= 0x7F;
+      j = jG();
+      if (j >= 0) {
+        return i | j << 7;
+      }
+      i |= (j & 0x7F) << 7;
+      j = jG();
+      if (j >= 0) {
+        return i | j << 14;
+      }
+      i |= (j & 0x7F) << 14;
+      k = jG();
+      if (k >= 0) {
+        return i | k << 21;
+      }
+      j = jG();
+      k = i | (k & 0x7F) << 21 | j << 28;
+      i = k;
+    } while (j >= 0);
+    int j = 0;
+    for (;;)
+    {
+      if (j >= 5) {
+        throw b.boj();
+      }
+      i = k;
+      if (jG() >= 0) {
+        break;
+      }
+      j += 1;
+    }
+  }
+  
+  public final long jD()
+  {
+    int i = 0;
+    long l = 0L;
+    for (;;)
+    {
+      if (i >= 64) {
+        throw b.boj();
+      }
+      int j = jG();
+      l |= (j & 0x7F) << i;
+      if ((j & 0x80) == 0) {
+        return l;
+      }
+      i += 7;
+    }
+  }
+  
   public final double readDouble()
   {
-    int i = aVr();
-    int j = aVr();
-    int k = aVr();
-    int m = aVr();
-    int n = aVr();
-    int i1 = aVr();
-    int i2 = aVr();
-    int i3 = aVr();
+    int i = jG();
+    int j = jG();
+    int k = jG();
+    int m = jG();
+    int n = jG();
+    int i1 = jG();
+    int i2 = jG();
+    int i3 = jG();
     long l = i;
     return Double.longBitsToDouble((j & 0xFF) << 8 | l & 0xFF | (k & 0xFF) << 16 | (m & 0xFF) << 24 | (n & 0xFF) << 32 | (i1 & 0xFF) << 40 | (i2 & 0xFF) << 48 | (i3 & 0xFF) << 56);
   }
   
   public final float readFloat()
   {
-    return Float.intBitsToFloat(aVr() & 0xFF | (aVr() & 0xFF) << 8 | (aVr() & 0xFF) << 16 | (aVr() & 0xFF) << 24);
+    return Float.intBitsToFloat(jG() & 0xFF | (jG() & 0xFF) << 8 | (jG() & 0xFF) << 16 | (jG() & 0xFF) << 24);
   }
   
   public final String readString()
   {
-    int i = aVp();
-    if ((i < fTs - jMI) && (i > 0))
+    int i = jC();
+    if ((i < aiz - aiB) && (i > 0))
     {
-      String str = new String(buffer, jMI, i, "UTF-8");
-      jMI = (i + jMI);
+      String str = new String(buffer, aiB, i, "UTF-8");
+      aiB = (i + aiB);
       return str;
     }
-    return new String(pP(i), "UTF-8");
+    return new String(au(i), "UTF-8");
+  }
+  
+  public final LinkedList sJ(int paramInt)
+  {
+    LinkedList localLinkedList = new LinkedList();
+    int i = jC();
+    try
+    {
+      byte[] arrayOfByte = new byte[i];
+      System.arraycopy(buffer, aiB, arrayOfByte, 0, i);
+      localLinkedList.add(arrayOfByte);
+      aiB = (i + aiB);
+      i = aiB;
+      if (aiB == aiz) {
+        return localLinkedList;
+      }
+    }
+    catch (OutOfMemoryError localOutOfMemoryError)
+    {
+      throw new OutOfMemoryError("alloc bytes:" + i);
+    }
+    Object localObject = sK(i);
+    for (i = localObject[0];; i = localObject[0])
+    {
+      if (a.a.a.b.a.aC(i) != paramInt) {}
+      do
+      {
+        return localLinkedList;
+        aiB = localObject[1];
+        i = jC();
+        localObject = new byte[i];
+        System.arraycopy(buffer, aiB, localObject, 0, i);
+        localLinkedList.add(localObject);
+        aiB = (i + aiB);
+      } while (aiB == aiz);
+      localObject = sK(aiB);
+    }
   }
 }
 

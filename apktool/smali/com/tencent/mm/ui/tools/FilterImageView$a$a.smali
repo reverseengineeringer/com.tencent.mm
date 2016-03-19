@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field cqb:Landroid/widget/TextView;
+.field cHA:Landroid/widget/TextView;
 
-.field jqp:Landroid/widget/ImageView;
+.field lvA:Landroid/graphics/Bitmap;
 
-.field jqq:Landroid/graphics/Bitmap;
+.field final synthetic lvB:Lcom/tencent/mm/ui/tools/FilterImageView$a;
 
-.field final synthetic jqr:Lcom/tencent/mm/ui/tools/FilterImageView$a;
+.field lvz:Landroid/widget/ImageView;
 
 
 # direct methods
@@ -29,8 +29,8 @@
     .locals 0
 
     .prologue
-    .line 401
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->jqr:Lcom/tencent/mm/ui/tools/FilterImageView$a;
+    .line 411
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->lvB:Lcom/tencent/mm/ui/tools/FilterImageView$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

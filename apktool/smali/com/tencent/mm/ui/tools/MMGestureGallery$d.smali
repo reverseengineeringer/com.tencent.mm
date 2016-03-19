@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aom()V
+.method public abstract aBX()V
 .end method

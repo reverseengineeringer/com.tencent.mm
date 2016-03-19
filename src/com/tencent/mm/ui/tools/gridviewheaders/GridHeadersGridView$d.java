@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools.gridviewheaders;
 
 public abstract interface GridHeadersGridView$d
 {
-  public abstract boolean aSB();
+  public abstract boolean biW();
 }
 
 /* Location:

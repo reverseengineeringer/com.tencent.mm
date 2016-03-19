@@ -1,25 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class du
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azU = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a axH = new a();
+  public b axI = new b();
   
   public du()
   {
-    id = "GiftCard";
-    hXT = atO;
+    id = "ExtVoiceMsgIdToFileName";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String azV;
-    public long azW;
-    public String azX;
+    public long avg;
+  }
+  
+  public static final class b
+  {
+    public String anC;
   }
 }
 

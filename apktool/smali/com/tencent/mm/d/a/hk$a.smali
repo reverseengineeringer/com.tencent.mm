@@ -15,9 +15,7 @@
 
 
 # instance fields
-.field public intent:Landroid/content/Intent;
-
-.field public username:Ljava/lang/String;
+.field public type:I
 
 
 # direct methods

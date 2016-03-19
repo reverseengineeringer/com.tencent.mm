@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class hb$b
 {
-  public int apL = 0;
+  public int errCode;
 }
 
 /* Location:

@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static ar(Landroid/content/Context;)V
+.method public static ay(Landroid/content/Context;)V
     .locals 3
 
     .prologue
@@ -48,7 +48,7 @@
 
     const-string/jumbo v1, "unable start activity AppsCheckReadPermission"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_1
     new-instance v0, Landroid/content/Intent;
@@ -74,7 +74,7 @@
 
     const-string/jumbo v1, "unable start activity APP_OPS_SETTINGS"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :try_start_2
     new-instance v0, Landroid/content/Intent;
@@ -100,12 +100,12 @@
 
     const-string/jumbo v1, "unable start activity AppControlSettingsActivity"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method private static bR(I)Z
+.method private static bS(I)Z
     .locals 9
 
     .prologue
@@ -124,7 +124,7 @@
 
     .line 147
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -202,7 +202,7 @@
 
     const/4 v6, 0x1
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
@@ -220,7 +220,7 @@
 
     const/4 v6, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
 
     move-result-object v7
 
@@ -255,7 +255,7 @@
 
     aput-object v0, v1, v2
 
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v2
 
@@ -279,7 +279,7 @@
 
     aput-object v0, v7, v2
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v3
 
@@ -303,7 +303,7 @@
 
     aput-object v0, v7, v2
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     :cond_1
     move-object v0, v3
@@ -327,7 +327,7 @@
 
     aput-object v0, v6, v2
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v3
 
@@ -340,7 +340,7 @@
     goto/16 :goto_0
 .end method
 
-.method public static oY()Z
+.method public static oQ()Z
     .locals 3
 
     .prologue
@@ -375,7 +375,7 @@
 
     :cond_1
     :goto_1
-    invoke-static {v0}, Lcom/tencent/mm/compatible/e/b;->bR(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/e/b;->bS(I)Z
 
     move-result v0
 
@@ -393,7 +393,7 @@
     goto :goto_1
 .end method
 
-.method public static oZ()Z
+.method public static oR()Z
     .locals 3
 
     .prologue
@@ -428,7 +428,7 @@
 
     :cond_1
     :goto_1
-    invoke-static {v0}, Lcom/tencent/mm/compatible/e/b;->bR(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/e/b;->bS(I)Z
 
     move-result v0
 
@@ -446,7 +446,7 @@
     goto :goto_1
 .end method
 
-.method public static pa()Z
+.method public static oS()Z
     .locals 9
     .annotation build Landroid/annotation/TargetApi;
         value = 0x13
@@ -466,7 +466,7 @@
     if-lt v0, v3, :cond_1
 
     .line 190
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -540,7 +540,7 @@
 
     const/4 v5, 0x1
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v6
 
@@ -558,7 +558,7 @@
 
     const/4 v5, 0x2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
 
     move-result-object v6
 
@@ -602,7 +602,7 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 214
     :cond_1
@@ -625,7 +625,7 @@
 
     aput-object v0, v7, v2
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v3
 
@@ -649,7 +649,7 @@
 
     aput-object v0, v7, v2
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v3
 
@@ -678,7 +678,7 @@
 
     aput-object v0, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_2
 .end method

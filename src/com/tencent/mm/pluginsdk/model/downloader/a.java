@@ -1,60 +1,121 @@
 package com.tencent.mm.pluginsdk.model.downloader;
 
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.Iterator;
 import java.util.Vector;
 
 public final class a
 {
-  private static Vector gMX = new Vector();
-  private static r gMY;
+  private static Vector iCf = new Vector();
+  private static k iCg;
   
-  public static void a(r paramr)
+  public static void a(k paramk)
   {
-    if ((paramr != null) && (!gMX.contains(paramr))) {
-      gMX.add(paramr);
+    if ((paramk != null) && (!iCf.contains(paramk))) {
+      iCf.add(paramk);
     }
   }
   
-  public static void azr()
+  public static void aPZ()
   {
-    gMY = null;
+    iCg = null;
   }
   
-  public static void b(r paramr)
+  public static void b(k paramk)
   {
-    if ((gMX != null) && (paramr != null)) {
-      gMX.remove(paramr);
+    if ((iCf != null) && (paramk != null)) {
+      iCf.remove(paramk);
     }
   }
   
-  public static void c(r paramr)
+  public static void c(k paramk)
   {
-    gMY = paramr;
+    iCg = paramk;
   }
   
-  public final void cg(long paramLong)
+  public final void cX(final long paramLong)
   {
-    t.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskRemoved: %d", new Object[] { Long.valueOf(paramLong) });
-    ad.g(new c(this, paramLong));
+    u.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskRemoved: %d", new Object[] { Long.valueOf(paramLong) });
+    ab.j(new Runnable()
+    {
+      public final void run()
+      {
+        if (a.aQa() != null)
+        {
+          Iterator localIterator = a.aQa().iterator();
+          while (localIterator.hasNext()) {
+            ((k)localIterator.next()).onTaskRemoved(paramLong);
+          }
+        }
+        if (a.aQb() != null) {
+          a.aQb().onTaskRemoved(paramLong);
+        }
+      }
+    });
   }
   
-  public final void ch(long paramLong)
+  public final void cY(final long paramLong)
   {
-    t.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskFailed: %d", new Object[] { Long.valueOf(paramLong) });
-    ad.g(new e(this, paramLong));
+    u.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskFailed: %d", new Object[] { Long.valueOf(paramLong) });
+    ab.j(new Runnable()
+    {
+      public final void run()
+      {
+        if (a.aQa() != null)
+        {
+          Iterator localIterator = a.aQa().iterator();
+          while (localIterator.hasNext()) {
+            ((k)localIterator.next()).onTaskFailed(paramLong);
+          }
+        }
+        if (a.aQb() != null) {
+          a.aQb().onTaskFailed(paramLong);
+        }
+      }
+    });
   }
   
-  public final void h(long paramLong, String paramString)
+  public final void k(final long paramLong, String paramString)
   {
-    t.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskStarted: %d, %s", new Object[] { Long.valueOf(paramLong), paramString });
-    ad.g(new b(this, paramLong, paramString));
+    u.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskStarted: %d, %s", new Object[] { Long.valueOf(paramLong), paramString });
+    ab.j(new Runnable()
+    {
+      public final void run()
+      {
+        if (a.aQa() != null)
+        {
+          Iterator localIterator = a.aQa().iterator();
+          while (localIterator.hasNext()) {
+            ((k)localIterator.next()).onTaskStarted(paramLong, dtx);
+          }
+        }
+        if (a.aQb() != null) {
+          a.aQb().onTaskStarted(paramLong, dtx);
+        }
+      }
+    });
   }
   
-  public final void i(long paramLong, String paramString)
+  public final void l(final long paramLong, String paramString)
   {
-    t.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskFinished: %d", new Object[] { Long.valueOf(paramLong) });
-    ad.g(new d(this, paramLong, paramString));
+    u.i("!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A==", "notifyTaskFinished: %d", new Object[] { Long.valueOf(paramLong) });
+    ab.j(new Runnable()
+    {
+      public final void run()
+      {
+        if (a.aQa() != null)
+        {
+          Iterator localIterator = a.aQa().iterator();
+          while (localIterator.hasNext()) {
+            ((k)localIterator.next()).c(paramLong, dtx);
+          }
+        }
+        if (a.aQb() != null) {
+          a.aQb().c(paramLong, dtx);
+        }
+      }
+    });
   }
 }
 

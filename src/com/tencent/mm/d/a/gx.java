@@ -1,29 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class gx
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEc = new a();
-  public b aEd = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aCo = new a();
   
   public gx()
   {
-    id = "SaveBankLogo";
-    hXT = atO;
+    id = "NetSceneGetChatroomMemberDetail";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public byte[] aEe;
-  }
-  
-  public static final class b
-  {
-    public int ret = 0;
+    public boolean aBY = false;
+    public String aCm;
+    public int aCp;
   }
 }
 

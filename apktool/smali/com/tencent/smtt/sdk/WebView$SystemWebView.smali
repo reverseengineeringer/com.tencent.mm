@@ -20,16 +20,29 @@
 
 # direct methods
 .method public constructor <init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;)V
+    .locals 1
+
+    .prologue
+    .line 2621
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    .line 2622
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 3
 
     .prologue
-    .line 1785
+    .line 2624
     iput-object p1, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    .line 1786
-    invoke-direct {p0, p2}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
+    .line 2625
+    invoke-direct {p0, p2, p3}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 1792
+    .line 2631
     invoke-static {p1}, Lcom/tencent/smtt/sdk/WebView;->b(Lcom/tencent/smtt/sdk/WebView;)Landroid/content/Context;
 
     move-result-object v0
@@ -40,7 +53,7 @@
 
     invoke-virtual {v0}, Lcom/tencent/smtt/sdk/CookieSyncManager;->startSync()V
 
-    .line 1796
+    .line 2635
     :try_start_0
     const-string/jumbo v0, "android.webkit.WebViewWorker"
 
@@ -48,7 +61,7 @@
 
     move-result-object v0
 
-    .line 1797
+    .line 2636
     const-string/jumbo v1, "getHandler"
 
     const/4 v2, 0x0
@@ -59,12 +72,12 @@
 
     move-result-object v0
 
-    .line 1798
+    .line 2637
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 1800
+    .line 2639
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -77,7 +90,7 @@
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 1801
+    .line 2640
     invoke-virtual {v0}, Landroid/os/Handler;->getLooper()Landroid/os/Looper;
 
     move-result-object v0
@@ -86,16 +99,21 @@
 
     move-result-object v0
 
-    .line 1802
+    .line 2641
     new-instance v1, Lcom/tencent/smtt/sdk/SQLiteUncaughtExceptionHandler;
 
     invoke-direct {v1}, Lcom/tencent/smtt/sdk/SQLiteUncaughtExceptionHandler;-><init>()V
 
     invoke-virtual {v0, v1}, Ljava/lang/Thread;->setUncaughtExceptionHandler(Ljava/lang/Thread$UncaughtExceptionHandler;)V
+
+    .line 2642
+    const/4 v0, 0x1
+
+    sput-boolean v0, Lcom/tencent/smtt/sdk/WebView;->mSysWebviewCreated:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1808
+    .line 2648
     :goto_0
     return-void
 
@@ -111,25 +129,25 @@
     .locals 1
 
     .prologue
-    .line 1829
+    .line 2682
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
     if-eqz v0, :cond_0
 
-    .line 1830
+    .line 2683
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
-    invoke-interface {v0}, Lcom/tencent/smtt/sdk/ad;->axF()V
+    invoke-interface {v0}, Lcom/tencent/smtt/sdk/x;->aNA()V
 
-    .line 1835
+    .line 2688
     :goto_0
     return-void
 
-    .line 1833
+    .line 2686
     :cond_0
     invoke-super {p0}, Landroid/webkit/WebView;->computeScroll()V
 
@@ -140,44 +158,44 @@
     .locals 1
 
     .prologue
-    .line 1875
+    .line 2728
     :try_start_0
     invoke-super {p0, p1}, Landroid/webkit/WebView;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 1878
-    invoke-static {}, Lcom/tencent/smtt/sdk/WebView;->aLG()Z
+    .line 2731
+    invoke-static {}, Lcom/tencent/smtt/sdk/WebView;->bme()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/smtt/sdk/WebView;->aUU()Landroid/graphics/Paint;
+    invoke-static {}, Lcom/tencent/smtt/sdk/WebView;->bmf()Landroid/graphics/Paint;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1880
+    .line 2733
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1881
-    invoke-static {}, Lcom/tencent/smtt/sdk/WebView;->aUU()Landroid/graphics/Paint;
+    .line 2734
+    invoke-static {}, Lcom/tencent/smtt/sdk/WebView;->bmf()Landroid/graphics/Paint;
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->drawPaint(Landroid/graphics/Paint;)V
 
-    .line 1882
+    .line 2735
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1888
+    .line 2741
     :cond_0
     :goto_0
     return-void
 
-    .line 1887
+    .line 2740
     :catch_0
     move-exception v0
 
@@ -188,23 +206,23 @@
     .locals 1
 
     .prologue
-    .line 1941
+    .line 2794
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
     if-eqz v0, :cond_0
 
-    .line 1942
+    .line 2795
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/ad;->q(Landroid/view/MotionEvent;)Z
+    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/x;->p(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 1945
+    .line 2798
     :goto_0
     return v0
 
@@ -216,27 +234,51 @@
     goto :goto_0
 .end method
 
+.method public getSettings()Landroid/webkit/WebSettings;
+    .locals 1
+
+    .prologue
+    .line 2654
+    :try_start_0
+    invoke-super {p0}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 2658
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
     .prologue
-    .line 1956
+    .line 2809
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
     if-eqz v0, :cond_0
 
-    .line 1957
+    .line 2810
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/ad;->r(Landroid/view/MotionEvent;)Z
+    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/x;->q(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 1960
+    .line 2813
     :goto_0
     return v0
 
@@ -255,26 +297,26 @@
     .end annotation
 
     .prologue
-    .line 1923
+    .line 2776
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
     if-eqz v0, :cond_1
 
-    .line 1924
+    .line 2777
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/ad;->b(IIZZ)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/x;->b(IIZZ)V
 
-    .line 1930
+    .line 2783
     :cond_0
     :goto_0
     return-void
 
-    .line 1927
+    .line 2780
     :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -282,7 +324,7 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 1928
+    .line 2781
     invoke-super {p0, p1, p2, p3, p4}, Landroid/webkit/WebView;->onOverScrolled(IIZZ)V
 
     goto :goto_0
@@ -292,29 +334,29 @@
     .locals 1
 
     .prologue
-    .line 1813
+    .line 2666
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
     if-eqz v0, :cond_0
 
-    .line 1814
+    .line 2667
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
-    invoke-interface {v0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/ad;->j(IIII)V
+    invoke-interface {v0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/x;->k(IIII)V
 
-    .line 1820
+    .line 2673
     :goto_0
     return-void
 
-    .line 1817
+    .line 2670
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/webkit/WebView;->onScrollChanged(IIII)V
 
-    .line 1818
+    .line 2671
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
     invoke-static {v0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/WebView;->b(Lcom/tencent/smtt/sdk/WebView;IIII)V
@@ -331,38 +373,38 @@
     .end annotation
 
     .prologue
-    .line 1845
+    .line 2698
     invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->hasFocus()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1846
+    .line 2699
     invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->requestFocus()Z
 
-    .line 1848
+    .line 2701
     :cond_0
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
     if-eqz v0, :cond_1
 
-    .line 1849
+    .line 2702
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/ad;->p(Landroid/view/MotionEvent;)Z
+    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/x;->o(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 1860
+    .line 2713
     :goto_0
     return v0
 
-    .line 1856
+    .line 2709
     :cond_1
     :try_start_0
     invoke-super {p0, p1}, Landroid/webkit/WebView;->onTouchEvent(Landroid/view/MotionEvent;)Z
@@ -373,7 +415,7 @@
 
     goto :goto_0
 
-    .line 1860
+    .line 2713
     :catch_0
     move-exception v0
 
@@ -389,17 +431,17 @@
     .end annotation
 
     .prologue
-    .line 1896
+    .line 2749
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
     if-eqz v0, :cond_0
 
-    .line 1897
+    .line 2750
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
     move v1, p1
 
@@ -419,15 +461,15 @@
 
     move/from16 v9, p9
 
-    invoke-interface/range {v0 .. v9}, Lcom/tencent/smtt/sdk/ad;->a(IIIIIIIIZ)Z
+    invoke-interface/range {v0 .. v9}, Lcom/tencent/smtt/sdk/x;->a(IIIIIIIIZ)Z
 
     move-result v0
 
-    .line 1905
+    .line 2758
     :goto_0
     return v0
 
-    .line 1902
+    .line 2755
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -435,14 +477,14 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 1903
+    .line 2756
     invoke-super/range {p0 .. p9}, Landroid/webkit/WebView;->overScrollBy(IIIIIIIIZ)Z
 
     move-result v0
 
     goto :goto_0
 
-    .line 1905
+    .line 2758
     :cond_1
     const/4 v0, 0x0
 
@@ -453,10 +495,10 @@
     .locals 0
 
     .prologue
-    .line 1838
+    .line 2691
     invoke-super {p0}, Landroid/webkit/WebView;->computeScroll()V
 
-    .line 1839
+    .line 2692
     return-void
 .end method
 
@@ -464,7 +506,7 @@
     .locals 1
 
     .prologue
-    .line 1951
+    .line 2804
     invoke-super {p0, p1}, Landroid/webkit/WebView;->dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -476,7 +518,7 @@
     .locals 1
 
     .prologue
-    .line 1966
+    .line 2819
     invoke-super {p0, p1}, Landroid/webkit/WebView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -491,17 +533,17 @@
     .end annotation
 
     .prologue
-    .line 1935
+    .line 2788
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x9
 
     if-lt v0, v1, :cond_0
 
-    .line 1936
+    .line 2789
     invoke-super {p0, p1, p2, p3, p4}, Landroid/webkit/WebView;->onOverScrolled(IIZZ)V
 
-    .line 1937
+    .line 2790
     :cond_0
     return-void
 .end method
@@ -510,10 +552,10 @@
     .locals 0
 
     .prologue
-    .line 1824
+    .line 2677
     invoke-super {p0, p1, p2, p3, p4}, Landroid/webkit/WebView;->onScrollChanged(IIII)V
 
-    .line 1825
+    .line 2678
     return-void
 .end method
 
@@ -521,7 +563,7 @@
     .locals 1
 
     .prologue
-    .line 1866
+    .line 2719
     invoke-super {p0, p1}, Landroid/webkit/WebView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -536,19 +578,19 @@
     .end annotation
 
     .prologue
-    .line 1913
+    .line 2766
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x9
 
     if-lt v0, v1, :cond_0
 
-    .line 1914
+    .line 2767
     invoke-super/range {p0 .. p9}, Landroid/webkit/WebView;->overScrollBy(IIIIIIIIZ)Z
 
     move-result v0
 
-    .line 1916
+    .line 2769
     :goto_0
     return v0
 

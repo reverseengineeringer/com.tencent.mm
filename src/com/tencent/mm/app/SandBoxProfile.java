@@ -1,44 +1,48 @@
 package com.tencent.mm.app;
 
-import com.tencent.mm.booter.g;
+import com.tencent.mm.booter.c;
 import com.tencent.mm.compatible.loader.h;
-import com.tencent.mm.compatible.util.m;
-import com.tencent.mm.platformtools.ab;
+import com.tencent.mm.compatible.util.i;
+import com.tencent.mm.platformtools.r;
 import com.tencent.mm.protocal.MMProtocalJni;
 import com.tencent.mm.protocal.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 import com.tencent.mm.xlog.Xlog;
 
 public final class SandBoxProfile
   extends h
 {
-  public static final String anu = aa.getPackageName() + ":sandbox";
+  public static final String alg = y.getPackageName() + ":sandbox";
   
-  public final void bg() {}
+  public final void aQ() {}
   
   public final void onCreate()
   {
-    m.a("stlport_shared", SandBoxProfile.class.getClassLoader());
-    g localg = g.ae(aa.getContext());
-    m.pm();
+    i.b("stlport_shared", SandBoxProfile.class.getClassLoader());
+    c localc = c.an(y.getContext());
+    i.setupBrokenLibraryHandler();
     Xlog.init();
-    m.a("MMProtocalJni", SandBoxProfile.class.getClassLoader());
-    MMProtocalJni.setClientPackVersion(b.hgo);
+    i.b("MMProtocalJni", SandBoxProfile.class.getClassLoader());
+    MMProtocalJni.setClientPackVersion(b.iUf);
     try
     {
-      localg.cs("SANDBOX");
-      ab.bWb = bn.a(localg.ct(".com.tencent.mm.debug.test.network.simulate_down_fault"), false);
-      t.i("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "Test.simulateDownFault = " + ab.bWb);
+      localc.cv("SANDBOX");
+      r.cna = ay.a(localc.cw(".com.tencent.mm.debug.test.network.simulate_down_fault"), false);
+      u.i("!32@/B4Tb64lLpKDiUa1siRPtt5j20lPwojX", "Test.simulateDownFault = " + r.cna);
+      MMApplicationWrapper.a(btM);
       return;
     }
-    catch (Error localError) {}
+    catch (Error localError)
+    {
+      for (;;) {}
+    }
   }
   
   public final String toString()
   {
-    return anu;
+    return alg;
   }
 }
 

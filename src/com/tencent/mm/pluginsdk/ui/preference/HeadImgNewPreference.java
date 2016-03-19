@@ -8,22 +8,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
 import com.tencent.mm.pluginsdk.ui.a.b;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public final class HeadImgNewPreference
   extends Preference
 {
-  public ImageView eqt;
-  public View.OnClickListener gJC;
-  private View gQX;
-  private TextView gXY;
-  public String gXZ;
-  public boolean gYa = false;
-  private boolean gYb = false;
+  public ImageView fAr;
   private int height = -1;
+  private View iJI;
+  private TextView iOq;
+  public String iOr;
+  public boolean iOs = false;
+  private boolean iOt = false;
+  public View.OnClickListener iyh;
   
   public HeadImgNewPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -33,61 +31,61 @@ public final class HeadImgNewPreference
   public HeadImgNewPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference);
+    setLayoutResource(2131363286);
   }
   
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    if (eqt == null) {
-      eqt = ((ImageView)paramView.findViewById(a.i.image_headimg));
+    if (fAr == null) {
+      fAr = ((ImageView)paramView.findViewById(2131168999));
     }
-    if (gXY == null) {
-      gXY = ((TextView)paramView.findViewById(a.i.no_header_icon_tip));
+    if (iOq == null) {
+      iOq = ((TextView)paramView.findViewById(2131169126));
     }
-    if (gQX == null) {
-      gQX = paramView.findViewById(a.i.mask_header_icon);
+    if (iJI == null) {
+      iJI = paramView.findViewById(2131166948);
     }
-    if (gJC != null) {
-      gQX.setOnClickListener(gJC);
+    if (iyh != null) {
+      iJI.setOnClickListener(iyh);
     }
-    if (gXZ != null)
+    if (iOr != null)
     {
-      a.b.b(eqt, gXZ);
-      gXZ = null;
+      a.b.b(fAr, iOr);
+      iOr = null;
     }
-    if (!gYa)
+    if (!iOs)
     {
-      gQX.setVisibility(8);
-      gXY.setVisibility(0);
+      iJI.setVisibility(8);
+      iOq.setVisibility(0);
     }
     for (;;)
     {
-      paramView = (RelativeLayout)paramView.findViewById(a.i.mm_preference_ll_id);
+      paramView = (RelativeLayout)paramView.findViewById(2131166874);
       if (height != -1) {
         paramView.setMinimumHeight(height);
       }
       return;
-      gXY.setVisibility(8);
-      gQX.setVisibility(0);
+      iOq.setVisibility(8);
+      iJI.setVisibility(0);
     }
   }
   
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(a.i.content);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
     localViewGroup.removeAllViews();
-    if (gYb) {
-      View.inflate(mContext, a.k.more_tab_personal_info, localViewGroup);
+    if (iOt) {
+      View.inflate(mContext, 2131363028, localViewGroup);
     }
     for (;;)
     {
-      eqt = ((ImageView)paramViewGroup.findViewById(a.i.image_headimg));
-      gXY = ((TextView)paramViewGroup.findViewById(a.i.no_header_icon_tip));
-      gQX = paramViewGroup.findViewById(a.i.mask_header_icon);
+      fAr = ((ImageView)paramViewGroup.findViewById(2131168999));
+      iOq = ((TextView)paramViewGroup.findViewById(2131169126));
+      iJI = paramViewGroup.findViewById(2131166948);
       return paramViewGroup;
-      View.inflate(mContext, a.k.mm_preference_content_headimg_new, localViewGroup);
+      View.inflate(mContext, 2131363074, localViewGroup);
     }
   }
 }

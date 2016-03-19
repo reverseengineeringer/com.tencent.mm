@@ -3,9 +3,9 @@ package com.tencent.mm.sdk.a;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.a.e;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.a.g;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class a
 {
@@ -13,25 +13,25 @@ public final class a
   {
     if (paramContext == null)
     {
-      t.e("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send fail, invalid argument");
+      u.e("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send fail, invalid argument");
       return false;
     }
-    if (bn.iW(hXK))
+    if (ay.kz(jUy))
     {
-      t.e("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send fail, invalid targetPkgName, targetPkgName = " + hXK);
+      u.e("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send fail, invalid targetPkgName, targetPkgName = " + jUy);
       return false;
     }
-    if (bn.iW(hXL)) {
-      hXL = (hXK + ".wxapi.WXEntryActivity");
+    if (ay.kz(jUz)) {
+      jUz = (jUy + ".wxapi.WXEntryActivity");
     }
-    t.d("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send, targetPkgName = " + hXK + ", targetClassName = " + hXL);
+    u.d("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send, targetPkgName = " + jUy + ", targetClassName = " + jUz);
     Intent localIntent = new Intent();
-    localIntent.setClassName(hXK, hXL);
-    if (hXM != null) {
-      localIntent.putExtras(hXM);
+    localIntent.setClassName(jUy, jUz);
+    if (jUA != null) {
+      localIntent.putExtras(jUA);
     }
     String str1 = paramContext.getPackageName();
-    localIntent.putExtra("_mmessage_sdkVersion", 570556416);
+    localIntent.putExtra("_mmessage_sdkVersion", 587333634);
     localIntent.putExtra("_mmessage_appPackage", str1);
     localIntent.putExtra("_mmessage_content", content);
     String str2 = content;
@@ -39,10 +39,10 @@ public final class a
     if (str2 != null) {
       localStringBuffer.append(str2);
     }
-    localStringBuffer.append(570556416);
+    localStringBuffer.append(587333634);
     localStringBuffer.append(str1);
     localStringBuffer.append("mMcShCsTr");
-    localIntent.putExtra("_mmessage_checksum", e.n(localStringBuffer.toString().substring(1, 9).getBytes()).getBytes());
+    localIntent.putExtra("_mmessage_checksum", g.m(localStringBuffer.toString().substring(1, 9).getBytes()).getBytes());
     if (flags == -1) {
       localIntent.addFlags(268435456).addFlags(134217728);
     }
@@ -51,12 +51,12 @@ public final class a
       try
       {
         paramContext.startActivity(localIntent);
-        t.d("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send mm message, intent=" + localIntent);
+        u.d("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send mm message, intent=" + localIntent);
         return true;
       }
       catch (Exception paramContext)
       {
-        t.e("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send fail, ex = %s", new Object[] { paramContext.getMessage() });
+        u.e("!44@/B4Tb64lLpIcVJc/YDTTqHums7mERtmpK2BGs1em8ao=", "send fail, ex = %s", new Object[] { paramContext.getMessage() });
       }
       localIntent.setFlags(flags);
     }
@@ -67,9 +67,14 @@ public final class a
   {
     public String content;
     public int flags = -1;
-    public String hXK;
-    public String hXL;
-    public Bundle hXM;
+    public Bundle jUA;
+    public String jUy;
+    public String jUz;
+    
+    public final String toString()
+    {
+      return "targetPkgName:" + jUy + ", targetClassName:" + jUz + ", content:" + content + ", flags:" + flags + ", bundle:" + jUA;
+    }
   }
 }
 

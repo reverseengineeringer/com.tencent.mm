@@ -1,79 +1,71 @@
-.class final Lcom/tencent/smtt/sdk/c;
+.class public final Lcom/tencent/smtt/sdk/c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/smtt/sdk/y;
+
+# static fields
+.field private static lRe:Lcom/tencent/smtt/sdk/c;
+
+
+# instance fields
+.field public lRf:Landroid/webkit/MimeTypeMap;
 
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
+.method private constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 764
+    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 33
+    invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/c;->lRf:Landroid/webkit/MimeTypeMap;
+
+    .line 34
     return-void
 .end method
 
-
-# virtual methods
-.method public final mn(I)V
-    .locals 1
+.method public static declared-synchronized bli()Lcom/tencent/smtt/sdk/c;
+    .locals 2
 
     .prologue
-    .line 768
-    const/4 v0, 0x0
+    .line 130
+    const-class v1, Lcom/tencent/smtt/sdk/c;
 
-    sput-boolean v0, Lcom/tencent/smtt/sdk/o;->jKC:Z
+    monitor-enter v1
 
-    .line 769
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->aUd()Lcom/tencent/smtt/sdk/y;
+    :try_start_0
+    sget-object v0, Lcom/tencent/smtt/sdk/c;->lRe:Lcom/tencent/smtt/sdk/c;
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    if-eqz v0, :cond_0
+    .line 132
+    new-instance v0, Lcom/tencent/smtt/sdk/c;
 
-    .line 770
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->aUd()Lcom/tencent/smtt/sdk/y;
+    invoke-direct {v0}, Lcom/tencent/smtt/sdk/c;-><init>()V
 
-    move-result-object v0
+    sput-object v0, Lcom/tencent/smtt/sdk/c;->lRe:Lcom/tencent/smtt/sdk/c;
 
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/y;->mn(I)V
-
-    .line 771
+    .line 134
     :cond_0
-    return-void
-.end method
+    sget-object v0, Lcom/tencent/smtt/sdk/c;->lRe:Lcom/tencent/smtt/sdk/c;
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-.method public final mo(I)V
-    .locals 1
+    monitor-exit v1
 
-    .prologue
-    const/4 v0, 0x0
+    return-object v0
 
-    .line 776
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/QbSdk;->setTBSInstallingStatus(Z)V
+    .line 130
+    :catchall_0
+    move-exception v0
 
-    .line 778
-    sput-boolean v0, Lcom/tencent/smtt/sdk/o;->jKC:Z
+    monitor-exit v1
 
-    .line 779
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->aUd()Lcom/tencent/smtt/sdk/y;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 780
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->aUd()Lcom/tencent/smtt/sdk/y;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/y;->mo(I)V
-
-    .line 781
-    :cond_0
-    return-void
+    throw v0
 .end method

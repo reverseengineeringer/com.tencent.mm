@@ -1,6 +1,17 @@
-.class Lcom/tencent/kingkong/MergeCursor$1;
+.class final Lcom/tencent/kingkong/MergeCursor$1;
 .super Lcom/tencent/kingkong/DataSetObserver;
 .source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/kingkong/MergeCursor;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
 
 
 # instance fields
@@ -23,7 +34,7 @@
 
 
 # virtual methods
-.method public onChanged()V
+.method public final onChanged()V
     .locals 2
 
     .prologue
@@ -38,7 +49,7 @@
     return-void
 .end method
 
-.method public onInvalidated()V
+.method public final onInvalidated()V
     .locals 2
 
     .prologue

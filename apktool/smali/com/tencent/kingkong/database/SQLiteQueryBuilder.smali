@@ -38,7 +38,7 @@
     .line 41
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteQueryBuilder;->sLimitPattern:Ljava/util/regex/Pattern;
 
-    .line 42
+    .line 38
     return-void
 .end method
 

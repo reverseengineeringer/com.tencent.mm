@@ -5,12 +5,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import com.tencent.mm.h.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.w;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.i;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.chatting.ChattingUI;
@@ -24,12 +24,12 @@ class URISpanHandlerSet$EnterRoomUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     if (paramString.startsWith("weixin://jump/mainframe/"))
     {
@@ -37,33 +37,33 @@ class URISpanHandlerSet$EnterRoomUriSpanHandler
       if ((i >= 0) && (i < paramString.trim().length() - 1))
       {
         paramString = paramString.trim().substring(i + 1);
-        if (w.dh(paramString))
+        if (i.dn(paramString))
         {
-          paramn = ax.tl().ri().yM(paramString);
-          if ((paramn == null) || ((int)bkE == 0))
+          paraml = ah.tD().rq().Ep(paramString);
+          if ((paraml == null) || ((int)bvi == 0))
           {
-            paramn = new k();
-            paramn.setUsername(paramString);
-            ax.tl().ri().H(paramn);
+            paraml = new k();
+            paraml.setUsername(paramString);
+            ah.tD().rq().M(paraml);
           }
         }
-        paramString = new Intent(URISpanHandlerSet.a(apd), ChattingUI.class).putExtra("Chat_User", paramString).putExtra("Chat_Mode", 1);
-        if ((URISpanHandlerSet.a(apd) instanceof Service)) {
+        paramString = new Intent(URISpanHandlerSet.a(ang), ChattingUI.class).putExtra("Chat_User", paramString).putExtra("Chat_Mode", 1);
+        if ((URISpanHandlerSet.a(ang) instanceof Service)) {
           paramString.addFlags(268435456);
         }
-        URISpanHandlerSet.a(apd).startActivity(paramString);
+        URISpanHandlerSet.a(ang).startActivity(paramString);
         return true;
       }
     }
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[0];
   }

@@ -1,11 +1,64 @@
 package android.support.v7.internal.view.menu;
 
-import android.support.v4.view.h.b;
+import android.support.v4.view.d;
+import android.support.v4.view.d.b;
+import android.view.ActionProvider.VisibilityListener;
+import android.view.MenuItem;
+import android.view.View;
 
 final class j
-  implements h.b
+  extends i
 {
-  j(i parami) {}
+  j(MenuItem paramMenuItem)
+  {
+    super(paramMenuItem, false);
+  }
+  
+  final i.a b(d paramd)
+  {
+    return new a(paramd);
+  }
+  
+  final class a
+    extends i.a
+    implements d.b
+  {
+    ActionProvider.VisibilityListener mE;
+    
+    public a(d paramd)
+    {
+      super(paramd);
+    }
+    
+    public final boolean isVisible()
+    {
+      return true;
+    }
+    
+    public final View onCreateActionView(MenuItem paramMenuItem)
+    {
+      return mz.onCreateActionView();
+    }
+    
+    public final boolean overridesItemVisibility()
+    {
+      return false;
+    }
+    
+    public final void refreshVisibility() {}
+    
+    public final void setVisibilityListener(ActionProvider.VisibilityListener paramVisibilityListener)
+    {
+      mE = paramVisibilityListener;
+      d locald = mz;
+      if (paramVisibilityListener != null) {}
+      for (paramVisibilityListener = this;; paramVisibilityListener = null)
+      {
+        locald.a(paramVisibilityListener);
+        return;
+      }
+    }
+  }
 }
 
 /* Location:

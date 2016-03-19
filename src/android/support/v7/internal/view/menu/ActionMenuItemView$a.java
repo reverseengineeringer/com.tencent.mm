@@ -11,17 +11,17 @@ import java.util.Locale;
 final class ActionMenuItemView$a
   implements TransformationMethod
 {
-  private Locale gm;
+  private Locale fu;
   
   public ActionMenuItemView$a(ActionMenuItemView paramActionMenuItemView)
   {
-    gm = getContextgetResourcesgetConfigurationlocale;
+    fu = getContextgetResourcesgetConfigurationlocale;
   }
   
   public final CharSequence getTransformation(CharSequence paramCharSequence, View paramView)
   {
     if (paramCharSequence != null) {
-      return paramCharSequence.toString().toUpperCase(gm);
+      return paramCharSequence.toString().toUpperCase(fu);
     }
     return null;
   }

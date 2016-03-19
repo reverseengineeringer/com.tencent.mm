@@ -12,9 +12,9 @@
 
 
 # instance fields
-.field public bnZ:Landroid/content/Context;
+.field public bzN:Landroid/content/Context;
 
-.field public isu:Landroid/view/accessibility/AccessibilityManager;
+.field public krA:Landroid/view/accessibility/AccessibilityManager;
 
 
 # direct methods
@@ -26,10 +26,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 27
-    iput-object p1, p0, Lcom/tencent/mm/ui/a/a;->bnZ:Landroid/content/Context;
+    iput-object p1, p0, Lcom/tencent/mm/ui/a/a;->bzN:Landroid/content/Context;
 
     .line 28
-    iget-object v0, p0, Lcom/tencent/mm/ui/a/a;->bnZ:Landroid/content/Context;
+    iget-object v0, p0, Lcom/tencent/mm/ui/a/a;->bzN:Landroid/content/Context;
 
     const-string/jumbo v1, "accessibility"
 
@@ -39,7 +39,7 @@
 
     check-cast v0, Landroid/view/accessibility/AccessibilityManager;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/a/a;->isu:Landroid/view/accessibility/AccessibilityManager;
+    iput-object v0, p0, Lcom/tencent/mm/ui/a/a;->krA:Landroid/view/accessibility/AccessibilityManager;
 
     .line 29
     return-void
@@ -54,7 +54,7 @@
     const/4 v6, 0x1
 
     .line 161
-    iget-object v0, p0, Lcom/tencent/mm/ui/a/a;->isu:Landroid/view/accessibility/AccessibilityManager;
+    iget-object v0, p0, Lcom/tencent/mm/ui/a/a;->krA:Landroid/view/accessibility/AccessibilityManager;
 
     invoke-virtual {v0}, Landroid/view/accessibility/AccessibilityManager;->isEnabled()Z
 
@@ -69,7 +69,7 @@
 
     .line 165
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/a/a;->bnZ:Landroid/content/Context;
+    iget-object v0, p0, Lcom/tencent/mm/ui/a/a;->bzN:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
@@ -88,19 +88,19 @@
     invoke-direct {v0}, Lcom/tencent/mm/ui/a/b;-><init>()V
 
     .line 175
-    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/a/b;->Ax(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/a/b;->Gn(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
 
     .line 177
     if-lez p3, :cond_2
 
     .line 178
-    iget-object v1, p0, Lcom/tencent/mm/ui/a/a;->bnZ:Landroid/content/Context;
+    iget-object v1, p0, Lcom/tencent/mm/ui/a/a;->bzN:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$l;->conversation_item_desc_unread:I
+    const v2, 0x7f100013
 
     new-array v3, v6, [Ljava/lang/Object;
 
@@ -117,18 +117,18 @@
     move-result-object v1
 
     .line 179
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/a/b;->Ax(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/a/b;->Gn(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
 
     .line 182
     :cond_2
-    invoke-virtual {v0, p4}, Lcom/tencent/mm/ui/a/b;->Ax(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
+    invoke-virtual {v0, p4}, Lcom/tencent/mm/ui/a/b;->Gn(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
 
     move-result-object v1
 
-    invoke-virtual {v1, p5}, Lcom/tencent/mm/ui/a/b;->Ax(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
+    invoke-virtual {v1, p5}, Lcom/tencent/mm/ui/a/b;->Gn(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
 
     .line 184
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/a/b;->am(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/a/b;->an(Landroid/view/View;)V
 
     goto :goto_0
 .end method

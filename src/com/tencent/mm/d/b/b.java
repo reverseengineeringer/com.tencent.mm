@@ -2,49 +2,49 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class b
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aIa = "snsId".hashCode();
-  private static final int aIb = "userName".hashCode();
-  private static final int aIc = "localFlag".hashCode();
-  private static final int aId = "createTime".hashCode();
-  private static final int aIe = "head".hashCode();
-  private static final int aIf = "localPrivate".hashCode();
-  private static final int aIg = "type".hashCode();
-  private static final int aIh = "sourceType".hashCode();
-  private static final int aIi = "likeFlag".hashCode();
-  private static final int aIj = "pravited".hashCode();
-  private static final int aIk = "stringSeq".hashCode();
-  private static final int aIl = "content".hashCode();
-  private static final int aIm = "attrBuf".hashCode();
-  private static final int aIn = "postBuf".hashCode();
-  private static final int aIo = "adinfo".hashCode();
-  private static final int aIp = "adxml".hashCode();
-  private static final int aIq = "createAdTime".hashCode();
-  private static final int aIr = "exposureTime".hashCode();
-  private boolean aHI = true;
-  private boolean aHJ = true;
-  private boolean aHK = true;
-  private boolean aHL = true;
-  private boolean aHM = true;
-  private boolean aHN = true;
-  private boolean aHO = true;
-  private boolean aHP = true;
-  private boolean aHQ = true;
-  private boolean aHR = true;
-  private boolean aHS = true;
-  private boolean aHT = true;
-  private boolean aHU = true;
-  private boolean aHV = true;
-  private boolean aHW = true;
-  private boolean aHX = true;
-  private boolean aHY = true;
-  private boolean aHZ = true;
+  private static final int aLG = "rowid".hashCode();
+  private static final int aLZ;
+  public static final String[] aLn = new String[0];
+  private static final int aMa;
+  private static final int aMb;
+  private static final int aMc;
+  private static final int aMd;
+  private static final int aMe;
+  private static final int aMf;
+  private static final int aMg;
+  private static final int aMh;
+  private static final int aMi;
+  private static final int aMj;
+  private static final int aMk;
+  private static final int aMl;
+  private static final int aMm;
+  private static final int aMn;
+  private static final int aMo;
+  private static final int aMp;
+  private static final int aMq;
+  private boolean aLH = true;
+  private boolean aLI = true;
+  private boolean aLJ = true;
+  private boolean aLK = true;
+  private boolean aLL = true;
+  private boolean aLM = true;
+  private boolean aLN = true;
+  private boolean aLO = true;
+  private boolean aLP = true;
+  private boolean aLQ = true;
+  private boolean aLR = true;
+  private boolean aLS = true;
+  private boolean aLT = true;
+  private boolean aLU = true;
+  private boolean aLV = true;
+  private boolean aLW = true;
+  private boolean aLX = true;
+  private boolean aLY = true;
   public String field_adinfo;
   public String field_adxml;
   public byte[] field_attrBuf;
@@ -64,6 +64,28 @@ public abstract class b
   public int field_type;
   public String field_userName;
   
+  static
+  {
+    aLZ = "snsId".hashCode();
+    aMa = "userName".hashCode();
+    aMb = "localFlag".hashCode();
+    aMc = "createTime".hashCode();
+    aMd = "head".hashCode();
+    aMe = "localPrivate".hashCode();
+    aMf = "type".hashCode();
+    aMg = "sourceType".hashCode();
+    aMh = "likeFlag".hashCode();
+    aMi = "pravited".hashCode();
+    aMj = "stringSeq".hashCode();
+    aMk = "content".hashCode();
+    aMl = "attrBuf".hashCode();
+    aMm = "postBuf".hashCode();
+    aMn = "adinfo".hashCode();
+    aMo = "adxml".hashCode();
+    aMp = "createAdTime".hashCode();
+    aMq = "exposureTime".hashCode();
+  }
+  
   public void c(Cursor paramCursor)
   {
     String[] arrayOfString = paramCursor.getColumnNames();
@@ -77,7 +99,7 @@ public abstract class b
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aIa != k) {
+      if (aLZ != k) {
         break label60;
       }
       field_snsId = paramCursor.getLong(i);
@@ -88,105 +110,105 @@ public abstract class b
       break label20;
       break;
       label60:
-      if (aIb == k) {
+      if (aMa == k) {
         field_userName = paramCursor.getString(i);
-      } else if (aIc == k) {
+      } else if (aMb == k) {
         field_localFlag = paramCursor.getInt(i);
-      } else if (aId == k) {
+      } else if (aMc == k) {
         field_createTime = paramCursor.getInt(i);
-      } else if (aIe == k) {
+      } else if (aMd == k) {
         field_head = paramCursor.getInt(i);
-      } else if (aIf == k) {
+      } else if (aMe == k) {
         field_localPrivate = paramCursor.getInt(i);
-      } else if (aIg == k) {
+      } else if (aMf == k) {
         field_type = paramCursor.getInt(i);
-      } else if (aIh == k) {
+      } else if (aMg == k) {
         field_sourceType = paramCursor.getInt(i);
-      } else if (aIi == k) {
+      } else if (aMh == k) {
         field_likeFlag = paramCursor.getInt(i);
-      } else if (aIj == k) {
+      } else if (aMi == k) {
         field_pravited = paramCursor.getInt(i);
-      } else if (aIk == k) {
+      } else if (aMj == k) {
         field_stringSeq = paramCursor.getString(i);
-      } else if (aIl == k) {
+      } else if (aMk == k) {
         field_content = paramCursor.getBlob(i);
-      } else if (aIm == k) {
+      } else if (aMl == k) {
         field_attrBuf = paramCursor.getBlob(i);
-      } else if (aIn == k) {
+      } else if (aMm == k) {
         field_postBuf = paramCursor.getBlob(i);
-      } else if (aIo == k) {
+      } else if (aMn == k) {
         field_adinfo = paramCursor.getString(i);
-      } else if (aIp == k) {
+      } else if (aMo == k) {
         field_adxml = paramCursor.getString(i);
-      } else if (aIq == k) {
+      } else if (aMp == k) {
         field_createAdTime = paramCursor.getInt(i);
-      } else if (aIr == k) {
+      } else if (aMq == k) {
         field_exposureTime = paramCursor.getInt(i);
-      } else if (aHH == k) {
-        ibV = paramCursor.getLong(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aHI) {
+    if (aLH) {
       localContentValues.put("snsId", Long.valueOf(field_snsId));
     }
-    if (aHJ) {
+    if (aLI) {
       localContentValues.put("userName", field_userName);
     }
-    if (aHK) {
+    if (aLJ) {
       localContentValues.put("localFlag", Integer.valueOf(field_localFlag));
     }
-    if (aHL) {
+    if (aLK) {
       localContentValues.put("createTime", Integer.valueOf(field_createTime));
     }
-    if (aHM) {
+    if (aLL) {
       localContentValues.put("head", Integer.valueOf(field_head));
     }
-    if (aHN) {
+    if (aLM) {
       localContentValues.put("localPrivate", Integer.valueOf(field_localPrivate));
     }
-    if (aHO) {
+    if (aLN) {
       localContentValues.put("type", Integer.valueOf(field_type));
     }
-    if (aHP) {
+    if (aLO) {
       localContentValues.put("sourceType", Integer.valueOf(field_sourceType));
     }
-    if (aHQ) {
+    if (aLP) {
       localContentValues.put("likeFlag", Integer.valueOf(field_likeFlag));
     }
-    if (aHR) {
+    if (aLQ) {
       localContentValues.put("pravited", Integer.valueOf(field_pravited));
     }
-    if (aHS) {
+    if (aLR) {
       localContentValues.put("stringSeq", field_stringSeq);
     }
-    if (aHT) {
+    if (aLS) {
       localContentValues.put("content", field_content);
     }
-    if (aHU) {
+    if (aLT) {
       localContentValues.put("attrBuf", field_attrBuf);
     }
-    if (aHV) {
+    if (aLU) {
       localContentValues.put("postBuf", field_postBuf);
     }
-    if (aHW) {
+    if (aLV) {
       localContentValues.put("adinfo", field_adinfo);
     }
-    if (aHX) {
+    if (aLW) {
       localContentValues.put("adxml", field_adxml);
     }
-    if (aHY) {
+    if (aLX) {
       localContentValues.put("createAdTime", Integer.valueOf(field_createAdTime));
     }
-    if (aHZ) {
+    if (aLY) {
       localContentValues.put("exposureTime", Integer.valueOf(field_exposureTime));
     }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

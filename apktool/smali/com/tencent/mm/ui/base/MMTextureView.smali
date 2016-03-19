@@ -10,10 +10,26 @@
 
 
 # instance fields
-.field private iIz:Z
+.field private kHL:Z
 
 
 # direct methods
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    .prologue
+    .line 47
+    invoke-direct {p0, p1}, Landroid/view/TextureView;-><init>(Landroid/content/Context;)V
+
+    .line 36
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextureView;->kHL:Z
+
+    .line 48
+    return-void
+.end method
+
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
     .locals 1
 
@@ -24,7 +40,7 @@
     .line 36
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextureView;->iIz:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextureView;->kHL:Z
 
     .line 44
     return-void
@@ -40,7 +56,7 @@
     .line 36
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextureView;->iIz:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextureView;->kHL:Z
 
     .line 40
     return-void
@@ -48,7 +64,7 @@
 
 
 # virtual methods
-.method public final aNi()V
+.method public final bcZ()V
     .locals 5
 
     .prologue
@@ -59,7 +75,7 @@
     .line 70
     const/16 v0, 0x10
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/e;->bU(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bV(I)Z
 
     move-result v0
 
@@ -80,7 +96,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 118
     :goto_0
@@ -90,7 +106,7 @@
     :cond_0
     const/16 v0, 0x14
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/e;->bV(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bW(I)Z
 
     move-result v0
 
@@ -111,15 +127,15 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 80
     :cond_1
-    sget-object v0, Lcom/tencent/mm/compatible/d/q;->bis:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bhT:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bsr:I
 
     const/4 v1, 0x2
 
@@ -130,7 +146,7 @@
 
     const-string/jumbo v1, "do not do sly textureView, config ERROR"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -142,7 +158,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-boolean v3, p0, Lcom/tencent/mm/ui/base/MMTextureView;->iIz:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/ui/base/MMTextureView;->kHL:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -150,10 +166,10 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 87
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextureView;->iIz:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextureView;->kHL:Z
 
     if-eqz v0, :cond_3
 
@@ -162,7 +178,7 @@
 
     const-string/jumbo v1, "detect texture problem, slyed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -192,17 +208,17 @@
     .line 98
     if-eqz v0, :cond_4
 
-    instance-of v2, v0, Lcom/tencent/mm/ui/base/bv;
+    instance-of v2, v0, Lcom/tencent/mm/ui/base/r;
 
     if-nez v2, :cond_4
 
     .line 99
-    new-instance v2, Lcom/tencent/mm/ui/base/bv;
+    new-instance v2, Lcom/tencent/mm/ui/base/r;
 
-    invoke-direct {v2}, Lcom/tencent/mm/ui/base/bv;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/ui/base/r;-><init>()V
 
     .line 100
-    iput-object v0, v2, Lcom/tencent/mm/ui/base/bv;->iHL:Landroid/graphics/SurfaceTexture;
+    iput-object v0, v2, Lcom/tencent/mm/ui/base/r;->kGX:Landroid/graphics/SurfaceTexture;
 
     .line 101
     invoke-virtual {v1, p0, v2}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
@@ -210,14 +226,14 @@
     .line 102
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextureView;->iIz:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTextureView;->kHL:Z
 
     .line 103
     const-string/jumbo v0, "!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh"
 
     const-string/jumbo v1, "detect texture problem, wrap"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/NoSuchFieldException; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_0 .. :try_end_0} :catch_1
@@ -233,7 +249,7 @@
 
     const-string/jumbo v1, "detect texture problem, NoSuchFieldException"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -244,7 +260,7 @@
 
     const-string/jumbo v1, "detect texture problem, no wrap"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/NoSuchFieldException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/IllegalArgumentException; {:try_start_1 .. :try_end_1} :catch_1
@@ -260,7 +276,7 @@
 
     const-string/jumbo v1, "detect texture problem, IllegalArgumentException"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -272,7 +288,7 @@
 
     const-string/jumbo v1, "detect texture problem, IllegalAccessException"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method
@@ -307,7 +323,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

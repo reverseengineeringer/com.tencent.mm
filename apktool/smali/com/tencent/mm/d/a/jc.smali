@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/jc;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aGn:Lcom/tencent/mm/d/a/jc$a;
+.field public aFD:Lcom/tencent/mm/d/a/jc$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/jc;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/jc;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/jc;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/jc;->arR:Z
 
     return-void
 .end method
@@ -42,23 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/jc$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/jc$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/jc;->aGn:Lcom/tencent/mm/d/a/jc$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/jc;->aFD:Lcom/tencent/mm/d/a/jc$a;
 
     .line 8
-    const-string/jumbo v0, "UpdateGestureProtectInfo"
+    const-string/jumbo v0, "ReceiveMsg"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/jc;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/jc;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/jc;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/jc;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/jc;->jUI:Z
 
     return-void
 .end method

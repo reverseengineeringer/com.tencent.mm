@@ -1,85 +1,77 @@
 package com.tencent.mm.x;
 
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.dm;
-import com.tencent.mm.protocal.b.dn;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.t;
+import android.os.Message;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.i;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j.b;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.ag;
+import junit.framework.Assert;
 
 public final class a
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  public static int bBT = 0;
-  public static int bBU = 1;
-  public static int bBV = -85;
-  private d apI;
-  private final com.tencent.mm.q.a apJ;
-  private int bBW = -1;
-  private String bBX;
-  private int bBY = 0;
-  
-  public a(int paramInt1, String paramString, int paramInt2)
+  private d anM;
+  private ag ask = new ag();
+  private aa handler = new aa()
   {
-    switch (1.bBZ[(paramInt1 - 1)])
+    public final void handleMessage(Message paramAnonymousMessage)
     {
+      a(999, 0, 0, "", null, null);
     }
+  };
+  
+  public a(String paramString1, String paramString2)
+  {
+    ask.bk(1);
+    ask.setTalker(paramString1);
+    ask.v(ar.fm(paramString1));
+    ask.bl(1);
+    ask.setContent(paramString2);
+    ask.setType(i.eK(paramString1));
+    long l = com.tencent.mm.model.ah.tD().rs().E(ask);
+    if (l != -1L) {}
     for (;;)
     {
-      bBX = paramString;
-      bBY = paramInt2;
-      paramString = new com.tencent.mm.q.a.a();
-      bsW = new dm();
-      bsX = new dn();
-      uri = "/cgi-bin/micromsg-bin/bindgooglecontact";
-      bsV = 487;
-      bsY = 0;
-      bsZ = 0;
-      apJ = paramString.vh();
+      Assert.assertTrue(bool);
+      u.i("!44@/B4Tb64lLpK+IBX8XDgnvsPvmyRJXaBBy0B7+2aqDGs=", "new msg inserted to db , local id = " + l);
       return;
-      bBW = 1;
-      continue;
-      bBW = 2;
+      bool = false;
     }
   }
   
-  public final int a(m paramm, d paramd)
+  public final int a(e parame, d paramd)
   {
-    t.i("!76@/B4Tb64lLpKHrGLZvbPyiBIPb+9i/+Gz73fnVukCcLy0RLMamaPrhe9Iy/jdhpZSEYm54712ix4=", "doScene");
-    apI = paramd;
-    paramd = (dm)apJ.bsT.btb;
-    hkO = bBW;
-    hmj = bBX;
-    hmk = bBY;
-    return a(paramm, apJ, this);
+    anM = paramd;
+    u.i("!44@/B4Tb64lLpK+IBX8XDgnvsPvmyRJXaBBy0B7+2aqDGs=", "send local msg, msgId = " + ask.field_msgId);
+    handler.sendEmptyMessageDelayed(0, 500L);
+    return 999;
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  protected final int a(o paramo)
   {
-    t.i("!76@/B4Tb64lLpKHrGLZvbPyiBIPb+9i/+Gz73fnVukCcLy0RLMamaPrhe9Iy/jdhpZSEYm54712ix4=", "NetId:%d, ErrType:%d, ErrCode:%d, errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
-    if ((paramInt2 != 0) || (paramInt3 != 0))
-    {
-      apI.a(paramInt2, paramInt3, paramString, this);
-      return;
-    }
-    apI.a(paramInt2, paramInt3, paramString, this);
+    return j.b.bFI;
+  }
+  
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  {
+    u.i("!44@/B4Tb64lLpK+IBX8XDgnvsPvmyRJXaBBy0B7+2aqDGs=", "recv local msg, msgId = " + ask.field_msgId);
+    ask.bk(2);
+    ask.v(ar.d(ask.field_talker, System.currentTimeMillis() / 1000L));
+    com.tencent.mm.model.ah.tD().rs().a(ask.field_msgId, ask);
+    anM.a(0, 0, paramString, this);
   }
   
   public final int getType()
   {
-    return 487;
-  }
-  
-  public static enum a
-  {
-    public static int[] yZ()
-    {
-      return (int[])bCc.clone();
-    }
+    return 522;
   }
 }
 

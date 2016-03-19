@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$aj
-  extends a.c
+  extends a.e
 {
   public a$aj()
   {
-    super("getSendC2CMessageRequest", "get_send_c2c_message_request", 83, true);
+    super("editAddress", "edit_address", 29, true);
   }
 }
 

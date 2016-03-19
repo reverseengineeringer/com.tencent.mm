@@ -1,22 +1,45 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.network.u;
-import com.tencent.mm.network.u.a;
-import java.util.HashSet;
-import java.util.Iterator;
+import com.tencent.mm.platformtools.n;
+import com.tencent.mm.protocal.b.aj;
+import com.tencent.mm.r.c.a;
+import com.tencent.mm.r.c.b;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.ag;
+import com.tencent.mm.storage.h;
+import java.util.Map;
+import junit.framework.Assert;
 
-final class ay
-  extends u.a
+public final class ay
+  implements com.tencent.mm.r.c
 {
-  ay(ax paramax) {}
-  
-  public final void aG(int paramInt)
+  public final c.b b(c.a parama)
   {
-    Iterator localIterator = ax.a(bpo).iterator();
-    while (localIterator.hasNext()) {
-      ((u)localIterator.next()).aG(paramInt);
+    boolean bool2 = true;
+    parama = bFh;
+    if (parama != null)
+    {
+      bool1 = true;
+      Assert.assertTrue(bool1);
+      if (iXv == null) {
+        break label95;
+      }
+    }
+    label95:
+    for (boolean bool1 = bool2;; bool1 = false)
+    {
+      Assert.assertTrue(bool1);
+      parama = (String)q.J(n.a(iXv), "tips", null).get(".tips.tip.url");
+      u.v("!44@/B4Tb64lLpKlRg6vINul8YyaOL4ccEjxhNngZRwSf28=", "url:" + parama);
+      ah.tD().rn().set(12308, parama);
+      return null;
+      bool1 = false;
+      break;
     }
   }
+  
+  public final void d(ag paramag) {}
 }
 
 /* Location:

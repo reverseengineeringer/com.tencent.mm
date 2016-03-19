@@ -1,49 +1,64 @@
 package com.tencent.mm.protocal.b;
 
 public final class aaz
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public int hKb;
-  public int hhU;
+  public String eiM;
+  public String eia;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.bM(1, hhU);
-      paramVarArgs.bM(2, hKb);
+      if (eiM != null) {
+        paramVarArgs.d(1, eiM);
+      }
+      if (eia != null) {
+        paramVarArgs.d(2, eia);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.bI(1, hhU) + 0 + a.a.a.a.bI(2, hKb);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
-        }
+      if (eiM == null) {
+        break label234;
       }
-      return 0;
     }
-    if (paramInt == 3)
+    label234:
+    for (paramInt = a.a.a.b.b.a.e(1, eiM) + 0;; paramInt = 0)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      aaz localaaz = (aaz)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      int i = paramInt;
+      if (eia != null) {
+        i = paramInt + a.a.a.b.b.a.e(2, eia);
+      }
+      return i;
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
-      case 1: 
-        hhU = jMD.aVp();
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        aaz localaaz = (aaz)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          eiM = maU.readString();
+          return 0;
+        }
+        eia = maU.readString();
         return 0;
       }
-      hKb = jMD.aVp();
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

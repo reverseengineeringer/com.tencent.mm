@@ -1,13 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
-
 public final class dz$a
 {
-  public WXMediaMessage aAd;
-  public String appId;
-  public Context context;
+  public int state = -1;
 }
 
 /* Location:

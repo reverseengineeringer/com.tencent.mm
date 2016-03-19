@@ -1,10 +1,12 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.storage.ar;
+import android.widget.EditText;
+import com.tencent.mm.pluginsdk.ui.a.a;
 
 public final class jk$a
 {
-  public ar aub;
+  public a aGc;
+  public EditText aGd;
 }
 
 /* Location:

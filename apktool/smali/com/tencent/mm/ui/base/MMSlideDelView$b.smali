@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iHE:Lcom/tencent/mm/ui/base/MMSlideDelView;
+.field final synthetic kGQ:Lcom/tencent/mm/ui/base/MMSlideDelView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 578
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMSlideDelView$b;->iHE:Lcom/tencent/mm/ui/base/MMSlideDelView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMSlideDelView$b;->kGQ:Lcom/tencent/mm/ui/base/MMSlideDelView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,10 +45,10 @@
 
     const-string/jumbo v1, "checkfortap"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 581
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSlideDelView$b;->iHE:Lcom/tencent/mm/ui/base/MMSlideDelView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSlideDelView$b;->kGQ:Lcom/tencent/mm/ui/base/MMSlideDelView;
 
     const/4 v1, 0x1
 

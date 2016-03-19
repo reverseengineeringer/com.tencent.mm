@@ -1,27 +1,31 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class da
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ayX = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public b awA = new b();
+  public a awz = new a();
   
   public da()
   {
-    id = "GameLauncherApp";
-    hXT = atO;
+    id = "ExDeviceSimpleBTUploadDataToServer";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String ayY;
-    public Context context;
-    public String messageAction;
-    public String messageExt;
+    public String auQ;
+    public byte[] data;
+    public String mac;
+  }
+  
+  public static final class b
+  {
+    public boolean auR;
   }
 }
 

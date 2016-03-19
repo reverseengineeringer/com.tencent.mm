@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bl
-  extends a.c
+  extends a.e
 {
   public a$bl()
   {
-    super("openGameDetail", "openGameDetail", 131, true);
+    super("getWXDeviceInfos", "getWXDeviceInfos", 119, true);
   }
 }
 

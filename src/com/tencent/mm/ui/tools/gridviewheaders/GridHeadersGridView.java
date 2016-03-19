@@ -23,7 +23,7 @@ import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.GridView;
 import android.widget.ListAdapter;
-import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.aa;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,39 +31,50 @@ public class GridHeadersGridView
   extends GridView
   implements AbsListView.OnScrollListener, AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener, AdapterView.OnItemSelectedListener
 {
-  private int cOq;
-  private AdapterView.OnItemLongClickListener cvg;
-  private int fR;
-  protected int gRc;
-  private int gk = 0;
-  private DataSetObserver hQ = new e(this);
-  private int iCT;
-  private int iCU;
-  private Runnable iHz;
-  private boolean jwA = true;
-  public a jwh;
-  public b jwi;
-  private boolean jwj = true;
-  private final Rect jwk = new Rect();
-  private boolean jwl;
-  private boolean jwm;
-  private int jwn;
-  private long jwo = -1L;
-  private int jwp;
-  private float jwq;
-  private boolean jwr;
-  private int jws = 1;
-  c jwt;
-  d jwu;
-  private e jwv;
-  private AbsListView.OnScrollListener jww;
-  private View jwx;
-  protected c jwy;
-  protected int jwz;
-  private ac mHandler = new ac();
-  protected boolean ql;
-  private AdapterView.OnItemClickListener sQ;
-  private AdapterView.OnItemSelectedListener sR;
+  private AdapterView.OnItemLongClickListener cMZ;
+  private int dgj;
+  protected int drt;
+  private int eY;
+  private int fs = 0;
+  private DataSetObserver gY = new DataSetObserver()
+  {
+    public final void onChanged()
+    {
+      GridHeadersGridView.a(GridHeadersGridView.this);
+    }
+    
+    public final void onInvalidated()
+    {
+      GridHeadersGridView.a(GridHeadersGridView.this);
+    }
+  };
+  private int kBW;
+  private int kBX;
+  private Runnable kGL;
+  public a lyY;
+  public b lyZ;
+  private boolean lza = true;
+  private final Rect lzb = new Rect();
+  private boolean lzc;
+  private boolean lzd;
+  private int lze;
+  private long lzf = -1L;
+  private int lzg;
+  private float lzh;
+  private boolean lzi;
+  private int lzj = 1;
+  c lzk;
+  d lzl;
+  private e lzm;
+  private AbsListView.OnScrollListener lzn;
+  private View lzo;
+  protected c lzp;
+  protected int lzq;
+  private boolean lzr = true;
+  private aa mHandler = new aa();
+  protected boolean pp;
+  private AdapterView.OnItemClickListener rT;
+  private AdapterView.OnItemSelectedListener rU;
   
   public GridHeadersGridView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -75,39 +86,39 @@ public class GridHeadersGridView
     super(paramContext, paramAttributeSet, paramInt);
     super.setOnScrollListener(this);
     setVerticalFadingEdgeEnabled(false);
-    if (!jwr) {
-      cOq = -1;
+    if (!lzi) {
+      dgj = -1;
     }
-    fR = ViewConfiguration.get(paramContext).getScaledTouchSlop();
+    eY = ViewConfiguration.get(paramContext).getScaledTouchSlop();
   }
   
-  private void aSA()
+  private void biV()
   {
-    if (jwx == null) {
+    if (lzo == null) {
       return;
     }
     int j = View.MeasureSpec.makeMeasureSpec(getWidth() - getPaddingLeft() - getPaddingRight(), 1073741824);
-    ViewGroup.LayoutParams localLayoutParams = jwx.getLayoutParams();
+    ViewGroup.LayoutParams localLayoutParams = lzo.getLayoutParams();
     if ((localLayoutParams != null) && (height > 0)) {}
     for (int i = View.MeasureSpec.makeMeasureSpec(height, 1073741824);; i = View.MeasureSpec.makeMeasureSpec(0, 0))
     {
-      jwx.measure(j, i);
-      jwx.layout(getLeft() + getPaddingLeft(), 0, getRight() - getPaddingRight(), jwx.getMeasuredHeight());
+      lzo.measure(j, i);
+      lzo.layout(getLeft() + getPaddingLeft(), 0, getRight() - getPaddingRight(), lzo.getMeasuredHeight());
       return;
     }
   }
   
   private int getHeaderHeight()
   {
-    if (jwx != null) {
-      return jwx.getMeasuredHeight();
+    if (lzo != null) {
+      return lzo.getMeasuredHeight();
     }
     return 0;
   }
   
-  private void oY(int paramInt)
+  private void rY(int paramInt)
   {
-    if ((jwy == null) || (jwy.getCount() == 0) || (!jwj)) {}
+    if ((lzp == null) || (lzp.getCount() == 0) || (!lza)) {}
     int j;
     long l;
     label125:
@@ -118,33 +129,33 @@ public class GridHeadersGridView
       {
         return;
       } while ((c.d)getChildAt(0) == null);
-      j = paramInt - jws;
+      j = paramInt - lzj;
       i = j;
       if (j < 0) {
         i = paramInt;
       }
-      k = jws + paramInt;
+      k = lzj + paramInt;
       j = k;
-      if (k >= jwy.getCount()) {
+      if (k >= lzp.getCount()) {
         j = paramInt;
       }
-      if (iCU == 0) {
+      if (kBX == 0) {
         break label305;
       }
-      if (iCU >= 0) {
+      if (kBX >= 0) {
         break label271;
       }
-      jwy.ff(paramInt);
-      if (getChildAt(jws).getTop() > 0) {
+      lzp.fO(paramInt);
+      if (getChildAt(lzj).getTop() > 0) {
         break;
       }
-      l = jwy.ff(j);
+      l = lzp.fO(j);
       i = j;
-      if (jwo != l)
+      if (lzf != l)
       {
-        jwx = jwy.a(i, jwx, this);
-        aSA();
-        jwo = l;
+        lzo = lzp.a(i, lzo, this);
+        biV();
+        lzf = l;
       }
       m = getChildCount();
     } while (m == 0);
@@ -156,7 +167,7 @@ public class GridHeadersGridView
     if (k < m)
     {
       locald = (c.d)super.getChildAt(k);
-      if (jwl)
+      if (lzc)
       {
         j = locald.getTop() - getPaddingTop();
         label218:
@@ -172,18 +183,18 @@ public class GridHeadersGridView
     label486:
     for (;;)
     {
-      k = jws + k;
+      k = lzj + k;
       break label182;
-      l = jwy.ff(paramInt);
+      l = lzp.fO(paramInt);
       i = paramInt;
       break label125;
       j = getChildAt(0).getTop();
-      if ((j > 0) && (j < iCU))
+      if ((j > 0) && (j < kBX))
       {
-        l = jwy.ff(i);
+        l = lzp.fO(i);
         break label125;
       }
-      l = jwy.ff(paramInt);
+      l = lzp.fO(paramInt);
       i = paramInt;
       break label125;
       j = locald.getTop();
@@ -191,51 +202,51 @@ public class GridHeadersGridView
       i = getHeaderHeight();
       if (localObject != null)
       {
-        if ((paramInt == 0) && (super.getChildAt(0).getTop() > 0) && (!jwl))
+        if ((paramInt == 0) && (super.getChildAt(0).getTop() > 0) && (!lzc))
         {
-          jwp = 0;
+          lzg = 0;
           return;
         }
-        if (jwl)
+        if (lzc)
         {
-          jwp = Math.min(((View)localObject).getTop(), getPaddingTop() + i);
-          if (jwp < getPaddingTop()) {}
-          for (paramInt = i + getPaddingTop();; paramInt = jwp)
+          lzg = Math.min(((View)localObject).getTop(), getPaddingTop() + i);
+          if (lzg < getPaddingTop()) {}
+          for (paramInt = i + getPaddingTop();; paramInt = lzg)
           {
-            jwp = paramInt;
+            lzg = paramInt;
             return;
           }
         }
-        jwp = Math.min(((View)localObject).getTop(), i);
-        if (jwp < 0) {}
-        for (paramInt = i;; paramInt = jwp)
+        lzg = Math.min(((View)localObject).getTop(), i);
+        if (lzg < 0) {}
+        for (paramInt = i;; paramInt = lzg)
         {
-          jwp = paramInt;
+          lzg = paramInt;
           return;
         }
       }
-      jwp = i;
-      if (!jwl) {
+      lzg = i;
+      if (!lzc) {
         break;
       }
-      jwp += getPaddingTop();
+      lzg += getPaddingTop();
       return;
     }
   }
   
   private void reset()
   {
-    jwp = 0;
-    jwx = null;
-    jwo = Long.MIN_VALUE;
+    lzg = 0;
+    lzo = null;
+    lzf = Long.MIN_VALUE;
   }
   
   protected void dispatchDraw(Canvas paramCanvas)
   {
     if (Build.VERSION.SDK_INT < 8) {
-      oY(getFirstVisiblePosition());
+      rY(getFirstVisiblePosition());
     }
-    if ((jwx != null) && (jwj) && (jwx.getVisibility() == 0)) {}
+    if ((lzo != null) && (lza) && (lzo.getVisibility() == 0)) {}
     int m;
     int n;
     ArrayList localArrayList;
@@ -243,15 +254,15 @@ public class GridHeadersGridView
     for (int i = 1;; i = 0)
     {
       m = getHeaderHeight();
-      n = jwp - m;
-      if ((i != 0) && (jwA))
+      n = lzg - m;
+      if ((i != 0) && (lzr))
       {
-        jwk.left = getPaddingLeft();
-        jwk.right = (getWidth() - getPaddingRight());
-        jwk.top = jwp;
-        jwk.bottom = getHeight();
+        lzb.left = getPaddingLeft();
+        lzb.right = (getWidth() - getPaddingRight());
+        lzb.top = lzg;
+        lzb.bottom = getHeight();
         paramCanvas.save();
-        paramCanvas.clipRect(jwk);
+        paramCanvas.clipRect(lzb);
       }
       super.dispatchDraw(paramCanvas);
       localArrayList = new ArrayList();
@@ -262,8 +273,8 @@ public class GridHeadersGridView
         if (getItemIdAtPosition(k) == -1L) {
           localArrayList.add(Integer.valueOf(j));
         }
-        k += jws;
-        j += jws;
+        k += lzj;
+        j += lzj;
       }
     }
     int j = 0;
@@ -276,19 +287,19 @@ public class GridHeadersGridView
       try
       {
         View localView = (View)locald.getTag();
-        if ((((c.b)locald.getChildAt(0)).getHeaderId() == jwo) && (locald.getTop() < 0) && (jwj)) {}
+        if ((((c.b)locald.getChildAt(0)).getHeaderId() == lzf) && (locald.getTop() < 0) && (lza)) {}
         for (k = 1;; k = 0)
         {
           if ((localView.getVisibility() == 0) && (k == 0))
           {
             localView.measure(View.MeasureSpec.makeMeasureSpec(getWidth(), 1073741824 - getPaddingLeft() - getPaddingRight()), View.MeasureSpec.makeMeasureSpec(0, 0));
             localView.layout(getLeft() + getPaddingLeft(), 0, getRight() - getPaddingRight(), locald.getHeight());
-            jwk.left = getPaddingLeft();
-            jwk.right = (getWidth() - getPaddingRight());
-            jwk.bottom = locald.getBottom();
-            jwk.top = locald.getTop();
+            lzb.left = getPaddingLeft();
+            lzb.right = (getWidth() - getPaddingRight());
+            lzb.bottom = locald.getBottom();
+            lzb.top = locald.getTop();
             paramCanvas.save();
-            paramCanvas.clipRect(jwk);
+            paramCanvas.clipRect(lzb);
             paramCanvas.translate(getPaddingLeft(), locald.getTop());
             localView.draw(paramCanvas);
             paramCanvas.restore();
@@ -296,31 +307,31 @@ public class GridHeadersGridView
           j += 1;
           break;
         }
-        if ((i != 0) && (jwA))
+        if ((i != 0) && (lzr))
         {
           paramCanvas.restore();
-          if (jwx.getWidth() != getWidth() - getPaddingLeft() - getPaddingRight())
+          if (lzo.getWidth() != getWidth() - getPaddingLeft() - getPaddingRight())
           {
             i = View.MeasureSpec.makeMeasureSpec(getWidth(), 1073741824 - getPaddingLeft() - getPaddingRight());
             j = View.MeasureSpec.makeMeasureSpec(0, 0);
-            jwx.measure(i, j);
-            jwx.layout(getLeft() + getPaddingLeft(), 0, getRight() - getPaddingRight(), jwx.getHeight());
+            lzo.measure(i, j);
+            lzo.layout(getLeft() + getPaddingLeft(), 0, getRight() - getPaddingRight(), lzo.getHeight());
           }
-          jwk.left = getPaddingLeft();
-          jwk.right = (getWidth() - getPaddingRight());
-          jwk.bottom = (n + m);
-          if (!jwl) {
+          lzb.left = getPaddingLeft();
+          lzb.right = (getWidth() - getPaddingRight());
+          lzb.bottom = (n + m);
+          if (!lzc) {
             break label714;
           }
         }
         label714:
-        for (jwk.top = getPaddingTop();; jwk.top = 0)
+        for (lzb.top = getPaddingTop();; lzb.top = 0)
         {
           paramCanvas.save();
-          paramCanvas.clipRect(jwk);
+          paramCanvas.clipRect(lzb);
           paramCanvas.translate(getPaddingLeft(), n);
-          paramCanvas.saveLayerAlpha(0.0F, 0.0F, paramCanvas.getWidth(), paramCanvas.getHeight(), (int)(255.0F * jwp / m), 4);
-          jwx.draw(paramCanvas);
+          paramCanvas.saveLayerAlpha(0.0F, 0.0F, paramCanvas.getWidth(), paramCanvas.getHeight(), (int)(255.0F * lzg / m), 4);
+          lzo.draw(paramCanvas);
           paramCanvas.restore();
           paramCanvas.restore();
           return;
@@ -350,21 +361,21 @@ public class GridHeadersGridView
         break label581;
       }
       return false;
-      if (jwi == null) {
-        jwi = new b();
+      if (lyZ == null) {
+        lyZ = new b();
       }
-      mHandler.postDelayed(jwh, ViewConfiguration.getTapTimeout());
+      mHandler.postDelayed(lyY, ViewConfiguration.getTapTimeout());
       i = (int)paramMotionEvent.getY();
-      jwq = i;
+      lzh = i;
       float f = i;
-      if ((jwx != null) && (f <= jwx.getBottom())) {}
+      if ((lzo != null) && (f <= lzo.getBottom())) {}
       for (;;)
       {
-        jwz = j;
-        if ((jwz == -1) || (gk == 2)) {
+        lzq = j;
+        if ((lzq == -1) || (fs == 2)) {
           break;
         }
-        gRc = 0;
+        drt = 0;
         break;
         int k = getFirstVisiblePosition();
         i = 0;
@@ -386,71 +397,82 @@ public class GridHeadersGridView
               }
             }
           }
-          k += jws;
-          i += jws;
+          k += lzj;
+          i += lzj;
         }
         label237:
         j = -1;
       }
-      if ((jwz == -1) || (Math.abs(paramMotionEvent.getY() - jwq) <= fR)) {
+      if ((lzq == -1) || (Math.abs(paramMotionEvent.getY() - lzh) <= eY)) {
         break;
       }
-      gRc = -1;
-      Object localObject = oX(jwz);
+      drt = -1;
+      Object localObject = rX(lzq);
       if (localObject != null) {
         ((View)localObject).setPressed(false);
       }
-      if (jwh != null) {
-        mHandler.removeCallbacks(jwh);
+      if (lyY != null) {
+        mHandler.removeCallbacks(lyY);
       }
-      jwz = -1;
+      lzq = -1;
       break;
-      if ((gRc == -2) || (gRc == -1) || (jwz == -1)) {
+      if ((drt == -2) || (drt == -1) || (lzq == -1)) {
         break;
       }
-      View localView = oX(jwz);
-      e locale;
+      final View localView = rX(lzq);
+      final e locale;
       if ((localView != null) && (!localView.hasFocusable()))
       {
-        if (gRc != 0) {
+        if (drt != 0) {
           localView.setPressed(false);
         }
-        if (jwv == null) {
-          jwv = new e((byte)0);
+        if (lzm == null) {
+          lzm = new e((byte)0);
         }
-        locale = jwv;
-        gRA = jwz;
-        locale.aAl();
-        if ((gRc == 0) && (gRc == 1)) {
+        locale = lzm;
+        drR = lzq;
+        locale.SC();
+        if ((drt == 0) && (drt == 1)) {
           break label564;
         }
-        localac = mHandler;
-        if (gRc == 0) {}
-        for (localObject = jwi;; localObject = jwh)
+        localaa = mHandler;
+        if (drt == 0) {}
+        for (localObject = lyZ;; localObject = lyY)
         {
-          localac.removeCallbacks((Runnable)localObject);
-          if (ql) {
+          localaa.removeCallbacks((Runnable)localObject);
+          if (pp) {
             break label551;
           }
-          gRc = 1;
+          drt = 1;
           localView.setPressed(true);
           setPressed(true);
-          if (iHz != null) {
-            removeCallbacks(iHz);
+          if (kGL != null) {
+            removeCallbacks(kGL);
           }
-          iHz = new f(this, localView, locale);
-          mHandler.postDelayed(iHz, ViewConfiguration.getPressedStateDuration());
+          kGL = new Runnable()
+          {
+            public final void run()
+            {
+              drt = -1;
+              localView.setPressed(false);
+              setPressed(false);
+              if (!pp) {
+                locale.run();
+              }
+            }
+          };
+          mHandler.postDelayed(kGL, ViewConfiguration.getPressedStateDuration());
           i = 1;
           break;
         }
         label551:
-        gRc = -1;
+        drt = -1;
       }
       label564:
-      while (ql)
+      while (pp)
       {
-        ac localac;
-        gRc = -1;
+        aa localaa;
+        drt = -1;
         break;
       }
       locale.run();
@@ -462,55 +484,41 @@ public class GridHeadersGridView
   
   public View getStickiedHeader()
   {
-    return jwx;
+    return lzo;
   }
   
   public boolean getStickyHeaderIsTranscluent()
   {
-    return !jwA;
-  }
-  
-  public final View oX(int paramInt)
-  {
-    if (paramInt == -2) {
-      return jwx;
-    }
-    try
-    {
-      View localView = (View)getChildAt(paramInt).getTag();
-      return localView;
-    }
-    catch (Exception localException) {}
-    return null;
+    return !lzr;
   }
   
   public void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    sQ.onItemClick(paramAdapterView, paramView, jwy.oW(paramInt).cHs, paramLong);
+    rT.onItemClick(paramAdapterView, paramView, lzp.rW(paramInt).dfq, paramLong);
   }
   
   public boolean onItemLongClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    return cvg.onItemLongClick(paramAdapterView, paramView, jwy.oW(paramInt).cHs, paramLong);
+    return cMZ.onItemLongClick(paramAdapterView, paramView, lzp.rW(paramInt).dfq, paramLong);
   }
   
   public void onItemSelected(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    sR.onItemSelected(paramAdapterView, paramView, jwy.oW(paramInt).cHs, paramLong);
+    rU.onItemSelected(paramAdapterView, paramView, lzp.rW(paramInt).dfq, paramLong);
   }
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
     int i = 1;
-    if (cOq == -1) {
-      if (jwn > 0)
+    if (dgj == -1) {
+      if (lze > 0)
       {
         int k = Math.max(View.MeasureSpec.getSize(paramInt1) - getPaddingLeft() - getPaddingRight(), 0);
-        int j = k / jwn;
+        int j = k / lze;
         if (j > 0)
         {
           i = j;
-          while ((i != 1) && (jwn * i + (i - 1) * iCT > k)) {
+          while ((i != 1) && (lze * i + (i - 1) * kBW > k)) {
             i -= 1;
           }
         }
@@ -522,12 +530,12 @@ public class GridHeadersGridView
     }
     for (;;)
     {
-      for (jws = i;; jws = cOq)
+      for (lzj = i;; lzj = dgj)
       {
-        if (jwy != null) {
-          jwy.setNumColumns(jws);
+        if (lzp != null) {
+          lzp.setNumColumns(lzj);
         }
-        aSA();
+        biV();
         super.onMeasure(paramInt1, paramInt2);
         return;
       }
@@ -536,73 +544,87 @@ public class GridHeadersGridView
   
   public void onNothingSelected(AdapterView paramAdapterView)
   {
-    sR.onNothingSelected(paramAdapterView);
+    rU.onNothingSelected(paramAdapterView);
   }
   
   public void onRestoreInstanceState(Parcelable paramParcelable)
   {
     paramParcelable = (SavedState)paramParcelable;
     super.onRestoreInstanceState(paramParcelable.getSuperState());
-    jwj = jwE;
+    lza = lzv;
     requestLayout();
   }
   
   public Parcelable onSaveInstanceState()
   {
     SavedState localSavedState = new SavedState(super.onSaveInstanceState());
-    jwE = jwj;
+    lzv = lza;
     return localSavedState;
   }
   
   public void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
   {
-    if (jww != null) {
-      jww.onScroll(paramAbsListView, paramInt1, paramInt2, paramInt3);
+    if (lzn != null) {
+      lzn.onScroll(paramAbsListView, paramInt1, paramInt2, paramInt3);
     }
     if (Build.VERSION.SDK_INT >= 8) {
-      oY(paramInt1);
+      rY(paramInt1);
     }
   }
   
   public void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
-    if (jww != null) {
-      jww.onScrollStateChanged(paramAbsListView, paramInt);
+    if (lzn != null) {
+      lzn.onScrollStateChanged(paramAbsListView, paramInt);
     }
-    gk = paramInt;
+    fs = paramInt;
+  }
+  
+  public final View rX(int paramInt)
+  {
+    if (paramInt == -2) {
+      return lzo;
+    }
+    try
+    {
+      View localView = (View)getChildAt(paramInt).getTag();
+      return localView;
+    }
+    catch (Exception localException) {}
+    return null;
   }
   
   public void setAdapter(ListAdapter paramListAdapter)
   {
-    if ((jwy != null) && (hQ != null)) {
-      jwy.unregisterDataSetObserver(hQ);
+    if ((lzp != null) && (gY != null)) {
+      lzp.unregisterDataSetObserver(gY);
     }
-    if (!jwm) {
-      jwl = true;
+    if (!lzd) {
+      lzc = true;
     }
     if ((paramListAdapter instanceof b)) {
       paramListAdapter = (b)paramListAdapter;
     }
     for (;;)
     {
-      jwy = new c(getContext(), this, paramListAdapter);
-      jwy.registerDataSetObserver(hQ);
+      lzp = new c(getContext(), this, paramListAdapter);
+      lzp.registerDataSetObserver(gY);
       reset();
-      super.setAdapter(jwy);
+      super.setAdapter(lzp);
       return;
-      if ((paramListAdapter instanceof j)) {
-        paramListAdapter = new k((j)paramListAdapter);
+      if ((paramListAdapter instanceof e)) {
+        paramListAdapter = new f((e)paramListAdapter);
       } else {
-        paramListAdapter = new h(paramListAdapter);
+        paramListAdapter = new d(paramListAdapter);
       }
     }
   }
   
   public void setAreHeadersSticky(boolean paramBoolean)
   {
-    if (paramBoolean != jwj)
+    if (paramBoolean != lza)
     {
-      jwj = paramBoolean;
+      lza = paramBoolean;
       requestLayout();
     }
   }
@@ -610,35 +632,35 @@ public class GridHeadersGridView
   public void setClipToPadding(boolean paramBoolean)
   {
     super.setClipToPadding(paramBoolean);
-    jwl = paramBoolean;
-    jwm = true;
+    lzc = paramBoolean;
+    lzd = true;
   }
   
   public void setColumnWidth(int paramInt)
   {
     super.setColumnWidth(paramInt);
-    jwn = paramInt;
+    lze = paramInt;
   }
   
   public void setHorizontalSpacing(int paramInt)
   {
     super.setHorizontalSpacing(paramInt);
-    iCT = paramInt;
+    kBW = paramInt;
   }
   
   public void setNumColumns(int paramInt)
   {
     super.setNumColumns(paramInt);
-    jwr = true;
-    cOq = paramInt;
-    if ((paramInt != -1) && (jwy != null)) {
-      jwy.setNumColumns(paramInt);
+    lzi = true;
+    dgj = paramInt;
+    if ((paramInt != -1) && (lzp != null)) {
+      lzp.setNumColumns(paramInt);
     }
   }
   
   public void setOnHeaderClickListener(c paramc)
   {
-    jwt = paramc;
+    lzk = paramc;
   }
   
   public void setOnHeaderLongClickListener(d paramd)
@@ -646,30 +668,30 @@ public class GridHeadersGridView
     if (!isLongClickable()) {
       setLongClickable(true);
     }
-    jwu = paramd;
+    lzl = paramd;
   }
   
   public void setOnItemClickListener(AdapterView.OnItemClickListener paramOnItemClickListener)
   {
-    sQ = paramOnItemClickListener;
+    rT = paramOnItemClickListener;
     super.setOnItemClickListener(this);
   }
   
   public void setOnItemLongClickListener(AdapterView.OnItemLongClickListener paramOnItemLongClickListener)
   {
-    cvg = paramOnItemLongClickListener;
+    cMZ = paramOnItemLongClickListener;
     super.setOnItemLongClickListener(this);
   }
   
   public void setOnItemSelectedListener(AdapterView.OnItemSelectedListener paramOnItemSelectedListener)
   {
-    sR = paramOnItemSelectedListener;
+    rU = paramOnItemSelectedListener;
     super.setOnItemSelectedListener(this);
   }
   
   public void setOnScrollListener(AbsListView.OnScrollListener paramOnScrollListener)
   {
-    jww = paramOnScrollListener;
+    lzn = paramOnScrollListener;
   }
   
   public void setStickyHeaderIsTranscluent(boolean paramBoolean)
@@ -677,7 +699,7 @@ public class GridHeadersGridView
     if (!paramBoolean) {}
     for (paramBoolean = true;; paramBoolean = false)
     {
-      jwA = paramBoolean;
+      lzr = paramBoolean;
       return;
     }
   }
@@ -685,14 +707,14 @@ public class GridHeadersGridView
   public void setVerticalSpacing(int paramInt)
   {
     super.setVerticalSpacing(paramInt);
-    iCU = paramInt;
+    kBX = paramInt;
   }
   
   static class SavedState
     extends View.BaseSavedState
   {
-    public static final Parcelable.Creator CREATOR = new g();
-    boolean jwE;
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+    boolean lzv;
     
     private SavedState(Parcel paramParcel)
     {
@@ -700,7 +722,7 @@ public class GridHeadersGridView
       if (paramParcel.readByte() != 0) {}
       for (boolean bool = true;; bool = false)
       {
-        jwE = bool;
+        lzv = bool;
         return;
       }
     }
@@ -712,13 +734,13 @@ public class GridHeadersGridView
     
     public String toString()
     {
-      return "StickyGridHeadersGridView.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " areHeadersSticky=" + jwE + "}";
+      return "StickyGridHeadersGridView.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " areHeadersSticky=" + lzv + "}";
     }
     
     public void writeToParcel(Parcel paramParcel, int paramInt)
     {
       super.writeToParcel(paramParcel, paramInt);
-      if (jwE) {}
+      if (lzv) {}
       for (paramInt = 1;; paramInt = 0)
       {
         paramParcel.writeByte((byte)paramInt);
@@ -738,19 +760,19 @@ public class GridHeadersGridView
     
     public final void run()
     {
-      View localView = oX(jwz);
+      View localView = rX(lzq);
       boolean bool1;
       if (localView != null)
       {
-        GridHeadersGridView.a(GridHeadersGridView.this, jwz);
-        if ((!aAm()) || (ql)) {
+        GridHeadersGridView.a(GridHeadersGridView.this, lzq);
+        if ((!SD()) || (pp)) {
           break label141;
         }
         GridHeadersGridView localGridHeadersGridView = GridHeadersGridView.this;
-        if (jwu == null) {
+        if (lzl == null) {
           break label136;
         }
-        bool1 = jwu.aSB();
+        bool1 = lzl.biW();
         bool2 = bool1;
         if (bool1)
         {
@@ -766,12 +788,12 @@ public class GridHeadersGridView
       {
         if (bool2)
         {
-          gRc = -2;
+          drt = -2;
           setPressed(false);
           localView.setPressed(false);
           return;
         }
-        gRc = 2;
+        drt = 2;
         return;
         bool1 = false;
         break;
@@ -786,13 +808,13 @@ public class GridHeadersGridView
     
     public final void run()
     {
-      if (gRc == 0)
+      if (drt == 0)
       {
-        gRc = 1;
-        View localView = oX(jwz);
+        drt = 1;
+        View localView = rX(lzq);
         if ((localView != null) && (!localView.hasFocusable()))
         {
-          if (ql) {
+          if (pp) {
             break label157;
           }
           localView.setPressed(true);
@@ -802,19 +824,19 @@ public class GridHeadersGridView
           if (!isLongClickable()) {
             break label148;
           }
-          if (jwh == null) {
-            jwh = new GridHeadersGridView.a(GridHeadersGridView.this, (byte)0);
+          if (lyY == null) {
+            lyY = new GridHeadersGridView.a(GridHeadersGridView.this, (byte)0);
           }
-          jwh.aAl();
-          GridHeadersGridView.d(GridHeadersGridView.this).postDelayed(jwh, i);
+          lyY.SC();
+          GridHeadersGridView.d(GridHeadersGridView.this).postDelayed(lyY, i);
         }
       }
       return;
       label148:
-      gRc = 2;
+      drt = 2;
       return;
       label157:
-      gRc = 2;
+      drt = 2;
     }
   }
   
@@ -825,14 +847,14 @@ public class GridHeadersGridView
   
   public static abstract interface d
   {
-    public abstract boolean aSB();
+    public abstract boolean biW();
   }
   
   private final class e
     extends GridHeadersGridView.f
     implements Runnable
   {
-    int gRA;
+    int drR;
     
     private e()
     {
@@ -841,7 +863,7 @@ public class GridHeadersGridView
     
     public final void run()
     {
-      if (ql) {}
+      if (pp) {}
       View localView;
       GridHeadersGridView localGridHeadersGridView;
       do
@@ -851,34 +873,34 @@ public class GridHeadersGridView
           do
           {
             return;
-          } while ((jwy == null) || (jwy.getCount() <= 0) || (gRA == -1) || (gRA >= jwy.getCount()) || (!aAm()));
-          localView = oX(gRA);
+          } while ((lzp == null) || (lzp.getCount() <= 0) || (drR == -1) || (drR >= lzp.getCount()) || (!SD()));
+          localView = rX(drR);
         } while (localView == null);
         localGridHeadersGridView = GridHeadersGridView.this;
-        GridHeadersGridView.a(GridHeadersGridView.this, gRA);
-      } while (jwt == null);
+        GridHeadersGridView.a(GridHeadersGridView.this, drR);
+      } while (lzk == null);
       localGridHeadersGridView.playSoundEffect(0);
       if (localView != null) {
         localView.sendAccessibilityEvent(1);
       }
-      jwt.L(localView);
+      lzk.L(localView);
     }
   }
   
   private class f
   {
-    private int gRB;
+    private int drS;
     
     private f() {}
     
-    public final void aAl()
+    public final void SC()
     {
-      gRB = GridHeadersGridView.b(GridHeadersGridView.this);
+      drS = GridHeadersGridView.b(GridHeadersGridView.this);
     }
     
-    public final boolean aAm()
+    public final boolean SD()
     {
-      return (hasWindowFocus()) && (GridHeadersGridView.c(GridHeadersGridView.this) == gRB);
+      return (hasWindowFocus()) && (GridHeadersGridView.c(GridHeadersGridView.this) == drS);
     }
   }
 }

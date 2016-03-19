@@ -1,23 +1,34 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
 
 public final class ir
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFR = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aEG = new a();
+  public b aEH = new b();
   
   public ir()
   {
-    id = "TalkRoomeStatusBarHide";
-    hXT = atO;
+    id = "ProductOperation";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aFS = false;
+    public String aEI;
+    public int auE = 0;
+    public Context context;
+  }
+  
+  public static final class b
+  {
+    public String aEJ;
+    public boolean atR = false;
+    public String ayz;
   }
 }
 

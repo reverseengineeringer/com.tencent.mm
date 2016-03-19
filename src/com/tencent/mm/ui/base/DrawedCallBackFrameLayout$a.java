@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface DrawedCallBackFrameLayout$a
 {
-  public abstract void lb();
+  public abstract void kw();
 }
 
 /* Location:

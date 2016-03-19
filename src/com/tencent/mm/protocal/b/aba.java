@@ -1,58 +1,64 @@
 package com.tencent.mm.protocal.b;
 
 public final class aba
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public String hDP;
-  public int htI;
+  public String cQT;
+  public double latitude;
+  public double longitude;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hDP != null) {
-        paramVarArgs.U(1, hDP);
+      paramVarArgs.a(1, latitude);
+      paramVarArgs.a(2, longitude);
+      if (cQT != null) {
+        paramVarArgs.d(3, cQT);
       }
-      paramVarArgs.bM(2, htI);
-      return 0;
+      paramInt = 0;
     }
-    if (paramInt == 1) {
-      if (hDP == null) {
-        break label212;
-      }
-    }
-    label212:
-    for (paramInt = a.a.a.b.b.a.T(1, hDP) + 0;; paramInt = 0)
+    int i;
+    do
     {
-      return paramInt + a.a.a.a.bI(2, htI);
-      if (paramInt == 2)
-      {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-          if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
-          }
-        }
+      return paramInt;
+      if (paramInt != 1) {
         break;
       }
-      if (paramInt == 3)
-      {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-        aba localaba = (aba)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
-        {
-        default: 
-          return -1;
-        case 1: 
-          hDP = jMD.readString();
-          return 0;
+      i = a.a.a.b.b.a.ay(1) + 8 + 0 + (a.a.a.b.b.a.ay(2) + 8);
+      paramInt = i;
+    } while (cQT == null);
+    return i + a.a.a.b.b.a.e(3, cQT);
+    if (paramInt == 2)
+    {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bog();
         }
-        htI = jMD.aVp();
+      }
+      return 0;
+    }
+    if (paramInt == 3)
+    {
+      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      aba localaba = (aba)paramVarArgs[1];
+      switch (((Integer)paramVarArgs[2]).intValue())
+      {
+      default: 
+        return -1;
+      case 1: 
+        latitude = maU.readDouble();
+        return 0;
+      case 2: 
+        longitude = maU.readDouble();
         return 0;
       }
-      return -1;
+      cQT = maU.readString();
+      return 0;
     }
+    return -1;
   }
 }
 

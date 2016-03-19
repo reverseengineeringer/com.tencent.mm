@@ -2,11 +2,11 @@ package com.tencent.mm.platformtools;
 
 import android.util.SparseArray;
 import android.util.SparseBooleanArray;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.ar.g.b;
-import com.tencent.mm.model.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.az.g;
+import com.tencent.mm.az.g.b;
+import com.tencent.mm.model.b;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -14,18 +14,18 @@ import junit.framework.Assert;
 
 public final class h
 {
-  private static SparseArray bUV = new SparseArray();
+  private static SparseArray clS = new SparseArray();
   
   public static final a a(int paramInt, String paramString, HashMap paramHashMap)
   {
-    if ((!bn.iW(paramString)) && (paramHashMap != null)) {}
+    if ((!ay.kz(paramString)) && (paramHashMap != null)) {}
     int i;
     a locala;
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue(bool);
       i = paramString.hashCode();
-      locala = (a)bUV.get(i);
+      locala = (a)clS.get(i);
       if (locala != null) {
         break label120;
       }
@@ -33,39 +33,39 @@ public final class h
       if (locala.b(paramString, paramHashMap, true, false)) {
         break;
       }
-      throw new a((byte)0);
+      throw new b((byte)0);
     }
-    bUV.put(i, locala);
+    clS.put(i, locala);
     for (paramString = locala;; paramString = locala)
     {
-      t.d("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "addRef %d", new Object[] { Integer.valueOf(paramInt) });
-      bUX.put(paramInt, true);
+      u.d("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "addRef %d", new Object[] { Integer.valueOf(paramInt) });
+      clU.put(paramInt, true);
       return paramString;
       label120:
-      if (!bUW) {
+      if (!clT) {
         bool = true;
       }
       long l;
       for (;;)
       {
         Assert.assertTrue(bool);
-        l = locala.aIo();
+        l = locala.adR();
         paramString = paramHashMap.values().iterator();
         for (;;)
         {
           if (paramString.hasNext())
           {
-            paramHashMap = ((g.b)paramString.next()).lW();
+            paramHashMap = ((g.b)paramString.next()).lr();
             int j = paramHashMap.length;
             i = 0;
             label183:
             if (i < j)
             {
               String str = paramHashMap[i];
-              t.d("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "init sql:" + str);
+              u.d("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "init sql:" + str);
               try
               {
-                locala.bx(null, str);
+                locala.cj(null, str);
                 i += 1;
                 break label183;
                 bool = false;
@@ -81,51 +81,51 @@ public final class h
           }
         }
       }
-      locala.cO(l);
+      locala.dI(l);
     }
   }
   
   public static final class a
     extends g
   {
-    public final boolean bUW;
-    SparseBooleanArray bUX = new SparseBooleanArray();
+    public final boolean clT;
+    SparseBooleanArray clU = new SparseBooleanArray();
     private final String path;
     
     public a(String paramString, boolean paramBoolean)
     {
-      t.d("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "create db %s", new Object[] { paramString });
-      bUW = false;
+      u.d("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "create db %s", new Object[] { paramString });
+      clT = false;
       path = paramString;
     }
     
     @Deprecated
-    public final void Dx()
+    public final void FE()
     {
-      t.e("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "forbid to use this method %s", new Object[] { bn.aFH() });
-      if (bUX.size() <= 1) {
-        super.Dx();
+      u.e("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "forbid to use this method %s", new Object[] { ay.aVJ() });
+      if (clU.size() <= 1) {
+        super.FE();
       }
     }
     
     @Deprecated
-    public final void cr(String paramString)
+    public final void cu(String paramString)
     {
-      t.e("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "forbid to use this method");
-      if (bUX.size() <= 1) {
-        super.cr(paramString);
+      u.e("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "forbid to use this method");
+      if (clU.size() <= 1) {
+        super.cu(paramString);
       }
     }
     
-    public final void dM(int paramInt)
+    public final void ek(int paramInt)
     {
-      t.d("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "try close db %d", new Object[] { Integer.valueOf(paramInt) });
-      bUX.delete(paramInt);
-      if (bUX.size() <= 0)
+      u.d("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "try close db %d", new Object[] { Integer.valueOf(paramInt) });
+      clU.delete(paramInt);
+      if (clU.size() <= 0)
       {
-        t.d("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "close db %d succ", new Object[] { Integer.valueOf(paramInt) });
-        super.Dx();
-        h.Dw().remove(path.hashCode());
+        u.d("!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w=", "close db %d succ", new Object[] { Integer.valueOf(paramInt) });
+        super.FE();
+        h.qV().remove(path.hashCode());
       }
     }
   }

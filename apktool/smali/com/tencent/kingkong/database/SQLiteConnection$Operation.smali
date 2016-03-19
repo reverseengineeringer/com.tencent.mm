@@ -43,17 +43,17 @@
     .locals 2
 
     .prologue
-    .line 1687
+    .line 1693
     new-instance v0, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v1, "yyyy-MM-dd HH:mm:ss.SSS"
 
     invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 1686
+    .line 1692
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->sDateFormat:Ljava/text/SimpleDateFormat;
 
-    .line 1687
+    .line 1691
     return-void
 .end method
 
@@ -61,7 +61,7 @@
     .locals 0
 
     .prologue
-    .line 1685
+    .line 1691
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -71,7 +71,7 @@
     .locals 0
 
     .prologue
-    .line 1685
+    .line 1691
     invoke-direct {p0}, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;-><init>()V
 
     return-void
@@ -81,7 +81,7 @@
     .locals 1
 
     .prologue
-    .line 1749
+    .line 1755
     invoke-direct {p0}, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->getFormattedStartTime()Ljava/lang/String;
 
     move-result-object v0
@@ -93,7 +93,7 @@
     .locals 4
 
     .prologue
-    .line 1750
+    .line 1756
     sget-object v0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->sDateFormat:Ljava/text/SimpleDateFormat;
 
     new-instance v1, Ljava/util/Date;
@@ -113,15 +113,15 @@
     .locals 1
 
     .prologue
-    .line 1743
+    .line 1749
     iget-boolean v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mFinished:Z
 
     if-nez v0, :cond_0
 
-    .line 1744
+    .line 1750
     const-string/jumbo v0, "running"
 
-    .line 1746
+    .line 1752
     :goto_0
     return-object v0
 
@@ -146,10 +146,10 @@
     .locals 0
 
     .prologue
-    .line 1737
+    .line 1743
     iput p1, p0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->type:I
 
-    .line 1738
+    .line 1744
     return-void
 .end method
 
@@ -157,17 +157,17 @@
     .locals 5
 
     .prologue
-    .line 1700
+    .line 1706
     iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mKind:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1701
+    .line 1707
     iget-boolean v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mFinished:Z
 
     if-eqz v0, :cond_3
 
-    .line 1702
+    .line 1708
     const-string/jumbo v0, " took "
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -188,7 +188,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1707
+    .line 1713
     :goto_0
     const-string/jumbo v0, " - "
 
@@ -202,12 +202,12 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1708
+    .line 1714
     iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mSql:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 1709
+    .line 1715
     const-string/jumbo v0, ", sql=\""
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -229,7 +229,7 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1711
+    .line 1717
     :cond_0
     if-eqz p2, :cond_1
 
@@ -245,19 +245,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 1712
+    .line 1718
     const-string/jumbo v0, ", bindArgs=["
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1713
+    .line 1719
     iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mBindArgs:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v2
 
-    .line 1714
+    .line 1720
     const/4 v0, 0x0
 
     move v1, v0
@@ -265,12 +265,12 @@
     :goto_1
     if-lt v1, v2, :cond_4
 
-    .line 1729
+    .line 1735
     const-string/jumbo v0, "]"
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1731
+    .line 1737
     :cond_1
     iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mException:Ljava/lang/Exception;
 
@@ -284,7 +284,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 1732
+    .line 1738
     const-string/jumbo v0, ", exception=\""
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -305,11 +305,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1734
+    .line 1740
     :cond_2
     return-void
 
-    .line 1704
+    .line 1710
     :cond_3
     const-string/jumbo v0, " started "
 
@@ -329,14 +329,14 @@
 
     move-result-object v0
 
-    .line 1705
+    .line 1711
     const-string/jumbo v1, "ms ago"
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto/16 :goto_0
 
-    .line 1715
+    .line 1721
     :cond_4
     iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mBindArgs:Ljava/util/ArrayList;
 
@@ -344,24 +344,24 @@
 
     move-result-object v0
 
-    .line 1716
+    .line 1722
     if-eqz v1, :cond_5
 
-    .line 1717
+    .line 1723
     const-string/jumbo v3, ", "
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1719
+    .line 1725
     :cond_5
     if-nez v0, :cond_6
 
-    .line 1720
+    .line 1726
     const-string/jumbo v0, "null"
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1714
+    .line 1720
     :goto_2
     add-int/lit8 v0, v1, 0x1
 
@@ -369,26 +369,26 @@
 
     goto :goto_1
 
-    .line 1721
+    .line 1727
     :cond_6
     instance-of v3, v0, [B
 
     if-eqz v3, :cond_7
 
-    .line 1722
+    .line 1728
     const-string/jumbo v0, "<byte[]>"
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     goto :goto_2
 
-    .line 1723
+    .line 1729
     :cond_7
     instance-of v3, v0, Ljava/lang/String;
 
     if-eqz v3, :cond_8
 
-    .line 1724
+    .line 1730
     const-string/jumbo v3, "\""
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -407,7 +407,7 @@
 
     goto :goto_2
 
-    .line 1726
+    .line 1732
     :cond_8
     invoke-virtual {p1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 

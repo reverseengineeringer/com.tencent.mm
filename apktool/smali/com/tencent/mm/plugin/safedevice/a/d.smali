@@ -1,14 +1,14 @@
 .class public final Lcom/tencent/mm/plugin/safedevice/a/d;
-.super Lcom/tencent/mm/sdk/g/ah;
+.super Lcom/tencent/mm/sdk/h/f;
 .source "SourceFile"
 
 
 # static fields
-.field public static final aqU:[Ljava/lang/String;
+.field public static final aoY:[Ljava/lang/String;
 
 
 # instance fields
-.field eKd:Lcom/tencent/mm/ar/g;
+.field fUQ:Lcom/tencent/mm/az/g;
 
 
 # direct methods
@@ -23,46 +23,46 @@
 
     const/4 v1, 0x0
 
-    sget-object v2, Lcom/tencent/mm/plugin/safedevice/a/c;->aqp:Lcom/tencent/mm/sdk/g/ae$a;
+    sget-object v2, Lcom/tencent/mm/plugin/safedevice/a/c;->aot:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v3, "SafeDeviceInfo"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/g/ah;->a(Lcom/tencent/mm/sdk/g/ae$a;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/h/f;->a(Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/plugin/safedevice/a/d;->aqU:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/plugin/safedevice/a/d;->aoY:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/sdk/g/af;)V
+.method public constructor <init>(Lcom/tencent/mm/sdk/h/d;)V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
     .line 20
-    sget-object v0, Lcom/tencent/mm/plugin/safedevice/a/c;->aqp:Lcom/tencent/mm/sdk/g/ae$a;
+    sget-object v0, Lcom/tencent/mm/plugin/safedevice/a/c;->aot:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v1, "SafeDeviceInfo"
 
-    invoke-direct {p0, p1, v0, v1, v2}, Lcom/tencent/mm/sdk/g/ah;-><init>(Lcom/tencent/mm/sdk/g/af;Lcom/tencent/mm/sdk/g/ae$a;Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lcom/tencent/mm/sdk/h/f;-><init>(Lcom/tencent/mm/sdk/h/d;Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;[Ljava/lang/String;)V
 
     .line 17
-    iput-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->eKd:Lcom/tencent/mm/ar/g;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->fUQ:Lcom/tencent/mm/az/g;
 
     .line 22
-    instance-of v0, p1, Lcom/tencent/mm/ar/g;
+    instance-of v0, p1, Lcom/tencent/mm/az/g;
 
     if-eqz v0, :cond_0
 
     .line 23
-    check-cast p1, Lcom/tencent/mm/ar/g;
+    check-cast p1, Lcom/tencent/mm/az/g;
 
-    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->eKd:Lcom/tencent/mm/ar/g;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->fUQ:Lcom/tencent/mm/az/g;
 
     .line 25
     :cond_0
@@ -76,28 +76,28 @@
 
     .prologue
     .line 37
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/g/ah;->b(Lcom/tencent/mm/sdk/g/ae;)Z
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/h/f;->a(Lcom/tencent/mm/sdk/h/c;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final bridge synthetic a(Lcom/tencent/mm/sdk/g/ae;)Z
+.method public final bridge synthetic a(Lcom/tencent/mm/sdk/h/c;)Z
     .locals 1
 
     .prologue
     .line 13
     check-cast p1, Lcom/tencent/mm/plugin/safedevice/a/c;
 
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/g/ah;->a(Lcom/tencent/mm/sdk/g/ae;)Z
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/h/f;->a(Lcom/tencent/mm/sdk/h/c;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final afq()Ljava/util/List;
+.method public final aqy()Ljava/util/List;
     .locals 3
 
     .prologue
@@ -114,7 +114,7 @@
     if-lez v1, :cond_1
 
     .line 50
-    invoke-super {p0}, Lcom/tencent/mm/sdk/g/ah;->Bz()Landroid/database/Cursor;
+    invoke-super {p0}, Lcom/tencent/mm/sdk/h/f;->Dy()Landroid/database/Cursor;
 
     move-result-object v1
 
@@ -148,7 +148,7 @@
     return-object v0
 .end method
 
-.method public final afr()V
+.method public final aqz()V
     .locals 5
 
     .prologue
@@ -156,14 +156,14 @@
     const-wide/16 v0, 0x0
 
     .line 64
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->eKd:Lcom/tencent/mm/ar/g;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->fUQ:Lcom/tencent/mm/az/g;
 
     if-eqz v2, :cond_2
 
     .line 65
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->eKd:Lcom/tencent/mm/ar/g;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->fUQ:Lcom/tencent/mm/az/g;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ar/g;->aIo()J
+    invoke-virtual {v0}, Lcom/tencent/mm/az/g;->adR()J
 
     move-result-wide v0
 
@@ -171,7 +171,7 @@
 
     .line 69
     :goto_0
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/a/d;->afq()Ljava/util/List;
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/a/d;->aqy()Ljava/util/List;
 
     move-result-object v0
 
@@ -205,20 +205,20 @@
 
     new-array v4, v4, [Ljava/lang/String;
 
-    invoke-virtual {p0, v0, v4}, Lcom/tencent/mm/plugin/safedevice/a/d;->b(Lcom/tencent/mm/sdk/g/ae;[Ljava/lang/String;)Z
+    invoke-virtual {p0, v0, v4}, Lcom/tencent/mm/plugin/safedevice/a/d;->b(Lcom/tencent/mm/sdk/h/c;[Ljava/lang/String;)Z
 
     goto :goto_1
 
     .line 75
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->eKd:Lcom/tencent/mm/ar/g;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->fUQ:Lcom/tencent/mm/az/g;
 
     if-eqz v0, :cond_1
 
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->eKd:Lcom/tencent/mm/ar/g;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/a/d;->fUQ:Lcom/tencent/mm/az/g;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ar/g;->cO(J)I
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/az/g;->dI(J)I
 
     .line 79
     :cond_1
@@ -230,14 +230,14 @@
     goto :goto_0
 .end method
 
-.method public final bridge synthetic b(Lcom/tencent/mm/sdk/g/ae;)Z
+.method public final bridge synthetic b(Lcom/tencent/mm/sdk/h/c;)Z
     .locals 1
 
     .prologue
     .line 13
     check-cast p1, Lcom/tencent/mm/plugin/safedevice/a/c;
 
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/g/ah;->b(Lcom/tencent/mm/sdk/g/ae;)Z
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/h/f;->b(Lcom/tencent/mm/sdk/h/c;)Z
 
     move-result v0
 

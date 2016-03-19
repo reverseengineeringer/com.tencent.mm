@@ -1,25 +1,25 @@
 package com.tencent.mm.ui.tools;
 
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.ref.WeakReference;
 
 public final class MMGestureGallery$h
-  extends ac
+  extends aa
 {
-  WeakReference iJb;
-  private long iJc;
-  boolean jtZ;
+  WeakReference kIn;
+  private long kIo;
+  boolean lwI;
   
   public MMGestureGallery$h(WeakReference paramWeakReference)
   {
-    iJb = paramWeakReference;
+    kIn = paramWeakReference;
   }
   
   public final void c(int paramInt, long paramLong1, long paramLong2)
   {
-    iJc = paramLong2;
+    kIo = paramLong2;
     sendEmptyMessageDelayed(paramInt, paramLong1);
   }
   
@@ -27,20 +27,26 @@ public final class MMGestureGallery$h
   {
     super.handleMessage(paramMessage);
     removeMessages(what);
-    MMGestureGallery localMMGestureGallery;
-    if (iJb != null)
+    final MMGestureGallery localMMGestureGallery;
+    if (kIn != null)
     {
-      localMMGestureGallery = (MMGestureGallery)iJb.get();
+      localMMGestureGallery = (MMGestureGallery)kIn.get();
       if (localMMGestureGallery != null)
       {
         if (what != 0) {
           break label95;
         }
-        if ((MMGestureGallery.i(localMMGestureGallery) == 1) || (jtZ))
+        if ((MMGestureGallery.i(localMMGestureGallery) == 1) || (lwI))
         {
-          t.d("!44@/B4Tb64lLpLtADHeupmcR9RkE1hpp/4l1le5KqFDqOc=", "single click over!");
+          u.d("!44@/B4Tb64lLpLtADHeupmcR9RkE1hpp/4l1le5KqFDqOc=", "single click over!");
           if (MMGestureGallery.f(localMMGestureGallery) != null) {
-            MMGestureGallery.c(localMMGestureGallery).post(new dz(this, localMMGestureGallery));
+            MMGestureGallery.c(localMMGestureGallery).post(new Runnable()
+            {
+              public final void run()
+              {
+                MMGestureGallery.f(localMMGestureGallery).aap();
+              }
+            });
           }
         }
         MMGestureGallery.a(localMMGestureGallery, 0);
@@ -52,10 +58,10 @@ public final class MMGestureGallery$h
       return;
       if (what == 1)
       {
-        if ((MMGestureGallery.z(localMMGestureGallery) != null) && (!MMGestureGallery.z(localMMGestureGallery).ayV()))
+        if ((MMGestureGallery.z(localMMGestureGallery) != null) && (!MMGestureGallery.z(localMMGestureGallery).aPA()))
         {
           MMGestureGallery.z(localMMGestureGallery).play();
-          sendEmptyMessageDelayed(what, iJc);
+          sendEmptyMessageDelayed(what, kIo);
           return;
         }
         MMGestureGallery.A(localMMGestureGallery);
@@ -63,7 +69,13 @@ public final class MMGestureGallery$h
       }
       removeMessages(2);
     } while (MMGestureGallery.B(localMMGestureGallery) == null);
-    MMGestureGallery.c(localMMGestureGallery).post(new ea(this, localMMGestureGallery));
+    MMGestureGallery.c(localMMGestureGallery).post(new Runnable()
+    {
+      public final void run()
+      {
+        MMGestureGallery.B(localMMGestureGallery).ahv();
+      }
+    });
   }
   
   public final void release()

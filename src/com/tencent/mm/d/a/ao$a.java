@@ -1,12 +1,8 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.q.j;
-
 public final class ao$a
 {
-  public String avo;
-  public int avp = 0;
-  public j avq;
+  public int anP = 0;
 }
 
 /* Location:

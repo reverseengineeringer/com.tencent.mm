@@ -1,6 +1,9 @@
 package com.tencent.mm.d.a;
 
-public final class cp$b {}
+public final class cp$b
+{
+  public boolean awe;
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.d.a.cp.b

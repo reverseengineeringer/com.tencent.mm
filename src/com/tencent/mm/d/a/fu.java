@@ -1,29 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class fu
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aCK = new a();
-  public b aCL = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aAJ = new a();
   
   public fu()
   {
-    id = "RcptAddress";
-    hXT = atO;
+    id = "GiftCard";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aCM;
-  }
-  
-  public static final class b
-  {
-    public int ret = 0;
+    public String aAK;
+    public long aAL;
+    public String aAM;
   }
 }
 

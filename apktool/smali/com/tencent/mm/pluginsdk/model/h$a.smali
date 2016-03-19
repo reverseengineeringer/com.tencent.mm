@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract ayM()V
+.method public abstract aPr()V
 .end method

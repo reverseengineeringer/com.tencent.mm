@@ -1,14 +1,16 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-
-final class dl
-  implements DialogInterface.OnClickListener
+public abstract interface dl
 {
-  dl(di paramdi) {}
+  public abstract void beD();
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt) {}
+  public abstract void beF();
+  
+  public abstract boolean beG();
+  
+  public abstract void rd(int paramInt);
+  
+  public static enum a {}
 }
 
 /* Location:

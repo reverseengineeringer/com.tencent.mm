@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static bjw:I
+.field private static btZ:I
 
 
 # direct methods
@@ -15,19 +15,19 @@
     .line 16
     const/4 v0, 0x0
 
-    sput v0, Lcom/tencent/mm/compatible/h/b;->bjw:I
+    sput v0, Lcom/tencent/mm/compatible/h/b;->btZ:I
 
     return-void
 .end method
 
-.method public static av(Z)V
+.method public static az(Z)V
     .locals 6
 
     .prologue
     const/4 v5, 0x1
 
     .line 36
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEU()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -78,13 +78,13 @@
 
     aput-object v1, v3, v5
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 44
     return-void
 .end method
 
-.method public static pc()Z
+.method public static oU()Z
     .locals 4
 
     .prologue
@@ -97,7 +97,7 @@
 
     const-string/jumbo v3, ""
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -117,7 +117,7 @@
 
     const-string/jumbo v3, ""
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -152,12 +152,12 @@
 
     .line 24
     :cond_3
-    sget v2, Lcom/tencent/mm/compatible/h/b;->bjw:I
+    sget v2, Lcom/tencent/mm/compatible/h/b;->btZ:I
 
     if-nez v2, :cond_4
 
     .line 25
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEU()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
 
     move-result-object v2
 
@@ -171,12 +171,12 @@
     if-eqz v2, :cond_5
 
     .line 27
-    sput v1, Lcom/tencent/mm/compatible/h/b;->bjw:I
+    sput v1, Lcom/tencent/mm/compatible/h/b;->btZ:I
 
     .line 32
     :cond_4
     :goto_2
-    sget v2, Lcom/tencent/mm/compatible/h/b;->bjw:I
+    sget v2, Lcom/tencent/mm/compatible/h/b;->btZ:I
 
     if-ne v2, v1, :cond_1
 
@@ -188,7 +188,7 @@
     :cond_5
     const/4 v2, 0x2
 
-    sput v2, Lcom/tencent/mm/compatible/h/b;->bjw:I
+    sput v2, Lcom/tencent/mm/compatible/h/b;->btZ:I
 
     goto :goto_2
 .end method

@@ -1,17 +1,41 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
-import com.tencent.mm.ui.base.MMDotView;
-import com.tencent.mm.ui.base.MMFlipper.b;
+import android.content.Context;
+import com.tencent.mm.pluginsdk.ui.ChatFooterPanel;
 
-final class d
-  implements MMFlipper.b
+public final class d
+  extends ChatFooterPanel
 {
-  d(AppPanel paramAppPanel) {}
-  
-  public final void it(int paramInt)
+  public d(Context paramContext)
   {
-    AppPanel.e(gTY).setSelectedDot(paramInt);
+    super(paramContext, null);
   }
+  
+  public final void RN() {}
+  
+  public final void RO() {}
+  
+  public final void RP() {}
+  
+  public final void RQ() {}
+  
+  public final void RR() {}
+  
+  public final void RS() {}
+  
+  public final void j(boolean paramBoolean1, boolean paramBoolean2) {}
+  
+  public final void onPause() {}
+  
+  public final void onResume() {}
+  
+  public final void setDefaultEmojiByDetail(String paramString) {}
+  
+  public final void setPortHeightPx(int paramInt) {}
+  
+  public final void setSendButtonEnable(boolean paramBoolean) {}
+  
+  public final void setTalkerName(String paramString) {}
 }
 
 /* Location:

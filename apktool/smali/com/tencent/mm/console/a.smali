@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/console/a;
-.super Lcom/tencent/mm/sdk/c/e;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
 
 
@@ -11,7 +11,7 @@
     .line 11
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/e;-><init>(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
 
     .line 12
     return-void
@@ -19,14 +19,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/d;)Z
+.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 4
 
     .prologue
     const/4 v3, 0x0
 
     .line 24
-    instance-of v0, p1, Lcom/tencent/mm/d/a/z;
+    instance-of v0, p1, Lcom/tencent/mm/d/a/aq;
 
     if-nez v0, :cond_0
 
@@ -36,24 +36,24 @@
 
     .line 28
     :cond_0
-    check-cast p1, Lcom/tencent/mm/d/a/z;
+    check-cast p1, Lcom/tencent/mm/d/a/aq;
 
     .line 29
-    iget-object v0, p1, Lcom/tencent/mm/d/a/z;->auK:Lcom/tencent/mm/d/a/z$b;
+    iget-object v0, p1, Lcom/tencent/mm/d/a/aq;->atP:Lcom/tencent/mm/d/a/aq$b;
 
-    iget-object v1, p1, Lcom/tencent/mm/d/a/z;->auJ:Lcom/tencent/mm/d/a/z$a;
+    iget-object v1, p1, Lcom/tencent/mm/d/a/aq;->atO:Lcom/tencent/mm/d/a/aq$a;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/a/z$a;->context:Landroid/content/Context;
+    iget-object v1, v1, Lcom/tencent/mm/d/a/aq$a;->context:Landroid/content/Context;
 
-    iget-object v2, p1, Lcom/tencent/mm/d/a/z;->auJ:Lcom/tencent/mm/d/a/z$a;
+    iget-object v2, p1, Lcom/tencent/mm/d/a/aq;->atO:Lcom/tencent/mm/d/a/aq$a;
 
-    iget-object v2, v2, Lcom/tencent/mm/d/a/z$a;->auL:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/d/a/aq$a;->atQ:Ljava/lang/String;
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/console/b;->r(Landroid/content/Context;Ljava/lang/String;)Z
+    invoke-static {v1, v2}, Lcom/tencent/mm/console/b;->u(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v1
 
-    iput-boolean v1, v0, Lcom/tencent/mm/d/a/z$b;->auM:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/d/a/aq$b;->atR:Z
 
     goto :goto_0
 .end method

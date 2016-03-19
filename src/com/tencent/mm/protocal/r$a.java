@@ -1,27 +1,31 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.ys;
+import com.tencent.mm.protocal.b.alx;
+import com.tencent.mm.protocal.b.wp;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class r$a
-  extends i.c
-  implements i.a
+  extends h.c
+  implements h.a
 {
-  public ys hhj = new ys();
+  public wp iVg = new wp();
   
   public final int getCmdId()
   {
-    return 27;
+    return 48;
   }
   
-  public final byte[] tH()
+  public final byte[] tY()
   {
-    hhj.hLO = i.a(this);
-    return hhj.toByteArray();
+    iUJ = z.aTx();
+    iVg.jbx = new alx().aO(ay.aVA());
+    iVg.jGS = h.a(this);
+    return iVg.toByteArray();
   }
   
-  public final int tI()
+  public final int tZ()
   {
-    return 139;
+    return 107;
   }
 }
 

@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/plugin/sight/draft/ui/b;
-.super Lcom/tencent/mm/ui/cj;
+.super Lcom/tencent/mm/ui/i;
 .source "SourceFile"
 
 
@@ -17,31 +17,31 @@
 
 
 # instance fields
-.field private fbi:I
+.field private gmC:I
 
-.field fih:Lcom/tencent/mm/plugin/sight/draft/ui/b$a;
+.field gzh:Lcom/tencent/mm/plugin/sight/draft/ui/b$a;
 
-.field private fii:Lcom/tencent/mm/plugin/sight/draft/ui/b$b;
+.field private gzi:Lcom/tencent/mm/plugin/sight/draft/ui/b$b;
 
-.field private fij:Lcom/tencent/mm/plugin/sight/draft/ui/b$c;
+.field private gzj:Lcom/tencent/mm/plugin/sight/draft/ui/b$c;
 
-.field fik:Ljava/util/Set;
+.field gzk:Ljava/util/Set;
 
-.field fil:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+.field gzl:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
-.field private fim:Lcom/tencent/mm/plugin/sight/draft/ui/a;
+.field private gzm:Lcom/tencent/mm/plugin/sight/draft/ui/a;
 
-.field fin:I
+.field gzn:I
 
-.field fio:I
+.field gzo:I
 
-.field private fip:I
+.field private gzp:I
 
-.field private fiq:I
+.field private gzq:I
 
-.field private fir:I
+.field private gzr:I
 
-.field fis:Lcom/tencent/mm/plugin/sight/draft/ui/e;
+.field gzs:Lcom/tencent/mm/plugin/sight/draft/ui/c;
 
 
 # direct methods
@@ -54,65 +54,65 @@
     .line 80
     const/4 v0, 0x0
 
-    invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/cj;-><init>(Landroid/content/Context;Ljava/lang/Object;)V
+    invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/i;-><init>(Landroid/content/Context;Ljava/lang/Object;)V
 
     .line 45
     new-instance v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$a;
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/plugin/sight/draft/ui/b$a;-><init>(Lcom/tencent/mm/plugin/sight/draft/ui/b;B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fih:Lcom/tencent/mm/plugin/sight/draft/ui/b$a;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzh:Lcom/tencent/mm/plugin/sight/draft/ui/b$a;
 
     .line 46
     new-instance v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$b;
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/plugin/sight/draft/ui/b$b;-><init>(Lcom/tencent/mm/plugin/sight/draft/ui/b;B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fii:Lcom/tencent/mm/plugin/sight/draft/ui/b$b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzi:Lcom/tencent/mm/plugin/sight/draft/ui/b$b;
 
     .line 47
     new-instance v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$c;
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/plugin/sight/draft/ui/b$c;-><init>(Lcom/tencent/mm/plugin/sight/draft/ui/b;B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fij:Lcom/tencent/mm/plugin/sight/draft/ui/b$c;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzj:Lcom/tencent/mm/plugin/sight/draft/ui/b$c;
 
     .line 48
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fik:Ljava/util/Set;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzk:Ljava/util/Set;
 
     .line 50
-    sget-object v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->fiv:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    sget-object v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->gzv:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fil:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzl:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     .line 53
-    sget v0, Lcom/tencent/mm/a$n;->sight_draft_send:I
+    const v0, 0x7f0b0c77
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fin:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzn:I
 
     .line 54
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fio:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzo:I
 
     .line 60
-    new-instance v0, Lcom/tencent/mm/plugin/sight/draft/ui/c;
+    new-instance v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/draft/ui/c;-><init>(Lcom/tencent/mm/plugin/sight/draft/ui/b;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/draft/ui/b$1;-><init>(Lcom/tencent/mm/plugin/sight/draft/ui/b;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fis:Lcom/tencent/mm/plugin/sight/draft/ui/e;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzs:Lcom/tencent/mm/plugin/sight/draft/ui/c;
 
     .line 81
-    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fim:Lcom/tencent/mm/plugin/sight/draft/ui/a;
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzm:Lcom/tencent/mm/plugin/sight/draft/ui/a;
 
     .line 83
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->sight_draft_padding:I
+    const v1, 0x7f0501aa
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -134,30 +134,30 @@
 
     div-int/lit8 v1, v1, 0x3
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fip:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzp:I
 
     .line 86
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fip:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzp:I
 
     sub-int/2addr v1, v0
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fbi:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gmC:I
 
     .line 87
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fbi:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gmC:I
 
     mul-int/lit8 v1, v1, 0x3
 
     div-int/lit8 v1, v1, 0x4
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fir:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzr:I
 
     .line 88
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fir:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzr:I
 
     add-int/2addr v0, v1
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fiq:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzq:I
 
     .line 89
     return-void
@@ -168,7 +168,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fik:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzk:Ljava/util/Set;
 
     return-object v0
 .end method
@@ -188,7 +188,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fil:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzl:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     return-object v0
 .end method
@@ -198,17 +198,17 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fim:Lcom/tencent/mm/plugin/sight/draft/ui/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzm:Lcom/tencent/mm/plugin/sight/draft/ui/a;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/tencent/mm/plugin/sight/draft/ui/b;)Lcom/tencent/mm/plugin/sight/draft/ui/e;
+.method static synthetic d(Lcom/tencent/mm/plugin/sight/draft/ui/b;)Lcom/tencent/mm/plugin/sight/draft/ui/c;
     .locals 1
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fis:Lcom/tencent/mm/plugin/sight/draft/ui/e;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzs:Lcom/tencent/mm/plugin/sight/draft/ui/c;
 
     return-object v0
 .end method
@@ -218,39 +218,39 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fih:Lcom/tencent/mm/plugin/sight/draft/ui/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzh:Lcom/tencent/mm/plugin/sight/draft/ui/b$a;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final Eb()V
+.method public final Gk()V
     .locals 0
 
     .prologue
     .line 361
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/draft/ui/b;->Ec()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/draft/ui/b;->Gl()V
 
     .line 362
-    invoke-super {p0}, Lcom/tencent/mm/ui/cj;->notifyDataSetChanged()V
+    invoke-super {p0}, Lcom/tencent/mm/ui/i;->notifyDataSetChanged()V
 
     .line 363
     return-void
 .end method
 
-.method protected final Ec()V
+.method protected final Gl()V
     .locals 5
 
     .prologue
     .line 367
-    invoke-static {}, Lcom/tencent/mm/ah/v;->BZ()Lcom/tencent/mm/ah/o;
+    invoke-static {}, Lcom/tencent/mm/an/j;->Eb()Lcom/tencent/mm/an/h;
 
     move-result-object v0
 
     const-string/jumbo v1, "SELECT * FROM SightDraftInfo WHERE fileStatus = ?  ORDER BY localId DESC "
 
-    iget-object v0, v0, Lcom/tencent/mm/ah/o;->aqT:Lcom/tencent/mm/sdk/g/af;
+    iget-object v0, v0, Lcom/tencent/mm/an/h;->aoX:Lcom/tencent/mm/sdk/h/d;
 
     const/4 v2, 0x1
 
@@ -262,7 +262,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/sdk/g/af;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -277,16 +277,16 @@
 
     .prologue
     .line 34
-    check-cast p1, Lcom/tencent/mm/ah/m;
+    check-cast p1, Lcom/tencent/mm/an/f;
 
     if-nez p1, :cond_0
 
-    new-instance p1, Lcom/tencent/mm/ah/m;
+    new-instance p1, Lcom/tencent/mm/an/f;
 
-    invoke-direct {p1}, Lcom/tencent/mm/ah/m;-><init>()V
+    invoke-direct {p1}, Lcom/tencent/mm/an/f;-><init>()V
 
     :cond_0
-    invoke-virtual {p1, p2}, Lcom/tencent/mm/ah/m;->c(Landroid/database/Cursor;)V
+    invoke-virtual {p1, p2}, Lcom/tencent/mm/an/f;->c(Landroid/database/Cursor;)V
 
     return-object p1
 .end method
@@ -301,7 +301,7 @@
     if-nez p1, :cond_0
 
     .line 210
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fik:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzk:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -321,7 +321,7 @@
     check-cast v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;
 
     .line 211
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiA:Landroid/view/View;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzA:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
@@ -329,7 +329,7 @@
 
     .line 214
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fik:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzk:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -349,7 +349,7 @@
     check-cast v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;
 
     .line 215
-    iget-object v3, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiA:Landroid/view/View;
+    iget-object v3, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzA:Landroid/view/View;
 
     if-ne p1, v0, :cond_1
 
@@ -370,17 +370,17 @@
     return-void
 .end method
 
-.method public final a(Ljava/lang/String;Lcom/tencent/mm/sdk/g/an;)V
+.method public final a(Ljava/lang/String;Lcom/tencent/mm/sdk/h/i;)V
     .locals 1
 
     .prologue
     .line 310
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fik:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzk:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->clear()V
 
     .line 311
-    invoke-super {p0, p1, p2}, Lcom/tencent/mm/ui/cj;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/g/an;)V
+    invoke-super {p0, p1, p2}, Lcom/tencent/mm/ui/i;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/h/i;)V
 
     .line 312
     return-void
@@ -391,19 +391,19 @@
 
     .prologue
     .line 289
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fil:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzl:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     if-ne p1, v0, :cond_1
 
     .line 290
     if-eqz p2, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fim:Lcom/tencent/mm/plugin/sight/draft/ui/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzm:Lcom/tencent/mm/plugin/sight/draft/ui/a;
 
     if-eqz v0, :cond_0
 
     .line 291
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fim:Lcom/tencent/mm/plugin/sight/draft/ui/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzm:Lcom/tencent/mm/plugin/sight/draft/ui/a;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sight/draft/ui/a;->a(Lcom/tencent/mm/plugin/sight/draft/ui/b$d;)V
 
@@ -417,12 +417,12 @@
 
     .line 295
     :cond_1
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fil:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzl:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     .line 296
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fih:Lcom/tencent/mm/plugin/sight/draft/ui/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzh:Lcom/tencent/mm/plugin/sight/draft/ui/b$a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/draft/ui/b$a;->ajx()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/draft/ui/b$a;->awd()Z
 
     .line 297
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/draft/ui/b;->notifyDataSetChanged()V
@@ -430,12 +430,12 @@
     .line 298
     if-eqz p2, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fim:Lcom/tencent/mm/plugin/sight/draft/ui/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzm:Lcom/tencent/mm/plugin/sight/draft/ui/a;
 
     if-eqz v0, :cond_2
 
     .line 299
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fim:Lcom/tencent/mm/plugin/sight/draft/ui/a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzm:Lcom/tencent/mm/plugin/sight/draft/ui/a;
 
     invoke-interface {v0, p1}, Lcom/tencent/mm/plugin/sight/draft/ui/a;->a(Lcom/tencent/mm/plugin/sight/draft/ui/b$d;)V
 
@@ -451,7 +451,7 @@
 
     .prologue
     .line 372
-    invoke-super {p0}, Lcom/tencent/mm/ui/cj;->getCount()I
+    invoke-super {p0}, Lcom/tencent/mm/ui/i;->getCount()I
 
     move-result v0
 
@@ -512,7 +512,7 @@
 
     move-result-object v0
 
-    sget v3, Lcom/tencent/mm/a$k;->sight_draft_list_item:I
+    const v3, 0x7f0a04f5
 
     invoke-virtual {v0, v3, p2, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
@@ -524,24 +524,24 @@
     invoke-direct {v5, v4}, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;-><init>(B)V
 
     .line 103
-    iput-object v3, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cAV:Landroid/view/View;
+    iput-object v3, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cTx:Landroid/view/View;
 
     .line 104
-    iget-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cAV:Landroid/view/View;
+    iget-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cTx:Landroid/view/View;
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     .line 105
-    sget v0, Lcom/tencent/mm/a$i;->sight_play_area:I
+    const v0, 0x7f070f48
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiy:Landroid/view/View;
+    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzy:Landroid/view/View;
 
     .line 106
-    sget v0, Lcom/tencent/mm/a$i;->sight_view:I
+    const v0, 0x7f070f49
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -549,10 +549,10 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sight/decode/a/a;
 
-    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     .line 107
-    sget v0, Lcom/tencent/mm/a$i;->sight_view_mask:I
+    const v0, 0x7f070f4a
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -560,19 +560,19 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->dkN:Landroid/widget/ImageView;
+    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->dVm:Landroid/widget/ImageView;
 
     .line 108
-    sget v0, Lcom/tencent/mm/a$i;->shadow_mask:I
+    const v0, 0x7f070f4c
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiA:Landroid/view/View;
+    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzA:Landroid/view/View;
 
     .line 109
-    sget v0, Lcom/tencent/mm/a$i;->sight_tips_tv:I
+    const v0, 0x7f070f4b
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -580,17 +580,17 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cuF:Landroid/widget/TextView;
+    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cMz:Landroid/widget/TextView;
 
     .line 110
-    iget-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cuF:Landroid/widget/TextView;
+    iget-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cMz:Landroid/widget/TextView;
 
-    iget v6, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fin:I
+    iget v6, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzn:I
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setText(I)V
 
     .line 111
-    sget v0, Lcom/tencent/mm/a$i;->sight_del_btn:I
+    const v0, 0x7f070f4d
 
     invoke-virtual {v3, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -598,10 +598,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiB:Landroid/widget/ImageView;
+    iput-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzB:Landroid/widget/ImageView;
 
     .line 112
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/draft/ui/b$f;->fiC:Ljava/util/List;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/draft/ui/b$f;->gzC:Ljava/util/List;
 
     invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -616,7 +616,7 @@
     iput v8, v0, Landroid/widget/LinearLayout$LayoutParams;->weight:F
 
     .line 116
-    iget v6, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fiq:I
+    iget v6, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzq:I
 
     iput v6, v0, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
@@ -624,24 +624,24 @@
     invoke-virtual {p2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
     .line 118
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fih:Lcom/tencent/mm/plugin/sight/draft/ui/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzh:Lcom/tencent/mm/plugin/sight/draft/ui/b$a;
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 119
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fii:Lcom/tencent/mm/plugin/sight/draft/ui/b$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzi:Lcom/tencent/mm/plugin/sight/draft/ui/b$b;
 
     invoke-virtual {v3, v0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     .line 120
-    iget-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiB:Landroid/widget/ImageView;
+    iget-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzB:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v5}, Landroid/widget/ImageView;->setTag(Ljava/lang/Object;)V
 
     .line 121
-    iget-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiB:Landroid/widget/ImageView;
+    iget-object v0, v5, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzB:Landroid/widget/ImageView;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fij:Lcom/tencent/mm/plugin/sight/draft/ui/b$c;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzj:Lcom/tencent/mm/plugin/sight/draft/ui/b$c;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -663,7 +663,7 @@
 
     .line 130
     :goto_2
-    iget-object v0, v2, Lcom/tencent/mm/plugin/sight/draft/ui/b$f;->fiC:Ljava/util/List;
+    iget-object v0, v2, Lcom/tencent/mm/plugin/sight/draft/ui/b$f;->gzC:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -677,7 +677,7 @@
     add-int v5, v0, v3
 
     .line 132
-    iget-object v0, v2, Lcom/tencent/mm/plugin/sight/draft/ui/b$f;->fiC:Ljava/util/List;
+    iget-object v0, v2, Lcom/tencent/mm/plugin/sight/draft/ui/b$f;->gzC:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -686,44 +686,44 @@
     check-cast v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;
 
     .line 133
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fik:Ljava/util/Set;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzk:Ljava/util/Set;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 136
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiA:Landroid/view/View;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzA:Landroid/view/View;
 
     invoke-virtual {v1, v9}, Landroid/view/View;->setVisibility(I)V
 
     .line 137
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cuF:Landroid/widget/TextView;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cMz:Landroid/widget/TextView;
 
     invoke-virtual {v1, v9}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 138
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->dkN:Landroid/widget/ImageView;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->dVm:Landroid/widget/ImageView;
 
-    sget v6, Lcom/tencent/mm/a$h;->sight_draft_mask:I
+    const v6, 0x7f0405cf
 
     invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     .line 139
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
-    invoke-interface {v1, v10, v4}, Lcom/tencent/mm/plugin/sight/decode/a/a;->I(Ljava/lang/String;Z)V
+    invoke-interface {v1, v10, v4}, Lcom/tencent/mm/plugin/sight/decode/a/a;->P(Ljava/lang/String;Z)V
 
     .line 140
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     invoke-interface {v1, v4}, Lcom/tencent/mm/plugin/sight/decode/a/a;->setCanPlay(Z)V
 
     .line 141
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     invoke-interface {v1, v4}, Lcom/tencent/mm/plugin/sight/decode/a/a;->setForceRecordState(Z)V
 
     .line 142
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     check-cast v1, Landroid/widget/ImageView;
 
@@ -733,20 +733,20 @@
     if-gtz v5, :cond_2
 
     .line 145
-    new-instance v1, Lcom/tencent/mm/ah/m;
+    new-instance v1, Lcom/tencent/mm/an/f;
 
-    invoke-direct {v1}, Lcom/tencent/mm/ah/m;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/an/f;-><init>()V
 
     .line 146
     const/4 v5, -0x1
 
-    iput v5, v1, Lcom/tencent/mm/ah/m;->field_fileStatus:I
+    iput v5, v1, Lcom/tencent/mm/an/f;->field_fileStatus:I
 
     .line 147
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->bOH:Lcom/tencent/mm/ah/m;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cfv:Lcom/tencent/mm/an/f;
 
     .line 148
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     check-cast v1, Landroid/widget/ImageView;
 
@@ -755,37 +755,37 @@
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     .line 149
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     check-cast v1, Landroid/widget/ImageView;
 
-    sget v5, Lcom/tencent/mm/a$h;->app_panel_setting_icon:I
+    const v5, 0x7f0302a2
 
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 150
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     check-cast v1, Landroid/widget/ImageView;
 
-    sget v5, Lcom/tencent/mm/a$h;->sight_draft_grid_item_bg:I
+    const v5, 0x7f0405bc
 
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setBackgroundResource(I)V
 
     .line 151
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiB:Landroid/widget/ImageView;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzB:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v9}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 152
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cAV:Landroid/view/View;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cTx:Landroid/view/View;
 
     invoke-virtual {v1, v4}, Landroid/view/View;->setVisibility(I)V
 
     .line 153
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiy:Landroid/view/View;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzy:Landroid/view/View;
 
-    invoke-static {v0, v8}, Lcom/tencent/mm/ui/tools/dt;->e(Landroid/view/View;F)V
+    invoke-static {v0, v8}, Lcom/tencent/mm/ui/tools/k;->e(Landroid/view/View;F)V
 
     .line 130
     :goto_3
@@ -809,7 +809,7 @@
 
     .line 155
     :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/draft/ui/b;->apH()I
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/draft/ui/b;->SU()I
 
     move-result v1
 
@@ -818,29 +818,29 @@
     if-lt v5, v1, :cond_3
 
     .line 156
-    iput-object v10, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->bOH:Lcom/tencent/mm/ah/m;
+    iput-object v10, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cfv:Lcom/tencent/mm/an/f;
 
     .line 157
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cAV:Landroid/view/View;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cTx:Landroid/view/View;
 
     const/4 v5, 0x4
 
     invoke-virtual {v1, v5}, Landroid/view/View;->setVisibility(I)V
 
     .line 158
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiy:Landroid/view/View;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzy:Landroid/view/View;
 
-    invoke-static {v0, v8}, Lcom/tencent/mm/ui/tools/dt;->e(Landroid/view/View;F)V
+    invoke-static {v0, v8}, Lcom/tencent/mm/ui/tools/k;->e(Landroid/view/View;F)V
 
     goto :goto_3
 
     .line 161
     :cond_3
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fio:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzo:I
 
     add-int/lit8 v1, v1, -0x1
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fio:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzo:I
 
     .line 162
     add-int/lit8 v1, v5, -0x1
@@ -849,50 +849,50 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/tencent/mm/ah/m;
+    check-cast v1, Lcom/tencent/mm/an/f;
 
     .line 163
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v5
 
-    invoke-virtual {v5}, Lcom/tencent/mm/model/b;->isSDCardAvailable()Z
+    invoke-virtual {v5}, Lcom/tencent/mm/model/c;->isSDCardAvailable()Z
 
     move-result v5
 
     if-nez v5, :cond_4
 
     .line 164
-    iput-object v10, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->bOH:Lcom/tencent/mm/ah/m;
+    iput-object v10, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cfv:Lcom/tencent/mm/an/f;
 
     .line 165
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
-    invoke-interface {v1}, Lcom/tencent/mm/plugin/sight/decode/a/a;->ajl()V
+    invoke-interface {v1}, Lcom/tencent/mm/plugin/sight/decode/a/a;->avF()V
 
     .line 174
     :goto_4
-    sget-object v1, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->fiw:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->gzw:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fil:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzl:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     if-ne v1, v5, :cond_6
 
     .line 175
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiB:Landroid/widget/ImageView;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzB:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v4}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 176
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiy:Landroid/view/View;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzy:Landroid/view/View;
 
     const v5, 0x3f733333    # 0.95f
 
-    invoke-static {v1, v5}, Lcom/tencent/mm/ui/tools/dt;->e(Landroid/view/View;F)V
+    invoke-static {v1, v5}, Lcom/tencent/mm/ui/tools/k;->e(Landroid/view/View;F)V
 
     .line 183
     :goto_5
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cAV:Landroid/view/View;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cTx:Landroid/view/View;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
@@ -900,32 +900,32 @@
 
     .line 167
     :cond_4
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->bOH:Lcom/tencent/mm/ah/m;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cfv:Lcom/tencent/mm/an/f;
 
     .line 168
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fis:Lcom/tencent/mm/plugin/sight/draft/ui/e;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzs:Lcom/tencent/mm/plugin/sight/draft/ui/c;
 
-    iget-object v6, v1, Lcom/tencent/mm/ah/m;->field_fileName:Ljava/lang/String;
+    iget-object v6, v1, Lcom/tencent/mm/an/f;->field_fileName:Ljava/lang/String;
 
-    iget-object v1, v1, Lcom/tencent/mm/ah/m;->field_fileName:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/an/f;->field_fileName:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/ah/n;->if(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/an/g;->jH(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v7
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->fio:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b;->gzo:I
 
     if-gtz v1, :cond_5
 
     const/4 v1, 0x1
 
     :goto_6
-    invoke-virtual {v5, v6, v7, v1}, Lcom/tencent/mm/plugin/sight/draft/ui/e;->h(Ljava/lang/String;Ljava/lang/String;Z)Landroid/graphics/Bitmap;
+    invoke-virtual {v5, v6, v7, v1}, Lcom/tencent/mm/plugin/sight/draft/ui/c;->h(Ljava/lang/String;Ljava/lang/String;Z)Landroid/graphics/Bitmap;
 
     move-result-object v5
 
     .line 170
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     check-cast v1, Landroid/widget/ImageView;
 
@@ -934,7 +934,7 @@
     invoke-virtual {v1, v6}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
     .line 171
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiz:Lcom/tencent/mm/plugin/sight/decode/a/a;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzz:Lcom/tencent/mm/plugin/sight/decode/a/a;
 
     invoke-interface {v1, v5}, Lcom/tencent/mm/plugin/sight/decode/a/a;->setThumbBmp(Landroid/graphics/Bitmap;)V
 
@@ -948,14 +948,14 @@
 
     .line 178
     :cond_6
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiB:Landroid/widget/ImageView;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzB:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v9}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 179
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->fiy:Landroid/view/View;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->gzy:Landroid/view/View;
 
-    invoke-static {v1, v8}, Lcom/tencent/mm/ui/tools/dt;->e(Landroid/view/View;F)V
+    invoke-static {v1, v8}, Lcom/tencent/mm/ui/tools/k;->e(Landroid/view/View;F)V
 
     goto :goto_5
 

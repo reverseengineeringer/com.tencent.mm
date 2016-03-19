@@ -4,11 +4,11 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tencent/mm/ah/m;)V
+.method public abstract a(Lcom/tencent/mm/an/f;)V
 .end method
 
 .method public abstract a(Lcom/tencent/mm/plugin/sight/draft/ui/b$d;)V
 .end method
 
-.method public abstract ajw()V
+.method public abstract awc()V
 .end method

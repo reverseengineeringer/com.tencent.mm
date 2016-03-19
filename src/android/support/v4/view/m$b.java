@@ -1,10 +1,14 @@
 package android.support.v4.view;
 
-abstract interface m$b
+import android.view.View;
+
+class m$b
+  extends m.a
 {
-  public abstract boolean ax();
-  
-  public abstract boolean ay();
+  public final boolean m(View paramView)
+  {
+    return paramView.isOpaque();
+  }
 }
 
 /* Location:

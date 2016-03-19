@@ -1,38 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import java.util.List;
+import com.tencent.mm.sdk.c.b;
 
 public final class ej
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aAD = new a();
-  public b aAE = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a ayZ = new a();
+  public b aza = new b();
   
   public ej()
   {
-    id = "NetSceneCreateChatRoom";
-    hXT = atO;
+    id = "FileDownloadPause";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aAC = false;
-    public String aAF;
-    public List aAG;
+    public long ayW = 0L;
   }
   
   public static final class b
   {
-    public int aAH;
-    public String aAI;
-    public List aAJ;
-    public List aAK;
-    public List aAL;
-    public List aAM;
-    public List aAN;
+    public boolean atf = false;
   }
 }
 

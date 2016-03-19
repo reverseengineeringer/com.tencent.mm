@@ -1,150 +1,96 @@
 package com.tencent.smtt.a;
 
-import android.content.Context;
-import android.content.pm.ApplicationInfo;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.PackageManager.NameNotFoundException;
-import android.os.Build;
-import android.os.Build.VERSION;
-import android.text.TextUtils;
-import android.util.DisplayMetrics;
-import android.view.Display;
-import android.view.WindowManager;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public final class q
 {
-  private static String jLV = "9397";
-  private static String jLW = "";
-  private static String jLX = "PP";
-  private static String jLY = "PPVC";
-  private static boolean jLZ = false;
-  private static boolean jMa = false;
+  public b lVt = null;
+  public b lVu = null;
   
-  private static String a(Context paramContext, String paramString1, String paramString2, String paramString3, String paramString4)
+  public static boolean a(b paramb1, b paramb2)
   {
-    localStringBuilder = new StringBuilder();
-    localStringBuilder.append("QV=2");
-    a(localStringBuilder, "PL", "ADR");
-    a(localStringBuilder, "PR", "TBS");
-    a(localStringBuilder, "PB", "GE");
-    a(localStringBuilder, "VE", "B1");
-    a(localStringBuilder, "VN", paramString2);
-    a(localStringBuilder, "CO", "AMTT");
-    a(localStringBuilder, "COVN", paramString1);
-    a(localStringBuilder, "RF", "PRI");
-    a(localStringBuilder, "PP", paramString3);
-    a(localStringBuilder, "PPVC", paramString4);
-    a(localStringBuilder, "RL", eT(paramContext) + "*" + eU(paramContext));
-    paramString1 = " " + Build.MODEL.replaceAll("[ |\\/|\\_|\\&|\\|]", "") + " ";
-    try
+    if ((paramb1 != null) && (lVy != null) && (paramb2 != null) && (lVy != null))
     {
-      paramString2 = new String(paramString1.getBytes("UTF-8"), "ISO8859-1");
-      paramString1 = paramString2;
-    }
-    catch (Exception paramString2)
-    {
-      for (;;)
+      Object localObject1 = lVy;
+      paramb1 = lVy;
+      paramb2 = ((Map)localObject1).entrySet().iterator();
+      while (paramb2.hasNext())
       {
-        continue;
-        i = Math.min(eT(paramContext), eU(paramContext));
-        paramContext = (WindowManager)paramContext.getSystemService("window");
-        paramString1 = new DisplayMetrics();
-        paramContext.getDefaultDisplay().getMetrics(paramString1);
-        if (i * 160 / densityDpi >= 700) {}
-        for (boolean bool = true;; bool = false)
+        Object localObject2 = (Map.Entry)paramb2.next();
+        localObject1 = (String)((Map.Entry)localObject2).getKey();
+        localObject2 = (a)((Map.Entry)localObject2).getValue();
+        if (paramb1.containsKey(localObject1))
         {
-          jMa = bool;
-          jLZ = true;
-          bool = jMa;
-          break;
+          localObject1 = (a)paramb1.get(localObject1);
+          if ((lVv != lVv) || (lVw != lVw)) {
+            return false;
+          }
         }
-        a(localStringBuilder, "DE", "PHONE");
+        else
+        {
+          return false;
+        }
       }
+      return true;
     }
-    if (!TextUtils.isEmpty(paramString1)) {
-      a(localStringBuilder, "MO", paramString1);
-    }
-    if (jLZ)
+    return false;
+  }
+  
+  final class a
+  {
+    long lVv;
+    long lVw;
+    private String mName;
+    
+    a(String paramString, long paramLong1, long paramLong2)
     {
-      bool = jMa;
-      if (!bool) {
-        break label412;
-      }
-      a(localStringBuilder, "DE", "PAD");
-      paramContext = Build.VERSION.RELEASE;
+      mName = paramString;
+      lVv = paramLong1;
+      lVw = paramLong2;
     }
-    try
+  }
+  
+  public final class b
+  {
+    public Map lVy = new HashMap();
+    
+    public b(File paramFile)
     {
-      paramString1 = new String(paramContext.getBytes("UTF-8"), "ISO8859-1");
-      paramContext = paramString1;
+      lVy.clear();
+      x(paramFile);
     }
-    catch (Exception paramString1)
+    
+    private void x(File paramFile)
     {
-      for (;;)
+      if (paramFile.isDirectory())
       {
-        int i;
-        continue;
-        paramContext = "11111";
+        paramFile = paramFile.listFiles();
+        int i = 0;
+        while (i < paramFile.length)
+        {
+          x(paramFile[i]);
+          i += 1;
+        }
       }
-    }
-    if (!TextUtils.isEmpty(paramContext)) {
-      a(localStringBuilder, "OS", paramContext);
-    }
-    a(localStringBuilder, "API", Build.VERSION.SDK_INT);
-    if (TextUtils.isEmpty("11111"))
-    {
-      paramContext = "0";
-      a(localStringBuilder, "CHID", paramContext);
-      a(localStringBuilder, "LCID", jLV);
-      return localStringBuilder.toString();
-    }
-  }
-  
-  private static void a(StringBuilder paramStringBuilder, String paramString1, String paramString2)
-  {
-    paramStringBuilder.append("&").append(paramString1).append("=").append(paramString2);
-  }
-  
-  public static String eS(Context paramContext)
-  {
-    if (!jLW.equals("")) {
-      return jLW;
-    }
-    Object localObject1 = paramContext.getApplicationInfo();
-    try
-    {
-      Object localObject2 = paramContext.getPackageManager().getPackageInfo(packageName, 0);
-      jLX = packageName;
-      jLY = String.valueOf(versionCode);
-      localObject1 = null;
-      if (jLX.equals("com.tencent.mm")) {
-        localObject1 = c.ba(paramContext.getApplicationContext(), "com.tencent.mm.BuildInfo.CLIENT_VERSION");
-      }
-      localObject2 = jLX;
-      if (localObject1 != null) {}
-      for (;;)
+      if (paramFile.isFile())
       {
-        paramContext = a(paramContext, "0", "1.0.1.0002", (String)localObject2, (String)localObject1);
-        jLW = paramContext;
-        return paramContext;
-        localObject1 = jLY;
+        String str = paramFile.getName();
+        long l1 = paramFile.length();
+        long l2 = paramFile.lastModified();
+        if ((str != null) && (str.length() > 0) && (l1 > 0L) && (l2 > 0L))
+        {
+          paramFile = new q.a(q.this, str, l1, l2);
+          if (!lVy.containsKey(str)) {
+            lVy.put(str, paramFile);
+          }
+        }
       }
     }
-    catch (PackageManager.NameNotFoundException localNameNotFoundException)
-    {
-      for (;;) {}
-    }
-  }
-  
-  private static int eT(Context paramContext)
-  {
-    return ((WindowManager)paramContext.getSystemService("window")).getDefaultDisplay().getWidth();
-  }
-  
-  private static int eU(Context paramContext)
-  {
-    return ((WindowManager)paramContext.getSystemService("window")).getDefaultDisplay().getHeight();
   }
 }
 

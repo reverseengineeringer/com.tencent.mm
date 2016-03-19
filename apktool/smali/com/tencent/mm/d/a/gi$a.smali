@@ -15,22 +15,26 @@
 
 
 # instance fields
-.field public aDK:Ljava/lang/String;
+.field public aBw:I
 
-.field public appId:Ljava/lang/String;
-
-.field public mediaTagName:Ljava/lang/String;
-
-.field public pkgName:Ljava/lang/String;
+.field public status:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 14
+    const/4 v0, 0x0
+
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 21
+    iput v0, p0, Lcom/tencent/mm/d/a/gi$a;->status:I
+
+    .line 22
+    iput v0, p0, Lcom/tencent/mm/d/a/gi$a;->aBw:I
 
     return-void
 .end method

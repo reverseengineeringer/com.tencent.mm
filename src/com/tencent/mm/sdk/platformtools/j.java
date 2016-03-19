@@ -160,7 +160,7 @@ public final class j
   }
   
   /* Error */
-  public static boolean bs(String paramString1, String paramString2)
+  public static boolean ce(String paramString1, String paramString2)
   {
     // Byte code:
     //   0: aconst_null
@@ -303,7 +303,7 @@ public final class j
         break;
       }
     } while ((!localFile.isFile()) && (localFile.exists()));
-    bs(paramString1, paramString2);
+    ce(paramString1, paramString2);
     if (paramBoolean) {
       ((File)localObject).delete();
     }
@@ -328,7 +328,7 @@ public final class j
     }
   }
   
-  public static boolean v(Context paramContext, String paramString1, String paramString2)
+  public static boolean w(Context paramContext, String paramString1, String paramString2)
   {
     int i = 0;
     try
@@ -338,7 +338,7 @@ public final class j
     }
     catch (IOException localIOException)
     {
-      t.d("!32@/B4Tb64lLpKEimhusr6EBVHdaUJF77fu", "copy assets file srcpath=%s to=%s failed, try pattern now", new Object[] { paramString1, paramString2 });
+      u.d("!32@/B4Tb64lLpKEimhusr6EBVHdaUJF77fu", "copy assets file srcpath=%s to=%s failed, try pattern now", new Object[] { paramString1, paramString2 });
       for (;;)
       {
         String str = paramString1 + "." + i;
@@ -346,7 +346,7 @@ public final class j
         {
           if (a(paramContext.getAssets().open(str), paramString2, true))
           {
-            t.d("!32@/B4Tb64lLpKEimhusr6EBVHdaUJF77fu", "copy pattern %s", new Object[] { str });
+            u.d("!32@/B4Tb64lLpKEimhusr6EBVHdaUJF77fu", "copy pattern %s", new Object[] { str });
             i += 1;
           }
         }

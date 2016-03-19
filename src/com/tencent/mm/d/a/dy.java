@@ -1,23 +1,35 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class dy
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aAb = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a axU = new a();
+  public b axV = new b();
   
   public dy()
   {
-    id = "LBSVerifyStorageNotify";
-    hXT = atO;
+    id = "FMsgInfoQuery";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String auu;
+    public int axW = -1;
+    public long axX = 0L;
+    public String username;
+  }
+  
+  public static final class b
+  {
+    public String apb;
+    public long axX = 0L;
+    public String axY;
+    public int axZ = -1;
+    public int type = -1;
   }
 }
 

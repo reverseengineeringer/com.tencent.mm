@@ -1,270 +1,280 @@
 package com.tencent.mm.ah;
 
+import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
-import android.os.SystemClock;
-import com.tencent.mm.a.c;
-import com.tencent.mm.a.e;
-import com.tencent.mm.compatible.d.j;
-import com.tencent.mm.compatible.d.q;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.sdk.g.af;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import android.util.DisplayMetrics;
+import android.view.Display;
+import android.view.WindowManager;
+import com.tencent.mm.loader.stub.b;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
+import junit.framework.Assert;
 
 public final class n
+  extends com.tencent.mm.sdk.h.g
 {
-  Map bOG = new HashMap();
+  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS packageinfo ( id int  PRIMARY KEY, version int  , name text  , size int  , packname text  , status int  , reserved1 text  , reserved2 text  , reserved3 int  , reserved4 int  ) ", "CREATE TABLE IF NOT EXISTS packageinfo2 ( localId text  PRIMARY KEY , id int  , version int  , name text  , size int  , packname text  , status int  , type int  , reserved1 text  , reserved2 text  , reserved3 int  , reserved4 int  ) " };
+  public com.tencent.mm.az.g bCw;
   
-  public static final String BP()
+  public n(com.tencent.mm.az.g paramg)
   {
-    return tlapT + "draft/";
+    bCw = paramg;
   }
   
-  public static final String ie(String paramString)
+  public static String Bx()
   {
-    if (bn.iW(paramString)) {
+    return ah.tD().rJ();
+  }
+  
+  public static String T(int paramInt1, int paramInt2)
+  {
+    return paramInt1 + "_" + paramInt2 + "_thumb.jpg";
+  }
+  
+  public static int aS(Context paramContext)
+  {
+    int j = 1;
+    DisplayMetrics localDisplayMetrics = new DisplayMetrics();
+    ((WindowManager)paramContext.getSystemService("window")).getDefaultDisplay().getMetrics(localDisplayMetrics);
+    int i;
+    if (heightPixels > widthPixels)
+    {
+      i = 1;
+      if (density > 1.0F) {
+        break label65;
+      }
+      if (i == 0) {
+        break label63;
+      }
+      j = 4;
+    }
+    label63:
+    label65:
+    while (i == 0)
+    {
+      return j;
+      i = 0;
+      break;
+      return 2;
+    }
+    return 3;
+  }
+  
+  public static String p(String paramString, boolean paramBoolean)
+  {
+    if (paramBoolean) {
+      return ah.tD().rJ() + paramString + "_chatting_bg_vertical.jpg";
+    }
+    return ah.tD().rJ() + paramString + "_chatting_bg_horizontal.jpg";
+  }
+  
+  public final m S(int paramInt1, int paramInt2)
+  {
+    m localm = null;
+    Object localObject = "select packageinfo2.localId,packageinfo2.id,packageinfo2.version,packageinfo2.name,packageinfo2.size,packageinfo2.packname,packageinfo2.status,packageinfo2.type,packageinfo2.reserved1,packageinfo2.reserved2,packageinfo2.reserved3,packageinfo2.reserved4 from packageinfo2   where packageinfo2.id = \"" + ay.kx(String.valueOf(paramInt1)) + "\" and packageinfo2." + "type = \"" + ay.kx(String.valueOf(paramInt2)) + "\"";
+    localObject = bCw.rawQuery((String)localObject, null);
+    if (localObject == null) {
       return null;
     }
-    return BP() + paramString;
-  }
-  
-  public static final String jdMethod_if(String paramString)
-  {
-    if (bn.iW(paramString)) {
-      return null;
-    }
-    return BP() + paramString + ".thumb";
-  }
-  
-  public final void Q(String paramString1, String paramString2)
-  {
-    b localb = new b((byte)0);
-    path = paramString1;
-    avf = paramString2;
-    ax.td().k(localb);
-  }
-  
-  public final void a(String paramString1, String paramString2, String paramString3, int paramInt, a parama)
-  {
-    c localc = new c((byte)0);
-    path = paramString1;
-    ayf = paramString2;
-    avf = paramString3;
-    duration = paramInt;
-    bOJ = parama;
-    ax.td().k(localc);
-  }
-  
-  public static abstract interface a
-  {
-    public abstract void dE(int paramInt);
-  }
-  
-  private final class b
-    implements Runnable
-  {
-    String avf;
-    m bOH;
-    String path;
-    
-    private b() {}
-    
-    public final void run()
+    if (((Cursor)localObject).moveToFirst())
     {
-      t.i("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "on SightDraftPerpareJob::run: path %s, md5 %s", new Object[] { path, avf });
-      long l = bn.DN();
-      Object localObject = path;
-      String str = avf;
-      m localm = new m();
-      Cursor localCursor = BZaqT.rawQuery("SELECT MAX(localId) FROM SightDraftInfo", null);
-      if (localCursor == null)
-      {
-        i = -1;
-        field_localId = i;
-        field_fileName = e.n(String.format("path=%s,time1=%d,time2=%d", new Object[] { localObject, Long.valueOf(System.currentTimeMillis()), Long.valueOf(SystemClock.elapsedRealtime()) }).getBytes());
-        field_fileNameHash = field_fileName.hashCode();
-        localObject = new File((String)localObject);
-        field_fileLength = ((File)localObject).length();
-        if (bn.iW(str))
-        {
-          field_fileMd5 = e.e((File)localObject);
-          label174:
-          field_fileStatus = 0;
-          bOH = localm;
-          bOH.d("prepared finish:", l);
-          bOG.put(path, Integer.valueOf(bOH.field_fileNameHash));
-          v.BZ().b(bOH);
-        }
-      }
-      else
-      {
-        if (!localCursor.moveToFirst()) {
-          break label294;
-        }
-      }
-      label294:
-      for (int i = localCursor.getInt(0) + 1;; i = 0)
-      {
-        localCursor.close();
-        t.v("!44@/B4Tb64lLpJ8NKLwSZ2/LuBQozZGsl0aE397zowhgDg=", "get max local id, result %d", new Object[] { Integer.valueOf(i) });
-        break;
-        field_fileMd5 = str;
-        break label174;
-      }
+      localm = new m();
+      localm.c((Cursor)localObject);
     }
+    ((Cursor)localObject).close();
+    return localm;
   }
   
-  private final class c
-    implements Runnable
+  public final String U(int paramInt1, int paramInt2)
   {
-    String avf;
-    String ayf;
-    n.a bOJ;
-    int duration;
-    String path;
-    
-    private c() {}
-    
-    public final void run()
+    switch (paramInt2)
     {
-      t.i("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "on SightDraftSaveJob::run: %s, %s", new Object[] { path, ayf });
-      Object localObject1 = (Integer)bOG.get(path);
-      if (localObject1 != null) {}
-      for (localObject1 = v.BZ().dF(((Integer)localObject1).intValue());; localObject1 = null)
+    case 3: 
+    case 4: 
+    case 6: 
+    case 10: 
+    case 11: 
+    case 13: 
+    case 14: 
+    case 15: 
+    case 16: 
+    case 17: 
+    case 22: 
+    case 24: 
+    case 25: 
+    default: 
+      return "";
+    case 0: 
+      return "";
+    case 1: 
+      return paramInt1 + "_session_bg.zip";
+    case 2: 
+      return paramInt1 + "_emoji_art.temp";
+    case 8: 
+      return paramInt1 + "_regiondata.temp";
+    case 7: 
+      return paramInt1 + "_configlist.cfg";
+    case 9: 
+      return "_speex_upload.cfg";
+    case 12: 
+      return "_rcpt_addr";
+    case 18: 
+      m localm = S(paramInt1, paramInt2);
+      return version + "_feature.zip";
+    case 5: 
+      return "brand_i18n.apk";
+    case 19: 
+      return "_report_reason.temp";
+    case 20: 
+      return "_pluginDesc.cfg";
+    case 21: 
+      return "_trace_config.cfg";
+    case 23: 
+      return "permissioncfg.cfg";
+    }
+    return "ipcallCountryCodeConfig.cfg";
+  }
+  
+  public final String V(int paramInt1, int paramInt2)
+  {
+    Object localObject;
+    switch (paramInt2)
+    {
+    default: 
+      localObject = "";
+    case 0: 
+    case 1: 
+      for (;;)
       {
-        Object localObject2 = localObject1;
-        if (localObject1 == null)
+        return (String)localObject;
+        return "";
+        String str2 = ah.tD().rJ() + paramInt1 + "_session_bg/";
+        try
         {
-          t.d("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "get sight draft from DB fail, path %s", new Object[] { path });
-          localObject1 = new n.b(n.this, (byte)0);
-          path = path;
-          avf = avf;
-          ((n.b)localObject1).run();
-          localObject2 = bOH;
-        }
-        localObject1 = new File(path);
-        if ((((File)localObject1).length() <= 0L) || (field_fileLength != ((File)localObject1).length()))
-        {
-          field_fileStatus = 3;
-          t.w("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "save sight draft error, prepare length %d, current file length %d", new Object[] { Long.valueOf(field_fileLength), Long.valueOf(((File)localObject1).length()) });
-          v.BZ().a((com.tencent.mm.sdk.g.ae)localObject2, new String[] { "localId" });
-          if (bOJ != null) {
-            bOJ.dE(1);
-          }
-          bOJ = null;
-          return;
-        }
-        if (1 == bisbhU)
-        {
-          t.i("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "save sight draft, check file md5");
-          localObject1 = bn.iV(e.e((File)localObject1));
-          if (!((String)localObject1).equals(field_fileMd5))
+          File localFile = new File(str2);
+          localObject = str2;
+          if (!localFile.exists())
           {
-            field_fileStatus = 4;
-            t.w("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "save sight draft error, prepare md5 %s, current file md5 %s", new Object[] { field_fileMd5, localObject1 });
-            v.BZ().a((com.tencent.mm.sdk.g.ae)localObject2, new String[] { "localId" });
-            if (bOJ != null) {
-              bOJ.dE(2);
-            }
-            bOJ = null;
-            return;
+            localFile.mkdirs();
+            return str2;
           }
         }
-        if (c.j(path, n.ie(field_fileName)) <= 0L)
+        catch (Exception localException)
         {
-          field_fileStatus = 5;
-          t.w("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "save sight draft error, copy %s to %s fail", new Object[] { path, n.ie(field_fileName) });
-          v.BZ().a((com.tencent.mm.sdk.g.ae)localObject2, new String[] { "localId" });
-          if (bOJ != null) {
-            bOJ.dE(3);
-          }
-          bOJ = null;
-          return;
+          u.e("!44@/B4Tb64lLpJ6jp9exyG3VlREQiimRbtRPC/3phAovSs=", "exception:%s", new Object[] { ay.b(localException) });
+          u.e("!44@/B4Tb64lLpJ6jp9exyG3VlREQiimRbtRPC/3phAovSs=", "can not create dir, dir = " + str2);
+          return str2;
         }
-        c.j(ayf, n.jdMethod_if(field_fileName));
-        field_fileDuration = duration;
-        field_createTime = bn.DM();
-        field_fileStatus = 1;
-        v.BZ().a((com.tencent.mm.sdk.g.ae)localObject2, new String[] { "localId" });
-        v.BZ().BS();
-        ((m)localObject2).d("save draft:", -1L);
-        if (bOJ != null) {
-          bOJ.dE(0);
-        }
-        bOJ = null;
-        return;
       }
+    case 2: 
+      return "";
+    }
+    String str1 = U(paramInt1, paramInt2);
+    return ah.tD().rJ() + str1.replace(".zip", "");
+  }
+  
+  public final void W(int paramInt1, int paramInt2)
+  {
+    b.deleteFile(ah.tD().rJ() + U(paramInt1, paramInt2));
+    m localm = S(paramInt1, paramInt2);
+    if (localm != null)
+    {
+      status = 5;
+      t.BA().b(localm);
     }
   }
   
-  private final class d
-    implements Runnable
+  public final boolean a(m paramm)
   {
-    public String aqX;
-    public n.a bOJ;
-    public int bOK;
-    
-    private d() {}
-    
-    public final void run()
+    if (paramm == null) {}
+    do
     {
-      m localm = v.BZ().dF(bOK);
-      if (localm == null)
-      {
-        t.w("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "want to send sight draft, but not found draft info, talker %s, draft hash %d", new Object[] { aqX, Integer.valueOf(bOK) });
-        return;
+      return false;
+      aou = -1;
+      paramm = paramm.lX();
+    } while ((int)bCw.insert("packageinfo2", "localId", paramm) == -1);
+    Ep();
+    return true;
+  }
+  
+  public final boolean b(m paramm)
+  {
+    if (paramm != null) {}
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      ContentValues localContentValues = paramm.lX();
+      if (localContentValues.size() <= 0) {
+        break;
       }
-      String str = ac.bl(aqX);
-      if (-1L == ae.d(str, field_fileDuration, aqX))
-      {
-        t.w("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "want to send sight draft, but prepare sight error, talker %s, draft hash %d", new Object[] { aqX, Integer.valueOf(bOK) });
-        return;
+      if (bCw.update("packageinfo2", localContentValues, "id= ? and type =?", new String[] { id, bXX }) <= 0) {
+        break;
       }
-      Object localObject = new File(n.ie(field_fileName));
-      if ((((File)localObject).length() <= 0L) || (field_fileLength != ((File)localObject).length()))
-      {
-        field_fileStatus = 3;
-        t.w("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "want to send sight draft, but file length error, target length %d, current file length %d, talker %s, draft hash %d", new Object[] { Long.valueOf(field_fileLength), Long.valueOf(((File)localObject).length()), aqX, Integer.valueOf(bOK) });
-        v.BZ().a(localm, new String[] { "localId" });
-        if (bOJ != null) {
-          bOJ.dE(1);
-        }
-        bOJ = null;
-        ae.in(str);
-        return;
-      }
-      if (1 == bisbhU)
-      {
-        t.i("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "send sight draft, check file md5");
-        localObject = bn.iV(e.e((File)localObject));
-        if (!((String)localObject).equals(field_fileMd5))
-        {
-          field_fileStatus = 4;
-          t.w("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "save sight draft error, prepare md5 %s, current file md5 %s", new Object[] { field_fileMd5, localObject });
-          v.BZ().a(localm, new String[] { "localId" });
-          if (bOJ != null) {
-            bOJ.dE(2);
-          }
-          bOJ = null;
-          ae.in(str);
-          return;
-        }
-      }
-      v.BY();
-      localObject = ac.ij(str);
-      c.j(n.ie(field_fileName), (String)localObject);
-      v.BY();
-      localObject = ac.ik(str);
-      c.j(n.jdMethod_if(field_fileName), (String)localObject);
-      ae.g(str, field_fileDuration, 62);
-      int i = ae.io(str);
-      t.i("!44@/B4Tb64lLpJ8NKLwSZ2/Lpf0Csev4S2jC7nZT4If6So=", "sight draft send to %s, draft hash %d, result %d", new Object[] { aqX, Integer.valueOf(bOK), Integer.valueOf(i) });
+      Ep();
+      return true;
     }
+    Ep();
+    return false;
+  }
+  
+  public final boolean dD(int paramInt)
+  {
+    String str = "update packageinfo2 set status = 2 where status = 1 and type = " + paramInt + ";";
+    boolean bool = bCw.cj("packageinfo2", str);
+    Ep();
+    return bool;
+  }
+  
+  public final boolean dE(int paramInt)
+  {
+    if (bCw.delete("packageinfo2", "type =?", new String[] { String.valueOf(paramInt) }) > 0)
+    {
+      Ep();
+      return true;
+    }
+    return false;
+  }
+  
+  public final m[] dF(int paramInt)
+  {
+    Object localObject = "select packageinfo2.localId,packageinfo2.id,packageinfo2.version,packageinfo2.name,packageinfo2.size,packageinfo2.packname,packageinfo2.status,packageinfo2.type,packageinfo2.reserved1,packageinfo2.reserved2,packageinfo2.reserved3,packageinfo2.reserved4 from packageinfo2   where packageinfo2.type=" + paramInt;
+    localObject = bCw.rawQuery((String)localObject, null);
+    int i = ((Cursor)localObject).getCount();
+    u.d("!44@/B4Tb64lLpJ6jp9exyG3VlREQiimRbtRPC/3phAovSs=", "getInfoByType : count:" + i + " type:" + paramInt);
+    if (i == 0)
+    {
+      ((Cursor)localObject).close();
+      return null;
+    }
+    m[] arrayOfm = new m[i];
+    paramInt = 0;
+    while (paramInt < i)
+    {
+      ((Cursor)localObject).moveToPosition(paramInt);
+      m localm = new m();
+      localm.c((Cursor)localObject);
+      arrayOfm[paramInt] = localm;
+      paramInt += 1;
+    }
+    ((Cursor)localObject).close();
+    return arrayOfm;
+  }
+  
+  public final String x(String paramString, int paramInt)
+  {
+    switch (paramInt)
+    {
+    default: 
+      return null;
+    case 3: 
+    case 4: 
+      return p(paramString, true);
+    }
+    return p(paramString, false);
   }
 }
 

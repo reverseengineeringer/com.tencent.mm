@@ -9,11 +9,11 @@ public class MMRadioImageButton
   extends ImageButton
   implements Checkable
 {
-  private boolean iHm;
-  public boolean iHn = true;
-  private boolean iHo;
-  private a iHp;
-  private a iHq;
+  public boolean kGA = true;
+  private boolean kGB;
+  private a kGC;
+  private a kGD;
+  private boolean kGz;
   
   public MMRadioImageButton(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -27,7 +27,7 @@ public class MMRadioImageButton
   
   public boolean isChecked()
   {
-    return iHo;
+    return kGB;
   }
   
   public boolean performClick()
@@ -38,49 +38,49 @@ public class MMRadioImageButton
   
   public void setCheckable(boolean paramBoolean)
   {
-    iHn = paramBoolean;
+    kGA = paramBoolean;
   }
   
   public void setChecked(boolean paramBoolean)
   {
-    if (iHo != paramBoolean)
+    if (kGB != paramBoolean)
     {
-      iHo = paramBoolean;
-      setSelected(iHo);
+      kGB = paramBoolean;
+      setSelected(kGB);
       refreshDrawableState();
-      if (!iHm) {}
+      if (!kGz) {}
     }
     else
     {
       return;
     }
-    iHm = true;
-    if (iHp != null) {
-      iHp.a(this);
+    kGz = true;
+    if (kGC != null) {
+      kGC.a(this);
     }
-    if (iHq != null) {
-      iHq.a(this);
+    if (kGD != null) {
+      kGD.a(this);
     }
-    iHm = false;
+    kGz = false;
   }
   
   public void setOnMMRadioButtonCheckedChangeListener(a parama)
   {
-    iHp = parama;
+    kGC = parama;
   }
   
   public void setOnOtherMMRadioButtonCheckedChangeListener(a parama)
   {
-    iHq = parama;
+    kGD = parama;
   }
   
   public void toggle()
   {
     boolean bool;
-    if (iHn) {
+    if (kGA) {
       if (!isChecked())
       {
-        if (iHo) {
+        if (kGB) {
           break label29;
         }
         bool = true;
@@ -93,11 +93,11 @@ public class MMRadioImageButton
       return;
       bool = false;
       break;
-      if (iHp != null) {
-        iHp.b(this);
+      if (kGC != null) {
+        kGC.b(this);
       }
-    } while (iHq == null);
-    iHq.b(this);
+    } while (kGD == null);
+    kGD.b(this);
   }
   
   public static abstract interface a

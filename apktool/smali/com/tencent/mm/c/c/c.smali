@@ -2,167 +2,660 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/tencent/mm/c/c/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/c/c/c$a;
+    }
+.end annotation
+
+
+# static fields
+.field private static arL:Lcom/tencent/mm/c/c/a$a;
+
 
 # instance fields
-.field public atB:Ljava/lang/String;
+.field private apH:I
 
-.field atC:Ljava/io/DataOutputStream;
+.field public arD:Ljava/util/concurrent/BlockingQueue;
 
-.field atD:I
+.field public arE:Z
+
+.field private arF:Ljava/lang/String;
+
+.field private arG:I
+
+.field private arH:[B
+
+.field private arI:I
+
+.field private arJ:Ljava/lang/Object;
+
+.field public arK:Lcom/tencent/mm/c/c/c$a;
+
+.field private mFileOutputStream:Ljava/io/FileOutputStream;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;II)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 31
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 237
+    new-instance v0, Lcom/tencent/mm/c/c/a$a;
 
-    .line 32
-    iput-object p1, p0, Lcom/tencent/mm/c/c/c;->atB:Ljava/lang/String;
+    invoke-direct {v0}, Lcom/tencent/mm/c/c/a$a;-><init>()V
 
-    .line 33
-    new-instance v0, Ljava/io/File;
+    sput-object v0, Lcom/tencent/mm/c/c/c;->arL:Lcom/tencent/mm/c/c/a$a;
 
-    invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    return-void
+.end method
 
-    .line 35
-    :try_start_0
-    invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
+.method public constructor <init>(II)V
+    .locals 5
 
-    .line 36
-    new-instance v1, Ljava/io/DataOutputStream;
+    .prologue
+    const/4 v4, 0x0
 
-    new-instance v2, Ljava/io/BufferedOutputStream;
+    const/16 v3, 0x3e80
 
-    new-instance v3, Ljava/io/FileOutputStream;
-
-    invoke-direct {v3, v0}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
-
-    invoke-direct {v2, v3}, Ljava/io/BufferedOutputStream;-><init>(Ljava/io/OutputStream;)V
-
-    invoke-direct {v1, v2}, Ljava/io/DataOutputStream;-><init>(Ljava/io/OutputStream;)V
-
-    iput-object v1, p0, Lcom/tencent/mm/c/c/c;->atC:Ljava/io/DataOutputStream;
-
-    .line 38
-    const/16 v0, 0x2c
-
-    invoke-static {v0}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v0
-
-    .line 39
-    sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    .line 40
-    const v1, 0x46464952
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    .line 41
-    const/4 v1, 0x0
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    .line 42
-    const v1, 0x45564157
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    .line 43
-    const v1, 0x20746d66
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    .line 44
-    const/16 v1, 0x10
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    .line 45
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    .line 46
-    int-to-short v1, p2
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
-
-    .line 47
-    invoke-virtual {v0, p3}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+    const/4 v2, 0x0
 
     .line 48
-    mul-int v1, p3, p2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    mul-int/lit8 v1, v1, 0x2
+    .line 30
+    new-instance v0, Ljava/util/concurrent/ArrayBlockingQueue;
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+    const/16 v1, 0x400
+
+    invoke-direct {v0, v1}, Ljava/util/concurrent/ArrayBlockingQueue;-><init>(I)V
+
+    iput-object v0, p0, Lcom/tencent/mm/c/c/c;->arD:Ljava/util/concurrent/BlockingQueue;
+
+    .line 32
+    iput-boolean v2, p0, Lcom/tencent/mm/c/c/c;->arE:Z
+
+    .line 34
+    iput v2, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    .line 35
+    iput-object v4, p0, Lcom/tencent/mm/c/c/c;->arH:[B
+
+    .line 36
+    iput v3, p0, Lcom/tencent/mm/c/c/c;->apH:I
+
+    .line 37
+    iput v3, p0, Lcom/tencent/mm/c/c/c;->arI:I
+
+    .line 38
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/c/c/c;->arJ:Ljava/lang/Object;
+
+    .line 39
+    iput-object v4, p0, Lcom/tencent/mm/c/c/c;->arK:Lcom/tencent/mm/c/c/c$a;
 
     .line 49
-    mul-int/lit8 v1, p2, 0x2
-
-    int-to-short v1, v1
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    iput p1, p0, Lcom/tencent/mm/c/c/c;->apH:I
 
     .line 50
-    const/16 v1, 0x10
-
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putShort(S)Ljava/nio/ByteBuffer;
+    iput p2, p0, Lcom/tencent/mm/c/c/c;->arI:I
 
     .line 51
-    const v1, 0x61746164
+    return-void
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+.method static synthetic a(Lcom/tencent/mm/c/c/c;)Z
+    .locals 1
 
-    .line 52
+    .prologue
+    .line 20
+    iget-boolean v0, p0, Lcom/tencent/mm/c/c/c;->arE:Z
+
+    return v0
+.end method
+
+.method static synthetic b(Lcom/tencent/mm/c/c/c;)Ljava/util/concurrent/BlockingQueue;
+    .locals 1
+
+    .prologue
+    .line 20
+    iget-object v0, p0, Lcom/tencent/mm/c/c/c;->arD:Ljava/util/concurrent/BlockingQueue;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/tencent/mm/c/c/c;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 20
+    iget-object v0, p0, Lcom/tencent/mm/c/c/c;->arF:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method static synthetic lW()Lcom/tencent/mm/c/c/a$a;
+    .locals 1
+
+    .prologue
+    .line 20
+    sget-object v0, Lcom/tencent/mm/c/c/c;->arL:Lcom/tencent/mm/c/c/a$a;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/tencent/mm/c/b/g$a;I)I
+    .locals 12
+
+    .prologue
+    .line 143
+    new-instance v4, Lcom/tencent/mm/compatible/util/f$a;
+
+    invoke-direct {v4}, Lcom/tencent/mm/compatible/util/f$a;-><init>()V
+
+    .line 145
+    iget v0, p0, Lcom/tencent/mm/c/c/c;->apH:I
+
+    mul-int/lit8 v0, v0, 0x14
+
+    mul-int/lit8 v0, v0, 0x2
+
+    div-int/lit16 v0, v0, 0x3e8
+
+    int-to-short v5, v0
+
+    .line 146
+    iget v0, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    iget v1, p1, Lcom/tencent/mm/c/b/g$a;->anV:I
+
+    add-int v3, v0, v1
+
+    .line 147
     const/4 v1, 0x0
 
-    invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
+    .line 149
+    new-array v6, v5, [B
 
-    .line 54
-    const/16 v1, 0x2c
+    .line 150
+    new-array v7, v5, [B
 
-    iput v1, p0, Lcom/tencent/mm/c/c/c;->atD:I
+    .line 152
+    const/4 v0, 0x1
 
-    .line 55
-    iget-object v1, p0, Lcom/tencent/mm/c/c/c;->atC:Ljava/io/DataOutputStream;
+    .line 153
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
 
-    invoke-virtual {v0}, Ljava/nio/ByteBuffer;->array()[B
+    move-result-object v2
 
-    move-result-object v0
+    const-string/jumbo v8, "VoiceNoiseSuppression"
 
-    invoke-virtual {v1, v0}, Ljava/io/DataOutputStream;->write([B)V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-virtual {v2, v8}, Lcom/tencent/mm/g/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 59
+    move-result-object v2
+
+    .line 155
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v8
+
+    if-nez v8, :cond_0
+
+    .line 156
+    const/4 v0, 0x1
+
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    .line 157
+    const/4 v2, 0x1
+
+    if-ne v0, v2, :cond_2
+
+    const/4 v0, 0x1
+
+    .line 159
+    :cond_0
     :goto_0
-    return-void
+    const-string/jumbo v2, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
 
-    .line 56
+    const-string/jumbo v8, "noise suppression: %b"
+
+    const/4 v9, 0x1
+
+    new-array v9, v9, [Ljava/lang/Object;
+
+    const/4 v10, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v11
+
+    aput-object v11, v9, v10
+
+    invoke-static {v2, v8, v9}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 161
+    const/4 v2, 0x0
+
+    .line 162
+    :cond_1
+    :goto_1
+    if-lt v3, v5, :cond_5
+
+    .line 163
+    iget v8, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    if-lez v8, :cond_3
+
+    .line 165
+    :try_start_0
+    iget-object v8, p0, Lcom/tencent/mm/c/c/c;->arH:[B
+
+    const/4 v9, 0x0
+
+    const/4 v10, 0x0
+
+    iget v11, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    invoke-static {v8, v9, v6, v10, v11}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 166
+    iget-object v8, p1, Lcom/tencent/mm/c/b/g$a;->buf:[B
+
+    const/4 v9, 0x0
+
+    iget v10, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    iget v11, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    sub-int v11, v5, v11
+
+    invoke-static {v8, v9, v6, v10, v11}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 173
+    iget v8, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    sub-int v8, v5, v8
+
+    add-int/2addr v1, v8
+
+    .line 174
+    const/4 v8, 0x0
+
+    iput v8, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    .line 186
+    :goto_2
+    sub-int/2addr v3, v5
+
+    .line 188
+    const/4 v8, 0x1
+
+    new-array v8, v8, [S
+
+    .line 190
+    iget-object v9, p0, Lcom/tencent/mm/c/c/c;->arJ:Ljava/lang/Object;
+
+    monitor-enter v9
+
+    .line 191
+    :try_start_1
+    invoke-static {v6, v5, v7, v8, v0}, Lcom/tencent/mm/modelvoice/MediaRecorder;->SilkDoEnc([BS[B[SZ)I
+
+    move-result v10
+
+    .line 192
+    monitor-exit v9
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 194
+    if-eqz v10, :cond_4
+
+    .line 195
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    .line 196
+    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+
+    const-string/jumbo v1, "writeSilkFile SilkEncode failed, ret:%d"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 197
+    const/4 v2, -0x1
+
+    .line 234
+    :goto_3
+    return v2
+
+    .line 157
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    .line 167
     :catch_0
     move-exception v0
 
-    .line 57
-    const-string/jumbo v1, "!32@/B4Tb64lLpKpZHW/L14GFGPrC+e0fvOZ"
+    .line 168
+    const-string/jumbo v1, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    const-string/jumbo v2, "writeSilkFile SilkEncode arraycopy failed, leftBufSize:%d copySize:%d error:%s"
 
-    const-string/jumbo v3, "create file failed: "
+    const/4 v3, 0x3
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    const/4 v4, 0x0
+
+    iget v6, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v3, v4
+
+    const/4 v4, 0x1
+
+    iget v6, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    sub-int/2addr v5, v6
+
+    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    const/4 v4, 0x2
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v0, v3, v4
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 170
+    const/4 v2, -0x1
+
+    goto :goto_3
+
+    .line 177
+    :cond_3
+    :try_start_2
+    iget-object v8, p1, Lcom/tencent/mm/c/b/g$a;->buf:[B
+
+    const/4 v9, 0x0
+
+    invoke-static {v8, v1, v6, v9, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    .line 184
+    add-int/2addr v1, v5
+
+    goto :goto_2
+
+    .line 178
+    :catch_1
+    move-exception v0
+
+    .line 179
+    const-string/jumbo v2, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+
+    const-string/jumbo v3, "writeSilkFile SilkEncode arraycopy failed, offset:%d framelen:%d error:%s"
+
+    const/4 v4, 0x3
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    aput-object v1, v4, v6
+
+    const/4 v1, 0x1
+
+    invoke-static {v5}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
+
+    move-result-object v5
+
+    aput-object v5, v4, v1
+
+    const/4 v1, 0x2
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v4, v1
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 181
+    const/4 v2, -0x1
+
+    goto :goto_3
+
+    .line 192
+    :catchall_0
+    move-exception v0
+
+    :try_start_3
+    monitor-exit v9
+    :try_end_3
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+
+    throw v0
+
+    .line 201
+    :cond_4
+    const/4 v9, 0x0
+
+    :try_start_4
+    aget-short v9, v8, v9
+
+    if-ge v9, v5, :cond_1
+
+    .line 202
+    iget-object v9, p0, Lcom/tencent/mm/c/c/c;->mFileOutputStream:Ljava/io/FileOutputStream;
+
+    const/4 v10, 0x0
+
+    const/4 v11, 0x0
+
+    aget-short v11, v8, v11
+
+    invoke-virtual {v9, v7, v10, v11}, Ljava/io/FileOutputStream;->write([BII)V
+
+    .line 203
+    const/4 v9, 0x0
+
+    aget-short v8, v8, v9
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+
+    add-int/2addr v2, v8
+
+    goto/16 :goto_1
+
+    .line 206
+    :catch_2
+    move-exception v0
+
+    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+
+    const-string/jumbo v1, "writeSilkFile Write File Error file:%s"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    iget-object v4, p0, Lcom/tencent/mm/c/c/c;->arF:Ljava/lang/String;
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 207
+    const/4 v2, -0x1
+
+    goto/16 :goto_3
+
+    .line 209
+    :cond_5
+    :try_start_5
+    iget-object v0, p0, Lcom/tencent/mm/c/c/c;->mFileOutputStream:Ljava/io/FileOutputStream;
+
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->flush()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
+
+    .line 219
+    :try_start_6
+    iget-object v0, p1, Lcom/tencent/mm/c/b/g$a;->buf:[B
+
+    iget-object v5, p0, Lcom/tencent/mm/c/c/c;->arH:[B
+
+    iget v6, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    invoke-static {v0, v1, v5, v6, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
+
+    .line 220
+    iget v0, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    add-int/2addr v0, v3
+
+    iput v0, p0, Lcom/tencent/mm/c/c/c;->arG:I
+    :try_end_6
+    .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_4
+
+    .line 227
+    invoke-virtual {v4}, Lcom/tencent/mm/compatible/util/f$a;->pa()J
+
+    move-result-wide v0
+
+    .line 228
+    const/4 v3, 0x1
+
+    if-ne p2, v3, :cond_6
+
+    .line 229
+    sget-object v3, Lcom/tencent/mm/c/c/c;->arL:Lcom/tencent/mm/c/c/a$a;
+
+    iget-wide v4, v3, Lcom/tencent/mm/c/c/a$a;->arz:J
+
+    iget v6, v3, Lcom/tencent/mm/c/c/a$a;->count:I
+
+    int-to-long v6, v6
+
+    mul-long/2addr v4, v6
+
+    add-long/2addr v4, v0
+
+    iget v6, v3, Lcom/tencent/mm/c/c/a$a;->count:I
+
+    add-int/lit8 v6, v6, 0x1
+
+    int-to-long v6, v6
+
+    div-long/2addr v4, v6
+
+    iput-wide v4, v3, Lcom/tencent/mm/c/c/a$a;->arz:J
+
+    iget v4, v3, Lcom/tencent/mm/c/c/a$a;->count:I
+
+    add-int/lit8 v4, v4, 0x1
+
+    iput v4, v3, Lcom/tencent/mm/c/c/a$a;->count:I
+
+    .line 231
+    :cond_6
+    const-string/jumbo v3, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "writeSilkFile append2silkfile silkTime:"
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0, v1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, " useFloat:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, " avg:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/c/c/c;->arL:Lcom/tencent/mm/c/c/a$a;
+
+    iget-wide v4, v1, Lcom/tencent/mm/c/c/a$a;->arz:J
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, " cnt:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v1, Lcom/tencent/mm/c/c/c;->arL:Lcom/tencent/mm/c/c/a$a;
+
+    iget v1, v1, Lcom/tencent/mm/c/c/a$a;->count:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -170,69 +663,328 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
-.end method
+    goto/16 :goto_3
 
+    .line 214
+    :catch_3
+    move-exception v0
 
-# virtual methods
-.method public final h([BI)Z
-    .locals 5
+    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
 
-    .prologue
-    const/4 v0, 0x0
+    const-string/jumbo v1, "writeSilkFile flush File Error file:%s"
 
-    .line 67
-    iget-object v1, p0, Lcom/tencent/mm/c/c/c;->atC:Ljava/io/DataOutputStream;
+    const/4 v2, 0x1
 
-    if-nez v1, :cond_0
+    new-array v2, v2, [Ljava/lang/Object;
 
-    .line 78
-    :goto_0
-    return v0
+    const/4 v3, 0x0
 
-    .line 72
-    :cond_0
-    :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/c/c/c;->atC:Ljava/io/DataOutputStream;
+    iget-object v4, p0, Lcom/tencent/mm/c/c/c;->arF:Ljava/lang/String;
 
-    const/4 v2, 0x0
+    aput-object v4, v2, v3
 
-    invoke-virtual {v1, p1, v2, p2}, Ljava/io/DataOutputStream;->write([BII)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 73
-    iget v1, p0, Lcom/tencent/mm/c/c/c;->atD:I
+    .line 215
+    const/4 v2, -0x1
 
-    add-int/2addr v1, p2
+    goto/16 :goto_3
 
-    iput v1, p0, Lcom/tencent/mm/c/c/c;->atD:I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .line 221
+    :catch_4
+    move-exception v0
 
-    .line 78
-    const/4 v0, 0x1
+    .line 222
+    const-string/jumbo v2, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
 
-    goto :goto_0
+    const-string/jumbo v4, "writeSilkFile SilkEncode arraycopy failed, offset:%d leftBufSize:%d leftSize:%d error:%s"
 
-    .line 74
-    :catch_0
-    move-exception v1
+    const/4 v5, 0x4
 
-    .line 75
-    const-string/jumbo v2, "!32@/B4Tb64lLpKpZHW/L14GFGPrC+e0fvOZ"
+    new-array v5, v5, [Ljava/lang/Object;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const/4 v6, 0x0
 
-    const-string/jumbo v4, "write to file failed: "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    aput-object v1, v5, v6
+
+    const/4 v1, 0x1
+
+    iget v6, p0, Lcom/tencent/mm/c/c/c;->arG:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v5, v1
+
+    const/4 v1, 0x2
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v5, v1
+
+    const/4 v1, 0x3
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v5, v1
+
+    invoke-static {v2, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 224
+    const/4 v2, -0x1
+
+    goto/16 :goto_3
+.end method
+
+.method public final br(Ljava/lang/String;)Z
+    .locals 5
+
+    .prologue
+    const/4 v2, 0x1
+
+    const/4 v1, 0x0
+
+    .line 54
+    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "initWriter path: "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 55
+    if-nez p1, :cond_0
+
+    .line 56
+    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+
+    const-string/jumbo v2, "path is null"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    move v0, v1
+
+    .line 85
+    :goto_0
+    return v0
+
+    .line 60
+    :cond_0
+    iput-object p1, p0, Lcom/tencent/mm/c/c/c;->arF:Ljava/lang/String;
+
+    .line 62
+    :try_start_0
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    iget-object v3, p0, Lcom/tencent/mm/c/c/c;->arF:Ljava/lang/String;
+
+    invoke-direct {v0, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/c/c/c;->mFileOutputStream:Ljava/io/FileOutputStream;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 68
+    invoke-static {}, Lcom/tencent/mm/compatible/d/l;->ok()S
+
+    move-result v0
+
+    .line 70
+    and-int/lit16 v3, v0, 0x400
+
+    if-eqz v3, :cond_1
+
+    .line 71
+    const/4 v0, 0x4
+
+    .line 79
+    :goto_1
+    iget v3, p0, Lcom/tencent/mm/c/c/c;->apH:I
+
+    iget v4, p0, Lcom/tencent/mm/c/c/c;->arI:I
+
+    invoke-static {v3, v4, v0}, Lcom/tencent/mm/modelvoice/MediaRecorder;->SilkEncInit(III)I
+
+    move-result v0
+
+    .line 80
+    if-eqz v0, :cond_3
+
+    .line 81
+    const-string/jumbo v3, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+
+    const-string/jumbo v4, "initWriter SilkEncoderInit Error:%d"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v2, v1
+
+    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    .line 82
+    goto :goto_0
+
+    .line 63
+    :catch_0
+    move-exception v0
+
+    .line 64
+    const-string/jumbo v3, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+
+    const-string/jumbo v4, "initWriter FileOutputStream error:%s"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v2, v1
+
+    invoke-static {v3, v4, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    .line 65
+    goto :goto_0
+
+    .line 72
+    :cond_1
+    and-int/lit16 v0, v0, 0x200
+
+    if-eqz v0, :cond_2
+
+    .line 73
+    const/4 v0, 0x2
+
+    goto :goto_1
+
+    .line 75
+    :cond_2
+    const-string/jumbo v0, "TAG"
+
+    const-string/jumbo v2, "initWriter cpuType error! silk don\'t support arm_v5!!!!"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    move v0, v1
+
+    .line 76
+    goto :goto_0
+
+    .line 84
+    :cond_3
+    iget v0, p0, Lcom/tencent/mm/c/c/c;->apH:I
+
+    mul-int/lit8 v0, v0, 0x14
+
+    mul-int/lit8 v0, v0, 0x2
+
+    div-int/lit16 v0, v0, 0x3e8
+
+    new-array v0, v0, [B
+
+    iput-object v0, p0, Lcom/tencent/mm/c/c/c;->arH:[B
+
+    move v0, v2
+
+    .line 85
+    goto :goto_0
+.end method
+
+.method public final lU()V
+    .locals 5
+
+    .prologue
+    const/4 v3, 0x1
+
+    .line 109
+    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+
+    const-string/jumbo v1, "waitStop"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 111
+    monitor-enter p0
+
+    .line 112
+    const/4 v0, 0x1
+
+    :try_start_0
+    iput-boolean v0, p0, Lcom/tencent/mm/c/c/c;->arE:Z
+
+    .line 113
+    monitor-exit p0
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 115
+    iget-object v0, p0, Lcom/tencent/mm/c/c/c;->arK:Lcom/tencent/mm/c/c/c$a;
+
+    if-eqz v0, :cond_0
+
+    .line 117
+    :try_start_1
+    iget-object v0, p0, Lcom/tencent/mm/c/c/c;->arK:Lcom/tencent/mm/c/c/c$a;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/i/e;->z(Ljava/lang/Runnable;)V
+    :try_end_1
+    .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 123
+    :cond_0
+    :goto_0
+    iget-object v1, p0, Lcom/tencent/mm/c/c/c;->arJ:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    :try_start_2
+    invoke-static {}, Lcom/tencent/mm/modelvoice/MediaRecorder;->SilkEncUnInit()I
+
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "finish Thread file:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/tencent/mm/c/c/c;->arF:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -240,124 +992,97 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    goto :goto_0
-.end method
+    iget-object v0, p0, Lcom/tencent/mm/c/c/c;->mFileOutputStream:Ljava/io/FileOutputStream;
 
-.method public final mz()V
-    .locals 5
+    if-eqz v0, :cond_1
 
-    .prologue
-    .line 83
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/c/c/c;->atC:Ljava/io/DataOutputStream;
-
-    invoke-virtual {v0}, Ljava/io/DataOutputStream;->close()V
-    :try_end_0
-    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 88
-    :goto_0
-    const/4 v1, 0x0
-
-    .line 90
-    :try_start_1
-    new-instance v0, Ljava/io/RandomAccessFile;
-
-    iget-object v2, p0, Lcom/tencent/mm/c/c/c;->atB:Ljava/lang/String;
-
-    const-string/jumbo v3, "rw"
-
-    invoke-direct {v0, v2, v3}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_1
-    .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_3
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    .line 91
-    const-wide/16 v1, 0x4
-
-    :try_start_2
-    invoke-virtual {v0, v1, v2}, Ljava/io/RandomAccessFile;->seek(J)V
-
-    .line 94
-    const/4 v1, 0x4
-
-    invoke-static {v1}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
-
-    move-result-object v1
-
-    .line 95
-    sget-object v2, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
-
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
-
-    .line 96
-    iget v2, p0, Lcom/tencent/mm/c/c/c;->atD:I
-
-    add-int/lit8 v2, v2, -0x8
-
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    .line 97
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Ljava/io/RandomAccessFile;->write([B)V
-
-    .line 101
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
-
-    .line 102
-    iget v2, p0, Lcom/tencent/mm/c/c/c;->atD:I
-
-    add-int/lit8 v2, v2, -0x2a
-
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->putInt(I)Ljava/nio/ByteBuffer;
-
-    .line 103
-    const-wide/16 v2, 0x28
-
-    invoke-virtual {v0, v2, v3}, Ljava/io/RandomAccessFile;->seek(J)V
-
-    .line 104
-    invoke-virtual {v1}, Ljava/nio/ByteBuffer;->array()[B
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/io/RandomAccessFile;->write([B)V
-    :try_end_2
-    .catch Ljava/io/FileNotFoundException; {:try_start_2 .. :try_end_2} :catch_8
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_7
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
-
-    .line 110
     :try_start_3
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_3
-    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_5
+    iget-object v0, p0, Lcom/tencent/mm/c/c/c;->mFileOutputStream:Ljava/io/FileOutputStream;
 
-    .line 118
-    :cond_0
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
+
     :goto_1
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/c/c/c;->mFileOutputStream:Ljava/io/FileOutputStream;
+
+    .line 124
+    :cond_1
     return-void
 
-    .line 84
+    .line 113
+    :catchall_0
+    move-exception v0
+
+    :try_start_4
+    monitor-exit p0
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
+
+    throw v0
+
+    .line 118
     :catch_0
     move-exception v0
 
-    .line 85
-    const-string/jumbo v1, "!32@/B4Tb64lLpKpZHW/L14GFGPrC+e0fvOZ"
+    .line 119
+    const-string/jumbo v1, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+
+    const-string/jumbo v2, "exception:%s"
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v4
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 123
+    :catchall_1
+    move-exception v0
+
+    :try_start_5
+    monitor-exit v1
+    :try_end_5
+    .catchall {:try_start_5 .. :try_end_5} :catchall_1
+
+    throw v0
+
+    :catch_1
+    move-exception v0
+
+    const-string/jumbo v1, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v3, "close file failed: "
+    const-string/jumbo v3, "close silk file:"
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0}, Ljava/io/IOException;->getMessage()Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/c/c/c;->arF:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string/jumbo v3, "msg:"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
 
     move-result-object v0
 
@@ -369,105 +1094,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 106
-    :catch_1
-    move-exception v0
-
-    move-object v0, v1
-
-    :goto_2
-    if-eqz v0, :cond_0
-
-    .line 112
-    :try_start_4
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
-
-    .line 114
-    :catch_2
-    move-exception v0
-
-    goto :goto_1
-
-    .line 108
-    :catch_3
-    move-exception v0
-
-    move-object v0, v1
-
-    :goto_3
-    if-eqz v0, :cond_0
-
-    .line 112
-    :try_start_5
-    invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_4
-
-    goto :goto_1
-
-    .line 114
-    :catch_4
-    move-exception v0
-
-    goto :goto_1
-
-    .line 110
-    :catchall_0
-    move-exception v0
-
-    :goto_4
-    if-eqz v1, :cond_1
-
-    .line 112
-    :try_start_6
-    invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
-    :try_end_6
-    .catch Ljava/io/IOException; {:try_start_6 .. :try_end_6} :catch_6
-
-    .line 114
-    :cond_1
-    :goto_5
-    throw v0
-
-    :catch_5
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_6
-    move-exception v1
-
-    goto :goto_5
-
-    .line 110
-    :catchall_1
-    move-exception v1
-
-    move-object v4, v1
-
-    move-object v1, v0
-
-    move-object v0, v4
-
-    goto :goto_4
-
-    .line 108
-    :catch_7
-    move-exception v1
-
-    goto :goto_3
-
-    .line 106
-    :catch_8
-    move-exception v1
-
-    goto :goto_2
 .end method

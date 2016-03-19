@@ -1,113 +1,159 @@
 package com.tencent.smtt.a;
 
+import android.annotation.TargetApi;
 import android.content.Context;
-import android.provider.Settings.System;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.io.Writer;
+import java.util.Properties;
 
 public final class o
 {
-  private static o jLU = null;
-  private static Context mContext = null;
+  private static o lVf = null;
+  private File lVe = null;
+  public String lVg = "http://log.tbs.qq.com/ajax?c=pu&v=2&k=";
+  private String lVh = "http://wup.imtt.qq.com:8080";
+  public String lVi = "http://log.tbs.qq.com/ajax?c=dl&k=";
+  public String lVj = "http://cfg.imtt.qq.com/tbs?v=2&mk=";
+  public String lVk = "http://log.tbs.qq.com/ajax?c=ul&v=2&k=";
+  private String lVl = "http://mqqad.html5.qq.com/adjs";
+  private String lVm = "http://log.tbs.qq.com/ajax?c=ucfu&k=";
+  private Context mContext = null;
   
-  /* Error */
-  static void Cn(String paramString)
+  @TargetApi(11)
+  private o(Context paramContext)
   {
-    // Byte code:
-    //   0: invokestatic 30	com/tencent/smtt/a/e:aUV	()Z
-    //   3: ifne +4 -> 7
-    //   6: return
-    //   7: aconst_null
-    //   8: astore_2
-    //   9: new 32	java/io/File
-    //   12: dup
-    //   13: invokestatic 36	com/tencent/smtt/a/e:aUW	()Ljava/io/File;
-    //   16: ldc 38
-    //   18: invokespecial 41	java/io/File:<init>	(Ljava/io/File;Ljava/lang/String;)V
-    //   21: astore_1
-    //   22: aload_1
-    //   23: invokevirtual 44	java/io/File:exists	()Z
-    //   26: ifne +8 -> 34
-    //   29: aload_1
-    //   30: invokevirtual 47	java/io/File:createNewFile	()Z
-    //   33: pop
-    //   34: new 49	java/io/DataOutputStream
-    //   37: dup
-    //   38: aload_1
-    //   39: invokestatic 53	com/tencent/smtt/a/e:s	(Ljava/io/File;)Ljava/io/FileOutputStream;
-    //   42: invokespecial 56	java/io/DataOutputStream:<init>	(Ljava/io/OutputStream;)V
-    //   45: astore_1
-    //   46: aload_1
-    //   47: aload_0
-    //   48: invokevirtual 59	java/io/DataOutputStream:writeUTF	(Ljava/lang/String;)V
-    //   51: aload_1
-    //   52: invokevirtual 62	java/io/DataOutputStream:flush	()V
-    //   55: aload_1
-    //   56: invokevirtual 65	java/io/DataOutputStream:close	()V
-    //   59: return
-    //   60: astore_0
-    //   61: return
-    //   62: astore_0
-    //   63: aload_2
-    //   64: astore_0
-    //   65: aload_0
-    //   66: ifnull -60 -> 6
-    //   69: aload_0
-    //   70: invokevirtual 65	java/io/DataOutputStream:close	()V
-    //   73: return
-    //   74: astore_0
-    //   75: return
-    //   76: astore_0
-    //   77: aconst_null
-    //   78: astore_1
-    //   79: aload_1
-    //   80: ifnull +7 -> 87
-    //   83: aload_1
-    //   84: invokevirtual 65	java/io/DataOutputStream:close	()V
-    //   87: aload_0
-    //   88: athrow
-    //   89: astore_1
-    //   90: goto -3 -> 87
-    //   93: astore_0
-    //   94: goto -15 -> 79
-    //   97: astore_0
-    //   98: aload_1
-    //   99: astore_0
-    //   100: goto -35 -> 65
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	103	0	paramString	String
-    //   21	63	1	localObject1	Object
-    //   89	10	1	localIOException	java.io.IOException
-    //   8	56	2	localObject2	Object
-    // Exception table:
-    //   from	to	target	type
-    //   55	59	60	java/io/IOException
-    //   9	34	62	java/lang/Exception
-    //   34	46	62	java/lang/Exception
-    //   69	73	74	java/io/IOException
-    //   9	34	76	finally
-    //   34	46	76	finally
-    //   83	87	89	java/io/IOException
-    //   46	55	93	finally
-    //   46	55	97	java/lang/Exception
+    r.w("TbsCommonConfig", "TbsCommonConfig constructing...");
+    mContext = paramContext.getApplicationContext();
+    bmr();
   }
   
-  static void Co(String paramString)
+  public static o bmq()
   {
     try
     {
-      Settings.System.putString(mContext.getContentResolver(), "sys_setting_tbs_qb_installer", paramString);
-      return;
+      o localo = lVf;
+      return localo;
     }
-    catch (Exception paramString) {}
+    finally
+    {
+      localObject = finally;
+      throw ((Throwable)localObject);
+    }
   }
   
-  public static o eR(Context paramContext)
+  private void bmr()
   {
-    mContext = paramContext.getApplicationContext();
-    if (jLU == null) {
-      jLU = new o();
+    for (;;)
+    {
+      try
+      {
+        localObject1 = bms();
+        if (localObject1 != null) {
+          continue;
+        }
+        r.e("TbsCommonConfig", "Config file is null, default values will be applied");
+      }
+      catch (Throwable localThrowable)
+      {
+        Object localObject1;
+        String str;
+        Object localObject3 = new StringWriter();
+        localThrowable.printStackTrace(new PrintWriter((Writer)localObject3));
+        r.e("TbsCommonConfig", "exceptions occurred1:" + ((StringWriter)localObject3).toString());
+        continue;
+      }
+      finally {}
+      return;
+      localObject1 = new FileInputStream((File)localObject1);
+      localObject3 = new Properties();
+      ((Properties)localObject3).load((InputStream)localObject1);
+      str = ((Properties)localObject3).getProperty("pv_post_url", "");
+      if (!"".equals(str)) {
+        lVg = str;
+      }
+      str = ((Properties)localObject3).getProperty("wup_proxy_domain", "");
+      if (!"".equals(str)) {
+        lVh = str;
+      }
+      str = ((Properties)localObject3).getProperty("tbs_download_stat_post_url", "");
+      if (!"".equals(str)) {
+        lVi = str;
+      }
+      str = ((Properties)localObject3).getProperty("tbs_downloader_post_url", "");
+      if (!"".equals(str)) {
+        lVj = str;
+      }
+      str = ((Properties)localObject3).getProperty("tbs_log_post_url", "");
+      if (!"".equals(str)) {
+        lVk = str;
+      }
+      str = ((Properties)localObject3).getProperty("tips_url", "");
+      if (!"".equals(str)) {
+        lVl = str;
+      }
+      localObject3 = ((Properties)localObject3).getProperty("tbs_cmd_post_url", "");
+      if (!"".equals(localObject3)) {
+        lVm = ((String)localObject3);
+      }
+      ((FileInputStream)localObject1).close();
     }
-    return jLU;
+  }
+  
+  private File bms()
+  {
+    try
+    {
+      if (lVe == null)
+      {
+        lVe = new File(d.S(mContext, 3));
+        if ((lVe == null) || (!lVe.isDirectory())) {
+          break label177;
+        }
+      }
+      localFile = new File(lVe, "tbsnet.conf");
+      if (!localFile.exists())
+      {
+        r.e("TbsCommonConfig", "Get file(" + localFile.getCanonicalPath() + ") failed!");
+        return null;
+      }
+      try
+      {
+        r.w("TbsCommonConfig", "pathc:" + localFile.getCanonicalPath());
+        return localFile;
+      }
+      catch (Throwable localThrowable1) {}
+    }
+    catch (Throwable localThrowable2)
+    {
+      for (;;)
+      {
+        StringWriter localStringWriter;
+        File localFile = null;
+      }
+    }
+    localStringWriter = new StringWriter();
+    localThrowable1.printStackTrace(new PrintWriter(localStringWriter));
+    r.e("TbsCommonConfig", "exceptions occurred2:" + localStringWriter.toString());
+    return localFile;
+    label177:
+    return null;
+  }
+  
+  public static o fS(Context paramContext)
+  {
+    try
+    {
+      if (lVf == null) {
+        lVf = new o(paramContext);
+      }
+      paramContext = lVf;
+      return paramContext;
+    }
+    finally {}
   }
 }
 

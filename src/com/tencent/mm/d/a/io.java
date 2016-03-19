@@ -1,23 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class io
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFH = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public io()
   {
-    id = "TalkRoomReportMgr";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public boolean aFI = false;
+    id = "PostSyncTask";
+    jUI = arR;
   }
 }
 

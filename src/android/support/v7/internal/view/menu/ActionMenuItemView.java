@@ -16,22 +16,21 @@ import android.view.View.MeasureSpec;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
 import android.widget.Toast;
-import com.tencent.mm.a.e;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 import java.util.Locale;
 
 public class ActionMenuItemView
   extends CompatTextView
-  implements ActionMenuView.a, p.a, View.OnClickListener, View.OnLongClickListener
+  implements ActionMenuView.a, m.a, View.OnClickListener, View.OnLongClickListener
 {
-  private CharSequence lg;
-  private i lp;
-  private Drawable lq;
-  private g.b lr;
-  private boolean ls;
-  private boolean lt;
-  private int lu;
-  private int lv;
+  private int kA;
+  private CharSequence km;
+  private h ku;
+  private Drawable kv;
+  private f.b kw;
+  private boolean kx;
+  private boolean ky;
+  private int kz;
   
   public ActionMenuItemView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -41,27 +40,27 @@ public class ActionMenuItemView
   public ActionMenuItemView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    ls = paramContext.getResources().getBoolean(a.e.abc_config_allowActionMenuItemTextWithIcon);
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.ActionMenuItemView, 0, 0);
-    lu = paramContext.getDimensionPixelSize(0, 0);
+    kx = paramContext.getResources().getBoolean(2131689472);
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.ActionMenuItemView, 0, 0);
+    kz = paramContext.getDimensionPixelSize(0, 0);
     paramContext.recycle();
     setOnClickListener(this);
     setOnLongClickListener(this);
     setTransformationMethod(new a());
-    lv = -1;
+    kA = -1;
   }
   
-  private void bt()
+  private void bd()
   {
     int m = 0;
     int i;
     int j;
-    if (!TextUtils.isEmpty(lg))
+    if (!TextUtils.isEmpty(km))
     {
       i = 1;
-      if (lq != null)
+      if (kv != null)
       {
-        if ((lp.ng & 0x4) != 4) {
+        if ((ku.ml & 0x4) != 4) {
           break label87;
         }
         j = 1;
@@ -70,10 +69,10 @@ public class ActionMenuItemView
         if (j == 0) {
           break label63;
         }
-        if (!ls)
+        if (!kx)
         {
           k = m;
-          if (!lt) {
+          if (!ky) {
             break label63;
           }
         }
@@ -86,7 +85,7 @@ public class ActionMenuItemView
     }
     label87:
     label92:
-    for (CharSequence localCharSequence = lg;; localCharSequence = null)
+    for (CharSequence localCharSequence = km;; localCharSequence = null)
     {
       setText(localCharSequence);
       return;
@@ -97,39 +96,39 @@ public class ActionMenuItemView
     }
   }
   
-  public final void a(i parami)
+  public final void a(h paramh)
   {
-    lp = parami;
-    setIcon(parami.getIcon());
-    setTitle(parami.a(this));
-    setId(parami.getItemId());
-    if (parami.isVisible()) {}
+    ku = paramh;
+    setIcon(paramh.getIcon());
+    setTitle(paramh.a(this));
+    setId(paramh.getItemId());
+    if (paramh.isVisible()) {}
     for (int i = 0;; i = 8)
     {
       setVisibility(i);
-      setEnabled(parami.isEnabled());
+      setEnabled(paramh.isEnabled());
       return;
     }
   }
   
-  public final boolean bs()
+  public final boolean bc()
   {
     return true;
   }
   
-  public final boolean bu()
+  public final boolean be()
   {
-    return (hasText()) && (lp.getIcon() == null);
+    return (hasText()) && (ku.getIcon() == null);
   }
   
-  public final boolean bv()
+  public final boolean bf()
   {
     return hasText();
   }
   
-  public i getItemData()
+  public h getItemData()
   {
-    return lp;
+    return ku;
   }
   
   public final boolean hasText()
@@ -139,8 +138,8 @@ public class ActionMenuItemView
   
   public void onClick(View paramView)
   {
-    if (lr != null) {
-      lr.c(lp);
+    if (kw != null) {
+      kw.c(ku);
     }
   }
   
@@ -159,7 +158,7 @@ public class ActionMenuItemView
     int k = paramView[1];
     int m = j / 2;
     int n = getResourcesgetDisplayMetricswidthPixels;
-    localObject = Toast.makeText((Context)localObject, lp.getTitle(), 0);
+    localObject = Toast.makeText((Context)localObject, ku.getTitle(), 0);
     if (k + m < localRect.height()) {
       ((Toast)localObject).setGravity(53, n - paramView[0] - i / 2, j);
     }
@@ -174,21 +173,21 @@ public class ActionMenuItemView
   protected void onMeasure(int paramInt1, int paramInt2)
   {
     boolean bool = hasText();
-    if ((bool) && (lv >= 0)) {
-      super.setPadding(lv, getPaddingTop(), getPaddingRight(), getPaddingBottom());
+    if ((bool) && (kA >= 0)) {
+      super.setPadding(kA, getPaddingTop(), getPaddingRight(), getPaddingBottom());
     }
     super.onMeasure(paramInt1, paramInt2);
     int i = View.MeasureSpec.getMode(paramInt1);
     paramInt1 = View.MeasureSpec.getSize(paramInt1);
     int j = getMeasuredWidth();
     if (i == Integer.MIN_VALUE) {}
-    for (paramInt1 = Math.min(paramInt1, lu);; paramInt1 = lu)
+    for (paramInt1 = Math.min(paramInt1, kz);; paramInt1 = kz)
     {
-      if ((i != 1073741824) && (lu > 0) && (j < paramInt1)) {
+      if ((i != 1073741824) && (kz > 0) && (j < paramInt1)) {
         super.onMeasure(View.MeasureSpec.makeMeasureSpec(paramInt1, 1073741824), paramInt2);
       }
-      if ((!bool) && (lq != null)) {
-        super.setPadding((getMeasuredWidth() - lq.getIntrinsicWidth()) / 2, getPaddingTop(), getPaddingRight(), getPaddingBottom());
+      if ((!bool) && (kv != null)) {
+        super.setPadding((getMeasuredWidth() - kv.getIntrinsicWidth()) / 2, getPaddingTop(), getPaddingRight(), getPaddingBottom());
       }
       return;
     }
@@ -200,51 +199,51 @@ public class ActionMenuItemView
   
   public void setExpandedFormat(boolean paramBoolean)
   {
-    if (lt != paramBoolean)
+    if (ky != paramBoolean)
     {
-      lt = paramBoolean;
-      if (lp != null) {
-        lp.jH.bJ();
+      ky = paramBoolean;
+      if (ku != null) {
+        ku.iO.bt();
       }
     }
   }
   
   public void setIcon(Drawable paramDrawable)
   {
-    lq = paramDrawable;
+    kv = paramDrawable;
     setCompoundDrawablesWithIntrinsicBounds(paramDrawable, null, null, null);
-    bt();
+    bd();
   }
   
-  public void setItemInvoker(g.b paramb)
+  public void setItemInvoker(f.b paramb)
   {
-    lr = paramb;
+    kw = paramb;
   }
   
   public void setPadding(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    lv = paramInt1;
+    kA = paramInt1;
     super.setPadding(paramInt1, paramInt2, paramInt3, paramInt4);
   }
   
   public void setTitle(CharSequence paramCharSequence)
   {
-    lg = paramCharSequence;
-    setContentDescription(lg);
-    bt();
+    km = paramCharSequence;
+    setContentDescription(km);
+    bd();
   }
   
   private final class a
     implements TransformationMethod
   {
-    private Locale gm = getContext().getResources().getConfiguration().locale;
+    private Locale fu = getContext().getResources().getConfiguration().locale;
     
     public a() {}
     
     public final CharSequence getTransformation(CharSequence paramCharSequence, View paramView)
     {
       if (paramCharSequence != null) {
-        return paramCharSequence.toString().toUpperCase(gm);
+        return paramCharSequence.toString().toUpperCase(fu);
       }
       return null;
     }

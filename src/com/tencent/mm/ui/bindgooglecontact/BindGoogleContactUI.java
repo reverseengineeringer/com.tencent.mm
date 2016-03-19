@@ -1,83 +1,142 @@
 package com.tencent.mm.ui.bindgooglecontact;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.widget.TextView;
 import com.jg.JgClassChecked;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.modelfriend.x;
-import com.tencent.mm.q.d;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.aa.a;
+import com.tencent.mm.aa.a.a;
+import com.tencent.mm.model.c;
+import com.tencent.mm.modelfriend.n;
+import com.tencent.mm.pluginsdk.ui.tools.q;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.widget.MMWebView.a;
-import com.tencent.mm.x.a;
-import com.tencent.mm.x.a.a;
 import com.tencent.smtt.sdk.CookieManager;
 import com.tencent.smtt.sdk.CookieSyncManager;
 import com.tencent.smtt.sdk.WebSettings;
 import com.tencent.smtt.sdk.WebView;
+import com.tencent.smtt.sdk.WebViewClient;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140429", reviewer=20, vComment={com.jg.EType.JSEXECUTECHECK})
 public class BindGoogleContactUI
   extends MMActivity
   implements d
 {
-  private boolean btW = false;
-  private ProgressDialog cHR;
-  private TextView dzR;
-  private boolean enm = false;
-  private boolean faJ = false;
-  String iNA;
-  String iNB;
-  private a iNC;
-  String iNq;
-  private int iNs;
-  private WebView iNx;
-  private boolean iNy = false;
-  private String iNz;
+  private boolean bGj = false;
+  private ProgressDialog dfT;
+  private TextView erD;
+  private boolean fxi = false;
+  private boolean gmc = false;
+  String kMD;
+  private int kMF;
+  private WebView kMK;
+  private boolean kML = false;
+  private String kMM;
+  String kMN;
+  String kMO;
+  private a kMP;
   
-  private void MT()
+  private void MB()
   {
-    if ((cHR == null) || (!cHR.isShowing()))
+    if (fxi)
     {
-      getString(a.n.app_tip);
-      cHR = com.tencent.mm.ui.base.h.a(this, getString(a.n.app_waiting), true, new m(this));
-    }
-  }
-  
-  private void Nq()
-  {
-    if (enm)
-    {
-      iNx.setVisibility(8);
-      MT();
+      kMK.setVisibility(8);
+      Rb();
       startActivityForResult(new Intent("com.tencent.mm.gms.ACTION_CHOOSE_ACCOUNT"), 1003);
       return;
     }
-    dzR.setVisibility(4);
-    iNx.setVisibility(0);
-    aND();
+    erD.setVisibility(4);
+    kMK.setVisibility(0);
+    bdu();
   }
   
-  private void aND()
+  private void Rb()
   {
-    MT();
-    iNx.getSettings().setJavaScriptEnabled(true);
-    iNx.setWebViewClient(new h(this));
-    WebView localWebView = iNx;
-    t.i("!44@/B4Tb64lLpKHrGLZvbPyiJfTn1QV0AFJw0rdZYMW3Eg=", "getRequestCodeUrl:%s", new Object[] { "https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/userinfo.email https://www.google.com/m8/feeds&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&client_id=369820936870.apps.googleusercontent.com" });
+    if ((dfT == null) || (!dfT.isShowing()))
+    {
+      getString(2131430877);
+      dfT = g.a(this, getString(2131430941), true, new DialogInterface.OnCancelListener()
+      {
+        public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+        {
+          BindGoogleContactUI.f(BindGoogleContactUI.this);
+          if (BindGoogleContactUI.g(BindGoogleContactUI.this) != null) {
+            com.tencent.mm.model.ah.tE().c(BindGoogleContactUI.g(BindGoogleContactUI.this));
+          }
+        }
+      });
+    }
+  }
+  
+  private void bdu()
+  {
+    Rb();
+    kMK.getSettings().setJavaScriptEnabled(true);
+    kMK.setWebViewClient(new WebViewClient()
+    {
+      public final void onPageFinished(WebView paramAnonymousWebView, String paramAnonymousString)
+      {
+        u.d("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "onPageFinished URL:" + paramAnonymousString);
+        if ((BindGoogleContactUI.a(BindGoogleContactUI.this) != null) && (BindGoogleContactUI.a(BindGoogleContactUI.this).getVisibility() != 0))
+        {
+          BindGoogleContactUI.a(BindGoogleContactUI.this).setVisibility(0);
+          if (BindGoogleContactUI.b(BindGoogleContactUI.this) != null) {
+            BindGoogleContactUI.b(BindGoogleContactUI.this).setVisibility(4);
+          }
+        }
+        BindGoogleContactUI.c(BindGoogleContactUI.this);
+        if (paramAnonymousWebView != null)
+        {
+          paramAnonymousWebView = paramAnonymousWebView.getTitle();
+          u.d("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "title:%s", new Object[] { paramAnonymousWebView });
+          if (!TextUtils.isEmpty(paramAnonymousWebView))
+          {
+            if (!paramAnonymousWebView.toLowerCase().contains("success")) {
+              break label162;
+            }
+            if (BindGoogleContactUI.a(BindGoogleContactUI.this) != null) {
+              BindGoogleContactUI.a(BindGoogleContactUI.this).setVisibility(4);
+            }
+            q.a(BindGoogleContactUI.a(BindGoogleContactUI.this), "weixin://private/googlegetcode", "document.getElementById('code').value");
+          }
+        }
+        label162:
+        while (!paramAnonymousWebView.toLowerCase().contains("error")) {
+          return;
+        }
+        u.w("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "failed." + paramAnonymousWebView.substring(paramAnonymousWebView.indexOf("=")));
+      }
+      
+      public final boolean shouldOverrideUrlLoading(WebView paramAnonymousWebView, String paramAnonymousString)
+      {
+        u.d("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "shouldOverrideUrlLoading, url = %s", new Object[] { paramAnonymousString });
+        if (paramAnonymousString.toLowerCase().startsWith("weixin://private/googlegetcode"))
+        {
+          BindGoogleContactUI.a(BindGoogleContactUI.this, paramAnonymousString);
+          return true;
+        }
+        return super.shouldOverrideUrlLoading(paramAnonymousWebView, paramAnonymousString);
+      }
+    });
+    WebView localWebView = kMK;
+    u.i("!44@/B4Tb64lLpKHrGLZvbPyiJfTn1QV0AFJw0rdZYMW3Eg=", "getRequestCodeUrl:%s", new Object[] { "https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/userinfo.email https://www.google.com/m8/feeds&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&client_id=369820936870.apps.googleusercontent.com" });
     localWebView.loadUrl("https://accounts.google.com/o/oauth2/auth?scope=https://www.googleapis.com/auth/userinfo.email https://www.google.com/m8/feeds&redirect_uri=urn:ietf:wg:oauth:2.0:oob&response_type=code&client_id=369820936870.apps.googleusercontent.com");
   }
   
-  private void aNF()
+  private void bdw()
   {
     try
     {
@@ -87,101 +146,121 @@ public class BindGoogleContactUI
     }
     catch (Exception localException)
     {
-      t.d("Google Login", "Clear cookie failed");
+      u.d("Google Login", "Clear cookie failed");
     }
   }
   
-  private void nV(int paramInt)
+  private void qU(int paramInt)
   {
-    iNC = new a(a.a.bCa, iNq, paramInt);
-    ax.tm().d(iNC);
-    t.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "doScene mAppToken:%s, mWebToke:%s", new Object[] { iNz, iNA });
+    kMP = new a(a.a.bPn, kMD, paramInt);
+    com.tencent.mm.model.ah.tE().d(kMP);
+    u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "doScene mAppToken:%s, mWebToke:%s", new Object[] { kMM, kMN });
   }
   
-  protected final void DV()
+  protected final void Gb()
   {
-    nh(a.n.gcontact_authorize_title);
-    a(new g(this));
-    iNx = MMWebView.a.f(this, a.i.gcontact_webview);
-    dzR = ((TextView)findViewById(a.i.empty));
+    qb(2131428709);
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        finish();
+        return true;
+      }
+    });
+    kMK = MMWebView.a.f(this, 2131169187);
+    erD = ((TextView)findViewById(2131166566));
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.q.j paramj)
+  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
   {
     paramj = paramString;
     if (TextUtils.isEmpty(paramString)) {
       paramj = "";
     }
-    t.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "[onSceneEnd] errType:%d,errCode:%d,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramj });
-    aNG();
+    u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "[onSceneEnd] errType:%d,errCode:%d,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramj });
+    bdx();
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      if (enm)
+      if (fxi)
       {
-        ax.tl().rf().set(208903, iNq);
-        ax.tl().rf().set(208901, iNz);
+        com.tencent.mm.model.ah.tD().rn().set(208903, kMD);
+        com.tencent.mm.model.ah.tD().rn().set(208901, kMM);
       }
       for (;;)
       {
-        ax.tl().rf().eN(true);
+        com.tencent.mm.model.ah.tD().rn().gN(true);
         paramString = new Intent(this, GoogleFriendUI.class);
-        paramString.putExtra("enter_scene", iNs);
+        paramString.putExtra("enter_scene", kMF);
         startActivity(paramString);
         finish();
-        if (faJ) {
-          com.tencent.mm.plugin.report.service.j.eJZ.f(11002, new Object[] { Integer.valueOf(6), Integer.valueOf(5) });
+        if (gmc) {
+          com.tencent.mm.plugin.report.service.h.fUJ.g(11002, new Object[] { Integer.valueOf(6), Integer.valueOf(5) });
         }
         return;
-        ax.tl().rf().set(208903, iNq);
-        ax.tl().rf().set(208902, iNA);
-        ax.tl().rf().set(208904, iNB);
+        com.tencent.mm.model.ah.tD().rn().set(208903, kMD);
+        com.tencent.mm.model.ah.tD().rn().set(208902, kMN);
+        com.tencent.mm.model.ah.tD().rn().set(208904, kMO);
       }
     }
-    if (paramInt2 == a.bBV)
+    if (paramInt2 == a.bPi)
     {
-      com.tencent.mm.ui.base.h.a(this, getString(a.n.gcontact_msg_account_has_binded), "", new k(this), new l(this));
+      g.a(this, getString(2131428701), "", new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          BindGoogleContactUI.a(BindGoogleContactUI.this, a.bPh);
+        }
+      }, new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          BindGoogleContactUI.d(BindGoogleContactUI.this);
+          BindGoogleContactUI.e(BindGoogleContactUI.this);
+        }
+      });
       return;
     }
-    aNE();
+    bdv();
   }
   
-  final void aH(String paramString, int paramInt)
+  final void aY(String paramString, int paramInt)
   {
-    iNq = paramString;
-    nV(paramInt);
+    kMD = paramString;
+    qU(paramInt);
   }
   
-  final void aNE()
+  final void bdv()
   {
-    if (iNx != null) {
-      iNx.setVisibility(4);
+    if (kMK != null) {
+      kMK.setVisibility(4);
     }
-    if (dzR != null) {
-      dzR.setVisibility(0);
+    if (erD != null) {
+      erD.setVisibility(0);
     }
-    if (!al.cN(this)) {}
-    for (String str = getString(a.n.gcontact_network_error_msg);; str = getString(a.n.gcontact_default_error_msg))
+    if (!com.tencent.mm.sdk.platformtools.ah.ds(this)) {}
+    for (String str = getString(2131428706);; str = getString(2131428705))
     {
-      dzR.setText(str);
+      erD.setText(str);
       return;
     }
   }
   
-  final void aNG()
+  final void bdx()
   {
-    if ((cHR != null) && (cHR.isShowing())) {
-      cHR.dismiss();
+    if ((dfT != null) && (dfT.isShowing())) {
+      dfT.dismiss();
     }
   }
   
   protected final int getLayoutId()
   {
-    return a.k.bindgooglecontact;
+    return 2131363099;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    t.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "requestCode:%d, resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "requestCode:%d, resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
     if (paramInt2 == -1)
     {
       switch (paramInt1)
@@ -189,109 +268,109 @@ public class BindGoogleContactUI
       default: 
         return;
       case 1005: 
-        enm = paramIntent.getBooleanExtra("gpservices", false);
-        Nq();
+        fxi = paramIntent.getBooleanExtra("gpservices", false);
+        MB();
         return;
       case 1003: 
         paramInt1 = paramIntent.getIntExtra("error_code", -1);
-        t.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "errorCode:%d ", new Object[] { Integer.valueOf(paramInt1) });
+        u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "errorCode:%d ", new Object[] { Integer.valueOf(paramInt1) });
         if (paramInt1 == 0)
         {
-          iNq = paramIntent.getStringExtra("account");
-          if (btW)
+          kMD = paramIntent.getStringExtra("account");
+          if (bGj)
           {
-            aNG();
+            bdx();
             return;
           }
-          t.d("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "startAcitivtyForGetToken");
+          u.d("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "startAcitivtyForGetToken");
           paramIntent = new Intent("com.tencent.mm.gms.ACTION_GET_TOKEN");
-          paramIntent.putExtra("gmail", iNq);
+          paramIntent.putExtra("gmail", kMD);
           paramIntent.putExtra("scope", "oauth2:https://www.googleapis.com/auth/userinfo.email https://www.google.com/m8/feeds");
           startActivityForResult(paramIntent, 1004);
           return;
         }
-        aNG();
-        aNE();
+        bdx();
+        bdv();
         return;
       }
       paramInt1 = paramIntent.getIntExtra("error_code", -1);
-      t.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "errorCode:%d errorMsg:%s", new Object[] { Integer.valueOf(paramInt1), paramIntent.getStringExtra("error_msg") });
+      u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "errorCode:%d errorMsg:%s", new Object[] { Integer.valueOf(paramInt1), paramIntent.getStringExtra("error_msg") });
       if (paramInt1 == 0)
       {
-        iNz = paramIntent.getStringExtra("token");
-        nV(a.bBT);
+        kMM = paramIntent.getStringExtra("token");
+        qU(a.bPg);
         return;
       }
-      aNG();
-      aNE();
+      bdx();
+      bdv();
       return;
     }
     if (paramInt1 == 1005)
     {
-      enm = paramIntent.getBooleanExtra("gpservices", false);
-      Nq();
+      fxi = paramIntent.getBooleanExtra("gpservices", false);
+      MB();
       return;
     }
-    aNG();
-    aNE();
+    bdx();
+    bdv();
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    iNs = getIntent().getIntExtra("enter_scene", 0);
-    faJ = getIntent().getBooleanExtra("KEnterFromBanner", false);
-    enm = x.aC(this);
-    iNq = ((String)ax.tl().rf().get(208903, null));
-    DV();
-    if (enm)
+    kMF = getIntent().getIntExtra("enter_scene", 0);
+    gmc = getIntent().getBooleanExtra("KEnterFromBanner", false);
+    fxi = n.aM(this);
+    kMD = ((String)com.tencent.mm.model.ah.tD().rn().get(208903, null));
+    Gb();
+    if (fxi)
     {
       startActivityForResult(new Intent("com.tencent.mm.gms.CHECK_GP_SERVICES"), 1005);
       return;
     }
-    Nq();
+    MB();
   }
   
   protected void onPause()
   {
     super.onPause();
-    ax.tm().b(487, this);
+    com.tencent.mm.model.ah.tE().b(487, this);
   }
   
   protected void onResume()
   {
     super.onResume();
-    ax.tm().a(487, this);
-    iNy = ((Boolean)ax.tl().rf().get(208905, Boolean.valueOf(false))).booleanValue();
-    if (iNy)
+    com.tencent.mm.model.ah.tE().a(487, this);
+    kML = ((Boolean)com.tencent.mm.model.ah.tD().rn().get(208905, Boolean.valueOf(false))).booleanValue();
+    if (kML)
     {
-      aNF();
-      iNy = false;
-      ax.tl().rf().set(208905, Boolean.valueOf(false));
+      bdw();
+      kML = false;
+      com.tencent.mm.model.ah.tD().rn().set(208905, Boolean.valueOf(false));
     }
   }
   
   final class a
     extends AsyncTask
   {
-    private String iNF;
-    private String iNG;
-    private boolean iNH;
+    private String kMS;
+    private String kMT;
+    private boolean kMU;
     
     public a(String paramString)
     {
-      iNF = paramString;
+      kMS = paramString;
     }
     
     /* Error */
-    private Void VE()
+    private Void acy()
     {
       // Byte code:
       //   0: ldc 38
       //   2: ldc 40
-      //   4: invokestatic 46	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;)V
+      //   4: invokestatic 46	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
       //   7: aload_0
-      //   8: getfield 23	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:iNF	Ljava/lang/String;
+      //   8: getfield 23	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:kMS	Ljava/lang/String;
       //   11: astore_3
       //   12: ldc 48
       //   14: astore_2
@@ -332,7 +411,7 @@ public class BindGoogleContactUI
       //   89: iload_1
       //   90: invokevirtual 100	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
       //   93: invokevirtual 65	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   96: invokestatic 103	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+      //   96: invokestatic 103	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
       //   99: sipush 200
       //   102: iload_1
       //   103: if_icmpne +101 -> 204
@@ -370,7 +449,7 @@ public class BindGoogleContactUI
       //   169: aload_2
       //   170: invokevirtual 133	java/net/MalformedURLException:getMessage	()Ljava/lang/String;
       //   173: aastore
-      //   174: invokestatic 136	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   174: invokestatic 136	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   177: aconst_null
       //   178: areturn
       //   179: aload 4
@@ -386,7 +465,7 @@ public class BindGoogleContactUI
       //   198: iconst_0
       //   199: aload_2
       //   200: aastore
-      //   201: invokestatic 144	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   201: invokestatic 144	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   204: aload_3
       //   205: invokevirtual 147	java/net/HttpURLConnection:disconnect	()V
       //   208: aload_0
@@ -396,14 +475,14 @@ public class BindGoogleContactUI
       //   214: invokespecial 150	org/json/JSONObject:<init>	(Ljava/lang/String;)V
       //   217: ldc -104
       //   219: invokevirtual 156	org/json/JSONObject:optString	(Ljava/lang/String;)Ljava/lang/String;
-      //   222: putfield 158	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:iNG	Ljava/lang/String;
+      //   222: putfield 158	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:kMT	Ljava/lang/String;
       //   225: aload_0
-      //   226: getfield 158	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:iNG	Ljava/lang/String;
+      //   226: getfield 158	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:kMT	Ljava/lang/String;
       //   229: invokestatic 164	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
       //   232: ifne -55 -> 177
       //   235: aload_0
       //   236: iconst_1
-      //   237: putfield 166	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:iNH	Z
+      //   237: putfield 166	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:kMU	Z
       //   240: goto -63 -> 177
       //   243: astore_2
       //   244: ldc 38
@@ -415,7 +494,7 @@ public class BindGoogleContactUI
       //   254: aload_2
       //   255: invokevirtual 169	java/net/ProtocolException:getMessage	()Ljava/lang/String;
       //   258: aastore
-      //   259: invokestatic 136	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   259: invokestatic 136	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   262: goto -85 -> 177
       //   265: astore_2
       //   266: ldc 38
@@ -427,7 +506,7 @@ public class BindGoogleContactUI
       //   276: aload_2
       //   277: invokevirtual 172	java/io/UnsupportedEncodingException:getMessage	()Ljava/lang/String;
       //   280: aastore
-      //   281: invokestatic 136	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   281: invokestatic 136	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   284: goto -107 -> 177
       //   287: astore_2
       //   288: ldc 38
@@ -439,7 +518,7 @@ public class BindGoogleContactUI
       //   298: aload_2
       //   299: invokevirtual 175	java/io/IOException:getMessage	()Ljava/lang/String;
       //   302: aastore
-      //   303: invokestatic 136	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   303: invokestatic 136	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   306: goto -129 -> 177
       //   309: astore_2
       //   310: goto -133 -> 177
@@ -499,30 +578,30 @@ public class BindGoogleContactUI
     protected final void onPreExecute()
     {
       super.onPreExecute();
-      t.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "onPreExecute");
-      iNH = false;
+      u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "onPreExecute");
+      kMU = false;
     }
   }
   
   final class b
     extends AsyncTask
   {
-    private boolean azi;
-    private String iNF;
-    private String iNI;
-    private String iNJ;
+    private boolean awe;
+    private String kMS;
+    private String kMV;
+    private String kMW;
     
     public b(String paramString)
     {
-      iNI = paramString;
+      kMV = paramString;
     }
     
     /* Error */
-    private Void VE()
+    private Void acy()
     {
       // Byte code:
       //   0: aload_0
-      //   1: getfield 24	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:iNI	Ljava/lang/String;
+      //   1: getfield 24	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:kMV	Ljava/lang/String;
       //   4: astore 4
       //   6: ldc 37
       //   8: astore_2
@@ -601,7 +680,7 @@ public class BindGoogleContactUI
       //   169: invokeinterface 96 2 0
       //   174: pop
       //   175: aload 5
-      //   177: invokestatic 118	com/tencent/mm/modelfriend/x:t	(Ljava/util/List;)Ljava/lang/String;
+      //   177: invokestatic 118	com/tencent/mm/modelfriend/n:w	(Ljava/util/List;)Ljava/lang/String;
       //   180: astore 4
       //   182: ldc 120
       //   184: ldc 122
@@ -611,7 +690,7 @@ public class BindGoogleContactUI
       //   191: iconst_0
       //   192: aload 4
       //   194: aastore
-      //   195: invokestatic 130	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   195: invokestatic 130	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   198: aload_3
       //   199: ldc -124
       //   201: aload 4
@@ -647,7 +726,7 @@ public class BindGoogleContactUI
       //   268: iload_1
       //   269: invokevirtual 178	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
       //   272: invokevirtual 182	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   275: invokestatic 185	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+      //   275: invokestatic 185	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
       //   278: sipush 200
       //   281: iload_1
       //   282: if_icmpne +107 -> 389
@@ -685,7 +764,7 @@ public class BindGoogleContactUI
       //   350: invokevirtual 213	java/net/MalformedURLException:getMessage	()Ljava/lang/String;
       //   353: invokevirtual 216	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
       //   356: invokevirtual 182	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   359: invokestatic 185	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+      //   359: invokestatic 185	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
       //   362: aconst_null
       //   363: areturn
       //   364: aload 4
@@ -701,7 +780,7 @@ public class BindGoogleContactUI
       //   383: iconst_0
       //   384: aload_2
       //   385: aastore
-      //   386: invokestatic 130	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   386: invokestatic 130	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   389: aload_3
       //   390: invokevirtual 223	java/net/HttpURLConnection:disconnect	()V
       //   393: aload_0
@@ -711,7 +790,7 @@ public class BindGoogleContactUI
       //   399: invokespecial 226	org/json/JSONObject:<init>	(Ljava/lang/String;)V
       //   402: ldc -28
       //   404: invokevirtual 232	org/json/JSONObject:optString	(Ljava/lang/String;)Ljava/lang/String;
-      //   407: putfield 234	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:iNF	Ljava/lang/String;
+      //   407: putfield 234	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:kMS	Ljava/lang/String;
       //   410: aload_0
       //   411: new 225	org/json/JSONObject
       //   414: dup
@@ -719,7 +798,7 @@ public class BindGoogleContactUI
       //   416: invokespecial 226	org/json/JSONObject:<init>	(Ljava/lang/String;)V
       //   419: ldc -20
       //   421: invokevirtual 232	org/json/JSONObject:optString	(Ljava/lang/String;)Ljava/lang/String;
-      //   424: putfield 238	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:iNJ	Ljava/lang/String;
+      //   424: putfield 238	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:kMW	Ljava/lang/String;
       //   427: ldc 120
       //   429: ldc -16
       //   431: iconst_1
@@ -728,7 +807,7 @@ public class BindGoogleContactUI
       //   436: iconst_0
       //   437: aload_2
       //   438: aastore
-      //   439: invokestatic 130	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   439: invokestatic 130	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   442: ldc 120
       //   444: ldc -14
       //   446: iconst_1
@@ -736,9 +815,9 @@ public class BindGoogleContactUI
       //   450: dup
       //   451: iconst_0
       //   452: aload_0
-      //   453: getfield 234	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:iNF	Ljava/lang/String;
+      //   453: getfield 234	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:kMS	Ljava/lang/String;
       //   456: aastore
-      //   457: invokestatic 130	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   457: invokestatic 130	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   460: ldc 120
       //   462: ldc -12
       //   464: iconst_1
@@ -746,12 +825,12 @@ public class BindGoogleContactUI
       //   468: dup
       //   469: iconst_0
       //   470: aload_0
-      //   471: getfield 238	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:iNJ	Ljava/lang/String;
+      //   471: getfield 238	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:kMW	Ljava/lang/String;
       //   474: aastore
-      //   475: invokestatic 130	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   475: invokestatic 130	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   478: aload_0
       //   479: iconst_1
-      //   480: putfield 246	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:azi	Z
+      //   480: putfield 246	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$b:awe	Z
       //   483: goto -121 -> 362
       //   486: astore_2
       //   487: ldc 120
@@ -763,7 +842,7 @@ public class BindGoogleContactUI
       //   499: invokevirtual 249	java/net/ProtocolException:getMessage	()Ljava/lang/String;
       //   502: invokevirtual 216	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
       //   505: invokevirtual 182	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   508: invokestatic 185	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+      //   508: invokestatic 185	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
       //   511: goto -149 -> 362
       //   514: astore_2
       //   515: ldc 120
@@ -775,7 +854,7 @@ public class BindGoogleContactUI
       //   527: invokevirtual 252	java/io/IOException:getMessage	()Ljava/lang/String;
       //   530: invokevirtual 216	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
       //   533: invokevirtual 182	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   536: invokestatic 185	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+      //   536: invokestatic 185	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
       //   539: goto -177 -> 362
       //   542: astore_2
       //   543: ldc 120
@@ -787,7 +866,7 @@ public class BindGoogleContactUI
       //   555: invokevirtual 255	org/json/JSONException:getMessage	()Ljava/lang/String;
       //   558: invokevirtual 216	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
       //   561: invokevirtual 182	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   564: invokestatic 185	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+      //   564: invokestatic 185	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
       //   567: goto -205 -> 362
       // Local variable table:
       //   start	length	slot	name	signature
@@ -837,10 +916,10 @@ public class BindGoogleContactUI
     protected final void onPreExecute()
     {
       super.onPreExecute();
-      t.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "onPreExecute");
-      iNF = "";
-      iNJ = "";
-      azi = false;
+      u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "onPreExecute");
+      kMS = "";
+      kMW = "";
+      awe = false;
     }
   }
 }

@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/cq;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -13,15 +13,15 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public ayu:Lcom/tencent/mm/d/a/cq$a;
+.field public awf:Lcom/tencent/mm/d/a/cq$a;
 
-.field public ayv:Lcom/tencent/mm/d/a/cq$b;
+.field public awg:Lcom/tencent/mm/d/a/cq$b;
 
 
 # direct methods
@@ -32,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/cq;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/cq;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/cq;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/cq;->arR:Z
 
     return-void
 .end method
@@ -45,30 +45,30 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/cq$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/cq$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/cq;->ayu:Lcom/tencent/mm/d/a/cq$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/cq;->awf:Lcom/tencent/mm/d/a/cq$a;
 
-    .line 24
+    .line 19
     new-instance v0, Lcom/tencent/mm/d/a/cq$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/cq$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/cq;->ayv:Lcom/tencent/mm/d/a/cq$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/cq;->awg:Lcom/tencent/mm/d/a/cq$b;
 
     .line 8
-    const-string/jumbo v0, "FileDownloadAdd"
+    const-string/jumbo v0, "ExDeviceSendDataToNetworkDeviceState"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/cq;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/cq;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/cq;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/cq;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/cq;->jUI:Z
 
     return-void
 .end method

@@ -1,124 +1,69 @@
 package com.tencent.mm.al;
 
-import java.io.UnsupportedEncodingException;
+import android.os.Looper;
+import android.os.MessageQueue;
+import android.os.MessageQueue.IdleHandler;
+import com.tencent.mm.c.b.g.a;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.am.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import java.io.File;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.BlockingQueue;
 
 public final class b
+  implements am.a
 {
-  public byte[] hga;
+  public BlockingQueue ccG = new ArrayBlockingQueue(1024);
+  public String mFileName = null;
   
-  private b() {}
-  
-  public b(byte[] paramArrayOfByte)
+  public final boolean vd()
   {
-    this(paramArrayOfByte, 0, paramArrayOfByte.length);
-  }
-  
-  private b(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
-  {
-    hga = new byte[paramInt2];
-    System.arraycopy(paramArrayOfByte, paramInt1, hga, 0, paramInt2);
-  }
-  
-  public static b au(byte[] paramArrayOfByte)
-  {
-    if (paramArrayOfByte != null) {}
-    for (;;)
-    {
-      return new b(paramArrayOfByte);
-      paramArrayOfByte = new byte[0];
-    }
-  }
-  
-  public static b f(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
-  {
-    return new b(paramArrayOfByte, paramInt1, paramInt2);
-  }
-  
-  public static b vJ(String paramString)
-  {
+    u.d("!44@/B4Tb64lLpJjdNXZaTU/yPJ+5ICc1/K11SmIwS+HTfk=", "doEncode");
+    com.tencent.mm.c.c.d locald = new com.tencent.mm.c.c.d();
+    String str = ah.tD().rE();
     try
     {
-      b localb = new b();
-      hga = paramString.getBytes("UTF-8");
-      return localb;
+      u.i("!44@/B4Tb64lLpJjdNXZaTU/yPJ+5ICc1/K11SmIwS+HTfk=", "path " + str);
+      Object localObject = new File(str);
+      if (!((File)localObject).exists()) {
+        ((File)localObject).mkdir();
+      }
+      locald.br(str + mFileName + ".temp");
+      while (ccG.size() > 0)
+      {
+        localObject = (g.a)ccG.poll();
+        if ((buf != null) && (anV > 0)) {
+          locald.a((g.a)localObject, 0);
+        }
+      }
+      localException1.lU();
     }
-    catch (UnsupportedEncodingException paramString)
+    catch (Exception localException1)
     {
-      throw new RuntimeException("UTF-8 not supported?", paramString);
+      u.e("!44@/B4Tb64lLpJjdNXZaTU/yPJ+5ICc1/K11SmIwS+HTfk=", "filename open failed, ", new Object[] { localException1 });
+      return true;
     }
-  }
-  
-  /* Error */
-  public final String aDi()
-  {
-    // Byte code:
-    //   0: iconst_0
-    //   1: istore_1
-    //   2: iload_1
-    //   3: aload_0
-    //   4: getfield 17	com/tencent/mm/al/b:hga	[B
-    //   7: arraylength
-    //   8: if_icmplt +19 -> 27
-    //   11: new 38	java/lang/String
-    //   14: dup
-    //   15: aload_0
-    //   16: getfield 17	com/tencent/mm/al/b:hga	[B
-    //   19: iconst_0
-    //   20: iload_1
-    //   21: ldc 36
-    //   23: invokespecial 54	java/lang/String:<init>	([BIILjava/lang/String;)V
-    //   26: areturn
-    //   27: aload_0
-    //   28: getfield 17	com/tencent/mm/al/b:hga	[B
-    //   31: iload_1
-    //   32: baload
-    //   33: istore_2
-    //   34: iload_2
-    //   35: ifeq -24 -> 11
-    //   38: iload_1
-    //   39: iconst_1
-    //   40: iadd
-    //   41: istore_1
-    //   42: goto -40 -> 2
-    //   45: astore_3
-    //   46: new 44	java/lang/RuntimeException
-    //   49: dup
-    //   50: ldc 46
-    //   52: invokespecial 57	java/lang/RuntimeException:<init>	(Ljava/lang/String;)V
-    //   55: athrow
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	56	0	this	b
-    //   1	41	1	i	int
-    //   33	2	2	j	int
-    //   45	1	3	localUnsupportedEncodingException	UnsupportedEncodingException
-    // Exception table:
-    //   from	to	target	type
-    //   2	11	45	java/io/UnsupportedEncodingException
-    //   11	27	45	java/io/UnsupportedEncodingException
-    //   27	34	45	java/io/UnsupportedEncodingException
-  }
-  
-  public final b lV(int paramInt)
-  {
-    byte[] arrayOfByte = new byte[paramInt];
-    if (hga.length >= paramInt)
+    try
     {
-      System.arraycopy(hga, 0, arrayOfByte, 0, paramInt - 1);
-      hga = arrayOfByte;
-      return this;
+      new File(str + mFileName + ".temp").renameTo(new File(str + mFileName + ".spx"));
+      d.Dl().start();
+      return true;
     }
-    System.arraycopy(hga, 0, arrayOfByte, 0, hga.length);
-    hga = arrayOfByte;
-    return this;
+    catch (Exception localException2)
+    {
+      for (;;)
+      {
+        u.e("!44@/B4Tb64lLpJjdNXZaTU/yPJ+5ICc1/K11SmIwS+HTfk=", "exception:%s", new Object[] { ay.b(localException2) });
+      }
+    }
   }
   
-  public final byte[] toByteArray()
+  public final boolean ve()
   {
-    int i = hga.length;
-    byte[] arrayOfByte = new byte[i];
-    System.arraycopy(hga, 0, arrayOfByte, 0, i);
-    return arrayOfByte;
+    return false;
   }
 }
 

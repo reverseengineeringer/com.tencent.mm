@@ -1,17 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.app.Activity;
+import com.tencent.mm.sdk.c.b;
 
 public final class u
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a asV = new a();
   
   public u()
   {
-    id = "CheckLanguageChange";
-    hXT = atO;
+    id = "CancelDealQBarStr";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public String asW;
+    public Activity asX;
   }
 }
 

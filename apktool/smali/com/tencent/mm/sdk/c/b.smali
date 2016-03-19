@@ -1,45 +1,28 @@
-.class final Lcom/tencent/mm/sdk/c/b;
+.class public abstract Lcom/tencent/mm/sdk/c/b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field final synthetic ebK:Lcom/tencent/mm/sdk/c/d;
+.field public aID:Ljava/lang/Runnable;
 
-.field final synthetic hXS:Lcom/tencent/mm/sdk/c/a;
+.field public id:Ljava/lang/String;
+
+.field public jUI:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/sdk/c/a;Lcom/tencent/mm/sdk/c/d;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 82
-    iput-object p1, p0, Lcom/tencent/mm/sdk/c/b;->hXS:Lcom/tencent/mm/sdk/c/a;
-
-    iput-object p2, p0, Lcom/tencent/mm/sdk/c/b;->ebK:Lcom/tencent/mm/sdk/c/d;
-
+    .line 3
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 4
+    const/4 v0, 0x0
 
+    iput-object v0, p0, Lcom/tencent/mm/sdk/c/b;->aID:Ljava/lang/Runnable;
 
-# virtual methods
-.method public final run()V
-    .locals 2
-
-    .prologue
-    .line 85
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
-
-    iget-object v1, p0, Lcom/tencent/mm/sdk/c/b;->ebK:Lcom/tencent/mm/sdk/c/d;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/c/a;->g(Lcom/tencent/mm/sdk/c/d;)Z
-
-    .line 86
     return-void
 .end method

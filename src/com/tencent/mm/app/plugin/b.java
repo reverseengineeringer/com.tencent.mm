@@ -1,16 +1,16 @@
 package com.tencent.mm.app.plugin;
 
-import com.tencent.mm.d.a.ea;
+import com.tencent.mm.d.a.gf;
 import com.tencent.mm.sdk.c.a;
 
 public final class b
 {
-  public static void aH(int paramInt)
+  public static void aL(int paramInt)
   {
-    ea localea = new ea();
-    aAe.axw = 2;
-    aAe.aAh = paramInt;
-    a.hXQ.g(localea);
+    gf localgf = new gf();
+    aBf.axD = 2;
+    aBf.aBi = paramInt;
+    a.jUF.j(localgf);
   }
 }
 

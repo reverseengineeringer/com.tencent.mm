@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public atX:[Ljava/lang/String;
+.field public asa:[Ljava/lang/String;
 
 .field public context:Landroid/content/Context;
 

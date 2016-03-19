@@ -1,15 +1,8 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.q.f.a;
-import com.tencent.mm.q.f.b;
-
 public final class bw$a
 {
-  public String apy;
-  public boolean arf;
-  public f.a axh;
-  public f.b axi;
-  public int op;
+  public long avg;
 }
 
 /* Location:

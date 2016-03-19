@@ -1,6 +1,6 @@
 package com.tencent.mm.modelcdntran;
 
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public class keep_SceneResult
 {
@@ -43,7 +43,7 @@ public class keep_SceneResult
   
   public String toString()
   {
-    String str2 = String.format("id:%s file:%s aeskey:%d filelen:%d midlen:%d thlen:%d transInfo:%s retCode:%d toUser:%s arg:%s videoFileId:%s argInfo:%s hitcache:%d needsend:%b msgid:%d convert2baseline:%b thumbUrl:%s fileUrl:%s", new Object[] { mediaId, field_fileId, Integer.valueOf(bn.iV(field_aesKey).length()), Integer.valueOf(field_fileLength), Integer.valueOf(field_midimgLength), Integer.valueOf(field_thumbimgLength), field_transInfo, Integer.valueOf(field_retCode), field_toUser, field_arg, field_videoFileId, field_argInfo, Integer.valueOf(field_UploadHitCacheType), Boolean.valueOf(field_needSendMsgField), Integer.valueOf(0), Boolean.valueOf(field_convert2baseline), field_thumbUrl, field_fileUrl });
+    String str2 = String.format("id:%s file:%s aeskey:%d filelen:%d midlen:%d thlen:%d transInfo:%s retCode:%d toUser:%s arg:%s videoFileId:%s argInfo:%s hitcache:%d needsend:%b msgid:%d convert2baseline:%b thumbUrl:%s fileUrl:%s", new Object[] { mediaId, field_fileId, Integer.valueOf(ay.ky(field_aesKey).length()), Integer.valueOf(field_fileLength), Integer.valueOf(field_midimgLength), Integer.valueOf(field_thumbimgLength), field_transInfo, Integer.valueOf(field_retCode), field_toUser, field_arg, field_videoFileId, field_argInfo, Integer.valueOf(field_UploadHitCacheType), Boolean.valueOf(field_needSendMsgField), Integer.valueOf(0), Boolean.valueOf(field_convert2baseline), field_thumbUrl, field_fileUrl });
     String str1 = str2;
     if (field_sKeyrespbuf != null) {
       str1 = str2 + String.format("skeyrespbuf:%s", new Object[] { bytesToHex(field_sKeyrespbuf) });

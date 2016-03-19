@@ -7,6 +7,10 @@
 .implements Lcom/tencent/mm/pluginsdk/ui/d$a;
 
 
+# static fields
+.field private static final TAG:Ljava/lang/String; = "!32@/B4Tb64lLpJvPADYHZ60V7qR4Q4a20iF"
+
+
 # instance fields
 .field public final AVATAR_LAYOUT_WIDTH:I
 
@@ -84,14 +88,14 @@
     .locals 2
 
     .prologue
-    .line 70
+    .line 72
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-direct {p0, p1, v0, v1}, Lcom/tencent/mm/ui/AddressView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 71
+    .line 73
     return-void
 .end method
 
@@ -99,30 +103,32 @@
     .locals 1
 
     .prologue
-    .line 74
+    .line 76
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/tencent/mm/ui/AddressView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 75
+    .line 77
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 3
+    .locals 4
 
     .prologue
+    const v3, 0x7f05020e
+
     const/4 v2, 0x0
 
-    .line 78
+    .line 80
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 97
+    .line 99
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$h;->signature_bg:I
+    const v1, 0x7f04078e
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
@@ -130,41 +136,37 @@
 
     iput-object v0, p0, Lcom/tencent/mm/ui/AddressView;->drawable:Landroid/graphics/drawable/Drawable;
 
-    .line 228
+    .line 230
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/tencent/mm/ui/AddressView;->needUpdatePostion:Z
 
-    .line 80
+    .line 82
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->ContactAvatarSize:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->AVATAR_LAYOUT_WIDTH:I
 
-    .line 81
+    .line 83
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->ContactAvatarSize:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->AVATAR_WIDTH:I
 
-    .line 82
-    sget v0, Lcom/tencent/mm/a$g;->NormalTextSize:I
+    .line 84
+    const v0, 0x7f0501c4
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/ao/a;->v(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lcom/tencent/mm/aw/a;->z(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -172,10 +174,10 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->NAME_TEXT_SIZE:F
 
-    .line 83
-    sget v0, Lcom/tencent/mm/a$g;->SmallestTextSize:I
+    .line 85
+    const v0, 0x7f0501c7
 
-    invoke-static {p1, v0}, Lcom/tencent/mm/ao/a;->v(Landroid/content/Context;I)I
+    invoke-static {p1, v0}, Lcom/tencent/mm/aw/a;->z(Landroid/content/Context;I)I
 
     move-result v0
 
@@ -183,12 +185,12 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->DESCRIPTION_TEXT_SIZE:F
 
-    .line 84
+    .line 86
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->SmallIconSize:I
+    const v1, 0x7f0501ea
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -196,15 +198,15 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->WEIBO_ICON_SIZE:I
 
-    .line 85
+    .line 87
     iput v2, p0, Lcom/tencent/mm/ui/AddressView;->AVATAR_START_POS:I
 
-    .line 86
+    .line 88
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->SmallPadding:I
+    const v1, 0x7f0501d2
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -212,15 +214,15 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->AVATAR_PADDING:I
 
-    .line 87
+    .line 89
     iput v2, p0, Lcom/tencent/mm/ui/AddressView;->COMMON_PADDING:I
 
-    .line 88
+    .line 90
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->LargestPadding:I
+    const v1, 0x7f0501d6
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -230,12 +232,12 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->DESCRIPTION_PADDING:I
 
-    .line 89
+    .line 91
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->SmallestPadding:I
+    const v1, 0x7f0501cf
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -243,7 +245,7 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->TEXT_TOP_PADDING:I
 
-    .line 90
+    .line 92
     return-void
 .end method
 
@@ -251,7 +253,7 @@
     .locals 2
 
     .prologue
-    .line 348
+    .line 350
     invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -262,7 +264,7 @@
 
     iget v0, v0, Landroid/util/DisplayMetrics;->density:F
 
-    .line 349
+    .line 351
     mul-float/2addr v0, p1
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -278,27 +280,27 @@
     .locals 3
 
     .prologue
-    .line 383
+    .line 389
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
-    .line 384
+    .line 390
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
-    .line 385
+    .line 391
     iget v1, p0, Lcom/tencent/mm/ui/AddressView;->DESCRIPTION_TEXT_SIZE:F
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 386
+    .line 392
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$f;->hint_text_color:I
+    const v2, 0x7f0801a2
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -306,7 +308,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 387
+    .line 393
     return-object v0
 .end method
 
@@ -314,27 +316,27 @@
     .locals 3
 
     .prologue
-    .line 370
+    .line 376
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
-    .line 371
+    .line 377
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setAntiAlias(Z)V
 
-    .line 372
+    .line 378
     iget v1, p0, Lcom/tencent/mm/ui/AddressView;->NAME_TEXT_SIZE:F
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 373
+    .line 379
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$f;->normal_text_color:I
+    const v2, 0x7f08019f
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -342,7 +344,7 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 374
+    .line 380
     return-object v0
 .end method
 
@@ -350,14 +352,14 @@
     .locals 1
 
     .prologue
-    .line 413
-    new-instance v0, Lcom/tencent/mm/ui/c;
+    .line 419
+    new-instance v0, Lcom/tencent/mm/ui/AddressView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/c;-><init>(Lcom/tencent/mm/ui/AddressView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/AddressView$1;-><init>(Lcom/tencent/mm/ui/AddressView;)V
 
-    invoke-static {p0, v0}, Landroid/support/v4/view/t;->a(Landroid/view/View;Landroid/support/v4/view/a;)V
+    invoke-static {p0, v0}, Landroid/support/v4/view/m;->a(Landroid/view/View;Landroid/support/v4/view/a;)V
 
-    .line 439
+    .line 445
     return-void
 .end method
 
@@ -365,7 +367,7 @@
     .locals 6
 
     .prologue
-    .line 266
+    .line 268
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->avatarDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v1, p0, Lcom/tencent/mm/ui/AddressView;->AVATAR_START_POS:I
@@ -402,7 +404,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 267
+    .line 269
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->needMask:Landroid/graphics/drawable/BitmapDrawable;
 
     iget v1, p0, Lcom/tencent/mm/ui/AddressView;->AVATAR_START_POS:I
@@ -507,7 +509,7 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
 
-    .line 269
+    .line 271
     return-void
 .end method
 
@@ -517,10 +519,10 @@
     .locals 0
 
     .prologue
-    .line 392
+    .line 398
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->invalidate()V
 
-    .line 393
+    .line 399
     return-void
 .end method
 
@@ -528,13 +530,13 @@
     .locals 0
 
     .prologue
-    .line 354
+    .line 356
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->updateTextColors()V
 
-    .line 355
+    .line 357
     invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
 
-    .line 356
+    .line 358
     return-void
 .end method
 
@@ -542,7 +544,7 @@
     .locals 2
 
     .prologue
-    .line 284
+    .line 286
     invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/AddressView;->getDensity(Landroid/content/Context;)F
 
     move-result v0
@@ -562,15 +564,15 @@
     .locals 2
 
     .prologue
-    .line 291
+    .line 293
     if-nez p1, :cond_0
 
-    .line 292
+    .line 294
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getContext()Landroid/content/Context;
 
     move-result-object p1
 
-    .line 294
+    .line 296
     :cond_0
     iget v0, p0, Lcom/tencent/mm/ui/AddressView;->density:F
 
@@ -580,7 +582,7 @@
 
     if-gez v0, :cond_1
 
-    .line 295
+    .line 297
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -593,7 +595,7 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->density:F
 
-    .line 298
+    .line 300
     :cond_1
     iget v0, p0, Lcom/tencent/mm/ui/AddressView;->density:F
 
@@ -604,17 +606,17 @@
     .locals 2
 
     .prologue
-    .line 221
+    .line 223
     instance-of v0, p1, Landroid/text/Spanned;
 
     if-eqz v0, :cond_0
 
-    .line 222
+    .line 224
     invoke-static {p1, p2}, Landroid/text/Layout;->getDesiredWidth(Ljava/lang/CharSequence;Landroid/text/TextPaint;)F
 
     move-result v0
 
-    .line 224
+    .line 226
     :goto_0
     return v0
 
@@ -636,7 +638,7 @@
     .locals 1
 
     .prologue
-    .line 314
+    .line 316
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->avatarDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -646,7 +648,7 @@
     .locals 1
 
     .prologue
-    .line 204
+    .line 206
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickName:Ljava/lang/CharSequence;
 
     return-object v0
@@ -656,7 +658,7 @@
     .locals 1
 
     .prologue
-    .line 200
+    .line 202
     iget v0, p0, Lcom/tencent/mm/ui/AddressView;->NAME_TEXT_SIZE:F
 
     return v0
@@ -666,7 +668,7 @@
     .locals 2
 
     .prologue
-    .line 280
+    .line 282
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getMeasuredWidth()I
 
     move-result v0
@@ -686,10 +688,10 @@
     .locals 0
 
     .prologue
-    .line 344
+    .line 346
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->invalidate()V
 
-    .line 345
+    .line 347
     return-void
 .end method
 
@@ -701,43 +703,43 @@
 
     const/4 v2, 0x0
 
-    .line 123
+    .line 125
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 124
+    .line 126
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->updatePosition()V
 
-    .line 125
+    .line 127
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->avatarDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 126
+    .line 128
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->avatarDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 128
+    .line 130
     :cond_0
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->needMask:Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v0, :cond_1
 
-    .line 129
+    .line 131
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->needMask:Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/BitmapDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 131
+    .line 133
     :cond_1
     iget-boolean v0, p0, Lcom/tencent/mm/ui/AddressView;->nameIsSpanned:Z
 
     if-eqz v0, :cond_3
 
-    .line 132
+    .line 134
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 133
+    .line 135
     iget v0, p0, Lcom/tencent/mm/ui/AddressView;->AVATAR_LAYOUT_WIDTH:I
 
     iget v1, p0, Lcom/tencent/mm/ui/AddressView;->AVATAR_PADDING:I
@@ -760,35 +762,35 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 134
+    .line 136
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickNamelayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 135
+    .line 137
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 169
+    .line 171
     :cond_2
     :goto_0
     return-void
 
-    .line 138
+    .line 140
     :cond_3
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->description:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_6
 
-    .line 139
+    .line 141
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->destNickName:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_2
 
-    .line 140
+    .line 142
     iget-object v1, p0, Lcom/tencent/mm/ui/AddressView;->destNickName:Ljava/lang/CharSequence;
 
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->destNickName:Ljava/lang/CharSequence;
@@ -847,12 +849,12 @@
 
     invoke-virtual/range {v0 .. v6}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
 
-    .line 141
+    .line 143
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getWidth()I
 
     move-result v4
 
-    .line 142
+    .line 144
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->descriptionPaint:Landroid/text/TextPaint;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/AddressView;->description:Ljava/lang/String;
@@ -861,10 +863,10 @@
 
     move-result v0
 
-    .line 143
+    .line 145
     iget-object v1, p0, Lcom/tencent/mm/ui/AddressView;->description:Ljava/lang/String;
 
-    .line 144
+    .line 146
     iget v3, p0, Lcom/tencent/mm/ui/AddressView;->DESCRIPTION_PADDING:I
 
     sub-int v3, v4, v3
@@ -875,7 +877,7 @@
 
     if-lez v0, :cond_5
 
-    .line 145
+    .line 147
     const/4 v0, 0x1
 
     :goto_1
@@ -887,21 +889,21 @@
 
     if-ge v0, v3, :cond_5
 
-    .line 146
+    .line 148
     iget-object v3, p0, Lcom/tencent/mm/ui/AddressView;->description:Ljava/lang/String;
 
     invoke-virtual {v3, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 147
+    .line 149
     iget-object v5, p0, Lcom/tencent/mm/ui/AddressView;->descriptionPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v5, v3}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
 
     move-result v5
 
-    .line 148
+    .line 150
     iget v6, p0, Lcom/tencent/mm/ui/AddressView;->DESCRIPTION_PADDING:I
 
     sub-int v6, v4, v6
@@ -912,14 +914,14 @@
 
     if-gez v5, :cond_4
 
-    .line 145
+    .line 147
     add-int/lit8 v0, v0, 0x1
 
     move-object v1, v3
 
     goto :goto_1
 
-    .line 152
+    .line 154
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -939,7 +941,7 @@
 
     move-result-object v1
 
-    .line 157
+    .line 159
     :cond_5
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -1003,13 +1005,13 @@
 
     goto/16 :goto_0
 
-    .line 161
+    .line 163
     :cond_6
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->destNickName:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_2
 
-    .line 162
+    .line 164
     iget-object v1, p0, Lcom/tencent/mm/ui/AddressView;->destNickName:Ljava/lang/CharSequence;
 
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->destNickName:Ljava/lang/CharSequence;
@@ -1068,20 +1070,20 @@
     .end annotation
 
     .prologue
-    .line 444
+    .line 450
     invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 445
+    .line 451
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getContentDescription()Ljava/lang/CharSequence;
 
     move-result-object v1
 
     move-object v0, v1
 
-    .line 447
+    .line 453
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1089,11 +1091,11 @@
 
     iget-object v1, p0, Lcom/tencent/mm/ui/AddressView;->nickName:Ljava/lang/CharSequence;
 
-    .line 448
+    .line 454
     :cond_0
     invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    .line 449
+    .line 455
     return-void
 .end method
 
@@ -1104,20 +1106,20 @@
     .end annotation
 
     .prologue
-    .line 398
+    .line 404
     invoke-super {p0, p1}, Landroid/view/View;->onPopulateAccessibilityEvent(Landroid/view/accessibility/AccessibilityEvent;)V
 
-    .line 399
+    .line 405
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getContentDescription()Ljava/lang/CharSequence;
 
     move-result-object v1
 
     move-object v0, v1
 
-    .line 401
+    .line 407
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1125,7 +1127,7 @@
 
     iget-object v1, p0, Lcom/tencent/mm/ui/AddressView;->nickName:Ljava/lang/CharSequence;
 
-    .line 402
+    .line 408
     :cond_0
     invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityEvent;->getText()Ljava/util/List;
 
@@ -1133,7 +1135,7 @@
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 403
+    .line 409
     return-void
 .end method
 
@@ -1141,17 +1143,17 @@
     .locals 0
 
     .prologue
-    .line 335
+    .line 337
     if-eqz p1, :cond_0
 
-    .line 336
+    .line 338
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->stopAvatarLoad()V
 
-    .line 340
+    .line 342
     :goto_0
     return-void
 
-    .line 338
+    .line 340
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->resumeAvatarLoad()V
 
@@ -1162,20 +1164,20 @@
     .locals 1
 
     .prologue
-    .line 318
+    .line 320
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->avatarDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 319
+    .line 321
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->avatarDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/ui/a;
 
-    .line 320
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/a;->aAf()V
-
     .line 322
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/a;->aQU()V
+
+    .line 324
     :cond_0
     return-void
 .end method
@@ -1184,22 +1186,22 @@
     .locals 1
 
     .prologue
-    .line 192
+    .line 194
     iput-object p1, p0, Lcom/tencent/mm/ui/AddressView;->description:Ljava/lang/String;
 
-    .line 193
+    .line 195
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->descriptionPaint:Landroid/text/TextPaint;
 
     if-nez v0, :cond_0
 
-    .line 194
+    .line 196
     invoke-direct {p0}, Lcom/tencent/mm/ui/AddressView;->generateDescriptionPaint()Landroid/text/TextPaint;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/tencent/mm/ui/AddressView;->descriptionPaint:Landroid/text/TextPaint;
 
-    .line 195
+    .line 197
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->descriptionPaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
@@ -1208,7 +1210,7 @@
 
     iput-object v0, p0, Lcom/tencent/mm/ui/AddressView;->descriptionFontMetrics:Landroid/graphics/Paint$FontMetrics;
 
-    .line 197
+    .line 199
     :cond_0
     return-void
 .end method
@@ -1217,18 +1219,18 @@
     .locals 1
 
     .prologue
-    .line 307
+    .line 309
     iput-object p1, p0, Lcom/tencent/mm/ui/AddressView;->avatarDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 308
+    .line 310
     if-eqz p1, :cond_0
 
-    .line 309
+    .line 311
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->avatarDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 310
+    .line 312
     :cond_0
     return-void
 .end method
@@ -1237,7 +1239,7 @@
     .locals 2
 
     .prologue
-    .line 302
+    .line 304
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getResources()Landroid/content/res/Resources;
@@ -1248,7 +1250,7 @@
 
     iput-object v0, p0, Lcom/tencent/mm/ui/AddressView;->needMask:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 303
+    .line 305
     return-void
 .end method
 
@@ -1256,7 +1258,7 @@
     .locals 1
 
     .prologue
-    .line 172
+    .line 174
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickName:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_0
@@ -1269,40 +1271,40 @@
 
     if-nez v0, :cond_1
 
-    .line 173
+    .line 175
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/tencent/mm/ui/AddressView;->needInvaildate:Z
 
-    .line 175
+    .line 177
     :cond_1
     iput-object p1, p0, Lcom/tencent/mm/ui/AddressView;->nickName:Ljava/lang/CharSequence;
 
-    .line 177
+    .line 179
     instance-of v0, p1, Landroid/text/Spanned;
 
     iput-boolean v0, p0, Lcom/tencent/mm/ui/AddressView;->nameIsSpanned:Z
 
-    .line 178
+    .line 180
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->displayNamePaint:Landroid/text/TextPaint;
 
     if-nez v0, :cond_2
 
-    .line 179
+    .line 181
     invoke-direct {p0}, Lcom/tencent/mm/ui/AddressView;->generateOnePaint()Landroid/text/TextPaint;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/tencent/mm/ui/AddressView;->displayNamePaint:Landroid/text/TextPaint;
 
-    .line 181
+    .line 183
     :cond_2
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->fm:Landroid/graphics/Paint$FontMetrics;
 
     if-nez v0, :cond_3
 
-    .line 182
+    .line 184
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->displayNamePaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getFontMetrics()Landroid/graphics/Paint$FontMetrics;
@@ -1311,7 +1313,7 @@
 
     iput-object v0, p0, Lcom/tencent/mm/ui/AddressView;->fm:Landroid/graphics/Paint$FontMetrics;
 
-    .line 184
+    .line 186
     :cond_3
     return-void
 .end method
@@ -1320,10 +1322,10 @@
     .locals 0
 
     .prologue
-    .line 100
+    .line 102
     iput-object p1, p0, Lcom/tencent/mm/ui/AddressView;->nickNameTextColor:Landroid/content/res/ColorStateList;
 
-    .line 101
+    .line 103
     return-void
 .end method
 
@@ -1331,20 +1333,20 @@
     .locals 1
 
     .prologue
-    .line 325
+    .line 327
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->avatarDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 326
+    .line 328
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->avatarDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v0, Lcom/tencent/mm/pluginsdk/ui/a;
 
-    .line 327
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/a;->aAe()V
-
     .line 329
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/a;->aQT()V
+
+    .line 331
     :cond_0
     return-void
 .end method
@@ -1353,10 +1355,10 @@
     .locals 0
 
     .prologue
-    .line 273
+    .line 275
     invoke-direct {p0}, Lcom/tencent/mm/ui/AddressView;->updateDrawableBounds()V
 
-    .line 274
+    .line 276
     return-void
 .end method
 
@@ -1364,16 +1366,16 @@
     .locals 8
 
     .prologue
-    .line 239
+    .line 241
     iget-boolean v0, p0, Lcom/tencent/mm/ui/AddressView;->needUpdatePostion:Z
 
     if-nez v0, :cond_0
 
-    .line 263
+    .line 265
     :goto_0
     return-void
 
-    .line 247
+    .line 249
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getTextAreaWidth()I
 
@@ -1393,7 +1395,7 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->nickNameWidth:I
 
-    .line 248
+    .line 250
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickName:Ljava/lang/CharSequence;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/AddressView;->displayNamePaint:Landroid/text/TextPaint;
@@ -1408,7 +1410,7 @@
 
     if-le v0, v1, :cond_1
 
-    .line 249
+    .line 251
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickName:Ljava/lang/CharSequence;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/AddressView;->displayNamePaint:Landroid/text/TextPaint;
@@ -1425,7 +1427,7 @@
 
     iput-object v0, p0, Lcom/tencent/mm/ui/AddressView;->destNickName:Ljava/lang/CharSequence;
 
-    .line 254
+    .line 256
     :goto_1
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickName:Ljava/lang/CharSequence;
 
@@ -1433,7 +1435,7 @@
 
     if-eqz v0, :cond_2
 
-    .line 255
+    .line 257
     new-instance v0, Landroid/text/StaticLayout;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/AddressView;->destNickName:Ljava/lang/CharSequence;
@@ -1456,7 +1458,7 @@
 
     iput-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickNamelayout:Landroid/text/StaticLayout;
 
-    .line 256
+    .line 258
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickNamelayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0}, Landroid/text/StaticLayout;->getHeight()I
@@ -1465,24 +1467,24 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->nickNameHeight:I
 
-    .line 261
+    .line 263
     :goto_2
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->updateDrawBounds()V
 
-    .line 262
+    .line 264
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/tencent/mm/ui/AddressView;->needUpdatePostion:Z
 
     goto :goto_0
 
-    .line 251
+    .line 253
     :cond_1
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickName:Ljava/lang/CharSequence;
 
     iput-object v0, p0, Lcom/tencent/mm/ui/AddressView;->destNickName:Ljava/lang/CharSequence;
 
-    .line 252
+    .line 254
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->destNickName:Ljava/lang/CharSequence;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/AddressView;->displayNamePaint:Landroid/text/TextPaint;
@@ -1497,13 +1499,13 @@
 
     goto :goto_1
 
-    .line 258
+    .line 260
     :cond_2
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickNamelayout:Landroid/text/StaticLayout;
 
-    .line 259
+    .line 261
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->fm:Landroid/graphics/Paint$FontMetrics;
 
     iget v0, v0, Landroid/graphics/Paint$FontMetrics;->descent:F
@@ -1533,25 +1535,25 @@
     .locals 1
 
     .prologue
-    .line 231
+    .line 233
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lcom/tencent/mm/ui/AddressView;->needUpdatePostion:Z
 
-    .line 232
+    .line 234
     iget-boolean v0, p0, Lcom/tencent/mm/ui/AddressView;->needInvaildate:Z
 
     if-eqz v0, :cond_0
 
-    .line 233
+    .line 235
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->invalidate()V
 
-    .line 234
+    .line 236
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lcom/tencent/mm/ui/AddressView;->needInvaildate:Z
 
-    .line 236
+    .line 238
     :cond_0
     return-void
 .end method
@@ -1560,7 +1562,12 @@
     .locals 3
 
     .prologue
-    .line 359
+    .line 361
+    iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickNameTextColor:Landroid/content/res/ColorStateList;
+
+    if-eqz v0, :cond_2
+
+    .line 362
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->nickNameTextColor:Landroid/content/res/ColorStateList;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/AddressView;->getDrawableState()[I
@@ -1573,27 +1580,27 @@
 
     move-result v0
 
-    .line 360
+    .line 363
     iget v1, p0, Lcom/tencent/mm/ui/AddressView;->nickNameCurrentTextColor:I
 
     if-eq v0, v1, :cond_1
 
-    .line 361
+    .line 364
     iput v0, p0, Lcom/tencent/mm/ui/AddressView;->nickNameCurrentTextColor:I
 
-    .line 362
+    .line 365
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->displayNamePaint:Landroid/text/TextPaint;
 
     if-nez v0, :cond_0
 
-    .line 363
+    .line 366
     invoke-direct {p0}, Lcom/tencent/mm/ui/AddressView;->generateOnePaint()Landroid/text/TextPaint;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/tencent/mm/ui/AddressView;->displayNamePaint:Landroid/text/TextPaint;
 
-    .line 365
+    .line 368
     :cond_0
     iget-object v0, p0, Lcom/tencent/mm/ui/AddressView;->displayNamePaint:Landroid/text/TextPaint;
 
@@ -1601,7 +1608,18 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 367
+    .line 373
     :cond_1
+    :goto_0
     return-void
+
+    .line 371
+    :cond_2
+    const-string/jumbo v0, "!32@/B4Tb64lLpJvPADYHZ60V7qR4Q4a20iF"
+
+    const-string/jumbo v1, "nickNameTextColor should not be null"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method

@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.View.MeasureSpec;
 import android.widget.FrameLayout;
 
-final class HeaderGridView$b
+public final class HeaderGridView$b
   extends FrameLayout
 {
   public HeaderGridView$b(HeaderGridView paramHeaderGridView, Context paramContext)
@@ -14,7 +14,7 @@ final class HeaderGridView$b
   
   protected final void onMeasure(int paramInt1, int paramInt2)
   {
-    super.onMeasure(View.MeasureSpec.makeMeasureSpec(iCY.getMeasuredWidth() - iCY.getPaddingLeft() - iCY.getPaddingRight(), 1073741824), paramInt2);
+    super.onMeasure(View.MeasureSpec.makeMeasureSpec(kCb.getMeasuredWidth() - kCb.getPaddingLeft() - kCb.getPaddingRight(), 1073741824), paramInt2);
   }
 }
 

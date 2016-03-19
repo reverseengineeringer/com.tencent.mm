@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <item type="layout" name="bv">r/f/bv.xml</item>
-    <item type="layout" name="dy">r/f/dy.xml</item>
-    <item type="layout" name="q1">r/f/q1.xml</item>
-    <item type="layout" name="vj">r/f/vj.xml</item>
-    <item type="layout" name="a93">r/f/a93.xml</item>
-    <item type="layout" name="a94">r/f/a94.xml</item>
-</resources>

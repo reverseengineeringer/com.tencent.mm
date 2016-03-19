@@ -1,36 +1,58 @@
 package com.tencent.mm.booter.notification.a;
 
-import android.media.MediaPlayer;
-import android.os.Looper;
-import android.os.Message;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.Context;
 
-final class g
-  extends ac
+public final class g
 {
-  g(f paramf, Looper paramLooper)
+  public int boA;
+  public int boB;
+  public int boC;
+  public boolean boD;
+  private int boE = -1;
+  private int boF = -1;
+  public boolean boG;
+  public boolean boH;
+  public b bot;
+  public c bou;
+  public d bov;
+  public h bow;
+  public f box;
+  public a boy;
+  public int boz;
+  public Context mContext;
+  
+  public g(Context paramContext)
   {
-    super(paramLooper);
+    mContext = paramContext;
+    bot = new b();
+    bou = new c();
+    bov = new d();
+    bow = new h();
+    boy = new a();
+    box = f.a.nG();
   }
   
-  public final void handleMessage(Message paramMessage)
+  public static String a(long[] paramArrayOfLong)
   {
-    t.i("!56@/B4Tb64lLpKR3MWtFvfaIMJb62Pm/jgsLT1nr0NtEmCplLo3H1kkFg==", "play sound handler, try to stop notify mediaplayer");
-    try
+    if (paramArrayOfLong == null) {
+      paramArrayOfLong = null;
+    }
+    String str;
+    do
     {
-      if ((bei.bef) && (bei.beg != null) && (bei.beg.isPlaying()))
+      return paramArrayOfLong;
+      str = "";
+      int j = paramArrayOfLong.length;
+      int i = 0;
+      while (i < j)
       {
-        bei.beg.stop();
-        bei.beg.release();
-        bei.bef = false;
+        long l = paramArrayOfLong[i];
+        str = str + String.valueOf(l) + ",";
+        i += 1;
       }
-      return;
-    }
-    catch (IllegalStateException paramMessage)
-    {
-      t.w("!56@/B4Tb64lLpKR3MWtFvfaIMJb62Pm/jgsLT1nr0NtEmCplLo3H1kkFg==", "Exception in playSoundHander %s", new Object[] { paramMessage.getMessage() });
-    }
+      paramArrayOfLong = str;
+    } while (str.isEmpty());
+    return str.substring(0, str.length() - 1);
   }
 }
 

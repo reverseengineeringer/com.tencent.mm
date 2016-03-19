@@ -6,11 +6,11 @@
 # instance fields
 .field private context:Landroid/content/Context;
 
-.field private dGU:Ljava/lang/String;
+.field private eut:Ljava/lang/String;
 
-.field private ga:I
+.field private fh:I
 
-.field private rR:Landroid/widget/TextView;
+.field private qU:Landroid/widget/TextView;
 
 
 # direct methods
@@ -25,7 +25,7 @@
     iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->context:Landroid/content/Context;
 
     .line 25
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_info:I
+    const v0, 0x7f0a05af
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/TextPreference;->setLayoutResource(I)V
 
@@ -51,22 +51,22 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->rR:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->qU:Landroid/widget/TextView;
 
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->rR:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->qU:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->rR:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->qU:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->dGU:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->eut:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->rR:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->qU:Landroid/widget/TextView;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->ga:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/TextPreference;->fh:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 

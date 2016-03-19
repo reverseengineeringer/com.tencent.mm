@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field ani:Ljava/lang/String;
+.field akU:Ljava/lang/String;
 
-.field public anj:Ljava/lang/String;
+.field public akV:Ljava/lang/String;
 
-.field public ank:Ljava/lang/String;
+.field public akW:Ljava/lang/String;
 
 .field public size:I
 
@@ -35,13 +35,13 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 130
-    iput-object p1, p0, Lcom/tencent/mm/b/f$a;->ani:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/b/f$a;->akU:Ljava/lang/String;
 
     .line 131
-    iput-object p2, p0, Lcom/tencent/mm/b/f$a;->anj:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/b/f$a;->akV:Ljava/lang/String;
 
     .line 132
-    iput-object p3, p0, Lcom/tencent/mm/b/f$a;->ank:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/b/f$a;->akW:Ljava/lang/String;
 
     .line 133
     iput p5, p0, Lcom/tencent/mm/b/f$a;->size:I

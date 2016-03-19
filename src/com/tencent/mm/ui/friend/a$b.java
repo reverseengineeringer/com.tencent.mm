@@ -2,7 +2,7 @@ package com.tencent.mm.ui.friend;
 
 public final class a$b
 {
-  public int elX;
+  public int fvF;
   public int position;
   public String username;
 }

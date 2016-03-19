@@ -15,7 +15,9 @@
 
 
 # instance fields
-.field public username:Ljava/lang/String;
+.field public asJ:Ljava/lang/String;
+
+.field public type:I
 
 
 # direct methods
@@ -23,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 14
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

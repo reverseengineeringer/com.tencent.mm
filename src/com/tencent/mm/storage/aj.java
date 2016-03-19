@@ -1,34 +1,47 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.ar.f;
-import com.tencent.mm.ar.f.a;
-import com.tencent.mm.sdk.g.af;
-import com.tencent.mm.sdk.g.ah;
+import android.database.Cursor;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.sdk.h.f;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class aj
-  extends ah
-  implements f.a
+  extends f
 {
-  public static final String[] aqU = { ah.a(ai.aqp, "EmotionDetail") };
-  public af aqT;
+  public static final String[] aoY = { f.a(ai.aot, "OpenMsgListener") };
+  public d aoX;
   
-  public aj(af paramaf)
+  public aj(d paramd)
   {
-    super(paramaf, ai.aqp, "EmotionDetail", null);
-    aqT = paramaf;
+    super(paramd, ai.aot, "OpenMsgListener", null);
+    aoX = paramd;
+    paramd.cj("OpenMsgListener", "CREATE INDEX IF NOT EXISTS openMsgListenerAppIdIndex ON OpenMsgListener ( appId )");
+    paramd.cj("OpenMsgListener", "CREATE INDEX IF NOT EXISTS openMsgListenerStatusIndex ON OpenMsgListener ( status )");
   }
   
-  public final int a(f paramf)
+  public final ai Fx(String paramString)
   {
-    if (paramf != null) {
-      aqT = paramf;
+    if ((paramString == null) || (paramString.length() <= 0)) {
+      return null;
     }
-    return 0;
+    Cursor localCursor = aoX.query("OpenMsgListener", null, "appId=?", new String[] { ay.kx(paramString) }, null, null, null);
+    if (localCursor.getCount() <= 0)
+    {
+      u.w("!44@/B4Tb64lLpJoDeDeiSCUn5MyWQBlOslHPXVmp0VF0zU=", "get null with appId:" + paramString);
+      localCursor.close();
+      return null;
+    }
+    localCursor.moveToFirst();
+    paramString = new ai();
+    paramString.c(localCursor);
+    localCursor.close();
+    return paramString;
   }
   
-  public final String getTableName()
+  public final Cursor aXT()
   {
-    return "EmotionDetail";
+    return rawQuery("select * from OpenMsgListener where (status = ?) ", new String[] { "1" });
   }
 }
 

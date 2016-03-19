@@ -1,23 +1,23 @@
 package com.tencent.smtt.sdk;
 
-final class c
-  implements y
+import android.webkit.MimeTypeMap;
+
+public final class c
 {
-  public final void mn(int paramInt)
-  {
-    o.jKC = false;
-    if (QbSdk.aUd() != null) {
-      QbSdk.aUd().mn(paramInt);
-    }
-  }
+  private static c lRe;
+  public MimeTypeMap lRf = MimeTypeMap.getSingleton();
   
-  public final void mo(int paramInt)
+  public static c bli()
   {
-    QbSdk.setTBSInstallingStatus(false);
-    o.jKC = false;
-    if (QbSdk.aUd() != null) {
-      QbSdk.aUd().mo(paramInt);
+    try
+    {
+      if (lRe == null) {
+        lRe = new c();
+      }
+      c localc = lRe;
+      return localc;
     }
+    finally {}
   }
 }
 

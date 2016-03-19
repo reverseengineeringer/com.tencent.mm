@@ -6,16 +6,16 @@ import java.util.Map;
 public final class c
   extends f
 {
-  public Map jPy = new HashMap();
+  public Map mdK = new HashMap();
   
   public c(j paramj, String paramString)
   {
     super(paramj, paramString);
   }
   
-  public final void bX(String paramString1, String paramString2)
+  public final void cR(String paramString1, String paramString2)
   {
-    Map localMap = jPy;
+    Map localMap = mdK;
     if ((paramString1.startsWith("oauth_")) || (paramString1.equals("scope")))
     {
       localMap.put(paramString1, paramString2);
@@ -26,7 +26,7 @@ public final class c
   
   public final String toString()
   {
-    return String.format("@OAuthRequest(%s, %s)", new Object[] { super.aVR(), super.getUrl() });
+    return String.format("@OAuthRequest(%s, %s)", new Object[] { super.boG(), super.getUrl() });
   }
 }
 

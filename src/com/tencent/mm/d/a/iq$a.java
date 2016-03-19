@@ -2,8 +2,14 @@ package com.tencent.mm.d.a;
 
 public final class iq$a
 {
-  public boolean aFP = false;
-  public boolean aFQ = false;
+  public boolean aEC;
+  public int aED;
+  public String aEE;
+  public boolean aEF;
+  public String aEy;
+  public int asc;
+  public int offset;
+  public int type;
 }
 
 /* Location:

@@ -1,12 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-
 public final class fn$a
 {
-  public String aCh;
-  public int avp = 0;
-  public Context context;
+  public String aAq;
 }
 
 /* Location:

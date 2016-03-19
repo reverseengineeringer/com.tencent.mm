@@ -1,10 +1,14 @@
 package com.tencent.mm.protocal;
 
-import android.os.Parcelable.Creator;
+import junit.framework.Assert;
 
-final class d
-  implements Parcelable.Creator
-{}
+public class d
+{
+  static
+  {
+    Assert.assertTrue("giveup rtType now ! Use the funcid !", true);
+  }
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.protocal.d

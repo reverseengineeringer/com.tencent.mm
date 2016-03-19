@@ -1,551 +1,382 @@
-.class final Lcom/tencent/mm/pluginsdk/ui/applet/j;
+.class public final Lcom/tencent/mm/pluginsdk/ui/applet/j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d;
+.implements Lcom/tencent/mm/r/d;
 
 
 # instance fields
-.field final synthetic gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+.field context:Landroid/content/Context;
+
+.field eaF:Lcom/tencent/mm/ui/base/p;
+
+.field private fzg:Lcom/tencent/mm/sdk/platformtools/af;
+
+.field gcq:Lcom/tencent/mm/modelsimple/m;
+
+.field private iJr:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/pluginsdk/ui/applet/f;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 3
 
     .prologue
-    .line 205
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
+    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 35
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
+
+    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/applet/j$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/j;)V
+
+    const/4 v2, 0x0
+
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
+
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->fzg:Lcom/tencent/mm/sdk/platformtools/af;
+
+    .line 53
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->context:Landroid/content/Context;
+
+    .line 54
+    return-void
+.end method
+
+.method private AH(Ljava/lang/String;)V
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x1
+
+    .line 81
+    new-instance v0, Landroid/content/Intent;
+
+    invoke-direct {v0}, Landroid/content/Intent;-><init>()V
+
+    .line 82
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->context:Landroid/content/Context;
+
+    const v2, 0x7f0b04a9
+
+    new-array v3, v5, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    aput-object p1, v3, v4
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getString(I[Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 83
+    const-string/jumbo v2, "rawUrl"
+
+    invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 84
+    const-string/jumbo v1, "useJs"
+
+    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 85
+    const-string/jumbo v1, "vertical_scroll"
+
+    invoke-virtual {v0, v1, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 86
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->context:Landroid/content/Context;
+
+    const-string/jumbo v2, "webview"
+
+    const-string/jumbo v3, ".ui.tools.ContactQZoneWebView"
+
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+
+    .line 87
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
-    .locals 8
+.method public final AG(Ljava/lang/String;)V
+    .locals 6
 
     .prologue
-    const/4 v5, 0x2
+    const/4 v3, 0x0
 
-    const/4 v7, 0x1
+    .line 57
+    if-eqz p1, :cond_0
 
-    const/4 v6, 0x0
-
-    const/4 v4, -0x1
-
-    .line 209
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->cHR:Landroid/app/ProgressDialog;
-
-    if-eqz v0, :cond_0
-
-    .line 210
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->cHR:Landroid/app/ProgressDialog;
-
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
-
-    .line 212
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->gSb:Lcom/tencent/mm/q/d;
-
-    if-eqz v0, :cond_1
-
-    .line 213
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
-
-    move-result-object v0
-
-    const/16 v1, 0x6a
-
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/f;->gSb:Lcom/tencent/mm/q/d;
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
-
-    .line 216
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->cHR:Landroid/app/ProgressDialog;
-
-    if-nez v0, :cond_2
-
-    .line 217
-    const-string/jumbo v0, "!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw="
-
-    const-string/jumbo v1, "has cancel the loading dialog"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 218
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/pluginsdk/ui/applet/f;->cc(I)V
-
-    .line 279
-    :goto_0
-    return-void
-
-    .line 222
-    :cond_2
-    if-nez p1, :cond_3
-
-    if-eqz p2, :cond_4
-
-    .line 223
-    :cond_3
-    const-string/jumbo v0, "!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw="
-
-    const-string/jumbo v1, "searchContact onSceneEnd, errType = %d, errCode = %d"
-
-    new-array v2, v5, [Ljava/lang/Object;
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v6
-
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v7
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 224
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/pluginsdk/ui/applet/f;->cc(I)V
-
-    goto :goto_0
-
-    .line 227
-    :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->mContext:Landroid/content/Context;
-
-    if-nez v0, :cond_5
-
-    .line 228
-    const-string/jumbo v0, "!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw="
-
-    const-string/jumbo v1, "searchContact, context is null, msghandler has already been detached!"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 229
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/pluginsdk/ui/applet/f;->cc(I)V
-
-    goto :goto_0
-
-    .line 233
-    :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->mContext:Landroid/content/Context;
-
-    instance-of v0, v0, Landroid/app/Activity;
-
-    if-eqz v0, :cond_6
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->mContext:Landroid/content/Context;
-
-    check-cast v0, Landroid/app/Activity;
-
-    invoke-virtual {v0}, Landroid/app/Activity;->isFinishing()Z
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v0
 
-    if-eqz v0, :cond_6
+    if-nez v0, :cond_1
 
-    .line 234
-    const-string/jumbo v0, "!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw="
+    .line 58
+    :cond_0
+    const-string/jumbo v0, "!32@/B4Tb64lLpLndYJUrncSP96j13QaNgBN"
 
-    const-string/jumbo v1, "searchContact, context isFinishing"
+    const-string/jumbo v1, "go fail, qqNum is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 235
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    .line 78
+    :goto_0
+    return-void
 
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/pluginsdk/ui/applet/f;->cc(I)V
+    .line 62
+    :cond_1
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->iJr:Ljava/lang/String;
 
-    goto :goto_0
-
-    .line 239
-    :cond_6
-    check-cast p4, Lcom/tencent/mm/modelsimple/af;
-
-    invoke-virtual {p4}, Lcom/tencent/mm/modelsimple/af;->AY()Lcom/tencent/mm/protocal/b/aed;
+    .line 64
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    .line 240
-    iget-object v1, v0, Lcom/tencent/mm/protocal/b/aed;->hrM:Lcom/tencent/mm/protocal/b/adu;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
+    move-result-object v0
 
-    move-result-object v1
+    const/16 v1, 0x2e
 
-    .line 242
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
-    move-result v2
+    move-result-object v0
 
-    if-eqz v2, :cond_7
+    check-cast v0, Ljava/lang/String;
 
-    .line 243
-    const-string/jumbo v0, "!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw="
-
-    const-string/jumbo v1, "searchContact, user is null"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 244
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/applet/f;->mContext:Landroid/content/Context;
-
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+    .line 65
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$n;->wv_follow_is_not_biz:I
-
-    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/h;->aN(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    const/16 v2, 0x48
 
-    .line 245
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/pluginsdk/ui/applet/f;->cc(I)V
+    move-result-object v1
 
-    goto/16 :goto_0
+    check-cast v1, Ljava/lang/String;
 
-    .line 248
-    :cond_7
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/f;->cvo:Ljava/lang/String;
+    move-result-object v1
 
-    if-eqz v2, :cond_8
+    .line 66
+    const-string/jumbo v2, "!32@/B4Tb64lLpLndYJUrncSP96j13QaNgBN"
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    const-string/jumbo v3, "get a2key:[%s], get new a2key:[%s]"
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/f;->cvo:Ljava/lang/String;
+    const/4 v4, 0x2
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    new-array v4, v4, [Ljava/lang/Object;
 
-    move-result v2
+    const/4 v5, 0x0
 
-    if-nez v2, :cond_9
+    aput-object v0, v4, v5
 
-    .line 249
-    :cond_8
-    const-string/jumbo v2, "!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw="
+    const/4 v5, 0x1
 
-    const-string/jumbo v3, "user not the same, %s, %s"
+    aput-object v1, v4, v5
 
-    new-array v4, v5, [Ljava/lang/Object;
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    .line 68
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
-    iget-object v5, v5, Lcom/tencent/mm/pluginsdk/ui/applet/f;->cvo:Ljava/lang/String;
+    move-result v0
 
-    aput-object v5, v4, v6
+    if-eqz v0, :cond_2
 
-    aput-object v1, v4, v7
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result v0
 
-    .line 254
-    :cond_9
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    .line 69
+    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/applet/j;->AH(Ljava/lang/String;)V
 
-    move-result-object v3
+    goto :goto_0
 
-    invoke-virtual {v3}, Lcom/tencent/mm/model/b;->ri()Lcom/tencent/mm/storage/q;
+    .line 72
+    :cond_2
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
-    move-result-object v3
+    move-result-object v0
 
-    invoke-virtual {v3, v1}, Lcom/tencent/mm/storage/q;->yM(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    const/16 v1, 0xe9
 
-    move-result-object v3
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
-    iput-object v3, v2, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
+    .line 74
+    new-instance v0, Lcom/tencent/mm/modelsimple/m;
 
-    .line 255
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    invoke-static {p1}, Lcom/tencent/mm/a/o;->aF(Ljava/lang/String;)I
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
+    move-result v1
 
-    if-eqz v2, :cond_a
+    invoke-direct {v0, v1}, Lcom/tencent/mm/modelsimple/m;-><init>(I)V
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gcq:Lcom/tencent/mm/modelsimple/m;
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
+    .line 75
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
-    iget-wide v2, v2, Lcom/tencent/mm/h/a;->bkE:J
+    move-result-object v0
 
-    long-to-int v2, v2
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gcq:Lcom/tencent/mm/modelsimple/m;
 
-    if-nez v2, :cond_d
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
-    .line 256
-    :cond_a
-    const-string/jumbo v2, "!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw="
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->fzg:Lcom/tencent/mm/sdk/platformtools/af;
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-wide/16 v1, 0xbb8
 
-    const-string/jumbo v4, "searchContact, no contact with username = "
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    goto :goto_0
+.end method
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    .locals 4
 
-    move-result-object v3
+    .prologue
+    const/4 v3, 0x1
 
-    const-string/jumbo v4, ", try get by alias"
+    .line 92
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->fzg:Lcom/tencent/mm/sdk/platformtools/af;
 
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
 
-    move-result-object v3
+    .line 93
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->eaF:Lcom/tencent/mm/ui/base/p;
 
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    move-result-object v3
+    .line 94
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->eaF:Lcom/tencent/mm/ui/base/p;
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
 
-    .line 257
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    .line 97
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    move-result-object v0
 
-    move-result-object v3
+    const/16 v1, 0xe9
 
-    invoke-virtual {v3}, Lcom/tencent/mm/model/b;->ri()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
-    move-result-object v3
+    .line 99
+    if-nez p1, :cond_3
 
-    invoke-virtual {v3, v1}, Lcom/tencent/mm/storage/q;->yJ(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    if-nez p2, :cond_3
 
-    move-result-object v3
+    .line 100
+    check-cast p4, Lcom/tencent/mm/modelsimple/m;
 
-    iput-object v3, v2, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
+    .line 101
+    invoke-virtual {p4}, Lcom/tencent/mm/modelsimple/m;->Co()Ljava/lang/String;
 
-    .line 259
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    move-result-object v0
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
+    .line 102
+    if-eqz v0, :cond_1
 
-    if-eqz v2, :cond_b
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    move-result v1
 
-    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
+    if-nez v1, :cond_2
 
-    iget-wide v2, v2, Lcom/tencent/mm/h/a;->bkE:J
+    .line 103
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->iJr:Ljava/lang/String;
 
-    long-to-int v2, v2
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/j;->AH(Ljava/lang/String;)V
 
-    if-nez v2, :cond_c
+    .line 117
+    :goto_0
+    return-void
 
-    .line 260
-    :cond_b
-    const-string/jumbo v2, "!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw="
+    .line 106
+    :cond_2
+    new-instance v1, Landroid/content/Intent;
 
-    const-string/jumbo v3, "searchContact, no contact with alias, new Contact"
+    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    .line 107
+    const-string/jumbo v2, "rawUrl"
 
-    .line 261
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    new-instance v3, Lcom/tencent/mm/storage/k;
+    .line 108
+    const-string/jumbo v0, "useJs"
 
-    invoke-direct {v3, v1}, Lcom/tencent/mm/storage/k;-><init>(Ljava/lang/String;)V
+    invoke-virtual {v1, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    iput-object v3, v2, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
+    .line 109
+    const-string/jumbo v0, "vertical_scroll"
 
-    .line 262
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    invoke-virtual {v1, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
+    .line 110
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->context:Landroid/content/Context;
 
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aed;->byL:Ljava/lang/String;
+    const-string/jumbo v2, "webview"
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/k;->bD(Ljava/lang/String;)V
+    const-string/jumbo v3, ".ui.tools.ContactQZoneWebView"
 
-    .line 263
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    invoke-static {v0, v2, v3, v1}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
+    goto :goto_0
 
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aed;->hDc:Lcom/tencent/mm/protocal/b/adu;
+    .line 115
+    :cond_3
+    const-string/jumbo v0, "!32@/B4Tb64lLpLndYJUrncSP96j13QaNgBN"
 
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    const-string/jumbo v2, "getA8Key fail, errType = "
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/k;->bG(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 264
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
+    move-result-object v1
 
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aed;->hrE:Lcom/tencent/mm/protocal/b/adu;
+    const-string/jumbo v2, ", errCode = "
 
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v1
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/k;->bH(Ljava/lang/String;)V
+    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 265
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
+    move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aed;->hrF:Lcom/tencent/mm/protocal/b/adu;
+    move-result-object v1
 
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v2
+    .line 116
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->iJr:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/k;->bI(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/j;->AH(Ljava/lang/String;)V
 
-    .line 266
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
-
-    iget v2, v0, Lcom/tencent/mm/protocal/b/aed;->byI:I
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/k;->aW(I)V
-
-    .line 267
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
-
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aed;->byP:Ljava/lang/String;
-
-    iget-object v3, v0, Lcom/tencent/mm/protocal/b/aed;->akJ:Ljava/lang/String;
-
-    iget-object v4, v0, Lcom/tencent/mm/protocal/b/aed;->akK:Ljava/lang/String;
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/storage/RegionCodeDecoder;->C(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/k;->bV(Ljava/lang/String;)V
-
-    .line 268
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
-
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aed;->byJ:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/k;->bP(Ljava/lang/String;)V
-
-    .line 269
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
-
-    iget v2, v0, Lcom/tencent/mm/protocal/b/aed;->hDY:I
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/k;->aS(I)V
-
-    .line 270
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
-
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aed;->hDZ:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/k;->bU(Ljava/lang/String;)V
-
-    .line 271
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
-
-    iget v2, v0, Lcom/tencent/mm/protocal/b/aed;->hEc:I
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/k;->aR(I)V
-
-    .line 272
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
-
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/aed;->hEb:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/storage/k;->bJ(Ljava/lang/String;)V
-
-    .line 273
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
-
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/aed;->hEa:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/k;->bT(Ljava/lang/String;)V
-
-    .line 278
-    :cond_c
-    :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/j;->gSc:Lcom/tencent/mm/pluginsdk/ui/applet/f;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/applet/f;->emA:Lcom/tencent/mm/storage/k;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/f;->D(Lcom/tencent/mm/storage/k;)V
-
-    goto/16 :goto_0
-
-    .line 276
-    :cond_d
-    const-string/jumbo v0, "!44@/B4Tb64lLpKN6K/THdLZyfhssx5i4XqJeW6IFVaMNdw="
-
-    const-string/jumbo v2, "searchContact, contact in db, %s"
-
-    new-array v3, v7, [Ljava/lang/Object;
-
-    aput-object v1, v3, v6
-
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_1
+    goto :goto_0
 .end method

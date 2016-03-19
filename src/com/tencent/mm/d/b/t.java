@@ -2,110 +2,160 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class t
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aOJ = "productID".hashCode();
-  private static final int aON;
-  private static final int aOO;
-  private static final int aOP;
-  private static final int aOQ;
-  private static final int aOR;
-  private static final int aOS;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int aMQ;
+  private static final int aMk;
+  private static final int aOB;
   private static final int aOT;
-  private static final int aOV;
-  private static final int aPO;
-  private static final int aQg = "consumeProductID".hashCode();
-  private static final int aQh;
-  private static final int aQi;
-  private static final int aQj;
-  private static final int aQk;
-  private static final int aQl;
-  private static final int aQm;
-  private static final int aQn;
-  private static final int aQo;
-  private static final int aQp;
-  private static final int aQq;
-  private static final int aQr;
-  private static final int aQs;
-  private static final int aQt;
-  private boolean aOA = true;
-  private boolean aOC = true;
-  private boolean aOq = true;
-  private boolean aOu = true;
-  private boolean aOv = true;
-  private boolean aOw = true;
-  private boolean aOx = true;
-  private boolean aOy = true;
-  private boolean aOz = true;
-  private boolean aPJ = true;
-  private boolean aPS = true;
-  private boolean aPT = true;
-  private boolean aPU = true;
-  private boolean aPV = true;
-  private boolean aPW = true;
-  private boolean aPX = true;
-  private boolean aPY = true;
-  private boolean aPZ = true;
-  private boolean aQa = true;
-  private boolean aQb = true;
-  private boolean aQc = true;
-  private boolean aQd = true;
-  private boolean aQe = true;
-  private boolean aQf = true;
-  public String field_consumeProductID;
-  public String field_coverUrl;
-  public String field_iconUrl;
-  public String field_lang;
-  public String field_oldRedirectUrl;
-  public String field_packAuthInfo;
-  public String field_packCopyright;
-  public String field_packDesc;
-  public int field_packExpire;
-  public int field_packFlag;
-  public String field_packName;
-  public String field_packPrice;
-  public int field_packThumbCnt;
-  public byte[] field_packThumbList;
-  public int field_packType;
-  public String field_panelUrl;
-  public String field_priceNum;
-  public String field_priceType;
-  public String field_productID;
-  public String field_shareDesc;
-  public int field_thumbExtCount;
-  public byte[] field_thumbExtList;
-  public String field_timeLimitStr;
-  public int field_version;
+  private static final int aOX;
+  private static final int aOY;
+  private static final int aOZ;
+  private static final int aPa;
+  private static final int aPc;
+  private static final int aPd;
+  private static final int aPe = "msgCount".hashCode();
+  private static final int aQb = "username".hashCode();
+  private static final int aTA;
+  private static final int aTB;
+  private static final int aTC;
+  private static final int aTD;
+  private static final int aTE;
+  private static final int aTF;
+  private static final int aTG;
+  private static final int aTw;
+  private static final int aTx;
+  private static final int aTy;
+  private static final int aTz;
+  private boolean aLS = false;
+  private boolean aMC = false;
+  private boolean aOF = false;
+  private boolean aOJ = false;
+  private boolean aOK = false;
+  private boolean aOL = false;
+  private boolean aOM = false;
+  private boolean aOO = false;
+  private boolean aOP = false;
+  private boolean aOQ = false;
+  private boolean aOz = false;
+  private boolean aPL = false;
+  private boolean aTl = false;
+  private boolean aTm = false;
+  private boolean aTn = false;
+  public boolean aTo = false;
+  private boolean aTp = false;
+  private boolean aTq = false;
+  private boolean aTr = false;
+  public boolean aTs = false;
+  private boolean aTt = false;
+  private boolean aTu = false;
+  public boolean aTv = false;
+  public int field_UnDeliverCount;
+  public int field_atCount;
+  public int field_attrflag;
+  public int field_chatmode;
+  public String field_content;
+  public long field_conversationTime;
+  private String field_customNotify;
+  public String field_digest;
+  public String field_digestUser;
+  public String field_editingMsg;
+  public long field_flag;
+  private int field_hasTrunc;
+  public int field_isSend;
+  public long field_lastSeq;
+  public int field_msgCount;
+  public String field_msgType;
+  public String field_parentRef;
+  public int field_showTips;
+  public long field_sightTime;
+  public int field_status;
+  public int field_unReadCount;
+  public int field_unReadMuteCount;
+  public String field_username;
   
   static
   {
-    aON = "packName".hashCode();
-    aOO = "packDesc".hashCode();
-    aOP = "packAuthInfo".hashCode();
-    aOQ = "packPrice".hashCode();
-    aOR = "packType".hashCode();
-    aOS = "packFlag".hashCode();
-    aOT = "packExpire".hashCode();
-    aOV = "packCopyright".hashCode();
-    aQh = "priceNum".hashCode();
-    aQi = "priceType".hashCode();
-    aQj = "iconUrl".hashCode();
-    aQk = "coverUrl".hashCode();
-    aQl = "panelUrl".hashCode();
-    aQm = "timeLimitStr".hashCode();
-    aQn = "version".hashCode();
-    aQo = "packThumbCnt".hashCode();
-    aQp = "thumbExtCount".hashCode();
-    aQq = "packThumbList".hashCode();
-    aQr = "thumbExtList".hashCode();
-    aPO = "lang".hashCode();
-    aQs = "shareDesc".hashCode();
-    aQt = "oldRedirectUrl".hashCode();
+    aOT = "unReadCount".hashCode();
+    aTw = "chatmode".hashCode();
+    aMQ = "status".hashCode();
+    aPc = "isSend".hashCode();
+    aTx = "conversationTime".hashCode();
+    aMk = "content".hashCode();
+    aPd = "msgType".hashCode();
+    aTy = "customNotify".hashCode();
+    aTz = "showTips".hashCode();
+    aOB = "flag".hashCode();
+    aOX = "digest".hashCode();
+    aOY = "digestUser".hashCode();
+    aTA = "hasTrunc".hashCode();
+    aTB = "parentRef".hashCode();
+    aTC = "attrflag".hashCode();
+    aPa = "editingMsg".hashCode();
+    aOZ = "atCount".hashCode();
+    aTD = "sightTime".hashCode();
+    aTE = "unReadMuteCount".hashCode();
+    aTF = "lastSeq".hashCode();
+    aTG = "UnDeliverCount".hashCode();
+  }
+  
+  public final void bh(int paramInt)
+  {
+    field_msgCount = paramInt;
+    aOQ = true;
+  }
+  
+  public final void bi(int paramInt)
+  {
+    field_unReadCount = paramInt;
+    aOF = true;
+  }
+  
+  public final void bj(int paramInt)
+  {
+    field_chatmode = paramInt;
+    aTl = true;
+  }
+  
+  public final void bk(int paramInt)
+  {
+    field_status = paramInt;
+    aMC = true;
+  }
+  
+  public final void bl(int paramInt)
+  {
+    field_isSend = paramInt;
+    aOO = true;
+  }
+  
+  public final void bm(int paramInt)
+  {
+    field_hasTrunc = paramInt;
+    aTp = true;
+  }
+  
+  public final void bn(int paramInt)
+  {
+    field_attrflag = paramInt;
+    aTr = true;
+  }
+  
+  public final void bo(int paramInt)
+  {
+    field_atCount = paramInt;
+    aOL = true;
+  }
+  
+  public final void bp(int paramInt)
+  {
+    field_unReadMuteCount = paramInt;
+    aTt = true;
   }
   
   public final void c(Cursor paramCursor)
@@ -121,176 +171,270 @@ public abstract class t
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aOJ != k) {
-        break label65;
+      if (aPe != k) {
+        break label60;
       }
-      field_productID = paramCursor.getString(i);
-      aOq = true;
+      field_msgCount = paramCursor.getInt(i);
     }
     for (;;)
     {
       i += 1;
       break label20;
       break;
-      label65:
-      if (aQg == k) {
-        field_consumeProductID = paramCursor.getString(i);
-      } else if (aON == k) {
-        field_packName = paramCursor.getString(i);
-      } else if (aOO == k) {
-        field_packDesc = paramCursor.getString(i);
-      } else if (aOP == k) {
-        field_packAuthInfo = paramCursor.getString(i);
-      } else if (aOQ == k) {
-        field_packPrice = paramCursor.getString(i);
-      } else if (aOR == k) {
-        field_packType = paramCursor.getInt(i);
-      } else if (aOS == k) {
-        field_packFlag = paramCursor.getInt(i);
-      } else if (aOT == k) {
-        field_packExpire = paramCursor.getInt(i);
-      } else if (aOV == k) {
-        field_packCopyright = paramCursor.getString(i);
-      } else if (aQh == k) {
-        field_priceNum = paramCursor.getString(i);
-      } else if (aQi == k) {
-        field_priceType = paramCursor.getString(i);
-      } else if (aQj == k) {
-        field_iconUrl = paramCursor.getString(i);
-      } else if (aQk == k) {
-        field_coverUrl = paramCursor.getString(i);
-      } else if (aQl == k) {
-        field_panelUrl = paramCursor.getString(i);
-      } else if (aQm == k) {
-        field_timeLimitStr = paramCursor.getString(i);
-      } else if (aQn == k) {
-        field_version = paramCursor.getInt(i);
-      } else if (aQo == k) {
-        field_packThumbCnt = paramCursor.getInt(i);
-      } else if (aQp == k) {
-        field_thumbExtCount = paramCursor.getInt(i);
-      } else if (aQq == k) {
-        field_packThumbList = paramCursor.getBlob(i);
-      } else if (aQr == k) {
-        field_thumbExtList = paramCursor.getBlob(i);
-      } else if (aPO == k) {
-        field_lang = paramCursor.getString(i);
-      } else if (aQs == k) {
-        field_shareDesc = paramCursor.getString(i);
-      } else if (aQt == k) {
-        field_oldRedirectUrl = paramCursor.getString(i);
-      } else if (aHH == k) {
-        ibV = paramCursor.getLong(i);
+      label60:
+      if (aQb == k)
+      {
+        field_username = paramCursor.getString(i);
+        aPL = true;
+      }
+      else if (aOT == k)
+      {
+        field_unReadCount = paramCursor.getInt(i);
+      }
+      else if (aTw == k)
+      {
+        field_chatmode = paramCursor.getInt(i);
+      }
+      else if (aMQ == k)
+      {
+        field_status = paramCursor.getInt(i);
+      }
+      else if (aPc == k)
+      {
+        field_isSend = paramCursor.getInt(i);
+      }
+      else if (aTx == k)
+      {
+        field_conversationTime = paramCursor.getLong(i);
+      }
+      else if (aMk == k)
+      {
+        field_content = paramCursor.getString(i);
+      }
+      else if (aPd == k)
+      {
+        field_msgType = paramCursor.getString(i);
+      }
+      else if (aTy == k)
+      {
+        field_customNotify = paramCursor.getString(i);
+      }
+      else if (aTz == k)
+      {
+        field_showTips = paramCursor.getInt(i);
+      }
+      else if (aOB == k)
+      {
+        field_flag = paramCursor.getLong(i);
+      }
+      else if (aOX == k)
+      {
+        field_digest = paramCursor.getString(i);
+      }
+      else if (aOY == k)
+      {
+        field_digestUser = paramCursor.getString(i);
+      }
+      else if (aTA == k)
+      {
+        field_hasTrunc = paramCursor.getInt(i);
+      }
+      else if (aTB == k)
+      {
+        field_parentRef = paramCursor.getString(i);
+      }
+      else if (aTC == k)
+      {
+        field_attrflag = paramCursor.getInt(i);
+      }
+      else if (aPa == k)
+      {
+        field_editingMsg = paramCursor.getString(i);
+      }
+      else if (aOZ == k)
+      {
+        field_atCount = paramCursor.getInt(i);
+      }
+      else if (aTD == k)
+      {
+        field_sightTime = paramCursor.getLong(i);
+      }
+      else if (aTE == k)
+      {
+        field_unReadMuteCount = paramCursor.getInt(i);
+      }
+      else if (aTF == k)
+      {
+        field_lastSeq = paramCursor.getLong(i);
+      }
+      else if (aTG == k)
+      {
+        field_UnDeliverCount = paramCursor.getInt(i);
+      }
+      else if (aLG == k)
+      {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final void cd(String paramString)
+  {
+    field_msgType = paramString;
+    aOP = true;
+  }
+  
+  public final void ce(String paramString)
+  {
+    field_digest = paramString;
+    aOJ = true;
+  }
+  
+  public final void cf(String paramString)
+  {
+    field_digestUser = paramString;
+    aOK = true;
+  }
+  
+  public final void cg(String paramString)
+  {
+    field_parentRef = paramString;
+    aTq = true;
+  }
+  
+  public final void ch(String paramString)
+  {
+    field_editingMsg = paramString;
+    aOM = true;
+  }
+  
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aOq) {
-      localContentValues.put("productID", field_productID);
+    if (aOQ) {
+      localContentValues.put("msgCount", Integer.valueOf(field_msgCount));
     }
-    if (aPS) {
-      localContentValues.put("consumeProductID", field_consumeProductID);
+    if (field_username == null) {
+      field_username = "";
     }
-    if (aOu) {
-      localContentValues.put("packName", field_packName);
+    if (aPL) {
+      localContentValues.put("username", field_username);
     }
-    if (aOv) {
-      localContentValues.put("packDesc", field_packDesc);
+    if (aOF) {
+      localContentValues.put("unReadCount", Integer.valueOf(field_unReadCount));
     }
-    if (aOw) {
-      localContentValues.put("packAuthInfo", field_packAuthInfo);
+    if (aTl) {
+      localContentValues.put("chatmode", Integer.valueOf(field_chatmode));
     }
-    if (aOx) {
-      localContentValues.put("packPrice", field_packPrice);
+    if (aMC) {
+      localContentValues.put("status", Integer.valueOf(field_status));
     }
-    if (aOy) {
-      localContentValues.put("packType", Integer.valueOf(field_packType));
+    if (aOO) {
+      localContentValues.put("isSend", Integer.valueOf(field_isSend));
+    }
+    if (aTm) {
+      localContentValues.put("conversationTime", Long.valueOf(field_conversationTime));
+    }
+    if (field_content == null) {
+      field_content = "";
+    }
+    if (aLS) {
+      localContentValues.put("content", field_content);
+    }
+    if (field_msgType == null) {
+      field_msgType = "";
+    }
+    if (aOP) {
+      localContentValues.put("msgType", field_msgType);
+    }
+    if (field_customNotify == null) {
+      field_customNotify = "";
+    }
+    if (aTn) {
+      localContentValues.put("customNotify", field_customNotify);
+    }
+    if (aTo) {
+      localContentValues.put("showTips", Integer.valueOf(field_showTips));
     }
     if (aOz) {
-      localContentValues.put("packFlag", Integer.valueOf(field_packFlag));
+      localContentValues.put("flag", Long.valueOf(field_flag));
     }
-    if (aOA) {
-      localContentValues.put("packExpire", Integer.valueOf(field_packExpire));
+    if (field_digest == null) {
+      field_digest = "";
     }
-    if (field_packCopyright == null) {
-      field_packCopyright = "";
+    if (aOJ) {
+      localContentValues.put("digest", field_digest);
     }
-    if (aOC) {
-      localContentValues.put("packCopyright", field_packCopyright);
+    if (field_digestUser == null) {
+      field_digestUser = "";
     }
-    if (field_priceNum == null) {
-      field_priceNum = "";
+    if (aOK) {
+      localContentValues.put("digestUser", field_digestUser);
     }
-    if (aPT) {
-      localContentValues.put("priceNum", field_priceNum);
+    if (aTp) {
+      localContentValues.put("hasTrunc", Integer.valueOf(field_hasTrunc));
     }
-    if (field_priceType == null) {
-      field_priceType = "";
+    if (aTq) {
+      localContentValues.put("parentRef", field_parentRef);
     }
-    if (aPU) {
-      localContentValues.put("priceType", field_priceType);
+    if (aTr) {
+      localContentValues.put("attrflag", Integer.valueOf(field_attrflag));
     }
-    if (aPV) {
-      localContentValues.put("iconUrl", field_iconUrl);
+    if (field_editingMsg == null) {
+      field_editingMsg = "";
     }
-    if (field_coverUrl == null) {
-      field_coverUrl = "";
+    if (aOM) {
+      localContentValues.put("editingMsg", field_editingMsg);
     }
-    if (aPW) {
-      localContentValues.put("coverUrl", field_coverUrl);
+    if (aOL) {
+      localContentValues.put("atCount", Integer.valueOf(field_atCount));
     }
-    if (field_panelUrl == null) {
-      field_panelUrl = "";
+    if (aTs) {
+      localContentValues.put("sightTime", Long.valueOf(field_sightTime));
     }
-    if (aPX) {
-      localContentValues.put("panelUrl", field_panelUrl);
+    if (aTt) {
+      localContentValues.put("unReadMuteCount", Integer.valueOf(field_unReadMuteCount));
     }
-    if (field_timeLimitStr == null) {
-      field_timeLimitStr = "";
+    if (aTu) {
+      localContentValues.put("lastSeq", Long.valueOf(field_lastSeq));
     }
-    if (aPY) {
-      localContentValues.put("timeLimitStr", field_timeLimitStr);
+    if (aTv) {
+      localContentValues.put("UnDeliverCount", Integer.valueOf(field_UnDeliverCount));
     }
-    if (aPZ) {
-      localContentValues.put("version", Integer.valueOf(field_version));
-    }
-    if (aQa) {
-      localContentValues.put("packThumbCnt", Integer.valueOf(field_packThumbCnt));
-    }
-    if (aQb) {
-      localContentValues.put("thumbExtCount", Integer.valueOf(field_thumbExtCount));
-    }
-    if (aQc) {
-      localContentValues.put("packThumbList", field_packThumbList);
-    }
-    if (aQd) {
-      localContentValues.put("thumbExtList", field_thumbExtList);
-    }
-    if (field_lang == null) {
-      field_lang = "";
-    }
-    if (aPJ) {
-      localContentValues.put("lang", field_lang);
-    }
-    if (field_shareDesc == null) {
-      field_shareDesc = "";
-    }
-    if (aQe) {
-      localContentValues.put("shareDesc", field_shareDesc);
-    }
-    if (field_oldRedirectUrl == null) {
-      field_oldRedirectUrl = "";
-    }
-    if (aQf) {
-      localContentValues.put("oldRedirectUrl", field_oldRedirectUrl);
-    }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
+  }
+  
+  public final void p(long paramLong)
+  {
+    field_conversationTime = paramLong;
+    aTm = true;
+  }
+  
+  public final void q(long paramLong)
+  {
+    field_flag = paramLong;
+    aOz = true;
+  }
+  
+  public final void r(long paramLong)
+  {
+    field_lastSeq = paramLong;
+    aTu = true;
+  }
+  
+  public final void setContent(String paramString)
+  {
+    field_content = paramString;
+    aLS = true;
+  }
+  
+  public final void setUsername(String paramString)
+  {
+    field_username = paramString;
+    aPL = true;
   }
 }
 

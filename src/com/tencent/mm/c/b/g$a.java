@@ -1,10 +1,15 @@
 package com.tencent.mm.c.b;
 
-public abstract interface g$a
+public final class g$a
 {
-  public abstract void d(byte[] paramArrayOfByte, int paramInt);
+  public int anV = 0;
+  public byte[] buf;
   
-  public abstract void t(int paramInt1, int paramInt2);
+  public g$a(byte[] paramArrayOfByte, int paramInt)
+  {
+    buf = paramArrayOfByte;
+    anV = paramInt;
+  }
 }
 
 /* Location:

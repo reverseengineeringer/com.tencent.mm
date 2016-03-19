@@ -4,9 +4,9 @@ import java.util.LinkedList;
 
 public final class g$a
 {
-  boolean jnA;
-  LinkedList jnB = new LinkedList();
-  f jnz;
+  f lsS;
+  boolean lsT;
+  LinkedList lsU = new LinkedList();
 }
 
 /* Location:

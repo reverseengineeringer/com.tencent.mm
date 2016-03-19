@@ -15,29 +15,22 @@
 
 
 # instance fields
-.field public atX:[Ljava/lang/String;
+.field public alN:Ljava/lang/String;
 
-.field public awH:I
+.field public auQ:Ljava/lang/String;
 
-.field public context:Landroid/content/Context;
+.field public avk:Ljava/lang/String;
 
-.field public selectionArgs:[Ljava/lang/String;
-
-.field public uri:Landroid/net/Uri;
+.field public type:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/tencent/mm/d/a/bv$a;->awH:I
 
     return-void
 .end method

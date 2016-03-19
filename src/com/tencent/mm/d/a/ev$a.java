@@ -2,9 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class ev$a
 {
-  public String aBA;
-  public String avY;
-  public int type;
+  public int auE = 0;
+  public byte[] azz;
 }
 
 /* Location:

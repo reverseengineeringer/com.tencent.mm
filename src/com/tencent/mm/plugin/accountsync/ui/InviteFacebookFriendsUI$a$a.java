@@ -6,10 +6,10 @@ import android.widget.TextView;
 
 public final class InviteFacebookFriendsUI$a$a
 {
-  ImageView bXN;
-  TextView bXO;
-  CheckBox bXP;
-  TextView bzm;
+  TextView bMs;
+  ImageView coY;
+  TextView coZ;
+  CheckBox cpa;
 }
 
 /* Location:

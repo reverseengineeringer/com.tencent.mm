@@ -15,6 +15,8 @@
 
 
 # instance fields
+.field public aAk:I
+
 .field public type:I
 
 

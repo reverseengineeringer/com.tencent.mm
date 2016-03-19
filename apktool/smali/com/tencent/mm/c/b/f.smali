@@ -1,52 +1,90 @@
-.class final Lcom/tencent/mm/c/b/f;
+.class public abstract Lcom/tencent/mm/c/b/f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/c/b/f$a;
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic arM:Lcom/tencent/mm/c/b/d;
+.field protected aqV:Z
+
+.field protected aqW:I
+
+.field protected aqi:I
+
+.field protected aqz:Lcom/tencent/mm/c/b/f$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/c/b/d;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     .prologue
-    .line 392
-    iput-object p1, p0, Lcom/tencent/mm/c/b/f;->arM:Lcom/tencent/mm/c/b/d;
+    const/4 v1, 0x0
 
+    .line 4
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 9
+    const v0, -0x75bcd15
+
+    iput v0, p0, Lcom/tencent/mm/c/b/f;->aqi:I
+
+    .line 10
+    iput-boolean v1, p0, Lcom/tencent/mm/c/b/f;->aqV:Z
+
+    .line 11
+    iput v1, p0, Lcom/tencent/mm/c/b/f;->aqW:I
+
+    .line 60
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
+.method public final a(Lcom/tencent/mm/c/b/f$a;)V
+    .locals 0
+
+    .prologue
+    .line 34
+    iput-object p1, p0, Lcom/tencent/mm/c/b/f;->aqz:Lcom/tencent/mm/c/b/f$a;
+
+    .line 35
+    return-void
+.end method
+
+.method public final aQ(I)V
+    .locals 0
+
+    .prologue
+    .line 42
+    iput p1, p0, Lcom/tencent/mm/c/b/f;->aqi:I
+
+    .line 43
+    return-void
+.end method
+
+.method public abstract an(Z)V
+.end method
+
+.method public abstract lN()Z
+.end method
+
+.method public final lR()I
     .locals 1
 
     .prologue
-    .line 395
-    iget-object v0, p0, Lcom/tencent/mm/c/b/f;->arM:Lcom/tencent/mm/c/b/d;
+    .line 54
+    iget v0, p0, Lcom/tencent/mm/c/b/f;->aqW:I
 
-    iget-object v0, v0, Lcom/tencent/mm/c/b/d;->arL:Lcom/tencent/mm/c/b/b;
+    return v0
+.end method
 
-    invoke-virtual {v0}, Lcom/tencent/mm/c/b/b;->ma()Z
-
-    .line 396
-    iget-object v0, p0, Lcom/tencent/mm/c/b/f;->arM:Lcom/tencent/mm/c/b/d;
-
-    iget-object v0, v0, Lcom/tencent/mm/c/b/d;->arL:Lcom/tencent/mm/c/b/b;
-
-    invoke-static {v0}, Lcom/tencent/mm/c/b/b;->a(Lcom/tencent/mm/c/b/b;)Lcom/tencent/mm/c/b/b$a;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Lcom/tencent/mm/c/b/b$a;->onError()V
-
-    .line 397
-    return-void
+.method public abstract li()V
 .end method

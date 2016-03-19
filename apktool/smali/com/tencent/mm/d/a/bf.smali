@@ -1,27 +1,24 @@
 .class public final Lcom/tencent/mm/d/a/bf;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tencent/mm/d/a/bf$b;,
         Lcom/tencent/mm/d/a/bf$a;
     }
 .end annotation
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public awl:Lcom/tencent/mm/d/a/bf$a;
-
-.field public awm:Lcom/tencent/mm/d/a/bf$b;
+.field public aun:Lcom/tencent/mm/d/a/bf$a;
 
 
 # direct methods
@@ -32,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/bf;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/bf;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/bf;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/bf;->arR:Z
 
     return-void
 .end method
@@ -45,30 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/bf$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/bf$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/bf;->awl:Lcom/tencent/mm/d/a/bf$a;
-
-    .line 18
-    new-instance v0, Lcom/tencent/mm/d/a/bf$b;
-
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/bf$b;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/d/a/bf;->awm:Lcom/tencent/mm/d/a/bf$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/bf;->aun:Lcom/tencent/mm/d/a/bf$a;
 
     .line 8
-    const-string/jumbo v0, "ExDeviceSimpleBTConnectDevice"
+    const-string/jumbo v0, "EmojiOnActivityResult"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/bf;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/bf;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/bf;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bf;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bf;->jUI:Z
 
     return-void
 .end method

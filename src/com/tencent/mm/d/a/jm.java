@@ -1,23 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class jm
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGB = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGe = new a();
   
   public jm()
   {
-    id = "VoicePrintNoiseDetectResult";
-    hXT = atO;
+    id = "RemoveSnsTask";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aGC;
+    public int state = -1;
   }
 }
 

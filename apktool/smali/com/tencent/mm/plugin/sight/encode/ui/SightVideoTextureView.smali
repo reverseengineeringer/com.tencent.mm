@@ -10,19 +10,19 @@
 
 
 # instance fields
-.field private fgY:Ljava/lang/String;
+.field private gDN:Landroid/media/MediaPlayer;
 
-.field private fmS:Landroid/media/MediaPlayer;
+.field private gDZ:Landroid/graphics/SurfaceTexture;
 
-.field private fnA:Landroid/view/TextureView;
+.field private gEv:Landroid/view/TextureView;
 
-.field private fnB:Landroid/view/Surface;
+.field private gEw:Landroid/view/Surface;
 
-.field private fnC:Z
+.field private gEx:Z
 
-.field private fnD:Z
+.field private gEy:Z
 
-.field private fne:Landroid/graphics/SurfaceTexture;
+.field private gxe:Ljava/lang/String;
 
 
 # direct methods
@@ -30,12 +30,12 @@
     .locals 1
 
     .prologue
-    .line 48
+    .line 49
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 49
+    .line 50
     return-void
 .end method
 
@@ -45,20 +45,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 43
+    .line 44
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 33
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnA:Landroid/view/TextureView;
-
     .line 34
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fne:Landroid/graphics/SurfaceTexture;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEv:Landroid/view/TextureView;
 
-    .line 36
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnB:Landroid/view/Surface;
+    .line 35
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDZ:Landroid/graphics/SurfaceTexture;
 
-    .line 44
-    sget v0, Lcom/tencent/mm/a$i;->surface_camera:I
+    .line 37
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEw:Landroid/view/Surface;
+
+    .line 45
+    const v0, 0x7f070125
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->findViewById(I)Landroid/view/View;
 
@@ -66,17 +66,17 @@
 
     check-cast v0, Landroid/view/TextureView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnA:Landroid/view/TextureView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEv:Landroid/view/TextureView;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnA:Landroid/view/TextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEv:Landroid/view/TextureView;
 
-    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/bo;
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/bo;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView$1;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)V
 
     invoke-virtual {v0, v1}, Landroid/view/TextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
-    .line 45
+    .line 46
     return-void
 .end method
 
@@ -84,8 +84,8 @@
     .locals 0
 
     .prologue
-    .line 28
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fne:Landroid/graphics/SurfaceTexture;
+    .line 29
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDZ:Landroid/graphics/SurfaceTexture;
 
     return-object p1
 .end method
@@ -94,8 +94,8 @@
     .locals 0
 
     .prologue
-    .line 28
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fmS:Landroid/media/MediaPlayer;
+    .line 29
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDN:Landroid/media/MediaPlayer;
 
     return-object p1
 .end method
@@ -104,65 +104,75 @@
     .locals 0
 
     .prologue
-    .line 28
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnB:Landroid/view/Surface;
+    .line 29
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEw:Landroid/view/Surface;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)Z
+.method static synthetic a(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)Landroid/view/TextureView;
     .locals 1
 
     .prologue
-    .line 28
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnD:Z
-
-    return v0
-.end method
-
-.method static synthetic b(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 28
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fgY:Ljava/lang/String;
+    .line 29
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEv:Landroid/view/TextureView;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)Z
+.method static synthetic b(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)Z
     .locals 1
 
     .prologue
-    .line 28
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnC:Z
+    .line 29
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEy:Z
 
     return v0
 .end method
 
-.method static synthetic d(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)Landroid/media/MediaPlayer;
+.method static synthetic c(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 28
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fmS:Landroid/media/MediaPlayer;
+    .line 29
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gxe:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)Landroid/view/Surface;
+.method static synthetic d(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)Z
     .locals 1
 
     .prologue
-    .line 28
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnB:Landroid/view/Surface;
+    .line 29
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEx:Z
+
+    return v0
+.end method
+
+.method static synthetic e(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)Landroid/media/MediaPlayer;
+    .locals 1
+
+    .prologue
+    .line 29
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDN:Landroid/media/MediaPlayer;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)Landroid/view/Surface;
+    .locals 1
+
+    .prologue
+    .line 29
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEw:Landroid/view/Surface;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final J(Ljava/lang/String;Z)V
+.method public final Q(Ljava/lang/String;Z)V
     .locals 7
 
     .prologue
@@ -170,7 +180,7 @@
 
     const/4 v5, 0x0
 
-    .line 144
+    .line 146
     const-string/jumbo v0, "!44@/B4Tb64lLpJtjoEZ/uIRrc1VCXsSmo3pwt2qvQCwV7E="
 
     const-string/jumbo v1, "start play video, path %s, mute %B, wantPlay %B"
@@ -189,7 +199,7 @@
 
     const/4 v3, 0x2
 
-    iget-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnD:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEy:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -197,56 +207,80 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 145
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fgY:Ljava/lang/String;
-
-    .line 146
-    iput-boolean p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnC:Z
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 147
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fne:Landroid/graphics/SurfaceTexture;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gxe:Ljava/lang/String;
+
+    .line 148
+    iput-boolean p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEx:Z
+
+    .line 149
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDZ:Landroid/graphics/SurfaceTexture;
 
     if-nez v0, :cond_0
 
-    .line 148
+    .line 150
     const-string/jumbo v0, "!44@/B4Tb64lLpJtjoEZ/uIRrc1VCXsSmo3pwt2qvQCwV7E="
 
     const-string/jumbo v1, "play video fail, texture is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 149
-    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnD:Z
+    .line 151
+    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEy:Z
 
-    .line 211
+    .line 213
     :goto_0
     return-void
 
-    .line 152
+    .line 154
     :cond_0
-    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnD:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEy:Z
 
-    .line 155
-    invoke-static {}, Lcom/tencent/mm/model/ax;->td()Lcom/tencent/mm/sdk/platformtools/ad;
+    .line 157
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/bp;
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView$2;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/tencent/mm/plugin/sight/encode/ui/bp;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;Ljava/lang/String;Z)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView$2;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;Ljava/lang/String;Z)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
 
     goto :goto_0
 .end method
 
-.method public final akA()V
+.method public final awO()V
+    .locals 0
+
+    .prologue
+    .line 113
+    return-void
+.end method
+
+.method protected final axa()V
+    .locals 0
+
+    .prologue
+    .line 108
+    return-void
+.end method
+
+.method protected final axb()V
+    .locals 0
+
+    .prologue
+    .line 261
+    return-void
+.end method
+
+.method public final axc()V
     .locals 5
 
     .prologue
-    .line 225
+    .line 227
     const-string/jumbo v0, "!44@/B4Tb64lLpJtjoEZ/uIRrc1VCXsSmo3pwt2qvQCwV7E="
 
     const-string/jumbo v1, "stop play video, wantPlay %B"
@@ -257,7 +291,7 @@
 
     const/4 v3, 0x0
 
-    iget-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnD:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEy:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -265,85 +299,61 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 226
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fmS:Landroid/media/MediaPlayer;
-
-    if-nez v0, :cond_0
-
-    .line 227
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnD:Z
-
-    if-nez v0, :cond_0
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 228
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDN:Landroid/media/MediaPlayer;
+
+    if-nez v0, :cond_0
+
+    .line 229
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEy:Z
+
+    if-nez v0, :cond_0
+
+    .line 230
     const-string/jumbo v0, "!44@/B4Tb64lLpJtjoEZ/uIRrc1VCXsSmo3pwt2qvQCwV7E="
 
     const-string/jumbo v1, "mediaplayer is null, do nothing when stop play video"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 255
+    .line 257
     :goto_0
     return-void
 
-    .line 232
+    .line 234
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ax;->td()Lcom/tencent/mm/sdk/platformtools/ad;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/bs;
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/bs;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView$3;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
 
     goto :goto_0
-.end method
-
-.method public final akk()V
-    .locals 0
-
-    .prologue
-    .line 111
-    return-void
-.end method
-
-.method protected final aky()V
-    .locals 0
-
-    .prologue
-    .line 106
-    return-void
-.end method
-
-.method protected final akz()V
-    .locals 0
-
-    .prologue
-    .line 259
-    return-void
 .end method
 
 .method protected getPreviewSurface()Landroid/view/Surface;
     .locals 2
 
     .prologue
-    .line 279
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fne:Landroid/graphics/SurfaceTexture;
+    .line 281
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDZ:Landroid/graphics/SurfaceTexture;
 
     if-eqz v0, :cond_0
 
-    .line 280
+    .line 282
     new-instance v0, Landroid/view/Surface;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fne:Landroid/graphics/SurfaceTexture;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDZ:Landroid/graphics/SurfaceTexture;
 
     invoke-direct {v0, v1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
-    .line 282
+    .line 284
     :goto_0
     return-object v0
 
@@ -357,19 +367,19 @@
     .locals 1
 
     .prologue
-    .line 271
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnA:Landroid/view/TextureView;
+    .line 273
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEv:Landroid/view/TextureView;
 
     if-eqz v0, :cond_0
 
-    .line 272
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnA:Landroid/view/TextureView;
+    .line 274
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEv:Landroid/view/TextureView;
 
     invoke-virtual {v0}, Landroid/view/TextureView;->getHeight()I
 
     move-result v0
 
-    .line 274
+    .line 276
     :goto_0
     return v0
 
@@ -383,19 +393,19 @@
     .locals 1
 
     .prologue
-    .line 263
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnA:Landroid/view/TextureView;
+    .line 265
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEv:Landroid/view/TextureView;
 
     if-eqz v0, :cond_0
 
-    .line 264
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnA:Landroid/view/TextureView;
+    .line 266
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEv:Landroid/view/TextureView;
 
     invoke-virtual {v0}, Landroid/view/TextureView;->getWidth()I
 
     move-result v0
 
-    .line 266
+    .line 268
     :goto_0
     return v0
 
@@ -411,19 +421,19 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 216
+    .line 218
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fmS:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDN:Landroid/media/MediaPlayer;
 
     if-nez v1, :cond_0
 
-    .line 218
+    .line 220
     :goto_0
     return v0
 
-    .line 216
+    .line 218
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fmS:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDN:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->isPlaying()Z
     :try_end_0
@@ -433,7 +443,7 @@
 
     goto :goto_0
 
-    .line 218
+    .line 220
     :catch_0
     move-exception v1
 
@@ -450,14 +460,14 @@
 
     const/4 v6, 0x0
 
-    .line 288
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnA:Landroid/view/TextureView;
+    .line 290
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEv:Landroid/view/TextureView;
 
     invoke-virtual {v0}, Landroid/view/TextureView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    .line 289
+    .line 291
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -466,7 +476,7 @@
 
     move-result-object v1
 
-    .line 290
+    .line 292
     const-string/jumbo v2, "!44@/B4Tb64lLpJtjoEZ/uIRrc1VCXsSmo3pwt2qvQCwV7E="
 
     const-string/jumbo v3, "setFixPreviewRate [%f], dm[%d, %d]"
@@ -497,14 +507,14 @@
 
     aput-object v5, v4, v8
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 292
+    .line 294
     iget v2, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     iput v2, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
-    .line 293
+    .line 295
     iget v1, v1, Landroid/util/DisplayMetrics;->widthPixels:I
 
     int-to-float v1, v1
@@ -515,7 +525,7 @@
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    .line 294
+    .line 296
     const-string/jumbo v1, "!44@/B4Tb64lLpJtjoEZ/uIRrc1VCXsSmo3pwt2qvQCwV7E="
 
     const-string/jumbo v2, "setFixPreviewRate width:%d, height:%d"
@@ -538,17 +548,17 @@
 
     aput-object v4, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 295
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fnA:Landroid/view/TextureView;
+    .line 297
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gEv:Landroid/view/TextureView;
 
     invoke-virtual {v1, v0}, Landroid/view/TextureView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 296
+    .line 298
     invoke-super {p0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setPreviewRate(F)V
 
-    .line 297
+    .line 299
     return-void
 .end method
 
@@ -560,20 +570,20 @@
 
     const/4 v5, 0x0
 
-    .line 115
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fmS:Landroid/media/MediaPlayer;
+    .line 117
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDN:Landroid/media/MediaPlayer;
 
     if-nez v0, :cond_1
 
-    .line 140
+    .line 142
     :cond_0
     :goto_0
     return-void
 
-    .line 119
+    .line 121
     :cond_1
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fmS:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDN:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
     :try_end_0
@@ -583,12 +593,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 126
+    .line 128
     if-eqz p1, :cond_2
 
-    .line 128
+    .line 130
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fmS:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDN:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x0
 
@@ -600,11 +610,11 @@
 
     goto :goto_0
 
-    .line 129
+    .line 131
     :catch_0
     move-exception v0
 
-    .line 130
+    .line 132
     const-string/jumbo v1, "!44@/B4Tb64lLpJtjoEZ/uIRrc1VCXsSmo3pwt2qvQCwV7E="
 
     const-string/jumbo v2, "try to set MediaPlayer Volume 0, 0 Fail: %s"
@@ -617,15 +627,15 @@
 
     aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 122
+    .line 124
     :catch_1
     move-exception v0
 
-    .line 123
+    .line 125
     const-string/jumbo v1, "!44@/B4Tb64lLpJtjoEZ/uIRrc1VCXsSmo3pwt2qvQCwV7E="
 
     const-string/jumbo v2, "setIsMute %B, check MediaPlayer playing Fail: %s"
@@ -646,17 +656,17 @@
 
     aput-object v0, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 133
-    :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->akF()V
-
     .line 135
+    :cond_2
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->axi()V
+
+    .line 137
     :try_start_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->fmS:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightVideoTextureView;->gDN:Landroid/media/MediaPlayer;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -668,11 +678,11 @@
 
     goto :goto_0
 
-    .line 136
+    .line 138
     :catch_2
     move-exception v0
 
-    .line 137
+    .line 139
     const-string/jumbo v1, "!44@/B4Tb64lLpJtjoEZ/uIRrc1VCXsSmo3pwt2qvQCwV7E="
 
     const-string/jumbo v2, "try to set MediaPlayer Volume 1, 1 Fail: %s"
@@ -685,7 +695,7 @@
 
     aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method

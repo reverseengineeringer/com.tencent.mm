@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class fw$a
 {
-  public String avk;
+  public byte[] aAU;
 }
 
 /* Location:

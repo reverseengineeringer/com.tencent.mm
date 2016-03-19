@@ -1,24 +1,27 @@
 .class public final Lcom/tencent/mm/d/a/iy;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/tencent/mm/d/a/iy$b;,
         Lcom/tencent/mm/d/a/iy$a;
     }
 .end annotation
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aGg:Lcom/tencent/mm/d/a/iy$a;
+.field public aFj:Lcom/tencent/mm/d/a/iy$a;
+
+.field public aFk:Lcom/tencent/mm/d/a/iy$b;
 
 
 # direct methods
@@ -29,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/iy;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/iy;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/iy;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/iy;->arR:Z
 
     return-void
 .end method
@@ -41,24 +44,31 @@
     .locals 1
 
     .prologue
-    .line 16
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    .line 8
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    .line 21
+    .line 13
     new-instance v0, Lcom/tencent/mm/d/a/iy$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/iy$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/iy;->aGg:Lcom/tencent/mm/d/a/iy$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/iy;->aFj:Lcom/tencent/mm/d/a/iy$a;
 
-    .line 16
-    const-string/jumbo v0, "UIStatusChanged"
+    .line 17
+    new-instance v0, Lcom/tencent/mm/d/a/iy$b;
+
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/iy$b;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/d/a/iy;->aFk:Lcom/tencent/mm/d/a/iy$b;
+
+    .line 8
+    const-string/jumbo v0, "RcptAddress"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/iy;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/iy;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/iy;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/iy;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/iy;->jUI:Z
 
     return-void
 .end method

@@ -1,7 +1,7 @@
 package com.tencent.mm.ui.e;
 
-import com.tencent.mm.protocal.b.eq;
-import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.protocal.b.fy;
+import com.tencent.mm.sdk.platformtools.aa;
 import com.tencent.mm.ui.e.a.a;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -9,39 +9,39 @@ import java.util.List;
 
 public abstract interface h
 {
-  public abstract void a(String paramString, ac paramac, HashSet paramHashSet);
+  public abstract void a(String paramString, aa paramaa, HashSet paramHashSet);
   
-  public abstract void ahf();
+  public abstract void ass();
   
-  public abstract LinkedList ahg();
+  public abstract LinkedList ast();
   
   public abstract int getType();
   
-  public abstract a iw(int paramInt);
+  public abstract a kn(int paramInt);
   
-  public abstract int iy(int paramInt);
+  public abstract int kq(int paramInt);
   
-  public abstract void qI();
+  public abstract void qE();
   
   public static final class a
   {
-    public List cvm = new LinkedList();
-    public List fWT = null;
-    public int jnC = Integer.MAX_VALUE;
-    public boolean jnD = true;
-    public int jnE = Integer.MAX_VALUE;
-    public boolean jnF = false;
-    public int jnG = 0;
-    public int jnH = 0;
+    public List cNf = new LinkedList();
+    public List gho = null;
+    public int ihI = 0;
+    public int lsV = Integer.MAX_VALUE;
+    public boolean lsW = true;
+    public int lsX = Integer.MAX_VALUE;
+    public boolean lsY = false;
+    public int lsZ = 0;
   }
   
   public static final class b
   {
-    public int jnC = Integer.MAX_VALUE;
-    public boolean jnF;
-    public int jnG = 0;
-    public int jnI;
-    public eq jnJ = null;
+    public int ihI = 0;
+    public int lsV = Integer.MAX_VALUE;
+    public boolean lsY;
+    public int lta;
+    public fy ltb = null;
   }
   
   public static abstract interface c

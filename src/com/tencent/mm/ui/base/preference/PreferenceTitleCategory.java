@@ -4,7 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
-import com.tencent.mm.a.k;
 
 public class PreferenceTitleCategory
   extends PreferenceCategory
@@ -22,8 +21,8 @@ public class PreferenceTitleCategory
   public PreferenceTitleCategory(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    if (getLayoutResource() != a.k.mm_preference_info_normaltext) {
-      setLayoutResource(a.k.mm_preference_info_bigtext);
+    if (kMt != 2131363209) {
+      setLayoutResource(2131363216);
     }
   }
   

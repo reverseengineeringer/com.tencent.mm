@@ -9,20 +9,20 @@ import com.tencent.mm.ui.BasePanelKeybordLayout;
 public class ChattingUILayout
   extends BasePanelKeybordLayout
 {
-  private ChatFooterBottom gVG;
+  private ChatFooterBottom iMa;
   
   public ChattingUILayout(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
   }
   
-  private ChatFooterBottom c(ViewGroup paramViewGroup)
+  private ChatFooterBottom e(ViewGroup paramViewGroup)
   {
-    if (gVG != null) {
-      return gVG;
+    if (iMa != null) {
+      return iMa;
     }
     if ((paramViewGroup == null) || (paramViewGroup.getChildCount() <= 0)) {
-      return gVG;
+      return iMa;
     }
     int i = 0;
     while (i < paramViewGroup.getChildCount())
@@ -30,20 +30,20 @@ public class ChattingUILayout
       View localView = paramViewGroup.getChildAt(i);
       if ((localView instanceof ChatFooterBottom))
       {
-        gVG = ((ChatFooterBottom)localView);
-        return gVG;
+        iMa = ((ChatFooterBottom)localView);
+        return iMa;
       }
-      if (((localView instanceof ViewGroup)) && (c((ViewGroup)localView) != null)) {
-        return gVG;
+      if (((localView instanceof ViewGroup)) && (e((ViewGroup)localView) != null)) {
+        return iMa;
       }
       i += 1;
     }
-    return gVG;
+    return iMa;
   }
   
   protected View getPanelView()
   {
-    return c(this);
+    return e(this);
   }
 }
 

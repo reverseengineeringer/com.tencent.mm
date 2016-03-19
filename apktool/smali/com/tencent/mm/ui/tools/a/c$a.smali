@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract ahA()V
+.method public abstract Om()V
 .end method
 
-.method public abstract ahB()V
+.method public abstract On()V
 .end method
 
-.method public abstract pJ(Ljava/lang/String;)V
+.method public abstract mm(Ljava/lang/String;)V
 .end method

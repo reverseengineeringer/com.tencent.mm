@@ -1,14 +1,41 @@
 package com.tencent.mm.ui.base;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.app.Dialog;
+import android.content.Context;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class i
-  implements DialogInterface.OnClickListener
+public class i
+  extends Dialog
 {
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public i(Context paramContext, int paramInt)
   {
-    paramDialogInterface.cancel();
+    super(paramContext, paramInt);
+  }
+  
+  public void dismiss()
+  {
+    try
+    {
+      super.dismiss();
+      return;
+    }
+    catch (Exception localException)
+    {
+      u.printErrStackTrace("!32@/B4Tb64lLpJ93Ympv7FhFV0Og0UsIWxy", localException, "", new Object[0]);
+    }
+  }
+  
+  public void show()
+  {
+    try
+    {
+      super.show();
+      return;
+    }
+    catch (Exception localException)
+    {
+      u.printErrStackTrace("!32@/B4Tb64lLpJ93Ympv7FhFV0Og0UsIWxy", localException, "", new Object[0]);
+    }
   }
 }
 

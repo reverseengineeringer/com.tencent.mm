@@ -1,112 +1,187 @@
-.class final Lcom/tencent/mm/booter/notification/a/g;
-.super Lcom/tencent/mm/sdk/platformtools/ac;
+.class public final Lcom/tencent/mm/booter/notification/a/g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic bei:Lcom/tencent/mm/booter/notification/a/f;
+.field public boA:I
+
+.field public boB:I
+
+.field public boC:I
+
+.field public boD:Z
+
+.field private boE:I
+
+.field private boF:I
+
+.field public boG:Z
+
+.field public boH:Z
+
+.field public bot:Lcom/tencent/mm/booter/notification/a/b;
+
+.field public bou:Lcom/tencent/mm/booter/notification/a/c;
+
+.field public bov:Lcom/tencent/mm/booter/notification/a/d;
+
+.field public bow:Lcom/tencent/mm/booter/notification/a/h;
+
+.field public box:Lcom/tencent/mm/booter/notification/a/f;
+
+.field public boy:Lcom/tencent/mm/booter/notification/a/a;
+
+.field public boz:I
+
+.field public mContext:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/booter/notification/a/f;Landroid/os/Looper;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
     .prologue
+    const/4 v0, -0x1
+
+    .line 52
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 46
+    iput v0, p0, Lcom/tencent/mm/booter/notification/a/g;->boE:I
+
+    .line 47
+    iput v0, p0, Lcom/tencent/mm/booter/notification/a/g;->boF:I
+
     .line 53
-    iput-object p1, p0, Lcom/tencent/mm/booter/notification/a/g;->bei:Lcom/tencent/mm/booter/notification/a/f;
+    iput-object p1, p0, Lcom/tencent/mm/booter/notification/a/g;->mContext:Landroid/content/Context;
 
-    invoke-direct {p0, p2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+    .line 54
+    new-instance v0, Lcom/tencent/mm/booter/notification/a/b;
 
-    return-void
-.end method
+    invoke-direct {v0}, Lcom/tencent/mm/booter/notification/a/b;-><init>()V
 
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bot:Lcom/tencent/mm/booter/notification/a/b;
 
-# virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 5
+    new-instance v0, Lcom/tencent/mm/booter/notification/a/c;
 
-    .prologue
-    const/4 v4, 0x0
+    invoke-direct {v0}, Lcom/tencent/mm/booter/notification/a/c;-><init>()V
 
-    .line 57
-    const-string/jumbo v0, "!56@/B4Tb64lLpKR3MWtFvfaIMJb62Pm/jgsLT1nr0NtEmCplLo3H1kkFg=="
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bou:Lcom/tencent/mm/booter/notification/a/c;
 
-    const-string/jumbo v1, "play sound handler, try to stop notify mediaplayer"
+    new-instance v0, Lcom/tencent/mm/booter/notification/a/d;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v0}, Lcom/tencent/mm/booter/notification/a/d;-><init>()V
 
-    .line 59
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bei:Lcom/tencent/mm/booter/notification/a/f;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bov:Lcom/tencent/mm/booter/notification/a/d;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/booter/notification/a/f;->bef:Z
+    new-instance v0, Lcom/tencent/mm/booter/notification/a/h;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0}, Lcom/tencent/mm/booter/notification/a/h;-><init>()V
 
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bei:Lcom/tencent/mm/booter/notification/a/f;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bow:Lcom/tencent/mm/booter/notification/a/h;
 
-    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    new-instance v0, Lcom/tencent/mm/booter/notification/a/a;
 
-    if-eqz v0, :cond_0
+    invoke-direct {v0}, Lcom/tencent/mm/booter/notification/a/a;-><init>()V
 
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bei:Lcom/tencent/mm/booter/notification/a/f;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->boy:Lcom/tencent/mm/booter/notification/a/a;
 
-    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 60
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bei:Lcom/tencent/mm/booter/notification/a/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->stop()V
-
-    .line 61
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bei:Lcom/tencent/mm/booter/notification/a/f;
-
-    iget-object v0, v0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->release()V
-
-    .line 62
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->bei:Lcom/tencent/mm/booter/notification/a/f;
-
-    const/4 v1, 0x0
-
-    iput-boolean v1, v0, Lcom/tencent/mm/booter/notification/a/f;->bef:Z
-    :try_end_0
-    .catch Ljava/lang/IllegalStateException; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 67
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 64
-    :catch_0
-    move-exception v0
-
-    .line 65
-    const-string/jumbo v1, "!56@/B4Tb64lLpKR3MWtFvfaIMJb62Pm/jgsLT1nr0NtEmCplLo3H1kkFg=="
-
-    const-string/jumbo v2, "Exception in playSoundHander %s"
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-virtual {v0}, Ljava/lang/IllegalStateException;->getMessage()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/booter/notification/a/f$a;->nG()Lcom/tencent/mm/booter/notification/a/f;
 
     move-result-object v0
 
-    aput-object v0, v3, v4
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/g;->box:Lcom/tencent/mm/booter/notification/a/f;
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 55
+    return-void
+.end method
+
+.method public static a([J)Ljava/lang/String;
+    .locals 7
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 350
+    if-nez p0, :cond_1
+
+    .line 351
+    const/4 v0, 0x0
+
+    .line 361
+    :cond_0
+    :goto_0
+    return-object v0
+
+    .line 353
+    :cond_1
+    const-string/jumbo v0, ""
+
+    .line 354
+    array-length v4, p0
+
+    move v1, v2
+
+    :goto_1
+    if-ge v1, v4, :cond_2
+
+    aget-wide v5, p0, v1
+
+    .line 355
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {v5, v6}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v3, ","
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 354
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    move-object v0, v3
+
+    goto :goto_1
+
+    .line 358
+    :cond_2
+    invoke-virtual {v0}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 361
+    invoke-virtual {v0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-virtual {v0, v2, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v0
 
     goto :goto_0
 .end method

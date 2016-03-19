@@ -6,26 +6,26 @@ import android.os.Parcelable.ClassLoaderCreator;
 public final class c
   implements Parcelable.ClassLoaderCreator
 {
-  private final b fc;
+  private final b el;
   
   public c(b paramb)
   {
-    fc = paramb;
+    el = paramb;
   }
   
   public final Object createFromParcel(Parcel paramParcel)
   {
-    return fc.createFromParcel(paramParcel, null);
+    return el.createFromParcel(paramParcel, null);
   }
   
   public final Object createFromParcel(Parcel paramParcel, ClassLoader paramClassLoader)
   {
-    return fc.createFromParcel(paramParcel, paramClassLoader);
+    return el.createFromParcel(paramParcel, paramClassLoader);
   }
   
   public final Object[] newArray(int paramInt)
   {
-    return fc.newArray(paramInt);
+    return el.newArray(paramInt);
   }
 }
 

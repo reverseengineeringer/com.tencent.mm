@@ -16,7 +16,7 @@
 
 
 # instance fields
-.field private ckj:Ljava/lang/String;
+.field private cBu:Ljava/lang/String;
 
 
 # direct methods
@@ -30,7 +30,7 @@
     .line 27
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->ckj:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->cBu:Ljava/lang/String;
 
     return-void
 .end method
@@ -61,16 +61,16 @@
 
     const-string/jumbo v3, "postLogin, delegate intent to OrderHandlerUI"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 47
     const-string/jumbo v2, "_mmessage_appPackage"
 
-    invoke-static {p2, v2}, Lcom/tencent/mm/sdk/platformtools/o;->c(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p2, v2}, Lcom/tencent/mm/sdk/platformtools/p;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->ckj:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->cBu:Ljava/lang/String;
 
     .line 48
     const-string/jumbo v2, "!44@/B4Tb64lLpIk9oeRSFJsygj/TxmByc1i1jnzfdXNmcs="
@@ -81,7 +81,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->ckj:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->cBu:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -91,7 +91,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 50
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->getIntent()Landroid/content/Intent;
@@ -123,7 +123,7 @@
 
     const-string/jumbo v3, "postLogin, checkApp fail"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 55
     :cond_3
@@ -136,7 +136,7 @@
 
     move-result-object v1
 
-    invoke-static {p0, v1, v0}, Lcom/tencent/mm/pluginsdk/wallet/c;->a(Landroid/content/Context;Landroid/os/Bundle;Z)Z
+    invoke-static {p0, v1, v0}, Lcom/tencent/mm/pluginsdk/wallet/d;->a(Landroid/content/Context;Landroid/os/Bundle;Z)Z
 
     .line 57
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->finish()V
@@ -145,9 +145,9 @@
 
     .line 50
     :cond_4
-    new-instance v2, Lcom/tencent/mm/sdk/f/a;
+    new-instance v2, Lcom/tencent/mm/sdk/g/a;
 
-    invoke-direct {v2}, Lcom/tencent/mm/sdk/f/a;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/sdk/g/a;-><init>()V
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->getIntent()Landroid/content/Intent;
 
@@ -157,9 +157,9 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/sdk/f/a;->n(Landroid/os/Bundle;)V
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/sdk/g/a;->m(Landroid/os/Bundle;)V
 
-    iget-object v2, v2, Lcom/tencent/mm/sdk/f/a;->appId:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/sdk/g/a;->appId:Ljava/lang/String;
 
     const-string/jumbo v3, "!44@/B4Tb64lLpIk9oeRSFJsygj/TxmByc1i1jnzfdXNmcs="
 
@@ -177,7 +177,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     if-eqz v2, :cond_5
 
@@ -192,14 +192,14 @@
 
     const-string/jumbo v2, "checkApp fail, appId is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
     goto :goto_1
 
     :cond_6
-    invoke-static {v2, v0}, Lcom/tencent/mm/pluginsdk/model/app/i;->V(Ljava/lang/String;Z)Lcom/tencent/mm/pluginsdk/model/app/h;
+    invoke-static {v2, v0}, Lcom/tencent/mm/pluginsdk/model/app/g;->ai(Ljava/lang/String;Z)Lcom/tencent/mm/pluginsdk/model/app/f;
 
     move-result-object v3
 
@@ -209,48 +209,48 @@
 
     const-string/jumbo v4, "checkApp fail, not reg"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-instance v3, Lcom/tencent/mm/pluginsdk/model/app/h;
+    new-instance v3, Lcom/tencent/mm/pluginsdk/model/app/f;
 
-    invoke-direct {v3}, Lcom/tencent/mm/pluginsdk/model/app/h;-><init>()V
+    invoke-direct {v3}, Lcom/tencent/mm/pluginsdk/model/app/f;-><init>()V
 
-    iput-object v2, v3, Lcom/tencent/mm/pluginsdk/model/app/h;->field_appId:Ljava/lang/String;
+    iput-object v2, v3, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
     const-string/jumbo v4, ""
 
-    iput-object v4, v3, Lcom/tencent/mm/pluginsdk/model/app/h;->field_appName:Ljava/lang/String;
+    iput-object v4, v3, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appName:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->ckj:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->cBu:Ljava/lang/String;
 
-    iput-object v4, v3, Lcom/tencent/mm/pluginsdk/model/app/h;->field_packageName:Ljava/lang/String;
+    iput-object v4, v3, Lcom/tencent/mm/pluginsdk/model/app/f;->field_packageName:Ljava/lang/String;
 
-    iput v1, v3, Lcom/tencent/mm/pluginsdk/model/app/h;->field_status:I
+    iput v1, v3, Lcom/tencent/mm/pluginsdk/model/app/f;->field_status:I
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->ckj:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->cBu:Ljava/lang/String;
 
-    invoke-static {p0, v4}, Lcom/tencent/mm/pluginsdk/model/app/r;->av(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0, v4}, Lcom/tencent/mm/pluginsdk/model/app/p;->aI(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     if-eqz v4, :cond_7
 
-    iput-object v4, v3, Lcom/tencent/mm/pluginsdk/model/app/h;->field_signature:Ljava/lang/String;
+    iput-object v4, v3, Lcom/tencent/mm/pluginsdk/model/app/f;->field_signature:Ljava/lang/String;
 
     :cond_7
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->azk()Lcom/tencent/mm/pluginsdk/model/app/l;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPR()Lcom/tencent/mm/pluginsdk/model/app/i;
 
     move-result-object v4
 
-    invoke-virtual {v4, v3}, Lcom/tencent/mm/pluginsdk/model/app/l;->m(Lcom/tencent/mm/pluginsdk/model/app/h;)Z
+    invoke-virtual {v4, v3}, Lcom/tencent/mm/pluginsdk/model/app/i;->m(Lcom/tencent/mm/pluginsdk/model/app/f;)Z
 
     move-result v4
 
     if-eqz v4, :cond_2
 
-    iget-object v3, v3, Lcom/tencent/mm/pluginsdk/model/app/h;->field_openId:Ljava/lang/String;
+    iget-object v3, v3, Lcom/tencent/mm/pluginsdk/model/app/f;->field_openId:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -272,18 +272,18 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->azn()Lcom/tencent/mm/pluginsdk/model/app/q;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPV()Lcom/tencent/mm/pluginsdk/model/app/m;
 
     move-result-object v3
 
-    invoke-virtual {v3, v2}, Lcom/tencent/mm/pluginsdk/model/app/q;->ut(Ljava/lang/String;)V
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/pluginsdk/model/app/m;->zT(Ljava/lang/String;)V
 
     goto/16 :goto_1
 
     :cond_8
-    iget v2, v3, Lcom/tencent/mm/pluginsdk/model/app/h;->field_status:I
+    iget v2, v3, Lcom/tencent/mm/pluginsdk/model/app/f;->field_status:I
 
     const/4 v4, 0x3
 
@@ -293,16 +293,16 @@
 
     const-string/jumbo v2, "checkApp fail, app is in blacklist"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 
     goto/16 :goto_1
 
     :cond_9
-    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->ckj:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/base/stub/WXPayEntryActivity;->cBu:Ljava/lang/String;
 
-    invoke-static {p0, v3, v2}, Lcom/tencent/mm/pluginsdk/model/app/r;->b(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/h;Ljava/lang/String;)Z
+    invoke-static {p0, v3, v2}, Lcom/tencent/mm/pluginsdk/model/app/p;->b(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/f;Ljava/lang/String;)Z
 
     move-result v2
 
@@ -312,7 +312,7 @@
 
     const-string/jumbo v2, "checkApp fail, app invalid"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v1
 

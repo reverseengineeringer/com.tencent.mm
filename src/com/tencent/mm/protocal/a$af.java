@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$af
-  extends a.c
+  extends a.e
 {
   public a$af()
   {
-    super("getInstallState", "get_install_state", 25, false);
+    super("disconnectWXDevice", "disconnectWXDevice", 124, true);
   }
 }
 

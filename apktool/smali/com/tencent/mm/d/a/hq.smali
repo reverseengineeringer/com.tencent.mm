@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/hq;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aES:Lcom/tencent/mm/d/a/hq$a;
+.field public aDo:Lcom/tencent/mm/d/a/hq$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/hq;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/hq;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/hq;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/hq;->arR:Z
 
     return-void
 .end method
@@ -42,23 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/hq$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/hq$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/hq;->aES:Lcom/tencent/mm/d/a/hq$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/hq;->aDo:Lcom/tencent/mm/d/a/hq$a;
 
     .line 8
-    const-string/jumbo v0, "ShareCouponCard"
+    const-string/jumbo v0, "NotifyNewFriendRequest"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/hq;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/hq;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/hq;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/hq;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/hq;->jUI:Z
 
     return-void
 .end method

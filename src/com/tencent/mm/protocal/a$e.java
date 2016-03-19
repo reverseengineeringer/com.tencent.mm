@@ -1,11 +1,40 @@
 package com.tencent.mm.protocal;
 
-public final class a$e
-  extends a.c
+public abstract class a$e
 {
-  public a$e()
+  protected String NAME = "noName";
+  protected String iTU = "";
+  protected int iTV = -1;
+  protected boolean iTW = false;
+  
+  public a$e() {}
+  
+  public a$e(String paramString1, String paramString2, int paramInt, boolean paramBoolean)
   {
-    super("addContact", "add_contact", 5, true);
+    NAME = paramString1;
+    iTU = paramString2;
+    iTV = paramInt;
+    iTW = paramBoolean;
+  }
+  
+  public final String aTh()
+  {
+    return iTU;
+  }
+  
+  public final int aTi()
+  {
+    return iTV;
+  }
+  
+  public final boolean aTj()
+  {
+    return iTW;
+  }
+  
+  public final String getName()
+  {
+    return NAME;
   }
 }
 

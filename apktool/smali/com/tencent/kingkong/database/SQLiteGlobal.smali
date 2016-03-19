@@ -35,6 +35,7 @@
     .line 42
     sput-boolean v1, Lcom/tencent/kingkong/database/SQLiteGlobal;->optimization:Z
 
+    .line 36
     return-void
 .end method
 
@@ -193,9 +194,9 @@
 
     move-result-object v6
 
+    .line 125
     aput-object v6, v4, v5
 
-    .line 125
     invoke-virtual {v3, v0, v4}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -320,9 +321,9 @@
 
     move-result-object v5
 
+    .line 86
     aput-object v5, v3, v4
 
-    .line 86
     invoke-virtual {v2, v0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -445,9 +446,9 @@
 
     const/4 v4, 0x1
 
+    .line 104
     aput-object v1, v3, v4
 
-    .line 104
     invoke-virtual {v2, v0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0

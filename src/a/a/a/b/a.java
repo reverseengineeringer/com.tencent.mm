@@ -2,22 +2,22 @@ package a.a.a.b;
 
 public final class a
 {
-  static final int jMF = 16;
-  static final int jMG = 26;
+  static final int maW = 16;
+  static final int maX = 26;
   
-  public static int bK(int paramInt1, int paramInt2)
-  {
-    return paramInt1 << 3 | paramInt2;
-  }
-  
-  public static int pM(int paramInt)
+  public static int aB(int paramInt)
   {
     return paramInt & 0x7;
   }
   
-  public static int pN(int paramInt)
+  public static int aC(int paramInt)
   {
     return paramInt >>> 3;
+  }
+  
+  public static int x(int paramInt1, int paramInt2)
+  {
+    return paramInt1 << 3 | paramInt2;
   }
 }
 

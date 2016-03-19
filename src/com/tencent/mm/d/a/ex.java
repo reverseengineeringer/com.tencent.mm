@@ -1,17 +1,33 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ex
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azA = new a();
+  public b azB = new b();
   
   public ex()
   {
-    id = "NotifyTimelineFp";
-    hXT = atO;
+    id = "GenFingerPrintRsaKey";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public boolean azC = false;
+    public int azD = 0;
+    public String azE;
+  }
+  
+  public static final class b
+  {
+    public boolean awe = false;
+    public String azF;
+    public String azG;
   }
 }
 

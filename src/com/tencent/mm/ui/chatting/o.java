@@ -1,40 +1,41 @@
 package com.tencent.mm.ui.chatting;
 
 import android.view.View;
-import android.widget.CheckBox;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
+import java.util.ArrayList;
+import java.util.List;
 
 final class o
-  extends cf.a
+  extends aa.a
 {
-  protected View djc;
-  protected TextView dkD;
-  protected ImageView doD;
-  protected ImageView doH;
-  protected TextView iRG;
-  protected TextView iRH;
-  protected ImageView iRI;
+  LinearLayout fIL;
+  List fNw = new ArrayList();
+  TextView kQE;
+  ChattingItemFooter kQP;
+  q kRv = new q();
   
   public o(int paramInt)
   {
     super(paramInt);
   }
   
-  public final o aw(View paramView)
+  public final aa.a aB(View paramView)
   {
-    super.aB(paramView);
-    doD = ((ImageView)paramView.findViewById(a.i.chatting_appmsg_thumb_iv));
-    dkD = ((TextView)paramView.findViewById(a.i.chatting_appmsg_source_tv));
-    iRG = ((TextView)paramView.findViewById(a.i.chatting_appmsg_progress));
-    djc = paramView.findViewById(a.i.chatting_appmsg_progress_area);
-    iRH = ((TextView)paramView.findViewById(a.i.chatting_appmsg_comment_tv));
-    eYr = ((TextView)paramView.findViewById(a.i.chatting_user_tv));
-    iRI = ((ImageView)paramView.findViewById(a.i.chatting_appmsg_refuse_iv));
-    doF = ((CheckBox)paramView.findViewById(a.i.chatting_checkbox));
-    fxt = paramView.findViewById(a.i.chatting_maskview);
-    doH = ((ImageView)paramView.findViewById(a.i.chatting_content_mask_iv));
+    ViewGroup localViewGroup = (ViewGroup)kRv.fNj.getParent();
+    n localn = new n();
+    fNj = paramView;
+    cVH = ((TextView)paramView.findViewById(2131165460));
+    kRu = ((TextView)paramView.findViewById(2131165600));
+    fNk = paramView.findViewById(2131165601);
+    fNl = ((ImageView)paramView.findViewById(2131165463));
+    fNn = ((ProgressBar)paramView.findViewById(2131165602));
+    fNo = paramView.findViewById(2131165603);
+    localViewGroup.addView(paramView, localViewGroup.getChildCount() - 1);
+    fNw.add(localn);
     return this;
   }
 }

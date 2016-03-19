@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iGe:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+.field final synthetic kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 1386
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->iGe:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +51,7 @@
 
     .prologue
     .line 1389
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->iGe:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->a(Lcom/tencent/mm/ui/base/MMListPopupWindow;)Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
 
@@ -59,7 +59,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->iGe:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->a(Lcom/tencent/mm/ui/base/MMListPopupWindow;)Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
 
@@ -69,7 +69,7 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->iGe:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->a(Lcom/tencent/mm/ui/base/MMListPopupWindow;)Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
 
@@ -81,7 +81,7 @@
 
     if-le v0, v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->iGe:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->a(Lcom/tencent/mm/ui/base/MMListPopupWindow;)Lcom/tencent/mm/ui/base/MMListPopupWindow$a;
 
@@ -91,25 +91,25 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->iGe:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    iget v1, v1, Lcom/tencent/mm/ui/base/MMListPopupWindow;->qR:I
+    iget v1, v1, Lcom/tencent/mm/ui/base/MMListPopupWindow;->pU:I
 
     if-gt v0, v1, :cond_0
 
     .line 1391
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->iGe:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->b(Lcom/tencent/mm/ui/base/MMListPopupWindow;)Lcom/tencent/mm/ui/base/bl;
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->b(Lcom/tencent/mm/ui/base/MMListPopupWindow;)Lcom/tencent/mm/ui/base/o;
 
     move-result-object v0
 
     const/4 v1, 0x2
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/bl;->setInputMethodMode(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/o;->setInputMethodMode(I)V
 
     .line 1392
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->iGe:Lcom/tencent/mm/ui/base/MMListPopupWindow;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$f;->kFn:Lcom/tencent/mm/ui/base/MMListPopupWindow;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMListPopupWindow;->show()V
 

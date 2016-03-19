@@ -39,7 +39,7 @@
 
     const/4 v3, 0x0
 
-    .line 98
+    .line 96
     new-instance v0, Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;
 
     const-string/jumbo v1, "DEFAULT"
@@ -48,7 +48,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;->DEFAULT:Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;
 
-    .line 99
+    .line 97
     new-instance v0, Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;
 
     const-string/jumbo v1, "STABLE"
@@ -57,7 +57,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;->STABLE:Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;
 
-    .line 100
+    .line 98
     new-instance v0, Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -68,7 +68,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;->UNKNOWN:Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;
 
-    .line 97
+    .line 95
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;
@@ -94,13 +94,13 @@
     .locals 0
 
     .prologue
-    .line 105
+    .line 103
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 106
+    .line 104
     iput p3, p0, Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;->value:I
 
-    .line 107
+    .line 105
     return-void
 .end method
 
@@ -144,7 +144,7 @@
     .locals 1
 
     .prologue
-    .line 111
+    .line 109
     iget v0, p0, Lcom/tencent/kingkong/database/SQLiteDatabase$LockedDevice;->value:I
 
     return v0

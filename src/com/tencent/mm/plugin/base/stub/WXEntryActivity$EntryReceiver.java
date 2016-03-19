@@ -8,18 +8,20 @@ import android.content.pm.PackageManager;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import com.jg.JgClassChecked;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.platformtools.ad;
-import com.tencent.mm.pluginsdk.l.a;
-import com.tencent.mm.pluginsdk.l.n;
-import com.tencent.mm.pluginsdk.model.app.ay;
+import com.tencent.mm.a.e;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.platformtools.t;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.p;
+import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.pluginsdk.model.app.f;
+import com.tencent.mm.pluginsdk.model.app.g;
+import com.tencent.mm.pluginsdk.model.app.h;
 import com.tencent.mm.pluginsdk.model.app.i;
-import com.tencent.mm.pluginsdk.model.app.j;
-import com.tencent.mm.pluginsdk.model.app.l;
-import com.tencent.mm.pluginsdk.model.app.q;
-import com.tencent.mm.pluginsdk.model.app.r;
-import com.tencent.mm.sdk.platformtools.o;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.pluginsdk.model.app.m;
+import com.tencent.mm.pluginsdk.ui.tools.b;
+import com.tencent.mm.sdk.platformtools.u;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140429", reviewer=20, vComment={com.jg.EType.RECEIVERCHECK})
 public class WXEntryActivity$EntryReceiver
@@ -27,8 +29,9 @@ public class WXEntryActivity$EntryReceiver
 {
   private String appId;
   private String appName;
-  private String cjN;
-  private int cjO;
+  private String cAX;
+  private int cAY;
+  private long cBt;
   private Context context;
   
   public void onReceive(Context paramContext, Intent paramIntent)
@@ -36,29 +39,30 @@ public class WXEntryActivity$EntryReceiver
     if ((paramContext == null) || (paramIntent == null)) {
       return;
     }
-    com.tencent.mm.aj.c.aCZ();
+    c.aSY();
     context = paramContext;
-    paramContext = o.c(paramIntent, "_mmessage_content");
-    cjO = o.a(paramIntent, "_mmessage_sdkVersion", 0);
-    if (!WXEntryActivity.dL(cjO))
+    paramContext = com.tencent.mm.sdk.platformtools.p.g(paramIntent, "_mmessage_content");
+    cBt = com.tencent.mm.sdk.platformtools.p.f(paramIntent, "_mmessage_support_content_type");
+    cAY = com.tencent.mm.sdk.platformtools.p.a(paramIntent, "_mmessage_sdkVersion", 0);
+    if (!WXEntryActivity.ej(cAY))
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "sdk version is not supported, sdkVersion = " + cjO);
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "sdk version is not supported, sdkVersion = " + cAY);
       return;
     }
-    cjN = o.c(paramIntent, "_mmessage_appPackage");
-    if ((cjN == null) || (cjN.length() <= 0))
+    cAX = com.tencent.mm.sdk.platformtools.p.g(paramIntent, "_mmessage_appPackage");
+    if ((cAX == null) || (cAX.length() <= 0))
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unknown package, ignore");
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unknown package, ignore");
       return;
     }
-    if (!WXEntryActivity.h(o.d(paramIntent, "_mmessage_checksum"), WXEntryActivity.g(paramContext, cjO, cjN)))
+    if (!WXEntryActivity.i(com.tencent.mm.sdk.platformtools.p.h(paramIntent, "_mmessage_checksum"), WXEntryActivity.h(paramContext, cAY, cAX)))
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checksum fail");
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checksum fail");
       return;
     }
     if (paramContext == null)
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "check appid failed, null content");
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "check appid failed, null content");
       return;
     }
     paramContext = Uri.parse(paramContext);
@@ -66,70 +70,71 @@ public class WXEntryActivity$EntryReceiver
     try
     {
       appId = paramContext.getQueryParameter("appid");
-      t.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "onReceive, appId = " + appId);
+      u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "onReceive, appId = " + appId);
       if ((appId == null) || (appId.length() <= 0))
       {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "invalid appid, ignore");
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "invalid appid, ignore");
         return;
       }
     }
     catch (Exception paramContext)
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "init: %s", new Object[] { paramContext.toString() });
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "init: %s", new Object[] { paramContext.toString() });
       return;
     }
-    if ((!ax.qZ()) || (ax.tu()))
+    if ((!ah.rh()) || (ah.tM()))
     {
-      t.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "not login, just save the appid : %s", new Object[] { appId });
-      r.uw(appId);
+      u.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "not login, just save the appid : %s", new Object[] { appId });
+      com.tencent.mm.pluginsdk.model.app.p.zW(appId);
       return;
     }
-    if (ax.ts())
+    if (ah.tK())
     {
-      t.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "not login accInitializing, just save the appid : %s", new Object[] { appId });
-      r.uw(appId);
+      u.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "not login accInitializing, just save the appid : %s", new Object[] { appId });
+      com.tencent.mm.pluginsdk.model.app.p.zW(appId);
       return;
     }
-    com.tencent.mm.pluginsdk.model.app.h localh;
+    f localf;
     if ("registerapp".equals(paramIntent))
     {
-      t.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handle app registeration: " + cjN + ", sdkver=" + cjO);
-      if (!ax.qZ())
+      u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handle app registeration: " + cAX + ", sdkver=" + cAY);
+      if (!ah.rh())
       {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "no available account");
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "no available account");
         return;
       }
-      localh = i.V(appId, true);
-      if (!r.b(context, localh, cjN))
+      localf = g.ai(appId, true);
+      if (!com.tencent.mm.pluginsdk.model.app.p.b(context, localf, cAX))
       {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "reg fail, check app fail");
-        ay.azj().un(appId);
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "reg fail, check app fail");
+        aj.aPQ().zN(appId);
         return;
       }
-      if ((localh != null) && (localh.ayW()))
+      if ((localf != null) && (localf.aPB()))
       {
-        paramContext = l.a.gKd;
+        paramContext = i.a.iyK;
         if (paramContext != null) {
-          paramContext.l(context, appId, cjN);
+          paramContext.m(context, appId, cAX);
         }
       }
     }
     for (paramContext = null;; paramContext = null)
     {
+      boolean bool;
       try
       {
         paramIntent = context.getPackageManager();
-        localApplicationInfo = paramIntent.getApplicationInfo(cjN, 0);
+        localApplicationInfo = paramIntent.getApplicationInfo(cAX, 0);
         if (localApplicationInfo == null)
         {
-          t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "package not installed");
+          u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "package not installed");
           return;
         }
       }
       catch (IncompatibleClassChangeError paramContext)
       {
         ApplicationInfo localApplicationInfo;
-        t.printErrStackTrace("MicroMsg.Crash", paramContext, "May cause dvmFindCatchBlock crash!", new Object[0]);
+        u.printErrStackTrace("MicroMsg.Crash", paramContext, "May cause dvmFindCatchBlock crash!", new Object[0]);
         throw ((IncompatibleClassChangeError)new IncompatibleClassChangeError("May cause dvmFindCatchBlock crash!").initCause(paramContext));
         appName = localApplicationInfo.loadLabel(paramIntent).toString();
         paramIntent = localApplicationInfo.loadIcon(paramIntent);
@@ -138,91 +143,106 @@ public class WXEntryActivity$EntryReceiver
         }
         paramIntent = ((BitmapDrawable)paramIntent).getBitmap();
         paramContext = paramIntent;
-        if (localh != null)
+        if (localf != null)
         {
-          ay.azk();
+          aj.aPR();
           paramIntent = appId;
           if ((paramIntent != null) && (paramIntent.length() != 0)) {
-            break label760;
+            break label784;
           }
-          t.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "hasIcon, appId is null");
+          u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "hasIcon, appId is null");
           bool = false;
           if (bool) {}
         }
         else
         {
-          ay.azk().t(appId, paramContext);
+          aj.aPR().t(appId, paramContext);
         }
-        if (localh == null)
+        if (localf == null)
         {
-          paramContext = new com.tencent.mm.pluginsdk.model.app.h();
+          paramContext = new f();
           field_appId = appId;
           field_appName = "";
-          field_packageName = cjN;
+          field_packageName = cAX;
           field_status = 0;
-          paramIntent = r.av(context, cjN);
+          paramIntent = com.tencent.mm.pluginsdk.model.app.p.aI(context, cAX);
           if (paramIntent != null) {
             field_signature = paramIntent;
           }
           field_modifyTime = System.currentTimeMillis();
-          bool = ay.azk().m(paramContext);
-          com.tencent.mm.pluginsdk.ui.tools.h.vt(appId);
-          if ((!bool) || (!ad.iW(field_openId))) {
+          field_appSupportContentType = cBt;
+          bool = aj.aPR().m(paramContext);
+          b.AR(appId);
+          if ((!bool) || (!t.kz(field_openId))) {
             break;
           }
-          t.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
-          ay.azn().ut(appId);
+          u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
+          aj.aPV().zT(appId);
           return;
         }
       }
       catch (Throwable paramIntent)
       {
-        boolean bool;
         for (;;)
         {
-          t.printErrStackTrace("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", paramIntent, "package not installed", new Object[0]);
+          u.printErrStackTrace("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", paramIntent, "package not installed", new Object[0]);
           continue;
-          label760:
-          bool = com.tencent.mm.a.c.az(l.aq(paramIntent, 1));
+          label784:
+          bool = e.ax(i.aG(paramIntent, 1));
         }
-        if ((field_status == 2) || (field_status == 3) || (field_status == 4))
+      }
+      int i;
+      if ((field_appInfoFlag & 0x2000) == 0) {
+        if (cBt != field_appSupportContentType)
         {
-          if (!localh.ayW()) {
-            com.tencent.mm.pluginsdk.ui.tools.h.vt(appId);
+          i = 1;
+          label824:
+          field_appSupportContentType = cBt;
+        }
+      }
+      for (;;)
+      {
+        if ((field_status == 2) || (field_status == 3) || (field_status == 4) || (i != 0))
+        {
+          if (!localf.aPB()) {
+            b.AR(appId);
           }
           field_status = 0;
-          bool = ay.azk().a(localh, new String[0]);
-          t.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, updateRet = " + bool);
+          bool = aj.aPR().a(localf, new String[0]);
+          u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, updateRet = " + bool);
         }
-      }
-      if (!ad.iW(field_openId)) {
-        break;
-      }
-      t.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
-      ay.azn().ut(appId);
-      return;
-      if (!"unregisterapp".equals(paramIntent)) {
-        break;
-      }
-      t.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handle app unregisteration: " + cjN + ", sdkver=" + cjO);
-      if (!ax.qZ())
-      {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "no available account");
+        if (!t.kz(field_openId)) {
+          break;
+        }
+        u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
+        aj.aPV().zT(appId);
         return;
-      }
-      paramContext = i.V(appId, false);
-      if (!r.b(context, paramContext, cjN))
-      {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unreg fail, check app fail");
+        i = 0;
+        break label824;
+        if (!"unregisterapp".equals(paramIntent)) {
+          break;
+        }
+        u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handle app unregisteration: " + cAX + ", sdkver=" + cAY);
+        if (!ah.rh())
+        {
+          u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "no available account");
+          return;
+        }
+        paramContext = g.ai(appId, false);
+        if (!com.tencent.mm.pluginsdk.model.app.p.b(context, paramContext, cAX))
+        {
+          u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unreg fail, check app fail");
+          return;
+        }
+        if ((paramContext == null) || (field_status == 5)) {
+          break;
+        }
+        field_status = 4;
+        aj.aPR().a(paramContext, new String[0]);
+        b.AS(appId);
         return;
+        i = 0;
       }
-      if ((paramContext == null) || (field_status == 5)) {
-        break;
-      }
-      field_status = 4;
-      ay.azk().a(paramContext, new String[0]);
-      com.tencent.mm.pluginsdk.ui.tools.h.vu(appId);
-      return;
     }
   }
 }

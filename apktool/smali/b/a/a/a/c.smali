@@ -24,26 +24,6 @@
 
 
 # virtual methods
-.method public aVO()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 20
-    const-string/jumbo v0, "http://api.twitter.com/oauth/request_token"
-
-    return-object v0
-.end method
-
-.method public aVP()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 14
-    const-string/jumbo v0, "http://api.twitter.com/oauth/access_token"
-
-    return-object v0
-.end method
-
 .method public final b(Lb/a/d/i;)Ljava/lang/String;
     .locals 4
 
@@ -64,6 +44,26 @@
     invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
+
+    return-object v0
+.end method
+
+.method public boD()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 20
+    const-string/jumbo v0, "http://api.twitter.com/oauth/request_token"
+
+    return-object v0
+.end method
+
+.method public boE()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 14
+    const-string/jumbo v0, "http://api.twitter.com/oauth/access_token"
 
     return-object v0
 .end method

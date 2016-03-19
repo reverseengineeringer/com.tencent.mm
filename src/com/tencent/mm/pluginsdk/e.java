@@ -1,70 +1,99 @@
 package com.tencent.mm.pluginsdk;
 
+import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.res.Resources;
+import android.graphics.Rect;
+import android.os.Build.VERSION;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.view.Window;
+import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.j;
 
-final class e
-  implements com.tencent.mm.q.d
+public final class e
 {
-  e(Context paramContext, int paramInt, String paramString1, String paramString2, d.a parama) {}
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.q.j paramj)
+  public static int cI(Context paramContext)
   {
-    ax.tm().b(233, this);
-    t.i("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "[oneliang][doDeepLink][onSceneEnd]:errType:%s,errCode:%s,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
-    boolean bool2 = false;
-    boolean bool3 = false;
-    boolean bool1 = bool3;
-    Object localObject;
-    if (paramj != null)
+    j localj;
+    int i;
+    if ((paramContext instanceof MMActivity))
     {
-      bool1 = bool3;
-      if ((paramj instanceof com.tencent.mm.modelsimple.l))
-      {
-        localObject = (com.tencent.mm.modelsimple.l)paramj;
-        t.d("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "bitset:" + ((com.tencent.mm.modelsimple.l)localObject).AH());
-        long l = ((com.tencent.mm.modelsimple.l)localObject).AH();
-        localObject = ((com.tencent.mm.modelsimple.l)localObject).AA();
-        if (!d.m((String)localObject, l)) {
-          break label316;
-        }
+      localj = koJ;
+      if (iH == null) {
+        i = 0;
       }
     }
-    for (bool1 = bool2;; bool1 = true)
+    for (;;)
     {
-      try
-      {
-        t.i("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "[oneliang] uri%s", new Object[] { localObject });
-        bool1 = bool2;
-        bool2 = d.as(val$context, (String)localObject);
-        bool1 = bool2;
-        com.tencent.mm.plugin.report.service.j.eJZ.f(11405, new Object[] { localObject, Integer.valueOf(1), Integer.valueOf(bVt), brL, bn.iV(val$url) });
-        bool1 = bool2;
+      int j = i;
+      if (i <= 0) {
+        j = paramContext.getResources().getDimensionPixelSize(2131034625);
       }
-      catch (Exception localException)
+      return j;
+      i = iH.getHeight();
+      continue;
+      i = 0;
+    }
+  }
+  
+  public static int cJ(Context paramContext)
+  {
+    if ((paramContext instanceof Activity))
+    {
+      Rect localRect = new Rect();
+      ((Activity)paramContext).getWindow().getDecorView().getWindowVisibleDisplayFrame(localRect);
+      int i = ((Activity)paramContext).getWindow().getDecorView().getHeight();
+      int[] arrayOfInt = new int[2];
+      ((Activity)paramContext).getWindow().getDecorView().getLocationOnScreen(arrayOfInt);
+      if ((i - localRect.height() >= 0) && (arrayOfInt[1] > 200)) {
+        return i - localRect.height();
+      }
+      return top;
+    }
+    return com.tencent.mm.aw.a.fromDPToPix(paramContext, 20);
+  }
+  
+  public static void g(MMActivity paramMMActivity)
+  {
+    if (Build.VERSION.SDK_INT >= 16) {
+      paramMMActivity.requestWindowFeature(9);
+    }
+  }
+  
+  public static void h(MMActivity paramMMActivity)
+  {
+    if (Build.VERSION.SDK_INT >= 16) {
+      paramMMActivity.getWindow().getDecorView().post(new Runnable()
       {
-        for (;;)
+        public final void run()
         {
-          t.printErrStackTrace("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", localException, "", new Object[] { "" });
-          com.tencent.mm.plugin.report.service.j.eJZ.f(11405, new Object[] { localObject, Integer.valueOf(0), Integer.valueOf(bVt), brL, bn.iV(val$url) });
+          cXd.getWindow().getDecorView().setSystemUiVisibility(cXd.getWindow().getDecorView().getSystemUiVisibility() | 0x100);
+          MMActivity localMMActivity = cXd;
+          if ((localMMActivity instanceof MMActivity)) {}
+          for (int i = iF.aP().getHeight();; i = 0)
+          {
+            DisplayMetrics localDisplayMetrics = localMMActivity.getResources().getDisplayMetrics();
+            if (widthPixels > heightPixels) {
+              i = localMMActivity.getResources().getDimensionPixelSize(2131034626);
+            }
+            int j = i;
+            if (i <= 0) {
+              if (widthPixels <= heightPixels) {
+                break label144;
+              }
+            }
+            label144:
+            for (j = localMMActivity.getResources().getDimensionPixelSize(2131034626);; j = localMMActivity.getResources().getDimensionPixelSize(2131034625))
+            {
+              cXd.koJ.koO.setPadding(0, j - com.tencent.mm.aw.a.fromDPToPix(cXd, 2), 0, 0);
+              return;
+            }
+          }
         }
-      }
-      if (gJU != null) {
-        gJU.a(paramInt1, paramInt2, paramString, paramj, bool1);
-      }
-      return;
-      label316:
-      t.i("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "[oneliang] no permission");
-      Intent localIntent = new Intent();
-      localIntent.setFlags(268435456);
-      localIntent.setClassName(aa.getContext(), "com.tencent.mm.plugin.webview.ui.tools.WebViewUI");
-      localIntent.putExtra("rawUrl", "http://support.weixin.qq.com/deeplink/noaccess#wechat_redirect");
-      aa.getContext().startActivity(localIntent);
-      com.tencent.mm.plugin.report.service.j.eJZ.f(11405, new Object[] { localObject, Integer.valueOf(0), Integer.valueOf(bVt), brL, bn.iV(val$url) });
+      });
     }
   }
 }

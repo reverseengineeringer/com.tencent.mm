@@ -1,10 +1,30 @@
 package com.tencent.mm.protocal;
 
-public abstract interface i$b
+import com.tencent.mm.protocal.b.ee;
+import com.tencent.mm.sdk.platformtools.u;
+
+public final class i$b
+  extends h.d
+  implements h.b
 {
-  public abstract boolean aDr();
+  public ee iUO = new ee();
   
-  public abstract int z(byte[] paramArrayOfByte);
+  public final boolean auE()
+  {
+    return true;
+  }
+  
+  public final int getCmdId()
+  {
+    return 1000000312;
+  }
+  
+  public final int y(byte[] paramArrayOfByte)
+  {
+    iUO = ((ee)new ee().am(paramArrayOfByte));
+    u.d("!24@/B4Tb64lLpKXSbY2VQERGw==", "retcode:" + iUO.fmB);
+    return iUO.fmB;
+  }
 }
 
 /* Location:

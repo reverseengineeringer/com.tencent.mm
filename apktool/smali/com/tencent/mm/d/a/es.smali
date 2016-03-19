@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/es;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aBt:Lcom/tencent/mm/d/a/es$a;
+.field public azr:Lcom/tencent/mm/d/a/es$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/es;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/es;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/es;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/es;->arR:Z
 
     return-void
 .end method
@@ -42,23 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/es$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/es$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/es;->aBt:Lcom/tencent/mm/d/a/es$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/es;->azr:Lcom/tencent/mm/d/a/es$a;
 
     .line 8
-    const-string/jumbo v0, "NotificationSendFailMsgFinish"
+    const-string/jumbo v0, "GameDownloadReport4WebView"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/es;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/es;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/es;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/es;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/es;->jUI:Z
 
     return-void
 .end method

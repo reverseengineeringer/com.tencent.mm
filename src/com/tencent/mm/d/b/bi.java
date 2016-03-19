@@ -2,26 +2,38 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class bi
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aIl;
-  private static final int aKr = "msgId".hashCode();
-  private static final int baf = "cmsgId".hashCode();
-  private boolean aHT = true;
-  private boolean aKm = true;
-  private boolean bae = true;
-  public String field_cmsgId;
-  public String field_content;
-  public long field_msgId;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int aMJ = "appId".hashCode();
+  private static final int aMQ;
+  private static final int aNA = "packageName".hashCode();
+  private static final int bdO;
+  private static final int bdP;
+  private static final int bdQ;
+  private boolean aMC = true;
+  private boolean aMv = true;
+  private boolean aNd = true;
+  private boolean bdL = true;
+  private boolean bdM = true;
+  private boolean bdN = true;
+  public String field_appId;
+  public int field_msgState;
+  public int field_msgTypeFlag;
+  public String field_packageName;
+  public int field_sceneFlag;
+  public int field_status;
   
   static
   {
-    aIl = "content".hashCode();
+    aMQ = "status".hashCode();
+    bdO = "sceneFlag".hashCode();
+    bdP = "msgTypeFlag".hashCode();
+    bdQ = "msgState".hashCode();
   }
   
   public final void c(Cursor paramCursor)
@@ -37,11 +49,11 @@ public abstract class bi
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aKr != k) {
+      if (aMJ != k) {
         break label65;
       }
-      field_msgId = paramCursor.getLong(i);
-      aKm = true;
+      field_appId = paramCursor.getString(i);
+      aMv = true;
     }
     for (;;)
     {
@@ -49,33 +61,45 @@ public abstract class bi
       break label20;
       break;
       label65:
-      if (baf == k) {
-        field_cmsgId = paramCursor.getString(i);
-      } else if (aIl == k) {
-        field_content = paramCursor.getString(i);
-      } else if (aHH == k) {
-        ibV = paramCursor.getLong(i);
+      if (aNA == k) {
+        field_packageName = paramCursor.getString(i);
+      } else if (aMQ == k) {
+        field_status = paramCursor.getInt(i);
+      } else if (bdO == k) {
+        field_sceneFlag = paramCursor.getInt(i);
+      } else if (bdP == k) {
+        field_msgTypeFlag = paramCursor.getInt(i);
+      } else if (bdQ == k) {
+        field_msgState = paramCursor.getInt(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aKm) {
-      localContentValues.put("msgId", Long.valueOf(field_msgId));
+    if (aMv) {
+      localContentValues.put("appId", field_appId);
     }
-    if (bae) {
-      localContentValues.put("cmsgId", field_cmsgId);
+    if (aNd) {
+      localContentValues.put("packageName", field_packageName);
     }
-    if (field_content == null) {
-      field_content = "";
+    if (aMC) {
+      localContentValues.put("status", Integer.valueOf(field_status));
     }
-    if (aHT) {
-      localContentValues.put("content", field_content);
+    if (bdL) {
+      localContentValues.put("sceneFlag", Integer.valueOf(field_sceneFlag));
     }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (bdM) {
+      localContentValues.put("msgTypeFlag", Integer.valueOf(field_msgTypeFlag));
+    }
+    if (bdN) {
+      localContentValues.put("msgState", Integer.valueOf(field_msgState));
+    }
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

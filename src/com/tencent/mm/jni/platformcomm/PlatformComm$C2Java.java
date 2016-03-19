@@ -6,9 +6,9 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -65,7 +65,7 @@ public class PlatformComm$C2Java
     }
     catch (Exception localException)
     {
-      t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+      u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
       new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
     }
     return null;
@@ -83,7 +83,7 @@ public class PlatformComm$C2Java
     }
     catch (Exception localException)
     {
-      t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+      u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
       new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
     }
     return 0;
@@ -96,13 +96,13 @@ public class PlatformComm$C2Java
       if (PlatformComm.access$000() == null) {
         return null;
       }
-      int i = al.cQ(PlatformComm.access$000());
+      int i = ah.du(PlatformComm.access$000());
       if (i != 0)
       {
         PlatformComm.SIMInfo localSIMInfo = new PlatformComm.SIMInfo();
         ispCode = String.valueOf(i);
-        t.d("!24@zf96t1YgIScRsX2UOICiFQ==", "getISPCode MCC_MNC=%s", new Object[] { ispCode });
-        ispName = al.cR(PlatformComm.access$000());
+        u.d("!24@zf96t1YgIScRsX2UOICiFQ==", "getISPCode MCC_MNC=%s", new Object[] { ispCode });
+        ispName = ah.dv(PlatformComm.access$000());
         return localSIMInfo;
       }
     }
@@ -132,7 +132,7 @@ public class PlatformComm$C2Java
       {
         for (;;)
         {
-          t.e("!24@zf96t1YgIScRsX2UOICiFQ==", "getActiveNetworkInfo failed.");
+          u.e("!24@zf96t1YgIScRsX2UOICiFQ==", "getActiveNetworkInfo failed.");
           localObject2 = null;
         }
         Object localObject2 = (WifiManager)PlatformComm.access$000().getSystemService("wifi");
@@ -206,9 +206,9 @@ public class PlatformComm$C2Java
         return 0L;
       }
       if (paramBoolean) {
-        return a.qV();
+        return a.qR();
       }
-      long l = a.qU();
+      long l = a.qQ();
       return l;
     }
     catch (Exception localException) {}
@@ -222,23 +222,23 @@ public class PlatformComm$C2Java
     }
     try
     {
-      int i = al.bS(PlatformComm.access$000());
+      int i = ah.cn(PlatformComm.access$000());
       if (i == -1) {
         return -1;
       }
-      if (al.cT(PlatformComm.access$000())) {
+      if (ah.dx(PlatformComm.access$000())) {
         return 3;
       }
-      if (al.cW(PlatformComm.access$000())) {
+      if (ah.dA(PlatformComm.access$000())) {
         return 4;
       }
-      if (al.cU(PlatformComm.access$000())) {
+      if (ah.dy(PlatformComm.access$000())) {
         return 5;
       }
-      if (al.my(i)) {
+      if (ah.ps(i)) {
         return 1;
       }
-      boolean bool = al.mx(i);
+      boolean bool = ah.pr(i);
       if (bool) {
         return 2;
       }
@@ -246,7 +246,7 @@ public class PlatformComm$C2Java
     }
     catch (Exception localException)
     {
-      t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+      u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
       new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
     }
     return -1;
@@ -259,12 +259,12 @@ public class PlatformComm$C2Java
     }
     try
     {
-      boolean bool = al.cZ(PlatformComm.access$000());
+      boolean bool = ah.dD(PlatformComm.access$000());
       return bool;
     }
     catch (Exception localException)
     {
-      t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+      u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
       new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
     }
     return false;
@@ -272,12 +272,18 @@ public class PlatformComm$C2Java
   
   public static void restartProcess()
   {
-    if (PlatformComm.blL == null) {
+    if (PlatformComm.bwq == null) {
       return;
     }
     try
     {
-      PlatformComm.qW().post(new c());
+      PlatformComm.qS().post(new Runnable()
+      {
+        public final void run()
+        {
+          PlatformComm.bwq.restartProcess();
+        }
+      });
       return;
     }
     catch (Exception localException) {}
@@ -296,7 +302,7 @@ public class PlatformComm$C2Java
     }
     catch (Exception localException)
     {
-      t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+      u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
       new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
     }
     return false;
@@ -315,7 +321,7 @@ public class PlatformComm$C2Java
     }
     catch (Exception localException)
     {
-      t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+      u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
       new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
     }
     return false;
@@ -333,7 +339,7 @@ public class PlatformComm$C2Java
     }
     catch (Exception localException)
     {
-      t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+      u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
       new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
     }
     return null;

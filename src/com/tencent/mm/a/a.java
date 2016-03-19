@@ -1,78 +1,112 @@
 package com.tencent.mm.a;
 
-import com.tencent.mm.pointers.PByteArray;
+import android.util.Base64;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.security.InvalidParameterException;
+import java.security.Key;
+import java.util.Arrays;
+import javax.crypto.Cipher;
+import javax.crypto.CipherOutputStream;
+import javax.crypto.spec.IvParameterSpec;
+import javax.crypto.spec.SecretKeySpec;
 
 public final class a
 {
-  public static int a(PByteArray paramPByteArray, byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
+  private static byte[] au(String paramString)
   {
-    if ((paramArrayOfByte1 == null) || (paramArrayOfByte2 == null)) {
-      return 2;
+    if (paramString.length() <= 0) {
+      return null;
     }
-    if ((paramArrayOfByte1.length < 0) || (paramArrayOfByte2.length <= 0)) {
-      return 2;
-    }
-    int i = 8 - paramArrayOfByte1.length % 8;
-    if (i == 0) {
-      i = 8;
-    }
-    for (;;)
+    byte[] arrayOfByte = new byte[paramString.length() / 2];
+    int i = 0;
+    while (i < paramString.length() / 2)
     {
-      byte[] arrayOfByte = new byte[paramArrayOfByte1.length + i];
-      int j = 0;
-      while (j < paramArrayOfByte1.length)
-      {
-        arrayOfByte[j] = paramArrayOfByte1[j];
-        j += 1;
-      }
-      j = 0;
-      while (j < i)
-      {
-        arrayOfByte[(paramArrayOfByte1.length + j)] = ((byte)i);
-        j += 1;
-      }
-      value = new byte[paramArrayOfByte1.length + i + 32];
-      if (g.a(value, arrayOfByte, arrayOfByte.length, paramArrayOfByte2.length, paramArrayOfByte2, 0) == 0) {
-        return 11;
-      }
-      paramArrayOfByte1 = new byte[paramArrayOfByte1.length + i + 8];
-      i = 0;
-      while (i < paramArrayOfByte1.length)
-      {
-        paramArrayOfByte1[i] = value[i];
-        i += 1;
-      }
-      value = paramArrayOfByte1;
-      return 0;
-    }
-  }
-  
-  public static int b(PByteArray paramPByteArray, byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
-  {
-    if ((paramArrayOfByte1 == null) || (paramArrayOfByte2 == null)) {
-      return 2;
-    }
-    if ((paramArrayOfByte1.length < 0) || (paramArrayOfByte2.length <= 0)) {
-      return 2;
-    }
-    int i = paramArrayOfByte1.length;
-    value = new byte[i];
-    if (g.a(value, paramArrayOfByte1, i, paramArrayOfByte2.length, paramArrayOfByte2, 1) == 0) {
-      return 12;
-    }
-    int j = value[(i - 1 - 8)];
-    if ((j <= 0) || (j > 8)) {
-      return 12;
-    }
-    paramArrayOfByte1 = new byte[i - j - 8];
-    i = 0;
-    while (i < paramArrayOfByte1.length)
-    {
-      paramArrayOfByte1[i] = value[i];
+      arrayOfByte[i] = ((byte)(Integer.parseInt(paramString.substring(i * 2, i * 2 + 1), 16) * 16 + Integer.parseInt(paramString.substring(i * 2 + 1, i * 2 + 2), 16)));
       i += 1;
     }
-    value = paramArrayOfByte1;
-    return 0;
+    return arrayOfByte;
+  }
+  
+  private static byte[] c(byte[] paramArrayOfByte, String paramString)
+  {
+    try
+    {
+      paramString = new SecretKeySpec(paramString.getBytes(), "AES");
+      Cipher localCipher = Cipher.getInstance("AES/ECB/PKCS5Padding");
+      localCipher.init(2, paramString);
+      paramArrayOfByte = localCipher.doFinal(paramArrayOfByte);
+      return paramArrayOfByte;
+    }
+    catch (Exception paramArrayOfByte)
+    {
+      u.e("!32@/B4Tb64lLpJxeqvX38nFlhZ4ZHYt2ISy", ay.b(paramArrayOfByte));
+    }
+    return null;
+  }
+  
+  public static boolean e(String paramString1, String paramString2, String paramString3)
+  {
+    boolean bool2 = false;
+    if (ay.kz("AES/CBC/PKCS7Padding")) {
+      throw new InvalidParameterException("invalid cipherTransformation");
+    }
+    paramString2 = new File(paramString2);
+    paramString3 = new File(paramString3);
+    boolean bool1 = bool2;
+    if (paramString2.exists())
+    {
+      bool1 = bool2;
+      if (paramString2.isFile())
+      {
+        if (!paramString3.getParentFile().exists()) {
+          paramString3.getParentFile().mkdirs();
+        }
+        paramString3.createNewFile();
+        paramString2 = new FileInputStream(paramString2);
+        paramString3 = new FileOutputStream(paramString3);
+        paramString1 = Base64.decode(paramString1.getBytes(), 0);
+        Object localObject = new SecretKeySpec(paramString1, "AES");
+        Cipher localCipher = Cipher.getInstance("AES/CBC/PKCS7Padding");
+        localCipher.init(2, (Key)localObject, new IvParameterSpec(Arrays.copyOf(paramString1, paramString1.length)));
+        paramString1 = new CipherOutputStream(paramString3, localCipher);
+        localObject = new byte['Ѐ'];
+        for (;;)
+        {
+          int i = paramString2.read((byte[])localObject);
+          if (i == -1) {
+            break;
+          }
+          paramString1.write((byte[])localObject, 0, i);
+          paramString1.flush();
+        }
+        paramString1.close();
+        paramString3.close();
+        paramString2.close();
+        bool1 = true;
+      }
+    }
+    return bool1;
+  }
+  
+  public static String n(String paramString1, String paramString2)
+  {
+    if (ay.kz(paramString1)) {
+      return "";
+    }
+    try
+    {
+      paramString2 = new String(c(au(paramString1), paramString2));
+      return paramString2;
+    }
+    catch (Exception paramString2)
+    {
+      u.e("!32@/B4Tb64lLpJxeqvX38nFlhZ4ZHYt2ISy", ay.b(paramString2));
+    }
+    return paramString1;
   }
 }
 

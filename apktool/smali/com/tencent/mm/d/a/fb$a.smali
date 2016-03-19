@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public azs:Ljava/util/ArrayList;
+.field public appId:Ljava/lang/String;
 
 
 # direct methods

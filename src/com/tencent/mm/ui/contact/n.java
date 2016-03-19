@@ -1,21 +1,24 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.ui.i.a;
+import java.util.List;
 
-final class n
-  implements i.a
+public abstract class n
+  extends m
 {
-  n(AddressUI.a parama) {}
+  public List cvM;
+  public boolean llg;
   
-  public final void DY()
+  public n(l paraml, List paramList, boolean paramBoolean1, boolean paramBoolean2)
   {
-    AddressUI.a locala = jet;
-    AddressUI.a.a(jet).getCount();
-    AddressUI.a.b(locala);
-    AddressUI.a.a(jet).aQa();
+    super(paraml, paramBoolean2);
+    cvM = paramList;
+    llg = paramBoolean1;
   }
   
-  public final void DZ() {}
+  public int He(String paramString)
+  {
+    return -1;
+  }
 }
 
 /* Location:

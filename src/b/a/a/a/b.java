@@ -10,11 +10,11 @@ public abstract class b
     return new b.a.e.a(this, parama);
   }
   
-  public abstract String aVO();
-  
-  public abstract String aVP();
-  
   public abstract String b(i parami);
+  
+  public abstract String boD();
+  
+  public abstract String boE();
 }
 
 /* Location:

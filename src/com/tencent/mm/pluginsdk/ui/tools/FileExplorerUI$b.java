@@ -5,7 +5,7 @@ import java.io.File;
 final class FileExplorerUI$b
 {
   File file;
-  String hed;
+  String iRV;
   
   private FileExplorerUI$b(FileExplorerUI paramFileExplorerUI) {}
 }

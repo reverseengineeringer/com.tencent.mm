@@ -15,13 +15,7 @@
 
 
 # instance fields
-.field public axa:Ljava/lang/String;
-
-.field public content:Ljava/lang/String;
-
-.field public flags:I
-
-.field public type:I
+.field public avg:J
 
 
 # direct methods

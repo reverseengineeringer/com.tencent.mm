@@ -1,37 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class cq
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ayu = new a();
-  public b ayv = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awf = new a();
+  public b awg = new b();
   
   public cq()
   {
-    id = "FileDownloadAdd";
-    hXT = atO;
+    id = "ExDeviceSendDataToNetworkDeviceState";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String appId;
-    public String apy;
-    public boolean ayA = false;
-    public boolean ayB = false;
-    public String ayw;
-    public String ayx;
-    public int ayy = 1;
-    public boolean ayz = false;
+    public String alN;
+    public String awh;
+    public int progress;
   }
   
-  public static final class b
-  {
-    public long ayC;
-  }
+  public static final class b {}
 }
 
 /* Location:

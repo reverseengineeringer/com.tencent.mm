@@ -1,12 +1,13 @@
 package com.tencent.mm.ui.base;
 
 import android.content.Context;
+import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.os.Looper;
 import android.os.Message;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.e;
-import android.support.v4.view.o;
+import android.support.v4.view.j;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.GestureDetector.SimpleOnGestureListener;
@@ -14,42 +15,92 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.MeasureSpec;
 import android.view.View.OnTouchListener;
-import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.aa;
 import java.lang.ref.WeakReference;
 
 public class MMViewPager
   extends ViewPager
 {
-  private GestureDetector cPx;
-  private int csg;
-  private int csh;
-  private View.OnTouchListener gfN;
-  private ac handler = new ac(Looper.getMainLooper());
-  private MultiTouchImageView iIG;
-  private g iIH;
-  private boolean iII = false;
-  private boolean iIJ = false;
-  private boolean iIK = false;
-  private boolean iIL = false;
-  private boolean iIM = false;
-  private float iIN;
-  private float iIO;
-  private a iIP;
-  private d iIQ;
-  private b iIR;
-  private ViewPager.e iIS = null;
-  private float iIT = 0.0F;
-  private MotionEvent iIU;
-  private long iIV = 0L;
+  private int cJE;
+  private int cJF;
+  private GestureDetector dpl;
+  private View.OnTouchListener hIN;
+  private aa handler = new aa(Looper.getMainLooper());
+  private MultiTouchImageView kHS;
+  private g kHT;
+  private boolean kHU = false;
+  private boolean kHV = false;
+  private boolean kHW = false;
+  private boolean kHX = false;
+  private boolean kHY = false;
+  private float kHZ;
+  private float kIa;
+  private a kIb;
+  private d kIc;
+  private b kId;
+  private ViewPager.e kIe = null;
+  private float kIf = 0.0F;
+  private MotionEvent kIg;
+  private long kIh = 0L;
   
   public MMViewPager(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     setStaticTransformationsEnabled(true);
-    iIH = new g(new WeakReference(this));
-    cPx = new GestureDetector(paramContext, new c((byte)0));
-    super.setOnPageChangeListener(new ct(this));
-    super.setOnTouchListener(new cu(this));
+    kHT = new g(new WeakReference(this));
+    dpl = new GestureDetector(paramContext, new c((byte)0));
+    super.setOnPageChangeListener(new ViewPager.e()
+    {
+      public final void a(int paramAnonymousInt1, float paramAnonymousFloat, int paramAnonymousInt2)
+      {
+        if (MMViewPager.d(MMViewPager.this) != null) {
+          MMViewPager.d(MMViewPager.this).a(paramAnonymousInt1, paramAnonymousFloat, paramAnonymousInt2);
+        }
+        MMViewPager.a(MMViewPager.this, paramAnonymousFloat);
+      }
+      
+      public final void n(int paramAnonymousInt)
+      {
+        if (MMViewPager.d(MMViewPager.this) != null) {
+          MMViewPager.d(MMViewPager.this).n(paramAnonymousInt);
+        }
+      }
+      
+      public final void o(int paramAnonymousInt)
+      {
+        if (MMViewPager.d(MMViewPager.this) != null) {
+          MMViewPager.d(MMViewPager.this).o(paramAnonymousInt);
+        }
+        if (paramAnonymousInt == 0) {
+          MMViewPager.a(MMViewPager.this, 0.0F);
+        }
+      }
+    });
+    super.setOnTouchListener(new View.OnTouchListener()
+    {
+      public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
+      {
+        if (MMViewPager.e(MMViewPager.this) != null) {}
+        for (boolean bool1 = MMViewPager.e(MMViewPager.this).onTouch(paramAnonymousView, paramAnonymousMotionEvent);; bool1 = false)
+        {
+          paramAnonymousView = MMViewPager.f(MMViewPager.this);
+          if (paramAnonymousView == null)
+          {
+            MMViewPager.a(MMViewPager.this, null);
+            MMViewPager.g(MMViewPager.this).onTouchEvent(paramAnonymousMotionEvent);
+            return bool1;
+          }
+          MMViewPager.a(MMViewPager.this, paramAnonymousView);
+          boolean bool2 = MMViewPager.a(MMViewPager.this, MMViewPager.a(MMViewPager.this), paramAnonymousMotionEvent);
+          if (MMViewPager.h(MMViewPager.this) != null) {
+            MMViewPager.h(MMViewPager.this).recycle();
+          }
+          MMViewPager.a(MMViewPager.this, MotionEvent.obtainNoHistory(paramAnonymousMotionEvent));
+          MMViewPager.g(MMViewPager.this).onTouchEvent(paramAnonymousMotionEvent);
+          return (bool2) || (bool1);
+        }
+      }
+    });
   }
   
   public MMViewPager(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
@@ -61,7 +112,7 @@ public class MMViewPager
   private boolean a(float paramFloat1, float paramFloat2, View paramView, float paramFloat3)
   {
     int i;
-    if ((iIK) || (iIJ))
+    if ((kHW) || (kHV))
     {
       i = 0;
       if (i == 0) {
@@ -71,13 +122,13 @@ public class MMViewPager
     for (;;)
     {
       return true;
-      if (getAdapter().b(paramView) == getAdapter().getCount() - 1)
+      if (getAdapter().e(paramView) == getAdapter().getCount() - 1)
       {
-        if (iIM)
+        if (kHY)
         {
           if (paramFloat3 > 0.0F)
           {
-            iIG.s(-paramFloat3, 0.0F);
+            kHS.q(-paramFloat3, 0.0F);
             i = 1;
             break;
           }
@@ -86,31 +137,31 @@ public class MMViewPager
         }
         if (paramFloat3 > 0.0F)
         {
-          if (paramFloat2 < csg) {
-            iIM = true;
+          if (paramFloat2 < cJE) {
+            kHY = true;
           }
-          iIG.s(-paramFloat3, 0.0F);
+          kHS.q(-paramFloat3, 0.0F);
           i = 1;
           break;
         }
       }
-      iIM = false;
+      kHY = false;
       i = 0;
       break;
       label131:
-      if ((iIK) || (iIJ)) {
+      if ((kHW) || (kHV)) {
         i = 0;
       }
       while (i == 0)
       {
         return false;
-        if (getAdapter().b(paramView) == 0)
+        if (getAdapter().e(paramView) == 0)
         {
-          if (iIL)
+          if (kHX)
           {
             if (paramFloat3 < 0.0F)
             {
-              iIG.s(-paramFloat3, 0.0F);
+              kHS.q(-paramFloat3, 0.0F);
               i = 1;
               continue;
             }
@@ -120,50 +171,28 @@ public class MMViewPager
           if (paramFloat3 < 0.0F)
           {
             if (paramFloat1 > 0.0F) {
-              iIL = true;
+              kHX = true;
             }
-            iIG.s(-paramFloat3, 0.0F);
+            kHS.q(-paramFloat3, 0.0F);
             i = 1;
             continue;
           }
         }
-        iIL = false;
+        kHX = false;
         i = 0;
       }
     }
   }
   
-  private void aNj()
-  {
-    iIH.removeMessages(1);
-  }
-  
-  private void aNk()
-  {
-    aNj();
-    g localg = iIH;
-    iJc = 15L;
-    localg.sendEmptyMessageDelayed(1, 15L);
-  }
-  
-  private boolean aNl()
-  {
-    if (iIJ) {
-      return true;
-    }
-    iIK = true;
-    return false;
-  }
-  
   private boolean b(float paramFloat1, float paramFloat2, float paramFloat3)
   {
-    if ((iIK) || (iIL) || (iIM)) {}
+    if ((kHW) || (kHX) || (kHY)) {}
     do
     {
       do
       {
         return true;
-        iIJ = true;
+        kHV = true;
         if (paramFloat1 >= 0.0F) {
           break;
         }
@@ -172,15 +201,37 @@ public class MMViewPager
       if (paramFloat2 - paramFloat1 > 0.0F) {
         paramFloat3 = -paramFloat2;
       }
-      iIG.s(0.0F, paramFloat3);
+      kHS.q(0.0F, paramFloat3);
       return true;
-    } while (paramFloat3 <= csh);
+    } while (paramFloat3 <= cJF);
     paramFloat2 = -paramFloat1;
-    if (paramFloat3 - paramFloat1 < csh) {
-      paramFloat2 = csh - paramFloat3;
+    if (paramFloat3 - paramFloat1 < cJF) {
+      paramFloat2 = cJF - paramFloat3;
     }
-    iIG.s(0.0F, paramFloat2);
+    kHS.q(0.0F, paramFloat2);
     return true;
+  }
+  
+  private void bda()
+  {
+    kHT.removeMessages(1);
+  }
+  
+  private void bdb()
+  {
+    bda();
+    g localg = kHT;
+    kIo = 15L;
+    localg.sendEmptyMessageDelayed(1, 15L);
+  }
+  
+  private boolean bdc()
+  {
+    if (kHV) {
+      return true;
+    }
+    kHW = true;
+    return false;
   }
   
   private int getCurrentX()
@@ -188,42 +239,42 @@ public class MMViewPager
     if (getAdapter() == null) {
       return -1;
     }
-    return getScrollX() - csg * (getAdapter().getCount() - getCurrentItem() - 1);
+    return getScrollX() - cJE * (getAdapter().getCount() - getCurrentItem() - 1);
   }
   
   private MultiTouchImageView getSelectedMultiTouchImageView()
   {
     int i = getCurrentItem();
-    return ((cx)getAdapter()).gp(i);
+    return ((t)getAdapter()).hn(i);
   }
   
   private View getSelectedView()
   {
     int i = getCurrentItem();
-    return ((cx)getAdapter()).nN(i);
+    return ((t)getAdapter()).qI(i);
   }
   
-  public final int aD()
+  public final int al()
   {
-    int i = ((cx)getAdapter()).aD();
+    int i = ((t)getAdapter()).al();
     if (i >= 0) {
       return i;
     }
-    return super.aD();
+    return super.al();
   }
   
-  public final int aE()
+  public final int am()
   {
-    int i = ((cx)getAdapter()).aE();
+    int i = ((t)getAdapter()).am();
     if (i >= 0) {
       return i;
     }
-    return super.aE();
+    return super.am();
   }
   
   public int getScreenWidth()
   {
-    return csg;
+    return cJE;
   }
   
   public boolean isFocused()
@@ -241,8 +292,8 @@ public class MMViewPager
   protected void onMeasure(int paramInt1, int paramInt2)
   {
     super.onMeasure(paramInt1, paramInt2);
-    csg = View.MeasureSpec.getSize(paramInt1);
-    csh = View.MeasureSpec.getSize(paramInt2);
+    cJE = View.MeasureSpec.getSize(paramInt1);
+    cJF = View.MeasureSpec.getSize(paramInt2);
   }
   
   public void onWindowFocusChanged(boolean paramBoolean)
@@ -252,11 +303,11 @@ public class MMViewPager
     }
   }
   
-  public void setAdapter(o paramo)
+  public void setAdapter(j paramj)
   {
-    if ((paramo instanceof cx))
+    if ((paramj instanceof t))
     {
-      super.setAdapter(paramo);
+      super.setAdapter(paramj);
       return;
     }
     throw new IllegalArgumentException("must be MMViewPagerAdapter");
@@ -264,33 +315,33 @@ public class MMViewPager
   
   public void setLongClickOverListener(b paramb)
   {
-    iIR = paramb;
+    kId = paramb;
   }
   
   public void setOnPageChangeListener(ViewPager.e parame)
   {
-    iIS = parame;
+    kIe = parame;
   }
   
   public void setOnTouchListener(View.OnTouchListener paramOnTouchListener)
   {
-    gfN = paramOnTouchListener;
+    hIN = paramOnTouchListener;
   }
   
   public void setSingleClickOverListener(d paramd)
   {
-    iIQ = paramd;
+    kIc = paramd;
   }
   
   private abstract class a
   {
-    protected boolean iIX = false;
+    protected boolean kIj = false;
     
     public a() {}
     
-    public final boolean ayV()
+    public final boolean aPA()
     {
-      return iIX;
+      return kIj;
     }
     
     public abstract void play();
@@ -298,7 +349,7 @@ public class MMViewPager
   
   public static abstract interface b
   {
-    public abstract void aAb();
+    public abstract void ahv();
   }
   
   private final class c
@@ -312,12 +363,12 @@ public class MMViewPager
         return false;
       }
       if (MMViewPager.a(MMViewPager.this).getScale() <= MMViewPager.a(MMViewPager.this).getScaleRate()) {
-        MMViewPager.a(MMViewPager.this).r(g.f(paramMotionEvent, 0), g.g(paramMotionEvent, 0));
+        MMViewPager.a(MMViewPager.this).p(f.e(paramMotionEvent, 0), f.f(paramMotionEvent, 0));
       }
       for (;;)
       {
         return true;
-        MMViewPager.a(MMViewPager.this).q(g.f(paramMotionEvent, 0), g.g(paramMotionEvent, 0));
+        MMViewPager.a(MMViewPager.this).o(f.e(paramMotionEvent, 0), f.f(paramMotionEvent, 0));
       }
     }
     
@@ -329,14 +380,14 @@ public class MMViewPager
     public final void onLongPress(MotionEvent paramMotionEvent)
     {
       if (MMViewPager.j(MMViewPager.this) != null) {
-        MMViewPager.j(MMViewPager.this).aAb();
+        MMViewPager.j(MMViewPager.this).ahv();
       }
     }
     
     public final boolean onSingleTapConfirmed(MotionEvent paramMotionEvent)
     {
       if (MMViewPager.i(MMViewPager.this) != null) {
-        MMViewPager.i(MMViewPager.this).Tj();
+        MMViewPager.i(MMViewPager.this).aap();
       }
       return true;
     }
@@ -344,13 +395,13 @@ public class MMViewPager
   
   public static abstract interface d
   {
-    public abstract void Tj();
+    public abstract void aap();
   }
   
   private final class e
     extends MMViewPager.a
   {
-    float[] iIY = new float[9];
+    float[] kIk = new float[9];
     
     public e()
     {
@@ -359,14 +410,40 @@ public class MMViewPager
     
     public final void play()
     {
-      MMViewPager.c(MMViewPager.this).post(new cv(this));
+      MMViewPager.c(MMViewPager.this).post(new Runnable()
+      {
+        public final void run()
+        {
+          MMViewPager.a(MMViewPager.this).getImageMatrix().getValues(kIk);
+          float f2 = kIk[2];
+          float f1 = MMViewPager.a(MMViewPager.this).getScale() * MMViewPager.a(MMViewPager.this).getImageWidth();
+          if (f1 < MMViewPager.b(MMViewPager.this)) {}
+          for (f1 = MMViewPager.b(MMViewPager.this) / 2.0F - f1 / 2.0F;; f1 = 0.0F)
+          {
+            f1 -= f2;
+            if (f1 >= 0.0F) {
+              kIj = true;
+            }
+            for (;;)
+            {
+              MMViewPager.a(MMViewPager.this).q(f1, 0.0F);
+              return;
+              if (Math.abs(f1) <= 5.0F) {
+                kIj = true;
+              } else {
+                f1 /= 4.0F;
+              }
+            }
+          }
+        }
+      });
     }
   }
   
   private final class f
     extends MMViewPager.a
   {
-    float[] iIY = new float[9];
+    float[] kIk = new float[9];
     
     public f()
     {
@@ -375,19 +452,46 @@ public class MMViewPager
     
     public final void play()
     {
-      MMViewPager.c(MMViewPager.this).post(new cw(this));
+      MMViewPager.c(MMViewPager.this).post(new Runnable()
+      {
+        public final void run()
+        {
+          MMViewPager.a(MMViewPager.this).getImageMatrix().getValues(kIk);
+          float f1 = MMViewPager.a(MMViewPager.this).getScale();
+          float f2 = MMViewPager.a(MMViewPager.this).getImageWidth() * f1;
+          float f3 = kIk[2];
+          f1 = MMViewPager.b(MMViewPager.this);
+          if (f2 < MMViewPager.b(MMViewPager.this)) {
+            f1 = MMViewPager.b(MMViewPager.this) / 2.0F + f2 / 2.0F;
+          }
+          f1 -= f3 + f2;
+          if (f1 <= 0.0F) {
+            kIj = true;
+          }
+          for (;;)
+          {
+            MMViewPager.a(MMViewPager.this).q(f1, 0.0F);
+            return;
+            if (Math.abs(f1 / 4.0F) <= 5.0F) {
+              kIj = true;
+            } else {
+              f1 /= 4.0F;
+            }
+          }
+        }
+      });
     }
   }
   
   public static final class g
-    extends ac
+    extends aa
   {
-    WeakReference iJb;
-    long iJc;
+    WeakReference kIn;
+    long kIo;
     
     public g(WeakReference paramWeakReference)
     {
-      iJb = paramWeakReference;
+      kIn = paramWeakReference;
     }
     
     public final void handleMessage(Message paramMessage)
@@ -395,16 +499,16 @@ public class MMViewPager
       super.handleMessage(paramMessage);
       removeMessages(what);
       MMViewPager localMMViewPager;
-      if (iJb != null)
+      if (kIn != null)
       {
-        localMMViewPager = (MMViewPager)iJb.get();
+        localMMViewPager = (MMViewPager)kIn.get();
         if ((localMMViewPager != null) && (what == 1))
         {
-          if ((MMViewPager.k(localMMViewPager) == null) || (MMViewPager.k(localMMViewPager).ayV())) {
+          if ((MMViewPager.k(localMMViewPager) == null) || (MMViewPager.k(localMMViewPager).aPA())) {
             break label81;
           }
           MMViewPager.k(localMMViewPager).play();
-          sendEmptyMessageDelayed(what, iJc);
+          sendEmptyMessageDelayed(what, kIo);
         }
       }
       return;

@@ -2,9 +2,9 @@ package com.tencent.mm.pluginsdk.ui.chat;
 
 public final class ChatFooter$a
 {
-  int gVA;
-  public String gVy;
-  String gVz;
+  public String iLS;
+  String iLT;
+  int iLU;
 }
 
 /* Location:

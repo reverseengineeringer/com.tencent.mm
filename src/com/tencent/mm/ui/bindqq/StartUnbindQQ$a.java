@@ -1,22 +1,18 @@
 package com.tencent.mm.ui.bindqq;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelsimple.an;
-import com.tencent.mm.q.l;
-import com.tencent.mm.ui.applet.SecurityImage.c;
+import com.tencent.mm.r.m;
+import com.tencent.mm.ui.applet.SecurityImage.b;
 
 final class StartUnbindQQ$a
-  extends SecurityImage.c
+  extends SecurityImage.b
 {
   StartUnbindQQ$a(StartUnbindQQ paramStartUnbindQQ) {}
   
-  public final void aLI()
+  public final void bby()
   {
-    an localan = new an(5, StartUnbindQQ.d(iQO), StartUnbindQQ.e(iQO), "", StartUnbindQQ.i(iQO), true);
-    ax.tm().d(localan);
+    com.tencent.mm.modelsimple.ah localah = new com.tencent.mm.modelsimple.ah(5, StartUnbindQQ.d(kPF), StartUnbindQQ.e(kPF), "", StartUnbindQQ.i(kPF), true);
+    com.tencent.mm.model.ah.tE().d(localah);
   }
-  
-  protected final void onStart() {}
 }
 
 /* Location:

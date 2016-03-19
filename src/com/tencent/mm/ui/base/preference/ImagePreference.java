@@ -6,15 +6,13 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 
 public final class ImagePreference
   extends Preference
 {
-  private ImageView enR = null;
-  private i iMk = new i();
+  private ImageView fxP = null;
+  private e kLv = new e();
   
   public ImagePreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -24,16 +22,16 @@ public final class ImagePreference
   public ImagePreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference_image);
-    setWidgetLayoutResource(a.k.mm_preference_submenu);
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.ImagePreference);
+    setLayoutResource(2131363269);
+    setWidgetLayoutResource(2131363236);
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.ImagePreference);
     paramInt = paramContext.getResourceId(0, 0);
     if (paramInt > 0)
     {
-      paramAttributeSet = iMk;
-      hVB = paramInt;
+      paramAttributeSet = kLv;
+      gtF = paramInt;
       bitmap = null;
-      iMk.e(enR);
+      kLv.d(fxP);
     }
     paramContext.recycle();
   }
@@ -41,16 +39,16 @@ public final class ImagePreference
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    enR = ((ImageView)paramView.findViewById(a.i.image_iv));
-    iMk.e(enR);
+    fxP = ((ImageView)paramView.findViewById(2131166875));
+    kLv.d(fxP);
   }
   
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(a.i.content_ll);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165904);
     localViewGroup.removeAllViews();
-    View.inflate(mContext, a.k.mm_preference_image, localViewGroup);
+    View.inflate(mContext, 2131363269, localViewGroup);
     return paramViewGroup;
   }
 }

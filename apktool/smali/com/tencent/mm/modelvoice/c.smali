@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract j(Lcom/tencent/mm/storage/ar;)V
+.method public abstract l(Lcom/tencent/mm/storage/ag;)V
 .end method

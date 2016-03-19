@@ -2,7 +2,7 @@ package b.a.d;
 
 public final class b
 {
-  public static final i jPx = new i("", "");
+  public static final i mdJ = new i("", "");
 }
 
 /* Location:

@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public aCG:Ljava/lang/String;
+.field public aAB:Ljava/lang/String;
 
-.field public azW:J
+.field public aAC:Ljava/lang/String;
 
 
 # direct methods

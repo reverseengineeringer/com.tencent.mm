@@ -2,7 +2,10 @@ package com.tencent.mm.compatible.loader;
 
 import android.app.Application;
 import android.content.Context;
-import com.tencent.mm.sdk.platformtools.aa;
+import android.os.Process;
+import com.tencent.mm.sdk.platformtools.at;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.y;
 
 public final class i
 {
@@ -10,8 +13,8 @@ public final class i
   {
     try
     {
-      paramString = (h)aa.getContext().getClassLoader().loadClass(aa.aER() + paramString).newInstance();
-      bjk = paramApplication;
+      paramString = (h)y.getContext().getClassLoader().loadClass(y.aUJ() + paramString).newInstance();
+      btM = paramApplication;
       return paramString;
     }
     catch (Exception paramApplication) {}

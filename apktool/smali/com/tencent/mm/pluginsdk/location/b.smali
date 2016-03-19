@@ -1,122 +1,103 @@
-.class final Lcom/tencent/mm/pluginsdk/location/b;
+.class public final Lcom/tencent/mm/pluginsdk/location/b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
+
+# instance fields
+.field public aBp:I
+
+.field public asc:I
+
+.field public bNY:F
+
+.field public bNZ:F
+
+.field public izG:J
 
 
 # direct methods
-.method constructor <init>()V
+.method public constructor <init>(JFFII)V
     .locals 0
 
     .prologue
-    .line 55
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 17
+    iput p3, p0, Lcom/tencent/mm/pluginsdk/location/b;->bNY:F
+
+    .line 18
+    iput p4, p0, Lcom/tencent/mm/pluginsdk/location/b;->bNZ:F
+
+    .line 19
+    iput p5, p0, Lcom/tencent/mm/pluginsdk/location/b;->aBp:I
+
+    .line 20
+    iput p6, p0, Lcom/tencent/mm/pluginsdk/location/b;->asc:I
+
+    .line 21
+    iput-wide p1, p0, Lcom/tencent/mm/pluginsdk/location/b;->izG:J
+
+    .line 22
     return-void
 .end method
 
 
 # virtual methods
-.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
-    .locals 4
+.method public final toString()Ljava/lang/String;
+    .locals 5
 
     .prologue
-    .line 55
-    new-instance v1, Lcom/tencent/mm/pluginsdk/location/LocationIntent;
+    const v4, 0x49742400    # 1000000.0f
 
-    invoke-direct {v1}, Lcom/tencent/mm/pluginsdk/location/LocationIntent;-><init>()V
+    .line 25
+    const-string/jumbo v0, "%d-%d-%d"
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
+    const/4 v1, 0x3
 
-    move-result-wide v2
+    new-array v1, v1, [Ljava/lang/Object;
 
-    iput-wide v2, v1, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aCl:D
+    const/4 v2, 0x0
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readDouble()D
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/location/b;->bNY:F
 
-    move-result-wide v2
+    mul-float/2addr v3, v4
 
-    iput-wide v2, v1, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aCm:D
+    float-to-int v3, v3
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v0
+    move-result-object v3
 
-    iput v0, v1, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aCn:I
+    aput-object v3, v1, v2
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    const/4 v2, 0x1
 
-    move-result-object v0
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/location/b;->bNZ:F
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->label:Ljava/lang/String;
+    mul-float/2addr v3, v4
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    float-to-int v3, v3
 
-    move-result-object v0
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    const-string/jumbo v2, ""
+    move-result-object v3
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    aput-object v3, v1, v2
 
-    move-result-object v0
+    const/4 v2, 0x2
 
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->dMF:Ljava/lang/String;
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/location/b;->aBp:I
 
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v3
 
-    const-string/jumbo v2, ""
+    aput-object v3, v1, v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->gKU:Ljava/lang/String;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
+    invoke-static {v0, v1}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
 
     move-result-object v0
-
-    const-string/jumbo v2, ""
-
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->dHq:Ljava/lang/String;
-
-    invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
-
-    move-result v0
-
-    iput v0, v1, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->gKV:I
-
-    const-class v0, Lcom/tencent/mm/modelgeo/Addr;
-
-    invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/os/Parcel;->readParcelable(Ljava/lang/ClassLoader;)Landroid/os/Parcelable;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/modelgeo/Addr;
-
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->bAW:Lcom/tencent/mm/modelgeo/Addr;
-
-    return-object v1
-.end method
-
-.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 55
-    new-array v0, p1, [Lcom/tencent/mm/pluginsdk/location/LocationIntent;
 
     return-object v0
 .end method

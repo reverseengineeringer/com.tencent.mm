@@ -1,9 +1,9 @@
 package com.tencent.mm.g;
 
 import android.util.SparseArray;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.storage.j;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,20 +15,20 @@ import org.json.JSONObject;
 
 public final class c
 {
-  public static final String bki = j.bjE + "configlist/";
-  public SparseArray bkh = new SparseArray();
+  public static final String buH = j.bxa + "configlist/";
+  public SparseArray buG = new SparseArray();
   
-  public static String bW(int paramInt)
+  public static String bX(int paramInt)
   {
-    return bki + "config_" + paramInt + ".xml";
+    return buH + "config_" + paramInt + ".xml";
   }
   
-  private d bX(int paramInt)
+  private d bY(int paramInt)
   {
-    if (bkh.get(1) == null) {
+    if (buG.get(1) == null) {
       load(1);
     }
-    return (d)bkh.get(1);
+    return (d)buG.get(1);
   }
   
   /* Error */
@@ -38,7 +38,7 @@ public final class c
     //   0: new 66	java/io/File
     //   3: dup
     //   4: iload_1
-    //   5: invokestatic 68	com/tencent/mm/g/c:bW	(I)Ljava/lang/String;
+    //   5: invokestatic 68	com/tencent/mm/g/c:bX	(I)Ljava/lang/String;
     //   8: invokespecial 71	java/io/File:<init>	(Ljava/lang/String;)V
     //   11: astore_2
     //   12: aload_2
@@ -94,9 +94,9 @@ public final class c
     //   105: dup
     //   106: iconst_0
     //   107: aload 4
-    //   109: invokestatic 111	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   109: invokestatic 111	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   112: aastore
-    //   113: invokestatic 117	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   113: invokestatic 117	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   116: aload_3
     //   117: ifnull +7 -> 124
     //   120: aload_3
@@ -108,7 +108,7 @@ public final class c
     //   128: iload_1
     //   129: aload 6
     //   131: invokevirtual 123	java/lang/StringBuffer:toString	()Ljava/lang/String;
-    //   134: invokevirtual 127	com/tencent/mm/g/c:h	(ILjava/lang/String;)V
+    //   134: invokevirtual 127	com/tencent/mm/g/c:k	(ILjava/lang/String;)V
     //   137: aload_3
     //   138: astore_2
     //   139: aload 4
@@ -130,9 +130,9 @@ public final class c
     //   169: dup
     //   170: iconst_0
     //   171: aload_2
-    //   172: invokestatic 111	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   172: invokestatic 111	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   175: aastore
-    //   176: invokestatic 117	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   176: invokestatic 117	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   179: return
     //   180: astore_2
     //   181: ldc 103
@@ -142,9 +142,9 @@ public final class c
     //   189: dup
     //   190: iconst_0
     //   191: aload_2
-    //   192: invokestatic 111	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   192: invokestatic 111	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   195: aastore
-    //   196: invokestatic 117	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   196: invokestatic 117	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   199: return
     //   200: astore_3
     //   201: aconst_null
@@ -163,9 +163,9 @@ public final class c
     //   222: dup
     //   223: iconst_0
     //   224: aload_2
-    //   225: invokestatic 111	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   225: invokestatic 111	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   228: aastore
-    //   229: invokestatic 117	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   229: invokestatic 117	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   232: goto -21 -> 211
     //   235: astore_3
     //   236: goto -33 -> 203
@@ -221,43 +221,48 @@ public final class c
     //   0	28	239	java/lang/Exception
   }
   
-  public static int pI()
+  public static int pz()
   {
     int i = 0;
-    String str = h.qa().getValue("VoiceVOIPSwitch");
-    t.d("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "voip is " + str);
+    String str = h.pS().getValue("VoiceVOIPSwitch");
+    u.d("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "voip is " + str);
     try
     {
-      int j = bn.getInt(str, 0);
+      int j = ay.getInt(str, 0);
       i = j;
     }
     catch (Exception localException)
     {
       for (;;)
       {
-        t.e("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "exception:%s", new Object[] { bn.a(localException) });
+        u.e("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "exception:%s", new Object[] { ay.b(localException) });
       }
     }
-    t.d("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "showVoiceVoipEntrance is " + i);
+    u.d("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "showVoiceVoipEntrance is " + i);
     return i;
-  }
-  
-  public final int cZ(String paramString)
-  {
-    return bn.getInt(q("QQBroswer", paramString), 5);
   }
   
   public final String getMailAppEnterUlAndroid()
   {
-    return q("MailApp", "MailAppEnterMailAppUrlAndroid");
+    return z("MailApp", "MailAppEnterMailAppUrlAndroid");
   }
   
-  public final void h(int paramInt, String paramString)
+  public final void init()
+  {
+    int i = 0;
+    while (i < d.buI.length)
+    {
+      load(d.buI[i]);
+      i += 1;
+    }
+  }
+  
+  public final void k(int paramInt, String paramString)
   {
     d locald = new d(paramInt);
-    bkl = p.z(paramString, "ConfigList", null);
-    if (bkl.containsKey(".ConfigList.$version")) {
-      version = Integer.valueOf((String)bkl.get(".ConfigList.$version")).intValue();
+    buK = q.J(paramString, "ConfigList", null);
+    if (buK.containsKey(".ConfigList.$version")) {
+      version = Integer.valueOf((String)buK.get(".ConfigList.$version")).intValue();
     }
     int i = 0;
     for (;;)
@@ -275,10 +280,10 @@ public final class c
       {
         paramString = "";
         localObject1 = paramString;
-        if (bkl.get((String)localObject1 + ".$name") == null) {
+        if (buK.get((String)localObject1 + ".$name") == null) {
           break;
         }
-        str = (String)bkl.get((String)localObject1 + ".$name");
+        str = (String)buK.get((String)localObject1 + ".$name");
         if (str.equalsIgnoreCase("JDWebViewMenu")) {
           break label510;
         }
@@ -306,19 +311,19 @@ public final class c
       for (paramString = "";; paramString = Integer.valueOf(j))
       {
         paramString = paramString + ".$lang";
-        if (!bkl.containsKey(localObject2)) {
+        if (!buK.containsKey(localObject2)) {
           break label510;
         }
-        localObject3 = (String)bkl.get(localObject3);
-        localObject2 = (String)bkl.get(localObject2);
-        paramString = (String)bkl.get(paramString);
-        t.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "itemKey " + (String)localObject3 + " itemValue " + (String)localObject2 + " itemLang " + paramString);
-        if ((paramString == null) || (d.da(paramString)))
+        localObject3 = (String)buK.get(localObject3);
+        localObject2 = (String)buK.get(localObject2);
+        paramString = (String)buK.get(paramString);
+        u.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "itemKey " + (String)localObject3 + " itemValue " + (String)localObject2 + " itemLang " + paramString);
+        if ((paramString == null) || (d.dg(paramString)))
         {
-          if (!bkk.containsKey(str)) {
-            bkk.put(str, new HashMap());
+          if (!buJ.containsKey(str)) {
+            buJ.put(str, new HashMap());
           }
-          ((HashMap)bkk.get(str)).put(localObject3, localObject2);
+          ((HashMap)buJ.get(str)).put(localObject3, localObject2);
         }
         j += 1;
         break label175;
@@ -332,51 +337,42 @@ public final class c
       label510:
       i += 1;
     }
-    bkh.put(Integer.valueOf(paramInt).intValue(), locald);
+    buG.put(Integer.valueOf(paramInt).intValue(), locald);
   }
   
-  public final void init()
+  public final String[] pA()
   {
-    int i = 0;
-    while (i < d.bkj.length)
-    {
-      load(d.bkj[i]);
-      i += 1;
-    }
-  }
-  
-  public final int pH()
-  {
-    String str = bn.aFE();
-    if (bn.iW(str)) {}
-    do
-    {
-      return -1;
-      str = q("VoipInviteTimeLimit", str);
-    } while (bn.iW(str));
-    try
-    {
-      int i = Integer.parseInt(str);
-      return i;
-    }
-    catch (Exception localException) {}
-    return -1;
-  }
-  
-  public final String[] pJ()
-  {
-    String str = q("WebViewConfig", "removeJavascriptInterface");
-    if (bn.iW(str)) {
+    String str = z("WebViewConfig", "removeJavascriptInterface");
+    if (ay.kz(str)) {
       return null;
     }
     return str.split(";");
   }
   
-  public final List pK()
+  public final String pB()
+  {
+    String str = z("FreeWiFiConfig", "CheckURL");
+    u.d("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "get check url for free wifi : %s", new Object[] { str });
+    return str;
+  }
+  
+  public final boolean pC()
+  {
+    boolean bool = true;
+    if (ay.getInt(z("ShowConfig", "showRecvTmpMsgBtn"), 0) == 1) {}
+    for (;;)
+    {
+      u.d("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "isShowRecvTmpMsgBtn : " + bool);
+      return bool;
+      bool = false;
+    }
+  }
+  
+  public final List pD()
   {
     Object localObject1 = null;
-    Object localObject3 = q("IBeacon", "Content");
-    if (!bn.iW((String)localObject3))
+    Object localObject3 = z("IBeacon", "Content");
+    if (!ay.kz((String)localObject3))
     {
       ArrayList localArrayList = new ArrayList();
       try
@@ -398,34 +394,42 @@ public final class c
       }
       catch (JSONException localJSONException)
       {
-        t.e("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "[oneliang] json parse exception: " + localJSONException.getMessage());
+        u.e("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "[oneliang] json parse exception: " + localJSONException.getMessage());
         localObject2 = localArrayList;
       }
     }
   }
   
-  public final String pL()
+  public final String pE()
   {
-    return q("MailApp", "MailAppRedirectUrAndroid");
+    return z("MailApp", "MailAppRedirectUrAndroid");
   }
   
-  public final Map pM()
+  public final Map pF()
   {
-    d locald = bX(1);
+    d locald = bY(1);
     if (locald == null) {
       return null;
     }
-    return bkl;
+    return buK;
   }
   
-  public final String q(String paramString1, String paramString2)
+  public final int py()
   {
-    d locald = bX(1);
-    if (locald == null) {}
-    while (!bkk.containsKey(paramString1)) {
-      return null;
+    String str = ay.aVF();
+    if (ay.kz(str)) {}
+    do
+    {
+      return -1;
+      str = z("VoipInviteTimeLimit", str);
+    } while (ay.kz(str));
+    try
+    {
+      int i = Integer.parseInt(str);
+      return i;
     }
-    return (String)((HashMap)bkk.get(paramString1)).get(paramString2);
+    catch (Exception localException) {}
+    return -1;
   }
   
   /* Error */
@@ -446,16 +450,16 @@ public final class c
     //   16: invokevirtual 75	java/io/File:exists	()Z
     //   19: ifeq +85 -> 104
     //   22: aload_1
-    //   23: invokevirtual 351	java/io/File:isDirectory	()Z
+    //   23: invokevirtual 367	java/io/File:isDirectory	()Z
     //   26: ifeq +81 -> 107
     //   29: aload_2
     //   30: invokevirtual 75	java/io/File:exists	()Z
     //   33: ifne +8 -> 41
     //   36: aload_2
-    //   37: invokevirtual 354	java/io/File:mkdir	()Z
+    //   37: invokevirtual 370	java/io/File:mkdir	()Z
     //   40: pop
     //   41: aload_1
-    //   42: invokevirtual 358	java/io/File:listFiles	()[Ljava/io/File;
+    //   42: invokevirtual 374	java/io/File:listFiles	()[Ljava/io/File;
     //   45: astore 6
     //   47: iconst_0
     //   48: istore 4
@@ -472,16 +476,16 @@ public final class c
     //   66: new 66	java/io/File
     //   69: dup
     //   70: aload_2
-    //   71: invokevirtual 361	java/io/File:getPath	()Ljava/lang/String;
+    //   71: invokevirtual 377	java/io/File:getPath	()Ljava/lang/String;
     //   74: aload 7
-    //   76: invokevirtual 364	java/io/File:getName	()Ljava/lang/String;
-    //   79: invokespecial 366	java/io/File:<init>	(Ljava/lang/String;Ljava/lang/String;)V
-    //   82: invokevirtual 368	com/tencent/mm/g/c:renameTo	(Ljava/io/File;Ljava/io/File;)Z
+    //   76: invokevirtual 380	java/io/File:getName	()Ljava/lang/String;
+    //   79: invokespecial 382	java/io/File:<init>	(Ljava/lang/String;Ljava/lang/String;)V
+    //   82: invokevirtual 384	com/tencent/mm/g/c:renameTo	(Ljava/io/File;Ljava/io/File;)Z
     //   85: istore 4
     //   87: iload 4
     //   89: ifeq +8 -> 97
     //   92: aload_1
-    //   93: invokevirtual 371	java/io/File:delete	()Z
+    //   93: invokevirtual 387	java/io/File:delete	()Z
     //   96: pop
     //   97: iload_3
     //   98: iconst_1
@@ -495,17 +499,17 @@ public final class c
     //   111: aload_1
     //   112: invokespecial 80	java/io/FileInputStream:<init>	(Ljava/io/File;)V
     //   115: astore 6
-    //   117: new 373	java/io/FileOutputStream
+    //   117: new 389	java/io/FileOutputStream
     //   120: dup
     //   121: aload_2
-    //   122: invokespecial 374	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
+    //   122: invokespecial 390	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
     //   125: astore_2
     //   126: sipush 1024
     //   129: newarray <illegal type>
     //   131: astore 7
     //   133: aload 6
     //   135: aload 7
-    //   137: invokevirtual 378	java/io/InputStream:read	([B)I
+    //   137: invokevirtual 394	java/io/InputStream:read	([B)I
     //   140: istore_3
     //   141: iload_3
     //   142: iconst_m1
@@ -514,7 +518,7 @@ public final class c
     //   147: aload 7
     //   149: iconst_0
     //   150: iload_3
-    //   151: invokevirtual 384	java/io/OutputStream:write	([BII)V
+    //   151: invokevirtual 400	java/io/OutputStream:write	([BII)V
     //   154: goto -21 -> 133
     //   157: astore_1
     //   158: ldc 103
@@ -524,9 +528,9 @@ public final class c
     //   166: dup
     //   167: iconst_0
     //   168: aload_1
-    //   169: invokestatic 111	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   169: invokestatic 111	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   172: aastore
-    //   173: invokestatic 117	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   173: invokestatic 117	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   176: aload 6
     //   178: ifnull +8 -> 186
     //   181: aload 6
@@ -536,7 +540,7 @@ public final class c
     //   190: aload_2
     //   191: ifnull -87 -> 104
     //   194: aload_2
-    //   195: invokevirtual 385	java/io/OutputStream:close	()V
+    //   195: invokevirtual 401	java/io/OutputStream:close	()V
     //   198: iconst_0
     //   199: ireturn
     //   200: astore_1
@@ -547,20 +551,20 @@ public final class c
     //   209: dup
     //   210: iconst_0
     //   211: aload_1
-    //   212: invokestatic 111	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   212: invokestatic 111	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   215: aastore
-    //   216: invokestatic 117	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   216: invokestatic 117	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   219: iconst_0
     //   220: ireturn
     //   221: aload_2
-    //   222: invokevirtual 388	java/io/OutputStream:flush	()V
+    //   222: invokevirtual 404	java/io/OutputStream:flush	()V
     //   225: aload_1
-    //   226: invokevirtual 371	java/io/File:delete	()Z
+    //   226: invokevirtual 387	java/io/File:delete	()Z
     //   229: pop
     //   230: aload 6
     //   232: invokevirtual 122	java/io/InputStream:close	()V
     //   235: aload_2
-    //   236: invokevirtual 385	java/io/OutputStream:close	()V
+    //   236: invokevirtual 401	java/io/OutputStream:close	()V
     //   239: iconst_1
     //   240: ireturn
     //   241: astore_1
@@ -571,9 +575,9 @@ public final class c
     //   250: dup
     //   251: iconst_0
     //   252: aload_1
-    //   253: invokestatic 111	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   253: invokestatic 111	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   256: aastore
-    //   257: invokestatic 117	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   257: invokestatic 117	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   260: goto -25 -> 235
     //   263: astore_1
     //   264: ldc 103
@@ -583,9 +587,9 @@ public final class c
     //   272: dup
     //   273: iconst_0
     //   274: aload_1
-    //   275: invokestatic 111	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   275: invokestatic 111	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   278: aastore
-    //   279: invokestatic 117	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   279: invokestatic 117	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   282: goto -43 -> 239
     //   285: astore_1
     //   286: ldc 103
@@ -595,9 +599,9 @@ public final class c
     //   294: dup
     //   295: iconst_0
     //   296: aload_1
-    //   297: invokestatic 111	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   297: invokestatic 111	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   300: aastore
-    //   301: invokestatic 117	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   301: invokestatic 117	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   304: goto -118 -> 186
     //   307: astore_1
     //   308: aconst_null
@@ -611,7 +615,7 @@ public final class c
     //   324: aload_2
     //   325: ifnull +7 -> 332
     //   328: aload_2
-    //   329: invokevirtual 385	java/io/OutputStream:close	()V
+    //   329: invokevirtual 401	java/io/OutputStream:close	()V
     //   332: aload_1
     //   333: athrow
     //   334: astore 6
@@ -622,9 +626,9 @@ public final class c
     //   344: dup
     //   345: iconst_0
     //   346: aload 6
-    //   348: invokestatic 111	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   348: invokestatic 111	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   351: aastore
-    //   352: invokestatic 117	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   352: invokestatic 117	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   355: goto -31 -> 324
     //   358: astore_2
     //   359: ldc 103
@@ -634,9 +638,9 @@ public final class c
     //   367: dup
     //   368: iconst_0
     //   369: aload_2
-    //   370: invokestatic 111	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   370: invokestatic 111	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   373: aastore
-    //   374: invokestatic 117	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   374: invokestatic 117	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   377: goto -45 -> 332
     //   380: astore_1
     //   381: aconst_null
@@ -690,6 +694,16 @@ public final class c
     //   158	176	390	finally
     //   107	117	394	java/lang/Exception
     //   117	126	404	java/lang/Exception
+  }
+  
+  public final String z(String paramString1, String paramString2)
+  {
+    d locald = bY(1);
+    if (locald == null) {}
+    while (!buJ.containsKey(paramString1)) {
+      return null;
+    }
+    return (String)((HashMap)buJ.get(paramString1)).get(paramString2);
   }
 }
 

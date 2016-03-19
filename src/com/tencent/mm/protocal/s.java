@@ -1,47 +1,51 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.yx;
-import com.tencent.mm.protocal.b.yy;
+import com.tencent.mm.protocal.b.aeu;
+import com.tencent.mm.protocal.b.aev;
+import com.tencent.mm.protocal.b.alq;
+import com.tencent.mm.protocal.b.dd;
 
 public final class s
 {
   public static final class a
-    extends i.c
-    implements i.a
+    extends h.c
+    implements h.a
   {
-    public yx hhl = new yx();
+    public aeu iVh = new aeu();
     
     public final int getCmdId()
     {
-      return 121;
+      return 27;
     }
     
-    public final byte[] tH()
+    public final byte[] tY()
     {
-      return hhl.toByteArray();
+      iVh.jGS = h.a(this);
+      return iVh.toByteArray();
     }
     
-    public final int tI()
+    public final int tZ()
     {
-      return 138;
+      return 139;
     }
   }
   
   public static final class b
-    extends i.d
-    implements i.b
+    extends h.d
+    implements h.b
   {
-    public yy hhm = new yy();
+    public aev iVi = new aev();
     
     public final int getCmdId()
     {
-      return 1000000121;
+      return 1000000027;
     }
     
-    public final int z(byte[] paramArrayOfByte)
+    public final int y(byte[] paramArrayOfByte)
     {
-      hhm = ((yy)new yy().x(paramArrayOfByte));
-      return hhm.hkV;
+      iVi = ((aev)new aev().am(paramArrayOfByte));
+      h.a(this, iVi.jHj);
+      return iVi.jHj.iZL;
     }
   }
 }

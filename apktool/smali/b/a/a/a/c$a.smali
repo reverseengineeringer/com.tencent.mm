@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final aVO()Ljava/lang/String;
+.method public final boD()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -37,7 +37,7 @@
     return-object v0
 .end method
 
-.method public final aVP()Ljava/lang/String;
+.method public final boE()Ljava/lang/String;
     .locals 1
 
     .prologue

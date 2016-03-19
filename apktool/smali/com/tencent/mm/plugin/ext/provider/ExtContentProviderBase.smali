@@ -16,23 +16,23 @@
 
 
 # static fields
-.field protected static cjY:Z
+.field protected static cBi:Z
 
-.field private static dbu:Ljava/util/HashMap;
+.field private static dKO:Ljava/util/HashMap;
 
 
 # instance fields
-.field public cjW:Landroid/database/MatrixCursor;
+.field public cBg:Landroid/database/MatrixCursor;
 
-.field private dbp:J
+.field private dKJ:J
 
-.field private dbq:Ljava/lang/String;
+.field private dKK:Ljava/lang/String;
 
-.field public dbr:Ljava/lang/String;
+.field public dKL:Ljava/lang/String;
 
-.field private dbs:[Ljava/lang/String;
+.field private dKM:[Ljava/lang/String;
 
-.field private dbt:I
+.field private dKN:I
 
 
 # direct methods
@@ -43,14 +43,14 @@
     .line 43
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cjY:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cBi:Z
 
     .line 232
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbu:Ljava/util/HashMap;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKO:Ljava/util/HashMap;
 
     return-void
 .end method
@@ -71,34 +71,34 @@
 
     invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cjW:Landroid/database/MatrixCursor;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cBg:Landroid/database/MatrixCursor;
 
     .line 47
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DN()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbp:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKJ:J
 
     .line 50
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
     .line 52
-    iput v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbt:I
+    iput v2, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKN:I
 
     return-void
 .end method
 
-.method private PH()I
+.method private Vv()I
     .locals 2
 
     .prologue
     .line 94
-    iget-wide v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbp:J
+    iget-wide v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKJ:J
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/bn;->Z(J)J
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ao(J)J
 
     move-result-wide v0
 
@@ -107,7 +107,7 @@
     return v0
 .end method
 
-.method private bi(Landroid/content/Context;)V
+.method private by(Landroid/content/Context;)V
     .locals 3
 
     .prologue
@@ -119,7 +119,7 @@
 
     const-string/jumbo v1, "in initCallerPkgName(), context == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 313
     :cond_0
@@ -148,7 +148,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 307
     invoke-virtual {p1}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
@@ -164,10 +164,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbs:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKM:[Ljava/lang/String;
 
     .line 310
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbs:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKM:[Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -176,9 +176,58 @@
 
     const-string/jumbo v1, "m_pkgs == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
+.end method
+
+.method public static gL(I)Landroid/database/MatrixCursor;
+    .locals 4
+
+    .prologue
+    .line 316
+    const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8mZxJJ4JsPX28ihhHV6igVo="
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "returnMatrix = "
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 317
+    new-instance v0, Landroid/database/MatrixCursor;
+
+    sget-object v1, Lcom/tencent/mm/plugin/ext/b/a;->dKx:[Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Landroid/database/MatrixCursor;-><init>([Ljava/lang/String;)V
+
+    .line 318
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/Object;
+
+    const/4 v2, 0x0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v1, v2
+
+    invoke-virtual {v0, v1}, Landroid/database/MatrixCursor;->addRow([Ljava/lang/Object;)V
+
+    .line 319
+    return-object v0
 .end method
 
 .method private static j(Landroid/net/Uri;)Ljava/lang/String;
@@ -202,7 +251,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -211,7 +260,56 @@
 
 
 # virtual methods
-.method public final Hq()Z
+.method public final Vw()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 158
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKK:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 159
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKK:Ljava/lang/String;
+
+    .line 164
+    :goto_0
+    return-object v0
+
+    .line 161
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKM:[Ljava/lang/String;
+
+    if-eqz v0, :cond_1
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKM:[Ljava/lang/String;
+
+    array-length v0, v0
+
+    if-gtz v0, :cond_2
+
+    .line 162
+    :cond_1
+    const-string/jumbo v0, ""
+
+    goto :goto_0
+
+    .line 164
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKM:[Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    aget-object v0, v0, v1
+
+    goto :goto_0
+.end method
+
+.method public final Vx()Z
     .locals 5
 
     .prologue
@@ -223,10 +321,10 @@
 
     const-string/jumbo v2, "checkIsLogin()"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 179
-    sget-boolean v1, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cjY:Z
+    sget-boolean v1, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cBi:Z
 
     if-nez v1, :cond_0
 
@@ -238,27 +336,27 @@
     .line 181
     const-wide/16 v2, 0xfa0
 
-    new-instance v4, Lcom/tencent/mm/plugin/ext/provider/a;
+    new-instance v4, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1;
 
-    invoke-direct {v4, p0, v1}, Lcom/tencent/mm/plugin/ext/provider/a;-><init>(Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;Lcom/tencent/mm/pluginsdk/d/a/a;)V
+    invoke-direct {v4, p0, v1}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase$1;-><init>(Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;Lcom/tencent/mm/pluginsdk/d/a/a;)V
 
     invoke-virtual {v1, v2, v3, v4}, Lcom/tencent/mm/pluginsdk/d/a/a;->b(JLjava/lang/Runnable;)V
 
     .line 204
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tq()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tI()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tu()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
 
     move-result v1
 
@@ -267,7 +365,7 @@
     .line 205
     const/4 v1, 0x1
 
-    sput-boolean v1, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cjY:Z
+    sput-boolean v1, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cBi:Z
 
     .line 209
     :goto_0
@@ -279,7 +377,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-boolean v3, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cjY:Z
+    sget-boolean v3, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cBi:Z
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
@@ -289,10 +387,10 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 210
-    sget-boolean v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cjY:Z
+    sget-boolean v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cBi:Z
 
     .line 214
     :goto_1
@@ -302,7 +400,7 @@
     :cond_1
     const/4 v1, 0x0
 
-    sput-boolean v1, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cjY:Z
+    sput-boolean v1, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->cBi:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -319,58 +417,9 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
-.end method
-
-.method public final PI()Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 158
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbq:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 159
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbq:Ljava/lang/String;
-
-    .line 164
-    :goto_0
-    return-object v0
-
-    .line 161
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbs:[Ljava/lang/String;
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbs:[Ljava/lang/String;
-
-    array-length v0, v0
-
-    if-gtz v0, :cond_2
-
-    .line 162
-    :cond_1
-    const-string/jumbo v0, ""
-
-    goto :goto_0
-
-    .line 164
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbs:[Ljava/lang/String;
-
-    const/4 v1, 0x0
-
-    aget-object v0, v0, v1
-
-    goto :goto_0
 .end method
 
 .method protected final a(Landroid/net/Uri;Landroid/content/Context;I)V
@@ -382,20 +431,20 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
     .line 121
-    invoke-direct {p0, p2}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->bi(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->by(Landroid/content/Context;)V
 
     .line 122
-    iput p3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbt:I
+    iput p3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKN:I
 
     .line 123
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DN()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbp:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKJ:J
 
     .line 124
     return-void
@@ -410,31 +459,31 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
     .line 136
     if-nez p4, :cond_0
 
     .line 137
-    invoke-direct {p0, p2}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->bi(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->by(Landroid/content/Context;)V
 
     .line 141
     :goto_0
-    iput p3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbt:I
+    iput p3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKN:I
 
     .line 142
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DN()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbp:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKJ:J
 
     .line 143
     return-void
 
     .line 139
     :cond_0
-    iput-object p4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbs:[Ljava/lang/String;
+    iput-object p4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKM:[Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -448,10 +497,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
     .line 104
-    invoke-direct {p0, p2}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->bi(Landroid/content/Context;)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->by(Landroid/content/Context;)V
 
     .line 105
     if-eqz p3, :cond_0
@@ -461,31 +510,31 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbt:I
+    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKN:I
 
     .line 107
-    iget v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbt:I
+    iget v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKN:I
 
     if-gez v0, :cond_0
 
     .line 108
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbt:I
+    iput v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKN:I
 
     .line 111
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DN()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FT()J
 
     move-result-wide v0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbp:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKJ:J
 
     .line 112
     return-void
 .end method
 
-.method public final bh(Landroid/content/Context;)Z
+.method public final bx(Landroid/content/Context;)Z
     .locals 11
 
     .prologue
@@ -503,7 +552,7 @@
 
     const-string/jumbo v1, "in checkAppId(), context == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v2
 
@@ -513,9 +562,9 @@
 
     .line 245
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -526,7 +575,7 @@
 
     const-string/jumbo v1, "invalid appid, ignore"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v2
 
@@ -535,11 +584,11 @@
 
     .line 249
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbs:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKM:[Ljava/lang/String;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbs:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKM:[Ljava/lang/String;
 
     array-length v0, v0
 
@@ -551,7 +600,7 @@
 
     const-string/jumbo v1, "packageList is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v2
 
@@ -561,11 +610,11 @@
     .line 255
     :cond_3
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/model/app/i;->V(Ljava/lang/String;Z)Lcom/tencent/mm/pluginsdk/model/app/h;
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/model/app/g;->ai(Ljava/lang/String;Z)Lcom/tencent/mm/pluginsdk/model/app/f;
 
     move-result-object v4
 
@@ -577,7 +626,7 @@
 
     const-string/jumbo v1, "app not reg, do nothing"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v2
 
@@ -586,16 +635,26 @@
 
     .line 259
     :cond_4
-    iget v0, v4, Lcom/tencent/mm/pluginsdk/model/app/h;->field_status:I
+    iget v0, v4, Lcom/tencent/mm/pluginsdk/model/app/f;->field_status:I
 
     if-ne v0, v5, :cond_7
 
     .line 260
     const-string/jumbo v0, "!44@/B4Tb64lLpKAQbqlkU5I8mZxJJ4JsPX28ihhHV6igVo="
 
-    const-string/jumbo v1, "app is in blacklist"
+    const-string/jumbo v1, "app is in blacklist.pkg:%s"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v5, 0x1
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    iget-object v4, v4, Lcom/tencent/mm/pluginsdk/model/app/f;->field_packageName:Ljava/lang/String;
+
+    aput-object v4, v5, v6
+
+    invoke-static {v0, v1, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
@@ -605,9 +664,9 @@
     :cond_5
     :goto_1
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbu:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKO:Ljava/util/HashMap;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
     invoke-virtual {v0, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -617,7 +676,7 @@
 
     const-wide/16 v4, 0x0
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/bn;->a(Ljava/lang/Long;J)J
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Long;J)J
 
     move-result-wide v4
 
@@ -650,7 +709,7 @@
 
     aput-object v8, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 285
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -680,23 +739,23 @@
 
     const/4 v6, 0x0
 
-    iget-object v7, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iget-object v7, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
     aput-object v7, v5, v6
 
-    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 287
-    sget-object v0, Lcom/tencent/mm/pluginsdk/l$a;->gJZ:Lcom/tencent/mm/pluginsdk/l$p;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyG:Lcom/tencent/mm/pluginsdk/i$r;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
-    invoke-interface {v0, v4}, Lcom/tencent/mm/pluginsdk/l$p;->tX(Ljava/lang/String;)V
+    invoke-interface {v0, v4}, Lcom/tencent/mm/pluginsdk/i$r;->zx(Ljava/lang/String;)V
 
     .line 288
-    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbu:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKO:Ljava/util/HashMap;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -719,7 +778,7 @@
     .line 262
     :cond_7
     :try_start_2
-    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbs:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKM:[Ljava/lang/String;
 
     array-length v5, v1
 
@@ -731,11 +790,19 @@
     aget-object v6, v1, v0
 
     .line 263
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    iget-object v7, v4, Lcom/tencent/mm/pluginsdk/model/app/f;->field_packageName:Ljava/lang/String;
+
+    invoke-virtual {v6, v7}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v7
+
+    if-eqz v7, :cond_a
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v7
 
-    invoke-static {v7, v4, v6}, Lcom/tencent/mm/pluginsdk/model/app/r;->b(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/h;Ljava/lang/String;)Z
+    invoke-static {v7, v4, v6}, Lcom/tencent/mm/pluginsdk/model/app/p;->b(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/model/app/f;Ljava/lang/String;)Z
 
     move-result v7
 
@@ -754,13 +821,13 @@
 
     aput-object v6, v5, v7
 
-    invoke-static {v0, v1, v5}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     .line 266
     :try_start_3
-    iput-object v6, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbq:Ljava/lang/String;
+    iput-object v6, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKK:Ljava/lang/String;
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
@@ -772,9 +839,9 @@
 
     .line 271
     :try_start_4
-    sget-object v0, Lcom/tencent/mm/pluginsdk/b$a;->gJR:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/b$b;->iyx:Ljava/util/HashMap;
 
-    iget v5, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbt:I
+    iget v5, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKN:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -804,9 +871,9 @@
 
     if-eqz v4, :cond_9
 
-    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/model/app/h;->field_appId:Ljava/lang/String;
+    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -831,7 +898,7 @@
 
     .line 275
     :cond_b
-    iget v0, v4, Lcom/tencent/mm/pluginsdk/model/app/h;->field_appInfoFlag:I
+    iget v0, v4, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appInfoFlag:I
 
     and-int/2addr v0, v5
 
@@ -850,7 +917,7 @@
 
     const/4 v9, 0x0
 
-    iget-object v4, v4, Lcom/tencent/mm/pluginsdk/model/app/h;->field_appId:Ljava/lang/String;
+    iget-object v4, v4, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
     aput-object v4, v8, v9
 
@@ -870,7 +937,7 @@
 
     aput-object v5, v8, v4
 
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
 
@@ -900,7 +967,7 @@
 
     aput-object v1, v3, v2
 
-    invoke-static {v4, v5, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
@@ -917,7 +984,7 @@
 
     const-string/jumbo v4, "appInfoFlag not set"
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_5
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
 
@@ -958,7 +1025,7 @@
     return v0
 .end method
 
-.method public final fN(I)V
+.method public final gK(I)V
     .locals 9
 
     .prologue
@@ -981,17 +1048,17 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->PI()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->Vw()Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
     aput-object v3, v2, v5
 
-    iget v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbt:I
+    iget v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKN:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1005,7 +1072,7 @@
 
     aput-object v3, v2, v7
 
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->PH()I
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->Vv()I
 
     move-result v3
 
@@ -1015,10 +1082,10 @@
 
     aput-object v3, v2, v8
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 86
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
     const/16 v1, 0x2909
 
@@ -1026,17 +1093,17 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->PI()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->Vw()Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v2, v4
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbr:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKL:Ljava/lang/String;
 
     aput-object v3, v2, v5
 
-    iget v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dbt:I
+    iget v3, p0, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->dKN:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -1050,7 +1117,7 @@
 
     aput-object v3, v2, v7
 
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->PH()I
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/ext/provider/ExtContentProviderBase;->Vv()I
 
     move-result v3
 
@@ -1060,7 +1127,7 @@
 
     aput-object v3, v2, v8
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
 
     .line 87
     return-void

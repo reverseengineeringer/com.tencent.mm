@@ -11,17 +11,17 @@ import java.util.Locale;
 final class CompatTextView$a
   implements TransformationMethod
 {
-  private final Locale gm;
+  private final Locale fu;
   
   public CompatTextView$a(Context paramContext)
   {
-    gm = getResourcesgetConfigurationlocale;
+    fu = getResourcesgetConfigurationlocale;
   }
   
   public final CharSequence getTransformation(CharSequence paramCharSequence, View paramView)
   {
     if (paramCharSequence != null) {
-      return paramCharSequence.toString().toUpperCase(gm);
+      return paramCharSequence.toString().toUpperCase(fu);
     }
     return null;
   }

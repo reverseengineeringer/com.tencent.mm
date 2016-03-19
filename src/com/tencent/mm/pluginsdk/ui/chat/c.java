@@ -1,35 +1,37 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.MMFlipper.a;
+import android.content.Context;
+import android.view.View;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.plugin.gif.d;
+import com.tencent.mm.pluginsdk.ui.emoji.PreViewEmojiView;
+import com.tencent.mm.ui.base.o;
+import com.tencent.mm.ui.base.s;
 
-final class c
-  implements MMFlipper.a
+public final class c
 {
-  c(AppPanel paramAppPanel) {}
+  private View cRI;
+  public com.tencent.mm.storage.a.c dmd;
+  public PreViewEmojiView iMb;
+  public o iMc;
+  public View iMd;
+  public int iMe;
+  public int iMf;
+  public Context mContext;
   
-  public final void aD(int paramInt1, int paramInt2)
+  public c(Context paramContext, View paramView)
   {
-    t.d("!32@/B4Tb64lLpIswCbzJzq2kbhBmMfFikWd", "onMeasure width:" + paramInt1 + " height:" + paramInt2 + " isMeasured:" + AppPanel.a(gTY));
-    if ((AppPanel.a(gTY)) || (paramInt2 == 0) || (paramInt1 == 0))
-    {
-      if ((paramInt2 == 0) || (paramInt1 == 0)) {
-        t.d("!32@/B4Tb64lLpIswCbzJzq2kbhBmMfFikWd", "onMeasure, width or height is 0");
-      }
-      return;
-    }
-    if (AppPanel.b(gTY) == 2) {
-      t.d("!32@/B4Tb64lLpIswCbzJzq2kbhBmMfFikWd", "landspace");
-    }
-    for (;;)
-    {
-      AppPanel.c(gTY);
-      AppPanel.a(gTY, paramInt2);
-      AppPanel.b(gTY, paramInt1);
-      AppPanel.d(gTY);
-      return;
-      t.d("!32@/B4Tb64lLpIswCbzJzq2kbhBmMfFikWd", "portrait");
-    }
+    mContext = paramContext;
+    iMd = paramView;
+    cRI = View.inflate(mContext, 2131363044, null);
+    iMb = ((PreViewEmojiView)cRI.findViewById(2131169061));
+    iMe = a.z(mContext, 2131034525);
+    iMc = new o(mContext);
+    iMc.setContentView(cRI);
+    iMc.setOutsideTouchable(false);
+    iMc.setFocusable(false);
+    iMc.setBackgroundDrawable(null);
+    iMf = s.eo(mContext);
   }
 }
 

@@ -1,26 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.storage.ar;
+import com.tencent.mm.sdk.c.b;
 
 public final class jo
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGE = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGh = new a();
   
   public jo()
   {
-    id = "VoiceReminderRemind";
-    hXT = atO;
+    id = "ReportClickFindFriendShake";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aCG;
-    public ar aub;
-    public String description;
+    public int asc = 1;
   }
 }
 

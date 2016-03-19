@@ -15,45 +15,45 @@
 
 
 # instance fields
-.field private cRP:I
+.field protected eED:F
 
-.field private eUB:Ljava/lang/String;
+.field private gBA:I
 
-.field private fkA:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
+.field private gBB:I
 
-.field private fkB:I
+.field protected gBC:Z
 
-.field private fkC:I
+.field private gBD:Lcom/tencent/mm/sdk/c/c;
 
-.field protected fkD:F
+.field private gBE:Ljava/lang/Runnable;
 
-.field protected fkE:Z
+.field private gBn:Z
 
-.field private fkF:Lcom/tencent/mm/sdk/c/e;
+.field private gBo:Z
 
-.field private fkG:Ljava/lang/Runnable;
+.field private gBp:Landroid/widget/LinearLayout;
 
-.field private fkp:Z
+.field private gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
-.field private fkq:Z
+.field private gBr:Landroid/widget/LinearLayout;
 
-.field private fkr:Landroid/widget/LinearLayout;
+.field private gBs:Landroid/widget/ImageView;
 
-.field private fks:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+.field private gBt:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
-.field private fkt:Landroid/widget/LinearLayout;
+.field private gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-.field private fku:Landroid/widget/ImageView;
+.field private gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
-.field private fkv:Lcom/tencent/mm/plugin/sight/encode/a/t;
+.field private gBw:Lcom/tencent/mm/plugin/sight/encode/a/g;
 
-.field private fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+.field private gBx:Lcom/tencent/mm/plugin/sight/encode/a/b$a;
 
-.field private fkx:Lcom/tencent/mm/plugin/sight/encode/a/b;
+.field private gBy:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
 
-.field private fky:Lcom/tencent/mm/plugin/sight/encode/a/o;
+.field private gBz:I
 
-.field private fkz:Lcom/tencent/mm/plugin/sight/encode/a/b$a;
+.field private gfD:Ljava/lang/String;
 
 .field private mFileName:Ljava/lang/String;
 
@@ -76,7 +76,13 @@
     .locals 8
 
     .prologue
-    const/16 v6, 0x8
+    const v6, 0x7f070f43
+
+    const v5, 0x7f070f3e
+
+    const v3, 0x7f070189
+
+    const/16 v4, 0x8
 
     const/4 v7, 0x0
 
@@ -84,31 +90,31 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/RelativeLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 59
-    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkp:Z
+    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBn:Z
 
     .line 60
-    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkq:Z
+    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBo:Z
 
     .line 68
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/t;
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/h;
 
-    invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/a/t;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkv:Lcom/tencent/mm/plugin/sight/encode/a/t;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBt:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
     .line 77
-    iput v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkB:I
+    iput v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBz:I
 
     .line 78
-    iput v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->cRP:I
+    iput v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBA:I
 
     .line 79
-    iput v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkC:I
+    iput v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBB:I
 
     .line 80
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->eUB:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gfD:Ljava/lang/String;
 
     .line 81
     const-string/jumbo v0, ""
@@ -118,39 +124,39 @@
     .line 83
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkD:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->eED:F
 
     .line 84
-    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkE:Z
+    iput-boolean v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBC:Z
 
     .line 86
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/a;
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/a;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$1;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkF:Lcom/tencent/mm/sdk/c/e;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBD:Lcom/tencent/mm/sdk/c/c;
 
-    .line 351
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/h;
+    .line 355
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$7;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/h;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$7;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkG:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBE:Ljava/lang/Runnable;
 
     .line 125
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$k;->chatting_sight_camera_view:I
+    const v1, 0x7f0a04ed
 
     invoke-static {v0, v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    sget v0, Lcom/tencent/mm/a$f;->black:I
+    const v0, 0x7f08017d
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->setBackgroundResource(I)V
 
-    sget v0, Lcom/tencent/mm/a$i;->camera_view_root:I
+    const v0, 0x7f070f39
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
@@ -158,9 +164,9 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkt:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBr:Landroid/widget/LinearLayout;
 
-    sget v0, Lcom/tencent/mm/a$i;->mask_iv:I
+    const v0, 0x7f070187
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
@@ -168,9 +174,9 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fku:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBs:Landroid/widget/ImageView;
 
-    sget v0, Lcom/tencent/mm/a$i;->sight_draft_area:I
+    const v0, 0x7f070f3f
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
@@ -178,9 +184,9 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkr:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBp:Landroid/widget/LinearLayout;
 
-    sget v0, Lcom/tencent/mm/a$i;->sight_draft_view:I
+    const v0, 0x7f070f0a
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
@@ -188,13 +194,13 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fks:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fks:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
-    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/b;
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/b;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$2;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->setSightDraftCallback(Lcom/tencent/mm/plugin/sight/draft/ui/a;)V
 
@@ -202,94 +208,80 @@
 
     move-result-wide v0
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkv:Lcom/tencent/mm/plugin/sight/encode/a/t;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBt:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
-    sget v3, Lcom/tencent/mm/a$i;->doubleclicke_tips_tv:I
+    invoke-virtual {v2, p0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->d(Landroid/view/ViewGroup;)V
 
-    sget v4, Lcom/tencent/mm/a$i;->moveup_tips_tv:I
+    new-instance v2, Lcom/tencent/mm/plugin/sight/encode/a/g;
 
-    sget v5, Lcom/tencent/mm/a$i;->cancel_tips_tv:I
+    invoke-direct {v2}, Lcom/tencent/mm/plugin/sight/encode/a/g;-><init>()V
 
-    invoke-virtual {v2, p0, v3, v4, v5}, Lcom/tencent/mm/plugin/sight/encode/a/t;->a(Landroid/view/ViewGroup;III)V
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBw:Lcom/tencent/mm/plugin/sight/encode/a/g;
 
-    new-instance v2, Lcom/tencent/mm/plugin/sight/encode/a/o;
+    new-instance v2, Lcom/tencent/mm/plugin/sight/encode/a/e;
 
-    invoke-direct {v2}, Lcom/tencent/mm/plugin/sight/encode/a/o;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/plugin/sight/encode/a/e;-><init>()V
 
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fky:Lcom/tencent/mm/plugin/sight/encode/a/o;
+    iput-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
-    new-instance v2, Lcom/tencent/mm/plugin/sight/encode/a/i;
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->awz()V
 
-    invoke-direct {v2}, Lcom/tencent/mm/plugin/sight/encode/a/i;-><init>()V
-
-    iput-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkx:Lcom/tencent/mm/plugin/sight/encode/a/b;
-
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->ajT()V
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/s;->aEF()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUx()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    sget v2, Lcom/tencent/mm/a$i;->videorecord_control_btn:I
-
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
     invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
 
-    sget v2, Lcom/tencent/mm/a$i;->videorecord_control_foreign_btn:I
-
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    invoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
     :goto_0
-    sget v2, Lcom/tencent/mm/a$i;->sight_draft_btn:I
+    const v2, 0x7f070f3c
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    new-instance v3, Lcom/tencent/mm/plugin/sight/encode/ui/d;
+    new-instance v3, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$3;
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/d;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
+    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$3;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v2, Lcom/tencent/mm/a$i;->sight_draft_edit_btn:I
-
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    invoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    sget v2, Lcom/tencent/mm/a$i;->sight_draft_edit_btn:I
-
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    new-instance v3, Lcom/tencent/mm/plugin/sight/encode/ui/e;
+    new-instance v3, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$4;
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/e;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
+    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$4;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v2, Lcom/tencent/mm/a$i;->actionbar_up_indicator:I
+    const v2, 0x7f070f40
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    invoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    sget v2, Lcom/tencent/mm/a$i;->sight_draft_title:I
+    const v2, 0x7f070f42
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
@@ -297,27 +289,27 @@
 
     invoke-virtual {v2, v7}, Landroid/view/View;->setVisibility(I)V
 
-    sget v2, Lcom/tencent/mm/a$i;->sight_draft_undo_btn:I
+    const v2, 0x7f070f41
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    new-instance v3, Lcom/tencent/mm/plugin/sight/encode/ui/f;
+    new-instance v3, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$5;
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/f;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
+    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$5;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    sget v2, Lcom/tencent/mm/a$i;->videorecord_control_root:I
+    const v2, 0x7f070f3d
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    new-instance v3, Lcom/tencent/mm/plugin/sight/encode/ui/g;
+    new-instance v3, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$6;
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/g;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
+    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$6;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
 
     invoke-virtual {v2, v3}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -341,24 +333,20 @@
 
     aput-object v0, v4, v7
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 126
     return-void
 
     .line 125
     :cond_0
-    sget v2, Lcom/tencent/mm/a$i;->videorecord_control_btn:I
-
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
-    invoke-virtual {v2, v6}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v2, v4}, Landroid/view/View;->setVisibility(I)V
 
-    sget v2, Lcom/tencent/mm/a$i;->videorecord_control_foreign_btn:I
-
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v2
 
@@ -372,152 +360,31 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->eUB:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gfD:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method private ajT()V
-    .locals 4
-
-    .prologue
-    .line 329
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->ajh()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 330
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    if-eqz v0, :cond_0
-
-    .line 349
-    :goto_0
-    return-void
-
-    .line 333
-    :cond_0
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    .line 340
-    :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    sget v1, Lcom/tencent/mm/a$i;->camera_view:I
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setId(I)V
-
-    .line 341
-    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getContext()Landroid/content/Context;
-
-    move-result-object v2
-
-    const/16 v3, 0xf0
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
-
-    move-result v2
-
-    invoke-direct {v0, v1, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
-
-    .line 343
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkt:Landroid/widget/LinearLayout;
-
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v1, v2, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 345
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    sget v1, Lcom/tencent/mm/pluginsdk/i/a;->gNS:I
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setTargetWidth(I)V
-
-    .line 346
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkx:Lcom/tencent/mm/plugin/sight/encode/a/b;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setSightMedia(Lcom/tencent/mm/plugin/sight/encode/a/b;)V
-
-    .line 347
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setSightCameraUIIm(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$a;)V
-
-    .line 348
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    const v1, 0x3faaaaab
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setPreviewRate(F)V
-
-    goto :goto_0
-
-    .line 335
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkt:Landroid/widget/LinearLayout;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
-
-    .line 336
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkx:Lcom/tencent/mm/plugin/sight/encode/a/b;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/b;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
-
-    .line 337
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;-><init>(Landroid/content/Context;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    goto :goto_1
-.end method
-
-.method private ajX()V
+.method private awC()V
     .locals 2
 
     .prologue
-    .line 426
-    invoke-static {}, Lcom/tencent/mm/ah/v;->BZ()Lcom/tencent/mm/ah/o;
+    const v1, 0x7f070f3c
+
+    .line 430
+    invoke-static {}, Lcom/tencent/mm/an/j;->Eb()Lcom/tencent/mm/an/h;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ah/o;->BR()I
+    invoke-virtual {v0}, Lcom/tencent/mm/an/h;->DS()I
 
     move-result v0
 
-    .line 427
+    .line 431
     if-lez v0, :cond_0
 
-    .line 428
-    sget v0, Lcom/tencent/mm/a$i;->sight_draft_btn:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
+    .line 432
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -525,15 +392,13 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 432
+    .line 436
     :goto_0
     return-void
 
-    .line 430
+    .line 434
     :cond_0
-    sget v0, Lcom/tencent/mm/a$i;->sight_draft_btn:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -544,12 +409,133 @@
     goto :goto_0
 .end method
 
+.method private awz()V
+    .locals 4
+
+    .prologue
+    .line 333
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avB()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 334
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    if-eqz v0, :cond_0
+
+    .line 353
+    :goto_0
+    return-void
+
+    .line 337
+    :cond_0
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    .line 344
+    :goto_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    const v1, 0x7f070efa
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setId(I)V
+
+    .line 345
+    new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    const/4 v1, -0x1
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const/16 v3, 0xf0
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+
+    move-result v2
+
+    invoke-direct {v0, v1, v2}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
+
+    .line 347
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBr:Landroid/widget/LinearLayout;
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v1, v2, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 349
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    sget v1, Lcom/tencent/mm/pluginsdk/l/a;->iFk:I
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setTargetWidth(I)V
+
+    .line 350
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setSightMedia(Lcom/tencent/mm/plugin/sight/encode/a/b;)V
+
+    .line 351
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setSightCameraUIIm(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$a;)V
+
+    .line 352
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    const v1, 0x3faaaaab
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setPreviewRate(F)V
+
+    goto :goto_0
+
+    .line 339
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBr:Landroid/widget/LinearLayout;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
+
+    .line 340
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
+
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/b;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
+
+    .line 341
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->getContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraSurfaceView;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    goto :goto_1
+.end method
+
 .method static synthetic b(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
     .locals 1
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fks:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
     return-object v0
 .end method
@@ -559,7 +545,7 @@
 
     .prologue
     .line 48
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->ajX()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->awC()V
 
     return-void
 .end method
@@ -569,7 +555,7 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkr:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBp:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
@@ -579,17 +565,17 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fku:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBs:Landroid/widget/ImageView;
 
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)Lcom/tencent/mm/plugin/sight/encode/a/t;
+.method static synthetic f(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)Lcom/tencent/mm/plugin/sight/encode/a/h;
     .locals 1
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkv:Lcom/tencent/mm/plugin/sight/encode/a/t;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBt:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
     return-object v0
 .end method
@@ -599,7 +585,7 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     return-object v0
 .end method
@@ -609,7 +595,7 @@
 
     .prologue
     .line 48
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkp:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBn:Z
 
     return v0
 .end method
@@ -619,7 +605,7 @@
 
     .prologue
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkx:Lcom/tencent/mm/plugin/sight/encode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
     return-object v0
 .end method
@@ -641,14 +627,14 @@
     .line 48
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkq:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBo:Z
 
     return v0
 .end method
 
 
 # virtual methods
-.method protected final ajU()V
+.method protected final adB()V
     .locals 7
 
     .prologue
@@ -658,23 +644,23 @@
 
     const/4 v4, 0x2
 
-    .line 373
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->eUB:Ljava/lang/String;
+    .line 377
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gfD:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/ah/ac;->bl(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/an/n;->bn(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->mFileName:Ljava/lang/String;
 
-    .line 374
+    .line 378
     const-string/jumbo v0, "!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ=="
 
     const-string/jumbo v1, "start record: talker[%s], fileName[%s]"
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->eUB:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gfD:Ljava/lang/String;
 
     aput-object v3, v2, v5
 
@@ -682,31 +668,31 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 375
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkx:Lcom/tencent/mm/plugin/sight/encode/a/b;
+    .line 379
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->eUB:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gfD:Ljava/lang/String;
 
     iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->mFileName:Ljava/lang/String;
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/plugin/sight/encode/a/b;->aI(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/plugin/sight/encode/a/b;->bk(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 376
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 380
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkG:Ljava/lang/Runnable;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBE:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setStopCallback(Ljava/lang/Runnable;)V
 
-    .line 377
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 381
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->ajU()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->adB()V
 
-    .line 379
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    .line 383
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
     const/16 v1, 0x2cb3
 
@@ -732,59 +718,59 @@
 
     aput-object v3, v2, v4
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
 
-    .line 382
+    .line 386
     return-void
 .end method
 
-.method protected final ajV()V
+.method protected final awA()V
     .locals 2
 
     .prologue
-    .line 385
+    .line 389
     const-string/jumbo v0, "!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ=="
 
     const-string/jumbo v1, "cancel record"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 388
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkv:Lcom/tencent/mm/plugin/sight/encode/a/t;
+    .line 392
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBt:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/t;->hide()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->hide()V
 
-    .line 390
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    .line 394
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->ajV()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->awA()V
 
-    .line 391
+    .line 395
     return-void
 .end method
 
-.method public final ajW()Z
+.method public final awB()Z
     .locals 1
 
     .prologue
-    .line 422
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkE:Z
+    .line 426
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBC:Z
 
     return v0
 .end method
 
-.method public final ajY()V
+.method public final awD()V
     .locals 3
 
     .prologue
-    .line 545
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fku:Landroid/widget/ImageView;
+    .line 549
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBs:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 546
+    .line 550
     new-instance v0, Landroid/view/animation/AlphaAnimation;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -793,40 +779,40 @@
 
     invoke-direct {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;-><init>(FF)V
 
-    .line 547
+    .line 551
     const-wide/16 v1, 0x1f4
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
-    .line 548
-    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkq:Z
+    .line 552
+    iget-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBo:Z
 
     if-nez v1, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->ajh()Z
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avB()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 549
-    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/j;
+    .line 553
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$9;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/j;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$9;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 566
+    .line 570
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fku:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBs:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 567
+    .line 571
     return-void
 .end method
 
-.method public final cY(Z)V
+.method public final eI(Z)V
     .locals 7
 
     .prologue
@@ -836,7 +822,7 @@
 
     const/4 v4, 0x0
 
-    .line 468
+    .line 472
     const-string/jumbo v0, "!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ=="
 
     const-string/jumbo v1, "hide recoder view, last time show %B, force %B"
@@ -845,7 +831,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkE:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBC:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -859,34 +845,34 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 469
+    .line 473
     if-nez p1, :cond_1
 
-    .line 470
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fks:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    .line 474
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->cX(Z)Z
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->eH(Z)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 496
+    .line 500
     :cond_0
     :goto_0
     return-void
 
-    .line 474
+    .line 478
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fks:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
-    invoke-virtual {v0, v5}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->cX(Z)Z
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->eH(Z)Z
 
-    .line 477
+    .line 481
     :cond_2
-    sget v0, Lcom/tencent/mm/a$i;->actionbar_up_indicator:I
+    const v0, 0x7f070f40
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
@@ -894,8 +880,8 @@
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 478
-    sget v0, Lcom/tencent/mm/a$i;->sight_draft_title:I
+    .line 482
+    const v0, 0x7f070f42
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->findViewById(I)Landroid/view/View;
 
@@ -903,58 +889,58 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 479
+    .line 483
     invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->setVisibility(I)V
 
-    .line 480
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkE:Z
-
-    .line 482
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->afJ()V
-
     .line 484
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fks:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBC:Z
+
+    .line 486
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->aqS()V
+
+    .line 488
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBq:Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->clearCache()V
 
-    .line 486
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkA:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
+    .line 490
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBy:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
 
     if-eqz v0, :cond_3
 
-    .line 487
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkA:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
+    .line 491
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBy:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;->aka()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;->onHide()V
 
-    .line 490
+    .line 494
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->ajh()Z
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avB()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 491
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkt:Landroid/widget/LinearLayout;
+    .line 495
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBr:Landroid/widget/LinearLayout;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
-    .line 492
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkx:Lcom/tencent/mm/plugin/sight/encode/a/b;
+    .line 496
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/b;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
 
     goto :goto_0
 .end method
 
-.method protected final lN()V
+.method protected final li()V
     .locals 8
 
     .prologue
@@ -966,14 +952,14 @@
 
     const/4 v4, 0x1
 
-    .line 394
+    .line 398
     const-string/jumbo v0, "!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ=="
 
     const-string/jumbo v1, "stop record: is finishRecord %B"
 
     new-array v2, v4, [Ljava/lang/Object;
 
-    iget-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkp:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBn:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -981,70 +967,70 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 395
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkp:Z
+    .line 399
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBn:Z
 
     if-nez v0, :cond_0
 
-    .line 396
+    .line 400
     const-string/jumbo v0, "!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ=="
 
     const-string/jumbo v1, "sight camera view try stop"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 397
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkv:Lcom/tencent/mm/plugin/sight/encode/a/t;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/t;->hide()V
-
-    .line 399
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->lN()V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 401
-    new-instance v0, Lcom/tencent/mm/d/a/iy;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBt:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/iy;-><init>()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->hide()V
 
-    .line 402
-    iget-object v1, v0, Lcom/tencent/mm/d/a/iy;->aGg:Lcom/tencent/mm/d/a/iy$a;
+    .line 403
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->li()V
+
+    .line 405
+    new-instance v0, Lcom/tencent/mm/d/a/nd;
+
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/nd;-><init>()V
+
+    .line 406
+    iget-object v1, v0, Lcom/tencent/mm/d/a/nd;->aJy:Lcom/tencent/mm/d/a/nd$a;
 
     const/4 v2, 0x7
 
-    iput v2, v1, Lcom/tencent/mm/d/a/iy$a;->type:I
+    iput v2, v1, Lcom/tencent/mm/d/a/nd$a;->type:I
 
-    .line 403
-    iget-object v1, v0, Lcom/tencent/mm/d/a/iy;->aGg:Lcom/tencent/mm/d/a/iy$a;
+    .line 407
+    iget-object v1, v0, Lcom/tencent/mm/d/a/nd;->aJy:Lcom/tencent/mm/d/a/nd$a;
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->cRP:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBA:I
 
-    iput v2, v1, Lcom/tencent/mm/d/a/iy$a;->aGh:I
-
-    .line 404
-    iget-object v1, v0, Lcom/tencent/mm/d/a/iy;->aGg:Lcom/tencent/mm/d/a/iy$a;
-
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkC:I
-
-    iput v2, v1, Lcom/tencent/mm/d/a/iy$a;->aGi:I
-
-    .line 405
-    iget-object v1, v0, Lcom/tencent/mm/d/a/iy;->aGg:Lcom/tencent/mm/d/a/iy$a;
-
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkB:I
-
-    iput v2, v1, Lcom/tencent/mm/d/a/iy$a;->aGj:I
-
-    .line 406
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->g(Lcom/tencent/mm/sdk/c/d;)Z
+    iput v2, v1, Lcom/tencent/mm/d/a/nd$a;->aJz:I
 
     .line 408
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    iget-object v1, v0, Lcom/tencent/mm/d/a/nd;->aJy:Lcom/tencent/mm/d/a/nd$a;
+
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBB:I
+
+    iput v2, v1, Lcom/tencent/mm/d/a/nd$a;->aJA:I
+
+    .line 409
+    iget-object v1, v0, Lcom/tencent/mm/d/a/nd;->aJy:Lcom/tencent/mm/d/a/nd$a;
+
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBz:I
+
+    iput v2, v1, Lcom/tencent/mm/d/a/nd$a;->aJB:I
+
+    .line 410
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 412
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
     const/16 v1, 0x2cb3
 
@@ -1068,13 +1054,13 @@
 
     aput-object v3, v2, v6
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
 
-    .line 414
+    .line 418
     :cond_0
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkp:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBn:Z
 
-    .line 415
+    .line 419
     return-void
 .end method
 
@@ -1087,19 +1073,19 @@
 
     const-string/jumbo v1, "on attached from window"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 119
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onAttachedToWindow()V
 
     .line 120
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "UIStatusChanged"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkF:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBD:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 121
     return-void
@@ -1114,19 +1100,19 @@
 
     const-string/jumbo v1, "on detached from window"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 112
     invoke-super {p0}, Landroid/widget/RelativeLayout;->onDetachedFromWindow()V
 
     .line 113
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "UIStatusChanged"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkF:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBD:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 114
     return-void
@@ -1137,13 +1123,13 @@
 
     .prologue
     .line 104
-    iput p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkB:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBz:I
 
     .line 105
-    iput p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->cRP:I
+    iput p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBA:I
 
     .line 106
-    iput p3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkC:I
+    iput p3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBB:I
 
     .line 107
     return-void
@@ -1153,22 +1139,22 @@
     .locals 2
 
     .prologue
-    .line 533
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkz:Lcom/tencent/mm/plugin/sight/encode/a/b$a;
+    .line 537
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBx:Lcom/tencent/mm/plugin/sight/encode/a/b$a;
 
-    .line 534
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkx:Lcom/tencent/mm/plugin/sight/encode/a/b;
+    .line 538
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
     if-eqz v0, :cond_0
 
-    .line 535
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkx:Lcom/tencent/mm/plugin/sight/encode/a/b;
+    .line 539
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBv:Lcom/tencent/mm/plugin/sight/encode/a/b;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkz:Lcom/tencent/mm/plugin/sight/encode/a/b$a;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBx:Lcom/tencent/mm/plugin/sight/encode/a/b$a;
 
     invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/b;->a(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
 
-    .line 537
+    .line 541
     :cond_0
     return-void
 .end method
@@ -1177,10 +1163,10 @@
     .locals 0
 
     .prologue
-    .line 418
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->eUB:Ljava/lang/String;
+    .line 422
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gfD:Ljava/lang/String;
 
-    .line 419
+    .line 423
     return-void
 .end method
 
@@ -1188,10 +1174,10 @@
     .locals 0
 
     .prologue
-    .line 540
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkA:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
+    .line 544
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBy:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
 
-    .line 541
+    .line 545
     return-void
 .end method
 
@@ -1207,14 +1193,14 @@
 
     const/4 v6, 0x0
 
-    .line 435
+    .line 439
     const-string/jumbo v0, "!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ=="
 
     const-string/jumbo v1, "show recoder view, last time show %B"
 
     new-array v3, v4, [Ljava/lang/Object;
 
-    iget-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkE:Z
+    iget-boolean v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBC:Z
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1222,25 +1208,25 @@
 
     aput-object v5, v3, v6
 
-    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 436
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkE:Z
+    .line 440
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBC:Z
 
     if-eqz v0, :cond_1
 
-    .line 465
+    .line 469
     :cond_0
     :goto_0
     return-void
 
-    .line 440
+    .line 444
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/compatible/e/b;->oY()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/e/b;->oQ()Z
 
     move-result v0
 
-    invoke-static {}, Lcom/tencent/mm/compatible/e/b;->oZ()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/e/b;->oR()Z
 
     move-result v1
 
@@ -1267,7 +1253,7 @@
 
     aput-object v8, v7, v4
 
-    invoke-static {v3, v5, v7}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v5, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     if-nez v0, :cond_4
 
@@ -1277,7 +1263,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$n;->app_special_no_audio_camera_permission:I
+    const v1, 0x7f0b08a7
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1287,7 +1273,7 @@
 
     move-result-object v0
 
-    sget v2, Lcom/tencent/mm/a$n;->app_need_audio_and_camera_title:I
+    const v2, 0x7f0b08a3
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1302,73 +1288,73 @@
 
     move-result-object v3
 
-    sget v5, Lcom/tencent/mm/a$n;->app_need_show_settings_button:I
+    const v5, 0x7f0b08a4
 
     invoke-virtual {v3, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    new-instance v5, Lcom/tencent/mm/plugin/sight/encode/ui/i;
+    new-instance v5, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$8;
 
-    invoke-direct {v5, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/i;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
+    invoke-direct {v5, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$8;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;)V
 
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/aa;
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
     move v0, v6
 
     :goto_2
     if-eqz v0, :cond_0
 
-    .line 444
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->ajT()V
+    .line 448
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->awz()V
 
-    .line 447
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkr:Landroid/widget/LinearLayout;
+    .line 451
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBp:Landroid/widget/LinearLayout;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 448
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->ajX()V
+    .line 452
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->awC()V
 
-    .line 451
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fku:Landroid/widget/ImageView;
+    .line 455
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBs:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 452
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkv:Lcom/tencent/mm/plugin/sight/encode/a/t;
+    .line 456
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBt:Lcom/tencent/mm/plugin/sight/encode/a/h;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/t;->ajP()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/h;->awv()V
 
-    .line 453
+    .line 457
     invoke-virtual {p0, v6}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->setVisibility(I)V
 
-    .line 454
-    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkE:Z
-
-    .line 455
-    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkp:Z
-
-    .line 456
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkw:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->akk()V
-
     .line 458
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkA:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
+    iput-boolean v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBC:Z
+
+    .line 459
+    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBn:Z
+
+    .line 460
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBu:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->awO()V
+
+    .line 462
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBy:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
 
     if-eqz v0, :cond_3
 
-    .line 459
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->fkA:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
+    .line 463
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView;->gBy:Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;->ajZ()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ChattingSightContainerView$a;->awE()V
 
-    .line 462
+    .line 466
     :cond_3
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
     const/16 v1, 0x2cb3
 
@@ -1394,11 +1380,11 @@
 
     aput-object v3, v2, v9
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 440
+    .line 444
     :cond_4
     if-nez v0, :cond_5
 
@@ -1406,7 +1392,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$n;->app_special_no_record_audio_permission:I
+    const v1, 0x7f0b08a5
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1416,7 +1402,7 @@
 
     move-result-object v0
 
-    sget v2, Lcom/tencent/mm/a$n;->app_need_audio_title:I
+    const v2, 0x7f0b08a1
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1431,7 +1417,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$n;->app_special_no_open_camera_permission:I
+    const v1, 0x7f0b08a6
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -1441,7 +1427,7 @@
 
     move-result-object v0
 
-    sget v2, Lcom/tencent/mm/a$n;->app_need_camera_title:I
+    const v2, 0x7f0b08a2
 
     invoke-virtual {v0, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 

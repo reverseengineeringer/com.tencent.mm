@@ -1,37 +1,37 @@
 package oicq.wlogin_sdk.a;
 
+import oicq.wlogin_sdk.tools.c;
 import oicq.wlogin_sdk.tools.d;
-import oicq.wlogin_sdk.tools.e;
 import oicq.wlogin_sdk.tools.util;
 
 public final class h
   extends a
 {
-  int jOq = 1;
-  int jOr = 1;
-  int jOs = 69;
+  int mcC = 1;
+  int mcD = 1;
+  int mcE = 69;
   
   public h()
   {
-    jNs = 262;
-    if (util.jPo <= 2)
+    mbE = 262;
+    if (util.mdA <= 2)
     {
-      jOq = 1;
-      jOs = 69;
+      mcC = 1;
+      mcE = 69;
       return;
     }
-    jOq = 2;
-    jOs = 90;
+    mcC = 2;
+    mcE = 90;
   }
   
   public final byte[] a(long paramLong1, int paramInt1, long paramLong2, byte[] paramArrayOfByte1, byte[] paramArrayOfByte2, byte[] paramArrayOfByte3, byte[] paramArrayOfByte4, int paramInt2, byte[] paramArrayOfByte5)
   {
-    if (util.jPo <= 2)
+    if (util.mdA <= 2)
     {
-      paramArrayOfByte5 = new byte[jOs];
-      util.m(paramArrayOfByte5, 0, jOq);
-      util.n(paramArrayOfByte5, 2, util.aVJ());
-      util.n(paramArrayOfByte5, 6, jOr);
+      paramArrayOfByte5 = new byte[mcE];
+      util.m(paramArrayOfByte5, 0, mcC);
+      util.n(paramArrayOfByte5, 2, util.boy());
+      util.n(paramArrayOfByte5, 6, mcD);
       util.n(paramArrayOfByte5, 10, (int)paramLong1);
       util.n(paramArrayOfByte5, 14, paramInt1);
       util.b(paramArrayOfByte5, 18, paramLong2);
@@ -46,18 +46,18 @@ public final class h
       paramArrayOfByte1 = new byte[24];
       System.arraycopy(paramArrayOfByte3, 0, paramArrayOfByte1, 0, paramArrayOfByte3.length);
       util.b(paramArrayOfByte1, 16, paramLong2);
-      paramArrayOfByte1 = d.bb(paramArrayOfByte1);
-      paramArrayOfByte1 = e.b(paramArrayOfByte5, paramArrayOfByte5.length, paramArrayOfByte1);
-      jOs = paramArrayOfByte1.length;
-      super.pV(jNs);
-      super.w(paramArrayOfByte1, jOs);
-      super.aVD();
-      return super.aVz();
+      paramArrayOfByte1 = c.bu(paramArrayOfByte1);
+      paramArrayOfByte1 = d.b(paramArrayOfByte5, paramArrayOfByte5.length, paramArrayOfByte1);
+      mcE = paramArrayOfByte1.length;
+      super.sL(mbE);
+      super.A(paramArrayOfByte1, mcE);
+      super.bos();
+      return super.boo();
     }
-    byte[] arrayOfByte = new byte[jOs];
-    util.m(arrayOfByte, 0, jOq);
-    util.n(arrayOfByte, 2, util.aVJ());
-    util.n(arrayOfByte, 6, jOr);
+    byte[] arrayOfByte = new byte[mcE];
+    util.m(arrayOfByte, 0, mcC);
+    util.n(arrayOfByte, 2, util.boy());
+    util.n(arrayOfByte, 6, mcD);
     util.n(arrayOfByte, 10, (int)paramLong1);
     util.n(arrayOfByte, 14, paramInt1);
     util.b(arrayOfByte, 18, paramLong2);
@@ -77,23 +77,23 @@ public final class h
     if ((paramArrayOfByte5 == null) || (paramArrayOfByte5.length <= 0))
     {
       paramArrayOfByte1 = new byte[16];
-      util.n(paramArrayOfByte1, 0, util.aVJ());
-      util.n(paramArrayOfByte1, 4, util.aVJ());
-      util.n(paramArrayOfByte1, 8, util.aVJ());
-      util.n(paramArrayOfByte1, 12, util.aVJ());
+      util.n(paramArrayOfByte1, 0, util.boy());
+      util.n(paramArrayOfByte1, 4, util.boy());
+      util.n(paramArrayOfByte1, 8, util.boy());
+      util.n(paramArrayOfByte1, 12, util.boy());
     }
     for (;;)
     {
       paramArrayOfByte1 = new byte[24];
       System.arraycopy(paramArrayOfByte3, 0, paramArrayOfByte1, 0, paramArrayOfByte3.length);
       util.b(paramArrayOfByte1, 16, paramLong2);
-      paramArrayOfByte1 = d.bb(paramArrayOfByte1);
-      paramArrayOfByte1 = e.b(arrayOfByte, arrayOfByte.length, paramArrayOfByte1);
-      jOs = paramArrayOfByte1.length;
-      super.pV(jNs);
-      super.w(paramArrayOfByte1, jOs);
-      super.aVD();
-      return aVz();
+      paramArrayOfByte1 = c.bu(paramArrayOfByte1);
+      paramArrayOfByte1 = d.b(arrayOfByte, arrayOfByte.length, paramArrayOfByte1);
+      mcE = paramArrayOfByte1.length;
+      super.sL(mbE);
+      super.A(paramArrayOfByte1, mcE);
+      super.bos();
+      return boo();
       System.arraycopy(paramArrayOfByte5, 0, arrayOfByte, paramInt1 + 1, paramArrayOfByte5.length);
     }
   }

@@ -115,6 +115,9 @@
 .method public abstract getFavicon()Landroid/graphics/Bitmap;
 .end method
 
+.method public abstract getGamePlayerWebViewClient()Ljava/lang/Object;
+.end method
+
 .method public abstract getHitTestResult()Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;
 .end method
 
@@ -261,6 +264,9 @@
 .end method
 
 .method public abstract setFindListener(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$FindListener;)V
+.end method
+
+.method public abstract setGamePlayerWebViewClient(Ljava/lang/Object;)V
 .end method
 
 .method public abstract setHorizontalScrollbarOverlay(Z)V

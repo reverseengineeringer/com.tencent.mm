@@ -3,13 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/model/au;
+.implements Lcom/tencent/mm/model/ae;
 
 
 # instance fields
-.field private bkq:Lcom/tencent/mm/g/e;
+.field private buQ:Lcom/tencent/mm/g/e;
 
-.field private bkr:Lcom/tencent/mm/g/c;
+.field private buR:Lcom/tencent/mm/g/c;
 
 
 # direct methods
@@ -25,24 +25,24 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/g/e;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/g/h;->bkq:Lcom/tencent/mm/g/e;
+    iput-object v0, p0, Lcom/tencent/mm/g/h;->buQ:Lcom/tencent/mm/g/e;
 
     .line 14
     new-instance v0, Lcom/tencent/mm/g/c;
 
     invoke-direct {v0}, Lcom/tencent/mm/g/c;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/g/h;->bkr:Lcom/tencent/mm/g/c;
+    iput-object v0, p0, Lcom/tencent/mm/g/h;->buR:Lcom/tencent/mm/g/c;
 
     return-void
 .end method
 
-.method private static pZ()Lcom/tencent/mm/g/h;
+.method private static pR()Lcom/tencent/mm/g/h;
     .locals 3
 
     .prologue
     .line 17
-    invoke-static {}, Lcom/tencent/mm/model/ax;->sS()Lcom/tencent/mm/model/dh;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tk()Lcom/tencent/mm/model/bc;
 
     move-result-object v0
 
@@ -52,7 +52,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/dh;->fb(Ljava/lang/String;)Lcom/tencent/mm/model/au;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/bc;->fu(Ljava/lang/String;)Lcom/tencent/mm/model/ae;
 
     move-result-object v0
 
@@ -67,7 +67,7 @@
     invoke-direct {v0}, Lcom/tencent/mm/g/h;-><init>()V
 
     .line 20
-    invoke-static {}, Lcom/tencent/mm/model/ax;->sS()Lcom/tencent/mm/model/dh;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tk()Lcom/tencent/mm/model/bc;
 
     move-result-object v1
 
@@ -77,78 +77,78 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/model/dh;->a(Ljava/lang/String;Lcom/tencent/mm/model/au;)Z
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/model/bc;->a(Ljava/lang/String;Lcom/tencent/mm/model/ae;)Z
 
     .line 22
     :cond_0
     return-object v0
 .end method
 
-.method public static qa()Lcom/tencent/mm/g/e;
+.method public static pS()Lcom/tencent/mm/g/e;
     .locals 1
 
     .prologue
     .line 57
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    iget v0, v0, Lcom/tencent/mm/model/b;->uin:I
+    iget v0, v0, Lcom/tencent/mm/model/c;->uin:I
 
     if-nez v0, :cond_0
 
     .line 58
-    new-instance v0, Lcom/tencent/mm/model/a;
+    new-instance v0, Lcom/tencent/mm/model/b;
 
-    invoke-direct {v0}, Lcom/tencent/mm/model/a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/model/b;-><init>()V
 
     throw v0
 
     .line 60
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/g/h;->pZ()Lcom/tencent/mm/g/h;
+    invoke-static {}, Lcom/tencent/mm/g/h;->pR()Lcom/tencent/mm/g/h;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/g/h;->bkq:Lcom/tencent/mm/g/e;
+    iget-object v0, v0, Lcom/tencent/mm/g/h;->buQ:Lcom/tencent/mm/g/e;
 
     return-object v0
 .end method
 
-.method public static qb()Lcom/tencent/mm/g/c;
+.method public static pT()Lcom/tencent/mm/g/c;
     .locals 1
 
     .prologue
     .line 69
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    iget v0, v0, Lcom/tencent/mm/model/b;->uin:I
+    iget v0, v0, Lcom/tencent/mm/model/c;->uin:I
 
     if-nez v0, :cond_0
 
     .line 70
-    new-instance v0, Lcom/tencent/mm/model/a;
+    new-instance v0, Lcom/tencent/mm/model/b;
 
-    invoke-direct {v0}, Lcom/tencent/mm/model/a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/model/b;-><init>()V
 
     throw v0
 
     .line 72
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/g/h;->pZ()Lcom/tencent/mm/g/h;
+    invoke-static {}, Lcom/tencent/mm/g/h;->pR()Lcom/tencent/mm/g/h;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/g/h;->bkr:Lcom/tencent/mm/g/c;
+    iget-object v0, v0, Lcom/tencent/mm/g/h;->buR:Lcom/tencent/mm/g/c;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final aJ(I)V
+.method public final aN(I)V
     .locals 0
 
     .prologue
@@ -164,13 +164,13 @@
     if-eqz p1, :cond_0
 
     .line 36
-    iget-object v0, p0, Lcom/tencent/mm/g/h;->bkr:Lcom/tencent/mm/g/c;
+    iget-object v0, p0, Lcom/tencent/mm/g/h;->buR:Lcom/tencent/mm/g/c;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v2, Lcom/tencent/mm/compatible/util/f;->bjI:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/compatible/util/d;->bxd:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -198,7 +198,7 @@
 
     new-instance v1, Ljava/io/File;
 
-    sget-object v3, Lcom/tencent/mm/g/c;->bki:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/g/c;->buH:Ljava/lang/String;
 
     invoke-direct {v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -212,18 +212,18 @@
 
     const-string/jumbo v4, "bugfix"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/g/c;->renameTo(Ljava/io/File;Ljava/io/File;)Z
 
     .line 38
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/g/h;->bkq:Lcom/tencent/mm/g/e;
+    iget-object v0, p0, Lcom/tencent/mm/g/h;->buQ:Lcom/tencent/mm/g/e;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/g/e;->pO()V
+    invoke-virtual {v0}, Lcom/tencent/mm/g/e;->pG()V
 
     .line 39
-    iget-object v0, p0, Lcom/tencent/mm/g/h;->bkr:Lcom/tencent/mm/g/c;
+    iget-object v0, p0, Lcom/tencent/mm/g/h;->buR:Lcom/tencent/mm/g/c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/g/c;->init()V
 
@@ -239,7 +239,7 @@
     return-void
 .end method
 
-.method public final lT()Ljava/util/HashMap;
+.method public final lo()Ljava/util/HashMap;
     .locals 1
 
     .prologue
@@ -249,7 +249,7 @@
     return-object v0
 .end method
 
-.method public final lU()V
+.method public final lp()V
     .locals 0
 
     .prologue

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$q
-  extends a.c
+  extends a.e
 {
   public a$q()
   {
-    super("connectToFreeWifi", "connectToFreeWifi", 95, false);
+    super("chooseImage", "chooseImage", 104, true);
   }
 }
 

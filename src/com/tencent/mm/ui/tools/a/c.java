@@ -2,30 +2,30 @@ package com.tencent.mm.ui.tools.a;
 
 import android.text.InputFilter;
 import android.widget.EditText;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.tools.dr;
-import com.tencent.mm.ui.tools.dr.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.tools.i;
+import com.tencent.mm.ui.tools.i.a;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 
 public final class c
   extends a
 {
-  private String dGU;
-  private int jtt;
-  public boolean jwQ = true;
-  private WeakReference jwR;
-  private int jwS;
-  private int jwT;
-  private ArrayList jwU;
-  private a jwV;
+  private String eut;
+  private int lwd;
+  public boolean lzG = true;
+  private WeakReference lzH;
+  private int lzI;
+  private int lzJ;
+  private ArrayList lzK;
+  private a lzL;
   
   private c(WeakReference paramWeakReference)
   {
-    jwR = paramWeakReference;
-    jtt = dr.a.jtw;
-    jwQ = false;
+    lzH = paramWeakReference;
+    lwd = i.a.lwf;
+    lzG = false;
   }
   
   public static c a(EditText paramEditText)
@@ -35,91 +35,91 @@ public final class c
   
   public final void a(a parama)
   {
-    jwV = parama;
-    aBx();
+    lzL = parama;
+    aSr();
   }
   
-  protected final int aBw()
+  protected final int aSq()
   {
-    if (bn.iW(dGU))
+    if (ay.kz(eut))
     {
-      if (jwR == null) {
+      if (lzH == null) {
         return 1;
       }
-      dGU = ((EditText)jwR.get()).getText().toString().trim();
+      eut = ((EditText)lzH.get()).getText().toString().trim();
     }
-    int j = dr.aO(dGU, jtt);
+    int j = i.bh(eut, lwd);
     if (j < 0) {}
     for (int i = 1; i != 0; i = 0)
     {
-      t.w("!44@/B4Tb64lLpKBZnNdUECN7wNhKDGLpubl8879tKhUKk0=", "you are crazy =.=!that is 2 GB character!");
+      u.w("!44@/B4Tb64lLpKBZnNdUECN7wNhKDGLpubl8879tKhUKk0=", "you are crazy =.=!that is 2 GB character!");
       return 2;
     }
-    if (j < jwT) {
+    if (j < lzJ) {
       return 1;
     }
-    if (j > jwS) {
+    if (j > lzI) {
       return 2;
     }
     return 0;
   }
   
-  protected final void aBx()
+  protected final void aSr()
   {
     Object localObject;
-    if (!jwQ)
+    if (!lzG)
     {
-      if (jwR == null)
+      if (lzH == null)
       {
-        t.w("!44@/B4Tb64lLpKBZnNdUECN7wNhKDGLpubl8879tKhUKk0=", "edit text view is null");
+        u.w("!44@/B4Tb64lLpKBZnNdUECN7wNhKDGLpubl8879tKhUKk0=", "edit text view is null");
         return;
       }
-      if (!bn.aP(jwU)) {
+      if (!ay.bq(lzK)) {
         break label123;
       }
-      localObject = new dr(jwS, jtt);
-      ((EditText)jwR.get()).setFilters(new InputFilter[] { localObject });
+      localObject = new i(lzI, lwd);
+      ((EditText)lzH.get()).setFilters(new InputFilter[] { localObject });
     }
-    while (jwV != null) {
-      switch (aBw())
+    while (lzL != null) {
+      switch (aSq())
       {
       default: 
         return;
       case 0: 
-        jwV.pJ(dGU);
+        lzL.mm(eut);
         return;
         label123:
-        jwU.add(new dr(jwS, jtt));
-        localObject = (InputFilter[])jwU.toArray(new InputFilter[jwU.size()]);
-        ((EditText)jwR.get()).setFilters((InputFilter[])localObject);
+        lzK.add(new i(lzI, lwd));
+        localObject = (InputFilter[])lzK.toArray(new InputFilter[lzK.size()]);
+        ((EditText)lzH.get()).setFilters((InputFilter[])localObject);
       }
     }
-    jwV.ahA();
+    lzL.Om();
     return;
-    jwV.ahB();
+    lzL.On();
   }
   
-  public final c bD(int paramInt1, int paramInt2)
+  public final c bV(int paramInt1, int paramInt2)
   {
-    jwT = paramInt1;
-    jwS = paramInt2;
+    lzJ = paramInt1;
+    lzI = paramInt2;
     return this;
   }
   
-  public final c oZ(int paramInt)
+  public final c rZ(int paramInt)
   {
-    jwT = 0;
-    jwS = paramInt;
+    lzJ = 0;
+    lzI = paramInt;
     return this;
   }
   
   public static abstract interface a
   {
-    public abstract void ahA();
+    public abstract void Om();
     
-    public abstract void ahB();
+    public abstract void On();
     
-    public abstract void pJ(String paramString);
+    public abstract void mm(String paramString);
   }
 }
 

@@ -1,26 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class iy
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGg = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aFj = new a();
+  public b aFk = new b();
   
   public iy()
   {
-    id = "UIStatusChanged";
-    hXT = atO;
+    id = "RcptAddress";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aGh = 0;
-    public int aGi = 0;
-    public int aGj = 0;
-    public int type = 0;
+    public String aFl;
+  }
+  
+  public static final class b
+  {
+    public int ret = 0;
   }
 }
 

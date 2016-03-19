@@ -2,10 +2,10 @@ package com.tencent.mm.d.a;
 
 public final class jp$a
 {
-  public boolean aGG = false;
-  public boolean aGH = false;
-  public boolean aGI = false;
-  public String aqX;
+  public String aGj;
+  public String alS;
+  public String appId;
+  public String mediaTagName;
 }
 
 /* Location:

@@ -2,62 +2,57 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class ap
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aIR;
-  private static final int aLe;
-  private static final int aPy;
-  private static final int aWo = "wechatId".hashCode();
-  private static final int aWp = "linkedInId".hashCode();
-  private static final int aWq;
-  private static final int aWr;
-  private static final int aWs;
-  private static final int aWt;
-  private static final int aWu;
-  private static final int aWv;
-  private static final int aWw;
-  private boolean aID = true;
-  private boolean aLa = true;
-  private boolean aPi = true;
-  private boolean aWf = true;
-  private boolean aWg = true;
-  private boolean aWh = true;
-  private boolean aWi = true;
-  private boolean aWj = true;
-  private boolean aWk = true;
-  private boolean aWl = true;
-  private boolean aWm = true;
-  private boolean aWn = true;
-  public String field_linkedInId;
-  public String field_linkedInProfileUrl;
-  public String field_name;
-  public String field_nickname;
-  public String field_picUrl;
-  public String field_position;
-  public int field_status;
-  public int field_userOpStatus;
-  public String field_wechatBigHead;
-  public String field_wechatId;
-  public String field_wechatSmallHead;
-  public String field_wechatUsername;
+  private static final int aLF = "rawXML".hashCode();
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int aMJ;
+  private static final int aMc;
+  private static final int aOu = "msgId".hashCode();
+  private static final int aPd;
+  private static final int aYZ = "gameMsgId".hashCode();
+  private static final int aZa;
+  private static final int aZb;
+  private static final int aZc;
+  private static final int aZd;
+  private static final int aZe;
+  private boolean aLK = true;
+  private boolean aLw = true;
+  private boolean aMv = true;
+  private boolean aOP = true;
+  private boolean aOp = true;
+  private boolean aYT = true;
+  private boolean aYU = true;
+  private boolean aYV = true;
+  private boolean aYW = true;
+  private boolean aYX = true;
+  private boolean aYY = true;
+  public String field_appId;
+  public long field_createTime;
+  public long field_expireTime;
+  public String field_gameMsgId;
+  public boolean field_isHidden;
+  public boolean field_isRead;
+  public String field_label;
+  public long field_msgId;
+  public int field_msgType;
+  public String field_rawXML;
+  public boolean field_showInMsgList;
   
   static
   {
-    aPy = "name".hashCode();
-    aWq = "position".hashCode();
-    aWr = "picUrl".hashCode();
-    aWs = "wechatUsername".hashCode();
-    aWt = "wechatSmallHead".hashCode();
-    aWu = "wechatBigHead".hashCode();
-    aWv = "linkedInProfileUrl".hashCode();
-    aIR = "status".hashCode();
-    aWw = "userOpStatus".hashCode();
-    aLe = "nickname".hashCode();
+    aPd = "msgType".hashCode();
+    aMc = "createTime".hashCode();
+    aZa = "expireTime".hashCode();
+    aMJ = "appId".hashCode();
+    aZb = "showInMsgList".hashCode();
+    aZc = "isRead".hashCode();
+    aZd = "label".hashCode();
+    aZe = "isHidden".hashCode();
   }
   
   public final void c(Cursor paramCursor)
@@ -66,93 +61,135 @@ public abstract class ap
     if (arrayOfString == null) {
       return;
     }
-    int i = 0;
     int j = arrayOfString.length;
+    int i = 0;
     label20:
     int k;
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aWo != k) {
-        break label60;
+      if (aOu != k) {
+        break label65;
       }
-      field_wechatId = paramCursor.getString(i);
+      field_msgId = paramCursor.getLong(i);
+      aOp = true;
     }
     for (;;)
     {
       i += 1;
       break label20;
       break;
-      label60:
-      if (aWp == k) {
-        field_linkedInId = paramCursor.getString(i);
-      } else if (aPy == k) {
-        field_name = paramCursor.getString(i);
-      } else if (aWq == k) {
-        field_position = paramCursor.getString(i);
-      } else if (aWr == k) {
-        field_picUrl = paramCursor.getString(i);
-      } else if (aWs == k) {
-        field_wechatUsername = paramCursor.getString(i);
-      } else if (aWt == k) {
-        field_wechatSmallHead = paramCursor.getString(i);
-      } else if (aWu == k) {
-        field_wechatBigHead = paramCursor.getString(i);
-      } else if (aWv == k) {
-        field_linkedInProfileUrl = paramCursor.getString(i);
-      } else if (aIR == k) {
-        field_status = paramCursor.getInt(i);
-      } else if (aWw == k) {
-        field_userOpStatus = paramCursor.getInt(i);
-      } else if (aLe == k) {
-        field_nickname = paramCursor.getString(i);
-      } else if (aHH == k) {
-        ibV = paramCursor.getLong(i);
+      label65:
+      if (aYZ == k)
+      {
+        field_gameMsgId = paramCursor.getString(i);
+      }
+      else if (aPd == k)
+      {
+        field_msgType = paramCursor.getInt(i);
+      }
+      else if (aMc == k)
+      {
+        field_createTime = paramCursor.getLong(i);
+      }
+      else if (aZa == k)
+      {
+        field_expireTime = paramCursor.getLong(i);
+      }
+      else if (aMJ == k)
+      {
+        field_appId = paramCursor.getString(i);
+      }
+      else
+      {
+        boolean bool;
+        if (aZb == k)
+        {
+          if (paramCursor.getInt(i) != 0) {}
+          for (bool = true;; bool = false)
+          {
+            field_showInMsgList = bool;
+            break;
+          }
+        }
+        if (aZc == k)
+        {
+          if (paramCursor.getInt(i) != 0) {}
+          for (bool = true;; bool = false)
+          {
+            field_isRead = bool;
+            break;
+          }
+        }
+        if (aZd == k)
+        {
+          field_label = paramCursor.getString(i);
+        }
+        else
+        {
+          if (aZe == k)
+          {
+            if (paramCursor.getInt(i) != 0) {}
+            for (bool = true;; bool = false)
+            {
+              field_isHidden = bool;
+              break;
+            }
+          }
+          if (aLF == k) {
+            field_rawXML = paramCursor.getString(i);
+          } else if (aLG == k) {
+            jYv = paramCursor.getLong(i);
+          }
+        }
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aWf) {
-      localContentValues.put("wechatId", field_wechatId);
+    if (aOp) {
+      localContentValues.put("msgId", Long.valueOf(field_msgId));
     }
-    if (aWg) {
-      localContentValues.put("linkedInId", field_linkedInId);
+    if (aYT) {
+      localContentValues.put("gameMsgId", field_gameMsgId);
     }
-    if (aPi) {
-      localContentValues.put("name", field_name);
+    if (aOP) {
+      localContentValues.put("msgType", Integer.valueOf(field_msgType));
     }
-    if (aWh) {
-      localContentValues.put("position", field_position);
+    if (aLK) {
+      localContentValues.put("createTime", Long.valueOf(field_createTime));
     }
-    if (aWi) {
-      localContentValues.put("picUrl", field_picUrl);
+    if (aYU) {
+      localContentValues.put("expireTime", Long.valueOf(field_expireTime));
     }
-    if (aWj) {
-      localContentValues.put("wechatUsername", field_wechatUsername);
+    if (aMv) {
+      localContentValues.put("appId", field_appId);
     }
-    if (aWk) {
-      localContentValues.put("wechatSmallHead", field_wechatSmallHead);
+    if (aYV) {
+      localContentValues.put("showInMsgList", Boolean.valueOf(field_showInMsgList));
     }
-    if (aWl) {
-      localContentValues.put("wechatBigHead", field_wechatBigHead);
+    if (aYW) {
+      localContentValues.put("isRead", Boolean.valueOf(field_isRead));
     }
-    if (aWm) {
-      localContentValues.put("linkedInProfileUrl", field_linkedInProfileUrl);
+    if (field_label == null) {
+      field_label = "";
     }
-    if (aID) {
-      localContentValues.put("status", Integer.valueOf(field_status));
+    if (aYX) {
+      localContentValues.put("label", field_label);
     }
-    if (aWn) {
-      localContentValues.put("userOpStatus", Integer.valueOf(field_userOpStatus));
+    if (aYY) {
+      localContentValues.put("isHidden", Boolean.valueOf(field_isHidden));
     }
-    if (aLa) {
-      localContentValues.put("nickname", field_nickname);
+    if (field_rawXML == null) {
+      field_rawXML = "";
     }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (aLw) {
+      localContentValues.put("rawXML", field_rawXML);
+    }
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

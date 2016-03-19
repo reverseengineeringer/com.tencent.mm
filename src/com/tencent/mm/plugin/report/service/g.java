@@ -1,376 +1,275 @@
 package com.tencent.mm.plugin.report.service;
 
+import android.app.ActivityManager;
+import android.app.ActivityManager.MemoryInfo;
 import android.content.Context;
-import com.tencent.mm.a.c;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.t;
+import android.os.StatFs;
+import android.util.SparseArray;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileFilter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.regex.Pattern;
 
 public final class g
 {
-  private static Byte eJN;
-  private static String filePath = getAppFilePath() + "/kvcomm/exception/";
+  private static boolean fUA = true;
+  private static long fUB = 0L;
+  private static long fUC = 0L;
+  private static long fUD = 0L;
+  private static SparseArray fUy = new SparseArray();
+  private static SparseArray fUz = new SparseArray();
   
-  static
+  public static void bP(long paramLong)
   {
-    eJN = new Byte((byte)0);
-    if (!c.az(filePath)) {
-      c.aC(filePath);
+    if (!fUA) {
+      return;
     }
+    u.d("!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx", "ReportLogInfo operationBegin eventID:%d  with time:%d", new Object[] { Integer.valueOf(8), Long.valueOf(paramLong) });
+    fUy.put(8, Long.valueOf(paramLong));
   }
   
-  public static void a(int paramInt, String arg1, boolean paramBoolean1, boolean paramBoolean2)
+  public static void kd(int paramInt)
   {
-    if (!c.az(filePath))
-    {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveKVcommData, filepath:" + filePath + " not exist , logId:" + paramInt + ", val:" + ??? + ", isImportant:" + paramBoolean2 + ", reportnow:" + paramBoolean1);
+    if (!fUA) {
       return;
     }
-    t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveKVcommData, logId:" + paramInt + ", val:" + ??? + ", isImportant:" + paramBoolean2 + ", reportnow:" + paramBoolean1);
-    String str1 = afn();
-    if ("MM".equals(str1))
-    {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "error path, invalid processname:" + str1 + ", logId:" + paramInt + ", val:" + ??? + ", isImportant:" + paramBoolean2 + ", reportnow:" + paramBoolean1);
-      return;
-    }
-    str1 = filePath + str1 + ".statictis";
-    Object localObject = new d();
-    eJH = paramInt;
-    eJI = ???;
-    eJF = paramBoolean2;
-    eJJ = paramBoolean1;
-    try
-    {
-      localObject = ((d)localObject).toByteArray();
-      if (localObject == null)
-      {
-        t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveKVcommData, null == temp.");
-        return;
-      }
-    }
-    catch (IOException ???)
-    {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveIDKeyData, IOException, detail:" + ???.getMessage());
-      return;
-    }
-    synchronized (eJN)
-    {
-      if (c.c(str1, il(localObject.length)) != 0)
-      {
-        t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveKVcommData, write obj_len to file:" + str1 + " fail.");
-        return;
-      }
-    }
-    if (c.c(str2, (byte[])localObject) != 0) {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveKVcommData, write object to file:" + str2 + " fail.");
-    }
+    fUy.put(paramInt, Long.valueOf(ay.FS()));
+    u.d("!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx", "ReportLogInfo operationBegin eventID:%d  time:%d", new Object[] { Integer.valueOf(paramInt), Long.valueOf(ay.FS()) });
   }
   
-  public static void afm()
+  public static void ke(int paramInt)
   {
-    if (!c.az(filePath))
+    if (!fUA) {}
+    long l;
+    do
     {
-      t.w("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport, filepath:" + filePath + " not exist.");
-      return;
-    }
-    File[] arrayOfFile = new File(filePath).listFiles();
-    if (arrayOfFile == null)
+      Long localLong;
+      do
+      {
+        return;
+        localLong = (Long)fUy.get(paramInt);
+      } while ((localLong == null) || (localLong.longValue() == -1L));
+      fUy.put(paramInt, Long.valueOf(-1L));
+      l = ay.FS() - localLong.longValue();
+    } while (l <= 0L);
+    switch (paramInt)
     {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "list file fail, filePath:" + filePath);
-      return;
     }
     for (;;)
     {
-      int j;
-      String str;
-      int i;
-      synchronized (eJN)
+      u.i("!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx", "ReportLogInfo operationEnd eventID:%d  time:%d", new Object[] { Integer.valueOf(paramInt), Long.valueOf(l) });
+      return;
+      if (y.jVC)
       {
-        int k = arrayOfFile.length;
-        j = 0;
-        if (j >= k) {
-          break label892;
-        }
-        localObject2 = arrayOfFile[j];
-        if (localObject2 == null)
-        {
-          t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport, file is null");
-        }
-        else
-        {
-          str = ((File)localObject2).getAbsolutePath();
-          i = 0;
-          int m = c.ay(str);
-          t.d("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport, filename:" + ((File)localObject2).getAbsolutePath() + ", filelenth:" + m);
-          if (i >= m)
-          {
-            t.d("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport, read to end, deletefile:" + str);
-            c.deleteFile(str);
-          }
-        }
-      }
-      Object localObject2 = c.c(str, i, 4);
-      if (localObject2 == null)
-      {
-        t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport, get obj_len fail. delete file:" + str);
+        h.fUJ.h(23, 4, 5, (int)l);
       }
       else
       {
-        i += 4;
-        int n = ah((byte[])localObject2);
-        localObject2 = c.c(str, i, n);
-        if (localObject2 == null)
-        {
-          t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport, get obj_data fail. delete file:" + str);
+        v(1, l);
+        u(227, l);
+        h.fUJ.h(23, 1, 2, (int)l);
+        continue;
+        v(3, l);
+        u(229, l);
+        h.fUJ.h(27, 1, 2, (int)l);
+        continue;
+        v(2, l);
+        u(228, l);
+        h.fUJ.h(28, 1, 2, (int)l);
+        continue;
+        v(6, l);
+        continue;
+        v(7, l);
+        continue;
+        v(8, l);
+        continue;
+        v(10, l);
+        continue;
+        v(14, l);
+        continue;
+        v(15, l);
+        continue;
+        v(9, l);
+        continue;
+        v(11, l);
+        continue;
+        v(16, l);
+        continue;
+        v(13, l);
+        continue;
+        v(12, l);
+      }
+    }
+  }
+  
+  public static void kf(int paramInt)
+  {
+    if (!fUA) {
+      return;
+    }
+    u.d("!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx", "ReportLogInfo stopOperation stop eventID:%d", new Object[] { Integer.valueOf(paramInt) });
+    fUy.put(paramInt, Long.valueOf(-1L));
+  }
+  
+  private static void u(int paramInt, long paramLong)
+  {
+    if (paramLong <= 0L) {
+      return;
+    }
+    if (paramLong < 1000L)
+    {
+      h.fUJ.aR(paramInt, 1);
+      return;
+    }
+    if (paramLong < 2000L)
+    {
+      h.fUJ.aR(paramInt, 3);
+      return;
+    }
+    if (paramLong < 5000L)
+    {
+      h.fUJ.aR(paramInt, 5);
+      return;
+    }
+    if (paramLong < 10000L)
+    {
+      h.fUJ.aR(paramInt, 7);
+      return;
+    }
+    h.fUJ.aR(paramInt, 9);
+  }
+  
+  private static void v(int paramInt, long paramLong)
+  {
+    long l;
+    if (paramInt == 6)
+    {
+      l = System.currentTimeMillis();
+      if (l < fUB + 60000L) {
+        return;
+      }
+      fUB = l;
+    }
+    for (;;)
+    {
+      localObject = a.aqu();
+      if (!hasInit) {
+        break label179;
+      }
+      h localh = h.fUJ;
+      h.a(11335, true, false, new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong), Integer.valueOf(fUF), Long.valueOf(fUE[0]), Long.valueOf(fUE[1]), Long.valueOf(fUH) });
+      return;
+      if (paramInt == 7)
+      {
+        l = System.currentTimeMillis();
+        if (l < fUC + 60000L) {
+          break;
         }
-        else
-        {
-          i += n;
-          Object localObject3;
-          if (str.contains(".statictis")) {
-            localObject3 = new d();
-          }
-          for (;;)
-          {
-            boolean bool1;
-            try
-            {
-              ((d)localObject3).x((byte[])localObject2);
-              n = eJH;
-              localObject2 = eJI;
-              bool1 = eJF;
-              boolean bool2 = eJJ;
-              t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport, reportkvcomm, logid:" + n + ", value:" + (String)localObject2 + ", isReportNow:" + bool2 + ", isImportant" + bool1);
-              localObject3 = j.eJZ;
-              j.c(n, (String)localObject2, bool2, bool1);
-              t.d("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport, curLen:" + i);
-            }
-            catch (IOException localIOException1)
-            {
-              t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport(kvcomm), IOException:" + localIOException1.getMessage());
-            }
-            break;
-            if (str.contains(".monitor"))
-            {
-              localObject3 = new b();
-              try
-              {
-                ((b)localObject3).x(localIOException1);
-                long l1 = aoF;
-                long l2 = eJD;
-                long l3 = eJE;
-                bool1 = eJF;
-                t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport, reportidkey, id:" + l1 + ", key:" + l2 + ", value:" + l3 + ", isImportant" + bool1);
-                j localj = j.eJZ;
-                j.b(l1, l2, l3, bool1);
-              }
-              catch (IOException localIOException2)
-              {
-                t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport(idkey), IOException:" + localIOException2.getMessage());
-              }
-              break;
-            }
-            if (!str.contains(".group_monitor")) {
-              break label866;
-            }
-            localObject3 = new a();
-            try
-            {
-              ((a)localObject3).x(localIOException2);
-              ArrayList localArrayList = new ArrayList();
-              bool1 = false;
-              localObject3 = eJC.iterator();
-              while (((Iterator)localObject3).hasNext())
-              {
-                b localb = (b)((Iterator)localObject3).next();
-                KVReportJni.IDKeyDataInfo localIDKeyDataInfo = new KVReportJni.IDKeyDataInfo(aoF, eJD, eJE);
-                bool1 = eJF;
-                localArrayList.add(localIDKeyDataInfo);
-                t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport, idkeyGroupStat, id:" + aoF + ", key:" + eJD + ", value:" + eJE + ", isImportant" + bool1);
-              }
-              localObject3 = j.eJZ;
-              j.d(localArrayList, bool1);
-            }
-            catch (IOException localIOException3)
-            {
-              t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "loadFilesToReport(idkey), IOException:" + localIOException3.getMessage());
-            }
-          }
-          continue;
-          label866:
-          t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "invalid filename:" + str);
-          continue;
-          label892:
-          return;
-          j += 1;
+        fUC = l;
+        continue;
+      }
+      if (paramInt == 8)
+      {
+        l = System.currentTimeMillis();
+        if (l < fUD + 60000L) {
+          break;
         }
+        fUD = l;
       }
     }
+    label179:
+    Object localObject = h.fUJ;
+    h.a(11335, true, false, new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong) });
   }
   
-  private static String afn()
+  public static final class a
   {
-    Object localObject = aa.aEY();
-    if ((localObject == null) || (((String)localObject).length() == 0)) {
-      return "MM";
-    }
-    localObject = ((String)localObject).split(":");
-    if (localObject.length <= 1) {
-      return "MM";
-    }
-    return localObject[1];
-  }
-  
-  private static int ah(byte[] paramArrayOfByte)
-  {
-    int i = 0;
-    int j = 0;
-    while (i < 4)
+    public static a fUI;
+    public long[] fUE;
+    public int fUF;
+    public String fUG;
+    public long fUH;
+    public volatile boolean hasInit;
+    
+    public static a aqu()
     {
-      j += ((paramArrayOfByte[i] & 0xFF) << (3 - i) * 8);
-      i += 1;
-    }
-    return j;
-  }
-  
-  public static void c(int paramInt1, int paramInt2, int paramInt3, boolean paramBoolean)
-  {
-    t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveIDKeyData, id:" + paramInt1 + ", key:" + paramInt2 + ", value:" + paramInt3 + ", isImportant:" + paramBoolean);
-    if (!c.az(filePath))
-    {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveIDKeyData, filepath:" + filePath + " not exist , Id:" + paramInt1 + ", key:" + paramInt2 + ", value:" + paramInt3 + ", isImportant:" + paramBoolean);
-      return;
-    }
-    String str1 = afn();
-    if ("MM".equals(str1))
-    {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "error path, current processname:" + str1 + ", id:" + paramInt1 + ", key:" + paramInt2 + ", val:" + paramInt3 + ", isImportant:" + paramBoolean);
-      return;
-    }
-    str1 = filePath + str1 + ".monitor";
-    ??? = new b();
-    aoF = paramInt1;
-    eJD = paramInt2;
-    eJE = paramInt3;
-    eJF = paramBoolean;
-    byte[] arrayOfByte;
-    try
-    {
-      arrayOfByte = ((b)???).toByteArray();
-      if (arrayOfByte == null)
+      try
       {
-        t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveIDKeyData, null == temp.");
-        return;
+        if (fUI == null)
+        {
+          locala = new a();
+          fUI = locala;
+          fUF = ot();
+          fUIfUG = on();
+          locala = fUI;
+          Object localObject2 = (ActivityManager)y.getContext().getSystemService("activity");
+          ActivityManager.MemoryInfo localMemoryInfo = new ActivityManager.MemoryInfo();
+          ((ActivityManager)localObject2).getMemoryInfo(localMemoryInfo);
+          fUH = (availMem >> 10);
+          locala = fUI;
+          localObject2 = new StatFs(com.tencent.mm.compatible.util.g.getDataDirectory().getPath());
+          long l1 = ((StatFs)localObject2).getBlockSize();
+          long l2 = ((StatFs)localObject2).getBlockCount();
+          localObject2 = new StatFs(com.tencent.mm.compatible.util.g.getDataDirectory().getPath());
+          long l3 = ((StatFs)localObject2).getBlockSize();
+          fUE = new long[] { l2 * l1, ((StatFs)localObject2).getAvailableBlocks() * l3 };
+          fUIhasInit = true;
+        }
+        a locala = fUI;
+        return locala;
       }
+      finally {}
     }
-    catch (IOException localIOException)
+    
+    private static String on()
     {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveIDKeyData, IOException, detail:" + localIOException.getMessage());
-      return;
-    }
-    synchronized (eJN)
-    {
-      if (c.c(localIOException, il(arrayOfByte.length)) != 0)
+      String str3 = "N/A";
+      String str1 = str3;
+      String str2 = str3;
+      try
       {
-        t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveIDKeyData, write obj_len to file:" + localIOException + " fail.");
-        return;
+        BufferedReader localBufferedReader = new BufferedReader(new FileReader("/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq"));
+        str1 = str3;
+        str2 = str3;
+        str3 = localBufferedReader.readLine().trim();
+        str1 = str3;
+        str2 = str3;
+        localBufferedReader.close();
+        return str3;
       }
-    }
-    if (c.c(str2, arrayOfByte) != 0) {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveIDKeyData, write object to file:" + str2 + " fail.");
-    }
-    t.d("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveIDKeyData, fileLength:" + c.ay(str2));
-  }
-  
-  public static void c(ArrayList arg0, boolean paramBoolean)
-  {
-    Object localObject1 = ???.iterator();
-    while (((Iterator)localObject1).hasNext())
-    {
-      localObject2 = (KVReportJni.IDKeyDataInfo)((Iterator)localObject1).next();
-      t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveGroupIDKeyData, id:" + ((KVReportJni.IDKeyDataInfo)localObject2).GetID() + ", key:" + ((KVReportJni.IDKeyDataInfo)localObject2).GetKey() + ", value:" + ((KVReportJni.IDKeyDataInfo)localObject2).GetValue() + ", isImportant:" + paramBoolean);
-    }
-    if (!c.az(filePath))
-    {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveGroupIDKeyData, filepath:" + filePath + " not exist ");
-      return;
-    }
-    localObject1 = afn();
-    if ("MM".equals(localObject1))
-    {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "error path, current processname:" + (String)localObject1);
-      return;
-    }
-    localObject1 = filePath + (String)localObject1 + ".group_monitor";
-    Object localObject2 = new a();
-    eJB = ???.size();
-    ??? = ???.iterator();
-    while (???.hasNext())
-    {
-      KVReportJni.IDKeyDataInfo localIDKeyDataInfo = (KVReportJni.IDKeyDataInfo)???.next();
-      b localb = new b();
-      aoF = ((int)localIDKeyDataInfo.GetID());
-      eJD = ((int)localIDKeyDataInfo.GetKey());
-      eJE = ((int)localIDKeyDataInfo.GetValue());
-      eJF = paramBoolean;
-      eJC.add(localb);
-    }
-    try
-    {
-      localObject2 = ((a)localObject2).toByteArray();
-      if (localObject2 == null)
+      catch (IOException localIOException)
       {
-        t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveGroupIDKeyData, null == temp.");
-        return;
+        return str1;
       }
+      catch (FileNotFoundException localFileNotFoundException) {}
+      return localIOException;
     }
-    catch (IOException ???)
+    
+    private static int ot()
     {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveGroupIDKeyData, IOException, detail:" + ???.getMessage());
-      return;
-    }
-    synchronized (eJN)
-    {
-      if (c.c((String)localObject1, il(localObject2.length)) != 0)
+      try
       {
-        t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveGroupIDKeyData, write obj_len to file:" + (String)localObject1 + " fail.");
-        return;
+        int i = new File("/sys/devices/system/cpu/").listFiles(new a()).length;
+        return i;
+      }
+      catch (Exception localException) {}
+      return 1;
+    }
+    
+    final class a
+      implements FileFilter
+    {
+      public final boolean accept(File paramFile)
+      {
+        return Pattern.matches("cpu[0-9]", paramFile.getName());
       }
     }
-    if (c.c(str, (byte[])localObject2) != 0) {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "saveGroupIDKeyData, write object to file:" + str + " fail.");
-    }
-  }
-  
-  private static String getAppFilePath()
-  {
-    Object localObject = aa.getContext();
-    if (localObject == null) {
-      return null;
-    }
-    try
-    {
-      localObject = ((Context)localObject).getFilesDir();
-      if (!((File)localObject).exists()) {
-        ((File)localObject).createNewFile();
-      }
-      localObject = ((File)localObject).toString();
-      return (String)localObject;
-    }
-    catch (Exception localException)
-    {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", localException.getMessage());
-    }
-    return null;
-  }
-  
-  private static byte[] il(int paramInt)
-  {
-    return new byte[] { (byte)(paramInt >> 24 & 0xFF), (byte)(paramInt >> 16 & 0xFF), (byte)(paramInt >> 8 & 0xFF), (byte)(paramInt & 0xFF) };
   }
 }
 

@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public jOD:I
+.field public mcP:I
 
 
 # direct methods
@@ -18,12 +18,12 @@
     .line 6
     const/4 v0, 0x0
 
-    iput v0, p0, Loicq/wlogin_sdk/a/ab;->jOD:I
+    iput v0, p0, Loicq/wlogin_sdk/a/ab;->mcP:I
 
     .line 9
     const/16 v0, 0x132
 
-    iput v0, p0, Loicq/wlogin_sdk/a/ab;->jNs:I
+    iput v0, p0, Loicq/wlogin_sdk/a/ab;->mbE:I
 
     .line 10
     return-void
@@ -31,14 +31,14 @@
 
 
 # virtual methods
-.method public final aVE()Ljava/lang/Boolean;
+.method public final bot()Ljava/lang/Boolean;
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
     .line 14
-    iget v0, p0, Loicq/wlogin_sdk/a/ab;->jOc:I
+    iget v0, p0, Loicq/wlogin_sdk/a/ab;->mco:I
 
     const/4 v1, 0x2
 
@@ -55,22 +55,22 @@
 
     .line 16
     :cond_0
-    iget-object v0, p0, Loicq/wlogin_sdk/a/ab;->jNm:[B
+    iget-object v0, p0, Loicq/wlogin_sdk/a/ab;->mby:[B
 
-    iget v1, p0, Loicq/wlogin_sdk/a/ab;->jOb:I
+    iget v1, p0, Loicq/wlogin_sdk/a/ab;->mcn:I
 
-    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/util;->A([BI)I
+    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/util;->E([BI)I
 
     move-result v0
 
-    iput v0, p0, Loicq/wlogin_sdk/a/ab;->jOD:I
+    iput v0, p0, Loicq/wlogin_sdk/a/ab;->mcP:I
 
     .line 17
-    iget v0, p0, Loicq/wlogin_sdk/a/ab;->jOD:I
+    iget v0, p0, Loicq/wlogin_sdk/a/ab;->mcP:I
 
     add-int/lit8 v0, v0, 0x2
 
-    iget v1, p0, Loicq/wlogin_sdk/a/ab;->jOc:I
+    iget v1, p0, Loicq/wlogin_sdk/a/ab;->mco:I
 
     if-le v0, v1, :cond_1
 

@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field of:J
+.field nj:J
 
 .field position:I
 
@@ -30,9 +30,9 @@
 
     .prologue
     .line 381
-    new-instance v0, Landroid/support/v7/internal/widget/c;
+    new-instance v0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState$1;
 
-    invoke-direct {v0}, Landroid/support/v7/internal/widget/c;-><init>()V
+    invoke-direct {v0}, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState$1;-><init>()V
 
     sput-object v0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -51,7 +51,7 @@
 
     move-result-wide v0
 
-    iput-wide v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->of:J
+    iput-wide v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->nj:J
 
     .line 363
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -116,7 +116,7 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->of:J
+    iget-wide v1, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->nj:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -155,7 +155,7 @@
     invoke-super {p0, p1, p2}, Landroid/view/View$BaseSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
     .line 369
-    iget-wide v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->of:J
+    iget-wide v0, p0, Landroid/support/v7/internal/widget/AbsSpinnerICS$SavedState;->nj:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 

@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private rh:Z
+.field private qj:Z
 
-.field private ri:Z
+.field private qk:Z
 
 
 # direct methods
@@ -28,12 +28,12 @@
     .line 1177
     const/4 v0, 0x0
 
-    sget v1, Lcom/tencent/mm/a$d;->dropDownListViewStyle:I
+    const v1, 0x7f0100a7
 
     invoke-direct {p0, p1, v0, v1}, Landroid/widget/ListView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 1178
-    iput-boolean p2, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->ri:Z
+    iput-boolean p2, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->qk:Z
 
     .line 1179
     const/4 v0, 0x0
@@ -49,7 +49,7 @@
 
     .prologue
     .line 1126
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->rh:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->qj:Z
 
     return p1
 .end method
@@ -61,7 +61,7 @@
 
     .prologue
     .line 1255
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->ri:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->qk:Z
 
     if-nez v0, :cond_0
 
@@ -88,7 +88,7 @@
 
     .prologue
     .line 1235
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->ri:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->qk:Z
 
     if-nez v0, :cond_0
 
@@ -115,7 +115,7 @@
 
     .prologue
     .line 1245
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->ri:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->qk:Z
 
     if-nez v0, :cond_0
 
@@ -142,11 +142,11 @@
 
     .prologue
     .line 1225
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->ri:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->qk:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->rh:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMListPopupWindow$a;->qj:Z
 
     if-nez v0, :cond_1
 

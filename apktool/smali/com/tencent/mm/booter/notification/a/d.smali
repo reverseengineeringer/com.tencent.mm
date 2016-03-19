@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public li:Landroid/content/Intent;
+.field public mIntent:Landroid/content/Intent;
 
 
 # direct methods

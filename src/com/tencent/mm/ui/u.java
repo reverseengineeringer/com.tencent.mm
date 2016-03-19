@@ -1,24 +1,18 @@
 package com.tencent.mm.ui;
 
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelsimple.o;
-import com.tencent.mm.q.l;
+import com.tencent.mm.d.a.mw;
+import com.tencent.mm.sdk.c.a;
 
-final class u
-  implements DialogInterface.OnCancelListener
+public final class u
 {
-  u(ExposeWithProofUI paramExposeWithProofUI, o paramo) {}
-  
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public static void ae(int paramInt, String paramString)
   {
-    ax.tm().c(imz);
-    if (ExposeWithProofUI.e(imy) != null)
+    if (a.jUF != null)
     {
-      ExposeWithProofUI.e(imy).cancel();
-      ExposeWithProofUI.f(imy);
+      mw localmw = new mw();
+      aJl.className = paramString;
+      aJl.aJm = paramInt;
+      a.jUF.j(localmw);
     }
   }
 }

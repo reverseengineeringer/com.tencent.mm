@@ -15,18 +15,30 @@
 
 
 # instance fields
-.field public data:[B
+.field public auC:Ljava/lang/String;
 
-.field public mac:Ljava/lang/String;
+.field public auD:I
+
+.field public auE:I
+
+.field public auF:Lcom/tencent/mm/r/j;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
+    const/4 v0, 0x0
+
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 16
+    iput v0, p0, Lcom/tencent/mm/d/a/bk$a;->auD:I
+
+    .line 17
+    iput v0, p0, Lcom/tencent/mm/d/a/bk$a;->auE:I
 
     return-void
 .end method

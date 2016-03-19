@@ -1,7 +1,6 @@
 package com.tencent.mm.plugin.accountsync.model;
 
 import android.accounts.Account;
-import android.accounts.OperationCanceledException;
 import android.app.Service;
 import android.content.AbstractThreadedSyncAdapter;
 import android.content.ContentProviderClient;
@@ -12,16 +11,17 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.Looper;
 import com.jg.JgClassChecked;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.modelfriend.al;
-import com.tencent.mm.modelfriend.at;
-import com.tencent.mm.modelsimple.c;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.h.e;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.modelfriend.a.b;
+import com.tencent.mm.modelfriend.ac;
+import com.tencent.mm.modelfriend.x;
+import com.tencent.mm.modelsimple.b;
+import com.tencent.mm.pluginsdk.g.a;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j;
+import com.tencent.mm.sdk.i.e;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.storage.h;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140422", reviewer=20, vComment={com.jg.EType.SERVICESCHECK})
@@ -29,36 +29,36 @@ public class ContactsSyncService
   extends Service
   implements d
 {
-  private static Account bKE;
-  private a bXo = null;
-  private Looper bXp;
+  private static Account caG;
+  private a cox = null;
+  private Looper coy;
   
   public ContactsSyncService()
   {
-    t.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService construction");
+    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService construction");
   }
   
-  private void DU()
+  private void Ga()
   {
-    if (bXp != null) {
-      bXp.quit();
+    if (coy != null) {
+      coy.quit();
     }
   }
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    t.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString + " type = " + paramj.getType());
+    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString + " type = " + paramj.getType());
     if (paramj.getType() == 133)
     {
-      ax.tm().b(133, this);
-      t.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "uploadcontact onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
-      l1 = ((Long)ax.tl().rf().get(327728, Long.valueOf(0L))).longValue();
+      ah.tE().b(133, this);
+      u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "uploadcontact onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
+      l1 = ((Long)ah.tD().rn().get(327728, Long.valueOf(0L))).longValue();
       l2 = System.currentTimeMillis();
-      t.d("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "getMFriend : curTime=" + l2 + ", lastTime=" + l1);
+      u.d("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "getMFriend : curTime=" + l2 + ", lastTime=" + l1);
       if ((paramInt2 != 0) && (l2 - l1 < 86400000L))
       {
-        DU();
-        t.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "uploadmcontact list null, do not do getmfriend.");
+        Ga();
+        u.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "uploadmcontact list null, do not do getmfriend.");
       }
     }
     while (paramj.getType() != 32)
@@ -66,31 +66,41 @@ public class ContactsSyncService
       long l1;
       long l2;
       return;
-      ax.tl().rf().set(327728, Long.valueOf(l2));
-      ax.tm().a(32, this);
-      paramString = (at)paramj;
-      paramString = new al(bzS, bzT);
-      ax.tm().d(paramString);
+      ah.tD().rn().set(327728, Long.valueOf(l2));
+      ah.tE().a(32, this);
+      paramString = (ac)paramj;
+      paramString = new x(bMX, bMY);
+      ah.tE().d(paramString);
     }
-    ax.tm().b(32, this);
-    t.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "getmfriend onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
+    ah.tE().b(32, this);
+    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "getmfriend onSceneEnd: errType = " + paramInt1 + ", errCode = " + paramInt2);
     if ((paramInt1 == 0) && (paramInt2 == 0)) {
-      e.c(new c(this, bKE), "MMAccountManager_updateLocalContacts").start();
+      e.c(new b(this, caG), "MMAccountManager_updateLocalContacts").start();
     }
-    DU();
+    Ga();
   }
   
   public IBinder onBind(Intent paramIntent)
   {
-    if (bXo == null) {
-      bXo = new a(getApplicationContext());
+    paramIntent = null;
+    if (a.aL(this, "android.permission.READ_CONTACTS"))
+    {
+      if (cox == null) {
+        cox = new a(getApplicationContext());
+      }
+      paramIntent = cox.getSyncAdapterBinder();
     }
-    return bXo.getSyncAdapterBinder();
+    for (;;)
+    {
+      u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService onBind ret[%s]", new Object[] { paramIntent });
+      return paramIntent;
+      u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService onBind no permission");
+    }
   }
   
   public void onDestroy()
   {
-    t.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "contacts sync service destory");
+    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "contacts sync service destory");
     super.onDestroy();
   }
   
@@ -103,13 +113,15 @@ public class ContactsSyncService
     {
       super(true);
       mContext = paramContext;
+      u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService SyncAdapterImpl construction");
     }
     
     public final void onPerformSync(Account paramAccount, Bundle paramBundle, String paramString, ContentProviderClient paramContentProviderClient, SyncResult paramSyncResult)
     {
-      if (!ax.qZ())
+      u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService SyncAdapterImpl onPerformSync");
+      if (!ah.rh())
       {
-        t.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "account not ready, ignore this sync");
+        u.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService account not ready, ignore this sync");
         return;
       }
       try
@@ -120,10 +132,10 @@ public class ContactsSyncService
         Looper.loop();
         return;
       }
-      catch (OperationCanceledException paramAccount)
+      catch (Exception paramAccount)
       {
         ContactsSyncService.a(ContactsSyncService.this);
-        t.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService.onPerformSync error: " + paramAccount.getMessage());
+        u.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService.onPerformSync error: " + paramAccount.getMessage());
       }
     }
   }

@@ -5,20 +5,18 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.v;
-import com.tencent.mm.model.w;
-import com.tencent.mm.p.i;
-import com.tencent.mm.p.u;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.h;
+import com.tencent.mm.model.i;
+import com.tencent.mm.plugin.extqlauncher.b;
+import com.tencent.mm.q.d;
+import com.tencent.mm.q.n;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.MMBaseActivity;
-import com.tencent.mm.ui.contact.de;
+import com.tencent.mm.ui.contact.r;
 import java.util.List;
 
 public class QLauncherCreateShortcutUI
@@ -27,7 +25,7 @@ public class QLauncherCreateShortcutUI
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
     super.onActivityResult(paramInt1, paramInt2, paramIntent);
-    t.d("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "onActivityResult resultCode = %s", new Object[] { Integer.valueOf(paramInt2) });
+    u.d("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "onActivityResult resultCode = %s", new Object[] { Integer.valueOf(paramInt2) });
     if (paramInt2 != -1)
     {
       finish();
@@ -41,24 +39,24 @@ public class QLauncherCreateShortcutUI
       finish();
       return;
     } while (paramIntent == null);
-    if (!ax.qZ())
+    if (!ah.rh())
     {
-      t.e("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "account not ready");
-      Toast.makeText(this, a.n.extqlauncher_add_shortcut_failed, 0).show();
+      u.e("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "account not ready");
+      Toast.makeText(this, 2131431510, 0).show();
       finish();
       return;
     }
     paramIntent = paramIntent.getStringExtra("Select_Contact");
-    if (!bn.iW(paramIntent)) {}
-    for (paramIntent = bn.g(paramIntent.split(","));; paramIntent = null)
+    if (!ay.kz(paramIntent)) {}
+    for (paramIntent = ay.h(paramIntent.split(","));; paramIntent = null)
     {
       if ((paramIntent == null) || (paramIntent.size() <= 0))
       {
-        t.e("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "userNames empty");
+        u.e("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "userNames empty");
         break;
       }
-      t.d("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "userNames count " + paramIntent.size());
-      String str1 = v.rS();
+      u.d("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "userNames count " + paramIntent.size());
+      String str1 = h.sc();
       ContentValues[] arrayOfContentValues;
       for (;;)
       {
@@ -67,39 +65,39 @@ public class QLauncherCreateShortcutUI
           arrayOfContentValues = new ContentValues[paramIntent.size()];
           paramInt1 = 0;
           if (paramInt1 >= paramIntent.size()) {
-            break label487;
+            break label485;
           }
-          localObject = ax.tl().ri().yM((String)paramIntent.get(paramInt1));
-          if ((localObject != null) && ((int)bkE > 0)) {
-            break label275;
+          localObject = ah.tD().rq().Ep((String)paramIntent.get(paramInt1));
+          if ((localObject != null) && ((int)bvi > 0)) {
+            break label273;
           }
-          t.e("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "no such user");
+          u.e("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "no such user");
           finish();
           return;
         }
         catch (Exception paramIntent)
         {
-          t.d("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "bulkInsert shortcut failed, %s", new Object[] { paramIntent.getMessage() });
-          Toast.makeText(this, a.n.extqlauncher_add_shortcut_failed, 0).show();
+          u.d("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "bulkInsert shortcut failed, %s", new Object[] { paramIntent.getMessage() });
+          Toast.makeText(this, 2131431510, 0).show();
         }
         break;
-        label275:
-        String str2 = com.tencent.mm.plugin.base.a.a.jF((String)paramIntent.get(paramInt1));
-        if (bn.iW(str2))
+        label273:
+        String str2 = com.tencent.mm.plugin.base.a.a.li((String)paramIntent.get(paramInt1));
+        if (ay.kz(str2))
         {
-          t.e("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "null encryptShortcutUser");
+          u.e("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "null encryptShortcutUser");
           finish();
           return;
         }
         ContentValues localContentValues = new ContentValues();
-        localContentValues.put("source_key", com.tencent.mm.plugin.base.a.a.cjE);
-        localContentValues.put("owner_id", com.tencent.mm.plugin.base.a.a.jF(str1));
+        localContentValues.put("source_key", com.tencent.mm.plugin.base.a.a.cAN);
+        localContentValues.put("owner_id", com.tencent.mm.plugin.base.a.a.li(str1));
         localContentValues.put("unique_id", str2);
         localContentValues.put("container", Integer.valueOf(1));
-        localContentValues.put("item_type", Integer.valueOf(com.tencent.mm.plugin.base.a.a.u((k)localObject)));
-        localContentValues.put("name", w.a((k)localObject, (String)paramIntent.get(paramInt1)));
-        u.uN();
-        localContentValues.put("icon_path", i.j((String)paramIntent.get(paramInt1), false));
+        localContentValues.put("item_type", Integer.valueOf(com.tencent.mm.plugin.base.a.a.w((k)localObject)));
+        localContentValues.put("name", i.a((k)localObject, (String)paramIntent.get(paramInt1)));
+        n.vb();
+        localContentValues.put("icon_path", d.k((String)paramIntent.get(paramInt1), false));
         Object localObject = new Intent("com.tencent.mm.action.BIZSHORTCUT");
         ((Intent)localObject).putExtra("LauncherUI.Shortcut.Username", str2);
         ((Intent)localObject).putExtra("LauncherUI.From.Biz.Shortcut", true);
@@ -108,10 +106,10 @@ public class QLauncherCreateShortcutUI
         arrayOfContentValues[paramInt1] = localContentValues;
         paramInt1 += 1;
       }
-      label487:
-      getContentResolver().bulkInsert(a.dcW, arrayOfContentValues);
-      Toast.makeText(this, a.n.extqlauncher_add_shortcut_success, 0).show();
-      com.tencent.mm.plugin.extqlauncher.b.PN().PP();
+      label485:
+      getContentResolver().bulkInsert(a.dMu, arrayOfContentValues);
+      Toast.makeText(this, 2131431509, 0).show();
+      b.VD().VF();
       break;
     }
   }
@@ -119,18 +117,18 @@ public class QLauncherCreateShortcutUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    t.d("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "onCreate");
+    u.d("!64@/B4Tb64lLpJDdPNWGvN8drS2dJ4haxZKzb5xwrBXrS9h6Br3OTt1bohJb6FlnEMD", "onCreate");
     requestWindowFeature(1);
-    setContentView(a.k.create_shortcut);
+    setContentView(2131362276);
     paramBundle = new Intent();
-    int i = de.h(new int[] { de.jhe, 64, 16384 });
-    de.bB(i, 1);
+    int i = r.n(new int[] { r.lly, 64, 16384 });
+    r.bR(i, 1);
     paramBundle.putExtra("list_attr", i);
     paramBundle.putExtra("list_type", 12);
     paramBundle.putExtra("stay_in_wechat", false);
-    paramBundle.putExtra("titile", getString(a.n.address_title_select_contact));
-    paramBundle.putExtra("block_contact", v.rS());
-    c.a(this, ".ui.contact.SelectContactUI", paramBundle, 1);
+    paramBundle.putExtra("titile", getString(2131428318));
+    paramBundle.putExtra("block_contact", h.sc());
+    com.tencent.mm.ar.c.a(this, ".ui.contact.SelectContactUI", paramBundle, 1);
   }
 }
 

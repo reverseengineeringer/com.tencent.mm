@@ -1,15 +1,14 @@
 package com.tencent.mm.plugin.accountsync.model;
 
 import android.accounts.Account;
-import android.accounts.OperationCanceledException;
 import android.content.AbstractThreadedSyncAdapter;
 import android.content.ContentProviderClient;
 import android.content.Context;
 import android.content.SyncResult;
 import android.os.Bundle;
 import android.os.Looper;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.platformtools.u;
 
 final class ContactsSyncService$a
   extends AbstractThreadedSyncAdapter
@@ -20,27 +19,29 @@ final class ContactsSyncService$a
   {
     super(paramContext, true);
     mContext = paramContext;
+    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService SyncAdapterImpl construction");
   }
   
   public final void onPerformSync(Account paramAccount, Bundle paramBundle, String paramString, ContentProviderClient paramContentProviderClient, SyncResult paramSyncResult)
   {
-    if (!ax.qZ())
+    u.i("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService SyncAdapterImpl onPerformSync");
+    if (!ah.rh())
     {
-      t.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "account not ready, ignore this sync");
+      u.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService account not ready, ignore this sync");
       return;
     }
     try
     {
       Looper.prepare();
-      ContactsSyncService.a(bXq, Looper.myLooper());
-      ContactsSyncService.a(bXq, paramAccount);
+      ContactsSyncService.a(coz, Looper.myLooper());
+      ContactsSyncService.a(coz, paramAccount);
       Looper.loop();
       return;
     }
-    catch (OperationCanceledException paramAccount)
+    catch (Exception paramAccount)
     {
-      ContactsSyncService.a(bXq);
-      t.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService.onPerformSync error: " + paramAccount.getMessage());
+      ContactsSyncService.a(coz);
+      u.e("!44@/B4Tb64lLpLSOpQlr7qYXeI8vtsBDwmDryVGH1F6tWw=", "ContactsSyncService.onPerformSync error: " + paramAccount.getMessage());
     }
   }
 }

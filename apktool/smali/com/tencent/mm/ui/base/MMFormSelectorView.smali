@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private cwe:Landroid/widget/TextView;
+.field private cNT:Landroid/widget/TextView;
 
-.field private euS:Landroid/widget/EditText;
+.field private fEO:Landroid/widget/EditText;
 
-.field private gYe:Ljava/lang/String;
+.field private iOw:Ljava/lang/String;
 
 .field private layout:I
 
@@ -54,7 +54,7 @@
     iput v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->layout:I
 
     .line 41
-    sget-object v0, Lcom/tencent/mm/a$p;->FormItemView:[I
+    sget-object v0, Lcom/tencent/mm/R$b;->FormItemView:[I
 
     invoke-virtual {p1, p2, v0, p3, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -93,7 +93,7 @@
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->gYe:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->iOw:Ljava/lang/String;
 
     .line 54
     :cond_1
@@ -127,12 +127,12 @@
 
     .prologue
     .line 137
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
     if-eqz v0, :cond_0
 
     .line 138
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -152,7 +152,7 @@
 
     const-string/jumbo v1, "contentET is null!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 143
     const/4 v0, 0x0
@@ -165,7 +165,7 @@
 
     .prologue
     .line 72
-    sget v0, Lcom/tencent/mm/a$i;->title:I
+    const v0, 0x7f070114
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMFormSelectorView;->findViewById(I)Landroid/view/View;
 
@@ -173,9 +173,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cwe:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cNT:Landroid/widget/TextView;
 
-    sget v0, Lcom/tencent/mm/a$i;->edittext:I
+    const v0, 0x7f0704d4
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMFormSelectorView;->findViewById(I)Landroid/view/View;
 
@@ -183,13 +183,13 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cwe:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cNT:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
     if-nez v0, :cond_2
 
@@ -204,17 +204,17 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cwe:Landroid/widget/TextView;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cNT:Landroid/widget/TextView;
 
     aput-object v4, v2, v3
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 73
     :cond_1
@@ -227,20 +227,20 @@
 
     if-eqz v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cwe:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cNT:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->title:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->gYe:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->iOw:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->gYe:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->iOw:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
@@ -252,12 +252,12 @@
 
     .prologue
     .line 121
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
     if-eqz v0, :cond_0
 
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setHint(I)V
 
@@ -271,7 +271,7 @@
 
     const-string/jumbo v1, "contentET is null!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -281,12 +281,12 @@
 
     .prologue
     .line 105
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
     if-eqz v0, :cond_0
 
     .line 106
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
@@ -300,7 +300,7 @@
 
     const-string/jumbo v1, "contentET is null!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -310,12 +310,12 @@
 
     .prologue
     .line 129
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
     if-eqz v0, :cond_0
 
     .line 130
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->euS:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->fEO:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -329,7 +329,7 @@
 
     const-string/jumbo v1, "contentET is null!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -339,12 +339,12 @@
 
     .prologue
     .line 113
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cwe:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cNT:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
     .line 114
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cwe:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cNT:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
 
@@ -358,7 +358,7 @@
 
     const-string/jumbo v1, "titleTV is null!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -368,12 +368,12 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cwe:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cNT:Landroid/widget/TextView;
 
     if-eqz v0, :cond_0
 
     .line 98
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cwe:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMFormSelectorView;->cNT:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -387,7 +387,7 @@
 
     const-string/jumbo v1, "titleTV is null!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static bjj:Ljava/util/Map;
+.field private static btL:Ljava/util/Map;
 
 
 # direct methods
-.method public static q(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
+.method public static t(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
     .locals 12
 
     .prologue
@@ -21,12 +21,12 @@
     const/4 v9, 0x0
 
     .line 56
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DM()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
 
     move-result-wide v3
 
     .line 57
-    sget-object v0, Lcom/tencent/mm/compatible/loader/g;->bjj:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/compatible/loader/g;->btL:Ljava/util/Map;
 
     if-nez v0, :cond_1
 
@@ -41,11 +41,11 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->e(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->d(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/p;->xj(Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/q;->CK(Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v2
 
@@ -61,7 +61,7 @@
 
     aput-object v0, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -78,7 +78,7 @@
 
     const-string/jumbo v2, "parse libraries.ini failed"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 58
     :cond_1
@@ -94,7 +94,7 @@
     move-result-object v0
 
     .line 60
-    sget-object v2, Lcom/tencent/mm/compatible/loader/g;->bjj:Ljava/util/Map;
+    sget-object v2, Lcom/tencent/mm/compatible/loader/g;->btL:Ljava/util/Map;
 
     if-nez v2, :cond_3
 
@@ -103,7 +103,7 @@
 
     const-string/jumbo v2, "extractVoipDex preload so files loaded failed"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -119,7 +119,7 @@
 
     const-string/jumbo v2, "load preload libraries failed"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -132,7 +132,7 @@
 
     invoke-direct {v0, v5}, Ljava/util/HashMap;-><init>(I)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/loader/g;->bjj:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/compatible/loader/g;->btL:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -173,9 +173,9 @@
 
     aput-object v8, v7, v10
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    sget-object v5, Lcom/tencent/mm/compatible/loader/g;->bjj:Ljava/util/Map;
+    sget-object v5, Lcom/tencent/mm/compatible/loader/g;->btL:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -214,7 +214,7 @@
     move-result-object v2
 
     .line 66
-    sget-object v0, Lcom/tencent/mm/compatible/loader/g;->bjj:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/compatible/loader/g;->btL:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -230,7 +230,7 @@
 
     const-string/jumbo v2, "extractVoipDex not in preloadfiles"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -251,7 +251,7 @@
     if-eqz v6, :cond_6
 
     .line 75
-    invoke-static {v5}, Lcom/tencent/mm/a/e;->e(Ljava/io/File;)Ljava/lang/String;
+    invoke-static {v5}, Lcom/tencent/mm/a/g;->g(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v6
 
@@ -273,7 +273,7 @@
 
     aput-object v5, v6, v9
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/bn;->Y(J)J
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
 
     move-result-wide v3
 
@@ -283,7 +283,7 @@
 
     aput-object v3, v6, v10
 
-    invoke-static {v0, v1, v6}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v2
 
@@ -302,11 +302,11 @@
 
     aput-object v0, v8, v10
 
-    invoke-static {v5, v7, v8}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 83
     :cond_6
-    invoke-static {v2}, Lcom/tencent/mm/a/c;->deleteFile(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/loader/stub/b;->deleteFile(Ljava/lang/String;)Z
 
     .line 85
     new-instance v5, Ljava/lang/StringBuilder;
@@ -323,7 +323,7 @@
 
     move-result-object v5
 
-    invoke-static {p0, v5, v2}, Lcom/tencent/mm/sdk/platformtools/j;->v(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-static {p0, v5, v2}, Lcom/tencent/mm/sdk/platformtools/j;->w(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
 
     move-result v5
 
@@ -334,7 +334,7 @@
 
     const-string/jumbo v2, "extractVoipDex  copyAssets failed"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -351,7 +351,7 @@
 
     new-array v6, v6, [Ljava/lang/Object;
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/bn;->Y(J)J
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/ay;->an(J)J
 
     move-result-wide v3
 
@@ -365,7 +365,7 @@
 
     aput-object v0, v6, v11
 
-    invoke-static {v1, v5, v6}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v2
 

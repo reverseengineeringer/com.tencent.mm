@@ -1,24 +1,26 @@
 package android.support.v7.app;
 
-import android.support.v7.internal.view.menu.g;
+import android.os.Bundle;
+import android.view.Window;
 
 final class c
-  implements Runnable
+  extends b
 {
-  c(b paramb) {}
-  
-  public final void run()
+  c(ActionBarActivity paramActionBarActivity)
   {
-    g localg = b.a(jO);
-    if ((jO.jz.a(0, localg)) && (jO.jz.a(0, null, localg))) {
-      b.a(jO, localg);
-    }
-    for (;;)
-    {
-      b.b(jO);
-      return;
-      b.a(jO, null);
-    }
+    super(paramActionBarActivity);
+  }
+  
+  public final ActionBar aO()
+  {
+    aU();
+    return new f(iG, iG);
+  }
+  
+  final void onCreate(Bundle paramBundle)
+  {
+    iG.getWindow().requestFeature(10);
+    super.onCreate(paramBundle);
   }
 }
 

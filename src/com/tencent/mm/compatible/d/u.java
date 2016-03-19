@@ -1,24 +1,45 @@
 package com.tencent.mm.compatible.d;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import com.tencent.mm.sdk.platformtools.y;
+
 public final class u
 {
-  public int biG = 800000;
-  public int biH = 60000;
-  public int biI = 100000000;
-  public int biJ = 1000;
-  public int biK = 0;
+  private static u bth = null;
   
-  public u()
+  public static int oN()
   {
-    reset();
-  }
-  
-  public final void reset()
-  {
-    biG = 800000;
-    biH = 60000;
-    biJ = 1000;
-    biK = 0;
+    NetworkInfo localNetworkInfo = ((ConnectivityManager)y.getContext().getSystemService("connectivity")).getActiveNetworkInfo();
+    if (localNetworkInfo == null) {
+      return 0;
+    }
+    int i = localNetworkInfo.getSubtype();
+    if (localNetworkInfo.getType() == 1) {
+      return 1;
+    }
+    switch (i)
+    {
+    case 8: 
+    case 9: 
+    case 10: 
+    case 16: 
+    default: 
+      return 0;
+    case 13: 
+    case 14: 
+    case 15: 
+      return 4;
+    case 3: 
+    case 4: 
+    case 5: 
+    case 6: 
+    case 12: 
+    case 17: 
+      return 3;
+    }
+    return 2;
   }
 }
 

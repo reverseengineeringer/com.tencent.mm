@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/d/a/d$a;
+.implements Lcom/tencent/mm/ui/d/a/c$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+.field final synthetic ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 362
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,7 +46,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/ui/d/a/c;)V
+.method public final a(Lcom/tencent/mm/ui/d/a/b;)V
     .locals 4
 
     .prologue
@@ -59,7 +59,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {p1}, Lcom/tencent/mm/ui/d/a/c;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/tencent/mm/ui/d/a/b;->getMessage()Ljava/lang/String;
 
     move-result-object v2
 
@@ -71,36 +71,36 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 394
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
-    invoke-virtual {p1}, Lcom/tencent/mm/ui/d/a/c;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/tencent/mm/ui/d/a/b;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
-    sget v3, Lcom/tencent/mm/a$n;->contact_info_facebookapp_bind_fail:I
+    const v3, 0x7f0b0717
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/h;->x(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->y(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/h;
 
     .line 395
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->fn(Z)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->hq(Z)V
 
     .line 396
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v1
 
@@ -114,7 +114,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -136,7 +136,7 @@
 
     const-string/jumbo v1, "L14"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v1
 
@@ -154,13 +154,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ja(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
 
     .line 398
     return-void
 .end method
 
-.method public final a(Lcom/tencent/mm/ui/d/a/f;)V
+.method public final a(Lcom/tencent/mm/ui/d/a/d;)V
     .locals 4
 
     .prologue
@@ -173,7 +173,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p1, Lcom/tencent/mm/ui/d/a/f;->jlG:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/ui/d/a/d;->lqX:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -183,36 +183,36 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 385
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
-    invoke-virtual {p1}, Lcom/tencent/mm/ui/d/a/f;->getMessage()Ljava/lang/String;
+    invoke-virtual {p1}, Lcom/tencent/mm/ui/d/a/d;->getMessage()Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
-    sget v3, Lcom/tencent/mm/a$n;->contact_info_facebookapp_bind_fail:I
+    const v3, 0x7f0b0717
 
     invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/h;->x(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/base/g;->y(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/ui/base/h;
 
     .line 386
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->fn(Z)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->hq(Z)V
 
     .line 387
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v1
 
@@ -226,7 +226,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -248,7 +248,7 @@
 
     const-string/jumbo v1, "L14"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v1
 
@@ -266,13 +266,13 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ja(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
 
     .line 389
     return-void
 .end method
 
-.method public final j(Landroid/os/Bundle;)V
+.method public final g(Landroid/os/Bundle;)V
     .locals 12
 
     .prologue
@@ -281,27 +281,27 @@
     const/4 v3, 0x0
 
     .line 366
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
-    sget v1, Lcom/tencent/mm/a$n;->app_tip:I
+    const v1, 0x7f0b0ddd
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
     .line 367
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
-    sget v2, Lcom/tencent/mm/a$n;->facebook_auth_binding:I
+    const v2, 0x7f0b0722
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
     .line 368
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v4, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-static {v4, v0, v1, v9}, Landroid/app/ProgressDialog;->show(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)Landroid/app/ProgressDialog;
 
@@ -310,13 +310,13 @@
     invoke-static {v2, v0}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->a(Lcom/tencent/mm/ui/account/FacebookLoginUI;Landroid/app/ProgressDialog;)Landroid/app/ProgressDialog;
 
     .line 369
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->e(Lcom/tencent/mm/ui/account/FacebookLoginUI;)Landroid/app/ProgressDialog;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->d(Lcom/tencent/mm/ui/account/FacebookLoginUI;)Landroid/content/DialogInterface$OnCancelListener;
 
@@ -325,15 +325,15 @@
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
     .line 371
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->f(Lcom/tencent/mm/ui/account/FacebookLoginUI;)Lcom/tencent/mm/ui/d/a/d;
+    invoke-static {v1}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->f(Lcom/tencent/mm/ui/account/FacebookLoginUI;)Lcom/tencent/mm/ui/d/a/c;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/d/a/d;->iNF:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/ui/d/a/c;->kMS:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->a(Lcom/tencent/mm/ui/account/FacebookLoginUI;Ljava/lang/String;)Ljava/lang/String;
 
@@ -350,7 +350,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v4, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-static {v4}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->a(Lcom/tencent/mm/ui/account/FacebookLoginUI;)Ljava/lang/String;
 
@@ -368,7 +368,7 @@
 
     const/4 v4, 0x2
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v5, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-static {v5}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->a(Lcom/tencent/mm/ui/account/FacebookLoginUI;)Ljava/lang/String;
 
@@ -382,16 +382,16 @@
 
     aput-object v5, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 374
-    iget-object v11, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v11, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
-    new-instance v0, Lcom/tencent/mm/modelsimple/s;
+    new-instance v0, Lcom/tencent/mm/modelsimple/t;
 
     const-string/jumbo v1, "facebook@wechat_auth"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->a(Lcom/tencent/mm/ui/account/FacebookLoginUI;)Ljava/lang/String;
 
@@ -409,32 +409,32 @@
 
     move v10, v3
 
-    invoke-direct/range {v0 .. v10}, Lcom/tencent/mm/modelsimple/s;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ZZ)V
+    invoke-direct/range {v0 .. v10}, Lcom/tencent/mm/modelsimple/t;-><init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;ZZ)V
 
-    invoke-static {v11, v0}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->a(Lcom/tencent/mm/ui/account/FacebookLoginUI;Lcom/tencent/mm/modelsimple/s;)Lcom/tencent/mm/modelsimple/s;
+    invoke-static {v11, v0}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->a(Lcom/tencent/mm/ui/account/FacebookLoginUI;Lcom/tencent/mm/modelsimple/t;)Lcom/tencent/mm/modelsimple/t;
 
     .line 375
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->b(Lcom/tencent/mm/ui/account/FacebookLoginUI;)Lcom/tencent/mm/modelsimple/s;
+    invoke-static {v1}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->b(Lcom/tencent/mm/ui/account/FacebookLoginUI;)Lcom/tencent/mm/modelsimple/t;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/q/l;->d(Lcom/tencent/mm/q/j;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
     .line 377
-    invoke-static {v9}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->fn(Z)V
+    invoke-static {v9}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->hq(Z)V
 
     .line 378
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v1
 
@@ -448,7 +448,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -470,7 +470,7 @@
 
     const-string/jumbo v1, "L14"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v1
 
@@ -488,7 +488,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ja(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
 
     .line 380
     return-void
@@ -503,19 +503,19 @@
 
     const-string/jumbo v1, "onCancel"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 404
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->fn(Z)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/account/FacebookLoginUI;->hq(Z)V
 
     .line 405
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v1
 
@@ -529,7 +529,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->itq:Lcom/tencent/mm/ui/account/FacebookLoginUI;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/FacebookLoginUI$a;->ksx:Lcom/tencent/mm/ui/account/FacebookLoginUI;
 
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -551,7 +551,7 @@
 
     const-string/jumbo v1, "L14"
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v1
 
@@ -569,7 +569,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ja(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kD(Ljava/lang/String;)V
 
     .line 407
     return-void

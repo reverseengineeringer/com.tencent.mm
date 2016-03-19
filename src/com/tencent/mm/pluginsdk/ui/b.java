@@ -5,25 +5,25 @@ import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Rect;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.p.i.a;
-import com.tencent.mm.pluginsdk.l.a;
-import com.tencent.mm.pluginsdk.l.v;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.x;
+import com.tencent.mm.q.d.a;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.e;
+import com.tencent.mm.sdk.platformtools.d;
+import com.tencent.mm.sdk.platformtools.y;
 import java.io.IOException;
 
 public final class b
-  extends r
-  implements i.a
+  extends h
+  implements d.a
 {
-  Bitmap cvJ = null;
-  private float gOD = 0.5F;
+  Bitmap cNy = null;
+  private float iFV = 0.5F;
   
   private b(String paramString)
   {
-    super(a.b.azJ(), paramString);
+    super(a.b.aQQ(), paramString);
   }
   
   public b(String paramString, float paramFloat)
@@ -35,21 +35,21 @@ public final class b
   {
     Rect localRect2 = getBounds();
     Rect localRect1 = null;
-    if ((gQh > 1.0F) || (gQb))
+    if ((iGK > 1.0F) || (iGE))
     {
       int i = paramBitmap.getHeight() / 15 / 2;
       int j = paramBitmap.getWidth() / 15 / 2;
       localRect1 = new Rect(j, i, paramBitmap.getWidth() - j, paramBitmap.getHeight() - i);
     }
-    paramCanvas.drawBitmap(paramBitmap, localRect1, localRect2, dqt);
+    paramCanvas.drawBitmap(paramBitmap, localRect1, localRect2, efA);
   }
   
   public final void draw(Canvas paramCanvas)
   {
     Bitmap localBitmap = null;
-    l.v localv = l.a.gKh;
-    if (localv != null) {
-      localBitmap = l.a.gKh.nc(tag);
+    i.x localx = i.a.iyO;
+    if (localx != null) {
+      localBitmap = i.a.iyO.qq(tag);
     }
     if (localBitmap != null) {
       a(paramCanvas, localBitmap);
@@ -57,23 +57,23 @@ public final class b
     do
     {
       return;
-      if (gQc) {}
-      for (localBitmap = epj.a(tag, paramCanvas.getWidth(), paramCanvas.getHeight(), 1); localBitmap != null; localBitmap = epj.aN(tag))
+      if (iGF) {}
+      for (localBitmap = fzj.a(tag, paramCanvas.getWidth(), paramCanvas.getHeight(), 1); localBitmap != null; localBitmap = fzj.aL(tag))
       {
-        localBitmap = e.a(localBitmap, false, gOD * localBitmap.getWidth());
-        if (localv != null) {
-          localv.m(tag, localBitmap);
+        localBitmap = d.a(localBitmap, false, iFV * localBitmap.getWidth());
+        if (localx != null) {
+          localx.m(tag, localBitmap);
         }
         a(paramCanvas, localBitmap);
         return;
       }
     } while ((localBitmap != null) && (!localBitmap.isRecycled()));
-    if (cvJ == null) {}
+    if (cNy == null) {}
     try
     {
-      cvJ = BackwardSupportUtil.b.a(aa.getContext().getAssets().open("avatar/default_nor_avatar.png"), a.getDensity(null), 0, 0);
-      cvJ = e.a(cvJ, false, gOD * cvJ.getWidth());
-      a(paramCanvas, cvJ);
+      cNy = BackwardSupportUtil.b.a(y.getContext().getAssets().open("avatar/default_nor_avatar.png"), a.getDensity(null), 0, 0);
+      cNy = d.a(cNy, false, iFV * cNy.getWidth());
+      a(paramCanvas, cNy);
       return;
     }
     catch (IOException localIOException)
@@ -82,9 +82,9 @@ public final class b
     }
   }
   
-  public final void fF(String paramString)
+  public final void fZ(String paramString)
   {
-    super.fF(paramString);
+    super.fZ(paramString);
   }
 }
 

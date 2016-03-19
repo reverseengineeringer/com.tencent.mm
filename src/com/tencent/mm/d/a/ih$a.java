@@ -2,7 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class ih$a
 {
-  public String avk;
+  public String aEa;
+  public String aEb;
+  public int ret;
 }
 
 /* Location:

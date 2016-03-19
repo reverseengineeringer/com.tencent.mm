@@ -16,17 +16,17 @@
 # instance fields
 .field direction:I
 
-.field private iAA:Landroid/view/GestureDetector;
+.field private fge:Landroid/view/GestureDetector;
 
-.field private iAw:I
+.field private kmz:Landroid/os/MessageQueue$IdleHandler;
 
-.field private iAx:Lcom/tencent/mm/ui/applet/b$c;
+.field kzA:Lcom/tencent/mm/ui/applet/b$a;
 
-.field iAy:Ljava/util/LinkedList;
+.field private kzx:I
 
-.field iAz:Lcom/tencent/mm/ui/applet/b$a;
+.field private kzy:Lcom/tencent/mm/ui/applet/b$c;
 
-.field private inK:Landroid/os/MessageQueue$IdleHandler;
+.field kzz:Ljava/util/LinkedList;
 
 
 # direct methods
@@ -45,21 +45,21 @@
     .line 121
     new-instance v0, Landroid/view/GestureDetector;
 
-    new-instance v1, Lcom/tencent/mm/ui/applet/d;
+    new-instance v1, Lcom/tencent/mm/ui/applet/b$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/applet/d;-><init>(Lcom/tencent/mm/ui/applet/b;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/applet/b$2;-><init>(Lcom/tencent/mm/ui/applet/b;)V
 
     invoke-direct {v0, v1}, Landroid/view/GestureDetector;-><init>(Landroid/view/GestureDetector$OnGestureListener;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b;->iAA:Landroid/view/GestureDetector;
+    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b;->fge:Landroid/view/GestureDetector;
 
     .line 40
-    iput-object p1, p0, Lcom/tencent/mm/ui/applet/b;->iAz:Lcom/tencent/mm/ui/applet/b$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/applet/b;->kzA:Lcom/tencent/mm/ui/applet/b$a;
 
     .line 44
     const/16 v0, 0xf
 
-    iput v0, p0, Lcom/tencent/mm/ui/applet/b;->iAw:I
+    iput v0, p0, Lcom/tencent/mm/ui/applet/b;->kzx:I
 
     .line 45
     new-instance v0, Lcom/tencent/mm/ui/applet/b$c;
@@ -68,28 +68,28 @@
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/ui/applet/b$c;-><init>(Lcom/tencent/mm/ui/applet/b;I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b;->iAx:Lcom/tencent/mm/ui/applet/b$c;
+    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b;->kzy:Lcom/tencent/mm/ui/applet/b$c;
 
     .line 46
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b;->iAy:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b;->kzz:Ljava/util/LinkedList;
 
     .line 47
-    new-instance v0, Lcom/tencent/mm/ui/applet/c;
+    new-instance v0, Lcom/tencent/mm/ui/applet/b$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/applet/c;-><init>(Lcom/tencent/mm/ui/applet/b;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/applet/b$1;-><init>(Lcom/tencent/mm/ui/applet/b;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b;->inK:Landroid/os/MessageQueue$IdleHandler;
+    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b;->kmz:Landroid/os/MessageQueue$IdleHandler;
 
     .line 63
     invoke-static {}, Landroid/os/Looper;->myQueue()Landroid/os/MessageQueue;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/applet/b;->inK:Landroid/os/MessageQueue$IdleHandler;
+    iget-object v1, p0, Lcom/tencent/mm/ui/applet/b;->kmz:Landroid/os/MessageQueue$IdleHandler;
 
     invoke-virtual {v0, v1}, Landroid/os/MessageQueue;->addIdleHandler(Landroid/os/MessageQueue$IdleHandler;)V
 
@@ -113,7 +113,7 @@
 
     const-string/jumbo v1, "earlyGet, getter is null, no early get headimg will be performed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 119
     :cond_0
@@ -122,7 +122,7 @@
 
     .line 72
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/applet/b;->iAw:I
+    iget v0, p0, Lcom/tencent/mm/ui/applet/b;->kzx:I
 
     if-gtz v0, :cond_2
 
@@ -131,13 +131,13 @@
 
     const-string/jumbo v1, "earlyGet fail, threshold is invalid"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 77
     :cond_2
-    invoke-interface {p2}, Lcom/tencent/mm/ui/applet/b$b;->xI()I
+    invoke-interface {p2}, Lcom/tencent/mm/ui/applet/b$b;->yz()I
 
     move-result v2
 
@@ -145,7 +145,7 @@
 
     .line 78
     :goto_1
-    iget v3, p0, Lcom/tencent/mm/ui/applet/b;->iAw:I
+    iget v3, p0, Lcom/tencent/mm/ui/applet/b;->kzx:I
 
     if-gt v0, v3, :cond_0
 
@@ -162,7 +162,7 @@
     .line 85
     sub-int v3, p1, v0
 
-    invoke-interface {p2, v3}, Lcom/tencent/mm/ui/applet/b$b;->cY(I)Ljava/lang/String;
+    invoke-interface {p2, v3}, Lcom/tencent/mm/ui/applet/b$b;->dd(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -176,7 +176,7 @@
     if-eqz v4, :cond_3
 
     .line 87
-    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->iAx:Lcom/tencent/mm/ui/applet/b$c;
+    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->kzy:Lcom/tencent/mm/ui/applet/b$c;
 
     invoke-virtual {v4, v3}, Lcom/tencent/mm/ui/applet/b$c;->contains(Ljava/lang/String;)Z
 
@@ -185,12 +185,12 @@
     if-nez v4, :cond_3
 
     .line 91
-    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->iAx:Lcom/tencent/mm/ui/applet/b$c;
+    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->kzy:Lcom/tencent/mm/ui/applet/b$c;
 
-    invoke-virtual {v4, v3}, Lcom/tencent/mm/ui/applet/b$c;->ut(Ljava/lang/String;)V
+    invoke-virtual {v4, v3}, Lcom/tencent/mm/ui/applet/b$c;->zT(Ljava/lang/String;)V
 
     .line 96
-    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->iAy:Ljava/util/LinkedList;
+    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->kzz:Ljava/util/LinkedList;
 
     invoke-virtual {v4, v3}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
@@ -210,7 +210,7 @@
     .line 104
     add-int v3, p1, v0
 
-    invoke-interface {p2, v3}, Lcom/tencent/mm/ui/applet/b$b;->cY(I)Ljava/lang/String;
+    invoke-interface {p2, v3}, Lcom/tencent/mm/ui/applet/b$b;->dd(I)Ljava/lang/String;
 
     move-result-object v3
 
@@ -224,7 +224,7 @@
     if-eqz v4, :cond_3
 
     .line 106
-    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->iAx:Lcom/tencent/mm/ui/applet/b$c;
+    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->kzy:Lcom/tencent/mm/ui/applet/b$c;
 
     invoke-virtual {v4, v3}, Lcom/tencent/mm/ui/applet/b$c;->contains(Ljava/lang/String;)Z
 
@@ -233,12 +233,12 @@
     if-nez v4, :cond_3
 
     .line 110
-    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->iAx:Lcom/tencent/mm/ui/applet/b$c;
+    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->kzy:Lcom/tencent/mm/ui/applet/b$c;
 
-    invoke-virtual {v4, v3}, Lcom/tencent/mm/ui/applet/b$c;->ut(Ljava/lang/String;)V
+    invoke-virtual {v4, v3}, Lcom/tencent/mm/ui/applet/b$c;->zT(Ljava/lang/String;)V
 
     .line 115
-    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->iAy:Ljava/util/LinkedList;
+    iget-object v4, p0, Lcom/tencent/mm/ui/applet/b;->kzz:Ljava/util/LinkedList;
 
     invoke-virtual {v4, v3}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
@@ -250,7 +250,7 @@
 
     .prologue
     .line 161
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b;->inK:Landroid/os/MessageQueue$IdleHandler;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b;->kmz:Landroid/os/MessageQueue$IdleHandler;
 
     if-eqz v0, :cond_0
 
@@ -259,7 +259,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/applet/b;->inK:Landroid/os/MessageQueue$IdleHandler;
+    iget-object v1, p0, Lcom/tencent/mm/ui/applet/b;->kmz:Landroid/os/MessageQueue$IdleHandler;
 
     invoke-virtual {v0, v1}, Landroid/os/MessageQueue;->removeIdleHandler(Landroid/os/MessageQueue$IdleHandler;)V
 
@@ -273,12 +273,12 @@
 
     .prologue
     .line 155
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b;->iAA:Landroid/view/GestureDetector;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b;->fge:Landroid/view/GestureDetector;
 
     if-eqz v0, :cond_0
 
     .line 156
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b;->iAA:Landroid/view/GestureDetector;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b;->fge:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 

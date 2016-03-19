@@ -2,18 +2,22 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/IInterface;
-
-
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/network/o$a;
-    }
-.end annotation
-
 
 # virtual methods
-.method public abstract aE(I)V
+.method public abstract getType()I
+.end method
+
+.method public abstract getUri()Ljava/lang/String;
+.end method
+
+.method public abstract tX()Lcom/tencent/mm/protocal/h$d;
+.end method
+
+.method public abstract vA()Lcom/tencent/mm/protocal/h$c;
+.end method
+
+.method public abstract vB()Z
+.end method
+
+.method public abstract vx()I
 .end method

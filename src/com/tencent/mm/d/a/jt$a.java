@@ -1,10 +1,12 @@
 package com.tencent.mm.d.a;
 
-import java.util.LinkedList;
+import android.content.Context;
+import android.content.Intent;
 
 public final class jt$a
 {
-  public LinkedList aGZ;
+  public Context context;
+  public Intent intent;
 }
 
 /* Location:

@@ -1,71 +1,77 @@
 package com.tencent.mm.v;
 
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.br;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.j.b;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
-import com.tencent.mm.storage.as;
-import junit.framework.Assert;
+import android.database.Cursor;
+import com.tencent.mm.az.g;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.s;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.t.aj;
+import com.tencent.mm.t.l;
+import com.tencent.mm.t.l.c;
+import com.tencent.mm.t.m;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 public final class a
-  extends j
-  implements r
+  extends s
 {
-  private d apI;
-  private ar aub = new ar();
-  private ac handler = new b(this);
-  
-  public a(String paramString1, String paramString2)
+  public final boolean cy(int paramInt)
   {
-    aub.setStatus(1);
-    aub.setTalker(paramString1);
-    aub.w(br.eV(paramString1));
-    aub.bh(1);
-    aub.setContent(paramString2);
-    aub.setType(com.tencent.mm.model.w.ey(paramString1));
-    long l = ax.tl().rk().C(aub);
-    if (l != -1L) {}
-    for (;;)
+    return (paramInt != 0) && (paramInt < 604372991);
+  }
+  
+  public final String getTag()
+  {
+    return "!56@/B4Tb64lLpL9pXWJM+9GqX3fd4FF3yK+sRnAHO+TcmmrixzJI4AV6A==";
+  }
+  
+  public final void transfer(int paramInt)
+  {
+    u.d("!56@/B4Tb64lLpL9pXWJM+9GqX3fd4FF3yK+sRnAHO+TcmmrixzJI4AV6A==", "the previous version is %d", new Object[] { Integer.valueOf(paramInt) });
+    if ((paramInt != 0) && (paramInt < 604372991))
     {
-      Assert.assertTrue(bool);
-      t.i("!44@/B4Tb64lLpK+IBX8XDgnvsPvmyRJXaBBy0B7+2aqDGs=", "new msg inserted to db , local id = " + l);
-      return;
-      bool = false;
+      Object localObject2 = tDbzA;
+      Object localObject3 = new StringBuilder();
+      ((StringBuilder)localObject3).append("select BizInfo.username").append(", BizInfo.extInfo");
+      ((StringBuilder)localObject3).append(" from rcontact , BizInfo");
+      ((StringBuilder)localObject3).append(" where rcontact.username").append(" = BizInfo.username");
+      ((StringBuilder)localObject3).append(" and (rcontact.type").append(" & 1 ) != 0 ");
+      ((StringBuilder)localObject3).append(" and ( rcontact.verifyFlag").append(" & 8 ) != 0 ");
+      String str = ((StringBuilder)localObject3).toString();
+      Object localObject1 = new LinkedList();
+      u.d("!56@/B4Tb64lLpL9pXWJM+9GqX3fd4FF3yK+sRnAHO+TcmmrixzJI4AV6A==", "sql %s", new Object[] { str });
+      localObject2 = ((g)localObject2).rawQuery(((StringBuilder)localObject3).toString(), null);
+      if (localObject2 != null)
+      {
+        ((Cursor)localObject2).moveToFirst();
+        while (!((Cursor)localObject2).isAfterLast())
+        {
+          localObject3 = new l();
+          ((l)localObject3).c((Cursor)localObject2);
+          if (((l)localObject3).aR(false).wX() == 1) {
+            ((List)localObject1).add(field_username);
+          }
+          ((Cursor)localObject2).moveToNext();
+        }
+        ((Cursor)localObject2).close();
+      }
+      if (((List)localObject1).size() > 0)
+      {
+        localObject2 = new StringBuilder();
+        ((StringBuilder)localObject2).append("Update BizInfo set type").append(" = 1 where 1 !=1 ");
+        localObject1 = ((List)localObject1).iterator();
+        while (((Iterator)localObject1).hasNext())
+        {
+          localObject3 = (String)((Iterator)localObject1).next();
+          ((StringBuilder)localObject2).append(" or username = '").append((String)localObject3).append("'");
+        }
+        localObject1 = ((StringBuilder)localObject2).toString();
+        u.d("!56@/B4Tb64lLpL9pXWJM+9GqX3fd4FF3yK+sRnAHO+TcmmrixzJI4AV6A==", "update sql %s", new Object[] { localObject1 });
+        aj.xF().cj("BizInfo", (String)localObject1);
+      }
     }
-  }
-  
-  public final int a(m paramm, d paramd)
-  {
-    apI = paramd;
-    t.i("!44@/B4Tb64lLpK+IBX8XDgnvsPvmyRJXaBBy0B7+2aqDGs=", "send local msg, msgId = " + aub.field_msgId);
-    handler.sendEmptyMessageDelayed(0, 500L);
-    return 999;
-  }
-  
-  protected final int a(com.tencent.mm.network.w paramw)
-  {
-    return j.b.btz;
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, com.tencent.mm.network.w paramw, byte[] paramArrayOfByte)
-  {
-    t.i("!44@/B4Tb64lLpK+IBX8XDgnvsPvmyRJXaBBy0B7+2aqDGs=", "recv local msg, msgId = " + aub.field_msgId);
-    aub.setStatus(2);
-    aub.w(br.c(aub.field_talker, System.currentTimeMillis() / 1000L));
-    ax.tl().rk().a(aub.field_msgId, aub);
-    apI.a(0, 0, paramString, this);
-  }
-  
-  public final int getType()
-  {
-    return 522;
   }
 }
 

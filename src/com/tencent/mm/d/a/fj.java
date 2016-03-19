@@ -1,31 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class fj
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aBX = new a();
-  public b aBY = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aAh = new a();
   
   public fj()
   {
-    id = "PermissionOpMark";
-    hXT = atO;
+    id = "GetMsgHandlerSize";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aBZ = false;
-    public boolean aCa = false;
-    public int type;
-  }
-  
-  public static final class b
-  {
-    public boolean aCb = false;
+    public int size;
   }
 }
 

@@ -3,1150 +3,1472 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/smtt/sdk/i$a;
-    }
-.end annotation
-
-
 # static fields
-.field private static jJy:Lcom/tencent/smtt/sdk/i;
+.field private static lSp:Lcom/tencent/smtt/sdk/i;
 
-
-# instance fields
-.field coy:I
-
-.field jJA:Ljava/lang/String;
-
-.field jJB:Ljava/lang/String;
-
-.field jJC:I
-
-.field private jJD:I
-
-.field jJE:I
-
-.field jJF:I
-
-.field jJG:Ljava/lang/String;
-
-.field jJH:I
-
-.field jJI:I
-
-.field jJJ:J
-
-.field jJK:J
-
-.field jJL:I
-
-.field private jJM:Ljava/lang/String;
-
-.field jJN:Ljava/lang/String;
-
-.field jJO:J
-
-.field jJz:J
-
-.field private mContext:Landroid/content/Context;
+.field private static mContext:Landroid/content/Context;
 
 
 # direct methods
-.method private constructor <init>(Landroid/content/Context;)V
+.method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 90
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    .line 91
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+    .line 15
+    sput-object v0, Lcom/tencent/smtt/sdk/i;->lSp:Lcom/tencent/smtt/sdk/i;
 
-    move-result-object v0
+    .line 16
+    sput-object v0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
-
-    .line 93
-    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/i;->aUi()V
-
-    .line 94
     return-void
 .end method
 
-.method private static Cf(Ljava/lang/String;)Ljava/lang/String;
-    .locals 2
+.method private constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 504
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 31
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    if-nez p0, :cond_0
-
-    const-string/jumbo p0, ""
-
-    :cond_0
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "|"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
+    return-void
 .end method
 
-.method private aUj()Lorg/json/JSONArray;
+.method static blC()Ljava/io/File;
     .locals 3
 
     .prologue
-    .line 230
-    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/i;->aUl()Landroid/content/SharedPreferences;
+    .line 163
+    invoke-static {}, Lcom/tencent/smtt/sdk/m;->blT()Lcom/tencent/smtt/sdk/m;
 
-    move-result-object v0
+    sget-object v0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "tbs_download_upload"
-
-    const/4 v2, 0x0
-
-    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/m;->fl(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v1
 
-    .line 231
+    .line 164
+    new-instance v0, Ljava/io/File;
+
+    const-string/jumbo v2, "tbscoreinstall.txt"
+
+    invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
+
+    .line 165
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
     if-nez v1, :cond_0
 
-    .line 234
-    new-instance v0, Lorg/json/JSONArray;
+    .line 167
+    :try_start_0
+    invoke-virtual {v0}, Ljava/io/File;->createNewFile()Z
+    :try_end_0
+    .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
-
-    .line 247
+    .line 174
+    :cond_0
     :goto_0
     return-object v0
 
-    .line 240
-    :cond_0
-    :try_start_0
-    new-instance v0, Lorg/json/JSONArray;
-
-    invoke-direct {v0, v1}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 244
+    .line 169
     :catch_0
     move-exception v0
 
-    new-instance v0, Lorg/json/JSONArray;
-
-    invoke-direct {v0}, Lorg/json/JSONArray;-><init>()V
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method private static ai(J)Ljava/lang/String;
-    .locals 4
+.method static blD()Ljava/util/Properties;
+    .locals 5
 
     .prologue
-    .line 314
-    const/4 v0, 0x0
+    const/4 v1, 0x0
 
-    .line 317
+    .line 187
     :try_start_0
-    new-instance v1, Ljava/text/SimpleDateFormat;
-
-    const-string/jumbo v2, "yyyy-MM-dd HH:mm:ss"
-
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blC()Ljava/io/File;
 
     move-result-object v3
 
-    invoke-direct {v1, v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
+    .line 188
+    new-instance v2, Ljava/util/Properties;
 
-    .line 318
-    new-instance v2, Ljava/util/Date;
-
-    invoke-direct {v2, p0, p1}, Ljava/util/Date;-><init>(J)V
-
-    invoke-virtual {v1, v2}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+    invoke-direct {v2}, Ljava/util/Properties;-><init>()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    .line 323
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v1
-
-    goto :goto_0
-.end method
-
-.method private static cY(J)Ljava/lang/String;
-    .locals 2
-
-    .prologue
-    .line 514
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "|"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static declared-synchronized eh(Landroid/content/Context;)Lcom/tencent/smtt/sdk/i;
-    .locals 2
-
-    .prologue
-    .line 98
-    const-class v1, Lcom/tencent/smtt/sdk/i;
-
-    monitor-enter v1
-
-    :try_start_0
-    sget-object v0, Lcom/tencent/smtt/sdk/i;->jJy:Lcom/tencent/smtt/sdk/i;
-
-    if-nez v0, :cond_0
-
-    .line 100
-    new-instance v0, Lcom/tencent/smtt/sdk/i;
-
-    invoke-direct {v0, p0}, Lcom/tencent/smtt/sdk/i;-><init>(Landroid/content/Context;)V
-
-    sput-object v0, Lcom/tencent/smtt/sdk/i;->jJy:Lcom/tencent/smtt/sdk/i;
-
-    .line 103
-    :cond_0
-    sget-object v0, Lcom/tencent/smtt/sdk/i;->jJy:Lcom/tencent/smtt/sdk/i;
-    :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    monitor-exit v1
+    .line 189
+    if-eqz v3, :cond_3
 
-    return-object v0
+    .line 190
+    :try_start_1
+    new-instance v0, Ljava/io/FileInputStream;
 
-    .line 98
-    :catchall_0
-    move-exception v0
+    invoke-direct {v0, v3}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    monitor-exit v1
+    .line 191
+    :try_start_2
+    invoke-virtual {v2, v0}, Ljava/util/Properties;->load(Ljava/io/InputStream;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
 
-    throw v0
-.end method
-
-.method private getImei()Ljava/lang/String;
-    .locals 3
-
-    .prologue
-    .line 300
-    const/4 v1, 0x0
-
-    .line 303
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
-
-    const-string/jumbo v2, "phone"
-
-    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/telephony/TelephonyManager;
-
-    .line 304
-    invoke-virtual {v0}, Landroid/telephony/TelephonyManager;->getDeviceId()Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    .line 309
+    .line 201
     :goto_0
+    if-eqz v0, :cond_0
+
+    .line 205
+    :try_start_3
+    invoke-virtual {v0}, Ljava/io/FileInputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_2
+
+    :cond_0
+    :goto_1
+    move-object v0, v2
+
+    .line 214
+    :cond_1
+    :goto_2
     return-object v0
 
+    .line 197
     :catch_0
     move-exception v0
 
     move-object v0, v1
 
+    :goto_3
+    if-eqz v1, :cond_1
+
+    .line 205
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_1
+
+    goto :goto_2
+
+    .line 209
+    :catch_1
+    move-exception v1
+
+    goto :goto_2
+
+    .line 201
+    :catchall_0
+    move-exception v0
+
+    :goto_4
+    if-eqz v1, :cond_2
+
+    .line 205
+    :try_start_5
+    invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
+
+    .line 209
+    :cond_2
+    :goto_5
+    throw v0
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_1
+
+    :catch_3
+    move-exception v1
+
+    goto :goto_5
+
+    .line 201
+    :catchall_1
+    move-exception v1
+
+    move-object v4, v1
+
+    move-object v1, v0
+
+    move-object v0, v4
+
+    goto :goto_4
+
+    .line 197
+    :catch_4
+    move-exception v0
+
+    move-object v0, v2
+
+    goto :goto_3
+
+    :catch_5
+    move-exception v1
+
+    move-object v1, v0
+
+    move-object v0, v2
+
+    goto :goto_3
+
+    :cond_3
+    move-object v0, v1
+
     goto :goto_0
 .end method
 
-.method private static pE(I)Ljava/lang/String;
-    .locals 2
+.method static eT(Landroid/content/Context;)Lcom/tencent/smtt/sdk/i;
+    .locals 1
 
     .prologue
-    .line 509
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0, p0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    .line 33
+    invoke-virtual {p0}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    const-string/jumbo v1, "|"
+    sput-object v0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 34
+    sget-object v0, Lcom/tencent/smtt/sdk/i;->lSp:Lcom/tencent/smtt/sdk/i;
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    .line 35
+    new-instance v0, Lcom/tencent/smtt/sdk/i;
 
-    move-result-object v0
+    invoke-direct {v0}, Lcom/tencent/smtt/sdk/i;-><init>()V
+
+    sput-object v0, Lcom/tencent/smtt/sdk/i;->lSp:Lcom/tencent/smtt/sdk/i;
+
+    .line 38
+    :cond_0
+    sget-object v0, Lcom/tencent/smtt/sdk/i;->lSp:Lcom/tencent/smtt/sdk/i;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final Ce(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 424
-    const/16 v0, 0x6c
-
-    invoke-virtual {p0, v0}, Lcom/tencent/smtt/sdk/i;->setErrorCode(I)V
-
-    .line 425
-    iput-object p1, p0, Lcom/tencent/smtt/sdk/i;->jJM:Ljava/lang/String;
-
-    .line 426
-    return-void
-.end method
-
-.method public final R(ILjava/lang/String;)V
-    .locals 3
-
-    .prologue
-    .line 458
-    const/16 v0, 0xc8
-
-    if-eq p1, v0, :cond_0
-
-    const/16 v0, 0xdc
-
-    if-eq p1, v0, :cond_0
-
-    .line 461
-    const-string/jumbo v0, "TbsDownload"
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "error occured in installation, errorCode:"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/smtt/a/u;->j(Ljava/lang/String;Ljava/lang/String;Z)V
-
-    .line 463
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/tencent/smtt/sdk/i;->setErrorCode(I)V
-
-    .line 464
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/tencent/smtt/sdk/i;->jJz:J
-
-    .line 465
-    iput-object p2, p0, Lcom/tencent/smtt/sdk/i;->jJN:Ljava/lang/String;
-
-    .line 466
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->aUc()Lcom/tencent/smtt/sdk/y;
-
-    move-result-object v0
-
-    invoke-interface {v0, p1}, Lcom/tencent/smtt/sdk/y;->mo(I)V
-
-    .line 467
-    sget-object v0, Lcom/tencent/smtt/sdk/i$a;->jJR:Lcom/tencent/smtt/sdk/i$a;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/smtt/sdk/i;->a(Lcom/tencent/smtt/sdk/i$a;)V
-
-    .line 468
-    return-void
-.end method
-
-.method public final S(ILjava/lang/String;)V
-    .locals 2
-
-    .prologue
-    .line 478
-    invoke-virtual {p0, p1}, Lcom/tencent/smtt/sdk/i;->setErrorCode(I)V
-
-    .line 479
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
-
-    iput-wide v0, p0, Lcom/tencent/smtt/sdk/i;->jJz:J
-
-    .line 480
-    iput-object p2, p0, Lcom/tencent/smtt/sdk/i;->jJN:Ljava/lang/String;
-
-    .line 481
-    sget-object v0, Lcom/tencent/smtt/sdk/i$a;->jJS:Lcom/tencent/smtt/sdk/i$a;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/smtt/sdk/i;->a(Lcom/tencent/smtt/sdk/i$a;)V
-
-    .line 482
-    return-void
-.end method
-
-.method public final a(ILjava/lang/Throwable;)V
-    .locals 1
-
-    .prologue
-    .line 486
-    invoke-virtual {p0, p2}, Lcom/tencent/smtt/sdk/i;->b(Ljava/lang/Throwable;)V
-
-    .line 487
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->jJN:Ljava/lang/String;
-
-    invoke-virtual {p0, p1, v0}, Lcom/tencent/smtt/sdk/i;->S(ILjava/lang/String;)V
-
-    .line 488
-    return-void
-.end method
-
-.method public final a(Lcom/tencent/smtt/sdk/i$a;)V
+.method final Ig(Ljava/lang/String;)V
     .locals 5
 
     .prologue
-    .line 140
-    new-instance v2, Ljava/lang/StringBuilder;
+    .line 362
+    const/4 v1, 0x0
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    .line 143
-    iget v0, p1, Lcom/tencent/smtt/sdk/i$a;->value:I
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->pE(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 145
-    invoke-direct {p0}, Lcom/tencent/smtt/sdk/i;->getImei()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->Cf(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 147
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/tencent/smtt/a/q;->eS(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->Cf(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 149
-    invoke-static {}, Lcom/tencent/smtt/sdk/s;->aUS()Lcom/tencent/smtt/sdk/s;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/smtt/sdk/s;->ev(Landroid/content/Context;)I
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->pE(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 151
-    sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
-
-    .line 152
+    .line 365
     :try_start_0
-    new-instance v0, Ljava/lang/String;
-
-    const-string/jumbo v3, "UTF-8"
-
-    invoke-virtual {v1, v3}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object v3
-
-    const-string/jumbo v4, "ISO8859-1"
-
-    invoke-direct {v0, v3, v4}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 164
-    :goto_0
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->Cf(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 166
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 167
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->Cf(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 170
-    const-string/jumbo v1, "com.tencent.mm"
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 172
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
-
-    const-string/jumbo v1, "com.tencent.mm.BuildInfo.CLIENT_VERSION"
-
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/c;->ba(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->Cf(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 179
-    :goto_1
-    iget-wide v0, p0, Lcom/tencent/smtt/sdk/i;->jJz:J
-
-    invoke-static {v0, v1}, Lcom/tencent/smtt/sdk/i;->ai(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->Cf(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 181
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->jJA:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->Cf(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 183
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->jJB:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->Cf(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 185
-    iget v0, p0, Lcom/tencent/smtt/sdk/i;->jJC:I
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->pE(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 187
-    iget v0, p0, Lcom/tencent/smtt/sdk/i;->jJD:I
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->pE(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 189
-    iget v0, p0, Lcom/tencent/smtt/sdk/i;->jJE:I
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->pE(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 191
-    iget v0, p0, Lcom/tencent/smtt/sdk/i;->jJF:I
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->pE(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 193
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->jJG:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->Cf(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 195
-    iget v0, p0, Lcom/tencent/smtt/sdk/i;->jJH:I
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->pE(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 197
-    iget v0, p0, Lcom/tencent/smtt/sdk/i;->jJI:I
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->pE(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 199
-    iget-wide v0, p0, Lcom/tencent/smtt/sdk/i;->jJO:J
-
-    invoke-static {v0, v1}, Lcom/tencent/smtt/sdk/i;->cY(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 201
-    iget-wide v0, p0, Lcom/tencent/smtt/sdk/i;->jJJ:J
-
-    invoke-static {v0, v1}, Lcom/tencent/smtt/sdk/i;->cY(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 203
-    iget-wide v0, p0, Lcom/tencent/smtt/sdk/i;->jJK:J
-
-    invoke-static {v0, v1}, Lcom/tencent/smtt/sdk/i;->cY(J)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 205
-    iget v0, p0, Lcom/tencent/smtt/sdk/i;->jJL:I
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->pE(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 207
-    iget v0, p0, Lcom/tencent/smtt/sdk/i;->coy:I
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->pE(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 209
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->jJM:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->Cf(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 211
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->jJN:Ljava/lang/String;
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 214
-    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/i;->aUl()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 215
-    invoke-direct {p0}, Lcom/tencent/smtt/sdk/i;->aUj()Lorg/json/JSONArray;
-
-    move-result-object v1
-
-    .line 216
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lorg/json/JSONArray;->put(Ljava/lang/Object;)Lorg/json/JSONArray;
+    .line 366
+    if-eqz v2, :cond_0
 
-    .line 217
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    .line 367
+    const-string/jumbo v0, "install_apk_path"
 
-    move-result-object v0
+    invoke-virtual {v2, v0, p1}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 218
-    const-string/jumbo v2, "tbs_download_upload"
+    .line 369
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blC()Ljava/io/File;
 
-    invoke-virtual {v1}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
+    move-result-object v3
 
-    move-result-object v1
+    .line 370
+    if-eqz v3, :cond_0
 
-    invoke-interface {v0, v2, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+    .line 371
+    new-instance v0, Ljava/io/FileOutputStream;
 
-    .line 219
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+    invoke-direct {v0, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 222
-    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/i;->aUi()V
+    .line 372
+    :try_start_1
+    const-string/jumbo v1, "update tbsapk path!"
 
-    .line 225
-    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/i;->aUk()V
+    invoke-virtual {v2, v0, v1}, Ljava/util/Properties;->store(Ljava/io/OutputStream;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 226
+    move-object v1, v0
+
+    .line 381
+    :cond_0
+    if-eqz v1, :cond_1
+
+    .line 384
+    :try_start_2
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+
+    .line 392
+    :cond_1
+    :goto_0
     return-void
 
-    .line 162
+    .line 377
     :catch_0
     move-exception v0
 
     move-object v0, v1
 
-    goto/16 :goto_0
+    :goto_1
+    if-eqz v0, :cond_1
 
-    .line 176
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
-
-    invoke-static {v0}, Lcom/tencent/smtt/a/c;->getAppVersionCode(Landroid/content/Context;)I
-
-    move-result v0
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/i;->pE(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    goto/16 :goto_1
-.end method
-
-.method final aUi()V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x2
-
-    const-wide/16 v3, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x0
-
-    .line 108
-    iput-wide v3, p0, Lcom/tencent/smtt/sdk/i;->jJz:J
-
-    .line 109
-    iput-object v2, p0, Lcom/tencent/smtt/sdk/i;->jJA:Ljava/lang/String;
-
-    .line 110
-    iput-object v2, p0, Lcom/tencent/smtt/sdk/i;->jJB:Ljava/lang/String;
-
-    .line 111
-    iput v1, p0, Lcom/tencent/smtt/sdk/i;->jJC:I
-
-    .line 114
-    iput v1, p0, Lcom/tencent/smtt/sdk/i;->jJD:I
-
-    .line 116
-    iput v1, p0, Lcom/tencent/smtt/sdk/i;->jJE:I
-
-    .line 118
-    iput v5, p0, Lcom/tencent/smtt/sdk/i;->jJF:I
-
-    .line 120
-    const-string/jumbo v0, "unknown"
-
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/i;->jJG:Ljava/lang/String;
-
-    .line 122
-    iput v1, p0, Lcom/tencent/smtt/sdk/i;->jJH:I
-
-    .line 124
-    iput v5, p0, Lcom/tencent/smtt/sdk/i;->jJI:I
-
-    .line 126
-    iput-wide v3, p0, Lcom/tencent/smtt/sdk/i;->jJJ:J
-
-    .line 127
-    iput-wide v3, p0, Lcom/tencent/smtt/sdk/i;->jJK:J
-
-    .line 130
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/tencent/smtt/sdk/i;->jJL:I
-
-    .line 132
-    iput v1, p0, Lcom/tencent/smtt/sdk/i;->coy:I
-
-    .line 133
-    iput-object v2, p0, Lcom/tencent/smtt/sdk/i;->jJM:Ljava/lang/String;
-
-    .line 134
-    iput-object v2, p0, Lcom/tencent/smtt/sdk/i;->jJN:Ljava/lang/String;
-
-    .line 135
-    iput-wide v3, p0, Lcom/tencent/smtt/sdk/i;->jJO:J
-
-    .line 136
-    return-void
-.end method
-
-.method public final aUk()V
-    .locals 4
-
-    .prologue
-    .line 252
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
-
-    move-result-object v0
-
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    if-ne v0, v1, :cond_0
-
-    .line 254
-    const-string/jumbo v0, "TbsDownload"
-
-    const-string/jumbo v1, "[TbsApkDownloadStat.reportDownloadStat] Run in UIThread, Report delay"
-
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 288
-    :goto_0
-    return-void
-
-    .line 258
-    :cond_0
-    const-string/jumbo v0, "TbsDownload"
-
-    const-string/jumbo v1, "[TbsApkDownloadStat.reportDownloadStat]"
-
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 259
-    invoke-direct {p0}, Lcom/tencent/smtt/sdk/i;->aUj()Lorg/json/JSONArray;
-
-    move-result-object v0
-
-    .line 260
-    invoke-virtual {v0}, Lorg/json/JSONArray;->length()I
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    .line 262
-    const-string/jumbo v0, "TbsDownload"
-
-    const-string/jumbo v1, "[TbsApkDownloadStat.reportDownloadStat] no data"
-
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    .line 384
+    :try_start_3
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
 
     goto :goto_0
 
-    .line 265
-    :cond_1
-    const-string/jumbo v1, "TbsDownload"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "[TbsApkDownloadStat.reportDownloadStat] jsonArray:"
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/smtt/a/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 268
-    :try_start_0
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
-
-    invoke-static {v1}, Lcom/tencent/smtt/a/r;->eV(Landroid/content/Context;)Lcom/tencent/smtt/a/r;
-
-    move-result-object v1
-
-    .line 269
-    iget-object v1, v1, Lcom/tencent/smtt/a/r;->jMf:Ljava/lang/String;
-
-    .line 271
-    invoke-virtual {v0}, Lorg/json/JSONArray;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string/jumbo v2, "utf-8"
-
-    invoke-virtual {v0, v2}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object v0
-
-    new-instance v2, Lcom/tencent/smtt/sdk/j;
-
-    invoke-direct {v2, p0}, Lcom/tencent/smtt/sdk/j;-><init>(Lcom/tencent/smtt/sdk/i;)V
-
-    invoke-static {v1, v0, v2}, Lcom/tencent/smtt/a/h;->a(Ljava/lang/String;[BLcom/tencent/smtt/a/h$a;)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 287
-    :catch_0
+    .line 388
+    :catch_1
     move-exception v0
 
     goto :goto_0
-.end method
 
-.method final aUl()Landroid/content/SharedPreferences;
-    .locals 3
+    .line 381
+    :catchall_0
+    move-exception v0
 
-    .prologue
-    .line 499
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/i;->mContext:Landroid/content/Context;
+    :goto_2
+    if-eqz v1, :cond_2
 
-    const-string/jumbo v1, "tbs_download_stat"
+    .line 384
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
 
-    const/4 v2, 0x4
+    .line 388
+    :cond_2
+    :goto_3
+    throw v0
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    :catch_2
+    move-exception v0
 
-    move-result-object v0
+    goto :goto_0
 
-    return-object v0
-.end method
+    :catch_3
+    move-exception v1
 
-.method public final b(Ljava/lang/Throwable;)V
-    .locals 8
+    goto :goto_3
 
-    .prologue
-    const/16 v7, 0x400
+    .line 381
+    :catchall_1
+    move-exception v1
 
-    const/4 v2, 0x0
+    move-object v4, v1
 
-    .line 435
-    if-nez p1, :cond_0
+    move-object v1, v0
 
-    .line 437
-    const-string/jumbo v0, ""
+    move-object v0, v4
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/i;->jJN:Ljava/lang/String;
+    goto :goto_2
 
-    .line 449
-    :goto_0
-    return-void
-
-    .line 441
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 442
-    invoke-virtual {p1}, Ljava/lang/Throwable;->getStackTrace()[Ljava/lang/StackTraceElement;
-
-    move-result-object v4
-
-    .line 443
-    array-length v5, v4
-
-    move v1, v2
-
-    :goto_1
-    if-ge v1, v5, :cond_1
-
-    aget-object v3, v4, v1
-
-    .line 445
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v3}, Ljava/lang/StackTraceElement;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 443
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
-
-    move-object v0, v3
+    .line 377
+    :catch_4
+    move-exception v1
 
     goto :goto_1
+.end method
 
-    .line 447
-    :cond_1
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+.method final blA()I
+    .locals 2
 
-    move-result v1
-
-    .line 448
-    if-le v1, v7, :cond_2
-
-    invoke-virtual {v0, v2, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    .prologue
+    .line 47
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
 
     move-result-object v0
 
-    :cond_2
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/i;->jJN:Ljava/lang/String;
+    .line 48
+    if-eqz v0, :cond_0
+
+    const-string/jumbo v1, "copy_core_ver"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 49
+    const-string/jumbo v1, "copy_core_ver"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 52
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public final setErrorCode(I)V
+.method final blB()I
+    .locals 2
+
+    .prologue
+    .line 60
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
+
+    move-result-object v0
+
+    .line 61
+    if-eqz v0, :cond_0
+
+    const-string/jumbo v1, "copy_status"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 62
+    const-string/jumbo v1, "copy_status"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 65
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    goto :goto_0
+.end method
+
+.method final blE()Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 248
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
+
+    move-result-object v0
+
+    .line 249
+    if-eqz v0, :cond_0
+
+    const-string/jumbo v1, "install_apk_path"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 250
+    const-string/jumbo v1, "install_apk_path"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 253
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method final blF()I
+    .locals 2
+
+    .prologue
+    .line 262
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
+
+    move-result-object v0
+
+    .line 263
+    if-eqz v0, :cond_0
+
+    const-string/jumbo v1, "install_core_ver"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 264
+    const-string/jumbo v1, "install_core_ver"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 267
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method final blG()I
+    .locals 2
+
+    .prologue
+    .line 275
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
+
+    move-result-object v0
+
+    .line 276
+    if-eqz v0, :cond_0
+
+    const-string/jumbo v1, "install_status"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 277
+    const-string/jumbo v1, "install_status"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 280
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    goto :goto_0
+.end method
+
+.method final blH()I
+    .locals 2
+
+    .prologue
+    .line 471
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
+
+    move-result-object v0
+
+    .line 472
+    if-eqz v0, :cond_0
+
+    const-string/jumbo v1, "incrupdate_status"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    if-eqz v1, :cond_0
+
+    .line 473
+    const-string/jumbo v1, "incrupdate_status"
+
+    invoke-virtual {v0, v1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 476
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, -0x1
+
+    goto :goto_0
+.end method
+
+.method final ce(II)V
     .locals 5
 
     .prologue
-    const/16 v4, 0x6f
+    .line 125
+    const/4 v1, 0x0
 
-    const/4 v3, 0x1
+    .line 128
+    :try_start_0
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
+
+    move-result-object v2
+
+    .line 129
+    if-eqz v2, :cond_0
+
+    .line 130
+    const-string/jumbo v0, "copy_core_ver"
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 131
+    const-string/jumbo v0, "copy_status"
+
+    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 133
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blC()Ljava/io/File;
+
+    move-result-object v3
+
+    .line 134
+    if-eqz v3, :cond_0
+
+    .line 135
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    invoke-direct {v0, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 136
+    :try_start_1
+    const-string/jumbo v1, "update tbsCore and status for copy!"
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/Properties;->store(Ljava/io/OutputStream;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-object v1, v0
+
+    .line 145
+    :cond_0
+    if-eqz v1, :cond_1
+
+    .line 148
+    :try_start_2
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+
+    .line 156
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 141
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    :goto_1
+    if-eqz v0, :cond_1
+
+    .line 148
+    :try_start_3
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_0
+
+    .line 152
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    .line 145
+    :catchall_0
+    move-exception v0
+
+    :goto_2
+    if-eqz v1, :cond_2
+
+    .line 148
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+
+    .line 152
+    :cond_2
+    :goto_3
+    throw v0
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_3
+    move-exception v1
+
+    goto :goto_3
+
+    .line 145
+    :catchall_1
+    move-exception v1
+
+    move-object v4, v1
+
+    move-object v1, v0
+
+    move-object v0, v4
+
+    goto :goto_2
+
+    .line 141
+    :catch_4
+    move-exception v1
+
+    goto :goto_1
+.end method
+
+.method final cf(II)V
+    .locals 5
+
+    .prologue
+    .line 401
+    const/4 v1, 0x0
+
+    .line 404
+    :try_start_0
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
+
+    move-result-object v2
 
     .line 405
-    const/16 v0, 0x64
+    if-eqz v2, :cond_0
 
-    if-eq p1, v0, :cond_0
+    .line 406
+    const-string/jumbo v0, "install_core_ver"
 
-    const/16 v0, 0x6e
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    if-eq p1, v0, :cond_0
+    move-result-object v3
 
-    if-eq p1, v4, :cond_0
+    invoke-virtual {v2, v0, v3}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    const/16 v0, 0x190
+    .line 407
+    const-string/jumbo v0, "install_status"
 
-    if-ge p1, v0, :cond_0
+    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     .line 409
-    const-string/jumbo v0, "TbsDownload"
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blC()Ljava/io/File;
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    move-result-object v3
 
-    const-string/jumbo v2, "error occured, errorCode:"
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1, v3}, Lcom/tencent/smtt/a/u;->j(Ljava/lang/String;Ljava/lang/String;Z)V
+    .line 410
+    if-eqz v3, :cond_0
 
     .line 411
-    :cond_0
-    if-ne p1, v4, :cond_1
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    invoke-direct {v0, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 412
-    const-string/jumbo v0, "TbsDownload"
+    :try_start_1
+    const-string/jumbo v1, "update coreversion and status!"
 
-    const-string/jumbo v1, "you are not in wifi, downloading stoped"
+    invoke-virtual {v2, v0, v1}, Ljava/util/Properties;->store(Ljava/io/OutputStream;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    invoke-static {v0, v1, v3}, Lcom/tencent/smtt/a/u;->j(Ljava/lang/String;Ljava/lang/String;Z)V
+    move-object v1, v0
 
-    .line 414
+    .line 421
+    :cond_0
+    if-eqz v1, :cond_1
+
+    .line 424
+    :try_start_2
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+
+    .line 432
     :cond_1
-    iput p1, p0, Lcom/tencent/smtt/sdk/i;->coy:I
-
-    .line 415
+    :goto_0
     return-void
+
+    .line 417
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    :goto_1
+    if-eqz v0, :cond_1
+
+    .line 424
+    :try_start_3
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_0
+
+    .line 428
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    .line 421
+    :catchall_0
+    move-exception v0
+
+    :goto_2
+    if-eqz v1, :cond_2
+
+    .line 424
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+
+    .line 428
+    :cond_2
+    :goto_3
+    throw v0
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_3
+    move-exception v1
+
+    goto :goto_3
+
+    .line 421
+    :catchall_1
+    move-exception v1
+
+    move-object v4, v1
+
+    move-object v1, v0
+
+    move-object v0, v4
+
+    goto :goto_2
+
+    .line 417
+    :catch_4
+    move-exception v1
+
+    goto :goto_1
+.end method
+
+.method final sq(I)V
+    .locals 5
+
+    .prologue
+    .line 86
+    const/4 v1, 0x0
+
+    .line 89
+    :try_start_0
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
+
+    move-result-object v2
+
+    .line 90
+    if-eqz v2, :cond_0
+
+    .line 91
+    const-string/jumbo v0, "copy_retry_num"
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 93
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blC()Ljava/io/File;
+
+    move-result-object v3
+
+    .line 94
+    if-eqz v3, :cond_0
+
+    .line 95
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    invoke-direct {v0, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 96
+    :try_start_1
+    const-string/jumbo v1, "update copy retry num!"
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/Properties;->store(Ljava/io/OutputStream;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-object v1, v0
+
+    .line 105
+    :cond_0
+    if-eqz v1, :cond_1
+
+    .line 108
+    :try_start_2
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+
+    .line 116
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 101
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    :goto_1
+    if-eqz v0, :cond_1
+
+    .line 108
+    :try_start_3
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_0
+
+    .line 112
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    .line 105
+    :catchall_0
+    move-exception v0
+
+    :goto_2
+    if-eqz v1, :cond_2
+
+    .line 108
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+
+    .line 112
+    :cond_2
+    :goto_3
+    throw v0
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_3
+    move-exception v1
+
+    goto :goto_3
+
+    .line 105
+    :catchall_1
+    move-exception v1
+
+    move-object v4, v1
+
+    move-object v1, v0
+
+    move-object v0, v4
+
+    goto :goto_2
+
+    .line 101
+    :catch_4
+    move-exception v1
+
+    goto :goto_1
+.end method
+
+.method final sr(I)V
+    .locals 5
+
+    .prologue
+    .line 288
+    const/4 v1, 0x0
+
+    .line 291
+    :try_start_0
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
+
+    move-result-object v2
+
+    .line 292
+    if-eqz v2, :cond_0
+
+    .line 293
+    const-string/jumbo v0, "dexopt_retry_num"
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 295
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blC()Ljava/io/File;
+
+    move-result-object v3
+
+    .line 296
+    if-eqz v3, :cond_0
+
+    .line 297
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    invoke-direct {v0, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 298
+    :try_start_1
+    const-string/jumbo v1, "update dexopt retry num!"
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/Properties;->store(Ljava/io/OutputStream;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-object v1, v0
+
+    .line 307
+    :cond_0
+    if-eqz v1, :cond_1
+
+    .line 310
+    :try_start_2
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+
+    .line 318
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 303
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    :goto_1
+    if-eqz v0, :cond_1
+
+    .line 310
+    :try_start_3
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_0
+
+    .line 314
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    .line 307
+    :catchall_0
+    move-exception v0
+
+    :goto_2
+    if-eqz v1, :cond_2
+
+    .line 310
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+
+    .line 314
+    :cond_2
+    :goto_3
+    throw v0
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_3
+    move-exception v1
+
+    goto :goto_3
+
+    .line 307
+    :catchall_1
+    move-exception v1
+
+    move-object v4, v1
+
+    move-object v1, v0
+
+    move-object v0, v4
+
+    goto :goto_2
+
+    .line 303
+    :catch_4
+    move-exception v1
+
+    goto :goto_1
+.end method
+
+.method final ss(I)V
+    .locals 5
+
+    .prologue
+    .line 325
+    const/4 v1, 0x0
+
+    .line 328
+    :try_start_0
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
+
+    move-result-object v2
+
+    .line 329
+    if-eqz v2, :cond_0
+
+    .line 330
+    const-string/jumbo v0, "unzip_retry_num"
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 332
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blC()Ljava/io/File;
+
+    move-result-object v3
+
+    .line 333
+    if-eqz v3, :cond_0
+
+    .line 334
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    invoke-direct {v0, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 335
+    :try_start_1
+    const-string/jumbo v1, "update unzip retry num!"
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/Properties;->store(Ljava/io/OutputStream;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-object v1, v0
+
+    .line 344
+    :cond_0
+    if-eqz v1, :cond_1
+
+    .line 347
+    :try_start_2
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+
+    .line 355
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 340
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    :goto_1
+    if-eqz v0, :cond_1
+
+    .line 347
+    :try_start_3
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_0
+
+    .line 351
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    .line 344
+    :catchall_0
+    move-exception v0
+
+    :goto_2
+    if-eqz v1, :cond_2
+
+    .line 347
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+
+    .line 351
+    :cond_2
+    :goto_3
+    throw v0
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_3
+    move-exception v1
+
+    goto :goto_3
+
+    .line 344
+    :catchall_1
+    move-exception v1
+
+    move-object v4, v1
+
+    move-object v1, v0
+
+    move-object v0, v4
+
+    goto :goto_2
+
+    .line 340
+    :catch_4
+    move-exception v1
+
+    goto :goto_1
+.end method
+
+.method final st(I)V
+    .locals 5
+
+    .prologue
+    .line 437
+    const/4 v1, 0x0
+
+    .line 440
+    :try_start_0
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blD()Ljava/util/Properties;
+
+    move-result-object v2
+
+    .line 441
+    if-eqz v2, :cond_0
+
+    .line 442
+    const-string/jumbo v0, "incrupdate_status"
+
+    invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v0, v3}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+
+    .line 444
+    invoke-static {}, Lcom/tencent/smtt/sdk/i;->blC()Ljava/io/File;
+
+    move-result-object v3
+
+    .line 445
+    if-eqz v3, :cond_0
+
+    .line 446
+    new-instance v0, Ljava/io/FileOutputStream;
+
+    invoke-direct {v0, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 447
+    :try_start_1
+    const-string/jumbo v1, "update coreversion and status!"
+
+    invoke-virtual {v2, v0, v1}, Ljava/util/Properties;->store(Ljava/io/OutputStream;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
+    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+
+    move-object v1, v0
+
+    .line 456
+    :cond_0
+    if-eqz v1, :cond_1
+
+    .line 459
+    :try_start_2
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_2
+    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
+
+    .line 467
+    :cond_1
+    :goto_0
+    return-void
+
+    .line 452
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    :goto_1
+    if-eqz v0, :cond_1
+
+    .line 459
+    :try_start_3
+    invoke-virtual {v0}, Ljava/io/FileOutputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_1
+
+    goto :goto_0
+
+    .line 463
+    :catch_1
+    move-exception v0
+
+    goto :goto_0
+
+    .line 456
+    :catchall_0
+    move-exception v0
+
+    :goto_2
+    if-eqz v1, :cond_2
+
+    .line 459
+    :try_start_4
+    invoke-virtual {v1}, Ljava/io/FileOutputStream;->close()V
+    :try_end_4
+    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_3
+
+    .line 463
+    :cond_2
+    :goto_3
+    throw v0
+
+    :catch_2
+    move-exception v0
+
+    goto :goto_0
+
+    :catch_3
+    move-exception v1
+
+    goto :goto_3
+
+    .line 456
+    :catchall_1
+    move-exception v1
+
+    move-object v4, v1
+
+    move-object v1, v0
+
+    move-object v0, v4
+
+    goto :goto_2
+
+    .line 452
+    :catch_4
+    move-exception v1
+
+    goto :goto_1
 .end method

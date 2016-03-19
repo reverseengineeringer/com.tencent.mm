@@ -4,99 +4,80 @@
 
 
 # direct methods
-.method public static getDrawable(I)Landroid/graphics/drawable/Drawable;
-    .locals 1
+.method public static aOP()Z
+    .locals 3
 
     .prologue
-    .line 31
-    :try_start_0
-    invoke-static {p0}, Lcom/tencent/mm/svg/frame/a;->mO(I)Z
+    .line 24
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "EnableStrangerChat"
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/g/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 25
+    const-string/jumbo v1, "1"
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    const-string/jumbo v0, "0"
+
+    :cond_0
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    .line 32
-    invoke-static {p0}, Lcom/tencent/mm/svg/frame/a;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    .line 39
-    :goto_0
-    return-object v0
-
-    .line 34
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 37
-    :catch_0
-    move-exception v0
-
-    .line 38
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->a(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    invoke-static {}, Lcom/tencent/mm/svg/frame/c/a/c;->aIz()V
-
-    .line 39
-    const/4 v0, 0x0
-
-    goto :goto_0
+    return v0
 .end method
 
-.method public static mm(I)Lcom/tencent/mm/svg/frame/b/a;
-    .locals 1
+.method public static cC(Landroid/content/Context;)V
+    .locals 2
 
     .prologue
-    .line 47
-    :try_start_0
-    invoke-static {p0}, Lcom/tencent/mm/svg/frame/a;->mO(I)Z
+    .line 29
+    invoke-static {}, Lcom/tencent/mm/ap/a;->aOP()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 48
-    invoke-static {p0}, Lcom/tencent/mm/svg/frame/a;->mm(I)Lcom/tencent/mm/svg/frame/b/a;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .line 30
+    invoke-static {}, Lcom/tencent/mm/am/l;->DM()Lcom/tencent/mm/am/i;
 
     move-result-object v0
 
-    .line 52
+    invoke-virtual {v0}, Lcom/tencent/mm/am/i;->DE()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    .line 33
+    const-string/jumbo v0, "nearby"
+
+    const-string/jumbo v1, ".ui.NearbyFriendShowSayHiUI"
+
+    invoke-static {p0, v0, v1}, Lcom/tencent/mm/ar/c;->u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 38
     :goto_0
-    return-object v0
+    return-void
 
-    .line 50
-    :catch_0
-    move-exception v0
-
-    .line 51
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->a(Ljava/lang/Throwable;)Ljava/lang/String;
-
-    invoke-static {}, Lcom/tencent/mm/svg/frame/c/a/c;->aIz()V
-
-    .line 52
+    .line 35
     :cond_0
-    const/4 v0, 0x0
+    const-string/jumbo v0, "nearby"
+
+    const-string/jumbo v1, ".ui.NearbyFriendsUI"
+
+    invoke-static {p0, v0, v1}, Lcom/tencent/mm/ar/c;->u(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

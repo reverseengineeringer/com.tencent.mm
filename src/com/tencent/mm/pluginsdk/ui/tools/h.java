@@ -1,93 +1,28 @@
 package com.tencent.mm.pluginsdk.ui.tools;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import android.text.Editable;
+import android.text.InputFilter;
+import android.text.InputFilter.LengthFilter;
+import android.text.TextWatcher;
+import com.tencent.mm.ui.widget.MMEditText.b;
 
 public final class h
 {
-  public static boolean vt(String paramString)
-  {
-    if ((paramString == null) || (paramString.length() == 0))
-    {
-      t.e("!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe", "markNew fail, appId is empty");
-      return false;
-    }
-    com.tencent.mm.storage.h localh = ax.tl().rf();
-    if (localh == null)
-    {
-      t.e("!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe", "markNew fail, cfgStg is null");
-      return false;
-    }
-    a locala = new a((byte)0);
-    locala.pi((String)localh.get(69121, null));
-    if (!fQy.contains(paramString)) {
-      fQy.add(paramString);
-    }
-    localh.set(69121, locala.aCN());
-    return true;
-  }
+  public static InputFilter[] iSL = { new InputFilter.LengthFilter(50) };
   
-  public static boolean vu(String paramString)
+  public static final class a
+    implements TextWatcher
   {
-    if ((paramString == null) || (paramString.length() == 0))
-    {
-      t.e("!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe", "unmarkNew fail, appId is empty");
-      return false;
-    }
-    com.tencent.mm.storage.h localh = ax.tl().rf();
-    if (localh == null)
-    {
-      t.e("!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe", "unmarkNew fail, cfgStg is null");
-      return false;
-    }
-    a locala = new a((byte)0);
-    locala.pi((String)localh.get(69121, null));
-    if (fQy.contains(paramString)) {
-      fQy.remove(paramString);
-    }
-    localh.set(69121, locala.aCN());
-    return true;
-  }
-  
-  private static final class a
-  {
-    List fQy = new ArrayList();
+    public MMEditText.b iSM = null;
     
-    final String aCN()
-    {
-      if ((fQy == null) || (fQy.size() == 0)) {
-        return "";
-      }
-      StringBuffer localStringBuffer = new StringBuffer();
-      Iterator localIterator = fQy.iterator();
-      while (localIterator.hasNext())
-      {
-        localStringBuffer.append((String)localIterator.next());
-        localStringBuffer.append(";");
-      }
-      return localStringBuffer.toString();
-    }
+    public final void afterTextChanged(Editable paramEditable) {}
     
-    final void pi(String paramString)
+    public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
+    
+    public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
     {
-      fQy = new ArrayList();
-      if ((paramString == null) || (paramString.length() == 0)) {}
-      for (;;)
-      {
-        return;
-        paramString = paramString.split(";");
-        int j = paramString.length;
-        int i = 0;
-        while (i < j)
-        {
-          Object localObject = paramString[i];
-          fQy.add(localObject);
-          i += 1;
-        }
+      if (iSM != null) {
+        iSM.aqD();
       }
     }
   }

@@ -1,8 +1,14 @@
 package com.tencent.mm.d.a;
 
+import android.content.Context;
+
 public final class h$a
 {
-  public int mode;
+  public int actionCode;
+  public String asf;
+  public boolean asg;
+  public boolean ash;
+  public Context context;
 }
 
 /* Location:

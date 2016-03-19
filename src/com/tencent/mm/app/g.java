@@ -1,162 +1,136 @@
 package com.tencent.mm.app;
 
-final class g
-  implements Runnable
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.HandlerThread;
+import android.os.Process;
+import android.view.View;
+import android.view.ViewGroup.LayoutParams;
+import android.view.WindowManager;
+import android.view.WindowManager.LayoutParams;
+import android.widget.FrameLayout;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.LauncherUI;
+import com.tencent.mm.ui.chatting.ea;
+
+public final class g
 {
-  private int ant = 0;
+  private static g alj;
+  private FrameLayout alk;
+  private WindowManager all;
+  private WindowManager.LayoutParams alm;
+  private ViewGroup.LayoutParams aln;
+  boolean alo;
+  public boolean alp;
+  public BitmapDrawable alq = null;
+  @Deprecated
+  public Boolean alr = Boolean.valueOf(false);
+  private final int als = 5;
+  protected Object mLock = new Object();
+  private View mView;
   
-  g(c paramc) {}
+  public static g ku()
+  {
+    if (alj == null) {
+      alj = new g();
+    }
+    return alj;
+  }
+  
+  public final void a(Activity paramActivity, View paramView)
+  {
+    if ((paramActivity instanceof Activity)) {
+      paramActivity.setContentView(paramView);
+    }
+    while ((alk != null) && (all != null)) {
+      return;
+    }
+    alm = new WindowManager.LayoutParams();
+    alm.height = -1;
+    alm.width = -1;
+    all = ((WindowManager)paramActivity.getSystemService("window"));
+    alm.x = 0;
+    alm.y = 0;
+    alm.type = 2002;
+    mView = paramView;
+    alm.gravity = 51;
+    alm.format = 1;
+    alk = new FrameLayout(paramActivity);
+    alk.setPadding(0, 0, 0, 0);
+    aln = new ViewGroup.LayoutParams(-1, -1);
+    alk.addView(mView, aln);
+    all.addView(alk, alm);
+    alp = true;
+  }
   
   /* Error */
-  public final void run()
+  public final void kv()
   {
     // Byte code:
-    //   0: ldc 25
-    //   2: ldc 27
-    //   4: iconst_1
-    //   5: anewarray 4	java/lang/Object
-    //   8: dup
-    //   9: iconst_0
-    //   10: aload_0
-    //   11: getfield 19	com/tencent/mm/app/g:ant	I
-    //   14: invokestatic 33	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
-    //   17: aastore
-    //   18: invokestatic 39	java/lang/String:format	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-    //   21: invokestatic 45	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
-    //   24: aload_0
-    //   25: getfield 19	com/tencent/mm/app/g:ant	I
-    //   28: iconst_1
-    //   29: if_icmpne +39 -> 68
-    //   32: ldc 47
-    //   34: invokestatic 53	com/tencent/mm/app/c:aQ	(Ljava/lang/String;)I
-    //   37: istore_1
-    //   38: iload_1
-    //   39: iconst_m1
-    //   40: if_icmpeq +126 -> 166
-    //   43: iload_1
-    //   44: invokestatic 59	android/os/Process:killProcess	(I)V
-    //   47: ldc 25
-    //   49: ldc 61
-    //   51: iconst_1
-    //   52: anewarray 4	java/lang/Object
-    //   55: dup
-    //   56: iconst_0
-    //   57: iload_1
-    //   58: invokestatic 33	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
-    //   61: aastore
-    //   62: invokestatic 39	java/lang/String:format	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-    //   65: invokestatic 64	com/tencent/mm/sdk/platformtools/t:d	(Ljava/lang/String;Ljava/lang/String;)V
-    //   68: invokestatic 70	com/tencent/mm/sdk/platformtools/aa:getContext	()Landroid/content/Context;
-    //   71: astore_2
-    //   72: new 72	android/content/Intent
-    //   75: dup
-    //   76: aload_2
-    //   77: ldc 74
-    //   79: invokespecial 77	android/content/Intent:<init>	(Landroid/content/Context;Ljava/lang/Class;)V
-    //   82: astore_3
-    //   83: ldc 25
-    //   85: ldc 79
-    //   87: invokestatic 82	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;)V
-    //   90: aload_2
-    //   91: aload_0
-    //   92: getfield 14	com/tencent/mm/app/g:anq	Lcom/tencent/mm/app/c;
-    //   95: invokevirtual 88	android/content/Context:unbindService	(Landroid/content/ServiceConnection;)V
-    //   98: aload_2
-    //   99: aload_3
-    //   100: invokevirtual 92	android/content/Context:stopService	(Landroid/content/Intent;)Z
-    //   103: pop
-    //   104: aload_2
-    //   105: aload_3
-    //   106: aload_0
-    //   107: getfield 14	com/tencent/mm/app/g:anq	Lcom/tencent/mm/app/c;
-    //   110: iconst_1
-    //   111: invokevirtual 96	android/content/Context:bindService	(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
-    //   114: pop
-    //   115: aload_2
-    //   116: aload_3
-    //   117: invokevirtual 100	android/content/Context:startService	(Landroid/content/Intent;)Landroid/content/ComponentName;
-    //   120: pop
-    //   121: aload_0
-    //   122: getfield 19	com/tencent/mm/app/g:ant	I
-    //   125: iconst_1
-    //   126: if_icmpne +106 -> 232
-    //   129: aload_0
-    //   130: iconst_0
-    //   131: putfield 19	com/tencent/mm/app/g:ant	I
-    //   134: aload_0
-    //   135: ldc2_w 101
-    //   138: invokestatic 108	com/tencent/mm/sdk/platformtools/ad:c	(Ljava/lang/Runnable;J)V
-    //   141: ldc 25
-    //   143: ldc 110
-    //   145: iconst_1
-    //   146: anewarray 4	java/lang/Object
-    //   149: dup
-    //   150: iconst_0
-    //   151: aload_0
-    //   152: getfield 19	com/tencent/mm/app/g:ant	I
-    //   155: invokestatic 33	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
-    //   158: aastore
-    //   159: invokestatic 39	java/lang/String:format	(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-    //   162: invokestatic 64	com/tencent/mm/sdk/platformtools/t:d	(Ljava/lang/String;Ljava/lang/String;)V
-    //   165: return
-    //   166: ldc 25
-    //   168: ldc 112
-    //   170: invokestatic 64	com/tencent/mm/sdk/platformtools/t:d	(Ljava/lang/String;Ljava/lang/String;)V
-    //   173: goto -105 -> 68
-    //   176: astore 4
-    //   178: aload_2
-    //   179: aload_3
-    //   180: invokevirtual 92	android/content/Context:stopService	(Landroid/content/Intent;)Z
-    //   183: pop
-    //   184: aload_2
-    //   185: aload_3
-    //   186: aload_0
-    //   187: getfield 14	com/tencent/mm/app/g:anq	Lcom/tencent/mm/app/c;
-    //   190: iconst_1
-    //   191: invokevirtual 96	android/content/Context:bindService	(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
-    //   194: pop
-    //   195: aload_2
-    //   196: aload_3
-    //   197: invokevirtual 100	android/content/Context:startService	(Landroid/content/Intent;)Landroid/content/ComponentName;
-    //   200: pop
-    //   201: goto -80 -> 121
-    //   204: astore 4
-    //   206: aload_2
-    //   207: aload_3
-    //   208: invokevirtual 92	android/content/Context:stopService	(Landroid/content/Intent;)Z
-    //   211: pop
-    //   212: aload_2
-    //   213: aload_3
-    //   214: aload_0
-    //   215: getfield 14	com/tencent/mm/app/g:anq	Lcom/tencent/mm/app/c;
-    //   218: iconst_1
-    //   219: invokevirtual 96	android/content/Context:bindService	(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
-    //   222: pop
-    //   223: aload_2
-    //   224: aload_3
-    //   225: invokevirtual 100	android/content/Context:startService	(Landroid/content/Intent;)Landroid/content/ComponentName;
-    //   228: pop
-    //   229: aload 4
-    //   231: athrow
-    //   232: aload_0
-    //   233: aload_0
-    //   234: getfield 19	com/tencent/mm/app/g:ant	I
-    //   237: iconst_1
-    //   238: iadd
-    //   239: putfield 19	com/tencent/mm/app/g:ant	I
-    //   242: goto -108 -> 134
+    //   0: aload_0
+    //   1: getfield 38	com/tencent/mm/app/g:mLock	Ljava/lang/Object;
+    //   4: astore_1
+    //   5: aload_1
+    //   6: monitorenter
+    //   7: aload_0
+    //   8: getfield 68	com/tencent/mm/app/g:all	Landroid/view/WindowManager;
+    //   11: ifnull +28 -> 39
+    //   14: aload_0
+    //   15: getfield 66	com/tencent/mm/app/g:alk	Landroid/widget/FrameLayout;
+    //   18: ifnull +16 -> 34
+    //   21: aload_0
+    //   22: getfield 68	com/tencent/mm/app/g:all	Landroid/view/WindowManager;
+    //   25: aload_0
+    //   26: getfield 66	com/tencent/mm/app/g:alk	Landroid/widget/FrameLayout;
+    //   29: invokeinterface 135 2 0
+    //   34: aload_0
+    //   35: aconst_null
+    //   36: putfield 68	com/tencent/mm/app/g:all	Landroid/view/WindowManager;
+    //   39: aload_0
+    //   40: getfield 66	com/tencent/mm/app/g:alk	Landroid/widget/FrameLayout;
+    //   43: ifnull +15 -> 58
+    //   46: aload_0
+    //   47: getfield 66	com/tencent/mm/app/g:alk	Landroid/widget/FrameLayout;
+    //   50: invokevirtual 138	android/widget/FrameLayout:removeAllViews	()V
+    //   53: aload_0
+    //   54: aconst_null
+    //   55: putfield 66	com/tencent/mm/app/g:alk	Landroid/widget/FrameLayout;
+    //   58: aload_0
+    //   59: aconst_null
+    //   60: putfield 100	com/tencent/mm/app/g:mView	Landroid/view/View;
+    //   63: aload_0
+    //   64: iconst_0
+    //   65: putfield 129	com/tencent/mm/app/g:alp	Z
+    //   68: aload_1
+    //   69: monitorexit
+    //   70: aload_0
+    //   71: iconst_0
+    //   72: putfield 129	com/tencent/mm/app/g:alp	Z
+    //   75: return
+    //   76: astore_2
+    //   77: aload_1
+    //   78: monitorexit
+    //   79: aload_2
+    //   80: athrow
+    //   81: astore_1
+    //   82: goto -12 -> 70
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	245	0	this	g
-    //   37	21	1	i	int
-    //   71	153	2	localContext	android.content.Context
-    //   82	143	3	localIntent	android.content.Intent
-    //   176	1	4	localException	Exception
-    //   204	26	4	localObject	Object
+    //   0	85	0	this	g
+    //   81	1	1	localException	Exception
+    //   76	4	2	localObject2	Object
     // Exception table:
     //   from	to	target	type
-    //   83	98	176	java/lang/Exception
-    //   83	98	204	finally
+    //   7	34	76	finally
+    //   34	39	76	finally
+    //   39	58	76	finally
+    //   58	70	76	finally
+    //   77	79	76	finally
+    //   0	7	81	java/lang/Exception
+    //   79	81	81	java/lang/Exception
   }
 }
 

@@ -3,559 +3,702 @@
 .source "SourceFile"
 
 
+# static fields
+.field private static buA:I
+
+.field private static buB:I
+
+.field private static bux:I
+
+.field private static buy:I
+
+.field private static buz:Z
+
+
 # direct methods
-.method public static C(J)Z
-    .locals 13
+.method static constructor <clinit>()V
+    .locals 2
 
     .prologue
-    const/4 v1, 0x1
+    const/4 v1, -0x1
 
-    const-wide/16 v6, 0x0
+    .line 33
+    sput v1, Lcom/tencent/mm/compatible/util/h;->bux:I
 
+    .line 39
+    sput v1, Lcom/tencent/mm/compatible/util/h;->buy:I
+
+    .line 45
     const/4 v0, 0x0
 
-    .line 56
-    invoke-static {}, Lcom/tencent/mm/compatible/util/h;->pe()Z
+    sput-boolean v0, Lcom/tencent/mm/compatible/util/h;->buz:Z
 
-    move-result v2
+    .line 159
+    sput v1, Lcom/tencent/mm/compatible/util/h;->buA:I
 
-    if-nez v2, :cond_1
+    .line 184
+    sput v1, Lcom/tencent/mm/compatible/util/h;->buB:I
 
-    .line 57
-    const-string/jumbo v1, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
-
-    const-string/jumbo v2, "summer isSDCardHaveEnoughSpace sdcard not avail and ret false"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 86
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 62
-    :cond_1
-    const/4 v4, 0x0
-
-    .line 64
-    :try_start_0
-    new-instance v3, Landroid/os/StatFs;
-
-    sget-object v2, Lcom/tencent/mm/compatible/util/f;->bjH:Ljava/lang/String;
-
-    invoke-direct {v3, v2}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 65
-    :try_start_1
-    invoke-virtual {v3}, Landroid/os/StatFs;->getBlockCount()I
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    move-result v2
-
-    int-to-long v4, v2
-
-    .line 66
-    :try_start_2
-    invoke-virtual {v3}, Landroid/os/StatFs;->getAvailableBlocks()I
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-
-    move-result v2
-
-    int-to-long v8, v2
-
-    move-wide v11, v8
-
-    move-wide v8, v4
-
-    move-wide v4, v11
-
-    .line 71
-    :goto_1
-    if-eqz v3, :cond_0
-
-    .line 75
-    cmp-long v2, v8, v6
-
-    if-lez v2, :cond_0
-
-    .line 78
-    sub-long v4, v8, v4
-
-    cmp-long v2, v4, v6
-
-    if-ltz v2, :cond_0
-
-    .line 82
-    invoke-virtual {v3}, Landroid/os/StatFs;->getBlockSize()I
-
-    move-result v2
-
-    int-to-long v4, v2
-
-    invoke-virtual {v3}, Landroid/os/StatFs;->getFreeBlocks()I
-
-    move-result v2
-
-    int-to-long v2, v2
-
-    mul-long/2addr v2, v4
-
-    cmp-long v2, v2, p0
-
-    if-gez v2, :cond_2
-
-    .line 83
-    const-string/jumbo v1, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "summer isSDCardHaveEnoughSpace needSize: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, " not enough and ret false"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 67
-    :catch_0
-    move-exception v2
-
-    move-object v3, v4
-
-    move-wide v4, v6
-
-    .line 68
-    :goto_2
-    const-string/jumbo v8, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
-
-    const-string/jumbo v9, "isSDCardHaveEnoughSpace"
-
-    new-array v10, v1, [Ljava/lang/Object;
-
-    aput-object v2, v10, v0
-
-    invoke-static {v8, v9, v10}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    move-wide v8, v4
-
-    move-wide v4, v6
-
-    goto :goto_1
-
-    :cond_2
-    move v0, v1
-
-    .line 86
-    goto :goto_0
-
-    .line 67
-    :catch_1
-    move-exception v2
-
-    move-wide v4, v6
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v2
-
-    goto :goto_2
+    return-void
 .end method
 
-.method public static D(J)Z
-    .locals 13
-
-    .prologue
-    const/4 v1, 0x1
-
-    const-wide/16 v6, 0x0
-
-    const/4 v0, 0x0
-
-    .line 90
-    .line 92
-    const/4 v4, 0x0
-
-    .line 94
-    :try_start_0
-    new-instance v3, Landroid/os/StatFs;
-
-    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->getDataDirectory()Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-direct {v3, v2}, Landroid/os/StatFs;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 95
-    :try_start_1
-    invoke-virtual {v3}, Landroid/os/StatFs;->getBlockCount()I
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
-
-    move-result v2
-
-    int-to-long v4, v2
-
-    .line 96
-    :try_start_2
-    invoke-virtual {v3}, Landroid/os/StatFs;->getAvailableBlocks()I
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
-
-    move-result v2
-
-    int-to-long v8, v2
-
-    move-wide v11, v8
-
-    move-wide v8, v4
-
-    move-wide v4, v11
-
-    .line 100
-    :goto_0
-    if-nez v3, :cond_1
-
-    .line 114
-    :cond_0
-    :goto_1
-    return v0
-
-    .line 97
-    :catch_0
-    move-exception v2
-
-    move-object v3, v4
-
-    move-wide v4, v6
-
-    .line 98
-    :goto_2
-    const-string/jumbo v8, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
-
-    const-string/jumbo v9, "isDataDirHaveEnoughSpace, exception: %s"
-
-    new-array v10, v1, [Ljava/lang/Object;
-
-    invoke-virtual {v2}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v10, v0
-
-    invoke-static {v8, v9, v10}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    move-wide v8, v4
-
-    move-wide v4, v6
-
-    goto :goto_0
-
-    .line 104
-    :cond_1
-    cmp-long v2, v8, v6
-
-    if-lez v2, :cond_0
-
-    .line 107
-    sub-long v4, v8, v4
-
-    cmp-long v2, v4, v6
-
-    if-ltz v2, :cond_0
-
-    .line 110
-    invoke-virtual {v3}, Landroid/os/StatFs;->getBlockSize()I
-
-    move-result v2
-
-    int-to-long v4, v2
-
-    invoke-virtual {v3}, Landroid/os/StatFs;->getFreeBlocks()I
-
-    move-result v2
-
-    int-to-long v2, v2
-
-    mul-long/2addr v2, v4
-
-    cmp-long v2, v2, p0
-
-    if-gez v2, :cond_2
-
-    .line 111
-    const-string/jumbo v1, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "isDataDirHaveEnoughSpace needSize: "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p0, p1}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, " not enough and ret false"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    :cond_2
-    move v0, v1
-
-    .line 114
-    goto :goto_1
-
-    .line 97
-    :catch_1
-    move-exception v2
-
-    move-wide v4, v6
-
-    goto :goto_2
-
-    :catch_2
-    move-exception v2
-
-    goto :goto_2
-.end method
-
-.method public static bT(I)Z
+.method public static final aA(Landroid/content/Context;)I
     .locals 1
 
     .prologue
-    .line 14
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 168
+    sget-boolean v0, Lcom/tencent/mm/compatible/util/h;->buz:Z
 
-    if-lt v0, p0, :cond_0
+    if-nez v0, :cond_2
+
+    .line 170
+    sget v0, Lcom/tencent/mm/compatible/util/h;->buA:I
+
+    if-lez v0, :cond_0
+
+    .line 171
+    sget v0, Lcom/tencent/mm/compatible/util/h;->buA:I
+
+    .line 180
+    :goto_0
+    return v0
+
+    .line 174
+    :cond_0
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aD(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 176
+    const/16 v0, 0x474
+
+    goto :goto_0
+
+    .line 178
+    :cond_1
+    const/16 v0, 0x17c
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/compatible/util/h;->buA:I
+
+    goto :goto_0
+
+    .line 180
+    :cond_2
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aB(Landroid/content/Context;)I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public static final aB(Landroid/content/Context;)I
+    .locals 1
+
+    .prologue
+    .line 193
+    sget v0, Lcom/tencent/mm/compatible/util/h;->buB:I
+
+    if-lez v0, :cond_0
+
+    .line 194
+    sget v0, Lcom/tencent/mm/compatible/util/h;->buB:I
+
+    .line 202
+    :goto_0
+    return v0
+
+    .line 197
+    :cond_0
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aD(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 199
+    sget v0, Lcom/tencent/mm/compatible/util/h;->buB:I
+
+    mul-int/lit8 v0, v0, 0x3
+
+    goto :goto_0
+
+    .line 202
+    :cond_1
+    const/16 v0, 0xe6
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/compatible/util/h;->buB:I
+
+    goto :goto_0
+.end method
+
+.method public static final aC(Landroid/content/Context;)I
+    .locals 1
+
+    .prologue
+    .line 241
+    const/4 v0, -0x1
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/compatible/util/h;->c(Landroid/content/Context;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method private static final aD(Landroid/content/Context;)Z
+    .locals 1
+
+    .prologue
+    .line 249
+    if-nez p0, :cond_0
+
+    .line 250
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object p0
+
+    .line 253
+    :cond_0
+    if-eqz p0, :cond_1
 
     const/4 v0, 0x1
 
     :goto_0
     return v0
 
-    :cond_0
+    :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public static bU(I)Z
-    .locals 1
+.method public static aE(Landroid/content/Context;)Z
+    .locals 4
 
     .prologue
-    .line 18
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    if-ge v0, p0, :cond_0
+    const/4 v1, 0x0
 
     const/4 v0, 0x1
 
+    .line 309
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aF(Landroid/content/Context;)[I
+
+    move-result-object v2
+
+    aget v3, v2, v1
+
+    aget v2, v2, v0
+
+    if-ge v3, v2, :cond_0
+
+    move v2, v0
+
     :goto_0
+    if-ne v2, v0, :cond_1
+
+    :goto_1
     return v0
 
     :cond_0
-    const/4 v0, 0x0
+    const/4 v2, 0x2
 
     goto :goto_0
+
+    :cond_1
+    move v0, v1
+
+    goto :goto_1
 .end method
 
-.method public static pe()Z
+.method private static aF(Landroid/content/Context;)[I
     .locals 5
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v4, 0x1
 
-    .line 31
-    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->getExternalStorageDirectory()Ljava/io/File;
+    const/4 v3, 0x0
 
-    move-result-object v1
+    .line 327
+    if-nez p0, :cond_1
 
-    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    .line 328
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
-    move-result-object v1
+    move-result-object v0
 
-    .line 32
-    sget-object v2, Lcom/tencent/mm/compatible/util/f;->bjH:Ljava/lang/String;
+    .line 330
+    :goto_0
+    const/4 v1, 0x2
 
-    invoke-virtual {v2, v1}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    new-array v1, v1, [I
 
-    move-result v1
+    .line 332
+    instance-of v2, v0, Landroid/app/Activity;
 
-    if-eqz v1, :cond_1
+    if-eqz v2, :cond_0
 
-    .line 34
-    :try_start_0
-    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->getExternalStorageState()Ljava/lang/String;
+    .line 333
+    new-instance v2, Landroid/util/DisplayMetrics;
 
-    move-result-object v1
+    invoke-direct {v2}, Landroid/util/DisplayMetrics;-><init>()V
 
-    const-string/jumbo v2, "mounted"
+    .line 334
+    check-cast v0, Landroid/app/Activity;
 
-    invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-virtual {v0}, Landroid/app/Activity;->getWindowManager()Landroid/view/WindowManager;
 
-    move-result v1
+    move-result-object v0
 
-    if-eqz v1, :cond_0
+    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
-    new-instance v1, Ljava/io/File;
+    move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->getExternalStorageDirectory()Ljava/io/File;
+    invoke-virtual {v0, v2}, Landroid/view/Display;->getMetrics(Landroid/util/DisplayMetrics;)V
 
-    move-result-object v2
+    .line 335
+    iget v0, v2, Landroid/util/DisplayMetrics;->widthPixels:I
 
-    invoke-virtual {v2}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    aput v0, v1, v3
 
-    move-result-object v2
+    .line 336
+    iget v0, v2, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    aput v0, v1, v4
 
-    invoke-virtual {v1}, Ljava/io/File;->canWrite()Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .line 342
+    :goto_1
+    return-object v1
 
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 44
+    .line 338
     :cond_0
+    const-string/jumbo v2, "window"
+
+    invoke-virtual {v0, v2}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/WindowManager;
+
+    invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
+
+    move-result-object v0
+
+    .line 339
+    invoke-virtual {v0}, Landroid/view/Display;->getWidth()I
+
+    move-result v2
+
+    aput v2, v1, v3
+
+    .line 340
+    invoke-virtual {v0}, Landroid/view/Display;->getHeight()I
+
+    move-result v0
+
+    aput v0, v1, v4
+
+    goto :goto_1
+
+    :cond_1
+    move-object v0, p0
+
+    goto :goto_0
+.end method
+
+.method public static final az(Landroid/content/Context;)I
+    .locals 3
+
+    .prologue
+    .line 75
+    sget-boolean v0, Lcom/tencent/mm/compatible/util/h;->buz:Z
+
+    if-nez v0, :cond_3
+
+    .line 76
+    sget v0, Lcom/tencent/mm/compatible/util/h;->bux:I
+
+    if-lez v0, :cond_0
+
+    .line 77
+    sget v0, Lcom/tencent/mm/compatible/util/h;->bux:I
+
+    .line 82
     :goto_0
     return v0
 
-    .line 35
-    :catch_0
-    move-exception v1
+    .line 79
+    :cond_0
+    sget-boolean v0, Lcom/tencent/mm/compatible/util/h;->buz:Z
 
-    .line 36
-    const-string/jumbo v2, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
+    if-nez v0, :cond_2
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aD(Landroid/content/Context;)Z
 
-    const-string/jumbo v4, "summer isSDCardAvail 1 e: "
+    move-result v0
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-nez v0, :cond_1
 
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
 
-    move-result-object v1
+    move-result-object v0
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string/jumbo v1, "com.tencent.mm.compatible.util.keybord.height"
 
-    move-result-object v1
+    const/16 v2, 0x2b2
 
-    const-string/jumbo v3, " SDCARD_ROOT: "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget-object v3, Lcom/tencent/mm/compatible/util/f;->bjH:Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 41
-    :cond_1
-    :try_start_1
-    new-instance v1, Ljava/io/File;
-
-    sget-object v2, Lcom/tencent/mm/compatible/util/f;->bjH:Ljava/lang/String;
-
-    invoke-direct {v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/io/File;->canWrite()Z
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
     goto :goto_0
 
-    .line 42
-    :catch_1
-    move-exception v1
+    :cond_1
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
 
-    .line 43
-    const-string/jumbo v2, "!24@/B4Tb64lLpJct1kv8RvO0Q=="
+    move-result-object v0
 
-    new-instance v3, Ljava/lang/StringBuilder;
+    const-string/jumbo v1, "com.tencent.mm.compatible.util.keybord.height"
 
-    const-string/jumbo v4, "summer isSDCardAvail 1 e: "
+    const/16 v2, 0xe6
 
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-static {p0, v2}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    move-result v2
 
-    move-result-object v1
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result v0
 
-    move-result-object v1
-
-    const-string/jumbo v3, " SDCARD_ROOT: "
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    sget-object v3, Lcom/tencent/mm/compatible/util/f;->bjH:Ljava/lang/String;
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    sput v0, Lcom/tencent/mm/compatible/util/h;->bux:I
 
     goto :goto_0
+
+    :cond_2
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aB(Landroid/content/Context;)I
+
+    move-result v0
+
+    goto :goto_0
+
+    .line 82
+    :cond_3
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aB(Landroid/content/Context;)I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public static final b(Landroid/content/Context;I)Z
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 134
+    sget v2, Lcom/tencent/mm/compatible/util/h;->bux:I
+
+    if-ne v2, p1, :cond_0
+
+    .line 156
+    :goto_0
+    return v0
+
+    .line 138
+    :cond_0
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aD(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    move v0, v1
+
+    .line 139
+    goto :goto_0
+
+    .line 142
+    :cond_1
+    if-gez p1, :cond_2
+
+    move v0, v1
+
+    .line 143
+    goto :goto_0
+
+    .line 154
+    :cond_2
+    sput p1, Lcom/tencent/mm/compatible/util/h;->bux:I
+
+    .line 155
+    const-string/jumbo v2, "!32@/B4Tb64lLpKpI+tgWEEQMW53kLRAnwLT"
+
+    const-string/jumbo v3, "save keybord: %d"
+
+    new-array v0, v0, [Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v0, v1
+
+    invoke-static {v2, v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 156
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "com.tencent.mm.compatible.util.keybord.height"
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public static final c(Landroid/content/Context;I)I
+    .locals 4
+
+    .prologue
+    .line 213
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aB(Landroid/content/Context;)I
+
+    move-result v1
+
+    .line 215
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aE(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    .line 216
+    int-to-double v0, v1
+
+    const-wide/high16 v2, 0x3ff8000000000000L    # 1.5
+
+    div-double/2addr v0, v2
+
+    double-to-int v0, v0
+
+    .line 217
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aF(Landroid/content/Context;)[I
+
+    move-result-object v1
+
+    const/4 v2, 0x0
+
+    aget v1, v1, v2
+
+    .line 218
+    div-int/lit8 v2, v1, 0x2
+
+    if-le v0, v2, :cond_0
+
+    .line 219
+    div-int/lit8 v0, v1, 0x2
+
+    .line 237
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 225
+    :cond_1
+    if-gtz p1, :cond_2
+
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->az(Landroid/content/Context;)I
+
+    move-result p1
+
+    .line 227
+    :cond_2
+    invoke-static {p0}, Lcom/tencent/mm/compatible/util/h;->aA(Landroid/content/Context;)I
+
+    move-result v0
+
+    .line 229
+    if-gt p1, v0, :cond_0
+
+    .line 233
+    if-ge p1, v1, :cond_3
+
+    move v0, v1
+
+    .line 234
+    goto :goto_0
+
+    :cond_3
+    move v0, p1
+
+    .line 237
+    goto :goto_0
+.end method
+
+.method public static final i(Landroid/app/Activity;)V
+    .locals 6
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0xb
+    .end annotation
+
+    .prologue
+    .line 89
+    if-nez p0, :cond_1
+
+    .line 110
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 92
+    :cond_1
+    new-instance v0, Landroid/graphics/Rect;
+
+    invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
+
+    .line 93
+    invoke-virtual {p0}, Landroid/app/Activity;->getWindow()Landroid/view/Window;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/view/Window;->getDecorView()Landroid/view/View;
+
+    move-result-object v1
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
+
+    .line 94
+    iget v1, v0, Landroid/graphics/Rect;->top:I
+
+    .line 96
+    new-instance v2, Landroid/util/TypedValue;
+
+    invoke-direct {v2}, Landroid/util/TypedValue;-><init>()V
+
+    .line 97
+    const/4 v0, 0x0
+
+    .line 98
+    sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v4, 0xb
+
+    if-lt v3, v4, :cond_3
+
+    .line 99
+    invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 102
+    invoke-virtual {p0}, Landroid/app/Activity;->getActionBar()Landroid/app/ActionBar;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/ActionBar;->getHeight()I
+
+    move-result v0
+
+    .line 107
+    :cond_2
+    :goto_1
+    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    .line 109
+    iget v2, v2, Landroid/util/DisplayMetrics;->heightPixels:I
+
+    sub-int v0, v2, v0
+
+    sub-int/2addr v0, v1
+
+    sput v0, Lcom/tencent/mm/compatible/util/h;->buy:I
+
+    goto :goto_0
+
+    .line 103
+    :cond_3
+    invoke-virtual {p0}, Landroid/app/Activity;->getTheme()Landroid/content/res/Resources$Theme;
+
+    move-result-object v3
+
+    const v4, 0x10102eb
+
+    const/4 v5, 0x1
+
+    invoke-virtual {v3, v4, v2, v5}, Landroid/content/res/Resources$Theme;->resolveAttribute(ILandroid/util/TypedValue;Z)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_2
+
+    .line 104
+    iget v0, v2, Landroid/util/TypedValue;->data:I
+
+    invoke-virtual {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v2
+
+    invoke-static {v0, v2}, Landroid/util/TypedValue;->complexToDimensionPixelSize(ILandroid/util/DisplayMetrics;)I
+
+    move-result v0
+
+    goto :goto_1
+.end method
+
+.method public static pb()V
+    .locals 1
+
+    .prologue
+    .line 48
+    const/4 v0, 0x0
+
+    sput-boolean v0, Lcom/tencent/mm/compatible/util/h;->buz:Z
+
+    .line 49
+    return-void
+.end method
+
+.method public static final pc()I
+    .locals 1
+
+    .prologue
+    .line 113
+    sget v0, Lcom/tencent/mm/compatible/util/h;->buy:I
+
+    return v0
 .end method

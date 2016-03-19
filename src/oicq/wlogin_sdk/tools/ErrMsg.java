@@ -7,9 +7,9 @@ import android.os.Parcelable.Creator;
 public class ErrMsg
   implements Parcelable, Cloneable
 {
-  public static final Parcelable.Creator CREATOR = new b();
-  public String jOT;
-  public String message;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  public String epN;
+  public String mdf;
   public String title;
   private int type;
   
@@ -17,24 +17,24 @@ public class ErrMsg
   {
     type = 0;
     title = "";
-    message = "";
-    jOT = "";
+    epN = "";
+    mdf = "";
   }
   
   private ErrMsg(Parcel paramParcel)
   {
     type = paramParcel.readInt();
     title = paramParcel.readString();
-    message = paramParcel.readString();
-    jOT = paramParcel.readString();
+    epN = paramParcel.readString();
+    mdf = paramParcel.readString();
   }
   
-  public final void aVG()
+  public final void bov()
   {
     type = 0;
     title = "";
-    message = "";
-    jOT = "";
+    epN = "";
+    mdf = "";
   }
   
   public Object clone()
@@ -51,8 +51,8 @@ public class ErrMsg
   {
     paramParcel.writeInt(type);
     paramParcel.writeString(title);
-    paramParcel.writeString(message);
-    paramParcel.writeString(jOT);
+    paramParcel.writeString(epN);
+    paramParcel.writeString(mdf);
   }
 }
 

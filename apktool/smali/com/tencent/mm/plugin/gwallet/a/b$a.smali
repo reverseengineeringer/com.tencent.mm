@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tencent/mm/plugin/gwallet/a/h;)V
+.method public abstract a(Lcom/tencent/mm/plugin/gwallet/a/c;)V
 .end method

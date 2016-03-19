@@ -15,9 +15,13 @@
 
 
 # instance fields
-.field public azx:Ljava/lang/String;
+.field public axi:Ljava/lang/String;
 
-.field public azy:Ljava/lang/String;
+.field public content:Ljava/lang/String;
+
+.field public flags:I
+
+.field public type:I
 
 
 # direct methods

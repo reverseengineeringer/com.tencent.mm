@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract a(ILcom/tencent/mm/pluginsdk/model/app/h;)V
+.method public abstract a(ILcom/tencent/mm/pluginsdk/model/app/f;)V
 .end method
 
-.method public abstract lB(I)I
+.method public abstract oA(I)I
 .end method
 
-.method public abstract lC(I)V
+.method public abstract oB(I)V
 .end method

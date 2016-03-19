@@ -15,51 +15,51 @@
 
 
 # instance fields
-.field private dgO:Z
+.field private dRD:Z
 
-.field private dhX:I
+.field private dSs:I
 
-.field private dhY:I
+.field private dSt:I
 
-.field public ehM:Z
+.field public frx:Z
 
-.field public hwz:Ljava/util/LinkedList;
+.field public jni:Ljava/util/LinkedList;
 
-.field public iHM:Z
+.field public kGY:Z
 
-.field private iHN:Z
+.field private kGZ:Z
 
-.field public iHO:Z
+.field public kHa:Z
 
-.field public iHP:Z
+.field public kHb:Z
 
-.field public iHQ:Z
+.field public kHc:Z
 
-.field private iHR:I
+.field private kHd:I
 
-.field private iHS:I
+.field private kHe:I
 
-.field private iHT:I
+.field private kHf:I
 
-.field private iHU:I
+.field private kHg:I
 
-.field private iHV:I
+.field private kHh:I
 
-.field private iHW:I
+.field private kHi:I
 
-.field private iHX:Lcom/tencent/mm/ui/base/MMTagPanel$d;
+.field private kHj:Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
-.field private iHY:Ljava/util/LinkedList;
+.field private kHk:Ljava/util/LinkedList;
 
-.field private iHZ:Lcom/tencent/mm/ui/base/MMTagPanel$a;
+.field private kHl:Lcom/tencent/mm/ui/base/MMTagPanel$a;
 
-.field private iIa:I
+.field private kHm:I
 
-.field private iIb:Landroid/view/View;
+.field private kHn:Landroid/view/View;
 
-.field private iIc:Landroid/widget/EditText;
+.field private kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-.field private iId:Landroid/view/View$OnClickListener;
+.field private kHp:Landroid/view/View$OnClickListener;
 
 
 # direct methods
@@ -71,98 +71,98 @@
 
     const/4 v1, 0x0
 
-    .line 100
+    .line 101
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/base/FlowLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 69
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dgO:Z
-
-    .line 71
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHM:Z
+    .line 70
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dRD:Z
 
     .line 72
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHN:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGY:Z
 
     .line 73
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHO:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGZ:Z
 
     .line 74
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHP:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHa:Z
 
     .line 75
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHQ:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHb:Z
 
     .line 76
-    sget v0, Lcom/tencent/mm/a$h;->tag_deletetab:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHR:I
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHc:Z
 
     .line 77
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHS:I
+    const v0, 0x7f04073b
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHd:I
 
     .line 78
-    sget v0, Lcom/tencent/mm/a$h;->tag_white_tab_selector:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dhY:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHe:I
 
     .line 79
-    sget v0, Lcom/tencent/mm/a$f;->normal_text_color:I
+    const v0, 0x7f040704
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dhX:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dSt:I
 
     .line 80
-    sget v0, Lcom/tencent/mm/a$h;->tag_green_tab_selector:I
+    const v0, 0x7f08019f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHT:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dSs:I
 
     .line 81
-    sget v0, Lcom/tencent/mm/a$f;->wechat_green:I
+    const v0, 0x7f0406a0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHU:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHf:I
 
     .line 82
-    sget v0, Lcom/tencent/mm/a$h;->tag_highlight_tab_selector:I
+    const v0, 0x7f0801b9
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHV:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHg:I
 
     .line 83
-    sget v0, Lcom/tencent/mm/a$f;->white:I
+    const v0, 0x7f040700
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHW:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHh:I
 
     .line 84
-    const/4 v0, 0x0
+    const v0, 0x7f08017c
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHX:Lcom/tencent/mm/ui/base/MMTagPanel$d;
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHi:I
 
     .line 85
-    new-instance v0, Ljava/util/LinkedList;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHj:Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
     .line 86
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHY:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
 
-    .line 634
-    new-instance v0, Lcom/tencent/mm/ui/base/cd;
+    .line 87
+    new-instance v0, Ljava/util/LinkedList;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/cd;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iId:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHk:Ljava/util/LinkedList;
 
-    .line 847
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->ehM:Z
+    .line 629
+    new-instance v0, Lcom/tencent/mm/ui/base/MMTagPanel$8;
 
-    .line 101
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->init()V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMTagPanel$8;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHp:Landroid/view/View$OnClickListener;
+
+    .line 842
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->frx:Z
 
     .line 102
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->init()V
+
+    .line 103
     return-void
 .end method
 
@@ -174,117 +174,107 @@
 
     const/4 v1, 0x0
 
-    .line 95
+    .line 96
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/FlowLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 69
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dgO:Z
-
-    .line 71
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHM:Z
+    .line 70
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dRD:Z
 
     .line 72
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHN:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGY:Z
 
     .line 73
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHO:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGZ:Z
 
     .line 74
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHP:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHa:Z
 
     .line 75
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHQ:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHb:Z
 
     .line 76
-    sget v0, Lcom/tencent/mm/a$h;->tag_deletetab:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHR:I
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHc:Z
 
     .line 77
-    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHS:I
+    const v0, 0x7f04073b
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHd:I
 
     .line 78
-    sget v0, Lcom/tencent/mm/a$h;->tag_white_tab_selector:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dhY:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHe:I
 
     .line 79
-    sget v0, Lcom/tencent/mm/a$f;->normal_text_color:I
+    const v0, 0x7f040704
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dhX:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dSt:I
 
     .line 80
-    sget v0, Lcom/tencent/mm/a$h;->tag_green_tab_selector:I
+    const v0, 0x7f08019f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHT:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dSs:I
 
     .line 81
-    sget v0, Lcom/tencent/mm/a$f;->wechat_green:I
+    const v0, 0x7f0406a0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHU:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHf:I
 
     .line 82
-    sget v0, Lcom/tencent/mm/a$h;->tag_highlight_tab_selector:I
+    const v0, 0x7f0801b9
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHV:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHg:I
 
     .line 83
-    sget v0, Lcom/tencent/mm/a$f;->white:I
+    const v0, 0x7f040700
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHW:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHh:I
 
     .line 84
-    const/4 v0, 0x0
+    const v0, 0x7f08017c
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHX:Lcom/tencent/mm/ui/base/MMTagPanel$d;
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHi:I
 
     .line 85
-    new-instance v0, Ljava/util/LinkedList;
+    const/4 v0, 0x0
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHj:Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
     .line 86
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHY:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
 
-    .line 634
-    new-instance v0, Lcom/tencent/mm/ui/base/cd;
+    .line 87
+    new-instance v0, Ljava/util/LinkedList;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/cd;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
+    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iId:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHk:Ljava/util/LinkedList;
 
-    .line 847
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->ehM:Z
+    .line 629
+    new-instance v0, Lcom/tencent/mm/ui/base/MMTagPanel$8;
 
-    .line 96
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->init()V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMTagPanel$8;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHp:Landroid/view/View$OnClickListener;
+
+    .line 842
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->frx:Z
 
     .line 97
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->init()V
+
+    .line 98
     return-void
-.end method
-
-.method static synthetic a(Lcom/tencent/mm/ui/base/MMTagPanel;)Landroid/widget/EditText;
-    .locals 1
-
-    .prologue
-    .line 35
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
-
-    return-object v0
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/ui/base/MMTagPanel;Lcom/tencent/mm/ui/base/MMTagPanel$d;)Lcom/tencent/mm/ui/base/MMTagPanel$d;
     .locals 0
 
     .prologue
-    .line 35
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHX:Lcom/tencent/mm/ui/base/MMTagPanel$d;
+    .line 36
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHj:Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
     return-object p1
 .end method
@@ -295,8 +285,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 35
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 36
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -306,7 +296,7 @@
 
     const-string/jumbo v2, "want to get tag info, but it is null or empty"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -314,7 +304,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -333,7 +323,7 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIp:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHB:Ljava/lang/String;
 
     invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -356,19 +346,29 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v1
 
     goto :goto_0
 .end method
 
+.method static synthetic a(Lcom/tencent/mm/ui/base/MMTagPanel;)Lcom/tencent/mm/ui/widget/MMEditText;
+    .locals 1
+
+    .prologue
+    .line 36
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
+
+    return-object v0
+.end method
+
 .method static synthetic a(Lcom/tencent/mm/ui/base/MMTagPanel;Z)Z
     .locals 0
 
     .prologue
-    .line 35
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dgO:Z
+    .line 36
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dRD:Z
 
     return p1
 .end method
@@ -377,8 +377,8 @@
     .locals 1
 
     .prologue
-    .line 35
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
+    .line 36
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
 
     return-object v0
 .end method
@@ -387,8 +387,8 @@
     .locals 1
 
     .prologue
-    .line 35
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHP:Z
+    .line 36
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHb:Z
 
     return v0
 .end method
@@ -397,8 +397,8 @@
     .locals 1
 
     .prologue
-    .line 35
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHX:Lcom/tencent/mm/ui/base/MMTagPanel$d;
+    .line 36
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHj:Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
     return-object v0
 .end method
@@ -407,8 +407,8 @@
     .locals 1
 
     .prologue
-    .line 35
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHZ:Lcom/tencent/mm/ui/base/MMTagPanel$a;
+    .line 36
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHl:Lcom/tencent/mm/ui/base/MMTagPanel$a;
 
     return-object v0
 .end method
@@ -417,8 +417,8 @@
     .locals 1
 
     .prologue
-    .line 35
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHN:Z
+    .line 36
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGZ:Z
 
     return v0
 .end method
@@ -427,8 +427,8 @@
     .locals 1
 
     .prologue
-    .line 35
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHQ:Z
+    .line 36
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHc:Z
 
     return v0
 .end method
@@ -437,8 +437,8 @@
     .locals 1
 
     .prologue
-    .line 35
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dgO:Z
+    .line 36
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dRD:Z
 
     return v0
 .end method
@@ -447,8 +447,8 @@
     .locals 1
 
     .prologue
-    .line 35
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHO:Z
+    .line 36
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHa:Z
 
     return v0
 .end method
@@ -457,7 +457,7 @@
     .locals 5
 
     .prologue
-    .line 114
+    .line 115
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -466,15 +466,15 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->HintTextSize:I
+    const v1, 0x7f0501c5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIa:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHm:I
 
-    .line 115
+    .line 116
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -483,7 +483,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$k;->mm_tag_panel_edittext:I
+    const v1, 0x7f0a05d5
 
     const/4 v2, 0x0
 
@@ -491,78 +491,78 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIb:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHn:Landroid/view/View;
 
-    .line 116
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIb:Landroid/view/View;
+    .line 117
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHn:Landroid/view/View;
 
-    sget v1, Lcom/tencent/mm/a$i;->edittext:I
+    const v1, 0x7f0704d4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/EditText;
+    check-cast v0, Lcom/tencent/mm/ui/widget/MMEditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    .line 117
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 118
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    new-instance v1, Lcom/tencent/mm/ui/base/bw;
+    new-instance v1, Lcom/tencent/mm/ui/base/MMTagPanel$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/bw;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMTagPanel$1;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
-    .line 156
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 157
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    new-instance v1, Lcom/tencent/mm/ui/base/bx;
+    new-instance v1, Lcom/tencent/mm/ui/base/MMTagPanel$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/bx;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMTagPanel$2;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 177
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 178
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    new-instance v1, Lcom/tencent/mm/ui/base/by;
+    new-instance v1, Lcom/tencent/mm/ui/base/MMTagPanel$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/by;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMTagPanel$3;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    .line 188
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 189
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    new-instance v1, Lcom/tencent/mm/ui/base/bz;
+    new-instance v1, Lcom/tencent/mm/ui/base/MMTagPanel$4;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/bz;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMTagPanel$4;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 199
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 200
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    new-instance v1, Lcom/tencent/mm/ui/base/ca;
+    new-instance v1, Lcom/tencent/mm/ui/base/MMTagPanel$5;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/ca;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMTagPanel$5;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    .line 207
+    .line 208
     new-instance v0, Lcom/tencent/mm/ui/base/MMTagPanel$c;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMTagPanel$c;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
 
-    .line 208
+    .line 209
     new-instance v1, Lcom/tencent/mm/ui/base/MMTagPanel$b;
 
     invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMTagPanel$b;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
 
-    .line 209
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 210
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     const/4 v3, 0x2
 
@@ -576,36 +576,36 @@
 
     aput-object v1, v3, v4
 
-    invoke-virtual {v2, v3}, Landroid/widget/EditText;->setFilters([Landroid/text/InputFilter;)V
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/ui/widget/MMEditText;->setFilters([Landroid/text/InputFilter;)V
 
-    .line 210
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->aNf()V
+    .line 211
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->bcW()V
 
-    .line 212
-    new-instance v1, Lcom/tencent/mm/ui/base/cb;
+    .line 213
+    new-instance v1, Lcom/tencent/mm/ui/base/MMTagPanel$6;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/cb;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMTagPanel$6;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;)V
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/base/MMTagPanel;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 231
-    new-instance v1, Lcom/tencent/mm/ui/base/cc;
+    .line 232
+    new-instance v1, Lcom/tencent/mm/ui/base/MMTagPanel$7;
 
-    invoke-direct {v1, p0, v0}, Lcom/tencent/mm/ui/base/cc;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;Lcom/tencent/mm/ui/base/MMTagPanel$c;)V
+    invoke-direct {v1, p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanel$7;-><init>(Lcom/tencent/mm/ui/base/MMTagPanel;Lcom/tencent/mm/ui/base/MMTagPanel$c;)V
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/base/MMTagPanel;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 250
+    .line 254
     return-void
 .end method
 
 
 # virtual methods
-.method public Ro()V
+.method public Xk()V
     .locals 0
 
     .prologue
-    .line 111
+    .line 112
     return-void
 .end method
 
@@ -615,7 +615,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 739
+    .line 734
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -624,7 +624,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->HintTextSize:I
+    const v1, 0x7f0501c5
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimension(I)F
 
@@ -634,7 +634,7 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/ao/a;->cz(Landroid/content/Context;)F
+    invoke-static {v1}, Lcom/tencent/mm/aw/a;->cY(Landroid/content/Context;)F
 
     move-result v1
 
@@ -642,20 +642,20 @@
 
     invoke-virtual {p1, v2, v0}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 741
+    .line 736
     if-eqz p3, :cond_0
 
-    .line 742
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHV:I
+    .line 737
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHh:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 743
+    .line 738
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHW:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHi:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -663,20 +663,20 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 744
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHR:I
+    .line 739
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHd:I
 
     invoke-virtual {p1, v2, v2, v0, v2}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
-    .line 758
+    .line 753
     :goto_0
     return-void
 
-    .line 747
+    .line 742
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 748
+    .line 743
     const/4 v0, 0x1
 
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -685,8 +685,39 @@
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
+    .line 744
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHf:I
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
+
+    .line 745
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHg:I
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 746
+    invoke-virtual {p1, v2, v2, v2, v2}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
+
+    goto :goto_0
+
+    .line 748
+    :cond_1
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
+
     .line 749
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHT:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dSt:I
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -695,7 +726,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHU:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dSs:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -707,52 +738,21 @@
     invoke-virtual {p1, v2, v2, v2, v2}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
     goto :goto_0
-
-    .line 753
-    :cond_1
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
-
-    .line 754
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dhY:I
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
-
-    .line 755
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dhX:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
-
-    move-result v0
-
-    invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTextColor(I)V
-
-    .line 756
-    invoke-virtual {p1, v2, v2, v2, v2}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
-
-    goto :goto_0
 .end method
 
 .method public final a(Lcom/tencent/mm/ui/base/MMTagPanel$d;)V
     .locals 2
 
     .prologue
-    .line 627
-    iget-object v0, p1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIq:Landroid/widget/TextView;
+    .line 622
+    iget-object v0, p1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHC:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 628
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHY:Ljava/util/LinkedList;
+    .line 623
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHk:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -762,13 +762,13 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 632
+    .line 627
     :goto_0
     return-void
 
-    .line 631
+    .line 626
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHY:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHk:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
@@ -779,49 +779,51 @@
     .locals 4
 
     .prologue
-    .line 714
-    iput-object p2, p1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIp:Ljava/lang/String;
+    .line 709
+    iput-object p2, p1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHB:Ljava/lang/String;
 
-    .line 715
-    iget-object v0, p1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIq:Landroid/widget/TextView;
+    .line 710
+    iget-object v0, p1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHC:Landroid/widget/TextView;
 
-    sget-object v1, Lcom/tencent/mm/aq/b$a;->icM:Lcom/tencent/mm/aq/b;
+    invoke-static {}, Lcom/tencent/mm/ay/g;->aWe()Lcom/tencent/mm/ay/g;
+
+    move-result-object v1
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIa:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHm:I
 
-    invoke-interface {v1, v2, p2, v3}, Lcom/tencent/mm/aq/b;->d(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+    invoke-virtual {v1, v2, p2, v3}, Lcom/tencent/mm/ay/g;->f(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 716
-    iget-object v1, p1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIq:Landroid/widget/TextView;
+    .line 711
+    iget-object v1, p1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHC:Landroid/widget/TextView;
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHM:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGY:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iId:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHp:Landroid/view/View$OnClickListener;
 
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 723
-    iget-object v0, p1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIq:Landroid/widget/TextView;
+    .line 718
+    iget-object v0, p1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHC:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, p3, v1}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Landroid/widget/TextView;ZZ)V
 
-    .line 724
+    .line 719
     return-void
 
-    .line 716
+    .line 711
     :cond_0
     const/4 v0, 0x0
 
@@ -832,20 +834,20 @@
     .locals 3
 
     .prologue
-    .line 605
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->aMW()V
+    .line 600
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->bcM()V
 
-    .line 606
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHN:Z
+    .line 601
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGZ:Z
 
     if-eqz v0, :cond_0
 
-    .line 607
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIb:Landroid/view/View;
+    .line 602
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHn:Landroid/view/View;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->addView(Landroid/view/View;)V
 
-    .line 609
+    .line 604
     :cond_0
     if-eqz p2, :cond_1
 
@@ -855,11 +857,11 @@
 
     if-eqz v0, :cond_2
 
-    .line 615
+    .line 610
     :cond_1
     return-void
 
-    .line 612
+    .line 607
     :cond_2
     invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -878,13 +880,13 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 613
+    .line 608
     if-nez p1, :cond_3
 
     const/4 v1, 0x0
 
     :goto_1
-    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/base/MMTagPanel;->ad(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/base/MMTagPanel;->ar(Ljava/lang/String;Z)V
 
     goto :goto_0
 
@@ -896,20 +898,232 @@
     goto :goto_1
 .end method
 
-.method public aMW()V
+.method public final ar(Ljava/lang/String;Z)V
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x1
+
+    const/4 v4, 0x0
+
+    .line 757
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 758
+    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
+
+    const-string/jumbo v1, "want to add tag, but it is null or empty"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 780
+    :goto_0
+    return-void
+
+    .line 761
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 762
+    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
+
+    const-string/jumbo v2, "want to add tag %s, do remove tag first"
+
+    new-array v3, v5, [Ljava/lang/Object;
+
+    aput-object v1, v3, v4
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 763
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/base/MMTagPanel;->removeTag(Ljava/lang/String;)V
+
+    .line 764
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :cond_1
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;
+
+    .line 765
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHB:Ljava/lang/String;
+
+    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 766
+    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
+
+    const-string/jumbo v2, "want to add tag %s, but it exsited!"
+
+    new-array v3, v5, [Ljava/lang/Object;
+
+    aput-object v1, v3, v4
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    .line 771
+    :cond_2
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->bcX()Lcom/tencent/mm/ui/base/MMTagPanel$d;
+
+    move-result-object v0
+
+    .line 772
+    invoke-virtual {p0, v0, v1, p2}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel$d;Ljava/lang/String;Z)V
+
+    .line 773
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
+
+    invoke-virtual {v1, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    .line 774
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGZ:Z
+
+    if-eqz v1, :cond_3
+
+    .line 775
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHC:Landroid/widget/TextView;
+
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getChildCount()I
+
+    move-result v1
+
+    add-int/lit8 v1, v1, -0x1
+
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/base/MMTagPanel;->addView(Landroid/view/View;I)V
+
+    .line 779
+    :goto_1
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->bcY()V
+
+    goto :goto_0
+
+    .line 777
+    :cond_3
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHC:Landroid/widget/TextView;
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->addView(Landroid/view/View;)V
+
+    goto :goto_1
+.end method
+
+.method public final as(Ljava/lang/String;Z)V
+    .locals 4
+
+    .prologue
+    .line 814
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 815
+    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
+
+    const-string/jumbo v1, "want to update tag status, but it is null or empty"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 826
+    :goto_0
+    return-void
+
+    .line 818
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_1
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;
+
+    .line 819
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHB:Ljava/lang/String;
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 820
+    invoke-virtual {p0, v0, p1, p2}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel$d;Ljava/lang/String;Z)V
+
+    .line 821
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->bcY()V
+
+    goto :goto_0
+
+    .line 825
+    :cond_2
+    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
+
+    const-string/jumbo v1, "want to update tag %s status, but it not exsited!"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method public bcM()V
     .locals 2
 
     .prologue
-    .line 595
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
+    .line 590
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
-    .line 596
+    .line 591
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->removeAllViews()V
 
-    .line 597
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
+    .line 592
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -928,119 +1142,119 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
-    .line 598
+    .line 593
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel$d;)V
 
     goto :goto_0
 
-    .line 600
+    .line 595
     :cond_0
     return-void
 .end method
 
-.method public final aNc()V
+.method public final bcT()V
     .locals 2
 
     .prologue
-    .line 501
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 496
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     if-eqz v0, :cond_0
 
-    .line 502
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 497
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     const-string/jumbo v1, ""
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 504
+    .line 499
     :cond_0
     return-void
 .end method
 
-.method public final aNd()Z
+.method public final bcU()Z
     .locals 1
 
     .prologue
-    .line 507
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 502
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     if-nez v0, :cond_0
 
-    .line 508
+    .line 503
     const/4 v0, 0x0
 
-    .line 510
+    .line 505
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->isFocused()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->isFocused()Z
 
     move-result v0
 
     goto :goto_0
 .end method
 
-.method public final aNe()V
+.method public final bcV()V
     .locals 1
 
     .prologue
-    .line 514
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 509
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->isFocused()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->isFocused()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 518
+    .line 513
     :cond_0
     :goto_0
     return-void
 
-    .line 517
+    .line 512
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->requestFocus()Z
 
     goto :goto_0
 .end method
 
-.method public final aNf()V
+.method public final bcW()V
     .locals 3
 
     .prologue
-    .line 521
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 516
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->isFocused()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->isFocused()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 522
+    .line 517
     const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
 
     const-string/jumbo v1, "do clear edit focus"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 523
+    .line 518
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -1053,46 +1267,46 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 524
+    .line 519
     if-nez v0, :cond_1
 
-    .line 534
+    .line 529
     :cond_0
     :goto_0
     return-void
 
-    .line 527
+    .line 522
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v1}, Landroid/widget/EditText;->getWindowToken()Landroid/os/IBinder;
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/MMEditText;->getWindowToken()Landroid/os/IBinder;
 
     move-result-object v1
 
-    .line 528
+    .line 523
     if-eqz v1, :cond_0
 
-    .line 531
+    .line 526
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 532
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 527
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->clearFocus()V
 
     goto :goto_0
 .end method
 
-.method public final aNg()Lcom/tencent/mm/ui/base/MMTagPanel$d;
+.method public final bcX()Lcom/tencent/mm/ui/base/MMTagPanel$d;
     .locals 5
 
     .prologue
     const/4 v4, 0x0
 
-    .line 618
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHY:Ljava/util/LinkedList;
+    .line 613
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHk:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->isEmpty()Z
 
@@ -1100,8 +1314,8 @@
 
     if-nez v0, :cond_0
 
-    .line 619
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHY:Ljava/util/LinkedList;
+    .line 614
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHk:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 
@@ -1109,17 +1323,17 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
-    .line 623
+    .line 618
     :goto_0
     return-object v0
 
-    .line 621
+    .line 616
     :cond_0
     new-instance v1, Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
     invoke-direct {v1}, Lcom/tencent/mm/ui/base/MMTagPanel$d;-><init>()V
 
-    .line 622
+    .line 617
     new-instance v2, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getContext()Landroid/content/Context;
@@ -1128,7 +1342,7 @@
 
     invoke-direct {v2, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dhY:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dSt:I
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
@@ -1136,7 +1350,7 @@
 
     move-result-object v0
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dhX:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dSs:I
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -1154,15 +1368,15 @@
 
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHR:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHd:I
 
     invoke-virtual {v2, v4, v4, v0, v4}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHM:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGY:Z
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iId:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHp:Landroid/view/View$OnClickListener;
 
     :goto_1
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -1173,21 +1387,21 @@
 
     invoke-virtual {v2}, Landroid/widget/TextView;->setSingleLine()V
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIq:Landroid/widget/TextView;
+    iput-object v2, v1, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHC:Landroid/widget/TextView;
 
     move-object v0, v1
 
-    .line 623
+    .line 618
     goto :goto_0
 
-    .line 622
+    .line 617
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_1
 .end method
 
-.method public final aNh()V
+.method public final bcY()V
     .locals 6
 
     .prologue
@@ -1195,21 +1409,21 @@
 
     const/4 v1, 0x1
 
-    .line 727
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 722
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     if-eqz v0, :cond_0
 
-    .line 728
+    .line 723
     const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
 
     const-string/jumbo v3, "do clear high light info, edittext is focus %B"
 
     new-array v4, v1, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v5}, Landroid/widget/EditText;->isFocused()Z
+    invoke-virtual {v5}, Lcom/tencent/mm/ui/widget/MMEditText;->isFocused()Z
 
     move-result v5
 
@@ -1219,32 +1433,32 @@
 
     aput-object v5, v4, v2
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 729
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 724
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setCursorVisible(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setCursorVisible(Z)V
 
-    .line 731
+    .line 726
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHX:Lcom/tencent/mm/ui/base/MMTagPanel$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHj:Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
     if-nez v0, :cond_1
 
-    .line 736
+    .line 731
     :goto_0
     return-void
 
-    .line 734
+    .line 729
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHX:Lcom/tencent/mm/ui/base/MMTagPanel$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHj:Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIq:Landroid/widget/TextView;
+    iget-object v3, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHC:Landroid/widget/TextView;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHX:Lcom/tencent/mm/ui/base/MMTagPanel$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHj:Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIq:Landroid/widget/TextView;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHC:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
@@ -1263,284 +1477,33 @@
     :goto_1
     invoke-virtual {p0, v3, v0, v2}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Landroid/widget/TextView;ZZ)V
 
-    .line 735
+    .line 730
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHX:Lcom/tencent/mm/ui/base/MMTagPanel$d;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHj:Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
     goto :goto_0
 
     :cond_2
     move v0, v2
 
-    .line 734
+    .line 729
     goto :goto_1
-.end method
-
-.method public final ad(Ljava/lang/String;Z)V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x1
-
-    const/4 v4, 0x0
-
-    .line 762
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 763
-    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
-
-    const-string/jumbo v1, "want to add tag, but it is null or empty"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 785
-    :goto_0
-    return-void
-
-    .line 766
-    :cond_0
-    invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 767
-    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
-
-    const-string/jumbo v2, "want to add tag %s, do remove tag first"
-
-    new-array v3, v5, [Ljava/lang/Object;
-
-    aput-object v1, v3, v4
-
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 768
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/base/MMTagPanel;->removeTag(Ljava/lang/String;)V
-
-    .line 769
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_1
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;
-
-    .line 770
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIp:Ljava/lang/String;
-
-    invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 771
-    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
-
-    const-string/jumbo v2, "want to add tag %s, but it exsited!"
-
-    new-array v3, v5, [Ljava/lang/Object;
-
-    aput-object v1, v3, v4
-
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 776
-    :cond_2
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->aNg()Lcom/tencent/mm/ui/base/MMTagPanel$d;
-
-    move-result-object v0
-
-    .line 777
-    invoke-virtual {p0, v0, v1, p2}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel$d;Ljava/lang/String;Z)V
-
-    .line 778
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
-
-    invoke-virtual {v1, v0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    .line 779
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHN:Z
-
-    if-eqz v1, :cond_3
-
-    .line 780
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIq:Landroid/widget/TextView;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getChildCount()I
-
-    move-result v1
-
-    add-int/lit8 v1, v1, -0x1
-
-    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/base/MMTagPanel;->addView(Landroid/view/View;I)V
-
-    .line 784
-    :goto_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->aNh()V
-
-    goto :goto_0
-
-    .line 782
-    :cond_3
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIq:Landroid/widget/TextView;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->addView(Landroid/view/View;)V
-
-    goto :goto_1
-.end method
-
-.method public final ae(Ljava/lang/String;Z)V
-    .locals 4
-
-    .prologue
-    .line 819
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 820
-    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
-
-    const-string/jumbo v1, "want to update tag status, but it is null or empty"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 831
-    :goto_0
-    return-void
-
-    .line 823
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_1
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_2
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;
-
-    .line 824
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIp:Ljava/lang/String;
-
-    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 825
-    invoke-virtual {p0, v0, p1, p2}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel$d;Ljava/lang/String;Z)V
-
-    .line 826
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->aNh()V
-
-    goto :goto_0
-
-    .line 830
-    :cond_2
-    const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
-
-    const-string/jumbo v1, "want to update tag %s status, but it not exsited!"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    aput-object p1, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method public final fw(Z)V
-    .locals 1
-
-    .prologue
-    .line 541
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHN:Z
-
-    if-ne p1, v0, :cond_1
-
-    .line 550
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 544
-    :cond_1
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHN:Z
-
-    .line 545
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIb:Landroid/view/View;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->removeView(Landroid/view/View;)V
-
-    .line 546
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHN:Z
-
-    if-eqz v0, :cond_0
-
-    .line 547
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIb:Landroid/view/View;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->addView(Landroid/view/View;)V
-
-    .line 548
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->aNf()V
-
-    goto :goto_0
 .end method
 
 .method public getEditText()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 494
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 489
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     if-eqz v0, :cond_0
 
-    .line 495
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 490
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
@@ -1548,7 +1511,7 @@
 
     move-result-object v0
 
-    .line 497
+    .line 492
     :goto_0
     return-object v0
 
@@ -1562,8 +1525,8 @@
     .locals 1
 
     .prologue
-    .line 591
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
+    .line 586
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -1576,13 +1539,13 @@
     .locals 4
 
     .prologue
-    .line 580
+    .line 575
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 581
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
+    .line 576
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -1602,23 +1565,23 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
-    .line 582
-    iget-object v3, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIp:Ljava/lang/String;
+    .line 577
+    iget-object v3, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHB:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 583
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIp:Ljava/lang/String;
+    .line 578
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHB:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 587
+    .line 582
     :cond_1
     return-object v1
 .end method
@@ -1627,13 +1590,13 @@
     .locals 4
 
     .prologue
-    .line 569
+    .line 564
     new-instance v1, Ljava/util/TreeSet;
 
     invoke-direct {v1}, Ljava/util/TreeSet;-><init>()V
 
-    .line 570
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
+    .line 565
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -1653,42 +1616,81 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
-    .line 571
-    iget-object v3, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIp:Ljava/lang/String;
+    .line 566
+    iget-object v3, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHB:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 572
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIp:Ljava/lang/String;
+    .line 567
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHB:Ljava/lang/String;
 
     invoke-interface {v1, v0}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 576
+    .line 571
     :cond_1
     return-object v1
+.end method
+
+.method public final hz(Z)V
+    .locals 1
+
+    .prologue
+    .line 536
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGZ:Z
+
+    if-ne p1, v0, :cond_1
+
+    .line 545
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 539
+    :cond_1
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGZ:Z
+
+    .line 540
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHn:Landroid/view/View;
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->removeView(Landroid/view/View;)V
+
+    .line 541
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kGZ:Z
+
+    if-eqz v0, :cond_0
+
+    .line 542
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHn:Landroid/view/View;
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->addView(Landroid/view/View;)V
+
+    .line 543
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->bcW()V
+
+    goto :goto_0
 .end method
 
 .method public onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
     .locals 1
 
     .prologue
-    .line 855
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->ehM:Z
+    .line 850
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->frx:Z
 
     if-eqz v0, :cond_0
 
-    .line 856
+    .line 851
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/FlowLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 858
+    .line 853
     :goto_0
     return v0
 
@@ -1702,27 +1704,27 @@
     .locals 4
 
     .prologue
-    .line 789
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 784
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 790
+    .line 785
     const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
 
     const-string/jumbo v1, "want to remove tag, but it is null or empty"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 803
+    .line 798
     :goto_0
     return-void
 
-    .line 793
+    .line 788
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -1741,8 +1743,8 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;
 
-    .line 794
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIp:Ljava/lang/String;
+    .line 789
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHB:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1750,25 +1752,25 @@
 
     if-eqz v2, :cond_1
 
-    .line 795
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->hwz:Ljava/util/LinkedList;
+    .line 790
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->jni:Ljava/util/LinkedList;
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    .line 796
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->iIq:Landroid/widget/TextView;
+    .line 791
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/MMTagPanel$d;->kHC:Landroid/widget/TextView;
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/base/MMTagPanel;->removeView(Landroid/view/View;)V
 
-    .line 797
+    .line 792
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->a(Lcom/tencent/mm/ui/base/MMTagPanel$d;)V
 
-    .line 798
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->aNh()V
+    .line 793
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->bcY()V
 
     goto :goto_0
 
-    .line 802
+    .line 797
     :cond_2
     const-string/jumbo v0, "!32@/B4Tb64lLpL4fhNdmBV+Mf4yaXXb52KA"
 
@@ -1782,7 +1784,7 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -1791,10 +1793,10 @@
     .locals 0
 
     .prologue
-    .line 565
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHZ:Lcom/tencent/mm/ui/base/MMTagPanel$a;
+    .line 560
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHl:Lcom/tencent/mm/ui/base/MMTagPanel$a;
 
-    .line 566
+    .line 561
     return-void
 .end method
 
@@ -1802,17 +1804,17 @@
     .locals 1
 
     .prologue
-    .line 488
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 483
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     if-eqz v0, :cond_0
 
-    .line 489
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 484
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0, p1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/widget/MMEditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 491
+    .line 486
     :cond_0
     return-void
 .end method
@@ -1821,17 +1823,17 @@
     .locals 1
 
     .prologue
-    .line 482
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 477
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     if-eqz v0, :cond_0
 
-    .line 483
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 478
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0, p1}, Landroid/widget/EditText;->setTextColor(I)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/widget/MMEditText;->setTextColor(I)V
 
-    .line 485
+    .line 480
     :cond_0
     return-void
 .end method
@@ -1840,33 +1842,33 @@
     .locals 2
 
     .prologue
-    .line 863
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 858
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     if-eqz v0, :cond_0
 
-    .line 864
+    .line 859
     if-eqz p1, :cond_1
 
+    .line 860
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
+
+    const v1, 0x7f0b0875
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setHint(I)V
+
     .line 865
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
-
-    sget v1, Lcom/tencent/mm/a$n;->add_tag_tips:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(I)V
-
-    .line 870
     :cond_0
     :goto_0
     return-void
 
-    .line 867
+    .line 862
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     const-string/jumbo v1, ""
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setHint(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 .end method
@@ -1875,10 +1877,10 @@
     .locals 0
 
     .prologue
-    .line 849
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->ehM:Z
+    .line 844
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->frx:Z
 
-    .line 850
+    .line 845
     return-void
 .end method
 
@@ -1886,40 +1888,40 @@
     .locals 2
 
     .prologue
-    .line 444
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHS:I
+    .line 439
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHe:I
 
-    .line 445
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 440
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
     if-eqz v0, :cond_0
 
-    .line 446
+    .line 441
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const/4 v1, 0x6
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
-    .line 447
+    .line 442
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMTagPanel;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->NormalPadding:I
+    const v1, 0x7f0501db
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
-    .line 448
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iIc:Landroid/widget/EditText;
+    .line 443
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHo:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHS:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHe:I
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackgroundResource(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setBackgroundResource(I)V
 
-    .line 451
+    .line 446
     :cond_0
     return-void
 .end method
@@ -1928,10 +1930,10 @@
     .locals 0
 
     .prologue
-    .line 474
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHV:I
+    .line 469
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHh:I
 
-    .line 475
+    .line 470
     return-void
 .end method
 
@@ -1939,10 +1941,10 @@
     .locals 0
 
     .prologue
-    .line 458
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dhY:I
+    .line 453
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dSt:I
 
-    .line 459
+    .line 454
     return-void
 .end method
 
@@ -1950,10 +1952,10 @@
     .locals 0
 
     .prologue
-    .line 462
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dhX:I
+    .line 457
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->dSs:I
 
-    .line 463
+    .line 458
     return-void
 .end method
 
@@ -1961,10 +1963,10 @@
     .locals 0
 
     .prologue
-    .line 466
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHT:I
+    .line 461
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHf:I
 
-    .line 467
+    .line 462
     return-void
 .end method
 
@@ -1972,10 +1974,10 @@
     .locals 0
 
     .prologue
-    .line 470
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHU:I
+    .line 465
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHg:I
 
-    .line 471
+    .line 466
     return-void
 .end method
 
@@ -1983,10 +1985,10 @@
     .locals 0
 
     .prologue
-    .line 454
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHR:I
+    .line 449
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHd:I
 
-    .line 455
+    .line 450
     return-void
 .end method
 
@@ -1994,9 +1996,9 @@
     .locals 0
 
     .prologue
-    .line 478
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->iHW:I
+    .line 473
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMTagPanel;->kHi:I
 
-    .line 479
+    .line 474
     return-void
 .end method

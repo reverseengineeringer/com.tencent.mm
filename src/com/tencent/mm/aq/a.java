@@ -1,24 +1,15 @@
 package com.tencent.mm.aq;
 
-import android.graphics.drawable.Drawable;
+import android.os.Build.VERSION;
 
-public abstract interface a
+public final class a
 {
-  public abstract Drawable vi(String paramString);
-  
-  public static final class a
+  public static int aOQ()
   {
-    private static a icL = null;
-    
-    public static void a(a parama)
-    {
-      icL = parama;
+    if (Build.VERSION.SDK_INT < 19) {
+      return 2130970401;
     }
-    
-    public static a aFZ()
-    {
-      return icL;
-    }
+    return 2130970396;
   }
 }
 

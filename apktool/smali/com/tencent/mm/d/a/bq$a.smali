@@ -15,17 +15,7 @@
 
 
 # instance fields
-.field public atX:[Ljava/lang/String;
-
-.field public awE:Ljava/lang/String;
-
-.field public context:Landroid/content/Context;
-
-.field public op:I
-
-.field public selectionArgs:[Ljava/lang/String;
-
-.field public source:I
+.field public auV:Z
 
 
 # direct methods
@@ -39,12 +29,7 @@
     .line 15
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/d/a/bq$a;->op:I
-
-    .line 16
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/tencent/mm/d/a/bq$a;->source:I
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bq$a;->auV:Z
 
     return-void
 .end method

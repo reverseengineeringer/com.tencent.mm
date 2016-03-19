@@ -1,39 +1,61 @@
-.class final Lcom/tencent/mm/pluginsdk/ui/tools/f;
+.class public interface abstract Lcom/tencent/mm/pluginsdk/ui/tools/f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnDismissListener;
 
-
-# instance fields
-.field final synthetic hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-
-# direct methods
-.method constructor <init>(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)V
-    .locals 0
-
-    .prologue
-    .line 192
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/f;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
+    }
+.end annotation
 
 
 # virtual methods
-.method public final onDismiss(Landroid/content/DialogInterface;)V
-    .locals 1
+.method public abstract f(Landroid/content/Context;Z)Z
+.end method
 
-    .prologue
-    .line 196
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/f;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+.method public abstract g(D)V
+.end method
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->finish()V
+.method public abstract getCurrentPosition()I
+.end method
 
-    .line 197
-    return-void
+.method public abstract getDuration()I
+.end method
+
+.method public abstract getLastProgresstime()D
+.end method
+
+.method public abstract getVideoPath()Ljava/lang/String;
+.end method
+
+.method public abstract isPlaying()Z
+.end method
+
+.method public abstract onDetach()V
+.end method
+
+.method public abstract pause()V
+.end method
+
+.method public abstract setLoop(Z)V
+.end method
+
+.method public abstract setPlayProgressCallback(Z)V
+.end method
+
+.method public abstract setThumb(Landroid/graphics/Bitmap;)V
+.end method
+
+.method public abstract setVideoCallback(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
+.end method
+
+.method public abstract setVideoPath(Ljava/lang/String;)V
+.end method
+
+.method public abstract start()Z
+.end method
+
+.method public abstract stop()V
 .end method

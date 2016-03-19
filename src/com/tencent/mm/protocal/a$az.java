@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$az
-  extends a.c
+  extends a.e
 {
   public a$az()
   {
-    super("launchApp", "", 27, false);
+    super("getSearchAvatar", "", 10000, false);
   }
 }
 

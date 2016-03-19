@@ -1,21 +1,54 @@
 package com.tencent.mm.pluginsdk.ui.applet;
 
-import android.app.ProgressDialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
+import com.tencent.mm.sdk.platformtools.ay;
 
-final class g
-  implements DialogInterface.OnCancelListener
+public final class g
 {
-  g(f paramf) {}
+  public int backgroundColor;
+  public Object data;
+  public int end;
+  public String gZd;
+  public int linkColor;
+  public int start;
+  public int type;
+  public String url;
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public g(String paramString, int paramInt, Object paramObject)
   {
-    if (gSc.cHR != null)
-    {
-      gSc.cHR.dismiss();
-      gSc.cHR = null;
+    url = paramString;
+    data = paramObject;
+    type = paramInt;
+  }
+  
+  public final Object c(Class paramClass)
+  {
+    if (paramClass.isInstance(data)) {
+      return paramClass.cast(data);
     }
+    return null;
+  }
+  
+  public final boolean equals(Object paramObject)
+  {
+    if ((paramObject instanceof g)) {
+      return hashCode() == ((g)paramObject).hashCode();
+    }
+    return super.equals(paramObject);
+  }
+  
+  public final int hashCode()
+  {
+    int j = super.hashCode();
+    int i = j;
+    if (!ay.kz(url)) {
+      i = j + url.hashCode();
+    }
+    j = i + type + end + start;
+    i = j;
+    if (data != null) {
+      i = j + data.hashCode();
+    }
+    return i;
   }
 }
 

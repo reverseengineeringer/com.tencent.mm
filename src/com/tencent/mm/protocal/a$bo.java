@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bo
-  extends a.c
+  extends a.e
 {
   public a$bo()
   {
-    super("openProductViewWithPid", "open_product_view", 60, true);
+    super("hideAllNonBaseMenuItem", "hideAllNonBaseMenuItem", 93, false);
   }
 }
 

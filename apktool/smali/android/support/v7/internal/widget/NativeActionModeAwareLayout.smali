@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private rj:Landroid/support/v7/internal/widget/NativeActionModeAwareLayout$a;
+.field private ql:Landroid/support/v7/internal/widget/NativeActionModeAwareLayout$a;
 
 
 # direct methods
@@ -34,7 +34,7 @@
 
     .prologue
     .line 37
-    iput-object p1, p0, Landroid/support/v7/internal/widget/NativeActionModeAwareLayout;->rj:Landroid/support/v7/internal/widget/NativeActionModeAwareLayout$a;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/NativeActionModeAwareLayout;->ql:Landroid/support/v7/internal/widget/NativeActionModeAwareLayout$a;
 
     .line 38
     return-void
@@ -45,12 +45,12 @@
 
     .prologue
     .line 42
-    iget-object v0, p0, Landroid/support/v7/internal/widget/NativeActionModeAwareLayout;->rj:Landroid/support/v7/internal/widget/NativeActionModeAwareLayout$a;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/NativeActionModeAwareLayout;->ql:Landroid/support/v7/internal/widget/NativeActionModeAwareLayout$a;
 
     if-eqz v0, :cond_0
 
     .line 43
-    iget-object v0, p0, Landroid/support/v7/internal/widget/NativeActionModeAwareLayout;->rj:Landroid/support/v7/internal/widget/NativeActionModeAwareLayout$a;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/NativeActionModeAwareLayout;->ql:Landroid/support/v7/internal/widget/NativeActionModeAwareLayout$a;
 
     invoke-interface {v0, p2}, Landroid/support/v7/internal/widget/NativeActionModeAwareLayout$a;->a(Landroid/view/ActionMode$Callback;)Landroid/view/ActionMode$Callback;
 

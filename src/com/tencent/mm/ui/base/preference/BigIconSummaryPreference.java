@@ -5,7 +5,6 @@ import android.content.res.Resources;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tencent.mm.a.g;
 
 public class BigIconSummaryPreference
   extends IconSummaryPreference
@@ -23,7 +22,7 @@ public class BigIconSummaryPreference
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
-    paramViewGroup.setMinimumHeight(paramViewGroup.getResources().getDimensionPixelSize(a.g.MediumListHeight));
+    paramViewGroup.setMinimumHeight(paramViewGroup.getResources().getDimensionPixelSize(2131034595));
     return paramViewGroup;
   }
 }

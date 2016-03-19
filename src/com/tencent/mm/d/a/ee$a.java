@@ -1,10 +1,10 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.protocal.b.agh;
+
 public final class ee$a
 {
-  public String aAs;
-  public int aAt = 1;
-  public int avp;
+  public agh ayJ;
 }
 
 /* Location:

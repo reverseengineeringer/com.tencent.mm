@@ -1,37 +1,28 @@
 package com.tencent.mm.pluginsdk.model;
 
-import android.content.Context;
-import com.tencent.mm.a.n;
-import com.tencent.mm.ah.ac;
-import com.tencent.mm.d.a.ag;
-import com.tencent.mm.d.a.ag.a;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.m.a.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.w;
-import com.tencent.mm.pluginsdk.model.app.ay;
-import com.tencent.mm.pluginsdk.model.app.h;
-import com.tencent.mm.protocal.b.kx;
-import com.tencent.mm.protocal.b.ky;
-import com.tencent.mm.protocal.b.kz;
-import com.tencent.mm.protocal.b.lc;
-import com.tencent.mm.protocal.b.le;
-import com.tencent.mm.protocal.b.lf;
-import com.tencent.mm.protocal.b.lg;
-import com.tencent.mm.protocal.b.lj;
-import com.tencent.mm.protocal.b.lo;
-import com.tencent.mm.protocal.b.lp;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
-import com.tencent.mm.y.af;
-import com.tencent.mm.y.e;
-import com.tencent.mm.y.f;
-import com.tencent.mm.y.g;
+import com.tencent.mm.ab.f;
+import com.tencent.mm.an.j;
+import com.tencent.mm.an.m;
+import com.tencent.mm.an.o;
+import com.tencent.mm.d.a.ay.a;
+import com.tencent.mm.d.a.jh;
+import com.tencent.mm.d.a.jh.b;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.n.a.a;
+import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.protocal.b.nf;
+import com.tencent.mm.protocal.b.ng;
+import com.tencent.mm.protocal.b.nh;
+import com.tencent.mm.protocal.b.nl;
+import com.tencent.mm.protocal.b.nn;
+import com.tencent.mm.protocal.b.no;
+import com.tencent.mm.protocal.b.np;
+import com.tencent.mm.protocal.b.ns;
+import com.tencent.mm.protocal.b.nx;
+import com.tencent.mm.protocal.b.ny;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.ag;
 import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -39,806 +30,897 @@ import java.util.Map;
 
 public final class d
 {
-  private static final SimpleDateFormat gDd = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-  
-  private static kx a(ar paramar, a.a parama, int paramInt)
+  private static nf a(nf paramnf, int paramInt)
   {
-    kx localkx = new kx();
-    localkx.wg(v(paramar));
-    localkx.vV(bmg);
-    localkx.vW(bmh);
-    localkx.vU(url);
-    localkx.eD(true);
-    paramar = new File(bn.U(af.zl().gM(field_imgPath), ""));
-    if (paramar.exists()) {
-      localkx.wd(paramar.getAbsolutePath());
+    nf localnf = j(paramnf);
+    localnf.oX(paramInt);
+    if ((jlV != null) && (jlV.jml != null))
+    {
+      nn localnn = new nn();
+      localnn.BT(jlV.jml.title);
+      localnn.BU(jlV.jml.asL);
+      localnn.pb(jlV.jml.type);
+      localnn.BW(jlV.jml.info);
+      localnn.BV(jlV.jml.ayA);
+      jlV.a(localnn);
+    }
+    return localnf;
+  }
+  
+  private static nf a(ag paramag, a.a parama, int paramInt)
+  {
+    nf localnf = new nf();
+    a(localnf, paramag);
+    localnf.Bs(bxz);
+    localnf.Bt(bxA);
+    localnf.Br(url);
+    localnf.gC(true);
+    paramag = new File(com.tencent.mm.sdk.platformtools.ay.ad(com.tencent.mm.ab.n.Ao().n(field_imgPath, true), ""));
+    if (paramag.exists()) {
+      localnf.BA(paramag.getAbsolutePath());
     }
     for (;;)
     {
-      localkx.vO(title);
-      localkx.vP(description);
-      localkx.mc(paramInt);
-      return localkx;
-      localkx.eE(true);
+      localnf.Bl(title);
+      localnf.Bm(description);
+      localnf.oX(paramInt);
+      return localnf;
+      localnf.gD(true);
     }
   }
   
-  private static kx a(ar paramar, String paramString, ky paramky)
+  private static void a(nf paramnf1, nf paramnf2)
   {
-    kx localkx = new kx();
-    localkx.wg(v(paramar));
-    localkx.mc(1);
-    localkx.vP(paramString);
-    localkx.eE(true);
-    localkx.eD(true);
-    localkx.a(paramky);
-    localkx.wj(a(hvy));
-    localkx.wk(b(hvy));
-    return localkx;
+    paramnf1.Bs(jlk);
+    paramnf1.Bt(jlm);
+    paramnf1.Br(jli);
+    paramnf1.Bl(title);
+    paramnf1.Bm(asL);
   }
   
-  private static String a(kz paramkz)
+  private static void a(nf paramnf, ag paramag)
   {
-    String str2 = hvU;
-    String str1 = str2;
-    if (bn.iW(str2)) {
-      str1 = blU;
+    if (field_isSend == 1)
+    {
+      paramnf.BD(field_talker + "#" + String.valueOf(field_msgSvrId));
+      return;
     }
-    return w.dN(str1);
+    paramnf.BD(String.valueOf(field_msgSvrId));
   }
   
-  private static boolean a(Context paramContext, ag paramag, ar paramar, int paramInt)
+  public static boolean a(com.tencent.mm.d.a.ay paramay, int paramInt, String paramString)
   {
-    ky localky = new ky();
-    localky.c(u(paramar));
-    String str = null;
-    if (paramInt == 1) {
-      str = paramContext.getString(a.n.app_emoji);
+    if (com.tencent.mm.sdk.platformtools.ay.kz(paramString))
+    {
+      u.w("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "fill favorite event fail, event is null or image path is empty");
+      aud.type = 2131431062;
+      return false;
+    }
+    u.i("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "do fill event info(fav simple image), path %s sourceType %d", new Object[] { paramString, Integer.valueOf(paramInt) });
+    no localno = new no();
+    np localnp = new np();
+    nf localnf = new nf();
+    localnf.oX(2);
+    localnf.Bz(paramString);
+    localnf.gD(true);
+    localnp.Ca(com.tencent.mm.model.h.sc());
+    localnp.Cb(com.tencent.mm.model.h.sc());
+    localnp.pe(paramInt);
+    localnp.dn(com.tencent.mm.sdk.platformtools.ay.FS());
+    localno.a(localnp);
+    jmZ.add(localnf);
+    aud.title = title;
+    aud.auf = localno;
+    aud.type = 2;
+    return true;
+  }
+  
+  public static boolean a(com.tencent.mm.d.a.ay paramay, int paramInt, String paramString1, String paramString2, String paramString3)
+  {
+    if (com.tencent.mm.sdk.platformtools.ay.kz(paramString1))
+    {
+      u.w("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "fill favorite event fail, event is null or image path is empty");
+      aud.type = 2131431062;
+      return false;
+    }
+    u.d("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "do fill event info(fav simple file), title %s, desc %s, path %s, sourceType %d", new Object[] { paramString2, paramString3, paramString1, Integer.valueOf(paramInt) });
+    if (new File(paramString1).length() > com.tencent.mm.g.b.pw())
+    {
+      aud.type = 2131432566;
+      return false;
+    }
+    no localno = new no();
+    np localnp = new np();
+    nf localnf = new nf();
+    localnf.Bz(paramString1);
+    localnf.oX(8);
+    localnf.Bv(com.tencent.mm.a.e.ay(paramString1));
+    localnf.gD(true);
+    localnf.Bl(paramString2);
+    localnf.Bm(paramString3);
+    localnp.Ca(com.tencent.mm.model.h.sc());
+    localnp.Cb(com.tencent.mm.model.h.sc());
+    localnp.pe(paramInt);
+    localnp.dn(com.tencent.mm.sdk.platformtools.ay.FS());
+    localno.a(localnp);
+    jmZ.add(localnf);
+    aud.title = title;
+    aud.asL = title;
+    aud.auf = localno;
+    aud.type = 8;
+    return true;
+  }
+  
+  public static boolean a(com.tencent.mm.d.a.ay paramay, long paramLong)
+  {
+    return a(paramay, com.tencent.mm.model.ah.tD().rs().dz(paramLong));
+  }
+  
+  private static boolean a(com.tencent.mm.d.a.ay paramay, a.a parama, no paramno, ag paramag)
+  {
+    Object localObject1 = new jh();
+    aFM.type = 0;
+    aFM.aFO = bxJ;
+    com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject1);
+    com.tencent.mm.protocal.a.a.a locala = aFN.aFW;
+    if (locala == null)
+    {
+      u.w("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "fill favorite event fail, parse record msg null");
+      aud.type = 2131431058;
+      return false;
+    }
+    paramno.BY(title);
+    Iterator localIterator = byZ.iterator();
+    int i = 0;
+    if (localIterator.hasNext())
+    {
+      localObject1 = (nf)localIterator.next();
+      switch (cyb)
+      {
+      case 9: 
+      case 13: 
+      default: 
+        parama = null;
+        label206:
+        if (parama != null) {
+          if (field_isSend == 1)
+          {
+            localObject1 = String.format("%s#%d$%d", new Object[] { field_talker, Long.valueOf(field_msgSvrId), Integer.valueOf(i) });
+            label255:
+            parama.BD((String)localObject1);
+            jmZ.add(parama);
+            i += 1;
+          }
+        }
+        break;
+      }
     }
     for (;;)
     {
-      paramContext = a(paramar, str, localky);
-      auX.auZ.hwr.add(paramContext);
-      return true;
-      if (paramInt == 2) {
-        str = paramContext.getString(a.n.app_pay);
-      } else if (paramInt == 3) {
-        str = paramContext.getString(a.n.app_special);
+      break;
+      long l = field_msgId;
+      parama = j((nf)localObject1);
+      parama.oX(3);
+      if (!com.tencent.mm.sdk.platformtools.ay.kz(jmd))
+      {
+        localObject2 = new jh();
+        aFM.type = 1;
+        aFM.ayg = ((nf)localObject1);
+        aFM.avg = l;
+        com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject2);
+        if ((com.tencent.mm.sdk.platformtools.ay.kz(aFN.aFX)) && (com.tencent.mm.sdk.platformtools.ay.kz(aFN.ayz))) {
+          u.e("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "cloneImgItem:not record plugin ? get paths error");
+        }
+        parama.Bz(aFN.aFX);
+        parama.oW(duration);
+        parama.gD(true);
+        parama.gC(false);
+        parama.Bv(jlq);
+      }
+      localObject1 = aud.aug;
+      jnn += 1;
+      break label206;
+      parama = j((nf)localObject1);
+      parama.oX(1);
+      parama.Bm(asL);
+      localObject1 = aud.aug;
+      jnl += 1;
+      break label206;
+      l = field_msgId;
+      parama = j((nf)localObject1);
+      parama.oX(2);
+      Object localObject2 = new jh();
+      aFM.type = 1;
+      aFM.ayg = ((nf)localObject1);
+      aFM.avg = l;
+      com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject2);
+      if ((com.tencent.mm.sdk.platformtools.ay.kz(aFN.aFX)) && (com.tencent.mm.sdk.platformtools.ay.kz(aFN.ayz))) {
+        u.e("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "cloneImgItem:not record plugin ? get paths error");
+      }
+      parama.Bz(aFN.aFX);
+      parama.BA(aFN.ayz);
+      parama.gD(false);
+      parama.gC(false);
+      localObject1 = aud.aug;
+      jnm += 1;
+      break label206;
+      l = field_msgId;
+      parama = j((nf)localObject1);
+      a(parama, (nf)localObject1);
+      parama.oX(5);
+      localObject2 = new jh();
+      aFM.type = 1;
+      aFM.ayg = ((nf)localObject1);
+      aFM.avg = l;
+      com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject2);
+      if ((com.tencent.mm.sdk.platformtools.ay.kz(aFN.aFX)) && (com.tencent.mm.sdk.platformtools.ay.kz(aFN.ayz))) {
+        u.e("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "cloneUrlItem:not record plugin ? get paths error");
+      }
+      parama.BA(aFN.ayz);
+      if ((jlV != null) && (jlV.jmj != null))
+      {
+        localObject2 = new ny();
+        ((ny)localObject2).Cn(jlV.jmj.title);
+        ((ny)localObject2).Co(jlV.jmj.asL);
+        ((ny)localObject2).Cq(jlV.jmj.ayA);
+        ((ny)localObject2).pf(jlV.jmj.jnC);
+        ((ny)localObject2).Cp(jlV.jmj.jnA);
+        jlV.a((ny)localObject2);
+      }
+      localObject1 = aud.aug;
+      jnp += 1;
+      break label206;
+      l = field_msgId;
+      parama = j((nf)localObject1);
+      a(parama, (nf)localObject1);
+      if (cyb == 15) {
+        parama.oX(15);
+      }
+      for (;;)
+      {
+        localObject2 = new jh();
+        aFM.type = 1;
+        aFM.ayg = ((nf)localObject1);
+        aFM.avg = l;
+        com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject2);
+        if ((com.tencent.mm.sdk.platformtools.ay.kz(aFN.aFX)) && (com.tencent.mm.sdk.platformtools.ay.kz(aFN.ayz))) {
+          u.e("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "cloneVideoItem:not record plugin ? get paths error");
+        }
+        parama.gC(false);
+        parama.Bz(aFN.aFX);
+        parama.gD(false);
+        parama.BA(aFN.ayz);
+        parama.oW(duration);
+        localObject1 = aud.aug;
+        jno += 1;
+        break;
+        parama.oX(4);
+      }
+      parama = j((nf)localObject1);
+      parama.oX(6);
+      if ((jlV != null) && (jlV.jmh != null))
+      {
+        localObject2 = new nl();
+        ((nl)localObject2).BR(jlV.jmh.label);
+        ((nl)localObject2).i(jlV.jmh.lat);
+        ((nl)localObject2).h(jlV.jmh.lng);
+        ((nl)localObject2).pa(jlV.jmh.aBp);
+        ((nl)localObject2).BS(jlV.jmh.aEM);
+        jlV.a((nl)localObject2);
+      }
+      localObject1 = aud.aug;
+      jnq += 1;
+      break label206;
+      l = field_msgId;
+      parama = j((nf)localObject1);
+      a(parama, (nf)localObject1);
+      parama.oX(7);
+      localObject2 = new jh();
+      aFM.type = 1;
+      aFM.ayg = ((nf)localObject1);
+      aFM.avg = l;
+      com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject2);
+      if ((com.tencent.mm.sdk.platformtools.ay.kz(aFN.aFX)) && (com.tencent.mm.sdk.platformtools.ay.kz(aFN.ayz))) {
+        u.e("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "cloneMusicItem:not record plugin ? get paths error");
+      }
+      parama.BA(aFN.ayz);
+      localObject1 = aud.aug;
+      jnr += 1;
+      break label206;
+      l = field_msgId;
+      parama = j((nf)localObject1);
+      a(parama, (nf)localObject1);
+      parama.oX(8);
+      localObject2 = new jh();
+      aFM.type = 1;
+      aFM.ayg = ((nf)localObject1);
+      aFM.avg = l;
+      com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject2);
+      if ((com.tencent.mm.sdk.platformtools.ay.kz(aFN.aFX)) && (com.tencent.mm.sdk.platformtools.ay.kz(aFN.ayz))) {
+        u.e("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "cloneFileItem:not record plugin ? get paths error");
+      }
+      parama.Bz(aFN.aFX);
+      parama.BA(aFN.ayz);
+      parama.gC(false);
+      parama.Bv(jlq);
+      localObject1 = aud.aug;
+      jns += 1;
+      break label206;
+      parama = a((nf)localObject1, cyb);
+      localObject1 = aud.aug;
+      jnu += 1;
+      break label206;
+      parama = a((nf)localObject1, cyb);
+      localObject1 = aud.aug;
+      jnv += 1;
+      break label206;
+      parama = j((nf)localObject1);
+      parama.oX(14);
+      if ((jlV != null) && (jlV.jmn != null))
+      {
+        localObject2 = new ns();
+        ((ns)localObject2).Cj(jlV.jmn.title);
+        ((ns)localObject2).Ck(jlV.jmn.asL);
+        ((ns)localObject2).Cm(jlV.jmn.info);
+        ((ns)localObject2).Cl(jlV.jmn.ayA);
+        jlV.a((ns)localObject2);
+      }
+      localObject1 = aud.aug;
+      jny += 1;
+      break label206;
+      parama = j((nf)localObject1);
+      parama.oX(16);
+      parama.Bm(asL);
+      localObject1 = aud.aug;
+      jnz += 1;
+      break label206;
+      localObject1 = String.format("%d$%d", new Object[] { Long.valueOf(field_msgSvrId), Integer.valueOf(i) });
+      break label255;
+      if ((!com.tencent.mm.sdk.platformtools.ay.kz(byZ.get(0)).jlq)) && (byZ.get(0)).jlq.equals(".htm"))) {}
+      for (aud.type = 18;; aud.type = 14) {
+        return true;
       }
     }
   }
   
-  private static boolean a(Context paramContext, ag paramag, ar paramar, boolean paramBoolean)
+  public static boolean a(com.tencent.mm.d.a.ay paramay, ag paramag)
   {
-    Object localObject1 = null;
     boolean bool = false;
-    if ((paramag == null) || (paramar == null))
+    if ((paramay == null) || (paramag == null))
     {
-      t.w("!44@/B4Tb64lLpKYFtXtgZZWUK4VcPMjRhy1n3liRqSeHfA=", "fill favorite event fail, event or msg is null");
-      if (paramag != null) {
-        auX.type = a.n.favorite_fail_argument_error;
+      u.w("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "fill favorite event fail, event or msg is null");
+      if (paramay != null) {
+        aud.type = 2131431062;
       }
       return false;
     }
-    Object localObject2 = ar.z(paramar);
-    if (((ar)localObject2).aHE())
+    ag localag = ag.B(paramag);
+    if (localag.aXf())
     {
-      paramContext = new ky();
-      paramContext.c(u((ar)localObject2));
-      paramar = new kx();
-      paramar.wg(v((ar)localObject2));
-      paramar.mc(1);
-      if (!((ar)localObject2).aHQ()) {
-        paramar.vP(field_content);
-      }
-      for (;;)
+      paramag = new no();
+      paramag.a(v(localag));
+      aud.auf = paramag;
+      if (!localag.aXr())
       {
-        paramar.eE(true);
-        paramar.eD(true);
-        paramar.a(paramContext);
-        paramar.wj(a(hvy));
-        paramar.wk(b(hvy));
-        auX.auZ.hwr.add(paramar);
-        paramContext = auX.ava;
-        hwC += 1;
-        return true;
-        paramar.vP(field_content + "\n\n" + field_transContent);
+        aud.asL = field_content;
+        aud.type = 1;
+        if (com.tencent.mm.ui.tools.i.HB(aud.asL) <= com.tencent.mm.g.b.pu()) {
+          break label183;
+        }
+        aud.type = 2131432565;
       }
     }
-    Object localObject3;
-    if (((ar)localObject2).aHv())
+    for (;;)
     {
-      paramar = new ky();
-      paramar.c(u((ar)localObject2));
-      localObject3 = new kx();
-      ((kx)localObject3).wg(v((ar)localObject2));
-      ((kx)localObject3).mc(3);
-      if (paramBoolean)
+      aud.auh = field_content;
+      return bool;
+      aud.asL = (field_content + "\n\n" + field_transContent);
+      break;
+      label183:
+      bool = true;
+      continue;
+      Object localObject1;
+      Object localObject2;
+      if (localag.aWW())
       {
-        ((kx)localObject3).eE(true);
-        ((kx)localObject3).eD(true);
-      }
-      for (;;)
-      {
-        ((kx)localObject3).a(paramar);
-        ((kx)localObject3).wj(a(hvy));
-        ((kx)localObject3).wk(b(hvy));
-        auX.auZ.hwr.add(localObject3);
-        paramContext = auX.ava;
-        hwE += 1;
-        paramBoolean = true;
-        return paramBoolean;
-        if (w.ej(field_talker))
+        localObject1 = new no();
+        ((no)localObject1).a(v(localag));
+        localObject2 = new nf();
+        a((nf)localObject2, localag);
+        if (com.tencent.mm.model.i.eu(field_talker))
         {
-          paramContext = field_imgPath;
-          paramContext = com.tencent.mm.sdk.platformtools.i.a(ax.tl().rv(), "recbiz_", paramContext, ".rec", 2);
-          if (bn.iW(paramContext))
+          paramag = field_imgPath;
+          paramag = com.tencent.mm.sdk.platformtools.h.a(com.tencent.mm.model.ah.tD().rD(), "recbiz_", paramag, ".rec", 2);
+          if (com.tencent.mm.sdk.platformtools.ay.kz(paramag))
           {
-            paramContext = (Context)localObject1;
-            label415:
-            ((kx)localObject3).wc(paramContext);
+            paramag = null;
+            label274:
+            ((nf)localObject2).Bz(paramag);
           }
         }
         for (;;)
         {
-          ((kx)localObject3).eE(true);
-          paramContext = com.tencent.mm.modelvoice.ae.iA(field_imgPath);
-          if (paramContext != null) {
-            break label479;
+          ((nf)localObject2).oX(3);
+          ((nf)localObject2).gD(true);
+          paramag = com.tencent.mm.modelvoice.q.kd(field_imgPath);
+          if (paramag == null) {
+            break;
           }
-          paramBoolean = false;
+          ((nf)localObject2).Bv(nZ(paramag.getFormat()));
+          ((nf)localObject2).oW((int)com.tencent.mm.modelvoice.nfield_content).time);
+          paramag = new LinkedList();
+          paramag.add(localObject2);
+          ((no)localObject1).S(paramag);
+          aud.auf = ((no)localObject1);
+          aud.type = 3;
+          bool = true;
           break;
-          new File(paramContext).exists();
-          break label415;
-          ((kx)localObject3).wc(com.tencent.mm.modelvoice.ae.gJ(field_imgPath));
+          new File(paramag).exists();
+          break label274;
+          ((nf)localObject2).Bz(com.tencent.mm.modelvoice.q.hK(field_imgPath));
         }
-        label479:
-        ((kx)localObject3).vY(c.lg(paramContext.getFormat()));
-        ((kx)localObject3).mb((int)com.tencent.mm.modelvoice.abfield_content).time);
       }
-    }
-    if (((ar)localObject2).aHD()) {
-      return b(paramag, (ar)localObject2);
-    }
-    if (((ar)localObject2).aHB()) {
-      if (field_msgId <= 0L) {
-        break label3184;
-      }
-    }
-    label799:
-    label919:
-    label925:
-    label963:
-    label3184:
-    for (paramar = af.zl().O((int)field_msgId);; paramar = null)
-    {
-      if (paramar != null)
+      if (localag.aXe())
       {
-        paramContext = paramar;
-        if (bCP > 0L) {}
+        bool = b(paramay, localag);
+      }
+      else if (localag.aXc())
+      {
+        paramag = null;
+        if (field_msgId > 0L) {
+          paramag = com.tencent.mm.ab.n.Ao().Z(field_msgId);
+        }
+        if (paramag != null)
+        {
+          localObject1 = paramag;
+          if (bQc > 0L) {}
+        }
+        else
+        {
+          localObject1 = paramag;
+          if (field_msgSvrId > 0L) {
+            localObject1 = com.tencent.mm.ab.n.Ao().Y(field_msgSvrId);
+          }
+        }
+        if (localObject1 == null)
+        {
+          u.w("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "getImgDataPath: try get imgInfo fail");
+          aud.type = 2131431057;
+        }
+        else
+        {
+          paramag = new no();
+          paramag.a(v(localag));
+          localObject2 = new nf();
+          a((nf)localObject2, localag);
+          ((nf)localObject2).oX(2);
+          ((nf)localObject2).Bz(com.tencent.mm.ab.n.Ao().j(com.tencent.mm.ab.e.c((com.tencent.mm.ab.d)localObject1), "", ""));
+          ((nf)localObject2).BA(com.tencent.mm.ab.n.Ao().n(field_imgPath, true));
+          localObject1 = new LinkedList();
+          ((LinkedList)localObject1).add(localObject2);
+          paramag.S((LinkedList)localObject1);
+          aud.auf = paramag;
+          aud.type = 2;
+          bool = true;
+        }
+      }
+      else if ((localag.aXg()) || (localag.aXh()))
+      {
+        paramag = new no();
+        paramag.a(v(localag));
+        localObject1 = new nf();
+        a((nf)localObject1, localag);
+        j.Ea();
+        ((nf)localObject1).Bz(com.tencent.mm.an.n.jL(field_imgPath));
+        j.Ea();
+        ((nf)localObject1).BA(com.tencent.mm.an.n.jM(field_imgPath));
+        ((nf)localObject1).Bv(com.tencent.mm.a.e.ay(jlz));
+        localObject2 = o.jV(field_imgPath);
+        u.i("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "video length is %d", new Object[] { Integer.valueOf(bEp) });
+        if (bEp > com.tencent.mm.g.b.pw())
+        {
+          aud.type = 2131432566;
+        }
+        else
+        {
+          ((nf)localObject1).oW(cfZ);
+          localObject2 = new LinkedList();
+          ((LinkedList)localObject2).add(localObject1);
+          paramag.S((LinkedList)localObject2);
+          aud.auf = paramag;
+          if (localag.aXh())
+          {
+            aud.type = 16;
+            ((nf)localObject1).oX(15);
+          }
+          for (;;)
+          {
+            bool = true;
+            break;
+            aud.type = 4;
+            ((nf)localObject1).oX(4);
+          }
+        }
+      }
+      else if (localag.aWV())
+      {
+        bool = c(paramay, localag);
       }
       else
       {
-        paramContext = paramar;
-        if (field_msgSvrId > 0L) {
-          paramContext = af.zl().N(field_msgSvrId);
-        }
-      }
-      if (paramContext == null)
-      {
-        t.w("!44@/B4Tb64lLpKYFtXtgZZWUK4VcPMjRhy1n3liRqSeHfA=", "getImgDataPath: try get imgInfo fail");
-        auX.type = a.n.favorite_fail_image_not_exists;
-        paramBoolean = bool;
-        return paramBoolean;
-      }
-      paramar = new ky();
-      paramar.c(u((ar)localObject2));
-      localObject1 = new kx();
-      ((kx)localObject1).wg(v((ar)localObject2));
-      ((kx)localObject1).mc(2);
-      ((kx)localObject1).wc(af.zl().g(f.c(paramContext), "", ""));
-      ((kx)localObject1).wd(af.zl().gM(field_imgPath));
-      ((kx)localObject1).a(paramar);
-      ((kx)localObject1).wj(a(hvy));
-      ((kx)localObject1).wk(b(hvy));
-      int i;
-      if (paramBoolean)
-      {
-        paramar = paramContext;
-        if (paramContext.zf())
+        if (localag.aXd()) {}
+        while ((!localag.aWU()) || (localag.aXj()))
         {
-          paramar = paramContext;
-          if (bsm == 0) {
-            paramar = af.zl().df(bCV);
-          }
+          aud.type = 2131431061;
+          break;
         }
-        if (field_isSend != 1) {
-          break label925;
-        }
-        if (!paramar.zf()) {
-          break label919;
-        }
-        i = 1;
-        paramContext = p.z(bCW, "msg", null);
-        if (paramContext == null) {
-          break label963;
-        }
-        if (i == 1)
-        {
-          ((kx)localObject1).vS((String)paramContext.get(".msg.img.$cdnbigimgurl"));
-          ((kx)localObject1).cq(bn.getInt((String)paramContext.get(".msg.img.$length"), 0));
-          ((kx)localObject1).vT((String)paramContext.get(".msg.img.$aeskey"));
-        }
-      }
-      for (;;)
-      {
-        auX.auZ.hwr.add(localObject1);
-        paramContext = auX.ava;
-        hwD += 1;
-        paramBoolean = true;
-        break;
-        i = 0;
-        break label799;
-        if (!paramar.zf())
-        {
-          i = 0;
-          break label799;
-        }
-        if (!com.tencent.mm.a.c.az(abCR))
-        {
-          i = 0;
-          break label799;
-        }
-        i = 1;
-        break label799;
-        t.i("!44@/B4Tb64lLpKYFtXtgZZWUK4VcPMjRhy1n3liRqSeHfA=", "parse cdnInfo failed. [%s]", new Object[] { bCW });
-      }
-      if (((ar)localObject2).aHF()) {
-        return a(paramag, (ar)localObject2, paramBoolean);
-      }
-      if (((ar)localObject2).aHG()) {
-        return a(paramag, (ar)localObject2, paramBoolean);
-      }
-      if ((paramBoolean) && (field_type == 318767153)) {
-        return a(paramContext, paramag, (ar)localObject2, 3);
-      }
-      if (((ar)localObject2).aHu()) {
-        return c(paramag, (ar)localObject2);
-      }
-      if ((paramBoolean) && ((((ar)localObject2).aHH()) || (((ar)localObject2).aHI()))) {
-        return a(paramContext, paramag, (ar)localObject2, 1);
-      }
-      if ((paramBoolean) && (field_type == 419430449)) {
-        return a(paramContext, paramag, (ar)localObject2, 2);
-      }
-      if (((ar)localObject2).aHC())
-      {
-        paramContext = new ky();
-        paramContext.c(u((ar)localObject2));
-        paramar = new kx();
-        paramar.wg(v((ar)localObject2));
-        paramar.mc(16);
-        paramar.vP(field_content);
-        paramar.eE(true);
-        paramar.eD(true);
-        paramar.a(paramContext);
-        paramar.wj(a(hvy));
-        paramar.wk(b(hvy));
-        auX.auZ.hwr.add(paramar);
-        paramContext = auX.ava;
-        hwQ += 1;
-        return true;
-      }
-      if (((ar)localObject2).aHt())
-      {
-        if (((ar)localObject2).aHI())
-        {
-          auX.type = a.n.favorite_fail_nonsupport;
-          return false;
-        }
-        paramar = new ky();
-        paramar.c(u((ar)localObject2));
+        paramag = new no();
+        paramag.a(v(localag));
         localObject1 = field_content;
         if (localObject1 == null)
         {
-          auX.type = a.n.favorite_fail_parse_error;
-          return false;
+          aud.type = 2131431058;
         }
-        localObject1 = a.a.dr((String)localObject1);
-        if (localObject1 == null)
+        else
         {
-          auX.type = a.n.favorite_fail_parse_error;
-          return false;
-        }
-        hvy.wq(appId);
-        hvy.ws(aEv);
-        localObject3 = com.tencent.mm.pluginsdk.model.app.i.V(appId, true);
-        if ((localObject3 != null) && (((h)localObject3).ayW()) && (paramBoolean))
-        {
-          paramContext = a((ar)localObject2, paramContext.getString(a.n.app_game), paramar);
-          auX.auZ.hwr.add(paramContext);
-          return true;
-        }
-        switch (type)
-        {
-        }
-        while (paramBoolean)
-        {
-          paramContext = a((ar)localObject2, paramContext.getString(a.n.app_special), paramar);
-          auX.auZ.hwr.add(paramContext);
-          return true;
-          paramContext = new kx();
-          paramContext.wg(v((ar)localObject2));
-          paramContext.mc(1);
-          paramContext.vP(title);
-          paramContext.eE(true);
-          paramContext.eD(true);
-          paramContext.a(paramar);
-          paramContext.wj(a(hvy));
-          paramContext.wk(b(hvy));
-          auX.auZ.hwr.add(paramContext);
-          paramContext = auX.ava;
-          hwC += 1;
-          return true;
-          if (!ax.tl().isSDCardAvailable())
+          localObject1 = a.a.dz((String)localObject1);
+          if (localObject1 == null)
           {
-            auX.type = a.n.favorite_fail_sdcard_not_available;
-            return false;
+            aud.type = 2131431058;
           }
-          localObject3 = ay.GA().uk(aqm);
-          paramContext = new kx();
-          paramContext.wg(v((ar)localObject2));
-          if (localObject3 != null) {
-            paramContext.wc(field_fileFullPath);
-          }
-          localObject2 = af.zl().gM(field_imgPath);
-          if (com.tencent.mm.a.c.az((String)localObject2)) {
-            paramContext.wd((String)localObject2);
-          }
-          paramContext.mc(2);
-          paramContext.vO(title);
-          paramContext.vP(description);
-          paramContext.a(paramar);
-          paramContext.wj(a(hvy));
-          paramContext.wk(b(hvy));
-          auX.auZ.hwr.add(paramContext);
-          paramContext = auX.ava;
-          hwD += 1;
-          return true;
-          paramContext = a((ar)localObject2, (a.a)localObject1, 7);
-          paramContext.a(paramar);
-          paramContext.wj(a(hvy));
-          paramContext.wk(b(hvy));
-          auX.auZ.hwr.add(paramContext);
-          paramContext = auX.ava;
-          hwI += 1;
-          return true;
-          paramContext = a((ar)localObject2, (a.a)localObject1, 4);
-          paramContext.a(paramar);
-          paramContext.wj(a(hvy));
-          paramContext.wk(b(hvy));
-          auX.auZ.hwr.add(paramContext);
-          paramContext = auX.ava;
-          hwF += 1;
-          return true;
-          if ((url != null) && (!url.equals("")))
+          else
           {
-            hvy.wr(url);
-            paramContext = a((ar)localObject2, (a.a)localObject1, 5);
-            paramContext.a(paramar);
-            paramContext.wj(a(hvy));
-            paramContext.wk(b(hvy));
-            localObject2 = new lp();
-            if (!bn.iW(title)) {
-              ((lp)localObject2).wP(title);
-            }
-            if (!bn.iW(description)) {
-              ((lp)localObject2).wQ(description);
-            }
-            if (!bn.iW(thumburl)) {
-              ((lp)localObject2).wS(thumburl);
-            }
-            if (((lp)localObject2).kS() > 0)
+            aud.auf = paramag;
+            localObject2 = jmX;
+            ((np)localObject2).Cg(appId);
+            ((np)localObject2).Ci(aHh);
+            Object localObject3;
+            switch (type)
             {
-              ((lp)localObject2).mj(1);
-              paramar.a((lp)localObject2);
+            case 8: 
+            case 9: 
+            case 11: 
+            case 12: 
+            case 14: 
+            case 15: 
+            case 16: 
+            case 17: 
+            case 18: 
+            case 21: 
+            case 22: 
+            case 23: 
+            default: 
+              aud.type = 2131431061;
+              break;
+            case 1: 
+              aud.auf = paramag;
+              aud.asL = title;
+              aud.type = 1;
+              bool = true;
+              break;
+            case 2: 
+              if (!com.tencent.mm.model.ah.tD().isSDCardAvailable())
+              {
+                aud.type = 2131431056;
+              }
+              else
+              {
+                localObject3 = aj.IL().zK(aoq);
+                localObject2 = new nf();
+                a((nf)localObject2, localag);
+                if (localObject3 != null) {
+                  ((nf)localObject2).Bz(field_fileFullPath);
+                }
+                localObject3 = com.tencent.mm.ab.n.Ao().n(field_imgPath, true);
+                if (com.tencent.mm.a.e.ax((String)localObject3)) {
+                  ((nf)localObject2).BA((String)localObject3);
+                }
+                ((nf)localObject2).oX(2);
+                ((nf)localObject2).Bl(title);
+                ((nf)localObject2).Bm(description);
+                jmZ.add(localObject2);
+                aud.type = 2;
+                bool = true;
+              }
+              break;
+            case 3: 
+              localObject1 = a(localag, (a.a)localObject1, 7);
+              jmZ.add(localObject1);
+              aud.type = 7;
+              bool = true;
+              break;
+            case 4: 
+              localObject1 = a(localag, (a.a)localObject1, 4);
+              paramag.BY(title);
+              paramag.BZ(asL);
+              jmZ.add(localObject1);
+              aud.type = 4;
+              bool = true;
+              break;
+            case 5: 
+              if ((url != null) && (!url.equals("")))
+              {
+                jmX.Ch(url);
+                localObject1 = a(localag, (a.a)localObject1, 5);
+                jmZ.add(localObject1);
+                paramag.BY(title);
+                paramag.BZ(asL);
+                aud.type = 5;
+                bool = true;
+              }
+              else
+              {
+                aud.type = 2131431059;
+              }
+              break;
+            case 6: 
+              if (!com.tencent.mm.model.ah.tD().isSDCardAvailable())
+              {
+                aud.type = 2131431056;
+              }
+              else
+              {
+                localObject3 = aj.IL().zK(aoq);
+                localObject2 = new nf();
+                if (localObject3 != null)
+                {
+                  ((nf)localObject2).Bz(field_fileFullPath);
+                  if (new File(field_fileFullPath).length() > com.tencent.mm.g.b.pw())
+                  {
+                    aud.type = 2131432566;
+                    continue;
+                  }
+                }
+                a((nf)localObject2, localag);
+                ((nf)localObject2).oX(8);
+                ((nf)localObject2).Bv(aos);
+                localObject3 = com.tencent.mm.ab.n.Ao().n(field_imgPath, true);
+                if (com.tencent.mm.sdk.platformtools.ay.kz((String)localObject3)) {
+                  ((nf)localObject2).gD(true);
+                }
+                if (com.tencent.mm.a.e.ax((String)localObject3)) {
+                  ((nf)localObject2).BA((String)localObject3);
+                }
+                ((nf)localObject2).Bl(title);
+                ((nf)localObject2).Bm(description);
+                jmZ.add(localObject2);
+                aud.asL = title;
+                aud.type = 8;
+                bool = true;
+              }
+              break;
+            case 7: 
+              if ((aoq == null) || (aoq.length() == 0)) {
+                aud.type = 2131431060;
+              }
+              while (com.tencent.mm.model.ah.tD().isSDCardAvailable())
+              {
+                aud.type = 2131431061;
+                break;
+              }
+              aud.type = 2131431056;
+              break;
+            case 10: 
+              localObject2 = new nn();
+              ((nn)localObject2).BT(title);
+              ((nn)localObject2).BU(description);
+              ((nn)localObject2).pb(bxE);
+              ((nn)localObject2).BW(bxF);
+              ((nn)localObject2).BV(thumburl);
+              aud.title = title;
+              aud.asL = description;
+              aud.type = 10;
+              paramag.b((nn)localObject2);
+              bool = true;
+              break;
+            case 20: 
+              localObject2 = new ns();
+              ((ns)localObject2).Cj(title);
+              ((ns)localObject2).Ck(description);
+              ((ns)localObject2).Cm(bxI);
+              ((ns)localObject2).Cl(thumburl);
+              aud.title = title;
+              aud.asL = description;
+              aud.type = 15;
+              paramag.b((ns)localObject2);
+              bool = true;
+              break;
+            case 13: 
+              localObject2 = new nn();
+              ((nn)localObject2).BT(title);
+              ((nn)localObject2).BU(description);
+              ((nn)localObject2).pb(bxK);
+              ((nn)localObject2).BW(bxL);
+              ((nn)localObject2).BV(thumburl);
+              aud.title = title;
+              aud.asL = description;
+              aud.type = 11;
+              paramag.b((nn)localObject2);
+              bool = true;
+              break;
+            case 19: 
+            case 24: 
+              aud.aug = new nx();
+              bool = a(paramay, (a.a)localObject1, paramag, localag);
             }
-            auX.auZ.hwr.add(paramContext);
-            paramContext = auX.ava;
-            hwG += 1;
-            return true;
-          }
-          auX.type = a.n.favorite_fail_empty_url;
-          if (paramBoolean)
-          {
-            paramContext = a((ar)localObject2, paramContext.getString(a.n.app_special), paramar);
-            auX.auZ.hwr.add(paramContext);
-            return true;
-          }
-          return false;
-          if (!ax.tl().isSDCardAvailable())
-          {
-            auX.type = a.n.favorite_fail_sdcard_not_available;
-            return false;
-          }
-          localObject3 = ay.GA().uk(aqm);
-          paramContext = new kx();
-          if (localObject3 != null)
-          {
-            paramContext.wc(field_fileFullPath);
-            if (new File(field_fileFullPath).length() > com.tencent.mm.g.b.pF())
-            {
-              auX.type = a.n.favorite_too_large;
-              return false;
-            }
-          }
-          paramContext.wg(v((ar)localObject2));
-          paramContext.mc(8);
-          paramContext.vY(aqo);
-          localObject2 = af.zl().gM(field_imgPath);
-          if (bn.iW((String)localObject2)) {
-            paramContext.eE(true);
-          }
-          if (com.tencent.mm.a.c.az((String)localObject2)) {
-            paramContext.wd((String)localObject2);
-          }
-          paramContext.vO(title);
-          paramContext.vP(description);
-          paramContext.a(paramar);
-          paramContext.wj(a(hvy));
-          paramContext.wk(b(hvy));
-          if (paramBoolean)
-          {
-            paramContext.vS(blW);
-            paramContext.vT(bmd);
-          }
-          auX.auZ.hwr.add(paramContext);
-          paramContext = auX.ava;
-          hwJ += 1;
-          return true;
-          if ((aqm == null) || (aqm.length() == 0)) {
-            auX.type = a.n.favorite_fail_attachment_not_exists;
-          }
-          while (ax.tl().isSDCardAvailable())
-          {
-            auX.type = a.n.favorite_fail_nonsupport;
-            return false;
-          }
-          auX.type = a.n.favorite_fail_sdcard_not_available;
-          return false;
-          paramContext = new le();
-          paramContext.wv(title);
-          paramContext.ww(description);
-          paramContext.mg(bmk);
-          paramContext.wy(bml);
-          paramContext.wx(thumburl);
-          paramar.a(paramContext);
-          paramContext = new kx();
-          paramContext.wg(v((ar)localObject2));
-          paramContext.mc(10);
-          paramContext.eE(true);
-          paramContext.eD(true);
-          paramContext.a(paramar);
-          paramContext.wj(a(hvy));
-          paramContext.wk(b(hvy));
-          auX.auZ.hwr.add(paramContext);
-          paramContext = auX.ava;
-          hwL += 1;
-          return true;
-          paramContext = new lj();
-          paramContext.wL(title);
-          paramContext.wM(description);
-          paramContext.wO(bmo);
-          paramContext.wN(thumburl);
-          paramar.a(paramContext);
-          paramContext = new kx();
-          paramContext.wg(v((ar)localObject2));
-          paramContext.mc(14);
-          paramContext.eE(true);
-          paramContext.eD(true);
-          paramContext.a(paramar);
-          paramContext.wj(a(hvy));
-          paramContext.wk(b(hvy));
-          auX.auZ.hwr.add(paramContext);
-          paramContext = auX.ava;
-          hwP += 1;
-          return true;
-          paramContext = new le();
-          paramContext.wv(title);
-          paramContext.ww(description);
-          paramContext.mg(bmq);
-          paramContext.wy(bmr);
-          paramContext.wx(thumburl);
-          paramar.a(paramContext);
-          paramContext = new kx();
-          paramContext.wg(v((ar)localObject2));
-          paramContext.mc(11);
-          paramContext.eE(true);
-          paramContext.eD(true);
-          paramContext.a(paramar);
-          paramContext.wj(a(hvy));
-          paramContext.wk(b(hvy));
-          auX.auZ.hwr.add(paramContext);
-          paramContext = auX.ava;
-          hwM += 1;
-          return true;
-          if (paramBoolean)
-          {
-            paramContext = a((ar)localObject2, paramContext.getString(a.n.app_record), paramar);
-            auX.auZ.hwr.add(paramContext);
-            return true;
-          }
-          if (paramBoolean)
-          {
-            paramContext = a((ar)localObject2, paramContext.getString(a.n.app_product_card_ticket), paramar);
-            auX.auZ.hwr.add(paramContext);
-            return true;
           }
         }
-        auX.type = a.n.favorite_fail_nonsupport;
-        return false;
       }
-      auX.type = a.n.favorite_fail_nonsupport;
-      if (paramBoolean) {
-        return a(paramContext, paramag, (ar)localObject2, 3);
-      }
-      return false;
     }
   }
   
-  public static boolean a(Context paramContext, ag paramag, String paramString, List paramList, boolean paramBoolean)
+  private static boolean b(com.tencent.mm.d.a.ay paramay, ag paramag)
   {
-    boolean bool = true;
-    if ((paramList == null) || (paramList.isEmpty()))
-    {
-      t.w("!44@/B4Tb64lLpKYFtXtgZZWUK4VcPMjRhy1n3liRqSeHfA=", "fill favorite event fail, event or msgs is null");
-      auX.type = a.n.favorite_fail_argument_error;
-      return false;
-    }
-    if (paramList.size() == 1)
-    {
-      paramList = (ar)paramList.get(0);
-      if (paramList.aHu())
-      {
-        com.tencent.mm.m.b localb = a.a.du(field_content);
-        if ((bns != null) && (bns.size() == 1)) {
-          return c.a(paramag, paramList);
-        }
-        auX.auZ = new lf();
-        auX.ava = new lo();
-        auX.auZ.a(uc(paramString));
-        auX.type = 14;
-        return a(paramContext, paramag, paramList, paramBoolean);
-      }
-      return c.a(paramag, paramList);
-    }
-    auX.auZ = new lf();
-    auX.ava = new lo();
-    auX.auZ.a(uc(paramString));
-    paramString = paramList.iterator();
-    while (paramString.hasNext()) {
-      if (!a(paramContext, paramag, (ar)paramString.next(), paramBoolean)) {
-        bool = false;
-      }
-    }
-    auX.type = 14;
-    return bool;
-  }
-  
-  private static boolean a(ag paramag, ar paramar, boolean paramBoolean)
-  {
-    ky localky = new ky();
-    localky.c(u(paramar));
-    kx localkx = new kx();
-    localkx.wg(v(paramar));
-    com.tencent.mm.ah.v.BY();
-    localkx.wc(ac.ij(field_imgPath));
-    com.tencent.mm.ah.v.BY();
-    localkx.wd(ac.ik(field_imgPath));
-    localkx.vY(com.tencent.mm.a.c.aA(huW));
-    if (paramar.aHG()) {
-      localkx.mc(15);
-    }
-    for (;;)
-    {
-      paramar = com.tencent.mm.ah.ae.is(field_imgPath);
-      t.i("!44@/B4Tb64lLpKYFtXtgZZWUK4VcPMjRhy1n3liRqSeHfA=", "video length is %d", new Object[] { Integer.valueOf(bsm) });
-      if (bsm <= com.tencent.mm.g.b.pF()) {
-        break;
-      }
-      auX.type = a.n.favorite_too_large;
-      return false;
-      localkx.mc(4);
-    }
-    localkx.mb(bPl);
-    localkx.a(localky);
-    localkx.wj(a(hvy));
-    localkx.wk(b(hvy));
-    if (paramBoolean)
-    {
-      paramar = p.z(paramar.Cg(), "msg", null);
-      if (paramar == null) {
-        break label286;
-      }
-      localkx.vS((String)paramar.get(".msg.videomsg.$cdnvideourl"));
-      localkx.vT((String)paramar.get(".msg.videomsg.$aeskey"));
-    }
-    for (;;)
-    {
-      auX.auZ.hwr.add(localkx);
-      paramag = auX.ava;
-      hwF += 1;
-      return true;
-      label286:
-      t.i("!44@/B4Tb64lLpKYFtXtgZZWUK4VcPMjRhy1n3liRqSeHfA=", "cdntra parse video recv xml failed");
-    }
-  }
-  
-  private static String b(kz paramkz)
-  {
-    return gDd.format(new Date(bPi));
-  }
-  
-  private static boolean b(ag paramag, ar paramar)
-  {
-    ky localky = new ky();
-    localky.c(u(paramar));
-    Object localObject = p.z(field_content, "msg", null);
-    if (localObject != null) {
+    no localno = new no();
+    localno.a(v(paramag));
+    paramag = com.tencent.mm.sdk.platformtools.q.J(field_content, "msg", null);
+    if (paramag != null) {
       try
       {
-        lc locallc = new lc();
-        locallc.wt((String)((Map)localObject).get(".msg.location.$label"));
-        locallc.i(Double.parseDouble((String)((Map)localObject).get(".msg.location.$x")));
-        locallc.h(Double.parseDouble((String)((Map)localObject).get(".msg.location.$y")));
-        locallc.mf(Integer.valueOf((String)((Map)localObject).get(".msg.location.$scale")).intValue());
-        locallc.wu((String)((Map)localObject).get(".msg.location.$poiname"));
-        localky.a(locallc);
-        localObject = new kx();
-        ((kx)localObject).wg(v(paramar));
-        ((kx)localObject).mc(6);
-        ((kx)localObject).eE(true);
-        ((kx)localObject).eD(true);
-        ((kx)localObject).a(localky);
-        ((kx)localObject).wj(a(hvy));
-        ((kx)localObject).wk(b(hvy));
-        auX.auZ.hwr.add(localObject);
-        paramar = auX.ava;
-        hwH += 1;
+        nl localnl = new nl();
+        localnl.BR((String)paramag.get(".msg.location.$label"));
+        localnl.i(Double.parseDouble((String)paramag.get(".msg.location.$x")));
+        localnl.h(Double.parseDouble((String)paramag.get(".msg.location.$y")));
+        localnl.pa(Integer.valueOf((String)paramag.get(".msg.location.$scale")).intValue());
+        localnl.BS((String)paramag.get(".msg.location.$poiname"));
+        localno.b(localnl);
+        aud.type = 6;
+        aud.auf = localno;
         return true;
       }
-      catch (Exception paramar)
+      catch (Exception paramag)
       {
-        t.e("!44@/B4Tb64lLpKYFtXtgZZWUK4VcPMjRhy1n3liRqSeHfA=", "parse failed, %s", new Object[] { paramar.getStackTrace().toString() });
+        u.e("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "parse failed, %s", new Object[] { paramag.getStackTrace().toString() });
       }
     }
-    auX.type = a.n.favorite_fail_parse_error;
+    aud.type = 2131431058;
     return false;
   }
   
-  private static boolean c(ag paramag, ar paramar)
+  private static boolean c(com.tencent.mm.d.a.ay paramay, ag paramag)
   {
-    ky localky = new ky();
-    localky.c(u(paramar));
+    no localno = new no();
+    Object localObject2 = v(paramag);
+    localno.a((np)localObject2);
+    label326:
     for (;;)
     {
       try
       {
-        localObject1 = a.a.du(field_content);
-        Object localObject2 = bns;
-        hvy.ws(aEv);
-        if (localObject2 != null)
+        Object localObject1 = a.a.dC(field_content);
+        Object localObject3 = byZ;
+        ((np)localObject2).Ci(aHh);
+        if ((localObject3 != null) && (((List)localObject3).size() > aud.aui))
         {
-          localObject2 = ((List)localObject2).iterator();
-          int i = 0;
-          if (!((Iterator)localObject2).hasNext()) {
-            break label324;
+          u.i("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "favorite biz msg, index is %d", new Object[] { Integer.valueOf(aud.aui) });
+          localObject1 = (com.tencent.mm.n.d)((List)localObject3).get(aud.aui);
+          ((np)localObject2).Ch(url);
+          if (aud.aui > 0) {
+            ((np)localObject2).Cc("");
           }
-          localObject1 = (com.tencent.mm.m.c)((Iterator)localObject2).next();
-          hvy.wr(url);
-          kx localkx = new kx();
-          localkx.vO(title);
-          localkx.vP(bnx);
-          localkx.wg(v(paramar));
-          if (!bn.iW(bnv))
+          localObject2 = new nf();
+          ((nf)localObject2).Bl(title);
+          ((nf)localObject2).Bm(bze);
+          a((nf)localObject2, paramag);
+          if (!com.tencent.mm.sdk.platformtools.ay.kz(bzc))
           {
-            String str = bnv;
-            int j = field_type;
-            if (i != 0) {
+            localObject3 = bzc;
+            int i = field_type;
+            if (aud.aui <= 0) {
               break label326;
             }
-            localObject1 = "@T";
-            localkx.wd(v.i(str, j, (String)localObject1));
-            localkx.eD(true);
-            localkx.mc(5);
-            localkx.a(localky);
-            localkx.wj(a(hvy));
-            localkx.wk(b(hvy));
-            auX.auZ.hwr.add(localkx);
-            localObject1 = auX.ava;
-            hwG += 1;
-            i += 1;
-            continue;
+            paramag = "@S";
+            ((nf)localObject2).BA(p.k((String)localObject3, i, paramag));
+            ((nf)localObject2).gC(true);
+            ((nf)localObject2).oX(5);
+            jmZ.add(localObject2);
+            aud.auf = localno;
+            aud.asL = title;
+            aud.type = 5;
+            return true;
           }
-          localkx.eE(true);
+          ((nf)localObject2).gD(true);
           continue;
         }
-        return true;
+        paramag = "@T";
       }
-      catch (Exception paramar)
+      catch (Exception paramag)
       {
-        t.e("!44@/B4Tb64lLpKYFtXtgZZWUK4VcPMjRhy1n3liRqSeHfA=", "retransmit app msg error : %s", new Object[] { paramar.getLocalizedMessage() });
-        auX.type = a.n.favorite_fail_parse_error;
+        u.e("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "retransmit app msg error : %s", new Object[] { paramag.getLocalizedMessage() });
+        aud.type = 2131431058;
         return false;
       }
-      label324:
-      label326:
-      Object localObject1 = "@S";
     }
   }
   
-  private static kz u(ar paramar)
+  private static nf j(nf paramnf)
   {
-    kz localkz = new kz();
+    nf localnf = new nf();
+    ng localng = new ng();
+    nh localnh1 = new nh();
+    nh localnh2 = jlV.jmf;
+    if (jmx) {
+      localnh1.BJ(bxn);
+    }
+    if (jmy) {
+      localnh1.BK(ayw);
+    }
+    if (jmC) {
+      localnh1.BM(jmB);
+    }
+    localnh1.oZ(1);
+    localnh1.dk(com.tencent.mm.sdk.platformtools.ay.FS());
+    localng.c(localnh1);
+    localnf.a(localng);
+    localnf.BG(jlX);
+    localnf.BH(jlZ);
+    localnf.gD(true);
+    localnf.gC(true);
+    localnf.BI(jmd);
+    localnf.Bw(jls);
+    localnf.Bx(jlu);
+    localnf.di(jlw);
+    localnf.BB(jlD);
+    localnf.BC(jlF);
+    localnf.dj(jlH);
+    return localnf;
+  }
+  
+  public static String nZ(int paramInt)
+  {
+    if (paramInt == 1) {
+      return "speex";
+    }
+    if (paramInt == 4) {
+      return "silk";
+    }
+    return "amr";
+  }
+  
+  private static np v(ag paramag)
+  {
+    np localnp = new np();
     if (field_isSend == 1)
     {
-      localkz.wl(com.tencent.mm.model.v.rS());
-      localkz.wm(field_talker);
-      if (w.dh(field_talker)) {
-        localkz.wo(blU);
+      localnp.Ca(com.tencent.mm.model.h.sc());
+      localnp.Cb(field_talker);
+      if (com.tencent.mm.model.i.dn(field_talker)) {
+        localnp.Cd(bxn);
       }
     }
     do
     {
-      localkz.me(1);
-      localkz.cs(field_createTime);
-      localkz.wp(field_msgSvrId);
+      localnp.pe(1);
+      localnp.dn(field_createTime);
+      localnp.Ce(field_msgSvrId);
       if (field_msgSvrId > 0L) {
-        localkz.wn(field_msgSvrId);
+        localnp.Cc(field_msgSvrId);
       }
-      return localkz;
-      localkz.wl(field_talker);
-      localkz.wm(com.tencent.mm.model.v.rS());
-    } while (!w.dh(field_talker));
+      return localnp;
+      localnp.Ca(field_talker);
+      localnp.Cb(com.tencent.mm.model.h.sc());
+    } while (!com.tencent.mm.model.i.dn(field_talker));
     if (field_content != null) {}
     for (String str = field_content.substring(0, Math.max(0, field_content.indexOf(':')));; str = "")
     {
-      localkz.wo(str);
-      if ((bn.iW(hvU)) || (paramar.aHv())) {
+      localnp.Cd(str);
+      if ((com.tencent.mm.sdk.platformtools.ay.kz(jmB)) || (paramag.aWW())) {
         break;
       }
-      paramar.setContent(field_content.substring(hvU.length() + 1));
+      paramag.setContent(field_content.substring(jmB.length() + 1));
       if ((field_content.length() > 0) && ('\n' == field_content.charAt(0))) {
-        paramar.setContent(field_content.substring(1));
+        paramag.setContent(field_content.substring(1));
       }
-      if (!paramar.aHM()) {
+      if (!paramag.aXn()) {
         break;
       }
-      paramar.cm(field_transContent.substring(hvU.length() + 1));
+      paramag.cp(field_transContent.substring(jmB.length() + 1));
       if ((field_transContent.length() <= 0) || ('\n' != field_transContent.charAt(0))) {
         break;
       }
-      paramar.cm(field_transContent.substring(1));
+      paramag.cp(field_transContent.substring(1));
       break;
     }
-  }
-  
-  private static lg uc(String paramString)
-  {
-    lg locallg = new lg();
-    locallg.wC(paramString);
-    locallg.mi(1);
-    locallg.cv(bn.DM());
-    locallg.wE("");
-    return locallg;
-  }
-  
-  private static String v(ar paramar)
-  {
-    if (field_isSend == 1) {
-      return String.format("%s#%d", new Object[] { field_talker, Long.valueOf(field_msgSvrId) });
-    }
-    return String.valueOf(field_msgSvrId);
   }
 }
 

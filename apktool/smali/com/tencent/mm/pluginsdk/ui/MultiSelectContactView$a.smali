@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract nJ(Ljava/lang/String;)V
+.method public abstract rc(Ljava/lang/String;)V
 .end method

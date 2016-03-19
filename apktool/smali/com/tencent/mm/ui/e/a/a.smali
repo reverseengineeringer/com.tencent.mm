@@ -13,29 +13,29 @@
 
 
 # instance fields
-.field public bII:Ljava/lang/String;
+.field public aEy:Ljava/lang/String;
 
-.field public final dJX:I
+.field public final eLV:I
 
-.field public eFd:Z
+.field public fOr:Z
 
-.field public eVC:I
+.field public ggB:I
 
-.field public eVv:I
+.field public ggI:I
 
-.field public jnK:Z
+.field public ltc:Z
 
-.field public jnL:Z
+.field public ltd:Z
 
-.field public jnM:I
+.field public lte:I
 
-.field public jnN:I
+.field public ltf:I
 
-.field public jnO:Ljava/lang/String;
+.field public ltg:Ljava/lang/String;
 
-.field public jnP:J
+.field public lth:J
 
-.field public jnQ:Z
+.field public lti:Z
 
 .field public final position:I
 
@@ -51,10 +51,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 72
-    iput-boolean v5, p0, Lcom/tencent/mm/ui/e/a/a;->eFd:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/ui/e/a/a;->fOr:Z
 
     .line 120
-    iput p1, p0, Lcom/tencent/mm/ui/e/a/a;->dJX:I
+    iput p1, p0, Lcom/tencent/mm/ui/e/a/a;->eLV:I
 
     .line 121
     iput p2, p0, Lcom/tencent/mm/ui/e/a/a;->position:I
@@ -82,20 +82,20 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 124
     return-void
 .end method
 
-.method public static b(Landroid/content/Context;Landroid/text/Spannable;I)Landroid/text/SpannableString;
+.method public static a(Landroid/content/Context;Landroid/text/Spannable;I)Landroid/text/SpannableString;
     .locals 8
 
     .prologue
     const/4 v1, 0x0
 
     .line 131
-    invoke-static {p0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/d/i;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+    invoke-static {p0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/d/e;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
 
     move-result-object v2
 
@@ -153,7 +153,7 @@
 
 
 # virtual methods
-.method public abstract IR()Lcom/tencent/mm/ui/e/a/a$b;
+.method public abstract Le()Lcom/tencent/mm/ui/e/a/a$b;
 .end method
 
 .method public varargs abstract a(Landroid/content/Context;Lcom/tencent/mm/ui/e/a/a$a;)V

@@ -10,50 +10,50 @@ import android.widget.EditText;
 public final class MMAutoSwitchEditText$a
   implements TextWatcher, View.OnKeyListener
 {
-  private String dGU;
-  MMAutoSwitchEditText.c iDN;
-  MMAutoSwitchEditText.b iDO;
-  MMAutoSwitchEditText.d iDP;
-  private EditText iDQ;
-  int iDR = 4;
+  private String eut;
+  MMAutoSwitchEditText.c kDb;
+  MMAutoSwitchEditText.b kDc;
+  MMAutoSwitchEditText.d kDd;
+  private EditText kDe;
+  int kDf = 4;
   int mIndex = 0;
   
   public MMAutoSwitchEditText$a(EditText paramEditText)
   {
-    iDQ = paramEditText;
+    kDe = paramEditText;
   }
   
   public final void afterTextChanged(Editable paramEditable)
   {
     int j = 0;
-    dGU = paramEditable.toString();
+    eut = paramEditable.toString();
     paramEditable = "";
-    if (iDP != null) {
-      iDP.aMH();
+    if (kDd != null) {
+      kDd.bcw();
     }
     int i = 0;
     int k;
     for (;;)
     {
       k = i;
-      if (j >= dGU.length()) {
+      if (j >= eut.length()) {
         break;
       }
       i += 1;
       k = i;
-      if (i > iDR) {
+      if (i > kDf) {
         break;
       }
-      paramEditable = paramEditable + dGU.charAt(j);
+      paramEditable = paramEditable + eut.charAt(j);
       j += 1;
     }
-    if (k > iDR)
+    if (k > kDf)
     {
-      iDQ.setText(paramEditable);
-      iDQ.setSelection(paramEditable.length());
+      kDe.setText(paramEditable);
+      kDe.setSelection(paramEditable.length());
     }
-    if ((k >= iDR) && (iDN != null)) {
-      iDN.nI(mIndex);
+    if ((k >= kDf) && (kDb != null)) {
+      kDb.qD(mIndex);
     }
   }
   
@@ -61,8 +61,8 @@ public final class MMAutoSwitchEditText$a
   
   public final boolean onKey(View paramView, int paramInt, KeyEvent paramKeyEvent)
   {
-    if ((paramInt == 67) && (iDQ.getText().toString().trim().length() == 0) && (iDO != null)) {
-      iDO.nH(mIndex);
+    if ((paramInt == 67) && (kDe.getText().toString().trim().length() == 0) && (kDc != null)) {
+      kDc.qC(mIndex);
     }
     return false;
   }

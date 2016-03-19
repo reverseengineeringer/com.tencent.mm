@@ -1,58 +1,197 @@
 package com.tencent.mm.ui.tools;
 
-import android.app.Activity;
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.AsyncTask;
-import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.e;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.h;
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+import com.tencent.mm.ui.base.l;
+import com.tencent.mm.ui.base.n.b;
+import com.tencent.mm.ui.base.n.c;
+import com.tencent.mm.ui.base.n.d;
+import com.tencent.mm.ui.p;
 
-final class n
-  extends AsyncTask
+public final class n
+  extends s
 {
-  private String filePath;
-  private ProgressDialog joy;
-  private boolean joz;
-  private Uri uri;
+  private LayoutInflater hI;
+  private boolean hbI = true;
+  public n.c hle;
+  public n.d hlf;
+  private l hlg;
+  public com.tencent.mm.ui.base.n.a lwM;
+  public n.b lwN;
+  private a lwR;
   
-  n(Intent paramIntent1, Activity paramActivity, String paramString, k.a parama, Intent paramIntent2, int paramInt) {}
-  
-  private Integer aRt()
+  public n(Context paramContext)
   {
-    try
-    {
-      if (uri == null) {
-        return null;
-      }
-      Bitmap localBitmap = e.m(uri);
-      filePath = k.u(joB, localBitmap);
-      return null;
-    }
-    catch (Exception localException)
-    {
-      t.printErrStackTrace("!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM=", localException, "doInBackground", new Object[0]);
-    }
-    return null;
+    super(paramContext);
+    hI = p.ee(paramContext);
+    hlg = new l();
   }
   
-  protected final void onPreExecute()
+  protected final BaseAdapter Li()
   {
-    try
+    if (lwR == null) {
+      lwR = new a((byte)0);
+    }
+    return lwR;
+  }
+  
+  public final boolean bH()
+  {
+    if (hle != null) {
+      hle.a(hlg);
+    }
+    if ((hlg.lW != null) && (hlg.lW.length() > 0)) {}
+    for (boolean bool = true;; bool = false)
     {
-      uri = dUL.getData();
-      joz = false;
-      Activity localActivity = joE;
-      joE.getString(a.n.app_tip);
-      joy = h.a(localActivity, joE.getString(a.n.app_getting_img), true, new o(this));
+      hbI = bool;
+      return super.bH();
+    }
+  }
+  
+  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  {
+    if ((hbI) && (paramInt == 0)) {
       return;
     }
-    catch (Exception localException)
+    int i = paramInt;
+    if (hbI) {
+      i = paramInt - 1;
+    }
+    if (hlf != null) {
+      hlf.d(hlg.getItem(i), i);
+    }
+    dismiss();
+  }
+  
+  private final class a
+    extends BaseAdapter
+  {
+    private a() {}
+    
+    public final int getCount()
     {
-      t.printErrStackTrace("!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM=", localException, "onPreExecute", new Object[0]);
+      if (n.a(n.this)) {
+        return n.b(n.this).size() + 1;
+      }
+      return n.b(n.this).size();
+    }
+    
+    public final Object getItem(int paramInt)
+    {
+      return null;
+    }
+    
+    public final long getItemId(int paramInt)
+    {
+      return 0L;
+    }
+    
+    public final int getItemViewType(int paramInt)
+    {
+      int j = 1;
+      int i = j;
+      if (n.a(n.this))
+      {
+        i = j;
+        if (paramInt == 0) {
+          i = 0;
+        }
+      }
+      return i;
+    }
+    
+    public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+    {
+      Object localObject;
+      if ((n.a(n.this)) && (paramInt == 0))
+      {
+        if (paramView == null)
+        {
+          localObject = n.c(n.this).inflate(2131363182, paramViewGroup, false);
+          paramView = new a((byte)0);
+          cVH = ((TextView)((View)localObject).findViewById(2131165460));
+          fAr = ((ImageView)((View)localObject).findViewById(2131166684));
+          ((View)localObject).setTag(paramView);
+          paramViewGroup = paramView;
+        }
+        for (;;)
+        {
+          cVH.setText(n.f(n.this));
+          return (View)localObject;
+          paramViewGroup = (a)paramView.getTag();
+          localObject = paramView;
+        }
+      }
+      int i = paramInt;
+      if (n.a(n.this)) {
+        i = paramInt - 1;
+      }
+      if (paramView == null)
+      {
+        paramView = n.c(n.this).inflate(2131363271, paramViewGroup, false);
+        paramViewGroup = new a((byte)0);
+        cVH = ((TextView)paramView.findViewById(2131165460));
+        fAr = ((ImageView)paramView.findViewById(2131166684));
+        iHc = paramView.findViewById(2131166057);
+        paramView.setTag(paramViewGroup);
+        localObject = n.b(n.this).getItem(i);
+        cVH.setText(((MenuItem)localObject).getTitle());
+        if (((MenuItem)localObject).getIcon() == null) {
+          break label326;
+        }
+        fAr.setVisibility(0);
+        fAr.setImageDrawable(((MenuItem)localObject).getIcon());
+      }
+      for (;;)
+      {
+        if (n.e(n.this) != null) {
+          n.e(n.this).a(cVH, (MenuItem)localObject);
+        }
+        if (i != n.b(n.this).size() - 1) {
+          break label377;
+        }
+        iHc.setBackgroundResource(2130970274);
+        return paramView;
+        paramViewGroup = (a)paramView.getTag();
+        break;
+        label326:
+        if (n.d(n.this) != null)
+        {
+          fAr.setVisibility(0);
+          n.d(n.this).a(fAr, (MenuItem)localObject);
+        }
+        else
+        {
+          fAr.setVisibility(8);
+        }
+      }
+      label377:
+      iHc.setBackgroundResource(2130970248);
+      return paramView;
+    }
+    
+    public final int getViewTypeCount()
+    {
+      if (n.a(n.this)) {
+        return 2;
+      }
+      return 1;
+    }
+    
+    private final class a
+    {
+      TextView cVH;
+      ImageView fAr;
+      View iHc;
+      
+      private a() {}
     }
   }
 }

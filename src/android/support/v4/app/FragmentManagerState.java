@@ -7,18 +7,18 @@ import android.os.Parcelable.Creator;
 final class FragmentManagerState
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new o();
-  FragmentState[] cE;
-  int[] cF;
-  BackStackState[] cG;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  FragmentState[] bU;
+  int[] bV;
+  BackStackState[] bW;
   
   public FragmentManagerState() {}
   
   public FragmentManagerState(Parcel paramParcel)
   {
-    cE = ((FragmentState[])paramParcel.createTypedArray(FragmentState.CREATOR));
-    cF = paramParcel.createIntArray();
-    cG = ((BackStackState[])paramParcel.createTypedArray(BackStackState.CREATOR));
+    bU = ((FragmentState[])paramParcel.createTypedArray(FragmentState.CREATOR));
+    bV = paramParcel.createIntArray();
+    bW = ((BackStackState[])paramParcel.createTypedArray(BackStackState.CREATOR));
   }
   
   public final int describeContents()
@@ -28,9 +28,9 @@ final class FragmentManagerState
   
   public final void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeTypedArray(cE, paramInt);
-    paramParcel.writeIntArray(cF);
-    paramParcel.writeTypedArray(cG, paramInt);
+    paramParcel.writeTypedArray(bU, paramInt);
+    paramParcel.writeIntArray(bV);
+    paramParcel.writeTypedArray(bW, paramInt);
   }
 }
 

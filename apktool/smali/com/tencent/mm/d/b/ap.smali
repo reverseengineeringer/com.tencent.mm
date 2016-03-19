@@ -1,86 +1,80 @@
 .class public abstract Lcom/tencent/mm/d/b/ap;
-.super Lcom/tencent/mm/sdk/g/ae;
+.super Lcom/tencent/mm/sdk/h/c;
 .source "SourceFile"
 
 
 # static fields
-.field private static final aHH:I
+.field private static final aLF:I
 
-.field public static final aHq:[Ljava/lang/String;
+.field private static final aLG:I
 
-.field private static final aIR:I
+.field public static final aLn:[Ljava/lang/String;
 
-.field private static final aLe:I
+.field private static final aMJ:I
 
-.field private static final aPy:I
+.field private static final aMc:I
 
-.field private static final aWo:I
+.field private static final aOu:I
 
-.field private static final aWp:I
+.field private static final aPd:I
 
-.field private static final aWq:I
+.field private static final aYZ:I
 
-.field private static final aWr:I
+.field private static final aZa:I
 
-.field private static final aWs:I
+.field private static final aZb:I
 
-.field private static final aWt:I
+.field private static final aZc:I
 
-.field private static final aWu:I
+.field private static final aZd:I
 
-.field private static final aWv:I
-
-.field private static final aWw:I
+.field private static final aZe:I
 
 
 # instance fields
-.field private aID:Z
+.field private aLK:Z
 
-.field private aLa:Z
+.field private aLw:Z
 
-.field private aPi:Z
+.field private aMv:Z
 
-.field private aWf:Z
+.field private aOP:Z
 
-.field private aWg:Z
+.field private aOp:Z
 
-.field private aWh:Z
+.field private aYT:Z
 
-.field private aWi:Z
+.field private aYU:Z
 
-.field private aWj:Z
+.field private aYV:Z
 
-.field private aWk:Z
+.field private aYW:Z
 
-.field private aWl:Z
+.field private aYX:Z
 
-.field private aWm:Z
+.field private aYY:Z
 
-.field private aWn:Z
+.field public field_appId:Ljava/lang/String;
 
-.field public field_linkedInId:Ljava/lang/String;
+.field public field_createTime:J
 
-.field public field_linkedInProfileUrl:Ljava/lang/String;
+.field public field_expireTime:J
 
-.field public field_name:Ljava/lang/String;
+.field public field_gameMsgId:Ljava/lang/String;
 
-.field public field_nickname:Ljava/lang/String;
+.field public field_isHidden:Z
 
-.field public field_picUrl:Ljava/lang/String;
+.field public field_isRead:Z
 
-.field public field_position:Ljava/lang/String;
+.field public field_label:Ljava/lang/String;
 
-.field public field_status:I
+.field public field_msgId:J
 
-.field public field_userOpStatus:I
+.field public field_msgType:I
 
-.field public field_wechatBigHead:Ljava/lang/String;
+.field public field_rawXML:Ljava/lang/String;
 
-.field public field_wechatId:Ljava/lang/String;
-
-.field public field_wechatSmallHead:Ljava/lang/String;
-
-.field public field_wechatUsername:Ljava/lang/String;
+.field public field_showInMsgList:Z
 
 
 # direct methods
@@ -93,124 +87,115 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/mm/d/b/ap;->aHq:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/d/b/ap;->aLn:[Ljava/lang/String;
+
+    .line 99
+    const-string/jumbo v0, "msgId"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/ap;->aOu:I
+
+    .line 100
+    const-string/jumbo v0, "gameMsgId"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/ap;->aYZ:I
+
+    .line 101
+    const-string/jumbo v0, "msgType"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/ap;->aPd:I
+
+    .line 102
+    const-string/jumbo v0, "createTime"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/ap;->aMc:I
+
+    .line 103
+    const-string/jumbo v0, "expireTime"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/ap;->aZa:I
+
+    .line 104
+    const-string/jumbo v0, "appId"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/ap;->aMJ:I
 
     .line 105
-    const-string/jumbo v0, "wechatId"
+    const-string/jumbo v0, "showInMsgList"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ap;->aWo:I
+    sput v0, Lcom/tencent/mm/d/b/ap;->aZb:I
 
     .line 106
-    const-string/jumbo v0, "linkedInId"
+    const-string/jumbo v0, "isRead"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ap;->aWp:I
+    sput v0, Lcom/tencent/mm/d/b/ap;->aZc:I
 
     .line 107
-    const-string/jumbo v0, "name"
+    const-string/jumbo v0, "label"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ap;->aPy:I
+    sput v0, Lcom/tencent/mm/d/b/ap;->aZd:I
 
     .line 108
-    const-string/jumbo v0, "position"
+    const-string/jumbo v0, "isHidden"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ap;->aWq:I
+    sput v0, Lcom/tencent/mm/d/b/ap;->aZe:I
 
     .line 109
-    const-string/jumbo v0, "picUrl"
+    const-string/jumbo v0, "rawXML"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ap;->aWr:I
+    sput v0, Lcom/tencent/mm/d/b/ap;->aLF:I
 
     .line 110
-    const-string/jumbo v0, "wechatUsername"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ap;->aWs:I
-
-    .line 111
-    const-string/jumbo v0, "wechatSmallHead"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ap;->aWt:I
-
-    .line 112
-    const-string/jumbo v0, "wechatBigHead"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ap;->aWu:I
-
-    .line 113
-    const-string/jumbo v0, "linkedInProfileUrl"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ap;->aWv:I
-
-    .line 114
-    const-string/jumbo v0, "status"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ap;->aIR:I
-
-    .line 115
-    const-string/jumbo v0, "userOpStatus"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ap;->aWw:I
-
-    .line 116
-    const-string/jumbo v0, "nickname"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ap;->aLe:I
-
-    .line 117
     const-string/jumbo v0, "rowid"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ap;->aHH:I
+    sput v0, Lcom/tencent/mm/d/b/ap;->aLG:I
 
     return-void
 .end method
@@ -222,43 +207,40 @@
     const/4 v0, 0x1
 
     .line 7
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/g/ae;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/c;-><init>()V
 
-    .line 25
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aWf:Z
+    .line 24
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aOp:Z
 
-    .line 27
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aWg:Z
+    .line 26
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aYT:Z
 
-    .line 29
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aPi:Z
+    .line 28
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aOP:Z
 
-    .line 31
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aWh:Z
+    .line 30
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aLK:Z
 
-    .line 33
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aWi:Z
+    .line 32
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aYU:Z
 
-    .line 35
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aWj:Z
+    .line 34
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aMv:Z
 
-    .line 37
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aWk:Z
+    .line 36
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aYV:Z
 
-    .line 39
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aWl:Z
+    .line 38
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aYW:Z
 
-    .line 41
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aWm:Z
+    .line 40
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aYX:Z
 
-    .line 43
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aID:Z
+    .line 42
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aYY:Z
 
-    .line 45
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aWn:Z
-
-    .line 47
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aLa:Z
+    .line 44
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->aLw:Z
 
     return-void
 .end method
@@ -266,423 +248,279 @@
 
 # virtual methods
 .method public final c(Landroid/database/Cursor;)V
-    .locals 5
+    .locals 8
 
     .prologue
-    .line 120
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 113
     invoke-interface {p1}, Landroid/database/Cursor;->getColumnNames()[Ljava/lang/String;
 
-    move-result-object v1
+    move-result-object v4
 
-    .line 121
-    if-nez v1, :cond_1
+    .line 114
+    if-nez v4, :cond_1
 
-    .line 164
+    .line 155
     :cond_0
     return-void
 
-    .line 122
+    .line 115
     :cond_1
-    const/4 v0, 0x0
+    array-length v5, v4
 
-    array-length v2, v1
+    move v3, v2
 
     :goto_0
-    if-ge v0, v2, :cond_0
+    if-ge v3, v5, :cond_0
 
-    .line 123
-    aget-object v3, v1, v0
+    .line 116
+    aget-object v0, v4, v3
 
-    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
-    move-result v3
+    move-result v0
 
-    .line 124
-    sget v4, Lcom/tencent/mm/d/b/ap;->aWo:I
+    .line 117
+    sget v6, Lcom/tencent/mm/d/b/ap;->aOu:I
 
-    if-ne v4, v3, :cond_3
+    if-ne v6, v0, :cond_3
 
-    .line 125
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    .line 118
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-object v3
+    move-result-wide v6
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ap;->field_wechatId:Ljava/lang/String;
+    iput-wide v6, p0, Lcom/tencent/mm/d/b/ap;->field_msgId:J
 
-    .line 122
+    .line 119
+    iput-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aOp:Z
+
+    .line 115
     :cond_2
     :goto_1
-    add-int/lit8 v0, v0, 0x1
+    add-int/lit8 v0, v3, 0x1
+
+    move v3, v0
 
     goto :goto_0
 
-    .line 127
+    .line 121
     :cond_3
-    sget v4, Lcom/tencent/mm/d/b/ap;->aWp:I
+    sget v6, Lcom/tencent/mm/d/b/ap;->aYZ:I
 
-    if-ne v4, v3, :cond_4
+    if-ne v6, v0, :cond_4
+
+    .line 122
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/d/b/ap;->field_gameMsgId:Ljava/lang/String;
+
+    goto :goto_1
+
+    .line 124
+    :cond_4
+    sget v6, Lcom/tencent/mm/d/b/ap;->aPd:I
+
+    if-ne v6, v0, :cond_5
+
+    .line 125
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/d/b/ap;->field_msgType:I
+
+    goto :goto_1
+
+    .line 127
+    :cond_5
+    sget v6, Lcom/tencent/mm/d/b/ap;->aMc:I
+
+    if-ne v6, v0, :cond_6
 
     .line 128
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-object v3
+    move-result-wide v6
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ap;->field_linkedInId:Ljava/lang/String;
+    iput-wide v6, p0, Lcom/tencent/mm/d/b/ap;->field_createTime:J
 
     goto :goto_1
 
     .line 130
-    :cond_4
-    sget v4, Lcom/tencent/mm/d/b/ap;->aPy:I
+    :cond_6
+    sget v6, Lcom/tencent/mm/d/b/ap;->aZa:I
 
-    if-ne v4, v3, :cond_5
+    if-ne v6, v0, :cond_7
 
     .line 131
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-object v3
+    move-result-wide v6
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ap;->field_name:Ljava/lang/String;
+    iput-wide v6, p0, Lcom/tencent/mm/d/b/ap;->field_expireTime:J
 
     goto :goto_1
 
     .line 133
-    :cond_5
-    sget v4, Lcom/tencent/mm/d/b/ap;->aWq:I
+    :cond_7
+    sget v6, Lcom/tencent/mm/d/b/ap;->aMJ:I
 
-    if-ne v4, v3, :cond_6
+    if-ne v6, v0, :cond_8
 
     .line 134
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v0
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ap;->field_position:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/d/b/ap;->field_appId:Ljava/lang/String;
 
     goto :goto_1
 
     .line 136
-    :cond_6
-    sget v4, Lcom/tencent/mm/d/b/ap;->aWr:I
+    :cond_8
+    sget v6, Lcom/tencent/mm/d/b/ap;->aZb:I
 
-    if-ne v4, v3, :cond_7
+    if-ne v6, v0, :cond_a
 
     .line 137
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result-object v3
+    move-result v0
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ap;->field_picUrl:Ljava/lang/String;
+    if-eqz v0, :cond_9
+
+    move v0, v1
+
+    :goto_2
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->field_showInMsgList:Z
 
     goto :goto_1
+
+    :cond_9
+    move v0, v2
+
+    goto :goto_2
 
     .line 139
-    :cond_7
-    sget v4, Lcom/tencent/mm/d/b/ap;->aWs:I
+    :cond_a
+    sget v6, Lcom/tencent/mm/d/b/ap;->aZc:I
 
-    if-ne v4, v3, :cond_8
+    if-ne v6, v0, :cond_c
 
     .line 140
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result-object v3
+    move-result v0
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ap;->field_wechatUsername:Ljava/lang/String;
+    if-eqz v0, :cond_b
+
+    move v0, v1
+
+    :goto_3
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->field_isRead:Z
 
     goto :goto_1
 
-    .line 142
-    :cond_8
-    sget v4, Lcom/tencent/mm/d/b/ap;->aWt:I
+    :cond_b
+    move v0, v2
 
-    if-ne v4, v3, :cond_9
+    goto :goto_3
+
+    .line 142
+    :cond_c
+    sget v6, Lcom/tencent/mm/d/b/ap;->aZd:I
+
+    if-ne v6, v0, :cond_d
 
     .line 143
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v0
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ap;->field_wechatSmallHead:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/d/b/ap;->field_label:Ljava/lang/String;
 
     goto :goto_1
 
     .line 145
-    :cond_9
-    sget v4, Lcom/tencent/mm/d/b/ap;->aWu:I
+    :cond_d
+    sget v6, Lcom/tencent/mm/d/b/ap;->aZe:I
 
-    if-ne v4, v3, :cond_a
+    if-ne v6, v0, :cond_f
 
     .line 146
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result-object v3
+    move-result v0
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ap;->field_wechatBigHead:Ljava/lang/String;
+    if-eqz v0, :cond_e
+
+    move v0, v1
+
+    :goto_4
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ap;->field_isHidden:Z
 
     goto :goto_1
 
-    .line 148
-    :cond_a
-    sget v4, Lcom/tencent/mm/d/b/ap;->aWv:I
+    :cond_e
+    move v0, v2
 
-    if-ne v4, v3, :cond_b
+    goto :goto_4
+
+    .line 148
+    :cond_f
+    sget v6, Lcom/tencent/mm/d/b/ap;->aLF:I
+
+    if-ne v6, v0, :cond_10
 
     .line 149
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result-object v3
+    move-result-object v0
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ap;->field_linkedInProfileUrl:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/d/b/ap;->field_rawXML:Ljava/lang/String;
 
     goto :goto_1
 
     .line 151
-    :cond_b
-    sget v4, Lcom/tencent/mm/d/b/ap;->aIR:I
+    :cond_10
+    sget v6, Lcom/tencent/mm/d/b/ap;->aLG:I
 
-    if-ne v4, v3, :cond_c
+    if-ne v6, v0, :cond_2
 
     .line 152
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {p1, v3}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result v3
+    move-result-wide v6
 
-    iput v3, p0, Lcom/tencent/mm/d/b/ap;->field_status:I
-
-    goto :goto_1
-
-    .line 154
-    :cond_c
-    sget v4, Lcom/tencent/mm/d/b/ap;->aWw:I
-
-    if-ne v4, v3, :cond_d
-
-    .line 155
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v3
-
-    iput v3, p0, Lcom/tencent/mm/d/b/ap;->field_userOpStatus:I
-
-    goto :goto_1
-
-    .line 157
-    :cond_d
-    sget v4, Lcom/tencent/mm/d/b/ap;->aLe:I
-
-    if-ne v4, v3, :cond_e
-
-    .line 158
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ap;->field_nickname:Ljava/lang/String;
-
-    goto :goto_1
-
-    .line 160
-    :cond_e
-    sget v4, Lcom/tencent/mm/d/b/ap;->aHH:I
-
-    if-ne v4, v3, :cond_2
-
-    .line 161
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v3
-
-    iput-wide v3, p0, Lcom/tencent/mm/d/b/ap;->ibV:J
+    iput-wide v6, p0, Lcom/tencent/mm/d/b/ap;->jYv:J
 
     goto/16 :goto_1
 .end method
 
-.method public final mA()Landroid/content/ContentValues;
+.method public final lX()Landroid/content/ContentValues;
     .locals 5
 
     .prologue
-    .line 167
+    .line 158
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 169
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aWf:Z
+    .line 160
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aOp:Z
 
     if-eqz v1, :cond_0
 
-    .line 170
-    const-string/jumbo v1, "wechatId"
+    .line 161
+    const-string/jumbo v1, "msgId"
 
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_wechatId:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 173
-    :cond_0
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aWg:Z
-
-    if-eqz v1, :cond_1
-
-    .line 174
-    const-string/jumbo v1, "linkedInId"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_linkedInId:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 177
-    :cond_1
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aPi:Z
-
-    if-eqz v1, :cond_2
-
-    .line 178
-    const-string/jumbo v1, "name"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_name:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 181
-    :cond_2
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aWh:Z
-
-    if-eqz v1, :cond_3
-
-    .line 182
-    const-string/jumbo v1, "position"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_position:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 185
-    :cond_3
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aWi:Z
-
-    if-eqz v1, :cond_4
-
-    .line 186
-    const-string/jumbo v1, "picUrl"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_picUrl:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 189
-    :cond_4
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aWj:Z
-
-    if-eqz v1, :cond_5
-
-    .line 190
-    const-string/jumbo v1, "wechatUsername"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_wechatUsername:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 193
-    :cond_5
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aWk:Z
-
-    if-eqz v1, :cond_6
-
-    .line 194
-    const-string/jumbo v1, "wechatSmallHead"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_wechatSmallHead:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 197
-    :cond_6
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aWl:Z
-
-    if-eqz v1, :cond_7
-
-    .line 198
-    const-string/jumbo v1, "wechatBigHead"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_wechatBigHead:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 201
-    :cond_7
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aWm:Z
-
-    if-eqz v1, :cond_8
-
-    .line 202
-    const-string/jumbo v1, "linkedInProfileUrl"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_linkedInProfileUrl:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 205
-    :cond_8
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aID:Z
-
-    if-eqz v1, :cond_9
-
-    .line 206
-    const-string/jumbo v1, "status"
-
-    iget v2, p0, Lcom/tencent/mm/d/b/ap;->field_status:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 209
-    :cond_9
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aWn:Z
-
-    if-eqz v1, :cond_a
-
-    .line 210
-    const-string/jumbo v1, "userOpStatus"
-
-    iget v2, p0, Lcom/tencent/mm/d/b/ap;->field_userOpStatus:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 213
-    :cond_a
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aLa:Z
-
-    if-eqz v1, :cond_b
-
-    .line 214
-    const-string/jumbo v1, "nickname"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_nickname:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 217
-    :cond_b
-    iget-wide v1, p0, Lcom/tencent/mm/d/b/ap;->ibV:J
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v1, v1, v3
-
-    if-lez v1, :cond_c
-
-    .line 218
-    const-string/jumbo v1, "rowid"
-
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/ap;->ibV:J
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/ap;->field_msgId:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -690,7 +528,204 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 220
+    .line 164
+    :cond_0
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aYT:Z
+
+    if-eqz v1, :cond_1
+
+    .line 165
+    const-string/jumbo v1, "gameMsgId"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_gameMsgId:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 168
+    :cond_1
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aOP:Z
+
+    if-eqz v1, :cond_2
+
+    .line 169
+    const-string/jumbo v1, "msgType"
+
+    iget v2, p0, Lcom/tencent/mm/d/b/ap;->field_msgType:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 172
+    :cond_2
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aLK:Z
+
+    if-eqz v1, :cond_3
+
+    .line 173
+    const-string/jumbo v1, "createTime"
+
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/ap;->field_createTime:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 176
+    :cond_3
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aYU:Z
+
+    if-eqz v1, :cond_4
+
+    .line 177
+    const-string/jumbo v1, "expireTime"
+
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/ap;->field_expireTime:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 180
+    :cond_4
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aMv:Z
+
+    if-eqz v1, :cond_5
+
+    .line 181
+    const-string/jumbo v1, "appId"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_appId:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 184
+    :cond_5
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aYV:Z
+
+    if-eqz v1, :cond_6
+
+    .line 185
+    const-string/jumbo v1, "showInMsgList"
+
+    iget-boolean v2, p0, Lcom/tencent/mm/d/b/ap;->field_showInMsgList:Z
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    .line 188
+    :cond_6
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aYW:Z
+
+    if-eqz v1, :cond_7
+
+    .line 189
+    const-string/jumbo v1, "isRead"
+
+    iget-boolean v2, p0, Lcom/tencent/mm/d/b/ap;->field_isRead:Z
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    .line 192
+    :cond_7
+    iget-object v1, p0, Lcom/tencent/mm/d/b/ap;->field_label:Ljava/lang/String;
+
+    if-nez v1, :cond_8
+
+    .line 193
+    const-string/jumbo v1, ""
+
+    iput-object v1, p0, Lcom/tencent/mm/d/b/ap;->field_label:Ljava/lang/String;
+
+    .line 195
+    :cond_8
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aYX:Z
+
+    if-eqz v1, :cond_9
+
+    .line 196
+    const-string/jumbo v1, "label"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_label:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 199
+    :cond_9
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aYY:Z
+
+    if-eqz v1, :cond_a
+
+    .line 200
+    const-string/jumbo v1, "isHidden"
+
+    iget-boolean v2, p0, Lcom/tencent/mm/d/b/ap;->field_isHidden:Z
+
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
+
+    .line 203
+    :cond_a
+    iget-object v1, p0, Lcom/tencent/mm/d/b/ap;->field_rawXML:Ljava/lang/String;
+
+    if-nez v1, :cond_b
+
+    .line 204
+    const-string/jumbo v1, ""
+
+    iput-object v1, p0, Lcom/tencent/mm/d/b/ap;->field_rawXML:Ljava/lang/String;
+
+    .line 206
+    :cond_b
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ap;->aLw:Z
+
+    if-eqz v1, :cond_c
+
+    .line 207
+    const-string/jumbo v1, "rawXML"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/ap;->field_rawXML:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 210
     :cond_c
+    iget-wide v1, p0, Lcom/tencent/mm/d/b/ap;->jYv:J
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
+
+    if-lez v1, :cond_d
+
+    .line 211
+    const-string/jumbo v1, "rowid"
+
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/ap;->jYv:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 213
+    :cond_d
     return-object v0
 .end method

@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/bv;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -13,15 +13,15 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public axd:Lcom/tencent/mm/d/a/bv$a;
+.field public avi:Lcom/tencent/mm/d/a/bv$a;
 
-.field public axe:Lcom/tencent/mm/d/a/bv$b;
+.field public avj:Lcom/tencent/mm/d/a/bv$b;
 
 
 # direct methods
@@ -32,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/bv;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/bv;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/bv;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/bv;->arR:Z
 
     return-void
 .end method
@@ -45,30 +45,30 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/bv$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/bv$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/bv;->axd:Lcom/tencent/mm/d/a/bv$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/bv;->avi:Lcom/tencent/mm/d/a/bv$a;
 
-    .line 21
+    .line 20
     new-instance v0, Lcom/tencent/mm/d/a/bv$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/bv$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/bv;->axe:Lcom/tencent/mm/d/a/bv$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/bv;->avj:Lcom/tencent/mm/d/a/bv$b;
 
     .line 8
-    const-string/jumbo v0, "ExtOpenApiCall"
+    const-string/jumbo v0, "ExDeviceGetTicket"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/bv;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/bv;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/bv;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bv;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bv;->jUI:Z
 
     return-void
 .end method

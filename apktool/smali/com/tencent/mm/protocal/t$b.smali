@@ -1,9 +1,9 @@
 .class public final Lcom/tencent/mm/protocal/t$b;
-.super Lcom/tencent/mm/protocal/i$d;
+.super Lcom/tencent/mm/protocal/h$d;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/protocal/i$b;
+.implements Lcom/tencent/mm/protocal/h$b;
 
 
 # annotations
@@ -17,13 +17,24 @@
 .end annotation
 
 
+# instance fields
+.field public iVk:Lcom/tencent/mm/protocal/b/afb;
+
+
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 63
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/i$d;-><init>()V
+    .line 33
+    invoke-direct {p0}, Lcom/tencent/mm/protocal/h$d;-><init>()V
+
+    .line 35
+    new-instance v0, Lcom/tencent/mm/protocal/b/afb;
+
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/afb;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/protocal/t$b;->iVk:Lcom/tencent/mm/protocal/b/afb;
 
     return-void
 .end method
@@ -34,18 +45,33 @@
     .locals 1
 
     .prologue
-    .line 72
-    const/4 v0, -0x1
+    .line 45
+    const v0, 0x3b9aca79
 
     return v0
 .end method
 
-.method public final z([B)I
+.method public final y([B)I
     .locals 1
 
     .prologue
-    .line 67
-    const/4 v0, 0x0
+    .line 39
+    new-instance v0, Lcom/tencent/mm/protocal/b/afb;
+
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/afb;-><init>()V
+
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/protocal/b/afb;->am([B)Lcom/tencent/mm/at/a;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/protocal/b/afb;
+
+    iput-object v0, p0, Lcom/tencent/mm/protocal/t$b;->iVk:Lcom/tencent/mm/protocal/b/afb;
+
+    .line 40
+    iget-object v0, p0, Lcom/tencent/mm/protocal/t$b;->iVk:Lcom/tencent/mm/protocal/b/afb;
+
+    iget v0, v0, Lcom/tencent/mm/protocal/b/afb;->iZL:I
 
     return v0
 .end method

@@ -15,10 +15,10 @@
 
 
 # virtual methods
-.method public abstract axt()V
+.method public abstract aNg()V
 .end method
 
-.method public abstract axu()V
+.method public abstract aNh()V
 .end method
 
 .method public abstract onCancel()V

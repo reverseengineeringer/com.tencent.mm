@@ -15,11 +15,7 @@
 
 
 # instance fields
-.field public azV:Ljava/lang/String;
-
-.field public azW:J
-
-.field public azX:Ljava/lang/String;
+.field public avg:J
 
 
 # direct methods

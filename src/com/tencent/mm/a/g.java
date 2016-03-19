@@ -1,290 +1,440 @@
 package com.tencent.mm.a;
 
+import java.io.File;
+import java.io.InputStream;
+import java.security.MessageDigest;
+
 public final class g
 {
-  public static char a(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2, long paramLong, int paramInt1, byte[] paramArrayOfByte3, int paramInt2)
+  /* Error */
+  private static String a(File paramFile, int paramInt1, int paramInt2)
   {
-    paramArrayOfByte1 = new f(paramArrayOfByte1);
-    paramArrayOfByte2 = new f(paramArrayOfByte2);
-    f[] arrayOff = new f[16];
+    // Byte code:
+    //   0: aload_0
+    //   1: invokevirtual 16	java/io/File:exists	()Z
+    //   4: ifne +5 -> 9
+    //   7: aconst_null
+    //   8: areturn
+    //   9: new 18	java/io/FileInputStream
+    //   12: dup
+    //   13: aload_0
+    //   14: invokespecial 22	java/io/FileInputStream:<init>	(Ljava/io/File;)V
+    //   17: astore_0
+    //   18: aload_0
+    //   19: ldc 23
+    //   21: iconst_0
+    //   22: sipush 256
+    //   25: aconst_null
+    //   26: invokestatic 26	com/tencent/mm/a/g:a	(Ljava/io/InputStream;III[B)Ljava/lang/String;
+    //   29: astore_3
+    //   30: aload_0
+    //   31: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   34: aload_0
+    //   35: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   38: aload_3
+    //   39: areturn
+    //   40: astore_0
+    //   41: aconst_null
+    //   42: astore_0
+    //   43: aload_0
+    //   44: ifnull -37 -> 7
+    //   47: aload_0
+    //   48: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   51: aconst_null
+    //   52: areturn
+    //   53: astore_0
+    //   54: aconst_null
+    //   55: areturn
+    //   56: astore_3
+    //   57: aconst_null
+    //   58: astore_0
+    //   59: aload_0
+    //   60: ifnull +7 -> 67
+    //   63: aload_0
+    //   64: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   67: aload_3
+    //   68: athrow
+    //   69: astore_0
+    //   70: goto -32 -> 38
+    //   73: astore_0
+    //   74: goto -7 -> 67
+    //   77: astore_3
+    //   78: goto -19 -> 59
+    //   81: astore_3
+    //   82: goto -39 -> 43
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	85	0	paramFile	File
+    //   0	85	1	paramInt1	int
+    //   0	85	2	paramInt2	int
+    //   29	10	3	str	String
+    //   56	12	3	localObject1	Object
+    //   77	1	3	localObject2	Object
+    //   81	1	3	localException	Exception
+    // Exception table:
+    //   from	to	target	type
+    //   9	18	40	java/lang/Exception
+    //   47	51	53	java/io/IOException
+    //   9	18	56	finally
+    //   34	38	69	java/io/IOException
+    //   63	67	73	java/io/IOException
+    //   18	34	77	finally
+    //   18	34	81	java/lang/Exception
+  }
+  
+  /* Error */
+  public static String a(File paramFile, int paramInt, byte[] paramArrayOfByte)
+  {
+    // Byte code:
+    //   0: aload_0
+    //   1: invokevirtual 16	java/io/File:exists	()Z
+    //   4: ifeq +7 -> 11
+    //   7: iload_1
+    //   8: ifgt +5 -> 13
+    //   11: aconst_null
+    //   12: areturn
+    //   13: new 18	java/io/FileInputStream
+    //   16: dup
+    //   17: aload_0
+    //   18: invokespecial 22	java/io/FileInputStream:<init>	(Ljava/io/File;)V
+    //   21: astore_0
+    //   22: aload_0
+    //   23: ldc 23
+    //   25: iconst_0
+    //   26: iload_1
+    //   27: aload_2
+    //   28: invokestatic 26	com/tencent/mm/a/g:a	(Ljava/io/InputStream;III[B)Ljava/lang/String;
+    //   31: astore_2
+    //   32: aload_0
+    //   33: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   36: aload_0
+    //   37: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   40: aload_2
+    //   41: areturn
+    //   42: astore_0
+    //   43: aload_2
+    //   44: areturn
+    //   45: astore_0
+    //   46: aconst_null
+    //   47: astore_0
+    //   48: aload_0
+    //   49: ifnull +7 -> 56
+    //   52: aload_0
+    //   53: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   56: aconst_null
+    //   57: areturn
+    //   58: astore_2
+    //   59: aconst_null
+    //   60: astore_0
+    //   61: aload_0
+    //   62: ifnull +7 -> 69
+    //   65: aload_0
+    //   66: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   69: aload_2
+    //   70: athrow
+    //   71: astore_0
+    //   72: goto -16 -> 56
+    //   75: astore_0
+    //   76: goto -7 -> 69
+    //   79: astore_2
+    //   80: goto -19 -> 61
+    //   83: astore_2
+    //   84: goto -36 -> 48
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	87	0	paramFile	File
+    //   0	87	1	paramInt	int
+    //   0	87	2	paramArrayOfByte	byte[]
+    // Exception table:
+    //   from	to	target	type
+    //   36	40	42	java/io/IOException
+    //   13	22	45	java/lang/Exception
+    //   13	22	58	finally
+    //   52	56	71	java/io/IOException
+    //   65	69	75	java/io/IOException
+    //   22	36	79	finally
+    //   22	36	83	java/lang/Exception
+  }
+  
+  public static final String a(InputStream paramInputStream, int paramInt)
+  {
     int i = 0;
-    while (i < 16)
-    {
-      arrayOff[i] = new f(new byte[48]);
-      i += 1;
+    if ((paramInputStream == null) || (paramInt <= 0)) {
+      return null;
     }
-    f localf1 = new f(new byte['Ā']);
-    f localf2 = new f(new byte[24]);
-    f localf3 = new f(new byte[64]);
-    f localf4 = new f();
-    f localf5 = new f();
-    f localf6 = new f();
-    f localf7 = new f();
-    f localf8 = new f(new byte[64]);
-    f localf9 = new f(new byte[48]);
-    f localf10 = new f(new byte[32]);
-    f localf11 = new f(new byte[9]);
-    f localf12 = new f(new byte[8]);
-    long l;
-    if ((paramArrayOfByte3 != null) && (paramArrayOfByte3.length > 0))
+    try
     {
-      l = 7L + paramLong & 0xFFFFFFFFFFFFFFF8;
-      if (l != 0L) {}
-    }
-    else
-    {
-      return '\000';
-    }
-    amJ = 0;
-    amI = amI;
-    amJ = 28;
-    amI = amI;
-    amJ = 0;
-    amI = amI;
-    amJ = 32;
-    amI = amI;
-    a(localf2, 24);
-    paramArrayOfByte3 = new f(paramArrayOfByte3);
-    i = paramInt1;
-    if (paramInt1 > 24) {
-      i = 24;
-    }
-    d(localf2, paramArrayOfByte3, i);
-    paramArrayOfByte3 = new byte[16];
-    byte[] tmp348_346 = paramArrayOfByte3;
-    tmp348_346[0] = 1;
-    byte[] tmp353_348 = tmp348_346;
-    tmp353_348[1] = 1;
-    byte[] tmp358_353 = tmp353_348;
-    tmp358_353[2] = 2;
-    byte[] tmp363_358 = tmp358_353;
-    tmp363_358[3] = 2;
-    byte[] tmp368_363 = tmp363_358;
-    tmp368_363[4] = 2;
-    byte[] tmp373_368 = tmp368_363;
-    tmp373_368[5] = 2;
-    byte[] tmp378_373 = tmp373_368;
-    tmp378_373[6] = 2;
-    byte[] tmp384_378 = tmp378_373;
-    tmp384_378[7] = 2;
-    byte[] tmp390_384 = tmp384_378;
-    tmp390_384[8] = 1;
-    byte[] tmp396_390 = tmp390_384;
-    tmp396_390[9] = 2;
-    byte[] tmp402_396 = tmp396_390;
-    tmp402_396[10] = 2;
-    byte[] tmp408_402 = tmp402_396;
-    tmp408_402[11] = 2;
-    byte[] tmp414_408 = tmp408_402;
-    tmp414_408[12] = 2;
-    byte[] tmp420_414 = tmp414_408;
-    tmp420_414[13] = 2;
-    byte[] tmp426_420 = tmp420_414;
-    tmp426_420[14] = 2;
-    byte[] tmp432_426 = tmp426_420;
-    tmp432_426[15] = 1;
-    tmp432_426;
-    b(localf3, localf2, 64);
-    a(localf3, localf3, new byte[] { 57, 49, 41, 33, 25, 17, 9, 1, 58, 50, 42, 34, 26, 18, 10, 2, 59, 51, 43, 35, 27, 19, 11, 3, 60, 52, 44, 36, 63, 55, 47, 39, 31, 23, 15, 7, 62, 54, 46, 38, 30, 22, 14, 6, 61, 53, 45, 37, 29, 21, 13, 5, 28, 20, 12, 4 }, 56, localf1);
-    paramInt1 = 0;
-    while (paramInt1 < 16)
-    {
-      c(localf4, localf1, paramArrayOfByte3[paramInt1]);
-      c(localf5, localf1, paramArrayOfByte3[paramInt1]);
-      a(arrayOff[paramInt1], localf3, new byte[] { 14, 17, 11, 24, 1, 5, 3, 28, 15, 6, 21, 10, 23, 19, 12, 4, 26, 8, 16, 7, 27, 20, 13, 2, 41, 52, 31, 37, 47, 55, 30, 40, 51, 45, 33, 48, 44, 49, 39, 56, 34, 53, 46, 42, 50, 36, 29, 32 }, 48, localf1);
-      paramInt1 += 1;
-    }
-    paramInt1 = amJ;
-    i = amJ;
-    if (paramInt2 == 0)
-    {
-      a(paramArrayOfByte1, tmp348_346, arrayOff, paramInt2, localf8, localf9, localf10, localf6, localf7, localf1);
-      d(tmp353_348, paramArrayOfByte1, 8);
-      amJ += 8;
-      paramLong = 0L;
-      while (paramLong < l >> 3)
+      MessageDigest localMessageDigest = MessageDigest.getInstance("MD5");
+      StringBuilder localStringBuilder = new StringBuilder(32);
+      byte[] arrayOfByte = new byte[paramInt];
+      for (;;)
       {
-        a(tmp353_348, tmp353_348, paramArrayOfByte2);
-        a(paramArrayOfByte1, tmp353_348, arrayOff, paramInt2, localf8, localf9, localf10, localf6, localf7, localf1);
-        d(tmp353_348, paramArrayOfByte1, 8);
-        paramLong += 1L;
-        amJ += 8;
-        amJ += 8;
+        paramInt = paramInputStream.read(arrayOfByte);
+        if (paramInt == -1) {
+          break;
+        }
+        localMessageDigest.update(arrayOfByte, 0, paramInt);
       }
-    }
-    d(tmp348_346, paramArrayOfByte2, 8);
-    amJ += 8;
-    for (paramLong = 1L; paramLong < l >> 3; paramLong = 1L + paramLong)
-    {
-      a(tmp353_348, paramArrayOfByte2, arrayOff, paramInt2, localf8, localf9, localf10, localf6, localf7, localf1);
-      a(paramArrayOfByte1, tmp353_348, tmp348_346);
-      d(tmp348_346, paramArrayOfByte2, 8);
-      amJ += 8;
-      amJ += 8;
-    }
-    amJ = paramInt1;
-    amJ = i;
-    return '\001';
-  }
-  
-  private static void a(f paramf, int paramInt)
-  {
-    int i = 0;
-    while (i < paramInt)
-    {
-      amI[(amJ + i)] = 0;
-      i += 1;
-    }
-  }
-  
-  private static void a(f paramf1, f paramf2, int paramInt)
-  {
-    int i = 0;
-    while (i < paramInt)
-    {
-      byte[] arrayOfByte = amI;
-      int j = amJ + i;
-      arrayOfByte[j] = ((byte)(arrayOfByte[j] ^ amI[(amJ + i)]));
-      i += 1;
-    }
-  }
-  
-  private static void a(f paramf1, f paramf2, f paramf3)
-  {
-    int i = 0;
-    while (i < 8)
-    {
-      amI[(amJ + i)] = ((byte)(amI[(amJ + i)] ^ amI[(amJ + i)]));
-      i += 1;
-    }
-  }
-  
-  private static void a(f paramf1, f paramf2, f paramf3, f paramf4)
-  {
-    int i = 0;
-    a(paramf3, paramf1, new byte[] { 32, 1, 2, 3, 4, 5, 4, 5, 6, 7, 8, 9, 8, 9, 10, 11, 12, 13, 12, 13, 14, 15, 16, 17, 16, 17, 18, 19, 20, 21, 20, 21, 22, 23, 24, 25, 24, 25, 26, 27, 28, 29, 28, 29, 30, 31, 32, 1 }, 48, paramf4);
-    a(paramf3, paramf2, 48);
-    byte[] arrayOfByte2 = { 14, 4, 13, 1, 2, 15, 11, 8, 3, 10, 6, 12, 5, 9, 0, 7 };
-    byte[] arrayOfByte3 = { 0, 15, 7, 4, 14, 2, 13, 1, 10, 6, 12, 11, 9, 5, 3, 8 };
-    byte[] arrayOfByte4 = { 4, 1, 14, 8, 13, 6, 2, 11, 15, 12, 9, 7, 3, 10, 5, 0 };
-    byte[] arrayOfByte5 = { 3, 13, 4, 7, 15, 2, 8, 14, 12, 0, 1, 10, 6, 9, 11, 5 };
-    byte[] arrayOfByte6 = { 0, 14, 7, 11, 10, 4, 13, 1, 5, 8, 12, 6, 9, 3, 2, 15 };
-    byte[] arrayOfByte7 = { 10, 0, 9, 14, 6, 3, 15, 5, 1, 13, 12, 7, 11, 4, 2, 8 };
-    byte[] arrayOfByte8 = { 13, 7, 0, 9, 3, 4, 6, 10, 2, 8, 5, 14, 12, 11, 15, 1 };
-    byte[] arrayOfByte9 = { 13, 6, 4, 9, 8, 15, 3, 0, 11, 1, 2, 12, 5, 10, 14, 7 };
-    byte[] arrayOfByte10 = { 1, 10, 13, 0, 6, 9, 8, 7, 4, 15, 14, 3, 11, 5, 2, 12 };
-    paramf2 = new byte[] { 7, 13, 14, 3, 0, 6, 9, 10, 1, 2, 8, 5, 11, 12, 4, 15 };
-    byte[] arrayOfByte1 = { 3, 15, 0, 6, 10, 1, 13, 8, 9, 4, 5, 11, 12, 7, 2, 14 };
-    Object localObject = { 2, 12, 4, 1, 7, 10, 11, 6, 8, 5, 3, 15, 13, 0, 14, 9 };
-    byte[] arrayOfByte11 = { 11, 8, 12, 7, 1, 14, 2, 13, 6, 15, 0, 9, 10, 4, 5, 3 };
-    localObject = new byte[][] { localObject, { 14, 11, 2, 12, 4, 7, 13, 1, 5, 0, 15, 10, 3, 9, 8, 6 }, { 4, 2, 1, 11, 10, 13, 7, 8, 15, 9, 12, 5, 6, 3, 0, 14 }, arrayOfByte11 };
-    arrayOfByte11 = new byte[] { 13, 0, 11, 7, 4, 9, 1, 10, 14, 3, 5, 12, 2, 15, 8, 6 };
-    byte[] arrayOfByte12 = { 1, 4, 11, 13, 12, 3, 7, 14, 10, 15, 6, 8, 0, 5, 9, 2 };
-    byte[] arrayOfByte13 = { 6, 11, 13, 8, 1, 4, 10, 7, 9, 5, 0, 15, 14, 2, 3, 12 };
-    int j = amJ;
-    int k = amJ;
-    while (i < 8)
-    {
-      int m = (byte)((amI[(amJ + 0)] << 1) + amI[(amJ + 5)]);
-      int n = (byte)((amI[(amJ + 1)] << 3) + (amI[(amJ + 2)] << 2) + (amI[(amJ + 3)] << 1) + amI[(amJ + 4)]);
-      b(paramf1, new f(new byte[][][] { { arrayOfByte2, arrayOfByte3, arrayOfByte4, { 15, 12, 8, 2, 4, 9, 1, 7, 5, 11, 3, 14, 10, 0, 6, 13 } }, { { 15, 1, 8, 14, 6, 11, 3, 4, 9, 7, 2, 13, 12, 0, 5, 10 }, arrayOfByte5, arrayOfByte6, { 13, 8, 10, 1, 3, 15, 4, 2, 11, 6, 7, 12, 0, 5, 14, 9 } }, { arrayOfByte7, arrayOfByte8, arrayOfByte9, arrayOfByte10 }, { paramf2, { 13, 8, 11, 5, 6, 15, 0, 3, 4, 7, 2, 12, 1, 10, 14, 9 }, { 10, 6, 9, 0, 12, 11, 7, 13, 15, 1, 3, 14, 5, 2, 8, 4 }, arrayOfByte1 }, localObject, { { 12, 1, 10, 15, 9, 2, 6, 8, 0, 13, 3, 4, 14, 7, 5, 11 }, { 10, 15, 4, 2, 7, 12, 9, 5, 6, 1, 13, 14, 0, 11, 3, 8 }, { 9, 14, 15, 5, 2, 8, 12, 3, 7, 0, 4, 10, 1, 13, 11, 6 }, { 4, 3, 2, 12, 9, 5, 15, 10, 11, 14, 1, 7, 6, 0, 8, 13 } }, { { 4, 11, 2, 14, 15, 0, 8, 13, 3, 12, 9, 7, 5, 10, 6, 1 }, arrayOfByte11, arrayOfByte12, arrayOfByte13 }, { { 13, 2, 8, 4, 6, 15, 11, 1, 10, 9, 3, 14, 5, 0, 12, 7 }, { 1, 15, 13, 8, 10, 3, 7, 4, 12, 5, 6, 11, 0, 14, 9, 2 }, { 7, 11, 4, 1, 9, 12, 14, 2, 0, 6, 10, 13, 15, 3, 5, 8 }, { 2, 1, 14, 7, 4, 10, 8, 13, 15, 12, 9, 0, 3, 5, 6, 11 } } }[i][m][n]), 4);
-      i = (byte)(i + 1);
-      amJ += 6;
-      amJ += 4;
-    }
-    amJ = j;
-    amJ = k;
-    a(paramf1, paramf1, new byte[] { 16, 7, 20, 21, 29, 12, 28, 17, 1, 15, 23, 26, 5, 18, 31, 10, 2, 8, 24, 14, 32, 27, 3, 9, 19, 13, 30, 6, 22, 11, 4, 25 }, 32, paramf4);
-  }
-  
-  private static void a(f paramf1, f paramf2, byte[] paramArrayOfByte, int paramInt, f paramf3)
-  {
-    int i = 0;
-    while (i < paramInt)
-    {
-      amI[(amJ + i)] = amI[(amJ + paramArrayOfByte[i] - 1)];
-      i += 1;
-    }
-    d(paramf1, paramf3, paramInt);
-  }
-  
-  private static void a(f paramf1, f paramf2, f[] paramArrayOff, int paramInt, f paramf3, f paramf4, f paramf5, f paramf6, f paramf7, f paramf8)
-  {
-    b(paramf3, paramf2, 64);
-    a(paramf3, paramf3, new byte[] { 58, 50, 42, 34, 26, 18, 10, 2, 60, 52, 44, 36, 28, 20, 12, 4, 62, 54, 46, 38, 30, 22, 14, 6, 64, 56, 48, 40, 32, 24, 16, 8, 57, 49, 41, 33, 25, 17, 9, 1, 59, 51, 43, 35, 27, 19, 11, 3, 61, 53, 45, 37, 29, 21, 13, 5, 63, 55, 47, 39, 31, 23, 15, 7 }, 64, paramf8);
-    if (paramInt == 0)
-    {
-      paramInt = 0;
-      while (paramInt < 16)
+      paramInputStream = localMessageDigest.digest();
+      paramInt = i;
+      while (paramInt < paramInputStream.length)
       {
-        d(paramf5, paramf7, 32);
-        a(paramf7, paramArrayOff[paramInt], paramf4, paramf8);
-        a(paramf7, paramf6, 32);
-        d(paramf6, paramf5, 32);
+        localStringBuilder.append(Integer.toString((paramInputStream[paramInt] & 0xFF) + 256, 16).substring(1));
         paramInt += 1;
       }
+      paramInputStream = localStringBuilder.toString();
+      return paramInputStream;
     }
-    paramInt = 15;
-    while (paramInt >= 0)
-    {
-      d(paramf5, paramf6, 32);
-      a(paramf6, paramArrayOff[paramInt], paramf4, paramf8);
-      a(paramf6, paramf7, 32);
-      d(paramf7, paramf5, 32);
-      paramInt -= 1;
-    }
-    a(paramf3, paramf3, new byte[] { 40, 8, 48, 16, 56, 24, 64, 32, 39, 7, 47, 15, 55, 23, 63, 31, 38, 6, 46, 14, 54, 22, 62, 30, 37, 5, 45, 13, 53, 21, 61, 29, 36, 4, 44, 12, 52, 20, 60, 28, 35, 3, 43, 11, 51, 19, 59, 27, 34, 2, 42, 10, 50, 18, 58, 26, 33, 1, 41, 9, 49, 17, 57, 25 }, 64, paramf8);
-    a(paramf1, 8);
-    paramInt = 0;
-    while (paramInt < 64)
-    {
-      paramf2 = amI;
-      int i = amJ + (paramInt >> 3);
-      paramf2[i] = ((byte)(paramf2[i] | amI[(amJ + paramInt)] << (paramInt & 0x7)));
-      paramInt += 1;
-    }
+    catch (Exception paramInputStream) {}
+    return null;
   }
   
-  private static void b(f paramf1, f paramf2, int paramInt)
+  private static String a(InputStream paramInputStream, int paramInt1, int paramInt2, int paramInt3, byte[] paramArrayOfByte)
   {
     int i = 0;
-    while (i < paramInt)
-    {
-      amI[(amJ + i)] = ((byte)(amI[((i >> 3) + amJ)] >> (i & 0x7) & 0x1));
-      i += 1;
-    }
-  }
-  
-  private static void c(f paramf1, f paramf2, int paramInt)
-  {
-    int k = 0;
-    d(paramf2, paramf1, paramInt);
-    int i = 0;
-    int j;
+    if ((paramInt2 < 0) || (paramInt3 <= 0)) {}
     for (;;)
     {
-      j = k;
-      if (i >= 28 - paramInt) {
-        break;
+      return null;
+      long l = paramInt2;
+      try
+      {
+        if (paramInputStream.skip(l) >= paramInt2)
+        {
+          MessageDigest localMessageDigest = MessageDigest.getInstance("MD5");
+          StringBuilder localStringBuilder = new StringBuilder(32);
+          byte[] arrayOfByte = new byte[102400];
+          paramInt1 = 0;
+          for (;;)
+          {
+            paramInt2 = paramInputStream.read(arrayOfByte);
+            if ((paramInt2 == -1) || (paramInt1 >= paramInt3)) {
+              break;
+            }
+            if (paramInt1 + paramInt2 <= paramInt3)
+            {
+              localMessageDigest.update(arrayOfByte, 0, paramInt2);
+              paramInt1 += paramInt2;
+            }
+            else
+            {
+              localMessageDigest.update(arrayOfByte, 0, paramInt3 - paramInt1);
+              paramInt1 = paramInt3;
+            }
+          }
+          if ((paramArrayOfByte != null) && (paramArrayOfByte.length > 0)) {
+            localMessageDigest.update(paramArrayOfByte);
+          }
+          paramInputStream = localMessageDigest.digest();
+          paramInt1 = i;
+          while (paramInt1 < paramInputStream.length)
+          {
+            localStringBuilder.append(Integer.toString((paramInputStream[paramInt1] & 0xFF) + 256, 16).substring(1));
+            paramInt1 += 1;
+          }
+          paramInputStream = localStringBuilder.toString();
+          return paramInputStream;
+        }
       }
-      amI[(amJ + i)] = amI[(amJ + i + paramInt)];
-      i += 1;
+      catch (Exception paramInputStream) {}
     }
-    while (j < paramInt)
+    return null;
+  }
+  
+  public static String aC(String paramString)
+  {
+    if (paramString == null) {}
+    do
     {
-      amI[(amJ + j + 28 - paramInt)] = amI[(amJ + j)];
-      j += 1;
+      return null;
+      paramString = new File(paramString);
+    } while (!paramString.exists());
+    return g(paramString);
+  }
+  
+  public static String aD(String paramString)
+  {
+    if (paramString == null) {}
+    do
+    {
+      return null;
+      paramString = new File(paramString);
+    } while (!paramString.exists());
+    return a(paramString, 0, 256);
+  }
+  
+  /* Error */
+  public static String g(File paramFile)
+  {
+    // Byte code:
+    //   0: ldc2_w 99
+    //   3: lstore_1
+    //   4: aload_0
+    //   5: ifnull +10 -> 15
+    //   8: aload_0
+    //   9: invokevirtual 16	java/io/File:exists	()Z
+    //   12: ifne +5 -> 17
+    //   15: aconst_null
+    //   16: areturn
+    //   17: new 18	java/io/FileInputStream
+    //   20: dup
+    //   21: aload_0
+    //   22: invokespecial 22	java/io/FileInputStream:<init>	(Ljava/io/File;)V
+    //   25: astore_3
+    //   26: ldc2_w 99
+    //   29: aload_0
+    //   30: invokevirtual 104	java/io/File:length	()J
+    //   33: lcmp
+    //   34: ifgt +23 -> 57
+    //   37: aload_3
+    //   38: lload_1
+    //   39: l2i
+    //   40: invokestatic 106	com/tencent/mm/a/g:a	(Ljava/io/InputStream;I)Ljava/lang/String;
+    //   43: astore_0
+    //   44: aload_3
+    //   45: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   48: aload_3
+    //   49: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   52: aload_0
+    //   53: areturn
+    //   54: astore_3
+    //   55: aload_0
+    //   56: areturn
+    //   57: aload_0
+    //   58: invokevirtual 104	java/io/File:length	()J
+    //   61: lstore_1
+    //   62: goto -25 -> 37
+    //   65: astore_0
+    //   66: aconst_null
+    //   67: astore_0
+    //   68: aload_0
+    //   69: ifnull +7 -> 76
+    //   72: aload_0
+    //   73: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   76: aconst_null
+    //   77: areturn
+    //   78: astore_0
+    //   79: aconst_null
+    //   80: astore_3
+    //   81: aload_3
+    //   82: ifnull +7 -> 89
+    //   85: aload_3
+    //   86: invokevirtual 30	java/io/FileInputStream:close	()V
+    //   89: aload_0
+    //   90: athrow
+    //   91: astore_0
+    //   92: goto -16 -> 76
+    //   95: astore_3
+    //   96: goto -7 -> 89
+    //   99: astore_0
+    //   100: goto -19 -> 81
+    //   103: astore_0
+    //   104: aload_3
+    //   105: astore_0
+    //   106: goto -38 -> 68
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	109	0	paramFile	File
+    //   3	59	1	l	long
+    //   25	24	3	localFileInputStream	java.io.FileInputStream
+    //   54	1	3	localIOException1	java.io.IOException
+    //   80	6	3	localObject	Object
+    //   95	10	3	localIOException2	java.io.IOException
+    // Exception table:
+    //   from	to	target	type
+    //   48	52	54	java/io/IOException
+    //   17	26	65	java/lang/Exception
+    //   17	26	78	finally
+    //   72	76	91	java/io/IOException
+    //   85	89	95	java/io/IOException
+    //   26	37	99	finally
+    //   37	48	99	finally
+    //   57	62	99	finally
+    //   26	37	103	java/lang/Exception
+    //   37	48	103	java/lang/Exception
+    //   57	62	103	java/lang/Exception
+  }
+  
+  public static final String m(byte[] paramArrayOfByte)
+  {
+    int i = 0;
+    char[] arrayOfChar = new char[16];
+    char[] tmp10_8 = arrayOfChar;
+    tmp10_8[0] = 48;
+    char[] tmp15_10 = tmp10_8;
+    tmp15_10[1] = 49;
+    char[] tmp20_15 = tmp15_10;
+    tmp20_15[2] = 50;
+    char[] tmp25_20 = tmp20_15;
+    tmp25_20[3] = 51;
+    char[] tmp30_25 = tmp25_20;
+    tmp30_25[4] = 52;
+    char[] tmp35_30 = tmp30_25;
+    tmp35_30[5] = 53;
+    char[] tmp40_35 = tmp35_30;
+    tmp40_35[6] = 54;
+    char[] tmp46_40 = tmp40_35;
+    tmp46_40[7] = 55;
+    char[] tmp52_46 = tmp46_40;
+    tmp52_46[8] = 56;
+    char[] tmp58_52 = tmp52_46;
+    tmp58_52[9] = 57;
+    char[] tmp64_58 = tmp58_52;
+    tmp64_58[10] = 97;
+    char[] tmp70_64 = tmp64_58;
+    tmp70_64[11] = 98;
+    char[] tmp76_70 = tmp70_64;
+    tmp76_70[12] = 99;
+    char[] tmp82_76 = tmp76_70;
+    tmp82_76[13] = 100;
+    char[] tmp88_82 = tmp82_76;
+    tmp88_82[14] = 101;
+    char[] tmp94_88 = tmp88_82;
+    tmp94_88[15] = 102;
+    tmp94_88;
+    for (;;)
+    {
+      Object localObject;
+      int k;
+      int j;
+      try
+      {
+        localObject = MessageDigest.getInstance("MD5");
+        ((MessageDigest)localObject).update(paramArrayOfByte);
+        paramArrayOfByte = ((MessageDigest)localObject).digest();
+        k = paramArrayOfByte.length;
+        localObject = new char[k * 2];
+        j = 0;
+      }
+      catch (Exception paramArrayOfByte)
+      {
+        return null;
+      }
+      paramArrayOfByte = new String((char[])localObject);
+      return paramArrayOfByte;
+      while (i < k)
+      {
+        int m = paramArrayOfByte[i];
+        int n = j + 1;
+        localObject[j] = arrayOfChar[(m >>> 4 & 0xF)];
+        j = n + 1;
+        localObject[n] = arrayOfChar[(m & 0xF)];
+        i += 1;
+      }
     }
   }
   
-  private static void d(f paramf1, f paramf2, int paramInt)
+  public static final byte[] n(byte[] paramArrayOfByte)
   {
-    int i = 0;
-    while (i < paramInt)
+    try
     {
-      amI[(amJ + i)] = amI[(amJ + i)];
-      i += 1;
+      MessageDigest localMessageDigest = MessageDigest.getInstance("MD5");
+      localMessageDigest.update(paramArrayOfByte);
+      paramArrayOfByte = localMessageDigest.digest();
+      return paramArrayOfByte;
     }
+    catch (Exception paramArrayOfByte) {}
+    return null;
   }
 }
 

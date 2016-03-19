@@ -68,7 +68,7 @@
     iput v2, p0, Landroid/support/v7/app/ActionBar$LayoutParams;->gravity:I
 
     .line 906
-    sget-object v0, Lcom/tencent/mm/a$p;->ActionBarLayout:[I
+    sget-object v0, Lcom/tencent/mm/R$b;->ActionBarLayout:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 

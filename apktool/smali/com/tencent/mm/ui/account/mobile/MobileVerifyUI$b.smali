@@ -18,7 +18,7 @@
 .method public abstract a(Lcom/tencent/mm/ui/account/mobile/MobileVerifyUI;)V
 .end method
 
-.method public abstract nw(I)Z
+.method public abstract qq(I)Z
 .end method
 
 .method public abstract start()V

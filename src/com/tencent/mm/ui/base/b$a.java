@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface b$a
 {
-  public abstract void fr(boolean paramBoolean);
+  public abstract void hu(boolean paramBoolean);
 }
 
 /* Location:

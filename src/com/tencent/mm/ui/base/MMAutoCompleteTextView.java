@@ -6,63 +6,95 @@ import android.graphics.drawable.Drawable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnFocusChangeListener;
+import android.view.View.OnTouchListener;
 import android.widget.AutoCompleteTextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public class MMAutoCompleteTextView
   extends AutoCompleteTextView
 {
-  private a iDI;
-  final Drawable iDJ = getResources().getDrawable(a.h.search_clear);
+  final Drawable iGP = getResources().getDrawable(2130970307);
+  private a kCX;
   
   public MMAutoCompleteTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    iDJ.setBounds(0, 0, iDJ.getIntrinsicWidth(), iDJ.getIntrinsicHeight());
-    aME();
-    setOnTouchListener(new ad(this));
-    addTextChangedListener(new ae(this));
-    setOnFocusChangeListener(new af(this));
+    iGP.setBounds(0, 0, iGP.getIntrinsicWidth(), iGP.getIntrinsicHeight());
+    aQV();
+    setOnTouchListener(new View.OnTouchListener()
+    {
+      public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
+      {
+        paramAnonymousView = MMAutoCompleteTextView.this;
+        if (paramAnonymousView.getCompoundDrawables()[2] == null) {}
+        while ((paramAnonymousMotionEvent.getAction() != 1) || (paramAnonymousMotionEvent.getX() <= paramAnonymousView.getWidth() - paramAnonymousView.getPaddingRight() - iGP.getIntrinsicWidth())) {
+          return false;
+        }
+        paramAnonymousView.setText("");
+        MMAutoCompleteTextView.a(MMAutoCompleteTextView.this);
+        return false;
+      }
+    });
+    addTextChangedListener(new TextWatcher()
+    {
+      public final void afterTextChanged(Editable paramAnonymousEditable) {}
+      
+      public final void beforeTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
+      
+      public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3)
+      {
+        MMAutoCompleteTextView.b(MMAutoCompleteTextView.this);
+      }
+    });
+    setOnFocusChangeListener(new View.OnFocusChangeListener()
+    {
+      public final void onFocusChange(View paramAnonymousView, boolean paramAnonymousBoolean)
+      {
+        MMAutoCompleteTextView.b(MMAutoCompleteTextView.this);
+      }
+    });
   }
   
-  private void aME()
+  private void aQV()
   {
     if ((getText().toString().equals("")) || (!isFocused()))
     {
-      aMF();
+      aQX();
       return;
     }
-    setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], iDJ, getCompoundDrawables()[3]);
+    setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], iGP, getCompoundDrawables()[3]);
   }
   
-  private void aMF()
+  private void aQX()
   {
     setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], null, getCompoundDrawables()[3]);
   }
   
   public void setSpilter(String paramString)
   {
-    if (!bn.iW(paramString))
+    if (!ay.kz(paramString))
     {
-      iDI = new a(paramString);
-      addTextChangedListener(iDI);
+      kCX = new a(paramString);
+      addTextChangedListener(kCX);
     }
   }
   
   private final class a
     implements TextWatcher
   {
-    private String iDL;
+    private String kCZ;
     
     public a(String paramString)
     {
-      iDL = paramString;
+      kCZ = paramString;
     }
     
     public final void afterTextChanged(Editable paramEditable)
     {
-      if (paramEditable.toString().endsWith(iDL)) {
+      if (paramEditable.toString().endsWith(kCZ)) {
         showDropDown();
       }
     }

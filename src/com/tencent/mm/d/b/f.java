@@ -2,27 +2,27 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class f
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aIK;
-  private static final int aIg;
-  private static final int aKr = "msgId".hashCode();
-  private static final int aKs = "xml".hashCode();
-  private static final int aKt;
-  private static final int aKu;
-  private static final int aKv;
-  private boolean aHO = true;
-  private boolean aIw = true;
-  private boolean aKm = true;
-  private boolean aKn = true;
-  private boolean aKo = true;
-  private boolean aKp = true;
-  private boolean aKq = true;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int aMJ;
+  private static final int aMf;
+  private static final int aOu = "msgId".hashCode();
+  private static final int aOv = "xml".hashCode();
+  private static final int aOw;
+  private static final int aOx;
+  private static final int aOy;
+  private boolean aLN = true;
+  private boolean aMv = true;
+  private boolean aOp = true;
+  private boolean aOq = true;
+  private boolean aOr = true;
+  private boolean aOs = true;
+  private boolean aOt = true;
   public String field_appId;
   public String field_description;
   public long field_msgId;
@@ -33,11 +33,11 @@ public abstract class f
   
   static
   {
-    aIK = "appId".hashCode();
-    aKt = "title".hashCode();
-    aKu = "description".hashCode();
-    aKv = "source".hashCode();
-    aIg = "type".hashCode();
+    aMJ = "appId".hashCode();
+    aOw = "title".hashCode();
+    aOx = "description".hashCode();
+    aOy = "source".hashCode();
+    aMf = "type".hashCode();
   }
   
   public final void c(Cursor paramCursor)
@@ -53,11 +53,11 @@ public abstract class f
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aKr != k) {
+      if (aOu != k) {
         break label65;
       }
       field_msgId = paramCursor.getLong(i);
-      aKm = true;
+      aOp = true;
     }
     for (;;)
     {
@@ -65,50 +65,50 @@ public abstract class f
       break label20;
       break;
       label65:
-      if (aKs == k) {
+      if (aOv == k) {
         field_xml = paramCursor.getString(i);
-      } else if (aIK == k) {
+      } else if (aMJ == k) {
         field_appId = paramCursor.getString(i);
-      } else if (aKt == k) {
+      } else if (aOw == k) {
         field_title = paramCursor.getString(i);
-      } else if (aKu == k) {
+      } else if (aOx == k) {
         field_description = paramCursor.getString(i);
-      } else if (aKv == k) {
+      } else if (aOy == k) {
         field_source = paramCursor.getString(i);
-      } else if (aIg == k) {
+      } else if (aMf == k) {
         field_type = paramCursor.getInt(i);
-      } else if (aHH == k) {
-        ibV = paramCursor.getLong(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aKm) {
+    if (aOp) {
       localContentValues.put("msgId", Long.valueOf(field_msgId));
     }
-    if (aKn) {
+    if (aOq) {
       localContentValues.put("xml", field_xml);
     }
-    if (aIw) {
+    if (aMv) {
       localContentValues.put("appId", field_appId);
     }
-    if (aKo) {
+    if (aOr) {
       localContentValues.put("title", field_title);
     }
-    if (aKp) {
+    if (aOs) {
       localContentValues.put("description", field_description);
     }
-    if (aKq) {
+    if (aOt) {
       localContentValues.put("source", field_source);
     }
-    if (aHO) {
+    if (aLN) {
       localContentValues.put("type", Integer.valueOf(field_type));
     }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

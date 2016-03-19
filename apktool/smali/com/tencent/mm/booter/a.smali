@@ -3,17 +3,17 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/model/ag;
+.implements Lcom/tencent/mm/model/q;
 
 
 # instance fields
-.field private bbG:Lcom/tencent/mm/sdk/platformtools/ao;
+.field private blA:Lcom/tencent/mm/sdk/platformtools/ak$a;
 
-.field private bbH:Lcom/tencent/mm/sdk/platformtools/ao$a;
+.field private blB:Ljava/util/List;
 
-.field private bbI:Ljava/util/List;
+.field private blC:Lcom/tencent/mm/sdk/c/c;
 
-.field private bbJ:Lcom/tencent/mm/sdk/c/e;
+.field private blz:Lcom/tencent/mm/sdk/platformtools/ak;
 
 
 # direct methods
@@ -29,57 +29,57 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/a;->bbI:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/booter/a;->blB:Ljava/util/List;
 
     .line 38
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ao;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ak;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ao;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ak;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/a;->bbG:Lcom/tencent/mm/sdk/platformtools/ao;
+    iput-object v0, p0, Lcom/tencent/mm/booter/a;->blz:Lcom/tencent/mm/sdk/platformtools/ak;
 
     .line 39
-    new-instance v0, Lcom/tencent/mm/booter/b;
+    new-instance v0, Lcom/tencent/mm/booter/a$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/booter/b;-><init>(Lcom/tencent/mm/booter/a;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/booter/a$1;-><init>(Lcom/tencent/mm/booter/a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/a;->bbH:Lcom/tencent/mm/sdk/platformtools/ao$a;
+    iput-object v0, p0, Lcom/tencent/mm/booter/a;->blA:Lcom/tencent/mm/sdk/platformtools/ak$a;
 
     .line 60
-    iget-object v0, p0, Lcom/tencent/mm/booter/a;->bbG:Lcom/tencent/mm/sdk/platformtools/ao;
+    iget-object v0, p0, Lcom/tencent/mm/booter/a;->blz:Lcom/tencent/mm/sdk/platformtools/ak;
 
-    iget-object v1, p0, Lcom/tencent/mm/booter/a;->bbH:Lcom/tencent/mm/sdk/platformtools/ao$a;
+    iget-object v1, p0, Lcom/tencent/mm/booter/a;->blA:Lcom/tencent/mm/sdk/platformtools/ak$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ao;->a(Lcom/tencent/mm/sdk/platformtools/ao$a;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ak;->a(Lcom/tencent/mm/sdk/platformtools/ak$a;)V
 
     .line 61
-    iget-object v0, p0, Lcom/tencent/mm/booter/a;->bbG:Lcom/tencent/mm/sdk/platformtools/ao;
+    iget-object v0, p0, Lcom/tencent/mm/booter/a;->blz:Lcom/tencent/mm/sdk/platformtools/ak;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ao;->dd(Landroid/content/Context;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ak;->dJ(Landroid/content/Context;)V
 
     .line 63
-    iget-object v0, p0, Lcom/tencent/mm/booter/a;->bbJ:Lcom/tencent/mm/sdk/c/e;
+    iget-object v0, p0, Lcom/tencent/mm/booter/a;->blC:Lcom/tencent/mm/sdk/c/c;
 
     if-nez v0, :cond_0
 
-    new-instance v0, Lcom/tencent/mm/booter/c;
+    new-instance v0, Lcom/tencent/mm/booter/a$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/booter/c;-><init>(Lcom/tencent/mm/booter/a;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/booter/a$2;-><init>(Lcom/tencent/mm/booter/a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/a;->bbJ:Lcom/tencent/mm/sdk/c/e;
+    iput-object v0, p0, Lcom/tencent/mm/booter/a;->blC:Lcom/tencent/mm/sdk/c/c;
 
     :cond_0
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "RecordStateChange"
 
-    iget-object v2, p0, Lcom/tencent/mm/booter/a;->bbJ:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/booter/a;->blC:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 65
     return-void
@@ -87,7 +87,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/model/ah;)V
+.method public final a(Lcom/tencent/mm/model/r;)V
     .locals 5
 
     .prologue
@@ -111,10 +111,10 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/booter/a;->bbI:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/booter/a;->blB:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -123,7 +123,7 @@
     return-void
 .end method
 
-.method public final b(Lcom/tencent/mm/model/ah;)V
+.method public final b(Lcom/tencent/mm/model/r;)V
     .locals 1
 
     .prologue
@@ -131,7 +131,7 @@
     if-eqz p1, :cond_0
 
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/booter/a;->bbI:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/booter/a;->blB:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
@@ -140,12 +140,12 @@
     return-void
 .end method
 
-.method public final mM()V
+.method public final mr()V
     .locals 2
 
     .prologue
     .line 100
-    iget-object v0, p0, Lcom/tencent/mm/booter/a;->bbI:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/booter/a;->blB:Ljava/util/List;
 
     if-nez v0, :cond_1
 
@@ -155,7 +155,7 @@
 
     .line 104
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/booter/a;->bbI:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/booter/a;->blB:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -172,20 +172,20 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/model/ah;
+    check-cast v0, Lcom/tencent/mm/model/r;
 
     .line 105
-    invoke-interface {v0}, Lcom/tencent/mm/model/ah;->sH()V
+    invoke-interface {v0}, Lcom/tencent/mm/model/r;->sY()V
 
     goto :goto_0
 .end method
 
-.method public final mN()V
+.method public final ms()V
     .locals 2
 
     .prologue
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/booter/a;->bbI:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/booter/a;->blB:Ljava/util/List;
 
     if-nez v0, :cond_1
 
@@ -195,7 +195,7 @@
 
     .line 114
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/booter/a;->bbI:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/booter/a;->blB:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -212,10 +212,10 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/model/ah;
+    check-cast v0, Lcom/tencent/mm/model/r;
 
     .line 115
-    invoke-interface {v0}, Lcom/tencent/mm/model/ah;->sI()V
+    invoke-interface {v0}, Lcom/tencent/mm/model/r;->sZ()V
 
     goto :goto_0
 .end method

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ar
-  extends a.c
+  extends a.e
 {
   public a$ar()
   {
-    super("hideOptionMenu", "", 14, false);
+    super("getHeadingAndPitch", "get_heading_and_pitch", 33, false);
   }
 }
 

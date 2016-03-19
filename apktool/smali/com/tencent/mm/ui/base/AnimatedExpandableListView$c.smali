@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field private iCL:I
+.field private kBN:I
 
-.field private iCM:I
+.field private kBO:I
 
-.field private iCN:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
+.field private kBP:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
 
 .field private view:Landroid/view/View;
 
@@ -33,18 +33,18 @@
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
     .line 555
-    iput p2, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->iCL:I
+    iput p2, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->kBN:I
 
     .line 556
     sub-int v0, p3, p2
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->iCM:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->kBO:I
 
     .line 557
     iput-object p1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->view:Landroid/view/View;
 
     .line 558
-    iput-object p4, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->iCN:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
+    iput-object p4, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->kBP:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
 
     .line 560
     iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->view:Landroid/view/View;
@@ -91,9 +91,9 @@
     if-gez v0, :cond_0
 
     .line 568
-    iget v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->iCL:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->kBN:I
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->iCM:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->kBO:I
 
     int-to-float v1, v1
 
@@ -113,9 +113,9 @@
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 570
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->iCN:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->kBP:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
 
-    iput v0, v1, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->iCQ:I
+    iput v0, v1, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->kBS:I
 
     .line 571
     iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->view:Landroid/view/View;
@@ -128,9 +128,9 @@
 
     .line 573
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->iCL:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->kBN:I
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->iCM:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->kBO:I
 
     add-int/2addr v0, v1
 
@@ -144,9 +144,9 @@
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 575
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->iCN:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->kBP:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
 
-    iput v0, v1, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->iCQ:I
+    iput v0, v1, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->kBS:I
 
     .line 576
     iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$c;->view:Landroid/view/View;

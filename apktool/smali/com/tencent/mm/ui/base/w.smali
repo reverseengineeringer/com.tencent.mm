@@ -1,111 +1,63 @@
-.class final Lcom/tencent/mm/ui/base/w;
+.class public final Lcom/tencent/mm/ui/base/w;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field final synthetic eZj:Landroid/widget/LinearLayout;
-
-.field final synthetic iDo:Lcom/tencent/mm/ui/base/h$a;
-
 
 # direct methods
-.method constructor <init>(Landroid/widget/LinearLayout;Lcom/tencent/mm/ui/base/h$a;)V
-    .locals 0
+.method public static a(ZLandroid/content/Intent;)V
+    .locals 2
 
     .prologue
-    .line 693
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/w;->eZj:Landroid/widget/LinearLayout;
+    .line 18
+    if-nez p1, :cond_0
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/base/w;->iDo:Lcom/tencent/mm/ui/base/h$a;
+    .line 19
+    new-instance p1, Landroid/content/Intent;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p1}, Landroid/content/Intent;-><init>()V
 
-    return-void
-.end method
+    .line 22
+    :cond_0
+    if-eqz p0, :cond_1
 
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 5
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 697
-    move v1, v2
+    const-string/jumbo v0, "com.tencent.mm.ui.ACTION_ACTIVE"
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/w;->eZj:Landroid/widget/LinearLayout;
+    invoke-virtual {p1, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
+    .line 23
+    const-string/jumbo v0, "_application_context_process_"
 
-    move-result v0
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aQC()Ljava/lang/String;
 
-    if-ge v1, v0, :cond_1
+    move-result-object v1
 
-    .line 698
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/w;->eZj:Landroid/widget/LinearLayout;
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+    .line 24
+    const-string/jumbo v0, "process_id"
+
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v1
+
+    invoke-virtual {p1, v0, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 25
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    const-string/jumbo v1, "com.tencent.mm.permission.MM_MESSAGE"
 
-    .line 699
-    invoke-virtual {v0}, Landroid/widget/TextView;->getId()I
+    invoke-virtual {v0, p1, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;Ljava/lang/String;)V
 
-    move-result v3
+    .line 26
+    return-void
 
-    sget v4, Lcom/tencent/mm/a$i;->tips_tv:I
-
-    if-eq v3, v4, :cond_0
-
-    .line 700
-    sget v3, Lcom/tencent/mm/a$h;->round_selector_normal:I
-
-    invoke-virtual {v0, v2, v2, v3, v2}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
-
-    .line 697
-    :cond_0
-    add-int/lit8 v0, v1, 0x1
-
-    move v1, v0
+    .line 22
+    :cond_1
+    const-string/jumbo v0, "com.tencent.mm.ui.ACTION_DEACTIVE"
 
     goto :goto_0
-
-    :cond_1
-    move-object v0, p1
-
-    .line 704
-    check-cast v0, Landroid/widget/TextView;
-
-    sget v1, Lcom/tencent/mm/a$h;->round_selector_checked:I
-
-    invoke-virtual {v0, v2, v2, v1, v2}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
-
-    .line 705
-    invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/Integer;
-
-    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
-
-    move-result v0
-
-    .line 706
-    new-instance v1, Lcom/tencent/mm/ui/base/x;
-
-    invoke-direct {v1, p0, v0}, Lcom/tencent/mm/ui/base/x;-><init>(Lcom/tencent/mm/ui/base/w;I)V
-
-    invoke-virtual {p1, v1}, Landroid/view/View;->post(Ljava/lang/Runnable;)Z
-
-    .line 716
-    return-void
 .end method

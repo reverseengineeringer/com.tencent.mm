@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools.a;
 
 public abstract interface b$a
 {
-  public abstract void Ni();
+  public abstract void Rs();
   
   public abstract void a(b paramb);
 }

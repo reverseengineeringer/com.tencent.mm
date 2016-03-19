@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field public gTl:Ljava/lang/ref/WeakReference;
+.field public iJu:Ljava/lang/ref/WeakReference;
 
 .field public view:Landroid/view/View;
 
@@ -26,14 +26,14 @@
     iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/b/b;->view:Landroid/view/View;
 
     .line 14
-    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/b/b;->gTl:Ljava/lang/ref/WeakReference;
+    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/b/b;->iJu:Ljava/lang/ref/WeakReference;
 
     .line 17
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/b/b;->gTl:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/b/b;->iJu:Ljava/lang/ref/WeakReference;
 
     .line 18
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/b/b;->getLayoutId()I
@@ -43,7 +43,7 @@
     if-lez v0, :cond_0
 
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/b/b;->gTl:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/b/b;->iJu:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -68,7 +68,7 @@
 
 
 # virtual methods
-.method public GQ()Z
+.method public Jb()Z
     .locals 1
 
     .prologue
@@ -78,7 +78,7 @@
     return v0
 .end method
 
-.method public GR()V
+.method public Jc()V
     .locals 0
 
     .prologue
@@ -86,7 +86,7 @@
     return-void
 .end method
 
-.method public GS()V
+.method public Jd()V
     .locals 0
 
     .prologue

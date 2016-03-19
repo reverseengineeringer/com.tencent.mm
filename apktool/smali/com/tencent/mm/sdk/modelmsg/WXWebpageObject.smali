@@ -79,7 +79,7 @@
 
     const-string/jumbo v1, "checkArgs fail, webpageUrl is invalid"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 72
     const/4 v0, 0x0

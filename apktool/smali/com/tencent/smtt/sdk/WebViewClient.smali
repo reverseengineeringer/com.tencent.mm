@@ -38,7 +38,7 @@
 
 
 # instance fields
-.field jLq:Lcom/tencent/smtt/sdk/h;
+.field lUl:Lcom/tencent/smtt/sdk/f;
 
 
 # direct methods
@@ -46,7 +46,7 @@
     .locals 0
 
     .prologue
-    .line 23
+    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -58,7 +58,15 @@
     .locals 0
 
     .prologue
-    .line 92
+    .line 142
+    return-void
+.end method
+
+.method public onDetectedBlankScreen(Ljava/lang/String;I)V
+    .locals 0
+
+    .prologue
+    .line 230
     return-void
 .end method
 
@@ -66,10 +74,10 @@
     .locals 0
 
     .prologue
-    .line 96
+    .line 151
     invoke-virtual {p2}, Landroid/os/Message;->sendToTarget()V
 
-    .line 97
+    .line 152
     return-void
 .end method
 
@@ -77,7 +85,7 @@
     .locals 0
 
     .prologue
-    .line 62
+    .line 67
     return-void
 .end method
 
@@ -85,7 +93,7 @@
     .locals 0
 
     .prologue
-    .line 79
+    .line 98
     return-void
 .end method
 
@@ -93,17 +101,17 @@
     .locals 1
 
     .prologue
-    .line 71
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebViewClient;->jLq:Lcom/tencent/smtt/sdk/h;
+    .line 86
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebViewClient;->lUl:Lcom/tencent/smtt/sdk/f;
 
     if-eqz v0, :cond_0
 
-    .line 73
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebViewClient;->jLq:Lcom/tencent/smtt/sdk/h;
+    .line 88
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebViewClient;->lUl:Lcom/tencent/smtt/sdk/f;
 
-    invoke-virtual {v0, p2, p3}, Lcom/tencent/smtt/sdk/h;->x(Ljava/lang/String;Landroid/graphics/Bitmap;)V
+    invoke-virtual {v0, p2, p3}, Lcom/tencent/smtt/sdk/f;->w(Ljava/lang/String;Landroid/graphics/Bitmap;)V
 
-    .line 75
+    .line 90
     :cond_0
     return-void
 .end method
@@ -112,7 +120,7 @@
     .locals 0
 
     .prologue
-    .line 83
+    .line 108
     return-void
 .end method
 
@@ -120,10 +128,10 @@
     .locals 0
 
     .prologue
-    .line 101
+    .line 162
     invoke-interface {p2}, Lcom/tencent/smtt/export/external/interfaces/HttpAuthHandler;->cancel()V
 
-    .line 102
+    .line 163
     return-void
 .end method
 
@@ -131,7 +139,7 @@
     .locals 0
 
     .prologue
-    .line 134
+    .line 225
     return-void
 .end method
 
@@ -139,10 +147,10 @@
     .locals 0
 
     .prologue
-    .line 106
+    .line 172
     invoke-interface {p2}, Lcom/tencent/smtt/export/external/interfaces/SslErrorHandler;->cancel()V
 
-    .line 107
+    .line 173
     return-void
 .end method
 
@@ -150,7 +158,7 @@
     .locals 0
 
     .prologue
-    .line 111
+    .line 182
     return-void
 .end method
 
@@ -158,7 +166,7 @@
     .locals 0
 
     .prologue
-    .line 130
+    .line 215
     return-void
 .end method
 
@@ -166,15 +174,53 @@
     .locals 0
 
     .prologue
-    .line 120
+    .line 195
     return-void
+.end method
+
+.method public shouldInterceptRequest(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/export/external/interfaces/WebResourceRequest;)Lcom/tencent/smtt/export/external/interfaces/WebResourceResponse;
+    .locals 3
+
+    .prologue
+    .line 127
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebViewClient;->lUl:Lcom/tencent/smtt/sdk/f;
+
+    if-eqz v0, :cond_0
+
+    .line 129
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebViewClient;->lUl:Lcom/tencent/smtt/sdk/f;
+
+    invoke-virtual {p1}, Lcom/tencent/smtt/sdk/WebView;->getX5WebView()Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+
+    move-result-object v1
+
+    invoke-interface {p2}, Lcom/tencent/smtt/export/external/interfaces/WebResourceRequest;->getUrl()Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Landroid/net/Uri;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/smtt/sdk/f;->shouldInterceptRequest(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;Ljava/lang/String;)Lcom/tencent/smtt/export/external/interfaces/WebResourceResponse;
+
+    move-result-object v0
+
+    .line 132
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public shouldInterceptRequest(Lcom/tencent/smtt/sdk/WebView;Ljava/lang/String;)Lcom/tencent/smtt/export/external/interfaces/WebResourceResponse;
     .locals 1
 
     .prologue
-    .line 87
+    .line 117
     const/4 v0, 0x0
 
     return-object v0
@@ -184,7 +230,7 @@
     .locals 1
 
     .prologue
-    .line 125
+    .line 205
     const/4 v0, 0x0
 
     return v0
@@ -194,7 +240,7 @@
     .locals 1
 
     .prologue
-    .line 66
+    .line 76
     const/4 v0, 0x0
 
     return v0

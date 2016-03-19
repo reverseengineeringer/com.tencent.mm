@@ -5,14 +5,14 @@ import android.view.Surface;
 final class SightPlayTextureView$a
   implements Runnable
 {
-  Surface fhW = null;
+  Surface gyC = null;
   
   public final void run()
   {
-    if (fhW == null) {
+    if (gyC == null) {
       return;
     }
-    fhW.release();
+    gyC.release();
   }
 }
 

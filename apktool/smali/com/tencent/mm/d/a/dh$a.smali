@@ -15,16 +15,36 @@
 
 
 # instance fields
-.field public azs:Ljava/util/ArrayList;
+.field public asa:[Ljava/lang/String;
+
+.field public awK:I
+
+.field public awL:Ljava/lang/String;
+
+.field public context:Landroid/content/Context;
+
+.field public op:I
+
+.field public selectionArgs:[Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/tencent/mm/d/a/dh$a;->op:I
+
+    .line 16
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/tencent/mm/d/a/dh$a;->awK:I
 
     return-void
 .end method

@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.ui;
 
 public abstract interface MultiSelectContactView$a
 {
-  public abstract void nJ(String paramString);
+  public abstract void rc(String paramString);
 }
 
 /* Location:

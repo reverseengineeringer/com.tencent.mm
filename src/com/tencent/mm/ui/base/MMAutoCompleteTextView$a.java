@@ -6,17 +6,17 @@ import android.text.TextWatcher;
 final class MMAutoCompleteTextView$a
   implements TextWatcher
 {
-  private String iDL;
+  private String kCZ;
   
   public MMAutoCompleteTextView$a(MMAutoCompleteTextView paramMMAutoCompleteTextView, String paramString)
   {
-    iDL = paramString;
+    kCZ = paramString;
   }
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    if (paramEditable.toString().endsWith(iDL)) {
-      iDK.showDropDown();
+    if (paramEditable.toString().endsWith(kCZ)) {
+      kCY.showDropDown();
     }
   }
   

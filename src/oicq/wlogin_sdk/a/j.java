@@ -3,22 +3,22 @@ package oicq.wlogin_sdk.a;
 public final class j
   extends a
 {
-  int jOu = 0;
+  int mcG = 0;
   
   public j()
   {
-    jNs = 264;
+    mbE = 264;
   }
   
-  public final byte[] aW(byte[] paramArrayOfByte)
+  public final byte[] bp(byte[] paramArrayOfByte)
   {
-    jOu = paramArrayOfByte.length;
-    byte[] arrayOfByte = new byte[jOu];
+    mcG = paramArrayOfByte.length;
+    byte[] arrayOfByte = new byte[mcG];
     System.arraycopy(paramArrayOfByte, 0, arrayOfByte, 0, paramArrayOfByte.length);
-    super.pV(jNs);
-    super.w(arrayOfByte, jOu);
-    super.aVD();
-    return super.aVz();
+    super.sL(mbE);
+    super.A(arrayOfByte, mcG);
+    super.bos();
+    return super.boo();
   }
 }
 

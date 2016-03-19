@@ -1,296 +1,275 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
-import android.graphics.drawable.Drawable;
-import android.graphics.drawable.StateListDrawable;
-import android.view.ContextMenu;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
+import android.graphics.Bitmap;
+import android.util.SparseArray;
 import android.view.View;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.CheckBox;
+import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.tencent.mm.a.f;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.m.a.a;
-import com.tencent.mm.model.br;
-import com.tencent.mm.platformtools.ad;
-import com.tencent.mm.pluginsdk.model.app.ay;
-import com.tencent.mm.pluginsdk.model.app.o;
-import com.tencent.mm.pluginsdk.model.app.p;
-import com.tencent.mm.pluginsdk.ui.a.b;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
-import com.tencent.mm.ui.cn;
-import com.tencent.mm.ui.ef;
+import com.tencent.mm.ab.f;
+import com.tencent.mm.an.m;
+import com.tencent.mm.an.n.a.a;
+import com.tencent.mm.an.n.a.b;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.platformtools.t;
+import com.tencent.mm.pluginsdk.model.h;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.ag;
+import java.lang.ref.WeakReference;
+import java.util.HashMap;
+import java.util.Map;
 
-public final class dy
-  extends cf
+final class dy
+  extends aa.a
 {
-  private ChattingUI.a iUg;
+  private static SparseArray ldE = new SparseArray();
+  private static Map ldF = new HashMap();
+  TextView czV;
+  ImageView hbk;
+  ImageView kQA;
+  ImageView kQC;
+  TextView kQE;
+  ImageView lco;
+  TextView ldL;
+  ImageView ldM;
+  ImageView ldN;
+  ProgressBar ldO;
+  View ldP;
+  ProgressBar ldQ;
   
-  public dy()
+  public dy(int paramInt)
   {
-    super(52);
+    super(paramInt);
   }
   
-  public final View a(LayoutInflater paramLayoutInflater, View paramView)
+  public static void a(dy paramdy, ag paramag, boolean paramBoolean, int paramInt1, ChattingUI.a parama, int paramInt2)
   {
-    Object localObject;
-    if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof a)))
-    {
-      localObject = paramView;
-      if (getTagtype == dJX) {}
+    Object localObject1 = (String)ldE.get(paramdy.hashCode());
+    if (localObject1 != null) {
+      ldF.remove(localObject1);
     }
-    else
-    {
-      localObject = new ds(paramLayoutInflater, a.k.chatting_item_harddevice_msg);
-      ((View)localObject).setTag(new a(dJX).aD((View)localObject));
+    ldE.put(paramdy.hashCode(), field_imgPath);
+    ldF.put(field_imgPath, new WeakReference(paramdy));
+    Object localObject2 = com.tencent.mm.an.o.jV(field_imgPath);
+    localObject1 = localObject2;
+    if (localObject2 == null) {
+      localObject1 = new m();
     }
-    return (View)localObject;
-  }
-  
-  public final void a(cf.a parama, int paramInt, ChattingUI.a parama1, ar paramar, String paramString)
-  {
-    iUg = parama1;
-    a locala = (a)parama;
-    Object localObject1 = ay.azl().cd(field_msgId);
-    Object localObject2 = field_content;
-    if ((localObject1 != null) && (localObject2 != null)) {
-      paramString = a.a.r((String)localObject2, field_reserved);
+    com.tencent.mm.an.j.Ea();
+    localObject2 = com.tencent.mm.an.n.jM(field_imgPath);
+    localObject2 = com.tencent.mm.ab.n.Ao().a((String)localObject2, a.getDensity(koJ.kpc), koJ.kpc, paramInt2);
+    lco.setLayoutParams(new FrameLayout.LayoutParams(0, 0));
+    if (localObject2 == null) {
+      if (!ah.tD().isSDCardAvailable())
+      {
+        kQA.setImageDrawable(a.y(koJ.kpc, 2130970617));
+        if (!paramBoolean) {
+          break label650;
+        }
+        czV.setText(t.al(bEp));
+        ldL.setText(t.el(cfZ));
+        paramInt2 = status;
+        if (paramInt2 != 199) {
+          break label529;
+        }
+        hbk.setImageDrawable(a.y(koJ.kpc, 2130970227));
+        czV.setVisibility(4);
+        label265:
+        if (paramInt2 != 112) {
+          break label560;
+        }
+        ldN.setVisibility(0);
+        ldM.setVisibility(8);
+        ldO.setVisibility(0);
+        ldO.setProgress(com.tencent.mm.an.o.e((m)localObject1));
+        u.v("!32@/B4Tb64lLpJM/Lh7GYoyAX5LS2Mvf7Yr", "status begin");
+        ldO.invalidate();
+      }
     }
     for (;;)
     {
-      nv localnv = new nv(paramar, iBB, paramInt, null, 0, (byte)0);
-      HardDeviceChattingItemView localHardDeviceChattingItemView = (HardDeviceChattingItemView)iUc;
-      int j;
-      int k;
-      int i;
-      if ((paramString != null) && ((aux == 1) || (bmJ == 1))) {
-        if (ad.iW(bmE))
+      ldN.setTag(new dg(paramag, kAy, paramInt1, field_talker, 4, (byte)0));
+      ldN.setOnClickListener(kSE.kVs);
+      ldM.setTag(new dg(paramag, kAy, paramInt1, field_talker, 3, (byte)0));
+      ldM.setOnClickListener(kSE.kVs);
+      kTa.setTag(new dg(paramag, kAy, paramInt1, field_talker, 2, (byte)0));
+      kTa.setOnClickListener(kSE.kVs);
+      kTa.setOnLongClickListener(kSE.kVu);
+      return;
+      kQA.setImageDrawable(a.y(koJ.kpc, 2130970561));
+      break;
+      kQA.setImageBitmap((Bitmap)localObject2);
+      localObject2 = new FrameLayout.LayoutParams(((Bitmap)localObject2).getWidth(), ((Bitmap)localObject2).getHeight());
+      lco.setLayoutParams((ViewGroup.LayoutParams)localObject2);
+      break;
+      label529:
+      hbk.setImageDrawable(a.y(koJ.kpc, 2130970227));
+      czV.setVisibility(0);
+      break label265;
+      label560:
+      if ((paramInt2 == 113) || (paramInt2 == 198))
+      {
+        ldM.setVisibility(0);
+        ldN.setVisibility(8);
+        ldO.setVisibility(8);
+        u.v("!32@/B4Tb64lLpJM/Lh7GYoyAX5LS2Mvf7Yr", "status pause");
+      }
+      else
+      {
+        ldN.setVisibility(8);
+        ldM.setVisibility(8);
+        ldO.setVisibility(8);
+        u.v("!32@/B4Tb64lLpJM/Lh7GYoyAX5LS2Mvf7Yr", "status gone");
+        continue;
+        label650:
+        czV.setText(t.al(bEp));
+        ldL.setText(t.el(cfZ));
+        paramInt2 = status;
+        hbk.setImageDrawable(a.y(koJ.kpc, 2130970227));
+        if (ldQ != null) {
+          ldQ.setVisibility(8);
+        }
+        u.v("!32@/B4Tb64lLpJM/Lh7GYoyAX5LS2Mvf7Yr", "video status %d", new Object[] { Integer.valueOf(paramInt2) });
+        if ((paramInt2 == 104) || (paramInt2 == 103))
         {
-          localObject2 = bmA;
-          Object localObject3 = bmB;
-          if (!bn.iW((String)localObject2))
+          ldN.setVisibility(0);
+          ldM.setVisibility(8);
+          ldO.setVisibility(0);
+          ldO.setProgress(com.tencent.mm.an.o.f((m)localObject1));
+          u.v("!32@/B4Tb64lLpJM/Lh7GYoyAX5LS2Mvf7Yr", "status begin");
+        }
+        else if ((paramInt2 == 105) || (paramInt2 == 198))
+        {
+          ldM.setVisibility(0);
+          ldN.setVisibility(8);
+          ldO.setVisibility(8);
+          u.v("!32@/B4Tb64lLpJM/Lh7GYoyAX5LS2Mvf7Yr", "status pause");
+        }
+        else if (paramInt2 == 106)
+        {
+          if (!h.zF(field_imgPath))
           {
-            localObject1 = localObject3;
-            paramar = (ar)localObject2;
-            if (!bn.iW((String)localObject3)) {}
+            com.tencent.mm.an.o.bj(field_imgPath);
           }
           else
           {
-            t.e("!56@/B4Tb64lLpJ4OHK7JMOa8DHZqBwonFRRNdHfjPfP1PlY1v166tKAoA==", "color is null or highlight color is null, color = %s, highlight color = %s", new Object[] { localObject2, localObject3 });
-            paramar = "#ffffff";
-            localObject1 = "#ffffff";
-          }
-          localObject2 = new StateListDrawable();
-          localObject3 = new ColorDrawable(Color.parseColor((String)localObject1));
-          ((StateListDrawable)localObject2).addState(new int[] { 16842919 }, (Drawable)localObject3);
-          localObject1 = new ColorDrawable(Color.parseColor((String)localObject1));
-          ((StateListDrawable)localObject2).addState(new int[] { 16842908 }, (Drawable)localObject1);
-          localObject1 = new ColorDrawable(Color.parseColor(paramar));
-          ((StateListDrawable)localObject2).addState(new int[] { 16842766 }, (Drawable)localObject1);
-          paramar = new ColorDrawable(Color.parseColor(paramar));
-          ((StateListDrawable)localObject2).addState(new int[0], paramar);
-          localHardDeviceChattingItemView.setBackgroundDrawable((Drawable)localObject2);
-          bmE = "#ffffff";
-          paramar = bmC;
-          localObject1 = bmD;
-          j = a.f.white;
-          k = a.f.white;
-          i = k;
-          paramInt = j;
-          if (!ad.iW(paramar))
-          {
-            i = k;
-            paramInt = j;
-            if (!ad.iW((String)localObject1)) {
-              paramInt = j;
+            if (ldQ != null) {
+              ldQ.setVisibility(0);
             }
+            ldL.setText(null);
+            czV.setText(null);
+            hbk.setImageDrawable(null);
+            ldN.setVisibility(8);
+            ldM.setVisibility(8);
+            ldO.setVisibility(8);
           }
         }
-      }
-      try
-      {
-        i = Color.parseColor(paramar);
-        paramInt = i;
-        j = Color.parseColor((String)localObject1);
-        paramInt = i;
-        i = j;
-        paramar = new StateListDrawable();
-        localObject1 = new ColorDrawable(i);
-        paramar.addState(new int[] { 16842919 }, (Drawable)localObject1);
-        localObject1 = new ColorDrawable(i);
-        paramar.addState(new int[] { 16842908 }, (Drawable)localObject1);
-        localObject1 = new ColorDrawable(paramInt);
-        paramar.addState(new int[] { 16842766 }, (Drawable)localObject1);
-        localObject1 = new ColorDrawable(paramInt);
-        paramar.addState(new int[0], (Drawable)localObject1);
-        iVp.setBackgroundDrawable(paramar);
-        paramar = bmE;
-        if (locala != null)
+        else
         {
-          i = a.f.white;
-          paramInt = i;
-          if (ad.iW(paramar)) {}
-        }
-      }
-      catch (IllegalArgumentException paramar)
-      {
-        try
-        {
-          paramInt = Color.parseColor(paramar);
-          iVm.setTextColor(paramInt);
-          iVn.setTextColor(paramInt);
-          iVk.setTextColor(paramInt);
-          iVl.setTextColor(paramInt);
-          iVo.setTextColor(paramInt);
-          iVm.setText(bmw);
-          iVn.setText(bmu);
-          iVk.setText(bmy);
-          iVl.setText(bmx);
-          iVo.setText(bmz);
-          if (!ad.iW(bmF))
-          {
-            iVq.setVisibility(0);
-            a.b.i(iVq, bmF);
-            iUc.setOnLongClickListener(iTH.iWw);
-            iUc.setTag(localnv);
-            iUc.setOnClickListener(iTH.iWu);
-            return;
-            if (localObject1 == null) {}
-            for (boolean bool = true;; bool = false)
-            {
-              t.e("!56@/B4Tb64lLpKwUcOR+EdWcqqGVJnK8iwmbiZxNVncOS2bsW//QRniUw==", "amessage:%b, %s, %d, %s", new Object[] { Boolean.valueOf(bool), localObject2, Long.valueOf(field_msgId), paramString });
-              paramString = null;
-              break;
-            }
-            paramar = paramar;
-            t.w("!56@/B4Tb64lLpKwUcOR+EdWcqqGVJnK8iwmbiZxNVncOS2bsW//QRniUw==", "hy: line color given color is incorrect. use default");
-            i = k;
-          }
-        }
-        catch (IllegalArgumentException paramar)
-        {
-          for (;;)
-          {
-            t.w("!56@/B4Tb64lLpKwUcOR+EdWcqqGVJnK8iwmbiZxNVncOS2bsW//QRniUw==", "hy: given color is incorrect.use default");
-            paramInt = i;
-            continue;
-            iVq.setVisibility(8);
-          }
+          ldN.setVisibility(8);
+          ldM.setVisibility(8);
+          ldO.setVisibility(8);
+          u.v("!32@/B4Tb64lLpJM/Lh7GYoyAX5LS2Mvf7Yr", "status gone");
         }
       }
     }
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ar paramar)
+  public static boolean b(n.a.a parama)
   {
-    paramContextMenu.add(getTagposition, 100, 0, iUg.getString(a.n.chatting_long_click_menu_delete_msg));
-    return false;
-  }
-  
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ar paramar)
-  {
-    switch (paramMenuItem.getItemId())
-    {
-    }
-    for (;;)
+    if (cgn != n.a.b.cgr) {}
+    m localm;
+    do
     {
       return false;
-      parama = bn.xO(field_content);
-      paramMenuItem = null;
-      if (parama != null) {
-        paramMenuItem = a.a.dr(parama);
-      }
-      if (paramMenuItem != null) {
-        p.ur(aqm);
-      }
-      br.E(field_msgId);
-    }
-  }
-  
-  public final boolean a(View paramView, ChattingUI.a parama, ar paramar)
-  {
-    int i = 0;
-    String str = field_content;
-    paramView = a.a.r(str, field_reserved);
-    if (paramView == null)
-    {
-      t.i("!56@/B4Tb64lLpKwUcOR+EdWcqqGVJnK8iwmbiZxNVncOS2bsW//QRniUw==", "onItemClick, content is null.");
-      return false;
-    }
-    t.d("!56@/B4Tb64lLpKwUcOR+EdWcqqGVJnK8iwmbiZxNVncOS2bsW//QRniUw==", "onItemClick, url is (%s).", new Object[] { url });
-    if (!ad.iW(url))
-    {
-      paramar = new Intent();
-      paramar.putExtra("rawUrl", url);
-      c.c(ipQ.iqj, "webview", ".ui.tools.WebViewUI", paramar);
-      return true;
-    }
-    if (!ad.iW(bmv))
-    {
-      int j = bmL;
-      if (System.currentTimeMillis() - j * 1000L >= 2592000000L) {
-        i = 1;
-      }
-      if (i == 0)
+      localm = com.tencent.mm.an.o.jV(anC);
+      if (localm == null)
       {
-        Intent localIntent = new Intent();
-        localIntent.putExtra("key_rank_info", str);
-        localIntent.putExtra("key_rank_semi", field_reserved);
-        localIntent.putExtra("key_rank_title", bmG);
-        localIntent.putExtra("key_champion_info", bmH);
-        localIntent.putExtra("key_champion_coverimg", bmH);
-        localIntent.putExtra("rank_id", bmv);
-        localIntent.putExtra("app_username", appName);
-        localIntent.putExtra("device_type", bmK);
-        localIntent.putExtra("key_champioin_username", bmF);
-        c.c(ipQ.iqj, "exdevice", ".ui.ExdeviceRankInfoUI", localIntent);
+        u.w("!32@/B4Tb64lLpJM/Lh7GYoyAX5LS2Mvf7Yr", "update status, filename %s, videoInfo not found", new Object[] { anC });
+        return false;
       }
-    }
-    for (;;)
+    } while ((status != 112) && (status != 104) && (status != 103));
+    ab.j(new Runnable()
     {
-      return true;
-      c.t(ipQ.iqj, "exdevice", ".ui.ExdeviceExpireUI");
-    }
+      public final void run()
+      {
+        Object localObject = (WeakReference)dy.bgl().get(kWg.getFileName());
+        if (localObject == null)
+        {
+          u.w("!32@/B4Tb64lLpJM/Lh7GYoyAX5LS2Mvf7Yr", "update status, filename %s, holder not found", new Object[] { kWg.getFileName() });
+          return;
+        }
+        localObject = (dy)((WeakReference)localObject).get();
+        if (localObject == null)
+        {
+          u.w("!32@/B4Tb64lLpJM/Lh7GYoyAX5LS2Mvf7Yr", "update status, filename %s, holder gc!", new Object[] { kWg.getFileName() });
+          return;
+        }
+        ldN.setVisibility(0);
+        ldM.setVisibility(8);
+        ldO.setVisibility(0);
+        if (kWg.status == 112)
+        {
+          ldO.setProgress(com.tencent.mm.an.o.e(kWg));
+          return;
+        }
+        ldO.setProgress(com.tencent.mm.an.o.f(kWg));
+      }
+    });
+    return true;
   }
   
-  final class a
-    extends cf.a
+  public final aa.a e(View paramView, boolean paramBoolean)
   {
-    protected TextView iVk;
-    protected TextView iVl;
-    protected TextView iVm;
-    protected TextView iVn;
-    protected TextView iVo;
-    protected TextView iVp;
-    protected ImageView iVq;
-    
-    public a(int paramInt)
+    super.aC(paramView);
+    dUV = ((TextView)paramView.findViewById(2131165184));
+    kQA = ((ImageView)paramView.findViewById(2131165387));
+    gjr = ((TextView)paramView.findViewById(2131165268));
+    czV = ((TextView)paramView.findViewById(2131165552));
+    ldL = ((TextView)paramView.findViewById(2131165553));
+    hbk = ((ImageView)paramView.findViewById(2131165414));
+    ldM = ((ImageView)paramView.findViewById(2131165556));
+    ldN = ((ImageView)paramView.findViewById(2131165555));
+    ldO = ((ProgressBar)paramView.findViewById(2131165554));
+    ldP = paramView.findViewById(2131165551);
+    kTa = paramView.findViewById(2131165257);
+    int i;
+    ImageView localImageView;
+    if (paramBoolean)
     {
-      super();
+      i = 10;
+      type = i;
+      kQE = ((TextView)paramView.findViewById(2131165432));
+      edK = ((CheckBox)paramView.findViewById(2131165186));
+      dMC = paramView.findViewById(2131165187);
+      lco = ((ImageView)paramView.findViewById(2131165430));
+      if (paramBoolean) {
+        break label268;
+      }
+      localImageView = (ImageView)paramView.findViewById(2131165313);
+      label234:
+      kQC = localImageView;
+      if (paramBoolean) {
+        break label274;
+      }
     }
-    
-    public final a aD(View paramView)
+    label268:
+    label274:
+    for (paramView = (ProgressBar)paramView.findViewById(2131165685);; paramView = null)
     {
-      super.aB(paramView);
-      iVk = ((TextView)paramView.findViewById(a.i.step_number));
-      iVm = ((TextView)paramView.findViewById(a.i.rank_number));
-      iVl = ((TextView)paramView.findViewById(a.i.step_number_tip));
-      iVn = ((TextView)paramView.findViewById(a.i.rank_number_tip));
-      iVo = ((TextView)paramView.findViewById(a.i.view_rank_tip));
-      iVp = ((TextView)paramView.findViewById(a.i.hard_device_spilter));
-      doF = ((CheckBox)paramView.findViewById(a.i.chatting_checkbox));
-      iVq = ((ImageView)paramView.findViewById(a.i.view_avatar));
+      ldQ = paramView;
       return this;
+      i = 11;
+      break;
+      localImageView = null;
+      break label234;
     }
   }
 }

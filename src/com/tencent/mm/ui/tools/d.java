@@ -1,17 +1,18 @@
 package com.tencent.mm.ui.tools;
 
-import android.view.View;
-import android.view.View.OnFocusChangeListener;
-import com.tencent.mm.sdk.platformtools.t;
-
 final class d
-  implements View.OnFocusChangeListener
 {
-  d(ActionBarSearchView paramActionBarSearchView) {}
+  String aJD;
+  String bUu;
+  int eCk;
+  String eCl;
   
-  public final void onFocusChange(View paramView, boolean paramBoolean)
+  public d(String paramString1, String paramString2, int paramInt, String paramString3)
   {
-    t.v("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on edittext focus changed, hasFocus %B", new Object[] { Boolean.valueOf(paramBoolean) });
+    bUu = paramString1;
+    aJD = paramString2;
+    eCk = paramInt;
+    eCl = paramString3;
   }
 }
 

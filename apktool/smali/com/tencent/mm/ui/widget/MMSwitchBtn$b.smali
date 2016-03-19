@@ -17,11 +17,11 @@
 # instance fields
 .field direction:I
 
-.field iks:F
+.field lFI:F
 
-.field jBk:J
+.field lFJ:J
 
-.field final synthetic jBl:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+.field final synthetic lFK:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     .prologue
     .line 194
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBl:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFK:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
@@ -42,12 +42,12 @@
     .line 191
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->iks:F
+    iput v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFI:F
 
     .line 192
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBk:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFJ:J
 
     .line 195
     new-instance v0, Landroid/view/animation/AccelerateDecelerateInterpolator;
@@ -57,9 +57,9 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
     .line 196
-    new-instance v0, Lcom/tencent/mm/ui/widget/d;
+    new-instance v0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;
 
-    invoke-direct {v0, p0, p1}, Lcom/tencent/mm/ui/widget/d;-><init>(Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;Lcom/tencent/mm/ui/widget/MMSwitchBtn;)V
+    invoke-direct {v0, p0, p1}, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b$1;-><init>(Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;Lcom/tencent/mm/ui/widget/MMSwitchBtn;)V
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -79,15 +79,15 @@
     if-nez v0, :cond_0
 
     .line 234
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBl:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFK:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->d(Lcom/tencent/mm/ui/widget/MMSwitchBtn;)Landroid/graphics/RectF;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->iks:F
+    iget v1, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFI:F
 
-    iget-wide v2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBk:J
+    iget-wide v2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFJ:J
 
     long-to-float v2, v2
 
@@ -99,12 +99,12 @@
 
     .line 238
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBl:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFK:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->e(Lcom/tencent/mm/ui/widget/MMSwitchBtn;)V
 
     .line 239
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBl:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFK:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->invalidate()V
 
@@ -113,15 +113,15 @@
 
     .line 236
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBl:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFK:Lcom/tencent/mm/ui/widget/MMSwitchBtn;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/widget/MMSwitchBtn;->d(Lcom/tencent/mm/ui/widget/MMSwitchBtn;)Landroid/graphics/RectF;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->iks:F
+    iget v1, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFI:F
 
-    iget-wide v2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->jBk:J
+    iget-wide v2, p0, Lcom/tencent/mm/ui/widget/MMSwitchBtn$b;->lFJ:J
 
     long-to-float v2, v2
 

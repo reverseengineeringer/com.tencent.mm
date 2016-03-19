@@ -2,10 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class cz$a
 {
-  public String appId;
-  public String avf;
-  public String extInfo;
-  public String url;
+  public byte[] data;
+  public String mac;
 }
 
 /* Location:

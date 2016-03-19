@@ -2,9 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class be$a
 {
-  public String awj;
-  public long awk;
-  public String mac;
+  public int state = -1;
 }
 
 /* Location:

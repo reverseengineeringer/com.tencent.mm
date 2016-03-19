@@ -1,21 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.database.Cursor;
+import com.tencent.mm.sdk.c.b;
 
 public final class dj
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azu = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awQ = new a();
+  public b awR = new b();
   
   public dj()
   {
-    id = "GetCardCount";
-    hXT = atO;
+    id = "ExtCursorForTimeLine";
+    jUI = arR;
   }
   
-  public static final class a {}
+  public static final class a
+  {
+    public String awS;
+  }
+  
+  public static final class b
+  {
+    public Cursor awP;
+  }
 }
 
 /* Location:

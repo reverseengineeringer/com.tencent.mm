@@ -1,361 +1,188 @@
 package com.tencent.mm.modelfriend;
 
-import android.content.Context;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.bj;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.agg;
-import com.tencent.mm.protocal.b.ais;
-import com.tencent.mm.protocal.b.ds;
-import com.tencent.mm.protocal.b.dt;
-import com.tencent.mm.protocal.i.c;
-import com.tencent.mm.protocal.i.d;
-import com.tencent.mm.protocal.y;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.h;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.g;
-import com.tencent.mm.sdk.platformtools.s;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.Iterator;
-import java.util.LinkedList;
+import android.content.ContentValues;
+import android.database.Cursor;
+import com.tencent.mm.az.g;
+import com.tencent.mm.sdk.h.j;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class ag
   extends j
-  implements r
 {
-  d apI = null;
-  public final w btU = new a();
-  private int bzD = 2;
+  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS qqlist ( qq long  PRIMARY KEY , wexinstatus int  , groupid int  , username text  , nickname text  , pyinitial text  , quanpin text  , qqnickname text  , qqpyinitial text  , qqquanpin text  , qqremark text  , qqremarkpyinitial text  , qqremarkquanpin text  , reserved1 text  , reserved2 text  , reserved3 int  , reserved4 int  ) ", "CREATE INDEX IF NOT EXISTS groupid_index ON qqlist ( groupid ) ", "CREATE INDEX IF NOT EXISTS qq_index ON qqlist ( qq ) " };
+  public final g bCw;
   
-  public ag(String paramString1, int paramInt1, String paramString2, int paramInt2, String paramString3)
+  public ag(g paramg)
   {
-    com.tencent.mm.protocal.j.a locala = (com.tencent.mm.protocal.j.a)btU.vj();
-    hgS.hkO = paramInt1;
-    t.d("!56@/B4Tb64lLpK+IBX8XDgnvtitwdiFr6yUU+4wykkCPbQfDMqQQ+s8JQ==", "Get mobile:" + paramString1 + " opcode:" + paramInt1 + " verifyCode:" + paramString2);
-    hgS.hmv = paramString1;
-    hgS.hmw = paramString2;
-    hgS.hmx = paramInt2;
-    hgS.hmy = paramString3;
-    hgS.cUR = s.aEJ();
-    hgS.hkF = ax.tf();
-    if ((bn.iW(hgS.hmA)) && (bn.iW(hgS.hmB)))
-    {
-      paramString2 = hgS;
-      if (!g.hYj) {
-        break label217;
-      }
+    bCw = paramg;
+  }
+  
+  public final af V(long paramLong)
+  {
+    af localaf = null;
+    Object localObject = "select qqlist.qq,qqlist.wexinstatus,qqlist.groupid,qqlist.username,qqlist.nickname,qqlist.pyinitial,qqlist.quanpin,qqlist.qqnickname,qqlist.qqpyinitial,qqlist.qqquanpin,qqlist.qqremark,qqlist.qqremarkpyinitial,qqlist.qqremarkquanpin,qqlist.reserved1,qqlist.reserved2,qqlist.reserved3,qqlist.reserved4 from qqlist  where qqlist.qq = \"" + paramLong + "\"";
+    localObject = bCw.rawQuery((String)localObject, null);
+    if (localObject == null) {
+      return null;
     }
-    label217:
-    for (paramString1 = aa.getContext().getString(a.n.safe_device_android_device_nm);; paramString1 = aa.getContext().getString(a.n.safe_device_android_device))
+    if (((Cursor)localObject).moveToFirst())
     {
-      hmA = paramString1;
-      hgS.hmB = com.tencent.mm.protocal.b.hgm;
-      return;
+      localaf = new af();
+      localaf.c((Cursor)localObject);
+    }
+    ((Cursor)localObject).close();
+    return localaf;
+  }
+  
+  public final int a(long paramLong, af paramaf)
+  {
+    int i = 0;
+    paramaf = paramaf.zg();
+    if (paramaf.size() > 0) {
+      i = bCw.update("qqlist", paramaf, "qq=?", new String[] { String.valueOf(paramLong) });
+    }
+    if (i > 0) {
+      b(3, this, String.valueOf(paramLong));
+    }
+    return i;
+  }
+  
+  public final boolean a(af paramaf)
+  {
+    if (paramaf == null) {}
+    ContentValues localContentValues;
+    do
+    {
+      return false;
+      u.d("!32@/B4Tb64lLpLDqTvM25JsITvy8IO+07dZ", "insert: name:" + paramaf.zi());
+      aou = -1;
+      localContentValues = paramaf.zg();
+    } while ((int)bCw.insert("qqlist", "qq", localContentValues) == -1);
+    b(2, this, bNk);
+    return true;
+  }
+  
+  public final Cursor b(int paramInt, String paramString, boolean paramBoolean)
+  {
+    u.d("!32@/B4Tb64lLpLDqTvM25JsITvy8IO+07dZ", "getByGroupID: GroupID:" + paramInt + ", searchby:" + paramString);
+    StringBuilder localStringBuilder = new StringBuilder();
+    if (paramBoolean) {
+      localStringBuilder.append("select qqlist.qq,qqlist.wexinstatus,qqlist.groupid,qqlist.username,qqlist.nickname,qqlist.pyinitial,qqlist.quanpin,qqlist.qqnickname,qqlist.qqpyinitial,qqlist.qqquanpin,qqlist.qqremark,qqlist.qqremarkpyinitial,qqlist.qqremarkquanpin,qqlist.reserved1,qqlist.reserved2,qqlist.reserved3,qqlist.reserved4 from qqlist  where qqlist.groupid = \"" + paramInt + "\" and ( ");
+    }
+    for (;;)
+    {
+      localStringBuilder.append("qqlist.qq like '%" + paramString + "%' or ");
+      localStringBuilder.append("qqlist.username like '%" + paramString + "%' or ");
+      localStringBuilder.append("qqlist.nickname like '%" + paramString + "%' or ");
+      localStringBuilder.append("qqlist.pyinitial like '%" + paramString + "%' or ");
+      localStringBuilder.append("qqlist.quanpin like '%" + paramString + "%' or ");
+      localStringBuilder.append("qqlist.qqnickname like '%" + paramString + "%' or ");
+      localStringBuilder.append("qqlist.qqpyinitial like '%" + paramString + "%' or ");
+      localStringBuilder.append("qqlist.qqquanpin like '%" + paramString + "%' or ");
+      localStringBuilder.append("qqlist.qqremark like '%" + paramString + "%' )");
+      localStringBuilder.append(" order by reserved3");
+      return bCw.rawQuery(localStringBuilder.toString(), null);
+      localStringBuilder.append("select qqlist.qq,qqlist.wexinstatus,qqlist.groupid,qqlist.username,qqlist.nickname,qqlist.pyinitial,qqlist.quanpin,qqlist.qqnickname,qqlist.qqpyinitial,qqlist.qqquanpin,qqlist.qqremark,qqlist.qqremarkpyinitial,qqlist.qqremarkquanpin,qqlist.reserved1,qqlist.reserved2,qqlist.reserved3,qqlist.reserved4 from qqlist  where qqlist.groupid = \"" + paramInt + "\" and (wexinstatus =\"1" + "\" or wexinstatus =\"2" + "\") and ( ");
     }
   }
   
-  public ag(String paramString1, int paramInt1, String paramString2, int paramInt2, String paramString3, String paramString4)
+  public final boolean di(int paramInt)
   {
-    this(paramString1, paramInt1, paramString2, 0, paramString3);
-    btU.vj()).hgS.hkx = paramString4;
-  }
-  
-  public ag(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6)
-  {
-    this(paramString1, 11, paramString2, 0, paramString3, paramString4);
-    paramString1 = (com.tencent.mm.protocal.j.a)btU.vj();
-    hgS.hmA = paramString5;
-    hgS.hmB = paramString6;
-  }
-  
-  private int yd()
-  {
-    Object localObject = btU.tG()).hgT.hkw;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
+    bool3 = false;
+    bool2 = false;
+    localObject3 = null;
+    localObject1 = null;
+    try
     {
-      localObject = hNr.iterator();
-      while (((Iterator)localObject).hasNext())
+      Cursor localCursor = bCw.rawQuery("select reserved3 from qqlist where groupid=? and reserved3=?  limit 1", new String[] { String.valueOf(paramInt), "0" });
+      boolean bool1 = bool2;
+      if (localCursor != null)
       {
-        ais localais = (ais)((Iterator)localObject).next();
-        if (eJD == 1) {
-          return bn.getInt(hPU, 0);
+        localObject1 = localCursor;
+        localObject3 = localCursor;
+        boolean bool4 = localCursor.moveToFirst();
+        bool1 = bool2;
+        if (bool4) {
+          bool1 = true;
         }
       }
-    }
-    return 0;
-  }
-  
-  public final int a(m paramm, d paramd)
-  {
-    apI = paramd;
-    paramd = (com.tencent.mm.protocal.j.a)btU.vj();
-    if ((hgS.hmv == null) || (hgS.hmv.length() <= 0))
-    {
-      t.e("!56@/B4Tb64lLpK+IBX8XDgnvtitwdiFr6yUU+4wykkCPbQfDMqQQ+s8JQ==", "doScene getMobile Error: " + hgS.hmv);
-      return -1;
-    }
-    if (((hgS.hkO == 6) || (hgS.hkO == 9)) && ((hgS.hmw == null) || (hgS.hmw.length() <= 0)))
-    {
-      t.e("!56@/B4Tb64lLpK+IBX8XDgnvtitwdiFr6yUU+4wykkCPbQfDMqQQ+s8JQ==", "doScene getVerifyCode Error: " + hgS.hmv);
-      return -1;
-    }
-    return a(paramm, btU, this);
-  }
-  
-  protected final int a(w paramw)
-  {
-    return com.tencent.mm.q.j.b.btz;
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
-  {
-    t.d("!56@/B4Tb64lLpK+IBX8XDgnvtitwdiFr6yUU+4wykkCPbQfDMqQQ+s8JQ==", "dkidc onGYNetEnd  errType:%d errCode:%d", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
-    paramArrayOfByte = (com.tencent.mm.protocal.j.b)paramw.tG();
-    if ((paramInt2 == 4) && (paramInt3 == 65235))
-    {
-      bj.a(true, hgT.hmJ, hgT.hmK, hgT.hmI);
-      bzD -= 1;
-      if (bzD <= 0)
+      bool2 = bool1;
+      if (localCursor != null)
       {
-        apI.a(3, -1, "", this);
-        return;
-      }
-      a(btk, apI);
-      return;
-    }
-    if ((paramInt2 == 4) && (paramInt3 == -102))
-    {
-      paramInt1 = vjhgO.gLC;
-      t.d("!56@/B4Tb64lLpK+IBX8XDgnvtitwdiFr6yUU+4wykkCPbQfDMqQQ+s8JQ==", "summerauth auth MM_ERR_CERT_EXPIRED  getcert now  old ver:%d", new Object[] { Integer.valueOf(paramInt1) });
-      ax.td().k(new ah(this, paramInt1));
-      return;
-    }
-    if ((paramInt2 != 0) || (paramInt3 != 0))
-    {
-      t.e("!56@/B4Tb64lLpK+IBX8XDgnvtitwdiFr6yUU+4wykkCPbQfDMqQQ+s8JQ==", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
-      apI.a(paramInt2, paramInt3, paramString, this);
-      return;
-    }
-    bj.a(false, hgT.hmJ, hgT.hmK, hgT.hmI);
-    if ((paramInt2 == 0) && (paramInt3 == 0)) {
-      com.tencent.mm.plugin.a.b.dP(yd());
-    }
-    apI.a(paramInt2, paramInt3, paramString, this);
-  }
-  
-  protected final void a(com.tencent.mm.q.j.a parama) {}
-  
-  public final void da(int paramInt)
-  {
-    btU.vj()).hgS.hmD = paramInt;
-  }
-  
-  public final void db(int paramInt)
-  {
-    btU.vj()).hgS.hmE = paramInt;
-  }
-  
-  public final int getType()
-  {
-    return 145;
-  }
-  
-  public final String getUsername()
-  {
-    return btU.tG()).hgT.hjS;
-  }
-  
-  protected final int lP()
-  {
-    return 3;
-  }
-  
-  public final int uM()
-  {
-    return btU.vj()).hgS.hkO;
-  }
-  
-  public final String xV()
-  {
-    return btU.tG()).hgT.hmH;
-  }
-  
-  public final String xW()
-  {
-    return btU.tG()).hgT.avE;
-  }
-  
-  public final String xX()
-  {
-    return btU.tG()).hgT.hkx;
-  }
-  
-  public final String xY()
-  {
-    return btU.tG()).hgT.hmO;
-  }
-  
-  public final int xZ()
-  {
-    Object localObject = btU.tG()).hgT.hkw;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
-    {
-      localObject = hNr.iterator();
-      while (((Iterator)localObject).hasNext())
-      {
-        ais localais = (ais)((Iterator)localObject).next();
-        if (eJD == 6) {
-          return bn.getInt(hPU, 3);
-        }
+        localCursor.close();
+        bool2 = bool1;
       }
     }
-    return 3;
+    catch (Exception localException)
+    {
+      localObject3 = localObject1;
+      u.e("!32@/B4Tb64lLpLDqTvM25JsITvy8IO+07dZ", "[cpan] check qq list show head faild.:%s", new Object[] { localException.toString() });
+      bool2 = bool3;
+      return false;
+    }
+    finally
+    {
+      if (localObject3 == null) {
+        break label145;
+      }
+      ((Cursor)localObject3).close();
+    }
+    return bool2;
   }
   
-  public final int ya()
+  public final af hC(String paramString)
   {
-    Object localObject = btU.tG()).hgT.hkw;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
+    Object localObject = null;
+    paramString = "select qqlist.qq,qqlist.wexinstatus,qqlist.groupid,qqlist.username,qqlist.nickname,qqlist.pyinitial,qqlist.quanpin,qqlist.qqnickname,qqlist.qqpyinitial,qqlist.qqquanpin,qqlist.qqremark,qqlist.qqremarkpyinitial,qqlist.qqremarkquanpin,qqlist.reserved1,qqlist.reserved2,qqlist.reserved3,qqlist.reserved4 from qqlist  where qqlist.username = \"" + paramString + "\"";
+    Cursor localCursor = bCw.rawQuery(paramString, null);
+    if (localCursor == null) {
+      return null;
+    }
+    paramString = (String)localObject;
+    if (localCursor.moveToFirst())
     {
-      localObject = hNr.iterator();
-      while (((Iterator)localObject).hasNext())
-      {
-        ais localais = (ais)((Iterator)localObject).next();
-        if (eJD == 4) {
-          return bn.getInt(hPU, 30);
-        }
+      paramString = new af();
+      paramString.c(localCursor);
+    }
+    localCursor.close();
+    return paramString;
+  }
+  
+  public final Cursor q(int paramInt, boolean paramBoolean)
+  {
+    String str;
+    String[] arrayOfString;
+    if (paramBoolean)
+    {
+      str = "select qqlist.qq,qqlist.wexinstatus,qqlist.groupid,qqlist.username,qqlist.nickname,qqlist.pyinitial,qqlist.quanpin,qqlist.qqnickname,qqlist.qqpyinitial,qqlist.qqquanpin,qqlist.qqremark,qqlist.qqremarkpyinitial,qqlist.qqremarkquanpin,qqlist.reserved1,qqlist.reserved2,qqlist.reserved3,qqlist.reserved4 from qqlist  where qqlist.groupid=?  order by reserved3";
+      arrayOfString = new String[1];
+      arrayOfString[0] = String.valueOf(paramInt);
+    }
+    for (;;)
+    {
+      return bCw.rawQuery(str, arrayOfString);
+      str = "select qqlist.qq,qqlist.wexinstatus,qqlist.groupid,qqlist.username,qqlist.nickname,qqlist.pyinitial,qqlist.quanpin,qqlist.qqnickname,qqlist.qqpyinitial,qqlist.qqquanpin,qqlist.qqremark,qqlist.qqremarkpyinitial,qqlist.qqremarkquanpin,qqlist.reserved1,qqlist.reserved2,qqlist.reserved3,qqlist.reserved4 from qqlist  where qqlist.groupid=? and (wexinstatus=? or wexinstatus=?) order by reserved3";
+      arrayOfString = new String[3];
+      arrayOfString[0] = String.valueOf(paramInt);
+      arrayOfString[1] = "1";
+      arrayOfString[2] = "2";
+    }
+  }
+  
+  protected final boolean yv()
+  {
+    boolean bool = true;
+    if ((bCw == null) || (bCw.aVP())) {
+      if (bCw != null) {
+        break label48;
       }
     }
-    return 30;
-  }
-  
-  public final int yb()
-  {
-    Object localObject = btU.tG()).hgT.hkw;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
+    label48:
+    for (Object localObject = "null";; localObject = Boolean.valueOf(bCw.aVP()))
     {
-      localObject = hNr.iterator();
-      while (((Iterator)localObject).hasNext())
-      {
-        ais localais = (ais)((Iterator)localObject).next();
-        if (eJD == 5) {
-          return bn.getInt(hPU, 0);
-        }
-      }
-    }
-    return 0;
-  }
-  
-  public final boolean yc()
-  {
-    Object localObject = btU.tG()).hgT.hkw;
-    ais localais;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
-    {
-      localObject = hNr.iterator();
-      do
-      {
-        if (!((Iterator)localObject).hasNext()) {
-          break;
-        }
-        localais = (ais)((Iterator)localObject).next();
-      } while (eJD != 7);
-    }
-    for (int i = bn.getInt(hPU, 0);; i = 0) {
-      return i > 0;
-    }
-  }
-  
-  public final boolean ye()
-  {
-    Object localObject = btU.tG()).hgT.hkw;
-    ais localais;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
-    {
-      localObject = hNr.iterator();
-      do
-      {
-        if (!((Iterator)localObject).hasNext()) {
-          break;
-        }
-        localais = (ais)((Iterator)localObject).next();
-      } while (eJD != 10);
-    }
-    for (int i = bn.getInt(hPU, 0);; i = 0) {
-      return i > 0;
-    }
-  }
-  
-  public final String yf()
-  {
-    Object localObject = btU.tG()).hgT.hkw;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
-    {
-      localObject = hNr.iterator();
-      while (((Iterator)localObject).hasNext())
-      {
-        ais localais = (ais)((Iterator)localObject).next();
-        if (eJD == 14) {
-          return hPU;
-        }
-      }
-    }
-    return null;
-  }
-  
-  public final String yg()
-  {
-    Object localObject = btU.tG()).hgT.hkw;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
-    {
-      localObject = hNr.iterator();
-      while (((Iterator)localObject).hasNext())
-      {
-        ais localais = (ais)((Iterator)localObject).next();
-        if (eJD == 15) {
-          return hPU;
-        }
-      }
-    }
-    return null;
-  }
-  
-  public static final class a
-    extends h
-  {
-    private final com.tencent.mm.protocal.j.a bzH = new com.tencent.mm.protocal.j.a();
-    private final com.tencent.mm.protocal.j.b bzI = new com.tencent.mm.protocal.j.b();
-    
-    public final int getType()
-    {
-      return 145;
-    }
-    
-    public final String getUri()
-    {
-      return "/cgi-bin/micromsg-bin/bindopmobileforreg";
-    }
-    
-    protected final i.c tF()
-    {
-      return bzH;
-    }
-    
-    public final i.d tG()
-    {
-      return bzI;
-    }
-    
-    public final int vk()
-    {
-      return 1;
+      u.w("!32@/B4Tb64lLpLDqTvM25JsITvy8IO+07dZ", "shouldProcessEvent db is close :%s", new Object[] { localObject });
+      bool = false;
+      return bool;
     }
   }
 }

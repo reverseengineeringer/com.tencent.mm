@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract nH(I)V
+.method public abstract qC(I)V
 .end method

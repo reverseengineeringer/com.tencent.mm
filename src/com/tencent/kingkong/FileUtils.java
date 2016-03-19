@@ -11,6 +11,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,31 +36,31 @@ public class FileUtils
   public static long checksumCrc32(File paramFile)
   {
     // Byte code:
-    //   0: new 57	java/util/zip/CRC32
+    //   0: new 59	java/util/zip/CRC32
     //   3: dup
-    //   4: invokespecial 58	java/util/zip/CRC32:<init>	()V
+    //   4: invokespecial 60	java/util/zip/CRC32:<init>	()V
     //   7: astore 4
-    //   9: new 60	java/util/zip/CheckedInputStream
+    //   9: new 62	java/util/zip/CheckedInputStream
     //   12: dup
-    //   13: new 62	java/io/FileInputStream
+    //   13: new 64	java/io/FileInputStream
     //   16: dup
     //   17: aload_0
-    //   18: invokespecial 65	java/io/FileInputStream:<init>	(Ljava/io/File;)V
+    //   18: invokespecial 67	java/io/FileInputStream:<init>	(Ljava/io/File;)V
     //   21: aload 4
-    //   23: invokespecial 68	java/util/zip/CheckedInputStream:<init>	(Ljava/io/InputStream;Ljava/util/zip/Checksum;)V
+    //   23: invokespecial 70	java/util/zip/CheckedInputStream:<init>	(Ljava/io/InputStream;Ljava/util/zip/Checksum;)V
     //   26: astore_3
     //   27: sipush 128
     //   30: newarray <illegal type>
     //   32: astore_0
     //   33: aload_3
     //   34: aload_0
-    //   35: invokevirtual 72	java/util/zip/CheckedInputStream:read	([B)I
+    //   35: invokevirtual 74	java/util/zip/CheckedInputStream:read	([B)I
     //   38: ifge -5 -> 33
     //   41: aload 4
-    //   43: invokevirtual 76	java/util/zip/CRC32:getValue	()J
+    //   43: invokevirtual 78	java/util/zip/CRC32:getValue	()J
     //   46: lstore_1
     //   47: aload_3
-    //   48: invokevirtual 79	java/util/zip/CheckedInputStream:close	()V
+    //   48: invokevirtual 81	java/util/zip/CheckedInputStream:close	()V
     //   51: lload_1
     //   52: lreturn
     //   53: astore_0
@@ -68,7 +69,7 @@ public class FileUtils
     //   56: aload_3
     //   57: ifnull +7 -> 64
     //   60: aload_3
-    //   61: invokevirtual 79	java/util/zip/CheckedInputStream:close	()V
+    //   61: invokevirtual 81	java/util/zip/CheckedInputStream:close	()V
     //   64: aload_0
     //   65: athrow
     //   66: astore_0
@@ -118,48 +119,48 @@ public class FileUtils
   {
     // Byte code:
     //   0: aload_1
-    //   1: invokevirtual 94	java/io/File:exists	()Z
+    //   1: invokevirtual 96	java/io/File:exists	()Z
     //   4: ifeq +8 -> 12
     //   7: aload_1
-    //   8: invokevirtual 97	java/io/File:delete	()Z
+    //   8: invokevirtual 99	java/io/File:delete	()Z
     //   11: pop
-    //   12: new 99	java/io/FileOutputStream
+    //   12: new 101	java/io/FileOutputStream
     //   15: dup
     //   16: aload_1
-    //   17: invokespecial 100	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
+    //   17: invokespecial 102	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
     //   20: astore_1
     //   21: sipush 4096
     //   24: newarray <illegal type>
     //   26: astore_3
     //   27: aload_0
     //   28: aload_3
-    //   29: invokevirtual 101	java/io/InputStream:read	([B)I
+    //   29: invokevirtual 103	java/io/InputStream:read	([B)I
     //   32: istore_2
     //   33: iload_2
     //   34: ifge +20 -> 54
     //   37: aload_1
-    //   38: invokevirtual 104	java/io/FileOutputStream:flush	()V
+    //   38: invokevirtual 106	java/io/FileOutputStream:flush	()V
     //   41: aload_1
-    //   42: invokevirtual 108	java/io/FileOutputStream:getFD	()Ljava/io/FileDescriptor;
-    //   45: invokevirtual 113	java/io/FileDescriptor:sync	()V
+    //   42: invokevirtual 110	java/io/FileOutputStream:getFD	()Ljava/io/FileDescriptor;
+    //   45: invokevirtual 115	java/io/FileDescriptor:sync	()V
     //   48: aload_1
-    //   49: invokevirtual 114	java/io/FileOutputStream:close	()V
+    //   49: invokevirtual 116	java/io/FileOutputStream:close	()V
     //   52: iconst_1
     //   53: ireturn
     //   54: aload_1
     //   55: aload_3
     //   56: iconst_0
     //   57: iload_2
-    //   58: invokevirtual 118	java/io/FileOutputStream:write	([BII)V
+    //   58: invokevirtual 120	java/io/FileOutputStream:write	([BII)V
     //   61: goto -34 -> 27
     //   64: astore_0
     //   65: aload_1
-    //   66: invokevirtual 104	java/io/FileOutputStream:flush	()V
+    //   66: invokevirtual 106	java/io/FileOutputStream:flush	()V
     //   69: aload_1
-    //   70: invokevirtual 108	java/io/FileOutputStream:getFD	()Ljava/io/FileDescriptor;
-    //   73: invokevirtual 113	java/io/FileDescriptor:sync	()V
+    //   70: invokevirtual 110	java/io/FileOutputStream:getFD	()Ljava/io/FileDescriptor;
+    //   73: invokevirtual 115	java/io/FileDescriptor:sync	()V
     //   76: aload_1
-    //   77: invokevirtual 114	java/io/FileOutputStream:close	()V
+    //   77: invokevirtual 116	java/io/FileOutputStream:close	()V
     //   80: aload_0
     //   81: athrow
     //   82: astore_0
@@ -201,7 +202,13 @@ public class FileUtils
     for (;;)
     {
       return;
-      Arrays.sort(paramFile, new FileUtils.1());
+      Arrays.sort(paramFile, new Comparator()
+      {
+        public final int compare(File paramAnonymousFile1, File paramAnonymousFile2)
+        {
+          return (int)(paramAnonymousFile2.lastModified() - paramAnonymousFile1.lastModified());
+        }
+      });
       while (paramInt < paramFile.length)
       {
         Object localObject = paramFile[paramInt];

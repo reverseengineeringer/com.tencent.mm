@@ -1,247 +1,464 @@
-.class final Lcom/tencent/mm/booter/e;
+.class public final Lcom/tencent/mm/booter/e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/aj$a;
-
 
 # instance fields
-.field final synthetic bbW:Lcom/tencent/mm/booter/CoreService;
+.field bmF:Landroid/net/NetworkInfo;
+
+.field bmG:Landroid/net/wifi/WifiInfo;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/booter/CoreService;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 373
-    iput-object p1, p0, Lcom/tencent/mm/booter/e;->bbW:Lcom/tencent/mm/booter/CoreService;
+    const/4 v0, 0x0
 
+    .line 12
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    iput-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    .line 16
+    iput-object v0, p0, Lcom/tencent/mm/booter/e;->bmG:Landroid/net/wifi/WifiInfo;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final lO()Z
-    .locals 8
+.method final mQ()Z
+    .locals 9
 
     .prologue
+    const/4 v3, 0x0
+
+    const/4 v2, 0x1
+
     const/4 v1, 0x0
 
-    const/4 v0, 0x1
+    .line 25
+    :try_start_0
+    invoke-static {}, Lcom/tencent/mm/network/z;->getContext()Landroid/content/Context;
 
-    .line 377
-    iget-object v2, p0, Lcom/tencent/mm/booter/e;->bbW:Lcom/tencent/mm/booter/CoreService;
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/tencent/mm/booter/CoreService;->a(Lcom/tencent/mm/booter/CoreService;)Lcom/tencent/mm/platformtools/g;
+    const-string/jumbo v4, "connectivity"
 
-    move-result-object v2
+    invoke-virtual {v0, v4}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-wide v3, v2, Lcom/tencent/mm/platformtools/g;->bUT:J
+    move-result-object v0
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/platformtools/ad;->Z(J)J
+    check-cast v0, Landroid/net/ConnectivityManager;
 
-    move-result-wide v3
+    .line 26
+    if-nez v0, :cond_0
 
-    iget-wide v5, v2, Lcom/tencent/mm/platformtools/g;->bUR:J
+    .line 27
+    const-string/jumbo v0, "!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI="
 
-    cmp-long v3, v3, v5
+    const-string/jumbo v3, "can\'t get ConnectivityManager"
 
-    if-gez v3, :cond_1
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v3, "!44@/B4Tb64lLpIs4rU5akH/Kq28MqWPoDJwMR5odbcFtuM="
+    .line 28
+    const/4 v0, 0x0
 
-    new-instance v4, Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
 
-    const-string/jumbo v5, "frequency limited, last="
+    .line 29
+    const/4 v0, 0x0
 
-    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput-object v0, p0, Lcom/tencent/mm/booter/e;->bmG:Landroid/net/wifi/WifiInfo;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    iget-wide v5, v2, Lcom/tencent/mm/platformtools/g;->bUT:J
+    move v0, v1
 
-    invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string/jumbo v5, ", cur="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-static {}, Lcom/tencent/mm/platformtools/ad;->DN()J
-
-    move-result-wide v5
-
-    invoke-virtual {v4, v5, v6}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    const-string/jumbo v5, ", retries="
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    iget v5, v2, Lcom/tencent/mm/platformtools/g;->bUU:I
-
-    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget v3, v2, Lcom/tencent/mm/platformtools/g;->bUU:I
-
-    if-gtz v3, :cond_0
-
-    move v2, v1
-
+    .line 85
     :goto_0
-    if-nez v2, :cond_2
-
-    .line 378
-    const-string/jumbo v1, "!32@/B4Tb64lLpIzvC/moQitzBn6RBAuk+sd"
-
-    const-string/jumbo v2, "checker frequency limited"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 396
-    :goto_1
     return v0
 
-    .line 377
+    .line 35
     :cond_0
-    iget v3, v2, Lcom/tencent/mm/platformtools/g;->bUU:I
+    :try_start_1
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    add-int/lit8 v3, v3, -0x1
+    move-result-object v0
 
-    iput v3, v2, Lcom/tencent/mm/platformtools/g;->bUU:I
+    move-object v5, v0
 
-    :goto_2
-    invoke-static {}, Lcom/tencent/mm/platformtools/ad;->DN()J
+    .line 39
+    :goto_1
+    if-nez v5, :cond_1
 
-    move-result-wide v3
+    .line 40
+    :try_start_2
+    const-string/jumbo v0, "!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI="
 
-    iput-wide v3, v2, Lcom/tencent/mm/platformtools/g;->bUT:J
+    const-string/jumbo v3, "ActiveNetwork is null, has no network"
 
-    move v2, v0
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 41
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    .line 42
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/booter/e;->bmG:Landroid/net/wifi/WifiInfo;
+
+    move v0, v1
+
+    .line 43
     goto :goto_0
 
+    .line 37
+    :catch_0
+    move-exception v0
+
+    const-string/jumbo v0, "!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI="
+
+    const-string/jumbo v4, "getActiveNetworkInfo failed."
+
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object v5, v3
+
+    goto :goto_1
+
+    .line 47
     :cond_1
-    iget v3, v2, Lcom/tencent/mm/platformtools/g;->bUS:I
+    invoke-virtual {v5}, Landroid/net/NetworkInfo;->getType()I
 
-    iput v3, v2, Lcom/tencent/mm/platformtools/g;->bUU:I
+    move-result v0
 
-    goto :goto_2
+    if-ne v0, v2, :cond_2
 
-    .line 384
-    :cond_2
-    const-string/jumbo v2, "!32@/B4Tb64lLpIzvC/moQitzBn6RBAuk+sd"
+    move v4, v2
 
-    const-string/jumbo v3, "start checker, borast NotifyReceiver"
+    .line 48
+    :goto_2
+    if-eqz v4, :cond_5
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    .line 49
+    invoke-static {}, Lcom/tencent/mm/network/z;->getContext()Landroid/content/Context;
 
-    .line 386
-    iget-object v2, p0, Lcom/tencent/mm/booter/e;->bbW:Lcom/tencent/mm/booter/CoreService;
+    move-result-object v0
 
-    invoke-static {v2}, Lcom/tencent/mm/booter/CoreService;->b(Lcom/tencent/mm/booter/CoreService;)Lcom/tencent/mm/network/z;
+    const-string/jumbo v3, "wifi"
 
-    move-result-object v2
+    invoke-virtual {v0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    iget-object v2, v2, Lcom/tencent/mm/network/z;->bRV:Lcom/tencent/mm/network/a;
+    move-result-object v0
 
-    invoke-virtual {v2}, Lcom/tencent/mm/network/a;->sY()[B
+    check-cast v0, Landroid/net/wifi/WifiManager;
 
-    move-result-object v2
+    .line 50
+    invoke-virtual {v0}, Landroid/net/wifi/WifiManager;->getConnectionInfo()Landroid/net/wifi/WifiInfo;
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/bn;->J([B)Z
+    move-result-object v0
+
+    .line 51
+    if-eqz v0, :cond_3
+
+    iget-object v3, p0, Lcom/tencent/mm/booter/e;->bmG:Landroid/net/wifi/WifiInfo;
+
+    if-eqz v3, :cond_3
+
+    iget-object v3, p0, Lcom/tencent/mm/booter/e;->bmG:Landroid/net/wifi/WifiInfo;
+
+    invoke-virtual {v3}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->getBSSID()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    iget-object v3, p0, Lcom/tencent/mm/booter/e;->bmG:Landroid/net/wifi/WifiInfo;
+
+    invoke-virtual {v3}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->getSSID()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v3, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    iget-object v3, p0, Lcom/tencent/mm/booter/e;->bmG:Landroid/net/wifi/WifiInfo;
+
+    invoke-virtual {v3}, Landroid/net/wifi/WifiInfo;->getNetworkId()I
+
+    move-result v3
+
+    invoke-virtual {v0}, Landroid/net/wifi/WifiInfo;->getNetworkId()I
 
     move-result v6
 
-    .line 387
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    if-ne v3, v6, :cond_3
 
-    move-result-object v2
+    .line 54
+    const-string/jumbo v0, "!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI="
 
-    invoke-virtual {v2}, Lcom/tencent/mm/network/z;->CK()Z
+    const-string/jumbo v3, "Same Wifi, do not NetworkChanged"
 
-    move-result v7
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 388
-    if-nez v6, :cond_3
+    move v0, v1
 
-    if-nez v7, :cond_3
+    .line 55
+    goto :goto_0
 
-    const/4 v2, 0x0
+    :cond_2
+    move v4, v1
 
-    iget-object v3, p0, Lcom/tencent/mm/booter/e;->bbW:Lcom/tencent/mm/booter/CoreService;
+    .line 47
+    goto :goto_2
 
-    invoke-static {v3}, Lcom/tencent/mm/booter/CoreService;->b(Lcom/tencent/mm/booter/CoreService;)Lcom/tencent/mm/network/z;
-
-    move-result-object v3
-
-    iget-object v3, v3, Lcom/tencent/mm/network/z;->bRV:Lcom/tencent/mm/network/a;
-
-    invoke-virtual {v3}, Lcom/tencent/mm/network/a;->sY()[B
-
-    move-result-object v3
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DM()J
-
-    move-result-wide v4
-
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/booter/af;->a(II[B[BJ)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    .line 390
-    const-string/jumbo v1, "!32@/B4Tb64lLpIzvC/moQitzBn6RBAuk+sd"
-
-    const-string/jumbo v2, "deal with notify sync in push"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_1
-
-    .line 393
+    .line 57
     :cond_3
-    const-string/jumbo v2, "!32@/B4Tb64lLpIzvC/moQitzBn6RBAuk+sd"
+    const-string/jumbo v1, "!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI="
 
-    const-string/jumbo v3, "deal with notify sync to mm by broast, isSessionKeyNull:%b, isMMProcessExist:%b"
+    const-string/jumbo v3, "New Wifi Info:%s"
 
-    const/4 v4, 0x2
+    const/4 v6, 0x1
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    aput-object v0, v6, v7
+
+    invoke-static {v1, v3, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 58
+    const-string/jumbo v1, "!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI="
+
+    const-string/jumbo v3, "OldWifi Info:%s"
+
+    const/4 v6, 0x1
+
+    new-array v6, v6, [Ljava/lang/Object;
+
+    const/4 v7, 0x0
+
+    iget-object v8, p0, Lcom/tencent/mm/booter/e;->bmG:Landroid/net/wifi/WifiInfo;
+
+    aput-object v8, v6, v7
+
+    invoke-static {v1, v3, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 76
+    :goto_3
+    if-nez v4, :cond_4
+
+    .line 77
+    const-string/jumbo v1, "!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI="
+
+    const-string/jumbo v3, "New NetworkInfo:%s"
+
+    const/4 v4, 0x1
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v6, 0x0
 
-    move-result-object v5
+    aput-object v5, v4, v6
 
-    aput-object v5, v4, v1
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {v7}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    .line 78
+    iget-object v1, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
 
-    move-result-object v1
+    if-eqz v1, :cond_4
 
-    aput-object v1, v4, v0
+    .line 79
+    const-string/jumbo v1, "!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI="
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string/jumbo v3, "Old NetworkInfo:%s"
 
-    .line 395
-    invoke-static {}, Lcom/tencent/mm/booter/CoreService;->mO()V
+    const/4 v4, 0x1
 
-    goto :goto_1
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v6, 0x0
+
+    iget-object v7, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    aput-object v7, v4, v6
+
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 81
+    :cond_4
+    iput-object v5, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    .line 82
+    iput-object v0, p0, Lcom/tencent/mm/booter/e;->bmG:Landroid/net/wifi/WifiInfo;
+
+    :goto_4
+    move v0, v2
+
+    .line 85
+    goto/16 :goto_0
+
+    .line 60
+    :cond_5
+    iget-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    invoke-virtual {v5}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v5}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v0, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    iget-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getSubtype()I
+
+    move-result v0
+
+    invoke-virtual {v5}, Landroid/net/NetworkInfo;->getSubtype()I
+
+    move-result v6
+
+    if-ne v0, v6, :cond_6
+
+    iget-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
+
+    move-result v0
+
+    invoke-virtual {v5}, Landroid/net/NetworkInfo;->getType()I
+
+    move-result v6
+
+    if-ne v0, v6, :cond_6
+
+    .line 65
+    const-string/jumbo v0, "!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI="
+
+    const-string/jumbo v3, "Same Network, do not NetworkChanged"
+
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    move v0, v1
+
+    .line 66
+    goto/16 :goto_0
+
+    .line 68
+    :cond_6
+    iget-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    if-eqz v0, :cond_7
+
+    iget-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_7
+
+    invoke-virtual {v5}, Landroid/net/NetworkInfo;->getExtraInfo()Ljava/lang/String;
+
+    move-result-object v0
+
+    if-nez v0, :cond_7
+
+    iget-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getSubtype()I
+
+    move-result v0
+
+    invoke-virtual {v5}, Landroid/net/NetworkInfo;->getSubtype()I
+
+    move-result v6
+
+    if-ne v0, v6, :cond_7
+
+    iget-object v0, p0, Lcom/tencent/mm/booter/e;->bmF:Landroid/net/NetworkInfo;
+
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
+
+    move-result v0
+
+    invoke-virtual {v5}, Landroid/net/NetworkInfo;->getType()I
+
+    move-result v6
+
+    if-ne v0, v6, :cond_7
+
+    .line 72
+    const-string/jumbo v0, "!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI="
+
+    const-string/jumbo v3, "Same Network, do not NetworkChanged"
+
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    move v0, v1
+
+    .line 73
+    goto/16 :goto_0
+
+    :catch_1
+    move-exception v0
+
+    goto :goto_4
+
+    :cond_7
+    move-object v0, v3
+
+    goto/16 :goto_3
 .end method

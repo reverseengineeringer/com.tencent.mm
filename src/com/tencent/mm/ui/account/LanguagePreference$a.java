@@ -2,17 +2,17 @@ package com.tencent.mm.ui.account;
 
 public final class LanguagePreference$a
 {
-  String itK;
-  private String itL;
-  public String itM;
-  public boolean itN;
+  String ksC;
+  private String ksD;
+  public String ksE;
+  public boolean ksF;
   
   public LanguagePreference$a(String paramString1, String paramString2, String paramString3, boolean paramBoolean)
   {
-    itK = paramString1;
-    itL = paramString2;
-    itM = paramString3;
-    itN = paramBoolean;
+    ksC = paramString1;
+    ksD = paramString2;
+    ksE = paramString3;
+    ksF = paramBoolean;
   }
 }
 

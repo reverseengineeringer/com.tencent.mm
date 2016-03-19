@@ -2,8 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class cf$a
 {
-  public String axH;
-  public String axI;
+  public int avM = -1;
 }
 
 /* Location:

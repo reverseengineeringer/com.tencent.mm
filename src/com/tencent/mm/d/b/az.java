@@ -2,42 +2,25 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class az
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = { "CREATE INDEX IF NOT EXISTS file_name_hash_index ON SightDraftInfo(fileNameHash)" };
-  private static final int aId;
-  private static final int aRy = "localId".hashCode();
-  private static final int aSG = "fileName".hashCode();
-  private static final int aYb = "fileNameHash".hashCode();
-  private static final int aYc = "fileMd5".hashCode();
-  private static final int aYd = "fileLength".hashCode();
-  private static final int aYe = "fileStatus".hashCode();
-  private static final int aYf = "fileDuration".hashCode();
-  private boolean aHL = true;
-  private boolean aRw = true;
-  private boolean aSw = true;
-  private boolean aXW = true;
-  private boolean aXX = true;
-  private boolean aXY = true;
-  private boolean aXZ = true;
-  private boolean aYa = true;
-  public long field_createTime;
-  public int field_fileDuration;
-  public long field_fileLength;
-  public String field_fileMd5;
-  public String field_fileName;
-  public int field_fileNameHash;
-  public int field_fileStatus;
-  public int field_localId;
-  
-  static
-  {
-    aId = "createTime".hashCode();
-  }
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int bbe = "wechatUsername".hashCode();
+  private static final int bbf = "systemAddressBookUsername".hashCode();
+  private static final int bbg = "contactId".hashCode();
+  private static final int bbh = "sortKey".hashCode();
+  private boolean bba = true;
+  private boolean bbb = true;
+  private boolean bbc = true;
+  private boolean bbd = true;
+  public String field_contactId;
+  public String field_sortKey;
+  public String field_systemAddressBookUsername;
+  public String field_wechatUsername;
   
   public final void c(Cursor paramCursor)
   {
@@ -52,70 +35,46 @@ public abstract class az
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aRy != k) {
-        break label65;
+      if (bbe != k) {
+        break label60;
       }
-      field_localId = paramCursor.getInt(i);
-      aRw = true;
+      field_wechatUsername = paramCursor.getString(i);
     }
     for (;;)
     {
       i += 1;
       break label20;
       break;
-      label65:
-      if (aSG == k) {
-        field_fileName = paramCursor.getString(i);
-      } else if (aYb == k) {
-        field_fileNameHash = paramCursor.getInt(i);
-      } else if (aYc == k) {
-        field_fileMd5 = paramCursor.getString(i);
-      } else if (aYd == k) {
-        field_fileLength = paramCursor.getLong(i);
-      } else if (aYe == k) {
-        field_fileStatus = paramCursor.getInt(i);
-      } else if (aYf == k) {
-        field_fileDuration = paramCursor.getInt(i);
-      } else if (aId == k) {
-        field_createTime = paramCursor.getLong(i);
-      } else if (aHH == k) {
-        ibV = paramCursor.getLong(i);
+      label60:
+      if (bbf == k) {
+        field_systemAddressBookUsername = paramCursor.getString(i);
+      } else if (bbg == k) {
+        field_contactId = paramCursor.getString(i);
+      } else if (bbh == k) {
+        field_sortKey = paramCursor.getString(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aRw) {
-      localContentValues.put("localId", Integer.valueOf(field_localId));
+    if (bba) {
+      localContentValues.put("wechatUsername", field_wechatUsername);
     }
-    if (aSw) {
-      localContentValues.put("fileName", field_fileName);
+    if (bbb) {
+      localContentValues.put("systemAddressBookUsername", field_systemAddressBookUsername);
     }
-    if (aXW) {
-      localContentValues.put("fileNameHash", Integer.valueOf(field_fileNameHash));
+    if (bbc) {
+      localContentValues.put("contactId", field_contactId);
     }
-    if (field_fileMd5 == null) {
-      field_fileMd5 = "";
+    if (bbd) {
+      localContentValues.put("sortKey", field_sortKey);
     }
-    if (aXX) {
-      localContentValues.put("fileMd5", field_fileMd5);
-    }
-    if (aXY) {
-      localContentValues.put("fileLength", Long.valueOf(field_fileLength));
-    }
-    if (aXZ) {
-      localContentValues.put("fileStatus", Integer.valueOf(field_fileStatus));
-    }
-    if (aYa) {
-      localContentValues.put("fileDuration", Integer.valueOf(field_fileDuration));
-    }
-    if (aHL) {
-      localContentValues.put("createTime", Long.valueOf(field_createTime));
-    }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

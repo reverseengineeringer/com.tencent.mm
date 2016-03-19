@@ -1,151 +1,201 @@
 package com.tencent.mm.ui.account.bind;
 
 import android.content.ContentResolver;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
 import android.view.KeyEvent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
+import android.widget.Toast;
+import com.tencent.mm.ac.b;
+import com.tencent.mm.ac.b.a;
 import com.tencent.mm.modelsimple.BindWordingContent;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.plugin.a.a;
+import com.tencent.mm.pluginsdk.g;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMWizardActivity;
-import com.tencent.mm.ui.friend.bs;
-import com.tencent.mm.z.b;
-import com.tencent.mm.z.b.a;
+import com.tencent.mm.ui.friend.i;
+import com.tencent.mm.ui.friend.i.a;
 
 public class BindMobileUI
   extends MMWizardActivity
 {
-  private String aMQ;
-  private String bFX = null;
-  private String bqA = null;
-  private TextView czY;
-  private LinearLayout itP;
-  private TextView itQ;
-  private String itS = null;
-  private BindWordingContent iya;
-  private int iyb;
-  private EditText iyg;
-  private TextView iyh;
-  private bs iyi;
-  private Button iyj;
-  private TextView iyk;
-  private TextView iyl;
-  private CheckBox iym;
-  private CheckBox iyn;
-  private LinearLayout iyo;
-  private ImageView iyp;
-  private boolean iyq;
+  private String aBH;
+  private String aJD = null;
+  private String bUu = null;
+  private TextView cVH;
+  private LinearLayout ksH;
+  private TextView ksI;
+  private String ksK = null;
+  private BindWordingContent kxe;
+  private int kxf;
+  private EditText kxk;
+  private TextView kxl;
+  private i kxm;
+  private Button kxn;
+  private TextView kxo;
+  private TextView kxp;
+  private CheckBox kxq;
+  private CheckBox kxr;
+  private LinearLayout kxs;
+  private ImageView kxt;
+  private boolean kxu;
   
-  protected final void DV()
+  protected final void Gb()
   {
-    iyg = ((EditText)findViewById(a.i.bind_mcontact_mobile));
-    itP = ((LinearLayout)findViewById(a.i.country_code_ll));
-    itQ = ((TextView)findViewById(a.i.country_name));
-    iyh = ((TextView)findViewById(a.i.country_code));
-    czY = ((TextView)findViewById(a.i.bind_mcontact_title_tv));
-    iyj = ((Button)findViewById(a.i.bind_m_contact_bind_mobile));
-    iyk = ((TextView)findViewById(a.i.bind_mcontact_skip_bind));
-    czY.setText(getString(a.n.bind_mcontact_security_bander_hint));
-    iyl = ((TextView)findViewById(a.i.bind_m_contact_bind_mobile_hint));
-    iyo = ((LinearLayout)findViewById(a.i.bind_mcontact_sync_contact_cb_ll));
-    iyn = ((CheckBox)findViewById(a.i.bind_mcontact_agree_cb_recom_friend));
-    iym = ((CheckBox)findViewById(a.i.bind_mcontact_agree_cb));
-    iyp = ((ImageView)findViewById(a.i.bind_mcontact_icon));
-    if (iya != null)
+    kxk = ((EditText)findViewById(2131167044));
+    ksH = ((LinearLayout)findViewById(2131166998));
+    ksI = ((TextView)findViewById(2131166999));
+    kxl = ((TextView)findViewById(2131167043));
+    cVH = ((TextView)findViewById(2131167042));
+    kxn = ((Button)findViewById(2131167045));
+    kxo = ((TextView)findViewById(2131167051));
+    cVH.setText(getString(2131428627));
+    kxp = ((TextView)findViewById(2131167049));
+    kxs = ((LinearLayout)findViewById(2131167046));
+    kxr = ((CheckBox)findViewById(2131167048));
+    kxq = ((CheckBox)findViewById(2131167047));
+    kxt = ((ImageView)findViewById(2131167041));
+    if (kxe != null)
     {
-      if ((iya.title != null) && (iya.title.length() > 0)) {
-        czY.setText(iya.title);
+      if ((kxe.title != null) && (kxe.title.length() > 0)) {
+        cVH.setText(kxe.title);
       }
-      if ((iya.content != null) && (iya.content.length() > 0)) {
-        iyl.setText(iya.content);
+      if ((kxe.content != null) && (kxe.content.length() > 0)) {
+        kxp.setText(kxe.content);
       }
     }
-    switch (iya.bKD.intValue())
+    switch (kxe.caF.intValue())
     {
     default: 
-      switch (iyb)
+      switch (kxf)
       {
       default: 
-        label328:
-        if ((bn.iW(bFX)) && (bn.iW(bqA))) {}
+        label320:
+        if ((ay.kz(bUu)) && (ay.kz(aJD))) {}
         break;
       }
       break;
     }
     for (;;)
     {
-      if ((bFX != null) && (!bFX.equals(""))) {
-        itQ.setText(bFX);
+      if ((bUu != null) && (!bUu.equals(""))) {
+        ksI.setText(bUu);
       }
-      if ((bqA != null) && (!bqA.equals(""))) {
-        iyh.setText("+" + bqA);
+      if ((aJD != null) && (!aJD.equals(""))) {
+        kxl.setText("+" + aJD);
       }
-      if ((itS != null) && (!itS.equals(""))) {
-        iyg.setText(itS);
+      if ((ksK != null) && (!ksK.equals(""))) {
+        kxk.setText(ksK);
       }
-      iyj.setOnClickListener(new f(this));
-      iyk.setOnClickListener(new g(this));
-      if (iyq)
+      kxn.setOnClickListener(new View.OnClickListener()
       {
-        nh(a.n.bind_mcontact_bind_for_chatroom_title);
-        iyp.setVisibility(8);
-        czY.setText(a.n.bind_mcontact_for_chatroom_title);
-        iyo.setVisibility(8);
-        iyn.setVisibility(8);
-        iyn.setChecked(false);
-        iym.setVisibility(0);
-        iym.setChecked(false);
-        iyl.setVisibility(8);
-        iyl.setText(getString(a.n.bind_mcontact_bind_mobile_warnning_hint));
-        iyk.setVisibility(8);
-        iyj.setText(a.n.bind_mcontact_bind_for_chatroom_title);
-        a(new h(this));
+        public final void onClick(View paramAnonymousView)
+        {
+          if ((BindMobileUI.a(BindMobileUI.this).getText().toString() == null) || (BindMobileUI.a(BindMobileUI.this).getText().toString().length() == 0))
+          {
+            Toast.makeText(BindMobileUI.this, getString(2131428668), 0).show();
+            return;
+          }
+          BindMobileUI.b(BindMobileUI.this, BindMobileUI.b(BindMobileUI.this).getText().toString().trim() + ay.qf(BindMobileUI.a(BindMobileUI.this).getText().toString()));
+          BindMobileUI.c(BindMobileUI.this, BindMobileUI.c(BindMobileUI.this));
+        }
+      });
+      kxo.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          BindMobileUI.d(BindMobileUI.this);
+        }
+      });
+      if (kxu)
+      {
+        qb(2131428625);
+        kxt.setVisibility(8);
+        cVH.setText(2131428626);
+        kxs.setVisibility(8);
+        kxr.setVisibility(8);
+        kxr.setChecked(false);
+        kxq.setVisibility(0);
+        kxq.setChecked(false);
+        kxp.setVisibility(8);
+        kxp.setText(getString(2131428676));
+        kxo.setVisibility(8);
+        kxn.setText(2131428625);
+        b(new MenuItem.OnMenuItemClickListener()
+        {
+          public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+          {
+            BindMobileUI.e(BindMobileUI.this);
+            return true;
+          }
+        });
       }
-      itP.setOnClickListener(new i(this));
-      itP.setOnClickListener(new j(this));
+      ksH.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          paramAnonymousView = new Intent();
+          paramAnonymousView.putExtra("country_name", BindMobileUI.f(BindMobileUI.this));
+          paramAnonymousView.putExtra("couttry_code", BindMobileUI.g(BindMobileUI.this));
+          a.coa.b(paramAnonymousView, BindMobileUI.this);
+        }
+      });
+      ksH.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          paramAnonymousView = new Intent();
+          paramAnonymousView.putExtra("country_name", BindMobileUI.f(BindMobileUI.this));
+          paramAnonymousView.putExtra("couttry_code", BindMobileUI.g(BindMobileUI.this));
+          a.coa.b(paramAnonymousView, BindMobileUI.this);
+        }
+      });
       return;
-      iyp.setImageResource(a.h.bind_mcontact_protect);
+      kxt.setImageResource(2130969226);
       break;
-      iyp.setImageResource(a.h.bind_mcontact_warning);
+      kxt.setImageResource(2130969216);
       break;
-      iyp.setImageResource(a.h.bind_mcontact_reco_friends);
+      kxt.setImageResource(2130969201);
       break;
-      iyo.setVisibility(0);
-      iyn.setVisibility(0);
-      iyl.setVisibility(8);
-      break label328;
-      iyo.setVisibility(8);
-      iyn.setVisibility(8);
-      iyl.setVisibility(0);
-      break label328;
+      kxs.setVisibility(0);
+      kxr.setVisibility(0);
+      kxp.setVisibility(8);
+      break label320;
+      kxs.setVisibility(8);
+      kxr.setVisibility(8);
+      kxp.setVisibility(0);
+      break label320;
       Object localObject = ((TelephonyManager)getSystemService("phone")).getSimCountryIso();
-      t.d("!32@/B4Tb64lLpJ7jzBwffYq6Py9Ymp9J5pb", "tm.getSimCountryIso()" + (String)localObject);
-      if (bn.iW((String)localObject))
+      u.d("!32@/B4Tb64lLpJ7jzBwffYq6Py9Ymp9J5pb", "tm.getSimCountryIso()" + (String)localObject);
+      if (ay.kz((String)localObject))
       {
-        t.e("!32@/B4Tb64lLpJ7jzBwffYq6Py9Ymp9J5pb", "getDefaultCountryInfo error");
+        u.e("!32@/B4Tb64lLpJ7jzBwffYq6Py9Ymp9J5pb", "getDefaultCountryInfo error");
       }
       else
       {
-        localObject = b.g(this, (String)localObject, getString(a.n.country_code));
+        localObject = b.h(this, (String)localObject, getString(2131428870));
         if (localObject == null)
         {
-          t.e("!32@/B4Tb64lLpJ7jzBwffYq6Py9Ymp9J5pb", "getDefaultCountryInfo error");
+          u.e("!32@/B4Tb64lLpJ7jzBwffYq6Py9Ymp9J5pb", "getDefaultCountryInfo error");
         }
         else
         {
-          bFX = bFX;
-          bqA = bFW;
+          bUu = bUu;
+          aJD = bUt;
         }
       }
     }
@@ -153,7 +203,7 @@ public class BindMobileUI
   
   protected final int getLayoutId()
   {
-    return a.k.bind_mcontact_input_phonenum;
+    return 2131362428;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
@@ -165,35 +215,35 @@ public class BindMobileUI
     do
     {
       return;
-      bFX = bn.U(paramIntent.getStringExtra("country_name"), "");
-      bqA = bn.U(paramIntent.getStringExtra("couttry_code"), "");
-      if (!bFX.equals("")) {
-        itQ.setText(bFX);
+      bUu = ay.ad(paramIntent.getStringExtra("country_name"), "");
+      aJD = ay.ad(paramIntent.getStringExtra("couttry_code"), "");
+      if (!bUu.equals("")) {
+        ksI.setText(bUu);
       }
-    } while (bqA.equals(""));
-    iyh.setText("+" + bqA);
+    } while (aJD.equals(""));
+    kxl.setText("+" + aJD);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    nh(a.n.bind_mcontact_security_title);
-    bFX = bn.U(getIntent().getStringExtra("country_name"), "");
-    bqA = bn.U(getIntent().getStringExtra("couttry_code"), "");
-    itS = bn.U(getIntent().getStringExtra("bindmcontact_shortmobile"), "");
-    iya = ((BindWordingContent)getIntent().getParcelableExtra("kstyle_bind_wording"));
-    iyb = getIntent().getIntExtra("kstyle_bind_recommend_show", 0);
-    iyq = getIntent().getBooleanExtra("is_bind_for_chatroom_upgrade", false);
-    DV();
+    qb(2131428624);
+    bUu = ay.ad(getIntent().getStringExtra("country_name"), "");
+    aJD = ay.ad(getIntent().getStringExtra("couttry_code"), "");
+    ksK = ay.ad(getIntent().getStringExtra("bindmcontact_shortmobile"), "");
+    kxe = ((BindWordingContent)getIntent().getParcelableExtra("kstyle_bind_wording"));
+    kxf = getIntent().getIntExtra("kstyle_bind_recommend_show", 0);
+    kxu = getIntent().getBooleanExtra("is_bind_for_chatroom_upgrade", false);
+    Gb();
   }
   
   public void onDestroy()
   {
     super.onDestroy();
-    if (iyi != null)
+    if (kxm != null)
     {
-      getContentResolver().unregisterContentObserver(iyi);
-      iyi.recycle();
+      getContentResolver().unregisterContentObserver(kxm);
+      kxm.recycle();
     }
   }
   
@@ -201,10 +251,23 @@ public class BindMobileUI
   {
     if (paramInt == 4)
     {
-      aLy();
+      bbm();
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);
+  }
+  
+  public void onRequestPermissionsResult(int paramInt, String[] paramArrayOfString, int[] paramArrayOfInt)
+  {
+    u.d("!32@/B4Tb64lLpJ7jzBwffYq6Py9Ymp9J5pb", "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(paramArrayOfInt[0]), Long.valueOf(Thread.currentThread().getId()) });
+    switch (paramInt)
+    {
+    }
+    do
+    {
+      return;
+    } while ((paramArrayOfInt[0] != 0) || (kxm == null));
+    kxm.bbZ();
   }
 }
 

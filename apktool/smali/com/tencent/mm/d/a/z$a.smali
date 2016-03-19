@@ -15,9 +15,7 @@
 
 
 # instance fields
-.field public auL:Ljava/lang/String;
-
-.field public context:Landroid/content/Context;
+.field public ato:I
 
 
 # direct methods

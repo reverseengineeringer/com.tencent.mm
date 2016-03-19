@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract Xl()V
+.method public abstract agj()V
 .end method

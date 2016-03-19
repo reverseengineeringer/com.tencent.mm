@@ -1,21 +1,8 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.telephony.PhoneStateListener;
-import android.telephony.SignalStrength;
-
-public final class al$a
-  extends PhoneStateListener
+public abstract interface al$a
 {
-  public final void onSignalStrengthsChanged(SignalStrength paramSignalStrength)
-  {
-    super.onSignalStrengthsChanged(paramSignalStrength);
-    if (!paramSignalStrength.isGsm())
-    {
-      al.iM(paramSignalStrength.getCdmaDbm());
-      return;
-    }
-    al.iM(paramSignalStrength.getGsmSignalStrength());
-  }
+  public abstract void lG();
 }
 
 /* Location:

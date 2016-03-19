@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$co
-  extends a.c
+  extends a.e
 {
   public a$co()
   {
-    super("showOptionMenu", "", 14, false);
+    super("nfcGetInfo", "nfcGetInfo", 148, false);
   }
 }
 

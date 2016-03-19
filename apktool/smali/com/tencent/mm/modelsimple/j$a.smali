@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/modelsimple/j$a;
-.super Lcom/tencent/mm/q/h;
+.super Lcom/tencent/mm/r/h;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private final bKS:Lcom/tencent/mm/protocal/l$a;
+.field private final caV:Lcom/tencent/mm/protocal/l$a;
 
-.field private final bKT:Lcom/tencent/mm/protocal/l$b;
+.field private final caW:Lcom/tencent/mm/protocal/l$b;
 
 
 # direct methods
@@ -26,21 +26,21 @@
 
     .prologue
     .line 77
-    invoke-direct {p0}, Lcom/tencent/mm/q/h;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/r/h;-><init>()V
 
     .line 79
     new-instance v0, Lcom/tencent/mm/protocal/l$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/protocal/l$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j$a;->bKS:Lcom/tencent/mm/protocal/l$a;
+    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j$a;->caV:Lcom/tencent/mm/protocal/l$a;
 
     .line 80
     new-instance v0, Lcom/tencent/mm/protocal/l$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/protocal/l$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j$a;->bKT:Lcom/tencent/mm/protocal/l$b;
+    iput-object v0, p0, Lcom/tencent/mm/modelsimple/j$a;->caW:Lcom/tencent/mm/protocal/l$b;
 
     return-void
 .end method
@@ -67,22 +67,22 @@
     return-object v0
 .end method
 
-.method protected final tF()Lcom/tencent/mm/protocal/i$c;
+.method protected final tW()Lcom/tencent/mm/protocal/h$c;
     .locals 1
 
     .prologue
     .line 84
-    iget-object v0, p0, Lcom/tencent/mm/modelsimple/j$a;->bKS:Lcom/tencent/mm/protocal/l$a;
+    iget-object v0, p0, Lcom/tencent/mm/modelsimple/j$a;->caV:Lcom/tencent/mm/protocal/l$a;
 
     return-object v0
 .end method
 
-.method public final tG()Lcom/tencent/mm/protocal/i$d;
+.method public final tX()Lcom/tencent/mm/protocal/h$d;
     .locals 1
 
     .prologue
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/modelsimple/j$a;->bKT:Lcom/tencent/mm/protocal/l$b;
+    iget-object v0, p0, Lcom/tencent/mm/modelsimple/j$a;->caW:Lcom/tencent/mm/protocal/l$b;
 
     return-object v0
 .end method

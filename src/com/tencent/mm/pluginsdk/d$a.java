@@ -1,6 +1,6 @@
 package com.tencent.mm.pluginsdk;
 
-import com.tencent.mm.q.j;
+import com.tencent.mm.r.j;
 
 public abstract interface d$a
 {

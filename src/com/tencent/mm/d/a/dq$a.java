@@ -2,7 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class dq$a
 {
-  public int awP;
+  public Runnable anK;
+  public String filePath;
+  public int op;
 }
 
 /* Location:

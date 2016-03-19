@@ -4,6 +4,32 @@ import java.util.List;
 
 class Java2C
 {
+  public static int a(List paramList, boolean paramBoolean)
+  {
+    long l1 = System.currentTimeMillis();
+    GetDnsReturn localGetDnsReturn = new GetDnsReturn(null);
+    getSnsIps(paramBoolean, localGetDnsReturn);
+    int i = 0;
+    while (i < length)
+    {
+      paramList.add(aryIps[i]);
+      i += 1;
+    }
+    long l2 = System.currentTimeMillis();
+    MMNativeNetComm.ReportInfo localReportInfo = new MMNativeNetComm.ReportInfo();
+    actionId = 11L;
+    beginTime = l1;
+    endTime = l2;
+    clientIp = "mmsns.qpic.cn";
+    if (length > 0) {}
+    for (paramList = aryIps[0];; paramList = "0.0.0.0")
+    {
+      ip = paramList;
+      C2Java.reportStat(localReportInfo);
+      return type;
+    }
+  }
+  
   public static int c(String paramString, List paramList)
   {
     long l1 = System.currentTimeMillis();
@@ -40,6 +66,8 @@ class Java2C
   
   public static native String getNetworkServerIp();
   
+  private static native void getSnsIps(boolean paramBoolean, GetDnsReturn paramGetDnsReturn);
+  
   public static native void keepSignalling();
   
   public static native void makesureLongLinkConnect();
@@ -55,6 +83,8 @@ class Java2C
   public static native void onIPxx(String paramString);
   
   public static native void onNetworkChange();
+  
+  public static native void reportCGIServerError(int paramInt1, int paramInt2);
   
   public static native void reportFailIp(String paramString);
   

@@ -1,19 +1,11 @@
 package com.tencent.mm.d.a;
 
-import java.util.List;
+import org.json.JSONArray;
 
 public final class bt$b
 {
-  public String awO;
-  public int awP;
-  public String awQ;
-  public long awR;
-  public int awS;
-  public int awT;
-  public List awU;
-  public List awV;
-  public int awW;
-  public int awX;
+  public boolean auR;
+  public JSONArray avb;
 }
 
 /* Location:

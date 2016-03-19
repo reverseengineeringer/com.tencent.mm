@@ -12,37 +12,37 @@
 
 
 # static fields
-.field private static iVH:Ljava/lang/ref/SoftReference;
+.field private static kUI:Ljava/lang/ref/SoftReference;
 
-.field private static iVI:Ljava/lang/ref/SoftReference;
+.field private static kUJ:Ljava/lang/ref/SoftReference;
 
-.field private static iVJ:Ljava/lang/ref/SoftReference;
+.field private static kUK:Ljava/lang/ref/SoftReference;
 
-.field private static iVP:I
+.field private static kUQ:I
 
-.field private static iVQ:I
+.field private static kUR:I
 
 
 # instance fields
-.field private dMd:Z
+.field private eNY:Z
 
-.field private iVD:I
+.field private kUE:I
 
-.field private iVE:I
+.field private kUF:I
 
-.field private iVF:Z
+.field private kUG:Z
 
-.field private iVG:Z
+.field private kUH:Z
 
-.field private iVK:Landroid/graphics/Bitmap;
+.field private kUL:Landroid/graphics/Bitmap;
 
-.field private iVL:Landroid/graphics/Bitmap;
+.field private kUM:Landroid/graphics/Bitmap;
 
-.field private iVM:Landroid/graphics/Bitmap;
+.field private kUN:Landroid/graphics/Bitmap;
 
-.field private iVN:Z
+.field private kUO:Z
 
-.field private iVO:Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar$a;
+.field private kUP:Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar$a;
 
 .field private rotation:F
 
@@ -56,48 +56,48 @@
 
     const/4 v0, 0x0
 
-    .line 38
-    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVH:Ljava/lang/ref/SoftReference;
-
     .line 39
-    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVI:Ljava/lang/ref/SoftReference;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUI:Ljava/lang/ref/SoftReference;
 
     .line 40
-    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVJ:Ljava/lang/ref/SoftReference;
+    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUJ:Ljava/lang/ref/SoftReference;
 
-    .line 49
-    sput v1, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVP:I
+    .line 41
+    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUK:Ljava/lang/ref/SoftReference;
 
     .line 50
-    sput v1, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVQ:I
+    sput v1, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUQ:I
 
-    .line 77
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    .line 51
+    sput v1, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUR:I
+
+    .line 78
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVP:I
+    sput v0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUQ:I
 
-    .line 78
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    .line 79
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const/4 v1, 0x6
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVQ:I
+    sput v0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUR:I
 
-    .line 79
+    .line 80
     return-void
 .end method
 
@@ -109,45 +109,45 @@
 
     const/4 v1, 0x0
 
-    .line 57
+    .line 58
     invoke-direct {p0, p1, p2}, Landroid/widget/ProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 32
-    iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVD:I
-
     .line 33
-    iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVE:I
+    iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUE:I
 
     .line 34
+    iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUF:I
+
+    .line 35
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->rotation:F
 
-    .line 35
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->dMd:Z
-
     .line 36
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVF:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->eNY:Z
 
     .line 37
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVG:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUG:Z
 
-    .line 41
-    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    .line 38
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUH:Z
 
     .line 42
-    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVL:Landroid/graphics/Bitmap;
+    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     .line 43
-    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVM:Landroid/graphics/Bitmap;
+    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUM:Landroid/graphics/Bitmap;
 
-    .line 47
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVN:Z
+    .line 44
+    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUN:Landroid/graphics/Bitmap;
 
     .line 48
-    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVO:Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar$a;
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUO:Z
 
-    .line 58
+    .line 49
+    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUP:Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar$a;
+
+    .line 59
     return-void
 .end method
 
@@ -159,45 +159,45 @@
 
     const/4 v1, 0x0
 
-    .line 61
+    .line 62
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/ProgressBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 32
-    iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVD:I
-
     .line 33
-    iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVE:I
+    iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUE:I
 
     .line 34
+    iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUF:I
+
+    .line 35
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->rotation:F
 
-    .line 35
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->dMd:Z
-
     .line 36
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVF:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->eNY:Z
 
     .line 37
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVG:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUG:Z
 
-    .line 41
-    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    .line 38
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUH:Z
 
     .line 42
-    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVL:Landroid/graphics/Bitmap;
+    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     .line 43
-    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVM:Landroid/graphics/Bitmap;
+    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUM:Landroid/graphics/Bitmap;
 
-    .line 47
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVN:Z
+    .line 44
+    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUN:Landroid/graphics/Bitmap;
 
     .line 48
-    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVO:Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar$a;
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUO:Z
 
-    .line 62
+    .line 49
+    iput-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUP:Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar$a;
+
+    .line 63
     return-void
 .end method
 
@@ -207,8 +207,8 @@
     .locals 1
 
     .prologue
-    .line 204
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVO:Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar$a;
+    .line 205
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUP:Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar$a;
 
     return-object v0
 .end method
@@ -232,23 +232,23 @@
 
     const/4 v8, 0x0
 
-    .line 122
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVN:Z
+    .line 123
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUO:Z
 
     if-nez v0, :cond_0
 
-    .line 123
+    .line 124
     invoke-super {p0, p1}, Landroid/widget/ProgressBar;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 183
+    .line 184
     :goto_0
     return-void
 
-    .line 125
+    .line 126
     :cond_0
     new-instance v0, Landroid/graphics/RectF;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -256,7 +256,7 @@
 
     int-to-float v2, v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -266,22 +266,22 @@
 
     invoke-direct {v0, v1, v1, v2, v3}, Landroid/graphics/RectF;-><init>(FFFF)V
 
-    .line 126
+    .line 127
     const/16 v2, 0x1f
 
     invoke-virtual {p1, v0, v10, v2}, Landroid/graphics/Canvas;->saveLayerAlpha(Landroid/graphics/RectF;II)I
 
-    .line 127
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->dMd:Z
+    .line 128
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->eNY:Z
 
     if-eqz v0, :cond_7
 
-    .line 128
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVF:Z
+    .line 129
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUG:Z
 
     if-nez v0, :cond_2
 
-    .line 129
+    .line 130
     iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->rotation:F
 
     const/high16 v1, 0x43870000    # 270.0f
@@ -294,30 +294,30 @@
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVG:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUH:Z
 
     if-eqz v0, :cond_1
 
-    .line 130
+    .line 131
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVF:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUG:Z
 
-    .line 131
+    .line 132
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->invalidate()V
 
     goto :goto_0
 
-    .line 133
+    .line 134
     :cond_1
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 134
+    .line 135
     iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->rotation:F
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -327,7 +327,7 @@
 
     int-to-float v2, v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -339,28 +339,28 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/graphics/Matrix;->setRotate(FFF)V
 
-    .line 135
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    .line 136
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, v1, v0, v9}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
-    .line 136
+    .line 137
     iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->rotation:F
 
     add-float/2addr v0, v4
 
     iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->rotation:F
 
-    .line 137
+    .line 138
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->invalidate()V
 
     goto :goto_0
 
-    .line 140
+    .line 141
     :cond_2
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVD:I
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUE:I
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVL:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUM:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -368,22 +368,22 @@
 
     if-gt v0, v2, :cond_5
 
-    .line 141
+    .line 142
     new-instance v2, Landroid/graphics/Matrix;
 
     invoke-direct {v2}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 142
+    .line 143
     iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->rotation:F
 
     add-float/2addr v0, v4
 
     iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->rotation:F
 
-    .line 143
+    .line 144
     iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->rotation:F
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -393,7 +393,7 @@
 
     int-to-float v3, v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -405,22 +405,22 @@
 
     invoke-virtual {v2, v0, v3, v4}, Landroid/graphics/Matrix;->setRotate(FFF)V
 
-    .line 144
+    .line 145
     iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->rotation:F
 
     float-to-int v0, v0
 
     rem-int/lit16 v0, v0, 0x168
 
-    .line 145
+    .line 146
     const/16 v3, 0x10e
 
     if-ge v0, v3, :cond_3
 
-    .line 146
+    .line 147
     add-int/lit16 v0, v0, 0x168
 
-    .line 148
+    .line 149
     :cond_3
     const/16 v3, 0x10e
 
@@ -430,22 +430,22 @@
 
     if-ge v0, v3, :cond_4
 
-    .line 149
+    .line 150
     new-instance v5, Landroid/graphics/Paint;
 
     invoke-direct {v5}, Landroid/graphics/Paint;-><init>()V
 
-    .line 150
+    .line 151
     const v0, -0xffff01
 
     invoke-virtual {v5, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 151
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    .line 152
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, v0, v2, v5}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Matrix;Landroid/graphics/Paint;)V
 
-    .line 152
+    .line 153
     new-instance v0, Landroid/graphics/PorterDuffXfermode;
 
     sget-object v2, Landroid/graphics/PorterDuff$Mode;->DST_OUT:Landroid/graphics/PorterDuff$Mode;
@@ -454,8 +454,8 @@
 
     invoke-virtual {v5, v0}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
-    .line 153
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    .line 154
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -463,7 +463,7 @@
 
     int-to-float v3, v0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVK:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUL:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -479,13 +479,13 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 155
+    .line 156
     :cond_4
     new-instance v0, Landroid/graphics/Rect;
 
-    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVD:I
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUE:I
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVL:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUM:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -493,59 +493,59 @@
 
     invoke-direct {v0, v8, v8, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 156
+    .line 157
     new-instance v1, Landroid/graphics/Rect;
 
-    sget v2, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVP:I
+    sget v2, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUQ:I
 
-    sget v3, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVQ:I
+    sget v3, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUR:I
 
-    iget v4, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVD:I
+    iget v4, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUE:I
 
-    sget v5, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVP:I
+    sget v5, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUQ:I
 
     add-int/2addr v4, v5
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVL:Landroid/graphics/Bitmap;
+    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUM:Landroid/graphics/Bitmap;
 
     invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v5
 
-    sget v6, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVQ:I
+    sget v6, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUR:I
 
     add-int/2addr v5, v6
 
     invoke-direct {v1, v2, v3, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 157
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVL:Landroid/graphics/Bitmap;
+    .line 158
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUM:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, v2, v0, v1, v9}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 158
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVD:I
+    .line 159
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUE:I
 
     add-int/lit8 v0, v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVD:I
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUE:I
 
-    .line 159
+    .line 160
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 161
+    .line 162
     :cond_5
     new-instance v0, Landroid/graphics/Rect;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVL:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUM:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVL:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUM:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -553,104 +553,104 @@
 
     invoke-direct {v0, v8, v8, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 162
+    .line 163
     new-instance v2, Landroid/graphics/Rect;
 
-    sget v3, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVP:I
+    sget v3, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUQ:I
 
-    sget v4, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVQ:I
+    sget v4, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUR:I
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVL:Landroid/graphics/Bitmap;
+    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUM:Landroid/graphics/Bitmap;
 
     invoke-virtual {v5}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
 
-    sget v6, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVP:I
+    sget v6, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUQ:I
 
     add-int/2addr v5, v6
 
-    iget-object v6, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVL:Landroid/graphics/Bitmap;
+    iget-object v6, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUM:Landroid/graphics/Bitmap;
 
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v6
 
-    sget v7, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVQ:I
+    sget v7, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUR:I
 
     add-int/2addr v6, v7
 
     invoke-direct {v2, v3, v4, v5, v6}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 163
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVL:Landroid/graphics/Bitmap;
+    .line 164
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUM:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, v3, v0, v2, v9}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 164
-    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVE:I
+    .line 165
+    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUF:I
 
     if-ge v3, v10, :cond_6
 
-    .line 165
+    .line 166
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
-    .line 166
-    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVE:I
+    .line 167
+    iget v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUF:I
 
     invoke-virtual {v1, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 167
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVM:Landroid/graphics/Bitmap;
+    .line 168
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUN:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, v3, v0, v2, v1}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 168
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVE:I
+    .line 169
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUF:I
 
     add-int/lit8 v0, v0, 0x14
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVE:I
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUF:I
 
-    .line 169
+    .line 170
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 171
+    .line 172
     :cond_6
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVM:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUN:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, v3, v0, v2, v9}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
-    .line 172
-    iput-boolean v8, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->dMd:Z
+    .line 173
+    iput-boolean v8, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->eNY:Z
 
     iput v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->rotation:F
 
-    iput v8, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVD:I
+    iput v8, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUE:I
 
-    iput v8, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVE:I
+    iput v8, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUF:I
 
-    iput-boolean v8, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVG:Z
+    iput-boolean v8, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUH:Z
 
-    iput-boolean v8, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVF:Z
+    iput-boolean v8, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUG:Z
 
     goto/16 :goto_0
 
-    .line 180
+    .line 181
     :cond_7
     new-instance v0, Landroid/graphics/Rect;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVM:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUN:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVM:Landroid/graphics/Bitmap;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUN:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -658,37 +658,37 @@
 
     invoke-direct {v0, v8, v8, v1, v2}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 181
+    .line 182
     new-instance v1, Landroid/graphics/Rect;
 
-    sget v2, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVP:I
+    sget v2, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUQ:I
 
-    sget v3, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVQ:I
+    sget v3, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUR:I
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVM:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUN:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v4
 
-    sget v5, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVP:I
+    sget v5, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUQ:I
 
     add-int/2addr v4, v5
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVM:Landroid/graphics/Bitmap;
+    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUN:Landroid/graphics/Bitmap;
 
     invoke-virtual {v5}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v5
 
-    sget v6, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVQ:I
+    sget v6, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUR:I
 
     add-int/2addr v5, v6
 
     invoke-direct {v1, v2, v3, v4, v5}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    .line 182
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVM:Landroid/graphics/Bitmap;
+    .line 183
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUN:Landroid/graphics/Bitmap;
 
     invoke-virtual {p1, v2, v0, v1, v9}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
@@ -699,9 +699,9 @@
     .locals 0
 
     .prologue
-    .line 200
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->iVO:Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar$a;
-
     .line 201
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar;->kUP:Lcom/tencent/mm/ui/chatting/ChattingItemSendOkProgressBar$a;
+
+    .line 202
     return-void
 .end method

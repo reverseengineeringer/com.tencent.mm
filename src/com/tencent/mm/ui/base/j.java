@@ -1,27 +1,22 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.bn;
-import java.util.List;
+import android.view.View;
 
-final class j
-  implements bk.c
+public abstract class j
 {
-  j(String paramString1, List paramList1, List paramList2, String paramString2) {}
+  public a kEA;
   
-  public final void a(bi parambi)
+  public abstract View b(int paramInt, View paramView);
+  
+  public abstract int getCount();
+  
+  public abstract Object getItem(int paramInt);
+  
+  public abstract long getItemId(int paramInt);
+  
+  public static abstract interface a
   {
-    if (!bn.iW(bVq)) {
-      parambi.setHeaderTitle(bVq);
-    }
-    int i = 0;
-    while (i < fzT.size())
-    {
-      parambi.a(((Integer)fzn.get(i)).intValue(), (CharSequence)fzT.get(i));
-      i += 1;
-    }
-    if (!bn.iW(iDi)) {
-      parambi.a(-1, iDi);
-    }
+    public abstract void bcD();
   }
 }
 

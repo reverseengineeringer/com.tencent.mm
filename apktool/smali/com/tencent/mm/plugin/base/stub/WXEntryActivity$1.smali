@@ -1,101 +1,52 @@
-.class final synthetic Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$1;
+.class final Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/MenuItem$OnMenuItemClickListener;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->onCreate(Landroid/os/Bundle;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic cjT:[I
+# instance fields
+.field final synthetic cBs:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;)V
+    .locals 0
 
     .prologue
-    .line 371
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->values()[Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    .line 303
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$1;->cBs:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
-
-    new-array v0, v0, [I
-
-    sput-object v0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$1;->cjT:[I
-
-    :try_start_0
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$1;->cjT:[I
-
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOz:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
-
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$1;->cjT:[I
-
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOB:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$1;->cjT:[I
-
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOA:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
-
-    :goto_2
     return-void
+.end method
 
-    :catch_0
-    move-exception v0
 
-    goto :goto_2
+# virtual methods
+.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
+    .locals 1
 
-    :catch_1
-    move-exception v0
+    .prologue
+    .line 307
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity$1;->cBs:Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;
 
-    goto :goto_1
+    invoke-static {v0}, Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;->a(Lcom/tencent/mm/plugin/base/stub/WXEntryActivity;)V
 
-    :catch_2
-    move-exception v0
+    .line 308
+    const/4 v0, 0x0
 
-    goto :goto_0
+    return v0
 .end method

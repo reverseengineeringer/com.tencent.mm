@@ -1,239 +1,423 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import com.tencent.mm.a.c;
-import com.tencent.mm.d.a.kb;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.ca;
-import com.tencent.mm.model.v;
-import com.tencent.mm.modelcdntran.CdnTransportEngine;
-import com.tencent.mm.modelcdntran.h;
-import com.tencent.mm.modelcdntran.m.a;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.adt;
-import com.tencent.mm.protocal.b.aep;
-import com.tencent.mm.protocal.b.aeq;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.as;
-import com.tencent.mm.storage.y;
-import com.tencent.mm.y.af;
-import com.tencent.mm.y.g;
-import junit.framework.Assert;
+import android.database.Cursor;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.r;
+import com.tencent.mm.protocal.b.acf;
+import com.tencent.mm.protocal.b.acg;
+import com.tencent.mm.protocal.b.vw;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.c;
+import com.tencent.mm.r.j;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.storage.h;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 public final class ak
-  extends com.tencent.mm.q.j
-  implements r
+  implements s, com.tencent.mm.r.d
 {
-  com.tencent.mm.storage.ar aDs = null;
-  private String aEB;
-  d apI;
-  private com.tencent.mm.q.a apJ;
-  long axb = 0L;
-  String bDP = "";
-  private m.a bDX = new al(this);
-  long startTime = 0L;
+  private static ak iBT;
+  public String bXM;
+  public boolean iBU = false;
+  public boolean iBV = false;
+  private List iBW = new LinkedList();
+  public long iBX;
+  private final int iBY = 20;
+  public int iBZ = 0;
+  public long iCa;
   
-  public ak(long paramLong)
+  private static void a(f paramf, acg paramacg)
   {
-    axb = paramLong;
-    com.tencent.mm.q.a.a locala = new com.tencent.mm.q.a.a();
-    bsW = new aep();
-    bsX = new aeq();
-    uri = "/cgi-bin/micromsg-bin/sendappmsg";
-    bsV = 222;
-    bsY = 107;
-    bsZ = 1000000107;
-    apJ = locala.vh();
+    field_appName = jyk;
+    field_appName_en = jyg;
+    field_appName_tw = jyh;
+    aOl = jyi;
+    aNo = true;
+    aOm = jyj;
+    aNo = true;
+    aOn = jyn;
+    aNo = true;
+    field_serviceAppInfoFlag = jym;
+    field_serviceAppType = jyl;
+    aOo = jyo;
+    aNo = true;
+    field_serviceShowFlag = jyp;
   }
   
-  public final int a(com.tencent.mm.network.m paramm, d paramd)
+  private static void a(i parami, List paramList)
   {
-    apI = paramd;
-    if (startTime == 0L) {
-      startTime = bn.DM();
+    if ((parami == null) || (paramList == null) || (paramList.size() <= 0)) {}
+    label47:
+    do
+    {
+      return;
+      u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "removeExpiredServiceApp");
+      localObject1 = new ArrayList();
+      if (i.a.iyG != null) {
+        break;
+      }
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getAllServices, getISubCorePluginBase() == null");
+      u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "oldList %d", new Object[] { Integer.valueOf(((List)localObject1).size()) });
+    } while (((List)localObject1).size() <= 0);
+    Object localObject1 = ((List)localObject1).iterator();
+    label90:
+    label287:
+    for (;;)
+    {
+      Object localObject2;
+      Object localObject3;
+      if (((Iterator)localObject1).hasNext())
+      {
+        localObject2 = (f)((Iterator)localObject1).next();
+        if (field_appId != null)
+        {
+          localObject3 = paramList.iterator();
+          String str;
+          do
+          {
+            if (!((Iterator)localObject3).hasNext()) {
+              break;
+            }
+            str = (String)((Iterator)localObject3).next();
+          } while (!field_appId.equals(str));
+        }
+      }
+      else
+      {
+        for (int i = 1;; i = 0)
+        {
+          if (i != 0) {
+            break label287;
+          }
+          boolean bool = parami.b((f)localObject2, new String[0]);
+          u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "delete old service : %s, %s", new Object[] { field_appId, Boolean.valueOf(bool) });
+          break label90;
+          break;
+          localObject2 = i.a.iyG.aOY();
+          if (localObject2 == null) {
+            break label47;
+          }
+          while (((Cursor)localObject2).moveToNext())
+          {
+            localObject3 = new f();
+            ((f)localObject3).c((Cursor)localObject2);
+            if (!ay.kz(field_openId)) {
+              ((List)localObject1).add(localObject3);
+            }
+          }
+          ((Cursor)localObject2).close();
+          break label47;
+        }
+      }
     }
-    aDs = ax.tl().rk().cH(axb);
-    if ((aDs == null) || (aDs.field_msgId != axb)) {
-      return -1;
+  }
+  
+  public static void aH(String paramString, int paramInt)
+  {
+    u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "get service app, offset = %d, lang = %s", new Object[] { Integer.valueOf(paramInt), paramString });
+    paramString = new ab(paramInt, paramString);
+    ah.tE().d(paramString);
+  }
+  
+  public static ak aPW()
+  {
+    if (iBT == null) {
+      iBT = new ak();
     }
-    paramd = com.tencent.mm.m.a.a.dr(aDs.field_content);
-    if (paramd == null) {
-      paramd = com.tencent.mm.m.a.a.dr(zkaDs.field_content).ieZ);
+    return iBT;
+  }
+  
+  public final void a(int paramInt1, int paramInt2, String paramString, v paramv)
+  {
+    if (!ah.rh()) {}
+    do
+    {
+      return;
+      iBU = false;
+      u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "Suggestion onSceneEnd errType=%s errCode=%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+      if (paramv == null)
+      {
+        u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "scene == null");
+        return;
+      }
+    } while ((paramInt1 != 0) || (paramInt2 != 0));
+    switch (paramv.getType())
+    {
+    default: 
+      return;
+    }
+    paramString = (ac)paramv;
+    u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "get suggestion appList, AppCount = %s", new Object[] { Integer.valueOf(dyc.bEX.bFf).jtt) });
+    paramString = iBp;
+    if ((paramString == null) || (paramString.size() <= 0))
+    {
+      u.w("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "empty suggestAppList");
+      return;
+    }
+    if ((y.getContext() == null) || (i.a.iyG == null))
+    {
+      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "wrong environment");
+      return;
+    }
+    paramv = new LinkedList();
+    Object localObject1 = paramString.iterator();
+    f localf;
+    Object localObject2;
+    Object localObject3;
+    if (((Iterator)localObject1).hasNext())
+    {
+      localf = (f)((Iterator)localObject1).next();
+      localObject2 = field_appName;
+      localObject3 = field_packageName;
+      String str1 = field_signature;
+      String str2 = aOb;
+      if (aOa != null) {}
+      for (boolean bool = true;; bool = false)
+      {
+        u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "suggestion appName=%s, packageName=%s, signature [%s], introUrl [%s], has iconUrl [%s]", new Object[] { localObject2, localObject3, str1, str2, Boolean.valueOf(bool) });
+        paramv.add(field_appId);
+        break;
+      }
+    }
+    i.a.iyG.P(paramv);
+    localObject1 = g.cO(y.getContext());
+    if (((List)localObject1).size() > 0)
+    {
+      paramv = i.a.iyG.aOX();
+      localObject1 = ((List)localObject1).iterator();
+    }
+    label509:
+    for (;;)
+    {
+      if (((Iterator)localObject1).hasNext())
+      {
+        localf = (f)((Iterator)localObject1).next();
+        if (field_appId != null)
+        {
+          localObject2 = paramString.iterator();
+          do
+          {
+            if (!((Iterator)localObject2).hasNext()) {
+              break;
+            }
+            localObject3 = (f)((Iterator)localObject2).next();
+          } while ((field_appId == null) || (!field_appId.equals(field_appId)));
+        }
+      }
+      else
+      {
+        for (paramInt1 = 1;; paramInt1 = 0)
+        {
+          if (paramInt1 != 0) {
+            break label509;
+          }
+          if (g.a(y.getContext(), localf)) {}
+          for (field_status = 1;; field_status = 4)
+          {
+            paramv.a(localf, new String[0]);
+            break;
+          }
+          ah.tD().rn().setLong(352275, System.currentTimeMillis());
+          iBX = System.currentTimeMillis();
+          return;
+        }
+      }
+    }
+  }
+  
+  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    if (!ah.rh())
+    {
+      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "getServiceAppList onSceneEnd account not ready");
+      iBZ = 0;
+      iBW.clear();
+      return;
+    }
+    iBV = false;
+    if (paramj == null)
+    {
+      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "scene == null");
+      iBZ = 0;
+      iBW.clear();
+      return;
+    }
+    if ((paramInt1 != 0) || (paramInt2 != 0))
+    {
+      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "getServiceAppList onSceneEnd : errType = %d, errCode = %d, errMsg = %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+      iBZ = 0;
+      iBW.clear();
+      return;
+    }
+    u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "getServiceAppList onSceneEnd : errType = %d, errCode = %d, errMsg = %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+    paramString = (ab)paramj;
+    if ((anN != null) && (anN.bEX.bFf != null)) {}
+    for (paramString = (acf)anN.bEX.bFf; paramString == null; paramString = null)
+    {
+      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "resp == null");
+      iBZ = 0;
+      iBW.clear();
+      return;
+    }
+    if ((jyf == null) || (jyf.size() <= 0))
+    {
+      u.e("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "Service_appinfo empty");
+      a(i.a.iyG.aOX(), iBW);
+      iBZ = 0;
+      iBW.clear();
+      ah.tD().rn().setLong(352276, System.currentTimeMillis());
+      iCa = System.currentTimeMillis();
+      return;
+    }
+    u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "offset = %d, count = %s", new Object[] { Integer.valueOf(iBZ), Integer.valueOf(jyf.size()) });
+    i locali = i.a.iyG.aOX();
+    LinkedList localLinkedList = new LinkedList();
+    Iterator localIterator = jyf.iterator();
+    label509:
+    label1015:
+    while (localIterator.hasNext())
+    {
+      acg localacg = (acg)localIterator.next();
+      u.v("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "service info: %s, %s, %s, %s, %s, %s", new Object[] { jyk, Integer.valueOf(jyl), Integer.valueOf(jyp), Integer.valueOf(jyo), Integer.valueOf(jym), dkU });
+      if (!ay.kz(dkU))
+      {
+        iBW.add(dkU);
+        f localf = g.ai(dkU, true);
+        boolean bool;
+        if (localf != null) {
+          if (field_serviceAppInfoFlag != jym)
+          {
+            paramInt1 = 1;
+            paramj = localf;
+            if (paramInt1 != 0)
+            {
+              paramj = aOm;
+              String str = aOl;
+              a(localf, localacg);
+              bool = locali.a(localf, new String[0]);
+              if (!ay.ky(paramj).equals(ay.ky(jyj)))
+              {
+                u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "update serviceApp.app_icon_url_list" + ay.ky(jyj));
+                aj.aPP().aE(field_appId, 5);
+              }
+              if (!ay.ky(str).equals(ay.ky(jyi)))
+              {
+                u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "update serviceApp.app_icon_url_panel" + ay.ky(jyi));
+                aj.aPP().aE(field_appId, 4);
+              }
+              u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "update app: AppID = %s, ret = %s", new Object[] { dkU, Boolean.valueOf(bool) });
+              paramj = localf;
+            }
+          }
+        }
+        for (;;)
+        {
+          if (!ay.kz(field_openId)) {
+            break label1015;
+          }
+          localLinkedList.add(dkU);
+          break;
+          if (field_serviceAppType != jyl)
+          {
+            paramInt1 = 1;
+            break label509;
+          }
+          if (aOo != jyo)
+          {
+            paramInt1 = 1;
+            break label509;
+          }
+          if (field_serviceShowFlag != jyp)
+          {
+            paramInt1 = 1;
+            break label509;
+          }
+          if (!ay.ky(field_appName).equals(ay.ky(jyk)))
+          {
+            paramInt1 = 1;
+            break label509;
+          }
+          if (!ay.ky(field_appName_en).equals(ay.ky(jyg)))
+          {
+            paramInt1 = 1;
+            break label509;
+          }
+          if (!ay.ky(field_appName_tw).equals(ay.ky(jyh)))
+          {
+            paramInt1 = 1;
+            break label509;
+          }
+          if (!ay.ky(aOm).equals(ay.ky(jyj)))
+          {
+            paramInt1 = 1;
+            break label509;
+          }
+          if (!ay.ky(aOl).equals(ay.ky(jyi)))
+          {
+            paramInt1 = 1;
+            break label509;
+          }
+          if (!ay.ky(aOn).equals(ay.ky(jyn)))
+          {
+            paramInt1 = 1;
+            break label509;
+          }
+          paramInt1 = 0;
+          break label509;
+          paramj = new f();
+          field_appId = dkU;
+          a(paramj, localacg);
+          bool = locali.m(paramj);
+          u.i("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "insert app: AppID = %s, ret = %s", new Object[] { dkU, Boolean.valueOf(bool) });
+        }
+      }
+    }
+    if (localLinkedList.size() > 0)
+    {
+      u.d("!44@/B4Tb64lLpJUej9RrA1bOWmsIpR3UVONBzVGWKMsBOw=", "needGetOpenIdList %d", new Object[] { Integer.valueOf(localLinkedList.size()) });
+      aj.aPV().bl(localLinkedList);
+    }
+    if (jyf.size() == 20)
+    {
+      iBZ += 20;
+      aH(bXM, iBZ);
     }
     for (;;)
     {
-      String str = "content != null [[" + aDs.field_content + "]]";
-      if (paramd != null) {}
-      for (boolean bool = true;; bool = false)
-      {
-        Assert.assertTrue(str, bool);
-        if (paramd != null) {
-          break;
-        }
-        aDs = null;
-        return -1;
-      }
-      if (!bn.iW(aDs.field_imgPath)) {}
-      for (str = af.zl().gL(aDs.field_imgPath);; str = "")
-      {
-        if ((type == 8) || (type == 9) || (type == 6))
-        {
-          t.i("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "cdntra cdn not support Emoji or voiceremind now type:%d", new Object[] { Integer.valueOf(type) });
-          i = 0;
-        }
-        while (i != 0)
-        {
-          t.d("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "cdntra use cdn return -1 for onGYNetEnd clientId:%s", new Object[] { bDP });
-          return 0;
-          if (bn.iW(str))
-          {
-            t.i("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "cdntra cdn not support no thumb msg type:%d", new Object[] { Integer.valueOf(type) });
-            i = 0;
-          }
-          else
-          {
-            i = c.ay(str);
-            if (i >= CdnTransportEngine.bxe)
-            {
-              t.w("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "cdntra thumb[%s][%d] Too Big Not Use CDN TRANS", new Object[] { str, Integer.valueOf(i) });
-              i = 0;
-            }
-            else if (!bn.iW(aqm))
-            {
-              t.w("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "cdntra attach has been upload by cdn msgid:%d", new Object[] { Long.valueOf(axb) });
-              i = 0;
-            }
-            else
-            {
-              com.tencent.mm.modelcdntran.j.xh();
-              if (!com.tencent.mm.modelcdntran.b.xb())
-              {
-                com.tencent.mm.modelcdntran.j.xh();
-                t.w("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "cdntra not use cdn flag:%b ", new Object[] { Boolean.valueOf(com.tencent.mm.modelcdntran.b.xb()) });
-                i = 0;
-              }
-              else
-              {
-                bDP = h.a("upappmsg", aDs.field_createTime, aDs.field_talker, aDs.field_msgId);
-                if (bn.iW(bDP))
-                {
-                  t.w("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "cdntra genClientId failed not use cdn msgid:%d", new Object[] { Long.valueOf(aDs.field_msgId) });
-                  i = 0;
-                }
-                else
-                {
-                  localObject = new com.tencent.mm.modelcdntran.m();
-                  bxZ = bDX;
-                  field_mediaId = bDP;
-                  field_fullpath = "";
-                  field_thumbpath = str;
-                  field_fileType = CdnTransportEngine.bwQ;
-                  field_talker = aDs.field_talker;
-                  field_priority = CdnTransportEngine.bwM;
-                  field_needStorage = false;
-                  field_isStreamMedia = false;
-                  bxZ = bDX;
-                  if (!com.tencent.mm.modelcdntran.j.xh().a((com.tencent.mm.modelcdntran.m)localObject))
-                  {
-                    t.e("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "cdntra addSendTask failed.");
-                    bDP = "";
-                    i = 0;
-                  }
-                  else
-                  {
-                    i = 1;
-                  }
-                }
-              }
-            }
-          }
-        }
-        Object localObject = (aep)apJ.bsT.btb;
-        com.tencent.mm.protocal.b.ar localar = new com.tencent.mm.protocal.b.ar();
-        hic = appId;
-        hjx = (aDs.field_talker + aDs.field_msgId + "T" + aDs.field_createTime);
-        eiY = com.tencent.mm.m.a.a.a(paramd, null, null, 0, 0);
-        ege = ((int)bn.DL());
-        hjw = aDs.field_talker;
-        hju = v.rS();
-        cVl = type;
-        hjv = sdkVer;
-        hjz = blS;
-        hiU = ca.tT();
-        hjB = aEy;
-        hjC = aEz;
-        hjD = aEA;
-        aEB = aEB;
-        t.d("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "SnsPostOperationFields: ShareUrlOriginal=%s, ShareUrlOpen=%s, JsAppId=%s", new Object[] { aEy, aEz, aEA });
-        if (!bn.iW(str))
-        {
-          paramd = c.c(str, 0, -1);
-          if (!bn.J(paramd)) {
-            hjy = new adt().aA(paramd);
-          }
-        }
-        if (hjy != null) {}
-        for (int i = hjy.hLZ;; i = -1)
-        {
-          t.d("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "doScene thumbFile:[%s] thumbdata:%d", new Object[] { str, Integer.valueOf(i) });
-          hMu = localar;
-          return a(paramm, apJ, this);
-        }
-      }
+      ah.tD().rn().setLong(352276, System.currentTimeMillis());
+      iCa = System.currentTimeMillis();
+      return;
+      a(locali, iBW);
+      iBZ = 0;
+      iBW.clear();
     }
   }
   
-  protected final int a(w paramw)
+  public final void aPX()
   {
-    return j.b.btz;
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
-  {
-    if ((paramInt2 == 3) && (paramInt3 == -1) && (!bn.iW(bDP)))
-    {
-      t.w("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "cdntra using cdn trans,  wait cdn service callback! clientid:%s", new Object[] { bDP });
+    if (!ah.rh()) {
       return;
     }
-    if ((paramInt2 != 0) || (paramInt3 != 0))
-    {
-      aDs.setStatus(5);
-      ax.tl().rk().a(aDs.field_msgId, aDs);
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvpM8F9Mwt9oo/dBMbRUcE7Q=", "send app msg failed, err=" + paramInt2 + "," + paramInt3 + ", msgId " + aDs.field_msgId);
-      if (paramInt2 == 4) {
-        com.tencent.mm.plugin.report.service.j.eJZ.f(10420, new Object[] { Integer.valueOf(paramInt3), Integer.valueOf(1), Long.valueOf(startTime), Long.valueOf(bn.DM()), Integer.valueOf(h.aB(aa.getContext())), Integer.valueOf(CdnTransportEngine.bwQ), Integer.valueOf(0) });
-      }
-      apI.a(paramInt2, paramInt3, paramString, this);
-      return;
-    }
-    paramArrayOfByte = (aeq)bsU.btb;
-    paramw = (aep)bsT.btb;
-    aDs.setStatus(2);
-    aDs.v(hiW);
-    ax.tl().rk().a(aDs.field_msgId, aDs);
-    if (!bn.iW(aEB))
-    {
-      kb localkb = new kb();
-      aHn.aHo = aEB;
-      aHn.aHp = ("msg_$id" + Long.toString(hiW));
-      com.tencent.mm.sdk.c.a.hXQ.g(localkb);
-    }
-    if (hMu.hjy != null) {
-      com.tencent.mm.plugin.report.service.j.eJZ.f(10420, new Object[] { Integer.valueOf(0), Integer.valueOf(1), Long.valueOf(startTime), Long.valueOf(bn.DM()), Integer.valueOf(h.aB(aa.getContext())), Integer.valueOf(CdnTransportEngine.bwQ), Integer.valueOf(hMu.hjy.hLZ) });
-    }
-    apI.a(paramInt2, paramInt3, paramString, this);
+    aj.abv().a(4, this);
+    ah.tE().a(1060, this);
   }
   
-  public final int getType()
+  public final void aPY()
   {
-    return 222;
+    if (!ah.rh()) {
+      return;
+    }
+    aj.abv().b(4, this);
+    ah.tE().b(1060, this);
+    iBU = false;
+    iBV = false;
   }
 }
 

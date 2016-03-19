@@ -29,7 +29,6 @@ import android.text.method.KeyListener;
 import android.text.method.MovementMethod;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.FloatMath;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.View.MeasureSpec;
@@ -37,53 +36,53 @@ import android.view.ViewDebug.CapturedViewProperty;
 import android.view.ViewDebug.ExportedProperty;
 import android.view.ViewGroup.LayoutParams;
 import android.view.accessibility.AccessibilityNodeInfo;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.sdk.platformtools.ay;
 
 @SuppressLint({"ResourceAsColor"})
 public class NoMeasuredTextView
   extends View
 {
-  private static final BoringLayout.Metrics iKy = new BoringLayout.Metrics();
-  private float dCf = 1.0F;
-  private float dCg = 0.0F;
-  private ColorStateList eqR;
-  private TextPaint fBk = new TextPaint(1);
-  private int ga = 51;
-  private boolean iHr;
-  private int iJT;
-  private Editable.Factory iJU = Editable.Factory.getInstance();
-  private Spannable.Factory iJV = Spannable.Factory.getInstance();
-  private TextUtils.TruncateAt iJW = null;
-  private CharSequence iJX = "";
-  private int iJY = a.iKz;
-  private KeyListener iJZ;
-  private Layout iKa;
-  private int iKb = Integer.MAX_VALUE;
-  private int iKc = 1;
-  private int iKd = 0;
-  private int iKe = 1;
-  private boolean iKf = false;
-  private boolean iKg = false;
-  private int iKh = -1;
-  private boolean iKi = true;
-  private BoringLayout iKj;
-  private boolean iKk = false;
-  private int iKl;
-  private Paint.FontMetricsInt iKm;
-  private boolean iKn = false;
-  private boolean iKo = false;
-  private b iKp;
-  private boolean iKq = false;
-  private boolean iKr = false;
-  private boolean iKs = false;
-  private boolean iKt = false;
-  private int iKu = -1;
-  private int iKv = -1;
-  private int iKw = -1;
-  private int iKx = -1;
-  private int lu = 0;
+  private static final BoringLayout.Metrics kJL = new BoringLayout.Metrics();
+  private TextPaint dGF = new TextPaint(1);
+  private ColorStateList fAP;
+  private int fh = 51;
+  private boolean kGE;
+  private boolean kJA = false;
+  private boolean kJB = false;
+  private b kJC;
+  private boolean kJD = false;
+  private boolean kJE = false;
+  private boolean kJF = false;
+  private boolean kJG = false;
+  private int kJH = -1;
+  private int kJI = -1;
+  private int kJJ = -1;
+  private int kJK = -1;
+  private int kJe;
+  private Editable.Factory kJf = Editable.Factory.getInstance();
+  private Spannable.Factory kJg = Spannable.Factory.getInstance();
+  private TextUtils.TruncateAt kJh = null;
+  private CharSequence kJi = "";
+  private int kJj = a.kJM;
+  private KeyListener kJk;
+  private Layout kJl;
+  private float kJm = 1.0F;
+  private float kJn = 0.0F;
+  private int kJo = Integer.MAX_VALUE;
+  private int kJp = 1;
+  private int kJq = 0;
+  private int kJr = 1;
+  private boolean kJs = false;
+  private boolean kJt = false;
+  private int kJu = -1;
+  private boolean kJv = true;
+  private BoringLayout kJw;
+  private boolean kJx = false;
+  private int kJy;
+  private Paint.FontMetricsInt kJz;
+  private int kz = 0;
   private CharSequence mText = "";
-  private int rl = Integer.MAX_VALUE;
+  private int qn = Integer.MAX_VALUE;
   
   static
   {
@@ -95,17 +94,17 @@ public class NoMeasuredTextView
   public NoMeasuredTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    fBk.density = getResourcesgetDisplayMetricsdensity;
+    dGF.density = getResourcesgetDisplayMetricsdensity;
     setDrawingCacheEnabled(false);
-    iKm = fBk.getFontMetricsInt();
-    aNt();
+    kJz = dGF.getFontMetricsInt();
+    bdk();
     setSingleLine(true);
     setEllipsize(null);
   }
   
   private void a(Drawable paramDrawable1, Drawable paramDrawable2)
   {
-    Object localObject2 = iKp;
+    Object localObject2 = kJC;
     int i;
     if ((paramDrawable1 != null) || (paramDrawable2 != null))
     {
@@ -115,10 +114,10 @@ public class NoMeasuredTextView
       }
       if (localObject2 != null)
       {
-        if (iKQ != 0) {
+        if (kKd != 0) {
           break label48;
         }
-        iKp = null;
+        kJC = null;
       }
     }
     for (;;)
@@ -128,65 +127,65 @@ public class NoMeasuredTextView
       i = 0;
       break;
       label48:
-      if (iKG != null) {
-        iKG.setCallback(null);
+      if (kJT != null) {
+        kJT.setCallback(null);
       }
-      iKG = null;
-      if (iKE != null) {
-        iKE.setCallback(null);
+      kJT = null;
+      if (kJR != null) {
+        kJR.setCallback(null);
       }
-      iKE = null;
-      if (iKH != null) {
-        iKH.setCallback(null);
+      kJR = null;
+      if (kJU != null) {
+        kJU.setCallback(null);
       }
-      iKH = null;
-      if (iKF != null) {
-        iKF.setCallback(null);
+      kJU = null;
+      if (kJS != null) {
+        kJS.setCallback(null);
       }
-      iKF = null;
-      iKO = 0;
-      iKK = 0;
+      kJS = null;
+      kKb = 0;
+      kJX = 0;
       paramDrawable1 = (Drawable)localObject2;
-      iKP = 0;
-      iKL = 0;
+      kKc = 0;
+      kJY = 0;
       label165:
-      iKM = 0;
-      iKI = 0;
-      iKN = 0;
-      iKJ = 0;
+      kJZ = 0;
+      kJV = 0;
+      kKa = 0;
+      kJW = 0;
     }
     label188:
     Object localObject1 = localObject2;
     if (localObject2 == null)
     {
       localObject1 = new b();
-      iKp = ((b)localObject1);
+      kJC = ((b)localObject1);
     }
-    if ((iKG != paramDrawable1) && (iKG != null)) {
-      iKG.setCallback(null);
+    if ((kJT != paramDrawable1) && (kJT != null)) {
+      kJT.setCallback(null);
     }
-    iKG = paramDrawable1;
-    if ((iKE != null) && (iKE != null)) {
-      iKE.setCallback(null);
+    kJT = paramDrawable1;
+    if ((kJR != null) && (kJR != null)) {
+      kJR.setCallback(null);
     }
-    iKE = null;
-    if ((iKH != paramDrawable2) && (iKH != null)) {
-      iKH.setCallback(null);
+    kJR = null;
+    if ((kJU != paramDrawable2) && (kJU != null)) {
+      kJU.setCallback(null);
     }
-    iKH = paramDrawable2;
-    if ((iKF != null) && (iKF != null)) {
-      iKF.setCallback(null);
+    kJU = paramDrawable2;
+    if ((kJS != null) && (kJS != null)) {
+      kJS.setCallback(null);
     }
-    iKF = null;
-    localObject2 = iKD;
+    kJS = null;
+    localObject2 = kJQ;
     int[] arrayOfInt = getDrawableState();
     if (paramDrawable1 != null)
     {
       paramDrawable1.setState(arrayOfInt);
       paramDrawable1.copyBounds((Rect)localObject2);
       paramDrawable1.setCallback(this);
-      iKK = ((Rect)localObject2).width();
-      iKO = ((Rect)localObject2).height();
+      kJX = ((Rect)localObject2).width();
+      kKb = ((Rect)localObject2).height();
     }
     for (;;)
     {
@@ -197,45 +196,16 @@ public class NoMeasuredTextView
       paramDrawable2.setState(arrayOfInt);
       paramDrawable2.copyBounds((Rect)localObject2);
       paramDrawable2.setCallback(this);
-      iKL = ((Rect)localObject2).width();
-      iKP = ((Rect)localObject2).height();
+      kJY = ((Rect)localObject2).width();
+      kKc = ((Rect)localObject2).height();
       paramDrawable1 = (Drawable)localObject1;
       break label165;
-      iKO = 0;
-      iKK = 0;
+      kKb = 0;
+      kJX = 0;
     }
   }
   
-  private void aNr()
-  {
-    if (((iKa instanceof BoringLayout)) && (iKj == null)) {
-      iKj = ((BoringLayout)iKa);
-    }
-    iKa = null;
-  }
-  
-  private void aNs()
-  {
-    if (iKf) {}
-    for (int i = rl - getCompoundPaddingLeft() - getCompoundPaddingRight();; i = getRight() - getLeft() - getCompoundPaddingLeft() - getCompoundPaddingRight())
-    {
-      int j = i;
-      if (i <= 0) {
-        j = 0;
-      }
-      by(j, j);
-      return;
-    }
-  }
-  
-  private void aNt()
-  {
-    if (iKl == 0) {
-      iKl = ((int)(Math.ceil(iKm.descent - iKm.ascent) + 2.0D));
-    }
-  }
-  
-  private void by(int paramInt1, int paramInt2)
+  private void bO(int paramInt1, int paramInt2)
   {
     if (paramInt1 < 0) {
       paramInt1 = 0;
@@ -243,11 +213,11 @@ public class NoMeasuredTextView
     for (;;)
     {
       Layout.Alignment localAlignment;
-      switch (ga & 0x7)
+      switch (fh & 0x7)
       {
       default: 
         localAlignment = Layout.Alignment.ALIGN_NORMAL;
-        if ((iJW == null) || (iJZ != null)) {
+        if ((kJh == null) || (kJk != null)) {
           break;
         }
       }
@@ -256,7 +226,7 @@ public class NoMeasuredTextView
         if (i == 0) {
           break label136;
         }
-        iKa = new StaticLayout(iJX, 0, iJX.length(), fBk, paramInt1, localAlignment, dCf, dCg, iKi, iJW, paramInt2);
+        kJl = new StaticLayout(kJi, 0, kJi.length(), dGF, paramInt1, localAlignment, kJm, kJn, kJv, kJh, paramInt2);
         return;
         localAlignment = Layout.Alignment.ALIGN_CENTER;
         break;
@@ -264,8 +234,37 @@ public class NoMeasuredTextView
         break;
       }
       label136:
-      iKa = new StaticLayout(iJX, fBk, paramInt1, localAlignment, dCf, dCg, iKi);
+      kJl = new StaticLayout(kJi, dGF, paramInt1, localAlignment, kJm, kJn, kJv);
       return;
+    }
+  }
+  
+  private void bdi()
+  {
+    if (((kJl instanceof BoringLayout)) && (kJw == null)) {
+      kJw = ((BoringLayout)kJl);
+    }
+    kJl = null;
+  }
+  
+  private void bdj()
+  {
+    if (kJs) {}
+    for (int i = qn - getCompoundPaddingLeft() - getCompoundPaddingRight();; i = getRight() - getLeft() - getCompoundPaddingLeft() - getCompoundPaddingRight())
+    {
+      int j = i;
+      if (i <= 0) {
+        j = 0;
+      }
+      bO(j, j);
+      return;
+    }
+  }
+  
+  private void bdk()
+  {
+    if (kJy == 0) {
+      kJy = ((int)(Math.ceil(kJz.descent - kJz.ascent) + 2.0D));
     }
   }
   
@@ -283,81 +282,81 @@ public class NoMeasuredTextView
       if (!(localObject instanceof Spanned)) {
         break label165;
       }
-      iKk = false;
-      if ((paramInt != a.iKB) && (iJZ == null)) {
+      kJx = false;
+      if ((paramInt != a.kJO) && (kJk == null)) {
         break label173;
       }
-      paramCharSequence = iJU.newEditable((CharSequence)localObject);
+      paramCharSequence = kJf.newEditable((CharSequence)localObject);
       i = getCompoundPaddingRight();
       j = getCompoundPaddingLeft() + i;
       localObject = paramCharSequence;
-      if (iKo)
+      if (kJB)
       {
-        if (!iKf) {
+        if (!kJs) {
           break label196;
         }
-        i = rl;
+        i = qn;
         if (getMeasuredWidth() > 0) {
-          i = Math.min(rl, getMeasuredWidth());
+          i = Math.min(qn, getMeasuredWidth());
         }
-        localObject = TextUtils.ellipsize(paramCharSequence, fBk, i - j, TextUtils.TruncateAt.END);
+        localObject = TextUtils.ellipsize(paramCharSequence, dGF, i - j, TextUtils.TruncateAt.END);
       }
     }
     for (;;)
     {
-      iJY = paramInt;
+      kJj = paramInt;
       mText = ((CharSequence)localObject);
-      iJX = ((CharSequence)localObject);
-      if (!iKk) {
+      kJi = ((CharSequence)localObject);
+      if (!kJx) {
         break label238;
       }
-      aNt();
+      bdk();
       invalidate();
       return;
       label165:
-      iKk = true;
+      kJx = true;
       break;
       label173:
       paramCharSequence = (CharSequence)localObject;
-      if (paramInt != a.iKA) {
+      if (paramInt != a.kJN) {
         break label60;
       }
-      paramCharSequence = iJV.newSpannable((CharSequence)localObject);
+      paramCharSequence = kJg.newSpannable((CharSequence)localObject);
       break label60;
       label196:
       if (getMeasuredWidth() > 0)
       {
-        localObject = TextUtils.ellipsize(paramCharSequence, fBk, getMeasuredWidth() - j, TextUtils.TruncateAt.END);
+        localObject = TextUtils.ellipsize(paramCharSequence, dGF, getMeasuredWidth() - j, TextUtils.TruncateAt.END);
       }
       else
       {
-        iKn = true;
+        kJA = true;
         localObject = paramCharSequence;
       }
     }
     label238:
     if (getWidth() != 0)
     {
-      if (iKa == null)
+      if (kJl == null)
       {
-        aNs();
-        if (iKa.getHeight() != getHeight()) {
+        bdj();
+        if (kJl.getHeight() != getHeight()) {
           requestLayout();
         }
         invalidate();
         return;
       }
-      paramInt = iKa.getHeight();
-      i = iKa.getWidth();
-      by(i, i - j);
-      if (iJW != TextUtils.TruncateAt.MARQUEE)
+      paramInt = kJl.getHeight();
+      i = kJl.getWidth();
+      bO(i, i - j);
+      if (kJh != TextUtils.TruncateAt.MARQUEE)
       {
         if ((getLayoutParamsheight != -2) && (getLayoutParamsheight != -1))
         {
           invalidate();
           return;
         }
-        i = iKa.getHeight();
+        i = kJl.getHeight();
         if ((i == paramInt) && (i == getHeight()))
         {
           invalidate();
@@ -372,8 +371,8 @@ public class NoMeasuredTextView
   private int getBottomVerticalOffset$1385f2()
   {
     int j = 0;
-    int k = ga & 0x70;
-    Layout localLayout = iKa;
+    int k = fh & 0x70;
+    Layout localLayout = kJl;
     int i = j;
     int m;
     int n;
@@ -397,7 +396,7 @@ public class NoMeasuredTextView
   
   private int getDesiredHeight()
   {
-    Layout localLayout = iKa;
+    Layout localLayout = kJl;
     if (localLayout == null) {
       return 0;
     }
@@ -406,27 +405,27 @@ public class NoMeasuredTextView
     int m = getCompoundPaddingBottom() + i;
     i = localLayout.getLineTop(j) + m;
     int k;
-    if (iKc == 1)
+    if (kJp == 1)
     {
       k = j;
-      if (j > iKb)
+      if (j > kJo)
       {
-        i = localLayout.getLineTop(iKb) + localLayout.getBottomPadding() + m;
-        k = iKb;
+        i = localLayout.getLineTop(kJo) + localLayout.getBottomPadding() + m;
+        k = kJo;
       }
-      if (iKe != 1) {
+      if (kJr != 1) {
         break label141;
       }
       j = i;
-      if (k < iKd) {
+      if (k < kJq) {
         j = getLineHeight();
       }
     }
     label141:
-    for (j = i + (iKd - k) * j;; j = Math.max(i, iKd))
+    for (j = i + (kJq - k) * j;; j = Math.max(i, kJq))
     {
       return Math.max(j, getSuggestedMinimumHeight());
-      i = Math.min(i, iKb);
+      i = Math.min(i, kJo);
       k = j;
       break;
     }
@@ -435,8 +434,8 @@ public class NoMeasuredTextView
   private int getVerticalOffset$1385f2()
   {
     int j = 0;
-    int k = ga & 0x70;
-    Layout localLayout = iKa;
+    int k = fh & 0x70;
+    Layout localLayout = kJl;
     int i = j;
     int m;
     int n;
@@ -460,14 +459,14 @@ public class NoMeasuredTextView
   
   private void setRawTextSize(float paramFloat)
   {
-    if (paramFloat != fBk.getTextSize())
+    if (paramFloat != dGF.getTextSize())
     {
-      fBk.setTextSize(paramFloat);
-      iKm = fBk.getFontMetricsInt();
-      iKl = ((int)(Math.ceil(iKm.descent - iKm.ascent) + 2.0D));
-      if (iKa != null)
+      dGF.setTextSize(paramFloat);
+      kJz = dGF.getFontMetricsInt();
+      kJy = ((int)(Math.ceil(kJz.descent - kJz.ascent) + 2.0D));
+      if (kJl != null)
       {
-        aNr();
+        bdi();
         requestLayout();
         invalidate();
       }
@@ -477,10 +476,10 @@ public class NoMeasuredTextView
   private void updateTextColors()
   {
     int i = 0;
-    int j = eqR.getColorForState(getDrawableState(), 0);
-    if (j != iJT)
+    int j = fAP.getColorForState(getDrawableState(), 0);
+    if (j != kJe)
     {
-      iJT = j;
+      kJe = j;
       i = 1;
     }
     if (i != 0) {
@@ -490,8 +489,8 @@ public class NoMeasuredTextView
   
   protected int computeHorizontalScrollRange()
   {
-    if (iKa != null) {
-      return iKa.getWidth();
+    if (kJl != null) {
+      return kJl.getWidth();
     }
     return super.computeHorizontalScrollRange();
   }
@@ -503,8 +502,8 @@ public class NoMeasuredTextView
   
   protected int computeVerticalScrollRange()
   {
-    if (iKa != null) {
-      return iKa.getHeight();
+    if (kJl != null) {
+      return kJl.getHeight();
     }
     return super.computeVerticalScrollRange();
   }
@@ -512,104 +511,104 @@ public class NoMeasuredTextView
   protected void drawableStateChanged()
   {
     super.drawableStateChanged();
-    if ((eqR != null) && (eqR.isStateful())) {
+    if ((fAP != null) && (fAP.isStateful())) {
       updateTextColors();
     }
-    b localb = iKp;
+    b localb = kJC;
     if (localb != null)
     {
       int[] arrayOfInt = getDrawableState();
-      if ((iKE != null) && (iKE.isStateful())) {
-        iKE.setState(arrayOfInt);
+      if ((kJR != null) && (kJR.isStateful())) {
+        kJR.setState(arrayOfInt);
       }
-      if ((iKF != null) && (iKF.isStateful())) {
-        iKF.setState(arrayOfInt);
+      if ((kJS != null) && (kJS.isStateful())) {
+        kJS.setState(arrayOfInt);
       }
-      if ((iKG != null) && (iKG.isStateful())) {
-        iKG.setState(arrayOfInt);
+      if ((kJT != null) && (kJT.isStateful())) {
+        kJT.setState(arrayOfInt);
       }
-      if ((iKH != null) && (iKH.isStateful())) {
-        iKH.setState(arrayOfInt);
+      if ((kJU != null) && (kJU.isStateful())) {
+        kJU.setState(arrayOfInt);
       }
     }
   }
   
   public int getBaseline()
   {
-    if (iKa == null) {
+    if (kJl == null) {
       return super.getBaseline();
     }
-    if ((ga & 0x70) != 48) {}
+    if ((fh & 0x70) != 48) {}
     for (int i = getVerticalOffset$1385f2();; i = 0) {
-      return i + getExtendedPaddingTop() + iKa.getLineBaseline(0);
+      return i + getExtendedPaddingTop() + kJl.getLineBaseline(0);
     }
   }
   
   public int getCompoundDrawablePadding()
   {
-    b localb = iKp;
+    b localb = kJC;
     if (localb != null) {
-      return iKQ;
+      return kKd;
     }
     return 0;
   }
   
   public Drawable[] getCompoundDrawables()
   {
-    b localb = iKp;
+    b localb = kJC;
     if (localb != null) {
-      return new Drawable[] { iKG, iKE, iKH, iKF };
+      return new Drawable[] { kJT, kJR, kJU, kJS };
     }
     return new Drawable[] { null, null, null, null };
   }
   
   public int getCompoundPaddingBottom()
   {
-    b localb = iKp;
-    if ((localb == null) || (iKF == null) || (!iKt)) {
+    b localb = kJC;
+    if ((localb == null) || (kJS == null) || (!kJG)) {
       return getPaddingBottom();
     }
     int i = getPaddingBottom();
-    int j = iKQ;
-    return iKJ + (i + j);
+    int j = kKd;
+    return kJW + (i + j);
   }
   
   public int getCompoundPaddingLeft()
   {
-    b localb = iKp;
-    if ((localb == null) || (iKG == null) || (!iKq)) {
+    b localb = kJC;
+    if ((localb == null) || (kJT == null) || (!kJD)) {
       return getPaddingLeft();
     }
     int i = getPaddingLeft();
-    int j = iKQ;
-    return iKK + (i + j);
+    int j = kKd;
+    return kJX + (i + j);
   }
   
   public int getCompoundPaddingRight()
   {
-    b localb = iKp;
-    if ((localb == null) || (iKH == null) || (!iKr)) {
+    b localb = kJC;
+    if ((localb == null) || (kJU == null) || (!kJE)) {
       return getPaddingRight();
     }
     int i = getPaddingRight();
-    int j = iKQ;
-    return iKL + (i + j);
+    int j = kKd;
+    return kJY + (i + j);
   }
   
   public int getCompoundPaddingTop()
   {
-    b localb = iKp;
-    if ((localb == null) || (iKE == null) || (!iKs)) {
+    b localb = kJC;
+    if ((localb == null) || (kJR == null) || (!kJF)) {
       return getPaddingTop();
     }
     int i = getPaddingTop();
-    int j = iKQ;
-    return iKI + (i + j);
+    int j = kKd;
+    return kJV + (i + j);
   }
   
   public final int getCurrentTextColor()
   {
-    return iJT;
+    return kJe;
   }
   
   protected boolean getDefaultEditable()
@@ -633,13 +632,13 @@ public class NoMeasuredTextView
   @ViewDebug.ExportedProperty
   public TextUtils.TruncateAt getEllipsize()
   {
-    return iJW;
+    return kJh;
   }
   
   public int getExtendedPaddingBottom()
   {
     int i;
-    if ((iKa == null) || (iKc != 1)) {
+    if ((kJl == null) || (kJp != 1)) {
       i = getCompoundPaddingBottom();
     }
     int j;
@@ -651,16 +650,16 @@ public class NoMeasuredTextView
       do
       {
         return i;
-        if (iKa.getLineCount() <= iKb) {
+        if (kJl.getLineCount() <= kJo) {
           return getCompoundPaddingBottom();
         }
         i = getCompoundPaddingTop();
         j = getCompoundPaddingBottom();
         k = getHeight() - i - j;
-        m = iKa.getLineTop(iKb);
+        m = kJl.getLineTop(kJo);
         i = j;
       } while (m >= k);
-      n = ga & 0x70;
+      n = fh & 0x70;
       if (n == 48) {
         return j + k - m;
       }
@@ -672,7 +671,7 @@ public class NoMeasuredTextView
   public int getExtendedPaddingTop()
   {
     int i;
-    if ((iKa == null) || (iKc != 1)) {
+    if ((kJl == null) || (kJp != 1)) {
       i = getCompoundPaddingTop();
     }
     int j;
@@ -684,16 +683,16 @@ public class NoMeasuredTextView
       do
       {
         return i;
-        if (iKa.getLineCount() <= iKb) {
+        if (kJl.getLineCount() <= kJo) {
           return getCompoundPaddingTop();
         }
         j = getCompoundPaddingTop();
         i = getCompoundPaddingBottom();
         k = getHeight() - j - i;
-        m = iKa.getLineTop(iKb);
+        m = kJl.getLineTop(kJo);
         i = j;
       } while (m >= k);
-      n = ga & 0x70;
+      n = fh & 0x70;
       i = j;
     } while (n == 48);
     if (n == 80) {
@@ -704,7 +703,7 @@ public class NoMeasuredTextView
   
   public void getFocusedRect(Rect paramRect)
   {
-    if (iKa == null)
+    if (kJl == null)
     {
       super.getFocusedRect(paramRect);
       return;
@@ -715,15 +714,15 @@ public class NoMeasuredTextView
       super.getFocusedRect(paramRect);
       return;
     }
-    int j = iKa.getLineForOffset(i);
-    top = iKa.getLineTop(j);
-    bottom = iKa.getLineBottom(j);
-    left = ((int)iKa.getPrimaryHorizontal(i));
+    int j = kJl.getLineForOffset(i);
+    top = kJl.getLineTop(j);
+    bottom = kJl.getLineBottom(j);
+    left = ((int)kJl.getPrimaryHorizontal(i));
     right = (left + 1);
     int k = getCompoundPaddingLeft();
     j = getExtendedPaddingTop();
     i = j;
-    if ((ga & 0x70) != 48) {
+    if ((fh & 0x70) != 48) {
       i = j + getVerticalOffset$1385f2();
     }
     paramRect.offset(k, i);
@@ -731,35 +730,35 @@ public class NoMeasuredTextView
   
   public int getGravity()
   {
-    return ga;
+    return fh;
   }
   
   public final Layout getLayout()
   {
-    return iKa;
+    return kJl;
   }
   
   public int getLineCount()
   {
-    if (iKa != null) {
-      return iKa.getLineCount();
+    if (kJl != null) {
+      return kJl.getLineCount();
     }
     return 0;
   }
   
   public int getLineHeight()
   {
-    return Math.round(fBk.getFontMetricsInt(null) * dCf + dCg);
+    return Math.round(dGF.getFontMetricsInt(null) * kJm + kJn);
   }
   
   public TextPaint getPaint()
   {
-    return fBk;
+    return dGF;
   }
   
   public int getPaintFlags()
   {
-    return fBk.getFlags();
+    return dGF.getFlags();
   }
   
   @ViewDebug.ExportedProperty
@@ -782,25 +781,25 @@ public class NoMeasuredTextView
   
   public final ColorStateList getTextColors()
   {
-    return eqR;
+    return fAP;
   }
   
   public float getTextScaleX()
   {
-    return fBk.getTextScaleX();
+    return dGF.getTextScaleX();
   }
   
   public float getTextSize()
   {
-    return fBk.getTextSize();
+    return dGF.getTextSize();
   }
   
   public int getTotalPaddingBottom()
   {
     int k = getExtendedPaddingBottom();
     int j = 0;
-    int m = ga & 0x70;
-    Layout localLayout = iKa;
+    int m = fh & 0x70;
+    Layout localLayout = kJl;
     int i = j;
     int n;
     int i1;
@@ -838,7 +837,7 @@ public class NoMeasuredTextView
   
   public Typeface getTypeface()
   {
-    return fBk.getTypeface();
+    return dGF.getTypeface();
   }
   
   public void invalidateDrawable(Drawable paramDrawable)
@@ -857,12 +856,12 @@ public class NoMeasuredTextView
       localRect = paramDrawable.getBounds();
       m = getScrollX();
       k = getScrollY();
-      localb = iKp;
+      localb = kJC;
       i = k;
       j = m;
       if (localb != null)
       {
-        if (paramDrawable != iKG) {
+        if (paramDrawable != kJT) {
           break label140;
         }
         i = getCompoundPaddingTop();
@@ -870,7 +869,7 @@ public class NoMeasuredTextView
         i1 = getBottom();
         i2 = getTop();
         j = m + getPaddingLeft();
-        i = k + ((i1 - i2 - n - i - iKO) / 2 + i);
+        i = k + ((i1 - i2 - n - i - kKb) / 2 + i);
       }
     }
     for (;;)
@@ -878,32 +877,32 @@ public class NoMeasuredTextView
       invalidate(left + j, top + i, j + right, i + bottom);
       return;
       label140:
-      if (paramDrawable == iKH)
+      if (paramDrawable == kJU)
       {
         i = getCompoundPaddingTop();
         n = getCompoundPaddingBottom();
         i1 = getBottom();
         i2 = getTop();
-        j = m + (getRight() - getLeft() - getPaddingRight() - iKL);
-        i = k + ((i1 - i2 - n - i - iKP) / 2 + i);
+        j = m + (getRight() - getLeft() - getPaddingRight() - kJY);
+        i = k + ((i1 - i2 - n - i - kKc) / 2 + i);
       }
-      else if (paramDrawable == iKE)
+      else if (paramDrawable == kJR)
       {
         i = getCompoundPaddingLeft();
         j = getCompoundPaddingRight();
-        j = m + ((getRight() - getLeft() - j - i - iKM) / 2 + i);
+        j = m + ((getRight() - getLeft() - j - i - kJZ) / 2 + i);
         i = k + getPaddingTop();
       }
       else
       {
         i = k;
         j = m;
-        if (paramDrawable == iKF)
+        if (paramDrawable == kJS)
         {
           i = getCompoundPaddingLeft();
           j = getCompoundPaddingRight();
-          j = m + (i + (getRight() - getLeft() - j - i - iKN) / 2);
-          i = k + (getBottom() - getTop() - getPaddingBottom() - iKJ);
+          j = m + (i + (getRight() - getLeft() - j - i - kKa) / 2);
+          i = k + (getBottom() - getTop() - getPaddingBottom() - kJW);
         }
       }
     }
@@ -924,7 +923,7 @@ public class NoMeasuredTextView
     int i6 = getTop();
     int k = getWidth();
     int n = getHeight();
-    b localb = iKp;
+    b localb = kJC;
     float f2 = -1.0F;
     float f1 = f2;
     float f3;
@@ -932,79 +931,79 @@ public class NoMeasuredTextView
     {
       i7 = i5 - i6 - i7 - i1;
       int i8 = i3 - i4 - i - m;
-      if ((iKq) && (iKG != null))
+      if ((kJD) && (kJT != null))
       {
         paramCanvas.save();
-        paramCanvas.translate(getPaddingLeft() + j, i2 + i1 + (i7 - iKO) / 2);
-        iKG.draw(paramCanvas);
+        paramCanvas.translate(getPaddingLeft() + j, i2 + i1 + (i7 - kKb) / 2);
+        kJT.draw(paramCanvas);
         paramCanvas.restore();
       }
       f3 = f2;
-      if (iKr)
+      if (kJE)
       {
         f3 = f2;
-        if (iKH != null)
+        if (kJU != null)
         {
           paramCanvas.save();
-          if (!iKk) {
+          if (!kJx) {
             break label684;
           }
-          f1 = fBk.measureText(mText, 0, mText.length());
+          f1 = dGF.measureText(mText, 0, mText.length());
           f2 = f1;
-          paramCanvas.translate(f1 + j - getPaddingRight(), i1 + i2 + (i7 - iKP) / 2);
-          iKH.draw(paramCanvas);
+          paramCanvas.translate(f1 + j - getPaddingRight(), i1 + i2 + (i7 - kKc) / 2);
+          kJU.draw(paramCanvas);
           paramCanvas.restore();
           f3 = f2;
         }
       }
-      if ((iKs) && (iKE != null))
+      if ((kJF) && (kJR != null))
       {
         paramCanvas.save();
-        paramCanvas.translate(j + m + (i8 - iKM) / 2, getPaddingTop() + i2);
-        iKE.draw(paramCanvas);
+        paramCanvas.translate(j + m + (i8 - kJZ) / 2, getPaddingTop() + i2);
+        kJR.draw(paramCanvas);
         paramCanvas.restore();
       }
       f1 = f3;
-      if (iKt)
+      if (kJG)
       {
         f1 = f3;
-        if (iKF != null)
+        if (kJS != null)
         {
           paramCanvas.save();
-          paramCanvas.translate(j + m + (i8 - iKN) / 2, i2 + i5 - i6 - getPaddingBottom() - iKJ);
-          iKF.draw(paramCanvas);
+          paramCanvas.translate(j + m + (i8 - kKa) / 2, i2 + i5 - i6 - getPaddingBottom() - kJW);
+          kJS.draw(paramCanvas);
           paramCanvas.restore();
           f1 = f3;
         }
       }
     }
-    i1 = iJT;
-    fBk.setColor(i1);
-    fBk.drawableState = getDrawableState();
+    i1 = kJe;
+    dGF.setColor(i1);
+    dGF.drawableState = getDrawableState();
     paramCanvas.save();
     i1 = getExtendedPaddingTop();
     i7 = getExtendedPaddingBottom();
     paramCanvas.clipRect(m + j, i1 + i2, i3 - i4 - i + j, i5 - i6 - i7 + i2);
     j = 0;
     i = 0;
-    if ((ga & 0x70) != 48)
+    if ((fh & 0x70) != 48)
     {
       j = getVerticalOffset$1385f2();
       i = getVerticalOffset$1385f2();
     }
     paramCanvas.translate(m, i1 + j);
-    if (iKk)
+    if (kJx)
     {
-      f3 = (n - (iKm.bottom - iKm.top)) / 2 - iKm.top;
+      f3 = (n - (kJz.bottom - kJz.top)) / 2 - kJz.top;
       j = 0;
       i = j;
-      if ((ga & 0x7) != 3) {}
-      switch (ga & 0x7)
+      if ((fh & 0x7) != 3) {}
+      switch (fh & 0x7)
       {
       default: 
         i = j;
         label652:
-        paramCanvas.drawText(mText, 0, mText.length(), i, f3, fBk);
+        paramCanvas.drawText(mText, 0, mText.length(), i, f3, dGF);
       }
     }
     for (;;)
@@ -1012,24 +1011,24 @@ public class NoMeasuredTextView
       paramCanvas.restore();
       return;
       label684:
-      f1 = FloatMath.ceil(Layout.getDesiredWidth(iJX, fBk));
+      f1 = (float)Math.ceil(Layout.getDesiredWidth(kJi, dGF));
       break;
       f2 = f1;
       if (f1 == -1.0F) {
-        f2 = fBk.measureText(mText, 0, mText.length());
+        f2 = dGF.measureText(mText, 0, mText.length());
       }
       i = (int)(k - getPaddingRight() - f2);
       break label652;
       f2 = f1;
       if (f1 == -1.0F) {
-        f2 = fBk.measureText(mText, 0, mText.length());
+        f2 = dGF.measureText(mText, 0, mText.length());
       }
       i = (int)(k - getPaddingRight() - f2) / 2;
       break label652;
-      if (iKa == null) {
-        aNs();
+      if (kJl == null) {
+        bdj();
       }
-      iKa.draw(paramCanvas, null, null, i - j);
+      kJl.draw(paramCanvas, null, null, i - j);
     }
   }
   
@@ -1039,7 +1038,7 @@ public class NoMeasuredTextView
     super.onInitializeAccessibilityNodeInfo(paramAccessibilityNodeInfo);
     CharSequence localCharSequence2 = getContentDescription();
     CharSequence localCharSequence1 = localCharSequence2;
-    if (bn.iW((String)localCharSequence2)) {
+    if (ay.kz((String)localCharSequence2)) {
       localCharSequence1 = getText();
     }
     paramAccessibilityNodeInfo.setText(localCharSequence1);
@@ -1048,10 +1047,10 @@ public class NoMeasuredTextView
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    if ((iKn) && (getMeasuredWidth() > 0))
+    if ((kJA) && (getMeasuredWidth() > 0))
     {
       setText(TextUtils.ellipsize(mText, getPaint(), getMeasuredWidth() - getCompoundPaddingRight() - getCompoundPaddingLeft(), TextUtils.TruncateAt.END));
-      iKn = false;
+      kJA = false;
     }
   }
   
@@ -1063,30 +1062,30 @@ public class NoMeasuredTextView
     int i = View.MeasureSpec.getSize(paramInt2);
     if (j == 0)
     {
-      setMeasuredDimension(j, iKl);
+      setMeasuredDimension(j, kJy);
       return;
     }
-    if (iKk)
+    if (kJx)
     {
-      if (iKl == 0) {
-        aNt();
+      if (kJy == 0) {
+        bdk();
       }
-      setMeasuredDimension(j, iKl);
+      setMeasuredDimension(j, kJy);
       return;
     }
     paramInt1 = getCompoundPaddingLeft() + getCompoundPaddingRight();
-    if (iKf)
+    if (kJs)
     {
-      paramInt1 = rl - paramInt1;
-      if (iKa != null) {
+      paramInt1 = qn - paramInt1;
+      if (kJl != null) {
         break label141;
       }
-      by(paramInt1, paramInt1);
+      bO(paramInt1, paramInt1);
       label104:
       if (k != 1073741824) {
         break label172;
       }
-      iKh = -1;
+      kJu = -1;
       paramInt1 = i;
     }
     for (;;)
@@ -1097,20 +1096,20 @@ public class NoMeasuredTextView
       paramInt1 = j - paramInt1;
       break;
       label141:
-      if (iKa.getWidth() != paramInt1) {}
+      if (kJl.getWidth() != paramInt1) {}
       for (paramInt2 = 1;; paramInt2 = 0)
       {
         if (paramInt2 == 0) {
           break label170;
         }
-        by(paramInt1, paramInt1);
+        bO(paramInt1, paramInt1);
         break;
       }
       label170:
       break label104;
       label172:
       paramInt2 = getDesiredHeight();
-      iKh = paramInt2;
+      kJu = paramInt2;
       paramInt1 = paramInt2;
       if (k == Integer.MIN_VALUE) {
         paramInt1 = Math.min(paramInt2, i);
@@ -1120,7 +1119,7 @@ public class NoMeasuredTextView
   
   public void setCompoundDrawablePadding(int paramInt)
   {
-    b localb2 = iKp;
+    b localb2 = kJC;
     b localb1;
     if (paramInt == 0) {
       if (localb2 != null) {
@@ -1129,7 +1128,7 @@ public class NoMeasuredTextView
     }
     for (;;)
     {
-      iKQ = paramInt;
+      kKd = paramInt;
       invalidate();
       requestLayout();
       return;
@@ -1137,16 +1136,16 @@ public class NoMeasuredTextView
       if (localb2 == null)
       {
         localb1 = new b();
-        iKp = localb1;
+        kJC = localb1;
       }
     }
   }
   
   public void setCompoundLeftDrawablesWithIntrinsicBounds(int paramInt)
   {
-    if (paramInt != iKu)
+    if (paramInt != kJH)
     {
-      iKu = paramInt;
+      kJH = paramInt;
       setCompoundLeftDrawablesWithIntrinsicBounds(getResources().getDrawable(paramInt));
     }
   }
@@ -1154,7 +1153,7 @@ public class NoMeasuredTextView
   public void setCompoundLeftDrawablesWithIntrinsicBounds(Drawable paramDrawable)
   {
     if (paramDrawable == null) {}
-    while ((iKp != null) && (iKp.iKG == paramDrawable)) {
+    while ((kJC != null) && (kJC.kJT == paramDrawable)) {
       return;
     }
     paramDrawable.setBounds(0, 0, paramDrawable.getIntrinsicWidth(), paramDrawable.getIntrinsicHeight());
@@ -1163,9 +1162,9 @@ public class NoMeasuredTextView
   
   public void setCompoundRightDrawablesWithIntrinsicBounds(int paramInt)
   {
-    if (paramInt != iKv)
+    if (paramInt != kJI)
     {
-      iKv = paramInt;
+      kJI = paramInt;
       setCompoundRightDrawablesWithIntrinsicBounds(getResources().getDrawable(paramInt));
     }
   }
@@ -1173,7 +1172,7 @@ public class NoMeasuredTextView
   public void setCompoundRightDrawablesWithIntrinsicBounds(Drawable paramDrawable)
   {
     if (paramDrawable == null) {}
-    while ((iKp != null) && (iKp.iKH == paramDrawable)) {
+    while ((kJC != null) && (kJC.kJU == paramDrawable)) {
       return;
     }
     paramDrawable.setBounds(0, 0, paramDrawable.getIntrinsicWidth(), paramDrawable.getIntrinsicHeight());
@@ -1182,36 +1181,48 @@ public class NoMeasuredTextView
   
   public void setDrawDownDrawable(boolean paramBoolean)
   {
-    iKt = paramBoolean;
+    if (kJG != paramBoolean) {
+      invalidate();
+    }
+    kJG = paramBoolean;
   }
   
   public void setDrawLeftDrawable(boolean paramBoolean)
   {
-    iKq = paramBoolean;
+    if (kJD != paramBoolean) {
+      invalidate();
+    }
+    kJD = paramBoolean;
   }
   
   public void setDrawRightDrawable(boolean paramBoolean)
   {
-    iKr = paramBoolean;
+    if (kJE != paramBoolean) {
+      invalidate();
+    }
+    kJE = paramBoolean;
   }
   
   public void setDrawTopDrawable(boolean paramBoolean)
   {
-    iKs = paramBoolean;
+    if (kJF != paramBoolean) {
+      invalidate();
+    }
+    kJF = paramBoolean;
   }
   
   public final void setEditableFactory(Editable.Factory paramFactory)
   {
-    iJU = paramFactory;
+    kJf = paramFactory;
     setText(mText);
   }
   
   public void setEllipsize(TextUtils.TruncateAt paramTruncateAt)
   {
-    iJW = paramTruncateAt;
-    if (iKa != null)
+    kJh = paramTruncateAt;
+    if (kJl != null)
     {
-      aNr();
+      bdi();
       requestLayout();
       invalidate();
     }
@@ -1229,15 +1240,15 @@ public class NoMeasuredTextView
         i = paramInt | 0x30;
       }
       paramInt = 0;
-      if ((i & 0x7) != (ga & 0x7)) {
+      if ((i & 0x7) != (fh & 0x7)) {
         paramInt = 1;
       }
-      if (i != ga) {
+      if (i != fh) {
         invalidate();
       }
-      ga = i;
-      if ((iKa != null) && (paramInt != 0)) {
-        by(iKa.getWidth(), getWidth() - getCompoundPaddingLeft() - getCompoundPaddingRight());
+      fh = i;
+      if ((kJl != null) && (paramInt != 0)) {
+        bO(kJl.getWidth(), getWidth() - getCompoundPaddingLeft() - getCompoundPaddingRight());
       }
       return;
     }
@@ -1245,20 +1256,20 @@ public class NoMeasuredTextView
   
   public void setHeight(int paramInt)
   {
-    iKd = paramInt;
-    iKb = paramInt;
-    iKe = 2;
-    iKc = 2;
+    kJq = paramInt;
+    kJo = paramInt;
+    kJr = 2;
+    kJp = 2;
     requestLayout();
     invalidate();
   }
   
   public void setIncludeFontPadding(boolean paramBoolean)
   {
-    iKi = paramBoolean;
-    if (iKa != null)
+    kJv = paramBoolean;
+    if (kJl != null)
     {
-      aNr();
+      bdi();
       requestLayout();
       invalidate();
     }
@@ -1266,58 +1277,58 @@ public class NoMeasuredTextView
   
   public void setLines(int paramInt)
   {
-    iKd = paramInt;
-    iKb = paramInt;
-    iKe = 1;
-    iKc = 1;
+    kJq = paramInt;
+    kJo = paramInt;
+    kJr = 1;
+    kJp = 1;
     requestLayout();
     invalidate();
   }
   
   public void setMaxHeight(int paramInt)
   {
-    iKb = paramInt;
-    iKc = 2;
+    kJo = paramInt;
+    kJp = 2;
     requestLayout();
     invalidate();
   }
   
   public void setMaxLines(int paramInt)
   {
-    iKb = paramInt;
-    iKc = 1;
+    kJo = paramInt;
+    kJp = 1;
     requestLayout();
     invalidate();
   }
   
   public void setMaxWidth(int paramInt)
   {
-    rl = paramInt;
-    iKf = true;
+    qn = paramInt;
+    kJs = true;
     requestLayout();
     invalidate();
   }
   
   public void setMinHeight(int paramInt)
   {
-    iKd = paramInt;
-    iKe = 2;
+    kJq = paramInt;
+    kJr = 2;
     requestLayout();
     invalidate();
   }
   
   public void setMinLines(int paramInt)
   {
-    iKd = paramInt;
-    iKe = 1;
+    kJq = paramInt;
+    kJr = 1;
     requestLayout();
     invalidate();
   }
   
   public void setMinWidth(int paramInt)
   {
-    lu = paramInt;
-    iKg = true;
+    kz = paramInt;
+    kJt = true;
     requestLayout();
     invalidate();
   }
@@ -1325,7 +1336,7 @@ public class NoMeasuredTextView
   public void setPadding(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     if ((paramInt1 != getPaddingLeft()) || (paramInt3 != getPaddingRight()) || (paramInt2 != getPaddingTop()) || (paramInt4 != getPaddingBottom())) {
-      aNr();
+      bdi();
     }
     super.setPadding(paramInt1, paramInt2, paramInt3, paramInt4);
     invalidate();
@@ -1333,12 +1344,12 @@ public class NoMeasuredTextView
   
   public void setPaintFlags(int paramInt)
   {
-    if (fBk.getFlags() != paramInt)
+    if (dGF.getFlags() != paramInt)
     {
-      fBk.setFlags(paramInt);
-      if (iKa != null)
+      dGF.setFlags(paramInt);
+      if (kJl != null)
       {
-        aNr();
+        bdi();
         requestLayout();
         invalidate();
       }
@@ -1347,12 +1358,12 @@ public class NoMeasuredTextView
   
   public void setShouldEllipsize(boolean paramBoolean)
   {
-    iKo = paramBoolean;
+    kJB = paramBoolean;
   }
   
   public void setSingleLine(boolean paramBoolean)
   {
-    iHr = paramBoolean;
+    kGE = paramBoolean;
     if (paramBoolean)
     {
       setLines(1);
@@ -1363,7 +1374,7 @@ public class NoMeasuredTextView
   
   public final void setSpannableFactory(Spannable.Factory paramFactory)
   {
-    iJV = paramFactory;
+    kJg = paramFactory;
     setText(mText);
   }
   
@@ -1374,12 +1385,12 @@ public class NoMeasuredTextView
   
   public final void setText(CharSequence paramCharSequence)
   {
-    c(paramCharSequence, iJY);
+    c(paramCharSequence, kJj);
   }
   
   public void setTextColor(int paramInt)
   {
-    eqR = ColorStateList.valueOf(paramInt);
+    fAP = ColorStateList.valueOf(paramInt);
     updateTextColors();
   }
   
@@ -1388,16 +1399,16 @@ public class NoMeasuredTextView
     if (paramColorStateList == null) {
       throw new NullPointerException();
     }
-    if (eqR == paramColorStateList) {
+    if (fAP == paramColorStateList) {
       return;
     }
-    eqR = paramColorStateList;
+    fAP = paramColorStateList;
     updateTextColors();
   }
   
   public final void setTextKeepState(CharSequence paramCharSequence)
   {
-    int i = iJY;
+    int i = kJj;
     int j = getSelectionStart();
     int k = getSelectionEnd();
     int m = paramCharSequence.length();
@@ -1425,12 +1436,12 @@ public class NoMeasuredTextView
   
   public void setTypeface(Typeface paramTypeface)
   {
-    if (fBk.getTypeface() != paramTypeface)
+    if (dGF.getTypeface() != paramTypeface)
     {
-      fBk.setTypeface(paramTypeface);
-      if (iKa != null)
+      dGF.setTypeface(paramTypeface);
+      if (kJl != null)
       {
-        aNr();
+        bdi();
         requestLayout();
         invalidate();
       }
@@ -1439,10 +1450,10 @@ public class NoMeasuredTextView
   
   public void setWidth(int paramInt)
   {
-    lu = paramInt;
-    rl = paramInt;
-    iKg = true;
-    iKf = true;
+    kz = paramInt;
+    qn = paramInt;
+    kJt = true;
+    kJs = true;
     requestLayout();
     invalidate();
   }
@@ -1454,9 +1465,9 @@ public class NoMeasuredTextView
     if (!bool2)
     {
       bool1 = bool2;
-      if (iKp != null)
+      if (kJC != null)
       {
-        if ((paramDrawable != iKp.iKG) && (paramDrawable != iKp.iKE) && (paramDrawable != iKp.iKH) && (paramDrawable != iKp.iKF)) {
+        if ((paramDrawable != kJC.kJT) && (paramDrawable != kJC.kJR) && (paramDrawable != kJC.kJU) && (paramDrawable != kJC.kJS)) {
           break label69;
         }
         bool1 = true;
@@ -1471,20 +1482,20 @@ public class NoMeasuredTextView
   
   final class b
   {
-    final Rect iKD = new Rect();
-    Drawable iKE;
-    Drawable iKF;
-    Drawable iKG;
-    Drawable iKH;
-    int iKI;
-    int iKJ;
-    int iKK;
-    int iKL;
-    int iKM;
-    int iKN;
-    int iKO;
-    int iKP;
-    int iKQ;
+    final Rect kJQ = new Rect();
+    Drawable kJR;
+    Drawable kJS;
+    Drawable kJT;
+    Drawable kJU;
+    int kJV;
+    int kJW;
+    int kJX;
+    int kJY;
+    int kJZ;
+    int kKa;
+    int kKb;
+    int kKc;
+    int kKd;
     
     b() {}
   }

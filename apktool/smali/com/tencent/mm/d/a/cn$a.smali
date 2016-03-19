@@ -15,7 +15,11 @@
 
 
 # instance fields
-.field public ayl:Lcom/tencent/mm/protocal/b/zr;
+.field public alN:Ljava/lang/String;
+
+.field public auQ:Ljava/lang/String;
+
+.field public data:[B
 
 
 # direct methods

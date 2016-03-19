@@ -2,7 +2,7 @@ package com.tencent.mm.modelvoice;
 
 public abstract interface b
 {
-  public abstract j R(int paramInt1, int paramInt2);
+  public abstract g aa(int paramInt1, int paramInt2);
   
   public abstract int getFormat();
   

@@ -6,39 +6,38 @@ import android.view.View.MeasureSpec;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ListAdapter;
 import android.widget.ListView;
-import com.tencent.mm.a.d;
 
 final class MMListPopupWindow$a
   extends ListView
 {
-  private boolean rh;
-  private boolean ri;
+  private boolean qj;
+  private boolean qk;
   
   public MMListPopupWindow$a(Context paramContext, boolean paramBoolean)
   {
-    super(paramContext, null, a.d.dropDownListViewStyle);
-    ri = paramBoolean;
+    super(paramContext, null, 2130772135);
+    qk = paramBoolean;
     setCacheColorHint(0);
   }
   
   public final boolean hasFocus()
   {
-    return (ri) || (super.hasFocus());
+    return (qk) || (super.hasFocus());
   }
   
   public final boolean hasWindowFocus()
   {
-    return (ri) || (super.hasWindowFocus());
+    return (qk) || (super.hasWindowFocus());
   }
   
   public final boolean isFocused()
   {
-    return (ri) || (super.isFocused());
+    return (qk) || (super.isFocused());
   }
   
   public final boolean isInTouchMode()
   {
-    return ((ri) && (rh)) || (super.isInTouchMode());
+    return ((qk) && (qj)) || (super.isInTouchMode());
   }
   
   final int k(int paramInt1, int paramInt2)

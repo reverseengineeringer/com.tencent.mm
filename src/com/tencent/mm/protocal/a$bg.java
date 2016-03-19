@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bg
-  extends a.c
+  extends a.e
 {
   public a$bg()
   {
-    super("nfcConnect", "nfcConnect", 140, false);
+    super("getSendC2CMessageRequest", "get_send_c2c_message_request", 83, true);
   }
 }
 

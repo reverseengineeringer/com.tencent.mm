@@ -5,7 +5,7 @@ public final class o
 {
   public o()
   {
-    jNs = 269;
+    mbE = 269;
   }
 }
 

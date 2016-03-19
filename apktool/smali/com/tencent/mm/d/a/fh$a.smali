@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public aBL:Z
+.field public url:Ljava/lang/String;
 
 
 # direct methods

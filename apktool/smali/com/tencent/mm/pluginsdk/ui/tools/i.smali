@@ -3,473 +3,143 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/pluginsdk/ui/tools/i$a;
+    }
+.end annotation
+
+
 # direct methods
-.method public static a(Landroid/content/Intent;Lcom/tencent/mm/protocal/b/aeb;I)V
-    .locals 5
+.method static AX(Ljava/lang/String;)I
+    .locals 7
 
     .prologue
-    .line 74
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/aeb;->hrM:Lcom/tencent/mm/protocal/b/adu;
+    const/4 v6, 0x2
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
+    const/4 v3, -0x1
 
-    move-result-object v0
+    .line 114
+    new-instance v4, Lcom/tencent/mm/sdk/platformtools/az;
 
-    .line 75
-    const-string/jumbo v1, "Contact_User"
+    invoke-direct {v4}, Lcom/tencent/mm/sdk/platformtools/az;-><init>()V
 
-    invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    .line 115
+    :try_start_0
+    iget-object v0, v4, Lcom/tencent/mm/sdk/platformtools/az;->jYs:Lorg/xmlpull/v1/XmlPullParser;
 
-    .line 76
-    const-string/jumbo v1, "Contact_Nick"
+    new-instance v1, Ljava/io/StringReader;
 
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->hDc:Lcom/tencent/mm/protocal/b/adu;
+    invoke-direct {v1, p0}, Ljava/io/StringReader;-><init>(Ljava/lang/String;)V
 
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
+    invoke-interface {v0, v1}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/Reader;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v2
+    .line 117
+    :goto_0
+    const/4 v1, 0x0
 
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 77
-    const-string/jumbo v1, "Contact_PyInitial"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->hrE:Lcom/tencent/mm/protocal/b/adu;
-
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 78
-    const-string/jumbo v1, "Contact_QuanPin"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->hrF:Lcom/tencent/mm/protocal/b/adu;
-
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 79
-    const-string/jumbo v1, "Contact_Alias"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->byL:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 80
-    const-string/jumbo v1, "Contact_Sex"
-
-    iget v2, p1, Lcom/tencent/mm/protocal/b/aeb;->byI:I
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 81
-    const-string/jumbo v1, "Contact_VUser_Info"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->hDZ:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 82
-    const-string/jumbo v1, "Contact_VUser_Info_Flag"
-
-    iget v2, p1, Lcom/tencent/mm/protocal/b/aeb;->hDY:I
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 83
-    const-string/jumbo v1, "Contact_KWeibo_flag"
-
-    iget v2, p1, Lcom/tencent/mm/protocal/b/aeb;->hEc:I
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 84
-    const-string/jumbo v1, "Contact_KWeibo"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->hEa:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 85
-    const-string/jumbo v1, "Contact_KWeiboNick"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->hEb:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 86
-    const-string/jumbo v1, "Contact_Scene"
-
-    invoke-virtual {p0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 87
-    const-string/jumbo v1, "Contact_KHideExpose"
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 88
-    const-string/jumbo v1, "Contact_RegionCode"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->byP:Ljava/lang/String;
-
-    iget-object v3, p1, Lcom/tencent/mm/protocal/b/aeb;->akJ:Ljava/lang/String;
-
-    iget-object v4, p1, Lcom/tencent/mm/protocal/b/aeb;->akK:Ljava/lang/String;
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/storage/RegionCodeDecoder;->C(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 89
-    const-string/jumbo v1, "Contact_Signature"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->byJ:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 90
-    const-string/jumbo v1, "Contact_BrandList"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->byQ:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 91
-    const-string/jumbo v1, "Contact_KSnsIFlag"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->hEe:Lcom/tencent/mm/protocal/b/aif;
-
-    iget v2, v2, Lcom/tencent/mm/protocal/b/aif;->byR:I
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 92
-    const-string/jumbo v1, "Contact_KSnsBgId"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->hEe:Lcom/tencent/mm/protocal/b/aif;
-
-    iget-wide v2, v2, Lcom/tencent/mm/protocal/b/aif;->byT:J
-
-    invoke-virtual {p0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
-
-    .line 93
-    const-string/jumbo v1, "Contact_KSnsBgUrl"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aeb;->hEe:Lcom/tencent/mm/protocal/b/aif;
-
-    iget-object v2, v2, Lcom/tencent/mm/protocal/b/aif;->byS:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 96
-    new-instance v1, Lcom/tencent/mm/s/a;
-
-    invoke-direct {v1}, Lcom/tencent/mm/s/a;-><init>()V
-
-    .line 97
-    iput-object v0, v1, Lcom/tencent/mm/s/a;->field_username:Ljava/lang/String;
-
-    .line 98
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/aeb;->byQ:Ljava/lang/String;
-
-    iput-object v0, v1, Lcom/tencent/mm/s/a;->field_brandList:Ljava/lang/String;
-
-    .line 100
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/aeb;->hEf:Lcom/tencent/mm/protocal/b/hm;
-
-    .line 101
-    if-eqz v0, :cond_0
-
-    .line 102
-    iget v2, v0, Lcom/tencent/mm/protocal/b/hm;->byU:I
-
-    iput v2, v1, Lcom/tencent/mm/s/a;->field_brandFlag:I
-
-    .line 103
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/hm;->byW:Ljava/lang/String;
-
-    iput-object v2, v1, Lcom/tencent/mm/s/a;->field_brandInfo:Ljava/lang/String;
-
-    .line 104
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/hm;->byV:Ljava/lang/String;
-
-    iput-object v2, v1, Lcom/tencent/mm/s/a;->field_extInfo:Ljava/lang/String;
-
-    .line 105
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/hm;->byX:Ljava/lang/String;
-
-    iput-object v0, v1, Lcom/tencent/mm/s/a;->field_brandIconURL:Ljava/lang/String;
-
-    .line 109
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/s/p;->wT()Lcom/tencent/mm/s/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/s/b;->c(Lcom/tencent/mm/s/a;)Z
+    .line 118
+    invoke-virtual {v4}, Lcom/tencent/mm/sdk/platformtools/az;->getEventType()I
 
     move-result v0
 
-    if-nez v0, :cond_1
+    move v2, v0
 
-    .line 110
-    invoke-static {}, Lcom/tencent/mm/s/p;->wT()Lcom/tencent/mm/s/b;
+    move v0, v1
 
-    move-result-object v0
+    move v1, v3
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/s/b;->b(Lcom/tencent/mm/s/a;)Z
+    .line 119
+    :goto_1
+    const/4 v5, 0x1
 
-    .line 112
+    if-eq v2, v5, :cond_2
+
+    if-eq v0, v6, :cond_2
+
+    .line 120
+    if-ne v2, v6, :cond_0
+
+    .line 121
+    iget-object v2, v4, Lcom/tencent/mm/sdk/platformtools/az;->jYs:Lorg/xmlpull/v1/XmlPullParser;
+
+    invoke-interface {v2}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 122
+    const-string/jumbo v5, "code"
+
+    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_1
+
+    .line 123
+    add-int/lit8 v0, v0, 0x1
+
+    .line 129
+    :cond_0
+    :goto_2
+    invoke-virtual {v4}, Lcom/tencent/mm/sdk/platformtools/az;->aVN()I
+
+    move-result v2
+
+    goto :goto_1
+
+    .line 124
     :cond_1
-    return-void
+    const-string/jumbo v5, "UnreadCountExDirs"
+
+    invoke-virtual {v5, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 125
+    invoke-virtual {v4}, Lcom/tencent/mm/sdk/platformtools/az;->aVO()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    .line 126
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    .line 131
+    :cond_2
+    return v1
+
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
 .end method
 
-.method public static a(Landroid/content/Intent;Lcom/tencent/mm/protocal/b/aed;I)V
-    .locals 5
+.method public static a(Lcom/tencent/mm/pluginsdk/ui/tools/i$a;)V
+    .locals 2
 
     .prologue
-    .line 23
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/aed;->hrM:Lcom/tencent/mm/protocal/b/adu;
-
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
+    .line 40
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
 
     move-result-object v0
 
-    .line 24
-    const-string/jumbo v1, "Contact_User"
+    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/tools/i$1;
 
-    invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/i$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/i$a;)V
 
-    .line 25
-    const-string/jumbo v1, "Contact_Nick"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->hDc:Lcom/tencent/mm/protocal/b/adu;
-
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 26
-    const-string/jumbo v1, "Contact_PyInitial"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->hrE:Lcom/tencent/mm/protocal/b/adu;
-
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 27
-    const-string/jumbo v1, "Contact_QuanPin"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->hrF:Lcom/tencent/mm/protocal/b/adu;
-
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/w;->a(Lcom/tencent/mm/protocal/b/adu;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 28
-    const-string/jumbo v1, "Contact_Alias"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->byL:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 29
-    const-string/jumbo v1, "Contact_Sex"
-
-    iget v2, p1, Lcom/tencent/mm/protocal/b/aed;->byI:I
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 30
-    const-string/jumbo v1, "Contact_VUser_Info"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->hDZ:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 31
-    const-string/jumbo v1, "Contact_VUser_Info_Flag"
-
-    iget v2, p1, Lcom/tencent/mm/protocal/b/aed;->hDY:I
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 32
-    const-string/jumbo v1, "Contact_KWeibo_flag"
-
-    iget v2, p1, Lcom/tencent/mm/protocal/b/aed;->hEc:I
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 33
-    const-string/jumbo v1, "Contact_KWeibo"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->hEa:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 34
-    const-string/jumbo v1, "Contact_KWeiboNick"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->hEb:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 35
-    const-string/jumbo v1, "Contact_Scene"
-
-    invoke-virtual {p0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 36
-    const-string/jumbo v1, "Contact_KHideExpose"
-
-    const/4 v2, 0x1
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 37
-    const-string/jumbo v1, "Contact_RegionCode"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->byP:Ljava/lang/String;
-
-    iget-object v3, p1, Lcom/tencent/mm/protocal/b/aed;->akJ:Ljava/lang/String;
-
-    iget-object v4, p1, Lcom/tencent/mm/protocal/b/aed;->akK:Ljava/lang/String;
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/storage/RegionCodeDecoder;->C(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 38
-    const-string/jumbo v1, "Contact_Signature"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->byJ:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 39
-    const-string/jumbo v1, "Contact_BrandList"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->byQ:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 40
-    const-string/jumbo v1, "Contact_KSnsIFlag"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->hEe:Lcom/tencent/mm/protocal/b/aif;
-
-    iget v2, v2, Lcom/tencent/mm/protocal/b/aif;->byR:I
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 41
-    const-string/jumbo v1, "Contact_KSnsBgId"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->hEe:Lcom/tencent/mm/protocal/b/aif;
-
-    iget-wide v2, v2, Lcom/tencent/mm/protocal/b/aif;->byT:J
-
-    invoke-virtual {p0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
-
-    .line 42
-    const-string/jumbo v1, "Contact_KSnsBgUrl"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->hEe:Lcom/tencent/mm/protocal/b/aif;
-
-    iget-object v2, v2, Lcom/tencent/mm/protocal/b/aif;->byS:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 43
-    const-string/jumbo v1, "Contact_BIZ_KF_WORKER_ID"
-
-    iget-object v2, p1, Lcom/tencent/mm/protocal/b/aed;->hMl:Ljava/lang/String;
-
-    invoke-virtual {p0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 46
-    new-instance v1, Lcom/tencent/mm/s/a;
-
-    invoke-direct {v1}, Lcom/tencent/mm/s/a;-><init>()V
-
-    .line 47
-    iput-object v0, v1, Lcom/tencent/mm/s/a;->field_username:Ljava/lang/String;
-
-    .line 48
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/aed;->byQ:Ljava/lang/String;
-
-    iput-object v0, v1, Lcom/tencent/mm/s/a;->field_brandList:Ljava/lang/String;
-
-    .line 49
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/aed;->hMl:Ljava/lang/String;
-
-    iput-object v0, v1, Lcom/tencent/mm/s/a;->field_kfWorkerId:Ljava/lang/String;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
 
     .line 51
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/aed;->hEf:Lcom/tencent/mm/protocal/b/hm;
-
-    .line 52
-    if-eqz v0, :cond_0
-
-    .line 53
-    iget v2, v0, Lcom/tencent/mm/protocal/b/hm;->byU:I
-
-    iput v2, v1, Lcom/tencent/mm/s/a;->field_brandFlag:I
-
-    .line 54
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/hm;->byW:Ljava/lang/String;
-
-    iput-object v2, v1, Lcom/tencent/mm/s/a;->field_brandInfo:Ljava/lang/String;
-
-    .line 55
-    iget-object v2, v0, Lcom/tencent/mm/protocal/b/hm;->byV:Ljava/lang/String;
-
-    iput-object v2, v1, Lcom/tencent/mm/s/a;->field_extInfo:Ljava/lang/String;
-
-    .line 56
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/hm;->byX:Ljava/lang/String;
-
-    iput-object v0, v1, Lcom/tencent/mm/s/a;->field_brandIconURL:Ljava/lang/String;
-
-    .line 60
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/s/p;->wT()Lcom/tencent/mm/s/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/s/b;->c(Lcom/tencent/mm/s/a;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 61
-    invoke-static {}, Lcom/tencent/mm/s/p;->wT()Lcom/tencent/mm/s/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/s/b;->b(Lcom/tencent/mm/s/a;)Z
-
-    .line 63
-    :cond_1
     return-void
 .end method

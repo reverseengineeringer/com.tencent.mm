@@ -9,126 +9,128 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.f;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.compatible.util.h;
-import com.tencent.mm.d.a.fy;
-import com.tencent.mm.d.a.fy.b;
-import com.tencent.mm.pluginsdk.l.ag;
-import com.tencent.mm.pluginsdk.l.m.c;
-import com.tencent.mm.protocal.b.xf;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.compatible.util.e;
+import com.tencent.mm.d.a.je;
+import com.tencent.mm.d.a.je.b;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.h;
+import com.tencent.mm.pluginsdk.i.ai;
+import com.tencent.mm.pluginsdk.i.o.c;
+import com.tencent.mm.protocal.b.add;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.storage.i.a;
+import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.preference.Preference;
-import com.tencent.mm.ui.base.preference.m;
+import com.tencent.mm.ui.base.preference.g;
 import com.tencent.mm.ui.widget.QImageView;
 import java.util.LinkedList;
 import java.util.List;
 
 public final class SnsPreference
   extends Preference
-  implements m
+  implements g
 {
-  private MMActivity atT;
-  private List dHB = new LinkedList();
-  private int eYx = 255;
-  private QImageView gYJ = null;
-  private QImageView gYK = null;
-  private QImageView gYL = null;
-  private ImageView gYM = null;
-  private ImageView gYN = null;
-  private ImageView gYO = null;
-  private a gYP = new a();
+  private MMActivity arW;
+  private List eEr = new LinkedList();
+  private i.a gHB;
+  private int gjx = 255;
+  private QImageView iPl = null;
+  private QImageView iPm = null;
+  private QImageView iPn = null;
+  private ImageView iPo = null;
+  private ImageView iPp = null;
+  private ImageView iPq = null;
+  private a iPr = new a();
   private String mTitle = "";
   
   public SnsPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
     this(paramContext, paramAttributeSet, 0);
-    atT = ((MMActivity)paramContext);
+    arW = ((MMActivity)paramContext);
   }
   
   public SnsPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    atT = ((MMActivity)paramContext);
-    mTitle = paramContext.getString(a.n.contact_info_sns_title);
-    setLayoutResource(a.k.mm_preference);
+    arW = ((MMActivity)paramContext);
+    mTitle = paramContext.getString(2131432997);
+    setLayoutResource(2131363286);
   }
   
-  private void aBM()
+  private void aSG()
   {
     int j = 0;
-    if (gYJ != null)
+    if (iPl != null)
     {
-      gYJ.setImageResource(a.f.white);
-      gYJ.setVisibility(4);
+      iPl.setImageResource(2131231100);
+      iPl.setVisibility(4);
     }
-    if (gYK != null)
+    if (iPm != null)
     {
-      gYK.setImageResource(a.f.white);
-      gYK.setVisibility(4);
+      iPm.setImageResource(2131231100);
+      iPm.setVisibility(4);
     }
-    if (gYL != null)
+    if (iPn != null)
     {
-      gYL.setImageResource(a.f.white);
-      gYL.setVisibility(4);
+      iPn.setImageResource(2131231100);
+      iPn.setVisibility(4);
     }
     ImageView localImageView;
-    if ((gYJ != null) && (dHB.size() > 0))
+    if ((iPl != null) && (eEr.size() > 0))
     {
-      gYJ.setVisibility(0);
-      if (h.pe()) {
-        break label222;
+      iPl.setVisibility(0);
+      if (e.oW()) {
+        break label216;
       }
-      gYJ.setImageResource(a.h.nosdcard_app);
-      localImageView = gYM;
+      iPl.setImageResource(2130970136);
+      localImageView = iPo;
     }
-    label222:
-    label359:
-    label431:
+    label216:
+    label361:
+    label437:
     for (;;)
     {
       for (int i = 8;; i = 0)
       {
         localImageView.setVisibility(i);
-        if ((gYK != null) && (dHB.size() >= 2))
+        if ((iPm != null) && (eEr.size() >= 2))
         {
-          gYK.setVisibility(0);
-          if (h.pe()) {
+          iPm.setVisibility(0);
+          if (e.oW()) {
             break;
           }
-          gYK.setImageResource(a.h.nosdcard_app);
+          iPm.setImageResource(2130970136);
         }
-        if ((gYL != null) && (dHB.size() >= 3))
+        if ((iPn != null) && (eEr.size() >= 3))
         {
-          gYL.setVisibility(0);
-          if (h.pe()) {
-            break label359;
+          iPn.setVisibility(0);
+          if (e.oW()) {
+            break label361;
           }
-          gYL.setImageResource(a.h.nosdcard_app);
+          iPn.setImageResource(2130970136);
         }
         return;
-        l.ag.gKr.b((xf)dHB.get(0), gYJ, atT.hashCode());
-        localImageView = gYM;
-        if (dHB.get(0)).cVl != 6) {
-          break label431;
+        i.ai.iza.b((add)eEr.get(0), iPl, arW.hashCode(), gHB);
+        localImageView = iPo;
+        if (eEr.get(0)).dzC != 6) {
+          break label437;
         }
       }
-      l.ag.gKr.b((xf)dHB.get(1), gYK, atT.hashCode());
-      localImageView = gYN;
-      if (dHB.get(1)).cVl == 6) {}
+      i.ai.iza.b((add)eEr.get(1), iPm, arW.hashCode(), gHB);
+      localImageView = iPp;
+      if (eEr.get(1)).dzC == 6) {}
       for (i = 0;; i = 8)
       {
         localImageView.setVisibility(i);
         break;
       }
-      l.ag.gKr.b((xf)dHB.get(2), gYL, atT.hashCode());
-      localImageView = gYO;
-      if (dHB.get(2)).cVl == 6) {}
+      i.ai.iza.b((add)eEr.get(2), iPn, arW.hashCode(), gHB);
+      localImageView = iPq;
+      if (eEr.get(2)).dzC == 6) {}
       for (i = j;; i = 8)
       {
         localImageView.setVisibility(i);
@@ -137,68 +139,81 @@ public final class SnsPreference
     }
   }
   
+  public final void AN(String paramString)
+  {
+    if (paramString == null) {
+      return;
+    }
+    eEr.clear();
+    Object localObject = ah.tD().rq().Ep(paramString);
+    if ((localObject != null) && ((int)bvi > 0) && (com.tencent.mm.h.a.ce(field_type))) {
+      gHB = i.a.kap;
+    }
+    for (;;)
+    {
+      localObject = new je();
+      aFF.username = paramString;
+      com.tencent.mm.sdk.c.a.jUF.j((b)localObject);
+      if (aFG.aFH != null) {
+        eEr.add(aFG.aFH);
+      }
+      if (aFG.aFI != null) {
+        eEr.add(aFG.aFI);
+      }
+      if (aFG.aFJ != null) {
+        eEr.add(aFG.aFJ);
+      }
+      aSG();
+      return;
+      if (paramString.equals(h.sc())) {
+        gHB = i.a.kap;
+      } else {
+        gHB = i.a.kaq;
+      }
+    }
+  }
+  
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    gYJ = ((QImageView)paramView.findViewById(a.i.image_iv1));
-    gYJ.setAlpha(eYx);
-    gYJ.setImageDrawable(gYP);
-    gYK = ((QImageView)paramView.findViewById(a.i.image_iv2));
-    gYK.setAlpha(eYx);
-    gYK.setImageDrawable(gYP);
-    gYL = ((QImageView)paramView.findViewById(a.i.image_iv3));
-    gYL.setAlpha(eYx);
-    gYL.setImageDrawable(gYP);
-    TextView localTextView = (TextView)paramView.findViewById(a.i.album_title);
-    if (!bn.iW(mTitle))
+    iPl = ((QImageView)paramView.findViewById(2131166915));
+    iPl.setAlpha(gjx);
+    iPl.setImageDrawable(iPr);
+    iPm = ((QImageView)paramView.findViewById(2131166916));
+    iPm.setAlpha(gjx);
+    iPm.setImageDrawable(iPr);
+    iPn = ((QImageView)paramView.findViewById(2131166917));
+    iPn.setAlpha(gjx);
+    iPn.setImageDrawable(iPr);
+    TextView localTextView = (TextView)paramView.findViewById(2131168995);
+    if (!ay.kz(mTitle))
     {
       localTextView.setText(mTitle);
       ViewGroup.LayoutParams localLayoutParams = localTextView.getLayoutParams();
-      width = com.tencent.mm.ao.a.v(mContext, a.g.FixedTitleWidth);
+      width = com.tencent.mm.aw.a.z(mContext, 2131034660);
       localTextView.setLayoutParams(localLayoutParams);
     }
-    gYM = ((ImageView)paramView.findViewById(a.i.sns_sight_icon1));
-    gYN = ((ImageView)paramView.findViewById(a.i.sns_sight_icon2));
-    gYO = ((ImageView)paramView.findViewById(a.i.sns_sight_icon3));
-    gYM.setVisibility(8);
-    gYN.setVisibility(8);
-    gYO.setVisibility(8);
-    aBM();
-    if ((paramView == null) || (dHB == null)) {
+    iPo = ((ImageView)paramView.findViewById(2131168996));
+    iPp = ((ImageView)paramView.findViewById(2131168997));
+    iPq = ((ImageView)paramView.findViewById(2131168998));
+    iPo.setVisibility(8);
+    iPp.setVisibility(8);
+    iPq.setVisibility(8);
+    aSG();
+    if ((paramView == null) || (eEr == null)) {
       return;
     }
-    paramView.setContentDescription(mContext.getString(a.n.profile_photo_desc, new Object[] { Integer.valueOf(dHB.size()) }));
+    paramView.setContentDescription(mContext.getString(2131429641, new Object[] { Integer.valueOf(eEr.size()) }));
   }
   
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
     LayoutInflater localLayoutInflater = (LayoutInflater)mContext.getSystemService("layout_inflater");
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(a.i.content);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
     localViewGroup.removeAllViews();
-    localLayoutInflater.inflate(a.k.mm_preference_content_album, localViewGroup);
+    localLayoutInflater.inflate(2131363015, localViewGroup);
     return paramViewGroup;
-  }
-  
-  public final void uW(String paramString)
-  {
-    if (paramString == null) {
-      return;
-    }
-    dHB.clear();
-    fy localfy = new fy();
-    aDe.username = paramString;
-    com.tencent.mm.sdk.c.a.hXQ.g(localfy);
-    if (aDf.aDg != null) {
-      dHB.add(aDf.aDg);
-    }
-    if (aDf.aDh != null) {
-      dHB.add(aDf.aDh);
-    }
-    if (aDf.aDi != null) {
-      dHB.add(aDf.aDi);
-    }
-    aBM();
   }
   
   static final class a

@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public iIu:Lcom/tencent/mm/ui/base/MMTagPanel;
+.field public kHG:Lcom/tencent/mm/ui/base/MMTagPanel;
 
 
 # direct methods
@@ -49,20 +49,20 @@
 
     .prologue
     .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;->iIu:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;->kHG:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     if-eqz v0, :cond_0
 
     .line 42
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;->iIu:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;->kHG:Lcom/tencent/mm/ui/base/MMTagPanel;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->aNe()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTagPanel;->bcV()V
 
     .line 44
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;->iIu:Lcom/tencent/mm/ui/base/MMTagPanel;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMTagPanelScrollView$a;->kHG:Lcom/tencent/mm/ui/base/MMTagPanel;
 
     .line 45
     return-void

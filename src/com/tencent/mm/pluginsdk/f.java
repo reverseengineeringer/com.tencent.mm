@@ -1,81 +1,87 @@
 package com.tencent.mm.pluginsdk;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelsimple.am;
-import com.tencent.mm.protocal.b.akf;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.t;
+import android.graphics.Bitmap;
+import android.os.Bundle;
+import com.tencent.mm.protocal.b.amk;
+import com.tencent.mm.r.e;
+import com.tencent.mm.r.j;
+import com.tencent.mm.storage.ag.b;
+import com.tencent.mm.storage.k;
+import com.tencent.mm.t.l;
 
-final class f
-  implements com.tencent.mm.q.d
+@Deprecated
+public abstract interface f
 {
-  f(Context paramContext, int paramInt, String paramString, d.a parama) {}
+  public abstract Bitmap a(Activity paramActivity, int paramInt1, int paramInt2, Intent paramIntent);
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.q.j paramj)
-  {
-    ax.tm().b(1200, this);
-    t.i("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "doTicketsDeepLink: errType = %s; errCode = %s; errMsg = %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
-    boolean bool2 = false;
-    boolean bool3 = false;
-    boolean bool1 = bool3;
-    Object localObject;
-    if (paramj != null)
-    {
-      bool1 = bool3;
-      if ((paramj instanceof am))
-      {
-        localObject = (akf)apJ.bsU.btb;
-        if (localObject != null) {
-          break label214;
-        }
-        localObject = null;
-        if (!d.tS((String)localObject)) {
-          break label289;
-        }
-      }
-    }
-    for (bool1 = bool2;; bool1 = true)
-    {
-      try
-      {
-        t.i("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "doTicketsDeepLink: deepLinkUri = %s", new Object[] { localObject });
-        bool1 = bool2;
-        bool2 = d.e(val$context, (String)localObject, bVt);
-        bool1 = bool2;
-        com.tencent.mm.plugin.report.service.j.eJZ.f(11405, new Object[] { gJV, Integer.valueOf(bVt), Integer.valueOf(1), localObject });
-        bool1 = bool2;
-      }
-      catch (Exception localException)
-      {
-        for (;;)
-        {
-          label214:
-          t.printErrStackTrace("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", localException, "", new Object[] { "" });
-          com.tencent.mm.plugin.report.service.j.eJZ.f(11405, new Object[] { gJV, Integer.valueOf(bVt), Integer.valueOf(0), localObject });
-        }
-      }
-      if (gJU != null) {
-        gJU.a(paramInt1, paramInt2, paramString, paramj, bool1);
-      }
-      return;
-      localObject = hQF;
-      break;
-      label289:
-      t.i("!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ", "doTicketsDeepLink: translate failed");
-      Intent localIntent = new Intent();
-      localIntent.setFlags(268435456);
-      localIntent.setClassName(aa.getContext(), "com.tencent.mm.plugin.webview.ui.tools.WebViewUI");
-      localIntent.putExtra("rawUrl", "http://support.weixin.qq.com/deeplink/noaccess#wechat_redirect");
-      localIntent.putExtra("showShare", false);
-      aa.getContext().startActivity(localIntent);
-      com.tencent.mm.plugin.report.service.j.eJZ.f(11405, new Object[] { gJV, Integer.valueOf(bVt), Integer.valueOf(0), localObject });
-    }
-  }
+  public abstract j a(e parame);
+  
+  public abstract String a(String paramString1, String paramString2, boolean paramBoolean);
+  
+  public abstract void a(Context paramContext, ag.b paramb, Bundle paramBundle);
+  
+  public abstract void a(Context paramContext, k paramk, ag.b paramb, Bundle paramBundle, String paramString);
+  
+  public abstract void a(Context paramContext, String paramString1, String paramString2, String paramString3, int paramInt1, int paramInt2, int paramInt3, String paramString4);
+  
+  public abstract void a(Context paramContext, String paramString1, String paramString2, String paramString3, long paramLong);
+  
+  public abstract void a(Intent paramIntent, amk paramamk, int paramInt);
+  
+  public abstract void a(Intent paramIntent, String paramString);
+  
+  public abstract void a(l paraml, Activity paramActivity, k paramk, boolean paramBoolean, Runnable paramRunnable);
+  
+  public abstract boolean a(Context paramContext, int paramInt1, int paramInt2, String paramString);
+  
+  public abstract boolean a(k paramk);
+  
+  public abstract void aJ(int paramInt);
+  
+  public abstract String aS(String paramString);
+  
+  public abstract boolean aT(String paramString);
+  
+  public abstract boolean aU(String paramString);
+  
+  public abstract void aV(String paramString);
+  
+  public abstract j af(boolean paramBoolean);
+  
+  public abstract void ah(Context paramContext);
+  
+  public abstract boolean b(Context paramContext, int paramInt1, int paramInt2, String paramString);
+  
+  public abstract String e(Context paramContext, String paramString1, String paramString2);
+  
+  public abstract boolean g(Activity paramActivity);
+  
+  public abstract void h(Activity paramActivity);
+  
+  public abstract void kG();
+  
+  public abstract com.tencent.mm.r.f kH();
+  
+  public abstract void kI();
+  
+  public abstract void kJ();
+  
+  public abstract void kK();
+  
+  public abstract void kL();
+  
+  public abstract Intent kM();
+  
+  public abstract boolean kN();
+  
+  public abstract void kO();
+  
+  public abstract String l(Context paramContext, String paramString);
+  
+  public abstract boolean m(Context paramContext, String paramString);
 }
 
 /* Location:

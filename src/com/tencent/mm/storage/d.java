@@ -1,80 +1,77 @@
 package com.tencent.mm.storage;
 
 import android.util.SparseArray;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.d.b.c;
-import com.tencent.mm.sdk.g.ae;
-import com.tencent.mm.sdk.g.ae.a;
-import com.tencent.mm.sdk.g.af;
-import com.tencent.mm.sdk.g.ah;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.az.g;
+import com.tencent.mm.sdk.h.c.a;
+import com.tencent.mm.sdk.h.f;
+import com.tencent.mm.sdk.platformtools.ay;
 import java.util.Iterator;
 import java.util.List;
 
 public final class d
-  extends ah
+  extends f
 {
-  public static final String[] aqU = { ah.a(c.mB(), "AddContactAntispamTicket") };
-  private g bqt;
-  SparseArray icT = new SparseArray();
+  public static final String[] aoY = { f.a(com.tencent.mm.d.b.c.lY(), "AddContactAntispamTicket") };
+  private g bCw;
+  SparseArray kaa = new SparseArray();
   
-  public d(af paramaf)
+  public d(com.tencent.mm.sdk.h.d paramd)
   {
-    super(paramaf, c.mB(), "AddContactAntispamTicket", null);
-    bqt = ((g)paramaf);
+    super(paramd, com.tencent.mm.d.b.c.lY(), "AddContactAntispamTicket", null);
+    bCw = ((g)paramd);
   }
   
-  public final void aQ(List paramList)
+  public final String DP(String paramString)
   {
-    if (paramList.size() == 0) {
-      return;
-    }
-    long l = bqt.cN(Thread.currentThread().getId());
-    paramList = paramList.iterator();
-    while (paramList.hasNext()) {
-      a((c)paramList.next());
-    }
-    bqt.cO(l);
-  }
-  
-  public final void by(String paramString1, String paramString2)
-  {
-    if (bn.iW(paramString1)) {
-      return;
-    }
-    icT.put(paramString1.hashCode(), paramString2);
-  }
-  
-  public final String yk(String paramString)
-  {
-    if (bn.iW(paramString)) {
+    if (ay.kz(paramString)) {
       localObject = null;
     }
     String str;
     do
     {
       return (String)localObject;
-      str = (String)icT.get(paramString.hashCode());
+      str = (String)kaa.get(paramString.hashCode());
       localObject = str;
-    } while (!bn.iW(str));
+    } while (!ay.kz(str));
     Object localObject = new a();
     field_userName = paramString;
-    if (c((ae)localObject, new String[] { "userName" }))
+    if (c((com.tencent.mm.sdk.h.c)localObject, new String[] { "userName" }))
     {
       paramString = field_userName;
       int i = field_scene;
-      by(paramString, field_ticket);
+      cm(paramString, field_ticket);
       return field_ticket;
     }
     return null;
   }
   
-  public static final class a
-    extends c
+  public final void br(List paramList)
   {
-    protected final ae.a lX()
+    if (paramList.size() == 0) {
+      return;
+    }
+    long l = bCw.dH(Thread.currentThread().getId());
+    paramList = paramList.iterator();
+    while (paramList.hasNext()) {
+      b((com.tencent.mm.d.b.c)paramList.next());
+    }
+    bCw.dI(l);
+  }
+  
+  public final void cm(String paramString1, String paramString2)
+  {
+    if (ay.kz(paramString1)) {
+      return;
+    }
+    kaa.put(paramString1.hashCode(), paramString2);
+  }
+  
+  public static final class a
+    extends com.tencent.mm.d.b.c
+  {
+    protected final c.a ls()
     {
-      return c.mB();
+      return com.tencent.mm.d.b.c.lY();
     }
   }
 }

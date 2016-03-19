@@ -2,14 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class cq$a
 {
-  public String appId;
-  public String apy;
-  public boolean ayA = false;
-  public boolean ayB = false;
-  public String ayw;
-  public String ayx;
-  public int ayy = 1;
-  public boolean ayz = false;
+  public String alN;
+  public String awh;
+  public int progress;
 }
 
 /* Location:

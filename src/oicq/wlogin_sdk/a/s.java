@@ -5,10 +5,10 @@ public final class s
 {
   public s()
   {
-    jNs = 281;
+    mbE = 281;
   }
   
-  public final Boolean aVE()
+  public final Boolean bot()
   {
     return Boolean.valueOf(true);
   }

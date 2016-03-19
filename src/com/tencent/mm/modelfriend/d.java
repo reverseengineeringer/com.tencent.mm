@@ -1,21 +1,38 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.ag.b.m;
+import com.tencent.mm.d.a.q;
+import com.tencent.mm.d.a.q.a;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.platformtools.u;
 
 final class d
-  implements c.b
+  extends com.tencent.mm.sdk.c.c
 {
-  public final void aN(boolean paramBoolean)
+  public d()
   {
-    t.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "syncAddrBookAndUpload onSyncEnd suc:%b", new Object[] { Boolean.valueOf(paramBoolean) });
-    if (!paramBoolean) {
-      return;
+    super(0);
+  }
+  
+  public final boolean a(b paramb)
+  {
+    if (!(paramb instanceof q)) {
+      u.f("!56@/B4Tb64lLpIqcrJBKv7GGpaIJVKtF1au3qNBtibJ6VVaWk4rYzgWDw==", "not bind qq event");
     }
-    System.currentTimeMillis();
-    at localat = new at(w.xT(), w.xS());
-    ax.tm().d(localat);
+    while (asx.asz != 0) {
+      return false;
+    }
+    try
+    {
+      int i = com.tencent.mm.model.h.sm() | 0x1000;
+      ah.tD().rn().set(34, Integer.valueOf(i));
+      ah.tD().rp().b(new b.m("", "", "", "", "", "", "", "", i, "", ""));
+      u.d("!56@/B4Tb64lLpIqcrJBKv7GGpaIJVKtF1au3qNBtibJ6VVaWk4rYzgWDw==", "doClearQQFriendHelper succ ");
+      return false;
+    }
+    catch (Exception paramb) {}
+    return false;
   }
 }
 

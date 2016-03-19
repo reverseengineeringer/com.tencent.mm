@@ -29,11 +29,9 @@
 
 # virtual methods
 .method public onReceive(Landroid/content/Context;Landroid/content/Intent;)V
-    .locals 8
+    .locals 7
 
     .prologue
-    const/4 v7, 0x2
-
     const/4 v1, 0x0
 
     const/4 v6, 0x1
@@ -47,7 +45,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -72,7 +70,7 @@
 
     const-string/jumbo v1, "getDefaultAdapter == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -97,7 +95,7 @@
 
     const-string/jumbo v1, "getBondedDevices == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -108,7 +106,7 @@
     move-result-object v0
 
     .line 42
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -135,10 +133,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 53
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v0
 
@@ -190,11 +188,11 @@
 
     move-result-object v3
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tn()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/tencent/mm/compatible/b/d;->od()Z
+    invoke-virtual {v4}, Lcom/tencent/mm/compatible/b/d;->nN()Z
 
     move-result v4
 
@@ -208,11 +206,11 @@
 
     move-result-object v3
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tn()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v4
 
-    invoke-virtual {v4}, Lcom/tencent/mm/compatible/b/d;->of()Ljava/lang/String;
+    invoke-virtual {v4}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
 
     move-result-object v4
 
@@ -224,23 +222,20 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 67
     if-ne v0, v6, :cond_5
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tn()Lcom/tencent/mm/compatible/b/d;
+    .line 68
+    const-string/jumbo v0, "!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc="
 
-    move-result-object v2
+    const-string/jumbo v2, "sco connected!"
 
-    invoke-virtual {v2}, Lcom/tencent/mm/compatible/b/d;->od()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 69
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tn()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
@@ -250,23 +245,17 @@
 
     new-array v4, v6, [Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->of()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget v1, v0, Lcom/tencent/mm/compatible/b/d;->bfp:I
+    sput-boolean v6, Lcom/tencent/mm/compatible/b/d;->bpx:Z
 
-    if-eq v1, v6, :cond_0
-
-    iput v6, v0, Lcom/tencent/mm/compatible/b/d;->bfp:I
-
-    iget v1, v0, Lcom/tencent/mm/compatible/b/d;->bfp:I
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/compatible/b/d;->bO(I)V
+    invoke-virtual {v0, v6}, Lcom/tencent/mm/compatible/b/d;->bN(I)V
 
     goto/16 :goto_0
 
@@ -281,13 +270,13 @@
 
     new-array v4, v6, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
@@ -297,59 +286,52 @@
     :cond_5
     if-nez v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tn()Lcom/tencent/mm/compatible/b/d;
+    .line 71
+    const-string/jumbo v0, "!44@/B4Tb64lLpLVC0LaS5ZOdqJgxv4SheKzLnVhrVs2Idc="
 
-    move-result-object v0
+    const-string/jumbo v2, "sco disconnected!"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->od()Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 72
-    sget-object v0, Lcom/tencent/mm/compatible/d/q;->bis:Lcom/tencent/mm/compatible/d/j;
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
 
-    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->bhc:I
+    iget v0, v0, Lcom/tencent/mm/compatible/d/j;->brA:I
 
     if-ne v0, v6, :cond_6
 
     .line 73
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tn()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->oc()V
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nM()V
 
     .line 76
     :cond_6
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tn()Lcom/tencent/mm/compatible/b/d;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tF()Lcom/tencent/mm/compatible/b/d;
 
     move-result-object v0
 
     const-string/jumbo v2, "!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6"
 
-    const-string/jumbo v3, "dkbt buletoothStopped %s"
+    const-string/jumbo v3, "dkbt bluetoothStopped %s"
 
     new-array v4, v6, [Ljava/lang/Object;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->of()Ljava/lang/String;
+    invoke-virtual {v0}, Lcom/tencent/mm/compatible/b/d;->nQ()Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget v1, v0, Lcom/tencent/mm/compatible/b/d;->bfp:I
+    sput-boolean v1, Lcom/tencent/mm/compatible/b/d;->bpx:Z
 
-    if-eq v1, v7, :cond_0
+    const/4 v1, 0x2
 
-    iput v7, v0, Lcom/tencent/mm/compatible/b/d;->bfp:I
-
-    iget v1, v0, Lcom/tencent/mm/compatible/b/d;->bfp:I
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/compatible/b/d;->bO(I)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/compatible/b/d;->bN(I)V
 
     goto/16 :goto_0
 .end method

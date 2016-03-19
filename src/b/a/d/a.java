@@ -4,31 +4,31 @@ import java.io.OutputStream;
 
 public final class a
 {
-  public final String hDq;
-  public final String jPp;
-  public final String jPq;
-  public final String jPr;
-  public final h jPt;
-  private final OutputStream jPu;
+  public final String jwt;
+  public final String mdB;
+  public final String mdC;
+  public final String mdD;
+  public final h mdF;
+  private final OutputStream mdG;
   
   public a(String paramString1, String paramString2, String paramString3, h paramh, String paramString4, OutputStream paramOutputStream)
   {
-    jPp = paramString1;
-    jPq = paramString2;
-    jPr = paramString3;
-    jPt = paramh;
-    hDq = paramString4;
-    jPu = paramOutputStream;
+    mdB = paramString1;
+    mdC = paramString2;
+    mdD = paramString3;
+    mdF = paramh;
+    jwt = paramString4;
+    mdG = paramOutputStream;
   }
   
-  public final void lx(String paramString)
+  public final void oa(String paramString)
   {
-    if (jPu != null) {
+    if (mdG != null) {
       paramString = paramString + "\n";
     }
     try
     {
-      jPu.write(paramString.getBytes("UTF8"));
+      mdG.write(paramString.getBytes("UTF8"));
       return;
     }
     catch (Exception paramString)

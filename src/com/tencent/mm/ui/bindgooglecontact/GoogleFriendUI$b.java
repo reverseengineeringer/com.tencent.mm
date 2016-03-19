@@ -3,9 +3,9 @@ package com.tencent.mm.ui.bindgooglecontact;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.text.TextUtils;
-import com.tencent.mm.modelfriend.y;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.modelfriend.o;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -20,17 +20,17 @@ import org.json.JSONObject;
 final class GoogleFriendUI$b
   extends AsyncTask
 {
-  private String bCl;
-  private GoogleFriendUI.a iOd = GoogleFriendUI.a.iOb;
+  private String bPy;
+  private GoogleFriendUI.a kNr = GoogleFriendUI.a.kNp;
   private Context mContext;
   
   private GoogleFriendUI$b(GoogleFriendUI paramGoogleFriendUI, Context paramContext, String paramString)
   {
     mContext = paramContext;
-    bCl = paramString;
+    bPy = paramString;
   }
   
-  private void AQ(String paramString)
+  private void GF(String paramString)
   {
     JSONArray localJSONArray1 = new JSONObject(paramString).getJSONObject("feed").getJSONArray("entry");
     int i;
@@ -99,18 +99,18 @@ final class GoogleFriendUI$b
           while (j < localJSONArray2.length())
           {
             paramString = localJSONArray2.getJSONObject(j).getString("address");
-            if ((!TextUtils.isEmpty(paramString)) && (bn.xC(paramString)) && (!paramString.equals(GoogleFriendUI.h(iNV))))
+            if ((!TextUtils.isEmpty(paramString)) && (ay.De(paramString)) && (!paramString.equals(GoogleFriendUI.h(kNj))))
             {
-              localObject3 = new y();
+              localObject3 = new o();
               field_googleid = ((String)localObject1);
               field_googleitemid = ((String)localObject1 + paramString);
               field_googlename = ((String)localObject2);
               field_googlephotourl = str1;
               field_googlegmail = paramString;
-              if (!GoogleFriendUI.f(iNV).containsKey(paramString))
+              if (!GoogleFriendUI.f(kNj).containsKey(paramString))
               {
-                GoogleFriendUI.e(iNV).add(localObject3);
-                GoogleFriendUI.f(iNV).put(paramString, localObject3);
+                GoogleFriendUI.e(kNj).add(localObject3);
+                GoogleFriendUI.f(kNj).put(paramString, localObject3);
               }
             }
             j += 1;
@@ -123,9 +123,9 @@ final class GoogleFriendUI$b
     }
   }
   
-  private Void VE()
+  private Void acy()
   {
-    t.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "doInBackground");
+    u.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "doInBackground");
     int j = 0;
     int i = 1;
     for (;;)
@@ -133,15 +133,15 @@ final class GoogleFriendUI$b
       int k;
       try
       {
-        t.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "startInde:%d, totalCount:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
-        localObject = bCl;
+        u.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "startInde:%d, totalCount:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
+        localObject = bPy;
         localObject = new URL("https://www.google.com/m8/feeds/contacts/default/property-email?alt=" + "json" + "&max-results=100&start-index=" + i + "&access_token=" + (String)localObject);
-        t.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "requestURL:%s", new Object[] { ((URL)localObject).toString() });
+        u.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "requestURL:%s", new Object[] { ((URL)localObject).toString() });
         localObject = (HttpURLConnection)((URL)localObject).openConnection();
         ((HttpURLConnection)localObject).setRequestMethod("GET");
         ((HttpURLConnection)localObject).setConnectTimeout(20000);
         j = ((HttpURLConnection)localObject).getResponseCode();
-        t.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "responseCode:%d", new Object[] { Integer.valueOf(j) });
+        u.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "responseCode:%d", new Object[] { Integer.valueOf(j) });
         if (j != 200) {
           continue;
         }
@@ -152,36 +152,36 @@ final class GoogleFriendUI$b
         if (k <= 0) {
           break label364;
         }
-        AQ((String)localObject);
+        GF((String)localObject);
       }
       catch (IOException localIOException)
       {
         Object localObject;
-        iOd = GoogleFriendUI.a.iOa;
-        t.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "IOException" + localIOException.getMessage());
+        kNr = GoogleFriendUI.a.kNo;
+        u.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "IOException" + localIOException.getMessage());
         return null;
         j = 0;
         continue;
       }
       catch (JSONException localJSONException)
       {
-        iOd = GoogleFriendUI.a.iOb;
-        t.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "JSONException" + localJSONException.getMessage());
+        kNr = GoogleFriendUI.a.kNp;
+        u.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "JSONException" + localJSONException.getMessage());
         return null;
       }
-      if ((j == 0) || (GoogleFriendUI.g(iNV)))
+      if ((j == 0) || (GoogleFriendUI.g(kNj)))
       {
-        iOd = GoogleFriendUI.a.iNY;
+        kNr = GoogleFriendUI.a.kNm;
         return null;
         if (j == 401)
         {
-          t.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "Server OAuth Error,Please Try Again.");
+          u.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "Server OAuth Error,Please Try Again.");
           ((HttpURLConnection)localObject).disconnect();
           localObject = null;
         }
         else
         {
-          t.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "Unknow Error.");
+          u.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "Unknow Error.");
         }
       }
       else
@@ -216,9 +216,9 @@ final class GoogleFriendUI$b
   protected final void onPreExecute()
   {
     super.onPreExecute();
-    t.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "onPreExecute");
-    GoogleFriendUI.e(iNV).clear();
-    GoogleFriendUI.f(iNV).clear();
+    u.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "onPreExecute");
+    GoogleFriendUI.e(kNj).clear();
+    GoogleFriendUI.f(kNj).clear();
   }
 }
 

@@ -1,31 +1,37 @@
 package com.tencent.mm.d.a;
 
-import android.app.Activity;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class eh
-  extends d
+  extends b
 {
-  public static boolean atN = true;
-  public static boolean atO = false;
-  public a aAw = new a();
-  public b aAx = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a ayO = new a();
+  public b ayP = new b();
   
   public eh()
   {
-    id = "NeedVerifyQQ";
-    hXT = atO;
+    id = "FileDownloadAdd";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public Activity aAy;
-    public Runnable aAz;
+    public String anC;
+    public String appId;
+    public String ayQ;
+    public String ayR;
+    public int ayS = 1;
+    public boolean ayT = false;
+    public boolean ayU = false;
+    public boolean ayV = false;
+    public String packageName;
   }
   
   public static final class b
   {
-    public boolean auM = false;
+    public long ayW;
   }
 }
 

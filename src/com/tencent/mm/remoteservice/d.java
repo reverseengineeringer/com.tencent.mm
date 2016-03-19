@@ -1,133 +1,87 @@
 package com.tencent.mm.remoteservice;
 
-import android.os.Binder;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
-import android.os.IInterface;
-import android.os.Parcel;
-import android.os.Parcelable.Creator;
+import android.os.RemoteException;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.LinkedList;
+import java.util.List;
 
-public abstract interface d
-  extends IInterface
+public final class d
 {
-  public abstract void a(String paramString1, String paramString2, Bundle paramBundle, c paramc);
-  
-  public static abstract class a
-    extends Binder
-    implements d
+  private Context context;
+  private ServiceConnection eem = new ServiceConnection()
   {
-    public a()
+    public final void onServiceConnected(ComponentName paramAnonymousComponentName, IBinder paramAnonymousIBinder)
     {
-      attachInterface(this, "com.tencent.mm.remoteservice.ICommRemoteServer");
+      jRY = c.a.as(paramAnonymousIBinder);
+      paramAnonymousComponentName = (Runnable[])jRX.toArray(new Runnable[jRX.size()]);
+      int j = paramAnonymousComponentName.length;
+      int i = 0;
+      while (i < j)
+      {
+        paramAnonymousComponentName[i].run();
+        i += 1;
+      }
+      jRX.clear();
     }
     
-    public static d as(IBinder paramIBinder)
+    public final void onServiceDisconnected(ComponentName paramAnonymousComponentName)
     {
-      if (paramIBinder == null) {
-        return null;
-      }
-      IInterface localIInterface = paramIBinder.queryLocalInterface("com.tencent.mm.remoteservice.ICommRemoteServer");
-      if ((localIInterface != null) && ((localIInterface instanceof d))) {
-        return (d)localIInterface;
-      }
-      return new a(paramIBinder);
+      jRY = null;
     }
-    
-    public IBinder asBinder()
+  };
+  List jRX = new LinkedList();
+  c jRY;
+  
+  public d(Context paramContext)
+  {
+    context = paramContext;
+  }
+  
+  final void a(b paramb, String paramString, Bundle paramBundle)
+  {
+    if (isConnected()) {}
+    try
     {
-      return this;
+      jRY.a(paramb.getClass().getName(), paramString, paramBundle, paramb);
+      return;
     }
-    
-    public boolean onTransact(int paramInt1, Parcel paramParcel1, Parcel paramParcel2, int paramInt2)
+    catch (RemoteException paramb)
     {
-      switch (paramInt1)
-      {
-      default: 
-        return super.onTransact(paramInt1, paramParcel1, paramParcel2, paramInt2);
-      case 1598968902: 
-        paramParcel2.writeString("com.tencent.mm.remoteservice.ICommRemoteServer");
-        return true;
-      }
-      paramParcel1.enforceInterface("com.tencent.mm.remoteservice.ICommRemoteServer");
-      String str1 = paramParcel1.readString();
-      String str2 = paramParcel1.readString();
-      Bundle localBundle;
-      if (paramParcel1.readInt() != 0)
-      {
-        localBundle = (Bundle)Bundle.CREATOR.createFromParcel(paramParcel1);
-        a(str1, str2, localBundle, c.a.asInterface(paramParcel1.readStrongBinder()));
-        paramParcel2.writeNoException();
-        if (localBundle == null) {
-          break label131;
-        }
-        paramParcel2.writeInt(1);
-        localBundle.writeToParcel(paramParcel2, 1);
-      }
-      for (;;)
-      {
-        return true;
-        localBundle = null;
-        break;
-        label131:
-        paramParcel2.writeInt(0);
-      }
+      u.e("!44@/B4Tb64lLpLrB/1eEHVU6z5YVpNsZ6z4b3IVgJSEHG0=", "exception:%s", new Object[] { ay.b(paramb) });
     }
-    
-    private static final class a
-      implements d
+  }
+  
+  public final boolean isConnected()
+  {
+    return (jRY != null) && (jRY.asBinder().isBinderAlive());
+  }
+  
+  public final void q(Runnable paramRunnable)
+  {
+    new StringBuilder("RemoteServiceProxy construct, thread id:").append(Thread.currentThread().getId());
+    if (isConnected())
     {
-      private IBinder mRemote;
-      
-      a(IBinder paramIBinder)
-      {
-        mRemote = paramIBinder;
-      }
-      
-      public final void a(String paramString1, String paramString2, Bundle paramBundle, c paramc)
-      {
-        Parcel localParcel1 = Parcel.obtain();
-        Parcel localParcel2 = Parcel.obtain();
-        for (;;)
-        {
-          try
-          {
-            localParcel1.writeInterfaceToken("com.tencent.mm.remoteservice.ICommRemoteServer");
-            localParcel1.writeString(paramString1);
-            localParcel1.writeString(paramString2);
-            if (paramBundle != null)
-            {
-              localParcel1.writeInt(1);
-              paramBundle.writeToParcel(localParcel1, 0);
-              if (paramc != null)
-              {
-                paramString1 = paramc.asBinder();
-                localParcel1.writeStrongBinder(paramString1);
-                mRemote.transact(1, localParcel1, localParcel2, 0);
-                localParcel2.readException();
-                if (localParcel2.readInt() != 0) {
-                  paramBundle.readFromParcel(localParcel2);
-                }
-              }
-            }
-            else
-            {
-              localParcel1.writeInt(0);
-              continue;
-            }
-            paramString1 = null;
-          }
-          finally
-          {
-            localParcel2.recycle();
-            localParcel1.recycle();
-          }
-        }
-      }
-      
-      public final IBinder asBinder()
-      {
-        return mRemote;
-      }
+      paramRunnable.run();
+      return;
+    }
+    jRX.add(paramRunnable);
+    paramRunnable = new Intent(context, RemoteService.class);
+    context.bindService(paramRunnable, eem, 1);
+  }
+  
+  public final void release()
+  {
+    if ((jRY != null) && (eem != null))
+    {
+      context.unbindService(eem);
+      jRY = null;
     }
   }
 }

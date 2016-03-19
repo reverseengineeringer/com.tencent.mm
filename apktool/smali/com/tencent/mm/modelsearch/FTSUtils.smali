@@ -14,6 +14,71 @@
     return-void
 .end method
 
+.method public static D(Ljava/util/List;)Ljava/lang/String;
+    .locals 4
+
+    .prologue
+    .line 188
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const/16 v0, 0x20
+
+    invoke-direct {v1, v0}, Ljava/lang/StringBuilder;-><init>(I)V
+
+    .line 189
+    const/16 v0, 0x28
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    .line 190
+    invoke-interface {p0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object v2
+
+    :goto_0
+    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    .line 191
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/16 v3, 0x2c
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_0
+
+    .line 193
+    :cond_0
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, -0x1
+
+    const/16 v2, 0x29
+
+    invoke-virtual {v1, v0, v2}, Ljava/lang/StringBuilder;->setCharAt(IC)V
+
+    .line 195
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
 .method public static a(Ljava/util/Map;II)I
     .locals 3
 
@@ -91,16 +156,16 @@
 
     .prologue
     .line 101
-    new-instance v1, Lcom/tencent/mm/modelsearch/k;
+    new-instance v1, Lcom/tencent/mm/modelsearch/FTSUtils$1;
 
-    invoke-direct {v1, p1}, Lcom/tencent/mm/modelsearch/k;-><init>(Ljava/util/Map;)V
+    invoke-direct {v1, p1}, Lcom/tencent/mm/modelsearch/FTSUtils$1;-><init>(Ljava/util/Map;)V
 
     .line 108
-    new-instance v2, Lcom/tencent/mm/modelsearch/o$g;
+    new-instance v2, Lcom/tencent/mm/modelsearch/m$g;
 
-    invoke-direct {v2}, Lcom/tencent/mm/modelsearch/o$g;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/modelsearch/m$g;-><init>()V
 
-    iput p2, v2, Lcom/tencent/mm/modelsearch/o$g;->type:I
+    iput p2, v2, Lcom/tencent/mm/modelsearch/m$g;->type:I
 
     invoke-static {p0, v2, v1}, Ljava/util/Collections;->binarySearch(Ljava/util/List;Ljava/lang/Object;Ljava/util/Comparator;)I
 
@@ -134,7 +199,7 @@
     return-object v0
 
     :cond_0
-    iput p3, v2, Lcom/tencent/mm/modelsearch/o$g;->type:I
+    iput p3, v2, Lcom/tencent/mm/modelsearch/m$g;->type:I
 
     invoke-static {p0, v2, v1}, Ljava/util/Collections;->binarySearch(Ljava/util/List;Ljava/lang/Object;Ljava/util/Comparator;)I
 
@@ -156,9 +221,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/modelsearch/o$g;
+    check-cast v0, Lcom/tencent/mm/modelsearch/m$g;
 
-    iget v0, v0, Lcom/tencent/mm/modelsearch/o$g;->type:I
+    iget v0, v0, Lcom/tencent/mm/modelsearch/m$g;->type:I
 
     if-eq v0, p2, :cond_1
 
@@ -183,9 +248,9 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/modelsearch/o$g;
+    check-cast v0, Lcom/tencent/mm/modelsearch/m$g;
 
-    iget v0, v0, Lcom/tencent/mm/modelsearch/o$g;->type:I
+    iget v0, v0, Lcom/tencent/mm/modelsearch/m$g;->type:I
 
     if-ne v0, p3, :cond_5
 
@@ -247,7 +312,10 @@
     goto :goto_2
 .end method
 
-.method public static c([I)Ljava/lang/String;
+.method static native countTokens(Ljava/lang/String;)I
+.end method
+
+.method public static f([I)Ljava/lang/String;
     .locals 5
 
     .prologue
@@ -307,10 +375,7 @@
     return-object v0
 .end method
 
-.method static native countTokens(Ljava/lang/String;)I
-.end method
-
-.method public static f([Ljava/lang/String;)[I
+.method public static g([Ljava/lang/String;)[I
     .locals 4
 
     .prologue
@@ -364,14 +429,14 @@
     return-object v1
 .end method
 
-.method public static hp(Ljava/lang/String;)Ljava/lang/String;
+.method public static iA(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 188
+    .line 199
     if-eqz p0, :cond_0
 
-    .line 189
+    .line 200
     const/16 v0, 0x2a
 
     const/16 v1, 0x20
@@ -384,7 +449,7 @@
 
     move-result-object v0
 
-    .line 191
+    .line 202
     :goto_0
     return-object v0
 

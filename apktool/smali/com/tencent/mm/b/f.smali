@@ -12,9 +12,9 @@
 
 
 # instance fields
-.field public ang:Ljava/lang/String;
+.field public akS:Ljava/lang/String;
 
-.field private anh:Ljava/util/Map;
+.field private akT:Ljava/util/Map;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/b/f;->anh:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/b/f;->akT:Ljava/util/Map;
 
     .line 19
     if-nez p1, :cond_0
@@ -38,7 +38,7 @@
     .line 20
     const-string/jumbo v0, "http://dldir1.qq.com/foxmail/"
 
-    iput-object v0, p0, Lcom/tencent/mm/b/f;->ang:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/b/f;->akS:Ljava/lang/String;
 
     .line 24
     :goto_0
@@ -46,12 +46,12 @@
 
     .line 22
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/b/f;->ang:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/b/f;->akS:Ljava/lang/String;
 
     goto :goto_0
 .end method
 
-.method public static aM(Ljava/lang/String;)Lcom/tencent/mm/b/f;
+.method public static aK(Ljava/lang/String;)Lcom/tencent/mm/b/f;
     .locals 12
 
     .prologue
@@ -62,7 +62,7 @@
     .line 58
     const-string/jumbo v1, "patchupdate"
 
-    invoke-static {p0, v1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {p0, v1, v0}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v9
 
@@ -96,7 +96,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0, v7}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+    invoke-static {v0, v7}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
 
     move-result v10
 
@@ -261,7 +261,7 @@
 
     check-cast v5, Ljava/lang/String;
 
-    invoke-static {v5, v7}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+    invoke-static {v5, v7}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
 
     move-result v5
 
@@ -269,15 +269,15 @@
     invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/b/f$a;-><init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
     .line 74
-    iget-object v1, v0, Lcom/tencent/mm/b/f$a;->ani:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/b/f$a;->akU:Ljava/lang/String;
 
     if-eqz v1, :cond_4
 
-    iget-object v1, v0, Lcom/tencent/mm/b/f$a;->anj:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/b/f$a;->akV:Ljava/lang/String;
 
     if-eqz v1, :cond_4
 
-    iget-object v1, v0, Lcom/tencent/mm/b/f$a;->ank:Ljava/lang/String;
+    iget-object v1, v0, Lcom/tencent/mm/b/f$a;->akW:Ljava/lang/String;
 
     if-eqz v1, :cond_4
 
@@ -291,9 +291,9 @@
     if-eqz v1, :cond_2
 
     .line 75
-    iget-object v1, v6, Lcom/tencent/mm/b/f;->anh:Ljava/util/Map;
+    iget-object v1, v6, Lcom/tencent/mm/b/f;->akT:Ljava/util/Map;
 
-    iget-object v2, v0, Lcom/tencent/mm/b/f$a;->ani:Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/b/f$a;->akU:Ljava/lang/String;
 
     invoke-interface {v1, v2, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -320,12 +320,12 @@
 
 
 # virtual methods
-.method public final aL(Ljava/lang/String;)Lcom/tencent/mm/b/f$a;
+.method public final aJ(Ljava/lang/String;)Lcom/tencent/mm/b/f$a;
     .locals 1
 
     .prologue
     .line 39
-    iget-object v0, p0, Lcom/tencent/mm/b/f;->anh:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/b/f;->akT:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

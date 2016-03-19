@@ -10,11 +10,11 @@
 
 
 # instance fields
-.field private fmV:Z
+.field private gDQ:Z
 
-.field private fnd:Lcom/tencent/mm/ui/base/MMTextureView;
+.field private gDY:Lcom/tencent/mm/ui/base/MMTextureView;
 
-.field private fne:Landroid/graphics/SurfaceTexture;
+.field private gDZ:Landroid/graphics/SurfaceTexture;
 
 
 # direct methods
@@ -56,18 +56,18 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 32
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnd:Lcom/tencent/mm/ui/base/MMTextureView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDY:Lcom/tencent/mm/ui/base/MMTextureView;
 
     .line 33
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fne:Landroid/graphics/SurfaceTexture;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDZ:Landroid/graphics/SurfaceTexture;
 
     .line 98
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fmV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDQ:Z
 
     .line 37
-    sget v0, Lcom/tencent/mm/a$i;->surface_camera:I
+    const v0, 0x7f070125
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->findViewById(I)Landroid/view/View;
 
@@ -75,13 +75,13 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMTextureView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnd:Lcom/tencent/mm/ui/base/MMTextureView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDY:Lcom/tencent/mm/ui/base/MMTextureView;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnd:Lcom/tencent/mm/ui/base/MMTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDY:Lcom/tencent/mm/ui/base/MMTextureView;
 
-    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/be;
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/be;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$1;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;)V
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMTextureView;->setSurfaceTextureListener(Landroid/view/TextureView$SurfaceTextureListener;)V
 
@@ -94,7 +94,7 @@
 
     .prologue
     .line 28
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fne:Landroid/graphics/SurfaceTexture;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDZ:Landroid/graphics/SurfaceTexture;
 
     return-object p1
 .end method
@@ -104,7 +104,7 @@
 
     .prologue
     .line 28
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnd:Lcom/tencent/mm/ui/base/MMTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDY:Lcom/tencent/mm/ui/base/MMTextureView;
 
     return-object v0
 .end method
@@ -114,7 +114,7 @@
 
     .prologue
     .line 28
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fne:Landroid/graphics/SurfaceTexture;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDZ:Landroid/graphics/SurfaceTexture;
 
     return-object v0
 .end method
@@ -124,7 +124,7 @@
 
     .prologue
     .line 28
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fmV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDQ:Z
 
     return v0
 .end method
@@ -136,14 +136,14 @@
     .line 28
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fmV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDQ:Z
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final J(Ljava/lang/String;Z)V
+.method public final Q(Ljava/lang/String;Z)V
     .locals 0
 
     .prologue
@@ -151,31 +151,23 @@
     return-void
 .end method
 
-.method public final akA()V
-    .locals 0
-
-    .prologue
-    .line 187
-    return-void
-.end method
-
-.method public final akk()V
+.method public final awO()V
     .locals 1
 
     .prologue
     .line 168
-    invoke-super {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->akk()V
+    invoke-super {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->awO()V
 
     .line 169
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fmV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDQ:Z
 
     .line 170
     return-void
 .end method
 
-.method protected final aky()V
+.method protected final axa()V
     .locals 5
 
     .prologue
@@ -184,7 +176,7 @@
 
     const-string/jumbo v1, "try preview camera"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 103
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->getVisibility()I
@@ -198,7 +190,7 @@
 
     const-string/jumbo v1, "error visibility"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 164
     :goto_0
@@ -206,9 +198,9 @@
 
     .line 107
     :cond_0
-    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;->fny:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
+    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;->gEt:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnn:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gEi:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
 
     if-ne v0, v1, :cond_1
 
@@ -223,7 +215,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnn:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gEi:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;
 
     invoke-virtual {v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView$b;->toString()Ljava/lang/String;
 
@@ -231,26 +223,26 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 111
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ax;->td()Lcom/tencent/mm/sdk/platformtools/ad;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/bf;
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/bf;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$2;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
 
     goto :goto_0
 .end method
 
-.method protected final akz()V
+.method protected final axb()V
     .locals 2
 
     .prologue
@@ -259,20 +251,28 @@
 
     const-string/jumbo v1, "try close camera"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 192
-    invoke-static {}, Lcom/tencent/mm/model/ax;->td()Lcom/tencent/mm/sdk/platformtools/ad;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tv()Lcom/tencent/mm/sdk/platformtools/ab;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/bh;
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/bh;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView$3;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ad;->k(Ljava/lang/Runnable;)I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ab;->r(Ljava/lang/Runnable;)I
 
     .line 204
+    return-void
+.end method
+
+.method public final axc()V
+    .locals 0
+
+    .prologue
+    .line 187
     return-void
 .end method
 
@@ -281,14 +281,14 @@
 
     .prologue
     .line 224
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fne:Landroid/graphics/SurfaceTexture;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDZ:Landroid/graphics/SurfaceTexture;
 
     if-eqz v0, :cond_0
 
     .line 225
     new-instance v0, Landroid/view/Surface;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fne:Landroid/graphics/SurfaceTexture;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDZ:Landroid/graphics/SurfaceTexture;
 
     invoke-direct {v0, v1}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
@@ -307,12 +307,12 @@
 
     .prologue
     .line 216
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnd:Lcom/tencent/mm/ui/base/MMTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDY:Lcom/tencent/mm/ui/base/MMTextureView;
 
     if-eqz v0, :cond_0
 
     .line 217
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnd:Lcom/tencent/mm/ui/base/MMTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDY:Lcom/tencent/mm/ui/base/MMTextureView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTextureView;->getHeight()I
 
@@ -333,12 +333,12 @@
 
     .prologue
     .line 208
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnd:Lcom/tencent/mm/ui/base/MMTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDY:Lcom/tencent/mm/ui/base/MMTextureView;
 
     if-eqz v0, :cond_0
 
     .line 209
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnd:Lcom/tencent/mm/ui/base/MMTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDY:Lcom/tencent/mm/ui/base/MMTextureView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTextureView;->getWidth()I
 
@@ -375,7 +375,7 @@
     const/4 v6, 0x0
 
     .line 233
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnd:Lcom/tencent/mm/ui/base/MMTextureView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDY:Lcom/tencent/mm/ui/base/MMTextureView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMTextureView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -421,7 +421,7 @@
 
     aput-object v5, v4, v8
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 237
     iget v2, v1, Landroid/util/DisplayMetrics;->widthPixels:I
@@ -462,10 +462,10 @@
 
     aput-object v4, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 240
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->fnd:Lcom/tencent/mm/ui/base/MMTextureView;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraTextureView;->gDY:Lcom/tencent/mm/ui/base/MMTextureView;
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/base/MMTextureView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 

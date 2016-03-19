@@ -6,23 +6,23 @@ import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import com.tencent.mm.ao.a;
+import com.tencent.mm.aw.a;
 
 public class CameraFrontSightView
   extends View
 {
-  protected int cIw;
-  protected int cnL;
-  private Paint dnc = new Paint();
-  boolean fkg = false;
-  boolean fkh = false;
-  boolean fki = false;
-  boolean fkj = false;
-  long fkk = 0L;
-  private int fkl;
-  private int fkm;
-  private int fkn;
-  private ViewGroup.LayoutParams fko;
+  protected int cFj;
+  private Paint cZX = new Paint();
+  protected int ewY;
+  boolean gBe = false;
+  boolean gBf = false;
+  boolean gBg = false;
+  boolean gBh = false;
+  long gBi = 0L;
+  private int gBj;
+  private int gBk;
+  private int gBl;
+  private ViewGroup.LayoutParams gBm;
   
   public CameraFrontSightView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -34,59 +34,59 @@ public class CameraFrontSightView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  public final void aK(int paramInt1, int paramInt2)
+  public final void bd(int paramInt1, int paramInt2)
   {
-    fko = getLayoutParams();
-    if (fko != null)
+    gBm = getLayoutParams();
+    if (gBm != null)
     {
-      fko.width = paramInt1;
-      fko.height = paramInt2;
+      gBm.width = paramInt1;
+      gBm.height = paramInt2;
     }
-    cIw = paramInt1;
-    cnL = paramInt2;
-    fkl = (cIw / 2);
-    fkm = (cnL / 2);
-    fkn = a.fromDPToPix(getContext(), 1);
-    dnc.setColor(-8393929);
-    dnc.setStrokeWidth(fkn);
+    ewY = paramInt1;
+    cFj = paramInt2;
+    gBj = (ewY / 2);
+    gBk = (cFj / 2);
+    gBl = a.fromDPToPix(getContext(), 1);
+    cZX.setColor(-8393929);
+    cZX.setStrokeWidth(gBl);
   }
   
   public void draw(Canvas paramCanvas)
   {
-    paramCanvas.translate(fkl / 2, fkm / 2);
-    long l = System.currentTimeMillis() - fkk;
+    paramCanvas.translate(gBj / 2, gBk / 2);
+    long l = System.currentTimeMillis() - gBi;
     if (l > 200L)
     {
-      fkg = false;
-      fkh = true;
+      gBe = false;
+      gBf = true;
     }
     if (l > 800L)
     {
-      fkh = false;
-      fki = true;
+      gBf = false;
+      gBg = true;
     }
     if (l > 1100L)
     {
-      fki = false;
-      fkj = true;
+      gBg = false;
+      gBh = true;
     }
     if (l > 1300L)
     {
-      fkj = false;
+      gBh = false;
       setVisibility(8);
       return;
     }
     float f;
-    if (fkg)
+    if (gBe)
     {
       f = (float)(200L - l) / 200.0F + 1.0F;
-      paramCanvas.scale(f, f, fkl / 2, fkm / 2);
-      dnc.setAlpha((int)((2.0F - f) * 255.0F));
-      if (!fkh) {
+      paramCanvas.scale(f, f, gBj / 2, gBk / 2);
+      cZX.setAlpha((int)((2.0F - f) * 255.0F));
+      if (!gBf) {
         break label476;
       }
       f = (float)((l - 200L) % 200L) / 200.0F * 2.0F;
-      Paint localPaint = dnc;
+      Paint localPaint = cZX;
       if (f <= 1.0F) {
         break label469;
       }
@@ -96,19 +96,19 @@ public class CameraFrontSightView
     }
     for (;;)
     {
-      if (fkj)
+      if (gBh)
       {
         f = (float)(l - 1100L) / 200.0F;
-        dnc.setAlpha((int)((1.0F - f) * 255.0F));
+        cZX.setAlpha((int)((1.0F - f) * 255.0F));
       }
-      paramCanvas.drawLine(0.0F, 0.0F, fkl, 0.0F, dnc);
-      paramCanvas.drawLine(0.0F, 0.0F, 0.0F, fkm, dnc);
-      paramCanvas.drawLine(fkl, 0.0F, fkl, fkm, dnc);
-      paramCanvas.drawLine(0.0F, fkm, fkl, fkm, dnc);
-      paramCanvas.drawLine(0.0F, fkm / 2, fkl / 10, fkm / 2, dnc);
-      paramCanvas.drawLine(fkl, fkm / 2, fkl * 9 / 10, fkm / 2, dnc);
-      paramCanvas.drawLine(fkl / 2, 0.0F, fkl / 2, fkm / 10, dnc);
-      paramCanvas.drawLine(fkl / 2, fkm, fkl / 2, fkm * 9 / 10, dnc);
+      paramCanvas.drawLine(0.0F, 0.0F, gBj, 0.0F, cZX);
+      paramCanvas.drawLine(0.0F, 0.0F, 0.0F, gBk, cZX);
+      paramCanvas.drawLine(gBj, 0.0F, gBj, gBk, cZX);
+      paramCanvas.drawLine(0.0F, gBk, gBj, gBk, cZX);
+      paramCanvas.drawLine(0.0F, gBk / 2, gBj / 10, gBk / 2, cZX);
+      paramCanvas.drawLine(gBj, gBk / 2, gBj * 9 / 10, gBk / 2, cZX);
+      paramCanvas.drawLine(gBj / 2, 0.0F, gBj / 2, gBk / 10, cZX);
+      paramCanvas.drawLine(gBj / 2, gBk, gBj / 2, gBk * 9 / 10, cZX);
       invalidate();
       return;
       paramCanvas.scale(1.0F, 1.0F);
@@ -117,7 +117,7 @@ public class CameraFrontSightView
       f = 1.0F - f;
       break label193;
       label476:
-      dnc.setAlpha(255);
+      cZX.setAlpha(255);
     }
   }
 }

@@ -4,31 +4,31 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.os.Build.VERSION;
 import android.util.DisplayMetrics;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 @Deprecated
 public final class a
 {
-  public static boolean bUQ = false;
+  public static boolean clN = false;
   
   static
   {
-    Du();
+    FC();
   }
   
-  private static boolean Du()
+  private static boolean FC()
   {
     try
     {
       Class.forName("android.media.ExifInterface");
-      t.i("!24@/B4Tb64lLpKVEdGqaNtVOg==", "android.media.ExifInterface find");
-      bUQ = true;
+      u.i("!24@/B4Tb64lLpKVEdGqaNtVOg==", "android.media.ExifInterface find");
+      clN = true;
       return true;
     }
     catch (Exception localException)
     {
-      t.w("!24@/B4Tb64lLpKVEdGqaNtVOg==", "android.media.ExifInterface can not found");
-      bUQ = false;
+      u.w("!24@/B4Tb64lLpKVEdGqaNtVOg==", "android.media.ExifInterface can not found");
+      clN = false;
     }
     return false;
   }
@@ -44,14 +44,14 @@ public final class a
   
   public static final class b
   {
-    public static int iM(String paramString)
+    public static int kq(String paramString)
     {
-      if (!a.bUQ) {}
-      while ((Build.VERSION.SDK_INT < 5) || (!a.bUQ)) {
+      if (!a.clN) {}
+      while ((Build.VERSION.SDK_INT < 5) || (!a.clN)) {
         return 0;
       }
       new d();
-      return d.iM(paramString);
+      return d.kq(paramString);
     }
   }
 }

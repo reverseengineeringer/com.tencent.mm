@@ -1,26 +1,27 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
 
 public final class if
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFs = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDV = new a();
   
   public if()
   {
-    id = "StatusNotifyFunction";
-    hXT = atO;
+    id = "OpenGameCenter";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public long aFt;
-    public String aFu;
-    public int axw;
-    public String funcName;
+    public int aDW;
+    public Context context;
+    public String extraInfo;
+    public int jumpType;
   }
 }
 

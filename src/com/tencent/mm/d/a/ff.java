@@ -1,32 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ff
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aBH = new a();
-  public b aBI = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azX = new a();
   
   public ff()
   {
-    id = "OpenFingerPrintAuth";
-    hXT = atO;
+    id = "GetFTFNecessaryElements";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aBJ = 0;
-    public String azh;
-  }
-  
-  public static final class b
-  {
-    public int azg = 0;
-    public String azj;
-    public String azk;
+    public String azY;
+    public String azZ;
   }
 }
 

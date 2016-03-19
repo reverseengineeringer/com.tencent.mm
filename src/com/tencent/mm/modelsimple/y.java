@@ -1,375 +1,129 @@
 package com.tencent.mm.modelsimple;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.os.Build;
-import android.os.Build.VERSION;
-import com.tencent.mm.ac.b.i;
-import com.tencent.mm.ac.b.i.a;
-import com.tencent.mm.compatible.d.q;
-import com.tencent.mm.model.aw;
-import com.tencent.mm.model.bj;
-import com.tencent.mm.model.bk;
-import com.tencent.mm.model.bl;
-import com.tencent.mm.model.by;
-import com.tencent.mm.model.ca;
-import com.tencent.mm.model.v;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.protocal.b.agg;
-import com.tencent.mm.protocal.b.ais;
-import com.tencent.mm.protocal.b.yv;
-import com.tencent.mm.protocal.b.yw;
-import com.tencent.mm.protocal.i.c;
-import com.tencent.mm.protocal.u.a;
-import com.tencent.mm.protocal.u.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j.a;
-import com.tencent.mm.q.j.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.s;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.h;
-import java.util.Iterator;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.ahw;
+import com.tencent.mm.protocal.b.ame;
+import com.tencent.mm.protocal.b.amf;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.a.c;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j.a;
+import com.tencent.mm.r.j.b;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.LinkedList;
-import java.util.List;
+import java.util.Map;
 
 public final class y
-  extends com.tencent.mm.q.j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  d apI;
-  private boolean bLA = true;
-  public boolean bLB = false;
-  private final String bLs;
-  private final String bLt;
-  private final String bLu;
-  private final String bLv;
-  private final String bLw;
-  private final String bLx;
-  private final int bLy;
-  private final int bLz;
-  public com.tencent.mm.network.w btU;
-  private int bzD = 2;
+  private d anM;
+  public a anN;
+  public long avg = -1L;
+  private final long cbI = 60000L;
+  private Runnable cbJ;
+  public int errCode;
+  public int errType;
   
-  public y(String paramString1, String paramString2, String paramString3, int paramInt1, String paramString4, String paramString5, String paramString6, int paramInt2)
+  public y(float paramFloat1, float paramFloat2, long paramLong)
   {
-    t.d("!32@/B4Tb64lLpK+IBX8XDgnvkJ8JGhUvp0/", "NetSceneReg: username = " + paramString1 + " nickname = " + paramString3);
-    t.d("!32@/B4Tb64lLpK+IBX8XDgnvkJ8JGhUvp0/", "NetSceneReg: bindUin = " + paramInt1 + "bindEmail = " + paramString4 + " bindMobile = " + paramString5);
-    t.d("!32@/B4Tb64lLpK+IBX8XDgnvkJ8JGhUvp0/", "NetSceneReg: regMode = " + paramInt2 + " ticket: " + paramString6);
-    bLz = paramInt2;
-    btU = new bl();
-    u.a locala = (u.a)btU.vj();
-    locala.aX(0);
-    hho.dse = paramString1;
-    hho.hmH = bn.xJ(paramString2);
-    if (paramInt2 == 4)
-    {
-      hho.hmH = paramString6;
-      t.w("!32@/B4Tb64lLpK+IBX8XDgnvkJ8JGhUvp0/", "dkreg rand:" + paramString6 + " reqMd5:" + hho.hmH);
-    }
-    hho.hhQ = paramString3;
-    hho.hhR = paramInt1;
-    hho.hhS = paramString4;
-    hho.hhT = paramString5;
-    hho.hst = paramString6;
-    hho.hBd = paramInt2;
-    hho.cUQ = bn.aFB();
-    hho.hsr = q.getSimCountryIso();
-    hho.cUR = s.aEJ();
-    hho.hkE = 0;
-    hho.hIn = 0;
-    hho.hIo = q.getAndroidId();
-    hho.huf = q.oJ();
-    hho.hIp = aa.getContext().getSharedPreferences(aa.aES(), 0).getString("installreferer", "");
-    hho.hIq = ca.tW();
-    hho.hIr = aa.getContext().getSharedPreferences(aa.aES() + "_google_aid", com.tencent.mm.compatible.util.j.pj()).getString("getgoogleaid", "");
-    bLs = paramString1;
-    bLt = paramString2;
-    bLu = paramString3;
-    bLv = paramString4;
-    bLw = paramString5;
-    bLy = paramInt1;
-    bLx = "";
-    if (((paramString6 == null) || (paramString6.length() <= 0)) && (paramString4.length() <= 0)) {}
-    for (;;)
-    {
-      bLA = bool;
-      hho.hkF = com.tencent.mm.model.ax.tf();
-      return;
-      bool = false;
-    }
+    ahw localahw = new ahw();
+    jeq = paramFloat1;
+    jer = paramFloat2;
+    jkL = 1;
+    jkI = 0;
+    a(localahw, 1, -10000.0F, -10000.0F);
+    avg = paramLong;
   }
   
-  public y(String paramString1, String paramString2, String paramString3, int paramInt1, String paramString4, String paramString5, String paramString6, String paramString7, String paramString8, int paramInt2, String paramString9, String paramString10, String paramString11, boolean paramBoolean1, boolean paramBoolean2)
+  public y(ahw paramahw, float paramFloat1, float paramFloat2)
   {
-    t.i("!32@/B4Tb64lLpK+IBX8XDgnvkJ8JGhUvp0/", "init: use:%s pwd:%s nick:%s bindqq:%d email:%s mobile:%s [%s,%s,%s] regmode:%d alias:%s [%s,%s] force:%b avatar:%b", new Object[] { paramString1, bn.xZ(paramString2), paramString3, Integer.valueOf(paramInt1), paramString4, paramString5, paramString6, paramString7, paramString8, Integer.valueOf(paramInt2), paramString9, paramString11, paramString10, Boolean.valueOf(paramBoolean1), Boolean.valueOf(paramBoolean2) });
-    bLz = paramInt2;
-    btU = new bl();
-    paramString6 = (u.a)btU.vj();
-    paramString6.aX(0);
-    hho.dse = paramString1;
-    hho.hmH = bn.xJ(paramString2);
-    if (paramInt2 == 4)
-    {
-      hho.hmH = paramString8;
-      t.w("!32@/B4Tb64lLpK+IBX8XDgnvkJ8JGhUvp0/", "dkreg rand:" + paramString8 + " reqMd5:" + hho.hmH);
-    }
-    hho.hhQ = paramString3;
-    hho.hhR = paramInt1;
-    hho.hhS = paramString4;
-    hho.hhT = paramString5;
-    hho.hst = paramString8;
-    hho.hBd = paramInt2;
-    hho.cUQ = bn.aFB();
-    hho.hsr = q.getSimCountryIso();
-    hho.cUR = s.aEJ();
-    hho.hkE = 0;
-    hho.byL = paramString9;
-    hho.hBc = paramString11;
-    hho.hBb = paramString10;
-    paramString7 = hho;
-    if (paramBoolean1)
-    {
-      paramInt2 = 1;
-      hmz = paramInt2;
-      paramString7 = hho;
-      if (!paramBoolean2) {
-        break label627;
-      }
-      paramInt2 = 1;
-      label421:
-      hIm = paramInt2;
-      hho.hkF = com.tencent.mm.model.ax.tf();
-      hho.hIo = q.getAndroidId();
-      hho.huf = q.oJ();
-      hho.hIp = aa.getContext().getSharedPreferences(aa.aES(), 0).getString("installreferer", "");
-      hho.hIq = ca.tW();
-      hho.hIr = aa.getContext().getSharedPreferences(aa.aES() + "_google_aid", com.tencent.mm.compatible.util.j.pj()).getString("getgoogleaid", "");
-      bLs = paramString1;
-      bLt = paramString2;
-      bLu = paramString3;
-      bLv = paramString4;
-      bLw = paramString5;
-      bLy = paramInt1;
-      bLx = paramString9;
-      if (((paramString8 != null) && (paramString8.length() > 0)) || ((paramString4 != null) && (paramString4.length() > 0))) {
-        break label633;
-      }
-    }
-    label627:
-    label633:
-    for (paramBoolean1 = true;; paramBoolean1 = false)
-    {
-      bLA = paramBoolean1;
-      return;
-      paramInt2 = 0;
-      break;
-      paramInt2 = 0;
-      break label421;
-    }
+    a(paramahw, 0, paramFloat1, paramFloat2);
   }
   
-  public final String AR()
+  public y(ame paramame)
   {
-    return btU.tG()).hhp.hIz;
+    a.a locala = new a.a();
+    bFa = paramame;
+    bFb = new amf();
+    uri = "/cgi-bin/micromsg-bin/scanstreetview";
+    bEY = 424;
+    bFc = 0;
+    bFd = 0;
+    anN = locala.vy();
   }
   
-  public final String AS()
+  private void a(ahw paramahw, int paramInt, float paramFloat1, float paramFloat2)
   {
-    Object localObject = btU.tG()).hhp.hkw;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
-    {
-      localObject = hNr.iterator();
-      while (((Iterator)localObject).hasNext())
-      {
-        ais localais = (ais)((Iterator)localObject).next();
-        if (eJD == 2) {
-          return hPU;
-        }
-      }
+    Object localObject = new a.a();
+    bFa = new ame();
+    bFb = new amf();
+    uri = "/cgi-bin/micromsg-bin/scanstreetview";
+    bEY = 424;
+    bFc = 0;
+    bFd = 0;
+    anN = ((a.a)localObject).vy();
+    localObject = (ame)anN.bEW.bFf;
+    jHB = paramahw;
+    iWm = paramInt;
+    jHC = paramFloat1;
+    jHD = paramFloat2;
+  }
+  
+  public static String je(String paramString)
+  {
+    paramString = q.J(paramString, "streetview", null);
+    if (paramString == null) {
+      return null;
     }
-    return "";
+    return (String)paramString.get(".streetview.link");
   }
   
-  public final int AT()
+  public final amf CK()
   {
-    Object localObject = btU.tG()).hhp.hkw;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
-    {
-      localObject = hNr.iterator();
-      while (((Iterator)localObject).hasNext())
-      {
-        ais localais = (ais)((Iterator)localObject).next();
-        if (eJD == 3) {
-          return bn.getInt(hPU, 2);
-        }
-      }
-    }
-    return 2;
-  }
-  
-  public final String AU()
-  {
-    Object localObject = btU.tG()).hhp.hkw;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
-    {
-      localObject = hNr.iterator();
-      while (((Iterator)localObject).hasNext())
-      {
-        ais localais = (ais)((Iterator)localObject).next();
-        if (eJD == 17) {
-          return hPU;
-        }
-      }
+    if ((anN != null) && (anN.bEX.bFf != null)) {
+      return (amf)anN.bEX.bFf;
     }
     return null;
   }
   
-  public final int a(m paramm, d paramd)
+  public final int a(e parame, d paramd)
   {
-    apI = paramd;
-    return a(paramm, btU, this);
+    anM = paramd;
+    return a(parame, anN, this);
   }
   
-  protected final int a(com.tencent.mm.network.w paramw)
+  protected final int a(o paramo)
   {
-    return j.b.btz;
+    if (bEW.bFf).jHB == null)
+    {
+      u.e("!44@/B4Tb64lLpK+IBX8XDgnvixiFaHlmIL8X17EHTvJycQ=", "req.rImpl.UserPos == null");
+      return j.b.bFJ;
+    }
+    return j.b.bFI;
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, com.tencent.mm.network.w paramw, byte[] paramArrayOfByte)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    paramArrayOfByte = (u.b)paramw.tG();
-    if ((paramInt2 == 4) && (paramInt3 == 65235))
-    {
-      bj.a(true, hhp.hmJ, hhp.hmK, hhp.hmI);
-      bzD -= 1;
-      if (bzD <= 0)
-      {
-        apI.a(3, -1, "", this);
-        return;
-      }
-      a(btk, apI);
-      return;
+    u.d("!44@/B4Tb64lLpK+IBX8XDgnvixiFaHlmIL8X17EHTvJycQ=", "onGYNetEnd errtype:" + paramInt2 + " errcode:" + paramInt3 + " errMsg:" + paramString);
+    errType = paramInt2;
+    errCode = paramInt3;
+    if (anM != null) {
+      anM.a(paramInt2, paramInt3, paramString, this);
     }
-    if ((paramInt2 == 4) && (paramInt3 == -102))
+    for (;;)
     {
-      paramInt1 = vjhgO.gLC;
-      t.d("!32@/B4Tb64lLpK+IBX8XDgnvkJ8JGhUvp0/", "summerauth auth MM_ERR_CERT_EXPIRED  getcert now  old ver:%d", new Object[] { Integer.valueOf(paramInt1) });
-      com.tencent.mm.model.ax.td().k(new z(this, paramInt1));
+      u.d("!44@/B4Tb64lLpK+IBX8XDgnvixiFaHlmIL8X17EHTvJycQ=", "xml is %s", new Object[] { CKjcQ });
+      if (cbJ != null) {
+        cbJ.run();
+      }
       return;
-    }
-    if ((paramInt2 != 0) || (paramInt3 != 0))
-    {
-      apI.a(paramInt2, paramInt3, paramString, this);
-      return;
-    }
-    paramw = (u.a)paramw.vj();
-    t.d("!32@/B4Tb64lLpK+IBX8XDgnvkJ8JGhUvp0/", "dkreg: pass:" + hhp.cUI + " regtype:" + hhp.hhV + " mode:" + hho.hBd);
-    String str1;
-    String str2;
-    String str3;
-    String str4;
-    int i;
-    String str5;
-    String str6;
-    int j;
-    int k;
-    String str7;
-    String str8;
-    String str9;
-    String str10;
-    h localh;
-    if ((hhp.cUG != 0) && (!bLA))
-    {
-      com.tencent.mm.model.ax.a(com.tencent.mm.model.ax.tc(), hhp.cUG);
-      com.tencent.mm.model.ax.cB(hhp.cUG);
-      if (hho.hBd == 4) {
-        com.tencent.mm.model.ax.tl().rf().set(2, hho.dse);
-      }
-      com.tencent.mm.model.ax.tl().rf().set(16, Integer.valueOf(1));
-      com.tencent.mm.model.ax.tl().rf().set(52, Integer.valueOf(hhp.hhV));
-      if ((bLs != null) && (bLs.length() > 0) && (bLz != 1)) {
-        hhp.dse = bLs;
-      }
-      hhp.hhS = bLv;
-      hhp.bZH = 0;
-      paramw = bLx;
-      paramInt1 = bLy;
-      str1 = bLu;
-      str2 = bLw;
-      str3 = hhp.dse;
-      str4 = hhp.hhS;
-      i = hhp.bZH;
-      str5 = hhp.hhY;
-      str6 = hhp.hhZ;
-      j = hhp.hia;
-      k = hhp.hIt;
-      str7 = hhp.hhD;
-      str8 = hhp.hib;
-      str9 = hhp.hkt;
-      str10 = hhp.hIs;
-      t.i("!32@/B4Tb64lLpK7gMQeegHmyzDwfyS7k7vZ", "dkwt updateProfile user:%s alias:%s qq:%s nick:%s email:%s mobile:%s status:%d offuser:%s offnick:%s pushmail:%d sendCard:%d session:%s fsurl:%s pluginFlag:%d atuhkey:%s a2:%s newa2:%s kisd:%s safedev:%d MicroBlog:%s emailpwd:%d", new Object[] { str3, paramw, com.tencent.mm.a.l.getString(paramInt1), str1, str4, str2, Integer.valueOf(i), str5, str6, Integer.valueOf(j), Integer.valueOf(k), bn.xZ(str7), str8, Integer.valueOf(0), bn.xZ(str9), bn.xZ(null), bn.xZ(null), bn.xZ(null), Integer.valueOf(-1), str10, Integer.valueOf(0) });
-      localh = com.tencent.mm.model.ax.tl().rf();
-      if ((com.tencent.mm.model.ax.qZ()) && (tluin != 0) && (localh != null)) {
-        break label1040;
-      }
-      t.e("!32@/B4Tb64lLpK7gMQeegHmyzDwfyS7k7vZ", "dkwt ERR: updateProfile acc:%b uin:%s userConfigStg:%s", new Object[] { Boolean.valueOf(com.tencent.mm.model.ax.qZ()), com.tencent.mm.a.l.getString(tluin), localh });
-      bj.a(false, hhp.hmJ, hhp.hmK, hhp.hmI);
-      ad.g(new bk(hhp.hyy, hhp.hyz, hhp.hyA));
-      com.tencent.mm.model.ax.tl().rf().eN(true);
-      com.tencent.mm.model.ax.tm().d(new by(new ab(this, paramArrayOfByte)));
-      t.d("!32@/B4Tb64lLpK+IBX8XDgnvkJ8JGhUvp0/", "resp return flag" + hhp.hIv);
-      if ((hhp.hIv & 0x1) == 0) {
-        break label1343;
-      }
-    }
-    label1040:
-    label1343:
-    for (boolean bool = true;; bool = false)
-    {
-      bLB = bool;
-      paramw = new LinkedList();
-      paramw.add(new b.i.a(21, "android-" + Build.VERSION.SDK_INT + "-" + Build.MODEL));
-      com.tencent.mm.model.ax.tl().rh().a(new b.i(paramw));
-      if ((paramInt2 == 0) && (paramInt3 == 0)) {
-        com.tencent.mm.plugin.a.b.dP(yd());
-      }
-      apI.a(paramInt2, paramInt3, paramString, this);
-      return;
-      aw.boE.x("last_avatar_path", com.tencent.mm.p.c.fu(v.rS()));
-      aw.boE.x("login_weixin_username", str3);
-      aw.boE.c(str2, paramInt1, str4);
-      com.tencent.mm.model.ax.tl().rn().aD(str10, 2);
-      if (paramInt1 != 0) {
-        com.tencent.mm.model.ax.tl().rn().aD(paramInt1 + "@qqim", 3);
-      }
-      localh.set(2, str3);
-      localh.set(42, paramw);
-      localh.set(9, Integer.valueOf(paramInt1));
-      com.tencent.mm.p.c.c(paramInt1, 3);
-      localh.set(4, str1);
-      localh.set(5, str4);
-      localh.set(6, str2);
-      localh.set(7, Integer.valueOf(i));
-      localh.set(21, str5);
-      localh.set(22, str6);
-      localh.set(57, Integer.valueOf(0));
-      localh.set(17, Integer.valueOf(j));
-      localh.set(25, Integer.valueOf(k));
-      localh.set(1, str7);
-      localh.set(29, str8);
-      localh.set(34, Integer.valueOf(0));
-      localh.set(256, Boolean.valueOf(false));
-      t.i("!32@/B4Tb64lLpK7gMQeegHmyzDwfyS7k7vZ", "summerstatus USERINFO_FORCE_UPDATE_AUTH set false");
-      localh.set(-1535680990, str9);
-      localh.set(46, null);
-      localh.set(72, null);
-      localh.set(64, Integer.valueOf(-1));
-      localh.eN(true);
-      break;
+      u.e("!44@/B4Tb64lLpK+IBX8XDgnvixiFaHlmIL8X17EHTvJycQ=", "callback null");
     }
   }
   
@@ -377,39 +131,67 @@ public final class y
   
   public final int getType()
   {
-    return 126;
+    return 424;
   }
   
-  protected final int lP()
+  protected final int lk()
   {
-    return 3;
+    return 10;
   }
   
-  public final int yd()
+  public static final class a
   {
-    Object localObject = btU.tG()).hhp.hkw;
-    if ((localObject != null) && (hNr != null) && (hNr.size() > 0))
+    public String asL = "";
+    public String cbK = "";
+    public String cbL = "";
+    public int type = 5;
+  }
+  
+  public static final class b
+  {
+    public String asL;
+    public LinkedList cbM;
+    public String title;
+    
+    public static LinkedList g(Map paramMap, String paramString)
     {
-      localObject = hNr.iterator();
-      while (((Iterator)localObject).hasNext())
+      LinkedList localLinkedList = new LinkedList();
+      int i = 0;
+      while (i < 1000)
       {
-        ais localais = (ais)((Iterator)localObject).next();
-        if (eJD == 1) {
-          return bn.getInt(hPU, 0);
+        Object localObject2 = new StringBuilder().append(paramString).append(".action");
+        if (i > 0) {}
+        for (Object localObject1 = Integer.valueOf(i);; localObject1 = "")
+        {
+          localObject1 = localObject1;
+          try
+          {
+            int j = Integer.valueOf((String)paramMap.get((String)localObject1 + ".$type")).intValue();
+            localObject2 = new y.a();
+            if (j != 5) {
+              break;
+            }
+            cbK = ay.ky((String)paramMap.get((String)localObject1 + ".iconurl"));
+            asL = ay.ky((String)paramMap.get((String)localObject1 + ".desc"));
+            cbL = ay.ky((String)paramMap.get((String)localObject1 + ".link"));
+            if ((!ay.kz(cbK)) || (!ay.kz(asL)) || (!ay.kz(cbL))) {
+              break label293;
+            }
+            return localLinkedList;
+          }
+          catch (Exception paramMap)
+          {
+            u.w("!44@/B4Tb64lLpK+IBX8XDgnvixiFaHlmIL8X17EHTvJycQ=", "parseVendorsFromXml() " + paramMap.getMessage());
+            return localLinkedList;
+          }
         }
+        return localLinkedList;
+        label293:
+        localLinkedList.add(localObject2);
+        i += 1;
       }
+      return localLinkedList;
     }
-    return 0;
-  }
-  
-  public final byte[] yk()
-  {
-    return com.tencent.mm.platformtools.w.a(btU.tG()).hhp.hBe, new byte[0]);
-  }
-  
-  public final String yl()
-  {
-    return btU.tG()).hhp.hBb;
   }
 }
 

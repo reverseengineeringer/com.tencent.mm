@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic fit:Lcom/tencent/mm/plugin/sight/draft/ui/b;
+.field final synthetic gzt:Lcom/tencent/mm/plugin/sight/draft/ui/b;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 314
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$b;->fit:Lcom/tencent/mm/plugin/sight/draft/ui/b;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$b;->gzt:Lcom/tencent/mm/plugin/sight/draft/ui/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -75,23 +75,23 @@
     check-cast v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;
 
     .line 322
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->bOH:Lcom/tencent/mm/ah/m;
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cfv:Lcom/tencent/mm/an/f;
 
     if-eqz v1, :cond_0
 
     .line 326
     const/4 v1, -0x1
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->bOH:Lcom/tencent/mm/ah/m;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$e;->cfv:Lcom/tencent/mm/an/f;
 
-    iget v0, v0, Lcom/tencent/mm/ah/m;->field_fileStatus:I
+    iget v0, v0, Lcom/tencent/mm/an/f;->field_fileStatus:I
 
     if-eq v1, v0, :cond_0
 
     .line 330
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$b;->fit:Lcom/tencent/mm/plugin/sight/draft/ui/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/draft/ui/b$b;->gzt:Lcom/tencent/mm/plugin/sight/draft/ui/b;
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->fiw:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->gzw:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/sight/draft/ui/b;->a(Lcom/tencent/mm/plugin/sight/draft/ui/b$d;Z)Z
 

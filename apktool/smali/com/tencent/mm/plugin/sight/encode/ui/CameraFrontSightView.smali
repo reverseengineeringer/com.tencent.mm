@@ -4,29 +4,29 @@
 
 
 # instance fields
-.field protected cIw:I
+.field protected cFj:I
 
-.field protected cnL:I
+.field private cZX:Landroid/graphics/Paint;
 
-.field private dnc:Landroid/graphics/Paint;
+.field protected ewY:I
 
-.field fkg:Z
+.field gBe:Z
 
-.field fkh:Z
+.field gBf:Z
 
-.field fki:Z
+.field gBg:Z
 
-.field fkj:Z
+.field gBh:Z
 
-.field fkk:J
+.field gBi:J
 
-.field private fkl:I
+.field private gBj:I
 
-.field private fkm:I
+.field private gBk:I
 
-.field private fkn:I
+.field private gBl:I
 
-.field private fko:Landroid/view/ViewGroup$LayoutParams;
+.field private gBm:Landroid/view/ViewGroup$LayoutParams;
 
 
 # direct methods
@@ -44,24 +44,24 @@
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     .line 29
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkg:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBe:Z
 
     .line 30
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkh:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBf:Z
 
     .line 31
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fki:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBg:Z
 
     .line 32
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkj:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBh:Z
 
     .line 34
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkk:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBi:J
 
     .line 21
     return-void
@@ -81,24 +81,24 @@
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     .line 29
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkg:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBe:Z
 
     .line 30
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkh:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBf:Z
 
     .line 31
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fki:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBg:Z
 
     .line 32
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkj:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBh:Z
 
     .line 34
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkk:J
+    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBi:J
 
     .line 17
     return-void
@@ -106,7 +106,7 @@
 
 
 # virtual methods
-.method public final aK(II)V
+.method public final bd(II)V
     .locals 2
 
     .prologue
@@ -115,43 +115,43 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fko:Landroid/view/ViewGroup$LayoutParams;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBm:Landroid/view/ViewGroup$LayoutParams;
 
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fko:Landroid/view/ViewGroup$LayoutParams;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBm:Landroid/view/ViewGroup$LayoutParams;
 
     if-eqz v0, :cond_0
 
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fko:Landroid/view/ViewGroup$LayoutParams;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBm:Landroid/view/ViewGroup$LayoutParams;
 
     iput p1, v0, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fko:Landroid/view/ViewGroup$LayoutParams;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBm:Landroid/view/ViewGroup$LayoutParams;
 
     iput p2, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
     .line 60
     :cond_0
-    iput p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cIw:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->ewY:I
 
     .line 61
-    iput p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cnL:I
+    iput p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cFj:I
 
     .line 63
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cIw:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->ewY:I
 
     div-int/lit8 v0, v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     .line 64
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cnL:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cFj:I
 
     div-int/lit8 v0, v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     .line 66
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->getContext()Landroid/content/Context;
@@ -160,23 +160,23 @@
 
     const/4 v1, 0x1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkn:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBl:I
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     const v1, -0x8014c9
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 69
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkn:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBl:I
 
     int-to-float v1, v1
 
@@ -201,13 +201,13 @@
     const/4 v1, 0x0
 
     .line 88
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     div-int/lit8 v0, v0, 0x2
 
     int-to-float v0, v0
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     div-int/lit8 v2, v2, 0x2
 
@@ -220,7 +220,7 @@
 
     move-result-wide v2
 
-    iget-wide v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkk:J
+    iget-wide v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBi:J
 
     sub-long/2addr v2, v4
 
@@ -230,12 +230,12 @@
     if-lez v0, :cond_0
 
     .line 92
-    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkg:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBe:Z
 
     .line 93
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkh:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBf:Z
 
     .line 96
     :cond_0
@@ -246,12 +246,12 @@
     if-lez v0, :cond_1
 
     .line 97
-    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkh:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBf:Z
 
     .line 98
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fki:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBg:Z
 
     .line 101
     :cond_1
@@ -262,12 +262,12 @@
     if-lez v0, :cond_2
 
     .line 102
-    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fki:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBg:Z
 
     .line 103
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBh:Z
 
     .line 106
     :cond_2
@@ -278,7 +278,7 @@
     if-lez v0, :cond_3
 
     .line 107
-    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkj:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBh:Z
 
     .line 108
     const/16 v0, 0x8
@@ -291,7 +291,7 @@
 
     .line 112
     :cond_3
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkg:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBe:Z
 
     if-eqz v0, :cond_5
 
@@ -305,13 +305,13 @@
     add-float/2addr v0, v8
 
     .line 114
-    iget v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     div-int/lit8 v4, v4, 0x2
 
     int-to-float v4, v4
 
-    iget v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     div-int/lit8 v5, v5, 0x2
 
@@ -325,7 +325,7 @@
     sub-float v0, v4, v0
 
     .line 116
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     const/high16 v5, 0x437f0000    # 255.0f
 
@@ -337,7 +337,7 @@
 
     .line 121
     :goto_1
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkh:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBf:Z
 
     if-eqz v0, :cond_7
 
@@ -355,7 +355,7 @@
     mul-float/2addr v0, v4
 
     .line 123
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     const/high16 v5, 0x42fe0000    # 127.0f
 
@@ -378,7 +378,7 @@
 
     .line 128
     :goto_3
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkj:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBh:Z
 
     if-eqz v0, :cond_4
 
@@ -392,7 +392,7 @@
     div-float/2addr v0, v11
 
     .line 130
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     const/high16 v3, 0x437f0000    # 255.0f
 
@@ -406,11 +406,11 @@
 
     .line 133
     :cond_4
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     int-to-float v3, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     move-object v0, p1
 
@@ -421,11 +421,11 @@
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
     .line 134
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     int-to-float v4, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     move-object v0, p1
 
@@ -436,19 +436,19 @@
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
     .line 135
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     int-to-float v3, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     int-to-float v5, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     int-to-float v6, v0
 
-    iget-object v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     move-object v2, p1
 
@@ -457,61 +457,61 @@
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
     .line 136
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     int-to-float v2, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     int-to-float v3, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     int-to-float v4, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     move-object v0, p1
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
     .line 137
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     div-int/lit8 v0, v0, 0x2
 
     int-to-float v2, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     div-int/lit8 v0, v0, 0xa
 
     int-to-float v3, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     div-int/lit8 v0, v0, 0x2
 
     int-to-float v4, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     move-object v0, p1
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
     .line 138
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     int-to-float v3, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     div-int/lit8 v0, v0, 0x2
 
     int-to-float v4, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     mul-int/lit8 v0, v0, 0x9
 
@@ -519,38 +519,38 @@
 
     int-to-float v5, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     div-int/lit8 v0, v0, 0x2
 
     int-to-float v6, v0
 
-    iget-object v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     move-object v2, p1
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
     .line 139
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     div-int/lit8 v0, v0, 0x2
 
     int-to-float v3, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     div-int/lit8 v0, v0, 0x2
 
     int-to-float v5, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     div-int/lit8 v0, v0, 0xa
 
     int-to-float v6, v0
 
-    iget-object v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v7, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     move-object v2, p1
 
@@ -559,23 +559,23 @@
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
     .line 140
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     div-int/lit8 v0, v0, 0x2
 
     int-to-float v1, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     int-to-float v2, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkl:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBj:I
 
     div-int/lit8 v0, v0, 0x2
 
     int-to-float v3, v0
 
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->fkm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->gBk:I
 
     mul-int/lit8 v0, v0, 0x9
 
@@ -583,7 +583,7 @@
 
     int-to-float v4, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     move-object v0, p1
 
@@ -608,7 +608,7 @@
 
     .line 125
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->dnc:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/CameraFrontSightView;->cZX:Landroid/graphics/Paint;
 
     const/16 v4, 0xff
 

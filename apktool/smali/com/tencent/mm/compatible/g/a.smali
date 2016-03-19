@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public bjs:Ljava/lang/String;
+.field public btV:Ljava/lang/String;
 
-.field public bjt:J
+.field public btW:J
 
-.field public bju:I
+.field public btX:I
 
-.field public bjv:I
+.field public btY:I
 
 
 # direct methods
@@ -28,25 +28,25 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 11
-    iput-object v1, p0, Lcom/tencent/mm/compatible/g/a;->bjs:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/compatible/g/a;->btV:Ljava/lang/String;
 
     .line 12
-    iput-wide v2, p0, Lcom/tencent/mm/compatible/g/a;->bjt:J
+    iput-wide v2, p0, Lcom/tencent/mm/compatible/g/a;->btW:J
 
     .line 13
-    iput v0, p0, Lcom/tencent/mm/compatible/g/a;->bju:I
+    iput v0, p0, Lcom/tencent/mm/compatible/g/a;->btX:I
 
     .line 14
-    iput v0, p0, Lcom/tencent/mm/compatible/g/a;->bjv:I
+    iput v0, p0, Lcom/tencent/mm/compatible/g/a;->btY:I
 
     .line 17
-    iput-object v1, p0, Lcom/tencent/mm/compatible/g/a;->bjs:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/compatible/g/a;->btV:Ljava/lang/String;
 
-    iput-wide v2, p0, Lcom/tencent/mm/compatible/g/a;->bjt:J
+    iput-wide v2, p0, Lcom/tencent/mm/compatible/g/a;->btW:J
 
-    iput v0, p0, Lcom/tencent/mm/compatible/g/a;->bju:I
+    iput v0, p0, Lcom/tencent/mm/compatible/g/a;->btX:I
 
-    iput v0, p0, Lcom/tencent/mm/compatible/g/a;->bjv:I
+    iput v0, p0, Lcom/tencent/mm/compatible/g/a;->btY:I
 
     .line 18
     return-void
@@ -54,7 +54,7 @@
 
 
 # virtual methods
-.method public final pb()Ljava/lang/String;
+.method public final oT()Ljava/lang/String;
     .locals 4
 
     .prologue
@@ -64,7 +64,7 @@
     invoke-direct {v0}, Ljava/lang/StringBuffer;-><init>()V
 
     .line 64
-    iget-object v1, p0, Lcom/tencent/mm/compatible/g/a;->bjs:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/g/a;->btV:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -74,7 +74,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 66
-    iget-wide v1, p0, Lcom/tencent/mm/compatible/g/a;->bjt:J
+    iget-wide v1, p0, Lcom/tencent/mm/compatible/g/a;->btW:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuffer;->append(J)Ljava/lang/StringBuffer;
 
@@ -84,7 +84,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 68
-    iget v1, p0, Lcom/tencent/mm/compatible/g/a;->bju:I
+    iget v1, p0, Lcom/tencent/mm/compatible/g/a;->btX:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
@@ -94,7 +94,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 70
-    iget v1, p0, Lcom/tencent/mm/compatible/g/a;->bjv:I
+    iget v1, p0, Lcom/tencent/mm/compatible/g/a;->btY:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(I)Ljava/lang/StringBuffer;
 
@@ -119,7 +119,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 73
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;

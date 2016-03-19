@@ -1,22 +1,30 @@
 package com.tencent.mm.sandbox.updater;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import android.net.Uri;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.d.a.no;
+import com.tencent.mm.d.a.no.a;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.c.c;
 
-final class g
-  implements DialogInterface.OnClickListener
+public final class g
+  extends c
 {
-  g(f paramf) {}
-  
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public g()
   {
-    t.d("!32@/B4Tb64lLpIxb8wjt/YBovT6oqBe5bV/", "go to WebView");
-    paramDialogInterface = new Intent("android.intent.action.VIEW", Uri.parse("http://weixin.qq.com/m"));
-    paramDialogInterface.addFlags(268435456);
-    hWp.hWo.startActivity(paramDialogInterface);
+    super(0);
+  }
+  
+  public final boolean a(b paramb)
+  {
+    if (!(paramb instanceof no)) {}
+    Updater localUpdater;
+    do
+    {
+      return false;
+      paramb = (no)paramb;
+      localUpdater = Updater.c(aJS.context, null);
+    } while (localUpdater == null);
+    localUpdater.K(aJS.type, true);
+    return false;
   }
 }
 

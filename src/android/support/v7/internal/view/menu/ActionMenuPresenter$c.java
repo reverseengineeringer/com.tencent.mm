@@ -2,7 +2,6 @@ package android.support.v7.internal.view.menu;
 
 import android.content.Context;
 import android.widget.ImageButton;
-import com.tencent.mm.a.d;
 
 final class ActionMenuPresenter$c
   extends ImageButton
@@ -10,19 +9,19 @@ final class ActionMenuPresenter$c
 {
   public ActionMenuPresenter$c(ActionMenuPresenter paramActionMenuPresenter, Context paramContext)
   {
-    super(paramContext, null, a.d.actionOverflowButtonStyle);
+    super(paramContext, null, 2130772112);
     setClickable(true);
     setFocusable(true);
     setVisibility(0);
     setEnabled(true);
   }
   
-  public final boolean bu()
+  public final boolean be()
   {
     return false;
   }
   
-  public final boolean bv()
+  public final boolean bf()
   {
     return false;
   }
@@ -33,7 +32,7 @@ final class ActionMenuPresenter$c
       return true;
     }
     playSoundEffect(0);
-    lP.showOverflowMenu();
+    kU.showOverflowMenu();
     return true;
   }
 }

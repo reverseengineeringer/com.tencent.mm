@@ -1,16 +1,16 @@
 package oicq.wlogin_sdk.a;
 
-import oicq.wlogin_sdk.tools.e;
+import oicq.wlogin_sdk.tools.d;
 import oicq.wlogin_sdk.tools.util;
 
 public final class ag
   extends a
 {
-  public int jOI = 0;
+  public int mcU = 0;
   
   public ag()
   {
-    jNs = 324;
+    mbE = 324;
   }
   
   public final byte[] a(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2, byte[] paramArrayOfByte3, byte[] paramArrayOfByte4, byte[] paramArrayOfByte5)
@@ -67,12 +67,12 @@ public final class ag
         if (paramArrayOfByte4 != null) {
           System.arraycopy(paramArrayOfByte4, 0, arrayOfByte, j, paramArrayOfByte4.length);
         }
-        paramArrayOfByte1 = e.b(arrayOfByte, arrayOfByte.length, paramArrayOfByte5);
-        jOI = paramArrayOfByte1.length;
-        super.pV(jNs);
-        super.w(paramArrayOfByte1, paramArrayOfByte1.length);
-        super.aVD();
-        return super.aVz();
+        paramArrayOfByte1 = d.b(arrayOfByte, arrayOfByte.length, paramArrayOfByte5);
+        mcU = paramArrayOfByte1.length;
+        super.sL(mbE);
+        super.A(paramArrayOfByte1, paramArrayOfByte1.length);
+        super.bos();
+        return super.boo();
       }
       k = 0;
       m = 0;

@@ -1,12 +1,14 @@
 package com.tencent.mm.app.plugin;
 
 import android.os.Bundle;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.compatible.d.p;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.model.k;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.u;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$FeedbackUriSpanHandler
@@ -17,32 +19,32 @@ class URISpanHandlerSet$FeedbackUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     if (type == 34)
     {
-      paramf = url.trim().replace("weixin://feedback/next/", "");
-      t.d("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "FeedbackUriSpanHandler, url:%s, content:%s", new Object[] { url, paramf });
-      ax.tm().d(new com.tencent.mm.pluginsdk.model.q(com.tencent.mm.compatible.d.q.oW(), paramf, 8));
+      paramb = url.trim().replace("weixin://feedback/next/", "");
+      u.d("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "FeedbackUriSpanHandler, url:%s, content:%s", new Object[] { url, paramb });
+      ah.tE().d(new k(p.oL(), paramb, 8));
       return true;
     }
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     if (paramString.trim().startsWith("weixin://feedback/next/")) {
-      return new ah(paramString, 34, null);
+      return new g(paramString, 34, null);
     }
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[] { 34 };
   }

@@ -4,7 +4,7 @@ import java.io.UnsupportedEncodingException;
 
 public final class a
 {
-  private final int bto;
+  private final int aiH;
   private final byte[] buffer;
   private int position;
   
@@ -12,34 +12,10 @@ public final class a
   {
     buffer = paramArrayOfByte;
     position = 0;
-    bto = (paramInt2 + 0);
+    aiH = (paramInt2 + 0);
   }
   
-  public static int T(int paramInt, String paramString)
-  {
-    if (paramString == null) {
-      return 0;
-    }
-    try
-    {
-      paramString = paramString.getBytes("UTF-8");
-      paramInt = pS(paramInt);
-      int i = pU(paramString.length);
-      int j = paramString.length;
-      return j + (paramInt + i);
-    }
-    catch (UnsupportedEncodingException paramString)
-    {
-      throw new IllegalStateException("UTF-8 not supported.");
-    }
-  }
-  
-  public static int pS(int paramInt)
-  {
-    return pU(a.a.a.b.a.bK(paramInt, 0));
-  }
-  
-  public static int pU(int paramInt)
+  public static int aA(int paramInt)
   {
     if ((paramInt & 0xFFFFFF80) == 0) {
       return 1;
@@ -56,7 +32,68 @@ public final class a
     return 5;
   }
   
-  public final void aR(byte[] paramArrayOfByte)
+  public static int ay(int paramInt)
+  {
+    return aA(a.a.a.b.a.x(paramInt, 0));
+  }
+  
+  public static int e(int paramInt, String paramString)
+  {
+    if (paramString == null) {
+      return 0;
+    }
+    try
+    {
+      paramString = paramString.getBytes("UTF-8");
+      paramInt = ay(paramInt);
+      int i = aA(paramString.length);
+      int j = paramString.length;
+      return j + (paramInt + i);
+    }
+    catch (UnsupportedEncodingException paramString)
+    {
+      throw new IllegalStateException("UTF-8 not supported.");
+    }
+  }
+  
+  public final void ax(int paramInt)
+  {
+    int i = (byte)paramInt;
+    byte[] arrayOfByte = buffer;
+    paramInt = position;
+    position = (paramInt + 1);
+    arrayOfByte[paramInt] = i;
+  }
+  
+  public final void az(int paramInt)
+  {
+    for (;;)
+    {
+      if ((paramInt & 0xFFFFFF80) == 0)
+      {
+        ax(paramInt);
+        return;
+      }
+      ax(paramInt & 0x7F | 0x80);
+      paramInt >>>= 7;
+    }
+  }
+  
+  public final void k(long paramLong)
+  {
+    for (;;)
+    {
+      if ((0xFFFFFFFFFFFFFF80 & paramLong) == 0L)
+      {
+        ax((int)paramLong);
+        return;
+      }
+      ax((int)paramLong & 0x7F | 0x80);
+      paramLong >>>= 7;
+    }
+  }
+  
+  public final void l(byte[] paramArrayOfByte)
   {
     if (paramArrayOfByte == null) {}
     int j;
@@ -68,61 +105,24 @@ public final class a
         return;
         j = paramArrayOfByte.length;
       } while (paramArrayOfByte == null);
-      if (bto - position >= j)
+      if (aiH - position >= j)
       {
         System.arraycopy(paramArrayOfByte, 0, buffer, position, j);
         position = (j + position);
         return;
       }
-      i = bto - position;
+      i = aiH - position;
       System.arraycopy(paramArrayOfByte, 0, buffer, position, i);
       j -= i;
-      position = bto;
-    } while (j > bto);
+      position = aiH;
+    } while (j > aiH);
     System.arraycopy(paramArrayOfByte, i + 0, buffer, 0, j);
     position = j;
   }
   
-  public final void bL(int paramInt1, int paramInt2)
+  public final void w(int paramInt1, int paramInt2)
   {
-    pT(a.a.a.b.a.bK(paramInt1, paramInt2));
-  }
-  
-  public final void da(long paramLong)
-  {
-    for (;;)
-    {
-      if ((0xFFFFFFFFFFFFFF80 & paramLong) == 0L)
-      {
-        pR((int)paramLong);
-        return;
-      }
-      pR((int)paramLong & 0x7F | 0x80);
-      paramLong >>>= 7;
-    }
-  }
-  
-  public final void pR(int paramInt)
-  {
-    int i = (byte)paramInt;
-    byte[] arrayOfByte = buffer;
-    paramInt = position;
-    position = (paramInt + 1);
-    arrayOfByte[paramInt] = i;
-  }
-  
-  public final void pT(int paramInt)
-  {
-    for (;;)
-    {
-      if ((paramInt & 0xFFFFFF80) == 0)
-      {
-        pR(paramInt);
-        return;
-      }
-      pR(paramInt & 0x7F | 0x80);
-      paramInt >>>= 7;
-    }
+    az(a.a.a.b.a.x(paramInt1, paramInt2));
   }
 }
 

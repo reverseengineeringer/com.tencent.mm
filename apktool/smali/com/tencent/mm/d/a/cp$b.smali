@@ -14,12 +14,16 @@
 .end annotation
 
 
+# instance fields
+.field public awe:Z
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 18
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -2,8 +2,10 @@ package com.tencent.mm.d.a;
 
 public final class dl$a
 {
-  public String azx;
-  public String azy;
+  public String axi;
+  public String content;
+  public int flags;
+  public int type;
 }
 
 /* Location:

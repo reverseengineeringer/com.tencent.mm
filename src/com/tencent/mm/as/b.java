@@ -1,56 +1,66 @@
 package com.tencent.mm.as;
 
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import android.accounts.Account;
+import android.accounts.AccountManager;
+import com.tencent.mm.ag.b.a;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.platformtools.r;
+import com.tencent.mm.protocal.b.xm;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.storage.h;
 
 public final class b
 {
-  private static boolean ikI = false;
-  
-  public static void mT(int paramInt)
+  public static void run()
   {
-    boolean bool1;
-    boolean bool2;
-    boolean bool3;
-    boolean bool4;
-    switch (paramInt)
-    {
-    default: 
-      bool1 = false;
-      bool2 = false;
-      bool3 = false;
-      bool4 = false;
-    }
+    long l1 = 0L;
+    if ((!ah.rh()) || (ah.tM())) {}
     for (;;)
     {
-      t.d("!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY=", "hprof operate: dump:%b, checkWifi:%b, uploadSingal:%b,uploadAll:%b,", new Object[] { Boolean.valueOf(bool4), Boolean.valueOf(bool3), Boolean.valueOf(bool2), Boolean.valueOf(bool1) });
-      Executors.newSingleThreadExecutor().execute(new c(bool4, bool3, bool2, bool1));
       return;
-      bool1 = false;
-      bool2 = true;
-      bool3 = false;
-      bool4 = true;
-      continue;
-      bool1 = false;
-      bool2 = true;
-      bool3 = true;
-      bool4 = true;
-      continue;
-      bool1 = false;
-      bool2 = false;
-      bool3 = false;
-      bool4 = true;
-      continue;
-      bool1 = true;
-      bool2 = false;
-      bool3 = false;
-      bool4 = false;
-      continue;
-      bool1 = true;
-      bool2 = false;
-      bool3 = true;
-      bool4 = false;
+      long l3 = ay.FR();
+      long l2 = ay.a((Long)ah.tD().rn().get(331797, null), 0L);
+      if ((10013 == r.cnl) && (r.cnm != 0)) {}
+      while (l1 < l3)
+      {
+        ah.tD().rn().set(331797, Long.valueOf(432000L + l3));
+        try
+        {
+          xm localxm = new xm();
+          juL = "";
+          Account[] arrayOfAccount = AccountManager.get(y.getContext()).getAccountsByType("com.google");
+          int j = arrayOfAccount.length;
+          int i = 0;
+          while (i < j)
+          {
+            Account localAccount = arrayOfAccount[i];
+            if (!ay.kz(juL)) {
+              break;
+            }
+            u.i("!44@/B4Tb64lLpIuznxMDiXSbB31hOU9T/FR8Q26kftvNBM=", "google account[%s]", new Object[] { name });
+            juL = name;
+            i += 1;
+          }
+          if ((10013 == r.cnl) && (r.cnm != 0)) {
+            juL = "rssjbbk@gmail.com";
+          }
+          if (!ay.kz(juL))
+          {
+            ah.tD().rp().b(new b.a(57, localxm));
+            return;
+          }
+        }
+        catch (Exception localException)
+        {
+          u.w("!44@/B4Tb64lLpIuznxMDiXSbB31hOU9T/FR8Q26kftvNBM=", "Get Accounts failed :%s", new Object[] { localException.getMessage() });
+          return;
+        }
+        u.w("!44@/B4Tb64lLpIuznxMDiXSbB31hOU9T/FR8Q26kftvNBM=", "Get Accounts failed , Not any info?");
+        return;
+        l1 = l2;
+      }
     }
   }
 }

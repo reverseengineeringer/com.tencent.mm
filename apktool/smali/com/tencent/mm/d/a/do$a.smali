@@ -15,7 +15,9 @@
 
 
 # instance fields
-.field public context:Landroid/content/Context;
+.field public op:I
+
+.field public username:Ljava/lang/String;
 
 
 # direct methods

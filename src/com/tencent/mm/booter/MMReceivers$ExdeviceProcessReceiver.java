@@ -3,10 +3,9 @@ package com.tencent.mm.booter;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.compatible.d.r;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 public class MMReceivers$ExdeviceProcessReceiver
   extends BroadcastReceiver
@@ -14,10 +13,9 @@ public class MMReceivers$ExdeviceProcessReceiver
   public void onReceive(Context paramContext, Intent paramIntent)
   {
     long l = System.currentTimeMillis();
-    t.i("!56@/B4Tb64lLpLiQ7OrT4MAaceQRK/W0iihqAiu47he09l2tvBb7e03Xw==", "[hakon][Step] onReceive, save rebootTime = %s", new Object[] { Long.valueOf(l) });
-    paramContext = aa.aEW().edit();
-    paramContext.putLong("com.tencent.mm_device_reboot_time", l);
-    paramContext.commit();
+    u.i("!56@/B4Tb64lLpLiQ7OrT4MAaceQRK/W0iihqAiu47he09l2tvBb7e03Xw==", "[hakon][Step] onReceive, save rebootTime = %s", new Object[] { Long.valueOf(l) });
+    y.aUO();
+    r.j(205, l);
   }
 }
 

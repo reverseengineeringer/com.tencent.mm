@@ -35,17 +35,17 @@
     .locals 1
 
     .prologue
-    .line 1469
+    .line 1475
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1474
+    .line 1480
     const/16 v0, 0x14
 
     new-array v0, v0, [Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     iput-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
-    .line 1469
+    .line 1475
     return-void
 .end method
 
@@ -53,7 +53,7 @@
     .locals 0
 
     .prologue
-    .line 1469
+    .line 1475
     invoke-direct {p0}, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;-><init>()V
 
     return-void
@@ -65,25 +65,25 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 1552
+    .line 1558
     invoke-direct {p0, p3}, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->getOperationLocked(I)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     move-result-object v3
 
-    .line 1553
+    .line 1559
     if-eqz v3, :cond_1
 
-    .line 1554
+    .line 1560
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mEndTime:J
 
-    .line 1555
+    .line 1561
     iput-boolean v6, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mFinished:Z
 
-    .line 1556
+    .line 1562
     iget-object v0, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mException:Ljava/lang/Exception;
 
     if-eqz v0, :cond_0
@@ -98,51 +98,51 @@
 
     move v0, v6
 
-    .line 1606
+    .line 1612
     :goto_0
     return v0
 
-    .line 1559
+    .line 1565
     :cond_0
     const/16 v0, 0xa
 
     new-array v5, v0, [I
 
-    .line 1560
+    .line 1566
     const-wide/16 v0, 0x2710
 
-    .line 1561
+    .line 1567
     iget v2, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->type:I
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1606
+    .line 1612
     :cond_1
     :pswitch_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1563
+    .line 1569
     :pswitch_1
-    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/i;->qN()Z
+    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/h;->qJ()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 1564
+    .line 1570
     # invokes: Lcom/tencent/kingkong/database/SQLiteConnection;->nativeGetLastPageTrace(I)[I
     invoke-static {p2}, Lcom/tencent/kingkong/database/SQLiteConnection;->access$3(I)[I
 
     move-result-object v5
 
-    .line 1565
-    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/i;->qO()J
+    .line 1571
+    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/h;->qK()J
 
     move-result-wide v0
 
-    .line 1567
+    .line 1573
     :cond_2
     iget-wide v7, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mEndTime:J
 
@@ -166,7 +166,7 @@
 
     if-lez v0, :cond_1
 
-    .line 1568
+    .line 1574
     :cond_3
     iget-object v1, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mSql:Ljava/lang/String;
 
@@ -180,33 +180,33 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/dbsupport/newcursor/i;->a(Ljava/lang/String;Ljava/lang/String;IJ[I)V
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/dbsupport/newcursor/h;->a(Ljava/lang/String;Ljava/lang/String;IJ[I)V
 
     move v0, v6
 
-    .line 1569
+    .line 1575
     goto :goto_0
 
-    .line 1573
+    .line 1579
     :pswitch_2
-    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/i;->qN()Z
+    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/h;->qJ()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    .line 1574
+    .line 1580
     # invokes: Lcom/tencent/kingkong/database/SQLiteConnection;->nativeGetLastPageTrace(I)[I
     invoke-static {p2}, Lcom/tencent/kingkong/database/SQLiteConnection;->access$3(I)[I
 
     move-result-object v5
 
-    .line 1575
-    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/i;->qO()J
+    .line 1581
+    invoke-static {}, Lcom/tencent/mm/dbsupport/newcursor/h;->qK()J
 
     move-result-wide v0
 
-    .line 1577
+    .line 1583
     :cond_4
     iget-wide v7, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mEndTime:J
 
@@ -230,7 +230,7 @@
 
     if-lez v0, :cond_1
 
-    .line 1578
+    .line 1584
     :cond_5
     iget-object v1, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mSql:Ljava/lang/String;
 
@@ -244,14 +244,14 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/dbsupport/newcursor/i;->a(Ljava/lang/String;Ljava/lang/String;IJ[I)V
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/dbsupport/newcursor/h;->a(Ljava/lang/String;Ljava/lang/String;IJ[I)V
 
     move v0, v6
 
-    .line 1579
+    .line 1585
     goto :goto_0
 
-    .line 1583
+    .line 1589
     :pswitch_3
     iget-wide v0, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mEndTime:J
 
@@ -265,7 +265,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1584
+    .line 1590
     iget-object v1, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mSql:Ljava/lang/String;
 
     iget v2, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->type:I
@@ -278,14 +278,14 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/dbsupport/newcursor/i;->a(Ljava/lang/String;Ljava/lang/String;IJ[I)V
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/dbsupport/newcursor/h;->a(Ljava/lang/String;Ljava/lang/String;IJ[I)V
 
     move v0, v6
 
-    .line 1585
+    .line 1591
     goto/16 :goto_0
 
-    .line 1594
+    .line 1600
     :pswitch_4
     iget-wide v0, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mEndTime:J
 
@@ -299,7 +299,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 1595
+    .line 1601
     iget-object v1, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mSql:Ljava/lang/String;
 
     iget v2, v3, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->type:I
@@ -312,14 +312,14 @@
 
     move-object v0, p1
 
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/dbsupport/newcursor/i;->a(Ljava/lang/String;Ljava/lang/String;IJ[I)V
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/dbsupport/newcursor/h;->a(Ljava/lang/String;Ljava/lang/String;IJ[I)V
 
     move v0, v6
 
-    .line 1596
+    .line 1602
     goto/16 :goto_0
 
-    .line 1561
+    .line 1567
     nop
 
     :pswitch_data_0
@@ -338,15 +338,15 @@
     .locals 2
 
     .prologue
-    .line 1638
+    .line 1644
     and-int/lit16 v0, p1, 0xff
 
-    .line 1639
+    .line 1645
     iget-object v1, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     aget-object v0, v1, v0
 
-    .line 1640
+    .line 1646
     iget v1, v0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mCookie:I
 
     if-ne v1, p1, :cond_0
@@ -364,25 +364,25 @@
     .locals 3
 
     .prologue
-    .line 1623
+    .line 1629
     invoke-direct {p0, p1}, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->getOperationLocked(I)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     move-result-object v0
 
-    .line 1624
+    .line 1630
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1625
+    .line 1631
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->describe(Ljava/lang/StringBuilder;Z)V
 
-    .line 1626
+    .line 1632
     if-eqz p2, :cond_0
 
-    .line 1627
+    .line 1633
     const-string/jumbo v0, ", "
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -391,7 +391,7 @@
 
     invoke-virtual {v0, p2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1629
+    .line 1635
     :cond_0
     const-string/jumbo v0, "MicroMsg.kkdb.SQLiteConnection"
 
@@ -401,7 +401,7 @@
 
     invoke-static {v0, v1}, Lcom/tencent/kingkong/support/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1630
+    .line 1636
     return-void
 .end method
 
@@ -409,14 +409,14 @@
     .locals 2
 
     .prologue
-    .line 1633
+    .line 1639
     iget v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mGeneration:I
 
     add-int/lit8 v1, v0, 0x1
 
     iput v1, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mGeneration:I
 
-    .line 1634
+    .line 1640
     shl-int/lit8 v0, v0, 0x8
 
     or-int/2addr v0, p1
@@ -432,12 +432,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1479
+    .line 1485
     iget-object v2, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     monitor-enter v2
 
-    .line 1480
+    .line 1486
     :try_start_0
     iget v1, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mIndex:I
 
@@ -445,27 +445,27 @@
 
     rem-int/lit8 v3, v1, 0x14
 
-    .line 1481
+    .line 1487
     iget-object v1, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     aget-object v1, v1, v3
 
-    .line 1482
+    .line 1488
     if-nez v1, :cond_2
 
-    .line 1483
+    .line 1489
     new-instance v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     const/4 v4, 0x0
 
     invoke-direct {v1, v4}, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;-><init>(Lcom/tencent/kingkong/database/SQLiteConnection$Operation;)V
 
-    .line 1484
+    .line 1490
     iget-object v4, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     aput-object v1, v4, v3
 
-    .line 1492
+    .line 1498
     :cond_0
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -474,34 +474,34 @@
 
     iput-wide v4, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mStartTime:J
 
-    .line 1493
+    .line 1499
     iput-object p1, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mKind:Ljava/lang/String;
 
-    .line 1494
+    .line 1500
     iput-object p2, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mSql:Ljava/lang/String;
 
-    .line 1495
+    .line 1501
     if-eqz p3, :cond_1
 
-    .line 1496
+    .line 1502
     iget-object v4, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mBindArgs:Ljava/util/ArrayList;
 
     if-nez v4, :cond_3
 
-    .line 1497
+    .line 1503
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v4, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mBindArgs:Ljava/util/ArrayList;
 
-    .line 1501
+    .line 1507
     :goto_1
     array-length v4, p3
 
     if-lt v0, v4, :cond_4
 
-    .line 1511
+    .line 1517
     :cond_1
     invoke-direct {p0, v3}, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->newOperationCookieLocked(I)I
 
@@ -509,38 +509,38 @@
 
     iput v0, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mCookie:I
 
-    .line 1512
+    .line 1518
     iput v3, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mIndex:I
 
-    .line 1513
+    .line 1519
     monitor-exit v2
 
     return-object v1
 
-    .line 1486
+    .line 1492
     :cond_2
     const/4 v4, 0x0
 
     iput-boolean v4, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mFinished:Z
 
-    .line 1487
+    .line 1493
     const/4 v4, 0x0
 
     iput-object v4, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mException:Ljava/lang/Exception;
 
-    .line 1488
+    .line 1494
     iget-object v4, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mBindArgs:Ljava/util/ArrayList;
 
     if-eqz v4, :cond_0
 
-    .line 1489
+    .line 1495
     iget-object v4, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mBindArgs:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
     goto :goto_0
 
-    .line 1479
+    .line 1485
     :catchall_0
     move-exception v0
 
@@ -550,7 +550,7 @@
 
     throw v0
 
-    .line 1499
+    .line 1505
     :cond_3
     :try_start_1
     iget-object v4, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mBindArgs:Ljava/util/ArrayList;
@@ -559,18 +559,18 @@
 
     goto :goto_1
 
-    .line 1502
+    .line 1508
     :cond_4
     aget-object v4, p3, v0
 
-    .line 1503
+    .line 1509
     if-eqz v4, :cond_5
 
     instance-of v5, v4, [B
 
     if-eqz v5, :cond_5
 
-    .line 1505
+    .line 1511
     iget-object v4, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mBindArgs:Ljava/util/ArrayList;
 
     # getter for: Lcom/tencent/kingkong/database/SQLiteConnection;->EMPTY_BYTE_ARRAY:[B
@@ -580,13 +580,13 @@
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1501
+    .line 1507
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1507
+    .line 1513
     :cond_5
     iget-object v5, v1, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mBindArgs:Ljava/util/ArrayList;
 
@@ -601,12 +601,12 @@
     .locals 4
 
     .prologue
-    .line 1644
+    .line 1650
     iget-object v1, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     monitor-enter v1
 
-    .line 1645
+    .line 1651
     :try_start_0
     iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
@@ -614,31 +614,31 @@
 
     aget-object v0, v0, v2
 
-    .line 1646
+    .line 1652
     if-eqz v0, :cond_0
 
     iget-boolean v2, v0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mFinished:Z
 
     if-nez v2, :cond_0
 
-    .line 1647
+    .line 1653
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1648
+    .line 1654
     const/4 v3, 0x0
 
     invoke-virtual {v0, v2, v3}, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->describe(Ljava/lang/StringBuilder;Z)V
 
-    .line 1649
+    .line 1655
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
 
     monitor-exit v1
 
-    .line 1651
+    .line 1657
     :goto_0
     return-object v0
 
@@ -649,7 +649,7 @@
 
     goto :goto_0
 
-    .line 1644
+    .line 1650
     :catchall_0
     move-exception v0
 
@@ -664,12 +664,12 @@
     .locals 8
 
     .prologue
-    .line 1656
+    .line 1662
     iget-object v3, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     monitor-enter v3
 
-    .line 1657
+    .line 1663
     :try_start_0
     const-string/jumbo v0, "MicroMsg.kkdb.SQLiteConnection"
 
@@ -677,18 +677,18 @@
 
     invoke-static {v0, v1}, Lcom/tencent/kingkong/support/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1658
+    .line 1664
     iget v2, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mIndex:I
 
-    .line 1659
+    .line 1665
     iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     aget-object v1, v0, v2
 
-    .line 1660
+    .line 1666
     if-eqz v1, :cond_2
 
-    .line 1661
+    .line 1667
     const/4 v0, 0x0
 
     move v7, v0
@@ -697,13 +697,13 @@
 
     move v1, v7
 
-    .line 1663
+    .line 1669
     :goto_0
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1664
+    .line 1670
     const-string/jumbo v5, "    "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -718,7 +718,7 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1665
+    .line 1671
     # invokes: Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->getFormattedStartTime()Ljava/lang/String;
     invoke-static {v0}, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->access$1(Lcom/tencent/kingkong/database/SQLiteConnection$Operation;)Ljava/lang/String;
 
@@ -726,15 +726,15 @@
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1666
+    .line 1672
     const-string/jumbo v5, "] "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1667
+    .line 1673
     invoke-virtual {v0, v4, p1}, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->describe(Ljava/lang/StringBuilder;Z)V
 
-    .line 1668
+    .line 1674
     const-string/jumbo v0, "MicroMsg.kkdb.SQLiteConnection"
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -743,43 +743,42 @@
 
     invoke-static {v0, v4}, Lcom/tencent/kingkong/support/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1670
+    .line 1676
     if-lez v2, :cond_1
 
-    .line 1671
+    .line 1677
     add-int/lit8 v0, v2, -0x1
 
-    .line 1675
+    .line 1681
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
-    .line 1676
+    .line 1682
     iget-object v2, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     aget-object v2, v2, v0
 
-    .line 1677
+    .line 1683
     if-eqz v2, :cond_0
 
     const/16 v4, 0x14
 
-    .line 1662
     if-lt v1, v4, :cond_3
 
-    .line 1656
+    .line 1662
     :cond_0
     :goto_2
     monitor-exit v3
 
     return-void
 
-    .line 1673
+    .line 1679
     :cond_1
     const/16 v0, 0x13
 
     goto :goto_1
 
-    .line 1679
+    .line 1685
     :cond_2
     const-string/jumbo v0, "MicroMsg.kkdb.SQLiteConnection"
 
@@ -789,7 +788,7 @@
 
     goto :goto_2
 
-    .line 1656
+    .line 1662
     :catchall_0
     move-exception v0
 
@@ -813,12 +812,12 @@
     .locals 2
 
     .prologue
-    .line 1532
+    .line 1538
     iget-object v1, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     monitor-enter v1
 
-    .line 1533
+    .line 1539
     :try_start_0
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->endOperationDeferLogLocked(Ljava/lang/String;II)Z
 
@@ -826,12 +825,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1534
+    .line 1540
     const/4 v0, 0x0
 
     invoke-direct {p0, p3, v0}, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->logOperationLocked(ILjava/lang/String;)V
 
-    .line 1532
+    .line 1538
     :cond_0
     monitor-exit v1
 
@@ -851,12 +850,12 @@
     .locals 2
 
     .prologue
-    .line 1540
+    .line 1546
     iget-object v1, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     monitor-enter v1
 
-    .line 1541
+    .line 1547
     :try_start_0
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->endOperationDeferLogLocked(Ljava/lang/String;II)Z
 
@@ -866,7 +865,7 @@
 
     return v0
 
-    .line 1540
+    .line 1546
     :catchall_0
     move-exception v0
 
@@ -881,24 +880,24 @@
     .locals 2
 
     .prologue
-    .line 1523
+    .line 1529
     iget-object v1, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     monitor-enter v1
 
-    .line 1524
+    .line 1530
     :try_start_0
     invoke-direct {p0, p1}, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->getOperationLocked(I)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     move-result-object v0
 
-    .line 1525
+    .line 1531
     if-eqz v0, :cond_0
 
-    .line 1526
+    .line 1532
     iput-object p2, v0, Lcom/tencent/kingkong/database/SQLiteConnection$Operation;->mException:Ljava/lang/Exception;
 
-    .line 1523
+    .line 1529
     :cond_0
     monitor-exit v1
 
@@ -918,16 +917,16 @@
     .locals 2
 
     .prologue
-    .line 1546
+    .line 1552
     iget-object v1, p0, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->mOperations:[Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
 
     monitor-enter v1
 
-    .line 1547
+    .line 1553
     :try_start_0
     invoke-direct {p0, p1, p2}, Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;->logOperationLocked(ILjava/lang/String;)V
 
-    .line 1546
+    .line 1552
     monitor-exit v1
 
     return-void

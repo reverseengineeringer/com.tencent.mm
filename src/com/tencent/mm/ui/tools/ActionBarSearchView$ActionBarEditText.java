@@ -5,13 +5,13 @@ import android.util.AttributeSet;
 import android.view.KeyEvent;
 import android.view.KeyEvent.DispatcherState;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.widget.AutoMatchKeywordEditText;
 
 public class ActionBarSearchView$ActionBarEditText
-  extends EditText
+  extends AutoMatchKeywordEditText
 {
-  private ActionBarSearchView jor;
+  private ActionBarSearchView ltI;
   
   public ActionBarSearchView$ActionBarEditText(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -25,13 +25,13 @@ public class ActionBarSearchView$ActionBarEditText
   
   public boolean onKeyPreIme(int paramInt, KeyEvent paramKeyEvent)
   {
-    t.v("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on onKeyPreIme");
+    u.v("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on onKeyPreIme");
     if (paramInt == 4)
     {
       KeyEvent.DispatcherState localDispatcherState;
       if ((paramKeyEvent.getAction() == 0) && (paramKeyEvent.getRepeatCount() == 0))
       {
-        t.v("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on onKeyPreIme action down");
+        u.v("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on onKeyPreIme action down");
         localDispatcherState = getKeyDispatcherState();
         if (localDispatcherState != null) {
           localDispatcherState.startTracking(paramKeyEvent, this);
@@ -40,15 +40,15 @@ public class ActionBarSearchView$ActionBarEditText
       }
       if (paramKeyEvent.getAction() == 1)
       {
-        t.v("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on onKeyPreIme action up");
+        u.v("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on onKeyPreIme action up");
         localDispatcherState = getKeyDispatcherState();
         if (localDispatcherState != null) {
           localDispatcherState.handleUpEvent(paramKeyEvent);
         }
         if ((paramKeyEvent.isTracking()) && (!paramKeyEvent.isCanceled()))
         {
-          t.v("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on onKeyPreIme action up is tracking");
-          jor.clearFocus();
+          u.v("!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE=", "on onKeyPreIme action up is tracking");
+          ltI.clearFocus();
           paramKeyEvent = (InputMethodManager)getContext().getSystemService("input_method");
           if (paramKeyEvent != null) {
             paramKeyEvent.hideSoftInputFromWindow(getWindowToken(), 0);
@@ -62,7 +62,7 @@ public class ActionBarSearchView$ActionBarEditText
   
   public void setSearchView(ActionBarSearchView paramActionBarSearchView)
   {
-    jor = paramActionBarSearchView;
+    ltI = paramActionBarSearchView;
   }
 }
 

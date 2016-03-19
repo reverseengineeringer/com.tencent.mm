@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/dt;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -13,15 +13,15 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public azO:Lcom/tencent/mm/d/a/dt$a;
+.field public axF:Lcom/tencent/mm/d/a/dt$a;
 
-.field public azP:Lcom/tencent/mm/d/a/dt$b;
+.field public axG:Lcom/tencent/mm/d/a/dt$b;
 
 
 # direct methods
@@ -32,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/dt;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/dt;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/dt;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/dt;->arR:Z
 
     return-void
 .end method
@@ -45,30 +45,30 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/dt$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/dt$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/dt;->azO:Lcom/tencent/mm/d/a/dt$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/dt;->axF:Lcom/tencent/mm/d/a/dt$a;
 
-    .line 23
+    .line 17
     new-instance v0, Lcom/tencent/mm/d/a/dt$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/dt$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/dt;->azP:Lcom/tencent/mm/d/a/dt$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/dt;->axG:Lcom/tencent/mm/d/a/dt$b;
 
     .line 8
-    const-string/jumbo v0, "GetStaticMap"
+    const-string/jumbo v0, "ExtVoiceFileNameToMsgId"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/dt;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/dt;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/dt;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/dt;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/dt;->jUI:Z
 
     return-void
 .end method

@@ -1,11 +1,33 @@
 package android.support.v4.view.a;
 
+import java.util.ArrayList;
+import java.util.List;
+
 final class b$b
   extends b.c
 {
-  public final Object a(b paramb)
+  public final Object a(final b paramb)
   {
-    return new e(new c(this, paramb));
+    new c.1(new c.a()
+    {
+      public final boolean at()
+      {
+        return b.at();
+      }
+      
+      public final List au()
+      {
+        b.au();
+        new ArrayList();
+        throw new NullPointerException();
+      }
+      
+      public final Object av()
+      {
+        b.as();
+        return null;
+      }
+    });
   }
 }
 

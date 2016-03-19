@@ -1,46 +1,33 @@
-.class final Lcom/tencent/mm/ui/transmit/a;
+.class public final Lcom/tencent/mm/ui/transmit/a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/ui/transmit/a$a;
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic jza:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
+.field apf:Lcom/tencent/mm/ui/base/h;
+
+.field lBr:Lcom/tencent/mm/ui/transmit/a$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;)V
+.method constructor <init>(Lcom/tencent/mm/ui/transmit/a$a;)V
     .locals 0
 
     .prologue
-    .line 212
-    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/a;->jza:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
-
+    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 31
+    iput-object p1, p0, Lcom/tencent/mm/ui/transmit/a;->lBr:Lcom/tencent/mm/ui/transmit/a$a;
 
-
-# virtual methods
-.method public final run()V
-    .locals 2
-
-    .prologue
-    .line 215
-    const-string/jumbo v0, "!44@/B4Tb64lLpLWl/1sKbbnJDN+/k3QDAC+0iKsGdZGh9U="
-
-    const-string/jumbo v1, "test before sendMutiImage"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 216
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/a;->jza:Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;->a(Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;)V
-
-    .line 218
+    .line 32
     return-void
 .end method

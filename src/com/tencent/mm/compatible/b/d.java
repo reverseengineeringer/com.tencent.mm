@@ -3,46 +3,103 @@ package com.tencent.mm.compatible.b;
 import android.annotation.TargetApi;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.AudioManager;
 import android.os.Build.VERSION;
 import com.jg.JgMethodChecked;
-import com.tencent.mm.compatible.d.j;
 import com.tencent.mm.compatible.d.k;
-import com.tencent.mm.compatible.d.q;
-import com.tencent.mm.compatible.util.n;
-import com.tencent.mm.sdk.platformtools.ao;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.compatible.d.p;
+import com.tencent.mm.compatible.util.e;
+import com.tencent.mm.sdk.platformtools.ak;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
 public final class d
 {
-  private static boolean bfq = false;
-  private static boolean bfr = false;
-  private static boolean bfs = false;
-  private final Set apZ = new HashSet();
-  public final AudioManager bfo;
-  public int bfp = 2;
-  public int bft = 0;
+  private static boolean bpw = false;
+  public static boolean bpx = false;
+  private static boolean bpy = false;
+  private static boolean bpz = false;
+  private final Set aod = new HashSet();
+  public int bpA = 0;
+  public final AudioManager bpu;
+  private int bpv = -1;
   
   @JgMethodChecked(author=20, fComment="checked", lastDate="20140429", reviewer=20, vComment={com.jg.EType.RECEIVERCHECK})
   public d(Context paramContext)
   {
-    bfo = ((AudioManager)paramContext.getSystemService("audio"));
-    t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "init dkbt %s", new Object[] { of() });
-    paramContext.registerReceiver(new e(this), new IntentFilter("com.htc.accessory.action.CONNECTION_EXISTING"));
-    paramContext.registerReceiver(new f(this), new IntentFilter("android.bluetooth.device.action.ACL_CONNECTED"));
-    paramContext.registerReceiver(new g(this), new IntentFilter("android.bluetooth.device.action.ACL_DISCONNECTED"));
-    if (com.tencent.mm.compatible.util.h.bT(11)) {
-      paramContext.registerReceiver(new h(this), new IntentFilter("android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"));
+    bpu = ((AudioManager)paramContext.getSystemService("audio"));
+    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "init dkbt %s", new Object[] { nQ() });
+    paramContext.registerReceiver(new BroadcastReceiver()new IntentFilter
+    {
+      public final void onReceive(Context paramAnonymousContext, Intent paramAnonymousIntent)
+      {
+        if (paramAnonymousIntent == null) {
+          return;
+        }
+        paramAnonymousContext = paramAnonymousIntent.getAction();
+        d.aw(paramAnonymousIntent.getBooleanExtra("existing", false));
+        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[" + paramAnonymousContext + "] existing:" + d.nV());
+      }
+    }, new IntentFilter("com.htc.accessory.action.CONNECTION_EXISTING"));
+    paramContext.registerReceiver(new BroadcastReceiver()new IntentFilter
+    {
+      public final void onReceive(Context paramAnonymousContext, Intent paramAnonymousIntent)
+      {
+        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[ BluetoothDevice.ACTION_ACL_CONNECTED ] ");
+        d.ax(true);
+        bN(3);
+      }
+    }, new IntentFilter("android.bluetooth.device.action.ACL_CONNECTED"));
+    paramContext.registerReceiver(new BroadcastReceiver()new IntentFilter
+    {
+      public final void onReceive(Context paramAnonymousContext, Intent paramAnonymousIntent)
+      {
+        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[ BluetoothDevice.ACTION_ACL_DISCONNECTED ] ");
+        d.ax(false);
+        if (bsQbrA == 1) {
+          com.tencent.mm.compatible.c.a.a(d.a(d.this));
+        }
+        bN(4);
+      }
+    }, new IntentFilter("android.bluetooth.device.action.ACL_DISCONNECTED"));
+    if (e.bU(11)) {
+      paramContext.registerReceiver(new BroadcastReceiver()new IntentFilter
+      {
+        public final void onReceive(Context paramAnonymousContext, Intent paramAnonymousIntent)
+        {
+          if (paramAnonymousIntent == null) {}
+          int i;
+          do
+          {
+            return;
+            paramAnonymousContext = paramAnonymousIntent.getAction();
+            i = paramAnonymousIntent.getIntExtra("android.bluetooth.profile.extra.STATE", -1);
+            u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt onReceive action[" + paramAnonymousContext + "] state:" + i);
+            if (i == 2)
+            {
+              d.ax(true);
+              bN(3);
+              return;
+            }
+          } while (i != 0);
+          d.ax(false);
+          if (bsQbrA == 1) {
+            com.tencent.mm.compatible.c.a.a(d.a(d.this));
+          }
+          bN(4);
+        }
+      }, new IntentFilter("android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"));
     }
   }
   
   @TargetApi(14)
-  public static boolean oe()
+  private static boolean nO()
   {
     boolean bool = true;
     try
@@ -54,8 +111,8 @@ public final class d
         }
         return true;
       }
-      if (!bfq) {
-        if (bisbhn == 1)
+      if (!bpw) {
+        if (bsQbrL == 1)
         {
           bool = BluetoothAdapter.getDefaultAdapter().isEnabled();
           return bool;
@@ -64,7 +121,7 @@ public final class d
     }
     catch (Exception localException)
     {
-      t.e("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt exception in isConnectDevice()");
+      u.e("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt exception in isConnectDevice()");
       bool = false;
     }
     return bool;
@@ -72,230 +129,402 @@ public final class d
     return false;
   }
   
-  private boolean og()
+  public static boolean nP()
   {
-    return bfo.getMode() == 0;
+    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt isBluetoothCanUse existing:" + bpy + " , isUseHTCAccessory = " + bpz);
+    if ((bpy) && (!bpz)) {
+      return false;
+    }
+    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt isACLConnected:" + bpw);
+    if (!nO())
+    {
+      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt isACLConnected =  " + bpw + " , isConnectHeadset() = " + nO());
+      return false;
+    }
+    Object localObject = BluetoothAdapter.getDefaultAdapter();
+    if (localObject == null)
+    {
+      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt BluetoothAdapter.getDefaultAdapter() == null");
+      return false;
+    }
+    if (!((BluetoothAdapter)localObject).isEnabled())
+    {
+      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt !adp.isEnabled()");
+      return false;
+    }
+    localObject = ((BluetoothAdapter)localObject).getBondedDevices();
+    if ((localObject == null) || (((Set)localObject).size() == 0))
+    {
+      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt setDev == null || setDev.size() == 0");
+      return false;
+    }
+    localObject = ((Set)localObject).iterator();
+    do
+    {
+      if (!((Iterator)localObject).hasNext()) {
+        break;
+      }
+    } while (((BluetoothDevice)((Iterator)localObject).next()).getBondState() != 12);
+    for (int i = 1;; i = 0)
+    {
+      if (i == 0)
+      {
+        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt hasBond == false");
+        return false;
+      }
+      return true;
+    }
+  }
+  
+  private void nT()
+  {
+    if (bpu != null)
+    {
+      int i = bpu.getMode();
+      boolean bool = bpu.isSpeakerphoneOn();
+      Object localObject1 = k.oi().bR(98305);
+      Object localObject2 = k.oi().bR(94209);
+      if (localObject1 == null)
+      {
+        k.oi().set(98305, Boolean.valueOf(bool));
+        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "storeAudioConfig spearkeron " + bool);
+      }
+      if (localObject2 == null)
+      {
+        k.oi().set(94209, Integer.valueOf(i));
+        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "storeAudioConfig inmode " + i);
+      }
+    }
   }
   
   public final void a(a parama)
   {
     if (parama != null) {
-      apZ.add(parama);
+      aod.add(parama);
     }
   }
   
-  public final int ar(boolean paramBoolean)
+  public final int au(boolean paramBoolean)
   {
     if (paramBoolean) {}
-    for (int i = 3; od(); i = 0) {
+    for (int i = 3; nN(); i = 0) {
       return 0;
     }
     return i;
   }
   
+  @TargetApi(11)
+  public final boolean av(boolean paramBoolean)
+  {
+    int i = 3;
+    int k = 0;
+    int j = 0;
+    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "IPCall dkbt shiftSpeaker:%b -> %b  %s", new Object[] { Boolean.valueOf(nR()), Boolean.valueOf(paramBoolean), nQ() });
+    boolean bool;
+    if (ak.aKi)
+    {
+      u.v("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "shiftSpeaker return when calling blue:%d", new Object[] { Integer.valueOf(bpv) });
+      bool = false;
+      return bool;
+    }
+    if (bpx)
+    {
+      bpu.setMode(0);
+      return false;
+    }
+    nT();
+    if (bsLbqF)
+    {
+      if (paramBoolean)
+      {
+        if (Build.VERSION.SDK_INT < 11) {}
+        for (i = j;; i = 3)
+        {
+          if (bsLbqG >= 0) {
+            i = bsLbqG;
+          }
+          u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "IPCall doShiftSpeaker useSpeakerMode:" + i);
+          if (i != bpu.getMode()) {
+            setMode(i);
+          }
+          bool = paramBoolean;
+          if (bpu.isSpeakerphoneOn()) {
+            break;
+          }
+          setSpeakerphoneOn(true);
+          return paramBoolean;
+        }
+      }
+      if (Build.VERSION.SDK_INT < 11)
+      {
+        if (bsQbrL != 1) {
+          break label728;
+        }
+        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "doShiftSpeaker htc usePhoneMode : 0");
+      }
+    }
+    label723:
+    label728:
+    for (i = 0;; i = 2)
+    {
+      if (bsLbqH >= 0) {
+        i = bsLbqH;
+      }
+      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "IPCall doShiftSpeaker usePhoneMode:" + i);
+      if (i != bpu.getMode()) {
+        setMode(i);
+      }
+      bool = paramBoolean;
+      if (!bpu.isSpeakerphoneOn()) {
+        break;
+      }
+      setSpeakerphoneOn(false);
+      return paramBoolean;
+      if (bsLbpH)
+      {
+        if (p.bsL.nW())
+        {
+          if (bsLbpJ >= 0) {
+            setMode(bsLbpJ);
+          }
+          for (;;)
+          {
+            bool = paramBoolean;
+            if (bsLbpL <= 0) {
+              break;
+            }
+            setSpeakerphoneOn(paramBoolean);
+            return paramBoolean;
+            if (bsLbpK >= 0) {
+              if (paramBoolean) {
+                setMode(0);
+              } else {
+                setMode(2);
+              }
+            }
+          }
+        }
+        if (p.bsL.nX())
+        {
+          if (paramBoolean)
+          {
+            if (p.bsL.oa()) {
+              setSpeakerphoneOn(true);
+            }
+            bool = paramBoolean;
+            if (p.bsL.nZ() < 0) {
+              break;
+            }
+            setMode(p.bsL.nZ());
+            return paramBoolean;
+          }
+          if (p.bsL.oc()) {
+            setSpeakerphoneOn(false);
+          }
+          bool = paramBoolean;
+          if (p.bsL.ob() < 0) {
+            break;
+          }
+          setMode(p.bsL.ob());
+          return paramBoolean;
+        }
+      }
+      if (paramBoolean)
+      {
+        if (Build.VERSION.SDK_INT < 11) {}
+        for (i = k;; i = 3)
+        {
+          if (bsLbqg >= 0) {
+            i = bsLbqg;
+          }
+          u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "IPCall doShiftSpeaker useSpeakerMode:" + i);
+          if (i != bpu.getMode()) {
+            setMode(i);
+          }
+          bool = paramBoolean;
+          if (bpu.isSpeakerphoneOn()) {
+            break;
+          }
+          setSpeakerphoneOn(true);
+          return paramBoolean;
+        }
+      }
+      if (Build.VERSION.SDK_INT < 11)
+      {
+        if (bsQbrL != 1) {
+          break label723;
+        }
+        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "doShiftSpeaker htc usePhoneMode : 0");
+      }
+      for (i = 0;; i = 2)
+      {
+        j = i;
+        if (Build.VERSION.SDK_INT >= 11)
+        {
+          j = i;
+          if (com.tencent.mm.compatible.util.j.nu())
+          {
+            j = i;
+            if (2 == bsQbrM) {
+              j = 2;
+            }
+          }
+        }
+        if (bsLbqh >= 0) {
+          j = bsLbqh;
+        }
+        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "IPCall doShiftSpeaker usePhoneMode:" + j);
+        if (j != bpu.getMode()) {
+          setMode(j);
+        }
+        bool = paramBoolean;
+        if (!bpu.isSpeakerphoneOn()) {
+          break;
+        }
+        setSpeakerphoneOn(false);
+        return paramBoolean;
+      }
+    }
+  }
+  
   public final void b(a parama)
   {
     if (parama != null) {
-      apZ.remove(parama);
+      aod.remove(parama);
     }
+  }
+  
+  public final boolean b(boolean paramBoolean, int paramInt)
+  {
+    int i = bpu.getStreamMaxVolume(paramInt);
+    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "maxVolumn:" + i);
+    i /= 3;
+    int j = bpu.getStreamVolume(paramInt);
+    if (j < i) {
+      bpu.setStreamVolume(paramInt, i, 0);
+    }
+    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "StreamType:" + paramInt + "  current:" + j);
+    return b(paramBoolean, true);
   }
   
   @TargetApi(11)
   public final boolean b(boolean paramBoolean1, boolean paramBoolean2)
   {
     int i = 1;
-    int k = 1;
-    int n = 0;
-    int m = 0;
+    int k = 0;
     int j = 0;
-    int i1 = bfo.getMode();
-    t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt shiftSpeaker:%b -> %b  %s", new Object[] { Boolean.valueOf(og()), Boolean.valueOf(paramBoolean1), of() });
-    if (ao.aGN)
+    int m = bpu.getMode();
+    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt shiftSpeaker:%b -> %b  %s", new Object[] { Boolean.valueOf(nR()), Boolean.valueOf(paramBoolean1), nQ() });
+    if (ak.aKi)
     {
-      t.v("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "shiftSpeaker return when calling Mode:%d blue:%d", new Object[] { Integer.valueOf(i1), Integer.valueOf(bfp) });
+      u.v("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "shiftSpeaker return when calling Mode:%d blue:%d", new Object[] { Integer.valueOf(m), Integer.valueOf(bpv) });
       paramBoolean2 = false;
-      return paramBoolean2;
     }
-    if ((!paramBoolean2) && (bfp == 1))
+    do
     {
-      bfo.setMode(0);
-      return false;
-    }
-    if ((paramBoolean2) && (bfp == 1) && (bfq))
-    {
-      bfo.setMode(0);
-      return false;
-    }
-    Object localObject1;
-    if (bfo != null)
-    {
-      i1 = bfo.getMode();
-      boolean bool = bfo.isSpeakerphoneOn();
-      localObject1 = k.ot().bQ(98305);
-      Object localObject2 = k.ot().bQ(94209);
-      if (localObject1 == null)
+      do
       {
-        k.ot().set(98305, Boolean.valueOf(bool));
-        t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "storeAudioConfig spearkeron " + bool);
-      }
-      if (localObject2 == null)
-      {
-        k.ot().set(94209, Integer.valueOf(i1));
-        t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "storeAudioConfig inmode " + i1);
-      }
-    }
-    if (paramBoolean2)
-    {
-      if (biobfA)
-      {
-        localObject1 = q.bio;
-        if (((bfC >= 0) && (bfD < 0)) || ((bfC < 0) && (bfD >= 0)) || (bfE > 0))
+        return paramBoolean2;
+        if ((nN()) || (bpx))
         {
-          i = 1;
-          label332:
-          if (i == 0) {
-            break label407;
-          }
-          if (biobfC < 0) {
-            break label378;
-          }
-          setMode(biobfC);
+          bpu.setMode(0);
+          return false;
         }
-        for (;;)
-        {
-          paramBoolean2 = paramBoolean1;
-          if (biobfE <= 0) {
-            break;
-          }
-          setSpeakerphoneOn(paramBoolean1);
-          return paramBoolean1;
-          i = 0;
-          break label332;
-          label378:
-          if (biobfD >= 0) {
-            if (paramBoolean1) {
-              setMode(0);
-            } else {
-              setMode(2);
-            }
-          }
+        nT();
+        if (!paramBoolean2) {
+          break label295;
         }
-        label407:
-        if (q.bio.ok())
+        if (!bsLbpH) {
+          break label532;
+        }
+        if (p.bsL.nW())
         {
-          if (paramBoolean1)
-          {
-            localObject1 = q.bio;
-            i = j;
-            if (((com.tencent.mm.compatible.d.a)localObject1).ok())
-            {
-              k = bfF & 0x10;
-              localObject1 = new StringBuilder("enableSpeaker ");
-              if (k <= 0) {
-                break label522;
-              }
-            }
-            label522:
-            for (paramBoolean2 = true;; paramBoolean2 = false)
-            {
-              t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", paramBoolean2);
-              i = j;
-              if (k > 0) {
-                i = 1;
-              }
-              if (i != 0) {
-                setSpeakerphoneOn(true);
-              }
-              paramBoolean2 = paramBoolean1;
-              if (q.bio.om() < 0) {
-                break;
-              }
-              setMode(q.bio.om());
-              return paramBoolean1;
-            }
-          }
-          localObject1 = q.bio;
-          if (((com.tencent.mm.compatible.d.a)localObject1).ok())
-          {
-            i = bfF & 0x1;
-            localObject1 = new StringBuilder("disableSpeaker ");
-            if (i > 0)
-            {
-              paramBoolean2 = true;
-              label566:
-              t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", paramBoolean2);
-              if (i <= 0) {
-                break label625;
-              }
-              i = k;
-            }
+          if (bsLbpJ >= 0) {
+            setMode(bsLbpJ);
           }
           for (;;)
           {
-            if (i != 0) {
-              setSpeakerphoneOn(false);
-            }
             paramBoolean2 = paramBoolean1;
-            if (q.bio.on() < 0) {
+            if (bsLbpL <= 0) {
               break;
             }
-            setMode(q.bio.on());
+            setSpeakerphoneOn(paramBoolean1);
             return paramBoolean1;
-            paramBoolean2 = false;
-            break label566;
-            label625:
-            i = 0;
-            continue;
-            i = 0;
+            if (bsLbpK >= 0) {
+              if (paramBoolean1) {
+                setMode(0);
+              } else {
+                setMode(2);
+              }
+            }
           }
         }
+        if (!p.bsL.nX()) {
+          break label532;
+        }
+        if (!paramBoolean1) {
+          break;
+        }
+        if (p.bsL.oa()) {
+          setSpeakerphoneOn(true);
+        }
+        paramBoolean2 = paramBoolean1;
+      } while (p.bsL.nZ() < 0);
+      setMode(p.bsL.nZ());
+      return paramBoolean1;
+      if (p.bsL.oc()) {
+        setSpeakerphoneOn(false);
       }
-    }
-    else if ((biobfA) && (q.bio.ol()))
+      paramBoolean2 = paramBoolean1;
+    } while (p.bsL.ob() < 0);
+    setMode(p.bsL.ob());
+    return paramBoolean1;
+    label295:
+    if ((bsLbpH) && (p.bsL.nY()))
     {
       if (paramBoolean1)
       {
-        localObject1 = q.bio;
-        i = n;
-        if (((com.tencent.mm.compatible.d.a)localObject1).ol())
+        localObject = p.bsL;
+        i = j;
+        if (((com.tencent.mm.compatible.d.a)localObject).nY())
         {
-          j = bfG & 0x10;
-          localObject1 = new StringBuilder("enableSpeaker ");
-          if (j <= 0) {
-            break label759;
+          k = bpN & 0x10;
+          localObject = new StringBuilder("enableSpeaker ");
+          if (k <= 0) {
+            break label419;
           }
         }
-        label759:
+        label419:
         for (paramBoolean2 = true;; paramBoolean2 = false)
         {
-          t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", paramBoolean2);
-          i = n;
-          if (j > 0) {
+          u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", paramBoolean2);
+          i = j;
+          if (k > 0) {
             i = 1;
           }
           if (i != 0) {
             setSpeakerphoneOn(true);
           }
           paramBoolean2 = paramBoolean1;
-          if (q.bio.oo() < 0) {
+          if (p.bsL.od() < 0) {
             break;
           }
-          setMode(q.bio.oo());
+          setMode(p.bsL.od());
           return paramBoolean1;
         }
       }
-      localObject1 = q.bio;
-      if (((com.tencent.mm.compatible.d.a)localObject1).ol())
+      Object localObject = p.bsL;
+      if (((com.tencent.mm.compatible.d.a)localObject).nY())
       {
-        j = bfG & 0x1;
-        localObject1 = new StringBuilder("disableSpeaker ");
+        j = bpN & 0x1;
+        localObject = new StringBuilder("disableSpeaker ");
         if (j > 0)
         {
           paramBoolean2 = true;
-          label805:
-          t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", paramBoolean2);
+          label465:
+          u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", paramBoolean2);
           if (j <= 0) {
-            break label862;
+            break label522;
           }
         }
       }
@@ -305,114 +534,115 @@ public final class d
           setSpeakerphoneOn(false);
         }
         paramBoolean2 = paramBoolean1;
-        if (q.bio.op() < 0) {
+        if (p.bsL.oe() < 0) {
           break;
         }
-        setMode(q.bio.op());
+        setMode(p.bsL.oe());
         return paramBoolean1;
         paramBoolean2 = false;
-        break label805;
-        label862:
+        break label465;
+        label522:
         i = 0;
         continue;
         i = 0;
       }
     }
+    label532:
     if (paramBoolean2)
     {
       if (paramBoolean1)
       {
         if (Build.VERSION.SDK_INT < 11)
         {
-          i = m;
-          label891:
-          if (biobga >= 0) {
-            i = biobga;
+          i = k;
+          label551:
+          if (bsLbqg >= 0) {
+            i = bsLbqg;
           }
-          t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "voip doShiftSpeaker useSpeakerMode:" + i);
-          if (i != bfo.getMode()) {
+          u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "voip doShiftSpeaker useSpeakerMode:" + i);
+          if (i != bpu.getMode()) {
             setMode(i);
           }
-          if (i != bfo.getMode())
+          if (i != bpu.getMode())
           {
-            if (bft != 0) {
-              break label992;
+            if (bpA != 0) {
+              break label652;
             }
-            bft = 1;
+            bpA = 1;
           }
         }
         for (;;)
         {
           paramBoolean2 = paramBoolean1;
-          if (bfo.isSpeakerphoneOn()) {
+          if (bpu.isSpeakerphoneOn()) {
             break;
           }
           setSpeakerphoneOn(true);
           return paramBoolean1;
           i = 3;
-          break label891;
-          label992:
-          if (bft == 2) {
-            bft = 3;
+          break label551;
+          label652:
+          if (bpA == 2) {
+            bpA = 3;
           }
         }
       }
       if (Build.VERSION.SDK_INT < 11)
       {
-        if (bisbhn != 1) {
-          break label1268;
+        if (bsQbrL != 1) {
+          break label943;
         }
-        t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "doShiftSpeaker htc usePhoneMode : 0");
+        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "doShiftSpeaker htc usePhoneMode : 0");
         i = 0;
       }
     }
     for (;;)
     {
-      label1046:
+      label706:
       j = i;
       if (Build.VERSION.SDK_INT >= 11)
       {
         j = i;
-        if (n.nJ())
+        if (com.tencent.mm.compatible.util.j.nu())
         {
           j = i;
-          if (2 == bisbho) {
+          if (2 == bsQbrM) {
             j = 2;
           }
         }
       }
-      if (biobgb >= 0) {
-        j = biobgb;
+      if (bsLbqh >= 0) {
+        j = bsLbqh;
       }
-      t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "voip doShiftSpeaker usePhoneMode:" + j);
-      if (j != bfo.getMode()) {
+      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "voip doShiftSpeaker usePhoneMode:" + j);
+      if (j != bpu.getMode()) {
         setMode(j);
       }
-      if (j != bfo.getMode())
+      if (j != bpu.getMode())
       {
-        if (bft != 0) {
-          break label1188;
+        if (bpA != 0) {
+          break label848;
         }
-        bft = 2;
+        bpA = 2;
       }
       for (;;)
       {
         paramBoolean2 = paramBoolean1;
-        if (!bfo.isSpeakerphoneOn()) {
+        if (!bpu.isSpeakerphoneOn()) {
           break;
         }
         setSpeakerphoneOn(false);
         return paramBoolean1;
         i = 3;
-        break label1046;
-        label1188:
-        if (bft == 1) {
-          bft = 3;
+        break label706;
+        label848:
+        if (bpA == 1) {
+          bpA = 3;
         }
       }
       setSpeakerphoneOn(paramBoolean1);
       paramBoolean2 = paramBoolean1;
-      if (og() == paramBoolean1) {
+      if (nR() == paramBoolean1) {
         break;
       }
       if (paramBoolean1)
@@ -420,169 +650,143 @@ public final class d
         setMode(0);
         return paramBoolean1;
       }
-      if ((Build.VERSION.SDK_INT >= 11) && (n.nJ()) && (2 != bisbho))
+      if ((Build.VERSION.SDK_INT >= 11) && (com.tencent.mm.compatible.util.j.nu()) && (2 != bsQbrM))
+      {
+        setMode(3);
+        return paramBoolean1;
+      }
+      if (Build.VERSION.SDK_INT >= 11)
       {
         setMode(3);
         return paramBoolean1;
       }
       setMode(2);
       return paramBoolean1;
-      label1268:
+      label943:
       i = 2;
+    }
+  }
+  
+  public final void bN(int paramInt)
+  {
+    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "notify, new status: %d, current status: %d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(bpv) });
+    if (bpv != paramInt)
+    {
+      bpv = paramInt;
+      Iterator localIterator = aod.iterator();
+      while (localIterator.hasNext()) {
+        ((a)localIterator.next()).aO(paramInt);
+      }
     }
   }
   
   public final void bO(int paramInt)
   {
-    Iterator localIterator = apZ.iterator();
-    while (localIterator.hasNext()) {
-      ((a)localIterator.next()).aK(paramInt);
+    if (bpu != null) {
+      bpu.adjustStreamVolume(paramInt, 1, 5);
     }
   }
   
-  public final int ob()
+  public final void bP(int paramInt)
   {
-    int j = 1;
-    t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt isBluetoothCanUse existing:" + bfr + " , isUseHTCAccessory = " + bfs);
-    if ((bfr) && (!bfs)) {
-      i = 0;
+    if (bpu != null) {
+      bpu.adjustStreamVolume(paramInt, -1, 5);
     }
-    Object localObject;
-    while (i == 0)
+  }
+  
+  public final int nL()
+  {
+    int i = 1;
+    if (!nP())
     {
       i = -1;
       return i;
-      t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt isConnectDevice:" + bfq);
-      if (!oe())
+    }
+    bpv = -1;
+    u.h("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt begin tryStartBluetooth %s", new Object[] { nQ() });
+    AudioManager localAudioManager = bpu;
+    boolean bool;
+    if (!localAudioManager.isBluetoothScoAvailableOffCall()) {
+      bool = false;
+    }
+    for (;;)
+    {
+      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt end tryStartBluetooth %s ret:%s", new Object[] { nQ(), Boolean.valueOf(bool) });
+      u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt  tryStartBluetooth " + nQ() + " ret:" + bool);
+      if (nN()) {
+        break;
+      }
+      return 0;
+      if (ak.aKi)
       {
-        t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt isConnectDevice =  " + bfq + " , isConnectDevice() = " + oe());
-        i = 0;
+        bool = false;
       }
       else
       {
-        localObject = BluetoothAdapter.getDefaultAdapter();
-        if (localObject == null)
-        {
-          t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt BluetoothAdapter.getDefaultAdapter() == null");
-          i = 0;
+        if ((bsQbrC == 1) || (bsQbrC == -1)) {
+          localAudioManager.startBluetoothSco();
         }
-        else if (!((BluetoothAdapter)localObject).isEnabled())
-        {
-          t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt !adp.isEnabled()");
-          i = 0;
+        if ((bsQbrD == 1) || (bsQbrC == -1)) {
+          localAudioManager.setBluetoothScoOn(true);
         }
-        else
-        {
-          localObject = ((BluetoothAdapter)localObject).getBondedDevices();
-          if ((localObject == null) || (((Set)localObject).size() == 0))
-          {
-            t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt setDev == null || setDev.size() == 0");
-            i = 0;
-          }
-          else
-          {
-            localObject = ((Set)localObject).iterator();
-            do
-            {
-              if (!((Iterator)localObject).hasNext()) {
-                break;
-              }
-            } while (((BluetoothDevice)((Iterator)localObject).next()).getBondState() != 12);
-          }
-        }
-      }
-    }
-    for (int i = 1;; i = 0)
-    {
-      if (i == 0)
-      {
-        t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt hasBond == false");
-        i = 0;
-        break;
-      }
-      i = 1;
-      break;
-      t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt begin tryStartBluetooth %s", new Object[] { of() });
-      localObject = bfo;
-      boolean bool;
-      if (!((AudioManager)localObject).isBluetoothScoAvailableOffCall()) {
-        bool = false;
-      }
-      for (;;)
-      {
-        t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt end tryStartBluetooth %s ret:%s", new Object[] { of(), Boolean.valueOf(bool) });
-        t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt  tryStartBluetooth " + of() + " ret:" + bool);
-        i = j;
-        if (od()) {
-          break;
-        }
-        return 0;
-        if (ao.aGN)
-        {
-          bool = false;
-        }
-        else
-        {
-          if ((bisbhe == 1) || (bisbhe == -1)) {
-            ((AudioManager)localObject).startBluetoothSco();
-          }
-          if ((bisbhf == 1) || (bisbhe == -1)) {
-            ((AudioManager)localObject).setBluetoothScoOn(true);
-          }
-          bool = true;
-        }
+        bool = true;
       }
     }
   }
   
-  public final void oc()
+  public final void nM()
   {
-    t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt begin stopBluetooth %s", new Object[] { of() });
-    com.tencent.mm.compatible.c.a.a(bfo);
-    t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt end stopBluetooth %s", new Object[] { of() });
+    u.h("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt begin stopBluetooth %s", new Object[] { nQ() });
+    com.tencent.mm.compatible.c.a.a(bpu);
+    u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "dkbt end stopBluetooth %s", new Object[] { nQ() });
   }
   
-  public final boolean od()
+  public final boolean nN()
   {
-    return (bfo.isBluetoothScoOn()) || (bfq);
+    return (bpu.isBluetoothScoOn()) || (bpx);
   }
   
-  public final String of()
+  public final String nQ()
   {
-    return "mode:" + bfo.getMode() + " isSpeakerphoneOn:" + bfo.isSpeakerphoneOn() + " isBluetoothOn:" + od() + " btStatus:" + bfp;
+    return "mode:" + bpu.getMode() + " isSpeakerphoneOn:" + bpu.isSpeakerphoneOn() + " isBluetoothOn:" + nN() + " btStatus:" + bpv;
   }
   
-  public final boolean oh()
+  public final boolean nR()
   {
-    if (bfo != null) {
-      return bfo.isWiredHeadsetOn();
+    return bpu.getMode() == 0;
+  }
+  
+  public final boolean nS()
+  {
+    if (bpu != null) {
+      return bpu.isWiredHeadsetOn();
     }
     return false;
   }
   
-  public final void oi()
+  public final void nU()
   {
     Object localObject2;
-    if (bfo != null)
+    if (bpu != null)
     {
-      Object localObject1 = k.ot().bQ(98305);
-      localObject2 = k.ot().bQ(94209);
+      Object localObject1 = k.oi().bR(98305);
+      localObject2 = k.oi().bR(94209);
       if (localObject1 != null)
       {
-        t.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "resumeAudioConfig spearkeron: " + localObject1);
+        u.d("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "resumeAudioConfig spearkeron: " + localObject1);
         setSpeakerphoneOn(((Boolean)localObject1).booleanValue());
-        k.ot().set(98305, null);
+        k.oi().set(98305, null);
       }
       if (localObject2 == null) {}
     }
     try
     {
-      t.i("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "resumeAudioConfig oinmode: " + localObject2 + ",inmode:0");
+      u.i("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "resumeAudioConfig oinmode: " + localObject2 + ",inmode:0");
       i = Integer.parseInt(String.valueOf(localObject2));
       if ((i >= -1) && (i < 4))
       {
         setMode(i);
-        k.ot().set(94209, null);
+        k.oi().set(94209, null);
         return;
       }
     }
@@ -599,26 +803,26 @@ public final class d
   
   public final void setMode(int paramInt)
   {
-    if (bfo != null)
+    if (bpu != null)
     {
-      t.i("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "set mode from %d to %d", new Object[] { Integer.valueOf(bfo.getMode()), Integer.valueOf(paramInt) });
-      bfo.setMode(paramInt);
+      u.i("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "set mode from %d to %d", new Object[] { Integer.valueOf(bpu.getMode()), Integer.valueOf(paramInt) });
+      bpu.setMode(paramInt);
     }
   }
   
   public final void setSpeakerphoneOn(boolean paramBoolean)
   {
-    t.c("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "setSpeakerphoneOn, on: " + paramBoolean, new Object[0]);
-    if (bfo != null)
+    u.h("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "setSpeakerphoneOn, on: " + paramBoolean, new Object[0]);
+    if (bpu != null)
     {
-      t.i("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "setSpeakerphoneOn on: " + paramBoolean);
-      bfo.setSpeakerphoneOn(paramBoolean);
+      u.i("!32@/B4Tb64lLpLjA0AEL11ABtNa4dj7akx6", "setSpeakerphoneOn on: " + paramBoolean);
+      bpu.setSpeakerphoneOn(paramBoolean);
     }
   }
   
   public static abstract interface a
   {
-    public abstract void aK(int paramInt);
+    public abstract void aO(int paramInt);
   }
 }
 

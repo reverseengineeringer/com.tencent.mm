@@ -2,58 +2,83 @@ package com.tencent.mm.ui.account.mobile;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.widget.Toast;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.by;
-import com.tencent.mm.modelsimple.s;
-import com.tencent.mm.platformtools.p;
-import com.tencent.mm.pluginsdk.i;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.as;
+import com.tencent.mm.model.as.a;
+import com.tencent.mm.modelsimple.d;
+import com.tencent.mm.modelsimple.t;
+import com.tencent.mm.network.e;
+import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.pluginsdk.f;
+import com.tencent.mm.r.j;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.y;
 import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.base.h;
 
 public final class a
 {
-  private String aFr;
-  private String bLf = "";
-  boolean iuV = false;
-  private String iyF = "";
-  private a iyG;
+  private String aIG;
+  private String cbh = "";
+  boolean ktX = false;
+  private String kxJ = "";
+  private a kxK;
   private String username = "";
   
   public a(a parama, String paramString1, String paramString2, String paramString3)
   {
     username = paramString1;
-    bLf = paramString3;
-    iyF = paramString2;
-    iyG = parama;
+    cbh = paramString3;
+    kxJ = paramString2;
+    kxK = parama;
   }
   
-  public final void a(MMActivity paramMMActivity, int paramInt1, int paramInt2, String paramString, com.tencent.mm.q.j paramj)
+  public final void a(final MMActivity paramMMActivity, int paramInt1, int paramInt2, String paramString, j paramj)
   {
     if ((paramInt1 == 4) && ((paramInt2 == -16) || (paramInt2 == -17))) {
-      ax.tm().d(new by(new c(this)));
+      ah.tE().d(new as(new as.a()
+      {
+        public final void a(e paramAnonymouse)
+        {
+          if (paramAnonymouse == null) {
+            return;
+          }
+          paramAnonymouse = paramAnonymouse.vW();
+          int i = tDuin;
+          paramAnonymouse.i(new byte[0], i);
+        }
+      }));
     }
     for (int i = 1;; i = 0)
     {
-      if ((paramj instanceof s)) {
-        aFr = ((s)paramj).AK();
+      if ((paramj instanceof t)) {
+        aIG = ((t)paramj).Cx();
       }
       if ((i != 0) || ((paramInt1 == 0) && (paramInt2 == 0)))
       {
-        ax.tw();
-        com.tencent.mm.modelsimple.e.aG(paramMMActivity);
-        p.iS(bLf);
-        p.a(paramMMActivity, new d(this, paramMMActivity), false, 2);
-        if (iuV)
+        ah.unhold();
+        d.aV(paramMMActivity);
+        com.tencent.mm.platformtools.m.kv(cbh);
+        com.tencent.mm.platformtools.m.a(paramMMActivity, new Runnable()
         {
-          paramMMActivity = aa.getContext().getSharedPreferences("auto_auth_key_prefs", com.tencent.mm.compatible.util.j.pj()).getString("randomID", "");
-          com.tencent.mm.plugin.report.service.j.eJZ.f(11930, new Object[] { paramMMActivity, Integer.valueOf(4) });
+          public final void run()
+          {
+            Intent localIntent = com.tencent.mm.plugin.a.a.coa.ak(paramMMActivity);
+            localIntent.addFlags(67108864);
+            paramMMActivity.startActivity(localIntent);
+            paramMMActivity.finish();
+          }
+        }, false, 2);
+        if (ktX)
+        {
+          paramMMActivity = y.getContext().getSharedPreferences("randomid_prefs", 4).getString("randomID", "");
+          h.fUJ.g(11930, new Object[] { paramMMActivity, Integer.valueOf(4) });
         }
       }
       for (;;)
@@ -61,15 +86,15 @@ public final class a
         return;
         if (paramInt2 == -106)
         {
-          p.y(paramMMActivity, paramString);
+          com.tencent.mm.platformtools.m.B(paramMMActivity, paramString);
           return;
         }
-        if (com.tencent.mm.plugin.a.a.bWX.a(paramMMActivity, paramInt1, paramInt2, paramString)) {
+        if (com.tencent.mm.plugin.a.a.cob.a(paramMMActivity, paramInt1, paramInt2, paramString)) {
           i = 1;
         }
         while (i == 0)
         {
-          Toast.makeText(paramMMActivity, paramMMActivity.getString(a.n.fmt_auth_err, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
+          Toast.makeText(paramMMActivity, paramMMActivity.getString(2131427482, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
           return;
           if (paramInt1 == 4) {}
           switch (paramInt2)
@@ -78,41 +103,47 @@ public final class a
             i = 0;
             break;
           case -1: 
-            if (ax.tm().vr() == 6)
+            if (ah.tE().vL() == 6)
             {
-              h.g(paramMMActivity, a.n.net_warn_server_down_tip, a.n.net_warn_server_down);
+              com.tencent.mm.ui.base.g.e(paramMMActivity, 2131427842, 2131427841);
               i = 1;
             }
             break;
           case -4: 
           case -3: 
-            h.g(paramMMActivity, a.n.errcode_password, a.n.login_err_title);
+            com.tencent.mm.ui.base.g.e(paramMMActivity, 2131427748, 2131427766);
             i = 1;
             break;
           case -9: 
-            h.g(paramMMActivity, a.n.login_err_mailnotverify, a.n.login_err_title);
+            com.tencent.mm.ui.base.g.e(paramMMActivity, 2131427767, 2131427766);
             i = 1;
             break;
           case -72: 
-            h.g(paramMMActivity, a.n.regbyqq_auth_err_failed_niceqq, a.n.app_tip);
+            com.tencent.mm.ui.base.g.e(paramMMActivity, 2131427612, 2131430877);
             i = 1;
             break;
           case -75: 
-            h.g(paramMMActivity, a.n.alpha_version_tip_login, a.n.app_tip);
+            com.tencent.mm.ui.base.g.e(paramMMActivity, 2131427770, 2131430877);
             i = 1;
             break;
           case -100: 
-            ax.tv();
-            if (TextUtils.isEmpty(ax.tx())) {}
-            for (paramString = com.tencent.mm.ao.a.w(paramMMActivity, a.n.main_err_another_place);; paramString = ax.tx())
+            ah.hold();
+            if (TextUtils.isEmpty(ah.tN())) {}
+            for (paramString = com.tencent.mm.aw.a.A(paramMMActivity, 2131427786);; paramString = ah.tN())
             {
-              h.a(paramMMActivity, paramString, paramMMActivity.getString(a.n.app_tip), new e(this), new f(this));
+              com.tencent.mm.ui.base.g.a(paramMMActivity, paramString, paramMMActivity.getString(2131430877), new DialogInterface.OnClickListener()new DialogInterface.OnCancelListener
+              {
+                public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
+              }, new DialogInterface.OnCancelListener()
+              {
+                public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
+              });
               i = 1;
               break;
             }
           case -140: 
-            if (!bn.iW(aFr)) {
-              p.j(paramMMActivity, paramString, aFr);
+            if (!ay.kz(aIG)) {
+              com.tencent.mm.platformtools.m.k(paramMMActivity, paramString, aIG);
             }
             i = 1;
           }
@@ -121,13 +152,19 @@ public final class a
     }
   }
   
-  public final void f(MMActivity paramMMActivity)
+  public final void i(MMActivity paramMMActivity)
   {
-    s locals = new s(username, iyF, 0, "", "", "", 0, "", false, true);
-    ax.tm().d(locals);
-    a locala = iyG;
-    paramMMActivity.getString(a.n.app_tip);
-    locala.a(h.a(paramMMActivity, paramMMActivity.getString(a.n.login_logining), true, new b(this, locals)));
+    final t localt = new t(username, kxJ, 0, "", "", "", 0, "", false, true);
+    ah.tE().d(localt);
+    a locala = kxK;
+    paramMMActivity.getString(2131430877);
+    locala.a(com.tencent.mm.ui.base.g.a(paramMMActivity, paramMMActivity.getString(2131427765), true, new DialogInterface.OnCancelListener()
+    {
+      public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+      {
+        ah.tE().c(localt);
+      }
+    }));
   }
   
   public static abstract interface a

@@ -17,13 +17,13 @@
 
 
 # instance fields
-.field private bTw:Z
+.field private cks:Z
 
-.field public bTx:Ljava/util/Set;
+.field public ckt:Ljava/util/Set;
 
-.field private bTy:Ljava/lang/Object;
+.field private cku:Ljava/lang/Object;
 
-.field private bTz:Landroid/app/Instrumentation;
+.field private ckv:Landroid/app/Instrumentation;
 
 
 # direct methods
@@ -51,21 +51,21 @@
     .line 23
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/performance/a/a;->bTw:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/performance/a/a;->cks:Z
 
     .line 52
-    iput-object v1, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iput-object v1, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     .line 127
-    iput-object v1, p0, Lcom/tencent/mm/performance/a/a;->bTy:Ljava/lang/Object;
+    iput-object v1, p0, Lcom/tencent/mm/performance/a/a;->cku:Ljava/lang/Object;
 
     .line 128
-    iput-object v1, p0, Lcom/tencent/mm/performance/a/a;->bTz:Landroid/app/Instrumentation;
+    iput-object v1, p0, Lcom/tencent/mm/performance/a/a;->ckv:Landroid/app/Instrumentation;
 
     return-void
 .end method
 
-.method private declared-synchronized Dg()V
+.method private declared-synchronized Fo()V
     .locals 2
 
     .prologue
@@ -73,7 +73,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -109,7 +109,7 @@
     return-void
 .end method
 
-.method private declared-synchronized Dh()V
+.method private declared-synchronized Fp()V
     .locals 2
 
     .prologue
@@ -117,7 +117,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -153,7 +153,7 @@
     return-void
 .end method
 
-.method private declared-synchronized Di()V
+.method private declared-synchronized Fq()V
     .locals 2
 
     .prologue
@@ -161,7 +161,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -202,7 +202,7 @@
 
     .prologue
     .line 20
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTz:Landroid/app/Instrumentation;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckv:Landroid/app/Instrumentation;
 
     return-object v0
 .end method
@@ -215,7 +215,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -278,7 +278,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -341,7 +341,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -434,7 +434,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -494,7 +494,7 @@
 
     .prologue
     .line 20
-    invoke-direct {p0}, Lcom/tencent/mm/performance/a/a;->Dh()V
+    invoke-direct {p0}, Lcom/tencent/mm/performance/a/a;->Fp()V
 
     return-void
 .end method
@@ -517,7 +517,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -577,7 +577,7 @@
 
     .prologue
     .line 20
-    invoke-direct {p0}, Lcom/tencent/mm/performance/a/a;->Di()V
+    invoke-direct {p0}, Lcom/tencent/mm/performance/a/a;->Fq()V
 
     return-void
 .end method
@@ -600,7 +600,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -660,7 +660,7 @@
 
     .prologue
     .line 20
-    invoke-direct {p0}, Lcom/tencent/mm/performance/a/a;->Dg()V
+    invoke-direct {p0}, Lcom/tencent/mm/performance/a/a;->Fo()V
 
     return-void
 .end method
@@ -673,7 +673,7 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
@@ -750,7 +750,7 @@
 
 
 # virtual methods
-.method public final Dj()Z
+.method public final Fr()Z
     .locals 6
 
     .prologue
@@ -765,14 +765,14 @@
 
     const-string/jumbo v3, "currentActivityThread"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/performance/e/b;->T(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v3}, Lcom/tencent/mm/performance/e/b;->ac(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTy:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/tencent/mm/performance/a/a;->cku:Ljava/lang/Object;
 
     .line 286
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTy:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->cku:Ljava/lang/Object;
 
     if-nez v0, :cond_1
 
@@ -794,7 +794,7 @@
 
     .line 317
     :goto_0
-    iput-boolean v0, p0, Lcom/tencent/mm/performance/a/a;->bTw:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/performance/a/a;->cks:Z
 
     move v1, v0
 
@@ -805,7 +805,7 @@
     .line 288
     :cond_1
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTy:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->cku:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -813,7 +813,7 @@
 
     const-string/jumbo v3, "mInstrumentation"
 
-    iget-object v4, p0, Lcom/tencent/mm/performance/a/a;->bTy:Ljava/lang/Object;
+    iget-object v4, p0, Lcom/tencent/mm/performance/a/a;->cku:Ljava/lang/Object;
 
     invoke-static {v0, v3, v4}, Lcom/tencent/mm/performance/e/b;->a(Ljava/lang/Class;Ljava/lang/String;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -821,10 +821,10 @@
 
     check-cast v0, Landroid/app/Instrumentation;
 
-    iput-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTz:Landroid/app/Instrumentation;
+    iput-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckv:Landroid/app/Instrumentation;
 
     .line 294
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTz:Landroid/app/Instrumentation;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckv:Landroid/app/Instrumentation;
 
     if-nez v0, :cond_2
 
@@ -838,7 +838,7 @@
 
     .line 298
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTz:Landroid/app/Instrumentation;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckv:Landroid/app/Instrumentation;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -853,7 +853,7 @@
     if-nez v0, :cond_0
 
     .line 302
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTz:Landroid/app/Instrumentation;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckv:Landroid/app/Instrumentation;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -878,7 +878,7 @@
 
     .line 306
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTy:Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->cku:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -892,7 +892,7 @@
 
     invoke-direct {v4, p0, v5}, Lcom/tencent/mm/performance/a/a$b;-><init>(Lcom/tencent/mm/performance/a/a;B)V
 
-    iget-object v2, p0, Lcom/tencent/mm/performance/a/a;->bTy:Ljava/lang/Object;
+    iget-object v2, p0, Lcom/tencent/mm/performance/a/a;->cku:Ljava/lang/Object;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
@@ -922,7 +922,7 @@
     goto :goto_0
 .end method
 
-.method public final Dk()Ljava/lang/String;
+.method public final Fs()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -932,7 +932,7 @@
     return-object v0
 .end method
 
-.method public final Dl()V
+.method public final Ft()V
     .locals 0
 
     .prologue
@@ -970,7 +970,7 @@
     .line 138
     :cond_0
     :try_start_1
-    iget-boolean v0, p0, Lcom/tencent/mm/performance/a/a;->bTw:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/performance/a/a;->cks:Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -985,7 +985,7 @@
     .line 140
     :cond_1
     :try_start_2
-    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->bTx:Ljava/util/Set;
+    iget-object v0, p0, Lcom/tencent/mm/performance/a/a;->ckt:Ljava/util/Set;
 
     invoke-interface {v0, p1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
     :try_end_2

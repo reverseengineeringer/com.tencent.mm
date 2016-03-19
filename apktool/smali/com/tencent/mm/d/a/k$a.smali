@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public auh:Z
+.field public mode:I
 
 
 # direct methods

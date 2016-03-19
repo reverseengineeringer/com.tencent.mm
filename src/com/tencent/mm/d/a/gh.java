@@ -1,23 +1,34 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.storage.ag;
 
 public final class gh
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDI = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBq = new a();
+  public b aBr = new b();
   
   public gh()
   {
-    id = "ReportClickFindFriendShake";
-    hXT = atO;
+    id = "LocationServer";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int atZ = 1;
+    public int aBl = 0;
+    public boolean aBs = false;
+    public String ajI;
+    public ag ask;
+  }
+  
+  public static final class b
+  {
+    public String aBt;
+    public String aBu;
   }
 }
 

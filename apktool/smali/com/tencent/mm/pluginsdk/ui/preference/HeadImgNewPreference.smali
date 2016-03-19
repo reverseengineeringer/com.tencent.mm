@@ -4,21 +4,21 @@
 
 
 # instance fields
-.field public eqt:Landroid/widget/ImageView;
-
-.field public gJC:Landroid/view/View$OnClickListener;
-
-.field private gQX:Landroid/view/View;
-
-.field private gXY:Landroid/widget/TextView;
-
-.field public gXZ:Ljava/lang/String;
-
-.field public gYa:Z
-
-.field private gYb:Z
+.field public fAr:Landroid/widget/ImageView;
 
 .field private height:I
+
+.field private iJI:Landroid/view/View;
+
+.field private iOq:Landroid/widget/TextView;
+
+.field public iOr:Ljava/lang/String;
+
+.field public iOs:Z
+
+.field private iOt:Z
+
+.field public iyh:Landroid/view/View$OnClickListener;
 
 
 # direct methods
@@ -50,13 +50,13 @@
     iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->height:I
 
     .line 29
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gYa:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOs:Z
 
     .line 30
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gYb:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOt:Z
 
     .line 42
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference:I
+    const v0, 0x7f0a05d6
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->setLayoutResource(I)V
 
@@ -78,12 +78,12 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 97
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->eqt:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->fAr:Landroid/widget/ImageView;
 
     if-nez v0, :cond_0
 
     .line 98
-    sget v0, Lcom/tencent/mm/a$i;->image_headimg:I
+    const v0, 0x7f070ee7
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -91,16 +91,16 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->eqt:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->fAr:Landroid/widget/ImageView;
 
     .line 101
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gXY:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOq:Landroid/widget/TextView;
 
     if-nez v0, :cond_1
 
     .line 102
-    sget v0, Lcom/tencent/mm/a$i;->no_header_icon_tip:I
+    const v0, 0x7f070f66
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -108,73 +108,73 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gXY:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOq:Landroid/widget/TextView;
 
     .line 105
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gQX:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iJI:Landroid/view/View;
 
     if-nez v0, :cond_2
 
     .line 106
-    sget v0, Lcom/tencent/mm/a$i;->mask_header_icon:I
+    const v0, 0x7f0706e4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gQX:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iJI:Landroid/view/View;
 
     .line 109
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gJC:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iyh:Landroid/view/View$OnClickListener;
 
     if-eqz v0, :cond_3
 
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gQX:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iJI:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gJC:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iyh:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 113
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gXZ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOr:Ljava/lang/String;
 
     if-eqz v0, :cond_4
 
     .line 115
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->eqt:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->fAr:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gXZ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOr:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;)V
 
     .line 116
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gXZ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOr:Ljava/lang/String;
 
     .line 119
     :cond_4
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gYa:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOs:Z
 
     if-nez v0, :cond_6
 
     .line 120
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gQX:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iJI:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
     .line 121
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gXY:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOq:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 127
     :goto_0
-    sget v0, Lcom/tencent/mm/a$i;->mm_preference_ll_id:I
+    const v0, 0x7f07069a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -200,12 +200,12 @@
 
     .line 123
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gXY:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOq:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 124
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gQX:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iJI:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
@@ -222,7 +222,7 @@
     move-result-object v1
 
     .line 54
-    sget v0, Lcom/tencent/mm/a$i;->content:I
+    const v0, 0x7f0700c1
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -234,20 +234,20 @@
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 57
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gYb:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOt:Z
 
     if-eqz v2, :cond_0
 
     .line 58
     iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    sget v3, Lcom/tencent/mm/a$k;->more_tab_personal_info:I
+    const v3, 0x7f0a04d4
 
     invoke-static {v2, v3, v0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 62
     :goto_0
-    sget v0, Lcom/tencent/mm/a$i;->image_headimg:I
+    const v0, 0x7f070ee7
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -255,10 +255,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->eqt:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->fAr:Landroid/widget/ImageView;
 
     .line 63
-    sget v0, Lcom/tencent/mm/a$i;->no_header_icon_tip:I
+    const v0, 0x7f070f66
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -266,16 +266,16 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gXY:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iOq:Landroid/widget/TextView;
 
     .line 64
-    sget v0, Lcom/tencent/mm/a$i;->mask_header_icon:I
+    const v0, 0x7f0706e4
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->gQX:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgNewPreference;->iJI:Landroid/view/View;
 
     .line 65
     return-object v1
@@ -284,7 +284,7 @@
     :cond_0
     iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    sget v3, Lcom/tencent/mm/a$k;->mm_preference_content_headimg_new:I
+    const v3, 0x7f0a0502
 
     invoke-static {v2, v3, v0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 

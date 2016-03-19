@@ -22,23 +22,26 @@
 .method public abstract ak(Z)V
 .end method
 
+.method public abstract c(Ljava/lang/String;ZI)Z
+.end method
+
 .method public abstract getStatus()I
 .end method
 
 .method public abstract isPlaying()Z
 .end method
 
-.method public abstract ma()Z
+.method public abstract lB()Z
 .end method
 
-.method public abstract mg()Z
+.method public abstract lE()D
 .end method
 
-.method public abstract mi()D
-.end method
-
-.method public abstract o(Ljava/lang/String;Z)Z
+.method public abstract lv()Z
 .end method
 
 .method public abstract pause()Z
+.end method
+
+.method public abstract s(Ljava/lang/String;Z)Z
 .end method

@@ -15,27 +15,16 @@
 
 
 # instance fields
-.field public aBv:I
-
-.field public aBy:Landroid/os/Bundle;
-
-.field public auC:Ljava/lang/String;
-
-.field public auD:Landroid/app/Activity;
+.field public asJ:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 17
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/tencent/mm/d/a/eu$a;->aBv:I
 
     return-void
 .end method

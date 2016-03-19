@@ -1,52 +1,52 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import com.tencent.mm.d.b.aq;
+import com.tencent.mm.d.b.bg;
 import com.tencent.mm.g.e;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.br;
-import com.tencent.mm.pluginsdk.l.ab;
-import com.tencent.mm.pluginsdk.l.ae;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.g;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.model.c;
+import com.tencent.mm.pluginsdk.i.ad;
+import com.tencent.mm.pluginsdk.i.ag;
+import com.tencent.mm.protocal.b;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.f;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.storage.ag;
 import java.util.Map;
 
 public final class a
 {
-  public String avf;
-  public String desc;
-  public long fPu;
-  public int gLM;
-  public long gLN;
+  public String asL;
+  public String aut;
+  public long hrr;
+  public int iAN;
+  public long iAO;
   public int size;
   public String url;
   
   public a(String paramString)
   {
-    Map localMap = p.z(paramString, "msg", null);
-    desc = ((String)localMap.get(".msg.appmsg.des"));
-    gLM = bn.getInt((String)localMap.get(".msg.alphainfo.clientVersion"), 0);
+    Map localMap = q.J(paramString, "msg", null);
+    asL = ((String)localMap.get(".msg.appmsg.des"));
+    iAN = ay.getInt((String)localMap.get(".msg.alphainfo.clientVersion"), 0);
     url = ((String)localMap.get(".msg.alphainfo.url"));
-    size = bn.getInt((String)localMap.get(".msg.alphainfo.size"), 0);
-    avf = ((String)localMap.get(".msg.alphainfo.md5"));
-    gLN = bn.getLong((String)localMap.get(".msg.alphainfo.maxAge"), 0L);
-    fPu = bn.getLong((String)localMap.get(".msg.alphainfo.expireTime"), 0L);
-    t.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "updateInfo, content:%s, clientVersion:%d, url:%s, size:%d, md5:%s, desc:%s, maxAge:%d, expireTime:%d", new Object[] { paramString, Integer.valueOf(gLM), url, Integer.valueOf(size), avf, desc, Long.valueOf(gLN), Long.valueOf(fPu) });
+    size = ay.getInt((String)localMap.get(".msg.alphainfo.size"), 0);
+    aut = ((String)localMap.get(".msg.alphainfo.md5"));
+    iAO = ay.getLong((String)localMap.get(".msg.alphainfo.maxAge"), 0L);
+    hrr = ay.getLong((String)localMap.get(".msg.alphainfo.expireTime"), 0L);
+    u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "updateInfo, content:%s, clientVersion:%d, url:%s, size:%d, md5:%s, desc:%s, maxAge:%d, expireTime:%d", new Object[] { paramString, Integer.valueOf(iAN), url, Integer.valueOf(size), aut, asL, Long.valueOf(iAO), Long.valueOf(hrr) });
   }
   
-  public static a ayQ()
+  public static a aPv()
   {
-    Object localObject = (String)ax.tl().rf().get(352273, "");
-    if (!bn.iW((String)localObject))
+    Object localObject = (String)com.tencent.mm.model.ah.tD().rn().get(352273, "");
+    if (!ay.kz((String)localObject))
     {
       localObject = new a((String)localObject);
-      if ((!((a)localObject).isValid()) || (((a)localObject).ayR()))
+      if ((!((a)localObject).isValid()) || (((a)localObject).aPw()))
       {
-        ayS();
+        aPx();
         return null;
       }
     }
@@ -57,87 +57,87 @@ public final class a
     return (a)localObject;
   }
   
-  private boolean ayR()
+  private boolean aPw()
   {
-    long l = ((Long)ax.tl().rf().get(352274, Long.valueOf(System.currentTimeMillis()))).longValue();
-    if ((System.currentTimeMillis() - l > gLN) || (System.currentTimeMillis() > fPu)) {}
+    long l = ((Long)com.tencent.mm.model.ah.tD().rn().get(352274, Long.valueOf(System.currentTimeMillis()))).longValue();
+    if ((System.currentTimeMillis() - l > iAO) || (System.currentTimeMillis() > hrr)) {}
     for (boolean bool = true;; bool = false)
     {
-      t.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "isExpired: %b", new Object[] { Boolean.valueOf(bool) });
+      u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "isExpired: %b", new Object[] { Boolean.valueOf(bool) });
       return bool;
     }
   }
   
-  public static void ayS()
+  public static void aPx()
   {
-    ax.tl().rf().set(352273, null);
-    ax.tl().rf().set(352274, null);
+    com.tencent.mm.model.ah.tD().rn().set(352273, null);
+    com.tencent.mm.model.ah.tD().rn().set(352274, null);
   }
   
   private boolean isValid()
   {
-    if ((gLM > com.tencent.mm.protocal.b.hgo) && (!bn.iW(url)) && (!bn.iW(avf)) && (!bn.iW(desc))) {}
+    if ((iAN > b.iUf) && (!ay.kz(url)) && (!ay.kz(aut)) && (!ay.kz(asL))) {}
     for (boolean bool = true;; bool = false)
     {
-      t.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "isValid %b", new Object[] { Boolean.valueOf(bool) });
+      u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "isValid %b", new Object[] { Boolean.valueOf(bool) });
       return bool;
     }
   }
   
-  public final void ayT()
+  public final void aPy()
   {
-    ar localar = new ar();
-    localar.w(br.c("weixin", bn.DL()));
-    localar.setType(1);
-    localar.setContent(desc);
-    t.d("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", field_content);
-    localar.bh(0);
-    localar.setTalker("weixin");
-    localar.setStatus(3);
-    br.e(localar);
-    t.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "insertUpdateTextMsg");
-    ayS();
+    ag localag = new ag();
+    localag.v(ar.d("weixin", ay.FR()));
+    localag.setType(1);
+    localag.setContent(asL);
+    u.d("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", field_content);
+    localag.bl(0);
+    localag.setTalker("weixin");
+    localag.bk(3);
+    ar.e(localag);
+    u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "insertUpdateTextMsg");
+    aPx();
   }
   
-  public final void ayU()
+  public final void aPz()
   {
-    t.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "downloadInSilence.");
-    if ((!isValid()) || (ayR())) {
+    u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "downloadInSilence.");
+    if ((!isValid()) || (aPw())) {
       return;
     }
     int i;
-    if (bn.xQ(com.tencent.mm.g.h.qa().getValue("SilentDownloadApkAtWiFi")) != 0) {
+    if (ay.Dr(com.tencent.mm.g.h.pS().getValue("SilentDownloadApkAtWiFi")) != 0) {
       i = 0;
     }
     while (i == 0)
     {
-      ayT();
+      aPy();
       return;
-      if ((((Integer)ax.tl().rf().get(7, Integer.valueOf(0))).intValue() & 0x1000000) == 0)
+      if ((((Integer)com.tencent.mm.model.ah.tD().rn().get(7, Integer.valueOf(0))).intValue() & 0x1000000) == 0)
       {
         i = 1;
         label76:
-        if ((!al.cX(aa.getContext())) || (i == 0)) {
+        if ((!com.tencent.mm.sdk.platformtools.ah.dB(y.getContext())) || (i == 0)) {
           break label117;
         }
       }
       label117:
       for (i = 1;; i = 0)
       {
-        if ((g.amT & 0x1) == 0) {
+        if ((f.akG & 0x1) == 0) {
           break label122;
         }
-        t.d("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "channel pack, not silence download.");
+        u.d("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "channel pack, not silence download.");
         i = 0;
         break;
         i = 0;
         break label76;
       }
       label122:
-      t.d("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "not channel pack.");
+      u.d("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "not channel pack.");
     }
-    t.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "go to download, %s, %d, %s, %s", new Object[] { avf, Integer.valueOf(size), desc, url });
-    l.ae.ayA().b(avf, size, desc.replaceFirst("(\n)*<a.*</a>(\n)*", "\n"), url);
+    u.i("!44@/B4Tb64lLpJZChIAjVsGamomrId1Ihg9dvGBOt04CsM=", "go to download, %s, %d, %s, %s", new Object[] { aut, Integer.valueOf(size), asL, url });
+    i.ag.aPc().c(aut, size, asL.replaceFirst("(\n)*<a.*</a>(\n)*", "\n"), url);
   }
 }
 

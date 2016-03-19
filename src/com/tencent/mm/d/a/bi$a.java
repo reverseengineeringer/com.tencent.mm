@@ -2,9 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class bi$a
 {
-  public boolean avW;
-  public String awj;
-  public String mac;
+  public int auw = 0;
 }
 
 /* Location:

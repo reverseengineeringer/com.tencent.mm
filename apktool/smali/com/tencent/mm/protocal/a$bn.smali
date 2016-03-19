@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$bn;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 896
-    const-string/jumbo v0, "openProductView"
+    .line 984
+    const-string/jumbo v0, "hasEmoticon"
 
-    const-string/jumbo v1, "open_product_view"
+    const-string/jumbo v1, "has_emoticon"
 
-    const/16 v2, 0x3b
+    const/16 v2, 0x9
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 897
+    .line 985
     return-void
 .end method

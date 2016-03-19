@@ -16,7 +16,7 @@
 
 
 # virtual methods
-.method public final ko()Ljava/lang/Class;
+.method public final jy()Ljava/lang/Class;
     .locals 2
 
     .prologue
@@ -25,7 +25,7 @@
 
     const-string/jumbo v1, "getServiceClass"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 17
     const-class v0, Lcom/tencent/mm/modelvoiceaction/VoiceActionService;

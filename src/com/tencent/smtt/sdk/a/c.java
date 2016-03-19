@@ -1,147 +1,467 @@
 package com.tencent.smtt.sdk.a;
 
-import MTT.ThirdAppInfoNew;
+import android.content.ActivityNotFoundException;
+import android.content.ComponentName;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.pm.ResolveInfo;
+import android.net.Uri;
+import android.os.Bundle;
+import android.text.TextUtils;
+import java.io.File;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
 
-final class c
-  extends Thread
+public final class c
 {
-  c(String paramString, ThirdAppInfoNew paramThirdAppInfoNew)
+  public static int a(Context paramContext, String paramString1, HashMap paramHashMap, String paramString2)
   {
-    super(paramString);
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("mttbrowser://url=").append(paramString1).append(",product=TBS,packagename=").append(paramContext.getPackageName()).append(",from=").append(paramString2).append(",version=1.5.0.1069");
+    return b(paramContext, localStringBuilder.toString(), paramHashMap);
   }
   
-  /* Error */
-  public final void run()
+  public static boolean a(Context paramContext, String paramString1, int paramInt, String paramString2, HashMap paramHashMap, Bundle paramBundle)
   {
-    // Byte code:
-    //   0: aconst_null
-    //   1: astore_1
-    //   2: getstatic 30	com/tencent/smtt/sdk/a/b:jLD	[B
-    //   5: ifnonnull +13 -> 18
-    //   8: ldc 32
-    //   10: ldc 34
-    //   12: invokevirtual 40	java/lang/String:getBytes	(Ljava/lang/String;)[B
-    //   15: putstatic 30	com/tencent/smtt/sdk/a/b:jLD	[B
-    //   18: getstatic 30	com/tencent/smtt/sdk/a/b:jLD	[B
-    //   21: ifnonnull +26 -> 47
-    //   24: ldc 42
-    //   26: ldc 44
-    //   28: invokestatic 50	com/tencent/smtt/a/u:e	(Ljava/lang/String;Ljava/lang/String;)V
-    //   31: return
-    //   32: astore_2
-    //   33: aconst_null
-    //   34: putstatic 30	com/tencent/smtt/sdk/a/b:jLD	[B
-    //   37: ldc 42
-    //   39: ldc 52
-    //   41: invokestatic 50	com/tencent/smtt/a/u:e	(Ljava/lang/String;Ljava/lang/String;)V
-    //   44: goto -26 -> 18
-    //   47: new 54	java/net/URL
-    //   50: dup
-    //   51: invokestatic 60	com/tencent/smtt/a/r:aVb	()Lcom/tencent/smtt/a/r;
-    //   54: getfield 64	com/tencent/smtt/a/r:jMd	Ljava/lang/String;
-    //   57: invokespecial 65	java/net/URL:<init>	(Ljava/lang/String;)V
-    //   60: invokevirtual 69	java/net/URL:openConnection	()Ljava/net/URLConnection;
-    //   63: checkcast 71	java/net/HttpURLConnection
-    //   66: astore_3
-    //   67: aload_3
-    //   68: ldc 73
-    //   70: invokevirtual 76	java/net/HttpURLConnection:setRequestMethod	(Ljava/lang/String;)V
-    //   73: aload_3
-    //   74: iconst_1
-    //   75: invokevirtual 80	java/net/HttpURLConnection:setDoOutput	(Z)V
-    //   78: aload_3
-    //   79: iconst_1
-    //   80: invokevirtual 83	java/net/HttpURLConnection:setDoInput	(Z)V
-    //   83: aload_3
-    //   84: iconst_0
-    //   85: invokevirtual 86	java/net/HttpURLConnection:setUseCaches	(Z)V
-    //   88: aload_3
-    //   89: sipush 20000
-    //   92: invokevirtual 90	java/net/HttpURLConnection:setConnectTimeout	(I)V
-    //   95: getstatic 96	android/os/Build$VERSION:SDK_INT	I
-    //   98: bipush 13
-    //   100: if_icmple +11 -> 111
-    //   103: aload_3
-    //   104: ldc 98
-    //   106: ldc 100
-    //   108: invokevirtual 103	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
-    //   111: aload_0
-    //   112: getfield 10	com/tencent/smtt/sdk/a/c:jLE	LMTT/ThirdAppInfoNew;
-    //   115: invokestatic 107	com/tencent/smtt/sdk/a/b:b	(LMTT/ThirdAppInfoNew;)Lorg/json/JSONObject;
-    //   118: astore_2
-    //   119: aload_2
-    //   120: astore_1
-    //   121: aload_1
-    //   122: ifnonnull +11 -> 133
-    //   125: ldc 42
-    //   127: ldc 109
-    //   129: invokestatic 50	com/tencent/smtt/a/u:e	(Ljava/lang/String;Ljava/lang/String;)V
-    //   132: return
-    //   133: aload_1
-    //   134: invokevirtual 115	org/json/JSONObject:toString	()Ljava/lang/String;
-    //   137: ldc 34
-    //   139: invokevirtual 40	java/lang/String:getBytes	(Ljava/lang/String;)[B
-    //   142: astore_1
-    //   143: getstatic 30	com/tencent/smtt/sdk/a/b:jLD	[B
-    //   146: aload_1
-    //   147: iconst_1
-    //   148: invokestatic 121	com/tencent/smtt/sdk/a/a:a	([B[BI)[B
-    //   151: astore_1
-    //   152: aload_3
-    //   153: ldc 123
-    //   155: ldc 125
-    //   157: invokevirtual 103	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
-    //   160: aload_3
-    //   161: ldc 127
-    //   163: aload_1
-    //   164: arraylength
-    //   165: invokestatic 131	java/lang/String:valueOf	(I)Ljava/lang/String;
-    //   168: invokevirtual 103	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
-    //   171: aload_3
-    //   172: invokevirtual 135	java/net/HttpURLConnection:getOutputStream	()Ljava/io/OutputStream;
-    //   175: astore_2
-    //   176: aload_2
-    //   177: aload_1
-    //   178: invokevirtual 141	java/io/OutputStream:write	([B)V
-    //   181: aload_2
-    //   182: invokevirtual 144	java/io/OutputStream:flush	()V
-    //   185: aload_3
-    //   186: invokevirtual 148	java/net/HttpURLConnection:getResponseCode	()I
-    //   189: sipush 200
-    //   192: if_icmpeq -161 -> 31
-    //   195: ldc 42
-    //   197: ldc -106
-    //   199: invokestatic 50	com/tencent/smtt/a/u:e	(Ljava/lang/String;Ljava/lang/String;)V
-    //   202: return
-    //   203: astore_1
-    //   204: ldc 42
-    //   206: ldc -104
-    //   208: invokestatic 50	com/tencent/smtt/a/u:e	(Ljava/lang/String;Ljava/lang/String;)V
-    //   211: return
-    //   212: astore_1
-    //   213: return
-    //   214: astore_2
-    //   215: goto -94 -> 121
-    //   218: astore_1
-    //   219: return
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	220	0	this	c
-    //   1	177	1	localObject1	Object
-    //   203	1	1	localThrowable1	Throwable
-    //   212	1	1	localThrowable2	Throwable
-    //   218	1	1	localIOException	java.io.IOException
-    //   32	1	2	localUnsupportedEncodingException	java.io.UnsupportedEncodingException
-    //   118	64	2	localObject2	Object
-    //   214	1	2	localException	Exception
-    //   66	120	3	localHttpURLConnection	java.net.HttpURLConnection
-    // Exception table:
-    //   from	to	target	type
-    //   8	18	32	java/io/UnsupportedEncodingException
-    //   171	202	203	java/lang/Throwable
-    //   133	152	212	java/lang/Throwable
-    //   111	119	214	java/lang/Exception
-    //   47	73	218	java/io/IOException
+    try
+    {
+      Intent localIntent = new Intent("com.tencent.QQBrowser.action.sdk.document");
+      Object localObject = paramHashMap.keySet();
+      if (localObject != null)
+      {
+        localObject = ((Set)localObject).iterator();
+        while (((Iterator)localObject).hasNext())
+        {
+          String str1 = (String)((Iterator)localObject).next();
+          String str2 = (String)paramHashMap.get(str1);
+          if (!TextUtils.isEmpty(str2)) {
+            localIntent.putExtra(str1, str2);
+          }
+        }
+      }
+      paramHashMap = new File(paramString1);
+      localIntent.putExtra("key_reader_sdk_id", 3);
+      localIntent.putExtra("key_reader_sdk_type", paramInt);
+      if (paramInt == 0) {
+        localIntent.putExtra("key_reader_sdk_path", paramString1);
+      }
+      for (;;)
+      {
+        localIntent.putExtra("key_reader_sdk_format", paramString2);
+        localIntent.setData(Uri.fromFile(paramHashMap));
+        localIntent.putExtra("loginType", fJ(paramContext.getApplicationContext()));
+        if (paramBundle != null) {
+          localIntent.putExtra("key_reader_sdk_extrals", paramBundle);
+        }
+        paramContext.startActivity(localIntent);
+        return true;
+        if (paramInt == 1) {
+          localIntent.putExtra("key_reader_sdk_url", paramString1);
+        }
+      }
+      return false;
+    }
+    catch (Exception paramContext) {}
+  }
+  
+  public static boolean a(Context paramContext, String paramString, HashMap paramHashMap)
+  {
+    Object localObject = Uri.parse(paramString);
+    paramString = new Intent("android.intent.action.VIEW");
+    paramString.setFlags(268435456);
+    paramString.setDataAndType((Uri)localObject, "video/*");
+    localObject = paramHashMap.keySet();
+    if (localObject != null)
+    {
+      localObject = ((Set)localObject).iterator();
+      while (((Iterator)localObject).hasNext())
+      {
+        String str1 = (String)((Iterator)localObject).next();
+        String str2 = (String)paramHashMap.get(str1);
+        if (!TextUtils.isEmpty(str2)) {
+          paramString.putExtra(str1, str2);
+        }
+      }
+    }
+    try
+    {
+      paramString.putExtra("loginType", fJ(paramContext));
+      paramString.setComponent(new ComponentName("com.tencent.mtt", "com.tencent.mtt.browser.video.H5VideoThrdcallActivity"));
+      paramContext.startActivity(paramString);
+      i = 1;
+    }
+    catch (Throwable paramHashMap)
+    {
+      for (;;)
+      {
+        try
+        {
+          paramString.setComponent(null);
+          paramContext.startActivity(paramString);
+          return true;
+        }
+        catch (Throwable paramContext) {}
+        paramHashMap = paramHashMap;
+        int i = 0;
+      }
+    }
+    if (i == 0) {}
+    return false;
+  }
+  
+  public static int b(Context paramContext, String paramString, HashMap paramHashMap)
+  {
+    if (paramContext == null) {
+      return 3;
+    }
+    boolean bool;
+    if ((paramString == null) || (paramString.length() == 0)) {
+      bool = false;
+    }
+    Object localObject1;
+    for (;;)
+    {
+      localObject1 = paramString;
+      if (!bool) {
+        localObject1 = "http://" + paramString;
+      }
+      try
+      {
+        localObject1 = Uri.parse((String)localObject1);
+        if (localObject1 != null) {
+          break;
+        }
+        return 2;
+      }
+      catch (Exception paramContext)
+      {
+        int i;
+        int j;
+        return 2;
+      }
+      localObject1 = paramString.trim();
+      i = ((String)localObject1).toLowerCase().indexOf("://");
+      j = ((String)localObject1).toLowerCase().indexOf('.');
+      if ((i > 0) && (j > 0) && (i > j)) {
+        bool = false;
+      } else {
+        bool = ((String)localObject1).toLowerCase().contains("://");
+      }
+    }
+    Object localObject2 = fK(paramContext);
+    if (iAB == -1) {
+      return 4;
+    }
+    if ((iAB == 2) && (iAC < 33)) {
+      return 5;
+    }
+    paramString = new Intent("android.intent.action.VIEW");
+    if (iAB == 2) {
+      if ((iAC >= 33) && (iAC <= 39)) {
+        paramString.setClassName("com.tencent.mtt", "com.tencent.mtt.MainActivity");
+      }
+    }
+    label624:
+    for (;;)
+    {
+      paramString.setData((Uri)localObject1);
+      if (paramHashMap != null)
+      {
+        localObject1 = paramHashMap.keySet();
+        if (localObject1 != null)
+        {
+          localObject1 = ((Set)localObject1).iterator();
+          for (;;)
+          {
+            if (((Iterator)localObject1).hasNext())
+            {
+              localObject2 = (String)((Iterator)localObject1).next();
+              String str = (String)paramHashMap.get(localObject2);
+              if (!TextUtils.isEmpty(str))
+              {
+                paramString.putExtra((String)localObject2, str);
+                continue;
+                if ((iAC >= 40) && (iAC <= 45))
+                {
+                  paramString.setClassName("com.tencent.mtt", "com.tencent.mtt.SplashActivity");
+                  break;
+                }
+                if (iAC < 46) {
+                  break label624;
+                }
+                paramString = new Intent("com.tencent.QQBrowser.action.VIEW");
+                localObject2 = e(paramContext, (Uri)localObject1);
+                if ((localObject2 != null) && (!TextUtils.isEmpty(classname))) {
+                  paramString.setClassName(iAE, classname);
+                }
+                break;
+                if (iAB == 1)
+                {
+                  if (iAC == 1)
+                  {
+                    paramString.setClassName("com.tencent.qbx5", "com.tencent.qbx5.MainActivity");
+                    break;
+                  }
+                  if (iAC != 2) {
+                    break label624;
+                  }
+                  paramString.setClassName("com.tencent.qbx5", "com.tencent.qbx5.SplashActivity");
+                  break;
+                }
+                if (iAB == 0)
+                {
+                  if ((iAC >= 4) && (iAC <= 6))
+                  {
+                    paramString.setClassName("com.tencent.qbx", "com.tencent.qbx.SplashActivity");
+                    break;
+                  }
+                  if (iAC <= 6) {
+                    break label624;
+                  }
+                  paramString = new Intent("com.tencent.QQBrowser.action.VIEW");
+                  localObject2 = e(paramContext, (Uri)localObject1);
+                  if ((localObject2 != null) && (!TextUtils.isEmpty(classname))) {
+                    paramString.setClassName(iAE, classname);
+                  }
+                  break;
+                }
+                paramString = new Intent("com.tencent.QQBrowser.action.VIEW");
+                localObject2 = e(paramContext, (Uri)localObject1);
+                if ((localObject2 != null) && (!TextUtils.isEmpty(classname))) {
+                  paramString.setClassName(iAE, classname);
+                }
+                break;
+              }
+            }
+          }
+        }
+      }
+      try
+      {
+        paramString.putExtra("loginType", fJ(paramContext));
+        paramString.addFlags(268435456);
+        paramContext.startActivity(paramString);
+        return 0;
+      }
+      catch (ActivityNotFoundException paramContext)
+      {
+        return 4;
+      }
+    }
+  }
+  
+  private static b e(Context paramContext, Uri paramUri)
+  {
+    Object localObject = new Intent("com.tencent.QQBrowser.action.VIEW");
+    ((Intent)localObject).setData(paramUri);
+    paramUri = paramContext.getPackageManager().queryIntentActivities((Intent)localObject, 0);
+    if (paramUri.size() <= 0) {
+      return null;
+    }
+    paramContext = new b((byte)0);
+    paramUri = paramUri.iterator();
+    while (paramUri.hasNext())
+    {
+      localObject = (ResolveInfo)paramUri.next();
+      String str = activityInfo.packageName;
+      if (str.contains("com.tencent.mtt"))
+      {
+        classname = activityInfo.name;
+        iAE = activityInfo.packageName;
+        return paramContext;
+      }
+      if (str.contains("com.tencent.qbx"))
+      {
+        classname = activityInfo.name;
+        iAE = activityInfo.packageName;
+      }
+    }
+    return paramContext;
+  }
+  
+  private static int fJ(Context paramContext)
+  {
+    int i = 26;
+    paramContext = getApplicationInfoprocessName;
+    if (paramContext.equals("com.tencent.mobileqq")) {
+      i = 13;
+    }
+    do
+    {
+      return i;
+      if (paramContext.equals("com.qzone")) {
+        return 14;
+      }
+      if (paramContext.equals("com.tencent.WBlog")) {
+        return 15;
+      }
+    } while (!paramContext.equals("com.tencent.mm"));
+    return 24;
+  }
+  
+  private static a fK(Context paramContext)
+  {
+    locala = new a();
+    for (;;)
+    {
+      try
+      {
+        localPackageManager = paramContext.getPackageManager();
+        localObject1 = null;
+        try
+        {
+          localObject6 = localPackageManager.getPackageInfo("com.tencent.mtt", 0);
+          localObject1 = localObject6;
+          iAB = 2;
+          localObject1 = localObject6;
+          packageName = "com.tencent.mtt";
+          localObject1 = localObject6;
+          iAD = "ADRQB_";
+          Object localObject3 = localObject6;
+          if (localObject6 != null)
+          {
+            localObject1 = localObject6;
+            localObject3 = localObject6;
+            if (versionCode > 420000)
+            {
+              localObject1 = localObject6;
+              iAC = versionCode;
+              localObject1 = localObject6;
+              iAD += versionName.replaceAll("\\.", "");
+              localObject1 = localObject6;
+              lUB = versionName.replaceAll("\\.", "");
+              return locala;
+            }
+          }
+        }
+        catch (PackageManager.NameNotFoundException localNameNotFoundException3)
+        {
+          localObject4 = localObject1;
+        }
+      }
+      catch (Exception paramContext)
+      {
+        PackageManager localPackageManager;
+        Object localObject1;
+        Object localObject6;
+        Object localObject4;
+        PackageInfo localPackageInfo1;
+        Object localObject2;
+        continue;
+      }
+      try
+      {
+        localObject1 = localPackageManager.getPackageInfo("com.tencent.qbx", 0);
+        localObject4 = localObject1;
+        iAB = 0;
+        localObject4 = localObject1;
+        packageName = "com.tencent.qbx";
+        localObject4 = localObject1;
+        iAD = "ADRQBX_";
+        paramContext = (Context)localObject1;
+      }
+      catch (PackageManager.NameNotFoundException localNameNotFoundException1)
+      {
+        try
+        {
+          localPackageInfo1 = localPackageManager.getPackageInfo("com.tencent.qbx5", 0);
+          localObject4 = localPackageInfo1;
+          iAB = 1;
+          localObject4 = localPackageInfo1;
+          packageName = "com.tencent.qbx5";
+          localObject4 = localPackageInfo1;
+          iAD = "ADRQBX5_";
+          paramContext = localPackageInfo1;
+        }
+        catch (PackageManager.NameNotFoundException localNameNotFoundException2)
+        {
+          localObject2 = localObject4;
+          try
+          {
+            localObject4 = localPackageManager.getPackageInfo("com.tencent.mtt", 0);
+            localObject2 = localObject4;
+            packageName = "com.tencent.mtt";
+            localObject2 = localObject4;
+            iAB = 2;
+            localObject2 = localObject4;
+            iAD = "ADRQB_";
+            paramContext = (Context)localObject4;
+          }
+          catch (PackageManager.NameNotFoundException localNameNotFoundException4)
+          {
+            try
+            {
+              PackageInfo localPackageInfo2 = localPackageManager.getPackageInfo("com.tencent.mtt.x86", 0);
+              localObject2 = localPackageInfo2;
+              packageName = "com.tencent.mtt.x86";
+              localObject2 = localPackageInfo2;
+              iAB = 2;
+              localObject2 = localPackageInfo2;
+              iAD = "ADRQB_";
+              paramContext = localPackageInfo2;
+            }
+            catch (Exception localException)
+            {
+              Object localObject5 = localObject2;
+              try
+              {
+                localObject6 = e(paramContext, Uri.parse("http://mdc.html5.qq.com/mh?channel_id=50079&u="));
+                paramContext = (Context)localObject2;
+                if (localObject6 == null) {
+                  continue;
+                }
+                paramContext = (Context)localObject2;
+                localObject5 = localObject2;
+                if (TextUtils.isEmpty(iAE)) {
+                  continue;
+                }
+                localObject5 = localObject2;
+                paramContext = localPackageManager.getPackageInfo(iAE, 0);
+                localObject5 = paramContext;
+                packageName = iAE;
+                localObject5 = paramContext;
+                iAB = 2;
+                localObject5 = paramContext;
+                iAD = "ADRQB_";
+              }
+              catch (Exception paramContext)
+              {
+                paramContext = (Context)localObject5;
+              }
+            }
+          }
+        }
+      }
+    }
+    if (paramContext != null)
+    {
+      iAC = versionCode;
+      iAD += versionName.replaceAll("\\.", "");
+      lUB = versionName.replaceAll("\\.", "");
+    }
+    return locala;
+  }
+  
+  public static final class a
+  {
+    public int iAB = -1;
+    public int iAC = -1;
+    public String iAD = "";
+    public String lUB = "0";
+    public String packageName = null;
+  }
+  
+  private static final class b
+  {
+    public String classname = "";
+    public String iAE = "";
   }
 }
 

@@ -10,16 +10,16 @@ final class MMViewPager$c
   
   public final boolean onDoubleTap(MotionEvent paramMotionEvent)
   {
-    if (MMViewPager.a(iIW) == null) {
+    if (MMViewPager.a(kIi) == null) {
       return false;
     }
-    if (MMViewPager.a(iIW).getScale() <= MMViewPager.a(iIW).getScaleRate()) {
-      MMViewPager.a(iIW).r(g.f(paramMotionEvent, 0), g.g(paramMotionEvent, 0));
+    if (MMViewPager.a(kIi).getScale() <= MMViewPager.a(kIi).getScaleRate()) {
+      MMViewPager.a(kIi).p(f.e(paramMotionEvent, 0), f.f(paramMotionEvent, 0));
     }
     for (;;)
     {
       return true;
-      MMViewPager.a(iIW).q(g.f(paramMotionEvent, 0), g.g(paramMotionEvent, 0));
+      MMViewPager.a(kIi).o(f.e(paramMotionEvent, 0), f.f(paramMotionEvent, 0));
     }
   }
   
@@ -30,15 +30,15 @@ final class MMViewPager$c
   
   public final void onLongPress(MotionEvent paramMotionEvent)
   {
-    if (MMViewPager.j(iIW) != null) {
-      MMViewPager.j(iIW).aAb();
+    if (MMViewPager.j(kIi) != null) {
+      MMViewPager.j(kIi).ahv();
     }
   }
   
   public final boolean onSingleTapConfirmed(MotionEvent paramMotionEvent)
   {
-    if (MMViewPager.i(iIW) != null) {
-      MMViewPager.i(iIW).Tj();
+    if (MMViewPager.i(kIi) != null) {
+      MMViewPager.i(kIi).aap();
     }
     return true;
   }

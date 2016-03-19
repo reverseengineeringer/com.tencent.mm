@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field bMA:Z
+.field public atB:I
 
-.field public bMy:I
+.field public cde:I
 
-.field public bMz:I
+.field cdf:Z
 
 .field public extraInfo:Ljava/lang/String;
 
@@ -37,7 +37,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 127
-    iput v1, p0, Lcom/tencent/mm/modelstat/a$a;->bMy:I
+    iput v1, p0, Lcom/tencent/mm/modelstat/a$a;->cde:I
 
     .line 128
     const-string/jumbo v0, ""
@@ -45,7 +45,7 @@
     iput-object v0, p0, Lcom/tencent/mm/modelstat/a$a;->ispName:Ljava/lang/String;
 
     .line 129
-    iput v1, p0, Lcom/tencent/mm/modelstat/a$a;->bMz:I
+    iput v1, p0, Lcom/tencent/mm/modelstat/a$a;->atB:I
 
     .line 130
     const-string/jumbo v0, ""
@@ -53,7 +53,7 @@
     iput-object v0, p0, Lcom/tencent/mm/modelstat/a$a;->extraInfo:Ljava/lang/String;
 
     .line 131
-    iput-boolean v1, p0, Lcom/tencent/mm/modelstat/a$a;->bMA:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/modelstat/a$a;->cdf:Z
 
     return-void
 .end method

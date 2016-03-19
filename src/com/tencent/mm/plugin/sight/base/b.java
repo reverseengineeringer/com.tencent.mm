@@ -2,11 +2,11 @@ package com.tencent.mm.plugin.sight.base;
 
 public final class b
 {
-  int[] fgN = { 1000, 7000 };
-  int[] fgO = { 10, 31 };
-  int[] fgP = { 10000, 650000 };
-  int[] fgQ = { 320, 240 };
-  int[] fgR = { 10240, 512000 };
+  public int[] gwT = { 1000, 7000 };
+  public int[] gwU = { 10, 31 };
+  public int[] gwV = { 10000, 650000 };
+  public int[] gwW = { 320, 240, 0, 240, 320, 1, 240, 320, 3 };
+  public int[] gwX = { 10240, 512000 };
 }
 
 /* Location:

@@ -1,113 +1,67 @@
 package com.tencent.mm.m;
 
-public final class c
-  extends com.tencent.mm.al.a
+import android.util.SparseArray;
+import com.tencent.mm.model.ae;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.bc;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.ArrayList;
+import java.util.HashMap;
+
+public class c
+  implements ae
 {
-  public String bnt;
-  public String bnu;
-  public String bnv;
-  public String bnw;
-  public String bnx;
-  public long time;
-  public String title;
-  public int type;
-  public String url;
+  private a bwh;
   
-  public final void a(a.a.a.c.a parama)
+  public c()
   {
-    if (title != null) {
-      parama.U(1, title);
+    if (a.bvM == null) {
+      a.bvM = new a();
     }
-    if (url != null) {
-      parama.U(2, url);
-    }
-    if (bnt != null) {
-      parama.U(3, bnt);
-    }
-    if (bnu != null) {
-      parama.U(4, bnu);
-    }
-    parama.r(5, time);
-    if (bnv != null) {
-      parama.U(6, bnv);
-    }
-    if (bnw != null) {
-      parama.U(7, bnw);
-    }
-    if (bnx != null) {
-      parama.U(8, bnx);
-    }
-    parama.bM(9, type);
+    bwh = a.bvM;
   }
   
-  public final boolean a(a.a.a.a.a parama, com.tencent.mm.al.a parama1, int paramInt)
+  public static a qP()
   {
-    parama1 = (c)parama1;
-    switch (paramInt)
+    if (tDuin == 0) {
+      throw new com.tencent.mm.model.b();
+    }
+    c localc2 = (c)ah.tk().fu(c.class.getName());
+    c localc1 = localc2;
+    if (localc2 == null)
     {
-    default: 
-      return false;
-    case 1: 
-      title = jMD.readString();
-      return true;
-    case 2: 
-      url = jMD.readString();
-      return true;
-    case 3: 
-      bnt = jMD.readString();
-      return true;
-    case 4: 
-      bnu = jMD.readString();
-      return true;
-    case 5: 
-      time = jMD.aVq();
-      return true;
-    case 6: 
-      bnv = jMD.readString();
-      return true;
-    case 7: 
-      bnw = jMD.readString();
-      return true;
-    case 8: 
-      bnx = jMD.readString();
-      return true;
+      localc1 = new c();
+      ah.tk().a(c.class.getName(), localc1);
+      bwh.init();
     }
-    type = jMD.aVp();
-    return true;
+    return bwh;
   }
   
-  public final int kS()
+  public final void aN(int paramInt) {}
+  
+  public final void ai(boolean paramBoolean)
   {
-    int j = 0;
-    if (title != null) {
-      j = a.a.a.b.b.a.T(1, title) + 0;
-    }
-    int i = j;
-    if (url != null) {
-      i = j + a.a.a.b.b.a.T(2, url);
-    }
-    j = i;
-    if (bnt != null) {
-      j = i + a.a.a.b.b.a.T(3, bnt);
-    }
-    i = j;
-    if (bnu != null) {
-      i = j + a.a.a.b.b.a.T(4, bnu);
-    }
-    j = i + a.a.a.a.q(5, time);
-    i = j;
-    if (bnv != null) {
-      i = j + a.a.a.b.b.a.T(6, bnv);
-    }
-    j = i;
-    if (bnw != null) {
-      j = i + a.a.a.b.b.a.T(7, bnw);
-    }
-    i = j;
-    if (bnx != null) {
-      i = j + a.a.a.b.b.a.T(8, bnx);
-    }
-    return i + a.a.a.a.bI(9, type);
+    bwh.init();
+  }
+  
+  public final void aj(boolean paramBoolean) {}
+  
+  public final HashMap lo()
+  {
+    return null;
+  }
+  
+  public final void lp()
+  {
+    a locala = bwh;
+    bvO.clear();
+    b localb = bvN;
+    u.d("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "[carl] decoder.clear()");
+    bvX.clear();
+    bvZ.clear();
+    bvY.clear();
+    bwa.clear();
+    bvP = false;
   }
 }
 

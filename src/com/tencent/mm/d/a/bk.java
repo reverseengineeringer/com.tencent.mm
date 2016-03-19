@@ -1,30 +1,33 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.r.j;
+import com.tencent.mm.sdk.c.b;
 
 public final class bk
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awt = new a();
-  public b awu = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auA = new a();
+  public b auB = new b();
   
   public bk()
   {
-    id = "ExDeviceSimpleBTSendDataToDevice";
-    hXT = atO;
+    id = "ExDeviceBindHardDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public byte[] data;
-    public String mac;
+    public String auC;
+    public int auD = 0;
+    public int auE = 0;
+    public j auF;
   }
   
   public static final class b
   {
-    public boolean avu;
+    public j auF;
   }
 }
 

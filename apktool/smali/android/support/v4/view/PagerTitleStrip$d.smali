@@ -35,13 +35,13 @@
 
     .prologue
     .line 94
-    new-instance v0, Landroid/support/v4/view/r$a;
+    new-instance v0, Landroid/support/v4/view/k$a;
 
     invoke-virtual {p1}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Landroid/support/v4/view/r$a;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, v1}, Landroid/support/v4/view/k$a;-><init>(Landroid/content/Context;)V
 
     invoke-virtual {p1, v0}, Landroid/widget/TextView;->setTransformationMethod(Landroid/text/method/TransformationMethod;)V
 

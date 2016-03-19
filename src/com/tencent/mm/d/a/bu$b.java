@@ -1,11 +1,11 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.q.j;
+import java.util.List;
 
 public final class bu$b
 {
-  public long axb = 0L;
-  public j axc;
+  public boolean auR;
+  public List avh;
 }
 
 /* Location:

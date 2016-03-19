@@ -1,79 +1,78 @@
 package com.tencent.mm.g;
 
-import com.tencent.mm.compatible.util.f;
-import com.tencent.mm.model.a;
-import com.tencent.mm.model.au;
-import com.tencent.mm.model.ax;
+import com.tencent.mm.compatible.util.d;
+import com.tencent.mm.model.ae;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.model.b;
-import com.tencent.mm.model.dh;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.bc;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.File;
 import java.util.HashMap;
 
 public class h
-  implements au
+  implements ae
 {
-  private e bkq = new e();
-  private c bkr = new c();
+  private e buQ = new e();
+  private c buR = new c();
   
-  private static h pZ()
+  private static h pR()
   {
-    h localh2 = (h)ax.sS().fb(h.class.getName());
+    h localh2 = (h)ah.tk().fu(h.class.getName());
     h localh1 = localh2;
     if (localh2 == null)
     {
       localh1 = new h();
-      ax.sS().a(h.class.getName(), localh1);
+      ah.tk().a(h.class.getName(), localh1);
     }
     return localh1;
   }
   
-  public static e qa()
+  public static e pS()
   {
-    if (tluin == 0) {
-      throw new a();
+    if (tDuin == 0) {
+      throw new b();
     }
-    return pZbkq;
+    return pRbuQ;
   }
   
-  public static c qb()
+  public static c pT()
   {
-    if (tluin == 0) {
-      throw new a();
+    if (tDuin == 0) {
+      throw new b();
     }
-    return pZbkr;
+    return pRbuR;
   }
   
-  public final void aJ(int paramInt) {}
+  public final void aN(int paramInt) {}
   
   public final void ai(boolean paramBoolean)
   {
     if (paramBoolean)
     {
-      c localc = bkr;
-      File localFile1 = new File(f.bjI + "configlist/");
+      c localc = buR;
+      File localFile1 = new File(d.bxd + "configlist/");
       if (localFile1.exists())
       {
-        File localFile2 = new File(c.bki);
+        File localFile2 = new File(c.buH);
         if (!localFile2.exists())
         {
-          t.d("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "bugfix");
+          u.d("!44@/B4Tb64lLpIGhQOF66mZzwHpIdHfcGA8oTfkk/LC/Wo=", "bugfix");
           localc.renameTo(localFile1, localFile2);
         }
       }
     }
-    bkq.pO();
-    bkr.init();
+    buQ.pG();
+    buR.init();
   }
   
   public final void aj(boolean paramBoolean) {}
   
-  public final HashMap lT()
+  public final HashMap lo()
   {
     return null;
   }
   
-  public final void lU() {}
+  public final void lp() {}
 }
 
 /* Location:

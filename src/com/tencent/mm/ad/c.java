@@ -1,72 +1,116 @@
 package com.tencent.mm.ad;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.h;
+import com.tencent.mm.model.h;
+import com.tencent.mm.modelfriend.ah;
+import com.tencent.mm.modelfriend.s;
+import com.tencent.mm.modelfriend.t;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.abp;
+import com.tencent.mm.protocal.b.abs;
+import com.tencent.mm.protocal.b.abt;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.a.c;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.Iterator;
+import java.util.List;
 
 public final class c
-  implements d
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private static c bHV;
-  private boolean bHT = false;
-  private int bHU = 3;
+  private d anM;
+  public final a bUv;
+  private int bUw = 0;
   
-  private void release()
+  public c(int paramInt1, int paramInt2)
   {
-    bHT = false;
-    ax.tm().b(159, this);
+    Object localObject = new a.a();
+    bFa = new abs();
+    bFb = new abt();
+    uri = "/cgi-bin/micromsg-bin/listlinkedinfriend";
+    bEY = 676;
+    bFc = 0;
+    bFd = 0;
+    bUv = ((a.a)localObject).vy();
+    localObject = (abs)bUv.bEW.bFf;
+    asc = paramInt1;
+    jxL = paramInt2;
+    bUw = paramInt2;
   }
   
-  public static c zS()
+  public final int a(e parame, d paramd)
   {
-    if (bHV == null) {
-      bHV = new c();
-    }
-    return bHV;
+    anM = paramd;
+    return a(parame, bUv, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    if (paramj.getType() == 159)
+    u.d("!56@/B4Tb64lLpK+IBX8XDgnvninVxBMd/6gOufbF40IWDsrZbcmI3Wlsw==", "[oneliang][NetSceneListLinkedInFriend][onGYNetEnd]:netId:%s,errType:%s,errCode:%s,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
+    if ((paramInt2 == 0) && (paramInt3 == 0))
     {
-      t.i("!44@/B4Tb64lLpIGhQOF66mZz7yGf5Fl90mTaWt6722OX8U=", "getPackageList sceneEnd, %s, %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-      if ((paramInt1 != 0) || (paramInt2 != 0)) {
-        break label66;
-      }
-      ax.tl().rf().set(81938, Long.valueOf(bn.DL()));
-    }
-    for (;;)
-    {
-      release();
-      return;
-      label66:
-      paramInt1 = bHU - 1;
-      bHU = paramInt1;
-      if (paramInt1 < 0)
+      paramo = bUv.bEX.bFf).jxO;
+      label115:
+      s locals;
+      if (paramo == null)
       {
-        ax.tl().rf().set(81938, Long.valueOf((bn.DM() - 86400000L + 3600000L) / 1000L));
-        bHU = 3;
+        paramInt1 = 0;
+        u.d("!56@/B4Tb64lLpK+IBX8XDgnvninVxBMd/6gOufbF40IWDsrZbcmI3Wlsw==", "[oneliang][NetSceneListLinkedInFriend][onGYNetEnd]:net end ok,friend list size:%d", new Object[] { Integer.valueOf(paramInt1) });
+        if (paramo == null) {
+          break label315;
+        }
+        if (bUw == 0) {
+          ah.zz().clear();
+        }
+        paramo = paramo.iterator();
+        if (!paramo.hasNext()) {
+          break label315;
+        }
+        paramArrayOfByte = (abp)paramo.next();
+        locals = new s();
+        field_wechatId = h.sc();
+        field_linkedInId = jwj;
+        field_name = name;
+        field_position = jxE;
+        field_picUrl = jxF;
+        field_wechatUsername = jxG;
+        field_wechatSmallHead = jxH;
+        field_wechatBigHead = jxI;
+        field_linkedInProfileUrl = jxJ;
+        field_nickname = bNn;
+        if (ay.kz(field_wechatUsername)) {
+          break label306;
+        }
+        if (!field_wechatUsername.endsWith("@stranger")) {
+          break label297;
+        }
+        field_status = 1;
+      }
+      for (;;)
+      {
+        ah.zz().a(locals);
+        break label115;
+        paramInt1 = paramo.size();
+        break;
+        label297:
+        field_status = 3;
+        continue;
+        label306:
+        field_status = 2;
       }
     }
+    label315:
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
-  public final void update()
+  public final int getType()
   {
-    t.i("!44@/B4Tb64lLpIGhQOF66mZz7yGf5Fl90mTaWt6722OX8U=", "isUpdateing : " + bHT);
-    t.i("!44@/B4Tb64lLpIGhQOF66mZz7yGf5Fl90mTaWt6722OX8U=", "isSDCardAvailable : " + ax.tl().isSDCardAvailable());
-    if ((!bHT) && (ax.tl().isSDCardAvailable()))
-    {
-      release();
-      bHT = true;
-      ax.tm().a(159, this);
-      k localk = new k(7);
-      ax.tm().d(localk);
-    }
+    return 676;
   }
 }
 

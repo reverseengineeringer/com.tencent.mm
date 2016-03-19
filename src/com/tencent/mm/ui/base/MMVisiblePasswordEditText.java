@@ -4,56 +4,77 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
 import android.widget.EditText;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.h;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MMVisiblePasswordEditText
   extends EditText
 {
-  public String iEe = "";
-  final Drawable iJg = getResources().getDrawable(a.h.login_showpassword_icon);
-  final Drawable iJh = getResources().getDrawable(a.h.login_showpassword_icon_activa);
-  private boolean iJi = false;
+  public String iGN = "";
+  final Drawable kIs = getResources().getDrawable(2130903475);
+  final Drawable kIt = getResources().getDrawable(2130903605);
+  private boolean kIu = false;
   
   public MMVisiblePasswordEditText(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    aMJ();
+    aSo();
   }
   
   public MMVisiblePasswordEditText(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    aMJ();
+    aSo();
   }
   
-  private void aMJ()
+  private void aSo()
   {
-    iJg.setBounds(0, 0, iJg.getIntrinsicWidth(), iJg.getIntrinsicHeight());
-    iJh.setBounds(0, 0, iJh.getIntrinsicWidth(), iJh.getIntrinsicHeight());
-    t.d("!56@/B4Tb64lLpIeSqVHC6FpCitb8mM4LSwL+kVR6pUSVkqLG7RV2oSlOw==", "closeEye width %d height %d", new Object[] { Integer.valueOf(iJg.getIntrinsicWidth()), Integer.valueOf(iJg.getIntrinsicHeight()) });
-    aNm();
-    setHeight(iJg.getIntrinsicHeight() + getResources().getDimensionPixelSize(a.g.OneDPPadding) * 5);
-    setOnTouchListener(new cy(this));
+    kIs.setBounds(0, 0, kIs.getIntrinsicWidth(), kIs.getIntrinsicHeight());
+    kIt.setBounds(0, 0, kIt.getIntrinsicWidth(), kIt.getIntrinsicHeight());
+    u.d("!56@/B4Tb64lLpIeSqVHC6FpCitb8mM4LSwL+kVR6pUSVkqLG7RV2oSlOw==", "closeEye width %d height %d", new Object[] { Integer.valueOf(kIs.getIntrinsicWidth()), Integer.valueOf(kIs.getIntrinsicHeight()) });
+    bdd();
+    setHeight(kIs.getIntrinsicHeight() + getResources().getDimensionPixelSize(2131034573) * 5);
+    setOnTouchListener(new View.OnTouchListener()
+    {
+      public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
+      {
+        boolean bool = true;
+        paramAnonymousView = MMVisiblePasswordEditText.this;
+        if (paramAnonymousView.getCompoundDrawables()[2] == null) {}
+        while ((paramAnonymousMotionEvent.getAction() != 1) || (paramAnonymousMotionEvent.getX() <= paramAnonymousView.getWidth() - paramAnonymousView.getPaddingRight() - kIs.getIntrinsicWidth())) {
+          return false;
+        }
+        paramAnonymousView = MMVisiblePasswordEditText.this;
+        if (!MMVisiblePasswordEditText.a(MMVisiblePasswordEditText.this)) {}
+        for (;;)
+        {
+          MMVisiblePasswordEditText.a(paramAnonymousView, bool);
+          MMVisiblePasswordEditText.b(MMVisiblePasswordEditText.this);
+          return false;
+          bool = false;
+        }
+      }
+    });
   }
   
-  private void aNm()
+  private void bdd()
   {
     int i = getSelectionStart();
     int j = getSelectionEnd();
-    if (iJi)
+    if (kIu)
     {
       setInputType(1);
-      setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], iJh, getCompoundDrawables()[3]);
+      setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], kIt, getCompoundDrawables()[3]);
     }
     for (;;)
     {
       setSelection(i, j);
       return;
       setInputType(129);
-      setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], iJg, getCompoundDrawables()[3]);
+      setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], kIs, getCompoundDrawables()[3]);
     }
   }
 }

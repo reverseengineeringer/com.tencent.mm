@@ -1,11 +1,11 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class WXMediaMessage$a
 {
-  public static WXMediaMessage G(Bundle paramBundle)
+  public static WXMediaMessage J(Bundle paramBundle)
   {
     WXMediaMessage localWXMediaMessage = new WXMediaMessage();
     sdkVer = paramBundle.getInt("_wxobject_sdkVer");
@@ -17,7 +17,7 @@ public final class WXMediaMessage$a
     messageExt = paramBundle.getString("_wxobject_message_ext");
     String str = paramBundle.getString("_wxobject_identifier_");
     if ((str == null) || (str.length() == 0)) {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "pathOldToNew fail, oldPath is null");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "pathOldToNew fail, oldPath is null");
     }
     while ((str == null) || (str.length() <= 0))
     {
@@ -32,7 +32,7 @@ public final class WXMediaMessage$a
     }
     catch (Exception paramBundle)
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "get media object from bundle failed: unknown ident " + str + ", ex = " + paramBundle.getMessage());
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "get media object from bundle failed: unknown ident " + str + ", ex = " + paramBundle.getMessage());
     }
     return localWXMediaMessage;
   }
@@ -51,7 +51,7 @@ public final class WXMediaMessage$a
       if ((str != null) && (str.length() != 0)) {
         break label133;
       }
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "pathNewToOld fail, newPath is null");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk=", "pathNewToOld fail, newPath is null");
     }
     for (;;)
     {

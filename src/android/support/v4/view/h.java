@@ -1,37 +1,42 @@
 package android.support.v4.view;
 
-import android.content.Context;
-import android.view.View;
+import android.view.MenuItem;
+import android.view.MenuItem.OnActionExpandListener;
 
-public abstract class h
+final class h
 {
-  public a fs;
-  private b ft;
-  public final Context mContext;
-  
-  public final void a(b paramb)
+  public static MenuItem a(MenuItem paramMenuItem, b paramb)
   {
-    if ((ft != null) && (paramb != null)) {
-      new StringBuilder("setVisibilityListener: Setting a new ActionProvider.VisibilityListener when one is already set. Are you reusing this ").append(getClass().getSimpleName()).append(" instance while it is still in use somewhere else?");
+    return paramMenuItem.setOnActionExpandListener(new a(paramb));
+  }
+  
+  static final class a
+    implements MenuItem.OnActionExpandListener
+  {
+    private h.b eG;
+    
+    public a(h.b paramb)
+    {
+      eG = paramb;
     }
-    ft = paramb;
-  }
-  
-  public final void k(boolean paramBoolean)
-  {
-    if (fs != null) {
-      fs.l(paramBoolean);
+    
+    public final boolean onMenuItemActionCollapse(MenuItem paramMenuItem)
+    {
+      return eG.ag();
+    }
+    
+    public final boolean onMenuItemActionExpand(MenuItem paramMenuItem)
+    {
+      return eG.af();
     }
   }
   
-  public abstract View onCreateActionView();
-  
-  public static abstract interface a
+  static abstract interface b
   {
-    public abstract void l(boolean paramBoolean);
+    public abstract boolean af();
+    
+    public abstract boolean ag();
   }
-  
-  public static abstract interface b {}
 }
 
 /* Location:

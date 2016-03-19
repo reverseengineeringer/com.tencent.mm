@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract YS()V
+.method public abstract QR()V
 .end method

@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private gRB:I
+.field private drS:I
 
-.field final synthetic jwB:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
+.field final synthetic lzs:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     .prologue
     .line 830
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->jwB:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->lzs:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -45,29 +45,29 @@
 
 
 # virtual methods
-.method public final aAl()V
+.method public final SC()V
     .locals 1
 
     .prologue
     .line 834
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->jwB:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->lzs:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;->b(Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->gRB:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->drS:I
 
     .line 835
     return-void
 .end method
 
-.method public final aAm()Z
+.method public final SD()Z
     .locals 2
 
     .prologue
     .line 838
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->jwB:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->lzs:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;->hasWindowFocus()Z
 
@@ -75,13 +75,13 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->jwB:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->lzs:Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;->c(Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView;)I
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->gRB:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/GridHeadersGridView$f;->drS:I
 
     if-ne v0, v1, :cond_0
 

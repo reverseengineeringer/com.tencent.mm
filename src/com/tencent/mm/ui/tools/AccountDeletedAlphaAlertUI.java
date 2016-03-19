@@ -1,22 +1,23 @@
 package com.tencent.mm.ui.tools;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.a.n;
-import com.tencent.mm.d.a.j;
-import com.tencent.mm.model.ax;
+import com.tencent.mm.d.a.m;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.base.h;
+import com.tencent.mm.ui.base.g;
 
 @com.tencent.mm.ui.base.a(3)
 public class AccountDeletedAlphaAlertUI
   extends MMActivity
 {
-  private static AccountDeletedAlphaAlertUI joe = null;
+  private static AccountDeletedAlphaAlertUI ltu = null;
   
-  public static AccountDeletedAlphaAlertUI aRk()
+  public static AccountDeletedAlphaAlertUI big()
   {
-    return joe;
+    return ltu;
   }
   
   protected final int getLayoutId()
@@ -27,23 +28,35 @@ public class AccountDeletedAlphaAlertUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    joe = this;
-    paramBundle = new j();
-    com.tencent.mm.sdk.c.a.hXQ.g(paramBundle);
-    ax.tv();
-    paramBundle = com.tencent.mm.e.a.cR(getIntent().getStringExtra("errmsg"));
+    ltu = this;
+    paramBundle = new m();
+    com.tencent.mm.sdk.c.a.jUF.j(paramBundle);
+    ah.hold();
+    paramBundle = com.tencent.mm.e.a.cV(getIntent().getStringExtra("errmsg"));
     if (paramBundle != null)
     {
-      paramBundle.a(this, new a(this), null);
+      paramBundle.a(this, new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          AccountDeletedAlphaAlertUI.a(AccountDeletedAlphaAlertUI.this);
+        }
+      }, null);
       return;
     }
-    h.a(this, getString(a.n.main_err_account_delete), null, false, new b(this));
+    g.a(this, getString(2131427787), null, false, new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        AccountDeletedAlphaAlertUI.a(AccountDeletedAlphaAlertUI.this);
+      }
+    });
   }
   
   public void onDestroy()
   {
-    if (equals(joe)) {
-      joe = null;
+    if (equals(ltu)) {
+      ltu = null;
     }
     super.onDestroy();
   }

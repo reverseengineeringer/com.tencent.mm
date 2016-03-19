@@ -1,150 +1,184 @@
 package android.support.v4.widget;
 
 import android.content.Context;
-import android.graphics.Canvas;
 import android.os.Build.VERSION;
-import android.widget.EdgeEffect;
+import android.view.animation.Interpolator;
+import android.widget.OverScroller;
+import android.widget.Scroller;
 
 public final class e
 {
-  private static final c iB = new a();
-  private Object iA;
+  static final a hK = new b();
+  Object hJ;
   
   static
   {
-    if (Build.VERSION.SDK_INT >= 14)
+    int i = Build.VERSION.SDK_INT;
+    if (i >= 14)
     {
-      iB = new b();
+      hK = new d();
+      return;
+    }
+    if (i >= 9)
+    {
+      hK = new c();
       return;
     }
   }
   
-  public e(Context paramContext)
+  private e(Context paramContext, Interpolator paramInterpolator)
   {
-    iA = iB.e(paramContext);
+    hJ = hK.b(paramContext, paramInterpolator);
   }
   
-  public final boolean aW()
+  public static e a(Context paramContext, Interpolator paramInterpolator)
   {
-    return iB.z(iA);
+    return new e(paramContext, paramInterpolator);
   }
   
-  public final boolean draw(Canvas paramCanvas)
+  public final void abortAnimation()
   {
-    return iB.a(iA, paramCanvas);
+    hK.G(hJ);
   }
   
-  public final boolean f(float paramFloat)
+  public final int getCurrX()
   {
-    return iB.a(iA, paramFloat);
+    return hK.D(hJ);
   }
   
-  public final void finish()
+  public final int getCurrY()
   {
-    iB.y(iA);
+    return hK.E(hJ);
   }
   
-  public final boolean isFinished()
+  static abstract interface a
   {
-    return iB.x(iA);
-  }
-  
-  public final void setSize(int paramInt1, int paramInt2)
-  {
-    iB.a(iA, paramInt1, paramInt2);
-  }
-  
-  static final class a
-    implements e.c
-  {
-    public final void a(Object paramObject, int paramInt1, int paramInt2) {}
+    public abstract boolean A(Object paramObject);
     
-    public final boolean a(Object paramObject, float paramFloat)
-    {
-      return false;
-    }
+    public abstract int D(Object paramObject);
     
-    public final boolean a(Object paramObject, Canvas paramCanvas)
-    {
-      return false;
-    }
+    public abstract int E(Object paramObject);
     
-    public final Object e(Context paramContext)
-    {
-      return null;
-    }
+    public abstract boolean F(Object paramObject);
     
-    public final boolean x(Object paramObject)
-    {
-      return true;
-    }
+    public abstract void G(Object paramObject);
     
-    public final void y(Object paramObject) {}
+    public abstract int H(Object paramObject);
     
-    public final boolean z(Object paramObject)
-    {
-      return false;
-    }
+    public abstract int I(Object paramObject);
+    
+    public abstract void a(Object paramObject, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5);
+    
+    public abstract Object b(Context paramContext, Interpolator paramInterpolator);
   }
   
   static final class b
-    implements e.c
+    implements e.a
   {
-    public final void a(Object paramObject, int paramInt1, int paramInt2)
+    public final boolean A(Object paramObject)
     {
-      ((EdgeEffect)paramObject).setSize(paramInt1, paramInt2);
+      return ((Scroller)paramObject).isFinished();
     }
     
-    public final boolean a(Object paramObject, float paramFloat)
+    public final int D(Object paramObject)
     {
-      ((EdgeEffect)paramObject).onPull(paramFloat);
-      return true;
+      return ((Scroller)paramObject).getCurrX();
     }
     
-    public final boolean a(Object paramObject, Canvas paramCanvas)
+    public final int E(Object paramObject)
     {
-      return ((EdgeEffect)paramObject).draw(paramCanvas);
+      return ((Scroller)paramObject).getCurrY();
     }
     
-    public final Object e(Context paramContext)
+    public final boolean F(Object paramObject)
     {
-      return new EdgeEffect(paramContext);
+      return ((Scroller)paramObject).computeScrollOffset();
     }
     
-    public final boolean x(Object paramObject)
+    public final void G(Object paramObject)
     {
-      return ((EdgeEffect)paramObject).isFinished();
+      ((Scroller)paramObject).abortAnimation();
     }
     
-    public final void y(Object paramObject)
+    public final int H(Object paramObject)
     {
-      ((EdgeEffect)paramObject).finish();
+      return ((Scroller)paramObject).getFinalX();
     }
     
-    public final boolean z(Object paramObject)
+    public final int I(Object paramObject)
     {
-      paramObject = (EdgeEffect)paramObject;
-      ((EdgeEffect)paramObject).onRelease();
-      return ((EdgeEffect)paramObject).isFinished();
+      return ((Scroller)paramObject).getFinalY();
+    }
+    
+    public final void a(Object paramObject, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
+    {
+      ((Scroller)paramObject).startScroll(paramInt1, paramInt2, paramInt3, paramInt4, paramInt5);
+    }
+    
+    public final Object b(Context paramContext, Interpolator paramInterpolator)
+    {
+      if (paramInterpolator != null) {
+        return new Scroller(paramContext, paramInterpolator);
+      }
+      return new Scroller(paramContext);
     }
   }
   
-  static abstract interface c
+  static class c
+    implements e.a
   {
-    public abstract void a(Object paramObject, int paramInt1, int paramInt2);
+    public final boolean A(Object paramObject)
+    {
+      return ((OverScroller)paramObject).isFinished();
+    }
     
-    public abstract boolean a(Object paramObject, float paramFloat);
+    public final int D(Object paramObject)
+    {
+      return ((OverScroller)paramObject).getCurrX();
+    }
     
-    public abstract boolean a(Object paramObject, Canvas paramCanvas);
+    public final int E(Object paramObject)
+    {
+      return ((OverScroller)paramObject).getCurrY();
+    }
     
-    public abstract Object e(Context paramContext);
+    public final boolean F(Object paramObject)
+    {
+      return ((OverScroller)paramObject).computeScrollOffset();
+    }
     
-    public abstract boolean x(Object paramObject);
+    public final void G(Object paramObject)
+    {
+      ((OverScroller)paramObject).abortAnimation();
+    }
     
-    public abstract void y(Object paramObject);
+    public final int H(Object paramObject)
+    {
+      return ((OverScroller)paramObject).getFinalX();
+    }
     
-    public abstract boolean z(Object paramObject);
+    public final int I(Object paramObject)
+    {
+      return ((OverScroller)paramObject).getFinalY();
+    }
+    
+    public final void a(Object paramObject, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
+    {
+      ((OverScroller)paramObject).startScroll(paramInt1, paramInt2, paramInt3, paramInt4, paramInt5);
+    }
+    
+    public final Object b(Context paramContext, Interpolator paramInterpolator)
+    {
+      if (paramInterpolator != null) {
+        return new OverScroller(paramContext, paramInterpolator);
+      }
+      return new OverScroller(paramContext);
+    }
   }
+  
+  static final class d
+    extends e.c
+  {}
 }
 
 /* Location:

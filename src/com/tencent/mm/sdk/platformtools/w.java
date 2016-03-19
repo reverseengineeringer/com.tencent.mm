@@ -1,216 +1,160 @@
 package com.tencent.mm.sdk.platformtools;
 
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
+import junit.framework.Assert;
 
-public class w
+public final class w
 {
-  private int createCount;
-  private int evictionCount;
-  private int hitCount;
-  private final LinkedHashMap map;
-  private int maxSize;
-  private int missCount;
-  private int putCount;
-  private int size;
+  public static b blH;
+  private static int jVp;
+  public static Map jVt = new HashMap();
+  private static boolean jVv = false;
+  public static boolean jVw;
+  public long hNj = 0L;
+  public final int jVq;
+  private final boolean jVr;
+  public long jVs = 0L;
+  private final a jVu;
   
-  public w(int paramInt)
+  public w(a parama)
   {
-    if (paramInt <= 0) {
-      throw new IllegalArgumentException("maxSize <= 0");
+    Assert.assertTrue("bumper not initialized", jVv);
+    jVu = parama;
+    jVr = true;
+    if (jVp >= 8192) {
+      jVp = 0;
     }
-    maxSize = paramInt;
-    map = new LinkedHashMap(0, 0.75F, true);
+    int i = jVp + 1;
+    jVp = i;
+    jVq = i;
   }
   
-  private int safeSizeOf(Object paramObject1, Object paramObject2)
+  public static void a(b paramb)
   {
-    int i = sizeOf(paramObject1, paramObject2);
-    if (i < 0) {
-      throw new IllegalStateException("Negative size: " + paramObject1 + "=" + paramObject2);
-    }
-    return i;
+    jVv = true;
+    blH = paramb;
   }
   
-  public final boolean aa(Object paramObject)
+  public static long aUE()
   {
-    try
+    jVw = false;
+    LinkedList localLinkedList = new LinkedList();
+    Object localObject = new HashSet();
+    ((Set)localObject).addAll(jVt.keySet());
+    localObject = ((Set)localObject).iterator();
+    long l1 = Long.MAX_VALUE;
+    if (((Iterator)localObject).hasNext())
     {
-      boolean bool = map.containsKey(paramObject);
-      return bool;
-    }
-    finally
-    {
-      paramObject = finally;
-      throw ((Throwable)paramObject);
-    }
-  }
-  
-  public Object create(Object paramObject)
-  {
-    return null;
-  }
-  
-  public void entryRemoved(boolean paramBoolean, Object paramObject1, Object paramObject2, Object paramObject3) {}
-  
-  public final Object get(Object paramObject)
-  {
-    if (paramObject == null) {
-      throw new NullPointerException("key == null");
-    }
-    Object localObject1;
-    try
-    {
-      localObject1 = map.get(paramObject);
-      if (localObject1 != null)
+      Integer localInteger = (Integer)((Iterator)localObject).next();
+      w localw = (w)jVt.get(localInteger);
+      if (localw == null) {
+        break label273;
+      }
+      long l3 = ay.ao(jVs);
+      long l2 = l3;
+      if (l3 < 0L) {
+        l2 = 0L;
+      }
+      if (l2 > hNj)
       {
-        hitCount += 1;
-        return localObject1;
-      }
-      missCount += 1;
-      localObject1 = create(paramObject);
-      if (localObject1 == null) {
-        return null;
-      }
-    }
-    finally {}
-    try
-    {
-      createCount += 1;
-      Object localObject2 = map.put(paramObject, localObject1);
-      if (localObject2 != null) {
-        map.put(paramObject, localObject2);
-      }
-      for (;;)
-      {
-        if (localObject2 == null) {
-          break;
+        if ((!jVu.lj()) || (!jVr)) {
+          localLinkedList.add(localInteger);
         }
-        entryRemoved(false, paramObject, localObject1, localObject2);
-        return localObject2;
-        size += safeSizeOf(paramObject, localObject1);
+        for (;;)
+        {
+          jVs = ay.FT();
+          break;
+          l1 = hNj;
+        }
       }
-      trimToSize(maxSize);
+      if (hNj - l2 >= l1) {
+        break label273;
+      }
+      l1 = hNj - l2;
     }
-    finally {}
-    return localObject1;
-  }
-  
-  public final Object put(Object paramObject1, Object paramObject2)
-  {
-    if ((paramObject1 == null) || (paramObject2 == null)) {
-      throw new NullPointerException("key == null || value == null");
-    }
-    try
+    label273:
+    for (;;)
     {
-      putCount += 1;
-      size += safeSizeOf(paramObject1, paramObject2);
-      Object localObject = map.put(paramObject1, paramObject2);
-      if (localObject != null) {
-        size -= safeSizeOf(paramObject1, localObject);
+      break;
+      int i = 0;
+      while (i < localLinkedList.size())
+      {
+        jVt.remove(localLinkedList.get(i));
+        i += 1;
       }
-      if (localObject != null) {
-        entryRemoved(false, paramObject1, localObject, paramObject2);
+      if ((!jVw) && (l1 == Long.MAX_VALUE) && (blH != null))
+      {
+        blH.cancel();
+        u.v("!32@/B4Tb64lLpIraIIYhljH18U8Zao9ShTz", "cancel bumper for no more handler");
       }
-      trimToSize(maxSize);
-      return localObject;
-    }
-    finally {}
-  }
-  
-  public final Object remove(Object paramObject)
-  {
-    if (paramObject == null) {
-      throw new NullPointerException("key == null");
-    }
-    try
-    {
-      Object localObject = map.remove(paramObject);
-      if (localObject != null) {
-        size -= safeSizeOf(paramObject, localObject);
-      }
-      if (localObject != null) {
-        entryRemoved(false, paramObject, localObject, null);
-      }
-      return localObject;
-    }
-    finally {}
-  }
-  
-  public final int size()
-  {
-    try
-    {
-      int i = size;
-      return i;
-    }
-    finally
-    {
-      localObject = finally;
-      throw ((Throwable)localObject);
+      return l1;
     }
   }
   
-  public int sizeOf(Object paramObject1, Object paramObject2)
+  public static boolean dr(long paramLong)
   {
-    return 1;
-  }
-  
-  public final Map snapshot()
-  {
-    try
+    u.d("!32@/B4Tb64lLpIraIIYhljH18U8Zao9ShTz", "check need prepare: check=" + paramLong);
+    Iterator localIterator = jVt.entrySet().iterator();
+    long l1 = Long.MAX_VALUE;
+    while (localIterator.hasNext())
     {
-      LinkedHashMap localLinkedHashMap = new LinkedHashMap(map);
-      return localLinkedHashMap;
-    }
-    finally
-    {
-      localObject = finally;
-      throw ((Throwable)localObject);
-    }
-  }
-  
-  public final String toString()
-  {
-    int i = 0;
-    try
-    {
-      int j = hitCount + missCount;
-      if (j != 0) {
-        i = hitCount * 100 / j;
+      w localw = (w)((Map.Entry)localIterator.next()).getValue();
+      if (localw == null) {
+        break label154;
       }
-      String str = String.format("LruCache[maxSize=%d,hits=%d,misses=%d,hitRate=%d%%]", new Object[] { Integer.valueOf(maxSize), Integer.valueOf(hitCount), Integer.valueOf(missCount), Integer.valueOf(i) });
-      return str;
-    }
-    finally {}
-  }
-  
-  public void trimToSize(int paramInt)
-  {
-    Object localObject3;
-    Object localObject2;
-    try
-    {
-      if ((size < 0) || ((map.isEmpty()) && (size != 0))) {
-        throw new IllegalStateException(getClass().getName() + ".sizeOf() is reporting inconsistent results!");
+      long l3 = ay.ao(jVs);
+      long l2 = l3;
+      if (l3 < 0L) {
+        l2 = 0L;
+      }
+      if (l2 > hNj)
+      {
+        l1 = hNj;
+      }
+      else
+      {
+        if (hNj - l2 >= l1) {
+          break label154;
+        }
+        l1 = hNj - l2;
       }
     }
-    finally
+    label154:
+    for (;;)
     {
-      throw ((Throwable)localObject1);
-      if ((size <= paramInt) || (map.isEmpty())) {
-        return;
-      }
-      localObject3 = (Map.Entry)map.entrySet().iterator().next();
-      localObject2 = ((Map.Entry)localObject3).getKey();
-      localObject3 = ((Map.Entry)localObject3).getValue();
-      map.remove(localObject2);
-      size -= safeSizeOf(localObject2, localObject3);
-      evictionCount += 1;
+      break;
+      return l1 > paramLong;
     }
+  }
+  
+  public final void aUF()
+  {
+    jVt.remove(Integer.valueOf(jVq));
+  }
+  
+  protected final void finalize()
+  {
+    aUF();
+    super.finalize();
+  }
+  
+  public static abstract interface a
+  {
+    public abstract boolean lj();
+  }
+  
+  public static abstract interface b
+  {
+    public abstract void cancel();
+    
+    public abstract void prepare();
   }
 }
 

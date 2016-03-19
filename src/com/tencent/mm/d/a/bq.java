@@ -1,29 +1,23 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class bq
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awD = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auU = new a();
   
   public bq()
   {
-    id = "ExtCallBiz";
-    hXT = atO;
+    id = "ExDeviceGetBoundDevices";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String[] atX;
-    public String awE;
-    public Context context;
-    public int op = 0;
-    public String[] selectionArgs;
-    public int source = -1;
+    public boolean auV = false;
   }
 }
 

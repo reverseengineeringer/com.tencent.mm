@@ -3,7 +3,7 @@ package com.tencent.mm.pluginsdk.ui.musicplayer;
 public final class a$a
 {
   public String content;
-  boolean gWx;
+  boolean ffb;
   public long timestamp;
   
   public final String toString()

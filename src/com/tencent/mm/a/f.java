@@ -1,23 +1,67 @@
 package com.tencent.mm.a;
 
-final class f
+import com.tencent.mm.sdk.platformtools.v;
+
+public final class f
+  extends v
 {
-  public byte[] amI;
-  public int amJ = 0;
+  private a aku = null;
   
-  public f()
+  public f(int paramInt)
   {
-    amI = new byte['Ā'];
+    super(paramInt);
   }
   
-  public f(byte paramByte)
+  public f(int paramInt, a parama)
   {
-    amI = new byte[] { paramByte };
+    super(paramInt);
+    aku = parama;
   }
   
-  public f(byte[] paramArrayOfByte)
+  public final void clear()
   {
-    amI = paramArrayOfByte;
+    super.trimToSize(-1);
+  }
+  
+  protected final Object create(Object paramObject)
+  {
+    return super.create(paramObject);
+  }
+  
+  public final void d(Object paramObject1, Object paramObject2)
+  {
+    if (paramObject2 == null) {
+      return;
+    }
+    put(paramObject1, paramObject2);
+  }
+  
+  protected final void entryRemoved(boolean paramBoolean, Object paramObject1, Object paramObject2, Object paramObject3)
+  {
+    super.entryRemoved(paramBoolean, paramObject1, paramObject2, paramObject3);
+    if ((aku != null) && (paramObject3 == null)) {
+      aku.e(paramObject1, paramObject2);
+    }
+  }
+  
+  public final void kl()
+  {
+    super.trimToSize(-1);
+  }
+  
+  protected final int sizeOf(Object paramObject1, Object paramObject2)
+  {
+    return super.sizeOf(paramObject1, paramObject2);
+  }
+  
+  public final void trimToSize(int paramInt)
+  {
+    super.trimToSize(paramInt);
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void e(Object paramObject1, Object paramObject2);
   }
 }
 

@@ -1,71 +1,68 @@
-.class final Lcom/tencent/mm/performance/wxperformancetool/b;
-.super Lcom/tencent/mm/sdk/platformtools/ac;
+.class public final Lcom/tencent/mm/performance/wxperformancetool/b;
+.super Landroid/os/HandlerThread;
 .source "SourceFile"
 
 
+# static fields
+.field public static clq:I
+
+
 # instance fields
-.field final synthetic bUs:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+.field private cky:Lcom/tencent/mm/performance/wxperformancetool/c;
+
+.field public clr:Z
+
+.field public mHandler:Landroid/os/Handler;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 21
-    iput-object p1, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->bUs:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+    .line 12
+    const/16 v0, 0x9c4
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
+    sput v0, Lcom/tencent/mm/performance/wxperformancetool/b;->clq:I
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 2
+.method public constructor <init>(Ljava/lang/String;Lcom/tencent/mm/performance/wxperformancetool/c;)V
+    .locals 1
 
     .prologue
-    .line 24
-    sget-object v0, Lcom/tencent/mm/performance/wxperformancetool/i;->bUy:Ljava/util/HashMap;
+    .line 17
+    invoke-direct {p0, p1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->bUs:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+    .line 14
+    const/4 v0, 0x0
 
-    invoke-static {v1}, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;->a(Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;)Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->clr:Z
 
-    move-result-object v1
+    .line 18
+    iput-object p2, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->cky:Lcom/tencent/mm/performance/wxperformancetool/c;
 
-    invoke-virtual {v0, v1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    .line 25
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_0
-
-    .line 26
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->bUs:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;->finish()V
-
-    .line 30
-    :goto_0
+    .line 19
     return-void
+.end method
 
-    .line 28
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->bUs:Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;
+.method static synthetic a(Lcom/tencent/mm/performance/wxperformancetool/b;)Lcom/tencent/mm/performance/wxperformancetool/c;
+    .locals 1
 
-    invoke-static {v0}, Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;->b(Lcom/tencent/mm/performance/wxperformancetool/MemoryLeakActivity;)Lcom/tencent/mm/ui/base/aa;
+    .prologue
+    .line 8
+    iget-object v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->cky:Lcom/tencent/mm/performance/wxperformancetool/c;
 
-    move-result-object v0
+    return-object v0
+.end method
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/aa;->show()V
+.method static synthetic b(Lcom/tencent/mm/performance/wxperformancetool/b;)Z
+    .locals 1
 
-    goto :goto_0
+    .prologue
+    .line 8
+    iget-boolean v0, p0, Lcom/tencent/mm/performance/wxperformancetool/b;->clr:Z
+
+    return v0
 .end method

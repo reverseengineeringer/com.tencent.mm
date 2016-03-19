@@ -1,22 +1,44 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.model.br;
-import com.tencent.mm.pluginsdk.model.app.p;
-import com.tencent.mm.storage.ar;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 final class dd
-  implements DialogInterface.OnClickListener
+  extends aa.a
 {
-  dd(dc paramdc, ar paramar) {}
+  TextView glu;
+  TextView ivL;
+  TextView kRz;
+  View lcg;
+  ImageView lch;
+  ImageView lci;
+  TextView lcj;
+  TextView lck;
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public dd(int paramInt)
   {
-    p.w(eId);
-    br.E(eId.field_msgId);
-    iUA.iUg.aPt();
+    super(paramInt);
+  }
+  
+  public final aa.a aI(View paramView)
+  {
+    super.aC(paramView);
+    dUV = ((TextView)paramView.findViewById(2131165184));
+    kRz = ((TextView)paramView.findViewById(2131165258));
+    glu = ((TextView)paramView.findViewById(2131165260));
+    ivL = ((TextView)paramView.findViewById(2131165262));
+    kTa = paramView.findViewById(2131165257);
+    lck = ((TextView)paramView.findViewById(2131165261));
+    lcg = paramView.findViewById(2131165263);
+    lch = ((ImageView)paramView.findViewById(2131165264));
+    lci = ((ImageView)paramView.findViewById(2131165266));
+    lcj = ((TextView)paramView.findViewById(2131165265));
+    edK = ((CheckBox)paramView.findViewById(2131165186));
+    dMC = paramView.findViewById(2131165187);
+    type = 9;
+    return this;
   }
 }
 

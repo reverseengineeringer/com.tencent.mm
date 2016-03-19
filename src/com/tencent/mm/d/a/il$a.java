@@ -2,7 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class il$a
 {
-  public boolean aFB;
+  public boolean aEr = false;
+  public boolean aEs = false;
+  public int type;
 }
 
 /* Location:

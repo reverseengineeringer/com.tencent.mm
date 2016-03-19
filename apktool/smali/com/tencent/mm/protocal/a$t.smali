@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$t;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 1218
-    const-string/jumbo v0, "disconnectWXDevice"
+    .line 1975
+    const-string/jumbo v0, "clearBounceBackground"
 
-    const-string/jumbo v1, "disconnectWXDevice"
+    const-string/jumbo v1, "clearBounceBackground"
 
-    const/16 v2, 0x7c
+    const/16 v2, 0xbd
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 1219
+    .line 1976
     return-void
 .end method

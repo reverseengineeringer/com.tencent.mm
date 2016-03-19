@@ -3,47 +3,47 @@ package com.tencent.mm.pluginsdk.ui.musicplayer;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.view.SurfaceHolder;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
 
 final class LyricView$b
   implements Runnable
 {
-  int gWI = 5;
+  int iMZ = 5;
   
   private LyricView$b(LyricView paramLyricView) {}
   
   public final void run()
   {
-    gWI -= 1;
-    t.i("!32@/B4Tb64lLpKLTg+RhqEt7h8agXSu+Fyh", "auto refresh bg, cur times [%d]", new Object[] { Integer.valueOf(gWI) });
-    if (gWI < 0) {
-      t.w("!32@/B4Tb64lLpKLTg+RhqEt7h8agXSu+Fyh", "auto refresh bg job finish, try times 0");
+    iMZ -= 1;
+    u.i("!32@/B4Tb64lLpKLTg+RhqEt7h8agXSu+Fyh", "auto refresh bg, cur times [%d]", new Object[] { Integer.valueOf(iMZ) });
+    if (iMZ < 0) {
+      u.w("!32@/B4Tb64lLpKLTg+RhqEt7h8agXSu+Fyh", "auto refresh bg job finish, try times 0");
     }
     do
     {
       return;
-      LyricView.b(gWH);
-      if (LyricView.c(gWH) != null) {
+      LyricView.b(iMY);
+      if (LyricView.c(iMY) != null) {
         try
         {
-          Canvas localCanvas = gWH.getHolder().lockCanvas();
-          LyricView.a(LyricView.c(gWH), localCanvas, new Rect());
-          LyricView.a(LyricView.d(gWH), localCanvas);
-          gWH.getHolder().unlockCanvasAndPost(localCanvas);
-          t.w("!32@/B4Tb64lLpKLTg+RhqEt7h8agXSu+Fyh", "auto refresh bg job finish, bgBmp not null");
+          Canvas localCanvas = iMY.getHolder().lockCanvas();
+          LyricView.a(LyricView.c(iMY), localCanvas, new Rect());
+          LyricView.a(LyricView.d(iMY), localCanvas);
+          iMY.getHolder().unlockCanvasAndPost(localCanvas);
+          u.w("!32@/B4Tb64lLpKLTg+RhqEt7h8agXSu+Fyh", "auto refresh bg job finish, bgBmp not null");
           return;
         }
         catch (Exception localException)
         {
           for (;;)
           {
-            t.w("!32@/B4Tb64lLpKLTg+RhqEt7h8agXSu+Fyh", "auto refresh bg error: %s", new Object[] { localException.getLocalizedMessage() });
+            u.w("!32@/B4Tb64lLpKLTg+RhqEt7h8agXSu+Fyh", "auto refresh bg error: %s", new Object[] { localException.getLocalizedMessage() });
           }
         }
       }
-    } while (LyricView.a(gWH) == null);
-    LyricView.a(gWH).postDelayed(this, 1500L);
+    } while (LyricView.a(iMY) == null);
+    LyricView.a(iMY).postDelayed(this, 1500L);
   }
 }
 

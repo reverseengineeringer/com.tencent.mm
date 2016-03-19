@@ -1,58 +1,54 @@
 package android.support.v4.view;
 
-import android.database.DataSetObservable;
-import android.database.DataSetObserver;
-import android.os.Parcelable;
-import android.view.View;
+import android.os.Build.VERSION;
 import android.view.ViewGroup;
 
-public abstract class o
+public final class o
 {
-  private DataSetObservable fB = new DataSetObservable();
+  static final c fy = new d();
   
-  public void Y() {}
-  
-  public Parcelable Z()
+  static
   {
-    return null;
+    int i = Build.VERSION.SDK_INT;
+    if (i >= 14)
+    {
+      fy = new b();
+      return;
+    }
+    if (i >= 11)
+    {
+      fy = new a();
+      return;
+    }
   }
   
-  public Object a(ViewGroup paramViewGroup, int paramInt)
+  public static void a(ViewGroup paramViewGroup)
   {
-    throw new UnsupportedOperationException("Required method instantiateItem was not overridden");
+    fy.a(paramViewGroup, false);
   }
   
-  public void a(Parcelable paramParcelable, ClassLoader paramClassLoader) {}
-  
-  public void a(ViewGroup paramViewGroup, int paramInt, Object paramObject)
+  static class a
+    extends o.d
   {
-    throw new UnsupportedOperationException("Required method destroyItem was not overridden");
+    public final void a(ViewGroup paramViewGroup, boolean paramBoolean)
+    {
+      paramViewGroup.setMotionEventSplittingEnabled(false);
+    }
   }
   
-  public void a(Object paramObject) {}
+  static final class b
+    extends o.a
+  {}
   
-  public abstract boolean a(View paramView, Object paramObject);
-  
-  public int b(Object paramObject)
+  static abstract interface c
   {
-    return -1;
+    public abstract void a(ViewGroup paramViewGroup, boolean paramBoolean);
   }
   
-  public abstract int getCount();
-  
-  public void notifyDataSetChanged()
+  static class d
+    implements o.c
   {
-    fB.notifyChanged();
-  }
-  
-  public final void registerDataSetObserver(DataSetObserver paramDataSetObserver)
-  {
-    fB.registerObserver(paramDataSetObserver);
-  }
-  
-  public final void unregisterDataSetObserver(DataSetObserver paramDataSetObserver)
-  {
-    fB.unregisterObserver(paramDataSetObserver);
+    public void a(ViewGroup paramViewGroup, boolean paramBoolean) {}
   }
 }
 

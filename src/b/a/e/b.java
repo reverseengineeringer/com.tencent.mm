@@ -10,9 +10,9 @@ public abstract interface b
   
   public abstract void a(i parami, c paramc);
   
-  public abstract i aVZ();
-  
   public abstract String b(i parami);
+  
+  public abstract i boO();
 }
 
 /* Location:

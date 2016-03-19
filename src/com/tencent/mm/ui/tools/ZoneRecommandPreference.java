@@ -7,23 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.platformtools.ad;
+import com.tencent.mm.platformtools.t;
 import com.tencent.mm.storage.RegionCodeDecoder.Region;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public class ZoneRecommandPreference
   extends Preference
 {
-  private TextView eod;
-  RegionCodeDecoder.Region jvO;
-  RegionCodeDecoder.Region jvP;
-  RegionCodeDecoder.Region jvQ;
-  private TextView jvR;
-  private ImageView jvS;
+  private TextView eEo;
+  RegionCodeDecoder.Region lyF;
+  RegionCodeDecoder.Region lyG;
+  RegionCodeDecoder.Region lyH;
+  private TextView lyI;
+  private ImageView lyJ;
   int status = 0;
   
   public ZoneRecommandPreference(Context paramContext)
@@ -39,12 +35,12 @@ public class ZoneRecommandPreference
   public ZoneRecommandPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference);
+    setLayoutResource(2131363286);
   }
   
-  final void aSw()
+  final void biR()
   {
-    if ((jvR == null) || (eod == null)) {
+    if ((lyI == null) || (eEo == null)) {
       return;
     }
     switch (status)
@@ -52,77 +48,77 @@ public class ZoneRecommandPreference
     default: 
       return;
     case 0: 
-      jvR.setVisibility(8);
-      eod.setVisibility(0);
-      eod.setText(a.n.setting_zone_getting_location);
-      jvS.setImageResource(a.h.get_location_icon);
+      lyI.setVisibility(8);
+      eEo.setVisibility(0);
+      eEo.setText(2131428308);
+      lyJ.setImageResource(2130903064);
       setEnabled(false);
       setSelectable(false);
       return;
     case 2: 
-      jvR.setVisibility(8);
-      eod.setVisibility(0);
-      eod.setText(a.n.setting_zone_cannot_get_location);
-      jvS.setImageResource(a.h.get_location_failed_icon);
+      lyI.setVisibility(8);
+      eEo.setVisibility(0);
+      eEo.setText(2131428309);
+      lyJ.setImageResource(2130903058);
       setEnabled(false);
       setSelectable(false);
       return;
     }
-    jvR.setVisibility(0);
-    eod.setVisibility(8);
-    jvS.setImageResource(a.h.get_location_icon);
+    lyI.setVisibility(0);
+    eEo.setVisibility(8);
+    lyJ.setImageResource(2130903064);
     Object localObject2 = "";
     Object localObject1 = localObject2;
-    if (jvO != null)
+    if (lyF != null)
     {
       localObject1 = localObject2;
-      if (!ad.iW(jvO.getName())) {
-        localObject1 = "" + jvO.getName();
+      if (!t.kz(lyF.getName())) {
+        localObject1 = "" + lyF.getName();
       }
     }
     localObject2 = localObject1;
-    if (jvP != null)
+    if (lyG != null)
     {
       localObject2 = localObject1;
-      if (!ad.iW(jvP.getName())) {
-        localObject2 = (String)localObject1 + " " + jvP.getName();
+      if (!t.kz(lyG.getName())) {
+        localObject2 = (String)localObject1 + " " + lyG.getName();
       }
     }
     localObject1 = localObject2;
-    if (jvQ != null)
+    if (lyH != null)
     {
       localObject1 = localObject2;
-      if (!ad.iW(jvQ.getName())) {
-        localObject1 = (String)localObject2 + " " + jvQ.getName();
+      if (!t.kz(lyH.getName())) {
+        localObject1 = (String)localObject2 + " " + lyH.getName();
       }
     }
-    jvR.setText((CharSequence)localObject1);
+    lyI.setText((CharSequence)localObject1);
     setEnabled(true);
     setSelectable(true);
   }
   
-  public final void aSx()
+  public final void biS()
   {
     status = 2;
-    aSw();
+    biR();
   }
   
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    aSw();
+    biR();
   }
   
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
     LayoutInflater localLayoutInflater = (LayoutInflater)mContext.getSystemService("layout_inflater");
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(a.i.content);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
     localViewGroup.removeAllViews();
-    localLayoutInflater.inflate(a.k.mm_preference_content_zone_recommand, localViewGroup);
-    jvR = ((TextView)paramViewGroup.findViewById(a.i.zonename));
-    eod = ((TextView)paramViewGroup.findViewById(a.i.status));
-    jvS = ((ImageView)paramViewGroup.findViewById(a.i.status_image));
+    localLayoutInflater.inflate(2131361825, localViewGroup);
+    lyI = ((TextView)paramViewGroup.findViewById(2131165371));
+    eEo = ((TextView)paramViewGroup.findViewById(2131165372));
+    lyJ = ((ImageView)paramViewGroup.findViewById(2131165370));
     return paramViewGroup;
   }
 }

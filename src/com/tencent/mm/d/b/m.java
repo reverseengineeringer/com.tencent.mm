@@ -2,36 +2,35 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class m
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aId;
-  private static final int aNt = "labelID".hashCode();
-  private static final int aNu = "labelName".hashCode();
-  private static final int aNv = "labelPYFull".hashCode();
-  private static final int aNw = "labelPYShort".hashCode();
-  private static final int aNx;
-  private boolean aHL = true;
-  private boolean aNo = true;
-  private boolean aNp = true;
-  private boolean aNq = true;
-  private boolean aNr = true;
-  private boolean aNs = true;
-  public long field_createTime;
-  public boolean field_isTemporary;
-  public int field_labelID;
-  public String field_labelName;
-  public String field_labelPYFull;
-  public String field_labelPYShort;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int aNI = "openId".hashCode();
+  private static final int aQj;
+  private static final int aQv = "brandUsername".hashCode();
+  private static final int aQw = "headImgUrl".hashCode();
+  private static final int aQx = "nickname".hashCode();
+  private static final int aQy = "kfType".hashCode();
+  private boolean aNl = true;
+  private boolean aPT = true;
+  private boolean aQr = true;
+  private boolean aQs = true;
+  private boolean aQt = true;
+  private boolean aQu = true;
+  public String field_brandUsername;
+  public String field_headImgUrl;
+  public int field_kfType;
+  public String field_nickname;
+  public String field_openId;
+  public long field_updateTime;
   
   static
   {
-    aId = "createTime".hashCode();
-    aNx = "isTemporary".hashCode();
+    aQj = "updateTime".hashCode();
   }
   
   public final void c(Cursor paramCursor)
@@ -40,18 +39,18 @@ public abstract class m
     if (arrayOfString == null) {
       return;
     }
-    int j = arrayOfString.length;
     int i = 0;
+    int j = arrayOfString.length;
     label20:
     int k;
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aNt != k) {
+      if (aNI != k) {
         break label65;
       }
-      field_labelID = paramCursor.getInt(i);
-      aNo = true;
+      field_openId = paramCursor.getString(i);
+      aNl = true;
     }
     for (;;)
     {
@@ -59,63 +58,48 @@ public abstract class m
       break label20;
       break;
       label65:
-      if (aNu == k)
-      {
-        field_labelName = paramCursor.getString(i);
-      }
-      else if (aNv == k)
-      {
-        field_labelPYFull = paramCursor.getString(i);
-      }
-      else if (aNw == k)
-      {
-        field_labelPYShort = paramCursor.getString(i);
-      }
-      else if (aId == k)
-      {
-        field_createTime = paramCursor.getLong(i);
-      }
-      else
-      {
-        if (aNx == k)
-        {
-          if (paramCursor.getInt(i) != 0) {}
-          for (boolean bool = true;; bool = false)
-          {
-            field_isTemporary = bool;
-            break;
-          }
-        }
-        if (aHH == k) {
-          ibV = paramCursor.getLong(i);
-        }
+      if (aQv == k) {
+        field_brandUsername = paramCursor.getString(i);
+      } else if (aQw == k) {
+        field_headImgUrl = paramCursor.getString(i);
+      } else if (aQx == k) {
+        field_nickname = paramCursor.getString(i);
+      } else if (aQy == k) {
+        field_kfType = paramCursor.getInt(i);
+      } else if (aQj == k) {
+        field_updateTime = paramCursor.getLong(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aNo) {
-      localContentValues.put("labelID", Integer.valueOf(field_labelID));
+    if (aNl) {
+      localContentValues.put("openId", field_openId);
     }
-    if (aNp) {
-      localContentValues.put("labelName", field_labelName);
+    if (field_brandUsername == null) {
+      field_brandUsername = "";
     }
-    if (aNq) {
-      localContentValues.put("labelPYFull", field_labelPYFull);
+    if (aQr) {
+      localContentValues.put("brandUsername", field_brandUsername);
     }
-    if (aNr) {
-      localContentValues.put("labelPYShort", field_labelPYShort);
+    if (aQs) {
+      localContentValues.put("headImgUrl", field_headImgUrl);
     }
-    if (aHL) {
-      localContentValues.put("createTime", Long.valueOf(field_createTime));
+    if (aQt) {
+      localContentValues.put("nickname", field_nickname);
     }
-    if (aNs) {
-      localContentValues.put("isTemporary", Boolean.valueOf(field_isTemporary));
+    if (aQu) {
+      localContentValues.put("kfType", Integer.valueOf(field_kfType));
     }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (aPT) {
+      localContentValues.put("updateTime", Long.valueOf(field_updateTime));
+    }
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

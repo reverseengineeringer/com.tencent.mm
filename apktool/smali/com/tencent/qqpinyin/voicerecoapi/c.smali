@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field private bRp:I
+.field private cig:I
 
-.field private jIO:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
+.field private lQQ:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
 
-.field private jIP:I
+.field private lQR:I
 
 
 # direct methods
@@ -32,17 +32,17 @@
 
     invoke-direct {v0}, Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIO:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
+    iput-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQQ:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
 
     .line 78
     const v0, 0x7a120
 
-    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->bRp:I
+    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->cig:I
 
     .line 79
     const v0, 0x989680
 
-    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIP:I
+    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQR:I
 
     .line 80
     return-void
@@ -60,15 +60,15 @@
 
     invoke-direct {v0}, Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIO:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
+    iput-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQQ:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
 
     .line 57
-    iput p1, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->bRp:I
+    iput p1, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->cig:I
 
     .line 58
     const v0, 0x4c4b40
 
-    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIP:I
+    iput v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQR:I
 
     .line 72
     return-void
@@ -98,7 +98,7 @@
     .line 149
     :cond_0
     :try_start_0
-    iget-object v3, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIO:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
+    iget-object v3, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQQ:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
 
     invoke-virtual {v3, p1, p2}, Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;->mfeSendData([SI)I
 
@@ -110,7 +110,7 @@
     .line 167
     const/4 v3, 0x0
 
-    iput v3, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->jIQ:I
+    iput v3, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->lQS:I
 
     :goto_1
     move v3, v2
@@ -129,7 +129,7 @@
     :goto_3
     double-to-int v0, v0
 
-    iput v0, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->jIU:I
+    iput v0, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->lQW:I
 
     .line 173
     new-instance v0, Ljava/lang/StringBuilder;
@@ -138,7 +138,7 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v1, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->jIU:I
+    iget v1, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->lQW:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
     :try_end_0
@@ -159,7 +159,7 @@
     const/4 v3, 0x1
 
     :try_start_1
-    iput v3, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->jIQ:I
+    iput v3, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->lQS:I
 
     goto :goto_1
 
@@ -167,7 +167,7 @@
     :pswitch_1
     const/4 v3, 0x2
 
-    iput v3, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->jIQ:I
+    iput v3, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->lQS:I
 
     goto :goto_1
 
@@ -175,7 +175,7 @@
     :pswitch_2
     const/4 v3, 0x3
 
-    iput v3, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->jIQ:I
+    iput v3, p3, Lcom/tencent/qqpinyin/voicerecoapi/c$a;->lQS:I
 
     goto :goto_1
 
@@ -244,11 +244,11 @@
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIO:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
+    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQQ:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
 
-    iget v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->bRp:I
+    iget v1, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->cig:I
 
-    iget v2, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIP:I
+    iget v2, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQR:I
 
     invoke-virtual {v0, v1, v2}, Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;->mfeInit(II)I
 
@@ -256,7 +256,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIO:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
+    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQQ:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
 
     invoke-virtual {v0}, Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;->mfeOpen()I
 
@@ -264,7 +264,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIO:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
+    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQQ:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
 
     const/4 v1, 0x1
 
@@ -274,7 +274,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIO:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
+    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQQ:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
 
     invoke-virtual {v0}, Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;->mfeStart()I
 
@@ -299,7 +299,7 @@
 
     .prologue
     .line 122
-    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIO:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
+    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQQ:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
 
     invoke-virtual {v0}, Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;->mfeStop()I
 
@@ -308,7 +308,7 @@
     if-nez v0, :cond_0
 
     .line 124
-    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIO:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
+    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQQ:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
 
     invoke-virtual {v0}, Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;->mfeClose()I
 
@@ -317,7 +317,7 @@
     if-nez v0, :cond_0
 
     .line 125
-    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->jIO:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
+    iget-object v0, p0, Lcom/tencent/qqpinyin/voicerecoapi/c;->lQQ:Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;
 
     invoke-virtual {v0}, Lcom/tencent/qqpinyin/voicerecoapi/TRVADNative;->mfeExit()I
 

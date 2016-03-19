@@ -1,25 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class al
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avd = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public al()
   {
-    id = "EmojiSyncTask";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public int ave;
-    public String avf;
-    public boolean avg;
+    id = "CleanStaticMap";
+    jUI = arR;
   }
 }
 

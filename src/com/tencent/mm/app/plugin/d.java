@@ -3,22 +3,21 @@ package com.tencent.mm.app.plugin;
 import android.content.Context;
 import android.content.DialogInterface.OnDismissListener;
 import android.os.Bundle;
-import com.tencent.mm.pluginsdk.l.i;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
+import com.tencent.mm.pluginsdk.i.k;
 import com.tencent.mm.pluginsdk.ui.d.a;
-import com.tencent.mm.pluginsdk.ui.d.k;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Iterator;
 
 public final class d
-  implements l.i
+  implements i.k
 {
   private static String a(String paramString1, int paramInt1, int paramInt2, String paramString2)
   {
-    if ((bn.iW(paramString1)) || (bn.iW(paramString2)) || (paramInt1 >= paramInt2)) {
+    if ((ay.kz(paramString1)) || (ay.kz(paramString2)) || (paramInt1 >= paramInt2)) {
       return paramString1;
     }
     StringBuilder localStringBuilder = new StringBuilder();
@@ -33,19 +32,19 @@ public final class d
     }
     catch (Exception paramString1)
     {
-      t.e("!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU=", paramString1.getMessage());
+      u.e("!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU=", paramString1.getMessage());
     }
     return "";
   }
   
   public final boolean a(Context paramContext, String paramString, DialogInterface.OnDismissListener paramOnDismissListener)
   {
-    t.d("!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU=", "tryHandleEvents, url:%s", new Object[] { paramString });
-    if (bn.iW(paramString)) {
+    u.d("!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU=", "tryHandleEvents, url:%s", new Object[] { paramString });
+    if (ay.kz(paramString)) {
       return false;
     }
     if (paramString.endsWith("@mailto@")) {
-      k.b(paramContext, paramString.substring(0, paramString.length() - 8), paramOnDismissListener);
+      com.tencent.mm.pluginsdk.ui.d.g.b(paramContext, paramString.substring(0, paramString.length() - 8), paramOnDismissListener);
     }
     for (;;)
     {
@@ -56,11 +55,11 @@ public final class d
       paramString = paramString.substring(0, paramString.length() - 5);
       Bundle localBundle = new Bundle();
       localBundle.putInt("fromScene", 3);
-      k.a(paramContext, paramString, paramOnDismissListener, localBundle);
+      com.tencent.mm.pluginsdk.ui.d.g.a(paramContext, paramString, paramOnDismissListener, localBundle);
     }
   }
   
-  public final boolean aY(String paramString)
+  public final boolean ba(String paramString)
   {
     if ((paramString == null) || (paramString.length() == 0)) {}
     while ((!paramString.endsWith("@mailto@")) && (!paramString.endsWith("@tel@"))) {
@@ -69,13 +68,13 @@ public final class d
     return true;
   }
   
-  public final String n(Context paramContext, String paramString)
+  public final String o(Context paramContext, String paramString)
   {
-    paramContext = a.az(paramContext, paramString);
+    paramContext = a.aP(paramContext, paramString);
     if (paramContext.size() == 0) {
       return paramString;
     }
-    Collections.sort(paramContext, new e(this));
+    Collections.sort(paramContext, new Comparator() {});
     Iterator localIterator = paramContext.iterator();
     paramContext = paramString;
     String str1;
@@ -83,7 +82,7 @@ public final class d
     String str2;
     if (localIterator.hasNext())
     {
-      ah localah = (ah)localIterator.next();
+      com.tencent.mm.pluginsdk.ui.applet.g localg = (com.tencent.mm.pluginsdk.ui.applet.g)localIterator.next();
       str1 = null;
       int i = start;
       int j = end;
@@ -109,7 +108,7 @@ public final class d
     }
     for (;;)
     {
-      t.d("!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU=", "formatQRString, result:%s", new Object[] { paramString });
+      u.d("!44@/B4Tb64lLpJlA7B6REc/zShVqjCVepSQzf0nXVT1zJU=", "formatQRString, result:%s", new Object[] { paramString });
       return paramString;
       str1 = "<a href=\"%s@tel@\">%s</a>";
       break label112;

@@ -1,21 +1,29 @@
 package com.tencent.mm.ui.base;
 
-import java.util.ArrayList;
+import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
-final class n
-  implements bk.c
+public final class n
 {
-  n(String paramString, ArrayList paramArrayList) {}
-  
-  public final void a(bi parambi)
+  public static abstract interface a
   {
-    parambi.setHeaderTitle(bVq);
-    int i = 0;
-    while (i < cxd.size())
-    {
-      parambi.a(i, (CharSequence)cxd.get(i));
-      i += 1;
-    }
+    public abstract void a(ImageView paramImageView, MenuItem paramMenuItem);
+  }
+  
+  public static abstract interface b
+  {
+    public abstract void a(TextView paramTextView, MenuItem paramMenuItem);
+  }
+  
+  public static abstract interface c
+  {
+    public abstract void a(l paraml);
+  }
+  
+  public static abstract interface d
+  {
+    public abstract void d(MenuItem paramMenuItem, int paramInt);
   }
 }
 

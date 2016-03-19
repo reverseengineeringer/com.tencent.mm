@@ -1,26 +1,8 @@
 package com.tencent.mm.modelcdntran;
 
-import com.tencent.mm.model.ap.a;
-import com.tencent.mm.model.ap.e;
-import com.tencent.mm.sdk.platformtools.aj.a;
-import com.tencent.mm.sdk.platformtools.t;
-
-final class a
-  implements aj.a
+public final class a
 {
-  a(CdnTransportEngine paramCdnTransportEngine) {}
-  
-  public final boolean lO()
-  {
-    if ((CdnTransportEngine.a(bxo) == 0) && (CdnTransportEngine.b(bxo) == 0)) {
-      return false;
-    }
-    t.i("!44@/B4Tb64lLpIOAjTgD1JTqYyjqbRxHUgGUCewsAH7DnA=", "CdnDataFlowStat id:%s send:%d recv:%d", new Object[] { CdnTransportEngine.c(bxo), Integer.valueOf(CdnTransportEngine.a(bxo)), Integer.valueOf(CdnTransportEngine.b(bxo)) });
-    ap.a.boB.B(CdnTransportEngine.b(bxo), CdnTransportEngine.a(bxo));
-    CdnTransportEngine.d(bxo);
-    CdnTransportEngine.e(bxo);
-    return true;
-  }
+  public static final int[] bJS = { -5103073, -5103084, -5103081, -5103082, -5103083, -5103210 };
 }
 
 /* Location:

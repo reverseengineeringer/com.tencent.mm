@@ -1,8 +1,46 @@
 package android.support.v4.view;
 
-abstract interface i$a
+import android.view.MotionEvent;
+
+final class i$a
+  implements i.c
 {
-  public abstract int getAbsoluteGravity(int paramInt1, int paramInt2);
+  public final int a(MotionEvent paramMotionEvent, int paramInt)
+  {
+    if (paramInt == 0) {
+      return 0;
+    }
+    return -1;
+  }
+  
+  public final int b(MotionEvent paramMotionEvent, int paramInt)
+  {
+    if (paramInt == 0) {
+      return 0;
+    }
+    throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
+  }
+  
+  public final float c(MotionEvent paramMotionEvent, int paramInt)
+  {
+    if (paramInt == 0) {
+      return paramMotionEvent.getX();
+    }
+    throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
+  }
+  
+  public final float d(MotionEvent paramMotionEvent, int paramInt)
+  {
+    if (paramInt == 0) {
+      return paramMotionEvent.getY();
+    }
+    throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
+  }
+  
+  public final int f(MotionEvent paramMotionEvent)
+  {
+    return 1;
+  }
 }
 
 /* Location:

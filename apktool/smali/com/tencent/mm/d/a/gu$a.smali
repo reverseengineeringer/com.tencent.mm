@@ -15,16 +15,23 @@
 
 
 # instance fields
-.field public axb:J
+.field public aBX:Ljava/util/LinkedList;
+
+.field public aBY:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 16
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/gu$a;->aBY:Z
 
     return-void
 .end method

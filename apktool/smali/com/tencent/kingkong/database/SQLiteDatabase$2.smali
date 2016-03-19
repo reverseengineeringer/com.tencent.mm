@@ -1,9 +1,20 @@
-.class Lcom/tencent/kingkong/database/SQLiteDatabase$2;
+.class final Lcom/tencent/kingkong/database/SQLiteDatabase$2;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
 .implements Ljava/io/FileFilter;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/kingkong/database/SQLiteDatabase;->deleteDatabase(Ljava/io/File;)Z
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
 
 
 # instance fields
@@ -18,7 +29,7 @@
     .line 1
     iput-object p1, p0, Lcom/tencent/kingkong/database/SQLiteDatabase$2;->val$prefix:Ljava/lang/String;
 
-    .line 1006
+    .line 1004
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -26,11 +37,11 @@
 
 
 # virtual methods
-.method public accept(Ljava/io/File;)Z
+.method public final accept(Ljava/io/File;)Z
     .locals 2
 
     .prologue
-    .line 1009
+    .line 1007
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v0

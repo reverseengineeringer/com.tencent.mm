@@ -7,7 +7,7 @@ import android.view.AbsSavedState;
 public class Preference$BaseSavedState
   extends AbsSavedState
 {
-  public static final Parcelable.Creator CREATOR = new ad();
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
   
   public Preference$BaseSavedState(Parcel paramParcel)
   {

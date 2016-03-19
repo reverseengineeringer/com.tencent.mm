@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="t">45.0dip</dimen>
+    <dimen name="u">45.0dip</dimen>
+    <dimen name="v">24.0dip</dimen>
+    <dimen name="w">6.0dip</dimen>
+    <dimen name="x">5.0dip</dimen>
+    <dimen name="y">180.0dip</dimen>
+    <dimen name="cz">120.0dip</dimen>
+    <dimen name="d0">32.0dip</dimen>
+    <dimen name="ou">32.0dip</dimen>
+    <dimen name="ov">6.0dip</dimen>
+    <dimen name="ow">40.0dip</dimen>
+    <dimen name="ox">30.0dip</dimen>
+    <dimen name="oy">36.0dip</dimen>
+</resources>

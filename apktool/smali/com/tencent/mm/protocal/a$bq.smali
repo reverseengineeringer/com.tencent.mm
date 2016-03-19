@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$bq;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 869
-    const-string/jumbo v0, "openUrlByExtBrowser"
+    .line 995
+    const-string/jumbo v0, "hideOptionMenu"
 
-    const-string/jumbo v1, "open_url_by_ext_browser"
+    const-string/jumbo v1, ""
 
-    const/16 v2, 0x37
+    const/16 v2, 0xe
 
     const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 870
+    .line 996
     return-void
 .end method

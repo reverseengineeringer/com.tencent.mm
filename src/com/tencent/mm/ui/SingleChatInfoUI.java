@@ -1,156 +1,224 @@
 package com.tencent.mm.ui;
 
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.os.Looper;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.View;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.ListView;
-import com.tencent.mm.a.f;
-import com.tencent.mm.a.n;
-import com.tencent.mm.a.q;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.w;
-import com.tencent.mm.platformtools.ad;
-import com.tencent.mm.plugin.report.service.j;
-import com.tencent.mm.pluginsdk.l.a;
-import com.tencent.mm.pluginsdk.l.r;
-import com.tencent.mm.pluginsdk.l.s;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.model.ar.a;
+import com.tencent.mm.model.i;
+import com.tencent.mm.modelmulti.l;
+import com.tencent.mm.modelmulti.n;
+import com.tencent.mm.platformtools.t;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.t;
+import com.tencent.mm.pluginsdk.i.u;
 import com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference;
+import com.tencent.mm.pluginsdk.ui.applet.ContactListExpandPreference.a;
 import com.tencent.mm.pluginsdk.ui.d;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.storage.as;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.storage.an;
+import com.tencent.mm.storage.ao;
+import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
-import com.tencent.mm.storage.t;
-import com.tencent.mm.ui.base.h;
+import com.tencent.mm.storage.s;
+import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.preference.CheckBoxPreference;
 import com.tencent.mm.ui.base.preference.MMPreference;
 import com.tencent.mm.ui.base.preference.Preference;
-import com.tencent.mm.ui.base.preference.l;
-import com.tencent.mm.ui.base.preference.v;
+import com.tencent.mm.ui.base.preference.f;
 import com.tencent.mm.ui.chatting.ChattingUI;
-import com.tencent.mm.ui.f.a;
-import com.tencent.mm.ui.tools.ImageGalleryGridUI;
-import java.util.ArrayList;
+import com.tencent.mm.ui.chatting.gallery.ImageGalleryGridUI;
+import com.tencent.mm.ui.contact.e;
 import java.util.LinkedList;
 import java.util.List;
 
 public class SingleChatInfoUI
   extends MMPreference
-  implements l.r
+  implements i.t
 {
-  private static boolean cpX = false;
-  private String aqX;
-  private l bXQ;
-  private SharedPreferences boF = null;
-  private ContactListExpandPreference cCD;
-  private CheckBoxPreference cCE;
-  private CheckBoxPreference cCG;
-  private boolean cCO;
-  private int cCR = -1;
-  private d cCS = new d(new et(this));
-  boolean cCT = false;
-  private String cCU = "";
-  private com.tencent.mm.storage.k cqE;
-  private ac handler = new ac(Looper.getMainLooper());
-  
-  private void Kx()
+  private static boolean cHw = false;
+  private String apb;
+  private SharedPreferences bxg = null;
+  private k cId;
+  private boolean cYC;
+  private d cYJ = new d(new AbsListView.OnScrollListener()
   {
-    if (boF == null) {
-      boF = getSharedPreferences(getPackageName() + "_preferences", 0);
+    public final void onScroll(AbsListView paramAnonymousAbsListView, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
+    
+    public final void onScrollStateChanged(AbsListView paramAnonymousAbsListView, int paramAnonymousInt) {}
+  });
+  boolean cYK = false;
+  private ContactListExpandPreference cYs;
+  private CheckBoxPreference cYt;
+  private CheckBoxPreference cYu;
+  private int cZj = -1;
+  private String cZs = "";
+  private f cpb;
+  private aa handler = new aa(Looper.getMainLooper());
+  
+  private void NU()
+  {
+    if (bxg == null) {
+      bxg = getSharedPreferences(getPackageName() + "_preferences", 0);
     }
-    cCO = cqE.qx();
-    if (cCO)
+    cYC = cId.qr();
+    if (cYC)
     {
-      nl(0);
-      if (cCE != null) {
-        boF.edit().putBoolean("room_notify_new_msg", true).commit();
+      qf(0);
+      if (cYt != null) {
+        bxg.edit().putBoolean("room_notify_new_msg", true).commit();
       }
     }
     for (;;)
     {
-      bXQ.notifyDataSetChanged();
+      cpb.notifyDataSetChanged();
       return;
-      nl(8);
-      if (cCE != null) {
-        boF.edit().putBoolean("room_notify_new_msg", false).commit();
+      qf(8);
+      if (cYt != null) {
+        bxg.edit().putBoolean("room_notify_new_msg", false).commit();
       }
     }
   }
   
-  protected final void DV()
+  protected final void Gb()
   {
-    bXQ = iMx;
-    At(getString(a.n.roominfo_name));
-    cCD = ((ContactListExpandPreference)bXQ.AN("roominfo_contact_anchor"));
-    cCD.a(bXQ, cCD.bUr);
-    cCD.en(true).eo(false);
-    if ((cqE != null) && (cqE.field_deleteFlag == 1)) {
-      cCD.en(false);
+    cpb = kLL;
+    Gj(getString(2131432663));
+    cYs = ((ContactListExpandPreference)cpb.GB("roominfo_contact_anchor"));
+    cYs.a(cpb, cYs.cln);
+    cYs.gn(true).go(false);
+    if ((cId != null) && (cId.field_deleteFlag == 1)) {
+      cYs.gn(false);
     }
-    cCE = ((CheckBoxPreference)bXQ.AN("room_notify_new_msg"));
-    cCG = ((CheckBoxPreference)bXQ.AN("room_placed_to_the_top"));
-    if (boF == null) {
-      boF = getSharedPreferences(getPackageName() + "_preferences", 0);
+    cYt = ((CheckBoxPreference)cpb.GB("room_notify_new_msg"));
+    cYu = ((CheckBoxPreference)cpb.GB("room_placed_to_the_top"));
+    if (bxg == null) {
+      bxg = getSharedPreferences(getPackageName() + "_preferences", 0);
     }
-    if (cqE != null)
+    if (cId != null)
     {
-      boF.edit().putBoolean("room_placed_to_the_top", ax.tl().rl().zc(cqE.field_username)).commit();
-      cCO = cqE.qx();
-      boF.edit().putBoolean("room_notify_new_msg", cCO).commit();
+      bxg.edit().putBoolean("room_placed_to_the_top", com.tencent.mm.model.ah.tD().rt().EG(cId.field_username)).commit();
+      cYC = cId.qr();
+      bxg.edit().putBoolean("room_notify_new_msg", cYC).commit();
     }
     for (;;)
     {
-      cCR = ax.tl().rk().zU(aqX);
-      bXQ.notifyDataSetChanged();
-      if (cCD != null)
+      cZj = com.tencent.mm.model.ah.tD().rs().Fr(apb);
+      cpb.notifyDataSetChanged();
+      if (cYs != null)
       {
         LinkedList localLinkedList = new LinkedList();
-        localLinkedList.add(aqX);
-        cCD.j(aqX, localLinkedList);
-        fxT.setOnScrollListener(cCS);
-        cCD.a(cCS);
-        cCD.a(new ev(this));
+        localLinkedList.add(apb);
+        cYs.n(apb, localLinkedList);
+        gWB.setOnScrollListener(cYJ);
+        cYs.a(cYJ);
+        cYs.a(new ContactListExpandPreference.a()
+        {
+          public final void Oa() {}
+          
+          public final void Ob()
+          {
+            if (SingleChatInfoUI.b(SingleChatInfoUI.this) != null) {
+              SingleChatInfoUI.b(SingleChatInfoUI.this).aRr();
+            }
+          }
+          
+          public final void fH(int paramAnonymousInt) {}
+          
+          public final void fI(int paramAnonymousInt)
+          {
+            String str = SingleChatInfoUI.b(SingleChatInfoUI.this).ox(paramAnonymousInt);
+            Object localObject2 = t.ky(SingleChatInfoUI.b(SingleChatInfoUI.this).oz(paramAnonymousInt));
+            Object localObject1 = localObject2;
+            if (t.kz((String)localObject2))
+            {
+              an localan = com.tencent.mm.model.ah.tD().rr().FH(str);
+              localObject1 = localObject2;
+              if (localan != null)
+              {
+                localObject1 = localObject2;
+                if (!t.kz(field_encryptUsername)) {
+                  localObject1 = field_conRemark;
+                }
+              }
+            }
+            if (t.kz(str)) {
+              return;
+            }
+            localObject2 = new Intent();
+            ((Intent)localObject2).putExtra("Contact_User", str);
+            ((Intent)localObject2).putExtra("Contact_RemarkName", (String)localObject1);
+            ((Intent)localObject2).putExtra("Contact_Nick", t.ky(SingleChatInfoUI.b(SingleChatInfoUI.this).oy(paramAnonymousInt)));
+            ((Intent)localObject2).putExtra("Contact_RoomMember", true);
+            localObject1 = com.tencent.mm.model.ah.tD().rq().Ep(str);
+            if ((localObject1 != null) && ((int)bvi > 0) && (com.tencent.mm.h.a.ce(field_type))) {
+              e.a((Intent)localObject2, str);
+            }
+            ((Intent)localObject2).putExtra("Kdel_from", 0);
+            com.tencent.mm.ar.c.a(SingleChatInfoUI.this, "profile", ".ui.ContactInfoUI", (Intent)localObject2, 0);
+          }
+          
+          public final void fJ(int paramAnonymousInt)
+          {
+            SingleChatInfoUI.c(SingleChatInfoUI.this);
+          }
+        });
       }
-      a(new ew(this));
+      b(new MenuItem.OnMenuItemClickListener()
+      {
+        public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+        {
+          finish();
+          return true;
+        }
+      });
       return;
-      boF.edit().putBoolean("room_notify_new_msg", false).commit();
-      cCO = false;
+      bxg.edit().putBoolean("room_notify_new_msg", false).commit();
+      cYC = false;
     }
   }
   
-  public final int Ee()
+  public final int Gn()
   {
-    return a.q.roominfo_single_pref;
+    return 2131296257;
   }
   
-  public final v a(SharedPreferences paramSharedPreferences)
+  public final com.tencent.mm.ui.base.preference.h a(SharedPreferences paramSharedPreferences)
   {
-    return new com.tencent.mm.ui.base.preference.b(this, paramSharedPreferences);
+    return new com.tencent.mm.ui.base.preference.a(this, paramSharedPreferences);
   }
   
-  public final boolean a(l paraml, Preference paramPreference)
+  public final boolean a(f paramf, Preference paramPreference)
   {
     boolean bool = true;
-    paraml = bUr;
-    if (paraml.equals("room_notify_new_msg")) {
-      if (!cCO)
+    paramf = cln;
+    if (paramf.equals("room_notify_new_msg")) {
+      if (!cYC)
       {
-        cCO = bool;
-        if (!cCO) {
+        cYC = bool;
+        if (!cYC) {
           break label134;
         }
-        w.l(cqE);
+        i.l(cId);
         label42:
-        cqE = ax.tl().ri().yM(aqX);
-        if (boF == null) {
-          boF = getSharedPreferences(getPackageName() + "_preferences", 0);
+        cId = com.tencent.mm.model.ah.tD().rq().Ep(apb);
+        if (bxg == null) {
+          bxg = getSharedPreferences(getPackageName() + "_preferences", 0);
         }
-        boF.edit().putBoolean("room_notify_new_msg", cCO).commit();
-        Kx();
+        bxg.edit().putBoolean("room_notify_new_msg", cYC).commit();
+        NU();
       }
     }
     label134:
@@ -162,77 +230,77 @@ public class SingleChatInfoUI
         return false;
         bool = false;
         break;
-        w.m(cqE);
+        i.m(cId);
         break label42;
-        if (!paraml.equals("room_placed_to_the_top")) {
+        if (!paramf.equals("room_placed_to_the_top")) {
           break label253;
         }
-        paraml = getSharedPreferences(cCU, 0);
-      } while (cqE == null);
-      if (ax.tl().rl().zc(cqE.field_username)) {
-        w.g(cqE.field_username, true);
+        paramf = getSharedPreferences(cZs, 0);
+      } while (cId == null);
+      if (com.tencent.mm.model.ah.tD().rt().EG(cId.field_username)) {
+        i.i(cId.field_username, true);
       }
       for (;;)
       {
-        paraml.edit().putBoolean("room_placed_to_the_top", ax.tl().rl().zc(cqE.field_username)).commit();
+        paramf.edit().putBoolean("room_placed_to_the_top", com.tencent.mm.model.ah.tD().rt().EG(cId.field_username)).commit();
         return false;
-        w.f(cqE.field_username, true);
+        i.h(cId.field_username, true);
       }
-      if (paraml.equals("room_chatting_images"))
+      if (paramf.equals("room_chatting_images"))
       {
-        j.eJZ.f(11041, new Object[] { Integer.valueOf(1) });
-        paraml = new Intent();
-        paraml.setClass(ipQ.iqj, ImageGalleryGridUI.class);
-        paraml.addFlags(67108864);
-        paraml.putExtra("kintent_intent_source", 1);
-        paraml.putExtra("kintent_talker", aqX);
-        paraml.putIntegerArrayListExtra("kintent_downloaded_index_list", new ArrayList());
-        paraml.putExtra("kintent_image_count", cCR);
-        if (cCR > 0) {
-          paraml.putExtra("kintent_image_index", cCR - 1);
+        paramf = com.tencent.mm.plugin.report.service.h.fUJ;
+        com.tencent.mm.plugin.report.service.h.b(219L, 12L, 1L, true);
+        paramf = new Intent();
+        paramf.setClass(koJ.kpc, ImageGalleryGridUI.class);
+        paramf.addFlags(67108864);
+        paramf.putExtra("kintent_intent_source", 1);
+        paramf.putExtra("kintent_talker", apb);
+        paramf.putExtra("kintent_image_count", cZj);
+        if (cZj > 0) {
+          paramf.putExtra("kintent_image_index", com.tencent.mm.model.ah.tD().rs().Fq(apb) - 1);
         }
-        j.eJZ.f(11627, new Object[] { Integer.valueOf(1) });
-        startActivity(paraml);
+        com.tencent.mm.plugin.report.service.h.fUJ.g(11627, new Object[] { Integer.valueOf(1) });
+        startActivity(paramf);
         return false;
       }
-      if (paraml.equals("room_set_chatting_background"))
+      if (paramf.equals("room_set_chatting_background"))
       {
-        paraml = new Intent();
-        paraml.putExtra("isApplyToAll", false);
-        paraml.putExtra("username", cqE.field_username);
-        c.a(this, "setting", ".ui.setting.SettingsChattingBackgroundUI", paraml, 2);
+        paramf = new Intent();
+        paramf.putExtra("isApplyToAll", false);
+        paramf.putExtra("username", cId.field_username);
+        com.tencent.mm.ar.c.a(this, "setting", ".ui.setting.SettingsChattingBackgroundUI", paramf, 2);
         return false;
       }
-      if (paraml.equals("room_search_chatting_content"))
+      if (paramf.equals("room_search_chatting_content"))
       {
-        paraml = new Intent(this, ChattingUI.class);
-        paraml.putExtra("Chat_User", aqX);
-        paraml.putExtra("search_chat_content", true);
-        paraml.putExtra("finish_direct", true);
-        startActivity(paraml);
+        paramf = new Intent(this, ChattingUI.class);
+        paramf.putExtra("Chat_User", apb);
+        paramf.putExtra("search_chat_content", true);
+        paramf.putExtra("finish_direct", true);
+        startActivity(paramf);
         return false;
       }
-      if (paraml.equals("room_clear_chatting_history"))
+      if (paramf.equals("room_clear_chatting_history"))
       {
-        paraml = getString(a.n.fmt_delcontactmsg_confirm, new Object[] { cqE.qD() });
-        h.a(ipQ.iqj, paraml, "", getString(a.n.app_clear), getString(a.n.app_cancel), new ey(this), null, a.f.alert_btn_color_warn);
+        paramf = getString(2131427490, new Object[] { cId.qz() });
+        g.a(koJ.kpc, paramf, "", getString(2131430892), getString(2131430884), new DialogInterface.OnClickListener()
+        {
+          public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+          {
+            SingleChatInfoUI.d(SingleChatInfoUI.this);
+          }
+        }, null, 2131231219);
         return false;
       }
-    } while (!paraml.equals("room_expose"));
-    paraml = new Intent();
-    paraml.setClass(ipQ.iqj, ExposeWithProofUI.class);
-    paraml.putExtra("k_username", aqX);
-    paraml.putExtra("k_expose_scene", 39);
-    paraml.putExtra("k_from_profile", true);
-    startActivity(paraml);
+    } while (!paramf.equals("room_expose"));
+    paramf = new Intent();
+    paramf.setClass(koJ.kpc, ExposeWithProofUI.class);
+    paramf.putExtra("k_username", apb);
+    paramf.putExtra("k_expose_scene", 39);
+    paramf.putExtra("k_need_step_two", true);
+    paramf.putExtra("k_from_profile", true);
+    startActivity(paramf);
     return false;
-  }
-  
-  public final void k(String paramString1, String paramString2, String paramString3)
-  {
-    if ((paramString1.equals(aqX)) && (cCD != null)) {
-      cCD.notifyChanged();
-    }
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
@@ -254,20 +322,20 @@ public class SingleChatInfoUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    if (l.a.gJW != null) {
-      l.a.gJW.a(this);
+    if (i.a.iyD != null) {
+      i.a.iyD.a(this);
     }
-    aqX = getIntent().getStringExtra("Single_Chat_Talker");
-    cqE = ax.tl().ri().yM(aqX);
-    cCU = (getPackageName() + "_preferences");
-    DV();
+    apb = getIntent().getStringExtra("Single_Chat_Talker");
+    cId = com.tencent.mm.model.ah.tD().rq().Ep(apb);
+    cZs = (getPackageName() + "_preferences");
+    Gb();
   }
   
   public void onDestroy()
   {
     
-    if (l.a.gJW != null) {
-      l.a.gJW.b(this);
+    if (i.a.iyD != null) {
+      i.a.iyD.b(this);
     }
     super.onDestroy();
   }
@@ -279,26 +347,42 @@ public class SingleChatInfoUI
   
   public void onResume()
   {
-    Kx();
+    NU();
     Object localObject;
-    if (cCD != null)
+    if (cYs != null)
     {
       localObject = new LinkedList();
-      ((List)localObject).add(aqX);
-      cCD.j(aqX, (List)localObject);
+      ((List)localObject).add(apb);
+      cYs.n(apb, (List)localObject);
     }
-    bXQ.notifyDataSetChanged();
+    cpb.notifyDataSetChanged();
     super.onResume();
-    if (!cCT)
+    if (!cYK)
     {
       localObject = getIntent().getStringExtra("need_matte_high_light_item");
-      if (!ad.iW((String)localObject))
+      if (!t.kz((String)localObject))
       {
-        int i = bXQ.AP((String)localObject);
+        final int i = cpb.GD((String)localObject);
         setSelection(i - 3);
-        new ac().postDelayed(new eu(this, i), 10L);
+        new aa().postDelayed(new Runnable()
+        {
+          public final void run()
+          {
+            View localView = ((com.tencent.mm.ui.base.preference.a)SingleChatInfoUI.a(SingleChatInfoUI.this)).a(i, gWB);
+            if (localView != null) {
+              com.tencent.mm.ui.f.a.c(koJ.kpc, localView);
+            }
+          }
+        }, 10L);
       }
-      cCT = true;
+      cYK = true;
+    }
+  }
+  
+  public final void p(String paramString1, String paramString2, String paramString3)
+  {
+    if ((paramString1.equals(apb)) && (cYs != null)) {
+      cYs.notifyChanged();
     }
   }
   
@@ -307,7 +391,7 @@ public class SingleChatInfoUI
   {
     public final void onCancel(DialogInterface paramDialogInterface)
     {
-      SingleChatInfoUI.aLF();
+      SingleChatInfoUI.bbu();
     }
   }
 }

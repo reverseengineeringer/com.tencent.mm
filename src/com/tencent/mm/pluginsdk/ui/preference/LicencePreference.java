@@ -7,19 +7,17 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.sdk.platformtools.ay;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public class LicencePreference
   extends Preference
 {
-  private CheckBox gYf;
-  private Button gYg;
-  private String gYh;
-  private boolean gYi = false;
-  private View.OnClickListener gYj;
+  private boolean iOA = false;
+  private View.OnClickListener iOB;
+  private CheckBox iOx;
+  private Button iOy;
+  private String iOz;
   
   public LicencePreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -29,7 +27,7 @@ public class LicencePreference
   public LicencePreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference_licence);
+    setLayoutResource(2131363065);
   }
   
   public final void onBindView(View paramView)
@@ -40,13 +38,21 @@ public class LicencePreference
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
-    gYf = ((CheckBox)paramViewGroup.findViewById(a.i.agree_cb));
-    gYg = ((Button)paramViewGroup.findViewById(a.i.agree_btn));
-    gYg.setOnClickListener(new n(this));
-    if (!bn.iW(gYh)) {
-      gYg.setText(gYh);
+    iOx = ((CheckBox)paramViewGroup.findViewById(2131167004));
+    iOy = ((Button)paramViewGroup.findViewById(2131167006));
+    iOy.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        if (LicencePreference.a(LicencePreference.this) != null) {
+          LicencePreference.a(LicencePreference.this).onClick(paramAnonymousView);
+        }
+      }
+    });
+    if (!ay.kz(iOz)) {
+      iOy.setText(iOz);
     }
-    gYf.setChecked(gYi);
+    iOx.setChecked(iOA);
     return paramViewGroup;
   }
 }

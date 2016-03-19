@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field protected iIX:Z
+.field protected kIj:Z
 
-.field final synthetic jtW:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+.field final synthetic lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
 
 # direct methods
@@ -26,14 +26,14 @@
 
     .prologue
     .line 81
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$a;->jtW:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$a;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 79
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$a;->iIX:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$a;->kIj:Z
 
     .line 83
     return-void
@@ -41,12 +41,12 @@
 
 
 # virtual methods
-.method public final ayV()Z
+.method public final aPA()Z
     .locals 1
 
     .prologue
     .line 87
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$a;->iIX:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$a;->kIj:Z
 
     return v0
 .end method

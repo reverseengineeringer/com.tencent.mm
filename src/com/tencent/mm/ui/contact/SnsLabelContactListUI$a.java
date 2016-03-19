@@ -8,15 +8,14 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.f;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
+import com.tencent.mm.d.b.p;
 import com.tencent.mm.h.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.w;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.i;
 import com.tencent.mm.pluginsdk.ui.a.b;
-import com.tencent.mm.pluginsdk.ui.d.i;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.base.MaskLayout;
 import java.io.IOException;
@@ -31,16 +30,16 @@ final class SnsLabelContactListUI$a
   extends BaseAdapter
 {
   private Context context = null;
-  private q fDk = null;
-  private Map jib = new HashMap();
-  private ColorStateList jic;
-  private ColorStateList jid;
+  private q hcs = null;
+  private Map lmA = new HashMap();
+  private ColorStateList lmB;
+  private ColorStateList lmC;
   
   public SnsLabelContactListUI$a(Context paramContext, List paramList)
   {
     context = paramContext;
-    jib.clear();
-    fDk = ax.tl().ri();
+    lmA.clear();
+    hcs = ah.tD().rq();
     paramList = paramList.iterator();
     int i = 0;
     Object localObject;
@@ -49,15 +48,15 @@ final class SnsLabelContactListUI$a
       localObject = (String)paramList.next();
       a locala = new a();
       locala.setUsername((String)localObject);
-      jib.put(Integer.valueOf(i), locala);
+      lmA.put(Integer.valueOf(i), locala);
       i += 1;
     }
     try
     {
-      paramList = paramContext.getResources().getXml(a.f.mm_list_textcolor_one);
-      localObject = paramContext.getResources().getXml(a.f.mm_list_textcolor_spuser);
-      jic = ColorStateList.createFromXml(paramContext.getResources(), paramList);
-      jid = ColorStateList.createFromXml(paramContext.getResources(), (XmlPullParser)localObject);
+      paramList = paramContext.getResources().getXml(2131231256);
+      localObject = paramContext.getResources().getXml(2131231251);
+      lmB = ColorStateList.createFromXml(paramContext.getResources(), paramList);
+      lmC = ColorStateList.createFromXml(paramContext.getResources(), (XmlPullParser)localObject);
       return;
     }
     catch (IOException paramContext) {}catch (XmlPullParserException paramContext) {}
@@ -65,7 +64,7 @@ final class SnsLabelContactListUI$a
   
   public final int getCount()
   {
-    return jib.size();
+    return lmA.size();
   }
   
   public final Object getItem(int paramInt)
@@ -74,20 +73,20 @@ final class SnsLabelContactListUI$a
     if (paramInt < 0) {
       localObject = null;
     }
-    com.tencent.mm.storage.k localk;
+    k localk;
     do
     {
       a locala;
       do
       {
         return localObject;
-        locala = (a)jib.get(Integer.valueOf(paramInt));
+        locala = (a)lmA.get(Integer.valueOf(paramInt));
         localObject = locala;
       } while (field_showHead != 0);
-      localk = fDk.yM(field_username);
+      localk = hcs.Ep(field_username);
       localObject = locala;
     } while (localk == null);
-    jib.put(Integer.valueOf(paramInt), localk);
+    lmA.put(Integer.valueOf(paramInt), localk);
     return localk;
   }
   
@@ -102,30 +101,30 @@ final class SnsLabelContactListUI$a
     TextView localTextView;
     if (paramView == null)
     {
-      paramView = View.inflate(context, a.k.contact_item, null);
+      paramView = View.inflate(context, 2131363246, null);
       paramViewGroup = new SnsLabelContactListUI.c((byte)0);
-      ciJ = ((TextView)paramView.findViewById(a.i.contactitem_catalog));
-      iSk = ((MaskLayout)paramView.findViewById(a.i.contactitem_avatar));
-      ciK = ((TextView)paramView.findViewById(a.i.contactitem_nick));
-      jif = ((TextView)paramView.findViewById(a.i.contactitem_account));
+      czT = ((TextView)paramView.findViewById(2131165247));
+      dbN = ((MaskLayout)paramView.findViewById(2131165376));
+      czU = ((TextView)paramView.findViewById(2131165378));
+      lmE = ((TextView)paramView.findViewById(2131165426));
       paramView.setTag(paramViewGroup);
       getItem(paramInt);
       locala = (a)getItem(paramInt);
-      ciJ.setVisibility(8);
-      localTextView = ciK;
-      if (w.ew(field_username)) {
-        break label224;
+      czT.setVisibility(8);
+      localTextView = czU;
+      if (i.eI(field_username)) {
+        break label219;
       }
     }
-    label224:
-    for (ColorStateList localColorStateList = jic;; localColorStateList = jid)
+    label219:
+    for (ColorStateList localColorStateList = lmB;; localColorStateList = lmC)
     {
       localTextView.setTextColor(localColorStateList);
-      a.b.b((ImageView)iSk.getContentView(), field_username, true);
-      jif.setVisibility(8);
-      iSk.setVisibility(0);
-      ciK.setText(i.a(context, locala.qD(), ciK.getTextSize()));
-      ciK.setVisibility(0);
+      a.b.b((ImageView)dbN.getContentView(), field_username, true);
+      lmE.setVisibility(8);
+      dbN.setVisibility(0);
+      czU.setText(e.a(context, locala.qz(), czU.getTextSize()));
+      czU.setVisibility(0);
       return paramView;
       paramViewGroup = (SnsLabelContactListUI.c)paramView.getTag();
       break;

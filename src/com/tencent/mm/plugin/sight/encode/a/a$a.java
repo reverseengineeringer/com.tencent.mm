@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sight.encode.a;
 
 public abstract interface a$a
 {
-  public abstract void ajG();
+  public abstract void awm();
 }
 
 /* Location:

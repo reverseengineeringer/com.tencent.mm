@@ -1,30 +1,29 @@
 package com.tencent.mm.storage;
 
 import android.database.Cursor;
-import com.tencent.mm.ar.f.a;
-import com.tencent.mm.sdk.g.af;
-import com.tencent.mm.sdk.g.ah;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.az.f.a;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.LinkedList;
 import java.util.List;
 import junit.framework.Assert;
 
 public final class f
-  extends ah
+  extends com.tencent.mm.sdk.h.f
   implements f.a
 {
-  public static final String[] aHq = { "CREATE INDEX IF NOT EXISTS serverChatRoomUserIndex ON chatroom ( chatroomname )" };
-  public static final String[] aqU = { ah.a(e.aqp, "chatroom") };
-  public af aqT;
+  public static final String[] aLn = { "CREATE INDEX IF NOT EXISTS serverChatRoomUserIndex ON chatroom ( chatroomname )" };
+  public static final String[] aoY = { com.tencent.mm.sdk.h.f.a(e.aot, "chatroom") };
+  public d aoX;
   
-  public f(af paramaf)
+  public f(d paramd)
   {
-    super(paramaf, e.aqp, "chatroom", aHq);
-    aqT = paramaf;
+    super(paramd, e.aot, "chatroom", aLn);
+    aoX = paramd;
   }
   
-  private static List yn(String paramString)
+  private static List DS(String paramString)
   {
     LinkedList localLinkedList = new LinkedList();
     if (paramString.equals("")) {
@@ -40,15 +39,94 @@ public final class f
     return localLinkedList;
   }
   
-  public final int a(com.tencent.mm.ar.f paramf)
+  public final e DT(String paramString)
+  {
+    e locale = new e();
+    field_chatroomname = paramString;
+    if (super.c(locale, new String[] { "chatroomname" })) {
+      return locale;
+    }
+    return null;
+  }
+  
+  public final e DU(String paramString)
+  {
+    e locale = new e();
+    field_chatroomname = paramString;
+    if (super.c(locale, new String[] { "chatroomname" })) {}
+    return locale;
+  }
+  
+  public final String DV(String paramString)
+  {
+    boolean bool2 = true;
+    Object localObject;
+    int i;
+    if (paramString.length() > 0)
+    {
+      bool1 = true;
+      Assert.assertTrue(bool1);
+      localObject = "select memberlist from chatroom where chatroomname='" + ay.kx(paramString) + "'";
+      localObject = aoX.rawQuery((String)localObject, null);
+      i = ((Cursor)localObject).getCount();
+      if (i > 1) {
+        break label120;
+      }
+    }
+    label120:
+    for (boolean bool1 = bool2;; bool1 = false)
+    {
+      Assert.assertTrue(bool1);
+      if (i > 0) {
+        break label125;
+      }
+      u.e("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "getMemberListByChatroomName chatroomName:" + paramString + " getCount ==0");
+      ((Cursor)localObject).close();
+      return null;
+      bool1 = false;
+      break;
+    }
+    label125:
+    ((Cursor)localObject).moveToFirst();
+    paramString = new e();
+    paramString.c((Cursor)localObject);
+    ((Cursor)localObject).close();
+    return field_memberlist;
+  }
+  
+  public final List DW(String paramString)
+  {
+    paramString = DV(paramString);
+    if (paramString == null) {
+      return null;
+    }
+    return DS(paramString);
+  }
+  
+  public final boolean DX(String paramString)
+  {
+    if (paramString.length() > 0) {}
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      if (aoX.delete("chatroom", "chatroomname=?", new String[] { paramString }) != 0) {
+        break;
+      }
+      return false;
+    }
+    DI(paramString);
+    return true;
+  }
+  
+  public final int a(com.tencent.mm.az.f paramf)
   {
     return 0;
   }
   
-  public final List aGi()
+  public final List aWn()
   {
-    t.d("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "getAllGroupCard : select * from chatroom where chatroomname like '%@groupcard'");
-    Cursor localCursor = aqT.rawQuery("select * from chatroom where chatroomname like '%@groupcard'", null);
+    u.d("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "getAllGroupCard : select * from chatroom where chatroomname like '%@groupcard'");
+    Cursor localCursor = aoX.rawQuery("select * from chatroom where chatroomname like '%@groupcard'", null);
     int i = localCursor.getCount();
     Object localObject1 = "";
     if (i == 0)
@@ -66,21 +144,21 @@ public final class f
       localObject1 = localObject2;
     } while (localCursor.moveToNext());
     localCursor.close();
-    return yn((String)localObject2);
+    return DS((String)localObject2);
   }
   
   public final boolean b(e parame)
   {
-    if (super.a(parame))
+    if (super.b(parame))
     {
-      yh(field_chatroomname);
+      DI(field_chatroomname);
       return true;
     }
-    t.w("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "replace error");
+    u.w("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "replace error");
     return false;
   }
   
-  public final String dN(String paramString)
+  public final String dY(String paramString)
   {
     boolean bool2 = true;
     Object localObject;
@@ -89,8 +167,8 @@ public final class f
     {
       bool1 = true;
       Assert.assertTrue(bool1);
-      localObject = "select displayname from chatroom where chatroomname='" + bn.iU(paramString) + "'";
-      localObject = aqT.rawQuery((String)localObject, null);
+      localObject = "select displayname from chatroom where chatroomname='" + ay.kx(paramString) + "'";
+      localObject = aoX.rawQuery((String)localObject, null);
       i = ((Cursor)localObject).getCount();
       if (i > 1) {
         break label120;
@@ -103,7 +181,7 @@ public final class f
       if (i > 0) {
         break label125;
       }
-      t.e("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "getDisplayName:" + paramString + " getCount ==0");
+      u.e("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "getDisplayName:" + paramString + " getCount ==0");
       ((Cursor)localObject).close();
       return null;
       bool1 = false;
@@ -115,85 +193,6 @@ public final class f
     paramString.c((Cursor)localObject);
     ((Cursor)localObject).close();
     return field_displayname;
-  }
-  
-  public final e yo(String paramString)
-  {
-    e locale = new e();
-    field_chatroomname = paramString;
-    if (super.c(locale, new String[] { "chatroomname" })) {
-      return locale;
-    }
-    return null;
-  }
-  
-  public final e yp(String paramString)
-  {
-    e locale = new e();
-    field_chatroomname = paramString;
-    if (super.c(locale, new String[] { "chatroomname" })) {}
-    return locale;
-  }
-  
-  public final String yq(String paramString)
-  {
-    boolean bool2 = true;
-    Object localObject;
-    int i;
-    if (paramString.length() > 0)
-    {
-      bool1 = true;
-      Assert.assertTrue(bool1);
-      localObject = "select memberlist from chatroom where chatroomname='" + bn.iU(paramString) + "'";
-      localObject = aqT.rawQuery((String)localObject, null);
-      i = ((Cursor)localObject).getCount();
-      if (i > 1) {
-        break label120;
-      }
-    }
-    label120:
-    for (boolean bool1 = bool2;; bool1 = false)
-    {
-      Assert.assertTrue(bool1);
-      if (i > 0) {
-        break label125;
-      }
-      t.e("!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc=", "getMemberListByChatroomName chatroomName:" + paramString + " getCount ==0");
-      ((Cursor)localObject).close();
-      return null;
-      bool1 = false;
-      break;
-    }
-    label125:
-    ((Cursor)localObject).moveToFirst();
-    paramString = new e();
-    paramString.c((Cursor)localObject);
-    ((Cursor)localObject).close();
-    return field_memberlist;
-  }
-  
-  public final List yr(String paramString)
-  {
-    paramString = yq(paramString);
-    if (paramString == null) {
-      return null;
-    }
-    return yn(paramString);
-  }
-  
-  public final boolean ys(String paramString)
-  {
-    if (paramString.length() > 0) {}
-    for (boolean bool = true;; bool = false)
-    {
-      Assert.assertTrue(bool);
-      if (aqT.delete("chatroom", "chatroomname=?", new String[] { paramString }) != 0) {
-        break;
-      }
-      return false;
-    }
-    yh(paramString);
-    return true;
   }
 }
 

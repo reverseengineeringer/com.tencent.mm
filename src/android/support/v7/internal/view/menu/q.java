@@ -1,32 +1,70 @@
 package android.support.v7.internal.view.menu;
 
-import android.os.Build.VERSION;
-import android.view.Menu;
+import android.graphics.drawable.Drawable;
+import android.support.v4.a.a.c;
 import android.view.MenuItem;
+import android.view.SubMenu;
+import android.view.View;
 
-public final class q
+final class q
+  extends o
+  implements c
 {
-  public static Menu c(Menu paramMenu)
+  q(SubMenu paramSubMenu)
   {
-    Object localObject = paramMenu;
-    if (Build.VERSION.SDK_INT >= 14) {
-      localObject = new r(paramMenu);
-    }
-    return (Menu)localObject;
+    super(paramSubMenu);
   }
   
-  public static MenuItem i(MenuItem paramMenuItem)
+  public final void clearHeader()
   {
-    Object localObject;
-    if (Build.VERSION.SDK_INT >= 16) {
-      localObject = new m(paramMenuItem);
-    }
-    do
-    {
-      return (MenuItem)localObject;
-      localObject = paramMenuItem;
-    } while (Build.VERSION.SDK_INT < 14);
-    return new k(paramMenuItem);
+    ((SubMenu)lr).clearHeader();
+  }
+  
+  public final MenuItem getItem()
+  {
+    return f(((SubMenu)lr).getItem());
+  }
+  
+  public final SubMenu setHeaderIcon(int paramInt)
+  {
+    ((SubMenu)lr).setHeaderIcon(paramInt);
+    return this;
+  }
+  
+  public final SubMenu setHeaderIcon(Drawable paramDrawable)
+  {
+    ((SubMenu)lr).setHeaderIcon(paramDrawable);
+    return this;
+  }
+  
+  public final SubMenu setHeaderTitle(int paramInt)
+  {
+    ((SubMenu)lr).setHeaderTitle(paramInt);
+    return this;
+  }
+  
+  public final SubMenu setHeaderTitle(CharSequence paramCharSequence)
+  {
+    ((SubMenu)lr).setHeaderTitle(paramCharSequence);
+    return this;
+  }
+  
+  public final SubMenu setHeaderView(View paramView)
+  {
+    ((SubMenu)lr).setHeaderView(paramView);
+    return this;
+  }
+  
+  public final SubMenu setIcon(int paramInt)
+  {
+    ((SubMenu)lr).setIcon(paramInt);
+    return this;
+  }
+  
+  public final SubMenu setIcon(Drawable paramDrawable)
+  {
+    ((SubMenu)lr).setIcon(paramDrawable);
+    return this;
   }
 }
 

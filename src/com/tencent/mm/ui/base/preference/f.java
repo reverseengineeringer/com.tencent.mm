@@ -1,15 +1,28 @@
 package com.tencent.mm.ui.base.preference;
 
-final class f
+public abstract interface f
 {
-  int id;
-  CharSequence text;
+  public abstract Preference GB(String paramString);
   
-  public f(CharSequence paramCharSequence, int paramInt)
-  {
-    text = paramCharSequence;
-    id = paramInt;
-  }
+  public abstract boolean GC(String paramString);
+  
+  public abstract int GD(String paramString);
+  
+  public abstract void a(Preference paramPreference);
+  
+  public abstract void a(Preference paramPreference, int paramInt);
+  
+  public abstract void addPreferencesFromResource(int paramInt);
+  
+  public abstract void at(String paramString, boolean paramBoolean);
+  
+  public abstract boolean b(Preference paramPreference);
+  
+  public abstract int indexOf(String paramString);
+  
+  public abstract void notifyDataSetChanged();
+  
+  public abstract void removeAll();
 }
 
 /* Location:

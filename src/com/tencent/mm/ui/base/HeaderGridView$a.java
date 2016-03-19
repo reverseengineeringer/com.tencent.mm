@@ -3,11 +3,11 @@ package com.tencent.mm.ui.base;
 import android.view.View;
 import android.view.ViewGroup;
 
-final class HeaderGridView$a
+public final class HeaderGridView$a
 {
   public Object data;
-  public ViewGroup iCX;
   public boolean isSelectable;
+  public ViewGroup kCa;
   public View view;
 }
 

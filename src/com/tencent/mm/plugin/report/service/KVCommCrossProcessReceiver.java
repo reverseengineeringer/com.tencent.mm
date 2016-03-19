@@ -6,132 +6,214 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Looper;
+import android.os.Message;
+import android.os.Parcelable;
+import android.os.Process;
+import com.tencent.mm.protocal.c;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.p;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class KVCommCrossProcessReceiver
   extends BroadcastReceiver
 {
   private static String className = "";
-  
-  public static void a(f paramf)
+  private static int fUn = 10000;
+  private static int fUo = 1;
+  private static aa fUp = new aa(Looper.getMainLooper())
   {
-    if ((com.tencent.mm.protocal.c.cy(aa.getContext())) || (!aa.aFb()))
+    public final void handleMessage(Message arg1)
     {
-      t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "sendKVBroadcast shut_down_weixin, no need to notify worker");
-      g.a((int)eJK, value, eJL, eJM);
-      return;
+      super.handleMessage(???);
+      if (what == KVCommCrossProcessReceiver.aa())
+      {
+        Object localObject4;
+        Object localObject5;
+        synchronized (KVCommCrossProcessReceiver.aqq())
+        {
+          Object localObject1 = new BroadCastData(KVCommCrossProcessReceiver.aqr());
+          localObject4 = KVCommCrossProcessReceiver.aqr();
+          fTY.clear();
+          fTZ.clear();
+          fUa.clear();
+          localObject5 = fUa;
+          localObject4 = fTZ;
+          ??? = fTY;
+          if ((!c.cX(y.getContext())) && (y.aUU())) {
+            break label240;
+          }
+          u.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "sendKVBroadcast shut_down_weixin, no need to notify worker");
+          localObject1 = ((ArrayList)localObject5).iterator();
+          if (((Iterator)localObject1).hasNext())
+          {
+            localObject5 = (GroupIDKeyDataInfo)((Iterator)localObject1).next();
+            f.c(fUg, fUh);
+          }
+        }
+        Object localObject3 = ((ArrayList)localObject4).iterator();
+        while (((Iterator)localObject3).hasNext())
+        {
+          localObject4 = (StIDKeyDataInfo)((Iterator)localObject3).next();
+          f.d((int)fUL, (int)key, (int)value, fUh);
+        }
+        ??? = ???.iterator();
+        while (???.hasNext())
+        {
+          localObject3 = (KVReportDataInfo)???.next();
+          f.a((int)fUv, value, fUw, fUh);
+          continue;
+          label240:
+          Intent localIntent = new Intent();
+          localIntent.setAction("com.tencent.mm.plugin.report.service.KVCommCrossProcessReceiver");
+          localIntent.setComponent(new ComponentName(y.getPackageName(), KVCommCrossProcessReceiver.bW()));
+          localIntent.putExtra("type", 1);
+          Bundle localBundle = new Bundle();
+          localBundle.putParcelable("BUNDLE_IDKEYGROUP", (Parcelable)localObject3);
+          localIntent.putExtra("INTENT_IDKEYGROUP", localBundle);
+          u.d("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "try sendBroadcast kvdata lenght: %d, idkey data lenght:%d,group lenght:%d", new Object[] { Integer.valueOf(???.size()), Integer.valueOf(((ArrayList)localObject4).size()), Integer.valueOf(((ArrayList)localObject5).size()) });
+          y.getContext().sendBroadcast(localIntent);
+        }
+      }
     }
-    Intent localIntent = new Intent();
-    localIntent.setAction("com.tencent.mm.plugin.report.service.KVCommCrossProcessReceiver");
-    localIntent.setComponent(new ComponentName(aa.getPackageName(), getClassName()));
-    localIntent.putExtra("type", 1);
-    localIntent.putExtra("logid", eJK);
-    localIntent.putExtra("value", value);
-    localIntent.putExtra("isImportant", eJM);
-    localIntent.putExtra("isReportNow", eJL);
-    t.d("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "sendKVBroadcast onReceive kv logid:%d, isImportant: %b,isReportNow: %b", new Object[] { Long.valueOf(eJK), Boolean.valueOf(eJM), Boolean.valueOf(eJL) });
-    aa.getContext().sendBroadcast(localIntent);
+  };
+  private static BroadCastData fUq = new BroadCastData();
+  private static Object lock = new Object();
+  
+  public static void a(KVReportDataInfo paramKVReportDataInfo)
+  {
+    u.d("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "receive kv logid:%d, isImportant: %b,isReportNow: %b", new Object[] { Long.valueOf(fUv), Boolean.valueOf(fUh), Boolean.valueOf(fUw) });
+    synchronized (lock)
+    {
+      fUqfTY.add(paramKVReportDataInfo);
+      if (fUp.hasMessages(fUo)) {
+        return;
+      }
+    }
+    fUp.sendEmptyMessageDelayed(fUo, fUn);
   }
   
-  public static void a(k paramk)
+  public static void a(StIDKeyDataInfo paramStIDKeyDataInfo)
   {
-    if ((com.tencent.mm.protocal.c.cy(aa.getContext())) || (!aa.aFb()))
+    u.d("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "receive id ID:%d, key:%d,value:%d, isImportant:%b", new Object[] { Long.valueOf(fUL), Long.valueOf(key), Long.valueOf(value), Boolean.valueOf(fUh) });
+    synchronized (lock)
     {
-      t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "sendIDKeyBroadCast shut_down_weixin, no need to notify worker");
-      g.c((int)eKb, (int)key, (int)value, eJM);
-      return;
+      fUqfTZ.add(paramStIDKeyDataInfo);
+      if (fUp.hasMessages(fUo)) {
+        return;
+      }
     }
-    Intent localIntent = new Intent();
-    localIntent.setAction("com.tencent.mm.plugin.report.service.KVCommCrossProcessReceiver");
-    localIntent.setComponent(new ComponentName(aa.getPackageName(), getClassName()));
-    localIntent.putExtra("type", 2);
-    localIntent.putExtra("id", eKb);
-    localIntent.putExtra("key", key);
-    localIntent.putExtra("value", value);
-    localIntent.putExtra("isImportant", eJM);
-    t.d("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "sendIDKeyBroadCast onReceive id ID:%d, key:%d,value:%d, isImportant:%b", new Object[] { Long.valueOf(eKb), Long.valueOf(key), Long.valueOf(value), Boolean.valueOf(eJM) });
-    aa.getContext().sendBroadcast(localIntent);
+    fUp.sendEmptyMessageDelayed(fUo, fUn);
   }
   
   public static void a(ArrayList paramArrayList, boolean paramBoolean)
   {
-    if ((com.tencent.mm.protocal.c.cy(aa.getContext())) || (!aa.aFb()))
+    u.d("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "receive group id size:%d, isImportant:%b", new Object[] { Integer.valueOf(paramArrayList.size()), Boolean.valueOf(paramBoolean) });
+    synchronized (lock)
     {
-      t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "sendIDKeyGroupBroadCast shut_down_weixin, no need to notify worker");
-      g.c(paramArrayList, paramBoolean);
-      return;
+      BroadCastData localBroadCastData = fUq;
+      paramArrayList = new GroupIDKeyDataInfo(paramArrayList, paramBoolean);
+      fUa.add(paramArrayList);
+      if (fUp.hasMessages(fUo)) {
+        return;
+      }
     }
-    Intent localIntent = new Intent();
-    localIntent.setAction("com.tencent.mm.plugin.report.service.KVCommCrossProcessReceiver");
-    localIntent.putExtra("type", 3);
-    localIntent.setComponent(new ComponentName(aa.getPackageName(), getClassName()));
-    Bundle localBundle = new Bundle();
-    localBundle.putSerializable("IDKEYGROUP", paramArrayList);
-    localIntent.putExtras(localBundle);
-    localIntent.putExtra("isImportant", paramBoolean);
-    aa.getContext().sendBroadcast(localIntent);
+    fUp.sendEmptyMessageDelayed(fUo, fUn);
   }
   
-  public static void afl()
+  public static void aqp()
   {
-    if ((com.tencent.mm.protocal.c.cy(aa.getContext())) || (!aa.aFb()))
+    if ((c.cX(y.getContext())) || (!y.aUU()))
     {
-      t.w("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "sendOnCrashOrExceptionBroadCast shut_down_weixin, NO MM Process , return.");
+      u.w("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "sendOnCrashOrExceptionBroadCast shut_down_weixin, NO MM Process , return.");
       return;
     }
     Intent localIntent = new Intent();
     localIntent.setAction("com.tencent.mm.plugin.report.service.KVCommCrossProcessReceiver");
-    localIntent.setComponent(new ComponentName(aa.getPackageName(), getClassName()));
-    localIntent.putExtra("type", 4);
-    aa.getContext().sendBroadcast(localIntent);
+    localIntent.setComponent(new ComponentName(y.getPackageName(), getClassName()));
+    localIntent.putExtra("type", 2);
+    y.getContext().sendBroadcast(localIntent);
   }
   
   private static String getClassName()
   {
-    if (bn.iW(className)) {
-      className = aa.getPackageName() + ".plugin.report.service.KVCommCrossProcessReceiver";
+    if (ay.kz(className)) {
+      className = y.getPackageName() + ".plugin.report.service.KVCommCrossProcessReceiver";
     }
     return className;
   }
   
   public void onReceive(Context paramContext, Intent paramIntent)
   {
-    if (paramIntent == null) {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "onReceive intent == null");
+    if (paramIntent == null)
+    {
+      u.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "onReceive intent == null");
+      label11:
+      return;
     }
     for (;;)
     {
-      return;
-      switch (paramIntent.getIntExtra("type", 0))
+      try
       {
+        int i = p.a(paramIntent, "type", 0);
+        switch (i)
+        {
+        default: 
+          if (!c.cX(y.getContext())) {
+            break label11;
+          }
+          new aa(Looper.myLooper()).postDelayed(new Runnable()
+          {
+            public final void run()
+            {
+              if (c.cX(y.getContext()))
+              {
+                u.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "KVCommCrossProcessReceiver shut_down_weixin need to kill process");
+                u.appenderFlushSync();
+                KVReportJni.KVReportJava2C.onExitAppOrAppCrash();
+                Process.killProcess(Process.myPid());
+              }
+            }
+          }, 5000L);
+          return;
+        }
       }
-      while (com.tencent.mm.protocal.c.cy(aa.getContext()))
+      catch (Exception paramContext)
       {
-        new ac(Looper.myLooper()).postDelayed(new c(this), 5000L);
+        u.printErrStackTrace("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", paramContext, "", new Object[0]);
         return;
-        long l1 = paramIntent.getLongExtra("logid", 0L);
-        paramContext = paramIntent.getStringExtra("value");
-        boolean bool1 = paramIntent.getBooleanExtra("isImportant", false);
-        boolean bool2 = paramIntent.getBooleanExtra("isReportNow", false);
-        t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "KVCommCrossProcessReceiver onReceive kv logid:%d, isImportant: %b,isReportNow: %b", new Object[] { Long.valueOf(l1), Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
-        e.a(l1, paramContext, bool2, bool1);
+      }
+      paramContext = paramIntent.getBundleExtra("INTENT_IDKEYGROUP");
+      if (paramContext != null)
+      {
+        paramContext = (BroadCastData)paramContext.getParcelable("BUNDLE_IDKEYGROUP");
+        Object localObject = fUa;
+        paramIntent = fTZ;
+        paramContext = fTY;
+        u.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "KVBroadCast onReceive kvdata lenght: %d, idkey data lenght:%d,group lenght:%d", new Object[] { Integer.valueOf(paramContext.size()), Integer.valueOf(paramIntent.size()), Integer.valueOf(((ArrayList)localObject).size()) });
+        localObject = ((ArrayList)localObject).iterator();
+        while (((Iterator)localObject).hasNext())
+        {
+          GroupIDKeyDataInfo localGroupIDKeyDataInfo = (GroupIDKeyDataInfo)((Iterator)localObject).next();
+          e.b(fUg, fUh);
+        }
+        paramIntent = paramIntent.iterator();
+        while (paramIntent.hasNext())
+        {
+          localObject = (StIDKeyDataInfo)paramIntent.next();
+          e.a(fUL, key, value, fUh);
+        }
+        paramContext = paramContext.iterator();
+        while (paramContext.hasNext())
+        {
+          paramIntent = (KVReportDataInfo)paramContext.next();
+          e.a(fUv, value, fUw, fUh);
+        }
         continue;
-        l1 = paramIntent.getLongExtra("id", 0L);
-        long l2 = paramIntent.getLongExtra("key", 0L);
-        long l3 = paramIntent.getLongExtra("value", 0L);
-        bool1 = paramIntent.getBooleanExtra("isImportant", false);
-        t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "KVCommCrossProcessReceiver onReceive id ID:%d, key:%d,value:%d, isImportant:%b", new Object[] { Long.valueOf(l1), Long.valueOf(l2), Long.valueOf(l3), Boolean.valueOf(bool1) });
-        e.a(l1, l2, l3, bool1);
-        continue;
-        paramContext = (ArrayList)paramIntent.getSerializableExtra("IDKEYGROUP");
-        bool1 = paramIntent.getBooleanExtra("isImportant", false);
-        t.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "KVCommCrossProcessReceiver onReceive groudid  isImportant: %b", new Object[] { Boolean.valueOf(bool1) });
-        e.b(paramContext, bool1);
-        continue;
+        u.i("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "KVBroadCast onReceive TYPE_ONCRASHOREXCEPTION");
         KVReportJni.KVReportJava2C.onExitAppOrAppCrash();
       }
     }

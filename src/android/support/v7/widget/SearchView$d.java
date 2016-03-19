@@ -2,9 +2,9 @@ package android.support.v7.widget;
 
 public abstract interface SearchView$d
 {
-  public abstract boolean cL();
+  public abstract boolean cv();
   
-  public abstract boolean cM();
+  public abstract boolean cw();
 }
 
 /* Location:

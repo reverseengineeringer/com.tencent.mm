@@ -15,17 +15,17 @@
 
 
 # static fields
-.field public static final enum arN:Lcom/tencent/mm/c/b/b$b;
+.field public static final enum apS:Lcom/tencent/mm/c/b/b$b;
 
-.field public static final enum arO:Lcom/tencent/mm/c/b/b$b;
+.field public static final enum apT:Lcom/tencent/mm/c/b/b$b;
 
-.field public static final enum arP:Lcom/tencent/mm/c/b/b$b;
+.field public static final enum apU:Lcom/tencent/mm/c/b/b$b;
 
-.field public static final enum arQ:Lcom/tencent/mm/c/b/b$b;
+.field public static final enum apV:Lcom/tencent/mm/c/b/b$b;
 
-.field public static final enum arR:Lcom/tencent/mm/c/b/b$b;
+.field public static final enum apW:Lcom/tencent/mm/c/b/b$b;
 
-.field private static final synthetic arS:[Lcom/tencent/mm/c/b/b$b;
+.field private static final synthetic apX:[Lcom/tencent/mm/c/b/b$b;
 
 
 # direct methods
@@ -43,77 +43,77 @@
 
     const/4 v2, 0x0
 
-    .line 73
+    .line 70
     new-instance v0, Lcom/tencent/mm/c/b/b$b;
 
     const-string/jumbo v1, "INITIALIZING"
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/c/b/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/c/b/b$b;->arN:Lcom/tencent/mm/c/b/b$b;
+    sput-object v0, Lcom/tencent/mm/c/b/b$b;->apS:Lcom/tencent/mm/c/b/b$b;
 
-    .line 74
+    .line 71
     new-instance v0, Lcom/tencent/mm/c/b/b$b;
 
     const-string/jumbo v1, "READY"
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/c/b/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/c/b/b$b;->arO:Lcom/tencent/mm/c/b/b$b;
+    sput-object v0, Lcom/tencent/mm/c/b/b$b;->apT:Lcom/tencent/mm/c/b/b$b;
 
-    .line 75
+    .line 72
     new-instance v0, Lcom/tencent/mm/c/b/b$b;
 
     const-string/jumbo v1, "RECORDING"
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/c/b/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/c/b/b$b;->arP:Lcom/tencent/mm/c/b/b$b;
+    sput-object v0, Lcom/tencent/mm/c/b/b$b;->apU:Lcom/tencent/mm/c/b/b$b;
 
-    .line 76
+    .line 73
     new-instance v0, Lcom/tencent/mm/c/b/b$b;
 
     const-string/jumbo v1, "ERROR"
 
     invoke-direct {v0, v1, v5}, Lcom/tencent/mm/c/b/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/c/b/b$b;->arQ:Lcom/tencent/mm/c/b/b$b;
+    sput-object v0, Lcom/tencent/mm/c/b/b$b;->apV:Lcom/tencent/mm/c/b/b$b;
 
-    .line 77
+    .line 74
     new-instance v0, Lcom/tencent/mm/c/b/b$b;
 
     const-string/jumbo v1, "STOPPED"
 
     invoke-direct {v0, v1, v6}, Lcom/tencent/mm/c/b/b$b;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/c/b/b$b;->arR:Lcom/tencent/mm/c/b/b$b;
+    sput-object v0, Lcom/tencent/mm/c/b/b$b;->apW:Lcom/tencent/mm/c/b/b$b;
 
-    .line 72
+    .line 69
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/tencent/mm/c/b/b$b;
 
-    sget-object v1, Lcom/tencent/mm/c/b/b$b;->arN:Lcom/tencent/mm/c/b/b$b;
+    sget-object v1, Lcom/tencent/mm/c/b/b$b;->apS:Lcom/tencent/mm/c/b/b$b;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/c/b/b$b;->arO:Lcom/tencent/mm/c/b/b$b;
+    sget-object v1, Lcom/tencent/mm/c/b/b$b;->apT:Lcom/tencent/mm/c/b/b$b;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/c/b/b$b;->arP:Lcom/tencent/mm/c/b/b$b;
+    sget-object v1, Lcom/tencent/mm/c/b/b$b;->apU:Lcom/tencent/mm/c/b/b$b;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/c/b/b$b;->arQ:Lcom/tencent/mm/c/b/b$b;
+    sget-object v1, Lcom/tencent/mm/c/b/b$b;->apV:Lcom/tencent/mm/c/b/b$b;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/tencent/mm/c/b/b$b;->arR:Lcom/tencent/mm/c/b/b$b;
+    sget-object v1, Lcom/tencent/mm/c/b/b$b;->apW:Lcom/tencent/mm/c/b/b$b;
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcom/tencent/mm/c/b/b$b;->arS:[Lcom/tencent/mm/c/b/b$b;
+    sput-object v0, Lcom/tencent/mm/c/b/b$b;->apX:[Lcom/tencent/mm/c/b/b$b;
 
     return-void
 .end method
@@ -122,7 +122,7 @@
     .locals 0
 
     .prologue
-    .line 72
+    .line 69
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -132,7 +132,7 @@
     .locals 1
 
     .prologue
-    .line 72
+    .line 69
     const-class v0, Lcom/tencent/mm/c/b/b$b;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -148,8 +148,8 @@
     .locals 1
 
     .prologue
-    .line 72
-    sget-object v0, Lcom/tencent/mm/c/b/b$b;->arS:[Lcom/tencent/mm/c/b/b$b;
+    .line 69
+    sget-object v0, Lcom/tencent/mm/c/b/b$b;->apX:[Lcom/tencent/mm/c/b/b$b;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/c/b/b$b;->clone()Ljava/lang/Object;
 

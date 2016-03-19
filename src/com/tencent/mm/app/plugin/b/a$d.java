@@ -1,76 +1,76 @@
 package com.tencent.mm.app.plugin.b;
 
 import com.tencent.mm.c.a.a;
-import com.tencent.mm.d.a.bw;
-import com.tencent.mm.d.a.bw.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.d.a.dn;
+import com.tencent.mm.d.a.dn.a;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 public final class a$d
-  extends e
+  extends c
 {
-  a apx;
-  String apy;
+  a anB;
+  String anC;
   
   public a$d()
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(b paramb)
   {
-    if (!(paramd instanceof bw))
+    if (!(paramb instanceof dn))
     {
-      t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+      u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
       return false;
     }
-    paramd = (bw)paramd;
-    if ((bn.iW(axf.apy)) && (axf.op == 1))
+    paramb = (dn)paramb;
+    if ((ay.kz(axm.anC)) && (axm.op == 1))
     {
-      t.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "fileName(%s) is null or nil.", new Object[] { axf.apy });
+      u.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "fileName(%s) is null or nil.", new Object[] { axm.anC });
       return true;
     }
-    if (axf.op == 1) {
-      if (apx == null)
+    if (axm.op == 1) {
+      if (anB == null)
       {
-        apx = new a(aa.getContext());
-        apx.ark = axf.axh;
-        apx.arj = axf.axi;
-        axg.auM = apx.c(axf.apy, axf.arf);
+        anB = new a(y.getContext());
+        anB.apq = axm.axo;
+        anB.app = axm.axp;
+        axn.atR = anB.c(axm.anC, axm.apj);
       }
     }
     for (;;)
     {
       return true;
-      if (!axf.apy.equals(apy))
+      if (!axm.anC.equals(anC))
       {
-        if (apx.isPlaying()) {
-          apx.stop();
+        if (anB.isPlaying()) {
+          anB.stop();
         }
-        apy = axf.apy;
+        anC = axm.anC;
         break;
       }
-      if (apx.mj())
+      if (anB.lF())
       {
-        axg.auM = apx.mg();
+        axn.atR = anB.lB();
         return true;
       }
-      if (!apx.isPlaying()) {
+      if (!anB.isPlaying()) {
         break;
       }
-      axg.auM = false;
+      axn.atR = false;
       return true;
-      if (axf.op == 2)
+      if (axm.op == 2)
       {
-        if (apx != null) {
-          apx.stop();
+        if (anB != null) {
+          anB.stop();
         }
       }
-      else if ((axf.op == 4) && (apx != null) && (apx.isPlaying())) {
-        axg.auM = apx.pause();
+      else if ((axm.op == 4) && (anB != null) && (anB.isPlaying())) {
+        axn.atR = anB.pause();
       }
     }
   }

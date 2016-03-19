@@ -1,692 +1,489 @@
 package com.tencent.mm.ui.base;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
-import android.content.res.Resources;
+import android.content.DialogInterface.OnDismissListener;
+import android.content.res.ColorStateList;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.os.Looper;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.EditText;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import android.widget.Toast;
-import com.jg.JgClassChecked;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.tools.a.c;
-import com.tencent.mm.ui.tools.eb;
-import com.tencent.mm.ui.tools.ef;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.ay.g;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ad;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.p;
 
-@JgClassChecked(author=20, fComment="checked", lastDate="201400504", reviewer=20, vComment={com.jg.EType.JSEXECUTECHECK})
 public final class h
+  extends Dialog
+  implements DialogInterface
 {
-  public static Dialog a(Context paramContext, String paramString, List paramList1, List paramList2, d paramd)
-  {
-    return b(paramContext, paramString, paramList1, paramList2, null, true, paramd);
-  }
+  private TextView dFY;
+  private boolean goQ;
+  public Button hZT;
+  public Button hug;
+  public LinearLayout kCH;
+  private TextView kCI;
+  private TextView kCJ;
+  private ImageView kCK;
+  private ImageView kCL;
+  private View kCM;
+  private LinearLayout kCN;
+  private ViewGroup kCO;
+  private ViewGroup kCP;
+  private View kCQ;
+  public Context mContext;
+  private View ns;
   
-  public static Dialog a(Context paramContext, String paramString1, List paramList1, List paramList2, String paramString2, d paramd)
+  public h(Context paramContext)
   {
-    return b(paramContext, paramString1, paramList1, paramList2, paramString2, true, paramd);
-  }
-  
-  public static Dialog a(Context paramContext, String paramString1, List paramList1, List paramList2, String paramString2, boolean paramBoolean, d paramd)
-  {
-    return b(paramContext, paramString1, paramList1, paramList2, paramString2, paramBoolean, paramd);
-  }
-  
-  public static Dialog a(Context paramContext, String paramString, String[] paramArrayOfString, c paramc)
-  {
-    return a(paramContext, paramString, paramArrayOfString, null, true, paramc, null);
-  }
-  
-  public static Dialog a(Context paramContext, String paramString1, String[] paramArrayOfString, String paramString2, c paramc)
-  {
-    return a(paramContext, paramString1, paramArrayOfString, paramString2, true, paramc, null);
-  }
-  
-  public static Dialog a(Context paramContext, String paramString1, String[] paramArrayOfString, String paramString2, c paramc, DialogInterface.OnCancelListener paramOnCancelListener)
-  {
-    return a(paramContext, paramString1, paramArrayOfString, paramString2, true, paramc, paramOnCancelListener);
-  }
-  
-  public static Dialog a(Context paramContext, String paramString1, String[] paramArrayOfString, String paramString2, boolean paramBoolean, c paramc)
-  {
-    return a(paramContext, paramString1, paramArrayOfString, paramString2, paramBoolean, paramc, null);
-  }
-  
-  @Deprecated
-  public static Dialog a(Context paramContext, String paramString1, String[] paramArrayOfString, String paramString2, boolean paramBoolean, c paramc, DialogInterface.OnCancelListener paramOnCancelListener)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    if (((paramArrayOfString == null) || (paramArrayOfString.length == 0)) && (com.tencent.mm.sdk.platformtools.bn.iW(paramString2))) {
-      return null;
-    }
-    ArrayList localArrayList = new ArrayList();
-    if ((paramArrayOfString != null) && (paramArrayOfString.length > 0)) {
-      Collections.addAll(localArrayList, paramArrayOfString);
-    }
-    if (!com.tencent.mm.sdk.platformtools.bn.iW(paramString2)) {
-      localArrayList.add(paramString2);
-    }
-    if (paramBoolean)
+    super(paramContext, 2131100061);
+    mContext = paramContext;
+    if (a.da(mContext)) {}
+    for (kCH = ((LinearLayout)p.ee(mContext).inflate(2131363281, null));; kCH = ((LinearLayout)p.ee(mContext).inflate(2131363173, null)))
     {
-      paramArrayOfString = new eb(paramContext);
-      jud = new n(paramString1, localArrayList);
-      jue = new o(paramc);
-      paramArrayOfString.d(paramOnCancelListener);
-      paramString1 = paramArrayOfString.aSi();
-      a(paramContext, paramString1);
-      return paramString1;
+      hZT = ((Button)kCH.findViewById(2131168324));
+      hug = ((Button)kCH.findViewById(2131168414));
+      dFY = ((TextView)kCH.findViewById(2131168319));
+      kCI = ((TextView)kCH.findViewById(2131166167));
+      kCJ = ((TextView)kCH.findViewById(2131166168));
+      kCK = ((ImageView)kCH.findViewById(2131168318));
+      kCL = ((ImageView)kCH.findViewById(2131166166));
+      kCM = kCH.findViewById(2131168317);
+      kCN = ((LinearLayout)kCH.findViewById(2131166165));
+      kCO = ((ViewGroup)kCH.findViewById(2131168322));
+      kCQ = kCH.findViewById(2131168323);
+      kCP = ((ViewGroup)kCH.findViewById(2131168321));
+      setCanceledOnTouchOutside(true);
+      return;
     }
-    paramContext = new ef(paramContext);
-    jud = new p(paramString1, localArrayList);
-    jue = new q(paramc);
-    jvw = paramOnCancelListener;
-    paramContext.bX();
-    return null;
   }
   
-  public static aa a(Context paramContext, int paramInt1, int paramInt2, int paramInt3, int paramInt4, DialogInterface.OnClickListener paramOnClickListener, int paramInt5)
+  public final void a(int paramInt, DialogInterface.OnClickListener paramOnClickListener)
   {
-    String str1;
-    if (paramInt1 > 0)
+    a(mContext.getString(paramInt), true, paramOnClickListener);
+  }
+  
+  public final void a(c paramc)
+  {
+    if ((title != null) && (title.length() > 0)) {
+      setTitle(title);
+    }
+    int i;
+    if (iFa != 0)
     {
-      str1 = paramContext.getString(paramInt1);
-      if (paramInt2 <= 0) {
-        break label55;
+      i = iFa;
+      dFY.setTextColor(ColorStateList.valueOf(i));
+    }
+    if (kBz != 0)
+    {
+      i = kBz;
+      dFY.setGravity(i);
+    }
+    if (maxLines != 0)
+    {
+      i = maxLines;
+      dFY.setMaxLines(i);
+    }
+    Object localObject;
+    if (kBo != null)
+    {
+      localObject = kBo;
+      kCM.setVisibility(0);
+      kCK.setVisibility(0);
+      kCK.setBackgroundDrawable((Drawable)localObject);
+    }
+    if (inG != null)
+    {
+      ns = inG;
+      if (ns != null)
+      {
+        kCN.setVisibility(8);
+        kCP.setVisibility(0);
+        kCP.removeAllViews();
+        kCP.addView(ns, new LinearLayout.LayoutParams(-1, -1));
       }
-    }
-    label55:
-    for (String str2 = paramContext.getString(paramInt2);; str2 = "")
-    {
-      return a(paramContext, str1, str2, paramContext.getString(paramInt3), paramContext.getString(paramInt4), false, paramOnClickListener, null, paramInt5);
-      str1 = "";
-      break;
-    }
-  }
-  
-  public static aa a(Context paramContext, int paramInt1, int paramInt2, int paramInt3, int paramInt4, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    String str1;
-    if (paramInt1 > 0)
-    {
-      str1 = paramContext.getString(paramInt1);
-      if (paramInt2 <= 0) {
-        break label54;
+      if (kBx != null)
+      {
+        if (kBA != null) {
+          break label569;
+        }
+        localObject = kBx;
+        kCQ.setVisibility(8);
+        kCO.addView((View)localObject);
       }
-    }
-    label54:
-    for (String str2 = paramContext.getString(paramInt2);; str2 = "")
-    {
-      return a(paramContext, str1, str2, paramContext.getString(paramInt3), paramContext.getString(paramInt4), false, paramOnClickListener1, paramOnClickListener2);
-      str1 = "";
-      break;
-    }
-  }
-  
-  public static aa a(Context paramContext, int paramInt1, int paramInt2, DialogInterface.OnClickListener paramOnClickListener)
-  {
-    return a(paramContext, paramInt1, paramInt2, true, paramOnClickListener);
-  }
-  
-  public static aa a(Context paramContext, int paramInt1, int paramInt2, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    String str1;
-    if (paramInt1 > 0)
-    {
-      str1 = paramContext.getString(paramInt1);
-      if (paramInt2 <= 0) {
-        break label41;
-      }
-    }
-    label41:
-    for (String str2 = paramContext.getString(paramInt2);; str2 = "")
-    {
-      return a(paramContext, str1, str2, paramOnClickListener1, paramOnClickListener2);
-      str1 = "";
-      break;
-    }
-  }
-  
-  public static aa a(Context paramContext, int paramInt1, int paramInt2, boolean paramBoolean, DialogInterface.OnClickListener paramOnClickListener)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    if (paramInt2 > 0) {
-      locala.nF(paramInt2);
-    }
-    locala.nG(paramInt1);
-    locala.a(a.n.app_ok, paramOnClickListener);
-    locala.ft(paramBoolean);
-    paramOnClickListener = locala.aMD();
-    paramOnClickListener.show();
-    a(paramContext, paramOnClickListener);
-    return paramOnClickListener;
-  }
-  
-  public static aa a(Context paramContext, String paramString, Drawable paramDrawable, DialogInterface.OnClickListener paramOnClickListener)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(null);
-    locala.AK(null);
-    locala.AL(paramString);
-    locala.f(paramDrawable);
-    locala.a(a.n.app_ok, paramOnClickListener);
-    paramString = locala.aMD();
-    paramString.show();
-    a(paramContext, paramString);
-    return paramString;
-  }
-  
-  public static aa a(Context paramContext, String paramString, View paramView, DialogInterface.OnClickListener paramOnClickListener)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString);
-    locala.ap(paramView);
-    locala.a(a.n.app_ok, paramOnClickListener);
-    paramString = locala.aMD();
-    paramString.show();
-    a(paramContext, paramString);
-    return paramString;
-  }
-  
-  public static aa a(Context paramContext, String paramString, View paramView, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString);
-    locala.AK(null);
-    locala.ap(paramView);
-    locala.a(a.n.app_ok, paramOnClickListener1);
-    locala.b(a.n.app_cancel, paramOnClickListener2);
-    locala.c(new s(paramOnClickListener2));
-    paramString = locala.aMD();
-    paramString.show();
-    a(paramContext, paramString);
-    return paramString;
-  }
-  
-  public static aa a(Context paramContext, String paramString1, View paramView, String paramString2, String paramString3, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    return a(paramContext, true, paramString1, paramView, paramString2, paramString3, paramOnClickListener1, paramOnClickListener2);
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, DialogInterface.OnClickListener paramOnClickListener)
-  {
-    return a(paramContext, paramString1, paramString2, true, paramOnClickListener);
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, DialogInterface.OnClickListener paramOnClickListener, DialogInterface.OnCancelListener paramOnCancelListener)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString2);
-    locala.AK(paramString1);
-    locala.a(a.n.app_ok, paramOnClickListener);
-    locala.c(paramOnCancelListener);
-    paramString1 = locala.aMD();
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString2);
-    locala.AK(paramString1);
-    locala.a(a.n.app_ok, paramOnClickListener1);
-    locala.b(a.n.app_cancel, paramOnClickListener2);
-    paramString1 = locala.aMD();
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, View paramView, DialogInterface.OnClickListener paramOnClickListener)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString1);
-    locala.ap(paramView);
-    locala.a(paramString2, paramOnClickListener);
-    paramString1 = locala.aMD();
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, String paramString3, int paramInt, b paramb)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing()))
-    {
-      paramString1 = null;
-      return paramString1;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.ft(false);
-    locala.fu(true);
-    locala.b(a.n.app_cancel, null);
-    locala.AJ(paramString1);
-    View localView = View.inflate(paramContext, a.k.mm_alert_input, null);
-    paramString1 = (EditText)localView.findViewById(a.i.edittext);
-    if (!com.tencent.mm.sdk.platformtools.bn.iW(paramString2)) {
-      paramString1.append(paramString2);
-    }
-    paramString2 = (TextView)localView.findViewById(a.i.tips_tv);
-    if (com.tencent.mm.sdk.platformtools.bn.iW(paramString3)) {
-      paramString2.setVisibility(8);
     }
     for (;;)
     {
-      locala.a(a.n.app_ok, false, new t(paramb, paramString1, paramContext));
-      if (paramInt > 0) {
-        c.a(paramString1).oZ(paramInt).a(null);
+      if ((kBs != null) && (kBs.length() > 0)) {
+        a(kBs, kBB, kBv);
       }
-      locala.ap(localView);
-      paramString2 = locala.aMD();
-      paramString2.show();
-      a(paramContext, paramString2);
-      paramString1 = paramString2;
-      if (!(paramContext instanceof MMActivity)) {
+      if ((kBt != null) && (kBt.length() > 0)) {
+        b(kBt, true, kBw);
+      }
+      if ((kBs != null) && (kBs.length() != 0) && (kBt != null)) {
+        kBt.length();
+      }
+      if (ial != null) {
+        setOnCancelListener(ial);
+      }
+      if (iRg != null) {
+        setOnDismissListener(iRg);
+      }
+      if (kBy > 0) {
+        qx(kBy);
+      }
+      setCancelable(goQ);
+      goQ = goQ;
+      if (!goQ) {
+        super.setCancelable(kBu);
+      }
+      return;
+      if (kBp != null)
+      {
+        localObject = kBp;
+        if (ns == null)
+        {
+          kCN.setGravity(19);
+          kCJ.setGravity(3);
+          kCI.setGravity(3);
+          dFY.setGravity(3);
+          kCN.setVisibility(0);
+          kCL.setVisibility(0);
+          kCL.setBackgroundDrawable((Drawable)localObject);
+        }
+      }
+      if ((kBq != null) && (kBq.length() > 0)) {
+        setMessage(kBq);
+      }
+      if ((kBr == null) || (kBr.length() <= 0)) {
         break;
       }
-      localView.post(new v(paramContext));
-      return paramString2;
-      paramString2.setText(paramString3);
-    }
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, String paramString3, DialogInterface.OnClickListener paramOnClickListener)
-  {
-    return a(paramContext, paramString1, paramString2, paramString3, true, paramOnClickListener);
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, String paramString3, b paramb)
-  {
-    return a(paramContext, paramString1, paramString2, paramString3, -1, paramb);
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, String paramString3, String paramString4, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString2);
-    locala.AK(paramString1);
-    locala.a(paramString3, paramOnClickListener1);
-    locala.b(paramString4, paramOnClickListener2);
-    paramString1 = locala.aMD();
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, String paramString3, String paramString4, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2, int paramInt)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString2);
-    locala.AK(paramString1);
-    locala.a(paramString3, paramOnClickListener1);
-    locala.b(paramString4, paramOnClickListener2);
-    paramString1 = locala.aMD();
-    paramString1.nE(paramContext.getResources().getColor(paramInt));
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, String paramString3, String paramString4, boolean paramBoolean, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    return a(paramContext, paramString1, paramString2, paramString3, paramString4, paramBoolean, paramOnClickListener1, paramOnClickListener2, -1);
-  }
-  
-  private static aa a(Context paramContext, String paramString1, String paramString2, String paramString3, String paramString4, boolean paramBoolean, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2, int paramInt)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString2);
-    locala.AK(paramString1);
-    locala.a(paramString3, paramOnClickListener1);
-    locala.b(paramString4, paramOnClickListener2);
-    locala.ft(paramBoolean);
-    paramString1 = locala.aMD();
-    if (paramInt > 0) {
-      paramString1.nE(paramContext.getResources().getColor(paramInt));
-    }
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, String paramString3, boolean paramBoolean, DialogInterface.OnClickListener paramOnClickListener)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString2);
-    locala.AK(paramString1);
-    locala.a(paramString3, paramOnClickListener);
-    locala.ft(paramBoolean);
-    paramString1 = locala.aMD();
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, boolean paramBoolean, DialogInterface.OnClickListener paramOnClickListener)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString2);
-    locala.AK(paramString1);
-    locala.a(a.n.app_ok, paramOnClickListener);
-    locala.ft(paramBoolean);
-    paramString1 = locala.aMD();
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  public static aa a(Context paramContext, String paramString1, String paramString2, boolean paramBoolean, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString2);
-    locala.AK(paramString1);
-    locala.a(a.n.app_ok, paramOnClickListener1);
-    locala.b(a.n.app_cancel, paramOnClickListener2);
-    locala.ft(paramBoolean);
-    paramString1 = locala.aMD();
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  public static aa a(Context paramContext, String paramString1, List paramList, int paramInt, String paramString2, a parama)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    if (paramList.isEmpty())
-    {
-      com.tencent.mm.sdk.platformtools.t.w("!32@/B4Tb64lLpK6ZJSQRdrgGEFdUYhqDjxF", "show switch alert fail");
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.ft(false);
-    locala.b(a.n.app_cancel, null);
-    locala.AJ(paramString1);
-    paramString1 = View.inflate(paramContext, a.k.mm_alert_switch, null);
-    TextView localTextView = (TextView)paramString1.findViewById(a.i.tips_tv);
-    if (com.tencent.mm.sdk.platformtools.bn.iW(paramString2)) {
-      localTextView.setVisibility(8);
-    }
-    for (;;)
-    {
-      paramString2 = (LinearLayout)paramString1.findViewById(a.i.switcher_container);
-      int i = paramList.size() - 1;
-      while (i >= 0)
-      {
-        localTextView = (TextView)View.inflate(paramContext, a.k.radio_btn_item, null);
-        localTextView.setText((CharSequence)paramList.get(i));
-        if (i == paramInt) {
-          localTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, a.h.round_selector_checked, 0);
-        }
-        if (i == paramList.size() - 1)
-        {
-          int j = paramContext.getResources().getDimensionPixelSize(a.g.NormalPadding);
-          localTextView.setBackgroundResource(a.h.submenu_item_selector_no_divider);
-          localTextView.setPadding(j, j, j, j);
-        }
-        localTextView.setTag(Integer.valueOf(i));
-        paramString2.addView(localTextView, 1);
-        localTextView.setOnClickListener(new w(paramString2, parama));
-        i -= 1;
+      localObject = kBr;
+      if (ns != null) {
+        break;
       }
-      localTextView.setText(paramString2);
-    }
-    locala.ap(paramString1);
-    paramString1 = locala.aMD();
-    paramString2.setTag(paramString1);
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  public static aa a(Context paramContext, boolean paramBoolean, String paramString1, View paramView, String paramString2, String paramString3, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    return a(paramContext, paramBoolean, paramString1, paramView, paramString2, paramString3, paramOnClickListener1, paramOnClickListener2, -1);
-  }
-  
-  public static aa a(Context paramContext, boolean paramBoolean, String paramString1, View paramView, String paramString2, String paramString3, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2, int paramInt)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString1);
-    locala.ap(paramView);
-    locala.a(paramString2, paramOnClickListener1);
-    locala.b(paramString3, paramOnClickListener2);
-    locala.ft(paramBoolean);
-    paramString1 = locala.aMD();
-    if (paramInt > 0) {
-      paramString1.nE(paramContext.getResources().getColor(paramInt));
-    }
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  public static aa a(Context paramContext, boolean paramBoolean, String paramString1, String paramString2, String paramString3, String paramString4, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString2);
-    locala.AK(paramString1);
-    locala.a(paramString3, paramOnClickListener1);
-    locala.b(paramString4, paramOnClickListener2);
-    locala.ft(paramBoolean);
-    paramString1 = locala.aMD();
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
-  }
-  
-  private static bn a(Context paramContext, int paramInt, String paramString, boolean paramBoolean, DialogInterface.OnCancelListener paramOnCancelListener)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    dj.a(true, null);
-    paramString = bn.b(paramContext, paramString, paramBoolean, paramInt, new y(new WeakReference(paramOnCancelListener)));
-    a(paramContext, paramString);
-    return paramString;
-  }
-  
-  public static bn a(Context paramContext, String paramString, DialogInterface.OnCancelListener paramOnCancelListener)
-  {
-    return a(paramContext, 2, paramString, true, paramOnCancelListener);
-  }
-  
-  public static bn a(Context paramContext, String paramString, boolean paramBoolean, DialogInterface.OnCancelListener paramOnCancelListener)
-  {
-    return a(paramContext, 0, paramString, paramBoolean, paramOnCancelListener);
-  }
-  
-  public static void a(Context paramContext, Dialog paramDialog)
-  {
-    if ((paramContext instanceof MMActivity)) {
-      ((MMActivity)paramContext).a(paramDialog);
-    }
-  }
-  
-  public static Toast aM(Context paramContext, String paramString)
-  {
-    return aN(paramContext, paramString);
-  }
-  
-  public static Toast aN(Context paramContext, String paramString)
-  {
-    paramContext = Toast.makeText(paramContext, paramString, 0);
-    paramContext.show();
-    return paramContext;
-  }
-  
-  @Deprecated
-  private static Dialog b(Context paramContext, String paramString1, List paramList1, List paramList2, String paramString2, boolean paramBoolean, d paramd)
-  {
-    if (((paramList1 == null) || (paramList1.size() == 0)) && (com.tencent.mm.sdk.platformtools.bn.iW(paramString2))) {
-      return null;
-    }
-    Object localObject = paramList1;
-    if (paramList1 == null) {
-      localObject = new ArrayList();
-    }
-    if (paramBoolean)
-    {
-      paramList1 = new eb(paramContext);
-      jud = new j(paramString1, (List)localObject, paramList2, paramString2);
-      jue = new k(paramd);
-      paramList1.d(null);
-      paramString1 = paramList1.aSi();
-      a(paramContext, paramString1);
-      return paramString1;
-    }
-    paramContext = new ef(paramContext);
-    jud = new l(paramString1, (List)localObject, paramList2, paramString2);
-    jue = new m(paramd);
-    jvw = null;
-    paramContext.bX();
-    return null;
-  }
-  
-  public static aa b(Context paramContext, int paramInt1, int paramInt2, int paramInt3, int paramInt4, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
-      return null;
-    }
-    aa.a locala = new aa.a(paramContext);
-    if (paramInt2 != 0) {
-      locala.nF(paramInt2);
-    }
-    locala.nG(paramInt1);
-    locala.a(paramInt3, paramOnClickListener1);
-    locala.b(paramInt4, paramOnClickListener2);
-    locala.c(new r(paramOnClickListener2));
-    paramOnClickListener1 = locala.aMD();
-    paramOnClickListener1.show();
-    a(paramContext, paramOnClickListener1);
-    return paramOnClickListener1;
-  }
-  
-  public static aa b(Context paramContext, int paramInt1, int paramInt2, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
-  {
-    String str1;
-    if (paramInt1 > 0)
-    {
-      str1 = paramContext.getString(paramInt1);
-      if (paramInt2 <= 0) {
-        break label42;
-      }
-    }
-    label42:
-    for (String str2 = paramContext.getString(paramInt2);; str2 = "")
-    {
-      return a(paramContext, str1, str2, false, paramOnClickListener1, paramOnClickListener2);
-      str1 = "";
+      kCN.setVisibility(0);
+      kCJ.setVisibility(0);
+      kCJ.setText((CharSequence)localObject);
       break;
+      label569:
+      localObject = kBx;
+      ViewGroup.LayoutParams localLayoutParams = kBA;
+      kCQ.setVisibility(8);
+      kCO.addView((View)localObject, localLayoutParams);
     }
   }
   
-  public static aa g(Context paramContext, int paramInt1, int paramInt2)
+  public final void a(CharSequence paramCharSequence, final boolean paramBoolean, final DialogInterface.OnClickListener paramOnClickListener)
   {
-    return x(paramContext, paramContext.getString(paramInt1), paramContext.getString(paramInt2));
+    if (hZT == null) {
+      return;
+    }
+    hZT.setVisibility(0);
+    hZT.setText(paramCharSequence);
+    hZT.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        if (paramOnClickListener != null) {
+          paramOnClickListener.onClick(h.this, -1);
+        }
+        if (paramBoolean) {
+          dismiss();
+        }
+      }
+    });
   }
   
-  public static aa w(Context paramContext, String paramString1, String paramString2)
+  public final void b(CharSequence paramCharSequence, final boolean paramBoolean, final DialogInterface.OnClickListener paramOnClickListener)
   {
-    return x(paramContext, paramString1, paramString2);
+    if (hug == null) {
+      return;
+    }
+    hug.setVisibility(0);
+    hug.setText(paramCharSequence);
+    hug.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        if (paramOnClickListener != null) {
+          paramOnClickListener.onClick(h.this, -2);
+        }
+        if (paramBoolean) {
+          cancel();
+        }
+      }
+    });
   }
   
-  public static aa x(Context paramContext, String paramString1, String paramString2)
+  public final void bcs()
   {
-    if (((paramContext instanceof Activity)) && (((Activity)paramContext).isFinishing())) {
+    if (kCJ != null) {
+      kCJ.setText(g.aWe().c(kCJ.getContext(), kCJ.getText().toString(), kCJ.getTextSize()));
+    }
+    if (kCI != null) {
+      kCI.setText(g.aWe().c(kCI.getContext(), kCI.getText().toString(), kCI.getTextSize()));
+    }
+  }
+  
+  public final void bct()
+  {
+    if (ns != null) {}
+    while (kCJ == null) {
+      return;
+    }
+    kCJ.setTextColor(-16777216);
+  }
+  
+  public final void dismiss()
+  {
+    if (Looper.myLooper() != Looper.getMainLooper())
+    {
+      ab.j(new Runnable()
+      {
+        public final void run()
+        {
+          dismiss();
+        }
+      });
+      u.e("!32@/B4Tb64lLpK6ZJSQRdrgGPCb19zAlM5/", ay.aVJ().toString());
+      return;
+    }
+    try
+    {
+      super.dismiss();
+      return;
+    }
+    catch (Exception localException)
+    {
+      u.e("!32@/B4Tb64lLpK6ZJSQRdrgGPCb19zAlM5/", "dismiss exception, e = " + localException.getMessage());
+    }
+  }
+  
+  public final Button getButton(int paramInt)
+  {
+    switch (paramInt)
+    {
+    default: 
       return null;
+    case -1: 
+      return hZT;
     }
-    aa.a locala = new aa.a(paramContext);
-    locala.AJ(paramString2);
-    locala.AK(paramString1);
-    locala.ft(true);
-    locala.a(a.n.app_ok, new i());
-    paramString1 = locala.aMD();
-    paramString1.show();
-    a(paramContext, paramString1);
-    return paramString1;
+    return hug;
   }
   
-  public static abstract interface a
+  public final void hv(boolean paramBoolean)
   {
-    public abstract void iA(int paramInt);
+    super.setCancelable(false);
   }
   
-  public static abstract interface b
+  protected final void onCreate(Bundle paramBundle)
   {
-    public abstract boolean i(CharSequence paramCharSequence);
+    super.onCreate(paramBundle);
+    setContentView(kCH);
   }
   
-  public static abstract interface c
+  public final void qx(int paramInt)
   {
-    public abstract void dW(int paramInt);
+    if (ns != null) {}
+    while (kCJ == null) {
+      return;
+    }
+    kCJ.setTextSize(paramInt);
   }
   
-  public static abstract interface d
+  public final void qy(int paramInt)
   {
-    public abstract void af(int paramInt1, int paramInt2);
+    hZT.setTextColor(paramInt);
+  }
+  
+  public final void setCancelable(boolean paramBoolean)
+  {
+    super.setCancelable(paramBoolean);
+    goQ = paramBoolean;
+    setCanceledOnTouchOutside(goQ);
+  }
+  
+  public final void setMessage(CharSequence paramCharSequence)
+  {
+    if (ns != null) {
+      return;
+    }
+    kCN.setVisibility(0);
+    kCI.setVisibility(0);
+    kCI.setText(paramCharSequence);
+  }
+  
+  public final void setTitle(int paramInt)
+  {
+    kCM.setVisibility(0);
+    dFY.setVisibility(0);
+    dFY.setText(paramInt);
+  }
+  
+  public final void setTitle(CharSequence paramCharSequence)
+  {
+    kCM.setVisibility(0);
+    dFY.setVisibility(0);
+    dFY.setText(g.aWe().c(mContext, paramCharSequence.toString(), dFY.getTextSize()));
+  }
+  
+  public final void show()
+  {
+    try
+    {
+      super.show();
+      return;
+    }
+    catch (Exception localException)
+    {
+      u.printErrStackTrace("!32@/B4Tb64lLpK6ZJSQRdrgGPCb19zAlM5/", localException, "", new Object[0]);
+    }
+  }
+  
+  public static final class a
+  {
+    public c kCW;
+    private Context mContext;
+    
+    public a(Context paramContext)
+    {
+      mContext = paramContext;
+      kCW = new c();
+      kCW.kBy = -1;
+    }
+    
+    public final a GA(String paramString)
+    {
+      kCW.kBr = paramString;
+      return this;
+    }
+    
+    public final a Gy(String paramString)
+    {
+      kCW.title = paramString;
+      return this;
+    }
+    
+    public final a Gz(String paramString)
+    {
+      kCW.kBq = paramString;
+      return this;
+    }
+    
+    public final a a(int paramInt, boolean paramBoolean, DialogInterface.OnClickListener paramOnClickListener)
+    {
+      return a(mContext.getString(paramInt), paramBoolean, paramOnClickListener);
+    }
+    
+    public final a a(DialogInterface.OnDismissListener paramOnDismissListener)
+    {
+      kCW.iRg = paramOnDismissListener;
+      return this;
+    }
+    
+    public final a a(String paramString, DialogInterface.OnClickListener paramOnClickListener)
+    {
+      kCW.kBs = paramString;
+      kCW.kBv = paramOnClickListener;
+      return this;
+    }
+    
+    public final a a(String paramString, boolean paramBoolean, DialogInterface.OnClickListener paramOnClickListener)
+    {
+      kCW.kBs = paramString;
+      kCW.kBv = paramOnClickListener;
+      kCW.kBB = paramBoolean;
+      return this;
+    }
+    
+    public final a aq(View paramView)
+    {
+      kCW.inG = paramView;
+      return this;
+    }
+    
+    public final a b(int paramInt, DialogInterface.OnClickListener paramOnClickListener)
+    {
+      return a(mContext.getString(paramInt), paramOnClickListener);
+    }
+    
+    public final a b(String paramString, DialogInterface.OnClickListener paramOnClickListener)
+    {
+      kCW.kBt = paramString;
+      kCW.kBw = paramOnClickListener;
+      return this;
+    }
+    
+    public final h bcu()
+    {
+      h localh = new h(mContext);
+      localh.a(kCW);
+      localh.bcs();
+      return localh;
+    }
+    
+    public final a c(int paramInt, DialogInterface.OnClickListener paramOnClickListener)
+    {
+      return b(mContext.getString(paramInt), paramOnClickListener);
+    }
+    
+    public final a c(DialogInterface.OnCancelListener paramOnCancelListener)
+    {
+      kCW.ial = paramOnCancelListener;
+      return this;
+    }
+    
+    public final a g(Drawable paramDrawable)
+    {
+      kCW.kBp = paramDrawable;
+      return this;
+    }
+    
+    public final a hw(boolean paramBoolean)
+    {
+      kCW.goQ = paramBoolean;
+      return this;
+    }
+    
+    public final a hx(boolean paramBoolean)
+    {
+      kCW.kBu = paramBoolean;
+      return this;
+    }
+    
+    public final a qA(int paramInt)
+    {
+      kCW.kBq = mContext.getString(paramInt);
+      return this;
+    }
+    
+    public final a qB(int paramInt)
+    {
+      kCW.kBr = mContext.getString(paramInt);
+      return this;
+    }
+    
+    public final a qz(int paramInt)
+    {
+      kCW.title = mContext.getString(paramInt);
+      return this;
+    }
   }
 }
 

@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private final bt:Ljava/lang/String;
+.field private em:Ljava/lang/StringBuilder;
 
-.field private fd:Ljava/lang/StringBuilder;
+.field private final mTag:Ljava/lang/String;
 
 
 # direct methods
@@ -24,21 +24,21 @@
 
     invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    iput-object v0, p0, Landroid/support/v4/c/b;->fd:Ljava/lang/StringBuilder;
+    iput-object v0, p0, Landroid/support/v4/c/b;->em:Ljava/lang/StringBuilder;
 
     .line 40
-    iput-object p1, p0, Landroid/support/v4/c/b;->bt:Ljava/lang/String;
+    iput-object p1, p0, Landroid/support/v4/c/b;->mTag:Ljava/lang/String;
 
     .line 41
     return-void
 .end method
 
-.method private av()V
+.method private ad()V
     .locals 3
 
     .prologue
     .line 64
-    iget-object v0, p0, Landroid/support/v4/c/b;->fd:Ljava/lang/StringBuilder;
+    iget-object v0, p0, Landroid/support/v4/c/b;->em:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
 
@@ -47,11 +47,11 @@
     if-lez v0, :cond_0
 
     .line 65
-    iget-object v0, p0, Landroid/support/v4/c/b;->fd:Ljava/lang/StringBuilder;
+    iget-object v0, p0, Landroid/support/v4/c/b;->em:Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0
 
-    iget-object v2, p0, Landroid/support/v4/c/b;->fd:Ljava/lang/StringBuilder;
+    iget-object v2, p0, Landroid/support/v4/c/b;->em:Ljava/lang/StringBuilder;
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
@@ -71,7 +71,7 @@
 
     .prologue
     .line 44
-    invoke-direct {p0}, Landroid/support/v4/c/b;->av()V
+    invoke-direct {p0}, Landroid/support/v4/c/b;->ad()V
 
     .line 45
     return-void
@@ -82,7 +82,7 @@
 
     .prologue
     .line 48
-    invoke-direct {p0}, Landroid/support/v4/c/b;->av()V
+    invoke-direct {p0}, Landroid/support/v4/c/b;->ad()V
 
     .line 49
     return-void
@@ -109,7 +109,7 @@
     if-ne v1, v2, :cond_0
 
     .line 55
-    invoke-direct {p0}, Landroid/support/v4/c/b;->av()V
+    invoke-direct {p0}, Landroid/support/v4/c/b;->ad()V
 
     .line 52
     :goto_1
@@ -119,7 +119,7 @@
 
     .line 58
     :cond_0
-    iget-object v2, p0, Landroid/support/v4/c/b;->fd:Ljava/lang/StringBuilder;
+    iget-object v2, p0, Landroid/support/v4/c/b;->em:Ljava/lang/StringBuilder;
 
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 

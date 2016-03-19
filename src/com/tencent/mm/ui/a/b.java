@@ -8,19 +8,19 @@ import java.util.List;
 public final class b
 {
   private final String TAG = "!44@/B4Tb64lLpIdP5qD4tOAzJ8XwC8LkQH47n23jHVKHks=";
-  private List isw = new ArrayList();
+  private List krC = new ArrayList();
   
-  public final b Ax(String paramString)
+  public final b Gn(String paramString)
   {
-    isw.add(paramString);
+    krC.add(paramString);
     return this;
   }
   
-  public final void am(View paramView)
+  public final void an(View paramView)
   {
-    if ((paramView != null) && (isw.size() > 0))
+    if ((paramView != null) && (krC.size() > 0))
     {
-      Iterator localIterator = isw.iterator();
+      Iterator localIterator = krC.iterator();
       String str2;
       for (String str1 = ""; localIterator.hasNext(); str1 = str1 + str2 + ",") {
         str2 = (String)localIterator.next();

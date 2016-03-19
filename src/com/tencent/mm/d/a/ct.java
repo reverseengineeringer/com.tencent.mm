@@ -1,34 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ct
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ayI = new a();
-  public b ayJ = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awm = new a();
+  public b awn = new b();
   
   public ct()
   {
-    id = "FileDownloadQuery";
-    hXT = atO;
+    id = "ExDeviceSimpleBTBindDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public long ayC = 0L;
+    public String awo;
+    public long awp;
+    public String mac;
   }
   
   public static final class b
   {
-    public String avf;
-    public long ayK = 0L;
-    public long ayL = 0L;
-    public String path;
-    public int status = 0;
-    public String url;
+    public boolean auR;
   }
 }
 

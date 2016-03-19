@@ -1,33 +1,23 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class dg
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azo = new a();
-  public b azp = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awI = new a();
   
   public dg()
   {
-    id = "GetA8KeyRedirect";
-    hXT = atO;
+    id = "ExtAgentLife";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int actionCode;
-    public String azq;
-    public Context context;
-    public String username;
-  }
-  
-  public static final class b
-  {
-    public int ret = 0;
+    public int op;
   }
 }
 

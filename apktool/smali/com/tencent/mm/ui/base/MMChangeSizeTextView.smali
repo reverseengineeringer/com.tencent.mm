@@ -4,15 +4,15 @@
 
 
 # static fields
-.field public static iEb:Z
+.field public static kDo:Z
 
 
 # instance fields
-.field private gWn:Landroid/graphics/Paint;
+.field private eEB:F
 
-.field private iEc:F
+.field private iMO:Landroid/graphics/Paint;
 
-.field private iEd:F
+.field private kDp:F
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .line 14
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iEb:Z
+    sput-boolean v0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->kDo:Z
 
     return-void
 .end method
@@ -56,12 +56,12 @@
     return-void
 .end method
 
-.method private aF(Ljava/lang/String;I)V
+.method private aX(Ljava/lang/String;I)V
     .locals 2
 
     .prologue
     .line 48
-    sget-boolean v0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iEb:Z
+    sget-boolean v0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->kDo:Z
 
     if-eqz v0, :cond_0
 
@@ -74,15 +74,15 @@
 
     .line 52
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iEd:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->eEB:F
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iEc:F
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->kDp:F
 
     cmpg-float v0, v0, v1
 
     if-gez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->gWn:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iMO:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
@@ -95,14 +95,14 @@
     if-gtz v0, :cond_0
 
     .line 54
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iEc:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->kDp:F
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iEd:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->eEB:F
 
     .line 55
     const/4 v0, 0x0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iEd:F
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->eEB:F
 
     invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->setTextSize(IF)V
 
@@ -118,32 +118,32 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->DialogTitleTextSize:I
+    const v1, 0x7f0501c8
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ao/a;->v(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->z(Landroid/content/Context;I)I
 
     move-result v0
 
     int-to-float v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iEc:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->kDp:F
 
     .line 40
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->getTextSize()F
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iEd:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->eEB:F
 
     .line 42
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->gWn:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iMO:Landroid/graphics/Paint;
 
     .line 43
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->gWn:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->iMO:Landroid/graphics/Paint;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->getPaint()Landroid/text/TextPaint;
 
@@ -176,7 +176,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->aF(Ljava/lang/String;I)V
+    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->aX(Ljava/lang/String;I)V
 
     .line 73
     :cond_0
@@ -199,7 +199,7 @@
 
     move-result v1
 
-    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->aF(Ljava/lang/String;I)V
+    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/base/MMChangeSizeTextView;->aX(Ljava/lang/String;I)V
 
     .line 64
     return-void

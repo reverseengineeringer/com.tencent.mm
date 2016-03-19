@@ -1,98 +1,129 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.al.b;
-import com.tencent.mm.protocal.b.adu;
-import com.tencent.mm.protocal.b.cj;
-import com.tencent.mm.protocal.b.ck;
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import com.tencent.mm.protocal.b.ed;
+import com.tencent.mm.protocal.b.ee;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import java.io.IOException;
 
 public final class i
 {
-  public static cj a(c paramc)
+  public static int aTs()
   {
-    cj localcj = new cj();
-    hlf = hgK;
-    hle = b.au(hgM.getBytes()).lV(16);
-    hlg = b.au(hgL.getBytes()).lV(132);
-    hih = hgN;
-    hlO = b.au(cWw).lV(36);
-    cUG = hgJ;
-    return localcj;
+    if (com.tencent.mm.sdk.b.b.foreground) {
+      return 1;
+    }
+    return 2;
   }
   
-  public static void a(d paramd, ck paramck)
+  public static int cn(Context paramContext)
   {
-    if (hlP != null)
+    for (;;)
     {
-      hgR = hlP.hMd;
-      return;
+      try
+      {
+        paramContext = ((ConnectivityManager)paramContext.getSystemService("connectivity")).getActiveNetworkInfo();
+        if (paramContext == null) {
+          return 0;
+        }
+        i = paramContext.getSubtype();
+        int j = paramContext.getType();
+        if (j != 1) {
+          continue;
+        }
+        i = 1;
+      }
+      catch (Exception paramContext)
+      {
+        u.e("!24@/B4Tb64lLpKXSbY2VQERGw==", "getNetType: %s", new Object[] { ay.b(paramContext) });
+        int i = 1;
+        continue;
+      }
+      return i;
+      if ((i == 13) || (i == 15) || (i == 14)) {
+        i = 4;
+      } else if ((i == 3) || (i == 4) || (i == 5) || (i == 6) || (i == 12)) {
+        i = 3;
+      } else if ((i == 1) || (i == 2)) {
+        i = 2;
+      } else {
+        i = 0;
+      }
     }
-    hgR = "";
-    t.e("MicroMsg.MMBase", "ErrMsg is Null!!!!!!");
   }
   
-  public static abstract interface a
+  public static final class a
+    extends h.c
+    implements h.a
   {
-    public abstract boolean aDr();
+    public int iUN = 0;
+    public int netType;
     
-    public abstract byte[] tH();
-    
-    public abstract int tI();
-  }
-  
-  public static abstract interface b
-  {
-    public abstract boolean aDr();
-    
-    public abstract int z(byte[] paramArrayOfByte);
-  }
-  
-  public static class c
-  {
-    public byte[] cWw = new byte[0];
-    public int hgJ = 0;
-    public int hgK = 0;
-    public String hgL = "";
-    public String hgM = "";
-    public int hgN = 0;
-    public y hgO = new y("", "", 0);
-    public long hgP = 0L;
-    
-    public boolean aDr()
-    {
-      return false;
-    }
-    
-    public void aX(int paramInt)
-    {
-      hgJ = paramInt;
-    }
-    
-    public int getCmdId()
-    {
-      return 0;
-    }
-    
-    public boolean vH()
+    public final boolean auE()
     {
       return true;
     }
-  }
-  
-  public static class d
-  {
-    public long hgP = 0L;
-    public int hgQ = -99;
-    public String hgR = "";
     
-    public boolean aDr()
+    public final int getCmdId()
+    {
+      return 312;
+    }
+    
+    public final byte[] tY()
+    {
+      Object localObject = new ed();
+      iZV = b.iUf;
+      jaZ = 2;
+      jba = netType;
+      jbb = iUN;
+      u.i("!24@/B4Tb64lLpKXSbY2VQERGw==", "somr online:%d nettype:%d ver:%d devid:%d", new Object[] { Integer.valueOf(jbb), Integer.valueOf(jba), Integer.valueOf(iZV), Integer.valueOf(jaZ) });
+      try
+      {
+        localObject = ((ed)localObject).toByteArray();
+        return (byte[])localObject;
+      }
+      catch (IOException localIOException)
+      {
+        u.e("!24@/B4Tb64lLpKXSbY2VQERGw==", "MMBgfg toProtoBuf exception:%s", new Object[] { ay.b(localIOException) });
+      }
+      return null;
+    }
+    
+    public final int tZ()
+    {
+      return 0;
+    }
+    
+    public final boolean we()
     {
       return false;
     }
+  }
+  
+  public static final class b
+    extends h.d
+    implements h.b
+  {
+    public ee iUO = new ee();
     
-    public int getCmdId()
+    public final boolean auE()
     {
-      return 0;
+      return true;
+    }
+    
+    public final int getCmdId()
+    {
+      return 1000000312;
+    }
+    
+    public final int y(byte[] paramArrayOfByte)
+    {
+      iUO = ((ee)new ee().am(paramArrayOfByte));
+      u.d("!24@/B4Tb64lLpKXSbY2VQERGw==", "retcode:" + iUO.fmB);
+      return iUO.fmB;
     }
   }
 }

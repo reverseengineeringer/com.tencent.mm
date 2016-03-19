@@ -85,8 +85,10 @@
     :goto_0
     sput-boolean v0, Lcom/tencent/kingkong/database/SQLiteDebug;->DEBUG_LOG_SLOW_QUERIES:Z
 
+    .line 28
     return-void
 
+    .line 86
     :cond_0
     const/4 v0, 0x0
 

@@ -3,24 +3,35 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$PictureListener;
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/smtt/sdk/WebView;->showDebugView(Ljava/lang/String;)Z
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
 
 
 # instance fields
 .field final synthetic this$0:Lcom/tencent/smtt/sdk/WebView;
 
-.field final synthetic val$listner:Lcom/tencent/smtt/sdk/WebView$PictureListener;
+.field final synthetic val$context:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/WebView$PictureListener;)V
+.method constructor <init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;)V
     .locals 0
 
     .prologue
-    .line 1343
+    .line 1216
     iput-object p1, p0, Lcom/tencent/smtt/sdk/WebView$5;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iput-object p2, p0, Lcom/tencent/smtt/sdk/WebView$5;->val$listner:Lcom/tencent/smtt/sdk/WebView$PictureListener;
+    iput-object p2, p0, Lcom/tencent/smtt/sdk/WebView$5;->val$context:Landroid/content/Context;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,30 +40,19 @@
 
 
 # virtual methods
-.method public onNewPicture(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;Landroid/graphics/Picture;Z)V
+.method public onClick(Landroid/view/View;)V
     .locals 2
 
     .prologue
-    .line 1354
+    .line 1220
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$5;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView;->setX5WebView(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;)V
+    new-instance v1, Lcom/tencent/smtt/sdk/WebView$5$1;
 
-    .line 1355
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$5;->val$listner:Lcom/tencent/smtt/sdk/WebView$PictureListener;
+    invoke-direct {v1, p0}, Lcom/tencent/smtt/sdk/WebView$5$1;-><init>(Lcom/tencent/smtt/sdk/WebView$5;)V
 
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView$5;->this$0:Lcom/tencent/smtt/sdk/WebView;
+    invoke-virtual {v0, v1}, Lcom/tencent/smtt/sdk/WebView;->post(Ljava/lang/Runnable;)Z
 
-    invoke-interface {v0, v1, p2}, Lcom/tencent/smtt/sdk/WebView$PictureListener;->onNewPicture(Lcom/tencent/smtt/sdk/WebView;Landroid/graphics/Picture;)V
-
-    .line 1356
-    return-void
-.end method
-
-.method public onNewPictureIfHaveContent(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;Landroid/graphics/Picture;)V
-    .locals 0
-
-    .prologue
-    .line 1349
+    .line 1235
     return-void
 .end method

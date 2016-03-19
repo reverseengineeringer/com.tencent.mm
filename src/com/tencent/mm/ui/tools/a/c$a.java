@@ -2,11 +2,11 @@ package com.tencent.mm.ui.tools.a;
 
 public abstract interface c$a
 {
-  public abstract void ahA();
+  public abstract void Om();
   
-  public abstract void ahB();
+  public abstract void On();
   
-  public abstract void pJ(String paramString);
+  public abstract void mm(String paramString);
 }
 
 /* Location:

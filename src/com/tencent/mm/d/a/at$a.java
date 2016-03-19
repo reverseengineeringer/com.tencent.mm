@@ -1,9 +1,13 @@
 package com.tencent.mm.d.a;
 
+import android.content.Context;
+
 public final class at$a
 {
-  public String avH;
-  public boolean avI = false;
+  public int action = 0;
+  public String[] asa;
+  public Context context;
+  public String[] selectionArgs;
 }
 
 /* Location:

@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public iEe:Ljava/lang/String;
+.field public iGN:Ljava/lang/String;
 
-.field final iJg:Landroid/graphics/drawable/Drawable;
+.field final kIs:Landroid/graphics/drawable/Drawable;
 
-.field final iJh:Landroid/graphics/drawable/Drawable;
+.field final kIt:Landroid/graphics/drawable/Drawable;
 
-.field private iJi:Z
+.field private kIu:Z
 
 
 # direct methods
@@ -24,41 +24,41 @@
     .line 20
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iEe:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iGN:Ljava/lang/String;
 
     .line 21
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$h;->login_showpassword_icon:I
+    const v1, 0x7f0301b3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJg:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIs:Landroid/graphics/drawable/Drawable;
 
     .line 22
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$h;->login_showpassword_icon_activa:I
+    const v1, 0x7f030235
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJh:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIt:Landroid/graphics/drawable/Drawable;
 
     .line 24
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJi:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIu:Z
 
     .line 33
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->aMJ()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->aSo()V
 
     .line 34
     return-void
@@ -74,41 +74,41 @@
     .line 20
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iEe:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iGN:Ljava/lang/String;
 
     .line 21
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$h;->login_showpassword_icon:I
+    const v1, 0x7f0301b3
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJg:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIs:Landroid/graphics/drawable/Drawable;
 
     .line 22
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$h;->login_showpassword_icon_activa:I
+    const v1, 0x7f030235
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJh:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIt:Landroid/graphics/drawable/Drawable;
 
     .line 24
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJi:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIu:Z
 
     .line 38
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->aMJ()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->aSo()V
 
     .line 39
     return-void
@@ -119,7 +119,7 @@
 
     .prologue
     .line 16
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJi:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIu:Z
 
     return v0
 .end method
@@ -129,27 +129,27 @@
 
     .prologue
     .line 16
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJi:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIu:Z
 
     return p1
 .end method
 
-.method private aMJ()V
+.method private aSo()V
     .locals 5
 
     .prologue
     const/4 v4, 0x0
 
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJg:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIs:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJg:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIs:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJg:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIs:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -158,15 +158,15 @@
     invoke-virtual {v0, v4, v4, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJh:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIt:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJh:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIt:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJh:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIt:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -183,7 +183,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJg:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIs:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -197,7 +197,7 @@
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJg:Landroid/graphics/drawable/Drawable;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIs:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -209,13 +209,13 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 54
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->aNm()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->bdd()V
 
     .line 58
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJg:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIs:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -225,7 +225,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$g;->OneDPPadding:I
+    const v2, 0x7f0501cd
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -238,9 +238,9 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->setHeight(I)V
 
     .line 60
-    new-instance v0, Lcom/tencent/mm/ui/base/cy;
+    new-instance v0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/cy;-><init>(Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText$1;-><init>(Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;)V
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -248,7 +248,17 @@
     return-void
 .end method
 
-.method private aNm()V
+.method static synthetic b(Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;)V
+    .locals 0
+
+    .prologue
+    .line 16
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->bdd()V
+
+    return-void
+.end method
+
+.method private bdd()V
     .locals 7
 
     .prologue
@@ -269,7 +279,7 @@
     move-result v1
 
     .line 98
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJi:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIu:Z
 
     if-eqz v2, :cond_0
 
@@ -289,7 +299,7 @@
 
     aget-object v3, v3, v4
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJh:Landroid/graphics/drawable/Drawable;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIt:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
 
@@ -325,7 +335,7 @@
 
     aget-object v3, v3, v4
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->iJg:Landroid/graphics/drawable/Drawable;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->kIs:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->getCompoundDrawables()[Landroid/graphics/drawable/Drawable;
 
@@ -336,14 +346,4 @@
     invoke-virtual {p0, v2, v3, v4, v5}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
-.end method
-
-.method static synthetic b(Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;)V
-    .locals 0
-
-    .prologue
-    .line 16
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMVisiblePasswordEditText;->aNm()V
-
-    return-void
 .end method

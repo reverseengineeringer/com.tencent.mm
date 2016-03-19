@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ui/tools/bo;
+.implements Lcom/tencent/mm/ui/tools/g;
 
 
 # annotations
@@ -15,17 +15,17 @@
 
 
 # instance fields
-.field public iLT:Landroid/widget/EditText;
+.field public kLd:Landroid/widget/EditText;
 
-.field private jog:Landroid/view/View;
+.field private ltD:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
 
-.field private joi:Landroid/widget/ImageButton;
+.field private ltw:Landroid/view/View;
 
-.field private jom:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
+.field private lty:Landroid/widget/ImageButton;
 
-.field public jvb:Landroid/widget/Button;
+.field public lxL:Landroid/widget/Button;
 
-.field private jvc:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;
+.field private lxM:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;
 
 
 # direct methods
@@ -33,13 +33,13 @@
     .locals 0
 
     .prologue
-    .line 59
+    .line 61
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 60
+    .line 62
     invoke-direct {p0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->init()V
 
-    .line 61
+    .line 63
     return-void
 .end method
 
@@ -47,13 +47,13 @@
     .locals 0
 
     .prologue
-    .line 54
+    .line 56
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 55
+    .line 57
     invoke-direct {p0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->init()V
 
-    .line 56
+    .line 58
     return-void
 .end method
 
@@ -61,8 +61,8 @@
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->joi:Landroid/widget/ImageButton;
+    .line 31
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->lty:Landroid/widget/ImageButton;
 
     return-object v0
 .end method
@@ -71,8 +71,8 @@
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jvb:Landroid/widget/Button;
+    .line 31
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->lxL:Landroid/widget/Button;
 
     return-object v0
 .end method
@@ -81,8 +81,8 @@
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jvc:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;
+    .line 31
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->lxM:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;
 
     return-object v0
 .end method
@@ -91,8 +91,8 @@
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 31
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
     return-object v0
 .end method
@@ -101,8 +101,8 @@
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jom:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
+    .line 31
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->ltD:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
 
     return-object v0
 .end method
@@ -111,24 +111,24 @@
     .locals 3
 
     .prologue
-    .line 65
+    .line 67
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/ek;->dx(Landroid/content/Context;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    .line 66
-    sget v1, Lcom/tencent/mm/a$k;->actionbar_searchview_with_searchbtn:I
+    .line 68
+    const v1, 0x7f0a05a2
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 68
-    sget v0, Lcom/tencent/mm/a$i;->edittext:I
+    .line 70
+    const v0, 0x7f0704d4
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->findViewById(I)Landroid/view/View;
 
@@ -136,10 +136,10 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
-    .line 69
-    sget v0, Lcom/tencent/mm/a$i;->status_btn:I
+    .line 71
+    const v0, 0x7f070cf5
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->findViewById(I)Landroid/view/View;
 
@@ -147,19 +147,19 @@
 
     check-cast v0, Landroid/widget/ImageButton;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->joi:Landroid/widget/ImageButton;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->lty:Landroid/widget/ImageButton;
 
-    .line 70
-    sget v0, Lcom/tencent/mm/a$i;->ab_back_container:I
+    .line 72
+    const v0, 0x7f0704e3
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jog:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->ltw:Landroid/view/View;
 
-    .line 71
-    sget v0, Lcom/tencent/mm/a$i;->button:I
+    .line 73
+    const v0, 0x7f0701c0
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->findViewById(I)Landroid/view/View;
 
@@ -167,35 +167,35 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jvb:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->lxL:Landroid/widget/Button;
 
-    .line 72
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jvb:Landroid/widget/Button;
+    .line 74
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->lxL:Landroid/widget/Button;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 74
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/tencent/mm/ui/tools/fk;
+    new-instance v1, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/fk;-><init>(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$1;-><init>(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 95
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 97
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
-    new-instance v1, Lcom/tencent/mm/ui/tools/fl;
+    new-instance v1, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/fl;-><init>(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$2;-><init>(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    .line 108
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 110
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/a/c;->a(Landroid/widget/EditText;)Lcom/tencent/mm/ui/tools/a/c;
 
@@ -203,7 +203,7 @@
 
     const/16 v1, 0x64
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->oZ(I)Lcom/tencent/mm/ui/tools/a/c;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->rZ(I)Lcom/tencent/mm/ui/tools/a/c;
 
     move-result-object v0
 
@@ -211,107 +211,84 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->a(Lcom/tencent/mm/ui/tools/a/c$a;)V
 
-    .line 112
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->joi:Landroid/widget/ImageButton;
+    .line 114
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->lty:Landroid/widget/ImageButton;
 
-    new-instance v1, Lcom/tencent/mm/ui/tools/fm;
+    new-instance v1, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/fm;-><init>(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$3;-><init>(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageButton;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 122
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jog:Landroid/view/View;
+    .line 124
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->ltw:Landroid/view/View;
 
-    new-instance v1, Lcom/tencent/mm/ui/tools/fn;
+    new-instance v1, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$4;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/fn;-><init>(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$4;-><init>(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 135
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jvb:Landroid/widget/Button;
+    .line 137
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->lxL:Landroid/widget/Button;
 
-    new-instance v1, Lcom/tencent/mm/ui/tools/fo;
+    new-instance v1, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$5;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/fo;-><init>(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$5;-><init>(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 144
+    .line 146
     return-void
 .end method
 
 
 # virtual methods
-.method public final aRm()V
+.method public final bii()V
     .locals 1
 
     .prologue
-    .line 196
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 198
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
 
-    .line 197
+    .line 199
     return-void
 .end method
 
-.method public final aRn()Z
+.method public final bij()Z
     .locals 1
 
     .prologue
-    .line 295
+    .line 297
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public final aRo()Z
+.method public final bik()Z
     .locals 1
 
     .prologue
-    .line 287
+    .line 289
     const/4 v0, 0x0
 
     return v0
-.end method
-
-.method public final fW(Z)V
-    .locals 0
-
-    .prologue
-    .line 252
-    return-void
-.end method
-
-.method public final fX(Z)V
-    .locals 2
-
-    .prologue
-    .line 186
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
-
-    const-string/jumbo v1, ""
-
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 193
-    return-void
 .end method
 
 .method public getSearchContent()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 205
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 207
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getEditableText()Landroid/text/Editable;
 
     move-result-object v0
 
-    .line 206
+    .line 208
     if-nez v0, :cond_0
 
     const-string/jumbo v0, ""
@@ -331,20 +308,51 @@
     .locals 1
 
     .prologue
-    .line 279
+    .line 281
     const/4 v0, 0x0
 
     return v0
+.end method
+
+.method public final id(Z)V
+    .locals 0
+
+    .prologue
+    .line 254
+    return-void
+.end method
+
+.method public final ie(Z)V
+    .locals 2
+
+    .prologue
+    .line 188
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
+
+    const-string/jumbo v1, ""
+
+    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    .line 195
+    return-void
+.end method
+
+.method public setAutoMatchKeywords(Z)V
+    .locals 0
+
+    .prologue
+    .line 312
+    return-void
 .end method
 
 .method public setBackClickCallback(Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;)V
     .locals 0
 
     .prologue
-    .line 300
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jom:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
-
     .line 302
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->ltD:Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;
+
+    .line 304
     return-void
 .end method
 
@@ -352,7 +360,7 @@
     .locals 0
 
     .prologue
-    .line 246
+    .line 248
     return-void
 .end method
 
@@ -360,10 +368,10 @@
     .locals 0
 
     .prologue
-    .line 201
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jvc:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;
+    .line 203
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->lxM:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;
 
-    .line 202
+    .line 204
     return-void
 .end method
 
@@ -371,7 +379,7 @@
     .locals 0
 
     .prologue
-    .line 258
+    .line 260
     return-void
 .end method
 
@@ -379,10 +387,18 @@
     .locals 0
 
     .prologue
-    .line 239
+    .line 241
     invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->setSearchHint(Ljava/lang/CharSequence;)V
 
-    .line 240
+    .line 242
+    return-void
+.end method
+
+.method public setKeywords(Ljava/util/ArrayList;)V
+    .locals 0
+
+    .prologue
+    .line 308
     return-void
 .end method
 
@@ -390,10 +406,10 @@
     .locals 0
 
     .prologue
-    .line 274
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jvc:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;
+    .line 276
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->lxM:Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;
 
-    .line 275
+    .line 277
     return-void
 .end method
 
@@ -401,7 +417,7 @@
     .locals 0
 
     .prologue
-    .line 270
+    .line 272
     return-void
 .end method
 
@@ -409,12 +425,12 @@
     .locals 1
 
     .prologue
-    .line 151
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jvb:Landroid/widget/Button;
+    .line 153
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->lxL:Landroid/widget/Button;
 
     invoke-virtual {v0, p1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
-    .line 152
+    .line 154
     return-void
 .end method
 
@@ -422,12 +438,12 @@
     .locals 1
 
     .prologue
-    .line 160
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 162
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 161
+    .line 163
     return-void
 .end method
 
@@ -435,19 +451,19 @@
     .locals 2
 
     .prologue
-    .line 155
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 157
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
     const-string/jumbo v1, ""
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 156
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 158
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->append(Ljava/lang/CharSequence;)V
 
-    .line 157
+    .line 159
     return-void
 .end method
 
@@ -455,10 +471,10 @@
     .locals 0
 
     .prologue
-    .line 234
+    .line 236
     invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->setSearchContent(Ljava/lang/CharSequence;)V
 
-    .line 235
+    .line 237
     return-void
 .end method
 
@@ -466,12 +482,12 @@
     .locals 1
 
     .prologue
-    .line 164
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 166
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 165
+    .line 167
     return-void
 .end method
 
@@ -479,12 +495,12 @@
     .locals 1
 
     .prologue
-    .line 168
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 170
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setHintTextColor(I)V
 
-    .line 169
+    .line 171
     return-void
 .end method
 
@@ -494,12 +510,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 172
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->iLT:Landroid/widget/EditText;
+    .line 174
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->kLd:Landroid/widget/EditText;
 
     invoke-virtual {v0, p1, v1, v1, v1}, Landroid/widget/EditText;->setCompoundDrawablesWithIntrinsicBounds(IIII)V
 
-    .line 173
+    .line 175
+    return-void
+.end method
+
+.method public setSearchTipIcon(I)V
+    .locals 0
+
+    .prologue
+    .line 317
     return-void
 .end method
 
@@ -507,29 +531,29 @@
     .locals 2
 
     .prologue
-    .line 176
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jog:Landroid/view/View;
+    .line 178
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->ltw:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
-    .line 177
+    .line 179
     if-eqz p1, :cond_1
 
-    .line 178
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jog:Landroid/view/View;
+    .line 180
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->ltw:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 183
+    .line 185
     :cond_0
     :goto_0
     return-void
 
-    .line 180
+    .line 182
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->jog:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper;->ltw:Landroid/view/View;
 
     const/16 v1, 0x8
 
@@ -542,6 +566,6 @@
     .locals 0
 
     .prologue
-    .line 264
+    .line 266
     return-void
 .end method

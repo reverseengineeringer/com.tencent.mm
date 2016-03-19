@@ -1,35 +1,22 @@
 package com.tencent.mm.ui.base.preference;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.util.SparseArray;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListView;
+import android.widget.RadioButton;
 
-public final class b
-  extends v
+final class b
 {
-  private SparseArray iLG = new SparseArray();
+  int id;
+  CharSequence text;
   
-  public b(Context paramContext, SharedPreferences paramSharedPreferences)
+  public b(CharSequence paramCharSequence, int paramInt)
   {
-    super(paramContext, paramSharedPreferences);
+    text = paramCharSequence;
+    id = paramInt;
   }
   
-  public final View a(int paramInt, ListView paramListView)
+  public final void a(RadioButton paramRadioButton)
   {
-    if ((paramInt > paramListView.getLastVisiblePosition()) || (paramInt < paramListView.getFirstVisiblePosition())) {
-      return null;
-    }
-    return (View)iLG.get(paramInt);
-  }
-  
-  public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
-  {
-    paramView = super.getView(paramInt, paramView, paramViewGroup);
-    iLG.put(paramInt, paramView);
-    return paramView;
+    paramRadioButton.setText(text);
+    paramRadioButton.setId(id);
   }
 }
 

@@ -1,89 +1,188 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
+import android.content.Context;
+import android.content.Intent;
+import android.view.View;
 import android.view.View.OnClickListener;
+import com.tencent.mm.an.r;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.d.a.er;
+import com.tencent.mm.d.a.mh;
+import com.tencent.mm.model.h;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.p;
+import com.tencent.mm.pluginsdk.model.app.p;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class k
+public final class k
   implements View.OnClickListener
 {
-  k(ChatFooter paramChatFooter) {}
+  private Context context;
   
-  /* Error */
-  public final void onClick(android.view.View paramView)
+  public k(Context paramContext)
   {
-    // Byte code:
-    //   0: aload_0
-    //   1: monitorenter
-    //   2: aload_0
-    //   3: getfield 12	com/tencent/mm/pluginsdk/ui/chat/k:gVu	Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
-    //   6: invokestatic 24	com/tencent/mm/pluginsdk/ui/chat/ChatFooter:a	(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
-    //   9: invokevirtual 30	com/tencent/mm/ui/widget/MMEditText:getText	()Landroid/text/Editable;
-    //   12: invokevirtual 34	java/lang/Object:toString	()Ljava/lang/String;
-    //   15: astore_1
-    //   16: ldc 36
-    //   18: ldc 38
-    //   20: invokestatic 44	com/tencent/mm/sdk/platformtools/t:d	(Ljava/lang/String;Ljava/lang/String;)V
-    //   23: aload_1
-    //   24: invokevirtual 49	java/lang/String:trim	()Ljava/lang/String;
-    //   27: invokevirtual 53	java/lang/String:length	()I
-    //   30: ifne +67 -> 97
-    //   33: aload_1
-    //   34: invokevirtual 53	java/lang/String:length	()I
-    //   37: ifeq +60 -> 97
-    //   40: ldc 36
-    //   42: ldc 55
-    //   44: invokestatic 44	com/tencent/mm/sdk/platformtools/t:d	(Ljava/lang/String;Ljava/lang/String;)V
-    //   47: aload_0
-    //   48: getfield 12	com/tencent/mm/pluginsdk/ui/chat/k:gVu	Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
-    //   51: invokestatic 59	com/tencent/mm/pluginsdk/ui/chat/ChatFooter:l	(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Lcom/tencent/mm/ui/base/aa;
-    //   54: ifnull +16 -> 70
-    //   57: aload_0
-    //   58: getfield 12	com/tencent/mm/pluginsdk/ui/chat/k:gVu	Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
-    //   61: invokestatic 59	com/tencent/mm/pluginsdk/ui/chat/ChatFooter:l	(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Lcom/tencent/mm/ui/base/aa;
-    //   64: invokevirtual 65	com/tencent/mm/ui/base/aa:isShowing	()Z
-    //   67: ifne +27 -> 94
-    //   70: aload_0
-    //   71: getfield 12	com/tencent/mm/pluginsdk/ui/chat/k:gVu	Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
-    //   74: aload_0
-    //   75: getfield 12	com/tencent/mm/pluginsdk/ui/chat/k:gVu	Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
-    //   78: invokevirtual 69	com/tencent/mm/pluginsdk/ui/chat/ChatFooter:getContext	()Landroid/content/Context;
-    //   81: getstatic 75	com/tencent/mm/a$n:chatting_empty_message_cant_be_sent	I
-    //   84: getstatic 78	com/tencent/mm/a$n:app_tip	I
-    //   87: invokestatic 84	com/tencent/mm/ui/base/h:g	(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
-    //   90: invokestatic 87	com/tencent/mm/pluginsdk/ui/chat/ChatFooter:a	(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;Lcom/tencent/mm/ui/base/aa;)Lcom/tencent/mm/ui/base/aa;
-    //   93: pop
-    //   94: aload_0
-    //   95: monitorexit
-    //   96: return
-    //   97: aload_0
-    //   98: getfield 12	com/tencent/mm/pluginsdk/ui/chat/k:gVu	Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
-    //   101: invokestatic 91	com/tencent/mm/pluginsdk/ui/chat/ChatFooter:j	(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Lcom/tencent/mm/pluginsdk/ui/chat/ak;
-    //   104: aload_1
-    //   105: invokeinterface 97 2 0
-    //   110: ifeq -16 -> 94
-    //   113: aload_0
-    //   114: getfield 12	com/tencent/mm/pluginsdk/ui/chat/k:gVu	Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
-    //   117: invokestatic 24	com/tencent/mm/pluginsdk/ui/chat/ChatFooter:a	(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
-    //   120: invokevirtual 100	com/tencent/mm/ui/widget/MMEditText:clearComposingText	()V
-    //   123: aload_0
-    //   124: getfield 12	com/tencent/mm/pluginsdk/ui/chat/k:gVu	Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
-    //   127: invokestatic 24	com/tencent/mm/pluginsdk/ui/chat/ChatFooter:a	(Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;)Lcom/tencent/mm/ui/widget/MMEditText;
-    //   130: ldc 102
-    //   132: invokevirtual 106	com/tencent/mm/ui/widget/MMEditText:setText	(Ljava/lang/CharSequence;)V
-    //   135: goto -41 -> 94
-    //   138: astore_1
-    //   139: aload_0
-    //   140: monitorexit
-    //   141: aload_1
-    //   142: athrow
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	143	0	this	k
-    //   0	143	1	paramView	android.view.View
-    // Exception table:
-    //   from	to	target	type
-    //   2	70	138	finally
-    //   70	94	138	finally
-    //   97	135	138	finally
+    context = paramContext;
+  }
+  
+  public final void onClick(View paramView)
+  {
+    int j = 1;
+    Object localObject = paramView.getTag();
+    int i;
+    if ((localObject instanceof c))
+    {
+      localObject = (c)localObject;
+      if ((localObject == null) || (paramView == null))
+      {
+        u.w("!44@/B4Tb64lLpJNTHUnt8U8i1AKj89DUbkhJMv2ktHo+Q4=", "localAppRedirectHandle: but info or v is null");
+        i = 0;
+        label41:
+        if (i == 0)
+        {
+          paramView = p.e(context, appId, aFT);
+          localObject = new mh();
+          aIF.aIG = paramView;
+          aIF.context = context;
+          com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject);
+        }
+      }
+    }
+    do
+    {
+      do
+      {
+        return;
+        if ("wx485a97c844086dc9".equals(appId))
+        {
+          paramView = new Intent();
+          paramView.putExtra("shake_music", true);
+          c.c(context, "shake", ".ui.ShakeReportUI", paramView);
+          i = j;
+          break label41;
+        }
+        if ("wxfbc915ff7c30e335".equals(appId))
+        {
+          i = j;
+          if (com.tencent.mm.ac.b.AJ()) {
+            break label41;
+          }
+          paramView = new Intent();
+          paramView.putExtra("BaseScanUI_select_scan_mode", 1);
+          i = j;
+          if (r.be(context)) {
+            break label41;
+          }
+          i = j;
+          if (com.tencent.mm.ae.a.aR(context)) {
+            break label41;
+          }
+          c.c(context, "scanner", ".ui.BaseScanUI", paramView);
+          i = j;
+          break label41;
+        }
+        if ("wx482a4001c37e2b74".equals(appId))
+        {
+          i = j;
+          if (com.tencent.mm.ac.b.AJ()) {
+            break label41;
+          }
+          paramView = new Intent();
+          paramView.putExtra("BaseScanUI_select_scan_mode", 2);
+          i = j;
+          if (r.be(context)) {
+            break label41;
+          }
+          i = j;
+          if (com.tencent.mm.ae.a.aR(context)) {
+            break label41;
+          }
+          c.c(context, "scanner", ".ui.BaseScanUI", paramView);
+          i = j;
+          break label41;
+        }
+        if ("wx751a1acca5688ba3".equals(appId))
+        {
+          i = j;
+          if (com.tencent.mm.ac.b.AJ()) {
+            break label41;
+          }
+          paramView = new Intent();
+          paramView.putExtra("BaseScanUI_select_scan_mode", 5);
+          i = j;
+          if (r.be(context)) {
+            break label41;
+          }
+          i = j;
+          if (com.tencent.mm.ae.a.aR(context)) {
+            break label41;
+          }
+          c.c(context, "scanner", ".ui.BaseScanUI", paramView);
+          i = j;
+          break label41;
+        }
+        if ("wxaf060266bfa9a35c".equals(appId))
+        {
+          i = j;
+          if (com.tencent.mm.ac.b.AK()) {
+            break label41;
+          }
+          paramView = new Intent();
+          paramView.putExtra("shake_tv", true);
+          c.c(context, "shake", ".ui.ShakeReportUI", paramView);
+          i = j;
+          break label41;
+        }
+        if ((!"wx9181ed3f223e6d76".equals(appId)) && (!"wx2fe12a395c426fcf".equals(appId))) {
+          break;
+        }
+        u.i("!44@/B4Tb64lLpJNTHUnt8U8i1AKj89DUbkhJMv2ktHo+Q4=", "hy: user clicked on the shake new year");
+        if (h.sM())
+        {
+          c.u(paramView.getContext(), "shakelucky", ".ui.ShakeLuckyUI");
+          i = j;
+          break label41;
+        }
+        u.i("!44@/B4Tb64lLpJNTHUnt8U8i1AKj89DUbkhJMv2ktHo+Q4=", "hy: end shake new year");
+        Intent localIntent = new Intent();
+        localIntent.putExtra("shake_tv", true);
+        c.c(paramView.getContext(), "shake", ".ui.ShakeReportUI", localIntent);
+        i = j;
+        break label41;
+      } while (!(localObject instanceof b));
+      paramView = (b)localObject;
+      localObject = new er();
+      azp.actionCode = 2;
+      azp.asc = asc;
+      azp.azq = ("chatting_src=" + asc);
+      azp.appId = appId;
+      azp.context = context;
+      com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject);
+      localObject = i.a.iyK;
+    } while (localObject == null);
+    ((i.p)localObject).a(context, appId, alS, aGj, iMt, asc, 5, iMu);
+  }
+  
+  public static final class a
+  {
+    public String iMs;
+    public String username;
+  }
+  
+  public static final class b
+  {
+    public String aFT;
+    public String aGj;
+    public String alS;
+    public String appId;
+    public int asc;
+    public int iMt;
+    public String iMu;
+  }
+  
+  public static final class c
+  {
+    public String aFT;
+    public String appId;
   }
 }
 

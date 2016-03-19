@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ci
-  extends a.c
+  extends a.e
 {
   public a$ci()
   {
-    super("setSendDataDirection", "setSendDataDirection", 127, false);
+    super("newyearCheckAbility", "newyearCheckAbility", 10003, false);
   }
 }
 

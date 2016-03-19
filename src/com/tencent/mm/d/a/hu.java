@@ -1,24 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class hu
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFa = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDs = new a();
   
   public hu()
   {
-    id = "SnsFinishBlockUser";
-    hXT = atO;
+    id = "NotifyWNNoteCdnChanged";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aFb = false;
-    public long ayS = 0L;
+    public String field_dataId;
+    public long field_favLocalId;
+    public int field_localId = 0;
+    public int field_offset;
+    public String field_path;
+    public int field_status;
+    public int field_totalLen;
   }
 }
 

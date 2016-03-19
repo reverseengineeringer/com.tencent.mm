@@ -1,16 +1,10 @@
 package com.tencent.mm.plugin.sight.decode.ui;
 
-import android.view.ViewGroup.LayoutParams;
-
-final class b
-  implements Runnable
+public abstract interface b
 {
-  b(SightPlayTextureView paramSightPlayTextureView, ViewGroup.LayoutParams paramLayoutParams) {}
+  public abstract void avV();
   
-  public final void run()
-  {
-    fhU.setLayoutParams(fhV);
-  }
+  public abstract void kW(int paramInt);
 }
 
 /* Location:

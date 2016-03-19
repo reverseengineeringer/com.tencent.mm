@@ -1,23 +1,37 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.protocal.b.no;
+import com.tencent.mm.sdk.c.b;
 
 public final class ef
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aAu = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a ayK = new a();
+  public b ayL = new b();
   
   public ef()
   {
-    id = "MStorageNotify";
-    hXT = atO;
+    id = "FetchFavItemInfo";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public d aAv;
+    public long aua = -1L;
+  }
+  
+  public static final class b
+  {
+    public no field_favProto;
+    public String field_fromUser;
+    public int field_id = -1;
+    public int field_itemStatus = -1;
+    public String field_realChatName;
+    public String field_toUser;
+    public int field_type = -1;
+    public int ret = -1;
   }
 }
 

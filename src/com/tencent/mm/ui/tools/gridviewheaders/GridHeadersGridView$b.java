@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools.gridviewheaders;
 
 import android.view.View;
 import android.view.ViewConfiguration;
-import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.aa;
 
 final class GridHeadersGridView$b
   implements Runnable
@@ -11,35 +11,35 @@ final class GridHeadersGridView$b
   
   public final void run()
   {
-    if (jwB.gRc == 0)
+    if (lzs.drt == 0)
     {
-      jwB.gRc = 1;
-      View localView = jwB.oX(jwB.jwz);
+      lzs.drt = 1;
+      View localView = lzs.rX(lzs.lzq);
       if ((localView != null) && (!localView.hasFocusable()))
       {
-        if (jwB.ql) {
+        if (lzs.pp) {
           break label157;
         }
         localView.setPressed(true);
-        jwB.setPressed(true);
-        jwB.refreshDrawableState();
+        lzs.setPressed(true);
+        lzs.refreshDrawableState();
         int i = ViewConfiguration.getLongPressTimeout();
-        if (!jwB.isLongClickable()) {
+        if (!lzs.isLongClickable()) {
           break label148;
         }
-        if (jwB.jwh == null) {
-          jwB.jwh = new GridHeadersGridView.a(jwB, (byte)0);
+        if (lzs.lyY == null) {
+          lzs.lyY = new GridHeadersGridView.a(lzs, (byte)0);
         }
-        jwB.jwh.aAl();
-        GridHeadersGridView.d(jwB).postDelayed(jwB.jwh, i);
+        lzs.lyY.SC();
+        GridHeadersGridView.d(lzs).postDelayed(lzs.lyY, i);
       }
     }
     return;
     label148:
-    jwB.gRc = 2;
+    lzs.drt = 2;
     return;
     label157:
-    jwB.gRc = 2;
+    lzs.drt = 2;
   }
 }
 

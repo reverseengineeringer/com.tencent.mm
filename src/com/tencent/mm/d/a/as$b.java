@@ -2,8 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class as$b
 {
-  public boolean avD;
-  public String avE;
+  public Object atV;
 }
 
 /* Location:

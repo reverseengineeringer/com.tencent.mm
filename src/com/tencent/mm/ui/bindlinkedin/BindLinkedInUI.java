@@ -1,59 +1,65 @@
 package com.tencent.mm.ui.bindlinkedin;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.text.Spannable;
 import android.text.Spannable.Factory;
+import android.text.TextPaint;
+import android.text.style.ClickableSpan;
 import android.view.KeyEvent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.ac.b.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.v;
-import com.tencent.mm.modelfriend.ae;
-import com.tencent.mm.modelfriend.ay;
-import com.tencent.mm.pluginsdk.i;
-import com.tencent.mm.protocal.b.lu;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.ag.b.a;
+import com.tencent.mm.modelfriend.t;
+import com.tencent.mm.pluginsdk.f;
+import com.tencent.mm.protocal.b.ok;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.widget.MMSwitchBtn;
+import com.tencent.mm.ui.widget.MMSwitchBtn.a;
 
 public class BindLinkedInUI
   extends MMActivity
-  implements com.tencent.mm.q.d
+  implements com.tencent.mm.r.d
 {
-  private String aNj;
-  private String aNk;
-  private ProgressDialog cAF;
-  private boolean eoh = false;
-  private String iOe;
-  private boolean iOf = false;
-  private boolean iOg = false;
-  private boolean iOh = false;
-  private Bundle iOi;
-  private boolean iOj = false;
-  private boolean iOk = false;
-  private TextView iOl;
-  private TextView iOm;
-  private View iOn;
-  private MMSwitchBtn iOo;
-  private TextView iOp;
-  private TextView iOq;
-  private TextView iOr;
-  private String iOs;
-  private String iOt;
-  private String iOu;
-  private String iOv;
+  private String aSQ;
+  private String aSR;
+  private ProgressDialog cWw;
+  private boolean fyd = false;
+  private TextView kNA;
+  private View kNB;
+  private MMSwitchBtn kNC;
+  private TextView kND;
+  private TextView kNE;
+  private TextView kNF;
+  private String kNG;
+  private String kNH;
+  private String kNI;
+  private String kNJ;
+  private String kNs;
+  private boolean kNt = false;
+  private boolean kNu = false;
+  private boolean kNv = false;
+  private Bundle kNw;
+  private boolean kNx = false;
+  private boolean kNy = false;
+  private TextView kNz;
   private String name;
   private int status;
   
-  private void A(boolean paramBoolean1, boolean paramBoolean2)
+  private void B(boolean paramBoolean1, boolean paramBoolean2)
   {
     if (paramBoolean1)
     {
@@ -65,14 +71,14 @@ public class BindLinkedInUI
     label108:
     for (int i = 1;; i = 2)
     {
-      ax.tl().rf().set(7, Integer.valueOf(status));
+      com.tencent.mm.model.ah.tD().rn().set(7, Integer.valueOf(status));
       if (paramBoolean2)
       {
-        lu locallu = new lu();
-        hxg = 33;
-        hxh = i;
-        ax.tl().rh().a(new b.a(23, locallu));
-        com.tencent.mm.plugin.a.a.bWX.ll();
+        ok localok = new ok();
+        joh = 33;
+        joi = i;
+        com.tencent.mm.model.ah.tD().rp().b(new b.a(23, localok));
+        com.tencent.mm.plugin.a.a.cob.kG();
       }
       return;
       status &= 0xFFBFFFFF;
@@ -80,112 +86,144 @@ public class BindLinkedInUI
     }
   }
   
-  private void AR(String paramString)
+  private void GG(String paramString)
   {
-    int i = getString(a.n.contact_info_linkedin_account_info_binded).indexOf("%s");
-    Object localObject = getString(a.n.contact_info_linkedin_account_info_binded, new Object[] { paramString });
+    int i = getString(2131429122).indexOf("%s");
+    Object localObject = getString(2131429122, new Object[] { paramString });
     localObject = Spannable.Factory.getInstance().newSpannable((CharSequence)localObject);
-    ((Spannable)localObject).setSpan(new q(this), i, paramString.length() + i, 33);
-    iOl.setText((CharSequence)localObject);
+    ((Spannable)localObject).setSpan(new ClickableSpan()
+    {
+      public final void onClick(View paramAnonymousView) {}
+      
+      public final void updateDrawState(TextPaint paramAnonymousTextPaint)
+      {
+        paramAnonymousTextPaint.setColor(getResources().getColor(2131231118));
+        paramAnonymousTextPaint.setUnderlineText(false);
+      }
+    }, i, paramString.length() + i, 33);
+    kNz.setText((CharSequence)localObject);
   }
   
-  private void Nq()
+  private void MB()
   {
     int i = 1;
-    if ((iOg) && (iOi == null))
+    if ((kNu) && (kNw == null))
     {
-      t.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "bindBundle is null");
+      u.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "bindBundle is null");
       return;
     }
-    if (iOh)
+    if (kNv)
     {
-      b(eoh, false, name, iOf);
+      b(fyd, false, name, kNt);
       return;
     }
-    if (iOg)
+    if (kNu)
     {
-      if ((eoh) && (iOe.equals(aNj))) {}
+      if ((fyd) && (kNs.equals(aSQ))) {}
       boolean bool;
       for (;;)
       {
-        String str = aNk;
-        bool = iOf;
-        iOl.setVisibility(0);
-        AR(str);
-        iOn.setVisibility(0);
-        iOq.setVisibility(8);
+        String str = aSR;
+        bool = kNt;
+        kNz.setVisibility(0);
+        GG(str);
+        kNB.setVisibility(0);
+        kNE.setVisibility(8);
         if (i == 0) {
           break;
         }
-        iOm.setVisibility(8);
-        iOp.setVisibility(8);
-        iOr.setVisibility(8);
-        iOo.setCheck(bool);
-        iOo.setSwitchListener(new r(this));
+        kNA.setVisibility(8);
+        kND.setVisibility(8);
+        kNF.setVisibility(8);
+        kNC.setCheck(bool);
+        kNC.setSwitchListener(new MMSwitchBtn.a()
+        {
+          public final void fg(boolean paramAnonymousBoolean)
+          {
+            BindLinkedInUI.a(BindLinkedInUI.this, paramAnonymousBoolean, true);
+          }
+        });
         return;
         i = 0;
       }
-      iOm.setVisibility(0);
-      iOp.setVisibility(0);
-      iOr.setVisibility(0);
-      iOo.setCheck(bool);
-      iOo.setSwitchListener(new b(this));
+      kNA.setVisibility(0);
+      kND.setVisibility(0);
+      kNF.setVisibility(0);
+      kNC.setCheck(bool);
+      kNC.setSwitchListener(new MMSwitchBtn.a()
+      {
+        public final void fg(boolean paramAnonymousBoolean)
+        {
+          BindLinkedInUI.a(BindLinkedInUI.this, paramAnonymousBoolean, false);
+        }
+      });
       return;
     }
-    b(eoh, true, name, iOf);
+    b(fyd, true, name, kNt);
+  }
+  
+  private void Ou()
+  {
+    boolean bool2 = true;
+    kNs = ((String)com.tencent.mm.model.ah.tD().rn().get(286721, null));
+    if (!ay.kz(kNs))
+    {
+      bool1 = true;
+      fyd = bool1;
+      name = ((String)com.tencent.mm.model.ah.tD().rn().get(286722, null));
+      status = com.tencent.mm.model.h.sg();
+      if ((status & 0x400000) == 0) {
+        break label89;
+      }
+    }
+    label89:
+    for (boolean bool1 = bool2;; bool1 = false)
+    {
+      kNt = bool1;
+      return;
+      bool1 = false;
+      break;
+    }
   }
   
   private void b(boolean paramBoolean1, boolean paramBoolean2, String paramString, boolean paramBoolean3)
   {
-    iOr.setVisibility(8);
+    kNF.setVisibility(8);
     if (paramBoolean1)
     {
-      iOm.setVisibility(8);
-      iOl.setVisibility(0);
-      AR(paramString);
-      iOn.setVisibility(0);
-      iOp.setVisibility(8);
+      kNA.setVisibility(8);
+      kNz.setVisibility(0);
+      GG(paramString);
+      kNB.setVisibility(0);
+      kND.setVisibility(8);
       if (paramBoolean2) {
-        iOq.setVisibility(0);
+        kNE.setVisibility(0);
       }
-      iOo.setCheck(paramBoolean3);
-      iOo.setSwitchListener(new c(this));
+      kNC.setCheck(paramBoolean3);
+      kNC.setSwitchListener(new MMSwitchBtn.a()
+      {
+        public final void fg(boolean paramAnonymousBoolean)
+        {
+          BindLinkedInUI.a(BindLinkedInUI.this, paramAnonymousBoolean, true);
+        }
+      });
       return;
     }
-    iOl.setVisibility(8);
-    iOl.setText(getString(a.n.contact_info_linkedin_account_info_unbind));
-    iOm.setVisibility(0);
-    iOn.setVisibility(8);
-    iOp.setVisibility(0);
-    iOq.setVisibility(8);
-  }
-  
-  private void fA(boolean paramBoolean)
-  {
-    if (iOi == null)
-    {
-      t.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "bindBundle is null !!");
-      return;
-    }
-    if (iOo.jBe) {}
-    for (int i = 1;; i = 2)
-    {
-      com.tencent.mm.aa.a locala = new com.tencent.mm.aa.a(i, aNj, aNk, "", iOs, iOt, iOu, iOv);
-      if (!paramBoolean) {
-        cAF = com.tencent.mm.ui.base.h.a(this, getString(a.n.loading_tips), false, new p(this, locala));
-      }
-      ax.tm().d(locala);
-      return;
-    }
+    kNz.setVisibility(8);
+    kNz.setText(getString(2131429123));
+    kNA.setVisibility(0);
+    kNB.setVisibility(8);
+    kND.setVisibility(0);
+    kNE.setVisibility(8);
   }
   
   private void goBack()
   {
-    if (iOg)
+    if (kNu)
     {
-      if (iOk)
+      if (kNy)
       {
-        Intent localIntent = com.tencent.mm.plugin.a.a.bWW.ab(this);
+        Intent localIntent = com.tencent.mm.plugin.a.a.coa.ak(this);
         localIntent.addFlags(603979776);
         localIntent.putExtra("preferred_tab", 2);
         startActivity(localIntent);
@@ -199,127 +237,205 @@ public class BindLinkedInUI
     finish();
   }
   
-  private void initData()
+  private void hE(boolean paramBoolean)
   {
-    boolean bool2 = true;
-    iOe = ((String)ax.tl().rf().get(286721, null));
-    if (!bn.iW(iOe))
+    if (kNw == null)
     {
-      bool1 = true;
-      eoh = bool1;
-      name = ((String)ax.tl().rf().get(286722, null));
-      status = v.rW();
-      if ((status & 0x400000) == 0) {
-        break label89;
-      }
-    }
-    label89:
-    for (boolean bool1 = bool2;; bool1 = false)
-    {
-      iOf = bool1;
+      u.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "bindBundle is null !!");
       return;
-      bool1 = false;
-      break;
+    }
+    if (kNC.lFD) {}
+    for (int i = 1;; i = 2)
+    {
+      final com.tencent.mm.ad.a locala = new com.tencent.mm.ad.a(i, aSQ, aSR, "", kNG, kNH, kNI, kNJ);
+      if (!paramBoolean) {
+        cWw = com.tencent.mm.ui.base.g.a(this, getString(2131431101), false, new DialogInterface.OnCancelListener()
+        {
+          public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+          {
+            com.tencent.mm.model.ah.tE().c(locala);
+          }
+        });
+      }
+      com.tencent.mm.model.ah.tE().d(locala);
+      return;
     }
   }
   
-  protected final void DV()
+  protected final void Gb()
   {
-    if (iOg) {
-      nh(a.n.contact_info_linkedin_qrcode_title);
+    if (kNu) {
+      qb(2131429118);
     }
     for (;;)
     {
-      iOl = ((TextView)findViewById(a.i.setting_bind_linkedin_account));
-      iOm = ((TextView)findViewById(a.i.setting_bind_linkedin_brief));
-      iOn = findViewById(a.i.show_name_option);
-      iOo = ((MMSwitchBtn)findViewById(a.i.show_name_checkbox));
-      iOp = ((TextView)findViewById(a.i.bind_linkedin_btn));
-      iOq = ((TextView)findViewById(a.i.unbind_linkedin_btn));
-      iOr = ((TextView)findViewById(a.i.cancel_bind_linkedin_btn));
-      iOl.setOnClickListener(new f(this));
-      iOp.setOnClickListener(new g(this));
-      iOq.setOnClickListener(new j(this));
-      iOr.setOnClickListener(new n(this));
-      a(new o(this));
-      Nq();
+      kNz = ((TextView)findViewById(2131169196));
+      kNA = ((TextView)findViewById(2131169195));
+      kNB = findViewById(2131169197);
+      kNC = ((MMSwitchBtn)findViewById(2131169198));
+      kND = ((TextView)findViewById(2131169199));
+      kNE = ((TextView)findViewById(2131169200));
+      kNF = ((TextView)findViewById(2131169201));
+      kNz.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          paramAnonymousView = (String)com.tencent.mm.model.ah.tD().rn().get(286723, null);
+          if (!ay.kz(paramAnonymousView))
+          {
+            Intent localIntent = new Intent();
+            localIntent.putExtra("rawUrl", paramAnonymousView);
+            localIntent.putExtra("geta8key_username", com.tencent.mm.model.h.sc());
+            com.tencent.mm.ar.c.c(BindLinkedInUI.this, "webview", "com.tencent.mm.plugin.webview.ui.tools.WebViewUI", localIntent);
+          }
+        }
+      });
+      kND.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          if (!BindLinkedInUI.b(BindLinkedInUI.this))
+          {
+            BindLinkedInUI.c(BindLinkedInUI.this);
+            return;
+          }
+          if (!BindLinkedInUI.d(BindLinkedInUI.this))
+          {
+            BindLinkedInUI.e(BindLinkedInUI.this);
+            return;
+          }
+          com.tencent.mm.ui.base.g.a(BindLinkedInUI.this, getString(2131429126), null, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+          {
+            public final void onClick(DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int)
+            {
+              BindLinkedInUI.e(BindLinkedInUI.this);
+            }
+          }, new DialogInterface.OnClickListener()
+          {
+            public final void onClick(DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int) {}
+          });
+        }
+      });
+      kNE.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          com.tencent.mm.ui.base.g.a(BindLinkedInUI.this, getString(2131429127), null, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+          {
+            public final void onClick(final DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int)
+            {
+              paramAnonymous2DialogInterface = new com.tencent.mm.ad.d();
+              BindLinkedInUI.a(BindLinkedInUI.this, com.tencent.mm.ui.base.g.a(BindLinkedInUI.this, getString(2131431101), false, new DialogInterface.OnCancelListener()
+              {
+                public final void onCancel(DialogInterface paramAnonymous3DialogInterface)
+                {
+                  com.tencent.mm.model.ah.tE().c(paramAnonymous2DialogInterface);
+                }
+              }));
+              com.tencent.mm.model.ah.tE().d(paramAnonymous2DialogInterface);
+            }
+          }, new DialogInterface.OnClickListener()
+          {
+            public final void onClick(DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int) {}
+          });
+        }
+      });
+      kNF.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          BindLinkedInUI.a(BindLinkedInUI.this);
+        }
+      });
+      b(new MenuItem.OnMenuItemClickListener()
+      {
+        public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+        {
+          BindLinkedInUI.a(BindLinkedInUI.this);
+          return true;
+        }
+      });
+      MB();
       return;
-      if (iOh) {
-        nh(a.n.contact_info_linkedin_title);
+      if (kNv) {
+        qb(2131429121);
       } else {
-        nh(a.n.contact_info_linkedin_bind_info);
+        qb(2131429120);
       }
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.q.j paramj)
+  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    if (cAF != null)
+    if (cWw != null)
     {
-      cAF.dismiss();
-      cAF = null;
+      cWw.dismiss();
+      cWw = null;
     }
     if ((paramInt1 != 0) || (paramInt2 != 0))
     {
       if (paramj.getType() == 549) {
         if (paramInt2 == 1) {
-          paramInt1 = a.n.contact_info_linkedin_err_bound;
+          paramInt1 = 2131429132;
         }
       }
       for (;;)
       {
-        com.tencent.mm.ui.base.h.x(this, getString(paramInt1), null);
+        com.tencent.mm.ui.base.g.y(this, getString(paramInt1), null);
         do
         {
           return;
-          paramInt1 = a.n.contact_info_linkedin_err_bind_failed;
+          paramInt1 = 2131429133;
           break;
         } while (paramj.getType() != 550);
-        paramInt1 = a.n.contact_info_linkedin_err_unbind_failed;
+        paramInt1 = 2131429134;
       }
     }
     if (paramj.getType() == 549)
     {
-      iOk = true;
-      if (!iOj) {
-        paramInt1 = a.n.contact_info_linkedin_bind_ok;
+      kNy = true;
+      if (!kNx) {
+        paramInt1 = 2131429136;
       }
     }
     for (;;)
     {
       paramString = getString(paramInt1);
-      new e(this);
-      com.tencent.mm.ui.base.h.aN(this, paramString);
-      initData();
-      iOf = iOo.jBe;
-      Nq();
+      new DialogInterface.OnDismissListener()
+      {
+        public final void onDismiss(DialogInterface paramAnonymousDialogInterface) {}
+      };
+      com.tencent.mm.ui.base.g.ba(this, paramString);
+      Ou();
+      kNt = kNC.lFD;
+      MB();
       return;
-      paramInt1 = a.n.contact_info_linkedin_bind_update_ok;
+      paramInt1 = 2131429135;
       continue;
       if (paramj.getType() != 550) {
         break;
       }
-      paramInt1 = a.n.contact_info_linkedin_unbind_ok;
-      ay.yK().clear();
+      paramInt1 = 2131429137;
+      com.tencent.mm.modelfriend.ah.zz().clear();
     }
   }
   
   protected final int getLayoutId()
   {
-    return a.k.bindlinkedin;
+    return 2131363103;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
     boolean bool = true;
-    t.d("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "onActivityResult . requestCode:" + paramInt1 + "  resultCode:" + paramInt2);
+    u.d("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "onActivityResult . requestCode:" + paramInt1 + "  resultCode:" + paramInt2);
     if (paramIntent == null) {
       return;
     }
     switch (paramInt1)
     {
     default: 
-      t.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "onActivityResult unknow request");
+      u.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "onActivityResult unknow request");
       return;
     }
     Object localObject = paramIntent.getBundleExtra("result_data");
@@ -328,44 +444,47 @@ public class BindLinkedInUI
     String str2 = ((Bundle)localObject).getString("liname");
     String str3 = ((Bundle)localObject).getString("liurl");
     localObject = ((Bundle)localObject).getString("liswitch");
-    if (bn.iW(paramIntent))
+    if (ay.kz(paramIntent))
     {
-      t.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "linkedin oauth ret is null, maybe canceled");
+      u.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "linkedin oauth ret is null, maybe canceled");
       return;
     }
-    paramInt1 = bn.xQ(paramIntent);
+    paramInt1 = ay.Dr(paramIntent);
     if (paramInt1 != 0)
     {
-      t.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "linkedin oauth bind failed ret %s ", new Object[] { Integer.valueOf(paramInt1) });
+      u.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "linkedin oauth bind failed ret %s ", new Object[] { Integer.valueOf(paramInt1) });
       if (paramInt1 == 1) {}
-      for (paramInt1 = a.n.contact_info_linkedin_err_bound;; paramInt1 = a.n.contact_info_linkedin_err_bind_failed)
+      for (paramInt1 = 2131429132;; paramInt1 = 2131429133)
       {
-        com.tencent.mm.ui.base.h.x(this, getString(paramInt1), null);
+        com.tencent.mm.ui.base.g.y(this, getString(paramInt1), null);
         return;
       }
     }
-    if (bn.iW(str1))
+    if (ay.kz(str1))
     {
-      t.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "linkedin member id is null");
+      u.e("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "linkedin member id is null");
       return;
     }
-    t.d("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "%s, %s, %s, %s", new Object[] { str1, str2, str3, localObject });
-    ax.tl().rf().set(286722, str2);
-    ax.tl().rf().set(286721, str1);
-    ax.tl().rf().set(286723, str3);
-    if (!bn.iW((String)localObject)) {
-      if (bn.xQ((String)localObject) != 1) {
+    u.d("!32@/B4Tb64lLpKzHIkXYjmfXc63BE0upClU", "%s, %s, %s, %s", new Object[] { str1, str2, str3, localObject });
+    com.tencent.mm.model.ah.tD().rn().set(286722, str2);
+    com.tencent.mm.model.ah.tD().rn().set(286721, str1);
+    com.tencent.mm.model.ah.tD().rn().set(286723, str3);
+    if (!ay.kz((String)localObject)) {
+      if (ay.Dr((String)localObject) != 1) {
         break label346;
       }
     }
     for (;;)
     {
-      A(bool, false);
-      initData();
-      Nq();
-      paramIntent = getString(a.n.contact_info_linkedin_bind_ok);
-      new d(this);
-      com.tencent.mm.ui.base.h.aN(this, paramIntent);
+      B(bool, false);
+      Ou();
+      MB();
+      paramIntent = getString(2131429136);
+      new DialogInterface.OnDismissListener()
+      {
+        public final void onDismiss(DialogInterface paramAnonymousDialogInterface) {}
+      };
+      com.tencent.mm.ui.base.g.ba(this, paramIntent);
       return;
       label346:
       bool = false;
@@ -375,35 +494,41 @@ public class BindLinkedInUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    ax.tm().a(549, this);
-    ax.tm().a(550, this);
-    iOi = getIntent().getBundleExtra("qrcode_bundle");
-    if (iOi != null) {}
+    com.tencent.mm.model.ah.tE().a(549, this);
+    com.tencent.mm.model.ah.tE().a(550, this);
+    kNw = getIntent().getBundleExtra("qrcode_bundle");
+    if (kNw != null) {}
     for (boolean bool = true;; bool = false)
     {
-      iOg = bool;
-      if (iOi != null)
+      kNu = bool;
+      if (kNw != null)
       {
-        aNj = iOi.getString("i");
-        aNk = iOi.getString("n");
-        iOs = iOi.getString("t");
-        iOt = iOi.getString("o");
-        iOu = iOi.getString("s");
-        iOv = iOi.getString("r");
-        if ((aNj == null) || (aNk == null) || (iOs == null) || (iOu == null) || (iOv == null)) {
-          com.tencent.mm.ui.base.h.a(this, getString(a.n.contact_info_linkedin_account_params_error), null, false, new a(this));
+        aSQ = kNw.getString("i");
+        aSR = kNw.getString("n");
+        kNG = kNw.getString("t");
+        kNH = kNw.getString("o");
+        kNI = kNw.getString("s");
+        kNJ = kNw.getString("r");
+        if ((aSQ == null) || (aSR == null) || (kNG == null) || (kNI == null) || (kNJ == null)) {
+          com.tencent.mm.ui.base.g.a(this, getString(2131429125), null, false, new DialogInterface.OnClickListener()
+          {
+            public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+            {
+              BindLinkedInUI.a(BindLinkedInUI.this);
+            }
+          });
         }
       }
-      iOh = getIntent().getBooleanExtra("oversea_entry", false);
-      initData();
-      if (iOg) {
-        iOf = true;
+      kNv = getIntent().getBooleanExtra("oversea_entry", false);
+      Ou();
+      if (kNu) {
+        kNt = true;
       }
-      DV();
-      if ((iOi != null) && (eoh) && (iOe.equals(aNj)))
+      Gb();
+      if ((kNw != null) && (fyd) && (kNs.equals(aSQ)))
       {
-        iOj = true;
-        fA(true);
+        kNx = true;
+        hE(true);
       }
       return;
     }
@@ -411,8 +536,8 @@ public class BindLinkedInUI
   
   protected void onDestroy()
   {
-    ax.tm().b(550, this);
-    ax.tm().b(549, this);
+    com.tencent.mm.model.ah.tE().b(550, this);
+    com.tencent.mm.model.ah.tE().b(549, this);
     super.onDestroy();
   }
   

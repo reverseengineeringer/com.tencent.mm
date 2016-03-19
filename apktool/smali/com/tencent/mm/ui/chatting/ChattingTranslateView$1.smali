@@ -15,7 +15,7 @@
 
 
 # static fields
-.field static final synthetic iYj:[I
+.field static final synthetic kXM:[I
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .locals 3
 
     .prologue
-    .line 133
+    .line 130
     invoke-static {}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->values()[Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     move-result-object v0
@@ -32,12 +32,12 @@
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->iYj:[I
+    sput-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->kXM:[I
 
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->iYj:[I
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->kXM:[I
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYk:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXN:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->ordinal()I
 
@@ -51,9 +51,9 @@
 
     :goto_0
     :try_start_1
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->iYj:[I
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->kXM:[I
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYl:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXO:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->ordinal()I
 
@@ -67,9 +67,9 @@
 
     :goto_1
     :try_start_2
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->iYj:[I
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->kXM:[I
 
-    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYm:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sget-object v1, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXP:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->ordinal()I
 

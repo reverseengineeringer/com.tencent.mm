@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class d$a
 {
-  public boolean atV;
+  public boolean arY;
 }
 
 /* Location:

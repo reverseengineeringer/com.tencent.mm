@@ -15,11 +15,7 @@
 
 
 # instance fields
-.field public awk:J
-
-.field public awo:I
-
-.field public mac:Ljava/lang/String;
+.field public aur:Z
 
 
 # direct methods

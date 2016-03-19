@@ -1,25 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class cr
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ayD = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awi = new a();
+  public b awj = new b();
   
   public cr()
   {
-    id = "FileDownloadCallback";
-    hXT = atO;
+    id = "ExDeviceSetSendDataDirection";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int ayE;
-    public long id = 0L;
-    public String path;
+    public String alN;
+    public boolean awk;
+    public int direction;
+  }
+  
+  public static final class b
+  {
+    public boolean auR;
   }
 }
 

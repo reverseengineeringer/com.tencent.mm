@@ -11,19 +11,19 @@ public final class c
 {
   public final String a(b.a.d.c paramc)
   {
-    d.d(paramc, "Cannot extract base string from null object");
-    if ((jPy == null) || (jPy.size() <= 0)) {
+    d.c(paramc, "Cannot extract base string from null object");
+    if ((mdK == null) || (mdK.size() <= 0)) {
       throw new b.a.b.c(paramc);
     }
-    String str1 = b.a.g.c.encode(paramc.aVR().name());
-    String str2 = b.a.g.c.encode(paramc.aVW());
+    String str1 = b.a.g.c.encode(paramc.boG().name());
+    String str2 = b.a.g.c.encode(paramc.boL());
     e locale = new e();
-    locale.a(paramc.aVQ());
-    locale.a(paramc.aVV());
-    locale.a(new e(jPy));
-    paramc = new e(jPz);
-    Collections.sort(jPz);
-    return String.format("%s&%s&%s", new Object[] { str1, str2, b.a.g.c.encode(paramc.aVX()) });
+    locale.a(paramc.boF());
+    locale.a(paramc.boK());
+    locale.a(new e(mdK));
+    paramc = new e(mdL);
+    Collections.sort(mdL);
+    return String.format("%s&%s&%s", new Object[] { str1, str2, b.a.g.c.encode(paramc.boM()) });
   }
 }
 

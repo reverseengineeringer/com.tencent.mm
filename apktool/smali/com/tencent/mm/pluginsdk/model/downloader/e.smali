@@ -1,92 +1,64 @@
-.class final Lcom/tencent/mm/pluginsdk/model/downloader/e;
+.class public final Lcom/tencent/mm/pluginsdk/model/downloader/e;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field final synthetic ftb:J
+.field public aut:Ljava/lang/String;
 
-.field final synthetic gMZ:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+.field public azd:J
+
+.field public aze:J
+
+.field public id:J
+
+.field public path:Ljava/lang/String;
+
+.field public status:I
+
+.field public url:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;J)V
-    .locals 0
-
-    .prologue
-    .line 89
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->gMZ:Lcom/tencent/mm/pluginsdk/model/downloader/a;
-
-    iput-wide p2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->ftb:J
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final run()V
+.method public constructor <init>()V
     .locals 4
 
     .prologue
-    .line 92
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->azs()Ljava/util/Vector;
+    const-wide/16 v2, 0x0
 
-    move-result-object v0
+    .line 3
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    if-eqz v0, :cond_0
+    .line 4
+    const-wide/16 v0, -0x1
 
-    .line 93
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->azs()Ljava/util/Vector;
+    iput-wide v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->id:J
 
-    move-result-object v0
+    .line 6
+    const-string/jumbo v0, ""
 
-    invoke-virtual {v0}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->url:Ljava/lang/String;
 
-    move-result-object v1
+    .line 8
+    const/4 v0, 0x0
 
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->status:I
 
-    move-result v0
+    .line 10
+    const-string/jumbo v0, ""
 
-    if-eqz v0, :cond_0
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->path:Ljava/lang/String;
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 12
+    const-string/jumbo v0, ""
 
-    move-result-object v0
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->aut:Ljava/lang/String;
 
-    check-cast v0, Lcom/tencent/mm/pluginsdk/model/downloader/r;
+    .line 14
+    iput-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->azd:J
 
-    .line 94
-    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->ftb:J
+    .line 16
+    iput-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->aze:J
 
-    invoke-interface {v0, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/r;->onTaskFailed(J)V
-
-    goto :goto_0
-
-    .line 97
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->azt()Lcom/tencent/mm/pluginsdk/model/downloader/r;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 98
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->azt()Lcom/tencent/mm/pluginsdk/model/downloader/r;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->ftb:J
-
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/model/downloader/r;->onTaskFailed(J)V
-
-    .line 100
-    :cond_1
     return-void
 .end method

@@ -1,43 +1,76 @@
-.class final Lcom/tencent/mm/network/d;
+.class public interface abstract Lcom/tencent/mm/network/d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/os/IInterface;
 
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 201
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/network/d$a;
+    }
+.end annotation
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public abstract A([B)I
+.end method
 
-    .prologue
-    .line 204
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Db()Lcom/tencent/mm/network/au;
+.method public abstract F([B)V
+.end method
 
-    move-result-object v0
+.method public abstract G([B)V
+.end method
 
-    const/16 v1, 0x18
+.method public abstract aN(Z)V
+.end method
 
-    const/4 v2, 0x7
+.method public abstract ba(I)V
+.end method
 
-    invoke-static {v2}, Lcom/tencent/mm/a/k;->aD(I)[B
+.method public abstract getUsername()Ljava/lang/String;
+.end method
 
-    move-result-object v2
+.method public abstract gf(Ljava/lang/String;)[B
+.end method
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/network/au;->d(I[B)V
+.method public abstract h(Ljava/lang/String;[B)V
+.end method
 
-    .line 206
-    return-void
+.method public abstract i([BI)V
+.end method
+
+.method public abstract kj(Ljava/lang/String;)V
+.end method
+
+.method public abstract reset()V
+.end method
+
+.method public abstract rg()I
+.end method
+
+.method public abstract setUsername(Ljava/lang/String;)V
+.end method
+
+.method public abstract tq()[B
+.end method
+
+.method public abstract vR()[B
+.end method
+
+.method public abstract vS()Z
+.end method
+
+.method public abstract vT()[B
+.end method
+
+.method public abstract vU()Z
+.end method
+
+.method public abstract vV()[B
+.end method
+
+.method public abstract wo()Ljava/lang/String;
 .end method

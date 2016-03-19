@@ -13,27 +13,27 @@ import android.view.ViewGroup;
 import android.view.animation.Interpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.Scroller;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MMADFlipper
   extends ViewGroup
 {
-  private View cMI;
-  private int fR;
-  private Scroller gC;
-  private int gRb = 0;
-  private float gT;
-  private float gU;
-  private VelocityTracker gW;
-  private Interpolator iDc;
-  private int iDd;
-  private int iDe;
-  private boolean iDf = false;
-  private boolean iDg = true;
-  private a iDh;
+  private View dmo;
+  private int drs = 0;
+  private int eY;
+  private Scroller fK;
+  private float gb;
+  private float gc;
+  private VelocityTracker ge;
+  private Interpolator kCt;
+  private int kCu;
+  private int kCv;
+  private boolean kCw = false;
+  private boolean kCx = true;
+  private a kCy;
+  private View lY;
   private Context mContext;
-  private View mT;
   
   public MMADFlipper(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -44,12 +44,12 @@ public class MMADFlipper
   {
     super(paramContext, paramAttributeSet, paramInt);
     mContext = paramContext;
-    iDc = getInterpolator();
-    gC = new Scroller(mContext, iDc);
-    fR = ViewConfiguration.get(mContext).getScaledDoubleTapSlop();
+    kCt = getInterpolator();
+    fK = new Scroller(mContext, kCt);
+    eY = ViewConfiguration.get(mContext).getScaledDoubleTapSlop();
   }
   
-  private boolean aMA()
+  private boolean bcr()
   {
     return getChildCount() > 1;
   }
@@ -59,24 +59,24 @@ public class MMADFlipper
     return new LinearInterpolator();
   }
   
-  private void nC(int paramInt)
+  private void qw(int paramInt)
   {
     int i = Math.max(0, Math.min(paramInt, getChildCount() - 1));
     if (getScrollX() != getWidth() * i)
     {
       i = i * getWidth() - getScrollX();
-      gC.startScroll(getScrollX(), 0, i, 0, a.x(getContext(), Math.abs(i) * 2));
+      fK.startScroll(getScrollX(), 0, i, 0, a.B(getContext(), Math.abs(i) * 2));
       invalidate();
     }
-    t.d("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "mCurScreen:%d, mLastScreen:%d, whichScreen:%d", new Object[] { Integer.valueOf(iDd), Integer.valueOf(iDe), Integer.valueOf(paramInt) });
-    iDe = paramInt;
+    u.d("!32@/B4Tb64lLpKU689CppO1CHt/InoddcC3", "mCurScreen:%d, mLastScreen:%d, whichScreen:%d", new Object[] { Integer.valueOf(kCu), Integer.valueOf(kCv), Integer.valueOf(paramInt) });
+    kCv = paramInt;
   }
   
   public void computeScroll()
   {
-    if (gC.computeScrollOffset())
+    if (fK.computeScrollOffset())
     {
-      scrollTo(gC.getCurrX(), gC.getCurrY());
+      scrollTo(fK.getCurrX(), fK.getCurrY());
       postInvalidate();
     }
     do
@@ -84,22 +84,22 @@ public class MMADFlipper
       do
       {
         return;
-      } while (!iDf);
-      iDf = false;
-      if (iDd <= 0)
+      } while (!kCw);
+      kCw = false;
+      if (kCu <= 0)
       {
-        iDd = getRealChildCount();
-        setScrollXOffest(iDd * getWidth());
+        kCu = getRealChildCount();
+        setScrollXOffest(kCu * getWidth());
         return;
       }
-    } while (iDd < getChildCount() - 1);
-    iDd = 1;
-    setScrollXOffest(iDd * getWidth());
+    } while (kCu < getChildCount() - 1);
+    kCu = 1;
+    setScrollXOffest(kCu * getWidth());
   }
   
   public int getCurScreen()
   {
-    return iDd;
+    return kCu;
   }
   
   public int getRealChildCount()
@@ -113,9 +113,9 @@ public class MMADFlipper
   public int getRealCurScreen()
   {
     if (getChildCount() > 1) {
-      return iDd - 1;
+      return kCu - 1;
     }
-    return iDd;
+    return kCu;
   }
   
   protected void onFinishInflate()
@@ -127,7 +127,7 @@ public class MMADFlipper
   {
     boolean bool2 = true;
     boolean bool1;
-    if (!iDg) {
+    if (!kCx) {
       bool1 = super.onInterceptTouchEvent(paramMotionEvent);
     }
     int i;
@@ -142,7 +142,7 @@ public class MMADFlipper
         break;
       }
       bool1 = bool2;
-    } while (gRb != 0);
+    } while (drs != 0);
     float f1 = paramMotionEvent.getX();
     float f2 = paramMotionEvent.getY();
     switch (i)
@@ -151,33 +151,33 @@ public class MMADFlipper
     for (;;)
     {
       bool1 = bool2;
-      if (gRb != 0) {
+      if (drs != 0) {
         break;
       }
       return false;
-      i = (int)Math.abs(gT - f1);
-      int j = (int)Math.abs(gU - f2);
-      if ((i > fR) && (j < fR)) {}
+      i = (int)Math.abs(gb - f1);
+      int j = (int)Math.abs(gc - f2);
+      if ((i > eY) && (j < eY)) {}
       for (i = 1;; i = 0)
       {
         if (i == 0) {
           break label177;
         }
-        gRb = 1;
+        drs = 1;
         break;
       }
       label177:
-      gRb = 0;
+      drs = 0;
       continue;
-      gT = f1;
-      gU = f2;
-      if (gC.isFinished()) {}
+      gb = f1;
+      gc = f2;
+      if (fK.isFinished()) {}
       for (i = 0;; i = 1)
       {
-        gRb = i;
+        drs = i;
         break;
       }
-      gRb = 0;
+      drs = 0;
     }
   }
   
@@ -218,10 +218,10 @@ public class MMADFlipper
     if (getChildCount() == 1) {
       return super.onTouchEvent(paramMotionEvent);
     }
-    if (gW == null) {
-      gW = VelocityTracker.obtain();
+    if (ge == null) {
+      ge = VelocityTracker.obtain();
     }
-    gW.addMovement(paramMotionEvent);
+    ge.addMovement(paramMotionEvent);
     int i = paramMotionEvent.getAction();
     float f = paramMotionEvent.getX();
     switch (i)
@@ -229,75 +229,75 @@ public class MMADFlipper
     default: 
       return true;
     case 0: 
-      if (!gC.isFinished()) {
-        gC.abortAnimation();
+      if (!fK.isFinished()) {
+        fK.abortAnimation();
       }
-      gT = f;
+      gb = f;
       return true;
     case 2: 
-      i = (int)(gT - f);
-      gT = f;
+      i = (int)(gb - f);
+      gb = f;
       scrollBy(i, 0);
       return true;
     }
-    paramMotionEvent = gW;
+    paramMotionEvent = ge;
     paramMotionEvent.computeCurrentVelocity(1000);
     i = (int)paramMotionEvent.getXVelocity();
     if (i > 600)
     {
-      if (aMA())
+      if (bcr())
       {
-        iDd -= 1;
-        nC(iDd);
+        kCu -= 1;
+        qw(kCu);
       }
-      iDf = true;
+      kCw = true;
     }
     for (;;)
     {
-      if (gW != null)
+      if (ge != null)
       {
-        gW.recycle();
-        gW = null;
+        ge.recycle();
+        ge = null;
       }
-      gRb = 0;
-      gT = 0.0F;
-      gU = 0.0F;
+      drs = 0;
+      gb = 0.0F;
+      gc = 0.0F;
       return true;
       if (i < 64936)
       {
-        if (aMA())
+        if (bcr())
         {
-          iDd += 1;
-          nC(iDd);
+          kCu += 1;
+          qw(kCu);
         }
-        iDf = true;
+        kCw = true;
       }
       else
       {
         i = getWidth();
-        nC((getScrollX() + i / 2) / i);
+        qw((getScrollX() + i / 2) / i);
       }
     }
   }
   
   public void setFooterView(View paramView)
   {
-    cMI = paramView;
+    dmo = paramView;
   }
   
   public void setHeaderView(View paramView)
   {
-    mT = paramView;
+    lY = paramView;
   }
   
   public void setOnScreenChangedListener(a parama)
   {
-    iDh = parama;
+    kCy = parama;
   }
   
   public void setScrollEnable(boolean paramBoolean)
   {
-    iDg = paramBoolean;
+    kCx = paramBoolean;
   }
   
   @TargetApi(14)
@@ -306,10 +306,10 @@ public class MMADFlipper
     if (Build.VERSION.SDK_INT >= 14) {
       setScrollX(paramInt);
     }
-    while (gC == null) {
+    while (fK == null) {
       return;
     }
-    gC.setFinalX(paramInt);
+    fK.setFinalX(paramInt);
   }
   
   public static abstract interface a {}

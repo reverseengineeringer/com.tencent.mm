@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 public class HardDeviceChattingItemView
   extends LinearLayout
 {
-  private boolean dzJ;
+  private boolean ery;
   
   public HardDeviceChattingItemView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -17,8 +17,8 @@ public class HardDeviceChattingItemView
   public void onFinishInflate()
   {
     super.onFinishInflate();
-    if (!dzJ) {
-      dzJ = true;
+    if (!ery) {
+      ery = true;
     }
   }
 }

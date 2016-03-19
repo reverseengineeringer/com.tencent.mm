@@ -1,33 +1,13 @@
 package android.support.v4.view;
 
-import android.view.MotionEvent;
+import android.view.ViewConfiguration;
 
 final class n$b
   implements n.c
 {
-  public final int a(MotionEvent paramMotionEvent, int paramInt)
+  public final int a(ViewConfiguration paramViewConfiguration)
   {
-    return paramMotionEvent.findPointerIndex(paramInt);
-  }
-  
-  public final int b(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return paramMotionEvent.getPointerId(paramInt);
-  }
-  
-  public final float c(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return paramMotionEvent.getX(paramInt);
-  }
-  
-  public final float d(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return paramMotionEvent.getY(paramInt);
-  }
-  
-  public final int f(MotionEvent paramMotionEvent)
-  {
-    return paramMotionEvent.getPointerCount();
+    return paramViewConfiguration.getScaledPagingTouchSlop();
   }
 }
 

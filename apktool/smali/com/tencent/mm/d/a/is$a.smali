@@ -15,23 +15,44 @@
 
 
 # instance fields
-.field public aFU:I
+.field public aBp:I
 
-.field public className:Ljava/lang/String;
+.field public aEM:Ljava/lang/String;
+
+.field public aou:I
+
+.field public label:Ljava/lang/String;
+
+.field public lat:D
+
+.field public lng:D
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 3
 
     .prologue
-    .line 14
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-wide/high16 v1, -0x4010000000000000L    # -1.0
 
     .line 16
-    const/4 v0, -0x1
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput v0, p0, Lcom/tencent/mm/d/a/is$a;->aFU:I
+    .line 17
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/tencent/mm/d/a/is$a;->aou:I
+
+    .line 18
+    iput-wide v1, p0, Lcom/tencent/mm/d/a/is$a;->lat:D
+
+    .line 19
+    iput-wide v1, p0, Lcom/tencent/mm/d/a/is$a;->lng:D
+
+    .line 20
+    const/16 v0, 0xa
+
+    iput v0, p0, Lcom/tencent/mm/d/a/is$a;->aBp:I
 
     return-void
 .end method

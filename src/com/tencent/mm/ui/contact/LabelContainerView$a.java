@@ -2,9 +2,9 @@ package com.tencent.mm.ui.contact;
 
 public abstract interface LabelContainerView$a
 {
-  public abstract void aQs();
+  public abstract void SQ();
   
-  public abstract void aQt();
+  public abstract void SR();
 }
 
 /* Location:

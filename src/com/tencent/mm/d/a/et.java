@@ -1,24 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class et
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aBu = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azs = new a();
+  public b azt = new b();
   
   public et()
   {
-    id = "NotifyCanPullVoiceTransRes";
-    hXT = atO;
+    id = "GameJsApiCommand";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aBv = 0;
-    public int aBw = 0;
+    public int aI = 0;
+    public String azu;
+  }
+  
+  public static final class b
+  {
+    public String azv;
   }
 }
 

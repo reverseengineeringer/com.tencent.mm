@@ -1,70 +1,62 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.content.Context;
-import android.content.res.AssetFileDescriptor;
-import android.content.res.AssetManager;
-import android.media.MediaPlayer;
+import com.tencent.mm.a.d;
 
 public final class av
 {
-  public static void C(Context paramContext, int paramInt)
+  private final d jXS;
+  private v jXT = new v(256);
+  
+  public av(String paramString)
   {
-    a(paramContext, paramInt, b.iax, false, null);
+    jXS = new d(paramString);
   }
   
-  public static void a(Context paramContext, int paramInt, a parama)
+  public final String CZ(String paramString)
   {
-    a(paramContext, paramInt, b.iay, false, parama);
-  }
-  
-  public static void a(Context paramContext, int paramInt, b paramb, boolean paramBoolean, a parama)
-  {
-    if ((paramContext == null) || (paramb == null))
+    String str1 = paramString;
+    try
     {
-      t.e("!32@/B4Tb64lLpLlVGlG0LwhNkUNSz1Jl26Q", "play Err context:%s pathId:%d speekeron:%s looping:%b listener:%s", new Object[] { paramContext, Integer.valueOf(paramInt), paramb, Boolean.valueOf(false), parama });
-      return;
-    }
-    String str = paramContext.getString(paramInt);
-    MediaPlayer localMediaPlayer = new MediaPlayer();
-    if (paramb != b.iax) {
-      if (paramb != b.iay) {
-        break label231;
+      if (paramString.startsWith("!"))
+      {
+        if (jXT.ad(paramString)) {
+          return (String)jXT.get(paramString);
+        }
+        str1 = paramString.substring(1);
+        Object localObject;
+        String str3;
+        int i;
+        str2 = "[td]" + paramString;
       }
     }
-    label231:
-    for (int i = 3;; i = 0)
+    catch (Exception localException)
     {
-      localMediaPlayer.setAudioStreamType(i);
-      t.i("!32@/B4Tb64lLpLlVGlG0LwhNkUNSz1Jl26Q", "play start mp:%d path:%s context:%s pathId:%d speekeron:%s looping:%b listener:%s ", new Object[] { Integer.valueOf(localMediaPlayer.hashCode()), str, paramContext, Integer.valueOf(paramInt), paramb, Boolean.valueOf(false), parama });
       try
       {
-        paramContext = paramContext.getAssets().openFd(str);
-        localMediaPlayer.setDataSource(paramContext.getFileDescriptor(), paramContext.getStartOffset(), paramContext.getLength());
-        localMediaPlayer.prepare();
-        localMediaPlayer.setLooping(false);
-        localMediaPlayer.start();
-        localMediaPlayer.setOnCompletionListener(new aw(str, paramContext, parama));
-        return;
+        localObject = str1.split("@");
+        if (localObject.length <= 1) {
+          break label178;
+        }
+        str3 = localObject[0];
+        i = Integer.valueOf(localObject[0]).intValue();
+        localObject = str1.substring(str3.length() + 1, str3.length() + 1 + i);
+        str3 = str1.substring(i + (str3.length() + 1));
+        str3 = jXS.av((String)localObject) + str3;
+        jXT.put(paramString, str3);
+        return str3;
       }
-      catch (Exception paramContext)
+      catch (Exception paramString)
       {
-        t.e("!32@/B4Tb64lLpLlVGlG0LwhNkUNSz1Jl26Q", "play failed pathId:%d e:%s", new Object[] { Integer.valueOf(paramInt), paramContext.getMessage() });
-        return;
+        for (;;)
+        {
+          String str2;
+          paramString = str2;
+        }
       }
+      localException = localException;
     }
+    return str2;
   }
-  
-  public static void b(Context paramContext, int paramInt, a parama)
-  {
-    a(paramContext, paramInt, b.iax, false, parama);
-  }
-  
-  public static abstract interface a
-  {
-    public abstract void mk();
-  }
-  
-  private static enum b {}
 }
 
 /* Location:

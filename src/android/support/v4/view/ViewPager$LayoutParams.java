@@ -8,11 +8,11 @@ import android.view.ViewGroup.LayoutParams;
 public class ViewPager$LayoutParams
   extends ViewGroup.LayoutParams
 {
+  float gD = 0.0F;
+  public boolean gF;
+  boolean gG;
+  int gH;
   public int gravity;
-  float hv = 0.0F;
-  public boolean hx;
-  boolean hy;
-  int hz;
   int position;
   
   public ViewPager$LayoutParams()
@@ -23,7 +23,7 @@ public class ViewPager$LayoutParams
   public ViewPager$LayoutParams(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, ViewPager.aI());
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, ViewPager.aq());
     gravity = paramContext.getInteger(0, 48);
     paramContext.recycle();
   }

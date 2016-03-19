@@ -1,174 +1,178 @@
-.class final Lcom/tencent/mm/modelgeo/g;
-.super Lcom/tencent/mm/modelgeo/l;
+.class public final Lcom/tencent/mm/modelgeo/g;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic bBl:Lcom/tencent/mm/modelgeo/d;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/modelgeo/g$a;
+    }
+.end annotation
+
+
+# static fields
+.field private static bOI:Lcom/tencent/mm/modelgeo/g;
+
+.field private static mContext:Landroid/content/Context;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/modelgeo/d;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 214
-    iput-object p1, p0, Lcom/tencent/mm/modelgeo/g;->bBl:Lcom/tencent/mm/modelgeo/d;
+    .line 14
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Lcom/tencent/mm/modelgeo/l;-><init>()V
+    sput-object v0, Lcom/tencent/mm/modelgeo/g;->bOI:Lcom/tencent/mm/modelgeo/g;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final a(ZDDIDD)V
-    .locals 15
+.method private constructor <init>()V
+    .locals 0
 
     .prologue
-    .line 224
-    if-eqz p1, :cond_0
+    .line 22
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 225
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/g;->bBl:Lcom/tencent/mm/modelgeo/d;
+    .line 23
+    return-void
+.end method
 
-    move-wide/from16 v0, p2
+.method public static a(Lcom/tencent/map/geolocation/TencentLocationListener;ILandroid/os/Looper;)V
+    .locals 6
 
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/d;->bBe:D
-
-    .line 226
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/g;->bBl:Lcom/tencent/mm/modelgeo/d;
-
-    move-wide/from16 v0, p4
-
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/d;->bBf:D
-
-    .line 227
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/g;->bBl:Lcom/tencent/mm/modelgeo/d;
-
-    move/from16 v0, p6
-
-    iput v0, v2, Lcom/tencent/mm/modelgeo/d;->bBg:I
-
-    .line 228
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/g;->bBl:Lcom/tencent/mm/modelgeo/d;
-
-    move-wide/from16 v0, p7
-
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/d;->bBh:D
-
-    .line 229
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/g;->bBl:Lcom/tencent/mm/modelgeo/d;
-
-    move-wide/from16 v0, p9
-
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/d;->bBi:D
-
-    .line 230
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/g;->bBl:Lcom/tencent/mm/modelgeo/d;
-
-    const/4 v3, 0x1
-
-    iput-boolean v3, v2, Lcom/tencent/mm/modelgeo/d;->bBd:Z
-
-    .line 231
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/g;->bBl:Lcom/tencent/mm/modelgeo/d;
-
-    const/4 v3, 0x0
-
-    iput-boolean v3, v2, Lcom/tencent/mm/modelgeo/d;->bBc:Z
-
-    .line 232
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/g;->bBl:Lcom/tencent/mm/modelgeo/d;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v3
-
-    iput-wide v3, v2, Lcom/tencent/mm/modelgeo/d;->bBb:J
-
-    .line 233
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/g;->bBl:Lcom/tencent/mm/modelgeo/d;
-
-    const v3, 0x10807
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/modelgeo/d;->a(Lcom/tencent/mm/modelgeo/d;I)V
-
-    .line 235
-    :cond_0
-    const-string/jumbo v2, "!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6"
-
-    const-string/jumbo v3, "onGetLocationWgs84 fLongitude: %f fLatitude:%f locType:%d %f:spped"
-
-    const/4 v4, 0x4
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    invoke-static/range {p4 .. p5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
-
-    move-result-object v6
-
-    aput-object v6, v4, v5
-
+    .prologue
     const/4 v5, 0x1
 
-    invoke-static/range {p2 .. p3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    const/4 v4, 0x0
 
-    move-result-object v6
+    .line 59
+    const-string/jumbo v0, "!44@/B4Tb64lLpJfn8anhv+Gj4anGnlU7moSrNKFEcSm62U="
 
-    aput-object v6, v4, v5
+    const-string/jumbo v1, "requestLocationUpdate %s, isLoaded %b"
 
-    const/4 v5, 0x2
+    const/4 v2, 0x2
 
-    invoke-static/range {p6 .. p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    move-result-object v6
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    aput-object v6, v4, v5
+    move-result-object v3
 
-    const/4 v5, 0x3
+    aput-object v3, v2, v4
 
-    invoke-static/range {p7 .. p8}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    invoke-static {}, Lcom/tencent/map/geolocation/TencentLocationManagerOptions;->isLoadLibraryEnabled()Z
 
-    move-result-object v6
+    move-result v3
 
-    aput-object v6, v4, v5
+    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    move-result-object v3
 
-    .line 238
-    new-instance v14, Lcom/tencent/mm/sdk/platformtools/ac;
+    aput-object v3, v2, v5
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result-object v2
+    .line 68
+    sget-object v0, Lcom/tencent/mm/modelgeo/g;->mContext:Landroid/content/Context;
 
-    invoke-direct {v14, v2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+    invoke-static {v0}, Lcom/tencent/map/geolocation/TencentLocationManager;->getInstance(Landroid/content/Context;)Lcom/tencent/map/geolocation/TencentLocationManager;
 
-    new-instance v2, Lcom/tencent/mm/modelgeo/h;
+    move-result-object v0
 
-    move-object v3, p0
+    invoke-virtual {v0, p1}, Lcom/tencent/map/geolocation/TencentLocationManager;->setCoordinateType(I)V
 
-    move/from16 v4, p1
+    .line 69
+    invoke-static {}, Lcom/tencent/map/geolocation/TencentLocationRequest;->create()Lcom/tencent/map/geolocation/TencentLocationRequest;
 
-    move-wide/from16 v5, p4
+    move-result-object v0
 
-    move-wide/from16 v7, p2
+    .line 70
+    const-wide/16 v1, 0x7d0
 
-    move/from16 v9, p6
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/map/geolocation/TencentLocationRequest;->setInterval(J)Lcom/tencent/map/geolocation/TencentLocationRequest;
 
-    move-wide/from16 v10, p7
+    .line 71
+    sget-object v1, Lcom/tencent/mm/modelgeo/g;->mContext:Landroid/content/Context;
 
-    move-wide/from16 v12, p9
+    invoke-static {v1}, Lcom/tencent/map/geolocation/TencentLocationManager;->getInstance(Landroid/content/Context;)Lcom/tencent/map/geolocation/TencentLocationManager;
 
-    invoke-direct/range {v2 .. v13}, Lcom/tencent/mm/modelgeo/h;-><init>(Lcom/tencent/mm/modelgeo/g;ZDDIDD)V
+    move-result-object v1
 
-    const-wide/16 v3, 0xc8
+    invoke-virtual {v1, v0, p0, p2}, Lcom/tencent/map/geolocation/TencentLocationManager;->requestLocationUpdates(Lcom/tencent/map/geolocation/TencentLocationRequest;Lcom/tencent/map/geolocation/TencentLocationListener;Landroid/os/Looper;)I
 
-    invoke-virtual {v14, v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
+    move-result v0
 
-    .line 276
+    .line 72
+    const-string/jumbo v1, "!44@/B4Tb64lLpJfn8anhv+Gj4anGnlU7moSrNKFEcSm62U="
+
+    const-string/jumbo v2, "requestCode %d"
+
+    new-array v3, v5, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v3, v4
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 73
+    return-void
+.end method
+
+.method public static aN(Landroid/content/Context;)Lcom/tencent/mm/modelgeo/g;
+    .locals 1
+
+    .prologue
+    .line 26
+    sget-object v0, Lcom/tencent/mm/modelgeo/g;->bOI:Lcom/tencent/mm/modelgeo/g;
+
+    if-nez v0, :cond_0
+
+    .line 27
+    new-instance v0, Lcom/tencent/mm/modelgeo/g;
+
+    invoke-direct {v0}, Lcom/tencent/mm/modelgeo/g;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/modelgeo/g;->bOI:Lcom/tencent/mm/modelgeo/g;
+
+    .line 29
+    :cond_0
+    sput-object p0, Lcom/tencent/mm/modelgeo/g;->mContext:Landroid/content/Context;
+
+    .line 30
+    sget-object v0, Lcom/tencent/mm/modelgeo/g;->bOI:Lcom/tencent/mm/modelgeo/g;
+
+    return-object v0
+.end method
+
+.method public static zH()V
+    .locals 2
+
+    .prologue
+    .line 35
+    const-string/jumbo v0, "!44@/B4Tb64lLpJfn8anhv+Gj4anGnlU7moSrNKFEcSm62U="
+
+    const-string/jumbo v1, "removeUpdate"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 36
+    sget-object v0, Lcom/tencent/mm/modelgeo/g;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/map/geolocation/TencentLocationManager;->getInstance(Landroid/content/Context;)Lcom/tencent/map/geolocation/TencentLocationManager;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v1}, Lcom/tencent/map/geolocation/TencentLocationManager;->removeUpdates(Lcom/tencent/map/geolocation/TencentLocationListener;)V
+
+    .line 37
     return-void
 .end method

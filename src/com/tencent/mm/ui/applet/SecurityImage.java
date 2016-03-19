@@ -1,98 +1,51 @@
 package com.tencent.mm.ui.applet;
 
-import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
 import android.content.DialogInterface.OnDismissListener;
 import android.graphics.Bitmap;
-import android.os.AsyncTask;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.e;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.aa;
-import com.tencent.mm.ui.base.aa.a;
+import com.tencent.mm.sdk.platformtools.d;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.base.h;
+import com.tencent.mm.ui.base.h.a;
 
 public class SecurityImage
   extends LinearLayout
 {
-  private aa arb = null;
-  ProgressBar iAJ = null;
-  ImageView iAK = null;
-  Button iAL = null;
-  EditText iAM = null;
-  c iAN;
-  private String iuJ = null;
-  private String iuK = null;
-  private int iuM = 0;
+  private h apf = null;
+  private String ktL = null;
+  private String ktM = null;
+  private int ktO = 0;
+  ProgressBar kzJ = null;
+  ImageView kzK = null;
+  Button kzL = null;
+  EditText kzM = null;
+  private b kzN;
   
   public SecurityImage(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
   }
   
-  final void a(int paramInt, Bitmap paramBitmap, String paramString1, String paramString2)
-  {
-    iuJ = paramString1;
-    iuK = paramString2;
-    iuM = paramInt;
-    if (paramBitmap != null)
-    {
-      iAK.setImageBitmap(paramBitmap);
-      return;
-    }
-    t.e("!32@/B4Tb64lLpLCHt2tgayO47zr1AOy7hh2", "setSecImg failed, decode failed");
-  }
-  
-  public final void a(int paramInt, byte[] paramArrayOfByte, String paramString1, String paramString2)
-  {
-    fq(true);
-    iuJ = paramString1;
-    iuK = paramString2;
-    iuM = paramInt;
-    Bitmap localBitmap = e.aC(paramArrayOfByte);
-    if (localBitmap != null)
-    {
-      t.i("!32@/B4Tb64lLpLCHt2tgayO47zr1AOy7hh2", "dkwt setSecImg sid:%s key:%s imgBuf:%d [%d %d]", new Object[] { paramString1, paramString2, Integer.valueOf(paramArrayOfByte.length), Integer.valueOf(localBitmap.getWidth()), Integer.valueOf(localBitmap.getHeight()) });
-      a(paramInt, localBitmap, paramString1, paramString2);
-      return;
-    }
-    if (paramArrayOfByte == null) {}
-    for (paramInt = -1;; paramInt = paramArrayOfByte.length)
-    {
-      t.e("!32@/B4Tb64lLpLCHt2tgayO47zr1AOy7hh2", "dkwt setSecImg ERROR sid:%s key:%s imgBuf:%d", new Object[] { paramString1, paramString2, Integer.valueOf(paramInt) });
-      return;
-    }
-  }
-  
-  public final void dismiss()
-  {
-    if (arb != null)
-    {
-      arb.dismiss();
-      arb = null;
-    }
-  }
-  
-  final void fq(boolean paramBoolean)
+  private void ht(boolean paramBoolean)
   {
     int j = 0;
-    Object localObject = iAK;
+    Object localObject = kzK;
     if (paramBoolean)
     {
       i = 255;
       ((ImageView)localObject).setAlpha(i);
-      localObject = iAK;
+      localObject = kzK;
       if (!paramBoolean) {
         break label67;
       }
@@ -101,7 +54,7 @@ public class SecurityImage
     for (int i = 0;; i = -5592406)
     {
       ((ImageView)localObject).setBackgroundColor(i);
-      localObject = iAJ;
+      localObject = kzJ;
       i = j;
       if (paramBoolean) {
         i = 4;
@@ -113,114 +66,112 @@ public class SecurityImage
     }
   }
   
+  public final void a(int paramInt, byte[] paramArrayOfByte, String paramString1, String paramString2)
+  {
+    ht(true);
+    ktL = paramString1;
+    ktM = paramString2;
+    ktO = paramInt;
+    Bitmap localBitmap = d.aQ(paramArrayOfByte);
+    if (localBitmap != null)
+    {
+      u.i("!32@/B4Tb64lLpLCHt2tgayO47zr1AOy7hh2", "dkwt setSecImg sid:%s key:%s imgBuf:%d [%d %d]", new Object[] { paramString1, paramString2, Integer.valueOf(paramArrayOfByte.length), Integer.valueOf(localBitmap.getWidth()), Integer.valueOf(localBitmap.getHeight()) });
+      ktL = paramString1;
+      ktM = paramString2;
+      ktO = paramInt;
+      if (localBitmap != null)
+      {
+        kzK.setImageBitmap(localBitmap);
+        return;
+      }
+      u.e("!32@/B4Tb64lLpLCHt2tgayO47zr1AOy7hh2", "setSecImg failed, decode failed");
+      return;
+    }
+    if (paramArrayOfByte == null) {}
+    for (paramInt = -1;; paramInt = paramArrayOfByte.length)
+    {
+      u.e("!32@/B4Tb64lLpLCHt2tgayO47zr1AOy7hh2", "dkwt setSecImg ERROR sid:%s key:%s imgBuf:%d", new Object[] { paramString1, paramString2, Integer.valueOf(paramInt) });
+      return;
+    }
+  }
+  
+  public final void dismiss()
+  {
+    if (apf != null)
+    {
+      apf.dismiss();
+      apf = null;
+    }
+  }
+  
   public int getSecCodeType()
   {
-    return iuM;
+    return ktO;
   }
   
   public String getSecImgCode()
   {
-    if (iAM == null) {
+    if (kzM == null) {
       return "";
     }
-    return iAM.getText().toString().trim();
+    return kzM.getText().toString().trim();
   }
   
   public String getSecImgEncryptKey()
   {
-    return iuK;
+    return ktM;
   }
   
   public String getSecImgSid()
   {
-    return iuJ;
+    return ktL;
   }
   
-  public void setNetworkModel(c paramc)
+  public void setNetworkModel(b paramb)
   {
-    if (iAN != null) {
-      iAN.d(null);
+    if (kzN != null) {
+      kzN.kzR = null;
     }
-    iAN = paramc;
-    iAN.d(this);
+    kzN = paramb;
+    kzN.kzR = this;
   }
   
   public static final class a
   {
-    public static SecurityImage a(Context paramContext, int paramInt1, int paramInt2, byte[] paramArrayOfByte, String paramString1, String paramString2, DialogInterface.OnClickListener paramOnClickListener, DialogInterface.OnCancelListener paramOnCancelListener, DialogInterface.OnDismissListener paramOnDismissListener, SecurityImage.c paramc)
+    public static SecurityImage a(Context paramContext, int paramInt, byte[] paramArrayOfByte, String paramString1, String paramString2, final DialogInterface.OnClickListener paramOnClickListener, DialogInterface.OnCancelListener paramOnCancelListener, DialogInterface.OnDismissListener paramOnDismissListener, SecurityImage.b paramb)
     {
-      SecurityImage localSecurityImage = (SecurityImage)View.inflate(paramContext, a.k.security_image, null);
-      localSecurityImage.setNetworkModel(paramc);
-      iAJ = ((ProgressBar)localSecurityImage.findViewById(a.i.refresh_mini_pb));
-      iAK = ((ImageView)localSecurityImage.findViewById(a.i.authcode_iv));
-      iAL = ((Button)localSecurityImage.findViewById(a.i.authcode_change_btn));
-      iAM = ((EditText)localSecurityImage.findViewById(a.i.authcode_et));
-      iAL.setOnClickListener(new h(localSecurityImage));
-      if (iAN != null) {
-        iAN.onStart();
-      }
-      localSecurityImage.a(paramInt2, paramArrayOfByte, paramString1, paramString2);
-      paramContext = new aa.a(paramContext);
-      paramContext.nF(paramInt1);
-      paramContext.a(a.n.app_continue, new i(localSecurityImage, paramOnClickListener));
+      SecurityImage localSecurityImage = (SecurityImage)View.inflate(paramContext, 2131363295, null);
+      localSecurityImage.setNetworkModel(paramb);
+      kzJ = ((ProgressBar)localSecurityImage.findViewById(2131169526));
+      kzK = ((ImageView)localSecurityImage.findViewById(2131169525));
+      kzL = ((Button)localSecurityImage.findViewById(2131169527));
+      kzM = ((EditText)localSecurityImage.findViewById(2131169528));
+      kzL.setOnClickListener(new SecurityImage.1(localSecurityImage));
+      localSecurityImage.a(paramInt, paramArrayOfByte, paramString1, paramString2);
+      paramContext = new h.a(paramContext);
+      paramContext.qz(2131427616);
+      paramContext.b(2131430894, new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          paramOnClickListener.onClick(paramAnonymousDialogInterface, paramAnonymousInt);
+        }
+      });
       paramContext.c(paramOnCancelListener);
-      paramContext.ap(localSecurityImage);
-      paramContext.ft(true);
-      SecurityImage.a(localSecurityImage, paramContext.aMD());
+      paramContext.aq(localSecurityImage);
+      paramContext.hw(true);
+      SecurityImage.a(localSecurityImage, paramContext.bcu());
       SecurityImage.c(localSecurityImage).setOnDismissListener(paramOnDismissListener);
       SecurityImage.c(localSecurityImage).show();
       return localSecurityImage;
     }
   }
   
-  @SuppressLint({"HandlerLeak"})
-  public static final class b
-    extends SecurityImage.c
+  public static abstract class b
   {
-    Bitmap bitmap;
-    private String iAR;
-    final ac iAS = new j(this);
+    public SecurityImage kzR;
     
-    public b(String paramString)
-    {
-      iAR = paramString;
-    }
-    
-    public final void aLI()
-    {
-      bitmap = null;
-      new a((byte)0).execute(new String[] { iAR });
-    }
-    
-    public final void d(SecurityImage paramSecurityImage)
-    {
-      iAU = paramSecurityImage;
-    }
-    
-    protected final void onStart()
-    {
-      aLI();
-    }
-    
-    private final class a
-      extends AsyncTask
-    {
-      private a() {}
-    }
-  }
-  
-  public static abstract class c
-  {
-    public SecurityImage iAU;
-    
-    public abstract void aLI();
-    
-    public void d(SecurityImage paramSecurityImage)
-    {
-      iAU = paramSecurityImage;
-    }
-    
-    public abstract void onStart();
+    public abstract void bby();
   }
 }
 

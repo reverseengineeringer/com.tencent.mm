@@ -1,34 +1,8 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-final class s
+public abstract interface s
 {
-  public String appId;
-  public int bLd;
-  
-  public s(String paramString, int paramInt)
-  {
-    appId = paramString;
-    bLd = paramInt;
-  }
-  
-  public final boolean equals(Object paramObject)
-  {
-    if (paramObject == null) {}
-    do
-    {
-      do
-      {
-        return false;
-      } while (!(paramObject instanceof s));
-      paramObject = (s)paramObject;
-    } while ((!appId.equals(appId)) || (bLd != bLd));
-    return true;
-  }
-  
-  public final String toString()
-  {
-    return appId + bLd;
-  }
+  public abstract void a(int paramInt1, int paramInt2, String paramString, v paramv);
 }
 
 /* Location:

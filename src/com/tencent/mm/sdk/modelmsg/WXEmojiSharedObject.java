@@ -2,7 +2,7 @@ package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
 import android.text.TextUtils;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class WXEmojiSharedObject
   implements WXMediaMessage.b
@@ -27,7 +27,7 @@ public class WXEmojiSharedObject
   {
     if ((TextUtils.isEmpty(packageid)) || (TextUtils.isEmpty(thumburl)) || (TextUtils.isEmpty(url)) || (packageflag == -1))
     {
-      t.e("!56@/B4Tb64lLpKbvaoYwgBif4k4YzGLjyyWXGsruMsGSha3hI/nuh+94w==", "checkArgs fail, packageid or thumburl is invalid");
+      u.e("!56@/B4Tb64lLpKbvaoYwgBif4k4YzGLjyyWXGsruMsGSha3hI/nuh+94w==", "checkArgs fail, packageid or thumburl is invalid");
       return false;
     }
     return true;

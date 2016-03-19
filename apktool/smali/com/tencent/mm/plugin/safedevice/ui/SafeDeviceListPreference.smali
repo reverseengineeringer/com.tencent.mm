@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d;
+.implements Lcom/tencent/mm/r/d;
 
 
 # annotations
@@ -16,19 +16,19 @@
 
 
 # instance fields
-.field private bXB:Landroid/app/ProgressDialog;
-
-.field private cFm:Landroid/widget/Button;
+.field private coM:Landroid/app/ProgressDialog;
 
 .field private context:Landroid/content/Context;
 
-.field eKA:Lcom/tencent/mm/plugin/safedevice/a/c;
+.field private ddh:Landroid/widget/Button;
 
-.field private eKB:Z
+.field fVm:Lcom/tencent/mm/plugin/safedevice/a/c;
 
-.field eKC:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$a;
+.field private fVn:Z
 
-.field eKD:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$b;
+.field fVo:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$a;
+
+.field fVp:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$b;
 
 .field private mode:I
 
@@ -75,7 +75,7 @@
     .line 41
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->eKB:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->fVn:Z
 
     .line 81
     iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->context:Landroid/content/Context;
@@ -84,12 +84,14 @@
     return-void
 .end method
 
-.method private DV()V
+.method private Gb()V
     .locals 2
 
     .prologue
+    const v1, 0x7f0a05a4
+
     .line 153
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->eKB:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->fVn:Z
 
     if-nez v0, :cond_1
 
@@ -98,7 +100,7 @@
 
     const-string/jumbo v1, "has not binded"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 181
     :cond_0
@@ -113,29 +115,27 @@
 
     .line 177
     :pswitch_0
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_submenu:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->setWidgetLayoutResource(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->setWidgetLayoutResource(I)V
 
     goto :goto_0
 
     .line 160
     :pswitch_1
-    sget v0, Lcom/tencent/mm/a$k;->delete_safe_divice:I
+    const v0, 0x7f0a0377
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->setWidgetLayoutResource(I)V
 
     .line 161
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->cFm:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->ddh:Landroid/widget/Button;
 
     if-eqz v0, :cond_0
 
     .line 162
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->cFm:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->ddh:Landroid/widget/Button;
 
-    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/v;
+    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/v;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$3;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -143,9 +143,7 @@
 
     .line 173
     :pswitch_2
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_submenu:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->setWidgetLayoutResource(I)V
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->setWidgetLayoutResource(I)V
 
     goto :goto_0
 
@@ -166,7 +164,7 @@
 
     .prologue
     .line 29
-    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->bXB:Landroid/app/ProgressDialog;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->coM:Landroid/app/ProgressDialog;
 
     return-object p1
 .end method
@@ -176,29 +174,29 @@
 
     .prologue
     .line 29
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x16a
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     return-void
 .end method
 
-.method private afx()V
+.method private aqF()V
     .locals 2
 
     .prologue
     .line 119
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x16a
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 120
     return-void
@@ -219,7 +217,7 @@
 
     .prologue
     .line 29
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->afx()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->aqF()V
 
     return-void
 .end method
@@ -233,7 +231,7 @@
 
     iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->context:Landroid/content/Context;
 
-    sget v2, Lcom/tencent/mm/a$n;->safe_device_confirm_del_title:I
+    const v2, 0x7f0b07a6
 
     const/4 v3, 0x1
 
@@ -241,7 +239,7 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->eKA:Lcom/tencent/mm/plugin/safedevice/a/c;
+    iget-object v5, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->fVm:Lcom/tencent/mm/plugin/safedevice/a/c;
 
     iget-object v5, v5, Lcom/tencent/mm/plugin/safedevice/a/c;->field_name:Ljava/lang/String;
 
@@ -255,50 +253,50 @@
 
     iget-object v3, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->context:Landroid/content/Context;
 
-    sget v4, Lcom/tencent/mm/a$n;->safe_device_del:I
+    const v4, 0x7f0b07ab
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/ao/a;->w(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v3, v4}, Lcom/tencent/mm/aw/a;->A(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v3
 
     iget-object v4, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->context:Landroid/content/Context;
 
-    sget v5, Lcom/tencent/mm/a$n;->app_cancel:I
+    const v5, 0x7f0b0de4
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/ao/a;->w(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/tencent/mm/aw/a;->A(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v4
 
-    new-instance v5, Lcom/tencent/mm/plugin/safedevice/ui/s;
+    new-instance v5, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$1;
 
-    invoke-direct {v5, p0}, Lcom/tencent/mm/plugin/safedevice/ui/s;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;)V
+    invoke-direct {v5, p0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$1;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;)V
 
-    new-instance v6, Lcom/tencent/mm/plugin/safedevice/ui/u;
+    new-instance v6, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$2;
 
-    invoke-direct {v6, p0}, Lcom/tencent/mm/plugin/safedevice/ui/u;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;)V
+    invoke-direct {v6, p0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$2;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;)V
 
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/aa;
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
     .locals 7
 
     .prologue
     const/4 v6, 0x0
 
     .line 185
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->afx()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->aqF()V
 
     .line 187
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->coM:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->coM:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -307,14 +305,14 @@
     if-eqz v0, :cond_0
 
     .line 188
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->coM:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 189
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->bXB:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->coM:Landroid/app/ProgressDialog;
 
     .line 192
     :cond_0
@@ -323,27 +321,27 @@
     if-nez p2, :cond_2
 
     .line 194
-    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->afu()Lcom/tencent/mm/plugin/safedevice/a/d;
+    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->aqC()Lcom/tencent/mm/plugin/safedevice/a/d;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->eKA:Lcom/tencent/mm/plugin/safedevice/a/c;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->fVm:Lcom/tencent/mm/plugin/safedevice/a/c;
 
     new-array v2, v6, [Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/safedevice/a/d;->b(Lcom/tencent/mm/sdk/g/ae;[Ljava/lang/String;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/safedevice/a/d;->b(Lcom/tencent/mm/sdk/h/c;[Ljava/lang/String;)Z
 
     .line 195
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->eKD:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->fVp:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$b;
 
     if-eqz v0, :cond_1
 
     .line 196
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->eKD:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->fVp:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$b;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->bUr:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$b;->pf(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$b;->sK(Ljava/lang/String;)V
 
     .line 209
     :cond_1
@@ -352,11 +350,11 @@
 
     .line 199
     :cond_2
-    sget-object v0, Lcom/tencent/mm/plugin/a/a;->bWX:Lcom/tencent/mm/pluginsdk/i;
+    sget-object v0, Lcom/tencent/mm/plugin/a/a;->cob:Lcom/tencent/mm/pluginsdk/f;
 
     iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->context:Landroid/content/Context;
 
-    invoke-interface {v0, v1, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/i;->a(Landroid/content/Context;IILjava/lang/String;)Z
+    invoke-interface {v0, v1, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/f;->a(Landroid/content/Context;IILjava/lang/String;)Z
 
     move-result v0
 
@@ -367,7 +365,7 @@
 
     iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->context:Landroid/content/Context;
 
-    sget v2, Lcom/tencent/mm/a$n;->safe_device_del_failed:I
+    const v2, 0x7f0b07ac
 
     const/4 v3, 0x2
 
@@ -398,23 +396,23 @@
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
     .line 203
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->eKC:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->fVo:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$a;
 
     if-eqz v0, :cond_1
 
     .line 204
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->eKC:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->fVo:Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->eKA:Lcom/tencent/mm/plugin/safedevice/a/c;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->fVm:Lcom/tencent/mm/plugin/safedevice/a/c;
 
     iget-object v1, v1, Lcom/tencent/mm/plugin/safedevice/a/c;->field_uid:Ljava/lang/String;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$a;->pg(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference$a;->sL(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public final ip(I)V
+.method public final kg(I)V
     .locals 0
 
     .prologue
@@ -422,7 +420,7 @@
     iput p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->mode:I
 
     .line 111
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->DV()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->Gb()V
 
     .line 112
     return-void
@@ -435,10 +433,10 @@
     .line 103
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->eKB:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->fVn:Z
 
     .line 104
-    sget v0, Lcom/tencent/mm/a$i;->del_safe_device_btn:I
+    const v0, 0x7f070b01
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -446,10 +444,10 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->cFm:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->ddh:Landroid/widget/Button;
 
     .line 105
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->DV()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SafeDeviceListPreference;->Gb()V
 
     .line 106
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference;->onBindView(Landroid/view/View;)V
@@ -479,7 +477,7 @@
     check-cast v0, Landroid/view/LayoutInflater;
 
     .line 90
-    sget v1, Lcom/tencent/mm/a$i;->content:I
+    const v1, 0x7f0700c1
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -494,7 +492,7 @@
     invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 94
-    sget v3, Lcom/tencent/mm/a$k;->mm_preference_edit_safe_device:I
+    const v3, 0x7f0a0379
 
     invoke-virtual {v0, v3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 

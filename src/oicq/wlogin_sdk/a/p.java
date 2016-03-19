@@ -5,7 +5,7 @@ public final class p
 {
   public p()
   {
-    jNs = 270;
+    mbE = 270;
   }
 }
 

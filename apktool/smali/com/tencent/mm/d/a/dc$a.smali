@@ -15,23 +15,16 @@
 
 
 # instance fields
-.field public avp:I
-
-.field public azc:[B
+.field public awe:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 22
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 23
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/tencent/mm/d/a/dc$a;->avp:I
 
     return-void
 .end method

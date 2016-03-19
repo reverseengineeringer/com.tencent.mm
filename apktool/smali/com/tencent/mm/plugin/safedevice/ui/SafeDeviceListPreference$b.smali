@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract pf(Ljava/lang/String;)V
+.method public abstract sK(Ljava/lang/String;)V
 .end method

@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sight.encode.a;
 
 public abstract interface b$a
 {
-  public abstract void ajO();
+  public abstract void awu();
   
   public abstract void onError();
   

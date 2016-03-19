@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/app/plugin/b/a$h;
-.super Lcom/tencent/mm/sdk/c/e;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
 
 
@@ -22,7 +22,7 @@
     .line 149
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/e;-><init>(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
 
     .line 150
     return-void
@@ -30,12 +30,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/d;)Z
+.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 3
 
     .prologue
     .line 154
-    instance-of v0, p1, Lcom/tencent/mm/d/a/cd;
+    instance-of v0, p1, Lcom/tencent/mm/d/a/du;
 
     if-nez v0, :cond_0
 
@@ -44,7 +44,7 @@
 
     const-string/jumbo v1, "mismatched event"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 156
     const/4 v0, 0x0
@@ -55,10 +55,10 @@
 
     .line 158
     :cond_0
-    check-cast p1, Lcom/tencent/mm/d/a/cd;
+    check-cast p1, Lcom/tencent/mm/d/a/du;
 
     .line 159
-    invoke-static {}, Lcom/tencent/mm/modelvoice/x;->Cp()Lcom/tencent/mm/modelvoice/am;
+    invoke-static {}, Lcom/tencent/mm/modelvoice/m;->Ew()Lcom/tencent/mm/modelvoice/u;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->aFH()Lcom/tencent/mm/sdk/platformtools/bn$b;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v2
 
@@ -85,28 +85,28 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 161
-    iget-object v0, p1, Lcom/tencent/mm/d/a/cd;->axB:Lcom/tencent/mm/d/a/cd$b;
+    iget-object v0, p1, Lcom/tencent/mm/d/a/du;->axI:Lcom/tencent/mm/d/a/du$b;
 
     const-string/jumbo v1, ""
 
-    iput-object v1, v0, Lcom/tencent/mm/d/a/cd$b;->apy:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/d/a/du$b;->anC:Ljava/lang/String;
 
     .line 163
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/modelvoice/x;->Cp()Lcom/tencent/mm/modelvoice/am;
+    invoke-static {}, Lcom/tencent/mm/modelvoice/m;->Ew()Lcom/tencent/mm/modelvoice/u;
 
     move-result-object v0
 
-    iget-object v1, p1, Lcom/tencent/mm/d/a/cd;->axA:Lcom/tencent/mm/d/a/cd$a;
+    iget-object v1, p1, Lcom/tencent/mm/d/a/du;->axH:Lcom/tencent/mm/d/a/du$a;
 
-    iget-wide v1, v1, Lcom/tencent/mm/d/a/cd$a;->axb:J
+    iget-wide v1, v1, Lcom/tencent/mm/d/a/du$a;->avg:J
 
     long-to-int v1, v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelvoice/am;->dG(I)Lcom/tencent/mm/modelvoice/ad;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelvoice/u;->ee(I)Lcom/tencent/mm/modelvoice/p;
 
     move-result-object v0
 
@@ -114,11 +114,11 @@
     if-nez v0, :cond_2
 
     .line 165
-    iget-object v0, p1, Lcom/tencent/mm/d/a/cd;->axB:Lcom/tencent/mm/d/a/cd$b;
+    iget-object v0, p1, Lcom/tencent/mm/d/a/du;->axI:Lcom/tencent/mm/d/a/du$b;
 
     const-string/jumbo v1, ""
 
-    iput-object v1, v0, Lcom/tencent/mm/d/a/cd$b;->apy:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/d/a/du$b;->anC:Ljava/lang/String;
 
     .line 169
     :goto_1
@@ -128,11 +128,11 @@
 
     .line 167
     :cond_2
-    iget-object v1, p1, Lcom/tencent/mm/d/a/cd;->axB:Lcom/tencent/mm/d/a/cd$b;
+    iget-object v1, p1, Lcom/tencent/mm/d/a/du;->axI:Lcom/tencent/mm/d/a/du$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/modelvoice/ad;->apy:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/modelvoice/p;->anC:Ljava/lang/String;
 
-    iput-object v0, v1, Lcom/tencent/mm/d/a/cd$b;->apy:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/d/a/du$b;->anC:Ljava/lang/String;
 
     goto :goto_1
 .end method

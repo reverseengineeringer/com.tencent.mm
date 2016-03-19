@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bb
-  extends a.c
+  extends a.e
 {
   public a$bb()
   {
-    super("musicPlay", "playMusic", 69, false);
+    super("getSearchDisplayName", "getSearchDisplayName", 10000, false);
   }
 }
 

@@ -1,6 +1,9 @@
-.class final synthetic Lcom/tencent/mm/ui/c/h$1;
+.class final Lcom/tencent/mm/ui/c/h$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -9,239 +12,91 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic iBl:[I
+# instance fields
+.field final synthetic kAA:Lcom/tencent/mm/ui/c/h;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/tencent/mm/ui/c/h;)V
+    .locals 0
 
     .prologue
-    .line 48
-    invoke-static {}, Lcom/tencent/mm/ui/c/h$a;->aMv()[I
+    .line 27
+    iput-object p1, p0, Lcom/tencent/mm/ui/c/h$1;->kAA:Lcom/tencent/mm/ui/c/h;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final onClick(Landroid/view/View;)V
+    .locals 4
+
+    .prologue
+    .line 29
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    array-length v0, v0
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
-    new-array v0, v0, [I
+    move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
+    const v1, 0x10129
 
-    :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
+    const/4 v2, 0x0
 
-    sget v1, Lcom/tencent/mm/ui/c/h$a;->iBn:I
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    add-int/lit8 v1, v1, -0x1
+    move-result-object v2
 
-    const/4 v2, 0x1
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_a
+    .line 30
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/h$1;->kAA:Lcom/tencent/mm/ui/c/h;
 
-    :goto_0
-    :try_start_1
-    sget-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
+    iget-object v0, v0, Lcom/tencent/mm/ui/c/h;->iJu:Ljava/lang/ref/WeakReference;
 
-    sget v1, Lcom/tencent/mm/ui/c/h$a;->iBo:I
+    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    add-int/lit8 v1, v1, -0x1
+    move-result-object v0
 
-    const/4 v2, 0x2
+    check-cast v0, Landroid/content/Context;
 
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_9
+    new-instance v2, Landroid/content/Intent;
 
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
+    iget-object v1, p0, Lcom/tencent/mm/ui/c/h$1;->kAA:Lcom/tencent/mm/ui/c/h;
 
-    sget v1, Lcom/tencent/mm/ui/c/h$a;->iBp:I
+    iget-object v1, v1, Lcom/tencent/mm/ui/c/h;->iJu:Ljava/lang/ref/WeakReference;
 
-    add-int/lit8 v1, v1, -0x1
+    invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
-    const/4 v2, 0x3
+    move-result-object v1
 
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_8
+    check-cast v1, Landroid/content/Context;
 
-    :goto_2
-    :try_start_3
-    sget-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
+    const-class v3, Lcom/tencent/mm/ui/account/FacebookFriendUI;
 
-    sget v1, Lcom/tencent/mm/ui/c/h$a;->iBq:I
+    invoke-direct {v2, v1, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    add-int/lit8 v1, v1, -0x1
+    invoke-virtual {v0, v2}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    const/4 v2, 0x4
+    .line 31
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/h$1;->kAA:Lcom/tencent/mm/ui/c/h;
 
-    aput v2, v0, v1
-    :try_end_3
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_3 .. :try_end_3} :catch_7
+    iget-object v0, v0, Lcom/tencent/mm/ui/c/h;->view:Landroid/view/View;
 
-    :goto_3
-    :try_start_4
-    sget-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
+    const/16 v1, 0x8
 
-    sget v1, Lcom/tencent/mm/ui/c/h$a;->iBr:I
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    add-int/lit8 v1, v1, -0x1
-
-    const/4 v2, 0x5
-
-    aput v2, v0, v1
-    :try_end_4
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_4 .. :try_end_4} :catch_6
-
-    :goto_4
-    :try_start_5
-    sget-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
-
-    sget v1, Lcom/tencent/mm/ui/c/h$a;->iBs:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    const/4 v2, 0x6
-
-    aput v2, v0, v1
-    :try_end_5
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_5 .. :try_end_5} :catch_5
-
-    :goto_5
-    :try_start_6
-    sget-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
-
-    sget v1, Lcom/tencent/mm/ui/c/h$a;->iBt:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    const/4 v2, 0x7
-
-    aput v2, v0, v1
-    :try_end_6
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_6 .. :try_end_6} :catch_4
-
-    :goto_6
-    :try_start_7
-    sget-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
-
-    sget v1, Lcom/tencent/mm/ui/c/h$a;->iBu:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    const/16 v2, 0x8
-
-    aput v2, v0, v1
-    :try_end_7
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_7 .. :try_end_7} :catch_3
-
-    :goto_7
-    :try_start_8
-    sget-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
-
-    sget v1, Lcom/tencent/mm/ui/c/h$a;->iBm:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    const/16 v2, 0x9
-
-    aput v2, v0, v1
-    :try_end_8
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_8 .. :try_end_8} :catch_2
-
-    :goto_8
-    :try_start_9
-    sget-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
-
-    sget v1, Lcom/tencent/mm/ui/c/h$a;->iBv:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    const/16 v2, 0xa
-
-    aput v2, v0, v1
-    :try_end_9
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_9 .. :try_end_9} :catch_1
-
-    :goto_9
-    :try_start_a
-    sget-object v0, Lcom/tencent/mm/ui/c/h$1;->iBl:[I
-
-    sget v1, Lcom/tencent/mm/ui/c/h$a;->iBw:I
-
-    add-int/lit8 v1, v1, -0x1
-
-    const/16 v2, 0xb
-
-    aput v2, v0, v1
-    :try_end_a
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_a .. :try_end_a} :catch_0
-
-    :goto_a
+    .line 32
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_a
-
-    :catch_1
-    move-exception v0
-
-    goto :goto_9
-
-    :catch_2
-    move-exception v0
-
-    goto :goto_8
-
-    :catch_3
-    move-exception v0
-
-    goto :goto_7
-
-    :catch_4
-    move-exception v0
-
-    goto :goto_6
-
-    :catch_5
-    move-exception v0
-
-    goto :goto_5
-
-    :catch_6
-    move-exception v0
-
-    goto :goto_4
-
-    :catch_7
-    move-exception v0
-
-    goto :goto_3
-
-    :catch_8
-    move-exception v0
-
-    goto :goto_2
-
-    :catch_9
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_a
-    move-exception v0
-
-    goto :goto_0
 .end method

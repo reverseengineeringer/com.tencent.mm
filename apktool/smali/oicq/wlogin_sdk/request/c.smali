@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field jNe:Landroid/content/Context;
+.field mbq:Landroid/content/Context;
 
-.field jNf:Ljava/util/TreeMap;
+.field mbr:Ljava/util/TreeMap;
 
 
 # direct methods
@@ -22,10 +22,10 @@
 
     invoke-direct {v0}, Ljava/util/TreeMap;-><init>()V
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/c;->jNf:Ljava/util/TreeMap;
+    iput-object v0, p0, Loicq/wlogin_sdk/request/c;->mbr:Ljava/util/TreeMap;
 
     .line 38
-    iput-object p1, p0, Loicq/wlogin_sdk/request/c;->jNe:Landroid/content/Context;
+    iput-object p1, p0, Loicq/wlogin_sdk/request/c;->mbq:Landroid/content/Context;
 
     .line 39
     return-void
@@ -258,7 +258,7 @@
     move-exception v0
 
     :goto_1
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->c(Ljava/lang/Exception;)V
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->g(Ljava/lang/Exception;)V
 
     .line 426
     if-eqz v1, :cond_1
@@ -276,7 +276,7 @@
     :catch_1
     move-exception v0
 
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->c(Ljava/lang/Exception;)V
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->g(Ljava/lang/Exception;)V
 
     .line 438
     invoke-virtual {v10}, Loicq/wlogin_sdk/request/a;->close()V
@@ -290,7 +290,7 @@
     :catch_2
     move-exception v0
 
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->c(Ljava/lang/Exception;)V
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->g(Ljava/lang/Exception;)V
 
     .line 448
     invoke-virtual {v10}, Loicq/wlogin_sdk/request/a;->close()V
@@ -304,7 +304,7 @@
     :catch_3
     move-exception v0
 
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->c(Ljava/lang/Exception;)V
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->g(Ljava/lang/Exception;)V
 
     .line 463
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
@@ -321,7 +321,7 @@
     :catch_4
     move-exception v0
 
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->c(Ljava/lang/Exception;)V
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->g(Ljava/lang/Exception;)V
 
     .line 476
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
@@ -390,7 +390,7 @@
     :try_start_0
     new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
 
-    sget-object v1, Loicq/wlogin_sdk/request/i;->jNH:[B
+    sget-object v1, Loicq/wlogin_sdk/request/i;->mbT:[B
 
     .line 245
     const-string/jumbo v2, "DESede"
@@ -432,7 +432,7 @@
     invoke-virtual {v1}, Ljava/io/ObjectOutputStream;->close()V
 
     .line 256
-    iget-object v1, p0, Loicq/wlogin_sdk/request/c;->jNe:Landroid/content/Context;
+    iget-object v1, p0, Loicq/wlogin_sdk/request/c;->mbq:Landroid/content/Context;
 
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
@@ -485,7 +485,7 @@
     .line 264
     const-string/jumbo v1, "exception"
 
-    invoke-static {v1, v0}, Loicq/wlogin_sdk/tools/util;->bW(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Loicq/wlogin_sdk/tools/util;->cQ(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -503,7 +503,7 @@
     throw v0
 .end method
 
-.method private static be(Landroid/content/Context;Ljava/lang/String;)Ljava/util/TreeMap;
+.method private static bs(Landroid/content/Context;Ljava/lang/String;)Ljava/util/TreeMap;
     .locals 7
 
     .prologue
@@ -511,7 +511,7 @@
     const/4 v1, 0x0
 
     .line 276
-    invoke-static {p0, p1}, Loicq/wlogin_sdk/request/c;->bf(Landroid/content/Context;Ljava/lang/String;)[B
+    invoke-static {p0, p1}, Loicq/wlogin_sdk/request/c;->bt(Landroid/content/Context;Ljava/lang/String;)[B
 
     move-result-object v2
 
@@ -522,7 +522,7 @@
     :try_start_0
     new-instance v0, Ljavax/crypto/spec/SecretKeySpec;
 
-    sget-object v3, Loicq/wlogin_sdk/request/i;->jNH:[B
+    sget-object v3, Loicq/wlogin_sdk/request/i;->mbT:[B
 
     .line 282
     const-string/jumbo v4, "DESede"
@@ -614,12 +614,12 @@
     .line 303
     const-string/jumbo v3, "exception"
 
-    invoke-static {v3, v0}, Loicq/wlogin_sdk/tools/util;->bW(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Loicq/wlogin_sdk/tools/util;->cQ(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 308
     :goto_2
     :try_start_2
-    invoke-static {p0}, Loicq/wlogin_sdk/tools/util;->fa(Landroid/content/Context;)[B
+    invoke-static {p0}, Loicq/wlogin_sdk/tools/util;->gN(Landroid/content/Context;)[B
 
     move-result-object v0
 
@@ -694,7 +694,7 @@
     .line 333
     :cond_2
     :try_start_4
-    invoke-static {p0}, Loicq/wlogin_sdk/tools/util;->eZ(Landroid/content/Context;)[B
+    invoke-static {p0}, Loicq/wlogin_sdk/tools/util;->gM(Landroid/content/Context;)[B
 
     move-result-object v0
 
@@ -709,7 +709,7 @@
     new-instance v3, Ljavax/crypto/spec/SecretKeySpec;
 
     .line 338
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/d;->bb([B)[B
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/c;->bu([B)[B
 
     move-result-object v0
 
@@ -775,7 +775,7 @@
     .line 359
     :cond_4
     :try_start_6
-    invoke-static {p0}, Loicq/wlogin_sdk/tools/util;->eY(Landroid/content/Context;)[B
+    invoke-static {p0}, Loicq/wlogin_sdk/tools/util;->gL(Landroid/content/Context;)[B
 
     move-result-object v0
 
@@ -790,7 +790,7 @@
     new-instance v3, Ljavax/crypto/spec/SecretKeySpec;
 
     .line 364
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/d;->bb([B)[B
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/c;->bu([B)[B
 
     move-result-object v0
 
@@ -977,7 +977,7 @@
     goto/16 :goto_0
 .end method
 
-.method private static bf(Landroid/content/Context;Ljava/lang/String;)[B
+.method private static bt(Landroid/content/Context;Ljava/lang/String;)[B
     .locals 12
 
     .prologue
@@ -1104,7 +1104,7 @@
     move-object v1, v8
 
     :goto_1
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->c(Ljava/lang/Exception;)V
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->g(Ljava/lang/Exception;)V
 
     .line 503
     if-eqz v1, :cond_2
@@ -1174,7 +1174,7 @@
     move-object v1, v8
 
     :goto_2
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->c(Ljava/lang/Exception;)V
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->g(Ljava/lang/Exception;)V
 
     .line 532
     if-eqz v1, :cond_4
@@ -1231,7 +1231,7 @@
     goto :goto_1
 .end method
 
-.method private declared-synchronized dd(J)Loicq/wlogin_sdk/request/WloginAllSigInfo;
+.method private declared-synchronized eb(J)Loicq/wlogin_sdk/request/WloginAllSigInfo;
     .locals 4
 
     .prologue
@@ -1257,10 +1257,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Loicq/wlogin_sdk/tools/util;->bV(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Loicq/wlogin_sdk/tools/util;->cP(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 98
-    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->jNf:Ljava/util/TreeMap;
+    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->mbr:Ljava/util/TreeMap;
 
     new-instance v2, Ljava/lang/Long;
 
@@ -1286,7 +1286,7 @@
     .line 105
     :cond_0
     :try_start_1
-    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->jNe:Landroid/content/Context;
+    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->mbq:Landroid/content/Context;
 
     if-nez v0, :cond_1
 
@@ -1297,13 +1297,13 @@
 
     .line 110
     :cond_1
-    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->jNe:Landroid/content/Context;
+    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->mbq:Landroid/content/Context;
 
     .line 111
     const-string/jumbo v2, "tk_file"
 
     .line 110
-    invoke-static {v0, v2}, Loicq/wlogin_sdk/request/c;->be(Landroid/content/Context;Ljava/lang/String;)Ljava/util/TreeMap;
+    invoke-static {v0, v2}, Loicq/wlogin_sdk/request/c;->bs(Landroid/content/Context;Ljava/lang/String;)Ljava/util/TreeMap;
 
     move-result-object v0
 
@@ -1335,7 +1335,7 @@
 
     const-string/jumbo v2, "null"
 
-    invoke-static {v0, v2}, Loicq/wlogin_sdk/tools/util;->bV(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Loicq/wlogin_sdk/tools/util;->cP(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
@@ -1344,7 +1344,7 @@
 
     .line 124
     :cond_3
-    iget-object v1, p0, Loicq/wlogin_sdk/request/c;->jNf:Ljava/util/TreeMap;
+    iget-object v1, p0, Loicq/wlogin_sdk/request/c;->mbr:Ljava/util/TreeMap;
 
     new-instance v2, Ljava/lang/Long;
 
@@ -1382,7 +1382,7 @@
     :try_start_0
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Loicq/wlogin_sdk/request/c;->jNf:Ljava/util/TreeMap;
+    iget-object v2, v0, Loicq/wlogin_sdk/request/c;->mbr:Ljava/util/TreeMap;
 
     new-instance v3, Ljava/lang/Long;
 
@@ -1525,25 +1525,25 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Loicq/wlogin_sdk/tools/util;->Ct(Ljava/lang/String;)V
+    invoke-static {v3}, Loicq/wlogin_sdk/tools/util;->IN(Ljava/lang/String;)V
 
     .line 71
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Loicq/wlogin_sdk/request/c;->jNe:Landroid/content/Context;
+    iget-object v3, v0, Loicq/wlogin_sdk/request/c;->mbq:Landroid/content/Context;
 
     if-eqz v3, :cond_1
 
     .line 72
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Loicq/wlogin_sdk/request/c;->jNe:Landroid/content/Context;
+    iget-object v2, v0, Loicq/wlogin_sdk/request/c;->mbq:Landroid/content/Context;
 
     .line 73
     const-string/jumbo v3, "tk_file"
 
     .line 72
-    invoke-static {v2, v3}, Loicq/wlogin_sdk/request/c;->be(Landroid/content/Context;Ljava/lang/String;)Ljava/util/TreeMap;
+    invoke-static {v2, v3}, Loicq/wlogin_sdk/request/c;->bs(Landroid/content/Context;Ljava/lang/String;)Ljava/util/TreeMap;
 
     move-result-object v2
 
@@ -1559,7 +1559,7 @@
     :cond_0
     const-string/jumbo v3, "after loadTKTreeMap"
 
-    invoke-static {v3}, Loicq/wlogin_sdk/tools/util;->Ct(Ljava/lang/String;)V
+    invoke-static {v3}, Loicq/wlogin_sdk/tools/util;->IN(Ljava/lang/String;)V
 
     .line 78
     new-instance v3, Ljava/lang/Long;
@@ -1598,7 +1598,7 @@
 
     move-result-object v3
 
-    invoke-static {v3}, Loicq/wlogin_sdk/tools/util;->Ct(Ljava/lang/String;)V
+    invoke-static {v3}, Loicq/wlogin_sdk/tools/util;->IN(Ljava/lang/String;)V
 
     :cond_1
     move v4, v2
@@ -1639,7 +1639,7 @@
     :cond_2
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Loicq/wlogin_sdk/request/c;->jNf:Ljava/util/TreeMap;
+    iget-object v2, v0, Loicq/wlogin_sdk/request/c;->mbr:Ljava/util/TreeMap;
 
     new-instance v3, Ljava/lang/Long;
 
@@ -1677,7 +1677,7 @@
     goto/16 :goto_0
 .end method
 
-.method public final declared-synchronized k(Ljava/lang/Long;)V
+.method public final declared-synchronized g(Ljava/lang/Long;)V
     .locals 2
 
     .prologue
@@ -1685,23 +1685,23 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->jNf:Ljava/util/TreeMap;
+    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->mbr:Ljava/util/TreeMap;
 
     invoke-virtual {v0, p1}, Ljava/util/TreeMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 161
-    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->jNe:Landroid/content/Context;
+    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->mbq:Landroid/content/Context;
 
     if-eqz v0, :cond_0
 
     .line 163
-    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->jNe:Landroid/content/Context;
+    iget-object v0, p0, Loicq/wlogin_sdk/request/c;->mbq:Landroid/content/Context;
 
     .line 164
     const-string/jumbo v1, "tk_file"
 
     .line 163
-    invoke-static {v0, v1}, Loicq/wlogin_sdk/request/c;->be(Landroid/content/Context;Ljava/lang/String;)Ljava/util/TreeMap;
+    invoke-static {v0, v1}, Loicq/wlogin_sdk/request/c;->bs(Landroid/content/Context;Ljava/lang/String;)Ljava/util/TreeMap;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -1740,7 +1740,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized p(JJ)Loicq/wlogin_sdk/sharemem/WloginSigInfo;
+.method public final declared-synchronized q(JJ)Loicq/wlogin_sdk/sharemem/WloginSigInfo;
     .locals 4
 
     .prologue
@@ -1776,10 +1776,10 @@
 
     move-result-object v2
 
-    invoke-static {v0, v2}, Loicq/wlogin_sdk/tools/util;->bV(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Loicq/wlogin_sdk/tools/util;->cP(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 132
-    invoke-direct {p0, p1, p2}, Loicq/wlogin_sdk/request/c;->dd(J)Loicq/wlogin_sdk/request/WloginAllSigInfo;
+    invoke-direct {p0, p1, p2}, Loicq/wlogin_sdk/request/c;->eb(J)Loicq/wlogin_sdk/request/WloginAllSigInfo;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

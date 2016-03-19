@@ -3,10 +3,10 @@ package com.tencent.kingkong;
 import java.io.File;
 import java.util.Comparator;
 
-class FileUtils$1
+final class FileUtils$1
   implements Comparator
 {
-  public int compare(File paramFile1, File paramFile2)
+  public final int compare(File paramFile1, File paramFile2)
   {
     return (int)(paramFile2.lastModified() - paramFile1.lastModified());
   }

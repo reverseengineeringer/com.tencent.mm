@@ -15,34 +15,30 @@
 
 
 # instance fields
-.field public aGL:[B
+.field public aFa:I
 
-.field public aGM:I
+.field public aFb:Ljava/lang/String;
 
-.field public aqX:Ljava/lang/String;
+.field public aFc:Ljava/lang/String;
 
-.field public axE:I
+.field public aGl:I
 
-.field public content:Ljava/lang/String;
+.field public aGm:Ljava/lang/String;
 
-.field public context:Landroid/content/Context;
+.field public action:I
+
+.field public appId:Ljava/lang/String;
+
+.field public asc:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    const/4 v0, 0x0
-
-    .line 29
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 31
-    iput v0, p0, Lcom/tencent/mm/d/a/jq$a;->axE:I
-
-    .line 35
-    iput v0, p0, Lcom/tencent/mm/d/a/jq$a;->aGM:I
 
     return-void
 .end method

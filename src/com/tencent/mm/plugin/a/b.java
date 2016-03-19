@@ -3,61 +3,61 @@ package com.tencent.mm.plugin.a;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import com.tencent.mm.model.cf;
-import com.tencent.mm.plugin.report.service.j;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.model.aw;
+import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.y;
 
 public final class b
 {
-  public static String DR()
+  public static String FX()
   {
-    return aa.getContext().getSharedPreferences(aa.aES(), 0).getString("reg_last_exit_ui", "");
+    return y.getContext().getSharedPreferences(y.aUK(), 0).getString("reg_last_exit_ui", "");
   }
   
   public static void b(boolean paramBoolean, String paramString)
   {
     if (paramBoolean) {}
-    for (paramString = paramString + "," + yd() + "," + bn.DM() + "," + DR();; paramString = paramString + "," + yd() + "," + bn.DM() + "," + aa.getContext().getSharedPreferences(aa.aES(), 0).getString("reg_next_enter_ui", ""))
+    for (paramString = paramString + "," + yU() + "," + ay.FS() + "," + FX();; paramString = paramString + "," + yU() + "," + ay.FS() + "," + y.getContext().getSharedPreferences(y.aUK(), 0).getString("reg_next_enter_ui", ""))
     {
-      j localj = j.eJZ;
-      j.c(10645, paramString, true, true);
+      h localh = h.fUJ;
+      h.c(10645, paramString, true, true);
       return;
     }
   }
   
-  public static void dP(int paramInt)
+  public static void en(int paramInt)
   {
     if (paramInt > 0)
     {
-      cf.um();
-      cf.um();
+      aw.uB();
+      aw.uB();
       if (paramInt == 20) {
-        aa.getContext().getSharedPreferences(aa.aES(), 0).edit().putInt("reg_style_id", paramInt).commit();
+        y.getContext().getSharedPreferences(y.aUK(), 0).edit().putInt("reg_style_id", paramInt).commit();
       }
     }
   }
   
-  public static void iY(String paramString)
+  public static void kB(String paramString)
   {
-    aa.getContext().getSharedPreferences(aa.aES(), 0).edit().putString("reg_last_exit_ui", paramString).commit();
+    y.getContext().getSharedPreferences(y.aUK(), 0).edit().putString("reg_last_exit_ui", paramString).commit();
   }
   
-  public static void iZ(String paramString)
+  public static void kC(String paramString)
   {
-    aa.getContext().getSharedPreferences(aa.aES(), 0).edit().putString("reg_next_enter_ui", paramString).commit();
+    y.getContext().getSharedPreferences(y.aUK(), 0).edit().putString("reg_next_enter_ui", paramString).commit();
   }
   
-  public static void ja(String paramString)
+  public static void kD(String paramString)
   {
-    paramString = paramString + "," + yd() + "," + bn.DM() + "," + DR();
-    j localj = j.eJZ;
-    j.c(10645, paramString, true, true);
+    paramString = paramString + "," + yU() + "," + ay.FS() + "," + FX();
+    h localh = h.fUJ;
+    h.c(10645, paramString, true, true);
   }
   
-  private static int yd()
+  private static int yU()
   {
-    return aa.getContext().getSharedPreferences(aa.aES(), 0).getInt("reg_style_id", 0);
+    return y.getContext().getSharedPreferences(y.aUK(), 0).getInt("reg_style_id", 0);
   }
 }
 

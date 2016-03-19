@@ -6,38 +6,38 @@ import android.hardware.Camera.CameraInfo;
 import android.hardware.Camera.Parameters;
 import android.os.Build;
 import android.os.Build.VERSION;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.List;
 
 public final class c
 {
   public static c.a.a a(Activity paramActivity, int paramInt)
   {
-    if (binbgL == 1)
+    if (bsKbri == 1)
     {
-      t.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "openCamera(), CameraUtilImpl20, cameraId = " + paramInt);
+      u.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "openCamera(), CameraUtilImpl20, cameraId = " + paramInt);
       new d();
-      return d.os();
+      return d.oh();
     }
-    if (binbgD)
+    if (bsKbra)
     {
-      t.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "openCamera(), CameraUtilImplConfig, cameraId = " + paramInt);
+      u.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "openCamera(), CameraUtilImplConfig, cameraId = " + paramInt);
       new h();
-      return h.bP(paramInt);
+      return h.bQ(paramInt);
     }
     if (Build.MODEL.equals("M9"))
     {
       new i();
-      return i.os();
+      return i.oh();
     }
     if (getNumberOfCameras() > 1)
     {
-      t.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "openCamera(), CameraUtilImpl23, cameraId = " + paramInt);
+      u.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "openCamera(), CameraUtilImpl23, cameraId = " + paramInt);
       new f();
       return f.a(paramActivity, paramInt);
     }
     new e();
-    return e.bP(paramInt);
+    return e.bQ(paramInt);
   }
   
   public static List a(Camera.Parameters paramParameters)
@@ -58,7 +58,7 @@ public final class c
   
   public static int getNumberOfCameras()
   {
-    if ((binbgD) && (binbgJ))
+    if ((bsKbra) && (bsKbrg))
     {
       new h();
       return h.getNumberOfCameras();
@@ -67,9 +67,9 @@ public final class c
     return Camera.getNumberOfCameras();
   }
   
-  public static int oq()
+  public static int of()
   {
-    if (bisbhy == 1) {
+    if (bsQbrW == 1) {
       return 0;
     }
     int j = Camera.getNumberOfCameras();
@@ -79,12 +79,12 @@ public final class c
     {
       Camera.getCameraInfo(i, localCameraInfo);
       if (facing == 0) {
-        t.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "tigercam get bid %d", new Object[] { Integer.valueOf(i) });
+        u.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "tigercam get bid %d", new Object[] { Integer.valueOf(i) });
       }
     }
     for (;;)
     {
-      t.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "tigercam getBackCameraId %d", new Object[] { Integer.valueOf(i) });
+      u.d("!32@/B4Tb64lLpIbGsIG/EE4YUq4NCnwmUc1", "tigercam getBackCameraId %d", new Object[] { Integer.valueOf(i) });
       return i;
       i += 1;
       break;
@@ -92,9 +92,9 @@ public final class c
     }
   }
   
-  public static boolean or()
+  public static boolean og()
   {
-    if (binbgL == 1) {}
+    if (bsKbri == 1) {}
     while ((Build.VERSION.SDK_INT == 10) && (Build.MODEL.equals("GT-S5360"))) {
       return true;
     }
@@ -105,8 +105,8 @@ public final class c
   {
     public static final class a
     {
-      public int bgY;
-      public Camera bhb;
+      public int brw;
+      public Camera brz;
     }
   }
 }

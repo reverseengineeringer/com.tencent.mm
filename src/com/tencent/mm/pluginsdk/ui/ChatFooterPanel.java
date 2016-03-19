@@ -3,62 +3,72 @@ package com.tencent.mm.pluginsdk.ui;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.LinearLayout;
-import com.tencent.mm.pluginsdk.ui.chat.an;
+import com.tencent.mm.pluginsdk.ui.chat.f;
 
 public abstract class ChatFooterPanel
   extends LinearLayout
 {
-  public a gOQ;
-  public an gOR;
-  protected int gOS;
+  public a iGi;
+  public f iGj;
+  protected int iGk;
   
   public ChatFooterPanel(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
   }
   
-  public abstract void azK();
+  public abstract void RN();
   
-  public abstract void azL();
+  public abstract void RO();
   
-  public abstract void azM();
+  public abstract void RP();
   
-  public abstract void azN();
+  public abstract void RQ();
+  
+  public abstract void RR();
+  
+  public abstract void RS();
   
   public void destroy() {}
+  
+  public abstract void j(boolean paramBoolean1, boolean paramBoolean2);
   
   public abstract void onPause();
   
   public abstract void onResume();
   
-  public void setCallback(an paraman)
+  public void setCallback(f paramf)
   {
-    gOR = paraman;
+    iGj = paramf;
   }
+  
+  public abstract void setDefaultEmojiByDetail(String paramString);
   
   public void setFooterType(int paramInt)
   {
-    gOS = paramInt;
+    iGk = paramInt;
   }
   
   public void setOnTextOperationListener(a parama)
   {
-    gOQ = parama;
+    iGi = parama;
   }
+  
+  public abstract void setPortHeightPx(int paramInt);
   
   public abstract void setSendButtonEnable(boolean paramBoolean);
   
-  public abstract void v(boolean paramBoolean1, boolean paramBoolean2);
+  public abstract void setTalkerName(String paramString);
   
   public static abstract interface a
   {
-    public abstract void Ye();
+    public abstract void ahA();
     
-    public abstract void Yf();
+    public abstract void ahB();
     
     public abstract void append(String paramString);
     
-    public abstract void co(boolean paramBoolean);
+    public abstract void dr(boolean paramBoolean);
   }
 }
 

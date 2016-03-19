@@ -2,9 +2,9 @@ package b.a.f;
 
 public abstract interface c
 {
-  public abstract String aWc();
+  public abstract String boR();
   
-  public abstract String aWd();
+  public abstract String getNonce();
 }
 
 /* Location:

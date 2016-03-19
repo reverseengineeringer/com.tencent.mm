@@ -2,11 +2,11 @@ package com.tencent.mm.compatible.d;
 
 public final class b$a
 {
-  public int bgV;
-  public int bgW;
-  public int bgX;
-  public int bgY;
-  public int bgZ;
+  public int brt;
+  public int bru;
+  public int brv;
+  public int brw;
+  public int brx;
   public int height;
   public int width;
   
@@ -14,11 +14,11 @@ public final class b$a
   
   public final void reset()
   {
-    bgV = 0;
-    bgW = 0;
-    bgX = 0;
-    bgY = 0;
-    bgZ = 0;
+    brt = 0;
+    bru = 0;
+    brv = 0;
+    brw = 0;
+    brx = 0;
     width = 0;
     height = 0;
   }

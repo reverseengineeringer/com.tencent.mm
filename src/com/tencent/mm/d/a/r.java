@@ -1,23 +1,38 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
 
 public final class r
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a auE = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a asA = new a();
+  public b asB = new b();
   
   public r()
   {
-    id = "CancelRecogImageFile";
-    hXT = atO;
+    id = "BizPreSearch";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String filePath;
+    public int action = 0;
+    public String asC;
+    public long asD = 0L;
+    public boolean asE = false;
+    public Runnable asF;
+    public Context context;
+    public int fromScene = 0;
+    public int offset = 0;
+    public String title;
+  }
+  
+  public static final class b
+  {
+    public boolean asG = false;
   }
 }
 

@@ -15,5 +15,8 @@
 
 
 # virtual methods
-.method public abstract rG(Ljava/lang/String;)Ljava/lang/String;
+.method public abstract biD()V
+.end method
+
+.method public abstract onAnimationEnd()V
 .end method

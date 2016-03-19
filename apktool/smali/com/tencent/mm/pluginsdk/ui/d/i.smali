@@ -1,498 +1,440 @@
-.class public final Lcom/tencent/mm/pluginsdk/ui/d/i;
-.super Ljava/lang/Object;
+.class public Lcom/tencent/mm/pluginsdk/ui/d/i;
+.super Landroid/text/style/ClickableSpan;
 .source "SourceFile"
 
 
-# static fields
-.field static hbl:Ljava/util/LinkedList;
+# instance fields
+.field private frQ:I
+
+.field fxe:Z
+
+.field gZd:Ljava/lang/String;
+
+.field public iQe:Z
+
+.field private iQf:I
+
+.field iQg:Lcom/tencent/mm/pluginsdk/ui/d/c;
+
+.field private iQh:Lcom/tencent/mm/pluginsdk/ui/applet/g;
+
+.field private iQi:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public constructor <init>()V
+    .locals 2
 
     .prologue
+    const/4 v1, 0x0
+
+    .line 28
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
+
+    .line 17
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQe:Z
+
     .line 22
-    new-instance v0, Ljava/util/LinkedList;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQg:Lcom/tencent/mm/pluginsdk/ui/d/c;
 
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
+    .line 23
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQh:Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/d/i;->hbl:Ljava/util/LinkedList;
+    .line 24
+    const/4 v0, 0x1
 
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->fxe:Z
+
+    .line 25
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQi:Ljava/lang/ref/WeakReference;
+
+    .line 28
     return-void
 .end method
 
-.method public static a(Landroid/content/Context;Ljava/lang/CharSequence;)Landroid/text/SpannableString;
-    .locals 1
+.method public constructor <init>(ILcom/tencent/mm/pluginsdk/ui/applet/g;)V
+    .locals 3
 
     .prologue
-    .line 150
+    const/4 v2, 0x0
+
     const/4 v0, 0x0
 
-    invoke-static {p0, p1, v0}, Lcom/tencent/mm/pluginsdk/ui/d/i;->b(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+    .line 30
+    invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    move-result-object v0
+    .line 17
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQe:Z
 
-    return-object v0
-.end method
+    .line 22
+    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQg:Lcom/tencent/mm/pluginsdk/ui/d/c;
 
-.method public static a(Landroid/content/Context;Ljava/lang/CharSequence;F)Landroid/text/SpannableString;
-    .locals 1
+    .line 23
+    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQh:Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
-    .prologue
-    .line 139
-    float-to-int v0, p2
+    .line 24
+    const/4 v1, 0x1
 
-    invoke-static {p0, p1, v0}, Lcom/tencent/mm/pluginsdk/ui/d/i;->b(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->fxe:Z
 
-    move-result-object v0
+    .line 25
+    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQi:Ljava/lang/ref/WeakReference;
 
-    return-object v0
-.end method
+    .line 33
+    if-eqz p2, :cond_1
 
-.method public static a(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
-    .locals 1
+    .line 34
+    iget v1, p2, Lcom/tencent/mm/pluginsdk/ui/applet/g;->linkColor:I
 
-    .prologue
-    .line 128
-    invoke-static {p0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/d/i;->b(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+    .line 35
+    iget v0, p2, Lcom/tencent/mm/pluginsdk/ui/applet/g;->backgroundColor:I
 
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static a(Landroid/widget/TextView;I)Landroid/text/SpannableString;
-    .locals 5
-
-    .prologue
-    const/4 v4, 0x0
-
-    const/4 v3, 0x1
-
-    .line 71
-    if-nez p0, :cond_0
-
-    .line 72
-    const-string/jumbo v0, "!32@/B4Tb64lLpI8edxndlo/LZHlIfZcNjMb"
-
-    const-string/jumbo v1, "spanForTextView, textView cannot be null!"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 73
-    new-instance v0, Landroid/text/SpannableString;
-
-    const-string/jumbo v1, ""
-
-    invoke-direct {v0, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
-
-    .line 75
+    .line 37
     :goto_0
-    return-object v0
+    if-nez v1, :cond_0
 
+    if-nez v0, :cond_0
+
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/d/i;->oK(I)V
+
+    .line 39
+    :goto_1
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/d/c;
+
+    invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/ui/d/c;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQg:Lcom/tencent/mm/pluginsdk/ui/d/c;
+
+    .line 41
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQh:Lcom/tencent/mm/pluginsdk/ui/applet/g;
+
+    .line 42
+    return-void
+
+    .line 37
     :cond_0
-    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
+    invoke-direct {p0, v1, v0}, Lcom/tencent/mm/pluginsdk/ui/d/i;->bE(II)V
+
+    goto :goto_1
+
+    :cond_1
+    move v1, v0
+
+    goto :goto_0
+.end method
+
+.method private bE(II)V
+    .locals 0
+
+    .prologue
+    .line 82
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQf:I
+
+    .line 83
+    iput p2, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->frQ:I
+
+    .line 84
+    return-void
+.end method
+
+
+# virtual methods
+.method public final aOI()V
+    .locals 2
+
+    .prologue
+    .line 129
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQg:Lcom/tencent/mm/pluginsdk/ui/d/c;
+
+    const/4 v1, 0x0
+
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/c;->mContext:Landroid/content/Context;
+
+    .line 130
+    return-void
+.end method
+
+.method protected final oK(I)V
+    .locals 4
+
+    .prologue
+    const v3, 0x7f080004
+
+    .line 63
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextSize()F
+    .line 64
+    packed-switch p1, :pswitch_data_0
+
+    .line 79
+    :goto_0
+    return-void
+
+    .line 66
+    :pswitch_0
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    const v1, 0x7f080199
+
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    const v1, -0x5a26ce
+
+    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/i;->bE(II)V
+
+    goto :goto_0
+
+    .line 70
+    :pswitch_1
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f08018e
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
-    float-to-int v1, v1
-
-    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;
-
-    invoke-direct {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/d/ac;-><init>(Landroid/content/Context;)V
-
-    iput-boolean v3, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hct:Z
-
-    iput-boolean v3, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcs:Z
-
-    iput p1, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcB:I
-
-    iput-boolean v3, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcu:Z
-
-    iput-boolean v4, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcw:Z
-
-    iput-boolean v3, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcD:Z
-
-    invoke-virtual {v2, p0}, Lcom/tencent/mm/pluginsdk/ui/d/ac;->c(Landroid/widget/TextView;)Lcom/tencent/mm/pluginsdk/ui/d/ac;
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    if-ne p1, v3, :cond_2
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
 
-    iput-boolean v3, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcv:Z
+    move-result v0
 
-    iput-boolean v3, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcx:Z
+    invoke-direct {p0, v1, v0}, Lcom/tencent/mm/pluginsdk/ui/d/i;->bE(II)V
 
-    :cond_1
-    :goto_1
-    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
+    goto :goto_0
+
+    .line 74
+    :pswitch_2
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    const v2, 0x7f080208
+
+    invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v1
+
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getColor(I)I
+
+    move-result v0
+
+    invoke-direct {p0, v1, v0}, Lcom/tencent/mm/pluginsdk/ui/d/i;->bE(II)V
+
+    goto :goto_0
+
+    .line 64
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+    .end packed-switch
+.end method
+
+.method public onClick(Landroid/view/View;)V
+    .locals 9
+
+    .prologue
+    const/4 v7, 0x1
+
+    const/4 v1, 0x0
+
+    const/4 v8, 0x0
+
+    .line 97
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQg:Lcom/tencent/mm/pluginsdk/ui/d/c;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQh:Lcom/tencent/mm/pluginsdk/ui/applet/g;
+
+    if-eqz v0, :cond_0
+
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->fxe:Z
+
+    if-eqz v0, :cond_0
+
+    .line 98
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQg:Lcom/tencent/mm/pluginsdk/ui/d/c;
+
+    invoke-virtual {p1}, Landroid/view/View;->getContext()Landroid/content/Context;
 
     move-result-object v2
 
-    invoke-virtual {v0, v2, v1, v3}, Lcom/tencent/mm/pluginsdk/ui/d/ac;->a(Ljava/lang/CharSequence;IZ)Landroid/text/SpannableString;
+    iput-object v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/c;->mContext:Landroid/content/Context;
 
-    move-result-object v0
+    .line 99
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQg:Lcom/tencent/mm/pluginsdk/ui/d/c;
+
+    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQh:Lcom/tencent/mm/pluginsdk/ui/applet/g;
+
+    if-nez v3, :cond_1
+
+    const-string/jumbo v0, "!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w="
+
+    const-string/jumbo v2, "onClick error, hrefInfo is null!"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 100
+    :goto_0
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQg:Lcom/tencent/mm/pluginsdk/ui/d/c;
+
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/c;->mContext:Landroid/content/Context;
+
+    .line 101
+    iput-boolean v8, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->fxe:Z
+
+    .line 103
+    :cond_0
+    return-void
+
+    .line 99
+    :cond_1
+    const-string/jumbo v0, "!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w="
+
+    const-string/jumbo v4, "MMSpanClickListener.onClick, hrefInfo type = %d"
+
+    new-array v5, v7, [Ljava/lang/Object;
+
+    iget v6, v3, Lcom/tencent/mm/pluginsdk/ui/applet/g;->type:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v5, v8
+
+    invoke-static {v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, v2, Lcom/tencent/mm/pluginsdk/ui/d/c;->mContext:Landroid/content/Context;
+
+    if-nez v0, :cond_2
+
+    const-string/jumbo v0, "!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w="
+
+    const-string/jumbo v2, "onClick error, context is null!"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_2
-    const/4 v2, 0x2
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/e;->iPI:Ljava/util/LinkedList;
 
-    if-ne p1, v2, :cond_1
+    if-eqz v0, :cond_3
 
-    iput-boolean v4, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcv:Z
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/e;->iPI:Ljava/util/LinkedList;
 
-    iput-boolean v4, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcx:Z
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_3
+
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/e;->iPI:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
+
+    move-result v4
+
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/e;->iPI:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/pluginsdk/ui/d/b;
+
+    const-string/jumbo v5, "!44@/B4Tb64lLpLO1dGQBsz4NTV9+/0VhiZSRvamG9JME6w="
+
+    const-string/jumbo v6, "spanCallbackList.size:%d, get the last callback"
+
+    new-array v7, v7, [Ljava/lang/Object;
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v7, v8
+
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    :goto_1
+    iget-object v4, v2, Lcom/tencent/mm/pluginsdk/ui/d/c;->gZd:Ljava/lang/String;
+
+    iput-object v4, v3, Lcom/tencent/mm/pluginsdk/ui/applet/g;->gZd:Ljava/lang/String;
+
+    sget-object v4, Lcom/tencent/mm/pluginsdk/i$a;->iyS:Lcom/tencent/mm/pluginsdk/i$c;
+
+    iget-object v2, v2, Lcom/tencent/mm/pluginsdk/ui/d/c;->mContext:Landroid/content/Context;
+
+    invoke-interface {v4, v2, v3, v0}, Lcom/tencent/mm/pluginsdk/i$c;->a(Landroid/content/Context;Lcom/tencent/mm/pluginsdk/ui/applet/g;Lcom/tencent/mm/pluginsdk/ui/d/b;)Z
+
+    iput-object v1, v3, Lcom/tencent/mm/pluginsdk/ui/applet/g;->gZd:Ljava/lang/String;
+
+    goto :goto_0
+
+    :cond_3
+    move-object v0, v1
 
     goto :goto_1
 .end method
 
-.method public static a(Lcom/tencent/mm/pluginsdk/ui/d/f;)V
-    .locals 1
-
-    .prologue
-    .line 33
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/i;->hbl:Ljava/util/LinkedList;
-
-    invoke-virtual {v0, p0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
-
-    .line 34
-    return-void
-.end method
-
-.method public static aCF()V
-    .locals 1
-
-    .prologue
-    .line 41
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/d/z;
-
-    invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/ui/d/z;-><init>()V
-
-    sput-object v0, Lcom/tencent/mm/aq/b$a;->icM:Lcom/tencent/mm/aq/b;
-
-    .line 42
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/d/b;->init()V
-
-    .line 43
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/d/w;->init()V
-
-    .line 44
-    return-void
-.end method
-
-.method public static aCG()V
-    .locals 0
-
-    .prologue
-    .line 240
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/d/d;->aCB()V
-
-    .line 241
-    return-void
-.end method
-
-.method public static aCH()V
-    .locals 0
-
-    .prologue
-    .line 244
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/d/d;->aCC()V
-
-    .line 245
-    return-void
-.end method
-
-.method private static b(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+.method public updateDrawState(Landroid/text/TextPaint;)V
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
-    .line 154
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;
+    .line 108
+    invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/d/ac;-><init>(Landroid/content/Context;)V
+    .line 109
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQf:I
 
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcu:Z
+    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
 
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcv:Z
+    .line 110
+    invoke-virtual {p1, v1}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcs:Z
-
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcw:Z
-
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hct:Z
-
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcD:Z
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, p1, p2, v1}, Lcom/tencent/mm/pluginsdk/ui/d/ac;->a(Ljava/lang/CharSequence;IZ)Landroid/text/SpannableString;
-
-    move-result-object v0
-
-    .line 156
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/d/z;->a(Landroid/text/Spannable;)V
-
-    .line 157
-    return-object v0
-.end method
-
-.method public static b(Landroid/widget/TextView;)Landroid/text/SpannableString;
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x1
-
-    .line 49
-    if-nez p0, :cond_0
-
-    .line 50
-    const-string/jumbo v0, "!32@/B4Tb64lLpI8edxndlo/LZHlIfZcNjMb"
-
-    const-string/jumbo v1, "spanForTextView, textView cannot be null!"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 51
-    new-instance v0, Landroid/text/SpannableString;
-
-    const-string/jumbo v1, ""
-
-    invoke-direct {v0, v1}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
-
-    .line 53
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-virtual {p0}, Landroid/widget/TextView;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getTextSize()F
-
-    move-result v1
-
-    float-to-int v1, v1
-
-    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;
-
-    invoke-direct {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/d/ac;-><init>(Landroid/content/Context;)V
-
-    iput-boolean v3, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hct:Z
-
-    iput-boolean v3, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcs:Z
-
-    iput-boolean v3, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcy:Z
-
-    iput-boolean v3, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcA:Z
-
-    iput v3, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcB:I
-
-    iput-boolean v3, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcu:Z
-
-    const/4 v0, 0x0
-
-    iput-boolean v0, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcw:Z
-
-    iput-boolean v3, v2, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcD:Z
-
-    invoke-virtual {v2, p0}, Lcom/tencent/mm/pluginsdk/ui/d/ac;->c(Landroid/widget/TextView;)Lcom/tencent/mm/pluginsdk/ui/d/ac;
-
-    move-result-object v0
-
-    iput-boolean v3, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcv:Z
-
-    iput-boolean v3, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcx:Z
-
-    invoke-virtual {p0}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2, v1, v3}, Lcom/tencent/mm/pluginsdk/ui/d/ac;->a(Ljava/lang/CharSequence;IZ)Landroid/text/SpannableString;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public static b(Lcom/tencent/mm/pluginsdk/ui/d/f;)V
-    .locals 1
-
-    .prologue
-    .line 37
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/d/i;->hbl:Ljava/util/LinkedList;
-
-    invoke-virtual {v0, p0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
-
-    .line 38
-    return-void
-.end method
-
-.method public static bk(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 207
-    .line 208
-    invoke-static {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/d/w;->bj(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 209
-    invoke-static {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/d/d;->bj(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 210
-    return-object v0
-.end method
-
-.method public static c(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x1
-
-    const/4 v1, 0x0
-
-    .line 178
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/d/ac;-><init>(Landroid/content/Context;)V
-
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hct:Z
-
-    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcs:Z
-
-    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcy:Z
-
-    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcz:Z
-
-    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcA:Z
-
-    iput v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcB:I
-
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcu:Z
-
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcw:Z
-
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcv:Z
-
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcx:Z
-
-    iput-boolean v1, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcD:Z
-
-    invoke-virtual {v0, p1, p2, v2}, Lcom/tencent/mm/pluginsdk/ui/d/ac;->a(Ljava/lang/CharSequence;IZ)Landroid/text/SpannableString;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static clearCache()V
-    .locals 2
-
-    .prologue
-    .line 234
-    const-string/jumbo v0, "!32@/B4Tb64lLpI8edxndlo/LZHlIfZcNjMb"
-
-    const-string/jumbo v1, "clear MMSpanManager cache"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 235
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/d/ac;->clearCache()V
-
-    .line 236
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/d/z;->clearCache()V
-
-    .line 237
-    return-void
-.end method
-
-.method public static vl(Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 214
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
-
-    move-result-object v0
-
-    invoke-static {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/d/d;->aA(Landroid/content/Context;Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static vm(Ljava/lang/String;)Ljava/lang/String;
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x1
-
-    const/4 v2, 0x0
-
-    .line 218
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
-
-    move-result v0
+    .line 111
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->iQe:Z
 
     if-eqz v0, :cond_0
 
-    .line 227
+    .line 112
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/d/i;->frQ:I
+
+    iput v0, p1, Landroid/text/TextPaint;->bgColor:I
+
+    .line 126
     :goto_0
-    return-object p0
+    return-void
 
-    .line 222
+    .line 114
     :cond_0
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/d/ac;-><init>(Landroid/content/Context;)V
-
-    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hct:Z
-
-    iput-boolean v3, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcs:Z
-
-    iput-boolean v3, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcy:Z
-
-    iput-boolean v3, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcz:Z
-
-    iput-boolean v3, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcA:Z
-
-    iput v3, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcB:I
-
-    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcu:Z
-
-    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcw:Z
-
-    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcv:Z
-
-    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcx:Z
-
-    iput-boolean v2, v0, Lcom/tencent/mm/pluginsdk/ui/d/ac;->hcD:Z
-
-    .line 226
-    invoke-virtual {v0, p0, v2, v2}, Lcom/tencent/mm/pluginsdk/ui/d/ac;->a(Ljava/lang/CharSequence;IZ)Landroid/text/SpannableString;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/text/SpannableString;->toString()Ljava/lang/String;
-
-    move-result-object p0
+    iput v1, p1, Landroid/text/TextPaint;->bgColor:I
 
     goto :goto_0
 .end method

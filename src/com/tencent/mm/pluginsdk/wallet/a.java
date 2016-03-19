@@ -1,10 +1,9 @@
 package com.tencent.mm.pluginsdk.wallet;
 
-import android.os.Parcelable.Creator;
-
-final class a
-  implements Parcelable.Creator
-{}
+public abstract interface a
+{
+  public abstract void z(int paramInt, String paramString);
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.pluginsdk.wallet.a

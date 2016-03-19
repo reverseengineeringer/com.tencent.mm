@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private biY:Z
+.field private btv:Z
 
-.field private biZ:Ljava/lang/reflect/Field;
+.field private btw:Ljava/lang/reflect/Field;
 
 .field private classname:Ljava/lang/String;
 
@@ -20,13 +20,13 @@
     .locals 2
 
     .prologue
-    .line 15
+    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
+    .line 14
     if-nez p1, :cond_0
 
-    .line 17
+    .line 15
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "obj cannot be null"
@@ -35,19 +35,19 @@
 
     throw v0
 
-    .line 19
+    .line 17
     :cond_0
     iput-object p1, p0, Lcom/tencent/mm/compatible/loader/d;->obj:Ljava/lang/Object;
 
-    .line 20
+    .line 18
     iput-object p2, p0, Lcom/tencent/mm/compatible/loader/d;->fieldName:Ljava/lang/String;
 
-    .line 21
+    .line 19
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->classname:Ljava/lang/String;
 
-    .line 22
+    .line 20
     return-void
 .end method
 
@@ -57,21 +57,21 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 25
-    iget-boolean v0, p0, Lcom/tencent/mm/compatible/loader/d;->biY:Z
+    .line 23
+    iget-boolean v0, p0, Lcom/tencent/mm/compatible/loader/d;->btv:Z
 
     if-eqz v0, :cond_1
 
-    .line 57
+    .line 56
     :cond_0
     :goto_0
     return-void
 
-    .line 27
+    .line 26
     :cond_1
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/loader/d;->biY:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/loader/d;->btv:Z
 
-    .line 29
+    .line 28
     iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->obj:Ljava/lang/Object;
 
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
@@ -80,11 +80,11 @@
 
     move-object v1, v0
 
-    .line 30
+    .line 29
     :goto_1
     if-eqz v1, :cond_0
 
-    .line 32
+    .line 31
     :try_start_0
     iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->fieldName:Ljava/lang/String;
 
@@ -92,18 +92,18 @@
 
     move-result-object v0
 
-    .line 33
+    .line 32
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 34
-    iput-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->biZ:Ljava/lang/reflect/Field;
+    .line 33
+    iput-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->btw:Ljava/lang/reflect/Field;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 54
+    .line 53
     invoke-virtual {v1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
 
     goto :goto_0
@@ -111,22 +111,28 @@
     :catch_0
     move-exception v0
 
-    .line 39
+    .line 38
     :try_start_1
     iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->classname:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->classname:Ljava/lang/String;
+
+    const-string/jumbo v2, ""
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 40
+    .line 39
     invoke-virtual {v1}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
 
     move-result-object v2
 
-    .line 41
+    .line 40
     array-length v3, v2
 
     const/4 v0, 0x0
@@ -136,7 +142,7 @@
 
     aget-object v4, v2, v0
 
-    .line 42
+    .line 41
     invoke-virtual {v4}, Ljava/lang/reflect/Field;->getType()Ljava/lang/Class;
 
     move-result-object v5
@@ -153,18 +159,18 @@
 
     if-eqz v5, :cond_3
 
-    .line 43
+    .line 42
     const/4 v0, 0x1
 
     invoke-virtual {v4, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 44
-    iput-object v4, p0, Lcom/tencent/mm/compatible/loader/d;->biZ:Ljava/lang/reflect/Field;
+    .line 43
+    iput-object v4, p0, Lcom/tencent/mm/compatible/loader/d;->btw:Ljava/lang/reflect/Field;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 54
+    .line 53
     :cond_2
     :goto_3
     invoke-virtual {v1}, Ljava/lang/Class;->getSuperclass()Ljava/lang/Class;
@@ -173,16 +179,16 @@
 
     move-object v1, v0
 
-    .line 55
+    .line 54
     goto :goto_1
 
-    .line 41
+    .line 40
     :cond_3
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 54
+    .line 53
     :catchall_0
     move-exception v0
 
@@ -202,25 +208,25 @@
     .locals 2
 
     .prologue
-    .line 60
+    .line 59
     invoke-direct {p0}, Lcom/tencent/mm/compatible/loader/d;->prepare()V
 
-    .line 62
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->biZ:Ljava/lang/reflect/Field;
+    .line 61
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->btw:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 63
+    .line 62
     new-instance v0, Ljava/lang/NoSuchFieldException;
 
     invoke-direct {v0}, Ljava/lang/NoSuchFieldException;-><init>()V
 
     throw v0
 
-    .line 67
+    .line 66
     :cond_0
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->biZ:Ljava/lang/reflect/Field;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->btw:Ljava/lang/reflect/Field;
 
     iget-object v1, p0, Lcom/tencent/mm/compatible/loader/d;->obj:Ljava/lang/Object;
 
@@ -230,10 +236,10 @@
 
     move-result-object v0
 
-    .line 68
+    .line 67
     return-object v0
 
-    .line 70
+    .line 69
     :catch_0
     move-exception v0
 
@@ -246,33 +252,56 @@
     throw v0
 .end method
 
+.method public final oO()Z
+    .locals 1
+
+    .prologue
+    .line 83
+    invoke-direct {p0}, Lcom/tencent/mm/compatible/loader/d;->prepare()V
+
+    .line 85
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->btw:Ljava/lang/reflect/Field;
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public final set(Ljava/lang/Object;)V
     .locals 2
 
     .prologue
-    .line 75
+    .line 74
     invoke-direct {p0}, Lcom/tencent/mm/compatible/loader/d;->prepare()V
 
-    .line 77
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->biZ:Ljava/lang/reflect/Field;
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->btw:Ljava/lang/reflect/Field;
 
     if-nez v0, :cond_0
 
-    .line 78
+    .line 77
     new-instance v0, Ljava/lang/NoSuchFieldException;
 
     invoke-direct {v0}, Ljava/lang/NoSuchFieldException;-><init>()V
 
     throw v0
 
-    .line 80
+    .line 79
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->biZ:Ljava/lang/reflect/Field;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/d;->btw:Ljava/lang/reflect/Field;
 
     iget-object v1, p0, Lcom/tencent/mm/compatible/loader/d;->obj:Ljava/lang/Object;
 
     invoke-virtual {v0, v1, p1}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 81
+    .line 80
     return-void
 .end method

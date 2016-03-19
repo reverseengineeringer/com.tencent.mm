@@ -1,28 +1,27 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import java.util.LinkedList;
+import android.content.Context;
+import android.content.Intent;
+import com.tencent.mm.sdk.c.b;
 
 public final class jt
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGX = new a();
-  public b aGY = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGr = new a();
   
   public jt()
   {
-    id = "WalletPayOrders";
-    hXT = atO;
+    id = "RequestEnterWallet";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public LinkedList aGZ;
+    public Context context;
+    public Intent intent;
   }
-  
-  public static final class b {}
 }
 
 /* Location:

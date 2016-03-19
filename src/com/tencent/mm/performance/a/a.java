@@ -13,16 +13,16 @@ public final class a
   extends com.tencent.mm.performance.e.a
 {
   public static String TYPE = "ActivityMonitorController";
-  private boolean bTw = false;
-  public Set bTx = null;
-  private Object bTy = null;
-  private Instrumentation bTz = null;
+  private boolean cks = false;
+  public Set ckt = null;
+  private Object cku = null;
+  private Instrumentation ckv = null;
   
-  private void Dg()
+  private void Fo()
   {
     try
     {
-      Iterator localIterator = bTx.iterator();
+      Iterator localIterator = ckt.iterator();
       while (localIterator.hasNext()) {
         localIterator.next();
       }
@@ -30,11 +30,11 @@ public final class a
     finally {}
   }
   
-  private void Dh()
+  private void Fp()
   {
     try
     {
-      Iterator localIterator = bTx.iterator();
+      Iterator localIterator = ckt.iterator();
       while (localIterator.hasNext()) {
         localIterator.next();
       }
@@ -42,11 +42,11 @@ public final class a
     finally {}
   }
   
-  private void Di()
+  private void Fq()
   {
     try
     {
-      Iterator localIterator = bTx.iterator();
+      Iterator localIterator = ckt.iterator();
       while (localIterator.hasNext()) {
         localIterator.next();
       }
@@ -60,7 +60,7 @@ public final class a
     {
       try
       {
-        Iterator localIterator = bTx.iterator();
+        Iterator localIterator = ckt.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -81,7 +81,7 @@ public final class a
     {
       try
       {
-        Iterator localIterator = bTx.iterator();
+        Iterator localIterator = ckt.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -102,7 +102,7 @@ public final class a
     {
       try
       {
-        Iterator localIterator = bTx.iterator();
+        Iterator localIterator = ckt.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -123,7 +123,7 @@ public final class a
     {
       try
       {
-        Iterator localIterator = bTx.iterator();
+        Iterator localIterator = ckt.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -144,7 +144,7 @@ public final class a
     {
       try
       {
-        Iterator localIterator = bTx.iterator();
+        Iterator localIterator = ckt.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -165,7 +165,7 @@ public final class a
     {
       try
       {
-        Iterator localIterator = bTx.iterator();
+        Iterator localIterator = ckt.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -186,7 +186,7 @@ public final class a
     {
       try
       {
-        Iterator localIterator = bTx.iterator();
+        Iterator localIterator = ckt.iterator();
         if (!localIterator.hasNext()) {
           break;
         }
@@ -201,13 +201,13 @@ public final class a
     }
   }
   
-  public final boolean Dj()
+  public final boolean Fr()
   {
     boolean bool = true;
     try
     {
-      bTy = b.T("android.app.ActivityThread", "currentActivityThread");
-      if (bTy == null) {
+      cku = b.ac("android.app.ActivityThread", "currentActivityThread");
+      if (cku == null) {
         throw new IllegalStateException("Failed to get CurrentActivityThread.");
       }
     }
@@ -217,21 +217,21 @@ public final class a
     }
     for (;;)
     {
-      bTw = bool;
+      cks = bool;
       do
       {
         return bool;
-        bTz = ((Instrumentation)b.a(bTy.getClass(), "mInstrumentation", bTy));
-        if (bTz == null) {
+        ckv = ((Instrumentation)b.a(cku.getClass(), "mInstrumentation", cku));
+        if (ckv == null) {
           throw new IllegalStateException("Failed to get Instrumentation instance.");
         }
-      } while (bTz.getClass().equals(b.class));
-      if (!bTz.getClass().equals(Instrumentation.class)) {
+      } while (ckv.getClass().equals(b.class));
+      if (!ckv.getClass().equals(Instrumentation.class)) {
         throw new IllegalStateException("Not original Instrumentation instance, give up monitoring.");
       }
-      Object localObject2 = bTy.getClass();
+      Object localObject2 = cku.getClass();
       b localb = new b((byte)0);
-      Object localObject1 = bTy;
+      Object localObject1 = cku;
       try
       {
         localObject2 = ((Class)localObject2).getDeclaredField("mInstrumentation");
@@ -246,12 +246,12 @@ public final class a
     }
   }
   
-  public final String Dk()
+  public final String Fs()
   {
     return TYPE;
   }
   
-  public final void Dl() {}
+  public final void Ft() {}
   
   public final void a(a parama)
   {
@@ -262,12 +262,12 @@ public final class a
       }
       finally {}
     }
-    boolean bool = bTw;
+    boolean bool = cks;
     if (!bool) {}
     for (;;)
     {
       return;
-      bTx.add(parama);
+      ckt.add(parama);
     }
   }
   

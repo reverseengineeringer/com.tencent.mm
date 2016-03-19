@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private iuY:Landroid/view/View;
+.field private ksV:Landroid/widget/LinearLayout;
 
-.field private iuq:Landroid/widget/LinearLayout;
+.field private ksW:Landroid/widget/LinearLayout;
 
-.field private iur:Landroid/widget/LinearLayout;
+.field private kua:Landroid/view/View;
 
 
 # direct methods
@@ -24,21 +24,23 @@
 
 
 # virtual methods
-.method public final aLN()Z
+.method public final bbD()Z
     .locals 1
 
     .prologue
-    .line 144
+    .line 154
     const/4 v0, 0x0
 
     return v0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
-    .locals 4
+    .locals 5
 
     .prologue
-    const/16 v1, 0x8
+    const v4, 0x7f07072a
+
+    const/16 v2, 0x8
 
     const/4 v3, 0x0
 
@@ -46,28 +48,48 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/account/LoginHistoryUI;->onCreate(Landroid/os/Bundle;)V
 
     .line 31
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->ius:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->ktq:Z
 
     if-eqz v0, :cond_0
 
-    .line 94
+    .line 104
     :goto_0
     return-void
 
     .line 35
     :cond_0
-    sget v0, Lcom/tencent/mm/a$i;->login_pwd_ll:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iuq:Landroid/widget/LinearLayout;
 
     .line 36
-    sget v0, Lcom/tencent/mm/a$i;->voice_print_ll:I
+    if-eqz v0, :cond_1
+
+    .line 38
+    const-string/jumbo v1, "login_success_need_bind_fingerprint"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    .line 39
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI;->kts:Z
+
+    .line 40
+    if-eqz v1, :cond_1
+
+    .line 41
+    const-string/jumbo v1, "bind_login_fingerprint_info"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/LoginHistoryUI;->ktt:Ljava/lang/String;
+
+    .line 45
+    :cond_1
+    const v0, 0x7f070725
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->findViewById(I)Landroid/view/View;
 
@@ -75,58 +97,69 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iur:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->ksV:Landroid/widget/LinearLayout;
 
-    .line 38
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iuq:Landroid/widget/LinearLayout;
+    .line 46
+    const v0, 0x7f070727
 
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->findViewById(I)Landroid/view/View;
 
-    .line 39
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iur:Landroid/widget/LinearLayout;
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->ksW:Landroid/widget/LinearLayout;
+
+    .line 48
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->ksV:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
+
+    .line 49
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->ksW:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 41
-    sget v0, Lcom/tencent/mm/a$i;->login_voice_btn:I
+    .line 51
+    const v0, 0x7f070728
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iuY:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->kua:Landroid/view/View;
 
-    .line 42
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iuh:Landroid/widget/Button;
+    .line 52
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->kth:Landroid/widget/Button;
 
-    invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 43
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iuf:Landroid/view/View;
+    .line 53
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->ktf:Landroid/view/View;
 
-    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+    invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 44
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iui:Landroid/widget/Button;
+    .line 54
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->kti:Landroid/widget/Button;
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 46
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iuh:Landroid/widget/Button;
+    .line 56
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->kth:Landroid/widget/Button;
 
-    sget v1, Lcom/tencent/mm/a$n;->login_login_by_pwd:I
+    const v1, 0x7f0b01b2
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(I)V
 
-    .line 47
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iuh:Landroid/widget/Button;
+    .line 57
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->kth:Landroid/widget/Button;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 49
-    sget v0, Lcom/tencent/mm/a$i;->voice_btn_icon:I
+    .line 59
+    const v0, 0x7f070729
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->findViewById(I)Landroid/view/View;
 
@@ -134,10 +167,8 @@
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 50
-    sget v0, Lcom/tencent/mm/a$i;->voice_login_btn:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->findViewById(I)Landroid/view/View;
+    .line 60
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -147,7 +178,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$f;->white:I
+    const v2, 0x7f08017c
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -155,10 +186,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 51
-    sget v0, Lcom/tencent/mm/a$i;->voice_login_btn:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->findViewById(I)Landroid/view/View;
+    .line 61
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -166,10 +195,8 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 52
-    sget v0, Lcom/tencent/mm/a$i;->voice_login_btn:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->findViewById(I)Landroid/view/View;
+    .line 62
+    invoke-virtual {p0, v4}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
@@ -179,7 +206,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$f;->transparent:I
+    const v2, 0x7f08018a
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -187,30 +214,30 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 54
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iuY:Landroid/view/View;
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->kua:Landroid/view/View;
 
-    new-instance v1, Lcom/tencent/mm/ui/account/dy;
+    new-instance v1, Lcom/tencent/mm/ui/account/LoginVoiceUI$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/dy;-><init>(Lcom/tencent/mm/ui/account/LoginVoiceUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/LoginVoiceUI$1;-><init>(Lcom/tencent/mm/ui/account/LoginVoiceUI;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iuh:Landroid/widget/Button;
+    .line 79
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->kth:Landroid/widget/Button;
 
-    sget v1, Lcom/tencent/mm/a$h;->btn_style_grey:I
+    const v1, 0x7f040694
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setBackgroundResource(I)V
 
-    .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iuh:Landroid/widget/Button;
+    .line 80
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->kth:Landroid/widget/Button;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/LoginVoiceUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$f;->grey_btn_text_color:I
+    const v2, 0x7f080215
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -218,21 +245,21 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setTextColor(I)V
 
-    .line 71
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iuh:Landroid/widget/Button;
+    .line 81
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->kth:Landroid/widget/Button;
 
-    new-instance v1, Lcom/tencent/mm/ui/account/dz;
+    new-instance v1, Lcom/tencent/mm/ui/account/LoginVoiceUI$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/dz;-><init>(Lcom/tencent/mm/ui/account/LoginVoiceUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/LoginVoiceUI$2;-><init>(Lcom/tencent/mm/ui/account/LoginVoiceUI;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->iui:Landroid/widget/Button;
+    .line 91
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/LoginVoiceUI;->kti:Landroid/widget/Button;
 
-    new-instance v1, Lcom/tencent/mm/ui/account/ea;
+    new-instance v1, Lcom/tencent/mm/ui/account/LoginVoiceUI$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/ea;-><init>(Lcom/tencent/mm/ui/account/LoginVoiceUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/LoginVoiceUI$3;-><init>(Lcom/tencent/mm/ui/account/LoginVoiceUI;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

@@ -1,59 +1,67 @@
 package com.tencent.mm.plugin.ext;
 
-import com.tencent.mm.d.a.bv;
-import com.tencent.mm.d.a.bv.a;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import com.tencent.mm.d.a.dm;
+import com.tencent.mm.d.a.dm.a;
 import com.tencent.mm.plugin.ext.openapi.provider.ExtControlProviderOpenApi;
 import com.tencent.mm.plugin.ext.provider.ExtControlProviderEntry;
 import com.tencent.mm.plugin.ext.provider.ExtControlProviderMsg;
 import com.tencent.mm.plugin.ext.voicecontrol.ExtControlProviderVoiceControl;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 public final class b$a
-  extends e
+  extends c
 {
   public b$a()
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(com.tencent.mm.sdk.c.b paramb)
   {
-    if (!(paramd instanceof bv))
+    if (!(paramb instanceof dm))
     {
-      t.f("!32@/B4Tb64lLpIAhUt0Bg2QTpTjMO1by0jp", "mismatched event");
+      u.f("!32@/B4Tb64lLpIAhUt0Bg2QTpTjMO1by0jp", "mismatched event");
       return false;
     }
-    paramd = (bv)paramd;
-    if (axd == null)
+    paramb = (dm)paramb;
+    if (axk == null)
     {
-      t.e("!32@/B4Tb64lLpIAhUt0Bg2QTpTjMO1by0jp", "revent.data is null");
+      u.e("!32@/B4Tb64lLpIAhUt0Bg2QTpTjMO1by0jp", "revent.data is null");
       return false;
     }
     Object localObject;
-    if ((axd.awH == 9) || (axd.awH == 13))
+    if ((axk.awO == 9) || (axk.awO == 13))
     {
-      localObject = new ExtControlProviderMsg(axd.atX, axd.awH, axd.context);
-      axe.cursor = ((ExtControlProviderMsg)localObject).query(axd.uri, null, null, axd.selectionArgs, null);
+      localObject = new ExtControlProviderMsg(axk.asa, axk.awO, axk.context);
+      axl.awP = ((ExtControlProviderMsg)localObject).query(axk.uri, null, null, axk.selectionArgs, null);
     }
     for (;;)
     {
       return true;
-      if (axd.awH == 3)
+      if (axk.awO == 3)
       {
-        localObject = new ExtControlProviderEntry(axd.atX, axd.awH, axd.context);
-        axe.cursor = ((ExtControlProviderEntry)localObject).query(axd.uri, null, null, axd.selectionArgs, null);
+        localObject = new ExtControlProviderEntry(axk.asa, axk.awO, axk.context);
+        axl.awP = ((ExtControlProviderEntry)localObject).query(axk.uri, null, null, axk.selectionArgs, null);
       }
-      else if (axd.awH == 29)
+      else if (axk.awO == 29)
       {
-        localObject = new ExtControlProviderVoiceControl(axd.atX, axd.awH, axd.context);
-        axe.cursor = ((ExtControlProviderVoiceControl)localObject).query(axd.uri, null, null, axd.selectionArgs, null);
+        localObject = new ExtControlProviderVoiceControl(axk.asa, axk.awO, axk.context);
+        axl.awP = ((ExtControlProviderVoiceControl)localObject).query(axk.uri, null, null, axk.selectionArgs, null);
+        paramb = y.aUM();
+        if (!b.nV())
+        {
+          paramb.edit().putBoolean("hasCallVoiceControlApi", true).commit();
+          b.CP();
+        }
       }
       else
       {
-        localObject = new ExtControlProviderOpenApi(axd.atX, axd.awH, axd.context);
-        axe.cursor = ((ExtControlProviderOpenApi)localObject).query(axd.uri, null, null, axd.selectionArgs, null);
+        localObject = new ExtControlProviderOpenApi(axk.asa, axk.awO, axk.context);
+        axl.awP = ((ExtControlProviderOpenApi)localObject).query(axk.uri, null, null, axk.selectionArgs, null);
       }
     }
   }

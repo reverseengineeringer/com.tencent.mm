@@ -2,9 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class bg$a
 {
-  public long awk;
-  public int awo;
-  public String mac;
+  public boolean aur;
 }
 
 /* Location:

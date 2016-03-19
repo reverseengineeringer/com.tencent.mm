@@ -1,155 +1,65 @@
-.class public final Lcom/tencent/mm/model/u;
+.class public interface abstract Lcom/tencent/mm/model/u;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# direct methods
-.method public static b(Ljava/lang/String;J)Ljava/lang/String;
-    .locals 6
+# virtual methods
+.method public abstract a(Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/protocal/b/aeo;)Lcom/tencent/mm/model/u;
+.end method
 
-    .prologue
-    const/4 v3, 0x1
+.method public abstract a(Lcom/tencent/mm/model/v;)V
+.end method
 
-    const/4 v5, 0x0
+.method public abstract b(Lcom/tencent/mm/model/v;)V
+.end method
 
-    .line 20
-    new-instance v0, Ljava/text/SimpleDateFormat;
+.method public abstract cD(Ljava/lang/String;)Lcom/tencent/mm/model/u;
+.end method
 
-    const-string/jumbo v1, "ssHHmmMMddyy"
+.method public abstract g(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
+.end method
 
-    invoke-direct {v0, v1}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+.method public abstract getMediaId()Ljava/lang/String;
+.end method
 
-    new-instance v1, Ljava/util/Date;
+.method public abstract getTitle()Ljava/lang/String;
+.end method
 
-    invoke-direct {v1, p1, p2}, Ljava/util/Date;-><init>(J)V
+.method public abstract mA()Z
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/text/SimpleDateFormat;->format(Ljava/util/Date;)Ljava/lang/String;
+.method public abstract mF()Lcom/tencent/mm/protocal/b/aeo;
+.end method
 
-    move-result-object v0
+.method public abstract mG()Lcom/tencent/mm/model/u;
+.end method
 
-    .line 21
-    if-eqz p0, :cond_0
+.method public abstract mI()I
+.end method
 
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
+.method public abstract mJ()Ljava/lang/String;
+.end method
 
-    move-result v1
+.method public abstract mK()Lcom/tencent/mm/model/u;
+.end method
 
-    if-le v1, v3, :cond_0
+.method public abstract mL()Lcom/tencent/mm/model/u;
+.end method
 
-    .line 22
-    new-instance v1, Ljava/lang/StringBuilder;
+.method public abstract mn()Ljava/lang/String;
+.end method
 
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+.method public abstract mw()I
+.end method
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+.method public abstract mx()Ljava/lang/String;
+.end method
 
-    move-result-object v0
+.method public abstract my()I
+.end method
 
-    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
+.method public abstract mz()Ljava/lang/String;
+.end method
 
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/tencent/mm/a/e;->n([B)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x7
-
-    invoke-virtual {v1, v5, v2}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 26
-    :goto_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "%04x"
-
-    new-array v2, v3, [Ljava/lang/Object;
-
-    const-wide/32 v3, 0xffff
-
-    rem-long v3, p1, v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v3
-
-    aput-object v3, v2, v5
-
-    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 27
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-wide/16 v1, 0x7
-
-    rem-long v1, p1, v1
-
-    const-wide/16 v3, 0x64
-
-    add-long/2addr v1, v3
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 28
-    return-object v0
-
-    .line 24
-    :cond_0
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "fffffff"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
+.method public abstract release()V
 .end method

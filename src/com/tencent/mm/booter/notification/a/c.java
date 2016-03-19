@@ -1,38 +1,29 @@
 package com.tencent.mm.booter.notification.a;
 
-import android.os.Build.VERSION;
-import com.tencent.mm.a.h;
+import com.tencent.mm.aq.a;
 import com.tencent.mm.g.g;
 
 public final class c
 {
-  public int bec = -1;
+  public int bol = -1;
   
-  public static int nQ()
+  public final int o(String paramString, int paramInt)
   {
-    if (Build.VERSION.SDK_INT < 19) {
-      return a.h.notification_icon;
-    }
-    return a.h.notification_icon_gray;
-  }
-  
-  public final int l(String paramString, int paramInt)
-  {
-    bec = nQ();
-    if ((!g.ca(paramInt)) || (g.dd(paramString))) {}
+    bol = a.aOQ();
+    if ((!g.cb(paramInt)) || (g.dj(paramString))) {}
     try
     {
-      bec = a.h.voip_newmessagetips1;
+      bol = 2130968670;
       for (;;)
       {
-        if (bec < 0) {
-          bec = nQ();
+        if (bol < 0) {
+          bol = a.aOQ();
         }
-        return bec;
-        if (g.de(paramString)) {
+        return bol;
+        if (g.dk(paramString)) {
           try
           {
-            bec = a.h.voip_newmessagetips1;
+            bol = 2130968670;
           }
           catch (Exception paramString) {}
         }

@@ -15,21 +15,16 @@
 
 
 # instance fields
-.field public count:I
+.field public auR:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 18
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 19
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/tencent/mm/d/a/cu$b;->count:I
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

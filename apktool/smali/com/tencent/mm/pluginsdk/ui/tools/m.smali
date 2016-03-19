@@ -1,112 +1,112 @@
-.class final Lcom/tencent/mm/pluginsdk/ui/tools/m;
+.class public final Lcom/tencent/mm/pluginsdk/ui/tools/m;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnClickListener;
-
-
-# instance fields
-.field final synthetic hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
-
-.field final synthetic hdX:Ljava/io/File;
-
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;Ljava/io/File;)V
-    .locals 0
+.method public static cU(Landroid/content/Context;)Lcom/tencent/mm/pluginsdk/ui/tools/f;
+    .locals 2
 
     .prologue
-    .line 228
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/m;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+    .line 15
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
 
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/m;->hdX:Ljava/io/File;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bsq:Ljava/lang/String;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const-string/jumbo v1, ""
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 233
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/m;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
-
-    invoke-static {v0, v3}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;I)V
-
-    .line 234
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/m;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;)Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/m;->hdX:Ljava/io/File;
+    const-string/jumbo v1, "surface"
 
-    invoke-virtual {v1}, Ljava/io/File;->getPath()Ljava/lang/String;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
-    move-result-object v1
+    move-result v0
 
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->fqn:Ljava/lang/String;
+    if-eqz v0, :cond_0
 
-    .line 235
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/m;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+    .line 16
+    const-string/jumbo v0, "!44@/B4Tb64lLpI0gAQi2o+bKffNaBJGXprKxiIC3NpMX2E="
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;)Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;
+    const-string/jumbo v1, "match full type surface"
 
-    move-result-object v0
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/m;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+    .line 17
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;
 
-    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;->e(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;)Ljava/io/File;
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSurfaceView;-><init>(Landroid/content/Context;)V
 
-    move-result-object v1
+    .line 24
+    :goto_0
+    return-object v0
 
-    invoke-virtual {v1}, Ljava/io/File;->getParentFile()Ljava/io/File;
+    .line 19
+    :cond_0
+    const-string/jumbo v0, "ro.mediatek.platform"
 
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/m;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
-
-    invoke-static {v2}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;->e(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;)Ljava/io/File;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->a(Ljava/io/File;Ljava/io/File;)V
-
-    .line 236
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/m;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;)Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;
+    invoke-static {v0}, Lcom/tencent/mm/compatible/d/w;->get(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->notifyDataSetInvalidated()V
+    if-eqz v0, :cond_2
 
-    .line 237
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/m;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+    const-string/jumbo v1, "MT"
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;)Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result-object v0
+    move-result v1
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$a;->notifyDataSetChanged()V
+    if-nez v1, :cond_1
 
-    .line 238
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/m;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+    const-string/jumbo v1, "mt"
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;)Landroid/widget/ListView;
+    invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
-    move-result-object v0
+    move-result v0
 
-    invoke-virtual {v0, v3}, Landroid/widget/ListView;->setSelection(I)V
+    if-eqz v0, :cond_2
 
-    .line 239
-    return-void
+    :cond_1
+    const/4 v0, 0x1
+
+    :goto_1
+    if-eqz v0, :cond_3
+
+    .line 20
+    const-string/jumbo v0, "!44@/B4Tb64lLpI0gAQi2o+bKffNaBJGXprKxiIC3NpMX2E="
+
+    const-string/jumbo v1, "IS MTK platform"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 21
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;-><init>(Landroid/content/Context;)V
+
+    goto :goto_0
+
+    .line 19
+    :cond_2
+    const/4 v0, 0x0
+
+    goto :goto_1
+
+    .line 23
+    :cond_3
+    const-string/jumbo v0, "!44@/B4Tb64lLpI0gAQi2o+bKffNaBJGXprKxiIC3NpMX2E="
+
+    const-string/jumbo v1, "default settings, use sightview"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 24
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;-><init>(Landroid/content/Context;)V
+
+    goto :goto_0
 .end method

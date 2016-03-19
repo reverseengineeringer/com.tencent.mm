@@ -12,33 +12,33 @@
 
 
 # instance fields
-.field jgA:F
+.field lkE:Z
 
-.field jgB:F
+.field lkF:Z
 
-.field private jgC:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
+.field lkG:F
 
-.field jgp:Z
+.field lkH:F
 
-.field jgq:Z
+.field lkI:F
 
-.field jgr:F
+.field lkJ:F
 
-.field jgs:F
+.field private lkK:I
 
-.field jgt:F
+.field lkL:Z
 
-.field jgu:F
+.field lkM:Z
 
-.field private jgv:I
+.field lkN:F
 
-.field jgw:Z
+.field lkO:F
 
-.field jgx:Z
+.field lkP:F
 
-.field jgy:F
+.field lkQ:F
 
-.field jgz:F
+.field private lkR:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
 
 
 # direct methods
@@ -54,19 +54,19 @@
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 18
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgp:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkE:Z
 
     .line 19
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgq:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkF:Z
 
     .line 23
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgw:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkL:Z
 
     .line 24
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgx:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkM:Z
 
     .line 36
-    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/LabelContainerView;->aQr()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/LabelContainerView;->bho()V
 
     .line 37
     return-void
@@ -84,25 +84,25 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/MMTagPanelScrollView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 18
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgp:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkE:Z
 
     .line 19
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgq:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkF:Z
 
     .line 23
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgw:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkL:Z
 
     .line 24
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgx:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkM:Z
 
     .line 31
-    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/LabelContainerView;->aQr()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/LabelContainerView;->bho()V
 
     .line 32
     return-void
 .end method
 
-.method private aQr()V
+.method private bho()V
     .locals 1
 
     .prologue
@@ -123,7 +123,7 @@
     .line 95
     mul-int/2addr v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgv:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkK:I
 
     .line 96
     return-void
@@ -262,33 +262,33 @@
 
     .line 67
     :pswitch_0
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgw:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkL:Z
 
     .line 68
-    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgz:F
+    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkO:F
 
-    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgy:F
+    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkN:F
 
     .line 69
-    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgB:F
+    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkQ:F
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgA:F
+    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkP:F
 
     .line 70
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgx:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkM:Z
 
     goto :goto_4
 
     .line 73
     :pswitch_1
-    iget v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgy:F
+    iget v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkN:F
 
     sub-float v1, v2, v1
 
     float-to-int v1, v1
 
     .line 74
-    iget v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgA:F
+    iget v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkP:F
 
     sub-float/2addr v0, v2
 
@@ -302,12 +302,12 @@
     add-int/2addr v0, v1
 
     .line 76
-    iget v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgv:I
+    iget v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkK:I
 
     if-le v0, v1, :cond_4
 
     .line 77
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgw:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkL:Z
 
     move v0, v3
 
@@ -316,10 +316,10 @@
 
     .line 83
     :pswitch_2
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgw:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkL:Z
 
     .line 84
-    iput-boolean v6, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgx:Z
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkM:Z
 
     goto :goto_4
 
@@ -453,66 +453,66 @@
 
     .line 122
     :pswitch_0
-    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgp:Z
+    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkE:Z
 
     .line 123
-    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgs:F
+    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkH:F
 
-    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgr:F
+    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkG:F
 
     .line 124
-    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgu:F
+    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkJ:F
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgt:F
+    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkI:F
 
     .line 125
-    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgq:Z
+    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkF:Z
 
     goto :goto_4
 
     .line 128
     :pswitch_1
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgq:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkF:Z
 
     if-nez v1, :cond_6
 
     .line 129
-    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgp:Z
+    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkE:Z
 
     .line 130
-    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgs:F
+    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkH:F
 
-    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgr:F
+    iput v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkG:F
 
     .line 131
-    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgu:F
+    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkJ:F
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgt:F
+    iput v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkI:F
 
     .line 132
-    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgq:Z
+    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkF:Z
 
     .line 134
     :cond_6
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgC:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkR:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
 
     if-eqz v1, :cond_7
 
     .line 135
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgC:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkR:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
 
-    invoke-interface {v1}, Lcom/tencent/mm/ui/contact/LabelContainerView$a;->aQs()V
+    invoke-interface {v1}, Lcom/tencent/mm/ui/contact/LabelContainerView$a;->SR()V
 
     .line 137
     :cond_7
-    iget v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgr:F
+    iget v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkG:F
 
     sub-float v1, v2, v1
 
     float-to-int v1, v1
 
     .line 138
-    iget v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgt:F
+    iget v2, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkI:F
 
     sub-float/2addr v0, v2
 
@@ -526,42 +526,42 @@
     add-int/2addr v0, v1
 
     .line 140
-    iget v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgv:I
+    iget v1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkK:I
 
     if-le v0, v1, :cond_4
 
     .line 141
-    iput-boolean v5, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgp:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkE:Z
 
     goto :goto_4
 
     .line 146
     :pswitch_2
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgp:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkE:Z
 
     if-nez v0, :cond_8
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgq:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkF:Z
 
     if-nez v0, :cond_9
 
     .line 147
     :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgC:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkR:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
 
     if-eqz v0, :cond_9
 
     .line 148
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgC:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkR:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/contact/LabelContainerView$a;->aQt()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/contact/LabelContainerView$a;->SQ()V
 
     .line 151
     :cond_9
-    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgp:Z
+    iput-boolean v7, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkE:Z
 
     .line 152
-    iput-boolean v5, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgq:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkF:Z
 
     goto :goto_4
 
@@ -580,7 +580,7 @@
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->jgC:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/LabelContainerView;->lkR:Lcom/tencent/mm/ui/contact/LabelContainerView$a;
 
     .line 46
     return-void

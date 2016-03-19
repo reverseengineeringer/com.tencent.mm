@@ -1,33 +1,33 @@
-.class final Lcom/tencent/mm/pluginsdk/model/app/v;
+.class public abstract Lcom/tencent/mm/pluginsdk/model/app/v;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/tencent/mm/network/j;
+
 
 # instance fields
-.field public appId:Ljava/lang/String;
-
-.field public bLd:I
-
-.field public data:[B
+.field public dyc:Lcom/tencent/mm/r/a;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;I[B)V
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 245
+    .line 6
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 246
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/app/v;->appId:Ljava/lang/String;
-
-    .line 247
-    iput p2, p0, Lcom/tencent/mm/pluginsdk/model/app/v;->bLd:I
-
-    .line 248
-    iput-object p3, p0, Lcom/tencent/mm/pluginsdk/model/app/v;->data:[B
-
-    .line 249
     return-void
+.end method
+
+
+# virtual methods
+.method public abstract abk()[B
+.end method
+
+.method public abstract af([B)V
+.end method
+
+.method public abstract getType()I
 .end method

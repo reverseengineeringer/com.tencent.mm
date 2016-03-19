@@ -2,8 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class et$a
 {
-  public int aBv = 0;
-  public int aBw = 0;
+  public int aI = 0;
+  public String azu;
 }
 
 /* Location:

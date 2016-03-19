@@ -22,7 +22,7 @@
 
 
 # instance fields
-.field final bK:Landroid/os/Bundle;
+.field final ba:Landroid/os/Bundle;
 
 
 # direct methods
@@ -31,9 +31,9 @@
 
     .prologue
     .line 330
-    new-instance v0, Landroid/support/v4/app/e;
+    new-instance v0, Landroid/support/v4/app/Fragment$SavedState$1;
 
-    invoke-direct {v0}, Landroid/support/v4/app/e;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/app/Fragment$SavedState$1;-><init>()V
 
     sput-object v0, Landroid/support/v4/app/Fragment$SavedState;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -48,7 +48,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 310
-    iput-object p1, p0, Landroid/support/v4/app/Fragment$SavedState;->bK:Landroid/os/Bundle;
+    iput-object p1, p0, Landroid/support/v4/app/Fragment$SavedState;->ba:Landroid/os/Bundle;
 
     .line 311
     return-void
@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/app/Fragment$SavedState;->bK:Landroid/os/Bundle;
+    iput-object v0, p0, Landroid/support/v4/app/Fragment$SavedState;->ba:Landroid/os/Bundle;
 
     .line 315
     return-void
@@ -89,7 +89,7 @@
 
     .prologue
     .line 327
-    iget-object v0, p0, Landroid/support/v4/app/Fragment$SavedState;->bK:Landroid/os/Bundle;
+    iget-object v0, p0, Landroid/support/v4/app/Fragment$SavedState;->ba:Landroid/os/Bundle;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeBundle(Landroid/os/Bundle;)V
 

@@ -1,42 +1,82 @@
 package com.tencent.mm.performance.wxperformancetool;
 
 import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.a.k;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.ui.base.aa;
-import com.tencent.mm.ui.base.aa.a;
+import android.os.Message;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.ui.base.h;
+import com.tencent.mm.ui.base.h.a;
+import java.lang.ref.WeakReference;
 import java.util.HashMap;
 
 @com.tencent.mm.ui.base.a(3)
 public class MemoryLeakActivity
   extends Activity
 {
-  private aa bUq;
-  private String bUr;
-  private ac mHandler = new b(this);
+  private h clm;
+  private String cln;
+  private aa mHandler = new aa()
+  {
+    public final void handleMessage(Message paramAnonymousMessage)
+    {
+      if (((WeakReference)d.clv.get(MemoryLeakActivity.a(MemoryLeakActivity.this))).get() == null)
+      {
+        finish();
+        return;
+      }
+      MemoryLeakActivity.b(MemoryLeakActivity.this).show();
+    }
+  };
   
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    setContentView(a.k.background_transparent);
-    aa.a locala = new aa.a(this);
-    locala.AJ("memory leak");
-    bUr = getIntent().getStringExtra("key");
+    setContentView(2131361883);
+    h.a locala = new h.a(this);
+    locala.Gy("memory leak");
+    cln = getIntent().getStringExtra("key");
     String str2 = getIntent().getStringExtra("tag");
-    String str1 = getIntent().getStringExtra("class");
+    final String str1 = getIntent().getStringExtra("class");
     paramBundle = str1;
     if (str1.contains(" ")) {
       paramBundle = str1.substring(str1.indexOf(" "));
     }
     str1 = paramBundle.replace(".", "_");
-    locala.AK(str2 + paramBundle + "\n\npath:" + com.tencent.mm.as.a.ikH + str1 + ".zip");
-    locala.ft(true);
-    locala.a("dumphprof", new c(this, str1));
-    locala.b("cancel", new d(this));
-    locala.a(new e(this));
-    bUq = locala.aMD();
+    locala.Gz(str2 + paramBundle + "\n\npath:" + com.tencent.mm.ba.a.kiO + str1 + ".zip");
+    locala.hw(true);
+    locala.a("dumphprof", new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        com.tencent.mm.ba.a.Gc(str1);
+        if ((MemoryLeakActivity.b(MemoryLeakActivity.this) != null) && (MemoryLeakActivity.b(MemoryLeakActivity.this).isShowing())) {
+          MemoryLeakActivity.b(MemoryLeakActivity.this).dismiss();
+        }
+        finish();
+      }
+    });
+    locala.b("cancel", new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        if ((MemoryLeakActivity.b(MemoryLeakActivity.this) != null) && (MemoryLeakActivity.b(MemoryLeakActivity.this).isShowing())) {
+          MemoryLeakActivity.b(MemoryLeakActivity.this).dismiss();
+        }
+        finish();
+      }
+    });
+    locala.a(new DialogInterface.OnDismissListener()
+    {
+      public final void onDismiss(DialogInterface paramAnonymousDialogInterface)
+      {
+        finish();
+      }
+    });
+    clm = locala.bcu();
     System.gc();
     System.gc();
     mHandler.sendEmptyMessageDelayed(0, 200L);
@@ -45,12 +85,12 @@ public class MemoryLeakActivity
   protected void onDestroy()
   {
     super.onDestroy();
-    i.bUy.remove(bUr);
+    d.clv.remove(cln);
     mHandler.removeCallbacksAndMessages(null);
-    if ((bUq != null) && (bUq.isShowing()))
+    if ((clm != null) && (clm.isShowing()))
     {
-      bUq.dismiss();
-      bUq = null;
+      clm.dismiss();
+      clm = null;
     }
   }
 }

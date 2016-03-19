@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private jA:Landroid/support/v7/app/ActionBar;
+.field final iG:Landroid/support/v7/app/ActionBarActivity;
 
-.field jB:Landroid/view/MenuInflater;
+.field private iH:Landroid/support/v7/app/ActionBar;
 
-.field jC:Z
+.field iI:Landroid/view/MenuInflater;
 
-.field jD:Z
+.field iJ:Z
 
-.field final jz:Landroid/support/v7/app/ActionBarActivity;
+.field iK:Z
 
 
 # direct methods
@@ -24,7 +24,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 67
-    iput-object p1, p0, Landroid/support/v7/app/a;->jz:Landroid/support/v7/app/ActionBarActivity;
+    iput-object p1, p0, Landroid/support/v7/app/a;->iG:Landroid/support/v7/app/ActionBarActivity;
 
     .line 68
     return-void
@@ -32,45 +32,42 @@
 
 
 # virtual methods
-.method abstract L()V
+.method abstract G()V
 .end method
 
-.method abstract addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+.method abstract aO()Landroid/support/v7/app/ActionBar;
 .end method
 
-.method abstract be()Landroid/support/v7/app/ActionBar;
-.end method
-
-.method public final bf()Landroid/support/v7/app/ActionBar;
+.method public final aP()Landroid/support/v7/app/ActionBar;
     .locals 1
 
     .prologue
     .line 75
-    iget-boolean v0, p0, Landroid/support/v7/app/a;->jC:Z
+    iget-boolean v0, p0, Landroid/support/v7/app/a;->iJ:Z
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Landroid/support/v7/app/a;->jD:Z
+    iget-boolean v0, p0, Landroid/support/v7/app/a;->iK:Z
 
     if-eqz v0, :cond_2
 
     .line 76
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/app/a;->jA:Landroid/support/v7/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/a;->iH:Landroid/support/v7/app/ActionBar;
 
     if-nez v0, :cond_1
 
     .line 77
-    invoke-virtual {p0}, Landroid/support/v7/app/a;->be()Landroid/support/v7/app/ActionBar;
+    invoke-virtual {p0}, Landroid/support/v7/app/a;->aO()Landroid/support/v7/app/ActionBar;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/app/a;->jA:Landroid/support/v7/app/ActionBar;
+    iput-object v0, p0, Landroid/support/v7/app/a;->iH:Landroid/support/v7/app/ActionBar;
 
     .line 83
     :cond_1
     :goto_0
-    iget-object v0, p0, Landroid/support/v7/app/a;->jA:Landroid/support/v7/app/ActionBar;
+    iget-object v0, p0, Landroid/support/v7/app/a;->iH:Landroid/support/v7/app/ActionBar;
 
     return-object v0
 
@@ -78,18 +75,18 @@
     :cond_2
     const/4 v0, 0x0
 
-    iput-object v0, p0, Landroid/support/v7/app/a;->jA:Landroid/support/v7/app/ActionBar;
+    iput-object v0, p0, Landroid/support/v7/app/a;->iH:Landroid/support/v7/app/ActionBar;
 
     goto :goto_0
 .end method
 
-.method abstract bg()V
+.method abstract aQ()V
 .end method
 
-.method abstract bh()Z
+.method abstract aR()Z
 .end method
 
-.method protected final bi()Ljava/lang/String;
+.method protected final aS()Ljava/lang/String;
     .locals 4
 
     .prologue
@@ -97,14 +94,14 @@
 
     .line 157
     :try_start_0
-    iget-object v1, p0, Landroid/support/v7/app/a;->jz:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, p0, Landroid/support/v7/app/a;->iG:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v1}, Landroid/support/v7/app/ActionBarActivity;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v1
 
     .line 158
-    iget-object v2, p0, Landroid/support/v7/app/a;->jz:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, p0, Landroid/support/v7/app/a;->iG:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v2}, Landroid/support/v7/app/ActionBarActivity;->getComponentName()Landroid/content/ComponentName;
 
@@ -147,7 +144,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Landroid/support/v7/app/a;->jz:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v2, p0, Landroid/support/v7/app/a;->iG:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v2}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -168,15 +165,15 @@
     goto :goto_0
 .end method
 
-.method protected final bj()Landroid/content/Context;
+.method protected final aT()Landroid/content/Context;
     .locals 2
 
     .prologue
     .line 174
-    iget-object v0, p0, Landroid/support/v7/app/a;->jz:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/a;->iG:Landroid/support/v7/app/ActionBarActivity;
 
     .line 177
-    invoke-virtual {p0}, Landroid/support/v7/app/a;->bf()Landroid/support/v7/app/ActionBar;
+    invoke-virtual {p0}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
 
     move-result-object v1
 
@@ -193,6 +190,9 @@
     return-object v0
 .end method
 
+.method abstract addContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+.end method
+
 .method abstract e(Ljava/lang/CharSequence;)V
 .end method
 
@@ -203,9 +203,9 @@
     const/4 v2, 0x0
 
     .line 99
-    iget-object v0, p0, Landroid/support/v7/app/a;->jz:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, p0, Landroid/support/v7/app/a;->iG:Landroid/support/v7/app/ActionBarActivity;
 
-    sget-object v1, Lcom/tencent/mm/a$p;->ActionBarWindow:[I
+    sget-object v1, Lcom/tencent/mm/R$b;->ActionBarWindow:[I
 
     invoke-virtual {v0, v1}, Landroid/support/v7/app/ActionBarActivity;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
@@ -236,7 +236,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Landroid/support/v7/app/a;->jC:Z
+    iput-boolean v1, p0, Landroid/support/v7/app/a;->iJ:Z
 
     .line 108
     const/4 v1, 0x1
@@ -245,7 +245,7 @@
 
     move-result v1
 
-    iput-boolean v1, p0, Landroid/support/v7/app/a;->jD:Z
+    iput-boolean v1, p0, Landroid/support/v7/app/a;->iK:Z
 
     .line 109
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
@@ -281,5 +281,5 @@
 .method abstract setContentView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 .end method
 
-.method public abstract x(I)Z
+.method public abstract y(I)Z
 .end method

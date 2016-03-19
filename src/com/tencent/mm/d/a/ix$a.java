@@ -2,14 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class ix$a
 {
-  public int auA;
-  public boolean auv = false;
-  public int auw;
-  public int aux;
-  public int auy;
-  public String auz;
-  public String desc;
-  public String url;
+  public String apb;
+  public String axY;
 }
 
 /* Location:

@@ -1,38 +1,38 @@
 package com.tencent.mm.pluginsdk.d.a;
 
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 public final class a
 {
-  private CountDownLatch gKS = null;
+  private CountDownLatch izC = null;
   
   public final void b(long paramLong, Runnable paramRunnable)
   {
-    if (gKS == null) {
-      gKS = new CountDownLatch(1);
+    if (izC == null) {
+      izC = new CountDownLatch(1);
     }
-    ad.g(paramRunnable);
-    if (gKS != null) {}
+    ab.j(paramRunnable);
+    if (izC != null) {}
     try
     {
-      gKS.await(paramLong, TimeUnit.MILLISECONDS);
+      izC.await(paramLong, TimeUnit.MILLISECONDS);
       return;
     }
     catch (InterruptedException paramRunnable)
     {
-      t.w("!32@/B4Tb64lLpKFlnpbg/Va1O9HKulZRc5c", paramRunnable.getMessage());
+      u.w("!32@/B4Tb64lLpKFlnpbg/Va1O9HKulZRc5c", paramRunnable.getMessage());
     }
   }
   
   public final void countDown()
   {
-    if (gKS != null)
+    if (izC != null)
     {
-      gKS.countDown();
-      gKS = null;
+      izC.countDown();
+      izC = null;
     }
   }
 }

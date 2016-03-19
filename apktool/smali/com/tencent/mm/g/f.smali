@@ -4,14 +4,14 @@
 
 
 # direct methods
-.method public static pP()Z
+.method public static pH()Z
     .locals 3
 
     .prologue
     const/4 v0, 0x1
 
     .line 16
-    invoke-static {}, Lcom/tencent/mm/g/h;->qa()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
 
     move-result-object v1
 
@@ -22,7 +22,7 @@
     move-result-object v1
 
     .line 17
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v2
 

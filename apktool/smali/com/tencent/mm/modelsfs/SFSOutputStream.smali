@@ -1,14 +1,14 @@
-.class Lcom/tencent/mm/modelsfs/SFSOutputStream;
+.class public Lcom/tencent/mm/modelsfs/SFSOutputStream;
 .super Ljava/io/OutputStream;
 .source "SourceFile"
 
 
 # instance fields
-.field private bKB:J
+.field private mNativePtr:J
 
 
 # direct methods
-.method constructor <init>(J)V
+.method public constructor <init>(J)V
     .locals 0
 
     .prologue
@@ -16,7 +16,7 @@
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
     .line 12
-    iput-wide p1, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->bKB:J
+    iput-wide p1, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->mNativePtr:J
 
     .line 13
     return-void
@@ -37,7 +37,7 @@
     const-wide/16 v2, 0x0
 
     .line 17
-    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->bKB:J
+    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->mNativePtr:J
 
     cmp-long v0, v0, v2
 
@@ -49,7 +49,7 @@
 
     .line 18
     :cond_0
-    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->bKB:J
+    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->mNativePtr:J
 
     invoke-static {v0, v1}, Lcom/tencent/mm/modelsfs/SFSOutputStream;->nativeClose(J)I
 
@@ -72,7 +72,7 @@
 
     .line 21
     :cond_1
-    iput-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->bKB:J
+    iput-wide v2, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->mNativePtr:J
 
     goto :goto_0
 .end method
@@ -82,7 +82,7 @@
 
     .prologue
     .line 51
-    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->bKB:J
+    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->mNativePtr:J
 
     const-wide/16 v2, 0x0
 
@@ -110,7 +110,7 @@
     const/4 v4, 0x1
 
     .line 26
-    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->bKB:J
+    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->mNativePtr:J
 
     const-wide/16 v2, 0x0
 
@@ -137,7 +137,7 @@
     aput-byte v1, v0, v5
 
     .line 32
-    iget-wide v1, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->bKB:J
+    iget-wide v1, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->mNativePtr:J
 
     invoke-static {v1, v2, v0, v5, v4}, Lcom/tencent/mm/modelsfs/SFSOutputStream;->nativeWrite(J[BII)I
 
@@ -166,7 +166,7 @@
 
     .prologue
     .line 38
-    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->bKB:J
+    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->mNativePtr:J
 
     const-wide/16 v2, 0x0
 
@@ -245,7 +245,7 @@
 
     .line 45
     :cond_2
-    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->bKB:J
+    iget-wide v0, p0, Lcom/tencent/mm/modelsfs/SFSOutputStream;->mNativePtr:J
 
     invoke-static {v0, v1, p1, p2, p3}, Lcom/tencent/mm/modelsfs/SFSOutputStream;->nativeWrite(J[BII)I
 

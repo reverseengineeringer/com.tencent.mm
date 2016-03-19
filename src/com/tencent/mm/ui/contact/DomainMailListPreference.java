@@ -6,21 +6,19 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public class DomainMailListPreference
   extends Preference
 {
-  private boolean cXR;
-  private TextView dKl;
-  private String jfT;
-  private TextView jfU;
-  private TextView jfV;
-  private TextView jfW;
+  private boolean dCB;
+  private TextView eMj;
+  private String lke;
+  private TextView lkf;
+  private TextView lkg;
+  private TextView lkh;
   private String title;
   
   public DomainMailListPreference(Context paramContext, AttributeSet paramAttributeSet)
@@ -37,59 +35,59 @@ public class DomainMailListPreference
   
   private void init()
   {
-    cXR = false;
+    dCB = false;
     title = "";
-    jfT = "";
+    lke = "";
   }
   
   public final void onBindView(View paramView)
   {
-    dKl = ((TextView)paramView.findViewById(a.i.title));
-    jfU = ((TextView)paramView.findViewById(a.i.firstDomainMail));
-    jfV = ((TextView)paramView.findViewById(a.i.secondDomainMail));
-    jfW = ((TextView)paramView.findViewById(a.i.thirdDomainMail));
-    cXR = true;
-    if (!cXR)
+    eMj = ((TextView)paramView.findViewById(2131165460));
+    lkf = ((TextView)paramView.findViewById(2131165776));
+    lkg = ((TextView)paramView.findViewById(2131165777));
+    lkh = ((TextView)paramView.findViewById(2131165778));
+    dCB = true;
+    if (!dCB)
     {
-      t.e("!44@/B4Tb64lLpI/Hb+9SS4dDy2P6MJ4r/GGzM67i80geIo=", "initView : unbind view");
+      u.e("!44@/B4Tb64lLpI/Hb+9SS4dDy2P6MJ4r/GGzM67i80geIo=", "initView : unbind view");
       super.onBindView(paramView);
       return;
     }
-    dKl.setText(ad.iV(title));
-    String[] arrayOfString = jfT.split(";");
-    if (ad.iV(jfT).length() <= 0)
+    eMj.setText(t.ky(title));
+    String[] arrayOfString = lke.split(";");
+    if (t.ky(lke).length() <= 0)
     {
-      jfU.setVisibility(8);
-      jfV.setVisibility(8);
+      lkf.setVisibility(8);
+      lkg.setVisibility(8);
     }
-    label174:
-    label243:
-    label253:
+    label170:
+    label239:
+    label249:
     for (;;)
     {
-      jfW.setVisibility(8);
+      lkh.setVisibility(8);
       break;
       if (arrayOfString.length > 0)
       {
-        jfU.setVisibility(0);
-        jfU.setText(ad.iV(arrayOfString[0]));
+        lkf.setVisibility(0);
+        lkf.setText(t.ky(arrayOfString[0]));
         if (arrayOfString.length <= 1) {
-          break label243;
+          break label239;
         }
-        jfV.setVisibility(0);
-        jfV.setText(ad.iV(arrayOfString[1]));
+        lkg.setVisibility(0);
+        lkg.setText(t.ky(arrayOfString[1]));
       }
       for (;;)
       {
         if (arrayOfString.length <= 2) {
-          break label253;
+          break label249;
         }
-        jfW.setVisibility(0);
-        jfW.setText(ad.iV(arrayOfString[2]));
+        lkh.setVisibility(0);
+        lkh.setText(t.ky(arrayOfString[2]));
         break;
-        jfU.setVisibility(8);
-        break label174;
-        jfV.setVisibility(8);
+        lkf.setVisibility(8);
+        break label170;
+        lkg.setVisibility(8);
       }
     }
   }
@@ -98,9 +96,9 @@ public class DomainMailListPreference
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
     LayoutInflater localLayoutInflater = (LayoutInflater)mContext.getSystemService("layout_inflater");
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(a.i.content);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
     localViewGroup.removeAllViews();
-    localLayoutInflater.inflate(a.k.mm_preference_content_domainmaillist, localViewGroup);
+    localLayoutInflater.inflate(2131362003, localViewGroup);
     return paramViewGroup;
   }
 }

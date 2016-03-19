@@ -1,29 +1,29 @@
 package com.tencent.mm.ui.bindgooglecontact;
 
 import android.os.AsyncTask;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 final class BindGoogleContactUI$a
   extends AsyncTask
 {
-  private String iNF;
-  private String iNG;
-  private boolean iNH;
+  private String kMS;
+  private String kMT;
+  private boolean kMU;
   
   public BindGoogleContactUI$a(BindGoogleContactUI paramBindGoogleContactUI, String paramString)
   {
-    iNF = paramString;
+    kMS = paramString;
   }
   
   /* Error */
-  private Void VE()
+  private Void acy()
   {
     // Byte code:
     //   0: ldc 38
     //   2: ldc 40
-    //   4: invokestatic 46	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   4: invokestatic 46	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   7: aload_0
-    //   8: getfield 23	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:iNF	Ljava/lang/String;
+    //   8: getfield 23	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:kMS	Ljava/lang/String;
     //   11: astore_3
     //   12: ldc 48
     //   14: astore_2
@@ -64,7 +64,7 @@ final class BindGoogleContactUI$a
     //   89: iload_1
     //   90: invokevirtual 100	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
     //   93: invokevirtual 65	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   96: invokestatic 103	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   96: invokestatic 103	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   99: sipush 200
     //   102: iload_1
     //   103: if_icmpne +101 -> 204
@@ -102,7 +102,7 @@ final class BindGoogleContactUI$a
     //   169: aload_2
     //   170: invokevirtual 133	java/net/MalformedURLException:getMessage	()Ljava/lang/String;
     //   173: aastore
-    //   174: invokestatic 136	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   174: invokestatic 136	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   177: aconst_null
     //   178: areturn
     //   179: aload 4
@@ -118,7 +118,7 @@ final class BindGoogleContactUI$a
     //   198: iconst_0
     //   199: aload_2
     //   200: aastore
-    //   201: invokestatic 144	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   201: invokestatic 144	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   204: aload_3
     //   205: invokevirtual 147	java/net/HttpURLConnection:disconnect	()V
     //   208: aload_0
@@ -128,14 +128,14 @@ final class BindGoogleContactUI$a
     //   214: invokespecial 150	org/json/JSONObject:<init>	(Ljava/lang/String;)V
     //   217: ldc -104
     //   219: invokevirtual 156	org/json/JSONObject:optString	(Ljava/lang/String;)Ljava/lang/String;
-    //   222: putfield 158	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:iNG	Ljava/lang/String;
+    //   222: putfield 158	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:kMT	Ljava/lang/String;
     //   225: aload_0
-    //   226: getfield 158	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:iNG	Ljava/lang/String;
+    //   226: getfield 158	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:kMT	Ljava/lang/String;
     //   229: invokestatic 164	android/text/TextUtils:isEmpty	(Ljava/lang/CharSequence;)Z
     //   232: ifne -55 -> 177
     //   235: aload_0
     //   236: iconst_1
-    //   237: putfield 166	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:iNH	Z
+    //   237: putfield 166	com/tencent/mm/ui/bindgooglecontact/BindGoogleContactUI$a:kMU	Z
     //   240: goto -63 -> 177
     //   243: astore_2
     //   244: ldc 38
@@ -147,7 +147,7 @@ final class BindGoogleContactUI$a
     //   254: aload_2
     //   255: invokevirtual 169	java/net/ProtocolException:getMessage	()Ljava/lang/String;
     //   258: aastore
-    //   259: invokestatic 136	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   259: invokestatic 136	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   262: goto -85 -> 177
     //   265: astore_2
     //   266: ldc 38
@@ -159,7 +159,7 @@ final class BindGoogleContactUI$a
     //   276: aload_2
     //   277: invokevirtual 172	java/io/UnsupportedEncodingException:getMessage	()Ljava/lang/String;
     //   280: aastore
-    //   281: invokestatic 136	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   281: invokestatic 136	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   284: goto -107 -> 177
     //   287: astore_2
     //   288: ldc 38
@@ -171,7 +171,7 @@ final class BindGoogleContactUI$a
     //   298: aload_2
     //   299: invokevirtual 175	java/io/IOException:getMessage	()Ljava/lang/String;
     //   302: aastore
-    //   303: invokestatic 136	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   303: invokestatic 136	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   306: goto -129 -> 177
     //   309: astore_2
     //   310: goto -133 -> 177
@@ -231,8 +231,8 @@ final class BindGoogleContactUI$a
   protected final void onPreExecute()
   {
     super.onPreExecute();
-    t.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "onPreExecute");
-    iNH = false;
+    u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBoluueOUk5Rr", "onPreExecute");
+    kMU = false;
   }
 }
 

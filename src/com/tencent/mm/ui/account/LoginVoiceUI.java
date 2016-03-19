@@ -1,24 +1,27 @@
 package com.tencent.mm.ui.account;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.a.f;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.n;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.model.ag;
+import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.j;
 
 public class LoginVoiceUI
   extends LoginHistoryUI
 {
-  private View iuY;
-  private LinearLayout iuq;
-  private LinearLayout iur;
+  private LinearLayout ksV;
+  private LinearLayout ksW;
+  private View kua;
   
-  public final boolean aLN()
+  public final boolean bbD()
   {
     return false;
   }
@@ -26,28 +29,66 @@ public class LoginVoiceUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    if (ius) {
+    if (ktq) {
       return;
     }
-    iuq = ((LinearLayout)findViewById(a.i.login_pwd_ll));
-    iur = ((LinearLayout)findViewById(a.i.voice_print_ll));
-    iuq.setVisibility(8);
-    iur.setVisibility(0);
-    iuY = findViewById(a.i.login_voice_btn);
-    iuh.setVisibility(8);
-    iuf.setVisibility(8);
-    iui.setVisibility(0);
-    iuh.setText(a.n.login_login_by_pwd);
-    iuh.setEnabled(true);
-    findViewById(a.i.voice_btn_icon).setEnabled(false);
-    ((TextView)findViewById(a.i.voice_login_btn)).setTextColor(getResources().getColor(a.f.white));
-    ((TextView)findViewById(a.i.voice_login_btn)).setEnabled(false);
-    ((TextView)findViewById(a.i.voice_login_btn)).setBackgroundResource(getResources().getColor(a.f.transparent));
-    iuY.setOnClickListener(new dy(this));
-    iuh.setBackgroundResource(a.h.btn_style_grey);
-    iuh.setTextColor(getResources().getColor(a.f.grey_btn_text_color));
-    iuh.setOnClickListener(new dz(this));
-    iui.setOnClickListener(new ea(this));
+    paramBundle = getIntent();
+    if (paramBundle != null)
+    {
+      boolean bool = paramBundle.getBooleanExtra("login_success_need_bind_fingerprint", false);
+      kts = bool;
+      if (bool) {
+        ktt = paramBundle.getStringExtra("bind_login_fingerprint_info");
+      }
+    }
+    ksV = ((LinearLayout)findViewById(2131167013));
+    ksW = ((LinearLayout)findViewById(2131167015));
+    ksV.setVisibility(8);
+    ksW.setVisibility(0);
+    kua = findViewById(2131167016);
+    kth.setVisibility(8);
+    ktf.setVisibility(8);
+    kti.setVisibility(0);
+    kth.setText(2131427762);
+    kth.setEnabled(true);
+    findViewById(2131167017).setEnabled(false);
+    ((TextView)findViewById(2131167018)).setTextColor(getResources().getColor(2131231100));
+    ((TextView)findViewById(2131167018)).setEnabled(false);
+    ((TextView)findViewById(2131167018)).setBackgroundResource(getResources().getColor(2131231114));
+    kua.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        h.fUJ.g(11557, new Object[] { Integer.valueOf(2) });
+        paramAnonymousView = ag.bAw.A("login_user_name", "");
+        Intent localIntent = new Intent();
+        localIntent.putExtra("Kusername", paramAnonymousView);
+        localIntent.putExtra("kscene_type", 1);
+        c.a(koJ.kpc, "voiceprint", ".ui.VoiceLoginUI", localIntent, 1024);
+      }
+    });
+    kth.setBackgroundResource(2130970260);
+    kth.setTextColor(getResources().getColor(2131231253));
+    kth.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        h.fUJ.g(11557, new Object[] { Integer.valueOf(3) });
+        finish();
+        paramAnonymousView = new Intent(LoginVoiceUI.this, LoginHistoryUI.class);
+        startActivity(paramAnonymousView);
+      }
+    });
+    kti.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        h.fUJ.g(11557, new Object[] { Integer.valueOf(3) });
+        finish();
+        paramAnonymousView = new Intent(LoginVoiceUI.this, LoginHistoryUI.class);
+        startActivity(paramAnonymousView);
+      }
+    });
   }
 }
 

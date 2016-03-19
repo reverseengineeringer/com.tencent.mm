@@ -1,21 +1,48 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.a.e;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import com.tencent.mm.protocal.b.aeo;
 
-public final class u
+public abstract interface u
 {
-  public static String b(String paramString, long paramLong)
-  {
-    String str = new SimpleDateFormat("ssHHmmMMddyy").format(new Date(paramLong));
-    if ((paramString != null) && (paramString.length() > 1)) {}
-    for (paramString = str + e.n(paramString.getBytes()).substring(0, 7);; paramString = str + "fffffff")
-    {
-      paramString = paramString + String.format("%04x", new Object[] { Long.valueOf(paramLong % 65535L) });
-      return paramString + (paramLong % 7L + 100L);
-    }
-  }
+  public abstract u a(String paramString1, String paramString2, aeo paramaeo);
+  
+  public abstract void a(v paramv);
+  
+  public abstract void b(v paramv);
+  
+  public abstract u cD(String paramString);
+  
+  public abstract boolean g(String paramString1, String paramString2, String paramString3);
+  
+  public abstract String getMediaId();
+  
+  public abstract String getTitle();
+  
+  public abstract boolean mA();
+  
+  public abstract aeo mF();
+  
+  public abstract u mG();
+  
+  public abstract int mI();
+  
+  public abstract String mJ();
+  
+  public abstract u mK();
+  
+  public abstract u mL();
+  
+  public abstract String mn();
+  
+  public abstract int mw();
+  
+  public abstract String mx();
+  
+  public abstract int my();
+  
+  public abstract String mz();
+  
+  public abstract void release();
 }
 
 /* Location:

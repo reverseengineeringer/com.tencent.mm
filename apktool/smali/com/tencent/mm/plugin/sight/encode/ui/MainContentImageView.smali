@@ -14,9 +14,9 @@
 # instance fields
 .field private final TAG:Ljava/lang/String;
 
-.field fkJ:Z
+.field gBH:Z
 
-.field fkK:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView$a;
+.field gBI:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView$a;
 
 
 # direct methods
@@ -30,7 +30,7 @@
     .line 15
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->fkJ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->gBH:Z
 
     .line 16
     const-string/jumbo v0, "!44@/B4Tb64lLpKt6d5qnDZ0amuE1L9es0a5kVaOtBxYgA0="
@@ -51,7 +51,7 @@
     .line 15
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->fkJ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->gBH:Z
 
     .line 16
     const-string/jumbo v0, "!44@/B4Tb64lLpKt6d5qnDZ0amuE1L9es0a5kVaOtBxYgA0="
@@ -72,14 +72,14 @@
     invoke-super/range {p0 .. p5}, Landroid/widget/ImageView;->onLayout(ZIIII)V
 
     .line 43
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->fkK:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->gBI:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView$a;
 
     if-eqz v0, :cond_0
 
     .line 44
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->fkK:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView$a;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->gBI:Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView$a;
 
-    invoke-interface {v0, p3}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView$a;->iQ(I)V
+    invoke-interface {v0, p3}, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView$a;->lb(I)V
 
     .line 46
     :cond_0
@@ -91,7 +91,7 @@
 
     .prologue
     .line 37
-    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->fkJ:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainContentImageView;->gBH:Z
 
     .line 38
     return-void

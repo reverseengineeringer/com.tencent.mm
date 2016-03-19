@@ -1,9 +1,6 @@
 package com.tencent.mm.d.a;
 
-public final class cq$b
-{
-  public long ayC;
-}
+public final class cq$b {}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.d.a.cq.b

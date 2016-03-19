@@ -36,9 +36,9 @@
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/ScrollView;->onSizeChanged(IIII)V
 
     .line 29
-    new-instance v0, Lcom/tencent/mm/ui/bindqq/a;
+    new-instance v0, Lcom/tencent/mm/ui/bindqq/AutoBottomScrollView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/bindqq/a;-><init>(Lcom/tencent/mm/ui/bindqq/AutoBottomScrollView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/bindqq/AutoBottomScrollView$1;-><init>(Lcom/tencent/mm/ui/bindqq/AutoBottomScrollView;)V
 
     const-wide/16 v1, 0x64
 

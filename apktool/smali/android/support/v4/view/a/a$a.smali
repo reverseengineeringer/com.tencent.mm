@@ -27,19 +27,6 @@
 
 
 # virtual methods
-.method public final a(Ljava/lang/Object;I)V
-    .locals 0
-
-    .prologue
-    .line 430
-    check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(I)V
-
-    .line 431
-    return-void
-.end method
-
 .method public final a(Ljava/lang/Object;Landroid/graphics/Rect;)V
     .locals 0
 
@@ -76,6 +63,19 @@
     invoke-virtual {p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->setClickable(Z)V
 
     .line 581
+    return-void
+.end method
+
+.method public final b(Ljava/lang/Object;I)V
+    .locals 0
+
+    .prologue
+    .line 430
+    check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {p1, p2}, Landroid/view/accessibility/AccessibilityNodeInfo;->addAction(I)V
+
+    .line 431
     return-void
 .end method
 
@@ -131,20 +131,6 @@
     return-void
 .end method
 
-.method public final c(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 425
-    check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-static {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->obtain(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public final c(Ljava/lang/Object;Landroid/graphics/Rect;)V
     .locals 0
 
@@ -195,20 +181,6 @@
 
     .line 596
     return-void
-.end method
-
-.method public final d(Ljava/lang/Object;)I
-    .locals 1
-
-    .prologue
-    .line 445
-    check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getActions()I
-
-    move-result v0
-
-    return v0
 .end method
 
 .method public final d(Ljava/lang/Object;Landroid/graphics/Rect;)V
@@ -263,20 +235,6 @@
     return-void
 .end method
 
-.method public final e(Ljava/lang/Object;)Ljava/lang/CharSequence;
-    .locals 1
-
-    .prologue
-    .line 470
-    check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
-
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getClassName()Ljava/lang/CharSequence;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public final e(Ljava/lang/Object;Z)V
     .locals 0
 
@@ -290,14 +248,14 @@
     return-void
 .end method
 
-.method public final f(Ljava/lang/Object;)Ljava/lang/CharSequence;
+.method public final f(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 475
+    .line 425
     check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getContentDescription()Ljava/lang/CharSequence;
+    invoke-static {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->obtain(Landroid/view/accessibility/AccessibilityNodeInfo;)Landroid/view/accessibility/AccessibilityNodeInfo;
 
     move-result-object v0
 
@@ -317,18 +275,18 @@
     return-void
 .end method
 
-.method public final g(Ljava/lang/Object;)Ljava/lang/CharSequence;
+.method public final g(Ljava/lang/Object;)I
     .locals 1
 
     .prologue
-    .line 480
+    .line 445
     check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
 
-    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getPackageName()Ljava/lang/CharSequence;
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getActions()I
 
-    move-result-object v0
+    move-result v0
 
-    return-object v0
+    return v0
 .end method
 
 .method public final g(Ljava/lang/Object;Z)V
@@ -348,6 +306,48 @@
     .locals 1
 
     .prologue
+    .line 470
+    check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getClassName()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final i(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 475
+    check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getContentDescription()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final j(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 480
+    check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
+
+    invoke-virtual {p1}, Landroid/view/accessibility/AccessibilityNodeInfo;->getPackageName()Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final k(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
     .line 490
     check-cast p1, Landroid/view/accessibility/AccessibilityNodeInfo;
 
@@ -358,7 +358,7 @@
     return-object v0
 .end method
 
-.method public final i(Ljava/lang/Object;)Z
+.method public final l(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -372,7 +372,7 @@
     return v0
 .end method
 
-.method public final j(Ljava/lang/Object;)Z
+.method public final m(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -386,7 +386,7 @@
     return v0
 .end method
 
-.method public final k(Ljava/lang/Object;)Z
+.method public final n(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -400,7 +400,7 @@
     return v0
 .end method
 
-.method public final l(Ljava/lang/Object;)Z
+.method public final o(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -414,7 +414,7 @@
     return v0
 .end method
 
-.method public final m(Ljava/lang/Object;)Z
+.method public final p(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -428,7 +428,7 @@
     return v0
 .end method
 
-.method public final n(Ljava/lang/Object;)Z
+.method public final q(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -442,7 +442,7 @@
     return v0
 .end method
 
-.method public final o(Ljava/lang/Object;)Z
+.method public final r(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -456,7 +456,7 @@
     return v0
 .end method
 
-.method public final p(Ljava/lang/Object;)Z
+.method public final s(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -470,7 +470,7 @@
     return v0
 .end method
 
-.method public final q(Ljava/lang/Object;)Z
+.method public final t(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -484,7 +484,7 @@
     return v0
 .end method
 
-.method public final r(Ljava/lang/Object;)Z
+.method public final u(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -498,7 +498,7 @@
     return v0
 .end method
 
-.method public final s(Ljava/lang/Object;)V
+.method public final v(Ljava/lang/Object;)V
     .locals 0
 
     .prologue

@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field private eYn:I
+.field private gjm:I
 
-.field final synthetic jhu:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+.field final synthetic llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
 
 # direct methods
@@ -28,15 +28,15 @@
     .locals 1
 
     .prologue
-    .line 524
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->jhu:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    .line 520
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 525
+    .line 521
     const/16 v0, 0x320
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->eYn:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gjm:I
 
     return-void
 .end method
@@ -45,7 +45,7 @@
     .locals 0
 
     .prologue
-    .line 524
+    .line 520
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;-><init>(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)V
 
     return-void
@@ -57,43 +57,43 @@
     .locals 3
 
     .prologue
-    .line 538
+    .line 534
     const/16 v0, 0x320
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/dr;->Q(ILjava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/i;->ai(ILjava/lang/String;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->eYn:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gjm:I
 
-    .line 539
-    iget v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->eYn:I
+    .line 535
+    iget v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gjm:I
 
     if-gez v0, :cond_0
 
-    .line 540
+    .line 536
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->eYn:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gjm:I
 
-    .line 542
+    .line 538
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->jhu:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->j(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->l(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)Landroid/widget/TextView;
 
     move-result-object v0
 
     if-eqz v0, :cond_1
 
-    .line 543
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->jhu:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    .line 539
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->j(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)Landroid/widget/TextView;
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->l(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)Landroid/widget/TextView;
 
     move-result-object v0
 
@@ -101,7 +101,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v2, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->eYn:I
+    iget v2, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->gjm:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -113,13 +113,13 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 546
+    .line 542
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->jhu:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ModRemarkNameUI$b;->llQ:Lcom/tencent/mm/ui/contact/ModRemarkNameUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->k(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)V
+    invoke-static {v0}, Lcom/tencent/mm/ui/contact/ModRemarkNameUI;->m(Lcom/tencent/mm/ui/contact/ModRemarkNameUI;)V
 
-    .line 547
+    .line 543
     return-void
 .end method
 
@@ -127,7 +127,7 @@
     .locals 0
 
     .prologue
-    .line 530
+    .line 526
     return-void
 .end method
 
@@ -135,6 +135,6 @@
     .locals 0
 
     .prologue
-    .line 534
+    .line 530
     return-void
 .end method

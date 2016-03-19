@@ -4,35 +4,29 @@
 
 
 # virtual methods
-.method public abstract O(II)Z
+.method public abstract a(Lcom/tencent/mm/modelsearch/m$i;)Lcom/tencent/mm/modelsearch/o$a;
 .end method
 
-.method public abstract beginTransaction()V
+.method public abstract a(Ljava/lang/String;Lcom/tencent/mm/modelsearch/m$g;I)V
 .end method
 
-.method public abstract c(JJ)J
+.method public abstract b(Lcom/tencent/mm/modelsearch/m$i;)Lcom/tencent/mm/modelsearch/o$a;
 .end method
 
-.method public abstract commit()V
+.method public abstract c(Lcom/tencent/mm/modelsearch/m$i;)Lcom/tencent/mm/modelsearch/o$a;
 .end method
 
-.method public abstract compileStatement(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteStatement;
+.method public abstract create()V
 .end method
 
-.method public abstract d(JJ)V
+.method public abstract d(Lcom/tencent/mm/modelsearch/m$i;)Lcom/tencent/mm/modelsearch/o$a;
 .end method
 
-.method public abstract execSQL(Ljava/lang/String;)V
+.method public abstract destroy()V
 .end method
 
-.method public abstract execSQL(Ljava/lang/String;[Ljava/lang/Object;)V
+.method public abstract e(Lcom/tencent/mm/modelsearch/m$i;)Lcom/tencent/mm/modelsearch/o$a;
 .end method
 
-.method public abstract hq(Ljava/lang/String;)Z
-.end method
-
-.method public abstract inTransaction()Z
-.end method
-
-.method public abstract rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+.method public abstract getName()Ljava/lang/String;
 .end method

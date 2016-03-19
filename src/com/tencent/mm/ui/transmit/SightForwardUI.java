@@ -11,127 +11,151 @@ import android.view.View;
 import android.view.ViewStub;
 import android.view.Window;
 import android.widget.RelativeLayout.LayoutParams;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
 import com.tencent.mm.a.e;
-import com.tencent.mm.ah.ac;
-import com.tencent.mm.ah.v;
-import com.tencent.mm.model.ax;
+import com.tencent.mm.a.g;
+import com.tencent.mm.an.n;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.sight.base.c;
 import com.tencent.mm.plugin.sight.encode.ui.MainSightForwardContainerView;
+import com.tencent.mm.plugin.sight.encode.ui.MainSightForwardContainerView.1;
+import com.tencent.mm.plugin.sight.encode.ui.MainSightForwardContainerView.2;
+import com.tencent.mm.plugin.sight.encode.ui.MainSightForwardContainerView.3;
 import com.tencent.mm.plugin.sight.encode.ui.MainSightSelectContactView;
 import com.tencent.mm.plugin.sight.encode.ui.SightCameraView;
-import com.tencent.mm.plugin.sight.encode.ui.ag;
-import com.tencent.mm.plugin.sight.encode.ui.ah;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.plugin.sight.encode.ui.b;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.LauncherUI;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMFragmentActivity;
+import com.tencent.mm.ui.chatting.ChattingUI;
 
 public class SightForwardUI
   extends MMActivity
 {
-  private MainSightForwardContainerView jzE;
-  private String mPath;
+  private String dtS;
+  private MainSightForwardContainerView lBI;
   
-  protected final int HX()
+  protected final int Kj()
   {
     return 1;
   }
   
   protected final int getLayoutId()
   {
-    return a.k.main_sight_forward_view;
+    return 2131363080;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
     getWindow().setFlags(1024, 1024);
-    jy.bf().hide();
-    getIntent().putExtra("sight_local_path", "/sdcard/Movies/test.mp4");
-    mPath = getIntent().getStringExtra("sight_local_path");
-    if (!com.tencent.mm.plugin.sight.base.c.pX(mPath))
+    iF.aP().hide();
+    dtS = getIntent().getStringExtra("sight_local_path");
+    if (!c.tW(dtS))
     {
-      t.e("!32@/B4Tb64lLpJDO2pGf7Sjg0zBm2PqUu1g", "Path:%s, NOT SIGHT!", new Object[] { mPath });
+      u.e("!32@/B4Tb64lLpJDO2pGf7Sjg0zBm2PqUu1g", "Path:%s, NOT SIGHT!", new Object[] { dtS });
       finish();
       return;
     }
-    if (!ax.qZ())
+    if (!ah.rh())
     {
-      t.e("!32@/B4Tb64lLpJDO2pGf7Sjg0zBm2PqUu1g", "acc not ready");
+      u.e("!32@/B4Tb64lLpJDO2pGf7Sjg0zBm2PqUu1g", "acc not ready");
       finish();
       return;
     }
-    paramBundle = ac.bl(String.valueOf(SystemClock.elapsedRealtime()));
-    v.BY();
-    paramBundle = ac.ij(paramBundle);
-    if (com.tencent.mm.a.c.j(mPath, paramBundle) <= 0L)
+    paramBundle = n.bn(String.valueOf(SystemClock.elapsedRealtime()));
+    com.tencent.mm.an.j.Ea();
+    paramBundle = n.jL(paramBundle);
+    if (e.o(dtS, paramBundle) <= 0L)
     {
-      t.e("!32@/B4Tb64lLpJDO2pGf7Sjg0zBm2PqUu1g", "Copy File %s to %s FAIL!", new Object[] { mPath, paramBundle });
+      u.e("!32@/B4Tb64lLpJDO2pGf7Sjg0zBm2PqUu1g", "Copy File %s to %s FAIL!", new Object[] { dtS, paramBundle });
       finish();
       return;
     }
-    mPath = paramBundle;
-    t.i("!32@/B4Tb64lLpJDO2pGf7Sjg0zBm2PqUu1g", "Doing Forward Sight, path %s", new Object[] { mPath });
-    jzE = ((MainSightForwardContainerView)findViewById(a.i.forward_view));
-    jzE.setIMainSightViewCallback(new af(this));
-    paramBundle = jzE;
-    Object localObject = mPath;
-    flw = this;
-    flK = ((String)localObject);
-    fls = e.aE((String)localObject);
+    dtS = paramBundle;
+    u.i("!32@/B4Tb64lLpJDO2pGf7Sjg0zBm2PqUu1g", "Doing Forward Sight, path %s", new Object[] { dtS });
+    lBI = ((MainSightForwardContainerView)findViewById(2131169136));
+    lBI.setIMainSightViewCallback(new b()
+    {
+      public final void awK() {}
+      
+      public final void awL() {}
+      
+      public final void eK(boolean paramAnonymousBoolean)
+      {
+        Intent localIntent = new Intent();
+        localIntent.setClass(koJ.kpc, LauncherUI.class).addFlags(67108864);
+        startActivity(localIntent);
+        finish();
+      }
+      
+      public final void tY(String paramAnonymousString)
+      {
+        Intent localIntent = new Intent(koJ.kpc, ChattingUI.class);
+        localIntent.addFlags(67108864);
+        localIntent.putExtra("Chat_User", paramAnonymousString);
+        startActivity(localIntent);
+        finish();
+      }
+    });
+    paramBundle = lBI;
+    Object localObject = dtS;
+    gCr = this;
+    gCG = ((String)localObject);
+    gCn = g.aC((String)localObject);
     long l = System.currentTimeMillis();
-    flL = 1.3333334F;
-    fla = ((SightCameraView)((ViewStub)paramBundle.findViewById(a.i.camera_video_view)).inflate());
-    fla.setTargetWidth(com.tencent.mm.pluginsdk.i.a.gNS);
-    fla.setFixPreviewRate(flL);
-    fla.setVisibility(0);
-    flg = paramBundle.findViewById(a.i.top_virtual_actionbar);
-    flg.setLayoutParams(new RelativeLayout.LayoutParams(-1, jy.bf().getHeight()));
-    fld = paramBundle.findViewById(a.i.main_sight_close);
-    fle = paramBundle.findViewById(a.i.main_sight_send);
-    flj = paramBundle.findViewById(a.i.camera_shadow);
-    fld.setOnClickListener(new com.tencent.mm.plugin.sight.encode.ui.af(paramBundle));
-    fle.setOnClickListener(new ag(paramBundle));
-    paramBundle.ake();
-    t.d("!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI=", "init concrol view use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
-    jzE.akd();
-    paramBundle = jzE;
-    if (fkY == null)
+    gCH = 1.3333334F;
+    gBX = ((SightCameraView)((ViewStub)paramBundle.findViewById(2131169092)).inflate());
+    gBX.setTargetWidth(com.tencent.mm.pluginsdk.l.a.iFk);
+    gBX.setFixPreviewRate(gCH);
+    gBX.setVisibility(0);
+    gCc = paramBundle.findViewById(2131169029);
+    gCc.setLayoutParams(new RelativeLayout.LayoutParams(-1, iF.aP().getHeight()));
+    gCa = paramBundle.findViewById(2131169031);
+    eXt = paramBundle.findViewById(2131169032);
+    gCf = paramBundle.findViewById(2131169017);
+    gCa.setOnClickListener(new MainSightForwardContainerView.1(paramBundle));
+    eXt.setOnClickListener(new MainSightForwardContainerView.2(paramBundle));
+    paramBundle.awI();
+    u.d("!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI=", "init concrol view use %dms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    lBI.awH();
+    paramBundle = lBI;
+    if (gBV == null)
     {
       localObject = paramBundle.getResources().getDisplayMetrics();
-      float f = widthPixels / flL;
-      fkY = ((MainSightSelectContactView)paramBundle.findViewById(a.i.select_contact_root));
-      MainSightSelectContactView localMainSightSelectContactView = fkY;
-      MMFragmentActivity localMMFragmentActivity = flw;
+      float f = widthPixels / gCH;
+      gBV = ((MainSightSelectContactView)paramBundle.findViewById(2131169027));
+      MainSightSelectContactView localMainSightSelectContactView = gBV;
+      MMFragmentActivity localMMFragmentActivity = gCr;
       int i = (int)(heightPixels - f);
       int j = heightPixels;
       localMainSightSelectContactView.a(localMMFragmentActivity, i, paramBundle, paramBundle);
-      fkY.setSearchView(paramBundle.findViewById(a.i.search_view));
-      fkY.setEmptyBgView(paramBundle.findViewById(a.i.empty_bg));
-      fkY.setMainSightContentView(paramBundle);
+      gBV.setSearchView(paramBundle.findViewById(2131167586));
+      gBV.setEmptyBgView(paramBundle.findViewById(2131169025));
+      gBV.setMainSightContentView(paramBundle);
     }
-    paramBundle.db(true);
-    fla.postDelayed(new ah(paramBundle), 50L);
+    paramBundle.eL(true);
+    gBX.postDelayed(new MainSightForwardContainerView.3(paramBundle), 50L);
   }
   
   protected void onPause()
   {
     super.onPause();
-    jzE.onPause();
+    lBI.onPause();
   }
   
   protected void onResume()
   {
     super.onResume();
-    MainSightForwardContainerView localMainSightForwardContainerView = jzE;
-    if (!flt) {}
+    MainSightForwardContainerView localMainSightForwardContainerView = lBI;
+    if (!gCo) {}
     for (int i = 1; i != 0; i = 0)
     {
-      com.tencent.mm.sdk.c.a.hXQ.b("SightSendResult", fly);
-      com.tencent.mm.sdk.c.a.hXQ.a("SightSendResult", fly);
+      com.tencent.mm.sdk.c.a.jUF.c("SightSendResult", gCt);
+      com.tencent.mm.sdk.c.a.jUF.b("SightSendResult", gCt);
       return;
     }
-    localMainSightForwardContainerView.Mp();
+    localMainSightForwardContainerView.Qo();
   }
 }
 

@@ -1,9 +1,11 @@
 package com.tencent.mm.d.a;
 
+import android.graphics.Bitmap;
+
 public final class eb$b
 {
-  public String aAm;
-  public String aAn;
+  public Bitmap aym;
+  public int ret = -1;
 }
 
 /* Location:

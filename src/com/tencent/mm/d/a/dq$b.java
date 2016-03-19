@@ -1,10 +1,9 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.ahe;
-
 public final class dq$b
 {
-  public ahe azL;
+  public boolean atR = false;
+  public int axu;
 }
 
 /* Location:

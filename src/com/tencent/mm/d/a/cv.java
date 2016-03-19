@@ -1,29 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class cv
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ayO = new a();
-  public b ayP = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aws = new a();
   
   public cv()
   {
-    id = "FileDownloadResume";
-    hXT = atO;
+    id = "ExDeviceSimpleBTOnConnectState";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public long ayC = 0L;
-  }
-  
-  public static final class b
-  {
-    public boolean ayH = false;
+    public int avD;
+    public long awp;
+    public String mac;
   }
 }
 

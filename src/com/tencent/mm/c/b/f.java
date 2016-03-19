@@ -1,14 +1,36 @@
 package com.tencent.mm.c.b;
 
-final class f
-  implements Runnable
+public abstract class f
 {
-  f(d paramd) {}
+  protected boolean aqV = false;
+  protected int aqW = 0;
+  protected int aqi = -123456789;
+  protected a aqz;
   
-  public final void run()
+  public final void a(a parama)
   {
-    arM.arL.ma();
-    b.a(arM.arL).onError();
+    aqz = parama;
+  }
+  
+  public final void aQ(int paramInt)
+  {
+    aqi = paramInt;
+  }
+  
+  public abstract void an(boolean paramBoolean);
+  
+  public abstract boolean lN();
+  
+  public final int lR()
+  {
+    return aqW;
+  }
+  
+  public abstract void li();
+  
+  public static abstract interface a
+  {
+    public abstract void c(int paramInt, byte[] paramArrayOfByte);
   }
 }
 

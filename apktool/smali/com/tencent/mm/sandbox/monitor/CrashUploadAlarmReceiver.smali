@@ -25,17 +25,17 @@
 
     const-string/jumbo v1, "dkcrash AlarmReceiver.onReceive"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 16
-    invoke-static {}, Lcom/tencent/mm/sandbox/monitor/a;->aDK()I
+    invoke-static {}, Lcom/tencent/mm/sandbox/monitor/a;->aTL()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 17
-    invoke-static {p1}, Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService;->cD(Landroid/content/Context;)V
+    invoke-static {p1}, Lcom/tencent/mm/sandbox/monitor/ExceptionMonitorService;->df(Landroid/content/Context;)V
 
     .line 19
     :cond_0

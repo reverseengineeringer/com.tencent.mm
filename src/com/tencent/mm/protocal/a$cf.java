@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cf
-  extends a.c
+  extends a.e
 {
   public a$cf()
   {
-    super("setCloseWindowConfirmDialogInfo", "setCloseWindowConfirmDialogInfo", 77, false);
+    super("openTimelineCheckInList", "open_timeline_checkin_list", 62, false);
   }
 }
 

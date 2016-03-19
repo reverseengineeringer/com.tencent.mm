@@ -1,29 +1,19 @@
 package android.support.v4.view.a;
 
-import java.util.ArrayList;
+import android.os.Bundle;
+import android.view.accessibility.AccessibilityNodeInfo;
+import android.view.accessibility.AccessibilityNodeProvider;
 import java.util.List;
 
 final class c
-  implements d.a
 {
-  c(b.b paramb, b paramb1) {}
-  
-  public final boolean aL()
+  static abstract interface a
   {
-    return b.aL();
-  }
-  
-  public final List aM()
-  {
-    b.aM();
-    new ArrayList();
-    throw new NullPointerException();
-  }
-  
-  public final Object aN()
-  {
-    b.aK();
-    return null;
+    public abstract boolean at();
+    
+    public abstract List au();
+    
+    public abstract Object av();
   }
 }
 

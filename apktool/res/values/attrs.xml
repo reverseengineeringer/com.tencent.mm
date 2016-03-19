@@ -1,274 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="a" format="reference" />
-    <attr name="b" format="boolean" />
-    <attr name="c" format="reference" />
-    <attr name="d" format="reference" />
-    <attr name="e" format="reference" />
-    <attr name="f" format="reference" />
-    <attr name="g" format="reference" />
-    <attr name="h" format="reference" />
-    <attr name="i" format="reference" />
-    <attr name="j" format="boolean" />
-    <attr name="k" format="string" />
-    <attr name="l" format="string" />
-    <attr name="m">
-        <enum name="a" value="0" />
-        <enum name="b" value="1" />
-        <enum name="c" value="2" />
-        <enum name="d" value="3" />
-        <enum name="e" value="4" />
-        <enum name="f" value="5" />
-        <enum name="g" value="6" />
-        <enum name="h" value="7" />
-        <enum name="i" value="8" />
-        <enum name="j" value="9" />
-        <enum name="k" value="10" />
-        <enum name="l" value="11" />
-        <enum name="m" value="12" />
-        <enum name="n" value="13" />
-        <enum name="o" value="14" />
-        <enum name="p" value="15" />
-        <enum name="q" value="16" />
-        <enum name="r" value="17" />
+    <attr name="a" format="integer" />
+    <attr name="b" format="dimension" />
+    <attr name="c" format="float" />
+    <attr name="d" format="float" />
+    <attr name="e" format="color" />
+    <attr name="f">
+        <enum name="cni" value="0" />
+        <enum name="cnj" value="1" />
     </attr>
-    <attr name="n" format="color" />
-    <attr name="o" format="reference" />
-    <attr name="p" format="boolean" />
+    <attr name="g" format="boolean" />
+    <attr name="h" format="float" />
+    <attr name="i" format="float" />
+    <attr name="j" format="integer" />
+    <attr name="k" format="integer" />
+    <attr name="l" format="boolean" />
+    <attr name="m" format="boolean" />
+    <attr name="n" format="boolean" />
+    <attr name="o">
+        <enum name="cnk" value="0" />
+        <enum name="cnl" value="2" />
+        <enum name="cnm" value="1" />
+    </attr>
+    <attr name="p" format="integer" />
     <attr name="q" format="integer" />
     <attr name="r" format="integer" />
-    <attr name="s">
-        <enum name="a" value="0" />
-        <enum name="e" value="3" />
-        <enum name="h" value="1" />
-        <enum name="s" value="2" />
-        <enum name="t" value="4" />
-        <enum name="u" value="5" />
-        <enum name="v" value="6" />
-        <enum name="w" value="7" />
+    <attr name="s" format="boolean" />
+    <attr name="t">
+        <enum name="clx" value="8" />
+        <enum name="cly" value="4" />
+        <enum name="clz" value="0" />
     </attr>
-    <attr name="t" format="reference" />
-    <attr name="u">
-        <enum name="x" value="0" />
-        <enum name="y" value="1" />
-        <enum name="z" value="2" />
-        <enum name="a0" value="3" />
-        <enum name="a1" value="100" />
-        <enum name="a2" value="0" />
-        <enum name="a3" value="20" />
-        <enum name="a4" value="60" />
-        <enum name="a5" value="40" />
-        <enum name="a6" value="30" />
-        <enum name="a7" value="50" />
-        <enum name="a8" value="-10" />
-        <enum name="a9" value="-20" />
-    </attr>
+    <attr name="u" format="boolean" />
     <attr name="v" format="reference" />
-    <attr name="w" format="reference" />
-    <attr name="x" format="string" />
+    <attr name="w" format="string" />
+    <attr name="x">
+        <enum name="aj9" value="0" />
+        <enum name="cnh" value="1" />
+    </attr>
     <attr name="y" format="reference" />
-    <attr name="z" format="string" />
-    <attr name="a0" format="reference|color" />
-    <attr name="a1" format="reference|color" />
-    <attr name="a2">
-        <enum name="a_" value="0" />
-        <enum name="aa" value="1" />
-        <enum name="ab" value="2" />
-    </attr>
-    <attr name="a3">
-        <enum name="a_" value="0" />
-        <enum name="aa" value="1" />
-        <enum name="ab" value="2" />
-    </attr>
-    <attr name="a4">
-        <enum name="a_" value="0" />
-        <enum name="aa" value="1" />
-        <enum name="ab" value="2" />
-    </attr>
+    <attr name="z" format="reference" />
+    <attr name="a0" format="reference" />
+    <attr name="a1" format="string" />
+    <attr name="a2" format="boolean" />
+    <attr name="a3" format="string" />
+    <attr name="a4" format="string" />
     <attr name="a5">
-        <enum name="a_" value="0" />
-        <enum name="aa" value="1" />
-        <enum name="ab" value="2" />
+        <enum name="ar0" value="0" />
+        <enum name="bgf" value="2" />
+        <enum name="btp" value="3" />
+        <enum name="clc" value="1" />
     </attr>
-    <attr name="a6" format="string" />
-    <attr name="a7" format="string" />
-    <attr name="a8">
-        <flag name="ac" value="0x00000030" />
-        <flag name="ad" value="0x00000050" />
-        <flag name="ae" value="0x00000003" />
-        <flag name="af" value="0x00000005" />
-        <flag name="ag" value="0x00000010" />
-        <flag name="ah" value="0x00000070" />
-        <flag name="ai" value="0x00000001" />
-        <flag name="aj" value="0x00000007" />
-        <flag name="ak" value="0x00000011" />
-        <flag name="al" value="0x00000077" />
-        <flag name="am" value="0x00000080" />
-        <flag name="an" value="0x00000008" />
-        <flag name="ao" value="0x00800003" />
-        <flag name="ap" value="0x00800005" />
+    <attr name="a6" format="color" />
+    <attr name="a7" format="reference" />
+    <attr name="a8" format="boolean" />
+    <attr name="a9" format="integer" />
+    <attr name="a_" format="integer" />
+    <attr name="aa" format="boolean" />
+    <attr name="ab">
+        <enum name="cnf" value="1" />
+        <enum name="cng" value="0" />
     </attr>
-    <attr name="a9" format="reference|color" />
-    <attr name="a_" format="string" localization="suggested" />
-    <attr name="aa">
-        <enum name="a" value="0" />
-        <enum name="e" value="3" />
-        <enum name="h" value="1" />
-        <enum name="s" value="2" />
-        <enum name="t" value="4" />
-        <enum name="u" value="5" />
-        <enum name="v" value="6" />
-        <enum name="w" value="7" />
-    </attr>
-    <attr name="ab" format="integer" />
     <attr name="ac" format="integer" />
-    <attr name="ad" format="reference|color" />
+    <attr name="ad" format="integer" />
     <attr name="ae" format="boolean" />
     <attr name="af" format="boolean" />
-    <attr name="ag" format="boolean" />
-    <attr name="ah" format="color" />
-    <attr name="ai">
-        <enum name="x" value="0" />
-        <enum name="y" value="1" />
-        <enum name="z" value="2" />
-        <enum name="a0" value="3" />
-        <enum name="a1" value="100" />
-        <enum name="a2" value="0" />
-        <enum name="a3" value="20" />
-        <enum name="a4" value="60" />
-        <enum name="a5" value="40" />
-        <enum name="a6" value="30" />
-        <enum name="a7" value="50" />
-        <enum name="a8" value="-10" />
-        <enum name="a9" value="-20" />
+    <attr name="ag" format="string" />
+    <attr name="ah" format="string" />
+    <attr name="ai" format="string" />
+    <attr name="aj" format="string" />
+    <attr name="ak">
+        <enum name="aj9" value="1" />
+        <enum name="ar0" value="0" />
     </attr>
-    <attr name="aj" format="boolean" />
-    <attr name="ak" format="string" />
-    <attr name="al" format="string" />
-    <attr name="am" format="boolean" />
-    <attr name="an" format="string" />
-    <attr name="ao" format="reference" />
-    <attr name="ap" format="boolean" />
-    <attr name="aq" format="string" />
-    <attr name="ar" format="reference" />
-    <attr name="as" format="dimension" />
-    <attr name="at" format="dimension" />
-    <attr name="au" format="dimension" />
-    <attr name="av" format="dimension" />
-    <attr name="aw" format="dimension" />
-    <attr name="ax" format="dimension" />
-    <attr name="ay" format="dimension" />
-    <attr name="az" format="reference" />
-    <attr name="b0" format="string" />
+    <attr name="al" format="reference" />
+    <attr name="am" format="string" />
+    <attr name="an" format="reference" />
+    <attr name="ao" format="string" />
+    <attr name="ap" format="reference|color" />
+    <attr name="aq" format="reference|color" />
+    <attr name="ar">
+        <enum name="clx" value="2" />
+        <enum name="cly" value="1" />
+        <enum name="clz" value="0" />
+    </attr>
+    <attr name="as">
+        <enum name="clx" value="2" />
+        <enum name="cly" value="1" />
+        <enum name="clz" value="0" />
+    </attr>
+    <attr name="at">
+        <enum name="clx" value="2" />
+        <enum name="cly" value="1" />
+        <enum name="clz" value="0" />
+    </attr>
+    <attr name="au">
+        <enum name="clx" value="2" />
+        <enum name="cly" value="1" />
+        <enum name="clz" value="0" />
+    </attr>
+    <attr name="av" format="string" />
+    <attr name="aw" format="string" />
+    <attr name="ax">
+        <flag name="cm0" value="0x00000050" />
+        <flag name="cm1" value="0x00000011" />
+        <flag name="cm2" value="0x00000001" />
+        <flag name="cm3" value="0x00000010" />
+        <flag name="cm4" value="0x00000008" />
+        <flag name="cm5" value="0x00000080" />
+        <flag name="cm6" value="0x00800005" />
+        <flag name="cm7" value="0x00000077" />
+        <flag name="cm8" value="0x00000007" />
+        <flag name="cm9" value="0x00000070" />
+        <flag name="cm_" value="0x00000003" />
+        <flag name="cma" value="0x00000005" />
+        <flag name="cmb" value="0x00800003" />
+        <flag name="cmc" value="0x00000030" />
+    </attr>
+    <attr name="ay" format="reference|color" />
+    <attr name="az" format="string" localization="suggested" />
+    <attr name="b0">
+        <enum name="ar0" value="0" />
+        <enum name="cl3" value="3" />
+        <enum name="clb" value="1" />
+        <enum name="clf" value="6" />
+        <enum name="clg" value="4" />
+        <enum name="clh" value="7" />
+        <enum name="cli" value="2" />
+        <enum name="clj" value="5" />
+    </attr>
     <attr name="b1" format="integer" />
-    <attr name="b2" format="reference" />
-    <attr name="b3" format="boolean" />
-    <attr name="b4" format="string" />
-    <attr name="b5" format="reference|string|integer|boolean|float" />
+    <attr name="b2" format="integer" />
+    <attr name="b3" format="reference|color" />
+    <attr name="b4" format="boolean" />
+    <attr name="b5" format="boolean" />
     <attr name="b6" format="boolean" />
-    <attr name="b7" format="reference" />
-    <attr name="b8" format="reference" />
+    <attr name="b7" format="color" />
+    <attr name="b8" format="boolean" />
     <attr name="b9" format="reference" />
-    <attr name="b_" format="string" />
-    <attr name="ba" format="color" />
-    <attr name="bb" format="string" />
+    <attr name="b_" format="reference" />
+    <attr name="ba" format="reference" />
+    <attr name="bb" format="reference" />
     <attr name="bc" format="string" />
-    <attr name="bd" format="boolean" />
-    <attr name="be" format="string" />
-    <attr name="bf" format="string" />
-    <attr name="bg" format="reference" />
+    <attr name="bd" format="integer" />
+    <attr name="be" format="integer" />
+    <attr name="bf" format="boolean" />
+    <attr name="bg" format="boolean" />
     <attr name="bh" format="string" />
-    <attr name="bi" format="string" />
-    <attr name="bj" format="reference" />
+    <attr name="bi" format="reference" />
+    <attr name="bj" format="boolean" />
     <attr name="bk" format="string" />
-    <attr name="bl" format="boolean" />
+    <attr name="bl" format="reference" />
     <attr name="bm" format="dimension" />
-    <attr name="bn" format="color" />
-    <attr name="bo" format="integer" />
-    <attr name="bp" format="integer" />
-    <attr name="bq" format="integer" />
-    <attr name="br" format="string" />
+    <attr name="bn" format="dimension" />
+    <attr name="bo" format="dimension" />
+    <attr name="bp" format="dimension" />
+    <attr name="bq" format="dimension" />
+    <attr name="br" format="integer" />
     <attr name="bs" format="dimension" />
-    <attr name="bt" format="dimension" />
+    <attr name="bt" format="reference" />
     <attr name="bu" format="reference" />
     <attr name="bv" format="string" />
-    <attr name="bw" format="string" />
-    <attr name="bx" format="boolean" />
-    <attr name="by" format="integer" />
-    <attr name="bz" format="integer" />
-    <attr name="c0" format="color" />
-    <attr name="c1" format="color" />
-    <attr name="c2" format="string" />
-    <attr name="c3" format="reference|color" />
-    <attr name="c4" format="reference|dimension" />
-    <attr name="c5">
-        <enum name="aw" value="0" />
-        <enum name="ax" value="1" />
-    </attr>
-    <attr name="c6" format="string" />
+    <attr name="bw" format="integer" />
+    <attr name="bx" format="reference" />
+    <attr name="by" format="boolean" />
+    <attr name="bz" format="string" />
+    <attr name="c0" format="reference|string|integer|boolean|float" />
+    <attr name="c1" format="boolean" />
+    <attr name="c2" format="reference" />
+    <attr name="c3" format="reference" />
+    <attr name="c4" format="reference" />
+    <attr name="c5" format="string" />
+    <attr name="c6" format="color" />
     <attr name="c7" format="string" />
     <attr name="c8" format="string" />
-    <attr name="c9">
-        <enum name="b3" value="0" />
-        <enum name="b4" value="1" />
-        <enum name="b5" value="2" />
-        <enum name="b6" value="3" />
-        <enum name="b7" value="4" />
-    </attr>
-    <attr name="c_" format="float" />
-    <attr name="ca" format="float" />
-    <attr name="cb" format="float" />
-    <attr name="cc" format="float" />
-    <attr name="cd" format="float" />
-    <attr name="ce" format="boolean" />
-    <attr name="cf" format="boolean" />
+    <attr name="c9" format="boolean" />
+    <attr name="c_" format="string" />
+    <attr name="ca" format="string" />
+    <attr name="cb" format="reference" />
+    <attr name="cc" format="string" />
+    <attr name="cd" format="string" />
+    <attr name="ce" format="reference" />
+    <attr name="cf" format="string" />
     <attr name="cg" format="boolean" />
-    <attr name="ch" format="boolean" />
-    <attr name="ci" format="boolean" />
-    <attr name="cj" format="boolean" />
-    <attr name="ck" format="boolean" />
-    <attr name="cl" format="boolean" />
-    <attr name="cm">
-        <enum name="b8" value="0" />
-        <enum name="b9" value="1" />
-    </attr>
-    <attr name="cn">
-        <enum name="b_" value="1" />
-        <enum name="ba" value="0" />
-        <enum name="bb" value="2" />
-    </attr>
-    <attr name="co" format="reference" />
-    <attr name="cp">
-        <enum name="bc" value="1" />
-        <enum name="bd" value="2" />
-    </attr>
-    <attr name="cq" format="dimension">
-        <enum name="be" value="-1" />
-        <enum name="bf" value="-2" />
-    </attr>
-    <attr name="cr" format="dimension">
-        <enum name="be" value="-1" />
-        <enum name="bf" value="-2" />
-    </attr>
-    <attr name="cs">
-        <enum name="bg" value="1" />
-        <enum name="bh" value="2" />
-        <enum name="bi" value="3" />
-    </attr>
-    <attr name="ct">
-        <enum name="bj" value="1" />
-        <enum name="bk" value="2" />
-        <enum name="bl" value="3" />
-    </attr>
-    <attr name="cu" format="reference" />
-    <attr name="cv" format="reference" />
-    <attr name="cw" format="reference|color" />
-    <attr name="cx" format="reference" />
+    <attr name="ch" format="dimension" />
+    <attr name="ci" format="color" />
+    <attr name="cj" format="integer" />
+    <attr name="ck" format="integer" />
+    <attr name="cl" format="integer" />
+    <attr name="cm" format="string" />
+    <attr name="cn" format="dimension" />
+    <attr name="co" format="dimension" />
+    <attr name="cp" format="reference" />
+    <attr name="cq" format="string" />
+    <attr name="cr" format="string" />
+    <attr name="cs" format="boolean" />
+    <attr name="ct" format="integer" />
+    <attr name="cu" format="integer" />
+    <attr name="cv" format="color" />
+    <attr name="cw" format="color" />
+    <attr name="cx" format="string" />
     <attr name="cy" format="reference|color" />
-    <attr name="cz" format="color" />
+    <attr name="cz" format="reference|dimension" />
     <attr name="d0">
-        <enum name="bj" value="1" />
-        <enum name="bl" value="2" />
+        <enum name="cnd" value="1" />
+        <enum name="cne" value="0" />
     </attr>
     <attr name="d1" format="boolean" />
     <attr name="d2" format="boolean" />
@@ -303,38 +239,38 @@
     <attr name="du" format="reference" />
     <attr name="dv" format="reference" />
     <attr name="dw" format="reference" />
-    <attr name="dx" format="string" />
-    <attr name="dy" format="dimension" />
+    <attr name="dx" format="dimension" />
+    <attr name="dy">
+        <enum name="cmf" value="0" />
+        <enum name="cmx" value="1" />
+        <enum name="cmy" value="2" />
+    </attr>
     <attr name="dz">
-        <enum name="b4" value="0" />
-        <enum name="bm" value="1" />
-        <enum name="bn" value="2" />
+        <flag name="cmz" value="0x00000020" />
+        <flag name="cn0" value="0x00000004" />
+        <flag name="cn1" value="0x00000010" />
+        <flag name="cn2" value="0x00000002" />
+        <flag name="cn3" value="0x00000008" />
+        <flag name="cn4" value="0x00000001" />
     </attr>
-    <attr name="e0">
-        <flag name="bo" value="0x00000001" />
-        <flag name="bp" value="0x00000002" />
-        <flag name="bq" value="0x00000004" />
-        <flag name="br" value="0x00000008" />
-        <flag name="bs" value="0x00000010" />
-        <flag name="bt" value="0x00000020" />
-    </attr>
-    <attr name="e1" format="string" />
+    <attr name="e0" format="string" />
+    <attr name="e1" format="reference" />
     <attr name="e2" format="reference" />
     <attr name="e3" format="reference" />
     <attr name="e4" format="reference" />
     <attr name="e5" format="reference" />
-    <attr name="e6" format="reference" />
-    <attr name="e7" format="reference" />
-    <attr name="e8" format="reference|color" />
-    <attr name="e9" format="reference|color" />
+    <attr name="e6" format="reference|color" />
+    <attr name="e7" format="reference|color" />
+    <attr name="e8" format="reference" />
+    <attr name="e9" format="reference" />
     <attr name="e_" format="reference" />
     <attr name="ea" format="reference" />
-    <attr name="eb" format="reference" />
-    <attr name="ec" format="reference" />
+    <attr name="eb" format="dimension" />
+    <attr name="ec" format="dimension" />
     <attr name="ed" format="dimension" />
     <attr name="ee" format="dimension" />
-    <attr name="ef" format="dimension" />
-    <attr name="eg" format="dimension" />
+    <attr name="ef" format="reference" />
+    <attr name="eg" format="reference" />
     <attr name="eh" format="reference" />
     <attr name="ei" format="reference" />
     <attr name="ej" format="reference" />
@@ -347,42 +283,42 @@
     <attr name="eq" format="reference" />
     <attr name="er" format="reference" />
     <attr name="es" format="reference" />
-    <attr name="et" format="reference" />
+    <attr name="et" format="dimension" />
     <attr name="eu" format="reference" />
     <attr name="ev" format="dimension" />
     <attr name="ew" format="reference" />
-    <attr name="ex" format="dimension" />
-    <attr name="ey" format="reference" />
+    <attr name="ex" format="reference" />
+    <attr name="ey">
+        <flag name="cn5" value="0x00000002" />
+        <flag name="cn6" value="0x00000008" />
+        <flag name="cn7" value="0x00000001" />
+        <flag name="cn8" value="0x00000000" />
+        <flag name="cn9" value="0x00000004" />
+    </attr>
     <attr name="ez" format="reference" />
-    <attr name="f0">
-        <flag name="bu" value="0x00000000" />
-        <flag name="bv" value="0x00000001" />
-        <flag name="bw" value="0x00000002" />
-        <flag name="bx" value="0x00000004" />
-        <flag name="by" value="0x00000008" />
+    <attr name="f0" format="string" />
+    <attr name="f1" format="string" />
+    <attr name="f2" format="reference" />
+    <attr name="f3">
+        <enum name="cn_" value="0" />
+        <enum name="cna" value="1" />
     </attr>
-    <attr name="f1" format="reference" />
-    <attr name="f2" format="string" />
-    <attr name="f3" format="string" />
     <attr name="f4" format="reference" />
-    <attr name="f5">
-        <enum name="bz" value="0" />
-        <enum name="c0" value="1" />
+    <attr name="f5" format="boolean" />
+    <attr name="f6">
+        <flag name="cm6" value="0x00000004" />
+        <flag name="cme" value="0x00000000" />
+        <flag name="cnb" value="0x00000001" />
+        <flag name="cnc" value="0x00000002" />
     </attr>
-    <attr name="f6" format="reference" />
-    <attr name="f7" format="boolean" />
-    <attr name="f8">
-        <flag name="ap" value="0x00000004" />
-        <flag name="b3" value="0x00000000" />
-        <flag name="c1" value="0x00000001" />
-        <flag name="c2" value="0x00000002" />
-    </attr>
-    <attr name="f9" format="dimension" />
-    <attr name="f_" format="reference" />
-    <attr name="fa" format="reference" />
-    <attr name="fb" format="boolean" />
-    <attr name="fc" format="boolean" />
-    <attr name="fd" format="string" />
+    <attr name="f7" format="dimension" />
+    <attr name="f8" format="reference" />
+    <attr name="f9" format="reference" />
+    <attr name="f_" format="boolean" />
+    <attr name="fa" format="boolean" />
+    <attr name="fb" format="string" />
+    <attr name="fc" format="reference" />
+    <attr name="fd" format="reference" />
     <attr name="fe" format="reference" />
     <attr name="ff" format="reference" />
     <attr name="fg" format="reference" />
@@ -390,153 +326,213 @@
     <attr name="fi" format="reference" />
     <attr name="fj" format="reference" />
     <attr name="fk" format="reference" />
-    <attr name="fl" format="reference" />
+    <attr name="fl" format="dimension" />
     <attr name="fm" format="reference" />
-    <attr name="fn" format="dimension" />
-    <attr name="fo" format="reference" />
+    <attr name="fn" format="reference" />
+    <attr name="fo" format="reference|color" />
     <attr name="fp" format="reference" />
-    <attr name="fq" format="reference|color" />
+    <attr name="fq" format="string" />
     <attr name="fr" format="reference" />
-    <attr name="fs" format="string" />
-    <attr name="ft" format="reference" />
-    <attr name="fu" format="reference" />
-    <attr name="fv" format="reference|boolean" />
-    <attr name="fw" format="integer" />
-    <attr name="fx" format="integer" />
-    <attr name="fy" format="reference" />
-    <attr name="fz" format="reference" />
-    <attr name="g0" format="reference" />
-    <attr name="g1" format="reference" />
-    <attr name="g2" format="string" />
-    <attr name="g3" format="string" />
-    <attr name="g4" format="string" />
-    <attr name="g5">
-        <enum name="a" value="0" />
-        <enum name="j" value="1" />
+    <attr name="fs" format="reference" />
+    <attr name="ft" format="reference|boolean" />
+    <attr name="fu">
+        <enum name="cmi" value="0" />
+        <enum name="cmj" value="1" />
     </attr>
-    <attr name="g6" format="reference" />
-    <attr name="g7" format="string" />
-    <attr name="g8" format="reference" />
+    <attr name="fv">
+        <enum name="cmk" value="1" />
+        <enum name="cml" value="0" />
+        <enum name="cmm" value="2" />
+    </attr>
+    <attr name="fw" format="reference" />
+    <attr name="fx">
+        <enum name="cmn" value="1" />
+        <enum name="cmo" value="2" />
+    </attr>
+    <attr name="fy" format="dimension">
+        <enum name="cmp" value="-1" />
+        <enum name="cmq" value="-2" />
+    </attr>
+    <attr name="fz" format="dimension">
+        <enum name="cmp" value="-1" />
+        <enum name="cmq" value="-2" />
+    </attr>
+    <attr name="g0">
+        <enum name="cmr" value="3" />
+        <enum name="cms" value="2" />
+        <enum name="cmt" value="1" />
+    </attr>
+    <attr name="g1">
+        <enum name="cmu" value="1" />
+        <enum name="cmv" value="2" />
+        <enum name="cmw" value="3" />
+    </attr>
+    <attr name="g2" format="reference" />
+    <attr name="g3" format="reference" />
+    <attr name="g4" format="reference|color" />
+    <attr name="g5" format="reference" />
+    <attr name="g6" format="reference|color" />
+    <attr name="g7" format="color" />
+    <attr name="g8">
+        <enum name="cmu" value="1" />
+        <enum name="cmw" value="2" />
+    </attr>
     <attr name="g9" format="string" />
-    <attr name="g_" format="reference|color" />
-    <attr name="ga" format="reference|color" />
+    <attr name="g_" format="string" />
+    <attr name="ga" format="string" />
     <attr name="gb">
-        <enum name="a_" value="0" />
-        <enum name="aa" value="1" />
-        <enum name="ab" value="2" />
+        <enum name="cmd" value="4" />
+        <enum name="cme" value="0" />
+        <enum name="cmf" value="1" />
+        <enum name="cmg" value="2" />
+        <enum name="cmh" value="3" />
     </attr>
-    <attr name="gc">
-        <enum name="a_" value="0" />
-        <enum name="aa" value="1" />
-        <enum name="ab" value="2" />
-    </attr>
-    <attr name="gd">
-        <enum name="a_" value="0" />
-        <enum name="aa" value="1" />
-        <enum name="ab" value="2" />
-    </attr>
-    <attr name="ge">
-        <enum name="a_" value="0" />
-        <enum name="aa" value="1" />
-        <enum name="ab" value="2" />
-    </attr>
-    <attr name="gf" format="string" />
-    <attr name="gg" format="string" />
-    <attr name="gh">
-        <flag name="ac" value="0x00000030" />
-        <flag name="ad" value="0x00000050" />
-        <flag name="ae" value="0x00000003" />
-        <flag name="af" value="0x00000005" />
-        <flag name="ag" value="0x00000010" />
-        <flag name="ah" value="0x00000070" />
-        <flag name="ai" value="0x00000001" />
-        <flag name="aj" value="0x00000007" />
-        <flag name="ak" value="0x00000011" />
-        <flag name="al" value="0x00000077" />
-        <flag name="am" value="0x00000080" />
-        <flag name="an" value="0x00000008" />
-        <flag name="ao" value="0x00800003" />
-        <flag name="ap" value="0x00800005" />
-    </attr>
-    <attr name="gi" format="reference|color" />
-    <attr name="gj" format="string" localization="suggested" />
-    <attr name="gk">
-        <enum name="a" value="0" />
-        <enum name="e" value="3" />
-        <enum name="h" value="1" />
-        <enum name="s" value="2" />
-        <enum name="t" value="4" />
-        <enum name="u" value="5" />
-        <enum name="v" value="6" />
-        <enum name="w" value="7" />
-    </attr>
-    <attr name="gl" format="integer" />
-    <attr name="gm" format="integer" />
-    <attr name="gn" format="reference|color" />
+    <attr name="gc" format="float" />
+    <attr name="gd" format="float" />
+    <attr name="ge" format="float" />
+    <attr name="gf" format="float" />
+    <attr name="gg" format="float" />
+    <attr name="gh" format="boolean" />
+    <attr name="gi" format="boolean" />
+    <attr name="gj" format="boolean" />
+    <attr name="gk" format="boolean" />
+    <attr name="gl" format="boolean" />
+    <attr name="gm" format="boolean" />
+    <attr name="gn" format="boolean" />
     <attr name="go" format="boolean" />
-    <attr name="gp" format="boolean" />
-    <attr name="gq" format="boolean" />
-    <attr name="gr" format="color" />
-    <attr name="gs" format="boolean" />
-    <attr name="gt" format="string" />
-    <attr name="gu" format="string" />
-    <attr name="gv">
-        <enum name="cc" value="0" />
-        <enum name="cd" value="1" />
+    <attr name="gp" format="string" />
+    <attr name="gq" format="string" />
+    <attr name="gr" format="string" />
+    <attr name="gs" format="string" />
+    <attr name="gt">
+        <enum name="aj9" value="9" />
+        <enum name="akw" value="3" />
+        <enum name="ar0" value="0" />
+        <enum name="bgf" value="10" />
+        <enum name="cl2" value="1" />
+        <enum name="cl3" value="4" />
+        <enum name="cl4" value="14" />
+        <enum name="cl5" value="15" />
+        <enum name="cl6" value="8" />
+        <enum name="cl7" value="17" />
+        <enum name="cl8" value="16" />
+        <enum name="cl9" value="5" />
+        <enum name="cl_" value="12" />
+        <enum name="cla" value="11" />
+        <enum name="clb" value="7" />
+        <enum name="clc" value="2" />
+        <enum name="cld" value="13" />
+        <enum name="cle" value="6" />
     </attr>
-    <attr name="gw" format="integer" />
+    <attr name="gu" format="color" />
+    <attr name="gv" format="reference" />
+    <attr name="gw" format="boolean" />
     <attr name="gx" format="integer" />
-    <attr name="gy" format="boolean" />
-    <attr name="gz" format="boolean" />
-    <attr name="h0">
-        <enum name="j" value="0" />
-        <enum name="ce" value="1" />
+    <attr name="gy" format="integer" />
+    <attr name="gz">
+        <enum name="ar0" value="0" />
+        <enum name="cl3" value="3" />
+        <enum name="clb" value="1" />
+        <enum name="clf" value="6" />
+        <enum name="clg" value="4" />
+        <enum name="clh" value="7" />
+        <enum name="cli" value="2" />
+        <enum name="clj" value="5" />
     </attr>
+    <attr name="h0" format="reference" />
     <attr name="h1">
-        <enum name="a_" value="0" />
-        <enum name="aa" value="4" />
-        <enum name="ab" value="8" />
+        <enum name="clk" value="50" />
+        <enum name="cll" value="30" />
+        <enum name="clm" value="0" />
+        <enum name="cln" value="-10" />
+        <enum name="clo" value="-20" />
+        <enum name="clp" value="20" />
+        <enum name="clq" value="40" />
+        <enum name="clr" value="60" />
+        <enum name="cls" value="2" />
+        <enum name="clt" value="100" />
+        <enum name="clu" value="1" />
+        <enum name="clv" value="0" />
+        <enum name="clw" value="3" />
     </attr>
-    <attr name="h2" format="boolean" />
+    <attr name="h2" format="reference" />
     <attr name="h3" format="reference" />
     <attr name="h4" format="string" />
-    <attr name="h5" format="string" />
-    <attr name="h6">
-        <enum name="a" value="0" />
-        <enum name="c" value="1" />
-        <enum name="k" value="2" />
-        <enum name="cf" value="3" />
+    <attr name="h5" format="reference" />
+    <attr name="h6" format="string" />
+    <attr name="h7" format="reference|color" />
+    <attr name="h8" format="reference|color" />
+    <attr name="h9">
+        <enum name="clx" value="2" />
+        <enum name="cly" value="1" />
+        <enum name="clz" value="0" />
     </attr>
-    <attr name="h7" format="color" />
-    <attr name="h8" format="reference" />
-    <attr name="h9" format="boolean" />
-    <attr name="h_" format="integer" />
-    <attr name="ha" format="integer" />
-    <attr name="hb" format="boolean" />
-    <attr name="hc" format="dimension" />
-    <attr name="hd" format="float" />
-    <attr name="he" format="float" />
-    <attr name="hf" format="color" />
-    <attr name="hg">
-        <enum name="cg" value="0" />
-        <enum name="ch" value="1" />
+    <attr name="h_">
+        <enum name="clx" value="2" />
+        <enum name="cly" value="1" />
+        <enum name="clz" value="0" />
     </attr>
-    <attr name="hh" format="boolean" />
-    <attr name="hi" format="float" />
-    <attr name="hj" format="float" />
-    <attr name="hk" format="integer" />
-    <attr name="hl" format="integer" />
+    <attr name="ha">
+        <enum name="clx" value="2" />
+        <enum name="cly" value="1" />
+        <enum name="clz" value="0" />
+    </attr>
+    <attr name="hb">
+        <enum name="clx" value="2" />
+        <enum name="cly" value="1" />
+        <enum name="clz" value="0" />
+    </attr>
+    <attr name="hc" format="string" />
+    <attr name="hd" format="string" />
+    <attr name="he">
+        <flag name="cm0" value="0x00000050" />
+        <flag name="cm1" value="0x00000011" />
+        <flag name="cm2" value="0x00000001" />
+        <flag name="cm3" value="0x00000010" />
+        <flag name="cm4" value="0x00000008" />
+        <flag name="cm5" value="0x00000080" />
+        <flag name="cm6" value="0x00800005" />
+        <flag name="cm7" value="0x00000077" />
+        <flag name="cm8" value="0x00000007" />
+        <flag name="cm9" value="0x00000070" />
+        <flag name="cm_" value="0x00000003" />
+        <flag name="cma" value="0x00000005" />
+        <flag name="cmb" value="0x00800003" />
+        <flag name="cmc" value="0x00000030" />
+    </attr>
+    <attr name="hf" format="reference|color" />
+    <attr name="hg" format="string" localization="suggested" />
+    <attr name="hh">
+        <enum name="ar0" value="0" />
+        <enum name="cl3" value="3" />
+        <enum name="clb" value="1" />
+        <enum name="clf" value="6" />
+        <enum name="clg" value="4" />
+        <enum name="clh" value="7" />
+        <enum name="cli" value="2" />
+        <enum name="clj" value="5" />
+    </attr>
+    <attr name="hi" format="integer" />
+    <attr name="hj" format="integer" />
+    <attr name="hk" format="reference|color" />
+    <attr name="hl" format="boolean" />
     <attr name="hm" format="boolean" />
     <attr name="hn" format="boolean" />
-    <attr name="ho" format="boolean" />
+    <attr name="ho" format="color" />
     <attr name="hp">
-        <enum name="ci" value="0" />
-        <enum name="cj" value="1" />
-        <enum name="ck" value="2" />
+        <enum name="clk" value="50" />
+        <enum name="cll" value="30" />
+        <enum name="clm" value="0" />
+        <enum name="cln" value="-10" />
+        <enum name="clo" value="-20" />
+        <enum name="clp" value="20" />
+        <enum name="clq" value="40" />
+        <enum name="clr" value="60" />
+        <enum name="cls" value="2" />
+        <enum name="clt" value="100" />
+        <enum name="clu" value="1" />
+        <enum name="clv" value="0" />
+        <enum name="clw" value="3" />
     </attr>
-    <attr name="hq" format="integer" />
-    <attr name="hr" format="integer" />
-    <attr name="hs" format="integer" />
-    <attr name="ht" format="boolean" />
-    <attr name="hu" format="integer" />
+    <attr name="hq" format="boolean" />
 </resources>

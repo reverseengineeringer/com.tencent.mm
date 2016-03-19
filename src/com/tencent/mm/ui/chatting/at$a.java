@@ -1,57 +1,52 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.d.a.gb;
-import com.tencent.mm.model.br;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.ax.a;
-import com.tencent.mm.ui.base.bn;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import android.graphics.Color;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.drawable.Drawable;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.widget.ImageView;
 
-final class at$a
-  implements ax.a
+public final class at$a
+  implements View.OnTouchListener
 {
-  private Set iTj;
-  private bn iTk;
-  private ny iTl;
+  private int dc;
   
-  public at$a(Set paramSet, bn parambn, ny paramny)
+  public at$a()
   {
-    iTj = paramSet;
-    iTk = parambn;
-    iTl = paramny;
+    this(Color.argb(255, 136, 136, 136));
   }
   
-  public final boolean ud()
+  private at$a(int paramInt)
   {
-    Object localObject = iTj;
-    LinkedList localLinkedList = new LinkedList();
-    localObject = ((Set)localObject).iterator();
-    while (((Iterator)localObject).hasNext())
-    {
-      Long localLong = (Long)((Iterator)localObject).next();
-      localLinkedList.add(localLong);
-      gb localgb = new gb();
-      aDl.type = 3;
-      aDl.axb = localLong.longValue();
-      a.hXQ.g(localgb);
-    }
-    br.l(localLinkedList);
-    return true;
+    dc = paramInt;
   }
   
-  public final boolean ue()
+  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
   {
-    if (iTk != null)
+    int i = paramMotionEvent.getAction();
+    if ((paramView instanceof ImageView))
     {
-      iTk.dismiss();
-      if (iTl != null) {
-        iTl.od(ny.a.jcj);
+      paramView = ((ImageView)paramView).getDrawable();
+      if (paramView != null)
+      {
+        if (i != 0) {
+          break label49;
+        }
+        paramView.setColorFilter(dc, PorterDuff.Mode.MULTIPLY);
       }
     }
-    return true;
+    for (;;)
+    {
+      return false;
+      paramView = paramView.getBackground();
+      break;
+      label49:
+      if ((i == 3) || (i == 1)) {
+        paramView.clearColorFilter();
+      }
+    }
   }
 }
 

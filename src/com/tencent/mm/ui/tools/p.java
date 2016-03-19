@@ -3,19 +3,17 @@ package com.tencent.mm.ui.tools;
 import android.graphics.Rect;
 import android.view.View;
 
-public final class p
+final class p
 {
-  public static void x(View paramView, int paramInt)
+  Rect lxn = new Rect();
+  View view = null;
+  
+  p(View paramView)
   {
-    if (paramView == null) {}
-    ev localev;
-    do
-    {
-      return;
-      localev = new ev(paramView);
-      paramView.setBackgroundResource(paramInt);
-    } while (view == null);
-    view.setPadding(juI.left, juI.top, juI.right, juI.bottom);
+    view = paramView;
+    if (paramView != null) {
+      lxn.set(paramView.getPaddingLeft(), paramView.getPaddingTop(), paramView.getPaddingRight(), paramView.getPaddingBottom());
+    }
   }
 }
 

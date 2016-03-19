@@ -4,10 +4,10 @@ import java.io.UnsupportedEncodingException;
 
 public class SpellMap
 {
-  public static String d(char paramChar)
+  public static String c(char paramChar)
   {
     Object localObject = null;
-    int j = e(paramChar);
+    int j = d(paramChar);
     if (j < 65536) {
       localObject = String.valueOf(paramChar);
     }
@@ -38,7 +38,7 @@ public class SpellMap
     return localObject[0];
   }
   
-  private static int e(char paramChar)
+  private static int d(char paramChar)
   {
     if (paramChar <= '') {
       return paramChar;

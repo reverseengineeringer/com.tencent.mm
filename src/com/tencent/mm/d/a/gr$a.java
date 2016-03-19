@@ -1,10 +1,15 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.ahe;
+import com.tencent.mm.protocal.b.aeo;
+import java.util.List;
 
 public final class gr$a
 {
-  public ahe azL;
+  public aeo aBN;
+  public int aBO;
+  public boolean aBP;
+  public int action;
+  public List ayD;
 }
 
 /* Location:

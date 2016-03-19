@@ -1,133 +1,68 @@
 package com.tencent.mm.a;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
+import java.io.ByteArrayOutputStream;
+import java.security.MessageDigest;
 
 public final class m
 {
-  public static String a(File paramFile, boolean paramBoolean, String paramString)
+  public static String aE(String paramString)
   {
+    MessageDigest localMessageDigest = MessageDigest.getInstance("SHA1");
+    ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
+    localByteArrayOutputStream.write(paramString.getBytes("UTF-8"));
+    return bytesToHex(localMessageDigest.digest(localByteArrayOutputStream.toByteArray()));
+  }
+  
+  private static String bytesToHex(byte[] paramArrayOfByte)
+  {
+    int i = 0;
+    char[] arrayOfChar1 = new char[16];
+    char[] tmp10_8 = arrayOfChar1;
+    tmp10_8[0] = 48;
+    char[] tmp15_10 = tmp10_8;
+    tmp15_10[1] = 49;
+    char[] tmp20_15 = tmp15_10;
+    tmp20_15[2] = 50;
+    char[] tmp25_20 = tmp20_15;
+    tmp25_20[3] = 51;
+    char[] tmp30_25 = tmp25_20;
+    tmp30_25[4] = 52;
+    char[] tmp35_30 = tmp30_25;
+    tmp35_30[5] = 53;
+    char[] tmp40_35 = tmp35_30;
+    tmp40_35[6] = 54;
+    char[] tmp46_40 = tmp40_35;
+    tmp46_40[7] = 55;
+    char[] tmp52_46 = tmp46_40;
+    tmp52_46[8] = 56;
+    char[] tmp58_52 = tmp52_46;
+    tmp58_52[9] = 57;
+    char[] tmp64_58 = tmp58_52;
+    tmp64_58[10] = 97;
+    char[] tmp70_64 = tmp64_58;
+    tmp70_64[11] = 98;
+    char[] tmp76_70 = tmp70_64;
+    tmp76_70[12] = 99;
+    char[] tmp82_76 = tmp76_70;
+    tmp82_76[13] = 100;
+    char[] tmp88_82 = tmp82_76;
+    tmp88_82[14] = 101;
+    char[] tmp94_88 = tmp88_82;
+    tmp94_88[15] = 102;
+    tmp94_88;
+    int k = paramArrayOfByte.length;
+    char[] arrayOfChar2 = new char[k * 2];
     int j = 0;
-    Object localObject;
-    if (paramString != null)
+    while (i < k)
     {
-      localObject = new File(paramString).getParentFile();
-      if ((localObject != null) && (!((File)localObject).exists())) {
-        ((File)localObject).mkdirs();
-      }
+      int m = paramArrayOfByte[i];
+      int n = j + 1;
+      arrayOfChar2[j] = arrayOfChar1[(m >>> 4 & 0xF)];
+      j = n + 1;
+      arrayOfChar2[n] = arrayOfChar1[(m & 0xF)];
+      i += 1;
     }
-    ArrayList localArrayList = new ArrayList();
-    int i;
-    if (paramFile.isDirectory())
-    {
-      localObject = paramFile.listFiles();
-      if (localObject == null) {
-        return null;
-      }
-      i = 0;
-      while (i < localObject.length)
-      {
-        localArrayList.add(localObject[i]);
-        i += 1;
-      }
-      localObject = paramString;
-      if (paramString == null) {
-        localObject = paramFile.getAbsolutePath() + File.separator + paramFile.getName() + ".zip";
-      }
-    }
-    for (;;)
-    {
-      paramFile = new File((String)localObject);
-      if (paramFile.exists()) {
-        paramFile.delete();
-      }
-      try
-      {
-        a(localArrayList, paramFile);
-        if (paramBoolean)
-        {
-          i = j;
-          for (;;)
-          {
-            if (i < localArrayList.size())
-            {
-              ((File)localArrayList.get(i)).delete();
-              i += 1;
-              continue;
-              localArrayList.add(paramFile);
-              localObject = paramString;
-              if (paramString != null) {
-                break;
-              }
-              localObject = paramFile.getAbsoluteFile().getParentFile().getAbsolutePath() + File.separator + paramFile.getName() + ".zip";
-            }
-          }
-        }
-      }
-      catch (Exception paramFile)
-      {
-        return null;
-      }
-    }
-    return paramFile.getAbsolutePath();
-  }
-  
-  private static void a(File paramFile, ZipOutputStream paramZipOutputStream, String paramString)
-  {
-    Object localObject = new StringBuilder().append(paramString);
-    if (paramString.trim().length() == 0) {}
-    int i;
-    for (paramString = "";; paramString = File.separator)
-    {
-      paramString = paramString + paramFile.getName();
-      if (!paramFile.isDirectory()) {
-        break;
-      }
-      paramFile = paramFile.listFiles();
-      int j = paramFile.length;
-      i = 0;
-      while (i < j)
-      {
-        a(paramFile[i], paramZipOutputStream, paramString);
-        i += 1;
-      }
-    }
-    localObject = new byte[131072];
-    paramFile = new BufferedInputStream(new FileInputStream(paramFile), 131072);
-    paramZipOutputStream.putNextEntry(new ZipEntry(paramString));
-    for (;;)
-    {
-      i = paramFile.read((byte[])localObject);
-      if (i == -1) {
-        break;
-      }
-      paramZipOutputStream.write((byte[])localObject, 0, i);
-    }
-    paramFile.close();
-    paramZipOutputStream.flush();
-    paramZipOutputStream.closeEntry();
-  }
-  
-  public static void a(Collection paramCollection, File paramFile)
-  {
-    paramFile = new ZipOutputStream(new BufferedOutputStream(new FileOutputStream(paramFile), 131072));
-    paramCollection = paramCollection.iterator();
-    while (paramCollection.hasNext())
-    {
-      File localFile = (File)paramCollection.next();
-      if (localFile.exists()) {
-        a(localFile, paramFile, "");
-      }
-    }
-    paramFile.close();
+    return new String(arrayOfChar2);
   }
 }
 

@@ -27,6 +27,11 @@ public class DexLoader
     }
   }
   
+  public DexClassLoader getClassLoader()
+  {
+    return mClassLoader;
+  }
+  
   public Object getStaticField(String paramString1, String paramString2)
   {
     try
@@ -63,6 +68,7 @@ public class DexLoader
   
   public Object invokeStaticMethod(String paramString1, String paramString2, Class[] paramArrayOfClass, Object... paramVarArgs)
   {
+    Object localObject = null;
     try
     {
       paramArrayOfClass = mClassLoader.loadClass(paramString1).getMethod(paramString2, paramArrayOfClass);
@@ -72,6 +78,13 @@ public class DexLoader
     }
     catch (Throwable paramArrayOfClass)
     {
+      do
+      {
+        if (paramString2 == null) {
+          break;
+        }
+        paramArrayOfClass = (Class[])localObject;
+      } while (paramString2.equalsIgnoreCase("initTesRuntimeEnvironment"));
       getClass().getSimpleName();
       new StringBuilder("'").append(paramString1).append("' invoke static method '").append(paramString2).append("' failed");
     }
@@ -121,6 +134,22 @@ public class DexLoader
       new StringBuilder("create '").append(paramString).append("' instance failed");
     }
     return null;
+  }
+  
+  public void setStaticField(String paramString1, String paramString2, Object paramObject)
+  {
+    try
+    {
+      Field localField = mClassLoader.loadClass(paramString1).getField(paramString2);
+      localField.setAccessible(true);
+      localField.set(null, paramObject);
+      return;
+    }
+    catch (Throwable paramObject)
+    {
+      getClass().getSimpleName();
+      new StringBuilder("'").append(paramString1).append("' set field '").append(paramString2).append("' failed");
+    }
   }
 }
 

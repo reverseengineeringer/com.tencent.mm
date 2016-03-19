@@ -19,7 +19,7 @@
 
 
 # virtual methods
-.method public createApplication()Lcom/tencent/mm/pluginsdk/k;
+.method public createApplication()Lcom/tencent/mm/pluginsdk/h;
     .locals 1
 
     .prologue
@@ -31,14 +31,14 @@
     return-object v0
 .end method
 
-.method public createSubCore()Lcom/tencent/mm/model/au;
+.method public createSubCore()Lcom/tencent/mm/model/ae;
     .locals 1
 
     .prologue
     .line 26
-    new-instance v0, Lcom/tencent/mm/plugin/auto/a/c;
+    new-instance v0, Lcom/tencent/mm/plugin/auto/a/b;
 
-    invoke-direct {v0}, Lcom/tencent/mm/plugin/auto/a/c;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/auto/a/b;-><init>()V
 
     return-object v0
 .end method

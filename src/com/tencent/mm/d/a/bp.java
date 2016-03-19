@@ -1,23 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class bp
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awC = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auS = new a();
+  public b auT = new b();
   
   public bp()
   {
-    id = "ExtAgentLife";
-    hXT = atO;
+    id = "ExDeviceConnectLanDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int op;
+    public boolean Jq = false;
+    public String alN;
+    public String auQ;
+  }
+  
+  public static final class b
+  {
+    public boolean auR;
   }
 }
 

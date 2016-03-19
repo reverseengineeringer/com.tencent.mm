@@ -2,10 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class iy$a
 {
-  public int aGh = 0;
-  public int aGi = 0;
-  public int aGj = 0;
-  public int type = 0;
+  public String aFl;
 }
 
 /* Location:

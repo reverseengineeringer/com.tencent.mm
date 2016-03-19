@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic iHk:Lcom/tencent/mm/ui/base/MMRadioGroupView;
+.field final synthetic kGx:Lcom/tencent/mm/ui/base/MMRadioGroupView;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 128
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->iHk:Lcom/tencent/mm/ui/base/MMRadioGroupView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->kGx:Lcom/tencent/mm/ui/base/MMRadioGroupView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,7 +41,7 @@
 
     .prologue
     .line 132
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->iHk:Lcom/tencent/mm/ui/base/MMRadioGroupView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->kGx:Lcom/tencent/mm/ui/base/MMRadioGroupView;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->a(Lcom/tencent/mm/ui/base/MMRadioGroupView;)I
 
@@ -52,9 +52,9 @@
     if-eq v0, v1, :cond_0
 
     .line 133
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->iHk:Lcom/tencent/mm/ui/base/MMRadioGroupView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->kGx:Lcom/tencent/mm/ui/base/MMRadioGroupView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->iHk:Lcom/tencent/mm/ui/base/MMRadioGroupView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->kGx:Lcom/tencent/mm/ui/base/MMRadioGroupView;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->a(Lcom/tencent/mm/ui/base/MMRadioGroupView;)I
 
@@ -69,12 +69,12 @@
     move-result v0
 
     .line 136
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->iHk:Lcom/tencent/mm/ui/base/MMRadioGroupView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->kGx:Lcom/tencent/mm/ui/base/MMRadioGroupView;
 
     invoke-static {v1, p1}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->a(Lcom/tencent/mm/ui/base/MMRadioGroupView;Lcom/tencent/mm/ui/base/MMRadioImageButton;)V
 
     .line 137
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->iHk:Lcom/tencent/mm/ui/base/MMRadioGroupView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->kGx:Lcom/tencent/mm/ui/base/MMRadioGroupView;
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/base/MMRadioGroupView;->d(Lcom/tencent/mm/ui/base/MMRadioGroupView;I)V
 
@@ -87,7 +87,7 @@
 
     .prologue
     .line 142
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->iHk:Lcom/tencent/mm/ui/base/MMRadioGroupView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMRadioGroupView$a;->kGx:Lcom/tencent/mm/ui/base/MMRadioGroupView;
 
     invoke-virtual {p1}, Lcom/tencent/mm/ui/base/MMRadioImageButton;->getId()I
 

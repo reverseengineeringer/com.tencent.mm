@@ -1,83 +1,38 @@
-.class public final Landroid/support/v4/content/a;
+.class public Landroid/support/v4/content/a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Landroid/support/v4/content/a$d;,
-        Landroid/support/v4/content/a$c;,
-        Landroid/support/v4/content/a$b;,
-        Landroid/support/v4/content/a$a;
-    }
-.end annotation
-
-
-# static fields
-.field private static final eU:Landroid/support/v4/content/a$a;
-
-
 # direct methods
-.method static constructor <clinit>()V
+.method public static b(Landroid/content/Context;Ljava/lang/String;)I
     .locals 2
 
     .prologue
-    .line 85
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 112
+    if-nez p1, :cond_0
 
-    .line 86
-    const/16 v1, 0xf
+    .line 113
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    if-lt v0, v1, :cond_0
+    const-string/jumbo v1, "permission is null"
 
-    .line 87
-    new-instance v0, Landroid/support/v4/content/a$d;
+    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
 
-    invoke-direct {v0}, Landroid/support/v4/content/a$d;-><init>()V
+    throw v0
 
-    sput-object v0, Landroid/support/v4/content/a;->eU:Landroid/support/v4/content/a$a;
-
-    .line 93
-    :goto_0
-    return-void
-
-    .line 88
+    .line 116
     :cond_0
-    const/16 v1, 0xb
+    invoke-static {}, Landroid/os/Process;->myPid()I
 
-    if-lt v0, v1, :cond_1
+    move-result v0
 
-    .line 89
-    new-instance v0, Landroid/support/v4/content/a$c;
+    invoke-static {}, Landroid/os/Process;->myUid()I
 
-    invoke-direct {v0}, Landroid/support/v4/content/a$c;-><init>()V
+    move-result v1
 
-    sput-object v0, Landroid/support/v4/content/a;->eU:Landroid/support/v4/content/a$a;
+    invoke-virtual {p0, p1, v0, v1}, Landroid/content/Context;->checkPermission(Ljava/lang/String;II)I
 
-    goto :goto_0
+    move-result v0
 
-    .line 91
-    :cond_1
-    new-instance v0, Landroid/support/v4/content/a$b;
-
-    invoke-direct {v0}, Landroid/support/v4/content/a$b;-><init>()V
-
-    sput-object v0, Landroid/support/v4/content/a;->eU:Landroid/support/v4/content/a$a;
-
-    goto :goto_0
-.end method
-
-.method public static makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
-    .locals 1
-
-    .prologue
-    .line 221
-    sget-object v0, Landroid/support/v4/content/a;->eU:Landroid/support/v4/content/a$a;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/content/a$a;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
-
-    move-result-object v0
-
-    return-object v0
+    return v0
 .end method

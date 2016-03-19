@@ -7,10 +7,10 @@ public final class aj
 {
   public aj()
   {
-    jNs = 327;
+    mbE = 327;
   }
   
-  private static int ba(byte[] paramArrayOfByte)
+  private static int bt(byte[] paramArrayOfByte)
   {
     if (paramArrayOfByte != null)
     {
@@ -24,8 +24,8 @@ public final class aj
   
   public final byte[] a(long paramLong, byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
   {
-    int j = ba(paramArrayOfByte1);
-    int i = ba(paramArrayOfByte2);
+    int j = bt(paramArrayOfByte1);
+    int i = bt(paramArrayOfByte2);
     byte[] arrayOfByte = new byte[j + 6 + 2 + i];
     util.c(arrayOfByte, 0, paramLong);
     util.m(arrayOfByte, 4, j);
@@ -33,10 +33,10 @@ public final class aj
     j += 6;
     util.m(arrayOfByte, j, i);
     System.arraycopy(paramArrayOfByte2, 0, arrayOfByte, j + 2, i);
-    super.pV(jNs);
-    super.w(arrayOfByte, arrayOfByte.length);
-    super.aVD();
-    return super.aVz();
+    super.sL(mbE);
+    super.A(arrayOfByte, arrayOfByte.length);
+    super.bos();
+    return super.boo();
   }
 }
 

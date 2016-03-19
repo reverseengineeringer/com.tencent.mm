@@ -1,232 +1,297 @@
 package com.tencent.mm.ab;
 
-import android.os.HandlerThread;
-import com.tencent.mm.compatible.util.i.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.pluginsdk.l.ag;
-import com.tencent.mm.pluginsdk.l.m.b;
-import com.tencent.mm.protocal.b.adt;
-import com.tencent.mm.protocal.b.ys;
-import com.tencent.mm.protocal.b.yt;
-import com.tencent.mm.protocal.i.c;
-import com.tencent.mm.protocal.i.d;
-import com.tencent.mm.protocal.r.a;
-import com.tencent.mm.protocal.r.b;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.j.b;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.s;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.LinkedList;
-import java.util.Queue;
-import junit.framework.Assert;
+import android.content.ContentValues;
+import android.database.Cursor;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class d
-  extends j
-  implements r
 {
-  com.tencent.mm.q.d apI;
-  private final aj apO = new aj(tdhZl.getLooper(), new e(this), true);
-  final Queue bBD = new LinkedList();
-  com.tencent.mm.q.e bDK = null;
-  i.a bGb;
-  private StringBuilder bGc = new StringBuilder();
-  final ys bGk = new ys();
-  int bGl = 0;
-  boolean bGm = false;
-  int bGn = 0;
-  int bGo = 0;
-  boolean bGp = false;
-  final n bGq = new n();
-  private int retryCount = 3;
+  public int aou = -2;
+  int awK;
+  public int bEp;
+  private boolean bQA;
+  boolean bQB;
+  private boolean bQC;
+  private boolean bQD;
+  private boolean bQE;
+  public long bQc;
+  public long bQd;
+  public String bQe = "";
+  public String bQf = "";
+  int bQg;
+  private String bQh = "";
+  int bQi;
+  public long bQj;
+  int bQk;
+  public int bQl = 0;
+  public String bQm = "";
+  int bQn = 1;
+  private boolean bQo;
+  private boolean bQp;
+  private boolean bQq;
+  private boolean bQr;
+  private boolean bQs;
+  private boolean bQt;
+  private boolean bQu;
+  private boolean bQv;
+  private boolean bQw;
+  private boolean bQx;
+  private boolean bQy;
+  boolean bQz;
+  int bcL = 0;
+  public int offset;
+  public int status;
   
-  public d(com.tencent.mm.q.e parame)
+  public final void W(long paramLong)
   {
-    t.i("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "NetSceneInit hash:%d stack:%s", new Object[] { Integer.valueOf(hashCode()), bn.aFH() });
-    bGc.append("stack:" + bn.aFH() + " time:" + bn.DL());
-    bDK = parame;
+    bQj = paramLong;
+    bQv = true;
   }
   
-  private int a(m paramm, adt paramadt1, adt paramadt2)
+  public final void X(long paramLong)
   {
-    bGc.append(" lastd:" + btl + " dotime:" + bn.DL() + " net:" + al.bS(aa.getContext()));
-    b localb = new b();
-    adt localadt = paramadt1;
-    if (paramadt1 == null) {
-      localadt = com.tencent.mm.platformtools.w.H(bn.iX(bn.iV((String)ax.tl().rf().get(8197, null))));
+    bQc = paramLong;
+    bQo = true;
+  }
+  
+  public final void bk(int paramInt)
+  {
+    status = paramInt;
+    bQw = true;
+  }
+  
+  public final void c(Cursor paramCursor)
+  {
+    bQc = paramCursor.getInt(0);
+    bQd = paramCursor.getLong(1);
+    offset = paramCursor.getInt(2);
+    bEp = paramCursor.getInt(3);
+    bQe = paramCursor.getString(4);
+    bQf = paramCursor.getString(5);
+    bQi = paramCursor.getInt(6);
+    bQj = paramCursor.getInt(7);
+    status = paramCursor.getInt(8);
+    bQk = paramCursor.getInt(9);
+    bQl = paramCursor.getInt(10);
+    awK = paramCursor.getInt(11);
+    bQm = paramCursor.getString(12);
+    bcL = paramCursor.getInt(14);
+    bQn = paramCursor.getInt(15);
+    bQh = paramCursor.getString(16);
+    bQg = paramCursor.getInt(17);
+  }
+  
+  public final void dk(int paramInt)
+  {
+    bQk = paramInt;
+    bQx = true;
+  }
+  
+  public final void dl(int paramInt)
+  {
+    bQi = paramInt;
+    bQu = true;
+  }
+  
+  public final void dm(int paramInt)
+  {
+    bEp = paramInt;
+    bQr = true;
+  }
+  
+  public final void dn(int paramInt)
+  {
+    bQl = paramInt;
+    bQy = true;
+  }
+  
+  public final void jdMethod_do(int paramInt)
+  {
+    if (bQn != paramInt) {
+      bQC = true;
     }
-    paramadt1 = paramadt2;
-    if (paramadt2 == null) {
-      paramadt1 = com.tencent.mm.platformtools.w.H(bn.iX(bn.iV((String)ax.tl().rf().get(8198, null))));
+    bQn = paramInt;
+  }
+  
+  public final void dp(int paramInt)
+  {
+    bQg = paramInt;
+    bQE = true;
+  }
+  
+  public final void hG(String paramString)
+  {
+    bQh = paramString;
+    bQD = true;
+  }
+  
+  public final void hH(String paramString)
+  {
+    bQe = paramString;
+    bQs = true;
+  }
+  
+  public final void hI(String paramString)
+  {
+    bQf = paramString;
+    bQt = true;
+  }
+  
+  public final void hJ(String paramString)
+  {
+    if (((bQm == null) && (paramString != null)) || ((bQm != null) && (!bQm.equals(paramString)))) {
+      bQA = true;
     }
-    if ((bn.c((Integer)ax.tl().rf().get(16, null)) != 0) && ((localadt == null) || (hLZ <= 0))) {
-      vjhgN = 7;
+    bQm = paramString;
+  }
+  
+  public final ContentValues lX()
+  {
+    ContentValues localContentValues = new ContentValues();
+    if (bQo) {
+      localContentValues.put("id", Long.valueOf(bQc));
     }
-    for (;;)
-    {
-      bGk.hIe = localadt;
-      bGk.hIf = paramadt1;
-      vjhhj = bGk;
-      t.i("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "doScene hash:%d time:%d count:%d user%s lan:%s status:%d cur[%s] max[%s]", new Object[] { Integer.valueOf(hashCode()), Long.valueOf(bGb.pi()), Integer.valueOf(bGl), bGk.dse, bGk.cUR, Integer.valueOf(vjhgN), bn.aI(com.tencent.mm.platformtools.w.a(localadt)), bn.aI(com.tencent.mm.platformtools.w.a(paramadt1)) });
-      bGl += 1;
-      return a(paramm, localb, this);
-      if (bn.iV((String)ax.tl().rf().get(8195, null)).length() <= 0) {
-        vjhgN = 3;
-      } else {
-        vjhgN = 4;
+    if (bQp) {
+      localContentValues.put("msgSvrId", Long.valueOf(bQd));
+    }
+    if (bQq) {
+      localContentValues.put("offset", Integer.valueOf(offset));
+    }
+    if (bQr) {
+      localContentValues.put("totalLen", Integer.valueOf(bEp));
+    }
+    if (bQs) {
+      localContentValues.put("bigImgPath", bQe);
+    }
+    if (bQt) {
+      localContentValues.put("thumbImgPath", bQf);
+    }
+    if (bQu) {
+      localContentValues.put("createtime", Integer.valueOf(bQi));
+    }
+    if (bQv) {
+      localContentValues.put("msglocalid", Long.valueOf(bQj));
+    }
+    if (bQw) {
+      localContentValues.put("status", Integer.valueOf(status));
+    }
+    if (bQx) {
+      localContentValues.put("nettimes", Integer.valueOf(bQk));
+    }
+    if (bQy) {
+      localContentValues.put("reserved1", Integer.valueOf(bQl));
+    }
+    if (bQz) {
+      localContentValues.put("reserved2", Integer.valueOf(awK));
+    }
+    if (bQA) {
+      localContentValues.put("reserved3", bQm);
+    }
+    if (bQB) {
+      localContentValues.put("hashdthumb", Integer.valueOf(bcL));
+    }
+    if (bQC) {
+      if (offset >= bEp) {
+        break label348;
       }
     }
-  }
-  
-  private void a(int paramInt1, int paramInt2, int paramInt3, String paramString, yt paramyt)
-  {
-    a locala = new a();
-    bGv = paramInt1;
-    errCode = paramInt3;
-    errType = paramInt2;
-    ayr = paramString;
-    bGu = paramyt;
-    bBD.add(locala);
-    if (apO.aFk()) {
-      apO.cA(50L);
-    }
-  }
-  
-  public final int a(m paramm, com.tencent.mm.q.d paramd)
-  {
-    bGb = new i.a();
-    apI = paramd;
-    if (l.ag.gKs != null) {
-      l.ag.gKs.amA();
-    }
-    bGk.dse = ((String)ax.tl().rf().get(2, null));
-    if (!bn.iW(bGk.dse)) {}
-    for (boolean bool = true;; bool = false)
+    label348:
+    for (int i = 0;; i = 1)
     {
-      Assert.assertTrue("by DK: req.UserName is null", bool);
-      bGk.cUR = s.aEJ();
-      return a(paramm, null, null);
-    }
-  }
-  
-  protected final int a(com.tencent.mm.network.w paramw)
-  {
-    return j.b.btz;
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, com.tencent.mm.network.w paramw, byte[] paramArrayOfByte)
-  {
-    bGc.append(" endtime:" + bn.DL());
-    if ((paramInt2 != 0) || (paramInt3 != 0)) {
-      if ((paramInt2 == 4) && (paramInt3 != -17))
-      {
-        t.e("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "onGYNetEnd Error hash:%d [%d,%d,%s] time:%d ", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString, Long.valueOf(bGb.pi()) });
-        a(Integer.MAX_VALUE, paramInt2, paramInt3, paramString, null);
+      localContentValues.put("iscomplete", Integer.valueOf(i));
+      if (bQD) {
+        localContentValues.put("origImgMD5", bQh);
       }
+      if (bQE) {
+        localContentValues.put("compressType", Integer.valueOf(bQg));
+      }
+      return localContentValues;
     }
-    do
+  }
+  
+  public final long mj()
+  {
+    return bQd;
+  }
+  
+  public final void setOffset(int paramInt)
+  {
+    int i = 0;
+    if (offset != paramInt) {
+      bQq = true;
+    }
+    offset = paramInt;
+    u.e("MicroMsg.Imgfo", "set offset : %d  id:%d total:%d", new Object[] { Integer.valueOf(paramInt), Long.valueOf(bQj), Integer.valueOf(bEp) });
+    if (paramInt < bEp) {}
+    for (paramInt = i;; paramInt = 1)
     {
-      do
-      {
-        return;
-        if (retryCount <= 0) {
-          break;
-        }
-        retryCount -= 1;
-        t.w("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "onGYNetEnd hash:%d [%d,%d] ignore update and doscene again retryCount:%d", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Integer.valueOf(retryCount) });
-      } while (a(btk, null, null) != -1);
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "doScene Failed stop init");
-      a(Integer.MAX_VALUE, 3, -1, "", null);
+      jdMethod_do(paramInt);
       return;
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "onGYNetEnd Error hash:%d [%d,%d,%s] time:%d ", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString, Long.valueOf(bGb.pi()) });
-      a(Integer.MAX_VALUE, paramInt2, paramInt3, paramString, null);
-      return;
-      paramw = tGhhk;
-      bGn += hIh;
-      t.i("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "onGYNetEnd hash:%d [%d,%d] time:%d cmdSum:%d doscenecount:%d conFlag:%d", new Object[] { Integer.valueOf(hashCode()), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Long.valueOf(bGb.pi()), Integer.valueOf(bGn), Integer.valueOf(bGl), Integer.valueOf(hog) });
-      a(bGl - 1, paramInt2, paramInt3, paramString, paramw);
-      if (((hog & 0x7) == 0) || (super.vm())) {
-        break;
-      }
-    } while (a(btk, hIe, hIf) != -1);
-    t.e("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "doScene Failed stop init");
-    a(Integer.MAX_VALUE, 3, -1, "", null);
-    return;
-    t.i("!44@/B4Tb64lLpK+IBX8XDgnvnIKeokfDtW+c2Qn4D1oK2g=", "NETWORK FINISH onGYNetEnd hash:%d time:%d netCnt:%d", new Object[] { Integer.valueOf(hashCode()), Long.valueOf(bGb.pi()), Integer.valueOf(bGl) });
-    bGm = true;
-    a(Integer.MAX_VALUE, 0, 0, "", null);
-  }
-  
-  protected final void cancel()
-  {
-    super.cancel();
-    bGp = true;
-  }
-  
-  public final String getInfo()
-  {
-    return bGc.toString();
-  }
-  
-  public final int getType()
-  {
-    return 37;
-  }
-  
-  protected final int lP()
-  {
-    return 500;
-  }
-  
-  public final boolean vm()
-  {
-    return super.vm();
-  }
-  
-  final class a
-  {
-    String ayr;
-    int bBQ = 0;
-    yt bGu;
-    int bGv = 0;
-    int errCode;
-    int errType;
-    
-    a() {}
-  }
-  
-  public static final class b
-    extends com.tencent.mm.q.h
-  {
-    private final r.a bGw = new r.a();
-    private final r.b bGx = new r.b();
-    
-    public final int getType()
-    {
-      return 37;
     }
-    
-    public final String getUri()
-    {
-      return "/cgi-bin/micromsg-bin/newinit";
+  }
+  
+  public final void u(long paramLong)
+  {
+    if (bQd != paramLong) {
+      bQp = true;
     }
-    
-    protected final i.c tF()
-    {
-      return bGw;
-    }
-    
-    public final i.d tG()
-    {
-      return bGx;
-    }
+    bQd = paramLong;
+  }
+  
+  public final long zS()
+  {
+    return bQj;
+  }
+  
+  public final long zT()
+  {
+    return bQc;
+  }
+  
+  public final String zU()
+  {
+    return bQe;
+  }
+  
+  public final String zV()
+  {
+    return bQf;
+  }
+  
+  public final boolean zW()
+  {
+    return (bEp != 0) && (bEp == offset);
+  }
+  
+  public final boolean zX()
+  {
+    return bQl > 0;
+  }
+  
+  public final String zY()
+  {
+    return bQm;
+  }
+  
+  public final void zZ()
+  {
+    bQo = false;
+    bQp = false;
+    bQq = false;
+    bQr = false;
+    bQs = false;
+    bQt = false;
+    bQu = false;
+    bQv = false;
+    bQw = false;
+    bQx = false;
+    bQy = false;
+    bQz = false;
+    bQA = false;
+    bQB = false;
+    bQC = false;
+    bQD = false;
+    bQE = false;
   }
 }
 

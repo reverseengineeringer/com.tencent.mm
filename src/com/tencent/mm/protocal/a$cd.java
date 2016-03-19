@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cd
-  extends a.c
+  extends a.e
 {
   public a$cd()
   {
-    super("sendEmail", "send_email", 35, false);
+    super("timelineCheckIn", "timeline_check_in", 64, false);
   }
 }
 

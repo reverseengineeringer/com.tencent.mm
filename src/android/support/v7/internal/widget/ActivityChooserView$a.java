@@ -9,45 +9,42 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
 
 final class ActivityChooserView$a
   extends BaseAdapter
 {
-  i pW;
-  private int pX = 4;
-  boolean pY;
-  private boolean pZ;
-  private boolean qa;
+  b pa;
+  private int pb = 4;
+  boolean pc;
+  private boolean pd;
+  private boolean pe;
   
   private ActivityChooserView$a(ActivityChooserView paramActivityChooserView) {}
   
-  public final void H(int paramInt)
+  public final void I(int paramInt)
   {
-    if (pX != paramInt)
+    if (pb != paramInt)
     {
-      pX = paramInt;
+      pb = paramInt;
       notifyDataSetChanged();
     }
   }
   
   public final void a(boolean paramBoolean1, boolean paramBoolean2)
   {
-    if ((pY != paramBoolean1) || (pZ != paramBoolean2))
+    if ((pc != paramBoolean1) || (pd != paramBoolean2))
     {
-      pY = paramBoolean1;
-      pZ = paramBoolean2;
+      pc = paramBoolean1;
+      pd = paramBoolean2;
       notifyDataSetChanged();
     }
   }
   
-  public final int cq()
+  public final int ca()
   {
     int i = 0;
-    int k = pX;
-    pX = Integer.MAX_VALUE;
+    int k = pb;
+    pb = Integer.MAX_VALUE;
     int m = View.MeasureSpec.makeMeasureSpec(0, 0);
     int n = View.MeasureSpec.makeMeasureSpec(0, 0);
     int i1 = getCount();
@@ -60,24 +57,24 @@ final class ActivityChooserView$a
       j = Math.max(j, localView.getMeasuredWidth());
       i += 1;
     }
-    pX = k;
+    pb = k;
     return j;
   }
   
   public final int getCount()
   {
-    int j = pW.cg();
+    int j = pa.bQ();
     int i = j;
-    if (!pY)
+    if (!pc)
     {
       i = j;
-      if (pW.ch() != null) {
+      if (pa.bR() != null) {
         i = j - 1;
       }
     }
-    j = Math.min(i, pX);
+    j = Math.min(i, pb);
     i = j;
-    if (qa) {
+    if (pe) {
       i = j + 1;
     }
     return i;
@@ -93,14 +90,14 @@ final class ActivityChooserView$a
       return null;
     }
     int i = paramInt;
-    if (!pY)
+    if (!pc)
     {
       i = paramInt;
-      if (pW.ch() != null) {
+      if (pa.bR() != null) {
         i = paramInt + 1;
       }
     }
-    return pW.E(i);
+    return pa.F(i);
   }
   
   public final long getItemId(int paramInt)
@@ -110,7 +107,7 @@ final class ActivityChooserView$a
   
   public final int getItemViewType(int paramInt)
   {
-    if ((qa) && (paramInt == getCount() - 1)) {
+    if ((pe) && (paramInt == getCount() - 1)) {
       return 1;
     }
     return 0;
@@ -131,26 +128,26 @@ final class ActivityChooserView$a
       }
       else
       {
-        localView = LayoutInflater.from(pV.getContext()).inflate(a.k.abc_activity_chooser_view_list_item, paramViewGroup, false);
+        localView = LayoutInflater.from(oZ.getContext()).inflate(2131363320, paramViewGroup, false);
         localView.setId(1);
-        ((TextView)localView.findViewById(a.i.title)).setText(pV.getContext().getString(a.n.abc_activity_chooser_view_see_all));
+        ((TextView)localView.findViewById(2131165460)).setText(oZ.getContext().getString(2131427348));
       }
       return localView;
     }
     if (paramView != null)
     {
       localView = paramView;
-      if (paramView.getId() == a.i.list_item) {}
+      if (paramView.getId() == 2131169552) {}
     }
     else
     {
-      localView = LayoutInflater.from(pV.getContext()).inflate(a.k.abc_activity_chooser_view_list_item, paramViewGroup, false);
+      localView = LayoutInflater.from(oZ.getContext()).inflate(2131363320, paramViewGroup, false);
     }
-    paramView = pV.getContext().getPackageManager();
-    paramViewGroup = (ImageView)localView.findViewById(a.i.icon);
+    paramView = oZ.getContext().getPackageManager();
+    paramViewGroup = (ImageView)localView.findViewById(2131166684);
     ResolveInfo localResolveInfo = (ResolveInfo)getItem(paramInt);
     paramViewGroup.setImageDrawable(localResolveInfo.loadIcon(paramView));
-    ((TextView)localView.findViewById(a.i.title)).setText(localResolveInfo.loadLabel(paramView));
+    ((TextView)localView.findViewById(2131165460)).setText(localResolveInfo.loadLabel(paramView));
     return localView;
   }
   
@@ -161,9 +158,9 @@ final class ActivityChooserView$a
   
   public final void setShowFooterView(boolean paramBoolean)
   {
-    if (qa != paramBoolean)
+    if (pe != paramBoolean)
     {
-      qa = paramBoolean;
+      pe = paramBoolean;
       notifyDataSetChanged();
     }
   }

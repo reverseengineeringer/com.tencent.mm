@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class x$a
 {
-  public int apL = 0;
+  public String username;
 }
 
 /* Location:

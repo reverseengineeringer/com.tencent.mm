@@ -7,7 +7,18 @@ public class MergeCursor
 {
   private Cursor mCursor;
   private Cursor[] mCursors;
-  private DataSetObserver mObserver = new MergeCursor.1(this);
+  private DataSetObserver mObserver = new DataSetObserver()
+  {
+    public final void onChanged()
+    {
+      mPos = -1;
+    }
+    
+    public final void onInvalidated()
+    {
+      mPos = -1;
+    }
+  };
   
   public MergeCursor(Cursor[] paramArrayOfCursor)
   {

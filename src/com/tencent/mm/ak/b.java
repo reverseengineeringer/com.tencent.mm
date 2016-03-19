@@ -1,68 +1,65 @@
 package com.tencent.mm.ak;
 
-import android.accounts.Account;
-import android.accounts.AccountManager;
-import com.tencent.mm.ac.b.a;
-import com.tencent.mm.ac.c;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.platformtools.ab;
-import com.tencent.mm.protocal.b.sq;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.h;
+import com.tencent.mm.network.j;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.er;
+import com.tencent.mm.protocal.b.es;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
 
 public final class b
+  extends e
+  implements j
 {
-  public static void run()
+  private d anM;
+  private a anN;
+  
+  public b(String paramString1, String paramString2)
   {
-    long l1 = 0L;
-    if ((!ax.qZ()) || (ax.tu())) {}
-    for (;;)
-    {
-      return;
-      long l3 = bn.DL();
-      long l2 = bn.a((Long)ax.tl().rf().get(331797, null), 0L);
-      if ((10013 == ab.bWm) && (ab.bWn != 0)) {}
-      while (l1 < l3)
-      {
-        ax.tl().rf().set(331797, Long.valueOf(432000L + l3));
-        try
-        {
-          sq localsq = new sq();
-          hCk = "";
-          Account[] arrayOfAccount = AccountManager.get(aa.getContext()).getAccountsByType("com.google");
-          int j = arrayOfAccount.length;
-          int i = 0;
-          while (i < j)
-          {
-            Account localAccount = arrayOfAccount[i];
-            if (!bn.iW(hCk)) {
-              break;
-            }
-            t.i("!44@/B4Tb64lLpIuznxMDiXSbB31hOU9T/FR8Q26kftvNBM=", "google account[%s]", new Object[] { name });
-            hCk = name;
-            i += 1;
-          }
-          if ((10013 == ab.bWm) && (ab.bWn != 0)) {
-            hCk = "rssjbbk@gmail.com";
-          }
-          if (!bn.iW(hCk))
-          {
-            ax.tl().rh().a(new b.a(57, localsq));
-            return;
-          }
-        }
-        catch (Exception localException)
-        {
-          t.w("!44@/B4Tb64lLpIuznxMDiXSbB31hOU9T/FR8Q26kftvNBM=", "Get Accounts failed :%s", new Object[] { localException.getMessage() });
-          return;
-        }
-        t.w("!44@/B4Tb64lLpIuznxMDiXSbB31hOU9T/FR8Q26kftvNBM=", "Get Accounts failed , Not any info?");
-        return;
-        l1 = l2;
-      }
+    Object localObject = new a.a();
+    bFa = new er();
+    bFb = new es();
+    uri = "/cgi-bin/micromsg-bin/bindsoterfingerprintlogin";
+    bEY = 246;
+    bFc = 0;
+    bFd = 0;
+    anN = ((a.a)localObject).vy();
+    localObject = (er)anN.bEW.bFf;
+    iWm = 246;
+    jbX = paramString2;
+    jbW = paramString1;
+  }
+  
+  public final int a(com.tencent.mm.network.e parame, d paramd)
+  {
+    anM = paramd;
+    return a(parame, anN, this);
+  }
+  
+  public final void b(int paramInt1, int paramInt2, String paramString, o paramo)
+  {
+    if (anM != null) {
+      anM.a(paramInt1, paramInt2, paramString, this);
     }
+  }
+  
+  public final void c(int paramInt1, int paramInt2, String paramString)
+  {
+    if (anM != null) {
+      anM.a(paramInt1, paramInt2, paramString, this);
+    }
+  }
+  
+  public final int getType()
+  {
+    return 246;
+  }
+  
+  public final d vI()
+  {
+    return anM;
   }
 }
 

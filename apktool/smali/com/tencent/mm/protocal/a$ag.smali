@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$ag;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 675
-    const-string/jumbo v0, "getNetworkType"
+    .line 1960
+    const-string/jumbo v0, "dispatchEvent"
 
-    const-string/jumbo v1, "network_type"
+    const-string/jumbo v1, "dispatchEvent"
 
-    const/16 v2, 0x10
+    const/16 v2, 0xba
 
     const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 676
+    .line 1961
     return-void
 .end method

@@ -2,7 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class bm$a
 {
-  public String avt;
+  public String alN;
+  public String auJ;
 }
 
 /* Location:

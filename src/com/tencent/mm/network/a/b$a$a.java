@@ -1,6 +1,7 @@
 package com.tencent.mm.network.a;
 
 import android.os.IBinder;
+import android.os.Parcel;
 
 public final class b$a$a
   implements b
@@ -82,8 +83,8 @@ public final class b$a$a
     //   0	116	5	paramString2	String
     //   0	116	6	paramBoolean	boolean
     //   1	57	7	i	int
-    //   6	104	8	localParcel1	android.os.Parcel
-    //   11	94	9	localParcel2	android.os.Parcel
+    //   6	104	8	localParcel1	Parcel
+    //   11	94	9	localParcel2	Parcel
     // Exception table:
     //   from	to	target	type
     //   13	52	103	finally
@@ -93,6 +94,28 @@ public final class b$a$a
   public final IBinder asBinder()
   {
     return mRemote;
+  }
+  
+  public final void d(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  {
+    Parcel localParcel1 = Parcel.obtain();
+    Parcel localParcel2 = Parcel.obtain();
+    try
+    {
+      localParcel1.writeInterfaceToken("com.tencent.mm.network.connpool.IConnPoolMoniter_AIDL");
+      localParcel1.writeInt(paramInt1);
+      localParcel1.writeInt(paramInt2);
+      localParcel1.writeInt(paramInt3);
+      localParcel1.writeInt(paramInt4);
+      mRemote.transact(2, localParcel1, localParcel2, 0);
+      localParcel2.readException();
+      return;
+    }
+    finally
+    {
+      localParcel2.recycle();
+      localParcel1.recycle();
+    }
   }
 }
 

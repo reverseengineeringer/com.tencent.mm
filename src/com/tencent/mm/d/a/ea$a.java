@@ -2,9 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class ea$a
 {
-  public String aAg;
-  public int aAh = 0;
-  public int axw = 0;
+  public boolean ayd;
 }
 
 /* Location:

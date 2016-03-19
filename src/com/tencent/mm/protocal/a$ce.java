@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ce
-  extends a.c
+  extends a.e
 {
   public a$ce()
   {
-    super("sendServiceAppMessage", "send_service_app_msg", 67, true);
+    super("openLocation", "open_location", 63, false);
   }
 }
 

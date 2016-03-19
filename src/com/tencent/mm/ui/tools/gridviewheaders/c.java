@@ -16,45 +16,73 @@ import java.util.List;
 public final class c
   extends BaseAdapter
 {
-  private static boolean jvX;
-  int cOq = 1;
-  private DataSetObserver hQ = new d(this);
-  final b jvY;
-  private GridHeadersGridView jvZ;
-  private final List jwa = new ArrayList();
-  private View[] jwb;
+  private static boolean lyO;
+  int dgj = 1;
+  private DataSetObserver gY = new DataSetObserver()
+  {
+    public final void onChanged()
+    {
+      int i = 0;
+      c localc = c.this;
+      mCount = 0;
+      int j = lyP.biU();
+      if (j == 0) {
+        mCount = lyP.getCount();
+      }
+      for (;;)
+      {
+        notifyDataSetChanged();
+        return;
+        while (i < j)
+        {
+          mCount += lyP.rT(i) + dgj;
+          i += 1;
+        }
+      }
+    }
+    
+    public final void onInvalidated()
+    {
+      c.a(c.this).clear();
+      notifyDataSetInvalidated();
+    }
+  };
+  final b lyP;
+  private GridHeadersGridView lyQ;
+  private final List lyR = new ArrayList();
+  private View[] lyS;
   private final Context mContext;
   int mCount;
   
   public c(Context paramContext, GridHeadersGridView paramGridHeadersGridView, b paramb)
   {
     mContext = paramContext;
-    jvY = paramb;
-    jvZ = paramGridHeadersGridView;
-    paramb.registerDataSetObserver(hQ);
+    lyP = paramb;
+    lyQ = paramGridHeadersGridView;
+    paramb.registerDataSetObserver(gY);
   }
   
-  private void oU(int paramInt)
+  private void rU(int paramInt)
   {
-    jwb = new View[paramInt];
-    Arrays.fill(jwb, null);
+    lyS = new View[paramInt];
+    Arrays.fill(lyS, null);
   }
   
-  private int oV(int paramInt)
+  private int rV(int paramInt)
   {
-    paramInt = jvY.oT(paramInt) % cOq;
+    paramInt = lyP.rT(paramInt) % dgj;
     if (paramInt == 0) {
       return 0;
     }
-    return cOq - paramInt;
+    return dgj - paramInt;
   }
   
   protected final View a(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    if (jvY.aSz() == 0) {
+    if (lyP.biU() == 0) {
       return null;
     }
-    return jvY.a(oWjwf, paramView, paramViewGroup);
+    return lyP.a(rWlyW, paramView, paramViewGroup);
   }
   
   public final boolean areAllItemsEnabled()
@@ -62,22 +90,22 @@ public final class c
     return false;
   }
   
-  protected final long ff(int paramInt)
+  protected final long fO(int paramInt)
   {
-    return oWjwf;
+    return rWlyW;
   }
   
   public final int getCount()
   {
     int i = 0;
     mCount = 0;
-    int j = jvY.aSz();
+    int j = lyP.biU();
     if (j == 0) {
-      return jvY.getCount();
+      return lyP.getCount();
     }
     while (i < j)
     {
-      mCount += jvY.oT(i) + oV(i) + cOq;
+      mCount += lyP.rT(i) + rV(i) + dgj;
       i += 1;
     }
     return mCount;
@@ -85,39 +113,39 @@ public final class c
   
   public final Object getItem(int paramInt)
   {
-    c localc = oW(paramInt);
-    if ((cHs == -1) || (cHs == -2)) {
+    c localc = rW(paramInt);
+    if ((dfq == -1) || (dfq == -2)) {
       return null;
     }
-    return jvY.getItem(cHs);
+    return lyP.getItem(dfq);
   }
   
   public final long getItemId(int paramInt)
   {
-    c localc = oW(paramInt);
-    if (cHs == -2) {
+    c localc = rW(paramInt);
+    if (dfq == -2) {
       return -1L;
     }
-    if (cHs == -1) {
+    if (dfq == -1) {
       return -2L;
     }
-    return jvY.getItemId(cHs);
+    return lyP.getItemId(dfq);
   }
   
   public final int getItemViewType(int paramInt)
   {
-    c localc = oW(paramInt);
-    if (cHs == -2) {
+    c localc = rW(paramInt);
+    if (dfq == -2) {
       paramInt = 1;
     }
     int i;
     do
     {
       return paramInt;
-      if (cHs == -1) {
+      if (dfq == -1) {
         return 0;
       }
-      i = jvY.getItemViewType(cHs);
+      i = lyP.getItemViewType(dfq);
       paramInt = i;
     } while (i == -1);
     return i + 2;
@@ -133,14 +161,14 @@ public final class c
     }
     for (;;)
     {
-      Object localObject2 = oW(paramInt);
-      if (cHs == -2)
+      Object localObject2 = rW(paramInt);
+      if (dfq == -2)
       {
         localObject1 = new b(mContext);
-        ((b)localObject1).setHeaderWidth(jvZ.getWidth());
-        ((b)localObject1).setHeaderId(jwf);
+        ((b)localObject1).setHeaderWidth(lyQ.getWidth());
+        ((b)localObject1).setHeaderId(lyW);
         View localView = (View)((View)localObject1).getTag();
-        ((View)localObject1).setTag(jvY.a(jwf, localView, paramViewGroup));
+        ((View)localObject1).setTag(lyP.a(lyW, localView, paramViewGroup));
       }
       for (;;)
       {
@@ -151,19 +179,19 @@ public final class c
         ((d)localObject2).removeAllViews();
         ((d)localObject2).addView((View)localObject1);
         ((d)localObject2).setPosition(paramInt);
-        ((d)localObject2).setNumColumns(cOq);
-        jwb[(paramInt % cOq)] = localObject2;
-        if (paramInt % cOq != 0) {
+        ((d)localObject2).setNumColumns(dgj);
+        lyS[(paramInt % dgj)] = localObject2;
+        if (paramInt % dgj != 0) {
           break label288;
         }
-        jvX = true;
+        lyO = true;
         int i = 1;
-        while (i < jwb.length)
+        while (i < lyS.length)
         {
-          jwb[i] = getView(paramInt + i, null, paramViewGroup);
+          lyS[i] = getView(paramInt + i, null, paramViewGroup);
           i += 1;
         }
-        if (cHs == -1)
+        if (dfq == -1)
         {
           localObject2 = (a)localObject1;
           localObject1 = localObject2;
@@ -173,14 +201,14 @@ public final class c
         }
         else
         {
-          localObject1 = jvY.getView(cHs, (View)localObject1, paramViewGroup);
+          localObject1 = lyP.getView(dfq, (View)localObject1, paramViewGroup);
         }
       }
-      jvX = false;
+      lyO = false;
       label288:
-      ((d)localObject2).setRowSiblings(jwb);
-      if ((!jvX) && ((paramInt % cOq == cOq - 1) || (paramInt == getCount() - 1))) {
-        oU(cOq);
+      ((d)localObject2).setRowSiblings(lyS);
+      if ((!lyO) && ((paramInt % dgj == dgj - 1) || (paramInt == getCount() - 1))) {
+        rU(dgj);
       }
       return (View)localObject2;
       localObject2 = null;
@@ -191,35 +219,35 @@ public final class c
   
   public final int getViewTypeCount()
   {
-    return jvY.getViewTypeCount() + 2;
+    return lyP.getViewTypeCount() + 2;
   }
   
   public final boolean hasStableIds()
   {
-    return jvY.hasStableIds();
+    return lyP.hasStableIds();
   }
   
   public final boolean isEmpty()
   {
-    return jvY.isEmpty();
+    return lyP.isEmpty();
   }
   
   public final boolean isEnabled(int paramInt)
   {
-    c localc = oW(paramInt);
-    if ((cHs == -1) || (cHs == -2)) {
+    c localc = rW(paramInt);
+    if ((dfq == -1) || (dfq == -2)) {
       return false;
     }
-    return jvY.isEnabled(cHs);
+    return lyP.isEnabled(dfq);
   }
   
-  protected final c oW(int paramInt)
+  protected final c rW(int paramInt)
   {
     int k = 0;
-    int m = jvY.aSz();
+    int m = lyP.biU();
     if (m == 0)
     {
-      if (paramInt >= jvY.getCount()) {
+      if (paramInt >= lyP.getCount()) {
         return new c(-1, 0);
       }
       return new c(paramInt, 0);
@@ -229,19 +257,19 @@ public final class c
     paramInt = k;
     while (paramInt < m)
     {
-      k = jvY.oT(paramInt);
+      k = lyP.rT(paramInt);
       if (j == 0) {
         return new c(-2, paramInt);
       }
-      j -= cOq;
+      j -= dgj;
       if (j < 0) {
         return new c(-1, paramInt);
       }
-      i -= cOq;
+      i -= dgj;
       if (j < k) {
         return new c(i, paramInt);
       }
-      int n = oV(paramInt);
+      int n = rV(paramInt);
       i -= n;
       paramInt += 1;
       j -= k + n;
@@ -251,18 +279,18 @@ public final class c
   
   public final void registerDataSetObserver(DataSetObserver paramDataSetObserver)
   {
-    jvY.registerDataSetObserver(paramDataSetObserver);
+    lyP.registerDataSetObserver(paramDataSetObserver);
   }
   
   public final void setNumColumns(int paramInt)
   {
-    cOq = paramInt;
-    oU(paramInt);
+    dgj = paramInt;
+    rU(paramInt);
   }
   
   public final void unregisterDataSetObserver(DataSetObserver paramDataSetObserver)
   {
-    jvY.unregisterDataSetObserver(paramDataSetObserver);
+    lyP.unregisterDataSetObserver(paramDataSetObserver);
   }
   
   protected final class a
@@ -277,8 +305,8 @@ public final class c
   protected final class b
     extends FrameLayout
   {
-    private int jwd;
-    private int jwe;
+    private int lyU;
+    private int lyV;
     
     public b(Context paramContext)
     {
@@ -292,7 +320,7 @@ public final class c
     
     public final int getHeaderId()
     {
-      return jwd;
+      return lyU;
     }
     
     protected final void onMeasure(int paramInt1, int paramInt2)
@@ -302,41 +330,41 @@ public final class c
         localView.setLayoutParams(generateDefaultLayoutParams());
       }
       if ((localView.getVisibility() != 8) && (localView.getMeasuredHeight() == 0)) {
-        localView.measure(View.MeasureSpec.makeMeasureSpec(jwe, 1073741824), View.MeasureSpec.makeMeasureSpec(0, 0));
+        localView.measure(View.MeasureSpec.makeMeasureSpec(lyV, 1073741824), View.MeasureSpec.makeMeasureSpec(0, 0));
       }
       setMeasuredDimension(View.MeasureSpec.getSize(paramInt1), localView.getMeasuredHeight());
     }
     
     public final void setHeaderId(int paramInt)
     {
-      jwd = paramInt;
+      lyU = paramInt;
     }
     
     public final void setHeaderWidth(int paramInt)
     {
-      jwe = paramInt;
+      lyV = paramInt;
     }
   }
   
   protected final class c
   {
-    protected int cHs;
-    protected int jwf;
+    protected int dfq;
+    protected int lyW;
     
     protected c(int paramInt1, int paramInt2)
     {
-      cHs = paramInt1;
-      jwf = paramInt2;
+      dfq = paramInt1;
+      lyW = paramInt2;
     }
   }
   
   protected final class d
     extends FrameLayout
   {
-    private int cHs;
-    private int cOq;
-    private View[] jwb;
-    private boolean jwg;
+    private int dfq;
+    private int dgj;
+    private View[] lyS;
+    private boolean lyX;
     
     public d(Context paramContext)
     {
@@ -366,17 +394,17 @@ public final class c
     protected final void onMeasure(int paramInt1, int paramInt2)
     {
       super.onMeasure(paramInt1, paramInt2);
-      if ((cOq == 1) || (c.b(c.this) == null)) {}
+      if ((dgj == 1) || (c.b(c.this) == null)) {}
       int i;
       int k;
       do
       {
         return;
         int j;
-        if ((cHs % cOq == 0) && (!jwg))
+        if ((dfq % dgj == 0) && (!lyX))
         {
-          jwg = true;
-          arrayOfView = jwb;
+          lyX = true;
+          arrayOfView = lyS;
           j = arrayOfView.length;
           i = 0;
           while (i < j)
@@ -384,10 +412,10 @@ public final class c
             arrayOfView[i].measure(paramInt1, paramInt2);
             i += 1;
           }
-          jwg = false;
+          lyX = false;
         }
         k = getMeasuredHeight();
-        View[] arrayOfView = jwb;
+        View[] arrayOfView = lyS;
         int m = arrayOfView.length;
         paramInt2 = 0;
         for (i = k; paramInt2 < m; i = j)
@@ -405,18 +433,18 @@ public final class c
     
     public final void setNumColumns(int paramInt)
     {
-      cOq = paramInt;
+      dgj = paramInt;
     }
     
     public final void setPosition(int paramInt)
     {
-      cHs = paramInt;
+      dfq = paramInt;
     }
     
     @SuppressLint({"NewApi"})
     public final void setRowSiblings(View[] paramArrayOfView)
     {
-      jwb = paramArrayOfView;
+      lyS = paramArrayOfView;
     }
     
     public final void setTag(int paramInt, Object paramObject)

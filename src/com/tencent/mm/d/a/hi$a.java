@@ -2,8 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class hi$a
 {
-  public int aCC = 0;
-  public String aDK;
+  public boolean ig = false;
 }
 
 /* Location:

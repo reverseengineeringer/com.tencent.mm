@@ -14,10 +14,6 @@
 .end annotation
 
 
-# instance fields
-.field public aub:Lcom/tencent/mm/storage/ar;
-
-
 # direct methods
 .method public constructor <init>()V
     .locals 0

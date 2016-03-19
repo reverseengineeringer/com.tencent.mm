@@ -1,15 +1,41 @@
 package android.support.v4.app;
 
+import android.content.Context;
+import android.util.SparseArray;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import android.widget.FrameLayout;
+import android.widget.FrameLayout.LayoutParams;
+
 final class m
-  implements Runnable
+  extends FrameLayout
 {
-  m(j paramj, int paramInt1, int paramInt2) {}
-  
-  public final void run()
+  private m(Context paramContext)
   {
-    j localj = cA;
-    FragmentActivity localFragmentActivity = cA.bn;
-    localj.e(cB, cC);
+    super(paramContext);
+  }
+  
+  static ViewGroup c(View paramView)
+  {
+    m localm = new m(paramView.getContext());
+    ViewGroup.LayoutParams localLayoutParams = paramView.getLayoutParams();
+    if (localLayoutParams != null) {
+      localm.setLayoutParams(localLayoutParams);
+    }
+    paramView.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
+    localm.addView(paramView);
+    return localm;
+  }
+  
+  protected final void dispatchRestoreInstanceState(SparseArray paramSparseArray)
+  {
+    dispatchThawSelfOnly(paramSparseArray);
+  }
+  
+  protected final void dispatchSaveInstanceState(SparseArray paramSparseArray)
+  {
+    dispatchFreezeSelfOnly(paramSparseArray);
   }
 }
 

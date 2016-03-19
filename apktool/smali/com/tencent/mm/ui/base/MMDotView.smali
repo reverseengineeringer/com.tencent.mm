@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private beP:I
+.field private bpb:I
 
-.field private iEk:I
+.field private kDu:I
 
-.field private iEl:I
+.field private kDv:I
 
 
 # direct methods
@@ -22,17 +22,17 @@
     .line 19
     const/16 v0, 0x9
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->beP:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->bpb:I
 
     .line 21
-    sget v0, Lcom/tencent/mm/a$h;->page_normal:I
+    const v0, 0x7f0406d1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEk:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
 
     .line 22
-    sget v0, Lcom/tencent/mm/a$h;->page_active:I
+    const v0, 0x7f04067b
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEl:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
 
     .line 34
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/base/MMDotView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -54,17 +54,17 @@
     .line 19
     const/16 v0, 0x9
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->beP:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->bpb:I
 
     .line 21
-    sget v0, Lcom/tencent/mm/a$h;->page_normal:I
+    const v0, 0x7f0406d1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEk:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
 
     .line 22
-    sget v0, Lcom/tencent/mm/a$h;->page_active:I
+    const v0, 0x7f04067b
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEl:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
 
     .line 28
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/base/MMDotView;->init(Landroid/content/Context;Landroid/util/AttributeSet;)V
@@ -80,7 +80,7 @@
     const/4 v1, 0x0
 
     .line 42
-    sget-object v0, Lcom/tencent/mm/a$p;->MMDotView:[I
+    sget-object v0, Lcom/tencent/mm/R$b;->MMDotView:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -111,14 +111,14 @@
     if-eqz p1, :cond_0
 
     .line 51
-    sget v0, Lcom/tencent/mm/a$h;->page_normal_dark:I
+    const v0, 0x7f0406e0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEk:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
 
     .line 52
-    sget v0, Lcom/tencent/mm/a$h;->page_active_dark:I
+    const v0, 0x7f0406f5
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEl:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
 
     .line 57
     :goto_0
@@ -126,14 +126,14 @@
 
     .line 54
     :cond_0
-    sget v0, Lcom/tencent/mm/a$h;->page_normal:I
+    const v0, 0x7f0406d1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEk:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
 
     .line 55
-    sget v0, Lcom/tencent/mm/a$h;->page_active:I
+    const v0, 0x7f04067b
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEl:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
 
     goto :goto_0
 .end method
@@ -159,7 +159,7 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 76
     if-gez p1, :cond_1
@@ -171,7 +171,7 @@
 
     .line 79
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->beP:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->bpb:I
 
     if-le p1, v0, :cond_2
 
@@ -180,10 +180,10 @@
 
     const-string/jumbo v1, "large than max count"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 81
-    iget p1, p0, Lcom/tencent/mm/ui/base/MMDotView;->beP:I
+    iget p1, p0, Lcom/tencent/mm/ui/base/MMDotView;->bpb:I
 
     .line 83
     :cond_2
@@ -198,7 +198,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$k;->mmpage_control_image:I
+    const v1, 0x7f0a0597
 
     const/4 v2, 0x0
 
@@ -211,7 +211,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 86
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEk:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -235,7 +235,7 @@
     if-eqz v0, :cond_0
 
     .line 91
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEl:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -243,21 +243,21 @@
 .end method
 
 .method public setInvertedStyle(Z)V
-    .locals 1
+    .locals 2
 
     .prologue
+    const v1, 0x7f0406d1
+
+    const v0, 0x7f04067b
+
     .line 60
     if-eqz p1, :cond_0
 
     .line 61
-    sget v0, Lcom/tencent/mm/a$h;->page_active:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEk:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
 
     .line 62
-    sget v0, Lcom/tencent/mm/a$h;->page_normal:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEl:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
 
     .line 67
     :goto_0
@@ -265,14 +265,10 @@
 
     .line 64
     :cond_0
-    sget v0, Lcom/tencent/mm/a$h;->page_normal:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEk:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
 
     .line 65
-    sget v0, Lcom/tencent/mm/a$h;->page_active:I
-
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEl:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
 
     goto :goto_0
 .end method
@@ -298,10 +294,10 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 71
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMDotView;->beP:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMDotView;->bpb:I
 
     .line 72
     return-void
@@ -328,7 +324,7 @@
 
     aput-object v4, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 98
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMDotView;->getChildCount()I
@@ -359,7 +355,7 @@
 
     aput-object v4, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v1, v0
 
@@ -379,7 +375,7 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 108
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEk:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDu:I
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -411,7 +407,7 @@
     if-eqz v0, :cond_3
 
     .line 112
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->iEl:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMDotView;->kDv:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 

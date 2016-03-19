@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.ref.WeakReference;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -8,20 +8,20 @@ import java.lang.reflect.Method;
 public final class b$b
   implements InvocationHandler
 {
-  public WeakReference iCj;
+  public WeakReference kBn;
   
   public final Object invoke(Object paramObject, Method paramMethod, Object[] paramArrayOfObject)
   {
     boolean bool2 = false;
-    if (iCj == null)
+    if (kBn == null)
     {
-      t.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callbackRef NULL!");
+      u.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callbackRef NULL!");
       return null;
     }
-    paramObject = (b.a)iCj.get();
+    paramObject = (b.a)kBn.get();
     if (paramObject == null)
     {
-      t.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callback NULL!");
+      u.i("!32@/B4Tb64lLpIvitRDGcxLrHlakUcyiw+i", "swipe invoke fail, callback NULL!");
       return null;
     }
     boolean bool1 = bool2;
@@ -36,7 +36,7 @@ public final class b$b
         }
       }
     }
-    ((b.a)paramObject).fr(bool1);
+    ((b.a)paramObject).hu(bool1);
     return null;
   }
 }

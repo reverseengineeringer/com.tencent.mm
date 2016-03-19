@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$bd;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 919
-    const-string/jumbo v0, "openLocation"
+    .line 1781
+    const-string/jumbo v0, "getSearchImage"
 
-    const-string/jumbo v1, "open_location"
+    const-string/jumbo v1, ""
 
-    const/16 v2, 0x3f
+    const/16 v2, 0x2710
 
     const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 920
+    .line 1782
     return-void
 .end method

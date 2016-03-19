@@ -20,7 +20,7 @@
     .locals 1
 
     .prologue
-    .line 37
+    .line 51
     const/4 v0, 0x0
 
     return-object v0
@@ -30,17 +30,17 @@
     .locals 1
 
     .prologue
-    .line 138
+    .line 254
     const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public getVisitedHistory(Lcom/tencent/smtt/sdk/ab;)V
+.method public getVisitedHistory(Lcom/tencent/smtt/sdk/u;)V
     .locals 0
 
     .prologue
-    .line 42
+    .line 59
     return-void
 .end method
 
@@ -48,7 +48,7 @@
     .locals 0
 
     .prologue
-    .line 133
+    .line 246
     return-void
 .end method
 
@@ -56,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 46
+    .line 67
     const/4 v0, 0x0
 
     return v0
@@ -66,20 +66,20 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 79
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method public onExceededDatabaseQuota(Ljava/lang/String;Ljava/lang/String;JJJLcom/tencent/smtt/sdk/ac$a;)V
+.method public onExceededDatabaseQuota(Ljava/lang/String;Ljava/lang/String;JJJLcom/tencent/smtt/sdk/w$a;)V
     .locals 0
 
     .prologue
-    .line 32
-    invoke-interface {p9, p5, p6}, Lcom/tencent/smtt/sdk/ac$a;->updateQuota(J)V
+    .line 43
+    invoke-interface {p9, p5, p6}, Lcom/tencent/smtt/sdk/w$a;->updateQuota(J)V
 
-    .line 33
+    .line 44
     return-void
 .end method
 
@@ -87,7 +87,7 @@
     .locals 0
 
     .prologue
-    .line 56
+    .line 87
     return-void
 .end method
 
@@ -97,10 +97,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 60
+    .line 97
     invoke-interface {p2, p1, v0, v0}, Lcom/tencent/smtt/export/external/interfaces/GeolocationPermissionsCallback;->invoke(Ljava/lang/String;ZZ)V
 
-    .line 61
+    .line 98
     return-void
 .end method
 
@@ -108,7 +108,7 @@
     .locals 0
 
     .prologue
-    .line 65
+    .line 104
     return-void
 .end method
 
@@ -116,7 +116,7 @@
     .locals 1
 
     .prologue
-    .line 70
+    .line 118
     const/4 v0, 0x0
 
     return v0
@@ -126,7 +126,7 @@
     .locals 1
 
     .prologue
-    .line 88
+    .line 157
     const/4 v0, 0x0
 
     return v0
@@ -136,7 +136,7 @@
     .locals 1
 
     .prologue
-    .line 76
+    .line 134
     const/4 v0, 0x0
 
     return v0
@@ -146,7 +146,7 @@
     .locals 1
 
     .prologue
-    .line 82
+    .line 151
     const/4 v0, 0x0
 
     return v0
@@ -156,7 +156,7 @@
     .locals 1
 
     .prologue
-    .line 93
+    .line 168
     const/4 v0, 0x1
 
     return v0
@@ -166,18 +166,18 @@
     .locals 0
 
     .prologue
-    .line 98
+    .line 177
     return-void
 .end method
 
-.method public onReachedMaxAppCacheSize(JJLcom/tencent/smtt/sdk/ac$a;)V
+.method public onReachedMaxAppCacheSize(JJLcom/tencent/smtt/sdk/w$a;)V
     .locals 0
 
     .prologue
-    .line 102
-    invoke-interface {p5, p3, p4}, Lcom/tencent/smtt/sdk/ac$a;->updateQuota(J)V
+    .line 186
+    invoke-interface {p5, p3, p4}, Lcom/tencent/smtt/sdk/w$a;->updateQuota(J)V
 
-    .line 103
+    .line 187
     return-void
 .end method
 
@@ -185,7 +185,7 @@
     .locals 0
 
     .prologue
-    .line 107
+    .line 195
     return-void
 .end method
 
@@ -193,7 +193,7 @@
     .locals 0
 
     .prologue
-    .line 115
+    .line 212
     return-void
 .end method
 
@@ -201,7 +201,7 @@
     .locals 0
 
     .prologue
-    .line 111
+    .line 204
     return-void
 .end method
 
@@ -209,7 +209,7 @@
     .locals 0
 
     .prologue
-    .line 120
+    .line 221
     return-void
 .end method
 
@@ -217,7 +217,7 @@
     .locals 0
 
     .prologue
-    .line 128
+    .line 238
     return-void
 .end method
 
@@ -225,19 +225,29 @@
     .locals 0
 
     .prologue
-    .line 124
+    .line 229
     return-void
 .end method
 
-.method public openFileChooser(Lcom/tencent/smtt/sdk/ab;Ljava/lang/String;Ljava/lang/String;)V
+.method public onShowFileChooser(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/u;Landroid/webkit/WebChromeClient$FileChooserParams;)Z
     .locals 1
 
     .prologue
-    .line 156
+    .line 294
     const/4 v0, 0x0
 
-    invoke-interface {p1, v0}, Lcom/tencent/smtt/sdk/ab;->onReceiveValue(Ljava/lang/Object;)V
+    return v0
+.end method
 
-    .line 157
+.method public openFileChooser(Lcom/tencent/smtt/sdk/u;Ljava/lang/String;Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 272
+    const/4 v0, 0x0
+
+    invoke-interface {p1, v0}, Lcom/tencent/smtt/sdk/u;->onReceiveValue(Ljava/lang/Object;)V
+
+    .line 273
     return-void
 .end method

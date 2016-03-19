@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cx
-  extends a.c
+  extends a.e
 {
   public a$cx()
   {
-    super("uploadImage", "uploadImage", 105, true);
+    super("openGameCenter", "openGameCenter", 175, true);
   }
 }
 

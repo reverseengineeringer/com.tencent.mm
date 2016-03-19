@@ -2,8 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class cw$a
 {
-  public boolean ayR = false;
-  public long ayS = 0L;
+  public byte[] data;
+  public String mac;
 }
 
 /* Location:

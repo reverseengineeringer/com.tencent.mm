@@ -1,12 +1,13 @@
 package com.tencent.mm.d.a;
 
-import android.widget.EditText;
-import com.tencent.mm.pluginsdk.ui.a.a;
+import android.content.Context;
+import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 
 public final class gd$a
 {
-  public a aDD;
-  public EditText aDE;
+  public WXMediaMessage aBc;
+  public String appId;
+  public Context context;
 }
 
 /* Location:

@@ -5,7 +5,7 @@ public final class ap
 {
   public ap()
   {
-    jNs = 773;
+    mbE = 773;
   }
 }
 

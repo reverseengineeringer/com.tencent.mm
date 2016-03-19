@@ -1,18 +1,34 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.network.w;
-
-public abstract interface h$c
+public class h$c
 {
-  public abstract w C(int paramInt1, int paramInt2);
+  public byte[] dBh = new byte[0];
+  public int iUE = 0;
+  public int iUF = 0;
+  public String iUG = "";
+  public String iUH = "";
+  public int iUI = 0;
+  public z iUJ = new z("", "", 0);
+  public long iUK = 0L;
   
-  public abstract void a(h.g paramg, int paramInt1, int paramInt2, String paramString);
-  
-  public abstract int tE();
-  
-  public static final class a
+  public boolean auE()
   {
-    public static h.c hgD;
+    return false;
+  }
+  
+  public void ba(int paramInt)
+  {
+    iUE = paramInt;
+  }
+  
+  public int getCmdId()
+  {
+    return 0;
+  }
+  
+  public boolean we()
+  {
+    return true;
   }
 }
 

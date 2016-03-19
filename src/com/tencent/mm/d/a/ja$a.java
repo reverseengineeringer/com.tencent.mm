@@ -2,8 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class ja$a
 {
-  public long aGl = -1L;
-  public long aGm = -1L;
+  public String auy;
 }
 
 /* Location:

@@ -1,26 +1,33 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import java.util.LinkedList;
 
 public final class gw
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEb = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aCk = new a();
+  public b aCl = new b();
   
   public gw()
   {
-    id = "SDKOpenWebview";
-    hXT = atO;
+    id = "NetSceneDelChatRoomMember";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String[] atX;
-    public Context context;
-    public String[] selectionArgs;
+    public boolean aBY = false;
+    public String aCm;
+    public LinkedList aCn;
+    public int asc = 0;
+  }
+  
+  public static final class b
+  {
+    public int errCode;
   }
 }
 

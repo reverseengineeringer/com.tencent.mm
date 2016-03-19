@@ -8,20 +8,18 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class ChattingTranslateView
   extends LinearLayout
 {
-  private String aFg;
-  private ImageView iYe;
-  private TextView iYf;
-  private boolean iYg = false;
-  a iYh = null;
-  private boolean iYi = false;
+  private String aIm;
+  private ImageView kXH;
+  private TextView kXI;
+  private boolean kXJ = false;
+  a kXK = null;
+  private boolean kXL = false;
   
   public ChattingTranslateView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -37,16 +35,16 @@ public class ChattingTranslateView
   
   private void a(a parama)
   {
-    if (iYi) {
+    if (kXL) {
       super.setVisibility(8);
     }
-    while ((iYh == parama) && (!iYg)) {
+    while ((kXK == parama) && (!kXJ)) {
       return;
     }
-    iYg = false;
-    t.d("!44@/B4Tb64lLpKwUcOR+EdWcrEYD8dwvm3wvSBPRtXIgAg=", "from status %s to status %s", new Object[] { iYh, parama });
-    iYh = parama;
-    switch (1.iYj[parama.ordinal()])
+    kXJ = false;
+    u.d("!44@/B4Tb64lLpKwUcOR+EdWcrEYD8dwvm3wvSBPRtXIgAg=", "from status %s to status %s", new Object[] { kXK, parama });
+    kXK = parama;
+    switch (1.kXM[parama.ordinal()])
     {
     }
     for (;;)
@@ -56,15 +54,15 @@ public class ChattingTranslateView
       super.setVisibility(8);
       continue;
       super.setVisibility(0);
-      iYe.setImageResource(a.h.translation_icon_loading);
-      iYf.setText(a.n.chatting_translate_status_loading);
+      kXH.setImageResource(2130903414);
+      kXI.setText(2131429629);
       continue;
       super.setVisibility(0);
-      iYe.setImageResource(a.h.translation_icon_got);
-      if (bn.iW(aFg)) {
-        iYf.setText(a.n.chatting_translate_status_got);
+      kXH.setImageResource(2130903060);
+      if (ay.kz(aIm)) {
+        kXI.setText(2131429628);
       } else {
-        iYf.setText(aFg);
+        kXI.setText(aIm);
       }
     }
   }
@@ -72,37 +70,37 @@ public class ChattingTranslateView
   private void init()
   {
     int i = (int)TypedValue.applyDimension(1, 3.0F, getResources().getDisplayMetrics());
-    iYe = new ImageView(getContext());
+    kXH = new ImageView(getContext());
     LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(-2, -2);
     gravity = 16;
     localLayoutParams.setMargins(i, i, 0, i);
-    iYe.setLayoutParams(localLayoutParams);
-    addView(iYe);
-    iYf = new TextView(getContext());
+    kXH.setLayoutParams(localLayoutParams);
+    addView(kXH);
+    kXI = new TextView(getContext());
     localLayoutParams = new LinearLayout.LayoutParams(-2, -2);
     localLayoutParams.setMargins(i, i, i, i);
     gravity = 16;
-    iYf.setLayoutParams(localLayoutParams);
-    iYf.setTextSize(1, 11.0F);
-    iYf.setTextColor(-1);
-    addView(iYf);
-    setBackgroundResource(a.h.chat_tips_bg);
-    a(a.iYk);
+    kXI.setLayoutParams(localLayoutParams);
+    kXI.setTextSize(1, 11.0F);
+    kXI.setTextColor(-1);
+    addView(kXI);
+    setBackgroundResource(2130970262);
+    a(a.kXN);
   }
   
-  public final void aOK()
+  public final void beN()
   {
-    a(a.iYk);
+    a(a.kXN);
   }
   
-  public final void aOL()
+  public final void beO()
   {
-    a(a.iYl);
+    a(a.kXO);
   }
   
-  public final void fH(boolean paramBoolean)
+  public final void hL(boolean paramBoolean)
   {
-    iYi = paramBoolean;
+    kXL = paramBoolean;
     if (paramBoolean) {
       super.setVisibility(8);
     }
@@ -110,11 +108,11 @@ public class ChattingTranslateView
   
   public void setTranslated(String paramString)
   {
-    if (!bn.iV(aFg).equals(bn.iV(paramString))) {
-      iYg = true;
+    if (!ay.ky(aIm).equals(ay.ky(paramString))) {
+      kXJ = true;
     }
-    aFg = paramString;
-    a(a.iYm);
+    aIm = paramString;
+    a(a.kXP);
   }
   
   public static enum a {}

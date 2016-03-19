@@ -1,16 +1,17 @@
 package com.tencent.mm.storage;
 
 import android.database.Cursor;
+import com.tencent.mm.d.b.p;
 import com.tencent.mm.g.c;
 import com.tencent.mm.g.h;
 import com.tencent.mm.h.a;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class k
   extends a
 {
-  public CharSequence icS;
-  public String ieA = null;
+  public CharSequence jZZ;
+  public String keM = null;
   
   public k() {}
   
@@ -19,27 +20,7 @@ public final class k
     super(paramString);
   }
   
-  public static int aGl()
-  {
-    return 16;
-  }
-  
-  public static int aGm()
-  {
-    return 8;
-  }
-  
-  public static String g(Cursor paramCursor)
-  {
-    return paramCursor.getString(paramCursor.getColumnIndex("username"));
-  }
-  
-  public static boolean mD(int paramInt)
-  {
-    return (paramInt & 0x8) > 0;
-  }
-  
-  public static boolean yt(String paramString)
+  public static boolean DY(String paramString)
   {
     if (paramString != null) {
       return paramString.endsWith("@t.qq.com");
@@ -47,7 +28,7 @@ public final class k
     return false;
   }
   
-  public static boolean yu(String paramString)
+  public static boolean DZ(String paramString)
   {
     if (paramString != null) {
       return paramString.endsWith("@qr");
@@ -55,7 +36,7 @@ public final class k
     return false;
   }
   
-  public static boolean yv(String paramString)
+  public static boolean Ea(String paramString)
   {
     if (paramString != null) {
       return paramString.endsWith("@qqim");
@@ -63,7 +44,7 @@ public final class k
     return false;
   }
   
-  public static boolean yw(String paramString)
+  public static boolean Eb(String paramString)
   {
     if (paramString != null) {
       return paramString.endsWith("@fb");
@@ -71,7 +52,7 @@ public final class k
     return false;
   }
   
-  public static boolean yx(String paramString)
+  public static boolean Ec(String paramString)
   {
     boolean bool2 = false;
     boolean bool1 = bool2;
@@ -89,13 +70,13 @@ public final class k
     return bool1;
   }
   
-  public static boolean yy(String paramString)
+  public static boolean Ed(String paramString)
   {
-    if (bn.iW(paramString)) {}
+    if (ay.kz(paramString)) {}
     for (;;)
     {
       return false;
-      String str = h.qb().q("HideWechatID", "idprefix");
+      String str = h.pT().z("HideWechatID", "idprefix");
       Object localObject = str;
       if (str == null) {
         localObject = "wx_;wxid_;gh_;a0;a1;a2;a3;a4;a5;a6;a7;a8;a9;q0;q1;q2;q3;q4;q5;q6;q7;q8;q9;qq0;qq1;qq2;qq3;qq4;qq5;qq6;qq7;qq8;qq9;f0;f1;f2;f3;f4;f5;f6;f7;f8;f9;F0;F1;F2;F3;F4;F5;F6;F7;F8;F9;";
@@ -112,9 +93,9 @@ public final class k
     }
   }
   
-  public static String yz(String paramString)
+  public static String Ee(String paramString)
   {
-    if (yx(paramString))
+    if (Ec(paramString))
     {
       String[] arrayOfString = paramString.split(":");
       if ((arrayOfString == null) || (arrayOfString.length <= 0)) {
@@ -128,46 +109,53 @@ public final class k
     return paramString + "@bottle";
   }
   
-  public final boolean aGk()
+  public static int aWq()
+  {
+    return 16;
+  }
+  
+  public static int aWr()
+  {
+    return 8;
+  }
+  
+  public static String h(Cursor paramCursor)
+  {
+    return paramCursor.getString(paramCursor.getColumnIndex("username"));
+  }
+  
+  public static boolean pD(int paramInt)
+  {
+    return (paramInt & 0x8) > 0;
+  }
+  
+  public final boolean aWp()
   {
     return (field_verifyFlag & 0x8) > 0;
   }
   
-  public final boolean aGn()
+  public final boolean aWs()
   {
-    return (int)bn.DL() - aNf > 86400L;
+    return (int)ay.FR() - aSM > 86400L;
   }
   
-  public final String aGo()
+  public final String aWt()
   {
-    Object localObject = aNe;
-    if (bn.iW((String)localObject)) {
+    Object localObject = aSL;
+    if (ay.kz((String)localObject)) {
       return "";
     }
     localObject = ((String)localObject).split("_");
     if ((localObject == null) || (localObject.length < 2)) {
       return "";
     }
-    return bn.iV(localObject[1]);
+    return ay.ky(localObject[1]);
   }
   
-  public final String aGp()
+  public final void aWu()
   {
-    Object localObject = aNe;
-    if (bn.iW((String)localObject)) {
-      return "";
-    }
-    localObject = ((String)localObject).split("_");
-    if ((localObject == null) || (localObject.length < 3)) {
-      return "";
-    }
-    return bn.iV(localObject[2]);
-  }
-  
-  public final void aGq()
-  {
-    Object localObject = aNe;
-    if (bn.iW((String)localObject)) {}
+    Object localObject = aSL;
+    if (ay.kz((String)localObject)) {}
     do
     {
       return;
@@ -175,30 +163,24 @@ public final class k
     } while (localObject.length <= 0);
     if (localObject.length > 2)
     {
-      if (RegionCodeDecoder.Aa(localObject[0])) {
-        super.bQ(RegionCodeDecoder.aIc().bD(localObject[0], localObject[1]));
+      if (RegionCodeDecoder.Fz(localObject[0])) {
+        super.bR(RegionCodeDecoder.aXU().cq(localObject[0], localObject[1]));
       }
       for (;;)
       {
-        super.bR(RegionCodeDecoder.aIc().D(localObject[0], localObject[1], localObject[2]));
+        super.bS(RegionCodeDecoder.aXU().N(localObject[0], localObject[1], localObject[2]));
         return;
-        super.bQ(RegionCodeDecoder.aIc().Ab(localObject[0]));
+        super.bR(RegionCodeDecoder.aXU().FA(localObject[0]));
       }
     }
     if (localObject.length == 2)
     {
-      super.bQ(RegionCodeDecoder.aIc().Ab(localObject[0]));
-      super.bR(RegionCodeDecoder.aIc().bD(localObject[0], localObject[1]));
+      super.bR(RegionCodeDecoder.aXU().FA(localObject[0]));
+      super.bS(RegionCodeDecoder.aXU().cq(localObject[0], localObject[1]));
       return;
     }
-    super.bQ(RegionCodeDecoder.aIc().Ab(localObject[0]));
-    super.bR("");
-  }
-  
-  @Deprecated
-  public final void bQ(String paramString)
-  {
-    super.bQ(paramString);
+    super.bR(RegionCodeDecoder.aXU().FA(localObject[0]));
+    super.bS("");
   }
   
   @Deprecated
@@ -207,33 +189,52 @@ public final class k
     super.bR(paramString);
   }
   
-  public final void bV(String paramString)
+  @Deprecated
+  public final void bS(String paramString)
   {
-    super.bV(paramString);
-    aGq();
+    super.bS(paramString);
+  }
+  
+  public final void bW(String paramString)
+  {
+    super.bW(paramString);
+    aWu();
+  }
+  
+  public final String getCity()
+  {
+    return super.getCity();
+  }
+  
+  public final String getCityCode()
+  {
+    Object localObject = aSL;
+    if (ay.kz((String)localObject)) {
+      return "";
+    }
+    localObject = ((String)localObject).split("_");
+    if ((localObject == null) || (localObject.length < 3)) {
+      return "";
+    }
+    return ay.ky(localObject[2]);
   }
   
   public final String getCountryCode()
   {
-    Object localObject = aNe;
-    if (bn.iW((String)localObject)) {
+    Object localObject = aSL;
+    if (ay.kz((String)localObject)) {
       return "";
     }
     localObject = ((String)localObject).split("_");
     if ((localObject == null) || (localObject.length <= 0)) {
       return "";
     }
-    return bn.iV(localObject[0]);
+    return ay.ky(localObject[0]);
   }
   
-  public final String mI()
+  public final String getProvince()
   {
-    return super.mI();
-  }
-  
-  public final String mJ()
-  {
-    return super.mJ();
+    return super.getProvince();
   }
 }
 

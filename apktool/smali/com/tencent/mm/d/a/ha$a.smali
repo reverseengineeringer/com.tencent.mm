@@ -15,22 +15,30 @@
 
 
 # instance fields
-.field public aEk:[B
+.field public aCE:Ljava/lang/String;
 
-.field public aEl:[Z
+.field public aCF:Lcom/tencent/mm/sdk/c/b;
 
-.field public height:I
+.field public errCode:I
 
-.field public width:I
+.field public errType:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
+    const/4 v0, 0x0
+
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    iput v0, p0, Lcom/tencent/mm/d/a/ha$a;->errType:I
+
+    .line 16
+    iput v0, p0, Lcom/tencent/mm/d/a/ha$a;->errCode:I
 
     return-void
 .end method

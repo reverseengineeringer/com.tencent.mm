@@ -1,24 +1,22 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-
 public final class b
-  extends d
+  extends com.tencent.mm.sdk.c.b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a atP = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a arS = new a();
   
   public b()
   {
     id = "AcceptCouponCard";
-    hXT = atO;
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String atQ;
-    public int atR;
+    public String arT;
+    public int arU = 0;
   }
 }
 

@@ -1,54 +1,70 @@
 package com.tencent.mm.compatible.d;
 
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class a
 {
-  public boolean bfA = false;
-  public int bfB;
-  public int bfC;
-  public int bfD;
-  public int bfE;
-  public int bfF;
-  public int bfG;
-  public int bfH;
-  public int bfI;
-  public int bfJ;
-  public int bfK;
-  public int bfL;
-  public int bfM;
-  public int bfN;
-  public int bfO;
-  public int bfP;
-  public int bfQ;
-  public int bfR;
-  public int bfS;
-  public int bfT;
-  public int bfU;
-  public int bfV;
-  public int bfW;
-  public int bfX;
-  public int bfY;
-  public int bfZ;
-  public int bga;
-  public int bgb;
-  public int bgc;
-  public int bgd;
-  public int bge;
-  public boolean bgf;
-  public int bgg;
-  public int bgh;
-  public int bgi;
-  public int bgj;
-  public int bgk;
-  public int bgl;
-  public int bgm;
-  public int bgn;
-  public int bgo;
-  public int bgp;
-  public int bgq;
-  public int bgr;
-  public short[] bgs = new short[15];
+  public boolean bpH = false;
+  public int bpI;
+  public int bpJ;
+  public int bpK;
+  public int bpL;
+  public int bpM;
+  public int bpN;
+  public int bpO;
+  public int bpP;
+  public int bpQ;
+  public int bpR;
+  public int bpS;
+  public int bpT;
+  public int bpU;
+  public int bpV;
+  public int bpW;
+  public int bpX;
+  public int bpY;
+  public int bpZ;
+  public int bqA;
+  public short[] bqB = new short[15];
+  public short[] bqC = new short[2];
+  public boolean bqD;
+  public int bqE;
+  public boolean bqF = false;
+  public int bqG;
+  public int bqH;
+  public int bqI;
+  public int bqJ;
+  public int bqK;
+  public int bqL;
+  public int bqM;
+  public int bqN;
+  public int bqO;
+  public int bqP;
+  public int bqa;
+  public int bqb;
+  public int bqc;
+  public int bqd;
+  public int bqe;
+  public int bqf;
+  public int bqg;
+  public int bqh;
+  public int bqi;
+  public int bqj;
+  public int bqk;
+  public boolean bql;
+  public int bqm;
+  public int bqn;
+  public int bqo;
+  public int bqp;
+  public int bqq;
+  public int bqr;
+  public int bqs;
+  public int bqt;
+  public int bqu;
+  public int bqv;
+  public int bqw;
+  public int bqx;
+  public int bqy;
+  public int bqz;
   
   public a()
   {
@@ -57,66 +73,81 @@ public final class a
   
   public final void dump()
   {
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "streamtype " + bfB);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "smode " + bfC);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "omode " + bfD);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ospeaker " + bfE);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "operating" + bfF);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "moperating" + bfG);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "mstreamtype" + bfH);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "mVoiceRecordMode" + bfI);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcMode :" + bfK);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "nsMode:" + bfM);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "aecMode:" + bfL);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "volumMode:" + bfN);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "micMode:" + bfY);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "sourceMode:" + bfZ);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "speakerMode:" + bga);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "phoneMode:" + bgb);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "voipstreamType:" + bgc);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "speakerstreamtype:" + bgd);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "phonestreamtype:" + bge);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringphonestream:" + bgg);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringphonemode:" + bgh);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringspeakerstream:" + bgi);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringspeakermode:" + bgj);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcModeNew :" + bgm);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "nsModeNew:" + bgl);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "aecModeNew:" + bgk);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agctargetdb:" + bgn);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcgaindb:" + bgo);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcflag:" + bgp);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "inputVolumeScale:" + bfO);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeScale:" + bfP);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "inputVolumeScaleForSpeaker:" + bfQ);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeScaleForSpeaker:" + bfR);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ehanceHeadsetEC:" + bfU);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "setECModeLevelForHeadSet:" + bfV);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "setECModeLevelForSpeaker:" + bfW);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "enableSpeakerEnhanceEC:" + bfX);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "enableRecTimer:" + bgq);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "setPlayerPrecorrectCofOnOrOff:" + bgr);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeGainForPhone:" + bfS);
-    t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeGainForSpeaker:" + bfT);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "streamtype " + bpI);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "smode " + bpJ);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "omode " + bpK);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ospeaker " + bpL);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "operating" + bpM);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "moperating" + bpN);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "mstreamtype" + bpO);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "mVoiceRecordMode" + bpP);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcMode :" + bqt);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "nsMode:" + bpS);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "aecMode:" + bpR);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "volumMode:" + bpT);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "micMode:" + bqe);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "sourceMode:" + bqf);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "speakerMode:" + bqg);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "phoneMode:" + bqh);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "voipstreamType:" + bqi);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "speakerstreamtype:" + bqj);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "phonestreamtype:" + bqk);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringphonestream:" + bqm);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringphonemode:" + bqn);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringspeakerstream:" + bqo);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ringspeakermode:" + bqp);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcModeNew :" + bqs);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "nsModeNew:" + bqr);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "aecModeNew:" + bqq);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agctargetdb:" + bqu);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcgaindb:" + bqv);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcflag:" + bqw);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agclimiter:" + bqx);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "inputVolumeScale:" + bpU);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeScale:" + bpV);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "inputVolumeScaleForSpeaker:" + bpW);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeScaleForSpeaker:" + bpX);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "ehanceHeadsetEC:" + bqa);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "setECModeLevelForHeadSet:" + bqb);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "setECModeLevelForSpeaker:" + bqc);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "enableSpeakerEnhanceEC:" + bqd);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "enableRecTimer:" + bqy);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "enablePlayTimer:" + bqz);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "setPlayerPrecorrectCofOnOrOff:" + bqA);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeGainForPhone:" + bpY);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "outputVolumeGainForSpeaker:" + bpZ);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "noisegateon" + bqD);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "noisegatestrength[0]" + bqC[0]);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "noisegatestrength[1]" + bqC[1]);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "spkecenable:" + bqE);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcRxFlag:" + bqM);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcRxTargetdb:" + bqN);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcRxGaindb:" + bqO);
+    u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "agcRxLimiter:" + bqP);
   }
   
-  public final boolean ok()
+  public final boolean nW()
   {
-    return bfF >= 0;
+    return ((bpJ >= 0) && (bpK < 0)) || ((bpJ < 0) && (bpK >= 0)) || (bpL > 0);
   }
   
-  public final boolean ol()
+  public final boolean nX()
   {
-    return bfG >= 0;
+    return bpM >= 0;
   }
   
-  public final int om()
+  public final boolean nY()
+  {
+    return bpN >= 0;
+  }
+  
+  public final int nZ()
   {
     int i;
-    if (ok())
+    if (nX())
     {
-      i = (bfF & 0xE0) >> 5;
-      t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getEnableMode " + i);
+      i = (bpM & 0xE0) >> 5;
+      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getEnableMode " + i);
       if (i != 7) {}
     }
     else
@@ -126,13 +157,39 @@ public final class a
     return i;
   }
   
-  public final int on()
+  public final boolean oa()
+  {
+    boolean bool2 = false;
+    boolean bool1 = bool2;
+    int i;
+    StringBuilder localStringBuilder;
+    if (nX())
+    {
+      i = bpM & 0x10;
+      localStringBuilder = new StringBuilder("enableSpeaker ");
+      if (i <= 0) {
+        break label61;
+      }
+    }
+    label61:
+    for (bool1 = true;; bool1 = false)
+    {
+      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", bool1);
+      bool1 = bool2;
+      if (i > 0) {
+        bool1 = true;
+      }
+      return bool1;
+    }
+  }
+  
+  public final int ob()
   {
     int i;
-    if (ok())
+    if (nX())
     {
-      i = (bfF & 0xE) >> 1;
-      t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getDisableMode " + i);
+      i = (bpM & 0xE) >> 1;
+      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getDisableMode " + i);
       if (i != 7) {}
     }
     else
@@ -142,13 +199,39 @@ public final class a
     return i;
   }
   
-  public final int oo()
+  public final boolean oc()
+  {
+    boolean bool2 = false;
+    boolean bool1 = bool2;
+    int i;
+    StringBuilder localStringBuilder;
+    if (nX())
+    {
+      i = bpM & 0x1;
+      localStringBuilder = new StringBuilder("disableSpeaker ");
+      if (i <= 0) {
+        break label60;
+      }
+    }
+    label60:
+    for (bool1 = true;; bool1 = false)
+    {
+      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", bool1);
+      bool1 = bool2;
+      if (i > 0) {
+        bool1 = true;
+      }
+      return bool1;
+    }
+  }
+  
+  public final int od()
   {
     int i;
-    if (ol())
+    if (nY())
     {
-      i = (bfG & 0xE0) >> 5;
-      t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getEnableMode " + i);
+      i = (bpN & 0xE0) >> 5;
+      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getEnableMode " + i);
       if (i != 7) {}
     }
     else
@@ -158,13 +241,13 @@ public final class a
     return i;
   }
   
-  public final int op()
+  public final int oe()
   {
     int i;
-    if (ol())
+    if (nY())
     {
-      i = (bfG & 0xE) >> 1;
-      t.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getDisableMode " + i);
+      i = (bpN & 0xE) >> 1;
+      u.d("!24@mc8vTY0SOcpXUKRYIpcCoA==", "getDisableMode " + i);
       if (i != 7) {}
     }
     else
@@ -176,50 +259,60 @@ public final class a
   
   public final void reset()
   {
-    bfA = false;
-    bfB = -1;
-    bfC = -1;
-    bfD = -1;
-    bfE = -1;
-    bfF = -1;
-    bfG = -1;
-    bfH = -1;
-    bfJ = -1;
-    bfI = -1;
-    bfK = -1;
-    bfL = -1;
-    bfM = -1;
-    bfN = -1;
-    bfY = -1;
-    bfZ = -1;
-    bga = -1;
-    bgb = -1;
-    bgc = -1;
-    bgd = -1;
-    bge = -1;
-    bgf = false;
-    bgg = -1;
-    bgh = -1;
-    bgj = -1;
-    bgi = -1;
-    bgm = -1;
-    bgk = -1;
-    bgl = -1;
-    bgn = -1;
-    bgo = -1;
-    bgp = -1;
-    bfO = -1;
-    bfP = -1;
-    bfQ = -1;
-    bfR = -1;
-    bfU = -1;
-    bfV = -1;
-    bfW = -1;
-    bfX = -1;
-    bgq = 0;
-    bgr = -1;
-    bfT = -1;
-    bfS = -1;
+    bpH = false;
+    bpI = -1;
+    bpJ = -1;
+    bpK = -1;
+    bpL = -1;
+    bpM = -1;
+    bpN = -1;
+    bpO = -1;
+    bpQ = -1;
+    bpP = -1;
+    bqt = -1;
+    bpR = -1;
+    bpS = -1;
+    bpT = -1;
+    bqe = -1;
+    bqf = -1;
+    bqg = -1;
+    bqh = -1;
+    bqi = -1;
+    bqj = -1;
+    bqk = -1;
+    bql = false;
+    bqm = -1;
+    bqn = -1;
+    bqp = -1;
+    bqo = -1;
+    bqs = -1;
+    bqq = -1;
+    bqr = -1;
+    bqu = -1;
+    bqv = -1;
+    bqw = -1;
+    bqx = -1;
+    bpU = -1;
+    bpV = -1;
+    bpW = -1;
+    bpX = -1;
+    bqa = -1;
+    bqb = -1;
+    bqc = -1;
+    bqd = -1;
+    bqy = 0;
+    bqz = 0;
+    bqA = -1;
+    bpZ = -1;
+    bpY = -1;
+    bqD = false;
+    bqC[0] = -1;
+    bqC[1] = -1;
+    bqE = -1;
+    bqM = -1;
+    bqN = -1;
+    bqO = -1;
+    bqP = -1;
   }
 }
 

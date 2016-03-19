@@ -15,7 +15,11 @@
 
 
 # instance fields
-.field public awP:I
+.field public anK:Ljava/lang/Runnable;
+
+.field public filePath:Ljava/lang/String;
+
+.field public op:I
 
 
 # direct methods

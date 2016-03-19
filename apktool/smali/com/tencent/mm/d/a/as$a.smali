@@ -15,13 +15,7 @@
 
 
 # instance fields
-.field public anZ:Ljava/lang/String;
-
-.field public avC:Ljava/lang/String;
-
-.field public avt:Ljava/lang/String;
-
-.field public type:I
+.field public context:Landroid/content/Context;
 
 
 # direct methods

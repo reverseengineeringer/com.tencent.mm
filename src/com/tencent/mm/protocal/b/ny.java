@@ -1,110 +1,162 @@
 package com.tencent.mm.protocal.b;
 
-import a.a.a.b;
-import java.util.LinkedList;
-
 public final class ny
-  extends adm
+  extends com.tencent.mm.at.a
 {
-  public abx hyG;
-  public int hyq;
+  public String asL;
+  public String ayA;
+  public int bxl;
+  public boolean jkU = false;
+  public boolean jkV = false;
+  public boolean jmU = false;
+  public String jnA;
+  public boolean jnB = false;
+  public int jnC;
+  public boolean jnD = false;
+  public boolean jnE = false;
+  public String title;
+  
+  public final ny Cn(String paramString)
+  {
+    title = paramString;
+    jkU = true;
+    return this;
+  }
+  
+  public final ny Co(String paramString)
+  {
+    asL = paramString;
+    jkV = true;
+    return this;
+  }
+  
+  public final ny Cp(String paramString)
+  {
+    jnA = paramString;
+    jnB = true;
+    return this;
+  }
+  
+  public final ny Cq(String paramString)
+  {
+    ayA = paramString;
+    jmU = true;
+    return this;
+  }
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLQ == null) {
-        throw new b("Not all required fields were included: BaseResponse");
+      if (title != null) {
+        paramVarArgs.d(1, title);
       }
-      if (hyG == null) {
-        throw new b("Not all required fields were included: CertValue");
+      if (asL != null) {
+        paramVarArgs.d(2, asL);
       }
-      if (hLQ != null)
-      {
-        paramVarArgs.bN(1, hLQ.kS());
-        hLQ.a(paramVarArgs);
+      if (jnA != null) {
+        paramVarArgs.d(3, jnA);
       }
-      if (hyG != null)
-      {
-        paramVarArgs.bN(2, hyG.kS());
-        hyG.a(paramVarArgs);
+      if (ayA != null) {
+        paramVarArgs.d(4, ayA);
       }
-      paramVarArgs.bM(3, hyq);
+      if (jnD == true) {
+        paramVarArgs.ci(5, jnC);
+      }
+      if (jnE == true) {
+        paramVarArgs.ci(6, bxl);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      if (hLQ == null) {
-        break label525;
+      if (title == null) {
+        break label494;
       }
     }
-    label525:
-    for (paramInt = a.a.a.a.bJ(1, hLQ.kS()) + 0;; paramInt = 0)
+    label494:
+    for (int i = a.a.a.b.b.a.e(1, title) + 0;; i = 0)
     {
-      int i = paramInt;
-      if (hyG != null) {
-        i = paramInt + a.a.a.a.bJ(2, hyG.kS());
+      paramInt = i;
+      if (asL != null) {
+        paramInt = i + a.a.a.b.b.a.e(2, asL);
       }
-      return i + a.a.a.a.bI(3, hyq);
+      i = paramInt;
+      if (jnA != null) {
+        i = paramInt + a.a.a.b.b.a.e(3, jnA);
+      }
+      paramInt = i;
+      if (ayA != null) {
+        paramInt = i + a.a.a.b.b.a.e(4, ayA);
+      }
+      i = paramInt;
+      if (jnD == true) {
+        i = paramInt + a.a.a.a.cg(5, jnC);
+      }
+      paramInt = i;
+      if (jnE == true) {
+        paramInt = i + a.a.a.a.cg(6, bxl);
+      }
+      return paramInt;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = adm.a(paramVarArgs); paramInt > 0; paramInt = adm.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
-        if (hLQ == null) {
-          throw new b("Not all required fields were included: BaseResponse");
-        }
-        if (hyG != null) {
-          break;
-        }
-        throw new b("Not all required fields were included: CertValue");
+        break;
       }
       if (paramInt == 3)
       {
-        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
         ny localny = (ny)paramVarArgs[1];
-        paramInt = ((Integer)paramVarArgs[2]).intValue();
-        Object localObject2;
-        boolean bool;
-        switch (paramInt)
+        switch (((Integer)paramVarArgs[2]).intValue())
         {
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new ck();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (bool = true; bool; bool = ((ck)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adm.a((a.a.a.a.a)localObject2))) {}
-            hLQ = ((ck)localObject1);
-            paramInt += 1;
-          }
+          title = maU.readString();
+          jkU = true;
+          return 0;
         case 2: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new abx();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (bool = true; bool; bool = ((abx)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adm.a((a.a.a.a.a)localObject2))) {}
-            hyG = ((abx)localObject1);
-            paramInt += 1;
-          }
+          asL = maU.readString();
+          jkV = true;
+          return 0;
+        case 3: 
+          jnA = maU.readString();
+          jnB = true;
+          return 0;
+        case 4: 
+          ayA = maU.readString();
+          jmU = true;
+          return 0;
+        case 5: 
+          jnC = maU.jC();
+          jnD = true;
+          return 0;
         }
-        hyq = jMD.aVp();
+        bxl = maU.jC();
+        jnE = true;
         return 0;
       }
       return -1;
     }
+  }
+  
+  public final ny pf(int paramInt)
+  {
+    jnC = paramInt;
+    jnD = true;
+    return this;
+  }
+  
+  public final ny pg(int paramInt)
+  {
+    bxl = paramInt;
+    jnE = true;
+    return this;
   }
 }
 

@@ -1,174 +1,299 @@
-.class final Lcom/tencent/mm/modelgeo/e;
-.super Lcom/tencent/mm/modelgeo/k;
+.class public abstract Lcom/tencent/mm/modelgeo/e;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcom/tencent/map/geolocation/TencentLocationListener;
 
 
 # instance fields
-.field final synthetic bBl:Lcom/tencent/mm/modelgeo/d;
+.field private final bOH:Ljava/util/Map;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/modelgeo/d;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 3
 
     .prologue
-    .line 150
-    iput-object p1, p0, Lcom/tencent/mm/modelgeo/e;->bBl:Lcom/tencent/mm/modelgeo/d;
+    .line 16
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lcom/tencent/mm/modelgeo/k;-><init>()V
+    .line 24
+    new-instance v0, Ljava/util/HashMap;
 
+    invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/modelgeo/e;->bOH:Ljava/util/Map;
+
+    .line 26
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/e;->bOH:Ljava/util/Map;
+
+    const-string/jumbo v1, "gps"
+
+    const/4 v2, 0x0
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 27
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/e;->bOH:Ljava/util/Map;
+
+    const-string/jumbo v1, "network"
+
+    const/4 v2, 0x1
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 28
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(ZDDIDD)V
-    .locals 15
+.method public a(ZDDIDD)V
+    .locals 0
 
     .prologue
-    .line 160
-    if-eqz p1, :cond_0
+    .line 55
+    return-void
+.end method
 
-    .line 161
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/e;->bBl:Lcom/tencent/mm/modelgeo/d;
+.method public onLocationChanged(Lcom/tencent/map/geolocation/TencentLocation;ILjava/lang/String;)V
+    .locals 12
 
-    move-wide/from16 v0, p2
+    .prologue
+    const/4 v1, 0x1
 
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/d;->bBe:D
+    const/4 v11, 0x0
 
-    .line 162
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/e;->bBl:Lcom/tencent/mm/modelgeo/d;
+    .line 32
+    const-string/jumbo v0, "!44@/B4Tb64lLpJfn8anhv+Gj4lPDE5/r0LjjEGFhWg+aVE="
 
-    move-wide/from16 v0, p4
+    const-string/jumbo v2, "lat=%f, lng=%f, accuracy=%f errcode=%d, areastat=%d, speed=%f, bearing=%f, reason=%s, provider=%s"
 
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/d;->bBf:D
+    const/16 v3, 0x9
 
-    .line 163
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/e;->bBl:Lcom/tencent/mm/modelgeo/d;
+    new-array v3, v3, [Ljava/lang/Object;
 
-    move/from16 v0, p6
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getLatitude()D
 
-    iput v0, v2, Lcom/tencent/mm/modelgeo/d;->bBg:I
+    move-result-wide v4
 
-    .line 164
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/e;->bBl:Lcom/tencent/mm/modelgeo/d;
+    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    move-wide/from16 v0, p7
+    move-result-object v4
 
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/d;->bBh:D
+    aput-object v4, v3, v11
 
-    .line 165
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/e;->bBl:Lcom/tencent/mm/modelgeo/d;
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getLongitude()D
 
-    move-wide/from16 v0, p9
+    move-result-wide v4
 
-    iput-wide v0, v2, Lcom/tencent/mm/modelgeo/d;->bBi:D
+    invoke-static {v4, v5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
 
-    .line 166
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/e;->bBl:Lcom/tencent/mm/modelgeo/d;
+    move-result-object v4
 
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    aput-object v4, v3, v1
 
-    move-result-wide v3
+    const/4 v4, 0x2
 
-    iput-wide v3, v2, Lcom/tencent/mm/modelgeo/d;->bBb:J
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getAccuracy()F
 
-    .line 167
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/e;->bBl:Lcom/tencent/mm/modelgeo/d;
+    move-result v5
 
-    const/4 v3, 0x1
+    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    iput-boolean v3, v2, Lcom/tencent/mm/modelgeo/d;->bBc:Z
+    move-result-object v5
 
-    .line 168
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/e;->bBl:Lcom/tencent/mm/modelgeo/d;
+    aput-object v5, v3, v4
 
-    const/4 v3, 0x0
+    const/4 v4, 0x3
 
-    iput-boolean v3, v2, Lcom/tencent/mm/modelgeo/d;->bBd:Z
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 169
-    iget-object v2, p0, Lcom/tencent/mm/modelgeo/e;->bBl:Lcom/tencent/mm/modelgeo/d;
+    move-result-object v5
 
-    const v3, 0x10808
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/modelgeo/d;->a(Lcom/tencent/mm/modelgeo/d;I)V
-
-    .line 171
-    :cond_0
-    const-string/jumbo v2, "!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6"
-
-    const-string/jumbo v3, "onGetLocation fLongitude: %f fLatitude:%f locType:%d %f:spped"
+    aput-object v5, v3, v4
 
     const/4 v4, 0x4
 
-    new-array v4, v4, [Ljava/lang/Object;
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getAreaStat()Ljava/lang/Integer;
 
-    const/4 v5, 0x0
+    move-result-object v5
 
-    invoke-static/range {p4 .. p5}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    aput-object v5, v3, v4
+
+    const/4 v4, 0x5
+
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getSpeed()F
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    const/4 v4, 0x6
+
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getBearing()F
+
+    move-result v5
+
+    invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    const/4 v4, 0x7
+
+    aput-object p3, v3, v4
+
+    const/16 v4, 0x8
+
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getProvider()Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 34
+    if-nez p2, :cond_0
+
+    .line 35
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getLatitude()D
+
+    move-result-wide v2
+
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getLongitude()D
+
+    move-result-wide v4
+
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/e;->bOH:Ljava/util/Map;
+
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getProvider()Ljava/lang/String;
 
     move-result-object v6
 
-    aput-object v6, v4, v5
+    invoke-interface {v0, v6}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    const/4 v5, 0x1
+    move-result-object v0
 
-    invoke-static/range {p2 .. p3}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    check-cast v0, Ljava/lang/Integer;
 
-    move-result-object v6
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    aput-object v6, v4, v5
+    move-result v6
 
-    const/4 v5, 0x2
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getSpeed()F
 
-    invoke-static/range {p6 .. p6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result v0
 
-    move-result-object v6
+    float-to-double v7, v0
 
-    aput-object v6, v4, v5
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getAccuracy()F
 
-    const/4 v5, 0x3
+    move-result v0
 
-    invoke-static/range {p7 .. p8}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+    float-to-double v9, v0
 
-    move-result-object v6
+    move-object v0, p0
 
-    aput-object v6, v4, v5
+    invoke-virtual/range {v0 .. v10}, Lcom/tencent/mm/modelgeo/e;->a(ZDDIDD)V
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 39
+    :goto_0
+    return-void
 
-    .line 174
-    new-instance v14, Lcom/tencent/mm/sdk/platformtools/ac;
+    .line 37
+    :cond_0
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getLatitude()D
 
-    invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
+    move-result-wide v2
 
-    move-result-object v2
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getLongitude()D
 
-    invoke-direct {v14, v2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+    move-result-wide v4
 
-    new-instance v2, Lcom/tencent/mm/modelgeo/f;
+    iget-object v0, p0, Lcom/tencent/mm/modelgeo/e;->bOH:Ljava/util/Map;
 
-    move-object v3, p0
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getProvider()Ljava/lang/String;
 
-    move/from16 v4, p1
+    move-result-object v1
 
-    move-wide/from16 v5, p4
+    invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
-    move-wide/from16 v7, p2
+    move-result-object v0
 
-    move/from16 v9, p6
+    check-cast v0, Ljava/lang/Integer;
 
-    move-wide/from16 v10, p7
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
-    move-wide/from16 v12, p9
+    move-result v6
 
-    invoke-direct/range {v2 .. v13}, Lcom/tencent/mm/modelgeo/f;-><init>(Lcom/tencent/mm/modelgeo/e;ZDDIDD)V
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getSpeed()F
 
-    const-wide/16 v3, 0xc8
+    move-result v0
 
-    invoke-virtual {v14, v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
+    float-to-double v7, v0
 
-    .line 196
+    invoke-interface {p1}, Lcom/tencent/map/geolocation/TencentLocation;->getAccuracy()F
+
+    move-result v0
+
+    float-to-double v9, v0
+
+    move-object v0, p0
+
+    move v1, v11
+
+    invoke-virtual/range {v0 .. v10}, Lcom/tencent/mm/modelgeo/e;->a(ZDDIDD)V
+
+    goto :goto_0
+.end method
+
+.method public onStatusUpdate(Ljava/lang/String;ILjava/lang/String;)V
+    .locals 5
+
+    .prologue
+    .line 43
+    const-string/jumbo v0, "!44@/B4Tb64lLpJfn8anhv+Gj4lPDE5/r0LjjEGFhWg+aVE="
+
+    const-string/jumbo v1, "onStatusUpdate, name=%s, status=%d, desc=%s"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    const/4 v3, 0x1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    aput-object p3, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 45
     return-void
 .end method

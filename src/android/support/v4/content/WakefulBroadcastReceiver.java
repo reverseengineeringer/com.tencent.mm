@@ -6,8 +6,8 @@ import android.util.SparseArray;
 public abstract class WakefulBroadcastReceiver
   extends BroadcastReceiver
 {
-  private static final SparseArray fa = new SparseArray();
-  private static int fb = 1;
+  private static final SparseArray ej = new SparseArray();
+  private static int ek = 1;
 }
 
 /* Location:

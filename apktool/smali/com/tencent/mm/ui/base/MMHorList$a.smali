@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract XP()V
+.method public abstract aEI()V
 .end method
 
-.method public abstract aqF()V
+.method public abstract aEJ()V
 .end method
 
-.method public abstract aqG()V
+.method public abstract ahf()V
 .end method

@@ -2,7 +2,12 @@ package com.tencent.mm.d.a;
 
 public final class ek$b
 {
-  public int errCode;
+  public String aut;
+  public long azd = 0L;
+  public long aze = 0L;
+  public String path;
+  public int status = 0;
+  public String url;
 }
 
 /* Location:

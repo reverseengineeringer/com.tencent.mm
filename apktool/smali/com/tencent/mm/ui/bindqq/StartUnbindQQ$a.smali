@@ -1,5 +1,5 @@
 .class final Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$a;
-.super Lcom/tencent/mm/ui/applet/SecurityImage$c;
+.super Lcom/tencent/mm/ui/applet/SecurityImage$b;
 .source "SourceFile"
 
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic iQO:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
+.field final synthetic kPF:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
 
 
 # direct methods
@@ -24,31 +24,31 @@
 
     .prologue
     .line 319
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$a;->iQO:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$a;->kPF:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/applet/SecurityImage$c;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/applet/SecurityImage$b;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final aLI()V
+.method public final bby()V
     .locals 7
 
     .prologue
     .line 323
-    new-instance v0, Lcom/tencent/mm/modelsimple/an;
+    new-instance v0, Lcom/tencent/mm/modelsimple/ah;
 
     const/4 v1, 0x5
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$a;->iQO:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$a;->kPF:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;->d(Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;)Ljava/lang/String;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$a;->iQO:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
+    iget-object v3, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$a;->kPF:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
 
     invoke-static {v3}, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;->e(Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;)Ljava/lang/String;
 
@@ -56,7 +56,7 @@
 
     const-string/jumbo v4, ""
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$a;->iQO:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
+    iget-object v5, p0, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ$a;->kPF:Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;
 
     invoke-static {v5}, Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;->i(Lcom/tencent/mm/ui/bindqq/StartUnbindQQ;)Ljava/lang/String;
 
@@ -64,23 +64,15 @@
 
     const/4 v6, 0x1
 
-    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/modelsimple/an;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/modelsimple/ah;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
     .line 325
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/q/l;->d(Lcom/tencent/mm/q/j;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
     .line 326
-    return-void
-.end method
-
-.method protected final onStart()V
-    .locals 0
-
-    .prologue
-    .line 331
     return-void
 .end method

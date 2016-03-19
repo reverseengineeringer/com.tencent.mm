@@ -7,11 +7,6 @@ import android.view.accessibility.AccessibilityNodeInfo;
 class a$a
   extends a.e
 {
-  public final void a(Object paramObject, int paramInt)
-  {
-    ((AccessibilityNodeInfo)paramObject).addAction(paramInt);
-  }
-  
   public final void a(Object paramObject, Rect paramRect)
   {
     ((AccessibilityNodeInfo)paramObject).getBoundsInParent(paramRect);
@@ -25,6 +20,11 @@ class a$a
   public final void a(Object paramObject, boolean paramBoolean)
   {
     ((AccessibilityNodeInfo)paramObject).setClickable(paramBoolean);
+  }
+  
+  public final void b(Object paramObject, int paramInt)
+  {
+    ((AccessibilityNodeInfo)paramObject).addAction(paramInt);
   }
   
   public final void b(Object paramObject, Rect paramRect)
@@ -47,11 +47,6 @@ class a$a
     ((AccessibilityNodeInfo)paramObject).setEnabled(paramBoolean);
   }
   
-  public final Object c(Object paramObject)
-  {
-    return AccessibilityNodeInfo.obtain((AccessibilityNodeInfo)paramObject);
-  }
-  
   public final void c(Object paramObject, Rect paramRect)
   {
     ((AccessibilityNodeInfo)paramObject).setBoundsInParent(paramRect);
@@ -70,11 +65,6 @@ class a$a
   public final void c(Object paramObject, boolean paramBoolean)
   {
     ((AccessibilityNodeInfo)paramObject).setFocusable(paramBoolean);
-  }
-  
-  public final int d(Object paramObject)
-  {
-    return ((AccessibilityNodeInfo)paramObject).getActions();
   }
   
   public final void d(Object paramObject, Rect paramRect)
@@ -97,19 +87,14 @@ class a$a
     ((AccessibilityNodeInfo)paramObject).setFocused(paramBoolean);
   }
   
-  public final CharSequence e(Object paramObject)
-  {
-    return ((AccessibilityNodeInfo)paramObject).getClassName();
-  }
-  
   public final void e(Object paramObject, boolean paramBoolean)
   {
     ((AccessibilityNodeInfo)paramObject).setLongClickable(paramBoolean);
   }
   
-  public final CharSequence f(Object paramObject)
+  public final Object f(Object paramObject)
   {
-    return ((AccessibilityNodeInfo)paramObject).getContentDescription();
+    return AccessibilityNodeInfo.obtain((AccessibilityNodeInfo)paramObject);
   }
   
   public final void f(Object paramObject, boolean paramBoolean)
@@ -117,9 +102,9 @@ class a$a
     ((AccessibilityNodeInfo)paramObject).setScrollable(paramBoolean);
   }
   
-  public final CharSequence g(Object paramObject)
+  public final int g(Object paramObject)
   {
-    return ((AccessibilityNodeInfo)paramObject).getPackageName();
+    return ((AccessibilityNodeInfo)paramObject).getActions();
   }
   
   public final void g(Object paramObject, boolean paramBoolean)
@@ -129,60 +114,75 @@ class a$a
   
   public final CharSequence h(Object paramObject)
   {
+    return ((AccessibilityNodeInfo)paramObject).getClassName();
+  }
+  
+  public final CharSequence i(Object paramObject)
+  {
+    return ((AccessibilityNodeInfo)paramObject).getContentDescription();
+  }
+  
+  public final CharSequence j(Object paramObject)
+  {
+    return ((AccessibilityNodeInfo)paramObject).getPackageName();
+  }
+  
+  public final CharSequence k(Object paramObject)
+  {
     return ((AccessibilityNodeInfo)paramObject).getText();
-  }
-  
-  public final boolean i(Object paramObject)
-  {
-    return ((AccessibilityNodeInfo)paramObject).isCheckable();
-  }
-  
-  public final boolean j(Object paramObject)
-  {
-    return ((AccessibilityNodeInfo)paramObject).isChecked();
-  }
-  
-  public final boolean k(Object paramObject)
-  {
-    return ((AccessibilityNodeInfo)paramObject).isClickable();
   }
   
   public final boolean l(Object paramObject)
   {
-    return ((AccessibilityNodeInfo)paramObject).isEnabled();
+    return ((AccessibilityNodeInfo)paramObject).isCheckable();
   }
   
   public final boolean m(Object paramObject)
   {
-    return ((AccessibilityNodeInfo)paramObject).isFocusable();
+    return ((AccessibilityNodeInfo)paramObject).isChecked();
   }
   
   public final boolean n(Object paramObject)
   {
-    return ((AccessibilityNodeInfo)paramObject).isFocused();
+    return ((AccessibilityNodeInfo)paramObject).isClickable();
   }
   
   public final boolean o(Object paramObject)
   {
-    return ((AccessibilityNodeInfo)paramObject).isLongClickable();
+    return ((AccessibilityNodeInfo)paramObject).isEnabled();
   }
   
   public final boolean p(Object paramObject)
   {
-    return ((AccessibilityNodeInfo)paramObject).isPassword();
+    return ((AccessibilityNodeInfo)paramObject).isFocusable();
   }
   
   public final boolean q(Object paramObject)
   {
-    return ((AccessibilityNodeInfo)paramObject).isScrollable();
+    return ((AccessibilityNodeInfo)paramObject).isFocused();
   }
   
   public final boolean r(Object paramObject)
   {
+    return ((AccessibilityNodeInfo)paramObject).isLongClickable();
+  }
+  
+  public final boolean s(Object paramObject)
+  {
+    return ((AccessibilityNodeInfo)paramObject).isPassword();
+  }
+  
+  public final boolean t(Object paramObject)
+  {
+    return ((AccessibilityNodeInfo)paramObject).isScrollable();
+  }
+  
+  public final boolean u(Object paramObject)
+  {
     return ((AccessibilityNodeInfo)paramObject).isSelected();
   }
   
-  public final void s(Object paramObject)
+  public final void v(Object paramObject)
   {
     ((AccessibilityNodeInfo)paramObject).recycle();
   }

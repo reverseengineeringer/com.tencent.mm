@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bs
-  extends a.c
+  extends a.e
 {
   public a$bs()
   {
-    super("getBrandWCPayCreateCreditCardRequest", "get_wcpay_create_credit_card_request", 65, true);
+    super("installDownloadTask", "install_download_task", 41, false);
   }
 }
 

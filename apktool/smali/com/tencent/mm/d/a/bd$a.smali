@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public anZ:Ljava/lang/String;
+.field public asc:I
 
-.field public awg:Z
+.field public aul:Lcom/tencent/mm/storage/a/c;
 
-.field public direction:I
+.field public context:Landroid/content/Context;
 
 
 # direct methods

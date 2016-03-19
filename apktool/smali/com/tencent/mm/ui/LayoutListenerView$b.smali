@@ -12,8 +12,3 @@
     accessFlags = 0x609
     name = "b"
 .end annotation
-
-
-# virtual methods
-.method public abstract onSizeChanged(IIII)V
-.end method

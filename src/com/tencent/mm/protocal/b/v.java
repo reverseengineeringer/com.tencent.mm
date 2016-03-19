@@ -1,64 +1,95 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
+import java.util.LinkedList;
+
 public final class v
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public int cVl;
-  public int hiE;
-  public int hiF;
-  public int hiG;
-  public int hiH;
+  public aaq iWV;
+  public LinkedList iWW = new LinkedList();
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.bM(1, hiE);
-      paramVarArgs.bM(2, cVl);
-      paramVarArgs.bM(3, hiF);
-      paramVarArgs.bM(4, hiG);
-      paramVarArgs.bM(5, hiH);
+      if (iWV == null) {
+        throw new b("Not all required fields were included: LogHead");
+      }
+      if (iWV != null)
+      {
+        paramVarArgs.cj(1, iWV.kn());
+        iWV.a(paramVarArgs);
+      }
+      paramVarArgs.d(2, 8, iWW);
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.bI(1, hiE) + 0 + a.a.a.a.bI(2, cVl) + a.a.a.a.bI(3, hiF) + a.a.a.a.bI(4, hiG) + a.a.a.a.bI(5, hiH);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
-        }
+      if (iWV == null) {
+        break label438;
       }
-      return 0;
     }
-    if (paramInt == 3)
+    label438:
+    for (paramInt = a.a.a.a.ch(1, iWV.kn()) + 0;; paramInt = 0)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      v localv = (v)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      return paramInt + a.a.a.a.c(2, 8, iWW);
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
-      case 1: 
-        hiE = jMD.aVp();
-        return 0;
-      case 2: 
-        cVl = jMD.aVp();
-        return 0;
-      case 3: 
-        hiF = jMD.aVp();
-        return 0;
-      case 4: 
-        hiG = jMD.aVp();
-        return 0;
+        paramVarArgs = (byte[])paramVarArgs[0];
+        iWW.clear();
+        paramVarArgs = new a.a.a.a.a(paramVarArgs, iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        if (iWV != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: LogHead");
       }
-      hiH = jMD.aVp();
-      return 0;
+      if (paramInt == 3)
+      {
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        v localv = (v)paramVarArgs[1];
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        Object localObject2;
+        boolean bool;
+        switch (paramInt)
+        {
+        default: 
+          return -1;
+        case 1: 
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new aaq();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (bool = true; bool; bool = ((aaq)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
+            iWV = ((aaq)localObject1);
+            paramInt += 1;
+          }
+        }
+        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+        int i = paramVarArgs.size();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          localObject2 = (byte[])paramVarArgs.get(paramInt);
+          localObject1 = new aar();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+          for (bool = true; bool; bool = ((aar)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, com.tencent.mm.at.a.a((a.a.a.a.a)localObject2))) {}
+          iWW.add(localObject1);
+          paramInt += 1;
+        }
+        break;
+      }
+      return -1;
     }
-    return -1;
   }
 }
 

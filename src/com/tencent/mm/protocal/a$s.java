@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$s
-  extends a.c
+  extends a.e
 {
   public a$s()
   {
-    super("connectWXDevice", "connectWXDevice", 123, true);
+    super("chooseVideo", "chooseVideo", 191, true);
   }
 }
 

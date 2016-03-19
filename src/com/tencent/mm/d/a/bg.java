@@ -1,25 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class bg
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awn = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auq = new a();
   
   public bg()
   {
-    id = "ExDeviceSimpleBTOnConnectState";
-    hXT = atO;
+    id = "EmojiRewardTips";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public long awk;
-    public int awo;
-    public String mac;
+    public boolean aur;
   }
 }
 

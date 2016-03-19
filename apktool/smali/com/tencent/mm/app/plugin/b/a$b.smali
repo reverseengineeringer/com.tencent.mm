@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/app/plugin/b/a$b;
-.super Lcom/tencent/mm/sdk/c/e;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
 
 
@@ -22,7 +22,7 @@
     .line 218
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/e;-><init>(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
 
     .line 219
     return-void
@@ -30,12 +30,12 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/d;)Z
+.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 3
 
     .prologue
     .line 223
-    instance-of v0, p1, Lcom/tencent/mm/d/a/bs;
+    instance-of v0, p1, Lcom/tencent/mm/d/a/dj;
 
     if-nez v0, :cond_0
 
@@ -44,7 +44,7 @@
 
     const-string/jumbo v1, "mismatched event"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 225
     const/4 v0, 0x0
@@ -55,27 +55,27 @@
 
     .line 227
     :cond_0
-    check-cast p1, Lcom/tencent/mm/d/a/bs;
+    check-cast p1, Lcom/tencent/mm/d/a/dj;
 
     .line 228
-    sget-object v0, Lcom/tencent/mm/pluginsdk/l$ag;->gKx:Lcom/tencent/mm/pluginsdk/l$m$d;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$ai;->izg:Lcom/tencent/mm/pluginsdk/i$o$d;
 
     if-eqz v0, :cond_1
 
     .line 229
-    iget-object v0, p1, Lcom/tencent/mm/d/a/bs;->awJ:Lcom/tencent/mm/d/a/bs$b;
+    iget-object v0, p1, Lcom/tencent/mm/d/a/dj;->awR:Lcom/tencent/mm/d/a/dj$b;
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/l$ag;->gKx:Lcom/tencent/mm/pluginsdk/l$m$d;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/i$ai;->izg:Lcom/tencent/mm/pluginsdk/i$o$d;
 
-    iget-object v2, p1, Lcom/tencent/mm/d/a/bs;->awI:Lcom/tencent/mm/d/a/bs$a;
+    iget-object v2, p1, Lcom/tencent/mm/d/a/dj;->awQ:Lcom/tencent/mm/d/a/dj$a;
 
-    iget-object v2, v2, Lcom/tencent/mm/d/a/bs$a;->awK:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/d/a/dj$a;->awS:Ljava/lang/String;
 
-    invoke-interface {v1, v2}, Lcom/tencent/mm/pluginsdk/l$m$d;->rr(Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-interface {v1, v2}, Lcom/tencent/mm/pluginsdk/i$o$d;->vA(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/d/a/bs$b;->cursor:Landroid/database/Cursor;
+    iput-object v1, v0, Lcom/tencent/mm/d/a/dj$b;->awP:Landroid/database/Cursor;
 
     .line 231
     :cond_1

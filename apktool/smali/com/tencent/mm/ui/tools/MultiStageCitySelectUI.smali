@@ -3,37 +3,37 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d;
+.implements Lcom/tencent/mm/r/d;
 
 
 # static fields
-.field private static bFX:Ljava/lang/String;
+.field private static bUu:Ljava/lang/String;
 
-.field private static jux:Ljava/lang/String;
+.field private static lxc:Ljava/lang/String;
 
-.field private static juy:Ljava/lang/String;
+.field private static lxd:Ljava/lang/String;
 
 
 # instance fields
-.field private bXQ:Lcom/tencent/mm/ui/base/preference/l;
+.field private aJD:Ljava/lang/String;
 
-.field private bZb:I
+.field private bCD:Ljava/lang/String;
 
-.field private bqA:Ljava/lang/String;
+.field private bCE:Ljava/lang/String;
 
-.field private bqB:Ljava/lang/String;
+.field private bJd:Lcom/tencent/mm/modelgeo/c;
 
-.field private bqC:Ljava/lang/String;
+.field private bmY:Lcom/tencent/mm/modelgeo/a$a;
 
-.field private bwc:Lcom/tencent/mm/modelgeo/d;
+.field private cpb:Lcom/tencent/mm/ui/base/preference/f;
 
-.field private bwg:Lcom/tencent/mm/modelgeo/b$a;
+.field private cqn:I
 
-.field private juA:Z
+.field private lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
-.field private juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+.field private lxf:Z
 
-.field private juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+.field private lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
 
 # direct methods
@@ -44,13 +44,13 @@
     const/4 v0, 0x0
 
     .line 51
-    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bFX:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bUu:Ljava/lang/String;
 
     .line 52
-    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->jux:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxc:Ljava/lang/String;
 
     .line 53
-    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juy:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxd:Ljava/lang/String;
 
     return-void
 .end method
@@ -67,78 +67,90 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/preference/MMPreference;-><init>()V
 
     .line 48
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
     .line 49
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
     .line 50
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqB:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCD:Ljava/lang/String;
 
     .line 54
-    iput v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iput v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
     .line 56
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juA:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxf:Z
 
     .line 74
-    new-instance v0, Lcom/tencent/mm/ui/tools/eo;
+    new-instance v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/eo;-><init>(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$1;-><init>(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bwg:Lcom/tencent/mm/modelgeo/b$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bmY:Lcom/tencent/mm/modelgeo/a$a;
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)Lcom/tencent/mm/modelgeo/d;
+.method static synthetic a(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)Lcom/tencent/mm/modelgeo/c;
     .locals 1
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bwc:Lcom/tencent/mm/modelgeo/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bJd:Lcom/tencent/mm/modelgeo/c;
 
     return-object v0
 .end method
 
-.method private aSk()V
-    .locals 10
+.method static synthetic b(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)V
+    .locals 0
 
     .prologue
-    const/4 v9, 0x2
+    .line 37
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->biI()V
 
-    const/4 v8, 0x1
+    return-void
+.end method
+
+.method private biG()V
+    .locals 11
+
+    .prologue
+    const/4 v10, 0x2
+
+    const/4 v9, 0x1
 
     const/4 v5, 0x0
+
+    const v8, 0x7f0b03d8
 
     const/4 v4, 0x0
 
     .line 120
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aIc()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aIe()[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXW()[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     move-result-object v0
 
     :goto_0
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     array-length v0, v0
 
@@ -150,7 +162,7 @@
 
     const-string/jumbo v1, "initZoneItems error ,check zone lists!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 193
     :cond_1
@@ -159,36 +171,36 @@
 
     .line 120
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aIc()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/RegionCodeDecoder;->Ac(Ljava/lang/String;)[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/storage/RegionCodeDecoder;->FB(Ljava/lang/String;)[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     move-result-object v0
 
     goto :goto_0
 
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aIc()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/RegionCodeDecoder;->bE(Ljava/lang/String;Ljava/lang/String;)[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/storage/RegionCodeDecoder;->cr(Ljava/lang/String;Ljava/lang/String;)[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     move-result-object v0
 
@@ -196,16 +208,16 @@
 
     .line 127
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bXQ:Lcom/tencent/mm/ui/base/preference/l;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/base/preference/l;->removeAll()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/preference/f;->removeAll()V
 
     .line 138
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -218,11 +230,11 @@
     check-cast v0, Ljava/lang/String;
 
     .line 139
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v1
 
@@ -235,11 +247,11 @@
     check-cast v1, Ljava/lang/String;
 
     .line 140
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v2
 
@@ -255,20 +267,20 @@
 
     .line 142
     :goto_2
-    iget-object v5, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v5, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     array-length v5, v5
 
     if-ge v3, v5, :cond_b
 
     .line 143
-    iget-object v5, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v5, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     aget-object v5, v5, v3
 
     if-eqz v5, :cond_6
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v5, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     aget-object v5, v5, v3
 
@@ -276,13 +288,13 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v5}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
     move-result v5
 
     if-nez v5, :cond_6
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v5, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     aget-object v5, v5, v3
 
@@ -290,7 +302,7 @@
 
     move-result-object v5
 
-    invoke-static {v5}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v5}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
     move-result v5
 
@@ -302,7 +314,7 @@
     invoke-direct {v5, p0}, Lcom/tencent/mm/ui/tools/ZonePreference;-><init>(Landroid/content/Context;)V
 
     .line 147
-    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     aget-object v6, v6, v3
 
@@ -312,7 +324,7 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v7}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
     move-result v7
 
@@ -322,7 +334,7 @@
 
     move-result-object v7
 
-    invoke-static {v7}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v7}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
     move-result v7
 
@@ -333,15 +345,15 @@
 
     const-string/jumbo v7, "setZoneItem item = null"
 
-    invoke-static {v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 149
     :goto_3
-    iget v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iget v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
     if-nez v6, :cond_8
 
-    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     aget-object v6, v6, v3
 
@@ -356,14 +368,12 @@
     if-eqz v6, :cond_8
 
     .line 150
-    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bXQ:Lcom/tencent/mm/ui/base/preference/l;
+    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
 
-    invoke-interface {v6, v5, v4}, Lcom/tencent/mm/ui/base/preference/l;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
+    invoke-interface {v6, v5, v4}, Lcom/tencent/mm/ui/base/preference/f;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
 
     .line 151
-    sget v6, Lcom/tencent/mm/a$n;->setting_zone_selected_location:I
-
-    invoke-virtual {v5, v6}, Lcom/tencent/mm/ui/tools/ZonePreference;->setSummary(I)V
+    invoke-virtual {v5, v8}, Lcom/tencent/mm/ui/tools/ZonePreference;->setSummary(I)V
 
     .line 142
     :cond_6
@@ -380,17 +390,17 @@
 
     invoke-virtual {v5, v7}, Lcom/tencent/mm/ui/tools/ZonePreference;->setKey(Ljava/lang/String;)V
 
-    iput-object v6, v5, Lcom/tencent/mm/ui/tools/ZonePreference;->jvL:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iput-object v6, v5, Lcom/tencent/mm/ui/tools/ZonePreference;->lyC:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     goto :goto_3
 
     .line 152
     :cond_8
-    iget v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iget v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
-    if-ne v6, v8, :cond_9
+    if-ne v6, v9, :cond_9
 
-    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     aget-object v6, v6, v3
 
@@ -405,24 +415,22 @@
     if-eqz v6, :cond_9
 
     .line 153
-    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bXQ:Lcom/tencent/mm/ui/base/preference/l;
+    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
 
-    invoke-interface {v6, v5, v4}, Lcom/tencent/mm/ui/base/preference/l;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
+    invoke-interface {v6, v5, v4}, Lcom/tencent/mm/ui/base/preference/f;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
 
     .line 154
-    sget v6, Lcom/tencent/mm/a$n;->setting_zone_selected_location:I
-
-    invoke-virtual {v5, v6}, Lcom/tencent/mm/ui/tools/ZonePreference;->setSummary(I)V
+    invoke-virtual {v5, v8}, Lcom/tencent/mm/ui/tools/ZonePreference;->setSummary(I)V
 
     goto :goto_4
 
     .line 155
     :cond_9
-    iget v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iget v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
-    if-ne v6, v9, :cond_a
+    if-ne v6, v10, :cond_a
 
-    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juz:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxe:[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     aget-object v6, v6, v3
 
@@ -437,22 +445,20 @@
     if-eqz v6, :cond_a
 
     .line 156
-    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bXQ:Lcom/tencent/mm/ui/base/preference/l;
+    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
 
-    invoke-interface {v6, v5, v4}, Lcom/tencent/mm/ui/base/preference/l;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
+    invoke-interface {v6, v5, v4}, Lcom/tencent/mm/ui/base/preference/f;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
 
     .line 157
-    sget v6, Lcom/tencent/mm/a$n;->setting_zone_selected_location:I
-
-    invoke-virtual {v5, v6}, Lcom/tencent/mm/ui/tools/ZonePreference;->setSummary(I)V
+    invoke-virtual {v5, v8}, Lcom/tencent/mm/ui/tools/ZonePreference;->setSummary(I)V
 
     goto :goto_4
 
     .line 159
     :cond_a
-    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bXQ:Lcom/tencent/mm/ui/base/preference/l;
+    iget-object v6, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
 
-    invoke-interface {v6, v5}, Lcom/tencent/mm/ui/base/preference/l;->a(Lcom/tencent/mm/ui/base/preference/Preference;)V
+    invoke-interface {v6, v5}, Lcom/tencent/mm/ui/base/preference/f;->a(Lcom/tencent/mm/ui/base/preference/Preference;)V
 
     goto :goto_4
 
@@ -460,19 +466,19 @@
     :cond_b
     new-instance v0, Lcom/tencent/mm/ui/base/preference/PreferenceCategory;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/base/preference/PreferenceCategory;-><init>(Landroid/content/Context;)V
 
     .line 171
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bXQ:Lcom/tencent/mm/ui/base/preference/l;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
 
-    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/base/preference/l;->a(Lcom/tencent/mm/ui/base/preference/Preference;)V
+    invoke-interface {v1, v0}, Lcom/tencent/mm/ui/base/preference/f;->a(Lcom/tencent/mm/ui/base/preference/Preference;)V
 
     .line 177
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
     if-nez v0, :cond_1
 
@@ -482,35 +488,35 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/preference/PreferenceTitleCategory;-><init>(Landroid/content/Context;)V
 
     .line 180
-    sget v1, Lcom/tencent/mm/a$n;->setting_zone_category_get_location:I
+    const v1, 0x7f0b03d6
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/preference/PreferenceTitleCategory;->setTitle(I)V
 
     .line 181
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bXQ:Lcom/tencent/mm/ui/base/preference/l;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
 
-    invoke-interface {v1, v0, v4}, Lcom/tencent/mm/ui/base/preference/l;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
+    invoke-interface {v1, v0, v4}, Lcom/tencent/mm/ui/base/preference/f;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
 
     .line 183
     new-instance v0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
     .line 184
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
     const-string/jumbo v1, "current_location"
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->setKey(Ljava/lang/String;)V
 
     .line 185
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bXQ:Lcom/tencent/mm/ui/base/preference/l;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
-    invoke-interface {v0, v1, v8}, Lcom/tencent/mm/ui/base/preference/l;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
+    invoke-interface {v0, v1, v9}, Lcom/tencent/mm/ui/base/preference/f;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
 
     .line 187
     new-instance v0, Lcom/tencent/mm/ui/base/preference/PreferenceTitleCategory;
@@ -518,44 +524,44 @@
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/preference/PreferenceTitleCategory;-><init>(Landroid/content/Context;)V
 
     .line 188
-    sget v1, Lcom/tencent/mm/a$n;->setting_zone_category_all_locations:I
+    const v1, 0x7f0b03d7
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/preference/PreferenceTitleCategory;->setTitle(I)V
 
     .line 189
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bXQ:Lcom/tencent/mm/ui/base/preference/l;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
 
-    invoke-interface {v1, v0, v9}, Lcom/tencent/mm/ui/base/preference/l;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
+    invoke-interface {v1, v0, v10}, Lcom/tencent/mm/ui/base/preference/f;->a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
 
     .line 191
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bwc:Lcom/tencent/mm/modelgeo/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bJd:Lcom/tencent/mm/modelgeo/c;
 
     if-nez v0, :cond_c
 
-    invoke-static {}, Lcom/tencent/mm/modelgeo/d;->yO()Lcom/tencent/mm/modelgeo/d;
+    invoke-static {}, Lcom/tencent/mm/modelgeo/c;->zD()Lcom/tencent/mm/modelgeo/c;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bwc:Lcom/tencent/mm/modelgeo/d;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bJd:Lcom/tencent/mm/modelgeo/c;
 
     :cond_c
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bwc:Lcom/tencent/mm/modelgeo/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bJd:Lcom/tencent/mm/modelgeo/c;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bwg:Lcom/tencent/mm/modelgeo/b$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bmY:Lcom/tencent/mm/modelgeo/a$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelgeo/d;->b(Lcom/tencent/mm/modelgeo/b$a;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelgeo/c;->b(Lcom/tencent/mm/modelgeo/a$a;)V
 
     goto/16 :goto_1
 .end method
 
-.method private aSl()V
+.method private biH()V
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
     .line 203
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
     packed-switch v0, :pswitch_data_0
 
@@ -565,19 +571,19 @@
 
     .line 205
     :pswitch_0
-    iput-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqB:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCD:Ljava/lang/String;
 
     goto :goto_0
 
     .line 208
     :pswitch_1
-    iput-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
     goto :goto_0
 
     .line 211
     :pswitch_2
-    iput-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
     goto :goto_0
 
@@ -590,53 +596,43 @@
     .end packed-switch
 .end method
 
-.method private aSm()V
+.method private biI()V
     .locals 1
 
     .prologue
     .line 451
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
     if-eqz v0, :cond_0
 
     .line 452
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->aSx()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->biS()V
 
     .line 454
     :cond_0
     return-void
 .end method
 
-.method static synthetic b(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)V
-    .locals 0
-
-    .prologue
-    .line 37
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aSm()V
-
-    return-void
-.end method
-
-.method static synthetic c(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)Lcom/tencent/mm/modelgeo/b$a;
+.method static synthetic c(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)Lcom/tencent/mm/modelgeo/a$a;
     .locals 1
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bwg:Lcom/tencent/mm/modelgeo/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bmY:Lcom/tencent/mm/modelgeo/a$a;
 
     return-object v0
 .end method
 
-.method static synthetic d(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)Lcom/tencent/mm/modelgeo/d;
+.method static synthetic d(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)Lcom/tencent/mm/modelgeo/c;
     .locals 1
 
     .prologue
     .line 37
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bwc:Lcom/tencent/mm/modelgeo/d;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bJd:Lcom/tencent/mm/modelgeo/c;
 
     return-object v0
 .end method
@@ -646,14 +642,14 @@
 
     .prologue
     .line 37
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aSl()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->biH()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 5
 
     .prologue
@@ -662,16 +658,16 @@
     const/4 v3, 0x0
 
     .line 253
-    sget v0, Lcom/tencent/mm/a$n;->nearby_friend_city_select:I
+    const v0, 0x7f0b0eee
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->qb(I)V
 
     .line 254
-    new-instance v0, Lcom/tencent/mm/ui/tools/ep;
+    new-instance v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/ep;-><init>(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI$2;-><init>(Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 264
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->getIntent()Landroid/content/Intent;
@@ -684,7 +680,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juA:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxf:Z
 
     .line 265
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->getIntent()Landroid/content/Intent;
@@ -697,7 +693,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
     .line 266
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->getIntent()Landroid/content/Intent;
@@ -710,7 +706,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
     .line 268
     const-string/jumbo v0, "!44@/B4Tb64lLpIde65kiMeUpqlCN7YBh+S07SSwJ3cICKI="
@@ -721,7 +717,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -733,7 +729,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -745,7 +741,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqB:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCD:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -755,42 +751,42 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 270
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
     .line 271
-    iput v4, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iput v4, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
     .line 272
-    iput-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
     .line 273
-    iput-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqB:Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCD:Ljava/lang/String;
 
     .line 281
     :goto_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aSk()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->biG()V
 
     .line 282
     return-void
 
     .line 274
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
     .line 275
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
     .line 276
-    iput-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqB:Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCD:Ljava/lang/String;
 
     goto :goto_0
 
@@ -798,22 +794,22 @@
     :cond_1
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
     goto :goto_0
 .end method
 
-.method public final Ee()I
+.method public final Gn()I
     .locals 1
 
     .prologue
     .line 247
-    sget v0, Lcom/tencent/mm/a$k;->zoneselect:I
+    const v0, 0x7f0a009c
 
     return v0
 .end method
 
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
     .locals 11
 
     .prologue
@@ -829,7 +825,7 @@
     if-nez p2, :cond_7
 
     .line 385
-    invoke-virtual {p4}, Lcom/tencent/mm/q/j;->getType()I
+    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
 
     move-result v0
 
@@ -838,16 +834,16 @@
     if-ne v0, v2, :cond_0
 
     .line 386
-    check-cast p4, Lcom/tencent/mm/modelsimple/n;
+    check-cast p4, Lcom/tencent/mm/modelsimple/o;
 
     .line 387
-    iget-object v2, p4, Lcom/tencent/mm/modelsimple/n;->bKU:Ljava/lang/String;
+    iget-object v2, p4, Lcom/tencent/mm/modelsimple/o;->bNO:Ljava/lang/String;
 
     .line 388
-    iget-object v5, p4, Lcom/tencent/mm/modelsimple/n;->aMY:Ljava/lang/String;
+    iget-object v5, p4, Lcom/tencent/mm/modelsimple/o;->aSF:Ljava/lang/String;
 
     .line 389
-    iget-object v6, p4, Lcom/tencent/mm/modelsimple/n;->aMZ:Ljava/lang/String;
+    iget-object v6, p4, Lcom/tencent/mm/modelsimple/o;->aSG:Ljava/lang/String;
 
     .line 391
     const-string/jumbo v0, "!44@/B4Tb64lLpIde65kiMeUpqlCN7YBh+S07SSwJ3cICKI="
@@ -866,14 +862,14 @@
 
     aput-object v6, v7, v8
 
-    invoke-static {v0, v3, v7}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v7}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 393
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aIc()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aIe()[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXW()[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     move-result-object v7
 
@@ -896,7 +892,7 @@
 
     if-eqz v9, :cond_5
 
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aIc()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v0
 
@@ -904,7 +900,7 @@
 
     move-result-object v2
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/storage/RegionCodeDecoder;->Ac(Ljava/lang/String;)[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/storage/RegionCodeDecoder;->FB(Ljava/lang/String;)[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     move-result-object v7
 
@@ -927,7 +923,7 @@
 
     if-eqz v9, :cond_3
 
-    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aIc()Lcom/tencent/mm/storage/RegionCodeDecoder;
+    invoke-static {}, Lcom/tencent/mm/storage/RegionCodeDecoder;->aXU()Lcom/tencent/mm/storage/RegionCodeDecoder;
 
     move-result-object v0
 
@@ -939,7 +935,7 @@
 
     move-result-object v7
 
-    invoke-virtual {v0, v5, v7}, Lcom/tencent/mm/storage/RegionCodeDecoder;->bE(Ljava/lang/String;Ljava/lang/String;)[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    invoke-virtual {v0, v5, v7}, Lcom/tencent/mm/storage/RegionCodeDecoder;->cr(Ljava/lang/String;Ljava/lang/String;)[Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     move-result-object v5
 
@@ -971,13 +967,13 @@
 
     if-nez v0, :cond_6
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->aSx()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->biS()V
 
     .line 400
     :cond_0
@@ -1017,27 +1013,27 @@
     goto :goto_0
 
     :cond_6
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
     if-eqz v3, :cond_0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
     iput v10, v3, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->status:I
 
-    iput-object v2, v3, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvO:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iput-object v2, v3, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyF:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
-    iput-object v1, v3, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvP:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iput-object v1, v3, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyG:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
-    iput-object v0, v3, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvQ:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iput-object v0, v3, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyH:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->aSw()V
+    invoke-virtual {v3}, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->biR()V
 
     goto :goto_4
 
     .line 398
     :cond_7
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aSm()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->biI()V
 
     goto :goto_4
 
@@ -1049,7 +1045,7 @@
     goto :goto_3
 .end method
 
-.method public final a(Lcom/tencent/mm/ui/base/preference/l;Lcom/tencent/mm/ui/base/preference/Preference;)Z
+.method public final a(Lcom/tencent/mm/ui/base/preference/f;Lcom/tencent/mm/ui/base/preference/Preference;)Z
     .locals 9
 
     .prologue
@@ -1071,7 +1067,7 @@
     .line 288
     check-cast p2, Lcom/tencent/mm/ui/tools/ZonePreference;
 
-    iget-object v1, p2, Lcom/tencent/mm/ui/tools/ZonePreference;->jvL:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v1, p2, Lcom/tencent/mm/ui/tools/ZonePreference;->lyC:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     .line 290
     if-eqz v1, :cond_0
@@ -1080,7 +1076,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -1126,7 +1122,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v3
 
@@ -1151,7 +1147,7 @@
 
     .line 295
     :cond_3
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
     if-nez v0, :cond_6
 
@@ -1160,14 +1156,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
     .line 297
     invoke-virtual {v1}, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bFX:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bUu:Ljava/lang/String;
 
     .line 306
     :cond_4
@@ -1179,52 +1175,52 @@
     if-nez v0, :cond_8
 
     .line 307
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juA:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxf:Z
 
     if-nez v0, :cond_5
 
     .line 308
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
     const/16 v1, 0x3024
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
     .line 309
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
     const/16 v1, 0x3025
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
     .line 310
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
     const/16 v1, 0x3026
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqB:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCD:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
@@ -1237,42 +1233,42 @@
     .line 313
     const-string/jumbo v1, "CountryName"
 
-    sget-object v3, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bFX:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bUu:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 314
     const-string/jumbo v1, "ProviceName"
 
-    sget-object v3, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->jux:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxc:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 315
     const-string/jumbo v1, "CityName"
 
-    sget-object v3, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juy:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxd:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 317
     const-string/jumbo v1, "Country"
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 318
     const-string/jumbo v1, "Contact_Province"
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 319
     const-string/jumbo v1, "Contact_City"
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqB:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCD:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -1290,7 +1286,7 @@
 
     .line 298
     :cond_6
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
     if-ne v0, v2, :cond_7
 
@@ -1299,20 +1295,20 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
     .line 300
     invoke-virtual {v1}, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->jux:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxc:Ljava/lang/String;
 
     goto/16 :goto_3
 
     .line 301
     :cond_7
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bZb:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cqn:I
 
     if-ne v0, v7, :cond_4
 
@@ -1321,14 +1317,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqB:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCD:Ljava/lang/String;
 
     .line 303
     invoke-virtual {v1}, Lcom/tencent/mm/storage/RegionCodeDecoder$Region;->getName()Ljava/lang/String;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juy:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxd:Ljava/lang/String;
 
     goto/16 :goto_3
 
@@ -1348,21 +1344,21 @@
     .line 326
     const-string/jumbo v3, "Country"
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqA:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aJD:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 327
     const-string/jumbo v3, "Provice"
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bqC:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bCE:Ljava/lang/String;
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 328
     const-string/jumbo v3, "GetAddress"
 
-    iget-boolean v4, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juA:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxf:Z
 
     invoke-virtual {v1, v3, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
@@ -1376,7 +1372,7 @@
 
     .line 336
     :cond_9
-    iget-object v0, p2, Lcom/tencent/mm/ui/base/preference/Preference;->bUr:Ljava/lang/String;
+    iget-object v0, p2, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
 
     const-string/jumbo v4, "current_location"
 
@@ -1386,7 +1382,7 @@
 
     if-eqz v0, :cond_a
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
     iget v0, v0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->status:I
 
@@ -1398,30 +1394,30 @@
     if-eqz v0, :cond_a
 
     .line 337
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->juB:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->lxg:Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;
 
     const/4 v4, 0x3
 
     new-array v4, v4, [Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvO:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v5, v0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyF:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     aput-object v5, v4, v3
 
-    iget-object v5, v0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvP:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v5, v0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyG:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     aput-object v5, v4, v2
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->jvQ:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/ZoneRecommandPreference;->lyH:Lcom/tencent/mm/storage/RegionCodeDecoder$Region;
 
     aput-object v0, v4, v7
 
     .line 338
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v5
 
@@ -1437,11 +1433,11 @@
     invoke-virtual {v5, v6, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
     .line 341
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v5
 
@@ -1457,11 +1453,11 @@
     invoke-virtual {v5, v6, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
     .line 342
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v5
 
@@ -1698,7 +1694,7 @@
 
     .prologue
     .line 362
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->aSl()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->biH()V
 
     .line 363
     invoke-super {p0}, Lcom/tencent/mm/ui/base/preference/MMPreference;->onBackPressed()V
@@ -1715,21 +1711,21 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/MMPreference;->onCreate(Landroid/os/Bundle;)V
 
     .line 223
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x299
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     .line 224
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference;->iMx:Lcom/tencent/mm/ui/base/preference/v;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/MMPreference;->kLL:Lcom/tencent/mm/ui/base/preference/h;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bXQ:Lcom/tencent/mm/ui/base/preference/l;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->cpb:Lcom/tencent/mm/ui/base/preference/f;
 
     .line 225
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->Gb()V
 
     .line 226
     return-void
@@ -1740,25 +1736,25 @@
 
     .prologue
     .line 236
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x299
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 238
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bwc:Lcom/tencent/mm/modelgeo/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bJd:Lcom/tencent/mm/modelgeo/c;
 
     if-eqz v0, :cond_0
 
     .line 239
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bwc:Lcom/tencent/mm/modelgeo/d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bJd:Lcom/tencent/mm/modelgeo/c;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bwg:Lcom/tencent/mm/modelgeo/b$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MultiStageCitySelectUI;->bmY:Lcom/tencent/mm/modelgeo/a$a;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelgeo/d;->c(Lcom/tencent/mm/modelgeo/b$a;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelgeo/c;->c(Lcom/tencent/mm/modelgeo/a$a;)V
 
     .line 242
     :cond_0

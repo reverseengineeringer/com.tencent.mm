@@ -15,7 +15,15 @@
 
 
 # instance fields
-.field public username:Ljava/lang/String;
+.field public aAW:Ljava/lang/Boolean;
+
+.field public aAX:I
+
+.field public aAY:Ljava/lang/Boolean;
+
+.field public ayw:Ljava/lang/String;
+
+.field public imagePath:Ljava/lang/String;
 
 
 # direct methods

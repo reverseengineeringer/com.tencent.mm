@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/as;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -13,15 +13,15 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public avA:Lcom/tencent/mm/d/a/as$a;
+.field public atT:Lcom/tencent/mm/d/a/as$a;
 
-.field public avB:Lcom/tencent/mm/d/a/as$b;
+.field public atU:Lcom/tencent/mm/d/a/as$b;
 
 
 # direct methods
@@ -32,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/as;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/as;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/as;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/as;->arR:Z
 
     return-void
 .end method
@@ -45,30 +45,30 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/as$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/as$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/as;->avA:Lcom/tencent/mm/d/a/as$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/as;->atT:Lcom/tencent/mm/d/a/as$a;
 
-    .line 20
+    .line 17
     new-instance v0, Lcom/tencent/mm/d/a/as$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/as$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/as;->avB:Lcom/tencent/mm/d/a/as$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/as;->atU:Lcom/tencent/mm/d/a/as$b;
 
     .line 8
-    const-string/jumbo v0, "ExDeviceGetTicket"
+    const-string/jumbo v0, "CreateBakBanner"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/as;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/as;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/as;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/as;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/as;->jUI:Z
 
     return-void
 .end method

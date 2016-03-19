@@ -6,7 +6,7 @@ import android.content.Intent;
 
 public final class d
 {
-  public Intent li;
+  public Intent mIntent;
   
   public static PendingIntent a(Context paramContext, int paramInt, Intent paramIntent)
   {

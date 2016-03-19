@@ -1,32 +1,70 @@
 package com.tencent.mm.ui.tools;
 
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.kingkong.support.Log;
+import com.tencent.mm.model.ar.a;
+import com.tencent.mm.storage.k;
+import com.tencent.mm.t.l;
+import com.tencent.mm.ui.base.g;
+import com.tencent.mm.ui.base.p;
 
-final class c
-  implements TextWatcher
+public final class c
 {
-  c(ActionBarSearchView paramActionBarSearchView) {}
+  private static boolean cHw = false;
+  private static p coc = null;
   
-  public final void afterTextChanged(Editable paramEditable) {}
-  
-  public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
-  
-  public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
+  public static void a(l paraml, Activity paramActivity, k paramk)
   {
-    ActionBarSearchView.a(joq);
-    ActionBarSearchView.b localb;
-    if (ActionBarSearchView.b(joq) != null)
+    a(paraml, paramActivity, paramk, false, null);
+  }
+  
+  public static void a(l paraml, final Activity paramActivity, final k paramk, final boolean paramBoolean, final Runnable paramRunnable)
+  {
+    boolean bool2 = true;
+    if ((paraml == null) || (paramActivity == null) || (paramk == null))
     {
-      localb = ActionBarSearchView.b(joq);
-      if (paramCharSequence != null) {
-        break label42;
+      boolean bool1;
+      if (paraml == null)
+      {
+        paramBoolean = true;
+        if (paramActivity != null) {
+          break label73;
+        }
+        bool1 = true;
+        label28:
+        if (paramk != null) {
+          break label79;
+        }
+      }
+      for (;;)
+      {
+        Log.e("!44@/B4Tb64lLpJcZAIZpKXu2jAJsuCaf+nmCcaYSxN3GfI=", "bizInfo null : %s, context null : %s, ct null : %s", new Object[] { Boolean.valueOf(paramBoolean), Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
+        return;
+        paramBoolean = false;
+        break;
+        label73:
+        bool1 = false;
+        break label28;
+        label79:
+        bool2 = false;
       }
     }
-    label42:
-    for (paramCharSequence = "";; paramCharSequence = paramCharSequence.toString())
+    if (paraml.wF()) {}
+    for (String str = paramActivity.getString(2131429728);; str = paramActivity.getString(2131429729, new Object[] { paramk.qz() }))
     {
-      localb.uM(paramCharSequence);
+      g.a(paramActivity, str, "", paramActivity.getString(2131429723), paramActivity.getString(2131430884), new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          c.a(ltX, paramActivity, paramk, paramBoolean);
+          if (paramRunnable != null) {
+            paramRunnable.run();
+          }
+        }
+      }, null);
       return;
     }
   }

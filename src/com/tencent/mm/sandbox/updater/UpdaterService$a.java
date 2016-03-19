@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import com.jg.JgClassChecked;
-import com.tencent.mm.sdk.platformtools.al;
+import com.tencent.mm.sdk.platformtools.ah;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Map;
@@ -15,15 +15,15 @@ final class UpdaterService$a
 {
   public final void onReceive(Context paramContext, Intent paramIntent)
   {
-    if (UpdaterService.aEk() != null)
+    if (UpdaterService.aUl() != null)
     {
-      paramIntent = UpdaterService.aEk();
-      boolean bool = al.cX(paramContext);
-      if (hXA.size() > 0)
+      paramIntent = UpdaterService.aUl();
+      boolean bool = ah.dB(paramContext);
+      if (jUp.size() > 0)
       {
-        paramContext = hXA.values().iterator();
+        paramContext = jUp.values().iterator();
         while (paramContext.hasNext()) {
-          ((x)paramContext.next()).eF(bool);
+          ((a)paramContext.next()).gF(bool);
         }
       }
     }

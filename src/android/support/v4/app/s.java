@@ -1,24 +1,41 @@
 package android.support.v4.app;
 
-public abstract class s
+import android.app.PendingIntent;
+import android.os.Bundle;
+
+final class s
 {
-  public abstract s a(int paramInt, Fragment paramFragment);
+  public static abstract class a
+  {
+    protected abstract PendingIntent X();
+    
+    protected abstract y.a[] Y();
+    
+    protected abstract Bundle getExtras();
+    
+    protected abstract int getIcon();
+    
+    protected abstract CharSequence getTitle();
+    
+    public static abstract interface a {}
+  }
   
-  public abstract s a(int paramInt, Fragment paramFragment, String paramString);
-  
-  public abstract s a(Fragment paramFragment);
-  
-  public abstract s a(Fragment paramFragment, String paramString);
-  
-  public abstract s b(int paramInt, Fragment paramFragment);
-  
-  public abstract s b(Fragment paramFragment);
-  
-  public abstract s c(Fragment paramFragment);
-  
-  public abstract int commit();
-  
-  public abstract int commitAllowingStateLoss();
+  public static abstract class b
+  {
+    abstract y.a Z();
+    
+    abstract long getLatestTimestamp();
+    
+    abstract String[] getMessages();
+    
+    abstract String[] getParticipants();
+    
+    abstract PendingIntent getReadPendingIntent();
+    
+    abstract PendingIntent getReplyPendingIntent();
+    
+    public static abstract interface a {}
+  }
 }
 
 /* Location:

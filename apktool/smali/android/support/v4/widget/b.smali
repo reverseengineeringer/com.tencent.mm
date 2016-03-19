@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field hU:Landroid/support/v4/widget/b$a;
+.field hc:Landroid/support/v4/widget/b$a;
 
 
 # direct methods
@@ -24,7 +24,7 @@
     invoke-direct {p0}, Landroid/widget/Filter;-><init>()V
 
     .line 40
-    iput-object p1, p0, Landroid/support/v4/widget/b;->hU:Landroid/support/v4/widget/b$a;
+    iput-object p1, p0, Landroid/support/v4/widget/b;->hc:Landroid/support/v4/widget/b$a;
 
     .line 41
     return-void
@@ -37,7 +37,7 @@
 
     .prologue
     .line 45
-    iget-object v0, p0, Landroid/support/v4/widget/b;->hU:Landroid/support/v4/widget/b$a;
+    iget-object v0, p0, Landroid/support/v4/widget/b;->hc:Landroid/support/v4/widget/b$a;
 
     check-cast p1, Landroid/database/Cursor;
 
@@ -53,7 +53,7 @@
 
     .prologue
     .line 50
-    iget-object v0, p0, Landroid/support/v4/widget/b;->hU:Landroid/support/v4/widget/b$a;
+    iget-object v0, p0, Landroid/support/v4/widget/b;->hc:Landroid/support/v4/widget/b$a;
 
     invoke-interface {v0, p1}, Landroid/support/v4/widget/b$a;->runQueryOnBackgroundThread(Ljava/lang/CharSequence;)Landroid/database/Cursor;
 
@@ -100,7 +100,7 @@
 
     .prologue
     .line 65
-    iget-object v0, p0, Landroid/support/v4/widget/b;->hU:Landroid/support/v4/widget/b$a;
+    iget-object v0, p0, Landroid/support/v4/widget/b;->hc:Landroid/support/v4/widget/b$a;
 
     invoke-interface {v0}, Landroid/support/v4/widget/b$a;->getCursor()Landroid/database/Cursor;
 
@@ -116,7 +116,7 @@
     if-eq v1, v0, :cond_0
 
     .line 68
-    iget-object v1, p0, Landroid/support/v4/widget/b;->hU:Landroid/support/v4/widget/b$a;
+    iget-object v1, p0, Landroid/support/v4/widget/b;->hc:Landroid/support/v4/widget/b$a;
 
     iget-object v0, p2, Landroid/widget/Filter$FilterResults;->values:Ljava/lang/Object;
 

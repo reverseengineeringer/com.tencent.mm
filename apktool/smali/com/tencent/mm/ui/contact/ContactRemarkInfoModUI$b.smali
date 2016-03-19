@@ -18,9 +18,11 @@
 
 
 # instance fields
-.field private eYn:I
+.field private gjm:I
 
-.field final synthetic jfL:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+.field final synthetic ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+
+.field private ljY:Ljava/lang/String;
 
 
 # direct methods
@@ -28,15 +30,20 @@
     .locals 1
 
     .prologue
-    .line 120
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->jfL:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    .line 141
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
+    .line 142
     const/16 v0, 0x320
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->eYn:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gjm:I
+
+    .line 143
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->ljY:Ljava/lang/String;
 
     return-void
 .end method
@@ -45,7 +52,7 @@
     .locals 0
 
     .prologue
-    .line 120
+    .line 141
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;-><init>(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)V
 
     return-void
@@ -57,32 +64,32 @@
     .locals 3
 
     .prologue
-    .line 134
+    .line 160
     const/16 v0, 0x320
 
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/dr;->Q(ILjava/lang/String;)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/tools/i;->ai(ILjava/lang/String;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->eYn:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gjm:I
 
-    .line 135
-    iget v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->eYn:I
+    .line 161
+    iget v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gjm:I
 
     if-gez v0, :cond_0
 
-    .line 136
+    .line 162
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->eYn:I
+    iput v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gjm:I
 
-    .line 138
+    .line 164
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->jfL:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->a(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Landroid/widget/TextView;
 
@@ -90,8 +97,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 139
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->jfL:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    .line 165
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->a(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)Landroid/widget/TextView;
 
@@ -101,7 +108,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v2, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->eYn:I
+    iget v2, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->gjm:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -113,13 +120,13 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 142
+    .line 168
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->jfL:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI$b;->ljV:Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;->b(Lcom/tencent/mm/ui/contact/ContactRemarkInfoModUI;)V
 
-    .line 143
+    .line 169
     return-void
 .end method
 
@@ -127,7 +134,7 @@
     .locals 0
 
     .prologue
-    .line 126
+    .line 147
     return-void
 .end method
 
@@ -135,6 +142,6 @@
     .locals 0
 
     .prologue
-    .line 130
+    .line 156
     return-void
 .end method

@@ -15,9 +15,9 @@
 
 
 # static fields
-.field private static apB:Lcom/tencent/mm/sdk/platformtools/aj;
+.field private static anF:Lcom/tencent/mm/sdk/platformtools/af;
 
-.field private static bPZ:Lcom/tencent/mm/modelvoice/RemoteController$a;
+.field private static cgQ:Lcom/tencent/mm/modelvoice/RemoteController$a;
 
 
 # direct methods
@@ -31,41 +31,41 @@
     return-void
 .end method
 
-.method public static Cj()V
+.method public static Eq()V
     .locals 2
 
     .prologue
     const/4 v1, 0x0
 
     .line 77
-    sput-object v1, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->bPZ:Lcom/tencent/mm/modelvoice/RemoteController$a;
+    sput-object v1, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->cgQ:Lcom/tencent/mm/modelvoice/RemoteController$a;
 
     .line 78
-    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->apB:Lcom/tencent/mm/sdk/platformtools/aj;
+    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->anF:Lcom/tencent/mm/sdk/platformtools/af;
 
     if-eqz v0, :cond_0
 
     .line 79
-    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->apB:Lcom/tencent/mm/sdk/platformtools/aj;
+    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->anF:Lcom/tencent/mm/sdk/platformtools/af;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/aj;->aEN()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
 
     .line 80
-    sput-object v1, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->apB:Lcom/tencent/mm/sdk/platformtools/aj;
+    sput-object v1, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->anF:Lcom/tencent/mm/sdk/platformtools/af;
 
     .line 82
     :cond_0
     return-void
 .end method
 
-.method static synthetic Ck()Lcom/tencent/mm/sdk/platformtools/aj;
+.method static synthetic Er()Lcom/tencent/mm/sdk/platformtools/af;
     .locals 1
 
     .prologue
     .line 34
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->apB:Lcom/tencent/mm/sdk/platformtools/aj;
+    sput-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->anF:Lcom/tencent/mm/sdk/platformtools/af;
 
     return-object v0
 .end method
@@ -119,17 +119,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 52
     :cond_2
-    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->apB:Lcom/tencent/mm/sdk/platformtools/aj;
+    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->anF:Lcom/tencent/mm/sdk/platformtools/af;
 
     if-nez v0, :cond_3
 
-    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->bPZ:Lcom/tencent/mm/modelvoice/RemoteController$a;
+    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->cgQ:Lcom/tencent/mm/modelvoice/RemoteController$a;
 
     if-eqz v0, :cond_3
 
@@ -138,33 +138,33 @@
 
     const-string/jumbo v1, "got remote key event down"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 54
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aj;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
 
-    new-instance v1, Lcom/tencent/mm/modelvoice/k;
+    new-instance v1, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/modelvoice/k;-><init>(Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver$1;-><init>(Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;)V
 
     const/4 v2, 0x1
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aj;-><init>(Lcom/tencent/mm/sdk/platformtools/aj$a;Z)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
 
-    sput-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->apB:Lcom/tencent/mm/sdk/platformtools/aj;
+    sput-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->anF:Lcom/tencent/mm/sdk/platformtools/af;
 
     .line 71
     :cond_3
-    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->apB:Lcom/tencent/mm/sdk/platformtools/aj;
+    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->anF:Lcom/tencent/mm/sdk/platformtools/af;
 
     if-eqz v0, :cond_0
 
     .line 72
-    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->apB:Lcom/tencent/mm/sdk/platformtools/aj;
+    sget-object v0, Lcom/tencent/mm/modelvoice/RemoteController$RemoteControlReceiver;->anF:Lcom/tencent/mm/sdk/platformtools/af;
 
     const-wide/16 v1, 0x3e8
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aj;->cA(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
 
     goto :goto_0
 .end method

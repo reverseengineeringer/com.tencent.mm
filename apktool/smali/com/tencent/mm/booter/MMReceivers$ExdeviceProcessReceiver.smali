@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 306
+    .line 328
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -31,12 +31,12 @@
     .locals 7
 
     .prologue
-    .line 311
+    .line 333
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 312
+    .line 334
     const-string/jumbo v2, "!56@/B4Tb64lLpLiQ7OrT4MAaceQRK/W0iihqAiu47he09l2tvBb7e03Xw=="
 
     const-string/jumbo v3, "[hakon][Step] onReceive, save rebootTime = %s"
@@ -53,26 +53,16 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 313
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEW()Landroid/content/SharedPreferences;
+    .line 335
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUO()Landroid/content/SharedPreferences;
 
-    move-result-object v2
+    .line 337
+    const/16 v2, 0xcd
 
-    .line 314
-    invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+    invoke-static {v2, v0, v1}, Lcom/tencent/mm/compatible/d/r;->j(IJ)V
 
-    move-result-object v2
-
-    .line 315
-    const-string/jumbo v3, "com.tencent.mm_device_reboot_time"
-
-    invoke-interface {v2, v3, v0, v1}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
-
-    .line 316
-    invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 317
+    .line 339
     return-void
 .end method

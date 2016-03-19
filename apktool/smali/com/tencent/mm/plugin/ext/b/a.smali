@@ -3,36 +3,27 @@
 .source "SourceFile"
 
 
+# static fields
+.field public static final dKx:[Ljava/lang/String;
+
+
 # direct methods
-.method public static o(Lcom/tencent/mm/storage/ar;)I
+.method static constructor <clinit>()V
     .locals 3
 
     .prologue
+    .line 10
     const/4 v0, 0x1
 
-    .line 27
-    iget v1, p0, Lcom/tencent/mm/d/b/aq;->field_type:I
+    new-array v0, v0, [Ljava/lang/String;
 
-    const/16 v2, 0x22
+    const/4 v1, 0x0
 
-    if-ne v1, v2, :cond_1
+    const-string/jumbo v2, "retCode"
 
-    .line 28
-    const/4 v0, 0x2
+    aput-object v2, v0, v1
 
-    .line 32
-    :cond_0
-    :goto_0
-    return v0
+    sput-object v0, Lcom/tencent/mm/plugin/ext/b/a;->dKx:[Ljava/lang/String;
 
-    .line 29
-    :cond_1
-    iget v1, p0, Lcom/tencent/mm/d/b/aq;->field_type:I
-
-    if-eq v1, v0, :cond_0
-
-    .line 32
-    const/4 v0, 0x3
-
-    goto :goto_0
+    return-void
 .end method

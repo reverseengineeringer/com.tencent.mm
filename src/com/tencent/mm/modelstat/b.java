@@ -1,15 +1,15 @@
 package com.tencent.mm.modelstat;
 
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class b
 {
-  long bMB;
-  long bMC;
-  long bMD;
+  boolean bLg;
   long beginTime;
-  boolean bxY;
+  long cdg;
+  long cdh;
+  long cdi;
   long endTime;
   int rtType;
   
@@ -18,29 +18,29 @@ public final class b
   public b(int paramInt, boolean paramBoolean, long paramLong)
   {
     rtType = paramInt;
-    bxY = paramBoolean;
-    bMB = paramLong;
-    bMC = 0L;
+    bLg = paramBoolean;
+    cdg = paramLong;
+    cdh = 0L;
   }
   
-  public final void Bn()
+  public final void Dn()
   {
-    if (bMC == 0L)
+    if (cdh == 0L)
     {
-      beginTime = bn.DM();
-      bMD = bn.DN();
+      beginTime = ay.FS();
+      cdi = ay.FT();
     }
-    bMC += 1L;
+    cdh += 1L;
   }
   
-  public final void Q(long paramLong)
+  public final void ae(long paramLong)
   {
-    if (bMB == 0L) {
-      bMB = paramLong;
+    if (cdg == 0L) {
+      cdg = paramLong;
     }
-    bMD = (bn.DN() - bMD);
-    endTime = bn.DM();
-    t.d("!32@/B4Tb64lLpIxKaXa+FvJsGW0qfmRAifD", "FIN: TIME:" + (endTime - beginTime) + " datalen:" + bMB + " Count:" + bMC + " type:" + rtType);
+    cdi = (ay.FT() - cdi);
+    endTime = ay.FS();
+    u.d("!32@/B4Tb64lLpIxKaXa+FvJsGW0qfmRAifD", "FIN: TIME:" + (endTime - beginTime) + " datalen:" + cdg + " Count:" + cdh + " type:" + rtType);
     WatchDogPushReceiver.a(this);
   }
 }

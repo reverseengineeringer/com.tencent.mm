@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 final class MMSlideDelView$a
   extends MMSlideDelView.h
@@ -13,16 +13,16 @@ final class MMSlideDelView$a
   
   public final void run()
   {
-    if ((iHE.hasWindowFocus()) && (MMSlideDelView.c(iHE) == gRB)) {}
+    if ((kGQ.hasWindowFocus()) && (MMSlideDelView.c(kGQ) == drS)) {}
     for (int i = 1;; i = 0)
     {
-      if ((i != 0) && (!MMSlideDelView.d(iHE)))
+      if ((i != 0) && (!MMSlideDelView.d(kGQ)))
       {
-        t.i("!32@/B4Tb64lLpKjyuEDzIt3EXrdyszrp4wg", "is long press");
-        if (iHE.getParent() != null)
+        u.i("!32@/B4Tb64lLpKjyuEDzIt3EXrdyszrp4wg", "is long press");
+        if (kGQ.getParent() != null)
         {
-          MMSlideDelView.e(iHE);
-          iHE.performLongClick();
+          MMSlideDelView.e(kGQ);
+          kGQ.performLongClick();
         }
       }
       return;

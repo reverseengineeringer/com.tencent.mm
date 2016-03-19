@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$by
-  extends a.c
+  extends a.e
 {
   public a$by()
   {
-    super("queryDownloadTask", "query_download_task", 40, false);
+    super("launch3rdApp", "launch_3rdApp", 52, false);
   }
 }
 

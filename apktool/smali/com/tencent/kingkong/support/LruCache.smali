@@ -800,9 +800,9 @@
 
     move-result-object v0
 
+    .line 382
     aput-object v0, v2, v3
 
-    .line 382
     invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0

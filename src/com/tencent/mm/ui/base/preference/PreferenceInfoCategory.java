@@ -6,15 +6,13 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
 
 public class PreferenceInfoCategory
   extends Preference
 {
-  public View.OnClickListener gXH = null;
-  public View.OnClickListener iNk = null;
-  public int iqM = 0;
+  public View.OnClickListener iOa = null;
+  public View.OnClickListener kMx = null;
+  public int kpE = 0;
   
   public PreferenceInfoCategory(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -24,7 +22,7 @@ public class PreferenceInfoCategory
   public PreferenceInfoCategory(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference_info_center);
+    setLayoutResource(2131363249);
   }
   
   protected final void onBindView(View paramView)
@@ -39,17 +37,17 @@ public class PreferenceInfoCategory
     }
     for (;;)
     {
-      paramView = (ImageView)paramView.findViewById(a.i.add_my_qrcode);
-      paramView.setOnClickListener(gXH);
-      if (iqM <= 0) {
+      paramView = (ImageView)paramView.findViewById(2131169472);
+      paramView.setOnClickListener(iOa);
+      if (kpE <= 0) {
         break;
       }
-      paramView.setImageResource(iqM);
+      paramView.setImageResource(kpE);
       paramView.setVisibility(0);
       return;
       localTextView.setVisibility(0);
       localTextView.setText(getTitle());
-      localTextView.setOnClickListener(iNk);
+      localTextView.setOnClickListener(kMx);
     }
     paramView.setVisibility(8);
   }

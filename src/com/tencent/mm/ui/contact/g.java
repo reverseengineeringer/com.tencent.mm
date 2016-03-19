@@ -1,48 +1,58 @@
 package com.tencent.mm.ui.contact;
 
-import android.widget.ListView;
-import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.VerticalScrollBar.a;
+import android.database.Cursor;
+import com.tencent.mm.d.b.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.i;
+import com.tencent.mm.storage.r;
+import com.tencent.mm.storage.s;
+import java.util.ArrayList;
+import java.util.List;
 
-final class g
-  implements VerticalScrollBar.a
+public final class g
 {
-  g(AddressUI.a parama) {}
-  
-  public final void jO(String paramString)
+  static final List bT(List paramList)
   {
+    ArrayList localArrayList = new ArrayList();
+    paramList = ah.tD().rt().a(i.bzW, paramList, true, null);
+    if (paramList.moveToFirst())
+    {
+      int i = 0;
+      do
+      {
+        r localr = new r();
+        localr.c(paramList);
+        int j = i;
+        if (vU(field_username))
+        {
+          localArrayList.add(field_username);
+          j = i + 1;
+          if (j >= 4) {
+            break;
+          }
+        }
+        i = j;
+      } while (paramList.moveToNext());
+    }
+    return localArrayList;
+  }
+  
+  private static final boolean vU(String paramString)
+  {
+    String[] arrayOfString = i.bAc;
+    int j = arrayOfString.length;
     int i = 0;
-    if (jet.getString(a.n.scroll_bar_search).equals(paramString)) {
-      AddressUI.a.c(jet).setSelection(0);
+    if (i < j) {
+      if (!paramString.equals(arrayOfString[i])) {}
     }
-    Object localObject;
-    do
+    while ((i.dn(paramString)) || (i.ea(paramString)))
     {
-      return;
-      localObject = AddressUI.a.a(jet);
-      t.v("!32@/B4Tb64lLpJvPADYHZ60V72QCl639+9L", "getSections");
-      localObject = jdA;
-    } while (localObject == null);
-    if ("↑".equals(paramString))
-    {
-      AddressUI.a.c(jet).setSelection(0);
-      return;
-    }
-    if ("☆".equals(paramString))
-    {
-      AddressUI.a.c(jet).setSelection(AddressUI.a.c(jet).getHeaderViewsCount());
-      return;
-    }
-    do
-    {
+      return false;
       i += 1;
-      if ((i >= localObject.length) || (localObject[i] == null)) {
-        break;
-      }
-    } while (!localObject[i].equals(paramString));
-    i = AddressUI.a.a(jet).getPositionForSection(i);
-    AddressUI.a.c(jet).setSelection(i + AddressUI.a.c(jet).getHeaderViewsCount());
+      break;
+    }
+    return true;
   }
 }
 

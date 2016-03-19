@@ -1,8 +1,9 @@
 package com.tencent.mm.g;
 
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.s;
+import android.view.ContextMenu.ContextMenuInfo;
+import com.tencent.mm.sdk.platformtools.ay;
 import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -13,9 +14,9 @@ import java.util.Map;
 
 public final class d
 {
-  public static final int[] bkj = { 1 };
-  HashMap bkk = new HashMap();
-  Map bkl = null;
+  public static final int[] buI = { 1 };
+  HashMap buJ = new HashMap();
+  Map buK = null;
   private int id;
   int version;
   
@@ -24,18 +25,18 @@ public final class d
     id = paramInt;
   }
   
-  static boolean da(String paramString)
+  static boolean dg(String paramString)
   {
     for (;;)
     {
       int i;
       try
       {
-        if (bn.iW(paramString)) {
+        if (ay.kz(paramString)) {
           return false;
         }
         Object localObject = new ArrayList();
-        if (!bn.iW(paramString))
+        if (!ay.kz(paramString))
         {
           paramString = paramString.split(",");
           if ((paramString != null) && (paramString.length > 0))
@@ -43,7 +44,7 @@ public final class d
             i = 0;
             if (i < paramString.length)
             {
-              if (bn.iW(paramString[i])) {
+              if (ay.kz(paramString[i])) {
                 break label237;
               }
               ((List)localObject).add(paramString[i]);
@@ -51,31 +52,31 @@ public final class d
             }
           }
         }
-        paramString = s.aEJ();
-        if (bn.iW(paramString)) {
+        paramString = t.aUB();
+        if (ay.kz(paramString)) {
           return false;
         }
-        t.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "locale is " + paramString);
+        u.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "locale is " + paramString);
         localObject = ((List)localObject).iterator();
         if (((Iterator)localObject).hasNext())
         {
           String str = (String)((Iterator)localObject).next();
           if ((str.trim().toLowerCase().equals("other")) && (!paramString.equals("zh_CN")))
           {
-            t.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "find other");
+            u.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "find other");
             return true;
           }
           if (!str.trim().toLowerCase().equals(paramString.trim().toLowerCase())) {
             continue;
           }
-          t.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "find ");
+          u.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "find ");
           return true;
         }
       }
       catch (Exception paramString)
       {
-        t.e("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "exception:%s", new Object[] { bn.a(paramString) });
-        t.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "isContainLocale failed " + paramString.getMessage());
+        u.e("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "exception:%s", new Object[] { ay.b(paramString) });
+        u.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "isContainLocale failed " + paramString.getMessage());
       }
       return false;
       label237:
@@ -122,7 +123,7 @@ public final class d
     }
   }
   
-  public static LinkedList j(Map paramMap)
+  public static LinkedList k(Map paramMap)
   {
     Object localObject1 = null;
     int i = 0;
@@ -152,7 +153,7 @@ public final class d
       localObject1 = localObject2;
       if (((LinkedList)localObject3).size() > 0)
       {
-        t.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "has menuItem2, %s, %s", new Object[] { Integer.valueOf(((LinkedList)localObject2).size()), Integer.valueOf(((LinkedList)localObject3).size()) });
+        u.d("!32@/B4Tb64lLpIGhQOF66mZz2YYmnWBJuR7", "has menuItem2, %s, %s", new Object[] { Integer.valueOf(((LinkedList)localObject2).size()), Integer.valueOf(((LinkedList)localObject3).size()) });
         ((LinkedList)localObject2).addAll((Collection)localObject3);
         localObject1 = localObject2;
       }
@@ -176,6 +177,24 @@ public final class d
       id = paramString1;
       title = paramString2;
       url = paramString3;
+    }
+  }
+  
+  public static final class b
+    implements ContextMenu.ContextMenuInfo
+  {
+    private static int buM = 10000;
+    public final String buL;
+    public final int id;
+    public final String title;
+    
+    public b(String paramString1, String paramString2)
+    {
+      int i = buM;
+      buM = i + 1;
+      id = i;
+      buL = paramString1;
+      title = paramString2;
     }
   }
 }

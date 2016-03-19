@@ -1,192 +1,139 @@
 package com.tencent.mm.pluginsdk.a;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.view.View;
-import android.widget.ImageView;
-import com.tencent.mm.pluginsdk.l.e;
-import com.tencent.mm.sdk.g.ai.a;
+import com.tencent.mm.pluginsdk.i.f;
+import com.tencent.mm.r.c.a;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.storage.ac;
+import com.tencent.mm.storage.a.c;
 import com.tencent.mm.storage.ag;
-import com.tencent.mm.storage.ar;
-import java.util.ArrayList;
+import com.tencent.mm.storage.y;
 import java.util.List;
 
 public final class b
-  implements l.e
+  implements i.f
 {
-  public final boolean LN()
+  public final boolean PP()
   {
     return false;
   }
   
-  public final boolean LO()
+  public final boolean PQ()
   {
     return false;
   }
   
-  public final void LR() {}
+  public final c a(String paramString1, String paramString2, int paramInt1, int paramInt2, int paramInt3, String paramString3, String paramString4, String paramString5)
+  {
+    return null;
+  }
   
-  public final int LS()
+  public final String a(Context paramContext, WXMediaMessage paramWXMediaMessage, String paramString)
+  {
+    return null;
+  }
+  
+  public final void a(Context paramContext, ag paramag) {}
+  
+  public final void a(String paramString, c paramc, ag paramag) {}
+  
+  public final boolean a(Context paramContext, c paramc, int paramInt)
+  {
+    return false;
+  }
+  
+  public final boolean a(String paramString1, String paramString2, long paramLong, String paramString3, c.a parama)
+  {
+    return false;
+  }
+  
+  public final byte[] a(c paramc)
+  {
+    return new byte[0];
+  }
+  
+  public final y as(String paramString1, String paramString2)
+  {
+    return null;
+  }
+  
+  public final c b(c paramc)
+  {
+    return null;
+  }
+  
+  public final void c(c paramc) {}
+  
+  public final int d(c paramc)
   {
     return 0;
   }
   
-  public final List LT()
+  public final int[] e(c paramc)
   {
-    return null;
+    return new int[0];
   }
-  
-  public final ArrayList LU()
-  {
-    return null;
-  }
-  
-  public final void LV() {}
-  
-  public final int LW()
-  {
-    return 0;
-  }
-  
-  public final Bitmap a(Context paramContext, int paramInt, ac paramac)
-  {
-    return null;
-  }
-  
-  public final Bitmap a(View paramView, String paramString1, int paramInt1, String paramString2, int paramInt2)
-  {
-    return null;
-  }
-  
-  public final Bitmap a(ImageView paramImageView, String paramString, ac paramac)
-  {
-    return null;
-  }
-  
-  public final ac a(String paramString1, String paramString2, int paramInt1, int paramInt2, int paramInt3, String paramString3, String paramString4, String paramString5)
-  {
-    return null;
-  }
-  
-  public final void a(ai.a parama) {}
-  
-  public final void a(ac paramac) {}
-  
-  public final void a(ac paramac, Context paramContext) {}
-  
-  public final void a(String paramString, ac paramac, ar paramar) {}
-  
-  public final boolean a(Context paramContext, ac paramac)
-  {
-    return false;
-  }
-  
-  public final boolean a(Context paramContext, ar paramar)
-  {
-    return false;
-  }
-  
-  public final ag ah(String paramString1, String paramString2)
-  {
-    return null;
-  }
-  
-  public final ac b(ac paramac)
-  {
-    return null;
-  }
-  
-  public final String b(Context paramContext, WXMediaMessage paramWXMediaMessage, String paramString)
-  {
-    return null;
-  }
-  
-  public final void b(Context paramContext, ar paramar) {}
-  
-  public final void b(ai.a parama) {}
-  
-  public final boolean b(String paramString1, String paramString2, long paramLong)
-  {
-    return false;
-  }
-  
-  public final void c(ai.a parama) {}
-  
-  public final void d(ai.a parama) {}
   
   public final boolean extractForeground(int[] paramArrayOfInt, int paramInt1, int paramInt2)
   {
     return false;
   }
   
-  public final List fq(int paramInt)
-  {
-    return null;
-  }
-  
-  public final boolean k(Context paramContext, String paramString1, String paramString2)
+  public final boolean l(Context paramContext, String paramString1, String paramString2)
   {
     return false;
   }
   
-  public final String kC(String paramString)
+  public final c mD(String paramString)
   {
     return null;
   }
   
-  public final String kD(String paramString)
-  {
-    return null;
-  }
-  
-  public final ac kE(String paramString)
-  {
-    return null;
-  }
-  
-  public final void kF(String paramString) {}
-  
-  public final boolean kG(String paramString)
+  public final boolean mE(String paramString)
   {
     return false;
   }
   
-  public final int kH(String paramString)
+  public final List mF(String paramString)
+  {
+    return null;
+  }
+  
+  public final String mG(String paramString)
+  {
+    return null;
+  }
+  
+  public final boolean mH(String paramString)
+  {
+    return false;
+  }
+  
+  public final String mI(String paramString)
+  {
+    return null;
+  }
+  
+  public final String mJ(String paramString)
+  {
+    return null;
+  }
+  
+  public final String mK(String paramString)
+  {
+    return null;
+  }
+  
+  public final int mL(String paramString)
   {
     return 0;
   }
   
-  public final List kI(String paramString)
+  public final String mM(String paramString)
   {
     return null;
   }
   
-  public final void kJ(String paramString) {}
-  
-  public final void kK(String paramString) {}
-  
-  public final String kL(String paramString)
-  {
-    return null;
-  }
-  
-  public final void kM(String paramString) {}
-  
-  public final String kN(String paramString)
-  {
-    return null;
-  }
-  
-  public final boolean kO(String paramString)
-  {
-    return false;
-  }
-  
-  public final void kP(String paramString) {}
-  
-  public final void setCanPlay(boolean paramBoolean) {}
+  public final void mN(String paramString) {}
 }
 
 /* Location:

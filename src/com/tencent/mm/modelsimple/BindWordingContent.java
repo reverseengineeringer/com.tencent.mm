@@ -7,8 +7,8 @@ import android.os.Parcelable.Creator;
 public class BindWordingContent
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new a();
-  public Integer bKD = Integer.valueOf(0);
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  public Integer caF = Integer.valueOf(0);
   public String content = "";
   public String title = "";
   
@@ -18,7 +18,7 @@ public class BindWordingContent
     paramParcel.readStringArray(arrayOfString);
     title = arrayOfString[0];
     content = arrayOfString[1];
-    bKD = Integer.valueOf(paramParcel.readInt());
+    caF = Integer.valueOf(paramParcel.readInt());
   }
   
   public BindWordingContent(String paramString1, String paramString2)
@@ -35,7 +35,7 @@ public class BindWordingContent
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     paramParcel.writeStringArray(new String[] { title, content });
-    paramParcel.writeInt(bKD.intValue());
+    paramParcel.writeInt(caF.intValue());
   }
 }
 

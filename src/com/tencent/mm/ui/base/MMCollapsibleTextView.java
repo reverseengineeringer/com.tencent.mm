@@ -7,62 +7,85 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MMCollapsibleTextView
   extends LinearLayout
 {
-  private TextView bZy;
   private Context context;
-  private Runnable dfs = new ak(this);
-  private int fpo;
-  private TextView fyC;
-  private boolean fyD = true;
-  private String fyE;
-  private String fyF;
-  private SparseIntArray iEi = new SparseIntArray();
+  private TextView cqK;
+  private Runnable dQh = new Runnable()
+  {
+    public final void run()
+    {
+      MMCollapsibleTextView.d(MMCollapsibleTextView.this).setMaxLines(10);
+      MMCollapsibleTextView.e(MMCollapsibleTextView.this).setVisibility(0);
+      MMCollapsibleTextView.e(MMCollapsibleTextView.this).setText(MMCollapsibleTextView.f(MMCollapsibleTextView.this));
+    }
+  };
+  private int gHI;
+  private TextView gXo;
+  private boolean gXp = true;
+  private String gXq;
+  private String gXr;
+  private SparseIntArray kDs = new SparseIntArray();
   
   public MMCollapsibleTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     context = paramContext;
-    fyE = context.getString(a.n.spread);
-    fyF = context.getString(a.n.shrinkup);
-    paramContext = inflate(context, a.k.mm_collapsible_textview, this);
+    gXq = context.getString(2131431106);
+    gXr = context.getString(2131431105);
+    paramContext = inflate(context, 2131363199, this);
     paramContext.setPadding(0, -3, 0, 0);
-    bZy = ((TextView)paramContext.findViewById(a.i.desc_tv));
-    fyC = ((TextView)paramContext.findViewById(a.i.desc_op_tv));
-    fyC.setOnClickListener(new aj(this));
+    cqK = ((TextView)paramContext.findViewById(2131165341));
+    gXo = ((TextView)paramContext.findViewById(2131168680));
+    gXo.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        switch (MMCollapsibleTextView.b(MMCollapsibleTextView.this).get(MMCollapsibleTextView.a(MMCollapsibleTextView.this), -1))
+        {
+        default: 
+          return;
+        case 1: 
+          MMCollapsibleTextView.b(MMCollapsibleTextView.this).put(MMCollapsibleTextView.a(MMCollapsibleTextView.this), 2);
+        }
+        for (;;)
+        {
+          MMCollapsibleTextView.c(MMCollapsibleTextView.this);
+          return;
+          MMCollapsibleTextView.b(MMCollapsibleTextView.this).put(MMCollapsibleTextView.a(MMCollapsibleTextView.this), 1);
+        }
+      }
+    });
   }
   
   public int getSpreadHeight()
   {
-    t.e("!44@/B4Tb64lLpKdZdqXmE3ffB9CB2u2tCIBL1PtadUVY0Y=", "count:" + bZy.getLineCount() + "  height:" + bZy.getLineHeight());
-    return (bZy.getLineCount() - 10) * bZy.getLineHeight();
+    u.e("!44@/B4Tb64lLpKdZdqXmE3ffB9CB2u2tCIBL1PtadUVY0Y=", "count:" + cqK.getLineCount() + "  height:" + cqK.getLineHeight());
+    return (cqK.getLineCount() - 10) * cqK.getLineHeight();
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    if (fyD) {
+    if (gXp) {
       return;
     }
-    fyD = true;
-    if (bZy.getLineCount() <= 10)
+    gXp = true;
+    if (cqK.getLineCount() <= 10)
     {
-      iEi.put(fpo, 0);
+      kDs.put(gHI, 0);
       return;
     }
-    iEi.put(fpo, 1);
-    post(dfs);
+    kDs.put(gHI, 1);
+    post(dQh);
   }
   
   public void setOpClickListener(View.OnClickListener paramOnClickListener)
   {
-    fyC.setOnClickListener(paramOnClickListener);
+    gXo.setOnClickListener(paramOnClickListener);
   }
 }
 

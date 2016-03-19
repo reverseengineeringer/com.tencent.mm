@@ -4,20 +4,20 @@
 
 
 # virtual methods
-.method public abstract c(I[B)V
-.end method
-
-.method public abstract f(IJ)V
-.end method
-
-.method public abstract g(IJ)V
+.method public abstract e(I[B)V
 .end method
 
 .method public abstract getKey()Ljava/lang/Object;
 .end method
 
-.method public abstract i(ILjava/lang/String;)V
+.method public abstract k(IJ)V
 .end method
 
-.method public abstract qG()V
+.method public abstract l(IJ)V
+.end method
+
+.method public abstract l(ILjava/lang/String;)V
+.end method
+
+.method public abstract qC()V
 .end method

@@ -1,24 +1,24 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.adt;
-import com.tencent.mm.protocal.b.iv;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.protocal.b.alx;
+import com.tencent.mm.protocal.b.kv;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class m$a
-  extends i.c
-  implements i.a
+  extends h.c
+  implements h.a
 {
-  public iv hhb = new iv();
+  public kv iUX = new kv();
   
-  public final byte[] tH()
+  public final byte[] tY()
   {
-    hgO = y.aDw();
-    hhb.hmC = new adt().aA(bn.aFz());
-    hhb.hLO = i.a(this);
-    return hhb.toByteArray();
+    iUJ = z.aTx();
+    iUX.jbx = new alx().aO(ay.aVA());
+    iUX.jGS = h.a(this);
+    return iUX.toByteArray();
   }
   
-  public final int tI()
+  public final int tZ()
   {
     return 481;
   }

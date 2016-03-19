@@ -16,10 +16,10 @@ import java.util.HashMap;
 public class FileProvider
   extends ContentProvider
 {
-  private static final String[] eO = { "_display_name", "_size" };
-  private static final File eP = new File("/");
-  private static HashMap eQ = new HashMap();
-  private a eR;
+  private static final String[] ec = { "_display_name", "_size" };
+  private static final File ed = new File("/");
+  private static HashMap ee = new HashMap();
+  private a ef;
   
   private static File a(File paramFile, String... paramVarArgs)
   {
@@ -45,11 +45,11 @@ public class FileProvider
   private static a c(Context paramContext, String paramString)
   {
     // Byte code:
-    //   0: getstatic 44	android/support/v4/content/FileProvider:eQ	Ljava/util/HashMap;
+    //   0: getstatic 44	android/support/v4/content/FileProvider:ee	Ljava/util/HashMap;
     //   3: astore 5
     //   5: aload 5
     //   7: monitorenter
-    //   8: getstatic 44	android/support/v4/content/FileProvider:eQ	Ljava/util/HashMap;
+    //   8: getstatic 44	android/support/v4/content/FileProvider:ee	Ljava/util/HashMap;
     //   11: aload_1
     //   12: invokevirtual 60	java/util/HashMap:get	(Ljava/lang/Object;)Ljava/lang/Object;
     //   15: checkcast 6	android/support/v4/content/FileProvider$a
@@ -96,7 +96,7 @@ public class FileProvider
     //   94: invokevirtual 95	java/io/File:getCanonicalFile	()Ljava/io/File;
     //   97: astore 8
     //   99: aload 4
-    //   101: getfield 98	android/support/v4/content/FileProvider$b:eT	Ljava/util/HashMap;
+    //   101: getfield 98	android/support/v4/content/FileProvider$b:eh	Ljava/util/HashMap;
     //   104: aload 7
     //   106: aload 8
     //   108: invokevirtual 102	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -127,7 +127,7 @@ public class FileProvider
     //   164: aload_3
     //   165: invokevirtual 126	java/lang/String:equals	(Ljava/lang/Object;)Z
     //   168: ifeq +53 -> 221
-    //   171: getstatic 38	android/support/v4/content/FileProvider:eP	Ljava/io/File;
+    //   171: getstatic 38	android/support/v4/content/FileProvider:ed	Ljava/io/File;
     //   174: iconst_1
     //   175: anewarray 22	java/lang/String
     //   178: dup
@@ -210,7 +210,7 @@ public class FileProvider
     //   328: aload_0
     //   329: invokespecial 91	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;Ljava/lang/Throwable;)V
     //   332: athrow
-    //   333: getstatic 44	android/support/v4/content/FileProvider:eQ	Ljava/util/HashMap;
+    //   333: getstatic 44	android/support/v4/content/FileProvider:ee	Ljava/util/HashMap;
     //   336: aload_1
     //   337: aload 4
     //   339: invokevirtual 102	java/util/HashMap:put	(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -287,12 +287,12 @@ public class FileProvider
     if (!grantUriPermissions) {
       throw new SecurityException("Provider must grant uri permissions");
     }
-    eR = c(paramContext, authority);
+    ef = c(paramContext, authority);
   }
   
   public int delete(Uri paramUri, String paramString, String[] paramArrayOfString)
   {
-    if (eR.a(paramUri).delete()) {
+    if (ef.a(paramUri).delete()) {
       return 1;
     }
     return 0;
@@ -300,7 +300,7 @@ public class FileProvider
   
   public String getType(Uri paramUri)
   {
-    paramUri = eR.a(paramUri);
+    paramUri = ef.a(paramUri);
     int i = paramUri.getName().lastIndexOf('.');
     if (i >= 0)
     {
@@ -325,7 +325,7 @@ public class FileProvider
   
   public ParcelFileDescriptor openFile(Uri paramUri, String paramString)
   {
-    paramUri = eR.a(paramUri);
+    paramUri = ef.a(paramUri);
     int i;
     if ("r".equals(paramString)) {
       i = 268435456;
@@ -358,10 +358,10 @@ public class FileProvider
   
   public Cursor query(Uri paramUri, String[] paramArrayOfString1, String paramString1, String[] paramArrayOfString2, String paramString2)
   {
-    paramString1 = eR.a(paramUri);
+    paramString1 = ef.a(paramUri);
     paramUri = paramArrayOfString1;
     if (paramArrayOfString1 == null) {
-      paramUri = eO;
+      paramUri = ec;
     }
     paramArrayOfString2 = new String[paramUri.length];
     paramArrayOfString1 = new Object[paramUri.length];
@@ -415,12 +415,12 @@ public class FileProvider
   static final class b
     implements FileProvider.a
   {
-    private final String eS;
-    final HashMap eT = new HashMap();
+    private final String eg;
+    final HashMap eh = new HashMap();
     
     public b(String paramString)
     {
-      eS = paramString;
+      eg = paramString;
     }
     
     public final File a(Uri paramUri)
@@ -429,7 +429,7 @@ public class FileProvider
       int i = ((String)localObject2).indexOf('/', 1);
       Object localObject1 = Uri.decode(((String)localObject2).substring(1, i));
       localObject2 = Uri.decode(((String)localObject2).substring(i + 1));
-      localObject1 = (File)eT.get(localObject1);
+      localObject1 = (File)eh.get(localObject1);
       if (localObject1 == null) {
         throw new IllegalArgumentException("Unable to find configured root for " + paramUri);
       }

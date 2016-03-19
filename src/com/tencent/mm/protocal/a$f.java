@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$f
-  extends a.c
+  extends a.e
 {
   public a$f()
   {
-    super("addDownloadTask", "add_download_task", 38, false);
+    super("addEmoticon", "add_emoticon", 8, true);
   }
 }
 

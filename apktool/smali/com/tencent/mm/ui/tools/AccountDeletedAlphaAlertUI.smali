@@ -10,7 +10,7 @@
 
 
 # static fields
-.field private static joe:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+.field private static ltu:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
 
 
 # direct methods
@@ -21,7 +21,7 @@
     .line 24
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->joe:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+    sput-object v0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->ltu:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
 
     return-void
 .end method
@@ -43,13 +43,13 @@
     .line 21
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->finish()V
 
-    invoke-static {p0}, Lcom/tencent/mm/modelsimple/e;->aH(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/modelsimple/d;->aW(Landroid/content/Context;)Z
 
     new-instance v0, Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
     const-class v2, Lcom/tencent/mm/ui/LauncherUI;
 
@@ -67,21 +67,21 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
     invoke-virtual {v1, v0}, Landroid/support/v7/app/ActionBarActivity;->startActivity(Landroid/content/Intent;)V
 
     return-void
 .end method
 
-.method public static aRk()Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+.method public static big()Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
     .locals 1
 
     .prologue
     .line 27
-    sget-object v0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->joe:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+    sget-object v0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->ltu:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
 
     return-object v0
 .end method
@@ -108,20 +108,20 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 34
-    sput-object p0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->joe:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+    sput-object p0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->ltu:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
 
     .line 36
-    new-instance v0, Lcom/tencent/mm/d/a/j;
+    new-instance v0, Lcom/tencent/mm/d/a/m;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/j;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/m;-><init>()V
 
     .line 37
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->g(Lcom/tencent/mm/sdk/c/d;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 38
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tv()V
+    invoke-static {}, Lcom/tencent/mm/model/ah;->hold()V
 
     .line 40
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->getIntent()Landroid/content/Intent;
@@ -135,7 +135,7 @@
     move-result-object v0
 
     .line 41
-    invoke-static {v0}, Lcom/tencent/mm/e/a;->cR(Ljava/lang/String;)Lcom/tencent/mm/e/a;
+    invoke-static {v0}, Lcom/tencent/mm/e/a;->cV(Ljava/lang/String;)Lcom/tencent/mm/e/a;
 
     move-result-object v0
 
@@ -143,9 +143,9 @@
     if-eqz v0, :cond_0
 
     .line 43
-    new-instance v1, Lcom/tencent/mm/ui/tools/a;
+    new-instance v1, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/a;-><init>(Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI$1;-><init>(Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;)V
 
     invoke-virtual {v0, p0, v1, v3}, Lcom/tencent/mm/e/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Z
 
@@ -155,7 +155,7 @@
 
     .line 50
     :cond_0
-    sget v0, Lcom/tencent/mm/a$n;->main_err_account_delete:I
+    const v0, 0x7f0b01cb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->getString(I)Ljava/lang/String;
 
@@ -163,11 +163,11 @@
 
     const/4 v1, 0x0
 
-    new-instance v2, Lcom/tencent/mm/ui/tools/b;
+    new-instance v2, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI$2;
 
-    invoke-direct {v2, p0}, Lcom/tencent/mm/ui/tools/b;-><init>(Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;)V
+    invoke-direct {v2, p0}, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI$2;-><init>(Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;)V
 
-    invoke-static {p0, v0, v3, v1, v2}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {p0, v0, v3, v1, v2}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
     goto :goto_0
 .end method
@@ -177,7 +177,7 @@
 
     .prologue
     .line 61
-    sget-object v0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->joe:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+    sget-object v0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->ltu:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
 
     invoke-virtual {p0, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -188,7 +188,7 @@
     .line 62
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->joe:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
+    sput-object v0, Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;->ltu:Lcom/tencent/mm/ui/tools/AccountDeletedAlphaAlertUI;
 
     .line 64
     :cond_0

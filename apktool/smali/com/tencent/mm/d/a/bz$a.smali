@@ -15,20 +15,47 @@
 
 
 # instance fields
-.field public apG:Ljava/lang/Runnable;
+.field public avA:Ljava/lang/String;
 
-.field public filePath:Ljava/lang/String;
+.field public avB:I
 
-.field public op:I
+.field public avt:Ljava/lang/String;
+
+.field public avw:I
+
+.field public avx:I
+
+.field public avy:D
+
+.field public avz:D
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 3
 
     .prologue
+    const-wide/16 v1, 0x0
+
+    const/4 v0, 0x0
+
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 16
+    iput v0, p0, Lcom/tencent/mm/d/a/bz$a;->avw:I
+
+    .line 17
+    iput v0, p0, Lcom/tencent/mm/d/a/bz$a;->avx:I
+
+    .line 18
+    iput-wide v1, p0, Lcom/tencent/mm/d/a/bz$a;->avy:D
+
+    .line 19
+    iput-wide v1, p0, Lcom/tencent/mm/d/a/bz$a;->avz:D
+
+    .line 21
+    iput v0, p0, Lcom/tencent/mm/d/a/bz$a;->avB:I
 
     return-void
 .end method

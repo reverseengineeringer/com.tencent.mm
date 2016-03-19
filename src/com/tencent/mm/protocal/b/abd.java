@@ -1,51 +1,51 @@
 package com.tencent.mm.protocal.b;
 
 public final class abd
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public float hpa;
-  public float hpb;
-  public int hue;
-  public String huf;
-  public String hug;
-  public int huh;
+  public float jeq;
+  public float jer;
+  public int jkI;
+  public String jkJ;
+  public String jkK;
+  public int jkL;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.d(1, hpa);
-      paramVarArgs.d(2, hpb);
-      paramVarArgs.bM(3, hue);
-      if (huf != null) {
-        paramVarArgs.U(4, huf);
+      paramVarArgs.f(1, jeq);
+      paramVarArgs.f(2, jer);
+      paramVarArgs.ci(3, jkI);
+      if (jkJ != null) {
+        paramVarArgs.d(4, jkJ);
       }
-      if (hug != null) {
-        paramVarArgs.U(5, hug);
+      if (jkK != null) {
+        paramVarArgs.d(5, jkK);
       }
-      paramVarArgs.bM(6, huh);
+      paramVarArgs.ci(6, jkL);
       return 0;
     }
     if (paramInt == 1)
     {
-      int i = a.a.a.b.b.a.pS(1) + 4 + 0 + (a.a.a.b.b.a.pS(2) + 4) + a.a.a.a.bI(3, hue);
+      int i = a.a.a.b.b.a.ay(1) + 4 + 0 + (a.a.a.b.b.a.ay(2) + 4) + a.a.a.a.cg(3, jkI);
       paramInt = i;
-      if (huf != null) {
-        paramInt = i + a.a.a.b.b.a.T(4, huf);
+      if (jkJ != null) {
+        paramInt = i + a.a.a.b.b.a.e(4, jkJ);
       }
       i = paramInt;
-      if (hug != null) {
-        i = paramInt + a.a.a.b.b.a.T(5, hug);
+      if (jkK != null) {
+        i = paramInt + a.a.a.b.b.a.e(5, jkK);
       }
-      return i + a.a.a.a.bI(6, huh);
+      return i + a.a.a.a.cg(6, jkL);
     }
     if (paramInt == 2)
     {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
         if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
+          paramVarArgs.bog();
         }
       }
       return 0;
@@ -59,22 +59,22 @@ public final class abd
       default: 
         return -1;
       case 1: 
-        hpa = jMD.readFloat();
+        jeq = maU.readFloat();
         return 0;
       case 2: 
-        hpb = jMD.readFloat();
+        jer = maU.readFloat();
         return 0;
       case 3: 
-        hue = jMD.aVp();
+        jkI = maU.jC();
         return 0;
       case 4: 
-        huf = jMD.readString();
+        jkJ = maU.readString();
         return 0;
       case 5: 
-        hug = jMD.readString();
+        jkK = maU.readString();
         return 0;
       }
-      huh = jMD.aVp();
+      jkL = maU.jC();
       return 0;
     }
     return -1;

@@ -18,44 +18,44 @@
 .method public abstract a(I[B[B)Z
 .end method
 
-.method public abstract cS(I)V
-.end method
-
-.method public abstract fS(Ljava/lang/String;)V
+.method public abstract cT(I)V
 .end method
 
 .method public abstract getCmdId()I
 .end method
 
-.method public abstract qY()I
+.method public abstract gl(Ljava/lang/String;)V
 .end method
 
-.method public abstract sY()[B
+.method public abstract rg()I
 .end method
 
-.method public abstract vL()Ljava/lang/String;
+.method public abstract tq()[B
 .end method
 
-.method public abstract vM()I
+.method public abstract vR()[B
 .end method
 
-.method public abstract vN()[B
+.method public abstract vT()[B
 .end method
 
-.method public abstract vO()Ljava/lang/String;
+.method public abstract wi()Ljava/lang/String;
 .end method
 
-.method public abstract vP()Ljava/lang/String;
+.method public abstract wj()I
 .end method
 
-.method public abstract vQ()I
+.method public abstract wk()[B
 .end method
 
-.method public abstract vR()Ljava/lang/String;
+.method public abstract wl()Ljava/lang/String;
 .end method
 
-.method public abstract vx()[B
+.method public abstract wm()Ljava/lang/String;
 .end method
 
-.method public abstract vy()[B
+.method public abstract wn()I
+.end method
+
+.method public abstract wo()Ljava/lang/String;
 .end method

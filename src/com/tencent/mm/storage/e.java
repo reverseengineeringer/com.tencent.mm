@@ -1,12 +1,12 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.d.b.j;
+import com.tencent.mm.d.b.o;
 import com.tencent.mm.f.a.a.a;
 import com.tencent.mm.f.a.a.b;
-import com.tencent.mm.sdk.g.ae.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.h.c.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -15,111 +15,101 @@ import java.util.List;
 import java.util.Map;
 
 public final class e
-  extends j
+  extends o
 {
-  protected static ae.a aqp;
-  private a icU = new a();
-  public a icV = icU;
-  private List icW = new LinkedList();
-  public Map icX = new HashMap();
+  protected static c.a aot;
+  public Map bHd = new HashMap();
+  private a kab = new a();
+  public a kac = kab;
+  private List kad = new LinkedList();
   
   static
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[13];
-    bbY = new String[14];
+    c.a locala = new c.a();
+    ceD = new Field[18];
+    blR = new String[19];
     StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "chatroomname";
-    ibX.put("chatroomname", "TEXT default ''  PRIMARY KEY ");
+    blR[0] = "chatroomname";
+    jYx.put("chatroomname", "TEXT default ''  PRIMARY KEY ");
     localStringBuilder.append(" chatroomname TEXT default ''  PRIMARY KEY ");
     localStringBuilder.append(", ");
-    ibW = "chatroomname";
-    bbY[1] = "addtime";
-    ibX.put("addtime", "LONG");
+    jYw = "chatroomname";
+    blR[1] = "addtime";
+    jYx.put("addtime", "LONG");
     localStringBuilder.append(" addtime LONG");
     localStringBuilder.append(", ");
-    bbY[2] = "memberlist";
-    ibX.put("memberlist", "TEXT");
+    blR[2] = "memberlist";
+    jYx.put("memberlist", "TEXT");
     localStringBuilder.append(" memberlist TEXT");
     localStringBuilder.append(", ");
-    bbY[3] = "displayname";
-    ibX.put("displayname", "TEXT");
+    blR[3] = "displayname";
+    jYx.put("displayname", "TEXT");
     localStringBuilder.append(" displayname TEXT");
     localStringBuilder.append(", ");
-    bbY[4] = "chatroomnick";
-    ibX.put("chatroomnick", "TEXT");
+    blR[4] = "chatroomnick";
+    jYx.put("chatroomnick", "TEXT");
     localStringBuilder.append(" chatroomnick TEXT");
     localStringBuilder.append(", ");
-    bbY[5] = "roomflag";
-    ibX.put("roomflag", "INTEGER");
+    blR[5] = "roomflag";
+    jYx.put("roomflag", "INTEGER");
     localStringBuilder.append(" roomflag INTEGER");
     localStringBuilder.append(", ");
-    bbY[6] = "roomowner";
-    ibX.put("roomowner", "TEXT");
+    blR[6] = "roomowner";
+    jYx.put("roomowner", "TEXT");
     localStringBuilder.append(" roomowner TEXT");
     localStringBuilder.append(", ");
-    bbY[7] = "roomdata";
-    ibX.put("roomdata", "BLOB");
+    blR[7] = "roomdata";
+    jYx.put("roomdata", "BLOB");
     localStringBuilder.append(" roomdata BLOB");
     localStringBuilder.append(", ");
-    bbY[8] = "isShowname";
-    ibX.put("isShowname", "INTEGER");
+    blR[8] = "isShowname";
+    jYx.put("isShowname", "INTEGER");
     localStringBuilder.append(" isShowname INTEGER");
     localStringBuilder.append(", ");
-    bbY[9] = "selfDisplayName";
-    ibX.put("selfDisplayName", "TEXT");
+    blR[9] = "selfDisplayName";
+    jYx.put("selfDisplayName", "TEXT");
     localStringBuilder.append(" selfDisplayName TEXT");
     localStringBuilder.append(", ");
-    bbY[10] = "style";
-    ibX.put("style", "INTEGER");
+    blR[10] = "style";
+    jYx.put("style", "INTEGER");
     localStringBuilder.append(" style INTEGER");
     localStringBuilder.append(", ");
-    bbY[11] = "chatroomdataflag";
-    ibX.put("chatroomdataflag", "INTEGER");
+    blR[11] = "chatroomdataflag";
+    jYx.put("chatroomdataflag", "INTEGER");
     localStringBuilder.append(" chatroomdataflag INTEGER");
     localStringBuilder.append(", ");
-    bbY[12] = "modifytime";
-    ibX.put("modifytime", "LONG");
+    blR[12] = "modifytime";
+    jYx.put("modifytime", "LONG");
     localStringBuilder.append(" modifytime LONG");
-    bbY[13] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    localStringBuilder.append(", ");
+    blR[13] = "chatroomnotice";
+    jYx.put("chatroomnotice", "TEXT");
+    localStringBuilder.append(" chatroomnotice TEXT");
+    localStringBuilder.append(", ");
+    blR[14] = "chatroomnoticeNewVersion";
+    jYx.put("chatroomnoticeNewVersion", "INTEGER");
+    localStringBuilder.append(" chatroomnoticeNewVersion INTEGER");
+    localStringBuilder.append(", ");
+    blR[15] = "chatroomnoticeOldVersion";
+    jYx.put("chatroomnoticeOldVersion", "INTEGER");
+    localStringBuilder.append(" chatroomnoticeOldVersion INTEGER");
+    localStringBuilder.append(", ");
+    blR[16] = "chatroomnoticeEditor";
+    jYx.put("chatroomnoticeEditor", "TEXT");
+    localStringBuilder.append(" chatroomnoticeEditor TEXT");
+    localStringBuilder.append(", ");
+    blR[17] = "chatroomnoticePublishTime";
+    jYx.put("chatroomnoticePublishTime", "LONG");
+    localStringBuilder.append(" chatroomnoticePublishTime LONG");
+    blR[18] = "rowid";
+    jYy = localStringBuilder.toString();
+    aot = locala;
   }
   
-  private void a(a parama)
-  {
-    if (field_roomdata == null) {
-      parama = new a();
-    }
-    parama = beO.iterator();
-    while (parama.hasNext())
-    {
-      b localb = (b)parama.next();
-      icX.put(avY, localb);
-    }
-  }
-  
-  private static int hi(String paramString)
-  {
-    int i = 0;
-    try
-    {
-      int j = Integer.parseInt(paramString);
-      i = j;
-    }
-    catch (Exception localException)
-    {
-      while (paramString == null) {}
-      t.e("!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk", "parserInt error " + paramString);
-    }
-    return i;
-    return 0;
-  }
-  
-  private static a ym(String paramString)
+  private static a DR(String paramString)
   {
     a locala = new a();
-    if (bn.iW(paramString)) {
+    if (ay.kz(paramString)) {
       return locala;
     }
     int i = paramString.indexOf('<');
@@ -127,10 +117,10 @@ public final class e
     if (i > 0) {
       str1 = paramString.substring(i);
     }
-    Map localMap = p.z(str1, "RoomData", null);
+    Map localMap = q.J(str1, "RoomData", null);
     if (localMap == null)
     {
-      t.e("!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk", "parse RoomData failed");
+      u.e("!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk", "parse RoomData failed");
       return null;
     }
     i = 0;
@@ -144,47 +134,47 @@ public final class e
           paramString = ".RoomData.Member.$UserName";
           str2 = ".RoomData.Member.DisplayName";
           str1 = ".RoomData.Member.Flag";
-          paramString = bn.U((String)localMap.get(paramString), "");
-          if (!bn.iW(paramString))
+          paramString = ay.ad((String)localMap.get(paramString), "");
+          if (!ay.kz(paramString))
           {
-            avY = paramString;
-            beS = bn.U((String)localMap.get(str2), "");
-            beT = hi((String)localMap.get(str1));
-            beO.add(localb);
+            ajh = paramString;
+            bpe = ay.ad((String)localMap.get(str2), "");
+            bpf = ip((String)localMap.get(str1));
+            bpa.add(localb);
             i += 1;
           }
         }
         else
         {
           if (i == 0) {
-            break label342;
+            break label340;
           }
           paramString = ".RoomData.Member" + i + ".$UserName";
           str2 = ".RoomData.Member" + i + ".DisplayName";
           str1 = ".RoomData.Member" + i + ".Flag";
           continue;
         }
-        type = hi((String)localMap.get(".RoomData.Type"));
-        status = hi((String)localMap.get(".RoomData.Status"));
-        beP = hi((String)localMap.get(".RoomData.MaxCount"));
-        beQ = bn.U((String)localMap.get(".RoomData.ExtInfo.Upgrader"), "");
+        type = ip((String)localMap.get(".RoomData.Type"));
+        status = ip((String)localMap.get(".RoomData.Status"));
+        bpb = ip((String)localMap.get(".RoomData.MaxCount"));
+        bpc = ay.ad((String)localMap.get(".RoomData.ExtInfo.Upgrader"), "");
         return locala;
       }
       catch (Exception paramString)
       {
         return locala;
       }
-      label342:
+      label340:
       str1 = null;
       String str2 = null;
       paramString = null;
     }
   }
   
-  public static List yn(String paramString)
+  public static List DS(String paramString)
   {
     LinkedList localLinkedList = new LinkedList();
-    if (bn.iW(paramString)) {
+    if (ay.kz(paramString)) {
       return localLinkedList;
     }
     paramString = paramString.split(";");
@@ -197,6 +187,47 @@ public final class e
     return localLinkedList;
   }
   
+  private void a(a parama)
+  {
+    if (field_roomdata == null) {
+      parama = new a();
+    }
+    parama = bpa.iterator();
+    while (parama.hasNext())
+    {
+      b localb = (b)parama.next();
+      bHd.put(ajh, localb);
+    }
+  }
+  
+  private static int ip(String paramString)
+  {
+    int i = 0;
+    try
+    {
+      int j = Integer.parseInt(paramString);
+      i = j;
+    }
+    catch (Exception localException)
+    {
+      while (paramString == null) {}
+      u.e("!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk", "parserInt error " + paramString);
+    }
+    return i;
+    return 0;
+  }
+  
+  public final b DQ(String paramString)
+  {
+    if (bHd.size() <= 0) {
+      aWi();
+    }
+    if (bHd.containsKey(paramString)) {
+      return (b)bHd.get(paramString);
+    }
+    return null;
+  }
+  
   public final e a(String paramString, a parama, boolean paramBoolean)
   {
     field_modifytime = System.currentTimeMillis();
@@ -204,11 +235,11 @@ public final class e
     if (!paramBoolean)
     {
       localObject = null;
-      Iterator localIterator = beO.iterator();
+      Iterator localIterator = bpa.iterator();
       if (localIterator.hasNext())
       {
         b localb = (b)localIterator.next();
-        if ((avY == null) || (!avY.equals(paramString))) {
+        if ((ajh == null) || (!ajh.equals(paramString))) {
           break label214;
         }
         localObject = localb;
@@ -220,18 +251,18 @@ public final class e
       break;
       if (localObject != null)
       {
-        field_selfDisplayName = beS;
-        field_isShowname = (beT & 0x1);
+        field_selfDisplayName = bpe;
+        field_isShowname = (bpf & 0x1);
       }
-      for (int i = beT;; i = 0)
+      for (int i = bpf;; i = 0)
       {
-        t.d("!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk", "displayName[%s] roomFlag[%d] flag[%d]", new Object[] { field_selfDisplayName, Integer.valueOf(field_chatroomdataflag), Integer.valueOf(i) });
-        aqq = (i & 0x2 | aqq & 0xFFFFFFFD);
-        field_chatroomdataflag = aqq;
+        u.d("!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk", "displayName[%s] roomFlag[%d] flag[%d]", new Object[] { field_selfDisplayName, Integer.valueOf(field_chatroomdataflag), Integer.valueOf(i) });
+        aou = (i & 0x2 | aou & 0xFFFFFFFD);
+        field_chatroomdataflag = aou;
         try
         {
           field_roomdata = parama.toByteArray();
-          icV = parama;
+          kac = parama;
           a(parama);
           return this;
         }
@@ -239,68 +270,65 @@ public final class e
         {
           for (;;)
           {
-            t.e("!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk", "exception:%s", new Object[] { bn.a(paramString) });
+            u.e("!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk", "exception:%s", new Object[] { ay.b(paramString) });
           }
         }
       }
     }
   }
   
-  public final List aGc()
-  {
-    if ((icW == null) || (icW.size() == 0)) {
-      icW = yn(field_memberlist);
-    }
-    return icW;
-  }
-  
-  public final void aGd()
+  public final void aWi()
   {
     try
     {
-      icV = ((a)new a().x(field_roomdata));
-      a(icV);
+      kac = ((a)new a().am(field_roomdata));
+      a(kac);
       return;
     }
     catch (Exception localException)
     {
       for (;;)
       {
-        icV = new a();
+        kac = new a();
       }
     }
   }
   
-  public final int aGe()
+  public final int aWj()
   {
-    if (b(icV)) {
-      aGd();
+    if (b(kac)) {
+      aWi();
     }
-    return icV.aAT;
+    return kac.aCp;
   }
   
-  public final boolean aGf()
+  public final boolean aWk()
   {
-    if (b(icV)) {
-      aGd();
+    if (b(kac)) {
+      aWi();
     }
-    return icV.aAT < icV.beR;
+    return kac.aCp < kac.bpd;
   }
   
-  public final int aGg()
+  public final int aWl()
   {
-    if (b(icV)) {
-      aGd();
+    if (b(kac)) {
+      aWi();
     }
-    return icV.beP;
+    return kac.bpb;
   }
   
-  public final boolean aGh()
+  public final boolean aWm()
   {
     return field_isShowname > 0;
   }
   
-  public final e aR(List paramList)
+  public final boolean b(a parama)
+  {
+    return kab.kn() == parama.kn();
+  }
+  
+  public final e bs(List paramList)
   {
     Object localObject2;
     if ((paramList == null) || (paramList.size() == 0))
@@ -326,31 +354,26 @@ public final class e
     }
   }
   
-  public final boolean b(a parama)
+  public final void cf(int paramInt)
   {
-    return icU.kS() == parama.kS();
+    field_chatroomdataflag = (kac.aou & 0xFFFFFFFD | paramInt & 0x2);
   }
   
-  public final e bz(String paramString1, String paramString2)
+  public final e cn(String paramString1, String paramString2)
   {
-    return a(paramString1, ym(paramString2), false);
+    return a(paramString1, DR(paramString2), false);
   }
   
-  public final void ce(int paramInt)
+  public final String dY(String paramString)
   {
-    field_chatroomdataflag = (icV.aqq & 0xFFFFFFFD | paramInt & 0x2);
-  }
-  
-  public final String dN(String paramString)
-  {
-    paramString = yl(paramString);
+    paramString = DQ(paramString);
     if (paramString == null) {
       return "";
     }
-    return bn.U(beS, "");
+    return ay.ad(bpe, "");
   }
   
-  public final e eM(boolean paramBoolean)
+  public final e gM(boolean paramBoolean)
   {
     if (paramBoolean) {}
     for (int i = 1;; i = 0)
@@ -360,20 +383,17 @@ public final class e
     }
   }
   
-  protected final ae.a lX()
+  protected final c.a ls()
   {
-    return aqp;
+    return aot;
   }
   
-  public final b yl(String paramString)
+  public final List ws()
   {
-    if (icX.size() <= 0) {
-      aGd();
+    if ((kad == null) || (kad.size() == 0)) {
+      kad = DS(field_memberlist);
     }
-    if (icX.containsKey(paramString)) {
-      return (b)icX.get(paramString);
-    }
-    return null;
+    return kad;
   }
 }
 

@@ -1,24 +1,28 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import java.util.List;
 
 public final class cm
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ayj = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avV = new a();
+  public b avW = new b();
   
   public cm()
   {
-    id = "FeatureListPackageDownload";
-    hXT = atO;
+    id = "ExDeviceScanNetworkDeviceResult";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String path;
+    public List avh;
   }
+  
+  public static final class b {}
 }
 
 /* Location:

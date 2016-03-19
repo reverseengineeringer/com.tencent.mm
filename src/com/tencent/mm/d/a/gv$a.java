@@ -1,12 +1,12 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
+import java.util.List;
 
 public final class gv$a
 {
-  public String[] atX;
-  public Context context;
-  public String[] selectionArgs;
+  public boolean aBY = false;
+  public String aCb;
+  public List aCc;
 }
 
 /* Location:

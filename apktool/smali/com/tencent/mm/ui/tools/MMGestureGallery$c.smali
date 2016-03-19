@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic jtW:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+.field final synthetic lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 970
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$c;->jtW:Lcom/tencent/mm/ui/tools/MMGestureGallery;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$c;->lwF:Lcom/tencent/mm/ui/tools/MMGestureGallery;
 
     invoke-direct {p0}, Landroid/view/GestureDetector$SimpleOnGestureListener;-><init>()V
 

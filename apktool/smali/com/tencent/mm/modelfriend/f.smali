@@ -1,121 +1,104 @@
-.class final Lcom/tencent/mm/modelfriend/f;
-.super Lcom/tencent/mm/sdk/platformtools/ac;
+.class public final Lcom/tencent/mm/modelfriend/f;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
 
 
 # direct methods
-.method constructor <init>(Landroid/os/Looper;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 144
-    invoke-direct {p0, p1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+    .line 14
+    const/4 v0, 0x0
 
+    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
+
+    .line 15
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 7
+.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
+    .locals 3
 
     .prologue
-    .line 148
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    const/4 v2, 0x0
 
-    move-result v0
+    .line 19
+    instance-of v0, p1, Lcom/tencent/mm/d/a/dw;
 
     if-nez v0, :cond_0
 
-    .line 161
+    .line 41
     :goto_0
-    return-void
+    return v2
 
-    .line 152
+    .line 23
     :cond_0
-    new-instance v1, Lcom/tencent/mm/compatible/util/i$a;
+    check-cast p1, Lcom/tencent/mm/d/a/dw;
 
-    invoke-direct {v1}, Lcom/tencent/mm/compatible/util/i$a;-><init>()V
+    .line 24
+    iget-object v0, p1, Lcom/tencent/mm/d/a/dw;->axN:Lcom/tencent/mm/d/a/dw$b;
 
-    .line 153
-    sget-object v0, Lcom/tencent/mm/modelfriend/c;->byl:Ljava/util/HashSet;
+    const/4 v1, 0x1
 
-    invoke-virtual {v0}, Ljava/util/HashSet;->size()I
+    iput-boolean v1, v0, Lcom/tencent/mm/d/a/dw$b;->axQ:Z
 
-    move-result v2
+    .line 27
+    iget-object v0, p1, Lcom/tencent/mm/d/a/dw;->axM:Lcom/tencent/mm/d/a/dw$a;
 
-    .line 154
-    iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
+    iget-object v0, v0, Lcom/tencent/mm/d/a/dw$a;->axO:Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/modelfriend/m;->hy(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Ljava/lang/Boolean;->parseBoolean(Ljava/lang/String;)Z
-
-    move-result v3
-
-    .line 155
-    sget-object v0, Lcom/tencent/mm/modelfriend/c;->byl:Ljava/util/HashSet;
-
-    invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
-
-    move-result-object v4
-
-    :goto_1
-    invoke-interface {v4}, Ljava/util/Iterator;->hasNext()Z
+    .line 28
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-nez v0, :cond_1
 
-    invoke-interface {v4}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 29
+    iget-object v0, p1, Lcom/tencent/mm/d/a/dw;->axN:Lcom/tencent/mm/d/a/dw$b;
+
+    iput-boolean v2, v0, Lcom/tencent/mm/d/a/dw$b;->axQ:Z
+
+    goto :goto_0
+
+    .line 34
+    :cond_1
+    iget-object v0, p1, Lcom/tencent/mm/d/a/dw;->axM:Lcom/tencent/mm/d/a/dw$a;
+
+    iget-object v0, v0, Lcom/tencent/mm/d/a/dw$a;->axP:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/modelfriend/m;->hy(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/modelfriend/c$b;
+    .line 35
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
-    .line 156
-    invoke-interface {v0, v3}, Lcom/tencent/mm/modelfriend/c$b;->aN(Z)V
+    move-result v0
 
-    goto :goto_1
+    if-nez v0, :cond_2
 
-    .line 158
-    :cond_1
-    sget-object v0, Lcom/tencent/mm/modelfriend/c;->byl:Ljava/util/HashSet;
+    .line 36
+    iget-object v0, p1, Lcom/tencent/mm/d/a/dw;->axN:Lcom/tencent/mm/d/a/dw$b;
 
-    invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
+    iput-boolean v2, v0, Lcom/tencent/mm/d/a/dw$b;->axQ:Z
 
-    .line 159
-    const-string/jumbo v0, "!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw="
+    goto :goto_0
 
-    const-string/jumbo v3, "callBackHandler setSize:%d time:%d"
+    .line 40
+    :cond_2
+    const-string/jumbo v0, "!64@/B4Tb64lLpISOYcLaKm7W1QqXzG1JnWL1rmNsLE7dnhsNrZV5csiI8CQhN3SjA2j"
 
-    const/4 v4, 0x2
+    const-string/jumbo v1, "mobile fmessage not found by phonemd5 or fullphonemd5"
 
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    aput-object v2, v4, v5
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1}, Lcom/tencent/mm/compatible/util/i$a;->pi()J
-
-    move-result-wide v5
-
-    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    aput-object v1, v4, v2
-
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

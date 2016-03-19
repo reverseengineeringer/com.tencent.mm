@@ -1,18 +1,10 @@
 package com.tencent.mm.ui.conversation;
 
-import android.view.MotionEvent;
-
 public abstract interface ConversationOverscrollListView$a
 {
-  public abstract void a(int paramInt, MotionEvent paramMotionEvent, boolean paramBoolean);
+  public abstract void baI();
   
-  public abstract void aKQ();
-  
-  public abstract void aKR();
-  
-  public abstract boolean aKS();
-  
-  public abstract boolean aKT();
+  public abstract boolean baJ();
   
   public abstract void init();
 }

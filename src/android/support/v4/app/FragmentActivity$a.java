@@ -2,7 +2,7 @@ package android.support.v4.app;
 
 final class FragmentActivity$a
 {
-  public static final int[] bT = { 16842755, 16842960, 16842961 };
+  public static final int[] bj = { 16842755, 16842960, 16842961 };
 }
 
 /* Location:

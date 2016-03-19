@@ -2,9 +2,11 @@ package com.tencent.mm.ui.base;
 
 import android.content.Context;
 import android.database.DataSetObserver;
+import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
+import android.view.GestureDetector.SimpleOnGestureListener;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.MeasureSpec;
@@ -20,29 +22,96 @@ import java.util.Queue;
 public class MMHorList
   extends AdapterView
 {
-  private a iFA;
-  private int iFB;
-  private int iFC;
-  private int iFD;
-  private int iFE;
-  private int iFF = 536870912;
-  private Queue iFG = new LinkedList();
-  private boolean iFH = false;
-  private boolean iFI = false;
-  protected Scroller iFJ;
-  private GestureDetector iFK;
-  private AdapterView.OnItemSelectedListener iFL;
-  private AdapterView.OnItemClickListener iFM;
-  private ListAdapter iFN;
-  private Runnable iFO = new bb(this);
-  private boolean iFP = false;
-  private boolean iFQ = false;
-  private int iFR = 0;
-  private int iFS = 0;
-  private boolean iFT = false;
-  private boolean iFU = false;
-  private DataSetObserver iFV = new bc(this);
-  private GestureDetector.OnGestureListener iFW = new bd(this);
+  private boolean fgb = false;
+  private a kEK;
+  private int kEL;
+  private int kEM;
+  private int kEN;
+  private int kEO;
+  private int kEP = 536870912;
+  private Queue kEQ = new LinkedList();
+  private boolean kER = false;
+  private boolean kES = false;
+  protected Scroller kET;
+  private GestureDetector kEU;
+  private AdapterView.OnItemSelectedListener kEV;
+  private AdapterView.OnItemClickListener kEW;
+  private ListAdapter kEX;
+  private Runnable kEY = new Runnable()
+  {
+    public final void run()
+    {
+      requestLayout();
+    }
+  };
+  private boolean kEZ = false;
+  private boolean kFa = false;
+  private int kFb = 0;
+  private int kFc = 0;
+  private boolean kFd = false;
+  private DataSetObserver kFe = new DataSetObserver()
+  {
+    public final void onChanged()
+    {
+      MMHorList.a(MMHorList.this);
+      invalidate();
+      requestLayout();
+    }
+    
+    public final void onInvalidated()
+    {
+      MMHorList.b(MMHorList.this);
+      invalidate();
+      requestLayout();
+    }
+  };
+  private GestureDetector.OnGestureListener kFf = new GestureDetector.SimpleOnGestureListener()
+  {
+    public final boolean onDown(MotionEvent paramAnonymousMotionEvent)
+    {
+      return bcq();
+    }
+    
+    public final boolean onFling(MotionEvent paramAnonymousMotionEvent1, MotionEvent paramAnonymousMotionEvent2, float paramAnonymousFloat1, float paramAnonymousFloat2)
+    {
+      return E(paramAnonymousFloat1);
+    }
+    
+    public final boolean onScroll(MotionEvent paramAnonymousMotionEvent1, MotionEvent paramAnonymousMotionEvent2, float paramAnonymousFloat1, float paramAnonymousFloat2)
+    {
+      MMHorList.a(MMHorList.this, (int)paramAnonymousFloat1);
+      requestLayout();
+      return true;
+    }
+    
+    public final boolean onSingleTapConfirmed(MotionEvent paramAnonymousMotionEvent)
+    {
+      Rect localRect = new Rect();
+      int i = 0;
+      for (;;)
+      {
+        if (i < getChildCount())
+        {
+          View localView = getChildAt(i);
+          int j = localView.getLeft();
+          int k = localView.getRight();
+          localRect.set(j, localView.getTop(), k, localView.getBottom());
+          if (!localRect.contains((int)paramAnonymousMotionEvent.getX(), (int)paramAnonymousMotionEvent.getY())) {
+            break label207;
+          }
+          if (MMHorList.c(MMHorList.this) != null) {
+            MMHorList.c(MMHorList.this).onItemClick(MMHorList.this, localView, MMHorList.d(MMHorList.this) + 1 + i, MMHorList.e(MMHorList.this).getItemId(MMHorList.d(MMHorList.this) + 1 + i));
+          }
+          if (MMHorList.f(MMHorList.this) != null) {
+            MMHorList.f(MMHorList.this).onItemSelected(MMHorList.this, localView, MMHorList.d(MMHorList.this) + 1 + i, MMHorList.e(MMHorList.this).getItemId(MMHorList.d(MMHorList.this) + 1 + i));
+          }
+        }
+        return true;
+        label207:
+        i += 1;
+      }
+    }
+  };
   private int offset;
   
   public MMHorList(Context paramContext, AttributeSet paramAttributeSet)
@@ -59,20 +128,20 @@ public class MMHorList
   
   private int getChildViewTotalWidth()
   {
-    return iFN.getCount() * iFR;
+    return kEX.getCount() * kFb;
   }
   
   private void init()
   {
-    iFJ = new Scroller(getContext());
-    iFB = -1;
-    iFC = 0;
+    kET = new Scroller(getContext());
+    kEL = -1;
+    kEM = 0;
     offset = 0;
-    iFD = 0;
-    iFE = 0;
-    iFH = false;
-    iFF = 536870912;
-    iFK = new GestureDetector(getContext(), iFW);
+    kEN = 0;
+    kEO = 0;
+    kER = false;
+    kEP = 536870912;
+    kEU = new GestureDetector(getContext(), kFf);
   }
   
   private void reset()
@@ -84,7 +153,7 @@ public class MMHorList
   
   private void v(View paramView, int paramInt)
   {
-    iFI = true;
+    kES = true;
     ViewGroup.LayoutParams localLayoutParams2 = paramView.getLayoutParams();
     ViewGroup.LayoutParams localLayoutParams1 = localLayoutParams2;
     if (localLayoutParams2 == null) {
@@ -94,64 +163,64 @@ public class MMHorList
     paramView.measure(View.MeasureSpec.makeMeasureSpec(getWidth(), Integer.MIN_VALUE), View.MeasureSpec.makeMeasureSpec(getHeight(), Integer.MIN_VALUE));
   }
   
-  protected final boolean A(float paramFloat)
+  protected final boolean E(float paramFloat)
   {
-    iFJ.fling(iFE, 0, (int)-paramFloat, 0, 0, iFF, 0, 0);
+    kET.fling(kEO, 0, (int)-paramFloat, 0, 0, kEP, 0, 0);
     requestLayout();
     return true;
   }
   
-  protected final boolean aLM()
+  protected final boolean bcq()
   {
-    iFJ.forceFinished(true);
+    kET.forceFinished(true);
     return true;
   }
   
   public boolean dispatchTouchEvent(MotionEvent paramMotionEvent)
   {
-    boolean bool = iFK.onTouchEvent(paramMotionEvent);
+    boolean bool = kEU.onTouchEvent(paramMotionEvent);
     if (paramMotionEvent.getAction() == 0)
     {
-      iFT = true;
-      if (iFA != null) {
-        iFA.aqF();
+      fgb = true;
+      if (kEK != null) {
+        kEK.aEI();
       }
     }
     while ((paramMotionEvent.getAction() != 3) && (paramMotionEvent.getAction() != 1)) {
       return bool;
     }
-    if (iFQ)
+    if (kFa)
     {
       if (getChildViewTotalWidth() <= getWidth()) {
         break label182;
       }
-      if (iFD >= 0) {
+      if (kEN >= 0) {
         break label134;
       }
-      iFJ.forceFinished(true);
-      iFJ.startScroll(iFD, 0, 0 - iFD, 0);
+      kET.forceFinished(true);
+      kET.startScroll(kEN, 0, 0 - kEN, 0);
       requestLayout();
     }
     for (;;)
     {
-      iFT = false;
-      if (iFA == null) {
+      fgb = false;
+      if (kEK == null) {
         break;
       }
-      iFA.aqG();
+      kEK.aEJ();
       return bool;
       label134:
-      if (iFD > iFF)
+      if (kEN > kEP)
       {
-        iFJ.forceFinished(true);
-        iFJ.startScroll(iFD, 0, iFF - iFD, 0);
+        kET.forceFinished(true);
+        kET.startScroll(kEN, 0, kEP - kEN, 0);
         requestLayout();
         continue;
         label182:
-        if (iFD != iFS * -1)
+        if (kEN != kFc * -1)
         {
-          iFJ.forceFinished(true);
-          iFJ.startScroll(iFD, 0, 0 - iFD, 0);
+          kET.forceFinished(true);
+          kET.startScroll(kEN, 0, 0 - kEN, 0);
           requestLayout();
         }
       }
@@ -160,17 +229,17 @@ public class MMHorList
   
   public ListAdapter getAdapter()
   {
-    return iFN;
+    return kEX;
   }
   
   public int getCurrentPosition()
   {
-    return iFD;
+    return kEN;
   }
   
   public boolean getIsTouching()
   {
-    return iFT;
+    return fgb;
   }
   
   public View getSelectedView()
@@ -178,95 +247,87 @@ public class MMHorList
     return null;
   }
   
-  public final void nL(int paramInt)
-  {
-    iFJ.forceFinished(true);
-    iFJ.startScroll(iFD, 0, paramInt - iFD, 0);
-    iFU = true;
-    requestLayout();
-  }
-  
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    if (iFN == null) {
+    if (kEX == null) {
       return;
     }
-    iFI = true;
-    if (iFH)
+    kES = true;
+    if (kER)
     {
-      paramInt1 = iFD;
+      paramInt1 = kEN;
       init();
       removeAllViewsInLayout();
-      iFE = paramInt1;
-      if (iFP)
+      kEO = paramInt1;
+      if (kEZ)
       {
-        iFS = Math.max(0, (getWidth() - getChildViewTotalWidth()) / 2);
-        offset = iFS;
+        kFc = Math.max(0, (getWidth() - getChildViewTotalWidth()) / 2);
+        offset = kFc;
       }
-      iFH = false;
+      kER = false;
     }
-    if (iFJ.computeScrollOffset()) {
-      iFE = iFJ.getCurrX();
+    if (kET.computeScrollOffset()) {
+      kEO = kET.getCurrX();
     }
-    if (iFQ) {
+    if (kFa) {
       if (getChildViewTotalWidth() > getWidth())
       {
-        if (iFE < getWidth() * -1)
+        if (kEO < getWidth() * -1)
         {
-          iFE = (getWidth() * -1 + 1);
-          iFJ.forceFinished(true);
+          kEO = (getWidth() * -1 + 1);
+          kET.forceFinished(true);
         }
-        if (iFE > iFF + getWidth())
+        if (kEO > kEP + getWidth())
         {
-          iFE = (iFF + getWidth() - 1);
-          iFJ.forceFinished(true);
+          kEO = (kEP + getWidth() - 1);
+          kET.forceFinished(true);
         }
       }
     }
     for (;;)
     {
-      paramInt2 = iFD - iFE;
+      paramInt2 = kEN - kEO;
       localView = getChildAt(0);
       while ((localView != null) && (localView.getRight() + paramInt2 <= 0))
       {
         offset += localView.getMeasuredWidth();
-        iFG.offer(localView);
+        kEQ.offer(localView);
         removeViewInLayout(localView);
-        iFB += 1;
+        kEL += 1;
         localView = getChildAt(0);
-        iFI = true;
+        kES = true;
       }
-      if (iFE < getWidth() * -1 + iFS)
+      if (kEO < getWidth() * -1 + kFc)
       {
-        iFE = (getWidth() * -1 + iFS + 1);
-        iFJ.forceFinished(true);
+        kEO = (getWidth() * -1 + kFc + 1);
+        kET.forceFinished(true);
       }
-      if (iFE > getWidth() - iFS)
+      if (kEO > getWidth() - kFc)
       {
-        iFE = (getWidth() - iFS - 1);
-        iFJ.forceFinished(true);
+        kEO = (getWidth() - kFc - 1);
+        kET.forceFinished(true);
         continue;
-        if (iFE < 0)
+        if (kEO < 0)
         {
-          iFE = 0;
-          iFJ.forceFinished(true);
+          kEO = 0;
+          kET.forceFinished(true);
         }
-        if (iFE > iFF)
+        if (kEO > kEP)
         {
-          iFE = iFF;
-          iFJ.forceFinished(true);
+          kEO = kEP;
+          kET.forceFinished(true);
         }
       }
     }
     View localView = getChildAt(getChildCount() - 1);
     while ((localView != null) && (localView.getLeft() + paramInt2 >= getWidth()))
     {
-      iFG.offer(localView);
+      kEQ.offer(localView);
       removeViewInLayout(localView);
-      iFC -= 1;
+      kEM -= 1;
       localView = getChildAt(getChildCount() - 1);
-      iFI = true;
+      kES = true;
     }
     localView = getChildAt(getChildCount() - 1);
     if (localView != null) {
@@ -274,15 +335,15 @@ public class MMHorList
     }
     for (;;)
     {
-      if ((paramInt1 + paramInt2 < getWidth()) && (iFC < iFN.getCount()))
+      if ((paramInt1 + paramInt2 < getWidth()) && (kEM < kEX.getCount()))
       {
-        localView = iFN.getView(iFC, (View)iFG.poll(), this);
+        localView = kEX.getView(kEM, (View)kEQ.poll(), this);
         v(localView, -1);
         paramInt1 = localView.getMeasuredWidth() + paramInt1;
-        if (iFC == iFN.getCount() - 1) {
-          iFF = (iFD + paramInt1 - getWidth());
+        if (kEM == kEX.getCount() - 1) {
+          kEP = (kEN + paramInt1 - getWidth());
         }
-        iFC += 1;
+        kEM += 1;
       }
       else
       {
@@ -292,18 +353,18 @@ public class MMHorList
         }
         for (;;)
         {
-          if ((paramInt1 + paramInt2 > 0) && (iFB >= 0))
+          if ((paramInt1 + paramInt2 > 0) && (kEL >= 0))
           {
-            localView = iFN.getView(iFB, (View)iFG.poll(), this);
+            localView = kEX.getView(kEL, (View)kEQ.poll(), this);
             v(localView, 0);
             paramInt3 = localView.getMeasuredWidth();
-            iFB -= 1;
+            kEL -= 1;
             offset -= localView.getMeasuredWidth();
             paramInt1 -= paramInt3;
           }
           else
           {
-            if ((getChildCount() > 0) && (iFI))
+            if ((getChildCount() > 0) && (kES))
             {
               offset += paramInt2;
               paramInt2 = offset;
@@ -317,17 +378,17 @@ public class MMHorList
                 paramInt1 += 1;
               }
             }
-            iFD = iFE;
-            if (!iFJ.isFinished())
+            kEN = kEO;
+            if (!kET.isFinished())
             {
-              post(iFO);
+              post(kEY);
               return;
             }
-            if ((iFA == null) || (!iFU)) {
+            if ((kEK == null) || (!kFd)) {
               break;
             }
-            iFA.XP();
-            iFU = false;
+            kEK.ahf();
+            kFd = false;
             return;
             paramInt1 = 0;
           }
@@ -339,7 +400,7 @@ public class MMHorList
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
-    if ((iFN != null) && (iFN.getCount() > 0))
+    if ((kEX != null) && (kEX.getCount() > 0))
     {
       View localView = getChildAt(0);
       if (localView != null)
@@ -356,54 +417,62 @@ public class MMHorList
     return false;
   }
   
+  public final void qG(int paramInt)
+  {
+    kET.forceFinished(true);
+    kET.startScroll(kEN, 0, paramInt - kEN, 0);
+    kFd = true;
+    requestLayout();
+  }
+  
   public void setAdapter(ListAdapter paramListAdapter)
   {
-    if (iFN == null) {
-      paramListAdapter.registerDataSetObserver(iFV);
+    if (kEX == null) {
+      paramListAdapter.registerDataSetObserver(kFe);
     }
-    iFN = paramListAdapter;
+    kEX = paramListAdapter;
     reset();
   }
   
   public void setCenterInParent(boolean paramBoolean)
   {
-    iFP = paramBoolean;
+    kEZ = paramBoolean;
   }
   
   public void setHorListLitener(a parama)
   {
-    iFA = parama;
+    kEK = parama;
   }
   
   public void setItemWidth(int paramInt)
   {
-    iFR = paramInt;
+    kFb = paramInt;
   }
   
   public void setOnItemClickListener(AdapterView.OnItemClickListener paramOnItemClickListener)
   {
-    iFM = paramOnItemClickListener;
+    kEW = paramOnItemClickListener;
   }
   
   public void setOnItemSelectedListener(AdapterView.OnItemSelectedListener paramOnItemSelectedListener)
   {
-    iFL = paramOnItemSelectedListener;
+    kEV = paramOnItemSelectedListener;
   }
   
   public void setOverScrollEnabled(boolean paramBoolean)
   {
-    iFQ = paramBoolean;
+    kFa = paramBoolean;
   }
   
   public void setSelection(int paramInt) {}
   
   public static abstract interface a
   {
-    public abstract void XP();
+    public abstract void aEI();
     
-    public abstract void aqF();
+    public abstract void aEJ();
     
-    public abstract void aqG();
+    public abstract void ahf();
   }
 }
 

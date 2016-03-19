@@ -54,10 +54,8 @@
     :goto_0
     sput-boolean v0, Lcom/tencent/kingkong/database/SQLiteSession;->$assertionsDisabled:Z
 
-    .line 222
     return-void
 
-    .line 165
     :cond_0
     const/4 v0, 0x0
 
@@ -119,10 +117,12 @@
     :cond_0
     iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteSession;->mConnectionPool:Lcom/tencent/kingkong/database/SQLiteConnectionPool;
 
+    .line 939
     invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/kingkong/database/SQLiteConnectionPool;->acquireConnection(Ljava/lang/String;ILcom/tencent/kingkong/support/CancellationSignal;)Lcom/tencent/kingkong/database/SQLiteConnection;
 
     move-result-object v0
 
+    .line 938
     iput-object v0, p0, Lcom/tencent/kingkong/database/SQLiteSession;->mConnection:Lcom/tencent/kingkong/database/SQLiteConnection;
 
     .line 940
@@ -400,7 +400,6 @@
 
     move-object v0, v3
 
-    .line 423
     goto :goto_1
 
     .line 438
@@ -454,7 +453,7 @@
     :cond_7
     return-void
 
-    .line 424
+    .line 423
     :catch_0
     move-exception v0
 
@@ -1081,7 +1080,7 @@
     if-eqz p6, :cond_1
 
     .line 868
-    invoke-virtual {p6}, Lcom/tencent/mm/dbsupport/newcursor/b;->qI()V
+    invoke-virtual {p6}, Lcom/tencent/mm/dbsupport/newcursor/b;->qE()V
 
     .line 869
     :cond_1

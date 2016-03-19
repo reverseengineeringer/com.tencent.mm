@@ -1,27 +1,24 @@
 .class public final Lcom/tencent/mm/d/a/js;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tencent/mm/d/a/js$b;,
         Lcom/tencent/mm/d/a/js$a;
     }
 .end annotation
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aGP:Lcom/tencent/mm/d/a/js$a;
-
-.field public aGQ:Lcom/tencent/mm/d/a/js$b;
+.field public aGp:Lcom/tencent/mm/d/a/js$a;
 
 
 # direct methods
@@ -29,13 +26,13 @@
     .locals 1
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v0, 0x1
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/js;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/js;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/js;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/js;->arR:Z
 
     return-void
 .end method
@@ -45,30 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/js$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/js$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/js;->aGP:Lcom/tencent/mm/d/a/js$a;
-
-    .line 17
-    new-instance v0, Lcom/tencent/mm/d/a/js$b;
-
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/js$b;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/d/a/js;->aGQ:Lcom/tencent/mm/d/a/js$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/js;->aGp:Lcom/tencent/mm/d/a/js$a;
 
     .line 8
-    const-string/jumbo v0, "WalletGetUserInfo"
+    const-string/jumbo v0, "ReportWakeLockStats"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/js;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/js;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/js;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/js;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/js;->jUI:Z
 
     return-void
 .end method

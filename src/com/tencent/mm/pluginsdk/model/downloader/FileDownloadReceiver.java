@@ -8,12 +8,12 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.ParcelFileDescriptor;
 import com.jg.JgClassChecked;
-import com.tencent.mm.model.ap.a;
-import com.tencent.mm.model.ap.e;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.al;
-import com.tencent.mm.storage.am;
+import com.tencent.mm.model.z.a;
+import com.tencent.mm.model.z.e;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.aa;
+import com.tencent.mm.storage.z;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20150202", reviewer=20, vComment={com.jg.EType.RECEIVERCHECK})
 public class FileDownloadReceiver
@@ -28,15 +28,15 @@ public class FileDownloadReceiver
     {
       return;
       localObject = paramIntent.getAction();
-      t.i("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", (String)localObject);
-      if (bn.iW((String)localObject))
+      u.i("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", (String)localObject);
+      if (ay.kz((String)localObject))
       {
-        t.e("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "action is null or nill, ignore");
+        u.e("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "action is null or nill, ignore");
         return;
       }
     } while (((String)localObject).equals("android.intent.action.DOWNLOAD_COMPLETE"));
-    if (ap.a.boB != null) {
-      ap.a.boB.B(0, 0);
+    if (z.a.bAt != null) {
+      z.a.bAt.K(0, 0);
     }
     try
     {
@@ -47,34 +47,34 @@ public class FileDownloadReceiver
     {
       for (;;)
       {
-        t.e("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "%s", new Object[] { bn.a(paramIntent) });
+        u.e("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "%s", new Object[] { ay.b(paramIntent) });
       }
       paramIntent = (DownloadManager)paramContext.getSystemService("download");
       try
       {
         paramIntent.openDownloadedFile(l1).close();
-        h.azu();
-        if (h.ck(l1))
+        c.aQc();
+        if (c.db(l1))
         {
-          h.azu();
-          l1 = h.cm(l1);
-          h.azu().cn(l1);
+          c.aQc();
+          l1 = c.dd(l1);
+          c.aQc().de(l1);
           return;
         }
       }
       catch (Exception paramContext)
       {
-        t.e("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "File not existed (caused by removing task or something)");
+        u.e("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "File not existed (caused by removing task or something)");
         return;
       }
-      paramIntent = g.rm();
+      paramIntent = b.ru();
       if (paramIntent != null) {
         break label195;
       }
     }
     if (l1 < 0L)
     {
-      t.e("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "get download id failed");
+      u.e("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "get download id failed");
       return;
     }
     paramIntent = null;
@@ -82,11 +82,11 @@ public class FileDownloadReceiver
     Cursor localCursor;
     while (paramIntent == null)
     {
-      t.e("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "SysId: %d not found in db, ignoring");
+      u.e("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "SysId: %d not found in db, ignoring");
       return;
       if (l1 < 1L)
       {
-        t.e("!56@/B4Tb64lLpKVQlIh1YRBX94HnKLHqasj4QVB2Lzhv8UbwRqK+FziQw==", "Invalie sys download id");
+        u.e("!56@/B4Tb64lLpKVQlIh1YRBX94HnKLHqasj4QVB2Lzhv8UbwRqK+FziQw==", "Invalie sys download id");
         paramIntent = null;
       }
       else
@@ -101,8 +101,8 @@ public class FileDownloadReceiver
           if (!localCursor.moveToFirst()) {
             break label386;
           }
-          localObject = new al();
-          ((al)localObject).c(localCursor);
+          localObject = new z();
+          ((z)localObject).c(localCursor);
         }
       }
     }
@@ -118,9 +118,9 @@ public class FileDownloadReceiver
       localObject = new Intent();
       ((Intent)localObject).setClass(paramContext, FileDownloadService.class);
       ((Intent)localObject).putExtra(FileDownloadService.EXTRA_ID, field_downloadId);
-      ((Intent)localObject).putExtra(FileDownloadService.gNq, 1);
+      ((Intent)localObject).putExtra(FileDownloadService.iCy, 1);
       paramContext = paramContext.startService((Intent)localObject);
-      t.d("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "start download service: " + paramContext.getClassName() + ", " + paramContext.getPackageName());
+      u.d("!44@/B4Tb64lLpKVQlIh1YRBX6+NbpGxgJ+oe80yOqlXWas=", "start download service: " + paramContext.getClassName() + ", " + paramContext.getPackageName());
       return;
       label386:
       localObject = null;

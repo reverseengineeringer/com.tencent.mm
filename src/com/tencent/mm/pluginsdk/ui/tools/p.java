@@ -1,11 +1,46 @@
 package com.tencent.mm.pluginsdk.ui.tools;
 
-import java.util.Comparator;
+import android.content.Context;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.ArrayList;
+import java.util.List;
 
-final class p
-  implements Comparator
+public final class p
 {
-  p(FileExplorerUI.a parama) {}
+  private static List iTp = new ArrayList();
+  
+  public static void a(a parama)
+  {
+    if (parama != null)
+    {
+      u.d("!44@/B4Tb64lLpJLnjolkGdCefwLG6QT9EqvNAxO7Tr/+58=", "add, plugin name = " + parama.getName());
+      if (!iTp.contains(parama)) {
+        iTp.add(parama);
+      }
+    }
+  }
+  
+  public static List aOo()
+  {
+    return iTp;
+  }
+  
+  public static void clear()
+  {
+    u.d("!44@/B4Tb64lLpJLnjolkGdCefwLG6QT9EqvNAxO7Tr/+58=", "clear");
+    iTp.clear();
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void aNM();
+    
+    public abstract void aNN();
+    
+    public abstract void cz(Context paramContext);
+    
+    public abstract String getName();
+  }
 }
 
 /* Location:

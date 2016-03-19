@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public axH:Ljava/lang/String;
+.field public alN:Ljava/lang/String;
 
-.field public axI:Ljava/lang/String;
+.field public auN:Z
 
 
 # direct methods

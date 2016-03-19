@@ -5,42 +5,44 @@ import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Parcelable;
 import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.View.BaseSavedState;
 import android.view.View.OnFocusChangeListener;
+import android.view.View.OnTouchListener;
 import android.widget.EditText;
 import android.widget.TextView.SavedState;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.h;
-import com.tencent.mm.aq.b;
-import com.tencent.mm.aq.b.a;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.ay.g;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MMClearEditText
   extends EditText
 {
-  private View.OnFocusChangeListener eGH = null;
-  final Drawable iDJ = getResources().getDrawable(a.h.search_clear);
-  public String iEe = "";
-  public boolean iEf = false;
-  int iEg = 0;
+  private View.OnFocusChangeListener fPV = null;
+  public String iGN = "";
+  public boolean iGO = false;
+  final Drawable iGP = getResources().getDrawable(2130970307);
+  int iGT = 0;
+  private boolean kDq = false;
   
   public MMClearEditText(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    aMJ();
+    aSo();
   }
   
   public MMClearEditText(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    aMJ();
+    aSo();
   }
   
-  private void AM(String paramString)
+  private void Az(String paramString)
   {
     int i = getSelectionStart();
-    setText(b.a.icM.b(getContext(), paramString, getTextSize()));
+    setText(g.aWe().c(getContext(), paramString, getTextSize()));
     int j = getText().length() - paramString.length();
     if (j > 0)
     {
@@ -53,30 +55,63 @@ public class MMClearEditText
     setSelection(i);
   }
   
-  private void aME()
+  private void aQV()
   {
-    if ((getText().toString().equals("")) || (!isFocused()))
-    {
-      aMF();
+    if ((getText().toString().equals("")) || (!isFocused())) {
+      aQX();
+    }
+    while (kDq) {
       return;
     }
-    setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], iDJ, getCompoundDrawables()[3]);
+    setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], iGP, getCompoundDrawables()[3]);
   }
   
-  private void aMF()
+  private void aQX()
   {
     setCompoundDrawables(getCompoundDrawables()[0], getCompoundDrawables()[1], null, getCompoundDrawables()[3]);
   }
   
-  private void aMJ()
+  private void aSo()
   {
-    iDJ.setBounds(0, 0, iDJ.getIntrinsicWidth(), iDJ.getIntrinsicHeight());
-    t.d("!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE=", "imgX width %d height %d", new Object[] { Integer.valueOf(iDJ.getIntrinsicWidth()), Integer.valueOf(iDJ.getIntrinsicHeight()) });
-    aME();
-    setHeight(iDJ.getIntrinsicHeight() + getResources().getDimensionPixelSize(a.g.OneDPPadding) * 5);
-    setOnTouchListener(new ag(this));
-    addTextChangedListener(new ah(this));
-    super.setOnFocusChangeListener(new ai(this));
+    iGP.setBounds(0, 0, iGP.getIntrinsicWidth(), iGP.getIntrinsicHeight());
+    u.d("!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE=", "imgX width %d height %d", new Object[] { Integer.valueOf(iGP.getIntrinsicWidth()), Integer.valueOf(iGP.getIntrinsicHeight()) });
+    aQV();
+    setHeight(iGP.getIntrinsicHeight() + getResources().getDimensionPixelSize(2131034573) * 5);
+    setOnTouchListener(new View.OnTouchListener()
+    {
+      public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
+      {
+        paramAnonymousView = MMClearEditText.this;
+        if (paramAnonymousView.getCompoundDrawables()[2] == null) {}
+        while ((paramAnonymousMotionEvent.getAction() != 1) || (paramAnonymousMotionEvent.getX() <= paramAnonymousView.getWidth() - paramAnonymousView.getPaddingRight() - iGP.getIntrinsicWidth())) {
+          return false;
+        }
+        paramAnonymousView.setText("");
+        MMClearEditText.a(MMClearEditText.this);
+        return false;
+      }
+    });
+    addTextChangedListener(new TextWatcher()
+    {
+      public final void afterTextChanged(Editable paramAnonymousEditable) {}
+      
+      public final void beforeTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
+      
+      public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3)
+      {
+        MMClearEditText.b(MMClearEditText.this);
+      }
+    });
+    super.setOnFocusChangeListener(new View.OnFocusChangeListener()
+    {
+      public final void onFocusChange(View paramAnonymousView, boolean paramAnonymousBoolean)
+      {
+        if (MMClearEditText.c(MMClearEditText.this) != null) {
+          MMClearEditText.c(MMClearEditText.this).onFocusChange(paramAnonymousView, paramAnonymousBoolean);
+        }
+        MMClearEditText.b(MMClearEditText.this);
+      }
+    });
   }
   
   public void onRestoreInstanceState(Parcelable paramParcelable)
@@ -86,7 +121,7 @@ public class MMClearEditText
       super.onRestoreInstanceState(paramParcelable);
       return;
     }
-    if (!iEf) {
+    if (!iGO) {
       paramParcelable = View.BaseSavedState.EMPTY_STATE;
     }
     super.onRestoreInstanceState(paramParcelable);
@@ -98,31 +133,31 @@ public class MMClearEditText
     String str;
     if (paramInt == 16908322)
     {
-      iEg = 0;
+      iGT = 0;
       str = getText().toString();
     }
     try
     {
-      AM(str);
+      Az(str);
       return bool;
     }
     catch (IndexOutOfBoundsException localIndexOutOfBoundsException)
     {
-      t.e("!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE=", "!!MMClearEditText Exception %d", new Object[] { Integer.valueOf(iEg) });
-      if (iEg < 3)
+      u.e("!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE=", "!!MMClearEditText Exception %d", new Object[] { Integer.valueOf(iGT) });
+      if (iGT < 3)
       {
-        iEg += 1;
-        AM(" " + str);
+        iGT += 1;
+        Az(" " + str);
         return bool;
       }
-      t.e("!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE=", "!!MMClearEditText, IndexOutOfBoundsException cannot fix");
+      u.e("!44@/B4Tb64lLpKV1gYdF8HNDrIV/d4j0/6hFGTPpQharhE=", "!!MMClearEditText, IndexOutOfBoundsException cannot fix");
     }
     return bool;
   }
   
   public void setOnFocusChangeListener(View.OnFocusChangeListener paramOnFocusChangeListener)
   {
-    eGH = paramOnFocusChangeListener;
+    fPV = paramOnFocusChangeListener;
   }
 }
 

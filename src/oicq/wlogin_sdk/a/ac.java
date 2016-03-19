@@ -5,7 +5,7 @@ public final class ac
 {
   public ac()
   {
-    jNs = 310;
+    mbE = 310;
   }
 }
 

@@ -2,9 +2,9 @@ package com.tencent.mm.modelstat;
 
 public final class a$a
 {
-  boolean bMA = false;
-  public int bMy = 0;
-  public int bMz = 0;
+  public int atB = 0;
+  public int cde = 0;
+  boolean cdf = false;
   public String extraInfo = "";
   public String ispName = "";
 }

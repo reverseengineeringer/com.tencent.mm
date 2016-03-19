@@ -1,28 +1,38 @@
-.class final Lcom/tencent/mm/ui/base/preference/f;
+.class public interface abstract Lcom/tencent/mm/ui/base/preference/f;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field id:I
+# virtual methods
+.method public abstract GB(Ljava/lang/String;)Lcom/tencent/mm/ui/base/preference/Preference;
+.end method
 
-.field text:Ljava/lang/CharSequence;
+.method public abstract GC(Ljava/lang/String;)Z
+.end method
 
+.method public abstract GD(Ljava/lang/String;)I
+.end method
 
-# direct methods
-.method public constructor <init>(Ljava/lang/CharSequence;I)V
-    .locals 0
+.method public abstract a(Lcom/tencent/mm/ui/base/preference/Preference;)V
+.end method
 
-    .prologue
-    .line 254
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+.method public abstract a(Lcom/tencent/mm/ui/base/preference/Preference;I)V
+.end method
 
-    .line 256
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/f;->text:Ljava/lang/CharSequence;
+.method public abstract addPreferencesFromResource(I)V
+.end method
 
-    .line 257
-    iput p2, p0, Lcom/tencent/mm/ui/base/preference/f;->id:I
+.method public abstract at(Ljava/lang/String;Z)V
+.end method
 
-    .line 258
-    return-void
+.method public abstract b(Lcom/tencent/mm/ui/base/preference/Preference;)Z
+.end method
+
+.method public abstract indexOf(Ljava/lang/String;)I
+.end method
+
+.method public abstract notifyDataSetChanged()V
+.end method
+
+.method public abstract removeAll()V
 .end method

@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field final synthetic bUc:Lcom/tencent/mm/performance/d/a;
+.field final synthetic ckY:Lcom/tencent/mm/performance/d/a;
 
-.field public bUd:Ljava/lang/ref/WeakReference;
+.field public ckZ:Ljava/lang/ref/WeakReference;
 
-.field public bUe:Ljava/lang/ref/WeakReference;
+.field public cla:Ljava/lang/ref/WeakReference;
 
-.field public bUf:J
+.field public clb:J
 
-.field public bUg:J
+.field public clc:J
 
 
 # direct methods
@@ -32,14 +32,14 @@
 
     .prologue
     .line 55
-    iput-object p1, p0, Lcom/tencent/mm/performance/d/a$a;->bUc:Lcom/tencent/mm/performance/d/a;
+    iput-object p1, p0, Lcom/tencent/mm/performance/d/a$a;->ckY:Lcom/tencent/mm/performance/d/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 59
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/performance/d/a$a;->bUg:J
+    iput-wide v0, p0, Lcom/tencent/mm/performance/d/a$a;->clc:J
 
     return-void
 .end method

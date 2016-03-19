@@ -1,27 +1,17 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import android.content.Intent;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ju
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aHa = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public ju()
   {
-    id = "WalletPayResult";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public Context context;
-    public Intent intent;
-    public int result = 0;
+    id = "ResendAllFailNormalMsg";
+    jUI = arR;
   }
 }
 

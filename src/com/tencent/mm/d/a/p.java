@@ -1,37 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class p
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aus = new a();
-  public b aut = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public p()
   {
-    id = "Broadcast";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public String auu;
-    public int type;
-  }
-  
-  public static final class b
-  {
-    public int auA;
-    public boolean auv = false;
-    public int auw;
-    public int aux;
-    public int auy;
-    public String auz;
-    public String desc;
-    public String url;
+    id = "BakPcCancelAuth";
+    jUI = arR;
   }
 }
 

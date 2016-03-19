@@ -2,7 +2,7 @@ package com.tencent.mm.ui;
 
 public final class LauncherUITabView$a
 {
-  MMTabView ipB;
+  MMTabView kov;
   
   protected LauncherUITabView$a(LauncherUITabView paramLauncherUITabView) {}
 }

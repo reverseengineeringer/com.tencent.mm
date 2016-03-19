@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static jIZ:I
+.field private static lRb:I
 
-.field public static jJa:I
+.field public static lRc:I
 
 
 # direct methods
@@ -17,29 +17,29 @@
     .line 15
     const/4 v0, 0x0
 
-    sput v0, Lcom/tencent/smtt/sdk/a;->jIZ:I
+    sput v0, Lcom/tencent/smtt/sdk/a;->lRb:I
 
     .line 18
     const/16 v0, 0x258
 
-    sput v0, Lcom/tencent/smtt/sdk/a;->jJa:I
+    sput v0, Lcom/tencent/smtt/sdk/a;->lRc:I
 
     return-void
 .end method
 
-.method public static aTZ()I
+.method public static blh()I
     .locals 5
 
     .prologue
     const/4 v0, 0x0
 
     .line 22
-    sget v1, Lcom/tencent/smtt/sdk/a;->jIZ:I
+    sget v1, Lcom/tencent/smtt/sdk/a;->lRb:I
 
     if-lez v1, :cond_0
 
     .line 23
-    sget v0, Lcom/tencent/smtt/sdk/a;->jIZ:I
+    sget v0, Lcom/tencent/smtt/sdk/a;->lRb:I
 
     .line 71
     :goto_0
@@ -155,7 +155,7 @@
     .line 71
     :cond_3
     :goto_1
-    sput v0, Lcom/tencent/smtt/sdk/a;->jIZ:I
+    sput v0, Lcom/tencent/smtt/sdk/a;->lRb:I
 
     goto :goto_0
 

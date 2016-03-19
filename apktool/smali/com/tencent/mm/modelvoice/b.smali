@@ -4,7 +4,7 @@
 
 
 # virtual methods
-.method public abstract R(II)Lcom/tencent/mm/modelvoice/j;
+.method public abstract aa(II)Lcom/tencent/mm/modelvoice/g;
 .end method
 
 .method public abstract getFormat()I

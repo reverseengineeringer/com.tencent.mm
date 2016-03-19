@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bx
-  extends a.c
+  extends a.e
 {
   public a$bx()
   {
-    super("profile", "profile", 2, true);
+    super("kvReport", "kvReport", 170, false);
   }
 }
 

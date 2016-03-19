@@ -2,13 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class iw$a
 {
-  public String aFX;
-  public String aFY;
-  public String aFg;
-  public String aGe;
-  public String id;
-  public int ret;
-  public int type;
+  public long aAL;
+  public String aFf;
 }
 
 /* Location:

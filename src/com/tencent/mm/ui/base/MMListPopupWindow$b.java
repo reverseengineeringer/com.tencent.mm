@@ -7,7 +7,7 @@ final class MMListPopupWindow$b
   
   public final void run()
   {
-    iGe.clearListSelection();
+    kFn.clearListSelection();
   }
 }
 

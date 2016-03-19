@@ -1,17 +1,33 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class jb
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aFx = new a();
+  public b aFy = new b();
   
   public jb()
   {
-    id = "UpdateGameMessage";
-    hXT = atO;
+    id = "ReaderAppOperation";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public int aFA = -1;
+    public String aFB;
+    public int aFC = 0;
+    public ay aFz;
+    public int auE = 1;
+  }
+  
+  public static final class b
+  {
+    public boolean atR;
   }
 }
 

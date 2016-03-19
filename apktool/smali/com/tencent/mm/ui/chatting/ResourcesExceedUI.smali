@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private jcx:Landroid/widget/TextView;
+.field private ldm:Landroid/widget/TextView;
 
 .field private type:I
 
@@ -27,19 +27,19 @@
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 2
 
     .prologue
     .line 29
-    new-instance v0, Lcom/tencent/mm/ui/chatting/of;
+    new-instance v0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/of;-><init>(Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI$1;-><init>(Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 38
-    sget v0, Lcom/tencent/mm/a$i;->download_fail_text:I
+    const v0, 0x7f0701e4
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->findViewById(I)Landroid/view/View;
 
@@ -47,7 +47,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->jcx:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->ldm:Landroid/widget/TextView;
 
     .line 39
     iget v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->type:I
@@ -60,9 +60,9 @@
 
     .line 41
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->jcx:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->ldm:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->video_fail_or_clean:I
+    const v1, 0x7f0b062c
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -70,9 +70,9 @@
 
     .line 44
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->jcx:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->ldm:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->file_fail_or_clean:I
+    const v1, 0x7f0b062d
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -80,9 +80,9 @@
 
     .line 47
     :pswitch_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->jcx:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->ldm:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->imgdownload_fail_or_cleaned:I
+    const v1, 0x7f0b0618
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -102,7 +102,7 @@
 
     .prologue
     .line 54
-    sget v0, Lcom/tencent/mm/a$k;->resources_exceed_ui:I
+    const v0, 0x7f0a00d1
 
     return v0
 .end method
@@ -132,10 +132,10 @@
     .line 23
     const-string/jumbo v0, ""
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->At(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->Gj(Ljava/lang/String;)V
 
     .line 24
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ResourcesExceedUI;->Gb()V
 
     .line 25
     return-void

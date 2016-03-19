@@ -5,35 +5,35 @@ import oicq.wlogin_sdk.tools.util;
 public final class ad
   extends a
 {
-  public int jOE = 0;
+  public int mcQ = 0;
   
   public ad()
   {
-    jNs = 312;
+    mbE = 312;
   }
   
-  public final Boolean aVE()
+  public final Boolean bot()
   {
-    if (jOc < 4) {
+    if (mco < 4) {
       return Boolean.valueOf(false);
     }
-    jOE = util.B(jNm, jOb);
-    if (jOc < jOE * 10 + 4) {
+    mcQ = util.F(mby, mcn);
+    if (mco < mcQ * 10 + 4) {
       return Boolean.valueOf(false);
     }
     return Boolean.valueOf(true);
   }
   
-  public final int aVF()
+  public final int bou()
   {
     int i = 0;
     for (;;)
     {
-      if (i >= jOE) {
+      if (i >= mcQ) {
         return 0;
       }
-      if (util.A(jNm, jOb + 4 + i * 10) == 266) {
-        return util.B(jNm, i * 10 + (jOb + 4) + 2);
+      if (util.E(mby, mcn + 4 + i * 10) == 266) {
+        return util.F(mby, i * 10 + (mcn + 4) + 2);
       }
       i += 1;
     }

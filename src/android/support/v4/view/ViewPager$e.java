@@ -4,9 +4,9 @@ public abstract interface ViewPager$e
 {
   public abstract void a(int paramInt1, float paramFloat, int paramInt2);
   
-  public abstract void m(int paramInt);
-  
   public abstract void n(int paramInt);
+  
+  public abstract void o(int paramInt);
 }
 
 /* Location:

@@ -2,8 +2,10 @@ package com.tencent.mm.d.a;
 
 public final class ip$a
 {
-  public boolean aFL = false;
-  public boolean aFM = false;
+  public int aEA;
+  public String aEy;
+  public String aEz;
+  public int type;
 }
 
 /* Location:

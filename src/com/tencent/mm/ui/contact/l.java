@@ -1,20 +1,18 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.i;
+import android.app.Activity;
+import android.widget.ListView;
+import com.tencent.mm.ui.contact.a.a;
 
-final class l
-  implements Runnable
+public abstract interface l
 {
-  l(AddressUI.a parama) {}
+  public abstract boolean a(a parama);
   
-  public final void run()
-  {
-    a locala = AddressUI.a.a(jet);
-    t.i(TAG, "newcursor resume ");
-    ilE = true;
-    locala.ab("resume", true);
-  }
+  public abstract boolean b(a parama);
+  
+  public abstract Activity getActivity();
+  
+  public abstract ListView getContentLV();
 }
 
 /* Location:

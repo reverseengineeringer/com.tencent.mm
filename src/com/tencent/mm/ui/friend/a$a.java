@@ -2,9 +2,9 @@ package com.tencent.mm.ui.friend;
 
 public abstract interface a$a
 {
-  public abstract void By(String paramString);
+  public abstract void Hs(String paramString);
   
-  public abstract void ah(String paramString, boolean paramBoolean);
+  public abstract void aw(String paramString, boolean paramBoolean);
 }
 
 /* Location:

@@ -2,29 +2,30 @@ package com.tencent.mm.sdk.e;
 
 import android.os.Bundle;
 
-public final class b
+public abstract class b
 {
-  public static final class a
-    extends com.tencent.mm.sdk.d.b
+  public String cAU;
+  public String csg;
+  public int errCode;
+  public String iBD;
+  
+  public abstract int getType();
+  
+  public void l(Bundle paramBundle)
   {
-    public String ayV;
-    
-    public final int getType()
-    {
-      return 14;
-    }
-    
-    public final void m(Bundle paramBundle)
-    {
-      super.m(paramBundle);
-      paramBundle.putString("_wxapi_create_chatroom_ext_msg", ayV);
-    }
-    
-    public final void n(Bundle paramBundle)
-    {
-      super.n(paramBundle);
-      ayV = paramBundle.getString("_wxapi_create_chatroom_ext_msg");
-    }
+    paramBundle.putInt("_wxapi_command_type", getType());
+    paramBundle.putInt("_wxapi_baseresp_errcode", errCode);
+    paramBundle.putString("_wxapi_baseresp_errstr", csg);
+    paramBundle.putString("_wxapi_baseresp_transaction", iBD);
+    paramBundle.putString("_wxapi_baseresp_openId", cAU);
+  }
+  
+  public void m(Bundle paramBundle)
+  {
+    errCode = paramBundle.getInt("_wxapi_baseresp_errcode");
+    csg = paramBundle.getString("_wxapi_baseresp_errstr");
+    iBD = paramBundle.getString("_wxapi_baseresp_transaction");
+    cAU = paramBundle.getString("_wxapi_baseresp_openId");
   }
 }
 

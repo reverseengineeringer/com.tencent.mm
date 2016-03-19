@@ -2,7 +2,7 @@ package com.tencent.mm.app;
 
 public abstract interface WorkerProfile$a
 {
-  public abstract void lI();
+  public abstract void ld();
 }
 
 /* Location:

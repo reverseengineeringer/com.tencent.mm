@@ -1,17 +1,22 @@
 package com.tencent.mm.protocal;
 
+import com.tencent.mm.protocal.b.afb;
+
 public final class t$b
-  extends i.d
-  implements i.b
+  extends h.d
+  implements h.b
 {
+  public afb iVk = new afb();
+  
   public final int getCmdId()
   {
-    return -1;
+    return 1000000121;
   }
   
-  public final int z(byte[] paramArrayOfByte)
+  public final int y(byte[] paramArrayOfByte)
   {
-    return 0;
+    iVk = ((afb)new afb().am(paramArrayOfByte));
+    return iVk.iZL;
   }
 }
 

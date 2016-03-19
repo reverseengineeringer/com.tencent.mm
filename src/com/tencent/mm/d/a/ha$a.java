@@ -1,11 +1,13 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.sdk.c.b;
+
 public final class ha$a
 {
-  public byte[] aEk;
-  public boolean[] aEl;
-  public int height;
-  public int width;
+  public String aCE;
+  public b aCF;
+  public int errCode = 0;
+  public int errType = 0;
 }
 
 /* Location:

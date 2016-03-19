@@ -1,18 +1,18 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.d.b;
+import com.tencent.mm.sdk.e.b;
 
 public final class a$b
   extends b
 {
-  public WXMediaMessage hXX;
+  public WXMediaMessage jUS;
   
   public a$b() {}
   
   public a$b(Bundle paramBundle)
   {
-    n(paramBundle);
+    m(paramBundle);
   }
   
   public final int getType()
@@ -20,16 +20,16 @@ public final class a$b
     return 3;
   }
   
+  public final void l(Bundle paramBundle)
+  {
+    super.l(paramBundle);
+    paramBundle.putAll(WXMediaMessage.a.b(jUS));
+  }
+  
   public final void m(Bundle paramBundle)
   {
     super.m(paramBundle);
-    paramBundle.putAll(WXMediaMessage.a.b(hXX));
-  }
-  
-  public final void n(Bundle paramBundle)
-  {
-    super.n(paramBundle);
-    hXX = WXMediaMessage.a.G(paramBundle);
+    jUS = WXMediaMessage.a.J(paramBundle);
   }
 }
 

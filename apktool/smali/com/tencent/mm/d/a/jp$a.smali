@@ -15,33 +15,22 @@
 
 
 # instance fields
-.field public aGG:Z
+.field public aGj:Ljava/lang/String;
 
-.field public aGH:Z
+.field public alS:Ljava/lang/String;
 
-.field public aGI:Z
+.field public appId:Ljava/lang/String;
 
-.field public aqX:Ljava/lang/String;
+.field public mediaTagName:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    const/4 v0, 0x0
-
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/jp$a;->aGG:Z
-
-    .line 16
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/jp$a;->aGH:Z
-
-    .line 17
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/jp$a;->aGI:Z
 
     return-void
 .end method

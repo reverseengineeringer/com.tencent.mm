@@ -1,83 +1,84 @@
-.class final Lcom/tencent/mm/ui/base/preference/a;
-.super Ljava/lang/Object;
+.class public final Lcom/tencent/mm/ui/base/preference/a;
+.super Lcom/tencent/mm/ui/base/preference/h;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/text/TextWatcher;
 
 
 # instance fields
-.field final synthetic iLF:Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;
+.field private kKR:Landroid/util/SparseArray;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;Landroid/content/SharedPreferences;)V
+    .locals 1
 
     .prologue
-    .line 46
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/a;->iLF:Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;
+    .line 23
+    invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/base/preference/h;-><init>(Landroid/content/Context;Landroid/content/SharedPreferences;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 24
+    new-instance v0, Landroid/util/SparseArray;
 
+    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/a;->kKR:Landroid/util/SparseArray;
+
+    .line 25
     return-void
 .end method
 
 
 # virtual methods
-.method public final afterTextChanged(Landroid/text/Editable;)V
-    .locals 4
+.method public final a(ILandroid/widget/ListView;)Landroid/view/View;
+    .locals 1
 
     .prologue
-    .line 62
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/a;->iLF:Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;
+    .line 35
+    invoke-virtual {p2}, Landroid/widget/ListView;->getLastVisiblePosition()I
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/a;->iLF:Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;
+    move-result v0
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->getHint()Ljava/lang/CharSequence;
+    if-gt p1, v0, :cond_0
 
-    move-result-object v1
+    invoke-virtual {p2}, Landroid/widget/ListView;->getFirstVisiblePosition()I
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/a;->iLF:Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;
+    move-result v0
 
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->getWidth()I
+    if-ge p1, v0, :cond_1
 
-    move-result v2
+    .line 36
+    :cond_0
+    const/4 v0, 0x0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/a;->iLF:Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;
+    .line 39
+    :goto_0
+    return-object v0
 
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->getPaddingLeft()I
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/a;->kKR:Landroid/util/SparseArray;
 
-    move-result v3
+    invoke-virtual {v0, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
-    sub-int/2addr v2, v3
+    move-result-object v0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/a;->iLF:Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;
+    check-cast v0, Landroid/view/View;
 
-    invoke-virtual {v3}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->getPaddingRight()I
-
-    move-result v3
-
-    sub-int/2addr v2, v3
-
-    invoke-static {v0, p1, v1, v2}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->a(Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;Landroid/text/Editable;Ljava/lang/CharSequence;I)V
-
-    .line 63
-    return-void
+    goto :goto_0
 .end method
 
-.method public final beforeTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+.method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
+    .locals 2
 
     .prologue
-    .line 58
-    return-void
-.end method
+    .line 29
+    invoke-super {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/h;->getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
 
-.method public final onTextChanged(Ljava/lang/CharSequence;III)V
-    .locals 0
+    move-result-object v0
 
-    .prologue
-    .line 52
-    return-void
+    .line 30
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/a;->kKR:Landroid/util/SparseArray;
+
+    invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+
+    .line 31
+    return-object v0
 .end method

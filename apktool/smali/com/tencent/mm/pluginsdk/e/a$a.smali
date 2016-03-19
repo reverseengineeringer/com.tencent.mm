@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract F(Landroid/app/Activity;)Z
+.method public abstract O(Landroid/app/Activity;)Z
 .end method

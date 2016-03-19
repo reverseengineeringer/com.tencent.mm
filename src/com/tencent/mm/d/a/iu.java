@@ -1,27 +1,34 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class iu
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFW = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aER = new a();
+  public b aES = new b();
   
   public iu()
   {
-    id = "TranslateMessage";
-    hXT = atO;
+    id = "QMessageOperation";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aFX;
-    public String aFY;
-    public boolean aFZ;
-    public String id;
-    public int type;
+    public String aET;
+    public String aEU;
+    public String aEV;
+    public int aEW = 0;
+    public int aEX = 0;
+    public int auE = 0;
+  }
+  
+  public static final class b
+  {
+    public boolean atR;
   }
 }
 

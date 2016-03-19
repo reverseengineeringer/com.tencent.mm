@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$ae;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 1295
-    const-string/jumbo v0, "getH5TransactionRequest"
+    .line 1970
+    const-string/jumbo v0, "disableBounceScroll"
 
-    const-string/jumbo v1, "getH5TransactionRequest"
+    const-string/jumbo v1, "disableBounceScroll"
 
-    const/16 v2, 0x8a
+    const/16 v2, 0xbc
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 1296
+    .line 1971
     return-void
 .end method

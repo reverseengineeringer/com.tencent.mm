@@ -4,22 +4,46 @@
 
 
 # direct methods
-.method public static a(Landroid/content/Context;Ljava/lang/String;IIII)Lcom/tencent/mm/pluginsdk/ui/applet/ah;
+.method public static a(Landroid/content/Context;Ljava/lang/String;II)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+    .locals 6
+
+    .prologue
+    const/4 v4, 0x0
+
+    .line 30
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move v2, p2
+
+    move v3, p3
+
+    move v5, v4
+
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/pluginsdk/ui/d/a;->a(Landroid/content/Context;Ljava/lang/String;IIII)Lcom/tencent/mm/pluginsdk/ui/applet/g;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public static a(Landroid/content/Context;Ljava/lang/String;IIII)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 1
 
     .prologue
     .line 34
     if-nez p0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object p0
 
     .line 35
     :cond_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/l$a;->gKl:Lcom/tencent/mm/pluginsdk/l$b;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyS:Lcom/tencent/mm/pluginsdk/i$c;
 
-    invoke-interface {v0, p0, p1}, Lcom/tencent/mm/pluginsdk/l$b;->o(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/ah;
+    invoke-interface {v0, p0, p1}, Lcom/tencent/mm/pluginsdk/i$c;->p(Landroid/content/Context;Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     move-result-object v0
 
@@ -27,23 +51,23 @@
     if-eqz v0, :cond_1
 
     .line 37
-    iput p2, v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;->start:I
+    iput p2, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->start:I
 
     .line 38
-    iput p3, v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;->end:I
+    iput p3, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->end:I
 
     .line 39
-    iput p4, v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;->linkColor:I
+    iput p4, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->linkColor:I
 
     .line 40
-    iput p5, v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;->backgroundColor:I
+    iput p5, v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;->backgroundColor:I
 
     .line 42
     :cond_1
     return-object v0
 .end method
 
-.method public static az(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
+.method public static aP(Landroid/content/Context;Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 5
 
     .prologue
@@ -53,7 +77,7 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 16
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/d/h$a;->hbe:Ljava/util/regex/Pattern;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/d/d$a;->iPB:Ljava/util/regex/Pattern;
 
     invoke-virtual {v1, p1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
@@ -83,7 +107,7 @@
 
     move-result-object v4
 
-    invoke-static {p0, v4, v2, v3}, Lcom/tencent/mm/pluginsdk/ui/d/a;->b(Landroid/content/Context;Ljava/lang/String;II)Lcom/tencent/mm/pluginsdk/ui/applet/ah;
+    invoke-static {p0, v4, v2, v3}, Lcom/tencent/mm/pluginsdk/ui/d/a;->a(Landroid/content/Context;Ljava/lang/String;II)Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     move-result-object v2
 
@@ -97,29 +121,5 @@
 
     .line 26
     :cond_1
-    return-object v0
-.end method
-
-.method public static b(Landroid/content/Context;Ljava/lang/String;II)Lcom/tencent/mm/pluginsdk/ui/applet/ah;
-    .locals 6
-
-    .prologue
-    const/4 v4, 0x0
-
-    .line 30
-    move-object v0, p0
-
-    move-object v1, p1
-
-    move v2, p2
-
-    move v3, p3
-
-    move v5, v4
-
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/pluginsdk/ui/d/a;->a(Landroid/content/Context;Ljava/lang/String;IIII)Lcom/tencent/mm/pluginsdk/ui/applet/ah;
-
-    move-result-object v0
-
     return-object v0
 .end method

@@ -5,31 +5,31 @@ import oicq.wlogin_sdk.tools.util;
 public final class g
   extends a
 {
-  public int jOm = 0;
-  public int jOn = 0;
-  public int jOo = 0;
-  public int jOp = 0;
+  public int mcA = 0;
+  public int mcB = 0;
+  public int mcy = 0;
+  public int mcz = 0;
   
   public g()
   {
-    jNs = 261;
+    mbE = 261;
   }
   
-  public final Boolean aVE()
+  public final Boolean bot()
   {
-    if (jOc < 2) {
+    if (mco < 2) {
       return Boolean.valueOf(false);
     }
-    jOn = util.A(jNm, jOb);
-    if (jOc < jOn + 2 + 2) {
+    mcz = util.E(mby, mcn);
+    if (mco < mcz + 2 + 2) {
       return Boolean.valueOf(false);
     }
-    jOm = util.A(jNm, jOb + 2 + jOn);
-    if (jOc < jOn + 2 + 2 + jOm) {
+    mcy = util.E(mby, mcn + 2 + mcz);
+    if (mco < mcz + 2 + 2 + mcy) {
       return Boolean.valueOf(false);
     }
-    jOp = (jOb + 2);
-    jOo = (jOn + 2 + 2 + jOb);
+    mcB = (mcn + 2);
+    mcA = (mcz + 2 + 2 + mcn);
     return Boolean.valueOf(true);
   }
 }

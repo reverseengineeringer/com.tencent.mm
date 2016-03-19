@@ -3,54 +3,53 @@ package com.tencent.mm.storage;
 import android.content.ContentValues;
 import android.database.Cursor;
 import android.os.HandlerThread;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.g.ao;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.az;
-import com.tencent.mm.sdk.platformtools.az.b;
-import com.tencent.mm.sdk.platformtools.az.c;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.az.g;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.h.j;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.an;
+import com.tencent.mm.sdk.platformtools.an.b;
+import com.tencent.mm.sdk.platformtools.an.c;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.LinkedBlockingQueue;
 import junit.framework.Assert;
 
 public final class h
-  extends ao
-  implements az.c
+  extends j
+  implements an.c
 {
-  public static final String[] aqU = { "CREATE TABLE IF NOT EXISTS userinfo ( id INTEGER PRIMARY KEY, type INT, value TEXT )", "CREATE TABLE IF NOT EXISTS userinfo2 ( sid TEXT PRIMARY KEY, type INT, value TEXT )" };
-  private long bNq;
-  private g bqt;
-  private az icZ;
-  private az ida;
-  private BlockingQueue idb = new LinkedBlockingQueue();
-  private BlockingQueue idc = new LinkedBlockingQueue();
+  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS userinfo ( id INTEGER PRIMARY KEY, type INT, value TEXT )", "CREATE TABLE IF NOT EXISTS userinfo2 ( sid TEXT PRIMARY KEY, type INT, value TEXT )" };
+  private g bCw;
+  private long cdW;
+  private an kaf;
+  private an kag;
+  private BlockingQueue kah = new LinkedBlockingQueue();
+  private BlockingQueue kai = new LinkedBlockingQueue();
   
   public h(g paramg)
   {
-    bqt = paramg;
-    bqt = paramg;
-    icZ = new az(this, tdhZl.getLooper(), 100, 20, 60000L, 1L);
-    icZ.setTag(Integer.valueOf(1));
-    ida = new az(this, tdhZl.getLooper(), 100, 20, 60000L, 1L);
-    ida.setTag(Integer.valueOf(3));
+    bCw = paramg;
+    kaf = new an(this, tvjVF.getLooper(), 100, 20, 60000L, 1L);
+    kaf.setTag(Integer.valueOf(1));
+    kag = new an(this, tvjVF.getLooper(), 100, 20, 60000L, 1L);
+    kag.setTag(Integer.valueOf(3));
   }
   
   private static boolean a(String paramString, Object paramObject, boolean paramBoolean)
   {
-    if ((paramString.equals("INT")) && ((paramObject instanceof Integer))) {}
-    while (((paramString.equals("LONG")) && ((paramObject instanceof Long))) || ((paramString.equals("STRING")) && ((paramObject instanceof String))) || ((paramString.equals("BOOLEAN")) && ((paramObject instanceof Boolean))) || ((paramString.equals("FLOAT")) && ((paramObject instanceof Float))) || ((paramString.equals("DOUBLE")) && ((paramObject instanceof Double)))) {
+    if ((paramObject == null) && (paramBoolean)) {}
+    while (((paramString.equals("INT")) && ((paramObject instanceof Integer))) || ((paramString.equals("LONG")) && ((paramObject instanceof Long))) || ((paramString.equals("STRING")) && ((paramObject instanceof String))) || ((paramString.equals("BOOLEAN")) && ((paramObject instanceof Boolean))) || ((paramString.equals("FLOAT")) && ((paramObject instanceof Float))) || ((paramString.equals("DOUBLE")) && ((paramObject instanceof Double)))) {
       return true;
     }
     if (paramBoolean) {
-      t.e("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "checkType failed, input type and value[%s, %s] are not match", new Object[] { paramString, paramObject });
+      u.e("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "checkType failed, input type and value[%s, %s] are not match", new Object[] { paramString, paramObject });
     }
     return false;
   }
   
-  private static int ar(Object paramObject)
+  private static int ax(Object paramObject)
   {
     if ((paramObject instanceof Integer)) {
       return 1;
@@ -70,11 +69,11 @@ public final class h
     if ((paramObject instanceof Double)) {
       return 6;
     }
-    t.e("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "unresolve failed, unknown type=" + paramObject.getClass().toString());
+    u.e("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "unresolve failed, unknown type=" + paramObject.getClass().toString());
     return -1;
   }
   
-  private static Object e(int paramInt, String paramString)
+  private static Object h(int paramInt, String paramString)
   {
     String str = paramString;
     switch (paramInt)
@@ -90,7 +89,7 @@ public final class h
       }
       catch (Exception paramString)
       {
-        t.e("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "exception:%s", new Object[] { bn.a(paramString) });
+        u.e("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "exception:%s", new Object[] { ay.b(paramString) });
       }
       return Long.valueOf(paramString);
       return Boolean.valueOf(paramString);
@@ -100,26 +99,26 @@ public final class h
     }
   }
   
-  public final boolean Bp()
+  public final boolean Dp()
   {
-    if (bqt.inTransaction())
+    if (bCw.inTransaction())
     {
-      t.i("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "summer preAppend inTransaction return false");
+      u.i("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "summer preAppend inTransaction return false");
       return false;
     }
-    bNq = bqt.cN(Thread.currentThread().getId());
-    if (bNq <= 0L)
+    cdW = bCw.dH(Thread.currentThread().getId());
+    if (cdW <= 0L)
     {
-      t.i("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "summer preAppend ticket: " + bNq + " return false");
+      u.i("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "summer preAppend ticket: " + cdW + " return false");
       return false;
     }
     return true;
   }
   
-  public final void Bq()
+  public final void Dq()
   {
-    if (bNq > 0L) {
-      bqt.cO(bNq);
+    if (cdW > 0L) {
+      bCw.dI(cdW);
     }
   }
   
@@ -130,7 +129,7 @@ public final class h
     {
       return paramObject;
       parama = parama.name();
-    } while (bn.iW(parama));
+    } while (ay.kz(parama));
     Object localObject = parama.split("_");
     String str = localObject[(localObject.length - 1)];
     if (str.equals("SYNC")) {
@@ -140,23 +139,23 @@ public final class h
     {
       parama = parama.substring(0, parama.lastIndexOf(str) + str.length());
       boolean bool;
-      if (bqt != null)
+      if (bCw != null)
       {
         bool = true;
         Assert.assertTrue("db is null", bool);
-        localObject = ida.get(parama);
-        if ((localObject != null) || (idc.contains(parama))) {
-          break label256;
+        localObject = kag.get(parama);
+        if ((localObject != null) || (kai.contains(parama))) {
+          break label257;
         }
         a locala = new a();
-        Cursor localCursor = bqt.a("userinfo2", null, "sid=?", new String[] { parama }, null, null);
+        Cursor localCursor = bCw.query("userinfo2", null, "sid=?", new String[] { parama }, null, null, null);
         if (localCursor.getCount() > 0)
         {
           localCursor.moveToFirst();
           type = localCursor.getInt(1);
-          bqD = localCursor.getString(2);
-          localObject = e(type, bqD);
-          ida.k(parama, locala);
+          bCF = localCursor.getString(2);
+          localObject = h(type, bCF);
+          kag.i(parama, locala);
         }
         localCursor.close();
         parama = (j.a)localObject;
@@ -167,34 +166,34 @@ public final class h
       for (;;)
       {
         if (!a(str, parama, false)) {
-          break label297;
+          break label298;
         }
         return parama;
         bool = false;
         break;
-        label256:
+        label257:
         parama = (j.a)localObject;
         if ((localObject instanceof a))
         {
           parama = (a)localObject;
-          localObject = e(type, bqD);
+          localObject = h(type, bCF);
           parama = (j.a)localObject;
           if (localObject == null) {
             parama = (j.a)paramObject;
           }
         }
       }
-      label297:
+      label298:
       break;
     }
   }
   
-  public final void a(az paramaz, az.b paramb)
+  public final void a(an paraman, an.b paramb)
   {
-    Object localObject1 = heQ;
+    Object localObject1 = iSE;
     Object localObject2 = values;
-    int i = iaP;
-    switch (((Integer)paramaz.getTag()).intValue())
+    int i = jXq;
+    switch (((Integer)paraman.getTag()).intValue())
     {
     }
     do
@@ -214,31 +213,31 @@ public final class h
                   break;
                 }
               } while ((localObject2 == null) || (!(localObject2 instanceof a)));
-              paramaz = (a)localObject2;
+              paraman = (a)localObject2;
             } while (type == -1);
             localObject1 = new ContentValues();
-            ((ContentValues)localObject1).put("id", (Integer)heQ);
+            ((ContentValues)localObject1).put("id", (Integer)iSE);
             ((ContentValues)localObject1).put("type", Integer.valueOf(type));
-            ((ContentValues)localObject1).put("value", bqD.toString());
-            bqt.replace("userinfo", "id", (ContentValues)localObject1);
+            ((ContentValues)localObject1).put("value", bCF.toString());
+            bCw.replace("userinfo", "id", (ContentValues)localObject1);
             return;
           } while (i != 2);
-          bqt.delete("userinfo", "id=" + localObject1, null);
+          bCw.delete("userinfo", "id=" + localObject1, null);
           return;
           if (i != 1) {
             break;
           }
         } while ((localObject2 == null) || (!(localObject2 instanceof a)));
-        paramaz = (a)localObject2;
+        paraman = (a)localObject2;
       } while (type == -1);
       localObject1 = new ContentValues();
-      ((ContentValues)localObject1).put("sid", (String)heQ);
+      ((ContentValues)localObject1).put("sid", (String)iSE);
       ((ContentValues)localObject1).put("type", Integer.valueOf(type));
-      ((ContentValues)localObject1).put("value", bqD.toString());
-      bqt.replace("userinfo2", "id", (ContentValues)localObject1);
+      ((ContentValues)localObject1).put("value", bCF.toString());
+      bCw.replace("userinfo2", "id", (ContentValues)localObject1);
       return;
     } while (i != 2);
-    bqt.delete("userinfo2", "sid=" + localObject1, null);
+    bCw.delete("userinfo2", "sid=" + localObject1, null);
   }
   
   public final void b(j.a parama, Object paramObject)
@@ -251,7 +250,7 @@ public final class h
     {
       return;
       Object localObject = parama.name();
-      if (!bn.iW((String)localObject))
+      if (!ay.kz((String)localObject))
       {
         String[] arrayOfString = ((String)localObject).split("_");
         String str = arrayOfString[(arrayOfString.length - 1)];
@@ -269,14 +268,14 @@ public final class h
           boolean bool1;
           if (paramObject == null)
           {
-            bool2 = ida.k(str, null);
+            bool2 = kag.i(str, null);
             bool1 = bool2;
             if (bool2)
             {
               bool1 = bool2;
-              if (!idc.contains(str))
+              if (!kai.contains(str))
               {
-                idc.add(str);
+                kai.add(str);
                 bool1 = bool2;
               }
             }
@@ -292,24 +291,24 @@ public final class h
             if (i == 0) {
               break;
             }
-            eN(true);
+            gN(true);
             return;
             localObject = new a();
-            type = ar(paramObject);
+            type = ax(paramObject);
             if (type == -1) {
               break;
             }
-            bqD = paramObject.toString();
-            bool2 = ida.k(str, localObject);
+            bCF = paramObject.toString();
+            bool2 = kag.i(str, localObject);
             bool1 = bool2;
             if (!bool2) {
               break label154;
             }
             bool1 = bool2;
-            if (!idc.contains(str)) {
+            if (!kai.contains(str)) {
               break label154;
             }
-            idc.remove(str);
+            kai.remove(str);
             bool1 = bool2;
             break label154;
           }
@@ -318,12 +317,12 @@ public final class h
     }
   }
   
-  public final void eN(boolean paramBoolean)
+  public final void gN(boolean paramBoolean)
   {
     long l = System.currentTimeMillis();
-    icZ.eK(true);
-    ida.eK(true);
-    t.i("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "summer config appendAllToDisk end takes: " + (System.currentTimeMillis() - l) + " ms");
+    kaf.gK(true);
+    kag.gK(true);
+    u.i("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "summer config appendAllToDisk end takes: " + (System.currentTimeMillis() - l) + " ms");
   }
   
   public final Object get(int paramInt, Object paramObject)
@@ -331,31 +330,31 @@ public final class h
     boolean bool;
     Object localObject1;
     Object localObject2;
-    if (bqt != null)
+    if (bCw != null)
     {
       bool = true;
       Assert.assertTrue("db is null", bool);
-      localObject1 = icZ.get(Integer.valueOf(paramInt));
-      if ((localObject1 != null) || (idb.contains(Integer.valueOf(paramInt)))) {
-        break label187;
+      localObject1 = kaf.get(Integer.valueOf(paramInt));
+      if ((localObject1 != null) || (kah.contains(Integer.valueOf(paramInt)))) {
+        break label188;
       }
       localObject2 = new a();
-      Cursor localCursor = bqt.a("userinfo", null, "id=" + paramInt, null, null, null);
+      Cursor localCursor = bCw.query("userinfo", null, "id=" + paramInt, null, null, null, null);
       if (localCursor.getCount() > 0)
       {
         localCursor.moveToFirst();
         type = localCursor.getInt(1);
-        bqD = localCursor.getString(2);
-        localObject1 = e(type, bqD);
-        icZ.k(Integer.valueOf(paramInt), localObject2);
+        bCF = localCursor.getString(2);
+        localObject1 = h(type, bCF);
+        kaf.i(Integer.valueOf(paramInt), localObject2);
       }
       localCursor.close();
       localObject2 = localObject1;
       if (localObject1 != null) {
-        break label226;
+        break label227;
       }
     }
-    label187:
+    label188:
     do
     {
       return paramObject;
@@ -363,16 +362,16 @@ public final class h
       break;
       localObject2 = localObject1;
       if (!(localObject1 instanceof a)) {
-        break label226;
+        break label227;
       }
       localObject1 = (a)localObject1;
-      localObject2 = e(type, bqD);
+      localObject2 = h(type, bCF);
     } while (localObject2 == null);
-    label226:
+    label227:
     return localObject2;
   }
   
-  public final int mB(int paramInt)
+  public final int pB(int paramInt)
   {
     Integer localInteger = (Integer)get(paramInt, null);
     if (localInteger == null) {
@@ -381,7 +380,7 @@ public final class h
     return localInteger.intValue();
   }
   
-  public final long mC(int paramInt)
+  public final long pC(int paramInt)
   {
     Long localLong = (Long)get(paramInt, null);
     if (localLong == null) {
@@ -394,21 +393,21 @@ public final class h
   {
     boolean bool1;
     boolean bool2;
-    if (bqt != null)
+    if (bCw != null)
     {
       bool1 = true;
       Assert.assertTrue("db is null", bool1);
       if (paramObject != null) {
         break label110;
       }
-      bool2 = icZ.k(Integer.valueOf(paramInt), null);
+      bool2 = kaf.i(Integer.valueOf(paramInt), null);
       bool1 = bool2;
       if (bool2)
       {
         bool1 = bool2;
-        if (!idb.contains(Integer.valueOf(paramInt)))
+        if (!kah.contains(Integer.valueOf(paramInt)))
         {
-          idb.add(Integer.valueOf(paramInt));
+          kah.add(Integer.valueOf(paramInt));
           bool1 = bool2;
         }
       }
@@ -431,19 +430,19 @@ public final class h
         bool1 = false;
         break;
         locala = new a();
-        type = ar(paramObject);
+        type = ax(paramObject);
       } while (type == -1);
-      bqD = paramObject.toString();
-      bool2 = icZ.k(Integer.valueOf(paramInt), locala);
+      bCF = paramObject.toString();
+      bool2 = kaf.i(Integer.valueOf(paramInt), locala);
       bool1 = bool2;
       if (!bool2) {
         break label82;
       }
       bool1 = bool2;
-      if (!idb.contains(Integer.valueOf(paramInt))) {
+      if (!kah.contains(Integer.valueOf(paramInt))) {
         break label82;
       }
-      idb.remove(Integer.valueOf(paramInt));
+      kah.remove(Integer.valueOf(paramInt));
       bool1 = bool2;
       break label82;
     }
@@ -459,18 +458,18 @@ public final class h
     set(paramInt, Long.valueOf(paramLong));
   }
   
-  protected final boolean xD()
+  protected final boolean yv()
   {
     boolean bool = true;
-    if ((bqt == null) || (bqt.aFN())) {
-      if (bqt != null) {
+    if ((bCw == null) || (bCw.aVP())) {
+      if (bCw != null) {
         break label50;
       }
     }
     label50:
-    for (Object localObject = "null";; localObject = Boolean.valueOf(bqt.aFN()))
+    for (Object localObject = "null";; localObject = Boolean.valueOf(bCw.aVP()))
     {
-      t.w("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "shouldProcessEvent db is close :%s", new Object[] { localObject });
+      u.w("!32@/B4Tb64lLpIASzWhbQWz2fClhydYrvHO", "shouldProcessEvent db is close :%s", new Object[] { localObject });
       bool = false;
       return bool;
     }
@@ -478,7 +477,7 @@ public final class h
   
   static final class a
   {
-    public String bqD = null;
+    public String bCF = null;
     public int type = -1;
     
     public final boolean equals(Object paramObject)
@@ -494,12 +493,12 @@ public final class h
           } while (!(paramObject instanceof a));
           paramObject = (a)paramObject;
         } while (type != type);
-        if (bqD != null) {
+        if (bCF != null) {
           break;
         }
-      } while (bqD != null);
+      } while (bCF != null);
       return true;
-      return bqD.equals(bqD);
+      return bCF.equals(bCF);
     }
   }
 }

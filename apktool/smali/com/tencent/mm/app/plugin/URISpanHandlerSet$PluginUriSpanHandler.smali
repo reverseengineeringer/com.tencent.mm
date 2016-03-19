@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic apd:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+.field final synthetic ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 970
-    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PluginUriSpanHandler;->apd:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1000
+    iput-object p1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PluginUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$BaseUriSpanHandler;-><init>(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)V
 
@@ -36,21 +36,21 @@
 
 
 # virtual methods
-.method final a(Lcom/tencent/mm/pluginsdk/ui/applet/ah;Lcom/tencent/mm/pluginsdk/ui/d/f;)Z
+.method final a(Lcom/tencent/mm/pluginsdk/ui/applet/g;Lcom/tencent/mm/pluginsdk/ui/d/b;)Z
     .locals 1
 
     .prologue
-    .line 993
+    .line 1023
     const/4 v0, 0x0
 
     return v0
 .end method
 
-.method final a(Ljava/lang/String;ZLcom/tencent/mm/pluginsdk/n;Landroid/os/Bundle;)Z
+.method final a(Ljava/lang/String;ZLcom/tencent/mm/pluginsdk/l;Landroid/os/Bundle;)Z
     .locals 4
 
     .prologue
-    .line 998
+    .line 1028
     const-string/jumbo v0, "weixin://plugin"
 
     invoke-virtual {p1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -59,13 +59,13 @@
 
     if-eqz v0, :cond_1
 
-    .line 999
+    .line 1029
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 1000
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PluginUriSpanHandler;->apd:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    .line 1030
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PluginUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -75,14 +75,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 1001
+    .line 1031
     const/high16 v1, 0x10000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 1003
+    .line 1033
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PluginUriSpanHandler;->apd:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
+    iget-object v1, p0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PluginUriSpanHandler;->ang:Lcom/tencent/mm/app/plugin/URISpanHandlerSet;
 
     invoke-static {v1}, Lcom/tencent/mm/app/plugin/URISpanHandlerSet;->a(Lcom/tencent/mm/app/plugin/URISpanHandlerSet;)Landroid/content/Context;
 
@@ -92,12 +92,12 @@
 
     const-string/jumbo v3, ".ui.setting.SettingsPluginsUI"
 
-    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/aj/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
+    invoke-static {v1, v2, v3, v0}, Lcom/tencent/mm/ar/c;->c(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;)V
 
-    .line 1004
+    .line 1034
     const/4 v0, 0x1
 
-    .line 1006
+    .line 1036
     :goto_0
     return v0
 
@@ -107,13 +107,13 @@
     goto :goto_0
 .end method
 
-.method final aZ(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/ah;
+.method final bb(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/applet/g;
     .locals 3
 
     .prologue
     const/4 v1, 0x0
 
-    .line 974
+    .line 1004
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -126,14 +126,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 975
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/ah;
+    .line 1005
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/g;
 
     const/16 v2, 0x1a
 
-    invoke-direct {v0, p1, v2, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/ah;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
+    invoke-direct {v0, p1, v2, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/g;-><init>(Ljava/lang/String;ILjava/lang/Object;)V
 
-    .line 978
+    .line 1008
     :goto_0
     return-object v0
 
@@ -143,11 +143,11 @@
     goto :goto_0
 .end method
 
-.method final lL()[I
+.method final lg()[I
     .locals 3
 
     .prologue
-    .line 988
+    .line 1018
     const/4 v0, 0x1
 
     new-array v0, v0, [I

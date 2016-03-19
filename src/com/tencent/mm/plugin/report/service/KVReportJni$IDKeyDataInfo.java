@@ -1,11 +1,24 @@
 package com.tencent.mm.plugin.report.service;
 
-import java.io.Serializable;
+import android.os.Parcel;
+import android.os.Parcelable;
+import android.os.Parcelable.Creator;
 
 public class KVReportJni$IDKeyDataInfo
-  implements Serializable
+  implements Parcelable
 {
-  private static final long serialVersionUID = 1L;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator()
+  {
+    public final KVReportJni.IDKeyDataInfo createFromParcel(Parcel paramAnonymousParcel)
+    {
+      return new KVReportJni.IDKeyDataInfo(paramAnonymousParcel);
+    }
+    
+    public final KVReportJni.IDKeyDataInfo[] newArray(int paramAnonymousInt)
+    {
+      return new KVReportJni.IDKeyDataInfo[paramAnonymousInt];
+    }
+  };
   private long id;
   private long key;
   private long value;
@@ -22,6 +35,13 @@ public class KVReportJni$IDKeyDataInfo
     id = paramInt1;
     key = paramInt2;
     value = paramInt3;
+  }
+  
+  protected KVReportJni$IDKeyDataInfo(Parcel paramParcel)
+  {
+    id = paramParcel.readLong();
+    key = paramParcel.readLong();
+    value = paramParcel.readLong();
   }
   
   public long GetID()
@@ -52,6 +72,18 @@ public class KVReportJni$IDKeyDataInfo
   public void SetValue(int paramInt)
   {
     value = paramInt;
+  }
+  
+  public int describeContents()
+  {
+    return 0;
+  }
+  
+  public void writeToParcel(Parcel paramParcel, int paramInt)
+  {
+    paramParcel.writeLong(id);
+    paramParcel.writeLong(key);
+    paramParcel.writeLong(value);
   }
 }
 

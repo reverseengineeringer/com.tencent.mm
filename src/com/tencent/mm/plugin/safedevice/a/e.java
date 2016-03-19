@@ -2,83 +2,77 @@ package com.tencent.mm.plugin.safedevice.a;
 
 import android.content.Context;
 import android.os.Build;
-import com.tencent.mm.a.n;
-import com.tencent.mm.ac.b.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.v;
+import com.tencent.mm.ag.b.a;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.plugin.a.a;
-import com.tencent.mm.pluginsdk.i;
-import com.tencent.mm.protocal.b.adw;
-import com.tencent.mm.protocal.b.adx;
-import com.tencent.mm.protocal.b.lu;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.g;
-import com.tencent.mm.storage.h;
+import com.tencent.mm.protocal.b.ama;
+import com.tencent.mm.protocal.b.amb;
+import com.tencent.mm.protocal.b.ok;
+import com.tencent.mm.sdk.platformtools.y;
 import java.util.Iterator;
 import java.util.List;
 
 public final class e
 {
-  static void a(adx paramadx)
+  static void a(amb paramamb)
   {
-    if ((paramadx != null) && (hlu != null))
+    if ((paramamb != null) && (jak != null))
     {
-      paramadx = hlu;
-      if ((paramadx != null) && (paramadx.size() >= 0))
+      paramamb = jak;
+      if ((paramamb != null) && (paramamb.size() >= 0))
       {
-        f.afu().afr();
-        paramadx = paramadx.iterator();
-        while (paramadx.hasNext())
+        f.aqC().aqz();
+        paramamb = paramamb.iterator();
+        while (paramamb.hasNext())
         {
-          adw localadw = (adw)paramadx.next();
-          f.afu().a(new c(localadw));
+          ama localama = (ama)paramamb.next();
+          f.aqC().a(new c(localama));
         }
       }
     }
   }
   
-  public static String afs()
+  public static String aqA()
   {
     return Build.MANUFACTURER + "-" + Build.MODEL;
   }
   
-  public static String bJ(Context paramContext)
+  public static String bX(Context paramContext)
   {
     if (paramContext == null)
     {
-      if (g.hYj) {
-        return aa.getContext().getString(a.n.safe_device_android_device_nm);
+      if (com.tencent.mm.sdk.platformtools.f.jVf) {
+        return y.getContext().getString(2131429297);
       }
-      return aa.getContext().getString(a.n.safe_device_android_device);
+      return y.getContext().getString(2131429296);
     }
-    if (g.hYj) {
-      return paramContext.getString(a.n.safe_device_android_device_nm);
+    if (com.tencent.mm.sdk.platformtools.f.jVf) {
+      return paramContext.getString(2131429297);
     }
-    return paramContext.getString(a.n.safe_device_android_device);
+    return paramContext.getString(2131429296);
   }
   
-  public static void k(boolean paramBoolean1, boolean paramBoolean2)
+  public static void l(boolean paramBoolean1, boolean paramBoolean2)
   {
-    if (!ax.qZ()) {}
+    if (!ah.rh()) {}
     do
     {
       return;
-      i = v.rX();
+      i = com.tencent.mm.model.h.sh();
       if (!paramBoolean1) {
         break;
       }
       i |= 0x4000;
-      ax.tl().rf().set(40, Integer.valueOf(i));
+      ah.tD().rn().set(40, Integer.valueOf(i));
     } while (!paramBoolean2);
-    lu locallu = new lu();
-    hxg = 28;
+    ok localok = new ok();
+    joh = 28;
     if (paramBoolean1) {}
     for (int i = 1;; i = 2)
     {
-      hxh = i;
-      ax.tl().rh().a(new b.a(23, locallu));
-      a.bWX.ll();
+      joi = i;
+      ah.tD().rp().b(new b.a(23, localok));
+      a.cob.kG();
       return;
       i &= 0xBFFF;
       break;

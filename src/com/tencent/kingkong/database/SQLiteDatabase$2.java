@@ -3,12 +3,12 @@ package com.tencent.kingkong.database;
 import java.io.File;
 import java.io.FileFilter;
 
-class SQLiteDatabase$2
+final class SQLiteDatabase$2
   implements FileFilter
 {
   SQLiteDatabase$2(String paramString) {}
   
-  public boolean accept(File paramFile)
+  public final boolean accept(File paramFile)
   {
     return paramFile.getName().startsWith(val$prefix);
   }

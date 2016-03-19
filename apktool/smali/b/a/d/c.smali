@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public jPy:Ljava/util/Map;
+.field public mdK:Ljava/util/Map;
 
 
 # direct methods
@@ -20,7 +20,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lb/a/d/c;->jPy:Ljava/util/Map;
+    iput-object v0, p0, Lb/a/d/c;->mdK:Ljava/util/Map;
 
     .line 27
     return-void
@@ -28,90 +28,6 @@
 
 
 # virtual methods
-.method public final bridge synthetic aVQ()Lb/a/d/e;
-    .locals 1
-
-    .prologue
-    .line 1
-    invoke-super {p0}, Lb/a/d/f;->aVQ()Lb/a/d/e;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic aVR()Lb/a/d/j;
-    .locals 1
-
-    .prologue
-    .line 1
-    invoke-super {p0}, Lb/a/d/f;->aVR()Lb/a/d/j;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic aVS()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 1
-    invoke-super {p0}, Lb/a/d/f;->aVS()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic aVT()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 1
-    invoke-super {p0}, Lb/a/d/f;->aVT()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic aVU()Lb/a/d/g;
-    .locals 1
-
-    .prologue
-    .line 1
-    invoke-super {p0}, Lb/a/d/f;->aVU()Lb/a/d/g;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic aVV()Lb/a/d/e;
-    .locals 1
-
-    .prologue
-    .line 1
-    invoke-super {p0}, Lb/a/d/f;->aVV()Lb/a/d/e;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final bridge synthetic aVW()Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 1
-    invoke-super {p0}, Lb/a/d/f;->aVW()Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
 .method public final bridge synthetic addHeader(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
@@ -122,12 +38,96 @@
     return-void
 .end method
 
-.method public final bX(Ljava/lang/String;Ljava/lang/String;)V
+.method public final bridge synthetic boF()Lb/a/d/e;
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-super {p0}, Lb/a/d/f;->boF()Lb/a/d/e;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic boG()Lb/a/d/j;
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-super {p0}, Lb/a/d/f;->boG()Lb/a/d/j;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic boH()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-super {p0}, Lb/a/d/f;->boH()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic boI()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-super {p0}, Lb/a/d/f;->boI()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic boJ()Lb/a/d/g;
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-super {p0}, Lb/a/d/f;->boJ()Lb/a/d/g;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic boK()Lb/a/d/e;
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-super {p0}, Lb/a/d/f;->boK()Lb/a/d/e;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final bridge synthetic boL()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 1
+    invoke-super {p0}, Lb/a/d/f;->boL()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final cR(Ljava/lang/String;Ljava/lang/String;)V
     .locals 5
 
     .prologue
     .line 39
-    iget-object v0, p0, Lb/a/d/c;->jPy:Ljava/util/Map;
+    iget-object v0, p0, Lb/a/d/c;->mdK:Ljava/util/Map;
 
     const-string/jumbo v1, "oauth_"
 
@@ -182,12 +182,12 @@
     throw v0
 .end method
 
-.method public final bridge synthetic bY(Ljava/lang/String;Ljava/lang/String;)V
+.method public final bridge synthetic cS(Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .prologue
     .line 1
-    invoke-super {p0, p1, p2}, Lb/a/d/f;->bY(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-super {p0, p1, p2}, Lb/a/d/f;->cS(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
@@ -217,7 +217,7 @@
 
     const/4 v2, 0x0
 
-    invoke-super {p0}, Lb/a/d/f;->aVR()Lb/a/d/j;
+    invoke-super {p0}, Lb/a/d/f;->boG()Lb/a/d/j;
 
     move-result-object v3
 

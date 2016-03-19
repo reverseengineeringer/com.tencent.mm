@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract mk()V
+.method public abstract lG()V
 .end method

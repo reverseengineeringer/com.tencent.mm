@@ -15,7 +15,9 @@
 
 
 # instance fields
-.field public aub:Lcom/tencent/mm/storage/ar;
+.field public aGc:Lcom/tencent/mm/pluginsdk/ui/a/a;
+
+.field public aGd:Landroid/widget/EditText;
 
 
 # direct methods

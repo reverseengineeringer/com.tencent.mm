@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static hXQ:Lcom/tencent/mm/sdk/c/a;
+.field public static jUF:Lcom/tencent/mm/sdk/c/a;
 
 
 # instance fields
-.field private final hXR:Ljava/util/HashMap;
+.field private final jUG:Ljava/util/HashMap;
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/sdk/c/a;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sput-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     return-void
 .end method
@@ -38,25 +38,25 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/c/a;->hXR:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/c/a;->jUG:Ljava/util/HashMap;
 
     .line 22
     return-void
 .end method
 
-.method private a(Ljava/util/LinkedList;Lcom/tencent/mm/sdk/c/d;)V
+.method private a(Ljava/util/LinkedList;Lcom/tencent/mm/sdk/c/b;)V
     .locals 4
 
     .prologue
     .line 91
-    iget-boolean v0, p2, Lcom/tencent/mm/sdk/c/d;->hXT:Z
+    iget-boolean v0, p2, Lcom/tencent/mm/sdk/c/b;->jUI:Z
 
     if-eqz v0, :cond_0
 
     .line 92
-    new-instance v0, Lcom/tencent/mm/sdk/c/c;
+    new-instance v0, Lcom/tencent/mm/sdk/c/a$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/c/c;-><init>(Lcom/tencent/mm/sdk/c/a;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/c/a$2;-><init>(Lcom/tencent/mm/sdk/c/a;)V
 
     invoke-static {p1, v0}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
@@ -66,7 +66,7 @@
 
     move-result v0
 
-    new-array v1, v0, [Lcom/tencent/mm/sdk/c/e;
+    new-array v1, v0, [Lcom/tencent/mm/sdk/c/c;
 
     .line 101
     invoke-virtual {p1, v1}, Ljava/util/LinkedList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
@@ -82,13 +82,13 @@
     aget-object v3, v1, v0
 
     .line 103
-    invoke-virtual {v3, p2}, Lcom/tencent/mm/sdk/c/e;->a(Lcom/tencent/mm/sdk/c/d;)Z
+    invoke-virtual {v3, p2}, Lcom/tencent/mm/sdk/c/c;->a(Lcom/tencent/mm/sdk/c/b;)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    iget-boolean v3, p2, Lcom/tencent/mm/sdk/c/d;->hXT:Z
+    iget-boolean v3, p2, Lcom/tencent/mm/sdk/c/b;->jUI:Z
 
     if-nez v3, :cond_2
 
@@ -100,12 +100,12 @@
 
     .line 108
     :cond_2
-    iget-object v0, p2, Lcom/tencent/mm/sdk/c/d;->fjN:Ljava/lang/Runnable;
+    iget-object v0, p2, Lcom/tencent/mm/sdk/c/b;->aID:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_3
 
     .line 109
-    iget-object v0, p2, Lcom/tencent/mm/sdk/c/d;->fjN:Ljava/lang/Runnable;
+    iget-object v0, p2, Lcom/tencent/mm/sdk/c/b;->aID:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
@@ -116,7 +116,60 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/d;Landroid/os/Looper;)V
+.method public final Cz(Ljava/lang/String;)Z
+    .locals 5
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 118
+    const-string/jumbo v0, "!32@/B4Tb64lLpIA8N9k9Noauc0XyOaqccJI"
+
+    const-string/jumbo v3, "hasListener %s"
+
+    new-array v4, v1, [Ljava/lang/Object;
+
+    aput-object p1, v4, v2
+
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 119
+    const-string/jumbo v0, "EventPoolImpl.hasListener"
+
+    invoke-static {v0, p1}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/String;Ljava/lang/Object;)V
+
+    .line 120
+    iget-object v0, p0, Lcom/tencent/mm/sdk/c/a;->jUG:Ljava/util/HashMap;
+
+    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/util/LinkedList;
+
+    .line 121
+    if-eqz v0, :cond_0
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    move v0, v2
+
+    goto :goto_0
+.end method
+
+.method public final a(Lcom/tencent/mm/sdk/c/b;Landroid/os/Looper;)V
     .locals 5
 
     .prologue
@@ -131,11 +184,11 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p1, Lcom/tencent/mm/sdk/c/d;->id:Ljava/lang/String;
+    iget-object v4, p1, Lcom/tencent/mm/sdk/c/b;->id:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 79
     const-string/jumbo v0, "EventPoolImpl.asyncPublish event"
@@ -148,22 +201,22 @@
     invoke-static {v0, p2}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 81
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
 
-    invoke-direct {v0, p2}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, p2}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
 
     .line 82
-    new-instance v1, Lcom/tencent/mm/sdk/c/b;
+    new-instance v1, Lcom/tencent/mm/sdk/c/a$1;
 
-    invoke-direct {v1, p0, p1}, Lcom/tencent/mm/sdk/c/b;-><init>(Lcom/tencent/mm/sdk/c/a;Lcom/tencent/mm/sdk/c/d;)V
+    invoke-direct {v1, p0, p1}, Lcom/tencent/mm/sdk/c/a$1;-><init>(Lcom/tencent/mm/sdk/c/a;Lcom/tencent/mm/sdk/c/b;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
 
     .line 88
     return-void
 .end method
 
-.method public final a(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+.method public final b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
     .locals 5
 
     .prologue
@@ -186,7 +239,7 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 30
     const-string/jumbo v0, "EventPoolImpl.add"
@@ -194,7 +247,7 @@
     invoke-static {v0, p2}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 31
-    iget-object v0, p0, Lcom/tencent/mm/sdk/c/a;->hXR:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/c/a;->jUG:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -206,7 +259,7 @@
     if-nez v0, :cond_2
 
     .line 33
-    iget-object v2, p0, Lcom/tencent/mm/sdk/c/a;->hXR:Ljava/util/HashMap;
+    iget-object v2, p0, Lcom/tencent/mm/sdk/c/a;->jUG:Ljava/util/HashMap;
 
     new-instance v0, Ljava/util/LinkedList;
 
@@ -233,7 +286,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/sdk/c/e;
+    check-cast v0, Lcom/tencent/mm/sdk/c/c;
 
     .line 36
     if-ne v0, p2, :cond_0
@@ -273,7 +326,7 @@
     goto :goto_0
 .end method
 
-.method public final b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+.method public final c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
     .locals 5
 
     .prologue
@@ -296,7 +349,7 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 49
     const-string/jumbo v0, "EventPoolImpl.remove"
@@ -304,7 +357,7 @@
     invoke-static {v0, p2}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 50
-    iget-object v0, p0, Lcom/tencent/mm/sdk/c/a;->hXR:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/c/a;->jUG:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -345,7 +398,7 @@
     throw v0
 .end method
 
-.method public final c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+.method public final d(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
     .locals 2
 
     .prologue
@@ -360,7 +413,7 @@
     invoke-static {v0, p2}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/String;Ljava/lang/Object;)V
 
     .line 128
-    iget-object v0, p0, Lcom/tencent/mm/sdk/c/a;->hXR:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/c/a;->jUG:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -394,7 +447,7 @@
     goto :goto_0
 .end method
 
-.method public final g(Lcom/tencent/mm/sdk/c/d;)Z
+.method public final j(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 6
 
     .prologue
@@ -409,11 +462,11 @@
 
     new-array v4, v2, [Ljava/lang/Object;
 
-    iget-object v5, p1, Lcom/tencent/mm/sdk/c/d;->id:Ljava/lang/String;
+    iget-object v5, p1, Lcom/tencent/mm/sdk/c/b;->id:Ljava/lang/String;
 
     aput-object v5, v4, v1
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 61
     const-string/jumbo v0, "EventPoolImpl.publish"
@@ -425,10 +478,10 @@
 
     .line 65
     :try_start_0
-    iget-object v3, p1, Lcom/tencent/mm/sdk/c/d;->id:Ljava/lang/String;
+    iget-object v3, p1, Lcom/tencent/mm/sdk/c/b;->id:Ljava/lang/String;
 
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/sdk/c/a;->hXR:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/sdk/c/a;->jUG:Ljava/util/HashMap;
 
     invoke-virtual {v0, v3}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -454,13 +507,13 @@
 
     const/4 v3, 0x1
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->aFH()Lcom/tencent/mm/sdk/platformtools/bn$b;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v5
 
     aput-object v5, v4, v3
 
-    invoke-static {v0, v2, v4}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 69
     monitor-exit p0
@@ -483,7 +536,7 @@
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 73
-    invoke-direct {p0, v1, p1}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/util/LinkedList;Lcom/tencent/mm/sdk/c/d;)V
+    invoke-direct {p0, v1, p1}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/util/LinkedList;Lcom/tencent/mm/sdk/c/b;)V
 
     move v0, v2
 
@@ -500,57 +553,4 @@
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
-.end method
-
-.method public final xa(Ljava/lang/String;)Z
-    .locals 5
-
-    .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 118
-    const-string/jumbo v0, "!32@/B4Tb64lLpIA8N9k9Noauc0XyOaqccJI"
-
-    const-string/jumbo v3, "hasListener %s"
-
-    new-array v4, v1, [Ljava/lang/Object;
-
-    aput-object p1, v4, v2
-
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 119
-    const-string/jumbo v0, "EventPoolImpl.hasListener"
-
-    invoke-static {v0, p1}, Ljunit/framework/Assert;->assertNotNull(Ljava/lang/String;Ljava/lang/Object;)V
-
-    .line 120
-    iget-object v0, p0, Lcom/tencent/mm/sdk/c/a;->hXR:Ljava/util/HashMap;
-
-    invoke-virtual {v0, p1}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/util/LinkedList;
-
-    .line 121
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    move v0, v2
-
-    goto :goto_0
 .end method

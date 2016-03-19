@@ -1,23 +1,30 @@
 package com.tencent.mm.pluginsdk.ui.tools;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.ListView;
-import java.io.File;
+import android.content.Context;
+import com.tencent.mm.compatible.d.j;
+import com.tencent.mm.compatible.d.p;
+import com.tencent.mm.compatible.d.w;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class m
-  implements View.OnClickListener
+public final class m
 {
-  m(FileExplorerUI paramFileExplorerUI, File paramFile) {}
-  
-  public final void onClick(View paramView)
+  public static f cU(Context paramContext)
   {
-    FileExplorerUI.a(hdW, 0);
-    ahdW).fqn = hdX.getPath();
-    FileExplorerUI.a(hdW).a(FileExplorerUI.e(hdW).getParentFile(), FileExplorerUI.e(hdW));
-    FileExplorerUI.a(hdW).notifyDataSetInvalidated();
-    FileExplorerUI.a(hdW).notifyDataSetChanged();
-    FileExplorerUI.c(hdW).setSelection(0);
+    if (ay.ad(bsQbsq, "").equals("surface"))
+    {
+      u.i("!44@/B4Tb64lLpI0gAQi2o+bKffNaBJGXprKxiIC3NpMX2E=", "match full type surface");
+      return new VideoSurfaceView(paramContext);
+    }
+    String str = w.get("ro.mediatek.platform");
+    if ((str != null) && ((str.startsWith("MT")) || (str.startsWith("mt")))) {}
+    for (int i = 1; i != 0; i = 0)
+    {
+      u.i("!44@/B4Tb64lLpI0gAQi2o+bKffNaBJGXprKxiIC3NpMX2E=", "IS MTK platform");
+      return new VideoSightView(paramContext);
+    }
+    u.i("!44@/B4Tb64lLpI0gAQi2o+bKffNaBJGXprKxiIC3NpMX2E=", "default settings, use sightview");
+    return new VideoSightView(paramContext);
   }
 }
 

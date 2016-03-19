@@ -1,21 +1,19 @@
 package com.tencent.mm.plugin.sandbox;
 
-import com.tencent.mm.pluginsdk.i;
-import com.tencent.mm.pluginsdk.j;
-import com.tencent.mm.pluginsdk.k;
-import com.tencent.mm.sandbox.updater.an;
+import com.tencent.mm.pluginsdk.f;
+import com.tencent.mm.pluginsdk.h;
 
 public final class a
-  implements k
+  implements h
 {
   public a()
   {
-    com.tencent.mm.sdk.c.a.hXQ.a("UpdateWeChat", new an());
+    com.tencent.mm.sdk.c.a.jUF.b("UpdateWeChat", new com.tencent.mm.sandbox.updater.g());
   }
   
-  public final void a(i parami) {}
+  public final void a(f paramf) {}
   
-  public final void a(j paramj) {}
+  public final void a(com.tencent.mm.pluginsdk.g paramg) {}
 }
 
 /* Location:

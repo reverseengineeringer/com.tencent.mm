@@ -4,33 +4,45 @@ import android.content.Context;
 import android.content.Intent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.b.c;
-import com.tencent.mm.ui.ExposeWithProofUI;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.pluginsdk.ui.b.b;
+import com.tencent.mm.ui.ScrollAlwaysTextView;
 import java.lang.ref.WeakReference;
 
-final class l
-  implements View.OnClickListener
+public final class l
+  extends b
 {
-  l(k paramk) {}
+  public ScrollAlwaysTextView kBa;
   
-  public final void onClick(View paramView)
+  public l(Context paramContext)
   {
-    paramView = new Intent();
-    paramView.setClass((Context)iBC.gTl.get(), ExposeWithProofUI.class);
-    paramView.putExtra("k_username", iBC.iBy);
-    if (!iBC.iBB) {
-      paramView.putExtra("k_expose_scene", 39);
-    }
-    for (;;)
+    super(paramContext);
+    if (view != null)
     {
-      paramView.putExtra("k_from_profile", true);
-      ((Context)iBC.gTl.get()).startActivity(paramView);
-      ax.tl().rM().fj(iBC.iBy);
-      ax.tl().rM().fj(iBC.iBz);
-      return;
-      paramView.putExtra("k_expose_scene", 36);
+      kBa = ((ScrollAlwaysTextView)view.findViewById(2131165434));
+      view.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          paramAnonymousView = new Intent();
+          h.fUJ.g(11992, new Object[] { Integer.valueOf(1) });
+          paramAnonymousView.putExtra("key_scene", 1);
+          c.c((Context)iJu.get(), "music", ".ui.MusicMainUI", paramAnonymousView);
+        }
+      });
+    }
+  }
+  
+  public final int getLayoutId()
+  {
+    return 2131361844;
+  }
+  
+  public final void setVisibility(int paramInt)
+  {
+    if (view != null) {
+      view.findViewById(2131165433).setVisibility(paramInt);
     }
   }
 }

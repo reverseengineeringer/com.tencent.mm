@@ -7,67 +7,80 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.animation.AlphaAnimation;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.ao.a;
+import com.tencent.mm.aw.a;
 
 public class AnimImageView
   extends TextView
 {
-  private boolean bqX = false;
+  private boolean bCZ = false;
   private Context context;
-  private AnimationDrawable iCA;
-  private AnimationDrawable iCB;
-  private boolean iCy = false;
-  private AlphaAnimation iCz;
+  private AlphaAnimation fRZ;
+  private AnimationDrawable fSa;
+  private boolean kBC = false;
+  private AnimationDrawable kBD;
   private int type = 1;
   
   public AnimImageView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     context = paramContext;
-    aMz();
+    aqb();
   }
   
   public AnimImageView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
     context = paramContext;
-    aMz();
+    aqb();
   }
   
-  private void aMz()
+  private void aqb()
   {
-    iCz = new AlphaAnimation(0.1F, 1.0F);
-    iCz.setDuration(1000L);
-    iCz.setRepeatCount(-1);
-    iCz.setRepeatMode(2);
-    iCA = new AnimationDrawable();
-    Drawable localDrawable = getResources().getDrawable(a.h.chatfrom_voice_playing_f1);
+    fRZ = new AlphaAnimation(0.1F, 1.0F);
+    fRZ.setDuration(1000L);
+    fRZ.setRepeatCount(-1);
+    fRZ.setRepeatMode(2);
+    fSa = new AnimationDrawable();
+    Drawable localDrawable = getResources().getDrawable(2130903448);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    iCA.addFrame(localDrawable, 300);
-    localDrawable = getResources().getDrawable(a.h.chatfrom_voice_playing_f2);
+    fSa.addFrame(localDrawable, 300);
+    localDrawable = getResources().getDrawable(2130903555);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    iCA.addFrame(localDrawable, 300);
-    localDrawable = getResources().getDrawable(a.h.chatfrom_voice_playing_f3);
+    fSa.addFrame(localDrawable, 300);
+    localDrawable = getResources().getDrawable(2130903592);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    iCA.addFrame(localDrawable, 300);
-    iCA.setOneShot(false);
-    iCA.setVisible(true, true);
-    iCB = new AnimationDrawable();
-    localDrawable = getResources().getDrawable(a.h.chatto_voice_playing_f1);
+    fSa.addFrame(localDrawable, 300);
+    fSa.setOneShot(false);
+    fSa.setVisible(true, true);
+    kBD = new AnimationDrawable();
+    localDrawable = getResources().getDrawable(2130903493);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    iCB.addFrame(localDrawable, 300);
-    localDrawable = getResources().getDrawable(a.h.chatto_voice_playing_f2);
+    kBD.addFrame(localDrawable, 300);
+    localDrawable = getResources().getDrawable(2130903611);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    iCB.addFrame(localDrawable, 300);
-    localDrawable = getResources().getDrawable(a.h.chatto_voice_playing_f3);
+    kBD.addFrame(localDrawable, 300);
+    localDrawable = getResources().getDrawable(2130903418);
     localDrawable.setBounds(0, 0, localDrawable.getIntrinsicWidth(), localDrawable.getIntrinsicHeight());
-    iCB.addFrame(localDrawable, 300);
-    iCB.setOneShot(false);
-    iCB.setVisible(true, true);
+    kBD.addFrame(localDrawable, 300);
+    kBD.setOneShot(false);
+    kBD.setVisible(true, true);
   }
   
-  public final void aMx()
+  public final void aqc()
+  {
+    if ((fRZ != null) && (fRZ.isInitialized())) {
+      setAnimation(null);
+    }
+    if (type == 1)
+    {
+      bCZ = false;
+      setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
+      fSa.stop();
+      kBD.stop();
+    }
+  }
+  
+  public final void bcp()
   {
     switch (type)
     {
@@ -76,43 +89,29 @@ public class AnimImageView
       do
       {
         return;
-      } while (bqX);
-      bqX = true;
-      if (iCy)
+      } while (bCZ);
+      bCZ = true;
+      if (kBC)
       {
-        setCompoundDrawablesWithIntrinsicBounds(iCA, null, null, null);
-        iCA.stop();
-        iCA.start();
+        setCompoundDrawablesWithIntrinsicBounds(fSa, null, null, null);
+        fSa.stop();
+        fSa.start();
         return;
       }
-      setCompoundDrawablesWithIntrinsicBounds(null, null, iCB, null);
-      iCB.stop();
-      iCB.start();
+      setCompoundDrawablesWithIntrinsicBounds(null, null, kBD, null);
+      kBD.stop();
+      kBD.start();
       return;
     }
-    if (iCy) {
-      setBackgroundDrawable(a.u(context, a.h.chatfrom_bg));
+    if (kBC) {
+      setBackgroundDrawable(a.y(context, 2130970339));
     }
     for (;;)
     {
-      setAnimation(iCz);
-      iCz.startNow();
+      setAnimation(fRZ);
+      fRZ.startNow();
       return;
-      setBackgroundDrawable(a.u(context, a.h.chatto_bg));
-    }
-  }
-  
-  public final void aMy()
-  {
-    if ((iCz != null) && (iCz.isInitialized())) {
-      setAnimation(null);
-    }
-    if (type == 1)
-    {
-      bqX = false;
-      setCompoundDrawablesWithIntrinsicBounds(null, null, null, null);
-      iCA.stop();
-      iCB.stop();
+      setBackgroundDrawable(a.y(context, 2130970364));
     }
   }
   
@@ -120,17 +119,17 @@ public class AnimImageView
   
   public void setFromVoice(boolean paramBoolean)
   {
-    iCy = paramBoolean;
+    kBC = paramBoolean;
   }
   
   public void setType(int paramInt)
   {
-    if (iCy)
+    if (kBC)
     {
-      setBackgroundDrawable(a.u(context, a.h.chatfrom_bg));
+      setBackgroundDrawable(a.y(context, 2130970339));
       return;
     }
-    setBackgroundDrawable(a.u(context, a.h.chatto_bg));
+    setBackgroundDrawable(a.y(context, 2130970364));
   }
 }
 

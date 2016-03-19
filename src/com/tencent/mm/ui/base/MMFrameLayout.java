@@ -9,7 +9,7 @@ import android.widget.FrameLayout.LayoutParams;
 public class MMFrameLayout
   extends FrameLayout
 {
-  private boolean iEK = false;
+  private boolean kDU = false;
   
   public MMFrameLayout(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -20,7 +20,7 @@ public class MMFrameLayout
   {
     int j = getChildCount();
     int i = 0;
-    while ((!iEK) && (i < j))
+    while ((!kDU) && (i < j))
     {
       View localView = getChildAt(i);
       if (localView != null)
@@ -34,7 +34,7 @@ public class MMFrameLayout
       }
       i += 1;
     }
-    iEK = true;
+    kDU = true;
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
   }
 }

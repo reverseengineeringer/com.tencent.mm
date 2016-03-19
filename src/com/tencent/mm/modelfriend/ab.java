@@ -1,65 +1,64 @@
 package com.tencent.mm.modelfriend;
 
-import android.content.ContentValues;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.aly;
+import com.tencent.mm.protocal.b.anr;
+import com.tencent.mm.protocal.b.ans;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
 public final class ab
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  int aqq = -1;
-  private int bqp = 0;
-  private String bqr = "";
-  private String bqs = "";
-  public int bvt = 0;
-  public int bzA = 0;
-  private int bzB = 0;
-  public String username = "";
+  private d anM = null;
+  private final a anN;
   
-  public final String getUsername()
+  public ab(String paramString, List paramList)
   {
-    if (username == null) {
-      return "";
+    Object localObject = new a.a();
+    bFa = new anr();
+    bFb = new ans();
+    uri = "/cgi-bin/micromsg-bin/sendsmstomfriend";
+    bEY = 432;
+    bFc = 0;
+    bFd = 0;
+    anN = ((a.a)localObject).vy();
+    localObject = (anr)anN.bEW.bFf;
+    jiB = paramString;
+    jxQ = new LinkedList();
+    jxP = paramList.size();
+    paramString = paramList.iterator();
+    while (paramString.hasNext())
+    {
+      paramList = (String)paramString.next();
+      if (!ay.kz(paramList)) {
+        jxQ.add(new aly().Cr(paramList));
+      }
     }
-    return username;
   }
   
-  public final ContentValues mA()
+  public final int a(e parame, d paramd)
   {
-    ContentValues localContentValues = new ContentValues();
-    if ((aqq & 0x1) != 0) {
-      localContentValues.put("username", getUsername());
-    }
-    if ((aqq & 0x2) != 0) {
-      localContentValues.put("friendtype", Integer.valueOf(bzA));
-    }
-    if ((aqq & 0x4) != 0) {
-      localContentValues.put("updatetime", Integer.valueOf(bvt));
-    }
-    if ((aqq & 0x8) != 0) {
-      localContentValues.put("reserved1", Integer.valueOf(bqp));
-    }
-    if ((aqq & 0x10) != 0) {
-      localContentValues.put("reserved2", Integer.valueOf(bzB));
-    }
-    if ((aqq & 0x20) != 0)
-    {
-      if (bqr == null)
-      {
-        str = "";
-        localContentValues.put("reserved3", str);
-      }
-    }
-    else if ((aqq & 0x40) != 0) {
-      if (bqs != null) {
-        break label181;
-      }
-    }
-    label181:
-    for (String str = "";; str = bqs)
-    {
-      localContentValues.put("reserved4", str);
-      return localContentValues;
-      str = bqr;
-      break;
-    }
+    anM = paramd;
+    return a(parame, anN, this);
+  }
+  
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  {
+    anM.a(paramInt2, paramInt3, paramString, this);
+  }
+  
+  public final int getType()
+  {
+    return 432;
   }
 }
 

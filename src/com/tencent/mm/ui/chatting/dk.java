@@ -1,22 +1,18 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.model.br;
-import com.tencent.mm.pluginsdk.model.app.p;
-import com.tencent.mm.storage.ar;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 final class dk
-  implements DialogInterface.OnClickListener
+  extends aa.a
 {
-  dk(di paramdi, ar paramar) {}
+  TextView ivK;
+  TextView ivL;
+  ImageView kQA;
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public dk(int paramInt)
   {
-    p.w(eId);
-    br.E(eId.field_msgId);
-    iUE.iUg.aPt();
+    super(paramInt);
   }
 }
 

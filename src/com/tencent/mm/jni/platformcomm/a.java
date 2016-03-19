@@ -3,32 +3,41 @@ package com.tencent.mm.jni.platformcomm;
 import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
+import android.telephony.PhoneStateListener;
+import android.telephony.SignalStrength;
 import android.telephony.TelephonyManager;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class a
 {
-  private static long blK = 10000L;
+  private static long bwp = 10000L;
   private static Context context = null;
   
-  public static void ay(Context paramContext)
+  public static void aI(Context paramContext)
   {
     context = paramContext;
-    ((TelephonyManager)paramContext.getSystemService("phone")).listen(new b(), 256);
+    ((TelephonyManager)paramContext.getSystemService("phone")).listen(new PhoneStateListener()
+    {
+      public final void onSignalStrengthsChanged(SignalStrength paramAnonymousSignalStrength)
+      {
+        super.onSignalStrengthsChanged(paramAnonymousSignalStrength);
+        a.a(paramAnonymousSignalStrength);
+      }
+    }, 256);
   }
   
-  public static long qU()
+  public static long qQ()
   {
-    return blK;
+    return bwp;
   }
   
-  public static long qV()
+  public static long qR()
   {
     WifiInfo localWifiInfo = ((WifiManager)context.getSystemService("wifi")).getConnectionInfo();
     if ((localWifiInfo != null) && (localWifiInfo.getBSSID() != null))
     {
       int j = WifiManager.calculateSignalLevel(localWifiInfo.getRssi(), 10);
-      t.v("!44@/B4Tb64lLpJlhWc9y/UzPNzz3NdxTnJ/gIsDYHugT/w=", "Wifi Signal:" + j * 10);
+      u.v("!44@/B4Tb64lLpJlhWc9y/UzPNzz3NdxTnJ/gIsDYHugT/w=", "Wifi Signal:" + j * 10);
       int i = j;
       if (j > 10) {
         i = 10;
@@ -39,7 +48,7 @@ public final class a
       }
       return j * 10;
     }
-    t.v("!44@/B4Tb64lLpJlhWc9y/UzPNzz3NdxTnJ/gIsDYHugT/w=", "Can Not Get Wifi Signal");
+    u.v("!44@/B4Tb64lLpJlhWc9y/UzPNzz3NdxTnJ/gIsDYHugT/w=", "Can Not Get Wifi Signal");
     return 0L;
   }
 }

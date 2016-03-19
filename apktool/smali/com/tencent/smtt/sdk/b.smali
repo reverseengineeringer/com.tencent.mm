@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private iNx:Lcom/tencent/smtt/sdk/WebView;
+.field private kMK:Lcom/tencent/smtt/sdk/WebView;
 
-.field private jJb:Lcom/tencent/smtt/sdk/DownloadListener;
+.field private lRd:Lcom/tencent/smtt/sdk/DownloadListener;
 
 
 # direct methods
@@ -21,10 +21,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 38
-    iput-object p2, p0, Lcom/tencent/smtt/sdk/b;->jJb:Lcom/tencent/smtt/sdk/DownloadListener;
+    iput-object p2, p0, Lcom/tencent/smtt/sdk/b;->lRd:Lcom/tencent/smtt/sdk/DownloadListener;
 
     .line 39
-    iput-object p1, p0, Lcom/tencent/smtt/sdk/b;->iNx:Lcom/tencent/smtt/sdk/WebView;
+    iput-object p1, p0, Lcom/tencent/smtt/sdk/b;->kMK:Lcom/tencent/smtt/sdk/WebView;
 
     .line 41
     return-void
@@ -37,12 +37,12 @@
 
     .prologue
     .line 46
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/b;->jJb:Lcom/tencent/smtt/sdk/DownloadListener;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/b;->lRd:Lcom/tencent/smtt/sdk/DownloadListener;
 
     if-nez v0, :cond_1
 
     .line 48
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/b;->iNx:Lcom/tencent/smtt/sdk/WebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/b;->kMK:Lcom/tencent/smtt/sdk/WebView;
 
     invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView;->getContext()Landroid/content/Context;
 
@@ -86,7 +86,7 @@
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
     .line 55
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/b;->iNx:Lcom/tencent/smtt/sdk/WebView;
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/b;->kMK:Lcom/tencent/smtt/sdk/WebView;
 
     invoke-virtual {v1}, Lcom/tencent/smtt/sdk/WebView;->getContext()Landroid/content/Context;
 
@@ -100,7 +100,7 @@
 
     .line 60
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/b;->iNx:Lcom/tencent/smtt/sdk/WebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/b;->kMK:Lcom/tencent/smtt/sdk/WebView;
 
     invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView;->getContext()Landroid/content/Context;
 
@@ -108,13 +108,13 @@
 
     const/4 v1, 0x0
 
-    invoke-static {v0, p1, v1}, Lcom/tencent/smtt/sdk/a/d;->b(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)I
+    invoke-static {v0, p1, v1}, Lcom/tencent/smtt/sdk/a/c;->b(Landroid/content/Context;Ljava/lang/String;Ljava/util/HashMap;)I
 
     goto :goto_0
 
     .line 87
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/b;->jJb:Lcom/tencent/smtt/sdk/DownloadListener;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/b;->lRd:Lcom/tencent/smtt/sdk/DownloadListener;
 
     move-object v1, p1
 

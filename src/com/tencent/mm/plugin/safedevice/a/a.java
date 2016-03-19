@@ -1,64 +1,62 @@
 package com.tencent.mm.plugin.safedevice.a;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.ia;
-import com.tencent.mm.protocal.b.ib;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.jx;
+import com.tencent.mm.protocal.b.jy;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.a.c;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.storage.h;
 
 public final class a
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private String anZ;
-  private d apI;
-  private com.tencent.mm.q.a apJ;
+  private String alN;
+  private d anM;
+  private com.tencent.mm.r.a anN;
   
   public a(String paramString)
   {
-    anZ = paramString;
+    alN = paramString;
     a.a locala = new a.a();
-    bsW = new ia();
-    bsX = new ib();
+    bFa = new jx();
+    bFb = new jy();
     uri = "/cgi-bin/micromsg-bin/delsafedevice";
-    bsV = 362;
-    bsY = 0;
-    bsZ = 0;
-    apJ = locala.vh();
-    apJ.bsT.btb).hrS = paramString;
+    bEY = 362;
+    bFc = 0;
+    bFd = 0;
+    anN = locala.vy();
+    anN.bEW.bFf).jhZ = paramString;
   }
   
-  public final int a(m paramm, d paramd)
+  public final int a(e parame, d paramd)
   {
-    if (bn.iW(anZ))
+    if (ay.kz(alN))
     {
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvg8Ydoa/S/6wziJiNmjZHY4=", "null device id");
+      u.e("!44@/B4Tb64lLpK+IBX8XDgnvg8Ydoa/S/6wziJiNmjZHY4=", "null device id");
       return -1;
     }
-    apI = paramd;
-    return a(paramm, apJ, this);
+    anM = paramd;
+    return a(parame, anN, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvg8Ydoa/S/6wziJiNmjZHY4=", "NetSceneDelSafeDevice, errType= " + paramInt2 + " errCode = " + paramInt3);
+    u.d("!44@/B4Tb64lLpK+IBX8XDgnvg8Ydoa/S/6wziJiNmjZHY4=", "NetSceneDelSafeDevice, errType= " + paramInt2 + " errCode = " + paramInt3);
     if ((paramInt2 == 0) && (paramInt3 == 0))
     {
-      paramw = (ib)apJ.bsU.btb;
-      ax.tl().rf().set(64, Integer.valueOf(hhX));
-      t.d("!44@/B4Tb64lLpK+IBX8XDgnvg8Ydoa/S/6wziJiNmjZHY4=", "NetSceneDelSafeDevice, get safedevice state = " + hhX);
+      paramo = (jy)anN.bEX.bFf;
+      ah.tD().rn().set(64, Integer.valueOf(iWd));
+      u.d("!44@/B4Tb64lLpK+IBX8XDgnvg8Ydoa/S/6wziJiNmjZHY4=", "NetSceneDelSafeDevice, get safedevice state = " + iWd);
     }
-    apI.a(paramInt2, paramInt3, paramString, this);
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()

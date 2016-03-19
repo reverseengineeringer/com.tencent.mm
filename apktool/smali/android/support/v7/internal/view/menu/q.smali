@@ -1,69 +1,161 @@
-.class public final Landroid/support/v7/internal/view/menu/q;
-.super Ljava/lang/Object;
+.class final Landroid/support/v7/internal/view/menu/q;
+.super Landroid/support/v7/internal/view/menu/o;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/support/v4/a/a/c;
 
 
 # direct methods
-.method public static c(Landroid/view/Menu;)Landroid/view/Menu;
-    .locals 2
+.method constructor <init>(Landroid/view/SubMenu;)V
+    .locals 0
 
     .prologue
-    .line 34
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 27
+    invoke-direct {p0, p1}, Landroid/support/v7/internal/view/menu/o;-><init>(Landroid/view/Menu;)V
 
-    const/16 v1, 0xe
+    .line 28
+    return-void
+.end method
 
-    if-lt v0, v1, :cond_0
 
-    .line 35
-    new-instance v0, Landroid/support/v7/internal/view/menu/r;
+# virtual methods
+.method public final clearHeader()V
+    .locals 1
 
-    invoke-direct {v0, p0}, Landroid/support/v7/internal/view/menu/r;-><init>(Landroid/view/Menu;)V
+    .prologue
+    .line 67
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/q;->lr:Ljava/lang/Object;
 
-    move-object p0, v0
+    check-cast v0, Landroid/view/SubMenu;
 
-    .line 37
-    :cond_0
+    invoke-interface {v0}, Landroid/view/SubMenu;->clearHeader()V
+
+    .line 68
+    return-void
+.end method
+
+.method public final getItem()Landroid/view/MenuItem;
+    .locals 1
+
+    .prologue
+    .line 84
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/q;->lr:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/SubMenu;
+
+    invoke-interface {v0}, Landroid/view/SubMenu;->getItem()Landroid/view/MenuItem;
+
+    move-result-object v0
+
+    invoke-virtual {p0, v0}, Landroid/support/v7/internal/view/menu/q;->f(Landroid/view/MenuItem;)Landroid/support/v4/a/a/b;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final setHeaderIcon(I)Landroid/view/SubMenu;
+    .locals 1
+
+    .prologue
+    .line 49
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/q;->lr:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/SubMenu;
+
+    invoke-interface {v0, p1}, Landroid/view/SubMenu;->setHeaderIcon(I)Landroid/view/SubMenu;
+
+    .line 50
     return-object p0
 .end method
 
-.method public static i(Landroid/view/MenuItem;)Landroid/view/MenuItem;
-    .locals 2
+.method public final setHeaderIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;
+    .locals 1
 
     .prologue
-    .line 41
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 55
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/q;->lr:Ljava/lang/Object;
 
-    const/16 v1, 0x10
+    check-cast v0, Landroid/view/SubMenu;
 
-    if-lt v0, v1, :cond_1
+    invoke-interface {v0, p1}, Landroid/view/SubMenu;->setHeaderIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;
 
-    .line 42
-    new-instance v0, Landroid/support/v7/internal/view/menu/m;
-
-    invoke-direct {v0, p0}, Landroid/support/v7/internal/view/menu/m;-><init>(Landroid/view/MenuItem;)V
-
-    move-object p0, v0
-
-    .line 46
-    :cond_0
-    :goto_0
+    .line 56
     return-object p0
+.end method
 
+.method public final setHeaderTitle(I)Landroid/view/SubMenu;
+    .locals 1
+
+    .prologue
+    .line 37
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/q;->lr:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/SubMenu;
+
+    invoke-interface {v0, p1}, Landroid/view/SubMenu;->setHeaderTitle(I)Landroid/view/SubMenu;
+
+    .line 38
+    return-object p0
+.end method
+
+.method public final setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/SubMenu;
+    .locals 1
+
+    .prologue
     .line 43
-    :cond_1
-    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/q;->lr:Ljava/lang/Object;
 
-    const/16 v1, 0xe
+    check-cast v0, Landroid/view/SubMenu;
 
-    if-lt v0, v1, :cond_0
+    invoke-interface {v0, p1}, Landroid/view/SubMenu;->setHeaderTitle(Ljava/lang/CharSequence;)Landroid/view/SubMenu;
 
     .line 44
-    new-instance v0, Landroid/support/v7/internal/view/menu/k;
+    return-object p0
+.end method
 
-    invoke-direct {v0, p0}, Landroid/support/v7/internal/view/menu/k;-><init>(Landroid/view/MenuItem;)V
+.method public final setHeaderView(Landroid/view/View;)Landroid/view/SubMenu;
+    .locals 1
 
-    move-object p0, v0
+    .prologue
+    .line 61
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/q;->lr:Ljava/lang/Object;
 
-    goto :goto_0
+    check-cast v0, Landroid/view/SubMenu;
+
+    invoke-interface {v0, p1}, Landroid/view/SubMenu;->setHeaderView(Landroid/view/View;)Landroid/view/SubMenu;
+
+    .line 62
+    return-object p0
+.end method
+
+.method public final setIcon(I)Landroid/view/SubMenu;
+    .locals 1
+
+    .prologue
+    .line 72
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/q;->lr:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/SubMenu;
+
+    invoke-interface {v0, p1}, Landroid/view/SubMenu;->setIcon(I)Landroid/view/SubMenu;
+
+    .line 73
+    return-object p0
+.end method
+
+.method public final setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;
+    .locals 1
+
+    .prologue
+    .line 78
+    iget-object v0, p0, Landroid/support/v7/internal/view/menu/q;->lr:Ljava/lang/Object;
+
+    check-cast v0, Landroid/view/SubMenu;
+
+    invoke-interface {v0, p1}, Landroid/view/SubMenu;->setIcon(Landroid/graphics/drawable/Drawable;)Landroid/view/SubMenu;
+
+    .line 79
+    return-object p0
 .end method

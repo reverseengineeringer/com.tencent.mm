@@ -32,13 +32,13 @@
 
     .prologue
     .line 47
-    new-instance v0, Landroid/support/v4/view/a/c;
+    new-instance v0, Landroid/support/v4/view/a/b$b$1;
 
-    invoke-direct {v0, p0, p1}, Landroid/support/v4/view/a/c;-><init>(Landroid/support/v4/view/a/b$b;Landroid/support/v4/view/a/b;)V
+    invoke-direct {v0, p0, p1}, Landroid/support/v4/view/a/b$b$1;-><init>(Landroid/support/v4/view/a/b$b;Landroid/support/v4/view/a/b;)V
 
-    new-instance v1, Landroid/support/v4/view/a/e;
+    new-instance v1, Landroid/support/v4/view/a/c$1;
 
-    invoke-direct {v1, v0}, Landroid/support/v4/view/a/e;-><init>(Landroid/support/v4/view/a/d$a;)V
+    invoke-direct {v1, v0}, Landroid/support/v4/view/a/c$1;-><init>(Landroid/support/v4/view/a/c$a;)V
 
     return-object v1
 .end method

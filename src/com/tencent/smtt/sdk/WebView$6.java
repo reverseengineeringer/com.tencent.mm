@@ -1,23 +1,27 @@
 package com.tencent.smtt.sdk;
 
 import android.view.View;
-import android.view.View.OnLongClickListener;
+import android.view.View.OnClickListener;
+import android.widget.LinearLayout;
 
 class WebView$6
-  implements View.OnLongClickListener
+  implements View.OnClickListener
 {
-  WebView$6(WebView paramWebView, View.OnLongClickListener paramOnLongClickListener) {}
+  WebView$6(WebView paramWebView, LinearLayout paramLinearLayout) {}
   
-  public boolean onLongClick(View paramView)
+  public void onClick(View paramView)
   {
-    if (val$l != null)
+    this$0.post(new Runnable()
     {
-      if (!val$l.onLongClick(paramView)) {
-        return WebView.a(this$0, paramView);
+      public void run()
+      {
+        if ((LinearLayout)val$layout.getChildAt(4) == null)
+        {
+          LinearLayout localLinearLayout = WebView.d(this$0);
+          val$layout.addView(localLinearLayout, 4);
+        }
       }
-      return true;
-    }
-    return WebView.a(this$0, paramView);
+    });
   }
 }
 

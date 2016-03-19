@@ -21,68 +21,65 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.MeasureSpec;
 import android.widget.RemoteViews.RemoteView;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.svg.frame.a;
-import com.tencent.mm.svg.frame.c.a.b;
-import com.tencent.mm.svg.frame.d.d;
+import com.tencent.mm.sdk.platformtools.u;
 
 @RemoteViews.RemoteView
 public class QImageView
   extends View
 {
-  private static final a[] jBL = { a.jBN, a.jBO, a.jBP, a.jBQ, a.jBR, a.jBS, a.jBT, a.jBU };
-  private static final Matrix.ScaleToFit[] jBM = { Matrix.ScaleToFit.FILL, Matrix.ScaleToFit.START, Matrix.ScaleToFit.CENTER, Matrix.ScaleToFit.END };
-  private final RectF ihL = new RectF();
-  private final RectF ihM = new RectF();
-  private int jBA = 255;
-  private int jBB = 256;
-  private boolean jBC = false;
-  private int[] jBD = null;
-  private boolean jBE = false;
-  private int jBF = 0;
-  private int jBG;
-  private int jBH;
-  private Matrix jBI = null;
-  private boolean jBJ;
-  private boolean jBK = false;
-  private int jBv = 0;
-  private a jBw;
-  private boolean jBx = false;
-  private boolean jBy = false;
-  private ColorFilter jBz;
+  private static final a[] lGm = { a.lGo, a.lGp, a.lGq, a.lGr, a.lGs, a.lGt, a.lGu, a.lGv };
+  private static final Matrix.ScaleToFit[] lGn = { Matrix.ScaleToFit.FILL, Matrix.ScaleToFit.START, Matrix.ScaleToFit.CENTER, Matrix.ScaleToFit.END };
+  private int lFU = 0;
+  private a lFV;
+  private boolean lFW = false;
+  private boolean lFX = false;
+  private ColorFilter lFY;
+  private int lFZ = 255;
+  private int lGa = 256;
+  private boolean lGb = false;
+  private int[] lGc = null;
+  private boolean lGd = false;
+  private int lGe = 0;
+  private int lGf;
+  private int lGg;
+  private Matrix lGh = null;
+  private final RectF lGi = new RectF();
+  private final RectF lGj = new RectF();
+  private boolean lGk;
+  private boolean lGl = false;
   private Context mContext;
   private Drawable mDrawable = null;
   private Matrix mMatrix;
   private Uri mUri;
-  private int rl = Integer.MAX_VALUE;
-  private int rn = Integer.MAX_VALUE;
+  private int qn = Integer.MAX_VALUE;
+  private int qp = Integer.MAX_VALUE;
   
   public QImageView(Context paramContext, AttributeSet paramAttributeSet)
   {
     this(paramContext, paramAttributeSet, 0);
     mContext = paramContext;
-    aTj();
+    bjM();
   }
   
   public QImageView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
     mContext = paramContext;
-    aTj();
-    jBK = false;
+    bjM();
+    lGl = false;
     setAdjustViewBounds(false);
     setMaxWidth(Integer.MAX_VALUE);
     setMaxHeight(Integer.MAX_VALUE);
-    jBJ = false;
+    lGk = false;
   }
   
-  private void aTj()
+  private void bjM()
   {
     mMatrix = new Matrix();
-    jBw = a.jBQ;
+    lFV = a.lGr;
   }
   
-  private void aTk()
+  private void bjN()
   {
     Object localObject1 = null;
     if (mDrawable != null) {}
@@ -92,28 +89,28 @@ public class QImageView
       return;
       localObject2 = getResources();
     } while (localObject2 == null);
-    if (jBv != 0) {}
+    if (lFU != 0) {}
     while (mUri != null)
     {
       try
       {
-        localObject2 = ((Resources)localObject2).getDrawable(jBv);
+        localObject2 = ((Resources)localObject2).getDrawable(lFU);
         localObject1 = localObject2;
       }
       catch (Exception localException)
       {
         for (;;)
         {
-          t.w("ImageView", "Unable to find resource: " + jBv, new Object[] { localException });
+          u.w("ImageView", "Unable to find resource: " + lFU, new Object[] { localException });
           mUri = null;
         }
       }
-      g((Drawable)localObject1);
+      h((Drawable)localObject1);
       return;
     }
   }
   
-  private void aTl()
+  private void bjO()
   {
     Drawable localDrawable = mDrawable;
     if (localDrawable != null)
@@ -121,66 +118,66 @@ public class QImageView
       int j = localDrawable.getIntrinsicWidth();
       int i = j;
       if (j < 0) {
-        i = jBG;
+        i = lGf;
       }
       int k = localDrawable.getIntrinsicHeight();
       j = k;
       if (k < 0) {
-        j = jBH;
+        j = lGg;
       }
-      if ((i != jBG) || (j != jBH))
+      if ((i != lGf) || (j != lGg))
       {
-        jBG = i;
-        jBH = j;
+        lGf = i;
+        lGg = j;
         requestLayout();
       }
     }
   }
   
-  private void aTm()
+  private void bjP()
   {
     float f1 = 0.0F;
-    if ((mDrawable == null) || (!jBx)) {
+    if ((mDrawable == null) || (!lFW)) {
       return;
     }
-    int j = jBG;
-    int k = jBH;
+    int j = lGf;
+    int k = lGg;
     int m = getWidth() - getPaddingLeft() - getPaddingRight();
     int n = getHeight() - getPaddingTop() - getPaddingBottom();
     if (((j < 0) || (m == j)) && ((k < 0) || (n == k))) {}
-    for (int i = 1; (j <= 0) || (k <= 0) || (a.jBO == jBw); i = 0)
+    for (int i = 1; (j <= 0) || (k <= 0) || (a.lGp == lFV); i = 0)
     {
       mDrawable.setBounds(0, 0, m, n);
-      jBI = null;
+      lGh = null;
       return;
     }
     mDrawable.setBounds(0, 0, j, k);
-    if (a.jBN == jBw)
+    if (a.lGo == lFV)
     {
       if (mMatrix.isIdentity())
       {
-        jBI = null;
+        lGh = null;
         return;
       }
-      jBI = mMatrix;
+      lGh = mMatrix;
       return;
     }
     if (i != 0)
     {
-      jBI = null;
+      lGh = null;
       return;
     }
-    if (a.jBS == jBw)
+    if (a.lGt == lFV)
     {
-      jBI = mMatrix;
-      jBI.setTranslate((int)((m - j) * 0.5F + 0.5F), (int)((n - k) * 0.5F + 0.5F));
+      lGh = mMatrix;
+      lGh.setTranslate((int)((m - j) * 0.5F + 0.5F), (int)((n - k) * 0.5F + 0.5F));
       return;
     }
     float f3;
     float f2;
-    if (a.jBT == jBw)
+    if (a.lGu == lFV)
     {
-      jBI = mMatrix;
+      lGh = mMatrix;
       if (j * n > m * k)
       {
         f3 = n / k;
@@ -188,8 +185,8 @@ public class QImageView
       }
       for (;;)
       {
-        jBI.setScale(f3, f3);
-        jBI.postTranslate((int)(f2 + 0.5F), (int)(f1 + 0.5F));
+        lGh.setScale(f3, f3);
+        lGh.postTranslate((int)(f2 + 0.5F), (int)(f1 + 0.5F));
         return;
         f3 = m / j;
         f1 = n;
@@ -198,40 +195,40 @@ public class QImageView
         f1 = (f1 - f4 * f3) * 0.5F;
       }
     }
-    if (a.jBU == jBw)
+    if (a.lGv == lFV)
     {
-      jBI = mMatrix;
+      lGh = mMatrix;
       if ((j <= m) && (k <= n)) {}
       for (f1 = 1.0F;; f1 = Math.min(m / j, n / k))
       {
         f2 = (int)((m - j * f1) * 0.5F + 0.5F);
         f3 = (int)((n - k * f1) * 0.5F + 0.5F);
-        jBI.setScale(f1, f1);
-        jBI.postTranslate(f2, f3);
+        lGh.setScale(f1, f1);
+        lGh.postTranslate(f2, f3);
         return;
       }
     }
-    ihL.set(0.0F, 0.0F, j, k);
-    ihM.set(0.0F, 0.0F, m, n);
-    jBI = mMatrix;
-    Matrix localMatrix = jBI;
-    RectF localRectF1 = ihL;
-    RectF localRectF2 = ihM;
-    a locala = jBw;
-    localMatrix.setRectToRect(localRectF1, localRectF2, jBM[(jBV - 1)]);
+    lGi.set(0.0F, 0.0F, j, k);
+    lGj.set(0.0F, 0.0F, m, n);
+    lGh = mMatrix;
+    Matrix localMatrix = lGh;
+    RectF localRectF1 = lGi;
+    RectF localRectF2 = lGj;
+    a locala = lFV;
+    localMatrix.setRectToRect(localRectF1, localRectF2, lGn[(lGw - 1)]);
   }
   
-  private void aTn()
+  private void bjQ()
   {
-    if ((mDrawable != null) && (jBC))
+    if ((mDrawable != null) && (lGb))
     {
       mDrawable = mDrawable.mutate();
-      mDrawable.setColorFilter(jBz);
-      mDrawable.setAlpha(jBA * jBB >> 8);
+      mDrawable.setColorFilter(lFY);
+      mDrawable.setAlpha(lFZ * lGa >> 8);
     }
   }
   
-  private void g(Drawable paramDrawable)
+  private void h(Drawable paramDrawable)
   {
     if (mDrawable != null)
     {
@@ -245,15 +242,15 @@ public class QImageView
       if (paramDrawable.isStateful()) {
         paramDrawable.setState(getDrawableState());
       }
-      paramDrawable.setLevel(jBF);
-      jBG = paramDrawable.getIntrinsicWidth();
-      jBH = paramDrawable.getIntrinsicHeight();
-      aTn();
-      aTm();
+      paramDrawable.setLevel(lGe);
+      lGf = paramDrawable.getIntrinsicWidth();
+      lGg = paramDrawable.getIntrinsicHeight();
+      bjQ();
+      bjP();
     }
   }
   
-  private static int w(int paramInt1, int paramInt2, int paramInt3)
+  private static int x(int paramInt1, int paramInt2, int paramInt3)
   {
     int i = View.MeasureSpec.getMode(paramInt3);
     paramInt3 = View.MeasureSpec.getSize(paramInt3);
@@ -280,7 +277,7 @@ public class QImageView
   
   public int getBaseline()
   {
-    if (jBK) {
+    if (lGl) {
       return getMeasuredHeight();
     }
     return -1;
@@ -298,7 +295,7 @@ public class QImageView
   
   public a getScaleType()
   {
-    return jBw;
+    return lFV;
   }
   
   public void invalidateDrawable(Drawable paramDrawable)
@@ -313,13 +310,13 @@ public class QImageView
   
   public int[] onCreateDrawableState(int paramInt)
   {
-    if (jBD == null) {
+    if (lGc == null) {
       return super.onCreateDrawableState(paramInt);
     }
-    if (!jBE) {
-      return jBD;
+    if (!lGd) {
+      return lGc;
     }
-    return mergeDrawableStates(super.onCreateDrawableState(jBD.length + paramInt), jBD);
+    return mergeDrawableStates(super.onCreateDrawableState(lGc.length + paramInt), lGc);
   }
   
   public void onDetachedFromWindow()
@@ -329,48 +326,42 @@ public class QImageView
   
   public void onDraw(Canvas paramCanvas)
   {
-    System.currentTimeMillis();
     paramCanvas.setDrawFilter(new PaintFlagsDrawFilter(0, 3));
     super.onDraw(paramCanvas);
     if (mDrawable == null) {}
-    while ((jBG == 0) || (jBH == 0)) {
+    while ((lGf == 0) || (lGg == 0)) {
       return;
     }
-    if ((jBI == null) && (getPaddingTop() == 0) && (getPaddingLeft() == 0)) {
-      mDrawable.draw(paramCanvas);
-    }
-    for (;;)
+    if ((lGh == null) && (getPaddingTop() == 0) && (getPaddingLeft() == 0))
     {
-      getContext();
-      System.currentTimeMillis();
-      b.aIu();
-      return;
-      int i = paramCanvas.getSaveCount();
-      paramCanvas.save();
-      if (jBJ)
-      {
-        int j = getScrollX();
-        int k = getScrollY();
-        paramCanvas.clipRect(getPaddingLeft() + j, getPaddingTop() + k, j + getRight() - getLeft() - getPaddingRight(), k + getBottom() - getTop() - getPaddingBottom());
-      }
-      paramCanvas.translate(getPaddingLeft(), getPaddingTop());
-      if (jBI != null) {
-        paramCanvas.concat(jBI);
-      }
       mDrawable.draw(paramCanvas);
-      paramCanvas.restoreToCount(i);
+      return;
     }
+    int i = paramCanvas.getSaveCount();
+    paramCanvas.save();
+    if (lGk)
+    {
+      int j = getScrollX();
+      int k = getScrollY();
+      paramCanvas.clipRect(getPaddingLeft() + j, getPaddingTop() + k, j + getRight() - getLeft() - getPaddingRight(), k + getBottom() - getTop() - getPaddingBottom());
+    }
+    paramCanvas.translate(getPaddingLeft(), getPaddingTop());
+    if (lGh != null) {
+      paramCanvas.concat(lGh);
+    }
+    mDrawable.draw(paramCanvas);
+    paramCanvas.restoreToCount(i);
   }
   
   public void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    jBx = true;
-    aTm();
+    lFW = true;
+    bjP();
   }
   
   public void onMeasure(int paramInt1, int paramInt2)
   {
-    aTk();
+    bjN();
     int m = 0;
     int j;
     int k;
@@ -378,8 +369,8 @@ public class QImageView
     float f;
     if (mDrawable == null)
     {
-      jBG = -1;
-      jBH = -1;
+      lGf = -1;
+      lGg = -1;
       j = 0;
       k = 0;
       i = 0;
@@ -393,8 +384,8 @@ public class QImageView
       int i1 = getPaddingBottom();
       if ((i != 0) || (m != 0))
       {
-        paramInt1 = w(j + i2 + i3, rl, paramInt1);
-        j = w(k + n + i1, rn, paramInt2);
+        paramInt1 = x(j + i2 + i3, qn, paramInt1);
+        j = x(k + n + i1, qp, paramInt2);
         paramInt2 = paramInt1;
         if (f == 0.0F) {
           break label400;
@@ -434,8 +425,8 @@ public class QImageView
         {
           setMeasuredDimension(paramInt2, paramInt1);
           return;
-          i = jBG;
-          k = jBH;
+          i = lGf;
+          k = lGg;
           j = i;
           if (i <= 0) {
             j = 1;
@@ -444,7 +435,7 @@ public class QImageView
           if (k <= 0) {
             i = 1;
           }
-          if (!jBy) {
+          if (!lFX) {
             break label412;
           }
           k = View.MeasureSpec.getMode(paramInt1);
@@ -492,11 +483,11 @@ public class QImageView
     if (getBackground() == null)
     {
       paramInt = (paramInt >> 7) + paramInt;
-      if (jBB != paramInt)
+      if (lGa != paramInt)
       {
-        jBB = paramInt;
-        jBC = true;
-        aTn();
+        lGa = paramInt;
+        lGb = true;
+        bjQ();
       }
       return true;
     }
@@ -505,35 +496,27 @@ public class QImageView
   
   public void setAdjustViewBounds(boolean paramBoolean)
   {
-    jBy = paramBoolean;
+    lFX = paramBoolean;
     if (paramBoolean) {
-      setScaleType(a.jBQ);
+      setScaleType(a.lGr);
     }
   }
   
   public void setAlpha(int paramInt)
   {
     paramInt &= 0xFF;
-    if (jBA != paramInt)
+    if (lFZ != paramInt)
     {
-      jBA = paramInt;
-      jBC = true;
-      aTn();
+      lFZ = paramInt;
+      lGb = true;
+      bjQ();
       invalidate();
     }
   }
   
   public void setBackgroundDrawable(Drawable paramDrawable)
   {
-    if ((paramDrawable instanceof PictureDrawable)) {
-      d.ak(this);
-    }
-    for (;;)
-    {
-      super.setBackgroundDrawable(paramDrawable);
-      return;
-      d.al(this);
-    }
+    super.setBackgroundDrawable(paramDrawable);
   }
   
   public final void setColorFilter(int paramInt)
@@ -543,11 +526,11 @@ public class QImageView
   
   public void setColorFilter(ColorFilter paramColorFilter)
   {
-    if (jBz != paramColorFilter)
+    if (lFY != paramColorFilter)
     {
-      jBz = paramColorFilter;
-      jBC = true;
-      aTn();
+      lFY = paramColorFilter;
+      lGb = true;
+      bjQ();
       invalidate();
     }
   }
@@ -561,35 +544,20 @@ public class QImageView
   {
     if (mDrawable != paramDrawable)
     {
-      if (!(paramDrawable instanceof PictureDrawable)) {
-        break label69;
-      }
-      d.ak(this);
-    }
-    for (;;)
-    {
-      jBv = 0;
+      lFU = 0;
       mUri = null;
-      int i = jBG;
-      int j = jBH;
-      g(paramDrawable);
-      if ((i != jBG) || (j != jBH)) {
-        requestLayout();
-      }
+      h(paramDrawable);
       invalidate();
-      return;
-      label69:
-      d.al(this);
     }
   }
   
   public void setImageLevel(int paramInt)
   {
-    jBF = paramInt;
+    lGe = paramInt;
     if (mDrawable != null)
     {
       mDrawable.setLevel(paramInt);
-      aTl();
+      bjO();
     }
   }
   
@@ -606,36 +574,31 @@ public class QImageView
     if (((localMatrix == null) && (!mMatrix.isIdentity())) || ((localMatrix != null) && (!mMatrix.equals(localMatrix))))
     {
       mMatrix.set(localMatrix);
-      aTm();
+      bjP();
       invalidate();
     }
   }
   
   public void setImageResource(int paramInt)
   {
-    if (a.mO(paramInt)) {
-      setSVGResource(paramInt);
-    }
-    do
+    if ((mUri != null) || (lFU != paramInt))
     {
-      return;
-      d.al(this);
-    } while ((mUri == null) && (jBv == paramInt));
-    g(null);
-    jBv = paramInt;
-    mUri = null;
-    aTk();
-    invalidate();
+      h(null);
+      lFU = paramInt;
+      mUri = null;
+      bjN();
+      invalidate();
+    }
   }
   
   public void setImageURI(Uri paramUri)
   {
-    if ((jBv != 0) || ((mUri != paramUri) && ((paramUri == null) || (mUri == null) || (!paramUri.equals(mUri)))))
+    if ((lFU != 0) || ((mUri != paramUri) && ((paramUri == null) || (mUri == null) || (!paramUri.equals(mUri)))))
     {
-      g(null);
-      jBv = 0;
+      h(null);
+      lFU = 0;
       mUri = paramUri;
-      aTk();
+      bjN();
       invalidate();
     }
   }
@@ -651,17 +614,12 @@ public class QImageView
   
   public void setMaxHeight(int paramInt)
   {
-    rn = paramInt;
+    qp = paramInt;
   }
   
   public void setMaxWidth(int paramInt)
   {
-    rl = paramInt;
-  }
-  
-  public void setSVGResource(int paramInt)
-  {
-    setImageDrawable(a.getDrawable(paramInt));
+    qn = paramInt;
   }
   
   public void setScaleType(a parama)
@@ -669,10 +627,10 @@ public class QImageView
     if (parama == null) {
       throw new NullPointerException();
     }
-    if (jBw != parama)
+    if (lFV != parama)
     {
-      jBw = parama;
-      if (jBw != a.jBS) {
+      lFV = parama;
+      if (lFV != a.lGt) {
         break label51;
       }
     }
@@ -689,7 +647,7 @@ public class QImageView
   public void setSelected(boolean paramBoolean)
   {
     super.setSelected(paramBoolean);
-    aTl();
+    bjO();
   }
   
   protected boolean verifyDrawable(Drawable paramDrawable)
@@ -699,11 +657,11 @@ public class QImageView
   
   public static enum a
   {
-    final int jBV;
+    final int lGw;
     
     private a(int paramInt1)
     {
-      jBV = paramInt1;
+      lGw = paramInt1;
     }
   }
 }

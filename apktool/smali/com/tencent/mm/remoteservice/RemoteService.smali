@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private hVm:Lcom/tencent/mm/remoteservice/d$a;
+.field private jRV:Lcom/tencent/mm/remoteservice/c$a;
 
 
 # direct methods
@@ -16,11 +16,11 @@
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     .line 41
-    new-instance v0, Lcom/tencent/mm/remoteservice/e;
+    new-instance v0, Lcom/tencent/mm/remoteservice/RemoteService$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/remoteservice/e;-><init>(Lcom/tencent/mm/remoteservice/RemoteService;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/remoteservice/RemoteService$1;-><init>(Lcom/tencent/mm/remoteservice/RemoteService;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/remoteservice/RemoteService;->hVm:Lcom/tencent/mm/remoteservice/d$a;
+    iput-object v0, p0, Lcom/tencent/mm/remoteservice/RemoteService;->jRV:Lcom/tencent/mm/remoteservice/c$a;
 
     return-void
 .end method
@@ -49,7 +49,7 @@
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
     .line 20
-    iget-object v0, p0, Lcom/tencent/mm/remoteservice/RemoteService;->hVm:Lcom/tencent/mm/remoteservice/d$a;
+    iget-object v0, p0, Lcom/tencent/mm/remoteservice/RemoteService;->jRV:Lcom/tencent/mm/remoteservice/c$a;
 
     return-object v0
 .end method

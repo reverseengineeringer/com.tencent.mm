@@ -6,37 +6,36 @@ import android.text.SpannableString;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tencent.mm.a.h;
-import com.tencent.mm.pluginsdk.ui.d.i;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.sdk.platformtools.u;
 
 public abstract class a
 {
-  public String bII;
-  public final int dJX;
-  public boolean eFd = true;
-  public int eVC;
-  public int eVv;
-  public boolean jnK;
-  public boolean jnL;
-  public int jnM;
-  public int jnN;
-  public String jnO;
-  public long jnP;
-  public boolean jnQ;
+  public String aEy;
+  public final int eLV;
+  public boolean fOr = true;
+  public int ggB;
+  public int ggI;
+  public boolean ltc;
+  public boolean ltd;
+  public int lte;
+  public int ltf;
+  public String ltg;
+  public long lth;
+  public boolean lti;
   public final int position;
   
   public a(int paramInt1, int paramInt2)
   {
-    dJX = paramInt1;
+    eLV = paramInt1;
     position = paramInt2;
-    t.d("!44@/B4Tb64lLpKLxeMowbLUcHkyhGF0k94A0iVGVfKUb5g=", "create data item | viewType=%d | position=%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    u.d("!44@/B4Tb64lLpKLxeMowbLUcHkyhGF0k94A0iVGVfKUb5g=", "create data item | viewType=%d | position=%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
   }
   
-  public static SpannableString b(Context paramContext, Spannable paramSpannable, int paramInt)
+  public static SpannableString a(Context paramContext, Spannable paramSpannable, int paramInt)
   {
     int i = 0;
-    paramContext = i.a(paramContext, paramSpannable, paramInt);
+    paramContext = e.a(paramContext, paramSpannable, paramInt);
     ForegroundColorSpan[] arrayOfForegroundColorSpan = (ForegroundColorSpan[])paramSpannable.getSpans(0, paramSpannable.length(), ForegroundColorSpan.class);
     if (arrayOfForegroundColorSpan != null)
     {
@@ -52,7 +51,7 @@ public abstract class a
     return paramContext;
   }
   
-  public abstract b IR();
+  public abstract b Le();
   
   public abstract void a(Context paramContext, a paramVarArgs);
   
@@ -71,14 +70,14 @@ public abstract class a
     
     public abstract boolean a(Context paramContext, a paramVarArgs);
     
-    public final void aK(View paramView)
+    public final void aN(View paramView)
     {
-      if (jnL)
+      if (ltd)
       {
-        paramView.setBackgroundResource(a.h.comm_list_item_selector_no_divider);
+        paramView.setBackgroundResource(2130970303);
         return;
       }
-      paramView.setBackgroundResource(a.h.comm_list_item_selector);
+      paramView.setBackgroundResource(2130970354);
     }
   }
 }

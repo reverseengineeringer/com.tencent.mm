@@ -1,17 +1,17 @@
 package oicq.wlogin_sdk.a;
 
-import oicq.wlogin_sdk.tools.e;
+import oicq.wlogin_sdk.tools.d;
 import oicq.wlogin_sdk.tools.util;
 
 public class a
 {
-  public int jNg = 128;
-  public int jNh = 0;
-  public byte[] jNm = new byte[jNg];
-  public int jNs = 0;
-  int jOa = 0;
-  public int jOb = 4;
-  public int jOc = 0;
+  public int mbE = 0;
+  public int mbs = 128;
+  public int mbt = 0;
+  public byte[] mby = new byte[mbs];
+  int mcm = 0;
+  public int mcn = 4;
+  public int mco = 0;
   
   private static int j(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
@@ -29,16 +29,30 @@ public class a
             break;
           }
           i = paramInt1;
-        } while (util.A(paramArrayOfByte, paramInt1) == paramInt2);
+        } while (util.E(paramArrayOfByte, paramInt1) == paramInt2);
         paramInt1 += 2;
       } while (paramInt1 + 2 > j);
-      paramInt1 += util.A(paramArrayOfByte, paramInt1) + 2;
+      paramInt1 += util.E(paramArrayOfByte, paramInt1) + 2;
     }
+  }
+  
+  public final void A(byte[] paramArrayOfByte, int paramInt)
+  {
+    if (paramInt > mbs - mcn)
+    {
+      mbs = (mcn + paramInt + 64);
+      byte[] arrayOfByte = new byte[mbs];
+      System.arraycopy(mby, 0, arrayOfByte, 0, mbt);
+      mby = arrayOfByte;
+    }
+    mco = paramInt;
+    System.arraycopy(paramArrayOfByte, 0, mby, mbt, paramInt);
+    mbt += paramInt;
   }
   
   public final int a(byte[] paramArrayOfByte1, int paramInt1, int paramInt2, byte[] paramArrayOfByte2)
   {
-    int i = j(paramArrayOfByte1, paramInt1, jNs);
+    int i = j(paramArrayOfByte1, paramInt1, mbE);
     if (i < 0) {}
     byte[] arrayOfByte;
     do
@@ -49,57 +63,57 @@ public class a
         paramInt1 = paramInt2 - (i - paramInt1);
         arrayOfByte = new byte[paramInt1];
         System.arraycopy(paramArrayOfByte1, i, arrayOfByte, 0, paramInt1);
-      } while (jOb >= paramInt1);
-      jOc = util.A(arrayOfByte, 2);
-    } while (jOb + jOc > paramInt1);
-    paramArrayOfByte1 = e.decrypt(arrayOfByte, jOb, jOc, paramArrayOfByte2);
+      } while (mcn >= paramInt1);
+      mco = util.E(arrayOfByte, 2);
+    } while (mcn + mco > paramInt1);
+    paramArrayOfByte1 = d.decrypt(arrayOfByte, mcn, mco, paramArrayOfByte2);
     if (paramArrayOfByte1 == null) {
       return 64521;
     }
-    if (jOb + paramArrayOfByte1.length > jNg)
+    if (mcn + paramArrayOfByte1.length > mbs)
     {
-      jNg = (jOb + paramArrayOfByte1.length);
-      jNm = new byte[jNg];
+      mbs = (mcn + paramArrayOfByte1.length);
+      mby = new byte[mbs];
     }
-    jNh = 0;
-    System.arraycopy(arrayOfByte, 0, jNm, 0, jOb);
-    jNh += jOb;
-    System.arraycopy(paramArrayOfByte1, 0, jNm, jNh, paramArrayOfByte1.length);
-    jNh += paramArrayOfByte1.length;
-    jOc = paramArrayOfByte1.length;
-    if (!aVE().booleanValue()) {
+    mbt = 0;
+    System.arraycopy(arrayOfByte, 0, mby, 0, mcn);
+    mbt += mcn;
+    System.arraycopy(paramArrayOfByte1, 0, mby, mbt, paramArrayOfByte1.length);
+    mbt += paramArrayOfByte1.length;
+    mco = paramArrayOfByte1.length;
+    if (!bot().booleanValue()) {
       return 64531;
     }
     return 0;
   }
   
-  public final byte[] aVC()
+  public final byte[] boo()
   {
-    byte[] arrayOfByte = new byte[jOc];
-    System.arraycopy(jNm, jOb, arrayOfByte, 0, jOc);
+    byte[] arrayOfByte = new byte[mbt];
+    System.arraycopy(mby, 0, arrayOfByte, 0, mbt);
     return arrayOfByte;
   }
   
-  public final void aVD()
+  public final byte[] bor()
   {
-    util.m(jNm, 2, jNh - jOb);
+    byte[] arrayOfByte = new byte[mco];
+    System.arraycopy(mby, mcn, arrayOfByte, 0, mco);
+    return arrayOfByte;
   }
   
-  public Boolean aVE()
+  public final void bos()
+  {
+    util.m(mby, 2, mbt - mcn);
+  }
+  
+  public Boolean bot()
   {
     return Boolean.valueOf(true);
   }
   
-  public final byte[] aVz()
-  {
-    byte[] arrayOfByte = new byte[jNh];
-    System.arraycopy(jNm, 0, arrayOfByte, 0, jNh);
-    return arrayOfByte;
-  }
-  
   public final int k(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
-    int i = j(paramArrayOfByte, paramInt1, jNs);
+    int i = j(paramArrayOfByte, paramInt1, mbE);
     if (i < 0) {}
     do
     {
@@ -107,45 +121,31 @@ public class a
       {
         return -1;
         paramInt1 = paramInt2 - (i - paramInt1);
-      } while (jOb >= paramInt1);
-      jOc = util.A(paramArrayOfByte, i + 2);
-    } while (jOb + jOc > paramInt1);
-    paramInt1 = jOb + jOc;
-    if (paramInt1 > jNg)
+      } while (mcn >= paramInt1);
+      mco = util.E(paramArrayOfByte, i + 2);
+    } while (mcn + mco > paramInt1);
+    paramInt1 = mcn + mco;
+    if (paramInt1 > mbs)
     {
-      jNg = (paramInt1 + 128);
-      jNm = new byte[jNg];
+      mbs = (paramInt1 + 128);
+      mby = new byte[mbs];
     }
-    jNh = paramInt1;
-    System.arraycopy(paramArrayOfByte, i, jNm, 0, paramInt1);
-    jNs = util.A(paramArrayOfByte, i);
-    jOc = (paramInt1 - jOb);
-    if (!aVE().booleanValue()) {
+    mbt = paramInt1;
+    System.arraycopy(paramArrayOfByte, i, mby, 0, paramInt1);
+    mbE = util.E(paramArrayOfByte, i);
+    mco = (paramInt1 - mcn);
+    if (!bot().booleanValue()) {
       return 64531;
     }
-    return jOb + i + jOc;
+    return mcn + i + mco;
   }
   
-  public final void pV(int paramInt)
+  public final void sL(int paramInt)
   {
-    util.m(jNm, jNh, paramInt);
-    jNh += 2;
-    util.m(jNm, jNh, 0);
-    jNh += 2;
-  }
-  
-  public final void w(byte[] paramArrayOfByte, int paramInt)
-  {
-    if (paramInt > jNg - jOb)
-    {
-      jNg = (jOb + paramInt + 64);
-      byte[] arrayOfByte = new byte[jNg];
-      System.arraycopy(jNm, 0, arrayOfByte, 0, jNh);
-      jNm = arrayOfByte;
-    }
-    jOc = paramInt;
-    System.arraycopy(paramArrayOfByte, 0, jNm, jNh, paramInt);
-    jNh += paramInt;
+    util.m(mby, mbt, paramInt);
+    mbt += 2;
+    util.m(mby, mbt, 0);
+    mbt += 2;
   }
 }
 

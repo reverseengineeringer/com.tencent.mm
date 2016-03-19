@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/ac;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public auR:Lcom/tencent/mm/d/a/ac$a;
+.field public ats:Lcom/tencent/mm/d/a/ac$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/ac;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ac;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/ac;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ac;->arR:Z
 
     return-void
 .end method
@@ -42,23 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/ac$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/ac$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/ac;->auR:Lcom/tencent/mm/d/a/ac$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/ac;->ats:Lcom/tencent/mm/d/a/ac$a;
 
     .line 8
-    const-string/jumbo v0, "DealQBarStr"
+    const-string/jumbo v0, "CheckF2FRemoteVideoOpen"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/ac;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/ac;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/ac;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ac;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ac;->jUI:Z
 
     return-void
 .end method

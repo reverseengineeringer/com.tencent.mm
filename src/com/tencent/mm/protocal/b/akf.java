@@ -1,75 +1,62 @@
 package com.tencent.mm.protocal.b;
 
-import a.a.a.b;
 import java.util.LinkedList;
 
 public final class akf
-  extends adm
+  extends ali
 {
-  public int hDv;
-  public String hDw;
-  public String hQF;
-  public String hQG;
+  public int asc;
+  public int dee;
+  public String dkU;
+  public String jGk;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLQ == null) {
-        throw new b("Not all required fields were included: BaseResponse");
-      }
-      if (hLQ != null)
+      if (jGS != null)
       {
-        paramVarArgs.bN(1, hLQ.kS());
-        hLQ.a(paramVarArgs);
+        paramVarArgs.cj(1, jGS.kn());
+        jGS.a(paramVarArgs);
       }
-      paramVarArgs.bM(2, hDv);
-      if (hDw != null) {
-        paramVarArgs.U(3, hDw);
+      paramVarArgs.ci(2, dee);
+      if (jGk != null) {
+        paramVarArgs.d(3, jGk);
       }
-      if (hQF != null) {
-        paramVarArgs.U(4, hQF);
+      if (dkU != null) {
+        paramVarArgs.d(4, dkU);
       }
-      if (hQG != null) {
-        paramVarArgs.U(5, hQG);
-      }
+      paramVarArgs.ci(5, asc);
       return 0;
     }
     if (paramInt == 1) {
-      if (hLQ == null) {
-        break label509;
+      if (jGS == null) {
+        break label457;
       }
     }
-    label509:
-    for (paramInt = a.a.a.a.bJ(1, hLQ.kS()) + 0;; paramInt = 0)
+    label457:
+    for (paramInt = a.a.a.a.ch(1, jGS.kn()) + 0;; paramInt = 0)
     {
-      int i = paramInt + a.a.a.a.bI(2, hDv);
+      int i = paramInt + a.a.a.a.cg(2, dee);
       paramInt = i;
-      if (hDw != null) {
-        paramInt = i + a.a.a.b.b.a.T(3, hDw);
+      if (jGk != null) {
+        paramInt = i + a.a.a.b.b.a.e(3, jGk);
       }
       i = paramInt;
-      if (hQF != null) {
-        i = paramInt + a.a.a.b.b.a.T(4, hQF);
+      if (dkU != null) {
+        i = paramInt + a.a.a.b.b.a.e(4, dkU);
       }
-      paramInt = i;
-      if (hQG != null) {
-        paramInt = i + a.a.a.b.b.a.T(5, hQG);
-      }
-      return paramInt;
+      return i + a.a.a.a.cg(5, asc);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = adm.a(paramVarArgs); paramInt > 0; paramInt = adm.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = ali.a(paramVarArgs); paramInt > 0; paramInt = ali.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
-        if (hLQ != null) {
-          break;
-        }
-        throw new b("Not all required fields were included: BaseResponse");
+        break;
       }
       if (paramInt == 3)
       {
@@ -81,29 +68,29 @@ public final class akf
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
           i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new ck();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (boolean bool = true; bool; bool = ((ck)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adm.a((a.a.a.a.a)localObject2))) {}
-            hLQ = ((ck)localObject1);
+            localObject1 = new dc();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (boolean bool = true; bool; bool = ((dc)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, ali.a((a.a.a.a.a)localObject2))) {}
+            jGS = ((dc)localObject1);
             paramInt += 1;
           }
         case 2: 
-          hDv = jMD.aVp();
+          dee = maU.jC();
           return 0;
         case 3: 
-          hDw = jMD.readString();
+          jGk = maU.readString();
           return 0;
         case 4: 
-          hQF = jMD.readString();
+          dkU = maU.readString();
           return 0;
         }
-        hQG = jMD.readString();
+        asc = maU.jC();
         return 0;
       }
       return -1;

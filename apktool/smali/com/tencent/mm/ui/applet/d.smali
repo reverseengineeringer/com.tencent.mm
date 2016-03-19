@@ -1,102 +1,105 @@
-.class final Lcom/tencent/mm/ui/applet/d;
+.class public final Lcom/tencent/mm/ui/applet/d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/GestureDetector$OnGestureListener;
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/ui/applet/d$a;
+    }
+.end annotation
 
 
-# instance fields
-.field final synthetic iAB:Lcom/tencent/mm/ui/applet/b;
+# static fields
+.field private static kzS:I
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/applet/b;)V
+.method static constructor <clinit>()V
+    .locals 1
+
+    .prologue
+    .line 37
+    const/4 v0, 0x0
+
+    sput v0, Lcom/tencent/mm/ui/applet/d;->kzS:I
+
+    return-void
+.end method
+
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 122
-    iput-object p1, p0, Lcom/tencent/mm/ui/applet/d;->iAB:Lcom/tencent/mm/ui/applet/b;
-
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 49
     return-void
 .end method
 
-
-# virtual methods
-.method public final onDown(Landroid/view/MotionEvent;)Z
-    .locals 1
+.method static synthetic bck()I
+    .locals 2
 
     .prologue
-    .line 126
-    const/4 v0, 0x0
+    .line 34
+    sget v0, Lcom/tencent/mm/ui/applet/d;->kzS:I
+
+    add-int/lit8 v1, v0, -0x1
+
+    sput v1, Lcom/tencent/mm/ui/applet/d;->kzS:I
 
     return v0
 .end method
 
-.method public final onFling(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
-    .locals 1
-
-    .prologue
-    .line 150
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
-.method public final onLongPress(Landroid/view/MotionEvent;)V
-    .locals 0
-
-    .prologue
-    .line 146
-    return-void
-.end method
-
-.method public final onScroll(Landroid/view/MotionEvent;Landroid/view/MotionEvent;FF)Z
+.method public static eg(Landroid/content/Context;)V
     .locals 3
 
     .prologue
-    const/4 v1, 0x0
+    .line 42
+    sget v0, Lcom/tencent/mm/ui/applet/d;->kzS:I
 
-    .line 140
-    iget-object v2, p0, Lcom/tencent/mm/ui/applet/d;->iAB:Lcom/tencent/mm/ui/applet/b;
+    if-lez v0, :cond_0
 
-    const/4 v0, 0x0
-
-    cmpl-float v0, p4, v0
-
-    if-ltz v0, :cond_0
-
-    move v0, v1
-
+    .line 47
     :goto_0
-    iput v0, v2, Lcom/tencent/mm/ui/applet/b;->direction:I
+    return-void
 
-    .line 141
-    return v1
-
-    .line 140
+    .line 43
     :cond_0
-    const/4 v0, 0x1
+    invoke-static {p0}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
+
+    move-result-object v0
+
+    const v1, 0x7f0a0089
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v0, v1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 44
+    new-instance v1, Lcom/tencent/mm/ui/applet/d$a;
+
+    invoke-direct {v1, p0, v0}, Lcom/tencent/mm/ui/applet/d$a;-><init>(Landroid/content/Context;Landroid/view/View;)V
+
+    .line 45
+    iget-object v0, v1, Lcom/tencent/mm/ui/applet/d$a;->all:Landroid/view/WindowManager;
+
+    iget-object v2, v1, Lcom/tencent/mm/ui/applet/d$a;->alk:Landroid/widget/FrameLayout;
+
+    iget-object v1, v1, Lcom/tencent/mm/ui/applet/d$a;->alm:Landroid/view/WindowManager$LayoutParams;
+
+    invoke-interface {v0, v2, v1}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 46
+    sget v0, Lcom/tencent/mm/ui/applet/d;->kzS:I
+
+    add-int/lit8 v0, v0, 0x1
+
+    sput v0, Lcom/tencent/mm/ui/applet/d;->kzS:I
 
     goto :goto_0
-.end method
-
-.method public final onShowPress(Landroid/view/MotionEvent;)V
-    .locals 0
-
-    .prologue
-    .line 131
-    return-void
-.end method
-
-.method public final onSingleTapUp(Landroid/view/MotionEvent;)Z
-    .locals 1
-
-    .prologue
-    .line 135
-    const/4 v0, 0x0
-
-    return v0
 .end method

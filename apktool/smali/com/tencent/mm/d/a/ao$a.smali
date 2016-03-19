@@ -15,11 +15,7 @@
 
 
 # instance fields
-.field public avo:Ljava/lang/String;
-
-.field public avp:I
-
-.field public avq:Lcom/tencent/mm/q/j;
+.field public anP:I
 
 
 # direct methods
@@ -30,10 +26,10 @@
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
+    .line 15
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/d/a/ao$a;->avp:I
+    iput v0, p0, Lcom/tencent/mm/d/a/ao$a;->anP:I
 
     return-void
 .end method

@@ -8,21 +8,20 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.MeasureSpec;
 import android.widget.TextView;
-import com.tencent.mm.a.f;
-import com.tencent.mm.a.p;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.R.b;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.LinkedList;
 
 public class MMSingelLinePanel
   extends MMTagPanel
 {
-  private int iCT = 0;
-  private int iCU = 0;
-  private LinkedList iCV = new LinkedList();
-  private boolean iHr = true;
-  private TextView iHs;
-  private int iHt = 0;
-  private int iHu = 0;
+  private int kBW = 0;
+  private int kBX = 0;
+  private LinkedList kBY = new LinkedList();
+  private boolean kGE = true;
+  private TextView kGF;
+  private int kGG = 0;
+  private int kGH = 0;
   
   static
   {
@@ -42,11 +41,11 @@ public class MMSingelLinePanel
   public MMSingelLinePanel(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.FlowLayout);
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.FlowLayout);
     try
     {
-      iCT = paramContext.getDimensionPixelSize(0, 0);
-      iCU = paramContext.getDimensionPixelSize(1, 0);
+      kBW = paramContext.getDimensionPixelSize(0, 0);
+      kBX = paramContext.getDimensionPixelSize(1, 0);
       return;
     }
     finally
@@ -55,14 +54,14 @@ public class MMSingelLinePanel
     }
   }
   
-  public final void aMW()
+  public final void bcM()
   {
-    super.aMW();
-    iHs = new TextView(getContext());
-    iHs.setText("...");
-    iHs.setTextColor(getResources().getColor(a.f.wechat_green));
-    iHs.setLayoutParams(generateDefaultLayoutParams());
-    addView(iHs);
+    super.bcM();
+    kGF = new TextView(getContext());
+    kGF.setText("...");
+    kGF.setTextColor(getResources().getColor(2131231161));
+    kGF.setLayoutParams(generateDefaultLayoutParams());
+    addView(kGF);
   }
   
   public boolean dispatchTouchEvent(MotionEvent paramMotionEvent)
@@ -84,10 +83,10 @@ public class MMSingelLinePanel
     int m;
     View localView;
     int n;
-    if (iHr)
+    if (kGE)
     {
       i1 = getChildCount();
-      int i2 = iHt;
+      int i2 = kGG;
       k = getPaddingLeft();
       j = getPaddingTop();
       i = 0;
@@ -97,7 +96,7 @@ public class MMSingelLinePanel
       if (m < i1)
       {
         localView = getChildAt(m);
-        if ((localView.getVisibility() == 8) || (localView == iHs)) {
+        if ((localView.getVisibility() == 8) || (localView == kGF)) {
           break label551;
         }
         int i3 = localView.getMeasuredWidth();
@@ -106,8 +105,8 @@ public class MMSingelLinePanel
           break label534;
         }
         n = getPaddingLeft();
-        int i5 = ((Integer)iCV.get(paramInt2)).intValue();
-        int i6 = iCU;
+        int i5 = ((Integer)kBY.get(paramInt2)).intValue();
+        int i6 = kBX;
         k = paramInt2 + 1;
         paramInt2 = j + (i5 + i6);
         j = n;
@@ -116,7 +115,7 @@ public class MMSingelLinePanel
           break label517;
         }
         localView.layout(j, paramInt2 + 0, j + i3, paramInt2 + 0 + i4);
-        paramInt4 = iCT + i3 + j;
+        paramInt4 = kBW + i3 + j;
         i = paramInt2;
         j = paramInt4;
       }
@@ -132,16 +131,16 @@ public class MMSingelLinePanel
       k = m;
       m = n;
       break;
-      if (iHs != null)
+      if (kGF != null)
       {
         if (paramInt2 > 0) {
-          iHs.layout(i, paramInt4, iHt + i, iHu + paramInt4);
+          kGF.layout(i, paramInt4, kGG + i, kGH + paramInt4);
         }
       }
       else {
         return;
       }
-      iHs.layout(0, 0, 0, 0);
+      kGF.layout(0, 0, 0, 0);
       return;
       i1 = getChildCount();
       i = getPaddingLeft();
@@ -160,7 +159,7 @@ public class MMSingelLinePanel
           n = i;
           m = paramInt4;
           k = paramInt2;
-          if (localView != iHs)
+          if (localView != kGF)
           {
             k = localView.getMeasuredWidth();
             m = localView.getMeasuredHeight();
@@ -168,7 +167,7 @@ public class MMSingelLinePanel
               break label514;
             }
             i = getPaddingLeft();
-            paramInt2 += ((Integer)iCV.get(paramInt4)).intValue() + iCU;
+            paramInt2 += ((Integer)kBY.get(paramInt4)).intValue() + kBX;
             paramInt4 += 1;
           }
         }
@@ -176,9 +175,9 @@ public class MMSingelLinePanel
       label514:
       for (;;)
       {
-        n = (((Integer)iCV.get(paramInt4)).intValue() - m) / 2;
+        n = (((Integer)kBY.get(paramInt4)).intValue() - m) / 2;
         localView.layout(i, paramInt2 + n, i + k, n + paramInt2 + m);
-        n = iCT + k + i;
+        n = kBW + k + i;
         k = paramInt2;
         m = paramInt4;
         j += 1;
@@ -216,7 +215,7 @@ public class MMSingelLinePanel
     int i = View.MeasureSpec.getSize(paramInt1) - getPaddingLeft() - getPaddingRight();
     int i6 = View.MeasureSpec.getSize(paramInt2) - getPaddingTop() - getPaddingBottom();
     int i7 = getChildCount();
-    iCV.clear();
+    kBY.clear();
     int n;
     int m;
     int j;
@@ -228,16 +227,16 @@ public class MMSingelLinePanel
     if (View.MeasureSpec.getMode(paramInt2) == Integer.MIN_VALUE)
     {
       n = View.MeasureSpec.makeMeasureSpec(i6, Integer.MIN_VALUE);
-      if ((iHr) && (iHs != null))
+      if ((kGE) && (kGF != null))
       {
-        iHs.measure(View.MeasureSpec.makeMeasureSpec(i, Integer.MIN_VALUE), n);
-        iHt = iHs.getMeasuredWidth();
-        iHu = iHs.getMeasuredHeight();
-        t.d("!44@/B4Tb64lLpIWTT1+V73NGcOwBivXqfVq8PGFAIyQgGU=", "mEllipsisWidth %d", new Object[] { Integer.valueOf(iHt) });
+        kGF.measure(View.MeasureSpec.makeMeasureSpec(i, Integer.MIN_VALUE), n);
+        kGG = kGF.getMeasuredWidth();
+        kGH = kGF.getMeasuredHeight();
+        u.d("!44@/B4Tb64lLpIWTT1+V73NGcOwBivXqfVq8PGFAIyQgGU=", "mEllipsisWidth %d", new Object[] { Integer.valueOf(kGG) });
       }
       int i1 = i;
-      if (iHr) {
-        i1 = i - iHt;
+      if (kGE) {
+        i1 = i - kGG;
       }
       m = 0;
       i = 0;
@@ -260,12 +259,12 @@ public class MMSingelLinePanel
       if (k + i8 > i1)
       {
         i3 = 0;
-        m = j + (iCU + i);
-        iCV.add(Integer.valueOf(i));
+        m = j + (kBX + i);
+        kBY.add(Integer.valueOf(i));
         i4 = 0;
       }
       i = Math.max(i4, localView.getMeasuredHeight());
-      j = i3 + (iCT + i8);
+      j = i3 + (kBW + i8);
       k = m;
       m = i;
       i = i5;
@@ -284,8 +283,8 @@ public class MMSingelLinePanel
       n = View.MeasureSpec.makeMeasureSpec(0, 0);
       break;
       label368:
-      iCV.add(Integer.valueOf(i));
-      if (iHr)
+      kBY.add(Integer.valueOf(i));
+      if (kGE)
       {
         getPaddingTop();
         getPaddingBottom();
@@ -317,11 +316,11 @@ public class MMSingelLinePanel
   
   public void setSingleLine(boolean paramBoolean)
   {
-    iHr = paramBoolean;
-    iHs = new TextView(getContext());
-    iHs.setText("...");
-    iHs.setLayoutParams(generateDefaultLayoutParams());
-    addView(iHs);
+    kGE = paramBoolean;
+    kGF = new TextView(getContext());
+    kGF.setText("...");
+    kGF.setLayoutParams(generateDefaultLayoutParams());
+    addView(kGF);
   }
 }
 

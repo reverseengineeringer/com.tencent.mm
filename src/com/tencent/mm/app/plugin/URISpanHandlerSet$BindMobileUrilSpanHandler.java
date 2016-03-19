@@ -3,9 +3,9 @@ package com.tencent.mm.app.plugin;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.bindmobile.BindMContactIntroUI;
 
@@ -18,42 +18,42 @@ class URISpanHandlerSet$BindMobileUrilSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     if (type == 5)
     {
-      if (paramf != null) {
-        paramf.a(paramah);
+      if (paramb != null) {
+        paramb.a(paramg);
       }
-      MMWizardActivity.q(URISpanHandlerSet.a(apd), new Intent(URISpanHandlerSet.a(apd), BindMContactIntroUI.class));
+      MMWizardActivity.v(URISpanHandlerSet.a(ang), new Intent(URISpanHandlerSet.a(ang), BindMContactIntroUI.class));
       return true;
     }
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     if (paramString.equals("weixin://setting/bindphone"))
     {
-      paramString = new Intent(URISpanHandlerSet.a(apd), BindMContactIntroUI.class);
-      if ((URISpanHandlerSet.a(apd) instanceof Service)) {
+      paramString = new Intent(URISpanHandlerSet.a(ang), BindMContactIntroUI.class);
+      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
         paramString.addFlags(268435456);
       }
-      MMWizardActivity.q(URISpanHandlerSet.a(apd), paramString);
+      MMWizardActivity.v(URISpanHandlerSet.a(ang), paramString);
       return true;
     }
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     if (paramString.trim().startsWith("weixin://setting/bindphone")) {
-      return new ah(paramString, 5, null);
+      return new g(paramString, 5, null);
     }
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[] { 5 };
   }

@@ -4,11 +4,12 @@ import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class CustomViewPager
   extends ViewPager
 {
-  private boolean iL = true;
+  private boolean hP = true;
   
   public CustomViewPager(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -17,7 +18,7 @@ public class CustomViewPager
   
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
-    if (!iL) {
+    if (!hP) {
       return false;
     }
     return super.onInterceptTouchEvent(paramMotionEvent);
@@ -25,15 +26,24 @@ public class CustomViewPager
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
-    if (!iL) {
+    if (!hP) {
       return false;
     }
-    return super.onTouchEvent(paramMotionEvent);
+    try
+    {
+      boolean bool = super.onTouchEvent(paramMotionEvent);
+      return bool;
+    }
+    catch (Exception paramMotionEvent)
+    {
+      u.printErrStackTrace("!44@/B4Tb64lLpKAr1qZju0bSpWJ7plvP2lewUUwPO20jzI=", paramMotionEvent, "get a Exception", new Object[0]);
+    }
+    return false;
   }
   
   public void setCanSlide(boolean paramBoolean)
   {
-    iL = paramBoolean;
+    hP = paramBoolean;
   }
 }
 

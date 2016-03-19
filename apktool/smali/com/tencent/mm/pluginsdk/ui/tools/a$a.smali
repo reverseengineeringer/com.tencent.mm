@@ -15,15 +15,15 @@
 
 
 # static fields
-.field public static final enum hcN:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+.field public static final enum iQE:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
-.field public static final enum hcO:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+.field public static final enum iQF:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
-.field public static final enum hcP:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+.field public static final enum iQG:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
-.field public static final enum hcQ:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+.field public static final enum iQH:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
-.field private static final synthetic hcR:[Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+.field private static final synthetic iQI:[Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
 
 # direct methods
@@ -39,64 +39,64 @@
 
     const/4 v2, 0x0
 
-    .line 353
+    .line 354
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     const-string/jumbo v1, "NOT_INSTALL"
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcN:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQE:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
-    .line 355
+    .line 356
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     const-string/jumbo v1, "INSTALL_BUT_NEED_UPDATE"
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcO:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQF:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
-    .line 357
+    .line 358
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     const-string/jumbo v1, "INSTALL_BUT_NOT_SUPPORT"
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcP:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQG:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
-    .line 358
+    .line 359
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     const-string/jumbo v1, "INSTALL_AND_SUPPORT"
 
     invoke-direct {v0, v1, v5}, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcQ:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQH:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
-    .line 352
+    .line 353
     const/4 v0, 0x4
 
     new-array v0, v0, [Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcN:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQE:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcO:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQF:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcP:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQG:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcQ:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQH:Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     aput-object v1, v0, v5
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcR:[Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQI:[Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     return-void
 .end method
@@ -105,7 +105,7 @@
     .locals 0
 
     .prologue
-    .line 352
+    .line 353
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -115,7 +115,7 @@
     .locals 1
 
     .prologue
-    .line 352
+    .line 353
     const-class v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -131,8 +131,8 @@
     .locals 1
 
     .prologue
-    .line 352
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->hcR:[Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
+    .line 353
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->iQI:[Lcom/tencent/mm/pluginsdk/ui/tools/a$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/pluginsdk/ui/tools/a$a;->clone()Ljava/lang/Object;
 

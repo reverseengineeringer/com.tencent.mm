@@ -13,20 +13,38 @@ import android.os.Parcelable.Creator;
 import android.util.AttributeSet;
 import android.view.View.BaseSavedState;
 import android.widget.CompoundButton;
-import com.tencent.mm.a.f;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MMPinProgressBtn
   extends CompoundButton
 {
-  private int dH;
-  private Paint jAH;
-  private Paint jAI;
-  private RectF jAJ = new RectF();
-  private int jAK;
-  private Runnable jAL = new b(this);
-  private int rp;
+  private int cU;
+  private Paint lFg;
+  private Paint lFh;
+  private RectF lFi = new RectF();
+  private int lFj;
+  private Runnable lFk = new Runnable()
+  {
+    public final void run()
+    {
+      if (getVisibility() != 0)
+      {
+        u.i("!44@/B4Tb64lLpKIBJ9Tuq9FD5Dg5gDMesCqWRQeWfcTBvw=", "cur progress bar not visiable, stop auto pregress");
+        return;
+      }
+      MMPinProgressBtn.a(MMPinProgressBtn.this);
+      if (MMPinProgressBtn.b(MMPinProgressBtn.this) >= MMPinProgressBtn.c(MMPinProgressBtn.this))
+      {
+        MMPinProgressBtn.d(MMPinProgressBtn.this);
+        u.i("!44@/B4Tb64lLpKIBJ9Tuq9FD5Dg5gDMesCqWRQeWfcTBvw=", "match auto progress max, return");
+        return;
+      }
+      invalidate();
+      postDelayed(MMPinProgressBtn.e(MMPinProgressBtn.this), 200L);
+    }
+  };
+  private int qs;
   
   public MMPinProgressBtn(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -42,64 +60,64 @@ public class MMPinProgressBtn
   
   private void a(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
-    rp = 100;
-    dH = 0;
+    qs = 100;
+    cU = 0;
     Resources localResources = getResources();
-    int m = localResources.getColor(a.f.pin_progress_default_circle_color);
-    int k = localResources.getColor(a.f.pin_progress_default_progress_color);
+    int m = localResources.getColor(2131231205);
+    int k = localResources.getColor(2131231206);
     int j = k;
     int i = m;
     if (paramAttributeSet != null)
     {
-      paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.MMPinProgressBtn, paramInt, 0);
-      rp = paramContext.getInteger(2, rp);
-      dH = paramContext.getInteger(1, dH);
+      paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.MMPinProgressBtn, paramInt, 0);
+      qs = paramContext.getInteger(2, qs);
+      cU = paramContext.getInteger(1, cU);
       i = paramContext.getColor(3, m);
       j = paramContext.getColor(4, k);
       paramContext.recycle();
     }
-    jAK = localResources.getDimensionPixelSize(a.g.pin_progress_inner_size);
-    jAH = new Paint();
-    jAH.setColor(i);
-    jAH.setStyle(Paint.Style.STROKE);
-    jAH.setStrokeWidth(2.0F);
-    jAH.setAntiAlias(true);
-    jAI = new Paint();
-    jAI.setColor(j);
-    jAI.setAntiAlias(true);
+    lFj = localResources.getDimensionPixelSize(2131034666);
+    lFg = new Paint();
+    lFg.setColor(i);
+    lFg.setStyle(Paint.Style.STROKE);
+    lFg.setStrokeWidth(2.0F);
+    lFg.setAntiAlias(true);
+    lFh = new Paint();
+    lFh.setColor(j);
+    lFh.setAntiAlias(true);
     setClickable(false);
   }
   
-  public final void aTe()
+  public final void bjH()
   {
-    removeCallbacks(jAL);
-    post(jAL);
+    removeCallbacks(lFk);
+    post(lFk);
   }
   
   public int getMax()
   {
-    return rp;
+    return qs;
   }
   
   public int getProgress()
   {
-    return dH;
+    return cU;
   }
   
   protected void onDraw(Canvas paramCanvas)
   {
     super.onDraw(paramCanvas);
-    jAJ.set(1.0F, 1.0F, jAK - 1.0F, jAK - 1.0F);
-    jAJ.offset((getWidth() - jAK) / 2, (getHeight() - jAK) / 2);
-    paramCanvas.drawArc(jAJ, 0.0F, 360.0F, true, jAH);
-    jAJ.set(5.0F, 5.0F, jAK - 5.0F, jAK - 5.0F);
-    jAJ.offset((getWidth() - jAK) / 2, (getHeight() - jAK) / 2);
-    paramCanvas.drawArc(jAJ, -90.0F, dH * 360 / rp, true, jAI);
+    lFi.set(1.0F, 1.0F, lFj - 1.0F, lFj - 1.0F);
+    lFi.offset((getWidth() - lFj) / 2, (getHeight() - lFj) / 2);
+    paramCanvas.drawArc(lFi, 0.0F, 360.0F, true, lFg);
+    lFi.set(5.0F, 5.0F, lFj - 5.0F, lFj - 5.0F);
+    lFi.offset((getWidth() - lFj) / 2, (getHeight() - lFj) / 2);
+    paramCanvas.drawArc(lFi, -90.0F, cU * 360 / qs, true, lFh);
   }
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
-    setMeasuredDimension(resolveSize(jAK, paramInt1), resolveSize(jAK, paramInt2));
+    setMeasuredDimension(resolveSize(lFj, paramInt1), resolveSize(lFj, paramInt2));
   }
   
   public void onRestoreInstanceState(Parcelable paramParcelable)
@@ -111,8 +129,8 @@ public class MMPinProgressBtn
     }
     paramParcelable = (SavedState)paramParcelable;
     super.onRestoreInstanceState(paramParcelable.getSuperState());
-    rp = SavedState.a(paramParcelable);
-    dH = SavedState.b(paramParcelable);
+    qs = SavedState.a(paramParcelable);
+    cU = SavedState.b(paramParcelable);
   }
   
   public Parcelable onSaveInstanceState()
@@ -121,8 +139,8 @@ public class MMPinProgressBtn
     if (isSaveEnabled())
     {
       localObject = new SavedState((Parcelable)localObject);
-      SavedState.a((SavedState)localObject, rp);
-      SavedState.b((SavedState)localObject, dH);
+      SavedState.a((SavedState)localObject, qs);
+      SavedState.b((SavedState)localObject, cU);
       return (Parcelable)localObject;
     }
     return (Parcelable)localObject;
@@ -130,29 +148,29 @@ public class MMPinProgressBtn
   
   public void setMax(int paramInt)
   {
-    rp = Math.max(0, paramInt);
+    qs = Math.max(0, paramInt);
     invalidate();
   }
   
   public void setProgress(int paramInt)
   {
-    dH = Math.max(0, paramInt);
-    dH = Math.min(paramInt, rp);
+    cU = Math.max(0, paramInt);
+    cU = Math.min(paramInt, qs);
     invalidate();
   }
   
   public static class SavedState
     extends View.BaseSavedState
   {
-    public static final Parcelable.Creator CREATOR = new c();
-    private int dH;
-    private int rp;
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+    private int cU;
+    private int qs;
     
     private SavedState(Parcel paramParcel)
     {
       super();
-      dH = paramParcel.readInt();
-      rp = paramParcel.readInt();
+      cU = paramParcel.readInt();
+      qs = paramParcel.readInt();
     }
     
     public SavedState(Parcelable paramParcelable)
@@ -163,8 +181,8 @@ public class MMPinProgressBtn
     public void writeToParcel(Parcel paramParcel, int paramInt)
     {
       super.writeToParcel(paramParcel, paramInt);
-      paramParcel.writeInt(dH);
-      paramParcel.writeInt(rp);
+      paramParcel.writeInt(cU);
+      paramParcel.writeInt(qs);
     }
   }
 }

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bq
-  extends a.c
+  extends a.e
 {
   public a$bq()
   {
-    super("openUrlByExtBrowser", "open_url_by_ext_browser", 55, false);
+    super("hideOptionMenu", "", 14, false);
   }
 }
 

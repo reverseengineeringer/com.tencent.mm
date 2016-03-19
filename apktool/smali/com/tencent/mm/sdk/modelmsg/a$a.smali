@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/sdk/modelmsg/a$a;
-.super Lcom/tencent/mm/sdk/d/a;
+.super Lcom/tencent/mm/sdk/e/a;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public bId:Ljava/lang/String;
+.field public bNO:Ljava/lang/String;
 
-.field public bKU:Ljava/lang/String;
+.field public bXM:Ljava/lang/String;
 
 .field public username:Ljava/lang/String;
 
@@ -28,7 +28,7 @@
 
     .prologue
     .line 51
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/d/a;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/e/a;-><init>()V
 
     .line 53
     return-void
@@ -46,24 +46,24 @@
     return v0
 .end method
 
-.method public final m(Landroid/os/Bundle;)V
+.method public final l(Landroid/os/Bundle;)V
     .locals 2
 
     .prologue
     .line 74
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/d/a;->m(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/a;->l(Landroid/os/Bundle;)V
 
     .line 75
     const-string/jumbo v0, "_wxapi_getmessage_req_lang"
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/a$a;->bId:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/a$a;->bXM:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 76
     const-string/jumbo v0, "_wxapi_getmessage_req_country"
 
-    iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/a$a;->bKU:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/a$a;->bNO:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -71,12 +71,12 @@
     return-void
 .end method
 
-.method public final n(Landroid/os/Bundle;)V
+.method public final m(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
     .line 81
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/d/a;->n(Landroid/os/Bundle;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/a;->m(Landroid/os/Bundle;)V
 
     .line 82
     const-string/jumbo v0, "_wxapi_getmessage_req_lang"
@@ -85,7 +85,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/a$a;->bId:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/a$a;->bXM:Ljava/lang/String;
 
     .line 83
     const-string/jumbo v0, "_wxapi_getmessage_req_country"
@@ -94,7 +94,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/a$a;->bKU:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/a$a;->bNO:Ljava/lang/String;
 
     .line 84
     return-void

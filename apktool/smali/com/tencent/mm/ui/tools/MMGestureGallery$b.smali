@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aAb()V
+.method public abstract ahv()V
 .end method

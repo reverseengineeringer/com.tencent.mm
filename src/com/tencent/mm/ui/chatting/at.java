@@ -1,83 +1,333 @@
 package com.tencent.mm.ui.chatting;
 
+import android.app.Activity;
 import android.content.Context;
-import com.tencent.mm.a.n;
-import com.tencent.mm.d.a.gb;
-import com.tencent.mm.model.br;
-import com.tencent.mm.plugin.report.service.j;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.ax;
-import com.tencent.mm.sdk.platformtools.ax.a;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.bn;
-import com.tencent.mm.ui.base.h;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Set;
+import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.Rect;
+import android.graphics.drawable.ColorDrawable;
+import android.graphics.drawable.Drawable;
+import android.os.Build.VERSION;
+import android.os.Looper;
+import android.util.DisplayMetrics;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnHoverListener;
+import android.view.View.OnTouchListener;
+import android.view.Window;
+import android.widget.ImageView;
+import com.tencent.mm.platformtools.t;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.base.o;
 
 public final class at
 {
-  public static void a(Context paramContext, Set paramSet, ny paramny)
+  public static b kTC = new b();
+  
+  public static void aD(View paramView)
   {
-    if (paramContext == null)
-    {
-      t.w("!44@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXeAKxqz/PXGE=", "do delete msg fail, context is null");
-      return;
+    Object localObject = kTC;
+    if ((paramView == null) || (localObject == null)) {
+      u.w("!56@/B4Tb64lLpLHJwTl6U1PaxsGdAoY4PefA4rSHuprks+kQc95WkyTbQ==", "view or callback is null.");
     }
-    if ((paramSet == null) || (paramSet.isEmpty()))
+    do
     {
-      t.w("!44@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXeAKxqz/PXGE=", "do delete msg fail, select ids is empty");
-      return;
-    }
-    paramContext.getString(a.n.app_tip);
-    paramContext = h.a(paramContext, paramContext.getString(a.n.deleting_message), false, null);
-    gp.iXq.c(new a(paramSet, paramContext, paramny));
-    j.eJZ.f(10811, new Object[] { Integer.valueOf(4), Integer.valueOf(paramSet.size()) });
+      do
+      {
+        return;
+      } while (Build.VERSION.SDK_INT < 14);
+      dn localdn = dn.bgi();
+      if ((Build.VERSION.SDK_INT >= 14) && (ldd == null)) {
+        ldd = new dn.a((dn.b)localObject);
+      }
+      localObject = ldd;
+    } while ((localObject == null) || (Build.VERSION.SDK_INT < 14) || (!(localObject instanceof View.OnHoverListener)));
+    paramView.setOnHoverListener((View.OnHoverListener)localObject);
   }
   
-  private static final class a
-    implements ax.a
+  public static void dismiss()
   {
-    private Set iTj;
-    private bn iTk;
-    private ny iTl;
-    
-    public a(Set paramSet, bn parambn, ny paramny)
+    try
     {
-      iTj = paramSet;
-      iTk = parambn;
-      iTl = paramny;
-    }
-    
-    public final boolean ud()
-    {
-      Object localObject = iTj;
-      LinkedList localLinkedList = new LinkedList();
-      localObject = ((Set)localObject).iterator();
-      while (((Iterator)localObject).hasNext())
-      {
-        Long localLong = (Long)((Iterator)localObject).next();
-        localLinkedList.add(localLong);
-        gb localgb = new gb();
-        aDl.type = 3;
-        aDl.axb = localLong.longValue();
-        a.hXQ.g(localgb);
+      if (kTC != null) {
+        b.a(kTC);
       }
-      br.l(localLinkedList);
-      return true;
+      return;
+    }
+    catch (Exception localException)
+    {
+      u.e("!64@/B4Tb64lLpKwUcOR+EdWcgUrCDYYt5XKNxI73I2a4RomBdAK4qpVVWMkFHlOIfex", "exception in dismiss, %s", new Object[] { localException.getMessage() });
+    }
+  }
+  
+  public static final class a
+    implements View.OnTouchListener
+  {
+    private int dc;
+    
+    public a()
+    {
+      this(Color.argb(255, 136, 136, 136));
     }
     
-    public final boolean ue()
+    private a(int paramInt)
     {
-      if (iTk != null)
+      dc = paramInt;
+    }
+    
+    public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+    {
+      int i = paramMotionEvent.getAction();
+      if ((paramView instanceof ImageView))
       {
-        iTk.dismiss();
-        if (iTl != null) {
-          iTl.od(ny.a.jcj);
+        paramView = ((ImageView)paramView).getDrawable();
+        if (paramView != null)
+        {
+          if (i != 0) {
+            break label49;
+          }
+          paramView.setColorFilter(dc, PorterDuff.Mode.MULTIPLY);
         }
       }
-      return true;
+      for (;;)
+      {
+        return false;
+        paramView = paramView.getBackground();
+        break;
+        label49:
+        if ((i == 3) || (i == 1)) {
+          paramView.clearColorFilter();
+        }
+      }
+    }
+  }
+  
+  public static final class b
+    implements View.OnClickListener, View.OnTouchListener, dn.b
+  {
+    private View cRI;
+    private af coj;
+    private int gFu;
+    private o kTD;
+    private View kTE;
+    private View kTF;
+    private int kTG;
+    private int kTH;
+    private int kTI;
+    private int kTJ;
+    private int kTK;
+    private boolean kTL;
+    private at.a kTM = new at.a();
+    private View.OnTouchListener kTN = new View.OnTouchListener()
+    {
+      public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
+      {
+        if (at.b.b(at.b.this) != null) {
+          at.b.b(at.b.this).onTouch(at.b.c(at.b.this), paramAnonymousMotionEvent);
+        }
+        return false;
+      }
+    };
+    private View kTO;
+    private int kTP = 300;
+    private af.a kTQ = new af.a()
+    {
+      public final boolean lj()
+      {
+        if ((at.b.d(at.b.this) != null) && (at.b.e(at.b.this) != null)) {
+          at.b.e(at.b.this).showAsDropDown(at.b.d(at.b.this), at.b.f(at.b.this), at.b.g(at.b.this));
+        }
+        return false;
+      }
+    };
+    
+    private void dismiss()
+    {
+      if (kTD != null) {
+        kTD.dismiss();
+      }
+    }
+    
+    public final boolean c(View paramView, MotionEvent paramMotionEvent)
+    {
+      int k = 8;
+      Object localObject1 = paramView.getTag();
+      if ((localObject1 == null) || (!(localObject1 instanceof dg))) {
+        u.i("!64@/B4Tb64lLpKwUcOR+EdWcgUrCDYYt5XKNxI73I2a4RomBdAK4qpVVWMkFHlOIfex", "The Tag of the View is not a instance of ItemDataTag or is null.");
+      }
+      Object localObject3;
+      int i;
+      do
+      {
+        return false;
+        localObject1 = (dg)paramView.getTag();
+        localObject2 = ajh;
+        localObject3 = com.tencent.mm.model.h.sc();
+        if ((!t.kz((String)localObject3)) && (!((String)localObject3).equals(localObject2))) {
+          break;
+        }
+        u.v("!64@/B4Tb64lLpKwUcOR+EdWcgUrCDYYt5XKNxI73I2a4RomBdAK4qpVVWMkFHlOIfex", "Can't talk to self and self username can't be null.");
+        i = 0;
+      } while (i == 0);
+      Object localObject2 = paramView.getContext();
+      if (kTD == null)
+      {
+        localObject3 = ((Context)localObject2).getResources();
+        float f = ((Resources)localObject3).getDimension(2131034637);
+        kTG = ((int)(((Resources)localObject3).getDimension(2131034576) * 2.0F + f));
+        cRI = View.inflate((Context)localObject2, 2131361947, null);
+        kTE = cRI.findViewById(2131165677);
+        kTF = cRI.findViewById(2131165678);
+        kTF.setOnClickListener(this);
+        kTE.setOnClickListener(this);
+        kTF.setOnTouchListener(kTN);
+        kTE.setOnTouchListener(kTN);
+        kTD = new o(cRI, -2, kTG, false);
+        kTD.setOutsideTouchable(true);
+        localObject3 = new Rect();
+        if ((localObject2 instanceof Activity)) {
+          ((Activity)localObject2).getWindow().getDecorView().getWindowVisibleDisplayFrame((Rect)localObject3);
+        }
+        gFu = top;
+        localObject3 = ((Context)localObject2).getResources().getDisplayMetrics();
+        if (widthPixels > heightPixels)
+        {
+          kTH = ((Context)localObject2).getResources().getDimensionPixelSize(2131034626);
+          label315:
+          kTD.setBackgroundDrawable(new ColorDrawable(16777215));
+          kTK = 0;
+          coj = new af(Looper.getMainLooper(), kTQ, false);
+          u.i("!64@/B4Tb64lLpKwUcOR+EdWcgUrCDYYt5XKNxI73I2a4RomBdAK4qpVVWMkFHlOIfex", "Create a new PopupWindow.");
+        }
+      }
+      else
+      {
+        localObject2 = kTD;
+        switch (paramMotionEvent.getAction())
+        {
+        }
+      }
+      label396:
+      do
+      {
+        for (;;)
+        {
+          return true;
+          i = 1;
+          break;
+          kTH = ((Context)localObject2).getResources().getDimensionPixelSize(2131034625);
+          break label315;
+          kTL = false;
+          kTO = null;
+        }
+        kTO = paramView;
+        paramView.setOnTouchListener(this);
+        if (((o)localObject2).isShowing()) {
+          ((o)localObject2).dismiss();
+        }
+      } while (kTL);
+      kTF.setTag(localObject1);
+      kTE.setTag(localObject1);
+      label496:
+      boolean bool;
+      label512:
+      int j;
+      if ((com.tencent.mm.model.h.sm() & 0x100000) == 0)
+      {
+        i = 1;
+        com.tencent.mm.g.h.pT();
+        if (com.tencent.mm.g.c.pz() == 2) {
+          break label685;
+        }
+        bool = com.tencent.mm.ar.c.aSY();
+        if ((!bool) && (i == 0)) {
+          break label705;
+        }
+        paramMotionEvent = kTF;
+        if (!bool) {
+          break label707;
+        }
+        j = 0;
+        label535:
+        paramMotionEvent.setVisibility(j);
+        paramMotionEvent = kTE;
+        j = k;
+        if (i != 0)
+        {
+          j = k;
+          if (!bool) {
+            j = 0;
+          }
+        }
+        paramMotionEvent.setVisibility(j);
+        paramMotionEvent = new int[2];
+        paramView.getLocationInWindow(paramMotionEvent);
+        i = paramMotionEvent[1];
+        paramView.getWidth();
+        j = paramView.getHeight();
+        kTJ = kTK;
+        if (i > gFu + kTH + kTG) {
+          kTJ = (-j - kTG - kTK);
+        }
+        kTI = 0;
+        if (kTJ < 0) {
+          break label714;
+        }
+        cRI.setBackgroundResource(2130968617);
+      }
+      for (;;)
+      {
+        coj.ds(kTP);
+        break label396;
+        i = 0;
+        break label496;
+        label685:
+        if ((com.tencent.mm.model.h.sm() & 0x400000) == 0)
+        {
+          bool = true;
+          break label512;
+        }
+        bool = false;
+        break label512;
+        label705:
+        break;
+        label707:
+        j = 8;
+        break label535;
+        label714:
+        cRI.setBackgroundResource(2130968627);
+      }
+    }
+    
+    public final void onClick(View paramView)
+    {
+      dg localdg = (dg)paramView.getTag();
+      if (paramView == kTF) {
+        at.i(paramView.getContext(), ajh, 3);
+      }
+      for (;;)
+      {
+        dismiss();
+        return;
+        at.i(paramView.getContext(), ajh, 2);
+      }
+    }
+    
+    public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+    {
+      switch (paramMotionEvent.getAction())
+      {
+      }
+      for (;;)
+      {
+        return false;
+        kTL = true;
+        dismiss();
+      }
     }
   }
 }

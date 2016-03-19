@@ -3,17 +3,17 @@ package com.tencent.kingkong;
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
 
-class BulkCursorDescriptor$1
+final class BulkCursorDescriptor$1
   implements Parcelable.Creator
 {
-  public BulkCursorDescriptor createFromParcel(Parcel paramParcel)
+  public final BulkCursorDescriptor createFromParcel(Parcel paramParcel)
   {
     BulkCursorDescriptor localBulkCursorDescriptor = new BulkCursorDescriptor();
     localBulkCursorDescriptor.readFromParcel(paramParcel);
     return localBulkCursorDescriptor;
   }
   
-  public BulkCursorDescriptor[] newArray(int paramInt)
+  public final BulkCursorDescriptor[] newArray(int paramInt)
   {
     return new BulkCursorDescriptor[paramInt];
   }

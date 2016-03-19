@@ -8,17 +8,15 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public final class HeadImgPreference
   extends Preference
 {
-  private ImageView eqt;
-  public View.OnClickListener gJC;
-  private Bitmap gYc;
+  private ImageView fAr;
   private int height = -1;
+  private Bitmap iOu;
+  public View.OnClickListener iyh;
   
   public HeadImgPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -28,24 +26,24 @@ public final class HeadImgPreference
   public HeadImgPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference);
+    setLayoutResource(2131363286);
   }
   
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    if (eqt == null) {
-      eqt = ((ImageView)paramView.findViewById(a.i.image_headimg));
+    if (fAr == null) {
+      fAr = ((ImageView)paramView.findViewById(2131168999));
     }
-    if (gJC != null) {
-      eqt.setOnClickListener(gJC);
+    if (iyh != null) {
+      fAr.setOnClickListener(iyh);
     }
-    if (gYc != null)
+    if (iOu != null)
     {
-      eqt.setImageBitmap(gYc);
-      gYc = null;
+      fAr.setImageBitmap(iOu);
+      iOu = null;
     }
-    paramView = (LinearLayout)paramView.findViewById(a.i.mm_preference_ll_id);
+    paramView = (LinearLayout)paramView.findViewById(2131166874);
     if (height != -1) {
       paramView.setMinimumHeight(height);
     }
@@ -54,22 +52,22 @@ public final class HeadImgPreference
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(a.i.content);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
     localViewGroup.removeAllViews();
-    View.inflate(mContext, a.k.mm_preference_content_headimg, localViewGroup);
-    eqt = ((ImageView)paramViewGroup.findViewById(a.i.image_headimg));
+    View.inflate(mContext, 2131363016, localViewGroup);
+    fAr = ((ImageView)paramViewGroup.findViewById(2131168999));
     return paramViewGroup;
   }
   
-  public final void r(Bitmap paramBitmap)
+  public final void q(Bitmap paramBitmap)
   {
-    gYc = null;
-    if (eqt != null)
+    iOu = null;
+    if (fAr != null)
     {
-      eqt.setImageBitmap(paramBitmap);
+      fAr.setImageBitmap(paramBitmap);
       return;
     }
-    gYc = paramBitmap;
+    iOu = paramBitmap;
   }
 }
 

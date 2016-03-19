@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/pluginsdk/model/app/u;
+.implements Lcom/tencent/mm/pluginsdk/model/app/s;
 
 
 # annotations
@@ -16,13 +16,13 @@
 
 
 # static fields
-.field public static gKZ:Z
+.field public static izT:Z
 
-.field private static gLa:Lcom/tencent/mm/pluginsdk/model/g;
+.field private static izU:Lcom/tencent/mm/pluginsdk/model/g;
 
 
 # instance fields
-.field public gLb:Lcom/tencent/mm/pluginsdk/model/g$a;
+.field public izV:Lcom/tencent/mm/pluginsdk/model/g$a;
 
 
 # direct methods
@@ -33,7 +33,7 @@
     .line 27
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/pluginsdk/model/g;->gKZ:Z
+    sput-boolean v0, Lcom/tencent/mm/pluginsdk/model/g;->izT:Z
 
     return-void
 .end method
@@ -49,12 +49,12 @@
     return-void
 .end method
 
-.method public static ayI()Lcom/tencent/mm/pluginsdk/model/g;
+.method public static aPm()Lcom/tencent/mm/pluginsdk/model/g;
     .locals 1
 
     .prologue
     .line 41
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/g;->gLa:Lcom/tencent/mm/pluginsdk/model/g;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/g;->izU:Lcom/tencent/mm/pluginsdk/model/g;
 
     if-nez v0, :cond_0
 
@@ -63,16 +63,16 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/model/g;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/g;->gLa:Lcom/tencent/mm/pluginsdk/model/g;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/g;->izU:Lcom/tencent/mm/pluginsdk/model/g;
 
     .line 44
     :cond_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/g;->gLa:Lcom/tencent/mm/pluginsdk/model/g;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/g;->izU:Lcom/tencent/mm/pluginsdk/model/g;
 
     return-object v0
 .end method
 
-.method public static ud(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/g$b;
+.method public static zE(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/g$b;
     .locals 3
 
     .prologue
@@ -91,7 +91,7 @@
     :cond_0
     const-string/jumbo v0, "PersonalAppSetting"
 
-    invoke-static {p0, v0, v1}, Lcom/tencent/mm/sdk/platformtools/p;->z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {p0, v0, v1}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v0
 
@@ -114,7 +114,7 @@
     check-cast v0, Ljava/lang/String;
 
     .line 143
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -132,7 +132,7 @@
     invoke-direct {v1}, Lcom/tencent/mm/pluginsdk/model/g$b;-><init>()V
 
     .line 147
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/g$b;->gLc:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/g$b;->izW:Ljava/lang/String;
 
     move-object v0, v1
 
@@ -142,7 +142,7 @@
 
 
 # virtual methods
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/pluginsdk/model/app/y;)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/pluginsdk/model/app/v;)V
     .locals 7
 
     .prologue
@@ -153,7 +153,7 @@
     const/4 v4, 0x0
 
     .line 93
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v0
 
@@ -184,7 +184,7 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 98
     if-nez p4, :cond_2
@@ -194,7 +194,7 @@
 
     const-string/jumbo v1, "scene == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -205,7 +205,7 @@
     if-nez p2, :cond_0
 
     .line 104
-    invoke-virtual {p4}, Lcom/tencent/mm/pluginsdk/model/app/y;->getType()I
+    invoke-virtual {p4}, Lcom/tencent/mm/pluginsdk/model/app/v;->getType()I
 
     move-result v0
 
@@ -215,13 +215,13 @@
 
     .line 106
     :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     if-eqz v0, :cond_3
 
-    sget-object v0, Lcom/tencent/mm/pluginsdk/l$a;->gJZ:Lcom/tencent/mm/pluginsdk/l$p;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/i$a;->iyG:Lcom/tencent/mm/pluginsdk/i$r;
 
     if-nez v0, :cond_4
 
@@ -231,7 +231,7 @@
 
     const-string/jumbo v1, "wrong environment"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -255,20 +255,20 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 111
-    check-cast p4, Lcom/tencent/mm/pluginsdk/model/p;
+    check-cast p4, Lcom/tencent/mm/pluginsdk/model/j;
 
     .line 113
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/g;->gLb:Lcom/tencent/mm/pluginsdk/model/g$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/g;->izV:Lcom/tencent/mm/pluginsdk/model/g$a;
 
     if-eqz v0, :cond_0
 
     .line 114
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/g;->gLb:Lcom/tencent/mm/pluginsdk/model/g$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/g;->izV:Lcom/tencent/mm/pluginsdk/model/g$a;
 
-    invoke-interface {v0, p4}, Lcom/tencent/mm/pluginsdk/model/g$a;->a(Lcom/tencent/mm/pluginsdk/model/p;)V
+    invoke-interface {v0, p4}, Lcom/tencent/mm/pluginsdk/model/g$a;->a(Lcom/tencent/mm/pluginsdk/model/j;)V
 
     goto :goto_0
 
@@ -279,12 +279,12 @@
     .end packed-switch
 .end method
 
-.method public final ayJ()V
+.method public final aPn()V
     .locals 2
 
     .prologue
     .line 48
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v0
 
@@ -296,18 +296,18 @@
 
     .line 51
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->Uw()Lcom/tencent/mm/pluginsdk/model/app/d;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->abv()Lcom/tencent/mm/pluginsdk/model/app/d;
 
     move-result-object v0
 
     const/16 v1, 0xe
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/pluginsdk/model/app/d;->a(ILcom/tencent/mm/pluginsdk/model/app/u;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/pluginsdk/model/app/d;->a(ILcom/tencent/mm/pluginsdk/model/app/s;)V
 
     .line 52
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/pluginsdk/model/g;->gKZ:Z
+    sput-boolean v0, Lcom/tencent/mm/pluginsdk/model/g;->izT:Z
 
     goto :goto_0
 .end method

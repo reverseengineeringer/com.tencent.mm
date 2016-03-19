@@ -4,22 +4,22 @@ public class Server$C2Java
 {
   public static void onConnect(String paramString, int paramInt)
   {
-    if (Server.blO != null) {
-      Server.blO.onConnect(paramString, paramInt);
+    if (Server.bwO != null) {
+      Server.bwO.onConnect(paramString, paramInt);
     }
   }
   
   public static void onDisconnect(String paramString, int paramInt)
   {
-    if (Server.blO != null) {
-      Server.blO.qX();
+    if (Server.bwO != null) {
+      Server.bwO.ra();
     }
   }
   
   public static void onRecv(String paramString, int paramInt, byte[] paramArrayOfByte)
   {
-    if (Server.blO != null) {
-      Server.blO.onRecv(paramString, paramInt, paramArrayOfByte);
+    if (Server.bwO != null) {
+      Server.bwO.onRecv(paramString, paramInt, paramArrayOfByte);
     }
   }
 }

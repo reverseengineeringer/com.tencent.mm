@@ -1,36 +1,39 @@
 package com.tencent.mm.modelfriend;
 
-import android.os.Looper;
-import android.os.Message;
-import com.tencent.mm.compatible.util.i.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.HashSet;
-import java.util.Iterator;
+import com.tencent.mm.d.a.dw;
+import com.tencent.mm.d.a.dw.a;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class f
-  extends ac
+public final class f
+  extends c
 {
-  f(Looper paramLooper)
+  public f()
   {
-    super(paramLooper);
+    super(0);
   }
   
-  public final void handleMessage(Message paramMessage)
+  public final boolean a(b paramb)
   {
-    if (!ax.qZ()) {
-      return;
+    if (!(paramb instanceof dw)) {
+      return false;
     }
-    i.a locala = new i.a();
-    int i = c.byl.size();
-    boolean bool = Boolean.parseBoolean(obj.toString());
-    paramMessage = c.byl.iterator();
-    while (paramMessage.hasNext()) {
-      ((c.b)paramMessage.next()).aN(bool);
+    paramb = (dw)paramb;
+    axN.axQ = true;
+    if (!ay.kz(m.hy(axM.axO)))
+    {
+      axN.axQ = false;
+      return false;
     }
-    c.byl.clear();
-    t.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "callBackHandler setSize:%d time:%d", new Object[] { Integer.valueOf(i), Long.valueOf(locala.pi()) });
+    if (!ay.kz(m.hy(axM.axP)))
+    {
+      axN.axQ = false;
+      return false;
+    }
+    u.i("!64@/B4Tb64lLpISOYcLaKm7W1QqXzG1JnWL1rmNsLE7dnhsNrZV5csiI8CQhN3SjA2j", "mobile fmessage not found by phonemd5 or fullphonemd5");
+    return false;
   }
 }
 

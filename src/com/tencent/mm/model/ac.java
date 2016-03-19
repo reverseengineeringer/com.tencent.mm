@@ -1,16 +1,16 @@
 package com.tencent.mm.model;
 
-final class ac
-  implements Runnable
+import com.tencent.mm.protocal.b.apu;
+
+public abstract interface ac
 {
-  ac(ab paramab, aa.c paramc) {}
+  public abstract void a(apu paramapu);
   
-  public final void run()
-  {
-    if (bos.boq.bop != null) {
-      bos.boq.bop.a(bor.url, bor.filename, bor.pos);
-    }
-  }
+  public abstract void tc();
+  
+  public abstract void td();
+  
+  public abstract void te();
 }
 
 /* Location:

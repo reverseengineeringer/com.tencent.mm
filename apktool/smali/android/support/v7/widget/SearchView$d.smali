@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract cL()Z
+.method public abstract cv()Z
 .end method
 
-.method public abstract cM()Z
+.method public abstract cw()Z
 .end method

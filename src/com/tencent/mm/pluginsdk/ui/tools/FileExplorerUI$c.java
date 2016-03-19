@@ -5,9 +5,9 @@ import android.widget.TextView;
 
 final class FileExplorerUI$c
 {
-  TextView cFf;
-  ImageView cwg;
-  TextView hee;
+  ImageView cNV;
+  TextView dda;
+  TextView iRW;
   
   private FileExplorerUI$c(FileExplorerUI paramFileExplorerUI) {}
 }

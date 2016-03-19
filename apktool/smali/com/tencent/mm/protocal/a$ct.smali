@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$ct;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 1206
-    const-string/jumbo v0, "stopScanWXDevice"
+    .line 2025
+    const-string/jumbo v0, "openDesignerProfile"
 
-    const-string/jumbo v1, "stopScanWXDevice"
+    const-string/jumbo v1, "openDesignerProfile"
 
-    const/16 v2, 0x7a
+    const/16 v2, 0xc1
 
     const/4 v3, 0x1
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 1207
+    .line 2026
     return-void
 .end method

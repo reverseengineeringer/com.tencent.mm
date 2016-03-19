@@ -2,7 +2,7 @@ package com.tencent.mm.ui.e;
 
 public final class e
 {
-  public static final String[] jnx = { " ", ",", ":" };
+  public static final String[] lsQ = { " ", ",", ":" };
 }
 
 /* Location:

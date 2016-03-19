@@ -1,12 +1,12 @@
 package com.tencent.mm.protocal.a.a;
 
 public final class b
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public int aDr;
-  public String ayf;
-  public String ddL;
-  public String desc;
+  public int aFQ;
+  public String asL;
+  public String ayz;
+  public String dOt;
   public String title;
   
   protected final int a(int paramInt, Object... paramVarArgs)
@@ -15,17 +15,17 @@ public final class b
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
       if (title != null) {
-        paramVarArgs.U(1, title);
+        paramVarArgs.d(1, title);
       }
-      if (desc != null) {
-        paramVarArgs.U(2, desc);
+      if (asL != null) {
+        paramVarArgs.d(2, asL);
       }
-      if (ayf != null) {
-        paramVarArgs.U(3, ayf);
+      if (ayz != null) {
+        paramVarArgs.d(3, ayz);
       }
-      paramVarArgs.bM(4, aDr);
-      if (ddL != null) {
-        paramVarArgs.U(5, ddL);
+      paramVarArgs.ci(4, aFQ);
+      if (dOt != null) {
+        paramVarArgs.d(5, dOt);
       }
       return 0;
     }
@@ -35,28 +35,28 @@ public final class b
       }
     }
     label383:
-    for (int i = a.a.a.b.b.a.T(1, title) + 0;; i = 0)
+    for (int i = a.a.a.b.b.a.e(1, title) + 0;; i = 0)
     {
       paramInt = i;
-      if (desc != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, desc);
+      if (asL != null) {
+        paramInt = i + a.a.a.b.b.a.e(2, asL);
       }
       i = paramInt;
-      if (ayf != null) {
-        i = paramInt + a.a.a.b.b.a.T(3, ayf);
+      if (ayz != null) {
+        i = paramInt + a.a.a.b.b.a.e(3, ayz);
       }
-      i += a.a.a.a.bI(4, aDr);
+      i += a.a.a.a.cg(4, aFQ);
       paramInt = i;
-      if (ddL != null) {
-        paramInt = i + a.a.a.b.b.a.T(5, ddL);
+      if (dOt != null) {
+        paramInt = i + a.a.a.b.b.a.e(5, dOt);
       }
       return paramInt;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
         break;
@@ -70,19 +70,19 @@ public final class b
         default: 
           return -1;
         case 1: 
-          title = jMD.readString();
+          title = maU.readString();
           return 0;
         case 2: 
-          desc = jMD.readString();
+          asL = maU.readString();
           return 0;
         case 3: 
-          ayf = jMD.readString();
+          ayz = maU.readString();
           return 0;
         case 4: 
-          aDr = jMD.aVp();
+          aFQ = maU.jC();
           return 0;
         }
-        ddL = jMD.readString();
+        dOt = maU.readString();
         return 0;
       }
       return -1;

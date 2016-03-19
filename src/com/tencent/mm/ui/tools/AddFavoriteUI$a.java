@@ -5,20 +5,20 @@ import android.net.Uri;
 final class AddFavoriteUI$a
   implements Runnable
 {
-  private AddFavoriteUI.b jox;
+  private AddFavoriteUI.b ltO;
   private Uri mUri;
   
   public AddFavoriteUI$a(AddFavoriteUI paramAddFavoriteUI, Uri paramUri, AddFavoriteUI.b paramb)
   {
     mUri = paramUri;
-    jox = paramb;
+    ltO = paramb;
   }
   
   public final void run()
   {
-    jow.filePath = AddFavoriteUI.a(jow, mUri);
-    if (jox != null) {
-      jox.aRs();
+    ltN.filePath = AddFavoriteUI.a(ltN, mUri);
+    if (ltO != null) {
+      ltO.bir();
     }
   }
 }

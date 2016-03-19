@@ -1,23 +1,59 @@
 package com.tencent.mm.plugin.report.service;
 
-import android.os.Process;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.t;
-
-final class c
-  implements Runnable
+public final class c
+  extends com.tencent.mm.at.a
 {
-  c(KVCommCrossProcessReceiver paramKVCommCrossProcessReceiver) {}
+  public int amt;
+  public int fUk;
+  public int fUl;
+  public boolean fUm;
   
-  public final void run()
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    if (com.tencent.mm.protocal.c.cy(aa.getContext()))
+    if (paramInt == 0)
     {
-      t.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "KVCommCrossProcessReceiver shut_down_weixin need to kill process");
-      t.appenderFlushSync();
-      KVReportJni.KVReportJava2C.onExitAppOrAppCrash();
-      Process.killProcess(Process.myPid());
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      paramVarArgs.ci(1, amt);
+      paramVarArgs.ci(2, fUk);
+      paramVarArgs.ci(3, fUl);
+      paramVarArgs.R(4, fUm);
+      return 0;
     }
+    if (paramInt == 1) {
+      return a.a.a.a.cg(1, amt) + 0 + a.a.a.a.cg(2, fUk) + a.a.a.a.cg(3, fUl) + (a.a.a.b.b.a.ay(4) + 1);
+    }
+    if (paramInt == 2)
+    {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bog();
+        }
+      }
+      return 0;
+    }
+    if (paramInt == 3)
+    {
+      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      c localc = (c)paramVarArgs[1];
+      switch (((Integer)paramVarArgs[2]).intValue())
+      {
+      default: 
+        return -1;
+      case 1: 
+        amt = maU.jC();
+        return 0;
+      case 2: 
+        fUk = maU.jC();
+        return 0;
+      case 3: 
+        fUl = maU.jC();
+        return 0;
+      }
+      fUm = locala.boe();
+      return 0;
+    }
+    return -1;
   }
 }
 

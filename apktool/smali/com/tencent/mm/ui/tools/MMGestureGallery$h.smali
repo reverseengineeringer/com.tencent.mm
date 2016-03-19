@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
-.super Lcom/tencent/mm/sdk/platformtools/ac;
+.super Lcom/tencent/mm/sdk/platformtools/aa;
 .source "SourceFile"
 
 
@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field iJb:Ljava/lang/ref/WeakReference;
+.field kIn:Ljava/lang/ref/WeakReference;
 
-.field private iJc:J
+.field private kIo:J
 
-.field jtZ:Z
+.field lwI:Z
 
 
 # direct methods
@@ -28,10 +28,10 @@
 
     .prologue
     .line 1029
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
 
     .line 1030
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->iJb:Ljava/lang/ref/WeakReference;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->kIn:Ljava/lang/ref/WeakReference;
 
     .line 1031
     return-void
@@ -44,7 +44,7 @@
 
     .prologue
     .line 1084
-    iput-wide p4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->iJc:J
+    iput-wide p4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->kIo:J
 
     .line 1085
     invoke-virtual {p0, p1, p2, p3}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->sendEmptyMessageDelayed(IJ)Z
@@ -60,7 +60,7 @@
     const/4 v2, 0x1
 
     .line 1035
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/ac;->handleMessage(Landroid/os/Message;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/platformtools/aa;->handleMessage(Landroid/os/Message;)V
 
     .line 1037
     iget v0, p1, Landroid/os/Message;->what:I
@@ -68,12 +68,12 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->removeMessages(I)V
 
     .line 1038
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->iJb:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->kIn:Ljava/lang/ref/WeakReference;
 
     if-eqz v0, :cond_2
 
     .line 1039
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->iJb:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->kIn:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -96,7 +96,7 @@
 
     if-eq v1, v2, :cond_0
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->jtZ:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->lwI:Z
 
     if-eqz v1, :cond_1
 
@@ -106,7 +106,7 @@
 
     const-string/jumbo v2, "single click over!"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 1045
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->f(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/ui/tools/MMGestureGallery$e;
@@ -116,15 +116,15 @@
     if-eqz v1, :cond_1
 
     .line 1046
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->c(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->c(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v1
 
-    new-instance v2, Lcom/tencent/mm/ui/tools/dz;
+    new-instance v2, Lcom/tencent/mm/ui/tools/MMGestureGallery$h$1;
 
-    invoke-direct {v2, p0, v0}, Lcom/tencent/mm/ui/tools/dz;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery$h;Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+    invoke-direct {v2, p0, v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h$1;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery$h;Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
 
     .line 1055
     :cond_1
@@ -155,7 +155,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery$a;->ayV()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery$a;->aPA()Z
 
     move-result v1
 
@@ -171,7 +171,7 @@
     .line 1061
     iget v0, p1, Landroid/os/Message;->what:I
 
-    iget-wide v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->iJc:J
+    iget-wide v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->kIo:J
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->sendEmptyMessageDelayed(IJ)Z
 
@@ -197,15 +197,15 @@
     if-eqz v1, :cond_2
 
     .line 1070
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->c(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->c(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v1
 
-    new-instance v2, Lcom/tencent/mm/ui/tools/ea;
+    new-instance v2, Lcom/tencent/mm/ui/tools/MMGestureGallery$h$2;
 
-    invoke-direct {v2, p0, v0}, Lcom/tencent/mm/ui/tools/ea;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery$h;Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+    invoke-direct {v2, p0, v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h$2;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery$h;Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 .end method

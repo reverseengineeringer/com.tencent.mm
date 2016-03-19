@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic hT:Landroid/support/v4/widget/a;
+.field final synthetic hb:Landroid/support/v4/widget/a;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 469
-    iput-object p1, p0, Landroid/support/v4/widget/a$b;->hT:Landroid/support/v4/widget/a;
+    iput-object p1, p0, Landroid/support/v4/widget/a$b;->hb:Landroid/support/v4/widget/a;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
@@ -48,14 +48,14 @@
 
     .prologue
     .line 472
-    iget-object v0, p0, Landroid/support/v4/widget/a$b;->hT:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v4/widget/a$b;->hb:Landroid/support/v4/widget/a;
 
     const/4 v1, 0x1
 
-    iput-boolean v1, v0, Landroid/support/v4/widget/a;->hL:Z
+    iput-boolean v1, v0, Landroid/support/v4/widget/a;->gT:Z
 
     .line 473
-    iget-object v0, p0, Landroid/support/v4/widget/a$b;->hT:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v4/widget/a$b;->hb:Landroid/support/v4/widget/a;
 
     invoke-virtual {v0}, Landroid/support/v4/widget/a;->notifyDataSetChanged()V
 
@@ -68,14 +68,14 @@
 
     .prologue
     .line 478
-    iget-object v0, p0, Landroid/support/v4/widget/a$b;->hT:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v4/widget/a$b;->hb:Landroid/support/v4/widget/a;
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Landroid/support/v4/widget/a;->hL:Z
+    iput-boolean v1, v0, Landroid/support/v4/widget/a;->gT:Z
 
     .line 479
-    iget-object v0, p0, Landroid/support/v4/widget/a$b;->hT:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v4/widget/a$b;->hb:Landroid/support/v4/widget/a;
 
     invoke-virtual {v0}, Landroid/support/v4/widget/a;->notifyDataSetInvalidated()V
 

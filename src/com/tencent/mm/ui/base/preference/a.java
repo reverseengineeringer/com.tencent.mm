@@ -1,21 +1,36 @@
 package com.tencent.mm.ui.base.preference;
 
-import android.text.Editable;
-import android.text.TextWatcher;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.util.SparseArray;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListView;
 
-final class a
-  implements TextWatcher
+public final class a
+  extends h
 {
-  a(AutoHintSizeEditText paramAutoHintSizeEditText) {}
+  private SparseArray kKR = new SparseArray();
   
-  public final void afterTextChanged(Editable paramEditable)
+  public a(Context paramContext, SharedPreferences paramSharedPreferences)
   {
-    AutoHintSizeEditText.a(iLF, paramEditable, iLF.getHint(), iLF.getWidth() - iLF.getPaddingLeft() - iLF.getPaddingRight());
+    super(paramContext, paramSharedPreferences);
   }
   
-  public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
+  public final View a(int paramInt, ListView paramListView)
+  {
+    if ((paramInt > paramListView.getLastVisiblePosition()) || (paramInt < paramListView.getFirstVisiblePosition())) {
+      return null;
+    }
+    return (View)kKR.get(paramInt);
+  }
   
-  public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
+  public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  {
+    paramView = super.getView(paramInt, paramView, paramViewGroup);
+    kKR.put(paramInt, paramView);
+    return paramView;
+  }
 }
 
 /* Location:

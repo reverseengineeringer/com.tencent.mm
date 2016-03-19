@@ -15,9 +15,11 @@
 
 
 # instance fields
-.field public aDD:Lcom/tencent/mm/pluginsdk/ui/a/a;
+.field public aBc:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
-.field public aDE:Landroid/widget/EditText;
+.field public appId:Ljava/lang/String;
+
+.field public context:Landroid/content/Context;
 
 
 # direct methods

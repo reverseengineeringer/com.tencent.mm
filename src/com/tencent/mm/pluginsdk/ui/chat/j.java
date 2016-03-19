@@ -1,19 +1,17 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
-import com.tencent.mm.ui.widget.MMEditText;
+import com.tencent.mm.storage.a.c;
 
-final class j
-  implements aw.a
+public abstract interface j
+  extends f
 {
-  j(ChatFooter paramChatFooter) {}
+  public abstract boolean aiE();
   
-  public final void clear()
-  {
-    ChatFooter localChatFooter = gVu;
-    if (dUy != null) {
-      dUy.setText("");
-    }
-  }
+  public abstract boolean aiF();
+  
+  public abstract void i(c paramc);
+  
+  public abstract void j(c paramc);
 }
 
 /* Location:

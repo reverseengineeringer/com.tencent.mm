@@ -1,15 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-
 public final class bq$a
 {
-  public String[] atX;
-  public String awE;
-  public Context context;
-  public int op = 0;
-  public String[] selectionArgs;
-  public int source = -1;
+  public boolean auV = false;
 }
 
 /* Location:

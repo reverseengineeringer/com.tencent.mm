@@ -14,29 +14,9 @@ public final class k
       {
         return;
       } while (Build.VERSION.SDK_INT < 11);
-      new m();
+      new l();
     } while (paramView.getLayerType() == 1);
     paramView.setLayerType(1, null);
-  }
-  
-  public static boolean bl(int paramInt1, int paramInt2)
-  {
-    boolean bool2 = false;
-    boolean bool1 = bool2;
-    if (Build.VERSION.SDK_INT >= 11)
-    {
-      new m();
-      if (paramInt1 < 2048)
-      {
-        bool1 = bool2;
-        if (paramInt2 < 2048) {}
-      }
-      else
-      {
-        bool1 = true;
-      }
-    }
-    return bool1;
   }
   
   public static void e(View paramView, int paramInt1, int paramInt2)
@@ -47,7 +27,7 @@ public final class k
       return;
       if (Build.VERSION.SDK_INT >= 11)
       {
-        new m();
+        new l();
         if ((paramInt1 >= 2048) || (paramInt2 >= 2048)) {}
         for (paramInt1 = 1; paramView.getLayerType() != paramInt1; paramInt1 = 2)
         {

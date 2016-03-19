@@ -9,16 +9,15 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.sdk.platformtools.e;
-import com.tencent.mm.sdk.platformtools.s;
+import com.tencent.mm.sdk.platformtools.d;
 import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.base.MMHorList;
 import java.io.IOException;
 import java.io.InputStream;
@@ -26,109 +25,139 @@ import java.io.InputStream;
 public class FilterImageView
   extends LinearLayout
 {
-  static c[] jqn = { new c(new b("原图", "原圖", "Normal"), "icon.png", 0, 0, "MatteOrigin.jpg", 0), new c(new b("LOMO", "LOMO", "LOMO"), "nuowei_mask%02d.jpg", 2, 1, "0004.jpg", 2), new c(new b("麦田", "麥田", "Wheat"), "0062_%02d.jpg", 2, 2, "0062.jpg", 20), new c(new b("玻璃镜", "玻璃鏡", "Glossy"), "habi_mask%02d.jpg", 1, 3, "0005.jpg", 4), new c(new b("拍立得", "拍立得", "Polaroid"), "0063_%02d.jpg", 2, 4, "0063.jpg", 21), new c(new b("湖水", "湖水", "Lake"), "0061_%02d.jpg", 1, 5, "0061.jpg", 19), new c(new b("黄昏", "黃昏", "Twilight"), "0030_mask%01d.jpg", 1, 6, "0030.jpg", 7), new c(new b("黑白", "黑白", "B&W"), "0065_%02d.jpg", 1, 7, "0065.jpg", 22), new c(new b("铜版画", "銅版畫", "Aquatint"), "0032_mask%01d.jpg", 1, 8, "0032.jpg", 9), new c(new b("圆珠笔", "圓珠筆", "Pen"), "0035_mask%01d.jpg", 1, 9, "0035.jpg", 18), new c(new b("海报", "海報", "Poster"), "0036_mask%01d.jpg", 0, 10, "0036.jpg", 17), new c(new b("素描", "素描", "Portrait"), "icon.jpg", 0, 11, "0040.jpg", 12) };
-  private Activity aAy;
-  private int fpl = 0;
-  int[] jqe;
-  private View jqf;
-  private ImageView jqg;
-  CropImageView jqh;
-  Bitmap jqi;
-  private MMHorList jqj;
-  private a jqk;
-  private Runnable jql;
-  private Runnable jqm;
+  static c[] lvx = { new c(new b("原图", "原圖", "Normal"), "icon.png", 0, 0, "MatteOrigin.jpg", 0), new c(new b("LOMO", "LOMO", "LOMO"), "nuowei_mask%02d.jpg", 2, 1, "0004.jpg", 2), new c(new b("麦田", "麥田", "Wheat"), "0062_%02d.jpg", 2, 2, "0062.jpg", 20), new c(new b("玻璃镜", "玻璃鏡", "Glossy"), "habi_mask%02d.jpg", 1, 3, "0005.jpg", 4), new c(new b("拍立得", "拍立得", "Polaroid"), "0063_%02d.jpg", 2, 4, "0063.jpg", 21), new c(new b("湖水", "湖水", "Lake"), "0061_%02d.jpg", 1, 5, "0061.jpg", 19), new c(new b("黄昏", "黃昏", "Twilight"), "0030_mask%01d.jpg", 1, 6, "0030.jpg", 7), new c(new b("黑白", "黑白", "B&W"), "0065_%02d.jpg", 1, 7, "0065.jpg", 22), new c(new b("铜版画", "銅版畫", "Aquatint"), "0032_mask%01d.jpg", 1, 8, "0032.jpg", 9), new c(new b("圆珠笔", "圓珠筆", "Pen"), "0035_mask%01d.jpg", 1, 9, "0035.jpg", 18), new c(new b("海报", "海報", "Poster"), "0036_mask%01d.jpg", 0, 10, "0036.jpg", 17), new c(new b("素描", "素描", "Portrait"), "icon.jpg", 0, 11, "0040.jpg", 12) };
+  private Activity aBU;
+  private int gHF = 0;
+  int[] lvo;
+  private View lvp;
+  private ImageView lvq;
+  CropImageView lvr;
+  Bitmap lvs;
+  private MMHorList lvt;
+  private a lvu;
+  private Runnable lvv;
+  private Runnable lvw;
   
   public FilterImageView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    aAy = ((Activity)paramContext);
-    paramContext = View.inflate(aAy, a.k.crop_image_filter, this);
-    jqh = ((CropImageView)paramContext.findViewById(a.i.cropimage_filter_show_iv));
-    jqg = ((ImageView)paramContext.findViewById(a.i.cropimage_iv));
-    jqf = paramContext.findViewById(a.i.cropimage_frame);
-    jqh.setOnTouchListener(null);
-    jqj = ((MMHorList)paramContext.findViewById(a.i.cropimage_filter_gallery));
-    jqk = new a();
-    jqj.setAdapter(jqk);
-    jqj.invalidate();
-    jqj.setOnItemClickListener(new bn(this));
+    aBU = ((Activity)paramContext);
+    paramContext = View.inflate(aBU, 2131363260, this);
+    lvr = ((CropImageView)paramContext.findViewById(2131169486));
+    lvq = ((ImageView)paramContext.findViewById(2131165483));
+    lvp = paramContext.findViewById(2131165482);
+    lvr.setOnTouchListener(null);
+    lvt = ((MMHorList)paramContext.findViewById(2131169488));
+    lvu = new a();
+    lvt.setAdapter(lvu);
+    lvt.invalidate();
+    lvt.setOnItemClickListener(new AdapterView.OnItemClickListener()
+    {
+      public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+      {
+        paramAnonymousAdapterView = FilterImageView.a(FilterImageView.this);
+        ePW = paramAnonymousInt;
+        paramAnonymousAdapterView.notifyDataSetChanged();
+        try
+        {
+          FilterImageView.a(FilterImageView.this, lvxlvI);
+          FilterImageView.a(FilterImageView.this, lvxlvF, lvxlvG, lvxlvH);
+          return;
+        }
+        catch (Exception paramAnonymousAdapterView)
+        {
+          u.e("!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a", paramAnonymousAdapterView.toString());
+          return;
+        }
+        catch (OutOfMemoryError paramAnonymousAdapterView)
+        {
+          u.e("!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a", paramAnonymousAdapterView.toString());
+        }
+      }
+    });
   }
   
-  public final void aN(String paramString, int paramInt)
+  public final void bg(String paramString, int paramInt)
   {
-    t.i("!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a", "filePath before fiterBmp:" + paramString);
-    if ((jqi == null) || (jqi.isRecycled())) {
-      jqi = e.b(e.a(paramString, 480, 480, false), paramInt);
+    u.i("!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a", "filePath before fiterBmp:" + paramString);
+    if ((lvs == null) || (lvs.isRecycled())) {
+      lvs = d.b(d.b(paramString, 480, 480, false), paramInt);
     }
-    t.d("!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a", "filterBmp w:" + jqi.getWidth() + " h:" + jqi.getHeight());
-    jqe = new int[jqi.getWidth() * jqi.getHeight()];
-    jqi.getPixels(jqe, 0, jqi.getWidth(), 0, 0, jqi.getWidth(), jqi.getHeight());
-    jqh.setImageBitmap(jqi);
+    u.d("!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a", "filterBmp w:" + lvs.getWidth() + " h:" + lvs.getHeight());
+    lvo = new int[lvs.getWidth() * lvs.getHeight()];
+    lvs.getPixels(lvo, 0, lvs.getWidth(), 0, 0, lvs.getWidth(), lvs.getHeight());
+    lvr.setImageBitmap(lvs);
   }
   
   public View getCropAreaView()
   {
-    return jqf;
+    return lvp;
   }
   
   public CropImageView getCropImageIV()
   {
-    return jqh;
+    return lvr;
   }
   
   public Bitmap getFilterBmp()
   {
-    return jqi;
+    return lvs;
   }
   
   public int getFilterId()
   {
-    return fpl;
+    return gHF;
+  }
+  
+  public void setCropMaskBackground(int paramInt)
+  {
+    if (lvq != null) {
+      lvq.setBackgroundResource(paramInt);
+    }
   }
   
   public void setCropMaskVisible(int paramInt)
   {
-    if (jqg != null) {
-      jqg.setVisibility(paramInt);
+    if (lvq != null) {
+      lvq.setVisibility(paramInt);
     }
   }
   
   public void setImage(Bitmap paramBitmap)
   {
-    jqi = paramBitmap;
+    lvs = paramBitmap;
   }
   
   public void setLimitZoomIn(boolean paramBoolean)
   {
-    if (jqh != null) {
-      jqh.setLimitZoomIn(paramBoolean);
+    if (lvr != null) {
+      lvr.setLimitZoomIn(paramBoolean);
     }
   }
   
   public void setMatrix(Matrix paramMatrix)
   {
-    if (jqh != null) {
-      jqh.setImageMatrix(paramMatrix);
+    if (lvr != null) {
+      lvr.setImageMatrix(paramMatrix);
     }
   }
   
   public void setOnConfirmImp(Runnable paramRunnable)
   {
-    jql = paramRunnable;
+    lvv = paramRunnable;
   }
   
   public void setOnExitImp(Runnable paramRunnable)
   {
-    jqm = paramRunnable;
+    lvw = paramRunnable;
   }
   
   public void setVisibility(int paramInt)
   {
     if (paramInt == 0)
     {
-      jqk.notifyDataSetChanged();
-      jqj.invalidate();
+      lvu.notifyDataSetChanged();
+      lvt.invalidate();
     }
     super.setVisibility(paramInt);
   }
@@ -136,18 +165,18 @@ public class FilterImageView
   final class a
     extends BaseAdapter
   {
-    int dNQ = 0;
+    int ePW = 0;
     
     a() {}
     
     public final int getCount()
     {
-      return FilterImageView.jqn.length;
+      return FilterImageView.lvx.length;
     }
     
     public final Object getItem(int paramInt)
     {
-      return FilterImageView.jqn[paramInt];
+      return FilterImageView.lvx[paramInt];
     }
     
     public final long getItemId(int paramInt)
@@ -161,53 +190,54 @@ public class FilterImageView
       Object localObject1;
       if ((paramView == null) || (!(paramView.getTag() instanceof a)))
       {
-        paramViewGroup = View.inflate(FilterImageView.b(FilterImageView.this), a.k.filter_selecter_item, null);
+        paramViewGroup = View.inflate(FilterImageView.b(FilterImageView.this), 2131363205, null);
         localObject1 = new a();
-        cqb = ((TextView)paramViewGroup.findViewById(a.i.filter_selecter_tv));
-        jqp = ((ImageView)paramViewGroup.findViewById(a.i.filter_selecter_img));
+        cHA = ((TextView)paramViewGroup.findViewById(2131169442));
+        lvz = ((ImageView)paramViewGroup.findViewById(2131169441));
         paramViewGroup.setTag(localObject1);
       }
       for (;;)
       {
-        Object localObject2 = cqb;
-        paramView = jqv;
-        String str = s.aEJ();
+        Object localObject2 = cHA;
+        paramView = lvE;
+        String str = t.aUB();
         if (str.equals("zh_CN"))
         {
-          paramView = jqs;
-          label118:
+          paramView = lfO;
+          label115:
           ((TextView)localObject2).setText(paramView);
         }
         try
         {
-          paramView = FilterImageView.b(FilterImageView.this).getAssets().open("filter/" + icon);
-          jqq = e.decodeStream(paramView);
+          paramView = FilterImageView.b(FilterImageView.this).getAssets().open("filter/" + aEZ);
+          lvA = d.decodeStream(paramView);
           paramView.close();
-          jqp.setImageBitmap(jqq);
+          lvz.setImageBitmap(lvA);
           paramViewGroup.setLayoutParams(new ViewGroup.LayoutParams(-2, -2));
-          if (paramInt == dNQ)
+          if (paramInt == ePW)
           {
-            paramViewGroup.findViewById(a.i.filter_selecter_img).setBackgroundResource(a.h.camera_filter_reviewbox_checked);
+            paramViewGroup.findViewById(2131169441).setBackgroundResource(2130970508);
             return paramViewGroup;
             localObject2 = (a)paramView.getTag();
             localObject1 = localObject2;
             paramViewGroup = paramView;
-            if (jqq == null) {
+            if (lvA == null) {
               continue;
             }
-            jqq.recycle();
+            u.i("!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a", "recycle bitmap:%s", new Object[] { lvA.toString() });
+            lvA.recycle();
             localObject1 = localObject2;
             paramViewGroup = paramView;
             continue;
             if ((str.equals("zh_TW")) || (str.equals("zh_HK")))
             {
-              paramView = jqt;
-              break label118;
+              paramView = lvC;
+              break label115;
             }
-            paramView = jqu;
-            break label118;
+            paramView = lvD;
+            break label115;
           }
-          paramViewGroup.findViewById(a.i.filter_selecter_img).setBackgroundResource(a.h.camera_filter_reviewbox_normal);
+          paramViewGroup.findViewById(2131169441).setBackgroundResource(2130970631);
           return paramViewGroup;
         }
         catch (IOException paramView)
@@ -219,9 +249,9 @@ public class FilterImageView
     
     final class a
     {
-      TextView cqb;
-      ImageView jqp;
-      Bitmap jqq;
+      TextView cHA;
+      Bitmap lvA;
+      ImageView lvz;
       
       a() {}
     }
@@ -229,35 +259,35 @@ public class FilterImageView
   
   static final class b
   {
-    String jqs;
-    String jqt;
-    String jqu;
+    String lfO;
+    String lvC;
+    String lvD;
     
     b(String paramString1, String paramString2, String paramString3)
     {
-      jqs = paramString1;
-      jqt = paramString2;
-      jqu = paramString3;
+      lfO = paramString1;
+      lvC = paramString2;
+      lvD = paramString3;
     }
   }
   
   static final class c
   {
-    String icon;
-    FilterImageView.b jqv;
-    String jqw;
-    int jqx;
-    int jqy;
-    int jqz;
+    String aEZ;
+    FilterImageView.b lvE;
+    String lvF;
+    int lvG;
+    int lvH;
+    int lvI;
     
     c(FilterImageView.b paramb, String paramString1, int paramInt1, int paramInt2, String paramString2, int paramInt3)
     {
-      jqv = paramb;
-      jqw = paramString1;
-      jqx = paramInt1;
-      jqy = paramInt2;
-      icon = paramString2;
-      jqz = paramInt3;
+      lvE = paramb;
+      lvF = paramString1;
+      lvG = paramInt1;
+      lvH = paramInt2;
+      aEZ = paramString2;
+      lvI = paramInt3;
     }
   }
 }

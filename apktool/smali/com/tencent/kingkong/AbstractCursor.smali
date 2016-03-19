@@ -265,7 +265,7 @@
     .locals 2
 
     .prologue
-    .line 418
+    .line 417
     iget-object v0, p0, Lcom/tencent/kingkong/AbstractCursor;->mSelfObserver:Lcom/tencent/kingkong/ContentObserver;
 
     if-eqz v0, :cond_0
@@ -274,14 +274,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 419
+    .line 418
     iget-object v0, p0, Lcom/tencent/kingkong/AbstractCursor;->mContentResolver:Landroid/content/ContentResolver;
 
     iget-object v1, p0, Lcom/tencent/kingkong/AbstractCursor;->mSelfObserver:Lcom/tencent/kingkong/ContentObserver;
 
     invoke-virtual {v0, v1}, Landroid/content/ContentResolver;->unregisterContentObserver(Landroid/database/ContentObserver;)V
 
-    .line 422
+    .line 421
     :cond_0
     :try_start_0
     iget-boolean v0, p0, Lcom/tencent/kingkong/AbstractCursor;->mClosed:Z
@@ -292,7 +292,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 424
+    .line 423
     :cond_1
     :goto_0
     return-void

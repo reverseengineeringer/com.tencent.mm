@@ -2,43 +2,19 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class s
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aPE;
-  private static final int aPN = "md5_lang".hashCode();
-  private static final int aPO;
-  private static final int aPP;
-  private static final int aPQ;
-  private static final int aPR;
-  private static final int aPs = "md5".hashCode();
-  private boolean aPI = true;
-  private boolean aPJ = true;
-  private boolean aPK = true;
-  private boolean aPL = true;
-  private boolean aPM = true;
-  private boolean aPc = true;
-  private boolean aPo = true;
-  public int field_click_flag;
-  public String field_desc;
-  public int field_download_flag;
-  public String field_groupId;
-  public String field_lang;
-  public String field_md5;
-  public String field_md5_lang;
-  
-  static
-  {
-    aPO = "lang".hashCode();
-    aPP = "desc".hashCode();
-    aPE = "groupId".hashCode();
-    aPQ = "click_flag".hashCode();
-    aPR = "download_flag".hashCode();
-  }
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int aTj = "labelId".hashCode();
+  private static final int aTk = "contactName".hashCode();
+  private boolean aTh;
+  private boolean aTi;
+  public String field_contactName;
+  public String field_labelId;
   
   public final void c(Cursor paramCursor)
   {
@@ -53,65 +29,36 @@ public abstract class s
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aPN != k) {
-        break label65;
+      if (aTj != k) {
+        break label60;
       }
-      field_md5_lang = paramCursor.getString(i);
-      aPI = true;
+      field_labelId = paramCursor.getString(i);
     }
     for (;;)
     {
       i += 1;
       break label20;
       break;
-      label65:
-      if (aPs == k) {
-        field_md5 = paramCursor.getString(i);
-      } else if (aPO == k) {
-        field_lang = paramCursor.getString(i);
-      } else if (aPP == k) {
-        field_desc = paramCursor.getString(i);
-      } else if (aPE == k) {
-        field_groupId = paramCursor.getString(i);
-      } else if (aPQ == k) {
-        field_click_flag = paramCursor.getInt(i);
-      } else if (aPR == k) {
-        field_download_flag = paramCursor.getInt(i);
-      } else if (aHH == k) {
-        ibV = paramCursor.getLong(i);
+      label60:
+      if (aTk == k) {
+        field_contactName = paramCursor.getString(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aPI) {
-      localContentValues.put("md5_lang", field_md5_lang);
+    if (aTh) {
+      localContentValues.put("labelId", field_labelId);
     }
-    if (aPc) {
-      localContentValues.put("md5", field_md5);
+    if (aTi) {
+      localContentValues.put("contactName", field_contactName);
     }
-    if (aPJ) {
-      localContentValues.put("lang", field_lang);
-    }
-    if (aPK) {
-      localContentValues.put("desc", field_desc);
-    }
-    if (field_groupId == null) {
-      field_groupId = "";
-    }
-    if (aPo) {
-      localContentValues.put("groupId", field_groupId);
-    }
-    if (aPL) {
-      localContentValues.put("click_flag", Integer.valueOf(field_click_flag));
-    }
-    if (aPM) {
-      localContentValues.put("download_flag", Integer.valueOf(field_download_flag));
-    }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

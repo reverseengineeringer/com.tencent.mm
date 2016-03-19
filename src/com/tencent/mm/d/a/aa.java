@@ -1,30 +1,23 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class aa
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a auN = new a();
-  public b auO = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atp = new a();
   
   public aa()
   {
-    id = "CreateBakBanner";
-    hXT = atO;
+    id = "CheckCanSyncAddrBook";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public Context context;
-  }
-  
-  public static final class b
-  {
-    public Object auP;
+    public boolean atf = false;
   }
 }
 

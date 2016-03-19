@@ -2,9 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class ep$a
 {
-  public boolean aAC = false;
-  public String aAQ;
-  public String aBm;
+  public int asc;
 }
 
 /* Location:

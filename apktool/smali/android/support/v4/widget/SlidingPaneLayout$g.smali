@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private jc:Ljava/lang/reflect/Method;
+.field private ih:Ljava/lang/reflect/Method;
 
-.field private jd:Ljava/lang/reflect/Field;
+.field private ii:Ljava/lang/reflect/Field;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->jc:Ljava/lang/reflect/Method;
+    iput-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->ih:Ljava/lang/reflect/Method;
     :try_end_0
     .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_1
 
@@ -55,10 +55,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->jd:Ljava/lang/reflect/Field;
+    iput-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->ii:Ljava/lang/reflect/Field;
 
     .line 1364
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->jd:Ljava/lang/reflect/Field;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->ii:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x1
 
@@ -89,24 +89,24 @@
 
     .prologue
     .line 1372
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->jc:Ljava/lang/reflect/Method;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->ih:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->jd:Ljava/lang/reflect/Field;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->ii:Ljava/lang/reflect/Field;
 
     if-eqz v0, :cond_0
 
     .line 1374
     :try_start_0
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->jd:Ljava/lang/reflect/Field;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->ii:Ljava/lang/reflect/Field;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, p2, v1}, Ljava/lang/reflect/Field;->setBoolean(Ljava/lang/Object;Z)V
 
     .line 1375
-    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->jc:Ljava/lang/reflect/Method;
+    iget-object v0, p0, Landroid/support/v4/widget/SlidingPaneLayout$g;->ih:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
 

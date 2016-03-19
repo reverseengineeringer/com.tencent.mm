@@ -12,17 +12,17 @@
 
 
 # instance fields
-.field private ecI:Lcom/tencent/mm/sdk/platformtools/aj;
+.field private fml:Lcom/tencent/mm/sdk/platformtools/af;
 
-.field private fhZ:Landroid/widget/TextView;
+.field private gyF:Landroid/widget/TextView;
 
-.field private iGr:I
+.field private kFB:I
 
-.field private iGs:I
+.field private kFC:I
 
-.field private iGt:Landroid/widget/TextView;
+.field private kFD:Landroid/widget/TextView;
 
-.field private iGu:Lcom/tencent/mm/ui/base/MMProgressBar$a;
+.field private kFE:Lcom/tencent/mm/ui/base/MMProgressBar$a;
 
 .field private max:I
 
@@ -43,32 +43,32 @@
     iput v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->max:I
 
     .line 22
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGr:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFB:I
 
     .line 23
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGs:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFC:I
 
     .line 36
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aj;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/af;
 
-    new-instance v1, Lcom/tencent/mm/ui/base/bm;
+    new-instance v1, Lcom/tencent/mm/ui/base/MMProgressBar$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/bm;-><init>(Lcom/tencent/mm/ui/base/MMProgressBar;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMProgressBar$1;-><init>(Lcom/tencent/mm/ui/base/MMProgressBar;)V
 
-    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aj;-><init>(Lcom/tencent/mm/sdk/platformtools/aj$a;Z)V
+    invoke-direct {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;-><init>(Lcom/tencent/mm/sdk/platformtools/af$a;Z)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->ecI:Lcom/tencent/mm/sdk/platformtools/aj;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->fml:Lcom/tencent/mm/sdk/platformtools/af;
 
     .line 59
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMProgressBar;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$k;->mm_progress_bar:I
+    const v1, 0x7f0a0584
 
     invoke-static {v0, v1, p0}, Lcom/tencent/mm/ui/base/MMProgressBar;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    sget v0, Lcom/tencent/mm/a$i;->mm_progress_bar_progress:I
+    const v0, 0x7f07109f
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMProgressBar;->findViewById(I)Landroid/view/View;
 
@@ -76,9 +76,9 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGt:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFD:Landroid/widget/TextView;
 
-    sget v0, Lcom/tencent/mm/a$i;->mm_progress_bar_tips:I
+    const v0, 0x7f07109e
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMProgressBar;->findViewById(I)Landroid/view/View;
 
@@ -86,7 +86,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->fhZ:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->gyF:Landroid/widget/TextView;
 
     .line 60
     return-void
@@ -97,7 +97,7 @@
 
     .prologue
     .line 13
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGs:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFC:I
 
     return v0
 .end method
@@ -107,11 +107,11 @@
 
     .prologue
     .line 13
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGr:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFB:I
 
     add-int/2addr v0, p1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGr:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFB:I
 
     return v0
 .end method
@@ -121,7 +121,7 @@
 
     .prologue
     .line 13
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGr:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFB:I
 
     return v0
 .end method
@@ -131,7 +131,7 @@
 
     .prologue
     .line 13
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGt:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFD:Landroid/widget/TextView;
 
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/MMProgressBar;->getProgressLength()I
 
@@ -139,13 +139,13 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setWidth(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGu:Lcom/tencent/mm/ui/base/MMProgressBar$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFE:Lcom/tencent/mm/ui/base/MMProgressBar$a;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGu:Lcom/tencent/mm/ui/base/MMProgressBar$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFE:Lcom/tencent/mm/ui/base/MMProgressBar$a;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/base/MMProgressBar$a;->ke(I)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/base/MMProgressBar$a;->mv(I)V
 
     :cond_0
     return-void
@@ -161,12 +161,12 @@
     return v0
 .end method
 
-.method static synthetic d(Lcom/tencent/mm/ui/base/MMProgressBar;)Lcom/tencent/mm/sdk/platformtools/aj;
+.method static synthetic d(Lcom/tencent/mm/ui/base/MMProgressBar;)Lcom/tencent/mm/sdk/platformtools/af;
     .locals 1
 
     .prologue
     .line 13
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->ecI:Lcom/tencent/mm/sdk/platformtools/aj;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->fml:Lcom/tencent/mm/sdk/platformtools/af;
 
     return-object v0
 .end method
@@ -182,7 +182,7 @@
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGr:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFB:I
 
     mul-int/2addr v0, v1
 
@@ -232,7 +232,7 @@
 
     .prologue
     .line 96
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGs:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFC:I
 
     return v0
 .end method
@@ -245,11 +245,11 @@
     if-eqz p1, :cond_0
 
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->ecI:Lcom/tencent/mm/sdk/platformtools/aj;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->fml:Lcom/tencent/mm/sdk/platformtools/af;
 
     const-wide/16 v1, 0x28
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aj;->cA(J)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/af;->ds(J)V
 
     .line 105
     :goto_0
@@ -257,9 +257,9 @@
 
     .line 103
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->ecI:Lcom/tencent/mm/sdk/platformtools/aj;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->fml:Lcom/tencent/mm/sdk/platformtools/af;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/aj;->aEN()V
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aUF()V
 
     goto :goto_0
 .end method
@@ -280,7 +280,7 @@
 
     .prologue
     .line 116
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGu:Lcom/tencent/mm/ui/base/MMProgressBar$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFE:Lcom/tencent/mm/ui/base/MMProgressBar$a;
 
     .line 117
     return-void
@@ -300,12 +300,12 @@
 
     .line 89
     :cond_0
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->iGs:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->kFC:I
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->ecI:Lcom/tencent/mm/sdk/platformtools/aj;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->fml:Lcom/tencent/mm/sdk/platformtools/af;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/aj;->aFk()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/af;->aVf()Z
 
     move-result v0
 
@@ -326,7 +326,7 @@
 
     .prologue
     .line 112
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->fhZ:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMProgressBar;->gyF:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 

@@ -1,180 +1,496 @@
 package com.tencent.smtt.sdk.a;
 
 import MTT.ThirdAppInfoNew;
-import com.tencent.smtt.a.u;
+import android.content.Context;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.Signature;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
+import android.telephony.TelephonyManager;
+import android.text.TextUtils;
+import com.tencent.smtt.a.n;
+import com.tencent.smtt.a.o;
+import com.tencent.smtt.a.r;
+import com.tencent.smtt.sdk.QbSdk;
 import java.io.UnsupportedEncodingException;
-import org.json.JSONObject;
+import java.security.MessageDigest;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 public final class b
 {
-  public static byte[] jLD = null;
+  public static byte[] lUz = null;
   
   static
   {
     try
     {
-      jLD = "65dRa93L".getBytes("utf-8");
+      lUz = "65dRa93L".getBytes("utf-8");
       return;
     }
     catch (UnsupportedEncodingException localUnsupportedEncodingException) {}
   }
   
-  private static JSONObject a(ThirdAppInfoNew paramThirdAppInfoNew)
-  {
-    try
-    {
-      JSONObject localJSONObject = new JSONObject();
-      localJSONObject.put("APPNAME", sAppName);
-      localJSONObject.put("TIME", sTime);
-      localJSONObject.put("QUA2", sQua2);
-      localJSONObject.put("LC", sLc);
-      localJSONObject.put("GUID", sGuid);
-      localJSONObject.put("IMEI", sImei);
-      localJSONObject.put("IMSI", sImsi);
-      localJSONObject.put("MAC", sMac);
-      localJSONObject.put("PV", iPv);
-      localJSONObject.put("CORETYPE", iCoreType);
-      localJSONObject.put("PROTOCOL_VERSION", 1);
-      return localJSONObject;
-    }
-    catch (Exception paramThirdAppInfoNew)
-    {
-      u.e("sdkreport", "getPostData exception!");
-    }
-    return null;
-  }
-  
   /* Error */
-  public static void a(android.content.Context paramContext, String paramString1, String paramString2, String paramString3, int paramInt, boolean paramBoolean)
+  private static org.json.JSONObject a(ThirdAppInfoNew paramThirdAppInfoNew)
   {
     // Byte code:
-    //   0: new 36	MTT/ThirdAppInfoNew
+    //   0: new 31	org/json/JSONObject
     //   3: dup
-    //   4: invokespecial 113	MTT/ThirdAppInfoNew:<init>	()V
-    //   7: astore 6
-    //   9: aload 6
+    //   4: invokespecial 34	org/json/JSONObject:<init>	()V
+    //   7: astore_1
+    //   8: aload_1
+    //   9: ldc 36
     //   11: aload_0
-    //   12: invokevirtual 119	android/content/Context:getPackageName	()Ljava/lang/String;
-    //   15: putfield 40	MTT/ThirdAppInfoNew:sAppName	Ljava/lang/String;
-    //   18: aload_0
-    //   19: invokestatic 125	com/tencent/smtt/a/r:eV	(Landroid/content/Context;)Lcom/tencent/smtt/a/r;
-    //   22: pop
-    //   23: new 127	java/text/SimpleDateFormat
-    //   26: dup
-    //   27: ldc -127
-    //   29: invokespecial 132	java/text/SimpleDateFormat:<init>	(Ljava/lang/String;)V
-    //   32: astore 7
-    //   34: aload 7
-    //   36: ldc -122
-    //   38: invokestatic 140	java/util/TimeZone:getTimeZone	(Ljava/lang/String;)Ljava/util/TimeZone;
-    //   41: invokevirtual 144	java/text/SimpleDateFormat:setTimeZone	(Ljava/util/TimeZone;)V
-    //   44: aload 6
-    //   46: aload 7
-    //   48: invokestatic 150	java/util/Calendar:getInstance	()Ljava/util/Calendar;
-    //   51: invokevirtual 154	java/util/Calendar:getTime	()Ljava/util/Date;
-    //   54: invokevirtual 158	java/text/SimpleDateFormat:format	(Ljava/util/Date;)Ljava/lang/String;
-    //   57: putfield 49	MTT/ThirdAppInfoNew:sTime	Ljava/lang/String;
-    //   60: aload 6
-    //   62: aload_1
-    //   63: putfield 64	MTT/ThirdAppInfoNew:sGuid	Ljava/lang/String;
-    //   66: iload 5
-    //   68: ifeq +122 -> 190
-    //   71: aload 6
-    //   73: aload_2
-    //   74: putfield 54	MTT/ThirdAppInfoNew:sQua2	Ljava/lang/String;
-    //   77: aload 6
-    //   79: aload_3
-    //   80: putfield 59	MTT/ThirdAppInfoNew:sLc	Ljava/lang/String;
-    //   83: aload_0
-    //   84: ldc -96
-    //   86: invokevirtual 164	android/content/Context:getSystemService	(Ljava/lang/String;)Ljava/lang/Object;
-    //   89: checkcast 166	android/telephony/TelephonyManager
-    //   92: astore_0
-    //   93: aload_0
-    //   94: ifnull +51 -> 145
-    //   97: aload_0
-    //   98: invokevirtual 169	android/telephony/TelephonyManager:getDeviceId	()Ljava/lang/String;
-    //   101: astore_1
-    //   102: aload_1
-    //   103: ifnull +18 -> 121
-    //   106: ldc -85
-    //   108: aload_1
-    //   109: invokevirtual 175	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   112: ifne +9 -> 121
-    //   115: aload 6
-    //   117: aload_1
-    //   118: putfield 69	MTT/ThirdAppInfoNew:sImei	Ljava/lang/String;
+    //   12: getfield 42	MTT/ThirdAppInfoNew:sAppName	Ljava/lang/String;
+    //   15: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   18: pop
+    //   19: aload_1
+    //   20: ldc 48
+    //   22: aload_0
+    //   23: getfield 51	MTT/ThirdAppInfoNew:sTime	Ljava/lang/String;
+    //   26: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   29: pop
+    //   30: aload_1
+    //   31: ldc 53
+    //   33: aload_0
+    //   34: getfield 56	MTT/ThirdAppInfoNew:sQua2	Ljava/lang/String;
+    //   37: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   40: pop
+    //   41: aload_1
+    //   42: ldc 58
+    //   44: aload_0
+    //   45: getfield 61	MTT/ThirdAppInfoNew:sLc	Ljava/lang/String;
+    //   48: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   51: pop
+    //   52: aload_1
+    //   53: ldc 63
+    //   55: aload_0
+    //   56: getfield 66	MTT/ThirdAppInfoNew:sGuid	Ljava/lang/String;
+    //   59: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   62: pop
+    //   63: aload_1
+    //   64: ldc 68
+    //   66: aload_0
+    //   67: getfield 71	MTT/ThirdAppInfoNew:sImei	Ljava/lang/String;
+    //   70: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   73: pop
+    //   74: aload_1
+    //   75: ldc 73
+    //   77: aload_0
+    //   78: getfield 76	MTT/ThirdAppInfoNew:sImsi	Ljava/lang/String;
+    //   81: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   84: pop
+    //   85: aload_1
+    //   86: ldc 78
+    //   88: aload_0
+    //   89: getfield 81	MTT/ThirdAppInfoNew:sMac	Ljava/lang/String;
+    //   92: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   95: pop
+    //   96: aload_1
+    //   97: ldc 83
+    //   99: aload_0
+    //   100: getfield 87	MTT/ThirdAppInfoNew:iPv	J
+    //   103: invokevirtual 90	org/json/JSONObject:put	(Ljava/lang/String;J)Lorg/json/JSONObject;
+    //   106: pop
+    //   107: aload_1
+    //   108: ldc 92
+    //   110: aload_0
+    //   111: getfield 96	MTT/ThirdAppInfoNew:iCoreType	I
+    //   114: invokevirtual 99	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
+    //   117: pop
+    //   118: aload_1
+    //   119: ldc 101
     //   121: aload_0
-    //   122: invokevirtual 178	android/telephony/TelephonyManager:getSubscriberId	()Ljava/lang/String;
-    //   125: astore_0
-    //   126: aload_0
-    //   127: ifnull +18 -> 145
-    //   130: ldc -85
-    //   132: aload_0
-    //   133: invokevirtual 175	java/lang/String:equals	(Ljava/lang/Object;)Z
-    //   136: ifne +9 -> 145
-    //   139: aload 6
-    //   141: aload_0
-    //   142: putfield 74	MTT/ThirdAppInfoNew:sImsi	Ljava/lang/String;
-    //   145: aload 6
-    //   147: ldc -85
-    //   149: putfield 79	MTT/ThirdAppInfoNew:sMac	Ljava/lang/String;
-    //   152: aload 6
-    //   154: iload 4
-    //   156: i2l
-    //   157: putfield 85	MTT/ThirdAppInfoNew:iPv	J
-    //   160: iload 5
-    //   162: ifeq +42 -> 204
-    //   165: iconst_1
-    //   166: istore 4
-    //   168: aload 6
-    //   170: iload 4
-    //   172: putfield 94	MTT/ThirdAppInfoNew:iCoreType	I
-    //   175: new 180	com/tencent/smtt/sdk/a/c
-    //   178: dup
-    //   179: ldc -74
-    //   181: aload 6
-    //   183: invokespecial 185	com/tencent/smtt/sdk/a/c:<init>	(Ljava/lang/String;LMTT/ThirdAppInfoNew;)V
-    //   186: invokevirtual 188	com/tencent/smtt/sdk/a/c:start	()V
-    //   189: return
-    //   190: aload 6
-    //   192: aload_0
-    //   193: invokestatic 194	com/tencent/smtt/a/q:eS	(Landroid/content/Context;)Ljava/lang/String;
-    //   196: putfield 54	MTT/ThirdAppInfoNew:sQua2	Ljava/lang/String;
-    //   199: goto -122 -> 77
-    //   202: astore_0
-    //   203: return
-    //   204: iconst_0
-    //   205: istore 4
-    //   207: goto -39 -> 168
-    //   210: astore_0
-    //   211: goto -66 -> 145
+    //   122: getfield 104	MTT/ThirdAppInfoNew:sAppVersionName	Ljava/lang/String;
+    //   125: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   128: pop
+    //   129: aload_0
+    //   130: getfield 107	MTT/ThirdAppInfoNew:sAppSignature	Ljava/lang/String;
+    //   133: ifnonnull +65 -> 198
+    //   136: aload_1
+    //   137: ldc 109
+    //   139: ldc 111
+    //   141: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   144: pop
+    //   145: aload_1
+    //   146: ldc 113
+    //   148: iconst_3
+    //   149: invokevirtual 99	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
+    //   152: pop
+    //   153: invokestatic 119	com/tencent/smtt/sdk/QbSdk:getTID	()Ljava/lang/String;
+    //   156: ifnull +40 -> 196
+    //   159: aload_0
+    //   160: getfield 42	MTT/ThirdAppInfoNew:sAppName	Ljava/lang/String;
+    //   163: ldc 121
+    //   165: invokevirtual 125	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   168: ifeq +54 -> 222
+    //   171: invokestatic 131	com/tencent/smtt/a/i:bmk	()Lcom/tencent/smtt/a/i;
+    //   174: pop
+    //   175: aload_1
+    //   176: ldc -123
+    //   178: invokestatic 119	com/tencent/smtt/sdk/QbSdk:getTID	()Ljava/lang/String;
+    //   181: invokestatic 137	com/tencent/smtt/a/i:Im	(Ljava/lang/String;)Ljava/lang/String;
+    //   184: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   187: pop
+    //   188: aload_1
+    //   189: ldc -117
+    //   191: iconst_1
+    //   192: invokevirtual 99	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
+    //   195: pop
+    //   196: aload_1
+    //   197: areturn
+    //   198: aload_1
+    //   199: ldc 109
+    //   201: aload_0
+    //   202: getfield 107	MTT/ThirdAppInfoNew:sAppSignature	Ljava/lang/String;
+    //   205: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   208: pop
+    //   209: goto -64 -> 145
+    //   212: astore_0
+    //   213: ldc -115
+    //   215: ldc -113
+    //   217: invokestatic 149	com/tencent/smtt/a/r:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   220: aconst_null
+    //   221: areturn
+    //   222: aload_0
+    //   223: getfield 42	MTT/ThirdAppInfoNew:sAppName	Ljava/lang/String;
+    //   226: ldc -105
+    //   228: invokevirtual 125	java/lang/String:equals	(Ljava/lang/Object;)Z
+    //   231: ifeq -35 -> 196
+    //   234: aload_1
+    //   235: ldc -123
+    //   237: invokestatic 119	com/tencent/smtt/sdk/QbSdk:getTID	()Ljava/lang/String;
+    //   240: invokevirtual 46	org/json/JSONObject:put	(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+    //   243: pop
+    //   244: aload_1
+    //   245: ldc -117
+    //   247: iconst_0
+    //   248: invokevirtual 99	org/json/JSONObject:put	(Ljava/lang/String;I)Lorg/json/JSONObject;
+    //   251: pop
+    //   252: aload_1
+    //   253: areturn
+    //   254: astore_0
+    //   255: aload_1
+    //   256: areturn
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	214	0	paramContext	android.content.Context
-    //   0	214	1	paramString1	String
-    //   0	214	2	paramString2	String
-    //   0	214	3	paramString3	String
-    //   0	214	4	paramInt	int
-    //   0	214	5	paramBoolean	boolean
-    //   7	184	6	localThirdAppInfoNew	ThirdAppInfoNew
-    //   32	15	7	localSimpleDateFormat	java.text.SimpleDateFormat
+    //   0	257	0	paramThirdAppInfoNew	ThirdAppInfoNew
+    //   7	249	1	localJSONObject	org.json.JSONObject
     // Exception table:
     //   from	to	target	type
-    //   0	66	202	java/lang/Throwable
-    //   71	77	202	java/lang/Throwable
-    //   77	93	202	java/lang/Throwable
-    //   97	102	202	java/lang/Throwable
-    //   106	121	202	java/lang/Throwable
-    //   121	126	202	java/lang/Throwable
-    //   130	145	202	java/lang/Throwable
-    //   145	160	202	java/lang/Throwable
-    //   168	189	202	java/lang/Throwable
-    //   190	199	202	java/lang/Throwable
-    //   97	102	210	java/lang/Exception
-    //   106	121	210	java/lang/Exception
-    //   121	126	210	java/lang/Exception
-    //   130	145	210	java/lang/Exception
+    //   0	145	212	java/lang/Exception
+    //   145	153	212	java/lang/Exception
+    //   198	209	212	java/lang/Exception
+    //   153	196	254	java/lang/Exception
+    //   222	252	254	java/lang/Exception
+  }
+  
+  public static void a(Context paramContext, String paramString1, String paramString2, String paramString3, int paramInt, boolean paramBoolean)
+  {
+    Object localObject4 = "";
+    localObject3 = localObject4;
+    for (;;)
+    {
+      try
+      {
+        ApplicationInfo localApplicationInfo = paramContext.getApplicationInfo();
+        localObject1 = localObject4;
+        localObject3 = localObject4;
+        if ("com.tencent.mobileqq".equals(packageName))
+        {
+          localObject3 = localObject4;
+          localObject4 = getPackageManagergetPackageInfopackageName, 0).versionName;
+          localObject1 = localObject4;
+          localObject3 = localObject4;
+          if (!TextUtils.isEmpty(QbSdk.getQQBuildNumber()))
+          {
+            localObject3 = localObject4;
+            localObject1 = (String)localObject4 + "." + QbSdk.getQQBuildNumber();
+          }
+        }
+      }
+      catch (Exception localException)
+      {
+        Object localObject1;
+        Object localObject2 = localObject3;
+        continue;
+      }
+      try
+      {
+        localObject3 = new ThirdAppInfoNew();
+        sAppName = getApplicationInfopackageName;
+        o.fS(paramContext);
+        localObject4 = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+        ((SimpleDateFormat)localObject4).setTimeZone(TimeZone.getTimeZone("GMT+08"));
+        sTime = ((SimpleDateFormat)localObject4).format(Calendar.getInstance().getTime());
+        sGuid = paramString1;
+        if (paramBoolean)
+        {
+          sQua2 = paramString2;
+          sLc = paramString3;
+          paramString1 = (TelephonyManager)paramContext.getSystemService("phone");
+          if (paramString1 == null) {}
+        }
+      }
+      catch (Throwable paramContext)
+      {
+        return;
+      }
+      try
+      {
+        paramString2 = paramString1.getDeviceId();
+        if ((paramString2 != null) && (!"".equals(paramString2))) {
+          sImei = paramString2;
+        }
+        paramString1 = paramString1.getSubscriberId();
+        if ((paramString1 != null) && (!"".equals(paramString1))) {
+          sImsi = paramString1;
+        }
+      }
+      catch (Exception paramString1)
+      {
+        continue;
+      }
+      try
+      {
+        paramString1 = (WifiManager)paramContext.getApplicationContext().getSystemService("wifi");
+        if (paramString1 != null) {
+          continue;
+        }
+        paramString1 = null;
+        if (paramString1 != null) {
+          continue;
+        }
+        paramString1 = "";
+      }
+      catch (Exception paramString1)
+      {
+        r.e("sdkreport", "doReport exception:" + paramString1.getMessage());
+        paramString1 = "";
+        continue;
+        paramInt = 0;
+        continue;
+      }
+      sMac = paramString1;
+      iPv = paramInt;
+      if (!paramBoolean) {
+        continue;
+      }
+      paramInt = 1;
+      iCoreType = paramInt;
+      sAppVersionName = ((String)localObject1);
+      sAppSignature = fI(paramContext);
+      new Thread("HttpUtils")
+      {
+        /* Error */
+        public final void run()
+        {
+          // Byte code:
+          //   0: aconst_null
+          //   1: astore_1
+          //   2: getstatic 32	android/os/Build$VERSION:SDK_INT	I
+          //   5: bipush 8
+          //   7: if_icmpge +4 -> 11
+          //   10: return
+          //   11: getstatic 36	com/tencent/smtt/sdk/a/b:lUz	[B
+          //   14: ifnonnull +13 -> 27
+          //   17: ldc 38
+          //   19: ldc 40
+          //   21: invokevirtual 46	java/lang/String:getBytes	(Ljava/lang/String;)[B
+          //   24: putstatic 36	com/tencent/smtt/sdk/a/b:lUz	[B
+          //   27: getstatic 36	com/tencent/smtt/sdk/a/b:lUz	[B
+          //   30: ifnonnull +26 -> 56
+          //   33: ldc 48
+          //   35: ldc 50
+          //   37: invokestatic 56	com/tencent/smtt/a/r:e	(Ljava/lang/String;Ljava/lang/String;)V
+          //   40: return
+          //   41: astore_2
+          //   42: aconst_null
+          //   43: putstatic 36	com/tencent/smtt/sdk/a/b:lUz	[B
+          //   46: ldc 48
+          //   48: ldc 58
+          //   50: invokestatic 56	com/tencent/smtt/a/r:e	(Ljava/lang/String;Ljava/lang/String;)V
+          //   53: goto -26 -> 27
+          //   56: invokestatic 64	com/tencent/smtt/a/o:bmq	()Lcom/tencent/smtt/a/o;
+          //   59: getfield 68	com/tencent/smtt/a/o:lVg	Ljava/lang/String;
+          //   62: astore_2
+          //   63: invokestatic 74	com/tencent/smtt/a/h:bmi	()Lcom/tencent/smtt/a/h;
+          //   66: pop
+          //   67: invokestatic 78	com/tencent/smtt/a/h:bmj	()Ljava/lang/String;
+          //   70: astore_3
+          //   71: new 80	java/net/URL
+          //   74: dup
+          //   75: new 82	java/lang/StringBuilder
+          //   78: dup
+          //   79: invokespecial 84	java/lang/StringBuilder:<init>	()V
+          //   82: aload_2
+          //   83: invokevirtual 88	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+          //   86: aload_3
+          //   87: invokevirtual 88	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+          //   90: invokevirtual 91	java/lang/StringBuilder:toString	()Ljava/lang/String;
+          //   93: invokespecial 92	java/net/URL:<init>	(Ljava/lang/String;)V
+          //   96: invokevirtual 96	java/net/URL:openConnection	()Ljava/net/URLConnection;
+          //   99: checkcast 98	java/net/HttpURLConnection
+          //   102: astore_3
+          //   103: aload_3
+          //   104: ldc 100
+          //   106: invokevirtual 103	java/net/HttpURLConnection:setRequestMethod	(Ljava/lang/String;)V
+          //   109: aload_3
+          //   110: iconst_1
+          //   111: invokevirtual 107	java/net/HttpURLConnection:setDoOutput	(Z)V
+          //   114: aload_3
+          //   115: iconst_1
+          //   116: invokevirtual 110	java/net/HttpURLConnection:setDoInput	(Z)V
+          //   119: aload_3
+          //   120: iconst_0
+          //   121: invokevirtual 113	java/net/HttpURLConnection:setUseCaches	(Z)V
+          //   124: aload_3
+          //   125: sipush 20000
+          //   128: invokevirtual 117	java/net/HttpURLConnection:setConnectTimeout	(I)V
+          //   131: getstatic 32	android/os/Build$VERSION:SDK_INT	I
+          //   134: bipush 13
+          //   136: if_icmple +11 -> 147
+          //   139: aload_3
+          //   140: ldc 119
+          //   142: ldc 121
+          //   144: invokevirtual 124	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
+          //   147: aload_0
+          //   148: getfield 12	com/tencent/smtt/sdk/a/b$1:lUA	LMTT/ThirdAppInfoNew;
+          //   151: invokestatic 128	com/tencent/smtt/sdk/a/b:b	(LMTT/ThirdAppInfoNew;)Lorg/json/JSONObject;
+          //   154: astore_2
+          //   155: aload_2
+          //   156: astore_1
+          //   157: aload_1
+          //   158: ifnonnull +11 -> 169
+          //   161: ldc 48
+          //   163: ldc -126
+          //   165: invokestatic 56	com/tencent/smtt/a/r:e	(Ljava/lang/String;Ljava/lang/String;)V
+          //   168: return
+          //   169: aload_1
+          //   170: invokevirtual 133	org/json/JSONObject:toString	()Ljava/lang/String;
+          //   173: ldc 40
+          //   175: invokevirtual 46	java/lang/String:getBytes	(Ljava/lang/String;)[B
+          //   178: astore_1
+          //   179: invokestatic 74	com/tencent/smtt/a/h:bmi	()Lcom/tencent/smtt/a/h;
+          //   182: aload_1
+          //   183: invokevirtual 137	com/tencent/smtt/a/h:bg	([B)[B
+          //   186: astore_1
+          //   187: aload_3
+          //   188: ldc -117
+          //   190: ldc -115
+          //   192: invokevirtual 124	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
+          //   195: aload_3
+          //   196: ldc -113
+          //   198: aload_1
+          //   199: arraylength
+          //   200: invokestatic 147	java/lang/String:valueOf	(I)Ljava/lang/String;
+          //   203: invokevirtual 124	java/net/HttpURLConnection:setRequestProperty	(Ljava/lang/String;Ljava/lang/String;)V
+          //   206: aload_3
+          //   207: invokevirtual 151	java/net/HttpURLConnection:getOutputStream	()Ljava/io/OutputStream;
+          //   210: astore_2
+          //   211: aload_2
+          //   212: aload_1
+          //   213: invokevirtual 157	java/io/OutputStream:write	([B)V
+          //   216: aload_2
+          //   217: invokevirtual 160	java/io/OutputStream:flush	()V
+          //   220: aload_3
+          //   221: invokevirtual 164	java/net/HttpURLConnection:getResponseCode	()I
+          //   224: sipush 200
+          //   227: if_icmpeq -217 -> 10
+          //   230: ldc 48
+          //   232: ldc -90
+          //   234: invokestatic 56	com/tencent/smtt/a/r:e	(Ljava/lang/String;Ljava/lang/String;)V
+          //   237: return
+          //   238: astore_1
+          //   239: ldc 48
+          //   241: new 82	java/lang/StringBuilder
+          //   244: dup
+          //   245: ldc -88
+          //   247: invokespecial 169	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+          //   250: aload_1
+          //   251: invokevirtual 172	java/lang/Throwable:getMessage	()Ljava/lang/String;
+          //   254: invokevirtual 88	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+          //   257: invokevirtual 91	java/lang/StringBuilder:toString	()Ljava/lang/String;
+          //   260: invokestatic 56	com/tencent/smtt/a/r:e	(Ljava/lang/String;Ljava/lang/String;)V
+          //   263: return
+          //   264: astore_1
+          //   265: return
+          //   266: astore_2
+          //   267: goto -110 -> 157
+          //   270: astore_1
+          //   271: return
+          // Local variable table:
+          //   start	length	slot	name	signature
+          //   0	272	0	this	1
+          //   1	212	1	localObject1	Object
+          //   238	13	1	localThrowable1	Throwable
+          //   264	1	1	localThrowable2	Throwable
+          //   270	1	1	localIOException	java.io.IOException
+          //   41	1	2	localUnsupportedEncodingException	UnsupportedEncodingException
+          //   62	155	2	localObject2	Object
+          //   266	1	2	localException	Exception
+          //   70	151	3	localObject3	Object
+          // Exception table:
+          //   from	to	target	type
+          //   17	27	41	java/io/UnsupportedEncodingException
+          //   206	237	238	java/lang/Throwable
+          //   169	187	264	java/lang/Throwable
+          //   147	155	266	java/lang/Exception
+          //   56	109	270	java/io/IOException
+        }
+      }.start();
+      return;
+      sQua2 = n.fP(paramContext);
+      continue;
+      paramString1 = paramString1.getConnectionInfo();
+      continue;
+      paramString1 = paramString1.getMacAddress();
+    }
+  }
+  
+  private static String fI(Context paramContext)
+  {
+    int i = 0;
+    try
+    {
+      paramContext = getPackageManagergetPackageInfogetPackageName64signatures[0].toByteArray();
+      if (paramContext != null)
+      {
+        Object localObject = MessageDigest.getInstance("SHA-1");
+        ((MessageDigest)localObject).update(paramContext);
+        paramContext = ((MessageDigest)localObject).digest();
+        if (paramContext != null)
+        {
+          localObject = new StringBuilder("");
+          if (paramContext != null)
+          {
+            if (paramContext.length <= 0) {
+              return null;
+            }
+            while (i < paramContext.length)
+            {
+              String str = Integer.toHexString(paramContext[i] & 0xFF).toUpperCase();
+              if (i > 0) {
+                ((StringBuilder)localObject).append(":");
+              }
+              if (str.length() < 2) {
+                ((StringBuilder)localObject).append(0);
+              }
+              ((StringBuilder)localObject).append(str);
+              i += 1;
+            }
+            paramContext = ((StringBuilder)localObject).toString();
+            return paramContext;
+          }
+        }
+      }
+    }
+    catch (Exception paramContext) {}
+    return null;
   }
 }
 

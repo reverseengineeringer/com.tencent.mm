@@ -9,9 +9,22 @@ public class MMKeyboardUperView
   extends ScrollView
 {
   int defaultHeight = -1;
-  View iva;
-  Runnable ivb = new eb(this);
-  Runnable ivc = new ec(this);
+  View kuc;
+  Runnable kud = new Runnable()
+  {
+    public final void run()
+    {
+      fullScroll(130);
+      MMKeyboardUperView.a(MMKeyboardUperView.this).setVisibility(4);
+    }
+  };
+  Runnable kue = new Runnable()
+  {
+    public final void run()
+    {
+      MMKeyboardUperView.a(MMKeyboardUperView.this).setVisibility(0);
+    }
+  };
   
   public MMKeyboardUperView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -25,7 +38,7 @@ public class MMKeyboardUperView
   
   public void setupUperView(View paramView)
   {
-    iva = paramView;
+    kuc = paramView;
     defaultHeight = -1;
   }
 }

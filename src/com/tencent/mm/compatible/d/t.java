@@ -2,16 +2,16 @@ package com.tencent.mm.compatible.d;
 
 public final class t
 {
-  public int biA;
-  public int biB;
-  public int biC;
-  public int biD;
-  public int biE;
-  public int biF;
-  public boolean biw;
-  public int bix;
-  public int biy;
-  public int biz;
+  public boolean bsX;
+  public int bsY;
+  public int bsZ;
+  public int bta;
+  public int btb;
+  public int btc;
+  public int btd;
+  public int bte;
+  public int btf;
+  public int btg;
   
   public t()
   {
@@ -20,16 +20,16 @@ public final class t
   
   public final void reset()
   {
-    biw = false;
-    biy = 224;
-    bix = 288;
-    biz = 10;
-    biA = 3000000;
-    biB = 1;
-    biC = 1;
-    biD = 1;
-    biE = 0;
-    biF = 1;
+    bsX = false;
+    bsZ = 224;
+    bsY = 288;
+    bta = 10;
+    btb = 3000000;
+    btc = 1;
+    btd = 1;
+    bte = 1;
+    btf = 0;
+    btg = 1;
   }
 }
 

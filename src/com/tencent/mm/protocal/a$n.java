@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$n
-  extends a.c
+  extends a.e
 {
   public a$n()
   {
-    super("closeWindow", "close_window", 17, false);
+    super("changePayActivityView", "change_pay_activity_view", 207, true);
   }
 }
 

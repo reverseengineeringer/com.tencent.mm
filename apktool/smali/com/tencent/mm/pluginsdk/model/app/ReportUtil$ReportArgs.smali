@@ -22,13 +22,13 @@
 
 
 # instance fields
-.field public cjK:Ljava/lang/String;
+.field public cAU:Ljava/lang/String;
 
-.field public cjN:Ljava/lang/String;
+.field public cAX:Ljava/lang/String;
 
 .field public errCode:I
 
-.field public gMB:Ljava/lang/String;
+.field public iBD:Ljava/lang/String;
 
 
 # direct methods
@@ -37,9 +37,9 @@
 
     .prologue
     .line 33
-    new-instance v0, Lcom/tencent/mm/pluginsdk/model/app/at;
+    new-instance v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs$1;
 
-    invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/model/app/at;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs$1;-><init>()V
 
     sput-object v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -68,7 +68,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cjN:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAX:Ljava/lang/String;
 
     .line 49
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
@@ -82,14 +82,14 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->gMB:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iBD:Ljava/lang/String;
 
     .line 51
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cjK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAU:Ljava/lang/String;
 
     .line 52
     return-void
@@ -122,7 +122,7 @@
 
     .prologue
     .line 27
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cjN:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAX:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
@@ -132,12 +132,12 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->gMB:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iBD:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 30
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cjK:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAU:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

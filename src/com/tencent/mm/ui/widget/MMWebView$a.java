@@ -3,10 +3,11 @@ package com.tencent.mm.ui.widget;
 import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
-import com.tencent.mm.compatible.d.q;
-import com.tencent.mm.compatible.d.w;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import android.os.Build.VERSION;
+import com.tencent.mm.compatible.d.p;
+import com.tencent.mm.compatible.d.x;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.smtt.sdk.QbSdk;
 import com.tencent.smtt.sdk.WebView;
 import java.util.ArrayList;
@@ -21,9 +22,9 @@ public final class MMWebView$a
     if (!"1".equals(paramString1)) {
       return false;
     }
-    if (bn.iW(paramString2))
+    if (ay.kz(paramString2))
     {
-      t.w("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "enableTbsKernel, tbsSupportVerSec is null");
+      u.w("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "enableTbsKernel, tbsSupportVerSec is null");
       return false;
     }
     for (;;)
@@ -34,38 +35,43 @@ public final class MMWebView$a
         int j = WebView.getTbsCoreVersion(paramContext);
         if (j == 0)
         {
-          t.i("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "tbs does not exist, should enable tbs");
+          u.i("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "tbs does not exist, should enable tbs");
           return true;
         }
-        paramContext = MMWebView.b.BU(paramString2);
-        i = 0;
-        if (i >= jBt.size()) {
-          break label198;
+        if ((Build.VERSION.SDK_INT >= 21) && (j < 25440))
+        {
+          u.i("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "enableTbsKernel, tbsCoreVersion = %d, sdk version = %d", new Object[] { Integer.valueOf(j), Integer.valueOf(Build.VERSION.SDK_INT) });
+          return false;
         }
-        int k = ((Integer)jBt.get(i)).intValue();
-        int m = ((Integer)jBu.get(i)).intValue();
+        paramContext = MMWebView.b.HP(paramString2);
+        i = 0;
+        if (i >= lFS.size()) {
+          break label244;
+        }
+        int k = ((Integer)lFS.get(i)).intValue();
+        int m = ((Integer)lFT.get(i)).intValue();
         if ((k >= 0) && (m > 0) && (m >= k) && (k <= j) && (j <= m))
         {
           paramBoolean = true;
-          t.i("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "enableTbsKernel, tbsCoreVersion = %d, inSection = %b", new Object[] { Integer.valueOf(j), Boolean.valueOf(paramBoolean) });
+          u.i("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "enableTbsKernel, tbsCoreVersion = %d, inSection = %b", new Object[] { Integer.valueOf(j), Boolean.valueOf(paramBoolean) });
           return paramBoolean;
         }
       }
       catch (Exception paramContext)
       {
-        t.e("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "enableTbsKernel, init x5 settings, ex = %s", new Object[] { paramContext.getMessage() });
+        u.e("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "enableTbsKernel, init x5 settings, ex = %s", new Object[] { paramContext.getMessage() });
         return false;
       }
       i += 1;
       continue;
-      label198:
+      label244:
       paramBoolean = false;
     }
   }
   
-  public static MMWebView ea(Context paramContext)
+  public static MMWebView eG(Context paramContext)
   {
-    eb(paramContext);
+    eH(paramContext);
     paramContext = new MMWebView(paramContext);
     MMWebView.a(paramContext);
     if (paramContext.getX5WebViewExtension() != null) {}
@@ -76,15 +82,15 @@ public final class MMWebView$a
     }
   }
   
-  public static void eb(Context paramContext)
+  private static void eH(Context paramContext)
   {
     Object localObject = paramContext.getSharedPreferences("com.tencent.mm_webview_x5_preferences", 4);
-    boolean bool = biqbiP;
+    boolean bool = bsNbtr;
     String str = ((SharedPreferences)localObject).getString("tbs_enable", null);
     localObject = ((SharedPreferences)localObject).getString("tbs_supported_ver_sec", null);
-    t.i("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "initTbsSettings, forceUseSysWebView = %b, tbsEnable = %s, tbsSupportVerSec = %s", new Object[] { Boolean.valueOf(bool), str, localObject });
+    u.i("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "initTbsSettings, forceUseSysWebView = %b, tbsEnable = %s, tbsSupportVerSec = %s", new Object[] { Boolean.valueOf(bool), str, localObject });
     bool = a(paramContext, bool, str, (String)localObject);
-    t.i("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "initTbsSettings, enableTbsKernel = %b", new Object[] { Boolean.valueOf(bool) });
+    u.i("!44@/B4Tb64lLpLUa7oZpyRLqvzHNIkqE5XC557eBqqYh7Y=", "initTbsSettings, enableTbsKernel = %b", new Object[] { Boolean.valueOf(bool) });
     if (!bool) {
       QbSdk.forceSysWebView();
     }
@@ -92,7 +98,7 @@ public final class MMWebView$a
   
   public static MMWebView f(Activity paramActivity, int paramInt)
   {
-    eb(paramActivity);
+    eH(paramActivity);
     paramActivity = (MMWebView)paramActivity.findViewById(paramInt);
     MMWebView.a(paramActivity);
     if (paramActivity.getX5WebViewExtension() != null) {}

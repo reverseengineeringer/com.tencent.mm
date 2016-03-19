@@ -1,28 +1,33 @@
 package com.tencent.mm.ui.tools;
 
 import android.app.ProgressDialog;
-import android.content.ContentResolver;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 import com.jg.JgClassChecked;
-import com.tencent.mm.a.n;
-import com.tencent.mm.aj.c;
+import com.tencent.mm.ar.c;
 import com.tencent.mm.g.e;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelsimple.am;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.modelsimple.ag;
 import com.tencent.mm.pluginsdk.ui.AutoLoginActivity;
 import com.tencent.mm.pluginsdk.ui.AutoLoginActivity.a;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.o;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.MMBitmapFactory.DecodeResultLogger;
+import com.tencent.mm.sdk.platformtools.MMBitmapFactory.KVStatHelper;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.n;
+import com.tencent.mm.sdk.platformtools.p;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.account.SimpleLoginUI;
+import com.tencent.mm.ui.base.g;
+import java.io.File;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -32,207 +37,211 @@ public class ShareToTimeLineUI
   extends AutoLoginActivity
   implements d
 {
-  private ProgressDialog bXB = null;
+  private ProgressDialog coM = null;
   private Intent intent;
   
-  private static boolean BJ(String paramString)
+  private static boolean Hw(String paramString)
   {
+    boolean bool1;
     if ((paramString == null) || (paramString.length() == 0)) {
-      return false;
+      bool1 = false;
     }
-    return bn.ya(paramString);
+    MMBitmapFactory.DecodeResultLogger localDecodeResultLogger;
+    boolean bool2;
+    do
+    {
+      do
+      {
+        return bool1;
+        localDecodeResultLogger = new MMBitmapFactory.DecodeResultLogger();
+        bool2 = n.a(paramString, localDecodeResultLogger);
+        bool1 = bool2;
+      } while (bool2);
+      bool1 = bool2;
+    } while (localDecodeResultLogger.getDecodeResult() < 2000);
+    paramString = MMBitmapFactory.KVStatHelper.getKVStatString(paramString, 4, localDecodeResultLogger);
+    com.tencent.mm.plugin.report.service.h.fUJ.O(12712, paramString);
+    return bool2;
   }
   
-  private ArrayList K(Bundle paramBundle)
+  private ArrayList N(Bundle paramBundle)
   {
-    Object localObject = null;
-    paramBundle = paramBundle.getParcelableArrayList("android.intent.extra.STREAM");
-    ArrayList localArrayList;
-    Cursor localCursor;
-    if ((paramBundle != null) && (paramBundle.size() > 0))
+    Object localObject1 = paramBundle.getParcelableArrayList("android.intent.extra.STREAM");
+    if ((localObject1 != null) && (((ArrayList)localObject1).size() > 0))
     {
-      localArrayList = new ArrayList();
-      Iterator localIterator = paramBundle.iterator();
-      for (;;)
+      paramBundle = new ArrayList();
+      localObject1 = ((ArrayList)localObject1).iterator();
+      while (((Iterator)localObject1).hasNext())
       {
-        if (localIterator.hasNext())
+        Object localObject2 = (Uri)((Iterator)localObject1).next();
+        if ((localObject2 != null) && (((Uri)localObject2).getScheme() != null))
         {
-          paramBundle = (Uri)localIterator.next();
-          if ((paramBundle != null) && (paramBundle.getScheme() != null)) {
-            if (paramBundle.getScheme().startsWith("content"))
+          localObject2 = ay.d(this, (Uri)localObject2);
+          if (!ay.kz((String)localObject2)) {
+            if (Hw((String)localObject2))
             {
-              localCursor = getContentResolver().query(paramBundle, null, null, null, null);
-              if (localCursor == null)
-              {
-                t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "null cursor");
-                continue;
-              }
-              if (!localCursor.moveToFirst()) {
-                break label229;
-              }
+              u.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "multisend file path: " + (String)localObject2);
+              paramBundle.add(localObject2);
+            }
+            else
+            {
+              u.w("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "not image: " + (String)localObject2);
             }
           }
         }
       }
-    }
-    label227:
-    label229:
-    for (paramBundle = localCursor.getString(localCursor.getColumnIndexOrThrow("_data"));; paramBundle = "")
-    {
-      localCursor.close();
-      for (;;)
-      {
-        if (bn.iW(paramBundle)) {
-          break label227;
-        }
-        t.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "multisend file path: " + paramBundle);
-        localArrayList.add(paramBundle);
-        break;
-        if (paramBundle.getScheme().startsWith("file"))
-        {
-          paramBundle = paramBundle.getPath();
-          continue;
-          paramBundle = (Bundle)localObject;
-          if (localArrayList.size() > 0) {
-            paramBundle = localArrayList;
-          }
-          return paramBundle;
-          t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "getParcelableArrayList failed");
-          return null;
-        }
-        else
-        {
-          paramBundle = "";
-        }
+      if (paramBundle.size() > 0) {
+        return paramBundle;
       }
-      break;
+      return null;
+    }
+    u.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "getParcelableArrayList failed");
+    return null;
+  }
+  
+  private void b(ArrayList paramArrayList, String paramString)
+  {
+    if ((paramArrayList == null) || (paramArrayList.size() <= 0))
+    {
+      finish();
+      return;
+    }
+    if (paramArrayList.size() > 9) {
+      paramArrayList.subList(9, paramArrayList.size()).clear();
+    }
+    Object localObject;
+    if ((ah.tI()) && (!ah.tM()))
+    {
+      localObject = new Intent();
+      ((Intent)localObject).putStringArrayListExtra("sns_kemdia_path_list", paramArrayList);
+      if (!ay.kz(paramString)) {
+        ((Intent)localObject).putExtra("Kdescription", paramString);
+      }
+      ((Intent)localObject).putExtra("K_go_to_SnsTimeLineUI", true);
+      c.c(this, "sns", ".ui.SnsUploadUI", (Intent)localObject);
+    }
+    for (;;)
+    {
+      finish();
+      return;
+      paramString = new Intent(this, ShareToTimeLineUI.class);
+      localObject = new ArrayList(paramArrayList.size());
+      paramArrayList = paramArrayList.iterator();
+      while (paramArrayList.hasNext()) {
+        ((ArrayList)localObject).add(Uri.fromFile(new File((String)paramArrayList.next())));
+      }
+      paramString.putParcelableArrayListExtra("android.intent.extra.STREAM", (ArrayList)localObject);
+      paramString.setAction("android.intent.action.SEND_MULTIPLE");
+      paramString.addFlags(32768).addFlags(268435456);
+      paramString.setType("image/*");
+      MMWizardActivity.b(this, new Intent(this, SimpleLoginUI.class).addFlags(268435456).addFlags(32768), paramString);
     }
   }
   
-  private void aRr()
-  {
-    Toast.makeText(this, a.n.shareimg_to_timeline_get_res_fail, 1).show();
-  }
-  
-  private void aSs()
+  private void biN()
   {
     Object localObject1 = getIntent();
     if (localObject1 == null)
     {
-      t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "launch : fail, intent is null");
-      aRr();
+      u.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "launch : fail, intent is null");
+      biq();
       finish();
       return;
     }
     Object localObject2 = ((Intent)localObject1).getAction();
-    Bundle localBundle = o.A((Intent)localObject1);
-    if (bn.iW((String)localObject2))
+    Bundle localBundle = p.J((Intent)localObject1);
+    if (ay.kz((String)localObject2))
     {
-      t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "launch : fail, action is null");
-      aRr();
+      u.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "launch : fail, action is null");
+      biq();
       finish();
       return;
     }
-    String str1 = o.c((Intent)localObject1, "Kdescription");
+    String str1 = p.g((Intent)localObject1, "Kdescription");
     String str2 = getIntent().resolveType(this);
-    if (bn.iW(str2))
+    if (ay.kz(str2))
     {
-      aRr();
+      biq();
       finish();
       return;
     }
     if (!str2.contains("image"))
     {
-      aRr();
+      biq();
       finish();
       return;
     }
     if ((((String)localObject2).equals("android.intent.action.SEND")) && (localBundle != null))
     {
-      t.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "send signal: " + (String)localObject2);
+      u.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "send signal: " + (String)localObject2);
       localObject2 = localBundle.getParcelable("android.intent.extra.STREAM");
       if ((localObject2 == null) || (!(localObject2 instanceof Uri)))
       {
         if (((Intent)localObject1).getBooleanExtra("Ksnsupload_empty_img", false))
         {
-          bM(null, str1);
+          cB(null, str1);
           return;
         }
-        aRr();
+        biq();
         finish();
         return;
       }
-      localObject2 = n((Uri)localObject2);
-      if ((bn.iW((String)localObject2)) || (!BJ((String)localObject2)))
+      localObject2 = ay.d(this, (Uri)localObject2);
+      if ((ay.kz((String)localObject2)) || (!ay.DA((String)localObject2)))
       {
         if (((Intent)localObject1).getBooleanExtra("Ksnsupload_empty_img", false))
         {
-          bM((String)localObject2, str1);
+          cB((String)localObject2, str1);
           return;
         }
-        aRr();
+        biq();
         finish();
         return;
       }
-      if (!BJ((String)localObject2))
+      if (Hw((String)localObject2))
       {
-        aRr();
-        finish();
+        cB((String)localObject2, str1);
         return;
       }
-      bM((String)localObject2, str1);
+      biq();
+      finish();
       return;
     }
     if ((((String)localObject2).equals("android.intent.action.SEND_MULTIPLE")) && (localBundle != null) && (localBundle.containsKey("android.intent.extra.STREAM")))
     {
-      t.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "send multi: " + (String)localObject2);
-      localObject1 = K(localBundle);
+      u.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "send multi: " + (String)localObject2);
+      localObject1 = N(localBundle);
       if ((localObject1 == null) || (((ArrayList)localObject1).size() == 0))
       {
-        aRr();
+        biq();
         finish();
         return;
       }
-      localObject2 = new Intent();
-      if ((localObject1 != null) && (((ArrayList)localObject1).size() > 0))
-      {
-        if (((ArrayList)localObject1).size() > 9) {
-          ((ArrayList)localObject1).subList(9, ((ArrayList)localObject1).size()).clear();
-        }
-        ((Intent)localObject2).putStringArrayListExtra("sns_kemdia_path_list", (ArrayList)localObject1);
-      }
-      if (!bn.iW(str1)) {
-        ((Intent)localObject2).putExtra("Kdescription", str1);
-      }
-      if ((ax.tq()) && (!ax.tu()))
-      {
-        ((Intent)localObject2).putExtra("K_go_to_SnsTimeLineUI", true);
-        c.c(this, "sns", ".ui.SnsUploadUI", (Intent)localObject2);
-      }
-      for (;;)
-      {
-        finish();
-        return;
-        MMWizardActivity.b(this, new Intent(this, SimpleLoginUI.class), getIntent().addFlags(67108864));
-      }
+      b((ArrayList)localObject1, str1);
+      return;
     }
-    t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "launch : fail, uri is null");
-    aRr();
+    u.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "launch : fail, uri is null");
+    biq();
     finish();
   }
   
-  private void bM(String paramString1, String paramString2)
+  private void biq()
+  {
+    Toast.makeText(this, 2131428913, 1).show();
+  }
+  
+  private void cB(String paramString1, String paramString2)
   {
     Intent localIntent = new Intent();
-    if (!bn.iW(paramString1))
+    if (!ay.kz(paramString1))
     {
       localIntent.putExtra("sns_kemdia_path", paramString1);
       localIntent.putExtra("KFilterId", -1);
     }
-    if (!bn.iW(paramString2)) {
+    if (!ay.kz(paramString2)) {
       localIntent.putExtra("Kdescription", paramString2);
     }
-    if ((ax.tq()) && (!ax.tu()))
+    if ((ah.tI()) && (!ah.tM()))
     {
       localIntent.putExtra("K_go_to_SnsTimeLineUI", true);
       c.c(this, "sns", ".ui.SnsUploadUI", localIntent);
@@ -241,74 +250,32 @@ public class ShareToTimeLineUI
     {
       finish();
       return;
-      MMWizardActivity.b(this, new Intent(this, SimpleLoginUI.class), getIntent().addFlags(67108864));
-    }
-  }
-  
-  private String n(Uri paramUri)
-  {
-    if (paramUri == null)
-    {
-      t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "uri is null");
-      return null;
-    }
-    Object localObject = paramUri.getScheme();
-    if (localObject == null) {
-      return null;
-    }
-    if (((String)localObject).equalsIgnoreCase("file"))
-    {
-      t.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "getFilePath : scheme is SCHEME_FILE");
-      return paramUri.getPath();
-    }
-    if (((String)localObject).equalsIgnoreCase("content"))
-    {
-      t.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "getFilePath : scheme is SCHEME_CONTENT: " + paramUri.toString());
-      try
+      if (!ay.kz(paramString1))
       {
-        localObject = getContentResolver().query(paramUri, null, null, null, null);
-        if (localObject == null)
-        {
-          t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "getFilePath : fail, cursor is null");
-          return null;
-        }
+        paramString2 = new Intent(this, ShareToTimeLineUI.class);
+        paramString2.putExtra("android.intent.extra.STREAM", Uri.fromFile(new File(paramString1)));
+        paramString2.addFlags(32768).addFlags(268435456);
+        paramString2.setType("image/*");
+        paramString2.setAction("android.intent.action.SEND");
+        MMWizardActivity.b(this, new Intent(this, SimpleLoginUI.class).addFlags(268435456).addFlags(32768), paramString2);
       }
-      catch (Exception localException)
+      else
       {
-        t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "error in getContentResolver().query() : uri = " + paramUri);
-        return null;
+        biq();
       }
-      if ((localException.getCount() <= 0) || (!localException.moveToFirst()))
-      {
-        localException.close();
-        t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "getFilePath : fail, cursor getCount is 0 or moveToFirst fail");
-        return null;
-      }
-      int i = localException.getColumnIndex("_data");
-      if (i == -1)
-      {
-        localException.close();
-        t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "getFilePath : columnIdx is -1, column with columnName = _data does not exist");
-        return null;
-      }
-      paramUri = localException.getString(i);
-      localException.close();
-      return paramUri;
     }
-    t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "unknown scheme");
-    return null;
   }
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    t.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "onSceneEnd, errType = %d, errCode = %d, errMsg = %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
-    ax.tm().b(1200, this);
-    if ((bXB != null) && (bXB.isShowing())) {
-      bXB.dismiss();
+    u.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "onSceneEnd, errType = %d, errCode = %d, errMsg = %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+    ah.tE().b(1200, this);
+    if ((coM != null) && (coM.isShowing())) {
+      coM.dismiss();
     }
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      aSs();
+      biN();
       return;
     }
     finish();
@@ -316,34 +283,51 @@ public class ShareToTimeLineUI
   
   protected final void a(AutoLoginActivity.a parama, Intent paramIntent)
   {
-    switch (1.cjT[parama.ordinal()])
+    switch (2.cBe[parama.ordinal()])
     {
     default: 
       finish();
       return;
     }
     intent = paramIntent;
-    int i = bn.getInt(com.tencent.mm.g.h.qa().getValue("SystemShareControlBitset"), 0);
-    t.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "now permission = %d", new Object[] { Integer.valueOf(i) });
+    int i = ay.getInt(com.tencent.mm.g.h.pS().getValue("SystemShareControlBitset"), 0);
+    u.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "now permission = %d", new Object[] { Integer.valueOf(i) });
     if ((i & 0x2) > 0)
     {
-      t.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "now allowed to share to friend");
+      u.e("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "now allowed to share to friend");
       finish();
       return;
     }
-    parama = o.c(paramIntent, "android.intent.extra.TEXT");
-    t.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "postLogin, text = %s", new Object[] { parama });
-    if (!bn.iW(parama))
+    parama = p.g(paramIntent, "android.intent.extra.TEXT");
+    u.i("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "postLogin, text = %s", new Object[] { parama });
+    if (!ay.kz(parama))
     {
-      parama = String.format("weixin://dl/business/systemshare/?txt=%s", new Object[] { parama });
-      getString(a.n.app_tip);
-      bXB = com.tencent.mm.ui.base.h.a(this, getString(a.n.app_waiting), true, new gb(this));
-      ax.tm().a(1200, this);
-      parama = new am(parama, 15, null);
-      ax.tm().d(parama);
+      parama = String.format("weixin://dl/business/systemshare/?txt=%s", new Object[] { URLEncoder.encode(parama) });
+      getString(2131430877);
+      coM = g.a(this, getString(2131430941), true, new DialogInterface.OnCancelListener()
+      {
+        public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+        {
+          finish();
+        }
+      });
+      ah.tE().a(1200, this);
+      parama = new ag(parama, 15, null);
+      ah.tE().d(parama);
       return;
     }
-    aSs();
+    biN();
+  }
+  
+  protected final boolean akx()
+  {
+    if ((!ah.tI()) || (ah.tM()))
+    {
+      u.w("!44@/B4Tb64lLpJVtS9qfp1qlfW9cqf1Mxpi6U2Uj2Hibvo=", "not login");
+      biN();
+      return true;
+    }
+    return false;
   }
   
   protected final boolean m(Intent paramIntent)

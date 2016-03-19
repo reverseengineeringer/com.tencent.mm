@@ -1,34 +1,23 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class fn
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aCf = new a();
-  public b aCg = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aAp = new a();
   
   public fn()
   {
-    id = "ProductOperation";
-    hXT = atO;
+    id = "GetSafeDeviceType";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aCh;
-    public int avp = 0;
-    public Context context;
-  }
-  
-  public static final class b
-  {
-    public String aCi;
-    public boolean auM = false;
-    public String ayf;
+    public String aAq;
   }
 }
 

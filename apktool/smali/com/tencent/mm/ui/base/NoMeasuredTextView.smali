@@ -19,89 +19,89 @@
 
 
 # static fields
-.field private static final iKy:Landroid/text/BoringLayout$Metrics;
+.field private static final kJL:Landroid/text/BoringLayout$Metrics;
 
 
 # instance fields
-.field private dCf:F
+.field private dGF:Landroid/text/TextPaint;
 
-.field private dCg:F
+.field private fAP:Landroid/content/res/ColorStateList;
 
-.field private eqR:Landroid/content/res/ColorStateList;
+.field private fh:I
 
-.field private fBk:Landroid/text/TextPaint;
+.field private kGE:Z
 
-.field private ga:I
+.field private kJA:Z
 
-.field private iHr:Z
+.field private kJB:Z
 
-.field private iJT:I
+.field private kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-.field private iJU:Landroid/text/Editable$Factory;
+.field private kJD:Z
 
-.field private iJV:Landroid/text/Spannable$Factory;
+.field private kJE:Z
 
-.field private iJW:Landroid/text/TextUtils$TruncateAt;
+.field private kJF:Z
 
-.field private iJX:Ljava/lang/CharSequence;
+.field private kJG:Z
 
-.field private iJY:I
+.field private kJH:I
 
-.field private iJZ:Landroid/text/method/KeyListener;
+.field private kJI:I
 
-.field private iKa:Landroid/text/Layout;
+.field private kJJ:I
 
-.field private iKb:I
+.field private kJK:I
 
-.field private iKc:I
+.field private kJe:I
 
-.field private iKd:I
+.field private kJf:Landroid/text/Editable$Factory;
 
-.field private iKe:I
+.field private kJg:Landroid/text/Spannable$Factory;
 
-.field private iKf:Z
+.field private kJh:Landroid/text/TextUtils$TruncateAt;
 
-.field private iKg:Z
+.field private kJi:Ljava/lang/CharSequence;
 
-.field private iKh:I
+.field private kJj:I
 
-.field private iKi:Z
+.field private kJk:Landroid/text/method/KeyListener;
 
-.field private iKj:Landroid/text/BoringLayout;
+.field private kJl:Landroid/text/Layout;
 
-.field private iKk:Z
+.field private kJm:F
 
-.field private iKl:I
+.field private kJn:F
 
-.field private iKm:Landroid/graphics/Paint$FontMetricsInt;
+.field private kJo:I
 
-.field private iKn:Z
+.field private kJp:I
 
-.field private iKo:Z
+.field private kJq:I
 
-.field private iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+.field private kJr:I
 
-.field private iKq:Z
+.field private kJs:Z
 
-.field private iKr:Z
+.field private kJt:Z
 
-.field private iKs:Z
+.field private kJu:I
 
-.field private iKt:Z
+.field private kJv:Z
 
-.field private iKu:I
+.field private kJw:Landroid/text/BoringLayout;
 
-.field private iKv:I
+.field private kJx:Z
 
-.field private iKw:I
+.field private kJy:I
 
-.field private iKx:I
+.field private kJz:Landroid/graphics/Paint$FontMetricsInt;
 
-.field private lu:I
+.field private kz:I
 
 .field private mText:Ljava/lang/CharSequence;
 
-.field private rl:I
+.field private qn:I
 
 
 # direct methods
@@ -109,27 +109,27 @@
     .locals 2
 
     .prologue
-    .line 355
+    .line 367
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 356
+    .line 368
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 358
+    .line 370
     const-string/jumbo v1, "H"
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
-    .line 2171
+    .line 2190
     new-instance v0, Landroid/text/BoringLayout$Metrics;
 
     invoke-direct {v0}, Landroid/text/BoringLayout$Metrics;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKy:Landroid/text/BoringLayout$Metrics;
+    sput-object v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJL:Landroid/text/BoringLayout$Metrics;
 
     return-void
 .end method
@@ -148,7 +148,7 @@
 
     const/4 v2, 0x0
 
-    .line 411
+    .line 423
     invoke-direct {p0, p1, p2}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 80
@@ -156,120 +156,120 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJU:Landroid/text/Editable$Factory;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJf:Landroid/text/Editable$Factory;
 
     .line 85
     invoke-static {}, Landroid/text/Spannable$Factory;->getInstance()Landroid/text/Spannable$Factory;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJV:Landroid/text/Spannable$Factory;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJg:Landroid/text/Spannable$Factory;
 
     .line 90
-    iput-object v5, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJW:Landroid/text/TextUtils$TruncateAt;
+    iput-object v5, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJh:Landroid/text/TextUtils$TruncateAt;
 
     .line 105
-    sget v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->iKz:I
+    sget v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->kJM:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJY:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJj:I
 
     .line 126
     const/16 v0, 0x33
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     .line 131
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dCf:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJm:F
 
     .line 136
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dCg:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJn:F
 
     .line 151
-    iput v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    iput v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
     .line 156
-    iput v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKc:I
+    iput v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJp:I
 
     .line 161
-    iput v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKd:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJq:I
 
     .line 166
-    iput v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKe:I
+    iput v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJr:I
 
     .line 171
-    iput v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->rl:I
+    iput v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->qn:I
 
     .line 176
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKf:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJs:Z
 
     .line 181
-    iput v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->lu:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kz:I
 
     .line 186
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKg:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJt:Z
 
     .line 196
-    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKh:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJu:I
 
     .line 201
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKi:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJv:Z
 
     .line 211
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKk:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJx:Z
 
     .line 231
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKn:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJA:Z
 
     .line 236
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKo:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJB:Z
 
     .line 277
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKq:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJD:Z
 
     .line 282
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKr:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJE:Z
 
     .line 287
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKs:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJF:Z
 
     .line 292
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKt:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJG:Z
 
     .line 297
-    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKu:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJH:I
 
     .line 302
-    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKv:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJI:I
 
     .line 307
-    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKw:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJJ:I
 
     .line 312
-    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKx:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJK:I
 
-    .line 412
+    .line 424
     const-string/jumbo v0, ""
 
     iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->mText:Ljava/lang/CharSequence;
 
-    .line 413
+    .line 425
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJX:Ljava/lang/CharSequence;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJi:Ljava/lang/CharSequence;
 
-    .line 414
+    .line 426
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0, v3}, Landroid/text/TextPaint;-><init>(I)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
-    .line 415
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 427
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getResources()Landroid/content/res/Resources;
 
@@ -283,28 +283,28 @@
 
     iput v1, v0, Landroid/text/TextPaint;->density:F
 
-    .line 418
+    .line 430
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setDrawingCacheEnabled(Z)V
 
-    .line 421
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 433
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKm:Landroid/graphics/Paint$FontMetricsInt;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJz:Landroid/graphics/Paint$FontMetricsInt;
 
-    .line 423
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->aNt()V
+    .line 435
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bdk()V
 
-    .line 425
+    .line 437
     invoke-virtual {p0, v3}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setSingleLine(Z)V
 
-    .line 426
+    .line 438
     invoke-virtual {p0, v5}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 430
+    .line 442
     return-void
 .end method
 
@@ -316,10 +316,10 @@
 
     const/4 v3, 0x0
 
-    .line 538
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    .line 550
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 540
+    .line 552
     if-nez p1, :cond_0
 
     if-eqz p2, :cond_2
@@ -327,315 +327,437 @@
     :cond_0
     const/4 v1, 0x1
 
-    .line 542
+    .line 554
     :goto_0
     if-nez v1, :cond_9
 
-    .line 544
+    .line 556
     if-eqz v0, :cond_1
 
-    .line 545
-    iget v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKQ:I
+    .line 557
+    iget v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKd:I
 
     if-nez v1, :cond_3
 
-    .line 546
-    iput-object v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    .line 558
+    iput-object v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 639
+    .line 651
     :cond_1
     :goto_1
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 643
+    .line 655
     return-void
 
     :cond_2
     move v1, v2
 
-    .line 540
+    .line 552
     goto :goto_0
 
-    .line 550
+    .line 562
     :cond_3
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_4
 
-    .line 551
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    .line 563
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 552
+    .line 564
     :cond_4
-    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
-    .line 553
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    .line 565
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_5
 
-    .line 554
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    .line 566
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 555
+    .line 567
     :cond_5
-    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
-    .line 556
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    .line 568
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_6
 
-    .line 557
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    .line 569
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 558
+    .line 570
     :cond_6
-    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
-    .line 559
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    .line 571
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_7
 
-    .line 560
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    .line 572
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 561
+    .line 573
     :cond_7
-    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
-    .line 562
-    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKO:I
+    .line 574
+    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKb:I
 
-    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKK:I
+    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJX:I
 
-    .line 615
+    .line 627
     :cond_8
-    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKP:I
+    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKc:I
 
-    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKL:I
+    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJY:I
 
-    .line 618
+    .line 630
     :goto_2
-    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKM:I
+    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJZ:I
 
-    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKI:I
+    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJV:I
 
-    .line 628
-    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKN:I
+    .line 640
+    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKa:I
 
-    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKJ:I
+    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJW:I
 
     goto :goto_1
 
-    .line 569
+    .line 581
     :cond_9
     if-nez v0, :cond_a
 
-    .line 570
+    .line 582
     new-instance v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;-><init>(Lcom/tencent/mm/ui/base/NoMeasuredTextView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 573
+    .line 585
     :cond_a
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     if-eq v1, p1, :cond_b
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_b
 
-    .line 574
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    .line 586
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 576
+    .line 588
     :cond_b
-    iput-object p1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    iput-object p1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
-    .line 578
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v1, :cond_c
-
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    .line 590
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_c
 
-    .line 579
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v1, :cond_c
+
+    .line 591
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 581
+    .line 593
     :cond_c
-    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
-    .line 583
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    .line 595
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     if-eq v1, p2, :cond_d
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_d
 
-    .line 584
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    .line 586
-    :cond_d
-    iput-object p2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
-
-    .line 588
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v1, :cond_e
-
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
-
-    if-eqz v1, :cond_e
-
-    .line 589
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
-
-    invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
-
-    .line 591
-    :cond_e
-    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
-
-    .line 593
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKD:Landroid/graphics/Rect;
-
     .line 596
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    .line 598
+    :cond_d
+    iput-object p2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
+
+    .line 600
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v1, :cond_e
+
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
+
+    if-eqz v1, :cond_e
+
+    .line 601
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
+
+    invoke-virtual {v1, v3}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
+
+    .line 603
+    :cond_e
+    iput-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
+
+    .line 605
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJQ:Landroid/graphics/Rect;
+
+    .line 608
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getDrawableState()[I
 
     move-result-object v3
 
-    .line 598
+    .line 610
     if-eqz p1, :cond_f
 
-    .line 599
+    .line 611
     invoke-virtual {p1, v3}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 600
+    .line 612
     invoke-virtual {p1, v1}, Landroid/graphics/drawable/Drawable;->copyBounds(Landroid/graphics/Rect;)V
 
-    .line 601
+    .line 613
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 602
+    .line 614
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v4
 
-    iput v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKK:I
+    iput v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJX:I
 
-    .line 603
+    .line 615
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v4
 
-    iput v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKO:I
+    iput v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKb:I
 
-    .line 608
+    .line 620
     :goto_3
     if-eqz p2, :cond_8
 
-    .line 609
+    .line 621
     invoke-virtual {p2, v3}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 610
+    .line 622
     invoke-virtual {p2, v1}, Landroid/graphics/drawable/Drawable;->copyBounds(Landroid/graphics/Rect;)V
 
-    .line 611
+    .line 623
     invoke-virtual {p2, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 612
+    .line 624
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
     move-result v3
 
-    iput v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKL:I
+    iput v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJY:I
 
-    .line 613
+    .line 625
     invoke-virtual {v1}, Landroid/graphics/Rect;->height()I
 
     move-result v1
 
-    iput v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKP:I
+    iput v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKc:I
 
     goto/16 :goto_2
 
-    .line 605
+    .line 617
     :cond_f
-    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKO:I
+    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKb:I
 
-    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKK:I
+    iput v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJX:I
 
     goto :goto_3
 .end method
 
-.method private aNr()V
+.method private bO(II)V
+    .locals 12
+
+    .prologue
+    const/4 v2, 0x0
+
+    .line 2115
+    if-gez p1, :cond_2
+
+    move v5, v2
+
+    .line 2120
+    :goto_0
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
+
+    and-int/lit8 v0, v0, 0x7
+
+    sparse-switch v0, :sswitch_data_0
+
+    .line 2130
+    sget-object v6, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
+
+    .line 2133
+    :goto_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJh:Landroid/text/TextUtils$TruncateAt;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJk:Landroid/text/method/KeyListener;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    .line 2135
+    :goto_2
+    if-eqz v0, :cond_1
+
+    .line 2136
+    new-instance v0, Landroid/text/StaticLayout;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJi:Ljava/lang/CharSequence;
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJi:Ljava/lang/CharSequence;
+
+    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
+
+    move-result v3
+
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
+
+    iget v7, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJm:F
+
+    iget v8, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJn:F
+
+    iget-boolean v9, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJv:Z
+
+    iget-object v10, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJh:Landroid/text/TextUtils$TruncateAt;
+
+    move v11, p2
+
+    invoke-direct/range {v0 .. v11}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;IILandroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZLandroid/text/TextUtils$TruncateAt;I)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
+
+    .line 2140
+    :goto_3
+    return-void
+
+    .line 2122
+    :sswitch_0
+    sget-object v6, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
+
+    goto :goto_1
+
+    .line 2126
+    :sswitch_1
+    sget-object v6, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
+
+    goto :goto_1
+
+    :cond_0
+    move v0, v2
+
+    .line 2133
+    goto :goto_2
+
+    .line 2138
+    :cond_1
+    new-instance v2, Landroid/text/StaticLayout;
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJi:Ljava/lang/CharSequence;
+
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
+
+    iget v7, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJm:F
+
+    iget v8, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJn:F
+
+    iget-boolean v9, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJv:Z
+
+    invoke-direct/range {v2 .. v9}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
+
+    iput-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
+
+    goto :goto_3
+
+    :cond_2
+    move v5, p1
+
+    goto :goto_0
+
+    .line 2120
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x1 -> :sswitch_0
+        0x5 -> :sswitch_1
+    .end sparse-switch
+.end method
+
+.method private bdi()V
     .locals 1
 
     .prologue
-    .line 2046
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 2065
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     instance-of v0, v0, Landroid/text/BoringLayout;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKj:Landroid/text/BoringLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJw:Landroid/text/BoringLayout;
 
     if-nez v0, :cond_0
 
-    .line 2047
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 2066
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     check-cast v0, Landroid/text/BoringLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKj:Landroid/text/BoringLayout;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJw:Landroid/text/BoringLayout;
 
-    .line 2054
+    .line 2073
     :cond_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
-    .line 2055
+    .line 2074
     return-void
 .end method
 
-.method private aNs()V
+.method private bdj()V
     .locals 2
 
     .prologue
-    .line 2063
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKf:Z
+    .line 2082
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJs:Z
 
     if-eqz v0, :cond_1
 
-    .line 2064
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->rl:I
+    .line 2083
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->qn:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingLeft()I
 
@@ -649,21 +771,21 @@
 
     sub-int/2addr v0, v1
 
-    .line 2068
+    .line 2087
     :goto_0
     if-gtz v0, :cond_0
 
-    .line 2069
+    .line 2088
     const/4 v0, 0x0
 
-    .line 2078
+    .line 2097
     :cond_0
-    invoke-direct {p0, v0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->by(II)V
+    invoke-direct {p0, v0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bO(II)V
 
-    .line 2079
+    .line 2098
     return-void
 
-    .line 2066
+    .line 2085
     :cond_1
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getRight()I
 
@@ -690,21 +812,21 @@
     goto :goto_0
 .end method
 
-.method private aNt()V
+.method private bdk()V
     .locals 4
 
     .prologue
-    .line 2340
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKl:I
+    .line 2359
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJy:I
 
     if-nez v0, :cond_0
 
-    .line 2341
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKm:Landroid/graphics/Paint$FontMetricsInt;
+    .line 2360
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJz:Landroid/graphics/Paint$FontMetricsInt;
 
     iget v0, v0, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKm:Landroid/graphics/Paint$FontMetricsInt;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJz:Landroid/graphics/Paint$FontMetricsInt;
 
     iget v1, v1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
@@ -722,133 +844,11 @@
 
     double-to-int v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKl:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJy:I
 
-    .line 2343
+    .line 2362
     :cond_0
     return-void
-.end method
-
-.method private by(II)V
-    .locals 12
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 2096
-    if-gez p1, :cond_2
-
-    move v5, v2
-
-    .line 2101
-    :goto_0
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
-
-    and-int/lit8 v0, v0, 0x7
-
-    sparse-switch v0, :sswitch_data_0
-
-    .line 2111
-    sget-object v6, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
-
-    .line 2114
-    :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJW:Landroid/text/TextUtils$TruncateAt;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJZ:Landroid/text/method/KeyListener;
-
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    .line 2116
-    :goto_2
-    if-eqz v0, :cond_1
-
-    .line 2117
-    new-instance v0, Landroid/text/StaticLayout;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJX:Ljava/lang/CharSequence;
-
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJX:Ljava/lang/CharSequence;
-
-    invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
-
-    move-result v3
-
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
-
-    iget v7, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dCf:F
-
-    iget v8, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dCg:F
-
-    iget-boolean v9, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKi:Z
-
-    iget-object v10, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJW:Landroid/text/TextUtils$TruncateAt;
-
-    move v11, p2
-
-    invoke-direct/range {v0 .. v11}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;IILandroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZLandroid/text/TextUtils$TruncateAt;I)V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
-
-    .line 2121
-    :goto_3
-    return-void
-
-    .line 2103
-    :sswitch_0
-    sget-object v6, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
-
-    goto :goto_1
-
-    .line 2107
-    :sswitch_1
-    sget-object v6, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
-
-    goto :goto_1
-
-    :cond_0
-    move v0, v2
-
-    .line 2114
-    goto :goto_2
-
-    .line 2119
-    :cond_1
-    new-instance v2, Landroid/text/StaticLayout;
-
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJX:Ljava/lang/CharSequence;
-
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
-
-    iget v7, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dCf:F
-
-    iget v8, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dCg:F
-
-    iget-boolean v9, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKi:Z
-
-    invoke-direct/range {v2 .. v9}, Landroid/text/StaticLayout;-><init>(Ljava/lang/CharSequence;Landroid/text/TextPaint;ILandroid/text/Layout$Alignment;FFZ)V
-
-    iput-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
-
-    goto :goto_3
-
-    :cond_2
-    move v5, p1
-
-    goto :goto_0
-
-    .line 2101
-    nop
-
-    :sswitch_data_0
-    .sparse-switch
-        0x1 -> :sswitch_0
-        0x5 -> :sswitch_1
-    .end sparse-switch
 .end method
 
 .method private c(Ljava/lang/CharSequence;I)V
@@ -857,7 +857,7 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1530
+    .line 1542
     if-nez p1, :cond_0
 
     const-string/jumbo p1, ""
@@ -877,19 +877,19 @@
 
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJx:Z
 
     :goto_0
-    sget v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->iKB:I
+    sget v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->kJO:I
 
     if-eq p2, v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJZ:Landroid/text/method/KeyListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJk:Landroid/text/method/KeyListener;
 
     if-eqz v0, :cond_7
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJU:Landroid/text/Editable$Factory;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJf:Landroid/text/Editable$Factory;
 
     invoke-virtual {v0, p1}, Landroid/text/Editable$Factory;->newEditable(Ljava/lang/CharSequence;)Landroid/text/Editable;
 
@@ -907,15 +907,15 @@
 
     add-int/2addr v1, v0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKo:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJB:Z
 
     if-eqz v0, :cond_4
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKf:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJs:Z
 
     if-eqz v0, :cond_8
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->rl:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->qn:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getMeasuredWidth()I
 
@@ -923,7 +923,7 @@
 
     if-lez v2, :cond_3
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->rl:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->qn:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getMeasuredWidth()I
 
@@ -934,7 +934,7 @@
     move-result v0
 
     :cond_3
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     sub-int/2addr v0, v1
 
@@ -948,37 +948,37 @@
 
     :cond_4
     :goto_2
-    iput p2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJY:I
+    iput p2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJj:I
 
     iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->mText:Ljava/lang/CharSequence;
 
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJX:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJi:Ljava/lang/CharSequence;
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKk:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJx:Z
 
     if-eqz v0, :cond_a
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->aNt()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bdk()V
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1532
+    .line 1544
     :cond_5
     :goto_3
     return-void
 
-    .line 1530
+    .line 1542
     :cond_6
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKk:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJx:Z
 
     goto :goto_0
 
     :cond_7
-    sget v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->iKA:I
+    sget v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->kJN:I
 
     if-ne p2, v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJV:Landroid/text/Spannable$Factory;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJg:Landroid/text/Spannable$Factory;
 
     invoke-virtual {v0, p1}, Landroid/text/Spannable$Factory;->newSpannable(Ljava/lang/CharSequence;)Landroid/text/Spannable;
 
@@ -993,7 +993,7 @@
 
     if-lez v0, :cond_9
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getMeasuredWidth()I
 
@@ -1012,7 +1012,7 @@
     goto :goto_2
 
     :cond_9
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKn:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJA:Z
 
     goto :goto_2
 
@@ -1023,13 +1023,13 @@
 
     if-eqz v0, :cond_e
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-nez v0, :cond_c
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->aNs()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bdj()V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v0}, Landroid/text/Layout;->getHeight()I
 
@@ -1049,13 +1049,13 @@
     goto :goto_3
 
     :cond_c
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v0}, Landroid/text/Layout;->getHeight()I
 
     move-result v0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v2}, Landroid/text/Layout;->getWidth()I
 
@@ -1063,9 +1063,9 @@
 
     sub-int v1, v2, v1
 
-    invoke-direct {p0, v2, v1}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->by(II)V
+    invoke-direct {p0, v2, v1}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bO(II)V
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJW:Landroid/text/TextUtils$TruncateAt;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJh:Landroid/text/TextUtils$TruncateAt;
 
     sget-object v2, Landroid/text/TextUtils$TruncateAt;->MARQUEE:Landroid/text/TextUtils$TruncateAt;
 
@@ -1096,7 +1096,7 @@
     goto :goto_3
 
     :cond_d
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v1}, Landroid/text/Layout;->getHeight()I
 
@@ -1126,23 +1126,23 @@
     .locals 5
 
     .prologue
-    .line 1754
+    .line 1766
     const/4 v0, 0x0
 
-    .line 1755
-    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    .line 1767
+    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     and-int/lit8 v1, v1, 0x70
 
-    .line 1757
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1769
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
-    .line 1762
+    .line 1774
     const/16 v3, 0x50
 
     if-eq v1, v3, :cond_0
 
-    .line 1769
+    .line 1781
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getMeasuredHeight()I
 
     move-result v3
@@ -1159,28 +1159,28 @@
 
     sub-int/2addr v3, v4
 
-    .line 1771
+    .line 1783
     invoke-virtual {v2}, Landroid/text/Layout;->getHeight()I
 
     move-result v2
 
-    .line 1773
+    .line 1785
     if-ge v2, v3, :cond_0
 
-    .line 1774
+    .line 1786
     const/16 v0, 0x30
 
     if-ne v1, v0, :cond_1
 
-    .line 1775
+    .line 1787
     sub-int v0, v3, v2
 
-    .line 1781
+    .line 1793
     :cond_0
     :goto_0
     return v0
 
-    .line 1778
+    .line 1790
     :cond_1
     sub-int v0, v3, v2
 
@@ -1195,8 +1195,8 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 2279
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 2298
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-nez v2, :cond_0
 
@@ -1226,15 +1226,15 @@
 
     add-int/2addr v0, v3
 
-    iget v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKc:I
+    iget v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJp:I
 
     if-ne v4, v5, :cond_3
 
-    iget v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    iget v4, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
     if-le v1, v4, :cond_1
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
     invoke-virtual {v2, v0}, Landroid/text/Layout;->getLineTop(I)I
 
@@ -1248,15 +1248,15 @@
 
     add-int/2addr v0, v3
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
     :cond_1
     :goto_1
-    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKe:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJr:I
 
     if-ne v2, v5, :cond_4
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKd:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJq:I
 
     if-ge v1, v2, :cond_2
 
@@ -1264,7 +1264,7 @@
 
     move-result v2
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKd:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJq:I
 
     sub-int v1, v3, v1
 
@@ -1285,7 +1285,7 @@
     goto :goto_0
 
     :cond_3
-    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
     invoke-static {v0, v2}, Ljava/lang/Math;->min(II)I
 
@@ -1294,7 +1294,7 @@
     goto :goto_1
 
     :cond_4
-    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKd:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJq:I
 
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
@@ -1307,23 +1307,23 @@
     .locals 5
 
     .prologue
-    .line 1716
+    .line 1728
     const/4 v0, 0x0
 
-    .line 1717
-    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    .line 1729
+    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     and-int/lit8 v1, v1, 0x70
 
-    .line 1719
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1731
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
-    .line 1724
+    .line 1736
     const/16 v3, 0x30
 
     if-eq v1, v3, :cond_0
 
-    .line 1731
+    .line 1743
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getMeasuredHeight()I
 
     move-result v3
@@ -1340,28 +1340,28 @@
 
     sub-int/2addr v3, v4
 
-    .line 1733
+    .line 1745
     invoke-virtual {v2}, Landroid/text/Layout;->getHeight()I
 
     move-result v2
 
-    .line 1735
+    .line 1747
     if-ge v2, v3, :cond_0
 
-    .line 1736
+    .line 1748
     const/16 v0, 0x50
 
     if-ne v1, v0, :cond_1
 
-    .line 1737
+    .line 1749
     sub-int v0, v3, v2
 
-    .line 1743
+    .line 1755
     :cond_0
     :goto_0
     return v0
 
-    .line 1740
+    .line 1752
     :cond_1
     sub-int v0, v3, v2
 
@@ -1374,8 +1374,8 @@
     .locals 4
 
     .prologue
-    .line 1114
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1126
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getTextSize()F
 
@@ -1385,26 +1385,26 @@
 
     if-eqz v0, :cond_0
 
-    .line 1115
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1127
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 1117
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1129
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getFontMetricsInt()Landroid/graphics/Paint$FontMetricsInt;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKm:Landroid/graphics/Paint$FontMetricsInt;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJz:Landroid/graphics/Paint$FontMetricsInt;
 
-    .line 1118
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKm:Landroid/graphics/Paint$FontMetricsInt;
+    .line 1130
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJz:Landroid/graphics/Paint$FontMetricsInt;
 
     iget v0, v0, Landroid/graphics/Paint$FontMetricsInt;->descent:I
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKm:Landroid/graphics/Paint$FontMetricsInt;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJz:Landroid/graphics/Paint$FontMetricsInt;
 
     iget v1, v1, Landroid/graphics/Paint$FontMetricsInt;->ascent:I
 
@@ -1422,23 +1422,23 @@
 
     double-to-int v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKl:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJy:I
 
-    .line 1121
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1133
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-eqz v0, :cond_0
 
-    .line 1122
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->aNr()V
+    .line 1134
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bdi()V
 
-    .line 1123
+    .line 1135
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1124
+    .line 1136
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1127
+    .line 1139
     :cond_0
     return-void
 .end method
@@ -1449,9 +1449,9 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 1467
-    .line 1468
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->eqR:Landroid/content/res/ColorStateList;
+    .line 1479
+    .line 1480
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fAP:Landroid/content/res/ColorStateList;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getDrawableState()[I
 
@@ -1461,25 +1461,25 @@
 
     move-result v1
 
-    .line 1469
-    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJT:I
+    .line 1481
+    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJe:I
 
     if-eq v1, v2, :cond_0
 
-    .line 1470
-    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJT:I
+    .line 1482
+    iput v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJe:I
 
-    .line 1471
+    .line 1483
     const/4 v0, 0x1
 
-    .line 1474
+    .line 1486
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 1475
+    .line 1487
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1477
+    .line 1489
     :cond_1
     return-void
 .end method
@@ -1490,19 +1490,19 @@
     .locals 1
 
     .prologue
-    .line 2579
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 2598
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-eqz v0, :cond_0
 
-    .line 2580
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 2599
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v0}, Landroid/text/Layout;->getWidth()I
 
     move-result v0
 
-    .line 2582
+    .line 2601
     :goto_0
     return v0
 
@@ -1518,7 +1518,7 @@
     .locals 2
 
     .prologue
-    .line 2605
+    .line 2624
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getHeight()I
 
     move-result v0
@@ -1542,19 +1542,19 @@
     .locals 1
 
     .prologue
-    .line 2592
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 2611
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-eqz v0, :cond_0
 
-    .line 2593
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 2612
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v0}, Landroid/text/Layout;->getHeight()I
 
     move-result v0
 
-    .line 2595
+    .line 2614
     :goto_0
     return v0
 
@@ -1570,15 +1570,15 @@
     .locals 3
 
     .prologue
-    .line 772
+    .line 784
     invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
 
-    .line 773
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->eqR:Landroid/content/res/ColorStateList;
+    .line 785
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fAP:Landroid/content/res/ColorStateList;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->eqR:Landroid/content/res/ColorStateList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fAP:Landroid/content/res/ColorStateList;
 
     invoke-virtual {v0}, Landroid/content/res/ColorStateList;->isStateful()Z
 
@@ -1586,27 +1586,27 @@
 
     if-eqz v0, :cond_0
 
-    .line 774
+    .line 786
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->updateTextColors()V
 
-    .line 777
+    .line 789
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 778
+    .line 790
     if-eqz v0, :cond_4
 
-    .line 779
+    .line 791
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getDrawableState()[I
 
     move-result-object v1
 
-    .line 780
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    .line 792
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_1
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->isStateful()Z
 
@@ -1614,18 +1614,18 @@
 
     if-eqz v2, :cond_1
 
-    .line 781
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    .line 793
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 783
+    .line 795
     :cond_1
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_2
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->isStateful()Z
 
@@ -1633,18 +1633,18 @@
 
     if-eqz v2, :cond_2
 
-    .line 784
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    .line 796
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 786
+    .line 798
     :cond_2
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_3
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->isStateful()Z
 
@@ -1652,18 +1652,18 @@
 
     if-eqz v2, :cond_3
 
-    .line 787
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    .line 799
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 789
+    .line 801
     :cond_3
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_4
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->isStateful()Z
 
@@ -1671,12 +1671,12 @@
 
     if-eqz v2, :cond_4
 
-    .line 790
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    .line 802
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 793
+    .line 805
     :cond_4
     return-void
 .end method
@@ -1687,23 +1687,23 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2030
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 2049
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-nez v0, :cond_0
 
-    .line 2031
+    .line 2050
     invoke-super {p0}, Landroid/view/View;->getBaseline()I
 
     move-result v0
 
-    .line 2039
+    .line 2058
     :goto_0
     return v0
 
-    .line 2035
+    .line 2054
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     and-int/lit8 v0, v0, 0x70
 
@@ -1711,12 +1711,12 @@
 
     if-eq v0, v2, :cond_1
 
-    .line 2036
+    .line 2055
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getVerticalOffset$1385f2()I
 
     move-result v0
 
-    .line 2039
+    .line 2058
     :goto_1
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getExtendedPaddingTop()I
 
@@ -1724,7 +1724,7 @@
 
     add-int/2addr v0, v2
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v2, v1}, Landroid/text/Layout;->getLineBaseline(I)I
 
@@ -1744,13 +1744,13 @@
     .locals 1
 
     .prologue
-    .line 890
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    .line 902
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 891
+    .line 903
     if-eqz v0, :cond_0
 
-    iget v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKQ:I
+    iget v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKd:I
 
     :goto_0
     return v0
@@ -1775,34 +1775,34 @@
 
     const/4 v2, 0x0
 
-    .line 757
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    .line 769
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 758
+    .line 770
     if-eqz v1, :cond_0
 
-    .line 759
+    .line 771
     const/4 v0, 0x4
 
     new-array v0, v0, [Landroid/graphics/drawable/Drawable;
 
-    iget-object v2, v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     aput-object v2, v0, v3
 
-    iget-object v2, v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     aput-object v2, v0, v4
 
-    iget-object v2, v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     aput-object v2, v0, v5
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
     aput-object v1, v0, v6
 
-    .line 761
+    .line 773
     :goto_0
     return-object v0
 
@@ -1826,27 +1826,27 @@
     .locals 3
 
     .prologue
-    .line 914
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    .line 926
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 915
+    .line 927
     if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKt:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJG:Z
 
     if-nez v1, :cond_1
 
-    .line 916
+    .line 928
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getPaddingBottom()I
 
     move-result v0
 
-    .line 918
+    .line 930
     :goto_0
     return v0
 
@@ -1855,11 +1855,11 @@
 
     move-result v1
 
-    iget v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKQ:I
+    iget v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKd:I
 
     add-int/2addr v1, v2
 
-    iget v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKJ:I
+    iget v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJW:I
 
     add-int/2addr v0, v1
 
@@ -1870,27 +1870,27 @@
     .locals 3
 
     .prologue
-    .line 928
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    .line 940
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 929
+    .line 941
     if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKq:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJD:Z
 
     if-nez v1, :cond_1
 
-    .line 930
+    .line 942
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getPaddingLeft()I
 
     move-result v0
 
-    .line 932
+    .line 944
     :goto_0
     return v0
 
@@ -1899,11 +1899,11 @@
 
     move-result v1
 
-    iget v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKQ:I
+    iget v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKd:I
 
     add-int/2addr v1, v2
 
-    iget v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKK:I
+    iget v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJX:I
 
     add-int/2addr v0, v1
 
@@ -1914,27 +1914,27 @@
     .locals 3
 
     .prologue
-    .line 942
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    .line 954
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 943
+    .line 955
     if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKr:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJE:Z
 
     if-nez v1, :cond_1
 
-    .line 944
+    .line 956
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getPaddingRight()I
 
     move-result v0
 
-    .line 946
+    .line 958
     :goto_0
     return v0
 
@@ -1943,11 +1943,11 @@
 
     move-result v1
 
-    iget v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKQ:I
+    iget v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKd:I
 
     add-int/2addr v1, v2
 
-    iget v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKL:I
+    iget v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJY:I
 
     add-int/2addr v0, v1
 
@@ -1958,27 +1958,27 @@
     .locals 3
 
     .prologue
-    .line 900
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    .line 912
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 901
+    .line 913
     if-eqz v0, :cond_0
 
-    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    iget-object v1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKs:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJF:Z
 
     if-nez v1, :cond_1
 
-    .line 902
+    .line 914
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getPaddingTop()I
 
     move-result v0
 
-    .line 904
+    .line 916
     :goto_0
     return v0
 
@@ -1987,11 +1987,11 @@
 
     move-result v1
 
-    iget v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKQ:I
+    iget v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKd:I
 
     add-int/2addr v1, v2
 
-    iget v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKI:I
+    iget v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJV:I
 
     add-int/2addr v0, v1
 
@@ -2002,8 +2002,8 @@
     .locals 1
 
     .prologue
-    .line 1208
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJT:I
+    .line 1220
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJe:I
 
     return v0
 .end method
@@ -2012,7 +2012,7 @@
     .locals 1
 
     .prologue
-    .line 467
+    .line 479
     const/4 v0, 0x0
 
     return v0
@@ -2022,7 +2022,7 @@
     .locals 1
 
     .prologue
-    .line 476
+    .line 488
     const/4 v0, 0x0
 
     return-object v0
@@ -2032,7 +2032,7 @@
     .locals 1
 
     .prologue
-    .line 504
+    .line 516
     iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->mText:Ljava/lang/CharSequence;
 
     instance-of v0, v0, Landroid/text/Editable;
@@ -2058,8 +2058,8 @@
     .end annotation
 
     .prologue
-    .line 2569
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJW:Landroid/text/TextUtils$TruncateAt;
+    .line 2588
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJh:Landroid/text/TextUtils$TruncateAt;
 
     return-object v0
 .end method
@@ -2068,59 +2068,59 @@
     .locals 5
 
     .prologue
-    .line 989
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1001
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKc:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJp:I
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_2
 
-    .line 990
+    .line 1002
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingBottom()I
 
     move-result v0
 
-    .line 1012
+    .line 1024
     :cond_1
     :goto_0
     return v0
 
-    .line 993
+    .line 1005
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v0}, Landroid/text/Layout;->getLineCount()I
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
     if-gt v0, v1, :cond_3
 
-    .line 994
+    .line 1006
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingBottom()I
 
     move-result v0
 
     goto :goto_0
 
-    .line 997
+    .line 1009
     :cond_3
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingTop()I
 
     move-result v1
 
-    .line 998
+    .line 1010
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingBottom()I
 
     move-result v0
 
-    .line 999
+    .line 1011
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getHeight()I
 
     move-result v2
@@ -2129,42 +2129,42 @@
 
     sub-int/2addr v1, v0
 
-    .line 1000
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1012
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
     invoke-virtual {v2, v3}, Landroid/text/Layout;->getLineTop(I)I
 
     move-result v2
 
-    .line 1002
+    .line 1014
     if-ge v2, v1, :cond_1
 
-    .line 1006
-    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    .line 1018
+    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     and-int/lit8 v3, v3, 0x70
 
-    .line 1007
+    .line 1019
     const/16 v4, 0x30
 
     if-ne v3, v4, :cond_4
 
-    .line 1008
+    .line 1020
     add-int/2addr v0, v1
 
     sub-int/2addr v0, v2
 
     goto :goto_0
 
-    .line 1009
+    .line 1021
     :cond_4
     const/16 v4, 0x50
 
     if-eq v3, v4, :cond_1
 
-    .line 1012
+    .line 1024
     sub-int/2addr v1, v2
 
     div-int/lit8 v1, v1, 0x2
@@ -2178,59 +2178,59 @@
     .locals 5
 
     .prologue
-    .line 956
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 968
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKc:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJp:I
 
     const/4 v1, 0x1
 
     if-eq v0, v1, :cond_2
 
-    .line 957
+    .line 969
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingTop()I
 
     move-result v0
 
-    .line 979
+    .line 991
     :cond_1
     :goto_0
     return v0
 
-    .line 960
+    .line 972
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v0}, Landroid/text/Layout;->getLineCount()I
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
     if-gt v0, v1, :cond_3
 
-    .line 961
+    .line 973
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingTop()I
 
     move-result v0
 
     goto :goto_0
 
-    .line 964
+    .line 976
     :cond_3
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingTop()I
 
     move-result v0
 
-    .line 965
+    .line 977
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingBottom()I
 
     move-result v1
 
-    .line 966
+    .line 978
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getHeight()I
 
     move-result v2
@@ -2239,41 +2239,41 @@
 
     sub-int v1, v2, v1
 
-    .line 967
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 979
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
     invoke-virtual {v2, v3}, Landroid/text/Layout;->getLineTop(I)I
 
     move-result v2
 
-    .line 969
+    .line 981
     if-ge v2, v1, :cond_1
 
-    .line 973
-    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    .line 985
+    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     and-int/lit8 v3, v3, 0x70
 
-    .line 974
+    .line 986
     const/16 v4, 0x30
 
     if-eq v3, v4, :cond_1
 
-    .line 976
+    .line 988
     const/16 v4, 0x50
 
     if-ne v3, v4, :cond_4
 
-    .line 977
+    .line 989
     add-int/2addr v0, v1
 
     sub-int/2addr v0, v2
 
     goto :goto_0
 
-    .line 979
+    .line 991
     :cond_4
     sub-int/2addr v1, v2
 
@@ -2288,42 +2288,42 @@
     .locals 4
 
     .prologue
-    .line 1958
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1977
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-nez v0, :cond_0
 
-    .line 1959
+    .line 1978
     invoke-super {p0, p1}, Landroid/view/View;->getFocusedRect(Landroid/graphics/Rect;)V
 
-    .line 1983
+    .line 2002
     :goto_0
     return-void
 
-    .line 1963
+    .line 1982
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getSelectionEnd()I
 
     move-result v0
 
-    .line 1964
+    .line 1983
     if-gez v0, :cond_1
 
-    .line 1965
+    .line 1984
     invoke-super {p0, p1}, Landroid/view/View;->getFocusedRect(Landroid/graphics/Rect;)V
 
     goto :goto_0
 
-    .line 1969
+    .line 1988
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v1, v0}, Landroid/text/Layout;->getLineForOffset(I)I
 
     move-result v1
 
-    .line 1970
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1989
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v2, v1}, Landroid/text/Layout;->getLineTop(I)I
 
@@ -2331,8 +2331,8 @@
 
     iput v2, p1, Landroid/graphics/Rect;->top:I
 
-    .line 1971
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1990
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v2, v1}, Landroid/text/Layout;->getLineBottom(I)I
 
@@ -2340,8 +2340,8 @@
 
     iput v1, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 1973
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1992
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v1, v0}, Landroid/text/Layout;->getPrimaryHorizontal(I)F
 
@@ -2351,25 +2351,25 @@
 
     iput v0, p1, Landroid/graphics/Rect;->left:I
 
-    .line 1974
+    .line 1993
     iget v0, p1, Landroid/graphics/Rect;->left:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p1, Landroid/graphics/Rect;->right:I
 
-    .line 1977
+    .line 1996
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingLeft()I
 
     move-result v1
 
-    .line 1978
+    .line 1997
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getExtendedPaddingTop()I
 
     move-result v0
 
-    .line 1979
-    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    .line 1998
+    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     and-int/lit8 v2, v2, 0x70
 
@@ -2377,14 +2377,14 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 1980
+    .line 1999
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getVerticalOffset$1385f2()I
 
     move-result v2
 
     add-int/2addr v0, v2
 
-    .line 1982
+    .line 2001
     :cond_2
     invoke-virtual {p1, v1, v0}, Landroid/graphics/Rect;->offset(II)V
 
@@ -2395,8 +2395,8 @@
     .locals 1
 
     .prologue
-    .line 1260
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    .line 1272
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     return v0
 .end method
@@ -2405,8 +2405,8 @@
     .locals 1
 
     .prologue
-    .line 522
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 534
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     return-object v0
 .end method
@@ -2415,12 +2415,12 @@
     .locals 1
 
     .prologue
-    .line 1991
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 2010
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v0}, Landroid/text/Layout;->getLineCount()I
 
@@ -2439,8 +2439,8 @@
     .locals 2
 
     .prologue
-    .line 513
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 525
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     const/4 v1, 0x0
 
@@ -2450,11 +2450,11 @@
 
     int-to-float v0, v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dCf:F
+    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJm:F
 
     mul-float/2addr v0, v1
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dCg:F
+    iget v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJn:F
 
     add-float/2addr v0, v1
 
@@ -2469,8 +2469,8 @@
     .locals 1
 
     .prologue
-    .line 1217
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1229
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     return-object v0
 .end method
@@ -2479,8 +2479,8 @@
     .locals 1
 
     .prologue
-    .line 1269
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1281
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getFlags()I
 
@@ -2495,7 +2495,7 @@
     .end annotation
 
     .prologue
-    .line 2491
+    .line 2510
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -2513,7 +2513,7 @@
     .end annotation
 
     .prologue
-    .line 2481
+    .line 2500
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getText()Ljava/lang/CharSequence;
 
     move-result-object v0
@@ -2531,7 +2531,7 @@
     .end annotation
 
     .prologue
-    .line 486
+    .line 498
     iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->mText:Ljava/lang/CharSequence;
 
     return-object v0
@@ -2541,8 +2541,8 @@
     .locals 1
 
     .prologue
-    .line 1199
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->eqR:Landroid/content/res/ColorStateList;
+    .line 1211
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fAP:Landroid/content/res/ColorStateList;
 
     return-object v0
 .end method
@@ -2551,8 +2551,8 @@
     .locals 1
 
     .prologue
-    .line 1135
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1147
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getTextScaleX()F
 
@@ -2565,8 +2565,8 @@
     .locals 1
 
     .prologue
-    .line 1074
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1086
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getTextSize()F
 
@@ -2579,18 +2579,18 @@
     .locals 6
 
     .prologue
-    .line 1049
+    .line 1061
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getExtendedPaddingBottom()I
 
     move-result v1
 
     const/4 v0, 0x0
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     and-int/lit8 v2, v2, 0x70
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     const/16 v4, 0x50
 
@@ -2642,7 +2642,7 @@
     .locals 1
 
     .prologue
-    .line 1022
+    .line 1034
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingLeft()I
 
     move-result v0
@@ -2654,7 +2654,7 @@
     .locals 1
 
     .prologue
-    .line 1031
+    .line 1043
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingRight()I
 
     move-result v0
@@ -2666,7 +2666,7 @@
     .locals 2
 
     .prologue
-    .line 1040
+    .line 1052
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getExtendedPaddingTop()I
 
     move-result v0
@@ -2684,8 +2684,8 @@
     .locals 1
 
     .prologue
-    .line 1162
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1174
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
 
@@ -2698,50 +2698,50 @@
     .locals 8
 
     .prologue
-    .line 816
+    .line 828
     invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 817
+    .line 829
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v2
 
-    .line 818
+    .line 830
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getScrollX()I
 
     move-result v1
 
-    .line 819
+    .line 831
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getScrollY()I
 
     move-result v0
 
-    .line 824
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    .line 836
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 825
+    .line 837
     if-eqz v3, :cond_0
 
-    .line 826
-    iget-object v4, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    .line 838
+    iget-object v4, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     if-ne p1, v4, :cond_2
 
-    .line 827
+    .line 839
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingTop()I
 
     move-result v4
 
-    .line 828
+    .line 840
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingBottom()I
 
     move-result v5
 
-    .line 829
+    .line 841
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getBottom()I
 
     move-result v6
@@ -2756,15 +2756,15 @@
 
     sub-int/2addr v5, v4
 
-    .line 831
+    .line 843
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getPaddingLeft()I
 
     move-result v6
 
     add-int/2addr v1, v6
 
-    .line 832
-    iget v3, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKO:I
+    .line 844
+    iget v3, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKb:I
 
     sub-int v3, v5, v3
 
@@ -2774,7 +2774,7 @@
 
     add-int/2addr v0, v3
 
-    .line 857
+    .line 869
     :cond_0
     :goto_0
     iget v3, v2, Landroid/graphics/Rect;->left:I
@@ -2795,27 +2795,27 @@
 
     invoke-virtual {p0, v3, v4, v1, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate(IIII)V
 
-    .line 859
+    .line 871
     :cond_1
     return-void
 
-    .line 833
+    .line 845
     :cond_2
-    iget-object v4, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    iget-object v4, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     if-ne p1, v4, :cond_3
 
-    .line 834
+    .line 846
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingTop()I
 
     move-result v4
 
-    .line 835
+    .line 847
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingBottom()I
 
     move-result v5
 
-    .line 836
+    .line 848
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getBottom()I
 
     move-result v6
@@ -2830,7 +2830,7 @@
 
     sub-int/2addr v5, v4
 
-    .line 838
+    .line 850
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getRight()I
 
     move-result v6
@@ -2847,14 +2847,14 @@
 
     sub-int/2addr v6, v7
 
-    iget v7, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKL:I
+    iget v7, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJY:I
 
     sub-int/2addr v6, v7
 
     add-int/2addr v1, v6
 
-    .line 839
-    iget v3, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKP:I
+    .line 851
+    iget v3, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKc:I
 
     sub-int v3, v5, v3
 
@@ -2864,25 +2864,25 @@
 
     add-int/2addr v0, v3
 
-    .line 840
+    .line 852
     goto :goto_0
 
     :cond_3
-    iget-object v4, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    iget-object v4, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     if-ne p1, v4, :cond_4
 
-    .line 841
+    .line 853
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingLeft()I
 
     move-result v4
 
-    .line 842
+    .line 854
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingRight()I
 
     move-result v5
 
-    .line 843
+    .line 855
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getRight()I
 
     move-result v6
@@ -2897,8 +2897,8 @@
 
     sub-int/2addr v5, v4
 
-    .line 845
-    iget v3, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKM:I
+    .line 857
+    iget v3, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJZ:I
 
     sub-int v3, v5, v3
 
@@ -2908,32 +2908,32 @@
 
     add-int/2addr v1, v3
 
-    .line 846
+    .line 858
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getPaddingTop()I
 
     move-result v3
 
     add-int/2addr v0, v3
 
-    .line 847
+    .line 859
     goto :goto_0
 
     :cond_4
-    iget-object v4, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    iget-object v4, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
     if-ne p1, v4, :cond_0
 
-    .line 848
+    .line 860
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingLeft()I
 
     move-result v4
 
-    .line 849
+    .line 861
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingRight()I
 
     move-result v5
 
-    .line 850
+    .line 862
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getRight()I
 
     move-result v6
@@ -2948,8 +2948,8 @@
 
     sub-int/2addr v5, v4
 
-    .line 852
-    iget v6, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKN:I
+    .line 864
+    iget v6, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKa:I
 
     sub-int/2addr v5, v6
 
@@ -2959,7 +2959,7 @@
 
     add-int/2addr v1, v4
 
-    .line 853
+    .line 865
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getBottom()I
 
     move-result v4
@@ -2976,7 +2976,7 @@
 
     sub-int/2addr v4, v5
 
-    iget v3, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKJ:I
+    iget v3, v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJW:I
 
     sub-int v3, v4, v3
 
@@ -2989,109 +2989,109 @@
     .locals 20
 
     .prologue
-    .line 1793
+    .line 1812
     invoke-super/range {p0 .. p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 1795
+    .line 1814
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingLeft()I
 
     move-result v5
 
-    .line 1796
+    .line 1815
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingTop()I
 
     move-result v4
 
-    .line 1797
+    .line 1816
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingRight()I
 
     move-result v6
 
-    .line 1798
+    .line 1817
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingBottom()I
 
     move-result v2
 
-    .line 1799
+    .line 1818
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getScrollX()I
 
     move-result v7
 
-    .line 1800
+    .line 1819
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getScrollY()I
 
     move-result v8
 
-    .line 1801
+    .line 1820
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getRight()I
 
     move-result v9
 
-    .line 1802
+    .line 1821
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getLeft()I
 
     move-result v10
 
-    .line 1803
+    .line 1822
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getBottom()I
 
     move-result v11
 
-    .line 1804
+    .line 1823
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getTop()I
 
     move-result v12
 
-    .line 1805
+    .line 1824
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getWidth()I
 
     move-result v13
 
-    .line 1806
+    .line 1825
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getHeight()I
 
     move-result v14
 
-    .line 1808
+    .line 1827
     move-object/from16 v0, p0
 
-    iget-object v15, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    iget-object v15, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 1809
+    .line 1828
     const/high16 v3, -0x40800000    # -1.0f
 
-    .line 1810
+    .line 1829
     if-eqz v15, :cond_3
 
-    .line 1816
+    .line 1835
     sub-int v16, v11, v12
 
     sub-int v2, v16, v2
 
     sub-int v16, v2, v4
 
-    .line 1817
+    .line 1836
     sub-int v2, v9, v10
 
     sub-int/2addr v2, v6
 
     sub-int v17, v2, v5
 
-    .line 1821
+    .line 1840
     move-object/from16 v0, p0
 
-    iget-boolean v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKq:Z
+    iget-boolean v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJD:Z
 
     if-eqz v2, :cond_0
 
-    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_0
 
-    .line 1822
+    .line 1841
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1823
+    .line 1842
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getPaddingLeft()I
 
     move-result v2
@@ -3102,7 +3102,7 @@
 
     add-int v18, v8, v4
 
-    iget v0, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKO:I
+    iget v0, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKb:I
 
     move/from16 v19, v0
 
@@ -3124,42 +3124,42 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1824
-    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    .line 1843
+    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1825
+    .line 1844
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1832
+    .line 1851
     :cond_0
     move-object/from16 v0, p0
 
-    iget-boolean v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKr:Z
+    iget-boolean v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJE:Z
 
     if-eqz v2, :cond_1
 
-    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_1
 
-    .line 1833
+    .line 1852
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1835
+    .line 1854
     move-object/from16 v0, p0
 
-    iget-boolean v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKk:Z
+    iget-boolean v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJx:Z
 
     if-eqz v2, :cond_6
 
-    .line 1836
+    .line 1855
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     move-object/from16 v0, p0
 
@@ -3187,7 +3187,7 @@
 
     move v3, v2
 
-    .line 1843
+    .line 1862
     :goto_0
     int-to-float v0, v7
 
@@ -3209,7 +3209,7 @@
 
     add-int/2addr v4, v8
 
-    iget v0, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKP:I
+    iget v0, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKc:I
 
     move/from16 v18, v0
 
@@ -3225,35 +3225,35 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1844
-    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    .line 1863
+    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1845
+    .line 1864
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1850
+    .line 1869
     :cond_1
     move-object/from16 v0, p0
 
-    iget-boolean v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKs:Z
+    iget-boolean v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJF:Z
 
     if-eqz v2, :cond_2
 
-    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_2
 
-    .line 1851
+    .line 1870
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1852
+    .line 1871
     add-int v2, v7, v5
 
-    iget v4, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKM:I
+    iget v4, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJZ:I
 
     sub-int v4, v17, v4
 
@@ -3275,35 +3275,35 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1853
-    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    .line 1872
+    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1854
+    .line 1873
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1859
+    .line 1878
     :cond_2
     move-object/from16 v0, p0
 
-    iget-boolean v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKt:Z
+    iget-boolean v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJG:Z
 
     if-eqz v2, :cond_3
 
-    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_3
 
-    .line 1860
+    .line 1879
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1861
+    .line 1880
     add-int v2, v7, v5
 
-    iget v4, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKN:I
+    iget v4, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKa:I
 
     sub-int v4, v17, v4
 
@@ -3323,7 +3323,7 @@
 
     sub-int v4, v4, v16
 
-    iget v0, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKJ:I
+    iget v0, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJW:I
 
     move/from16 v16, v0
 
@@ -3335,33 +3335,33 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1862
-    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    .line 1881
+    iget-object v2, v15, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
     move-object/from16 v0, p1
 
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1863
+    .line 1882
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1867
+    .line 1886
     :cond_3
     move-object/from16 v0, p0
 
-    iget v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJT:I
+    iget v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJe:I
 
-    .line 1877
+    .line 1896
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    iget-object v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v4, v2}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 1878
+    .line 1897
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getDrawableState()[I
 
@@ -3369,25 +3369,25 @@
 
     iput-object v4, v2, Landroid/text/TextPaint;->drawableState:[I
 
-    .line 1880
+    .line 1899
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 1886
+    .line 1905
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getExtendedPaddingTop()I
 
     move-result v15
 
-    .line 1887
+    .line 1906
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getExtendedPaddingBottom()I
 
     move-result v2
 
-    .line 1889
+    .line 1908
     add-int v4, v5, v7
 
     int-to-float v4, v4
 
-    .line 1890
+    .line 1909
     add-int v16, v15, v8
 
     move/from16 v0, v16
@@ -3396,7 +3396,7 @@
 
     move/from16 v16, v0
 
-    .line 1891
+    .line 1910
     sub-int/2addr v9, v10
 
     sub-int v6, v9, v6
@@ -3405,7 +3405,7 @@
 
     int-to-float v6, v6
 
-    .line 1892
+    .line 1911
     sub-int v7, v11, v12
 
     sub-int v2, v7, v2
@@ -3414,23 +3414,23 @@
 
     int-to-float v2, v2
 
-    .line 1894
+    .line 1913
     move-object/from16 v0, p1
 
     move/from16 v1, v16
 
     invoke-virtual {v0, v4, v1, v6, v2}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
-    .line 1896
+    .line 1915
     const/4 v4, 0x0
 
-    .line 1897
+    .line 1916
     const/4 v2, 0x0
 
-    .line 1902
+    .line 1921
     move-object/from16 v0, p0
 
-    iget v6, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    iget v6, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     and-int/lit8 v6, v6, 0x70
 
@@ -3438,17 +3438,17 @@
 
     if-eq v6, v7, :cond_4
 
-    .line 1903
+    .line 1922
     invoke-direct/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getVerticalOffset$1385f2()I
 
     move-result v4
 
-    .line 1904
+    .line 1923
     invoke-direct/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getVerticalOffset$1385f2()I
 
     move-result v2
 
-    .line 1906
+    .line 1925
     :cond_4
     int-to-float v5, v5
 
@@ -3460,23 +3460,23 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1909
+    .line 1928
     move-object/from16 v0, p0
 
-    iget-boolean v5, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKk:Z
+    iget-boolean v5, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJx:Z
 
     if-eqz v5, :cond_9
 
-    .line 1911
+    .line 1930
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKm:Landroid/graphics/Paint$FontMetricsInt;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJz:Landroid/graphics/Paint$FontMetricsInt;
 
     iget v2, v2, Landroid/graphics/Paint$FontMetricsInt;->bottom:I
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKm:Landroid/graphics/Paint$FontMetricsInt;
+    iget-object v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJz:Landroid/graphics/Paint$FontMetricsInt;
 
     iget v4, v4, Landroid/graphics/Paint$FontMetricsInt;->top:I
 
@@ -3488,7 +3488,7 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKm:Landroid/graphics/Paint$FontMetricsInt;
+    iget-object v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJz:Landroid/graphics/Paint$FontMetricsInt;
 
     iget v4, v4, Landroid/graphics/Paint$FontMetricsInt;->top:I
 
@@ -3496,13 +3496,13 @@
 
     int-to-float v7, v2
 
-    .line 1913
+    .line 1932
     const/4 v2, 0x0
 
-    .line 1914
+    .line 1933
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    iget v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     and-int/lit8 v4, v4, 0x7
 
@@ -3510,16 +3510,16 @@
 
     if-eq v4, v5, :cond_5
 
-    .line 1915
+    .line 1934
     move-object/from16 v0, p0
 
-    iget v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    iget v4, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     and-int/lit8 v4, v4, 0x7
 
     sparse-switch v4, :sswitch_data_0
 
-    .line 1931
+    .line 1950
     :cond_5
     :goto_1
     move-object/from16 v0, p0
@@ -3540,28 +3540,28 @@
 
     move-object/from16 v0, p0
 
-    iget-object v8, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    iget-object v8, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     move-object/from16 v2, p1
 
     invoke-virtual/range {v2 .. v8}, Landroid/graphics/Canvas;->drawText(Ljava/lang/CharSequence;IIFFLandroid/graphics/Paint;)V
 
-    .line 1948
+    .line 1967
     :goto_2
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 1949
+    .line 1968
     return-void
 
-    .line 1841
+    .line 1860
     :cond_6
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJX:Ljava/lang/CharSequence;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJi:Ljava/lang/CharSequence;
 
     move-object/from16 v0, p0
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     move-object/from16 v18, v0
 
@@ -3571,13 +3571,21 @@
 
     move-result v2
 
-    invoke-static {v2}, Landroid/util/FloatMath;->ceil(F)F
+    float-to-double v0, v2
 
-    move-result v2
+    move-wide/from16 v18, v0
+
+    invoke-static/range {v18 .. v19}, Ljava/lang/Math;->ceil(D)D
+
+    move-result-wide v18
+
+    move-wide/from16 v0, v18
+
+    double-to-float v2, v0
 
     goto/16 :goto_0
 
-    .line 1917
+    .line 1936
     :sswitch_0
     const/high16 v2, -0x40800000    # -1.0f
 
@@ -3585,10 +3593,10 @@
 
     if-nez v2, :cond_7
 
-    .line 1918
+    .line 1937
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     move-object/from16 v0, p0
 
@@ -3608,7 +3616,7 @@
 
     move-result v3
 
-    .line 1920
+    .line 1939
     :cond_7
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getPaddingRight()I
 
@@ -3622,10 +3630,10 @@
 
     float-to-int v2, v2
 
-    .line 1921
+    .line 1940
     goto :goto_1
 
-    .line 1923
+    .line 1942
     :sswitch_1
     const/high16 v2, -0x40800000    # -1.0f
 
@@ -3633,10 +3641,10 @@
 
     if-nez v2, :cond_8
 
-    .line 1924
+    .line 1943
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    iget-object v2, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     move-object/from16 v0, p0
 
@@ -3656,7 +3664,7 @@
 
     move-result v3
 
-    .line 1926
+    .line 1945
     :cond_8
     invoke-virtual/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getPaddingRight()I
 
@@ -3672,26 +3680,26 @@
 
     div-int/lit8 v2, v2, 0x2
 
-    goto :goto_1
+    goto/16 :goto_1
 
-    .line 1933
+    .line 1952
     :cond_9
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-nez v3, :cond_a
 
-    .line 1934
-    invoke-direct/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->aNs()V
+    .line 1953
+    invoke-direct/range {p0 .. p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bdj()V
 
-    .line 1937
+    .line 1956
     :cond_a
     move-object/from16 v0, p0
 
-    iget-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v3, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
-    .line 1939
+    .line 1958
     const/4 v5, 0x0
 
     const/4 v6, 0x0
@@ -3702,9 +3710,9 @@
 
     invoke-virtual {v3, v0, v5, v6, v2}, Landroid/text/Layout;->draw(Landroid/graphics/Canvas;Landroid/graphics/Path;Landroid/graphics/Paint;I)V
 
-    goto :goto_2
+    goto/16 :goto_2
 
-    .line 1915
+    .line 1934
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_1
@@ -3719,20 +3727,20 @@
     .end annotation
 
     .prologue
-    .line 2678
+    .line 2697
     invoke-super {p0, p1}, Landroid/view/View;->onInitializeAccessibilityNodeInfo(Landroid/view/accessibility/AccessibilityNodeInfo;)V
 
-    .line 2679
+    .line 2698
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getContentDescription()Ljava/lang/CharSequence;
 
     move-result-object v1
 
     move-object v0, v1
 
-    .line 2681
+    .line 2700
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -3742,11 +3750,11 @@
 
     move-result-object v1
 
-    .line 2682
+    .line 2701
     :cond_0
     invoke-virtual {p1, v1}, Landroid/view/accessibility/AccessibilityNodeInfo;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2683
+    .line 2702
     return-void
 .end method
 
@@ -3754,11 +3762,11 @@
     .locals 4
 
     .prologue
-    .line 1617
+    .line 1629
     invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
 
-    .line 1618
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKn:Z
+    .line 1630
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJA:Z
 
     if-eqz v0, :cond_0
 
@@ -3768,7 +3776,7 @@
 
     if-lez v0, :cond_0
 
-    .line 1619
+    .line 1631
     iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->mText:Ljava/lang/CharSequence;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getPaint()Landroid/text/TextPaint;
@@ -3801,12 +3809,12 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1620
+    .line 1632
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKn:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJA:Z
 
-    .line 1622
+    .line 1634
     :cond_0
     return-void
 .end method
@@ -3817,59 +3825,59 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2180
+    .line 2199
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
-    .line 2181
+    .line 2200
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v4
 
-    .line 2182
+    .line 2201
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v5
 
-    .line 2183
+    .line 2202
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 2188
+    .line 2207
     if-nez v5, :cond_0
 
-    .line 2189
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKl:I
+    .line 2208
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJy:I
 
     invoke-virtual {p0, v5, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setMeasuredDimension(II)V
 
-    .line 2271
+    .line 2290
     :goto_0
     return-void
 
-    .line 2192
+    .line 2211
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKk:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJx:Z
 
     if-eqz v0, :cond_2
 
-    .line 2193
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKl:I
+    .line 2212
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJy:I
 
     if-nez v0, :cond_1
 
-    .line 2194
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->aNt()V
+    .line 2213
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bdk()V
 
-    .line 2195
+    .line 2214
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKl:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJy:I
 
     invoke-virtual {p0, v5, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setMeasuredDimension(II)V
 
     goto :goto_0
 
-    .line 2199
+    .line 2218
     :cond_2
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getCompoundPaddingLeft()I
 
@@ -3881,58 +3889,58 @@
 
     add-int/2addr v0, v2
 
-    .line 2209
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKf:Z
+    .line 2228
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJs:Z
 
     if-eqz v2, :cond_5
 
-    .line 2238
-    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->rl:I
+    .line 2257
+    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->qn:I
 
     sub-int v0, v2, v0
 
-    .line 2242
+    .line 2261
     :goto_1
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-nez v2, :cond_6
 
-    .line 2243
-    invoke-direct {p0, v0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->by(II)V
+    .line 2262
+    invoke-direct {p0, v0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bO(II)V
 
-    .line 2252
+    .line 2271
     :cond_3
     :goto_2
     const/high16 v0, 0x40000000    # 2.0f
 
     if-ne v4, v0, :cond_8
 
-    .line 2255
+    .line 2274
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKh:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJu:I
 
     move v0, v1
 
-    .line 2267
+    .line 2286
     :cond_4
     :goto_3
     invoke-virtual {p0, v3, v3}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->scrollTo(II)V
 
-    .line 2270
+    .line 2289
     invoke-virtual {p0, v5, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setMeasuredDimension(II)V
 
     goto :goto_0
 
-    .line 2240
+    .line 2259
     :cond_5
     sub-int v0, v5, v0
 
     goto :goto_1
 
-    .line 2245
+    .line 2264
     :cond_6
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v2}, Landroid/text/Layout;->getWidth()I
 
@@ -3942,36 +3950,36 @@
 
     const/4 v2, 0x1
 
-    .line 2247
+    .line 2266
     :goto_4
     if-eqz v2, :cond_3
 
-    .line 2248
-    invoke-direct {p0, v0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->by(II)V
+    .line 2267
+    invoke-direct {p0, v0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bO(II)V
 
     goto :goto_2
 
     :cond_7
     move v2, v3
 
-    .line 2245
+    .line 2264
     goto :goto_4
 
-    .line 2257
+    .line 2276
     :cond_8
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getDesiredHeight()I
 
     move-result v0
 
-    .line 2260
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKh:I
+    .line 2279
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJu:I
 
-    .line 2262
+    .line 2281
     const/high16 v2, -0x80000000
 
     if-ne v4, v2, :cond_4
 
-    .line 2263
+    .line 2282
     invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
     move-result v0
@@ -3983,40 +3991,40 @@
     .locals 1
 
     .prologue
-    .line 868
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    .line 880
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    .line 869
+    .line 881
     if-nez p1, :cond_2
 
-    .line 870
+    .line 882
     if-eqz v0, :cond_1
 
-    .line 877
+    .line 889
     :cond_0
     :goto_0
-    iput p1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKQ:I
+    iput p1, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKd:I
 
-    .line 880
+    .line 892
     :cond_1
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 881
+    .line 893
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 882
+    .line 894
     return-void
 
-    .line 874
+    .line 886
     :cond_2
     if-nez v0, :cond_0
 
-    .line 875
+    .line 887
     new-instance v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;-><init>(Lcom/tencent/mm/ui/base/NoMeasuredTextView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
     goto :goto_0
 .end method
@@ -4025,15 +4033,15 @@
     .locals 1
 
     .prologue
-    .line 703
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKu:I
+    .line 715
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJH:I
 
     if-eq p1, v0, :cond_0
 
-    .line 704
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKu:I
+    .line 716
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJH:I
 
-    .line 705
+    .line 717
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -4044,7 +4052,7 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setCompoundLeftDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;)V
 
-    .line 707
+    .line 719
     :cond_0
     return-void
 .end method
@@ -4055,27 +4063,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 671
+    .line 683
     if-nez p1, :cond_1
 
-    .line 678
+    .line 690
     :cond_0
     :goto_0
     return-void
 
-    .line 673
+    .line 685
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     if-eq v0, p1, :cond_0
 
-    .line 676
+    .line 688
     :cond_2
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -4087,7 +4095,7 @@
 
     invoke-virtual {p1, v2, v2, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 677
+    .line 689
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->a(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
@@ -4099,15 +4107,15 @@
     .locals 1
 
     .prologue
-    .line 716
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKv:I
+    .line 728
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJI:I
 
     if-eq p1, v0, :cond_0
 
-    .line 717
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKv:I
+    .line 729
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJI:I
 
-    .line 718
+    .line 730
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -4118,7 +4126,7 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setCompoundRightDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;)V
 
-    .line 720
+    .line 732
     :cond_0
     return-void
 .end method
@@ -4129,27 +4137,27 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 687
+    .line 699
     if-nez p1, :cond_1
 
-    .line 694
+    .line 706
     :cond_0
     :goto_0
     return-void
 
-    .line 689
+    .line 701
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
 
     if-eq v0, p1, :cond_0
 
-    .line 692
+    .line 704
     :cond_2
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -4161,7 +4169,7 @@
 
     invoke-virtual {p1, v2, v2, v0, v1}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 693
+    .line 705
     const/4 v0, 0x0
 
     invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->a(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
@@ -4170,46 +4178,82 @@
 .end method
 
 .method public setDrawDownDrawable(Z)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 351
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKt:Z
+    .line 360
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJG:Z
 
-    .line 352
+    if-eq v0, p1, :cond_0
+
+    .line 361
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
+
+    .line 363
+    :cond_0
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJG:Z
+
+    .line 364
     return-void
 .end method
 
 .method public setDrawLeftDrawable(Z)V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 321
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKq:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJD:Z
+
+    if-eq v0, p1, :cond_0
 
     .line 322
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
+
+    .line 324
+    :cond_0
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJD:Z
+
+    .line 325
     return-void
 .end method
 
 .method public setDrawRightDrawable(Z)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 331
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKr:Z
+    .line 334
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJE:Z
 
-    .line 332
+    if-eq v0, p1, :cond_0
+
+    .line 335
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
+
+    .line 337
+    :cond_0
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJE:Z
+
+    .line 338
     return-void
 .end method
 
 .method public setDrawTopDrawable(Z)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 341
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKs:Z
+    .line 347
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJF:Z
 
-    .line 342
+    if-eq v0, p1, :cond_0
+
+    .line 348
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
+
+    .line 350
+    :cond_0
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJF:Z
+
+    .line 351
     return-void
 .end method
 
@@ -4217,15 +4261,15 @@
     .locals 1
 
     .prologue
-    .line 1486
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJU:Landroid/text/Editable$Factory;
+    .line 1498
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJf:Landroid/text/Editable$Factory;
 
-    .line 1487
+    .line 1499
     iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->mText:Ljava/lang/CharSequence;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1488
+    .line 1500
     return-void
 .end method
 
@@ -4233,24 +4277,24 @@
     .locals 1
 
     .prologue
-    .line 2553
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJW:Landroid/text/TextUtils$TruncateAt;
+    .line 2572
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJh:Landroid/text/TextUtils$TruncateAt;
 
-    .line 2555
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 2574
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-eqz v0, :cond_0
 
-    .line 2556
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->aNr()V
+    .line 2575
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bdi()V
 
-    .line 2557
+    .line 2576
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 2558
+    .line 2577
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 2560
+    .line 2579
     :cond_0
     return-void
 .end method
@@ -4259,67 +4303,67 @@
     .locals 4
 
     .prologue
-    .line 1227
+    .line 1239
     and-int/lit8 v0, p1, 0x7
 
     if-nez v0, :cond_4
 
-    .line 1228
+    .line 1240
     or-int/lit8 v0, p1, 0x3
 
-    .line 1230
+    .line 1242
     :goto_0
     and-int/lit8 v1, v0, 0x70
 
     if-nez v1, :cond_0
 
-    .line 1231
+    .line 1243
     or-int/lit8 v0, v0, 0x30
 
-    .line 1234
+    .line 1246
     :cond_0
     const/4 v1, 0x0
 
-    .line 1236
+    .line 1248
     and-int/lit8 v2, v0, 0x7
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    iget v3, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     and-int/lit8 v3, v3, 0x7
 
     if-eq v2, v3, :cond_1
 
-    .line 1237
+    .line 1249
     const/4 v1, 0x1
 
-    .line 1240
+    .line 1252
     :cond_1
-    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
     if-eq v0, v2, :cond_2
 
-    .line 1241
+    .line 1253
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1244
+    .line 1256
     :cond_2
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->ga:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fh:I
 
-    .line 1246
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1258
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-eqz v0, :cond_3
 
     if-eqz v1, :cond_3
 
-    .line 1248
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1260
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     invoke-virtual {v0}, Landroid/text/Layout;->getWidth()I
 
     move-result v0
 
-    .line 1250
+    .line 1262
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getWidth()I
 
     move-result v1
@@ -4336,9 +4380,9 @@
 
     sub-int/2addr v1, v2
 
-    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->by(II)V
+    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bO(II)V
 
-    .line 1252
+    .line 1264
     :cond_3
     return-void
 
@@ -4352,25 +4396,25 @@
     .locals 1
 
     .prologue
-    .line 1367
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKd:I
+    .line 1379
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJq:I
 
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
-    .line 1368
+    .line 1380
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKe:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJr:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKc:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJp:I
 
-    .line 1370
+    .line 1382
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1371
+    .line 1383
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1372
+    .line 1384
     return-void
 .end method
 
@@ -4378,24 +4422,24 @@
     .locals 1
 
     .prologue
-    .line 2159
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKi:Z
+    .line 2178
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJv:Z
 
-    .line 2161
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 2180
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-eqz v0, :cond_0
 
-    .line 2162
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->aNr()V
+    .line 2181
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bdi()V
 
-    .line 2163
+    .line 2182
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 2164
+    .line 2183
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 2166
+    .line 2185
     :cond_0
     return-void
 .end method
@@ -4404,25 +4448,25 @@
     .locals 1
 
     .prologue
-    .line 1353
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKd:I
+    .line 1365
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJq:I
 
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
-    .line 1354
+    .line 1366
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKe:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJr:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKc:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJp:I
 
-    .line 1356
+    .line 1368
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1357
+    .line 1369
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1358
+    .line 1370
     return-void
 .end method
 
@@ -4430,21 +4474,21 @@
     .locals 1
 
     .prologue
-    .line 1339
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    .line 1351
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
-    .line 1340
+    .line 1352
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKc:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJp:I
 
-    .line 1342
+    .line 1354
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1343
+    .line 1355
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1344
+    .line 1356
     return-void
 .end method
 
@@ -4452,21 +4496,21 @@
     .locals 1
 
     .prologue
-    .line 1325
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKb:I
+    .line 1337
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJo:I
 
-    .line 1326
+    .line 1338
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKc:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJp:I
 
-    .line 1328
+    .line 1340
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1329
+    .line 1341
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1330
+    .line 1342
     return-void
 .end method
 
@@ -4474,21 +4518,21 @@
     .locals 1
 
     .prologue
-    .line 1395
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->rl:I
+    .line 1407
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->qn:I
 
-    .line 1396
+    .line 1408
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKf:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJs:Z
 
-    .line 1398
+    .line 1410
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1399
+    .line 1411
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1400
+    .line 1412
     return-void
 .end method
 
@@ -4496,21 +4540,21 @@
     .locals 1
 
     .prologue
-    .line 1311
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKd:I
+    .line 1323
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJq:I
 
-    .line 1312
+    .line 1324
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKe:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJr:I
 
-    .line 1314
+    .line 1326
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1315
+    .line 1327
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1316
+    .line 1328
     return-void
 .end method
 
@@ -4518,21 +4562,21 @@
     .locals 1
 
     .prologue
-    .line 1297
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKd:I
+    .line 1309
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJq:I
 
-    .line 1298
+    .line 1310
     const/4 v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKe:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJr:I
 
-    .line 1300
+    .line 1312
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1301
+    .line 1313
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1302
+    .line 1314
     return-void
 .end method
 
@@ -4540,21 +4584,21 @@
     .locals 1
 
     .prologue
-    .line 1381
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->lu:I
+    .line 1393
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kz:I
 
-    .line 1382
+    .line 1394
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKg:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJt:Z
 
-    .line 1384
+    .line 1396
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1385
+    .line 1397
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1386
+    .line 1398
     return-void
 .end method
 
@@ -4562,7 +4606,7 @@
     .locals 1
 
     .prologue
-    .line 1059
+    .line 1071
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getPaddingLeft()I
 
     move-result v0
@@ -4587,18 +4631,18 @@
 
     if-eq p4, v0, :cond_1
 
-    .line 1060
+    .line 1072
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->aNr()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bdi()V
 
-    .line 1064
+    .line 1076
     :cond_1
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 1065
+    .line 1077
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1066
+    .line 1078
     return-void
 .end method
 
@@ -4606,8 +4650,8 @@
     .locals 1
 
     .prologue
-    .line 1279
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1291
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getFlags()I
 
@@ -4615,26 +4659,26 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 1280
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1292
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setFlags(I)V
 
-    .line 1282
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1294
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-eqz v0, :cond_0
 
-    .line 1283
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->aNr()V
+    .line 1295
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bdi()V
 
-    .line 1284
+    .line 1296
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1285
+    .line 1297
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1288
+    .line 1300
     :cond_0
     return-void
 .end method
@@ -4643,10 +4687,10 @@
     .locals 0
 
     .prologue
-    .line 368
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKo:Z
+    .line 380
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJB:Z
 
-    .line 369
+    .line 381
     return-void
 .end method
 
@@ -4654,8 +4698,8 @@
     .locals 1
 
     .prologue
-    .line 2517
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iHr:Z
+    .line 2536
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kGE:Z
 
     if-eqz p1, :cond_0
 
@@ -4663,11 +4707,11 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setLines(I)V
 
-    .line 2518
+    .line 2537
     :goto_0
     return-void
 
-    .line 2517
+    .line 2536
     :cond_0
     const v0, 0x7fffffff
 
@@ -4680,15 +4724,15 @@
     .locals 1
 
     .prologue
-    .line 1497
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJV:Landroid/text/Spannable$Factory;
+    .line 1509
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJg:Landroid/text/Spannable$Factory;
 
-    .line 1498
+    .line 1510
     iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->mText:Ljava/lang/CharSequence;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1499
+    .line 1511
     return-void
 .end method
 
@@ -4696,7 +4740,7 @@
     .locals 1
 
     .prologue
-    .line 1691
+    .line 1703
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -4711,7 +4755,7 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1692
+    .line 1704
     return-void
 .end method
 
@@ -4719,12 +4763,12 @@
     .locals 1
 
     .prologue
-    .line 1508
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJY:I
+    .line 1520
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJj:I
 
     invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->c(Ljava/lang/CharSequence;I)V
 
-    .line 1509
+    .line 1521
     return-void
 .end method
 
@@ -4732,17 +4776,17 @@
     .locals 1
 
     .prologue
-    .line 1172
+    .line 1184
     invoke-static {p1}, Landroid/content/res/ColorStateList;->valueOf(I)Landroid/content/res/ColorStateList;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->eqR:Landroid/content/res/ColorStateList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fAP:Landroid/content/res/ColorStateList;
 
-    .line 1173
+    .line 1185
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->updateTextColors()V
 
-    .line 1174
+    .line 1186
     return-void
 .end method
 
@@ -4750,31 +4794,31 @@
     .locals 1
 
     .prologue
-    .line 1183
+    .line 1195
     if-nez p1, :cond_0
 
-    .line 1184
+    .line 1196
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 1186
+    .line 1198
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->eqR:Landroid/content/res/ColorStateList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fAP:Landroid/content/res/ColorStateList;
 
     if-ne v0, p1, :cond_1
 
-    .line 1191
+    .line 1203
     :goto_0
     return-void
 
-    .line 1189
+    .line 1201
     :cond_1
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->eqR:Landroid/content/res/ColorStateList;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fAP:Landroid/content/res/ColorStateList;
 
-    .line 1190
+    .line 1202
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->updateTextColors()V
 
     goto :goto_0
@@ -4786,8 +4830,8 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1518
-    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iJY:I
+    .line 1530
+    iget v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJj:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getSelectionStart()I
 
@@ -4836,7 +4880,7 @@
 
     invoke-static {v0, v1, v2}, Landroid/text/Selection;->setSelection(Landroid/text/Spannable;II)V
 
-    .line 1519
+    .line 1531
     :cond_1
     return-void
 .end method
@@ -4845,12 +4889,12 @@
     .locals 1
 
     .prologue
-    .line 1084
+    .line 1096
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0, p1}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setTextSize(IF)V
 
-    .line 1085
+    .line 1097
     return-void
 .end method
 
@@ -4858,20 +4902,20 @@
     .locals 1
 
     .prologue
-    .line 1096
+    .line 1108
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 1099
+    .line 1111
     if-nez v0, :cond_0
 
-    .line 1100
+    .line 1112
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    .line 1104
+    .line 1116
     :goto_0
     invoke-virtual {v0}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
 
@@ -4883,10 +4927,10 @@
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->setRawTextSize(F)V
 
-    .line 1105
+    .line 1117
     return-void
 
-    .line 1102
+    .line 1114
     :cond_0
     invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -4899,8 +4943,8 @@
     .locals 1
 
     .prologue
-    .line 1145
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1157
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0}, Landroid/text/TextPaint;->getTypeface()Landroid/graphics/Typeface;
 
@@ -4908,26 +4952,26 @@
 
     if-eq v0, p1, :cond_0
 
-    .line 1146
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->fBk:Landroid/text/TextPaint;
+    .line 1158
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->dGF:Landroid/text/TextPaint;
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 1148
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKa:Landroid/text/Layout;
+    .line 1160
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJl:Landroid/text/Layout;
 
     if-eqz v0, :cond_0
 
-    .line 1149
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->aNr()V
+    .line 1161
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->bdi()V
 
-    .line 1150
+    .line 1162
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1151
+    .line 1163
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1154
+    .line 1166
     :cond_0
     return-void
 .end method
@@ -4936,25 +4980,25 @@
     .locals 1
 
     .prologue
-    .line 1409
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->lu:I
+    .line 1421
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kz:I
 
-    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->rl:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->qn:I
 
-    .line 1410
+    .line 1422
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKg:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJt:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKf:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJs:Z
 
-    .line 1412
+    .line 1424
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->requestLayout()V
 
-    .line 1413
+    .line 1425
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->invalidate()V
 
-    .line 1414
+    .line 1426
     return-void
 .end method
 
@@ -4962,52 +5006,52 @@
     .locals 2
 
     .prologue
-    .line 802
+    .line 814
     invoke-super {p0, p1}, Landroid/view/View;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0
 
-    .line 803
+    .line 815
     if-nez v0, :cond_1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
     if-eqz v1, :cond_1
 
-    .line 804
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    .line 816
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKG:Landroid/graphics/drawable/Drawable;
-
-    if-eq p1, v0, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKE:Landroid/graphics/drawable/Drawable;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJT:Landroid/graphics/drawable/Drawable;
 
     if-eq p1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKH:Landroid/graphics/drawable/Drawable;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJR:Landroid/graphics/drawable/Drawable;
 
     if-eq p1, v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->iKp:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKF:Landroid/graphics/drawable/Drawable;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJU:Landroid/graphics/drawable/Drawable;
+
+    if-eq p1, v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView;->kJC:Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJS:Landroid/graphics/drawable/Drawable;
 
     if-ne p1, v0, :cond_2
 
     :cond_0
     const/4 v0, 0x1
 
-    .line 806
+    .line 818
     :cond_1
     :goto_0
     return v0
 
-    .line 804
+    .line 816
     :cond_2
     const/4 v0, 0x0
 

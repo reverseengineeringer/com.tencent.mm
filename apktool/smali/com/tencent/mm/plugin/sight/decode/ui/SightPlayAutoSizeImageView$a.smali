@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private fhO:Ljava/lang/ref/WeakReference;
+.field private gys:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView$a;->fhO:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView$a;->gys:Ljava/lang/ref/WeakReference;
 
     .line 38
     return-void
@@ -41,7 +41,7 @@
 
 
 # virtual methods
-.method public final aJ(II)V
+.method public final aB(II)V
     .locals 0
 
     .prologue
@@ -49,12 +49,12 @@
     return-void
 .end method
 
-.method protected final ajo()I
+.method protected final avI()I
     .locals 1
 
     .prologue
     .line 32
-    sget v0, Lcom/tencent/mm/a$a;->sight_loop:I
+    const v0, 0x7f020040
 
     return v0
 .end method
@@ -64,7 +64,7 @@
 
     .prologue
     .line 47
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView$a;->fhO:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView$a;->gys:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -80,7 +80,7 @@
 
     const-string/jumbo v1, "onGetFrameBmp, imageView is null, do clear"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 50
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView$a;->clear()V

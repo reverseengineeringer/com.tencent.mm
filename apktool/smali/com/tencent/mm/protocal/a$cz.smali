@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$cz;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 1188
-    const-string/jumbo v0, "verifyWCPayPassword"
+    .line 2003
+    const-string/jumbo v0, "openMapNavigateMenu"
 
-    const-string/jumbo v1, "verifyWCPayPassword"
+    const-string/jumbo v1, "openMapNavigateMenu"
 
-    const/16 v2, 0x73
+    const/16 v2, 0xb8
 
     const/4 v3, 0x1
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 1189
+    .line 2004
     return-void
 .end method

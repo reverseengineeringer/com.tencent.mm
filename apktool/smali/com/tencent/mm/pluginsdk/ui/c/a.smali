@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field private fgY:Ljava/lang/String;
+.field private gxe:Ljava/lang/String;
 
-.field public fi:I
+.field private iML:Lcom/tencent/mm/pluginsdk/ui/c/a$a;
 
-.field private gWk:Lcom/tencent/mm/pluginsdk/ui/c/a$a;
+.field public mSize:I
 
 
 # direct methods
@@ -30,16 +30,16 @@
     .line 23
     const/high16 v0, 0x6400000
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->fi:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->mSize:I
 
     .line 33
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->fgY:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->gxe:Ljava/lang/String;
 
     .line 34
     return-void
 .end method
 
-.method public static uT(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/c/a;
+.method public static AK(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/ui/c/a;
     .locals 1
 
     .prologue
@@ -53,19 +53,19 @@
 
 
 # virtual methods
-.method public final aBv()I
+.method public final aSp()I
     .locals 1
 
     .prologue
     .line 52
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/c/a;->aBw()I
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/c/a;->aSq()I
 
     move-result v0
 
     return v0
 .end method
 
-.method protected final aBw()I
+.method protected final aSq()I
     .locals 9
 
     .prologue
@@ -74,9 +74,9 @@
     const/4 v8, 0x1
 
     .line 57
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->fgY:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->gxe:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -87,24 +87,24 @@
 
     const-string/jumbo v1, "dz[check video but path is null or nil]"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 69
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/al;->cT(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ah;->dx(Landroid/content/Context;)Z
 
     move-result v4
 
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->fgY:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->gxe:Ljava/lang/String;
 
-    const/16 v1, 0x280
+    const/16 v1, 0x294
 
-    const/16 v2, 0x1e0
+    const/16 v2, 0x1f4
 
     if-eqz v4, :cond_1
 
@@ -116,7 +116,7 @@
     const-wide v4, 0x40ed4c0000000000L    # 60000.0
 
     :goto_1
-    const v6, 0xc3500
+    const v6, 0xf4240
 
     invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->shouldRemuxing(Ljava/lang/String;IIIDI)I
 
@@ -135,7 +135,7 @@
 
     aput-object v4, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 77
     packed-switch v0, :pswitch_data_0
@@ -153,7 +153,7 @@
 
     aput-object v0, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v8
 
@@ -163,12 +163,12 @@
 
     .line 70
     :cond_1
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->fi:I
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->mSize:I
 
     goto :goto_0
 
     :cond_2
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->fi:I
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->mSize:I
 
     int-to-double v4, v4
 
@@ -206,12 +206,12 @@
     .end packed-switch
 .end method
 
-.method protected final aBx()V
+.method protected final aSr()V
     .locals 2
 
     .prologue
     .line 101
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->gWk:Lcom/tencent/mm/pluginsdk/ui/c/a$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/c/a;->iML:Lcom/tencent/mm/pluginsdk/ui/c/a$a;
 
     if-nez v0, :cond_0
 
@@ -220,7 +220,7 @@
 
     const-string/jumbo v1, "dz[callback is null]"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 107
     :goto_0
@@ -228,7 +228,7 @@
 
     .line 105
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/c/a;->aBw()I
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/c/a;->aSq()I
 
     goto :goto_0
 .end method

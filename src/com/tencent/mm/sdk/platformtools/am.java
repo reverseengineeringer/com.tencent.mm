@@ -1,274 +1,183 @@
 package com.tencent.mm.sdk.platformtools;
 
-import java.util.Iterator;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import android.os.Looper;
+import android.os.Message;
+import java.util.Vector;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.TimeUnit;
 
 public final class am
 {
-  public static an hZS = null;
+  boolean aEd = false;
+  public LinkedBlockingQueue jXd = new LinkedBlockingQueue();
+  private int jXe = 1;
+  Vector jXf = new Vector();
+  aa jXg;
+  Object lock = new byte[0];
+  String name = "";
+  int priority = 1;
   
-  private static String A(String paramString1, String paramString2, String paramString3)
+  public am(int paramInt, String paramString)
   {
-    Pattern localPattern = Pattern.compile(paramString1);
-    paramString1 = "";
-    paramString3 = localPattern.matcher(paramString3);
-    if (paramString3.find()) {
-      paramString1 = paramString3.replaceAll(paramString2);
-    }
-    return paramString1;
+    this(paramInt, paramString, 1);
   }
   
-  private static int av(String paramString, int paramInt)
+  public am(int paramInt1, String paramString, int paramInt2)
   {
-    Pattern localPattern = Pattern.compile(paramString);
-    paramString = "1";
-    int i = 0;
-    while ((i < paramInt) && (!localPattern.matcher(paramString).find()))
-    {
-      paramString = paramString + "1";
-      i += 1;
-    }
-    return i + 1;
+    this(paramInt1, paramString, paramInt2, Looper.myLooper());
   }
   
-  public static String bt(String paramString1, String paramString2)
+  public am(int paramInt1, String paramString, int paramInt2, Looper paramLooper)
   {
-    paramString1 = xx(paramString1).replace("+", "");
-    if (hZS == null) {
-      hZS = new an();
-    }
-    int i;
-    if (bn.iW(paramString2))
+    jXe = paramInt2;
+    name = paramString;
+    priority = paramInt1;
+    paramString = paramLooper;
+    if (paramLooper == null)
     {
-      paramString2 = hZShZT.iterator();
-      do
+      paramString = paramLooper;
+      if (Looper.myLooper() == null)
       {
-        do
-        {
-          if (!paramString2.hasNext()) {
-            break;
-          }
-          localObject = (an.a)paramString2.next();
-        } while (!paramString1.startsWith(hZV));
-        i = paramString1.length() - hZV.length();
-      } while ((i < hZW) || (i > hZX));
-      t.i("!32@/B4Tb64lLpK2a/1CtFdgf3C9at81KaHN", "[extractCountryCode] countrycode:%s country isocode: %s country.minlen:%d country.maxlen:%d", new Object[] { hZV, hZU, Integer.valueOf(hZX), Integer.valueOf(hZX) });
-      return hZV;
-    }
-    Object localObject = hZShZT.iterator();
-    while (((Iterator)localObject).hasNext())
-    {
-      an.a locala = (an.a)((Iterator)localObject).next();
-      if (paramString1.startsWith(hZV))
-      {
-        i = paramString1.length() - hZV.length();
-        if ((i >= hZW) && (i <= hZX) && (paramString2.equalsIgnoreCase(hZU)))
-        {
-          t.i("!32@/B4Tb64lLpK2a/1CtFdgf3C9at81KaHN", "[extractCountryCode] countrycode:%s country isocode: %s country.minlen:%d country.maxlen:%d", new Object[] { hZV, hZU, Integer.valueOf(hZX), Integer.valueOf(hZX) });
-          return hZV;
-        }
+        Looper.prepare();
+        paramString = Looper.myLooper();
       }
     }
-    return null;
+    jXg = new aa(paramString)
+    {
+      public final void handleMessage(Message paramAnonymousMessage)
+      {
+        if ((paramAnonymousMessage != null) && (obj != null)) {
+          ((am.a)obj).ve();
+        }
+      }
+    };
   }
   
-  public static String formatNumber(String paramString1, String paramString2)
+  @Deprecated
+  public final boolean aVi()
   {
-    Object localObject;
-    if ((bn.iW(paramString1)) || (bn.iW(paramString2)))
+    return (jXf == null) || (jXf.size() == 0);
+  }
+  
+  public final int c(a parama)
+  {
+    int j = 0;
+    int i;
+    if (parama == null)
     {
-      localObject = paramString2;
-      return (String)localObject;
+      u.e("!56@1vpV4H6/Dg9+MyOLQz8RMq550HsmviC6Zq3QPW/02X323tNqmpb/gQ==", "add empty thread object");
+      i = -1;
     }
-    if (hZS == null) {
-      hZS = new an();
-    }
-    Iterator localIterator1 = hZShZT.iterator();
-    an.a locala;
-    String str;
-    int n;
-    int k;
-    label371:
-    label520:
     do
     {
-      StringBuffer localStringBuffer;
       do
       {
-        Iterator localIterator2;
-        while (!localIterator2.hasNext())
+        return i;
+        try
         {
-          do
+          if (!jXd.offer(parama, 1L, TimeUnit.MILLISECONDS))
           {
-            if (!localIterator1.hasNext()) {
-              break;
-            }
-            locala = (an.a)localIterator1.next();
-          } while ((hZV == null) || (!paramString1.trim().toLowerCase().equals(hZV.trim().toLowerCase())) || (hZY == null));
-          str = xx(paramString2);
-          if (str != null)
-          {
-            localObject = str;
-            if (str.length() > hZW) {
-              break;
-            }
+            u.e("!56@1vpV4H6/Dg9+MyOLQz8RMq550HsmviC6Zq3QPW/02X323tNqmpb/gQ==", "add To Queue failed");
+            return -2;
           }
-          localIterator2 = hZY.iterator();
         }
-        localObject = (an.b)localIterator2.next();
-        if (!bn.iW(hZZ)) {
-          break label520;
+        catch (Exception parama)
+        {
+          u.e("!56@1vpV4H6/Dg9+MyOLQz8RMq550HsmviC6Zq3QPW/02X323tNqmpb/gQ==", "add To Queue failed :" + parama.getMessage());
+          return -3;
         }
-        if (hZY.size() <= 1) {
-          break label371;
-        }
-        localStringBuffer = new StringBuffer();
-        localStringBuffer.append(str);
-        m = str.length();
-      } while (m > av(iab, hZX));
-      while (localStringBuffer.toString().length() < hZX) {
-        localStringBuffer.append("0");
-      }
-      paramString1 = A(iab, iaa, localStringBuffer.toString());
-      i = 0;
-      j = 0;
-      for (;;)
-      {
-        localObject = paramString1;
-        if (i >= paramString1.length()) {
+        if (jXf.size() == 0) {
           break;
         }
-        n = paramString1.charAt(i);
-        paramString2 = paramString1;
-        if (j >= m) {
-          paramString2 = paramString1.substring(0, i);
-        }
-        k = j;
-        if (n != 32)
+        i = j;
+      } while (jXd.size() <= 0);
+      i = j;
+    } while (jXe <= jXf.size());
+    new b((byte)0).start();
+    return 0;
+  }
+  
+  public final void gJ(boolean paramBoolean)
+  {
+    synchronized (lock)
+    {
+      aEd = paramBoolean;
+      if (!paramBoolean) {}
+      synchronized (lock)
+      {
+        lock.notifyAll();
+        return;
+      }
+    }
+  }
+  
+  public static abstract interface a
+  {
+    public abstract boolean vd();
+    
+    public abstract boolean ve();
+  }
+  
+  final class b
+    extends Thread
+  {
+    private int imf = 60;
+    
+    private b()
+    {
+      super();
+      setPriority(priority);
+      jXf.add(this);
+    }
+    
+    public final void run()
+    {
+      for (;;)
+      {
+        if (imf > 0) {}
+        try
         {
-          k = j;
-          if (n != 45)
+          synchronized (lock)
           {
-            k = j;
-            if (n != 12290) {
-              k = j + 1;
+            if (aEd) {
+              lock.wait();
             }
           }
-        }
-        i += 1;
-        j = k;
-        paramString1 = paramString2;
-      }
-      paramString1 = new StringBuffer();
-      paramString1.append(str);
-      m = str.length();
-      while (paramString1.toString().length() < hZX) {
-        paramString1.append("0");
-      }
-      paramString1 = A(iab, iaa, paramString1.toString());
-      i = 0;
-      j = 0;
-      while (i < paramString1.length())
-      {
-        n = paramString1.charAt(i);
-        paramString2 = paramString1;
-        if (j >= m) {
-          paramString2 = paramString1.substring(0, i);
-        }
-        k = j;
-        if (n != 32)
-        {
-          k = j;
-          if (n != 45)
+          Object localObject2;
+          try
           {
-            k = j;
-            if (n != 12290) {
-              k = j + 1;
+            ??? = (am.a)jXd.poll(2000L, TimeUnit.MILLISECONDS);
+            if (??? == null)
+            {
+              imf -= 1;
+              continue;
+              localObject3 = finally;
+              throw ((Throwable)localObject3);
             }
           }
-        }
-        i += 1;
-        j = k;
-        paramString1 = paramString2;
-      }
-      return paramString1;
-    } while (!Pattern.compile(hZZ).matcher(str).lookingAt());
-    paramString1 = new StringBuffer();
-    paramString1.append(str);
-    int m = str.length();
-    while (paramString1.toString().length() < hZX) {
-      paramString1.append(str.charAt(m - 1));
-    }
-    paramString1 = A(iab, iaa, paramString1.toString());
-    int i = 0;
-    int j = 0;
-    for (;;)
-    {
-      localObject = paramString1;
-      if (i >= paramString1.length()) {
-        break;
-      }
-      n = paramString1.charAt(i);
-      paramString2 = paramString1;
-      if (j >= m) {
-        paramString2 = paramString1.substring(0, i);
-      }
-      k = j;
-      if (n != 32)
-      {
-        k = j;
-        if (n != 45)
-        {
-          k = j;
-          if (n != 12290) {
-            k = j + 1;
+          catch (Exception localException1)
+          {
+            for (;;)
+            {
+              localObject2 = null;
+            }
+            imf = 60;
           }
+          if (!((am.a)localObject2).vd()) {
+            continue;
+          }
+          jXg.sendMessage(jXg.obtainMessage(0, localObject2));
+          continue;
+          jXf.remove(this);
+          u.d("!56@1vpV4H6/Dg9+MyOLQz8RMq550HsmviC6Zq3QPW/02X323tNqmpb/gQ==", "dktest Finish queueToReqSize:" + jXd.size() + " ThreadSize:" + jXf.size());
+          return;
+        }
+        catch (Exception localException2)
+        {
+          for (;;) {}
         }
       }
-      i += 1;
-      j = k;
-      paramString1 = paramString2;
     }
-    return paramString2;
-  }
-  
-  public static String xv(String paramString)
-  {
-    return bt(paramString, null);
-  }
-  
-  public static String xw(String paramString)
-  {
-    if (bn.iW(paramString)) {}
-    while (!bn.xW(paramString).booleanValue()) {
-      return paramString;
-    }
-    new am();
-    String str1 = "86";
-    Object localObject = paramString;
-    if (paramString.startsWith("+"))
-    {
-      String str2 = paramString.replace("+", "");
-      paramString = bt(str2, null);
-      str1 = paramString;
-      localObject = str2;
-      if (paramString != null)
-      {
-        localObject = str2.substring(paramString.length());
-        str1 = paramString;
-      }
-    }
-    return formatNumber(str1, (String)localObject);
-  }
-  
-  public static String xx(String paramString)
-  {
-    if (bn.iW(paramString)) {
-      return "";
-    }
-    return paramString.replaceAll("[\\.\\-\\ ]", "").trim();
   }
 }
 

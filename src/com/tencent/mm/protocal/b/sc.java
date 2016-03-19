@@ -4,66 +4,63 @@ import a.a.a.b;
 import java.util.LinkedList;
 
 public final class sc
-  extends adk
+  extends alq
 {
-  public int hBW;
-  public String hBX;
-  public adt hmC;
+  public alx jqQ;
+  public LinkedList jqS = new LinkedList();
+  public LinkedList jqT = new LinkedList();
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hmC == null) {
-        throw new b("Not all required fields were included: RandomEncryKey");
+      if (jHj == null) {
+        throw new b("Not all required fields were included: BaseResponse");
       }
-      if (hLO != null)
+      if (jHj != null)
       {
-        paramVarArgs.bN(1, hLO.kS());
-        hLO.a(paramVarArgs);
+        paramVarArgs.cj(1, jHj.kn());
+        jHj.a(paramVarArgs);
       }
-      paramVarArgs.bM(2, hBW);
-      if (hBX != null) {
-        paramVarArgs.U(3, hBX);
-      }
-      if (hmC != null)
+      paramVarArgs.d(2, 8, jqS);
+      if (jqQ != null)
       {
-        paramVarArgs.bN(4, hmC.kS());
-        hmC.a(paramVarArgs);
+        paramVarArgs.cj(3, jqQ.kn());
+        jqQ.a(paramVarArgs);
       }
+      paramVarArgs.d(4, 8, jqT);
       return 0;
     }
     if (paramInt == 1) {
-      if (hLO == null) {
-        break label548;
+      if (jHj == null) {
+        break label716;
       }
     }
-    label548:
-    for (paramInt = a.a.a.a.bJ(1, hLO.kS()) + 0;; paramInt = 0)
+    label716:
+    for (paramInt = a.a.a.a.ch(1, jHj.kn()) + 0;; paramInt = 0)
     {
-      int i = paramInt + a.a.a.a.bI(2, hBW);
+      int i = paramInt + a.a.a.a.c(2, 8, jqS);
       paramInt = i;
-      if (hBX != null) {
-        paramInt = i + a.a.a.b.b.a.T(3, hBX);
+      if (jqQ != null) {
+        paramInt = i + a.a.a.a.ch(3, jqQ.kn());
       }
-      i = paramInt;
-      if (hmC != null) {
-        i = paramInt + a.a.a.a.bJ(4, hmC.kS());
-      }
-      return i;
+      return paramInt + a.a.a.a.c(4, 8, jqT);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = adk.a(paramVarArgs); paramInt > 0; paramInt = adk.a(paramVarArgs)) {
+        paramVarArgs = (byte[])paramVarArgs[0];
+        jqS.clear();
+        jqT.clear();
+        paramVarArgs = new a.a.a.a.a(paramVarArgs, iTR);
+        for (paramInt = alq.a(paramVarArgs); paramInt > 0; paramInt = alq.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
-        if (hmC != null) {
+        if (jHj != null) {
           break;
         }
-        throw new b("Not all required fields were included: RandomEncryKey");
+        throw new b("Not all required fields were included: BaseResponse");
       }
       if (paramInt == 3)
       {
@@ -77,35 +74,55 @@ public final class sc
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
           i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new cj();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (bool = true; bool; bool = ((cj)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adk.a((a.a.a.a.a)localObject2))) {}
-            hLO = ((cj)localObject1);
+            localObject1 = new dd();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (bool = true; bool; bool = ((dd)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
+            jHj = ((dd)localObject1);
             paramInt += 1;
           }
         case 2: 
-          hBW = jMD.aVp();
-          return 0;
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new kz();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (bool = true; bool; bool = ((kz)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
+            jqS.add(localObject1);
+            paramInt += 1;
+          }
         case 3: 
-          hBX = jMD.readString();
-          return 0;
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new alx();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (bool = true; bool; bool = ((alx)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
+            jqQ = ((alx)localObject1);
+            paramInt += 1;
+          }
         }
-        paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
+        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
         i = paramVarArgs.size();
         paramInt = 0;
         while (paramInt < i)
         {
           localObject2 = (byte[])paramVarArgs.get(paramInt);
-          localObject1 = new adt();
-          localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-          for (bool = true; bool; bool = ((adt)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adk.a((a.a.a.a.a)localObject2))) {}
-          hmC = ((adt)localObject1);
+          localObject1 = new la();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+          for (bool = true; bool; bool = ((la)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
+          jqT.add(localObject1);
           paramInt += 1;
         }
         break;

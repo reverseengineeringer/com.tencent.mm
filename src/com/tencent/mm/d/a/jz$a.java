@@ -1,12 +1,10 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.storage.ag;
+
 public final class jz$a
 {
-  public String aHl;
-  public String anZ;
-  public int ave;
-  public boolean azi;
-  public byte[] data;
+  public ag ask;
 }
 
 /* Location:

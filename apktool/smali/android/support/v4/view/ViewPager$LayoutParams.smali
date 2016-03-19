@@ -15,15 +15,15 @@
 
 
 # instance fields
+.field gD:F
+
+.field public gF:Z
+
+.field gG:Z
+
+.field gH:I
+
 .field public gravity:I
-
-.field hv:F
-
-.field public hx:Z
-
-.field hy:Z
-
-.field hz:I
 
 .field position:I
 
@@ -41,7 +41,7 @@
     .line 2864
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v4/view/ViewPager$LayoutParams;->hv:F
+    iput v0, p0, Landroid/support/v4/view/ViewPager$LayoutParams;->gD:F
 
     .line 2884
     return-void
@@ -57,10 +57,10 @@
     .line 2864
     const/4 v0, 0x0
 
-    iput v0, p0, Landroid/support/v4/view/ViewPager$LayoutParams;->hv:F
+    iput v0, p0, Landroid/support/v4/view/ViewPager$LayoutParams;->gD:F
 
     .line 2889
-    invoke-static {}, Landroid/support/v4/view/ViewPager;->aI()[I
+    invoke-static {}, Landroid/support/v4/view/ViewPager;->aq()[I
 
     move-result-object v0
 

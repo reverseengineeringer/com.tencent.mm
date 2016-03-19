@@ -1,16 +1,14 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.ar.f;
-import com.tencent.mm.ar.f.a;
-import com.tencent.mm.sdk.g.ah;
+import com.tencent.mm.az.f.a;
 
 public final class o
-  extends ah
+  extends com.tencent.mm.sdk.h.f
   implements f.a
 {
-  public static final String[] aqU = { ah.a(n.aqp, "ContactLabelCache") };
+  public static final String[] aoY = { com.tencent.mm.sdk.h.f.a(n.aot, "ContactLabelCache") };
   
-  public final int a(f paramf)
+  public final int a(com.tencent.mm.az.f paramf)
   {
     return 0;
   }

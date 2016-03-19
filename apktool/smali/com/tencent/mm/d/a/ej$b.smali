@@ -15,28 +15,21 @@
 
 
 # instance fields
-.field public aAH:I
-
-.field public aAI:Ljava/lang/String;
-
-.field public aAJ:Ljava/util/List;
-
-.field public aAK:Ljava/util/List;
-
-.field public aAL:Ljava/util/List;
-
-.field public aAM:Ljava/util/List;
-
-.field public aAN:Ljava/util/List;
+.field public atf:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 20
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 19
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ej$b;->atf:Z
 
     return-void
 .end method

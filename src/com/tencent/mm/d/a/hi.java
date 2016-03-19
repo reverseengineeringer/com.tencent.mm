@@ -1,24 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class hi
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEG = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDb = new a();
   
   public hi()
   {
-    id = "SendMsgFailNotification";
-    hXT = atO;
+    id = "NewYearSnsOpen";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aCC = 0;
-    public String aDK;
+    public boolean ig = false;
   }
 }
 

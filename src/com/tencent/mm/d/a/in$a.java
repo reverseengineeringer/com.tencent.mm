@@ -1,12 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-
 public final class in$a
 {
-  public String aFG;
-  public int avp = 0;
-  public Context context;
+  public byte[] content;
 }
 
 /* Location:

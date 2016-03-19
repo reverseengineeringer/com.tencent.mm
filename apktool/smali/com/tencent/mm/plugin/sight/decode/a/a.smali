@@ -4,19 +4,22 @@
 
 
 # virtual methods
-.method public abstract I(Ljava/lang/String;Z)V
+.method public abstract P(Ljava/lang/String;Z)V
 .end method
 
-.method public abstract aI(II)V
+.method public abstract avF()V
 .end method
 
-.method public abstract ajl()V
+.method public abstract avG()Z
 .end method
 
-.method public abstract ajm()Z
+.method public abstract bc(II)V
 .end method
 
 .method public abstract clear()V
+.end method
+
+.method public abstract eD(Z)V
 .end method
 
 .method public abstract getTagObject()Ljava/lang/Object;
@@ -38,6 +41,15 @@
 .end method
 
 .method public abstract setMaskID(I)V
+.end method
+
+.method public abstract setOnCompletionListener(Lcom/tencent/mm/plugin/sight/decode/a/b$e;)V
+.end method
+
+.method public abstract setOnDecodeDurationListener(Lcom/tencent/mm/plugin/sight/decode/a/b$f;)V
+.end method
+
+.method public abstract setOnSightCompletionAction(Lcom/tencent/mm/plugin/sight/decode/a/b$g;)V
 .end method
 
 .method public abstract setPosition(I)V

@@ -6,21 +6,21 @@ import android.os.Parcelable.Creator;
 public final class a$a
   implements Parcelable.Creator
 {
-  final b fc;
+  final b el;
   
   public a$a(b paramb)
   {
-    fc = paramb;
+    el = paramb;
   }
   
   public final Object createFromParcel(Parcel paramParcel)
   {
-    return fc.createFromParcel(paramParcel, null);
+    return el.createFromParcel(paramParcel, null);
   }
   
   public final Object[] newArray(int paramInt)
   {
-    return fc.newArray(paramInt);
+    return el.newArray(paramInt);
   }
 }
 

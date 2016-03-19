@@ -18,7 +18,7 @@
     .line 22
     const-string/jumbo v0, "Must provide a valid string as verifier"
 
-    invoke-static {p1, v0}, Lb/a/g/d;->d(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-static {p1, v0}, Lb/a/g/d;->c(Ljava/lang/Object;Ljava/lang/String;)V
 
     .line 23
     iput-object p1, p0, Lb/a/d/k;->value:Ljava/lang/String;

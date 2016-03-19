@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract Ni()V
+.method public abstract Rs()V
 .end method
 
 .method public abstract a(Lcom/tencent/mm/ui/tools/a/b;)V

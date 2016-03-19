@@ -2,7 +2,10 @@ package com.tencent.mm.d.a;
 
 public final class bj$a
 {
-  public boolean Kr = false;
+  public String auy;
+  public String auz;
+  public int progress = 0;
+  public int status = 0;
 }
 
 /* Location:

@@ -2,67 +2,81 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class ac
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aIK;
-  private static final int aIR;
-  private static final int aJz;
-  private static final int aPs;
-  private static final int aSE = "downloadId".hashCode();
-  private static final int aSF = "downloadUrl".hashCode();
-  private static final int aSG = "fileName".hashCode();
-  private static final int aSH = "filePath".hashCode();
-  private static final int aSI = "fileType".hashCode();
-  private static final int aSJ;
-  private static final int aSK;
-  private static final int aSL;
-  private static final int aSM;
-  private static final int aSN;
-  private boolean aID = true;
-  private boolean aIw = true;
-  private boolean aJe = true;
-  private boolean aPc = true;
-  private boolean aSA = true;
-  private boolean aSB = true;
-  private boolean aSC = true;
-  private boolean aSD = true;
-  private boolean aSu = true;
-  private boolean aSv = true;
-  private boolean aSw = true;
-  private boolean aSx = true;
-  private boolean aSy = true;
-  private boolean aSz = true;
-  public String field_appId;
-  public boolean field_autoInstall;
-  public long field_downloadId;
-  public String field_downloadUrl;
-  public int field_downloadUrlHashCode;
-  public int field_downloaderType;
-  public String field_fileName;
-  public String field_filePath;
-  public int field_fileType;
-  public String field_md5;
-  public String field_packageName;
-  public boolean field_showNotification;
-  public int field_status;
-  public long field_sysDownloadId;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = { "CREATE INDEX IF NOT EXISTS fmconversation_isnew_Index ON fmessage_conversation(isNew)" };
+  private static final int aVb;
+  private static final int aWf = "talker".hashCode();
+  private static final int aWg = "encryptTalker".hashCode();
+  private static final int aWh = "displayName".hashCode();
+  private static final int aWi;
+  private static final int aWj;
+  private static final int aWk;
+  private static final int aWl;
+  private static final int aWm;
+  private static final int aWn;
+  private static final int aWo;
+  private static final int aWp;
+  private static final int aWq;
+  private static final int aWr;
+  private static final int aWs;
+  private static final int aWt;
+  private static final int aWu;
+  private boolean aUG = true;
+  private boolean aVP = true;
+  private boolean aVQ = true;
+  private boolean aVR = true;
+  private boolean aVS = true;
+  private boolean aVT = true;
+  private boolean aVU = true;
+  private boolean aVV = true;
+  private boolean aVW = true;
+  private boolean aVX = true;
+  private boolean aVY = true;
+  private boolean aVZ = true;
+  private boolean aWa = true;
+  private boolean aWb = true;
+  private boolean aWc = true;
+  private boolean aWd = true;
+  private boolean aWe = true;
+  public int field_addScene;
+  public String field_contentFromUsername;
+  public String field_contentFullPhoneNumMD5;
+  public String field_contentNickname;
+  public String field_contentPhoneNumMD5;
+  public String field_contentVerifyContent;
+  public String field_displayName;
+  public String field_encryptTalker;
+  public String field_fmsgContent;
+  public int field_fmsgIsSend;
+  public long field_fmsgSysRowId;
+  public int field_fmsgType;
+  public int field_isNew;
+  public long field_lastModifiedTime;
+  public int field_recvFmsgType;
+  public int field_state;
+  public String field_talker;
   
   static
   {
-    aIR = "status".hashCode();
-    aPs = "md5".hashCode();
-    aSJ = "autoInstall".hashCode();
-    aSK = "showNotification".hashCode();
-    aSL = "sysDownloadId".hashCode();
-    aSM = "downloaderType".hashCode();
-    aIK = "appId".hashCode();
-    aSN = "downloadUrlHashCode".hashCode();
-    aJz = "packageName".hashCode();
+    aVb = "state".hashCode();
+    aWi = "lastModifiedTime".hashCode();
+    aWj = "isNew".hashCode();
+    aWk = "addScene".hashCode();
+    aWl = "fmsgSysRowId".hashCode();
+    aWm = "fmsgIsSend".hashCode();
+    aWn = "fmsgType".hashCode();
+    aWo = "fmsgContent".hashCode();
+    aWp = "recvFmsgType".hashCode();
+    aWq = "contentFromUsername".hashCode();
+    aWr = "contentNickname".hashCode();
+    aWs = "contentPhoneNumMD5".hashCode();
+    aWt = "contentFullPhoneNumMD5".hashCode();
+    aWu = "contentVerifyContent".hashCode();
   }
   
   public final void c(Cursor paramCursor)
@@ -71,18 +85,18 @@ public abstract class ac
     if (arrayOfString == null) {
       return;
     }
-    int j = arrayOfString.length;
     int i = 0;
+    int j = arrayOfString.length;
     label20:
     int k;
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aSE != k) {
+      if (aWf != k) {
         break label65;
       }
-      field_downloadId = paramCursor.getLong(i);
-      aSu = true;
+      field_talker = paramCursor.getString(i);
+      aVP = true;
     }
     for (;;)
     {
@@ -90,133 +104,127 @@ public abstract class ac
       break label20;
       break;
       label65:
-      if (aSF == k)
-      {
-        field_downloadUrl = paramCursor.getString(i);
-      }
-      else if (aSG == k)
-      {
-        field_fileName = paramCursor.getString(i);
-      }
-      else if (aSH == k)
-      {
-        field_filePath = paramCursor.getString(i);
-      }
-      else if (aSI == k)
-      {
-        field_fileType = paramCursor.getInt(i);
-      }
-      else if (aIR == k)
-      {
-        field_status = paramCursor.getInt(i);
-      }
-      else if (aPs == k)
-      {
-        field_md5 = paramCursor.getString(i);
-      }
-      else
-      {
-        boolean bool;
-        if (aSJ == k)
-        {
-          if (paramCursor.getInt(i) != 0) {}
-          for (bool = true;; bool = false)
-          {
-            field_autoInstall = bool;
-            break;
-          }
-        }
-        if (aSK == k)
-        {
-          if (paramCursor.getInt(i) != 0) {}
-          for (bool = true;; bool = false)
-          {
-            field_showNotification = bool;
-            break;
-          }
-        }
-        if (aSL == k) {
-          field_sysDownloadId = paramCursor.getLong(i);
-        } else if (aSM == k) {
-          field_downloaderType = paramCursor.getInt(i);
-        } else if (aIK == k) {
-          field_appId = paramCursor.getString(i);
-        } else if (aSN == k) {
-          field_downloadUrlHashCode = paramCursor.getInt(i);
-        } else if (aJz == k) {
-          field_packageName = paramCursor.getString(i);
-        } else if (aHH == k) {
-          ibV = paramCursor.getLong(i);
-        }
+      if (aWg == k) {
+        field_encryptTalker = paramCursor.getString(i);
+      } else if (aWh == k) {
+        field_displayName = paramCursor.getString(i);
+      } else if (aVb == k) {
+        field_state = paramCursor.getInt(i);
+      } else if (aWi == k) {
+        field_lastModifiedTime = paramCursor.getLong(i);
+      } else if (aWj == k) {
+        field_isNew = paramCursor.getInt(i);
+      } else if (aWk == k) {
+        field_addScene = paramCursor.getInt(i);
+      } else if (aWl == k) {
+        field_fmsgSysRowId = paramCursor.getLong(i);
+      } else if (aWm == k) {
+        field_fmsgIsSend = paramCursor.getInt(i);
+      } else if (aWn == k) {
+        field_fmsgType = paramCursor.getInt(i);
+      } else if (aWo == k) {
+        field_fmsgContent = paramCursor.getString(i);
+      } else if (aWp == k) {
+        field_recvFmsgType = paramCursor.getInt(i);
+      } else if (aWq == k) {
+        field_contentFromUsername = paramCursor.getString(i);
+      } else if (aWr == k) {
+        field_contentNickname = paramCursor.getString(i);
+      } else if (aWs == k) {
+        field_contentPhoneNumMD5 = paramCursor.getString(i);
+      } else if (aWt == k) {
+        field_contentFullPhoneNumMD5 = paramCursor.getString(i);
+      } else if (aWu == k) {
+        field_contentVerifyContent = paramCursor.getString(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aSu) {
-      localContentValues.put("downloadId", Long.valueOf(field_downloadId));
+    if (field_talker == null) {
+      field_talker = "0";
     }
-    if (field_downloadUrl == null) {
-      field_downloadUrl = "";
+    if (aVP) {
+      localContentValues.put("talker", field_talker);
     }
-    if (aSv) {
-      localContentValues.put("downloadUrl", field_downloadUrl);
+    if (field_encryptTalker == null) {
+      field_encryptTalker = "";
     }
-    if (field_fileName == null) {
-      field_fileName = "";
+    if (aVQ) {
+      localContentValues.put("encryptTalker", field_encryptTalker);
     }
-    if (aSw) {
-      localContentValues.put("fileName", field_fileName);
+    if (field_displayName == null) {
+      field_displayName = "";
     }
-    if (field_filePath == null) {
-      field_filePath = "";
+    if (aVR) {
+      localContentValues.put("displayName", field_displayName);
     }
-    if (aSx) {
-      localContentValues.put("filePath", field_filePath);
+    if (aUG) {
+      localContentValues.put("state", Integer.valueOf(field_state));
     }
-    if (aSy) {
-      localContentValues.put("fileType", Integer.valueOf(field_fileType));
+    if (aVS) {
+      localContentValues.put("lastModifiedTime", Long.valueOf(field_lastModifiedTime));
     }
-    if (aID) {
-      localContentValues.put("status", Integer.valueOf(field_status));
+    if (aVT) {
+      localContentValues.put("isNew", Integer.valueOf(field_isNew));
     }
-    if (field_md5 == null) {
-      field_md5 = "";
+    if (aVU) {
+      localContentValues.put("addScene", Integer.valueOf(field_addScene));
     }
-    if (aPc) {
-      localContentValues.put("md5", field_md5);
+    if (aVV) {
+      localContentValues.put("fmsgSysRowId", Long.valueOf(field_fmsgSysRowId));
     }
-    if (aSz) {
-      localContentValues.put("autoInstall", Boolean.valueOf(field_autoInstall));
+    if (aVW) {
+      localContentValues.put("fmsgIsSend", Integer.valueOf(field_fmsgIsSend));
     }
-    if (aSA) {
-      localContentValues.put("showNotification", Boolean.valueOf(field_showNotification));
+    if (aVX) {
+      localContentValues.put("fmsgType", Integer.valueOf(field_fmsgType));
     }
-    if (aSB) {
-      localContentValues.put("sysDownloadId", Long.valueOf(field_sysDownloadId));
+    if (field_fmsgContent == null) {
+      field_fmsgContent = "";
     }
-    if (aSC) {
-      localContentValues.put("downloaderType", Integer.valueOf(field_downloaderType));
+    if (aVY) {
+      localContentValues.put("fmsgContent", field_fmsgContent);
     }
-    if (field_appId == null) {
-      field_appId = "";
+    if (aVZ) {
+      localContentValues.put("recvFmsgType", Integer.valueOf(field_recvFmsgType));
     }
-    if (aIw) {
-      localContentValues.put("appId", field_appId);
+    if (field_contentFromUsername == null) {
+      field_contentFromUsername = "";
     }
-    if (aSD) {
-      localContentValues.put("downloadUrlHashCode", Integer.valueOf(field_downloadUrlHashCode));
+    if (aWa) {
+      localContentValues.put("contentFromUsername", field_contentFromUsername);
     }
-    if (field_packageName == null) {
-      field_packageName = "";
+    if (field_contentNickname == null) {
+      field_contentNickname = "";
     }
-    if (aJe) {
-      localContentValues.put("packageName", field_packageName);
+    if (aWb) {
+      localContentValues.put("contentNickname", field_contentNickname);
     }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (field_contentPhoneNumMD5 == null) {
+      field_contentPhoneNumMD5 = "";
+    }
+    if (aWc) {
+      localContentValues.put("contentPhoneNumMD5", field_contentPhoneNumMD5);
+    }
+    if (field_contentFullPhoneNumMD5 == null) {
+      field_contentFullPhoneNumMD5 = "";
+    }
+    if (aWd) {
+      localContentValues.put("contentFullPhoneNumMD5", field_contentFullPhoneNumMD5);
+    }
+    if (field_contentVerifyContent == null) {
+      field_contentVerifyContent = "";
+    }
+    if (aWe) {
+      localContentValues.put("contentVerifyContent", field_contentVerifyContent);
+    }
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

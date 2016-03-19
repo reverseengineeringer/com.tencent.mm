@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field private cHs:I
+.field private dfq:I
 
-.field private cOq:I
+.field private dgj:I
 
-.field private jwb:[Landroid/view/View;
+.field private lyS:[Landroid/view/View;
 
-.field final synthetic jwc:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
+.field final synthetic lyT:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
 
-.field private jwg:Z
+.field private lyX:Z
 
 
 # direct methods
@@ -32,7 +32,7 @@
 
     .prologue
     .line 496
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->jwc:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->lyT:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
 
     .line 497
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -131,11 +131,11 @@
     invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
     .line 577
-    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->cOq:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->dgj:I
 
     if-eq v1, v3, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->jwc:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->lyT:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/tools/gridviewheaders/c;->b(Lcom/tencent/mm/ui/tools/gridviewheaders/c;)[Landroid/view/View;
 
@@ -150,22 +150,22 @@
 
     .line 582
     :cond_1
-    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->cHs:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->dfq:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->cOq:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->dgj:I
 
     rem-int/2addr v1, v2
 
     if-nez v1, :cond_3
 
     .line 583
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->jwg:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->lyX:Z
 
     if-nez v1, :cond_3
 
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->jwg:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->lyX:Z
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->jwb:[Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->lyS:[Landroid/view/View;
 
     array-length v3, v2
 
@@ -183,7 +183,7 @@
     goto :goto_1
 
     :cond_2
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->jwg:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->lyX:Z
 
     .line 586
     :cond_3
@@ -192,7 +192,7 @@
     move-result v2
 
     .line 588
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->jwb:[Landroid/view/View;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->lyS:[Landroid/view/View;
 
     array-length v4, v3
 
@@ -245,7 +245,7 @@
 
     .prologue
     .line 524
-    iput p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->cOq:I
+    iput p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->dgj:I
 
     .line 525
     return-void
@@ -256,7 +256,7 @@
 
     .prologue
     .line 528
-    iput p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->cHs:I
+    iput p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->dfq:I
 
     .line 529
     return-void
@@ -272,7 +272,7 @@
 
     .prologue
     .line 533
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->jwb:[Landroid/view/View;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$d;->lyS:[Landroid/view/View;
 
     .line 534
     return-void

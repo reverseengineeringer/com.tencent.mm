@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract DY()V
+.method public abstract Gh()V
 .end method
 
-.method public abstract DZ()V
+.method public abstract Gi()V
 .end method

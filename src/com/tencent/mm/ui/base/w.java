@@ -1,30 +1,27 @@
 package com.tencent.mm.ui.base;
 
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
+import android.content.Context;
+import android.content.Intent;
+import android.os.Process;
+import com.tencent.mm.sdk.platformtools.y;
 
-final class w
-  implements View.OnClickListener
+public final class w
 {
-  w(LinearLayout paramLinearLayout, h.a parama) {}
-  
-  public final void onClick(View paramView)
+  public static void a(boolean paramBoolean, Intent paramIntent)
   {
-    int i = 0;
-    while (i < eZj.getChildCount())
-    {
-      TextView localTextView = (TextView)eZj.getChildAt(i);
-      if (localTextView.getId() != a.i.tips_tv) {
-        localTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, a.h.round_selector_normal, 0);
-      }
-      i += 1;
+    Intent localIntent = paramIntent;
+    if (paramIntent == null) {
+      localIntent = new Intent();
     }
-    ((TextView)paramView).setCompoundDrawablesWithIntrinsicBounds(0, 0, a.h.round_selector_checked, 0);
-    paramView.post(new x(this, ((Integer)paramView.getTag()).intValue()));
+    if (paramBoolean) {}
+    for (paramIntent = "com.tencent.mm.ui.ACTION_ACTIVE";; paramIntent = "com.tencent.mm.ui.ACTION_DEACTIVE")
+    {
+      localIntent.setAction(paramIntent);
+      localIntent.putExtra("_application_context_process_", y.aQC());
+      localIntent.putExtra("process_id", Process.myPid());
+      y.getContext().sendBroadcast(localIntent, "com.tencent.mm.permission.MM_MESSAGE");
+      return;
+    }
   }
 }
 

@@ -15,14 +15,17 @@
 
 
 # virtual methods
-.method public abstract KC()V
+.method public abstract Oa()V
 .end method
 
-.method public abstract eZ(I)V
+.method public abstract Ob()V
 .end method
 
-.method public abstract fa(I)V
+.method public abstract fH(I)V
 .end method
 
-.method public abstract fb(I)V
+.method public abstract fI(I)V
+.end method
+
+.method public abstract fJ(I)V
 .end method

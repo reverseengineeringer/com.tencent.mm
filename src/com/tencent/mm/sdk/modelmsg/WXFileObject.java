@@ -1,7 +1,7 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.File;
 
 public class WXFileObject
@@ -44,17 +44,17 @@ public class WXFileObject
   {
     if (((fileData == null) || (fileData.length == 0)) && ((filePath == null) || (filePath.length() == 0)))
     {
-      t.e("!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY=", "checkArgs fail, both arguments is null");
+      u.e("!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY=", "checkArgs fail, both arguments is null");
       return false;
     }
     if ((fileData != null) && (fileData.length > contentLengthLimit))
     {
-      t.e("!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY=", "checkArgs fail, fileData is too large");
+      u.e("!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY=", "checkArgs fail, fileData is too large");
       return false;
     }
     if ((filePath != null) && (getFileSize(filePath) > contentLengthLimit))
     {
-      t.e("!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY=", "checkArgs fail, fileSize is too large");
+      u.e("!44@/B4Tb64lLpISsBeGklBKOYzdO14BK4vr5Asj6Oq15NY=", "checkArgs fail, fileSize is too large");
       return false;
     }
     return true;

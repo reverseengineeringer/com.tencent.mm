@@ -1,89 +1,142 @@
 package com.tencent.mm.pluginsdk.ui.tools;
 
-import android.net.Uri;
-import android.view.View;
-import android.view.View.OnClickListener;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.pluginsdk.model.app.r;
-import com.tencent.mm.pluginsdk.model.downloader.i.a;
-import com.tencent.mm.pluginsdk.model.w;
-import com.tencent.mm.pluginsdk.model.x;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.cn;
-import java.io.File;
+import android.content.Context;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class e
-  implements View.OnClickListener
+public final class e
+  implements p.a
 {
-  e(AppChooserUI paramAppChooserUI) {}
+  public static e iSb = null;
+  public boolean hasInit = false;
+  private float[] iRX = new float[3];
+  int iRY = 55536;
+  int iRZ = 55536;
+  private SensorManager iSa;
+  private SensorEventListener irX;
   
-  public final void onClick(View paramView)
+  private void aSO()
   {
-    int i;
-    if (AppChooserUI.a(hdq) != null)
+    u.d("!44@/B4Tb64lLpL9QWdfCuQ83fK9Jq2zEatwik+a4P9gxQo=", "releaseSensor");
+    if ((iSa != null) && (irX != null))
     {
-      i = ahdq).hdr;
-      if (i != AppChooserUI.f.hdH) {
-        break label253;
-      }
-      if ((AppChooserUI.b(hdq) != null) && (AppChooserUI.b(hdq).isShowing()))
-      {
-        ahdq).hdr = AppChooserUI.f.hdI;
-        AppChooserUI.a(hdq).notifyDataSetChanged();
-      }
-      paramView = new i.a();
-      if (AppChooserUI.f(hdq) != 1) {
-        break label202;
-      }
-      paramView.uC("http://mdc.html5.qq.com/d/directdown.jsp?channel_id=10375");
-      paramView.uD(AppChooserUI.g(hdq).ayO());
-      paramView.lo(1);
-      paramView.ej(true);
-      com.tencent.mm.pluginsdk.model.downloader.h.azu().a(gNo);
-      x.ayP();
-      x.lm(AppChooserUI.h(hdq));
-      if (AppChooserUI.h(hdq) == 0)
-      {
-        if (!AppChooserUI.i(hdq)) {
-          break label219;
-        }
-        com.tencent.mm.plugin.report.service.j.eJZ.f(11168, new Object[] { Integer.valueOf(4), Integer.valueOf(AppChooserUI.f(hdq)) });
-      }
+      u.d("!44@/B4Tb64lLpL9QWdfCuQ83fK9Jq2zEatwik+a4P9gxQo=", "releaseSensor");
+      iSa.unregisterListener(irX);
+      iSa = null;
+      irX = null;
     }
-    label202:
-    label219:
-    label253:
-    label374:
-    do
+    hasInit = false;
+  }
+  
+  public final void aNM()
+  {
+    iSb = null;
+    aSO();
+  }
+  
+  public final void aNN()
+  {
+    aSO();
+  }
+  
+  public final int aSN()
+  {
+    u.d("!44@/B4Tb64lLpL9QWdfCuQ83fK9Jq2zEatwik+a4P9gxQo=", "getHeading() " + iRY);
+    return iRY;
+  }
+  
+  public final void cS(Context paramContext)
+  {
+    u.d("!44@/B4Tb64lLpL9QWdfCuQ83fK9Jq2zEatwik+a4P9gxQo=", "initSensor() ");
+    if (paramContext == null)
     {
-      do
-      {
-        do
-        {
-          return;
-          paramView.uC(AppChooserUI.g(hdq).Dz());
-          break;
-          com.tencent.mm.plugin.report.service.j.eJZ.f(11168, new Object[] { Integer.valueOf(3), Integer.valueOf(AppChooserUI.f(hdq)) });
-          return;
-        } while (i != AppChooserUI.f.hdJ);
-        paramView = hdq;
-        long l = AppChooserUI.j(hdq);
-        Object localObject = azubWpath;
-        t.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "filepath:%s", new Object[] { localObject });
-        localObject = new File((String)localObject);
-        if (r.c(ipQ.iqj, Uri.fromFile((File)localObject))) {
-          break label374;
-        }
-        ax.tl().rf().set(paramView.lQ(274560), Long.valueOf(0L));
-      } while (hcS == null);
-      hcS.hdr = AppChooserUI.f.hdH;
-      hcS.notifyDataSetChanged();
+      u.e("!44@/B4Tb64lLpL9QWdfCuQ83fK9Jq2zEatwik+a4P9gxQo=", "initSensor() context == null");
       return;
-    } while (hcS == null);
-    hcS.hdr = AppChooserUI.f.hdJ;
-    hcS.notifyDataSetChanged();
+    }
+    if (iSa == null) {
+      iSa = ((SensorManager)paramContext.getSystemService("sensor"));
+    }
+    if (irX == null) {
+      irX = new SensorEventListener()
+      {
+        public final void onAccuracyChanged(Sensor paramAnonymousSensor, int paramAnonymousInt)
+        {
+          u.i("!44@/B4Tb64lLpL9QWdfCuQ83fK9Jq2zEatwik+a4P9gxQo=", "onAccuracyChanged");
+        }
+        
+        public final void onSensorChanged(SensorEvent paramAnonymousSensorEvent)
+        {
+          if (sensor.getType() == 3)
+          {
+            e.a(e.this)[0] = values[0];
+            e.a(e.this)[1] = values[1];
+            e.a(e.this)[2] = values[2];
+            if (iRY != 55536) {
+              break label158;
+            }
+            iRY = ((int)e.a(e.this)[0]);
+          }
+          for (;;)
+          {
+            if (iRY == 0) {
+              iRY = 1;
+            }
+            if (iRY == 365) {
+              iRY = 364;
+            }
+            if (iRZ != 55536) {
+              break;
+            }
+            iRZ = ((int)e.a(e.this)[1]);
+            return;
+            label158:
+            if ((e.a(e.this)[0] - iRY > 300.0F) || (e.a(e.this)[0] - iRY < -300.0F)) {
+              iRY = ((int)e.a(e.this)[0]);
+            } else {
+              iRY = ((int)(iRY * 0.6D + e.a(e.this)[0] * 0.4D));
+            }
+          }
+          if (e.a(e.this)[1] < -68.0F)
+          {
+            int j = (int)(-68.0D + (e.a(e.this)[1] + 68.0F) / 1.5D);
+            int i = j;
+            if (j < -89) {
+              i = -89;
+            }
+            iRZ = i;
+            return;
+          }
+          if (e.a(e.this)[1] > 89.0F)
+          {
+            iRZ = 89;
+            return;
+          }
+          iRZ = ((int)(iRZ * 0.6D + e.a(e.this)[1] * 0.4D));
+        }
+      };
+    }
+    boolean bool = iSa.registerListener(irX, iSa.getDefaultSensor(3), 3);
+    hasInit = true;
+    u.d("!44@/B4Tb64lLpL9QWdfCuQ83fK9Jq2zEatwik+a4P9gxQo=", "initSensor() finish, %s", new Object[] { Boolean.valueOf(bool) });
+  }
+  
+  public final void cz(Context paramContext)
+  {
+    cS(paramContext);
+  }
+  
+  public final String getName()
+  {
+    return "HeadingPitchSensorMgr";
+  }
+  
+  public final int getPitch()
+  {
+    u.d("!44@/B4Tb64lLpL9QWdfCuQ83fK9Jq2zEatwik+a4P9gxQo=", "getPitch() " + iRZ);
+    return iRZ;
   }
 }
 

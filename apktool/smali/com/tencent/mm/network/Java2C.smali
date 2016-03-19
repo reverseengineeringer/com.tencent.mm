@@ -17,80 +17,82 @@
     .locals 0
 
     .prologue
-    .line 63
+    .line 60
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
+    .line 95
     return-void
 .end method
 
-.method public static c(Ljava/lang/String;Ljava/util/List;)I
+.method public static a(Ljava/util/List;Z)I
     .locals 10
 
     .prologue
     const/4 v1, 0x0
 
-    .line 105
+    .line 128
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 106
+    .line 129
     new-instance v4, Lcom/tencent/mm/network/Java2C$GetDnsReturn;
 
     const/4 v0, 0x0
 
     invoke-direct {v4, v0}, Lcom/tencent/mm/network/Java2C$GetDnsReturn;-><init>(Lcom/tencent/mm/network/Java2C$1;)V
 
-    .line 107
-    invoke-static {p0, v4}, Lcom/tencent/mm/network/Java2C;->getHostIps(Ljava/lang/String;Lcom/tencent/mm/network/Java2C$GetDnsReturn;)V
+    .line 130
+    invoke-static {p1, v4}, Lcom/tencent/mm/network/Java2C;->getSnsIps(ZLcom/tencent/mm/network/Java2C$GetDnsReturn;)V
 
     move v0, v1
 
-    .line 108
+    .line 131
     :goto_0
     iget v5, v4, Lcom/tencent/mm/network/Java2C$GetDnsReturn;->length:I
 
     if-ge v0, v5, :cond_0
 
-    .line 109
+    .line 132
     iget-object v5, v4, Lcom/tencent/mm/network/Java2C$GetDnsReturn;->aryIps:[Ljava/lang/String;
 
     aget-object v5, v5, v0
 
-    invoke-interface {p1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {p0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 108
+    .line 131
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 111
+    .line 134
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v5
 
-    .line 112
+    .line 135
     new-instance v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;
 
     invoke-direct {v7}, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;-><init>()V
 
-    .line 113
+    .line 136
     const-wide/16 v8, 0xb
 
     iput-wide v8, v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->actionId:J
 
-    .line 114
+    .line 137
     iput-wide v2, v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->beginTime:J
 
-    .line 115
+    .line 138
     iput-wide v5, v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->endTime:J
 
-    .line 116
-    iput-object p0, v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->clientIp:Ljava/lang/String;
+    .line 139
+    const-string/jumbo v0, "mmsns.qpic.cn"
 
-    .line 117
+    iput-object v0, v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->clientIp:Ljava/lang/String;
+
+    .line 140
     iget v0, v4, Lcom/tencent/mm/network/Java2C$GetDnsReturn;->length:I
 
     if-lez v0, :cond_1
@@ -102,15 +104,108 @@
     :goto_1
     iput-object v0, v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->ip:Ljava/lang/String;
 
-    .line 119
+    .line 142
     invoke-static {v7}, Lcom/tencent/mm/network/C2Java;->reportStat(Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;)V
 
-    .line 120
+    .line 143
     iget v0, v4, Lcom/tencent/mm/network/Java2C$GetDnsReturn;->type:I
 
     return v0
 
+    .line 140
+    :cond_1
+    const-string/jumbo v0, "0.0.0.0"
+
+    goto :goto_1
+.end method
+
+.method public static c(Ljava/lang/String;Ljava/util/List;)I
+    .locals 10
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 107
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v2
+
+    .line 108
+    new-instance v4, Lcom/tencent/mm/network/Java2C$GetDnsReturn;
+
+    const/4 v0, 0x0
+
+    invoke-direct {v4, v0}, Lcom/tencent/mm/network/Java2C$GetDnsReturn;-><init>(Lcom/tencent/mm/network/Java2C$1;)V
+
+    .line 109
+    invoke-static {p0, v4}, Lcom/tencent/mm/network/Java2C;->getHostIps(Ljava/lang/String;Lcom/tencent/mm/network/Java2C$GetDnsReturn;)V
+
+    move v0, v1
+
+    .line 110
+    :goto_0
+    iget v5, v4, Lcom/tencent/mm/network/Java2C$GetDnsReturn;->length:I
+
+    if-ge v0, v5, :cond_0
+
+    .line 111
+    iget-object v5, v4, Lcom/tencent/mm/network/Java2C$GetDnsReturn;->aryIps:[Ljava/lang/String;
+
+    aget-object v5, v5, v0
+
+    invoke-interface {p1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 110
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 113
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v5
+
+    .line 114
+    new-instance v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;
+
+    invoke-direct {v7}, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;-><init>()V
+
+    .line 115
+    const-wide/16 v8, 0xb
+
+    iput-wide v8, v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->actionId:J
+
+    .line 116
+    iput-wide v2, v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->beginTime:J
+
     .line 117
+    iput-wide v5, v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->endTime:J
+
+    .line 118
+    iput-object p0, v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->clientIp:Ljava/lang/String;
+
+    .line 119
+    iget v0, v4, Lcom/tencent/mm/network/Java2C$GetDnsReturn;->length:I
+
+    if-lez v0, :cond_1
+
+    iget-object v0, v4, Lcom/tencent/mm/network/Java2C$GetDnsReturn;->aryIps:[Ljava/lang/String;
+
+    aget-object v0, v0, v1
+
+    :goto_1
+    iput-object v0, v7, Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;->ip:Ljava/lang/String;
+
+    .line 121
+    invoke-static {v7}, Lcom/tencent/mm/network/C2Java;->reportStat(Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;)V
+
+    .line 122
+    iget v0, v4, Lcom/tencent/mm/network/Java2C$GetDnsReturn;->type:I
+
+    return v0
+
+    .line 119
     :cond_1
     const-string/jumbo v0, "0.0.0.0"
 
@@ -130,6 +225,9 @@
 .end method
 
 .method public static native getNetworkServerIp()Ljava/lang/String;
+.end method
+
+.method private static native getSnsIps(ZLcom/tencent/mm/network/Java2C$GetDnsReturn;)V
 .end method
 
 .method public static native keepSignalling()V
@@ -154,6 +252,9 @@
 .end method
 
 .method public static native onNetworkChange()V
+.end method
+
+.method public static native reportCGIServerError(II)V
 .end method
 
 .method public static native reportFailIp(Ljava/lang/String;)V

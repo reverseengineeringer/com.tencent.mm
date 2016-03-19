@@ -10,7 +10,7 @@ import com.tencent.mm.dbsupport.newcursor.a;
 import com.tencent.mm.dbsupport.newcursor.b;
 import com.tencent.mm.dbsupport.newcursor.d;
 import com.tencent.mm.dbsupport.newcursor.d.a;
-import com.tencent.mm.dbsupport.newcursor.i;
+import com.tencent.mm.dbsupport.newcursor.h;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -319,6 +319,8 @@ public final class SQLiteConnection
   
   private static native String nativeExecuteForString(int paramInt1, int paramInt2);
   
+  private static native String nativeExplainQueryPlan(int paramInt, String paramString);
+  
   private static native void nativeFinalizeStatement(int paramInt1, int paramInt2);
   
   private static native int nativeGetColumnCount(int paramInt1, int paramInt2);
@@ -497,26 +499,26 @@ public final class SQLiteConnection
     //   29: return
     //   30: aload_0
     //   31: getfield 116	com/tencent/kingkong/database/SQLiteConnection:mConfiguration	Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;
-    //   34: getfield 541	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:locale	Ljava/util/Locale;
-    //   37: invokevirtual 544	java/util/Locale:toString	()Ljava/lang/String;
+    //   34: getfield 543	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:locale	Ljava/util/Locale;
+    //   37: invokevirtual 546	java/util/Locale:toString	()Ljava/lang/String;
     //   40: astore_1
     //   41: aload_0
     //   42: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
     //   45: aload_1
-    //   46: invokestatic 546	com/tencent/kingkong/database/SQLiteConnection:nativeRegisterLocalizedCollators	(ILjava/lang/String;)V
+    //   46: invokestatic 548	com/tencent/kingkong/database/SQLiteConnection:nativeRegisterLocalizedCollators	(ILjava/lang/String;)V
     //   49: aload_0
     //   50: getfield 125	com/tencent/kingkong/database/SQLiteConnection:mIsReadOnlyConnection	Z
     //   53: ifne -24 -> 29
     //   56: aload_0
-    //   57: ldc_w 548
+    //   57: ldc_w 550
     //   60: aconst_null
     //   61: aconst_null
-    //   62: invokevirtual 501	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   62: invokevirtual 503	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   65: aload_0
-    //   66: ldc_w 550
+    //   66: ldc_w 552
     //   69: aconst_null
     //   70: aconst_null
-    //   71: invokevirtual 510	com/tencent/kingkong/database/SQLiteConnection:executeForString	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)Ljava/lang/String;
+    //   71: invokevirtual 512	com/tencent/kingkong/database/SQLiteConnection:executeForString	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)Ljava/lang/String;
     //   74: astore_2
     //   75: aload_2
     //   76: ifnull +11 -> 87
@@ -525,17 +527,17 @@ public final class SQLiteConnection
     //   81: invokevirtual 303	java/lang/String:equals	(Ljava/lang/Object;)Z
     //   84: ifne -55 -> 29
     //   87: aload_0
-    //   88: ldc_w 552
+    //   88: ldc_w 554
     //   91: aconst_null
     //   92: aconst_null
-    //   93: invokevirtual 501	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   93: invokevirtual 503	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   96: aload_0
-    //   97: ldc_w 554
+    //   97: ldc_w 556
     //   100: aconst_null
     //   101: aconst_null
-    //   102: invokevirtual 501	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   102: invokevirtual 503	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   105: aload_0
-    //   106: ldc_w 556
+    //   106: ldc_w 558
     //   109: iconst_1
     //   110: anewarray 4	java/lang/Object
     //   113: dup
@@ -543,45 +545,45 @@ public final class SQLiteConnection
     //   115: aload_1
     //   116: aastore
     //   117: aconst_null
-    //   118: invokevirtual 501	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   118: invokevirtual 503	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   121: aload_0
-    //   122: ldc_w 558
+    //   122: ldc_w 560
     //   125: aconst_null
     //   126: aconst_null
-    //   127: invokevirtual 501	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   127: invokevirtual 503	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   130: aload_0
-    //   131: ldc_w 560
+    //   131: ldc_w 562
     //   134: aconst_null
     //   135: aconst_null
-    //   136: invokevirtual 501	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   136: invokevirtual 503	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   139: return
     //   140: astore_2
-    //   141: new 450	com/tencent/kingkong/database/SQLiteException
+    //   141: new 452	com/tencent/kingkong/database/SQLiteException
     //   144: dup
     //   145: new 231	java/lang/StringBuilder
     //   148: dup
-    //   149: ldc_w 562
+    //   149: ldc_w 564
     //   152: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   155: aload_0
     //   156: getfield 116	com/tencent/kingkong/database/SQLiteConnection:mConfiguration	Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;
-    //   159: getfield 459	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:label	Ljava/lang/String;
+    //   159: getfield 461	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:label	Ljava/lang/String;
     //   162: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   165: ldc_w 522
+    //   165: ldc_w 524
     //   168: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   171: aload_1
     //   172: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   175: ldc_w 564
+    //   175: ldc_w 566
     //   178: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   181: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   184: aload_2
-    //   185: invokespecial 567	com/tencent/kingkong/database/SQLiteException:<init>	(Ljava/lang/String;Ljava/lang/Throwable;)V
+    //   185: invokespecial 569	com/tencent/kingkong/database/SQLiteException:<init>	(Ljava/lang/String;Ljava/lang/Throwable;)V
     //   188: athrow
     //   189: astore_2
     //   190: aload_0
-    //   191: ldc_w 569
+    //   191: ldc_w 571
     //   194: aconst_null
     //   195: aconst_null
-    //   196: invokevirtual 501	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   196: invokevirtual 503	com/tencent/kingkong/database/SQLiteConnection:execute	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   199: aload_2
     //   200: athrow
     // Local variable table:
@@ -668,9 +670,9 @@ public final class SQLiteConnection
     if (currentFillingWindow != null)
     {
       b localb = currentFillingWindow;
-      bkN = null;
-      bkK = bkJ.size();
-      Log.i("MicroMsg.kkdb.CursorDataWindow", "newcursor fillEnd posistionMaps.size is   %d ,data size is :%d", new Object[] { Integer.valueOf(bkK), Integer.valueOf(bkL.size()) });
+      bvq = null;
+      bvn = bvm.size();
+      Log.i("MicroMsg.kkdb.CursorDataWindow", "newcursor fillEnd posistionMaps.size is   %d ,data size is :%d", new Object[] { Integer.valueOf(bvn), Integer.valueOf(bvo.size()) });
       windowAllocatedSize += paramInt2;
       return;
     }
@@ -690,25 +692,25 @@ public final class SQLiteConnection
     // Byte code:
     //   0: aload_0
     //   1: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
-    //   4: invokestatic 666	com/tencent/kingkong/database/SQLiteConnection:nativeGetDbLookaside	(I)I
+    //   4: invokestatic 668	com/tencent/kingkong/database/SQLiteConnection:nativeGetDbLookaside	(I)I
     //   7: istore_2
     //   8: lconst_0
     //   9: lstore 4
     //   11: lconst_0
     //   12: lstore 8
     //   14: aload_0
-    //   15: ldc_w 668
+    //   15: ldc_w 670
     //   18: aconst_null
     //   19: aconst_null
-    //   20: invokevirtual 485	com/tencent/kingkong/database/SQLiteConnection:executeForLong	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)J
+    //   20: invokevirtual 487	com/tencent/kingkong/database/SQLiteConnection:executeForLong	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)J
     //   23: lstore 6
     //   25: lload 6
     //   27: lstore 4
     //   29: aload_0
-    //   30: ldc_w 670
+    //   30: ldc_w 672
     //   33: aconst_null
     //   34: aconst_null
-    //   35: invokevirtual 485	com/tencent/kingkong/database/SQLiteConnection:executeForLong	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)J
+    //   35: invokevirtual 487	com/tencent/kingkong/database/SQLiteConnection:executeForLong	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)J
     //   38: lstore 10
     //   40: lload 10
     //   42: lstore 8
@@ -719,44 +721,44 @@ public final class SQLiteConnection
     //   50: iload_2
     //   51: lload 4
     //   53: lload 8
-    //   55: invokespecial 672	com/tencent/kingkong/database/SQLiteConnection:getMainDbStatsUnsafe	(IJJ)Lcom/tencent/kingkong/database/SQLiteDebug$DbStats;
-    //   58: invokevirtual 675	java/util/ArrayList:add	(Ljava/lang/Object;)Z
+    //   55: invokespecial 674	com/tencent/kingkong/database/SQLiteConnection:getMainDbStatsUnsafe	(IJJ)Lcom/tencent/kingkong/database/SQLiteDebug$DbStats;
+    //   58: invokevirtual 677	java/util/ArrayList:add	(Ljava/lang/Object;)Z
     //   61: pop
-    //   62: new 677	com/tencent/kingkong/CursorWindow
+    //   62: new 679	com/tencent/kingkong/CursorWindow
     //   65: dup
-    //   66: ldc_w 678
-    //   69: invokespecial 679	com/tencent/kingkong/CursorWindow:<init>	(Ljava/lang/String;)V
+    //   66: ldc_w 680
+    //   69: invokespecial 681	com/tencent/kingkong/CursorWindow:<init>	(Ljava/lang/String;)V
     //   72: astore 14
     //   74: aload_0
-    //   75: ldc_w 681
+    //   75: ldc_w 683
     //   78: aconst_null
     //   79: aload 14
     //   81: iconst_0
     //   82: iconst_0
     //   83: iconst_0
     //   84: aconst_null
-    //   85: invokevirtual 685	com/tencent/kingkong/database/SQLiteConnection:executeForCursorWindow	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/CursorWindow;IIZLcom/tencent/kingkong/support/CancellationSignal;)I
+    //   85: invokevirtual 687	com/tencent/kingkong/database/SQLiteConnection:executeForCursorWindow	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/CursorWindow;IIZLcom/tencent/kingkong/support/CancellationSignal;)I
     //   88: pop
     //   89: iconst_1
     //   90: istore_2
     //   91: aload 14
-    //   93: invokevirtual 688	com/tencent/kingkong/CursorWindow:getNumRows	()I
+    //   93: invokevirtual 690	com/tencent/kingkong/CursorWindow:getNumRows	()I
     //   96: istore_3
     //   97: iload_2
     //   98: iload_3
     //   99: if_icmplt +9 -> 108
     //   102: aload 14
-    //   104: invokevirtual 690	com/tencent/kingkong/CursorWindow:close	()V
+    //   104: invokevirtual 692	com/tencent/kingkong/CursorWindow:close	()V
     //   107: return
     //   108: aload 14
     //   110: iload_2
     //   111: iconst_1
-    //   112: invokevirtual 693	com/tencent/kingkong/CursorWindow:getString	(II)Ljava/lang/String;
+    //   112: invokevirtual 695	com/tencent/kingkong/CursorWindow:getString	(II)Ljava/lang/String;
     //   115: astore 12
     //   117: aload 14
     //   119: iload_2
     //   120: iconst_2
-    //   121: invokevirtual 693	com/tencent/kingkong/CursorWindow:getString	(II)Ljava/lang/String;
+    //   121: invokevirtual 695	com/tencent/kingkong/CursorWindow:getString	(II)Ljava/lang/String;
     //   124: astore 15
     //   126: lconst_0
     //   127: lstore 4
@@ -765,38 +767,38 @@ public final class SQLiteConnection
     //   132: aload_0
     //   133: new 231	java/lang/StringBuilder
     //   136: dup
-    //   137: ldc_w 695
+    //   137: ldc_w 697
     //   140: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   143: aload 12
     //   145: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   148: ldc_w 697
+    //   148: ldc_w 699
     //   151: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   154: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   157: aconst_null
     //   158: aconst_null
-    //   159: invokevirtual 485	com/tencent/kingkong/database/SQLiteConnection:executeForLong	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)J
+    //   159: invokevirtual 487	com/tencent/kingkong/database/SQLiteConnection:executeForLong	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)J
     //   162: lstore 6
     //   164: lload 6
     //   166: lstore 4
     //   168: aload_0
     //   169: new 231	java/lang/StringBuilder
     //   172: dup
-    //   173: ldc_w 695
+    //   173: ldc_w 697
     //   176: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   179: aload 12
     //   181: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   184: ldc_w 699
+    //   184: ldc_w 701
     //   187: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   190: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   193: aconst_null
     //   194: aconst_null
-    //   195: invokevirtual 485	com/tencent/kingkong/database/SQLiteConnection:executeForLong	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)J
+    //   195: invokevirtual 487	com/tencent/kingkong/database/SQLiteConnection:executeForLong	(Ljava/lang/String;[Ljava/lang/Object;Lcom/tencent/kingkong/support/CancellationSignal;)J
     //   198: lstore 10
     //   200: lload 10
     //   202: lstore 4
     //   204: new 231	java/lang/StringBuilder
     //   207: dup
-    //   208: ldc_w 701
+    //   208: ldc_w 703
     //   211: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   214: aload 12
     //   216: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -805,14 +807,14 @@ public final class SQLiteConnection
     //   224: aload 13
     //   226: astore 12
     //   228: aload 15
-    //   230: invokevirtual 704	java/lang/String:length	()I
+    //   230: invokevirtual 706	java/lang/String:length	()I
     //   233: ifeq +31 -> 264
     //   236: new 231	java/lang/StringBuilder
     //   239: dup
     //   240: aload 13
     //   242: invokestatic 355	java/lang/String:valueOf	(Ljava/lang/Object;)Ljava/lang/String;
     //   245: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   248: ldc_w 706
+    //   248: ldc_w 708
     //   251: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   254: aload 15
     //   256: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -829,7 +831,7 @@ public final class SQLiteConnection
     //   277: iconst_0
     //   278: iconst_0
     //   279: invokespecial 373	com/tencent/kingkong/database/SQLiteDebug$DbStats:<init>	(Ljava/lang/String;JJIIII)V
-    //   282: invokevirtual 675	java/util/ArrayList:add	(Ljava/lang/Object;)Z
+    //   282: invokevirtual 677	java/util/ArrayList:add	(Ljava/lang/Object;)Z
     //   285: pop
     //   286: iload_2
     //   287: iconst_1
@@ -844,11 +846,11 @@ public final class SQLiteConnection
     //   303: goto -99 -> 204
     //   306: astore_1
     //   307: aload 14
-    //   309: invokevirtual 690	com/tencent/kingkong/CursorWindow:close	()V
+    //   309: invokevirtual 692	com/tencent/kingkong/CursorWindow:close	()V
     //   312: return
     //   313: astore_1
     //   314: aload 14
-    //   316: invokevirtual 690	com/tencent/kingkong/CursorWindow:close	()V
+    //   316: invokevirtual 692	com/tencent/kingkong/CursorWindow:close	()V
     //   319: aload_1
     //   320: athrow
     //   321: astore 12
@@ -926,14 +928,14 @@ public final class SQLiteConnection
     // Byte code:
     //   0: aload_1
     //   1: ifnonnull +14 -> 15
-    //   4: new 740	java/lang/IllegalArgumentException
+    //   4: new 742	java/lang/IllegalArgumentException
     //   7: dup
-    //   8: ldc_w 742
-    //   11: invokespecial 743	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
+    //   8: ldc_w 744
+    //   11: invokespecial 745	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
     //   14: athrow
     //   15: aload_0
     //   16: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   19: ldc_w 744
+    //   19: ldc_w 746
     //   22: aload_1
     //   23: aload_2
     //   24: invokevirtual 325	com/tencent/kingkong/database/SQLiteConnection$OperationLog:beginOperation	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
@@ -943,36 +945,36 @@ public final class SQLiteConnection
     //   34: istore 4
     //   36: aload_0
     //   37: aload_1
-    //   38: invokespecial 746	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
+    //   38: invokespecial 748	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
     //   41: astore_1
     //   42: aload 5
     //   44: aload_1
-    //   45: getfield 441	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
-    //   48: invokevirtual 749	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
+    //   45: getfield 443	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
+    //   48: invokevirtual 751	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
     //   51: aload_0
     //   52: aload_1
-    //   53: invokespecial 751	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   53: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   56: aload_0
     //   57: aload_1
     //   58: aload_2
-    //   59: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
+    //   59: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
     //   62: aload_0
     //   63: aload_1
-    //   64: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   64: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   67: aload_0
     //   68: aload_3
-    //   69: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   69: invokespecial 759	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   72: aload_0
     //   73: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
     //   76: aload_1
     //   77: getfield 255	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mStatementPtr	I
-    //   80: invokestatic 759	com/tencent/kingkong/database/SQLiteConnection:nativeExecute	(II)V
+    //   80: invokestatic 761	com/tencent/kingkong/database/SQLiteConnection:nativeExecute	(II)V
     //   83: aload_0
     //   84: aload_3
-    //   85: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   85: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   88: aload_0
     //   89: aload_1
-    //   90: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   90: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   93: aload_0
     //   94: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   97: aload_0
@@ -986,33 +988,33 @@ public final class SQLiteConnection
     //   114: astore_2
     //   115: aload_0
     //   116: aload_3
-    //   117: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   117: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   120: aload_2
     //   121: athrow
     //   122: astore_2
     //   123: aload_0
     //   124: aload_1
-    //   125: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   125: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   128: aload_2
     //   129: athrow
     //   130: astore_1
     //   131: aload_1
-    //   132: instanceof 504
+    //   132: instanceof 506
     //   135: ifne +10 -> 145
     //   138: aload_1
-    //   139: instanceof 765
+    //   139: instanceof 767
     //   142: ifeq +17 -> 159
     //   145: aload_0
     //   146: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
     //   149: ifnull +10 -> 159
     //   152: aload_0
     //   153: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   156: invokevirtual 770	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
+    //   156: invokevirtual 772	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
     //   159: aload_0
     //   160: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   163: iload 4
     //   165: aload_1
-    //   166: invokevirtual 774	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
+    //   166: invokevirtual 776	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
     //   169: aload_1
     //   170: athrow
     //   171: astore_1
@@ -1058,14 +1060,14 @@ public final class SQLiteConnection
     // Byte code:
     //   0: aload_1
     //   1: ifnonnull +14 -> 15
-    //   4: new 740	java/lang/IllegalArgumentException
+    //   4: new 742	java/lang/IllegalArgumentException
     //   7: dup
-    //   8: ldc_w 742
-    //   11: invokespecial 743	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
+    //   8: ldc_w 744
+    //   11: invokespecial 745	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
     //   14: athrow
     //   15: aload_0
     //   16: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   19: ldc_w 777
+    //   19: ldc_w 779
     //   22: aload_1
     //   23: aload_2
     //   24: invokevirtual 325	com/tencent/kingkong/database/SQLiteConnection$OperationLog:beginOperation	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
@@ -1075,42 +1077,42 @@ public final class SQLiteConnection
     //   34: istore 4
     //   36: aload_0
     //   37: aload_1
-    //   38: invokespecial 746	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
+    //   38: invokespecial 748	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
     //   41: astore 6
     //   43: aload 7
     //   45: aload 6
-    //   47: getfield 441	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
-    //   50: invokevirtual 749	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
+    //   47: getfield 443	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
+    //   50: invokevirtual 751	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
     //   53: aload_0
     //   54: aload 6
-    //   56: invokespecial 751	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   56: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   59: aload_0
     //   60: aload 6
     //   62: aload_2
-    //   63: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
+    //   63: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
     //   66: aload_0
     //   67: aload 6
-    //   69: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   69: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   72: aload_0
     //   73: aload_3
-    //   74: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   74: invokespecial 759	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   77: aload_0
     //   78: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
     //   81: aload 6
     //   83: getfield 255	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mStatementPtr	I
-    //   86: invokestatic 779	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForBlobFileDescriptor	(II)I
+    //   86: invokestatic 781	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForBlobFileDescriptor	(II)I
     //   89: istore 5
     //   91: iload 5
     //   93: iflt +42 -> 135
     //   96: iload 5
-    //   98: invokestatic 785	com/tencent/kingkong/ParcelFileDescriptor:adoptFd	(I)Lcom/tencent/kingkong/ParcelFileDescriptor;
+    //   98: invokestatic 787	com/tencent/kingkong/ParcelFileDescriptor:adoptFd	(I)Lcom/tencent/kingkong/ParcelFileDescriptor;
     //   101: astore_1
     //   102: aload_0
     //   103: aload_3
-    //   104: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   104: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   107: aload_0
     //   108: aload 6
-    //   110: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   110: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   113: aload_0
     //   114: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   117: aload_0
@@ -1128,33 +1130,33 @@ public final class SQLiteConnection
     //   140: astore_1
     //   141: aload_0
     //   142: aload_3
-    //   143: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   143: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   146: aload_1
     //   147: athrow
     //   148: astore_1
     //   149: aload_0
     //   150: aload 6
-    //   152: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   152: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   155: aload_1
     //   156: athrow
     //   157: astore_1
     //   158: aload_1
-    //   159: instanceof 504
+    //   159: instanceof 506
     //   162: ifne +10 -> 172
     //   165: aload_1
-    //   166: instanceof 765
+    //   166: instanceof 767
     //   169: ifeq +17 -> 186
     //   172: aload_0
     //   173: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
     //   176: ifnull +10 -> 186
     //   179: aload_0
     //   180: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   183: invokevirtual 770	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
+    //   183: invokevirtual 772	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
     //   186: aload_0
     //   187: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   190: iload 4
     //   192: aload_1
-    //   193: invokevirtual 774	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
+    //   193: invokevirtual 776	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
     //   196: aload_1
     //   197: athrow
     //   198: astore_1
@@ -1203,226 +1205,239 @@ public final class SQLiteConnection
     // Byte code:
     //   0: aload_1
     //   1: ifnonnull +14 -> 15
-    //   4: new 740	java/lang/IllegalArgumentException
+    //   4: new 742	java/lang/IllegalArgumentException
     //   7: dup
-    //   8: ldc_w 742
-    //   11: invokespecial 743	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
+    //   8: ldc_w 744
+    //   11: invokespecial 745	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
     //   14: athrow
-    //   15: iconst_0
-    //   16: istore 6
-    //   18: iconst_0
-    //   19: istore 8
-    //   21: iconst_0
-    //   22: istore 7
-    //   24: aload_0
-    //   25: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   28: ldc_w 788
-    //   31: aload_1
-    //   32: aload_2
-    //   33: invokevirtual 325	com/tencent/kingkong/database/SQLiteConnection$OperationLog:beginOperation	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
-    //   36: astore 10
-    //   38: aload 10
-    //   40: getfield 328	com/tencent/kingkong/database/SQLiteConnection$Operation:mCookie	I
-    //   43: istore 9
-    //   45: iload 6
-    //   47: istore 4
-    //   49: iload 8
-    //   51: istore 5
+    //   15: aload_0
+    //   16: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   19: ldc_w 790
+    //   22: aload_1
+    //   23: aload_2
+    //   24: invokevirtual 325	com/tencent/kingkong/database/SQLiteConnection$OperationLog:beginOperation	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
+    //   27: astore 9
+    //   29: aload 9
+    //   31: getfield 328	com/tencent/kingkong/database/SQLiteConnection$Operation:mCookie	I
+    //   34: istore 7
+    //   36: aload_0
+    //   37: aload_1
+    //   38: invokespecial 748	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
+    //   41: astore 8
+    //   43: aload 9
+    //   45: aload 8
+    //   47: getfield 443	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
+    //   50: invokevirtual 751	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
     //   53: aload_0
-    //   54: aload_1
-    //   55: invokespecial 746	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
-    //   58: astore_1
-    //   59: iload 6
-    //   61: istore 4
-    //   63: iload 8
-    //   65: istore 5
-    //   67: aload 10
-    //   69: aload_1
-    //   70: getfield 441	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
-    //   73: invokevirtual 749	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
-    //   76: iload 7
-    //   78: istore 6
-    //   80: aload_0
-    //   81: aload_1
-    //   82: invokespecial 751	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
-    //   85: iload 7
-    //   87: istore 6
-    //   89: aload_0
-    //   90: aload_1
-    //   91: aload_2
-    //   92: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
-    //   95: iload 7
-    //   97: istore 6
-    //   99: aload_0
-    //   100: aload_1
-    //   101: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
-    //   104: iload 7
-    //   106: istore 6
-    //   108: aload_0
-    //   109: aload_3
-    //   110: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
-    //   113: aload_0
-    //   114: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
-    //   117: aload_1
-    //   118: getfield 255	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mStatementPtr	I
-    //   121: invokestatic 790	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForChangedRowCount	(II)I
-    //   124: istore 4
-    //   126: iload 4
-    //   128: istore 7
-    //   130: iload 7
-    //   132: istore 6
-    //   134: aload_0
-    //   135: aload_3
-    //   136: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
-    //   139: iload 7
-    //   141: istore 4
-    //   143: iload 7
-    //   145: istore 5
-    //   147: aload_0
-    //   148: aload_1
-    //   149: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
-    //   152: aload_0
-    //   153: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   156: aload_0
-    //   157: getfield 116	com/tencent/kingkong/database/SQLiteConnection:mConfiguration	Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;
-    //   160: getfield 338	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:path	Ljava/lang/String;
-    //   163: aload_0
-    //   164: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
-    //   167: iload 9
-    //   169: invokevirtual 794	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
-    //   172: ifeq +30 -> 202
-    //   175: aload_0
-    //   176: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   179: iload 9
-    //   181: new 231	java/lang/StringBuilder
-    //   184: dup
-    //   185: ldc_w 796
-    //   188: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   191: iload 7
-    //   193: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   196: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   199: invokevirtual 799	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
-    //   202: iload 7
-    //   204: ireturn
-    //   205: astore_2
-    //   206: iload 7
-    //   208: istore 6
-    //   210: aload_0
-    //   211: aload_3
-    //   212: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
-    //   215: iload 7
-    //   217: istore 6
-    //   219: aload_2
-    //   220: athrow
-    //   221: astore_2
-    //   222: iload 6
-    //   224: istore 4
-    //   226: iload 6
-    //   228: istore 5
-    //   230: aload_0
-    //   231: aload_1
-    //   232: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
-    //   235: iload 6
-    //   237: istore 4
-    //   239: iload 6
-    //   241: istore 5
-    //   243: aload_2
-    //   244: athrow
-    //   245: astore_1
-    //   246: iload 4
-    //   248: istore 5
-    //   250: aload_1
-    //   251: instanceof 504
-    //   254: ifne +14 -> 268
-    //   257: iload 4
-    //   259: istore 5
-    //   261: aload_1
-    //   262: instanceof 765
-    //   265: ifeq +25 -> 290
-    //   268: iload 4
-    //   270: istore 5
-    //   272: aload_0
-    //   273: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   276: ifnull +14 -> 290
-    //   279: iload 4
-    //   281: istore 5
-    //   283: aload_0
-    //   284: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   287: invokevirtual 770	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
-    //   290: iload 4
-    //   292: istore 5
-    //   294: aload_0
-    //   295: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   298: iload 9
-    //   300: aload_1
-    //   301: invokevirtual 774	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
-    //   304: iload 4
-    //   306: istore 5
-    //   308: aload_1
-    //   309: athrow
-    //   310: astore_1
-    //   311: aload_0
-    //   312: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   315: aload_0
-    //   316: getfield 116	com/tencent/kingkong/database/SQLiteConnection:mConfiguration	Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;
-    //   319: getfield 338	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:path	Ljava/lang/String;
-    //   322: aload_0
-    //   323: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
-    //   326: iload 9
-    //   328: invokevirtual 794	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
-    //   331: ifeq +30 -> 361
-    //   334: aload_0
-    //   335: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   338: iload 9
-    //   340: new 231	java/lang/StringBuilder
-    //   343: dup
-    //   344: ldc_w 796
-    //   347: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   350: iload 5
-    //   352: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   355: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   358: invokevirtual 799	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
-    //   361: aload_1
-    //   362: athrow
+    //   54: aload 8
+    //   56: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   59: aload_0
+    //   60: aload 8
+    //   62: aload_2
+    //   63: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
+    //   66: aload_0
+    //   67: aload 8
+    //   69: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   72: aload_0
+    //   73: aload_3
+    //   74: invokespecial 759	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   77: aload_0
+    //   78: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
+    //   81: aload 8
+    //   83: getfield 255	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mStatementPtr	I
+    //   86: invokestatic 792	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForChangedRowCount	(II)I
+    //   89: istore 5
+    //   91: aload_0
+    //   92: aload_3
+    //   93: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   96: iload 5
+    //   98: istore 6
+    //   100: iload 5
+    //   102: istore 4
+    //   104: aload_0
+    //   105: aload 8
+    //   107: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   110: aload_0
+    //   111: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   114: aload_0
+    //   115: getfield 116	com/tencent/kingkong/database/SQLiteConnection:mConfiguration	Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;
+    //   118: getfield 338	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:path	Ljava/lang/String;
+    //   121: aload_0
+    //   122: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
+    //   125: iload 7
+    //   127: invokevirtual 796	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
+    //   130: ifeq +60 -> 190
+    //   133: aload_0
+    //   134: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   137: iload 7
+    //   139: new 231	java/lang/StringBuilder
+    //   142: dup
+    //   143: ldc_w 798
+    //   146: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   149: iload 5
+    //   151: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   154: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   157: invokevirtual 801	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
+    //   160: aload_0
+    //   161: aload_1
+    //   162: invokevirtual 804	com/tencent/kingkong/database/SQLiteConnection:explainQueryPlan	(Ljava/lang/String;)Ljava/lang/String;
+    //   165: astore_2
+    //   166: aload_2
+    //   167: ifnull +23 -> 190
+    //   170: ldc 30
+    //   172: ldc_w 806
+    //   175: iconst_2
+    //   176: anewarray 4	java/lang/Object
+    //   179: dup
+    //   180: iconst_0
+    //   181: aload_1
+    //   182: aastore
+    //   183: dup
+    //   184: iconst_1
+    //   185: aload_2
+    //   186: aastore
+    //   187: invokestatic 658	com/tencent/kingkong/support/Log:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   190: iload 5
+    //   192: ireturn
+    //   193: astore_2
+    //   194: aload_0
+    //   195: aload_3
+    //   196: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   199: aload_2
+    //   200: athrow
+    //   201: astore_2
+    //   202: iconst_0
+    //   203: istore 5
+    //   205: iload 5
+    //   207: istore 6
+    //   209: iload 5
+    //   211: istore 4
+    //   213: aload_0
+    //   214: aload 8
+    //   216: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   219: iload 5
+    //   221: istore 6
+    //   223: iload 5
+    //   225: istore 4
+    //   227: aload_2
+    //   228: athrow
+    //   229: astore_2
+    //   230: iload 6
+    //   232: istore 4
+    //   234: aload_2
+    //   235: instanceof 506
+    //   238: ifne +14 -> 252
+    //   241: iload 6
+    //   243: istore 4
+    //   245: aload_2
+    //   246: instanceof 767
+    //   249: ifeq +25 -> 274
+    //   252: iload 6
+    //   254: istore 4
+    //   256: aload_0
+    //   257: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
+    //   260: ifnull +14 -> 274
+    //   263: iload 6
+    //   265: istore 4
+    //   267: aload_0
+    //   268: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
+    //   271: invokevirtual 772	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
+    //   274: iload 6
+    //   276: istore 4
+    //   278: aload_0
+    //   279: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   282: iload 7
+    //   284: aload_2
+    //   285: invokevirtual 776	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
+    //   288: iload 6
+    //   290: istore 4
+    //   292: aload_2
+    //   293: athrow
+    //   294: astore_2
+    //   295: aload_0
+    //   296: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   299: aload_0
+    //   300: getfield 116	com/tencent/kingkong/database/SQLiteConnection:mConfiguration	Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;
+    //   303: getfield 338	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:path	Ljava/lang/String;
+    //   306: aload_0
+    //   307: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
+    //   310: iload 7
+    //   312: invokevirtual 796	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
+    //   315: ifeq +60 -> 375
+    //   318: aload_0
+    //   319: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   322: iload 7
+    //   324: new 231	java/lang/StringBuilder
+    //   327: dup
+    //   328: ldc_w 798
+    //   331: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   334: iload 4
+    //   336: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   339: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   342: invokevirtual 801	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
+    //   345: aload_0
+    //   346: aload_1
+    //   347: invokevirtual 804	com/tencent/kingkong/database/SQLiteConnection:explainQueryPlan	(Ljava/lang/String;)Ljava/lang/String;
+    //   350: astore_3
+    //   351: aload_3
+    //   352: ifnull +23 -> 375
+    //   355: ldc 30
+    //   357: ldc_w 806
+    //   360: iconst_2
+    //   361: anewarray 4	java/lang/Object
+    //   364: dup
+    //   365: iconst_0
+    //   366: aload_1
+    //   367: aastore
+    //   368: dup
+    //   369: iconst_1
+    //   370: aload_3
+    //   371: aastore
+    //   372: invokestatic 658	com/tencent/kingkong/support/Log:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   375: aload_2
+    //   376: athrow
+    //   377: astore_2
+    //   378: iconst_0
+    //   379: istore 4
+    //   381: goto -86 -> 295
+    //   384: astore_2
+    //   385: iconst_0
+    //   386: istore 6
+    //   388: goto -158 -> 230
+    //   391: astore_2
+    //   392: goto -187 -> 205
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	363	0	this	SQLiteConnection
-    //   0	363	1	paramString	String
-    //   0	363	2	paramArrayOfObject	Object[]
-    //   0	363	3	paramCancellationSignal	CancellationSignal
-    //   47	258	4	i	int
-    //   51	300	5	j	int
-    //   16	224	6	k	int
-    //   22	194	7	m	int
-    //   19	45	8	n	int
-    //   43	296	9	i1	int
-    //   36	32	10	localOperation	Operation
+    //   0	395	0	this	SQLiteConnection
+    //   0	395	1	paramString	String
+    //   0	395	2	paramArrayOfObject	Object[]
+    //   0	395	3	paramCancellationSignal	CancellationSignal
+    //   102	278	4	i	int
+    //   89	135	5	j	int
+    //   98	289	6	k	int
+    //   34	289	7	m	int
+    //   41	174	8	localPreparedStatement	PreparedStatement
+    //   27	17	9	localOperation	Operation
     // Exception table:
     //   from	to	target	type
-    //   113	126	205	finally
-    //   80	85	221	finally
-    //   89	95	221	finally
-    //   99	104	221	finally
-    //   108	113	221	finally
-    //   134	139	221	finally
-    //   210	215	221	finally
-    //   219	221	221	finally
-    //   53	59	245	java/lang/RuntimeException
-    //   67	76	245	java/lang/RuntimeException
-    //   147	152	245	java/lang/RuntimeException
-    //   230	235	245	java/lang/RuntimeException
-    //   243	245	245	java/lang/RuntimeException
-    //   53	59	310	finally
-    //   67	76	310	finally
-    //   147	152	310	finally
-    //   230	235	310	finally
-    //   243	245	310	finally
-    //   250	257	310	finally
-    //   261	268	310	finally
-    //   272	279	310	finally
-    //   283	290	310	finally
-    //   294	304	310	finally
-    //   308	310	310	finally
+    //   77	91	193	finally
+    //   53	77	201	finally
+    //   194	201	201	finally
+    //   104	110	229	java/lang/RuntimeException
+    //   213	219	229	java/lang/RuntimeException
+    //   227	229	229	java/lang/RuntimeException
+    //   104	110	294	finally
+    //   213	219	294	finally
+    //   227	229	294	finally
+    //   234	241	294	finally
+    //   245	252	294	finally
+    //   256	263	294	finally
+    //   267	274	294	finally
+    //   278	288	294	finally
+    //   292	294	294	finally
+    //   36	53	377	finally
+    //   36	53	384	java/lang/RuntimeException
+    //   91	96	391	finally
   }
   
   /* Error */
@@ -1433,18 +1448,18 @@ public final class SQLiteConnection
     //   1: istore_3
     //   2: aload_1
     //   3: ifnonnull +14 -> 17
-    //   6: new 740	java/lang/IllegalArgumentException
+    //   6: new 742	java/lang/IllegalArgumentException
     //   9: dup
-    //   10: ldc_w 742
-    //   13: invokespecial 743	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
+    //   10: ldc_w 744
+    //   13: invokespecial 745	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
     //   16: athrow
     //   17: aload 6
     //   19: ifnull +8 -> 27
     //   22: aload 6
-    //   24: invokevirtual 803	com/tencent/mm/dbsupport/newcursor/b:acquireReference	()V
+    //   24: invokevirtual 810	com/tencent/mm/dbsupport/newcursor/b:acquireReference	()V
     //   27: aload_0
     //   28: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   31: ldc_w 804
+    //   31: ldc_w 811
     //   34: aload_1
     //   35: aload_2
     //   36: invokevirtual 325	com/tencent/kingkong/database/SQLiteConnection$OperationLog:beginOperation	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
@@ -1454,28 +1469,28 @@ public final class SQLiteConnection
     //   46: istore 15
     //   48: aload_0
     //   49: aload_1
-    //   50: invokespecial 746	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
+    //   50: invokespecial 748	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
     //   53: astore 18
     //   55: aload 19
     //   57: aload 18
-    //   59: getfield 441	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
-    //   62: invokevirtual 749	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
+    //   59: getfield 443	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
+    //   62: invokevirtual 751	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
     //   65: aload_0
     //   66: aload 18
-    //   68: invokespecial 751	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   68: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   71: aload_0
     //   72: aload 18
     //   74: aload_2
-    //   75: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
+    //   75: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
     //   78: aload_0
     //   79: aload 18
-    //   81: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   81: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   84: aload_0
     //   85: aload 6
-    //   87: putfield 620	com/tencent/kingkong/database/SQLiteConnection:currentFillingWindow	Lcom/tencent/mm/dbsupport/newcursor/b;
+    //   87: putfield 622	com/tencent/kingkong/database/SQLiteConnection:currentFillingWindow	Lcom/tencent/mm/dbsupport/newcursor/b;
     //   90: aload_0
     //   91: aload 7
-    //   93: putfield 660	com/tencent/kingkong/database/SQLiteConnection:currentFillingDbCursor	Lcom/tencent/mm/dbsupport/newcursor/d;
+    //   93: putfield 662	com/tencent/kingkong/database/SQLiteConnection:currentFillingDbCursor	Lcom/tencent/mm/dbsupport/newcursor/d;
     //   96: aload_0
     //   97: aload_0
     //   98: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
@@ -1483,7 +1498,7 @@ public final class SQLiteConnection
     //   103: getfield 255	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mStatementPtr	I
     //   106: iload 4
     //   108: iload 5
-    //   110: invokespecial 806	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForCursorDataWindow	(IIII)J
+    //   110: invokespecial 813	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForCursorDataWindow	(IIII)J
     //   113: lstore 16
     //   115: lload 16
     //   117: bipush 32
@@ -1498,14 +1513,14 @@ public final class SQLiteConnection
     //   131: aload 6
     //   133: ifnull +23 -> 156
     //   136: aload 6
-    //   138: getfield 630	com/tencent/mm/dbsupport/newcursor/b:bkJ	Landroid/util/SparseArray;
-    //   141: invokevirtual 633	android/util/SparseArray:size	()I
+    //   138: getfield 632	com/tencent/mm/dbsupport/newcursor/b:bvm	Landroid/util/SparseArray;
+    //   141: invokevirtual 635	android/util/SparseArray:size	()I
     //   144: istore 9
     //   146: iload 9
     //   148: istore_3
     //   149: aload 6
     //   151: iload 11
-    //   153: putfield 809	com/tencent/mm/dbsupport/newcursor/b:mStartPos	I
+    //   153: putfield 816	com/tencent/mm/dbsupport/newcursor/b:mStartPos	I
     //   156: iload 9
     //   158: istore 12
     //   160: iload 10
@@ -1520,7 +1535,7 @@ public final class SQLiteConnection
     //   177: istore 8
     //   179: aload_0
     //   180: aload 18
-    //   182: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   182: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   185: iload 9
     //   187: istore 12
     //   189: iload 10
@@ -1535,7 +1550,7 @@ public final class SQLiteConnection
     //   206: istore 8
     //   208: aload_0
     //   209: aconst_null
-    //   210: putfield 620	com/tencent/kingkong/database/SQLiteConnection:currentFillingWindow	Lcom/tencent/mm/dbsupport/newcursor/b;
+    //   210: putfield 622	com/tencent/kingkong/database/SQLiteConnection:currentFillingWindow	Lcom/tencent/mm/dbsupport/newcursor/b;
     //   213: iload 9
     //   215: istore 12
     //   217: iload 10
@@ -1550,7 +1565,7 @@ public final class SQLiteConnection
     //   234: istore 8
     //   236: aload_0
     //   237: aconst_null
-    //   238: putfield 660	com/tencent/kingkong/database/SQLiteConnection:currentFillingDbCursor	Lcom/tencent/mm/dbsupport/newcursor/d;
+    //   238: putfield 662	com/tencent/kingkong/database/SQLiteConnection:currentFillingDbCursor	Lcom/tencent/mm/dbsupport/newcursor/d;
     //   241: aload_0
     //   242: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   245: aload_0
@@ -1559,280 +1574,320 @@ public final class SQLiteConnection
     //   252: aload_0
     //   253: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
     //   256: iload 15
-    //   258: invokevirtual 794	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
-    //   261: ifeq +74 -> 335
+    //   258: invokevirtual 796	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
+    //   261: ifeq +104 -> 365
     //   264: aload_0
     //   265: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   268: iload 15
     //   270: new 231	java/lang/StringBuilder
     //   273: dup
-    //   274: ldc_w 811
+    //   274: ldc_w 818
     //   277: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   280: aload 6
-    //   282: invokevirtual 814	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-    //   285: ldc_w 816
+    //   282: invokevirtual 821	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    //   285: ldc_w 823
     //   288: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   291: iload 4
     //   293: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   296: ldc_w 818
+    //   296: ldc_w 825
     //   299: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   302: iload 11
     //   304: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   307: ldc_w 820
+    //   307: ldc_w 827
     //   310: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   313: iload 9
     //   315: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   318: ldc_w 822
+    //   318: ldc_w 829
     //   321: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   324: iload 10
     //   326: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
     //   329: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   332: invokevirtual 799	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
-    //   335: aload 6
-    //   337: ifnull +8 -> 345
-    //   340: aload 6
-    //   342: invokevirtual 825	com/tencent/mm/dbsupport/newcursor/b:releaseReference	()V
-    //   345: iload 10
-    //   347: ireturn
-    //   348: astore_1
-    //   349: iconst_m1
-    //   350: istore 10
-    //   352: iconst_m1
-    //   353: istore 11
-    //   355: iload_3
-    //   356: istore 9
-    //   358: iload 9
-    //   360: istore 12
-    //   362: iload 10
-    //   364: istore 13
-    //   366: iload 11
-    //   368: istore 14
-    //   370: iload 9
-    //   372: istore_3
-    //   373: iload 10
-    //   375: istore 5
-    //   377: iload 11
-    //   379: istore 8
-    //   381: aload_0
-    //   382: aload 18
-    //   384: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
-    //   387: iload 9
-    //   389: istore 12
-    //   391: iload 10
-    //   393: istore 13
-    //   395: iload 11
-    //   397: istore 14
-    //   399: iload 9
-    //   401: istore_3
-    //   402: iload 10
-    //   404: istore 5
-    //   406: iload 11
-    //   408: istore 8
-    //   410: aload_0
-    //   411: aconst_null
-    //   412: putfield 620	com/tencent/kingkong/database/SQLiteConnection:currentFillingWindow	Lcom/tencent/mm/dbsupport/newcursor/b;
-    //   415: iload 9
-    //   417: istore 12
-    //   419: iload 10
-    //   421: istore 13
-    //   423: iload 11
-    //   425: istore 14
-    //   427: iload 9
-    //   429: istore_3
-    //   430: iload 10
-    //   432: istore 5
-    //   434: iload 11
-    //   436: istore 8
-    //   438: aload_0
-    //   439: aconst_null
-    //   440: putfield 660	com/tencent/kingkong/database/SQLiteConnection:currentFillingDbCursor	Lcom/tencent/mm/dbsupport/newcursor/d;
-    //   443: iload 9
-    //   445: istore 12
-    //   447: iload 10
-    //   449: istore 13
-    //   451: iload 11
-    //   453: istore 14
-    //   455: iload 9
-    //   457: istore_3
-    //   458: iload 10
-    //   460: istore 5
-    //   462: iload 11
-    //   464: istore 8
-    //   466: aload_1
-    //   467: athrow
-    //   468: astore_1
-    //   469: iload 12
-    //   471: istore_3
-    //   472: iload 13
-    //   474: istore 5
-    //   476: iload 14
-    //   478: istore 8
-    //   480: aload_1
-    //   481: instanceof 504
-    //   484: ifne +21 -> 505
-    //   487: iload 12
-    //   489: istore_3
-    //   490: iload 13
-    //   492: istore 5
-    //   494: iload 14
-    //   496: istore 8
-    //   498: aload_1
-    //   499: instanceof 765
-    //   502: ifeq +39 -> 541
-    //   505: iload 12
-    //   507: istore_3
-    //   508: iload 13
-    //   510: istore 5
-    //   512: iload 14
-    //   514: istore 8
-    //   516: aload_0
-    //   517: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   520: ifnull +21 -> 541
-    //   523: iload 12
-    //   525: istore_3
-    //   526: iload 13
-    //   528: istore 5
-    //   530: iload 14
-    //   532: istore 8
-    //   534: aload_0
-    //   535: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   538: invokevirtual 770	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
-    //   541: iload 12
-    //   543: istore_3
-    //   544: iload 13
-    //   546: istore 5
-    //   548: iload 14
-    //   550: istore 8
-    //   552: aload_0
-    //   553: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   556: iload 15
-    //   558: aload_1
-    //   559: invokevirtual 774	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
-    //   562: iload 12
-    //   564: istore_3
-    //   565: iload 13
-    //   567: istore 5
-    //   569: iload 14
-    //   571: istore 8
-    //   573: aload_1
-    //   574: athrow
-    //   575: astore_1
-    //   576: aload_0
-    //   577: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   580: aload_0
-    //   581: getfield 116	com/tencent/kingkong/database/SQLiteConnection:mConfiguration	Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;
-    //   584: getfield 338	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:path	Ljava/lang/String;
-    //   587: aload_0
-    //   588: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
-    //   591: iload 15
-    //   593: invokevirtual 794	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
-    //   596: ifeq +73 -> 669
-    //   599: aload_0
-    //   600: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   603: iload 15
-    //   605: new 231	java/lang/StringBuilder
-    //   608: dup
-    //   609: ldc_w 811
-    //   612: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   615: aload 6
-    //   617: invokevirtual 814	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-    //   620: ldc_w 816
-    //   623: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   626: iload 4
-    //   628: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   631: ldc_w 818
-    //   634: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   637: iload 8
-    //   639: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   642: ldc_w 820
-    //   645: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   648: iload_3
-    //   649: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   652: ldc_w 822
-    //   655: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   658: iload 5
-    //   660: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   663: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   666: invokevirtual 799	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
-    //   669: aload_1
-    //   670: athrow
-    //   671: astore_1
-    //   672: aload 6
-    //   674: ifnull +8 -> 682
-    //   677: aload 6
-    //   679: invokevirtual 825	com/tencent/mm/dbsupport/newcursor/b:releaseReference	()V
-    //   682: aload_1
-    //   683: athrow
-    //   684: astore_1
-    //   685: iconst_m1
-    //   686: istore 5
-    //   688: iconst_m1
-    //   689: istore 8
-    //   691: goto -115 -> 576
-    //   694: astore_1
-    //   695: iconst_m1
-    //   696: istore 13
-    //   698: iconst_m1
-    //   699: istore 14
-    //   701: iload_3
-    //   702: istore 12
-    //   704: goto -235 -> 469
-    //   707: astore_1
-    //   708: iload_3
-    //   709: istore 9
-    //   711: goto -353 -> 358
+    //   332: invokevirtual 801	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
+    //   335: aload_0
+    //   336: aload_1
+    //   337: invokevirtual 804	com/tencent/kingkong/database/SQLiteConnection:explainQueryPlan	(Ljava/lang/String;)Ljava/lang/String;
+    //   340: astore_2
+    //   341: aload_2
+    //   342: ifnull +23 -> 365
+    //   345: ldc 30
+    //   347: ldc_w 806
+    //   350: iconst_2
+    //   351: anewarray 4	java/lang/Object
+    //   354: dup
+    //   355: iconst_0
+    //   356: aload_1
+    //   357: aastore
+    //   358: dup
+    //   359: iconst_1
+    //   360: aload_2
+    //   361: aastore
+    //   362: invokestatic 658	com/tencent/kingkong/support/Log:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   365: aload 6
+    //   367: ifnull +8 -> 375
+    //   370: aload 6
+    //   372: invokevirtual 832	com/tencent/mm/dbsupport/newcursor/b:releaseReference	()V
+    //   375: iload 10
+    //   377: ireturn
+    //   378: astore_2
+    //   379: iconst_m1
+    //   380: istore 10
+    //   382: iconst_m1
+    //   383: istore 11
+    //   385: iload_3
+    //   386: istore 9
+    //   388: iload 9
+    //   390: istore 12
+    //   392: iload 10
+    //   394: istore 13
+    //   396: iload 11
+    //   398: istore 14
+    //   400: iload 9
+    //   402: istore_3
+    //   403: iload 10
+    //   405: istore 5
+    //   407: iload 11
+    //   409: istore 8
+    //   411: aload_0
+    //   412: aload 18
+    //   414: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   417: iload 9
+    //   419: istore 12
+    //   421: iload 10
+    //   423: istore 13
+    //   425: iload 11
+    //   427: istore 14
+    //   429: iload 9
+    //   431: istore_3
+    //   432: iload 10
+    //   434: istore 5
+    //   436: iload 11
+    //   438: istore 8
+    //   440: aload_0
+    //   441: aconst_null
+    //   442: putfield 622	com/tencent/kingkong/database/SQLiteConnection:currentFillingWindow	Lcom/tencent/mm/dbsupport/newcursor/b;
+    //   445: iload 9
+    //   447: istore 12
+    //   449: iload 10
+    //   451: istore 13
+    //   453: iload 11
+    //   455: istore 14
+    //   457: iload 9
+    //   459: istore_3
+    //   460: iload 10
+    //   462: istore 5
+    //   464: iload 11
+    //   466: istore 8
+    //   468: aload_0
+    //   469: aconst_null
+    //   470: putfield 662	com/tencent/kingkong/database/SQLiteConnection:currentFillingDbCursor	Lcom/tencent/mm/dbsupport/newcursor/d;
+    //   473: iload 9
+    //   475: istore 12
+    //   477: iload 10
+    //   479: istore 13
+    //   481: iload 11
+    //   483: istore 14
+    //   485: iload 9
+    //   487: istore_3
+    //   488: iload 10
+    //   490: istore 5
+    //   492: iload 11
+    //   494: istore 8
+    //   496: aload_2
+    //   497: athrow
+    //   498: astore_2
+    //   499: iload 12
+    //   501: istore_3
+    //   502: iload 13
+    //   504: istore 5
+    //   506: iload 14
+    //   508: istore 8
+    //   510: aload_2
+    //   511: instanceof 506
+    //   514: ifne +21 -> 535
+    //   517: iload 12
+    //   519: istore_3
+    //   520: iload 13
+    //   522: istore 5
+    //   524: iload 14
+    //   526: istore 8
+    //   528: aload_2
+    //   529: instanceof 767
+    //   532: ifeq +39 -> 571
+    //   535: iload 12
+    //   537: istore_3
+    //   538: iload 13
+    //   540: istore 5
+    //   542: iload 14
+    //   544: istore 8
+    //   546: aload_0
+    //   547: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
+    //   550: ifnull +21 -> 571
+    //   553: iload 12
+    //   555: istore_3
+    //   556: iload 13
+    //   558: istore 5
+    //   560: iload 14
+    //   562: istore 8
+    //   564: aload_0
+    //   565: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
+    //   568: invokevirtual 772	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
+    //   571: iload 12
+    //   573: istore_3
+    //   574: iload 13
+    //   576: istore 5
+    //   578: iload 14
+    //   580: istore 8
+    //   582: aload_0
+    //   583: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   586: iload 15
+    //   588: aload_2
+    //   589: invokevirtual 776	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
+    //   592: iload 12
+    //   594: istore_3
+    //   595: iload 13
+    //   597: istore 5
+    //   599: iload 14
+    //   601: istore 8
+    //   603: aload_2
+    //   604: athrow
+    //   605: astore_2
+    //   606: aload_0
+    //   607: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   610: aload_0
+    //   611: getfield 116	com/tencent/kingkong/database/SQLiteConnection:mConfiguration	Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;
+    //   614: getfield 338	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:path	Ljava/lang/String;
+    //   617: aload_0
+    //   618: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
+    //   621: iload 15
+    //   623: invokevirtual 796	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
+    //   626: ifeq +106 -> 732
+    //   629: aload_0
+    //   630: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   633: iload 15
+    //   635: new 231	java/lang/StringBuilder
+    //   638: dup
+    //   639: ldc_w 818
+    //   642: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   645: aload 6
+    //   647: invokevirtual 821	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    //   650: ldc_w 823
+    //   653: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   656: iload 4
+    //   658: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   661: ldc_w 825
+    //   664: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   667: iload 8
+    //   669: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   672: ldc_w 827
+    //   675: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   678: iload_3
+    //   679: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   682: ldc_w 829
+    //   685: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   688: iload 5
+    //   690: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   693: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   696: invokevirtual 801	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
+    //   699: aload_0
+    //   700: aload_1
+    //   701: invokevirtual 804	com/tencent/kingkong/database/SQLiteConnection:explainQueryPlan	(Ljava/lang/String;)Ljava/lang/String;
+    //   704: astore 7
+    //   706: aload 7
+    //   708: ifnull +24 -> 732
+    //   711: ldc 30
+    //   713: ldc_w 806
+    //   716: iconst_2
+    //   717: anewarray 4	java/lang/Object
+    //   720: dup
+    //   721: iconst_0
+    //   722: aload_1
+    //   723: aastore
+    //   724: dup
+    //   725: iconst_1
+    //   726: aload 7
+    //   728: aastore
+    //   729: invokestatic 658	com/tencent/kingkong/support/Log:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   732: aload_2
+    //   733: athrow
+    //   734: astore_1
+    //   735: aload 6
+    //   737: ifnull +8 -> 745
+    //   740: aload 6
+    //   742: invokevirtual 832	com/tencent/mm/dbsupport/newcursor/b:releaseReference	()V
+    //   745: aload_1
+    //   746: athrow
+    //   747: astore_2
+    //   748: iconst_m1
+    //   749: istore 5
+    //   751: iconst_m1
+    //   752: istore 8
+    //   754: goto -148 -> 606
+    //   757: astore_2
+    //   758: iconst_m1
+    //   759: istore 13
+    //   761: iconst_m1
+    //   762: istore 14
+    //   764: iload_3
+    //   765: istore 12
+    //   767: goto -268 -> 499
+    //   770: astore_2
+    //   771: iload_3
+    //   772: istore 9
+    //   774: goto -386 -> 388
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	714	0	this	SQLiteConnection
-    //   0	714	1	paramString	String
-    //   0	714	2	paramArrayOfObject	Object[]
-    //   0	714	3	paramInt1	int
-    //   0	714	4	paramInt2	int
-    //   0	714	5	paramInt3	int
-    //   0	714	6	paramb	b
-    //   0	714	7	paramd	d
-    //   177	513	8	i	int
-    //   129	581	9	j	int
-    //   126	333	10	k	int
-    //   121	342	11	m	int
-    //   158	545	12	n	int
-    //   162	535	13	i1	int
-    //   166	534	14	i2	int
-    //   46	558	15	i3	int
+    //   0	777	0	this	SQLiteConnection
+    //   0	777	1	paramString	String
+    //   0	777	2	paramArrayOfObject	Object[]
+    //   0	777	3	paramInt1	int
+    //   0	777	4	paramInt2	int
+    //   0	777	5	paramInt3	int
+    //   0	777	6	paramb	b
+    //   0	777	7	paramd	d
+    //   177	576	8	i	int
+    //   129	644	9	j	int
+    //   126	363	10	k	int
+    //   121	372	11	m	int
+    //   158	608	12	n	int
+    //   162	598	13	i1	int
+    //   166	597	14	i2	int
+    //   46	588	15	i3	int
     //   113	11	16	l	long
-    //   53	330	18	localPreparedStatement	PreparedStatement
+    //   53	360	18	localPreparedStatement	PreparedStatement
     //   39	17	19	localOperation	Operation
     // Exception table:
     //   from	to	target	type
-    //   84	115	348	finally
-    //   179	185	468	java/lang/RuntimeException
-    //   208	213	468	java/lang/RuntimeException
-    //   236	241	468	java/lang/RuntimeException
-    //   381	387	468	java/lang/RuntimeException
-    //   410	415	468	java/lang/RuntimeException
-    //   438	443	468	java/lang/RuntimeException
-    //   466	468	468	java/lang/RuntimeException
-    //   179	185	575	finally
-    //   208	213	575	finally
-    //   236	241	575	finally
-    //   381	387	575	finally
-    //   410	415	575	finally
-    //   438	443	575	finally
-    //   466	468	575	finally
-    //   480	487	575	finally
-    //   498	505	575	finally
-    //   516	523	575	finally
-    //   534	541	575	finally
-    //   552	562	575	finally
-    //   573	575	575	finally
-    //   27	48	671	finally
-    //   241	335	671	finally
-    //   576	669	671	finally
-    //   669	671	671	finally
-    //   48	84	684	finally
-    //   48	84	694	java/lang/RuntimeException
-    //   136	146	707	finally
-    //   149	156	707	finally
+    //   84	115	378	finally
+    //   179	185	498	java/lang/RuntimeException
+    //   208	213	498	java/lang/RuntimeException
+    //   236	241	498	java/lang/RuntimeException
+    //   411	417	498	java/lang/RuntimeException
+    //   440	445	498	java/lang/RuntimeException
+    //   468	473	498	java/lang/RuntimeException
+    //   496	498	498	java/lang/RuntimeException
+    //   179	185	605	finally
+    //   208	213	605	finally
+    //   236	241	605	finally
+    //   411	417	605	finally
+    //   440	445	605	finally
+    //   468	473	605	finally
+    //   496	498	605	finally
+    //   510	517	605	finally
+    //   528	535	605	finally
+    //   546	553	605	finally
+    //   564	571	605	finally
+    //   582	592	605	finally
+    //   603	605	605	finally
+    //   27	48	734	finally
+    //   241	341	734	finally
+    //   345	365	734	finally
+    //   606	706	734	finally
+    //   711	732	734	finally
+    //   732	734	734	finally
+    //   48	84	747	finally
+    //   48	84	757	java/lang/RuntimeException
+    //   136	146	770	finally
+    //   149	156	770	finally
   }
   
   /* Error */
@@ -1841,20 +1896,20 @@ public final class SQLiteConnection
     // Byte code:
     //   0: aload_1
     //   1: ifnonnull +14 -> 15
-    //   4: new 740	java/lang/IllegalArgumentException
+    //   4: new 742	java/lang/IllegalArgumentException
     //   7: dup
-    //   8: ldc_w 742
-    //   11: invokespecial 743	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
+    //   8: ldc_w 744
+    //   11: invokespecial 745	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
     //   14: athrow
     //   15: aload_3
     //   16: ifnonnull +14 -> 30
-    //   19: new 740	java/lang/IllegalArgumentException
+    //   19: new 742	java/lang/IllegalArgumentException
     //   22: dup
-    //   23: ldc_w 827
-    //   26: invokespecial 743	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
+    //   23: ldc_w 834
+    //   26: invokespecial 745	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
     //   29: athrow
     //   30: aload_3
-    //   31: invokevirtual 828	com/tencent/kingkong/CursorWindow:acquireReference	()V
+    //   31: invokevirtual 835	com/tencent/kingkong/CursorWindow:acquireReference	()V
     //   34: iconst_m1
     //   35: istore 12
     //   37: iconst_m1
@@ -1863,7 +1918,7 @@ public final class SQLiteConnection
     //   41: istore 16
     //   43: aload_0
     //   44: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   47: ldc_w 804
+    //   47: ldc_w 811
     //   50: aload_1
     //   51: aload_2
     //   52: invokevirtual 325	com/tencent/kingkong/database/SQLiteConnection$OperationLog:beginOperation	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
@@ -1885,7 +1940,7 @@ public final class SQLiteConnection
     //   86: istore 10
     //   88: aload_0
     //   89: aload_1
-    //   90: invokespecial 746	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
+    //   90: invokespecial 748	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
     //   93: astore 20
     //   95: iload 16
     //   97: istore 13
@@ -1901,31 +1956,31 @@ public final class SQLiteConnection
     //   117: istore 10
     //   119: aload 21
     //   121: aload 20
-    //   123: getfield 441	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
-    //   126: invokevirtual 749	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
+    //   123: getfield 443	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
+    //   126: invokevirtual 751	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
     //   129: aload_0
     //   130: aload 20
-    //   132: invokespecial 751	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   132: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   135: aload_0
     //   136: aload 20
     //   138: aload_2
-    //   139: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
+    //   139: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
     //   142: aload_0
     //   143: aload 20
-    //   145: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   145: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   148: aload_0
     //   149: aload 7
-    //   151: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   151: invokespecial 759	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   154: aload_0
     //   155: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
     //   158: aload 20
     //   160: getfield 255	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mStatementPtr	I
     //   163: aload_3
-    //   164: getfield 831	com/tencent/kingkong/CursorWindow:mWindowPtr	I
+    //   164: getfield 838	com/tencent/kingkong/CursorWindow:mWindowPtr	I
     //   167: iload 4
     //   169: iload 5
     //   171: iload 6
-    //   173: invokestatic 833	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForCursorWindow	(IIIIIZ)J
+    //   173: invokestatic 840	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForCursorWindow	(IIIIIZ)J
     //   176: lstore 18
     //   178: lload 18
     //   180: bipush 32
@@ -1936,11 +1991,11 @@ public final class SQLiteConnection
     //   188: l2i
     //   189: istore 9
     //   191: aload_3
-    //   192: invokevirtual 688	com/tencent/kingkong/CursorWindow:getNumRows	()I
+    //   192: invokevirtual 690	com/tencent/kingkong/CursorWindow:getNumRows	()I
     //   195: istore 5
     //   197: aload_3
     //   198: iload 8
-    //   200: invokevirtual 836	com/tencent/kingkong/CursorWindow:setStartPosition	(I)V
+    //   200: invokevirtual 843	com/tencent/kingkong/CursorWindow:setStartPosition	(I)V
     //   203: iload 5
     //   205: istore 12
     //   207: iload 9
@@ -1949,10 +2004,10 @@ public final class SQLiteConnection
     //   213: istore 10
     //   215: aload_0
     //   216: aload 7
-    //   218: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   218: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   221: aload_0
     //   222: aload 20
-    //   224: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   224: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   227: aload_0
     //   228: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   231: aload_0
@@ -1961,83 +2016,87 @@ public final class SQLiteConnection
     //   238: aload_0
     //   239: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
     //   242: iload 17
-    //   244: invokevirtual 794	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
-    //   247: ifeq +73 -> 320
+    //   244: invokevirtual 796	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
+    //   247: ifeq +103 -> 350
     //   250: aload_0
     //   251: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   254: iload 17
     //   256: new 231	java/lang/StringBuilder
     //   259: dup
-    //   260: ldc_w 811
+    //   260: ldc_w 818
     //   263: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   266: aload_3
-    //   267: invokevirtual 814	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-    //   270: ldc_w 816
+    //   267: invokevirtual 821	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    //   270: ldc_w 823
     //   273: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   276: iload 4
     //   278: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   281: ldc_w 818
+    //   281: ldc_w 825
     //   284: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   287: iload 8
     //   289: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   292: ldc_w 820
+    //   292: ldc_w 827
     //   295: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   298: iload 5
     //   300: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   303: ldc_w 822
+    //   303: ldc_w 829
     //   306: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   309: iload 9
     //   311: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
     //   314: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   317: invokevirtual 799	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
-    //   320: aload_3
-    //   321: invokevirtual 837	com/tencent/kingkong/CursorWindow:releaseReference	()V
-    //   324: iload 9
-    //   326: ireturn
-    //   327: astore_1
-    //   328: iconst_m1
-    //   329: istore 5
-    //   331: iconst_m1
-    //   332: istore 9
-    //   334: iconst_m1
-    //   335: istore 8
-    //   337: iload 5
-    //   339: istore 12
-    //   341: iload 9
-    //   343: istore 11
-    //   345: iload 8
-    //   347: istore 10
-    //   349: aload_0
-    //   350: aload 7
-    //   352: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
-    //   355: iload 5
-    //   357: istore 12
-    //   359: iload 9
-    //   361: istore 11
-    //   363: iload 8
-    //   365: istore 10
-    //   367: aload_1
-    //   368: athrow
-    //   369: astore_1
-    //   370: iload 12
-    //   372: istore 5
-    //   374: iload 10
-    //   376: istore 12
-    //   378: iload 5
-    //   380: istore 13
-    //   382: iload 11
-    //   384: istore 14
-    //   386: iload 12
-    //   388: istore 15
-    //   390: iload 5
-    //   392: istore 8
-    //   394: iload 11
-    //   396: istore 9
-    //   398: iload 12
-    //   400: istore 10
-    //   402: aload_0
-    //   403: aload 20
-    //   405: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   317: invokevirtual 801	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
+    //   320: aload_0
+    //   321: aload_1
+    //   322: invokevirtual 804	com/tencent/kingkong/database/SQLiteConnection:explainQueryPlan	(Ljava/lang/String;)Ljava/lang/String;
+    //   325: astore_2
+    //   326: aload_2
+    //   327: ifnull +23 -> 350
+    //   330: ldc 30
+    //   332: ldc_w 806
+    //   335: iconst_2
+    //   336: anewarray 4	java/lang/Object
+    //   339: dup
+    //   340: iconst_0
+    //   341: aload_1
+    //   342: aastore
+    //   343: dup
+    //   344: iconst_1
+    //   345: aload_2
+    //   346: aastore
+    //   347: invokestatic 658	com/tencent/kingkong/support/Log:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   350: aload_3
+    //   351: invokevirtual 844	com/tencent/kingkong/CursorWindow:releaseReference	()V
+    //   354: iload 9
+    //   356: ireturn
+    //   357: astore_2
+    //   358: iconst_m1
+    //   359: istore 5
+    //   361: iconst_m1
+    //   362: istore 9
+    //   364: iconst_m1
+    //   365: istore 8
+    //   367: iload 5
+    //   369: istore 12
+    //   371: iload 9
+    //   373: istore 11
+    //   375: iload 8
+    //   377: istore 10
+    //   379: aload_0
+    //   380: aload 7
+    //   382: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   385: iload 5
+    //   387: istore 12
+    //   389: iload 9
+    //   391: istore 11
+    //   393: iload 8
+    //   395: istore 10
+    //   397: aload_2
+    //   398: athrow
+    //   399: astore_2
+    //   400: iload 12
+    //   402: istore 5
+    //   404: iload 10
+    //   406: istore 12
     //   408: iload 5
     //   410: istore 13
     //   412: iload 11
@@ -2050,185 +2109,221 @@ public final class SQLiteConnection
     //   426: istore 9
     //   428: iload 12
     //   430: istore 10
-    //   432: aload_1
-    //   433: athrow
-    //   434: astore_1
-    //   435: iload 13
-    //   437: istore 8
-    //   439: iload 14
-    //   441: istore 9
-    //   443: iload 15
-    //   445: istore 10
-    //   447: aload_1
-    //   448: instanceof 504
-    //   451: ifne +22 -> 473
-    //   454: iload 13
-    //   456: istore 8
-    //   458: iload 14
-    //   460: istore 9
-    //   462: iload 15
-    //   464: istore 10
-    //   466: aload_1
-    //   467: instanceof 765
-    //   470: ifeq +41 -> 511
-    //   473: iload 13
-    //   475: istore 8
-    //   477: iload 14
-    //   479: istore 9
-    //   481: iload 15
-    //   483: istore 10
-    //   485: aload_0
-    //   486: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   489: ifnull +22 -> 511
-    //   492: iload 13
-    //   494: istore 8
-    //   496: iload 14
-    //   498: istore 9
-    //   500: iload 15
-    //   502: istore 10
-    //   504: aload_0
-    //   505: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   508: invokevirtual 770	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
-    //   511: iload 13
-    //   513: istore 8
-    //   515: iload 14
-    //   517: istore 9
-    //   519: iload 15
-    //   521: istore 10
-    //   523: aload_0
-    //   524: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   527: iload 17
-    //   529: aload_1
-    //   530: invokevirtual 774	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
-    //   533: iload 13
-    //   535: istore 8
-    //   537: iload 14
-    //   539: istore 9
-    //   541: iload 15
-    //   543: istore 10
-    //   545: aload_1
-    //   546: athrow
-    //   547: astore_1
-    //   548: aload_0
-    //   549: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   552: aload_0
-    //   553: getfield 116	com/tencent/kingkong/database/SQLiteConnection:mConfiguration	Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;
-    //   556: getfield 338	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:path	Ljava/lang/String;
-    //   559: aload_0
-    //   560: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
-    //   563: iload 17
-    //   565: invokevirtual 794	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
-    //   568: ifeq +73 -> 641
-    //   571: aload_0
-    //   572: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   575: iload 17
-    //   577: new 231	java/lang/StringBuilder
-    //   580: dup
-    //   581: ldc_w 811
-    //   584: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   587: aload_3
-    //   588: invokevirtual 814	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-    //   591: ldc_w 816
-    //   594: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   597: iload 4
-    //   599: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   602: ldc_w 818
-    //   605: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   608: iload 10
-    //   610: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   613: ldc_w 820
-    //   616: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   619: iload 8
-    //   621: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   624: ldc_w 822
-    //   627: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   630: iload 9
-    //   632: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
-    //   635: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   638: invokevirtual 799	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
-    //   641: aload_1
-    //   642: athrow
-    //   643: astore_1
-    //   644: aload_3
-    //   645: invokevirtual 837	com/tencent/kingkong/CursorWindow:releaseReference	()V
-    //   648: aload_1
-    //   649: athrow
-    //   650: astore_1
-    //   651: iload 8
-    //   653: istore 10
-    //   655: iload 5
-    //   657: istore 8
-    //   659: goto -111 -> 548
-    //   662: astore_1
-    //   663: iload 5
-    //   665: istore 13
-    //   667: iload 9
-    //   669: istore 14
-    //   671: iload 8
-    //   673: istore 15
-    //   675: goto -240 -> 435
-    //   678: astore_1
-    //   679: iload 16
-    //   681: istore 5
-    //   683: goto -305 -> 378
-    //   686: astore_1
-    //   687: iconst_m1
-    //   688: istore 5
-    //   690: goto -353 -> 337
-    //   693: astore_1
-    //   694: goto -357 -> 337
+    //   432: aload_0
+    //   433: aload 20
+    //   435: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   438: iload 5
+    //   440: istore 13
+    //   442: iload 11
+    //   444: istore 14
+    //   446: iload 12
+    //   448: istore 15
+    //   450: iload 5
+    //   452: istore 8
+    //   454: iload 11
+    //   456: istore 9
+    //   458: iload 12
+    //   460: istore 10
+    //   462: aload_2
+    //   463: athrow
+    //   464: astore_2
+    //   465: iload 13
+    //   467: istore 8
+    //   469: iload 14
+    //   471: istore 9
+    //   473: iload 15
+    //   475: istore 10
+    //   477: aload_2
+    //   478: instanceof 506
+    //   481: ifne +22 -> 503
+    //   484: iload 13
+    //   486: istore 8
+    //   488: iload 14
+    //   490: istore 9
+    //   492: iload 15
+    //   494: istore 10
+    //   496: aload_2
+    //   497: instanceof 767
+    //   500: ifeq +41 -> 541
+    //   503: iload 13
+    //   505: istore 8
+    //   507: iload 14
+    //   509: istore 9
+    //   511: iload 15
+    //   513: istore 10
+    //   515: aload_0
+    //   516: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
+    //   519: ifnull +22 -> 541
+    //   522: iload 13
+    //   524: istore 8
+    //   526: iload 14
+    //   528: istore 9
+    //   530: iload 15
+    //   532: istore 10
+    //   534: aload_0
+    //   535: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
+    //   538: invokevirtual 772	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
+    //   541: iload 13
+    //   543: istore 8
+    //   545: iload 14
+    //   547: istore 9
+    //   549: iload 15
+    //   551: istore 10
+    //   553: aload_0
+    //   554: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   557: iload 17
+    //   559: aload_2
+    //   560: invokevirtual 776	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
+    //   563: iload 13
+    //   565: istore 8
+    //   567: iload 14
+    //   569: istore 9
+    //   571: iload 15
+    //   573: istore 10
+    //   575: aload_2
+    //   576: athrow
+    //   577: astore_2
+    //   578: aload_0
+    //   579: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   582: aload_0
+    //   583: getfield 116	com/tencent/kingkong/database/SQLiteConnection:mConfiguration	Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;
+    //   586: getfield 338	com/tencent/kingkong/database/SQLiteDatabaseConfiguration:path	Ljava/lang/String;
+    //   589: aload_0
+    //   590: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
+    //   593: iload 17
+    //   595: invokevirtual 796	com/tencent/kingkong/database/SQLiteConnection$OperationLog:endOperationDeferLog	(Ljava/lang/String;II)Z
+    //   598: ifeq +106 -> 704
+    //   601: aload_0
+    //   602: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
+    //   605: iload 17
+    //   607: new 231	java/lang/StringBuilder
+    //   610: dup
+    //   611: ldc_w 818
+    //   614: invokespecial 236	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   617: aload_3
+    //   618: invokevirtual 821	java/lang/StringBuilder:append	(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+    //   621: ldc_w 823
+    //   624: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   627: iload 4
+    //   629: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   632: ldc_w 825
+    //   635: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   638: iload 10
+    //   640: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   643: ldc_w 827
+    //   646: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   649: iload 8
+    //   651: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   654: ldc_w 829
+    //   657: invokevirtual 245	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   660: iload 9
+    //   662: invokevirtual 240	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
+    //   665: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   668: invokevirtual 801	com/tencent/kingkong/database/SQLiteConnection$OperationLog:logOperation	(ILjava/lang/String;)V
+    //   671: aload_0
+    //   672: aload_1
+    //   673: invokevirtual 804	com/tencent/kingkong/database/SQLiteConnection:explainQueryPlan	(Ljava/lang/String;)Ljava/lang/String;
+    //   676: astore 7
+    //   678: aload 7
+    //   680: ifnull +24 -> 704
+    //   683: ldc 30
+    //   685: ldc_w 806
+    //   688: iconst_2
+    //   689: anewarray 4	java/lang/Object
+    //   692: dup
+    //   693: iconst_0
+    //   694: aload_1
+    //   695: aastore
+    //   696: dup
+    //   697: iconst_1
+    //   698: aload 7
+    //   700: aastore
+    //   701: invokestatic 658	com/tencent/kingkong/support/Log:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   704: aload_2
+    //   705: athrow
+    //   706: astore_1
+    //   707: aload_3
+    //   708: invokevirtual 844	com/tencent/kingkong/CursorWindow:releaseReference	()V
+    //   711: aload_1
+    //   712: athrow
+    //   713: astore_2
+    //   714: iload 8
+    //   716: istore 10
+    //   718: iload 5
+    //   720: istore 8
+    //   722: goto -144 -> 578
+    //   725: astore_2
+    //   726: iload 5
+    //   728: istore 13
+    //   730: iload 9
+    //   732: istore 14
+    //   734: iload 8
+    //   736: istore 15
+    //   738: goto -273 -> 465
+    //   741: astore_2
+    //   742: iload 16
+    //   744: istore 5
+    //   746: goto -338 -> 408
+    //   749: astore_2
+    //   750: iconst_m1
+    //   751: istore 5
+    //   753: goto -386 -> 367
+    //   756: astore_2
+    //   757: goto -390 -> 367
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	697	0	this	SQLiteConnection
-    //   0	697	1	paramString	String
-    //   0	697	2	paramArrayOfObject	Object[]
-    //   0	697	3	paramCursorWindow	com.tencent.kingkong.CursorWindow
-    //   0	697	4	paramInt1	int
-    //   0	697	5	paramInt2	int
-    //   0	697	6	paramBoolean	boolean
-    //   0	697	7	paramCancellationSignal	CancellationSignal
-    //   78	594	8	i	int
-    //   82	586	9	j	int
-    //   86	568	10	k	int
-    //   38	387	11	m	int
-    //   35	394	12	n	int
-    //   66	600	13	i1	int
-    //   70	600	14	i2	int
-    //   74	600	15	i3	int
-    //   41	639	16	i4	int
-    //   62	514	17	i5	int
+    //   0	760	0	this	SQLiteConnection
+    //   0	760	1	paramString	String
+    //   0	760	2	paramArrayOfObject	Object[]
+    //   0	760	3	paramCursorWindow	com.tencent.kingkong.CursorWindow
+    //   0	760	4	paramInt1	int
+    //   0	760	5	paramInt2	int
+    //   0	760	6	paramBoolean	boolean
+    //   0	760	7	paramCancellationSignal	CancellationSignal
+    //   78	657	8	i	int
+    //   82	649	9	j	int
+    //   86	631	10	k	int
+    //   38	417	11	m	int
+    //   35	424	12	n	int
+    //   66	663	13	i1	int
+    //   70	663	14	i2	int
+    //   74	663	15	i3	int
+    //   41	702	16	i4	int
+    //   62	544	17	i5	int
     //   176	11	18	l	long
-    //   93	311	20	localPreparedStatement	PreparedStatement
+    //   93	341	20	localPreparedStatement	PreparedStatement
     //   55	65	21	localOperation	Operation
     // Exception table:
     //   from	to	target	type
-    //   154	178	327	finally
-    //   215	221	369	finally
-    //   349	355	369	finally
-    //   367	369	369	finally
-    //   88	95	434	java/lang/RuntimeException
-    //   119	129	434	java/lang/RuntimeException
-    //   402	408	434	java/lang/RuntimeException
-    //   432	434	434	java/lang/RuntimeException
-    //   88	95	547	finally
-    //   119	129	547	finally
-    //   402	408	547	finally
-    //   432	434	547	finally
-    //   447	454	547	finally
-    //   466	473	547	finally
-    //   485	492	547	finally
-    //   504	511	547	finally
-    //   523	533	547	finally
-    //   545	547	547	finally
-    //   43	64	643	finally
-    //   227	320	643	finally
-    //   548	641	643	finally
-    //   641	643	643	finally
-    //   221	227	650	finally
-    //   221	227	662	java/lang/RuntimeException
-    //   129	154	678	finally
-    //   191	197	686	finally
-    //   197	203	693	finally
+    //   154	178	357	finally
+    //   215	221	399	finally
+    //   379	385	399	finally
+    //   397	399	399	finally
+    //   88	95	464	java/lang/RuntimeException
+    //   119	129	464	java/lang/RuntimeException
+    //   432	438	464	java/lang/RuntimeException
+    //   462	464	464	java/lang/RuntimeException
+    //   88	95	577	finally
+    //   119	129	577	finally
+    //   432	438	577	finally
+    //   462	464	577	finally
+    //   477	484	577	finally
+    //   496	503	577	finally
+    //   515	522	577	finally
+    //   534	541	577	finally
+    //   553	563	577	finally
+    //   575	577	577	finally
+    //   43	64	706	finally
+    //   227	326	706	finally
+    //   330	350	706	finally
+    //   578	678	706	finally
+    //   683	704	706	finally
+    //   704	706	706	finally
+    //   221	227	713	finally
+    //   221	227	725	java/lang/RuntimeException
+    //   129	154	741	finally
+    //   191	197	749	finally
+    //   197	203	756	finally
   }
   
   /* Error */
@@ -2237,14 +2332,14 @@ public final class SQLiteConnection
     // Byte code:
     //   0: aload_1
     //   1: ifnonnull +14 -> 15
-    //   4: new 740	java/lang/IllegalArgumentException
+    //   4: new 742	java/lang/IllegalArgumentException
     //   7: dup
-    //   8: ldc_w 742
-    //   11: invokespecial 743	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
+    //   8: ldc_w 744
+    //   11: invokespecial 745	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
     //   14: athrow
     //   15: aload_0
     //   16: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   19: ldc_w 839
+    //   19: ldc_w 846
     //   22: aload_1
     //   23: aload_2
     //   24: invokevirtual 325	com/tencent/kingkong/database/SQLiteConnection$OperationLog:beginOperation	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
@@ -2254,37 +2349,37 @@ public final class SQLiteConnection
     //   34: istore 4
     //   36: aload_0
     //   37: aload_1
-    //   38: invokespecial 746	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
+    //   38: invokespecial 748	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
     //   41: astore_1
     //   42: aload 7
     //   44: aload_1
-    //   45: getfield 441	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
-    //   48: invokevirtual 749	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
+    //   45: getfield 443	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
+    //   48: invokevirtual 751	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
     //   51: aload_0
     //   52: aload_1
-    //   53: invokespecial 751	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   53: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   56: aload_0
     //   57: aload_1
     //   58: aload_2
-    //   59: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
+    //   59: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
     //   62: aload_0
     //   63: aload_1
-    //   64: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   64: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   67: aload_0
     //   68: aload_3
-    //   69: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   69: invokespecial 759	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   72: aload_0
     //   73: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
     //   76: aload_1
     //   77: getfield 255	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mStatementPtr	I
-    //   80: invokestatic 841	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForLastInsertedRowId	(II)J
+    //   80: invokestatic 848	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForLastInsertedRowId	(II)J
     //   83: lstore 5
     //   85: aload_0
     //   86: aload_3
-    //   87: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   87: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   90: aload_0
     //   91: aload_1
-    //   92: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   92: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   95: aload_0
     //   96: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   99: aload_0
@@ -2299,33 +2394,33 @@ public final class SQLiteConnection
     //   118: astore_2
     //   119: aload_0
     //   120: aload_3
-    //   121: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   121: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   124: aload_2
     //   125: athrow
     //   126: astore_2
     //   127: aload_0
     //   128: aload_1
-    //   129: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   129: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   132: aload_2
     //   133: athrow
     //   134: astore_1
     //   135: aload_1
-    //   136: instanceof 504
+    //   136: instanceof 506
     //   139: ifne +10 -> 149
     //   142: aload_1
-    //   143: instanceof 765
+    //   143: instanceof 767
     //   146: ifeq +17 -> 163
     //   149: aload_0
     //   150: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
     //   153: ifnull +10 -> 163
     //   156: aload_0
     //   157: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   160: invokevirtual 770	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
+    //   160: invokevirtual 772	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
     //   163: aload_0
     //   164: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   167: iload 4
     //   169: aload_1
-    //   170: invokevirtual 774	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
+    //   170: invokevirtual 776	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
     //   173: aload_1
     //   174: athrow
     //   175: astore_1
@@ -2372,14 +2467,14 @@ public final class SQLiteConnection
     // Byte code:
     //   0: aload_1
     //   1: ifnonnull +14 -> 15
-    //   4: new 740	java/lang/IllegalArgumentException
+    //   4: new 742	java/lang/IllegalArgumentException
     //   7: dup
-    //   8: ldc_w 742
-    //   11: invokespecial 743	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
+    //   8: ldc_w 744
+    //   11: invokespecial 745	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
     //   14: athrow
     //   15: aload_0
     //   16: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   19: ldc_w 842
+    //   19: ldc_w 849
     //   22: aload_1
     //   23: aload_2
     //   24: invokevirtual 325	com/tencent/kingkong/database/SQLiteConnection$OperationLog:beginOperation	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
@@ -2389,37 +2484,37 @@ public final class SQLiteConnection
     //   34: istore 4
     //   36: aload_0
     //   37: aload_1
-    //   38: invokespecial 746	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
+    //   38: invokespecial 748	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
     //   41: astore_1
     //   42: aload 7
     //   44: aload_1
-    //   45: getfield 441	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
-    //   48: invokevirtual 749	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
+    //   45: getfield 443	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
+    //   48: invokevirtual 751	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
     //   51: aload_0
     //   52: aload_1
-    //   53: invokespecial 751	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   53: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   56: aload_0
     //   57: aload_1
     //   58: aload_2
-    //   59: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
+    //   59: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
     //   62: aload_0
     //   63: aload_1
-    //   64: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   64: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   67: aload_0
     //   68: aload_3
-    //   69: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   69: invokespecial 759	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   72: aload_0
     //   73: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
     //   76: aload_1
     //   77: getfield 255	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mStatementPtr	I
-    //   80: invokestatic 844	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForLong	(II)J
+    //   80: invokestatic 851	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForLong	(II)J
     //   83: lstore 5
     //   85: aload_0
     //   86: aload_3
-    //   87: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   87: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   90: aload_0
     //   91: aload_1
-    //   92: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   92: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   95: aload_0
     //   96: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   99: aload_0
@@ -2434,33 +2529,33 @@ public final class SQLiteConnection
     //   118: astore_2
     //   119: aload_0
     //   120: aload_3
-    //   121: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   121: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   124: aload_2
     //   125: athrow
     //   126: astore_2
     //   127: aload_0
     //   128: aload_1
-    //   129: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   129: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   132: aload_2
     //   133: athrow
     //   134: astore_1
     //   135: aload_1
-    //   136: instanceof 504
+    //   136: instanceof 506
     //   139: ifne +10 -> 149
     //   142: aload_1
-    //   143: instanceof 765
+    //   143: instanceof 767
     //   146: ifeq +17 -> 163
     //   149: aload_0
     //   150: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
     //   153: ifnull +10 -> 163
     //   156: aload_0
     //   157: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   160: invokevirtual 770	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
+    //   160: invokevirtual 772	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
     //   163: aload_0
     //   164: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   167: iload 4
     //   169: aload_1
-    //   170: invokevirtual 774	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
+    //   170: invokevirtual 776	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
     //   173: aload_1
     //   174: athrow
     //   175: astore_1
@@ -2507,14 +2602,14 @@ public final class SQLiteConnection
     // Byte code:
     //   0: aload_1
     //   1: ifnonnull +14 -> 15
-    //   4: new 740	java/lang/IllegalArgumentException
+    //   4: new 742	java/lang/IllegalArgumentException
     //   7: dup
-    //   8: ldc_w 742
-    //   11: invokespecial 743	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
+    //   8: ldc_w 744
+    //   11: invokespecial 745	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
     //   14: athrow
     //   15: aload_0
     //   16: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   19: ldc_w 845
+    //   19: ldc_w 852
     //   22: aload_1
     //   23: aload_2
     //   24: invokevirtual 325	com/tencent/kingkong/database/SQLiteConnection$OperationLog:beginOperation	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
@@ -2524,37 +2619,37 @@ public final class SQLiteConnection
     //   34: istore 4
     //   36: aload_0
     //   37: aload_1
-    //   38: invokespecial 746	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
+    //   38: invokespecial 748	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
     //   41: astore_1
     //   42: aload 5
     //   44: aload_1
-    //   45: getfield 441	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
-    //   48: invokevirtual 749	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
+    //   45: getfield 443	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
+    //   48: invokevirtual 751	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
     //   51: aload_0
     //   52: aload_1
-    //   53: invokespecial 751	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   53: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:throwIfStatementForbidden	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   56: aload_0
     //   57: aload_1
     //   58: aload_2
-    //   59: invokespecial 753	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
+    //   59: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:bindArguments	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;[Ljava/lang/Object;)V
     //   62: aload_0
     //   63: aload_1
-    //   64: invokespecial 755	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   64: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:applyBlockGuardPolicy	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   67: aload_0
     //   68: aload_3
-    //   69: invokespecial 757	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   69: invokespecial 759	com/tencent/kingkong/database/SQLiteConnection:attachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   72: aload_0
     //   73: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
     //   76: aload_1
     //   77: getfield 255	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mStatementPtr	I
-    //   80: invokestatic 847	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForString	(II)Ljava/lang/String;
+    //   80: invokestatic 854	com/tencent/kingkong/database/SQLiteConnection:nativeExecuteForString	(II)Ljava/lang/String;
     //   83: astore_2
     //   84: aload_0
     //   85: aload_3
-    //   86: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   86: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   89: aload_0
     //   90: aload_1
-    //   91: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   91: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   94: aload_0
     //   95: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   98: aload_0
@@ -2569,33 +2664,33 @@ public final class SQLiteConnection
     //   116: astore_2
     //   117: aload_0
     //   118: aload_3
-    //   119: invokespecial 761	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
+    //   119: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:detachCancellationSignal	(Lcom/tencent/kingkong/support/CancellationSignal;)V
     //   122: aload_2
     //   123: athrow
     //   124: astore_2
     //   125: aload_0
     //   126: aload_1
-    //   127: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   127: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   130: aload_2
     //   131: athrow
     //   132: astore_1
     //   133: aload_1
-    //   134: instanceof 504
+    //   134: instanceof 506
     //   137: ifne +10 -> 147
     //   140: aload_1
-    //   141: instanceof 765
+    //   141: instanceof 767
     //   144: ifeq +17 -> 161
     //   147: aload_0
     //   148: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
     //   151: ifnull +10 -> 161
     //   154: aload_0
     //   155: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   158: invokevirtual 770	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
+    //   158: invokevirtual 772	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
     //   161: aload_0
     //   162: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   165: iload 4
     //   167: aload_1
-    //   168: invokevirtual 774	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
+    //   168: invokevirtual 776	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
     //   171: aload_1
     //   172: athrow
     //   173: astore_1
@@ -2635,13 +2730,18 @@ public final class SQLiteConnection
     //   161	173	173	finally
   }
   
+  public final String explainQueryPlan(String paramString)
+  {
+    return nativeExplainQueryPlan(mConnectionPtr, paramString);
+  }
+  
   public final void fillRowBlob(int paramInt, byte[] paramArrayOfByte)
   {
     if (currentFillingWindow != null)
     {
       localb = currentFillingWindow;
-      if (bkN != null) {
-        bkN.c(paramInt, paramArrayOfByte);
+      if (bvq != null) {
+        bvq.e(paramInt, paramArrayOfByte);
       }
     }
     while (rb == null)
@@ -2649,13 +2749,13 @@ public final class SQLiteConnection
       b localb;
       return;
     }
-    rb.T(paramArrayOfByte);
+    rb.U(paramArrayOfByte);
   }
   
   public final void fillRowDouble(int paramInt, double paramDouble)
   {
     if ((currentFillingWindow == null) && (rb != null)) {
-      rb.T(Double.valueOf(paramDouble));
+      rb.U(Double.valueOf(paramDouble));
     }
   }
   
@@ -2669,21 +2769,21 @@ public final class SQLiteConnection
         break label52;
       }
       Log.e("MicroMsg.kkdb.CursorDataWindow", "newcursor rowEnd with error %d rowNum : %d", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt1) });
-      bkJ.remove(paramInt1);
+      bvm.remove(paramInt1);
     }
     label52:
-    while (bkN == null) {
+    while (bvq == null) {
       return;
     }
-    Object localObject = bkN.getKey();
-    bkL.put(localObject, bkN);
-    bkJ.put(paramInt1, localObject);
+    Object localObject = bvq.getKey();
+    bvo.put(localObject, bvq);
+    bvm.put(paramInt1, localObject);
   }
   
   public final void fillRowFloat(int paramInt, float paramFloat)
   {
     if ((currentFillingWindow == null) && (rb != null)) {
-      rb.T(Float.valueOf(paramFloat));
+      rb.U(Float.valueOf(paramFloat));
     }
   }
   
@@ -2692,8 +2792,8 @@ public final class SQLiteConnection
     if (currentFillingWindow != null)
     {
       localb = currentFillingWindow;
-      if (bkN != null) {
-        bkN.f(paramInt, paramLong);
+      if (bvq != null) {
+        bvq.k(paramInt, paramLong);
       }
     }
     while (rb == null)
@@ -2701,7 +2801,7 @@ public final class SQLiteConnection
       b localb;
       return;
     }
-    rb.T(Long.valueOf(paramLong));
+    rb.U(Long.valueOf(paramLong));
   }
   
   public final void fillRowLong(int paramInt, long paramLong)
@@ -2709,8 +2809,8 @@ public final class SQLiteConnection
     if (currentFillingWindow != null)
     {
       localb = currentFillingWindow;
-      if (bkN != null) {
-        bkN.g(paramInt, paramLong);
+      if (bvq != null) {
+        bvq.l(paramInt, paramLong);
       }
     }
     while (rb == null)
@@ -2718,13 +2818,13 @@ public final class SQLiteConnection
       b localb;
       return;
     }
-    rb.T(Long.valueOf(paramLong));
+    rb.U(Long.valueOf(paramLong));
   }
   
   public final void fillRowNull(int paramInt)
   {
     if ((currentFillingWindow == null) && (rb != null)) {
-      rb.T(null);
+      rb.U(null);
     }
   }
   
@@ -2734,37 +2834,37 @@ public final class SQLiteConnection
     if (currentFillingWindow != null)
     {
       localObject = currentFillingWindow;
-      if (!((b)localObject).ch(paramInt)) {
-        bkN = ((b)localObject).qH();
+      if (!((b)localObject).ci(paramInt)) {
+        bvq = ((b)localObject).qD();
       }
     }
     while (currentFillingDbCursor == null) {
       return;
     }
     d locald = currentFillingDbCursor;
-    int i = paramInt / bkP;
+    int i = paramInt / bvs;
     int j;
-    if (bkO.indexOfKey(i) < 0)
+    if (bvr.indexOfKey(i) < 0)
     {
-      localObject = new Object[bkP * columnCount];
-      bkO.put(i, localObject);
-      i = bkP;
+      localObject = new Object[bvs * columnCount];
+      bvr.put(i, localObject);
+      i = bvs;
       i = columnCount * (paramInt % i);
       j = columnCount;
       paramInt += 1;
-      if (paramInt <= bkQ) {
+      if (paramInt <= bvt) {
         break label171;
       }
     }
     for (;;)
     {
-      bkQ = paramInt;
+      bvt = paramInt;
       rb = new d.a(locald, i, i + j, (Object[])localObject);
       return;
-      localObject = (Object[])bkO.get(i);
+      localObject = (Object[])bvr.get(i);
       break;
       label171:
-      paramInt = bkQ;
+      paramInt = bvt;
     }
   }
   
@@ -2773,8 +2873,8 @@ public final class SQLiteConnection
     if (currentFillingWindow != null)
     {
       localb = currentFillingWindow;
-      if (bkN != null) {
-        bkN.i(paramInt, paramString);
+      if (bvq != null) {
+        bvq.l(paramInt, paramString);
       }
     }
     while (rb == null)
@@ -2782,7 +2882,7 @@ public final class SQLiteConnection
       b localb;
       return;
     }
-    rb.T(paramString);
+    rb.U(paramString);
   }
   
   protected final void finalize()
@@ -2832,14 +2932,14 @@ public final class SQLiteConnection
     // Byte code:
     //   0: aload_1
     //   1: ifnonnull +14 -> 15
-    //   4: new 740	java/lang/IllegalArgumentException
+    //   4: new 742	java/lang/IllegalArgumentException
     //   7: dup
-    //   8: ldc_w 742
-    //   11: invokespecial 743	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
+    //   8: ldc_w 744
+    //   11: invokespecial 745	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
     //   14: athrow
     //   15: aload_0
     //   16: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
-    //   19: ldc_w 954
+    //   19: ldc_w 962
     //   22: aload_1
     //   23: aconst_null
     //   24: invokevirtual 325	com/tencent/kingkong/database/SQLiteConnection$OperationLog:beginOperation	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)Lcom/tencent/kingkong/database/SQLiteConnection$Operation;
@@ -2849,36 +2949,36 @@ public final class SQLiteConnection
     //   34: istore 4
     //   36: aload_0
     //   37: aload_1
-    //   38: invokespecial 746	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
+    //   38: invokespecial 748	com/tencent/kingkong/database/SQLiteConnection:acquirePreparedStatement	(Ljava/lang/String;)Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
     //   41: astore_1
     //   42: aload 6
     //   44: aload_1
-    //   45: getfield 441	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
-    //   48: invokevirtual 749	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
+    //   45: getfield 443	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mType	I
+    //   48: invokevirtual 751	com/tencent/kingkong/database/SQLiteConnection$Operation:bindStamentType	(I)V
     //   51: aload_2
     //   52: ifnull +44 -> 96
     //   55: aload_2
     //   56: aload_1
     //   57: getfield 227	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mNumParameters	I
-    //   60: putfield 959	com/tencent/kingkong/database/SQLiteStatementInfo:numParameters	I
+    //   60: putfield 967	com/tencent/kingkong/database/SQLiteStatementInfo:numParameters	I
     //   63: aload_2
     //   64: aload_1
-    //   65: getfield 444	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mReadOnly	Z
-    //   68: putfield 962	com/tencent/kingkong/database/SQLiteStatementInfo:readOnly	Z
+    //   65: getfield 446	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mReadOnly	Z
+    //   68: putfield 970	com/tencent/kingkong/database/SQLiteStatementInfo:readOnly	Z
     //   71: aload_0
     //   72: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
     //   75: aload_1
     //   76: getfield 255	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mStatementPtr	I
-    //   79: invokestatic 964	com/tencent/kingkong/database/SQLiteConnection:nativeGetColumnCount	(II)I
+    //   79: invokestatic 972	com/tencent/kingkong/database/SQLiteConnection:nativeGetColumnCount	(II)I
     //   82: istore 5
     //   84: iload 5
     //   86: ifne +36 -> 122
     //   89: aload_2
     //   90: getstatic 75	com/tencent/kingkong/database/SQLiteConnection:EMPTY_STRING_ARRAY	[Ljava/lang/String;
-    //   93: putfield 967	com/tencent/kingkong/database/SQLiteStatementInfo:columnNames	[Ljava/lang/String;
+    //   93: putfield 975	com/tencent/kingkong/database/SQLiteStatementInfo:columnNames	[Ljava/lang/String;
     //   96: aload_0
     //   97: aload_1
-    //   98: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   98: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   101: aload_0
     //   102: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   105: aload_0
@@ -2892,21 +2992,21 @@ public final class SQLiteConnection
     //   122: aload_2
     //   123: iload 5
     //   125: anewarray 73	java/lang/String
-    //   128: putfield 967	com/tencent/kingkong/database/SQLiteStatementInfo:columnNames	[Ljava/lang/String;
+    //   128: putfield 975	com/tencent/kingkong/database/SQLiteStatementInfo:columnNames	[Ljava/lang/String;
     //   131: iconst_0
     //   132: istore_3
     //   133: iload_3
     //   134: iload 5
     //   136: if_icmpge -40 -> 96
     //   139: aload_2
-    //   140: getfield 967	com/tencent/kingkong/database/SQLiteStatementInfo:columnNames	[Ljava/lang/String;
+    //   140: getfield 975	com/tencent/kingkong/database/SQLiteStatementInfo:columnNames	[Ljava/lang/String;
     //   143: iload_3
     //   144: aload_0
     //   145: getfield 164	com/tencent/kingkong/database/SQLiteConnection:mConnectionPtr	I
     //   148: aload_1
     //   149: getfield 255	com/tencent/kingkong/database/SQLiteConnection$PreparedStatement:mStatementPtr	I
     //   152: iload_3
-    //   153: invokestatic 969	com/tencent/kingkong/database/SQLiteConnection:nativeGetColumnName	(III)Ljava/lang/String;
+    //   153: invokestatic 977	com/tencent/kingkong/database/SQLiteConnection:nativeGetColumnName	(III)Ljava/lang/String;
     //   156: aastore
     //   157: iload_3
     //   158: iconst_1
@@ -2916,27 +3016,27 @@ public final class SQLiteConnection
     //   164: astore_2
     //   165: aload_0
     //   166: aload_1
-    //   167: invokespecial 763	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
+    //   167: invokespecial 765	com/tencent/kingkong/database/SQLiteConnection:releasePreparedStatement	(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     //   170: aload_2
     //   171: athrow
     //   172: astore_1
     //   173: aload_1
-    //   174: instanceof 504
+    //   174: instanceof 506
     //   177: ifne +10 -> 187
     //   180: aload_1
-    //   181: instanceof 765
+    //   181: instanceof 767
     //   184: ifeq +17 -> 201
     //   187: aload_0
     //   188: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
     //   191: ifnull +10 -> 201
     //   194: aload_0
     //   195: getfield 109	com/tencent/kingkong/database/SQLiteConnection:mPool	Lcom/tencent/kingkong/database/SQLiteConnectionPool;
-    //   198: invokevirtual 770	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
+    //   198: invokevirtual 772	com/tencent/kingkong/database/SQLiteConnectionPool:logConnectionPoolBusy	()V
     //   201: aload_0
     //   202: getfield 97	com/tencent/kingkong/database/SQLiteConnection:mRecentOperations	Lcom/tencent/kingkong/database/SQLiteConnection$OperationLog;
     //   205: iload 4
     //   207: aload_1
-    //   208: invokevirtual 774	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
+    //   208: invokevirtual 776	com/tencent/kingkong/database/SQLiteConnection$OperationLog:failOperation	(ILjava/lang/Exception;)V
     //   211: aload_1
     //   212: athrow
     //   213: astore_1
@@ -3165,27 +3265,27 @@ public final class SQLiteConnection
             do
             {
               return false;
-              if (i.qN())
+              if (h.qJ())
               {
                 arrayOfInt = SQLiteConnection.nativeGetLastPageTrace(paramInt1);
-                l = i.qO();
+                l = h.qK();
               }
             } while ((!SQLiteDebug.shouldLogSlowQuery(mEndTime - mStartTime)) && (arrayOfInt[4] <= l));
-            i.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
+            h.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
             return true;
-            if (i.qN())
+            if (h.qJ())
             {
               arrayOfInt = SQLiteConnection.nativeGetLastPageTrace(paramInt1);
-              l = i.qO();
+              l = h.qK();
             }
           } while ((!SQLiteDebug.shouldLogSlowUpdate(mEndTime - mStartTime)) && (arrayOfInt[9] <= l));
-          i.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
+          h.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
           return true;
         } while (!SQLiteDebug.shouldLogSlowPragma(mEndTime - mStartTime));
-        i.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
+        h.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
         return true;
       } while (!SQLiteDebug.shouldLogSlowTransation(mEndTime - mStartTime));
-      i.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
+      h.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
       return true;
     }
     

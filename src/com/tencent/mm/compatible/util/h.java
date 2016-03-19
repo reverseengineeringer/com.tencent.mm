@@ -1,174 +1,214 @@
 package com.tencent.mm.compatible.util;
 
+import android.annotation.TargetApi;
+import android.app.ActionBar;
+import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import android.content.res.Resources;
+import android.content.res.Resources.Theme;
+import android.graphics.Rect;
 import android.os.Build.VERSION;
-import android.os.StatFs;
-import com.tencent.mm.sdk.platformtools.t;
-import java.io.File;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
+import android.view.Display;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 public final class h
 {
-  public static boolean C(long paramLong)
+  private static int buA = -1;
+  private static int buB = -1;
+  private static int bux = -1;
+  private static int buy = -1;
+  private static boolean buz = false;
+  
+  public static final int aA(Context paramContext)
   {
-    if (!pe())
+    if (!buz)
     {
-      t.i("!24@/B4Tb64lLpJct1kv8RvO0Q==", "summer isSDCardHaveEnoughSpace sdcard not avail and ret false");
-      return false;
+      if (buA > 0) {
+        return buA;
+      }
+      if (!aD(paramContext)) {
+        return 1140;
+      }
+      int i = a.fromDPToPix(paramContext, 380);
+      buA = i;
+      return i;
+    }
+    return aB(paramContext);
+  }
+  
+  public static final int aB(Context paramContext)
+  {
+    if (buB > 0) {
+      return buB;
+    }
+    if (!aD(paramContext)) {
+      return buB * 3;
+    }
+    int i = a.fromDPToPix(paramContext, 230);
+    buB = i;
+    return i;
+  }
+  
+  public static final int aC(Context paramContext)
+  {
+    return c(paramContext, -1);
+  }
+  
+  private static final boolean aD(Context paramContext)
+  {
+    Context localContext = paramContext;
+    if (paramContext == null) {
+      localContext = y.getContext();
+    }
+    return localContext != null;
+  }
+  
+  public static boolean aE(Context paramContext)
+  {
+    paramContext = aF(paramContext);
+    if (paramContext[0] < paramContext[1]) {}
+    for (int i = 1; i == 1; i = 2) {
+      return true;
+    }
+    return false;
+  }
+  
+  private static int[] aF(Context paramContext)
+  {
+    if (paramContext == null) {
+      paramContext = y.getContext();
     }
     for (;;)
     {
-      try
+      int[] arrayOfInt = new int[2];
+      if ((paramContext instanceof Activity))
       {
-        localStatFs = new StatFs(f.bjH);
+        DisplayMetrics localDisplayMetrics = new DisplayMetrics();
+        ((Activity)paramContext).getWindowManager().getDefaultDisplay().getMetrics(localDisplayMetrics);
+        arrayOfInt[0] = widthPixels;
+        arrayOfInt[1] = heightPixels;
+        return arrayOfInt;
       }
-      catch (Exception localException1)
-      {
-        try
-        {
-          i = localStatFs.getBlockCount();
-          l1 = i;
-        }
-        catch (Exception localException2)
-        {
-          for (;;)
-          {
-            StatFs localStatFs;
-            int i;
-            long l2;
-            long l1 = 0L;
-          }
-        }
-        try
-        {
-          i = localStatFs.getAvailableBlocks();
-          l2 = i;
-          if ((localStatFs == null) || (l1 <= 0L) || (l1 - l2 < 0L)) {
-            break;
-          }
-          l1 = localStatFs.getBlockSize();
-          if (localStatFs.getFreeBlocks() * l1 >= paramLong) {
-            break label143;
-          }
-          t.i("!24@/B4Tb64lLpJct1kv8RvO0Q==", "summer isSDCardHaveEnoughSpace needSize: " + paramLong + " not enough and ret false");
-          return false;
-        }
-        catch (Exception localException3)
-        {
-          break label121;
-        }
-        localException1 = localException1;
-        localStatFs = null;
-        l1 = 0L;
-      }
-      label121:
-      t.e("!24@/B4Tb64lLpJct1kv8RvO0Q==", "isSDCardHaveEnoughSpace", new Object[] { localException1 });
-      l2 = 0L;
+      paramContext = ((WindowManager)paramContext.getSystemService("window")).getDefaultDisplay();
+      arrayOfInt[0] = paramContext.getWidth();
+      arrayOfInt[1] = paramContext.getHeight();
+      return arrayOfInt;
     }
-    label143:
-    return true;
   }
   
-  public static boolean D(long paramLong)
+  public static final int az(Context paramContext)
   {
-    do
+    if (!buz)
     {
-      for (;;)
-      {
-        try
-        {
-          localStatFs = new StatFs(j.getDataDirectory().getAbsolutePath());
-          int i;
-        }
-        catch (Exception localException1)
-        {
-          for (;;)
-          {
-            try
-            {
-              i = localStatFs.getBlockCount();
-              l1 = i;
-            }
-            catch (Exception localException2)
-            {
-              StatFs localStatFs;
-              long l2;
-              long l1 = 0L;
-              continue;
-            }
-            try
-            {
-              i = localStatFs.getAvailableBlocks();
-              l2 = i;
-              if (localStatFs != null) {
-                continue;
-              }
-              return false;
-            }
-            catch (Exception localException3) {}
-          }
-          localException1 = localException1;
-          localStatFs = null;
-          l1 = 0L;
-        }
-        tmp56_53[0] = localException1.getMessage();
-        t.e("!24@/B4Tb64lLpJct1kv8RvO0Q==", "isDataDirHaveEnoughSpace, exception: %s", tmp56_53);
-        l2 = 0L;
+      if (bux > 0) {
+        return bux;
       }
-    } while ((l1 <= 0L) || (l1 - l2 < 0L));
-    l1 = localStatFs.getBlockSize();
-    if (localStatFs.getFreeBlocks() * l1 < paramLong)
-    {
-      t.i("!24@/B4Tb64lLpJct1kv8RvO0Q==", "isDataDirHaveEnoughSpace needSize: " + paramLong + " not enough and ret false");
+      if (!buz)
+      {
+        if (!aD(paramContext)) {
+          return y.aUM().getInt("com.tencent.mm.compatible.util.keybord.height", 690);
+        }
+        int i = y.aUM().getInt("com.tencent.mm.compatible.util.keybord.height", a.fromDPToPix(paramContext, 230));
+        bux = i;
+        return i;
+      }
+      return aB(paramContext);
+    }
+    return aB(paramContext);
+  }
+  
+  public static final boolean b(Context paramContext, int paramInt)
+  {
+    if (bux == paramInt) {
+      return true;
+    }
+    if (!aD(paramContext)) {
       return false;
     }
-    return true;
+    if (paramInt < 0) {
+      return false;
+    }
+    bux = paramInt;
+    u.d("!32@/B4Tb64lLpKpI+tgWEEQMW53kLRAnwLT", "save keybord: %d", new Object[] { Integer.valueOf(paramInt) });
+    return y.aUM().edit().putInt("com.tencent.mm.compatible.util.keybord.height", paramInt).commit();
   }
   
-  public static boolean bT(int paramInt)
+  public static final int c(Context paramContext, int paramInt)
   {
-    return Build.VERSION.SDK_INT >= paramInt;
-  }
-  
-  public static boolean bU(int paramInt)
-  {
-    return Build.VERSION.SDK_INT < paramInt;
-  }
-  
-  public static boolean pe()
-  {
-    boolean bool2 = false;
-    String str = j.getExternalStorageDirectory().getAbsolutePath();
-    boolean bool1;
-    if (f.bjH.equalsIgnoreCase(str))
+    int k = aB(paramContext);
+    int i;
+    int j;
+    if (!aE(paramContext))
     {
-      bool1 = bool2;
-      try
-      {
-        if (j.getExternalStorageState().equals("mounted"))
-        {
-          boolean bool3 = new File(j.getExternalStorageDirectory().getAbsolutePath()).canWrite();
-          bool1 = bool2;
-          if (bool3) {
-            bool1 = true;
-          }
-        }
-        return bool1;
-      }
-      catch (Exception localException1)
-      {
-        t.w("!24@/B4Tb64lLpJct1kv8RvO0Q==", "summer isSDCardAvail 1 e: " + localException1.getMessage() + " SDCARD_ROOT: " + f.bjH);
-        return false;
+      i = (int)(k / 1.5D);
+      j = aF(paramContext)[0];
+      paramInt = i;
+      if (i > j / 2) {
+        paramInt = j / 2;
       }
     }
-    try
+    do
     {
-      bool1 = new File(f.bjH).canWrite();
-      return bool1;
+      return paramInt;
+      i = paramInt;
+      if (paramInt <= 0) {
+        i = az(paramContext);
+      }
+      j = aA(paramContext);
+      paramInt = j;
+    } while (i > j);
+    if (i < k) {
+      return k;
     }
-    catch (Exception localException2)
+    return i;
+  }
+  
+  @TargetApi(11)
+  public static final void i(Activity paramActivity)
+  {
+    if (paramActivity == null) {}
+    Object localObject;
+    int j;
+    do
     {
-      t.w("!24@/B4Tb64lLpJct1kv8RvO0Q==", "summer isSDCardAvail 1 e: " + localException2.getMessage() + " SDCARD_ROOT: " + f.bjH);
+      return;
+      localObject = new Rect();
+      paramActivity.getWindow().getDecorView().getWindowVisibleDisplayFrame((Rect)localObject);
+      j = top;
+      localObject = new TypedValue();
+      i = 0;
+      if (Build.VERSION.SDK_INT < 11) {
+        break;
+      }
+    } while (paramActivity.getActionBar() == null);
+    int i = paramActivity.getActionBar().getHeight();
+    for (;;)
+    {
+      buy = getResourcesgetDisplayMetricsheightPixels - i - j;
+      return;
+      if (paramActivity.getTheme().resolveAttribute(16843499, (TypedValue)localObject, true)) {
+        i = TypedValue.complexToDimensionPixelSize(data, paramActivity.getResources().getDisplayMetrics());
+      }
     }
-    return false;
+  }
+  
+  public static void pb()
+  {
+    buz = false;
+  }
+  
+  public static final int pc()
+  {
+    return buy;
   }
 }
 

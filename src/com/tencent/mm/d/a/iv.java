@@ -1,29 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class iv
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGa = new a();
-  public b aGb = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aEY = new a();
   
   public iv()
   {
-    id = "TranslateMessageQueryStatus";
-    hXT = atO;
+    id = "QueryGameMessage";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String id;
-  }
-  
-  public static final class b
-  {
-    public boolean aGc;
+    public String aEZ;
+    public int aFa;
+    public String aFb;
+    public String aFc;
+    public String appId;
+    public String appName;
+    public int asN = 0;
+    public String content;
   }
 }
 

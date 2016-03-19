@@ -1,28 +1,34 @@
 package com.tencent.mm.ui.friend;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.KeyEvent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelsimple.p;
-import com.tencent.mm.protocal.b.ls;
-import com.tencent.mm.protocal.b.yr;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.modelsimple.q;
+import com.tencent.mm.protocal.b.aet;
+import com.tencent.mm.protocal.b.og;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.c;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.c;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.base.h;
-import com.tencent.mm.ui.cn;
+import com.tencent.mm.ui.base.g;
 import java.util.LinkedList;
 import junit.framework.Assert;
 
@@ -30,73 +36,73 @@ public class RecommendFriendUI
   extends MMActivity
   implements d
 {
-  private ProgressDialog bXB = null;
-  private int bXD = -1;
-  private ListView cux;
-  private TextView ewP;
-  private z jmS;
-  private LinkedList jmT = new LinkedList();
-  private boolean jmU = false;
-  private LinkedList jmg = new LinkedList();
-  private boolean jmh;
+  private ListView cLT;
+  private ProgressDialog coM = null;
+  private int coO = -1;
+  private TextView fGL;
+  private LinkedList lrx = new LinkedList();
+  private boolean lry;
+  private b lsl;
+  private LinkedList lsm = new LinkedList();
+  private boolean lsn = false;
   
-  private void aRe()
+  private void bia()
   {
-    ewP.setVisibility(0);
-    cux.setVisibility(8);
+    fGL.setVisibility(0);
+    cLT.setVisibility(8);
   }
   
-  private void aRf()
+  private void bib()
   {
-    if (bXD == 0) {}
+    if (coO == 0) {}
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue("dealGetInviteFriendGroupSuccess just only qq", bool);
-      t.i("!44@/B4Tb64lLpIsKKY/xHp2FOssnieKalTqmWywoHo91qQ=", "dealGetInviteFriendGroupSuccess  respList.size:" + jmg.size());
-      jmS.jmg = jmg;
-      cux.setAdapter(jmS);
-      ff(false);
-      jmh = true;
-      nh(a.n.settings_invite_qq_friends);
-      jmS.jmh = jmh;
-      jmS.notifyDataSetChanged();
+      u.i("!44@/B4Tb64lLpIsKKY/xHp2FOssnieKalTqmWywoHo91qQ=", "dealGetInviteFriendGroupSuccess  respList.size:" + lrx.size());
+      lsl.lrx = lrx;
+      cLT.setAdapter(lsl);
+      hh(false);
+      lry = true;
+      qb(2131428100);
+      lsl.lry = lry;
+      lsl.notifyDataSetChanged();
       return;
     }
   }
   
   private void goBack()
   {
-    if (bXD != 0)
+    if (coO != 0)
     {
       finish();
       return;
     }
-    if ((jmh) || (jmU))
+    if ((lry) || (lsn))
     {
       finish();
       return;
     }
-    aRf();
+    bib();
   }
   
-  private void ot(int paramInt)
+  private void rP(int paramInt)
   {
-    t.i("!44@/B4Tb64lLpIsKKY/xHp2FOssnieKalTqmWywoHo91qQ=", "dealGetInviteFriendSuccess  respList.size:" + jmT.size());
-    jmS.e(jmT, paramInt);
-    cux.setAdapter(jmS);
-    jmh = false;
+    u.i("!44@/B4Tb64lLpIsKKY/xHp2FOssnieKalTqmWywoHo91qQ=", "dealGetInviteFriendSuccess  respList.size:" + lsm.size());
+    lsl.e(lsm, paramInt);
+    cLT.setAdapter(lsl);
+    lry = false;
     String str;
     int i;
-    if (bXD == 0)
+    if (coO == 0)
     {
       str = "";
       i = 0;
-      if (i < jmg.size())
+      if (i < lrx.size())
       {
-        if (paramInt != jmg.get(i)).hxd) {
+        if (paramInt != lrx.get(i)).jnZ) {
           break label142;
         }
-        str = jmg.get(i)).hxe;
+        str = lrx.get(i)).joa;
       }
     }
     label142:
@@ -104,102 +110,164 @@ public class RecommendFriendUI
     {
       i += 1;
       break;
-      At(str);
-      jmS.jmh = jmh;
-      jmS.notifyDataSetChanged();
+      Gj(str);
+      lsl.lry = lry;
+      lsl.notifyDataSetChanged();
       return;
     }
   }
   
-  protected final void DV()
+  protected final void Gb()
   {
-    ewP = ((TextView)findViewById(a.i.empty_tip_tv));
-    if (bXD == 1)
+    fGL = ((TextView)findViewById(2131165868));
+    if (coO == 1)
     {
-      nh(a.n.settings_recommend_by_mb);
-      ewP.setText(a.n.settings_recommend_no_mb_contact);
+      qb(2131428095);
+      fGL.setText(2131428099);
     }
     for (;;)
     {
-      jmS = new z(getLayoutInflater());
-      cux = ((ListView)findViewById(a.i.inviteqqfriends_friend_lv));
-      cux.setOnItemClickListener(new bd(this));
-      cux.setAdapter(jmS);
-      a(0, getString(a.n.inviteqqfriends_invite), new be(this));
-      ff(false);
-      jmU = true;
-      p localp = new p(bXD);
-      ax.tm().d(localp);
-      ActionBarActivity localActionBarActivity = ipQ.iqj;
-      getString(a.n.app_tip);
-      bXB = h.a(localActionBarActivity, getString(a.n.inviteqqfriends_loading_friends_info), true, new bj(this, localp));
-      a(new bh(this));
-      new bi(this);
-      return;
-      if (bXD == 2)
+      lsl = new b(getLayoutInflater());
+      cLT = ((ListView)findViewById(2131169399));
+      cLT.setOnItemClickListener(new AdapterView.OnItemClickListener()
       {
-        nh(a.n.settings_recommend_by_mail);
-        ewP.setText(a.n.settings_recommend_no_mail_contact);
+        public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+        {
+          int i = 0;
+          if (!RecommendFriendUI.a(RecommendFriendUI.this))
+          {
+            RecommendFriendUI.b(RecommendFriendUI.this).ep(paramAnonymousInt);
+            if (RecommendFriendUI.b(RecommendFriendUI.this).bhZ().length > 0)
+            {
+              hh(true);
+              return;
+            }
+            hh(false);
+            return;
+          }
+          paramAnonymousAdapterView = RecommendFriendUI.this;
+          paramAnonymousView = RecommendFriendUI.b(RecommendFriendUI.this);
+          if (!lry) {}
+          for (paramAnonymousInt = i;; paramAnonymousInt = lrx.get(paramAnonymousInt)).jnZ)
+          {
+            RecommendFriendUI.a(paramAnonymousAdapterView, paramAnonymousInt);
+            return;
+          }
+        }
+      });
+      cLT.setAdapter(lsl);
+      a(0, getString(2131428838), new MenuItem.OnMenuItemClickListener()
+      {
+        public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+        {
+          int i = RecommendFriendUI.b(RecommendFriendUI.this).bhZ().length;
+          g.a(koJ.kpc, koJ.kpc.getResources().getQuantityString(2131755022, i, new Object[] { Integer.valueOf(i) }), getString(2131430877), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+          {
+            public final void onClick(DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int)
+            {
+              RecommendFriendUI.c(RecommendFriendUI.this);
+            }
+          }, new DialogInterface.OnClickListener()
+          {
+            public final void onClick(DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int) {}
+          });
+          return true;
+        }
+      });
+      hh(false);
+      lsn = true;
+      final q localq = new q(coO);
+      ah.tE().d(localq);
+      ActionBarActivity localActionBarActivity = koJ.kpc;
+      getString(2131430877);
+      coM = g.a(localActionBarActivity, getString(2131428842), true, new DialogInterface.OnCancelListener()
+      {
+        public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+        {
+          ah.tE().c(localq);
+          finish();
+        }
+      });
+      b(new MenuItem.OnMenuItemClickListener()
+      {
+        public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+        {
+          RecommendFriendUI.d(RecommendFriendUI.this);
+          return true;
+        }
+      });
+      new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          BackwardSupportUtil.c.a(RecommendFriendUI.e(RecommendFriendUI.this));
+        }
+      };
+      return;
+      if (coO == 2)
+      {
+        qb(2131428096);
+        fGL.setText(2131428097);
       }
       else
       {
-        nh(a.n.settings_invite_qq_friends);
-        ewP.setText(a.n.settings_recommend_no_qq_contact);
+        qb(2131428100);
+        fGL.setText(2131428098);
       }
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
   {
-    t.i("!44@/B4Tb64lLpIsKKY/xHp2FOssnieKalTqmWywoHo91qQ=", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    if (bXB != null)
+    u.i("!44@/B4Tb64lLpIsKKY/xHp2FOssnieKalTqmWywoHo91qQ=", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    if (coM != null)
     {
-      bXB.dismiss();
-      bXB = null;
+      coM.dismiss();
+      coM = null;
     }
     if ((paramInt1 != 0) || (paramInt2 != 0) || (paramj.getType() != 135))
     {
-      aRe();
+      bia();
       return;
     }
-    jmT = apJ.bsU.btb).hAl;
-    jmg = apJ.bsU.btb).hjd;
-    jmU = false;
-    if (jmT.size() <= 0)
+    lsm = anN.bEX.bFf).jsp;
+    lrx = anN.bEX.bFf).iXO;
+    lsn = false;
+    if (lsm.size() <= 0)
     {
-      aRe();
+      bia();
       return;
     }
-    if ((bXD == 0) && (jmg.size() <= 0))
+    if ((coO == 0) && (lrx.size() <= 0))
     {
-      aRe();
+      bia();
       return;
     }
-    if (bXD != 0)
+    if (coO != 0)
     {
-      ot(-1);
+      rP(-1);
       return;
     }
-    aRf();
+    bib();
   }
   
   protected final int getLayoutId()
   {
-    return a.k.inviteqqfriends;
+    return 2131363170;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    bXD = Integer.parseInt(getIntent().getStringExtra("recommend_type"));
-    jmh = false;
-    ax.tm().a(135, this);
-    DV();
+    coO = Integer.parseInt(getIntent().getStringExtra("recommend_type"));
+    lry = false;
+    ah.tE().a(135, this);
+    Gb();
   }
   
   protected void onDestroy()
   {
-    ax.tm().b(135, this);
+    ah.tE().b(135, this);
     super.onDestroy();
   }
   

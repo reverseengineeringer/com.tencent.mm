@@ -4,5 +4,5 @@
 
 
 # virtual methods
-.method public abstract Cu(Ljava/lang/String;)Lb/a/d/i;
+.method public abstract IO(Ljava/lang/String;)Lb/a/d/i;
 .end method

@@ -1,26 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class an
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avj = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public an()
   {
-    id = "EmotionStateChange";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public String avk;
-    public String avl;
-    public int progress = 0;
-    public int status = 0;
+    id = "ClickF2FButton";
+    jUI = arR;
   }
 }
 

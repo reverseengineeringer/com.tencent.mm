@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/he;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aEt:Lcom/tencent/mm/d/a/he$a;
+.field public aCT:Lcom/tencent/mm/d/a/he$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/he;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/he;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/he;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/he;->arR:Z
 
     return-void
 .end method
@@ -42,23 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/he$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/he$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/he;->aEt:Lcom/tencent/mm/d/a/he$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/he;->aCT:Lcom/tencent/mm/d/a/he$a;
 
     .line 8
-    const-string/jumbo v0, "SendAppMsg"
+    const-string/jumbo v0, "NewYearClearRedDot"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/he;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/he;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/he;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/he;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/he;->jUI:Z
 
     return-void
 .end method

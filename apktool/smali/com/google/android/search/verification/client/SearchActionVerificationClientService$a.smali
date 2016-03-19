@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic ajT:Lcom/google/android/search/verification/client/SearchActionVerificationClientService;
+.field final synthetic aix:Lcom/google/android/search/verification/client/SearchActionVerificationClientService;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 84
-    iput-object p1, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->ajT:Lcom/google/android/search/verification/client/SearchActionVerificationClientService;
+    .line 115
+    iput-object p1, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->aix:Lcom/google/android/search/verification/client/SearchActionVerificationClientService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -40,8 +40,8 @@
     .locals 2
 
     .prologue
-    .line 87
-    iget-object v0, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->ajT:Lcom/google/android/search/verification/client/SearchActionVerificationClientService;
+    .line 118
+    iget-object v0, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->aix:Lcom/google/android/search/verification/client/SearchActionVerificationClientService;
 
     invoke-static {p2}, Lcom/google/android/search/verification/a/a$a;->S(Landroid/os/IBinder;)Lcom/google/android/search/verification/a/a;
 
@@ -49,7 +49,7 @@
 
     invoke-static {v0, v1}, Lcom/google/android/search/verification/client/SearchActionVerificationClientService;->a(Lcom/google/android/search/verification/client/SearchActionVerificationClientService;Lcom/google/android/search/verification/a/a;)Lcom/google/android/search/verification/a/a;
 
-    .line 89
+    .line 120
     return-void
 .end method
 
@@ -57,13 +57,13 @@
     .locals 2
 
     .prologue
-    .line 93
-    iget-object v0, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->ajT:Lcom/google/android/search/verification/client/SearchActionVerificationClientService;
+    .line 124
+    iget-object v0, p0, Lcom/google/android/search/verification/client/SearchActionVerificationClientService$a;->aix:Lcom/google/android/search/verification/client/SearchActionVerificationClientService;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lcom/google/android/search/verification/client/SearchActionVerificationClientService;->a(Lcom/google/android/search/verification/client/SearchActionVerificationClientService;Lcom/google/android/search/verification/a/a;)Lcom/google/android/search/verification/a/a;
 
-    .line 94
+    .line 125
     return-void
 .end method

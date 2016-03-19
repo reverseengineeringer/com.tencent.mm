@@ -2,9 +2,9 @@ package b.a.f;
 
 public abstract interface b
 {
-  public abstract String G(String paramString1, String paramString2, String paramString3);
+  public abstract String Q(String paramString1, String paramString2, String paramString3);
   
-  public abstract String aWb();
+  public abstract String boQ();
 }
 
 /* Location:

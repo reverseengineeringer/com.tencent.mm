@@ -169,7 +169,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 62
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->vx()[B
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->vR()[B
 
     move-result-object v0
 
@@ -193,7 +193,7 @@
     move-result v0
 
     .line 72
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/f$a;->cS(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/f$a;->cT(I)V
 
     .line 73
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -207,7 +207,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 79
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->vM()I
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->wj()I
 
     move-result v0
 
@@ -226,7 +226,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 87
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->vL()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->wi()Ljava/lang/String;
 
     move-result-object v0
 
@@ -250,7 +250,7 @@
     move-result-object v0
 
     .line 97
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/f$a;->fS(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/protocal/f$a;->gl(Ljava/lang/String;)V
 
     .line 98
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -264,7 +264,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 104
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->sY()[B
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->tq()[B
 
     move-result-object v0
 
@@ -283,7 +283,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 112
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->vN()[B
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->wk()[B
 
     move-result-object v0
 
@@ -302,7 +302,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 120
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->vy()[B
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->vT()[B
 
     move-result-object v0
 
@@ -321,7 +321,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 128
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->qY()I
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->rg()I
 
     move-result v0
 
@@ -340,7 +340,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 136
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->vR()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->wo()Ljava/lang/String;
 
     move-result-object v0
 
@@ -378,7 +378,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 152
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->vO()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->wl()Ljava/lang/String;
 
     move-result-object v0
 
@@ -397,7 +397,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 160
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->vP()Ljava/lang/String;
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->wm()Ljava/lang/String;
 
     move-result-object v0
 
@@ -416,7 +416,7 @@
     invoke-virtual {p2, v0}, Landroid/os/Parcel;->enforceInterface(Ljava/lang/String;)V
 
     .line 168
-    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->vQ()I
+    invoke-virtual {p0}, Lcom/tencent/mm/protocal/f$a;->wn()I
 
     move-result v0
 

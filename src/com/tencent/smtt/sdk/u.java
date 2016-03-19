@@ -1,17 +1,11 @@
 package com.tencent.smtt.sdk;
 
-import java.io.File;
-import java.io.FileFilter;
+import android.webkit.ValueCallback;
 
-final class u
-  implements FileFilter
+public abstract interface u
+  extends ValueCallback
 {
-  u(s params) {}
-  
-  public final boolean accept(File paramFile)
-  {
-    return paramFile.getName().endsWith(".jar");
-  }
+  public abstract void onReceiveValue(Object paramObject);
 }
 
 /* Location:

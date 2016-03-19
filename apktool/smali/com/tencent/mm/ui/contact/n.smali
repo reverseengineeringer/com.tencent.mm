@@ -1,64 +1,40 @@
-.class final Lcom/tencent/mm/ui/contact/n;
-.super Ljava/lang/Object;
+.class public abstract Lcom/tencent/mm/ui/contact/n;
+.super Lcom/tencent/mm/ui/contact/m;
 .source "SourceFile"
-
-# interfaces
-.implements Lcom/tencent/mm/ui/i$a;
 
 
 # instance fields
-.field final synthetic jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
+.field public cvM:Ljava/util/List;
+
+.field public llg:Z
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/contact/AddressUI$a;)V
+.method public constructor <init>(Lcom/tencent/mm/ui/contact/l;Ljava/util/List;ZZ)V
     .locals 0
 
     .prologue
-    .line 253
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/n;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 26
+    invoke-direct {p0, p1, p4}, Lcom/tencent/mm/ui/contact/m;-><init>(Lcom/tencent/mm/ui/contact/l;Z)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 27
+    iput-object p2, p0, Lcom/tencent/mm/ui/contact/n;->cvM:Ljava/util/List;
 
+    .line 28
+    iput-boolean p3, p0, Lcom/tencent/mm/ui/contact/n;->llg:Z
+
+    .line 29
     return-void
 .end method
 
 
 # virtual methods
-.method public final DY()V
-    .locals 2
+.method public He(Ljava/lang/String;)I
+    .locals 1
 
     .prologue
-    .line 257
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/n;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 32
+    const/4 v0, -0x1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/n;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->a(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/contact/a;->getCount()I
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->b(Lcom/tencent/mm/ui/contact/AddressUI$a;)V
-
-    .line 258
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/n;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->a(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/contact/a;->aQa()V
-
-    .line 259
-    return-void
-.end method
-
-.method public final DZ()V
-    .locals 0
-
-    .prologue
-    .line 264
-    return-void
+    return v0
 .end method

@@ -1,10 +1,9 @@
 package com.tencent.mm.d.a;
 
-import android.database.Cursor;
-
 public final class bv$b
 {
-  public Cursor cursor;
+  public boolean avl;
+  public String avm;
 }
 
 /* Location:

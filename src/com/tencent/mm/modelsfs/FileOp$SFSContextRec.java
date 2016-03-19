@@ -7,27 +7,27 @@ import android.os.Parcelable.Creator;
 class FileOp$SFSContextRec
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new b();
-  String bKp;
-  String[] bKq;
-  boolean bKr;
-  boolean bKs;
-  SFSContext bKt;
-  SFSContext.Builder bKu;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  String cat;
+  String[] cau;
+  boolean cav;
+  boolean caw;
+  SFSContext cax;
+  SFSContext.Builder cay;
   
   public FileOp$SFSContextRec() {}
   
   FileOp$SFSContextRec(Parcel paramParcel)
   {
-    bKp = paramParcel.readString();
-    bKq = paramParcel.createStringArray();
+    cat = paramParcel.readString();
+    cau = paramParcel.createStringArray();
     if (paramParcel.readByte() != 0) {}
     for (boolean bool = true;; bool = false)
     {
-      bKr = bool;
-      bKt = null;
-      bKs = false;
-      bKu = ((SFSContext.Builder)paramParcel.readParcelable(SFSContext.Builder.class.getClassLoader()));
+      cav = bool;
+      cax = null;
+      caw = false;
+      cay = ((SFSContext.Builder)paramParcel.readParcelable(SFSContext.Builder.class.getClassLoader()));
       return;
     }
   }
@@ -39,13 +39,13 @@ class FileOp$SFSContextRec
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeString(bKp);
-    paramParcel.writeStringArray(bKq);
-    if (bKr) {}
+    paramParcel.writeString(cat);
+    paramParcel.writeStringArray(cau);
+    if (cav) {}
     for (int i = 1;; i = 0)
     {
       paramParcel.writeByte((byte)i);
-      paramParcel.writeParcelable(bKu, paramInt);
+      paramParcel.writeParcelable(cay, paramInt);
       return;
     }
   }

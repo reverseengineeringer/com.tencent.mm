@@ -28,15 +28,15 @@
     .locals 0
 
     .prologue
-    .line 331
+    .line 362
     iput-object p1, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$JsPromptResultImpl;->this$0:Lcom/tencent/smtt/sdk/SystemWebChromeClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 332
+    .line 363
     iput-object p2, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$JsPromptResultImpl;->mJsPromptResult:Landroid/webkit/JsPromptResult;
 
-    .line 333
+    .line 364
     return-void
 .end method
 
@@ -46,12 +46,12 @@
     .locals 1
 
     .prologue
-    .line 337
+    .line 368
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$JsPromptResultImpl;->mJsPromptResult:Landroid/webkit/JsPromptResult;
 
     invoke-virtual {v0}, Landroid/webkit/JsPromptResult;->cancel()V
 
-    .line 338
+    .line 369
     return-void
 .end method
 
@@ -59,12 +59,12 @@
     .locals 1
 
     .prologue
-    .line 342
+    .line 373
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$JsPromptResultImpl;->mJsPromptResult:Landroid/webkit/JsPromptResult;
 
     invoke-virtual {v0}, Landroid/webkit/JsPromptResult;->confirm()V
 
-    .line 344
+    .line 375
     return-void
 .end method
 
@@ -72,11 +72,11 @@
     .locals 1
 
     .prologue
-    .line 348
+    .line 379
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$JsPromptResultImpl;->mJsPromptResult:Landroid/webkit/JsPromptResult;
 
     invoke-virtual {v0, p1}, Landroid/webkit/JsPromptResult;->confirm(Ljava/lang/String;)V
 
-    .line 349
+    .line 380
     return-void
 .end method

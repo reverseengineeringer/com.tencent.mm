@@ -1,27 +1,26 @@
 package com.tencent.mm.plugin.safedevice.ui;
 
-import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.preference.l;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.base.preference.f;
 
 final class MySafeDeviceListUI$a
   implements SafeDeviceListPreference.a, SafeDeviceListPreference.b
 {
   private MySafeDeviceListUI$a(MySafeDeviceListUI paramMySafeDeviceListUI) {}
   
-  public final void pf(String paramString)
+  public final void sK(String paramString)
   {
-    MySafeDeviceListUI.b(eKv).AO(paramString);
-    MySafeDeviceListUI.f(eKv).sendEmptyMessage(0);
-    eKv.a(0, eKv.getString(a.n.safe_device_edit), MySafeDeviceListUI.h(eKv));
-    MySafeDeviceListUI.a(eKv, MySafeDeviceListUI.d(eKv) ^ 0xFFFFFFFF);
-    MySafeDeviceListUI.b(eKv, MySafeDeviceListUI.c(eKv));
+    MySafeDeviceListUI.b(fVh).GC(paramString);
+    MySafeDeviceListUI.f(fVh).sendEmptyMessage(0);
+    fVh.a(0, fVh.getString(2131429290), MySafeDeviceListUI.h(fVh));
+    MySafeDeviceListUI.a(fVh, MySafeDeviceListUI.d(fVh) ^ 0xFFFFFFFF);
+    MySafeDeviceListUI.b(fVh, MySafeDeviceListUI.c(fVh));
   }
   
-  public final void pg(String paramString)
+  public final void sL(String paramString)
   {
-    t.e("!44@/B4Tb64lLpK17Cy+IK1HH08djXQCkIZFwr3WucVnP+g=", "delete safedevice failed" + paramString);
+    u.e("!44@/B4Tb64lLpK17Cy+IK1HH08djXQCkIZFwr3WucVnP+g=", "delete safedevice failed" + paramString);
   }
 }
 

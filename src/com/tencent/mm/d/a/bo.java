@@ -1,24 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class bo
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awz = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auO = new a();
+  public b auP = new b();
   
   public bo()
   {
-    id = "ExposeWithProofFinish";
-    hXT = atO;
+    id = "ExDeviceConnectDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public long awA = 0L;
-    public boolean awB = false;
+    public boolean Jq = false;
+    public String alN;
+    public String auQ;
+  }
+  
+  public static final class b
+  {
+    public boolean auR;
   }
 }
 

@@ -1,103 +1,110 @@
 package com.tencent.mm.app.plugin.b;
 
-import com.tencent.mm.c.b.g;
-import com.tencent.mm.d.a.bz;
-import com.tencent.mm.d.a.bz.a;
-import com.tencent.mm.d.a.bz.b;
-import com.tencent.mm.g.c;
+import com.tencent.mm.d.a.dq;
+import com.tencent.mm.d.a.dq.a;
+import com.tencent.mm.d.a.dq.b;
 import com.tencent.mm.g.h;
-import com.tencent.mm.modelvoice.u;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.modelvoice.k;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class a$f
-  extends e
+  extends com.tencent.mm.sdk.c.c
 {
-  u apA;
-  aj apB;
-  boolean apC;
-  boolean apD;
-  boolean apE;
-  bz apF;
-  Runnable apG;
-  String apy = "";
+  String anC = "";
+  k anE;
+  af anF;
+  boolean anG;
+  boolean anH;
+  boolean anI;
+  dq anJ;
+  Runnable anK;
   
   public a$f()
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(b paramb)
   {
-    if (!(paramd instanceof bz))
+    if (!(paramb instanceof dq))
     {
-      t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+      u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
       return false;
     }
-    paramd = (bz)paramd;
-    if (axl.op == 1)
+    paramb = (dq)paramb;
+    if (axs.op == 1)
     {
-      if (apA == null) {
-        apA = new u();
+      if (anE == null) {
+        anE = new k();
       }
-      apG = axl.apG;
-      if (apA.mStatus == 1) {
-        apA.ml();
+      anK = axs.anK;
+      if (anE.mStatus == 1) {
+        anE.lH();
       }
-      axm.auM = apA.bn(axl.filePath);
-      long l = bn.getInt(h.qb().q("OpenApi", "maxVoiceRecordTime"), 60) * 1000;
-      t.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "MaxVoiceRecordTime (%d)", new Object[] { Long.valueOf(l) });
-      if (apB == null) {
-        apB = new aj(new b(this), false);
+      axt.atR = anE.bp(axs.filePath);
+      long l = ay.getInt(h.pT().z("OpenApi", "maxVoiceRecordTime"), 60) * 1000;
+      u.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "MaxVoiceRecordTime (%d)", new Object[] { Long.valueOf(l) });
+      if (anF == null) {
+        anF = new af(new af.a()
+        {
+          public final boolean lj()
+          {
+            u.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "Voice record timeout.");
+            anI = true;
+            li();
+            return false;
+          }
+        }, false);
       }
-      if (apB.aFk()) {
-        apB.aEN();
+      if (anF.aVf()) {
+        anF.aUF();
       }
-      apE = false;
-      apB.cA(l);
-      apC = false;
-      t.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], ret = [%s]", new Object[] { Integer.valueOf(axl.op), Boolean.valueOf(axm.auM) });
+      anI = false;
+      anF.ds(l);
+      anG = false;
+      u.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], ret = [%s]", new Object[] { Integer.valueOf(axs.op), Boolean.valueOf(axt.atR) });
     }
     for (;;)
     {
       return true;
-      if ((axl.op == 2) && (apA != null))
+      if ((axs.op == 2) && (anE != null))
       {
-        if (!apC)
+        if (!anG)
         {
-          apB.aEN();
-          t.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "Voice record stop.");
-          lN();
+          anF.aUF();
+          u.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "Voice record stop.");
+          li();
         }
-        axm.auM = apD;
-        t.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], fileName = [%s], ret = [%s]", new Object[] { Integer.valueOf(axl.op), apy, Boolean.valueOf(axm.auM) });
-        apy = "";
-        apD = false;
+        axt.atR = anH;
+        u.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], fileName = [%s], ret = [%s]", new Object[] { Integer.valueOf(axs.op), anC, Boolean.valueOf(axt.atR) });
+        anC = "";
+        anH = false;
       }
     }
   }
   
-  final void lN()
+  final void li()
   {
-    if (apA != null)
+    if (anE != null)
     {
-      apD = apA.ml();
-      if (apG != null)
+      anH = anE.lH();
+      if (anK != null)
       {
-        if (apF != null)
+        if (anJ != null)
         {
-          apF.axm.axn = apA.arG.ast;
-          apF = null;
+          anJ.axt.axu = anE.apL.aqy;
+          anJ = null;
         }
-        if (apE) {
-          apG.run();
+        if (anI) {
+          anK.run();
         }
-        apG = null;
+        anK = null;
       }
-      apC = true;
+      anG = true;
     }
   }
 }

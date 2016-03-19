@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cj
-  extends a.c
+  extends a.e
 {
   public a$cj()
   {
-    super("shareQQ", "shareQQ", 90, false);
+    super("newyearOpenUrlWithExtraWebview", "newyearOpenUrlWithExtraWebview", 10005, false);
   }
 }
 

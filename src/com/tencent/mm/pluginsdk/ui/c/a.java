@@ -1,40 +1,40 @@
 package com.tencent.mm.pluginsdk.ui.c;
 
 import com.tencent.mm.plugin.sight.base.SightVideoJNI;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 public final class a
   extends com.tencent.mm.ui.tools.a.a
 {
-  private String fgY;
-  public int fi = 104857600;
-  private a gWk;
+  private String gxe;
+  private a iML;
+  public int mSize = 104857600;
   
   private a(String paramString)
   {
-    fgY = paramString;
+    gxe = paramString;
   }
   
-  public static a uT(String paramString)
+  public static a AK(String paramString)
   {
     return new a(paramString);
   }
   
-  public final int aBv()
+  public final int aSp()
   {
-    return aBw();
+    return aSq();
   }
   
-  protected final int aBw()
+  protected final int aSq()
   {
-    if (bn.iW(fgY)) {
-      t.w("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "dz[check video but path is null or nil]");
+    if (ay.kz(gxe)) {
+      u.w("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "dz[check video but path is null or nil]");
     }
-    boolean bool = al.cT(aa.getContext());
-    String str = fgY;
+    boolean bool = ah.dx(y.getContext());
+    String str = gxe;
     int i;
     if (bool)
     {
@@ -45,16 +45,16 @@ public final class a
       }
     }
     label172:
-    for (double d = 60000.0D;; d = fi)
+    for (double d = 60000.0D;; d = mSize)
     {
-      i = SightVideoJNI.shouldRemuxing(str, 640, 480, i, d, 800000);
-      t.i("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "check should remuxing, ret %d", new Object[] { Integer.valueOf(i) });
+      i = SightVideoJNI.shouldRemuxing(str, 660, 500, i, d, 1000000);
+      u.i("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "check should remuxing, ret %d", new Object[] { Integer.valueOf(i) });
       switch (i)
       {
       default: 
-        t.e("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "unknown check type %d", new Object[] { Integer.valueOf(i) });
+        u.e("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "unknown check type %d", new Object[] { Integer.valueOf(i) });
         return 1;
-        i = fi;
+        i = mSize;
         break label39;
       }
     }
@@ -62,14 +62,14 @@ public final class a
     return 1;
   }
   
-  protected final void aBx()
+  protected final void aSr()
   {
-    if (gWk == null)
+    if (iML == null)
     {
-      t.w("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "dz[callback is null]");
+      u.w("!44@/B4Tb64lLpKN1sQ+P5w+hi17h4teZKb0JWAkVqFiAao=", "dz[callback is null]");
       return;
     }
-    aBw();
+    aSq();
   }
   
   public static abstract interface a {}

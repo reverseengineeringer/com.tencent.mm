@@ -3,63 +3,62 @@ package com.tencent.mm.ui.contact;
 import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.d.b.k;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.chatting.ChattingUI;
 import com.tencent.mm.ui.contact.a.a;
 
 public class SelectSpecialContactUI
   extends MMBaseSelectContactUI
 {
-  private int jhy;
+  private int dbS;
   private String title;
   
-  protected final String WX()
+  protected final void Ou()
+  {
+    super.Ou();
+    title = getIntent().getStringExtra("titile");
+    dbS = getIntent().getIntExtra("list_attr", 0);
+  }
+  
+  protected final String afU()
   {
     return title;
   }
   
-  protected final boolean Yg()
+  protected final boolean ahC()
   {
     return false;
   }
   
-  protected final da Yh()
+  protected final n ahD()
   {
-    return new eq(this, getIntent().getStringExtra("filter_type"));
+    return new v(this, getIntent().getStringExtra("filter_type"));
   }
   
-  protected final db Yi()
+  protected final p ahE()
   {
     return null;
   }
   
-  protected final void initData()
-  {
-    super.initData();
-    title = getIntent().getStringExtra("titile");
-    jhy = getIntent().getIntExtra("list_attr", 0);
-  }
-  
   public void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    paramAdapterView = aQu().op(paramInt);
+    paramAdapterView = bhp().rM(paramInt);
     if (paramAdapterView == null) {}
-    while (cqE == null) {
+    while (cId == null) {
       return;
     }
-    paramAdapterView = cqE.field_username;
-    t.i("!44@/B4Tb64lLpLXgGazfMudjQwDSbIF5kbc960s6N0ug7g=", "ClickUser=%s", new Object[] { paramAdapterView });
+    paramAdapterView = cId.field_username;
+    u.i("!44@/B4Tb64lLpLXgGazfMudjQwDSbIF5kbc960s6N0ug7g=", "ClickUser=%s", new Object[] { paramAdapterView });
     paramView = new Intent();
-    if (de.aG(jhy, 16384))
+    if (r.aW(dbS, 16384))
     {
       paramView.putExtra("Select_Contact", paramAdapterView);
       setResult(-1, paramView);
       finish();
       return;
     }
-    if (de.aG(jhy, 32768))
+    if (r.aW(dbS, 32768))
     {
       paramView.putExtra("Contact_User", paramAdapterView);
       c.c(this, "profile", ".ui.ContactInfoUI", paramView);

@@ -71,9 +71,9 @@
 
     .prologue
     .line 202
-    new-instance v0, Loicq/wlogin_sdk/sharemem/b;
+    new-instance v0, Loicq/wlogin_sdk/sharemem/WloginSigInfo$1;
 
-    invoke-direct {v0}, Loicq/wlogin_sdk/sharemem/b;-><init>()V
+    invoke-direct {v0}, Loicq/wlogin_sdk/sharemem/WloginSigInfo$1;-><init>()V
 
     sput-object v0, Loicq/wlogin_sdk/sharemem/WloginSigInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 

@@ -15,19 +15,19 @@
 
 
 # instance fields
-.field public ciI:Landroid/widget/ImageView;
+.field public cHk:Landroid/widget/TextView;
 
-.field public cpL:Landroid/widget/TextView;
+.field public cHl:Landroid/widget/TextView;
 
-.field public cpM:Landroid/widget/TextView;
+.field public cHm:Landroid/widget/TextView;
 
-.field public cpN:Landroid/widget/TextView;
+.field public cHo:Landroid/widget/TextView;
 
-.field public cpP:Landroid/widget/TextView;
+.field public czS:Landroid/widget/ImageView;
 
-.field public jjE:Landroid/widget/ImageView;
+.field public lnI:Landroid/widget/ImageView;
 
-.field public jjF:Landroid/widget/ImageView;
+.field public lnJ:Landroid/widget/ImageView;
 
 
 # direct methods

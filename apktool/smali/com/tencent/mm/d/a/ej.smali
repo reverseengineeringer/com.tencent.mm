@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/ej;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -13,15 +13,15 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aAD:Lcom/tencent/mm/d/a/ej$a;
+.field public ayZ:Lcom/tencent/mm/d/a/ej$a;
 
-.field public aAE:Lcom/tencent/mm/d/a/ej$b;
+.field public aza:Lcom/tencent/mm/d/a/ej$b;
 
 
 # direct methods
@@ -32,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/ej;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ej;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/ej;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ej;->arR:Z
 
     return-void
 .end method
@@ -45,30 +45,30 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/ej$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/ej$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/ej;->aAD:Lcom/tencent/mm/d/a/ej$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/ej;->ayZ:Lcom/tencent/mm/d/a/ej$a;
 
-    .line 19
+    .line 17
     new-instance v0, Lcom/tencent/mm/d/a/ej$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/ej$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/ej;->aAE:Lcom/tencent/mm/d/a/ej$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/ej;->aza:Lcom/tencent/mm/d/a/ej$b;
 
     .line 8
-    const-string/jumbo v0, "NetSceneCreateChatRoom"
+    const-string/jumbo v0, "FileDownloadPause"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/ej;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/ej;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/ej;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ej;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ej;->jUI:Z
 
     return-void
 .end method

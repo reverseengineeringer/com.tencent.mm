@@ -1,59 +1,64 @@
 package com.tencent.mm.protocal.b;
 
 public final class bc
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public int hjY;
-  public int hjZ;
-  public int hka;
-  public int hkb;
+  public String iYc;
+  public String iYd;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.bM(1, hjY);
-      paramVarArgs.bM(2, hjZ);
-      paramVarArgs.bM(3, hka);
-      paramVarArgs.bM(4, hkb);
+      if (iYc != null) {
+        paramVarArgs.d(1, iYc);
+      }
+      if (iYd != null) {
+        paramVarArgs.d(2, iYd);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.bI(1, hjY) + 0 + a.a.a.a.bI(2, hjZ) + a.a.a.a.bI(3, hka) + a.a.a.a.bI(4, hkb);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
-        }
+      if (iYc == null) {
+        break label234;
       }
-      return 0;
     }
-    if (paramInt == 3)
+    label234:
+    for (paramInt = a.a.a.b.b.a.e(1, iYc) + 0;; paramInt = 0)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      bc localbc = (bc)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      int i = paramInt;
+      if (iYd != null) {
+        i = paramInt + a.a.a.b.b.a.e(2, iYd);
+      }
+      return i;
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
-      case 1: 
-        hjY = jMD.aVp();
-        return 0;
-      case 2: 
-        hjZ = jMD.aVp();
-        return 0;
-      case 3: 
-        hka = jMD.aVp();
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        bc localbc = (bc)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          iYc = maU.readString();
+          return 0;
+        }
+        iYd = maU.readString();
         return 0;
       }
-      hkb = jMD.aVp();
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

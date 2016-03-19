@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field public gXH:Landroid/view/View$OnClickListener;
+.field public iOa:Landroid/view/View$OnClickListener;
 
-.field public iNk:Landroid/view/View$OnClickListener;
+.field public kMx:Landroid/view/View$OnClickListener;
 
-.field public iqM:I
+.field public kpE:I
 
 
 # direct methods
@@ -35,18 +35,18 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 17
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->gXH:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->iOa:Landroid/view/View$OnClickListener;
 
     .line 18
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->iNk:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->kMx:Landroid/view/View$OnClickListener;
 
     .line 20
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->iqM:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->kpE:I
 
     .line 32
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_info_center:I
+    const v0, 0x7f0a05b1
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->setLayoutResource(I)V
 
@@ -107,7 +107,7 @@
 
     .line 56
     :goto_1
-    sget v0, Lcom/tencent/mm/a$i;->add_my_qrcode:I
+    const v0, 0x7f0710c0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,17 +116,17 @@
     check-cast v0, Landroid/widget/ImageView;
 
     .line 57
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->gXH:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->iOa:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 58
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->iqM:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->kpE:I
 
     if-lez v1, :cond_3
 
     .line 59
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->iqM:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->kpE:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -147,7 +147,7 @@
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 53
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->iNk:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/PreferenceInfoCategory;->kMx:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

@@ -11,23 +11,23 @@
 
 
 # instance fields
-.field public aCl:D
+.field public aBp:I
 
-.field public aCm:D
+.field public bOh:Lcom/tencent/mm/modelgeo/Addr;
 
-.field public aCn:I
+.field public eJj:Ljava/lang/String;
 
-.field public bAW:Lcom/tencent/mm/modelgeo/Addr;
+.field public eLJ:Ljava/lang/String;
 
-.field public dHq:Ljava/lang/String;
+.field public izE:Ljava/lang/String;
 
-.field public dMF:Ljava/lang/String;
-
-.field public gKU:Ljava/lang/String;
-
-.field public gKV:I
+.field public izF:I
 
 .field public label:Ljava/lang/String;
+
+.field public lat:D
+
+.field public lng:D
 
 
 # direct methods
@@ -36,9 +36,9 @@
 
     .prologue
     .line 55
-    new-instance v0, Lcom/tencent/mm/pluginsdk/location/b;
+    new-instance v0, Lcom/tencent/mm/pluginsdk/location/LocationIntent$1;
 
-    invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/location/b;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/location/LocationIntent$1;-><init>()V
 
     sput-object v0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -55,7 +55,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 12
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aCn:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aBp:I
 
     .line 13
     const-string/jumbo v0, ""
@@ -65,27 +65,27 @@
     .line 14
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->dMF:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->eLJ:Ljava/lang/String;
 
     .line 15
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->gKU:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->izE:Ljava/lang/String;
 
     .line 17
-    iput v1, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->gKV:I
+    iput v1, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->izF:I
 
     .line 19
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->bAW:Lcom/tencent/mm/modelgeo/Addr;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->bOh:Lcom/tencent/mm/modelgeo/Addr;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final Gs()Ljava/lang/String;
+.method public final ID()Ljava/lang/String;
     .locals 4
 
     .prologue
@@ -101,7 +101,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aCl:D
+    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->lat:D
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -126,7 +126,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aCm:D
+    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->lng:D
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/StringBuilder;->append(D)Ljava/lang/StringBuilder;
 
@@ -151,7 +151,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aCn:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aBp:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -201,7 +201,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->dMF:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->eLJ:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -226,7 +226,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->gKU:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->izE:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -251,7 +251,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->dHq:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->eJj:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -276,7 +276,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->gKV:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->izF:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -295,7 +295,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     .line 31
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->bAW:Lcom/tencent/mm/modelgeo/Addr;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->bOh:Lcom/tencent/mm/modelgeo/Addr;
 
     if-eqz v1, :cond_0
 
@@ -306,7 +306,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->bAW:Lcom/tencent/mm/modelgeo/Addr;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->bOh:Lcom/tencent/mm/modelgeo/Addr;
 
     invoke-virtual {v2}, Lcom/tencent/mm/modelgeo/Addr;->toString()Ljava/lang/String;
 
@@ -352,17 +352,17 @@
 
     .prologue
     .line 43
-    iget-wide v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aCl:D
+    iget-wide v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->lat:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
     .line 44
-    iget-wide v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aCm:D
+    iget-wide v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->lng:D
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeDouble(D)V
 
     .line 45
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aCn:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->aBp:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
@@ -372,27 +372,27 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 47
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->dMF:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->eLJ:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 48
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->gKU:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->izE:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 49
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->dHq:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->eJj:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 50
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->gKV:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->izF:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->bAW:Lcom/tencent/mm/modelgeo/Addr;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/location/LocationIntent;->bOh:Lcom/tencent/mm/modelgeo/Addr;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 

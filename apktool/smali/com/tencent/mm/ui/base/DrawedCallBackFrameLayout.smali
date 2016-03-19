@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field private iCR:Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;
+.field private kBV:Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;
 
 
 # direct methods
@@ -41,19 +41,19 @@
 
     .line 34
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout;->iCR:Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout;->kBV:Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;
 
     if-eqz v0, :cond_0
 
     .line 35
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout;->iCR:Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout;->kBV:Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;->lb()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;->kw()V
 
     .line 36
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout;->iCR:Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout;->kBV:Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;
 
     .line 38
     :cond_0
@@ -81,7 +81,7 @@
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout;->iCR:Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout;->kBV:Lcom/tencent/mm/ui/base/DrawedCallBackFrameLayout$a;
 
     .line 46
     return-void

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cr
-  extends a.c
+  extends a.e
 {
   public a$cr()
   {
-    super("startTempSession", "startTempSession", 128, true);
+    super("openDesignerEmojiView", "openDesignerEmojiView", 185, true);
   }
 }
 

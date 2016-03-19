@@ -2,10 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class bu$a
 {
-  public String axa;
-  public String content;
-  public int flags;
-  public int type;
+  public long avg;
 }
 
 /* Location:

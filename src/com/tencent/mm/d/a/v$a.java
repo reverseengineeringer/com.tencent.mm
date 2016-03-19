@@ -2,8 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class v$a
 {
-  public String auH;
-  public int state;
+  public String filePath;
 }
 
 /* Location:

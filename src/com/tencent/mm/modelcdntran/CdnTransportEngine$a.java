@@ -8,7 +8,7 @@ abstract interface CdnTransportEngine$a
   
   public abstract void a(String paramString, ByteArrayOutputStream paramByteArrayOutputStream);
   
-  public abstract byte[] f(String paramString, byte[] paramArrayOfByte);
+  public abstract byte[] i(String paramString, byte[] paramArrayOfByte);
 }
 
 /* Location:

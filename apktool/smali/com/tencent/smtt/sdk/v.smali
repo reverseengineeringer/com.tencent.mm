@@ -1,93 +1,181 @@
 .class final Lcom/tencent/smtt/sdk/v;
-.super Ljava/lang/Thread;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # instance fields
-.field final synthetic jKK:Lcom/tencent/smtt/sdk/s;
-
-.field final synthetic jKL:Landroid/content/Context;
-
-.field final synthetic jKM:Landroid/content/Context;
+.field protected mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/smtt/sdk/s;Landroid/content/Context;Landroid/content/Context;)V
-    .locals 0
+.method public constructor <init>(Lcom/tencent/smtt/export/external/DexLoader;)V
+    .locals 1
 
     .prologue
-    .line 1094
-    iput-object p1, p0, Lcom/tencent/smtt/sdk/v;->jKK:Lcom/tencent/smtt/sdk/s;
+    .line 19
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object p2, p0, Lcom/tencent/smtt/sdk/v;->jKL:Landroid/content/Context;
+    .line 16
+    const/4 v0, 0x0
 
-    iput-object p3, p0, Lcom/tencent/smtt/sdk/v;->jKM:Landroid/content/Context;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/v;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
 
-    invoke-direct {p0}, Ljava/lang/Thread;-><init>()V
+    .line 20
+    iput-object p1, p0, Lcom/tencent/smtt/sdk/v;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
 
+    .line 21
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final a(Ljava/lang/Object;Landroid/app/Activity;I)V
+    .locals 8
 
     .prologue
-    .line 1097
-    const-string/jumbo v0, "TbsInstaller"
+    const/4 v5, 0x2
 
-    const-string/jumbo v1, "TbsInstaller--quickDexOptForThirdPartyApp thread start"
+    const/4 v7, 0x1
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v6, 0x0
 
-    .line 1100
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/v;->jKL:Landroid/content/Context;
+    .line 60
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/v;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
 
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/s;->ez(Landroid/content/Context;)Ljava/io/File;
+    const-string/jumbo v2, "com.tencent.tbs.player.TbsPlayerProxy"
 
-    move-result-object v0
+    const-string/jumbo v3, "onActivity"
 
-    .line 1101
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/v;->jKM:Landroid/content/Context;
+    new-array v4, v5, [Ljava/lang/Class;
 
-    invoke-static {v1}, Lcom/tencent/smtt/sdk/s;->ez(Landroid/content/Context;)Ljava/io/File;
+    const-class v1, Landroid/app/Activity;
+
+    aput-object v1, v4, v6
+
+    sget-object v1, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
+
+    aput-object v1, v4, v7
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    aput-object p2, v5, v6
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 1104
-    new-instance v2, Lcom/tencent/smtt/sdk/w;
+    aput-object v1, v5, v7
 
-    invoke-direct {v2, p0}, Lcom/tencent/smtt/sdk/w;-><init>(Lcom/tencent/smtt/sdk/v;)V
+    move-object v1, p1
 
-    .line 1109
-    invoke-static {v0, v1, v2}, Lcom/tencent/smtt/a/e;->a(Ljava/io/File;Ljava/io/File;Ljava/io/FileFilter;)Z
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/smtt/export/external/DexLoader;->invokeMethod(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1112
-    new-instance v2, Lcom/tencent/smtt/sdk/x;
-
-    invoke-direct {v2, p0}, Lcom/tencent/smtt/sdk/x;-><init>(Lcom/tencent/smtt/sdk/v;)V
-
-    .line 1118
-    invoke-static {v0, v1, v2}, Lcom/tencent/smtt/a/e;->a(Ljava/io/File;Ljava/io/File;Ljava/io/FileFilter;)Z
-
-    .line 1119
-    const-string/jumbo v0, "TbsInstaller"
-
-    const-string/jumbo v1, "TbsInstaller--quickDexOptForThirdPartyApp thread done"
-
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 1122
-    :goto_0
+    .line 61
     return-void
+.end method
 
-    .line 1121
-    :catch_0
-    move-exception v0
+.method public final a(Ljava/lang/Object;Landroid/os/Bundle;Landroid/widget/FrameLayout;Ljava/lang/Object;)Z
+    .locals 8
+
+    .prologue
+    const/4 v5, 0x2
+
+    const/4 v7, 0x1
+
+    const/4 v6, 0x0
+
+    .line 32
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/v;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+
+    const-string/jumbo v2, "com.tencent.tbs.player.TbsPlayerProxy"
+
+    const-string/jumbo v3, "play"
+
+    new-array v4, v5, [Ljava/lang/Class;
+
+    const-class v1, Landroid/os/Bundle;
+
+    aput-object v1, v4, v6
+
+    const-class v1, Landroid/widget/FrameLayout;
+
+    aput-object v1, v4, v7
+
+    new-array v5, v5, [Ljava/lang/Object;
+
+    aput-object p2, v5, v6
+
+    aput-object p3, v5, v7
+
+    move-object v1, p1
+
+    invoke-virtual/range {v0 .. v5}, Lcom/tencent/smtt/export/external/DexLoader;->invokeMethod(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 47
+    instance-of v1, v0, Ljava/lang/Boolean;
+
+    if-eqz v1, :cond_0
+
+    .line 49
+    check-cast v0, Ljava/lang/Boolean;
+
+    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
+
+    move-result v0
+
+    .line 53
+    :goto_0
+    return v0
+
+    :cond_0
+    move v0, v6
 
     goto :goto_0
+.end method
+
+.method public final fD(Landroid/content/Context;)Ljava/lang/Object;
+    .locals 7
+
+    .prologue
+    const/4 v6, 0x2
+
+    const/4 v5, 0x1
+
+    const/4 v4, 0x0
+
+    .line 25
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/v;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+
+    const-string/jumbo v1, "com.tencent.tbs.player.TbsPlayerProxy"
+
+    new-array v2, v6, [Ljava/lang/Class;
+
+    const-class v3, Landroid/content/Context;
+
+    aput-object v3, v2, v4
+
+    const-class v3, Ldalvik/system/DexClassLoader;
+
+    aput-object v3, v2, v5
+
+    new-array v3, v6, [Ljava/lang/Object;
+
+    aput-object p1, v3, v4
+
+    iget-object v4, p0, Lcom/tencent/smtt/sdk/v;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+
+    invoke-virtual {v4}, Lcom/tencent/smtt/export/external/DexLoader;->getClassLoader()Ldalvik/system/DexClassLoader;
+
+    move-result-object v4
+
+    aput-object v4, v3, v5
+
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/smtt/export/external/DexLoader;->newInstance(Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    .line 27
+    return-object v0
 .end method

@@ -1,5 +1,6 @@
 package com.tencent.mm.ui;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
@@ -10,18 +11,20 @@ import android.os.Build.VERSION;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.view.KeyEvent;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.FrameLayout;
+import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
-import com.tencent.mm.a.g;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.o;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.tools.ex;
+import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.p;
+import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.ui.tools.r;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -32,11 +35,62 @@ public abstract class MMActivity
   extends MMFragmentActivity
 {
   String className;
-  public boolean ipP = false;
-  public cn ipQ = new cl(this);
-  public a ipR = null;
+  public boolean koI = false;
+  public j koJ = new j()
+  {
+    protected final void aNa()
+    {
+      MMActivity.this.aNa();
+    }
+    
+    public final boolean aNj()
+    {
+      return MMActivity.this.aNj();
+    }
+    
+    public final boolean aZY()
+    {
+      return MMActivity.this.aZY();
+    }
+    
+    protected final String amX()
+    {
+      return MMActivity.this.amX();
+    }
+    
+    public final void ayk()
+    {
+      MMActivity.this.ayk();
+    }
+    
+    protected final boolean baL()
+    {
+      return MMActivity.this.baL();
+    }
+    
+    protected final View baY()
+    {
+      return null;
+    }
+    
+    protected final void dealContentView(View paramAnonymousView)
+    {
+      MMActivity.this.dealContentView(paramAnonymousView);
+    }
+    
+    protected final String getClassName()
+    {
+      return getClass().getName();
+    }
+    
+    protected final int getLayoutId()
+    {
+      return MMActivity.this.getLayoutId();
+    }
+  };
+  public a koK = null;
   
-  public static void B(Activity paramActivity)
+  public static void I(Activity paramActivity)
   {
     InputMethodManager localInputMethodManager = (InputMethodManager)paramActivity.getSystemService("input_method");
     if (localInputMethodManager == null) {}
@@ -48,113 +102,111 @@ public abstract class MMActivity
     localInputMethodManager.toggleSoftInput(0, 2);
   }
   
-  public static void aLa() {}
+  public static void baO() {}
   
-  public static Locale dn(Context paramContext)
+  public static Locale dS(Context paramContext)
   {
-    return cn.dn(paramContext);
+    return j.dS(paramContext);
   }
   
-  public final void A(int paramInt, boolean paramBoolean)
+  public final void B(CharSequence paramCharSequence)
   {
-    ipQ.a(false, paramInt, paramBoolean);
+    koJ.B(paramCharSequence);
   }
   
-  public final void At(String paramString)
+  public final void F(Runnable paramRunnable)
   {
-    ipQ.At(paramString);
-  }
-  
-  public final void Au(String paramString)
-  {
-    ipQ.Au(paramString);
-  }
-  
-  public final void B(int paramInt, boolean paramBoolean)
-  {
-    ipQ.b(false, paramInt, paramBoolean);
+    j localj = koJ;
+    if (iH == null) {
+      return;
+    }
+    iH.getCustomView().setOnClickListener(new j.2(localj, paramRunnable));
   }
   
   @Deprecated
-  public void DV() {}
+  public void Gb() {}
   
-  public int HX()
+  public final void Gj(String paramString)
+  {
+    koJ.Gj(paramString);
+  }
+  
+  public final void Gk(String paramString)
+  {
+    koJ.Gk(paramString);
+  }
+  
+  public int Kj()
   {
     return -1;
   }
   
-  public final void L(int paramInt, String paramString)
+  public final void M(int paramInt, boolean paramBoolean)
   {
-    cn localcn = ipQ;
-    cn.a locala = localcn.nm(paramInt);
-    if ((locala != null) && (!bn.U(paramString, "").equals(text)))
-    {
-      text = paramString;
-      localcn.L();
-    }
+    koJ.a(false, paramInt, paramBoolean);
   }
   
-  public boolean Rb()
+  public final void N(int paramInt, boolean paramBoolean)
   {
-    return false;
-  }
-  
-  public void Xh()
-  {
-    ipQ.aLo();
+    koJ.b(false, paramInt, paramBoolean);
   }
   
   public final void a(int paramInt1, int paramInt2, int paramInt3, MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
   {
-    ipQ.a(paramInt1, paramInt2, paramInt3, paramOnMenuItemClickListener);
+    koJ.a(paramInt1, paramInt2, paramInt3, paramOnMenuItemClickListener);
   }
   
   public final void a(int paramInt1, int paramInt2, MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
   {
-    ipQ.a(paramInt1, paramInt2, "", paramOnMenuItemClickListener, null, cn.b.iqQ);
+    koJ.a(paramInt1, paramInt2, paramOnMenuItemClickListener);
   }
   
   public void a(int paramInt, String paramString, MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
   {
-    ipQ.a(paramInt, 0, paramString, paramOnMenuItemClickListener, null, cn.b.iqQ);
+    koJ.a(paramInt, 0, paramString, paramOnMenuItemClickListener, null, j.b.kpI);
   }
   
   public final void a(int paramInt1, String paramString, MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener, int paramInt2)
   {
-    ipQ.a(paramInt1, paramString, paramOnMenuItemClickListener, null, paramInt2);
+    koJ.a(paramInt1, paramString, paramOnMenuItemClickListener, null, paramInt2);
   }
   
   public final void a(Dialog paramDialog)
   {
-    cn localcn = ipQ;
+    j localj = koJ;
     if (paramDialog != null)
     {
-      if (iqo == null) {
-        iqo = new ArrayList();
+      if (kph == null) {
+        kph = new ArrayList();
       }
-      iqo.add(paramDialog);
+      kph.add(paramDialog);
     }
   }
   
-  public void a(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
+  public final void a(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
   {
-    ipQ.a(paramOnMenuItemClickListener, 0);
+    j.a locala = koJ.qg(1);
+    if (locala != null)
+    {
+      fVg = paramOnMenuItemClickListener;
+      dTW = null;
+    }
   }
   
   public final void a(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener, int paramInt)
   {
-    ipQ.a(paramOnMenuItemClickListener, paramInt);
+    koJ.a(paramOnMenuItemClickListener, paramInt);
   }
   
   public final void a(a parama, Intent paramIntent, int paramInt)
   {
-    ipR = parama;
+    koK = parama;
     startActivityForResult(paramIntent, paramInt);
   }
   
-  public final void a(ex paramex)
+  public final void a(r paramr)
   {
-    ipQ.a(true, paramex);
+    koJ.a(true, paramr);
   }
   
   public final void a(Class paramClass, Intent paramIntent)
@@ -163,141 +215,24 @@ public abstract class MMActivity
     startActivity(paramIntent);
   }
   
-  public boolean aKX()
+  public boolean aCT()
   {
-    return false;
+    return true;
   }
   
-  public void aKY() {}
-  
-  public boolean aKZ()
+  public int aNP()
   {
-    return false;
+    return koJ.kps;
   }
   
-  public boolean aKk()
-  {
-    return false;
-  }
+  public void aNa() {}
   
-  public final boolean aLb()
+  public void aNc()
   {
-    Iterator localIterator = ipQ.iqm.iterator();
-    while (localIterator.hasNext())
+    if (Kj() == -1)
     {
-      cn.a locala = (cn.a)localIterator.next();
-      if (iqL == 0) {
-        return cqF;
-      }
-    }
-    return false;
-  }
-  
-  public final boolean aLc()
-  {
-    Iterator localIterator = ipQ.iqm.iterator();
-    while (localIterator.hasNext())
-    {
-      cn.a locala = (cn.a)localIterator.next();
-      if (iqL == 0) {
-        return auv;
-      }
-    }
-    return false;
-  }
-  
-  public final void aLd()
-  {
-    boolean bool = true;
-    cn localcn = ipQ;
-    if (jA != null) {}
-    for (;;)
-    {
-      t.v("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", "hideTitleView hasTitle:%b", new Object[] { Boolean.valueOf(bool) });
-      if (jA != null) {
-        jA.hide();
-      }
-      return;
-      bool = false;
-    }
-  }
-  
-  public final void aLe()
-  {
-    boolean bool = true;
-    cn localcn = ipQ;
-    if (jA != null) {}
-    for (;;)
-    {
-      t.v("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", "showTitleView hasTitle:%b", new Object[] { Boolean.valueOf(bool) });
-      if (jA != null) {
-        jA.show();
-      }
-      return;
-      bool = false;
-    }
-  }
-  
-  public final boolean aLf()
-  {
-    boolean bool = true;
-    cn localcn = ipQ;
-    if (jA != null) {}
-    for (;;)
-    {
-      t.v("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", "isTitleShowing hasTitle:%b", new Object[] { Boolean.valueOf(bool) });
-      if (jA != null) {
-        break;
-      }
-      return false;
-      bool = false;
-    }
-    return jA.isShowing();
-  }
-  
-  public final int aLg()
-  {
-    cn localcn = ipQ;
-    if (jA == null) {
-      return 0;
-    }
-    return jA.getHeight();
-  }
-  
-  public final void aLh()
-  {
-    cn localcn = ipQ;
-    iqt.setVisibility(0);
-    iqs.setVisibility(8);
-    iqr.setVisibility(8);
-  }
-  
-  public final void aLi()
-  {
-    cn localcn = ipQ;
-    if (mContext != null) {
-      localcn.I(iqj);
-    }
-  }
-  
-  public String aci()
-  {
-    return "";
-  }
-  
-  public void aeG()
-  {
-    ipQ.aeG();
-  }
-  
-  public void axq() {}
-  
-  public void axr()
-  {
-    if (HX() == -1)
-    {
-      ipP = getSharedPreferences(aa.aES(), 0).getBoolean("settings_landscape_mode", false);
-      if (ipP)
+      koI = getSharedPreferences(y.aUK(), 0).getBoolean("settings_landscape_mode", false);
+      if (koI)
       {
         setRequestedOrientation(-1);
         return;
@@ -305,56 +240,252 @@ public abstract class MMActivity
       setRequestedOrientation(1);
       return;
     }
-    setRequestedOrientation(HX());
+    setRequestedOrientation(Kj());
   }
   
-  public void axt()
+  public void aNg()
   {
-    if (!aKZ()) {
-      ipQ.aLl();
+    if (!baN()) {
+      koJ.bba();
     }
-    super.axt();
+    super.aNg();
   }
   
-  public boolean axv()
+  public boolean aNj()
   {
     return true;
   }
   
+  public boolean aZY()
+  {
+    return false;
+  }
+  
+  public final void ad(int paramInt, String paramString)
+  {
+    j localj = koJ;
+    j.a locala = localj.qg(paramInt);
+    if ((locala != null) && (!ay.ad(paramString, "").equals(text)))
+    {
+      text = paramString;
+      localj.G();
+    }
+  }
+  
+  public void age()
+  {
+    koJ.VC();
+  }
+  
+  public String amX()
+  {
+    return "";
+  }
+  
+  public void apz()
+  {
+    koJ.apz();
+  }
+  
+  public void ayk() {}
+  
+  public void b(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
+  {
+    koJ.a(paramOnMenuItemClickListener, 0);
+  }
+  
+  public final void bC(boolean paramBoolean)
+  {
+    koJ.a(true, -1, paramBoolean);
+  }
+  
+  public boolean baL()
+  {
+    return false;
+  }
+  
+  protected final void baM()
+  {
+    j localj = koJ;
+    if (koR == null) {
+      koR = ((FrameLayout)cMt.findViewById(2131169402));
+    }
+    if (koP != null) {
+      koR.removeView(koP);
+    }
+    koR.removeView(koO);
+    koO = ((LayoutInflater)mContext.getSystemService("layout_inflater")).inflate(2131361950, null);
+    koR.addView(koO, 0, new FrameLayout.LayoutParams(-1, -1));
+    if (koP != null)
+    {
+      FrameLayout.LayoutParams localLayoutParams = new FrameLayout.LayoutParams(-1, BackwardSupportUtil.b.a(mContext, 47.0F));
+      koR.addView(koP, koR.getChildCount(), localLayoutParams);
+    }
+    koR.invalidate();
+  }
+  
+  public boolean baN()
+  {
+    return false;
+  }
+  
+  public final void baP()
+  {
+    j localj = koJ;
+    if (kpi == null) {
+      return;
+    }
+    kpi.setVisibility(8);
+  }
+  
+  public final boolean baQ()
+  {
+    Iterator localIterator = koJ.kpf.iterator();
+    while (localIterator.hasNext())
+    {
+      j.a locala = (j.a)localIterator.next();
+      if (kpD == 0) {
+        return aur;
+      }
+    }
+    return false;
+  }
+  
+  public final boolean baR()
+  {
+    Iterator localIterator = koJ.kpf.iterator();
+    while (localIterator.hasNext())
+    {
+      j.a locala = (j.a)localIterator.next();
+      if (kpD == 0) {
+        return asK;
+      }
+    }
+    return false;
+  }
+  
+  public final CharSequence baS()
+  {
+    j localj = koJ;
+    if (iH == null) {
+      return null;
+    }
+    if (koT != null) {
+      return koT;
+    }
+    return iH.getTitle();
+  }
+  
+  public final void baT()
+  {
+    boolean bool = true;
+    j localj = koJ;
+    if (iH != null) {}
+    for (;;)
+    {
+      com.tencent.mm.sdk.platformtools.u.v("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", "hideTitleView hasTitle:%b", new Object[] { Boolean.valueOf(bool) });
+      if (iH != null) {
+        iH.hide();
+      }
+      return;
+      bool = false;
+    }
+  }
+  
+  public final void baU()
+  {
+    boolean bool = true;
+    j localj = koJ;
+    if (iH != null) {}
+    for (;;)
+    {
+      com.tencent.mm.sdk.platformtools.u.v("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", "showTitleView hasTitle:%b", new Object[] { Boolean.valueOf(bool) });
+      if (iH != null) {
+        iH.show();
+      }
+      return;
+      bool = false;
+    }
+  }
+  
+  public final boolean baV()
+  {
+    boolean bool = true;
+    j localj = koJ;
+    if (iH != null) {}
+    for (;;)
+    {
+      com.tencent.mm.sdk.platformtools.u.v("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", "isTitleShowing hasTitle:%b", new Object[] { Boolean.valueOf(bool) });
+      if (iH != null) {
+        break;
+      }
+      return false;
+      bool = false;
+    }
+    return iH.isShowing();
+  }
+  
+  public final void baW()
+  {
+    j localj = koJ;
+    kpm.setVisibility(0);
+    kpl.setVisibility(8);
+    kpk.setVisibility(8);
+  }
+  
+  public final void baX()
+  {
+    j localj = koJ;
+    if (mContext != null) {
+      localj.R(kpc);
+    }
+  }
+  
   public void dealContentView(View paramView)
   {
-    ipQ.setRootConsumeWatcher(new cm(this));
     setContentView(paramView);
   }
   
-  public final void f(Class paramClass)
+  public void finish()
+  {
+    super.finish();
+    int i = p.a(getIntent(), "MMActivity.OverrideEnterAnimation", -1);
+    int j = p.a(getIntent(), "MMActivity.OverrideExitAnimation", -1);
+    if (i != -1) {
+      super.overridePendingTransition(i, j);
+    }
+  }
+  
+  public final void g(Class paramClass)
   {
     Intent localIntent = new Intent();
     localIntent.setClass(this, paramClass);
     startActivity(localIntent);
   }
   
-  public final void fb(boolean paramBoolean)
+  public abstract int getLayoutId();
+  
+  public final void he(boolean paramBoolean)
   {
-    ipQ.fb(paramBoolean);
+    koJ.he(paramBoolean);
   }
   
-  public final void fc(boolean paramBoolean)
+  public final void hf(boolean paramBoolean)
   {
     int j = 8;
-    Object localObject = ipQ;
-    if (jA != null)
+    Object localObject = koJ;
+    if (iH != null)
     {
-      jA.setDisplayHomeAsUpEnabled(paramBoolean);
-      if ((iqr != null) && (iqt != null))
+      iH.setDisplayHomeAsUpEnabled(paramBoolean);
+      if ((kpk != null) && (kpm != null))
       {
-        View localView = iqr;
+        View localView = kpk;
         if (!paramBoolean) {
           break label81;
         }
         i = 0;
         localView.setVisibility(i);
-        localObject = iqt;
+        localObject = kpm;
         if (!paramBoolean) {
           break label87;
         }
@@ -371,129 +502,72 @@ public abstract class MMActivity
     }
   }
   
-  public final void fd(boolean paramBoolean)
+  public final void hg(boolean paramBoolean)
   {
-    ipQ.fd(paramBoolean);
+    koJ.hg(paramBoolean);
   }
   
-  public final void fe(boolean paramBoolean)
+  public final void hh(boolean paramBoolean)
   {
-    ipQ.a(true, -1, paramBoolean);
+    koJ.b(true, -1, paramBoolean);
   }
   
-  public final void ff(boolean paramBoolean)
+  public final void hi(boolean paramBoolean)
   {
-    ipQ.b(true, -1, paramBoolean);
-  }
-  
-  public void finish()
-  {
-    super.finish();
-    int i = o.a(getIntent(), "MMActivity.OverrideEnterAnimation", -1);
-    int j = o.a(getIntent(), "MMActivity.OverrideExitAnimation", -1);
-    if (i != -1) {
-      super.overridePendingTransition(i, j);
-    }
-  }
-  
-  public abstract int getLayoutId();
-  
-  public void hC(int paramInt)
-  {
-    ipQ.cvG.setVisibility(paramInt);
-    if (paramInt == 0)
+    j localj = koJ;
+    if (kpl != null)
     {
-      aLe();
-      return;
-    }
-    aLd();
-  }
-  
-  public void hideVKB(View paramView)
-  {
-    ipQ.aj(paramView);
-  }
-  
-  public final void ng(int paramInt)
-  {
-    cn localcn = ipQ;
-    if (jA != null)
-    {
-      if (paramInt == 0) {
-        jA.show();
+      if (paramBoolean) {
+        kpl.setVisibility(0);
       }
     }
     else {
       return;
     }
-    jA.hide();
+    kpl.setVisibility(8);
   }
   
-  public final void nh(int paramInt)
+  public void hideVKB(View paramView)
   {
-    ipQ.nh(paramInt);
+    koJ.am(paramView);
   }
   
-  public final void ni(int paramInt)
+  public void jo(int paramInt)
   {
-    ipQ.ni(paramInt);
-  }
-  
-  public final void nj(int paramInt)
-  {
-    cn localcn = ipQ;
-    if (jA == null) {
-      return;
-    }
-    iqb = 0;
-    iqd = null;
+    koJ.cMt.setVisibility(paramInt);
     if (paramInt == 0)
     {
-      iqc = 0;
-      iqe = null;
-    }
-    for (;;)
-    {
-      localcn.aLm();
+      baU();
       return;
-      if (iqc != paramInt)
-      {
-        iqc = paramInt;
-        iqe = localcn.br(mContext.getResources().getDimensionPixelSize(a.g.BigTextSize), iqc);
-      }
     }
-  }
-  
-  public final boolean nk(int paramInt)
-  {
-    return ipQ.nk(paramInt);
-  }
-  
-  public final void nl(int paramInt)
-  {
-    ipQ.nl(paramInt);
+    baT();
   }
   
   public void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
     super.onActivityResult(paramInt1, paramInt2, paramIntent);
-    if (ipR != null) {
-      ipR.a(paramInt1, paramInt2, paramIntent);
+    if (koK != null) {
+      koK.a(paramInt1, paramInt2, paramIntent);
     }
-    ipR = null;
+    koK = null;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    ipQ.a(getBaseContext(), this);
-    t.i("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", "checktask onCreate:%s#0x%x, taskid:%d, task:%s", new Object[] { getClass().getSimpleName(), Integer.valueOf(hashCode()), Integer.valueOf(getTaskId()), bn.dl(this) });
-    aLw();
+    if (!aCT())
+    {
+      com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", "can not init activity");
+      return;
+    }
+    koJ.a(getBaseContext(), this);
+    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", "checktask onCreate:%s#0x%x, taskid:%d, task:%s", new Object[] { getClass().getSimpleName(), Integer.valueOf(hashCode()), Integer.valueOf(getTaskId()), ay.dQ(this) });
+    bbk();
   }
   
   public boolean onCreateOptionsMenu(Menu paramMenu)
   {
-    if (ipQ.onCreateOptionsMenu(paramMenu)) {
+    if (koJ.onCreateOptionsMenu(paramMenu)) {
       return true;
     }
     return super.onCreateOptionsMenu(paramMenu);
@@ -501,58 +575,68 @@ public abstract class MMActivity
   
   public void onDestroy()
   {
-    t.i("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", "checktask onDestroy:%s#0x%x task:%s ", new Object[] { getClass().getSimpleName(), Integer.valueOf(hashCode()), bn.dl(this) });
+    com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", "checktask onDestroy:%s#0x%x task:%s ", new Object[] { getClass().getSimpleName(), Integer.valueOf(hashCode()), ay.dQ(this) });
     super.onDestroy();
-    com.tencent.mm.sdk.platformtools.a.ah(ipQ.cvG);
-    com.tencent.mm.sdk.platformtools.a.cH(ipQ.iqj);
-    ipQ.onDestroy();
+    com.tencent.mm.sdk.platformtools.a.ak(koJ.cMt);
+    com.tencent.mm.sdk.platformtools.a.dj(koJ.kpc);
+    koJ.onDestroy();
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
-    if (ipQ.onKeyDown(paramInt, paramKeyEvent)) {
+    if (koJ.onKeyDown(paramInt, paramKeyEvent)) {
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);
   }
   
+  @TargetApi(17)
   public boolean onKeyUp(int paramInt, KeyEvent paramKeyEvent)
   {
-    if (ipQ.onKeyUp(paramInt, paramKeyEvent)) {
+    if (koJ.onKeyUp(paramInt, paramKeyEvent)) {
       return true;
     }
-    return super.onKeyUp(paramInt, paramKeyEvent);
+    try
+    {
+      boolean bool = super.onKeyUp(paramInt, paramKeyEvent);
+      return bool;
+    }
+    catch (Exception paramKeyEvent)
+    {
+      com.tencent.mm.sdk.platformtools.u.printErrStackTrace("!32@/B4Tb64lLpLxTDkrgDsygulNLPLtkN5p", paramKeyEvent, "java.lang.IllegalStateException: Can not perform this action after onSaveInstanceState", new Object[0]);
+    }
+    return true;
   }
   
   public boolean onOptionsItemSelected(MenuItem paramMenuItem)
   {
-    return ipQ.onOptionsItemSelected(paramMenuItem);
+    return koJ.onOptionsItemSelected(paramMenuItem);
   }
   
   public void onPause()
   {
     long l = System.currentTimeMillis();
-    fb.M(2, className);
+    u.ae(2, className);
     super.onPause();
-    ipQ.onPause();
+    koJ.onPause();
     boolean bool = isFinishing();
-    t.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN MMActivity onPause: %d ms, isFinishing %B, hash:#0x%x", new Object[] { Long.valueOf(System.currentTimeMillis() - l), Boolean.valueOf(bool), Integer.valueOf(hashCode()) });
+    com.tencent.mm.sdk.platformtools.u.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN MMActivity onPause: %d ms, isFinishing %B, hash:#0x%x", new Object[] { Long.valueOf(System.currentTimeMillis() - l), Boolean.valueOf(bool), Integer.valueOf(hashCode()) });
   }
   
   public boolean onPrepareOptionsMenu(Menu paramMenu)
   {
-    ipQ.onPrepareOptionsMenu(paramMenu);
+    koJ.onPrepareOptionsMenu(paramMenu);
     return super.onPrepareOptionsMenu(paramMenu);
   }
   
   public void onResume()
   {
     long l = System.currentTimeMillis();
-    fb.M(1, className);
+    u.ae(1, className);
     super.onResume();
-    t.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN MMActivity super.onResume " + (System.currentTimeMillis() - l));
-    ipQ.onResume();
-    t.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN MMActivity onResume :%dms, hash:#0x%x", new Object[] { Long.valueOf(System.currentTimeMillis() - l), Integer.valueOf(hashCode()) });
+    com.tencent.mm.sdk.platformtools.u.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN MMActivity super.onResume " + (System.currentTimeMillis() - l));
+    koJ.onResume();
+    com.tencent.mm.sdk.platformtools.u.v("!24@/B4Tb64lLpKk4tudMInS/w==", "KEVIN MMActivity onResume :%dms, hash:#0x%x", new Object[] { Long.valueOf(System.currentTimeMillis() - l), Integer.valueOf(hashCode()) });
   }
   
   public void onSaveInstanceState(Bundle paramBundle)
@@ -564,22 +648,86 @@ public abstract class MMActivity
   
   public void onStart()
   {
-    axr();
+    aNc();
     super.onStart();
+  }
+  
+  public final void pZ(int paramInt)
+  {
+    j localj = koJ;
+    if (cMt != null)
+    {
+      if (koR == null) {
+        koR = ((FrameLayout)cMt.findViewById(2131169402));
+      }
+      koR.setBackgroundResource(paramInt);
+      koO.setBackgroundResource(paramInt);
+    }
+  }
+  
+  public final void qa(int paramInt)
+  {
+    j localj = koJ;
+    if (iH != null)
+    {
+      if (paramInt == 0) {
+        iH.show();
+      }
+    }
+    else {
+      return;
+    }
+    iH.hide();
+  }
+  
+  public final void qb(int paramInt)
+  {
+    koJ.qb(paramInt);
+  }
+  
+  public final void qc(int paramInt)
+  {
+    koJ.qc(paramInt);
+  }
+  
+  public final void qd(int paramInt)
+  {
+    j localj = koJ;
+    if (iH == null) {
+      return;
+    }
+    koU = 0;
+    koW = null;
+    if (paramInt == 0)
+    {
+      koV = 0;
+      koX = null;
+    }
+    for (;;)
+    {
+      localj.bbb();
+      return;
+      if (koV != paramInt)
+      {
+        koV = paramInt;
+        koX = localj.bI(mContext.getResources().getDimensionPixelSize(2131034563), koV);
+      }
+    }
+  }
+  
+  public final boolean qe(int paramInt)
+  {
+    return koJ.qe(paramInt);
+  }
+  
+  public final void qf(int paramInt)
+  {
+    koJ.qf(paramInt);
   }
   
   public final void setScreenEnable(boolean paramBoolean)
   {
-    ipQ.setScreenEnable(paramBoolean);
-  }
-  
-  public final void z(Runnable paramRunnable)
-  {
-    cn localcn = ipQ;
-    if (jA == null) {
-      return;
-    }
-    jA.getCustomView().setOnClickListener(new cp(localcn, paramRunnable));
+    koJ.setScreenEnable(paramBoolean);
   }
   
   public static abstract interface a

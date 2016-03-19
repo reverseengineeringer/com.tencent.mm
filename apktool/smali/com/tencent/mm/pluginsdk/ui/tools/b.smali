@@ -1,217 +1,205 @@
-.class final Lcom/tencent/mm/pluginsdk/ui/tools/b;
+.class public final Lcom/tencent/mm/pluginsdk/ui/tools/b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/widget/AdapterView$OnItemClickListener;
 
-
-# instance fields
-.field final synthetic hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/pluginsdk/ui/tools/b$a;
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)V
-    .locals 0
+.method public static AR(Ljava/lang/String;)Z
+    .locals 4
 
     .prologue
-    .line 103
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    const v3, 0x10e01
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, 0x0
 
-    return-void
-.end method
+    .line 18
+    if-eqz p0, :cond_0
 
-
-# virtual methods
-.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 107
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$a;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    .line 108
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$a;
-
-    move-result-object v1
-
-    invoke-virtual {v1, p3}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$a;->lR(I)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
-
-    .line 109
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$a;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$a;->notifyDataSetChanged()V
-
-    .line 110
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->b(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->b(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->isShowing()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 113
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
-
-    move-result-object v0
-
-    iget-boolean v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdx:Z
-
-    if-eqz v0, :cond_3
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
-
-    move-result-object v0
-
-    iget-boolean v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdA:Z
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
-
-    move-result-object v0
-
-    iget-boolean v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdy:Z
-
-    if-nez v0, :cond_3
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->d(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)I
-
-    move-result v0
-
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->e(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)I
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v1
 
-    if-ge v0, v1, :cond_3
+    if-nez v1, :cond_1
 
-    .line 117
+    .line 19
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    const-string/jumbo v1, "!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe"
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->b(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;
+    const-string/jumbo v2, "markNew fail, appId is empty"
 
-    move-result-object v0
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->eC(Z)V
-
-    .line 122
-    :cond_1
+    .line 37
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    return v0
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->f(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)I
-
-    move-result v0
-
-    const/4 v1, 0x6
-
-    if-ne v0, v1, :cond_2
-
-    .line 123
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
-
-    move-result-object v0
-
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdu:Landroid/content/pm/ResolveInfo;
-
-    if-eqz v0, :cond_2
-
-    .line 124
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
-
-    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->c(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;
+    .line 23
+    :cond_1
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdu:Landroid/content/pm/ResolveInfo;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
-    iget-object v1, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
+    move-result-object v1
 
-    iget-object v1, v1, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
+    .line 24
+    if-nez v1, :cond_2
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->a(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;Ljava/lang/String;Z)V
+    .line 25
+    const-string/jumbo v1, "!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe"
 
-    .line 128
+    const-string/jumbo v2, "markNew fail, cfgStg is null"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 29
     :cond_2
-    return-void
+    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;
 
-    .line 119
-    :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/b;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    invoke-direct {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;-><init>(B)V
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;->b(Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;)Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;
+    .line 30
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v3, v0}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    const/4 v1, 0x1
+    check-cast v0, Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$e;->eC(Z)V
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->sN(Ljava/lang/String;)V
+
+    .line 32
+    iget-object v0, v2, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hss:Ljava/util/List;
+
+    invoke-interface {v0, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    .line 33
+    iget-object v0, v2, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hss:Ljava/util/List;
+
+    invoke-interface {v0, p0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 36
+    :cond_3
+    invoke-virtual {v2}, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->aSM()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v3, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+
+    .line 37
+    const/4 v0, 0x1
+
+    goto :goto_0
+.end method
+
+.method public static AS(Ljava/lang/String;)Z
+    .locals 4
+
+    .prologue
+    const v3, 0x10e01
+
+    const/4 v0, 0x0
+
+    .line 41
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 42
+    :cond_0
+    const-string/jumbo v1, "!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe"
+
+    const-string/jumbo v2, "unmarkNew fail, appId is empty"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 60
+    :goto_0
+    return v0
+
+    .line 46
+    :cond_1
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+
+    move-result-object v1
+
+    .line 47
+    if-nez v1, :cond_2
+
+    .line 48
+    const-string/jumbo v1, "!32@/B4Tb64lLpI2WocNsy9sFoT3u3tMXqXe"
+
+    const-string/jumbo v2, "unmarkNew fail, cfgStg is null"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 52
+    :cond_2
+    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;
+
+    invoke-direct {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;-><init>(B)V
+
+    .line 53
+    const/4 v0, 0x0
+
+    invoke-virtual {v1, v3, v0}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v2, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->sN(Ljava/lang/String;)V
+
+    .line 55
+    iget-object v0, v2, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hss:Ljava/util/List;
+
+    invoke-interface {v0, p0}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 56
+    iget-object v0, v2, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->hss:Ljava/util/List;
+
+    invoke-interface {v0, p0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
+
+    .line 59
+    :cond_3
+    invoke-virtual {v2}, Lcom/tencent/mm/pluginsdk/ui/tools/b$a;->aSM()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v3, v0}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+
+    .line 60
+    const/4 v0, 0x1
 
     goto :goto_0
 .end method

@@ -2,33 +2,32 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnClickListener;
-
 
 # instance fields
-.field final synthetic iUD:Lcom/tencent/mm/ui/chatting/df;
+.field lcw:Ljava/lang/String;
+
+.field lcx:Ljava/lang/String;
+
+.field lcy:I
+
+.field lcz:I
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/df;)V
-    .locals 0
+.method constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 1840
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/dh;->iUD:Lcom/tencent/mm/ui/chatting/df;
+    const/high16 v0, -0x1000000
 
+    .line 707
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 710
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/dh;->lcy:I
 
+    .line 711
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/dh;->lcz:I
 
-# virtual methods
-.method public final onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
-
-    .prologue
-    .line 1844
     return-void
 .end method

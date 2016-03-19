@@ -1,20 +1,11 @@
 package com.tencent.mm.modelvoice;
 
-import com.tencent.mm.q.d;
-import com.tencent.mm.sdk.platformtools.aj.a;
-
-final class g
-  implements aj.a
+public final class g
 {
-  g(e parame) {}
-  
-  public final boolean lO()
-  {
-    if (bPS.a(e.a(bPS), e.b(bPS)) == -1) {
-      e.b(bPS).a(3, -1, "doScene failed", bPS);
-    }
-    return false;
-  }
+  public int anQ = 0;
+  public int anV = 0;
+  public byte[] buf = null;
+  public int ret = 0;
 }
 
 /* Location:

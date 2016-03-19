@@ -2,16 +2,16 @@ package com.tencent.mm.platformtools;
 
 final class k$b$c
 {
-  boolean bVl;
-  int bVm;
-  int bVn;
+  boolean cmi;
+  int cmj;
+  int cmk;
   
   public final String toString()
   {
     StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append("fail[").append(bVl).append("],");
-    localStringBuilder.append("tryTimes[").append(bVm).append("],");
-    localStringBuilder.append("lastTS[").append(bVn).append("]");
+    localStringBuilder.append("fail[").append(cmi).append("],");
+    localStringBuilder.append("tryTimes[").append(cmj).append("],");
+    localStringBuilder.append("lastTS[").append(cmk).append("]");
     return localStringBuilder.toString();
   }
 }

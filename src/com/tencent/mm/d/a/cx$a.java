@@ -2,7 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class cx$a
 {
-  public int type = 15;
+  public boolean avH;
+  public String awo;
+  public String mac;
 }
 
 /* Location:

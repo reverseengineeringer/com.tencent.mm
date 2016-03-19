@@ -6,20 +6,26 @@ import java.lang.reflect.Field;
 
 public class CookieSyncManager
 {
-  private static android.webkit.CookieSyncManager jIX;
-  private static CookieSyncManager jIY;
+  private static android.webkit.CookieSyncManager lQZ;
+  private static CookieSyncManager lRa;
+  
+  private CookieSyncManager(Context paramContext)
+  {
+    d locald = d.is(false);
+    if ((locald != null) && (locald.bln())) {
+      blmmDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "cookieSyncManager_createInstance", new Class[] { Context.class }, new Object[] { paramContext });
+    }
+  }
   
   public static CookieSyncManager createInstance(Context paramContext)
   {
     try
     {
-      jIX = android.webkit.CookieSyncManager.createInstance(paramContext);
-      if (jIY == null)
-      {
-        paramContext.getApplicationContext();
-        jIY = new CookieSyncManager();
+      lQZ = android.webkit.CookieSyncManager.createInstance(paramContext);
+      if (lRa == null) {
+        lRa = new CookieSyncManager(paramContext.getApplicationContext());
       }
-      paramContext = jIY;
+      paramContext = lRa;
       return paramContext;
     }
     finally {}
@@ -29,29 +35,29 @@ public class CookieSyncManager
   {
     try
     {
-      if (jIY == null) {
+      if (lRa == null) {
         throw new IllegalStateException("CookieSyncManager::createInstance() needs to be called before CookieSyncManager::getInstance()");
       }
     }
     finally {}
-    CookieSyncManager localCookieSyncManager = jIY;
+    CookieSyncManager localCookieSyncManager = lRa;
     return localCookieSyncManager;
   }
   
   public void startSync()
   {
-    Object localObject = d.gn(false);
-    if ((localObject != null) && (jJm))
+    Object localObject = d.is(false);
+    if ((localObject != null) && (((d)localObject).bln()))
     {
-      jJk.mDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "cookieSyncManager_startSync", new Class[0], new Object[0]);
+      blmmDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "cookieSyncManager_startSync", new Class[0], new Object[0]);
       return;
     }
-    jIX.startSync();
+    lQZ.startSync();
     try
     {
       localObject = Class.forName("android.webkit.WebSyncManager").getDeclaredField("mSyncThread");
       ((Field)localObject).setAccessible(true);
-      ((Thread)((Field)localObject).get(jIX)).setUncaughtExceptionHandler(new SQLiteUncaughtExceptionHandler());
+      ((Thread)((Field)localObject).get(lQZ)).setUncaughtExceptionHandler(new SQLiteUncaughtExceptionHandler());
       return;
     }
     catch (Exception localException) {}
@@ -59,24 +65,24 @@ public class CookieSyncManager
   
   public void stopSync()
   {
-    d locald = d.gn(false);
-    if ((locald != null) && (jJm))
+    d locald = d.is(false);
+    if ((locald != null) && (locald.bln()))
     {
-      jJk.mDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "cookieSyncManager_stopSync", new Class[0], new Object[0]);
+      blmmDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "cookieSyncManager_stopSync", new Class[0], new Object[0]);
       return;
     }
-    jIX.stopSync();
+    lQZ.stopSync();
   }
   
   public void sync()
   {
-    d locald = d.gn(false);
-    if ((locald != null) && (jJm))
+    d locald = d.is(false);
+    if ((locald != null) && (locald.bln()))
     {
-      jJk.mDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "cookieSyncManager_Sync", new Class[0], new Object[0]);
+      blmmDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "cookieSyncManager_Sync", new Class[0], new Object[0]);
       return;
     }
-    jIX.sync();
+    lQZ.sync();
   }
 }
 

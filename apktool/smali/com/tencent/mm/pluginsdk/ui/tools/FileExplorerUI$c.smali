@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field cFf:Landroid/widget/TextView;
+.field cNV:Landroid/widget/ImageView;
 
-.field cwg:Landroid/widget/ImageView;
+.field dda:Landroid/widget/TextView;
 
-.field final synthetic hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+.field final synthetic iRO:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
 
-.field hee:Landroid/widget/TextView;
+.field iRW:Landroid/widget/TextView;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     .prologue
     .line 482
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$c;->iRO:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

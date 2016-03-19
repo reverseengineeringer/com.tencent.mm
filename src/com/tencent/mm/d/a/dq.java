@@ -1,30 +1,32 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.ahe;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class dq
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azJ = new a();
-  public b azK = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a axs = new a();
+  public b axt = new b();
   
   public dq()
   {
-    id = "GetSnsObjectDetail";
-    hXT = atO;
+    id = "ExtSimpleRecord";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int awP;
+    public Runnable anK;
+    public String filePath;
+    public int op;
   }
   
   public static final class b
   {
-    public ahe azL;
+    public boolean atR = false;
+    public int axu;
   }
 }
 

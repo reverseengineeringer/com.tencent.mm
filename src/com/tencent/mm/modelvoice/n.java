@@ -1,38 +1,60 @@
 package com.tencent.mm.modelvoice;
 
-import android.media.AudioTrack;
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
-import com.tencent.mm.compatible.util.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.k;
 
-final class n
-  implements MediaPlayer.OnCompletionListener
+public final class n
 {
-  n(m paramm) {}
+  public String cfR;
+  public boolean cfS;
+  public long time;
   
-  public final void onCompletion(MediaPlayer paramMediaPlayer)
+  public n(String paramString)
   {
-    if (m.a(bQr) != null) {
-      m.a(bQr).pd();
-    }
-    try
+    String str = paramString;
+    for (;;)
     {
-      m.a(bQr, 0);
-      if (m.b(bQr) != null)
+      try
       {
-        t.i("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "mAudioTrack.stop()");
-        m.b(bQr).stop();
-        m.b(bQr).release();
-        m.c(bQr);
+        if (paramString.endsWith("\n")) {
+          str = paramString.substring(0, paramString.length() - 1);
+        }
+        paramString = str.split(":");
+        if ((paramString.length == 4) && (k.Ec(paramString[0])))
+        {
+          i = 1;
+          if (paramString.length > i) {
+            cfR = paramString[i];
+          }
+          if (paramString.length > i + 1) {
+            time = Long.parseLong(paramString[(i + 1)]);
+          }
+          if (paramString.length > i + 2) {
+            cfS = paramString[(i + 2)].equals("1");
+          }
+          return;
+        }
       }
-      return;
+      catch (Exception paramString)
+      {
+        if (cfR == null) {
+          cfR = "";
+        }
+        cfS = false;
+        time = 0L;
+        u.e("!32@/B4Tb64lLpLuTfcKnpSMB7/OhLfNVcYh", "VoiceContent parse failed.");
+        return;
+      }
+      int i = 0;
     }
-    catch (Exception paramMediaPlayer)
-    {
-      t.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "exception:%s", new Object[] { bn.a(paramMediaPlayer) });
-      t.e("!32@/B4Tb64lLpI6G0A88lJp/HYDGO4/YhIU", "setCompletion File[" + m.d(bQr) + "] ErrMsg[" + paramMediaPlayer.getStackTrace() + "]");
+  }
+  
+  public static String a(String paramString, long paramLong, boolean paramBoolean)
+  {
+    paramString = new StringBuilder().append(paramString).append(":").append(paramLong).append(":");
+    if (paramBoolean) {}
+    for (int i = 1;; i = 0) {
+      return i + "\n";
     }
   }
 }

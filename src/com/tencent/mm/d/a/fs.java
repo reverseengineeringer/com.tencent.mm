@@ -1,30 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class fs
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aCE = new a();
-  public b aCF = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aAA = new a();
   
   public fs()
   {
-    id = "QueryRecordMsgMediaList";
-    hXT = atO;
+    id = "GetSoterDeviceInfo";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aCG;
-    public long azW;
-  }
-  
-  public static final class b
-  {
-    public String aCH;
+    public String aAB;
+    public String aAC;
   }
 }
 

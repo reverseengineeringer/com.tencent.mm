@@ -2,92 +2,91 @@ package com.tencent.mm.ui.chatting;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.a.c;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.as;
+import com.tencent.mm.ab.f;
+import com.tencent.mm.ab.n;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.model.c;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.tools.ShowImageUI;
-import com.tencent.mm.y.af;
-import com.tencent.mm.y.f;
-import com.tencent.mm.y.g;
-import com.tencent.mm.y.u;
 
 public class ImageDownloadUI
   extends MMActivity
-  implements d, com.tencent.mm.q.e
+  implements com.tencent.mm.r.d, com.tencent.mm.r.e
 {
-  private long axb = 0L;
-  private long bCQ = 0L;
-  private int bDN;
-  private ProgressBar exD;
-  private TextView exE;
-  private TextView exF;
-  private TextView exG;
-  private TextView exH;
-  private com.tencent.mm.y.e exJ;
-  private u exK;
-  private ImageView jbS;
+  private long avg = 0L;
+  private long bQd = 0L;
+  private int bQg;
+  private TextView fHA;
+  private TextView fHB;
+  private TextView fHC;
+  private TextView fHD;
+  private com.tencent.mm.ab.d fHF;
+  private com.tencent.mm.ab.j fHG;
+  private ProgressBar fHz;
+  private ImageView lcl;
   private String username;
   
-  private void hZ(int paramInt)
+  private void jO(int paramInt)
   {
-    exD.setProgress(paramInt);
-    exE.setText(getString(a.n.fmt_percent, new Object[] { Integer.valueOf(paramInt) }));
-    if (paramInt < exD.getMax()) {
+    fHz.setProgress(paramInt);
+    fHA.setText(getString(2131427520, new Object[] { Integer.valueOf(paramInt) }));
+    if (paramInt < fHz.getMax()) {
       return;
     }
-    Object localObject = af.zl().M(exK.bDL);
-    String str = bCR;
-    if (bDN == 1) {
-      str = f.c((com.tencent.mm.y.e)localObject);
+    Object localObject = n.Ao().a(Long.valueOf(fHG.bRt));
+    String str = bQe;
+    if (bQg == 1) {
+      str = com.tencent.mm.ab.e.c((com.tencent.mm.ab.d)localObject);
     }
-    str = af.zl().g(str, null, null);
-    if ((str == null) || (str.equals("")) || (!c.az(str)))
+    str = n.Ao().j(str, null, null);
+    if ((str == null) || (str.equals("")) || (!com.tencent.mm.a.e.ax(str)))
     {
-      t.d("!24@aCqboZt8TBBxdzAJlMmkPg==", "showImg : imgPath is null");
+      u.d("!24@aCqboZt8TBBxdzAJlMmkPg==", "showImg : imgPath is null");
       return;
     }
     localObject = new Intent(this, ShowImageUI.class);
-    ((Intent)localObject).putExtra("key_message_id", axb);
+    ((Intent)localObject).putExtra("key_message_id", avg);
     ((Intent)localObject).putExtra("key_image_path", str);
-    ((Intent)localObject).putExtra("key_compress_type", bDN);
+    ((Intent)localObject).putExtra("key_compress_type", bQg);
     ((Intent)localObject).putExtra("key_favorite", true);
     finish();
   }
   
-  protected final void DV()
+  protected final void Gb()
   {
-    exE = ((TextView)findViewById(a.i.image_download_percent_tv));
-    exF = ((TextView)findViewById(a.i.video_download_percent_tv));
-    exG = ((TextView)findViewById(a.i.video_download_size_tv));
-    exH = ((TextView)findViewById(a.i.video_download_length_tv));
-    jbS = ((ImageView)findViewById(a.i.down_background));
-    jbS.setImageResource(a.h.download_image_icon);
-    exE.setVisibility(0);
-    exF.setVisibility(8);
-    exG.setVisibility(8);
-    exH.setVisibility(8);
-    a(new nt(this));
-    exD = ((ProgressBar)findViewById(a.i.video_download_pb));
+    fHA = ((TextView)findViewById(2131165716));
+    fHB = ((TextView)findViewById(2131165717));
+    fHC = ((TextView)findViewById(2131165718));
+    fHD = ((TextView)findViewById(2131165719));
+    lcl = ((ImageView)findViewById(2131165714));
+    lcl.setImageResource(2130903595);
+    fHA.setVisibility(0);
+    fHB.setVisibility(8);
+    fHC.setVisibility(8);
+    fHD.setVisibility(8);
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        com.tencent.mm.model.ah.tE().c(ImageDownloadUI.a(ImageDownloadUI.this));
+        finish();
+        return true;
+      }
+    });
+    fHz = ((ProgressBar)findViewById(2131165715));
   }
   
-  public final void a(int paramInt1, int paramInt2, j paramj)
+  public final void a(int paramInt1, int paramInt2, com.tencent.mm.r.j paramj)
   {
-    t.d("!24@aCqboZt8TBBxdzAJlMmkPg==", "offset " + paramInt1 + "totaolLen  " + paramInt2);
+    u.d("!24@aCqboZt8TBBxdzAJlMmkPg==", "offset " + paramInt1 + "totaolLen  " + paramInt2);
     if (paramj.getType() == 109) {
       if (paramInt2 == 0) {
         break label62;
@@ -96,66 +95,66 @@ public class ImageDownloadUI
     label62:
     for (paramInt1 = paramInt1 * 100 / paramInt2 - 1;; paramInt1 = 0)
     {
-      hZ(Math.max(0, paramInt1));
+      jO(Math.max(0, paramInt1));
       return;
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
   {
     if (paramj.getType() != 109) {
       return;
     }
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      hZ(exD.getMax());
+      jO(fHz.getMax());
       return;
     }
-    t.e("!24@aCqboZt8TBBxdzAJlMmkPg==", "onSceneEnd : fail, errType = " + paramInt1 + ", errCode = " + paramInt2);
-    Toast.makeText(this, a.n.imgdownload_fail, 1).show();
+    u.e("!24@aCqboZt8TBBxdzAJlMmkPg==", "onSceneEnd : fail, errType = " + paramInt1 + ", errCode = " + paramInt2);
+    Toast.makeText(this, 2131428887, 1).show();
   }
   
   protected final int getLayoutId()
   {
-    return a.k.video_download;
+    return 2131361981;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    axb = getIntent().getLongExtra("img_msg_id", 0L);
-    bCQ = getIntent().getLongExtra("img_server_id", 0L);
-    bDN = getIntent().getIntExtra("img_download_compress_type", 0);
+    avg = getIntent().getLongExtra("img_msg_id", 0L);
+    bQd = getIntent().getLongExtra("img_server_id", 0L);
+    bQg = getIntent().getIntExtra("img_download_compress_type", 0);
     username = getIntent().getStringExtra("img_download_username");
-    DV();
-    if (axb > 0L) {
-      exJ = af.zl().O(axb);
+    Gb();
+    if (avg > 0L) {
+      fHF = n.Ao().Z(avg);
     }
-    if (((exJ == null) || (exJ.bCP <= 0L)) && (bCQ > 0L)) {
-      exJ = af.zl().N(bCQ);
+    if (((fHF == null) || (fHF.bQc <= 0L)) && (bQd > 0L)) {
+      fHF = n.Ao().Y(bQd);
     }
-    if ((exJ == null) || (exJ.bCP <= 0L))
+    if ((fHF == null) || (fHF.bQc <= 0L))
     {
-      t.e("!24@aCqboZt8TBBxdzAJlMmkPg==", "onCreate : on such imginfo, with msgLocalId = " + axb + ", or msgSvrId = " + bCQ);
+      u.e("!24@aCqboZt8TBBxdzAJlMmkPg==", "onCreate : on such imginfo, with msgLocalId = " + avg + ", or msgSvrId = " + bQd);
       return;
     }
-    if ((axb <= 0L) && (bCQ > 0L)) {
-      axb = tlrkqusername, bCQ).field_msgId;
+    if ((avg <= 0L) && (bQd > 0L)) {
+      avg = tDrsxusername, bQd).field_msgId;
     }
-    exK = new u(exJ.bCP, axb, bDN, this);
-    ax.tm().d(exK);
+    fHG = new com.tencent.mm.ab.j(fHF.bQc, avg, bQg, this);
+    com.tencent.mm.model.ah.tE().d(fHG);
   }
   
   protected void onPause()
   {
     super.onPause();
-    ax.tm().b(109, this);
+    com.tencent.mm.model.ah.tE().b(109, this);
   }
   
   protected void onResume()
   {
     super.onResume();
-    ax.tm().a(109, this);
+    com.tencent.mm.model.ah.tE().a(109, this);
   }
 }
 

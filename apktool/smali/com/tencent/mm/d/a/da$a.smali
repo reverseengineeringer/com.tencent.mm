@@ -15,13 +15,11 @@
 
 
 # instance fields
-.field public ayY:Ljava/lang/String;
+.field public auQ:Ljava/lang/String;
 
-.field public context:Landroid/content/Context;
+.field public data:[B
 
-.field public messageAction:Ljava/lang/String;
-
-.field public messageExt:Ljava/lang/String;
+.field public mac:Ljava/lang/String;
 
 
 # direct methods

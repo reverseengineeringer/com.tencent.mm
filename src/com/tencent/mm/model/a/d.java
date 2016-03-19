@@ -2,11 +2,11 @@ package com.tencent.mm.model.a;
 
 public final class d
 {
-  public String azq;
-  public String brj;
-  public long brk;
-  public boolean brl = false;
-  public long brm = 0L;
+  public String azM;
+  public String bDn;
+  public long bDo;
+  public boolean bDp = false;
+  public long bDq = 0L;
   public long endTime;
   public String id;
   public long startTime;

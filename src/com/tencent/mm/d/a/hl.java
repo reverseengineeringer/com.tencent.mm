@@ -1,25 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import java.util.LinkedList;
+import com.tencent.mm.sdk.c.b;
 
 public final class hl
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEK = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDf = new a();
   
   public hl()
   {
-    id = "SetRecvTmpMsgOption";
-    hXT = atO;
+    id = "NotifyCanPullVoiceTransRes";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aDK;
-    public LinkedList aEL;
+    public int aDg = 0;
+    public int aDh = 0;
   }
 }
 

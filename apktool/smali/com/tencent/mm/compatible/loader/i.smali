@@ -18,9 +18,9 @@
     .locals 3
 
     .prologue
-    .line 100
+    .line 102
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -28,12 +28,12 @@
 
     move-result-object v0
 
-    .line 102
+    .line 104
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aER()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUJ()Ljava/lang/String;
 
     move-result-object v2
 
@@ -53,19 +53,19 @@
 
     move-result-object v0
 
-    .line 103
+    .line 105
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/compatible/loader/h;
 
-    .line 104
-    iput-object p0, v0, Lcom/tencent/mm/compatible/loader/h;->bjk:Landroid/app/Application;
+    .line 106
+    iput-object p0, v0, Lcom/tencent/mm/compatible/loader/h;->btM:Landroid/app/Application;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 108
+    .line 110
     :goto_0
     return-object v0
 

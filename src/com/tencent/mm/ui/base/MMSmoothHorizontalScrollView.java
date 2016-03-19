@@ -13,11 +13,11 @@ import android.widget.HorizontalScrollView;
 public class MMSmoothHorizontalScrollView
   extends HorizontalScrollView
 {
-  private Interpolator dtY = new DecelerateInterpolator();
-  private Rect eBK = new Rect();
-  private TranslateAnimation eBL;
-  private float gT;
-  private View iHF;
+  private Interpolator elA = new DecelerateInterpolator();
+  private Rect fKX = new Rect();
+  private TranslateAnimation fKY;
+  private float gb;
+  private View kGR;
   
   public MMSmoothHorizontalScrollView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -28,7 +28,7 @@ public class MMSmoothHorizontalScrollView
   protected void onFinishInflate()
   {
     if (getChildCount() > 0) {
-      iHF = getChildAt(0);
+      kGR = getChildAt(0);
     }
   }
   
@@ -36,7 +36,7 @@ public class MMSmoothHorizontalScrollView
   {
     int j = 1;
     int i = 0;
-    if (iHF == null) {
+    if (kGR == null) {
       return super.onTouchEvent(paramMotionEvent);
     }
     switch (paramMotionEvent.getAction())
@@ -46,16 +46,16 @@ public class MMSmoothHorizontalScrollView
     for (;;)
     {
       return super.onTouchEvent(paramMotionEvent);
-      gT = paramMotionEvent.getX();
+      gb = paramMotionEvent.getX();
       continue;
       float f = paramMotionEvent.getX();
-      if (gT == 0.0F) {
-        gT = f;
+      if (gb == 0.0F) {
+        gb = f;
       }
-      j = (int)(gT - f) / 2;
+      j = (int)(gb - f) / 2;
       scrollBy(j, 0);
-      gT = f;
-      int k = iHF.getMeasuredWidth();
+      gb = f;
+      int k = kGR.getMeasuredWidth();
       int m = getWidth();
       int n = getPaddingLeft();
       int i1 = getPaddingRight();
@@ -65,24 +65,24 @@ public class MMSmoothHorizontalScrollView
       }
       if (i != 0)
       {
-        if (eBK.isEmpty()) {
-          eBK.set(iHF.getLeft(), iHF.getTop(), iHF.getRight(), iHF.getBottom());
+        if (fKX.isEmpty()) {
+          fKX.set(kGR.getLeft(), kGR.getTop(), kGR.getRight(), kGR.getBottom());
         }
-        iHF.layout(iHF.getLeft() - j, iHF.getTop(), iHF.getRight() - j, iHF.getBottom());
+        kGR.layout(kGR.getLeft() - j, kGR.getTop(), kGR.getRight() - j, kGR.getBottom());
         continue;
-        gT = 0.0F;
-        if (!eBK.isEmpty()) {}
+        gb = 0.0F;
+        if (!fKX.isEmpty()) {}
         for (i = j;; i = 0)
         {
           if (i == 0) {
             break label407;
           }
-          eBL = new TranslateAnimation(iHF.getLeft(), eBK.left, 0.0F, 0.0F);
-          eBL.setInterpolator(dtY);
-          eBL.setDuration(Math.abs(iHF.getLeft() - eBK.left));
-          iHF.startAnimation(eBL);
-          iHF.layout(eBK.left, eBK.top, eBK.right, eBK.bottom);
-          eBK.setEmpty();
+          fKY = new TranslateAnimation(kGR.getLeft(), fKX.left, 0.0F, 0.0F);
+          fKY.setInterpolator(elA);
+          fKY.setDuration(Math.abs(kGR.getLeft() - fKX.left));
+          kGR.startAnimation(fKY);
+          kGR.layout(fKX.left, fKX.top, fKX.right, fKX.bottom);
+          fKX.setEmpty();
           break;
         }
       }

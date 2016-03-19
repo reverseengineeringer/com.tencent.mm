@@ -2,9 +2,9 @@ package com.tencent.mm.ui.tools.a;
 
 public abstract class a
 {
-  public abstract int aBw();
+  public abstract int aSq();
   
-  public abstract void aBx();
+  public abstract void aSr();
 }
 
 /* Location:

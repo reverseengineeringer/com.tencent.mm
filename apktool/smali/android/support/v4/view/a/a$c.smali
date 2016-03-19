@@ -27,7 +27,7 @@
 
 
 # virtual methods
-.method public final b(Ljava/lang/Object;I)V
+.method public final c(Ljava/lang/Object;I)V
     .locals 0
 
     .prologue
@@ -66,7 +66,7 @@
     return-void
 .end method
 
-.method public final t(Ljava/lang/Object;)I
+.method public final w(Ljava/lang/Object;)I
     .locals 1
 
     .prologue
@@ -80,7 +80,7 @@
     return v0
 .end method
 
-.method public final u(Ljava/lang/Object;)Z
+.method public final x(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -94,7 +94,7 @@
     return v0
 .end method
 
-.method public final v(Ljava/lang/Object;)Z
+.method public final y(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue

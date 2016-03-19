@@ -1,11 +1,13 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.ajx;
-
 public final class ic$a
 {
-  public ag aFm;
-  public ajx aFp;
+  public String aBB;
+  public int aBw;
+  public String alN;
+  public int avD;
+  public int op = 0;
+  public String url;
 }
 
 /* Location:

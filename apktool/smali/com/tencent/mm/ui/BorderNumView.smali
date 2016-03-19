@@ -4,19 +4,19 @@
 
 
 # static fields
-.field private static ilo:I
+.field private static kjw:I
 
-.field private static ilp:I
+.field private static kjx:I
 
-.field private static ilq:I
+.field private static kjy:I
 
 
 # instance fields
+.field private cZX:Landroid/graphics/Paint;
+
 .field private context:Landroid/content/Context;
 
-.field private dnc:Landroid/graphics/Paint;
-
-.field private iln:I
+.field private kjv:I
 
 
 # direct methods
@@ -27,17 +27,17 @@
     .line 42
     const/16 v0, 0x16
 
-    sput v0, Lcom/tencent/mm/ui/BorderNumView;->ilo:I
+    sput v0, Lcom/tencent/mm/ui/BorderNumView;->kjw:I
 
     .line 43
     const/16 v0, 0x69
 
-    sput v0, Lcom/tencent/mm/ui/BorderNumView;->ilp:I
+    sput v0, Lcom/tencent/mm/ui/BorderNumView;->kjx:I
 
     .line 44
     const/16 v0, 0x64
 
-    sput v0, Lcom/tencent/mm/ui/BorderNumView;->ilq:I
+    sput v0, Lcom/tencent/mm/ui/BorderNumView;->kjy:I
 
     return-void
 .end method
@@ -57,7 +57,7 @@
     .line 13
     const/16 v0, 0x64
 
-    iput v0, p0, Lcom/tencent/mm/ui/BorderNumView;->iln:I
+    iput v0, p0, Lcom/tencent/mm/ui/BorderNumView;->kjv:I
 
     .line 23
     iput-object p1, p0, Lcom/tencent/mm/ui/BorderNumView;->context:Landroid/content/Context;
@@ -84,7 +84,7 @@
     .line 13
     const/16 v0, 0x64
 
-    iput v0, p0, Lcom/tencent/mm/ui/BorderNumView;->iln:I
+    iput v0, p0, Lcom/tencent/mm/ui/BorderNumView;->kjv:I
 
     .line 29
     iput-object p1, p0, Lcom/tencent/mm/ui/BorderNumView;->context:Landroid/content/Context;
@@ -105,7 +105,7 @@
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
     .line 35
     return-void
@@ -123,36 +123,36 @@
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 65
-    iget v0, p0, Lcom/tencent/mm/ui/BorderNumView;->iln:I
+    iget v0, p0, Lcom/tencent/mm/ui/BorderNumView;->kjv:I
 
     const/16 v1, 0x64
 
     if-ge v0, v1, :cond_0
 
-    sget v0, Lcom/tencent/mm/ui/BorderNumView;->ilo:I
+    sget v0, Lcom/tencent/mm/ui/BorderNumView;->kjw:I
 
     add-int/lit8 v0, v0, 0xf
 
-    sput v0, Lcom/tencent/mm/ui/BorderNumView;->ilo:I
+    sput v0, Lcom/tencent/mm/ui/BorderNumView;->kjw:I
 
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/BorderNumView;->iln:I
+    iget v0, p0, Lcom/tencent/mm/ui/BorderNumView;->kjv:I
 
     const/16 v1, 0x3e8
 
     if-lt v0, v1, :cond_1
 
-    sget v0, Lcom/tencent/mm/ui/BorderNumView;->ilq:I
+    sget v0, Lcom/tencent/mm/ui/BorderNumView;->kjy:I
 
     add-int/lit8 v0, v0, -0x14
 
-    sput v0, Lcom/tencent/mm/ui/BorderNumView;->ilq:I
+    sput v0, Lcom/tencent/mm/ui/BorderNumView;->kjy:I
 
     .line 67
     :cond_1
     iget-object v0, p0, Lcom/tencent/mm/ui/BorderNumView;->context:Landroid/content/Context;
 
-    sget v1, Lcom/tencent/mm/ui/BorderNumView;->ilo:I
+    sget v1, Lcom/tencent/mm/ui/BorderNumView;->kjw:I
 
     int-to-float v1, v1
 
@@ -165,7 +165,7 @@
     .line 69
     iget-object v1, p0, Lcom/tencent/mm/ui/BorderNumView;->context:Landroid/content/Context;
 
-    sget v2, Lcom/tencent/mm/ui/BorderNumView;->ilp:I
+    sget v2, Lcom/tencent/mm/ui/BorderNumView;->kjx:I
 
     int-to-float v2, v2
 
@@ -180,7 +180,7 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v3, p0, Lcom/tencent/mm/ui/BorderNumView;->iln:I
+    iget v3, p0, Lcom/tencent/mm/ui/BorderNumView;->kjv:I
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -191,75 +191,75 @@
     move-result-object v2
 
     .line 71
-    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 72
-    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
-    sget v4, Lcom/tencent/mm/ui/BorderNumView;->ilq:I
+    sget v4, Lcom/tencent/mm/ui/BorderNumView;->kjy:I
 
     int-to-float v4, v4
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 73
-    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
     const v4, -0xaf58f4
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 74
-    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
     sget-object v4, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 75
-    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
     invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
     .line 76
-    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v2, v0, v1, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     .line 78
-    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
-    sget v4, Lcom/tencent/mm/ui/BorderNumView;->ilq:I
+    sget v4, Lcom/tencent/mm/ui/BorderNumView;->kjy:I
 
     int-to-float v4, v4
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 79
-    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
     const v4, -0x1b044d
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 80
-    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
     sget-object v4, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v3, v4}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 81
-    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
     invoke-virtual {v3, v5}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
     .line 82
-    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/ui/BorderNumView;->cZX:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v2, v0, v1, v3}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
@@ -272,7 +272,7 @@
 
     .prologue
     .line 38
-    iput p1, p0, Lcom/tencent/mm/ui/BorderNumView;->iln:I
+    iput p1, p0, Lcom/tencent/mm/ui/BorderNumView;->kjv:I
 
     .line 39
     return-void

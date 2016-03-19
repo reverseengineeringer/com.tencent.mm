@@ -1,27 +1,19 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.telephony.PhoneStateListener;
-import android.telephony.SignalStrength;
-import android.telephony.TelephonyManager;
+import java.util.HashMap;
 
-final class au
-  extends PhoneStateListener
+public final class au
 {
-  au(at paramat) {}
+  private static final HashMap jXR = new HashMap();
   
-  public final void onSignalStrengthsChanged(SignalStrength paramSignalStrength)
+  public static String getProperty(String paramString)
   {
-    super.onSignalStrengthsChanged(paramSignalStrength);
-    if (at.a(iau) == 2) {
-      at.iY(paramSignalStrength.getCdmaDbm());
-    }
-    if (at.a(iau) == 1) {
-      at.iY(paramSignalStrength.getGsmSignalStrength() * 2 - 113);
-    }
-    if (at.b(iau) != null) {
-      at.b(iau).listen(at.c(iau), 0);
-    }
-    at.d(iau);
+    return (String)jXR.get(paramString);
+  }
+  
+  public static void setProperty(String paramString1, String paramString2)
+  {
+    jXR.put(paramString1, paramString2);
   }
 }
 

@@ -5,29 +5,29 @@ import java.io.Writer;
 public final class b
   extends Writer
 {
-  private final String bt;
-  private StringBuilder fd = new StringBuilder(128);
+  private StringBuilder em = new StringBuilder(128);
+  private final String mTag;
   
   public b(String paramString)
   {
-    bt = paramString;
+    mTag = paramString;
   }
   
-  private void av()
+  private void ad()
   {
-    if (fd.length() > 0) {
-      fd.delete(0, fd.length());
+    if (em.length() > 0) {
+      em.delete(0, em.length());
     }
   }
   
   public final void close()
   {
-    av();
+    ad();
   }
   
   public final void flush()
   {
-    av();
+    ad();
   }
   
   public final void write(char[] paramArrayOfChar, int paramInt1, int paramInt2)
@@ -37,13 +37,13 @@ public final class b
     {
       char c = paramArrayOfChar[(paramInt1 + i)];
       if (c == '\n') {
-        av();
+        ad();
       }
       for (;;)
       {
         i += 1;
         break;
-        fd.append(c);
+        em.append(c);
       }
     }
   }

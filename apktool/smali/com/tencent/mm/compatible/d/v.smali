@@ -3,149 +3,84 @@
 .source "SourceFile"
 
 
-# static fields
-.field private static biL:Ljava/lang/Class;
+# instance fields
+.field public bti:I
 
-.field private static biM:Ljava/lang/reflect/Method;
+.field public btj:I
 
-.field private static biN:Ljava/lang/reflect/Method;
+.field public btk:I
+
+.field public btl:I
+
+.field public btm:I
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 5
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    const/4 v0, 0x0
+    .line 30
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11
-    sput-object v0, Lcom/tencent/mm/compatible/d/v;->biL:Ljava/lang/Class;
+    .line 14
+    const v0, 0xc3500
 
-    .line 12
-    sput-object v0, Lcom/tencent/mm/compatible/d/v;->biM:Ljava/lang/reflect/Method;
-
-    .line 13
-    sput-object v0, Lcom/tencent/mm/compatible/d/v;->biN:Ljava/lang/reflect/Method;
-
-    .line 17
-    :try_start_0
-    const-string/jumbo v0, "android.os.SystemProperties"
-
-    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
-
-    move-result-object v0
-
-    .line 18
-    sput-object v0, Lcom/tencent/mm/compatible/d/v;->biL:Ljava/lang/Class;
-
-    const-string/jumbo v1, "get"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Class;
-
-    const/4 v3, 0x0
-
-    const-class v4, Ljava/lang/String;
-
-    aput-object v4, v2, v3
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tencent/mm/compatible/d/v;->biM:Ljava/lang/reflect/Method;
-
-    .line 19
-    sget-object v0, Lcom/tencent/mm/compatible/d/v;->biL:Ljava/lang/Class;
-
-    const-string/jumbo v1, "getInt"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Class;
-
-    const/4 v3, 0x0
-
-    const-class v4, Ljava/lang/String;
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    sget-object v4, Ljava/lang/Integer;->TYPE:Ljava/lang/Class;
-
-    aput-object v4, v2, v3
-
-    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tencent/mm/compatible/d/v;->biN:Ljava/lang/reflect/Method;
+    iput v0, p0, Lcom/tencent/mm/compatible/d/v;->bti:I
 
     .line 20
-    sget-object v0, Lcom/tencent/mm/compatible/d/v;->biM:Ljava/lang/reflect/Method;
+    const v0, 0xea60
 
-    const/4 v1, 0x1
+    iput v0, p0, Lcom/tencent/mm/compatible/d/v;->btj:I
 
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
+    .line 27
+    const v0, 0x5f5e100
 
-    .line 21
-    sget-object v0, Lcom/tencent/mm/compatible/d/v;->biN:Ljava/lang/reflect/Method;
+    iput v0, p0, Lcom/tencent/mm/compatible/d/v;->btk:I
 
-    const/4 v1, 0x1
+    .line 45
+    const/16 v0, 0x3e8
 
-    invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    iput v0, p0, Lcom/tencent/mm/compatible/d/v;->btl:I
 
-    .line 24
-    :goto_0
+    .line 51
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/tencent/mm/compatible/d/v;->btm:I
+
+    .line 31
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/v;->reset()V
+
+    .line 32
     return-void
-
-    .line 23
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
 .end method
 
-.method public static get(Ljava/lang/String;)Ljava/lang/String;
-    .locals 5
+
+# virtual methods
+.method public final reset()V
+    .locals 1
 
     .prologue
-    const/4 v1, 0x0
+    .line 35
+    const v0, 0xc3500
+
+    iput v0, p0, Lcom/tencent/mm/compatible/d/v;->bti:I
+
+    .line 36
+    const v0, 0xea60
+
+    iput v0, p0, Lcom/tencent/mm/compatible/d/v;->btj:I
+
+    .line 37
+    const/16 v0, 0x3e8
+
+    iput v0, p0, Lcom/tencent/mm/compatible/d/v;->btl:I
 
     .line 38
-    :try_start_0
-    sget-object v0, Lcom/tencent/mm/compatible/d/v;->biM:Ljava/lang/reflect/Method;
+    const/4 v0, 0x0
 
-    const/4 v2, 0x0
+    iput v0, p0, Lcom/tencent/mm/compatible/d/v;->btm:I
 
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    aput-object p0, v3, v4
-
-    invoke-virtual {v0, v2, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 40
-    :goto_0
-    return-object v0
-
-    :catch_0
-    move-exception v0
-
-    move-object v0, v1
-
-    goto :goto_0
+    .line 39
+    return-void
 .end method

@@ -4,14 +4,14 @@ import android.os.Build.VERSION;
 
 public final class a$b
 {
-  public static int iM(String paramString)
+  public static int kq(String paramString)
   {
-    if (!a.bUQ) {}
-    while ((Build.VERSION.SDK_INT < 5) || (!a.bUQ)) {
+    if (!a.clN) {}
+    while ((Build.VERSION.SDK_INT < 5) || (!a.clN)) {
       return 0;
     }
     new d();
-    return d.iM(paramString);
+    return d.kq(paramString);
   }
 }
 

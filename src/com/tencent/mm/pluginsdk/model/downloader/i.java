@@ -1,49 +1,60 @@
 package com.tencent.mm.pluginsdk.model.downloader;
 
-public final class i
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+
+final class i
+  extends h
 {
-  public String dtM = "";
-  public String gNi = "";
-  String gNj = "";
-  int gNk = 1;
-  boolean gNl = false;
-  public boolean gNm = true;
-  public boolean gNn = false;
-  String mFileName = "";
-  
-  public static final class a
+  public i(a parama)
   {
-    public i gNo = new i((byte)0);
-    
-    public final void ej(boolean paramBoolean)
-    {
-      gNo.gNl = paramBoolean;
+    super(parama);
+  }
+  
+  public final long a(d paramd)
+  {
+    if (ay.kz(iCq)) {
+      return -1L;
     }
-    
-    public final void lo(int paramInt)
+    paramd = new Intent("android.intent.action.VIEW", Uri.parse(iCq));
+    paramd.addFlags(268435456);
+    try
     {
-      gNo.gNk = paramInt;
+      y.getContext().startActivity(paramd);
+      return 0L;
     }
-    
-    public final void setAppId(String paramString)
+    catch (Exception paramd)
     {
-      gNo.dtM = paramString;
+      u.e("!56@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXMR0rg2iWmbvGurx8Zm7eZ3Q==", "Add download task failed: " + paramd.toString());
     }
-    
-    public final void uC(String paramString)
-    {
-      gNo.gNi = paramString;
-    }
-    
-    public final void uD(String paramString)
-    {
-      gNo.mFileName = paramString;
-    }
-    
-    public final void uE(String paramString)
-    {
-      gNo.gNj = paramString;
-    }
+    return -1L;
+  }
+  
+  public final int cG(long paramLong)
+  {
+    return 1;
+  }
+  
+  public final e cH(long paramLong)
+  {
+    e locale = new e();
+    id = paramLong;
+    status = -1;
+    return locale;
+  }
+  
+  public final boolean cI(long paramLong)
+  {
+    return false;
+  }
+  
+  public final boolean cJ(long paramLong)
+  {
+    return false;
   }
 }
 

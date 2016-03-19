@@ -35,7 +35,7 @@
     .line 29
     sput-object v0, Lcom/tencent/kingkong/BulkCursorDescriptor;->CREATOR:Landroid/os/Parcelable$Creator;
 
-    .line 42
+    .line 28
     return-void
 .end method
 

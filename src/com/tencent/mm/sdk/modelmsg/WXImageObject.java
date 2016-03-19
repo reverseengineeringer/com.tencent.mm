@@ -3,7 +3,7 @@ package com.tencent.mm.sdk.modelmsg;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 
@@ -13,10 +13,8 @@ public class WXImageObject
   private static final int CONTENT_LENGTH_LIMIT = 10485760;
   private static final int PATH_LENGTH_LIMIT = 10240;
   private static final String TAG = "!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=";
-  private static final int URL_LENGTH_LIMIT = 10240;
   public byte[] imageData;
   public String imagePath;
-  public String imageUrl;
   
   public WXImageObject() {}
   
@@ -51,29 +49,24 @@ public class WXImageObject
   
   public boolean checkArgs()
   {
-    if (((imageData == null) || (imageData.length == 0)) && ((imagePath == null) || (imagePath.length() == 0)) && ((imageUrl == null) || (imageUrl.length() == 0)))
+    if (((imageData == null) || (imageData.length == 0)) && ((imagePath == null) || (imagePath.length() == 0)))
     {
-      t.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, all arguments are null");
+      u.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, all arguments are null");
       return false;
     }
     if ((imageData != null) && (imageData.length > 10485760))
     {
-      t.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, content is too large");
+      u.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, content is too large");
       return false;
     }
     if ((imagePath != null) && (imagePath.length() > 10240))
     {
-      t.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, path is invalid");
+      u.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, path is invalid");
       return false;
     }
     if ((imagePath != null) && (getFileSize(imagePath) > 10485760))
     {
-      t.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, image content is too large");
-      return false;
-    }
-    if ((imageUrl != null) && (imageUrl.length() > 10240))
-    {
-      t.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, url is invalid");
+      u.e("!44@/B4Tb64lLpIyQij4HtGFZMINqfKLk3xCSNB+M4PcHh0=", "checkArgs fail, image content is too large");
       return false;
     }
     return true;
@@ -83,7 +76,6 @@ public class WXImageObject
   {
     paramBundle.putByteArray("_wximageobject_imageData", imageData);
     paramBundle.putString("_wximageobject_imagePath", imagePath);
-    paramBundle.putString("_wximageobject_imageUrl", imageUrl);
   }
   
   public void setImagePath(String paramString)
@@ -100,7 +92,6 @@ public class WXImageObject
   {
     imageData = paramBundle.getByteArray("_wximageobject_imageData");
     imagePath = paramBundle.getString("_wximageobject_imagePath");
-    imageUrl = paramBundle.getString("_wximageobject_imageUrl");
   }
 }
 

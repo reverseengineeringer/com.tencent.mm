@@ -1,17 +1,16 @@
 package com.tencent.mm.sandbox.updater;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
+import android.content.Intent;
 
-final class a
-  implements DialogInterface.OnCancelListener
+public abstract interface a
 {
-  a(AppInstallerUI paramAppInstallerUI) {}
+  public abstract boolean H(Intent paramIntent);
   
-  public final void onCancel(DialogInterface paramDialogInterface)
-  {
-    AppInstallerUI.a(hWh);
-  }
+  public abstract void gF(boolean paramBoolean);
+  
+  public abstract boolean isBusy();
+  
+  public abstract void onDestroy();
 }
 
 /* Location:

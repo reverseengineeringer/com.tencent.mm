@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cz
-  extends a.c
+  extends a.e
 {
   public a$cz()
   {
-    super("verifyWCPayPassword", "verifyWCPayPassword", 115, true);
+    super("openMapNavigateMenu", "openMapNavigateMenu", 184, true);
   }
 }
 

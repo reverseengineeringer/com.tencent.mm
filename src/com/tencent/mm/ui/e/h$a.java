@@ -5,14 +5,14 @@ import java.util.List;
 
 public final class h$a
 {
-  public List cvm = new LinkedList();
-  public List fWT = null;
-  public int jnC = Integer.MAX_VALUE;
-  public boolean jnD = true;
-  public int jnE = Integer.MAX_VALUE;
-  public boolean jnF = false;
-  public int jnG = 0;
-  public int jnH = 0;
+  public List cNf = new LinkedList();
+  public List gho = null;
+  public int ihI = 0;
+  public int lsV = Integer.MAX_VALUE;
+  public boolean lsW = true;
+  public int lsX = Integer.MAX_VALUE;
+  public boolean lsY = false;
+  public int lsZ = 0;
 }
 
 /* Location:

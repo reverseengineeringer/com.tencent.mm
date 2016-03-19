@@ -1,36 +1,30 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import android.database.Cursor;
-import android.net.Uri;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class br
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awF = new a();
-  public b awG = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auW = new a();
+  public b auX = new b();
   
   public br()
   {
-    id = "ExtCall";
-    hXT = atO;
+    id = "ExDeviceGetCurrentSSID";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String[] atX;
-    public int awH = 0;
-    public Context context;
-    public String[] selectionArgs;
-    public Uri uri;
+    public boolean Jq = false;
   }
   
   public static final class b
   {
-    public Cursor cursor;
+    public boolean auR;
+    public String auY;
   }
 }
 

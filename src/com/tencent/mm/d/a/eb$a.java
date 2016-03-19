@@ -1,13 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.storage.ar;
+import android.content.Context;
+import android.widget.ImageView;
+import com.tencent.mm.protocal.b.nf;
 
 public final class eb$a
 {
-  public int aAk = 0;
-  public boolean aAl = false;
-  public String amm;
-  public ar aub;
+  public int auE = -1;
+  public long aua;
+  public nf ayg;
+  public ImageView ayh;
+  public int ayi;
+  public boolean ayj = false;
+  public boolean ayk = false;
+  public boolean ayl = true;
+  public Context context;
+  public int height;
+  public int maxWidth;
+  public int width;
 }
 
 /* Location:

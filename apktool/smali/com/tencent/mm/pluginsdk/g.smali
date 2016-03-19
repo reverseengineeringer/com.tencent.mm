@@ -1,116 +1,193 @@
-.class final Lcom/tencent/mm/pluginsdk/g;
+.class public interface abstract Lcom/tencent/mm/pluginsdk/g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/model/ap$c$a;
 
-
-# instance fields
-.field final synthetic val$context:Landroid/content/Context;
-
-.field final synthetic val$intent:Landroid/content/Intent;
-
-
-# direct methods
-.method constructor <init>(Landroid/content/Intent;Landroid/content/Context;)V
-    .locals 0
-
-    .prologue
-    .line 694
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/g;->val$intent:Landroid/content/Intent;
-
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/g;->val$context:Landroid/content/Context;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
+# annotations
+.annotation runtime Ljava/lang/Deprecated;
+.end annotation
 
 
 # virtual methods
-.method public final h(Ljava/lang/String;Z)V
-    .locals 6
+.method public abstract a(Ljava/lang/Runnable;Lcom/tencent/mm/ui/MMActivity;IILandroid/content/Intent;)Lcom/tencent/mm/ui/base/h;
+.end method
 
-    .prologue
-    const/4 v3, 0x1
+.method public abstract a(Landroid/app/Activity;Landroid/content/Intent;I)V
+.end method
 
-    const/4 v5, 0x0
+.method public abstract a(Landroid/app/Activity;Landroid/content/Intent;Landroid/content/Intent;Ljava/lang/String;ILcom/tencent/mm/ui/tools/a$a;)V
+.end method
 
-    .line 697
-    if-nez p2, :cond_0
+.method public abstract a(Landroid/content/Context;Landroid/content/Intent;Landroid/content/Intent;)V
+.end method
 
-    .line 698
-    const-string/jumbo v0, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
+.method public abstract a(Landroid/content/Intent;ILandroid/app/Activity;)V
+.end method
 
-    const-string/jumbo v1, "getContact fail, %s"
+.method public abstract a(Landroid/content/Intent;ILcom/tencent/mm/ui/MMActivity;Landroid/content/Intent;)V
+.end method
 
-    new-array v2, v3, [Ljava/lang/Object;
+.method public abstract a(Landroid/content/Intent;Landroid/app/Activity;)V
+.end method
 
-    aput-object p1, v2, v5
+.method public abstract a(Landroid/content/Intent;Landroid/app/Activity;I)V
+.end method
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+.method public abstract a(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
 
-    .line 712
-    :goto_0
-    return-void
+.method public abstract a(Landroid/content/Intent;Lcom/tencent/mm/ui/MMActivity$a;Lcom/tencent/mm/ui/MMActivity;)V
+.end method
 
-    .line 702
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/g;->val$intent:Landroid/content/Intent;
+.method public abstract a(Landroid/content/Intent;Lcom/tencent/mm/ui/MMActivity;)V
+.end method
 
-    const-string/jumbo v1, "Chat_User"
+.method public abstract a(Lcom/tencent/mm/ui/MMActivity;Ljava/lang/String;Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;Ljava/lang/String;Ljava/lang/String;)V
+.end method
 
-    invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+.method public abstract a(Lcom/tencent/mm/ui/MMWizardActivity;Landroid/content/Intent;)V
+.end method
 
-    .line 704
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/g;->val$context:Landroid/content/Context;
+.method public abstract a(ZZLandroid/content/Context;Ljava/lang/String;II)V
+.end method
 
-    if-eqz v0, :cond_1
+.method public abstract a(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Z
+.end method
 
-    .line 705
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/g;->val$context:Landroid/content/Context;
+.method public varargs abstract a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/Object;)Z
+.end method
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/g;->val$intent:Landroid/content/Intent;
+.method public abstract aj(Landroid/content/Context;)Lcom/tencent/mm/ui/base/h;
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+.method public abstract ak(Landroid/content/Context;)Landroid/content/Intent;
+.end method
 
-    goto :goto_0
+.method public abstract al(Landroid/content/Context;)V
+.end method
 
-    .line 709
-    :catch_0
-    move-exception v0
+.method public abstract am(Landroid/content/Context;)V
+.end method
 
-    .line 710
-    const-string/jumbo v1, "!32@/B4Tb64lLpJqiCZqhHFUf3K4PpttAcDQ"
+.method public abstract b(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
 
-    const-string/jumbo v2, ""
+.method public abstract b(Landroid/content/Intent;Landroid/app/Activity;)V
+.end method
 
-    new-array v3, v3, [Ljava/lang/Object;
+.method public abstract b(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
 
-    const-string/jumbo v4, ""
+.method public abstract b(Lcom/tencent/mm/ui/MMWizardActivity;Landroid/content/Intent;)V
+.end method
 
-    aput-object v4, v3, v5
+.method public abstract b(Ljava/lang/String;Landroid/content/Context;)V
+.end method
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+.method public abstract c(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
 
-    goto :goto_0
+.method public abstract c(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
 
-    .line 707
-    :cond_1
-    :try_start_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+.method public abstract cancelNotification(Ljava/lang/String;)V
+.end method
 
-    move-result-object v0
+.method public abstract d(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/g;->val$intent:Landroid/content/Intent;
+.method public abstract d(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+.method public abstract e(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
 
-    goto :goto_0
+.method public abstract e(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract f(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
+
+.method public abstract f(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract g(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
+
+.method public abstract g(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract h(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
+
+.method public abstract h(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract i(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
+
+.method public abstract i(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract j(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
+
+.method public abstract j(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract k(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
+
+.method public abstract k(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract kL()V
+.end method
+
+.method public abstract l(Landroid/content/Context;Landroid/content/Intent;)V
+.end method
+
+.method public abstract l(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract m(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract n(Landroid/content/Context;Ljava/lang/String;)V
+.end method
+
+.method public abstract n(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract o(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract p(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract q(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract r(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract s(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract t(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract u(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract v(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract w(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract x(Landroid/content/Intent;Landroid/content/Context;)V
+.end method
+
+.method public abstract y(Landroid/content/Intent;Landroid/content/Context;)V
 .end method

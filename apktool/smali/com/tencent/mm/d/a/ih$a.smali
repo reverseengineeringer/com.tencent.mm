@@ -15,7 +15,11 @@
 
 
 # instance fields
-.field public avk:Ljava/lang/String;
+.field public aEa:Ljava/lang/String;
+
+.field public aEb:Ljava/lang/String;
+
+.field public ret:I
 
 
 # direct methods

@@ -1,29 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class n
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aui = new a();
-  public b auj = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a asv = new a();
   
   public n()
   {
-    id = "BindQQ";
-    hXT = atO;
+    id = "BackupProcessMgrExit";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int auk = 0;
-  }
-  
-  public static final class b
-  {
-    public int ret = 0;
+    public boolean asw;
   }
 }
 

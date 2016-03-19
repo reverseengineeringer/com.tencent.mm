@@ -1,7 +1,7 @@
 package com.tencent.mm.performance.b;
 
 import android.os.Looper;
-import com.tencent.mm.performance.wxperformancetool.h;
+import com.tencent.mm.performance.wxperformancetool.c;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -14,23 +14,23 @@ public final class a
   extends com.tencent.mm.performance.e.a
 {
   public static String TYPE = "LooperMonitorController";
-  public HashMap bTB;
-  public h bTC;
-  public HashSet bTD;
+  public HashMap ckx;
+  public c cky;
+  public HashSet ckz;
   
-  public a(h paramh)
+  public a(c paramc)
   {
-    bTC = paramh;
+    cky = paramc;
   }
   
-  public final String Dk()
+  public final String Fs()
   {
     return TYPE;
   }
   
-  public final void Dl()
+  public final void Ft()
   {
-    if ((bTB == null) || (bTB.isEmpty()) || (!b.bTJ) || (!b.bTK)) {
+    if ((ckx == null) || (ckx.isEmpty()) || (!b.ckF) || (!b.ckG)) {
       return;
     }
     for (;;)
@@ -42,7 +42,7 @@ public final class a
       Object localObject1;
       try
       {
-        localObject5 = bTB.entrySet().iterator();
+        localObject5 = ckx.entrySet().iterator();
         Object localObject2 = null;
         if (!((Iterator)localObject5).hasNext()) {
           break label239;
@@ -54,28 +54,28 @@ public final class a
         if (localLooper == null) {
           break label217;
         }
-        if ((bTE == -1L) || (!b.bTJ)) {
+        if ((ckA == -1L) || (!b.ckF)) {
           break label287;
         }
-        if (b.bTK) {
+        if (b.ckG) {
           break label183;
         }
       }
       finally {}
-      if (localObject1 > bTF)
+      if (localObject1 > ckB)
       {
-        bTG = bTE;
-        a(localLooper, localObject1, bTF, false, bTL);
+        ckC = ckA;
+        a(localLooper, localObject1, ckB, false, ckH);
         continue;
         label183:
         long l;
-        if (bTG == bTE)
+        if (ckC == ckA)
         {
           l = -1L;
         }
         else
         {
-          l = System.currentTimeMillis() - bTE;
+          l = System.currentTimeMillis() - ckA;
           continue;
           label217:
           Object localObject4;
@@ -93,7 +93,7 @@ public final class a
               while (((Iterator)localObject4).hasNext())
               {
                 localObject5 = (WeakReference)((Iterator)localObject4).next();
-                bTB.remove(localObject5);
+                ckx.remove(localObject5);
               }
             }
             return;
@@ -111,13 +111,13 @@ public final class a
       throw new IllegalArgumentException("addMoniterLooper, looper is null");
     }
     WeakReference localWeakReference = new WeakReference(paramLooper);
-    if (bTB.containsKey(localWeakReference)) {
+    if (ckx.containsKey(localWeakReference)) {
       return;
     }
     b localb = new b(this, localWeakReference);
     try
     {
-      bTB.put(localWeakReference, localb);
+      ckx.put(localWeakReference, localb);
       paramLooper.setMessageLogging(localb);
       return;
     }
@@ -126,9 +126,9 @@ public final class a
   
   public final void a(Looper paramLooper, long paramLong, int paramInt, boolean paramBoolean, String paramString)
   {
-    synchronized (bTD)
+    synchronized (ckz)
     {
-      Iterator localIterator = bTD.iterator();
+      Iterator localIterator = ckz.iterator();
       if (localIterator.hasNext()) {
         ((a)localIterator.next()).b(paramLooper, paramLong, paramInt, paramBoolean, paramString);
       }

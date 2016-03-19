@@ -6,16 +6,14 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 
 public final class PluginTextPreference
   extends Preference
 {
-  private TextView cDE = null;
-  private ImageView enR = null;
-  public int iMS;
+  private TextView daQ = null;
+  private ImageView fxP = null;
+  public int kMg;
   private String text;
   private int textColor;
   public int visibility;
@@ -33,28 +31,28 @@ public final class PluginTextPreference
   public PluginTextPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference_content_plugin_text);
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.PluginTextPreference);
-    iMS = paramContext.getResourceId(0, 0);
+    setLayoutResource(2131363243);
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.PluginTextPreference);
+    kMg = paramContext.getResourceId(0, 0);
     text = paramContext.getString(1);
     textColor = paramContext.getColor(2, -7039852);
     paramContext.recycle();
   }
   
-  public final void nU(int paramInt)
-  {
-    text = mContext.getString(paramInt);
-  }
-  
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    enR = ((ImageView)paramView.findViewById(a.i.image_iv));
-    enR.setImageResource(iMS);
-    enR.setVisibility(visibility);
-    cDE = ((TextView)paramView.findViewById(a.i.text_tv));
-    cDE.setText(text);
-    cDE.setTextColor(textColor);
+    fxP = ((ImageView)paramView.findViewById(2131166875));
+    fxP.setImageResource(kMg);
+    fxP.setVisibility(visibility);
+    daQ = ((TextView)paramView.findViewById(2131165420));
+    daQ.setText(text);
+    daQ.setTextColor(textColor);
+  }
+  
+  public final void qT(int paramInt)
+  {
+    text = mContext.getString(paramInt);
   }
 }
 

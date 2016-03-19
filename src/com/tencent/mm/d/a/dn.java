@@ -1,23 +1,35 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.r.f.a;
+import com.tencent.mm.r.f.b;
+import com.tencent.mm.sdk.c.b;
 
 public final class dn
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azD = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a axm = new a();
+  public b axn = new b();
   
   public dn()
   {
-    id = "GetJDUrl";
-    hXT = atO;
+    id = "ExtPlayer";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String url;
+    public String anC;
+    public boolean apj;
+    public f.a axo;
+    public f.b axp;
+    public int op;
+  }
+  
+  public static final class b
+  {
+    public boolean atR = false;
   }
 }
 

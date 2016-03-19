@@ -1,23 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
 
 public final class er
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aBr = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azp = new a();
   
   public er()
   {
-    id = "NewYearDisasterTest";
-    hXT = atO;
+    id = "GameCenterOperation";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aBs;
+    public int actionCode;
+    public String appId;
+    public int asc;
+    public String azq;
+    public Context context;
+    public String messageAction;
+    public String messageExt;
   }
 }
 

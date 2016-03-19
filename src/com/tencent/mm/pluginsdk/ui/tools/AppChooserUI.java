@@ -1,6 +1,7 @@
 package com.tencent.mm.pluginsdk.ui.tools;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -10,6 +11,7 @@ import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.content.res.Resources.NotFoundException;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -17,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -24,21 +27,20 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.a.o;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.pluginsdk.model.u;
-import com.tencent.mm.pluginsdk.model.w;
-import com.tencent.mm.pluginsdk.model.x;
-import com.tencent.mm.pluginsdk.model.x.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.pluginsdk.model.app.p;
+import com.tencent.mm.pluginsdk.model.downloader.d.a;
+import com.tencent.mm.pluginsdk.model.downloader.k;
+import com.tencent.mm.pluginsdk.model.q;
+import com.tencent.mm.pluginsdk.model.r;
+import com.tencent.mm.pluginsdk.model.r.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.f;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.base.al;
-import com.tencent.mm.ui.cn;
+import com.tencent.mm.ui.base.i;
+import com.tencent.mm.ui.j;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -47,39 +49,218 @@ import java.util.List;
 public class AppChooserUI
   extends MMActivity
 {
-  private int atZ = 0;
-  a hcS;
-  private Intent hcT = null;
-  private int hcU;
-  private String hcV = null;
-  private Bundle hcW = null;
-  private w hcX = null;
-  private ArrayList hcY = null;
-  private c hcZ = null;
-  private c hda = new c();
-  private List hdb;
-  private String hdc;
-  private int hdd;
-  private int hde;
-  private boolean hdf = false;
-  private boolean hdg = false;
-  private boolean hdh = false;
-  private long hdi;
-  private e hdj;
-  private AdapterView.OnItemClickListener hdk = new b(this);
-  private View.OnClickListener hdl = new c(this);
-  private View.OnClickListener hdm = new d(this);
-  private View.OnClickListener hdn = new e(this);
-  private DialogInterface.OnDismissListener hdo = new f(this);
-  private com.tencent.mm.pluginsdk.model.downloader.r hdp = new g(this);
-  private PackageManager mPackageManager;
+  private int asc = 0;
+  private PackageManager iQJ;
+  a iQK;
+  private Intent iQL = null;
+  private int iQM;
+  private String iQN = null;
+  private Bundle iQO = null;
+  private q iQP = null;
+  private ArrayList iQQ = null;
+  private c iQR = null;
+  private c iQS = new c();
+  private List iQT;
+  private String iQU;
+  private int iQV;
+  private int iQW;
+  private boolean iQX = false;
+  private boolean iQY = false;
+  private boolean iQZ = false;
+  private long iRa;
+  private e iRb;
+  private AdapterView.OnItemClickListener iRc = new AdapterView.OnItemClickListener()
+  {
+    public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+    {
+      if (AppChooserUI.a(AppChooserUI.this) != null)
+      {
+        AppChooserUI.a(AppChooserUI.this, AppChooserUI.a(AppChooserUI.this).oM(paramAnonymousInt));
+        AppChooserUI.a(AppChooserUI.this).notifyDataSetChanged();
+        if ((AppChooserUI.b(AppChooserUI.this) != null) && (AppChooserUI.b(AppChooserUI.this).isShowing()))
+        {
+          if ((AppChooserUI.c(AppChooserUI.this) == null) || (!ciRp) || ((ciRs) && ((ciRq) || (AppChooserUI.d(AppChooserUI.this) >= AppChooserUI.e(AppChooserUI.this))))) {
+            break label249;
+          }
+          AppChooserUI.b(AppChooserUI.this).gB(false);
+        }
+      }
+      for (;;)
+      {
+        if (((AppChooserUI.f(AppChooserUI.this) == 6) || (AppChooserUI.g(AppChooserUI.this) == 2)) && (AppChooserUI.c(AppChooserUI.this) != null) && (ciRm != null))
+        {
+          AppChooserUI.a(AppChooserUI.this, ciRm.activityInfo.packageName, false);
+          com.tencent.mm.plugin.report.service.h.fUJ.g(12809, new Object[] { Integer.valueOf(4), ciRm.activityInfo.packageName });
+        }
+        return;
+        label249:
+        AppChooserUI.b(AppChooserUI.this).gB(true);
+      }
+    }
+  };
+  private View.OnClickListener iRd = new View.OnClickListener()
+  {
+    public final void onClick(View paramAnonymousView)
+    {
+      if ((AppChooserUI.c(AppChooserUI.this) != null) && (ciRm != null))
+      {
+        ah.tD().rn().set(AppChooserUI.a(AppChooserUI.this, 274528), ciRm.activityInfo.packageName);
+        AppChooserUI.a(AppChooserUI.this, ciRm.activityInfo.packageName, true);
+      }
+    }
+  };
+  private View.OnClickListener iRe = new View.OnClickListener()
+  {
+    public final void onClick(View paramAnonymousView)
+    {
+      if ((AppChooserUI.c(AppChooserUI.this) != null) && (ciRm != null)) {
+        AppChooserUI.a(AppChooserUI.this, ciRm.activityInfo.packageName, false);
+      }
+    }
+  };
+  private View.OnClickListener iRf = new View.OnClickListener()
+  {
+    public final void onClick(View paramAnonymousView)
+    {
+      u.i("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "mDownloadOnClickListener");
+      int i;
+      if (AppChooserUI.a(AppChooserUI.this) != null)
+      {
+        i = aiRj;
+        if (i != AppChooserUI.f.iRz) {
+          break label298;
+        }
+        if ((AppChooserUI.b(AppChooserUI.this) != null) && (AppChooserUI.b(AppChooserUI.this).isShowing()))
+        {
+          aiRj = AppChooserUI.f.iRA;
+          AppChooserUI.a(AppChooserUI.this).notifyDataSetChanged();
+        }
+        paramAnonymousView = new d.a();
+        if (AppChooserUI.f(AppChooserUI.this) != 1) {
+          break label245;
+        }
+        paramAnonymousView.Ac("http://mdc.html5.qq.com/d/directdown.jsp?channel_id=10375");
+        paramAnonymousView.Ad(AppChooserUI.h(AppChooserUI.this).aPk());
+        paramAnonymousView.oh(1);
+        paramAnonymousView.gj(true);
+        com.tencent.mm.pluginsdk.model.downloader.c.aQc().a(iCw);
+        r.aPt();
+        r.oe(AppChooserUI.g(AppChooserUI.this));
+        if (AppChooserUI.g(AppChooserUI.this) == 0)
+        {
+          if (!AppChooserUI.i(AppChooserUI.this)) {
+            break label262;
+          }
+          com.tencent.mm.plugin.report.service.h.fUJ.g(11168, new Object[] { Integer.valueOf(4), Integer.valueOf(AppChooserUI.f(AppChooserUI.this)) });
+        }
+        label208:
+        if (AppChooserUI.g(AppChooserUI.this) == 1) {
+          com.tencent.mm.plugin.report.service.h.fUJ.g(12809, new Object[] { Integer.valueOf(5), "" });
+        }
+      }
+      label245:
+      label262:
+      label298:
+      label426:
+      do
+      {
+        do
+        {
+          do
+          {
+            return;
+            paramAnonymousView.Ac(AppChooserUI.h(AppChooserUI.this).FG());
+            break;
+            com.tencent.mm.plugin.report.service.h.fUJ.g(11168, new Object[] { Integer.valueOf(3), Integer.valueOf(AppChooserUI.f(AppChooserUI.this)) });
+            break label208;
+          } while (i != AppChooserUI.f.iRB);
+          paramAnonymousView = AppChooserUI.this;
+          long l = AppChooserUI.j(AppChooserUI.this);
+          u.i("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "installRecommendApp");
+          Object localObject = aQccHpath;
+          u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "filepath:%s", new Object[] { localObject });
+          localObject = new File((String)localObject);
+          if (p.c(koJ.kpc, Uri.fromFile((File)localObject))) {
+            break label426;
+          }
+          ah.tD().rn().set(paramAnonymousView.oL(274560), Long.valueOf(0L));
+        } while (iQK == null);
+        iQK.iRj = AppChooserUI.f.iRz;
+        iQK.notifyDataSetChanged();
+        return;
+      } while (iQK == null);
+      iQK.iRj = AppChooserUI.f.iRB;
+      iQK.notifyDataSetChanged();
+    }
+  };
+  private DialogInterface.OnDismissListener iRg = new DialogInterface.OnDismissListener()
+  {
+    public final void onDismiss(DialogInterface paramAnonymousDialogInterface)
+    {
+      finish();
+    }
+  };
+  private k iRh = new k()
+  {
+    public final void bu(long paramAnonymousLong) {}
+    
+    public final void bv(long paramAnonymousLong) {}
+    
+    public final void c(long paramAnonymousLong, String paramAnonymousString)
+    {
+      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskFinished downloadId: %d, savedPath: %s", new Object[] { Long.valueOf(paramAnonymousLong), paramAnonymousString });
+      if ((!ay.kz(paramAnonymousString)) && (com.tencent.mm.a.e.ax(paramAnonymousString)))
+      {
+        ah.tD().rn().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(AppChooserUI.j(AppChooserUI.this)));
+        if ((AppChooserUI.a(AppChooserUI.this) != null) && (AppChooserUI.j(AppChooserUI.this) == paramAnonymousLong))
+        {
+          aiRj = AppChooserUI.f.iRB;
+          AppChooserUI.a(AppChooserUI.this).notifyDataSetChanged();
+        }
+      }
+    }
+    
+    public final void onTaskFailed(long paramAnonymousLong)
+    {
+      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskFailed downloadId:%s", new Object[] { Long.valueOf(paramAnonymousLong) });
+      ah.tD().rn().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(0L));
+      if (AppChooserUI.a(AppChooserUI.this) != null)
+      {
+        aiRj = AppChooserUI.f.iRz;
+        AppChooserUI.a(AppChooserUI.this).notifyDataSetChanged();
+      }
+    }
+    
+    public final void onTaskPaused(long paramAnonymousLong)
+    {
+      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskPaused downloadId:%s", new Object[] { Long.valueOf(paramAnonymousLong) });
+      ah.tD().rn().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(0L));
+      if (AppChooserUI.a(AppChooserUI.this) != null)
+      {
+        aiRj = AppChooserUI.f.iRz;
+        AppChooserUI.a(AppChooserUI.this).notifyDataSetChanged();
+      }
+    }
+    
+    public final void onTaskRemoved(long paramAnonymousLong)
+    {
+      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskRemove downloadId:%s", new Object[] { Long.valueOf(paramAnonymousLong) });
+    }
+    
+    public final void onTaskStarted(long paramAnonymousLong, String paramAnonymousString)
+    {
+      AppChooserUI.a(AppChooserUI.this, paramAnonymousLong);
+      ah.tD().rn().set(AppChooserUI.a(AppChooserUI.this, 274560), Long.valueOf(AppChooserUI.j(AppChooserUI.this)));
+      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "onTaskStarted downloadId:%s savedFilePath:%s", new Object[] { String.valueOf(paramAnonymousLong), paramAnonymousString });
+    }
+  };
   private String mimeType = null;
   
   private static Drawable a(Resources paramResources, int paramInt)
   {
     try
     {
-      paramResources = paramResources.getDrawable(paramInt);
+      paramResources = com.tencent.mm.ax.a.b(paramResources, paramInt);
       return paramResources;
     }
     catch (Resources.NotFoundException paramResources) {}
@@ -89,91 +270,94 @@ public class AppChooserUI
   private List a(Intent paramIntent, boolean paramBoolean, ArrayList paramArrayList)
   {
     ArrayList localArrayList = new ArrayList();
-    paramIntent = mPackageManager.queryIntentActivities(paramIntent, 65536);
-    Object localObject = x.ayP();
-    int i = hcU;
-    localObject = new x.a((x)localObject);
+    paramIntent = iQJ.queryIntentActivities(paramIntent, 65536);
+    Object localObject = iQP.aPl();
+    label103:
     int j;
+    int i;
     int k;
-    switch (i)
+    if (!ay.kz(iAJ))
     {
-    default: 
-      gLJ = a.n.qq_browser_desc;
-      gLK = a.n.qq_browser_lable;
-      gLI = a.h.icon_qqbrowser;
-      hcV = getResources().getString(gLJ);
-      hda.hdw = getResources().getDrawable(gLI);
-      hda.hdv = getResources().getString(gLK);
-      hda.hdx = true;
-      hda.hdy = hdf;
-      if (hdf) {
-        hda.hdA = true;
+      iQN = iAJ;
+      if (iAH > 0) {
+        iQS.iRo = getResources().getDrawable(iAH);
       }
-      if (hdg) {
-        hda.hdz = true;
+      if (iAK <= 0) {
+        break label385;
+      }
+      iQS.iRn = getResources().getString(iAK);
+      iQS.iRp = true;
+      iQS.iRq = iQX;
+      if (iQX) {
+        iQS.iRs = true;
+      }
+      if (iQY) {
+        iQS.iRr = true;
       }
       j = 0;
       i = 0;
       k = j;
       if (paramIntent == null) {
-        break label461;
+        break label437;
       }
       k = j;
       if (paramIntent.size() <= 0) {
-        break label461;
+        break label437;
       }
       int m = paramIntent.size();
       j = 0;
-      label229:
+      label190:
       k = i;
       if (j >= m) {
-        break label461;
+        break label437;
       }
-      t.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "cpan name:%s", new Object[] { getactivityInfo.name });
+      u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "cpan name:%s", new Object[] { getactivityInfo.name });
       localObject = (ResolveInfo)paramIntent.get(j);
-      if (localObject != null)
-      {
-        String str = activityInfo.packageName;
-        if ((paramArrayList == null) || (paramArrayList.isEmpty()) || (paramArrayList.contains(str))) {
-          if (hcX.uh(str))
-          {
-            hda.hdu = ((ResolveInfo)localObject);
-            hda.hdA = true;
-            if (((paramBoolean) || (!hdf)) && ((paramBoolean) || (!hda.hdA))) {
-              break label458;
-            }
-            localArrayList.add(0, hda);
-            i = 1;
-          }
-        }
+      if (localObject == null) {
+        break label434;
       }
-      break;
+      String str = activityInfo.packageName;
+      if ((paramArrayList != null) && (!paramArrayList.isEmpty()) && (!paramArrayList.contains(str))) {
+        break label434;
+      }
+      if (!iQP.zC(str)) {
+        break label400;
+      }
+      iQS.iRm = ((ResolveInfo)localObject);
+      iQS.iRs = true;
+      if (((paramBoolean) || (!iQX)) && ((paramBoolean) || (!iQS.iRs))) {
+        break label434;
+      }
+      localArrayList.add(0, iQS);
+      i = 1;
     }
-    label458:
+    label385:
+    label400:
+    label434:
     for (;;)
     {
       j += 1;
-      break label229;
-      gLJ = a.n.tencent_map_desc;
-      gLK = a.n.tencent_map_label;
-      gLI = a.h.icon_tencent_map;
+      break label190;
+      if (iAI <= 0) {
+        break;
+      }
+      iQN = getResources().getString(iAI);
       break;
-      localArrayList.add(new c((ResolveInfo)localObject, hcX.a(ipQ.iqj, (ResolveInfo)localObject)));
+      iQS.iRn = iAL;
+      break label103;
+      localArrayList.add(new c((ResolveInfo)localObject, iQP.a(koJ.kpc, (ResolveInfo)localObject)));
     }
-    label461:
+    label437:
     if ((paramBoolean) && (k == 0))
     {
-      if ((hcU != 0) || (mimeType == null)) {
-        break label665;
+      if ((iQM != 0) || (mimeType == null)) {
+        break label631;
       }
-      if (u.ug(mimeType))
-      {
-        localArrayList.add(0, hda);
-        if (!hdg) {
-          break label632;
-        }
-        com.tencent.mm.plugin.report.service.j.eJZ.f(11168, new Object[] { Integer.valueOf(2), Integer.valueOf(atZ) });
+      localArrayList.add(0, iQS);
+      if (!iQY) {
+        break label598;
       }
+      com.tencent.mm.plugin.report.service.h.fUJ.g(11168, new Object[] { Integer.valueOf(2), Integer.valueOf(asc) });
     }
     for (;;)
     {
@@ -182,28 +366,28 @@ public class AppChooserUI
       while (i >= 0)
       {
         paramArrayList = (c)localArrayList.get(i);
-        if (hdu != null)
+        if (iRm != null)
         {
-          paramArrayList = hdu.activityInfo.packageName;
-          if ((!bn.iW(paramArrayList)) && (!paramIntent.add(paramArrayList))) {
+          paramArrayList = iRm.activityInfo.packageName;
+          if ((!ay.kz(paramArrayList)) && (!paramIntent.add(paramArrayList))) {
             localArrayList.remove(i);
           }
         }
         i -= 1;
       }
-      label632:
-      com.tencent.mm.plugin.report.service.j.eJZ.f(11168, new Object[] { Integer.valueOf(1), Integer.valueOf(atZ) });
+      label598:
+      com.tencent.mm.plugin.report.service.h.fUJ.g(11168, new Object[] { Integer.valueOf(1), Integer.valueOf(asc) });
       continue;
-      label665:
-      localArrayList.add(0, hda);
+      label631:
+      localArrayList.add(0, iQS);
     }
     return localArrayList;
   }
   
-  private boolean aCM()
+  private boolean aSL()
   {
-    t.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "mShouldShowRecommendApp %s | mAppRecommendCount %d | mAppMaxRecommendCount %d | isOverseasUser %s", new Object[] { Boolean.valueOf(hdh), Integer.valueOf(hdd), Integer.valueOf(hde), Boolean.valueOf(bn.zI()) });
-    return (hdh) && (hdd < hde) && (!bn.zI()) && (com.tencent.mm.sdk.platformtools.g.amP != 1);
+    u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "mShouldShowRecommendApp %s | mAppRecommendCount %d | mAppMaxRecommendCount %d | isOverseasUser %s", new Object[] { Boolean.valueOf(iQZ), Integer.valueOf(iQV), Integer.valueOf(iQW), Boolean.valueOf(ay.AL()) });
+    return (iQZ) && (iQV < iQW) && (!ay.AL()) && (f.akC != 1);
   }
   
   private Drawable b(ResolveInfo paramResolveInfo)
@@ -213,7 +397,7 @@ public class AppChooserUI
       Drawable localDrawable;
       if ((resolvePackageName != null) && (icon != 0))
       {
-        localDrawable = a(mPackageManager.getResourcesForApplication(resolvePackageName), icon);
+        localDrawable = a(iQJ.getResourcesForApplication(resolvePackageName), icon);
         if (localDrawable != null) {
           return localDrawable;
         }
@@ -221,7 +405,7 @@ public class AppChooserUI
       int i = paramResolveInfo.getIconResource();
       if (i != 0)
       {
-        localDrawable = a(mPackageManager.getResourcesForApplication(activityInfo.packageName), i);
+        localDrawable = a(iQJ.getResourcesForApplication(activityInfo.packageName), i);
         if (localDrawable != null) {
           return ???;
         }
@@ -231,19 +415,19 @@ public class AppChooserUI
     {
       for (;;)
       {
-        t.e("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "Couldn't find resources for package", new Object[] { localNameNotFoundException });
+        u.e("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "Couldn't find resources for package", new Object[] { localNameNotFoundException });
       }
       return localNameNotFoundException;
     }
-    return paramResolveInfo.loadIcon(mPackageManager);
+    return paramResolveInfo.loadIcon(iQJ);
   }
   
-  private void b(int paramInt, String paramString, boolean paramBoolean)
+  private void c(int paramInt, String paramString, boolean paramBoolean)
   {
     Intent localIntent = new Intent();
     localIntent.putExtra("selectpkg", paramString);
     localIntent.putExtra("isalways", paramBoolean);
-    localIntent.putExtra("transferback", hcW);
+    localIntent.putExtra("transferback", iQO);
     setResult(paramInt, localIntent);
     finish();
   }
@@ -253,143 +437,152 @@ public class AppChooserUI
     return -1;
   }
   
-  final int lQ(int paramInt)
+  final int oL(int paramInt)
   {
     if (mimeType != null) {
-      return hcU + paramInt + mimeType.hashCode();
+      return iQM + paramInt + mimeType.hashCode();
     }
-    return hcU + paramInt;
+    return iQM + paramInt;
   }
   
   public void onBackPressed()
   {
     super.onBackPressed();
-    b(0, null, false);
+    c(0, null, false);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    x.ayP();
-    x.lj(hcU);
-    Object localObject = getIntent();
-    paramBundle = ((Intent)localObject).getParcelableExtra("targetintent");
-    if (!(paramBundle instanceof Intent))
+    r.aPt();
+    r.ob(iQM);
+    paramBundle = getIntent();
+    Object localObject = paramBundle.getParcelableExtra("targetintent");
+    if (!(localObject instanceof Intent))
     {
-      t.w("ChooseActivity", "Target is not an intent: " + paramBundle);
-      b(0, null, false);
+      u.w("ChooseActivity", "Target is not an intent: " + localObject);
+      c(0, null, false);
       return;
     }
-    hcT = ((Intent)paramBundle);
-    paramBundle = ((Intent)localObject).getStringExtra("title");
-    hcU = ((Intent)localObject).getIntExtra("type", 0);
-    hcW = ((Intent)localObject).getBundleExtra("transferback");
-    hcY = ((Intent)localObject).getStringArrayListExtra("targetwhitelist");
-    hdg = ((Intent)localObject).getBooleanExtra("needupate", false);
-    mimeType = ((Intent)localObject).getStringExtra("mimetype");
-    atZ = ((Intent)localObject).getIntExtra("scene", 0);
-    hdc = ((String)ax.tl().rf().get(lQ(274528), ""));
+    iQL = ((Intent)localObject);
+    localObject = paramBundle.getStringExtra("title");
+    iQM = paramBundle.getIntExtra("type", 0);
+    iQO = paramBundle.getBundleExtra("transferback");
+    iQQ = paramBundle.getStringArrayListExtra("targetwhitelist");
+    iQY = paramBundle.getBooleanExtra("needupate", false);
+    mimeType = paramBundle.getStringExtra("mimetype");
+    asc = paramBundle.getIntExtra("scene", 0);
     int i;
-    if ((!TextUtils.isEmpty(hdc)) && (com.tencent.mm.pluginsdk.model.app.r.l(ipQ.iqj, hdc)) && ((hcY == null) || (hcY.isEmpty()) || (hcY.contains(hdc))))
+    if (ah.rh())
     {
-      localObject = new Intent(hcT);
-      ((Intent)localObject).setPackage(hdc);
-      if (bn.n(this, (Intent)localObject)) {
-        i = 1;
+      iQU = ((String)ah.tD().rn().get(oL(274528), ""));
+      if ((TextUtils.isEmpty(iQU)) || (!p.m(koJ.kpc, iQU)) || ((iQQ != null) && (!iQQ.isEmpty()) && (!iQQ.contains(iQU)))) {
+        break label975;
       }
+      Intent localIntent = new Intent(iQL);
+      localIntent.setPackage(iQU);
+      if (!ay.n(this, localIntent)) {
+        break label318;
+      }
+      i = 1;
     }
     for (;;)
     {
-      if ((i != 0) && (atZ != 6))
+      if ((i != 0) && (asc != 6))
       {
-        b(-1, hdc, true);
+        c(-1, iQU, true);
         return;
+        u.e("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "acc not ready");
+        c(4097, null, false);
+        return;
+        label318:
         i = 0;
       }
       else
       {
-        mPackageManager = getPackageManager();
-        hcS = new a();
-        x.ayP();
-        hcX = x.lh(hcU);
-        hdf = hcX.ck(ipQ.iqj);
-        hdd = ((Integer)ax.tl().rf().get(274496 + hcU, Integer.valueOf(0))).intValue();
-        x.ayP();
-        hde = x.li(hcU);
-        t.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "jiaminchen mRecommendAppAvailable is %s, mAppRecommendCount is %d", new Object[] { String.valueOf(hdf), Integer.valueOf(hdd) });
-        hdh = true;
-        if (hdd >= hde)
+        iQJ = getPackageManager();
+        iQK = new a();
+        r.aPt();
+        iQP = r.l(iQM, paramBundle.getBundleExtra("key_recommend_params"));
+        iQX = iQP.cK(koJ.kpc);
+        iQV = ((Integer)ah.tD().rn().get(274496 + iQM, Integer.valueOf(0))).intValue();
+        r.aPt();
+        iQW = r.oa(iQM);
+        u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "jiaminchen mRecommendAppAvailable is %s, mAppRecommendCount is %d", new Object[] { String.valueOf(iQX), Integer.valueOf(iQV) });
+        iQZ = true;
+        if (iQV >= iQW)
         {
           i = 1;
-          hdb = a(hcT, aCM(), hcY);
-          if ((i == 0) && (!hdf)) {
-            ax.tl().rf().set(274496 + hcU, Integer.valueOf(hdd + 1));
+          iQT = a(iQL, aSL(), iQQ);
+          if ((i == 0) && (!iQX)) {
+            ah.tD().rn().set(274496 + iQM, Integer.valueOf(iQV + 1));
           }
-          if (!hdf) {
-            break label601;
+          if (!iQX) {
+            break label635;
           }
-          x.ayP();
-          x.ll(hcU);
+          r.aPt();
+          r.od(iQM);
         }
         for (;;)
         {
-          if ((hdb != null) && (hdb.size() == 1) && ((!aCM()) || (hdf)))
+          if ((iQT != null) && (iQT.size() == 1) && ((!aSL()) || (iQX)))
           {
-            paramBundle = (c)hdb.get(0);
+            paramBundle = (c)iQT.get(0);
             if (paramBundle != null)
             {
-              if (hdu != null)
+              if (iRm != null)
               {
-                b(-1, hdu.activityInfo.packageName, false);
+                c(-1, iRm.activityInfo.packageName, false);
                 return;
                 i = 0;
                 break;
-                label601:
+                label635:
                 if (i != 0) {
                   continue;
                 }
-                x.ayP();
-                x.lk(hcU);
+                r.aPt();
+                r.oc(iQM);
                 continue;
               }
-              b(4098, null, false);
+              c(4098, null, false);
               return;
             }
-            b(4097, null, false);
+            c(4097, null, false);
             return;
           }
         }
-        ng(8);
-        if ((hdb != null) && (!hdb.isEmpty()))
+        qa(8);
+        if ((iQT != null) && (!iQT.isEmpty()))
         {
-          hcS.cHW = hdb;
-          hdi = ((Long)ax.tl().rf().get(lQ(274560), Long.valueOf(0L))).longValue();
-          localObject = com.tencent.mm.pluginsdk.model.downloader.h.azu().bW(hdi);
-          t.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "downloadId:" + hdi + ", status:" + status);
-          if ((3 == status) && (com.tencent.mm.a.c.az(path)) && (hcS != null))
+          iQK.dfX = iQT;
+          iRa = ((Long)ah.tD().rn().get(oL(274560), Long.valueOf(0L))).longValue();
+          paramBundle = com.tencent.mm.pluginsdk.model.downloader.c.aQc().cH(iRa);
+          u.d("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "downloadId:" + iRa + ", status:" + status);
+          if ((3 == status) && (com.tencent.mm.a.e.ax(path)) && (iQK != null))
           {
-            hcS.hdr = f.hdJ;
-            hcS.notifyDataSetChanged();
+            iQK.iRj = f.iRB;
+            iQK.notifyDataSetChanged();
           }
-          hdj = new e(ipQ.iqj);
-          hdj.setTitle(paramBundle);
-          hdj.hdF = hdk;
-          hdj.hdm = hdm;
-          hdj.hdG = hdl;
-          hdj.cAS = hcS;
-          hdj.setOnDismissListener(hdo);
-          hdj.show();
-          if ((!hdg) && (hdf) && (i == 0))
+          iRb = new e(koJ.kpc);
+          iRb.setTitle((CharSequence)localObject);
+          iRb.iRx = iRc;
+          iRb.iRe = iRe;
+          iRb.iRy = iRd;
+          iRb.cTk = iQK;
+          iRb.setOnDismissListener(iRg);
+          iRb.show();
+          if ((!iQY) && (iQX) && (i == 0))
           {
-            hcZ = hda;
-            hdj.eC(true);
+            iQR = iQS;
+            iRb.gB(true);
           }
-          com.tencent.mm.pluginsdk.model.downloader.h.azu();
-          com.tencent.mm.pluginsdk.model.downloader.a.a(hdp);
+          com.tencent.mm.pluginsdk.model.downloader.c.aQc();
+          com.tencent.mm.pluginsdk.model.downloader.a.a(iRh);
           return;
         }
-        b(4097, null, false);
+        c(4097, null, false);
         return;
+        label975:
         i = 0;
       }
     }
@@ -398,41 +591,41 @@ public class AppChooserUI
   protected void onDestroy()
   {
     super.onDestroy();
-    com.tencent.mm.pluginsdk.model.downloader.h.azu();
-    com.tencent.mm.pluginsdk.model.downloader.a.b(hdp);
-    if (hdj != null) {
-      hdj.dismiss();
+    com.tencent.mm.pluginsdk.model.downloader.c.aQc();
+    com.tencent.mm.pluginsdk.model.downloader.a.b(iRh);
+    if (iRb != null) {
+      iRb.dismiss();
     }
   }
   
   protected void onResume()
   {
     super.onResume();
-    if ((hdg) && (hcT != null) && (hcX.p(this, hcT)))
+    if ((iQY) && (iQL != null) && (iQP.u(this, iQL)))
     {
-      t.i("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "user installed lasted recommend app");
-      hdg = false;
-      hda.hdz = false;
+      u.i("!32@/B4Tb64lLpIg3+3oVdUfy4qJrktshWRo", "user installed lasted recommend app");
+      iQY = false;
+      iQS.iRr = false;
     }
-    hdf = hcX.ck(ipQ.iqj);
-    hdb = a(hcT, aCM(), hcY);
-    if ((hdf) && (hcZ == null))
+    iQX = iQP.cK(koJ.kpc);
+    iQT = a(iQL, aSL(), iQQ);
+    if ((iQX) && (iQR == null))
     {
-      hcZ = hda;
-      hdj.eC(true);
+      iQR = iQS;
+      iRb.gB(true);
     }
-    if (hcS != null)
+    if (iQK != null)
     {
-      hcS.cHW = hdb;
-      hcS.notifyDataSetChanged();
+      iQK.dfX = iQT;
+      iQK.notifyDataSetChanged();
     }
   }
   
   final class a
     extends BaseAdapter
   {
-    List cHW = new ArrayList();
-    int hdr = AppChooserUI.f.hdH;
+    List dfX = new ArrayList();
+    int iRj = AppChooserUI.f.iRz;
     
     public a()
     {
@@ -441,10 +634,10 @@ public class AppChooserUI
     
     public final int getCount()
     {
-      if (cHW == null) {
+      if (dfX == null) {
         return 0;
       }
-      return cHW.size();
+      return dfX.size();
     }
     
     public final long getItemId(int paramInt)
@@ -454,146 +647,152 @@ public class AppChooserUI
     
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
+      int i = 0;
       AppChooserUI.c localc1;
       boolean bool;
       if ((paramView == null) || (paramView.getTag() == null))
       {
-        paramView = LayoutInflater.from(ipQ.iqj).inflate(a.k.app_choose_list_item, null);
+        paramView = LayoutInflater.from(koJ.kpc).inflate(2131363031, null);
         paramViewGroup = new AppChooserUI.b(AppChooserUI.this, paramView);
         paramView.setTag(paramViewGroup);
-        localc1 = lR(paramInt);
-        if (hdw == null) {
+        localc1 = oM(paramInt);
+        if (iRo == null) {
           new AppChooserUI.d(AppChooserUI.this).execute(new AppChooserUI.c[] { localc1 });
         }
-        dAV.setImageDrawable(hdw);
-        dAW.setText(hdv);
-        if ((localc1 == null) || ((hdx) && (!hdy) && ((!hdx) || (!hdA) || (AppChooserUI.d(AppChooserUI.this) < AppChooserUI.e(AppChooserUI.this)))) || (hdz)) {
-          break label393;
+        esD.setImageDrawable(iRo);
+        esE.setText(iRn);
+        if ((localc1 == null) || ((iRp) && (!iRq) && ((!iRp) || (!iRs) || (AppChooserUI.d(AppChooserUI.this) < AppChooserUI.e(AppChooserUI.this)))) || (iRr)) {
+          break label417;
         }
-        hds.setVisibility(8);
-        hdt.setVisibility(0);
-        RadioButton localRadioButton = hdt;
+        iRk.setVisibility(8);
+        iRl.setVisibility(0);
+        Object localObject = iRl;
         AppChooserUI.c localc2 = AppChooserUI.c(AppChooserUI.this);
         if (!(localc2 instanceof AppChooserUI.c)) {
-          break label387;
+          break label411;
         }
         localc2 = (AppChooserUI.c)localc2;
-        if (((hdu == null) || (hdu == null) || (!hdu.activityInfo.packageName.equals(hdu.activityInfo.packageName))) && ((!hdx) || (!hdx))) {
-          break label387;
+        if (((iRm == null) || (iRm == null) || (!iRm.activityInfo.packageName.equals(iRm.activityInfo.packageName))) && ((!iRp) || (!iRp))) {
+          break label411;
         }
         bool = true;
-        label285:
-        localRadioButton.setChecked(bool);
-        label292:
-        if (!hdx) {
-          break label576;
+        label287:
+        ((RadioButton)localObject).setChecked(bool);
+        label294:
+        if (!iRp) {
+          break label598;
         }
         if (AppChooserUI.f(AppChooserUI.this) != 4) {
-          break label559;
+          break label578;
         }
-        dAY.setText(a.n.qq_browser_desc_for_wb);
-        label321:
-        dAY.setVisibility(0);
+        esG.setText(2131429472);
+        label322:
+        localObject = esG;
+        paramInt = i;
+        if (ay.kz(AppChooserUI.l(AppChooserUI.this))) {
+          paramInt = 8;
+        }
+        ((TextView)localObject).setVisibility(paramInt);
       }
       for (;;)
       {
         if ((AppChooserUI.f(AppChooserUI.this) != 6) && (AppChooserUI.c(AppChooserUI.this) != null) && (AppChooserUI.c(AppChooserUI.this).equals(localc1))) {
-          hdt.setChecked(true);
+          iRl.setChecked(true);
         }
         return paramView;
         paramViewGroup = (AppChooserUI.b)paramView.getTag();
         break;
-        label387:
+        label411:
         bool = false;
-        break label285;
-        label393:
-        hds.setVisibility(0);
-        hdt.setVisibility(8);
-        hds.setOnClickListener(AppChooserUI.k(AppChooserUI.this));
-        if (hdr == AppChooserUI.f.hdH)
+        break label287;
+        label417:
+        iRk.setVisibility(0);
+        iRl.setVisibility(8);
+        iRk.setOnClickListener(AppChooserUI.k(AppChooserUI.this));
+        if (iRj == AppChooserUI.f.iRz)
         {
-          if (hdz) {
-            hds.setText(a.n.app_need_to_update);
+          if (iRr) {
+            iRk.setText(2131430952);
           }
           for (;;)
           {
-            hds.setEnabled(true);
+            iRk.setEnabled(true);
             break;
-            hds.setText(a.n.app_download);
+            iRk.setText(2131430948);
           }
         }
-        if (hdr == AppChooserUI.f.hdI)
+        if (iRj == AppChooserUI.f.iRA)
         {
-          hds.setText(a.n.app_downloading);
-          hds.setEnabled(false);
-          break label292;
+          iRk.setText(2131430949);
+          iRk.setEnabled(false);
+          break label294;
         }
-        if (hdr != AppChooserUI.f.hdJ) {
-          break label292;
+        if (iRj != AppChooserUI.f.iRB) {
+          break label294;
         }
-        if (hdz) {
-          hds.setText(a.n.app_to_update);
+        if (iRr) {
+          iRk.setText(2131430954);
         }
         for (;;)
         {
-          hds.setEnabled(true);
+          iRk.setEnabled(true);
           break;
-          hds.setText(a.n.app_to_install);
+          iRk.setText(2131430953);
         }
-        label559:
-        dAY.setText(AppChooserUI.l(AppChooserUI.this));
-        break label321;
-        label576:
-        dAY.setVisibility(8);
+        label578:
+        esG.setText(ay.ky(AppChooserUI.l(AppChooserUI.this)));
+        break label322;
+        label598:
+        esG.setVisibility(8);
       }
     }
     
-    public final AppChooserUI.c lR(int paramInt)
+    public final AppChooserUI.c oM(int paramInt)
     {
-      if (cHW == null) {
+      if (dfX == null) {
         return null;
       }
-      return (AppChooserUI.c)cHW.get(paramInt);
+      return (AppChooserUI.c)dfX.get(paramInt);
     }
   }
   
   final class b
   {
-    ImageView dAV;
-    TextView dAW;
-    TextView dAY;
-    TextView hds;
-    RadioButton hdt;
+    ImageView esD;
+    TextView esE;
+    TextView esG;
+    TextView iRk;
+    RadioButton iRl;
     
     public b(View paramView)
     {
-      dAV = ((ImageView)paramView.findViewById(a.i.app_icon));
-      dAW = ((TextView)paramView.findViewById(a.i.app_name));
-      dAY = ((TextView)paramView.findViewById(a.i.app_desc));
-      hds = ((TextView)paramView.findViewById(a.i.app_status));
-      hdt = ((RadioButton)paramView.findViewById(a.i.app_radio));
+      esD = ((ImageView)paramView.findViewById(2131169035));
+      esE = ((TextView)paramView.findViewById(2131167381));
+      esG = ((TextView)paramView.findViewById(2131169036));
+      iRk = ((TextView)paramView.findViewById(2131169037));
+      iRl = ((RadioButton)paramView.findViewById(2131169038));
     }
   }
   
   final class c
   {
-    boolean hdA;
-    ResolveInfo hdu;
-    CharSequence hdv;
-    Drawable hdw;
-    boolean hdx;
-    boolean hdy;
-    boolean hdz;
+    ResolveInfo iRm;
+    CharSequence iRn;
+    Drawable iRo;
+    boolean iRp;
+    boolean iRq;
+    boolean iRr;
+    boolean iRs;
     
     public c() {}
     
     public c(ResolveInfo paramResolveInfo, CharSequence paramCharSequence)
     {
-      hdu = paramResolveInfo;
-      hdv = paramCharSequence;
-      hdx = false;
-      hdy = true;
-      hdz = false;
+      iRm = paramResolveInfo;
+      iRn = paramCharSequence;
+      iRp = false;
+      iRq = true;
+      iRr = false;
     }
   }
   
@@ -604,43 +803,43 @@ public class AppChooserUI
   }
   
   final class e
-    extends al
+    extends i
   {
-    BaseAdapter cAS;
-    private View cPa;
-    private ListView hdB;
-    private Button hdC;
-    private Button hdD;
-    private View hdE;
-    AdapterView.OnItemClickListener hdF;
-    View.OnClickListener hdG;
-    View.OnClickListener hdm;
+    private View cRn;
+    BaseAdapter cTk;
+    View.OnClickListener iRe;
+    private ListView iRt;
+    private Button iRu;
+    private Button iRv;
+    private View iRw;
+    AdapterView.OnItemClickListener iRx;
+    View.OnClickListener iRy;
+    private TextView lv;
     private Context mContext;
     private String mTitle;
-    private TextView mq;
     
     public e(Context paramContext)
     {
-      super(a.o.mmalertdialog);
+      super(2131100061);
       mContext = paramContext;
-      cPa = View.inflate(mContext, a.k.app_choose_layout, null);
-      mq = ((TextView)cPa.findViewById(a.i.app_title));
-      hdB = ((ListView)cPa.findViewById(a.i.app_list));
-      hdC = ((Button)cPa.findViewById(a.i.app_button_always));
-      hdD = ((Button)cPa.findViewById(a.i.app_button_once));
-      hdE = cPa.findViewById(a.i.app_title_divider);
-      if (AppChooserUI.f(AppChooserUI.this) == 6) {
-        cPa.findViewById(a.i.app_button_bar).setVisibility(8);
+      cRn = View.inflate(mContext, 2131363089, null);
+      lv = ((TextView)cRn.findViewById(2131169161));
+      iRt = ((ListView)cRn.findViewById(2131169163));
+      iRu = ((Button)cRn.findViewById(2131169165));
+      iRv = ((Button)cRn.findViewById(2131169167));
+      iRw = cRn.findViewById(2131169162);
+      if ((AppChooserUI.f(AppChooserUI.this) == 6) || (AppChooserUI.g(AppChooserUI.this) == 2)) {
+        cRn.findViewById(2131169164).setVisibility(8);
       }
     }
     
-    public final void eC(boolean paramBoolean)
+    public final void gB(boolean paramBoolean)
     {
-      if (hdC != null) {
-        hdC.setEnabled(paramBoolean);
+      if (iRu != null) {
+        iRu.setEnabled(paramBoolean);
       }
-      if (hdD != null) {
-        hdD.setEnabled(paramBoolean);
+      if (iRv != null) {
+        iRv.setEnabled(paramBoolean);
       }
     }
     
@@ -652,7 +851,7 @@ public class AppChooserUI
     protected final void onCreate(Bundle paramBundle)
     {
       super.onCreate(paramBundle);
-      setContentView(cPa);
+      setContentView(cRn);
     }
     
     public final void setTitle(CharSequence paramCharSequence)
@@ -667,30 +866,30 @@ public class AppChooserUI
     
     public final void show()
     {
-      if (bn.iW(mTitle))
+      if (ay.kz(mTitle))
       {
-        hdE.setVisibility(8);
-        mq.setVisibility(8);
+        iRw.setVisibility(8);
+        lv.setVisibility(8);
       }
       for (;;)
       {
-        if (hdF != null) {
-          hdB.setOnItemClickListener(hdF);
+        if (iRx != null) {
+          iRt.setOnItemClickListener(iRx);
         }
-        if (cAS != null) {
-          hdB.setAdapter(cAS);
+        if (cTk != null) {
+          iRt.setAdapter(cTk);
         }
-        if (hdC != null) {
-          hdC.setOnClickListener(hdG);
+        if (iRu != null) {
+          iRu.setOnClickListener(iRy);
         }
-        if (hdD != null) {
-          hdD.setOnClickListener(hdm);
+        if (iRv != null) {
+          iRv.setOnClickListener(iRe);
         }
         super.show();
         return;
-        hdE.setVisibility(0);
-        mq.setVisibility(0);
-        mq.setText(mTitle);
+        iRw.setVisibility(0);
+        lv.setVisibility(0);
+        lv.setText(mTitle);
       }
     }
   }

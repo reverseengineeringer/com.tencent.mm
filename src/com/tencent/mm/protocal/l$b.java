@@ -1,29 +1,29 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.a.a;
+import com.tencent.mm.a.c;
 import com.tencent.mm.pointers.PByteArray;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.IOException;
 
 public final class l$b
-  extends i.d
-  implements i.b
+  extends h.d
+  implements h.b
 {
-  private int aqq = 0;
-  private int axE = 0;
-  public String bKR = "";
-  private int ccm = 0;
+  private int aou = 0;
+  private int axL = 0;
+  public String caU = "";
+  private int ccb = 0;
   public byte[] content = new byte[0];
-  public String hha = "";
+  public String deviceID = "";
   
-  private byte[] ay(byte[] paramArrayOfByte)
+  private byte[] aL(byte[] paramArrayOfByte)
   {
     if ((paramArrayOfByte == null) || (paramArrayOfByte.length < 2))
     {
-      t.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "parse all failed, empty buf");
+      u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "parse all failed, empty buf");
       return null;
     }
     byte[] arrayOfByte = new byte[paramArrayOfByte.length - 2];
@@ -31,21 +31,21 @@ public final class l$b
     {
       paramArrayOfByte = new ByteArrayInputStream(paramArrayOfByte);
       DataInputStream localDataInputStream = new DataInputStream(paramArrayOfByte);
-      axE = localDataInputStream.readByte();
-      aqq = localDataInputStream.readByte();
+      axL = localDataInputStream.readByte();
+      aou = localDataInputStream.readByte();
       localDataInputStream.readFully(arrayOfByte);
-      t.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "cmdId:" + axE + ", flag=" + aqq + ", tail len=" + arrayOfByte.length);
+      u.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "cmdId:" + axL + ", flag=" + aou + ", tail len=" + arrayOfByte.length);
       paramArrayOfByte.close();
       return arrayOfByte;
     }
     catch (IOException paramArrayOfByte)
     {
-      t.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct parse all failed, err=" + paramArrayOfByte.getMessage());
+      u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct parse all failed, err=" + paramArrayOfByte.getMessage());
     }
     return arrayOfByte;
   }
   
-  public final boolean aDr()
+  public final boolean auE()
   {
     return true;
   }
@@ -55,11 +55,11 @@ public final class l$b
     return 8;
   }
   
-  public final int z(byte[] paramArrayOfByte)
+  public final int y(byte[] paramArrayOfByte)
   {
-    byte[] arrayOfByte1 = l.vN(hha);
+    byte[] arrayOfByte1 = l.Bk(deviceID);
     PByteArray localPByteArray = new PByteArray();
-    if (a.b(localPByteArray, ay(paramArrayOfByte), arrayOfByte1) != 0)
+    if (c.b(localPByteArray, aL(paramArrayOfByte), arrayOfByte1) != 0)
     {
       byte[] arrayOfByte2 = new byte[16];
       i = 0;
@@ -68,23 +68,23 @@ public final class l$b
         arrayOfByte2[i] = 0;
         i += 1;
       }
-      if (a.b(localPByteArray, ay(paramArrayOfByte), arrayOfByte2) != 0)
+      if (c.b(localPByteArray, aL(paramArrayOfByte), arrayOfByte2) != 0)
       {
-        t.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "decrypting from buffer using key=%s error", new Object[] { bn.aG(arrayOfByte1) });
+        u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "decrypting from buffer using key=%s error", new Object[] { ay.I(arrayOfByte1) });
         return -1;
       }
     }
     paramArrayOfByte = value;
     if (paramArrayOfByte == null)
     {
-      t.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "parse tail failed, empty buf");
+      u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "parse tail failed, empty buf");
       return 0;
     }
     try
     {
       paramArrayOfByte = new DataInputStream(new ByteArrayInputStream(paramArrayOfByte));
-      ccm = paramArrayOfByte.readInt();
-      t.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "seq=" + ccm);
+      ccb = paramArrayOfByte.readInt();
+      u.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "seq=" + ccb);
       i = paramArrayOfByte.readShort();
       if (i < 0) {
         throw new IOException("sender empty");
@@ -92,20 +92,20 @@ public final class l$b
     }
     catch (IOException paramArrayOfByte)
     {
-      t.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct parse all failed, err=" + paramArrayOfByte.getMessage());
+      u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct parse all failed, err=" + paramArrayOfByte.getMessage());
       return 0;
     }
     arrayOfByte1 = new byte[i];
     paramArrayOfByte.readFully(arrayOfByte1);
-    bKR = new String(arrayOfByte1);
-    t.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "recievers len=" + i + ", sender=" + bKR);
+    caU = new String(arrayOfByte1);
+    u.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "recievers len=" + i + ", sender=" + caU);
     int i = paramArrayOfByte.readShort();
     if (i < 0) {
       throw new IOException("content empty");
     }
     content = new byte[i];
     paramArrayOfByte.readFully(content);
-    t.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "content len=" + content.length);
+    u.d("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "content len=" + content.length);
     return 0;
   }
 }

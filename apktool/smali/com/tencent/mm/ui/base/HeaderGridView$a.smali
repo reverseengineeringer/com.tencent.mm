@@ -1,4 +1,4 @@
-.class final Lcom/tencent/mm/ui/base/HeaderGridView$a;
+.class public final Lcom/tencent/mm/ui/base/HeaderGridView$a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -17,9 +17,9 @@
 # instance fields
 .field public data:Ljava/lang/Object;
 
-.field public iCX:Landroid/view/ViewGroup;
-
 .field public isSelectable:Z
+
+.field public kCa:Landroid/view/ViewGroup;
 
 .field public view:Landroid/view/View;
 
@@ -35,7 +35,7 @@
     return-void
 .end method
 
-.method synthetic constructor <init>(B)V
+.method public synthetic constructor <init>(B)V
     .locals 0
 
     .prologue

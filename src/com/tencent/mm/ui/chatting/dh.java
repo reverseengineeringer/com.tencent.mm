@@ -1,14 +1,11 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-
 final class dh
-  implements DialogInterface.OnClickListener
 {
-  dh(df paramdf) {}
-  
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt) {}
+  String lcw;
+  String lcx;
+  int lcy = -16777216;
+  int lcz = -16777216;
 }
 
 /* Location:

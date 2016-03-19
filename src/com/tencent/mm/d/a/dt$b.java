@@ -1,6 +1,9 @@
 package com.tencent.mm.d.a;
 
-public final class dt$b {}
+public final class dt$b
+{
+  public long avg = 0L;
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.d.a.dt.b

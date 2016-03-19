@@ -1,26 +1,14 @@
 package com.tencent.mm.pluginsdk.model.downloader;
 
-import java.util.Iterator;
-import java.util.Vector;
-
-final class e
-  implements Runnable
+public final class e
 {
-  e(a parama, long paramLong) {}
-  
-  public final void run()
-  {
-    if (a.azs() != null)
-    {
-      Iterator localIterator = a.azs().iterator();
-      while (localIterator.hasNext()) {
-        ((r)localIterator.next()).onTaskFailed(ftb);
-      }
-    }
-    if (a.azt() != null) {
-      a.azt().onTaskFailed(ftb);
-    }
-  }
+  public String aut = "";
+  public long azd = 0L;
+  public long aze = 0L;
+  public long id = -1L;
+  public String path = "";
+  public int status = 0;
+  public String url = "";
 }
 
 /* Location:

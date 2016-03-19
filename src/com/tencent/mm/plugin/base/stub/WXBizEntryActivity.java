@@ -1,55 +1,80 @@
 package com.tencent.mm.plugin.base.stub;
 
 import android.content.Intent;
-import com.tencent.mm.aj.c;
+import com.tencent.mm.ar.c;
 import com.tencent.mm.pluginsdk.ui.AutoLoginActivity;
 import com.tencent.mm.pluginsdk.ui.AutoLoginActivity.a;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.CheckCanSubscribeBizUI;
 
 public class WXBizEntryActivity
   extends AutoLoginActivity
 {
-  private int cjS;
+  private int cBc;
   
   protected final void a(AutoLoginActivity.a parama, Intent paramIntent)
   {
-    t.i("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "postLogin, loginResult = " + parama);
+    u.i("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "postLogin, loginResult = " + parama);
     if (getIntent() != null) {
-      cjS = getIntent().getIntExtra("key_command_id", 0);
+      cBc = getIntent().getIntExtra("key_command_id", 0);
     }
-    switch (1.cjT[parama.ordinal()])
+    switch (2.cBe[parama.ordinal()])
     {
     default: 
-      t.e("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "postLogin, unknown login result = " + parama);
+      u.e("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "postLogin, unknown login result = " + parama);
     }
     for (;;)
     {
       finish();
       return;
-      t.i("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "req type = %d", new Object[] { Integer.valueOf(cjS) });
-      switch (cjS)
+      u.i("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "req type = %d", new Object[] { Integer.valueOf(cBc) });
+      switch (cBc)
       {
-      }
-      for (;;)
-      {
-        finish();
+      case 10: 
+      case 12: 
+      default: 
         return;
-        c.a(this, "card", ".ui.CardAddEntranceUI", getIntent(), false);
-        continue;
+      case 7: 
+      case 8: 
         parama = getIntent();
         parama.setClass(this, CheckCanSubscribeBizUI.class);
         startActivity(parama);
-        continue;
+        finish();
+        return;
+      case 9: 
+        c.a(this, "card", ".ui.CardAddEntranceUI", getIntent(), false);
+        finish();
+        return;
+      case 11: 
         parama = getIntent();
         parama.putExtra("device_type", 1);
         c.a(this, "exdevice", ".ui.ExdeviceRankInfoUI", parama, false);
-        continue;
-        c.a(this, "luckymoney", ".ui.LuckyMoneyBusiReceiveUI", getIntent(), false);
-        continue;
-        c.a(this, "game", ".ui.CreateOrJoinChatroomUI", getIntent(), false);
+        finish();
+        return;
+      case 13: 
+        parama = getIntent();
+        parama.putExtra("key_static_from_scene", 100001);
+        c.a(this, "luckymoney", ".ui.LuckyMoneyBusiReceiveUI", parama, false);
+        finish();
+        return;
       }
-      t.e("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "postLogin fail, loginResult = " + parama);
+      new a(this, getIntent().getStringExtra("key_app_id"), getIntent().getStringExtra("open_id"), new d.a()
+      {
+        public final void bq(boolean paramAnonymousBoolean)
+        {
+          if (paramAnonymousBoolean) {
+            c.a(WXBizEntryActivity.this, "game", ".ui.CreateOrJoinChatroomUI", getIntent(), false);
+          }
+          for (;;)
+          {
+            finish();
+            return;
+            u.e("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "openIdCheck false");
+          }
+        }
+      }).Jz();
+      return;
+      u.e("!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg=", "postLogin fail, loginResult = " + parama);
     }
   }
   

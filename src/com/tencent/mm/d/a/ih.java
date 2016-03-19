@@ -1,23 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ih
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFv = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDZ = new a();
   
   public ih()
   {
-    id = "SucceedUploadEmotion";
-    hXT = atO;
+    id = "OplogServiceResult";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String avk;
+    public String aEa;
+    public String aEb;
+    public int ret;
   }
 }
 

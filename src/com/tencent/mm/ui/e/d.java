@@ -1,9 +1,9 @@
 package com.tencent.mm.ui.e;
 
 import android.content.Context;
-import com.tencent.mm.protocal.b.eq;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.protocal.b.fy;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.e.a.a;
 import com.tencent.mm.ui.e.a.c;
 import java.util.Collections;
@@ -14,74 +14,74 @@ import java.util.List;
 public abstract class d
   extends b
 {
-  private String bII;
-  public List jnw = Collections.synchronizedList(new LinkedList());
+  private String aEy;
+  public List lsP = Collections.synchronizedList(new LinkedList());
   
   public d(Context paramContext, h.c paramc, int paramInt)
   {
     super(paramContext, paramc, paramInt);
   }
   
-  public abstract long IS();
+  public abstract long Lf();
   
   public abstract a a(int paramInt, h.b paramb);
   
-  public final void a(eq parameq, String paramString)
+  public final void a(fy paramfy, String paramString)
   {
-    bII = paramString;
-    b(parameq);
+    aEy = paramString;
+    b(paramfy);
   }
   
-  public final void a(String paramString, ac paramac, HashSet paramHashSet) {}
+  public final void a(String paramString, aa paramaa, HashSet paramHashSet) {}
   
-  protected final int aRh()
-  {
-    return super.aRh();
-  }
+  public final void ass() {}
   
-  public final void ahf() {}
-  
-  public final LinkedList ahg()
+  public final LinkedList ast()
   {
     LinkedList localLinkedList = new LinkedList();
-    int j = jnw.size();
+    int j = lsP.size();
     int i = 0;
     while (i < j)
     {
-      h.b localb = (h.b)jnw.get(i);
-      if (jnC != Integer.MAX_VALUE) {
-        localLinkedList.add(Integer.valueOf(jnC));
+      h.b localb = (h.b)lsP.get(i);
+      if (lsV != Integer.MAX_VALUE) {
+        localLinkedList.add(Integer.valueOf(lsV));
       }
       i += 1;
     }
     return localLinkedList;
   }
   
-  public abstract void b(eq parameq);
+  public abstract void b(fy paramfy);
   
-  public final void c(eq parameq)
+  protected final int bid()
   {
-    if (jnw.size() > 0)
+    return super.bid();
+  }
+  
+  public final void c(fy paramfy)
+  {
+    if (lsP.size() > 0)
     {
-      localb = (h.b)jnw.get(0);
-      jnJ.hoi.addAll(hoi);
-      jnJ.hlv = hlv;
-      jnJ.hog = hog;
-      jnJ.hoh = hoh;
-      jnJ.hoj = hoj;
-      jnI = jnJ.hoi.size();
+      localb = (h.b)lsP.get(0);
+      ltb.jdy.addAll(jdy);
+      ltb.jal = jal;
+      ltb.jdw = jdw;
+      ltb.jdx = jdx;
+      ltb.jdz = jdz;
+      lta = ltb.jdy.size();
       return;
     }
     h.b localb = new h.b();
-    jnJ = parameq;
-    jnI = jnJ.hoi.size();
-    jnG = ((int)IS());
-    jnw.add(localb);
+    ltb = paramfy;
+    lta = ltb.jdy.size();
+    ihI = ((int)Lf());
+    lsP.add(localb);
   }
   
-  public final a iw(int paramInt)
+  public final a kn(int paramInt)
   {
-    int j = jnw.size();
+    int j = lsP.size();
     int i = 0;
     h.b localb;
     Object localObject2;
@@ -89,27 +89,27 @@ public abstract class d
     int k;
     if (i < j)
     {
-      localb = (h.b)jnw.get(i);
-      if (jnC == paramInt)
+      localb = (h.b)lsP.get(i);
+      if (lsV == paramInt)
       {
         localObject2 = new com.tencent.mm.ui.e.a.b(paramInt);
         if (localObject2 != null)
         {
-          jnO = jnJ.hoj;
-          eVC = super.aRh();
-          bII = bII;
-          eVv = jnG;
+          ltg = ltb.jdz;
+          ggI = super.bid();
+          aEy = aEy;
+          ggB = ihI;
           return (a)localObject2;
         }
       }
       else
       {
-        k = jnC + jnI + 1;
-        if ((!jnF) || (k != paramInt)) {
+        k = lsV + lta + 1;
+        if ((!lsY) || (k != paramInt)) {
           break label256;
         }
         localObject2 = new c(paramInt);
-        jnN = (jnI + 1);
+        ltf = (lta + 1);
       }
     }
     for (;;)
@@ -119,7 +119,7 @@ public abstract class d
         localObject1 = a(paramInt, localb);
       }
       localObject2 = localObject1;
-      if (jnF) {
+      if (lsY) {
         break label51;
       }
       localObject2 = localObject1;
@@ -130,35 +130,35 @@ public abstract class d
       if (position != k - 1) {
         break label51;
       }
-      jnL = true;
+      ltd = true;
       localObject2 = localObject1;
       break label51;
       i += 1;
       break;
-      t.v("!56@/B4Tb64lLpKcfpdNe8eelrmxTBcDOmDFaYcVM0S1iyxes12bmrTspA==", "createDataItem is null, position=%d | type=%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(getType()) });
+      u.v("!56@/B4Tb64lLpKcfpdNe8eelrmxTBcDOmDFaYcVM0S1iyxes12bmrTspA==", "createDataItem is null, position=%d | type=%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(getType()) });
       return null;
       label256:
       localObject2 = null;
     }
   }
   
-  public final int iy(int paramInt)
+  public final int kq(int paramInt)
   {
-    int m = jnw.size();
+    int m = lsP.size();
     int k = 0;
     int i = paramInt;
     int j;
     if (k < m)
     {
-      h.b localb = (h.b)jnw.get(k);
+      h.b localb = (h.b)lsP.get(k);
       j = i;
-      if (jnJ.hoi.size() <= 0) {
+      if (ltb.jdy.size() <= 0) {
         break label131;
       }
-      jnC = i;
-      i += jnI + 1;
+      lsV = i;
+      i += lta + 1;
       j = i;
-      if (!jnF) {
+      if (!lsY) {
         break label131;
       }
       i += 1;
@@ -167,16 +167,16 @@ public abstract class d
     {
       k += 1;
       break;
-      t.v("!56@/B4Tb64lLpKcfpdNe8eelrmxTBcDOmDFaYcVM0S1iyxes12bmrTspA==", "updateHeaderPosition type=%d | origin=%d | return=%d", new Object[] { Integer.valueOf(getType()), Integer.valueOf(paramInt), Integer.valueOf(i) });
+      u.v("!56@/B4Tb64lLpKcfpdNe8eelrmxTBcDOmDFaYcVM0S1iyxes12bmrTspA==", "updateHeaderPosition type=%d | origin=%d | return=%d", new Object[] { Integer.valueOf(getType()), Integer.valueOf(paramInt), Integer.valueOf(i) });
       return i;
       label131:
       i = j;
     }
   }
   
-  public final void qI()
+  public final void qE()
   {
-    jnw.clear();
+    lsP.clear();
   }
 }
 

@@ -1,45 +1,67 @@
 package com.tencent.mm.protocal.b;
 
-import com.tencent.mm.al.b;
 import java.util.LinkedList;
 
 public final class cn
-  extends adk
+  extends ali
 {
-  public int eJB;
-  public LinkedList hlS = new LinkedList();
+  public int dzC;
+  public String iYf;
+  public String iZR;
+  public int iZS;
+  public int jal;
+  public int jam;
+  public int jan;
+  public int jao;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLO != null)
+      if (jGS != null)
       {
-        paramVarArgs.bN(1, hLO.kS());
-        hLO.a(paramVarArgs);
+        paramVarArgs.cj(1, jGS.kn());
+        jGS.a(paramVarArgs);
       }
-      paramVarArgs.bM(2, eJB);
-      paramVarArgs.c(3, hlS);
+      if (iZR != null) {
+        paramVarArgs.d(2, iZR);
+      }
+      paramVarArgs.ci(3, iZS);
+      if (iYf != null) {
+        paramVarArgs.d(4, iYf);
+      }
+      paramVarArgs.ci(5, jal);
+      paramVarArgs.ci(6, jam);
+      paramVarArgs.ci(7, jan);
+      paramVarArgs.ci(8, dzC);
+      paramVarArgs.ci(9, jao);
       return 0;
     }
     if (paramInt == 1) {
-      if (hLO == null) {
-        break label368;
+      if (jGS == null) {
+        break label613;
       }
     }
-    label368:
-    for (paramInt = a.a.a.a.bJ(1, hLO.kS()) + 0;; paramInt = 0)
+    label613:
+    for (paramInt = a.a.a.a.ch(1, jGS.kn()) + 0;; paramInt = 0)
     {
-      return paramInt + a.a.a.a.bI(2, eJB) + a.a.a.a.b(3, hlS);
+      int i = paramInt;
+      if (iZR != null) {
+        i = paramInt + a.a.a.b.b.a.e(2, iZR);
+      }
+      i += a.a.a.a.cg(3, iZS);
+      paramInt = i;
+      if (iYf != null) {
+        paramInt = i + a.a.a.b.b.a.e(4, iYf);
+      }
+      return paramInt + a.a.a.a.cg(5, jal) + a.a.a.a.cg(6, jam) + a.a.a.a.cg(7, jan) + a.a.a.a.cg(8, dzC) + a.a.a.a.cg(9, jao);
       if (paramInt == 2)
       {
-        paramVarArgs = (byte[])paramVarArgs[0];
-        hlS.clear();
-        paramVarArgs = new a.a.a.a.a(paramVarArgs, hfZ);
-        for (paramInt = adk.a(paramVarArgs); paramInt > 0; paramInt = adk.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = ali.a(paramVarArgs); paramInt > 0; paramInt = ali.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
         break;
@@ -54,23 +76,41 @@ public final class cn
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
-          int i = paramVarArgs.size();
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new cj();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (boolean bool = true; bool; bool = ((cj)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adk.a((a.a.a.a.a)localObject2))) {}
-            hLO = ((cj)localObject1);
+            localObject1 = new dc();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (boolean bool = true; bool; bool = ((dc)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, ali.a((a.a.a.a.a)localObject2))) {}
+            jGS = ((dc)localObject1);
             paramInt += 1;
           }
         case 2: 
-          eJB = jMD.aVp();
+          iZR = maU.readString();
+          return 0;
+        case 3: 
+          iZS = maU.jC();
+          return 0;
+        case 4: 
+          iYf = maU.readString();
+          return 0;
+        case 5: 
+          jal = maU.jC();
+          return 0;
+        case 6: 
+          jam = maU.jC();
+          return 0;
+        case 7: 
+          jan = maU.jC();
+          return 0;
+        case 8: 
+          dzC = maU.jC();
           return 0;
         }
-        hlS = new a.a.a.a.a(aVnhga, hfZ).aVk();
+        jao = maU.jC();
         return 0;
       }
       return -1;

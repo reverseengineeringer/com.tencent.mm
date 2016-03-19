@@ -17,7 +17,7 @@
     return-void
 .end method
 
-.method public static bP(I)Lcom/tencent/mm/compatible/d/c$a$a;
+.method public static bQ(I)Lcom/tencent/mm/compatible/d/c$a$a;
     .locals 9
     .annotation build Landroid/annotation/TargetApi;
         value = 0x8
@@ -43,17 +43,17 @@
 
     move-result-object v4
 
-    iput-object v4, v3, Lcom/tencent/mm/compatible/d/c$a$a;->bhb:Landroid/hardware/Camera;
+    iput-object v4, v3, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
 
     .line 227
     const/16 v4, 0x5a
 
-    iput v4, v3, Lcom/tencent/mm/compatible/d/c$a$a;->bgY:I
+    iput v4, v3, Lcom/tencent/mm/compatible/d/c$a$a;->brw:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 232
-    iget-object v4, v3, Lcom/tencent/mm/compatible/d/c$a$a;->bhb:Landroid/hardware/Camera;
+    iget-object v4, v3, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
 
     if-nez v4, :cond_0
 
@@ -71,7 +71,7 @@
     invoke-static {p0, v4}, Landroid/hardware/Camera;->getCameraInfo(ILandroid/hardware/Camera$CameraInfo;)V
 
     .line 240
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -146,10 +146,10 @@
 
     aput-object v1, v7, v0
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 258
-    iget-object v0, v3, Lcom/tencent/mm/compatible/d/c$a$a;->bhb:Landroid/hardware/Camera;
+    iget-object v0, v3, Lcom/tencent/mm/compatible/d/c$a$a;->brz:Landroid/hardware/Camera;
 
     invoke-virtual {v0, v2}, Landroid/hardware/Camera;->setDisplayOrientation(I)V
 

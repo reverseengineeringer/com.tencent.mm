@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/fr;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -13,15 +13,15 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aCA:Lcom/tencent/mm/d/a/fr$b;
+.field public aAw:Lcom/tencent/mm/d/a/fr$a;
 
-.field public aCz:Lcom/tencent/mm/d/a/fr$a;
+.field public aAx:Lcom/tencent/mm/d/a/fr$b;
 
 
 # direct methods
@@ -32,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/fr;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/fr;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/fr;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/fr;->arR:Z
 
     return-void
 .end method
@@ -45,30 +45,30 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/fr$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/fr$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/fr;->aCz:Lcom/tencent/mm/d/a/fr$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/fr;->aAw:Lcom/tencent/mm/d/a/fr$a;
 
-    .line 17
+    .line 18
     new-instance v0, Lcom/tencent/mm/d/a/fr$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/fr$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/fr;->aCA:Lcom/tencent/mm/d/a/fr$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/fr;->aAx:Lcom/tencent/mm/d/a/fr$b;
 
     .line 8
-    const-string/jumbo v0, "QueryGameMessage"
+    const-string/jumbo v0, "GetSoterAuthKey"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/fr;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/fr;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/fr;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/fr;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/fr;->jUI:Z
 
     return-void
 .end method

@@ -1,30 +1,38 @@
 package com.tencent.mm.modelgeo;
 
-import android.os.Looper;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.map.geolocation.TencentLocation;
+import com.tencent.map.geolocation.TencentLocationListener;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.HashMap;
+import java.util.Map;
 
-final class e
-  extends k
+public abstract class e
+  implements TencentLocationListener
 {
-  e(d paramd) {}
+  private final Map bOH = new HashMap();
   
-  public final void a(boolean paramBoolean, double paramDouble1, double paramDouble2, int paramInt, double paramDouble3, double paramDouble4)
+  public e()
   {
-    if (paramBoolean)
+    bOH.put("gps", Integer.valueOf(0));
+    bOH.put("network", Integer.valueOf(1));
+  }
+  
+  public void a(boolean paramBoolean, double paramDouble1, double paramDouble2, int paramInt, double paramDouble3, double paramDouble4) {}
+  
+  public void onLocationChanged(TencentLocation paramTencentLocation, int paramInt, String paramString)
+  {
+    u.i("!44@/B4Tb64lLpJfn8anhv+Gj4lPDE5/r0LjjEGFhWg+aVE=", "lat=%f, lng=%f, accuracy=%f errcode=%d, areastat=%d, speed=%f, bearing=%f, reason=%s, provider=%s", new Object[] { Double.valueOf(paramTencentLocation.getLatitude()), Double.valueOf(paramTencentLocation.getLongitude()), Float.valueOf(paramTencentLocation.getAccuracy()), Integer.valueOf(paramInt), paramTencentLocation.getAreaStat(), Float.valueOf(paramTencentLocation.getSpeed()), Float.valueOf(paramTencentLocation.getBearing()), paramString, paramTencentLocation.getProvider() });
+    if (paramInt == 0)
     {
-      bBl.bBe = paramDouble1;
-      bBl.bBf = paramDouble2;
-      bBl.bBg = paramInt;
-      bBl.bBh = paramDouble3;
-      bBl.bBi = paramDouble4;
-      bBl.bBb = System.currentTimeMillis();
-      bBl.bBc = true;
-      bBl.bBd = false;
-      d.a(bBl, 67592);
+      a(true, paramTencentLocation.getLatitude(), paramTencentLocation.getLongitude(), ((Integer)bOH.get(paramTencentLocation.getProvider())).intValue(), paramTencentLocation.getSpeed(), paramTencentLocation.getAccuracy());
+      return;
     }
-    t.d("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", "onGetLocation fLongitude: %f fLatitude:%f locType:%d %f:spped", new Object[] { Double.valueOf(paramDouble2), Double.valueOf(paramDouble1), Integer.valueOf(paramInt), Double.valueOf(paramDouble3) });
-    new ac(Looper.getMainLooper()).postDelayed(new f(this, paramBoolean, paramDouble2, paramDouble1, paramInt, paramDouble3, paramDouble4), 200L);
+    a(false, paramTencentLocation.getLatitude(), paramTencentLocation.getLongitude(), ((Integer)bOH.get(paramTencentLocation.getProvider())).intValue(), paramTencentLocation.getSpeed(), paramTencentLocation.getAccuracy());
+  }
+  
+  public void onStatusUpdate(String paramString1, int paramInt, String paramString2)
+  {
+    u.d("!44@/B4Tb64lLpJfn8anhv+Gj4lPDE5/r0LjjEGFhWg+aVE=", "onStatusUpdate, name=%s, status=%d, desc=%s", new Object[] { paramString1, Integer.valueOf(paramInt), paramString2 });
   }
 }
 

@@ -15,21 +15,26 @@
 
 
 # instance fields
-.field public azN:Z
+.field public axw:Z
+
+.field public axx:Z
+
+.field public axy:I
+
+.field public axz:Lcom/tencent/mm/model/as$a;
+
+.field public type:I
+
+.field public username:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/dr$a;->azN:Z
 
     return-void
 .end method

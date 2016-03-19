@@ -1,25 +1,27 @@
 package com.tencent.mm.sdk.h;
 
-import java.util.concurrent.ThreadFactory;
-import java.util.concurrent.atomic.AtomicInteger;
+import android.content.ContentValues;
+import android.database.Cursor;
 
-final class d
-  implements ThreadFactory
+public abstract interface d
 {
-  private ThreadGroup bES = new ThreadGroup("MM_THREAD_POOL_GROUP");
-  private final AtomicInteger ico = new AtomicInteger(1);
+  public abstract Cursor a(String paramString, String[] paramArrayOfString, boolean paramBoolean);
   
-  public final Thread newThread(Runnable paramRunnable)
-  {
-    paramRunnable = new Thread(bES, paramRunnable, "MM_Thread_Pool_Thread#" + ico.getAndIncrement());
-    if (paramRunnable.isDaemon()) {
-      paramRunnable.setDaemon(false);
-    }
-    if (paramRunnable.getPriority() != 5) {
-      paramRunnable.setPriority(5);
-    }
-    return paramRunnable;
-  }
+  public abstract boolean aVP();
+  
+  public abstract boolean cj(String paramString1, String paramString2);
+  
+  public abstract int delete(String paramString1, String paramString2, String[] paramArrayOfString);
+  
+  public abstract long insert(String paramString1, String paramString2, ContentValues paramContentValues);
+  
+  public abstract Cursor query(String paramString1, String[] paramArrayOfString1, String paramString2, String[] paramArrayOfString2, String paramString3, String paramString4, String paramString5);
+  
+  public abstract Cursor rawQuery(String paramString, String[] paramArrayOfString);
+  
+  public abstract long replace(String paramString1, String paramString2, ContentValues paramContentValues);
+  
+  public abstract int update(String paramString1, ContentValues paramContentValues, String paramString2, String[] paramArrayOfString);
 }
 
 /* Location:

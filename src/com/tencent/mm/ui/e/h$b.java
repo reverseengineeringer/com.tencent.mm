@@ -1,14 +1,14 @@
 package com.tencent.mm.ui.e;
 
-import com.tencent.mm.protocal.b.eq;
+import com.tencent.mm.protocal.b.fy;
 
 public final class h$b
 {
-  public int jnC = Integer.MAX_VALUE;
-  public boolean jnF;
-  public int jnG = 0;
-  public int jnI;
-  public eq jnJ = null;
+  public int ihI = 0;
+  public int lsV = Integer.MAX_VALUE;
+  public boolean lsY;
+  public int lta;
+  public fy ltb = null;
 }
 
 /* Location:

@@ -1,12 +1,8 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.storage.ar;
-
 public final class jo$a
 {
-  public String aCG;
-  public ar aub;
-  public String description;
+  public int asc = 1;
 }
 
 /* Location:

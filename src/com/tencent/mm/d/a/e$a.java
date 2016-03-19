@@ -4,7 +4,7 @@ import android.content.Context;
 
 public final class e$a
 {
-  public String[] atX;
+  public String[] asa;
   public Context context;
   public String[] selectionArgs;
 }

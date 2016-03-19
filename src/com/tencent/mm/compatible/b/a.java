@@ -4,33 +4,33 @@ import java.util.concurrent.locks.Lock;
 
 public final class a
 {
-  public int bfa = 0;
-  public int bfb = 0;
-  public byte[] bfc = null;
-  public int bfd = 0;
-  public int bfe = 0;
-  public boolean bff = false;
-  public Lock bfg = null;
+  public int bpg = 0;
+  public int bph = 0;
+  public byte[] bpi = null;
+  public int bpj = 0;
+  public int bpk = 0;
+  public boolean bpl = false;
+  public Lock bpm = null;
   
-  public final int nY()
+  public final int nI()
   {
-    if (bff) {
-      bfg.lock();
+    if (bpl) {
+      bpm.lock();
     }
-    if (bfd == bfe) {
+    if (bpj == bpk) {
       return 0;
     }
-    if (bfd < bfe) {
-      bfb = (bfe - bfd);
+    if (bpj < bpk) {
+      bph = (bpk - bpj);
     }
     for (;;)
     {
-      if (bff) {
-        bfg.unlock();
+      if (bpl) {
+        bpm.unlock();
       }
-      return bfb;
-      if (bfd > bfe) {
-        bfb = (bfe + bfa - bfd);
+      return bph;
+      if (bpj > bpk) {
+        bph = (bpk + bpg - bpj);
       }
     }
   }

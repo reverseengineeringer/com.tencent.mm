@@ -1,23 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.app.Activity;
+import com.tencent.mm.sdk.c.b;
 
 public final class gt
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDY = new a();
+  public static boolean arQ = true;
+  public static boolean arR = false;
+  public a aBS = new a();
+  public b aBT = new b();
   
   public gt()
   {
-    id = "RevokeNativeMsg";
-    hXT = atO;
+    id = "NeedVerifyQQ";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public long axb = 0L;
+    public Activity aBU;
+    public Runnable aBV;
+  }
+  
+  public static final class b
+  {
+    public boolean atR = false;
   }
 }
 

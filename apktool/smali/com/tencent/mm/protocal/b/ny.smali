@@ -1,29 +1,133 @@
 .class public final Lcom/tencent/mm/protocal/b/ny;
-.super Lcom/tencent/mm/protocal/b/adm;
+.super Lcom/tencent/mm/at/a;
 .source "SourceFile"
 
 
 # instance fields
-.field public hyG:Lcom/tencent/mm/protocal/b/abx;
+.field public asL:Ljava/lang/String;
 
-.field public hyq:I
+.field public ayA:Ljava/lang/String;
+
+.field public bxl:I
+
+.field public jkU:Z
+
+.field public jkV:Z
+
+.field public jmU:Z
+
+.field public jnA:Ljava/lang/String;
+
+.field public jnB:Z
+
+.field public jnC:I
+
+.field public jnD:Z
+
+.field public jnE:Z
+
+.field public title:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
+    const/4 v0, 0x0
+
     .line 11
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/b/adm;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/at/a;-><init>()V
+
+    .line 13
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jkU:Z
+
+    .line 15
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jkV:Z
+
+    .line 17
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jnB:Z
+
+    .line 19
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jmU:Z
+
+    .line 21
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jnD:Z
+
+    .line 23
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jnE:Z
 
     return-void
 .end method
 
 
 # virtual methods
+.method public final Cn(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/ny;
+    .locals 1
+
+    .prologue
+    .line 25
+    iput-object p1, p0, Lcom/tencent/mm/protocal/b/ny;->title:Ljava/lang/String;
+
+    .line 26
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jkU:Z
+
+    .line 27
+    return-object p0
+.end method
+
+.method public final Co(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/ny;
+    .locals 1
+
+    .prologue
+    .line 33
+    iput-object p1, p0, Lcom/tencent/mm/protocal/b/ny;->asL:Ljava/lang/String;
+
+    .line 34
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jkV:Z
+
+    .line 35
+    return-object p0
+.end method
+
+.method public final Cp(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/ny;
+    .locals 1
+
+    .prologue
+    .line 41
+    iput-object p1, p0, Lcom/tencent/mm/protocal/b/ny;->jnA:Ljava/lang/String;
+
+    .line 42
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jnB:Z
+
+    .line 43
+    return-object p0
+.end method
+
+.method public final Cq(Ljava/lang/String;)Lcom/tencent/mm/protocal/b/ny;
+    .locals 1
+
+    .prologue
+    .line 49
+    iput-object p1, p0, Lcom/tencent/mm/protocal/b/ny;->ayA:Ljava/lang/String;
+
+    .line 50
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jmU:Z
+
+    .line 51
+    return-object p0
+.end method
+
 .method protected final varargs a(I[Ljava/lang/Object;)I
-    .locals 10
+    .locals 7
 
     .prologue
     const/4 v4, -0x1
@@ -32,242 +136,259 @@
 
     const/4 v2, 0x2
 
-    const/4 v5, 0x1
-
     const/4 v3, 0x0
 
-    .line 16
-    if-nez p1, :cond_5
+    const/4 v5, 0x1
 
-    .line 17
+    .line 74
+    if-nez p1, :cond_6
+
+    .line 75
     aget-object v0, p2, v3
 
     check-cast v0, La/a/a/c/a;
 
-    .line 18
-    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->hLQ:Lcom/tencent/mm/protocal/b/ck;
+    .line 76
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->title:Ljava/lang/String;
 
-    if-nez v1, :cond_0
+    if-eqz v1, :cond_0
 
-    .line 19
-    new-instance v0, La/a/a/b;
+    .line 77
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->title:Ljava/lang/String;
 
-    const-string/jumbo v1, "Not all required fields were included: BaseResponse"
+    invoke-virtual {v0, v5, v1}, La/a/a/c/a;->d(ILjava/lang/String;)V
 
-    invoke-direct {v0, v1}, La/a/a/b;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 21
+    .line 79
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->hyG:Lcom/tencent/mm/protocal/b/abx;
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->asL:Ljava/lang/String;
 
-    if-nez v1, :cond_1
+    if-eqz v1, :cond_1
 
-    .line 22
-    new-instance v0, La/a/a/b;
+    .line 80
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->asL:Ljava/lang/String;
 
-    const-string/jumbo v1, "Not all required fields were included: CertValue"
+    invoke-virtual {v0, v2, v1}, La/a/a/c/a;->d(ILjava/lang/String;)V
 
-    invoke-direct {v0, v1}, La/a/a/b;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 24
+    .line 82
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->hLQ:Lcom/tencent/mm/protocal/b/ck;
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->jnA:Ljava/lang/String;
 
     if-eqz v1, :cond_2
 
-    .line 25
-    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->hLQ:Lcom/tencent/mm/protocal/b/ck;
+    .line 83
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->jnA:Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/protocal/b/ck;->kS()I
+    invoke-virtual {v0, v6, v1}, La/a/a/c/a;->d(ILjava/lang/String;)V
 
-    move-result v1
-
-    invoke-virtual {v0, v5, v1}, La/a/a/c/a;->bN(II)V
-
-    .line 26
-    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->hLQ:Lcom/tencent/mm/protocal/b/ck;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/protocal/b/ck;->a(La/a/a/c/a;)V
-
-    .line 28
+    .line 85
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->hyG:Lcom/tencent/mm/protocal/b/abx;
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->ayA:Ljava/lang/String;
 
     if-eqz v1, :cond_3
 
-    .line 29
-    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->hyG:Lcom/tencent/mm/protocal/b/abx;
+    .line 86
+    const/4 v1, 0x4
 
-    invoke-virtual {v1}, Lcom/tencent/mm/protocal/b/abx;->kS()I
+    iget-object v2, p0, Lcom/tencent/mm/protocal/b/ny;->ayA:Ljava/lang/String;
 
-    move-result v1
+    invoke-virtual {v0, v1, v2}, La/a/a/c/a;->d(ILjava/lang/String;)V
 
-    invoke-virtual {v0, v2, v1}, La/a/a/c/a;->bN(II)V
-
-    .line 30
-    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->hyG:Lcom/tencent/mm/protocal/b/abx;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/protocal/b/abx;->a(La/a/a/c/a;)V
-
-    .line 32
+    .line 88
     :cond_3
-    iget v1, p0, Lcom/tencent/mm/protocal/b/ny;->hyq:I
+    iget-boolean v1, p0, Lcom/tencent/mm/protocal/b/ny;->jnD:Z
 
-    invoke-virtual {v0, v6, v1}, La/a/a/c/a;->bM(II)V
+    if-ne v1, v5, :cond_4
 
-    .line 115
+    .line 89
+    iget v1, p0, Lcom/tencent/mm/protocal/b/ny;->jnC:I
+
+    const/4 v2, 0x5
+
+    invoke-virtual {v0, v2, v1}, La/a/a/c/a;->ci(II)V
+
+    .line 91
     :cond_4
+    iget-boolean v1, p0, Lcom/tencent/mm/protocal/b/ny;->jnE:Z
+
+    if-ne v1, v5, :cond_5
+
+    .line 92
+    iget v1, p0, Lcom/tencent/mm/protocal/b/ny;->bxl:I
+
+    const/4 v2, 0x6
+
+    invoke-virtual {v0, v2, v1}, La/a/a/c/a;->ci(II)V
+
+    .line 171
+    :cond_5
     :goto_0
     return v3
 
-    .line 35
-    :cond_5
-    if-ne p1, v5, :cond_7
+    .line 96
+    :cond_6
+    if-ne p1, v5, :cond_c
 
-    .line 37
-    iget-object v0, p0, Lcom/tencent/mm/protocal/b/ny;->hLQ:Lcom/tencent/mm/protocal/b/ck;
+    .line 98
+    iget-object v0, p0, Lcom/tencent/mm/protocal/b/ny;->title:Ljava/lang/String;
 
-    if-eqz v0, :cond_f
+    if-eqz v0, :cond_10
 
-    .line 38
-    iget-object v0, p0, Lcom/tencent/mm/protocal/b/ny;->hLQ:Lcom/tencent/mm/protocal/b/ck;
+    .line 99
+    iget-object v0, p0, Lcom/tencent/mm/protocal/b/ny;->title:Ljava/lang/String;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/protocal/b/ck;->kS()I
-
-    move-result v0
-
-    invoke-static {v5, v0}, La/a/a/a;->bJ(II)I
+    invoke-static {v5, v0}, La/a/a/b/b/a;->e(ILjava/lang/String;)I
 
     move-result v0
 
     add-int/lit8 v0, v0, 0x0
 
-    .line 40
+    .line 101
     :goto_1
-    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->hyG:Lcom/tencent/mm/protocal/b/abx;
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->asL:Ljava/lang/String;
 
-    if-eqz v1, :cond_6
+    if-eqz v1, :cond_7
 
-    .line 41
-    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->hyG:Lcom/tencent/mm/protocal/b/abx;
+    .line 102
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->asL:Ljava/lang/String;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/protocal/b/abx;->kS()I
-
-    move-result v1
-
-    invoke-static {v2, v1}, La/a/a/a;->bJ(II)I
+    invoke-static {v2, v1}, La/a/a/b/b/a;->e(ILjava/lang/String;)I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 43
-    :cond_6
-    iget v1, p0, Lcom/tencent/mm/protocal/b/ny;->hyq:I
+    .line 104
+    :cond_7
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->jnA:Ljava/lang/String;
 
-    invoke-static {v6, v1}, La/a/a/a;->bI(II)I
+    if-eqz v1, :cond_8
+
+    .line 105
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->jnA:Ljava/lang/String;
+
+    invoke-static {v6, v1}, La/a/a/b/b/a;->e(ILjava/lang/String;)I
 
     move-result v1
 
-    add-int v3, v0, v1
+    add-int/2addr v0, v1
 
-    .line 44
+    .line 107
+    :cond_8
+    iget-object v1, p0, Lcom/tencent/mm/protocal/b/ny;->ayA:Ljava/lang/String;
+
+    if-eqz v1, :cond_9
+
+    .line 108
+    const/4 v1, 0x4
+
+    iget-object v2, p0, Lcom/tencent/mm/protocal/b/ny;->ayA:Ljava/lang/String;
+
+    invoke-static {v1, v2}, La/a/a/b/b/a;->e(ILjava/lang/String;)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 110
+    :cond_9
+    iget-boolean v1, p0, Lcom/tencent/mm/protocal/b/ny;->jnD:Z
+
+    if-ne v1, v5, :cond_a
+
+    .line 111
+    const/4 v1, 0x5
+
+    iget v2, p0, Lcom/tencent/mm/protocal/b/ny;->jnC:I
+
+    invoke-static {v1, v2}, La/a/a/a;->cg(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    .line 113
+    :cond_a
+    iget-boolean v1, p0, Lcom/tencent/mm/protocal/b/ny;->jnE:Z
+
+    if-ne v1, v5, :cond_b
+
+    .line 114
+    const/4 v1, 0x6
+
+    iget v2, p0, Lcom/tencent/mm/protocal/b/ny;->bxl:I
+
+    invoke-static {v1, v2}, La/a/a/a;->cg(II)I
+
+    move-result v1
+
+    add-int/2addr v0, v1
+
+    :cond_b
+    move v3, v0
+
+    .line 116
     goto :goto_0
 
-    .line 46
-    :cond_7
-    if-ne p1, v2, :cond_b
+    .line 118
+    :cond_c
+    if-ne p1, v2, :cond_e
 
-    .line 47
+    .line 119
     aget-object v0, p2, v3
 
     check-cast v0, [B
 
     check-cast v0, [B
 
-    .line 48
+    .line 120
     new-instance v1, La/a/a/a/a;
 
-    sget-object v2, Lcom/tencent/mm/protocal/b/ny;->hfZ:La/a/a/a/a/b;
+    sget-object v2, Lcom/tencent/mm/protocal/b/ny;->iTR:La/a/a/a/a/b;
 
     invoke-direct {v1, v0, v2}, La/a/a/a/a;-><init>([BLa/a/a/a/a/b;)V
 
-    .line 49
-    invoke-static {v1}, Lcom/tencent/mm/protocal/b/adm;->a(La/a/a/a/a;)I
+    .line 121
+    invoke-static {v1}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;)I
 
     move-result v0
 
-    .line 51
+    .line 123
     :goto_2
-    if-lez v0, :cond_9
+    if-lez v0, :cond_5
 
-    .line 52
-    invoke-super {p0, v1, p0, v0}, Lcom/tencent/mm/protocal/b/adm;->a(La/a/a/a/a;Lcom/tencent/mm/al/a;I)Z
+    .line 124
+    invoke-super {p0, v1, p0, v0}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;Lcom/tencent/mm/at/a;I)Z
 
     move-result v0
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_d
 
-    .line 53
-    invoke-virtual {v1}, La/a/a/a/a;->aVo()V
+    .line 125
+    invoke-virtual {v1}, La/a/a/a/a;->bog()V
 
-    .line 55
-    :cond_8
-    invoke-static {v1}, Lcom/tencent/mm/protocal/b/adm;->a(La/a/a/a/a;)I
+    .line 127
+    :cond_d
+    invoke-static {v1}, Lcom/tencent/mm/at/a;->a(La/a/a/a/a;)I
 
     move-result v0
 
     goto :goto_2
 
-    .line 58
-    :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/protocal/b/ny;->hLQ:Lcom/tencent/mm/protocal/b/ck;
+    .line 132
+    :cond_e
+    if-ne p1, v6, :cond_f
 
-    if-nez v0, :cond_a
-
-    .line 59
-    new-instance v0, La/a/a/b;
-
-    const-string/jumbo v1, "Not all required fields were included: BaseResponse"
-
-    invoke-direct {v0, v1}, La/a/a/b;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 61
-    :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/protocal/b/ny;->hyG:Lcom/tencent/mm/protocal/b/abx;
-
-    if-nez v0, :cond_4
-
-    .line 62
-    new-instance v0, La/a/a/b;
-
-    const-string/jumbo v1, "Not all required fields were included: CertValue"
-
-    invoke-direct {v0, v1}, La/a/a/b;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 66
-    :cond_b
-    if-ne p1, v6, :cond_e
-
-    .line 67
+    .line 133
     aget-object v0, p2, v3
 
     check-cast v0, La/a/a/a/a;
 
-    .line 68
+    .line 134
     aget-object v1, p2, v5
 
     check-cast v1, Lcom/tencent/mm/protocal/b/ny;
 
-    .line 69
+    .line 135
     aget-object v2, p2, v2
 
     check-cast v2, Ljava/lang/Integer;
@@ -276,172 +397,155 @@
 
     move-result v2
 
-    .line 70
+    .line 136
     packed-switch v2, :pswitch_data_0
 
     move v3, v4
 
-    .line 112
-    goto :goto_0
+    .line 168
+    goto/16 :goto_0
 
-    .line 72
+    .line 138
     :pswitch_0
-    invoke-virtual {v0, v2}, La/a/a/a/a;->pL(I)Ljava/util/LinkedList;
+    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
 
-    move-result-object v4
-
-    .line 73
-    invoke-virtual {v4}, Ljava/util/LinkedList;->size()I
-
-    move-result v6
-
-    move v2, v3
-
-    :goto_3
-    if-ge v2, v6, :cond_4
-
-    .line 74
-    invoke-virtual {v4, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
+    invoke-virtual {v0}, La/a/a/b/a/a;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, [B
+    iput-object v0, v1, Lcom/tencent/mm/protocal/b/ny;->title:Ljava/lang/String;
 
-    .line 75
-    new-instance v7, Lcom/tencent/mm/protocal/b/ck;
-
-    invoke-direct {v7}, Lcom/tencent/mm/protocal/b/ck;-><init>()V
-
-    .line 76
-    new-instance v8, La/a/a/a/a;
-
-    sget-object v9, Lcom/tencent/mm/protocal/b/ny;->hfZ:La/a/a/a/a/b;
-
-    invoke-direct {v8, v0, v9}, La/a/a/a/a;-><init>([BLa/a/a/a/a/b;)V
-
-    move v0, v5
-
-    .line 78
-    :goto_4
-    if-eqz v0, :cond_c
-
-    .line 80
-    invoke-static {v8}, Lcom/tencent/mm/protocal/b/adm;->a(La/a/a/a/a;)I
-
-    move-result v0
-
-    .line 81
-    invoke-virtual {v7, v8, v7, v0}, Lcom/tencent/mm/protocal/b/ck;->a(La/a/a/a/a;Lcom/tencent/mm/al/a;I)Z
-
-    move-result v0
-
-    goto :goto_4
-
-    .line 83
-    :cond_c
-    iput-object v7, v1, Lcom/tencent/mm/protocal/b/ny;->hLQ:Lcom/tencent/mm/protocal/b/ck;
-
-    .line 73
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    goto :goto_3
-
-    .line 90
-    :pswitch_1
-    invoke-virtual {v0, v2}, La/a/a/a/a;->pL(I)Ljava/util/LinkedList;
-
-    move-result-object v4
-
-    .line 91
-    invoke-virtual {v4}, Ljava/util/LinkedList;->size()I
-
-    move-result v6
-
-    move v2, v3
-
-    :goto_5
-    if-ge v2, v6, :cond_4
-
-    .line 92
-    invoke-virtual {v4, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [B
-
-    .line 93
-    new-instance v7, Lcom/tencent/mm/protocal/b/abx;
-
-    invoke-direct {v7}, Lcom/tencent/mm/protocal/b/abx;-><init>()V
-
-    .line 94
-    new-instance v8, La/a/a/a/a;
-
-    sget-object v9, Lcom/tencent/mm/protocal/b/ny;->hfZ:La/a/a/a/a/b;
-
-    invoke-direct {v8, v0, v9}, La/a/a/a/a;-><init>([BLa/a/a/a/a/b;)V
-
-    move v0, v5
-
-    .line 96
-    :goto_6
-    if-eqz v0, :cond_d
-
-    .line 98
-    invoke-static {v8}, Lcom/tencent/mm/protocal/b/adm;->a(La/a/a/a/a;)I
-
-    move-result v0
-
-    .line 99
-    invoke-virtual {v7, v8, v7, v0}, Lcom/tencent/mm/protocal/b/abx;->a(La/a/a/a/a;Lcom/tencent/mm/al/a;I)Z
-
-    move-result v0
-
-    goto :goto_6
-
-    .line 101
-    :cond_d
-    iput-object v7, v1, Lcom/tencent/mm/protocal/b/ny;->hyG:Lcom/tencent/mm/protocal/b/abx;
-
-    .line 91
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    goto :goto_5
-
-    .line 108
-    :pswitch_2
-    iget-object v0, v0, La/a/a/a/a;->jMD:La/a/a/b/a/a;
-
-    invoke-virtual {v0}, La/a/a/b/a/a;->aVp()I
-
-    move-result v0
-
-    iput v0, v1, Lcom/tencent/mm/protocal/b/ny;->hyq:I
+    .line 139
+    iput-boolean v5, v1, Lcom/tencent/mm/protocal/b/ny;->jkU:Z
 
     goto/16 :goto_0
 
-    :cond_e
-    move v3, v4
+    .line 143
+    :pswitch_1
+    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
 
-    .line 115
+    invoke-virtual {v0}, La/a/a/b/a/a;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/tencent/mm/protocal/b/ny;->asL:Ljava/lang/String;
+
+    .line 144
+    iput-boolean v5, v1, Lcom/tencent/mm/protocal/b/ny;->jkV:Z
+
+    goto/16 :goto_0
+
+    .line 148
+    :pswitch_2
+    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+
+    invoke-virtual {v0}, La/a/a/b/a/a;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/tencent/mm/protocal/b/ny;->jnA:Ljava/lang/String;
+
+    .line 149
+    iput-boolean v5, v1, Lcom/tencent/mm/protocal/b/ny;->jnB:Z
+
+    goto/16 :goto_0
+
+    .line 153
+    :pswitch_3
+    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+
+    invoke-virtual {v0}, La/a/a/b/a/a;->readString()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/tencent/mm/protocal/b/ny;->ayA:Ljava/lang/String;
+
+    .line 154
+    iput-boolean v5, v1, Lcom/tencent/mm/protocal/b/ny;->jmU:Z
+
+    goto/16 :goto_0
+
+    .line 158
+    :pswitch_4
+    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+
+    invoke-virtual {v0}, La/a/a/b/a/a;->jC()I
+
+    move-result v0
+
+    iput v0, v1, Lcom/tencent/mm/protocal/b/ny;->jnC:I
+
+    .line 159
+    iput-boolean v5, v1, Lcom/tencent/mm/protocal/b/ny;->jnD:Z
+
+    goto/16 :goto_0
+
+    .line 163
+    :pswitch_5
+    iget-object v0, v0, La/a/a/a/a;->maU:La/a/a/b/a/a;
+
+    invoke-virtual {v0}, La/a/a/b/a/a;->jC()I
+
+    move-result v0
+
+    iput v0, v1, Lcom/tencent/mm/protocal/b/ny;->bxl:I
+
+    .line 164
+    iput-boolean v5, v1, Lcom/tencent/mm/protocal/b/ny;->jnE:Z
+
     goto/16 :goto_0
 
     :cond_f
+    move v3, v4
+
+    .line 171
+    goto/16 :goto_0
+
+    :cond_10
     move v0, v3
 
     goto/16 :goto_1
 
-    .line 70
-    nop
-
+    .line 136
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
         :pswitch_1
         :pswitch_2
+        :pswitch_3
+        :pswitch_4
+        :pswitch_5
     .end packed-switch
+.end method
+
+.method public final pf(I)Lcom/tencent/mm/protocal/b/ny;
+    .locals 1
+
+    .prologue
+    .line 57
+    iput p1, p0, Lcom/tencent/mm/protocal/b/ny;->jnC:I
+
+    .line 58
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jnD:Z
+
+    .line 59
+    return-object p0
+.end method
+
+.method public final pg(I)Lcom/tencent/mm/protocal/b/ny;
+    .locals 1
+
+    .prologue
+    .line 65
+    iput p1, p0, Lcom/tencent/mm/protocal/b/ny;->bxl:I
+
+    .line 66
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/protocal/b/ny;->jnE:Z
+
+    .line 67
+    return-object p0
 .end method

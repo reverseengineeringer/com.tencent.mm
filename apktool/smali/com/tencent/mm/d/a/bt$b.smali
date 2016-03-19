@@ -15,25 +15,9 @@
 
 
 # instance fields
-.field public awO:Ljava/lang/String;
+.field public auR:Z
 
-.field public awP:I
-
-.field public awQ:Ljava/lang/String;
-
-.field public awR:J
-
-.field public awS:I
-
-.field public awT:I
-
-.field public awU:Ljava/util/List;
-
-.field public awV:Ljava/util/List;
-
-.field public awW:I
-
-.field public awX:I
+.field public avb:Lorg/json/JSONArray;
 
 
 # direct methods
@@ -41,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 18
+    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

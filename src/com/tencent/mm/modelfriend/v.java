@@ -1,131 +1,173 @@
 package com.tencent.mm.modelfriend;
 
-import android.content.ContentValues;
-import android.database.Cursor;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.sdk.g.ai;
-import com.tencent.mm.sdk.platformtools.bl;
-import com.tencent.mm.sdk.platformtools.bn;
+import android.content.Context;
+import com.tencent.mm.d.a.nj;
+import com.tencent.mm.d.a.nk;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b;
+import com.tencent.mm.protocal.b.en;
+import com.tencent.mm.protocal.b.eo;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.a.c;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.f;
 import com.tencent.mm.sdk.platformtools.t;
-import java.util.List;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.storage.h;
 
 public final class v
-  extends ai
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  public static final String[] aqU = { "CREATE TABLE IF NOT EXISTS friend_ext ( username text  PRIMARY KEY , sex int  , personalcard int  , province text  , city text  , signature text  , reserved1 text  , reserved2 text  , reserved3 text  , reserved4 text  , reserved5 int  , reserved6 int  , reserved7 int  , reserved8 int  ) " };
-  private g bqt;
+  private String aAo = null;
+  private String aAq = null;
+  private d anM = null;
+  public final com.tencent.mm.r.a anN;
   
-  public v(g paramg)
+  public v(String paramString1, int paramInt1, String paramString2, int paramInt2, String paramString3)
   {
-    bqt = paramg;
-  }
-  
-  public final boolean a(u paramu)
-  {
-    boolean bool = true;
-    Object localObject = paramu.getUsername();
-    localObject = "select friend_ext.username,friend_ext.sex,friend_ext.personalcard,friend_ext.province,friend_ext.city,friend_ext.signature from friend_ext   where friend_ext.username = \"" + bn.iU((String)localObject) + "\"";
-    localObject = bqt.rawQuery((String)localObject, null);
-    if (((Cursor)localObject).getCount() > 0)
+    Object localObject = new a.a();
+    bFa = new en();
+    bFb = new eo();
+    uri = "/cgi-bin/micromsg-bin/bindopmobile";
+    bEY = 132;
+    bFc = 45;
+    bFd = 1000000045;
+    anN = ((a.a)localObject).vy();
+    localObject = (en)anN.bEW.bFf;
+    iZE = paramInt1;
+    jbs = paramInt2;
+    jbt = paramString3;
+    if ((ay.kz(aAo)) && (ay.kz(aAq)))
     {
-      i = 1;
-      ((Cursor)localObject).close();
-      if (i == 0) {
-        break label128;
-      }
-      if (paramu == null) {
-        break label123;
-      }
-      paramu = paramu.mA();
-      if (paramu.size() <= 0) {
-        break label164;
+      if (f.jVf)
+      {
+        paramString3 = y.getContext().getString(2131429297);
+        jbv = paramString3;
+        jbw = b.iUd;
       }
     }
-    label123:
-    label128:
-    label164:
-    for (int i = bqt.update("friend_ext", paramu, "username=?", new String[] { "username" });; i = 0)
+    else
     {
-      if (i > 0) {}
-      for (;;)
-      {
-        Ci();
-        return bool;
-        i = 0;
-        break;
-        bool = false;
-        continue;
-        if (paramu != null)
-        {
-          aqq = -1;
-          paramu = paramu.mA();
-          if ((int)bqt.insert("friend_ext", "username", paramu) != -1) {}
-        }
-        else
-        {
-          bool = false;
-        }
+      if ((paramString1 == null) || (paramString1.length() <= 0) || ((paramInt1 != 1) && (paramInt1 != 4) && (paramInt1 != 18))) {
+        break label289;
+      }
+      ah.tD().rn().set(4097, paramString1);
+    }
+    for (;;)
+    {
+      u.d("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "Get mobile:" + paramString1 + " opcode:" + paramInt1 + " verifyCode:" + paramString2);
+      jbq = paramString1;
+      jbr = paramString2;
+      dzi = t.aUB();
+      return;
+      paramString3 = y.getContext().getString(2131429296);
+      break;
+      label289:
+      if ((paramInt1 == 2) || (paramInt1 == 19)) {
+        paramString1 = (String)ah.tD().rn().get(4097, null);
+      } else if (paramInt1 == 3) {
+        paramString1 = (String)ah.tD().rn().get(6, null);
       }
     }
   }
   
-  public final u gA(String paramString)
+  public v(String paramString1, int paramInt, String paramString2, String paramString3, String paramString4, String paramString5)
   {
-    Object localObject = null;
-    paramString = "select friend_ext.username,friend_ext.sex,friend_ext.personalcard,friend_ext.province,friend_ext.city,friend_ext.signature from friend_ext   where friend_ext.username = \"" + bn.iU(paramString) + "\"";
-    Cursor localCursor = bqt.rawQuery(paramString, null);
-    if (localCursor == null) {
-      return null;
-    }
-    paramString = (String)localObject;
-    if (localCursor.moveToFirst())
-    {
-      paramString = new u();
-      username = localCursor.getString(0);
-      sex = localCursor.getInt(1);
-      aMW = localCursor.getInt(2);
-      aMY = localCursor.getString(3);
-      aMZ = localCursor.getString(4);
-      aMX = localCursor.getString(5);
-    }
-    localCursor.close();
-    return paramString;
+    this(paramString1, paramInt, paramString2, 0, paramString3);
+    aAo = paramString4;
+    aAq = paramString5;
+    paramString1 = (en)anN.bEW.bFf;
+    jbv = paramString4;
+    jbw = paramString5;
   }
   
-  public final boolean n(List paramList)
+  public final int a(e parame, d paramd)
   {
-    if (paramList.size() <= 0) {
-      return false;
-    }
-    bl localbl = new bl("!44@/B4Tb64lLpLakB5kto6z7ZqDoGWblGk+4pheC3MTT7Q=", "batchSetFriendExt transaction");
-    localbl.addSplit("transation begin");
-    long l = bqt.cN(Thread.currentThread().getId());
-    int i = 0;
-    try
+    anM = paramd;
+    paramd = (en)anN.bEW.bFf;
+    if ((jbq == null) || (jbq.length() <= 0))
     {
-      while (i < paramList.size())
-      {
-        u localu = (u)paramList.get(i);
-        if (localu != null) {
-          a(localu);
-        }
-        i += 1;
-      }
-      bool = true;
+      u.e("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "doScene getMobile Error: " + jbq);
+      return -1;
     }
-    catch (Exception paramList)
+    if (((iZE == 2) || (iZE == 19)) && ((jbr == null) || (jbr.length() <= 0)))
     {
-      for (;;)
+      u.e("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "doScene getVerifyCode Error: " + jbq);
+      return -1;
+    }
+    return a(parame, anN, this);
+  }
+  
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  {
+    if ((paramInt2 != 0) || (paramInt3 != 0))
+    {
+      u.e("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+      anM.a(paramInt2, paramInt3, paramString, this);
+      return;
+    }
+    paramo = (en)anN.bEW.bFf;
+    paramArrayOfByte = (eo)anN.bEX.bFf;
+    u.d("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3 + " sms:" + jbA + "safedevice status = " + iWd);
+    if ((iZE == 2) || (iZE == 4) || (iZE == 11) || (iZE == 19))
+    {
+      ah.tD().rn().set(4097, "");
+      ah.tD().rn().set(6, jbq);
+      if ((ay.kz(aAo)) || (ay.kz(aAq))) {
+        m.yA();
+      }
+      if ((!ay.kz(aAo)) && (!ay.kz(aAq)))
       {
-        t.e("!44@/B4Tb64lLpLakB5kto6z7ZqDoGWblGk+4pheC3MTT7Q=", paramList.getMessage());
-        boolean bool = false;
+        nj localnj = new nj();
+        aJJ.aJK = paramArrayOfByte;
+        com.tencent.mm.sdk.c.a.jUF.j(localnj);
+        ah.tD().rn().set(64, Integer.valueOf(iWd));
+        paramArrayOfByte = new nk();
+        aJL.aJM = true;
+        aJL.aJN = true;
+        com.tencent.mm.sdk.c.a.jUF.j(paramArrayOfByte);
+      }
+      if (iZE == 19) {
+        ah.tD().rn().set(12322, null);
+      }
+      u.d("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "onGYNetEnd  mobile binded");
+    }
+    for (;;)
+    {
+      anM.a(paramInt2, paramInt3, paramString, this);
+      return;
+      if (iZE == 3)
+      {
+        ah.tD().rn().set(4097, "");
+        ah.tD().rn().set(6, "");
+        ah.tD().rn().set(12322, null);
+        ah.tD().rn().set(64, Integer.valueOf(iWd));
+        paramo = new nk();
+        aJL.aJM = false;
+        aJL.aJN = true;
+        com.tencent.mm.sdk.c.a.jUF.j(paramo);
+        m.yH();
+        m.yI();
+        u.d("!44@/B4Tb64lLpK+IBX8XDgnvmzqgoquDYqOHJ2BkZdfhUE=", "onGYNetEnd  mobile unbinded");
       }
     }
-    bqt.cO(l);
-    localbl.addSplit("transation end");
-    localbl.dumpToLog();
-    Ci();
-    return bool;
+  }
+  
+  public final int getType()
+  {
+    return 132;
+  }
+  
+  public final int va()
+  {
+    return anN.bEW.bFf).iZE;
   }
 }
 

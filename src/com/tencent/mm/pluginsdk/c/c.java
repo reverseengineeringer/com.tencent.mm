@@ -1,32 +1,33 @@
 package com.tencent.mm.pluginsdk.c;
 
-import com.tencent.mm.d.a.eo;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
+import com.tencent.mm.d.a.ha;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.c.e;
+import com.tencent.mm.sdk.c.b;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 import java.util.Set;
 
 public abstract class c
-  extends e
-  implements com.tencent.mm.q.d
+  extends com.tencent.mm.sdk.c.c
+  implements d
 {
-  private static HashMap bAU = new HashMap();
-  private static HashMap gKR = new HashMap();
-  private int gKQ = 0;
+  private static HashMap bOe = new HashMap();
+  private static HashMap izB = new HashMap();
+  private int izA = 0;
   
   public c(int paramInt)
   {
     super(0);
   }
   
-  public static void e(com.tencent.mm.sdk.c.d paramd)
+  public static void h(b paramb)
   {
-    Iterator localIterator = gKR.entrySet().iterator();
+    Iterator localIterator = izB.entrySet().iterator();
     Map.Entry localEntry;
     do
     {
@@ -34,68 +35,68 @@ public abstract class c
         break;
       }
       localEntry = (Map.Entry)localIterator.next();
-    } while (localEntry.getValue() != paramd);
-    for (paramd = (j)localEntry.getKey();; paramd = null)
+    } while (localEntry.getValue() != paramb);
+    for (paramb = (j)localEntry.getKey();; paramb = null)
     {
-      if (paramd != null)
+      if (paramb != null)
       {
-        ax.tm().c(paramd);
-        gKR.remove(paramd);
+        ah.tE().c(paramb);
+        izB.remove(paramb);
       }
       return;
     }
   }
   
-  public final void Fx()
+  public final void HI()
   {
-    if (gKQ == 0) {
-      ax.tm().a(Kp(), this);
+    if (izA == 0) {
+      ah.tE().a(NQ(), this);
     }
-    gKQ += 1;
+    izA += 1;
   }
   
-  public abstract int Kp();
+  public abstract int NQ();
   
-  public final void VG()
-  {
-    if (gKQ == 0) {}
-    do
-    {
-      return;
-      gKQ -= 1;
-    } while (gKQ != 0);
-    ax.tm().b(Kp(), this);
-  }
-  
-  public abstract com.tencent.mm.sdk.c.d a(int paramInt, j paramj, com.tencent.mm.sdk.c.d paramd);
+  public abstract b a(int paramInt, j paramj, b paramb);
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    com.tencent.mm.sdk.c.d locald;
-    if (Kp() == paramj.getType())
+    b localb;
+    if (NQ() == paramj.getType())
     {
-      locald = (com.tencent.mm.sdk.c.d)gKR.remove(paramj);
-      if (locald != null) {}
+      localb = (b)izB.remove(paramj);
+      if (localb != null) {}
     }
     else
     {
       return;
     }
-    eo localeo = new eo();
-    aBi.aBj = a(paramInt2, paramj, locald);
-    aBi.errType = paramInt1;
-    aBi.errCode = paramInt2;
-    aBi.ayr = paramString;
-    a.hXQ.g(localeo);
+    ha localha = new ha();
+    aCD.aCF = a(paramInt2, paramj, localb);
+    aCD.errType = paramInt1;
+    aCD.errCode = paramInt2;
+    aCD.aCE = paramString;
+    a.jUF.j(localha);
   }
   
-  public abstract j b(com.tencent.mm.sdk.c.d paramd);
-  
-  public final void f(com.tencent.mm.sdk.c.d paramd)
+  public final void aeB()
   {
-    j localj = b(paramd);
-    ax.tm().d(localj);
-    gKR.put(localj, paramd);
+    if (izA == 0) {}
+    do
+    {
+      return;
+      izA -= 1;
+    } while (izA != 0);
+    ah.tE().b(NQ(), this);
+  }
+  
+  public abstract j b(b paramb);
+  
+  public final void i(b paramb)
+  {
+    j localj = b(paramb);
+    ah.tE().d(localj);
+    izB.put(localj, paramb);
   }
 }
 

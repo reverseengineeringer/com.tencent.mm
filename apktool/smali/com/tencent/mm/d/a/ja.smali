@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/ja;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aGk:Lcom/tencent/mm/d/a/ja$a;
+.field public aFw:Lcom/tencent/mm/d/a/ja$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/ja;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ja;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/ja;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ja;->arR:Z
 
     return-void
 .end method
@@ -42,23 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/ja$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/ja$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/ja;->aGk:Lcom/tencent/mm/d/a/ja$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/ja;->aFw:Lcom/tencent/mm/d/a/ja$a;
 
     .line 8
-    const-string/jumbo v0, "UpdateFailedMsgId"
+    const-string/jumbo v0, "RePullEmojiInfoDesc"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/ja;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/ja;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/ja;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ja;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ja;->jUI:Z
 
     return-void
 .end method

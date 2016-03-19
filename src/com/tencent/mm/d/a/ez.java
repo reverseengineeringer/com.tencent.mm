@@ -1,17 +1,35 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import android.os.Bundle;
+import com.tencent.mm.sdk.c.b;
 
 public final class ez
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azK = new a();
+  public b azL = new b();
   
   public ez()
   {
-    id = "OmitAllFailNormalMsg";
-    hXT = atO;
+    id = "GetA8KeyRedirect";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public int actionCode;
+    public String azM;
+    public Bundle azN;
+    public Context context;
+    public String username;
+  }
+  
+  public static final class b
+  {
+    public int ret = 0;
   }
 }
 

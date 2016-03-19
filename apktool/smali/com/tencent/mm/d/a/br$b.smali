@@ -15,7 +15,9 @@
 
 
 # instance fields
-.field public cursor:Landroid/database/Cursor;
+.field public auR:Z
+
+.field public auY:Ljava/lang/String;
 
 
 # direct methods
@@ -23,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 22
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

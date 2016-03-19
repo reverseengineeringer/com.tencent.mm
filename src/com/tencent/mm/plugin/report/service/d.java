@@ -3,47 +3,47 @@ package com.tencent.mm.plugin.report.service;
 import a.a.a.b;
 
 public final class d
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public boolean eJF;
-  public int eJH;
-  public String eJI;
-  public boolean eJJ;
+  public boolean fUm;
+  public int fUs;
+  public String fUt;
+  public boolean fUu;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (eJI == null) {
+      if (fUt == null) {
         throw new b("Not all required fields were included: Value");
       }
-      paramVarArgs.bM(1, eJH);
-      if (eJI != null) {
-        paramVarArgs.U(2, eJI);
+      paramVarArgs.ci(1, fUs);
+      if (fUt != null) {
+        paramVarArgs.d(2, fUt);
       }
-      paramVarArgs.F(3, eJJ);
-      paramVarArgs.F(4, eJF);
+      paramVarArgs.R(3, fUu);
+      paramVarArgs.R(4, fUm);
       return 0;
     }
     if (paramInt == 1)
     {
-      int i = a.a.a.a.bI(1, eJH) + 0;
+      int i = a.a.a.a.cg(1, fUs) + 0;
       paramInt = i;
-      if (eJI != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, eJI);
+      if (fUt != null) {
+        paramInt = i + a.a.a.b.b.a.e(2, fUt);
       }
-      return paramInt + (a.a.a.b.b.a.pS(3) + 1) + (a.a.a.b.b.a.pS(4) + 1);
+      return paramInt + (a.a.a.b.b.a.ay(3) + 1) + (a.a.a.b.b.a.ay(4) + 1);
     }
     if (paramInt == 2)
     {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
         if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
+          paramVarArgs.bog();
         }
       }
-      if (eJI == null) {
+      if (fUt == null) {
         throw new b("Not all required fields were included: Value");
       }
       return 0;
@@ -57,16 +57,16 @@ public final class d
       default: 
         return -1;
       case 1: 
-        eJH = jMD.aVp();
+        fUs = maU.jC();
         return 0;
       case 2: 
-        eJI = jMD.readString();
+        fUt = maU.readString();
         return 0;
       case 3: 
-        eJJ = locala.aVm();
+        fUu = locala.boe();
         return 0;
       }
-      eJF = locala.aVm();
+      fUm = locala.boe();
       return 0;
     }
     return -1;

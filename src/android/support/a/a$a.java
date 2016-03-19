@@ -2,15 +2,15 @@ package android.support.a;
 
 final class a$a
 {
-  String ai;
   String aj;
   String ak;
+  String al;
   
   public a$a(String paramString1, String paramString2, String paramString3)
   {
-    ai = paramString1;
-    aj = paramString2;
-    ak = paramString3;
+    aj = paramString1;
+    ak = paramString2;
+    al = paramString3;
   }
 }
 

@@ -8,36 +8,36 @@ import android.os.Parcelable.Creator;
 final class FragmentState
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new p();
-  Bundle aY;
-  final Bundle bb;
-  final boolean bi;
-  final int bq;
-  final int br;
-  final String bt;
-  final boolean bv;
-  final boolean bw;
-  final String cH;
-  Fragment cI;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  final String bX;
+  Fragment bY;
+  final Bundle mArguments;
+  final int mContainerId;
+  final boolean mDetached;
+  final int mFragmentId;
+  final boolean mFromLayout;
   final int mIndex;
+  final boolean mRetainInstance;
+  Bundle mSavedFragmentState;
+  final String mTag;
   
   public FragmentState(Parcel paramParcel)
   {
-    cH = paramParcel.readString();
+    bX = paramParcel.readString();
     mIndex = paramParcel.readInt();
     if (paramParcel.readInt() != 0)
     {
       bool1 = true;
-      bi = bool1;
-      bq = paramParcel.readInt();
-      br = paramParcel.readInt();
-      bt = paramParcel.readString();
+      mFromLayout = bool1;
+      mFragmentId = paramParcel.readInt();
+      mContainerId = paramParcel.readInt();
+      mTag = paramParcel.readString();
       if (paramParcel.readInt() == 0) {
         break label110;
       }
       bool1 = true;
       label69:
-      bw = bool1;
+      mRetainInstance = bool1;
       if (paramParcel.readInt() == 0) {
         break label115;
       }
@@ -46,9 +46,9 @@ final class FragmentState
     label115:
     for (boolean bool1 = bool2;; bool1 = false)
     {
-      bv = bool1;
-      bb = paramParcel.readBundle();
-      aY = paramParcel.readBundle();
+      mDetached = bool1;
+      mArguments = paramParcel.readBundle();
+      mSavedFragmentState = paramParcel.readBundle();
       return;
       bool1 = false;
       break;
@@ -59,15 +59,15 @@ final class FragmentState
   
   public FragmentState(Fragment paramFragment)
   {
-    cH = paramFragment.getClass().getName();
+    bX = paramFragment.getClass().getName();
     mIndex = mIndex;
-    bi = bi;
-    bq = bq;
-    br = br;
-    bt = bt;
-    bw = bw;
-    bv = bv;
-    bb = bb;
+    mFromLayout = mFromLayout;
+    mFragmentId = mFragmentId;
+    mContainerId = mContainerId;
+    mTag = mTag;
+    mRetainInstance = mRetainInstance;
+    mDetached = mDetached;
+    mArguments = mArguments;
   }
   
   public final int describeContents()
@@ -78,22 +78,22 @@ final class FragmentState
   public final void writeToParcel(Parcel paramParcel, int paramInt)
   {
     int i = 1;
-    paramParcel.writeString(cH);
+    paramParcel.writeString(bX);
     paramParcel.writeInt(mIndex);
-    if (bi)
+    if (mFromLayout)
     {
       paramInt = 1;
       paramParcel.writeInt(paramInt);
-      paramParcel.writeInt(bq);
-      paramParcel.writeInt(br);
-      paramParcel.writeString(bt);
-      if (!bw) {
+      paramParcel.writeInt(mFragmentId);
+      paramParcel.writeInt(mContainerId);
+      paramParcel.writeString(mTag);
+      if (!mRetainInstance) {
         break label106;
       }
       paramInt = 1;
       label65:
       paramParcel.writeInt(paramInt);
-      if (!bv) {
+      if (!mDetached) {
         break label111;
       }
     }
@@ -102,8 +102,8 @@ final class FragmentState
     for (paramInt = i;; paramInt = 0)
     {
       paramParcel.writeInt(paramInt);
-      paramParcel.writeBundle(bb);
-      paramParcel.writeBundle(aY);
+      paramParcel.writeBundle(mArguments);
+      paramParcel.writeBundle(mSavedFragmentState);
       return;
       paramInt = 0;
       break;

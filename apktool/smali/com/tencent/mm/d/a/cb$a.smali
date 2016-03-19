@@ -15,27 +15,20 @@
 
 
 # instance fields
-.field public apy:Ljava/lang/String;
+.field public alN:Ljava/lang/String;
 
-.field public axv:Ljava/lang/String;
+.field public auQ:Ljava/lang/String;
 
-.field public axw:I
-
-.field public axx:Ljava/lang/Runnable;
+.field public data:[B
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 17
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/tencent/mm/d/a/cb$a;->axw:I
 
     return-void
 .end method

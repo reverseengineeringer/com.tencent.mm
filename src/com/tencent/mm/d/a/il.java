@@ -1,23 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class il
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFA = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aEp = new a();
+  public b aEq = new b();
   
   public il()
   {
-    id = "SyncOfflineToken";
-    hXT = atO;
+    id = "PermissionOpMark";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aFB;
+    public boolean aEr = false;
+    public boolean aEs = false;
+    public int type;
+  }
+  
+  public static final class b
+  {
+    public boolean aEt = false;
   }
 }
 

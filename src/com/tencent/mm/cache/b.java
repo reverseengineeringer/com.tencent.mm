@@ -12,9 +12,9 @@ public abstract interface b
 {
   public abstract void a(String paramString, Bitmap paramBitmap);
   
-  public abstract MCacheItem cG(String paramString);
+  public abstract MCacheItem cI(String paramString);
   
-  public abstract void cH(String paramString);
+  public abstract void cJ(String paramString);
   
   public abstract Bitmap getBitmap(String paramString);
   
@@ -43,7 +43,7 @@ public abstract interface b
         return true;
       case 1: 
         paramParcel1.enforceInterface("com.tencent.mm.cache.IMMCache_AIDL");
-        cG(paramParcel1.readString());
+        cI(paramParcel1.readString());
         paramParcel2.writeNoException();
         paramParcel2.writeInt(0);
         return true;
@@ -53,7 +53,7 @@ public abstract interface b
         if (paramParcel1.readInt() != 0) {
           MCacheItem.CREATOR.createFromParcel(paramParcel1);
         }
-        cH(str);
+        cJ(str);
         paramParcel2.writeNoException();
         return true;
       case 3: 

@@ -1,31 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ea
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aAe = new a();
-  public b aAf = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a ayc = new a();
   
   public ea()
   {
-    id = "LbsroomLogic";
-    hXT = atO;
+    id = "FailMsgActiveChange";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aAg;
-    public int aAh = 0;
-    public int axw = 0;
-  }
-  
-  public static final class b
-  {
-    public boolean auM = false;
+    public boolean ayd;
   }
 }
 

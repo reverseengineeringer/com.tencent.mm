@@ -1,121 +1,168 @@
 package com.tencent.mm.pluginsdk.ui.applet;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
 import android.widget.Toast;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.pluginsdk.model.r;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.h;
+import com.tencent.mm.d.a.gp;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.pluginsdk.model.l;
+import com.tencent.mm.protocal.b.axg;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.base.g;
+import com.tencent.mm.ui.base.p;
 import java.util.LinkedList;
+import java.util.List;
 import junit.framework.Assert;
 
 public final class a
-  implements com.tencent.mm.q.d
+  implements d
 {
-  public com.tencent.mm.ui.base.bn bWY;
+  public String aCm = "";
+  public p coc;
   public Context context;
-  private LinkedList eAm;
-  private LinkedList eAn;
-  public String elY = "";
-  private a gRR;
-  public b gRS;
-  public String gRT;
-  String gRU = "";
-  public boolean gRV = true;
-  public boolean gRW = true;
-  public String gRX = "";
+  private LinkedList fJx;
+  private LinkedList fJy;
+  public String fvG = "";
+  private a iHO;
+  public b iHP;
+  public String iHQ;
+  String iHR = "";
+  public String iHS;
+  public String iHT;
+  public boolean iHU = true;
+  public boolean iHV = true;
+  public String iHW = "";
+  public boolean iHX = false;
   
   public a(Context paramContext, a parama)
   {
     context = paramContext;
-    gRR = parama;
-    eAm = new LinkedList();
-    bWY = null;
+    iHO = parama;
+    fJx = new LinkedList();
+    coc = null;
   }
   
   private void c(boolean paramBoolean1, boolean paramBoolean2, String paramString1, String paramString2)
   {
-    if (gRR != null) {
-      gRR.a(paramBoolean1, paramBoolean2, paramString1, paramString2);
+    if (iHO != null) {
+      iHO.a(paramBoolean1, paramBoolean2, paramString1, paramString2);
+    }
+    if (paramBoolean1)
+    {
+      paramString2 = new gp();
+      aBG.username = paramString1;
+      com.tencent.mm.sdk.c.a.jUF.j(paramString2);
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void a(int paramInt1, int paramInt2, String paramString, final j paramj)
   {
-    t.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "onSceneEnd, errType = " + paramInt1 + ", errCode = " + paramInt2);
+    u.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "onSceneEnd, errType = " + paramInt1 + ", errCode = " + paramInt2);
     if (paramj.getType() != 30) {
-      t.w("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "not expected scene,  type = " + paramj.getType());
+      u.w("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "not expected scene,  type = " + paramj.getType());
     }
     do
     {
       return;
-      if (bWY != null)
+      if (coc != null)
       {
-        bWY.dismiss();
-        bWY = null;
+        coc.dismiss();
+        coc = null;
       }
-      ax.tm().b(30, this);
+      ah.tE().b(30, this);
       if ((paramInt1 == 0) && (paramInt2 == 0))
       {
-        gRU = ((r)paramj).ayN();
-        c(true, false, gRU, gRX);
+        iHR = ((l)paramj).aPs();
+        c(true, false, iHR, iHW);
         return;
       }
       if (paramInt2 == -44)
       {
-        paramString = gRX;
-        if (gRS != null)
+        paramString = iHW;
+        if (iHP != null)
         {
-          gRS.acx();
-          c(false, false, gRU, paramString);
+          iHP.aek();
+          c(false, false, iHR, paramString);
           return;
         }
-        paramString = new aj(context, new e(this));
-        if (gRT != null) {
-          gRT = gRT;
-        }
-        if (gRV)
+        paramString = new i(context, new i.a()
         {
-          paramj = eAm;
-          LinkedList localLinkedList = eAn;
-          gTf = false;
+          public final void bK(boolean paramAnonymousBoolean)
+          {
+            String str = iHW;
+            a.a(a.this, paramAnonymousBoolean, iHR, str);
+          }
+        });
+        if (iHQ != null) {
+          iHQ = iHQ;
+        }
+        if (iHU)
+        {
+          paramj = fJx;
+          LinkedList localLinkedList = fJy;
+          iJo = false;
           paramString.onStart();
-          ax.tm().d(new r(2, paramj, localLinkedList, "", ""));
+          ah.tE().d(new l(2, paramj, localLinkedList, "", ""));
           return;
         }
-        paramString.d(eAm, eAn);
+        paramString.e(fJx, fJy);
         return;
       }
       if (paramInt2 == -87)
       {
-        h.x(context, context.getString(a.n.contact_info_biz_join_fans_limit), "");
+        g.y(context, context.getString(2131431097), "");
         return;
       }
-      if ((paramInt2 == -101) && (!com.tencent.mm.sdk.platformtools.bn.iW(paramString)))
+      if ((paramInt2 == -101) && (!ay.kz(paramString)))
       {
-        t.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "jacks catch add Contact errCode: %d && errMsg: %s", new Object[] { Integer.valueOf(paramInt2), paramString });
-        h.x(context, paramString, "");
+        u.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "jacks catch add Contact errCode: %d && errMsg: %s", new Object[] { Integer.valueOf(paramInt2), paramString });
+        g.y(context, paramString, "");
         return;
       }
       if (paramInt2 != 65234) {
         break;
       }
-      paramInt1 = axE;
-      t.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "onSceneEnd, verify relation out of date, opCode = %d", new Object[] { Integer.valueOf(paramInt1) });
+      paramInt1 = axL;
+      u.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "onSceneEnd, verify relation out of date, opCode = %d", new Object[] { Integer.valueOf(paramInt1) });
     } while (paramInt1 != 3);
-    h.a(context, context.getString(a.n.contact_info_verify_outofdate_msg), context.getString(a.n.app_tip), context.getString(a.n.app_add), context.getString(a.n.app_cancel), new d(this, paramj), null);
+    g.a(context, context.getString(2131428539), context.getString(2131430877), context.getString(2131430900), context.getString(2131430884), new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        u.d("!32@/B4Tb64lLpKN6K/THdLZybvP+afE3jBu", "dealwith verify relation out of date");
+        paramAnonymousDialogInterface = (l)paramj;
+        if ((anN != null) && (anN.vA() != null)) {}
+        for (paramAnonymousDialogInterface = anN.bEW.bFf).jPq;; paramAnonymousDialogInterface = null)
+        {
+          List localList = paramjiAo;
+          if ((localList != null) && (localList.size() > 0)) {
+            a((String)localList.get(0), paramAnonymousDialogInterface, false);
+          }
+          return;
+        }
+      }
+    }, null);
     return;
-    if ((paramInt1 == 4) && (paramInt2 == -22)) {
-      Toast.makeText(context, context.getString(a.n.addcontact_fail_blacklist), 1).show();
+    if ((iHX) && (!ay.kz(paramString))) {
+      Toast.makeText(context, paramString, 1).show();
     }
     for (;;)
     {
-      c(false, false, gRU, gRX);
+      c(false, false, iHR, iHW);
       return;
-      Toast.makeText(context, context.getString(a.n.addcontact_fail), 1).show();
+      if ((paramInt1 == 4) && (paramInt2 == -22)) {
+        Toast.makeText(context, context.getString(2131431092), 1).show();
+      } else if ((paramInt1 == 4) && (paramInt2 == -24) && (!ay.kz(paramString))) {
+        Toast.makeText(context, paramString, 1).show();
+      } else {
+        Toast.makeText(context, context.getString(2131431091), 1).show();
+      }
     }
   }
   
@@ -131,25 +178,40 @@ public final class a
         bool1 = true;
       }
       Assert.assertTrue(bool1);
-      gRV = paramBoolean;
+      iHU = paramBoolean;
       onStart();
-      if (gRW)
+      if (iHV)
       {
         Context localContext = context;
-        context.getString(a.n.app_tip);
-        bWY = h.a(localContext, context.getString(a.n.contact_info_adding_tip), true, new b(this));
+        context.getString(2131430877);
+        coc = g.a(localContext, context.getString(2131431095), true, new DialogInterface.OnCancelListener()
+        {
+          public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+          {
+            a.a(a.this, false, iHR, iHW);
+          }
+        });
       }
-      eAn = paramLinkedList;
-      eAm.add(paramString);
-      gRU = paramString;
-      ax.tm().d(new r(1, eAm, paramLinkedList, "", elY));
+      fJy = paramLinkedList;
+      fJx.add(paramString);
+      iHR = paramString;
+      paramString = new l(1, fJx, paramLinkedList, "", fvG, null, aCm);
+      if (!ay.kz(iHS)) {
+        paramString.bQ(iHS, iHT);
+      }
+      ah.tE().d(paramString);
       return;
     }
   }
   
+  public final void d(String paramString, LinkedList paramLinkedList)
+  {
+    a(paramString, paramLinkedList, false);
+  }
+  
   public final void onStart()
   {
-    ax.tm().a(30, this);
+    ah.tE().a(30, this);
   }
   
   public static abstract interface a
@@ -159,7 +221,7 @@ public final class a
   
   public static abstract interface b
   {
-    public abstract boolean acx();
+    public abstract boolean aek();
   }
 }
 

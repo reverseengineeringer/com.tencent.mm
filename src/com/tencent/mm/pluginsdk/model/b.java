@@ -1,155 +1,113 @@
 package com.tencent.mm.pluginsdk.model;
 
-import com.tencent.mm.protocal.b.kx;
-import com.tencent.mm.protocal.b.lb;
-import com.tencent.mm.protocal.b.lc;
-import com.tencent.mm.protocal.b.le;
-import com.tencent.mm.protocal.b.lf;
-import com.tencent.mm.protocal.b.lg;
-import com.tencent.mm.protocal.b.lj;
-import com.tencent.mm.protocal.b.ln;
-import com.tencent.mm.protocal.b.lp;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import android.content.Context;
+import com.tencent.mm.am.i;
+import com.tencent.mm.am.l;
+import com.tencent.mm.d.a.ge;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.model.ar.b;
+import com.tencent.mm.platformtools.n;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.f;
+import com.tencent.mm.protocal.b.aj;
+import com.tencent.mm.r.c.a;
+import com.tencent.mm.r.c.b;
+import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.storage.ag;
 
 public final class b
+  implements com.tencent.mm.r.c
 {
-  public static lb a(int paramInt, lf paramlf, ln paramln)
+  public final c.b b(c.a parama)
   {
-    if (paramlf == null) {
-      t.w("!32@/B4Tb64lLpJdilZqE3zQgZEgF2biJ1Xc", "proto item is null");
+    aj localaj = bFh;
+    if ((localaj == null) || (iXu != 47)) {
+      u.f("!32@/B4Tb64lLpJAz7ZZyuqdwFauBzP/voPJ", "parseEmojiMsg failed, invalid cmdAM");
     }
-    lb locallb;
+    Object localObject1;
+    ag localag;
+    label148:
+    long l;
+    label196:
     do
     {
-      return null;
-      locallb = new lb();
-      lg locallg = hwp;
-      if (locallg != null)
+      do
       {
-        blU = blU;
-        hwf = hvU;
-        appId = appId;
-        hwc = hwc;
-      }
-      if (paramln != null)
-      {
-        if (hwA != null) {
-          hwg.addAll(hwA);
+        return null;
+        localObject2 = n.a(iXs);
+        localObject1 = n.a(iXt);
+        if (!((String)com.tencent.mm.model.ah.tD().rn().get(2, null)).equals(localObject2)) {
+          break;
         }
-        if (hwB != null) {
-          hwg.addAll(hwB);
-        }
-      }
-      aDq = paramlf;
-      type = paramInt;
-      switch (paramInt)
-      {
-      case 3: 
-      case 9: 
-      case 13: 
-      default: 
-        t.w("!32@/B4Tb64lLpJdilZqE3zQgZEgF2biJ1Xc", "unknown type %d", new Object[] { Integer.valueOf(paramInt) });
-        return locallb;
-      case 1: 
-        title = "";
-        desc = desc;
-        return locallb;
-      case 4: 
-        if ((hwr != null) && (!hwr.isEmpty())) {
-          title = hwr.get(0)).title;
-        }
-        return locallb;
-      case 5: 
-        if (hvC != null)
+        String str = n.a(iXv);
+        if (!i.a.aOT().a((String)localObject1, str, iXA, iXy, parama))
         {
-          title = hvC.title;
-          desc = hvC.hwR;
-        }
-        if ((bn.iW(title)) && (hwr != null) && (!hwr.isEmpty())) {
-          title = hwr.get(0)).title;
-        }
-        if ((bn.iW(desc)) && (locallg != null)) {
-          desc = bLJ;
-        }
-        return locallb;
-      case 6: 
-        title = dBa;
-        if (bn.iW(title)) {
-          if (hvA != null)
-          {
-            title = hvA.aCo;
-            desc = hvA.label;
+          u.w("!32@/B4Tb64lLpJAz7ZZyuqdwFauBzP/voPJ", "emoji plugin not found");
+          localag = new ag();
+          localag.setType(47);
+          localag.setTalker((String)localObject1);
+          if (!com.tencent.mm.model.h.dQ((String)localObject2)) {
+            break label485;
           }
-        }
-        for (;;)
-        {
-          return locallb;
-          if (hvA != null) {
-            desc = hvA.aCo;
+          i = 1;
+          localag.bl(i);
+          localag.cn("no_plugin_md5");
+          localag.u(iXA);
+          localag.setContent(str);
+          if (field_isSend != 1) {
+            break label490;
           }
+          l = ar.fm(field_talker);
+          localag.v(l);
+          localag.bk(3);
+          localag.cs(iXy);
+          ar.a(localag, parama);
+          com.tencent.mm.model.ah.tD().rs().E(localag);
         }
-      case 2: 
-        if ((hwr != null) && (hwr.size() > 0)) {
-          title = hwr.get(0)).title;
-        }
-        return locallb;
-      case 7: 
-        if ((hwr != null) && (!hwr.isEmpty()))
-        {
-          title = hwr.get(0)).title;
-          desc = hwr.get(0)).desc;
-        }
-        return locallb;
-      case 8: 
-        title = title;
-        if ((bn.iW(title)) && (hwr != null) && (!hwr.isEmpty())) {
-          title = hwr.get(0)).title;
-        }
-        return locallb;
-      case 10: 
-      case 11: 
-        if (hvE != null)
-        {
-          title = hvE.title;
-          desc = hvE.desc;
-        }
-        return locallb;
-      case 12: 
-      case 15: 
-        if (hvG != null)
-        {
-          title = hvG.title;
-          desc = hvG.desc;
-        }
-        return locallb;
-      }
-      paramlf = hwr;
-    } while (paramlf == null);
-    paramlf = paramlf.iterator();
-    while (paramlf.hasNext())
+        localObject1 = ar.fo(iXy);
+      } while (localObject1 == null);
+      u.i("!32@/B4Tb64lLpJAz7ZZyuqdwFauBzP/voPJ", "bizClientMsgId = %s", new Object[] { bBP });
+    } while ((bBR == null) || (asc != 1));
+    parama = n.a(iXs);
+    com.tencent.mm.model.ah.tD().rn().set(73729, Integer.valueOf(1));
+    Object localObject2 = new com.tencent.mm.am.h();
+    field_content = y.getContext().getString(2131431185);
+    field_createtime = ay.FR();
+    field_imgpath = "";
+    field_sayhicontent = field_content;
+    field_sayhiuser = parama;
+    field_scene = 18;
+    if (cqT > 3) {}
+    for (int i = cqT;; i = 3)
     {
-      paramln = (kx)paramlf.next();
-      if (1 == cgR) {
-        title = desc;
-      }
+      field_status = i;
+      field_svrid = iXA;
+      field_talker = parama;
+      field_type = iXu;
+      field_isSend = 0;
+      field_sayhiencryptuser = parama;
+      field_ticket = bBR;
+      l.DM().a((com.tencent.mm.am.h)localObject2);
+      localObject1 = new ge();
+      aBd.aBe = parama;
+      a.jUF.j((com.tencent.mm.sdk.c.b)localObject1);
+      return null;
+      localObject1 = localObject2;
+      break;
+      label485:
+      i = 0;
+      break label148;
+      label490:
+      l = ar.d(field_talker, fpL);
+      break label196;
     }
-    return locallb;
   }
   
-  public static String bf(String paramString1, String paramString2)
-  {
-    if (bn.iW(paramString1)) {
-      return paramString2;
-    }
-    if (bn.iW(paramString2)) {
-      return paramString1;
-    }
-    return paramString1 + '​' + paramString2;
-  }
+  public final void d(ag paramag) {}
 }
 
 /* Location:

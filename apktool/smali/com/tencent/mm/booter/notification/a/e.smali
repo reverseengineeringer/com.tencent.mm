@@ -4,11 +4,11 @@
 
 
 # static fields
-.field private static final bed:Ljava/util/Set;
+.field private static final bom:Ljava/util/Set;
 
 
 # instance fields
-.field public bee:Z
+.field public bon:Z
 
 
 # direct methods
@@ -22,21 +22,21 @@
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
     .line 47
-    sput-object v0, Lcom/tencent/mm/booter/notification/a/e;->bed:Ljava/util/Set;
+    sput-object v0, Lcom/tencent/mm/booter/notification/a/e;->bom:Ljava/util/Set;
 
     const-string/jumbo v1, "readerapp"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 48
-    sget-object v0, Lcom/tencent/mm/booter/notification/a/e;->bed:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/booter/notification/a/e;->bom:Ljava/util/Set;
 
     const-string/jumbo v1, "blogapp"
 
     invoke-interface {v0, v1}, Ljava/util/Set;->add(Ljava/lang/Object;)Z
 
     .line 49
-    sget-object v0, Lcom/tencent/mm/booter/notification/a/e;->bed:Ljava/util/Set;
+    sget-object v0, Lcom/tencent/mm/booter/notification/a/e;->bom:Ljava/util/Set;
 
     const-string/jumbo v1, "newsapp"
 
@@ -56,7 +56,7 @@
     return-void
 .end method
 
-.method public static a(Ljava/lang/String;Lcom/tencent/mm/storage/ar;)Z
+.method public static a(Ljava/lang/String;Lcom/tencent/mm/storage/ag;)Z
     .locals 6
 
     .prologue
@@ -65,13 +65,13 @@
     const/4 v2, 0x0
 
     .line 339
-    invoke-static {p0}, Lcom/tencent/mm/g/g;->di(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/g/g;->do(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {p1}, Lcom/tencent/mm/g/g;->c(Lcom/tencent/mm/storage/ar;)Z
+    invoke-static {p1}, Lcom/tencent/mm/g/g;->c(Lcom/tencent/mm/storage/ag;)Z
 
     move-result v0
 
@@ -96,7 +96,7 @@
 
     aput-object v1, v5, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 341
     return v0
@@ -192,7 +192,7 @@
     goto :goto_0
 .end method
 
-.method public static bJ(I)Z
+.method public static bI(I)Z
     .locals 6
 
     .prologue
@@ -221,7 +221,7 @@
 
     aput-object v5, v1, v2
 
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 333
     return v0
@@ -233,7 +233,7 @@
     goto :goto_0
 .end method
 
-.method public static bK(I)Z
+.method public static bJ(I)Z
     .locals 6
 
     .prologue
@@ -262,7 +262,7 @@
 
     aput-object v5, v1, v2
 
-    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 419
     return v0
@@ -274,7 +274,7 @@
     goto :goto_0
 .end method
 
-.method public static cL(Ljava/lang/String;)Z
+.method public static cP(Ljava/lang/String;)Z
     .locals 2
 
     .prologue
@@ -293,7 +293,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->xs(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/z;->CS(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -304,7 +304,7 @@
 
     const-string/jumbo v1, "check is Sound NOT Lock: FALSE"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 95
     const/4 v0, 0x1
@@ -319,7 +319,7 @@
 
     const-string/jumbo v1, "check is Sound NOT Lock: TRUE"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 99
     const/4 v0, 0x0
@@ -327,7 +327,7 @@
     goto :goto_0
 .end method
 
-.method public static cM(Ljava/lang/String;)Z
+.method public static cQ(Ljava/lang/String;)Z
     .locals 6
 
     .prologue
@@ -336,7 +336,7 @@
     const/4 v1, 0x0
 
     .line 306
-    sget-object v2, Lcom/tencent/mm/booter/notification/a/e;->bed:Ljava/util/Set;
+    sget-object v2, Lcom/tencent/mm/booter/notification/a/e;->bom:Ljava/util/Set;
 
     invoke-interface {v2, p0}, Ljava/util/Set;->contains(Ljava/lang/Object;)Z
 
@@ -358,7 +358,7 @@
 
     aput-object v0, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 308
     return v2
@@ -370,7 +370,7 @@
     goto :goto_0
 .end method
 
-.method public static g(ILjava/lang/String;)Z
+.method public static j(ILjava/lang/String;)Z
     .locals 6
 
     .prologue
@@ -378,21 +378,21 @@
 
     .line 371
     .line 375
-    invoke-static {p0}, Lcom/tencent/mm/g/g;->ca(I)Z
+    invoke-static {p0}, Lcom/tencent/mm/g/g;->cb(I)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 376
-    invoke-static {p1}, Lcom/tencent/mm/g/g;->dd(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/g/g;->dj(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 380
-    invoke-static {}, Lcom/tencent/mm/g/g;->pX()Z
+    invoke-static {}, Lcom/tencent/mm/g/g;->pP()Z
 
     move-result v0
 
@@ -412,21 +412,21 @@
 
     aput-object v5, v1, v4
 
-    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 392
     return v0
 
     .line 384
     :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/g/g;->de(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/g/g;->dk(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
     .line 385
-    invoke-static {}, Lcom/tencent/mm/g/g;->pY()Z
+    invoke-static {}, Lcom/tencent/mm/g/g;->pQ()Z
 
     move-result v0
 
@@ -438,7 +438,7 @@
     goto :goto_0
 .end method
 
-.method public static nR()Z
+.method public static nB()Z
     .locals 2
 
     .prologue
@@ -455,7 +455,7 @@
 
     iget v0, v0, Landroid/text/format/Time;->minute:I
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/network/ax;->S(II)Z
+    invoke-static {v1, v0}, Lcom/tencent/mm/network/aa;->ab(II)Z
 
     move-result v0
 
@@ -466,7 +466,7 @@
 
     const-string/jumbo v1, "no shake & sound notification during background deactive time"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 316
     const/4 v0, 0x1
@@ -481,12 +481,12 @@
     goto :goto_0
 .end method
 
-.method public static nS()Z
+.method public static nC()Z
     .locals 6
 
     .prologue
     .line 324
-    invoke-static {}, Lcom/tencent/mm/g/g;->pt()Z
+    invoke-static {}, Lcom/tencent/mm/g/g;->pj()Z
 
     move-result v0
 
@@ -507,13 +507,13 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 326
     return v0
 .end method
 
-.method public static nT()Z
+.method public static nD()Z
     .locals 6
 
     .prologue
@@ -523,26 +523,26 @@
 
     .line 350
     :try_start_0
-    new-instance v0, Lcom/tencent/mm/d/a/jq;
+    new-instance v0, Lcom/tencent/mm/d/a/nv;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/jq;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/nv;-><init>()V
 
     .line 351
-    iget-object v3, v0, Lcom/tencent/mm/d/a/jq;->aGJ:Lcom/tencent/mm/d/a/jq$a;
+    iget-object v3, v0, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
 
     const/4 v4, 0x2
 
-    iput v4, v3, Lcom/tencent/mm/d/a/jq$a;->axE:I
+    iput v4, v3, Lcom/tencent/mm/d/a/nv$a;->axL:I
 
     .line 352
-    sget-object v3, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v3, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v3, v0}, Lcom/tencent/mm/sdk/c/a;->g(Lcom/tencent/mm/sdk/c/d;)Z
+    invoke-virtual {v3, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
 
     .line 353
-    iget-object v0, v0, Lcom/tencent/mm/d/a/jq;->aGK:Lcom/tencent/mm/d/a/jq$b;
+    iget-object v0, v0, Lcom/tencent/mm/d/a/nv;->aKf:Lcom/tencent/mm/d/a/nv$b;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/d/a/jq$b;->aGN:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/d/a/nv$b;->aKi:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -563,7 +563,7 @@
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 359
     return v0
@@ -582,19 +582,19 @@
     goto :goto_1
 .end method
 
-.method public static nU()Z
+.method public static nE()Z
     .locals 7
 
     .prologue
     const/4 v1, 0x0
 
     .line 398
-    invoke-static {}, Lcom/tencent/mm/g/g;->pv()Z
+    invoke-static {}, Lcom/tencent/mm/g/g;->pl()Z
 
     move-result v0
 
     .line 399
-    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->nV()I
+    invoke-static {}, Lcom/tencent/mm/booter/notification/a/e;->nF()I
 
     move-result v2
 
@@ -627,18 +627,18 @@
 
     aput-object v2, v5, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 405
     return v0
 .end method
 
-.method public static nV()I
+.method public static nF()I
     .locals 2
 
     .prologue
     .line 409
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

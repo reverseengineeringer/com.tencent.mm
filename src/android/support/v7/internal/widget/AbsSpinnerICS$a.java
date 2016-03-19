@@ -5,22 +5,22 @@ import android.view.View;
 
 final class AbsSpinnerICS$a
 {
-  final SparseArray od = new SparseArray();
+  final SparseArray nh = new SparseArray();
   
   AbsSpinnerICS$a(AbsSpinnerICS paramAbsSpinnerICS) {}
   
-  final View C(int paramInt)
+  final View D(int paramInt)
   {
-    View localView = (View)od.get(paramInt);
+    View localView = (View)nh.get(paramInt);
     if (localView != null) {
-      od.delete(paramInt);
+      nh.delete(paramInt);
     }
     return localView;
   }
   
   public final void a(int paramInt, View paramView)
   {
-    od.put(paramInt, paramView);
+    nh.put(paramInt, paramView);
   }
 }
 

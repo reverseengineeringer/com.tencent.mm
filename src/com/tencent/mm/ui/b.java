@@ -1,34 +1,39 @@
 package com.tencent.mm.ui;
 
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
 
 public final class b
 {
-  public TextView cwe;
-  public View ilg;
-  private ImageView ilh;
-  public TextView ili;
-  private ImageView ilj;
-  public ImageView ilk;
-  private ImageView ill;
+  public TextView cNT;
+  private View kjn;
+  private ImageView kjo;
+  public TextView kjp;
+  private ImageView kjq;
+  public ImageView kjr;
+  private ImageView kjs;
   
   public b(View paramView)
   {
-    cwe = ((TextView)paramView.findViewById(a.i.title_area));
-    ili = ((TextView)paramView.findViewById(a.i.sub_title_area));
-    ilj = ((ImageView)paramView.findViewById(a.i.mute_icon));
-    ilk = ((ImageView)paramView.findViewById(a.i.phone_icon));
-    ill = ((ImageView)paramView.findViewById(a.i.qmsg_icon));
-    ilg = paramView.findViewById(a.i.arrow_area);
-    ilh = ((ImageView)paramView.findViewById(a.i.arrow_area_btn));
+    cNT = ((TextView)paramView.findViewById(2131169493));
+    kjp = ((TextView)paramView.findViewById(2131169494));
+    kjq = ((ImageView)paramView.findViewById(2131169495));
+    kjr = ((ImageView)paramView.findViewById(2131169496));
+    kjs = ((ImageView)paramView.findViewById(2131169497));
+    kjn = paramView.findViewById(2131169491);
+    kjo = ((ImageView)paramView.findViewById(2131169492));
   }
   
-  public final void eO(boolean paramBoolean)
+  public final void b(View.OnClickListener paramOnClickListener)
   {
-    ImageView localImageView = ilj;
+    kjn.setOnClickListener(paramOnClickListener);
+  }
+  
+  public final void gQ(boolean paramBoolean)
+  {
+    ImageView localImageView = kjq;
     if (paramBoolean) {}
     for (int i = 0;; i = 8)
     {
@@ -37,15 +42,20 @@ public final class b
     }
   }
   
-  public final void eP(boolean paramBoolean)
+  public final void gR(boolean paramBoolean)
   {
-    ImageView localImageView = ill;
+    ImageView localImageView = kjs;
     if (paramBoolean) {}
     for (int i = 0;; i = 8)
     {
       localImageView.setVisibility(i);
       return;
     }
+  }
+  
+  public final void setTitle(CharSequence paramCharSequence)
+  {
+    cNT.setText(paramCharSequence);
   }
 }
 

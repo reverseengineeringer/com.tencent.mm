@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/ij;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aFy:Lcom/tencent/mm/d/a/ij$a;
+.field public aEc:Lcom/tencent/mm/d/a/ij$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/ij;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ij;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/ij;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ij;->arR:Z
 
     return-void
 .end method
@@ -41,24 +41,24 @@
     .locals 1
 
     .prologue
-    .line 10
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    .line 8
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    .line 15
+    .line 13
     new-instance v0, Lcom/tencent/mm/d/a/ij$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/ij$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/ij;->aFy:Lcom/tencent/mm/d/a/ij$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/ij;->aEc:Lcom/tencent/mm/d/a/ij$a;
 
-    .line 10
-    const-string/jumbo v0, "Switcher"
+    .line 8
+    const-string/jumbo v0, "PauseAutoGetBigImg"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/ij;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/ij;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/ij;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ij;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ij;->jUI:Z
 
     return-void
 .end method

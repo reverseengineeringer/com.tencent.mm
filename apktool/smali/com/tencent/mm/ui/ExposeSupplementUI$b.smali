@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic imm:Lcom/tencent/mm/ui/ExposeSupplementUI;
+.field final synthetic kkt:Lcom/tencent/mm/ui/ExposeSupplementUI;
 
-.field private rp:I
+.field private qs:I
 
 
 # direct methods
@@ -29,14 +29,14 @@
 
     .prologue
     .line 122
-    iput-object p1, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$b;->imm:Lcom/tencent/mm/ui/ExposeSupplementUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$b;->kkt:Lcom/tencent/mm/ui/ExposeSupplementUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 123
     const/16 v0, 0x32
 
-    iput v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$b;->rp:I
+    iput v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$b;->qs:I
 
     .line 124
     return-void
@@ -115,15 +115,15 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 128
-    invoke-static {p4}, Lcom/tencent/mm/ui/ExposeSupplementUI;->B(Ljava/lang/CharSequence;)F
+    invoke-static {p4}, Lcom/tencent/mm/ui/ExposeSupplementUI;->A(Ljava/lang/CharSequence;)F
 
     move-result v0
 
     .line 129
-    iget v1, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$b;->rp:I
+    iget v1, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$b;->qs:I
 
     invoke-static {v0}, Ljava/lang/Math;->round(F)I
 
@@ -139,7 +139,7 @@
     if-gtz v1, :cond_1
 
     .line 132
-    iget v1, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$b;->rp:I
+    iget v1, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$b;->qs:I
 
     int-to-double v1, v1
 
@@ -166,7 +166,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->f(C)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->e(C)Z
 
     move-result v0
 

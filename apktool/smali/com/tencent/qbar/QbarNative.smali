@@ -14,11 +14,11 @@
 # static fields
 .field public static data:[B
 
-.field public static jIm:[B
+.field public static lQH:[B
 
-.field public static jIn:[B
+.field public static lQI:[B
 
-.field public static jIo:[I
+.field public static lQJ:[I
 
 
 # direct methods
@@ -31,7 +31,7 @@
     .line 65
     new-array v0, v1, [B
 
-    sput-object v0, Lcom/tencent/qbar/QbarNative;->jIm:[B
+    sput-object v0, Lcom/tencent/qbar/QbarNative;->lQH:[B
 
     .line 66
     const/16 v0, 0xbb8
@@ -43,14 +43,14 @@
     .line 67
     new-array v0, v1, [B
 
-    sput-object v0, Lcom/tencent/qbar/QbarNative;->jIn:[B
+    sput-object v0, Lcom/tencent/qbar/QbarNative;->lQI:[B
 
     .line 68
     const/4 v0, 0x4
 
     new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/qbar/QbarNative;->jIo:[I
+    sput-object v0, Lcom/tencent/qbar/QbarNative;->lQJ:[I
 
     .line 77
     const-string/jumbo v0, "wechatQrMod"
@@ -61,7 +61,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/compatible/util/m;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/compatible/util/i;->b(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
     .line 78
     return-void
@@ -122,13 +122,13 @@
 
     .prologue
     .line 89
-    sget-object v0, Lcom/tencent/qbar/QbarNative;->jIm:[B
+    sget-object v0, Lcom/tencent/qbar/QbarNative;->lQH:[B
 
     sget-object v1, Lcom/tencent/qbar/QbarNative;->data:[B
 
-    sget-object v2, Lcom/tencent/qbar/QbarNative;->jIn:[B
+    sget-object v2, Lcom/tencent/qbar/QbarNative;->lQI:[B
 
-    sget-object v3, Lcom/tencent/qbar/QbarNative;->jIo:[I
+    sget-object v3, Lcom/tencent/qbar/QbarNative;->lQJ:[I
 
     invoke-static {v0, v1, v2, v3}, Lcom/tencent/qbar/QbarNative;->GetOneResult([B[B[B[I)I
 
@@ -138,11 +138,11 @@
     :try_start_0
     new-instance v1, Ljava/lang/String;
 
-    sget-object v2, Lcom/tencent/qbar/QbarNative;->jIn:[B
+    sget-object v2, Lcom/tencent/qbar/QbarNative;->lQI:[B
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/tencent/qbar/QbarNative;->jIo:[I
+    sget-object v4, Lcom/tencent/qbar/QbarNative;->lQJ:[I
 
     const/4 v5, 0x2
 
@@ -164,11 +164,11 @@
     .line 95
     new-instance v1, Ljava/lang/String;
 
-    sget-object v2, Lcom/tencent/qbar/QbarNative;->jIm:[B
+    sget-object v2, Lcom/tencent/qbar/QbarNative;->lQH:[B
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/tencent/qbar/QbarNative;->jIo:[I
+    sget-object v4, Lcom/tencent/qbar/QbarNative;->lQJ:[I
 
     const/4 v5, 0x0
 
@@ -187,7 +187,7 @@
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/tencent/qbar/QbarNative;->jIo:[I
+    sget-object v4, Lcom/tencent/qbar/QbarNative;->lQJ:[I
 
     const/4 v5, 0x1
 
@@ -209,11 +209,11 @@
     .line 99
     new-instance v1, Ljava/lang/String;
 
-    sget-object v2, Lcom/tencent/qbar/QbarNative;->jIm:[B
+    sget-object v2, Lcom/tencent/qbar/QbarNative;->lQH:[B
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/tencent/qbar/QbarNative;->jIo:[I
+    sget-object v4, Lcom/tencent/qbar/QbarNative;->lQJ:[I
 
     const/4 v5, 0x0
 
@@ -232,7 +232,7 @@
 
     const/4 v3, 0x0
 
-    sget-object v4, Lcom/tencent/qbar/QbarNative;->jIo:[I
+    sget-object v4, Lcom/tencent/qbar/QbarNative;->lQJ:[I
 
     const/4 v5, 0x1
 
@@ -253,11 +253,11 @@
     :cond_1
     new-instance v2, Ljava/lang/String;
 
-    sget-object v3, Lcom/tencent/qbar/QbarNative;->jIm:[B
+    sget-object v3, Lcom/tencent/qbar/QbarNative;->lQH:[B
 
     const/4 v4, 0x0
 
-    sget-object v5, Lcom/tencent/qbar/QbarNative;->jIo:[I
+    sget-object v5, Lcom/tencent/qbar/QbarNative;->lQJ:[I
 
     const/4 v6, 0x0
 
@@ -274,7 +274,7 @@
 
     const/4 v4, 0x0
 
-    sget-object v5, Lcom/tencent/qbar/QbarNative;->jIo:[I
+    sget-object v5, Lcom/tencent/qbar/QbarNative;->lQJ:[I
 
     const/4 v6, 0x1
 

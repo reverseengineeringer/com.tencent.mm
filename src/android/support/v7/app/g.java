@@ -1,102 +1,114 @@
 package android.support.v7.app;
 
-import android.support.v7.internal.widget.NativeActionModeAwareLayout;
-import android.support.v7.internal.widget.NativeActionModeAwareLayout.a;
-import android.view.ActionMode;
-import android.view.ActionMode.Callback;
-import android.view.Menu;
-import android.view.MenuItem;
-import com.tencent.mm.a.i;
+import android.app.Activity;
+import android.content.Context;
+import android.graphics.drawable.Drawable;
+import android.view.View;
+import java.util.ArrayList;
 
 final class g
-  extends f
-  implements NativeActionModeAwareLayout.a
+  extends ActionBar
 {
-  final NativeActionModeAwareLayout km;
-  ActionMode kn;
+  final ActionBar.a js;
+  final Activity jx;
+  final android.app.ActionBar jy;
+  private ArrayList jz = new ArrayList();
   
-  public g(ActionBarActivity paramActionBarActivity, ActionBar.a parama)
+  public g(Activity paramActivity, ActionBar.a parama)
   {
-    super(paramActionBarActivity, parama);
-    km = ((NativeActionModeAwareLayout)paramActionBarActivity.findViewById(a.i.action_bar_root));
-    if (km != null) {
-      km.setActionModeForChildListener(this);
-    }
+    jx = paramActivity;
+    js = parama;
+    jy = paramActivity.getActionBar();
   }
   
-  public final ActionMode.Callback a(ActionMode.Callback paramCallback)
+  public final void aJ()
   {
-    return new a(paramCallback);
+    jy.setCustomView(2131363238);
   }
   
-  final boolean bn()
+  public final void aK()
   {
-    return (kn == null) && (super.bn());
+    jy.setIcon(2130968578);
+  }
+  
+  public final void aL()
+  {
+    jy.setDisplayShowHomeEnabled(false);
+  }
+  
+  public final void aM()
+  {
+    jy.setDisplayShowCustomEnabled(true);
+  }
+  
+  public final View getCustomView()
+  {
+    return jy.getCustomView();
+  }
+  
+  public final int getDisplayOptions()
+  {
+    return jy.getDisplayOptions();
+  }
+  
+  public final int getHeight()
+  {
+    return jy.getHeight();
+  }
+  
+  public final Context getThemedContext()
+  {
+    return jy.getThemedContext();
+  }
+  
+  public final CharSequence getTitle()
+  {
+    return jy.getTitle();
   }
   
   public final void hide()
   {
-    super.hide();
-    if (kn != null) {
-      kn.finish();
-    }
+    jy.hide();
+  }
+  
+  public final boolean isShowing()
+  {
+    return jy.isShowing();
+  }
+  
+  public final void setBackgroundDrawable(Drawable paramDrawable)
+  {
+    jy.setBackgroundDrawable(paramDrawable);
+  }
+  
+  public final void setCustomView(View paramView)
+  {
+    jy.setCustomView(paramView);
+  }
+  
+  public final void setDisplayHomeAsUpEnabled(boolean paramBoolean)
+  {
+    jy.setDisplayHomeAsUpEnabled(paramBoolean);
+  }
+  
+  public final void setDisplayOptions(int paramInt)
+  {
+    jy.setDisplayOptions(paramInt);
+  }
+  
+  public final void setDisplayShowTitleEnabled(boolean paramBoolean)
+  {
+    jy.setDisplayShowTitleEnabled(paramBoolean);
+  }
+  
+  public final void setLogo(Drawable paramDrawable)
+  {
+    jy.setLogo(paramDrawable);
   }
   
   public final void show()
   {
-    super.show();
-    if (kn != null) {
-      kn.finish();
-    }
-  }
-  
-  private final class a
-    implements ActionMode.Callback
-  {
-    private final ActionMode.Callback ko;
-    
-    a(ActionMode.Callback paramCallback)
-    {
-      ko = paramCallback;
-    }
-    
-    public final boolean onActionItemClicked(ActionMode paramActionMode, MenuItem paramMenuItem)
-    {
-      return ko.onActionItemClicked(paramActionMode, paramMenuItem);
-    }
-    
-    public final boolean onCreateActionMode(ActionMode paramActionMode, Menu paramMenu)
-    {
-      boolean bool = ko.onCreateActionMode(paramActionMode, paramMenu);
-      if (bool)
-      {
-        kn = paramActionMode;
-        paramActionMode = g.this;
-        if (!ki)
-        {
-          ki = true;
-          paramActionMode.bm();
-        }
-      }
-      return bool;
-    }
-    
-    public final void onDestroyActionMode(ActionMode paramActionMode)
-    {
-      ko.onDestroyActionMode(paramActionMode);
-      paramActionMode = g.this;
-      if (ki)
-      {
-        ki = false;
-        paramActionMode.bm();
-      }
-      kn = null;
-    }
-    
-    public final boolean onPrepareActionMode(ActionMode paramActionMode, Menu paramMenu)
-    {
-      return ko.onPrepareActionMode(paramActionMode, paramMenu);
-    }
+    jy.show();
   }
 }
 

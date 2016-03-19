@@ -2,7 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class fu$a
 {
-  public String aCM;
+  public String aAK;
+  public long aAL;
+  public String aAM;
 }
 
 /* Location:

@@ -15,8 +15,5 @@
 
 
 # virtual methods
-.method public abstract aKU()V
-.end method
-
-.method public abstract aKV()V
+.method public abstract onSizeChanged(IIII)V
 .end method

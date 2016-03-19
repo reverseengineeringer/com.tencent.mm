@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$dg
-  extends a.c
+  extends a.e
 {
   public a$dg()
   {
-    super("menu:share:timeline", "", 88, false);
+    super("openUrlWithExtraWebview", "openUrlWithExtraWebview", 173, false);
   }
 }
 

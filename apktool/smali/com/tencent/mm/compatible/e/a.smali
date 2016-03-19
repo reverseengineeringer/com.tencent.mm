@@ -13,7 +13,7 @@
 
 
 # static fields
-.field public static bjm:Ljava/lang/Boolean;
+.field public static btO:Ljava/lang/Boolean;
 
 
 # direct methods
@@ -24,7 +24,7 @@
     const/4 v3, 0x0
 
     .line 292
-    invoke-static {p0}, Lcom/tencent/mm/a/c;->az(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -35,7 +35,7 @@
 
     const-string/jumbo v1, "file is not exists"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 366
     :cond_0
@@ -50,7 +50,7 @@
     const-string/jumbo v0, ""
 
     .line 299
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/s;->aEJ()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
 
     move-result-object v1
 
@@ -110,7 +110,7 @@
 
     const/4 v5, 0x0
 
-    invoke-static {v3, v0, v5}, Lcom/tencent/mm/sdk/platformtools/p;->z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v3, v0, v5}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v5
 
@@ -134,7 +134,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/io/FileNotFoundException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_2
@@ -154,7 +154,7 @@
 
     const-string/jumbo v2, "file not found exception"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_2
 
@@ -271,7 +271,7 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_4
     .catch Ljava/io/FileNotFoundException; {:try_start_4 .. :try_end_4} :catch_0
     .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
@@ -289,7 +289,7 @@
 
     const-string/jumbo v1, "read permission config file failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
@@ -333,7 +333,7 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->bjq:Landroid/util/SparseArray;
+    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->btS:Landroid/util/SparseArray;
 
     .line 333
     const-string/jumbo v0, ".perm.manufacture"
@@ -344,7 +344,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->bjr:Ljava/lang/String;
+    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->btT:Ljava/lang/String;
 
     .line 334
     const-string/jumbo v0, ".perm.model"
@@ -369,7 +369,7 @@
     iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->version:Ljava/lang/String;
 
     .line 336
-    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->bjq:Landroid/util/SparseArray;
+    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->btS:Landroid/util/SparseArray;
 
     const/4 v6, 0x1
 
@@ -396,7 +396,7 @@
     invoke-virtual {v0, v6, v7}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
     .line 337
-    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->bjq:Landroid/util/SparseArray;
+    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$b;->btS:Landroid/util/SparseArray;
 
     const/4 v6, 0x2
 
@@ -437,11 +437,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->xQ(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dr(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, v3, Lcom/tencent/mm/compatible/e/a$b;->bjp:I
+    iput v0, v3, Lcom/tencent/mm/compatible/e/a$b;->btR:I
 
     .line 339
     invoke-interface {p1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -493,7 +493,7 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->bjq:Landroid/util/SparseArray;
+    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btS:Landroid/util/SparseArray;
 
     .line 343
     const-string/jumbo v0, ".perm.package"
@@ -504,7 +504,7 @@
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->pkgName:Ljava/lang/String;
+    iput-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->alS:Ljava/lang/String;
 
     .line 344
     const-string/jumbo v0, ".perm.min_versioncode"
@@ -515,11 +515,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->xQ(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dr(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, v3, Lcom/tencent/mm/compatible/e/a$a;->bjn:I
+    iput v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btP:I
 
     .line 345
     const-string/jumbo v0, ".perm.max_versioncode"
@@ -530,14 +530,14 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->xQ(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dr(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, v3, Lcom/tencent/mm/compatible/e/a$a;->bjo:I
+    iput v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btQ:I
 
     .line 346
-    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->bjq:Landroid/util/SparseArray;
+    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btS:Landroid/util/SparseArray;
 
     const/4 v6, 0x1
 
@@ -564,7 +564,7 @@
     invoke-virtual {v0, v6, v7}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
     .line 347
-    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->bjq:Landroid/util/SparseArray;
+    iget-object v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btS:Landroid/util/SparseArray;
 
     const/4 v6, 0x2
 
@@ -605,11 +605,11 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->xQ(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dr(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, v3, Lcom/tencent/mm/compatible/e/a$a;->bjp:I
+    iput v0, v3, Lcom/tencent/mm/compatible/e/a$a;->btR:I
 
     .line 349
     invoke-interface {p2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
@@ -731,7 +731,7 @@
     goto :goto_0
 .end method
 
-.method public static au(Z)Ljava/util/List;
+.method public static ay(Z)Ljava/util/List;
     .locals 5
 
     .prologue
@@ -744,7 +744,7 @@
     if-eqz p0, :cond_0
 
     .line 248
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -809,11 +809,11 @@
 
     const-string/jumbo v1, "getRunningServices failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 271
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 

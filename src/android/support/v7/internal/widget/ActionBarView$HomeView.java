@@ -11,27 +11,26 @@ import android.view.accessibility.AccessibilityEvent;
 import android.widget.FrameLayout;
 import android.widget.FrameLayout.LayoutParams;
 import android.widget.ImageView;
-import com.tencent.mm.a.i;
 import java.util.List;
 
 class ActionBarView$HomeView
   extends FrameLayout
 {
-  private ImageView mo;
-  ImageView pi;
-  private int pj;
-  int pk;
-  Drawable pl;
+  private ImageView lt;
+  ImageView oj;
+  private int ok;
+  int ol;
+  Drawable om;
   
   public ActionBarView$HomeView(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
   }
   
-  public final void D(int paramInt)
+  public final void E(int paramInt)
   {
-    pk = paramInt;
-    ImageView localImageView = pi;
+    ol = paramInt;
+    ImageView localImageView = oj;
     if (paramInt != 0) {}
     for (Drawable localDrawable = getResources().getDrawable(paramInt);; localDrawable = null)
     {
@@ -40,10 +39,10 @@ class ActionBarView$HomeView
     }
   }
   
-  public final int cf()
+  public final int bP()
   {
-    if (pi.getVisibility() == 8) {
-      return pj;
+    if (oj.getVisibility() == 8) {
+      return ok;
     }
     return 0;
   }
@@ -60,16 +59,16 @@ class ActionBarView$HomeView
   protected void onConfigurationChanged(Configuration paramConfiguration)
   {
     super.onConfigurationChanged(paramConfiguration);
-    if (pk != 0) {
-      D(pk);
+    if (ol != 0) {
+      E(ol);
     }
   }
   
   protected void onFinishInflate()
   {
-    pi = ((ImageView)findViewById(a.i.up));
-    mo = ((ImageView)findViewById(a.i.home));
-    pl = pi.getDrawable();
+    oj = ((ImageView)findViewById(2131169530));
+    lt = ((ImageView)findViewById(2131165233));
+    om = oj.getDrawable();
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
@@ -78,46 +77,46 @@ class ActionBarView$HomeView
     int j = (paramInt4 - paramInt2) / 2;
     paramInt2 = i;
     paramInt4 = paramInt1;
-    if (pi.getVisibility() != 8)
+    if (oj.getVisibility() != 8)
     {
-      localLayoutParams = (FrameLayout.LayoutParams)pi.getLayoutParams();
-      paramInt4 = pi.getMeasuredHeight();
-      paramInt2 = pi.getMeasuredWidth();
+      localLayoutParams = (FrameLayout.LayoutParams)oj.getLayoutParams();
+      paramInt4 = oj.getMeasuredHeight();
+      paramInt2 = oj.getMeasuredWidth();
       i = j - paramInt4 / 2;
-      pi.layout(0, i, paramInt2, paramInt4 + i);
+      oj.layout(0, i, paramInt2, paramInt4 + i);
       paramInt4 = leftMargin;
       paramInt2 = rightMargin + (paramInt4 + paramInt2);
       paramInt4 = paramInt1 + paramInt2;
     }
-    FrameLayout.LayoutParams localLayoutParams = (FrameLayout.LayoutParams)mo.getLayoutParams();
-    paramInt1 = mo.getMeasuredHeight();
-    i = mo.getMeasuredWidth();
+    FrameLayout.LayoutParams localLayoutParams = (FrameLayout.LayoutParams)lt.getLayoutParams();
+    paramInt1 = lt.getMeasuredHeight();
+    i = lt.getMeasuredWidth();
     paramInt3 = (paramInt3 - paramInt4) / 2;
     paramInt2 += Math.max(leftMargin, paramInt3 - i / 2);
     paramInt3 = Math.max(topMargin, j - paramInt1 / 2);
-    mo.layout(paramInt2, paramInt3, i + paramInt2, paramInt1 + paramInt3);
+    lt.layout(paramInt2, paramInt3, i + paramInt2, paramInt1 + paramInt3);
   }
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
-    measureChildWithMargins(pi, paramInt1, 0, paramInt2, 0);
-    FrameLayout.LayoutParams localLayoutParams = (FrameLayout.LayoutParams)pi.getLayoutParams();
-    pj = (leftMargin + pi.getMeasuredWidth() + rightMargin);
+    measureChildWithMargins(oj, paramInt1, 0, paramInt2, 0);
+    FrameLayout.LayoutParams localLayoutParams = (FrameLayout.LayoutParams)oj.getLayoutParams();
+    ok = (leftMargin + oj.getMeasuredWidth() + rightMargin);
     int i;
     int j;
     int k;
     int m;
-    if (pi.getVisibility() == 8)
+    if (oj.getVisibility() == 8)
     {
       i = 0;
       j = topMargin;
-      k = pi.getMeasuredHeight();
+      k = oj.getMeasuredHeight();
       m = bottomMargin;
-      measureChildWithMargins(mo, paramInt1, i, paramInt2, 0);
-      localLayoutParams = (FrameLayout.LayoutParams)mo.getLayoutParams();
-      i += leftMargin + mo.getMeasuredWidth() + rightMargin;
+      measureChildWithMargins(lt, paramInt1, i, paramInt2, 0);
+      localLayoutParams = (FrameLayout.LayoutParams)lt.getLayoutParams();
+      i += leftMargin + lt.getMeasuredWidth() + rightMargin;
       int n = topMargin;
-      int i1 = mo.getMeasuredHeight();
+      int i1 = lt.getMeasuredHeight();
       j = Math.max(j + k + m, bottomMargin + (n + i1));
       i1 = View.MeasureSpec.getMode(paramInt1);
       n = View.MeasureSpec.getMode(paramInt2);
@@ -141,7 +140,7 @@ class ActionBarView$HomeView
     {
       setMeasuredDimension(paramInt1, paramInt2);
       return;
-      i = pj;
+      i = ok;
       break;
       paramInt1 = Math.min(i, m);
       break label226;
@@ -150,12 +149,12 @@ class ActionBarView$HomeView
   
   public final void setIcon(Drawable paramDrawable)
   {
-    mo.setImageDrawable(paramDrawable);
+    lt.setImageDrawable(paramDrawable);
   }
   
   public final void y(boolean paramBoolean)
   {
-    ImageView localImageView = pi;
+    ImageView localImageView = oj;
     if (paramBoolean) {}
     for (int i = 0;; i = 8)
     {

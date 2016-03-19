@@ -1,134 +1,155 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Context;
-import android.content.Intent;
-import android.view.ContextMenu;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import android.widget.TextView;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.pluginsdk.ui.d.i;
-import com.tencent.mm.s.d;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
-import com.tencent.mm.storage.ar.b;
-import com.tencent.mm.storage.as;
-import com.tencent.mm.ui.cn;
-import com.tencent.mm.ui.ef;
-import com.tencent.mm.ui.transmit.MsgRetransmitUI;
+import com.tencent.mm.d.a.jh;
+import com.tencent.mm.d.a.jy;
+import com.tencent.mm.d.a.jz;
+import com.tencent.mm.d.a.kt;
+import com.tencent.mm.d.a.kv;
+import com.tencent.mm.d.a.np;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.model.f;
+import com.tencent.mm.model.i;
+import com.tencent.mm.n.a.a;
+import com.tencent.mm.pluginsdk.model.app.ai.a;
+import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.pluginsdk.model.app.l;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.ag;
 
-final class dr
-  extends cf.c
+public final class dr
 {
-  private ChattingUI.a iUg;
-  
-  public dr()
+  public static void W(ag paramag)
   {
-    super(13);
+    u.i("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "resendEmoji, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    np localnp = new np();
+    aJV.ask = paramag;
+    a.jUF.j(localnp);
   }
   
-  public final View a(LayoutInflater paramLayoutInflater, View paramView)
+  public static void X(ag paramag)
   {
-    Object localObject;
-    if ((paramView != null) && (paramView.getTag() != null))
-    {
-      localObject = paramView;
-      if (getTagtype == dJX) {}
-    }
-    else
-    {
-      localObject = new ds(paramLayoutInflater, a.k.chatting_item_to_card);
-      ((View)localObject).setTag(new am(dJX).f((View)localObject, false));
-    }
-    return (View)localObject;
+    u.i("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "resendTextMsg, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    ag(paramag);
   }
   
-  public final void a(cf.a parama, int paramInt, ChattingUI.a parama1, ar paramar, String paramString)
+  public static void Y(ag paramag)
   {
-    iUg = parama1;
-    parama = (am)parama;
-    paramString = ax.tl().rk().zO(field_content);
-    if ((ige == null) || (ige.length() <= 0)) {
-      t.e("!44@/B4Tb64lLpKwUcOR+EdWcoC/QFCp1tJP096fZet3i00=", "getView : parse possible friend msg failed");
-    }
-    iSE.setText(am.a(paramString));
-    iSD.setText(a.n.chatting_from_card);
-    cpL.setText(i.a(ipQ.iqj, bAi, cpL.getTextSize()));
-    iSF.setVisibility(8);
-    a(iSC, ige);
-    iRD.setVisibility(8);
-    iUc.setTag(new nv(paramar, iBB, paramInt, null, 0, (byte)0));
-    iUc.setOnClickListener(iTH.iWu);
-    iUc.setOnLongClickListener(iTH.iWw);
-    if (aOu())
+    u.i("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "resendCardMsg, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    ag(paramag);
+  }
+  
+  public static void Z(ag paramag)
+  {
+    u.i("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "resendAppMsgEmoji, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    com.tencent.mm.pluginsdk.model.app.b localb = aj.IL().cS(field_msgId);
+    if ((localb != null) && (field_msgInfoId == field_msgId))
     {
-      if (ewK != null) {
-        ewK.setVisibility(8);
-      }
-      if ((field_status == 2) && (a(iTH, field_msgId))) {
-        if (iRF != null) {
-          iRF.setVisibility(0);
+      u.d("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "resendAppMsgEmoji, upload app attach first");
+      field_status = 101L;
+      field_offset = 0L;
+      field_lastModifyTime = (System.currentTimeMillis() / 1000L);
+      aj.IL().a(localb, new String[0]);
+      aj.aPU().run();
+      return;
+    }
+    u.d("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "resendAppMsgEmoji, directly send app mag");
+    aj.aPU();
+    ai.a.cW(field_msgId);
+  }
+  
+  public static void ad(ag paramag)
+  {
+    u.i("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "resendVoiceMsg, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    if (i.eu(field_talker))
+    {
+      localObject = new jz();
+      aGw.ask = paramag;
+      a.jUF.j((com.tencent.mm.sdk.c.b)localObject);
+      return;
+    }
+    Object localObject = new jy();
+    aGv.ask = paramag;
+    a.jUF.j((com.tencent.mm.sdk.c.b)localObject);
+  }
+  
+  public static void ae(ag paramag)
+  {
+    u.i("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "resendMsgImage, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    kt localkt = new kt();
+    aHo.ask = paramag;
+    a.jUF.j(localkt);
+  }
+  
+  public static void af(ag paramag)
+  {
+    u.i("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "resendLocation, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    ag(paramag);
+  }
+  
+  private static void ag(ag paramag)
+  {
+    long l = field_msgId;
+    if (l == -1L) {
+      u.e("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "sendMsgInternal failed msgId " + l);
+    }
+    do
+    {
+      do
+      {
+        return;
+      } while ((field_talker.equals("medianote")) && ((com.tencent.mm.model.h.sg() & 0x4000) == 0));
+      u.d("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "sendMsgInternal, start send msgId: %d", new Object[] { Long.valueOf(l) });
+      localObject = new com.tencent.mm.modelmulti.h(l);
+    } while (com.tencent.mm.model.ah.tE().d((j)localObject));
+    u.e("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "sendMsgInternal, doScene return false, directly mark msg to failed");
+    paramag.bk(5);
+    com.tencent.mm.model.ah.tD().rs().a(field_msgId, paramag);
+    Object localObject = new kv();
+    aHr.ask = paramag;
+    a.jUF.j((com.tencent.mm.sdk.c.b)localObject);
+  }
+  
+  public static void y(ag paramag)
+  {
+    int i = 0;
+    u.i("!32@/B4Tb64lLpKeVWMkCZpNoKMdvMLNM0Oh", "resendAppMsg, msgId:%d", new Object[] { Long.valueOf(field_msgId) });
+    String str = field_content;
+    int j = field_isSend;
+    Object localObject = field_talker;
+    if ((i.dS((String)localObject)) || (f.dH((String)localObject))) {
+      i = 1;
+    }
+    localObject = str;
+    if (i != 0)
+    {
+      localObject = str;
+      if (str != null)
+      {
+        localObject = str;
+        if (j == 0) {
+          localObject = ar.fl(str);
         }
       }
+    }
+    localObject = a.a.dz((String)localObject);
+    if (((localObject != null) && (19 == type)) || ((localObject != null) && (24 == type)))
+    {
+      localObject = new jh();
+      aFM.type = 4;
+      aFM.aFR = paramag;
+      aFM.ayw = field_talker;
+      a.jUF.j((com.tencent.mm.sdk.c.b)localObject);
     }
     for (;;)
     {
-      a(paramInt, parama, paramar, iTH.bsH, iBB, iTH.iWu);
+      ar.E(field_msgId);
       return;
-      if (iRF != null)
-      {
-        iRF.setVisibility(8);
-        continue;
-        if (ewK != null)
-        {
-          ewK.setVisibility(0);
-          if (field_status >= 2) {
-            ewK.setVisibility(8);
-          }
-        }
-      }
+      l.y(paramag);
     }
-  }
-  
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ar paramar)
-  {
-    int i = getTagposition;
-    paramContextMenu.add(i, 118, 0, paramView.getContext().getString(a.n.retransmit));
-    d.wF();
-    if ((!paramar.aHu()) && ((field_status == 2) || (aWT == 1)) && (paramar.aHC()) && (aOt()) && (AV(field_talker))) {
-      paramContextMenu.add(i, 123, 0, paramView.getContext().getString(a.n.chatting_long_click_menu_revoke_msg));
-    }
-    if (!iUg.aPy()) {
-      paramContextMenu.add(i, 100, 0, paramView.getContext().getString(a.n.chatting_long_click_menu_delete_msg));
-    }
-    return true;
-  }
-  
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ar paramar)
-  {
-    switch (paramMenuItem.getItemId())
-    {
-    default: 
-      return false;
-    }
-    paramMenuItem = new Intent(ipQ.iqj, MsgRetransmitUI.class);
-    paramMenuItem.putExtra("Retr_Msg_content", parama.aJ(field_content, field_isSend));
-    paramMenuItem.putExtra("Retr_Msg_Type", 8);
-    paramMenuItem.putExtra("Retr_Msg_Id", field_msgId);
-    parama.startActivity(paramMenuItem);
-    return false;
-  }
-  
-  public final boolean a(View paramView, ChattingUI.a parama, ar paramar)
-  {
-    return false;
   }
 }
 

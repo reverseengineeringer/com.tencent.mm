@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract lI()V
+.method public abstract ld()V
 .end method

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public auW:I
+.field public atu:Z
 
 
 # direct methods
@@ -27,9 +27,9 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 15
-    const/4 v0, -0x1
+    const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/d/a/ae$a;->auW:I
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ae$a;->atu:Z
 
     return-void
 .end method

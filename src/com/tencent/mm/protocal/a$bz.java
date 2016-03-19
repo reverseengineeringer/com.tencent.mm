@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bz
-  extends a.c
+  extends a.e
 {
   public a$bz()
   {
-    super("scanQRCode", "scanQRCode", 7, false);
+    super("launchApp", "", 27, false);
   }
 }
 

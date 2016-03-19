@@ -15,7 +15,7 @@
 
 
 # static fields
-.field private static final bdS:Lcom/tencent/mm/booter/notification/f;
+.field private static final bob:Lcom/tencent/mm/booter/notification/f;
 
 
 # direct methods
@@ -30,17 +30,17 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/booter/notification/f;-><init>(B)V
 
-    sput-object v0, Lcom/tencent/mm/booter/notification/f$a;->bdS:Lcom/tencent/mm/booter/notification/f;
+    sput-object v0, Lcom/tencent/mm/booter/notification/f$a;->bob:Lcom/tencent/mm/booter/notification/f;
 
     return-void
 .end method
 
-.method public static synthetic nK()Lcom/tencent/mm/booter/notification/f;
+.method public static synthetic nv()Lcom/tencent/mm/booter/notification/f;
     .locals 1
 
     .prologue
     .line 26
-    sget-object v0, Lcom/tencent/mm/booter/notification/f$a;->bdS:Lcom/tencent/mm/booter/notification/f;
+    sget-object v0, Lcom/tencent/mm/booter/notification/f$a;->bob:Lcom/tencent/mm/booter/notification/f;
 
     return-object v0
 .end method

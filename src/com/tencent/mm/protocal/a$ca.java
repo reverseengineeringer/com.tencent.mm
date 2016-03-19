@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ca
-  extends a.c
+  extends a.e
 {
   public a$ca()
   {
-    super("selectPedometerSource", "selectPedometerSource", 146, true);
+    super("getWebPayCheckoutCounterRequst", "getWebPayCheckoutCounterRequst", 161, true);
   }
 }
 

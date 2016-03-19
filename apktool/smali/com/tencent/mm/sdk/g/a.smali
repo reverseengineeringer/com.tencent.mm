@@ -1,678 +1,256 @@
 .class public final Lcom/tencent/mm/sdk/g/a;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/sdk/e/a;
 .source "SourceFile"
 
 
-# instance fields
-.field private filePath:Ljava/lang/String;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/sdk/g/a$a;
+    }
+.end annotation
 
-.field private ibT:Ljava/util/Properties;
+
+# instance fields
+.field public aEf:Ljava/lang/String;
+
+.field public aEg:Ljava/lang/String;
+
+.field public aEh:Ljava/lang/String;
+
+.field public aEi:Ljava/lang/String;
+
+.field public appId:Ljava/lang/String;
+
+.field public dZG:Ljava/lang/String;
+
+.field public ibV:Ljava/lang/String;
+
+.field public ibZ:Lcom/tencent/mm/sdk/g/a$a;
+
+.field public jUT:Ljava/lang/String;
+
+.field public jUU:Ljava/lang/String;
 
 
 # direct methods
-.method public constructor <init>(Ljava/lang/String;)V
-    .locals 9
+.method public constructor <init>()V
+    .locals 0
 
     .prologue
-    const/4 v2, 0x0
+    .line 72
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/e/a;-><init>()V
 
-    const/4 v8, 0x2
-
-    const/4 v7, 0x1
-
-    const/4 v6, 0x0
-
-    .line 16
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 13
-    iput-object v2, p0, Lcom/tencent/mm/sdk/g/a;->ibT:Ljava/util/Properties;
-
-    .line 14
-    iput-object v2, p0, Lcom/tencent/mm/sdk/g/a;->filePath:Ljava/lang/String;
-
-    .line 17
-    new-instance v0, Ljava/util/Properties;
-
-    invoke-direct {v0}, Ljava/util/Properties;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a;->ibT:Ljava/util/Properties;
-
-    .line 18
-    iput-object p1, p0, Lcom/tencent/mm/sdk/g/a;->filePath:Ljava/lang/String;
-
-    .line 21
-    :try_start_0
-    new-instance v1, Ljava/io/FileInputStream;
-
-    invoke-direct {v1, p1}, Ljava/io/FileInputStream;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 22
-    :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/sdk/g/a;->ibT:Ljava/util/Properties;
-
-    invoke-virtual {v0, v1}, Ljava/util/Properties;->load(Ljava/io/InputStream;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
-
-    .line 27
-    :try_start_2
-    invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
-
-    .line 35
-    :cond_0
-    :goto_0
     return-void
-
-    .line 30
-    :catch_0
-    move-exception v0
-
-    .line 31
-    const-string/jumbo v1, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
-
-    const-string/jumbo v2, "Close File: %s Failed. [%s]"
-
-    new-array v3, v8, [Ljava/lang/Object;
-
-    aput-object p1, v3, v6
-
-    invoke-virtual {v0}, Ljava/io/IOException;->getLocalizedMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v3, v7
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 23
-    :catch_1
-    move-exception v0
-
-    move-object v1, v2
-
-    .line 24
-    :goto_1
-    :try_start_3
-    const-string/jumbo v2, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
-
-    const-string/jumbo v3, "Read File: %s Failed. [%s]"
-
-    const/4 v4, 0x2
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    aput-object p1, v4, v5
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getLocalizedMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v4, v5
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 27
-    if-eqz v1, :cond_0
-
-    .line 29
-    :try_start_4
-    invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
-
-    goto :goto_0
-
-    .line 30
-    :catch_2
-    move-exception v0
-
-    .line 31
-    const-string/jumbo v1, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
-
-    const-string/jumbo v2, "Close File: %s Failed. [%s]"
-
-    new-array v3, v8, [Ljava/lang/Object;
-
-    aput-object p1, v3, v6
-
-    invoke-virtual {v0}, Ljava/io/IOException;->getLocalizedMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v3, v7
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-
-    .line 27
-    :catchall_0
-    move-exception v0
-
-    move-object v1, v2
-
-    :goto_2
-    if-eqz v1, :cond_1
-
-    .line 29
-    :try_start_5
-    invoke-virtual {v1}, Ljava/io/FileInputStream;->close()V
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
-
-    .line 32
-    :cond_1
-    :goto_3
-    throw v0
-
-    .line 30
-    :catch_3
-    move-exception v1
-
-    .line 31
-    const-string/jumbo v2, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
-
-    const-string/jumbo v3, "Close File: %s Failed. [%s]"
-
-    new-array v4, v8, [Ljava/lang/Object;
-
-    aput-object p1, v4, v6
-
-    invoke-virtual {v1}, Ljava/io/IOException;->getLocalizedMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v4, v7
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    .line 27
-    :catchall_1
-    move-exception v0
-
-    goto :goto_2
-
-    .line 23
-    :catch_4
-    move-exception v0
-
-    goto :goto_1
-.end method
-
-.method public static B(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 1
-
-    .prologue
-    .line 135
-    new-instance v0, Lcom/tencent/mm/sdk/g/a;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/g/a;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/sdk/g/a;->bv(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static bw(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Long;
-    .locals 1
-
-    .prologue
-    .line 111
-    new-instance v0, Lcom/tencent/mm/sdk/g/a;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/g/a;-><init>(Ljava/lang/String;)V
-
-    invoke-direct {v0, p1}, Lcom/tencent/mm/sdk/g/a;->yd(Ljava/lang/String;)Ljava/lang/Long;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public static d(Ljava/lang/String;Ljava/lang/String;J)Z
-    .locals 2
-
-    .prologue
-    .line 139
-    new-instance v0, Lcom/tencent/mm/sdk/g/a;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/g/a;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p2, p3}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, p1, v1}, Lcom/tencent/mm/sdk/g/a;->bv(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static getValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
-    .locals 1
-
-    .prologue
-    .line 107
-    new-instance v0, Lcom/tencent/mm/sdk/g/a;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/sdk/g/a;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/g/a;->getValue(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method private yd(Ljava/lang/String;)Ljava/lang/Long;
-    .locals 7
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 77
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/sdk/g/a;->getValue(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 78
-    if-nez v2, :cond_0
-
-    .line 88
-    :goto_0
-    return-object v0
-
-    .line 81
-    :cond_0
-    :try_start_0
-    invoke-static {v2}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
-
-    move-result-wide v3
-
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 84
-    :catch_0
-    move-exception v1
-
-    .line 85
-    const-string/jumbo v3, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
-
-    const-string/jumbo v4, "getLongValue ParseLong : %s Failed. [%s]"
-
-    const/4 v5, 0x2
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    aput-object v2, v5, v6
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->getLocalizedMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v5, v2
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final aw(Ljava/lang/String;I)Z
+.method public final getType()I
     .locals 1
 
     .prologue
-    .line 65
-    invoke-static {p2}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, p1, v0}, Lcom/tencent/mm/sdk/g/a;->bv(Ljava/lang/String;Ljava/lang/String;)Z
-
-    move-result v0
+    .line 156
+    const/4 v0, 0x5
 
     return v0
 .end method
 
-.method public final bv(Ljava/lang/String;Ljava/lang/String;)Z
-    .locals 10
+.method public final l(Landroid/os/Bundle;)V
+    .locals 3
 
     .prologue
-    const/4 v9, 0x2
+    .line 121
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/a;->l(Landroid/os/Bundle;)V
 
-    const/4 v0, 0x1
+    .line 122
+    const-string/jumbo v0, "_wxapi_payreq_appid"
 
-    const/4 v1, 0x0
+    iget-object v1, p0, Lcom/tencent/mm/sdk/g/a;->appId:Ljava/lang/String;
 
-    .line 38
-    const/4 v4, 0x0
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 39
-    :try_start_0
-    new-instance v3, Ljava/io/FileOutputStream;
+    .line 123
+    const-string/jumbo v0, "_wxapi_payreq_partnerid"
 
-    iget-object v2, p0, Lcom/tencent/mm/sdk/g/a;->filePath:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/g/a;->aEf:Ljava/lang/String;
 
-    invoke-direct {v3, v2}, Ljava/io/FileOutputStream;-><init>(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 42
-    :try_start_1
-    iget-object v2, p0, Lcom/tencent/mm/sdk/g/a;->ibT:Ljava/util/Properties;
+    .line 124
+    const-string/jumbo v0, "_wxapi_payreq_prepayid"
 
-    invoke-virtual {v2, p1, p2}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/g/a;->ibV:Ljava/lang/String;
 
-    .line 43
-    iget-object v2, p0, Lcom/tencent/mm/sdk/g/a;->ibT:Ljava/util/Properties;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v4, ""
+    .line 125
+    const-string/jumbo v0, "_wxapi_payreq_noncestr"
 
-    invoke-virtual {v2, v3, v4}, Ljava/util/Properties;->store(Ljava/io/OutputStream;Ljava/lang/String;)V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_4
-    .catchall {:try_start_1 .. :try_end_1} :catchall_1
+    iget-object v1, p0, Lcom/tencent/mm/sdk/g/a;->aEh:Ljava/lang/String;
 
-    .line 49
-    :try_start_2
-    invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
-    :try_end_2
-    .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_0
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 57
-    :goto_0
-    return v0
+    .line 126
+    const-string/jumbo v0, "_wxapi_payreq_timestamp"
 
-    .line 52
-    :catch_0
-    move-exception v2
+    iget-object v1, p0, Lcom/tencent/mm/sdk/g/a;->aEi:Ljava/lang/String;
 
-    .line 53
-    const-string/jumbo v3, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v4, "Close File: %s Failed. [%s]"
+    .line 127
+    const-string/jumbo v0, "_wxapi_payreq_packagevalue"
 
-    new-array v5, v9, [Ljava/lang/Object;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/g/a;->jUT:Ljava/lang/String;
 
-    iget-object v6, p0, Lcom/tencent/mm/sdk/g/a;->filePath:Ljava/lang/String;
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    aput-object v6, v5, v1
+    .line 128
+    const-string/jumbo v0, "_wxapi_payreq_sign"
 
-    invoke-virtual {v2}, Ljava/io/IOException;->getLocalizedMessage()Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/sdk/g/a;->dZG:Ljava/lang/String;
 
-    move-result-object v1
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    aput-object v1, v5, v0
+    .line 129
+    const-string/jumbo v0, "_wxapi_payreq_extdata"
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v1, p0, Lcom/tencent/mm/sdk/g/a;->jUU:Ljava/lang/String;
 
-    goto :goto_0
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 45
-    :catch_1
-    move-exception v2
+    .line 130
+    const-string/jumbo v0, "_wxapi_payreq_sign_type"
 
-    move-object v3, v4
+    iget-object v1, p0, Lcom/tencent/mm/sdk/g/a;->aEg:Ljava/lang/String;
 
-    .line 46
-    :goto_1
-    :try_start_3
-    const-string/jumbo v4, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const-string/jumbo v5, "Write File: %s Failed. [%s]"
+    .line 132
+    iget-object v0, p0, Lcom/tencent/mm/sdk/g/a;->ibZ:Lcom/tencent/mm/sdk/g/a$a;
 
-    const/4 v6, 0x2
+    if-eqz v0, :cond_0
 
-    new-array v6, v6, [Ljava/lang/Object;
+    .line 133
+    iget-object v0, p0, Lcom/tencent/mm/sdk/g/a;->ibZ:Lcom/tencent/mm/sdk/g/a$a;
 
-    const/4 v7, 0x0
+    const-string/jumbo v1, "_wxapi_payoptions_callback_classname"
 
-    iget-object v8, p0, Lcom/tencent/mm/sdk/g/a;->filePath:Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/g/a$a;->jUV:Ljava/lang/String;
 
-    aput-object v8, v6, v7
+    invoke-virtual {p1, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    const/4 v7, 0x1
+    const-string/jumbo v1, "_wxapi_payoptions_callback_flags"
 
-    invoke-virtual {v2}, Ljava/lang/Exception;->getLocalizedMessage()Ljava/lang/String;
+    iget v0, v0, Lcom/tencent/mm/sdk/g/a$a;->jUW:I
 
-    move-result-object v2
+    invoke-virtual {p1, v1, v0}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    aput-object v2, v6, v7
-
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_1
-
-    .line 49
-    if-eqz v3, :cond_1
-
-    .line 51
-    :try_start_4
-    invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
-    :try_end_4
-    .catch Ljava/io/IOException; {:try_start_4 .. :try_end_4} :catch_2
-
-    move v0, v1
-
-    .line 54
-    goto :goto_0
-
-    .line 52
-    :catch_2
-    move-exception v2
-
-    .line 53
-    const-string/jumbo v3, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
-
-    const-string/jumbo v4, "Close File: %s Failed. [%s]"
-
-    new-array v5, v9, [Ljava/lang/Object;
-
-    iget-object v6, p0, Lcom/tencent/mm/sdk/g/a;->filePath:Ljava/lang/String;
-
-    aput-object v6, v5, v1
-
-    invoke-virtual {v2}, Ljava/io/IOException;->getLocalizedMessage()Ljava/lang/String;
-
-    move-result-object v2
-
-    aput-object v2, v5, v0
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    move v0, v1
-
-    .line 54
-    goto :goto_0
-
-    .line 49
-    :catchall_0
-    move-exception v2
-
-    move-object v3, v4
-
-    :goto_2
-    if-eqz v3, :cond_0
-
-    .line 51
-    :try_start_5
-    invoke-virtual {v3}, Ljava/io/FileOutputStream;->close()V
-    :try_end_5
-    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_3
-
-    .line 54
+    .line 135
     :cond_0
-    :goto_3
-    throw v2
-
-    .line 52
-    :catch_3
-    move-exception v3
-
-    .line 53
-    const-string/jumbo v4, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
-
-    const-string/jumbo v5, "Close File: %s Failed. [%s]"
-
-    new-array v6, v9, [Ljava/lang/Object;
-
-    iget-object v7, p0, Lcom/tencent/mm/sdk/g/a;->filePath:Ljava/lang/String;
-
-    aput-object v7, v6, v1
-
-    invoke-virtual {v3}, Ljava/io/IOException;->getLocalizedMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v6, v0
-
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_3
-
-    .line 49
-    :catchall_1
-    move-exception v2
-
-    goto :goto_2
-
-    .line 45
-    :catch_4
-    move-exception v2
-
-    goto :goto_1
-
-    :cond_1
-    move v0, v1
-
-    goto :goto_0
+    return-void
 .end method
 
-.method public final getValue(Ljava/lang/String;)Ljava/lang/String;
+.method public final m(Landroid/os/Bundle;)V
     .locals 1
 
     .prologue
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/sdk/g/a;->ibT:Ljava/util/Properties;
+    .line 139
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/e/a;->m(Landroid/os/Bundle;)V
 
-    if-eqz v0, :cond_0
+    .line 140
+    const-string/jumbo v0, "_wxapi_payreq_appid"
 
-    iget-object v0, p0, Lcom/tencent/mm/sdk/g/a;->ibT:Ljava/util/Properties;
-
-    invoke-virtual {v0, p1}, Ljava/util/Properties;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 70
-    iget-object v0, p0, Lcom/tencent/mm/sdk/g/a;->ibT:Ljava/util/Properties;
-
-    invoke-virtual {v0, p1}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 73
-    :goto_0
-    return-object v0
+    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a;->appId:Ljava/lang/String;
 
-    :cond_0
-    const/4 v0, 0x0
+    .line 141
+    const-string/jumbo v0, "_wxapi_payreq_partnerid"
 
-    goto :goto_0
-.end method
-
-.method public final ye(Ljava/lang/String;)Ljava/lang/Integer;
-    .locals 7
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 92
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/sdk/g/a;->getValue(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 93
-    if-nez v2, :cond_0
-
-    .line 103
-    :goto_0
-    return-object v0
-
-    .line 96
-    :cond_0
-    :try_start_0
-    invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-
-    move-result v1
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    goto :goto_0
+    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a;->aEf:Ljava/lang/String;
 
-    .line 99
-    :catch_0
-    move-exception v1
+    .line 142
+    const-string/jumbo v0, "_wxapi_payreq_prepayid"
 
-    .line 100
-    const-string/jumbo v3, "!32@/B4Tb64lLpI24FTqnIlF6kXlwDUHA2X3"
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
 
-    const-string/jumbo v4, "getIntegerValue ParseInteger : %s Failed. [%s]"
+    move-result-object v0
 
-    const/4 v5, 0x2
+    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a;->ibV:Ljava/lang/String;
 
-    new-array v5, v5, [Ljava/lang/Object;
+    .line 143
+    const-string/jumbo v0, "_wxapi_payreq_noncestr"
 
-    const/4 v6, 0x0
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
 
-    aput-object v2, v5, v6
+    move-result-object v0
 
-    const/4 v2, 0x1
+    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a;->aEh:Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/Exception;->getLocalizedMessage()Ljava/lang/String;
+    .line 144
+    const-string/jumbo v0, "_wxapi_payreq_timestamp"
 
-    move-result-object v1
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
 
-    aput-object v1, v5, v2
+    move-result-object v0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a;->aEi:Ljava/lang/String;
 
-    goto :goto_0
+    .line 145
+    const-string/jumbo v0, "_wxapi_payreq_packagevalue"
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a;->jUT:Ljava/lang/String;
+
+    .line 146
+    const-string/jumbo v0, "_wxapi_payreq_sign"
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a;->dZG:Ljava/lang/String;
+
+    .line 147
+    const-string/jumbo v0, "_wxapi_payreq_extdata"
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a;->jUU:Ljava/lang/String;
+
+    .line 148
+    const-string/jumbo v0, "_wxapi_payreq_sign_type"
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/sdk/platformtools/p;->c(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a;->aEg:Ljava/lang/String;
+
+    .line 150
+    new-instance v0, Lcom/tencent/mm/sdk/g/a$a;
+
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/g/a$a;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/sdk/g/a;->ibZ:Lcom/tencent/mm/sdk/g/a$a;
+
+    .line 151
+    iget-object v0, p0, Lcom/tencent/mm/sdk/g/a;->ibZ:Lcom/tencent/mm/sdk/g/a$a;
+
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/sdk/g/a$a;->m(Landroid/os/Bundle;)V
+
+    .line 152
+    return-void
 .end method

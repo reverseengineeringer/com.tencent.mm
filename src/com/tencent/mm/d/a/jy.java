@@ -1,24 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.storage.ag;
 
 public final class jy
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aHi = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGv = new a();
   
   public jy()
   {
-    id = "WearDownloadEmoji";
-    hXT = atO;
+    id = "ResendVoiceMsg";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String[] aHj;
-    public int ave;
+    public ag ask;
   }
 }
 

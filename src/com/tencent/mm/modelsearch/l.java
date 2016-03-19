@@ -1,31 +1,24 @@
 package com.tencent.mm.modelsearch;
 
-import android.database.Cursor;
-import com.tencent.kingkong.database.SQLiteStatement;
-
 public abstract interface l
 {
-  public abstract boolean O(int paramInt1, int paramInt2);
+  public abstract o.a a(m.i parami);
   
-  public abstract void beginTransaction();
+  public abstract void a(String paramString, m.g paramg, int paramInt);
   
-  public abstract long c(long paramLong1, long paramLong2);
+  public abstract o.a b(m.i parami);
   
-  public abstract void commit();
+  public abstract o.a c(m.i parami);
   
-  public abstract SQLiteStatement compileStatement(String paramString);
+  public abstract void create();
   
-  public abstract void d(long paramLong1, long paramLong2);
+  public abstract o.a d(m.i parami);
   
-  public abstract void execSQL(String paramString);
+  public abstract void destroy();
   
-  public abstract void execSQL(String paramString, Object[] paramArrayOfObject);
+  public abstract o.a e(m.i parami);
   
-  public abstract boolean hq(String paramString);
-  
-  public abstract boolean inTransaction();
-  
-  public abstract Cursor rawQuery(String paramString, String[] paramArrayOfString);
+  public abstract String getName();
 }
 
 /* Location:

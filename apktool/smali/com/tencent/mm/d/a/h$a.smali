@@ -15,7 +15,15 @@
 
 
 # instance fields
-.field public mode:I
+.field public actionCode:I
+
+.field public asf:Ljava/lang/String;
+
+.field public asg:Z
+
+.field public ash:Z
+
+.field public context:Landroid/content/Context;
 
 
 # direct methods

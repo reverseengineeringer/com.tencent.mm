@@ -1,10 +1,10 @@
 package com.tencent.mm.app.plugin;
 
 import android.os.Bundle;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
-import com.tencent.mm.pluginsdk.ui.d.k;
+import com.tencent.mm.modelfriend.ah;
+import com.tencent.mm.modelfriend.c;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.sdk.platformtools.ay;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$PhoneEmailUriSpanHandler
@@ -15,32 +15,53 @@ class URISpanHandlerSet$PhoneEmailUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(com.tencent.mm.pluginsdk.ui.applet.g paramg, com.tencent.mm.pluginsdk.ui.d.b paramb)
   {
     if (type == 25)
     {
-      paramf = new Bundle();
-      paramf.putInt("fromScene", 1);
-      k.a(URISpanHandlerSet.a(apd), url, null, paramf);
-      return true;
+      paramb = data;
+      if ((paramb == null) || (!(paramb instanceof String))) {
+        break label149;
+      }
     }
-    if (type == 24) {
-      k.b(URISpanHandlerSet.a(apd), url, null);
+    label144:
+    label149:
+    for (paramb = (String)paramb;; paramb = "")
+    {
+      Bundle localBundle = new Bundle();
+      if (paramb != null)
+      {
+        localBundle.putString("Contact_User", paramb);
+        paramb = ah.zq().hq(paramb);
+        if ((paramb == null) || (ay.kz(paramb.yh()))) {
+          break label144;
+        }
+      }
+      for (paramb = ay.ky(paramb.yp()).replace(" ", "");; paramb = null)
+      {
+        localBundle.putString("Contact_Mobile_MD5", paramb);
+        localBundle.putInt("fromScene", 1);
+        com.tencent.mm.pluginsdk.ui.d.g.a(URISpanHandlerSet.a(ang), url, null, localBundle);
+        return true;
+        if (type == 24) {
+          com.tencent.mm.pluginsdk.ui.d.g.b(URISpanHandlerSet.a(ang), url, null);
+        }
+        return false;
+      }
     }
-    return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     return false;
   }
   
-  final ah aZ(String paramString)
+  final com.tencent.mm.pluginsdk.ui.applet.g bb(String paramString)
   {
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[] { 25, 24 };
   }

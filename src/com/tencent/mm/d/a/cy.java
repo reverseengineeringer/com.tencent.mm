@@ -1,28 +1,29 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class cy
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ayU = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awv = new a();
+  public b aww = new b();
   
   public cy()
   {
-    id = "GameCenterOperation";
-    hXT = atO;
+    id = "ExDeviceSimpleBTScanDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int actionCode;
-    public String appId;
-    public int atZ;
-    public String ayV;
-    public Context context;
+    public boolean Jq = false;
+  }
+  
+  public static final class b
+  {
+    public boolean auR;
   }
 }
 

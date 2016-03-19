@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field public cqF:Z
+.field public aur:Z
 
-.field private enQ:Landroid/widget/TextView;
+.field private fxO:Landroid/widget/TextView;
 
 
 # direct methods
@@ -33,10 +33,10 @@
     .line 14
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->cqF:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->aur:Z
 
     .line 26
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference:I
+    const v0, 0x7f0a05d6
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->setLayoutResource(I)V
 
@@ -46,12 +46,12 @@
 
 
 # virtual methods
-.method public final Nq()V
+.method public final MB()V
     .locals 2
 
     .prologue
     .line 42
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->enQ:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->fxO:Landroid/widget/TextView;
 
     if-nez v0, :cond_0
 
@@ -61,16 +61,16 @@
 
     .line 46
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->cqF:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->aur:Z
 
     if-eqz v0, :cond_1
 
     .line 47
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->enQ:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->fxO:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/tools/gg;->dS(Landroid/content/Context;)Landroid/content/res/ColorStateList;
+    invoke-static {v1}, Lcom/tencent/mm/ui/tools/t;->ez(Landroid/content/Context;)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
@@ -80,11 +80,11 @@
 
     .line 50
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->enQ:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->fxO:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/tools/gg;->dT(Landroid/content/Context;)Landroid/content/res/ColorStateList;
+    invoke-static {v1}, Lcom/tencent/mm/ui/tools/t;->eA(Landroid/content/Context;)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
@@ -109,10 +109,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->enQ:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->fxO:Landroid/widget/TextView;
 
     .line 33
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->Nq()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/SwitchKeyValuePreference;->MB()V
 
     .line 34
     return-void

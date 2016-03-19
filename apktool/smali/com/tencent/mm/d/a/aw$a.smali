@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public avQ:I
+.field public auc:I
 
 
 # direct methods
@@ -29,7 +29,7 @@
     .line 15
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/d/a/aw$a;->avQ:I
+    iput v0, p0, Lcom/tencent/mm/d/a/aw$a;->auc:I
 
     return-void
 .end method

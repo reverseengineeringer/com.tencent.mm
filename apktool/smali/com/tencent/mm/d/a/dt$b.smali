@@ -14,13 +14,22 @@
 .end annotation
 
 
+# instance fields
+.field public avg:J
+
+
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 2
 
     .prologue
-    .line 24
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 19
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/tencent/mm/d/a/dt$b;->avg:J
 
     return-void
 .end method

@@ -1,23 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class db
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ayZ = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awB = new a();
   
   public db()
   {
-    id = "GameMessageStorageNotify";
-    hXT = atO;
+    id = "ExDeviceStartScanLanDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String auu;
+    public boolean Jq = false;
   }
 }
 

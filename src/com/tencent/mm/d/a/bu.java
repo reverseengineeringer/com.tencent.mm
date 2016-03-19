@@ -1,34 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import java.util.List;
 
 public final class bu
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awY = new a();
-  public b awZ = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a ave = new a();
+  public b avf = new b();
   
   public bu()
   {
-    id = "ExtNetSceneSendMsg";
-    hXT = atO;
+    id = "ExDeviceGetNetworkDeviceInfo";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String axa;
-    public String content;
-    public int flags;
-    public int type;
+    public long avg;
   }
   
   public static final class b
   {
-    public long axb = 0L;
-    public j axc;
+    public boolean auR;
+    public List avh;
   }
 }
 

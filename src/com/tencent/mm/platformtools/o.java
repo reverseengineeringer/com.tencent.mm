@@ -1,21 +1,6 @@
 package com.tencent.mm.platformtools;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
-
-final class o
-  implements MediaPlayer.OnCompletionListener
-{
-  public final void onCompletion(MediaPlayer paramMediaPlayer)
-  {
-    try
-    {
-      paramMediaPlayer.release();
-      return;
-    }
-    catch (Exception paramMediaPlayer) {}
-  }
-}
+public final class o {}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.platformtools.o

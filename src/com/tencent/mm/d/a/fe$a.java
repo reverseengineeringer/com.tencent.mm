@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class fe$a
 {
-  public String aqX;
+  public int auw = 0;
 }
 
 /* Location:

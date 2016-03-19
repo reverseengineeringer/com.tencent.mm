@@ -1,9 +1,6 @@
-.class final Landroid/support/v4/view/i$c;
+.class interface abstract Landroid/support/v4/view/i$c;
 .super Ljava/lang/Object;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/support/v4/view/i$a;
 
 
 # annotations
@@ -12,32 +9,23 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x608
     name = "c"
 .end annotation
 
 
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 62
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+# virtual methods
+.method public abstract a(Landroid/view/MotionEvent;I)I
 .end method
 
+.method public abstract b(Landroid/view/MotionEvent;I)I
+.end method
 
-# virtual methods
-.method public final getAbsoluteGravity(II)I
-    .locals 1
+.method public abstract c(Landroid/view/MotionEvent;I)F
+.end method
 
-    .prologue
-    .line 65
-    invoke-static {p1, p2}, Landroid/view/Gravity;->getAbsoluteGravity(II)I
+.method public abstract d(Landroid/view/MotionEvent;I)F
+.end method
 
-    move-result v0
-
-    return v0
+.method public abstract f(Landroid/view/MotionEvent;)I
 .end method

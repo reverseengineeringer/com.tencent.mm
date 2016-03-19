@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public iIp:Ljava/lang/String;
+.field public kHB:Ljava/lang/String;
 
-.field public iIq:Landroid/widget/TextView;
+.field public kHC:Landroid/widget/TextView;
 
 
 # direct methods
@@ -25,7 +25,7 @@
     .locals 0
 
     .prologue
-    .line 45
+    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

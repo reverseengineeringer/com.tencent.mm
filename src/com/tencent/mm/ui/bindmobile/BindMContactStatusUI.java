@@ -2,38 +2,36 @@ package com.tencent.mm.ui.bindmobile;
 
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.modelfriend.w;
-import com.tencent.mm.modelfriend.w.a;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.modelfriend.m;
+import com.tencent.mm.modelfriend.m.a;
 import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.MMWizardActivity;
 
 public class BindMContactStatusUI
   extends MMWizardActivity
 {
-  private Button cht;
-  private TextView iPk;
-  private ImageView ixR;
-  private TextView ixS;
+  private Button cyD;
+  private TextView kOy;
+  private ImageView kwV;
+  private TextView kwW;
   
-  protected final void DV()
+  protected final void Gb()
   {
-    ixR = ((ImageView)findViewById(a.i.bind_m_contact_status_state_icon));
-    iPk = ((TextView)findViewById(a.i.bind_m_contact_status_bind_state_title));
-    ixS = ((TextView)findViewById(a.i.bind_m_contact_status_bind_state));
-    cht = ((Button)findViewById(a.i.bind_m_contact_status_ok_btn));
-    if (w.xM() == w.a.bzv)
+    kwV = ((ImageView)findViewById(2131167094));
+    kOy = ((TextView)findViewById(2131167095));
+    kwW = ((TextView)findViewById(2131169184));
+    cyD = ((Button)findViewById(2131167097));
+    if (m.yD() == m.a.bMB)
     {
-      ixR.setImageResource(a.h.mobile_binded_icon);
-      String str2 = (String)ax.tl().rf().get(6, null);
+      kwV.setImageResource(2130903410);
+      String str2 = (String)ah.tD().rn().get(6, null);
       String str1;
       if (str2 != null)
       {
@@ -42,39 +40,45 @@ public class BindMContactStatusUI
       }
       else
       {
-        str1 = (String)ax.tl().rf().get(4097, null);
+        str1 = (String)ah.tD().rn().get(4097, null);
       }
-      ixS.setText(getString(a.n.bind_mcontact_status_bind_ok));
-      iPk.setText(getString(a.n.bind_mcontact_verify_mobile, new Object[] { str1 }));
+      kwW.setText(getString(2131428677));
+      kOy.setText(getString(2131428658, new Object[] { str1 }));
     }
     for (;;)
     {
-      cht.setOnClickListener(new ad(this));
+      cyD.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          BindMContactStatusUI.a(BindMContactStatusUI.this);
+        }
+      });
       return;
-      ixR.setImageResource(a.h.mobile_unbind_icon);
-      ixS.setText(a.n.bind_mcontact_unbind_ok);
-      iPk.setText(a.n.bind_mcontact_unbind_ok);
-      ixS.setVisibility(8);
+      kwV.setImageResource(2130903411);
+      kwW.setText(2131428618);
+      kOy.setText(2131428618);
+      kwW.setVisibility(8);
     }
   }
   
   protected final int getLayoutId()
   {
-    return a.k.bindmcontact_status;
+    return 2131363097;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    nh(a.n.bind_mcontact_title_setting);
-    DV();
+    qb(2131428607);
+    Gb();
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
     if (paramInt == 4)
     {
-      aLy();
+      bbm();
       return true;
     }
     return super.onKeyDown(paramInt, paramKeyEvent);

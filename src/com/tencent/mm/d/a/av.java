@@ -1,23 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class av
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avO = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atY = new a();
+  public b atZ = new b();
   
   public av()
   {
-    id = "ExDeviceOPFromJSAPI";
-    hXT = atO;
+    id = "DeleteFavorite";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int op = 0;
+    public long aua = 0L;
+  }
+  
+  public static final class b
+  {
+    public boolean atR = false;
   }
 }
 

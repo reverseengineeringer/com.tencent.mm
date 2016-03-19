@@ -1,23 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
 
 public final class aq
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avv = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atO = new a();
+  public b atP = new b();
   
   public aq()
   {
-    id = "ExDeviceGetBoundDevices";
-    hXT = atO;
+    id = "CommandProcessor";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean avw = false;
+    public String atQ;
+    public Context context;
+  }
+  
+  public static final class b
+  {
+    public boolean atR = false;
   }
 }
 

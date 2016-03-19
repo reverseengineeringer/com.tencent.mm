@@ -1,233 +1,315 @@
-.class final Lcom/tencent/mm/app/g;
+.class public final Lcom/tencent/mm/app/g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# static fields
+.field private static alj:Lcom/tencent/mm/app/g;
 
 
 # instance fields
-.field final synthetic anq:Lcom/tencent/mm/app/c;
+.field private alk:Landroid/widget/FrameLayout;
 
-.field private ant:I
+.field private all:Landroid/view/WindowManager;
+
+.field private alm:Landroid/view/WindowManager$LayoutParams;
+
+.field private aln:Landroid/view/ViewGroup$LayoutParams;
+
+.field alo:Z
+
+.field public alp:Z
+
+.field public alq:Landroid/graphics/drawable/BitmapDrawable;
+
+.field public alr:Ljava/lang/Boolean;
+    .annotation runtime Ljava/lang/Deprecated;
+    .end annotation
+.end field
+
+.field private final als:I
+
+.field protected mLock:Ljava/lang/Object;
+
+.field private mView:Landroid/view/View;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/app/c;)V
+.method public constructor <init>()V
     .locals 1
 
     .prologue
-    .line 133
-    iput-object p1, p0, Lcom/tencent/mm/app/g;->anq:Lcom/tencent/mm/app/c;
-
+    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 134
+    .line 39
+    new-instance v0, Ljava/lang/Object;
+
+    invoke-direct {v0}, Ljava/lang/Object;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/app/g;->mLock:Ljava/lang/Object;
+
+    .line 47
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/app/g;->ant:I
+    iput-object v0, p0, Lcom/tencent/mm/app/g;->alq:Landroid/graphics/drawable/BitmapDrawable;
+
+    .line 48
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/app/g;->alr:Ljava/lang/Boolean;
+
+    .line 79
+    const/4 v0, 0x5
+
+    iput v0, p0, Lcom/tencent/mm/app/g;->als:I
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 6
+.method public static ku()Lcom/tencent/mm/app/g;
+    .locals 1
 
     .prologue
-    const/4 v5, 0x0
+    .line 50
+    sget-object v0, Lcom/tencent/mm/app/g;->alj:Lcom/tencent/mm/app/g;
 
+    if-nez v0, :cond_0
+
+    .line 51
+    new-instance v0, Lcom/tencent/mm/app/g;
+
+    invoke-direct {v0}, Lcom/tencent/mm/app/g;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/app/g;->alj:Lcom/tencent/mm/app/g;
+
+    .line 53
+    :cond_0
+    sget-object v0, Lcom/tencent/mm/app/g;->alj:Lcom/tencent/mm/app/g;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final a(Landroid/app/Activity;Landroid/view/View;)V
+    .locals 5
+
+    .prologue
     const/4 v4, 0x1
 
-    .line 138
-    const-string/jumbo v0, "!44@/B4Tb64lLpIzvC/moQitzF8rP6t/SuMFxU5aFFcIy9Y="
+    const/4 v3, -0x1
 
-    const-string/jumbo v1, "CoreService started but not responding, possibly zombie. Use step %d to restart CoreService."
+    const/4 v2, 0x0
 
-    new-array v2, v4, [Ljava/lang/Object;
+    .line 188
+    instance-of v0, p1, Landroid/app/Activity;
 
-    iget v3, p0, Lcom/tencent/mm/app/g;->ant:I
+    if-eqz v0, :cond_1
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 190
+    invoke-virtual {p1, p2}, Landroid/app/Activity;->setContentView(Landroid/view/View;)V
 
-    move-result-object v3
-
-    aput-object v3, v2, v5
-
-    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 140
-    iget v0, p0, Lcom/tencent/mm/app/g;->ant:I
-
-    if-ne v0, v4, :cond_0
-
-    .line 142
-    const-string/jumbo v0, "com.tencent.mm:push"
-
-    invoke-static {v0}, Lcom/tencent/mm/app/c;->aQ(Ljava/lang/String;)I
-
-    move-result v0
-
-    .line 143
-    const/4 v1, -0x1
-
-    if-eq v0, v1, :cond_1
-
-    .line 144
-    invoke-static {v0}, Landroid/os/Process;->killProcess(I)V
-
-    .line 145
-    const-string/jumbo v1, "!44@/B4Tb64lLpIzvC/moQitzF8rP6t/SuMFxU5aFFcIy9Y="
-
-    const-string/jumbo v2, "Push Process %d killed."
-
-    new-array v3, v4, [Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v3, v5
-
-    invoke-static {v2, v3}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 151
+    .line 194
     :cond_0
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
-
-    move-result-object v1
-
-    .line 152
-    new-instance v2, Landroid/content/Intent;
-
-    const-class v0, Lcom/tencent/mm/booter/CoreService;
-
-    invoke-direct {v2, v1, v0}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
-
-    .line 155
-    :try_start_0
-    const-string/jumbo v0, "!44@/B4Tb64lLpIzvC/moQitzF8rP6t/SuMFxU5aFFcIy9Y="
-
-    const-string/jumbo v3, "unbinding CoreService..."
-
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 156
-    iget-object v0, p0, Lcom/tencent/mm/app/g;->anq:Lcom/tencent/mm/app/c;
-
-    invoke-virtual {v1, v0}, Landroid/content/Context;->unbindService(Landroid/content/ServiceConnection;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 163
-    invoke-virtual {v1, v2}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
-
-    .line 164
-    iget-object v0, p0, Lcom/tencent/mm/app/g;->anq:Lcom/tencent/mm/app/c;
-
-    invoke-virtual {v1, v2, v0, v4}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
-
-    .line 165
-    invoke-virtual {v1, v2}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-
-    .line 168
-    :goto_1
-    iget v0, p0, Lcom/tencent/mm/app/g;->ant:I
-
-    if-ne v0, v4, :cond_2
-
-    iput v5, p0, Lcom/tencent/mm/app/g;->ant:I
-
-    .line 171
-    :goto_2
-    const-wide/16 v0, 0x2710
-
-    invoke-static {p0, v0, v1}, Lcom/tencent/mm/sdk/platformtools/ad;->c(Ljava/lang/Runnable;J)V
-
-    .line 172
-    const-string/jumbo v0, "!44@/B4Tb64lLpIzvC/moQitzF8rP6t/SuMFxU5aFFcIy9Y="
-
-    const-string/jumbo v1, "ZombieWaker posted again with step %d"
-
-    new-array v2, v4, [Ljava/lang/Object;
-
-    iget v3, p0, Lcom/tencent/mm/app/g;->ant:I
-
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v3
-
-    aput-object v3, v2, v5
-
-    invoke-static {v1, v2}, Ljava/lang/String;->format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 173
     return-void
 
-    .line 147
+    .line 192
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpIzvC/moQitzF8rP6t/SuMFxU5aFFcIy9Y="
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alk:Landroid/widget/FrameLayout;
 
-    const-string/jumbo v1, "Push Process not found."
+    if-eqz v0, :cond_2
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->all:Landroid/view/WindowManager;
+
+    if-nez v0, :cond_0
+
+    :cond_2
+    new-instance v0, Landroid/view/WindowManager$LayoutParams;
+
+    invoke-direct {v0}, Landroid/view/WindowManager$LayoutParams;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/app/g;->alm:Landroid/view/WindowManager$LayoutParams;
+
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alm:Landroid/view/WindowManager$LayoutParams;
+
+    iput v3, v0, Landroid/view/WindowManager$LayoutParams;->height:I
+
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alm:Landroid/view/WindowManager$LayoutParams;
+
+    iput v3, v0, Landroid/view/WindowManager$LayoutParams;->width:I
+
+    const-string/jumbo v0, "window"
+
+    invoke-virtual {p1, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/WindowManager;
+
+    iput-object v0, p0, Lcom/tencent/mm/app/g;->all:Landroid/view/WindowManager;
+
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alm:Landroid/view/WindowManager$LayoutParams;
+
+    iput v2, v0, Landroid/view/WindowManager$LayoutParams;->x:I
+
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alm:Landroid/view/WindowManager$LayoutParams;
+
+    iput v2, v0, Landroid/view/WindowManager$LayoutParams;->y:I
+
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alm:Landroid/view/WindowManager$LayoutParams;
+
+    const/16 v1, 0x7d2
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->type:I
+
+    iput-object p2, p0, Lcom/tencent/mm/app/g;->mView:Landroid/view/View;
+
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alm:Landroid/view/WindowManager$LayoutParams;
+
+    const/16 v1, 0x33
+
+    iput v1, v0, Landroid/view/WindowManager$LayoutParams;->gravity:I
+
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alm:Landroid/view/WindowManager$LayoutParams;
+
+    iput v4, v0, Landroid/view/WindowManager$LayoutParams;->format:I
+
+    new-instance v0, Landroid/widget/FrameLayout;
+
+    invoke-direct {v0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/app/g;->alk:Landroid/widget/FrameLayout;
+
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alk:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v0, v2, v2, v2, v2}, Landroid/widget/FrameLayout;->setPadding(IIII)V
+
+    new-instance v0, Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-direct {v0, v3, v3}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    iput-object v0, p0, Lcom/tencent/mm/app/g;->aln:Landroid/view/ViewGroup$LayoutParams;
+
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alk:Landroid/widget/FrameLayout;
+
+    iget-object v1, p0, Lcom/tencent/mm/app/g;->mView:Landroid/view/View;
+
+    iget-object v2, p0, Lcom/tencent/mm/app/g;->aln:Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->all:Landroid/view/WindowManager;
+
+    iget-object v1, p0, Lcom/tencent/mm/app/g;->alk:Landroid/widget/FrameLayout;
+
+    iget-object v2, p0, Lcom/tencent/mm/app/g;->alm:Landroid/view/WindowManager$LayoutParams;
+
+    invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    iput-boolean v4, p0, Lcom/tencent/mm/app/g;->alp:Z
 
     goto :goto_0
+.end method
 
-    .line 163
-    :catch_0
-    move-exception v0
+.method public final kv()V
+    .locals 4
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
+    .prologue
+    const/4 v3, 0x0
 
-    .line 164
-    iget-object v0, p0, Lcom/tencent/mm/app/g;->anq:Lcom/tencent/mm/app/c;
+    .line 240
+    :try_start_0
+    iget-object v1, p0, Lcom/tencent/mm/app/g;->mLock:Ljava/lang/Object;
 
-    invoke-virtual {v1, v2, v0, v4}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
+    monitor-enter v1
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 165
-    invoke-virtual {v1, v2}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
+    .line 241
+    :try_start_1
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->all:Landroid/view/WindowManager;
 
-    goto :goto_1
+    if-eqz v0, :cond_1
 
-    .line 163
+    .line 243
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alk:Landroid/widget/FrameLayout;
+
+    if-eqz v0, :cond_0
+
+    .line 244
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->all:Landroid/view/WindowManager;
+
+    iget-object v2, p0, Lcom/tencent/mm/app/g;->alk:Landroid/widget/FrameLayout;
+
+    invoke-interface {v0, v2}, Landroid/view/WindowManager;->removeView(Landroid/view/View;)V
+
+    .line 246
+    :cond_0
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/app/g;->all:Landroid/view/WindowManager;
+
+    .line 249
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alk:Landroid/widget/FrameLayout;
+
+    if-eqz v0, :cond_2
+
+    .line 250
+    iget-object v0, p0, Lcom/tencent/mm/app/g;->alk:Landroid/widget/FrameLayout;
+
+    invoke-virtual {v0}, Landroid/widget/FrameLayout;->removeAllViews()V
+
+    .line 251
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/app/g;->alk:Landroid/widget/FrameLayout;
+
+    .line 254
+    :cond_2
+    const/4 v0, 0x0
+
+    iput-object v0, p0, Lcom/tencent/mm/app/g;->mView:Landroid/view/View;
+
+    .line 255
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/app/g;->alp:Z
+
+    .line 257
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 261
+    :goto_0
+    iput-boolean v3, p0, Lcom/tencent/mm/app/g;->alp:Z
+
+    .line 262
+    return-void
+
+    .line 257
     :catchall_0
     move-exception v0
 
-    invoke-virtual {v1, v2}, Landroid/content/Context;->stopService(Landroid/content/Intent;)Z
+    :try_start_2
+    monitor-exit v1
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 164
-    iget-object v3, p0, Lcom/tencent/mm/app/g;->anq:Lcom/tencent/mm/app/c;
-
-    invoke-virtual {v1, v2, v3, v4}, Landroid/content/Context;->bindService(Landroid/content/Intent;Landroid/content/ServiceConnection;I)Z
-
-    .line 165
-    invoke-virtual {v1, v2}, Landroid/content/Context;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
-
+    :try_start_3
     throw v0
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 169
-    :cond_2
-    iget v0, p0, Lcom/tencent/mm/app/g;->ant:I
+    :catch_0
+    move-exception v0
 
-    add-int/lit8 v0, v0, 0x1
-
-    iput v0, p0, Lcom/tencent/mm/app/g;->ant:I
-
-    goto :goto_2
+    goto :goto_0
 .end method

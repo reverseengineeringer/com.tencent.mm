@@ -4,11 +4,11 @@
 
 
 # instance fields
-.field private cDE:Landroid/widget/TextView;
+.field private daQ:Landroid/widget/TextView;
 
-.field private enR:Landroid/widget/ImageView;
+.field private fxP:Landroid/widget/ImageView;
 
-.field public iMS:I
+.field public kMg:I
 
 .field private text:Ljava/lang/String;
 
@@ -56,18 +56,18 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 16
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->enR:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->fxP:Landroid/widget/ImageView;
 
     .line 17
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->cDE:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->daQ:Landroid/widget/TextView;
 
     .line 34
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_content_plugin_text:I
+    const v0, 0x7f0a05ab
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->setLayoutResource(I)V
 
     .line 36
-    sget-object v0, Lcom/tencent/mm/a$p;->PluginTextPreference:[I
+    sget-object v0, Lcom/tencent/mm/R$b;->PluginTextPreference:[I
 
     invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -78,7 +78,7 @@
 
     move-result v1
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->iMS:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->kMg:I
 
     .line 38
     const/4 v1, 0x1
@@ -109,7 +109,68 @@
 
 
 # virtual methods
-.method public final nU(I)V
+.method protected final onBindView(Landroid/view/View;)V
+    .locals 2
+
+    .prologue
+    .line 61
+    invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference;->onBindView(Landroid/view/View;)V
+
+    .line 63
+    const v0, 0x7f07069b
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->fxP:Landroid/widget/ImageView;
+
+    .line 64
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->fxP:Landroid/widget/ImageView;
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->kMg:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
+
+    .line 65
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->fxP:Landroid/widget/ImageView;
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->visibility:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 67
+    const v0, 0x7f0700ec
+
+    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->daQ:Landroid/widget/TextView;
+
+    .line 68
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->daQ:Landroid/widget/TextView;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->text:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 69
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->daQ:Landroid/widget/TextView;
+
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->textColor:I
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 70
+    return-void
+.end method
+
+.method public final qT(I)V
     .locals 1
 
     .prologue
@@ -123,66 +184,5 @@
     iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->text:Ljava/lang/String;
 
     .line 53
-    return-void
-.end method
-
-.method protected final onBindView(Landroid/view/View;)V
-    .locals 2
-
-    .prologue
-    .line 61
-    invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference;->onBindView(Landroid/view/View;)V
-
-    .line 63
-    sget v0, Lcom/tencent/mm/a$i;->image_iv:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->enR:Landroid/widget/ImageView;
-
-    .line 64
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->enR:Landroid/widget/ImageView;
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->iMS:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
-
-    .line 65
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->enR:Landroid/widget/ImageView;
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->visibility:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
-
-    .line 67
-    sget v0, Lcom/tencent/mm/a$i;->text_tv:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->cDE:Landroid/widget/TextView;
-
-    .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->cDE:Landroid/widget/TextView;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->text:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
-
-    .line 69
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->cDE:Landroid/widget/TextView;
-
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/PluginTextPreference;->textColor:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    .line 70
     return-void
 .end method

@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static biQ:[Ljava/lang/Object;
+.field private static bts:[Ljava/lang/Object;
 
-.field private static biR:[Ljava/lang/Object;
+.field private static btt:[Ljava/lang/Object;
 
 
 # direct methods
@@ -19,19 +19,19 @@
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    sput-object v0, Lcom/tencent/mm/compatible/loader/a;->biQ:[Ljava/lang/Object;
+    sput-object v0, Lcom/tencent/mm/compatible/loader/a;->bts:[Ljava/lang/Object;
 
     .line 16
     const/16 v0, 0x49
 
     new-array v0, v0, [Ljava/lang/Object;
 
-    sput-object v0, Lcom/tencent/mm/compatible/loader/a;->biR:[Ljava/lang/Object;
+    sput-object v0, Lcom/tencent/mm/compatible/loader/a;->btt:[Ljava/lang/Object;
 
     return-void
 .end method
 
-.method public static l(I)I
+.method public static m(I)I
     .locals 4
 
     .prologue

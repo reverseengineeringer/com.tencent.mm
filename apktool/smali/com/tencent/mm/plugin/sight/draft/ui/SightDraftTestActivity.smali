@@ -32,7 +32,7 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftTestActivity;->setContentView(Landroid/view/View;)V
 
     .line 14
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->ajy()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/draft/ui/SightDraftContainerView;->awe()V
 
     .line 15
     return-void

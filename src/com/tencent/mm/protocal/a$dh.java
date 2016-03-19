@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$dh
-  extends a.c
+  extends a.e
 {
   public a$dh()
   {
-    super("menu:share:weiboApp", "", 109, false);
+    super("openWCPaySpecificView", "open_wcpay_specific_view", 76, true);
   }
 }
 

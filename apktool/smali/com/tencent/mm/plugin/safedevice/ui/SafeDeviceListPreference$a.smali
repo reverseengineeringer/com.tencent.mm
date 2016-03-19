@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract pg(Ljava/lang/String;)V
+.method public abstract sL(Ljava/lang/String;)V
 .end method

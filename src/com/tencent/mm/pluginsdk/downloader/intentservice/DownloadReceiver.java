@@ -2,15 +2,15 @@ package com.tencent.mm.pluginsdk.downloader.intentservice;
 
 import android.os.Bundle;
 import android.os.ResultReceiver;
-import android.support.v4.app.aa.d;
-import com.tencent.mm.model.ao;
-import com.tencent.mm.model.ax;
+import android.support.v4.app.p.d;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.y;
 
 public class DownloadReceiver
   extends ResultReceiver
 {
   private static final String TAG = DownloadReceiver.class.getSimpleName();
-  private aa.d gKM;
+  private p.d izw;
   
   protected void onReceiveResult(int paramInt, Bundle paramBundle)
   {
@@ -20,16 +20,16 @@ public class DownloadReceiver
       paramInt = paramBundle.getInt("progress");
       if (paramInt < 100)
       {
-        gKM.a(100, paramInt, false).b("Download in progress:" + paramInt);
-        ax.lz().notify(4657, gKM.build());
+        izw.b(100, paramInt, false).b("Download in progress:" + paramInt);
+        ah.kU().notify(4657, izw.build());
       }
     }
     else
     {
       return;
     }
-    gKM.a(0, 0, false).b("Download Complete");
-    ax.lz().notify(4658, gKM.build());
+    izw.b(0, 0, false).b("Download Complete");
+    ah.kU().notify(4658, izw.build());
   }
 }
 

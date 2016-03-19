@@ -1,268 +1,156 @@
 package com.tencent.mm.modelfriend;
 
-import android.content.Context;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import com.tencent.mm.ag.f;
-import com.tencent.mm.ag.m;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.v;
-import com.tencent.mm.pluginsdk.a;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.compatible.d.p;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.ai;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.plugin.a.b;
+import com.tencent.mm.protocal.b.apg;
+import com.tencent.mm.protocal.b.asl;
+import com.tencent.mm.protocal.b.kw;
+import com.tencent.mm.protocal.h.c;
+import com.tencent.mm.protocal.h.d;
+import com.tencent.mm.protocal.m.a;
+import com.tencent.mm.protocal.m.b;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.h;
+import com.tencent.mm.r.j.b;
+import com.tencent.mm.sdk.platformtools.ay;
 import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar.b;
-import com.tencent.mm.storage.as;
-import java.util.ArrayList;
-import java.util.HashSet;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.Iterator;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
 
 public final class w
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private static Map bzs = null;
+  private d anM;
+  private int bFL = 2;
+  public o bGh = new a();
   
-  public static boolean a(String paramString, Context paramContext, byte[] paramArrayOfByte)
+  private w(int paramInt, String paramString1, String paramString2, String paramString3)
   {
-    return a.b(paramString, paramContext, paramArrayOfByte);
+    m.a locala = (m.a)bGh.vA();
+    iUX.iZE = paramInt;
+    iUX.jbc = paramString1;
+    iUX.dzi = t.aUB();
+    iUX.jbC = ay.Dl(paramString2);
+    iUX.jiy = paramString3;
+    iUX.iZs = ah.tx();
+    iUX.jiz = p.getSimCountryIso();
+    iUX.jiA = 1;
   }
   
-  public static boolean cZ(int paramInt)
+  public w(String paramString1, String paramString2)
   {
-    au localau = ay.yE().dc(paramInt);
-    boolean bool = ay.yG().dd(paramInt);
-    if (localau == null) {}
-    while ((bAc != 1) && (!bool)) {
-      return false;
-    }
-    return true;
+    this(1, paramString1, paramString2, "");
   }
   
-  public static Bitmap d(String paramString, Context paramContext)
+  public w(String paramString1, String paramString2, String paramString3)
   {
-    return a.h(paramString, paramContext);
+    this(2, paramString1, paramString2, paramString3);
   }
   
-  public static String gB(String paramString)
+  public final int a(e parame, d paramd)
   {
-    if ((paramString == null) || (paramString.equals(""))) {
-      return "";
-    }
-    Object localObject = ay.yB();
-    paramString = "select addr_upload2.realname from addr_upload2 where addr_upload2.id = \"" + g.gt(paramString) + "\"";
-    localObject = bqt.rawQuery(paramString, null);
-    if (localObject == null) {
-      return "";
-    }
-    if (((Cursor)localObject).getCount() == 0)
+    anM = paramd;
+    return a(parame, bGh, this);
+  }
+  
+  protected final int a(o paramo)
+  {
+    return j.b.bFI;
+  }
+  
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  {
+    u.i("!44@/B4Tb64lLpK+IBX8XDgnvngb9j239D9dCEvdErt89hw=", "onGYNetEnd  errType:%d errCode:%d", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
+    paramo = (m.b)paramo.tX();
+    if ((paramInt2 == 4) && (paramInt3 == 65235))
     {
-      ((Cursor)localObject).close();
-      return "";
-    }
-    paramString = "";
-    if (((Cursor)localObject).moveToFirst()) {
-      paramString = ((Cursor)localObject).getString(0);
-    }
-    ((Cursor)localObject).close();
-    return paramString;
-  }
-  
-  public static void q(List paramList)
-  {
-    if (paramList.size() == 0) {}
-    for (;;)
-    {
-      return;
-      HashSet localHashSet = new HashSet();
-      Iterator localIterator = m.BK().BE().iterator();
-      while (localIterator.hasNext())
+      ai.a(true, iUY.jbE, iUY.jbF, iUY.jbD);
+      bFL -= 1;
+      if (bFL <= 0)
       {
-        com.tencent.mm.ag.g localg = (com.tencent.mm.ag.g)localIterator.next();
-        ar.b localb = com.tencent.mm.model.ax.tl().rk().zO(field_msgContent);
-        if (localb != null)
-        {
-          String str1 = igh;
-          String str2 = igg;
-          if (((atZ == 10) || (atZ == 11)) && ((paramList.contains(str1)) || (paramList.contains(str2)))) {
-            localHashSet.add(field_talker);
-          }
+        anM.a(3, -1, "", this);
+        return;
+      }
+      a(bFs, anM);
+      return;
+    }
+    if ((paramInt2 != 0) || (paramInt3 != 0))
+    {
+      u.e("!44@/B4Tb64lLpK+IBX8XDgnvngb9j239D9dCEvdErt89hw=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+      anM.a(paramInt2, paramInt3, paramString, this);
+      return;
+    }
+    ai.a(false, iUY.jbE, iUY.jbF, iUY.jbD);
+    if ((paramInt2 == 0) && (paramInt3 == 0)) {
+      b.en(yU());
+    }
+    anM.a(paramInt2, paramInt3, paramString, this);
+  }
+  
+  public final int getType()
+  {
+    return 481;
+  }
+  
+  protected final int lk()
+  {
+    return 5;
+  }
+  
+  public final int yU()
+  {
+    Object localObject = bGh.tX()).iUY.iZj;
+    if ((localObject != null) && (jJe != null) && (jJe.size() > 0))
+    {
+      localObject = jJe.iterator();
+      while (((Iterator)localObject).hasNext())
+      {
+        asl localasl = (asl)((Iterator)localObject).next();
+        if (fUk == 1) {
+          return ay.getInt(jMf, 0);
         }
       }
-      t.d("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "deleteMobileFMessage(md5List), delete fmsg and fconv, talker size = " + localHashSet.size());
-      paramList = localHashSet.iterator();
-      while (paramList.hasNext()) {
-        f.hX((String)paramList.next());
-      }
     }
+    return 0;
   }
   
-  public static void r(List paramList)
+  public static final class a
+    extends h
   {
-    if (paramList == null)
+    private m.a bMO = new m.a();
+    private m.b bMP = new m.b();
+    
+    public final int getType()
     {
-      t.e("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "sync address book failed, null info list");
-      return;
+      return 481;
     }
-    ay.yB().n(paramList);
-  }
-  
-  public static void s(List paramList)
-  {
-    if (paramList == null)
+    
+    public final String getUri()
     {
-      t.e("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "set uploaded mobile contact failed, null info list");
-      return;
+      return "/cgi-bin/micromsg-bin/emailreg";
     }
-    ay.yB().p(paramList);
-  }
-  
-  public static void xJ()
-  {
-    com.tencent.mm.model.ax.tl().rf().set(12322, Boolean.valueOf(true));
-  }
-  
-  public static boolean xK()
-  {
-    if ((com.tencent.mm.model.ax.tl() != null) && (com.tencent.mm.model.ax.tl().rf() != null)) {
-      return bn.a((Boolean)com.tencent.mm.model.ax.tl().rf().get(12322, Boolean.valueOf(true)), true);
-    }
-    t.e("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "[arthurdan.UploadPhone] Notice!!!! MMCore.getAccStg() is null!!!");
-    return false;
-  }
-  
-  public static boolean xL()
-  {
-    a locala = xM();
-    t.i("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "isTipInMobileFriend, state %s", new Object[] { locala.toString() });
-    if (locala == a.bzv)
+    
+    protected final h.c tW()
     {
-      boolean bool = bn.a((Boolean)com.tencent.mm.model.ax.tl().rf().get(12322, Boolean.valueOf(false)), false);
-      t.i("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "USERINFO_UPLOAD_ADDR_LOOK_UP %B", new Object[] { Boolean.valueOf(bool) });
-      return !bool;
+      return bMO;
     }
-    return false;
-  }
-  
-  public static a xM()
-  {
-    for (;;)
+    
+    public final h.d tX()
     {
-      try
-      {
-        localObject3 = (String)com.tencent.mm.model.ax.tl().rf().get(4097, "");
-        String str = (String)com.tencent.mm.model.ax.tl().rf().get(6, "");
-        boolean bool = v.st();
-        t.i("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "isUpload " + bool + " stat " + v.rW());
-        if (localObject3 != null)
-        {
-          Object localObject1 = localObject3;
-          if (((String)localObject3).length() > 0)
-          {
-            if (str == null) {
-              break label153;
-            }
-            localObject3 = str;
-            if (str.length() <= 0) {
-              break label153;
-            }
-            if ((localObject1 == null) && (localObject3 == null)) {
-              return a.bzt;
-            }
-            if ((localObject1 != null) && (localObject3 == null)) {
-              return a.bzu;
-            }
-            if (bool) {
-              return a.bzv;
-            }
-            localObject1 = a.bzw;
-            return (a)localObject1;
-          }
-        }
-      }
-      catch (Exception localException)
-      {
-        return a.bzt;
-      }
-      Object localObject2 = null;
-      continue;
-      label153:
-      Object localObject3 = null;
+      return bMP;
     }
-  }
-  
-  public static void xN()
-  {
-    com.tencent.mm.model.ax.tl().rf().set(4097, "");
-    com.tencent.mm.model.ax.tl().rf().set(6, "");
-  }
-  
-  public static String xO()
-  {
-    return (String)com.tencent.mm.model.ax.tl().rf().get(6, "");
-  }
-  
-  public static boolean xP()
-  {
-    return (com.tencent.mm.model.ax.qZ()) && (xM() == a.bzv) && (xK());
-  }
-  
-  public static void xQ()
-  {
-    h localh = ay.yB();
-    int i = bqt.delete("addr_upload2", null, null);
-    t.d("!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk=", "delete addr_upload2");
-    if (i > 0) {
-      localh.b(5, localh, null);
-    }
-  }
-  
-  public static void xR()
-  {
-    Object localObject = new HashSet();
-    Iterator localIterator = m.BK().BE().iterator();
-    while (localIterator.hasNext())
+    
+    public final int vx()
     {
-      com.tencent.mm.ag.g localg = (com.tencent.mm.ag.g)localIterator.next();
-      ar.b localb = com.tencent.mm.model.ax.tl().rk().zO(field_msgContent);
-      if ((localb != null) && ((atZ == 10) || (atZ == 11))) {
-        ((HashSet)localObject).add(field_talker);
-      }
-    }
-    t.d("!32@/B4Tb64lLpLlcnOZ5z2wsUFTA6om59vy", "deleteMobileFMessage, delete fmsg and fconv, talker size = " + ((HashSet)localObject).size());
-    localObject = ((HashSet)localObject).iterator();
-    while (((Iterator)localObject).hasNext()) {
-      f.hX((String)((Iterator)localObject).next());
+      return 1;
     }
   }
-  
-  public static List xS()
-  {
-    Cursor localCursor = yBbqt.rawQuery("select addr_upload2.md5 from addr_upload2 where addr_upload2.uploadtime = 0 AND addr_upload2.type = 1", null);
-    LinkedList localLinkedList = new LinkedList();
-    while (localCursor.moveToNext()) {
-      localLinkedList.add(localCursor.getString(0));
-    }
-    localCursor.close();
-    return localLinkedList;
-  }
-  
-  public static List xT()
-  {
-    Cursor localCursor = yBbqt.rawQuery("select addr_upload2.moblie from addr_upload2 where addr_upload2.uploadtime = 0 AND addr_upload2.type = 0", null);
-    LinkedList localLinkedList = new LinkedList();
-    while (localCursor.moveToNext())
-    {
-      String str = a.oV(localCursor.getString(0));
-      if (a.tQ(str)) {
-        localLinkedList.add(str);
-      }
-    }
-    localCursor.close();
-    return localLinkedList;
-  }
-  
-  public static enum a {}
 }
 
 /* Location:

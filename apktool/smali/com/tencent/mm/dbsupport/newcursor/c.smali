@@ -546,12 +546,12 @@
     if-eqz v1, :cond_15
 
     .line 130
-    invoke-static {v6}, Lcom/tencent/mm/dbsupport/newcursor/c;->do(Ljava/lang/String;)Ljava/util/ArrayList;
+    invoke-static {v6}, Lcom/tencent/mm/dbsupport/newcursor/c;->du(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v1
 
     .line 131
-    invoke-static {v1}, Lcom/tencent/mm/dbsupport/newcursor/c;->f(Ljava/util/ArrayList;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/dbsupport/newcursor/c;->e(Ljava/util/ArrayList;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -565,7 +565,7 @@
     if-eqz p6, :cond_12
 
     .line 146
-    invoke-interface/range {p6 .. p6}, Lcom/tencent/mm/dbsupport/newcursor/c$a;->qJ()Ljava/lang/String;
+    invoke-interface/range {p6 .. p6}, Lcom/tencent/mm/dbsupport/newcursor/c$a;->qF()Ljava/lang/String;
 
     .line 148
     :cond_12
@@ -781,7 +781,7 @@
     goto/16 :goto_1
 .end method
 
-.method private static do(Ljava/lang/String;)Ljava/util/ArrayList;
+.method private static du(Ljava/lang/String;)Ljava/util/ArrayList;
     .locals 6
 
     .prologue
@@ -867,7 +867,7 @@
     goto :goto_0
 .end method
 
-.method private static f(Ljava/util/ArrayList;)Ljava/lang/String;
+.method private static e(Ljava/util/ArrayList;)Ljava/lang/String;
     .locals 3
 
     .prologue

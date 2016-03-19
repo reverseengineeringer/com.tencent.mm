@@ -2,7 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class bn$a
 {
-  public String username;
+  public String alN;
+  public String auJ;
 }
 
 /* Location:

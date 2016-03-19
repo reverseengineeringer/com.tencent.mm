@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bf
-  extends a.c
+  extends a.e
 {
   public a$bf()
   {
-    super("nfcBatchTransceive", "nfcBatchTransceive", 142, false);
+    super("getSearchSuggestionData", "", 10000, false);
   }
 }
 

@@ -15,26 +15,26 @@
 .method public abstract a(Ljava/lang/String;Ljava/lang/String;ZII)Landroid/graphics/Bitmap;
 .end method
 
+.method public abstract a(Landroid/widget/ImageView;Ljava/lang/String;Ljava/lang/String;ZII)Ljava/lang/String;
+.end method
+
 .method public abstract a(Landroid/content/Context;Landroid/widget/ImageView;Ljava/lang/String;Ljava/lang/String;ZII)V
 .end method
 
-.method public abstract a(Landroid/widget/ImageView;Ljava/lang/String;Ljava/lang/String;ZII)V
+.method public abstract asj()V
 .end method
 
-.method public abstract agX()V
+.method public abstract ask()V
 .end method
 
-.method public abstract agY()V
+.method public abstract asl()Z
 .end method
 
-.method public abstract agZ()Z
+.method public abstract asm()V
 .end method
 
-.method public abstract aha()V
+.method public abstract asn()V
 .end method
 
-.method public abstract ahb()V
-.end method
-
-.method public abstract ahc()V
+.method public abstract aso()V
 .end method

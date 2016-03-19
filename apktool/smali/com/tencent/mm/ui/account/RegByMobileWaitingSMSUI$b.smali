@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public bzl:Landroid/widget/ImageView;
+.field public bMr:Landroid/widget/ImageView;
 
-.field public gQU:Landroid/widget/TextView;
+.field final synthetic kvB:Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;
 
-.field final synthetic iwy:Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;
+.field public kvE:Landroid/widget/TextView;
 
 
 # direct methods
@@ -27,8 +27,8 @@
     .locals 0
 
     .prologue
-    .line 302
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$b;->iwy:Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;
+    .line 305
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$b;->kvB:Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -39,7 +39,7 @@
     .locals 0
 
     .prologue
-    .line 302
+    .line 305
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI$b;-><init>(Lcom/tencent/mm/ui/account/RegByMobileWaitingSMSUI;)V
 
     return-void

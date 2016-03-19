@@ -1,41 +1,41 @@
 package com.tencent.mm.plugin.safedevice.a;
 
-import com.tencent.mm.d.b.aw;
-import com.tencent.mm.protocal.b.adw;
-import com.tencent.mm.sdk.g.ae.a;
+import com.tencent.mm.d.b.bq;
+import com.tencent.mm.protocal.b.ama;
+import com.tencent.mm.sdk.h.c.a;
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public final class c
-  extends aw
+  extends bq
 {
-  protected static ae.a aqp;
+  protected static c.a aot;
   
   static
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[4];
-    bbY = new String[5];
+    c.a locala = new c.a();
+    ceD = new Field[4];
+    blR = new String[5];
     StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "uid";
-    ibX.put("uid", "TEXT default ''  PRIMARY KEY ");
+    blR[0] = "uid";
+    jYx.put("uid", "TEXT default ''  PRIMARY KEY ");
     localStringBuilder.append(" uid TEXT default ''  PRIMARY KEY ");
     localStringBuilder.append(", ");
-    ibW = "uid";
-    bbY[1] = "name";
-    ibX.put("name", "TEXT default '' ");
+    jYw = "uid";
+    blR[1] = "name";
+    jYx.put("name", "TEXT default '' ");
     localStringBuilder.append(" name TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[2] = "devicetype";
-    ibX.put("devicetype", "TEXT default '' ");
+    blR[2] = "devicetype";
+    jYx.put("devicetype", "TEXT default '' ");
     localStringBuilder.append(" devicetype TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[3] = "createtime";
-    ibX.put("createtime", "LONG default '0' ");
+    blR[3] = "createtime";
+    jYx.put("createtime", "LONG default '0' ");
     localStringBuilder.append(" createtime LONG default '0' ");
-    bbY[4] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    blR[4] = "rowid";
+    jYy = localStringBuilder.toString();
+    aot = locala;
   }
   
   public c()
@@ -46,17 +46,17 @@ public final class c
     field_createtime = 0L;
   }
   
-  public c(adw paramadw)
+  public c(ama paramama)
   {
-    field_createtime = ege;
-    field_devicetype = hkG;
-    field_name = akv;
-    field_uid = hrS;
+    field_createtime = fpL;
+    field_devicetype = iZt;
+    field_name = ehZ;
+    field_uid = jhZ;
   }
   
-  protected final ae.a lX()
+  protected final c.a ls()
   {
-    return aqp;
+    return aot;
   }
 }
 

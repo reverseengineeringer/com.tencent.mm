@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field private final eS:Ljava/lang/String;
+.field private final eg:Ljava/lang/String;
 
-.field final eT:Ljava/util/HashMap;
+.field final eh:Ljava/util/HashMap;
 
 
 # direct methods
@@ -36,10 +36,10 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v4/content/FileProvider$b;->eT:Ljava/util/HashMap;
+    iput-object v0, p0, Landroid/support/v4/content/FileProvider$b;->eh:Ljava/util/HashMap;
 
     .line 318
-    iput-object p1, p0, Landroid/support/v4/content/FileProvider$b;->eS:Ljava/lang/String;
+    iput-object p1, p0, Landroid/support/v4/content/FileProvider$b;->eg:Ljava/lang/String;
 
     .line 319
     return-void
@@ -86,7 +86,7 @@
     move-result-object v1
 
     .line 387
-    iget-object v0, p0, Landroid/support/v4/content/FileProvider$b;->eT:Ljava/util/HashMap;
+    iget-object v0, p0, Landroid/support/v4/content/FileProvider$b;->eh:Ljava/util/HashMap;
 
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 

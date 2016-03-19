@@ -18,13 +18,13 @@
 
 
 # instance fields
-.field cZ:I
+.field cU:I
 
-.field dH:I
+.field mId:I
 
-.field rG:Z
+.field qJ:Z
 
-.field final synthetic rH:Landroid/support/v7/internal/widget/ProgressBarICS;
+.field final synthetic qK:Landroid/support/v7/internal/widget/ProgressBarICS;
 
 
 # direct methods
@@ -33,18 +33,18 @@
 
     .prologue
     .line 396
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->rH:Landroid/support/v7/internal/widget/ProgressBarICS;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->qK:Landroid/support/v7/internal/widget/ProgressBarICS;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 397
-    iput p2, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->cZ:I
+    iput p2, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->mId:I
 
     .line 398
-    iput p3, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->dH:I
+    iput p3, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->cU:I
 
     .line 399
-    iput-boolean p4, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->rG:Z
+    iput-boolean p4, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->qJ:Z
 
     .line 400
     return-void
@@ -57,16 +57,16 @@
 
     .prologue
     .line 403
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->rH:Landroid/support/v7/internal/widget/ProgressBarICS;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->qK:Landroid/support/v7/internal/widget/ProgressBarICS;
 
-    iget v1, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->cZ:I
+    iget v1, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->mId:I
 
-    iget v2, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->dH:I
+    iget v2, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->cU:I
 
     invoke-static {v0, v1, v2}, Landroid/support/v7/internal/widget/ProgressBarICS;->a(Landroid/support/v7/internal/widget/ProgressBarICS;II)V
 
     .line 405
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->rH:Landroid/support/v7/internal/widget/ProgressBarICS;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ProgressBarICS$a;->qK:Landroid/support/v7/internal/widget/ProgressBarICS;
 
     invoke-static {v0, p0}, Landroid/support/v7/internal/widget/ProgressBarICS;->a(Landroid/support/v7/internal/widget/ProgressBarICS;Landroid/support/v7/internal/widget/ProgressBarICS$a;)Landroid/support/v7/internal/widget/ProgressBarICS$a;
 

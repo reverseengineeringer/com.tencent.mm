@@ -1,20 +1,20 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.adm;
-import com.tencent.mm.protocal.b.ck;
-import com.tencent.mm.protocal.b.dt;
+import com.tencent.mm.protocal.b.alq;
+import com.tencent.mm.protocal.b.dd;
+import com.tencent.mm.protocal.b.eo;
 
 public final class j$b
-  extends i.d
-  implements i.b
+  extends h.d
+  implements h.b
 {
-  public dt hgT = new dt();
+  public eo iUQ = new eo();
   
-  public final int z(byte[] paramArrayOfByte)
+  public final int y(byte[] paramArrayOfByte)
   {
-    hgT = ((dt)new dt().x(paramArrayOfByte));
-    i.a(this, hgT.hLQ);
-    return hgT.hLQ.hkV;
+    iUQ = ((eo)new eo().am(paramArrayOfByte));
+    h.a(this, iUQ.jHj);
+    return iUQ.jHj.iZL;
   }
 }
 

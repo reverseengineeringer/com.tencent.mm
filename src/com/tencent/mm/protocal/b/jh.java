@@ -1,86 +1,81 @@
 package com.tencent.mm.protocal.b;
 
 public final class jh
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public String eiZ;
-  public String hsI;
-  public int hsJ;
-  public int hsK;
-  public String hsL;
+  public int bMa;
+  public String bMb;
+  public String bMc;
+  public String bMd;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hsI != null) {
-        paramVarArgs.U(1, hsI);
+      paramVarArgs.ci(1, bMa);
+      if (bMb != null) {
+        paramVarArgs.d(2, bMb);
       }
-      paramVarArgs.bM(2, hsJ);
-      paramVarArgs.bM(3, hsK);
-      if (eiZ != null) {
-        paramVarArgs.U(4, eiZ);
+      if (bMc != null) {
+        paramVarArgs.d(3, bMc);
       }
-      if (hsL != null) {
-        paramVarArgs.U(5, hsL);
+      if (bMd != null) {
+        paramVarArgs.d(4, bMd);
+      }
+      paramInt = 0;
+    }
+    int i;
+    do
+    {
+      return paramInt;
+      if (paramInt != 1) {
+        break;
+      }
+      i = a.a.a.a.cg(1, bMa) + 0;
+      paramInt = i;
+      if (bMb != null) {
+        paramInt = i + a.a.a.b.b.a.e(2, bMb);
+      }
+      i = paramInt;
+      if (bMc != null) {
+        i = paramInt + a.a.a.b.b.a.e(3, bMc);
+      }
+      paramInt = i;
+    } while (bMd == null);
+    return i + a.a.a.b.b.a.e(4, bMd);
+    if (paramInt == 2)
+    {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bog();
+        }
       }
       return 0;
     }
-    if (paramInt == 1) {
-      if (hsI == null) {
-        break label363;
-      }
-    }
-    label363:
-    for (paramInt = a.a.a.b.b.a.T(1, hsI) + 0;; paramInt = 0)
+    if (paramInt == 3)
     {
-      int i = paramInt + a.a.a.a.bI(2, hsJ) + a.a.a.a.bI(3, hsK);
-      paramInt = i;
-      if (eiZ != null) {
-        paramInt = i + a.a.a.b.b.a.T(4, eiZ);
-      }
-      i = paramInt;
-      if (hsL != null) {
-        i = paramInt + a.a.a.b.b.a.T(5, hsL);
-      }
-      return i;
-      if (paramInt == 2)
+      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      jh localjh = (jh)paramVarArgs[1];
+      switch (((Integer)paramVarArgs[2]).intValue())
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-          if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
-          }
-        }
-        break;
-      }
-      if (paramInt == 3)
-      {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-        jh localjh = (jh)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
-        {
-        default: 
-          return -1;
-        case 1: 
-          hsI = jMD.readString();
-          return 0;
-        case 2: 
-          hsJ = jMD.aVp();
-          return 0;
-        case 3: 
-          hsK = jMD.aVp();
-          return 0;
-        case 4: 
-          eiZ = jMD.readString();
-          return 0;
-        }
-        hsL = jMD.readString();
+      default: 
+        return -1;
+      case 1: 
+        bMa = maU.jC();
+        return 0;
+      case 2: 
+        bMb = maU.readString();
+        return 0;
+      case 3: 
+        bMc = maU.readString();
         return 0;
       }
-      return -1;
+      bMd = maU.readString();
+      return 0;
     }
+    return -1;
   }
 }
 

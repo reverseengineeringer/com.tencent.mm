@@ -7,7 +7,7 @@
 
 
 # instance fields
-.field private gOG:Landroid/widget/AbsListView$OnScrollListener;
+.field private iFY:Landroid/widget/AbsListView$OnScrollListener;
 
 
 # direct methods
@@ -34,7 +34,7 @@
     .line 21
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/applet/a;->gOG:Landroid/widget/AbsListView$OnScrollListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/applet/a;->iFY:Landroid/widget/AbsListView$OnScrollListener;
 
     .line 22
     return-void
@@ -47,12 +47,12 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/a;->gOG:Landroid/widget/AbsListView$OnScrollListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/a;->iFY:Landroid/widget/AbsListView$OnScrollListener;
 
     if-eqz v0, :cond_0
 
     .line 27
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/a;->gOG:Landroid/widget/AbsListView$OnScrollListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/a;->iFY:Landroid/widget/AbsListView$OnScrollListener;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/widget/AbsListView$OnScrollListener;->onScroll(Landroid/widget/AbsListView;III)V
 
@@ -66,12 +66,12 @@
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/a;->gOG:Landroid/widget/AbsListView$OnScrollListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/a;->iFY:Landroid/widget/AbsListView$OnScrollListener;
 
     if-eqz v0, :cond_0
 
     .line 41
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/a;->gOG:Landroid/widget/AbsListView$OnScrollListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/a;->iFY:Landroid/widget/AbsListView$OnScrollListener;
 
     invoke-interface {v0, p1, p2}, Landroid/widget/AbsListView$OnScrollListener;->onScrollStateChanged(Landroid/widget/AbsListView;I)V
 

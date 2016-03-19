@@ -15,11 +15,11 @@
 
 
 # static fields
-.field public static final enum bUY:Lcom/tencent/mm/platformtools/j$a;
+.field public static final enum clV:Lcom/tencent/mm/platformtools/j$a;
 
-.field public static final enum bUZ:Lcom/tencent/mm/platformtools/j$a;
+.field public static final enum clW:Lcom/tencent/mm/platformtools/j$a;
 
-.field private static final synthetic bVa:[Lcom/tencent/mm/platformtools/j$a;
+.field private static final synthetic clX:[Lcom/tencent/mm/platformtools/j$a;
 
 
 # direct methods
@@ -38,7 +38,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/platformtools/j$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/platformtools/j$a;->bUY:Lcom/tencent/mm/platformtools/j$a;
+    sput-object v0, Lcom/tencent/mm/platformtools/j$a;->clV:Lcom/tencent/mm/platformtools/j$a;
 
     .line 9
     new-instance v0, Lcom/tencent/mm/platformtools/j$a;
@@ -47,22 +47,22 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/platformtools/j$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/platformtools/j$a;->bUZ:Lcom/tencent/mm/platformtools/j$a;
+    sput-object v0, Lcom/tencent/mm/platformtools/j$a;->clW:Lcom/tencent/mm/platformtools/j$a;
 
     .line 7
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/tencent/mm/platformtools/j$a;
 
-    sget-object v1, Lcom/tencent/mm/platformtools/j$a;->bUY:Lcom/tencent/mm/platformtools/j$a;
+    sget-object v1, Lcom/tencent/mm/platformtools/j$a;->clV:Lcom/tencent/mm/platformtools/j$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/platformtools/j$a;->bUZ:Lcom/tencent/mm/platformtools/j$a;
+    sget-object v1, Lcom/tencent/mm/platformtools/j$a;->clW:Lcom/tencent/mm/platformtools/j$a;
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/tencent/mm/platformtools/j$a;->bVa:[Lcom/tencent/mm/platformtools/j$a;
+    sput-object v0, Lcom/tencent/mm/platformtools/j$a;->clX:[Lcom/tencent/mm/platformtools/j$a;
 
     return-void
 .end method
@@ -98,7 +98,7 @@
 
     .prologue
     .line 7
-    sget-object v0, Lcom/tencent/mm/platformtools/j$a;->bVa:[Lcom/tencent/mm/platformtools/j$a;
+    sget-object v0, Lcom/tencent/mm/platformtools/j$a;->clX:[Lcom/tencent/mm/platformtools/j$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/platformtools/j$a;->clone()Ljava/lang/Object;
 

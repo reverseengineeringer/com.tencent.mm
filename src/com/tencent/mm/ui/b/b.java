@@ -1,12 +1,13 @@
 package com.tencent.mm.ui.b;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.v7.app.ActionBar;
+import android.support.v7.internal.view.menu.e;
 import android.support.v7.internal.view.menu.f;
-import android.support.v7.internal.view.menu.g;
-import android.support.v7.internal.view.menu.g.a;
-import android.support.v7.internal.view.menu.o.a;
+import android.support.v7.internal.view.menu.f.a;
+import android.support.v7.internal.view.menu.l.a;
 import android.support.v7.internal.widget.ActionBarContainer;
 import android.support.v7.internal.widget.ActionBarContextView;
 import android.support.v7.internal.widget.ActionBarView;
@@ -14,110 +15,134 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 
 public final class b
   extends a
-  implements g.a, o.a
+  implements f.a, l.a
 {
-  a iAn;
-  private ActionBarView jF;
-  private f jG;
-  private g jH;
-  private boolean jJ;
-  boolean jM;
-  private final Runnable jN = new c(this);
-  public ViewGroup jv;
+  public ViewGroup iC;
+  private ActionBarView iM;
+  private e iN;
+  private f iO;
+  private boolean iQ;
+  boolean iT;
+  private final Runnable iU = new Runnable()
+  {
+    public final void run()
+    {
+      b localb = b.this;
+      Object localObject = jx;
+      ActionBar localActionBar = localb.aP();
+      if (localActionBar != null) {
+        localObject = localActionBar.getThemedContext();
+      }
+      localObject = new f((Context)localObject);
+      ((f)localObject).a(localb);
+      if (kzo != null)
+      {
+        kzo.c((Menu)localObject);
+        kzo.b((Menu)localObject);
+        b.a(b.this, (f)localObject);
+      }
+      for (;;)
+      {
+        iT = false;
+        return;
+        b.a(b.this, null);
+      }
+    }
+  };
+  a kzo;
   
   public b(Activity paramActivity, a parama)
   {
     super(paramActivity);
-    iAn = parama;
+    kzo = parama;
   }
   
   private View findViewById(int paramInt)
   {
-    if (jv != null) {
-      return jv.findViewById(paramInt);
+    if (iC != null) {
+      return iC.findViewById(paramInt);
     }
-    return kq.findViewById(paramInt);
+    return jx.findViewById(paramInt);
   }
   
-  public final void L()
+  public final void G()
   {
-    if (!jM)
+    if (!iT)
     {
-      jM = true;
-      jN.run();
+      iT = true;
+      iU.run();
     }
   }
   
-  public final void a(g paramg)
+  public final void a(f paramf)
   {
-    if ((jF != null) && (jF.bZ()))
+    if ((iM != null) && (iM.bJ()))
     {
-      if (!jF.isOverflowMenuShowing())
+      if (!iM.isOverflowMenuShowing())
       {
-        if (jF.getVisibility() == 0) {
-          jF.showOverflowMenu();
+        if (iM.getVisibility() == 0) {
+          iM.showOverflowMenu();
         }
         return;
       }
-      jF.hideOverflowMenu();
+      iM.hideOverflowMenu();
       return;
     }
-    paramg.close();
+    paramf.close();
   }
   
-  public final void a(g paramg, boolean paramBoolean) {}
+  public final void a(f paramf, boolean paramBoolean) {}
   
-  public final boolean b(g paramg)
+  public final ActionBar aO()
   {
-    return false;
-  }
-  
-  public final ActionBar be()
-  {
-    if (!jJ)
+    if (!iQ)
     {
-      jF = ((ActionBarView)findViewById(a.i.custom_action_bar));
-      jF.setWindowCallback(kq);
-      Object localObject = kq.obtainStyledAttributes(a.p.ActionBarWindow);
+      iM = ((ActionBarView)findViewById(2131169502));
+      iM.setWindowCallback(jx);
+      Object localObject = jx.obtainStyledAttributes(R.b.ActionBarWindow);
       boolean bool = ((TypedArray)localObject).getBoolean(2, false);
       ((TypedArray)localObject).recycle();
-      localObject = (ActionBarContainer)findViewById(a.i.split_action_bar);
+      localObject = (ActionBarContainer)findViewById(2131169537);
       if (localObject != null)
       {
-        jF.setSplitView((ActionBarContainer)localObject);
-        jF.setSplitActionBar(bool);
-        jF.setSplitWhenNarrow(false);
-        ActionBarContextView localActionBarContextView = (ActionBarContextView)findViewById(a.i.action_context_bar);
+        iM.setSplitView((ActionBarContainer)localObject);
+        iM.setSplitActionBar(bool);
+        iM.setSplitWhenNarrow(false);
+        ActionBarContextView localActionBarContextView = (ActionBarContextView)findViewById(2131169536);
         localActionBarContextView.setSplitView((ActionBarContainer)localObject);
         localActionBarContextView.setSplitActionBar(bool);
         localActionBarContextView.setSplitWhenNarrow(false);
       }
-      jJ = true;
-      L();
+      iQ = true;
+      G();
     }
-    return new d(kq, jv);
+    return new c(jx, iC);
   }
   
-  public final boolean f(MenuItem paramMenuItem)
+  public final boolean b(f paramf)
   {
-    if (iAn != null) {
-      return iAn.f(paramMenuItem);
+    return false;
+  }
+  
+  public final boolean d(MenuItem paramMenuItem)
+  {
+    if (kzo != null) {
+      return kzo.d(paramMenuItem);
     }
     return false;
   }
   
   public static abstract interface a
   {
-    public abstract boolean d(Menu paramMenu);
+    public abstract boolean b(Menu paramMenu);
     
-    public abstract boolean e(Menu paramMenu);
+    public abstract boolean c(Menu paramMenu);
     
-    public abstract boolean f(MenuItem paramMenuItem);
+    public abstract boolean d(MenuItem paramMenuItem);
   }
 }
 

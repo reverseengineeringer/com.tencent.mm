@@ -1,220 +1,208 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import android.content.ContentValues;
-import com.tencent.mm.d.b.e;
-import com.tencent.mm.pluginsdk.ui.chat.AppPanel;
-import com.tencent.mm.sdk.g.ae.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import java.lang.reflect.Field;
+import android.content.Context;
+import android.os.Looper;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.z.b;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
-public class h
-  extends e
+public final class h
+  implements z.b, s, com.tencent.mm.r.d
 {
-  protected static ae.a aqp;
-  
-  static
+  private List gmw = null;
+  private List iAP = null;
+  Map iAQ = null;
+  private af iAR = new af(Looper.getMainLooper(), new af.a()
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[23];
-    bbY = new String[24];
-    StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "appId";
-    ibX.put("appId", "TEXT default ''  PRIMARY KEY ");
-    localStringBuilder.append(" appId TEXT default ''  PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    ibW = "appId";
-    bbY[1] = "appName";
-    ibX.put("appName", "TEXT");
-    localStringBuilder.append(" appName TEXT");
-    localStringBuilder.append(", ");
-    bbY[2] = "appDiscription";
-    ibX.put("appDiscription", "TEXT");
-    localStringBuilder.append(" appDiscription TEXT");
-    localStringBuilder.append(", ");
-    bbY[3] = "appIconUrl";
-    ibX.put("appIconUrl", "TEXT");
-    localStringBuilder.append(" appIconUrl TEXT");
-    localStringBuilder.append(", ");
-    bbY[4] = "appStoreUrl";
-    ibX.put("appStoreUrl", "TEXT");
-    localStringBuilder.append(" appStoreUrl TEXT");
-    localStringBuilder.append(", ");
-    bbY[5] = "appVersion";
-    ibX.put("appVersion", "INTEGER");
-    localStringBuilder.append(" appVersion INTEGER");
-    localStringBuilder.append(", ");
-    bbY[6] = "appWatermarkUrl";
-    ibX.put("appWatermarkUrl", "TEXT");
-    localStringBuilder.append(" appWatermarkUrl TEXT");
-    localStringBuilder.append(", ");
-    bbY[7] = "packageName";
-    ibX.put("packageName", "TEXT");
-    localStringBuilder.append(" packageName TEXT");
-    localStringBuilder.append(", ");
-    bbY[8] = "status";
-    ibX.put("status", "INTEGER");
-    localStringBuilder.append(" status INTEGER");
-    localStringBuilder.append(", ");
-    bbY[9] = "signature";
-    ibX.put("signature", "TEXT");
-    localStringBuilder.append(" signature TEXT");
-    localStringBuilder.append(", ");
-    bbY[10] = "modifyTime";
-    ibX.put("modifyTime", "LONG");
-    localStringBuilder.append(" modifyTime LONG");
-    localStringBuilder.append(", ");
-    bbY[11] = "appName_en";
-    ibX.put("appName_en", "TEXT");
-    localStringBuilder.append(" appName_en TEXT");
-    localStringBuilder.append(", ");
-    bbY[12] = "appName_tw";
-    ibX.put("appName_tw", "TEXT");
-    localStringBuilder.append(" appName_tw TEXT");
-    localStringBuilder.append(", ");
-    bbY[13] = "appDiscription_en";
-    ibX.put("appDiscription_en", "TEXT");
-    localStringBuilder.append(" appDiscription_en TEXT");
-    localStringBuilder.append(", ");
-    bbY[14] = "appDiscription_tw";
-    ibX.put("appDiscription_tw", "TEXT");
-    localStringBuilder.append(" appDiscription_tw TEXT");
-    localStringBuilder.append(", ");
-    bbY[15] = "appType";
-    ibX.put("appType", "TEXT");
-    localStringBuilder.append(" appType TEXT");
-    localStringBuilder.append(", ");
-    bbY[16] = "openId";
-    ibX.put("openId", "TEXT");
-    localStringBuilder.append(" openId TEXT");
-    localStringBuilder.append(", ");
-    bbY[17] = "authFlag";
-    ibX.put("authFlag", "INTEGER");
-    localStringBuilder.append(" authFlag INTEGER");
-    localStringBuilder.append(", ");
-    bbY[18] = "appInfoFlag";
-    ibX.put("appInfoFlag", "INTEGER default '-1' ");
-    localStringBuilder.append(" appInfoFlag INTEGER default '-1' ");
-    localStringBuilder.append(", ");
-    bbY[19] = "lvbuff";
-    ibX.put("lvbuff", "BLOB");
-    localStringBuilder.append(" lvbuff BLOB");
-    localStringBuilder.append(", ");
-    bbY[20] = "serviceAppType";
-    ibX.put("serviceAppType", "INTEGER default '0' ");
-    localStringBuilder.append(" serviceAppType INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[21] = "serviceAppInfoFlag";
-    ibX.put("serviceAppInfoFlag", "INTEGER default '0' ");
-    localStringBuilder.append(" serviceAppInfoFlag INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[22] = "serviceShowFlag";
-    ibX.put("serviceShowFlag", "INTEGER default '0' ");
-    localStringBuilder.append(" serviceShowFlag INTEGER default '0' ");
-    bbY[23] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
-  }
+    public final boolean lj()
+    {
+      iAQ.clear();
+      return false;
+    }
+  }, false);
+  private List iAT = new ArrayList();
+  private List iAU = new ArrayList();
+  private volatile boolean iAV = false;
   
   public h()
   {
-    field_appId = "";
-    field_appName = "";
-    field_appDiscription = "";
-    field_appIconUrl = "";
-    field_appStoreUrl = "";
-    field_appVersion = 0;
-    field_appWatermarkUrl = "";
-    field_packageName = "";
-    field_status = 4;
-    field_signature = "";
-    field_modifyTime = 0L;
-    field_appName_en = "";
-    field_appName_tw = "";
-    field_appDiscription_en = "";
-    field_appDiscription_tw = "";
-    field_appInfoFlag = 0;
-    field_appType = "";
-    field_openId = "";
-    field_authFlag = 0;
-    field_appInfoFlag = 0;
-    br("");
-    bq("");
-    bs("");
-    bw("");
-    bx("");
-    by("");
+    iAR.ds(600000L);
+    ah.tE().a(231, this);
+    aj.abv().a(7, this);
   }
   
-  public final boolean ayW()
+  private void aPH()
   {
-    if (bn.iW(field_appType)) {}
+    int i = 20;
+    if (iAV)
+    {
+      u.d("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", " batch get appinfo doing now");
+      return;
+    }
+    if ((iAT == null) || (iAT.isEmpty()))
+    {
+      u.d("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "batchwaitinglist is empty, no need to doscene");
+      return;
+    }
+    int j = iAT.size();
+    if (j > 20) {}
     for (;;)
     {
-      return false;
-      String[] arrayOfString = field_appType.split(",");
-      if ((arrayOfString != null) && (arrayOfString.length != 0))
+      iAU.addAll(iAT.subList(0, i));
+      if ((iAU == null) || (iAU.isEmpty())) {
+        break;
+      }
+      iAV = true;
+      w localw = new w(7, new z(iAU));
+      ah.tE().d(localw);
+      return;
+      i = j;
+    }
+  }
+  
+  private void kW(String paramString)
+  {
+    for (;;)
+    {
+      try
       {
-        int j = arrayOfString.length;
-        int i = 0;
-        while (i < j)
+        if ((!ay.kz(paramString)) && (!iAT.contains(paramString)))
         {
-          if (arrayOfString[i].equals("1")) {
-            return true;
+          if (!zO(paramString))
+          {
+            u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "this app has reach the max retry count, appid is %s", new Object[] { paramString });
+            return;
           }
-          i += 1;
+          u.i("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "add appid:[%s]", new Object[] { paramString });
+          iAT.add(paramString);
+          continue;
+        }
+      }
+      finally {}
+      tmp90_87[0] = paramString;
+      u.i("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "should not add this appid:[%s], it is already runing", tmp90_87);
+    }
+  }
+  
+  private boolean zO(String paramString)
+  {
+    if (paramString == null)
+    {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "increaseCounter fail, appId is null");
+      return false;
+    }
+    Integer localInteger = Integer.valueOf(ay.b((Integer)iAQ.get(paramString), 0));
+    if (localInteger.intValue() >= 5)
+    {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "increaseCounter fail, has reached the max try count");
+      return false;
+    }
+    iAQ.put(paramString, Integer.valueOf(localInteger.intValue() + 1));
+    return true;
+  }
+  
+  public final void Q(LinkedList paramLinkedList)
+  {
+    if ((paramLinkedList == null) || (paramLinkedList.size() == 0))
+    {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "batch push appinfo err: null or nil applist");
+      return;
+    }
+    paramLinkedList = paramLinkedList.iterator();
+    while (paramLinkedList.hasNext()) {
+      kW((String)paramLinkedList.next());
+    }
+    aPH();
+  }
+  
+  public final void a(int paramInt1, int paramInt2, String paramString, v paramv)
+  {
+    if (paramv.getType() != 7)
+    {
+      u.d("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "not the getappinfolist scene, ignore");
+      return;
+    }
+    if ((iAU != null) && (!iAU.isEmpty()))
+    {
+      iAT.removeAll(iAU);
+      iAU.clear();
+    }
+    iAV = false;
+    aPH();
+  }
+  
+  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  {
+    paramInt1 = paramj.getType();
+    switch (paramInt1)
+    {
+    default: 
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "error type: " + paramInt1);
+    case 231: 
+      do
+      {
+        return;
+        paramString = appId;
+        if (iAP.contains(paramString)) {
+          iAP.remove(paramString);
+        }
+      } while (gmw.size() <= 0);
+      paramString = (String)gmw.remove(0);
+      if ((paramString == null) || (paramString.length() == 0))
+      {
+        u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "startDownload fail, appId is null");
+        paramInt1 = 0;
+      }
+      while (paramInt1 != 0)
+      {
+        iAP.add(paramString);
+        return;
+        if (!zO(paramString))
+        {
+          u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "increaseCounter fail");
+          paramInt1 = 0;
+        }
+        else
+        {
+          paramj = new y(paramString);
+          ah.tE().d(paramj);
+          paramInt1 = 1;
         }
       }
     }
-  }
-  
-  public final boolean ayX()
-  {
-    return field_serviceAppType != 0;
-  }
-  
-  public final boolean ayY()
-  {
-    return (field_serviceAppInfoFlag & 0x2) != 0;
-  }
-  
-  public final boolean ayZ()
-  {
-    return AppPanel.gTC.equals(field_appId);
-  }
-  
-  public boolean equals(Object paramObject)
-  {
-    if (paramObject == null) {}
-    do
+    if ((iAU != null) && (!iAU.isEmpty()))
     {
-      return false;
-      if (paramObject == this) {
-        return true;
-      }
-    } while (!(paramObject instanceof h));
-    return field_appId.equals(field_appId);
-  }
-  
-  public int hashCode()
-  {
-    if (!bn.iW(field_appId)) {
-      return field_appId.hashCode();
+      iAT.removeAll(iAU);
+      iAU.clear();
     }
-    return super.hashCode();
+    iAV = false;
+    aPH();
   }
   
-  protected final ae.a lX()
+  public final String l(Context paramContext, String paramString)
   {
-    return aqp;
+    return g.l(paramContext, paramString);
   }
   
-  public final ContentValues mA()
+  public final void zN(String paramString)
   {
-    if ((!bn.iW(field_appType)) && (field_appType.startsWith("1"))) {
-      field_appType = ("," + field_appType);
+    if ((paramString == null) || (paramString.length() == 0))
+    {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToYcRvBbje375", "push fail, appId is null");
+      return;
     }
-    return super.mA();
+    kW(paramString);
+    aPH();
   }
 }
 

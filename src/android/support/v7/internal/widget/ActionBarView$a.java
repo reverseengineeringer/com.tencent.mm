@@ -3,125 +3,125 @@ package android.support.v7.internal.widget;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.Drawable.ConstantState;
-import android.support.v7.internal.view.menu.g;
-import android.support.v7.internal.view.menu.i;
-import android.support.v7.internal.view.menu.o;
-import android.support.v7.internal.view.menu.s;
+import android.support.v7.internal.view.menu.f;
+import android.support.v7.internal.view.menu.h;
+import android.support.v7.internal.view.menu.l;
+import android.support.v7.internal.view.menu.p;
 import android.view.View;
 import android.widget.LinearLayout;
 
 public final class ActionBarView$a
-  implements o
+  implements l
 {
-  g jH;
-  public i ph;
+  f iO;
+  public h oi;
   
   private ActionBarView$a(ActionBarView paramActionBarView) {}
   
-  public final void a(Context paramContext, g paramg)
+  public final void a(Context paramContext, f paramf)
   {
-    if ((jH != null) && (ph != null)) {
-      jH.g(ph);
+    if ((iO != null) && (oi != null)) {
+      iO.g(oi);
     }
-    jH = paramg;
+    iO = paramf;
   }
   
-  public final void a(g paramg, boolean paramBoolean) {}
+  public final void a(f paramf, boolean paramBoolean) {}
   
-  public final boolean a(s params)
+  public final boolean a(p paramp)
   {
     return false;
   }
   
-  public final boolean bz()
+  public final boolean bj()
   {
     return false;
   }
   
-  public final boolean d(i parami)
+  public final boolean d(h paramh)
   {
-    pg.pb = parami.getActionView();
-    ActionBarView.d(pg).setIcon(ActionBarView.c(pg).getConstantState().newDrawable(pg.getResources()));
-    ph = parami;
-    if (pg.pb.getParent() != pg) {
-      pg.addView(pg.pb);
+    oh.oc = paramh.getActionView();
+    ActionBarView.d(oh).setIcon(ActionBarView.c(oh).getConstantState().newDrawable(oh.getResources()));
+    oi = paramh;
+    if (oh.oc.getParent() != oh) {
+      oh.addView(oh.oc);
     }
-    if (ActionBarView.d(pg).getParent() != pg) {
-      pg.addView(ActionBarView.d(pg));
+    if (ActionBarView.d(oh).getParent() != oh) {
+      oh.addView(ActionBarView.d(oh));
     }
-    ActionBarView.e(pg).setVisibility(8);
-    if (ActionBarView.f(pg) != null) {
-      ActionBarView.f(pg).setVisibility(8);
+    ActionBarView.e(oh).setVisibility(8);
+    if (ActionBarView.f(oh) != null) {
+      ActionBarView.f(oh).setVisibility(8);
     }
-    if (ActionBarView.g(pg) != null) {
-      ActionBarView.g(pg).setVisibility(8);
+    if (ActionBarView.g(oh) != null) {
+      ActionBarView.g(oh).setVisibility(8);
     }
-    if (ActionBarView.h(pg) != null) {
-      ActionBarView.h(pg).setVisibility(8);
+    if (ActionBarView.h(oh) != null) {
+      ActionBarView.h(oh).setVisibility(8);
     }
-    if (ActionBarView.i(pg) != null) {
-      ActionBarView.i(pg).setVisibility(8);
+    if (ActionBarView.i(oh) != null) {
+      ActionBarView.i(oh).setVisibility(8);
     }
-    pg.requestLayout();
-    parami.x(true);
-    if ((pg.pb instanceof android.support.v7.a.b)) {
-      ((android.support.v7.a.b)pg.pb).onActionViewExpanded();
+    oh.requestLayout();
+    paramh.x(true);
+    if ((oh.oc instanceof android.support.v7.a.b)) {
+      ((android.support.v7.a.b)oh.oc).onActionViewExpanded();
     }
     return true;
   }
   
-  public final boolean e(i parami)
+  public final boolean e(h paramh)
   {
-    if ((pg.pb instanceof android.support.v7.a.b)) {
-      ((android.support.v7.a.b)pg.pb).onActionViewCollapsed();
+    if ((oh.oc instanceof android.support.v7.a.b)) {
+      ((android.support.v7.a.b)oh.oc).onActionViewCollapsed();
     }
-    pg.removeView(pg.pb);
-    pg.removeView(ActionBarView.d(pg));
-    pg.pb = null;
-    if ((ActionBarView.j(pg) & 0x2) != 0) {
-      ActionBarView.e(pg).setVisibility(0);
+    oh.removeView(oh.oc);
+    oh.removeView(ActionBarView.d(oh));
+    oh.oc = null;
+    if ((ActionBarView.j(oh) & 0x2) != 0) {
+      ActionBarView.e(oh).setVisibility(0);
     }
-    if ((ActionBarView.j(pg) & 0x8) != 0)
+    if ((ActionBarView.j(oh) & 0x8) != 0)
     {
-      if (ActionBarView.f(pg) != null) {
+      if (ActionBarView.f(oh) != null) {
         break label245;
       }
-      ActionBarView.k(pg);
+      ActionBarView.k(oh);
     }
     for (;;)
     {
-      if ((ActionBarView.g(pg) != null) && (ActionBarView.l(pg) == 2)) {
-        ActionBarView.g(pg).setVisibility(0);
+      if ((ActionBarView.g(oh) != null) && (ActionBarView.l(oh) == 2)) {
+        ActionBarView.g(oh).setVisibility(0);
       }
-      if ((ActionBarView.h(pg) != null) && (ActionBarView.l(pg) == 1)) {
-        ActionBarView.h(pg).setVisibility(0);
+      if ((ActionBarView.h(oh) != null) && (ActionBarView.l(oh) == 1)) {
+        ActionBarView.h(oh).setVisibility(0);
       }
-      if ((ActionBarView.i(pg) != null) && ((ActionBarView.j(pg) & 0x10) != 0)) {
-        ActionBarView.i(pg).setVisibility(0);
+      if ((ActionBarView.i(oh) != null) && ((ActionBarView.j(oh) & 0x10) != 0)) {
+        ActionBarView.i(oh).setVisibility(0);
       }
-      ActionBarView.d(pg).setIcon(null);
-      ph = null;
-      pg.requestLayout();
-      parami.x(false);
+      ActionBarView.d(oh).setIcon(null);
+      oi = null;
+      oh.requestLayout();
+      paramh.x(false);
       return true;
       label245:
-      ActionBarView.f(pg).setVisibility(0);
+      ActionBarView.f(oh).setVisibility(0);
     }
   }
   
   public final void q(boolean paramBoolean)
   {
-    if (ph != null)
+    if (oi != null)
     {
-      if (jH == null) {
+      if (iO == null) {
         break label70;
       }
-      int j = jH.size();
+      int j = iO.size();
       i = 0;
       if (i >= j) {
         break label70;
       }
-      if ((android.support.v4.a.a.b)jH.getItem(i) != ph) {
+      if ((android.support.v4.a.a.b)iO.getItem(i) != oi) {
         break label63;
       }
     }
@@ -130,7 +130,7 @@ public final class ActionBarView$a
     for (int i = 1;; i = 0)
     {
       if (i == 0) {
-        e(ph);
+        e(oi);
       }
       return;
       i += 1;

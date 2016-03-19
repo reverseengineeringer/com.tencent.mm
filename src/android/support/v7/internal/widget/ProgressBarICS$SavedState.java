@@ -8,7 +8,7 @@ import android.view.View.BaseSavedState;
 class ProgressBarICS$SavedState
   extends View.BaseSavedState
 {
-  public static final Parcelable.Creator CREATOR = new p();
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
   int progress;
   int secondaryProgress;
   

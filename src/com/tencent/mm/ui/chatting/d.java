@@ -1,22 +1,28 @@
 package com.tencent.mm.ui.chatting;
 
-import android.widget.ProgressBar;
-import com.tencent.mm.q.e;
-import com.tencent.mm.q.j;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.TextView;
 
 final class d
-  implements e
+  extends aa.a
 {
-  d(AppAttachDownloadUI paramAppAttachDownloadUI) {}
+  public TextView kQv;
   
-  public final void a(int paramInt1, int paramInt2, j paramj)
+  public d(int paramInt)
   {
-    if (paramInt2 == 0) {}
-    for (float f = 0.0F;; f = paramInt1 * 100.0F / paramInt2)
-    {
-      AppAttachDownloadUI.f(iRi).setProgress((int)f);
-      return;
-    }
+    super(paramInt);
+  }
+  
+  public final d av(View paramView)
+  {
+    super.aC(paramView);
+    dUV = ((TextView)hnE.findViewById(2131165184));
+    edK = ((CheckBox)hnE.findViewById(2131165186));
+    dMC = hnE.findViewById(2131165187);
+    gjr = ((TextView)hnE.findViewById(2131165268));
+    kQv = ((TextView)hnE.findViewById(2131165538));
+    return this;
   }
 }
 

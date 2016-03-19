@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field bU:Ljava/lang/Object;
+.field bk:Ljava/lang/Object;
 
-.field bV:Ljava/lang/Object;
+.field bl:Ljava/lang/Object;
 
-.field bW:Ljava/util/HashMap;
+.field bm:Ljava/util/HashMap;
 
-.field bX:Ljava/util/ArrayList;
+.field bn:Ljava/util/ArrayList;
 
-.field bY:Ljava/util/HashMap;
+.field bo:Ljava/util/HashMap;
 
 
 # direct methods

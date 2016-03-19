@@ -15,15 +15,15 @@
 
 
 # static fields
-.field public static final enum ixA:I
+.field public static final enum kwB:I
 
-.field private static final synthetic ixB:[I
+.field public static final enum kwC:I
 
-.field public static final enum ixx:I
+.field public static final enum kwD:I
 
-.field public static final enum ixy:I
+.field public static final enum kwE:I
 
-.field public static final enum ixz:I
+.field private static final synthetic kwF:[I
 
 
 # direct methods
@@ -39,47 +39,47 @@
 
     const/4 v3, 0x1
 
-    .line 75
-    sput v3, Lcom/tencent/mm/ui/account/SetPwdUI$a;->ixx:I
+    .line 83
+    sput v3, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwB:I
 
-    sput v4, Lcom/tencent/mm/ui/account/SetPwdUI$a;->ixy:I
+    sput v4, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwC:I
 
-    sput v5, Lcom/tencent/mm/ui/account/SetPwdUI$a;->ixz:I
+    sput v5, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwD:I
 
-    sput v0, Lcom/tencent/mm/ui/account/SetPwdUI$a;->ixA:I
+    sput v0, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwE:I
 
-    .line 74
+    .line 82
     new-array v0, v0, [I
 
     const/4 v1, 0x0
 
-    sget v2, Lcom/tencent/mm/ui/account/SetPwdUI$a;->ixx:I
+    sget v2, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwB:I
 
     aput v2, v0, v1
 
-    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->ixy:I
+    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwC:I
 
     aput v1, v0, v3
 
-    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->ixz:I
+    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwD:I
 
     aput v1, v0, v4
 
-    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->ixA:I
+    sget v1, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwE:I
 
     aput v1, v0, v5
 
-    sput-object v0, Lcom/tencent/mm/ui/account/SetPwdUI$a;->ixB:[I
+    sput-object v0, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwF:[I
 
     return-void
 .end method
 
-.method public static aMg()[I
+.method public static bbW()[I
     .locals 1
 
     .prologue
-    .line 74
-    sget-object v0, Lcom/tencent/mm/ui/account/SetPwdUI$a;->ixB:[I
+    .line 82
+    sget-object v0, Lcom/tencent/mm/ui/account/SetPwdUI$a;->kwF:[I
 
     invoke-virtual {v0}, [I->clone()Ljava/lang/Object;
 

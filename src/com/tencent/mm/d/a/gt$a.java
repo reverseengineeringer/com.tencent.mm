@@ -1,8 +1,11 @@
 package com.tencent.mm.d.a;
 
+import android.app.Activity;
+
 public final class gt$a
 {
-  public long axb = 0L;
+  public Activity aBU;
+  public Runnable aBV;
 }
 
 /* Location:

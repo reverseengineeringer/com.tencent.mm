@@ -9,18 +9,17 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.TextView;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
+import com.tencent.mm.sdk.platformtools.ay;
 import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.cn;
+import com.tencent.mm.ui.j;
 import java.util.ArrayList;
 import java.util.List;
 
 final class AppChooserUI$a
   extends BaseAdapter
 {
-  List cHW = new ArrayList();
-  int hdr = AppChooserUI.f.hdH;
+  List dfX = new ArrayList();
+  int iRj = AppChooserUI.f.iRz;
   
   public AppChooserUI$a(AppChooserUI paramAppChooserUI)
   {
@@ -29,10 +28,10 @@ final class AppChooserUI$a
   
   public final int getCount()
   {
-    if (cHW == null) {
+    if (dfX == null) {
       return 0;
     }
-    return cHW.size();
+    return dfX.size();
   }
   
   public final long getItemId(int paramInt)
@@ -42,106 +41,112 @@ final class AppChooserUI$a
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
+    int i = 0;
     AppChooserUI.c localc1;
     boolean bool;
     if ((paramView == null) || (paramView.getTag() == null))
     {
-      paramView = LayoutInflater.from(hdq.ipQ.iqj).inflate(a.k.app_choose_list_item, null);
-      paramViewGroup = new AppChooserUI.b(hdq, paramView);
+      paramView = LayoutInflater.from(iRi.koJ.kpc).inflate(2131363031, null);
+      paramViewGroup = new AppChooserUI.b(iRi, paramView);
       paramView.setTag(paramViewGroup);
-      localc1 = lR(paramInt);
-      if (hdw == null) {
-        new AppChooserUI.d(hdq).execute(new AppChooserUI.c[] { localc1 });
+      localc1 = oM(paramInt);
+      if (iRo == null) {
+        new AppChooserUI.d(iRi).execute(new AppChooserUI.c[] { localc1 });
       }
-      dAV.setImageDrawable(hdw);
-      dAW.setText(hdv);
-      if ((localc1 == null) || ((hdx) && (!hdy) && ((!hdx) || (!hdA) || (AppChooserUI.d(hdq) < AppChooserUI.e(hdq)))) || (hdz)) {
-        break label393;
+      esD.setImageDrawable(iRo);
+      esE.setText(iRn);
+      if ((localc1 == null) || ((iRp) && (!iRq) && ((!iRp) || (!iRs) || (AppChooserUI.d(iRi) < AppChooserUI.e(iRi)))) || (iRr)) {
+        break label417;
       }
-      hds.setVisibility(8);
-      hdt.setVisibility(0);
-      RadioButton localRadioButton = hdt;
-      AppChooserUI.c localc2 = AppChooserUI.c(hdq);
+      iRk.setVisibility(8);
+      iRl.setVisibility(0);
+      Object localObject = iRl;
+      AppChooserUI.c localc2 = AppChooserUI.c(iRi);
       if (!(localc2 instanceof AppChooserUI.c)) {
-        break label387;
+        break label411;
       }
       localc2 = (AppChooserUI.c)localc2;
-      if (((hdu == null) || (hdu == null) || (!hdu.activityInfo.packageName.equals(hdu.activityInfo.packageName))) && ((!hdx) || (!hdx))) {
-        break label387;
+      if (((iRm == null) || (iRm == null) || (!iRm.activityInfo.packageName.equals(iRm.activityInfo.packageName))) && ((!iRp) || (!iRp))) {
+        break label411;
       }
       bool = true;
-      label285:
-      localRadioButton.setChecked(bool);
-      label292:
-      if (!hdx) {
-        break label576;
+      label287:
+      ((RadioButton)localObject).setChecked(bool);
+      label294:
+      if (!iRp) {
+        break label598;
       }
-      if (AppChooserUI.f(hdq) != 4) {
-        break label559;
+      if (AppChooserUI.f(iRi) != 4) {
+        break label578;
       }
-      dAY.setText(a.n.qq_browser_desc_for_wb);
-      label321:
-      dAY.setVisibility(0);
+      esG.setText(2131429472);
+      label322:
+      localObject = esG;
+      paramInt = i;
+      if (ay.kz(AppChooserUI.l(iRi))) {
+        paramInt = 8;
+      }
+      ((TextView)localObject).setVisibility(paramInt);
     }
     for (;;)
     {
-      if ((AppChooserUI.f(hdq) != 6) && (AppChooserUI.c(hdq) != null) && (AppChooserUI.c(hdq).equals(localc1))) {
-        hdt.setChecked(true);
+      if ((AppChooserUI.f(iRi) != 6) && (AppChooserUI.c(iRi) != null) && (AppChooserUI.c(iRi).equals(localc1))) {
+        iRl.setChecked(true);
       }
       return paramView;
       paramViewGroup = (AppChooserUI.b)paramView.getTag();
       break;
-      label387:
+      label411:
       bool = false;
-      break label285;
-      label393:
-      hds.setVisibility(0);
-      hdt.setVisibility(8);
-      hds.setOnClickListener(AppChooserUI.k(hdq));
-      if (hdr == AppChooserUI.f.hdH)
+      break label287;
+      label417:
+      iRk.setVisibility(0);
+      iRl.setVisibility(8);
+      iRk.setOnClickListener(AppChooserUI.k(iRi));
+      if (iRj == AppChooserUI.f.iRz)
       {
-        if (hdz) {
-          hds.setText(a.n.app_need_to_update);
+        if (iRr) {
+          iRk.setText(2131430952);
         }
         for (;;)
         {
-          hds.setEnabled(true);
+          iRk.setEnabled(true);
           break;
-          hds.setText(a.n.app_download);
+          iRk.setText(2131430948);
         }
       }
-      if (hdr == AppChooserUI.f.hdI)
+      if (iRj == AppChooserUI.f.iRA)
       {
-        hds.setText(a.n.app_downloading);
-        hds.setEnabled(false);
-        break label292;
+        iRk.setText(2131430949);
+        iRk.setEnabled(false);
+        break label294;
       }
-      if (hdr != AppChooserUI.f.hdJ) {
-        break label292;
+      if (iRj != AppChooserUI.f.iRB) {
+        break label294;
       }
-      if (hdz) {
-        hds.setText(a.n.app_to_update);
+      if (iRr) {
+        iRk.setText(2131430954);
       }
       for (;;)
       {
-        hds.setEnabled(true);
+        iRk.setEnabled(true);
         break;
-        hds.setText(a.n.app_to_install);
+        iRk.setText(2131430953);
       }
-      label559:
-      dAY.setText(AppChooserUI.l(hdq));
-      break label321;
-      label576:
-      dAY.setVisibility(8);
+      label578:
+      esG.setText(ay.ky(AppChooserUI.l(iRi)));
+      break label322;
+      label598:
+      esG.setVisibility(8);
     }
   }
   
-  public final AppChooserUI.c lR(int paramInt)
+  public final AppChooserUI.c oM(int paramInt)
   {
-    if (cHW == null) {
+    if (dfX == null) {
       return null;
     }
-    return (AppChooserUI.c)cHW.get(paramInt);
+    return (AppChooserUI.c)dfX.get(paramInt);
   }
 }
 

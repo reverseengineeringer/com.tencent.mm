@@ -1,113 +1,72 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.pointers.PByteArray;
-import com.tencent.mm.protocal.b.ajf;
-import com.tencent.mm.protocal.b.vd;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.Map;
-import java.util.Set;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 public final class z
 {
-  private static Map az(byte[] paramArrayOfByte)
+  public int iAC;
+  public String iVr;
+  public String iVs;
+  
+  z(String paramString1, String paramString2, int paramInt)
   {
-    if (bn.J(paramArrayOfByte)) {
-      return null;
-    }
-    try
-    {
-      paramArrayOfByte = (ajf)new ajf().x(paramArrayOfByte);
-      if (paramArrayOfByte == null) {
-        return null;
-      }
-    }
-    catch (Exception paramArrayOfByte)
-    {
-      return null;
-    }
-    t.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush : keyCount:" + hNq);
-    LinkedList localLinkedList = hNr;
-    if (localLinkedList.size() != hNq) {
-      return null;
-    }
-    HashMap localHashMap = new HashMap();
-    int i = 0;
-    while (i < hNq)
-    {
-      localHashMap.put(Integer.valueOf(geteJD), Long.valueOf(0xFFFFFFFF & gethDR));
-      i += 1;
-    }
-    if (localHashMap.size() != hNq) {
-      return null;
-    }
-    return localHashMap;
+    iVr = paramString1;
+    iVs = paramString2;
+    iAC = paramInt;
   }
   
-  public static byte[] i(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
+  public static z aTv()
   {
-    if ((paramArrayOfByte1 == null) || (paramArrayOfByte1.length <= 0))
+    Object localObject = y.getContext().getSharedPreferences("rsa_public_key_prefs", 4);
+    z localz = new z(((SharedPreferences)localObject).getString("keye", ""), ((SharedPreferences)localObject).getString("keyn", ""), ((SharedPreferences)localObject).getInt("version", 0));
+    int i = ((SharedPreferences)localObject).getInt("client_version", 0);
+    if (!localz.aTy())
     {
-      t.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "empty old key, use new key");
-      return paramArrayOfByte2;
-    }
-    if ((paramArrayOfByte2 == null) || (paramArrayOfByte2.length <= 0))
-    {
-      t.e("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "newKey is null");
-      return null;
-    }
-    PByteArray localPByteArray = new PByteArray();
-    try
-    {
-      if (!MMProtocalJni.mergeSyncKey(paramArrayOfByte1, paramArrayOfByte2, localPByteArray))
-      {
-        t.e("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "merge key failed");
-        return null;
+      if (i > 637665843) {
+        return localz;
       }
+      boolean bool = ((SharedPreferences)localObject).edit().clear().commit();
+      localObject = h.fUJ;
+      h.b(148L, 38L, 1L, false);
+      u.i("!32@/B4Tb64lLpKEqekw1pYAtcFrYzlTsOfK", "summercert clear old rsa lastClientVer[%d] nowVer[%d], commit[%b]", new Object[] { Integer.valueOf(i), Integer.valueOf(b.iUf), Boolean.valueOf(bool) });
     }
-    catch (IncompatibleClassChangeError paramArrayOfByte1)
-    {
-      t.printErrStackTrace("MicroMsg.Crash", paramArrayOfByte1, "NoSuchMethod MMProtocalJni.mergeSyncKey", new Object[0]);
-      throw ((IncompatibleClassChangeError)new IncompatibleClassChangeError("NoSuchMethod MMProtocalJni.mergeSyncKey").initCause(paramArrayOfByte1));
-    }
-    return value;
+    localObject = h.fUJ;
+    h.b(148L, 39L, 1L, false);
+    u.d("!32@/B4Tb64lLpKEqekw1pYAtcFrYzlTsOfK", "summercert req keye[%s], keyn[%s], ver[%d]", new Object[] { "010001", "C3D875421DD26653E21DB55E3EECBA8A277754D8DD4E733684673EE8CF8EEFC66CA491E90B33CD6DD877C99A7DD41C3CA764A67EA5ABBF389AB0F201367D2CC48AEDAA7400EF7BA08D261B061D39CCE93149B64A761F45D21FF33E3586D721394C881046726C4399BB4F716AC2E923F360F370A845F5E6D38ED19FF16D45FE24823E4E6D4420CA31D641E00082C23CBEC5C82D819DD6492A3DC41390B3D7653714A377938521C0837C2D42F6CA052175B3F10308DE422A0F38910E2DCA2F36737A2111A10C9DD239A0EA627A6C471CC1A411107F25AFCF0B82DD6E526D2DDA1B3FCCA4648F2218639AF26D0F93DC4AF2320A4F2668DE98B50947288D57995029".substring(0, 4) + "_" + "C3D875421DD26653E21DB55E3EECBA8A277754D8DD4E733684673EE8CF8EEFC66CA491E90B33CD6DD877C99A7DD41C3CA764A67EA5ABBF389AB0F201367D2CC48AEDAA7400EF7BA08D261B061D39CCE93149B64A761F45D21FF33E3586D721394C881046726C4399BB4F716AC2E923F360F370A845F5E6D38ED19FF16D45FE24823E4E6D4420CA31D641E00082C23CBEC5C82D819DD6492A3DC41390B3D7653714A377938521C0837C2D42F6CA052175B3F10308DE422A0F38910E2DCA2F36737A2111A10C9DD239A0EA627A6C471CC1A411107F25AFCF0B82DD6E526D2DDA1B3FCCA4648F2218639AF26D0F93DC4AF2320A4F2668DE98B50947288D57995029".substring(507, 511), Integer.valueOf(137) });
+    return new z("010001", "C3D875421DD26653E21DB55E3EECBA8A277754D8DD4E733684673EE8CF8EEFC66CA491E90B33CD6DD877C99A7DD41C3CA764A67EA5ABBF389AB0F201367D2CC48AEDAA7400EF7BA08D261B061D39CCE93149B64A761F45D21FF33E3586D721394C881046726C4399BB4F716AC2E923F360F370A845F5E6D38ED19FF16D45FE24823E4E6D4420CA31D641E00082C23CBEC5C82D819DD6492A3DC41390B3D7653714A377938521C0837C2D42F6CA052175B3F10308DE422A0F38910E2DCA2F36737A2111A10C9DD239A0EA627A6C471CC1A411107F25AFCF0B82DD6E526D2DDA1B3FCCA4648F2218639AF26D0F93DC4AF2320A4F2668DE98B50947288D57995029", 137);
   }
   
-  public static boolean j(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
+  public static z aTw()
   {
-    paramArrayOfByte1 = az(paramArrayOfByte1);
-    if (paramArrayOfByte1 == null)
-    {
-      t.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush local sync key failed");
-      return true;
-    }
-    paramArrayOfByte2 = az(paramArrayOfByte2);
-    if (paramArrayOfByte2 == null)
-    {
-      t.e("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush svr sync key failed");
-      return false;
-    }
-    Iterator localIterator = paramArrayOfByte2.keySet().iterator();
-    while (localIterator.hasNext())
-    {
-      Integer localInteger = (Integer)localIterator.next();
-      Long localLong1 = (Long)paramArrayOfByte1.get(localInteger);
-      Long localLong2 = (Long)paramArrayOfByte2.get(localInteger);
-      if (localLong1 == null)
-      {
-        t.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush local key null :" + localInteger);
-        return true;
-      }
-      t.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush local key:" + localInteger + " sv:" + localLong2 + " lv:" + localLong1);
-      if (localLong2.longValue() > localLong1.longValue()) {
-        return true;
-      }
-    }
-    t.d("!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms", "dkpush two sync key is the same");
-    return false;
+    return new z("010001", "D8D2AE73FF601B93B1471B35870A1B59D7649EEA815CDD8CE5496BBD0C6CFE19C0E082F4E513B615C6030CCFCE3153E25AA00E8156D0311AF72ABBB9BBEC8B1D3751592234B1A621CA774E2EC50047A93FA0BC60DF0C10E8A65C3B29D13167EC217FC6A29034494870705CBF4AC929FBA0E1E656A8F8B50E779AD89BB4EEF6FF", 125);
+  }
+  
+  public static z aTx()
+  {
+    u.d("!32@/B4Tb64lLpKEqekw1pYAtcFrYzlTsOfK", "summercert base keye[%s], keyn[%s], ver[%d]", new Object[] { "010001", "BAAB953F86EE9EC456176D983E3B6EC8D29D92C946896916CC2EF12E5D1AE00D89F58B481BCAC7B8A3F5942734EDF6E4EF7134A50EF095E2B2640F231F0F255FF8F38B1AC4DF3D6D10B22D1F1889FF921DB7F91B286EF7CDF30CA4FADA206AE94391F8664F79654F3EA9F64310D0E52FB502D032C08D10FF00CBF377CCAE1FB4131B91EE7A0B2AD5971056EB037F0DA318D92F0EF46C53831C27EB35BE24DA4B887A2701E8285C56E607E778D1606DB6A92D4A41139DBA78E195D6F772354E6B40ECA4529EB57578FA6F28EA6AC001BB73F4A86C26F9328E8AA9727B5C12F0C51C5969D1F02995D00044B6BE460676917559AAD5227DB007E518624790AC75D7".substring(0, 4) + "_" + "BAAB953F86EE9EC456176D983E3B6EC8D29D92C946896916CC2EF12E5D1AE00D89F58B481BCAC7B8A3F5942734EDF6E4EF7134A50EF095E2B2640F231F0F255FF8F38B1AC4DF3D6D10B22D1F1889FF921DB7F91B286EF7CDF30CA4FADA206AE94391F8664F79654F3EA9F64310D0E52FB502D032C08D10FF00CBF377CCAE1FB4131B91EE7A0B2AD5971056EB037F0DA318D92F0EF46C53831C27EB35BE24DA4B887A2701E8285C56E607E778D1606DB6A92D4A41139DBA78E195D6F772354E6B40ECA4529EB57578FA6F28EA6AC001BB73F4A86C26F9328E8AA9727B5C12F0C51C5969D1F02995D00044B6BE460676917559AAD5227DB007E518624790AC75D7".substring(507, 511), Integer.valueOf(136) });
+    return new z("010001", "BAAB953F86EE9EC456176D983E3B6EC8D29D92C946896916CC2EF12E5D1AE00D89F58B481BCAC7B8A3F5942734EDF6E4EF7134A50EF095E2B2640F231F0F255FF8F38B1AC4DF3D6D10B22D1F1889FF921DB7F91B286EF7CDF30CA4FADA206AE94391F8664F79654F3EA9F64310D0E52FB502D032C08D10FF00CBF377CCAE1FB4131B91EE7A0B2AD5971056EB037F0DA318D92F0EF46C53831C27EB35BE24DA4B887A2701E8285C56E607E778D1606DB6A92D4A41139DBA78E195D6F772354E6B40ECA4529EB57578FA6F28EA6AC001BB73F4A86C26F9328E8AA9727B5C12F0C51C5969D1F02995D00044B6BE460676917559AAD5227DB007E518624790AC75D7", 136);
+  }
+  
+  public static void v(String paramString1, String paramString2, int paramInt)
+  {
+    u.d("!32@/B4Tb64lLpKEqekw1pYAtcFrYzlTsOfK", "summercert dkcert saveRsaInfo ver:%d keye:%s keyn:%s  ", new Object[] { Integer.valueOf(paramInt), paramString1, paramString2 });
+    SharedPreferences.Editor localEditor = y.getContext().getSharedPreferences("rsa_public_key_prefs", 4).edit();
+    localEditor.putString("keye", paramString1);
+    localEditor.putString("keyn", paramString2);
+    localEditor.putInt("version", paramInt);
+    localEditor.putInt("client_version", b.iUf);
+    localEditor.commit();
+  }
+  
+  public final boolean aTy()
+  {
+    return (iAC == 0) || (ay.kz(iVr)) || (ay.kz(iVs));
   }
 }
 

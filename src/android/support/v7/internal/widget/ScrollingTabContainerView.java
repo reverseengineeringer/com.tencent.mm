@@ -20,38 +20,36 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.a.d;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 
 public final class ScrollingTabContainerView
   extends HorizontalScrollView
-  implements m.b
+  implements c.b
 {
-  private final LayoutInflater iE;
-  private int nR;
-  Runnable oZ;
-  private LinearLayout rI;
-  private r rJ;
-  private boolean rK;
-  int rL;
-  int rM;
-  private int rN;
+  private final LayoutInflater hI;
+  private int mV;
+  Runnable oa;
+  private LinearLayout qL;
+  private d qM;
+  private boolean qN;
+  int qO;
+  int qP;
+  private int qQ;
   
-  private boolean cA()
+  private boolean cj()
   {
-    if (!cz()) {
-      return false;
-    }
-    removeView(rJ);
-    addView(rI, new ViewGroup.LayoutParams(-2, -1));
-    setTabSelected(rJ.qm);
-    return false;
+    return (qM != null) && (qM.getParent() == this);
   }
   
-  private boolean cz()
+  private boolean ck()
   {
-    return (rJ != null) && (rJ.getParent() == this);
+    if (!cj()) {
+      return false;
+    }
+    removeView(qM);
+    addView(qL, new ViewGroup.LayoutParams(-2, -1));
+    setTabSelected(qM.pq);
+    return false;
   }
   
   public final void i(View paramView, int paramInt)
@@ -62,31 +60,31 @@ public final class ScrollingTabContainerView
   public final void onAttachedToWindow()
   {
     super.onAttachedToWindow();
-    if (oZ != null) {
-      post(oZ);
+    if (oa != null) {
+      post(oa);
     }
   }
   
   protected final void onConfigurationChanged(Configuration paramConfiguration)
   {
-    paramConfiguration = a.f(getContext());
-    TypedArray localTypedArray = mContext.obtainStyledAttributes(null, a.p.ActionBar, a.d.actionBarStyle, 0);
-    int j = localTypedArray.getLayoutDimension(1, 0);
+    paramConfiguration = a.m(getContext());
+    TypedArray localTypedArray = mContext.obtainStyledAttributes(null, R.b.ActionBar, 2130772113, 0);
+    int j = localTypedArray.getLayoutDimension(2, 0);
     Resources localResources = mContext.getResources();
     int i = j;
-    if (!paramConfiguration.bo()) {
-      i = Math.min(j, localResources.getDimensionPixelSize(a.g.abc_action_bar_stacked_max_height));
+    if (!paramConfiguration.aY()) {
+      i = Math.min(j, localResources.getDimensionPixelSize(2131034687));
     }
     localTypedArray.recycle();
     setContentHeight(i);
-    rM = mContext.getResources().getDimensionPixelSize(a.g.abc_action_bar_stacked_tab_max_width);
+    qP = mContext.getResources().getDimensionPixelSize(2131034686);
   }
   
   public final void onDetachedFromWindow()
   {
     super.onDetachedFromWindow();
-    if (oZ != null) {
-      removeCallbacks(oZ);
+    if (oa != null) {
+      removeCallbacks(oa);
     }
   }
   
@@ -99,49 +97,49 @@ public final class ScrollingTabContainerView
     {
       bool = true;
       setFillViewport(bool);
-      int j = rI.getChildCount();
+      int j = qL.getChildCount();
       if ((j <= 1) || ((i != 1073741824) && (i != Integer.MIN_VALUE))) {
-        break label327;
+        break label324;
       }
       if (j <= 2) {
-        break label314;
+        break label311;
       }
-      rL = ((int)(View.MeasureSpec.getSize(paramInt1) * 0.4F));
+      qO = ((int)(View.MeasureSpec.getSize(paramInt1) * 0.4F));
       label68:
-      rL = Math.min(rL, rM);
+      qO = Math.min(qO, qP);
       label83:
-      i = View.MeasureSpec.makeMeasureSpec(nR, 1073741824);
-      if ((bool) || (!rK)) {
-        break label335;
+      i = View.MeasureSpec.makeMeasureSpec(mV, 1073741824);
+      if ((bool) || (!qN)) {
+        break label332;
       }
       label105:
       if (paramInt2 == 0) {
-        break label348;
+        break label345;
       }
-      rI.measure(0, i);
-      if (rI.getMeasuredWidth() <= View.MeasureSpec.getSize(paramInt1)) {
-        break label340;
+      qL.measure(0, i);
+      if (qL.getMeasuredWidth() <= View.MeasureSpec.getSize(paramInt1)) {
+        break label337;
       }
-      if (!cz())
+      if (!cj())
       {
-        if (rJ == null)
+        if (qM == null)
         {
-          r localr = new r(getContext(), a.d.actionDropDownStyle);
-          localr.setLayoutParams(new LinearLayout.LayoutParams(-2, -1));
-          localr.b(this);
-          rJ = localr;
+          d locald = new d(getContext());
+          locald.setLayoutParams(new LinearLayout.LayoutParams(-2, -1));
+          locald.b(this);
+          qM = locald;
         }
-        removeView(rI);
-        addView(rJ, new ViewGroup.LayoutParams(-2, -1));
-        if (rJ.nT == null) {
-          rJ.setAdapter(new a((byte)0));
+        removeView(qL);
+        addView(qM, new ViewGroup.LayoutParams(-2, -1));
+        if (qM.mX == null) {
+          qM.setAdapter(new a((byte)0));
         }
-        if (oZ != null)
+        if (oa != null)
         {
-          removeCallbacks(oZ);
-          oZ = null;
+          removeCallbacks(oa);
+          oa = null;
         }
-        rJ.setSelection(rN);
+        qM.setSelection(qQ);
       }
     }
     for (;;)
@@ -150,59 +148,68 @@ public final class ScrollingTabContainerView
       super.onMeasure(paramInt1, i);
       paramInt1 = getMeasuredWidth();
       if ((bool) && (paramInt2 != paramInt1)) {
-        setTabSelected(rN);
+        setTabSelected(qQ);
       }
       return;
       bool = false;
       break;
-      label314:
-      rL = (View.MeasureSpec.getSize(paramInt1) / 2);
+      label311:
+      qO = (View.MeasureSpec.getSize(paramInt1) / 2);
       break label68;
-      label327:
-      rL = -1;
+      label324:
+      qO = -1;
       break label83;
-      label335:
+      label332:
       paramInt2 = 0;
       break label105;
-      label340:
-      cA();
+      label337:
+      ck();
       continue;
-      label348:
-      cA();
+      label345:
+      ck();
     }
   }
   
   public final void setAllowCollapse(boolean paramBoolean)
   {
-    rK = paramBoolean;
+    qN = paramBoolean;
   }
   
   public final void setContentHeight(int paramInt)
   {
-    nR = paramInt;
+    mV = paramInt;
     requestLayout();
   }
   
   public final void setTabSelected(int paramInt)
   {
-    rN = paramInt;
-    int j = rI.getChildCount();
+    qQ = paramInt;
+    int j = qL.getChildCount();
     int i = 0;
     if (i < j)
     {
-      View localView = rI.getChildAt(i);
+      final View localView = qL.getChildAt(i);
       if (i == paramInt) {}
       for (boolean bool = true;; bool = false)
       {
         localView.setSelected(bool);
         if (bool)
         {
-          localView = rI.getChildAt(paramInt);
-          if (oZ != null) {
-            removeCallbacks(oZ);
+          localView = qL.getChildAt(paramInt);
+          if (oa != null) {
+            removeCallbacks(oa);
           }
-          oZ = new q(this, localView);
-          post(oZ);
+          oa = new Runnable()
+          {
+            public final void run()
+            {
+              int i = localView.getLeft();
+              int j = (getWidth() - localView.getWidth()) / 2;
+              smoothScrollTo(i - j, 0);
+              oa = null;
+            }
+          };
+          post(oa);
         }
         i += 1;
         break;
@@ -213,11 +220,11 @@ public final class ScrollingTabContainerView
   public static class TabView
     extends LinearLayout
   {
-    private ImageView mo;
-    private View oq;
-    ActionBar.c rQ;
-    private TextView rR;
-    ScrollingTabContainerView rS;
+    private ImageView lt;
+    private View ns;
+    ActionBar.c qT;
+    private TextView qU;
+    ScrollingTabContainerView qV;
     
     public TabView(Context paramContext, AttributeSet paramAttributeSet)
     {
@@ -226,14 +233,14 @@ public final class ScrollingTabContainerView
     
     public ActionBar.c getTab()
     {
-      return rQ;
+      return qT;
     }
     
     public void onMeasure(int paramInt1, int paramInt2)
     {
       super.onMeasure(paramInt1, paramInt2);
-      if (rS != null) {}
-      for (paramInt1 = rS.rL;; paramInt1 = 0)
+      if (qV != null) {}
+      for (paramInt1 = qV.qO;; paramInt1 = 0)
       {
         if ((paramInt1 > 0) && (getMeasuredWidth() > paramInt1)) {
           super.onMeasure(View.MeasureSpec.makeMeasureSpec(paramInt1, 1073741824), paramInt2);
@@ -244,7 +251,7 @@ public final class ScrollingTabContainerView
     
     public final void update()
     {
-      Object localObject1 = rQ;
+      Object localObject1 = qT;
       Object localObject2 = ((ActionBar.c)localObject1).getCustomView();
       if (localObject2 != null)
       {
@@ -256,75 +263,75 @@ public final class ScrollingTabContainerView
           }
           addView((View)localObject2);
         }
-        oq = ((View)localObject2);
-        if (rR != null) {
-          rR.setVisibility(8);
+        ns = ((View)localObject2);
+        if (qU != null) {
+          qU.setVisibility(8);
         }
-        if (mo != null)
+        if (lt != null)
         {
-          mo.setVisibility(8);
-          mo.setImageDrawable(null);
+          lt.setVisibility(8);
+          lt.setImageDrawable(null);
         }
       }
-      label329:
-      label354:
+      label328:
+      label353:
       for (;;)
       {
         return;
-        if (oq != null)
+        if (ns != null)
         {
-          removeView(oq);
-          oq = null;
+          removeView(ns);
+          ns = null;
         }
         Object localObject3 = ((ActionBar.c)localObject1).getIcon();
         localObject2 = ((ActionBar.c)localObject1).getText();
         if (localObject3 != null)
         {
           Object localObject4;
-          if (mo == null)
+          if (lt == null)
           {
             localObject4 = new ImageView(getContext());
             LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(-2, -2);
             gravity = 16;
             ((ImageView)localObject4).setLayoutParams(localLayoutParams);
             addView((View)localObject4, 0);
-            mo = ((ImageView)localObject4);
+            lt = ((ImageView)localObject4);
           }
-          mo.setImageDrawable((Drawable)localObject3);
-          mo.setVisibility(0);
+          lt.setImageDrawable((Drawable)localObject3);
+          lt.setVisibility(0);
           if (localObject2 == null) {
-            break label329;
+            break label328;
           }
-          if (rR == null)
+          if (qU == null)
           {
-            localObject3 = new CompatTextView(getContext(), null, a.d.actionBarTabTextStyle);
+            localObject3 = new CompatTextView(getContext(), null, 2130772111);
             ((TextView)localObject3).setEllipsize(TextUtils.TruncateAt.END);
             localObject4 = new LinearLayout.LayoutParams(-2, -2);
             gravity = 16;
             ((TextView)localObject3).setLayoutParams((ViewGroup.LayoutParams)localObject4);
             addView((View)localObject3);
-            rR = ((TextView)localObject3);
+            qU = ((TextView)localObject3);
           }
-          rR.setText((CharSequence)localObject2);
-          rR.setVisibility(0);
+          qU.setText((CharSequence)localObject2);
+          qU.setVisibility(0);
         }
         for (;;)
         {
-          if (mo == null) {
-            break label354;
+          if (lt == null) {
+            break label353;
           }
-          mo.setContentDescription(((ActionBar.c)localObject1).getContentDescription());
+          lt.setContentDescription(((ActionBar.c)localObject1).getContentDescription());
           return;
-          if (mo == null) {
+          if (lt == null) {
             break;
           }
-          mo.setVisibility(8);
-          mo.setImageDrawable(null);
+          lt.setVisibility(8);
+          lt.setImageDrawable(null);
           break;
-          if (rR != null)
+          if (qU != null)
           {
-            rR.setVisibility(8);
-            rR.setText(null);
+            qU.setVisibility(8);
+            qU.setText(null);
           }
         }
       }
@@ -357,7 +364,7 @@ public final class ScrollingTabContainerView
         return ScrollingTabContainerView.a(ScrollingTabContainerView.this, (ActionBar.c)getItem(paramInt));
       }
       paramViewGroup = (ScrollingTabContainerView.TabView)paramView;
-      rQ = ((ActionBar.c)getItem(paramInt));
+      qT = ((ActionBar.c)getItem(paramInt));
       paramViewGroup.update();
       return paramView;
     }

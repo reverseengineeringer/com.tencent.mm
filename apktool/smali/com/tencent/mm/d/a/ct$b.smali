@@ -15,39 +15,16 @@
 
 
 # instance fields
-.field public avf:Ljava/lang/String;
-
-.field public ayK:J
-
-.field public ayL:J
-
-.field public path:Ljava/lang/String;
-
-.field public status:I
-
-.field public url:Ljava/lang/String;
+.field public auR:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 0
 
     .prologue
-    const-wide/16 v1, 0x0
-
-    .line 18
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
     .line 20
-    const/4 v0, 0x0
-
-    iput v0, p0, Lcom/tencent/mm/d/a/ct$b;->status:I
-
-    .line 23
-    iput-wide v1, p0, Lcom/tencent/mm/d/a/ct$b;->ayK:J
-
-    .line 24
-    iput-wide v1, p0, Lcom/tencent/mm/d/a/ct$b;->ayL:J
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method

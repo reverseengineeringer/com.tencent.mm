@@ -1,8 +1,10 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.r.j;
+
 public final class bk$b
 {
-  public boolean avu;
+  public j auF;
 }
 
 /* Location:

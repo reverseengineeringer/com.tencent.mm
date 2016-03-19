@@ -15,30 +15,16 @@
 
 
 # instance fields
-.field public aBj:Lcom/tencent/mm/sdk/c/d;
-
-.field public ayr:Ljava/lang/String;
-
-.field public errCode:I
-
-.field public errType:I
+.field public data:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    const/4 v0, 0x0
-
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    iput v0, p0, Lcom/tencent/mm/d/a/eo$a;->errType:I
-
-    .line 16
-    iput v0, p0, Lcom/tencent/mm/d/a/eo$a;->errCode:I
 
     return-void
 .end method

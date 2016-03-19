@@ -1,24 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ja
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGk = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aFw = new a();
   
   public ja()
   {
-    id = "UpdateFailedMsgId";
-    hXT = atO;
+    id = "RePullEmojiInfoDesc";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public long aGl = -1L;
-    public long aGm = -1L;
+    public String auy;
   }
 }
 

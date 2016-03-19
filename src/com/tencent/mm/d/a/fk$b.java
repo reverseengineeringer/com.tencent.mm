@@ -2,7 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class fk$b
 {
-  public boolean aCb = false;
+  public boolean aAl = false;
+  public String path;
 }
 
 /* Location:

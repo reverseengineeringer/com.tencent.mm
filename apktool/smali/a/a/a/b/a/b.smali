@@ -15,7 +15,7 @@
     return-void
 .end method
 
-.method static aVs()La/a/a/b/a/b;
+.method static boh()La/a/a/b/a/b;
     .locals 2
 
     .prologue
@@ -31,7 +31,7 @@
     return-object v0
 .end method
 
-.method static aVt()La/a/a/b/a/b;
+.method static boi()La/a/a/b/a/b;
     .locals 2
 
     .prologue
@@ -47,7 +47,7 @@
     return-object v0
 .end method
 
-.method static aVu()La/a/a/b/a/b;
+.method static boj()La/a/a/b/a/b;
     .locals 2
 
     .prologue
@@ -63,7 +63,7 @@
     return-object v0
 .end method
 
-.method public static aVv()La/a/a/b/a/b;
+.method public static bok()La/a/a/b/a/b;
     .locals 2
 
     .prologue
@@ -79,7 +79,7 @@
     return-object v0
 .end method
 
-.method static aVw()La/a/a/b/a/b;
+.method static bol()La/a/a/b/a/b;
     .locals 2
 
     .prologue

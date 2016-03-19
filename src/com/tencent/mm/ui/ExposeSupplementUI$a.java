@@ -12,20 +12,20 @@ final class ExposeSupplementUI$a
   
   public final void afterTextChanged(Editable paramEditable)
   {
-    int j = ExposeSupplementUI.a(imm, paramEditable);
+    int j = ExposeSupplementUI.a(kkt, paramEditable);
     int i = j;
     if (j < 0) {
       i = 0;
     }
-    if (ExposeSupplementUI.b(imm) != null) {
-      ExposeSupplementUI.b(imm).setText(String.valueOf(i));
+    if (ExposeSupplementUI.b(kkt) != null) {
+      ExposeSupplementUI.b(kkt).setText(String.valueOf(i));
     }
-    if (ExposeSupplementUI.a(imm).getText().length() == 0)
+    if (ExposeSupplementUI.a(kkt).getText().length() == 0)
     {
-      imm.fe(false);
+      kkt.bC(false);
       return;
     }
-    imm.fe(true);
+    kkt.bC(true);
   }
   
   public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

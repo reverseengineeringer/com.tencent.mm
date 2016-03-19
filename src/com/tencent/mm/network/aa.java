@@ -1,32 +1,53 @@
 package com.tencent.mm.network;
 
-import android.os.RemoteException;
-import com.tencent.mm.sdk.platformtools.bh;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.Context;
+import com.tencent.mm.g.a;
+import com.tencent.mm.network.a.b;
+import com.tencent.mm.sdk.platformtools.ah;
 
-final class aa
-  extends bh
+public final class aa
 {
-  aa(z paramz, int paramInt)
+  public b cjW = null;
+  public boolean cjX = false;
+  
+  public static boolean ab(int paramInt1, int paramInt2)
   {
-    super(1000L, null);
+    if (a.pm()) {}
+    int i;
+    int j;
+    int k;
+    int m;
+    do
+    {
+      do
+      {
+        do
+        {
+          return true;
+          i = a.pn();
+          j = a.pp();
+          k = a.po();
+          m = a.pq();
+          if ((i == k) && (j == m)) {
+            return false;
+          }
+          if ((i != k) || (j >= m)) {
+            break;
+          }
+        } while ((paramInt1 == i) && (paramInt2 > j) && (paramInt2 < m));
+        return false;
+        if (k <= i) {
+          break;
+        }
+      } while (((paramInt1 > i) && (paramInt1 < k)) || ((paramInt1 == i) && (paramInt2 > j)) || ((paramInt1 == k) && (paramInt2 < m)));
+      return false;
+    } while (((k >= i) && ((i != k) || (j <= m))) || ((paramInt1 > i) && (paramInt1 <= 23)) || ((paramInt1 == i) && (paramInt2 > j)) || ((paramInt1 == k) && (paramInt2 < m)) || ((paramInt1 > 0) && (paramInt1 < k)));
+    return false;
   }
   
-  protected final Object run()
+  public static boolean bg(Context paramContext)
   {
-    try
-    {
-      z.dH(bud);
-      return null;
-    }
-    catch (RemoteException localRemoteException)
-    {
-      for (;;)
-      {
-        t.e("!32@/B4Tb64lLpKdx3uu06WLRv6g+efXe4sb", "exception:%s", new Object[] { bn.a(localRemoteException) });
-      }
-    }
+    return (paramContext != null) && (ah.dB(paramContext));
   }
 }
 

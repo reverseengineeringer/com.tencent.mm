@@ -1,54 +1,75 @@
 package com.tencent.mm.protocal.b;
 
 public final class bb
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public int hjV;
-  public int hjW;
-  public int hjX;
+  public String iXZ;
+  public String iYa;
+  public String iYb;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.bM(1, hjV);
-      paramVarArgs.bM(2, hjW);
-      paramVarArgs.bM(3, hjX);
+      if (iXZ != null) {
+        paramVarArgs.d(1, iXZ);
+      }
+      if (iYa != null) {
+        paramVarArgs.d(2, iYa);
+      }
+      if (iYb != null) {
+        paramVarArgs.d(3, iYb);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.bI(1, hjV) + 0 + a.a.a.a.bI(2, hjW) + a.a.a.a.bI(3, hjX);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
-        }
+      if (iXZ == null) {
+        break label289;
       }
-      return 0;
     }
-    if (paramInt == 3)
+    label289:
+    for (int i = a.a.a.b.b.a.e(1, iXZ) + 0;; i = 0)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      bb localbb = (bb)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      paramInt = i;
+      if (iYa != null) {
+        paramInt = i + a.a.a.b.b.a.e(2, iYa);
+      }
+      i = paramInt;
+      if (iYb != null) {
+        i = paramInt + a.a.a.b.b.a.e(3, iYb);
+      }
+      return i;
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
-      case 1: 
-        hjV = jMD.aVp();
-        return 0;
-      case 2: 
-        hjW = jMD.aVp();
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        bb localbb = (bb)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          iXZ = maU.readString();
+          return 0;
+        case 2: 
+          iYa = maU.readString();
+          return 0;
+        }
+        iYb = maU.readString();
         return 0;
       }
-      hjX = jMD.aVp();
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

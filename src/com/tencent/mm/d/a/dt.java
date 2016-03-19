@@ -1,36 +1,30 @@
 package com.tencent.mm.d.a;
 
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.storage.ar;
+import com.tencent.mm.sdk.c.b;
 
 public final class dt
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azO = new a();
-  public b azP = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a axF = new a();
+  public b axG = new b();
   
   public dt()
   {
-    id = "GetStaticMap";
-    hXT = atO;
+    id = "ExtVoiceFileNameToMsgId";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public ar aub;
-    public ImageView azQ;
-    public ImageView azR;
-    public ProgressBar azS;
-    public int azT;
-    public int h;
-    public int w;
+    public String anC;
   }
   
-  public static final class b {}
+  public static final class b
+  {
+    public long avg = 0L;
+  }
 }
 
 /* Location:

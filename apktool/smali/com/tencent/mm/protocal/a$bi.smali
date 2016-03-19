@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$bi;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 1340
-    const-string/jumbo v0, "nfcGetInfo"
+    .line 1314
+    const-string/jumbo v0, "getTransferMoneyRequest"
 
-    const-string/jumbo v1, "nfcGetInfo"
+    const-string/jumbo v1, "get_transfer_money_request"
 
-    const/16 v2, 0x94
+    const/16 v2, 0x4a
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 1341
+    .line 1315
     return-void
 .end method

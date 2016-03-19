@@ -1,7 +1,7 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class WXTextObject
   implements WXMediaMessage.b
@@ -24,7 +24,7 @@ public class WXTextObject
   {
     if ((text == null) || (text.length() == 0) || (text.length() > 10240))
     {
-      t.e("!44@/B4Tb64lLpKTQHlmUvaQNfesKh/fmod7zG0Z1fkch64=", "checkArgs fail, text is invalid");
+      u.e("!44@/B4Tb64lLpKTQHlmUvaQNfesKh/fmod7zG0Z1fkch64=", "checkArgs fail, text is invalid");
       return false;
     }
     return true;

@@ -16,51 +16,53 @@
 
 
 # instance fields
-.field public bUr:Ljava/lang/String;
+.field public cXo:I
 
-.field public cBN:I
+.field public cln:Ljava/lang/String;
 
-.field private gf:[I
+.field private euc:Z
 
-.field private iMT:Lcom/tencent/mm/ui/base/preference/Preference$a;
+.field private fn:[I
 
-.field private iMU:I
+.field private fyV:Ljava/lang/CharSequence;
 
-.field private iMV:I
+.field private kMh:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
-.field private iMW:Ljava/lang/CharSequence;
+.field private kMi:I
 
-.field private iMX:Ljava/lang/String;
+.field private kMj:I
 
-.field private iMY:Z
+.field private kMk:I
 
-.field iMZ:Z
+.field private kMl:Ljava/lang/String;
 
-.field private iNa:Z
+.field kMm:Z
 
-.field public iNb:Z
+.field private kMn:Z
 
-.field iNc:Ljava/lang/String;
+.field public kMo:Z
 
-.field private iNd:Ljava/lang/Object;
+.field kMp:Ljava/lang/String;
 
-.field private iNe:Z
+.field private kMq:Ljava/lang/Object;
 
-.field private iNf:Z
+.field private kMr:Z
 
-.field private iNg:I
+.field private kMs:Z
 
-.field iNh:I
+.field kMt:I
 
-.field private iNi:Z
+.field kMu:I
 
-.field private iNj:Ljava/util/List;
+.field private kMv:Z
 
-.field private lg:Ljava/lang/CharSequence;
+.field private kMw:Ljava/util/List;
 
-.field public lm:I
+.field private km:Ljava/lang/CharSequence;
 
-.field public lq:Landroid/graphics/drawable/Drawable;
+.field public kr:I
+
+.field public kv:Landroid/graphics/drawable/Drawable;
 
 .field public final mContext:Landroid/content/Context;
 
@@ -70,12 +72,12 @@
     .locals 1
 
     .prologue
-    .line 293
+    .line 300
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/base/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 294
+    .line 301
     return-void
 .end method
 
@@ -83,12 +85,12 @@
     .locals 1
 
     .prologue
-    .line 283
+    .line 290
     const v0, 0x101008e
 
     invoke-direct {p0, p1, p2, v0}, Lcom/tencent/mm/ui/base/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 284
+    .line 291
     return-void
 .end method
 
@@ -102,66 +104,60 @@
 
     const/4 v4, 0x1
 
-    .line 209
+    .line 207
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 78
+    .line 75
     new-array v0, v6, [I
 
-    sget v1, Lcom/tencent/mm/a$d;->title:I
+    fill-array-data v0, :array_0
 
-    aput v1, v0, v5
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->fn:[I
 
-    sget v1, Lcom/tencent/mm/a$d;->summary:I
-
-    aput v1, v0, v4
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->gf:[I
-
-    .line 91
+    .line 88
     const v0, 0x7fffffff
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMU:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMi:I
 
-    .line 104
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMY:Z
+    .line 102
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->euc:Z
+
+    .line 103
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMm:Z
 
     .line 105
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMZ:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMo:Z
 
-    .line 107
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNb:Z
+    .line 109
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMr:Z
 
-    .line 111
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNe:Z
-
-    .line 112
+    .line 110
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cBN:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cXo:I
+
+    .line 115
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMs:Z
 
     .line 117
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNf:Z
+    const v0, 0x7f0a05d6
+
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
 
     .line 119
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference:I
+    iput-boolean v5, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMv:Z
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNg:I
-
-    .line 121
-    iput-boolean v5, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNi:Z
-
-    .line 210
+    .line 208
     iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    .line 212
-    sget-object v0, Lcom/tencent/mm/a$p;->Preference:[I
+    .line 210
+    sget-object v0, Lcom/tencent/mm/R$b;->Preference:[I
 
     invoke-virtual {p1, p2, v0, p3, v5}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
     move-result-object v1
 
-    .line 213
+    .line 211
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->getIndexCount()I
 
     move-result v0
@@ -169,239 +165,274 @@
     :goto_0
     if-ltz v0, :cond_e
 
-    .line 214
+    .line 212
     invoke-virtual {v1, v0}, Landroid/content/res/TypedArray;->getIndex(I)I
 
     move-result v2
 
-    .line 215
-    const/16 v3, 0xd
+    .line 213
+    const/4 v3, 0x6
 
     if-ne v2, v3, :cond_1
 
-    .line 216
+    .line 214
     invoke-virtual {v1, v2, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lm:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kr:I
 
-    .line 213
+    .line 211
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 217
+    .line 215
     :cond_1
-    const/4 v3, 0x5
+    const/4 v3, 0x7
 
     if-ne v2, v3, :cond_2
 
-    .line 218
+    .line 216
     invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->bUr:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 219
+    .line 217
     :cond_2
-    const/16 v3, 0xc
+    if-nez v2, :cond_3
 
-    if-ne v2, v3, :cond_3
-
-    .line 220
+    .line 218
     invoke-virtual {v1, v2, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v3
 
-    iput v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMV:I
+    iput v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMj:I
 
-    .line 221
+    .line 219
     invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lg:Ljava/lang/CharSequence;
+    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->km:Ljava/lang/CharSequence;
+
+    .line 220
+    iget v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMj:I
+
+    if-eqz v2, :cond_0
+
+    .line 221
+    iget v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMj:I
+
+    invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->km:Ljava/lang/CharSequence;
 
     goto :goto_1
 
-    .line 222
+    .line 223
     :cond_3
-    const/4 v3, 0x4
+    const/4 v3, 0x5
 
     if-ne v2, v3, :cond_4
 
-    .line 223
+    .line 224
     invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->fyV:Ljava/lang/CharSequence;
+
+    .line 225
+    invoke-virtual {v1, v2, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
+
+    move-result v2
+
+    iput v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMk:I
+
+    .line 226
+    iget v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMk:I
+
+    if-eqz v2, :cond_0
+
+    .line 227
+    iget v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMk:I
+
+    invoke-virtual {p1, v2}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMW:Ljava/lang/CharSequence;
+    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->fyV:Ljava/lang/CharSequence;
 
     goto :goto_1
 
-    .line 224
+    .line 229
     :cond_4
-    const/4 v3, 0x6
+    const/16 v3, 0x8
 
     if-ne v2, v3, :cond_5
 
-    .line 225
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMU:I
+    .line 230
+    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMi:I
 
     invoke-virtual {v1, v2, v3}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMU:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMi:I
 
     goto :goto_1
 
-    .line 226
+    .line 231
     :cond_5
-    if-ne v2, v4, :cond_6
+    if-ne v2, v6, :cond_6
 
-    .line 227
+    .line 232
     invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMX:Ljava/lang/String;
+    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMl:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 228
+    .line 233
     :cond_6
-    if-ne v2, v6, :cond_7
+    const/4 v3, 0x3
 
-    .line 229
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNg:I
+    if-ne v2, v3, :cond_7
+
+    .line 234
+    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
 
     invoke-virtual {v1, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNg:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
 
     goto :goto_1
 
-    .line 230
+    .line 235
     :cond_7
-    const/4 v3, 0x7
+    const/16 v3, 0x9
 
     if-ne v2, v3, :cond_8
 
-    .line 231
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNh:I
+    .line 236
+    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMu:I
 
     invoke-virtual {v1, v2, v3}, Landroid/content/res/TypedArray;->getResourceId(II)I
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNh:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMu:I
 
     goto :goto_1
 
-    .line 232
+    .line 237
     :cond_8
-    if-nez v2, :cond_9
+    if-ne v2, v4, :cond_9
 
-    .line 233
+    .line 238
     invoke-virtual {v1, v2, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMY:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->euc:Z
 
     goto :goto_1
 
-    .line 234
+    .line 239
     :cond_9
-    const/16 v3, 0x8
+    const/16 v3, 0xa
 
     if-ne v2, v3, :cond_a
 
-    .line 235
+    .line 240
     invoke-virtual {v1, v2, v4}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMZ:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMm:Z
 
-    goto :goto_1
+    goto/16 :goto_1
 
-    .line 236
+    .line 241
     :cond_a
-    const/4 v3, 0x3
+    const/4 v3, 0x4
 
     if-ne v2, v3, :cond_b
 
-    .line 237
-    iget-boolean v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNb:Z
+    .line 242
+    iget-boolean v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMo:Z
 
     invoke-virtual {v1, v2, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNb:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMo:Z
 
-    goto :goto_1
+    goto/16 :goto_1
 
-    .line 238
+    .line 243
     :cond_b
-    const/16 v3, 0x9
+    const/16 v3, 0xb
 
     if-ne v2, v3, :cond_c
 
-    .line 239
+    .line 244
     invoke-virtual {v1, v2}, Landroid/content/res/TypedArray;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNc:Ljava/lang/String;
-
-    goto :goto_1
-
-    .line 240
-    :cond_c
-    const/16 v3, 0xa
-
-    if-ne v2, v3, :cond_d
-
-    .line 241
-    const/4 v2, 0x0
-
-    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNd:Ljava/lang/Object;
+    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMp:Ljava/lang/String;
 
     goto/16 :goto_1
 
-    .line 242
+    .line 245
+    :cond_c
+    const/16 v3, 0xc
+
+    if-ne v2, v3, :cond_d
+
+    .line 246
+    const/4 v2, 0x0
+
+    iput-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMq:Ljava/lang/Object;
+
+    goto/16 :goto_1
+
+    .line 247
     :cond_d
-    const/16 v3, 0xb
+    const/16 v3, 0xd
 
     if-ne v2, v3, :cond_0
 
-    .line 243
-    iget-boolean v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNf:Z
+    .line 248
+    iget-boolean v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMs:Z
 
     invoke-virtual {v1, v2, v3}, Landroid/content/res/TypedArray;->getBoolean(IZ)Z
 
     move-result v2
 
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNf:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMs:Z
 
     goto/16 :goto_1
 
-    .line 246
+    .line 251
     :cond_e
     invoke-virtual {v1}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 248
+    .line 253
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -418,72 +449,37 @@
 
     if-nez v0, :cond_f
 
-    .line 250
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNi:Z
-
-    .line 253
-    :cond_f
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->gf:[I
-
-    invoke-virtual {p1, p2, v0}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
-
-    move-result-object v0
-
-    .line 254
-    invoke-virtual {v0, v5, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v1
-
     .line 255
-    if-eqz v1, :cond_10
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMv:Z
 
-    .line 256
-    invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/base/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
-
-    .line 258
-    :cond_10
-    invoke-virtual {v0, v4, v5}, Landroid/content/res/TypedArray;->getResourceId(II)I
-
-    move-result v1
-
-    .line 259
-    if-eqz v1, :cond_11
-
-    .line 260
-    invoke-virtual {p1, v1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/base/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
-
-    .line 262
-    :cond_11
-    invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
-
-    .line 264
+    .line 271
+    :cond_f
     return-void
+
+    .line 75
+    :array_0
+    .array-data 4
+        0x7f010016
+        0x7f010054
+    .end array-data
 .end method
 
-.method private e(Landroid/view/View;Z)V
+.method private d(Landroid/view/View;Z)V
     .locals 2
 
     .prologue
-    .line 541
+    .line 547
     invoke-virtual {p1, p2}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 543
+    .line 549
     instance-of v0, p1, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_0
 
-    .line 544
+    .line 550
     check-cast p1, Landroid/view/ViewGroup;
 
-    .line 545
+    .line 551
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getChildCount()I
 
     move-result v0
@@ -493,19 +489,19 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 546
+    .line 552
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    invoke-direct {p0, v1, p2}, Lcom/tencent/mm/ui/base/preference/Preference;->e(Landroid/view/View;Z)V
+    invoke-direct {p0, v1, p2}, Lcom/tencent/mm/ui/base/preference/Preference;->d(Landroid/view/View;Z)V
 
-    .line 545
+    .line 551
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_0
 
-    .line 549
+    .line 555
     :cond_0
     return-void
 .end method
@@ -516,17 +512,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1009
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNj:Ljava/util/List;
+    .line 1037
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMw:Ljava/util/List;
 
-    .line 1011
+    .line 1039
     if-nez v4, :cond_1
 
-    .line 1019
+    .line 1047
     :cond_0
     return-void
 
-    .line 1015
+    .line 1043
     :cond_1
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -534,18 +530,18 @@
 
     move v3, v2
 
-    .line 1016
+    .line 1044
     :goto_0
     if-ge v3, v5, :cond_0
 
-    .line 1017
+    .line 1045
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/ui/base/preference/Preference;
 
-    iget-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->iNe:Z
+    iget-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMr:Z
 
     if-ne v1, p1, :cond_2
 
@@ -554,7 +550,7 @@
     const/4 v1, 0x1
 
     :goto_1
-    iput-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->iNe:Z
+    iput-boolean v1, v0, Lcom/tencent/mm/ui/base/preference/Preference;->kMr:Z
 
     invoke-direct {v0}, Lcom/tencent/mm/ui/base/preference/Preference;->shouldDisableDependents()Z
 
@@ -564,7 +560,7 @@
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/preference/Preference;->notifyChanged()V
 
-    .line 1016
+    .line 1044
     :cond_2
     add-int/lit8 v0, v3, 0x1
 
@@ -575,7 +571,7 @@
     :cond_3
     move v1, v2
 
-    .line 1017
+    .line 1045
     goto :goto_1
 .end method
 
@@ -583,7 +579,7 @@
     .locals 1
 
     .prologue
-    .line 1047
+    .line 1075
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/Preference;->isEnabled()Z
 
     move-result v0
@@ -607,10 +603,10 @@
     .locals 0
 
     .prologue
-    .line 891
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMT:Lcom/tencent/mm/ui/base/preference/Preference$a;
+    .line 897
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMh:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
-    .line 892
+    .line 898
     return-void
 .end method
 
@@ -618,8 +614,8 @@
     .locals 1
 
     .prologue
-    .line 880
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMT:Lcom/tencent/mm/ui/base/preference/Preference$a;
+    .line 886
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMh:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
     if-nez v0, :cond_0
 
@@ -629,7 +625,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMT:Lcom/tencent/mm/ui/base/preference/Preference$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMh:Lcom/tencent/mm/ui/base/preference/Preference$a;
 
     invoke-interface {v0, p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference$a;->a(Lcom/tencent/mm/ui/base/preference/Preference;Ljava/lang/Object;)Z
 
@@ -646,25 +642,25 @@
 
     const v1, 0x7fffffff
 
-    .line 73
+    .line 70
     check-cast p1, Lcom/tencent/mm/ui/base/preference/Preference;
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMU:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMi:I
 
     if-ne v0, v1, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMU:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMi:I
 
     if-ne v0, v1, :cond_1
 
-    iget v0, p1, Lcom/tencent/mm/ui/base/preference/Preference;->iMU:I
+    iget v0, p1, Lcom/tencent/mm/ui/base/preference/Preference;->kMi:I
 
     if-eq v0, v1, :cond_1
 
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMU:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMi:I
 
-    iget v1, p1, Lcom/tencent/mm/ui/base/preference/Preference;->iMU:I
+    iget v1, p1, Lcom/tencent/mm/ui/base/preference/Preference;->kMi:I
 
     sub-int/2addr v0, v1
 
@@ -672,7 +668,7 @@
     return v0
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lg:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->km:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_2
 
@@ -681,7 +677,7 @@
     goto :goto_0
 
     :cond_2
-    iget-object v0, p1, Lcom/tencent/mm/ui/base/preference/Preference;->lg:Ljava/lang/CharSequence;
+    iget-object v0, p1, Lcom/tencent/mm/ui/base/preference/Preference;->km:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_3
 
@@ -690,9 +686,9 @@
     goto :goto_0
 
     :cond_3
-    iget-object v6, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lg:Ljava/lang/CharSequence;
+    iget-object v6, p0, Lcom/tencent/mm/ui/base/preference/Preference;->km:Ljava/lang/CharSequence;
 
-    iget-object v7, p1, Lcom/tencent/mm/ui/base/preference/Preference;->lg:Ljava/lang/CharSequence;
+    iget-object v7, p1, Lcom/tencent/mm/ui/base/preference/Preference;->km:Ljava/lang/CharSequence;
 
     invoke-interface {v6}, Ljava/lang/CharSequence;->length()I
 
@@ -758,22 +754,12 @@
     goto :goto_2
 .end method
 
-.method public getLayoutResource()I
-    .locals 1
-
-    .prologue
-    .line 400
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNg:I
-
-    return v0
-.end method
-
 .method public getSummary()Ljava/lang/CharSequence;
     .locals 1
 
     .prologue
-    .line 680
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMW:Ljava/lang/CharSequence;
+    .line 686
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->fyV:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
@@ -782,8 +768,8 @@
     .locals 1
 
     .prologue
-    .line 629
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lg:Ljava/lang/CharSequence;
+    .line 635
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->km:Ljava/lang/CharSequence;
 
     return-object v0
 .end method
@@ -792,19 +778,19 @@
     .locals 0
 
     .prologue
-    .line 446
+    .line 453
     if-nez p1, :cond_0
 
-    .line 447
+    .line 454
     invoke-virtual {p0, p2}, Lcom/tencent/mm/ui/base/preference/Preference;->onCreateView(Landroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object p1
 
-    .line 449
+    .line 456
     :cond_0
     invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference;->onBindView(Landroid/view/View;)V
 
-    .line 450
+    .line 457
     return-object p1
 .end method
 
@@ -812,12 +798,12 @@
     .locals 1
 
     .prologue
-    .line 731
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMY:Z
+    .line 737
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->euc:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNe:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMr:Z
 
     if-eqz v0, :cond_0
 
@@ -836,7 +822,7 @@
     .locals 0
 
     .prologue
-    .line 984
+    .line 1012
     return-void
 .end method
 
@@ -848,7 +834,7 @@
 
     const/16 v2, 0x8
 
-    .line 493
+    .line 501
     const v0, 0x1020016
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
@@ -857,17 +843,17 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 494
+    .line 502
     if-eqz v0, :cond_0
 
-    .line 495
+    .line 503
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/Preference;->getTitle()Ljava/lang/CharSequence;
 
     move-result-object v3
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 498
+    .line 506
     :cond_0
     const v0, 0x1020010
 
@@ -877,32 +863,32 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 499
+    .line 507
     if-eqz v0, :cond_2
 
-    .line 500
+    .line 508
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/Preference;->getSummary()Ljava/lang/CharSequence;
 
     move-result-object v3
 
-    .line 501
+    .line 509
     invoke-static {v3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v3
 
     if-nez v3, :cond_8
 
-    .line 502
+    .line 510
     invoke-virtual {v0}, Landroid/widget/TextView;->getVisibility()I
 
     move-result v3
 
     if-eqz v3, :cond_1
 
-    .line 503
+    .line 511
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 505
+    .line 513
     :cond_1
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/Preference;->getSummary()Ljava/lang/CharSequence;
 
@@ -910,19 +896,19 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 506
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cBN:I
+    .line 514
+    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cXo:I
 
     const/4 v4, -0x1
 
     if-eq v3, v4, :cond_2
 
-    .line 507
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cBN:I
+    .line 515
+    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cXo:I
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 516
+    .line 524
     :cond_2
     :goto_0
     const v0, 0x1020006
@@ -933,74 +919,77 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    .line 518
+    .line 526
     if-eqz v0, :cond_6
 
-    .line 519
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lm:I
+    .line 527
+    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kr:I
 
     if-nez v3, :cond_3
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lq:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kv:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_5
 
-    .line 521
+    .line 528
     :cond_3
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lq:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kv:Landroid/graphics/drawable/Drawable;
 
     if-nez v3, :cond_4
 
-    .line 522
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lm:I
+    .line 529
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    invoke-static {v3}, Lcom/tencent/mm/ap/a;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+    invoke-virtual {v3}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lq:Landroid/graphics/drawable/Drawable;
+    iget v4, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kr:I
 
-    .line 524
+    invoke-virtual {v3, v4}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kv:Landroid/graphics/drawable/Drawable;
+
+    .line 531
     :cond_4
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lq:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kv:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_5
 
-    .line 525
-    invoke-static {v0}, Lcom/tencent/mm/svg/frame/d/d;->d(Landroid/widget/ImageView;)V
-
-    .line 526
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lq:Landroid/graphics/drawable/Drawable;
+    .line 532
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kv:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 529
+    .line 535
     :cond_5
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lq:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kv:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_9
 
     :goto_1
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 532
+    .line 538
     :cond_6
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNf:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMs:Z
 
     if-eqz v0, :cond_7
 
-    .line 533
+    .line 539
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/Preference;->isEnabled()Z
 
     move-result v0
 
-    invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/base/preference/Preference;->e(Landroid/view/View;Z)V
+    invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/base/preference/Preference;->d(Landroid/view/View;Z)V
 
-    .line 535
+    .line 541
     :cond_7
     return-void
 
-    .line 510
+    .line 518
     :cond_8
     invoke-virtual {v0}, Landroid/widget/TextView;->getVisibility()I
 
@@ -1008,7 +997,7 @@
 
     if-eq v3, v2, :cond_2
 
-    .line 511
+    .line 519
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_0
@@ -1016,7 +1005,7 @@
     :cond_9
     move v1, v2
 
-    .line 529
+    .line 535
     goto :goto_1
 .end method
 
@@ -1024,58 +1013,54 @@
     .locals 4
 
     .prologue
-    .line 466
+    .line 474
     iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    const-string/jumbo v1, "layout_inflater"
-
-    invoke-virtual {v0, v1}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/view/LayoutInflater;
-
-    .line 468
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNg:I
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v2
-
-    .line 470
-    const v1, 0x1020018
-
-    invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-static {v0}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v1
 
-    check-cast v1, Landroid/view/ViewGroup;
+    .line 476
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
 
-    .line 471
-    if-eqz v1, :cond_0
+    const/4 v2, 0x0
 
-    .line 472
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNh:I
+    invoke-virtual {v1, v0, p1, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v2
+
+    .line 478
+    const v0, 0x1020018
+
+    invoke-virtual {v2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/view/ViewGroup;
+
+    .line 479
+    if-eqz v0, :cond_0
+
+    .line 480
+    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMu:I
 
     if-eqz v3, :cond_1
 
-    .line 473
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNh:I
+    .line 481
+    iget v3, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMu:I
 
-    invoke-virtual {v0, v3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-virtual {v1, v3, v0}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
-    .line 478
+    .line 486
     :cond_0
     :goto_0
     return-object v2
 
-    .line 475
+    .line 483
     :cond_1
-    const/16 v0, 0x8
+    const/16 v1, 0x8
 
-    invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setVisibility(I)V
+    invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
     goto :goto_0
 .end method
@@ -1084,25 +1069,25 @@
     .locals 1
 
     .prologue
-    .line 715
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMY:Z
+    .line 721
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->euc:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 716
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMY:Z
+    .line 722
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->euc:Z
 
-    .line 719
+    .line 725
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/preference/Preference;->shouldDisableDependents()Z
 
     move-result v0
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/ui/base/preference/Preference;->notifyDependencyChange(Z)V
 
-    .line 721
+    .line 727
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/Preference;->notifyChanged()V
 
-    .line 723
+    .line 729
     :cond_0
     return-void
 .end method
@@ -1113,15 +1098,15 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 807
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->bUr:Ljava/lang/String;
+    .line 813
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
 
-    .line 809
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNa:Z
+    .line 815
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMn:Z
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->bUr:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1134,8 +1119,8 @@
     :goto_0
     if-nez v0, :cond_2
 
-    .line 810
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->bUr:Ljava/lang/String;
+    .line 816
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->cln:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
@@ -1147,17 +1132,17 @@
 
     throw v0
 
-    .line 809
+    .line 815
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 810
+    .line 816
     :cond_1
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNa:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMn:Z
 
-    .line 812
+    .line 818
     :cond_2
     return-void
 .end method
@@ -1166,21 +1151,21 @@
     .locals 1
 
     .prologue
-    .line 386
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNg:I
+    .line 393
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
 
     if-eq p1, v0, :cond_0
 
-    .line 388
+    .line 395
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNi:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMv:Z
 
-    .line 391
+    .line 398
     :cond_0
-    iput p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNg:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
 
-    .line 392
+    .line 399
     return-void
 .end method
 
@@ -1188,18 +1173,18 @@
     .locals 1
 
     .prologue
-    .line 741
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMZ:Z
+    .line 747
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMm:Z
 
     if-eq v0, p1, :cond_0
 
-    .line 742
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMZ:Z
+    .line 748
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMm:Z
 
-    .line 743
+    .line 749
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/Preference;->notifyChanged()V
 
-    .line 745
+    .line 751
     :cond_0
     return-void
 .end method
@@ -1208,7 +1193,7 @@
     .locals 1
 
     .prologue
-    .line 704
+    .line 710
     iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1217,7 +1202,7 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/Preference;->setSummary(Ljava/lang/CharSequence;)V
 
-    .line 705
+    .line 711
     return-void
 .end method
 
@@ -1225,17 +1210,17 @@
     .locals 1
 
     .prologue
-    .line 690
+    .line 696
     if-nez p1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMW:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->fyV:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_1
 
     :cond_0
     if-eqz p1, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMW:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->fyV:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1243,14 +1228,14 @@
 
     if-nez v0, :cond_2
 
-    .line 691
+    .line 697
     :cond_1
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMW:Ljava/lang/CharSequence;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->fyV:Ljava/lang/CharSequence;
 
-    .line 692
+    .line 698
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/Preference;->notifyChanged()V
 
-    .line 694
+    .line 700
     :cond_2
     return-void
 .end method
@@ -1259,7 +1244,7 @@
     .locals 1
 
     .prologue
-    .line 607
+    .line 613
     iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
     invoke-virtual {v0, p1}, Landroid/content/Context;->getString(I)Ljava/lang/String;
@@ -1268,10 +1253,10 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/Preference;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 608
-    iput p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMV:I
+    .line 614
+    iput p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMj:I
 
-    .line 609
+    .line 615
     return-void
 .end method
 
@@ -1279,17 +1264,17 @@
     .locals 1
 
     .prologue
-    .line 592
+    .line 598
     if-nez p1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lg:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->km:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_1
 
     :cond_0
     if-eqz p1, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lg:Ljava/lang/CharSequence;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->km:Ljava/lang/CharSequence;
 
     invoke-virtual {p1, v0}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
@@ -1297,19 +1282,19 @@
 
     if-nez v0, :cond_2
 
-    .line 593
+    .line 599
     :cond_1
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iMV:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMj:I
 
-    .line 594
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lg:Ljava/lang/CharSequence;
+    .line 600
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->km:Ljava/lang/CharSequence;
 
-    .line 595
+    .line 601
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/Preference;->notifyChanged()V
 
-    .line 597
+    .line 603
     :cond_2
     return-void
 .end method
@@ -1318,21 +1303,21 @@
     .locals 1
 
     .prologue
-    .line 414
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNh:I
+    .line 421
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMu:I
 
     if-eq p1, v0, :cond_0
 
-    .line 416
+    .line 423
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNi:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMv:Z
 
-    .line 418
+    .line 425
     :cond_0
-    iput p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->iNh:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMu:I
 
-    .line 419
+    .line 426
     return-void
 .end method
 
@@ -1342,7 +1327,7 @@
     .prologue
     const/16 v3, 0x20
 
-    .line 1078
+    .line 1106
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

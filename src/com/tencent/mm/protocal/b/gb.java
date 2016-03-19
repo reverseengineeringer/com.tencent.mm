@@ -1,69 +1,101 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
+
 public final class gb
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public String hqo;
-  public String hqp;
-  public String hqq;
-  public int hqr;
-  public int hqs;
-  public String hqt;
-  public int hqu;
+  public String asP;
+  public String eiq;
+  public String jdC;
+  public String jdD;
+  public int jdE;
+  public String jdF;
+  public int jdG;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hqo != null) {
-        paramVarArgs.U(1, hqo);
+      if (asP == null) {
+        throw new b("Not all required fields were included: Title");
       }
-      if (hqp != null) {
-        paramVarArgs.U(2, hqp);
+      if (eiq == null) {
+        throw new b("Not all required fields were included: Url");
       }
-      if (hqq != null) {
-        paramVarArgs.U(3, hqq);
+      if (jdC == null) {
+        throw new b("Not all required fields were included: Position");
       }
-      paramVarArgs.bM(4, hqr);
-      paramVarArgs.bM(5, hqs);
-      if (hqt != null) {
-        paramVarArgs.U(6, hqt);
+      if (jdD == null) {
+        throw new b("Not all required fields were included: DetailInfo");
       }
-      paramVarArgs.bM(7, hqu);
+      if (asP != null) {
+        paramVarArgs.d(1, asP);
+      }
+      if (eiq != null) {
+        paramVarArgs.d(2, eiq);
+      }
+      if (jdC != null) {
+        paramVarArgs.d(3, jdC);
+      }
+      if (jdD != null) {
+        paramVarArgs.d(4, jdD);
+      }
+      paramVarArgs.ci(5, jdE);
+      if (jdF != null) {
+        paramVarArgs.d(6, jdF);
+      }
+      paramVarArgs.ci(7, jdG);
       return 0;
     }
     if (paramInt == 1) {
-      if (hqo == null) {
-        break label461;
+      if (asP == null) {
+        break label613;
       }
     }
-    label461:
-    for (int i = a.a.a.b.b.a.T(1, hqo) + 0;; i = 0)
+    label613:
+    for (int i = a.a.a.b.b.a.e(1, asP) + 0;; i = 0)
     {
       paramInt = i;
-      if (hqp != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, hqp);
+      if (eiq != null) {
+        paramInt = i + a.a.a.b.b.a.e(2, eiq);
       }
       i = paramInt;
-      if (hqq != null) {
-        i = paramInt + a.a.a.b.b.a.T(3, hqq);
+      if (jdC != null) {
+        i = paramInt + a.a.a.b.b.a.e(3, jdC);
       }
-      i = i + a.a.a.a.bI(4, hqr) + a.a.a.a.bI(5, hqs);
       paramInt = i;
-      if (hqt != null) {
-        paramInt = i + a.a.a.b.b.a.T(6, hqt);
+      if (jdD != null) {
+        paramInt = i + a.a.a.b.b.a.e(4, jdD);
       }
-      return paramInt + a.a.a.a.bI(7, hqu);
+      i = paramInt + a.a.a.a.cg(5, jdE);
+      paramInt = i;
+      if (jdF != null) {
+        paramInt = i + a.a.a.b.b.a.e(6, jdF);
+      }
+      return paramInt + a.a.a.a.cg(7, jdG);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
-        break;
+        if (asP == null) {
+          throw new b("Not all required fields were included: Title");
+        }
+        if (eiq == null) {
+          throw new b("Not all required fields were included: Url");
+        }
+        if (jdC == null) {
+          throw new b("Not all required fields were included: Position");
+        }
+        if (jdD != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: DetailInfo");
       }
       if (paramInt == 3)
       {
@@ -74,25 +106,25 @@ public final class gb
         default: 
           return -1;
         case 1: 
-          hqo = jMD.readString();
+          asP = maU.readString();
           return 0;
         case 2: 
-          hqp = jMD.readString();
+          eiq = maU.readString();
           return 0;
         case 3: 
-          hqq = jMD.readString();
+          jdC = maU.readString();
           return 0;
         case 4: 
-          hqr = jMD.aVp();
+          jdD = maU.readString();
           return 0;
         case 5: 
-          hqs = jMD.aVp();
+          jdE = maU.jC();
           return 0;
         case 6: 
-          hqt = jMD.readString();
+          jdF = maU.readString();
           return 0;
         }
-        hqu = jMD.aVp();
+        jdG = maU.jC();
         return 0;
       }
       return -1;

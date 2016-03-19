@@ -2,53 +2,59 @@ package com.tencent.mm.pluginsdk.ui.applet;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
 import android.view.ViewGroup;
-import com.tencent.mm.a.k;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public class ContactListCustomPreference
   extends Preference
 {
   int background = -1;
-  View.OnClickListener dhS;
-  private View gDW;
-  private final View.OnTouchListener gSV = new ac(this);
+  View.OnClickListener fSm;
+  private final View.OnTouchListener iJe = new View.OnTouchListener()
+  {
+    public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
+    {
+      return true;
+    }
+  };
+  private View inG;
   
   public ContactListCustomPreference(Context paramContext)
   {
     super(paramContext);
-    setLayoutResource(a.k.mm_preference_contact_list_custom);
+    setLayoutResource(2131363019);
   }
   
   public ContactListCustomPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    setLayoutResource(a.k.mm_preference_contact_list_custom);
+    setLayoutResource(2131363019);
   }
   
   public ContactListCustomPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference_contact_list_custom);
+    setLayoutResource(2131363019);
   }
   
   public final void onBindView(View paramView)
   {
     ViewGroup localViewGroup = (ViewGroup)paramView;
-    if ((gDW != null) && (gDW != null))
+    if ((inG != null) && (inG != null))
     {
       localViewGroup.removeAllViews();
-      if (gDW.getParent() != null) {
-        ((ViewGroup)gDW.getParent()).removeAllViews();
+      if (inG.getParent() != null) {
+        ((ViewGroup)inG.getParent()).removeAllViews();
       }
-      localViewGroup.addView(gDW);
-      if (dhS == null) {
+      localViewGroup.addView(inG);
+      if (fSm == null) {
         break label85;
       }
-      localViewGroup.setOnClickListener(dhS);
+      localViewGroup.setOnClickListener(fSm);
     }
     for (;;)
     {
@@ -57,7 +63,7 @@ public class ContactListCustomPreference
       }
       return;
       label85:
-      localViewGroup.setOnTouchListener(gSV);
+      localViewGroup.setOnTouchListener(iJe);
     }
   }
   
@@ -66,7 +72,7 @@ public class ContactListCustomPreference
     if (paramView == null) {
       return;
     }
-    gDW = paramView;
+    inG = paramView;
   }
 }
 

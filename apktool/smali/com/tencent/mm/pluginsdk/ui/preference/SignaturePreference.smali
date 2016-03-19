@@ -23,7 +23,7 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 23
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference:I
+    const v0, 0x7f0a05d6
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/SignaturePreference;->setLayoutResource(I)V
 
@@ -45,7 +45,7 @@
     move-result-object v1
 
     .line 30
-    sget v0, Lcom/tencent/mm/a$i;->content:I
+    const v0, 0x7f0700c1
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -62,7 +62,7 @@
     .line 34
     iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    sget v3, Lcom/tencent/mm/a$k;->mm_preference_content_signature:I
+    const v3, 0x7f0a04e7
 
     invoke-static {v2, v3, v0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 

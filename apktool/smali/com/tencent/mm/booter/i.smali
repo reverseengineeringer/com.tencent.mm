@@ -1,192 +1,149 @@
-.class final Lcom/tencent/mm/booter/i;
+.class public final Lcom/tencent/mm/booter/i;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/aj$a;
-
-
-# instance fields
-.field final synthetic bcD:Lcom/tencent/mm/booter/h;
-
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/booter/h;)V
-    .locals 0
+.method public static run()V
+    .locals 9
 
     .prologue
-    .line 103
-    iput-object p1, p0, Lcom/tencent/mm/booter/i;->bcD:Lcom/tencent/mm/booter/h;
+    const/16 v8, 0x1f
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v7, 0x14
 
-    return-void
-.end method
+    const/16 v6, 0x13
 
+    const/4 v1, 0x0
 
-# virtual methods
-.method public final lO()Z
-    .locals 5
+    .line 19
+    new-instance v2, Ljava/util/LinkedList;
 
-    .prologue
-    .line 108
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/booter/i;->bcD:Lcom/tencent/mm/booter/h;
+    invoke-direct {v2}, Ljava/util/LinkedList;-><init>()V
 
-    invoke-static {v0}, Lcom/tencent/mm/booter/h;->a(Lcom/tencent/mm/booter/h;)Landroid/media/MediaPlayer;
+    .line 21
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tu()Lcom/tencent/mm/storage/g;
 
     move-result-object v0
 
-    if-eqz v0, :cond_2
-
-    iget-object v0, p0, Lcom/tencent/mm/booter/i;->bcD:Lcom/tencent/mm/booter/h;
-
-    invoke-static {v0}, Lcom/tencent/mm/booter/h;->a(Lcom/tencent/mm/booter/h;)Landroid/media/MediaPlayer;
+    invoke-virtual {v0, v6}, Lcom/tencent/mm/storage/g;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->isPlaying()Z
+    check-cast v0, Ljava/lang/Integer;
 
-    move-result v0
+    check-cast v0, Ljava/lang/Integer;
 
-    if-eqz v0, :cond_2
-
-    .line 110
-    iget-object v0, p0, Lcom/tencent/mm/booter/i;->bcD:Lcom/tencent/mm/booter/h;
-
-    invoke-static {v0}, Lcom/tencent/mm/booter/h;->b(Lcom/tencent/mm/booter/h;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    monitor-enter v1
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 111
-    :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/booter/i;->bcD:Lcom/tencent/mm/booter/h;
-
-    invoke-static {v0}, Lcom/tencent/mm/booter/h;->a(Lcom/tencent/mm/booter/h;)Landroid/media/MediaPlayer;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/media/MediaPlayer;->getCurrentPosition()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    .line 112
-    iget-object v0, p0, Lcom/tencent/mm/booter/i;->bcD:Lcom/tencent/mm/booter/h;
-
-    iget-object v2, p0, Lcom/tencent/mm/booter/i;->bcD:Lcom/tencent/mm/booter/h;
-
-    invoke-static {v2}, Lcom/tencent/mm/booter/h;->a(Lcom/tencent/mm/booter/h;)Landroid/media/MediaPlayer;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/media/MediaPlayer;->getCurrentPosition()I
-
-    move-result v2
-
-    invoke-static {v0, v2}, Lcom/tencent/mm/booter/h;->a(Lcom/tencent/mm/booter/h;I)I
-
-    .line 114
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/booter/i;->bcD:Lcom/tencent/mm/booter/h;
-
-    invoke-static {v0}, Lcom/tencent/mm/booter/h;->c(Lcom/tencent/mm/booter/h;)Ljava/util/List;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v2
-
-    :cond_1
-    :goto_0
-    invoke-interface {v2}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_3
-
-    invoke-interface {v2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/model/al;
-
-    .line 115
-    if-eqz v0, :cond_1
-
-    .line 116
-    iget-object v3, p0, Lcom/tencent/mm/booter/i;->bcD:Lcom/tencent/mm/booter/h;
-
-    invoke-static {v3}, Lcom/tencent/mm/booter/h;->a(Lcom/tencent/mm/booter/h;)Landroid/media/MediaPlayer;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/media/MediaPlayer;->getCurrentPosition()I
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Integer;I)I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/tencent/mm/booter/i;->bcD:Lcom/tencent/mm/booter/h;
+    move v0, v1
 
-    invoke-static {v4}, Lcom/tencent/mm/booter/h;->a(Lcom/tencent/mm/booter/h;)Landroid/media/MediaPlayer;
+    .line 22
+    :goto_0
+    if-ge v0, v3, :cond_0
 
-    move-result-object v4
+    .line 23
+    new-instance v4, Lcom/tencent/mm/protocal/b/aas;
 
-    invoke-virtual {v4}, Landroid/media/MediaPlayer;->getDuration()I
+    invoke-direct {v4}, Lcom/tencent/mm/protocal/b/aas;-><init>()V
 
-    move-result v4
+    .line 24
+    iput v8, v4, Lcom/tencent/mm/protocal/b/aas;->fUk:I
 
-    invoke-interface {v0, v3, v4}, Lcom/tencent/mm/model/al;->A(II)V
+    .line 25
+    const-string/jumbo v5, "0"
+
+    iput-object v5, v4, Lcom/tencent/mm/protocal/b/aas;->fUt:Ljava/lang/String;
+
+    .line 26
+    invoke-virtual {v2, v4}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    .line 22
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 119
-    :catchall_0
-    move-exception v0
-
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
-
-    :try_start_2
-    throw v0
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-
-    .line 123
-    :catch_0
-    move-exception v0
-
-    .line 124
-    const-string/jumbo v1, "!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei"
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    .line 29
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tu()Lcom/tencent/mm/storage/g;
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v7}, Lcom/tencent/mm/storage/g;->get(I)Ljava/lang/Object;
 
-    .line 127
-    :cond_2
-    const/4 v0, 0x0
+    move-result-object v0
 
+    check-cast v0, Ljava/lang/Integer;
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Integer;I)I
+
+    move-result v3
+
+    move v0, v1
+
+    .line 30
     :goto_1
-    return v0
+    if-ge v0, v3, :cond_1
 
-    .line 119
-    :cond_3
-    :try_start_3
-    monitor-exit v1
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    .line 31
+    new-instance v4, Lcom/tencent/mm/protocal/b/aas;
 
-    .line 121
-    const/4 v0, 0x1
+    invoke-direct {v4}, Lcom/tencent/mm/protocal/b/aas;-><init>()V
+
+    .line 32
+    iput v8, v4, Lcom/tencent/mm/protocal/b/aas;->fUk:I
+
+    .line 33
+    const-string/jumbo v5, "1"
+
+    iput-object v5, v4, Lcom/tencent/mm/protocal/b/aas;->fUt:Ljava/lang/String;
+
+    .line 34
+    invoke-virtual {v2, v4}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
+
+    .line 30
+    add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
+
+    .line 37
+    :cond_1
+    invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_2
+
+    .line 38
+    invoke-static {v2}, Lcom/tencent/mm/model/bb;->a(Ljava/util/LinkedList;)V
+
+    .line 40
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tu()Lcom/tencent/mm/storage/g;
+
+    move-result-object v0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v6, v2}, Lcom/tencent/mm/storage/g;->set(ILjava/lang/Object;)V
+
+    .line 41
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tu()Lcom/tencent/mm/storage/g;
+
+    move-result-object v0
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v7, v1}, Lcom/tencent/mm/storage/g;->set(ILjava/lang/Object;)V
+
+    .line 43
+    :cond_2
+    return-void
 .end method

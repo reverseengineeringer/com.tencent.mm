@@ -1,75 +1,180 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.res.Resources;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.widget.CheckBox;
-import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.os.HandlerThread;
+import android.os.Looper;
 import android.widget.TextView;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.o;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.an.j;
+import com.tencent.mm.an.o;
+import com.tencent.mm.an.q.a;
+import com.tencent.mm.d.a.ke;
+import com.tencent.mm.d.a.ke.a;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.modelcdntran.e;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.ag;
+import com.tencent.mm.ui.base.g;
+import com.tencent.mm.ui.chatting.gallery.ImageGalleryUI;
+import com.tencent.mm.ui.chatting.gallery.ImageGalleryUI.5;
 
 public final class ds
-  extends RelativeLayout
+  extends com.tencent.mm.sdk.c.c
 {
-  private LayoutInflater dWD;
-  private int iVa;
+  Activity asX = null;
+  private a ldo = null;
   
-  public ds(LayoutInflater paramLayoutInflater, int paramInt)
+  public ds(a parama, Activity paramActivity)
   {
-    super(paramLayoutInflater.getContext());
-    dWD = paramLayoutInflater;
-    iVa = paramInt;
-    paramLayoutInflater = dWD.inflate(a.k.chatting_history_msg_tip_layout, null);
-    RelativeLayout.LayoutParams localLayoutParams = new RelativeLayout.LayoutParams(-1, -2);
-    paramLayoutInflater.setId(a.i.chatting_histroy_msg_tip);
-    localLayoutParams.setMargins(0, getResources().getDimensionPixelSize(a.g.NormalPadding), 0, getResources().getDimensionPixelSize(a.g.NormalPadding));
-    paramLayoutInflater.setVisibility(8);
-    addView(paramLayoutInflater, localLayoutParams);
-    paramLayoutInflater = new TextView(getContext(), null, a.o.ChattingUISplit);
-    paramLayoutInflater.setId(a.i.chatting_time_tv);
-    paramLayoutInflater.setTextSize(0, a.v(getContext(), a.g.SmallestTextSize));
-    localLayoutParams = new RelativeLayout.LayoutParams(-2, -2);
-    localLayoutParams.addRule(3, a.i.chatting_histroy_msg_tip);
-    localLayoutParams.addRule(14);
-    localLayoutParams.setMargins(0, getResources().getDimensionPixelSize(a.g.NormalPadding), 0, getResources().getDimensionPixelSize(a.g.NormalPadding));
-    addView(paramLayoutInflater, localLayoutParams);
-    paramLayoutInflater = (CheckBox)LayoutInflater.from(getContext()).inflate(a.k.mm_big_checkbox, this, false);
-    paramLayoutInflater.setId(a.i.chatting_checkbox);
-    paramInt = a.fromDPToPix(getContext(), 20);
-    localLayoutParams = new RelativeLayout.LayoutParams(paramInt, paramInt);
-    localLayoutParams.setMargins(0, getResources().getDimensionPixelSize(a.g.SmallPadding), getResources().getDimensionPixelSize(a.g.SmallPadding), 0);
-    localLayoutParams.addRule(3, a.i.chatting_time_tv);
-    localLayoutParams.addRule(11);
-    width = paramInt;
-    height = paramInt;
-    addView(paramLayoutInflater, localLayoutParams);
-    paramLayoutInflater = dWD.inflate(iVa, null);
-    int i = paramLayoutInflater.getId();
-    paramInt = i;
-    if (-1 == i)
-    {
-      t.v("!44@/B4Tb64lLpKwUcOR+EdWcg2fJDecFVGIxHkQgJMBNWM=", "content view has no id, use defaul id");
-      paramInt = a.i.chatting_content_area;
-      paramLayoutInflater.setId(a.i.chatting_content_area);
-    }
-    localLayoutParams = new RelativeLayout.LayoutParams(-1, -2);
-    localLayoutParams.addRule(3, a.i.chatting_time_tv);
-    localLayoutParams.addRule(0, a.i.chatting_checkbox);
-    addView(paramLayoutInflater, localLayoutParams);
-    paramLayoutInflater = new View(getContext());
-    paramLayoutInflater.setId(a.i.chatting_maskview);
-    paramLayoutInflater.setVisibility(8);
-    localLayoutParams = new RelativeLayout.LayoutParams(-1, -1);
-    localLayoutParams.addRule(6, paramInt);
-    localLayoutParams.addRule(8, paramInt);
-    addView(paramLayoutInflater, localLayoutParams);
+    super(0);
+    ldo = parama;
+    asX = paramActivity;
   }
+  
+  private static void ah(ag paramag)
+  {
+    paramag = o.jV(field_imgPath);
+    Object localObject;
+    if (paramag != null) {
+      localObject = com.tencent.mm.modelcdntran.c.a("downvideo", cfW, paramag.Ei(), paramag.getFileName());
+    }
+    try
+    {
+      e.xW().hk((String)localObject);
+      u.i("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", "ashutest::[oneliang][revokeMsgVideo] cancel result:%s", new Object[] { Boolean.valueOf(true) });
+      localObject = j.Ec();
+      ah.tE().c(cgA);
+      ((q.a)localObject).lz();
+      j.Ea().jK(paramag.getFileName());
+      return;
+    }
+    catch (Exception paramag)
+    {
+      u.printErrStackTrace("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", paramag, "[oneliang][revokeMsgVideo] chatting item video,cancel failure:%s", new Object[] { paramag.getMessage() });
+    }
+  }
+  
+  public final boolean a(com.tencent.mm.sdk.c.b paramb)
+  {
+    int i = 1;
+    Object localObject;
+    long l;
+    String str;
+    if ((ldo != null) && (paramb != null) && ((paramb instanceof ke)))
+    {
+      localObject = (ke)paramb;
+      l = aGE.avg;
+      str = aGE.aGF;
+      paramb = aGE.aGG;
+      if ((paramb != null) && (field_msgId > 0L)) {
+        break label590;
+      }
+      paramb = aGE.aGG;
+    }
+    label391:
+    label590:
+    for (;;)
+    {
+      if (paramb == null) {
+        u.e("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", "in callback msgInfo null");
+      }
+      boolean bool;
+      do
+      {
+        for (;;)
+        {
+          return false;
+          switch (field_type)
+          {
+          default: 
+            return false;
+          case 3: 
+            switch (3.ldq[ldo.ordinal()])
+            {
+            default: 
+              return false;
+            }
+            if ((paramb != null) && (field_msgId > 0L)) {
+              localObject = com.tencent.mm.modelcdntran.c.a("downimg", field_createTime, field_talker, field_msgId);
+            }
+            try
+            {
+              e.xW().hk((String)localObject);
+              u.i("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", "[oneliang][revokeMsgImage] cancel result:%s", new Object[] { Boolean.valueOf(true) });
+              ah.tE().cancel(109);
+              paramb = com.tencent.mm.ui.chatting.gallery.d.at(paramb);
+              com.tencent.mm.ab.n.Ap().c(bQc, l);
+              if ((asX != null) && ((asX instanceof ImageGalleryUI)))
+              {
+                paramb = (ImageGalleryUI)asX;
+                u.i("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", "[oneliang][revokeMsgImage] image gallery ui,msg id is:%s,downloadingImageMsgId: %s", new Object[] { Long.valueOf(l), Long.valueOf(avg) });
+                if (l == avg)
+                {
+                  g.a(asX, str, "", false, new DialogInterface.OnClickListener()
+                  {
+                    public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+                    {
+                      paramAnonymousDialogInterface.dismiss();
+                      asX.finish();
+                    }
+                  });
+                  return false;
+                }
+              }
+            }
+            catch (Exception paramb)
+            {
+              for (;;)
+              {
+                u.printErrStackTrace("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", paramb, "[oneliang][revokeMsgImage] cancel failure:%s", new Object[] { paramb.getMessage() });
+              }
+            }
+          }
+        }
+        localObject = ldo;
+        if (Looper.myLooper() != tvjVF.getLooper()) {
+          break;
+        }
+        bool = true;
+        u.v("!44@/B4Tb64lLpLvj7Df3Bvn5xYnbkX/ygtwaXm7+WPl0ys=", "ashutest::revoke msg, type %s, isWorkerThread %B", new Object[] { localObject, Boolean.valueOf(bool) });
+        switch (3.ldq[ldo.ordinal()])
+        {
+        default: 
+          return false;
+        case 2: 
+          ah(paramb);
+        }
+      } while (!(asX instanceof ImageGalleryUI));
+      localObject = (ImageGalleryUI)asX;
+      if ((lel != null) && (com.tencent.mm.ui.chatting.gallery.b.aj(paramb)) && (field_msgId == lel.bgo().field_msgId)) {}
+      while (i != 0)
+      {
+        i = ((ImageGalleryUI)localObject).getCurrentItem();
+        if (bgDlgp != null) {
+          bgDlgp.post(new ImageGalleryUI.5((ImageGalleryUI)localObject, i));
+        }
+        g.a(asX, str, "", false, new DialogInterface.OnClickListener()
+        {
+          public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+          {
+            paramAnonymousDialogInterface.dismiss();
+            asX.finish();
+          }
+        });
+        return false;
+        bool = false;
+        break label391;
+        i = 0;
+      }
+      ah(paramb);
+      return false;
+    }
+  }
+  
+  public static enum a {}
 }
 
 /* Location:

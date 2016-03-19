@@ -1,136 +1,152 @@
-.class final Lcom/tencent/mm/pluginsdk/model/f;
-.super Landroid/os/AsyncTask;
+.class public final Lcom/tencent/mm/pluginsdk/model/f;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic gKX:[Ljava/lang/String;
-
-.field final synthetic gKY:Lcom/tencent/mm/pluginsdk/model/e$a;
-
-.field final synthetic val$context:Landroid/content/Context;
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/pluginsdk/model/f$a;
+    }
+.end annotation
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Context;[Ljava/lang/String;Lcom/tencent/mm/pluginsdk/model/e$a;)V
-    .locals 0
+.method public static a(Landroid/content/Context;[Ljava/lang/String;Lcom/tencent/mm/pluginsdk/model/f$a;)V
+    .locals 2
 
     .prologue
-    .line 75
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/f;->val$context:Landroid/content/Context;
-
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/f;->gKX:[Ljava/lang/String;
-
-    iput-object p3, p0, Lcom/tencent/mm/pluginsdk/model/f;->gKY:Lcom/tencent/mm/pluginsdk/model/e$a;
-
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method protected final synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 6
-
-    .prologue
-    const/4 v2, 0x0
-
-    .line 75
-    const-string/jumbo v0, "content://com.tencent.mm.plugin.gwallet.queryprovider"
-
-    invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v1
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/f;->val$context:Landroid/content/Context;
-
-    invoke-virtual {v0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
-
-    move-result-object v0
-
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/model/f;->gKX:[Ljava/lang/String;
-
-    move-object v3, v2
-
-    move-object v5, v2
-
-    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method protected final synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 9
-
-    .prologue
-    .line 75
-    check-cast p1, Landroid/database/Cursor;
+    .line 76
+    if-eqz p2, :cond_0
 
     if-eqz p1, :cond_0
 
-    invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
+    array-length v0, p1
 
-    move-result v0
+    if-nez v0, :cond_1
 
-    if-gtz v0, :cond_2
-
+    .line 77
     :cond_0
-    new-instance v1, Ljava/util/ArrayList;
+    new-instance v0, Ljava/lang/IllegalArgumentException;
 
-    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+    invoke-direct {v0}, Ljava/lang/IllegalArgumentException;-><init>()V
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/model/f;->gKX:[Ljava/lang/String;
+    throw v0
 
-    array-length v3, v2
+    .line 79
+    :cond_1
+    new-instance v0, Lcom/tencent/mm/pluginsdk/model/f$1;
+
+    invoke-direct {v0, p0, p1, p2}, Lcom/tencent/mm/pluginsdk/model/f$1;-><init>(Landroid/content/Context;[Ljava/lang/String;Lcom/tencent/mm/pluginsdk/model/f$a;)V
+
+    const/4 v1, 0x0
+
+    new-array v1, v1, [Ljava/lang/Void;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/model/f$1;->execute([Ljava/lang/Object;)Landroid/os/AsyncTask;
+
+    .line 106
+    return-void
+.end method
+
+.method static synthetic g(Landroid/database/Cursor;)Ljava/util/ArrayList;
+    .locals 8
+
+    .prologue
+    .line 17
+    if-nez p0, :cond_0
 
     const/4 v0, 0x0
 
     :goto_0
-    if-ge v0, v3, :cond_1
+    return-object v0
 
-    aget-object v4, v2, v0
+    :cond_0
+    new-instance v7, Ljava/util/ArrayList;
 
-    new-instance v5, Lcom/tencent/mm/pluginsdk/model/t;
+    invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v6, -0x1
-
-    const-string/jumbo v7, ""
-
-    const/16 v8, 0x27fd
-
-    invoke-direct {v5, v6, v4, v7, v8}, Lcom/tencent/mm/pluginsdk/model/t;-><init>(ILjava/lang/String;Ljava/lang/String;I)V
-
-    invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    add-int/lit8 v0, v0, 0x1
-
-    goto :goto_0
-
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/f;->gKY:Lcom/tencent/mm/pluginsdk/model/e$a;
-
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/model/e$a;->n(Ljava/util/ArrayList;)V
+    invoke-interface {p0}, Landroid/database/Cursor;->moveToFirst()Z
 
     :goto_1
-    invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
+    invoke-interface {p0}, Landroid/database/Cursor;->isAfterLast()Z
 
-    return-void
+    move-result v0
 
-    :cond_2
-    invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
+    if-nez v0, :cond_1
 
-    invoke-static {p1}, Lcom/tencent/mm/pluginsdk/model/e;->f(Landroid/database/Cursor;)Ljava/util/ArrayList;
+    const-string/jumbo v0, "_id"
 
-    move-result-object v0
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
-    invoke-interface {p1}, Landroid/database/Cursor;->close()V
+    move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/f;->gKY:Lcom/tencent/mm/pluginsdk/model/e$a;
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getInt(I)I
 
-    invoke-interface {v1, v0}, Lcom/tencent/mm/pluginsdk/model/e$a;->n(Ljava/util/ArrayList;)V
+    move-result v1
+
+    const-string/jumbo v0, "product_id"
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string/jumbo v0, "full_price"
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    const-string/jumbo v0, "product_state"
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v6
+
+    const-string/jumbo v0, "price_currency"
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    const-string/jumbo v0, "price_amount"
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    invoke-interface {p0, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    new-instance v0, Lcom/tencent/mm/pluginsdk/model/n;
+
+    invoke-direct/range {v0 .. v6}, Lcom/tencent/mm/pluginsdk/model/n;-><init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+
+    invoke-virtual {v7, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    invoke-interface {p0}, Landroid/database/Cursor;->moveToNext()Z
 
     goto :goto_1
+
+    :cond_1
+    move-object v0, v7
+
+    goto :goto_0
 .end method

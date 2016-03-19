@@ -31,42 +31,42 @@ import android.view.animation.Transformation;
 public final class ProgressBarICS
   extends View
 {
-  private static final int[] rk = { 16843062, 16843063, 16843064, 16843065, 16843066, 16843067, 16843068, 16843069, 16843070, 16843071, 16843039, 16843072, 16843040, 16843073 };
-  private int dH = 0;
-  int lu = 24;
+  private static final int[] qm = { 16843062, 16843063, 16843064, 16843065, 16843066, 16843067, 16843068, 16843069, 16843070, 16843071, 16843039, 16843072, 16843040, 16843073 };
+  private int cU = 0;
+  int kz = 24;
   private Interpolator mInterpolator;
-  private boolean rA;
-  private a rB;
-  private long rC = Thread.currentThread().getId();
-  private boolean rD;
-  private long rE;
-  private boolean rF;
-  int rl = 48;
-  int rm = 24;
-  int rn = 48;
-  private int ro = 0;
-  private int rp = 100;
-  private int rq = 1;
-  private int rr = 4000;
-  private boolean rs = false;
-  private boolean rt = false;
-  private Transformation ru;
-  private AlphaAnimation rv;
-  private Drawable rw;
-  private Drawable rx;
-  private Drawable ry;
-  Bitmap rz;
+  private Drawable qA;
+  private Drawable qB;
+  Bitmap qC;
+  private boolean qD;
+  private a qE;
+  private long qF = Thread.currentThread().getId();
+  private boolean qG;
+  private long qH;
+  private boolean qI;
+  int qn = 48;
+  int qo = 24;
+  int qp = 48;
+  private int qr = 0;
+  private int qs = 100;
+  private int qt = 1;
+  private int qu = 4000;
+  private boolean qv = false;
+  private boolean qw = false;
+  private Transformation qx;
+  private AlphaAnimation qy;
+  private Drawable qz;
   
   public ProgressBarICS(Context paramContext, int paramInt)
   {
     super(paramContext, null, 0);
-    TypedArray localTypedArray = paramContext.obtainStyledAttributes(null, rk, 0, paramInt);
-    rA = true;
-    setMax(localTypedArray.getInt(0, rp));
-    setProgress(localTypedArray.getInt(1, dH));
-    setSecondaryProgress(localTypedArray.getInt(2, ro));
-    boolean bool2 = localTypedArray.getBoolean(3, rs);
-    rt = localTypedArray.getBoolean(4, rt);
+    TypedArray localTypedArray = paramContext.obtainStyledAttributes(null, qm, 0, paramInt);
+    qD = true;
+    setMax(localTypedArray.getInt(0, qs));
+    setProgress(localTypedArray.getInt(1, cU));
+    setSecondaryProgress(localTypedArray.getInt(2, qr));
+    boolean bool2 = localTypedArray.getBoolean(3, qv);
+    qw = localTypedArray.getBoolean(4, qw);
     Drawable localDrawable = localTypedArray.getDrawable(5);
     if (localDrawable != null) {
       setIndeterminateDrawable(b(localDrawable));
@@ -75,19 +75,19 @@ public final class ProgressBarICS
     if (localDrawable != null) {
       setProgressDrawable(a(localDrawable, false));
     }
-    rr = localTypedArray.getInt(7, rr);
-    rq = localTypedArray.getInt(8, rq);
-    lu = localTypedArray.getDimensionPixelSize(9, lu);
-    rl = localTypedArray.getDimensionPixelSize(10, rl);
-    rm = localTypedArray.getDimensionPixelSize(11, rm);
-    rn = localTypedArray.getDimensionPixelSize(12, rn);
+    qu = localTypedArray.getInt(7, qu);
+    qt = localTypedArray.getInt(8, qt);
+    kz = localTypedArray.getDimensionPixelSize(9, kz);
+    qn = localTypedArray.getDimensionPixelSize(10, qn);
+    qo = localTypedArray.getDimensionPixelSize(11, qo);
+    qp = localTypedArray.getDimensionPixelSize(12, qp);
     paramInt = localTypedArray.getResourceId(13, 17432587);
     if (paramInt > 0) {
       setInterpolator(AnimationUtils.loadInterpolator(paramContext, paramInt));
     }
     localTypedArray.recycle();
-    rA = false;
-    if ((rt) || (bool2)) {
+    qD = false;
+    if ((qw) || (bool2)) {
       bool1 = true;
     }
     setIndeterminate(bool1);
@@ -128,8 +128,8 @@ public final class ProgressBarICS
       localObject = paramDrawable;
     } while (!(paramDrawable instanceof BitmapDrawable));
     Object localObject = ((BitmapDrawable)paramDrawable).getBitmap();
-    if (rz == null) {
-      rz = ((Bitmap)localObject);
+    if (qC == null) {
+      qC = ((Bitmap)localObject);
     }
     paramDrawable = new ShapeDrawable(getDrawableShape());
     localObject = new BitmapShader((Bitmap)localObject, Shader.TileMode.REPEAT, Shader.TileMode.CLAMP);
@@ -162,24 +162,24 @@ public final class ProgressBarICS
     return (Drawable)localObject;
   }
   
-  private void b(int paramInt1, int paramInt2, boolean paramBoolean)
+  private void c(int paramInt1, int paramInt2, boolean paramBoolean)
   {
     for (;;)
     {
       try
       {
-        if (rC == Thread.currentThread().getId())
+        if (qF == Thread.currentThread().getId())
         {
           l(paramInt1, paramInt2);
           return;
         }
-        if (rB != null)
+        if (qE != null)
         {
-          a locala1 = rB;
-          rB = null;
-          cZ = paramInt1;
-          dH = paramInt2;
-          rG = false;
+          a locala1 = qE;
+          qE = null;
+          mId = paramInt1;
+          cU = paramInt2;
+          qJ = false;
           post(locala1);
         }
         else
@@ -191,15 +191,15 @@ public final class ProgressBarICS
     }
   }
   
-  private void cw()
+  private void cg()
   {
     if (getVisibility() != 0) {
       return;
     }
-    if ((rw instanceof Animatable))
+    if ((qz instanceof Animatable))
     {
-      rD = true;
-      rv = null;
+      qG = true;
+      qy = null;
     }
     for (;;)
     {
@@ -208,36 +208,36 @@ public final class ProgressBarICS
       if (mInterpolator == null) {
         mInterpolator = new LinearInterpolator();
       }
-      ru = new Transformation();
-      rv = new AlphaAnimation(0.0F, 1.0F);
-      rv.setRepeatMode(rq);
-      rv.setRepeatCount(-1);
-      rv.setDuration(rr);
-      rv.setInterpolator(mInterpolator);
-      rv.setStartTime(-1L);
+      qx = new Transformation();
+      qy = new AlphaAnimation(0.0F, 1.0F);
+      qy.setRepeatMode(qt);
+      qy.setRepeatCount(-1);
+      qy.setDuration(qu);
+      qy.setInterpolator(mInterpolator);
+      qy.setStartTime(-1L);
     }
   }
   
-  private void cx()
+  private void ch()
   {
-    rv = null;
-    ru = null;
-    if ((rw instanceof Animatable))
+    qy = null;
+    qx = null;
+    if ((qz instanceof Animatable))
     {
-      ((Animatable)rw).stop();
-      rD = false;
+      ((Animatable)qz).stop();
+      qG = false;
     }
     postInvalidate();
   }
   
-  private void cy()
+  private void ci()
   {
     int[] arrayOfInt = getDrawableState();
-    if ((rx != null) && (rx.isStateful())) {
-      rx.setState(arrayOfInt);
+    if ((qA != null) && (qA.isStateful())) {
+      qA.setState(arrayOfInt);
     }
-    if ((rw != null) && (rw.isStateful())) {
-      rw.setState(arrayOfInt);
+    if ((qz != null) && (qz.isStateful())) {
+      qz.setState(arrayOfInt);
     }
   }
   
@@ -249,10 +249,10 @@ public final class ProgressBarICS
       try
       {
         float f;
-        if (rp > 0)
+        if (qs > 0)
         {
-          f = paramInt2 / rp;
-          localObject2 = ry;
+          f = paramInt2 / qs;
+          localObject2 = qB;
           if (localObject2 != null)
           {
             Drawable localDrawable = null;
@@ -288,11 +288,11 @@ public final class ProgressBarICS
     int k;
     float f1;
     float f2;
-    if (rw != null) {
-      if ((rt) && (!(rw instanceof AnimationDrawable)))
+    if (qz != null) {
+      if ((qw) && (!(qz instanceof AnimationDrawable)))
       {
-        k = rw.getIntrinsicWidth();
-        int m = rw.getIntrinsicHeight();
+        k = qz.getIntrinsicWidth();
+        int m = qz.getIntrinsicHeight();
         f1 = k / m;
         f2 = paramInt1 / paramInt2;
         if (f1 != f2) {
@@ -304,15 +304,15 @@ public final class ProgressBarICS
             paramInt1 = i;
             j = 0;
             i = k;
-            rw.setBounds(i, j, paramInt2, paramInt1);
+            qz.setBounds(i, j, paramInt2, paramInt1);
           }
         }
       }
     }
     for (;;)
     {
-      if (rx != null) {
-        rx.setBounds(0, 0, paramInt2, paramInt1);
+      if (qA != null) {
+        qA.setBounds(0, 0, paramInt2, paramInt1);
       }
       return;
       f2 = paramInt1;
@@ -339,7 +339,7 @@ public final class ProgressBarICS
     int i = 0;
     try
     {
-      boolean bool = rs;
+      boolean bool = qv;
       if (bool) {
         return;
       }
@@ -349,14 +349,14 @@ public final class ProgressBarICS
       for (;;)
       {
         i = paramInt;
-        if (paramInt > rp) {
-          i = rp;
+        if (paramInt > qs) {
+          i = qs;
         }
-        if (i == dH) {
+        if (i == cU) {
           break;
         }
-        dH = i;
-        b(16908301, dH, false);
+        cU = i;
+        c(16908301, cU, false);
         break;
       }
     }
@@ -366,7 +366,7 @@ public final class ProgressBarICS
   protected final void drawableStateChanged()
   {
     super.drawableStateChanged();
-    cy();
+    ci();
   }
   
   final Shape getDrawableShape()
@@ -376,7 +376,7 @@ public final class ProgressBarICS
   
   public final Drawable getIndeterminateDrawable()
   {
-    return rw;
+    return qz;
   }
   
   public final Interpolator getInterpolator()
@@ -388,7 +388,7 @@ public final class ProgressBarICS
   {
     try
     {
-      int i = rp;
+      int i = qs;
       return i;
     }
     finally
@@ -405,7 +405,7 @@ public final class ProgressBarICS
     //   0: aload_0
     //   1: monitorenter
     //   2: aload_0
-    //   3: getfield 89	android/support/v7/internal/widget/ProgressBarICS:rs	Z
+    //   3: getfield 91	android/support/v7/internal/widget/ProgressBarICS:qv	Z
     //   6: istore_2
     //   7: iload_2
     //   8: ifeq +9 -> 17
@@ -416,7 +416,7 @@ public final class ProgressBarICS
     //   15: iload_1
     //   16: ireturn
     //   17: aload_0
-    //   18: getfield 85	android/support/v7/internal/widget/ProgressBarICS:dH	I
+    //   18: getfield 87	android/support/v7/internal/widget/ProgressBarICS:cU	I
     //   21: istore_1
     //   22: goto -9 -> 13
     //   25: astore_3
@@ -438,7 +438,7 @@ public final class ProgressBarICS
   
   public final Drawable getProgressDrawable()
   {
-    return rx;
+    return qA;
   }
   
   /* Error */
@@ -448,7 +448,7 @@ public final class ProgressBarICS
     //   0: aload_0
     //   1: monitorenter
     //   2: aload_0
-    //   3: getfield 89	android/support/v7/internal/widget/ProgressBarICS:rs	Z
+    //   3: getfield 91	android/support/v7/internal/widget/ProgressBarICS:qv	Z
     //   6: istore_2
     //   7: iload_2
     //   8: ifeq +9 -> 17
@@ -459,7 +459,7 @@ public final class ProgressBarICS
     //   15: iload_1
     //   16: ireturn
     //   17: aload_0
-    //   18: getfield 87	android/support/v7/internal/widget/ProgressBarICS:ro	I
+    //   18: getfield 89	android/support/v7/internal/widget/ProgressBarICS:qr	I
     //   21: istore_1
     //   22: goto -9 -> 13
     //   25: astore_3
@@ -481,7 +481,7 @@ public final class ProgressBarICS
   
   public final void invalidateDrawable(Drawable paramDrawable)
   {
-    if (!rF)
+    if (!qI)
     {
       if (verifyDrawable(paramDrawable))
       {
@@ -500,18 +500,18 @@ public final class ProgressBarICS
   protected final void onAttachedToWindow()
   {
     super.onAttachedToWindow();
-    if (rs) {
-      cw();
+    if (qv) {
+      cg();
     }
   }
   
   protected final void onDetachedFromWindow()
   {
-    if (rs) {
-      cx();
+    if (qv) {
+      ch();
     }
-    if (rB != null) {
-      removeCallbacks(rB);
+    if (qE != null) {
+      removeCallbacks(qE);
     }
     super.onDetachedFromWindow();
   }
@@ -524,90 +524,90 @@ public final class ProgressBarICS
     //   1: monitorenter
     //   2: aload_0
     //   3: aload_1
-    //   4: invokespecial 461	android/view/View:onDraw	(Landroid/graphics/Canvas;)V
+    //   4: invokespecial 464	android/view/View:onDraw	(Landroid/graphics/Canvas;)V
     //   7: aload_0
-    //   8: getfield 357	android/support/v7/internal/widget/ProgressBarICS:ry	Landroid/graphics/drawable/Drawable;
+    //   8: getfield 360	android/support/v7/internal/widget/ProgressBarICS:qB	Landroid/graphics/drawable/Drawable;
     //   11: astore 5
     //   13: aload 5
     //   15: ifnull +146 -> 161
     //   18: aload_1
-    //   19: invokevirtual 466	android/graphics/Canvas:save	()I
+    //   19: invokevirtual 469	android/graphics/Canvas:save	()I
     //   22: pop
     //   23: aload_1
     //   24: aload_0
-    //   25: invokevirtual 371	android/support/v7/internal/widget/ProgressBarICS:getPaddingLeft	()I
+    //   25: invokevirtual 374	android/support/v7/internal/widget/ProgressBarICS:getPaddingLeft	()I
     //   28: i2f
     //   29: aload_0
-    //   30: invokevirtual 377	android/support/v7/internal/widget/ProgressBarICS:getPaddingTop	()I
+    //   30: invokevirtual 380	android/support/v7/internal/widget/ProgressBarICS:getPaddingTop	()I
     //   33: i2f
-    //   34: invokevirtual 469	android/graphics/Canvas:translate	(FF)V
+    //   34: invokevirtual 472	android/graphics/Canvas:translate	(FF)V
     //   37: aload_0
-    //   38: invokevirtual 472	android/support/v7/internal/widget/ProgressBarICS:getDrawingTime	()J
+    //   38: invokevirtual 475	android/support/v7/internal/widget/ProgressBarICS:getDrawingTime	()J
     //   41: lstore_3
     //   42: aload_0
-    //   43: getfield 303	android/support/v7/internal/widget/ProgressBarICS:rv	Landroid/view/animation/AlphaAnimation;
+    //   43: getfield 306	android/support/v7/internal/widget/ProgressBarICS:qy	Landroid/view/animation/AlphaAnimation;
     //   46: ifnull +75 -> 121
     //   49: aload_0
-    //   50: getfield 303	android/support/v7/internal/widget/ProgressBarICS:rv	Landroid/view/animation/AlphaAnimation;
+    //   50: getfield 306	android/support/v7/internal/widget/ProgressBarICS:qy	Landroid/view/animation/AlphaAnimation;
     //   53: lload_3
     //   54: aload_0
-    //   55: getfield 316	android/support/v7/internal/widget/ProgressBarICS:ru	Landroid/view/animation/Transformation;
-    //   58: invokevirtual 476	android/view/animation/AlphaAnimation:getTransformation	(JLandroid/view/animation/Transformation;)Z
+    //   55: getfield 319	android/support/v7/internal/widget/ProgressBarICS:qx	Landroid/view/animation/Transformation;
+    //   58: invokevirtual 479	android/view/animation/AlphaAnimation:getTransformation	(JLandroid/view/animation/Transformation;)Z
     //   61: pop
     //   62: aload_0
-    //   63: getfield 316	android/support/v7/internal/widget/ProgressBarICS:ru	Landroid/view/animation/Transformation;
-    //   66: invokevirtual 480	android/view/animation/Transformation:getAlpha	()F
+    //   63: getfield 319	android/support/v7/internal/widget/ProgressBarICS:qx	Landroid/view/animation/Transformation;
+    //   66: invokevirtual 483	android/view/animation/Transformation:getAlpha	()F
     //   69: fstore_2
     //   70: aload_0
     //   71: iconst_1
-    //   72: putfield 412	android/support/v7/internal/widget/ProgressBarICS:rF	Z
+    //   72: putfield 415	android/support/v7/internal/widget/ProgressBarICS:qI	Z
     //   75: aload 5
     //   77: fload_2
-    //   78: ldc_w 364
+    //   78: ldc_w 367
     //   81: fmul
     //   82: f2i
-    //   83: invokevirtual 268	android/graphics/drawable/Drawable:setLevel	(I)Z
+    //   83: invokevirtual 270	android/graphics/drawable/Drawable:setLevel	(I)Z
     //   86: pop
     //   87: aload_0
     //   88: iconst_0
-    //   89: putfield 412	android/support/v7/internal/widget/ProgressBarICS:rF	Z
-    //   92: invokestatic 485	android/os/SystemClock:uptimeMillis	()J
+    //   89: putfield 415	android/support/v7/internal/widget/ProgressBarICS:qI	Z
+    //   92: invokestatic 488	android/os/SystemClock:uptimeMillis	()J
     //   95: aload_0
-    //   96: getfield 487	android/support/v7/internal/widget/ProgressBarICS:rE	J
+    //   96: getfield 490	android/support/v7/internal/widget/ProgressBarICS:qH	J
     //   99: lsub
-    //   100: ldc2_w 488
+    //   100: ldc2_w 491
     //   103: lcmp
     //   104: iflt +17 -> 121
     //   107: aload_0
-    //   108: invokestatic 485	android/os/SystemClock:uptimeMillis	()J
-    //   111: putfield 487	android/support/v7/internal/widget/ProgressBarICS:rE	J
+    //   108: invokestatic 488	android/os/SystemClock:uptimeMillis	()J
+    //   111: putfield 490	android/support/v7/internal/widget/ProgressBarICS:qH	J
     //   114: aload_0
-    //   115: ldc2_w 488
-    //   118: invokevirtual 492	android/support/v7/internal/widget/ProgressBarICS:postInvalidateDelayed	(J)V
+    //   115: ldc2_w 491
+    //   118: invokevirtual 495	android/support/v7/internal/widget/ProgressBarICS:postInvalidateDelayed	(J)V
     //   121: aload 5
     //   123: aload_1
-    //   124: invokevirtual 495	android/graphics/drawable/Drawable:draw	(Landroid/graphics/Canvas;)V
+    //   124: invokevirtual 498	android/graphics/drawable/Drawable:draw	(Landroid/graphics/Canvas;)V
     //   127: aload_1
-    //   128: invokevirtual 498	android/graphics/Canvas:restore	()V
+    //   128: invokevirtual 501	android/graphics/Canvas:restore	()V
     //   131: aload_0
-    //   132: getfield 301	android/support/v7/internal/widget/ProgressBarICS:rD	Z
+    //   132: getfield 304	android/support/v7/internal/widget/ProgressBarICS:qG	Z
     //   135: ifeq +26 -> 161
     //   138: aload 5
-    //   140: instanceof 299
+    //   140: instanceof 302
     //   143: ifeq +18 -> 161
     //   146: aload 5
-    //   148: checkcast 299	android/graphics/drawable/Animatable
-    //   151: invokeinterface 501 1 0
+    //   148: checkcast 302	android/graphics/drawable/Animatable
+    //   151: invokeinterface 504 1 0
     //   156: aload_0
     //   157: iconst_0
-    //   158: putfield 301	android/support/v7/internal/widget/ProgressBarICS:rD	Z
+    //   158: putfield 304	android/support/v7/internal/widget/ProgressBarICS:qG	Z
     //   161: aload_0
     //   162: monitorexit
     //   163: return
     //   164: astore_1
     //   165: aload_0
     //   166: iconst_0
-    //   167: putfield 412	android/support/v7/internal/widget/ProgressBarICS:rF	Z
+    //   167: putfield 415	android/support/v7/internal/widget/ProgressBarICS:qI	Z
     //   170: aload_1
     //   171: athrow
     //   172: astore_1
@@ -639,12 +639,12 @@ public final class ProgressBarICS
     {
       try
       {
-        Drawable localDrawable = ry;
+        Drawable localDrawable = qB;
         if (localDrawable != null)
         {
-          j = Math.max(lu, Math.min(rl, localDrawable.getIntrinsicWidth()));
-          i = Math.max(rm, Math.min(rn, localDrawable.getIntrinsicHeight()));
-          cy();
+          j = Math.max(kz, Math.min(qn, localDrawable.getIntrinsicWidth()));
+          i = Math.max(qo, Math.min(qp, localDrawable.getIntrinsicHeight()));
+          ci();
           int k = getPaddingLeft();
           int m = getPaddingRight();
           int n = getPaddingTop();
@@ -669,8 +669,8 @@ public final class ProgressBarICS
   public final Parcelable onSaveInstanceState()
   {
     SavedState localSavedState = new SavedState(super.onSaveInstanceState());
-    progress = dH;
-    secondaryProgress = ro;
+    progress = cU;
+    secondaryProgress = qr;
     return localSavedState;
   }
   
@@ -682,21 +682,21 @@ public final class ProgressBarICS
   protected final void onVisibilityChanged(View paramView, int paramInt)
   {
     super.onVisibilityChanged(paramView, paramInt);
-    if (rs)
+    if (qv)
     {
       if ((paramInt == 8) || (paramInt == 4)) {
-        cx();
+        ch();
       }
     }
     else {
       return;
     }
-    cw();
+    cg();
   }
   
   public final void postInvalidate()
   {
-    if (!rA) {
+    if (!qD) {
       super.postInvalidate();
     }
   }
@@ -708,35 +708,35 @@ public final class ProgressBarICS
     //   0: aload_0
     //   1: monitorenter
     //   2: aload_0
-    //   3: getfield 91	android/support/v7/internal/widget/ProgressBarICS:rt	Z
+    //   3: getfield 93	android/support/v7/internal/widget/ProgressBarICS:qw	Z
     //   6: ifeq +10 -> 16
     //   9: aload_0
-    //   10: getfield 89	android/support/v7/internal/widget/ProgressBarICS:rs	Z
+    //   10: getfield 91	android/support/v7/internal/widget/ProgressBarICS:qv	Z
     //   13: ifne +32 -> 45
     //   16: iload_1
     //   17: aload_0
-    //   18: getfield 89	android/support/v7/internal/widget/ProgressBarICS:rs	Z
+    //   18: getfield 91	android/support/v7/internal/widget/ProgressBarICS:qv	Z
     //   21: if_icmpeq +24 -> 45
     //   24: aload_0
     //   25: iload_1
-    //   26: putfield 89	android/support/v7/internal/widget/ProgressBarICS:rs	Z
+    //   26: putfield 91	android/support/v7/internal/widget/ProgressBarICS:qv	Z
     //   29: iload_1
     //   30: ifeq +18 -> 48
     //   33: aload_0
     //   34: aload_0
-    //   35: getfield 297	android/support/v7/internal/widget/ProgressBarICS:rw	Landroid/graphics/drawable/Drawable;
-    //   38: putfield 357	android/support/v7/internal/widget/ProgressBarICS:ry	Landroid/graphics/drawable/Drawable;
+    //   35: getfield 300	android/support/v7/internal/widget/ProgressBarICS:qz	Landroid/graphics/drawable/Drawable;
+    //   38: putfield 360	android/support/v7/internal/widget/ProgressBarICS:qB	Landroid/graphics/drawable/Drawable;
     //   41: aload_0
-    //   42: invokespecial 449	android/support/v7/internal/widget/ProgressBarICS:cw	()V
+    //   42: invokespecial 452	android/support/v7/internal/widget/ProgressBarICS:cg	()V
     //   45: aload_0
     //   46: monitorexit
     //   47: return
     //   48: aload_0
     //   49: aload_0
-    //   50: getfield 348	android/support/v7/internal/widget/ProgressBarICS:rx	Landroid/graphics/drawable/Drawable;
-    //   53: putfield 357	android/support/v7/internal/widget/ProgressBarICS:ry	Landroid/graphics/drawable/Drawable;
+    //   50: getfield 351	android/support/v7/internal/widget/ProgressBarICS:qA	Landroid/graphics/drawable/Drawable;
+    //   53: putfield 360	android/support/v7/internal/widget/ProgressBarICS:qB	Landroid/graphics/drawable/Drawable;
     //   56: aload_0
-    //   57: invokespecial 452	android/support/v7/internal/widget/ProgressBarICS:cx	()V
+    //   57: invokespecial 455	android/support/v7/internal/widget/ProgressBarICS:ch	()V
     //   60: goto -15 -> 45
     //   63: astore_2
     //   64: aload_0
@@ -761,10 +761,10 @@ public final class ProgressBarICS
     if (paramDrawable != null) {
       paramDrawable.setCallback(this);
     }
-    rw = paramDrawable;
-    if (rs)
+    qz = paramDrawable;
+    if (qv)
     {
-      ry = paramDrawable;
+      qB = paramDrawable;
       postInvalidate();
     }
   }
@@ -782,14 +782,14 @@ public final class ProgressBarICS
     }
     try
     {
-      if (i != rp)
+      if (i != qs)
       {
-        rp = i;
+        qs = i;
         postInvalidate();
-        if (dH > i) {
-          dH = i;
+        if (cU > i) {
+          cU = i;
         }
-        b(16908301, dH, false);
+        c(16908301, cU, false);
       }
       return;
     }
@@ -812,8 +812,8 @@ public final class ProgressBarICS
   
   public final void setProgressDrawable(Drawable paramDrawable)
   {
-    if ((rx != null) && (paramDrawable != rx)) {
-      rx.setCallback(null);
+    if ((qA != null) && (paramDrawable != qA)) {
+      qA.setCallback(null);
     }
     for (int i = 1;; i = 0)
     {
@@ -821,24 +821,24 @@ public final class ProgressBarICS
       {
         paramDrawable.setCallback(this);
         int j = paramDrawable.getMinimumHeight();
-        if (rn < j)
+        if (qp < j)
         {
-          rn = j;
+          qp = j;
           requestLayout();
         }
       }
-      rx = paramDrawable;
-      if (!rs)
+      qA = paramDrawable;
+      if (!qv)
       {
-        ry = paramDrawable;
+        qB = paramDrawable;
         postInvalidate();
       }
       if (i != 0)
       {
         m(getWidth(), getHeight());
-        cy();
-        l(16908301, dH);
-        l(16908303, ro);
+        ci();
+        l(16908301, cU);
+        l(16908303, qr);
       }
       return;
     }
@@ -849,7 +849,7 @@ public final class ProgressBarICS
     int i = 0;
     try
     {
-      boolean bool = rs;
+      boolean bool = qv;
       if (bool) {
         return;
       }
@@ -859,14 +859,14 @@ public final class ProgressBarICS
       for (;;)
       {
         i = paramInt;
-        if (paramInt > rp) {
-          i = rp;
+        if (paramInt > qs) {
+          i = qs;
         }
-        if (i == ro) {
+        if (i == qr) {
           break;
         }
-        ro = i;
-        b(16908303, ro, false);
+        qr = i;
+        c(16908303, qr, false);
         break;
       }
     }
@@ -878,28 +878,28 @@ public final class ProgressBarICS
     if (getVisibility() != paramInt)
     {
       super.setVisibility(paramInt);
-      if (rs)
+      if (qv)
       {
         if ((paramInt != 8) && (paramInt != 4)) {
           break label36;
         }
-        cx();
+        ch();
       }
     }
     return;
     label36:
-    cw();
+    cg();
   }
   
   protected final boolean verifyDrawable(Drawable paramDrawable)
   {
-    return (paramDrawable == rx) || (paramDrawable == rw) || (super.verifyDrawable(paramDrawable));
+    return (paramDrawable == qA) || (paramDrawable == qz) || (super.verifyDrawable(paramDrawable));
   }
   
   static class SavedState
     extends View.BaseSavedState
   {
-    public static final Parcelable.Creator CREATOR = new p();
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
     int progress;
     int secondaryProgress;
     
@@ -926,20 +926,20 @@ public final class ProgressBarICS
   private final class a
     implements Runnable
   {
-    int cZ;
-    int dH;
-    boolean rG;
+    int cU;
+    int mId;
+    boolean qJ;
     
     a(int paramInt1, int paramInt2, boolean paramBoolean)
     {
-      cZ = paramInt1;
-      dH = paramInt2;
-      rG = paramBoolean;
+      mId = paramInt1;
+      cU = paramInt2;
+      qJ = paramBoolean;
     }
     
     public final void run()
     {
-      ProgressBarICS.a(ProgressBarICS.this, cZ, dH);
+      ProgressBarICS.a(ProgressBarICS.this, mId, cU);
       ProgressBarICS.a(ProgressBarICS.this, this);
     }
   }

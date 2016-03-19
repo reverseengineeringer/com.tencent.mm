@@ -1,209 +1,136 @@
 package com.tencent.mm.ui.chatting;
 
 import android.content.Context;
-import android.graphics.Bitmap;
-import android.view.ContextMenu;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.m.a.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.pluginsdk.l.a;
-import com.tencent.mm.pluginsdk.l.e;
-import com.tencent.mm.pluginsdk.ui.EmojiView;
-import com.tencent.mm.storage.ac;
-import com.tencent.mm.storage.ar;
-import com.tencent.mm.storage.as;
-import com.tencent.mm.storage.y;
-import com.tencent.mm.ui.cn;
-import com.tencent.mm.ui.ef;
-import com.tencent.mm.y.af;
-import com.tencent.mm.y.g;
+import android.widget.TextView;
+import com.tencent.mm.az.g;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.model.c;
+import com.tencent.mm.platformtools.t;
+import com.tencent.mm.pluginsdk.h.n;
+import com.tencent.mm.pluginsdk.ui.a.b;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.storage.ag;
 
-final class cr
-  extends cf.c
+public final class cr
+  extends com.tencent.mm.ui.i
 {
-  private ChattingUI.a iUg;
+  private String apb;
+  private String bEJ;
+  private boolean kAy;
+  private String kWX;
+  a kWY;
   
-  public cr()
+  public cr(Context paramContext, ag paramag, String paramString1, String paramString2, boolean paramBoolean)
   {
-    super(23);
+    super(paramContext, paramag);
+    apb = paramString1;
+    bEJ = paramString2;
+    kAy = paramBoolean;
   }
   
-  public final View a(LayoutInflater paramLayoutInflater, View paramView)
+  private String P(ag paramag)
   {
+    if (field_isSend == 1) {
+      return bEJ;
+    }
+    return apb;
+  }
+  
+  private CharSequence Q(ag paramag)
+  {
+    if (field_createTime == Long.MAX_VALUE) {
+      return "";
+    }
+    return n.b(context, field_createTime, true);
+  }
+  
+  public final void Gk()
+  {
+    com.tencent.mm.storage.ah localah = com.tencent.mm.model.ah.tD().rs();
+    String str1 = apb;
+    String str2 = kWX;
+    str1 = "SELECT * FROM " + localah.Fs(str1) + " WHERE" + localah.EU(str1) + "AND content LIKE '%" + str2 + "%' AND type = 1";
+    str1 = str1 + " ORDER BY createTime DESC";
+    setCursor(bCw.rawQuery(str1, null));
+    if ((kWY != null) && (!t.kz(kWX))) {
+      kWY.re(getCount());
+    }
+    super.notifyDataSetChanged();
+  }
+  
+  protected final void Gl()
+  {
+    adW();
+    Gk();
+  }
+  
+  public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  {
+    if (paramView == null)
+    {
+      paramView = View.inflate(context, 2131361919, null);
+      paramViewGroup = new b((byte)0);
+      czS = ((ImageView)paramView.findViewById(2131165293));
+      cHk = ((TextView)paramView.findViewById(2131165296));
+      cHl = ((TextView)paramView.findViewById(2131165297));
+      kWZ = ((TextView)paramView.findViewById(2131165624));
+      paramView.setTag(paramViewGroup);
+    }
     Object localObject;
-    if ((paramView != null) && (paramView.getTag() != null))
+    for (;;)
     {
-      localObject = paramView;
-      if (getTagtype == dJX) {}
-    }
-    else
-    {
-      localObject = new ds(paramLayoutInflater, a.k.chatting_item_to_appmsg_emoji);
-      ((View)localObject).setTag(new n(dJX).f((View)localObject, false));
-    }
-    return (View)localObject;
-  }
-  
-  public final void a(cf.a parama, int paramInt, ChattingUI.a parama1, ar paramar, String paramString)
-  {
-    iUg = parama1;
-    n localn = (n)parama;
-    iRE.setOnClickListener(iTH.iWu);
-    iRE.setTag(cLx.getTag());
-    if (paramar != null)
-    {
-      parama = field_content;
-      paramString = y.zk(field_content);
-      if (bPe) {
-        break label657;
-      }
-      EmojiView.setMsgIdLimit(field_msgId);
-      if (parama == null) {
-        break label662;
-      }
-    }
-    label223:
-    label238:
-    label331:
-    label493:
-    label499:
-    label633:
-    label657:
-    label662:
-    for (parama = a.a.r(parama, field_reserved);; parama = null)
-    {
-      if (parama != null) {}
-      for (parama = l.a.ayr().kE(blR);; parama = null)
+      localObject = (ag)getItem(paramInt);
+      if (localObject != null)
       {
-        if ((avf != null) && (!avf.equals("-1")) && (parama == null)) {
-          parama = l.a.ayr().kE(avf);
+        if ((!kAy) || (field_isSend != 0)) {
+          break;
         }
-        for (;;)
+        String str1 = field_content;
+        String str2 = ar.fk(str1);
+        if (!t.kz(str2))
         {
-          Object localObject;
-          boolean bool;
-          int i;
-          int j;
-          if (parama != null)
-          {
-            localObject = cLx;
-            long l = field_msgId;
-            if ((field_type == ac.ifC) || (field_type == ac.ifz))
-            {
-              bool = true;
-              ((EmojiView)localObject).a(parama, l, bool, true);
-              if ((field_state != ac.ifH) && (field_status == 1)) {
-                break label493;
-              }
-              i = 1;
-              localObject = ewK;
-              if (i == 0) {
-                break label499;
-              }
-              j = 4;
-              ((ProgressBar)localObject).setVisibility(j);
-              iRE.setVisibility(8);
-              if ((!bPe) && (i != 0))
-              {
-                bPe = true;
-                avf = parama.xq();
-                paramar.setContent(paramString.aGN());
-                paramar.setStatus(tlrkcHfield_msgId).field_status);
-                ax.tl().rk().a(field_msgId, paramar);
-              }
-              if (aOu())
-              {
-                if ((paramar == null) || (field_status != 2) || (!a(iTH, field_msgId))) {
-                  break label633;
-                }
-                if (iRF != null) {
-                  iRF.setVisibility(0);
-                }
-              }
-            }
-          }
-          for (;;)
-          {
-            cLx.setTag(new nv(paramar, iBB, paramInt, iTH.bsH, 0, (byte)0));
-            cLx.setOnClickListener(iTH.iWu);
-            cLx.setOnLongClickListener(iTH.iWw);
-            iRE.setTag(cLx.getTag());
-            a(paramInt, localn, paramar, iTH.bsH, iBB, iTH.iWu);
-            return;
-            bool = false;
-            break;
-            i = 0;
-            break label223;
-            j = 0;
-            break label238;
-            if (c.th("emoji"))
-            {
-              localObject = af.zl().gM(field_imgPath);
-              paramString = af.zp().gU((String)localObject);
-              if (paramString != null)
-              {
-                parama = paramString;
-                if (!paramString.isRecycled()) {}
-              }
-              else
-              {
-                parama = af.zl().b((String)localObject, com.tencent.mm.ao.a.getDensity(ipQ.iqj), true);
-                af.zp().f((String)localObject, parama);
-              }
-              if (parama != null)
-              {
-                cLx.setEmojiInfo(null);
-                cLx.azZ();
-                cLx.setImageBitmap(parama);
-                iRE.setVisibility(0);
-              }
-            }
-            ewK.setVisibility(8);
-            break label331;
-            if (iRF != null) {
-              iRF.setVisibility(8);
-            }
-          }
+          a.b.b(czS, str2);
+          cHk.setText(e.a(context, com.tencent.mm.model.i.dY(str2), cHk.getTextSize()));
         }
+        cHl.setText(Q((ag)localObject));
+        localObject = ar.fl(str1);
+        kWZ.setText(e.a(context, (CharSequence)localObject, kWZ.getTextSize()));
       }
+      return paramView;
+      paramViewGroup = (b)paramView.getTag();
     }
+    a.b.b(czS, P((ag)localObject));
+    cHk.setText(e.a(context, com.tencent.mm.model.i.dY(P((ag)localObject)), cHk.getTextSize()));
+    cHl.setText(Q((ag)localObject));
+    kWZ.setText(e.a(context, field_content, kWZ.getTextSize()));
+    return paramView;
   }
   
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ar paramar)
+  public final void pH(String paramString)
   {
-    if (ax.tl().isSDCardAvailable())
+    kWX = paramString;
+    if (!t.kz(kWX))
     {
-      int i = getTagposition;
-      if (field_status == 5) {
-        paramContextMenu.add(i, 103, 0, paramView.getContext().getString(a.n.chatting_resend_title));
-      }
-      if ((!paramar.aHu()) && (paramar.aHI()) && ((field_status == 2) || (aWT == 1)) && (aOt()) && (AV(field_talker))) {
-        paramContextMenu.add(i, 123, 0, paramView.getContext().getString(a.n.chatting_long_click_menu_revoke_msg));
-      }
-      if (!iUg.aPy()) {
-        paramContextMenu.add(i, 100, 0, paramView.getContext().getString(a.n.chatting_long_click_menu_delete_emoji));
-      }
+      adW();
+      Gk();
     }
-    return true;
   }
   
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ar paramar)
+  public static abstract interface a
   {
-    return false;
+    public abstract void re(int paramInt);
   }
   
-  public final boolean a(View paramView, ChattingUI.a parama, ar paramar)
+  private static final class b
   {
-    return false;
+    public TextView cHk;
+    public TextView cHl;
+    public ImageView czS;
+    public TextView kWZ;
   }
 }
 

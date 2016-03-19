@@ -1,21 +1,24 @@
 package com.tencent.mm.g;
 
-import com.tencent.mm.d.a.ak;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
+import com.tencent.mm.d.a.bc;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.storage.h;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
-public class e
+public final class e
 {
-  private static e bkm = null;
-  private HashMap bkn = new HashMap();
-  private boolean bko = false;
+  private HashMap buN = new HashMap();
+  private boolean buO = false;
   
   private void a(Map paramMap, boolean paramBoolean)
   {
@@ -23,7 +26,7 @@ public class e
       return;
     }
     if (!paramBoolean) {
-      bkn.clear();
+      buN.clear();
     }
     int i = 0;
     if (i < 10000)
@@ -43,10 +46,10 @@ public class e
           str1 = (String)localObject1 + ".$key";
           localObject2 = (String)paramMap.get(localObject1);
           str1 = (String)paramMap.get(str1);
-          if ((str1 == null) || (bn.iW(str1.trim()))) {
+          if ((str1 == null) || (ay.kz(str1.trim()))) {
             break label246;
           }
-          localHashMap = bkn;
+          localHashMap = buN;
           str2 = str1.trim();
           if (localObject2 == null) {
             break label239;
@@ -57,7 +60,7 @@ public class e
       for (Object localObject1 = localObject2;; localObject1 = "")
       {
         localHashMap.put(str2, localObject1);
-        t.d("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "put %s %s", new Object[] { str1.trim(), localObject2 });
+        u.d("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "put %s %s", new Object[] { str1.trim(), localObject2 });
         i += 1;
         break;
         localObject1 = Integer.valueOf(i);
@@ -72,25 +75,12 @@ public class e
       }
     }
     label246:
-    t.d("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "All dynamicConfig:%s", new Object[] { bkn.toString() });
+    u.d("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "All dynamicConfig:%s", new Object[] { buN.toString() });
   }
   
   private void d(String paramString, boolean paramBoolean)
   {
-    a(p.z(paramString, "sysmsg", null), paramBoolean);
-  }
-  
-  public static e pN()
-  {
-    if (bkm == null) {}
-    try
-    {
-      if (bkm == null) {
-        bkm = new e();
-      }
-      return bkm;
-    }
-    finally {}
+    a(q.J(paramString, "sysmsg", null), paramBoolean);
   }
   
   public final void a(String paramString, Map paramMap, boolean paramBoolean)
@@ -99,32 +89,63 @@ public class e
     {
       try
       {
-        boolean bool = bn.iW(paramString);
+        boolean bool = ay.kz(paramString);
         if (bool) {
           return;
         }
         if (paramBoolean)
         {
-          ax.tl().rf().set(278530, paramString);
+          ah.tD().rn().set(278530, paramString);
           if (paramMap == null) {
             break label94;
           }
           a(paramMap, paramBoolean);
-          paramString = new ak();
-          a.hXQ.g(paramString);
+          paramString = new bc();
+          a.jUF.j(paramString);
           continue;
         }
-        ax.tl().rf().set(278529, paramString);
+        ah.tD().rn().set(278529, paramString);
       }
       finally {}
-      ax.tl().rf().set(278530, "");
+      ah.tD().rn().set(278530, "");
       continue;
       label94:
       d(paramString, paramBoolean);
     }
   }
   
-  public final int db(String paramString)
+  public final List dh(String paramString)
+  {
+    ArrayList localArrayList;
+    try
+    {
+      if (!buO)
+      {
+        u.e("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "DynamicConfig hadnot load");
+        pG();
+      }
+      localArrayList = new ArrayList();
+      if (!ay.kz(paramString))
+      {
+        Iterator localIterator = buN.keySet().iterator();
+        while (localIterator.hasNext())
+        {
+          String str = (String)localIterator.next();
+          if (str.matches(paramString)) {
+            localArrayList.add(buN.get(str));
+          }
+        }
+      }
+    }
+    finally {}
+    tmp109_106[0] = paramString;
+    Object[] tmp113_109 = tmp109_106;
+    tmp113_109[1] = Integer.valueOf(localArrayList.size());
+    u.d("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "searchValues, entry:%s, size:%d", tmp113_109);
+    return localArrayList;
+  }
+  
+  public final int getInt(String paramString, int paramInt)
   {
     try
     {
@@ -133,47 +154,48 @@ public class e
     }
     catch (Exception localException)
     {
-      t.e("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "parseInt failed, val: " + paramString);
+      u.e("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "parseInt failed, val: " + paramString);
     }
-    return 0;
+    return paramInt;
   }
   
   public final String getValue(String paramString)
   {
-    if (!bko)
+    if (!buO)
     {
-      t.e("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "DynamicConfig hadnot load");
-      pO();
+      u.e("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "DynamicConfig hadnot load");
+      pG();
     }
-    t.d("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "get configs.get(config) %s %s", new Object[] { paramString.trim(), bkn.get(paramString) });
-    return (String)bkn.get(paramString);
+    u.d("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "get configs.get(config) %s %s", new Object[] { paramString.trim(), buN.get(paramString) });
+    return (String)buN.get(paramString);
   }
   
-  public final void pO()
+  public final void pG()
   {
     try
     {
-      if ((ax.tl() != null) && (ax.tl().rf() != null))
+      if ((ah.tD() != null) && (ah.tD().rn() != null))
       {
-        bko = true;
-        d((String)ax.tl().rf().get(278529, null), false);
+        buO = true;
+        d((String)ah.tD().rn().get(278529, null), false);
       }
-      if ((ax.tl() != null) && (ax.tl().rf() != null))
+      if ((ah.tD() != null) && (ah.tD().rn() != null))
       {
-        bko = true;
-        d((String)ax.tl().rf().get(278530, null), true);
+        buO = true;
+        d((String)ah.tD().rn().get(278530, null), true);
       }
       return;
     }
     finally {}
   }
   
+  @Deprecated
   public final void put(String paramString1, String paramString2)
   {
     if ((paramString1 != null) && (paramString2 != null))
     {
-      t.d("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "put configs.put(key,value) %s %s", new Object[] { paramString1.trim(), paramString2 });
-      bkn.put(paramString1, paramString2);
+      u.d("!32@/B4Tb64lLpJX2xqu8Tj3tCMRbqMu26rl", "put configs.put(key,value) %s %s", new Object[] { paramString1.trim(), paramString2 });
+      buN.put(paramString1, paramString2);
     }
   }
 }

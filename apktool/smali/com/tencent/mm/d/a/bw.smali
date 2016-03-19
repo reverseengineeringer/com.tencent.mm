@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/bw;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -13,15 +13,15 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public axf:Lcom/tencent/mm/d/a/bw$a;
+.field public avn:Lcom/tencent/mm/d/a/bw$a;
 
-.field public axg:Lcom/tencent/mm/d/a/bw$b;
+.field public avo:Lcom/tencent/mm/d/a/bw$b;
 
 
 # direct methods
@@ -32,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/bw;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/bw;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/bw;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/bw;->arR:Z
 
     return-void
 .end method
@@ -45,30 +45,30 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/bw$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/bw$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/bw;->axf:Lcom/tencent/mm/d/a/bw$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/bw;->avn:Lcom/tencent/mm/d/a/bw$a;
 
-    .line 21
+    .line 17
     new-instance v0, Lcom/tencent/mm/d/a/bw$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/bw$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/bw;->axg:Lcom/tencent/mm/d/a/bw$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/bw;->avo:Lcom/tencent/mm/d/a/bw$b;
 
     .line 8
-    const-string/jumbo v0, "ExtPlayer"
+    const-string/jumbo v0, "ExDeviceHaveBindNetworkDevice"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/bw;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/bw;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/bw;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bw;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bw;->jUI:Z
 
     return-void
 .end method

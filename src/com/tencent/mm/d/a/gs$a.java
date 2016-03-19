@@ -1,13 +1,13 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.storage.ar;
+import com.tencent.mm.af.a;
+import com.tencent.mm.protocal.b.aeo;
 
 public final class gs$a
 {
-  public String aDW;
-  public ar aDX;
-  public ar aDs;
-  public long axb = 0L;
+  public aeo aBN;
+  public a aBR;
+  public int action;
 }
 
 /* Location:

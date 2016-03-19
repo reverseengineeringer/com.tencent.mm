@@ -8,12 +8,12 @@ import java.util.HashMap;
 final class FileProvider$b
   implements FileProvider.a
 {
-  private final String eS;
-  final HashMap eT = new HashMap();
+  private final String eg;
+  final HashMap eh = new HashMap();
   
   public FileProvider$b(String paramString)
   {
-    eS = paramString;
+    eg = paramString;
   }
   
   public final File a(Uri paramUri)
@@ -22,7 +22,7 @@ final class FileProvider$b
     int i = ((String)localObject2).indexOf('/', 1);
     Object localObject1 = Uri.decode(((String)localObject2).substring(1, i));
     localObject2 = Uri.decode(((String)localObject2).substring(i + 1));
-    localObject1 = (File)eT.get(localObject1);
+    localObject1 = (File)eh.get(localObject1);
     if (localObject1 == null) {
       throw new IllegalArgumentException("Unable to find configured root for " + paramUri);
     }

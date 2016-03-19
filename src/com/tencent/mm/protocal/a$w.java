@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$w
-  extends a.c
+  extends a.e
 {
   public a$w()
   {
-    super("editAddress", "edit_address", 29, true);
+    super("closeWindow", "close_window", 17, false);
   }
 }
 

@@ -1,41 +1,24 @@
 package android.support.v4.app;
 
-import android.content.Context;
-import android.util.SparseArray;
-import android.view.View;
-import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.FrameLayout;
-import android.widget.FrameLayout.LayoutParams;
+import android.app.RemoteInput;
+import android.app.RemoteInput.Builder;
 
 final class x
-  extends FrameLayout
 {
-  private x(Context paramContext)
+  static RemoteInput[] a(y.a[] paramArrayOfa)
   {
-    super(paramContext);
-  }
-  
-  static ViewGroup c(View paramView)
-  {
-    x localx = new x(paramView.getContext());
-    ViewGroup.LayoutParams localLayoutParams = paramView.getLayoutParams();
-    if (localLayoutParams != null) {
-      localx.setLayoutParams(localLayoutParams);
+    if (paramArrayOfa == null) {
+      return null;
     }
-    paramView.setLayoutParams(new FrameLayout.LayoutParams(-1, -1));
-    localx.addView(paramView);
-    return localx;
-  }
-  
-  protected final void dispatchRestoreInstanceState(SparseArray paramSparseArray)
-  {
-    dispatchThawSelfOnly(paramSparseArray);
-  }
-  
-  protected final void dispatchSaveInstanceState(SparseArray paramSparseArray)
-  {
-    dispatchFreezeSelfOnly(paramSparseArray);
+    RemoteInput[] arrayOfRemoteInput = new RemoteInput[paramArrayOfa.length];
+    int i = 0;
+    while (i < paramArrayOfa.length)
+    {
+      y.a locala = paramArrayOfa[i];
+      arrayOfRemoteInput[i] = new RemoteInput.Builder(locala.getResultKey()).setLabel(locala.getLabel()).setChoices(locala.getChoices()).setAllowFreeFormInput(locala.getAllowFreeFormInput()).addExtras(locala.getExtras()).build();
+      i += 1;
+    }
+    return arrayOfRemoteInput;
   }
 }
 

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$db
-  extends a.c
+  extends a.e
 {
   public a$db()
   {
-    super("writeCommData", "write_comm_data", 53, false);
+    super("openNewPage", "openNewPage", 20000, false);
   }
 }
 

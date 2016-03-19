@@ -7,7 +7,9 @@ import android.graphics.Canvas;
 import android.os.Build.VERSION;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.webkit.WebSettings;
 import java.lang.reflect.Method;
 
 class WebView$SystemWebView
@@ -15,13 +17,19 @@ class WebView$SystemWebView
 {
   public WebView$SystemWebView(WebView paramWebView, Context paramContext)
   {
-    super(paramContext);
+    this(paramWebView, paramContext, null);
+  }
+  
+  public WebView$SystemWebView(WebView paramWebView, Context paramContext, AttributeSet paramAttributeSet)
+  {
+    super(paramContext, paramAttributeSet);
     CookieSyncManager.createInstance(WebView.b(paramWebView)).startSync();
     try
     {
       paramWebView = Class.forName("android.webkit.WebViewWorker").getDeclaredMethod("getHandler", new Class[0]);
       paramWebView.setAccessible(true);
       ((Handler)paramWebView.invoke(null, new Object[0])).getLooper().getThread().setUncaughtExceptionHandler(new SQLiteUncaughtExceptionHandler());
+      WebView.mSysWebviewCreated = true;
       return;
     }
     catch (Exception paramWebView) {}
@@ -31,7 +39,7 @@ class WebView$SystemWebView
   {
     if (this$0.mWebViewCallbackClient != null)
     {
-      this$0.mWebViewCallbackClient.axF();
+      this$0.mWebViewCallbackClient.aNA();
       return;
     }
     super.computeScroll();
@@ -42,10 +50,10 @@ class WebView$SystemWebView
     try
     {
       super.dispatchDraw(paramCanvas);
-      if ((!WebView.aLG()) && (WebView.aUU() != null))
+      if ((!WebView.bme()) && (WebView.bmf() != null))
       {
         paramCanvas.save();
-        paramCanvas.drawPaint(WebView.aUU());
+        paramCanvas.drawPaint(WebView.bmf());
         paramCanvas.restore();
       }
       return;
@@ -56,15 +64,26 @@ class WebView$SystemWebView
   public boolean dispatchTouchEvent(MotionEvent paramMotionEvent)
   {
     if (this$0.mWebViewCallbackClient != null) {
-      return this$0.mWebViewCallbackClient.q(paramMotionEvent);
+      return this$0.mWebViewCallbackClient.p(paramMotionEvent);
     }
     return super.dispatchTouchEvent(paramMotionEvent);
+  }
+  
+  public WebSettings getSettings()
+  {
+    try
+    {
+      WebSettings localWebSettings = super.getSettings();
+      return localWebSettings;
+    }
+    catch (Exception localException) {}
+    return null;
   }
   
   public boolean onInterceptTouchEvent(MotionEvent paramMotionEvent)
   {
     if (this$0.mWebViewCallbackClient != null) {
-      return this$0.mWebViewCallbackClient.r(paramMotionEvent);
+      return this$0.mWebViewCallbackClient.q(paramMotionEvent);
     }
     return super.onInterceptTouchEvent(paramMotionEvent);
   }
@@ -85,7 +104,7 @@ class WebView$SystemWebView
   {
     if (this$0.mWebViewCallbackClient != null)
     {
-      this$0.mWebViewCallbackClient.j(paramInt1, paramInt2, paramInt3, paramInt4);
+      this$0.mWebViewCallbackClient.k(paramInt1, paramInt2, paramInt3, paramInt4);
       return;
     }
     super.onScrollChanged(paramInt1, paramInt2, paramInt3, paramInt4);
@@ -99,7 +118,7 @@ class WebView$SystemWebView
       requestFocus();
     }
     if (this$0.mWebViewCallbackClient != null) {
-      return this$0.mWebViewCallbackClient.p(paramMotionEvent);
+      return this$0.mWebViewCallbackClient.o(paramMotionEvent);
     }
     try
     {

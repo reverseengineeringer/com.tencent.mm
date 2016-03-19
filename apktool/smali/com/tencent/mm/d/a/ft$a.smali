@@ -15,9 +15,19 @@
 
 
 # instance fields
-.field public aqX:Ljava/lang/String;
+.field public aAF:Landroid/widget/ImageView;
 
-.field public axR:Ljava/lang/String;
+.field public aAG:Landroid/widget/ImageView;
+
+.field public aAH:Landroid/widget/ProgressBar;
+
+.field public aAI:I
+
+.field public ask:Lcom/tencent/mm/storage/ag;
+
+.field public h:I
+
+.field public w:I
 
 
 # direct methods

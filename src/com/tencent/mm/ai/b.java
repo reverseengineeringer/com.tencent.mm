@@ -1,179 +1,172 @@
 package com.tencent.mm.ai;
 
-import com.tencent.mm.a.e;
-import com.tencent.mm.compatible.util.i;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.adt;
-import com.tencent.mm.protocal.b.adu;
-import com.tencent.mm.protocal.b.anc;
-import com.tencent.mm.protocal.b.and;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j.a;
-import com.tencent.mm.q.j.b;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.h;
-import java.util.LinkedList;
+import android.graphics.Bitmap;
+import com.tencent.mm.a.g;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.d;
 
 public final class b
-  extends a
-  implements r
 {
-  d apI;
-  private com.tencent.mm.q.a apJ;
-  int apL = 0;
-  boolean apN = false;
-  aj apO = new aj(new c(this), true);
-  int bLW = 0;
-  private long bRd = -1L;
-  private boolean bRe = false;
-  private int bRf;
-  private String[] bRg = new String[0];
-  String filename = null;
-  
-  public b(String paramString, int paramInt)
+  public static Bitmap BD()
   {
-    filename = paramString;
-    bRf = paramInt;
-  }
-  
-  public final void Cv()
-  {
-    apN = true;
-  }
-  
-  public final String[] Cw()
-  {
-    return bRg;
-  }
-  
-  public final long Cx()
-  {
-    return bRd;
-  }
-  
-  public final int a(m paramm, d paramd)
-  {
-    int i = 3960;
-    apI = paramd;
-    int k = com.tencent.mm.a.c.ay(filename);
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", i.ph() + " read file:" + filename + " filelen:" + k + " oldoff:" + bLW + " isFin:" + apN);
-    if (k <= 0)
-    {
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", "read failed :" + filename);
-      apL = (i.pf() + 40000);
-      return -1;
+    int i = ay.d((Integer)ah.tD().rn().get(66561, null));
+    byte[] arrayOfByte = is(com.tencent.mm.model.h.sc());
+    if ((arrayOfByte == null) || (i == 0)) {
+      return null;
     }
-    int j = k - bLW;
-    if (j > 3960) {}
-    for (;;)
-    {
-      t.d("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", i.ph() + " read file:" + filename + " filelen:" + k + " oldoff:" + bLW + " isFin:" + apN + " endFlag:" + bRe);
-      paramd = com.tencent.mm.a.c.c(filename, bLW, i);
-      if (paramd != null) {
-        break;
-      }
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", i.ph() + " read failed :" + filename + " read:" + i);
-      apL = (i.pf() + 40000);
-      return -1;
-      if ((j < 3300) && (!apN))
-      {
-        t.e("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", i.ph() + " read failed :" + filename + "can read:" + j + " isfinish:" + apN);
-        apL = (i.pf() + 40000);
-        return -1;
-      }
-      if (apN) {
-        bRe = true;
-      }
-      i = j;
-    }
-    Object localObject = new a.a();
-    bsW = new anc();
-    bsX = new and();
-    uri = "/cgi-bin/micromsg-bin/voiceaddr";
-    bsV = 206;
-    bsY = 94;
-    bsZ = 1000000094;
-    apJ = ((a.a)localObject).vh();
-    localObject = (anc)apJ.bsT.btb;
-    hlA = new adt().aA(paramd);
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", i.ph() + " read file:" + filename + " readlen:" + paramd.length + " datalen:" + hlA.hMb.toByteArray().length + " dataiLen:" + hlA.hLZ + " md5:" + e.n(paramd) + " datamd5:" + e.n(hlA.hMb.toByteArray()));
-    dse = ((String)ax.tl().rf().get(2, ""));
-    hlv = bLW;
-    hRq = bRd;
-    if (bRe) {}
-    for (i = 1;; i = 0)
-    {
-      hlB = i;
-      hRr = 0;
-      hkb = 0;
-      hRs = 0;
-      hjY = 0;
-      hSL = bRf;
-      t.d("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", "clientId " + bRd);
-      return a(paramm, apJ, this);
-    }
+    return d.aQ(arrayOfByte);
   }
   
-  protected final int a(w paramw)
+  public static String ir(String paramString)
   {
-    return j.b.btz;
+    return com.tencent.mm.sdk.platformtools.h.b(ah.tD().rx(), ah.tD().ry(), "qr_", g.m(paramString.getBytes()), ".png");
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  /* Error */
+  public static byte[] is(String paramString)
   {
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", i.ph() + " onGYNetEnd file:" + filename + " errtype:" + paramInt2 + " errCode:" + paramInt3);
-    paramArrayOfByte = (anc)bsT.btb;
-    paramw = (and)bsU.btb;
-    if ((paramInt2 != 0) || (paramInt3 != 0))
-    {
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", i.ph() + " onGYNetEnd file:" + filename + " errType:" + paramInt2 + " errCode:" + paramInt3);
-      apI.a(paramInt2, paramInt3, paramString, this);
-      return;
-    }
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", i.ph() + " onGYNetEnd  file:" + filename + " endflag:" + hlB + " lst:" + hlV);
-    if (hlB == 1)
-    {
-      bRg = new String[hlV.size()];
-      paramInt1 = 0;
-      while (paramInt1 < hlV.size())
-      {
-        bRg[paramInt1] = hlV.get(paramInt1)).hMd;
-        paramInt1 += 1;
-      }
-      apI.a(paramInt2, paramInt3, paramString, this);
-      return;
-    }
-    paramInt1 = hlv;
-    bLW = (hlA.hLZ + paramInt1);
-    if (apN) {}
-    for (long l = 0L;; l = 500L)
-    {
-      t.d("!44@/B4Tb64lLpK+IBX8XDgnvqfYc64hc25hhxPaLMWlC3U=", "onGYNetEnd file:" + filename + " delay:" + l);
-      apO.cA(l);
-      return;
-    }
+    // Byte code:
+    //   0: aload_0
+    //   1: invokestatic 84	com/tencent/mm/ai/b:ir	(Ljava/lang/String;)Ljava/lang/String;
+    //   4: astore_0
+    //   5: new 86	java/io/RandomAccessFile
+    //   8: dup
+    //   9: aload_0
+    //   10: ldc 88
+    //   12: invokespecial 92	java/io/RandomAccessFile:<init>	(Ljava/lang/String;Ljava/lang/String;)V
+    //   15: astore_0
+    //   16: aload_0
+    //   17: invokevirtual 96	java/io/RandomAccessFile:length	()J
+    //   20: l2i
+    //   21: newarray <illegal type>
+    //   23: astore_1
+    //   24: aload_0
+    //   25: aload_1
+    //   26: invokevirtual 100	java/io/RandomAccessFile:read	([B)I
+    //   29: pop
+    //   30: aload_0
+    //   31: invokevirtual 104	java/io/RandomAccessFile:close	()V
+    //   34: aload_1
+    //   35: areturn
+    //   36: astore_0
+    //   37: aconst_null
+    //   38: astore_0
+    //   39: aload_0
+    //   40: ifnull +7 -> 47
+    //   43: aload_0
+    //   44: invokevirtual 104	java/io/RandomAccessFile:close	()V
+    //   47: aconst_null
+    //   48: areturn
+    //   49: astore_1
+    //   50: aconst_null
+    //   51: astore_0
+    //   52: aload_0
+    //   53: ifnull +7 -> 60
+    //   56: aload_0
+    //   57: invokevirtual 104	java/io/RandomAccessFile:close	()V
+    //   60: aload_1
+    //   61: athrow
+    //   62: astore_0
+    //   63: aload_1
+    //   64: areturn
+    //   65: astore_0
+    //   66: goto -19 -> 47
+    //   69: astore_0
+    //   70: goto -10 -> 60
+    //   73: astore_1
+    //   74: goto -22 -> 52
+    //   77: astore_1
+    //   78: goto -39 -> 39
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	81	0	paramString	String
+    //   23	12	1	arrayOfByte1	byte[]
+    //   49	15	1	arrayOfByte2	byte[]
+    //   73	1	1	localObject	Object
+    //   77	1	1	localException	Exception
+    // Exception table:
+    //   from	to	target	type
+    //   5	16	36	java/lang/Exception
+    //   5	16	49	finally
+    //   30	34	62	java/lang/Exception
+    //   43	47	65	java/lang/Exception
+    //   56	60	69	java/lang/Exception
+    //   16	30	73	finally
+    //   16	30	77	java/lang/Exception
   }
   
-  protected final void a(j.a parama)
+  /* Error */
+  public static int k(String paramString, byte[] paramArrayOfByte)
   {
-    apI.a(3, i.pf() + 40000, "ecurityCheckError", this);
-  }
-  
-  public final int getType()
-  {
-    return 206;
-  }
-  
-  protected final int lP()
-  {
-    return 20;
+    // Byte code:
+    //   0: aload_0
+    //   1: invokestatic 84	com/tencent/mm/ai/b:ir	(Ljava/lang/String;)Ljava/lang/String;
+    //   4: astore_0
+    //   5: aconst_null
+    //   6: astore_2
+    //   7: new 108	java/io/FileOutputStream
+    //   10: dup
+    //   11: aload_0
+    //   12: invokespecial 111	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
+    //   15: astore_0
+    //   16: aload_0
+    //   17: aload_1
+    //   18: invokevirtual 115	java/io/FileOutputStream:write	([B)V
+    //   21: aload_0
+    //   22: invokevirtual 116	java/io/FileOutputStream:close	()V
+    //   25: aload_0
+    //   26: invokevirtual 116	java/io/FileOutputStream:close	()V
+    //   29: iconst_0
+    //   30: ireturn
+    //   31: astore_0
+    //   32: aconst_null
+    //   33: astore_0
+    //   34: aload_0
+    //   35: ifnull +7 -> 42
+    //   38: aload_0
+    //   39: invokevirtual 116	java/io/FileOutputStream:close	()V
+    //   42: iconst_m1
+    //   43: ireturn
+    //   44: astore_0
+    //   45: aload_2
+    //   46: astore_1
+    //   47: aload_1
+    //   48: ifnull +7 -> 55
+    //   51: aload_1
+    //   52: invokevirtual 116	java/io/FileOutputStream:close	()V
+    //   55: aload_0
+    //   56: athrow
+    //   57: astore_0
+    //   58: goto -29 -> 29
+    //   61: astore_0
+    //   62: goto -20 -> 42
+    //   65: astore_1
+    //   66: goto -11 -> 55
+    //   69: astore_2
+    //   70: aload_0
+    //   71: astore_1
+    //   72: aload_2
+    //   73: astore_0
+    //   74: goto -27 -> 47
+    //   77: astore_1
+    //   78: goto -44 -> 34
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	81	0	paramString	String
+    //   0	81	1	paramArrayOfByte	byte[]
+    //   6	40	2	localObject1	Object
+    //   69	4	2	localObject2	Object
+    // Exception table:
+    //   from	to	target	type
+    //   7	16	31	java/lang/Exception
+    //   7	16	44	finally
+    //   25	29	57	java/lang/Exception
+    //   38	42	61	java/lang/Exception
+    //   51	55	65	java/lang/Exception
+    //   16	25	69	finally
+    //   16	25	77	java/lang/Exception
   }
 }
 

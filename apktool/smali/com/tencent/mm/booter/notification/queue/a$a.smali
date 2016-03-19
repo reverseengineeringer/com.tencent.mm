@@ -18,17 +18,17 @@
 
 
 # instance fields
-.field public avY:Ljava/lang/String;
+.field public ajh:Ljava/lang/String;
 
-.field public axb:J
+.field public avg:J
 
-.field public bdO:Z
+.field public bnF:I
 
-.field public bdU:I
+.field public bnX:Z
 
-.field public bdV:I
+.field public bod:I
 
-.field public bdy:I
+.field public boe:I
 
 
 # direct methods
@@ -44,18 +44,18 @@
     .line 210
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->axb:J
+    iput-wide v0, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->avg:J
 
     .line 211
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->avY:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->ajh:Ljava/lang/String;
 
     .line 213
-    iput-boolean v2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdO:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bnX:Z
 
     .line 214
-    iput v2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdV:I
+    iput v2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->boe:I
 
     .line 217
     invoke-virtual/range {p0 .. p7}, Lcom/tencent/mm/booter/notification/queue/a$a;->a(IJLjava/lang/String;IZI)V
@@ -76,24 +76,24 @@
     .line 210
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->axb:J
+    iput-wide v0, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->avg:J
 
     .line 211
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->avY:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->ajh:Ljava/lang/String;
 
     .line 213
-    iput-boolean v2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdO:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bnX:Z
 
     .line 214
-    iput v2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdV:I
+    iput v2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->boe:I
 
     .line 221
-    iput p1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdU:I
+    iput p1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bod:I
 
     .line 222
-    iput-boolean p2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdO:Z
+    iput-boolean p2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bnX:Z
 
     .line 223
     return-void
@@ -106,22 +106,22 @@
 
     .prologue
     .line 226
-    iput p1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdU:I
+    iput p1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bod:I
 
     .line 227
-    iput-wide p2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->axb:J
+    iput-wide p2, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->avg:J
 
     .line 228
-    iput-object p4, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->avY:Ljava/lang/String;
+    iput-object p4, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->ajh:Ljava/lang/String;
 
     .line 229
-    iput p5, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdy:I
+    iput p5, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bnF:I
 
     .line 230
-    iput-boolean p6, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdO:Z
+    iput-boolean p6, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bnX:Z
 
     .line 231
-    iput p7, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdV:I
+    iput p7, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->boe:I
 
     .line 232
     return-void
@@ -136,7 +136,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->avY:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->ajh:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -148,7 +148,7 @@
 
     move-result-object v0
 
-    iget-wide v1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->axb:J
+    iget-wide v1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->avg:J
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
 
@@ -160,7 +160,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdy:I
+    iget v1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bnF:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -172,7 +172,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bdU:I
+    iget v1, p0, Lcom/tencent/mm/booter/notification/queue/a$a;->bod:I
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 

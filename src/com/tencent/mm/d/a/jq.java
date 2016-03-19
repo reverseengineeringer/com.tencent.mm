@@ -1,37 +1,30 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class jq
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGJ = new a();
-  public b aGK = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGk = new a();
   
   public jq()
   {
-    id = "Voip";
-    hXT = atO;
+    id = "ReportGameCenter";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public byte[] aGL;
-    public int aGM = 0;
-    public String aqX;
-    public int axE = 0;
-    public String content;
-    public Context context;
-  }
-  
-  public static final class b
-  {
-    public boolean aGN = false;
-    public boolean aGO = false;
-    public int type = 0;
+    public int aFa;
+    public String aFb;
+    public String aFc;
+    public int aGl;
+    public String aGm;
+    public int action;
+    public String appId;
+    public int asc;
   }
 }
 

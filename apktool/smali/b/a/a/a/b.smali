@@ -31,11 +31,11 @@
     return-object v0
 .end method
 
-.method public abstract aVO()Ljava/lang/String;
-.end method
-
-.method public abstract aVP()Ljava/lang/String;
-.end method
-
 .method public abstract b(Lb/a/d/i;)Ljava/lang/String;
+.end method
+
+.method public abstract boD()Ljava/lang/String;
+.end method
+
+.method public abstract boE()Ljava/lang/String;
 .end method

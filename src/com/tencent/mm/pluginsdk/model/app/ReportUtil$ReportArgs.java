@@ -7,20 +7,20 @@ import android.os.Parcelable.Creator;
 public class ReportUtil$ReportArgs
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new at();
-  public String cjK;
-  public String cjN;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  public String cAU;
+  public String cAX;
   public int errCode;
-  public String gMB;
+  public String iBD;
   
   public ReportUtil$ReportArgs() {}
   
   private ReportUtil$ReportArgs(Parcel paramParcel)
   {
-    cjN = paramParcel.readString();
+    cAX = paramParcel.readString();
     errCode = paramParcel.readInt();
-    gMB = paramParcel.readString();
-    cjK = paramParcel.readString();
+    iBD = paramParcel.readString();
+    cAU = paramParcel.readString();
   }
   
   public int describeContents()
@@ -30,10 +30,10 @@ public class ReportUtil$ReportArgs
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeString(cjN);
+    paramParcel.writeString(cAX);
     paramParcel.writeInt(errCode);
-    paramParcel.writeString(gMB);
-    paramParcel.writeString(cjK);
+    paramParcel.writeString(iBD);
+    paramParcel.writeString(cAU);
   }
 }
 

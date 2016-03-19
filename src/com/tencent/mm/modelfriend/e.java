@@ -1,28 +1,38 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.HashSet;
+import com.tencent.mm.protocal.b.aj;
+import com.tencent.mm.q.h;
+import com.tencent.mm.q.i;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.ag;
+import com.tencent.mm.storage.ag.b;
 
-final class e
-  implements Runnable
+public final class e
+  extends com.tencent.mm.model.e
 {
-  e(long paramLong, c.b paramb) {}
-  
-  public final void run()
+  protected final ag a(aj paramaj, String paramString1, String paramString2, String paramString3)
   {
-    if ((c.xn() != null) && (c.xn().isAlive())) {}
-    for (boolean bool = true;; bool = false)
+    Object localObject = com.tencent.mm.platformtools.n.a(iXv);
+    if ((localObject == null) || (((String)localObject).length() <= 0))
     {
-      t.i("!44@/B4Tb64lLpKsaaaeu1U1LvE9rg8EoeqFZ8tU4LT5XLw=", "syncAddrBook running:%b setSize:%d call:%d callback:%s", new Object[] { Boolean.valueOf(bool), Integer.valueOf(c.byl.size()), Long.valueOf(byn), byo });
-      c.byl.add(byo);
-      if (!bool) {
-        break;
-      }
-      return;
+      u.e("!44@/B4Tb64lLpL1dEr9MTsZoH470szkdgdrgFUdKsSMXFM=", "possible friend msg : content is null");
+      return null;
     }
-    c.a(com.tencent.mm.sdk.h.e.d(new c.a((byte)0), "AddrBookSyncHelper_addrBookRead", 1));
-    w.xJ();
-    c.xn().start();
+    localObject = ag.b.EQ((String)localObject);
+    if (ay.ky(hmX).length() > 0)
+    {
+      h localh = new h();
+      username = hmX;
+      aSt = 3;
+      localh.aK(true);
+      bEy = kfN;
+      bEx = kfO;
+      aou = -1;
+      u.d("!44@/B4Tb64lLpL1dEr9MTsZoH470szkdgdrgFUdKsSMXFM=", "dkhurl user:[%s] big:[%s] sm:[%s]", new Object[] { hmX, localh.vi(), localh.vj() });
+      com.tencent.mm.q.n.vs().a(localh);
+    }
+    return super.a(paramaj, paramString1, paramString2, paramString3);
   }
 }
 

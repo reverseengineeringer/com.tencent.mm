@@ -6,7 +6,7 @@ import java.net.MalformedURLException;
 
 public abstract interface a$a
 {
-  public abstract void AA(String paramString);
+  public abstract void Gp(String paramString);
   
   public abstract void a(FileNotFoundException paramFileNotFoundException);
   

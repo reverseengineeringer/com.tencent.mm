@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/platformtools/h$a;
-.super Lcom/tencent/mm/ar/g;
+.super Lcom/tencent/mm/az/g;
 .source "SourceFile"
 
 
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field public final bUW:Z
+.field public final clT:Z
 
-.field bUX:Landroid/util/SparseBooleanArray;
+.field clU:Landroid/util/SparseBooleanArray;
 
 .field private final path:Ljava/lang/String;
 
@@ -30,14 +30,14 @@
     const/4 v3, 0x0
 
     .line 68
-    invoke-direct {p0}, Lcom/tencent/mm/ar/g;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/az/g;-><init>()V
 
     .line 66
     new-instance v0, Landroid/util/SparseBooleanArray;
 
     invoke-direct {v0}, Landroid/util/SparseBooleanArray;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/platformtools/h$a;->bUX:Landroid/util/SparseBooleanArray;
+    iput-object v0, p0, Lcom/tencent/mm/platformtools/h$a;->clU:Landroid/util/SparseBooleanArray;
 
     .line 69
     const-string/jumbo v0, "!44@/B4Tb64lLpKLtvWkVeLEdAH+ecu3SbUE1q+PcZlao4w="
@@ -50,10 +50,10 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 70
-    iput-boolean v3, p0, Lcom/tencent/mm/platformtools/h$a;->bUW:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/platformtools/h$a;->clT:Z
 
     .line 71
     iput-object p1, p0, Lcom/tencent/mm/platformtools/h$a;->path:Ljava/lang/String;
@@ -64,7 +64,7 @@
 
 
 # virtual methods
-.method public final Dx()V
+.method public final FE()V
     .locals 6
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -81,16 +81,16 @@
 
     const/4 v3, 0x0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->aFH()Lcom/tencent/mm/sdk/platformtools/bn$b;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 93
-    iget-object v0, p0, Lcom/tencent/mm/platformtools/h$a;->bUX:Landroid/util/SparseBooleanArray;
+    iget-object v0, p0, Lcom/tencent/mm/platformtools/h$a;->clU:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->size()I
 
@@ -99,14 +99,14 @@
     if-gt v0, v5, :cond_0
 
     .line 94
-    invoke-super {p0}, Lcom/tencent/mm/ar/g;->Dx()V
+    invoke-super {p0}, Lcom/tencent/mm/az/g;->FE()V
 
     .line 96
     :cond_0
     return-void
 .end method
 
-.method public final cr(Ljava/lang/String;)V
+.method public final cu(Ljava/lang/String;)V
     .locals 2
     .annotation runtime Ljava/lang/Deprecated;
     .end annotation
@@ -117,10 +117,10 @@
 
     const-string/jumbo v1, "forbid to use this method"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/platformtools/h$a;->bUX:Landroid/util/SparseBooleanArray;
+    iget-object v0, p0, Lcom/tencent/mm/platformtools/h$a;->clU:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->size()I
 
@@ -131,14 +131,14 @@
     if-gt v0, v1, :cond_0
 
     .line 103
-    invoke-super {p0, p1}, Lcom/tencent/mm/ar/g;->cr(Ljava/lang/String;)V
+    invoke-super {p0, p1}, Lcom/tencent/mm/az/g;->cu(Ljava/lang/String;)V
 
     .line 105
     :cond_0
     return-void
 .end method
 
-.method public final dM(I)V
+.method public final ek(I)V
     .locals 6
 
     .prologue
@@ -159,15 +159,15 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/platformtools/h$a;->bUX:Landroid/util/SparseBooleanArray;
+    iget-object v0, p0, Lcom/tencent/mm/platformtools/h$a;->clU:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseBooleanArray;->delete(I)V
 
     .line 82
-    iget-object v0, p0, Lcom/tencent/mm/platformtools/h$a;->bUX:Landroid/util/SparseBooleanArray;
+    iget-object v0, p0, Lcom/tencent/mm/platformtools/h$a;->clU:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v0}, Landroid/util/SparseBooleanArray;->size()I
 
@@ -188,13 +188,13 @@
 
     aput-object v3, v2, v4
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 84
-    invoke-super {p0}, Lcom/tencent/mm/ar/g;->Dx()V
+    invoke-super {p0}, Lcom/tencent/mm/az/g;->FE()V
 
     .line 85
-    invoke-static {}, Lcom/tencent/mm/platformtools/h;->Dw()Landroid/util/SparseArray;
+    invoke-static {}, Lcom/tencent/mm/platformtools/h;->qV()Landroid/util/SparseArray;
 
     move-result-object v0
 

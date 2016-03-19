@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field private cXR:Z
+.field private dCB:Z
 
-.field private dKl:Landroid/widget/TextView;
+.field private eMj:Landroid/widget/TextView;
 
-.field private jfT:Ljava/lang/String;
+.field private lke:Ljava/lang/String;
 
-.field private jfU:Landroid/widget/TextView;
+.field private lkf:Landroid/widget/TextView;
 
-.field private jfV:Landroid/widget/TextView;
+.field private lkg:Landroid/widget/TextView;
 
-.field private jfW:Landroid/widget/TextView;
+.field private lkh:Landroid/widget/TextView;
 
 .field private title:Ljava/lang/String;
 
@@ -55,7 +55,7 @@
     .line 41
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->cXR:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->dCB:Z
 
     .line 42
     const-string/jumbo v0, ""
@@ -65,7 +65,7 @@
     .line 43
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfT:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lke:Ljava/lang/String;
 
     .line 44
     return-void
@@ -86,7 +86,7 @@
     const/16 v3, 0x8
 
     .line 61
-    sget v0, Lcom/tencent/mm/a$i;->title:I
+    const v0, 0x7f070114
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -94,10 +94,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->dKl:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->eMj:Landroid/widget/TextView;
 
     .line 62
-    sget v0, Lcom/tencent/mm/a$i;->firstDomainMail:I
+    const v0, 0x7f070250
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -105,10 +105,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfU:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkf:Landroid/widget/TextView;
 
     .line 63
-    sget v0, Lcom/tencent/mm/a$i;->secondDomainMail:I
+    const v0, 0x7f070251
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -116,10 +116,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfV:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkg:Landroid/widget/TextView;
 
     .line 64
-    sget v0, Lcom/tencent/mm/a$i;->thirdDomainMail:I
+    const v0, 0x7f070252
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -127,13 +127,13 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfW:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkh:Landroid/widget/TextView;
 
     .line 66
-    iput-boolean v5, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->cXR:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->dCB:Z
 
     .line 67
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->cXR:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->dCB:Z
 
     if-nez v0, :cond_0
 
@@ -141,7 +141,7 @@
 
     const-string/jumbo v1, "initView : unbind view"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 68
     :goto_0
@@ -152,17 +152,17 @@
 
     .line 67
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->dKl:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->eMj:Landroid/widget/TextView;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->title:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/ad;->iV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfT:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lke:Ljava/lang/String;
 
     const-string/jumbo v1, ";"
 
@@ -170,9 +170,9 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfT:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lke:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/platformtools/ad;->iV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/platformtools/t;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -182,16 +182,16 @@
 
     if-gtz v1, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfU:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkf:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfV:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkg:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfW:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkh:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -202,15 +202,15 @@
 
     if-lez v1, :cond_3
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfU:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkf:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfU:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkf:Landroid/widget/TextView;
 
     aget-object v2, v0, v4
 
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/ad;->iV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/platformtools/t;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -221,15 +221,15 @@
 
     if-le v1, v5, :cond_4
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfV:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkg:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfV:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkg:Landroid/widget/TextView;
 
     aget-object v2, v0, v5
 
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/ad;->iV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/platformtools/t;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -240,15 +240,15 @@
 
     if-le v1, v6, :cond_1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfW:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkh:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfW:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkh:Landroid/widget/TextView;
 
     aget-object v0, v0, v6
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/ad;->iV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -257,14 +257,14 @@
     goto :goto_0
 
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfU:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkf:Landroid/widget/TextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto :goto_1
 
     :cond_4
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->jfV:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/DomainMailListPreference;->lkg:Landroid/widget/TextView;
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
@@ -292,7 +292,7 @@
     check-cast v0, Landroid/view/LayoutInflater;
 
     .line 52
-    sget v1, Lcom/tencent/mm/a$i;->content:I
+    const v1, 0x7f0700c1
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -304,7 +304,7 @@
     invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViews()V
 
     .line 55
-    sget v3, Lcom/tencent/mm/a$k;->mm_preference_content_domainmaillist:I
+    const v3, 0x7f0a00d3
 
     invoke-virtual {v0, v3, v1}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 

@@ -13,6 +13,10 @@
 
 .field public sAppName:Ljava/lang/String;
 
+.field public sAppSignature:Ljava/lang/String;
+
+.field public sAppVersionName:Ljava/lang/String;
+
 .field public sGuid:Ljava/lang/String;
 
 .field public sImei:Ljava/lang/String;
@@ -33,7 +37,7 @@
     .locals 2
 
     .prologue
-    .line 34
+    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 13
@@ -86,6 +90,16 @@
 
     iput v0, p0, LMTT/ThirdAppInfoNew;->iCoreType:I
 
+    .line 33
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, LMTT/ThirdAppInfoNew;->sAppVersionName:Ljava/lang/String;
+
     .line 35
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, LMTT/ThirdAppInfoNew;->sAppSignature:Ljava/lang/String;
+
+    .line 39
     return-void
 .end method

@@ -1,19 +1,19 @@
 package android.support.v4.app;
 
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.ActivityInfo;
+import android.os.Bundle;
 
-abstract interface w$a
+public final class w$a
 {
-  public abstract Intent a(Activity paramActivity);
+  public final String dT;
+  public CharSequence dU;
+  public CharSequence[] dV;
+  public boolean dW = true;
+  public Bundle mExtras = new Bundle();
   
-  public abstract String a(Context paramContext, ActivityInfo paramActivityInfo);
-  
-  public abstract boolean a(Activity paramActivity, Intent paramIntent);
-  
-  public abstract void b(Activity paramActivity, Intent paramIntent);
+  public w$a(String paramString)
+  {
+    dT = paramString;
+  }
 }
 
 /* Location:

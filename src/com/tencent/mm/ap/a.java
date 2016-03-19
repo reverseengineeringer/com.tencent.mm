@@ -1,50 +1,33 @@
 package com.tencent.mm.ap;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.svg.frame.c.a.c;
+import com.tencent.mm.am.i;
+import com.tencent.mm.am.l;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.g.e;
+import com.tencent.mm.g.h;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class a
 {
-  public static Drawable getDrawable(int paramInt)
+  public static boolean aOP()
   {
-    try
-    {
-      if (com.tencent.mm.svg.frame.a.mO(paramInt)) {
-        return com.tencent.mm.svg.frame.a.getDrawable(paramInt);
-      }
-      Drawable localDrawable = aa.getContext().getResources().getDrawable(paramInt);
-      return localDrawable;
+    String str2 = h.pS().getValue("EnableStrangerChat");
+    String str1 = str2;
+    if (ay.kz(str2)) {
+      str1 = "0";
     }
-    catch (Exception localException)
-    {
-      localException.getMessage();
-      bn.a(localException);
-      c.aIz();
-    }
-    return null;
+    return "1".equals(str1);
   }
   
-  public static com.tencent.mm.svg.frame.b.a mm(int paramInt)
+  public static void cC(Context paramContext)
   {
-    try
+    if ((!aOP()) && (l.DM().DE() > 0))
     {
-      if (com.tencent.mm.svg.frame.a.mO(paramInt))
-      {
-        com.tencent.mm.svg.frame.b.a locala = com.tencent.mm.svg.frame.a.mm(paramInt);
-        return locala;
-      }
+      c.u(paramContext, "nearby", ".ui.NearbyFriendShowSayHiUI");
+      return;
     }
-    catch (Exception localException)
-    {
-      localException.getMessage();
-      bn.a(localException);
-      c.aIz();
-    }
-    return null;
+    c.u(paramContext, "nearby", ".ui.NearbyFriendsUI");
   }
 }
 

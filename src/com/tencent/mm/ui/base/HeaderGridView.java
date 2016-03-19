@@ -22,7 +22,7 @@ import java.util.Iterator;
 public class HeaderGridView
   extends GridView
 {
-  private ArrayList iCW = new ArrayList();
+  public ArrayList kBZ = new ArrayList();
   
   public HeaderGridView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -36,50 +36,9 @@ public class HeaderGridView
     super.setClipChildren(false);
   }
   
-  public final void a(ListAdapter paramListAdapter, int paramInt)
-  {
-    if (iCW.size() > 0)
-    {
-      paramListAdapter = new c(iCW, paramListAdapter);
-      if (paramInt > 1)
-      {
-        if (paramInt <= 0) {
-          throw new IllegalArgumentException("Number of columns must be 1 or more");
-        }
-        if (cOq != paramInt)
-        {
-          cOq = paramInt;
-          iCZ.notifyChanged();
-        }
-      }
-      super.setAdapter(paramListAdapter);
-      return;
-    }
-    super.setAdapter(paramListAdapter);
-  }
-  
-  public final void d(View paramView, boolean paramBoolean)
-  {
-    ListAdapter localListAdapter = getAdapter();
-    if ((localListAdapter != null) && (!(localListAdapter instanceof c))) {
-      throw new IllegalStateException("Cannot add header view to grid -- setAdapter has already been called.");
-    }
-    a locala = new a((byte)0);
-    b localb = new b(getContext());
-    localb.addView(paramView);
-    view = paramView;
-    iCX = localb;
-    data = null;
-    isSelectable = paramBoolean;
-    iCW.add(locala);
-    if (localListAdapter != null) {
-      iCZ.notifyChanged();
-    }
-  }
-  
   public int getHeaderViewCount()
   {
-    return iCW.size();
+    return kBZ.size();
   }
   
   @TargetApi(11)
@@ -99,13 +58,29 @@ public class HeaderGridView
     return 1;
   }
   
+  public final void setAdapter$159aa965(ListAdapter paramListAdapter)
+  {
+    if (kBZ.size() > 0)
+    {
+      paramListAdapter = new c(kBZ, paramListAdapter);
+      if (dgj != 5)
+      {
+        dgj = 5;
+        kCc.notifyChanged();
+      }
+      super.setAdapter(paramListAdapter);
+      return;
+    }
+    super.setAdapter(paramListAdapter);
+  }
+  
   public void setClipChildren(boolean paramBoolean) {}
   
   private static final class a
   {
     public Object data;
-    public ViewGroup iCX;
     public boolean isSelectable;
+    public ViewGroup kCa;
     public View view;
   }
   
@@ -126,25 +101,25 @@ public class HeaderGridView
   private static final class c
     implements Filterable, WrapperListAdapter
   {
-    int cOq = 1;
-    ArrayList iCW;
-    final DataSetObservable iCZ = new DataSetObservable();
-    boolean iDa;
-    private final boolean iDb;
-    private final ListAdapter qI;
+    int dgj = 1;
+    ArrayList kBZ;
+    public final DataSetObservable kCc = new DataSetObservable();
+    boolean kCd;
+    private final boolean kCe;
+    private final ListAdapter pL;
     
     public c(ArrayList paramArrayList, ListAdapter paramListAdapter)
     {
-      qI = paramListAdapter;
-      iDb = (paramListAdapter instanceof Filterable);
+      pL = paramListAdapter;
+      kCe = (paramListAdapter instanceof Filterable);
       if (paramArrayList == null) {
         throw new IllegalArgumentException("headerViewInfos cannot be null");
       }
-      iCW = paramArrayList;
-      iDa = L(iCW);
+      kBZ = paramArrayList;
+      kCd = O(kBZ);
     }
     
-    private static boolean L(ArrayList paramArrayList)
+    private static boolean O(ArrayList paramArrayList)
     {
       if (paramArrayList != null)
       {
@@ -160,21 +135,21 @@ public class HeaderGridView
     
     public final boolean areAllItemsEnabled()
     {
-      return (qI == null) || ((iDa) && (qI.areAllItemsEnabled()));
+      return (pL == null) || ((kCd) && (pL.areAllItemsEnabled()));
     }
     
     public final int getCount()
     {
-      if (qI != null) {
-        return iCW.size() * cOq + qI.getCount();
+      if (pL != null) {
+        return kBZ.size() * dgj + pL.getCount();
       }
-      return iCW.size() * cOq;
+      return kBZ.size() * dgj;
     }
     
     public final Filter getFilter()
     {
-      if (iDb) {
-        return ((Filterable)qI).getFilter();
+      if (kCe) {
+        return ((Filterable)pL).getFilter();
       }
       return null;
     }
@@ -182,13 +157,13 @@ public class HeaderGridView
     public final Object getItem(int paramInt)
     {
       Object localObject2 = null;
-      int i = iCW.size() * cOq;
+      int i = kBZ.size() * dgj;
       Object localObject1;
       if (paramInt < i)
       {
         localObject1 = localObject2;
-        if (paramInt % cOq == 0) {
-          localObject1 = iCW.get(paramInt / cOq)).data;
+        if (paramInt % dgj == 0) {
+          localObject1 = kBZ.get(paramInt / dgj)).data;
         }
       }
       do
@@ -198,20 +173,20 @@ public class HeaderGridView
           return localObject1;
           paramInt -= i;
           localObject1 = localObject2;
-        } while (qI == null);
+        } while (pL == null);
         localObject1 = localObject2;
-      } while (paramInt >= qI.getCount());
-      return qI.getItem(paramInt);
+      } while (paramInt >= pL.getCount());
+      return pL.getItem(paramInt);
     }
     
     public final long getItemId(int paramInt)
     {
-      int i = iCW.size() * cOq;
-      if ((qI != null) && (paramInt >= i))
+      int i = kBZ.size() * dgj;
+      if ((pL != null) && (paramInt >= i))
       {
         paramInt -= i;
-        if (paramInt < qI.getCount()) {
-          return qI.getItemId(paramInt);
+        if (paramInt < pL.getCount()) {
+          return pL.getItemId(paramInt);
         }
       }
       return -1L;
@@ -219,19 +194,19 @@ public class HeaderGridView
     
     public final int getItemViewType(int paramInt)
     {
-      int i = iCW.size() * cOq;
-      if ((paramInt < i) && (paramInt % cOq != 0))
+      int i = kBZ.size() * dgj;
+      if ((paramInt < i) && (paramInt % dgj != 0))
       {
-        if (qI != null) {
-          return qI.getViewTypeCount();
+        if (pL != null) {
+          return pL.getViewTypeCount();
         }
         return 1;
       }
-      if ((qI != null) && (paramInt >= i))
+      if ((pL != null) && (paramInt >= i))
       {
         paramInt -= i;
-        if (paramInt < qI.getCount()) {
-          return qI.getItemViewType(paramInt);
+        if (paramInt < pL.getCount()) {
+          return pL.getItemViewType(paramInt);
         }
       }
       return -2;
@@ -239,11 +214,11 @@ public class HeaderGridView
     
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
-      int i = iCW.size() * cOq;
+      int i = kBZ.size() * dgj;
       if (paramInt < i)
       {
-        ViewGroup localViewGroup = iCW.get(paramInt / cOq)).iCX;
-        if (paramInt % cOq == 0) {
+        ViewGroup localViewGroup = kBZ.get(paramInt / dgj)).kCa;
+        if (paramInt % dgj == 0) {
           return localViewGroup;
         }
         localView = paramView;
@@ -255,8 +230,8 @@ public class HeaderGridView
         return localView;
       }
       paramInt -= i;
-      if ((qI != null) && (paramInt < qI.getCount())) {
-        return qI.getView(paramInt, paramView, paramViewGroup);
+      if ((pL != null) && (paramInt < pL.getCount())) {
+        return pL.getView(paramInt, paramView, paramViewGroup);
       }
       View localView = paramView;
       if (paramView == null) {
@@ -268,56 +243,56 @@ public class HeaderGridView
     
     public final int getViewTypeCount()
     {
-      if (qI != null) {
-        return qI.getViewTypeCount() + 1;
+      if (pL != null) {
+        return pL.getViewTypeCount() + 1;
       }
       return 2;
     }
     
     public final ListAdapter getWrappedAdapter()
     {
-      return qI;
+      return pL;
     }
     
     public final boolean hasStableIds()
     {
-      if (qI != null) {
-        return qI.hasStableIds();
+      if (pL != null) {
+        return pL.hasStableIds();
       }
       return false;
     }
     
     public final boolean isEmpty()
     {
-      return ((qI == null) || (qI.isEmpty())) && (iCW.size() == 0);
+      return ((pL == null) || (pL.isEmpty())) && (kBZ.size() == 0);
     }
     
     public final boolean isEnabled(int paramInt)
     {
-      int i = iCW.size() * cOq;
+      int i = kBZ.size() * dgj;
       if (paramInt < i) {
-        return (paramInt % cOq == 0) && (iCW.get(paramInt / cOq)).isSelectable);
+        return (paramInt % dgj == 0) && (kBZ.get(paramInt / dgj)).isSelectable);
       }
       paramInt -= i;
-      if ((qI != null) && (paramInt < qI.getCount())) {
-        return qI.isEnabled(paramInt);
+      if ((pL != null) && (paramInt < pL.getCount())) {
+        return pL.isEnabled(paramInt);
       }
       return false;
     }
     
     public final void registerDataSetObserver(DataSetObserver paramDataSetObserver)
     {
-      iCZ.registerObserver(paramDataSetObserver);
-      if (qI != null) {
-        qI.registerDataSetObserver(paramDataSetObserver);
+      kCc.registerObserver(paramDataSetObserver);
+      if (pL != null) {
+        pL.registerDataSetObserver(paramDataSetObserver);
       }
     }
     
     public final void unregisterDataSetObserver(DataSetObserver paramDataSetObserver)
     {
-      iCZ.unregisterObserver(paramDataSetObserver);
-      if (qI != null) {
-        qI.unregisterDataSetObserver(paramDataSetObserver);
+      kCc.unregisterObserver(paramDataSetObserver);
+      if (pL != null) {
+        pL.unregisterDataSetObserver(paramDataSetObserver);
       }
     }
   }

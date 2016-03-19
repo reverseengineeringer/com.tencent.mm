@@ -7,13 +7,10 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.modelsearch.h;
-import com.tencent.mm.modelsearch.o;
+import com.tencent.mm.modelsearch.f;
+import com.tencent.mm.modelsearch.m;
 
-public class d$b
+public final class d$b
   extends a.b
 {
   public d$b(d paramd)
@@ -21,66 +18,61 @@ public class d$b
     super(paramd);
   }
   
-  public View a(Context paramContext, ViewGroup paramViewGroup)
+  public final View a(Context paramContext, ViewGroup paramViewGroup)
   {
-    if (com.tencent.mm.ao.a.cB(paramContext)) {}
-    for (paramContext = LayoutInflater.from(paramContext).inflate(a.k.select_ui_listcontactitem_large, paramViewGroup, false);; paramContext = LayoutInflater.from(paramContext).inflate(a.k.select_ui_listcontactitem, paramViewGroup, false))
-    {
-      paramViewGroup = (d.a)jix.akp();
-      ciI = ((ImageView)paramContext.findViewById(a.i.avatar_iv));
-      cwe = ((TextView)paramContext.findViewById(a.i.title_tv));
-      cwo = ((TextView)paramContext.findViewById(a.i.desc_tv));
-      cvG = paramContext.findViewById(a.i.select_item_content_layout);
-      ciM = ((CheckBox)paramContext.findViewById(a.i.select_cb));
-      paramContext.setTag(paramViewGroup);
-      return paramContext;
+    paramViewGroup = LayoutInflater.from(paramContext).inflate(2131363057, paramViewGroup, false);
+    d.a locala = (d.a)lmY.lmX;
+    czS = ((ImageView)paramViewGroup.findViewById(2131165293));
+    cNT = ((TextView)paramViewGroup.findViewById(2131165340));
+    cNT.setMaxWidth(com.tencent.mm.aw.a.fromDPToPix(paramContext, 200));
+    cOd = ((TextView)paramViewGroup.findViewById(2131165341));
+    fKK = ((TextView)paramViewGroup.findViewById(2131166160));
+    cMt = paramViewGroup.findViewById(2131167176);
+    czW = ((CheckBox)paramViewGroup.findViewById(2131165695));
+    if (lmY.cLD) {
+      cMt.setBackgroundResource(2130970303);
     }
+    paramViewGroup.setTag(locala);
+    return paramViewGroup;
   }
   
-  public void a(Context paramContext, a.a parama, a parama1, boolean paramBoolean1, boolean paramBoolean2)
+  public final void a(Context paramContext, a.a parama, a parama1, boolean paramBoolean1, boolean paramBoolean2)
   {
     paramContext = (d.a)parama;
     parama = (d)parama1;
     if ((username != null) && (username.length() > 0))
     {
-      com.tencent.mm.pluginsdk.ui.a.b.b(ciI, username);
-      h.a(ctu, cwe);
-      h.a(eWr, cwo);
-      if (!jix.jgE) {
-        break label155;
+      com.tencent.mm.pluginsdk.ui.a.b.b(czS, username);
+      f.a(cKS, cNT);
+      f.a(ghW, cOd);
+      f.a(lmV, fKK);
+      if (!lmY.lkT) {
+        break label146;
       }
       if (!paramBoolean1) {
-        break label135;
+        break label126;
       }
-      ciM.setChecked(true);
-      ciM.setEnabled(false);
-      label93:
-      ciM.setVisibility(0);
+      czW.setChecked(true);
+      czW.setEnabled(false);
     }
     for (;;)
     {
-      if (!jix.cuh) {
-        break label167;
-      }
-      cvG.setBackgroundResource(a.h.comm_list_item_selector_no_divider);
+      czW.setVisibility(0);
       return;
-      ciI.setImageResource(a.h.default_avatar);
+      czS.setImageResource(2130970523);
       break;
-      label135:
-      ciM.setChecked(paramBoolean2);
-      ciM.setEnabled(true);
-      break label93;
-      label155:
-      ciM.setVisibility(8);
+      label126:
+      czW.setChecked(paramBoolean2);
+      czW.setEnabled(true);
     }
-    label167:
-    cvG.setBackgroundResource(a.h.comm_list_item_selector);
+    label146:
+    czW.setVisibility(8);
   }
   
-  public final boolean aQF()
+  public final boolean bhz()
   {
-    if (jix.cwj != null) {
-      o.b(jix.bII, jix.cwj, 1);
+    if (lmY.cNY != null) {
+      m.b(lmY.aEy, lmY.cNY, 1);
     }
     return false;
   }

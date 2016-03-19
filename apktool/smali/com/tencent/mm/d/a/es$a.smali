@@ -15,7 +15,13 @@
 
 
 # instance fields
-.field public type:I
+.field public appId:Ljava/lang/String;
+
+.field public aut:Ljava/lang/String;
+
+.field public extInfo:Ljava/lang/String;
+
+.field public url:Ljava/lang/String;
 
 
 # direct methods

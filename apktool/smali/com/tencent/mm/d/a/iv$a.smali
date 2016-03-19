@@ -15,16 +15,35 @@
 
 
 # instance fields
-.field public id:Ljava/lang/String;
+.field public aEZ:Ljava/lang/String;
+
+.field public aFa:I
+
+.field public aFb:Ljava/lang/String;
+
+.field public aFc:Ljava/lang/String;
+
+.field public appId:Ljava/lang/String;
+
+.field public appName:Ljava/lang/String;
+
+.field public asN:I
+
+.field public content:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/tencent/mm/d/a/iv$a;->asN:I
 
     return-void
 .end method

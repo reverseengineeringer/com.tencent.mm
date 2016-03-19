@@ -1,41 +1,16 @@
 package com.tencent.mm.y;
 
-import android.graphics.Bitmap;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.HashMap;
+import com.tencent.mm.protocal.b.ry;
 
 final class c$a
-  implements Runnable
 {
-  private HashMap bCB;
-  private Bitmap bCC;
-  private String url;
+  String aCE;
+  ry bPa;
+  int bPb = 0;
+  int errCode;
+  int errType;
   
-  public c$a(String paramString, Bitmap paramBitmap, HashMap paramHashMap)
-  {
-    url = paramString;
-    bCC = paramBitmap;
-    bCB = paramHashMap;
-  }
-  
-  public final void run()
-  {
-    af.zk();
-    c.e(url, bCC);
-    if (bCB != null)
-    {
-      localObject = (c.c)bCB.remove(url);
-      if (localObject != null) {
-        ((c.c)localObject).f(bCC);
-      }
-    }
-    if (url == null) {}
-    for (Object localObject = "null";; localObject = url)
-    {
-      t.i("!44@/B4Tb64lLpIqiy54boRLZBxJv63zg5oBcZ6pephrpMY=", "finish download post job, url[%s]", new Object[] { localObject });
-      return;
-    }
-  }
+  c$a(c paramc) {}
 }
 
 /* Location:

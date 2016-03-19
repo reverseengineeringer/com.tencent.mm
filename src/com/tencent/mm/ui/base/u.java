@@ -1,15 +1,39 @@
 package com.tencent.mm.ui.base;
 
-import com.tencent.mm.ui.MMActivity;
+import android.util.SparseArray;
+import android.view.View;
 
-final class u
-  implements Runnable
+public final class u
 {
-  u(t paramt) {}
+  View[] kKg = new View[0];
+  int[] kKh = new int[0];
+  SparseArray[] kKi;
+  int kKj;
+  SparseArray kKk;
   
-  public final void run()
+  static View a(SparseArray paramSparseArray, int paramInt)
   {
-    ((MMActivity)iDn.val$context).Xh();
+    int j = paramSparseArray.size();
+    if (j > 0)
+    {
+      int i = 0;
+      while (i < j)
+      {
+        int k = paramSparseArray.keyAt(i);
+        localView = (View)paramSparseArray.get(k);
+        if (k == paramInt)
+        {
+          paramSparseArray.remove(k);
+          return localView;
+        }
+        i += 1;
+      }
+      paramInt = j - 1;
+      View localView = (View)paramSparseArray.valueAt(paramInt);
+      paramSparseArray.remove(paramSparseArray.keyAt(paramInt));
+      return localView;
+    }
+    return null;
   }
 }
 

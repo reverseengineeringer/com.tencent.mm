@@ -1,85 +1,106 @@
 package com.tencent.mm.protocal.b;
 
-import com.tencent.mm.al.b;
+import a.a.a.b;
+import java.util.LinkedList;
 
 public final class akk
-  extends com.tencent.mm.al.a
+  extends alq
 {
-  public int hQR;
-  public int hQS;
-  public String hQT;
-  public b hQU;
-  public int hQV;
-  public int hQW;
+  public akd jFX;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.bM(1, hQR);
-      paramVarArgs.bM(2, hQS);
-      if (hQT != null) {
-        paramVarArgs.U(3, hQT);
+      if (jFX == null) {
+        throw new b("Not all required fields were included: rcptinfolist");
       }
-      if (hQU != null) {
-        paramVarArgs.b(4, hQU);
+      if (jHj == null) {
+        throw new b("Not all required fields were included: BaseResponse");
       }
-      paramVarArgs.bM(5, hQV);
-      paramVarArgs.bM(6, hQW);
-      return 0;
-    }
-    if (paramInt == 1)
-    {
-      int i = a.a.a.a.bI(1, hQR) + 0 + a.a.a.a.bI(2, hQS);
-      paramInt = i;
-      if (hQT != null) {
-        paramInt = i + a.a.a.b.b.a.T(3, hQT);
-      }
-      i = paramInt;
-      if (hQU != null) {
-        i = paramInt + a.a.a.a.a(4, hQU);
-      }
-      return i + a.a.a.a.bI(5, hQV) + a.a.a.a.bI(6, hQW);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
-        }
-      }
-      return 0;
-    }
-    if (paramInt == 3)
-    {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      akk localakk = (akk)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      if (jFX != null)
       {
-      default: 
-        return -1;
-      case 1: 
-        hQR = jMD.aVp();
-        return 0;
-      case 2: 
-        hQS = jMD.aVp();
-        return 0;
-      case 3: 
-        hQT = jMD.readString();
-        return 0;
-      case 4: 
-        hQU = locala.aVn();
-        return 0;
-      case 5: 
-        hQV = jMD.aVp();
-        return 0;
+        paramVarArgs.cj(1, jFX.kn());
+        jFX.a(paramVarArgs);
       }
-      hQW = jMD.aVp();
+      if (jHj != null)
+      {
+        paramVarArgs.cj(2, jHj.kn());
+        jHj.a(paramVarArgs);
+      }
       return 0;
     }
-    return -1;
+    if (paramInt == 1) {
+      if (jFX == null) {
+        break label486;
+      }
+    }
+    label486:
+    for (paramInt = a.a.a.a.ch(1, jFX.kn()) + 0;; paramInt = 0)
+    {
+      int i = paramInt;
+      if (jHj != null) {
+        i = paramInt + a.a.a.a.ch(2, jHj.kn());
+      }
+      return i;
+      if (paramInt == 2)
+      {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = alq.a(paramVarArgs); paramInt > 0; paramInt = alq.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        if (jFX == null) {
+          throw new b("Not all required fields were included: rcptinfolist");
+        }
+        if (jHj != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: BaseResponse");
+      }
+      if (paramInt == 3)
+      {
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        akk localakk = (akk)paramVarArgs[1];
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        Object localObject2;
+        boolean bool;
+        switch (paramInt)
+        {
+        default: 
+          return -1;
+        case 1: 
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new akd();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (bool = true; bool; bool = ((akd)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
+            jFX = ((akd)localObject1);
+            paramInt += 1;
+          }
+        }
+        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+        i = paramVarArgs.size();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          localObject2 = (byte[])paramVarArgs.get(paramInt);
+          localObject1 = new dd();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+          for (bool = true; bool; bool = ((dd)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
+          jHj = ((dd)localObject1);
+          paramInt += 1;
+        }
+        break;
+      }
+      return -1;
+    }
   }
 }
 

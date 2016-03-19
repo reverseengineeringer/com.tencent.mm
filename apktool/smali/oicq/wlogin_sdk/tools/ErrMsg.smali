@@ -12,9 +12,9 @@
 
 
 # instance fields
-.field public jOT:Ljava/lang/String;
+.field public epN:Ljava/lang/String;
 
-.field public message:Ljava/lang/String;
+.field public mdf:Ljava/lang/String;
 
 .field public title:Ljava/lang/String;
 
@@ -27,9 +27,9 @@
 
     .prologue
     .line 95
-    new-instance v0, Loicq/wlogin_sdk/tools/b;
+    new-instance v0, Loicq/wlogin_sdk/tools/ErrMsg$1;
 
-    invoke-direct {v0}, Loicq/wlogin_sdk/tools/b;-><init>()V
+    invoke-direct {v0}, Loicq/wlogin_sdk/tools/ErrMsg$1;-><init>()V
 
     sput-object v0, Loicq/wlogin_sdk/tools/ErrMsg;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -57,12 +57,12 @@
     .line 16
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->message:Ljava/lang/String;
+    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->epN:Ljava/lang/String;
 
     .line 17
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->jOT:Ljava/lang/String;
+    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->mdf:Ljava/lang/String;
 
     .line 18
     return-void
@@ -92,13 +92,13 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->message:Ljava/lang/String;
+    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->epN:Ljava/lang/String;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->jOT:Ljava/lang/String;
+    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->mdf:Ljava/lang/String;
 
     .line 73
     return-void
@@ -116,7 +116,7 @@
 
 
 # virtual methods
-.method public final aVG()V
+.method public final bov()V
     .locals 1
 
     .prologue
@@ -133,12 +133,12 @@
     .line 30
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->message:Ljava/lang/String;
+    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->epN:Ljava/lang/String;
 
     .line 31
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->jOT:Ljava/lang/String;
+    iput-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->mdf:Ljava/lang/String;
 
     .line 32
     return-void
@@ -181,12 +181,12 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 84
-    iget-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->message:Ljava/lang/String;
+    iget-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->epN:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 85
-    iget-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->jOT:Ljava/lang/String;
+    iget-object v0, p0, Loicq/wlogin_sdk/tools/ErrMsg;->mdf:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 

@@ -1,8 +1,10 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.modelsns.SnsAdClick;
+
 public final class jn$a
 {
-  public String path;
+  public SnsAdClick aGg;
 }
 
 /* Location:

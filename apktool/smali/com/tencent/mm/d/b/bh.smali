@@ -1,297 +1,426 @@
 .class public abstract Lcom/tencent/mm/d/b/bh;
-.super Lcom/tencent/mm/sdk/g/ae;
+.super Lcom/tencent/mm/sdk/h/c;
 .source "SourceFile"
 
 
 # static fields
-.field private static final aHH:I
+.field private static final aLG:I
 
-.field public static final aHq:[Ljava/lang/String;
+.field public static final aLn:[Ljava/lang/String;
 
-.field private static final aIQ:I
+.field private static final aMJ:I
 
-.field private static final aIR:I
+.field private static final aQj:I
 
-.field private static final aPA:I
+.field private static final bdA:I
 
-.field private static final aPz:I
+.field private static final bdB:I
 
-.field private static final aWb:I
+.field private static final bdC:I
 
-.field private static final aZS:I
+.field private static final bdD:I
 
-.field private static final aZT:I
+.field private static final bdE:I
 
-.field private static final aZU:I
+.field private static final bdF:I
 
-.field private static final aZV:I
+.field private static final bdG:I
 
-.field private static final aZW:I
+.field private static final bdH:I
 
-.field private static final aZX:I
+.field private static final bdI:I
 
-.field private static final aZY:I
+.field private static final bdJ:I
 
-.field private static final aZZ:I
+.field private static final bdK:I
 
-.field private static final baa:I
+.field private static final bdn:I
 
-.field private static final bab:I
+.field private static final bdo:I
 
-.field private static final bac:I
+.field private static final bdp:I
 
-.field private static final bad:I
+.field private static final bdq:I
+
+.field private static final bdr:I
+
+.field private static final bds:I
+
+.field private static final bdt:I
+
+.field private static final bdu:I
+
+.field private static final bdv:I
+
+.field private static final bdw:I
+
+.field private static final bdx:I
+
+.field private static final bdy:I
+
+.field private static final bdz:I
 
 
 # instance fields
-.field private aIC:Z
+.field private aMv:Z
 
-.field private aID:Z
+.field private aPT:Z
 
-.field private aPj:Z
+.field private bcP:Z
 
-.field private aPk:Z
+.field private bcQ:Z
 
-.field private aVX:Z
+.field private bcR:Z
 
-.field private aZG:Z
+.field private bcS:Z
 
-.field private aZH:Z
+.field private bcT:Z
 
-.field private aZI:Z
+.field private bcU:Z
 
-.field private aZJ:Z
+.field private bcV:Z
 
-.field private aZK:Z
+.field private bcW:Z
 
-.field private aZL:Z
+.field private bcX:Z
 
-.field private aZM:Z
+.field private bcY:Z
 
-.field private aZN:Z
+.field private bcZ:Z
 
-.field private aZO:Z
+.field private bda:Z
 
-.field private aZP:Z
+.field private bdb:Z
 
-.field private aZQ:Z
+.field private bdc:Z
 
-.field private aZR:Z
+.field private bdd:Z
 
-.field public field_clientid:Ljava/lang/String;
+.field private bde:Z
 
-.field public field_createtime:J
+.field private bdf:Z
 
-.field public field_filename:Ljava/lang/String;
+.field private bdg:Z
 
-.field public field_filenowsize:I
+.field private bdh:Z
 
-.field public field_human:Ljava/lang/String;
+.field private bdi:Z
 
-.field public field_lastmodifytime:J
+.field private bdj:Z
 
-.field public field_msgid:J
+.field private bdk:Z
 
-.field public field_msglocalid:I
+.field private bdl:Z
 
-.field public field_nettimes:I
+.field private bdm:Z
 
-.field public field_offset:I
+.field public field_appId:Ljava/lang/String;
 
-.field public field_reserved1:I
+.field public field_downloadedLength:J
 
-.field public field_reserved2:Ljava/lang/String;
+.field public field_endFlag:I
 
-.field public field_status:I
+.field public field_musicId:Ljava/lang/String;
 
-.field public field_totallen:I
+.field public field_musicType:I
 
-.field public field_user:Ljava/lang/String;
+.field public field_originMusicId:Ljava/lang/String;
 
-.field public field_voiceformat:I
+.field public field_songAlbum:Ljava/lang/String;
 
-.field public field_voicelenght:I
+.field public field_songAlbumLocalPath:Ljava/lang/String;
+
+.field public field_songAlbumType:I
+
+.field public field_songAlbumUrl:Ljava/lang/String;
+
+.field public field_songBgColor:I
+
+.field public field_songHAlbumUrl:Ljava/lang/String;
+
+.field public field_songId:I
+
+.field public field_songLyric:Ljava/lang/String;
+
+.field public field_songLyricColor:I
+
+.field public field_songMediaId:Ljava/lang/String;
+
+.field public field_songName:Ljava/lang/String;
+
+.field public field_songSinger:Ljava/lang/String;
+
+.field public field_songSnsAlbumUser:Ljava/lang/String;
+
+.field public field_songSnsShareUser:Ljava/lang/String;
+
+.field public field_songWapLinkUrl:Ljava/lang/String;
+
+.field public field_songWebUrl:Ljava/lang/String;
+
+.field public field_songWifiUrl:Ljava/lang/String;
+
+.field public field_updateTime:J
+
+.field public field_wifiDownloadedLength:J
+
+.field public field_wifiEndFlag:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     .prologue
     .line 10
-    const/4 v0, 0x1
+    const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const/4 v1, 0x0
+    sput-object v0, Lcom/tencent/mm/d/b/bh;->aLn:[Ljava/lang/String;
 
-    const-string/jumbo v2, "CREATE INDEX IF NOT EXISTS voiceRemindFileNameIndex ON VoiceRemindInfo(filename)"
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/tencent/mm/d/b/bh;->aHq:[Ljava/lang/String;
-
-    .line 141
-    const-string/jumbo v0, "filename"
+    .line 204
+    const-string/jumbo v0, "musicId"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/bh;->aZS:I
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdn:I
 
-    .line 142
-    const-string/jumbo v0, "user"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/bh;->aZT:I
-
-    .line 143
-    const-string/jumbo v0, "msgid"
+    .line 205
+    const-string/jumbo v0, "originMusicId"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/bh;->aZU:I
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdo:I
 
-    .line 144
-    const-string/jumbo v0, "offset"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/bh;->aIQ:I
-
-    .line 145
-    const-string/jumbo v0, "filenowsize"
+    .line 206
+    const-string/jumbo v0, "musicType"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/bh;->aZV:I
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdp:I
 
-    .line 146
-    const-string/jumbo v0, "totallen"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/bh;->aZW:I
-
-    .line 147
-    const-string/jumbo v0, "status"
+    .line 207
+    const-string/jumbo v0, "downloadedLength"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/bh;->aIR:I
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdq:I
 
-    .line 148
-    const-string/jumbo v0, "createtime"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/bh;->aWb:I
-
-    .line 149
-    const-string/jumbo v0, "lastmodifytime"
+    .line 208
+    const-string/jumbo v0, "wifiDownloadedLength"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/bh;->aZX:I
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdr:I
 
-    .line 150
-    const-string/jumbo v0, "clientid"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/bh;->aZY:I
-
-    .line 151
-    const-string/jumbo v0, "voicelenght"
+    .line 209
+    const-string/jumbo v0, "endFlag"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/bh;->aZZ:I
+    sput v0, Lcom/tencent/mm/d/b/bh;->bds:I
 
-    .line 152
-    const-string/jumbo v0, "msglocalid"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/bh;->baa:I
-
-    .line 153
-    const-string/jumbo v0, "human"
+    .line 210
+    const-string/jumbo v0, "wifiEndFlag"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/bh;->bab:I
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdt:I
 
-    .line 154
-    const-string/jumbo v0, "voiceformat"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/bh;->bac:I
-
-    .line 155
-    const-string/jumbo v0, "nettimes"
+    .line 211
+    const-string/jumbo v0, "updateTime"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/bh;->bad:I
+    sput v0, Lcom/tencent/mm/d/b/bh;->aQj:I
 
-    .line 156
-    const-string/jumbo v0, "reserved1"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/bh;->aPz:I
-
-    .line 157
-    const-string/jumbo v0, "reserved2"
+    .line 212
+    const-string/jumbo v0, "songId"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/bh;->aPA:I
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdu:I
 
-    .line 158
+    .line 213
+    const-string/jumbo v0, "songName"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdv:I
+
+    .line 214
+    const-string/jumbo v0, "songSinger"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdw:I
+
+    .line 215
+    const-string/jumbo v0, "songAlbum"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdx:I
+
+    .line 216
+    const-string/jumbo v0, "songAlbumType"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdy:I
+
+    .line 217
+    const-string/jumbo v0, "songAlbumUrl"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdz:I
+
+    .line 218
+    const-string/jumbo v0, "songHAlbumUrl"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdA:I
+
+    .line 219
+    const-string/jumbo v0, "songAlbumLocalPath"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdB:I
+
+    .line 220
+    const-string/jumbo v0, "songWifiUrl"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdC:I
+
+    .line 221
+    const-string/jumbo v0, "songWapLinkUrl"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdD:I
+
+    .line 222
+    const-string/jumbo v0, "songWebUrl"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdE:I
+
+    .line 223
+    const-string/jumbo v0, "appId"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->aMJ:I
+
+    .line 224
+    const-string/jumbo v0, "songMediaId"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdF:I
+
+    .line 225
+    const-string/jumbo v0, "songSnsAlbumUser"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdG:I
+
+    .line 226
+    const-string/jumbo v0, "songSnsShareUser"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdH:I
+
+    .line 227
+    const-string/jumbo v0, "songLyric"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdI:I
+
+    .line 228
+    const-string/jumbo v0, "songBgColor"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdJ:I
+
+    .line 229
+    const-string/jumbo v0, "songLyricColor"
+
+    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/mm/d/b/bh;->bdK:I
+
+    .line 230
     const-string/jumbo v0, "rowid"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/bh;->aHH:I
+    sput v0, Lcom/tencent/mm/d/b/bh;->aLG:I
 
     return-void
 .end method
@@ -303,60 +432,861 @@
     const/4 v0, 0x1
 
     .line 7
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/g/ae;-><init>()V
-
-    .line 31
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZG:Z
-
-    .line 33
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZH:Z
-
-    .line 35
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZI:Z
-
-    .line 37
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aIC:Z
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/c;-><init>()V
 
     .line 39
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZJ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bcP:Z
 
     .line 41
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZK:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bcQ:Z
 
     .line 43
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aID:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bcR:Z
 
     .line 45
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aVX:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bcS:Z
 
     .line 47
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZL:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bcT:Z
 
     .line 49
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZM:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bcU:Z
 
     .line 51
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZN:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bcV:Z
 
     .line 53
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZO:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aPT:Z
 
     .line 55
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZP:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bcW:Z
 
     .line 57
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZQ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bcX:Z
 
     .line 59
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aZR:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bcY:Z
 
     .line 61
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aPj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bcZ:Z
 
     .line 63
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aPk:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bda:Z
+
+    .line 65
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bdb:Z
+
+    .line 67
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bdc:Z
+
+    .line 69
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bdd:Z
+
+    .line 71
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bde:Z
+
+    .line 73
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bdf:Z
+
+    .line 75
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bdg:Z
+
+    .line 77
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->aMv:Z
+
+    .line 79
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bdh:Z
+
+    .line 81
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bdi:Z
+
+    .line 83
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bdj:Z
+
+    .line 85
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bdk:Z
+
+    .line 87
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bdl:Z
+
+    .line 89
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/bh;->bdm:Z
 
     return-void
+.end method
+
+.method public static lY()Lcom/tencent/mm/sdk/h/c$a;
+    .locals 6
+
+    .prologue
+    const/16 v5, 0x1a
+
+    .line 91
+    new-instance v0, Lcom/tencent/mm/sdk/h/c$a;
+
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/h/c$a;-><init>()V
+
+    .line 92
+    new-array v1, v5, [Ljava/lang/reflect/Field;
+
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
+
+    .line 93
+    const/16 v1, 0x1b
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    .line 94
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 95
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    const-string/jumbo v4, "musicId"
+
+    aput-object v4, v2, v3
+
+    .line 96
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "musicId"
+
+    const-string/jumbo v4, "TEXT PRIMARY KEY "
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 97
+    const-string/jumbo v2, " musicId TEXT PRIMARY KEY "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 98
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 99
+    const-string/jumbo v2, "musicId"
+
+    iput-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYw:Ljava/lang/String;
+
+    .line 100
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x1
+
+    const-string/jumbo v4, "originMusicId"
+
+    aput-object v4, v2, v3
+
+    .line 101
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "originMusicId"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 102
+    const-string/jumbo v2, " originMusicId TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 103
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 104
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x2
+
+    const-string/jumbo v4, "musicType"
+
+    aput-object v4, v2, v3
+
+    .line 105
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "musicType"
+
+    const-string/jumbo v4, "INTEGER"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 106
+    const-string/jumbo v2, " musicType INTEGER"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 107
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 108
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x3
+
+    const-string/jumbo v4, "downloadedLength"
+
+    aput-object v4, v2, v3
+
+    .line 109
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "downloadedLength"
+
+    const-string/jumbo v4, "LONG"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 110
+    const-string/jumbo v2, " downloadedLength LONG"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 111
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 112
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x4
+
+    const-string/jumbo v4, "wifiDownloadedLength"
+
+    aput-object v4, v2, v3
+
+    .line 113
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "wifiDownloadedLength"
+
+    const-string/jumbo v4, "LONG"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 114
+    const-string/jumbo v2, " wifiDownloadedLength LONG"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 115
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 116
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x5
+
+    const-string/jumbo v4, "endFlag"
+
+    aput-object v4, v2, v3
+
+    .line 117
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "endFlag"
+
+    const-string/jumbo v4, "INTEGER"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 118
+    const-string/jumbo v2, " endFlag INTEGER"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 119
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 120
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x6
+
+    const-string/jumbo v4, "wifiEndFlag"
+
+    aput-object v4, v2, v3
+
+    .line 121
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "wifiEndFlag"
+
+    const-string/jumbo v4, "INTEGER"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 122
+    const-string/jumbo v2, " wifiEndFlag INTEGER"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 123
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 124
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x7
+
+    const-string/jumbo v4, "updateTime"
+
+    aput-object v4, v2, v3
+
+    .line 125
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "updateTime"
+
+    const-string/jumbo v4, "LONG"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 126
+    const-string/jumbo v2, " updateTime LONG"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 127
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 128
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x8
+
+    const-string/jumbo v4, "songId"
+
+    aput-object v4, v2, v3
+
+    .line 129
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songId"
+
+    const-string/jumbo v4, "INTEGER"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 130
+    const-string/jumbo v2, " songId INTEGER"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 131
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 132
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x9
+
+    const-string/jumbo v4, "songName"
+
+    aput-object v4, v2, v3
+
+    .line 133
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songName"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 134
+    const-string/jumbo v2, " songName TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 135
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 136
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0xa
+
+    const-string/jumbo v4, "songSinger"
+
+    aput-object v4, v2, v3
+
+    .line 137
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songSinger"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 138
+    const-string/jumbo v2, " songSinger TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 139
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 140
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0xb
+
+    const-string/jumbo v4, "songAlbum"
+
+    aput-object v4, v2, v3
+
+    .line 141
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songAlbum"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 142
+    const-string/jumbo v2, " songAlbum TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 143
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 144
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0xc
+
+    const-string/jumbo v4, "songAlbumType"
+
+    aput-object v4, v2, v3
+
+    .line 145
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songAlbumType"
+
+    const-string/jumbo v4, "INTEGER"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 146
+    const-string/jumbo v2, " songAlbumType INTEGER"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 147
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 148
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0xd
+
+    const-string/jumbo v4, "songAlbumUrl"
+
+    aput-object v4, v2, v3
+
+    .line 149
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songAlbumUrl"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 150
+    const-string/jumbo v2, " songAlbumUrl TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 151
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 152
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0xe
+
+    const-string/jumbo v4, "songHAlbumUrl"
+
+    aput-object v4, v2, v3
+
+    .line 153
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songHAlbumUrl"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 154
+    const-string/jumbo v2, " songHAlbumUrl TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 155
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 156
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0xf
+
+    const-string/jumbo v4, "songAlbumLocalPath"
+
+    aput-object v4, v2, v3
+
+    .line 157
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songAlbumLocalPath"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 158
+    const-string/jumbo v2, " songAlbumLocalPath TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 159
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 160
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x10
+
+    const-string/jumbo v4, "songWifiUrl"
+
+    aput-object v4, v2, v3
+
+    .line 161
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songWifiUrl"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 162
+    const-string/jumbo v2, " songWifiUrl TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 163
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 164
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x11
+
+    const-string/jumbo v4, "songWapLinkUrl"
+
+    aput-object v4, v2, v3
+
+    .line 165
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songWapLinkUrl"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 166
+    const-string/jumbo v2, " songWapLinkUrl TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 167
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 168
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x12
+
+    const-string/jumbo v4, "songWebUrl"
+
+    aput-object v4, v2, v3
+
+    .line 169
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songWebUrl"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 170
+    const-string/jumbo v2, " songWebUrl TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 171
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 172
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x13
+
+    const-string/jumbo v4, "appId"
+
+    aput-object v4, v2, v3
+
+    .line 173
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "appId"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 174
+    const-string/jumbo v2, " appId TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 175
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 176
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x14
+
+    const-string/jumbo v4, "songMediaId"
+
+    aput-object v4, v2, v3
+
+    .line 177
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songMediaId"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 178
+    const-string/jumbo v2, " songMediaId TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 179
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 180
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x15
+
+    const-string/jumbo v4, "songSnsAlbumUser"
+
+    aput-object v4, v2, v3
+
+    .line 181
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songSnsAlbumUser"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 182
+    const-string/jumbo v2, " songSnsAlbumUser TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 183
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 184
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x16
+
+    const-string/jumbo v4, "songSnsShareUser"
+
+    aput-object v4, v2, v3
+
+    .line 185
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songSnsShareUser"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 186
+    const-string/jumbo v2, " songSnsShareUser TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 187
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 188
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x17
+
+    const-string/jumbo v4, "songLyric"
+
+    aput-object v4, v2, v3
+
+    .line 189
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songLyric"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 190
+    const-string/jumbo v2, " songLyric TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 191
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 192
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x18
+
+    const-string/jumbo v4, "songBgColor"
+
+    aput-object v4, v2, v3
+
+    .line 193
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songBgColor"
+
+    const-string/jumbo v4, "INTEGER"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 194
+    const-string/jumbo v2, " songBgColor INTEGER"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 195
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 196
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x19
+
+    const-string/jumbo v4, "songLyricColor"
+
+    aput-object v4, v2, v3
+
+    .line 197
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "songLyricColor"
+
+    const-string/jumbo v4, "INTEGER"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 198
+    const-string/jumbo v2, " songLyricColor INTEGER"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 199
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const-string/jumbo v3, "rowid"
+
+    aput-object v3, v2, v5
+
+    .line 200
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->jYy:Ljava/lang/String;
+
+    .line 202
+    return-object v0
 .end method
 
 
@@ -365,19 +1295,19 @@
     .locals 5
 
     .prologue
-    .line 161
+    .line 233
     invoke-interface {p1}, Landroid/database/Cursor;->getColumnNames()[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 162
+    .line 234
     if-nez v1, :cond_1
 
-    .line 220
+    .line 320
     :cond_0
     return-void
 
-    .line 163
+    .line 235
     :cond_1
     const/4 v0, 0x0
 
@@ -386,383 +1316,523 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 164
+    .line 236
     aget-object v3, v1, v0
 
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     move-result v3
 
-    .line 165
-    sget v4, Lcom/tencent/mm/d/b/bh;->aZS:I
+    .line 237
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdn:I
 
     if-ne v4, v3, :cond_3
 
-    .line 166
+    .line 238
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_filename:Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_musicId:Ljava/lang/String;
 
-    .line 163
+    .line 239
+    const/4 v3, 0x1
+
+    iput-boolean v3, p0, Lcom/tencent/mm/d/b/bh;->bcP:Z
+
+    .line 235
     :cond_2
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 168
+    .line 241
     :cond_3
-    sget v4, Lcom/tencent/mm/d/b/bh;->aZT:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdo:I
 
     if-ne v4, v3, :cond_4
 
-    .line 169
+    .line 242
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_user:Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_originMusicId:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 171
+    .line 244
     :cond_4
-    sget v4, Lcom/tencent/mm/d/b/bh;->aZU:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdp:I
 
     if-ne v4, v3, :cond_5
 
-    .line 172
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
+    .line 245
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result-wide v3
+    move-result v3
 
-    iput-wide v3, p0, Lcom/tencent/mm/d/b/bh;->field_msgid:J
+    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_musicType:I
 
     goto :goto_1
 
-    .line 174
+    .line 247
     :cond_5
-    sget v4, Lcom/tencent/mm/d/b/bh;->aIQ:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdq:I
 
     if-ne v4, v3, :cond_6
 
-    .line 175
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+    .line 248
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result v3
+    move-result-wide v3
 
-    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_offset:I
+    iput-wide v3, p0, Lcom/tencent/mm/d/b/bh;->field_downloadedLength:J
 
     goto :goto_1
 
-    .line 177
+    .line 250
     :cond_6
-    sget v4, Lcom/tencent/mm/d/b/bh;->aZV:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdr:I
 
     if-ne v4, v3, :cond_7
 
-    .line 178
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+    .line 251
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result v3
+    move-result-wide v3
 
-    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_filenowsize:I
+    iput-wide v3, p0, Lcom/tencent/mm/d/b/bh;->field_wifiDownloadedLength:J
 
     goto :goto_1
 
-    .line 180
+    .line 253
     :cond_7
-    sget v4, Lcom/tencent/mm/d/b/bh;->aZW:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bds:I
 
     if-ne v4, v3, :cond_8
 
-    .line 181
+    .line 254
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v3
 
-    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_totallen:I
+    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_endFlag:I
 
     goto :goto_1
 
-    .line 183
+    .line 256
     :cond_8
-    sget v4, Lcom/tencent/mm/d/b/bh;->aIR:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdt:I
 
     if-ne v4, v3, :cond_9
 
-    .line 184
+    .line 257
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v3
 
-    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_status:I
+    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_wifiEndFlag:I
 
     goto :goto_1
 
-    .line 186
+    .line 259
     :cond_9
-    sget v4, Lcom/tencent/mm/d/b/bh;->aWb:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->aQj:I
 
     if-ne v4, v3, :cond_a
 
-    .line 187
+    .line 260
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v3
 
-    iput-wide v3, p0, Lcom/tencent/mm/d/b/bh;->field_createtime:J
+    iput-wide v3, p0, Lcom/tencent/mm/d/b/bh;->field_updateTime:J
 
     goto :goto_1
 
-    .line 189
+    .line 262
     :cond_a
-    sget v4, Lcom/tencent/mm/d/b/bh;->aZX:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdu:I
 
     if-ne v4, v3, :cond_b
 
-    .line 190
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
+    .line 263
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result-wide v3
+    move-result v3
 
-    iput-wide v3, p0, Lcom/tencent/mm/d/b/bh;->field_lastmodifytime:J
+    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_songId:I
 
     goto :goto_1
 
-    .line 192
+    .line 265
     :cond_b
-    sget v4, Lcom/tencent/mm/d/b/bh;->aZY:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdv:I
 
     if-ne v4, v3, :cond_c
 
-    .line 193
+    .line 266
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_clientid:Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songName:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 195
+    .line 268
     :cond_c
-    sget v4, Lcom/tencent/mm/d/b/bh;->aZZ:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdw:I
 
     if-ne v4, v3, :cond_d
 
-    .line 196
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+    .line 269
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result v3
+    move-result-object v3
 
-    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_voicelenght:I
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songSinger:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 198
+    .line 271
     :cond_d
-    sget v4, Lcom/tencent/mm/d/b/bh;->baa:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdx:I
 
     if-ne v4, v3, :cond_e
 
-    .line 199
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+    .line 272
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    move-result v3
+    move-result-object v3
 
-    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_msglocalid:I
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songAlbum:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 201
+    .line 274
     :cond_e
-    sget v4, Lcom/tencent/mm/d/b/bh;->bab:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdy:I
 
     if-ne v4, v3, :cond_f
 
-    .line 202
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    .line 275
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
-    move-result-object v3
+    move-result v3
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_human:Ljava/lang/String;
+    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_songAlbumType:I
 
     goto/16 :goto_1
 
-    .line 204
+    .line 277
     :cond_f
-    sget v4, Lcom/tencent/mm/d/b/bh;->bac:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdz:I
 
     if-ne v4, v3, :cond_10
 
-    .line 205
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v3
-
-    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_voiceformat:I
-
-    goto/16 :goto_1
-
-    .line 207
-    :cond_10
-    sget v4, Lcom/tencent/mm/d/b/bh;->bad:I
-
-    if-ne v4, v3, :cond_11
-
-    .line 208
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v3
-
-    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_nettimes:I
-
-    goto/16 :goto_1
-
-    .line 210
-    :cond_11
-    sget v4, Lcom/tencent/mm/d/b/bh;->aPz:I
-
-    if-ne v4, v3, :cond_12
-
-    .line 211
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v3
-
-    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_reserved1:I
-
-    goto/16 :goto_1
-
-    .line 213
-    :cond_12
-    sget v4, Lcom/tencent/mm/d/b/bh;->aPA:I
-
-    if-ne v4, v3, :cond_13
-
-    .line 214
+    .line 278
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_reserved2:Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songAlbumUrl:Ljava/lang/String;
 
     goto/16 :goto_1
 
-    .line 216
+    .line 280
+    :cond_10
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdA:I
+
+    if-ne v4, v3, :cond_11
+
+    .line 281
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songHAlbumUrl:Ljava/lang/String;
+
+    goto/16 :goto_1
+
+    .line 283
+    :cond_11
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdB:I
+
+    if-ne v4, v3, :cond_12
+
+    .line 284
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songAlbumLocalPath:Ljava/lang/String;
+
+    goto/16 :goto_1
+
+    .line 286
+    :cond_12
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdC:I
+
+    if-ne v4, v3, :cond_13
+
+    .line 287
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songWifiUrl:Ljava/lang/String;
+
+    goto/16 :goto_1
+
+    .line 289
     :cond_13
-    sget v4, Lcom/tencent/mm/d/b/bh;->aHH:I
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdD:I
+
+    if-ne v4, v3, :cond_14
+
+    .line 290
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songWapLinkUrl:Ljava/lang/String;
+
+    goto/16 :goto_1
+
+    .line 292
+    :cond_14
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdE:I
+
+    if-ne v4, v3, :cond_15
+
+    .line 293
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songWebUrl:Ljava/lang/String;
+
+    goto/16 :goto_1
+
+    .line 295
+    :cond_15
+    sget v4, Lcom/tencent/mm/d/b/bh;->aMJ:I
+
+    if-ne v4, v3, :cond_16
+
+    .line 296
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_appId:Ljava/lang/String;
+
+    goto/16 :goto_1
+
+    .line 298
+    :cond_16
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdF:I
+
+    if-ne v4, v3, :cond_17
+
+    .line 299
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songMediaId:Ljava/lang/String;
+
+    goto/16 :goto_1
+
+    .line 301
+    :cond_17
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdG:I
+
+    if-ne v4, v3, :cond_18
+
+    .line 302
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songSnsAlbumUser:Ljava/lang/String;
+
+    goto/16 :goto_1
+
+    .line 304
+    :cond_18
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdH:I
+
+    if-ne v4, v3, :cond_19
+
+    .line 305
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songSnsShareUser:Ljava/lang/String;
+
+    goto/16 :goto_1
+
+    .line 307
+    :cond_19
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdI:I
+
+    if-ne v4, v3, :cond_1a
+
+    .line 308
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, p0, Lcom/tencent/mm/d/b/bh;->field_songLyric:Ljava/lang/String;
+
+    goto/16 :goto_1
+
+    .line 310
+    :cond_1a
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdJ:I
+
+    if-ne v4, v3, :cond_1b
+
+    .line 311
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v3
+
+    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_songBgColor:I
+
+    goto/16 :goto_1
+
+    .line 313
+    :cond_1b
+    sget v4, Lcom/tencent/mm/d/b/bh;->bdK:I
+
+    if-ne v4, v3, :cond_1c
+
+    .line 314
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v3
+
+    iput v3, p0, Lcom/tencent/mm/d/b/bh;->field_songLyricColor:I
+
+    goto/16 :goto_1
+
+    .line 316
+    :cond_1c
+    sget v4, Lcom/tencent/mm/d/b/bh;->aLG:I
 
     if-ne v4, v3, :cond_2
 
-    .line 217
+    .line 317
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v3
 
-    iput-wide v3, p0, Lcom/tencent/mm/d/b/bh;->ibV:J
+    iput-wide v3, p0, Lcom/tencent/mm/d/b/bh;->jYv:J
 
     goto/16 :goto_1
 .end method
 
-.method public final mA()Landroid/content/ContentValues;
+.method public final lX()Landroid/content/ContentValues;
     .locals 5
 
     .prologue
-    .line 223
+    .line 323
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 225
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZG:Z
+    .line 325
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bcP:Z
 
     if-eqz v1, :cond_0
 
-    .line 226
-    const-string/jumbo v1, "filename"
+    .line 326
+    const-string/jumbo v1, "musicId"
 
-    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_filename:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_musicId:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 229
+    .line 329
     :cond_0
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZH:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bcQ:Z
 
     if-eqz v1, :cond_1
 
-    .line 230
-    const-string/jumbo v1, "user"
+    .line 330
+    const-string/jumbo v1, "originMusicId"
 
-    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_user:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_originMusicId:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 233
+    .line 333
     :cond_1
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZI:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bcR:Z
 
     if-eqz v1, :cond_2
 
-    .line 234
-    const-string/jumbo v1, "msgid"
+    .line 334
+    const-string/jumbo v1, "musicType"
 
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/bh;->field_msgid:J
+    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_musicType:I
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 237
+    .line 337
     :cond_2
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aIC:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bcS:Z
 
     if-eqz v1, :cond_3
 
-    .line 238
-    const-string/jumbo v1, "offset"
+    .line 338
+    const-string/jumbo v1, "downloadedLength"
 
-    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_offset:I
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/bh;->field_downloadedLength:J
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 241
+    .line 341
     :cond_3
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZJ:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bcT:Z
 
     if-eqz v1, :cond_4
 
-    .line 242
-    const-string/jumbo v1, "filenowsize"
+    .line 342
+    const-string/jumbo v1, "wifiDownloadedLength"
 
-    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_filenowsize:I
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/bh;->field_wifiDownloadedLength:J
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 245
+    .line 345
     :cond_4
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZK:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bcU:Z
 
     if-eqz v1, :cond_5
 
-    .line 246
-    const-string/jumbo v1, "totallen"
+    .line 346
+    const-string/jumbo v1, "endFlag"
 
-    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_totallen:I
+    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_endFlag:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -770,16 +1840,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 249
+    .line 349
     :cond_5
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aID:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bcV:Z
 
     if-eqz v1, :cond_6
 
-    .line 250
-    const-string/jumbo v1, "status"
+    .line 350
+    const-string/jumbo v1, "wifiEndFlag"
 
-    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_status:I
+    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_wifiEndFlag:I
 
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -787,16 +1857,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 253
+    .line 353
     :cond_6
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aVX:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aPT:Z
 
     if-eqz v1, :cond_7
 
-    .line 254
-    const-string/jumbo v1, "createtime"
+    .line 354
+    const-string/jumbo v1, "updateTime"
 
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/bh;->field_createtime:J
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/bh;->field_updateTime:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -804,161 +1874,270 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 257
+    .line 357
     :cond_7
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZL:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bcW:Z
 
     if-eqz v1, :cond_8
 
-    .line 258
-    const-string/jumbo v1, "lastmodifytime"
+    .line 358
+    const-string/jumbo v1, "songId"
 
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/bh;->field_lastmodifytime:J
+    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_songId:I
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 261
+    .line 361
     :cond_8
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZM:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bcX:Z
 
     if-eqz v1, :cond_9
 
-    .line 262
-    const-string/jumbo v1, "clientid"
+    .line 362
+    const-string/jumbo v1, "songName"
 
-    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_clientid:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songName:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 265
+    .line 365
     :cond_9
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZN:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bcY:Z
 
     if-eqz v1, :cond_a
 
-    .line 266
-    const-string/jumbo v1, "voicelenght"
+    .line 366
+    const-string/jumbo v1, "songSinger"
 
-    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_voicelenght:I
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songSinger:Ljava/lang/String;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 269
+    .line 369
     :cond_a
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZO:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bcZ:Z
 
     if-eqz v1, :cond_b
 
-    .line 270
-    const-string/jumbo v1, "msglocalid"
+    .line 370
+    const-string/jumbo v1, "songAlbum"
 
-    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_msglocalid:I
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songAlbum:Ljava/lang/String;
 
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 273
+    .line 373
     :cond_b
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZP:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bda:Z
 
     if-eqz v1, :cond_c
 
-    .line 274
-    const-string/jumbo v1, "human"
+    .line 374
+    const-string/jumbo v1, "songAlbumType"
 
-    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_human:Ljava/lang/String;
+    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_songAlbumType:I
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 277
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 377
     :cond_c
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZQ:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bdb:Z
 
     if-eqz v1, :cond_d
 
-    .line 278
-    const-string/jumbo v1, "voiceformat"
+    .line 378
+    const-string/jumbo v1, "songAlbumUrl"
 
-    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_voiceformat:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 281
-    :cond_d
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aZR:Z
-
-    if-eqz v1, :cond_e
-
-    .line 282
-    const-string/jumbo v1, "nettimes"
-
-    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_nettimes:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 285
-    :cond_e
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aPj:Z
-
-    if-eqz v1, :cond_f
-
-    .line 286
-    const-string/jumbo v1, "reserved1"
-
-    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_reserved1:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 289
-    :cond_f
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aPk:Z
-
-    if-eqz v1, :cond_10
-
-    .line 290
-    const-string/jumbo v1, "reserved2"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_reserved2:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songAlbumUrl:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 293
+    .line 381
+    :cond_d
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bdc:Z
+
+    if-eqz v1, :cond_e
+
+    .line 382
+    const-string/jumbo v1, "songHAlbumUrl"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songHAlbumUrl:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 385
+    :cond_e
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bdd:Z
+
+    if-eqz v1, :cond_f
+
+    .line 386
+    const-string/jumbo v1, "songAlbumLocalPath"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songAlbumLocalPath:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 389
+    :cond_f
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bde:Z
+
+    if-eqz v1, :cond_10
+
+    .line 390
+    const-string/jumbo v1, "songWifiUrl"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songWifiUrl:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 393
     :cond_10
-    iget-wide v1, p0, Lcom/tencent/mm/d/b/bh;->ibV:J
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bdf:Z
+
+    if-eqz v1, :cond_11
+
+    .line 394
+    const-string/jumbo v1, "songWapLinkUrl"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songWapLinkUrl:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 397
+    :cond_11
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bdg:Z
+
+    if-eqz v1, :cond_12
+
+    .line 398
+    const-string/jumbo v1, "songWebUrl"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songWebUrl:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 401
+    :cond_12
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->aMv:Z
+
+    if-eqz v1, :cond_13
+
+    .line 402
+    const-string/jumbo v1, "appId"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_appId:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 405
+    :cond_13
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bdh:Z
+
+    if-eqz v1, :cond_14
+
+    .line 406
+    const-string/jumbo v1, "songMediaId"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songMediaId:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 409
+    :cond_14
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bdi:Z
+
+    if-eqz v1, :cond_15
+
+    .line 410
+    const-string/jumbo v1, "songSnsAlbumUser"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songSnsAlbumUser:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 413
+    :cond_15
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bdj:Z
+
+    if-eqz v1, :cond_16
+
+    .line 414
+    const-string/jumbo v1, "songSnsShareUser"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songSnsShareUser:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 417
+    :cond_16
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bdk:Z
+
+    if-eqz v1, :cond_17
+
+    .line 418
+    const-string/jumbo v1, "songLyric"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/bh;->field_songLyric:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 421
+    :cond_17
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bdl:Z
+
+    if-eqz v1, :cond_18
+
+    .line 422
+    const-string/jumbo v1, "songBgColor"
+
+    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_songBgColor:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 425
+    :cond_18
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/bh;->bdm:Z
+
+    if-eqz v1, :cond_19
+
+    .line 426
+    const-string/jumbo v1, "songLyricColor"
+
+    iget v2, p0, Lcom/tencent/mm/d/b/bh;->field_songLyricColor:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 429
+    :cond_19
+    iget-wide v1, p0, Lcom/tencent/mm/d/b/bh;->jYv:J
 
     const-wide/16 v3, 0x0
 
     cmp-long v1, v1, v3
 
-    if-lez v1, :cond_11
+    if-lez v1, :cond_1a
 
-    .line 294
+    .line 430
     const-string/jumbo v1, "rowid"
 
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/bh;->ibV:J
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/bh;->jYv:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -966,7 +2145,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 296
-    :cond_11
+    .line 432
+    :cond_1a
     return-object v0
 .end method

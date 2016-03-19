@@ -22,11 +22,11 @@
 
 
 # static fields
-.field private static final cjI:Landroid/content/UriMatcher;
+.field private static final cAS:Landroid/content/UriMatcher;
 
 
 # instance fields
-.field private cjH:Lcom/tencent/mm/plugin/base/stub/b;
+.field private cAR:Lcom/tencent/mm/plugin/base/stub/c;
 
 
 # direct methods
@@ -42,7 +42,7 @@
     invoke-direct {v0, v1}, Landroid/content/UriMatcher;-><init>(I)V
 
     .line 31
-    sput-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cjI:Landroid/content/UriMatcher;
+    sput-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
 
     const-string/jumbo v1, "com.tencent.mm.sdk.plugin.provider"
 
@@ -64,11 +64,11 @@
     invoke-direct {p0}, Landroid/content/ContentProvider;-><init>()V
 
     .line 25
-    new-instance v0, Lcom/tencent/mm/plugin/base/stub/b;
+    new-instance v0, Lcom/tencent/mm/plugin/base/stub/c;
 
-    invoke-direct {v0}, Lcom/tencent/mm/plugin/base/stub/b;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/base/stub/c;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cjH:Lcom/tencent/mm/plugin/base/stub/b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAR:Lcom/tencent/mm/plugin/base/stub/c;
 
     .line 34
     return-void
@@ -97,10 +97,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 94
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cjI:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -125,7 +125,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 100
     const/4 v0, 0x0
@@ -135,7 +135,7 @@
 
     .line 96
     :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/b;->Hm()I
+    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/c;->Jx()I
 
     move-result v0
 
@@ -155,7 +155,7 @@
     const/4 v1, 0x0
 
     .line 59
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cjI:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -197,10 +197,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 79
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cjI:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -225,7 +225,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 85
     const/4 v0, 0x0
@@ -235,7 +235,7 @@
 
     .line 81
     :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/b;->Hl()Landroid/net/Uri;
+    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/c;->Jw()Landroid/net/Uri;
 
     move-result-object v0
 
@@ -253,13 +253,13 @@
 
     .prologue
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cjH:Lcom/tencent/mm/plugin/base/stub/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAR:Lcom/tencent/mm/plugin/base/stub/c;
 
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/base/stub/b;->aZ(Landroid/content/Context;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/base/stub/c;->bp(Landroid/content/Context;)Z
 
     .line 71
     const/4 v0, 0x1
@@ -288,10 +288,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 109
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cjI:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -316,7 +316,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 115
     const/4 v0, 0x0
@@ -326,7 +326,7 @@
 
     .line 111
     :pswitch_0
-    invoke-static {p2, p4}, Lcom/tencent/mm/plugin/base/stub/b;->a([Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-static {p2, p4}, Lcom/tencent/mm/plugin/base/stub/c;->a([Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -360,10 +360,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 125
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cjI:Landroid/content/UriMatcher;
+    sget-object v0, Lcom/tencent/mm/plugin/base/stub/MMPluginProvider;->cAS:Landroid/content/UriMatcher;
 
     invoke-virtual {v0, p1}, Landroid/content/UriMatcher;->match(Landroid/net/Uri;)I
 
@@ -388,7 +388,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 131
     const/4 v0, 0x0
@@ -398,7 +398,7 @@
 
     .line 127
     :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/b;->Hn()I
+    invoke-static {}, Lcom/tencent/mm/plugin/base/stub/c;->Jy()I
 
     move-result v0
 

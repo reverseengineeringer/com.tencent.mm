@@ -4,38 +4,54 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import com.tencent.mm.booter.NotifyReceiver;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.by;
-import com.tencent.mm.q.l;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.as;
+import com.tencent.mm.model.as.a;
+import com.tencent.mm.network.e;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.modelmsg.c.a;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.base.a;
+import com.tencent.mm.ui.transmit.SendAppMessageWrapperUI;
 
 @a(7)
 public class UIEntryStub
   extends Activity
 {
-  private String cjN;
-  private int cjO;
-  private Intent cjP;
+  private String cAX;
+  private int cAY;
+  private Intent cAZ;
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    NotifyReceiver.nw();
+    NotifyReceiver.mS();
   }
   
   public void onNewIntent(Intent paramIntent)
   {
     super.onNewIntent(paramIntent);
-    cjP = paramIntent;
+    cAZ = paramIntent;
   }
   
   public void onResume()
   {
     super.onResume();
-    if (cjP == null) {
-      cjP = getIntent();
+    if (cAZ == null) {
+      cAZ = getIntent();
     }
-    ax.tm().d(new by(new f(this)));
+    ah.tE().d(new as(new as.a()
+    {
+      public final void a(e paramAnonymouse)
+      {
+        if (paramAnonymouse == null)
+        {
+          finish();
+          return;
+        }
+        UIEntryStub.a(UIEntryStub.this, UIEntryStub.a(UIEntryStub.this).getExtras());
+      }
+    }));
   }
 }
 

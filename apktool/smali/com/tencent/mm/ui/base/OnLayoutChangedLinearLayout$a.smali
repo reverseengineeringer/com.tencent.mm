@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aKP()V
+.method public abstract baH()V
 .end method

@@ -1,26 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class gi
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDJ = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBv = new a();
   
   public gi()
   {
-    id = "ReportDelGameMsg";
-    hXT = atO;
+    id = "Logout";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aDK;
-    public String appId;
-    public String mediaTagName;
-    public String pkgName;
+    public int aBw = 0;
+    public int status = 0;
   }
 }
 

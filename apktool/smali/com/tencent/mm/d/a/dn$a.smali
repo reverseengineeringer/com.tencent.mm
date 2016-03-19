@@ -15,7 +15,15 @@
 
 
 # instance fields
-.field public url:Ljava/lang/String;
+.field public anC:Ljava/lang/String;
+
+.field public apj:Z
+
+.field public axo:Lcom/tencent/mm/r/f$a;
+
+.field public axp:Lcom/tencent/mm/r/f$b;
+
+.field public op:I
 
 
 # direct methods

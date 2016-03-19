@@ -1,9 +1,18 @@
 package com.tencent.mm.d.a;
 
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import com.tencent.mm.storage.ag;
+
 public final class ft$a
 {
-  public String aqX;
-  public String axR;
+  public ImageView aAF;
+  public ImageView aAG;
+  public ProgressBar aAH;
+  public int aAI;
+  public ag ask;
+  public int h;
+  public int w;
 }
 
 /* Location:

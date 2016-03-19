@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class jm$a
 {
-  public boolean aGC;
+  public int state = -1;
 }
 
 /* Location:

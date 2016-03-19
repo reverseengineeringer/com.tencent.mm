@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ag
-  extends a.c
+  extends a.e
 {
   public a$ag()
   {
-    super("getNetworkType", "network_type", 16, false);
+    super("dispatchEvent", "dispatchEvent", 186, false);
   }
 }
 

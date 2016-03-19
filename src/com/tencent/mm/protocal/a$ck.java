@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ck
-  extends a.c
+  extends a.e
 {
   public a$ck()
   {
-    super("shareQZone", "shareQZone", 132, true);
+    super("nfcBatchTransceive", "nfcBatchTransceive", 142, false);
   }
 }
 

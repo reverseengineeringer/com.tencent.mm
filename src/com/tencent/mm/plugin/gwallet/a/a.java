@@ -3,27 +3,27 @@ package com.tencent.mm.plugin.gwallet.a;
 public final class a
   extends Exception
 {
-  h dEN;
+  c exC;
   
   public a(int paramInt, String paramString)
   {
-    this(new h(paramInt, paramString));
+    this(new c(paramInt, paramString));
   }
   
-  private a(h paramh)
+  private a(c paramc)
   {
-    this(paramh, null);
+    this(paramc, null);
   }
   
-  private a(h paramh, Exception paramException)
+  private a(c paramc, Exception paramException)
   {
     super(mMessage, paramException);
-    dEN = paramh;
+    exC = paramc;
   }
   
   public a(String paramString, Exception paramException)
   {
-    this(new h(64535, paramString), paramException);
+    this(new c(64535, paramString), paramException);
   }
 }
 

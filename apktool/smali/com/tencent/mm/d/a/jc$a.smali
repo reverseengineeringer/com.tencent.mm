@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public aGo:Lcom/tencent/mm/protocal/b/adm;
+.field public ask:Lcom/tencent/mm/storage/ag;
 
 
 # direct methods

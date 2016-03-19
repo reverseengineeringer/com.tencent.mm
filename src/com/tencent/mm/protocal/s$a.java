@@ -1,26 +1,27 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.yx;
+import com.tencent.mm.protocal.b.aeu;
 
 public final class s$a
-  extends i.c
-  implements i.a
+  extends h.c
+  implements h.a
 {
-  public yx hhl = new yx();
+  public aeu iVh = new aeu();
   
   public final int getCmdId()
   {
-    return 121;
+    return 27;
   }
   
-  public final byte[] tH()
+  public final byte[] tY()
   {
-    return hhl.toByteArray();
+    iVh.jGS = h.a(this);
+    return iVh.toByteArray();
   }
   
-  public final int tI()
+  public final int tZ()
   {
-    return 138;
+    return 139;
   }
 }
 

@@ -87,21 +87,6 @@ public class SQLiteCursor
     mDriver.cursorDeactivated();
   }
   
-  protected void finalize()
-  {
-    try
-    {
-      if (mWindow != null) {
-        close();
-      }
-      return;
-    }
-    finally
-    {
-      super.finalize();
-    }
-  }
-  
   public int getColumnIndex(String paramString)
   {
     Object localObject;

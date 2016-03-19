@@ -6,20 +6,20 @@ import android.os.Build;
 final class i
   implements c.a
 {
-  public static c.a.a os()
+  public static c.a.a oh()
   {
     c.a.a locala = new c.a.a();
     try
     {
-      bhb = Camera.open();
-      bgY = 0;
-      if (bhb == null) {
+      brz = Camera.open();
+      brw = 0;
+      if (brz == null) {
         return null;
       }
       if (Build.DISPLAY.startsWith("Flyme"))
       {
-        bgY = 90;
-        bhb.setDisplayOrientation(90);
+        brw = 90;
+        brz.setDisplayOrientation(90);
       }
       label149:
       for (;;)
@@ -34,8 +34,8 @@ final class i
           if (i < 7093) {
             break label149;
           }
-          bgY = 90;
-          bhb.setDisplayOrientation(180);
+          brw = 90;
+          brz.setDisplayOrientation(180);
           break;
           Object localObject = Build.DISPLAY;
           if (((String)localObject).substring(0, 0).equals("1"))

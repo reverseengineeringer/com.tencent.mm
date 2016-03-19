@@ -2,6 +2,7 @@ package com.tencent.mm.ui;
 
 import android.content.Context;
 import android.content.res.Resources;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,48 +14,80 @@ import android.widget.LinearLayout.LayoutParams;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.a.f;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.tools.gh;
+import com.tencent.mm.d.a.gn;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public class LauncherUIBottomTabView
   extends RelativeLayout
-  implements d
+  implements c
 {
-  private long dzL = 0L;
-  protected int gWq = 0;
-  private d.a ioN;
-  protected a ioO;
-  protected a ioP;
-  protected a ioQ;
-  protected a ioR;
-  private int ioS = 0;
-  private int ioT;
-  private int ioU;
-  private int ioV;
-  private int ioW = 0;
-  private int ioX;
-  private int ioY;
-  private int ioZ;
-  private int ipa;
-  private int ipb;
-  private int ipc;
-  private int ipd = -1;
-  protected View.OnClickListener ipe = new cf(this);
-  private ac ipf = new cg(this);
-  private int ipg = 0;
-  private int iph = 0;
-  private int ipi = 0;
-  private boolean ipj = false;
-  private int ipk = 0;
-  private boolean ipl = false;
+  private long erA = 0L;
+  protected int feV = 0;
+  private c.a knH;
+  protected a knI;
+  protected a knJ;
+  protected a knK;
+  protected a knL;
+  private int knM = 0;
+  private int knN;
+  private int knO;
+  private int knP;
+  private int knQ = 0;
+  private int knR;
+  private int knS;
+  private int knT;
+  private int knU;
+  private int knV;
+  private int knW;
+  private int knX = -1;
+  protected View.OnClickListener knY = new View.OnClickListener()
+  {
+    private final long hjY = 300L;
+    
+    public final void onClick(View paramAnonymousView)
+    {
+      int i = ((Integer)paramAnonymousView.getTag()).intValue();
+      if ((LauncherUIBottomTabView.a(LauncherUIBottomTabView.this) == i) && (i == 0) && (System.currentTimeMillis() - LauncherUIBottomTabView.b(LauncherUIBottomTabView.this) <= 300L))
+      {
+        com.tencent.mm.sdk.platformtools.u.v("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "onMainTabDoubleClick");
+        LauncherUIBottomTabView.c(LauncherUIBottomTabView.this).removeMessages(0);
+        com.tencent.mm.sdk.c.a.jUF.j(new gn());
+        LauncherUIBottomTabView.a(LauncherUIBottomTabView.this, System.currentTimeMillis());
+        LauncherUIBottomTabView.a(LauncherUIBottomTabView.this, i);
+        return;
+      }
+      if (LauncherUIBottomTabView.d(LauncherUIBottomTabView.this) != null)
+      {
+        if ((i != 0) || (LauncherUIBottomTabView.a(LauncherUIBottomTabView.this) != 0))
+        {
+          com.tencent.mm.sdk.platformtools.u.v("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "directly dispatch tab click event");
+          LauncherUIBottomTabView.a(LauncherUIBottomTabView.this, System.currentTimeMillis());
+          LauncherUIBottomTabView.a(LauncherUIBottomTabView.this, i);
+          LauncherUIBottomTabView.d(LauncherUIBottomTabView.this).gr(i);
+          return;
+        }
+        com.tencent.mm.sdk.platformtools.u.v("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "do double click check");
+        LauncherUIBottomTabView.c(LauncherUIBottomTabView.this).sendEmptyMessageDelayed(0, 300L);
+      }
+      LauncherUIBottomTabView.a(LauncherUIBottomTabView.this, System.currentTimeMillis());
+      LauncherUIBottomTabView.a(LauncherUIBottomTabView.this, i);
+      com.tencent.mm.sdk.platformtools.u.w("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "on tab click, index %d, but listener is null", new Object[] { (Integer)paramAnonymousView.getTag() });
+    }
+  };
+  private aa knZ = new aa()
+  {
+    public final void handleMessage(Message paramAnonymousMessage)
+    {
+      com.tencent.mm.sdk.platformtools.u.v("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "onMainTabClick");
+      LauncherUIBottomTabView.d(LauncherUIBottomTabView.this).gr(0);
+    }
+  };
+  private int koa = 0;
+  private int kob = 0;
+  private int koc = 0;
+  private boolean kod = false;
+  private int koe = 0;
+  private boolean kof = false;
   
   public LauncherUIBottomTabView(Context paramContext)
   {
@@ -77,17 +110,17 @@ public class LauncherUIBottomTabView
   private a a(int paramInt, ViewGroup paramViewGroup)
   {
     a locala = new a();
-    ipn = ek.dx(getContext()).inflate(a.k.mm_bottom_tabitem, paramViewGroup, false);
-    if (a.cB(getContext())) {}
-    for (ipn = ek.dx(getContext()).inflate(a.k.mm_bottom_tabitem_large, paramViewGroup, false);; ipn = ek.dx(getContext()).inflate(a.k.mm_bottom_tabitem, paramViewGroup, false))
+    koh = p.ee(getContext()).inflate(2131361862, paramViewGroup, false);
+    if (com.tencent.mm.aw.a.da(getContext())) {}
+    for (koh = p.ee(getContext()).inflate(2131361988, paramViewGroup, false);; koh = p.ee(getContext()).inflate(2131361862, paramViewGroup, false))
     {
-      ipo = ((TabIconView)ipn.findViewById(a.i.icon_iv));
-      ipp = ((TextView)ipn.findViewById(a.i.icon_tv));
-      ipq = ((TextView)ipn.findViewById(a.i.unread_tv));
-      ipq.setBackgroundResource(gh.dU(getContext()));
-      ipr = ((ImageView)ipn.findViewById(a.i.dot_iv));
-      ipn.setTag(Integer.valueOf(paramInt));
-      ipn.setOnClickListener(ipe);
+      koi = ((TabIconView)koh.findViewById(2131165516));
+      koj = ((TextView)koh.findViewById(2131165519));
+      kok = ((TextView)koh.findViewById(2131165517));
+      kok.setBackgroundResource(com.tencent.mm.ui.tools.u.eB(getContext()));
+      kol = ((ImageView)koh.findViewById(2131165518));
+      koh.setTag(Integer.valueOf(paramInt));
+      koh.setOnClickListener(knY);
       return locala;
     }
   }
@@ -98,135 +131,106 @@ public class LauncherUIBottomTabView
     localLinearLayout.setOrientation(0);
     addView(localLinearLayout, new RelativeLayout.LayoutParams(-1, -2));
     a locala = a(0, localLinearLayout);
-    ipp.setText(a.n.main_title);
-    ipp.setTextColor(getResources().getColor(a.f.navbar_text_focus));
-    LinearLayout.LayoutParams localLayoutParams;
-    if (a.cB(getContext()))
-    {
-      ipo.bs(a.h.navbar_chat_icon_focus_large, a.h.navbar_chat_icon_normal_large);
-      ipq.setVisibility(4);
-      localLayoutParams = new LinearLayout.LayoutParams(0, a.v(getContext(), a.g.DefaultTabbarHeight));
-      weight = 1.0F;
-      localLinearLayout.addView(ipn, localLayoutParams);
-      ioO = locala;
-      locala = a(1, localLinearLayout);
-      ipp.setText(a.n.main_contact);
-      ipp.setTextColor(getResources().getColor(a.f.navbar_text_normal));
-      if (!a.cB(getContext())) {
-        break label612;
-      }
-      ipo.bs(a.h.navbar_addresslist_icon_focus_large, a.h.navbar_addresslist_icon_normal_large);
-      label192:
-      ipq.setVisibility(4);
-      localLayoutParams = new LinearLayout.LayoutParams(0, a.v(getContext(), a.g.DefaultTabbarHeight));
-      weight = 1.0F;
-      localLinearLayout.addView(ipn, localLayoutParams);
-      ioQ = locala;
-      locala = a(2, localLinearLayout);
-      ipp.setText(a.n.main_addcontact);
-      ipp.setTextColor(getResources().getColor(a.f.navbar_text_normal));
-      if (!a.cB(getContext())) {
-        break label628;
-      }
-      ipo.bs(a.h.navbar_discovery_icon_focus_large, a.h.navbar_discovery_icon_normal_large);
-      label295:
-      ipq.setVisibility(4);
-      localLayoutParams = new LinearLayout.LayoutParams(0, a.v(getContext(), a.g.DefaultTabbarHeight));
-      weight = 1.0F;
-      localLinearLayout.addView(ipn, localLayoutParams);
-      ioP = locala;
-      locala = a(3, localLinearLayout);
-      ipp.setText(a.n.main_more);
-      ipp.setTextColor(getResources().getColor(a.f.navbar_text_normal));
-      if (!a.cB(getContext())) {
-        break label644;
-      }
-      ipo.bs(a.h.navbar_me_icon_focus_large, a.h.navbar_me_icon_normal_large);
-    }
-    for (;;)
-    {
-      ipq.setVisibility(4);
-      localLayoutParams = new LinearLayout.LayoutParams(0, a.v(getContext(), a.g.DefaultTabbarHeight));
-      weight = 1.0F;
-      localLinearLayout.addView(ipn, localLayoutParams);
-      ioR = locala;
-      ioS = getResources().getColor(a.f.navbar_text_focus);
-      ioT = ((ioS & 0xFF0000) >> 16);
-      ioU = ((ioS & 0xFF00) >> 8);
-      ioV = (ioS & 0xFF);
-      ioW = getResources().getColor(a.f.navbar_text_normal);
-      ioX = ((ioW & 0xFF0000) >> 16);
-      ioY = ((ioW & 0xFF00) >> 8);
-      ioZ = (ioW & 0xFF);
-      ipa = (ioT - ioX);
-      ipb = (ioU - ioY);
-      ipc = (ioV - ioZ);
-      return;
-      ipo.bs(a.h.navbar_chat_icon_focus, a.h.navbar_chat_icon_normal);
-      break;
-      label612:
-      ipo.bs(a.h.navbar_addresslist_icon_focus, a.h.navbar_addresslist_icon_normal);
-      break label192;
-      label628:
-      ipo.bs(a.h.navbar_discovery_icon_focus, a.h.navbar_discovery_icon_normal);
-      break label295;
-      label644:
-      ipo.bs(a.h.navbar_me_icon_focus, a.h.navbar_me_icon_normal);
-    }
+    koj.setText(2131427773);
+    koj.setTextColor(getResources().getColor(2131231148));
+    koi.i(2130903699, 2130903721, com.tencent.mm.aw.a.da(getContext()));
+    kok.setVisibility(4);
+    LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(0, com.tencent.mm.aw.a.z(getContext(), 2131034627));
+    weight = 1.0F;
+    localLinearLayout.addView(koh, localLayoutParams);
+    knI = locala;
+    locala = a(1, localLinearLayout);
+    koj.setText(2131427775);
+    koj.setTextColor(getResources().getColor(2131231149));
+    koi.i(2130903705, 2130903684, com.tencent.mm.aw.a.da(getContext()));
+    kok.setVisibility(4);
+    localLayoutParams = new LinearLayout.LayoutParams(0, com.tencent.mm.aw.a.z(getContext(), 2131034627));
+    weight = 1.0F;
+    localLinearLayout.addView(koh, localLayoutParams);
+    knK = locala;
+    locala = a(2, localLinearLayout);
+    koj.setText(2131427776);
+    koj.setTextColor(getResources().getColor(2131231149));
+    koi.i(2130903690, 2130903669, com.tencent.mm.aw.a.da(getContext()));
+    kok.setVisibility(4);
+    localLayoutParams = new LinearLayout.LayoutParams(0, com.tencent.mm.aw.a.z(getContext(), 2131034627));
+    weight = 1.0F;
+    localLinearLayout.addView(koh, localLayoutParams);
+    knJ = locala;
+    locala = a(3, localLinearLayout);
+    koj.setText(2131427777);
+    koj.setTextColor(getResources().getColor(2131231149));
+    koi.i(2130903718, 2130903725, com.tencent.mm.aw.a.da(getContext()));
+    kok.setVisibility(4);
+    localLayoutParams = new LinearLayout.LayoutParams(0, com.tencent.mm.aw.a.z(getContext(), 2131034627));
+    weight = 1.0F;
+    localLinearLayout.addView(koh, localLayoutParams);
+    knL = locala;
+    knM = getResources().getColor(2131231148);
+    knN = ((knM & 0xFF0000) >> 16);
+    knO = ((knM & 0xFF00) >> 8);
+    knP = (knM & 0xFF);
+    knQ = getResources().getColor(2131231149);
+    knR = ((knQ & 0xFF0000) >> 16);
+    knS = ((knQ & 0xFF00) >> 8);
+    knT = (knQ & 0xFF);
+    knU = (knN - knR);
+    knV = (knO - knS);
+    knW = (knP - knT);
   }
   
-  public final void aJK()
+  public final void aZw()
   {
-    if ((ioO != null) && (ioQ != null) && (ioP == null)) {}
+    if ((knI != null) && (knK != null) && (knJ == null)) {}
   }
   
-  public final void c(int paramInt, float paramFloat)
+  public final void b(int paramInt, float paramFloat)
   {
     int i = (int)(255.0F * paramFloat);
     int j = 255 - i;
-    int k = ((int)(ipa * paramFloat + ioX) << 16) + ((int)(ipb * paramFloat + ioY) << 8) + (int)(ipc * paramFloat + ioZ) - 16777216;
-    int m = ((int)(ipa * (1.0F - paramFloat) + ioX) << 16) + ((int)(ipb * (1.0F - paramFloat) + ioY) << 8) + (int)(ipc * (1.0F - paramFloat) + ioZ) - 16777216;
+    int k = ((int)(knU * paramFloat + knR) << 16) + ((int)(knV * paramFloat + knS) << 8) + (int)(knW * paramFloat + knT) - 16777216;
+    int m = ((int)(knU * (1.0F - paramFloat) + knR) << 16) + ((int)(knV * (1.0F - paramFloat) + knS) << 8) + (int)(knW * (1.0F - paramFloat) + knT) - 16777216;
     switch (paramInt)
     {
     default: 
       return;
     case 0: 
-      ioO.ipo.setFocusAlpha(j);
-      ioQ.ipo.setFocusAlpha(i);
-      ioO.ipp.setTextColor(m);
-      ioQ.ipp.setTextColor(k);
+      knI.koi.setFocusAlpha(j);
+      knK.koi.setFocusAlpha(i);
+      knI.koj.setTextColor(m);
+      knK.koj.setTextColor(k);
       return;
     case 1: 
-      ioQ.ipo.setFocusAlpha(j);
-      ioP.ipo.setFocusAlpha(i);
-      ioQ.ipp.setTextColor(m);
-      ioP.ipp.setTextColor(k);
+      knK.koi.setFocusAlpha(j);
+      knJ.koi.setFocusAlpha(i);
+      knK.koj.setTextColor(m);
+      knJ.koj.setTextColor(k);
       return;
     }
-    ioP.ipo.setFocusAlpha(j);
-    ioR.ipo.setFocusAlpha(i);
-    ioP.ipp.setTextColor(m);
-    ioR.ipp.setTextColor(k);
+    knJ.koi.setFocusAlpha(j);
+    knL.koi.setFocusAlpha(i);
+    knJ.koj.setTextColor(m);
+    knL.koj.setTextColor(k);
   }
   
-  public final void eQ(boolean paramBoolean)
+  public final void gS(boolean paramBoolean)
   {
     int i = 4;
-    ipj = paramBoolean;
-    ioP.ipq.setVisibility(4);
-    ImageView localImageView = ioP.ipr;
+    kod = paramBoolean;
+    knJ.kok.setVisibility(4);
+    ImageView localImageView = knJ.kol;
     if (paramBoolean) {
       i = 0;
     }
     localImageView.setVisibility(i);
   }
   
-  public final void eR(boolean paramBoolean)
+  public final void gT(boolean paramBoolean)
   {
     int i = 4;
-    ipl = paramBoolean;
-    ioR.ipq.setVisibility(4);
-    ImageView localImageView = ioR.ipr;
+    kof = paramBoolean;
+    knL.kok.setVisibility(4);
+    ImageView localImageView = knL.kol;
     if (paramBoolean) {
       i = 0;
     }
@@ -235,185 +239,185 @@ public class LauncherUIBottomTabView
   
   public int getContactTabUnread()
   {
-    return iph;
+    return kob;
   }
   
   public int getCurIdx()
   {
-    return gWq;
+    return feV;
   }
   
   public int getFriendTabUnread()
   {
-    return ipi;
+    return koc;
   }
   
   public int getMainTabUnread()
   {
-    return ipg;
+    return koa;
   }
   
   public boolean getSettingsPoint()
   {
-    return ipl;
+    return kof;
   }
   
   public int getSettingsTabUnread()
   {
-    return ipk;
+    return koe;
   }
   
   public boolean getShowFriendPoint()
   {
-    return ipj;
+    return kod;
   }
   
-  public final void mU(int paramInt)
+  public final void pP(int paramInt)
   {
-    t.d("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "updateMainTabUnread %d", new Object[] { Integer.valueOf(paramInt) });
-    ipg = paramInt;
+    com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "updateMainTabUnread %d", new Object[] { Integer.valueOf(paramInt) });
+    koa = paramInt;
     if (paramInt > 0)
     {
       if (paramInt > 99)
       {
-        ioO.ipq.setText(getContext().getString(a.n.unread_count_overt_100));
-        ioO.ipq.setVisibility(0);
-        ioO.ipr.setVisibility(4);
+        knI.kok.setText(getContext().getString(2131431112));
+        knI.kok.setVisibility(0);
+        knI.kol.setVisibility(4);
         return;
       }
-      ioO.ipq.setText(String.valueOf(paramInt));
-      ioO.ipq.setVisibility(0);
-      ioO.ipr.setVisibility(4);
+      knI.kok.setText(String.valueOf(paramInt));
+      knI.kok.setVisibility(0);
+      knI.kol.setVisibility(4);
       return;
     }
-    ioO.ipq.setText("");
-    ioO.ipq.setVisibility(4);
+    knI.kok.setText("");
+    knI.kok.setVisibility(4);
   }
   
-  public final void mV(int paramInt)
+  public final void pQ(int paramInt)
   {
-    iph = paramInt;
+    kob = paramInt;
     if (paramInt > 0)
     {
       if (paramInt > 99)
       {
-        ioQ.ipq.setText(getContext().getString(a.n.unread_count_overt_100));
-        ioQ.ipq.setVisibility(0);
-        ioQ.ipr.setVisibility(4);
+        knK.kok.setText(getContext().getString(2131431112));
+        knK.kok.setVisibility(0);
+        knK.kol.setVisibility(4);
         return;
       }
-      ioQ.ipq.setText(String.valueOf(paramInt));
-      ioQ.ipq.setVisibility(0);
-      ioQ.ipr.setVisibility(4);
+      knK.kok.setText(String.valueOf(paramInt));
+      knK.kok.setVisibility(0);
+      knK.kol.setVisibility(4);
       return;
     }
-    ioQ.ipq.setText("");
-    ioQ.ipq.setVisibility(4);
+    knK.kok.setText("");
+    knK.kok.setVisibility(4);
   }
   
-  public final void mW(int paramInt)
+  public final void pR(int paramInt)
   {
-    ipi = paramInt;
+    koc = paramInt;
     if (paramInt > 0)
     {
       if (paramInt > 99)
       {
-        ioP.ipq.setText(getContext().getString(a.n.unread_count_overt_100));
-        ioP.ipq.setVisibility(0);
-        ioP.ipr.setVisibility(4);
+        knJ.kok.setText(getContext().getString(2131431112));
+        knJ.kok.setVisibility(0);
+        knJ.kol.setVisibility(4);
         return;
       }
-      ioP.ipq.setText(String.valueOf(paramInt));
-      ioP.ipq.setVisibility(0);
-      ioP.ipr.setVisibility(4);
+      knJ.kok.setText(String.valueOf(paramInt));
+      knJ.kok.setVisibility(0);
+      knJ.kol.setVisibility(4);
       return;
     }
-    ioP.ipq.setText("");
-    ioP.ipq.setVisibility(4);
+    knJ.kok.setText("");
+    knJ.kok.setVisibility(4);
   }
   
-  public final void mX(int paramInt)
+  public final void pS(int paramInt)
   {
-    ipk = paramInt;
+    koe = paramInt;
     if (paramInt > 0)
     {
       if (paramInt > 99)
       {
-        ioR.ipq.setText(getContext().getString(a.n.unread_count_overt_100));
-        ioR.ipq.setVisibility(0);
-        ioR.ipr.setVisibility(4);
+        knL.kok.setText(getContext().getString(2131431112));
+        knL.kok.setVisibility(0);
+        knL.kol.setVisibility(4);
         return;
       }
-      ioR.ipq.setText(String.valueOf(paramInt));
-      ioR.ipq.setVisibility(0);
-      ioR.ipr.setVisibility(4);
+      knL.kok.setText(String.valueOf(paramInt));
+      knL.kok.setVisibility(0);
+      knL.kol.setVisibility(4);
       return;
     }
-    ioR.ipq.setText("");
-    ioR.ipq.setVisibility(4);
+    knL.kok.setText("");
+    knL.kok.setVisibility(4);
   }
   
-  public void setOnTabClickListener(d.a parama)
+  public void setOnTabClickListener(c.a parama)
   {
-    ioN = parama;
+    knH = parama;
   }
   
   public void setTo(int paramInt)
   {
-    gWq = paramInt;
+    feV = paramInt;
     switch (paramInt)
     {
     }
     for (;;)
     {
-      dzL = System.currentTimeMillis();
-      ipd = gWq;
+      erA = System.currentTimeMillis();
+      knX = feV;
       return;
-      ioO.ipo.setFocusAlpha(255);
-      ioP.ipo.setFocusAlpha(0);
-      ioQ.ipo.setFocusAlpha(0);
-      ioR.ipo.setFocusAlpha(0);
-      ioO.ipp.setTextColor(ioS);
-      ioP.ipp.setTextColor(ioW);
-      ioQ.ipp.setTextColor(ioW);
-      ioR.ipp.setTextColor(ioW);
+      knI.koi.setFocusAlpha(255);
+      knJ.koi.setFocusAlpha(0);
+      knK.koi.setFocusAlpha(0);
+      knL.koi.setFocusAlpha(0);
+      knI.koj.setTextColor(knM);
+      knJ.koj.setTextColor(knQ);
+      knK.koj.setTextColor(knQ);
+      knL.koj.setTextColor(knQ);
       continue;
-      ioO.ipo.setFocusAlpha(0);
-      ioP.ipo.setFocusAlpha(255);
-      ioQ.ipo.setFocusAlpha(0);
-      ioR.ipo.setFocusAlpha(0);
-      ioO.ipp.setTextColor(ioW);
-      ioP.ipp.setTextColor(ioS);
-      ioQ.ipp.setTextColor(ioW);
-      ioR.ipp.setTextColor(ioW);
+      knI.koi.setFocusAlpha(0);
+      knJ.koi.setFocusAlpha(255);
+      knK.koi.setFocusAlpha(0);
+      knL.koi.setFocusAlpha(0);
+      knI.koj.setTextColor(knQ);
+      knJ.koj.setTextColor(knM);
+      knK.koj.setTextColor(knQ);
+      knL.koj.setTextColor(knQ);
       continue;
-      ioO.ipo.setFocusAlpha(0);
-      ioP.ipo.setFocusAlpha(0);
-      ioQ.ipo.setFocusAlpha(255);
-      ioR.ipo.setFocusAlpha(0);
-      ioO.ipp.setTextColor(ioW);
-      ioP.ipp.setTextColor(ioW);
-      ioQ.ipp.setTextColor(ioS);
-      ioR.ipp.setTextColor(ioW);
+      knI.koi.setFocusAlpha(0);
+      knJ.koi.setFocusAlpha(0);
+      knK.koi.setFocusAlpha(255);
+      knL.koi.setFocusAlpha(0);
+      knI.koj.setTextColor(knQ);
+      knJ.koj.setTextColor(knQ);
+      knK.koj.setTextColor(knM);
+      knL.koj.setTextColor(knQ);
       continue;
-      ioO.ipo.setFocusAlpha(0);
-      ioP.ipo.setFocusAlpha(0);
-      ioQ.ipo.setFocusAlpha(0);
-      ioR.ipo.setFocusAlpha(255);
-      ioO.ipp.setTextColor(ioW);
-      ioP.ipp.setTextColor(ioW);
-      ioQ.ipp.setTextColor(ioW);
-      ioR.ipp.setTextColor(ioS);
+      knI.koi.setFocusAlpha(0);
+      knJ.koi.setFocusAlpha(0);
+      knK.koi.setFocusAlpha(0);
+      knL.koi.setFocusAlpha(255);
+      knI.koj.setTextColor(knQ);
+      knJ.koj.setTextColor(knQ);
+      knK.koj.setTextColor(knQ);
+      knL.koj.setTextColor(knM);
     }
   }
   
   protected final class a
   {
-    View ipn;
-    TabIconView ipo;
-    TextView ipp;
-    TextView ipq;
-    ImageView ipr;
+    View koh;
+    TabIconView koi;
+    TextView koj;
+    TextView kok;
+    ImageView kol;
     
     protected a() {}
   }

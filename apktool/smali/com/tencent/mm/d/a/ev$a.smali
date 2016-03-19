@@ -15,20 +15,23 @@
 
 
 # instance fields
-.field public aBA:Ljava/lang/String;
+.field public auE:I
 
-.field public avY:Ljava/lang/String;
-
-.field public type:I
+.field public azz:[B
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 14
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 23
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/tencent/mm/d/a/ev$a;->auE:I
 
     return-void
 .end method

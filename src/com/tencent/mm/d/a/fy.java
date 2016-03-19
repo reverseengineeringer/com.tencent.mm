@@ -1,32 +1,27 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.xf;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class fy
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDe = new a();
-  public b aDf = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aAV = new a();
   
   public fy()
   {
-    id = "RecentlySnsMediaObj";
-    hXT = atO;
+    id = "ImageSelectedOperation";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String username;
-  }
-  
-  public static final class b
-  {
-    public xf aDg;
-    public xf aDh;
-    public xf aDi;
+    public Boolean aAW;
+    public int aAX;
+    public Boolean aAY;
+    public String ayw;
+    public String imagePath;
   }
 }
 

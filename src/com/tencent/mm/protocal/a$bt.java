@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bt
-  extends a.c
+  extends a.e
 {
   public a$bt()
   {
-    super("openWXDeviceLib", "openWXDeviceLib", 117, false);
+    super("jumpToInstallUrl", "", 26, false);
   }
 }
 

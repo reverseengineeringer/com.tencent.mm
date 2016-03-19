@@ -1,16 +1,11 @@
 package com.tencent.smtt.sdk;
 
-import java.io.File;
-import java.io.FileFilter;
-
-final class w
-  implements FileFilter
+public final class w
 {
-  w(v paramv) {}
-  
-  public final boolean accept(File paramFile)
+  @Deprecated
+  public static abstract interface a
   {
-    return paramFile.getName().endsWith(".dex");
+    public abstract void updateQuota(long paramLong);
   }
 }
 

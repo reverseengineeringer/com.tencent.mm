@@ -3,21 +3,21 @@ package android.support.v7.internal.widget;
 final class ProgressBarICS$a
   implements Runnable
 {
-  int cZ;
-  int dH;
-  boolean rG;
+  int cU;
+  int mId;
+  boolean qJ;
   
   ProgressBarICS$a(ProgressBarICS paramProgressBarICS, int paramInt1, int paramInt2, boolean paramBoolean)
   {
-    cZ = paramInt1;
-    dH = paramInt2;
-    rG = paramBoolean;
+    mId = paramInt1;
+    cU = paramInt2;
+    qJ = paramBoolean;
   }
   
   public final void run()
   {
-    ProgressBarICS.a(rH, cZ, dH);
-    ProgressBarICS.a(rH, this);
+    ProgressBarICS.a(qK, mId, cU);
+    ProgressBarICS.a(qK, this);
   }
 }
 

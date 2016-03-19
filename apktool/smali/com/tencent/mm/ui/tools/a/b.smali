@@ -12,21 +12,21 @@
 
 
 # instance fields
-.field public cIw:I
+.field public cFj:I
 
-.field public cnL:I
+.field private eXB:Ljava/lang/String;
 
-.field public fi:I
+.field public ewY:I
 
-.field private jwL:Ljava/lang/String;
+.field public lzC:I
 
-.field public jwM:I
+.field public lzD:I
 
-.field public jwN:I
+.field public lzE:I
 
-.field public jwO:I
+.field private lzF:Lcom/tencent/mm/ui/tools/a/b$a;
 
-.field private jwP:Lcom/tencent/mm/ui/tools/a/b$a;
+.field public mSize:I
 
 
 # direct methods
@@ -44,25 +44,25 @@
     .line 20
     const/high16 v0, 0x6400000
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/a/b;->fi:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/a/b;->mSize:I
 
     .line 21
-    iput v2, p0, Lcom/tencent/mm/ui/tools/a/b;->cIw:I
+    iput v2, p0, Lcom/tencent/mm/ui/tools/a/b;->ewY:I
 
     .line 22
-    iput v2, p0, Lcom/tencent/mm/ui/tools/a/b;->cnL:I
+    iput v2, p0, Lcom/tencent/mm/ui/tools/a/b;->cFj:I
 
     .line 24
-    iput v1, p0, Lcom/tencent/mm/ui/tools/a/b;->jwM:I
+    iput v1, p0, Lcom/tencent/mm/ui/tools/a/b;->lzC:I
 
     .line 25
-    iput v1, p0, Lcom/tencent/mm/ui/tools/a/b;->jwN:I
+    iput v1, p0, Lcom/tencent/mm/ui/tools/a/b;->lzD:I
 
     .line 26
-    iput v1, p0, Lcom/tencent/mm/ui/tools/a/b;->jwO:I
+    iput v1, p0, Lcom/tencent/mm/ui/tools/a/b;->lzE:I
 
     .line 37
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a/b;->jwL:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a/b;->eXB:Ljava/lang/String;
 
     .line 38
     return-void
@@ -75,16 +75,16 @@
 
     .prologue
     .line 78
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a/b;->jwP:Lcom/tencent/mm/ui/tools/a/b$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/a/b;->lzF:Lcom/tencent/mm/ui/tools/a/b$a;
 
     .line 79
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/a/b;->aBx()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/a/b;->aSr()V
 
     .line 80
     return-void
 .end method
 
-.method protected final aBw()I
+.method protected final aSq()I
     .locals 6
 
     .prologue
@@ -93,9 +93,9 @@
     const/4 v2, 0x0
 
     .line 84
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->jwL:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->eXB:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -106,20 +106,20 @@
 
     const-string/jumbo v3, "dz[check image but path is null or nil]"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 87
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->jwL:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->eXB:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/a/c;->ay(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/a/e;->aw(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/a/b;->jwM:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/a/b;->lzC:I
 
     .line 88
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->jwL:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->eXB:Ljava/lang/String;
 
     new-instance v3, Landroid/graphics/BitmapFactory$Options;
 
@@ -132,21 +132,21 @@
     .line 89
     iget v0, v3, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/a/b;->jwN:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/a/b;->lzD:I
 
     .line 90
     iget v0, v3, Landroid/graphics/BitmapFactory$Options;->outHeight:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/a/b;->jwO:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/a/b;->lzE:I
 
     .line 96
-    iget v0, p0, Lcom/tencent/mm/ui/tools/a/b;->jwM:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/a/b;->lzC:I
 
-    iget v3, p0, Lcom/tencent/mm/ui/tools/a/b;->fi:I
+    iget v3, p0, Lcom/tencent/mm/ui/tools/a/b;->mSize:I
 
     if-gt v0, v3, :cond_1
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/a/b;->jwM:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/a/b;->lzC:I
 
     if-gez v0, :cond_4
 
@@ -163,7 +163,7 @@
 
     new-array v4, v1, [Ljava/lang/Object;
 
-    iget v5, p0, Lcom/tencent/mm/ui/tools/a/b;->jwM:I
+    iget v5, p0, Lcom/tencent/mm/ui/tools/a/b;->lzC:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -171,21 +171,21 @@
 
     aput-object v5, v4, v2
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v2
 
     .line 102
     :goto_1
-    iget v3, p0, Lcom/tencent/mm/ui/tools/a/b;->jwN:I
+    iget v3, p0, Lcom/tencent/mm/ui/tools/a/b;->lzD:I
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/a/b;->cIw:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/a/b;->ewY:I
 
     if-gt v3, v4, :cond_2
 
-    iget v3, p0, Lcom/tencent/mm/ui/tools/a/b;->jwO:I
+    iget v3, p0, Lcom/tencent/mm/ui/tools/a/b;->lzE:I
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/a/b;->cnL:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/a/b;->cFj:I
 
     if-le v3, v4, :cond_3
 
@@ -199,7 +199,7 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget v5, p0, Lcom/tencent/mm/ui/tools/a/b;->jwN:I
+    iget v5, p0, Lcom/tencent/mm/ui/tools/a/b;->lzD:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -207,7 +207,7 @@
 
     aput-object v5, v4, v2
 
-    iget v5, p0, Lcom/tencent/mm/ui/tools/a/b;->jwO:I
+    iget v5, p0, Lcom/tencent/mm/ui/tools/a/b;->lzE:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -215,7 +215,7 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v2
 
@@ -228,7 +228,7 @@
 
     const-string/jumbo v1, "dz[status ok]"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 111
     :goto_2
@@ -252,12 +252,12 @@
     goto :goto_1
 .end method
 
-.method protected final aBx()V
+.method protected final aSr()V
     .locals 2
 
     .prologue
     .line 124
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->jwP:Lcom/tencent/mm/ui/tools/a/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->lzF:Lcom/tencent/mm/ui/tools/a/b$a;
 
     if-nez v0, :cond_0
 
@@ -266,7 +266,7 @@
 
     const-string/jumbo v1, "dz[callback is null]"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 136
     :goto_0
@@ -274,7 +274,7 @@
 
     .line 128
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/a/b;->aBw()I
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/a/b;->aSq()I
 
     move-result v0
 
@@ -284,7 +284,7 @@
 
     .line 130
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->jwP:Lcom/tencent/mm/ui/tools/a/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->lzF:Lcom/tencent/mm/ui/tools/a/b$a;
 
     invoke-interface {v0, p0}, Lcom/tencent/mm/ui/tools/a/b$a;->a(Lcom/tencent/mm/ui/tools/a/b;)V
 
@@ -292,9 +292,9 @@
 
     .line 133
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->jwP:Lcom/tencent/mm/ui/tools/a/b$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/a/b;->lzF:Lcom/tencent/mm/ui/tools/a/b$a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/a/b$a;->Ni()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/a/b$a;->Rs()V
 
     goto :goto_0
 

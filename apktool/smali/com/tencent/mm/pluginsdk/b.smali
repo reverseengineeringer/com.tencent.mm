@@ -6,6 +6,7 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tencent/mm/pluginsdk/b$a;
+        Lcom/tencent/mm/pluginsdk/b$a;,
+        Lcom/tencent/mm/pluginsdk/b$b;
     }
 .end annotation

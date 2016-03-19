@@ -3,15 +3,15 @@ package com.tencent.mm.modelsfs;
 import java.io.IOException;
 import java.io.InputStream;
 
-class SFSInputStream
+public class SFSInputStream
   extends InputStream
 {
-  private long bKB;
-  private long bjW = 0L;
+  private long cam = 0L;
+  private long mNativePtr;
   
-  SFSInputStream(long paramLong)
+  public SFSInputStream(long paramLong)
   {
-    bKB = paramLong;
+    mNativePtr = paramLong;
   }
   
   private static native int nativeClose(long paramLong);
@@ -24,14 +24,14 @@ class SFSInputStream
   
   public int available()
   {
-    if (bKB == 0L) {
+    if (mNativePtr == 0L) {
       throw new IOException("Stream already closed.");
     }
-    long l1 = nativeSize(bKB);
+    long l1 = nativeSize(mNativePtr);
     if (l1 < 0L) {
       throw new IOException(SFSContext.nativeErrorMessage());
     }
-    long l2 = nativeSeek(bKB, 0L, 1);
+    long l2 = nativeSeek(mNativePtr, 0L, 1);
     if (l2 < 0L) {
       throw new IOException(SFSContext.nativeErrorMessage());
     }
@@ -40,18 +40,18 @@ class SFSInputStream
   
   public void close()
   {
-    if (bKB == 0L) {
+    if (mNativePtr == 0L) {
       return;
     }
-    if (nativeClose(bKB) == -1) {
+    if (nativeClose(mNativePtr) == -1) {
       throw new IOException(SFSContext.nativeErrorMessage());
     }
-    bKB = 0L;
+    mNativePtr = 0L;
   }
   
   protected void finalize()
   {
-    if (bKB != 0L) {
+    if (mNativePtr != 0L) {
       close();
     }
     super.finalize();
@@ -59,10 +59,10 @@ class SFSInputStream
   
   public void mark(int paramInt)
   {
-    if (bKB == 0L) {
+    if (mNativePtr == 0L) {
       return;
     }
-    bjW = nativeSeek(bKB, 0L, 1);
+    cam = nativeSeek(mNativePtr, 0L, 1);
   }
   
   public boolean markSupported()
@@ -72,14 +72,14 @@ class SFSInputStream
   
   public int read()
   {
-    if (bKB == 0L) {
+    if (mNativePtr == 0L) {
       throw new IOException("Stream already closed.");
     }
     byte[] arrayOfByte = new byte[1];
     int i;
     do
     {
-      i = nativeRead(bKB, arrayOfByte, 0, 1);
+      i = nativeRead(mNativePtr, arrayOfByte, 0, 1);
     } while (i == 0);
     if (i == -1) {
       return -1;
@@ -89,13 +89,13 @@ class SFSInputStream
   
   public int read(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
-    if (bKB == 0L) {
+    if (mNativePtr == 0L) {
       throw new IOException("Stream already closed.");
     }
     if (((paramInt1 | paramInt2) < 0) || (paramInt1 > paramArrayOfByte.length) || (paramArrayOfByte.length - paramInt1 < paramInt2)) {
       throw new ArrayIndexOutOfBoundsException("length = " + paramArrayOfByte.length + ", offset = " + paramInt1 + ", count = " + paramInt2);
     }
-    paramInt1 = nativeRead(bKB, paramArrayOfByte, paramInt1, paramInt2);
+    paramInt1 = nativeRead(mNativePtr, paramArrayOfByte, paramInt1, paramInt2);
     if (paramInt1 == 0) {
       return -1;
     }
@@ -107,27 +107,27 @@ class SFSInputStream
   
   public void reset()
   {
-    if (bKB == 0L) {
+    if (mNativePtr == 0L) {
       throw new IOException("Stream already closed.");
     }
-    if (bjW < 0L) {
+    if (cam < 0L) {
       throw new IOException("Previous call to mark() failed.");
     }
-    if (nativeSeek(bKB, bjW, 0) != bjW) {
+    if (nativeSeek(mNativePtr, cam, 0) != cam) {
       throw new IOException("Seeking to previous position failed.");
     }
   }
   
   public long skip(long paramLong)
   {
-    if (bKB == 0L) {
+    if (mNativePtr == 0L) {
       throw new IOException("Stream already closed.");
     }
     if (paramLong < 0L) {
       throw new IOException("byteCount < 0: " + paramLong);
     }
-    long l = nativeSeek(bKB, 0L, 1);
-    paramLong = nativeSeek(bKB, paramLong, 1);
+    long l = nativeSeek(mNativePtr, 0L, 1);
+    paramLong = nativeSeek(mNativePtr, paramLong, 1);
     if ((l == -1L) || (paramLong == -1L)) {
       throw new IOException(SFSContext.nativeErrorMessage());
     }

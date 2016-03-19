@@ -1,34 +1,45 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.storage.ar;
+import android.content.Context;
+import android.graphics.Bitmap;
+import android.widget.ImageView;
+import com.tencent.mm.protocal.b.nf;
+import com.tencent.mm.sdk.c.b;
 
 public final class eb
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aAi = new a();
-  public b aAj = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aye = new a();
+  public b ayf = new b();
   
   public eb()
   {
-    id = "LocationServer";
-    hXT = atO;
+    id = "FavImageService";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aAk = 0;
-    public boolean aAl = false;
-    public String amm;
-    public ar aub;
+    public int auE = -1;
+    public long aua;
+    public nf ayg;
+    public ImageView ayh;
+    public int ayi;
+    public boolean ayj = false;
+    public boolean ayk = false;
+    public boolean ayl = true;
+    public Context context;
+    public int height;
+    public int maxWidth;
+    public int width;
   }
   
   public static final class b
   {
-    public String aAm;
-    public String aAn;
+    public Bitmap aym;
+    public int ret = -1;
   }
 }
 

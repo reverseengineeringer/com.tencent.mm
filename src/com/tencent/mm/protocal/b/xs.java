@@ -1,47 +1,35 @@
 package com.tencent.mm.protocal.b;
 
 public final class xs
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public String dse;
-  public int eJE;
-  public int hGM;
-  public String hrN;
+  public String juP;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hrN != null) {
-        paramVarArgs.U(1, hrN);
+      if (juP != null) {
+        paramVarArgs.d(1, juP);
       }
-      if (dse != null) {
-        paramVarArgs.U(2, dse);
-      }
-      paramVarArgs.bM(3, hGM);
-      paramVarArgs.bM(4, eJE);
       return 0;
     }
     if (paramInt == 1) {
-      if (hrN == null) {
-        break label308;
+      if (juP == null) {
+        break label174;
       }
     }
-    label308:
-    for (paramInt = a.a.a.b.b.a.T(1, hrN) + 0;; paramInt = 0)
+    label174:
+    for (paramInt = a.a.a.b.b.a.e(1, juP) + 0;; paramInt = 0)
     {
-      int i = paramInt;
-      if (dse != null) {
-        i = paramInt + a.a.a.b.b.a.T(2, dse);
-      }
-      return i + a.a.a.a.bI(3, hGM) + a.a.a.a.bI(4, eJE);
+      return paramInt;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
         break;
@@ -54,17 +42,8 @@ public final class xs
         {
         default: 
           return -1;
-        case 1: 
-          hrN = jMD.readString();
-          return 0;
-        case 2: 
-          dse = jMD.readString();
-          return 0;
-        case 3: 
-          hGM = jMD.aVp();
-          return 0;
         }
-        eJE = jMD.aVp();
+        juP = maU.readString();
         return 0;
       }
       return -1;

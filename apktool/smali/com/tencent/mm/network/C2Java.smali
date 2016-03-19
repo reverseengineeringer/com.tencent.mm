@@ -46,51 +46,76 @@
 
 .field private static lastPercent:I
 
+.field private static lastReportTime:J
+
+.field private static totalMobileRecv:I
+
+.field private static totalMobileSend:I
+
+.field private static totalWifiRecv:I
+
+.field private static totalWifiSend:I
+
 .field private static wLock:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 4
 
     .prologue
-    const/4 v2, 0x0
+    const-wide/16 v2, 0x0
 
-    .line 134
+    const/4 v1, 0x0
+
+    .line 157
     const/4 v0, 0x0
 
     sput-object v0, Lcom/tencent/mm/network/C2Java;->wLock:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    .line 692
+    .line 449
+    sput v1, Lcom/tencent/mm/network/C2Java;->totalWifiRecv:I
+
+    .line 450
+    sput v1, Lcom/tencent/mm/network/C2Java;->totalWifiSend:I
+
+    .line 451
+    sput v1, Lcom/tencent/mm/network/C2Java;->totalMobileRecv:I
+
+    .line 452
+    sput v1, Lcom/tencent/mm/network/C2Java;->totalMobileSend:I
+
+    .line 455
+    sput-wide v2, Lcom/tencent/mm/network/C2Java;->lastReportTime:J
+
+    .line 723
     const v0, 0x3b9acacd
 
     sput v0, Lcom/tencent/mm/network/C2Java;->NEWSYNCCHECK_CMDID_RESP:I
 
-    .line 693
+    .line 724
     const/16 v0, 0xcd
 
     sput v0, Lcom/tencent/mm/network/C2Java;->NEWSYNCCHECK_CMDID_REQ:I
 
-    .line 695
-    sput v2, Lcom/tencent/mm/network/C2Java;->ECHECK_NOW:I
+    .line 726
+    sput v1, Lcom/tencent/mm/network/C2Java;->ECHECK_NOW:I
 
-    .line 696
+    .line 727
     const/4 v0, 0x1
 
     sput v0, Lcom/tencent/mm/network/C2Java;->ECHECK_NEXT:I
 
-    .line 697
+    .line 728
     const/4 v0, 0x2
 
     sput v0, Lcom/tencent/mm/network/C2Java;->ECHECK_NEVER:I
 
-    .line 749
-    const-wide/16 v0, 0x0
+    .line 780
+    sput-wide v2, Lcom/tencent/mm/network/C2Java;->lastCallback:J
 
-    sput-wide v0, Lcom/tencent/mm/network/C2Java;->lastCallback:J
-
-    .line 750
-    sput v2, Lcom/tencent/mm/network/C2Java;->lastPercent:I
+    .line 781
+    sput v1, Lcom/tencent/mm/network/C2Java;->lastPercent:I
 
     return-void
 .end method
@@ -99,7 +124,7 @@
     .locals 0
 
     .prologue
-    .line 131
+    .line 154
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -109,7 +134,7 @@
     .locals 1
 
     .prologue
-    .line 131
+    .line 154
     invoke-static {p0, p1}, Lcom/tencent/mm/network/C2Java;->getJavaActionId(J)I
 
     move-result v0
@@ -123,25 +148,25 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 281
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Da()Lcom/tencent/mm/network/av;
+    .line 304
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 297
+    .line 320
     :goto_0
     return v0
 
-    .line 287
+    .line 310
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Da()Lcom/tencent/mm/network/av;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
 
     move-result-object v1
 
-    invoke-virtual {v1, p0, p1, p2}, Lcom/tencent/mm/network/av;->buf2Resp(I[BLjava/io/ByteArrayOutputStream;)I
+    invoke-virtual {v1, p0, p1, p2}, Lcom/tencent/mm/network/y;->buf2Resp(I[BLjava/io/ByteArrayOutputStream;)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -149,20 +174,20 @@
 
     goto :goto_0
 
-    .line 289
+    .line 312
     :catch_0
     move-exception v1
 
-    .line 290
+    .line 313
     const-string/jumbo v2, "!12@sAoJwmn0ssk="
 
     invoke-static {v1}, Lcom/tencent/mm/network/C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 291
+    .line 314
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -220,20 +245,20 @@
     .locals 2
 
     .prologue
-    .line 137
+    .line 160
     new-instance v0, Ljava/io/StringWriter;
 
     invoke-direct {v0}, Ljava/io/StringWriter;-><init>()V
 
-    .line 138
+    .line 161
     new-instance v1, Ljava/io/PrintWriter;
 
     invoke-direct {v1, v0}, Ljava/io/PrintWriter;-><init>(Ljava/io/Writer;)V
 
-    .line 139
+    .line 162
     invoke-virtual {p0, v1}, Ljava/lang/Exception;->printStackTrace(Ljava/io/PrintWriter;)V
 
-    .line 140
+    .line 163
     invoke-virtual {v0}, Ljava/io/StringWriter;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -245,72 +270,74 @@
     .locals 2
 
     .prologue
-    .line 490
+    .line 521
     new-instance v0, Lcom/tencent/mm/network/MMNativeNetComm$AccountInfo;
 
     invoke-direct {v0}, Lcom/tencent/mm/network/MMNativeNetComm$AccountInfo;-><init>()V
 
-    .line 491
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    .line 522
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/network/z;->bRV:Lcom/tencent/mm/network/a;
+    iget-object v1, v1, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
 
     if-nez v1, :cond_1
 
-    .line 506
+    .line 537
     :cond_0
     :goto_0
     return-object v0
 
-    .line 497
+    .line 528
     :cond_1
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/network/z;->bRV:Lcom/tencent/mm/network/a;
+    iget-object v1, v1, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/network/a;->qY()I
+    invoke-virtual {v1}, Lcom/tencent/mm/network/a;->rg()I
 
     move-result v1
 
     iput v1, v0, Lcom/tencent/mm/network/MMNativeNetComm$AccountInfo;->uin:I
 
-    .line 498
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    .line 529
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/network/z;->bRV:Lcom/tencent/mm/network/a;
+    iget-object v1, v1, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
 
-    iget-object v1, v1, Lcom/tencent/mm/network/a;->bRz:Ljava/lang/String;
+    invoke-virtual {v1}, Lcom/tencent/mm/network/a;->wo()Ljava/lang/String;
+
+    move-result-object v1
 
     iput-object v1, v0, Lcom/tencent/mm/network/MMNativeNetComm$AccountInfo;->username:Ljava/lang/String;
 
-    .line 499
+    .line 530
     iget-object v1, v0, Lcom/tencent/mm/network/MMNativeNetComm$AccountInfo;->username:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 500
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    .line 531
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/network/z;->bRV:Lcom/tencent/mm/network/a;
+    iget-object v1, v1, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
 
     invoke-virtual {v1}, Lcom/tencent/mm/network/a;->getUsername()Ljava/lang/String;
 
@@ -322,7 +349,7 @@
 
     goto :goto_0
 
-    .line 506
+    .line 537
     :catch_0
     move-exception v1
 
@@ -333,8 +360,8 @@
     .locals 1
 
     .prologue
-    .line 381
-    sget v0, Lcom/tencent/mm/protocal/b;->hgo:I
+    .line 404
+    sget v0, Lcom/tencent/mm/protocal/b;->iUf:I
 
     return v0
 .end method
@@ -345,7 +372,7 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 625
+    .line 656
     :try_start_0
     new-instance v0, Ljava/util/Date;
 
@@ -363,19 +390,19 @@
 
     invoke-direct {v0, v2, v3}, Ljava/util/Date;-><init>(J)V
 
-    .line 627
+    .line 658
     new-instance v2, Ljava/text/SimpleDateFormat;
 
     const-string/jumbo v3, "yyyyMMdd"
 
     invoke-direct {v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
 
-    .line 628
+    .line 659
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v4, Lcom/tencent/mm/compatible/util/f;->bjR:Ljava/lang/String;
+    sget-object v4, Lcom/tencent/mm/compatible/util/d;->bxe:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -405,8 +432,8 @@
 
     move-result-object v0
 
-    .line 630
-    invoke-static {v0}, Lcom/tencent/mm/a/c;->az(Ljava/lang/String;)Z
+    .line 661
+    invoke-static {v0}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -414,17 +441,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 635
+    .line 666
     :goto_0
     return-object v0
 
     :cond_0
     move-object v0, v1
 
-    .line 633
+    .line 664
     goto :goto_0
 
-    .line 635
+    .line 666
     :catch_0
     move-exception v0
 
@@ -437,8 +464,8 @@
     .locals 1
 
     .prologue
-    .line 680
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/s;->aEJ()Ljava/lang/String;
+    .line 711
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
 
     move-result-object v0
 
@@ -449,13 +476,13 @@
     .locals 3
 
     .prologue
-    .line 684
+    .line 715
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 685
-    sget-object v1, Lcom/tencent/mm/protocal/b;->hgm:Ljava/lang/String;
+    .line 716
+    sget-object v1, Lcom/tencent/mm/protocal/b;->iUd:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -467,11 +494,11 @@
 
     move-result-object v1
 
-    sget-object v2, Lcom/tencent/mm/protocal/b;->hgg:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/protocal/b;->bwR:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 688
+    .line 719
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
@@ -483,8 +510,8 @@
     .locals 1
 
     .prologue
-    .line 677
-    sget-object v0, Lcom/tencent/mm/protocal/b;->hgg:Ljava/lang/String;
+    .line 708
+    sget-object v0, Lcom/tencent/mm/protocal/b;->bwR:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -493,84 +520,84 @@
     .locals 1
 
     .prologue
-    .line 530
+    .line 561
     long-to-int v0, p0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 554
+    .line 585
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 532
+    .line 563
     :pswitch_0
     const/16 v0, 0x2acb
 
     goto :goto_0
 
-    .line 534
+    .line 565
     :pswitch_1
     const/16 v0, 0x2778
 
     goto :goto_0
 
-    .line 536
+    .line 567
     :pswitch_2
     const/16 v0, 0x2777
 
     goto :goto_0
 
-    .line 538
+    .line 569
     :pswitch_3
     const/16 v0, 0x2779
 
     goto :goto_0
 
-    .line 540
+    .line 571
     :pswitch_4
     const/16 v0, 0x2776
 
     goto :goto_0
 
-    .line 542
+    .line 573
     :pswitch_5
     const/16 v0, 0x2775
 
     goto :goto_0
 
-    .line 544
+    .line 575
     :pswitch_6
     const/16 v0, 0x451
 
     goto :goto_0
 
-    .line 546
+    .line 577
     :pswitch_7
     const/16 v0, 0x28bc
 
     goto :goto_0
 
-    .line 548
+    .line 579
     :pswitch_8
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 550
+    .line 581
     :pswitch_9
     const/4 v0, -0x2
 
     goto :goto_0
 
-    .line 552
+    .line 583
     :pswitch_a
     const/4 v0, -0x3
 
     goto :goto_0
 
-    .line 530
+    .line 561
     :pswitch_data_0
     .packed-switch 0x1
         :pswitch_0
@@ -591,26 +618,26 @@
     .locals 2
 
     .prologue
-    .line 703
+    .line 734
     const/4 v0, 0x0
 
     sget v1, Lcom/tencent/mm/network/C2Java;->NEWSYNCCHECK_CMDID_REQ:I
 
     aput v1, p2, v0
 
-    .line 704
+    .line 735
     const/4 v0, 0x1
 
     sget v1, Lcom/tencent/mm/network/C2Java;->NEWSYNCCHECK_CMDID_RESP:I
 
     aput v1, p2, v0
 
-    .line 707
+    .line 738
     invoke-static {p0, p1}, Lcom/tencent/mm/network/C2Java;->getSyncCheckInfo(Ljava/io/ByteArrayOutputStream;Ljava/io/ByteArrayOutputStream;)I
 
     move-result v0
 
-    .line 709
+    .line 740
     if-eqz v0, :cond_0
 
     invoke-virtual {p0}, Ljava/io/ByteArrayOutputStream;->size()I
@@ -625,14 +652,14 @@
 
     if-nez v0, :cond_1
 
-    .line 711
+    .line 742
     :cond_0
     invoke-static {}, Lcom/tencent/mm/network/C2Java;->onRequestDoSync()V
 
-    .line 712
+    .line 743
     sget v0, Lcom/tencent/mm/network/C2Java;->ECHECK_NEXT:I
 
-    .line 715
+    .line 746
     :goto_0
     return v0
 
@@ -646,15 +673,15 @@
     .locals 2
 
     .prologue
-    .line 654
+    .line 685
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/ba;->De()J
+    invoke-static {}, Lcom/tencent/mm/network/ac;->Fl()J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-wide v0
 
-    .line 656
+    .line 687
     :goto_0
     return-wide v0
 
@@ -670,15 +697,15 @@
     .locals 2
 
     .prologue
-    .line 663
+    .line 694
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/ba;->De()J
+    invoke-static {}, Lcom/tencent/mm/network/ac;->Fl()J
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-wide v0
 
-    .line 665
+    .line 696
     :goto_0
     return-wide v0
 
@@ -696,64 +723,64 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 388
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    .line 411
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
     if-nez v1, :cond_1
 
-    .line 414
+    .line 437
     :cond_0
     :goto_0
     return v0
 
-    .line 395
+    .line 418
     :cond_1
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/network/z;->CJ()[B
+    invoke-virtual {v1}, Lcom/tencent/mm/network/r;->EQ()[B
 
     move-result-object v1
 
-    .line 396
+    .line 419
     if-eqz v1, :cond_2
 
-    .line 397
+    .line 420
     invoke-virtual {p0, v1}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 398
+    .line 421
     sput-object v1, Lcom/tencent/mm/network/C2Java;->cacheKeyBuf:[B
 
-    .line 400
+    .line 423
     :cond_2
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/network/z;->bpq:[B
+    iget-object v1, v1, Lcom/tencent/mm/network/r;->bBg:[B
 
-    .line 401
+    .line 424
     if-eqz v1, :cond_3
 
-    .line 402
+    .line 425
     invoke-virtual {p1, v1}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 403
+    .line 426
     sput-object v1, Lcom/tencent/mm/network/C2Java;->cacheMd5Buf:[B
 
-    .line 405
+    .line 428
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/network/z;->bRV:Lcom/tencent/mm/network/a;
+    iget-object v1, v1, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/network/a;->qY()I
+    invoke-virtual {v1}, Lcom/tencent/mm/network/a;->rg()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -761,20 +788,20 @@
 
     goto :goto_0
 
-    .line 406
+    .line 429
     :catch_0
     move-exception v1
 
-    .line 407
+    .line 430
     const-string/jumbo v2, "!12@sAoJwmn0ssk="
 
     invoke-static {v1}, Lcom/tencent/mm/network/C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 409
+    .line 432
     sget-object v1, Lcom/tencent/mm/network/C2Java;->cacheKeyBuf:[B
 
     if-eqz v1, :cond_0
@@ -783,13 +810,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 411
+    .line 434
     :try_start_1
     sget-object v1, Lcom/tencent/mm/network/C2Java;->cacheKeyBuf:[B
 
     invoke-virtual {p0, v1}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 412
+    .line 435
     sget-object v1, Lcom/tencent/mm/network/C2Java;->cacheMd5Buf:[B
 
     invoke-virtual {p1, v1}, Ljava/io/ByteArrayOutputStream;->write([B)V
@@ -810,33 +837,33 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 603
+    .line 634
     :try_start_0
     invoke-static {}, Lcom/tencent/mm/network/C2Java;->getAccountInfo()Lcom/tencent/mm/network/MMNativeNetComm$AccountInfo;
 
     move-result-object v1
 
-    .line 604
+    .line 635
     if-nez v1, :cond_0
 
-    .line 614
+    .line 645
     :goto_0
     return-object v0
 
-    .line 608
+    .line 639
     :cond_0
     new-instance v1, Ljava/lang/StringBuffer;
 
     invoke-direct {v1}, Ljava/lang/StringBuffer;-><init>()V
 
-    .line 610
+    .line 641
     const-string/jumbo v2, "Device:"
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
     move-result-object v2
 
-    sget-object v3, Lcom/tencent/mm/protocal/b;->hgi:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/protocal/b;->iTZ:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -848,7 +875,7 @@
 
     move-result-object v2
 
-    sget-object v3, Lcom/tencent/mm/protocal/b;->hgj:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/protocal/b;->iUa:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -858,7 +885,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 612
+    .line 643
     invoke-virtual {v1}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -867,7 +894,7 @@
 
     goto :goto_0
 
-    .line 614
+    .line 645
     :catch_0
     move-exception v1
 
@@ -878,22 +905,22 @@
     .locals 1
 
     .prologue
-    .line 642
+    .line 673
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->zI()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->AL()Z
 
     move-result v0
 
-    .line 643
+    .line 674
     if-eqz v0, :cond_0
 
     const-string/jumbo v0, "HK"
 
-    .line 645
+    .line 676
     :goto_0
     return-object v0
 
-    .line 643
+    .line 674
     :cond_0
     const-string/jumbo v0, "CN"
     :try_end_0
@@ -901,7 +928,7 @@
 
     goto :goto_0
 
-    .line 645
+    .line 676
     :catch_0
     move-exception v0
 
@@ -914,12 +941,12 @@
     .locals 2
 
     .prologue
-    .line 620
+    .line 651
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/compatible/util/f;->bjI:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/compatible/util/d;->bxd:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -944,27 +971,27 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 337
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    .line 360
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 352
+    .line 375
     :goto_0
     return v0
 
-    .line 343
+    .line 366
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/network/z;->bRV:Lcom/tencent/mm/network/a;
+    iget-object v1, v1, Lcom/tencent/mm/network/r;->ciM:Lcom/tencent/mm/network/a;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/network/a;->CB()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/network/a;->vS()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -972,20 +999,20 @@
 
     goto :goto_0
 
-    .line 344
+    .line 367
     :catch_0
     move-exception v1
 
-    .line 345
+    .line 368
     const-string/jumbo v2, "!12@sAoJwmn0ssk="
 
     invoke-static {v1}, Lcom/tencent/mm/network/C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 346
+    .line 369
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1043,25 +1070,25 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 317
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    .line 340
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 333
+    .line 356
     :goto_0
     return v0
 
-    .line 324
+    .line 347
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/network/z;->makeSureAuth()Z
+    invoke-virtual {v1}, Lcom/tencent/mm/network/r;->makeSureAuth()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -1069,20 +1096,20 @@
 
     goto :goto_0
 
-    .line 325
+    .line 348
     :catch_0
     move-exception v1
 
-    .line 326
+    .line 349
     const-string/jumbo v2, "!12@sAoJwmn0ssk="
 
     invoke-static {v1}, Lcom/tencent/mm/network/C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 327
+    .line 350
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1140,8 +1167,8 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 145
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Da()Lcom/tencent/mm/network/av;
+    .line 168
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
 
     move-result-object v0
 
@@ -1149,30 +1176,30 @@
 
     move v0, v7
 
-    .line 165
+    .line 188
     :goto_0
     return v0
 
-    .line 152
+    .line 175
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Da()Lcom/tencent/mm/network/av;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
 
     move-result-object v0
 
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/network/av;->dI(I)I
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/network/y;->eg(I)I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result v6
 
-    .line 153
+    .line 176
     :try_start_1
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CX()Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fe()Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v8
 
-    new-instance v0, Lcom/tencent/mm/network/b;
+    new-instance v0, Lcom/tencent/mm/network/C2Java$1;
 
     move v1, p0
 
@@ -1184,18 +1211,18 @@
 
     move-object v5, p4
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/network/b;-><init>(IILjava/lang/String;I[B)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/network/C2Java$1;-><init>(IILjava/lang/String;I[B)V
 
-    invoke-virtual {v8, v0}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v8, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     move v0, v6
 
-    .line 164
+    .line 187
     goto :goto_0
 
-    .line 160
+    .line 183
     :catch_0
     move-exception v0
 
@@ -1203,7 +1230,7 @@
 
     move v0, v7
 
-    .line 161
+    .line 184
     :goto_1
     const-string/jumbo v2, "!12@sAoJwmn0ssk="
 
@@ -1211,9 +1238,9 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 162
+    .line 185
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -1264,7 +1291,7 @@
 
     goto :goto_0
 
-    .line 160
+    .line 183
     :catch_1
     move-exception v0
 
@@ -1279,26 +1306,26 @@
     .locals 3
 
     .prologue
-    .line 721
+    .line 752
     if-eqz p0, :cond_0
 
     if-eqz p1, :cond_0
 
-    .line 724
+    .line 755
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 726
+    .line 757
     :try_start_0
     invoke-virtual {v0, p0}, Ljava/io/ByteArrayOutputStream;->write([B)V
 
-    .line 727
+    .line 758
     invoke-virtual {v0, p1}, Ljava/io/ByteArrayOutputStream;->write([B)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 730
+    .line 761
     :goto_0
     const/4 v1, 0x0
 
@@ -1310,7 +1337,7 @@
 
     invoke-static {v1, v2, v0}, Lcom/tencent/mm/network/C2Java;->onNotify(II[B)V
 
-    .line 736
+    .line 767
     :cond_0
     const/4 v0, 0x1
 
@@ -1326,28 +1353,28 @@
     .locals 4
 
     .prologue
-    .line 170
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Db()Lcom/tencent/mm/network/au;
+    .line 193
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fi()Lcom/tencent/mm/network/x;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 192
+    .line 215
     :goto_0
     return-void
 
-    .line 176
+    .line 199
     :cond_0
     :try_start_0
     sget-object v0, Lcom/tencent/mm/network/C2Java;->wLock:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     if-nez v0, :cond_1
 
-    .line 177
+    .line 200
     new-instance v0, Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    invoke-static {}, Lcom/tencent/mm/network/aw;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/network/z;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -1355,43 +1382,45 @@
 
     sput-object v0, Lcom/tencent/mm/network/C2Java;->wLock:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
-    .line 178
+    .line 201
     :cond_1
     sget-object v0, Lcom/tencent/mm/network/C2Java;->wLock:Lcom/tencent/mm/jni/platformcomm/WakerLock;
 
     const-wide/16 v1, 0x3e8
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(J)V
+    const-string/jumbo v3, "MMNativeNetJni.onNotify"
 
-    .line 179
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CX()Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/jni/platformcomm/WakerLock;->lock(JLjava/lang/String;)V
+
+    .line 202
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fe()Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/network/c;
+    new-instance v1, Lcom/tencent/mm/network/C2Java$2;
 
-    invoke-direct {v1, p0, p1, p2}, Lcom/tencent/mm/network/c;-><init>(II[B)V
+    invoke-direct {v1, p0, p1, p2}, Lcom/tencent/mm/network/C2Java$2;-><init>(II[B)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 185
+    .line 208
     :catch_0
     move-exception v0
 
-    .line 186
+    .line 209
     const-string/jumbo v1, "!12@sAoJwmn0ssk="
 
     invoke-static {v0}, Lcom/tencent/mm/network/C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 187
+    .line 210
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1449,48 +1478,48 @@
     .locals 4
 
     .prologue
-    .line 356
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Db()Lcom/tencent/mm/network/au;
+    .line 379
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fi()Lcom/tencent/mm/network/x;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 377
+    .line 400
     :goto_0
     return-void
 
-    .line 362
+    .line 385
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CX()Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fe()Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/network/g;
+    new-instance v1, Lcom/tencent/mm/network/C2Java$6;
 
-    invoke-direct {v1, p0, p1, p2, p3}, Lcom/tencent/mm/network/g;-><init>(JJ)V
+    invoke-direct {v1, p0, p1, p2, p3}, Lcom/tencent/mm/network/C2Java$6;-><init>(JJ)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 370
+    .line 393
     :catch_0
     move-exception v0
 
-    .line 371
+    .line 394
     const-string/jumbo v1, "!12@sAoJwmn0ssk="
 
     invoke-static {v0}, Lcom/tencent/mm/network/C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 372
+    .line 395
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1548,48 +1577,48 @@
     .locals 4
 
     .prologue
-    .line 238
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Db()Lcom/tencent/mm/network/au;
+    .line 261
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fi()Lcom/tencent/mm/network/x;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 255
+    .line 278
     :goto_0
     return-void
 
-    .line 244
+    .line 267
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CX()Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fe()Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/network/f;
+    new-instance v1, Lcom/tencent/mm/network/C2Java$5;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/network/f;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/network/C2Java$5;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 250
+    .line 273
     :catch_0
     move-exception v0
 
-    .line 251
+    .line 274
     const-string/jumbo v1, "!12@sAoJwmn0ssk="
 
     invoke-static {v0}, Lcom/tencent/mm/network/C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 252
+    .line 275
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1647,48 +1676,48 @@
     .locals 4
 
     .prologue
-    .line 195
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Db()Lcom/tencent/mm/network/au;
+    .line 218
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fi()Lcom/tencent/mm/network/x;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 213
+    .line 236
     :goto_0
     return-void
 
-    .line 201
+    .line 224
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CX()Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fe()Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/network/d;
+    new-instance v1, Lcom/tencent/mm/network/C2Java$3;
 
-    invoke-direct {v1}, Lcom/tencent/mm/network/d;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/network/C2Java$3;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 208
+    .line 231
     :catch_0
     move-exception v0
 
-    .line 209
+    .line 232
     const-string/jumbo v1, "!12@sAoJwmn0ssk="
 
     invoke-static {v0}, Lcom/tencent/mm/network/C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 210
+    .line 233
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1746,48 +1775,48 @@
     .locals 4
 
     .prologue
-    .line 217
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Db()Lcom/tencent/mm/network/au;
+    .line 240
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fi()Lcom/tencent/mm/network/x;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 234
+    .line 257
     :goto_0
     return-void
 
-    .line 223
+    .line 246
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CX()Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fe()Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/network/e;
+    new-instance v1, Lcom/tencent/mm/network/C2Java$4;
 
-    invoke-direct {v1}, Lcom/tencent/mm/network/e;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/network/C2Java$4;-><init>()V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 229
+    .line 252
     :catch_0
     move-exception v0
 
-    .line 230
+    .line 253
     const-string/jumbo v1, "!12@sAoJwmn0ssk="
 
     invoke-static {v0}, Lcom/tencent/mm/network/C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 231
+    .line 254
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -1845,17 +1874,17 @@
     .locals 1
 
     .prologue
-    .line 511
+    .line 542
     :try_start_0
-    invoke-static {p0, p1}, Lcom/tencent/mm/sdk/b/b;->k(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {p0, p1}, Lcom/tencent/mm/sdk/b/b;->q(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 515
+    .line 546
     :goto_0
     return-void
 
-    .line 514
+    .line 545
     :catch_0
     move-exception v0
 
@@ -1863,37 +1892,95 @@
 .end method
 
 .method public static reportFlowData(IIII)V
-    .locals 7
+    .locals 9
 
     .prologue
-    const/4 v0, 0x1
+    const/4 v8, 0x1
 
-    const/4 v1, 0x0
+    const/4 v7, 0x0
 
-    .line 429
+    .line 459
+    sget v0, Lcom/tencent/mm/network/C2Java;->totalWifiRecv:I
+
+    add-int/2addr v0, p0
+
+    sput v0, Lcom/tencent/mm/network/C2Java;->totalWifiRecv:I
+
+    .line 460
+    sget v0, Lcom/tencent/mm/network/C2Java;->totalWifiSend:I
+
+    add-int/2addr v0, p1
+
+    sput v0, Lcom/tencent/mm/network/C2Java;->totalWifiSend:I
+
+    .line 461
+    sget v0, Lcom/tencent/mm/network/C2Java;->totalMobileRecv:I
+
+    add-int/2addr v0, p2
+
+    sput v0, Lcom/tencent/mm/network/C2Java;->totalMobileRecv:I
+
+    .line 462
+    sget v0, Lcom/tencent/mm/network/C2Java;->totalMobileSend:I
+
+    add-int/2addr v0, p3
+
+    sput v0, Lcom/tencent/mm/network/C2Java;->totalMobileSend:I
+
+    .line 464
+    sget v0, Lcom/tencent/mm/network/C2Java;->totalMobileRecv:I
+
+    sget v1, Lcom/tencent/mm/network/C2Java;->totalMobileSend:I
+
+    add-int/2addr v0, v1
+
+    sget v1, Lcom/tencent/mm/network/C2Java;->totalWifiRecv:I
+
+    add-int/2addr v0, v1
+
+    sget v1, Lcom/tencent/mm/network/C2Java;->totalWifiSend:I
+
+    add-int/2addr v0, v1
+
+    .line 466
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fc()Lcom/tencent/mm/network/aa;
+
+    move-result-object v1
+
+    iget-object v1, v1, Lcom/tencent/mm/network/aa;->cjW:Lcom/tencent/mm/network/a/b;
+
+    .line 468
     const-string/jumbo v2, "!12@sAoJwmn0ssk="
 
-    const-string/jumbo v3, "dknetstat ReportDataFlow %d,%d,%d,%d  getNetworkMoniter:%b  %s"
+    const-string/jumbo v3, "reportNetFlow time[%d,%d] sum:%d wr[%d,%d] ws[%d,%d] mr[%d,%d] ms[%d,%d] fgbg:%b Moniter:%s"
 
-    const/4 v4, 0x6
+    const/16 v4, 0xd
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget-wide v5, Lcom/tencent/mm/network/C2Java;->lastReportTime:J
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
-    aput-object v5, v4, v1
+    aput-object v5, v4, v7
 
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    sget-wide v5, Lcom/tencent/mm/network/C2Java;->lastReportTime:J
+
+    invoke-static {v5, v6}, Lcom/tencent/mm/sdk/platformtools/ay;->am(J)J
+
+    move-result-wide v5
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v5
 
-    aput-object v5, v4, v0
+    aput-object v5, v4, v8
 
     const/4 v5, 0x2
 
-    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
@@ -1901,7 +1988,7 @@
 
     const/4 v5, 0x3
 
-    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
@@ -1909,93 +1996,190 @@
 
     const/4 v5, 0x4
 
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CV()Lcom/tencent/mm/network/ax;
+    sget v6, Lcom/tencent/mm/network/C2Java;->totalWifiRecv:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
-    iget-object v6, v6, Lcom/tencent/mm/network/ax;->bTc:Lcom/tencent/mm/network/a/b;
+    aput-object v6, v4, v5
 
-    if-eqz v6, :cond_0
+    const/4 v5, 0x5
 
-    :goto_0
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    aput-object v0, v4, v5
-
-    const/4 v0, 0x5
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->aFH()Lcom/tencent/mm/sdk/platformtools/bn$b;
-
-    move-result-object v1
-
-    aput-object v1, v4, v0
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 432
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CV()Lcom/tencent/mm/network/ax;
-
-    move-result-object v0
-
-    iget-object v2, v0, Lcom/tencent/mm/network/ax;->bTc:Lcom/tencent/mm/network/a/b;
-
-    .line 434
-    if-nez v2, :cond_1
-
-    .line 472
-    :goto_1
-    return-void
-
-    :cond_0
-    move v0, v1
-
-    .line 429
-    goto :goto_0
-
-    .line 439
-    :cond_1
-    :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CX()Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v6
 
-    new-instance v0, Lcom/tencent/mm/network/h;
+    aput-object v6, v4, v5
 
-    move v1, p0
+    const/4 v5, 0x6
 
-    move v3, p1
+    sget v6, Lcom/tencent/mm/network/C2Java;->totalWifiSend:I
 
-    move v4, p2
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move v5, p3
+    move-result-object v6
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/network/h;-><init>(ILcom/tencent/mm/network/a/b;III)V
+    aput-object v6, v4, v5
 
-    invoke-virtual {v6, v0}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v5, 0x7
 
-    goto :goto_1
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    const/16 v5, 0x8
+
+    sget v6, Lcom/tencent/mm/network/C2Java;->totalMobileRecv:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    const/16 v5, 0x9
+
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    const/16 v5, 0xa
+
+    sget v6, Lcom/tencent/mm/network/C2Java;->totalMobileSend:I
+
+    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    const/16 v5, 0xb
+
+    sget-boolean v6, Lcom/tencent/mm/sdk/b/b;->foreground:Z
+
+    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    const/16 v5, 0xc
+
+    aput-object v1, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 471
+    if-nez v1, :cond_1
+
+    .line 504
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 474
+    :cond_1
+    const v2, 0x19000
+
+    if-ge v0, v2, :cond_2
+
+    sget-wide v2, Lcom/tencent/mm/network/C2Java;->lastReportTime:J
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->am(J)J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x1e
+
+    cmp-long v0, v2, v4
+
+    if-ltz v0, :cond_0
+
+    .line 478
+    :cond_2
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FR()J
+
+    move-result-wide v2
+
+    sput-wide v2, Lcom/tencent/mm/network/C2Java;->lastReportTime:J
+
+    .line 480
+    sget v2, Lcom/tencent/mm/network/C2Java;->totalWifiRecv:I
+
+    .line 481
+    sput v7, Lcom/tencent/mm/network/C2Java;->totalWifiRecv:I
+
+    .line 482
+    sget v3, Lcom/tencent/mm/network/C2Java;->totalWifiSend:I
+
+    .line 483
+    sput v7, Lcom/tencent/mm/network/C2Java;->totalWifiSend:I
+
+    .line 484
+    sget v4, Lcom/tencent/mm/network/C2Java;->totalMobileRecv:I
+
+    .line 485
+    sput v7, Lcom/tencent/mm/network/C2Java;->totalMobileRecv:I
+
+    .line 486
+    sget v5, Lcom/tencent/mm/network/C2Java;->totalMobileSend:I
+
+    .line 487
+    sput v7, Lcom/tencent/mm/network/C2Java;->totalMobileSend:I
+
+    .line 490
+    :try_start_0
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fe()Lcom/tencent/mm/sdk/platformtools/aa;
+
+    move-result-object v6
+
+    new-instance v0, Lcom/tencent/mm/network/C2Java$7;
+
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/network/C2Java$7;-><init>(Lcom/tencent/mm/network/a/b;IIII)V
+
+    invoke-virtual {v6, v0}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 501
     :catch_0
     move-exception v0
 
-    goto :goto_1
+    .line 502
+    const-string/jumbo v1, "!12@sAoJwmn0ssk="
+
+    const-string/jumbo v2, "reportFlowData :%s"
+
+    new-array v3, v8, [Ljava/lang/Object;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v3, v7
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_0
 .end method
 
 .method public static reportIDKey(JJJZ)V
     .locals 1
 
     .prologue
-    .line 745
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    .line 776
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
-    invoke-static/range {p0 .. p6}, Lcom/tencent/mm/plugin/report/service/j;->b(JJJZ)V
+    invoke-static/range {p0 .. p6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
 
-    .line 746
+    .line 777
     return-void
 .end method
 
@@ -2003,14 +2187,14 @@
     .locals 1
 
     .prologue
-    .line 741
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    .line 772
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
     long-to-int v0, p0
 
-    invoke-static {v0, p2, p4, p3}, Lcom/tencent/mm/plugin/report/service/j;->c(ILjava/lang/String;ZZ)V
+    invoke-static {v0, p2, p4, p3}, Lcom/tencent/mm/plugin/report/service/h;->c(ILjava/lang/String;ZZ)V
 
-    .line 742
+    .line 773
     return-void
 .end method
 
@@ -2020,7 +2204,7 @@
     .end annotation
 
     .prologue
-    .line 674
+    .line 705
     return-void
 .end method
 
@@ -2028,21 +2212,21 @@
     .locals 1
 
     .prologue
-    .line 477
+    .line 508
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CW()Lcom/tencent/mm/network/ay;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fd()Lcom/tencent/mm/network/ab;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/network/ay;->dK(I)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/network/ab;->ei(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 480
+    .line 511
     :goto_0
     return-void
 
-    .line 479
+    .line 510
     :catch_0
     move-exception v0
 
@@ -2053,25 +2237,25 @@
     .locals 2
 
     .prologue
-    .line 574
+    .line 605
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CX()Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fe()Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/network/i;
+    new-instance v1, Lcom/tencent/mm/network/C2Java$8;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/network/i;-><init>(Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/network/C2Java$8;-><init>(Lcom/tencent/mm/network/MMNativeNetComm$ReportInfo;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 598
+    .line 629
     :goto_0
     return-void
 
-    .line 597
+    .line 628
     :catch_0
     move-exception v0
 
@@ -2084,25 +2268,25 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 261
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Da()Lcom/tencent/mm/network/av;
+    .line 284
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 276
+    .line 299
     :goto_0
     return v0
 
-    .line 267
+    .line 290
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->Da()Lcom/tencent/mm/network/av;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fh()Lcom/tencent/mm/network/y;
 
     move-result-object v1
 
-    invoke-virtual {v1, p0, p1}, Lcom/tencent/mm/network/av;->req2Buf(ILjava/io/ByteArrayOutputStream;)Z
+    invoke-virtual {v1, p0, p1}, Lcom/tencent/mm/network/y;->req2Buf(ILjava/io/ByteArrayOutputStream;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -2110,20 +2294,20 @@
 
     goto :goto_0
 
-    .line 269
+    .line 292
     :catch_0
     move-exception v1
 
-    .line 270
+    .line 293
     const-string/jumbo v2, "!12@sAoJwmn0ssk="
 
     invoke-static {v1}, Lcom/tencent/mm/network/C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 271
+    .line 294
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2179,44 +2363,44 @@
     .locals 4
 
     .prologue
-    .line 301
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    .line 324
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 314
+    .line 337
     :goto_0
     return-void
 
-    .line 307
+    .line 330
     :cond_0
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/network/z;->CI()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/network/r;->EP()Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 308
+    .line 331
     :catch_0
     move-exception v0
 
-    .line 309
+    .line 332
     const-string/jumbo v1, "!12@sAoJwmn0ssk="
 
     invoke-static {v0}, Lcom/tencent/mm/network/C2Java;->exception2String(Ljava/lang/Exception;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 310
+    .line 333
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -2274,17 +2458,17 @@
     .locals 1
 
     .prologue
-    .line 774
+    .line 805
     const/4 v0, 0x0
 
     sput v0, Lcom/tencent/mm/network/C2Java;->lastPercent:I
 
-    .line 775
+    .line 806
     const/4 v0, -0x1
 
     invoke-static {v0}, Lcom/tencent/mm/network/C2Java;->uploadLogNotify(I)V
 
-    .line 776
+    .line 807
     return-void
 .end method
 
@@ -2296,32 +2480,32 @@
 
     const/4 v5, 0x0
 
-    .line 786
+    .line 817
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/network/aw;->CZ()Lcom/tencent/mm/network/z;
+    invoke-static {}, Lcom/tencent/mm/network/z;->Fg()Lcom/tencent/mm/network/r;
 
     move-result-object v0
 
-    iget-object v1, v0, Lcom/tencent/mm/network/z;->bSb:Lcom/tencent/mm/network/o;
+    iget-object v1, v0, Lcom/tencent/mm/network/r;->ciS:Lcom/tencent/mm/network/g;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
     if-eqz v1, :cond_0
 
     :try_start_1
-    iget-object v0, v0, Lcom/tencent/mm/network/z;->bSb:Lcom/tencent/mm/network/o;
+    iget-object v0, v0, Lcom/tencent/mm/network/r;->ciS:Lcom/tencent/mm/network/g;
 
-    invoke-interface {v0, p0}, Lcom/tencent/mm/network/o;->aE(I)V
+    invoke-interface {v0, p0}, Lcom/tencent/mm/network/g;->aH(I)V
     :try_end_1
     .catch Landroid/os/RemoteException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 790
+    .line 821
     :cond_0
     :goto_0
     return-void
 
-    .line 786
+    .line 817
     :catch_0
     move-exception v0
 
@@ -2336,36 +2520,36 @@
 
     const/4 v4, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
     goto :goto_0
 
-    .line 787
+    .line 818
     :catch_1
     move-exception v0
 
-    .line 788
+    .line 819
     const-string/jumbo v1, "!12@sAoJwmn0ssk="
 
     const-string/jumbo v2, "exception:%s"
 
     new-array v3, v6, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
@@ -2380,7 +2564,7 @@
 
     const/4 v1, 0x0
 
-    .line 753
+    .line 784
     const-string/jumbo v2, "!12@sAoJwmn0ssk="
 
     const-string/jumbo v3, "ipxx progress totalSize:%d uploadSize:%d lastPercent:%d "
@@ -2413,14 +2597,14 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 754
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DL()J
+    .line 785
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FR()J
 
     move-result-wide v2
 
-    .line 755
+    .line 786
     const-wide/16 v4, 0x1
 
     sub-long v4, v2, v4
@@ -2431,15 +2615,15 @@
 
     if-gez v4, :cond_0
 
-    .line 771
+    .line 802
     :goto_0
     return-void
 
-    .line 758
+    .line 789
     :cond_0
     sput-wide v2, Lcom/tencent/mm/network/C2Java;->lastCallback:J
 
-    .line 760
+    .line 791
     cmp-long v2, p2, v8
 
     if-ltz v2, :cond_1
@@ -2452,7 +2636,7 @@
 
     if-gez v2, :cond_1
 
-    .line 761
+    .line 792
     const-wide/16 v1, 0x64
 
     mul-long/2addr v1, p2
@@ -2461,24 +2645,24 @@
 
     long-to-int v1, v1
 
-    .line 763
+    .line 794
     :cond_1
     if-le v1, v0, :cond_3
 
-    .line 766
+    .line 797
     :goto_1
     sget v1, Lcom/tencent/mm/network/C2Java;->lastPercent:I
 
     if-le v1, v0, :cond_2
 
-    .line 767
+    .line 798
     sget v0, Lcom/tencent/mm/network/C2Java;->lastPercent:I
 
-    .line 769
+    .line 800
     :cond_2
     sput v0, Lcom/tencent/mm/network/C2Java;->lastPercent:I
 
-    .line 770
+    .line 801
     invoke-static {v0}, Lcom/tencent/mm/network/C2Java;->uploadLogNotify(I)V
 
     goto :goto_0
@@ -2493,16 +2677,16 @@
     .locals 1
 
     .prologue
-    .line 779
+    .line 810
     const/4 v0, 0x0
 
     sput v0, Lcom/tencent/mm/network/C2Java;->lastPercent:I
 
-    .line 780
+    .line 811
     const/16 v0, 0x64
 
     invoke-static {v0}, Lcom/tencent/mm/network/C2Java;->uploadLogNotify(I)V
 
-    .line 781
+    .line 812
     return-void
 .end method

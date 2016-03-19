@@ -2,9 +2,9 @@ package com.tencent.mm.pluginsdk.location;
 
 public abstract interface a
 {
-  public abstract void a(c paramc);
+  public abstract void a(b paramb);
   
-  public abstract void a(String paramString, c paramc);
+  public abstract void a(String paramString, b paramb);
 }
 
 /* Location:

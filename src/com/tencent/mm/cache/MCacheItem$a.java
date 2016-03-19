@@ -1,54 +1,54 @@
 package com.tencent.mm.cache;
 
 import android.os.Parcel;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
 
 class MCacheItem$a
 {
-  public static Map beM = new HashMap();
-  public static Map beN = new HashMap();
+  public static Map boY = new HashMap();
+  public static Map boZ = new HashMap();
   
   static
   {
     try
     {
-      beM.put(byte[].class, a.class.getMethod("keep_writeByteArray", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Short.TYPE, a.class.getMethod("keep_writeShort", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Short.class, a.class.getMethod("keep_writeShort", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Boolean.TYPE, a.class.getMethod("keep_writeBoolean", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Boolean.class, a.class.getMethod("keep_writeBoolean", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Integer.TYPE, a.class.getMethod("keep_writeInt", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Integer.class, a.class.getMethod("keep_writeInt", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Float.TYPE, a.class.getMethod("keep_writeFloat", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Float.class, a.class.getMethod("keep_writeFloat", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Double.TYPE, a.class.getMethod("keep_writeDouble", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Double.class, a.class.getMethod("keep_writeDouble", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Long.TYPE, a.class.getMethod("keep_writeLong", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(Long.class, a.class.getMethod("keep_writeLong", new Class[] { Parcel.class, Field.class, Object.class }));
-      beM.put(String.class, a.class.getMethod("keep_writeString", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(byte[].class, a.class.getMethod("keep_readByteArray", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Short.TYPE, a.class.getMethod("keep_readShort", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Short.class, a.class.getMethod("keep_readShort", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Boolean.TYPE, a.class.getMethod("keep_readBoolean", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Boolean.class, a.class.getMethod("keep_readBoolean", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Integer.TYPE, a.class.getMethod("keep_readInt", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Integer.class, a.class.getMethod("keep_readInt", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Float.TYPE, a.class.getMethod("keep_readFloat", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Float.class, a.class.getMethod("keep_readFloat", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Double.TYPE, a.class.getMethod("keep_readDouble", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Double.class, a.class.getMethod("keep_readDouble", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Long.TYPE, a.class.getMethod("keep_readLong", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(Long.class, a.class.getMethod("keep_readLong", new Class[] { Parcel.class, Field.class, Object.class }));
-      beN.put(String.class, a.class.getMethod("keep_readString", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(byte[].class, a.class.getMethod("keep_writeByteArray", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Short.TYPE, a.class.getMethod("keep_writeShort", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Short.class, a.class.getMethod("keep_writeShort", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Boolean.TYPE, a.class.getMethod("keep_writeBoolean", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Boolean.class, a.class.getMethod("keep_writeBoolean", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Integer.TYPE, a.class.getMethod("keep_writeInt", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Integer.class, a.class.getMethod("keep_writeInt", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Float.TYPE, a.class.getMethod("keep_writeFloat", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Float.class, a.class.getMethod("keep_writeFloat", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Double.TYPE, a.class.getMethod("keep_writeDouble", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Double.class, a.class.getMethod("keep_writeDouble", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Long.TYPE, a.class.getMethod("keep_writeLong", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(Long.class, a.class.getMethod("keep_writeLong", new Class[] { Parcel.class, Field.class, Object.class }));
+      boY.put(String.class, a.class.getMethod("keep_writeString", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(byte[].class, a.class.getMethod("keep_readByteArray", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Short.TYPE, a.class.getMethod("keep_readShort", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Short.class, a.class.getMethod("keep_readShort", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Boolean.TYPE, a.class.getMethod("keep_readBoolean", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Boolean.class, a.class.getMethod("keep_readBoolean", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Integer.TYPE, a.class.getMethod("keep_readInt", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Integer.class, a.class.getMethod("keep_readInt", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Float.TYPE, a.class.getMethod("keep_readFloat", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Float.class, a.class.getMethod("keep_readFloat", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Double.TYPE, a.class.getMethod("keep_readDouble", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Double.class, a.class.getMethod("keep_readDouble", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Long.TYPE, a.class.getMethod("keep_readLong", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(Long.class, a.class.getMethod("keep_readLong", new Class[] { Parcel.class, Field.class, Object.class }));
+      boZ.put(String.class, a.class.getMethod("keep_readString", new Class[] { Parcel.class, Field.class, Object.class }));
       return;
     }
     catch (Exception localException)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(localException) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(localException) });
     }
   }
   
@@ -66,7 +66,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -79,7 +79,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -92,7 +92,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -105,7 +105,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -118,7 +118,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -131,7 +131,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -144,7 +144,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -157,7 +157,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -175,7 +175,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -188,7 +188,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -201,7 +201,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -214,7 +214,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -227,7 +227,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -240,7 +240,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -253,7 +253,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
   
@@ -266,7 +266,7 @@ class MCacheItem$a
     }
     catch (Exception paramParcel)
     {
-      t.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { bn.a(paramParcel) });
+      u.e("!32@/B4Tb64lLpJX3+0uU1IhFvN5Y94KHYDk", "exception:%s", new Object[] { ay.b(paramParcel) });
     }
   }
 }

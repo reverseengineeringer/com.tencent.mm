@@ -1,52 +1,53 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.sdk.g.ae.a;
+import com.tencent.mm.d.b.r;
+import com.tencent.mm.sdk.h.c.a;
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public final class m
-  extends com.tencent.mm.d.b.m
+  extends r
 {
-  protected static ae.a aqp;
+  protected static c.a aot;
   
   static
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[6];
-    bbY = new String[7];
+    c.a locala = new c.a();
+    ceD = new Field[6];
+    blR = new String[7];
     StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "labelID";
-    ibX.put("labelID", "INTEGER PRIMARY KEY ");
+    blR[0] = "labelID";
+    jYx.put("labelID", "INTEGER PRIMARY KEY ");
     localStringBuilder.append(" labelID INTEGER PRIMARY KEY ");
     localStringBuilder.append(", ");
-    ibW = "labelID";
-    bbY[1] = "labelName";
-    ibX.put("labelName", "TEXT");
+    jYw = "labelID";
+    blR[1] = "labelName";
+    jYx.put("labelName", "TEXT");
     localStringBuilder.append(" labelName TEXT");
     localStringBuilder.append(", ");
-    bbY[2] = "labelPYFull";
-    ibX.put("labelPYFull", "TEXT");
+    blR[2] = "labelPYFull";
+    jYx.put("labelPYFull", "TEXT");
     localStringBuilder.append(" labelPYFull TEXT");
     localStringBuilder.append(", ");
-    bbY[3] = "labelPYShort";
-    ibX.put("labelPYShort", "TEXT");
+    blR[3] = "labelPYShort";
+    jYx.put("labelPYShort", "TEXT");
     localStringBuilder.append(" labelPYShort TEXT");
     localStringBuilder.append(", ");
-    bbY[4] = "createTime";
-    ibX.put("createTime", "LONG");
+    blR[4] = "createTime";
+    jYx.put("createTime", "LONG");
     localStringBuilder.append(" createTime LONG");
     localStringBuilder.append(", ");
-    bbY[5] = "isTemporary";
-    ibX.put("isTemporary", "INTEGER");
+    blR[5] = "isTemporary";
+    jYx.put("isTemporary", "INTEGER");
     localStringBuilder.append(" isTemporary INTEGER");
-    bbY[6] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    blR[6] = "rowid";
+    jYy = localStringBuilder.toString();
+    aot = locala;
   }
   
-  protected final ae.a lX()
+  protected final c.a ls()
   {
-    return aqp;
+    return aot;
   }
 }
 

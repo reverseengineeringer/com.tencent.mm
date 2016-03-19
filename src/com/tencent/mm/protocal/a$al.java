@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$al
-  extends a.c
+  extends a.e
 {
   public a$al()
   {
-    super("getWechatVerifyTicket", "getWechatVerifyTicket", 112, false);
+    super("geoLocation", "geo_location", 57, false);
   }
 }
 

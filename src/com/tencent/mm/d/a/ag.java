@@ -1,37 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.lf;
-import com.tencent.mm.protocal.b.lo;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ag
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a auX = new a();
-  public b auY = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public ag()
   {
-    id = "DoFavorite";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public lf auZ;
-    public lo ava;
-    public String avb;
-    public int avc = 0;
-    public String desc;
-    public String title;
-    public int type = 0;
-  }
-  
-  public static final class b
-  {
-    public int ret = 0;
+    id = "CheckLanguageChange";
+    jUI = arR;
   }
 }
 

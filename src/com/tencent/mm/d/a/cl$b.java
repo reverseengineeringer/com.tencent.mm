@@ -1,18 +1,8 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.lb;
-import com.tencent.mm.sdk.g.af;
-import java.util.List;
-
 public final class cl$b
 {
-  public List aye;
-  public String ayf;
-  public String ayg;
-  public lb ayh;
-  public af ayi;
-  public String path;
-  public int ret = -1;
+  public boolean auR;
 }
 
 /* Location:

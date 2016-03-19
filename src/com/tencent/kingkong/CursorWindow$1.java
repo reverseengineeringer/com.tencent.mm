@@ -3,15 +3,15 @@ package com.tencent.kingkong;
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
 
-class CursorWindow$1
+final class CursorWindow$1
   implements Parcelable.Creator
 {
-  public CursorWindow createFromParcel(Parcel paramParcel)
+  public final CursorWindow createFromParcel(Parcel paramParcel)
   {
     return new CursorWindow(paramParcel, null);
   }
   
-  public CursorWindow[] newArray(int paramInt)
+  public final CursorWindow[] newArray(int paramInt)
   {
     return new CursorWindow[paramInt];
   }

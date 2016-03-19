@@ -1,6 +1,6 @@
 package com.tencent.mm.modelvoice;
 
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import junit.framework.Assert;
@@ -8,21 +8,21 @@ import junit.framework.Assert;
 public final class l
   implements b
 {
-  private RandomAccessFile apQ = null;
-  private String apy = "";
+  private String anC = "";
+  private RandomAccessFile anU = null;
   
   public l(String paramString)
   {
-    apy = paramString;
+    anC = paramString;
   }
   
-  private boolean bb(String paramString)
+  private boolean bd(String paramString)
   {
-    if (apy.length() >= 0)
+    if (anC.length() >= 0)
     {
       bool = true;
       Assert.assertTrue(bool);
-      if (apQ != null) {
+      if (anU != null) {
         break label109;
       }
       bool = true;
@@ -37,16 +37,16 @@ public final class l
     for (boolean bool = true;; bool = false)
     {
       Assert.assertTrue(bool);
-      t.d("!44@/B4Tb64lLpJWCW5Yaa5SO/ng2USwsr0G1/mgjd4+wvk=", "Open file:" + apQ + " mode:" + paramString);
+      u.d("!44@/B4Tb64lLpKbU59mf71RZFzMaOEttCECeZZozT7o7i8=", "Open file:" + anU + " mode:" + paramString);
       try
       {
-        apQ = new RandomAccessFile(apy, paramString);
+        anU = new RandomAccessFile(anC, paramString);
         return true;
       }
       catch (Exception paramString)
       {
-        t.e("!44@/B4Tb64lLpJWCW5Yaa5SO/ng2USwsr0G1/mgjd4+wvk=", "ERR: OpenFile[" + apy + "] failed:[" + paramString.getMessage() + "]");
-        apQ = null;
+        u.e("!44@/B4Tb64lLpKbU59mf71RZFzMaOEttCECeZZozT7o7i8=", "ERR: OpenFile[" + anC + "] failed:[" + paramString.getMessage() + "]");
+        anU = null;
       }
       bool = false;
       break;
@@ -56,57 +56,57 @@ public final class l
     return false;
   }
   
-  public final j R(int paramInt1, int paramInt2)
+  public final g aa(int paramInt1, int paramInt2)
   {
-    j localj = new j();
+    g localg = new g();
     if ((paramInt1 < 0) || (paramInt2 <= 0))
     {
       ret = -3;
-      return localj;
+      return localg;
     }
-    if ((apQ == null) && (!bb("r")))
+    if ((anU == null) && (!bd("r")))
     {
       ret = -2;
-      return localj;
+      return localg;
     }
     buf = new byte[paramInt2];
     try
     {
-      long l = apQ.length();
-      apQ.seek(paramInt1);
-      int i = apQ.read(buf, 0, paramInt2);
-      t.d("!44@/B4Tb64lLpJWCW5Yaa5SO/ng2USwsr0G1/mgjd4+wvk=", "DBG: ReadFile[" + apy + "] readOffset:" + paramInt1 + " readRet:" + i + " fileNow:" + apQ.getFilePointer() + " fileSize:" + l);
+      long l = anU.length();
+      anU.seek(paramInt1);
+      int i = anU.read(buf, 0, paramInt2);
+      u.d("!44@/B4Tb64lLpKbU59mf71RZFzMaOEttCECeZZozT7o7i8=", "DBG: ReadFile[" + anC + "] readOffset:" + paramInt1 + " readRet:" + i + " fileNow:" + anU.getFilePointer() + " fileSize:" + l);
       paramInt2 = i;
       if (i < 0) {
         paramInt2 = 0;
       }
-      apR = paramInt2;
-      apM = (paramInt2 + paramInt1);
+      anV = paramInt2;
+      anQ = (paramInt2 + paramInt1);
       ret = 0;
-      return localj;
+      return localg;
     }
     catch (Exception localException)
     {
-      t.e("!44@/B4Tb64lLpJWCW5Yaa5SO/ng2USwsr0G1/mgjd4+wvk=", "ERR: ReadFile[" + apy + "] Offset:" + paramInt1 + "  failed:[" + localException.getMessage() + "] ");
-      lQ();
+      u.e("!44@/B4Tb64lLpKbU59mf71RZFzMaOEttCECeZZozT7o7i8=", "ERR: ReadFile[" + anC + "] Offset:" + paramInt1 + "  failed:[" + localException.getMessage() + "] ");
+      ll();
       ret = -1;
     }
-    return localj;
+    return localg;
   }
   
   public final int getFormat()
   {
-    return 4;
+    return 1;
   }
   
-  public final void lQ()
+  public final void ll()
   {
-    if (apQ != null) {}
+    if (anU != null) {}
     try
     {
-      apQ.close();
-      apQ = null;
-      t.d("!44@/B4Tb64lLpJWCW5Yaa5SO/ng2USwsr0G1/mgjd4+wvk=", "Close :" + apy);
+      anU.close();
+      anU = null;
+      u.d("!44@/B4Tb64lLpKbU59mf71RZFzMaOEttCECeZZozT7o7i8=", "Close :" + anC);
       return;
     }
     catch (IOException localIOException) {}
@@ -119,7 +119,7 @@ public final class l
     for (boolean bool1 = true;; bool1 = false)
     {
       Assert.assertTrue(bool1);
-      if ((apQ != null) || (bb("rw"))) {
+      if ((anU != null) || (bd("rw"))) {
         break;
       }
       return -1;
@@ -128,9 +128,9 @@ public final class l
     {
       try
       {
-        apQ.seek(paramInt2);
-        apQ.write(paramArrayOfByte, 0, paramInt1);
-        long l = apQ.getFilePointer();
+        anU.seek(paramInt2);
+        anU.write(paramArrayOfByte, 0, paramInt1);
+        long l = anU.getFilePointer();
         int i = (int)l;
         paramInt1 = paramInt2 + paramInt1;
         if (i == paramInt1)
@@ -147,8 +147,8 @@ public final class l
       }
       catch (Exception paramArrayOfByte)
       {
-        t.e("!44@/B4Tb64lLpJWCW5Yaa5SO/ng2USwsr0G1/mgjd4+wvk=", "ERR: WriteFile[" + apy + "] Offset:" + paramInt2 + " failed:[" + paramArrayOfByte.getMessage() + "]");
-        lQ();
+        u.e("!44@/B4Tb64lLpKbU59mf71RZFzMaOEttCECeZZozT7o7i8=", "ERR: WriteFile[" + anC + "] Offset:" + paramInt2 + " failed:[" + paramArrayOfByte.getMessage() + "]");
+        ll();
         return -3;
       }
       bool1 = false;

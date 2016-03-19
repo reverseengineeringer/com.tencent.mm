@@ -1,153 +1,82 @@
 package com.tencent.mm.ui.chatting;
 
-import android.app.ProgressDialog;
-import android.support.v4.app.FragmentActivity;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Toast;
-import com.tencent.mm.a.n;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.m.a.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.br;
-import com.tencent.mm.pluginsdk.model.app.ay;
-import com.tencent.mm.pluginsdk.model.app.i;
-import com.tencent.mm.pluginsdk.model.app.y;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.ui.base.h;
-import com.tencent.mm.ui.base.h.c;
-import com.tencent.mm.ui.dt.a;
+import android.content.Context;
+import com.tencent.mm.d.a.jh;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.sdk.c.a;
+import com.tencent.mm.sdk.platformtools.am;
+import com.tencent.mm.sdk.platformtools.am.a;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.base.g;
+import com.tencent.mm.ui.base.p;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Set;
 
 public final class t
-  implements View.OnClickListener, com.tencent.mm.pluginsdk.model.app.u, com.tencent.mm.q.d
 {
-  private ChattingUI.a apj;
-  private ProgressDialog bXB;
-  
-  public t(ChattingUI.a parama)
+  public static void a(Context paramContext, Set paramSet, dl paramdl)
   {
-    apj = parama;
+    if (paramContext == null)
+    {
+      u.w("!44@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXeAKxqz/PXGE=", "do delete msg fail, context is null");
+      return;
+    }
+    if ((paramSet == null) || (paramSet.isEmpty()))
+    {
+      u.w("!44@/B4Tb64lLpKwUcOR+EdWcuVetlyqrLmXeAKxqz/PXGE=", "do delete msg fail, select ids is empty");
+      return;
+    }
+    paramContext.getString(2131430877);
+    paramContext = g.a(paramContext, paramContext.getString(2131427912), false, null);
+    cp.kWq.c(new a(paramSet, paramContext, paramdl));
+    h.fUJ.g(10811, new Object[] { Integer.valueOf(4), Integer.valueOf(paramSet.size()) });
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, y paramy)
+  private static final class a
+    implements am.a
   {
-    com.tencent.mm.sdk.platformtools.t.d("!44@/B4Tb64lLpIspjrGglFY27cir3zuhRM08q/5rhpDM1Q=", "appsettings errType = " + paramInt1 + ", errCode = " + paramInt2);
-    if ((bXB != null) && (bXB.isShowing()))
+    private Set kSe;
+    private p kSf;
+    private dl kSg;
+    
+    public a(Set paramSet, p paramp, dl paramdl)
     {
-      bXB.dismiss();
-      bXB = null;
+      kSe = paramSet;
+      kSf = paramp;
+      kSg = paramdl;
     }
-    ay.Uw().b(2, this);
-    if ((paramInt1 == 0) && (paramInt2 == 0)) {
-      h.aN(apj.G(), apj.getString(a.n.game_refuse_message_ok));
-    }
-    while (dt.a.b(apj.G(), paramInt1, paramInt2, paramString, 4)) {
-      return;
-    }
-    Toast.makeText(apj.G(), apj.getString(a.n.game_liset_set_refuse_msg_failed, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
-  {
-    if ((bXB != null) && (bXB.isShowing()))
+    
+    public final boolean vd()
     {
-      bXB.dismiss();
-      bXB = null;
-    }
-    ax.tm().b(1030, this);
-    if ((paramInt1 == 0) && (paramInt2 == 0))
-    {
-      h.aN(apj.G(), apj.getString(a.n.game_refuse_message_ok));
-      return;
-    }
-    Toast.makeText(apj.G(), apj.getString(a.n.template_msg_refuse_success, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
-  }
-  
-  public final void onClick(View paramView)
-  {
-    boolean bool = true;
-    int i = 0;
-    if (paramView.getTag() == null)
-    {
-      com.tencent.mm.sdk.platformtools.t.e("!44@/B4Tb64lLpIspjrGglFY27cir3zuhRM08q/5rhpDM1Q=", "onClick tag is null");
-      return;
-    }
-    Object localObject1;
-    if ((paramView.getTag() instanceof nv))
-    {
-      localObject1 = (nv)paramView.getTag();
-      if (localObject1 == null)
+      Object localObject = kSe;
+      LinkedList localLinkedList = new LinkedList();
+      localObject = ((Set)localObject).iterator();
+      while (((Iterator)localObject).hasNext())
       {
-        com.tencent.mm.sdk.platformtools.t.e("!44@/B4Tb64lLpIspjrGglFY27cir3zuhRM08q/5rhpDM1Q=", "ItemDataTag is null");
-        return;
+        Long localLong = (Long)((Iterator)localObject).next();
+        localLinkedList.add(localLong);
+        jh localjh = new jh();
+        aFM.type = 3;
+        aFM.avg = localLong.longValue();
+        a.jUF.j(localjh);
       }
-      paramView = jca.appId;
-      if (bn.iW(paramView))
-      {
-        com.tencent.mm.sdk.platformtools.t.e("!44@/B4Tb64lLpIspjrGglFY27cir3zuhRM08q/5rhpDM1Q=", "appId is null or nil");
-        label74:
-        if (i == 0) {
-          break label243;
-        }
-        ay.Uw().a(2, this);
-        if (!apj.iTL) {
-          break label245;
-        }
-        i = 2;
-        label98:
-        paramView = apj.getTalkerUserName();
-        if (!com.tencent.mm.model.w.dh(paramView)) {
-          break label432;
-        }
-        paramView = br.eT(aDs.field_content);
-      }
+      ar.n(localLinkedList);
+      return true;
     }
-    label243:
-    label245:
-    label432:
-    for (;;)
+    
+    public final boolean ve()
     {
-      localObject1 = jca;
-      h.a(apj.G(), apj.getString(a.n.app_message_setting_confirm), apj.getString(a.n.app_message_setting_title), apj.getString(a.n.ac_app_message_btn_tip), apj.getString(a.n.refuse_app_message_btn_tip), new w(this, (a.a)localObject1, paramView, i), new x(this, (a.a)localObject1, paramView, i));
-      return;
-      if (i.V(paramView, false) == null)
+      if (kSf != null)
       {
-        com.tencent.mm.sdk.platformtools.t.e("!44@/B4Tb64lLpIspjrGglFY27cir3zuhRM08q/5rhpDM1Q=", "get null appinfo : appid = " + paramView);
-        break label74;
-      }
-      i = 1;
-      break label74;
-      break;
-      i = 1;
-      break label98;
-      if (!(paramView.getTag() instanceof pb)) {
-        break;
-      }
-      Object localObject2 = (pb)paramView.getTag();
-      if (localObject2 == null)
-      {
-        com.tencent.mm.sdk.platformtools.t.e("!44@/B4Tb64lLpIspjrGglFY27cir3zuhRM08q/5rhpDM1Q=", "TemplateItemDataTag is null");
-        return;
-      }
-      if ((localObject2 == null) || (bn.iW(jbF)) || (aDs == null))
-      {
-        if (localObject2 == null) {}
-        for (;;)
-        {
-          com.tencent.mm.sdk.platformtools.t.e("!44@/B4Tb64lLpIspjrGglFY27cir3zuhRM08q/5rhpDM1Q=", "wrong args, tag is null ? ", new Object[] { Boolean.valueOf(bool) });
-          return;
-          bool = false;
+        kSf.dismiss();
+        if (kSg != null) {
+          kSg.rd(dl.a.lcC);
         }
       }
-      paramView = apj.G().getString(a.n.template_msg_btn_expose);
-      localObject1 = apj.G().getString(a.n.template_msg_btn_refuse);
-      String str = apj.G().getString(a.n.app_cancel);
-      FragmentActivity localFragmentActivity = apj.G();
-      localObject2 = new u(this, (pb)localObject2);
-      h.a(localFragmentActivity, null, new String[] { paramView, localObject1, str }, null, true, (h.c)localObject2);
-      return;
+      return true;
     }
   }
 }

@@ -15,7 +15,9 @@
 
 
 # instance fields
-.field public aGZ:Ljava/util/LinkedList;
+.field public context:Landroid/content/Context;
+
+.field public intent:Landroid/content/Intent;
 
 
 # direct methods

@@ -1,30 +1,30 @@
 package com.tencent.mm.ui.chatting;
 
-import com.tencent.mm.d.a.fp;
-import com.tencent.mm.d.a.fp.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
+import com.tencent.mm.d.a.it;
+import com.tencent.mm.d.a.it.a;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.c.c;
 
 final class ChatFooterCustom$b
-  extends e
+  extends c
 {
   public ChatFooterCustom$b(ChatFooterCustom paramChatFooterCustom)
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(b paramb)
   {
-    paramd = (fp)paramd;
-    switch (aCp.aqq)
+    paramb = (it)paramb;
+    switch (aEN.aou)
     {
     }
     for (;;)
     {
       return false;
-      iSU.e(1003, paramd);
+      kRP.e(1003, paramb);
       continue;
-      iSU.e(1004, paramd);
+      kRP.e(1004, paramb);
     }
   }
 }

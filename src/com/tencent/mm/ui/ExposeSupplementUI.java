@@ -7,30 +7,35 @@ import android.text.Editable;
 import android.text.InputFilter;
 import android.text.Spanned;
 import android.text.TextWatcher;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
+import android.view.View.OnFocusChangeListener;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class ExposeSupplementUI
   extends MMActivity
 {
-  private Dialog fEJ = null;
-  private EditText imj = null;
-  private TextView imk = null;
-  private String iml = null;
+  private Dialog elG = null;
+  private EditText kkq = null;
+  private TextView kkr = null;
+  private String kks = null;
   
-  private static float A(CharSequence paramCharSequence)
+  private static int y(CharSequence paramCharSequence)
+  {
+    return 50 - Math.round(z(paramCharSequence));
+  }
+  
+  private static float z(CharSequence paramCharSequence)
   {
     float f = 0.0F;
     int i = 0;
     if (i < paramCharSequence.length())
     {
-      if (bn.f(paramCharSequence.charAt(i))) {}
+      if (ay.e(paramCharSequence.charAt(i))) {}
       for (f += 1.0F;; f += 0.5F)
       {
         i += 1;
@@ -40,41 +45,64 @@ public class ExposeSupplementUI
     return f;
   }
   
-  private static int z(CharSequence paramCharSequence)
+  protected final void Gb()
   {
-    return 50 - Math.round(A(paramCharSequence));
-  }
-  
-  protected final void DV()
-  {
-    a(new m(this));
-    iml = getIntent().getStringExtra("supplement");
-    imj = ((EditText)findViewById(a.i.supplement_edit_text));
-    imj.setFilters(new InputFilter[] { new b() });
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        finish();
+        return true;
+      }
+    });
+    kks = getIntent().getStringExtra("supplement");
+    kkq = ((EditText)findViewById(2131165599));
+    kkq.setFilters(new InputFilter[] { new b() });
     a locala = new a((byte)0);
-    imj.addTextChangedListener(locala);
-    if (!bn.iW(iml)) {
-      imj.setText(iml);
+    kkq.addTextChangedListener(locala);
+    if (!ay.kz(kks)) {
+      kkq.setText(kks);
     }
-    imk = ((TextView)findViewById(a.i.wordcount));
-    View localView = findViewById(a.i.supplement_container);
-    imj.setOnFocusChangeListener(new n(this, localView));
-    imk.setText(z(imj.getEditableText()));
-    a(2, getString(a.n.expose_confirm), new o(this), cn.b.iqR);
-    Xh();
-    locala.afterTextChanged(imj.getEditableText());
+    kkr = ((TextView)findViewById(2131165331));
+    final View localView = findViewById(2131165598);
+    kkq.setOnFocusChangeListener(new View.OnFocusChangeListener()
+    {
+      public final void onFocusChange(View paramAnonymousView, boolean paramAnonymousBoolean)
+      {
+        if (!paramAnonymousBoolean)
+        {
+          localView.setBackgroundResource(2130970418);
+          return;
+        }
+        localView.setBackgroundResource(2130970444);
+      }
+    });
+    kkr.setText(y(kkq.getEditableText()));
+    a(2, getString(2131429505), new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        paramAnonymousMenuItem = new Intent();
+        paramAnonymousMenuItem.putExtra("supplement", ExposeSupplementUI.a(ExposeSupplementUI.this).getEditableText().toString());
+        setResult(-1, paramAnonymousMenuItem);
+        finish();
+        return false;
+      }
+    }, j.b.kpJ);
+    age();
+    locala.afterTextChanged(kkq.getEditableText());
   }
   
   protected final int getLayoutId()
   {
-    return a.k.expose_supplement;
+    return 2131361905;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    nh(a.n.expose_supplement);
-    DV();
+    qb(2131429504);
+    Gb();
   }
   
   private final class a
@@ -94,10 +122,10 @@ public class ExposeSupplementUI
       }
       if (ExposeSupplementUI.a(ExposeSupplementUI.this).getText().length() == 0)
       {
-        fe(false);
+        bC(false);
         return;
       }
-      fe(true);
+      bC(true);
     }
     
     public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
@@ -108,18 +136,18 @@ public class ExposeSupplementUI
   private final class b
     implements InputFilter
   {
-    private int rp = 50;
+    private int qs = 50;
     
     public b() {}
     
     public final CharSequence filter(CharSequence paramCharSequence, int paramInt1, int paramInt2, Spanned paramSpanned, int paramInt3, int paramInt4)
     {
-      t.d("!44@/B4Tb64lLpLtCwxbDnWL8eYXXy6IqmvtU/Fp3lqpqos=", paramCharSequence + " start:" + paramInt1 + " end:" + paramInt2 + " " + paramSpanned + " dstart:" + paramInt3 + " dend:" + paramInt4);
-      float f = ExposeSupplementUI.B(paramSpanned);
-      paramInt3 = rp - Math.round(f) - (paramInt4 - paramInt3);
+      u.d("!44@/B4Tb64lLpLtCwxbDnWL8eYXXy6IqmvtU/Fp3lqpqos=", paramCharSequence + " start:" + paramInt1 + " end:" + paramInt2 + " " + paramSpanned + " dstart:" + paramInt3 + " dend:" + paramInt4);
+      float f = ExposeSupplementUI.A(paramSpanned);
+      paramInt3 = qs - Math.round(f) - (paramInt4 - paramInt3);
       if (paramInt3 <= 0)
       {
-        if ((Float.compare(f, (float)(rp - 0.5D)) == 0) && (paramCharSequence.length() > 0) && (!bn.f(paramCharSequence.charAt(0)))) {
+        if ((Float.compare(f, (float)(qs - 0.5D)) == 0) && (paramCharSequence.length() > 0) && (!ay.e(paramCharSequence.charAt(0)))) {
           return paramCharSequence.subSequence(0, 1);
         }
         return "";

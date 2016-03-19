@@ -1,86 +1,58 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.d.a.ae;
-import com.tencent.mm.platformtools.w;
-import com.tencent.mm.protocal.b.y;
-import com.tencent.mm.q.c;
-import com.tencent.mm.q.c.a;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
-import java.io.ByteArrayInputStream;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
+import android.content.Context;
 
-public final class z
-  implements c
+public abstract interface z
 {
-  public final c.a a(y paramy)
+  public static final class a
   {
-    if ((paramy == null) || (hiR == null))
+    public static z.c bAs;
+    public static z.e bAt;
+    public static z.d bAu;
+    public static z.b bAv;
+    
+    public static z.c ta()
     {
-      t.f("!56@/B4Tb64lLpLeGMTAbOABqUEIzYa3QSlUEXQmssP5LBIYWeWcrCVOVQ==", "[oneliang]DeletePackageMsgExtension failed, invalid cmdAM");
-      return null;
-    }
-    t.i("!56@/B4Tb64lLpLeGMTAbOABqUEIzYa3QSlUEXQmssP5LBIYWeWcrCVOVQ==", "[oneliang]DeletePackageMsgExtension start");
-    paramy = w.a(hiR);
-    Object localObject = DocumentBuilderFactory.newInstance();
-    for (;;)
-    {
-      int i;
-      try
-      {
-        paramy = ((DocumentBuilderFactory)localObject).newDocumentBuilder().parse(new InputSource(new ByteArrayInputStream(paramy.getBytes("utf-8"))));
-        paramy.normalize();
-        paramy = paramy.getDocumentElement().getElementsByTagName("deletepackage");
-        if ((paramy != null) && (paramy.getLength() == 1))
-        {
-          paramy = paramy.item(0).getChildNodes();
-          int j = paramy.getLength();
-          i = 0;
-          if (i < j)
-          {
-            localObject = paramy.item(i);
-            if ((localObject == null) || (((Node)localObject).getNodeName() == null) || (!((Node)localObject).getNodeName().equals("pack"))) {
-              break label272;
-            }
-            localObject = ((Node)localObject).getAttributes();
-            if (localObject == null) {
-              break label272;
-            }
-            localObject = ((NamedNodeMap)localObject).getNamedItem("type");
-            if (localObject == null) {
-              break label272;
-            }
-            int k = Integer.parseInt(((Node)localObject).getNodeValue());
-            localObject = new ae();
-            auV.auW = k;
-            a.hXQ.g((d)localObject);
-            break label272;
-          }
-        }
-        t.i("!56@/B4Tb64lLpLeGMTAbOABqUEIzYa3QSlUEXQmssP5LBIYWeWcrCVOVQ==", "[oneliang]DeletePackageMsgExtension end");
-        return null;
-      }
-      catch (Exception paramy)
-      {
-        t.e("!56@/B4Tb64lLpLeGMTAbOABqUEIzYa3QSlUEXQmssP5LBIYWeWcrCVOVQ==", "exception:%s", new Object[] { bn.a(paramy) });
-        return null;
-      }
-      label272:
-      i += 1;
+      return bAs;
     }
   }
   
-  public final void d(ar paramar) {}
+  public static abstract interface b
+  {
+    public abstract String l(Context paramContext, String paramString);
+  }
+  
+  public static abstract interface c
+  {
+    public abstract void G(String paramString1, String paramString2);
+    
+    public abstract void a(String paramString1, String paramString2, a parama);
+    
+    public abstract void eZ(String paramString);
+    
+    public static abstract interface a
+    {
+      public abstract void f(String paramString, boolean paramBoolean);
+    }
+  }
+  
+  public static abstract interface d
+  {
+    public abstract String cA(int paramInt);
+    
+    public abstract boolean cB(int paramInt);
+    
+    public abstract String cz(int paramInt);
+    
+    public abstract String p(int paramInt, boolean paramBoolean);
+    
+    public abstract void tb();
+  }
+  
+  public static abstract interface e
+  {
+    public abstract void K(int paramInt1, int paramInt2);
+  }
 }
 
 /* Location:

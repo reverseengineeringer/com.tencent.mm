@@ -1,23 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class fe
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aBG = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azW = new a();
   
   public fe()
   {
-    id = "OpenChattingUI";
-    hXT = atO;
+    id = "GetEmojiIsUseUnicode";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aqX;
+    public int auw = 0;
   }
 }
 

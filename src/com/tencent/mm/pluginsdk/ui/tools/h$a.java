@@ -1,44 +1,22 @@
 package com.tencent.mm.pluginsdk.ui.tools;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import android.text.Editable;
+import android.text.TextWatcher;
+import com.tencent.mm.ui.widget.MMEditText.b;
 
-final class h$a
+public final class h$a
+  implements TextWatcher
 {
-  List fQy = new ArrayList();
+  public MMEditText.b iSM = null;
   
-  final String aCN()
-  {
-    if ((fQy == null) || (fQy.size() == 0)) {
-      return "";
-    }
-    StringBuffer localStringBuffer = new StringBuffer();
-    Iterator localIterator = fQy.iterator();
-    while (localIterator.hasNext())
-    {
-      localStringBuffer.append((String)localIterator.next());
-      localStringBuffer.append(";");
-    }
-    return localStringBuffer.toString();
-  }
+  public final void afterTextChanged(Editable paramEditable) {}
   
-  final void pi(String paramString)
+  public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}
+  
+  public final void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    fQy = new ArrayList();
-    if ((paramString == null) || (paramString.length() == 0)) {}
-    for (;;)
-    {
-      return;
-      paramString = paramString.split(";");
-      int j = paramString.length;
-      int i = 0;
-      while (i < j)
-      {
-        Object localObject = paramString[i];
-        fQy.add(localObject);
-        i += 1;
-      }
+    if (iSM != null) {
+      iSM.aqD();
     }
   }
 }

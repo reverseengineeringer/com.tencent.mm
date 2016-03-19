@@ -27,9 +27,10 @@
     .locals 0
 
     .prologue
-    .line 192
+    .line 195
     iput-object p1, p0, Lcom/tencent/kingkong/MatrixCursor$RowBuilder;->this$0:Lcom/tencent/kingkong/MatrixCursor;
 
+    .line 192
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 193
@@ -38,7 +39,6 @@
     .line 194
     iput p3, p0, Lcom/tencent/kingkong/MatrixCursor$RowBuilder;->endIndex:I
 
-    .line 195
     return-void
 .end method
 

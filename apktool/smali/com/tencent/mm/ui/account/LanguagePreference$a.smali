@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field itK:Ljava/lang/String;
+.field ksC:Ljava/lang/String;
 
-.field private itL:Ljava/lang/String;
+.field private ksD:Ljava/lang/String;
 
-.field public itM:Ljava/lang/String;
+.field public ksE:Ljava/lang/String;
 
-.field public itN:Z
+.field public ksF:Z
 
 
 # direct methods
@@ -33,16 +33,16 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 26
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/LanguagePreference$a;->itK:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/LanguagePreference$a;->ksC:Ljava/lang/String;
 
     .line 27
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/LanguagePreference$a;->itL:Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/LanguagePreference$a;->ksD:Ljava/lang/String;
 
     .line 28
-    iput-object p3, p0, Lcom/tencent/mm/ui/account/LanguagePreference$a;->itM:Ljava/lang/String;
+    iput-object p3, p0, Lcom/tencent/mm/ui/account/LanguagePreference$a;->ksE:Ljava/lang/String;
 
     .line 29
-    iput-boolean p4, p0, Lcom/tencent/mm/ui/account/LanguagePreference$a;->itN:Z
+    iput-boolean p4, p0, Lcom/tencent/mm/ui/account/LanguagePreference$a;->ksF:Z
 
     .line 30
     return-void

@@ -1,21 +1,181 @@
 package com.tencent.mm.pluginsdk.ui.d;
 
-import java.util.regex.Pattern;
+import android.os.Looper;
+import android.text.Layout;
+import android.text.Spannable;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.View.OnTouchListener;
+import android.view.ViewConfiguration;
+import android.widget.TextView;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class h
+  implements View.OnTouchListener
 {
-  public static final class a
+  private static int iPY = ;
+  private static int iPZ;
+  private GestureDetector dpl = null;
+  public String gZd;
+  private TextView gZt = null;
+  private i iPU = null;
+  private boolean iPV = false;
+  private TextView iPW;
+  private boolean iPX = false;
+  private aa iQa = new aa(Looper.getMainLooper());
+  private b iQb = new b((byte)0);
+  private a iQc = new a();
+  
+  static
   {
-    public static final Pattern hbb = Pattern.compile("<a.+?href\\s*=\\s*[\"|']\\s*(.+?)\\s*[\"|']\\s*>(.+?)</a>");
-    public static final Pattern hbc = Pattern.compile("<_wc_custom_link_.+?color\\s*=\\s*[\"|']\\s*(.+?)\\s*[\"|']\\s*href\\s*=\\s*[\"|']\\s*(.+?)\\s*[\"|']\\s*>(.+?)</_wc_custom_link_>");
-    public static final Pattern hbd = Pattern.compile("<img.+?src=\"(.+?).png\"/>\\s*");
-    public static final Pattern hbe = Pattern.compile("weixin://\\S+");
-    public static final Pattern hbf = Pattern.compile("((?:(http|https|Http|Https):\\/\\/(?:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,64}(?:\\:(?:[a-zA-Z0-9\\$\\-\\_\\.\\+\\!\\*\\'\\(\\)\\,\\;\\?\\&\\=]|(?:\\%[a-fA-F0-9]{2})){1,25})?\\@)?)?((?:(?:[a-zA-Z0-9][a-zA-Z0-9\\-\\_]{0,64}\\.)+(?:(?:aero|arpa|asia|a[cdefgilmnoqrstuwxz])|(?:biz|b[abdefghijmnorstvwyz])|(?:cat|com|coop|c[acdfghiklmnoruvxyz])|d[ejkmoz]|(?:edu|e[cegrstu])|f[ijkmor]|(?:gov|g[abdefghilmnpqrstuwy])|h[kmnrtu]|(?:info|int|i[delmnoqrst])|(?:jobs|j[emop])|k[eghimnrwyz]|l[abcikrstuvy]|(?:mil|mobi|museum|m[acdeghklmnopqrstuvwxyz])|(?:name|net|n[acefgilopruz])|(?:org|om)|(?:pro|p[aefghklmnrstwy])|qa|r[eouw]|s[abcdeghijklmnortuvyz]|(?:tel|travel|t[cdfghjklmnoprtvwz])|u[agkmsyz]|v[aceginu]|w[fs]|y[etu]|z[amw]))|(?:(?:25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9])\\.(?:25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(?:25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[1-9]|0)\\.(?:25[0-5]|2[0-4][0-9]|[0-1][0-9]{2}|[1-9][0-9]|[0-9])))(?:\\:\\d{1,5})?)(\\/(?:(?:[a-zA-Z0-9\\;\\/\\?\\:\\@\\&\\=\\#\\~%\\-\\.\\+\\!\\*\\'\\(\\)\\,\\_])|(?:\\%[a-fA-F0-9]{2}))*)?");
-    public static final Pattern hbg = Pattern.compile("[a-zA-Z0-9][\\w\\.-]*[a-zA-Z0-9][@#][a-zA-Z0-9][\\w\\.-]*[a-zA-Z0-9] *\\. *[a-zA-Z][a-zA-Z\\.]*[a-zA-Z]");
-    public static final Pattern hbh = Pattern.compile("\\+?(\\d{2,8}([- ]?\\d{3,8}){2,6}|\\d{5,20})");
-    public static final Pattern hbi = Pattern.compile("weixin://wxpay/\\S+");
-    public static final Pattern hbj = Pattern.compile("weixin://dl/\\w+");
-    public static final Pattern hbk = Pattern.compile("weixin://dl/business(\\/(?:(?:[a-zA-Z0-9\\;\\/\\?\\:\\@\\&\\=\\#\\~%\\-\\.\\+\\!\\*\\'\\(\\)\\,\\_])|(?:\\%[a-fA-F0-9]{2}))*)?");
+    int i = ViewConfiguration.getLongPressTimeout();
+    iPZ = i;
+    if (i > iPY * 2) {
+      iPZ -= iPY;
+    }
+    u.d("!44@/B4Tb64lLpJuU9xFppdi4JAUZb9P6SeKDzd5aaDiunc=", "long press timeout:%d", new Object[] { Integer.valueOf(iPZ) });
+  }
+  
+  private void adj()
+  {
+    if (iPU != null)
+    {
+      iPU.iQe = false;
+      iPU.aOI();
+      gZt.invalidate();
+      gZt = null;
+      iPU = null;
+    }
+  }
+  
+  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  {
+    if (!(paramView instanceof TextView)) {
+      return false;
+    }
+    paramView = (TextView)paramView;
+    iPW = paramView;
+    Object localObject = paramView.getText();
+    Layout localLayout = paramView.getLayout();
+    paramMotionEvent = MotionEvent.obtain(paramMotionEvent);
+    int i;
+    int j;
+    if (((localObject instanceof Spannable)) && (localLayout != null))
+    {
+      localObject = (Spannable)localObject;
+      i = paramMotionEvent.getAction();
+      paramView.invalidate();
+      if ((i == 1) || (i == 0) || (i == 2) || (i == 3))
+      {
+        i = (int)paramMotionEvent.getX();
+        j = (int)paramMotionEvent.getY();
+        int k = paramView.getTotalPaddingLeft();
+        int m = paramView.getTotalPaddingTop();
+        int n = paramView.getScrollX();
+        int i1 = paramView.getScrollY();
+        localLayout = paramView.getLayout();
+        j = localLayout.getOffsetForHorizontal(localLayout.getLineForVertical(j - m + i1), i - k + n) + 1;
+        i = paramMotionEvent.getAction();
+        localObject = (i[])((Spannable)localObject).getSpans(j, j, i.class);
+        j = localObject.length - 1;
+        if (localObject.length == 0) {
+          break label314;
+        }
+        if (i != 1) {
+          break label331;
+        }
+        iQa.removeCallbacks(iQb);
+        iQa.removeCallbacks(iQc);
+        if (!iPX) {
+          break label250;
+        }
+        adj();
+        iPX = false;
+        paramView.setClickable(iPV);
+      }
+    }
+    paramMotionEvent.recycle();
+    return false;
+    label250:
+    iPX = false;
+    if (iPU != null)
+    {
+      localObject = iPU;
+      gZd = gZd;
+      if (iQg != null) {
+        iQg.gZd = gZd;
+      }
+      iPU.onClick(paramView);
+      label306:
+      paramView.setClickable(iPV);
+    }
+    for (;;)
+    {
+      label314:
+      adj();
+      break;
+      u.e("!44@/B4Tb64lLpJuU9xFppdi4JAUZb9P6SeKDzd5aaDiunc=", "ACTION_UP error, lastClickSpan is null");
+      break label306;
+      label331:
+      if ((i == 0) || (i == 2))
+      {
+        if ((i == 0) && (iPZ > 0)) {
+          iQa.postDelayed(iQc, iPZ);
+        }
+        if (i == 0) {
+          iPV = paramView.isClickable();
+        }
+        adj();
+        iPU = localObject[j];
+        gZt = paramView;
+        localObject[j].aOI();
+        iQe = true;
+        fxe = true;
+        paramView.invalidate();
+        paramView.setClickable(true);
+        if (!iPX) {
+          break;
+        }
+        iQe = false;
+        fxe = false;
+        paramView.setClickable(iPV);
+        break;
+      }
+      if (i != 3) {
+        break;
+      }
+      iQa.removeCallbacks(iQb);
+      iQa.removeCallbacks(iQc);
+      paramView.setClickable(iPV);
+    }
+  }
+  
+  final class a
+    implements Runnable
+  {
+    a() {}
+    
+    public final void run()
+    {
+      if ((h.a(h.this) != null) && (h.a(h.this).isPressed()))
+      {
+        u.d("!44@/B4Tb64lLpJuU9xFppdi4JAUZb9P6SeKDzd5aaDiunc=", "long pressed timeout");
+        h.b(h.this);
+      }
+    }
+  }
+  
+  private final class b
+    implements Runnable
+  {
+    private b() {}
+    
+    public final void run()
+    {
+      h.a(h.this, h.aa());
+    }
   }
 }
 

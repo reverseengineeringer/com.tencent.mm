@@ -4,7 +4,7 @@ public abstract interface MobileVerifyUI$b
 {
   public abstract void a(MobileVerifyUI paramMobileVerifyUI);
   
-  public abstract boolean nw(int paramInt);
+  public abstract boolean qq(int paramInt);
   
   public abstract void start();
   

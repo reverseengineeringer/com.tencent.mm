@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Process;
 import android.os.SystemClock;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.TreeSet;
@@ -16,49 +16,49 @@ import java.util.TreeSet;
 public class Alarm
   extends BroadcastReceiver
 {
-  private static WakerLock blD = null;
-  private static Alarm blE = null;
-  private static TreeSet blF = new TreeSet(new a((byte)0));
+  private static WakerLock bwi = null;
+  private static Alarm bwj = null;
+  private static TreeSet bwk = new TreeSet(new a((byte)0));
   
   public static boolean a(long paramLong, int paramInt, Context paramContext)
   {
     long l = SystemClock.elapsedRealtime();
     if (paramInt < 0)
     {
-      t.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "id:%d, after:%d", new Object[] { Long.valueOf(paramLong), Integer.valueOf(paramInt) });
+      u.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "id:%d, after:%d", new Object[] { Long.valueOf(paramLong), Integer.valueOf(paramInt) });
       return false;
     }
     if (paramContext == null)
     {
-      t.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "null==context, id:%d, after:%d", new Object[] { Long.valueOf(paramLong), Integer.valueOf(paramInt) });
+      u.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "null==context, id:%d, after:%d", new Object[] { Long.valueOf(paramLong), Integer.valueOf(paramInt) });
       return false;
     }
     for (;;)
     {
-      synchronized (blF)
+      synchronized (bwk)
       {
-        if (blD == null)
+        if (bwi == null)
         {
-          blD = new WakerLock(paramContext);
-          t.i("!24@/B4Tb64lLpJgcLwqaN0ERg==", "start new wakerlock");
+          bwi = new WakerLock(paramContext);
+          u.i("!24@/B4Tb64lLpJgcLwqaN0ERg==", "start new wakerlock");
         }
-        if (blE == null)
+        if (bwj == null)
         {
-          blE = new Alarm();
-          paramContext.registerReceiver(blE, new IntentFilter("ALARM_ACTION(" + String.valueOf(Process.myPid()) + ")"));
+          bwj = new Alarm();
+          paramContext.registerReceiver(bwj, new IntentFilter("ALARM_ACTION(" + String.valueOf(Process.myPid()) + ")"));
         }
-        Object localObject = blF.iterator();
+        Object localObject = bwk.iterator();
         if (((Iterator)localObject).hasNext())
         {
-          if (((Long)((Object[])localObject.next())[(b.blG - 1)]).longValue() != paramLong) {
+          if (((Long)((Object[])localObject.next())[(b.bwl - 1)]).longValue() != paramLong) {
             continue;
           }
-          t.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "id exist=%d", new Object[] { Long.valueOf(paramLong) });
+          u.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "id exist=%d", new Object[] { Long.valueOf(paramLong) });
           return false;
           localObject = (AlarmManager)paramContext.getSystemService("alarm");
           if (localObject == null)
           {
-            t.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "am == null");
+            u.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "am == null");
             paramContext = null;
             if (paramContext == null) {
               return false;
@@ -74,7 +74,7 @@ public class Alarm
             ((AlarmManager)localObject).set(2, l, paramContext);
             continue;
           }
-          blF.add(new Object[] { Long.valueOf(paramLong), Long.valueOf(l), paramContext });
+          bwk.add(new Object[] { Long.valueOf(paramLong), Long.valueOf(l), paramContext });
           return true;
         }
       }
@@ -88,30 +88,30 @@ public class Alarm
   {
     if (paramContext == null)
     {
-      t.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "context==null");
+      u.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "context==null");
       return false;
     }
-    synchronized (blF)
+    synchronized (bwk)
     {
-      if (blD == null)
+      if (bwi == null)
       {
-        blD = new WakerLock(paramContext);
-        t.i("!24@/B4Tb64lLpJgcLwqaN0ERg==", "stop new wakerlock");
+        bwi = new WakerLock(paramContext);
+        u.i("!24@/B4Tb64lLpJgcLwqaN0ERg==", "stop new wakerlock");
       }
-      if (blE == null)
+      if (bwj == null)
       {
-        blE = new Alarm();
+        bwj = new Alarm();
         localObject = new IntentFilter();
-        paramContext.registerReceiver(blE, (IntentFilter)localObject);
-        t.i("!24@/B4Tb64lLpJgcLwqaN0ERg==", "stop new Alarm");
+        paramContext.registerReceiver(bwj, (IntentFilter)localObject);
+        u.i("!24@/B4Tb64lLpJgcLwqaN0ERg==", "stop new Alarm");
       }
-      Object localObject = blF.iterator();
+      Object localObject = bwk.iterator();
       while (((Iterator)localObject).hasNext())
       {
         Object[] arrayOfObject = (Object[])((Iterator)localObject).next();
-        if (((Long)arrayOfObject[(b.blG - 1)]).longValue() == paramLong)
+        if (((Long)arrayOfObject[(b.bwl - 1)]).longValue() == paramLong)
         {
-          a(paramContext, (PendingIntent)arrayOfObject[(b.blI - 1)]);
+          a(paramContext, (PendingIntent)arrayOfObject[(b.bwn - 1)]);
           ((Iterator)localObject).remove();
           return true;
         }
@@ -125,12 +125,12 @@ public class Alarm
     paramContext = (AlarmManager)paramContext.getSystemService("alarm");
     if (paramContext == null)
     {
-      t.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "am == null");
+      u.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "am == null");
       return false;
     }
     if (paramPendingIntent == null)
     {
-      t.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "pendingIntent == null");
+      u.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "pendingIntent == null");
       return false;
     }
     paramContext.cancel(paramPendingIntent);
@@ -138,20 +138,20 @@ public class Alarm
     return true;
   }
   
-  public static void ax(Context paramContext)
+  public static void aH(Context paramContext)
   {
-    synchronized (blF)
+    synchronized (bwk)
     {
-      Iterator localIterator = blF.iterator();
+      Iterator localIterator = bwk.iterator();
       if (localIterator.hasNext()) {
-        a(paramContext, (PendingIntent)((Object[])localIterator.next())[(b.blI - 1)]);
+        a(paramContext, (PendingIntent)((Object[])localIterator.next())[(b.bwn - 1)]);
       }
     }
-    blF.clear();
-    if (blE != null)
+    bwk.clear();
+    if (bwj != null)
     {
-      paramContext.unregisterReceiver(blE);
-      blE = null;
+      paramContext.unregisterReceiver(bwj);
+      bwj = null;
     }
   }
   
@@ -169,30 +169,30 @@ public class Alarm
     } while ((0L == paramContext.longValue()) || (localInteger.intValue() == 0));
     if (localInteger.intValue() != Process.myPid())
     {
-      t.w("!24@/B4Tb64lLpJgcLwqaN0ERg==", "onReceive id:%d, pid:%d, mypid:%d", new Object[] { paramContext, localInteger, Integer.valueOf(Process.myPid()) });
+      u.w("!24@/B4Tb64lLpJgcLwqaN0ERg==", "onReceive id:%d, pid:%d, mypid:%d", new Object[] { paramContext, localInteger, Integer.valueOf(Process.myPid()) });
       return;
     }
     for (;;)
     {
-      synchronized (blF)
+      synchronized (bwk)
       {
-        Iterator localIterator = blF.iterator();
+        Iterator localIterator = bwk.iterator();
         if (localIterator.hasNext())
         {
           Object[] arrayOfObject = (Object[])localIterator.next();
-          Long localLong = (Long)arrayOfObject[(b.blG - 1)];
-          t.i("!24@/B4Tb64lLpJgcLwqaN0ERg==", "onReceive id=%d, curId=%d", new Object[] { paramContext, localLong });
+          Long localLong = (Long)arrayOfObject[(b.bwl - 1)];
+          u.i("!24@/B4Tb64lLpJgcLwqaN0ERg==", "onReceive id=%d, curId=%d", new Object[] { paramContext, localLong });
           if (!localLong.equals(paramContext)) {
             continue;
           }
-          t.i("!24@/B4Tb64lLpJgcLwqaN0ERg==", "onReceive find alarm id:%d, pid:%d, delta miss time:%d", new Object[] { paramContext, localInteger, Long.valueOf(SystemClock.elapsedRealtime() - ((Long)arrayOfObject[(b.blH - 1)]).longValue()) });
+          u.i("!24@/B4Tb64lLpJgcLwqaN0ERg==", "onReceive find alarm id:%d, pid:%d, delta miss time:%d", new Object[] { paramContext, localInteger, Long.valueOf(SystemClock.elapsedRealtime() - ((Long)arrayOfObject[(b.bwm - 1)]).longValue()) });
           localIterator.remove();
           i = 1;
           if (i == 0) {
-            t.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "onReceive not found id:%d, pid:%d, alarm_waiting_set.size:%d", new Object[] { paramContext, localInteger, Integer.valueOf(blF.size()) });
+            u.e("!24@/B4Tb64lLpJgcLwqaN0ERg==", "onReceive not found id:%d, pid:%d, alarm_waiting_set.size:%d", new Object[] { paramContext, localInteger, Integer.valueOf(bwk.size()) });
           }
-          if (blD != null) {
-            blD.lock(200L);
+          if (bwi != null) {
+            bwi.lock(200L, "Alarm.onReceive");
           }
           if (i == 0) {
             break;

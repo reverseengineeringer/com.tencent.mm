@@ -2,10 +2,10 @@ package com.tencent.mm.ui.base;
 
 final class AnimatedExpandableListView$d
 {
-  boolean dqx = false;
-  boolean iCO = false;
-  int iCP;
-  int iCQ = -1;
+  boolean efE = false;
+  boolean kBQ = false;
+  int kBR;
+  int kBS = -1;
 }
 
 /* Location:

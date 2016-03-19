@@ -4,37 +4,37 @@ import android.database.Cursor;
 
 public final class c
 {
-  private static final String bNh;
-  int aqq = -2;
-  public int bME = 0;
-  public int bMF = 0;
-  public int bMG = 0;
-  public int bMH = 0;
-  public int bMI = 0;
-  public int bMJ = 0;
-  public int bMK = 0;
-  public int bML = 0;
-  public int bMM = 0;
-  public int bMN = 0;
-  public int bMO = 0;
-  public int bMP = 0;
-  public int bMQ = 0;
-  public int bMR = 0;
-  public int bMS = 0;
-  public int bMT = 0;
-  public int bMU = 0;
-  public int bMV = 0;
-  public int bMW = 0;
-  public int bMX = 0;
-  public int bMY = 0;
-  public int bMZ = 0;
-  public int bNa = 0;
-  public int bNb = 0;
-  public int bNc = 0;
-  public int bNd = 0;
-  public int bNe = 0;
-  public int bNf = 0;
-  public int bNg = 0;
+  private static final String cdM;
+  int aou = -2;
+  public int cdA = 0;
+  public int cdB = 0;
+  public int cdC = 0;
+  public int cdD = 0;
+  public int cdE = 0;
+  public int cdF = 0;
+  public int cdG = 0;
+  public int cdH = 0;
+  public int cdI = 0;
+  public int cdJ = 0;
+  public int cdK = 0;
+  public int cdL = 0;
+  public int cdj = 0;
+  public int cdk = 0;
+  public int cdl = 0;
+  public int cdm = 0;
+  public int cdn = 0;
+  public int cdo = 0;
+  public int cdp = 0;
+  public int cdq = 0;
+  public int cdr = 0;
+  public int cds = 0;
+  public int cdt = 0;
+  public int cdu = 0;
+  public int cdv = 0;
+  public int cdw = 0;
+  public int cdx = 0;
+  public int cdy = 0;
+  public int cdz = 0;
   public int id = 0;
   
   static
@@ -47,46 +47,46 @@ public final class c
     localStringBuilder.append("[image in=%d/%dB, out=%d/%dB]");
     localStringBuilder.append("[voice in=%d/%dB, out=%d/%dB]");
     localStringBuilder.append("[video in=%d/%dB, out=%d/%dB]");
-    bNh = localStringBuilder.toString();
+    cdM = localStringBuilder.toString();
   }
   
   public final void c(Cursor paramCursor)
   {
     id = paramCursor.getInt(0);
-    bME = paramCursor.getInt(1);
-    bMF = paramCursor.getInt(2);
-    bMG = paramCursor.getInt(3);
-    bMH = paramCursor.getInt(4);
-    bMI = paramCursor.getInt(5);
-    bMJ = paramCursor.getInt(6);
-    bMK = paramCursor.getInt(7);
-    bML = paramCursor.getInt(8);
-    bMM = paramCursor.getInt(9);
-    bMN = paramCursor.getInt(10);
-    bMO = paramCursor.getInt(11);
-    bMP = paramCursor.getInt(12);
-    bMQ = paramCursor.getInt(13);
-    bMR = paramCursor.getInt(14);
-    bMS = paramCursor.getInt(15);
-    bMT = paramCursor.getInt(16);
-    bMU = paramCursor.getInt(17);
-    bMV = paramCursor.getInt(18);
-    bMW = paramCursor.getInt(19);
-    bMX = paramCursor.getInt(20);
-    bMY = paramCursor.getInt(21);
-    bMZ = paramCursor.getInt(22);
-    bNa = paramCursor.getInt(23);
-    bNb = paramCursor.getInt(24);
-    bNc = paramCursor.getInt(25);
-    bNd = paramCursor.getInt(26);
-    bNe = paramCursor.getInt(27);
-    bNf = paramCursor.getInt(28);
-    bNg = paramCursor.getInt(29);
+    cdj = paramCursor.getInt(1);
+    cdk = paramCursor.getInt(2);
+    cdl = paramCursor.getInt(3);
+    cdm = paramCursor.getInt(4);
+    cdn = paramCursor.getInt(5);
+    cdo = paramCursor.getInt(6);
+    cdp = paramCursor.getInt(7);
+    cdq = paramCursor.getInt(8);
+    cdr = paramCursor.getInt(9);
+    cds = paramCursor.getInt(10);
+    cdt = paramCursor.getInt(11);
+    cdu = paramCursor.getInt(12);
+    cdv = paramCursor.getInt(13);
+    cdw = paramCursor.getInt(14);
+    cdx = paramCursor.getInt(15);
+    cdy = paramCursor.getInt(16);
+    cdz = paramCursor.getInt(17);
+    cdA = paramCursor.getInt(18);
+    cdB = paramCursor.getInt(19);
+    cdC = paramCursor.getInt(20);
+    cdD = paramCursor.getInt(21);
+    cdE = paramCursor.getInt(22);
+    cdF = paramCursor.getInt(23);
+    cdG = paramCursor.getInt(24);
+    cdH = paramCursor.getInt(25);
+    cdI = paramCursor.getInt(26);
+    cdJ = paramCursor.getInt(27);
+    cdK = paramCursor.getInt(28);
+    cdL = paramCursor.getInt(29);
   }
   
   public final String toString()
   {
-    return String.format(bNh, new Object[] { Integer.valueOf(bMN), Integer.valueOf(bNd), Integer.valueOf(bMP), Integer.valueOf(bMZ), Integer.valueOf(bNf), Integer.valueOf(bNb), Integer.valueOf(bMO), Integer.valueOf(bNe), Integer.valueOf(bMQ), Integer.valueOf(bNa), Integer.valueOf(bNg), Integer.valueOf(bNc), Integer.valueOf(bMF), Integer.valueOf(bMG), Integer.valueOf(bMR), Integer.valueOf(bMS), Integer.valueOf(bMH), Integer.valueOf(bMI), Integer.valueOf(bMT), Integer.valueOf(bMU), Integer.valueOf(bMJ), Integer.valueOf(bMK), Integer.valueOf(bMV), Integer.valueOf(bMW), Integer.valueOf(bML), Integer.valueOf(bMM), Integer.valueOf(bMX), Integer.valueOf(bMY) });
+    return String.format(cdM, new Object[] { Integer.valueOf(cds), Integer.valueOf(cdI), Integer.valueOf(cdu), Integer.valueOf(cdE), Integer.valueOf(cdK), Integer.valueOf(cdG), Integer.valueOf(cdt), Integer.valueOf(cdJ), Integer.valueOf(cdv), Integer.valueOf(cdF), Integer.valueOf(cdL), Integer.valueOf(cdH), Integer.valueOf(cdk), Integer.valueOf(cdl), Integer.valueOf(cdw), Integer.valueOf(cdx), Integer.valueOf(cdm), Integer.valueOf(cdn), Integer.valueOf(cdy), Integer.valueOf(cdz), Integer.valueOf(cdo), Integer.valueOf(cdp), Integer.valueOf(cdA), Integer.valueOf(cdB), Integer.valueOf(cdq), Integer.valueOf(cdr), Integer.valueOf(cdC), Integer.valueOf(cdD) });
   }
 }
 

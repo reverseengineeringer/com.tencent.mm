@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static bUQ:Z
+.field public static clN:Z
 
 
 # direct methods
@@ -26,16 +26,16 @@
     .line 191
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil;->bUQ:Z
+    sput-boolean v0, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil;->clN:Z
 
     .line 194
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil;->Du()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil;->FC()Z
 
     .line 195
     return-void
 .end method
 
-.method private static Du()Z
+.method private static FC()Z
     .locals 4
 
     .prologue
@@ -54,12 +54,12 @@
 
     const-string/jumbo v3, "android.media.ExifInterface find"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 201
     const/4 v2, 0x1
 
-    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil;->bUQ:Z
+    sput-boolean v2, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil;->clN:Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -75,10 +75,10 @@
 
     const-string/jumbo v2, "android.media.ExifInterface can not found"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 204
-    sput-boolean v1, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil;->bUQ:Z
+    sput-boolean v1, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil;->clN:Z
 
     move v0, v1
 

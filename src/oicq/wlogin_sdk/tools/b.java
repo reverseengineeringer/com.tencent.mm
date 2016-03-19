@@ -1,10 +1,11 @@
 package oicq.wlogin_sdk.tools;
 
-import android.os.Parcelable.Creator;
-
-final class b
-  implements Parcelable.Creator
-{}
+public class b
+{
+  public void e(int paramInt, String paramString1, String paramString2) {}
+  
+  public void o(int paramInt, String paramString) {}
+}
 
 /* Location:
  * Qualified Name:     oicq.wlogin_sdk.tools.b

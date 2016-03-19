@@ -10,35 +10,35 @@ import android.widget.BaseAdapter;
 import android.widget.Filter;
 import android.widget.FilterQueryProvider;
 import android.widget.Filterable;
-import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public abstract class a
   extends BaseAdapter
   implements b.a, Filterable
 {
-  protected boolean hL = false;
-  protected boolean hM = true;
-  public Cursor hN = null;
-  protected int hO;
-  protected a hP;
-  protected DataSetObserver hQ;
-  protected b hR;
-  protected FilterQueryProvider hS;
+  protected boolean gT = false;
+  protected boolean gU = true;
+  public Cursor gV = null;
+  protected int gW;
+  protected a gX;
+  protected DataSetObserver gY;
+  protected b gZ;
+  protected FilterQueryProvider ha;
   public Context mContext;
   
   public a(Context paramContext, Cursor paramCursor, boolean paramBoolean)
   {
     mContext = paramContext;
-    hO = -1;
-    hP = new a();
-    hQ = new b((byte)0);
+    gW = -1;
+    gX = new a();
+    gY = new b((byte)0);
   }
   
   public abstract void a(View paramView, Cursor paramCursor);
   
   public void changeCursor(Cursor paramCursor)
   {
-    if (paramCursor == hN) {
+    if (paramCursor == gV) {
       paramCursor = null;
     }
     for (;;)
@@ -47,34 +47,34 @@ public abstract class a
         paramCursor.close();
       }
       return;
-      Cursor localCursor = hN;
+      Cursor localCursor = gV;
       if (localCursor != null)
       {
-        if (hP != null) {
-          localCursor.unregisterContentObserver(hP);
+        if (gX != null) {
+          localCursor.unregisterContentObserver(gX);
         }
-        if (hQ != null) {
-          localCursor.unregisterDataSetObserver(hQ);
+        if (gY != null) {
+          localCursor.unregisterDataSetObserver(gY);
         }
       }
-      hN = paramCursor;
+      gV = paramCursor;
       if (paramCursor != null)
       {
-        if (hP != null) {
-          paramCursor.registerContentObserver(hP);
+        if (gX != null) {
+          paramCursor.registerContentObserver(gX);
         }
-        if (hQ != null) {
-          paramCursor.registerDataSetObserver(hQ);
+        if (gY != null) {
+          paramCursor.registerDataSetObserver(gY);
         }
-        hO = paramCursor.getColumnIndexOrThrow("_id");
-        hL = true;
+        gW = paramCursor.getColumnIndexOrThrow("_id");
+        gT = true;
         notifyDataSetChanged();
         paramCursor = localCursor;
       }
       else
       {
-        hO = -1;
-        hL = false;
+        gW = -1;
+        gT = false;
         notifyDataSetInvalidated();
         paramCursor = localCursor;
       }
@@ -91,27 +91,27 @@ public abstract class a
   
   public int getCount()
   {
-    if ((hL) && (hN != null)) {
-      return hN.getCount();
+    if ((gT) && (gV != null)) {
+      return gV.getCount();
     }
     return 0;
   }
   
   public final Cursor getCursor()
   {
-    return hN;
+    return gV;
   }
   
   public View getDropDownView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    if (hL)
+    if (gT)
     {
-      hN.moveToPosition(paramInt);
+      gV.moveToPosition(paramInt);
       View localView = paramView;
       if (paramView == null) {
-        localView = newDropDownView(mContext, hN, paramViewGroup);
+        localView = newDropDownView(mContext, gV, paramViewGroup);
       }
-      a(localView, hN);
+      a(localView, gV);
       return localView;
     }
     return null;
@@ -119,18 +119,18 @@ public abstract class a
   
   public Filter getFilter()
   {
-    if (hR == null) {
-      hR = new b(this);
+    if (gZ == null) {
+      gZ = new b(this);
     }
-    return hR;
+    return gZ;
   }
   
   public Object getItem(int paramInt)
   {
-    if ((hL) && (hN != null))
+    if ((gT) && (gV != null))
     {
-      hN.moveToPosition(paramInt);
-      return hN;
+      gV.moveToPosition(paramInt);
+      return gV;
     }
     return null;
   }
@@ -139,14 +139,14 @@ public abstract class a
   {
     long l2 = 0L;
     long l1 = l2;
-    if (hL)
+    if (gT)
     {
       l1 = l2;
-      if (hN != null)
+      if (gV != null)
       {
         l1 = l2;
-        if (hN.moveToPosition(paramInt)) {
-          l1 = hN.getLong(hO);
+        if (gV.moveToPosition(paramInt)) {
+          l1 = gV.getLong(gW);
         }
       }
     }
@@ -155,17 +155,17 @@ public abstract class a
   
   public View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    if (!hL) {
+    if (!gT) {
       throw new IllegalStateException("this should only be called when the cursor is valid");
     }
-    if (!hN.moveToPosition(paramInt)) {
+    if (!gV.moveToPosition(paramInt)) {
       throw new IllegalStateException("couldn't move cursor to position " + paramInt);
     }
     View localView = paramView;
     if (paramView == null) {
-      localView = newView(mContext, hN, paramViewGroup);
+      localView = newView(mContext, gV, paramViewGroup);
     }
-    a(localView, hN);
+    a(localView, gV);
     return localView;
   }
   
@@ -183,17 +183,17 @@ public abstract class a
   
   protected final void onContentChanged()
   {
-    if ((hM) && (hN != null) && (!hN.isClosed())) {
-      hL = hN.requery();
+    if ((gU) && (gV != null) && (!gV.isClosed())) {
+      gT = gV.requery();
     }
   }
   
   public Cursor runQueryOnBackgroundThread(CharSequence paramCharSequence)
   {
-    if (hS != null) {
-      return hS.runQuery(paramCharSequence);
+    if (ha != null) {
+      return ha.runQuery(paramCharSequence);
     }
-    return hN;
+    return gV;
   }
   
   private final class a
@@ -222,13 +222,13 @@ public abstract class a
     
     public final void onChanged()
     {
-      hL = true;
+      gT = true;
       notifyDataSetChanged();
     }
     
     public final void onInvalidated()
     {
-      hL = false;
+      gT = false;
       notifyDataSetInvalidated();
     }
   }

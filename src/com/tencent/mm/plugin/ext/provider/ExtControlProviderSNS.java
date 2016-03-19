@@ -5,17 +5,23 @@ import android.content.UriMatcher;
 import android.database.Cursor;
 import android.net.Uri;
 import com.jg.JgClassChecked;
-import com.tencent.mm.d.a.bs;
-import com.tencent.mm.d.a.bs.b;
-import com.tencent.mm.d.a.bt;
-import com.tencent.mm.d.a.bt.b;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.v;
-import com.tencent.mm.p.c;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.az.d;
+import com.tencent.mm.d.a.dj;
+import com.tencent.mm.d.a.dj.b;
+import com.tencent.mm.d.a.dk;
+import com.tencent.mm.d.a.dk.b;
+import com.tencent.mm.d.a.dr;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.as.a;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.h;
+import com.tencent.mm.network.e;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import java.util.List;
 
@@ -23,50 +29,57 @@ import java.util.List;
 public final class ExtControlProviderSNS
   extends ExtContentProviderBase
 {
-  private static boolean dbZ = false;
-  private static final UriMatcher dby;
-  private static aj dca = new aj(new j(), false);
-  private static final String[] dcc = { "feedId", "desc", "url", "nickname", "avatar", "timestamp", "mediaCount", "type", "bigImgUrl", "firstImgWidth", "firstImgHeight" };
-  private boolean axp = false;
-  private boolean axq = false;
-  private int axr = 0;
-  private String dcd = "";
+  private static final UriMatcher dKS;
+  private static boolean dLt = false;
+  private static af dLu = new af(new af.a()
+  {
+    public final boolean lj()
+    {
+      ExtControlProviderSNS.CP();
+      return false;
+    }
+  }, false);
+  private static final String[] dLw = { "feedId", "desc", "url", "nickname", "avatar", "timestamp", "mediaCount", "type", "bigImgUrl", "firstImgWidth", "firstImgHeight" };
+  private boolean axw = false;
+  private boolean axx = false;
+  private int axy = 0;
+  private String dLx = "";
   
   static
   {
     UriMatcher localUriMatcher = new UriMatcher(-1);
-    dby = localUriMatcher;
+    dKS = localUriMatcher;
     localUriMatcher.addURI("com.tencent.mm.plugin.ext.SNS", "snsInfo", 17);
   }
   
-  private Cursor PM()
+  private Cursor VB()
   {
-    t.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "getSnsCursor() , needDownload = true");
-    com.tencent.mm.ar.d locald = new com.tencent.mm.ar.d(dcc, (byte)0);
-    Object localObject1 = new bs();
-    awI.awK = dcd;
-    if (!com.tencent.mm.sdk.c.a.hXQ.g((com.tencent.mm.sdk.c.d)localObject1))
+    u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "getSnsCursor() , needDownload = true");
+    d locald = new d(dLw, (byte)0);
+    Object localObject1 = new dj();
+    awQ.awS = dLx;
+    if (!com.tencent.mm.sdk.c.a.jUF.j((com.tencent.mm.sdk.c.b)localObject1))
     {
       locald.close();
       return null;
     }
-    Cursor localCursor = awJ.cursor;
+    Cursor localCursor = awR.awP;
     if (localCursor != null) {}
     for (;;)
     {
       try
       {
         i = localCursor.getCount();
-        t.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "in getSnsCursor(), snsCount = " + i);
-        bt localbt;
+        u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "in getSnsCursor(), snsCount = " + i);
+        dk localdk;
         if ((i > 0) && (localCursor.moveToFirst()))
         {
           if (localCursor != null)
           {
-            localbt = new bt();
-            awL.awN = localCursor;
-            if (!com.tencent.mm.sdk.c.a.hXQ.g(localbt)) {
-              t.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "ExtGetSnsDataEvent publish error");
+            localdk = new dk();
+            awT.awV = localCursor;
+            if (!com.tencent.mm.sdk.c.a.jUF.j(localdk)) {
+              u.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "ExtGetSnsDataEvent publish error");
             }
           }
           else
@@ -78,36 +91,36 @@ public final class ExtControlProviderSNS
         }
         else
         {
-          t.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "in getSnsCursor(), matrixCursor Count = " + locald.getCount());
+          u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "in getSnsCursor(), matrixCursor Count = " + locald.getCount());
           localCursor.close();
-          break label787;
+          break label788;
         }
-        Object localObject2 = ax.tl().ri().yK(awM.awO);
-        if ((localObject2 == null) || ((int)bkE <= 0)) {
+        Object localObject2 = ah.tD().rq().En(awU.awW);
+        if ((localObject2 == null) || ((int)bvi <= 0)) {
           continue;
         }
         String str3 = "";
-        switch (awM.awS)
+        switch (awU.axa)
         {
         case 2: 
-          if ((awM.awU == null) || (awM.awU.size() <= 0) || (getContext() == null)) {
-            break label781;
+          if ((awU.axc == null) || (awU.axc.size() <= 0) || (getContext() == null)) {
+            break label782;
           }
-          t.d("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "uris.size() = [%s]", new Object[] { Integer.valueOf(awM.awU.size()) });
+          u.d("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "uris.size() = [%s]", new Object[] { Integer.valueOf(awU.axc.size()) });
           if ((i != 2) && (i != 6) && (i != 3) && (i != 4)) {
-            break label781;
+            break label782;
           }
-          localObject1 = (String)awM.awU.get(0);
+          localObject1 = (String)awU.axc.get(0);
           String str2 = str3;
-          if (awM.awV != null)
+          if (awU.axd != null)
           {
             str2 = str3;
-            if (awM.awV.size() > 0)
+            if (awU.axd.size() > 0)
             {
               str2 = str3;
               if (getContext() != null)
               {
-                t.d("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "bigImgUris.size() = [%s], firstImgWidth = [%s], firstImgHeight = [%s]", new Object[] { Integer.valueOf(awM.awV.size()), Integer.valueOf(awM.awW), Integer.valueOf(awM.awX) });
+                u.d("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "bigImgUris.size() = [%s], firstImgWidth = [%s], firstImgHeight = [%s]", new Object[] { Integer.valueOf(awU.axd.size()), Integer.valueOf(awU.axe), Integer.valueOf(awU.axf) });
                 if ((i != 2) && (i != 6) && (i != 3))
                 {
                   str2 = str3;
@@ -115,26 +128,26 @@ public final class ExtControlProviderSNS
                 }
                 else
                 {
-                  str2 = (String)awM.awV.get(0);
+                  str2 = (String)awU.axd.get(0);
                 }
               }
             }
           }
-          str3 = c.fu(awM.awO);
+          str3 = com.tencent.mm.q.b.fO(awU.awW);
           try
           {
-            String str4 = com.tencent.mm.plugin.ext.a.a.aI(awM.awP);
-            String str5 = awM.awQ;
-            String str6 = ((com.tencent.mm.storage.k)localObject2).qD();
+            String str4 = com.tencent.mm.plugin.ext.a.a.bc(awU.awX);
+            String str5 = awU.awY;
+            String str6 = ((k)localObject2).qz();
             localObject2 = str3;
             if (str3 == null) {
               localObject2 = "";
             }
-            locald.addRow(new Object[] { str4, str5, localObject1, str6, localObject2, Long.valueOf(awM.awR), Integer.valueOf(awM.awT), Integer.valueOf(i), str2, Integer.valueOf(awM.awW), Integer.valueOf(awM.awX) });
+            locald.addRow(new Object[] { str4, str5, localObject1, str6, localObject2, Long.valueOf(awU.awZ), Integer.valueOf(awU.axb), Integer.valueOf(i), str2, Integer.valueOf(awU.axe), Integer.valueOf(awU.axf) });
           }
           catch (Exception localException1)
           {
-            t.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", localException1.getMessage());
+            u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", localException1.getMessage());
           }
           continue;
           i = 1;
@@ -142,7 +155,7 @@ public final class ExtControlProviderSNS
       }
       catch (Exception localException2)
       {
-        t.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", localException2.getMessage());
+        u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", localException2.getMessage());
         if (localCursor != null) {
           localCursor.close();
         }
@@ -158,30 +171,30 @@ public final class ExtControlProviderSNS
       continue;
       i = 4;
       continue;
-      label781:
+      label782:
       String str1 = "";
       continue;
-      label787:
+      label788:
       return locald;
       i = 5;
     }
   }
   
-  private Cursor aJ(long paramLong)
+  private Cursor bd(long paramLong)
   {
     int i = 1;
-    t.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "handleGetSnsInfo() userId = " + paramLong);
+    u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "handleGetSnsInfo() userId = " + paramLong);
     try
     {
-      t.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "startGetSNSInfo, userId=[%s]", new Object[] { Long.valueOf(paramLong) });
-      com.tencent.mm.storage.k localk;
+      u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "startGetSNSInfo, userId=[%s]", new Object[] { Long.valueOf(paramLong) });
+      final k localk;
       if (paramLong == 0L)
       {
-        localk = ax.tl().ri().yK(v.rS());
-        if ((localk != null) && ((int)bkE > 0)) {
+        localk = ah.tD().rq().En(h.sc());
+        if ((localk != null) && ((int)bvi > 0)) {
           break label116;
         }
-        t.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "ct == null");
+        u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "ct == null");
         i = 0;
       }
       for (;;)
@@ -189,34 +202,53 @@ public final class ExtControlProviderSNS
         if (i != 0) {
           break label224;
         }
-        t.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "startGetSNSInfo() return false");
+        u.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "startGetSNSInfo() return false");
         return null;
-        localk = ax.tl().ri().cD(paramLong);
+        localk = ah.tD().rq().dv(paramLong);
         break;
         label116:
-        axp = com.tencent.mm.h.a.cd(field_type);
-        axq = v.dF(field_username);
-        t.d("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "ct.getUsername()=[%s], isFriend=[%s], isSelf=[%s]", new Object[] { field_username, Boolean.valueOf(axp), Boolean.valueOf(axq) });
-        com.tencent.mm.pluginsdk.d.a.a locala = new com.tencent.mm.pluginsdk.d.a.a();
-        locala.b(10000L, new k(this, localk, locala));
+        axw = com.tencent.mm.h.a.ce(field_type);
+        axx = h.dQ(field_username);
+        u.d("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "ct.getUsername()=[%s], isFriend=[%s], isSelf=[%s]", new Object[] { field_username, Boolean.valueOf(axw), Boolean.valueOf(axx) });
+        final com.tencent.mm.pluginsdk.d.a.a locala = new com.tencent.mm.pluginsdk.d.a.a();
+        locala.b(10000L, new Runnable()
+        {
+          public final void run()
+          {
+            dr localdr = new dr();
+            axv.type = 1;
+            axv.username = localkfield_username;
+            axv.axw = ExtControlProviderSNS.a(ExtControlProviderSNS.this);
+            axv.axx = ExtControlProviderSNS.b(ExtControlProviderSNS.this);
+            axv.axy = ExtControlProviderSNS.c(ExtControlProviderSNS.this);
+            axv.axz = new as.a()
+            {
+              public final void a(e paramAnonymous2e)
+              {
+                dKP.countDown();
+              }
+            };
+            com.tencent.mm.sdk.c.a.jUF.j(localdr);
+          }
+        });
       }
-      return PM();
+      return VB();
     }
     catch (Exception localException)
     {
-      t.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", localException.getMessage());
+      u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", localException.getMessage());
     }
   }
   
-  private static void bE(boolean paramBoolean)
+  private static void cj(boolean paramBoolean)
   {
     if (paramBoolean)
     {
-      dbZ = true;
-      dca.cA(15000L);
+      dLt = true;
+      dLu.ds(15000L);
       return;
     }
-    dca.cA(0L);
+    dLu.ds(0L);
   }
   
   public final int delete(Uri paramUri, String paramString, String[] paramArrayOfString)
@@ -241,51 +273,51 @@ public final class ExtControlProviderSNS
   
   public final Cursor query(Uri paramUri, String[] paramArrayOfString1, String paramString1, String[] paramArrayOfString2, String paramString2)
   {
-    t.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "query() " + paramUri);
-    a(paramUri, getContext(), dby);
+    u.i("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "query() " + paramUri);
+    a(paramUri, getContext(), dKS);
     if (paramUri == null)
     {
-      fN(3);
+      gK(3);
       return null;
     }
-    if ((bn.iW(dbr)) || (bn.iW(PI())))
+    if ((ay.kz(dKL)) || (ay.kz(Vw())))
     {
-      fN(3);
+      gK(3);
       return null;
     }
-    if (dbZ)
+    if (dLt)
     {
-      t.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "isBusy, return null");
-      fN(5);
+      u.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "isBusy, return null");
+      gK(5);
       return null;
     }
-    bE(true);
-    if (!Hq())
+    cj(true);
+    if (!Vx())
     {
-      bE(false);
-      fN(1);
-      return cjW;
+      cj(false);
+      gK(1);
+      return cBg;
     }
-    if (!bh(getContext()))
+    if (!bx(getContext()))
     {
-      t.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "invalid appid ! return null");
-      bE(false);
-      fN(2);
+      u.w("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "invalid appid ! return null");
+      cj(false);
+      gK(2);
       return null;
     }
     if ((paramArrayOfString2 == null) || (paramArrayOfString2.length == 0))
     {
-      t.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "invaild selections");
-      bE(false);
-      fN(3);
+      u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "invaild selections");
+      cj(false);
+      gK(3);
       return null;
     }
     paramArrayOfString1 = paramArrayOfString2[0];
-    if (bn.iW(paramArrayOfString1))
+    if (ay.kz(paramArrayOfString1))
     {
-      t.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "userIdStr should not be null or nil");
-      bE(false);
-      fN(3);
+      u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", "userIdStr should not be null or nil");
+      cj(false);
+      gK(3);
       return null;
     }
     for (;;)
@@ -297,32 +329,32 @@ public final class ExtControlProviderSNS
         if (bool) {
           l = 0L;
         }
-        switch (dby.match(paramUri))
+        switch (dKS.match(paramUri))
         {
         default: 
           paramUri = null;
           if (paramUri == null) {
             break label322;
           }
-          fN(0);
-          bE(false);
+          gK(0);
+          cj(false);
           return paramUri;
-          l = Long.valueOf(com.tencent.mm.plugin.ext.a.a.lr(paramArrayOfString1.trim())).longValue();
+          l = Long.valueOf(com.tencent.mm.plugin.ext.a.a.nS(paramArrayOfString1.trim())).longValue();
           break;
         case 17: 
-          paramUri = aJ(l);
+          paramUri = bd(l);
         }
       }
       catch (Exception paramUri)
       {
-        t.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", paramUri.getMessage());
-        bE(false);
-        fN(4);
+        u.e("!44@/B4Tb64lLpKAQbqlkU5I8moU7mSKZGy4QAahF9Px7Zg=", paramUri.getMessage());
+        cj(false);
+        gK(4);
         return null;
       }
       continue;
       label322:
-      fN(4);
+      gK(4);
     }
   }
   

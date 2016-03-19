@@ -15,26 +15,16 @@
 
 
 # instance fields
-.field public aGr:Z
-
-.field public aGs:Z
+.field public filePath:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    const/4 v0, 0x0
-
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/jf$a;->aGr:Z
-
-    .line 16
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/jf$a;->aGs:Z
 
     return-void
 .end method

@@ -1,35 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.q.f.a;
-import com.tencent.mm.q.f.b;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class bw
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a axf = new a();
-  public b axg = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avn = new a();
+  public b avo = new b();
   
   public bw()
   {
-    id = "ExtPlayer";
-    hXT = atO;
+    id = "ExDeviceHaveBindNetworkDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String apy;
-    public boolean arf;
-    public f.a axh;
-    public f.b axi;
-    public int op;
+    public long avg;
   }
   
   public static final class b
   {
-    public boolean auM = false;
+    public boolean auR;
   }
 }
 

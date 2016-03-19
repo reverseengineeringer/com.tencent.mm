@@ -1,79 +1,114 @@
 package com.tencent.mm.ah;
 
-import com.tencent.mm.d.b.az;
-import com.tencent.mm.sdk.g.ae.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import java.lang.reflect.Field;
-import java.util.Map;
+import android.content.ContentValues;
+import android.database.Cursor;
 
 public final class m
-  extends az
 {
-  protected static ae.a aqp;
+  int aou = -1;
+  private String axC = id + "_" + bXX;
+  private String bEs = "";
+  private String bEt = "";
+  private int bEu = 0;
+  private int bEv = 0;
+  String bXW = "";
+  public int bXX = 0;
+  public int id = 0;
+  String name = "";
+  int size = 0;
+  public int status = 0;
+  public int version = 0;
   
-  static
+  public final String Bw()
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[8];
-    bbY = new String[9];
-    StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "localId";
-    ibX.put("localId", "INTEGER PRIMARY KEY ");
-    localStringBuilder.append(" localId INTEGER PRIMARY KEY ");
-    localStringBuilder.append(", ");
-    ibW = "localId";
-    bbY[1] = "fileName";
-    ibX.put("fileName", "TEXT");
-    localStringBuilder.append(" fileName TEXT");
-    localStringBuilder.append(", ");
-    bbY[2] = "fileNameHash";
-    ibX.put("fileNameHash", "INTEGER");
-    localStringBuilder.append(" fileNameHash INTEGER");
-    localStringBuilder.append(", ");
-    bbY[3] = "fileMd5";
-    ibX.put("fileMd5", "TEXT default '' ");
-    localStringBuilder.append(" fileMd5 TEXT default '' ");
-    localStringBuilder.append(", ");
-    bbY[4] = "fileLength";
-    ibX.put("fileLength", "LONG default '0' ");
-    localStringBuilder.append(" fileLength LONG default '0' ");
-    localStringBuilder.append(", ");
-    bbY[5] = "fileStatus";
-    ibX.put("fileStatus", "INTEGER default '0' ");
-    localStringBuilder.append(" fileStatus INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[6] = "fileDuration";
-    ibX.put("fileDuration", "INTEGER default '0' ");
-    localStringBuilder.append(" fileDuration INTEGER default '0' ");
-    localStringBuilder.append(", ");
-    bbY[7] = "createTime";
-    ibX.put("createTime", "LONG default '0' ");
-    localStringBuilder.append(" createTime LONG default '0' ");
-    bbY[8] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
-  }
-  
-  public final void d(String paramString, long paramLong)
-  {
-    StringBuilder localStringBuilder = new StringBuilder();
-    localStringBuilder.append(paramString);
-    localStringBuilder.append("localId=").append(field_localId).append(", ");
-    localStringBuilder.append("filename=").append(field_fileName).append(", ");
-    localStringBuilder.append("filenamehash=").append(field_fileNameHash).append(", ");
-    localStringBuilder.append("filelength=").append(field_fileLength).append(", ");
-    localStringBuilder.append("filemd5=").append(field_fileMd5).append(", ");
-    localStringBuilder.append("filestatus=").append(field_fileStatus);
-    if (paramLong > 0L) {
-      localStringBuilder.append(", use ").append(bn.Z(paramLong)).append("ms");
+    if (bXW == null) {
+      return "";
     }
-    t.i("!32@/B4Tb64lLpJ8NKLwSZ2/LqaAhkgA6Bm/", localStringBuilder.toString());
+    return bXW;
   }
   
-  protected final ae.a lX()
+  public final void c(Cursor paramCursor)
   {
-    return aqp;
+    version = paramCursor.getInt(2);
+    name = paramCursor.getString(3);
+    size = paramCursor.getInt(4);
+    bXW = paramCursor.getString(5);
+    status = paramCursor.getInt(6);
+    bEs = paramCursor.getString(8);
+    bEt = paramCursor.getString(9);
+    bXX = paramCursor.getInt(7);
+    bEv = paramCursor.getInt(11);
+    id = paramCursor.getInt(1);
+    bEu = paramCursor.getInt(10);
+    axC = paramCursor.getString(0);
+  }
+  
+  public final ContentValues lX()
+  {
+    ContentValues localContentValues = new ContentValues();
+    if ((aou & 0x2) != 0) {
+      localContentValues.put("id", Integer.valueOf(id));
+    }
+    if ((aou & 0x4) != 0) {
+      localContentValues.put("version", Integer.valueOf(version));
+    }
+    if ((aou & 0x8) != 0)
+    {
+      if (name == null)
+      {
+        str = "";
+        localContentValues.put("name", str);
+      }
+    }
+    else
+    {
+      if ((aou & 0x10) != 0) {
+        localContentValues.put("size", Integer.valueOf(size));
+      }
+      if ((aou & 0x20) != 0) {
+        localContentValues.put("packname", Bw());
+      }
+      if ((aou & 0x40) != 0) {
+        localContentValues.put("status", Integer.valueOf(status));
+      }
+      if ((aou & 0x80) != 0) {
+        localContentValues.put("type", Integer.valueOf(bXX));
+      }
+      if ((aou & 0x100) != 0)
+      {
+        if (bEs != null) {
+          break label327;
+        }
+        str = "";
+        label190:
+        localContentValues.put("reserved1", str);
+      }
+      if ((aou & 0x200) != 0) {
+        if (bEt != null) {
+          break label335;
+        }
+      }
+    }
+    label327:
+    label335:
+    for (String str = "";; str = bEt)
+    {
+      localContentValues.put("reserved2", str);
+      if ((aou & 0x400) != 0) {
+        localContentValues.put("reserved3", Integer.valueOf(bEu));
+      }
+      if ((aou & 0x800) != 0) {
+        localContentValues.put("reserved4", Integer.valueOf(bEv));
+      }
+      if ((aou & 0x1) != 0) {
+        localContentValues.put("localId", id + "_" + bXX);
+      }
+      return localContentValues;
+      str = name;
+      break;
+      str = bEs;
+      break label190;
+    }
   }
 }
 

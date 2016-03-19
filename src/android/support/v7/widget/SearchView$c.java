@@ -2,7 +2,7 @@ package android.support.v7.widget;
 
 public abstract interface SearchView$c
 {
-  public abstract boolean cK();
+  public abstract boolean cu();
 }
 
 /* Location:

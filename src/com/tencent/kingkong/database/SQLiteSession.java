@@ -413,7 +413,7 @@ public final class SQLiteSession
     if (executeSpecial(paramString, paramArrayOfObject, paramInt1, null))
     {
       if (paramb != null) {
-        paramb.qI();
+        paramb.qE();
       }
       return 0;
     }

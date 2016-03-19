@@ -2,9 +2,9 @@ package android.support.v7.internal.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.v4.view.h;
-import android.support.v4.view.k;
-import android.support.v7.internal.view.menu.i;
+import android.support.v4.view.d;
+import android.support.v4.view.g;
+import android.support.v7.internal.view.menu.h;
 import android.util.AttributeSet;
 import android.view.InflateException;
 import android.view.Menu;
@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.SubMenu;
 import android.view.View;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;
 import org.xmlpull.v1.XmlPullParser;
@@ -21,28 +21,28 @@ import org.xmlpull.v1.XmlPullParser;
 public final class c
   extends MenuInflater
 {
-  private static final Class[] kv;
-  private static final Class[] kw;
-  private final Object[] kx;
-  private final Object[] ky;
-  private Object kz;
+  private static final Class[] jC;
+  private static final Class[] jD;
+  private final Object[] jE;
+  private final Object[] jF;
+  private Object jG;
   private Context mContext;
   
   static
   {
     Class[] arrayOfClass = new Class[1];
     arrayOfClass[0] = Context.class;
-    kv = arrayOfClass;
-    kw = arrayOfClass;
+    jC = arrayOfClass;
+    jD = arrayOfClass;
   }
   
   public c(Context paramContext)
   {
     super(paramContext);
     mContext = paramContext;
-    kz = paramContext;
-    kx = new Object[] { paramContext };
-    ky = kx;
+    jG = paramContext;
+    jE = new Object[] { paramContext };
+    jF = jE;
   }
   
   private void a(XmlPullParser paramXmlPullParser, AttributeSet paramAttributeSet, Menu paramMenu)
@@ -88,62 +88,62 @@ public final class c
           localObject = paramXmlPullParser.getName();
           if (((String)localObject).equals("group"))
           {
-            localObject = lb.mContext.obtainStyledAttributes(paramAttributeSet, a.p.MenuGroup);
-            kD = ((TypedArray)localObject).getResourceId(1, 0);
-            kE = ((TypedArray)localObject).getInt(3, 0);
-            kF = ((TypedArray)localObject).getInt(4, 0);
-            kG = ((TypedArray)localObject).getInt(5, 0);
-            kH = ((TypedArray)localObject).getBoolean(2, true);
-            kI = ((TypedArray)localObject).getBoolean(0, true);
+            localObject = ki.mContext.obtainStyledAttributes(paramAttributeSet, R.b.MenuGroup);
+            jK = ((TypedArray)localObject).getResourceId(1, 0);
+            jL = ((TypedArray)localObject).getInt(3, 0);
+            jM = ((TypedArray)localObject).getInt(4, 0);
+            jN = ((TypedArray)localObject).getInt(5, 0);
+            jO = ((TypedArray)localObject).getBoolean(2, true);
+            jP = ((TypedArray)localObject).getBoolean(0, true);
             ((TypedArray)localObject).recycle();
           }
           else
           {
             if (((String)localObject).equals("item"))
             {
-              localObject = lb.mContext.obtainStyledAttributes(paramAttributeSet, a.p.MenuItem);
-              kK = ((TypedArray)localObject).getResourceId(2, 0);
-              kL = (((TypedArray)localObject).getInt(5, kE) & 0xFFFF0000 | ((TypedArray)localObject).getInt(6, kF) & 0xFFFF);
-              kM = ((TypedArray)localObject).getText(7);
-              kN = ((TypedArray)localObject).getText(8);
-              kO = ((TypedArray)localObject).getResourceId(0, 0);
-              kP = b.i(((TypedArray)localObject).getString(9));
-              kQ = b.i(((TypedArray)localObject).getString(10));
+              localObject = ki.mContext.obtainStyledAttributes(paramAttributeSet, R.b.MenuItem);
+              jR = ((TypedArray)localObject).getResourceId(2, 0);
+              jS = (((TypedArray)localObject).getInt(5, jL) & 0xFFFF0000 | ((TypedArray)localObject).getInt(6, jM) & 0xFFFF);
+              jT = ((TypedArray)localObject).getText(7);
+              jU = ((TypedArray)localObject).getText(8);
+              jV = ((TypedArray)localObject).getResourceId(0, 0);
+              jW = b.j(((TypedArray)localObject).getString(9));
+              jX = b.j(((TypedArray)localObject).getString(10));
               if (((TypedArray)localObject).hasValue(11)) {
                 if (((TypedArray)localObject).getBoolean(11, false))
                 {
                   k = 1;
                   label433:
-                  kR = k;
+                  jY = k;
                   label440:
-                  kS = ((TypedArray)localObject).getBoolean(3, false);
-                  kT = ((TypedArray)localObject).getBoolean(4, kH);
-                  kU = ((TypedArray)localObject).getBoolean(1, kI);
-                  kV = ((TypedArray)localObject).getInt(13, -1);
-                  kZ = ((TypedArray)localObject).getString(12);
-                  kW = ((TypedArray)localObject).getResourceId(14, 0);
-                  kX = ((TypedArray)localObject).getString(15);
-                  kY = ((TypedArray)localObject).getString(16);
-                  if (kY == null) {
+                  jZ = ((TypedArray)localObject).getBoolean(3, false);
+                  ka = ((TypedArray)localObject).getBoolean(4, jO);
+                  kb = ((TypedArray)localObject).getBoolean(1, jP);
+                  kc = ((TypedArray)localObject).getInt(13, -1);
+                  kg = ((TypedArray)localObject).getString(12);
+                  kd = ((TypedArray)localObject).getResourceId(14, 0);
+                  ke = ((TypedArray)localObject).getString(15);
+                  kf = ((TypedArray)localObject).getString(16);
+                  if (kf == null) {
                     break label640;
                   }
                   k = 1;
                   label557:
-                  if ((k == 0) || (kW != 0) || (kX != null)) {
+                  if ((k == 0) || (kd != 0) || (ke != null)) {
                     break label646;
                   }
                 }
               }
               label640:
               label646:
-              for (la = ((h)localb.newInstance(kY, kw, lb.ky));; la = null)
+              for (kh = ((d)localb.newInstance(kf, jD, ki.jF));; kh = null)
               {
                 ((TypedArray)localObject).recycle();
-                kJ = false;
+                jQ = false;
                 break;
                 k = 0;
                 break label433;
-                kR = kG;
+                jY = jN;
                 break label440;
                 k = 0;
                 break label557;
@@ -151,9 +151,9 @@ public final class c
             }
             if (((String)localObject).equals("menu"))
             {
-              kJ = true;
-              localObject = kC.addSubMenu(kD, kK, kL, kM);
-              localb.g(((SubMenu)localObject).getItem());
+              jQ = true;
+              localObject = jJ.addSubMenu(jK, jR, jS, jT);
+              localb.e(((SubMenu)localObject).getItem());
               a(paramXmlPullParser, paramAttributeSet, (Menu)localObject);
             }
             else
@@ -169,14 +169,14 @@ public final class c
               }
               else if (((String)localObject).equals("group"))
               {
-                localb.br();
+                localb.bb();
               }
               else if (((String)localObject).equals("item"))
               {
-                if (!kJ)
+                if (!jQ)
                 {
-                  kJ = true;
-                  localb.g(kC.add(kD, kK, kL, kM));
+                  jQ = true;
+                  localb.e(jJ.add(jK, jR, jS, jT));
                 }
               }
               else if (((String)localObject).equals("menu"))
@@ -281,17 +281,17 @@ public final class c
   private static final class a
     implements MenuItem.OnMenuItemClickListener
   {
-    private static final Class[] kA = { MenuItem.class };
-    private Method kB;
-    private Object kz;
+    private static final Class[] jH = { MenuItem.class };
+    private Object jG;
+    private Method jI;
     
     public a(Object paramObject, String paramString)
     {
-      kz = paramObject;
+      jG = paramObject;
       Class localClass = paramObject.getClass();
       try
       {
-        kB = localClass.getMethod(paramString, kA);
+        jI = localClass.getMethod(paramString, jH);
         return;
       }
       catch (Exception paramObject)
@@ -306,10 +306,10 @@ public final class c
     {
       try
       {
-        if (kB.getReturnType() == Boolean.TYPE) {
-          return ((Boolean)kB.invoke(kz, new Object[] { paramMenuItem })).booleanValue();
+        if (jI.getReturnType() == Boolean.TYPE) {
+          return ((Boolean)jI.invoke(jG, new Object[] { paramMenuItem })).booleanValue();
         }
-        kB.invoke(kz, new Object[] { paramMenuItem });
+        jI.invoke(jG, new Object[] { paramMenuItem });
         return true;
       }
       catch (Exception paramMenuItem)
@@ -321,39 +321,39 @@ public final class c
   
   private final class b
   {
-    Menu kC;
-    int kD;
-    int kE;
-    int kF;
-    int kG;
-    boolean kH;
-    boolean kI;
-    boolean kJ;
-    int kK;
-    int kL;
-    CharSequence kM;
-    CharSequence kN;
-    int kO;
-    char kP;
-    char kQ;
-    int kR;
-    boolean kS;
-    boolean kT;
-    boolean kU;
-    int kV;
-    int kW;
-    String kX;
-    String kY;
-    String kZ;
-    h la;
+    Menu jJ;
+    int jK;
+    int jL;
+    int jM;
+    int jN;
+    boolean jO;
+    boolean jP;
+    boolean jQ;
+    int jR;
+    int jS;
+    CharSequence jT;
+    CharSequence jU;
+    int jV;
+    char jW;
+    char jX;
+    int jY;
+    boolean jZ;
+    boolean ka;
+    boolean kb;
+    int kc;
+    int kd;
+    String ke;
+    String kf;
+    String kg;
+    d kh;
     
     public b(Menu paramMenu)
     {
-      kC = paramMenu;
-      br();
+      jJ = paramMenu;
+      bb();
     }
     
-    static char i(String paramString)
+    static char j(String paramString)
     {
       if (paramString == null) {
         return '\000';
@@ -361,28 +361,28 @@ public final class c
       return paramString.charAt(0);
     }
     
-    public final void br()
+    public final void bb()
     {
-      kD = 0;
-      kE = 0;
-      kF = 0;
-      kG = 0;
-      kH = true;
-      kI = true;
+      jK = 0;
+      jL = 0;
+      jM = 0;
+      jN = 0;
+      jO = true;
+      jP = true;
     }
     
-    final void g(MenuItem paramMenuItem)
+    final void e(MenuItem paramMenuItem)
     {
       int i = 1;
-      Object localObject = paramMenuItem.setChecked(kS).setVisible(kT).setEnabled(kU);
-      if (kR > 0) {}
+      Object localObject = paramMenuItem.setChecked(jZ).setVisible(ka).setEnabled(kb);
+      if (jY > 0) {}
       for (boolean bool = true;; bool = false)
       {
-        ((MenuItem)localObject).setCheckable(bool).setTitleCondensed(kN).setIcon(kO).setAlphabeticShortcut(kP).setNumericShortcut(kQ);
-        if (kV >= 0) {
-          k.a(paramMenuItem, kV);
+        ((MenuItem)localObject).setCheckable(bool).setTitleCondensed(jU).setIcon(jV).setAlphabeticShortcut(jW).setNumericShortcut(jX);
+        if (kc >= 0) {
+          g.a(paramMenuItem, kc);
         }
-        if (kZ == null) {
+        if (kg == null) {
           break label161;
         }
         if (!c.a(c.this).isRestricted()) {
@@ -390,26 +390,26 @@ public final class c
         }
         throw new IllegalStateException("The android:onClick attribute cannot be used within a restricted context");
       }
-      paramMenuItem.setOnMenuItemClickListener(new c.a(c.b(c.this), kZ));
+      paramMenuItem.setOnMenuItemClickListener(new c.a(c.b(c.this), kg));
       label161:
-      if ((paramMenuItem instanceof i))
+      if ((paramMenuItem instanceof h))
       {
-        localObject = (i)paramMenuItem;
-        if ((localObject != null) && (kR >= 2)) {
-          ((i)localObject).t(true);
+        localObject = (h)paramMenuItem;
+        if ((localObject != null) && (jY >= 2)) {
+          ((h)localObject).t(true);
         }
-        if (kX == null) {
+        if (ke == null) {
           break label269;
         }
-        k.a(paramMenuItem, (View)newInstance(kX, c.bq(), c.c(c.this)));
+        g.a(paramMenuItem, (View)newInstance(ke, c.ba(), c.c(c.this)));
       }
       for (;;)
       {
-        if ((kW > 0) && (i == 0)) {
-          k.b(paramMenuItem, kW);
+        if ((kd > 0) && (i == 0)) {
+          g.b(paramMenuItem, kd);
         }
-        if (la != null) {
-          k.a(paramMenuItem, la);
+        if (kh != null) {
+          g.a(paramMenuItem, kh);
         }
         return;
         localObject = null;

@@ -1,73 +1,77 @@
 package com.tencent.mm.protocal.b;
 
+import com.tencent.mm.at.b;
+
 public final class ft
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public int bZH;
-  public int hiG;
-  public String hpY;
-  public long hpZ;
-  public int hqa;
+  public b jdj;
+  public b jdk;
+  public int port;
+  public int type;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
+    int i;
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hpY != null) {
-        paramVarArgs.U(1, hpY);
+      paramVarArgs.ci(1, type);
+      paramVarArgs.ci(2, port);
+      if (jdj != null) {
+        paramVarArgs.b(3, jdj);
       }
-      paramVarArgs.r(2, hpZ);
-      paramVarArgs.bM(3, hqa);
-      paramVarArgs.bM(4, hiG);
-      paramVarArgs.bM(5, bZH);
-      return 0;
-    }
-    if (paramInt == 1) {
-      if (hpY == null) {
-        break label318;
+      if (jdk != null) {
+        paramVarArgs.b(4, jdk);
       }
+      i = 0;
     }
-    label318:
-    for (paramInt = a.a.a.b.b.a.T(1, hpY) + 0;; paramInt = 0)
+    do
     {
-      return paramInt + a.a.a.a.q(2, hpZ) + a.a.a.a.bI(3, hqa) + a.a.a.a.bI(4, hiG) + a.a.a.a.bI(5, bZH);
-      if (paramInt == 2)
-      {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-          if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
-          }
-        }
+      return i;
+      if (paramInt != 1) {
         break;
       }
-      if (paramInt == 3)
-      {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-        ft localft = (ft)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
-        {
-        default: 
-          return -1;
-        case 1: 
-          hpY = jMD.readString();
-          return 0;
-        case 2: 
-          hpZ = jMD.aVq();
-          return 0;
-        case 3: 
-          hqa = jMD.aVp();
-          return 0;
-        case 4: 
-          hiG = jMD.aVp();
-          return 0;
+      i = a.a.a.a.cg(1, type) + 0 + a.a.a.a.cg(2, port);
+      paramInt = i;
+      if (jdj != null) {
+        paramInt = i + a.a.a.a.a(3, jdj);
+      }
+      i = paramInt;
+    } while (jdk == null);
+    return paramInt + a.a.a.a.a(4, jdk);
+    if (paramInt == 2)
+    {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bog();
         }
-        bZH = jMD.aVp();
+      }
+      return 0;
+    }
+    if (paramInt == 3)
+    {
+      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      ft localft = (ft)paramVarArgs[1];
+      switch (((Integer)paramVarArgs[2]).intValue())
+      {
+      default: 
+        return -1;
+      case 1: 
+        type = maU.jC();
+        return 0;
+      case 2: 
+        port = maU.jC();
+        return 0;
+      case 3: 
+        jdj = locala.bof();
         return 0;
       }
-      return -1;
+      jdk = locala.bof();
+      return 0;
     }
+    return -1;
   }
 }
 

@@ -3,82 +3,162 @@
 .source "SourceFile"
 
 
-# instance fields
-.field iBy:Ljava/lang/String;
+# static fields
+.field private static kAB:Ljava/util/Date;
 
-.field iBz:Ljava/lang/String;
+
+# instance fields
+.field public hasInit:Z
+
+.field public kAC:Ljava/lang/Runnable;
 
 
 # direct methods
-.method public constructor <init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
-    .locals 4
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
+    .line 37
     const/4 v0, 0x0
 
-    .line 27
+    sput-object v0, Lcom/tencent/mm/ui/c/i;->kAB:Ljava/util/Date;
+
+    return-void
+.end method
+
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
+
+    .prologue
+    .line 40
     invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/b/b;-><init>(Landroid/content/Context;)V
 
-    .line 23
-    iput-object v0, p0, Lcom/tencent/mm/ui/c/i;->iBy:Ljava/lang/String;
+    .line 35
+    const/4 v0, 0x0
 
-    .line 24
-    iput-object v0, p0, Lcom/tencent/mm/ui/c/i;->iBz:Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/c/i;->hasInit:Z
 
-    .line 28
-    iput-object p2, p0, Lcom/tencent/mm/ui/c/i;->iBy:Ljava/lang/String;
+    .line 88
+    new-instance v0, Lcom/tencent/mm/ui/c/i$2;
 
-    .line 29
-    iput-object p3, p0, Lcom/tencent/mm/ui/c/i;->iBz:Ljava/lang/String;
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/c/i$2;-><init>(Lcom/tencent/mm/ui/c/i;)V
 
-    .line 30
+    iput-object v0, p0, Lcom/tencent/mm/ui/c/i;->kAC:Ljava/lang/Runnable;
+
+    .line 41
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/c/i;->ZF()V
+
+    .line 42
+    return-void
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/ui/c/i;)Ljava/lang/ref/WeakReference;
+    .locals 1
+
+    .prologue
+    .line 31
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/i;->iJu:Ljava/lang/ref/WeakReference;
+
+    return-object v0
+.end method
+
+.method static synthetic a(Ljava/util/Date;)Ljava/util/Date;
+    .locals 0
+
+    .prologue
+    .line 31
+    sput-object p0, Lcom/tencent/mm/ui/c/i;->kAB:Ljava/util/Date;
+
+    return-object p0
+.end method
+
+.method static synthetic b(Lcom/tencent/mm/ui/c/i;)Landroid/view/View;
+    .locals 1
+
+    .prologue
+    .line 31
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/i;->view:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method static synthetic bcn()Ljava/util/Date;
+    .locals 1
+
+    .prologue
+    .line 31
+    sget-object v0, Lcom/tencent/mm/ui/c/i;->kAB:Ljava/util/Date;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/tencent/mm/ui/c/i;)Landroid/view/View;
+    .locals 1
+
+    .prologue
+    .line 31
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/i;->view:Landroid/view/View;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public ZF()V
+    .locals 2
+
+    .prologue
+    .line 49
     iget-object v0, p0, Lcom/tencent/mm/ui/c/i;->view:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
+    .line 50
     iget-object v0, p0, Lcom/tencent/mm/ui/c/i;->view:Landroid/view/View;
 
-    sget v1, Lcom/tencent/mm/a$i;->chatting_banner_recom_icon:I
+    const v1, 0x7f0701ae
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/ImageView;
+    .line 51
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/c/i;->hasInit:Z
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/c/i;->view:Landroid/view/View;
+    if-eqz v1, :cond_1
 
-    new-instance v2, Lcom/tencent/mm/ui/c/j;
-
-    invoke-direct {v2, p0}, Lcom/tencent/mm/ui/c/j;-><init>(Lcom/tencent/mm/ui/c/i;)V
-
-    invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/c/i;->iBy:Ljava/lang/String;
-
-    const/4 v2, 0x1
-
-    const/4 v3, -0x1
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/p/c;->a(Ljava/lang/String;ZI)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
-
-    .line 31
+    .line 70
     :cond_0
+    :goto_0
     return-void
+
+    .line 54
+    :cond_1
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/c/i;->hasInit:Z
+
+    .line 55
+    new-instance v1, Lcom/tencent/mm/ui/c/i$1;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/c/i$1;-><init>(Lcom/tencent/mm/ui/c/i;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 68
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
+
+    goto :goto_0
 .end method
 
-
-# virtual methods
 .method public final getLayoutId()I
     .locals 1
 
     .prologue
-    .line 34
-    sget v0, Lcom/tencent/mm/a$k;->chatting_recom_friends_banner:I
+    .line 45
+    const v0, 0x7f0a007a
 
     return v0
 .end method

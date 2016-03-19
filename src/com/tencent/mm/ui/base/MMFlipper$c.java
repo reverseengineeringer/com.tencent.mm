@@ -5,7 +5,7 @@ import android.view.animation.Interpolator;
 final class MMFlipper$c
   implements Interpolator
 {
-  private float eBN = 1.3F;
+  private float fLa = 1.3F;
   
   public final float getInterpolation(float paramFloat)
   {

@@ -1,235 +1,116 @@
 .class final Lcom/tencent/mm/ui/chatting/ce;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/ui/chatting/cb;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/ChattingImageBGView;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 52
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
+    .line 205
+    const/16 v0, 0x1b
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/cb;-><init>(I)V
 
+    .line 206
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 8
+.method public final a(Landroid/view/LayoutInflater;Landroid/view/View;)Landroid/view/View;
+    .locals 2
 
     .prologue
-    .line 56
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
+    .line 210
+    if-eqz p2, :cond_0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingImageBGView;->a(Lcom/tencent/mm/ui/chatting/ChattingImageBGView;)Landroid/graphics/Bitmap;
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v0
 
-    if-nez v0, :cond_0
+    if-eqz v0, :cond_0
 
-    .line 57
-    const-string/jumbo v0, "!44@/B4Tb64lLpKwUcOR+EdWctGDzfdAEkAyxbpaMbRDirY="
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    const-string/jumbo v1, "want to reset matrix, but bmp is null"
+    move-result-object v0
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v0, Lcom/tencent/mm/ui/chatting/aa$a;
 
-    .line 76
-    :goto_0
-    return-void
+    iget v0, v0, Lcom/tencent/mm/ui/chatting/aa$a;->type:I
 
-    .line 60
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/ce;->eLV:I
+
+    if-eq v0, v1, :cond_1
+
+    .line 211
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
+    new-instance p2, Lcom/tencent/mm/ui/chatting/ax;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/ChattingImageBGView;->a(Lcom/tencent/mm/ui/chatting/ChattingImageBGView;)Landroid/graphics/Bitmap;
+    const v0, 0x7f0a00c7
+
+    invoke-direct {p2, p1, v0}, Lcom/tencent/mm/ui/chatting/ax;-><init>(Landroid/view/LayoutInflater;I)V
+
+    .line 212
+    new-instance v0, Lcom/tencent/mm/ui/chatting/ed;
+
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/ce;->eLV:I
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/ui/chatting/ed;-><init>(I)V
+
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/ui/chatting/ed;->aI(Landroid/view/View;)Lcom/tencent/mm/ui/chatting/aa$a;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
+    invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 61
-    const-string/jumbo v0, "!44@/B4Tb64lLpKwUcOR+EdWctGDzfdAEkAyxbpaMbRDirY="
-
-    const-string/jumbo v1, "want to reset matrix, but measured width error"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 63
+    .line 215
     :cond_1
-    new-instance v0, Landroid/graphics/Matrix;
+    return-object p2
+.end method
 
-    invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
+.method public final a(Lcom/tencent/mm/ui/chatting/aa$a;ILcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ag;Ljava/lang/String;)V
+    .locals 1
 
-    .line 64
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
+    .prologue
+    .line 220
+    check-cast p1, Lcom/tencent/mm/ui/chatting/ed;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingImageBGView;->getMeasuredWidth()I
+    const/4 v0, 0x1
 
-    move-result v1
+    invoke-static {p1, p4, v0, p2, p3}, Lcom/tencent/mm/ui/chatting/ed;->a(Lcom/tencent/mm/ui/chatting/ed;Lcom/tencent/mm/storage/ag;ZILcom/tencent/mm/ui/chatting/ChattingUI$a;)V
 
-    int-to-float v1, v1
+    .line 221
+    return-void
+.end method
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
+.method public final a(Landroid/view/ContextMenu;Landroid/view/View;Lcom/tencent/mm/storage/ag;)Z
+    .locals 1
 
-    invoke-static {v2}, Lcom/tencent/mm/ui/chatting/ChattingImageBGView;->a(Lcom/tencent/mm/ui/chatting/ChattingImageBGView;)Landroid/graphics/Bitmap;
+    .prologue
+    .line 225
+    const/4 v0, 0x0
 
-    move-result-object v2
+    return v0
+.end method
 
-    invoke-virtual {v2}, Landroid/graphics/Bitmap;->getWidth()I
+.method public final a(Landroid/view/MenuItem;Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ag;)Z
+    .locals 1
 
-    move-result v2
+    .prologue
+    .line 230
+    const/4 v0, 0x0
 
-    int-to-float v2, v2
+    return v0
+.end method
 
-    div-float/2addr v1, v2
+.method public final a(Landroid/view/View;Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ag;)Z
+    .locals 1
 
-    .line 65
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
+    .prologue
+    .line 235
+    const/4 v0, 0x0
 
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/chatting/ChattingImageBGView;->getMeasuredHeight()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
-
-    invoke-static {v3}, Lcom/tencent/mm/ui/chatting/ChattingImageBGView;->a(Lcom/tencent/mm/ui/chatting/ChattingImageBGView;)Landroid/graphics/Bitmap;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
-
-    move-result v3
-
-    int-to-float v3, v3
-
-    div-float/2addr v2, v3
-
-    .line 66
-    const-string/jumbo v3, "!44@/B4Tb64lLpKwUcOR+EdWctGDzfdAEkAyxbpaMbRDirY="
-
-    const-string/jumbo v4, "scaleW[%f], scaleH[%f] measured width[%d] measured height[%d]"
-
-    const/4 v5, 0x4
-
-    new-array v5, v5, [Ljava/lang/Object;
-
-    const/4 v6, 0x0
-
-    invoke-static {v1}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v7
-
-    aput-object v7, v5, v6
-
-    const/4 v6, 0x1
-
-    invoke-static {v2}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
-
-    move-result-object v7
-
-    aput-object v7, v5, v6
-
-    const/4 v6, 0x2
-
-    iget-object v7, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
-
-    invoke-virtual {v7}, Lcom/tencent/mm/ui/chatting/ChattingImageBGView;->getMeasuredWidth()I
-
-    move-result v7
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    aput-object v7, v5, v6
-
-    const/4 v6, 0x3
-
-    iget-object v7, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
-
-    invoke-virtual {v7}, Lcom/tencent/mm/ui/chatting/ChattingImageBGView;->getMeasuredHeight()I
-
-    move-result v7
-
-    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v7
-
-    aput-object v7, v5, v6
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 68
-    cmpl-float v3, v1, v2
-
-    if-lez v3, :cond_2
-
-    .line 69
-    invoke-virtual {v0, v1, v1}, Landroid/graphics/Matrix;->setScale(FF)V
-
-    .line 75
-    :goto_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/chatting/ChattingImageBGView;->setImageMatrix(Landroid/graphics/Matrix;)V
-
-    goto/16 :goto_0
-
-    .line 71
-    :cond_2
-    invoke-virtual {v0, v2, v2}, Landroid/graphics/Matrix;->setScale(FF)V
-
-    .line 72
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/ChattingImageBGView;->a(Lcom/tencent/mm/ui/chatting/ChattingImageBGView;)Landroid/graphics/Bitmap;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
-
-    move-result v1
-
-    int-to-float v1, v1
-
-    mul-float/2addr v1, v2
-
-    .line 73
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ce;->iUa:Lcom/tencent/mm/ui/chatting/ChattingImageBGView;
-
-    invoke-virtual {v2}, Lcom/tencent/mm/ui/chatting/ChattingImageBGView;->getMeasuredWidth()I
-
-    move-result v2
-
-    int-to-float v2, v2
-
-    sub-float v1, v2, v1
-
-    const/high16 v2, 0x40000000    # 2.0f
-
-    div-float/2addr v1, v2
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
-
-    goto :goto_1
+    return v0
 .end method

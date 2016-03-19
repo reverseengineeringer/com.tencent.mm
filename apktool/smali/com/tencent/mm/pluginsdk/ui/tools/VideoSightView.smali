@@ -3,86 +3,124 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/pluginsdk/ui/tools/t;
+.implements Lcom/tencent/mm/pluginsdk/ui/tools/f;
 
 
 # instance fields
-.field private fgY:Ljava/lang/String;
+.field private duration:I
 
-.field private hfg:Z
+.field private gxe:Ljava/lang/String;
 
-.field private hfh:Lcom/tencent/mm/pluginsdk/ui/tools/t$a;
+.field private iSR:Z
+
+.field private iSS:Z
 
 
 # direct methods
 .method public constructor <init>(Landroid/content/Context;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 41
+    .line 42
     invoke-direct {p0, p1}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;-><init>(Landroid/content/Context;)V
 
-    .line 42
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->init()V
+    .line 28
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->duration:I
+
+    .line 29
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->iSS:Z
 
     .line 43
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->init()V
+
+    .line 44
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 36
+    .line 37
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 37
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->init()V
+    .line 28
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->duration:I
+
+    .line 29
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->iSS:Z
 
     .line 38
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->init()V
+
+    .line 39
     return-void
 .end method
 
 .method public constructor <init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 31
+    .line 32
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 32
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->init()V
+    .line 28
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->duration:I
+
+    .line 29
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->iSS:Z
 
     .line 33
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->init()V
+
+    .line 34
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;)Lcom/tencent/mm/pluginsdk/ui/tools/t$a;
+.method static synthetic a(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;)I
     .locals 1
 
     .prologue
     .line 22
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->hfh:Lcom/tencent/mm/pluginsdk/ui/tools/t$a;
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->duration:I
 
-    return-object v0
+    return v0
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;I)I
+    .locals 0
+
+    .prologue
+    .line 22
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->duration:I
+
+    return p1
 .end method
 
 .method private init()V
-    .locals 6
+    .locals 2
 
     .prologue
-    const/4 v4, 0x1
+    .line 47
+    sget-object v0, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
 
-    const/4 v5, 0x0
-
-    .line 46
-    sget-object v0, Lcom/tencent/mm/compatible/d/q;->bis:Lcom/tencent/mm/compatible/d/j;
-
-    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bhS:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/d/j;->bsq:Ljava/lang/String;
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -92,61 +130,38 @@
 
     move-result v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_0
 
-    .line 47
+    .line 48
     const-string/jumbo v0, "!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG"
 
     const-string/jumbo v1, "init::use other player"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
-    :cond_0
+    .line 52
     :goto_0
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/an;
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/an;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;)V
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->setOnCompletionListener(Lcom/tencent/mm/plugin/sight/decode/a/b$e;)V
 
-    .line 66
+    .line 79
     return-void
 
-    .line 49
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 50
+    :cond_0
+    const/4 v0, 0x1
 
-    const-string/jumbo v1, "!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss="
-
-    const-string/jumbo v2, "configure: need sound %B"
-
-    new-array v3, v4, [Ljava/lang/Object;
-
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v4
-
-    aput-object v4, v3, v5
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->fho:Lcom/tencent/mm/plugin/sight/decode/a/b$g;
-
-    if-nez v1, :cond_0
-
-    new-instance v1, Lcom/tencent/mm/plugin/sight/decode/a/b$g;
-
-    invoke-direct {v1, v0, v5}, Lcom/tencent/mm/plugin/sight/decode/a/b$g;-><init>(Lcom/tencent/mm/plugin/sight/decode/a/b;B)V
-
-    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->fho:Lcom/tencent/mm/plugin/sight/decode/a/b$g;
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->eD(Z)V
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method public final e(Landroid/content/Context;Z)Z
+.method public final f(Landroid/content/Context;Z)Z
     .locals 6
 
     .prologue
@@ -154,14 +169,32 @@
 
     const/4 v0, 0x0
 
-    .line 149
-    sget-object v2, Lcom/tencent/mm/compatible/d/q;->bis:Lcom/tencent/mm/compatible/d/j;
+    .line 173
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gxe:Ljava/lang/String;
 
-    iget-object v2, v2, Lcom/tencent/mm/compatible/d/j;->bhS:Ljava/lang/String;
+    if-nez v2, :cond_1
+
+    .line 174
+    const-string/jumbo v1, "!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG"
+
+    const-string/jumbo v2, "start::use path is null!"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 200
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 178
+    :cond_1
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
+
+    iget-object v2, v2, Lcom/tencent/mm/compatible/d/j;->bsq:Ljava/lang/String;
 
     const-string/jumbo v3, ""
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -171,9 +204,18 @@
 
     move-result v2
 
-    if-eqz v2, :cond_1
+    if-nez v2, :cond_2
 
-    .line 150
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gxe:Ljava/lang/String;
+
+    invoke-static {v2}, Lcom/tencent/mm/plugin/sight/decode/a/b;->tX(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_4
+
+    .line 180
+    :cond_2
     const-string/jumbo v2, "!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG"
 
     const-string/jumbo v3, "start::use other player, path %s, has called %B"
@@ -182,11 +224,11 @@
 
     new-array v4, v4, [Ljava/lang/Object;
 
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->fgY:Ljava/lang/String;
+    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gxe:Ljava/lang/String;
 
     aput-object v5, v4, v0
 
-    iget-boolean v5, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->hfg:Z
+    iget-boolean v5, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->iSR:Z
 
     invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -194,34 +236,30 @@
 
     aput-object v5, v4, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 151
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->hfg:Z
+    .line 181
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->iSR:Z
 
-    if-eqz v2, :cond_0
+    if-eqz v2, :cond_3
 
-    if-nez p2, :cond_0
+    if-eqz p2, :cond_0
 
-    .line 170
-    :goto_0
-    return v0
-
-    .line 154
-    :cond_0
+    .line 184
+    :cond_3
     new-instance v2, Landroid/content/Intent;
 
     invoke-direct {v2}, Landroid/content/Intent;-><init>()V
 
-    .line 155
+    .line 185
     const-string/jumbo v3, "android.intent.action.VIEW"
 
     invoke-virtual {v2, v3}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 156
+    .line 186
     new-instance v3, Ljava/io/File;
 
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->fgY:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gxe:Ljava/lang/String;
 
     invoke-direct {v3, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
@@ -233,10 +271,10 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/content/Intent;->setDataAndType(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 158
-    :try_start_0
-    sget v3, Lcom/tencent/mm/a$n;->favorite_video:I
+    .line 188
+    const v3, 0x7f0b1453
 
+    :try_start_0
     invoke-virtual {p1, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -249,13 +287,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 166
+    .line 196
     :goto_1
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->hfg:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->iSR:Z
 
     goto :goto_0
 
-    .line 160
+    .line 190
     :catch_0
     move-exception v2
 
@@ -263,77 +301,189 @@
 
     const-string/jumbo v3, "startActivity fail, activity not found"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 161
+    .line 191
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
 
-    sget v3, Lcom/tencent/mm/a$n;->video_file_play_faile:I
+    const v3, 0x7f0b0604
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-static {p1, v2}, Lcom/tencent/mm/ui/base/h;->aN(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {p1, v2}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
     goto :goto_1
 
-    .line 169
-    :cond_1
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->fgY:Ljava/lang/String;
+    .line 199
+    :cond_4
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gxe:Ljava/lang/String;
 
-    invoke-virtual {p0, v2, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->I(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v2, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->P(Ljava/lang/String;Z)V
 
     move v0, v1
 
-    .line 170
-    goto :goto_0
+    .line 200
+    goto/16 :goto_0
+.end method
+
+.method public final g(D)V
+    .locals 6
+
+    .prologue
+    .line 219
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
+
+    const-string/jumbo v1, "!44@/B4Tb64lLpK4fJPZwyrCPCWaM/Ck+mK9pbC9h+HcGss="
+
+    const-string/jumbo v2, "seekToFrame now %f %s"
+
+    const/4 v3, 0x2
+
+    new-array v3, v3, [Ljava/lang/Object;
+
+    const/4 v4, 0x0
+
+    invoke-static {p1, p2}, Ljava/lang/Double;->valueOf(D)Ljava/lang/Double;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    const/4 v4, 0x1
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Lcom/tencent/mm/sdk/platformtools/ad;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v3, v4
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    new-instance v1, Lcom/tencent/mm/plugin/sight/decode/a/b$3;
+
+    invoke-direct {v1, v0, p1, p2}, Lcom/tencent/mm/plugin/sight/decode/a/b$3;-><init>(Lcom/tencent/mm/plugin/sight/decode/a/b;D)V
+
+    const-wide/16 v2, 0x0
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/an/j;->b(Ljava/lang/Runnable;J)Z
+
+    .line 220
+    :cond_0
+    return-void
 .end method
 
 .method public getCurrentPosition()I
     .locals 2
 
     .prologue
-    .line 127
+    .line 150
     const-string/jumbo v0, "!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG"
 
     const-string/jumbo v1, "get current position"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 128
+    .line 151
     const/4 v0, 0x0
 
     return v0
 .end method
 
 .method public getDuration()I
-    .locals 2
+    .locals 4
 
     .prologue
-    .line 133
-    const-string/jumbo v0, "!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG"
+    .line 156
+    invoke-super {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->getDuration()I
 
-    const-string/jumbo v1, "get duration"
+    move-result v0
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    .line 157
+    const-string/jumbo v1, "!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG"
 
-    .line 134
-    const/4 v0, 0x0
+    new-instance v2, Ljava/lang/StringBuilder;
 
+    const-string/jumbo v3, "get duration "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 158
     return v0
+.end method
+
+.method public getLastProgresstime()D
+    .locals 5
+
+    .prologue
+    .line 211
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->getController()Lcom/tencent/mm/plugin/sight/decode/a/b;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    .line 212
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->getController()Lcom/tencent/mm/plugin/sight/decode/a/b;
+
+    move-result-object v0
+
+    iget-wide v1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->gxF:D
+
+    const-wide/high16 v3, -0x4010000000000000L    # -1.0
+
+    cmpl-double v1, v1, v3
+
+    if-eqz v1, :cond_0
+
+    iget-wide v0, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->gxF:D
+
+    .line 214
+    :goto_0
+    return-wide v0
+
+    .line 212
+    :cond_0
+    iget-wide v0, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->gxC:D
+
+    goto :goto_0
+
+    .line 214
+    :cond_1
+    const-wide/16 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method public final isPlaying()Z
     .locals 1
 
     .prologue
-    .line 92
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 113
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->ajp()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->avJ()Z
 
     move-result v0
 
@@ -344,10 +494,15 @@
     .locals 1
 
     .prologue
-    .line 84
+    .line 103
     invoke-super {p0, p1}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->onConfigurationChanged(Landroid/content/res/Configuration;)V
 
-    .line 86
+    .line 104
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->iSS:Z
+
+    if-eqz v0, :cond_0
+
+    .line 106
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -356,12 +511,13 @@
 
     move-result-object v0
 
-    .line 87
+    .line 107
     iget v0, v0, Landroid/util/DisplayMetrics;->widthPixels:I
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->setDrawableWidth(I)V
 
-    .line 88
+    .line 109
+    :cond_0
     return-void
 .end method
 
@@ -369,20 +525,20 @@
     .locals 3
 
     .prologue
-    .line 139
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    .line 163
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "UIStatusChanged"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/decode/a/b;->ajr()Lcom/tencent/mm/sdk/c/e;
+    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/decode/a/b;->avL()Lcom/tencent/mm/sdk/c/c;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
-    .line 140
+    .line 164
     return-void
 .end method
 
@@ -390,15 +546,15 @@
     .locals 5
 
     .prologue
-    .line 75
+    .line 88
     invoke-super/range {p0 .. p5}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->onLayout(ZIIII)V
 
-    .line 76
+    .line 89
     const-string/jumbo v0, "!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG"
 
-    const-string/jumbo v1, "ashutest::on layout changed %B, %d %d %d %d"
+    const-string/jumbo v1, "ashutest::on layout changed %B, %d %d %d %d %s"
 
-    const/4 v2, 0x5
+    const/4 v2, 0x6
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -442,19 +598,33 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v3, 0x5
 
-    .line 77
+    iget-boolean v4, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gyy:Z
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 90
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gyy:Z
+
+    if-eqz v0, :cond_0
+
     sub-int v0, p4, p2
 
     if-lez v0, :cond_0
 
-    .line 78
+    .line 91
     sub-int v0, p4, p2
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->setDrawableWidth(I)V
 
-    .line 80
+    .line 93
     :cond_0
     return-void
 .end method
@@ -463,10 +633,10 @@
     .locals 0
 
     .prologue
-    .line 70
+    .line 83
     invoke-super {p0, p1, p2}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->onMeasure(II)V
 
-    .line 71
+    .line 84
     return-void
 .end method
 
@@ -474,14 +644,25 @@
     .locals 2
 
     .prologue
-    .line 111
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->fgY:Ljava/lang/String;
+    .line 133
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gxe:Ljava/lang/String;
 
     const/4 v1, 0x1
 
-    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->I(Ljava/lang/String;Z)V
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->P(Ljava/lang/String;Z)V
 
-    .line 112
+    .line 134
+    return-void
+.end method
+
+.method public setEnableConfigChanged(Z)V
+    .locals 0
+
+    .prologue
+    .line 98
+    iput-boolean p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->iSS:Z
+
+    .line 99
     return-void
 .end method
 
@@ -489,29 +670,59 @@
     .locals 0
 
     .prologue
-    .line 118
+    .line 139
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->setLoopImp(Z)V
+
+    .line 140
     return-void
+.end method
+
+.method public setPlayProgressCallback(Z)V
+    .locals 1
+
+    .prologue
+    .line 224
+    if-eqz p1, :cond_0
+
+    .line 225
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$2;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView$2;-><init>(Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;)V
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->setOnDecodeDurationListener(Lcom/tencent/mm/plugin/sight/decode/a/b$f;)V
+
+    .line 239
+    :goto_0
+    return-void
+
+    .line 237
+    :cond_0
+    const/4 v0, 0x0
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->setOnDecodeDurationListener(Lcom/tencent/mm/plugin/sight/decode/a/b$f;)V
+
+    goto :goto_0
 .end method
 
 .method public setThumb(Landroid/graphics/Bitmap;)V
     .locals 0
 
     .prologue
-    .line 176
+    .line 206
     invoke-virtual {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->m(Landroid/graphics/Bitmap;)V
 
-    .line 177
+    .line 207
     return-void
 .end method
 
-.method public setVideoCallback(Lcom/tencent/mm/pluginsdk/ui/tools/t$a;)V
+.method public setVideoCallback(Lcom/tencent/mm/pluginsdk/ui/tools/f$a;)V
     .locals 0
 
     .prologue
-    .line 122
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->hfh:Lcom/tencent/mm/pluginsdk/ui/tools/t$a;
+    .line 144
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
-    .line 123
+    .line 145
     return-void
 .end method
 
@@ -521,64 +732,73 @@
     .prologue
     const/4 v1, 0x1
 
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    .line 97
-    const-string/jumbo v2, "!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG"
+    .line 118
+    const-string/jumbo v3, "!32@/B4Tb64lLpLxD5nHaNBo4uNW5qSmIaVG"
 
-    const-string/jumbo v3, "set sight path %s, callback null ? %B"
+    const-string/jumbo v4, "set sight path %s, callback null ? %B"
 
-    const/4 v4, 0x2
+    const/4 v0, 0x2
 
-    new-array v4, v4, [Ljava/lang/Object;
+    new-array v5, v0, [Ljava/lang/Object;
 
-    aput-object p1, v4, v0
+    aput-object p1, v5, v2
 
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->hfh:Lcom/tencent/mm/pluginsdk/ui/tools/t$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
-    if-nez v5, :cond_0
+    if-nez v0, :cond_1
 
     move v0, v1
 
-    :cond_0
+    :goto_0
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    aput-object v0, v4, v1
+    aput-object v0, v5, v1
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 98
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->fgY:Ljava/lang/String;
+    .line 119
+    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->duration:I
 
-    .line 99
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->hfh:Lcom/tencent/mm/pluginsdk/ui/tools/t$a;
+    .line 120
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gxe:Ljava/lang/String;
 
-    if-eqz v0, :cond_1
+    .line 121
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
-    .line 100
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->hfh:Lcom/tencent/mm/pluginsdk/ui/tools/t$a;
+    if-eqz v0, :cond_0
 
-    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/t$a;->Ru()V
+    .line 122
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->gyx:Lcom/tencent/mm/pluginsdk/ui/tools/f$a;
 
-    .line 102
-    :cond_1
+    invoke-interface {v0}, Lcom/tencent/mm/pluginsdk/ui/tools/f$a;->Xq()V
+
+    .line 124
+    :cond_0
     return-void
+
+    :cond_1
+    move v0, v2
+
+    .line 118
+    goto :goto_0
 .end method
 
 .method public final start()Z
     .locals 2
 
     .prologue
-    .line 144
+    .line 168
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
     const/4 v1, 0x0
 
-    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->e(Landroid/content/Context;Z)Z
+    invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/pluginsdk/ui/tools/VideoSightView;->f(Landroid/content/Context;Z)Z
 
     move-result v0
 
@@ -589,11 +809,11 @@
     .locals 1
 
     .prologue
-    .line 106
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 128
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->clear()V
 
-    .line 107
+    .line 129
     return-void
 .end method

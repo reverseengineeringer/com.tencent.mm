@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aPP()Z
+.method public abstract bgd()Z
 .end method

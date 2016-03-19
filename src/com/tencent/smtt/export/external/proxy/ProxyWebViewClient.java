@@ -8,6 +8,7 @@ import com.tencent.smtt.export.external.interfaces.IX5WebViewBase;
 import com.tencent.smtt.export.external.interfaces.IX5WebViewClient;
 import com.tencent.smtt.export.external.interfaces.SslError;
 import com.tencent.smtt.export.external.interfaces.SslErrorHandler;
+import com.tencent.smtt.export.external.interfaces.WebResourceRequest;
 import com.tencent.smtt.export.external.interfaces.WebResourceResponse;
 
 public abstract class ProxyWebViewClient
@@ -22,12 +23,24 @@ public abstract class ProxyWebViewClient
     }
   }
   
+  public boolean notifyHideADWebview()
+  {
+    return false;
+  }
+  
+  public boolean notifyLoadADUrl(String paramString)
+  {
+    return false;
+  }
+  
   public void onContentSizeChanged(IX5WebViewBase paramIX5WebViewBase, int paramInt1, int paramInt2)
   {
     if (mWebViewClient != null) {
       mWebViewClient.onContentSizeChanged(paramIX5WebViewBase, paramInt1, paramInt2);
     }
   }
+  
+  public void onDetectedBlankScreen(IX5WebViewBase paramIX5WebViewBase, String paramString, int paramInt) {}
   
   public void onFormResubmission(IX5WebViewBase paramIX5WebViewBase, Message paramMessage1, Message paramMessage2)
   {
@@ -109,6 +122,14 @@ public abstract class ProxyWebViewClient
   public void setWebViewClient(IX5WebViewClient paramIX5WebViewClient)
   {
     mWebViewClient = paramIX5WebViewClient;
+  }
+  
+  public WebResourceResponse shouldInterceptRequest(IX5WebViewBase paramIX5WebViewBase, WebResourceRequest paramWebResourceRequest)
+  {
+    if (mWebViewClient != null) {
+      return mWebViewClient.shouldInterceptRequest(paramIX5WebViewBase, paramWebResourceRequest);
+    }
+    return null;
   }
   
   public WebResourceResponse shouldInterceptRequest(IX5WebViewBase paramIX5WebViewBase, String paramString)

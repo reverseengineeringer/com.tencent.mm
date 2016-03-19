@@ -1,17 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import java.util.ArrayList;
 
 public final class fa
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azO = new a();
   
   public fa()
   {
-    id = "OmitAllFailSnsMsg";
-    hXT = atO;
+    id = "GetAllNeedResendSns";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public ArrayList azP;
   }
 }
 

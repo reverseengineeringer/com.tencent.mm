@@ -1,27 +1,23 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ab
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a auQ = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atq = new a();
   
   public ab()
   {
-    id = "CreateOrJoinChatroom";
-    hXT = atO;
+    id = "CheckF2FCameraIsOpen";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int action = 0;
-    public String[] atX;
-    public Context context;
-    public String[] selectionArgs;
+    public boolean atr;
   }
 }
 

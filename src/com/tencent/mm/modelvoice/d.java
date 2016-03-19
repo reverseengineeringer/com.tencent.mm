@@ -8,23 +8,25 @@ public abstract interface d
   
   public abstract void ak(boolean paramBoolean);
   
+  public abstract boolean c(String paramString, boolean paramBoolean, int paramInt);
+  
   public abstract int getStatus();
   
   public abstract boolean isPlaying();
   
-  public abstract boolean ma();
+  public abstract boolean lB();
   
-  public abstract boolean mg();
+  public abstract double lE();
   
-  public abstract double mi();
-  
-  public abstract boolean o(String paramString, boolean paramBoolean);
+  public abstract boolean lv();
   
   public abstract boolean pause();
   
+  public abstract boolean s(String paramString, boolean paramBoolean);
+  
   public static abstract interface a
   {
-    public abstract void mk();
+    public abstract void lG();
   }
   
   public static abstract interface b

@@ -1,35 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
+import com.tencent.mm.sdk.c.b;
 
 public final class he
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEt = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aCT = new a();
   
   public he()
   {
-    id = "SendAppMsg";
-    hXT = atO;
+    id = "NewYearClearRedDot";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public WXMediaMessage aAd;
-    public String aDp;
-    public String aEA;
-    public String aEB;
-    public int aEu;
-    public String aEv;
-    public String aEw;
-    public String aEx;
-    public String aEy;
-    public String aEz;
-    public String appId;
-    public String appName;
+    public int asc;
   }
 }
 

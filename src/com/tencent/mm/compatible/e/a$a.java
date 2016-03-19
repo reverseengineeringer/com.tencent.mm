@@ -5,15 +5,15 @@ import java.util.Locale;
 
 public final class a$a
 {
-  public int bjn;
-  public int bjo;
-  public int bjp;
-  public SparseArray bjq;
-  public String pkgName;
+  public String alS;
+  public int btP;
+  public int btQ;
+  public int btR;
+  public SparseArray btS;
   
   public final String toString()
   {
-    return String.format(Locale.US, "pkgname: %s, minCode:%d, maxCode: %d, value: %s, chkExp: %d", new Object[] { pkgName, Integer.valueOf(bjn), Integer.valueOf(bjo), bjq, Integer.valueOf(bjp) });
+    return String.format(Locale.US, "pkgname: %s, minCode:%d, maxCode: %d, value: %s, chkExp: %d", new Object[] { alS, Integer.valueOf(btP), Integer.valueOf(btQ), btS, Integer.valueOf(btR) });
   }
 }
 

@@ -13,11 +13,11 @@
 
 
 # instance fields
-.field public jnW:Ljava/lang/String;
+.field public ltn:Ljava/lang/String;
 
-.field private jnX:Lcom/tencent/mm/ui/e/a/c$b;
+.field private lto:Lcom/tencent/mm/ui/e/a/c$b;
 
-.field private jnY:Lcom/tencent/mm/ui/e/a/c$a;
+.field private ltp:Lcom/tencent/mm/ui/e/a/c$a;
 
 
 # direct methods
@@ -35,19 +35,19 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/e/a/c$b;-><init>(Lcom/tencent/mm/ui/e/a/c;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e/a/c;->jnX:Lcom/tencent/mm/ui/e/a/c$b;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e/a/c;->lto:Lcom/tencent/mm/ui/e/a/c$b;
 
     .line 91
     new-instance v0, Lcom/tencent/mm/ui/e/a/c$a;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/e/a/c$a;-><init>(Lcom/tencent/mm/ui/e/a/c;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e/a/c;->jnY:Lcom/tencent/mm/ui/e/a/c$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e/a/c;->ltp:Lcom/tencent/mm/ui/e/a/c$a;
 
     .line 70
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/e/a/a;->jnL:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/e/a/a;->ltd:Z
 
     .line 71
     return-void
@@ -55,12 +55,12 @@
 
 
 # virtual methods
-.method public final IR()Lcom/tencent/mm/ui/e/a/a$b;
+.method public final Le()Lcom/tencent/mm/ui/e/a/a$b;
     .locals 1
 
     .prologue
     .line 88
-    iget-object v0, p0, Lcom/tencent/mm/ui/e/a/c;->jnX:Lcom/tencent/mm/ui/e/a/c$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e/a/c;->lto:Lcom/tencent/mm/ui/e/a/c$b;
 
     return-object v0
 .end method
@@ -74,9 +74,9 @@
     const/4 v5, 0x0
 
     .line 75
-    iget v0, p0, Lcom/tencent/mm/ui/e/a/a;->eVv:I
+    iget v0, p0, Lcom/tencent/mm/ui/e/a/a;->ggB:I
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsearch/h;->dr(I)I
+    invoke-static {v0}, Lcom/tencent/mm/modelsearch/f;->dG(I)I
 
     move-result v0
 
@@ -86,7 +86,7 @@
     .line 77
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e/a/c;->jnW:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e/a/c;->ltn:Ljava/lang/String;
 
     .line 82
     :goto_0
@@ -96,11 +96,11 @@
 
     new-array v2, v6, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/e/a/c;->jnW:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/e/a/c;->ltn:Ljava/lang/String;
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 83
     return-void
@@ -111,7 +111,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$n;->search_contact_button_find_more:I
+    const v2, 0x7f0b0fca
 
     new-array v3, v6, [Ljava/lang/Object;
 
@@ -129,7 +129,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e/a/c;->jnW:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e/a/c;->ltn:Ljava/lang/String;
 
     goto :goto_0
 .end method

@@ -1,11 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-
 public final class z$a
 {
-  public String auL;
-  public Context context;
+  public int ato;
 }
 
 /* Location:

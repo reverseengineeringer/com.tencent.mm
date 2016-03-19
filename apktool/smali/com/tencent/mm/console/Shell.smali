@@ -13,15 +13,15 @@
 
 
 # static fields
-.field private static bkB:Ljava/util/HashMap;
+.field private static bvf:Ljava/util/HashMap;
 
-.field private static bkC:Landroid/content/IntentFilter;
+.field private static bvg:Landroid/content/IntentFilter;
 
-.field private static bkD:Ljava/lang/Runnable;
+.field private static bvh:Ljava/lang/Runnable;
 
 
 # instance fields
-.field private bkA:Lcom/tencent/mm/console/Shell$Receiver;
+.field private bve:Lcom/tencent/mm/console/Shell$Receiver;
 
 
 # direct methods
@@ -29,89 +29,98 @@
     .locals 2
 
     .prologue
-    .line 30
+    .line 29
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/console/Shell;->bkB:Ljava/util/HashMap;
+    sput-object v0, Lcom/tencent/mm/console/Shell;->bvf:Ljava/util/HashMap;
 
-    .line 32
+    .line 31
     new-instance v0, Landroid/content/IntentFilter;
 
     invoke-direct {v0}, Landroid/content/IntentFilter;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/console/Shell;->bkC:Landroid/content/IntentFilter;
+    sput-object v0, Lcom/tencent/mm/console/Shell;->bvg:Landroid/content/IntentFilter;
 
-    .line 34
+    .line 33
     const-string/jumbo v0, "wechat.shell.SET_NEXTRET"
 
-    new-instance v1, Lcom/tencent/mm/console/n;
+    new-instance v1, Lcom/tencent/mm/console/Shell$1;
 
-    invoke-direct {v1}, Lcom/tencent/mm/console/n;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/console/Shell$1;-><init>()V
 
     invoke-static {v0, v1}, Lcom/tencent/mm/console/Shell;->a(Ljava/lang/String;Lcom/tencent/mm/console/Shell$a;)V
 
-    .line 49
+    .line 48
     const-string/jumbo v0, "wechat.shell.SET_LOGLEVEL"
 
-    new-instance v1, Lcom/tencent/mm/console/o;
+    new-instance v1, Lcom/tencent/mm/console/Shell$2;
 
-    invoke-direct {v1}, Lcom/tencent/mm/console/o;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/console/Shell$2;-><init>()V
 
     invoke-static {v0, v1}, Lcom/tencent/mm/console/Shell;->a(Ljava/lang/String;Lcom/tencent/mm/console/Shell$a;)V
 
-    .line 60
+    .line 59
     const-string/jumbo v0, "wechat.shell.SET_CDNTRANS"
 
-    new-instance v1, Lcom/tencent/mm/console/p;
+    new-instance v1, Lcom/tencent/mm/console/Shell$3;
 
-    invoke-direct {v1}, Lcom/tencent/mm/console/p;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/console/Shell$3;-><init>()V
 
     invoke-static {v0, v1}, Lcom/tencent/mm/console/Shell;->a(Ljava/lang/String;Lcom/tencent/mm/console/Shell$a;)V
 
-    .line 70
+    .line 69
     const-string/jumbo v0, "wechat.shell.SET_DKTEST"
 
-    new-instance v1, Lcom/tencent/mm/console/q;
+    new-instance v1, Lcom/tencent/mm/console/Shell$4;
 
-    invoke-direct {v1}, Lcom/tencent/mm/console/q;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/console/Shell$4;-><init>()V
 
     invoke-static {v0, v1}, Lcom/tencent/mm/console/Shell;->a(Ljava/lang/String;Lcom/tencent/mm/console/Shell$a;)V
 
     .line 92
     const-string/jumbo v0, "wechat.shell.NET_DNS_TEST"
 
-    new-instance v1, Lcom/tencent/mm/console/r;
+    new-instance v1, Lcom/tencent/mm/console/Shell$5;
 
-    invoke-direct {v1}, Lcom/tencent/mm/console/r;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/console/Shell$5;-><init>()V
 
     invoke-static {v0, v1}, Lcom/tencent/mm/console/Shell;->a(Ljava/lang/String;Lcom/tencent/mm/console/Shell$a;)V
 
     .line 102
     const-string/jumbo v0, "wechat.shell.IDC_ERROR"
 
-    new-instance v1, Lcom/tencent/mm/console/s;
+    new-instance v1, Lcom/tencent/mm/console/Shell$6;
 
-    invoke-direct {v1}, Lcom/tencent/mm/console/s;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/console/Shell$6;-><init>()V
 
     invoke-static {v0, v1}, Lcom/tencent/mm/console/Shell;->a(Ljava/lang/String;Lcom/tencent/mm/console/Shell$a;)V
 
     .line 113
     const-string/jumbo v0, "wechat.shell.SET_DK_WT_TEST"
 
-    new-instance v1, Lcom/tencent/mm/console/t;
+    new-instance v1, Lcom/tencent/mm/console/Shell$7;
 
-    invoke-direct {v1}, Lcom/tencent/mm/console/t;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/console/Shell$7;-><init>()V
 
     invoke-static {v0, v1}, Lcom/tencent/mm/console/Shell;->a(Ljava/lang/String;Lcom/tencent/mm/console/Shell$a;)V
 
-    .line 128
-    new-instance v0, Lcom/tencent/mm/console/u;
+    .line 124
+    const-string/jumbo v0, "wechat.shell.SET_MUTE_ROOM_TEST"
 
-    invoke-direct {v0}, Lcom/tencent/mm/console/u;-><init>()V
+    new-instance v1, Lcom/tencent/mm/console/Shell$8;
 
-    sput-object v0, Lcom/tencent/mm/console/Shell;->bkD:Ljava/lang/Runnable;
+    invoke-direct {v1}, Lcom/tencent/mm/console/Shell$8;-><init>()V
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/console/Shell;->a(Ljava/lang/String;Lcom/tencent/mm/console/Shell$a;)V
+
+    .line 138
+    new-instance v0, Lcom/tencent/mm/console/Shell$9;
+
+    invoke-direct {v0}, Lcom/tencent/mm/console/Shell$9;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/console/Shell;->bvh:Ljava/lang/Runnable;
 
     return-void
 .end method
@@ -120,15 +129,15 @@
     .locals 1
 
     .prologue
-    .line 24
+    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
+    .line 27
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/console/Shell;->bkA:Lcom/tencent/mm/console/Shell$Receiver;
+    iput-object v0, p0, Lcom/tencent/mm/console/Shell;->bve:Lcom/tencent/mm/console/Shell$Receiver;
 
-    .line 168
+    .line 178
     return-void
 .end method
 
@@ -136,34 +145,34 @@
     .locals 1
 
     .prologue
-    .line 160
-    sget-object v0, Lcom/tencent/mm/console/Shell;->bkC:Landroid/content/IntentFilter;
+    .line 170
+    sget-object v0, Lcom/tencent/mm/console/Shell;->bvg:Landroid/content/IntentFilter;
 
     invoke-virtual {v0, p0}, Landroid/content/IntentFilter;->addAction(Ljava/lang/String;)V
 
-    .line 161
-    sget-object v0, Lcom/tencent/mm/console/Shell;->bkB:Ljava/util/HashMap;
+    .line 171
+    sget-object v0, Lcom/tencent/mm/console/Shell;->bvf:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 162
+    .line 172
     return-void
 .end method
 
-.method static synthetic qd()V
+.method static synthetic pW()V
     .locals 0
 
     .prologue
-    .line 24
+    .line 23
     return-void
 .end method
 
-.method static synthetic qe()Ljava/util/HashMap;
+.method static synthetic pX()Ljava/util/HashMap;
     .locals 1
 
     .prologue
-    .line 24
-    sget-object v0, Lcom/tencent/mm/console/Shell;->bkB:Ljava/util/HashMap;
+    .line 23
+    sget-object v0, Lcom/tencent/mm/console/Shell;->bvf:Ljava/util/HashMap;
 
     return-object v0
 .end method

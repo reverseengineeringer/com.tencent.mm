@@ -3,46 +3,88 @@ package com.tencent.mm.model;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
-import com.tencent.mm.compatible.util.j;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
-public enum aw
+public class aw
 {
-  private final SharedPreferences boF = aa.getContext().getSharedPreferences(aa.aES(), 0);
+  private static aw bCx;
+  public final SharedPreferences bxg = y.getContext().getSharedPreferences(y.aUK(), 0);
   
-  private aw() {}
-  
-  public final void c(String paramString1, int paramInt, String paramString2)
+  public static aw uB()
   {
-    int i = 0;
-    if (paramInt != 0) {
-      i = 1;
+    try
+    {
+      if (bCx == null) {
+        bCx = new aw();
+      }
+      return bCx;
     }
-    paramInt = i;
-    if (!bn.iW(paramString2)) {
-      paramInt = i | 0x2;
-    }
-    i = paramInt;
-    if (!bn.iW(paramString1)) {
-      i = paramInt | 0x4;
-    }
-    x("last_bind_info", String.valueOf(i));
+    finally {}
   }
   
-  public final void x(String paramString1, String paramString2)
+  public static final class a
   {
-    t.d("!32@/B4Tb64lLpKi2lXvYwKJe8aax+f9N9cy", "save key : %s value : %s", new Object[] { paramString1, paramString2 });
-    boF.edit().putString(paramString1, paramString2).commit();
-    if (paramString1.equals("login_weixin_username")) {
-      aa.getContext().getSharedPreferences("notify_key_pref_no_account", j.pj()).edit().putString("login_weixin_username", paramString2).commit();
+    private int bCA;
+    private int bCy;
+    private int bCz;
+    private int id;
+    
+    public final a cK(int paramInt)
+    {
+      bCy = paramInt;
+      return this;
     }
-  }
-  
-  public final String y(String paramString1, String paramString2)
-  {
-    return boF.getString(paramString1, paramString2);
+    
+    public final a cL(int paramInt)
+    {
+      bCz = paramInt;
+      return this;
+    }
+    
+    public final a cM(int paramInt)
+    {
+      bCA = paramInt;
+      return this;
+    }
+    
+    public final boolean commit()
+    {
+      SharedPreferences.Editor localEditor = aw.a(aw.uB()).edit();
+      if (id > 0)
+      {
+        localEditor.putInt("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=style_id", id);
+        if (bCy <= 0) {
+          break label171;
+        }
+        localEditor.putInt("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=new_flow", bCy);
+        label52:
+        if (bCz <= 0) {
+          break label183;
+        }
+        localEditor.putInt("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=has_password", bCz);
+        label72:
+        if (bCA <= 0) {
+          break label195;
+        }
+        localEditor.putInt("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=has_AVATAR", bCA);
+      }
+      for (;;)
+      {
+        u.i("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=", "id: " + id + " newFlow: " + bCy + "hasPassword:" + bCz + "hasAvatar:" + bCA);
+        return localEditor.commit();
+        localEditor.remove("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=style_id");
+        break;
+        label171:
+        localEditor.remove("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=new_flow");
+        break label52;
+        label183:
+        localEditor.remove("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=has_password");
+        break label72;
+        label195:
+        localEditor.remove("!44@/B4Tb64lLpIq8/rz82HB73s3T0aShOZicGQMdPpMx80=has_AVATAR");
+      }
+    }
   }
 }
 

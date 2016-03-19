@@ -3,21 +3,21 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d;
+.implements Lcom/tencent/mm/r/d;
 
 
 # instance fields
-.field private aMQ:Ljava/lang/String;
+.field private aBH:Ljava/lang/String;
 
-.field private bXB:Landroid/app/ProgressDialog;
+.field private coM:Landroid/app/ProgressDialog;
 
-.field private eKH:Ljava/lang/String;
+.field private fVt:Ljava/lang/String;
 
-.field private eKI:Z
+.field private fVu:Z
 
-.field private eKJ:Landroid/widget/Button;
+.field private fVv:Landroid/widget/Button;
 
-.field private eKK:Ljava/lang/String;
+.field private fVw:Ljava/lang/String;
 
 
 # direct methods
@@ -31,12 +31,12 @@
     .line 51
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKI:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVu:Z
 
     .line 53
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->coM:Landroid/app/ProgressDialog;
 
     return-void
 .end method
@@ -46,7 +46,7 @@
 
     .prologue
     .line 32
-    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->coM:Landroid/app/ProgressDialog;
 
     return-object p1
 .end method
@@ -56,25 +56,25 @@
 
     .prologue
     .line 32
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKI:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVu:Z
 
     return v0
 .end method
 
-.method private afy()V
+.method private aqG()V
     .locals 1
 
     .prologue
     .line 166
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKK:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVw:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->iZ(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
 
     .line 167
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->cancel()V
 
     .line 168
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->aLy()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->bbm()V
 
     .line 169
     return-void
@@ -85,7 +85,7 @@
 
     .prologue
     .line 32
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->aMQ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->aBH:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -95,7 +95,7 @@
 
     .prologue
     .line 32
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKH:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVt:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -105,42 +105,42 @@
 
     .prologue
     .line 32
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->afy()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->aqG()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 2
 
     .prologue
     .line 109
-    sget v0, Lcom/tencent/mm/a$n;->safe_device_verify_phone_title:I
+    const v0, 0x7f0b07ae
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->qb(I)V
 
     .line 111
-    sget v0, Lcom/tencent/mm/a$i;->operation_btn:I
+    const v0, 0x7f070b02
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/w;
+    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/w;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI$1;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 133
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKI:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVu:Z
 
     if-nez v0, :cond_0
 
     .line 134
-    sget v0, Lcom/tencent/mm/a$i;->close_account_protect_btn:I
+    const v0, 0x7f070afb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->findViewById(I)Landroid/view/View;
 
@@ -148,37 +148,37 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKJ:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVv:Landroid/widget/Button;
 
     .line 135
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKJ:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVv:Landroid/widget/Button;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
     .line 136
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKJ:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVv:Landroid/widget/Button;
 
-    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/y;
+    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/y;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI$2;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 155
     :cond_0
-    new-instance v0, Lcom/tencent/mm/plugin/safedevice/ui/z;
+    new-instance v0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI$3;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/safedevice/ui/z;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI$3;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 163
     return-void
 .end method
 
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
     .locals 5
 
     .prologue
@@ -189,11 +189,11 @@
     const/4 v1, 0x1
 
     .line 173
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->coM:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->coM:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -202,12 +202,12 @@
     if-eqz v0, :cond_0
 
     .line 174
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->coM:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 175
-    iput-object v4, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object v4, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->coM:Landroid/app/ProgressDialog;
 
     .line 178
     :cond_0
@@ -216,14 +216,14 @@
     if-nez p2, :cond_3
 
     .line 179
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKI:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVu:Z
 
     if-nez v0, :cond_2
 
     .line 182
-    check-cast p4, Lcom/tencent/mm/modelfriend/ag;
+    check-cast p4, Lcom/tencent/mm/modelfriend/u;
 
-    invoke-virtual {p4}, Lcom/tencent/mm/modelfriend/ag;->xX()Ljava/lang/String;
+    invoke-virtual {p4}, Lcom/tencent/mm/modelfriend/u;->yO()Ljava/lang/String;
 
     move-result-object v0
 
@@ -237,7 +237,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKH:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVt:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -257,7 +257,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 189
     new-instance v2, Landroid/content/Intent;
@@ -274,14 +274,14 @@
     .line 191
     const-string/jumbo v0, "binded_mobile"
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->aMQ:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->aBH:Ljava/lang/String;
 
     invoke-virtual {v2, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 192
     const-string/jumbo v0, "re_open_verify"
 
-    iget-boolean v3, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKI:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVu:Z
 
     invoke-virtual {v2, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
@@ -301,7 +301,7 @@
     invoke-virtual {v2, v0, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
     .line 194
-    invoke-static {p0, v2}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->q(Landroid/content/Context;Landroid/content/Intent;)V
+    invoke-static {p0, v2}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->v(Landroid/content/Context;Landroid/content/Intent;)V
 
     .line 195
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->getIntent()Landroid/content/Intent;
@@ -328,19 +328,19 @@
 
     .line 184
     :cond_2
-    check-cast p4, Lcom/tencent/mm/modelfriend/aj;
+    check-cast p4, Lcom/tencent/mm/modelfriend/v;
 
-    iget-object v0, p4, Lcom/tencent/mm/modelfriend/aj;->apJ:Lcom/tencent/mm/q/a;
+    iget-object v0, p4, Lcom/tencent/mm/modelfriend/v;->anN:Lcom/tencent/mm/r/a;
 
-    iget-object v0, v0, Lcom/tencent/mm/q/a;->bsU:Lcom/tencent/mm/q/a$c;
+    iget-object v0, v0, Lcom/tencent/mm/r/a;->bEX:Lcom/tencent/mm/r/a$c;
 
-    iget-object v0, v0, Lcom/tencent/mm/q/a$c;->btb:Lcom/tencent/mm/al/a;
+    iget-object v0, v0, Lcom/tencent/mm/r/a$c;->bFf:Lcom/tencent/mm/at/a;
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/dt;
+    check-cast v0, Lcom/tencent/mm/protocal/b/eo;
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/dt;
+    check-cast v0, Lcom/tencent/mm/protocal/b/eo;
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/dt;->hkx:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/protocal/b/eo;->iZk:Ljava/lang/String;
 
     goto :goto_0
 
@@ -353,16 +353,16 @@
     :goto_2
     if-nez v0, :cond_1
 
-    sget-object v0, Lcom/tencent/mm/plugin/a/a;->bWX:Lcom/tencent/mm/pluginsdk/i;
+    sget-object v0, Lcom/tencent/mm/plugin/a/a;->cob:Lcom/tencent/mm/pluginsdk/f;
 
-    invoke-interface {v0, p0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/i;->a(Landroid/content/Context;IILjava/lang/String;)Z
+    invoke-interface {v0, p0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/f;->a(Landroid/content/Context;IILjava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 202
-    sget v0, Lcom/tencent/mm/a$n;->safe_device_send_verify_code_failed:I
+    const v0, 0x7f0b07b5
 
     const/4 v3, 0x2
 
@@ -394,7 +394,7 @@
 
     .line 199
     :sswitch_0
-    sget v0, Lcom/tencent/mm/a$n;->app_err_system_busy_tip:I
+    const v0, 0x7f0b00c6
 
     invoke-static {p0, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -407,7 +407,7 @@
     goto :goto_2
 
     :sswitch_1
-    sget v0, Lcom/tencent/mm/a$n;->bind_mcontact_err_freq_limit:I
+    const v0, 0x7f0b0537
 
     invoke-static {p0, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -420,7 +420,7 @@
     goto :goto_2
 
     :sswitch_2
-    sget v0, Lcom/tencent/mm/a$n;->bind_mcontact_err_format:I
+    const v0, 0x7f0b053c
 
     invoke-static {p0, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -433,11 +433,11 @@
     goto :goto_2
 
     :sswitch_3
-    sget v0, Lcom/tencent/mm/a$n;->bind_mcontact_err_BindPhone_NeedAdjust:I
+    const v0, 0x7f0b053a
 
-    sget v3, Lcom/tencent/mm/a$n;->app_tip:I
+    const v3, 0x7f0b0ddd
 
-    invoke-static {p0, v0, v3, v4}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {p0, v0, v3, v4}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
     move v0, v1
 
@@ -458,7 +458,7 @@
 
     .prologue
     .line 59
-    sget v0, Lcom/tencent/mm/a$k;->security_account_intro:I
+    const v0, 0x7f0a0378
 
     return v0
 .end method
@@ -481,7 +481,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKH:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVt:Ljava/lang/String;
 
     .line 66
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->getIntent()Landroid/content/Intent;
@@ -494,7 +494,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->aMQ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->aBH:Ljava/lang/String;
 
     .line 67
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->getIntent()Landroid/content/Intent;
@@ -509,7 +509,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKI:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVu:Z
 
     .line 68
     const-string/jumbo v0, "!44@/B4Tb64lLpLCHt2tgayO4+XlFyFQ+G0BHJ5MwErQ6I4="
@@ -520,7 +520,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKH:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVt:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -530,17 +530,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 69
-    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->DR()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->FX()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVw:Ljava/lang/String;
 
     .line 70
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->Gb()V
 
     .line 71
     return-void
@@ -566,7 +566,7 @@
     if-nez v0, :cond_0
 
     .line 100
-    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->afy()V
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->aqG()V
 
     .line 101
     const/4 v0, 0x1
@@ -591,25 +591,25 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->onPause()V
 
     .line 89
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x91
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 90
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x84
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 91
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKI:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVu:Z
 
     if-nez v0, :cond_0
 
@@ -620,7 +620,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v2
 
@@ -654,7 +654,7 @@
 
     const-string/jumbo v2, "L600_100"
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v2
 
@@ -687,25 +687,25 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->onResume()V
 
     .line 76
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x91
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     .line 77
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x84
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     .line 78
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->eKI:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/SecurityAccountIntroUI;->fVu:Z
 
     if-nez v0, :cond_0
 
@@ -716,7 +716,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v2
 
@@ -750,7 +750,7 @@
 
     const-string/jumbo v2, "L600_100"
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v2
 
@@ -773,7 +773,7 @@
     .line 81
     const-string/jumbo v0, "L600_100"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->iY(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kB(Ljava/lang/String;)V
 
     .line 84
     :cond_0

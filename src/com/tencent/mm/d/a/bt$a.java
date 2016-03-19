@@ -1,10 +1,11 @@
 package com.tencent.mm.d.a;
 
-import android.database.Cursor;
+import android.content.Context;
 
 public final class bt$a
 {
-  public Cursor awN;
+  public String auQ;
+  public Context context;
 }
 
 /* Location:

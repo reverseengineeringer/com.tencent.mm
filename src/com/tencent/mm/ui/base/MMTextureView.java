@@ -7,16 +7,21 @@ import android.os.Build.VERSION;
 import android.util.AttributeSet;
 import android.view.TextureView;
 import com.tencent.mm.compatible.d.j;
-import com.tencent.mm.compatible.d.q;
-import com.tencent.mm.compatible.util.e;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.compatible.d.p;
+import com.tencent.mm.compatible.util.c;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.reflect.Field;
 
 @TargetApi(14)
 public class MMTextureView
   extends TextureView
 {
-  private boolean iIz = false;
+  private boolean kHL = false;
+  
+  public MMTextureView(Context paramContext)
+  {
+    super(paramContext);
+  }
   
   public MMTextureView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -28,27 +33,27 @@ public class MMTextureView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  public final void aNi()
+  public final void bcZ()
   {
-    if (e.bU(16))
+    if (c.bV(16))
     {
-      t.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "current API Level %d, do not do sly", new Object[] { Integer.valueOf(Build.VERSION.SDK_INT) });
+      u.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "current API Level %d, do not do sly", new Object[] { Integer.valueOf(Build.VERSION.SDK_INT) });
       return;
     }
-    if (e.bV(20))
+    if (c.bW(20))
     {
-      t.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "current API Level %d, do not do sly", new Object[] { Integer.valueOf(Build.VERSION.SDK_INT) });
+      u.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "current API Level %d, do not do sly", new Object[] { Integer.valueOf(Build.VERSION.SDK_INT) });
       return;
     }
-    if (bisbhT == 2)
+    if (bsQbsr == 2)
     {
-      t.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "do not do sly textureView, config ERROR");
+      u.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "do not do sly textureView, config ERROR");
       return;
     }
-    t.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, slyed ? %B", new Object[] { Boolean.valueOf(iIz) });
-    if (iIz)
+    u.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, slyed ? %B", new Object[] { Boolean.valueOf(kHL) });
+    if (kHL)
     {
-      t.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, slyed");
+      u.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, slyed");
       return;
     }
     try
@@ -56,31 +61,31 @@ public class MMTextureView
       Field localField = TextureView.class.getDeclaredField("mSurface");
       localField.setAccessible(true);
       SurfaceTexture localSurfaceTexture = (SurfaceTexture)localField.get(this);
-      if ((localSurfaceTexture != null) && (!(localSurfaceTexture instanceof bv)))
+      if ((localSurfaceTexture != null) && (!(localSurfaceTexture instanceof r)))
       {
-        bv localbv = new bv();
-        iHL = localSurfaceTexture;
-        localField.set(this, localbv);
-        iIz = true;
-        t.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, wrap");
+        r localr = new r();
+        kGX = localSurfaceTexture;
+        localField.set(this, localr);
+        kHL = true;
+        u.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, wrap");
         return;
       }
     }
     catch (NoSuchFieldException localNoSuchFieldException)
     {
-      t.e("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, NoSuchFieldException");
+      u.e("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, NoSuchFieldException");
       return;
-      t.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, no wrap");
+      u.i("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, no wrap");
       return;
     }
     catch (IllegalArgumentException localIllegalArgumentException)
     {
-      t.e("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, IllegalArgumentException");
+      u.e("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, IllegalArgumentException");
       return;
     }
     catch (IllegalAccessException localIllegalAccessException)
     {
-      t.e("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, IllegalAccessException");
+      u.e("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", "detect texture problem, IllegalAccessException");
     }
   }
   
@@ -94,7 +99,7 @@ public class MMTextureView
     }
     catch (Exception localException)
     {
-      t.printErrStackTrace("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", localException, "unkown error", new Object[0]);
+      u.printErrStackTrace("!32@/B4Tb64lLpKe/KXD4K2vRxSyKZ5+u4wh", localException, "unkown error", new Object[0]);
     }
   }
 }

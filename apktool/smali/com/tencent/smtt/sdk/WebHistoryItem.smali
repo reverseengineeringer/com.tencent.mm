@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private jLb:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
+.field private lTI:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 
-.field private jLc:Landroid/webkit/WebHistoryItem;
+.field private lTJ:Landroid/webkit/WebHistoryItem;
 
 
 # direct methods
@@ -20,10 +20,10 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 18
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLb:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTI:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 
     .line 19
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLc:Landroid/webkit/WebHistoryItem;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTJ:Landroid/webkit/WebHistoryItem;
 
     .line 23
     return-void
@@ -50,7 +50,7 @@
     invoke-direct {v0}, Lcom/tencent/smtt/sdk/WebHistoryItem;-><init>()V
 
     .line 43
-    iput-object p0, v0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLc:Landroid/webkit/WebHistoryItem;
+    iput-object p0, v0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTJ:Landroid/webkit/WebHistoryItem;
 
     goto :goto_0
 .end method
@@ -76,7 +76,7 @@
     invoke-direct {v0}, Lcom/tencent/smtt/sdk/WebHistoryItem;-><init>()V
 
     .line 32
-    iput-object p0, v0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLb:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
+    iput-object p0, v0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTI:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 
     goto :goto_0
 .end method
@@ -87,24 +87,24 @@
     .locals 1
 
     .prologue
-    .line 73
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLb:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
+    .line 87
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTI:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 
     if-eqz v0, :cond_0
 
-    .line 74
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLb:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
+    .line 88
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTI:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;->getFavicon()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 76
+    .line 90
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLc:Landroid/webkit/WebHistoryItem;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTJ:Landroid/webkit/WebHistoryItem;
 
     invoke-virtual {v0}, Landroid/webkit/WebHistoryItem;->getFavicon()Landroid/graphics/Bitmap;
 
@@ -117,24 +117,24 @@
     .locals 1
 
     .prologue
-    .line 57
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLb:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
+    .line 65
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTI:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 
     if-eqz v0, :cond_0
 
-    .line 58
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLb:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
+    .line 66
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTI:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;->getOriginalUrl()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 60
+    .line 68
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLc:Landroid/webkit/WebHistoryItem;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTJ:Landroid/webkit/WebHistoryItem;
 
     invoke-virtual {v0}, Landroid/webkit/WebHistoryItem;->getOriginalUrl()Ljava/lang/String;
 
@@ -147,24 +147,24 @@
     .locals 1
 
     .prologue
-    .line 65
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLb:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
+    .line 76
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTI:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 
     if-eqz v0, :cond_0
 
-    .line 66
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLb:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
+    .line 77
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTI:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;->getTitle()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 68
+    .line 79
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLc:Landroid/webkit/WebHistoryItem;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTJ:Landroid/webkit/WebHistoryItem;
 
     invoke-virtual {v0}, Landroid/webkit/WebHistoryItem;->getTitle()Ljava/lang/String;
 
@@ -177,24 +177,24 @@
     .locals 1
 
     .prologue
-    .line 49
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLb:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
+    .line 53
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTI:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 
     if-eqz v0, :cond_0
 
-    .line 50
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLb:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
+    .line 54
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTI:Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebHistoryItem;->getUrl()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 52
+    .line 56
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->jLc:Landroid/webkit/WebHistoryItem;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebHistoryItem;->lTJ:Landroid/webkit/WebHistoryItem;
 
     invoke-virtual {v0}, Landroid/webkit/WebHistoryItem;->getUrl()Ljava/lang/String;
 

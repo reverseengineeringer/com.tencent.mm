@@ -15,18 +15,21 @@
 
 
 # instance fields
-.field public op:I
-
-.field public username:Ljava/lang/String;
+.field public avq:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bx$a;->avq:Z
 
     return-void
 .end method

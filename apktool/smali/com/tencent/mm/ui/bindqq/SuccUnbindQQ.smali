@@ -19,34 +19,34 @@
 
     .prologue
     .line 10
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ;->aLy()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ;->bbm()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 3
 
     .prologue
     .line 34
-    sget v0, Lcom/tencent/mm/a$n;->unbind_qq:I
+    const v0, 0x7f0b05b2
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ;->qb(I)V
 
     .line 35
     const/4 v0, 0x0
 
-    sget v1, Lcom/tencent/mm/a$n;->app_finish:I
+    const v1, 0x7f0b0df0
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    new-instance v2, Lcom/tencent/mm/ui/bindqq/ar;
+    new-instance v2, Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ$1;
 
-    invoke-direct {v2, p0}, Lcom/tencent/mm/ui/bindqq/ar;-><init>(Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ;)V
+    invoke-direct {v2, p0}, Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ$1;-><init>(Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ;)V
 
     invoke-virtual {p0, v0, v1, v2}, Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
@@ -59,7 +59,7 @@
 
     .prologue
     .line 29
-    sget v0, Lcom/tencent/mm/a$k;->succ_unbindqq:I
+    const v0, 0x7f0a0527
 
     return v0
 .end method
@@ -94,7 +94,7 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMWizardActivity;->onResume()V
 
     .line 24
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/bindqq/SuccUnbindQQ;->Gb()V
 
     .line 25
     return-void

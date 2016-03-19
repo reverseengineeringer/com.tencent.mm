@@ -1,15 +1,10 @@
 package com.tencent.mm.ac;
 
-import com.tencent.mm.al.a;
-
 public final class b$a
-  extends b.p
 {
-  public b$a(int paramInt, a parama)
-  {
-    super(paramInt);
-    bHL = parama;
-  }
+  public String bUs;
+  public String bUt;
+  public String bUu;
 }
 
 /* Location:

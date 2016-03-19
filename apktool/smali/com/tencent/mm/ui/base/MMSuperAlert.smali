@@ -14,64 +14,100 @@
     .locals 0
 
     .prologue
-    .line 13
+    .line 16
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
     return-void
 .end method
 
-.method public static h(Landroid/content/Context;II)V
+.method public static K(Landroid/content/Context;I)V
     .locals 3
 
     .prologue
-    .line 60
+    .line 63
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/tencent/mm/ui/base/MMSuperAlert;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 61
+    .line 64
     const-string/jumbo v1, "MMSuperAlert_title"
+
+    const v2, 0x7f0b0ddd
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
+
+    .line 65
+    const-string/jumbo v1, "MMSuperAlert_msg"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 62
-    const-string/jumbo v1, "MMSuperAlert_msg"
-
-    invoke-virtual {v0, v1, p2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 63
+    .line 66
     const-string/jumbo v1, "MMSuperAlert_cancelable"
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 64
+    .line 67
     invoke-virtual {p0, v0}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 65
+    .line 68
     return-void
 .end method
 
 
 # virtual methods
+.method public getResources()Landroid/content/res/Resources;
+    .locals 1
+
+    .prologue
+    .line 72
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMSuperAlert;->getAssets()Landroid/content/res/AssetManager;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 73
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    .line 75
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-super {p0}, Landroid/app/Activity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 5
 
     .prologue
     const/4 v3, 0x0
 
-    .line 21
+    .line 24
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 25
-    sget v0, Lcom/tencent/mm/a$k;->mm_super_alert_empty:I
+    .line 28
+    const v0, 0x7f0a05dc
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMSuperAlert;->setContentView(I)V
 
-    .line 26
+    .line 29
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMSuperAlert;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -82,7 +118,7 @@
 
     move-result v0
 
-    .line 27
+    .line 30
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMSuperAlert;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -93,7 +129,7 @@
 
     move-result v1
 
-    .line 28
+    .line 31
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/MMSuperAlert;->getIntent()Landroid/content/Intent;
 
     move-result-object v2
@@ -106,19 +142,19 @@
 
     move-result v2
 
-    .line 29
-    new-instance v3, Lcom/tencent/mm/sdk/platformtools/ac;
+    .line 32
+    new-instance v3, Lcom/tencent/mm/sdk/platformtools/aa;
 
-    invoke-direct {v3}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
+    invoke-direct {v3}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
 
-    new-instance v4, Lcom/tencent/mm/ui/base/bs;
+    new-instance v4, Lcom/tencent/mm/ui/base/MMSuperAlert$1;
 
-    invoke-direct {v4, p0, v0, v1, v2}, Lcom/tencent/mm/ui/base/bs;-><init>(Lcom/tencent/mm/ui/base/MMSuperAlert;IIZ)V
+    invoke-direct {v4, p0, v0, v1, v2}, Lcom/tencent/mm/ui/base/MMSuperAlert$1;-><init>(Lcom/tencent/mm/ui/base/MMSuperAlert;IIZ)V
 
     const-wide/16 v0, 0x32
 
-    invoke-virtual {v3, v4, v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v3, v4, v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 50
+    .line 53
     return-void
 .end method

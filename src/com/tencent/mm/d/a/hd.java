@@ -1,23 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class hd
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEr = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aCN = new a();
+  public b aCO = new b();
   
   public hd()
   {
-    id = "ScanQrcodeExtDeviceLogin";
-    hXT = atO;
+    id = "NewYearAcceptCard";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aEs;
+    public String aCP;
+  }
+  
+  public static final class b
+  {
+    public int aCQ;
+    public String aCR;
+    public String aCS;
   }
 }
 

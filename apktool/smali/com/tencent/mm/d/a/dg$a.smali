@@ -15,13 +15,7 @@
 
 
 # instance fields
-.field public actionCode:I
-
-.field public azq:Ljava/lang/String;
-
-.field public context:Landroid/content/Context;
-
-.field public username:Ljava/lang/String;
+.field public op:I
 
 
 # direct methods

@@ -4,25 +4,25 @@
 
 
 # instance fields
-.field public biA:I
+.field public bsX:Z
 
-.field public biB:I
+.field public bsY:I
 
-.field public biC:I
+.field public bsZ:I
 
-.field public biD:I
+.field public bta:I
 
-.field public biE:I
+.field public btb:I
 
-.field public biF:I
+.field public btc:I
 
-.field public biw:Z
+.field public btd:I
 
-.field public bix:I
+.field public bte:I
 
-.field public biy:I
+.field public btf:I
 
-.field public biz:I
+.field public btg:I
 
 
 # direct methods
@@ -51,42 +51,42 @@
     const/4 v1, 0x1
 
     .line 20
-    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/t;->biw:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/compatible/d/t;->bsX:Z
 
     .line 21
     const/16 v0, 0xe0
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->biy:I
+    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->bsZ:I
 
     .line 22
     const/16 v0, 0x120
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->bix:I
+    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->bsY:I
 
     .line 23
     const/16 v0, 0xa
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->biz:I
+    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->bta:I
 
     .line 24
     const v0, 0x2dc6c0
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->biA:I
+    iput v0, p0, Lcom/tencent/mm/compatible/d/t;->btb:I
 
     .line 25
-    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->biB:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->btc:I
 
     .line 26
-    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->biC:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->btd:I
 
     .line 27
-    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->biD:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->bte:I
 
     .line 28
-    iput v2, p0, Lcom/tencent/mm/compatible/d/t;->biE:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/t;->btf:I
 
     .line 29
-    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->biF:I
+    iput v1, p0, Lcom/tencent/mm/compatible/d/t;->btg:I
 
     .line 30
     return-void

@@ -1,17 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class dw
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a axM = new a();
+  public b axN = new b();
   
   public dw()
   {
-    id = "JDSysMsgNotify";
-    hXT = atO;
+    id = "FMessageMobileFilter";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public String axO;
+    public String axP;
+  }
+  
+  public static final class b
+  {
+    public boolean axQ = true;
   }
 }
 

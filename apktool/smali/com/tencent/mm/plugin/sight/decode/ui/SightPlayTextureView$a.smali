@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field fhW:Landroid/view/Surface;
+.field gyC:Landroid/view/Surface;
 
 
 # direct methods
@@ -32,7 +32,7 @@
     .line 143
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$a;->fhW:Landroid/view/Surface;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$a;->gyC:Landroid/view/Surface;
 
     return-void
 .end method
@@ -54,7 +54,7 @@
 
     .prologue
     .line 147
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$a;->fhW:Landroid/view/Surface;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$a;->gyC:Landroid/view/Surface;
 
     if-nez v0, :cond_0
 
@@ -64,7 +64,7 @@
 
     .line 150
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$a;->fhW:Landroid/view/Surface;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$a;->gyC:Landroid/view/Surface;
 
     invoke-virtual {v0}, Landroid/view/Surface;->release()V
 

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$g
-  extends a.c
+  extends a.e
 {
   public a$g()
   {
-    super("batchAddCard", "batch_add_card", 82, true);
+    super("addContact", "add_contact", 5, true);
   }
 }
 

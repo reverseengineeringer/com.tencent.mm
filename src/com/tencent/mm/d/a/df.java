@@ -1,31 +1,24 @@
 package com.tencent.mm.d.a;
 
-import android.app.Activity;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class df
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azl = new a();
-  public b azm = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awF = new a();
   
   public df()
   {
-    id = "GestureProtect";
-    hXT = atO;
+    id = "ExposeWithProofFinish";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public Activity auD;
-    public int azn;
-  }
-  
-  public static final class b
-  {
-    public Object data = Integer.valueOf(0);
+    public long awG = 0L;
+    public boolean awH = false;
   }
 }
 

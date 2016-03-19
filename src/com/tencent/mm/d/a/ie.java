@@ -1,25 +1,36 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ie
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFq = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDP = new a();
+  public b aDQ = new b();
   
   public ie()
   {
-    id = "StartWebView";
-    hXT = atO;
+    id = "OpenFingerPrintAuth";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aFr;
-    public Context context;
+    public int aDR = 0;
+    public Runnable aDS;
+    public String azE;
+  }
+  
+  public static final class b
+  {
+    public String aDT;
+    public boolean aDU = false;
+    public boolean awe = false;
+    public int azD = 0;
+    public String azF;
+    public String azG;
   }
 }
 

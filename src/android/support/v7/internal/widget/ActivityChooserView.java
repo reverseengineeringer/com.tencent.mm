@@ -9,7 +9,7 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.database.DataSetObserver;
 import android.graphics.drawable.Drawable;
-import android.support.v4.view.h;
+import android.support.v4.view.d;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
@@ -30,34 +30,62 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.PopupWindow.OnDismissListener;
 import android.widget.TextView;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 import java.util.List;
 
 public class ActivityChooserView
   extends ViewGroup
 {
-  private final a pD;
-  private final b pE;
-  private final LinearLayout pF;
-  private final Drawable pG;
-  private final FrameLayout pH;
-  private final ImageView pI;
-  private final FrameLayout pJ;
-  private final ImageView pK;
-  private final int pL;
-  h pM;
-  private final DataSetObserver pN = new j(this);
-  private final ViewTreeObserver.OnGlobalLayoutListener pO = new k(this);
-  private ListPopupWindow pP;
-  private PopupWindow.OnDismissListener pQ;
-  private boolean pR;
-  private int pS = 4;
-  private boolean pT;
-  private int pU;
+  private final a oH;
+  private final b oI;
+  private final LinearLayout oJ;
+  private final Drawable oK;
+  private final FrameLayout oL;
+  private final ImageView oM;
+  private final FrameLayout oN;
+  private final ImageView oO;
+  private final int oP;
+  d oQ;
+  private final DataSetObserver oR = new DataSetObserver()
+  {
+    public final void onChanged()
+    {
+      super.onChanged();
+      ActivityChooserView.a(ActivityChooserView.this).notifyDataSetChanged();
+    }
+    
+    public final void onInvalidated()
+    {
+      super.onInvalidated();
+      ActivityChooserView.a(ActivityChooserView.this).notifyDataSetInvalidated();
+    }
+  };
+  private final ViewTreeObserver.OnGlobalLayoutListener oS = new ViewTreeObserver.OnGlobalLayoutListener()
+  {
+    public final void onGlobalLayout()
+    {
+      if (bZ())
+      {
+        if (isShown()) {
+          break label31;
+        }
+        ActivityChooserView.b(ActivityChooserView.this).dismiss();
+      }
+      label31:
+      do
+      {
+        return;
+        ActivityChooserView.b(ActivityChooserView.this).show();
+      } while (oQ == null);
+      oQ.k(true);
+    }
+  };
+  private ListPopupWindow oT;
+  private PopupWindow.OnDismissListener oU;
+  private boolean oV;
+  private int oW = 4;
+  private boolean oX;
+  private int oY;
   
   public ActivityChooserView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -67,43 +95,50 @@ public class ActivityChooserView
   public ActivityChooserView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.ActivityChooserView, paramInt, 0);
-    pS = paramAttributeSet.getInt(0, 4);
+    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.ActivityChooserView, paramInt, 0);
+    oW = paramAttributeSet.getInt(0, 4);
     Drawable localDrawable = paramAttributeSet.getDrawable(1);
     paramAttributeSet.recycle();
-    LayoutInflater.from(getContext()).inflate(a.k.abc_activity_chooser_view, this, true);
-    pE = new b((byte)0);
-    pF = ((LinearLayout)findViewById(a.i.activity_chooser_view_content));
-    pG = pF.getBackground();
-    pJ = ((FrameLayout)findViewById(a.i.default_activity_button));
-    pJ.setOnClickListener(pE);
-    pJ.setOnLongClickListener(pE);
-    pK = ((ImageView)pJ.findViewById(a.i.image));
-    pH = ((FrameLayout)findViewById(a.i.expand_activities_button));
-    pH.setOnClickListener(pE);
-    pI = ((ImageView)pH.findViewById(a.i.image));
-    pI.setImageDrawable(localDrawable);
-    pD = new a((byte)0);
-    pD.registerDataSetObserver(new l(this));
+    LayoutInflater.from(getContext()).inflate(2131363316, this, true);
+    oI = new b((byte)0);
+    oJ = ((LinearLayout)findViewById(2131169539));
+    oK = oJ.getBackground();
+    oN = ((FrameLayout)findViewById(2131169541));
+    oN.setOnClickListener(oI);
+    oN.setOnLongClickListener(oI);
+    oO = ((ImageView)oN.findViewById(2131165228));
+    oL = ((FrameLayout)findViewById(2131169540));
+    oL.setOnClickListener(oI);
+    oM = ((ImageView)oL.findViewById(2131165228));
+    oM.setImageDrawable(localDrawable);
+    oH = new a((byte)0);
+    oH.registerDataSetObserver(new DataSetObserver()
+    {
+      public final void onChanged()
+      {
+        super.onChanged();
+        ActivityChooserView.c(ActivityChooserView.this);
+      }
+    });
     paramContext = paramContext.getResources();
-    pL = Math.max(getDisplayMetricswidthPixels / 2, paramContext.getDimensionPixelSize(a.g.abc_config_prefDialogWidth));
+    oP = Math.max(getDisplayMetricswidthPixels / 2, paramContext.getDimensionPixelSize(2131034685));
   }
   
-  private void G(int paramInt)
+  private void H(int paramInt)
   {
-    if (pD.pW == null) {
+    if (oH.pa == null) {
       throw new IllegalStateException("No data model. Did you call #setDataModel?");
     }
-    getViewTreeObserver().addOnGlobalLayoutListener(pO);
+    getViewTreeObserver().addOnGlobalLayoutListener(oS);
     boolean bool;
     int i;
     label62:
     label93:
     ListPopupWindow localListPopupWindow;
-    if (pJ.getVisibility() == 0)
+    if (oN.getVisibility() == 0)
     {
       bool = true;
-      int j = pD.pW.cg();
+      int j = oH.pa.bQ();
       if (!bool) {
         break label196;
       }
@@ -111,25 +146,25 @@ public class ActivityChooserView
       if ((paramInt == Integer.MAX_VALUE) || (j <= i + paramInt)) {
         break label201;
       }
-      pD.setShowFooterView(true);
-      pD.H(paramInt - 1);
+      oH.setShowFooterView(true);
+      oH.I(paramInt - 1);
       localListPopupWindow = getListPopupWindow();
-      if (!qH.isShowing())
+      if (!pK.isShowing())
       {
-        if ((!pR) && (bool)) {
+        if ((!oV) && (bool)) {
           break label220;
         }
-        pD.a(true, bool);
+        oH.a(true, bool);
       }
     }
     for (;;)
     {
-      localListPopupWindow.setContentWidth(Math.min(pD.cq(), pL));
+      localListPopupWindow.setContentWidth(Math.min(oH.ca(), oP));
       localListPopupWindow.show();
-      if (pM != null) {
-        pM.k(true);
+      if (oQ != null) {
+        oQ.k(true);
       }
-      qJ.setContentDescription(getContext().getString(a.n.abc_activitychooserview_choose_application));
+      pM.setContentDescription(getContext().getString(2131427347));
       return;
       bool = false;
       break;
@@ -137,188 +172,188 @@ public class ActivityChooserView
       i = 0;
       break label62;
       label201:
-      pD.setShowFooterView(false);
-      pD.H(paramInt);
+      oH.setShowFooterView(false);
+      oH.I(paramInt);
       break label93;
       label220:
-      pD.a(false, false);
+      oH.a(false, false);
     }
   }
   
   private ListPopupWindow getListPopupWindow()
   {
-    if (pP == null)
+    if (oT == null)
     {
-      pP = new ListPopupWindow(getContext());
-      pP.setAdapter(pD);
-      pP.qV = this;
-      pP.cu();
-      pP.qX = pE;
-      pP.setOnDismissListener(pE);
+      oT = new ListPopupWindow(getContext());
+      oT.setAdapter(oH);
+      oT.pY = this;
+      oT.ce();
+      oT.qa = oI;
+      oT.setOnDismissListener(oI);
     }
-    return pP;
+    return oT;
   }
   
-  public final boolean co()
+  public final boolean bY()
   {
-    if (getListPopupWindowqH.isShowing())
+    if (getListPopupWindowpK.isShowing())
     {
       getListPopupWindow().dismiss();
       ViewTreeObserver localViewTreeObserver = getViewTreeObserver();
       if (localViewTreeObserver.isAlive()) {
-        localViewTreeObserver.removeGlobalOnLayoutListener(pO);
+        localViewTreeObserver.removeGlobalOnLayoutListener(oS);
       }
     }
     return true;
   }
   
-  public final boolean cp()
+  public final boolean bZ()
   {
-    return getListPopupWindowqH.isShowing();
+    return getListPopupWindowpK.isShowing();
   }
   
-  public i getDataModel()
+  public b getDataModel()
   {
-    return pD.pW;
+    return oH.pa;
   }
   
   protected void onAttachedToWindow()
   {
     super.onAttachedToWindow();
-    i locali = pD.pW;
-    if (locali != null) {
-      locali.registerObserver(pN);
+    b localb = oH.pa;
+    if (localb != null) {
+      localb.registerObserver(oR);
     }
-    pT = true;
+    oX = true;
   }
   
   protected void onDetachedFromWindow()
   {
     super.onDetachedFromWindow();
-    Object localObject = pD.pW;
+    Object localObject = oH.pa;
     if (localObject != null) {
-      ((i)localObject).unregisterObserver(pN);
+      ((b)localObject).unregisterObserver(oR);
     }
     localObject = getViewTreeObserver();
     if (((ViewTreeObserver)localObject).isAlive()) {
-      ((ViewTreeObserver)localObject).removeGlobalOnLayoutListener(pO);
+      ((ViewTreeObserver)localObject).removeGlobalOnLayoutListener(oS);
     }
-    if (cp()) {
-      co();
+    if (bZ()) {
+      bY();
     }
-    pT = false;
+    oX = false;
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    pF.layout(0, 0, paramInt3 - paramInt1, paramInt4 - paramInt2);
-    if (!cp()) {
-      co();
+    oJ.layout(0, 0, paramInt3 - paramInt1, paramInt4 - paramInt2);
+    if (!bZ()) {
+      bY();
     }
   }
   
   protected void onMeasure(int paramInt1, int paramInt2)
   {
-    LinearLayout localLinearLayout = pF;
+    LinearLayout localLinearLayout = oJ;
     int i = paramInt2;
-    if (pJ.getVisibility() != 0) {
+    if (oN.getVisibility() != 0) {
       i = View.MeasureSpec.makeMeasureSpec(View.MeasureSpec.getSize(paramInt2), 1073741824);
     }
     measureChild(localLinearLayout, paramInt1, i);
     setMeasuredDimension(localLinearLayout.getMeasuredWidth(), localLinearLayout.getMeasuredHeight());
   }
   
-  public void setActivityChooserModel(i parami)
+  public void setActivityChooserModel(b paramb)
   {
-    a locala = pD;
-    i locali = pV.pD.pW;
-    if ((locali != null) && (pV.isShown())) {
-      locali.unregisterObserver(pV.pN);
+    a locala = oH;
+    b localb = oZ.oH.pa;
+    if ((localb != null) && (oZ.isShown())) {
+      localb.unregisterObserver(oZ.oR);
     }
-    pW = parami;
-    if ((parami != null) && (pV.isShown())) {
-      parami.registerObserver(pV.pN);
+    pa = paramb;
+    if ((paramb != null) && (oZ.isShown())) {
+      paramb.registerObserver(oZ.oR);
     }
     locala.notifyDataSetChanged();
-    if (getListPopupWindowqH.isShowing())
+    if (getListPopupWindowpK.isShowing())
     {
-      co();
-      if ((!getListPopupWindowqH.isShowing()) && (pT)) {}
+      bY();
+      if ((!getListPopupWindowpK.isShowing()) && (oX)) {}
     }
     else
     {
       return;
     }
-    pR = false;
-    G(pS);
+    oV = false;
+    H(oW);
   }
   
   public void setDefaultActionButtonContentDescription(int paramInt)
   {
-    pU = paramInt;
+    oY = paramInt;
   }
   
   public void setExpandActivityOverflowButtonContentDescription(int paramInt)
   {
     String str = getContext().getString(paramInt);
-    pI.setContentDescription(str);
+    oM.setContentDescription(str);
   }
   
   public void setExpandActivityOverflowButtonDrawable(Drawable paramDrawable)
   {
-    pI.setImageDrawable(paramDrawable);
+    oM.setImageDrawable(paramDrawable);
   }
   
   public void setInitialActivityCount(int paramInt)
   {
-    pS = paramInt;
+    oW = paramInt;
   }
   
   public void setOnDismissListener(PopupWindow.OnDismissListener paramOnDismissListener)
   {
-    pQ = paramOnDismissListener;
+    oU = paramOnDismissListener;
   }
   
-  public void setProvider(h paramh)
+  public void setProvider(d paramd)
   {
-    pM = paramh;
+    oQ = paramd;
   }
   
   private final class a
     extends BaseAdapter
   {
-    i pW;
-    private int pX = 4;
-    boolean pY;
-    private boolean pZ;
-    private boolean qa;
+    b pa;
+    private int pb = 4;
+    boolean pc;
+    private boolean pd;
+    private boolean pe;
     
     private a() {}
     
-    public final void H(int paramInt)
+    public final void I(int paramInt)
     {
-      if (pX != paramInt)
+      if (pb != paramInt)
       {
-        pX = paramInt;
+        pb = paramInt;
         notifyDataSetChanged();
       }
     }
     
     public final void a(boolean paramBoolean1, boolean paramBoolean2)
     {
-      if ((pY != paramBoolean1) || (pZ != paramBoolean2))
+      if ((pc != paramBoolean1) || (pd != paramBoolean2))
       {
-        pY = paramBoolean1;
-        pZ = paramBoolean2;
+        pc = paramBoolean1;
+        pd = paramBoolean2;
         notifyDataSetChanged();
       }
     }
     
-    public final int cq()
+    public final int ca()
     {
       int i = 0;
-      int k = pX;
-      pX = Integer.MAX_VALUE;
+      int k = pb;
+      pb = Integer.MAX_VALUE;
       int m = View.MeasureSpec.makeMeasureSpec(0, 0);
       int n = View.MeasureSpec.makeMeasureSpec(0, 0);
       int i1 = getCount();
@@ -331,24 +366,24 @@ public class ActivityChooserView
         j = Math.max(j, localView.getMeasuredWidth());
         i += 1;
       }
-      pX = k;
+      pb = k;
       return j;
     }
     
     public final int getCount()
     {
-      int j = pW.cg();
+      int j = pa.bQ();
       int i = j;
-      if (!pY)
+      if (!pc)
       {
         i = j;
-        if (pW.ch() != null) {
+        if (pa.bR() != null) {
           i = j - 1;
         }
       }
-      j = Math.min(i, pX);
+      j = Math.min(i, pb);
       i = j;
-      if (qa) {
+      if (pe) {
         i = j + 1;
       }
       return i;
@@ -364,14 +399,14 @@ public class ActivityChooserView
         return null;
       }
       int i = paramInt;
-      if (!pY)
+      if (!pc)
       {
         i = paramInt;
-        if (pW.ch() != null) {
+        if (pa.bR() != null) {
           i = paramInt + 1;
         }
       }
-      return pW.E(i);
+      return pa.F(i);
     }
     
     public final long getItemId(int paramInt)
@@ -381,7 +416,7 @@ public class ActivityChooserView
     
     public final int getItemViewType(int paramInt)
     {
-      if ((qa) && (paramInt == getCount() - 1)) {
+      if ((pe) && (paramInt == getCount() - 1)) {
         return 1;
       }
       return 0;
@@ -402,26 +437,26 @@ public class ActivityChooserView
         }
         else
         {
-          localView = LayoutInflater.from(getContext()).inflate(a.k.abc_activity_chooser_view_list_item, paramViewGroup, false);
+          localView = LayoutInflater.from(getContext()).inflate(2131363320, paramViewGroup, false);
           localView.setId(1);
-          ((TextView)localView.findViewById(a.i.title)).setText(getContext().getString(a.n.abc_activity_chooser_view_see_all));
+          ((TextView)localView.findViewById(2131165460)).setText(getContext().getString(2131427348));
         }
         return localView;
       }
       if (paramView != null)
       {
         localView = paramView;
-        if (paramView.getId() == a.i.list_item) {}
+        if (paramView.getId() == 2131169552) {}
       }
       else
       {
-        localView = LayoutInflater.from(getContext()).inflate(a.k.abc_activity_chooser_view_list_item, paramViewGroup, false);
+        localView = LayoutInflater.from(getContext()).inflate(2131363320, paramViewGroup, false);
       }
       paramView = getContext().getPackageManager();
-      paramViewGroup = (ImageView)localView.findViewById(a.i.icon);
+      paramViewGroup = (ImageView)localView.findViewById(2131166684);
       ResolveInfo localResolveInfo = (ResolveInfo)getItem(paramInt);
       paramViewGroup.setImageDrawable(localResolveInfo.loadIcon(paramView));
-      ((TextView)localView.findViewById(a.i.title)).setText(localResolveInfo.loadLabel(paramView));
+      ((TextView)localView.findViewById(2131165460)).setText(localResolveInfo.loadLabel(paramView));
       return localView;
     }
     
@@ -432,9 +467,9 @@ public class ActivityChooserView
     
     public final void setShowFooterView(boolean paramBoolean)
     {
-      if (qa != paramBoolean)
+      if (pe != paramBoolean)
       {
-        qa = paramBoolean;
+        pe = paramBoolean;
         notifyDataSetChanged();
       }
     }
@@ -449,10 +484,10 @@ public class ActivityChooserView
     {
       if (paramView == ActivityChooserView.e(ActivityChooserView.this))
       {
-        co();
-        paramView = apW.ch();
-        int i = apW.a(paramView);
-        paramView = apW.F(i);
+        bY();
+        paramView = apa.bR();
+        int i = apa.a(paramView);
+        paramView = apa.G(i);
         if (paramView != null)
         {
           paramView.addFlags(524288);
@@ -474,8 +509,8 @@ public class ActivityChooserView
       if (ActivityChooserView.h(ActivityChooserView.this) != null) {
         ActivityChooserView.h(ActivityChooserView.this).onDismiss();
       }
-      if (pM != null) {
-        pM.k(false);
+      if (oQ != null) {
+        oQ.k(false);
       }
     }
     
@@ -491,32 +526,32 @@ public class ActivityChooserView
       do
       {
         return;
-        co();
+        bY();
         if (!ActivityChooserView.d(ActivityChooserView.this)) {
           break;
         }
       } while (paramInt <= 0);
-      paramView = apW;
+      paramView = apa;
       for (;;)
       {
-        synchronized (pq)
+        synchronized (ou)
         {
-          paramView.ci();
-          i.a locala1 = (i.a)pr.get(paramInt);
-          i.a locala2 = (i.a)pr.get(0);
+          paramView.bS();
+          b.a locala1 = (b.a)ov.get(paramInt);
+          b.a locala2 = (b.a)ov.get(0);
           if (locala2 != null)
           {
             f = weight - weight + 5.0F;
-            paramView.a(new i.c(new ComponentName(resolveInfo.activityInfo.packageName, resolveInfo.activityInfo.name), System.currentTimeMillis(), f));
+            paramView.a(new b.c(new ComponentName(resolveInfo.activityInfo.packageName, resolveInfo.activityInfo.name), System.currentTimeMillis(), f));
             return;
           }
         }
         float f = 1.0F;
       }
-      if (apY) {}
+      if (apc) {}
       for (;;)
       {
-        ??? = apW.F(paramInt);
+        ??? = apa.G(paramInt);
         if (??? == null) {
           break;
         }

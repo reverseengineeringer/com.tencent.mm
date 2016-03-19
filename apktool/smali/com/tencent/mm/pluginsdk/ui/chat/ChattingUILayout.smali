@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private gVG:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
+.field private iMa:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
 
 
 # direct methods
@@ -19,17 +19,17 @@
     return-void
 .end method
 
-.method private c(Landroid/view/ViewGroup;)Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
+.method private e(Landroid/view/ViewGroup;)Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
     .locals 3
 
     .prologue
     .line 30
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->gVG:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->iMa:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
 
     if-eqz v0, :cond_0
 
     .line 31
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->gVG:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->iMa:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
 
     .line 52
     :goto_0
@@ -47,7 +47,7 @@
 
     .line 35
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->gVG:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->iMa:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
 
     goto :goto_0
 
@@ -77,10 +77,10 @@
     .line 41
     check-cast v0, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->gVG:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->iMa:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
 
     .line 42
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->gVG:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->iMa:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
 
     goto :goto_0
 
@@ -93,14 +93,14 @@
     .line 46
     check-cast v0, Landroid/view/ViewGroup;
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->c(Landroid/view/ViewGroup;)Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->e(Landroid/view/ViewGroup;)Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
     .line 47
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->gVG:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->iMa:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
 
     goto :goto_0
 
@@ -114,7 +114,7 @@
 
     .line 52
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->gVG:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->iMa:Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
 
     goto :goto_0
 .end method
@@ -126,7 +126,7 @@
 
     .prologue
     .line 57
-    invoke-direct {p0, p0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->c(Landroid/view/ViewGroup;)Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
+    invoke-direct {p0, p0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChattingUILayout;->e(Landroid/view/ViewGroup;)Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooterBottom;
 
     move-result-object v0
 

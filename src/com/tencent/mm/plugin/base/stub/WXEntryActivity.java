@@ -3,6 +3,8 @@ package com.tencent.mm.plugin.base.stub;
 import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
@@ -10,35 +12,44 @@ import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TextView;
 import com.jg.JgClassChecked;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
 import com.tencent.mm.a.e;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelsimple.am;
-import com.tencent.mm.platformtools.ad;
-import com.tencent.mm.pluginsdk.l.a;
-import com.tencent.mm.pluginsdk.l.n;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.k;
+import com.tencent.mm.model.k.a;
+import com.tencent.mm.modelsimple.ag;
+import com.tencent.mm.platformtools.t;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.p;
 import com.tencent.mm.pluginsdk.model.app.ReportUtil;
-import com.tencent.mm.pluginsdk.model.app.ay;
+import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.pluginsdk.model.app.f;
+import com.tencent.mm.pluginsdk.model.app.h;
 import com.tencent.mm.pluginsdk.model.app.i;
 import com.tencent.mm.pluginsdk.ui.AutoLoginActivity;
 import com.tencent.mm.pluginsdk.ui.AutoLoginActivity.a;
-import com.tencent.mm.q.d;
+import com.tencent.mm.pluginsdk.ui.tools.b;
+import com.tencent.mm.protocal.b.ape;
+import com.tencent.mm.protocal.b.aub;
+import com.tencent.mm.r.d;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.sdk.modelmsg.WXTextObject;
 import com.tencent.mm.sdk.modelmsg.WXWebpageObject;
-import com.tencent.mm.sdk.modelmsg.d.a;
-import com.tencent.mm.sdk.platformtools.o;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.modelmsg.c.a;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.cn;
-import com.tencent.mm.ui.dt.a;
+import com.tencent.mm.ui.n.a;
+import java.net.URLEncoder;
 import java.util.LinkedList;
+import java.util.Map;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140422", reviewer=20, vComment={com.jg.EType.ACTIVITYCHECK})
 public class WXEntryActivity
@@ -47,69 +58,89 @@ public class WXEntryActivity
 {
   private String appId;
   private String authority;
-  private ProgressDialog bXB;
-  private String cjN;
-  private int cjO;
+  private String cAX;
+  private int cAY;
+  private ProgressDialog coM;
   private String content;
   private Uri uri;
   
-  private boolean Hs()
-  {
-    Intent localIntent = getIntent();
-    if (("sendreq".equals(authority)) || ("sendresp".equals(authority)))
-    {
-      Object localObject = i.V(appId, true);
-      if (localObject == null)
-      {
-        t.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "app not reg, do nothing");
-        return false;
-      }
-      if (field_status == 3)
-      {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "send fail, app is in blacklist");
-        Hu();
-        return false;
-      }
-      if (!com.tencent.mm.pluginsdk.model.app.r.b(this, (com.tencent.mm.pluginsdk.model.app.h)localObject, cjN))
-      {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "send fail, check app fail, force to get app info from server again : %s", new Object[] { appId });
-        ay.azj().un(appId);
-        Hu();
-        return false;
-      }
-      if (d.agetExtrasatZ == 2)
-      {
-        localObject = new Intent();
-        ((Intent)localObject).addFlags(268435456).addFlags(67108864);
-        ((Intent)localObject).putExtras(localIntent.getExtras());
-        com.tencent.mm.aj.c.c(this, "favorite", ".ui.FavOpenApiEntry", (Intent)localObject);
-        return true;
-      }
-      startActivity(new Intent(this, UIEntryStub.class).addFlags(268435456).addFlags(67108864).putExtras(localIntent.getExtras()));
-      return true;
-    }
-    t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unknown authority, should never reached, authority=" + authority);
-    return false;
-  }
-  
-  private void Ht()
+  private void JD()
   {
     ReportUtil.a(this, ReportUtil.a(getIntent().getExtras(), -2));
     finish();
   }
   
-  private void Hu()
+  private void JE()
   {
-    ReportUtil.a(this, ReportUtil.a(getIntent().getExtras(), -4));
+    ReportUtil.a(this, ReportUtil.a(getIntent().getExtras(), -6));
     finish();
   }
   
-  private static boolean em(int paramInt)
+  private static boolean eK(int paramInt)
   {
     return paramInt >= 553713665;
   }
   
-  private static byte[] f(String paramString1, int paramInt, String paramString2)
+  private boolean g(com.tencent.mm.r.j paramj)
+  {
+    Object localObject = getIntent();
+    if (("sendreq".equals(authority)) || ("sendresp".equals(authority)))
+    {
+      f localf = com.tencent.mm.pluginsdk.model.app.g.ai(appId, true);
+      if (localf == null)
+      {
+        u.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "app not reg, do nothing");
+        return false;
+      }
+      if (!com.tencent.mm.pluginsdk.model.app.p.b(this, localf, cAX))
+      {
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "send fail, check app fail, force to get app info from server again : %s", new Object[] { appId });
+        aj.aPQ().zN(appId);
+        if (com.tencent.mm.sdk.platformtools.p.a(getIntent().getExtras(), "_wxapi_command_type", 0) == 1)
+        {
+          u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "it is auth, just dealrequest");
+          finish();
+          return false;
+        }
+        JE();
+        return false;
+      }
+      c.a locala = new c.a(((Intent)localObject).getExtras());
+      if (asc == 2)
+      {
+        paramj = new Intent();
+        paramj.addFlags(268435456).addFlags(67108864);
+        paramj.putExtras(((Intent)localObject).getExtras());
+        if ((jUS != null) && (jUS.getType() == 5))
+        {
+          u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "report(11954), appId : %s", new Object[] { field_appId });
+          localObject = k.eV("app_" + field_appId);
+          k.sW().eT((String)localObject).e("prePublishId", "app_" + field_appId);
+          paramj.putExtra("reportSessionId", (String)localObject);
+        }
+        c.c(this, "favorite", ".ui.FavOpenApiEntry", paramj);
+        return true;
+      }
+      if ((paramj != null) && (jUS != null) && (jUS.getType() == 7))
+      {
+        paramj = ((ag)paramj).CM();
+        if ((paramj != null) && (jMT != null) && (!t.kz(jMT.url)))
+        {
+          u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "change appextend to Webpage,url :%s", new Object[] { jMT.url });
+          jUS.mediaObject = new WXWebpageObject(jMT.url);
+          paramj = new Bundle();
+          locala.l(paramj);
+          ((Intent)localObject).putExtras(paramj);
+        }
+      }
+      startActivity(new Intent(this, UIEntryStub.class).addFlags(268435456).addFlags(67108864).putExtras(((Intent)localObject).getExtras()));
+      return true;
+    }
+    u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unknown authority, should never reached, authority=" + authority);
+    return false;
+  }
+  
+  private static byte[] g(String paramString1, int paramInt, String paramString2)
   {
     StringBuffer localStringBuffer = new StringBuffer();
     if (paramString1 != null) {
@@ -118,51 +149,68 @@ public class WXEntryActivity
     localStringBuffer.append(paramInt);
     localStringBuffer.append(paramString2);
     localStringBuffer.append("mMcShCsTr");
-    return e.n(localStringBuffer.toString().substring(1, 9).getBytes()).getBytes();
+    return com.tencent.mm.a.g.m(localStringBuffer.toString().substring(1, 9).getBytes()).getBytes();
   }
   
-  private static boolean g(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
+  private void goBack()
+  {
+    View localView = findViewById(2131165271);
+    if ((localView != null) && (localView.getVisibility() != 8))
+    {
+      JE();
+      return;
+    }
+    JD();
+  }
+  
+  private static boolean h(byte[] paramArrayOfByte1, byte[] paramArrayOfByte2)
   {
     if ((paramArrayOfByte1 == null) || (paramArrayOfByte1.length == 0) || (paramArrayOfByte2 == null) || (paramArrayOfByte2.length == 0))
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checkSumConsistent fail, invalid arguments");
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checkSumConsistent fail, invalid arguments");
       return false;
     }
     if (paramArrayOfByte1.length != paramArrayOfByte2.length)
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checkSumConsistent fail, length is different");
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checkSumConsistent fail, length is different");
       return false;
     }
     int i = 0;
     for (;;)
     {
       if (i >= paramArrayOfByte1.length) {
-        break label67;
+        break label69;
       }
       if (paramArrayOfByte1[i] != paramArrayOfByte2[i]) {
         break;
       }
       i += 1;
     }
-    label67:
+    label69:
     return true;
   }
   
-  private void goBack()
+  private static String lk(String paramString)
   {
-    View localView = findViewById(a.i.sdk_share_body);
-    if ((localView != null) && (localView.getVisibility() != 8))
-    {
-      Hu();
-      return;
+    if (t.kz(paramString)) {
+      return paramString;
     }
-    Ht();
+    try
+    {
+      String str = URLEncoder.encode(paramString);
+      return str;
+    }
+    catch (Exception localException)
+    {
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "urlEncode fail, str = %s, ex = %s", new Object[] { paramString, localException.getMessage() });
+    }
+    return paramString;
   }
   
   private boolean n(Intent paramIntent)
   {
-    cjO = o.a(paramIntent, "_mmessage_sdkVersion", 0);
-    content = o.c(paramIntent, "_mmessage_content");
+    cAY = com.tencent.mm.sdk.platformtools.p.a(paramIntent, "_mmessage_sdkVersion", 0);
+    content = com.tencent.mm.sdk.platformtools.p.g(paramIntent, "_mmessage_content");
     if (content != null)
     {
       uri = Uri.parse(content);
@@ -170,92 +218,117 @@ public class WXEntryActivity
       try
       {
         appId = uri.getQueryParameter("appid");
-        cjN = o.c(paramIntent, "_mmessage_appPackage");
+        cAX = com.tencent.mm.sdk.platformtools.p.g(paramIntent, "_mmessage_appPackage");
         return true;
       }
       catch (Exception paramIntent)
       {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "init: %s", new Object[] { paramIntent.toString() });
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "init: %s", new Object[] { paramIntent.toString() });
         return false;
       }
     }
     return false;
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.q.j paramj)
+  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
   {
-    t.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "onSceneEnd, errType = %d, errCode = %d, errMsg = %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
-    ax.tm().b(1200, this);
-    if ((bXB != null) && (bXB.isShowing())) {
-      bXB.dismiss();
+    u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "onSceneEnd, errType = %d, errCode = %d, errMsg = %s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+    ah.tE().b(1200, this);
+    if ((coM != null) && (coM.isShowing())) {
+      coM.dismiss();
     }
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      Hs();
+      g(paramj);
       finish();
       return;
     }
-    if (dt.a.b(this, paramInt1, paramInt2, null, 4))
+    if (n.a.b(this, paramInt1, paramInt2, null, 4))
     {
-      t.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "mm error processor process this errcode");
+      u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "mm error processor process this errcode");
       finish();
       return;
     }
-    findViewById(a.i.sdk_share_body).setVisibility(0);
-    nh(a.n.share_to_wechat_spam);
-    paramj = (TextView)findViewById(a.i.share_to_wecaht_spam_tips_text);
-    if (!ad.iW(paramString)) {
-      paramj.setText(getString(a.n.share_to_wechat_spam_tips, new Object[] { paramString }));
+    findViewById(2131165271).setVisibility(0);
+    qb(2131429571);
+    TextView localTextView = (TextView)findViewById(2131165272);
+    if (!t.kz(paramString))
+    {
+      paramj = paramString;
+      if (paramString.startsWith("autoauth_errmsg_")) {
+        paramj = paramString.substring(16);
+      }
+      paramString = paramj;
+      if (paramj.startsWith("<e>"))
+      {
+        Map localMap = q.J(paramj, "e", null);
+        paramString = paramj;
+        if (localMap != null)
+        {
+          paramString = paramj;
+          if (!t.kz((String)localMap.get(".e.Content"))) {
+            paramString = (String)localMap.get(".e.Content");
+          }
+        }
+      }
+      localTextView.setText(getString(2131429573, new Object[] { paramString }));
     }
-    paramString = (Button)findViewById(a.i.back_to_app);
-    paramj = i.k(this, appId);
-    t.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "appName = %s", new Object[] { paramj });
-    if (!ad.iW(paramj)) {
-      paramString.setText(getString(a.n.share_spam_back) + paramj);
+    paramString = (Button)findViewById(2131165273);
+    paramj = com.tencent.mm.pluginsdk.model.app.g.l(this, appId);
+    u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "appName = %s", new Object[] { paramj });
+    if (!t.kz(paramj)) {
+      paramString.setText(getString(2131429575) + paramj);
     }
     for (;;)
     {
-      paramString.setOnClickListener(new s(this));
+      paramString.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          WXEntryActivity.c(WXEntryActivity.this);
+          finish();
+        }
+      });
       return;
-      paramString.setText(a.n.share_spam_back);
+      paramString.setText(2131429575);
     }
   }
   
   protected final void a(AutoLoginActivity.a parama, Intent paramIntent)
   {
-    t.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "postLogin, loginResult = " + parama);
+    u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "postLogin, loginResult = " + parama);
     n(paramIntent);
     int i;
-    switch (1.cjT[parama.ordinal()])
+    switch (4.cBe[parama.ordinal()])
     {
     default: 
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "postLogin, unknown login result = " + parama);
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "postLogin, unknown login result = " + parama);
       finish();
       return;
     case 1: 
       if ((getIntent() == null) || (getIntent().getExtras() == null))
       {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checkCanShare fail, invalid intent/extras");
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checkCanShare fail, invalid intent/extras");
         finish();
         return;
       }
-      paramIntent = new d.a(getIntent().getExtras());
-      parama = hXX;
+      paramIntent = new c.a(getIntent().getExtras());
+      parama = jUS;
       if (parama == null)
       {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "wxmsg is null, how could it be?, directly deal request");
-        Hs();
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "wxmsg is null, how could it be?, directly deal request");
+        g(null);
         finish();
         return;
       }
-      if (o.a(getIntent().getExtras(), "_wxapi_command_type", 0) == 1)
+      if (com.tencent.mm.sdk.platformtools.p.a(getIntent().getExtras(), "_wxapi_command_type", 0) == 1)
       {
-        t.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "it is auth, just dealrequest");
-        Hs();
+        u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "it is auth, just dealrequest");
+        g(null);
         finish();
         return;
       }
-      if (atZ == 2) {
+      if (asc == 2) {
         i = 3;
       }
       break;
@@ -264,90 +337,97 @@ public class WXEntryActivity
     {
       if (parama.getType() == 1)
       {
-        parama = (WXTextObject)mediaObject;
-        parama = String.format("weixin://dl/business/share/?appid=%s&type=%s&txt=%s&url=%s", new Object[] { appId, Integer.valueOf(i), text, "" });
+        paramIntent = (WXTextObject)mediaObject;
+        parama = String.format("weixin://dl/business/share/?appid=%s&type=%s&txt=%s&url=%s&msgType=%s", new Object[] { appId, Integer.valueOf(i), lk(text), "", parama.getType() });
       }
       for (;;)
       {
-        bXB = com.tencent.mm.ui.base.h.a(ipQ.iqj, getString(a.n.app_waiting), true, new r(this));
-        ax.tm().a(1200, this);
-        parama = new am(parama, 1, new LinkedList());
-        ax.tm().d(parama);
+        coM = com.tencent.mm.ui.base.g.a(koJ.kpc, getString(2131430941), true, new DialogInterface.OnCancelListener()
+        {
+          public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+          {
+            WXEntryActivity.b(WXEntryActivity.this);
+            finish();
+          }
+        });
+        ah.tE().a(1200, this);
+        parama = new ag(parama, 1, new LinkedList());
+        ah.tE().d(parama);
         return;
-        if (atZ == 1)
+        if (asc == 1)
         {
           i = 2;
           break;
         }
-        if (atZ != 0) {
-          break label478;
+        if (asc != 0) {
+          break label550;
         }
         i = 1;
         break;
         if (parama.getType() == 5)
         {
           paramIntent = (WXWebpageObject)mediaObject;
-          parama = String.format("weixin://dl/business/share/?appid=%s&type=%s&txt=%s&url=%s", new Object[] { appId, Integer.valueOf(i), description, webpageUrl });
+          parama = String.format("weixin://dl/business/share/?appid=%s&type=%s&txt=%s&url=%s&msgType=%s", new Object[] { appId, Integer.valueOf(i), lk(description), lk(webpageUrl), parama.getType() });
         }
         else
         {
-          parama = String.format("weixin://dl/business/share/?appid=%s&type=%s&txt=%s&url=%s", new Object[] { appId, Integer.valueOf(i), description, "" });
+          parama = String.format("weixin://dl/business/share/?appid=%s&type=%s&txt=%s&url=%s&msgType=%s", new Object[] { appId, Integer.valueOf(i), lk(description), "", parama.getType() });
         }
       }
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "postLogin fail, loginResult = " + parama);
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "postLogin fail, loginResult = " + parama);
       break;
-      label478:
+      label550:
       i = 0;
     }
   }
   
   protected final int getLayoutId()
   {
-    return a.k.sdk_share_check;
+    return 2131361800;
   }
   
   protected final boolean m(Intent paramIntent)
   {
     if (!n(paramIntent))
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "Init failed");
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "Init failed");
       finish();
       return false;
     }
-    if ((!ax.qZ()) || (ax.tu()))
+    if ((!ah.rh()) || (ah.tM()))
     {
-      t.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "preLogin not login, save the appid : %s", new Object[] { appId });
-      com.tencent.mm.pluginsdk.model.app.r.uw(appId);
+      u.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "preLogin not login, save the appid : %s", new Object[] { appId });
+      com.tencent.mm.pluginsdk.model.app.p.zW(appId);
     }
-    if (!em(cjO))
+    if (!eK(cAY))
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "sdk version is not supported, sdkVersion = " + cjO);
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "sdk version is not supported, sdkVersion = " + cAY);
       finish();
       return false;
     }
     if (uri == null)
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "check appid failed, null content");
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "check appid failed, null content");
       finish();
       return false;
     }
-    t.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "preLogin, appId = " + appId);
-    if (ad.iW(appId))
+    u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "preLogin, appId = " + appId);
+    if (t.kz(appId))
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "invalid appid, ignore");
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "invalid appid, ignore");
       finish();
       return false;
     }
-    t.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "preLogin, pkg = " + cjN);
-    if (ad.iW(cjN))
+    u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "preLogin, pkg = " + cAX);
+    if (t.kz(cAX))
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unknown package, ignore");
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unknown package, ignore");
       finish();
       return false;
     }
-    if (!g(o.d(paramIntent, "_mmessage_checksum"), f(content, cjO, cjN)))
+    if (!h(com.tencent.mm.sdk.platformtools.p.h(paramIntent, "_mmessage_checksum"), g(content, cAY, cAX)))
     {
-      t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checksum fail");
+      u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checksum fail");
       finish();
       return false;
     }
@@ -357,20 +437,27 @@ public class WXEntryActivity
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    a(new q(this));
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        WXEntryActivity.a(WXEntryActivity.this);
+        return false;
+      }
+    });
   }
   
   protected void onDestroy()
   {
     super.onDestroy();
-    ax.tm().b(1200, this);
+    ah.tE().b(1200, this);
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
   {
     if ((paramKeyEvent.getRepeatCount() == 0) && (paramKeyEvent.getKeyCode() == 4))
     {
-      t.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "user click back button");
+      u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "user click back button");
       goBack();
       return true;
     }
@@ -383,8 +470,9 @@ public class WXEntryActivity
   {
     private String appId;
     private String appName;
-    private String cjN;
-    private int cjO;
+    private String cAX;
+    private int cAY;
+    private long cBt;
     private Context context;
     
     public void onReceive(Context paramContext, Intent paramIntent)
@@ -392,29 +480,30 @@ public class WXEntryActivity
       if ((paramContext == null) || (paramIntent == null)) {
         return;
       }
-      com.tencent.mm.aj.c.aCZ();
+      c.aSY();
       context = paramContext;
-      paramContext = o.c(paramIntent, "_mmessage_content");
-      cjO = o.a(paramIntent, "_mmessage_sdkVersion", 0);
-      if (!WXEntryActivity.dL(cjO))
+      paramContext = com.tencent.mm.sdk.platformtools.p.g(paramIntent, "_mmessage_content");
+      cBt = com.tencent.mm.sdk.platformtools.p.f(paramIntent, "_mmessage_support_content_type");
+      cAY = com.tencent.mm.sdk.platformtools.p.a(paramIntent, "_mmessage_sdkVersion", 0);
+      if (!WXEntryActivity.ej(cAY))
       {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "sdk version is not supported, sdkVersion = " + cjO);
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "sdk version is not supported, sdkVersion = " + cAY);
         return;
       }
-      cjN = o.c(paramIntent, "_mmessage_appPackage");
-      if ((cjN == null) || (cjN.length() <= 0))
+      cAX = com.tencent.mm.sdk.platformtools.p.g(paramIntent, "_mmessage_appPackage");
+      if ((cAX == null) || (cAX.length() <= 0))
       {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unknown package, ignore");
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unknown package, ignore");
         return;
       }
-      if (!WXEntryActivity.h(o.d(paramIntent, "_mmessage_checksum"), WXEntryActivity.g(paramContext, cjO, cjN)))
+      if (!WXEntryActivity.i(com.tencent.mm.sdk.platformtools.p.h(paramIntent, "_mmessage_checksum"), WXEntryActivity.h(paramContext, cAY, cAX)))
       {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checksum fail");
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "checksum fail");
         return;
       }
       if (paramContext == null)
       {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "check appid failed, null content");
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "check appid failed, null content");
         return;
       }
       paramContext = Uri.parse(paramContext);
@@ -422,70 +511,71 @@ public class WXEntryActivity
       try
       {
         appId = paramContext.getQueryParameter("appid");
-        t.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "onReceive, appId = " + appId);
+        u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "onReceive, appId = " + appId);
         if ((appId == null) || (appId.length() <= 0))
         {
-          t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "invalid appid, ignore");
+          u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "invalid appid, ignore");
           return;
         }
       }
       catch (Exception paramContext)
       {
-        t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "init: %s", new Object[] { paramContext.toString() });
+        u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "init: %s", new Object[] { paramContext.toString() });
         return;
       }
-      if ((!ax.qZ()) || (ax.tu()))
+      if ((!ah.rh()) || (ah.tM()))
       {
-        t.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "not login, just save the appid : %s", new Object[] { appId });
-        com.tencent.mm.pluginsdk.model.app.r.uw(appId);
+        u.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "not login, just save the appid : %s", new Object[] { appId });
+        com.tencent.mm.pluginsdk.model.app.p.zW(appId);
         return;
       }
-      if (ax.ts())
+      if (ah.tK())
       {
-        t.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "not login accInitializing, just save the appid : %s", new Object[] { appId });
-        com.tencent.mm.pluginsdk.model.app.r.uw(appId);
+        u.w("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "not login accInitializing, just save the appid : %s", new Object[] { appId });
+        com.tencent.mm.pluginsdk.model.app.p.zW(appId);
         return;
       }
-      com.tencent.mm.pluginsdk.model.app.h localh;
+      f localf;
       if ("registerapp".equals(paramIntent))
       {
-        t.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handle app registeration: " + cjN + ", sdkver=" + cjO);
-        if (!ax.qZ())
+        u.i("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handle app registeration: " + cAX + ", sdkver=" + cAY);
+        if (!ah.rh())
         {
-          t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "no available account");
+          u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "no available account");
           return;
         }
-        localh = i.V(appId, true);
-        if (!com.tencent.mm.pluginsdk.model.app.r.b(context, localh, cjN))
+        localf = com.tencent.mm.pluginsdk.model.app.g.ai(appId, true);
+        if (!com.tencent.mm.pluginsdk.model.app.p.b(context, localf, cAX))
         {
-          t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "reg fail, check app fail");
-          ay.azj().un(appId);
+          u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "reg fail, check app fail");
+          aj.aPQ().zN(appId);
           return;
         }
-        if ((localh != null) && (localh.ayW()))
+        if ((localf != null) && (localf.aPB()))
         {
-          paramContext = l.a.gKd;
+          paramContext = i.a.iyK;
           if (paramContext != null) {
-            paramContext.l(context, appId, cjN);
+            paramContext.m(context, appId, cAX);
           }
         }
       }
       for (paramContext = null;; paramContext = null)
       {
+        boolean bool;
         try
         {
           paramIntent = context.getPackageManager();
-          localApplicationInfo = paramIntent.getApplicationInfo(cjN, 0);
+          localApplicationInfo = paramIntent.getApplicationInfo(cAX, 0);
           if (localApplicationInfo == null)
           {
-            t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "package not installed");
+            u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "package not installed");
             return;
           }
         }
         catch (IncompatibleClassChangeError paramContext)
         {
           ApplicationInfo localApplicationInfo;
-          t.printErrStackTrace("MicroMsg.Crash", paramContext, "May cause dvmFindCatchBlock crash!", new Object[0]);
+          u.printErrStackTrace("MicroMsg.Crash", paramContext, "May cause dvmFindCatchBlock crash!", new Object[0]);
           throw ((IncompatibleClassChangeError)new IncompatibleClassChangeError("May cause dvmFindCatchBlock crash!").initCause(paramContext));
           appName = localApplicationInfo.loadLabel(paramIntent).toString();
           paramIntent = localApplicationInfo.loadIcon(paramIntent);
@@ -494,91 +584,106 @@ public class WXEntryActivity
           }
           paramIntent = ((BitmapDrawable)paramIntent).getBitmap();
           paramContext = paramIntent;
-          if (localh != null)
+          if (localf != null)
           {
-            ay.azk();
+            aj.aPR();
             paramIntent = appId;
             if ((paramIntent != null) && (paramIntent.length() != 0)) {
-              break label760;
+              break label784;
             }
-            t.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "hasIcon, appId is null");
+            u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "hasIcon, appId is null");
             bool = false;
             if (bool) {}
           }
           else
           {
-            ay.azk().t(appId, paramContext);
+            aj.aPR().t(appId, paramContext);
           }
-          if (localh == null)
+          if (localf == null)
           {
-            paramContext = new com.tencent.mm.pluginsdk.model.app.h();
+            paramContext = new f();
             field_appId = appId;
             field_appName = "";
-            field_packageName = cjN;
+            field_packageName = cAX;
             field_status = 0;
-            paramIntent = com.tencent.mm.pluginsdk.model.app.r.av(context, cjN);
+            paramIntent = com.tencent.mm.pluginsdk.model.app.p.aI(context, cAX);
             if (paramIntent != null) {
               field_signature = paramIntent;
             }
             field_modifyTime = System.currentTimeMillis();
-            bool = ay.azk().m(paramContext);
-            com.tencent.mm.pluginsdk.ui.tools.h.vt(appId);
-            if ((!bool) || (!ad.iW(field_openId))) {
+            field_appSupportContentType = cBt;
+            bool = aj.aPR().m(paramContext);
+            b.AR(appId);
+            if ((!bool) || (!t.kz(field_openId))) {
               break;
             }
-            t.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
-            ay.azn().ut(appId);
+            u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
+            aj.aPV().zT(appId);
             return;
           }
         }
         catch (Throwable paramIntent)
         {
-          boolean bool;
           for (;;)
           {
-            t.printErrStackTrace("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", paramIntent, "package not installed", new Object[0]);
+            u.printErrStackTrace("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", paramIntent, "package not installed", new Object[0]);
             continue;
-            label760:
-            bool = com.tencent.mm.a.c.az(com.tencent.mm.pluginsdk.model.app.l.aq(paramIntent, 1));
+            label784:
+            bool = e.ax(i.aG(paramIntent, 1));
           }
-          if ((field_status == 2) || (field_status == 3) || (field_status == 4))
+        }
+        int i;
+        if ((field_appInfoFlag & 0x2000) == 0) {
+          if (cBt != field_appSupportContentType)
           {
-            if (!localh.ayW()) {
-              com.tencent.mm.pluginsdk.ui.tools.h.vt(appId);
+            i = 1;
+            label824:
+            field_appSupportContentType = cBt;
+          }
+        }
+        for (;;)
+        {
+          if ((field_status == 2) || (field_status == 3) || (field_status == 4) || (i != 0))
+          {
+            if (!localf.aPB()) {
+              b.AR(appId);
             }
             field_status = 0;
-            bool = ay.azk().a(localh, new String[0]);
-            t.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, updateRet = " + bool);
+            bool = aj.aPR().a(localf, new String[0]);
+            u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, updateRet = " + bool);
           }
-        }
-        if (!ad.iW(field_openId)) {
-          break;
-        }
-        t.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
-        ay.azn().ut(appId);
-        return;
-        if (!"unregisterapp".equals(paramIntent)) {
-          break;
-        }
-        t.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handle app unregisteration: " + cjN + ", sdkver=" + cjO);
-        if (!ax.qZ())
-        {
-          t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "no available account");
+          if (!t.kz(field_openId)) {
+            break;
+          }
+          u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handleAppRegisteration, trigger getAppSetting, appId = " + appId);
+          aj.aPV().zT(appId);
           return;
-        }
-        paramContext = i.V(appId, false);
-        if (!com.tencent.mm.pluginsdk.model.app.r.b(context, paramContext, cjN))
-        {
-          t.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unreg fail, check app fail");
+          i = 0;
+          break label824;
+          if (!"unregisterapp".equals(paramIntent)) {
+            break;
+          }
+          u.d("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "handle app unregisteration: " + cAX + ", sdkver=" + cAY);
+          if (!ah.rh())
+          {
+            u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "no available account");
+            return;
+          }
+          paramContext = com.tencent.mm.pluginsdk.model.app.g.ai(appId, false);
+          if (!com.tencent.mm.pluginsdk.model.app.p.b(context, paramContext, cAX))
+          {
+            u.e("!44@/B4Tb64lLpJdjEu5xDey9UG2pFkOWxegY/Q68uMN0RY=", "unreg fail, check app fail");
+            return;
+          }
+          if ((paramContext == null) || (field_status == 5)) {
+            break;
+          }
+          field_status = 4;
+          aj.aPR().a(paramContext, new String[0]);
+          b.AS(appId);
           return;
+          i = 0;
         }
-        if ((paramContext == null) || (field_status == 5)) {
-          break;
-        }
-        field_status = 4;
-        ay.azk().a(paramContext, new String[0]);
-        com.tencent.mm.pluginsdk.ui.tools.h.vu(appId);
-        return;
       }
     }
   }

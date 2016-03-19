@@ -1,6 +1,18 @@
 package com.tencent.mm.ui.account;
 
-final class RegByFacebookSetPwdUI$1 {}
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+
+final class RegByFacebookSetPwdUI$1
+  implements DialogInterface.OnClickListener
+{
+  RegByFacebookSetPwdUI$1(RegByFacebookSetPwdUI paramRegByFacebookSetPwdUI) {}
+  
+  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  {
+    kup.finish();
+  }
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.ui.account.RegByFacebookSetPwdUI.1

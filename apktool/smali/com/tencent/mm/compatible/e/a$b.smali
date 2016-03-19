@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field public bjp:I
+.field public btR:I
 
-.field public bjq:Landroid/util/SparseArray;
+.field public btS:Landroid/util/SparseArray;
 
-.field public bjr:Ljava/lang/String;
+.field public btT:Ljava/lang/String;
 
 .field public model:Ljava/lang/String;
 
@@ -64,7 +64,7 @@
 
     const/4 v3, 0x0
 
-    iget-object v4, p0, Lcom/tencent/mm/compatible/e/a$b;->bjr:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/compatible/e/a$b;->btT:Ljava/lang/String;
 
     aput-object v4, v2, v3
 
@@ -82,13 +82,13 @@
 
     const/4 v3, 0x3
 
-    iget-object v4, p0, Lcom/tencent/mm/compatible/e/a$b;->bjq:Landroid/util/SparseArray;
+    iget-object v4, p0, Lcom/tencent/mm/compatible/e/a$b;->btS:Landroid/util/SparseArray;
 
     aput-object v4, v2, v3
 
     const/4 v3, 0x4
 
-    iget v4, p0, Lcom/tencent/mm/compatible/e/a$b;->bjp:I
+    iget v4, p0, Lcom/tencent/mm/compatible/e/a$b;->btR:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 

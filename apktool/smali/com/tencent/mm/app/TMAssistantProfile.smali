@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final anu:Ljava/lang/String;
+.field public static final alg:Ljava/lang/String;
 
 
 # direct methods
@@ -17,7 +17,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getPackageName()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getPackageName()Ljava/lang/String;
 
     move-result-object v1
 
@@ -35,7 +35,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/app/TMAssistantProfile;->anu:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/app/TMAssistantProfile;->alg:Ljava/lang/String;
 
     return-void
 .end method
@@ -52,11 +52,11 @@
 
 
 # virtual methods
-.method public final bg()V
+.method public final aQ()V
     .locals 0
 
     .prologue
-    .line 26
+    .line 28
     return-void
 .end method
 
@@ -73,10 +73,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/compatible/util/m;->a(Ljava/lang/String;Ljava/lang/ClassLoader;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/compatible/util/i;->b(Ljava/lang/String;Ljava/lang/ClassLoader;)V
 
     .line 17
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -85,17 +85,22 @@
     invoke-static {v0, v1}, Landroid/support/a/a;->a(Landroid/content/Context;Z)Z
 
     .line 18
-    sget-object v0, Lcom/tencent/mm/app/TMAssistantProfile;->anu:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/app/TMAssistantProfile;->alg:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/app/n;->aR(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/app/h;->aP(Ljava/lang/String;)Z
 
     .line 19
-    invoke-static {}, Lcom/tencent/mm/compatible/util/m;->pm()V
+    invoke-static {}, Lcom/tencent/mm/compatible/util/i;->setupBrokenLibraryHandler()V
 
     .line 20
     invoke-static {}, Lcom/tencent/mm/xlog/Xlog;->init()V
 
-    .line 21
+    .line 22
+    iget-object v0, p0, Lcom/tencent/mm/app/TMAssistantProfile;->btM:Landroid/app/Application;
+
+    invoke-static {v0}, Lcom/tencent/mm/app/MMApplicationWrapper;->a(Landroid/app/Application;)V
+
+    .line 23
     return-void
 .end method
 
@@ -103,8 +108,8 @@
     .locals 1
 
     .prologue
-    .line 30
-    sget-object v0, Lcom/tencent/mm/app/TMAssistantProfile;->anu:Ljava/lang/String;
+    .line 32
+    sget-object v0, Lcom/tencent/mm/app/TMAssistantProfile;->alg:Ljava/lang/String;
 
     return-object v0
 .end method

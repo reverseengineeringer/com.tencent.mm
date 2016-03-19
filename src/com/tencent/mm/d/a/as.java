@@ -1,33 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
 
 public final class as
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avA = new a();
-  public b avB = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atT = new a();
+  public b atU = new b();
   
   public as()
   {
-    id = "ExDeviceGetTicket";
-    hXT = atO;
+    id = "CreateBakBanner";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String anZ;
-    public String avC;
-    public String avt;
-    public int type;
+    public Context context;
   }
   
   public static final class b
   {
-    public boolean avD;
-    public String avE;
+    public Object atV;
   }
 }
 

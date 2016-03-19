@@ -8,11 +8,11 @@
 
 
 # instance fields
-.field private cjo:I
+.field private cAx:I
 
-.field private gKK:Landroid/os/ResultReceiver;
+.field private izu:Landroid/os/ResultReceiver;
 
-.field private gKL:I
+.field private izv:I
 
 
 # direct methods
@@ -146,18 +146,18 @@
     invoke-virtual {v2, v0, v5, v4}, Ljava/io/FileOutputStream;->write([BII)V
 
     .line 88
-    iget v5, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->gKL:I
+    iget v5, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->izv:I
 
     add-int/2addr v4, v5
 
-    iput v4, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->gKL:I
+    iput v4, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->izv:I
 
     .line 89
     new-instance v4, Landroid/os/Bundle;
 
     invoke-direct {v4}, Landroid/os/Bundle;-><init>()V
 
-    iget v5, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->gKL:I
+    iget v5, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->izv:I
 
     int-to-long v5, v5
 
@@ -171,7 +171,7 @@
 
     long-to-int v5, v5
 
-    iget v6, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->cjo:I
+    iget v6, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->cAx:I
 
     if-le v5, v6, :cond_0
 
@@ -179,13 +179,13 @@
 
     invoke-virtual {v4, v6, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    iget-object v6, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->gKK:Landroid/os/ResultReceiver;
+    iget-object v6, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->izu:Landroid/os/ResultReceiver;
 
     const/16 v7, 0x1231
 
     invoke-virtual {v6, v7, v4}, Landroid/os/ResultReceiver;->send(ILandroid/os/Bundle;)V
 
-    iput v5, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->cjo:I
+    iput v5, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->cAx:I
     :try_end_2
     .catch Ljava/net/ProtocolException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/net/MalformedURLException; {:try_start_2 .. :try_end_2} :catch_2
@@ -424,31 +424,31 @@
     invoke-super {p0}, Landroid/app/IntentService;->onCreate()V
 
     .line 38
-    new-instance v0, Landroid/support/v4/app/aa$d;
+    new-instance v0, Landroid/support/v4/app/p$d;
 
-    invoke-direct {v0, p0}, Landroid/support/v4/app/aa$d;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Landroid/support/v4/app/p$d;-><init>(Landroid/content/Context;)V
 
     .line 39
     const-string/jumbo v1, "Something Download"
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/aa$d;->a(Ljava/lang/CharSequence;)Landroid/support/v4/app/aa$d;
+    invoke-virtual {v0, v1}, Landroid/support/v4/app/p$d;->a(Ljava/lang/CharSequence;)Landroid/support/v4/app/p$d;
 
     move-result-object v1
 
     const-string/jumbo v2, "Download in progress"
 
-    invoke-virtual {v1, v2}, Landroid/support/v4/app/aa$d;->b(Ljava/lang/CharSequence;)Landroid/support/v4/app/aa$d;
+    invoke-virtual {v1, v2}, Landroid/support/v4/app/p$d;->b(Ljava/lang/CharSequence;)Landroid/support/v4/app/p$d;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$h;->icon:I
+    const v2, 0x7f040668
 
-    invoke-virtual {v1, v2}, Landroid/support/v4/app/aa$d;->k(I)Landroid/support/v4/app/aa$d;
+    invoke-virtual {v1, v2}, Landroid/support/v4/app/p$d;->l(I)Landroid/support/v4/app/p$d;
 
     .line 44
     const/16 v1, 0x1231
 
-    invoke-virtual {v0}, Landroid/support/v4/app/aa$d;->build()Landroid/app/Notification;
+    invoke-virtual {v0}, Landroid/support/v4/app/p$d;->build()Landroid/app/Notification;
 
     move-result-object v0
 
@@ -483,7 +483,7 @@
 
     check-cast v0, Landroid/os/ResultReceiver;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->gKK:Landroid/os/ResultReceiver;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadFileService;->izu:Landroid/os/ResultReceiver;
 
     .line 53
     new-instance v0, Ljava/io/File;

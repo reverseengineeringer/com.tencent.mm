@@ -1,10 +1,8 @@
 package com.tencent.mm.d.a;
 
-import java.util.ArrayList;
-
 public final class fb$a
 {
-  public ArrayList azs;
+  public String appId;
 }
 
 /* Location:

@@ -1,21 +1,62 @@
 package com.tencent.mm.console;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.by.a;
-import com.tencent.mm.network.m;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.Context;
+import com.tencent.mm.modelstat.WatchDogPushReceiver;
+import com.tencent.mm.protocal.MMProtocalJni;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import junit.framework.Assert;
 
-final class c
-  implements by.a
+public final class c
+  extends b.a
 {
-  c(String paramString, int paramInt) {}
+  public static final Map bvd = new HashMap();
   
-  public final void a(m paramm)
+  static
   {
-    ax.tm().a(1, "", 0, false);
-    t.appenderFlush();
-    ax.tm().a(2, bks, bkt, ax.qZ());
+    c localc = new c();
+    bvd.put("//assert", localc);
+    bvd.put("//netassert", localc);
+    bvd.put("//jniassert", localc);
+    bvd.put("//jnipushassert", localc);
+    bvd.put("//pushassert", localc);
+  }
+  
+  public c()
+  {
+    bvc = 5;
+  }
+  
+  public final boolean aG(Context paramContext)
+  {
+    if ("//assert".equals(bvb[0]))
+    {
+      Assert.assertTrue("test errlog " + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()), false);
+      return true;
+    }
+    if ("//netassert".equals(bvb[0]))
+    {
+      Assert.assertTrue("NetsceneQueue forbid in ", false);
+      return true;
+    }
+    if ("//jniassert".equals(bvb[0]))
+    {
+      MMProtocalJni.setClientPackVersion(-1);
+      return true;
+    }
+    if ("//jnipushassert".equals(bvb[0]))
+    {
+      WatchDogPushReceiver.eb(2);
+      return true;
+    }
+    if ("//pushassert".equals(bvb[0]))
+    {
+      WatchDogPushReceiver.eb(1);
+      return true;
+    }
+    return false;
   }
 }
 

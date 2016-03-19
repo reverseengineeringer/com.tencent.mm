@@ -3,19 +3,19 @@ package android.support.v7.internal.view.menu;
 import android.content.DialogInterface;
 
 final class ActionMenuPresenter$a
-  extends h
+  extends g
 {
-  public ActionMenuPresenter$a(ActionMenuPresenter paramActionMenuPresenter, s params)
+  public ActionMenuPresenter$a(ActionMenuPresenter paramActionMenuPresenter, p paramp)
   {
-    super(params);
-    mg = lN;
+    super(paramp);
+    ll = kS;
   }
   
   public final void onDismiss(DialogInterface paramDialogInterface)
   {
     super.onDismiss(paramDialogInterface);
-    lP.lL = null;
-    lP.lO = 0;
+    kU.kQ = null;
+    kU.kT = 0;
   }
 }
 

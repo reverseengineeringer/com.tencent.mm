@@ -1,17 +1,18 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-final class v
+import com.tencent.mm.network.j;
+import com.tencent.mm.r.a;
+
+public abstract class v
+  implements j
 {
-  public String appId;
-  public int bLd;
-  public byte[] data;
+  public a dyc;
   
-  public v(String paramString, int paramInt, byte[] paramArrayOfByte)
-  {
-    appId = paramString;
-    bLd = paramInt;
-    data = paramArrayOfByte;
-  }
+  public abstract byte[] abk();
+  
+  public abstract void af(byte[] paramArrayOfByte);
+  
+  public abstract int getType();
 }
 
 /* Location:

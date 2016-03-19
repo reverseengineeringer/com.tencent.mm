@@ -15,13 +15,13 @@
 
 
 # static fields
-.field public static final enum jNa:Loicq/wlogin_sdk/request/b$a;
+.field public static final enum mbm:Loicq/wlogin_sdk/request/b$a;
 
-.field public static final enum jNb:Loicq/wlogin_sdk/request/b$a;
+.field public static final enum mbn:Loicq/wlogin_sdk/request/b$a;
 
-.field public static final enum jNc:Loicq/wlogin_sdk/request/b$a;
+.field public static final enum mbo:Loicq/wlogin_sdk/request/b$a;
 
-.field private static final synthetic jNd:[Loicq/wlogin_sdk/request/b$a;
+.field private static final synthetic mbp:[Loicq/wlogin_sdk/request/b$a;
 
 
 # direct methods
@@ -42,7 +42,7 @@
 
     invoke-direct {v0, v1, v2}, Loicq/wlogin_sdk/request/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Loicq/wlogin_sdk/request/b$a;->jNa:Loicq/wlogin_sdk/request/b$a;
+    sput-object v0, Loicq/wlogin_sdk/request/b$a;->mbm:Loicq/wlogin_sdk/request/b$a;
 
     .line 56
     new-instance v0, Loicq/wlogin_sdk/request/b$a;
@@ -51,7 +51,7 @@
 
     invoke-direct {v0, v1, v3}, Loicq/wlogin_sdk/request/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Loicq/wlogin_sdk/request/b$a;->jNb:Loicq/wlogin_sdk/request/b$a;
+    sput-object v0, Loicq/wlogin_sdk/request/b$a;->mbn:Loicq/wlogin_sdk/request/b$a;
 
     .line 57
     new-instance v0, Loicq/wlogin_sdk/request/b$a;
@@ -60,26 +60,26 @@
 
     invoke-direct {v0, v1, v4}, Loicq/wlogin_sdk/request/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Loicq/wlogin_sdk/request/b$a;->jNc:Loicq/wlogin_sdk/request/b$a;
+    sput-object v0, Loicq/wlogin_sdk/request/b$a;->mbo:Loicq/wlogin_sdk/request/b$a;
 
     .line 54
     const/4 v0, 0x3
 
     new-array v0, v0, [Loicq/wlogin_sdk/request/b$a;
 
-    sget-object v1, Loicq/wlogin_sdk/request/b$a;->jNa:Loicq/wlogin_sdk/request/b$a;
+    sget-object v1, Loicq/wlogin_sdk/request/b$a;->mbm:Loicq/wlogin_sdk/request/b$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Loicq/wlogin_sdk/request/b$a;->jNb:Loicq/wlogin_sdk/request/b$a;
+    sget-object v1, Loicq/wlogin_sdk/request/b$a;->mbn:Loicq/wlogin_sdk/request/b$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Loicq/wlogin_sdk/request/b$a;->jNc:Loicq/wlogin_sdk/request/b$a;
+    sget-object v1, Loicq/wlogin_sdk/request/b$a;->mbo:Loicq/wlogin_sdk/request/b$a;
 
     aput-object v1, v0, v4
 
-    sput-object v0, Loicq/wlogin_sdk/request/b$a;->jNd:[Loicq/wlogin_sdk/request/b$a;
+    sput-object v0, Loicq/wlogin_sdk/request/b$a;->mbp:[Loicq/wlogin_sdk/request/b$a;
 
     return-void
 .end method
@@ -117,7 +117,7 @@
     const/4 v3, 0x0
 
     .line 1
-    sget-object v0, Loicq/wlogin_sdk/request/b$a;->jNd:[Loicq/wlogin_sdk/request/b$a;
+    sget-object v0, Loicq/wlogin_sdk/request/b$a;->mbp:[Loicq/wlogin_sdk/request/b$a;
 
     array-length v1, v0
 

@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/smtt/sdk/ac$a;
+.implements Lcom/tencent/smtt/sdk/w$a;
 
 
 # annotations
@@ -18,9 +18,9 @@
 
 
 # instance fields
-.field final synthetic jJv:Lcom/tencent/smtt/sdk/e;
+.field final synthetic lRK:Lcom/tencent/smtt/sdk/e;
 
-.field jJw:Lcom/tencent/smtt/export/external/interfaces/QuotaUpdater;
+.field lRL:Lcom/tencent/smtt/export/external/interfaces/QuotaUpdater;
 
 
 # direct methods
@@ -29,12 +29,12 @@
 
     .prologue
     .line 253
-    iput-object p1, p0, Lcom/tencent/smtt/sdk/e$a;->jJv:Lcom/tencent/smtt/sdk/e;
+    iput-object p1, p0, Lcom/tencent/smtt/sdk/e$a;->lRK:Lcom/tencent/smtt/sdk/e;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 254
-    iput-object p2, p0, Lcom/tencent/smtt/sdk/e$a;->jJw:Lcom/tencent/smtt/export/external/interfaces/QuotaUpdater;
+    iput-object p2, p0, Lcom/tencent/smtt/sdk/e$a;->lRL:Lcom/tencent/smtt/export/external/interfaces/QuotaUpdater;
 
     .line 255
     return-void
@@ -47,7 +47,7 @@
 
     .prologue
     .line 259
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/e$a;->jJw:Lcom/tencent/smtt/export/external/interfaces/QuotaUpdater;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/e$a;->lRL:Lcom/tencent/smtt/export/external/interfaces/QuotaUpdater;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/smtt/export/external/interfaces/QuotaUpdater;->updateQuota(J)V
 

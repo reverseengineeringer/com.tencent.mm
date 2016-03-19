@@ -1,60 +1,54 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.d.a;
-import com.tencent.mm.sdk.d.b;
+import com.tencent.mm.sdk.e.a;
+import com.tencent.mm.sdk.e.b;
 
 public final class d
 {
   public static final class a
     extends a
   {
-    public int atZ;
-    public WXMediaMessage hXX;
-    
-    public a() {}
-    
-    public a(Bundle paramBundle)
-    {
-      n(paramBundle);
-    }
+    public String bNO;
+    public String bXM;
+    public WXMediaMessage jUS;
     
     public final int getType()
     {
-      return 2;
+      return 4;
+    }
+    
+    public final void l(Bundle paramBundle)
+    {
+      Bundle localBundle = WXMediaMessage.a.b(jUS);
+      super.l(localBundle);
+      paramBundle.putString("_wxapi_showmessage_req_lang", bXM);
+      paramBundle.putString("_wxapi_showmessage_req_country", bNO);
+      paramBundle.putAll(localBundle);
     }
     
     public final void m(Bundle paramBundle)
     {
       super.m(paramBundle);
-      paramBundle.putAll(WXMediaMessage.a.b(hXX));
-      paramBundle.putInt("_wxapi_sendmessagetowx_req_scene", atZ);
-    }
-    
-    public final void n(Bundle paramBundle)
-    {
-      super.n(paramBundle);
-      hXX = WXMediaMessage.a.G(paramBundle);
-      atZ = paramBundle.getInt("_wxapi_sendmessagetowx_req_scene");
+      bXM = paramBundle.getString("_wxapi_showmessage_req_lang");
+      bNO = paramBundle.getString("_wxapi_showmessage_req_country");
+      jUS = WXMediaMessage.a.J(paramBundle);
     }
   }
   
   public static final class b
     extends b
   {
+    public b() {}
+    
+    public b(Bundle paramBundle)
+    {
+      m(paramBundle);
+    }
+    
     public final int getType()
     {
-      return 2;
-    }
-    
-    public final void m(Bundle paramBundle)
-    {
-      super.m(paramBundle);
-    }
-    
-    public final void n(Bundle paramBundle)
-    {
-      super.n(paramBundle);
+      return 4;
     }
   }
 }

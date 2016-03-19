@@ -15,7 +15,11 @@
 
 
 # instance fields
-.field public aCM:Ljava/lang/String;
+.field public aAK:Ljava/lang/String;
+
+.field public aAL:J
+
+.field public aAM:Ljava/lang/String;
 
 
 # direct methods

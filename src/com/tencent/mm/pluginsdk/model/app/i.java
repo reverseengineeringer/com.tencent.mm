@@ -1,457 +1,396 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import android.content.Context;
-import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.os.Bundle;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.e;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.v;
-import com.tencent.mm.pluginsdk.l.a;
-import com.tencent.mm.pluginsdk.l.p;
-import com.tencent.mm.sdk.a.a;
-import com.tencent.mm.sdk.a.a.a;
-import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
-import com.tencent.mm.sdk.modelmsg.e.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.s;
-import com.tencent.mm.sdk.platformtools.t;
+import android.graphics.Bitmap.CompressFormat;
+import com.tencent.mm.a.g;
+import com.tencent.mm.d.b.e;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public final class i
+  extends com.tencent.mm.sdk.h.f
 {
-  public static h V(String paramString, boolean paramBoolean)
+  public static final String[] aoY = { com.tencent.mm.sdk.h.f.a(f.aot, "AppInfo") };
+  final com.tencent.mm.a.f iAX = new com.tencent.mm.a.f(50);
+  
+  public i(d paramd)
   {
-    Object localObject = null;
-    if ((paramString == null) || (paramString.length() == 0)) {
-      t.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getAppInfo, appId is null");
+    super(paramd, f.aot, "AppInfo", e.aLn);
+    paramd = new f();
+    field_appId = "wx4310bbd51be7d979";
+    if (!super.c(paramd, new String[0]))
+    {
+      paramd = new f();
+      field_appId = "wx4310bbd51be7d979";
+      field_appName = "weixinfile";
+      field_packageName = "com.tencent.mm.openapi";
+      field_status = -1;
+      super.a(paramd);
     }
-    h localh;
+  }
+  
+  public static String aG(String paramString, int paramInt)
+  {
+    if ((paramString == null) || (paramString.length() == 0))
+    {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "getIconPath : invalid argument");
+      return null;
+    }
+    switch (paramInt)
+    {
+    default: 
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "getIconPath, unknown iconType = " + paramInt);
+      return null;
+    case 1: 
+      return ah.tD().rK() + g.m(paramString.getBytes()) + ".png";
+    case 2: 
+      return ah.tD().rK() + g.m(paramString.getBytes()) + "_wm.png";
+    case 3: 
+      return ah.tD().rK() + g.m(paramString.getBytes()) + "_sg.png";
+    case 5: 
+      return ah.tD().rK() + g.m(paramString.getBytes()) + "_sl.png";
+    }
+    return ah.tD().rK() + g.m(paramString.getBytes()) + "_sp.png";
+  }
+  
+  public static f aPK()
+  {
+    f localf = new f();
+    field_appName = "invalid_appname";
+    field_packageName = "";
+    field_signature = "";
+    field_status = 3;
+    return localf;
+  }
+  
+  private void l(f paramf)
+  {
+    if ((paramf == null) || (field_appId == null)) {
+      return;
+    }
+    iAX.d(field_appId, paramf);
+  }
+  
+  private void th(String paramString)
+  {
+    if (!ay.kz(paramString)) {
+      iAX.remove(paramString);
+    }
+  }
+  
+  public final boolean a(f paramf, String... paramVarArgs)
+  {
+    boolean bool2 = false;
+    boolean bool1 = bool2;
+    if (paramf != null)
+    {
+      if (!ay.kz(field_appId)) {
+        break label25;
+      }
+      bool1 = bool2;
+    }
+    label25:
     do
     {
-      return (h)localObject;
-      if (l.a.gJZ == null)
-      {
-        t.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getISubCorePluginBase() == null");
-        return null;
-      }
-      localh = l.a.gJZ.tW(paramString);
-      localObject = localh;
-    } while (!paramBoolean);
-    if ((localh == null) || (field_appName == null) || (field_appName.length() == 0)) {}
-    for (int i = 1;; i = 0)
-    {
-      localObject = localh;
-      if (i == 0) {
-        break;
-      }
-      l.a.gJZ.tX(paramString);
-      return localh;
+      return bool1;
+      th(field_appId);
+      bool2 = super.b(paramf, false, paramVarArgs);
+      bool1 = bool2;
+    } while (!bool2);
+    a(field_appId, 3, field_appId);
+    return bool2;
+  }
+  
+  public final List aPI()
+  {
+    u.d("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "getNullOpenIdList, maxCount = -1");
+    ArrayList localArrayList = new ArrayList();
+    Cursor localCursor = rawQuery("select appId from AppInfo where openId is NULL ", new String[0]);
+    if (localCursor == null) {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "get null cursor");
     }
+    do
+    {
+      return localArrayList;
+      int i = localCursor.getCount();
+      if (i <= 0)
+      {
+        u.w("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "getNullOpenIdList fail, cursor count = " + i);
+        localCursor.close();
+        return localArrayList;
+      }
+      if (localCursor.moveToFirst()) {
+        while (!localCursor.isAfterLast())
+        {
+          i = localCursor.getColumnIndex("appId");
+          if (i >= 0)
+          {
+            String str = localCursor.getString(i);
+            if (!ay.kz(str)) {
+              localArrayList.add(str);
+            }
+          }
+          localCursor.moveToNext();
+        }
+      }
+    } while (localCursor == null);
+    localCursor.close();
+    return localArrayList;
   }
   
-  public static e.a a(Context paramContext, String paramString1, WXMediaMessage paramWXMediaMessage, String paramString2)
+  public final Cursor aPJ()
   {
-    t.d("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "request pkg = " + paramString1 + ", openId = " + paramString2);
-    e.a locala = new e.a();
-    hXX = paramWXMediaMessage;
-    gMB = e.n(bn.DM().getBytes());
-    cjK = paramString2;
-    bId = s.d(paramContext.getSharedPreferences(aa.aES(), 0));
-    bKU = ((String)ax.tl().rf().get(274436, null));
-    paramWXMediaMessage = new Bundle();
-    locala.m(paramWXMediaMessage);
-    r.E(paramWXMediaMessage);
-    r.F(paramWXMediaMessage);
-    paramString2 = new a.a();
-    hXK = paramString1;
-    hXM = paramWXMediaMessage;
-    a.a(paramContext, paramString2);
-    return locala;
+    Cursor localCursor2 = rawQuery("select * from AppInfo where appType like ',1" + ",%'", new String[0]);
+    Cursor localCursor1 = localCursor2;
+    if (localCursor2 == null)
+    {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "getAppByType : cursor is null");
+      localCursor1 = null;
+    }
+    return localCursor1;
   }
   
-  public static String a(Context paramContext, h paramh, String paramString)
+  public final boolean b(f paramf, String... paramVarArgs)
   {
-    if ((paramContext == null) || (paramh == null)) {}
-    label88:
-    label129:
-    label137:
-    label143:
+    boolean bool2 = false;
+    boolean bool1 = bool2;
+    if (paramf != null)
+    {
+      if (!ay.kz(field_appId)) {
+        break label25;
+      }
+      bool1 = bool2;
+    }
+    label25:
+    do
+    {
+      return bool1;
+      th(field_appId);
+      bool2 = super.a(paramf, false, paramVarArgs);
+      bool1 = bool2;
+    } while (!bool2);
+    a(field_appId, 5, field_appId);
+    return bool2;
+  }
+  
+  public final Cursor bz(int paramInt1, int paramInt2)
+  {
+    Object localObject = new StringBuilder(256);
+    ((StringBuilder)localObject).append("select * from AppInfo");
+    ((StringBuilder)localObject).append(" where ");
+    if (paramInt1 != 0) {
+      ((StringBuilder)localObject).append(" ( serviceAppInfoFlag & ").append(paramInt1).append(" ) != 0 and ");
+    }
+    ((StringBuilder)localObject).append(" ( serviceShowFlag & ").append(paramInt2).append(" ) != 0");
+    localObject = rawQuery(((StringBuilder)localObject).toString(), new String[0]);
+    if (localObject == null)
+    {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "getServiceByAppInfoFlagAndShowFlag : cursor is null");
+      return null;
+    }
+    u.d("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "getServiceByAppInfoFlagAndShowFlag count = %d", new Object[] { Integer.valueOf(((Cursor)localObject).getCount()) });
+    return (Cursor)localObject;
+  }
+  
+  /* Error */
+  public final boolean d(String paramString, byte[] paramArrayOfByte, int paramInt)
+  {
+    // Byte code:
+    //   0: aload_1
+    //   1: ifnull +19 -> 20
+    //   4: aload_1
+    //   5: invokevirtual 79	java/lang/String:length	()I
+    //   8: ifeq +12 -> 20
+    //   11: aload_2
+    //   12: ifnull +8 -> 20
+    //   15: aload_2
+    //   16: arraylength
+    //   17: ifne +13 -> 30
+    //   20: ldc 81
+    //   22: ldc_w 285
+    //   25: invokestatic 89	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   28: iconst_0
+    //   29: ireturn
+    //   30: aload_1
+    //   31: iload_3
+    //   32: invokestatic 287	com/tencent/mm/pluginsdk/model/app/i:aG	(Ljava/lang/String;I)Ljava/lang/String;
+    //   35: astore 4
+    //   37: aload 4
+    //   39: ifnonnull +13 -> 52
+    //   42: ldc 81
+    //   44: ldc_w 289
+    //   47: invokestatic 89	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   50: iconst_0
+    //   51: ireturn
+    //   52: new 291	java/io/File
+    //   55: dup
+    //   56: aload 4
+    //   58: invokespecial 292	java/io/File:<init>	(Ljava/lang/String;)V
+    //   61: astore 4
+    //   63: aload 4
+    //   65: invokevirtual 295	java/io/File:exists	()Z
+    //   68: ifeq +9 -> 77
+    //   71: aload 4
+    //   73: invokevirtual 298	java/io/File:delete	()Z
+    //   76: pop
+    //   77: new 300	java/io/FileOutputStream
+    //   80: dup
+    //   81: aload 4
+    //   83: invokespecial 303	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
+    //   86: astore 4
+    //   88: aload 4
+    //   90: aload_2
+    //   91: invokevirtual 307	java/io/FileOutputStream:write	([B)V
+    //   94: aload 4
+    //   96: invokevirtual 308	java/io/FileOutputStream:close	()V
+    //   99: aload_0
+    //   100: aload_1
+    //   101: invokevirtual 311	com/tencent/mm/pluginsdk/model/app/i:DI	(Ljava/lang/String;)V
+    //   104: iconst_1
+    //   105: ireturn
+    //   106: astore_1
+    //   107: aconst_null
+    //   108: astore_2
+    //   109: ldc 81
+    //   111: new 91	java/lang/StringBuilder
+    //   114: dup
+    //   115: ldc_w 313
+    //   118: invokespecial 96	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   121: aload_1
+    //   122: invokevirtual 316	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   125: invokevirtual 119	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   128: invokevirtual 104	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   131: invokestatic 89	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   134: aload_2
+    //   135: ifnull -107 -> 28
+    //   138: aload_2
+    //   139: invokevirtual 308	java/io/FileOutputStream:close	()V
+    //   142: iconst_0
+    //   143: ireturn
+    //   144: astore_1
+    //   145: iconst_0
+    //   146: ireturn
+    //   147: astore_1
+    //   148: aload 4
+    //   150: astore_2
+    //   151: goto -42 -> 109
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	154	0	this	i
+    //   0	154	1	paramString	String
+    //   0	154	2	paramArrayOfByte	byte[]
+    //   0	154	3	paramInt	int
+    //   35	114	4	localObject	Object
+    // Exception table:
+    //   from	to	target	type
+    //   77	88	106	java/lang/Exception
+    //   138	142	144	java/io/IOException
+    //   88	104	147	java/lang/Exception
+  }
+  
+  public final boolean m(f paramf)
+  {
+    if ((paramf == null) || (ay.kz(field_appId))) {}
+    while (!super.a(paramf, false)) {
+      return false;
+    }
+    a(field_appId, 2, field_appId);
+    l(paramf);
+    return true;
+  }
+  
+  public final void n(f paramf)
+  {
+    if (paramf == null) {}
+    while (field_status == 5) {
+      return;
+    }
+    field_status = 3;
+    u.i("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "setBlack package name = %s", new Object[] { field_packageName });
+    a(paramf, new String[0]);
+  }
+  
+  public final void o(f paramf)
+  {
+    if ((paramf == null) || (field_status != 3)) {
+      return;
+    }
+    field_status = 4;
+    a(paramf, new String[0]);
+  }
+  
+  public final boolean t(String paramString, Bitmap paramBitmap)
+  {
+    if ((paramString == null) || (paramString.length() == 0) || (paramBitmap == null) || (paramBitmap.isRecycled()))
+    {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "saveIcon : invalid argument");
+      return false;
+    }
+    Object localObject = aG(paramString, 1);
+    if (localObject == null)
+    {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "saveIcon fail, iconPath is null");
+      return false;
+    }
+    localObject = new File((String)localObject);
+    if (((File)localObject).exists()) {
+      ((File)localObject).delete();
+    }
+    try
+    {
+      localObject = new FileOutputStream((File)localObject);
+      paramBitmap.compress(Bitmap.CompressFormat.PNG, 100, (OutputStream)localObject);
+      ((FileOutputStream)localObject).close();
+      DI(paramString);
+      return true;
+    }
+    catch (Exception paramString)
+    {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "saveIcon : compress occurs an exception");
+    }
+    return false;
+  }
+  
+  public final f zP(String paramString)
+  {
+    Object localObject;
+    if ((paramString == null) || (paramString.length() == 0))
+    {
+      u.e("!32@/B4Tb64lLpIuLnUbSWxToau2iFFgrLBl", "appId is null");
+      localObject = null;
+      return (f)localObject;
+    }
+    f localf = (f)iAX.get(paramString);
+    if (localf != null) {}
     for (;;)
     {
-      return paramString;
-      Object localObject = cp(paramContext);
-      paramContext = null;
-      if (((String)localObject).equalsIgnoreCase("zh_CN")) {
-        paramContext = field_appName;
-      }
-      if (((String)localObject).equalsIgnoreCase("en"))
+      if (localf != null)
       {
-        if (bn.iW(field_appName_en)) {
-          paramContext = field_appName;
+        localObject = localf;
+        if (!ay.kz(field_appId)) {
+          break;
         }
       }
-      else
-      {
-        if ((((String)localObject).equalsIgnoreCase("zh_TW")) || (((String)localObject).equalsIgnoreCase("zh_HK")))
-        {
-          if (!bn.iW(field_appName_tw)) {
-            break label129;
-          }
-          paramContext = field_appName;
-        }
-        localObject = paramContext;
-        if (bn.iW(paramContext)) {
-          if (!bn.iW(field_appName_en)) {
-            break label137;
-          }
-        }
+      localf = new f();
+      field_appId = paramString;
+      if (!super.c(localf, new String[0])) {
+        break label92;
       }
-      for (localObject = field_appName;; localObject = field_appName_en)
-      {
-        if (bn.iW((String)localObject)) {
-          break label143;
-        }
-        return (String)localObject;
-        paramContext = field_appName_en;
-        break;
-        paramContext = field_appName_tw;
-        break label88;
-      }
+      l(localf);
+      return localf;
+      localf = null;
     }
-  }
-  
-  public static List a(Context paramContext, boolean paramBoolean, int paramInt)
-  {
-    Object localObject1 = new ArrayList();
-    if (l.a.gJZ == null) {
-      t.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getISubCorePluginBase() == null");
-    }
-    List localList;
-    Object localObject2;
-    do
-    {
-      do
-      {
-        return (List)localObject1;
-        localList = bg(1, paramInt);
-        localObject2 = null;
-        if (paramBoolean)
-        {
-          localObject2 = new int[1];
-          localObject2[0] = 5;
-        }
-        localObject1 = localList;
-      } while (localObject2 == null);
-      localObject2 = l.a.gJZ.f((int[])localObject2);
-      localObject1 = localList;
-    } while (localObject2 == null);
-    while (((Cursor)localObject2).moveToNext())
-    {
-      localObject1 = new h();
-      ((h)localObject1).c((Cursor)localObject2);
-      if (field_status == 1)
-      {
-        if (l(paramContext, field_appId))
-        {
-          if (!bn.iW(field_signature)) {
-            localList.add(localObject1);
-          }
-        }
-        else
-        {
-          field_status = 4;
-          l.a.gJZ.e((h)localObject1);
-        }
-      }
-      else if (field_signature != null) {
-        localList.add(localObject1);
-      }
-    }
-    ((Cursor)localObject2).close();
-    return localList;
-  }
-  
-  public static boolean aU(String paramString)
-  {
-    return (paramString != null) && (paramString.trim().length() != 0) && (!paramString.equals("weixinfile")) && (!paramString.equals("invalid_appname"));
-  }
-  
-  public static boolean aV(String paramString)
-  {
-    if (bn.iW(paramString)) {
-      return false;
-    }
-    h localh = V(paramString, false);
-    if (localh == null)
-    {
-      t.w("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "app is null, appId = " + paramString);
-      return false;
-    }
-    return localh.ayW();
-  }
-  
-  public static void aza()
-  {
-    SharedPreferences localSharedPreferences = aa.aEU();
-    if (localSharedPreferences != null) {
-      localSharedPreferences.edit().putString("key_app_ids_registion_while_not_login", "").commit();
-    }
-  }
-  
-  public static Bitmap b(String paramString, int paramInt, float paramFloat)
-  {
-    if ((paramString == null) || (paramString.length() == 0)) {
-      t.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getAppIcon, appId is null");
-    }
-    Bitmap localBitmap;
-    do
-    {
-      do
-      {
-        do
-        {
-          do
-          {
-            return null;
-          } while (!ax.qZ());
-          if (ax.tl().isSDCardAvailable()) {
-            break;
-          }
-        } while ((aa.getContext() == null) || (aa.getContext().getResources() == null));
-        switch (paramInt)
-        {
-        case 2: 
-        default: 
-          t.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getAppIcon, unknown iconType = " + paramInt);
-          return null;
-        }
-        paramString = BitmapFactory.decodeResource(aa.getContext().getResources(), a.h.sharemore_nosdcard_icon);
-      } while ((paramString == null) || (paramString.isRecycled()));
-      return paramString;
-      localBitmap = l.a.gJZ.a(paramString, paramInt, paramFloat);
-      if (localBitmap == null)
-      {
-        t.w("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getAppIcon, bm does not exist or has been recycled");
-        l.a.gJZ.ao(paramString, paramInt);
-        return null;
-      }
-    } while (localBitmap.isRecycled());
-    return localBitmap;
-  }
-  
-  public static boolean b(Context paramContext, h paramh)
-  {
-    if (paramh == null)
-    {
-      t.w("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "app is null");
-      return false;
-    }
-    if ((field_packageName == null) || (field_packageName.length() == 0))
-    {
-      t.w("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "field_packageName is null");
-      return false;
-    }
-    return r.l(paramContext, field_packageName);
-  }
-  
-  private static List bg(int paramInt1, int paramInt2)
-  {
-    ArrayList localArrayList = new ArrayList();
-    if (l.a.gJZ == null) {
-      t.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getServiceByAppInfoFlagAndShowFlag, getISubCorePluginBase() == null");
-    }
-    Cursor localCursor;
-    do
-    {
-      return localArrayList;
-      localCursor = l.a.gJZ.bf(1, paramInt2);
-    } while (localCursor == null);
-    while (localCursor.moveToNext())
-    {
-      h localh = new h();
-      localh.c(localCursor);
-      if (!bn.iW(field_openId)) {
-        localArrayList.add(localh);
-      }
-    }
-    localCursor.close();
-    return localArrayList;
-  }
-  
-  public static List co(Context paramContext)
-  {
-    ArrayList localArrayList = new ArrayList();
-    if (l.a.gJZ == null) {
-      t.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "getISubCorePluginBase() == null");
-    }
-    Cursor localCursor;
-    do
-    {
-      return localArrayList;
-      localCursor = l.a.gJZ.lf(5);
-    } while (localCursor == null);
-    while (localCursor.moveToNext())
-    {
-      h localh = new h();
-      localh.c(localCursor);
-      if (field_status == 1)
-      {
-        if (l(paramContext, field_appId))
-        {
-          if (!bn.iW(field_signature)) {
-            localArrayList.add(localh);
-          }
-        }
-        else
-        {
-          field_status = 4;
-          l.a.gJZ.e(localh);
-        }
-      }
-      else if (field_signature != null) {
-        localArrayList.add(localh);
-      }
-    }
-    localCursor.close();
-    return localArrayList;
-  }
-  
-  public static String cp(Context paramContext)
-  {
-    String str = s.d(paramContext.getSharedPreferences(aa.aES(), 0));
-    if ((str != null) && (str.length() != 0))
-    {
-      paramContext = str;
-      if (!str.equalsIgnoreCase("zh_CN")) {}
-    }
-    else
-    {
-      paramContext = "zh_CN";
-    }
-    return paramContext;
-  }
-  
-  public static boolean h(h paramh)
-  {
-    if ((paramh == null) || (bn.iW(field_appId))) {}
-    while ((field_appInfoFlag & 0x1) <= 0) {
-      return false;
-    }
-    return true;
-  }
-  
-  public static boolean i(h paramh)
-  {
-    if (paramh == null) {}
-    while ((field_appInfoFlag & 0x2) == 0) {
-      return true;
-    }
-    return false;
-  }
-  
-  public static boolean j(h paramh)
-  {
-    if ((paramh == null) || (bn.iW(field_appId))) {
-      return false;
-    }
-    if ((field_appInfoFlag & 0x40) > 0) {}
-    for (boolean bool = true;; bool = false)
-    {
-      t.v("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "canReadMMMsg, appid = %s, ret = %b", new Object[] { field_appId, Boolean.valueOf(bool) });
-      return bool;
-    }
-  }
-  
-  public static String k(Context paramContext, String paramString)
-  {
-    return a(paramContext, V(paramString, true), null);
-  }
-  
-  public static boolean k(h paramh)
-  {
-    if ((paramh == null) || (bn.iW(field_appId))) {
-      return false;
-    }
-    int i;
-    HashMap localHashMap;
-    if ((field_appInfoFlag & 0x80) > 0)
-    {
-      i = 1;
-      if (1 != i) {
-        break label103;
-      }
-      paramh = field_appId;
-      localHashMap = new HashMap();
-      v.b(327682, localHashMap);
-      if (!localHashMap.containsKey(paramh)) {
-        break label96;
-      }
-    }
-    label96:
-    for (paramh = (String)localHashMap.get(paramh);; paramh = null)
-    {
-      if ((paramh != null) && (!paramh.equals("0"))) {
-        break label101;
-      }
-      return true;
-      i = 0;
-      break;
-    }
-    label101:
-    return false;
-    label103:
-    return false;
-  }
-  
-  public static boolean l(Context paramContext, String paramString)
-  {
-    if ((paramContext == null) || (paramString == null) || (paramString.length() == 0))
-    {
-      t.e("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "isAppInstalled, invalid arguments");
-      return false;
-    }
-    return b(paramContext, V(paramString, true));
-  }
-  
-  public static boolean ul(String paramString)
-  {
-    if (bn.iW(paramString)) {}
-    h localh;
-    do
-    {
-      return false;
-      localh = V(paramString, true);
-      if (localh == null)
-      {
-        t.w("!32@/B4Tb64lLpIuLnUbSWxToRnGurpHu6ve", "app is null, appId = " + paramString);
-        return false;
-      }
-      if (field_authFlag == 0) {
-        return true;
-      }
-    } while ((field_authFlag & 0x2) <= 0);
-    return true;
-  }
-  
-  public static boolean um(String paramString)
-  {
-    if (bn.iW(paramString)) {}
-    do
-    {
-      return false;
-      paramString = V(paramString, true);
-    } while ((paramString == null) || (bn.iW(field_appId)) || ((field_appInfoFlag & 0x8) <= 0));
-    return true;
+    label92:
+    return null;
   }
 }
 

@@ -1,23 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.model.as.a;
+import com.tencent.mm.sdk.c.b;
 
 public final class dr
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azM = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a axv = new a();
   
   public dr()
   {
-    id = "GetSnsResume";
-    hXT = atO;
+    id = "ExtStartSnsServerAndCallbackOnFpSetSize";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean azN = false;
+    public boolean axw;
+    public boolean axx;
+    public int axy;
+    public as.a axz;
+    public int type;
+    public String username;
   }
 }
 

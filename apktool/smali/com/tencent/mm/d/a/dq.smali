@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/dq;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -13,15 +13,15 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public azJ:Lcom/tencent/mm/d/a/dq$a;
+.field public axs:Lcom/tencent/mm/d/a/dq$a;
 
-.field public azK:Lcom/tencent/mm/d/a/dq$b;
+.field public axt:Lcom/tencent/mm/d/a/dq$b;
 
 
 # direct methods
@@ -32,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/dq;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/dq;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/dq;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/dq;->arR:Z
 
     return-void
 .end method
@@ -45,30 +45,30 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/dq$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/dq$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/dq;->azJ:Lcom/tencent/mm/d/a/dq$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/dq;->axs:Lcom/tencent/mm/d/a/dq$a;
 
-    .line 17
+    .line 19
     new-instance v0, Lcom/tencent/mm/d/a/dq$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/dq$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/dq;->azK:Lcom/tencent/mm/d/a/dq$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/dq;->axt:Lcom/tencent/mm/d/a/dq$b;
 
     .line 8
-    const-string/jumbo v0, "GetSnsObjectDetail"
+    const-string/jumbo v0, "ExtSimpleRecord"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/dq;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/dq;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/dq;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/dq;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/dq;->jUI:Z
 
     return-void
 .end method

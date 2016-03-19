@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ai
-  extends a.c
+  extends a.e
 {
   public a$ai()
   {
-    super("getLatestAddress", "get_recently_used_address", 46, true);
+    super("downloadVoice", "downloadVoice", 103, true);
   }
 }
 

@@ -2,52 +2,37 @@
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/View$OnFocusChangeListener;
-
 
 # instance fields
-.field final synthetic joq:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+.field aJD:Ljava/lang/String;
+
+.field bUu:Ljava/lang/String;
+
+.field eCk:I
+
+.field eCl:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 74
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/d;->joq:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
-
+    .line 314
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    return-void
-.end method
+    .line 315
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/d;->bUu:Ljava/lang/String;
 
+    .line 316
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/d;->aJD:Ljava/lang/String;
 
-# virtual methods
-.method public final onFocusChange(Landroid/view/View;Z)V
-    .locals 5
+    .line 317
+    iput p3, p0, Lcom/tencent/mm/ui/tools/d;->eCk:I
 
-    .prologue
-    .line 78
-    const-string/jumbo v0, "!44@/B4Tb64lLpL4/IPflj+tleANqnL7qi1AFYpzfZUCVoE="
+    .line 318
+    iput-object p4, p0, Lcom/tencent/mm/ui/tools/d;->eCl:Ljava/lang/String;
 
-    const-string/jumbo v1, "on edittext focus changed, hasFocus %B"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 84
+    .line 320
     return-void
 .end method

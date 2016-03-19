@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field public bjk:Landroid/app/Application;
+.field public btM:Landroid/app/Application;
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
 
 # virtual methods
-.method public abstract bg()V
+.method public abstract aQ()V
 .end method
 
 .method public abstract onCreate()V

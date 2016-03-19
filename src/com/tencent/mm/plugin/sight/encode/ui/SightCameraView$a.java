@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sight.encode.ui;
 
 public abstract interface SightCameraView$a
 {
-  public abstract void ajY();
+  public abstract void awD();
 }
 
 /* Location:

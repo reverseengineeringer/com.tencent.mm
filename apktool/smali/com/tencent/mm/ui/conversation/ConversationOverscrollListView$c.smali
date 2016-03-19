@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field private eBN:F
+.field private fLa:F
 
 
 # direct methods
@@ -26,15 +26,15 @@
     .locals 1
 
     .prologue
-    .line 52
+    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
+    .line 59
     const v0, 0x3fa66666    # 1.3f
 
-    iput v0, p0, Lcom/tencent/mm/ui/conversation/ConversationOverscrollListView$c;->eBN:F
+    iput v0, p0, Lcom/tencent/mm/ui/conversation/ConversationOverscrollListView$c;->fLa:F
 
-    .line 54
+    .line 60
     return-void
 .end method
 
@@ -46,19 +46,19 @@
     .prologue
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 58
+    .line 64
     sub-float v1, p1, v0
 
-    .line 59
+    .line 65
     mul-float v2, v1, v1
 
-    iget v3, p0, Lcom/tencent/mm/ui/conversation/ConversationOverscrollListView$c;->eBN:F
+    iget v3, p0, Lcom/tencent/mm/ui/conversation/ConversationOverscrollListView$c;->fLa:F
 
     add-float/2addr v3, v0
 
     mul-float/2addr v1, v3
 
-    iget v3, p0, Lcom/tencent/mm/ui/conversation/ConversationOverscrollListView$c;->eBN:F
+    iget v3, p0, Lcom/tencent/mm/ui/conversation/ConversationOverscrollListView$c;->fLa:F
 
     add-float/2addr v1, v3
 
@@ -66,7 +66,7 @@
 
     add-float/2addr v1, v0
 
-    .line 63
+    .line 69
     cmpl-float v2, v1, v0
 
     if-lez v2, :cond_0

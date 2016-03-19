@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.gwallet.a;
 
 public abstract interface b$a
 {
-  public abstract void a(h paramh);
+  public abstract void a(c paramc);
 }
 
 /* Location:

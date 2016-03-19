@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.safedevice.ui;
 
 public abstract interface SafeDeviceListPreference$a
 {
-  public abstract void pg(String paramString);
+  public abstract void sL(String paramString);
 }
 
 /* Location:

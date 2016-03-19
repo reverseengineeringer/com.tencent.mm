@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract b(Landroid/support/v4/view/o;Landroid/support/v4/view/o;)V
+.method public abstract b(Landroid/support/v4/view/j;Landroid/support/v4/view/j;)V
 .end method

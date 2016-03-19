@@ -1,22 +1,20 @@
 package com.tencent.mm.ui.bindqq;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.q.l;
-import com.tencent.mm.r.a;
-import com.tencent.mm.ui.applet.SecurityImage.c;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.r.m;
+import com.tencent.mm.s.a;
+import com.tencent.mm.ui.applet.SecurityImage.b;
 
 final class VerifyQQUI$a
-  extends SecurityImage.c
+  extends SecurityImage.b
 {
   VerifyQQUI$a(VerifyQQUI paramVerifyQQUI) {}
   
-  public final void aLI()
+  public final void bby()
   {
-    a locala = new a(VerifyQQUI.b(iQS), VerifyQQUI.c(iQS), VerifyQQUI.i(iQS), "", VerifyQQUI.j(iQS), 2, true);
-    ax.tm().d(locala);
+    a locala = new a(VerifyQQUI.b(kPK), VerifyQQUI.c(kPK), VerifyQQUI.i(kPK), "", VerifyQQUI.j(kPK), 2, true);
+    ah.tE().d(locala);
   }
-  
-  protected final void onStart() {}
 }
 
 /* Location:

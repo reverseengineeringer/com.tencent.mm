@@ -1,24 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.adm;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.storage.ag;
 
 public final class jc
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGn = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aFD = new a();
   
   public jc()
   {
-    id = "UpdateGestureProtectInfo";
-    hXT = atO;
+    id = "ReceiveMsg";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public adm aGo;
+    public ag ask;
   }
 }
 

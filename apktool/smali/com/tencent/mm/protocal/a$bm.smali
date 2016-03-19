@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$bm;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 1283
-    const-string/jumbo v0, "openMyDeviceProfile"
+    .line 1588
+    const-string/jumbo v0, "getWXDeviceTicket"
 
-    const-string/jumbo v1, "openMyDeviceProfile"
+    const-string/jumbo v1, "getWXDeviceTicket"
 
-    const/16 v2, 0x91
+    const/16 v2, 0x7d
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 1284
+    .line 1589
     return-void
 .end method

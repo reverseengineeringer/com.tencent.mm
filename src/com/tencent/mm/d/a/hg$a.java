@@ -2,10 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class hg$a
 {
-  public String aEE;
-  public String content;
-  public int flags;
-  public int type;
+  public int aCW;
 }
 
 /* Location:

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract XV()V
+.method public abstract ahl()V
 .end method

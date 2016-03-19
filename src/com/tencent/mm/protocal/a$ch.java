@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ch
-  extends a.c
+  extends a.e
 {
   public a$ch()
   {
-    super("setPageOwner", "setPageOwner", 114, false);
+    super("newyearAsyncSubscribe", "newyearAsyncSubscribe", 10004, false);
   }
 }
 

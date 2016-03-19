@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract cK()Z
+.method public abstract cu()Z
 .end method

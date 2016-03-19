@@ -15,18 +15,21 @@
 
 
 # instance fields
-.field public auC:Ljava/lang/String;
-
-.field public auD:Landroid/app/Activity;
+.field public asz:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 16
+    const/4 v0, 0x0
+
+    iput v0, p0, Lcom/tencent/mm/d/a/q$a;->asz:I
 
     return-void
 .end method

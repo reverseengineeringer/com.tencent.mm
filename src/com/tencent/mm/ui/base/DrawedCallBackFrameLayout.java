@@ -8,7 +8,7 @@ import android.widget.FrameLayout;
 public class DrawedCallBackFrameLayout
   extends FrameLayout
 {
-  private a iCR;
+  private a kBV;
   
   public DrawedCallBackFrameLayout(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -20,10 +20,10 @@ public class DrawedCallBackFrameLayout
     try
     {
       super.dispatchDraw(paramCanvas);
-      if (iCR != null)
+      if (kBV != null)
       {
-        iCR.lb();
-        iCR = null;
+        kBV.kw();
+        kBV = null;
       }
       return;
     }
@@ -40,12 +40,12 @@ public class DrawedCallBackFrameLayout
   
   public void setListener(a parama)
   {
-    iCR = parama;
+    kBV = parama;
   }
   
   public static abstract interface a
   {
-    public abstract void lb();
+    public abstract void kw();
   }
 }
 

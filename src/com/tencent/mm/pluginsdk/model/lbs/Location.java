@@ -3,36 +3,36 @@ package com.tencent.mm.pluginsdk.model.lbs;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class Location
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new a();
-  public int aAZ;
-  public String aBb;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  public int aCu;
+  public String aCw;
   public int accuracy;
-  public float bAO;
-  public float bAP;
+  public float bNY;
+  public float bNZ;
   public String mac;
   
   public Location() {}
   
   public Location(float paramFloat1, float paramFloat2, int paramInt1, int paramInt2, String paramString1, String paramString2)
   {
-    bAO = paramFloat1;
-    bAP = paramFloat2;
+    bNY = paramFloat1;
+    bNZ = paramFloat2;
     accuracy = paramInt1;
-    aAZ = paramInt2;
+    aCu = paramInt2;
     mac = paramString1;
-    aBb = paramString2;
+    aCw = paramString2;
   }
   
-  public final boolean azy()
+  public final boolean aQg()
   {
-    if ((bAO == -1000.0F) || (bAP == -1000.0F))
+    if ((bNY == -1000.0F) || (bNZ == -1000.0F))
     {
-      t.d("!32@/B4Tb64lLpJgSt8Yezr5cT1sn628jl3w", "mac and cellId is null");
+      u.d("!32@/B4Tb64lLpJgSt8Yezr5cT1sn628jl3w", "mac and cellId is null");
       return true;
     }
     return false;
@@ -45,12 +45,12 @@ public class Location
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeFloat(bAO);
-    paramParcel.writeFloat(bAP);
+    paramParcel.writeFloat(bNY);
+    paramParcel.writeFloat(bNZ);
     paramParcel.writeInt(accuracy);
-    paramParcel.writeInt(aAZ);
+    paramParcel.writeInt(aCu);
     paramParcel.writeString(mac);
-    paramParcel.writeString(aBb);
+    paramParcel.writeString(aCw);
   }
 }
 

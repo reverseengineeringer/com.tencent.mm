@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$dd
-  extends a.c
+  extends a.e
 {
   public a$dd()
   {
-    super("menu:share:appmessage", "", 89, false);
+    super("openProductViewWithPid", "open_product_view", 60, true);
   }
 }
 

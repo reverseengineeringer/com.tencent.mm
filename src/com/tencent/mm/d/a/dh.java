@@ -1,24 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import java.util.ArrayList;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
 
 public final class dh
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azr = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awJ = new a();
   
   public dh()
   {
-    id = "GetAllNeedResendSns";
-    hXT = atO;
+    id = "ExtCallBiz";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public ArrayList azs;
+    public String[] asa;
+    public int awK = -1;
+    public String awL;
+    public Context context;
+    public int op = 0;
+    public String[] selectionArgs;
   }
 }
 

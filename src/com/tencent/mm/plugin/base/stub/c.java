@@ -1,64 +1,107 @@
 package com.tencent.mm.plugin.base.stub;
 
 import android.content.Context;
-import com.tencent.mm.a.n;
-import com.tencent.mm.platformtools.ad;
-import com.tencent.mm.pluginsdk.model.app.ay;
-import com.tencent.mm.pluginsdk.model.app.i;
-import com.tencent.mm.pluginsdk.model.app.q;
-import com.tencent.mm.sdk.platformtools.t;
+import android.database.Cursor;
+import android.database.MatrixCursor;
+import android.net.Uri;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class c
+  extends MMPluginProvider.a
 {
-  String appId;
-  String cjK;
-  a cjL;
-  private Context context;
+  private static final Map cAT;
   
-  public c(Context paramContext, String paramString1, String paramString2, a parama)
+  static
   {
-    context = paramContext;
-    appId = paramString1;
-    cjK = paramString2;
-    cjL = parama;
+    HashMap localHashMap = new HashMap();
+    cAT = localHashMap;
+    localHashMap.put("_build_info_sdk_int_", Integer.valueOf(587333634));
+    cAT.put("_build_info_sdk_name_", "android 3.2.2");
+    cAT.put("_wxapp_pay_entry_classname_", "com.tencent.mm.plugin.base.stub.WXPayEntryActivity");
   }
   
-  public final void Ho()
+  public static Uri Jw()
   {
-    if ((cjK == null) || (cjK.length() == 0))
-    {
-      t.w("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck, openId is null");
-      cjL.bd(true);
-      return;
-    }
-    com.tencent.mm.pluginsdk.model.app.h localh = i.V(appId, false);
-    if (localh == null)
-    {
-      t.e("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck fail, local app is null, appId = " + appId);
-      cjL.bd(true);
-      return;
-    }
-    if (ad.iW(field_openId))
-    {
-      t.w("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck fail, local openId is null, appId = " + appId);
-      t.d("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck, trigger getappsetting, appId = " + appId);
-      ay.azn().ut(appId);
-      cjL.bd(true);
-      return;
-    }
-    if (cjK.equalsIgnoreCase(field_openId))
-    {
-      t.d("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck succ, appId = " + appId);
-      cjL.bd(true);
-      return;
-    }
-    t.w("!32@/B4Tb64lLpJzC/9YxIg88yo3n7Lv0eKR", "doCheck fail, appId = " + appId + ", openId = " + cjK + ", localOpenId = " + field_openId);
-    com.tencent.mm.ui.base.h.b(context, a.n.openid_checker_fail_msg, a.n.app_tip, new d(this), new e(this));
+    return null;
   }
   
-  public static abstract interface a
+  public static int Jx()
   {
-    public abstract void bd(boolean paramBoolean);
+    return 0;
+  }
+  
+  public static int Jy()
+  {
+    return 0;
+  }
+  
+  public static Cursor a(String[] paramArrayOfString1, String[] paramArrayOfString2)
+  {
+    paramArrayOfString2 = paramArrayOfString2[0];
+    Object localObject = cAT.get(paramArrayOfString2);
+    if (localObject == null)
+    {
+      u.w("!56@/B4Tb64lLpJVwK899MjSHnGus/LYixbx/xUPPDfdLnaW++vs6UTDlA==", "not found value for key: " + paramArrayOfString2);
+      return null;
+    }
+    int i;
+    MatrixCursor localMatrixCursor;
+    if (localObject == null)
+    {
+      u.e("!56@/B4Tb64lLpJ4ba4B7uT0vIuwclbFoi5gAykVHqdxOX6pBh8qPlAfTg==", "unresolve failed, null value");
+      i = 0;
+      localMatrixCursor = new MatrixCursor(paramArrayOfString1);
+      if (localObject != null) {
+        break label217;
+      }
+    }
+    label217:
+    for (paramArrayOfString1 = null;; paramArrayOfString1 = localObject.toString())
+    {
+      localMatrixCursor.addRow(new Object[] { Integer.valueOf(0), paramArrayOfString2, Integer.valueOf(i), paramArrayOfString1 });
+      return localMatrixCursor;
+      if ((localObject instanceof Integer))
+      {
+        i = 1;
+        break;
+      }
+      if ((localObject instanceof Long))
+      {
+        i = 2;
+        break;
+      }
+      if ((localObject instanceof String))
+      {
+        i = 3;
+        break;
+      }
+      if ((localObject instanceof Boolean))
+      {
+        i = 4;
+        break;
+      }
+      if ((localObject instanceof Float))
+      {
+        i = 5;
+        break;
+      }
+      if ((localObject instanceof Double))
+      {
+        i = 6;
+        break;
+      }
+      u.e("!56@/B4Tb64lLpJ4ba4B7uT0vIuwclbFoi5gAykVHqdxOX6pBh8qPlAfTg==", "unresolve failed, unknown type=" + localObject.getClass().toString());
+      i = 0;
+      break;
+    }
+  }
+  
+  public final boolean bp(Context paramContext)
+  {
+    super.bp(paramContext);
+    return true;
   }
 }
 

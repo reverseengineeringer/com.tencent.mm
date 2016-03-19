@@ -45,9 +45,9 @@
     sput v0, Loicq/wlogin_sdk/sharemem/WloginLoginInfo;->TYPE_REMOTE:I
 
     .line 27
-    new-instance v0, Loicq/wlogin_sdk/sharemem/a;
+    new-instance v0, Loicq/wlogin_sdk/sharemem/WloginLoginInfo$1;
 
-    invoke-direct {v0}, Loicq/wlogin_sdk/sharemem/a;-><init>()V
+    invoke-direct {v0}, Loicq/wlogin_sdk/sharemem/WloginLoginInfo$1;-><init>()V
 
     sput-object v0, Loicq/wlogin_sdk/sharemem/WloginLoginInfo;->CREATOR:Landroid/os/Parcelable$Creator;
 

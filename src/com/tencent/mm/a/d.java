@@ -1,67 +1,44 @@
 package com.tencent.mm.a;
 
-import com.tencent.mm.sdk.platformtools.w;
+import android.util.Base64;
+import javax.crypto.Cipher;
+import javax.crypto.SecretKeyFactory;
+import javax.crypto.spec.DESKeySpec;
+import javax.crypto.spec.IvParameterSpec;
 
 public final class d
-  extends w
 {
-  private a amH = null;
+  private Cipher aks;
+  private Cipher akt;
   
-  public d(int paramInt)
+  public d(String paramString)
   {
-    super(paramInt);
-  }
-  
-  public d(int paramInt, a parama)
-  {
-    super(paramInt);
-    amH = parama;
-  }
-  
-  public final void clear()
-  {
-    super.trimToSize(-1);
-  }
-  
-  protected final Object create(Object paramObject)
-  {
-    return super.create(paramObject);
-  }
-  
-  protected final void entryRemoved(boolean paramBoolean, Object paramObject1, Object paramObject2, Object paramObject3)
-  {
-    super.entryRemoved(paramBoolean, paramObject1, paramObject2, paramObject3);
-    if ((amH != null) && (paramObject3 == null)) {
-      amH.g(paramObject1, paramObject2);
-    }
-  }
-  
-  public final void f(Object paramObject1, Object paramObject2)
-  {
-    if (paramObject2 == null) {
+    try
+    {
+      paramString = new DESKeySpec(paramString.getBytes("UTF8"));
+      paramString = SecretKeyFactory.getInstance("DES").generateSecret(paramString);
+      IvParameterSpec localIvParameterSpec = new IvParameterSpec("manifest".getBytes("UTF8"));
+      aks = Cipher.getInstance("DES/CBC/PKCS5Padding");
+      aks.init(1, paramString, localIvParameterSpec);
+      akt = Cipher.getInstance("DES/CBC/PKCS5Padding");
+      akt.init(2, paramString, localIvParameterSpec);
       return;
     }
-    put(paramObject1, paramObject2);
+    catch (Exception paramString) {}
   }
   
-  public final void kQ()
+  public final String av(String paramString)
   {
-    super.trimToSize(-1);
-  }
-  
-  protected final int sizeOf(Object paramObject1, Object paramObject2)
-  {
-    return super.sizeOf(paramObject1, paramObject2);
-  }
-  
-  public final void trimToSize(int paramInt)
-  {
-    super.trimToSize(paramInt);
-  }
-  
-  public static abstract interface a
-  {
-    public abstract void g(Object paramObject1, Object paramObject2);
+    try
+    {
+      Object localObject = Base64.decode(paramString, 0);
+      localObject = new String(akt.doFinal((byte[])localObject), "UTF8");
+      return (String)localObject;
+    }
+    catch (Exception localException)
+    {
+      return "[des]" + paramString + "|" + localException.toString();
+    }
   }
 }
 

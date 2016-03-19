@@ -6,9 +6,9 @@ import android.widget.ProgressBar;
 
 final class GetHdHeadImageGalleryView$a$a
 {
-  ImageView azQ;
-  ProgressBar dxH;
-  View gPJ;
+  ImageView aAF;
+  ProgressBar epr;
+  View iGr;
   
   GetHdHeadImageGalleryView$a$a(GetHdHeadImageGalleryView.a parama) {}
 }

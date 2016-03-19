@@ -4,131 +4,173 @@
 
 
 # instance fields
-.field public bfA:Z
+.field public bpH:Z
 
-.field public bfB:I
+.field public bpI:I
 
-.field public bfC:I
+.field public bpJ:I
 
-.field public bfD:I
+.field public bpK:I
 
-.field public bfE:I
+.field public bpL:I
 
-.field public bfF:I
+.field public bpM:I
 
-.field public bfG:I
+.field public bpN:I
 
-.field public bfH:I
+.field public bpO:I
 
-.field public bfI:I
+.field public bpP:I
 
-.field public bfJ:I
+.field public bpQ:I
 
-.field public bfK:I
+.field public bpR:I
 
-.field public bfL:I
+.field public bpS:I
 
-.field public bfM:I
+.field public bpT:I
 
-.field public bfN:I
+.field public bpU:I
 
-.field public bfO:I
+.field public bpV:I
 
-.field public bfP:I
+.field public bpW:I
 
-.field public bfQ:I
+.field public bpX:I
 
-.field public bfR:I
+.field public bpY:I
 
-.field public bfS:I
+.field public bpZ:I
 
-.field public bfT:I
+.field public bqA:I
 
-.field public bfU:I
+.field public bqB:[S
 
-.field public bfV:I
+.field public bqC:[S
 
-.field public bfW:I
+.field public bqD:Z
 
-.field public bfX:I
+.field public bqE:I
 
-.field public bfY:I
+.field public bqF:Z
 
-.field public bfZ:I
+.field public bqG:I
 
-.field public bga:I
+.field public bqH:I
 
-.field public bgb:I
+.field public bqI:I
 
-.field public bgc:I
+.field public bqJ:I
 
-.field public bgd:I
+.field public bqK:I
 
-.field public bge:I
+.field public bqL:I
 
-.field public bgf:Z
+.field public bqM:I
 
-.field public bgg:I
+.field public bqN:I
 
-.field public bgh:I
+.field public bqO:I
 
-.field public bgi:I
+.field public bqP:I
 
-.field public bgj:I
+.field public bqa:I
 
-.field public bgk:I
+.field public bqb:I
 
-.field public bgl:I
+.field public bqc:I
 
-.field public bgm:I
+.field public bqd:I
 
-.field public bgn:I
+.field public bqe:I
 
-.field public bgo:I
+.field public bqf:I
 
-.field public bgp:I
+.field public bqg:I
 
-.field public bgq:I
+.field public bqh:I
 
-.field public bgr:I
+.field public bqi:I
 
-.field public bgs:[S
+.field public bqj:I
+
+.field public bqk:I
+
+.field public bql:Z
+
+.field public bqm:I
+
+.field public bqn:I
+
+.field public bqo:I
+
+.field public bqp:I
+
+.field public bqq:I
+
+.field public bqr:I
+
+.field public bqs:I
+
+.field public bqt:I
+
+.field public bqu:I
+
+.field public bqv:I
+
+.field public bqw:I
+
+.field public bqx:I
+
+.field public bqy:I
+
+.field public bqz:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .prologue
-    .line 74
+    const/4 v1, 0x0
+
+    .line 92
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 8
-    const/4 v0, 0x0
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bpH:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/compatible/d/a;->bfA:Z
-
-    .line 65
+    .line 67
     const/16 v0, 0xf
 
     new-array v0, v0, [S
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/d/a;->bgs:[S
+    iput-object v0, p0, Lcom/tencent/mm/compatible/d/a;->bqB:[S
 
-    .line 75
+    .line 68
+    const/4 v0, 0x2
+
+    new-array v0, v0, [S
+
+    iput-object v0, p0, Lcom/tencent/mm/compatible/d/a;->bqC:[S
+
+    .line 72
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bqF:Z
+
+    .line 93
     invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->reset()V
 
-    .line 76
+    .line 94
     return-void
 .end method
 
 
 # virtual methods
 .method public final dump()V
-    .locals 3
+    .locals 4
 
     .prologue
-    .line 234
+    .line 262
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -137,7 +179,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfB:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpI:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -147,9 +189,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 235
+    .line 263
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -158,7 +200,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfC:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpJ:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -168,9 +210,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 236
+    .line 264
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -179,7 +221,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfD:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpK:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -189,9 +231,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 237
+    .line 265
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -200,7 +242,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfE:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpL:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -210,9 +252,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 238
+    .line 266
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -221,7 +263,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfF:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -231,9 +273,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 239
+    .line 267
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -242,7 +284,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfG:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpN:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -252,9 +294,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 240
+    .line 268
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -263,7 +305,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfH:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpO:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -273,9 +315,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 241
+    .line 269
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -284,7 +326,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfI:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpP:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -294,9 +336,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 242
+    .line 270
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -305,7 +347,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfK:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqt:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -315,9 +357,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 243
+    .line 271
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -326,7 +368,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfM:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpS:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -336,9 +378,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 244
+    .line 272
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -347,7 +389,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfL:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpR:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -357,9 +399,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 245
+    .line 273
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -368,7 +410,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfN:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpT:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -378,9 +420,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 246
+    .line 274
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -389,7 +431,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfY:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqe:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -399,9 +441,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 247
+    .line 275
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -410,7 +452,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfZ:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqf:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -420,9 +462,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 248
+    .line 276
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -431,7 +473,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bga:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqg:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -441,9 +483,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 249
+    .line 277
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -452,7 +494,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgb:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqh:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -462,9 +504,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 250
+    .line 278
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -473,7 +515,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgc:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqi:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -483,9 +525,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 251
+    .line 279
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -494,7 +536,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgd:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqj:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -504,9 +546,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 252
+    .line 280
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -515,7 +557,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bge:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqk:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -525,9 +567,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 256
+    .line 284
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -536,7 +578,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgg:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqm:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -546,9 +588,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 257
+    .line 285
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -557,7 +599,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgh:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqn:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -567,9 +609,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 258
+    .line 286
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -578,7 +620,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgi:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqo:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -588,9 +630,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 259
+    .line 287
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -599,7 +641,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgj:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqp:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -609,9 +651,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 261
+    .line 289
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -620,7 +662,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgm:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqs:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -630,9 +672,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 262
+    .line 290
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -641,7 +683,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgl:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqr:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -651,9 +693,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 263
+    .line 291
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -662,7 +704,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgk:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqq:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -672,9 +714,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 264
+    .line 292
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -683,7 +725,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgn:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqu:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -693,9 +735,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 265
+    .line 293
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -704,7 +746,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgo:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqv:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -714,9 +756,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 266
+    .line 294
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -725,7 +767,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgp:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqw:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -735,9 +777,30 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 267
+    .line 295
+    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "agclimiter:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqx:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 296
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -746,7 +809,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfO:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpU:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -756,9 +819,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 268
+    .line 297
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -767,7 +830,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfP:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpV:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -777,9 +840,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 269
+    .line 298
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -788,7 +851,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfQ:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpW:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -798,9 +861,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 270
+    .line 299
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -809,7 +872,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfR:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpX:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -819,9 +882,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 271
+    .line 300
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -830,7 +893,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfU:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqa:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -840,9 +903,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 272
+    .line 301
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -851,7 +914,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfV:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqb:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -861,9 +924,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 273
+    .line 302
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -872,7 +935,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfW:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqc:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -882,9 +945,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 274
+    .line 303
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -893,7 +956,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfX:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqd:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -903,9 +966,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 276
+    .line 305
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -914,7 +977,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgq:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqy:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -924,9 +987,30 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 277
+    .line 306
+    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "enablePlayTimer:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqz:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 307
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -935,7 +1019,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bgr:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqA:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -945,9 +1029,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 279
+    .line 309
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -956,7 +1040,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfS:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpY:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -966,9 +1050,9 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 280
+    .line 310
     const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -977,7 +1061,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bfT:I
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bpZ:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -987,185 +1071,290 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 282
+    .line 312
+    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "noisegateon"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-boolean v2, p0, Lcom/tencent/mm/compatible/d/a;->bqD:Z
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 313
+    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "noisegatestrength[0]"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/tencent/mm/compatible/d/a;->bqC:[S
+
+    const/4 v3, 0x0
+
+    aget-short v2, v2, v3
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 314
+    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "noisegatestrength[1]"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/tencent/mm/compatible/d/a;->bqC:[S
+
+    const/4 v3, 0x1
+
+    aget-short v2, v2, v3
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 316
+    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "spkecenable:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqE:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 318
+    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "agcRxFlag:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqM:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 319
+    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "agcRxTargetdb:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqN:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 320
+    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "agcRxGaindb:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqO:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 321
+    const-string/jumbo v0, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "agcRxLimiter:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v2, p0, Lcom/tencent/mm/compatible/d/a;->bqP:I
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 322
     return-void
 .end method
 
-.method public final ok()Z
+.method public final nW()Z
     .locals 1
 
     .prologue
-    .line 142
-    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bfF:I
+    .line 163
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpJ:I
 
     if-ltz v0, :cond_0
 
-    const/4 v0, 0x1
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpK:I
 
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final ol()Z
-    .locals 1
-
-    .prologue
-    .line 146
-    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bfG:I
-
-    if-ltz v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
+    if-ltz v0, :cond_2
 
     :cond_0
-    const/4 v0, 0x0
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpJ:I
 
-    goto :goto_0
-.end method
+    if-gez v0, :cond_1
 
-.method public final om()I
-    .locals 5
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpK:I
 
-    .prologue
-    const/4 v0, -0x1
-
-    .line 150
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->ok()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 151
-    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bfF:I
-
-    and-int/lit16 v1, v1, 0xe0
-
-    shr-int/lit8 v1, v1, 0x5
-
-    .line 152
-    const-string/jumbo v2, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "getEnableMode "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 153
-    const/4 v2, 0x7
-
-    if-ne v1, v2, :cond_1
-
-    .line 158
-    :cond_0
-    :goto_0
-    return v0
+    if-gez v0, :cond_2
 
     :cond_1
-    move v0, v1
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpL:I
 
-    .line 156
+    if-lez v0, :cond_3
+
+    .line 164
+    :cond_2
+    const/4 v0, 0x1
+
+    .line 166
+    :goto_0
+    return v0
+
+    :cond_3
+    const/4 v0, 0x0
+
     goto :goto_0
 .end method
 
-.method public final on()I
+.method public final nX()Z
+    .locals 1
+
+    .prologue
+    .line 170
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
+
+    if-ltz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final nY()Z
+    .locals 1
+
+    .prologue
+    .line 174
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpN:I
+
+    if-ltz v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final nZ()I
     .locals 5
 
     .prologue
     const/4 v0, -0x1
 
-    .line 171
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->ok()Z
+    .line 178
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nX()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
-
-    .line 172
-    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bfF:I
-
-    and-int/lit8 v1, v1, 0xe
-
-    shr-int/lit8 v1, v1, 0x1
-
-    .line 173
-    const-string/jumbo v2, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "getDisableMode "
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 174
-    const/4 v2, 0x7
-
-    if-ne v1, v2, :cond_1
 
     .line 179
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    move v0, v1
-
-    .line 177
-    goto :goto_0
-.end method
-
-.method public final oo()I
-    .locals 5
-
-    .prologue
-    const/4 v0, -0x1
-
-    .line 192
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->ol()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 193
-    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bfG:I
+    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
 
     and-int/lit16 v1, v1, 0xe0
 
     shr-int/lit8 v1, v1, 0x5
 
-    .line 194
+    .line 180
     const-string/jumbo v2, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1182,14 +1371,14 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 195
+    .line 181
     const/4 v2, 0x7
 
     if-ne v1, v2, :cond_1
 
-    .line 200
+    .line 186
     :cond_0
     :goto_0
     return v0
@@ -1197,31 +1386,91 @@
     :cond_1
     move v0, v1
 
-    .line 198
+    .line 184
     goto :goto_0
 .end method
 
-.method public final op()I
+.method public final oa()Z
+    .locals 6
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 190
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nX()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 191
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
+
+    and-int/lit8 v3, v0, 0x10
+
+    .line 192
+    const-string/jumbo v4, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v0, "enableSpeaker "
+
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    if-lez v3, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 193
+    if-lez v3, :cond_0
+
+    move v2, v1
+
+    .line 195
+    :cond_0
+    return v2
+
+    :cond_1
+    move v0, v2
+
+    .line 192
+    goto :goto_0
+.end method
+
+.method public final ob()I
     .locals 5
 
     .prologue
     const/4 v0, -0x1
 
-    .line 213
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->ol()Z
+    .line 199
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nX()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 214
-    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bfG:I
+    .line 200
+    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
 
     and-int/lit8 v1, v1, 0xe
 
     shr-int/lit8 v1, v1, 0x1
 
-    .line 215
+    .line 201
     const-string/jumbo v2, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1238,14 +1487,14 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 216
+    .line 202
     const/4 v2, 0x7
 
     if-ne v1, v2, :cond_1
 
-    .line 221
+    .line 207
     :cond_0
     :goto_0
     return v0
@@ -1253,150 +1502,358 @@
     :cond_1
     move v0, v1
 
-    .line 219
+    .line 205
+    goto :goto_0
+.end method
+
+.method public final oc()Z
+    .locals 6
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 211
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nX()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 212
+    iget v0, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
+
+    and-int/lit8 v3, v0, 0x1
+
+    .line 213
+    const-string/jumbo v4, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v0, "disableSpeaker "
+
+    invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    if-lez v3, :cond_1
+
+    move v0, v1
+
+    :goto_0
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v4, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 214
+    if-lez v3, :cond_0
+
+    move v2, v1
+
+    .line 216
+    :cond_0
+    return v2
+
+    :cond_1
+    move v0, v2
+
+    .line 213
+    goto :goto_0
+.end method
+
+.method public final od()I
+    .locals 5
+
+    .prologue
+    const/4 v0, -0x1
+
+    .line 220
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nY()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 221
+    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bpN:I
+
+    and-int/lit16 v1, v1, 0xe0
+
+    shr-int/lit8 v1, v1, 0x5
+
+    .line 222
+    const-string/jumbo v2, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "getEnableMode "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 223
+    const/4 v2, 0x7
+
+    if-ne v1, v2, :cond_1
+
+    .line 228
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    move v0, v1
+
+    .line 226
+    goto :goto_0
+.end method
+
+.method public final oe()I
+    .locals 5
+
+    .prologue
+    const/4 v0, -0x1
+
+    .line 241
+    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/a;->nY()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 242
+    iget v1, p0, Lcom/tencent/mm/compatible/d/a;->bpN:I
+
+    and-int/lit8 v1, v1, 0xe
+
+    shr-int/lit8 v1, v1, 0x1
+
+    .line 243
+    const-string/jumbo v2, "!24@mc8vTY0SOcpXUKRYIpcCoA=="
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "getDisableMode "
+
+    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 244
+    const/4 v2, 0x7
+
+    if-ne v1, v2, :cond_1
+
+    .line 249
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    move v0, v1
+
+    .line 247
     goto :goto_0
 .end method
 
 .method public final reset()V
-    .locals 2
+    .locals 3
 
     .prologue
     const/4 v1, 0x0
 
-    const/4 v0, -0x1
-
-    .line 79
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bfA:Z
-
-    .line 80
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfB:I
-
-    .line 81
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfC:I
-
-    .line 82
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfD:I
-
-    .line 83
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfE:I
-
-    .line 84
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfF:I
-
-    .line 85
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfG:I
-
-    .line 86
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfH:I
-
-    .line 88
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfJ:I
-
-    .line 90
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfI:I
-
-    .line 92
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfK:I
-
-    .line 93
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfL:I
-
-    .line 94
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfM:I
-
-    .line 95
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfN:I
-
-    .line 96
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfY:I
+    const/4 v2, -0x1
 
     .line 97
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfZ:I
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bpH:Z
+
+    .line 98
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpI:I
 
     .line 99
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bga:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpJ:I
 
     .line 100
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgb:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpK:I
 
     .line 101
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgc:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpL:I
 
     .line 102
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgd:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpM:I
 
     .line 103
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bge:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpN:I
 
-    .line 105
-    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bgf:Z
+    .line 104
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpO:I
 
-    .line 107
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgg:I
+    .line 106
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpQ:I
 
     .line 108
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgh:I
-
-    .line 109
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgj:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpP:I
 
     .line 110
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgi:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqt:I
+
+    .line 111
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpR:I
 
     .line 112
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgm:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpS:I
 
     .line 113
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgk:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpT:I
 
     .line 114
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgl:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqe:I
 
     .line 115
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgn:I
-
-    .line 116
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgo:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqf:I
 
     .line 117
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgp:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqg:I
 
     .line 118
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfO:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqh:I
 
     .line 119
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfP:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqi:I
 
     .line 120
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfQ:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqj:I
 
     .line 121
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfR:I
-
-    .line 122
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfU:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqk:I
 
     .line 123
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfV:I
-
-    .line 124
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfW:I
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bql:Z
 
     .line 125
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfX:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqm:I
+
+    .line 126
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqn:I
 
     .line 127
-    iput v1, p0, Lcom/tencent/mm/compatible/d/a;->bgq:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqp:I
 
     .line 128
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bgr:I
-
-    .line 129
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfT:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqo:I
 
     .line 130
-    iput v0, p0, Lcom/tencent/mm/compatible/d/a;->bfS:I
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqs:I
+
+    .line 131
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqq:I
 
     .line 132
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqr:I
+
+    .line 133
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqu:I
+
+    .line 134
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqv:I
+
+    .line 135
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqw:I
+
+    .line 136
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqx:I
+
+    .line 137
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpU:I
+
+    .line 138
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpV:I
+
+    .line 139
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpW:I
+
+    .line 140
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpX:I
+
+    .line 141
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqa:I
+
+    .line 142
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqb:I
+
+    .line 143
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqc:I
+
+    .line 144
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqd:I
+
+    .line 146
+    iput v1, p0, Lcom/tencent/mm/compatible/d/a;->bqy:I
+
+    .line 147
+    iput v1, p0, Lcom/tencent/mm/compatible/d/a;->bqz:I
+
+    .line 148
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqA:I
+
+    .line 149
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpZ:I
+
+    .line 150
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bpY:I
+
+    .line 151
+    iput-boolean v1, p0, Lcom/tencent/mm/compatible/d/a;->bqD:Z
+
+    .line 152
+    iget-object v0, p0, Lcom/tencent/mm/compatible/d/a;->bqC:[S
+
+    aput-short v2, v0, v1
+
+    .line 153
+    iget-object v0, p0, Lcom/tencent/mm/compatible/d/a;->bqC:[S
+
+    const/4 v1, 0x1
+
+    aput-short v2, v0, v1
+
+    .line 154
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqE:I
+
+    .line 156
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqM:I
+
+    .line 157
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqN:I
+
+    .line 158
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqO:I
+
+    .line 159
+    iput v2, p0, Lcom/tencent/mm/compatible/d/a;->bqP:I
+
+    .line 160
     return-void
 .end method

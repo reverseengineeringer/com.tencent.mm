@@ -1,29 +1,54 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Intent;
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.m.a.a;
-import com.tencent.mm.ui.cn;
-import com.tencent.mm.ui.ef;
+import android.view.ContextMenu;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import com.tencent.mm.storage.ag;
 
 final class cj
-  implements Animation.AnimationListener
+  extends ci
 {
-  cj(ci paramci, a.a parama, ChattingUI.a parama1) {}
-  
-  public final void onAnimationEnd(Animation paramAnimation)
+  public cj()
   {
-    paramAnimation = new Intent();
-    paramAnimation.putExtra("key_native_url", iSc.bnp);
-    paramAnimation.putExtra("key_username", iUi.getTalkerUserName());
-    c.c(iUi.ipQ.iqj, "luckymoney", ".ui.LuckyMoneyNewYearReceiveUI", paramAnimation);
+    super(39);
   }
   
-  public final void onAnimationRepeat(Animation paramAnimation) {}
+  public final View a(LayoutInflater paramLayoutInflater, View paramView)
+  {
+    Object localObject;
+    if ((paramView != null) && (paramView.getTag() != null))
+    {
+      localObject = paramView;
+      if (getTagtype == eLV) {}
+    }
+    else
+    {
+      localObject = new ax(paramLayoutInflater, 2131361908);
+      ((View)localObject).setTag(new ee(eLV).aI((View)localObject));
+    }
+    return (View)localObject;
+  }
   
-  public final void onAnimationStart(Animation paramAnimation) {}
+  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  {
+    ee.a((ee)parama, paramag, paramInt, parama1);
+  }
+  
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  {
+    return false;
+  }
+  
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  {
+    return false;
+  }
+  
+  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  {
+    return false;
+  }
 }
 
 /* Location:

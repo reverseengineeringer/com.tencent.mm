@@ -14,13 +14,22 @@
 .end annotation
 
 
+# instance fields
+.field public aEt:Z
+
+
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
-    .line 23
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 19
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/im$b;->aEt:Z
 
     return-void
 .end method

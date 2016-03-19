@@ -12,11 +12,11 @@
 
 
 # instance fields
-.field bef:Z
+.field boo:Z
 
-.field beg:Landroid/media/MediaPlayer;
+.field bop:Landroid/media/MediaPlayer;
 
-.field private beh:Lcom/tencent/mm/sdk/platformtools/ac;
+.field private boq:Lcom/tencent/mm/sdk/platformtools/aa;
     .annotation build Landroid/annotation/SuppressLint;
         value = {
             "HandlerLeak"
@@ -38,26 +38,26 @@
     .line 32
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/booter/notification/a/f;->bef:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/booter/notification/a/f;->boo:Z
 
     .line 34
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     .line 52
-    new-instance v0, Lcom/tencent/mm/booter/notification/a/g;
+    new-instance v0, Lcom/tencent/mm/booter/notification/a/f$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/booter/notification/a/g;-><init>(Lcom/tencent/mm/booter/notification/a/f;Landroid/os/Looper;)V
+    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/booter/notification/a/f$1;-><init>(Lcom/tencent/mm/booter/notification/a/f;Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->beh:Lcom/tencent/mm/sdk/platformtools/ac;
+    iput-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->boq:Lcom/tencent/mm/sdk/platformtools/aa;
 
     .line 49
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -79,7 +79,7 @@
 
 
 # virtual methods
-.method public final declared-synchronized cN(Ljava/lang/String;)V
+.method public final declared-synchronized cR(Ljava/lang/String;)V
     .locals 6
 
     .prologue
@@ -92,7 +92,7 @@
     if-nez v0, :cond_0
 
     .line 75
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -109,7 +109,7 @@
 
     const-string/jumbo v1, "playSound:context is null!!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -123,7 +123,7 @@
     .line 83
     :cond_2
     :try_start_1
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -141,31 +141,31 @@
     .line 89
     :goto_1
     :try_start_2
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->beh:Lcom/tencent/mm/sdk/platformtools/ac;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->boq:Lcom/tencent/mm/sdk/platformtools/aa;
 
     const v2, 0x12345678
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->removeMessages(I)V
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->removeMessages(I)V
 
     .line 90
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->beh:Lcom/tencent/mm/sdk/platformtools/ac;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->boq:Lcom/tencent/mm/sdk/platformtools/aa;
 
     const v2, 0x12345678
 
     const-wide/16 v3, 0x1f40
 
-    invoke-virtual {v1, v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v1, v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessageDelayed(IJ)Z
 
     .line 91
-    iget-boolean v1, p0, Lcom/tencent/mm/booter/notification/a/f;->bef:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/booter/notification/a/f;->boo:Z
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->isPlaying()Z
 
@@ -174,19 +174,19 @@
     if-eqz v1, :cond_3
 
     .line 92
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->stop()V
 
     .line 93
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     invoke-virtual {v1}, Landroid/media/MediaPlayer;->release()V
 
     .line 94
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/booter/notification/a/f;->bef:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/booter/notification/a/f;->boo:Z
 
     .line 96
     :cond_3
@@ -194,10 +194,10 @@
 
     invoke-direct {v1}, Landroid/media/MediaPlayer;-><init>()V
 
-    iput-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iput-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     .line 97
-    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v1, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     iget-object v2, p0, Lcom/tencent/mm/booter/notification/a/f;->context:Landroid/content/Context;
 
@@ -263,40 +263,40 @@
     invoke-virtual {v0, v2, v1, v4}, Landroid/media/AudioManager;->setStreamVolume(III)V
 
     .line 109
-    iget-object v2, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     const/16 v4, 0x8
 
     invoke-virtual {v2, v4}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
     .line 110
-    iget-object v2, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     const/4 v4, 0x1
 
     invoke-virtual {v2, v4}, Landroid/media/MediaPlayer;->setLooping(Z)V
 
     .line 111
-    iget-object v2, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->prepare()V
 
     .line 112
-    iget-object v2, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     const/4 v4, 0x0
 
     invoke-virtual {v2, v4}, Landroid/media/MediaPlayer;->setLooping(Z)V
 
     .line 113
-    iget-object v2, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v2, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->start()V
 
     .line 114
     const/4 v2, 0x1
 
-    iput-boolean v2, p0, Lcom/tencent/mm/booter/notification/a/f;->bef:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/booter/notification/a/f;->boo:Z
 
     .line 115
     const/16 v2, 0x8
@@ -334,7 +334,7 @@
 
     aput-object p1, v4, v1
 
-    invoke-static {v0, v2, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_2
     .catch Ljava/lang/IllegalArgumentException; {:try_start_2 .. :try_end_2} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_2 .. :try_end_2} :catch_1
@@ -357,7 +357,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -411,43 +411,43 @@
 
     aput-object p1, v3, v0
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 119
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x5
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setAudioStreamType(I)V
 
     .line 120
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setLooping(Z)V
 
     .line 121
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->prepare()V
 
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/media/MediaPlayer;->setLooping(Z)V
 
     .line 123
-    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->beg:Landroid/media/MediaPlayer;
+    iget-object v0, p0, Lcom/tencent/mm/booter/notification/a/f;->bop:Landroid/media/MediaPlayer;
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
 
     .line 124
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/booter/notification/a/f;->bef:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/booter/notification/a/f;->boo:Z
     :try_end_5
     .catch Ljava/lang/IllegalArgumentException; {:try_start_5 .. :try_end_5} :catch_0
     .catch Ljava/lang/SecurityException; {:try_start_5 .. :try_end_5} :catch_1
@@ -470,7 +470,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -485,7 +485,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -500,7 +500,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -515,7 +515,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_6
     .catchall {:try_start_6 .. :try_end_6} :catchall_0
 

@@ -1,16 +1,27 @@
 package com.tencent.mm.ui.base;
 
-import android.view.MenuItem;
+import android.app.ProgressDialog;
+import android.content.Context;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class q
-  implements bk.d
+public class q
+  extends ProgressDialog
 {
-  q(h.c paramc) {}
-  
-  public final void d(MenuItem paramMenuItem, int paramInt)
+  public q(Context paramContext, int paramInt)
   {
-    if (iDk != null) {
-      iDk.dW(paramMenuItem.getItemId());
+    super(paramContext, paramInt);
+  }
+  
+  public void dismiss()
+  {
+    try
+    {
+      super.dismiss();
+      return;
+    }
+    catch (Exception localException)
+    {
+      u.e("!44@/B4Tb64lLpK+qNTh5lI0rQ2+i9dgkCmS8K9PUsUQ4IY=", "dismiss exception, e = " + localException.getMessage());
     }
   }
 }

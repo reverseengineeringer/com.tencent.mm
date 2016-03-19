@@ -1,31 +1,24 @@
 package com.tencent.mm.plugin.sight.encode.ui;
 
-import com.tencent.mm.d.a.iy;
-import com.tencent.mm.d.a.iy.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.t;
-
-final class a
-  extends e
+public abstract interface a
 {
-  a(ChattingSightContainerView paramChattingSightContainerView)
-  {
-    super(0);
-  }
+  public abstract void awF();
   
-  public final boolean a(d paramd)
-  {
-    paramd = (iy)paramd;
-    t.d("!56@/B4Tb64lLpKwUcOR+EdWcqTX9DHwPoekDqTih72bviWMKwaxVrupIQ==", "on chatting status callback, type %d", new Object[] { Integer.valueOf(aGg.type) });
-    switch (aGg.type)
-    {
-    default: 
-      return false;
-    }
-    fkH.cY(true);
-    return false;
-  }
+  public abstract void awG();
+  
+  public abstract void awH();
+  
+  public abstract void awI();
+  
+  public abstract boolean awJ();
+  
+  public abstract void eJ(boolean paramBoolean);
+  
+  public abstract int getViewHeight();
+  
+  public abstract boolean qr();
+  
+  public abstract void setCameraShadowAlpha(float paramFloat);
 }
 
 /* Location:

@@ -3,10 +3,12 @@ package com.tencent.smtt.a;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 
 public final class b
 {
-  public static String eO(Context paramContext)
+  public static String fL(Context paramContext)
   {
     paramContext = ((ConnectivityManager)paramContext.getSystemService("connectivity")).getActiveNetworkInfo();
     if ((paramContext != null) && (paramContext.isConnectedOrConnecting())) {}
@@ -20,7 +22,7 @@ public final class b
     return paramContext.getExtraInfo();
   }
   
-  public static int eP(Context paramContext)
+  public static int fM(Context paramContext)
   {
     paramContext = ((ConnectivityManager)paramContext.getSystemService("connectivity")).getActiveNetworkInfo();
     if ((paramContext != null) && (paramContext.isConnectedOrConnecting()))
@@ -56,6 +58,24 @@ public final class b
       return 4;
     }
     return 0;
+  }
+  
+  public static String fN(Context paramContext)
+  {
+    paramContext = ((WifiManager)paramContext.getSystemService("wifi")).getConnectionInfo();
+    if (paramContext != null) {
+      return paramContext.getBSSID();
+    }
+    return null;
+  }
+  
+  public static boolean isNetworkAvailable(Context paramContext)
+  {
+    paramContext = ((ConnectivityManager)paramContext.getSystemService("connectivity")).getActiveNetworkInfo();
+    if (paramContext == null) {
+      return false;
+    }
+    return (paramContext.isConnected()) || (paramContext.isAvailable());
   }
 }
 

@@ -1,30 +1,32 @@
-.class final Lcom/tencent/smtt/sdk/d;
+.class public final Lcom/tencent/smtt/sdk/d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
 # static fields
-.field private static jJl:Lcom/tencent/smtt/sdk/d;
+.field private static lRC:Z
 
-.field private static jJn:Z
+.field private static lRD:I
 
-.field private static jJo:I
+.field private static lRE:I
 
-.field private static jJp:I
+.field static lRF:Z
 
-.field private static jJq:Z
+.field private static lRG:I
 
-.field private static jJr:I
+.field private static lRI:Ljava/lang/String;
 
-.field private static jJt:Ljava/lang/String;
+.field private static lRz:Lcom/tencent/smtt/sdk/d;
 
 
 # instance fields
-.field jJk:Lcom/tencent/smtt/sdk/aa;
+.field private lRA:Z
 
-.field jJm:Z
+.field lRB:Z
 
-.field private jJs:Ljava/io/File;
+.field private lRH:Ljava/io/File;
+
+.field lRy:Lcom/tencent/smtt/sdk/t;
 
 
 # direct methods
@@ -36,28 +38,28 @@
 
     const/4 v0, 0x0
 
-    .line 24
-    sput-object v1, Lcom/tencent/smtt/sdk/d;->jJl:Lcom/tencent/smtt/sdk/d;
-
-    .line 26
-    sput-boolean v0, Lcom/tencent/smtt/sdk/d;->jJn:Z
-
-    .line 27
-    sput v0, Lcom/tencent/smtt/sdk/d;->jJo:I
+    .line 25
+    sput-object v1, Lcom/tencent/smtt/sdk/d;->lRz:Lcom/tencent/smtt/sdk/d;
 
     .line 28
-    sput v0, Lcom/tencent/smtt/sdk/d;->jJp:I
+    sput-boolean v0, Lcom/tencent/smtt/sdk/d;->lRC:Z
 
-    .line 260
-    sput-boolean v0, Lcom/tencent/smtt/sdk/d;->jJq:Z
+    .line 29
+    sput v0, Lcom/tencent/smtt/sdk/d;->lRD:I
 
-    .line 262
+    .line 30
+    sput v0, Lcom/tencent/smtt/sdk/d;->lRE:I
+
+    .line 322
+    sput-boolean v0, Lcom/tencent/smtt/sdk/d;->lRF:Z
+
+    .line 324
     const/4 v0, 0x3
 
-    sput v0, Lcom/tencent/smtt/sdk/d;->jJr:I
+    sput v0, Lcom/tencent/smtt/sdk/d;->lRG:I
 
-    .line 264
-    sput-object v1, Lcom/tencent/smtt/sdk/d;->jJt:Ljava/lang/String;
+    .line 326
+    sput-object v1, Lcom/tencent/smtt/sdk/d;->lRI:Ljava/lang/String;
 
     return-void
 .end method
@@ -68,96 +70,89 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 33
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 23
-    iput-object v1, p0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
-
-    .line 25
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    .line 35
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 263
-    iput-object v1, p0, Lcom/tencent/smtt/sdk/d;->jJs:Ljava/io/File;
+    .line 24
+    iput-object v1, p0, Lcom/tencent/smtt/sdk/d;->lRy:Lcom/tencent/smtt/sdk/t;
 
-    .line 33
+    .line 26
+    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->lRA:Z
+
+    .line 27
+    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->lRB:Z
+
+    .line 325
+    iput-object v1, p0, Lcom/tencent/smtt/sdk/d;->lRH:Ljava/io/File;
+
+    .line 35
     return-void
 .end method
 
-.method static Cd(Ljava/lang/String;)V
+.method static If(Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 299
-    sput-object p0, Lcom/tencent/smtt/sdk/d;->jJt:Ljava/lang/String;
+    .line 369
+    sput-object p0, Lcom/tencent/smtt/sdk/d;->lRI:Ljava/lang/String;
 
-    .line 300
+    .line 370
     return-void
 .end method
 
-.method public static aUe()I
+.method public static blo()I
     .locals 1
 
     .prologue
-    .line 246
-    sget v0, Lcom/tencent/smtt/sdk/d;->jJo:I
+    .line 303
+    sget v0, Lcom/tencent/smtt/sdk/d;->lRD:I
 
     return v0
 .end method
 
-.method static aUf()Z
+.method static blp()Z
     .locals 1
 
     .prologue
-    .line 291
-    sget-boolean v0, Lcom/tencent/smtt/sdk/d;->jJq:Z
-
-    return v0
-.end method
-
-.method static aUg()Z
-    .locals 1
-
-    .prologue
-    .line 295
+    .line 360
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/smtt/sdk/d;->jJq:Z
+    sput-boolean v0, Lcom/tencent/smtt/sdk/d;->lRF:Z
 
     return v0
 .end method
 
-.method private aUh()I
+.method private blq()I
     .locals 3
 
     .prologue
-    .line 308
+    .line 378
     :try_start_0
     new-instance v0, Ljava/io/File;
 
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/d;->jJs:Ljava/io/File;
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/d;->lRH:Ljava/io/File;
 
     const-string/jumbo v2, "count.prop"
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 312
+    .line 382
     new-instance v1, Ljava/io/FileInputStream;
 
     invoke-direct {v1, v0}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
 
-    .line 313
+    .line 383
     new-instance v0, Ljava/util/Properties;
 
     invoke-direct {v0}, Ljava/util/Properties;-><init>()V
 
-    .line 314
+    .line 384
     invoke-virtual {v0, v1}, Ljava/util/Properties;->load(Ljava/io/InputStream;)V
 
-    .line 316
-    sget-object v1, Lcom/tencent/smtt/sdk/d;->jJt:Ljava/lang/String;
+    .line 386
+    sget-object v1, Lcom/tencent/smtt/sdk/d;->lRI:Ljava/lang/String;
 
     const-string/jumbo v2, "1"
 
@@ -165,7 +160,7 @@
 
     move-result-object v0
 
-    .line 317
+    .line 387
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v0
@@ -176,7 +171,7 @@
 
     move-result v0
 
-    .line 322
+    .line 392
     :goto_0
     return v0
 
@@ -188,32 +183,97 @@
     goto :goto_0
 .end method
 
-.method public static gn(Z)Lcom/tencent/smtt/sdk/d;
+.method static eO(Landroid/content/Context;)Z
+    .locals 2
+
+    .prologue
+    .line 56
+    invoke-static {p0}, Lcom/tencent/smtt/sdk/q;->fr(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 57
+    invoke-static {p0}, Lcom/tencent/smtt/sdk/q;->ft(Landroid/content/Context;)I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/smtt/sdk/d;->lRD:I
+
+    .line 64
+    :goto_0
+    sget v0, Lcom/tencent/smtt/sdk/d;->lRD:I
+
+    if-eqz v0, :cond_1
+
+    sget v0, Lcom/tencent/smtt/sdk/d;->lRD:I
+
+    const/16 v1, 0x620e
+
+    if-ge v0, v1, :cond_1
+
+    .line 65
+    invoke-static {}, Lcom/tencent/smtt/sdk/h;->bly()Lcom/tencent/smtt/sdk/h;
+
+    move-result-object v0
+
+    const/16 v1, 0x135
+
+    invoke-virtual {v0, p0, v1}, Lcom/tencent/smtt/sdk/h;->N(Landroid/content/Context;I)V
+
+    .line 66
+    const/4 v0, 0x0
+
+    .line 69
+    :goto_1
+    return v0
+
+    .line 61
+    :cond_0
+    invoke-static {}, Lcom/tencent/smtt/sdk/m;->blT()Lcom/tencent/smtt/sdk/m;
+
+    invoke-static {p0}, Lcom/tencent/smtt/sdk/m;->fe(Landroid/content/Context;)I
+
+    move-result v0
+
+    sput v0, Lcom/tencent/smtt/sdk/d;->lRD:I
+
+    goto :goto_0
+
+    .line 69
+    :cond_1
+    const/4 v0, 0x1
+
+    goto :goto_1
+.end method
+
+.method public static is(Z)Lcom/tencent/smtt/sdk/d;
     .locals 1
 
     .prologue
-    .line 42
-    sget-object v0, Lcom/tencent/smtt/sdk/d;->jJl:Lcom/tencent/smtt/sdk/d;
+    .line 44
+    sget-object v0, Lcom/tencent/smtt/sdk/d;->lRz:Lcom/tencent/smtt/sdk/d;
 
     if-nez v0, :cond_0
 
     if-eqz p0, :cond_0
 
-    .line 43
+    .line 45
     new-instance v0, Lcom/tencent/smtt/sdk/d;
 
     invoke-direct {v0}, Lcom/tencent/smtt/sdk/d;-><init>()V
 
-    sput-object v0, Lcom/tencent/smtt/sdk/d;->jJl:Lcom/tencent/smtt/sdk/d;
+    sput-object v0, Lcom/tencent/smtt/sdk/d;->lRz:Lcom/tencent/smtt/sdk/d;
 
-    .line 44
+    .line 46
     :cond_0
-    sget-object v0, Lcom/tencent/smtt/sdk/d;->jJl:Lcom/tencent/smtt/sdk/d;
+    sget-object v0, Lcom/tencent/smtt/sdk/d;->lRz:Lcom/tencent/smtt/sdk/d;
 
     return-object v0
 .end method
 
-.method private l(Landroid/content/Context;Z)V
+.method private n(Landroid/content/Context;Z)V
     .locals 7
 
     .prologue
@@ -221,21 +281,42 @@
 
     const/4 v6, 0x0
 
-    .line 123
-    iput-boolean v6, p0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    .line 111
+    sget-boolean v0, Lcom/tencent/smtt/sdk/QbSdk;->lRk:Z
 
-    .line 124
-    if-eqz p2, :cond_1
+    if-eqz v0, :cond_1
 
-    .line 125
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    if-nez p2, :cond_1
 
-    if-eqz v0, :cond_0
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->lRA:Z
 
-    .line 126
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    if-eqz v0, :cond_1
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/aa;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+    .line 127
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 115
+    :cond_1
+    iput-boolean v6, p0, Lcom/tencent/smtt/sdk/d;->lRA:Z
+
+    .line 116
+    if-eqz p2, :cond_3
+
+    .line 117
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/d;->lRy:Lcom/tencent/smtt/sdk/t;
+
+    if-eqz v0, :cond_2
+
+    sget-boolean v0, Lcom/tencent/smtt/sdk/QbSdk;->lRk:Z
+
+    if-nez v0, :cond_2
+
+    .line 118
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/d;->lRy:Lcom/tencent/smtt/sdk/t;
+
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
 
     const-string/jumbo v1, "com.tencent.tbs.tbsshell.WebCoreProxy"
 
@@ -257,62 +338,69 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lcom/tencent/smtt/export/external/DexLoader;->invokeStaticMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
-    :cond_0
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->aUa()V
+    .line 120
+    :cond_2
+    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->blj()V
 
-    .line 132
-    :cond_1
-    sget v0, Lcom/tencent/smtt/sdk/d;->jJo:I
+    .line 124
+    :cond_3
+    sget v0, Lcom/tencent/smtt/sdk/d;->lRD:I
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->lRA:Z
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_0
 
-    .line 133
-    invoke-static {}, Lcom/tencent/smtt/sdk/l;->aUq()Lcom/tencent/smtt/sdk/l;
+    .line 125
+    invoke-static {}, Lcom/tencent/smtt/sdk/h;->bly()Lcom/tencent/smtt/sdk/h;
 
     move-result-object v0
 
     const/16 v1, 0x195
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, p1, v1}, Lcom/tencent/smtt/sdk/h;->N(Landroid/content/Context;I)V
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/tencent/smtt/sdk/l;->a(Landroid/content/Context;ILjava/lang/Throwable;)V
+    goto :goto_0
+.end method
 
-    .line 135
-    :cond_2
+.method static so(I)V
+    .locals 0
+
+    .prologue
+    .line 308
+    sput p0, Lcom/tencent/smtt/sdk/d;->lRD:I
+
+    .line 309
     return-void
 .end method
 
-.method private pD(I)V
+.method private sp(I)V
     .locals 5
 
     .prologue
-    .line 333
+    .line 403
     invoke-static {p1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 334
+    .line 404
     new-instance v1, Ljava/util/Properties;
 
     invoke-direct {v1}, Ljava/util/Properties;-><init>()V
 
-    .line 335
-    sget-object v2, Lcom/tencent/smtt/sdk/d;->jJt:Ljava/lang/String;
+    .line 405
+    sget-object v2, Lcom/tencent/smtt/sdk/d;->lRI:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Ljava/util/Properties;->setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 338
+    .line 408
     :try_start_0
     new-instance v0, Ljava/io/FileOutputStream;
 
     new-instance v2, Ljava/io/File;
 
-    iget-object v3, p0, Lcom/tencent/smtt/sdk/d;->jJs:Ljava/io/File;
+    iget-object v3, p0, Lcom/tencent/smtt/sdk/d;->lRH:Ljava/io/File;
 
     const-string/jumbo v4, "count.prop"
 
@@ -327,29 +415,29 @@
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_1
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 347
+    .line 417
     :goto_0
     return-void
 
-    .line 346
+    .line 416
     :catch_0
     move-exception v0
 
     goto :goto_0
 
-    .line 342
+    .line 412
     :catch_1
     move-exception v0
 
     goto :goto_0
 .end method
 
-.method public static useSoftWare(I)Z
+.method public static useSoftWare()Z
     .locals 1
 
     .prologue
-    .line 356
-    invoke-static {p0}, Lcom/tencent/smtt/sdk/QbSdk;->useSoftWare(I)Z
+    .line 426
+    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->useSoftWare()Z
 
     move-result v0
 
@@ -358,314 +446,443 @@
 
 
 # virtual methods
+.method public final blm()Lcom/tencent/smtt/sdk/t;
+    .locals 1
+
+    .prologue
+    .line 288
+    sget-boolean v0, Lcom/tencent/smtt/sdk/QbSdk;->lRk:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/d;->lRy:Lcom/tencent/smtt/sdk/t;
+
+    goto :goto_0
+.end method
+
+.method public final bln()Z
+    .locals 1
+
+    .prologue
+    .line 293
+    sget-boolean v0, Lcom/tencent/smtt/sdk/QbSdk;->lRk:Z
+
+    if-eqz v0, :cond_0
+
+    const/4 v0, 0x0
+
+    :goto_0
+    return v0
+
+    :cond_0
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->lRA:Z
+
+    goto :goto_0
+.end method
+
 .method final getTbsNeedReboot()Z
     .locals 4
 
     .prologue
     const/4 v0, 0x0
 
-    .line 269
-    sget-boolean v1, Lcom/tencent/smtt/sdk/d;->jJq:Z
+    .line 333
+    sget-boolean v1, Lcom/tencent/smtt/sdk/d;->lRF:Z
 
     if-eqz v1, :cond_2
 
-    .line 271
-    sget-object v1, Lcom/tencent/smtt/sdk/d;->jJt:Ljava/lang/String;
+    .line 335
+    sget-object v1, Lcom/tencent/smtt/sdk/d;->lRI:Ljava/lang/String;
 
     if-nez v1, :cond_1
 
-    .line 287
+    .line 352
     :cond_0
     :goto_0
     return v0
 
-    .line 275
+    .line 339
     :cond_1
-    invoke-direct {p0}, Lcom/tencent/smtt/sdk/d;->aUh()I
+    invoke-direct {p0}, Lcom/tencent/smtt/sdk/d;->blq()I
 
     move-result v1
 
-    .line 276
+    .line 340
     if-nez v1, :cond_3
 
-    .line 277
+    .line 341
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/tencent/smtt/sdk/d;->pD(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/smtt/sdk/d;->sp(I)V
 
-    .line 287
+    .line 352
     :cond_2
     :goto_1
-    sget-boolean v0, Lcom/tencent/smtt/sdk/d;->jJq:Z
+    sget-boolean v0, Lcom/tencent/smtt/sdk/d;->lRF:Z
 
     goto :goto_0
 
-    .line 279
+    .line 343
     :cond_3
     add-int/lit8 v2, v1, 0x1
 
-    sget v3, Lcom/tencent/smtt/sdk/d;->jJr:I
+    sget v3, Lcom/tencent/smtt/sdk/d;->lRG:I
 
     if-gt v2, v3, :cond_0
 
-    .line 280
+    .line 344
     add-int/lit8 v0, v1, 0x1
 
-    invoke-direct {p0, v0}, Lcom/tencent/smtt/sdk/d;->pD(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/smtt/sdk/d;->sp(I)V
 
     goto :goto_1
 .end method
 
 .method public final declared-synchronized init(Landroid/content/Context;)V
-    .locals 7
+    .locals 1
+
+    .prologue
+    .line 131
+    monitor-enter p0
+
+    const/4 v0, 0x0
+
+    :try_start_0
+    invoke-virtual {p0, p1, v0}, Lcom/tencent/smtt/sdk/d;->o(Landroid/content/Context;Z)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 132
+    monitor-exit p0
+
+    return-void
+
+    .line 131
+    :catchall_0
+    move-exception v0
+
+    monitor-exit p0
+
+    throw v0
+.end method
+
+.method public final declared-synchronized o(Landroid/content/Context;Z)V
+    .locals 8
 
     .prologue
     const/4 v1, 0x0
 
-    const/4 v0, 0x1
+    const/4 v2, 0x1
 
     .line 146
     monitor-enter p0
 
     :try_start_0
-    sget v2, Lcom/tencent/smtt/sdk/d;->jJp:I
+    sget v0, Lcom/tencent/smtt/sdk/d;->lRE:I
 
-    add-int/lit8 v2, v2, 0x1
+    add-int/lit8 v0, v0, 0x1
 
-    sput v2, Lcom/tencent/smtt/sdk/d;->jJp:I
+    sput v0, Lcom/tencent/smtt/sdk/d;->lRE:I
 
     .line 149
-    invoke-static {}, Lcom/tencent/smtt/sdk/l;->aUq()Lcom/tencent/smtt/sdk/l;
+    invoke-static {}, Lcom/tencent/smtt/sdk/h;->bly()Lcom/tencent/smtt/sdk/h;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2}, Lcom/tencent/smtt/sdk/l;->aUr()V
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/h;->blz()V
 
-    .line 152
-    invoke-static {}, Lcom/tencent/smtt/sdk/s;->aUS()Lcom/tencent/smtt/sdk/s;
+    .line 153
+    invoke-static {}, Lcom/tencent/smtt/sdk/m;->blT()Lcom/tencent/smtt/sdk/m;
 
     move-result-object v3
 
-    sget v2, Lcom/tencent/smtt/sdk/d;->jJp:I
+    sget v0, Lcom/tencent/smtt/sdk/d;->lRE:I
 
-    if-ne v2, v0, :cond_2
+    if-ne v0, v2, :cond_2
 
-    move v2, v0
+    move v0, v2
 
     :goto_0
-    const-string/jumbo v4, "TbsInstaller"
+    invoke-virtual {v3, p1, v0}, Lcom/tencent/smtt/sdk/m;->r(Landroid/content/Context;Z)V
 
-    new-instance v5, Ljava/lang/StringBuilder;
+    .line 157
+    const/4 v0, 0x0
 
-    const-string/jumbo v6, "TbsInstaller-continueInstallTbsCore currentProcessName="
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
-
-    move-result-object v6
-
-    iget-object v6, v6, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lcom/tencent/smtt/a/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string/jumbo v4, "TbsInstaller"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v6, "TbsInstaller-installTbsCoreIfNeeded currentProcessId="
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Landroid/os/Process;->myPid()I
-
-    move-result v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lcom/tencent/smtt/a/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    const-string/jumbo v4, "TbsInstaller"
-
-    new-instance v5, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v6, "TbsInstaller-installTbsCoreIfNeeded currentThreadName="
-
-    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/Thread;->getName()Ljava/lang/String;
-
-    move-result-object v6
-
-    invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v5
-
-    invoke-static {v4, v5}, Lcom/tencent/smtt/a/u;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->aUb()Z
+    invoke-static {p1, v0, p2}, Lcom/tencent/smtt/sdk/QbSdk;->c(Landroid/content/Context;ZZ)Z
 
     move-result v4
 
-    if-nez v4, :cond_0
-
-    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v5, 0x8
-
-    if-ge v4, v5, :cond_3
-
-    const-string/jumbo v2, "TbsInstaller"
-
-    const-string/jumbo v3, "android version < 2.1 no need install X5 core"
-
-    const/4 v4, 0x1
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/smtt/a/u;->k(Ljava/lang/String;Ljava/lang/String;Z)V
-
-    .line 155
-    :cond_0
-    :goto_1
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/z;->eG(Landroid/content/Context;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_5
-
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/z;->eI(Landroid/content/Context;)I
-
-    move-result v2
-
-    sput v2, Lcom/tencent/smtt/sdk/d;->jJo:I
-
-    :goto_2
-    sget v2, Lcom/tencent/smtt/sdk/d;->jJo:I
-
-    if-eqz v2, :cond_6
-
-    sget v2, Lcom/tencent/smtt/sdk/d;->jJo:I
-
-    const/16 v3, 0x620e
-
-    if-ge v2, v3, :cond_6
-
-    invoke-static {}, Lcom/tencent/smtt/sdk/l;->aUq()Lcom/tencent/smtt/sdk/l;
-
-    move-result-object v2
-
-    const/16 v3, 0x135
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v2, p1, v3, v4}, Lcom/tencent/smtt/sdk/l;->a(Landroid/content/Context;ILjava/lang/Throwable;)V
-
-    move v2, v1
-
-    :goto_3
-    if-eqz v2, :cond_8
-
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/QbSdk;->canLoadX5(Landroid/content/Context;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_8
-
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
+    .line 158
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v3, 0x7
 
-    if-lt v2, v3, :cond_7
+    if-lt v0, v3, :cond_3
 
-    move v2, v0
+    move v3, v2
 
-    :goto_4
-    if-eqz v2, :cond_8
+    .line 160
+    :goto_1
+    if-nez v3, :cond_0
 
-    sget v2, Lcom/tencent/smtt/sdk/d;->jJo:I
+    .line 161
+    const-string/jumbo v0, "loaderror"
 
-    invoke-static {p1, v2}, Lcom/tencent/smtt/sdk/QbSdk;->L(Landroid/content/Context;I)Z
+    const-string/jumbo v5, "320"
 
-    move-result v2
+    invoke-static {v0, v5}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    if-eqz v2, :cond_1
+    .line 167
+    :cond_0
+    if-eqz v4, :cond_4
 
-    invoke-static {}, Lcom/tencent/smtt/sdk/l;->aUq()Lcom/tencent/smtt/sdk/l;
+    if-eqz v3, :cond_4
+
+    move v0, v2
+
+    .line 171
+    :goto_2
+    const-string/jumbo v5, "SDKEngine"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v7, "SDKEngine--init canLoadTbs="
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v5, v6}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 172
+    if-nez v0, :cond_1
+
+    .line 173
+    const-string/jumbo v5, "SDKEngine"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v7, "SDKEngine--init can_load_x5="
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v5, v4}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 174
+    const-string/jumbo v4, "SDKEngine"
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v6, "SDKEngine--init is_compatible="
+
+    invoke-direct {v5, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v3}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
     move-result-object v3
 
-    const/16 v4, 0x194
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const/4 v5, 0x0
+    move-result-object v3
 
-    invoke-virtual {v3, p1, v4, v5}, Lcom/tencent/smtt/sdk/l;->a(Landroid/content/Context;ILjava/lang/Throwable;)V
+    invoke-static {v4, v3}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
+    .line 175
+    const-string/jumbo v3, "SDKEngine"
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "SDKEngine--init isTbsCoreLegaL=true"
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v3, v4}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 179
     :cond_1
-    if-nez v2, :cond_8
+    if-eqz v0, :cond_c
 
-    .line 161
-    :goto_5
-    if-eqz v0, :cond_d
-
-    .line 164
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    .line 182
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->lRA:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    if-eqz v0, :cond_9
+    if-eqz v0, :cond_5
 
-    .line 232
-    :goto_6
+    .line 284
+    :goto_3
     monitor-exit p0
 
     return-void
 
     :cond_2
-    move v2, v1
+    move v0, v1
 
-    .line 152
-    goto/16 :goto_0
+    .line 153
+    goto :goto_0
 
     :cond_3
+    move v3, v1
+
+    .line 158
+    goto :goto_1
+
+    :cond_4
+    move v0, v1
+
+    .line 167
+    goto :goto_2
+
+    .line 188
+    :cond_5
     :try_start_1
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/z;->eG(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/tencent/smtt/sdk/q;->fr(Landroid/content/Context;)Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_0
+    if-eqz v0, :cond_7
 
-    invoke-virtual {v3, p1, v2}, Lcom/tencent/smtt/sdk/s;->m(Landroid/content/Context;Z)Z
+    .line 193
+    invoke-static {p1}, Lcom/tencent/smtt/sdk/q;->fB(Landroid/content/Context;)Z
 
-    move-result v4
+    move-result v0
 
-    if-nez v4, :cond_4
+    if-eqz v0, :cond_6
 
-    invoke-virtual {v3, p1, v2}, Lcom/tencent/smtt/sdk/s;->n(Landroid/content/Context;Z)Z
+    .line 194
+    new-instance v0, Ljava/io/File;
+
+    invoke-static {p1}, Lcom/tencent/smtt/sdk/q;->fs(Landroid/content/Context;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    .line 195
+    invoke-static {}, Lcom/tencent/smtt/sdk/m;->blT()Lcom/tencent/smtt/sdk/m;
+
+    invoke-static {p1}, Lcom/tencent/smtt/sdk/m;->fj(Landroid/content/Context;)Ljava/io/File;
+
+    move-result-object v1
+
+    .line 196
+    invoke-static {p1}, Lcom/tencent/smtt/sdk/q;->fu(Landroid/content/Context;)Landroid/content/Context;
+
+    move-result-object v2
+
+    .line 198
+    if-nez v1, :cond_d
+
+    .line 200
+    const-string/jumbo v0, "SDKEngine"
+
+    const-string/jumbo v1, "useSystemWebView by ERROR_TBSCORE_DEXOPT_DIR"
+
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 201
+    invoke-static {}, Lcom/tencent/smtt/sdk/h;->bly()Lcom/tencent/smtt/sdk/h;
+
+    move-result-object v0
+
+    const/16 v1, 0x137
+
+    invoke-virtual {v0, p1, v1}, Lcom/tencent/smtt/sdk/h;->N(Landroid/content/Context;I)V
+
+    .line 205
+    const/4 v0, 0x1
+
+    invoke-direct {p0, p1, v0}, Lcom/tencent/smtt/sdk/d;->n(Landroid/content/Context;Z)V
     :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    goto :goto_1
+    goto :goto_3
+
+    .line 258
+    :catch_0
+    move-exception v0
+
+    .line 260
+    :try_start_2
+    const-string/jumbo v1, "SDKEngine"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "useSystemWebView by exception: "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Landroid/util/Log;->getStackTraceString(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 261
+    invoke-static {}, Lcom/tencent/smtt/sdk/h;->bly()Lcom/tencent/smtt/sdk/h;
+
+    move-result-object v1
+
+    const/16 v2, 0x136
+
+    invoke-virtual {v1, p1, v2, v0}, Lcom/tencent/smtt/sdk/h;->a(Landroid/content/Context;ILjava/lang/Throwable;)V
+
+    .line 265
+    const/4 v0, 0x1
+
+    invoke-direct {p0, p1, v0}, Lcom/tencent/smtt/sdk/d;->n(Landroid/content/Context;Z)V
+
+    .line 281
+    :goto_4
+    invoke-static {}, Lcom/tencent/smtt/sdk/m;->blT()Lcom/tencent/smtt/sdk/m;
+
+    invoke-static {p1}, Lcom/tencent/smtt/sdk/m;->fl(Landroid/content/Context;)Ljava/io/File;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/d;->lRH:Ljava/io/File;
+
+    .line 282
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->lRB:Z
+    :try_end_2
+    .catchall {:try_start_2 .. :try_end_2} :catchall_0
+
+    goto :goto_3
 
     .line 146
     :catchall_0
@@ -675,201 +892,105 @@
 
     throw v0
 
-    .line 152
-    :cond_4
-    :try_start_2
-    const-string/jumbo v2, "TbsInstaller"
-
-    const-string/jumbo v3, "TbsInstaller-installTbsCoreIfNeeded, SUCCESS!!"
-
-    const/4 v4, 0x1
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/smtt/a/u;->j(Ljava/lang/String;Ljava/lang/String;Z)V
-
-    goto :goto_1
-
-    .line 155
-    :cond_5
-    invoke-static {}, Lcom/tencent/smtt/sdk/s;->aUS()Lcom/tencent/smtt/sdk/s;
-
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/s;->eu(Landroid/content/Context;)I
-
-    move-result v2
-
-    sput v2, Lcom/tencent/smtt/sdk/d;->jJo:I
-    :try_end_2
-    .catchall {:try_start_2 .. :try_end_2} :catchall_0
-
-    goto :goto_2
-
+    .line 212
     :cond_6
-    move v2, v0
-
-    goto :goto_3
-
-    :cond_7
-    move v2, v1
-
-    goto :goto_4
-
-    :cond_8
-    move v0, v1
-
-    goto :goto_5
-
-    .line 170
-    :cond_9
     :try_start_3
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/z;->eG(Landroid/content/Context;)Z
+    const-string/jumbo v0, "SDKEngine"
 
-    move-result v0
+    const-string/jumbo v1, "useSystemWebView by ERROR_HOST_UNAVAILABLE"
 
-    if-eqz v0, :cond_b
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 175
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/z;->eL(Landroid/content/Context;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_a
-
-    .line 176
-    new-instance v1, Ljava/io/File;
-
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/z;->eH(Landroid/content/Context;)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    .line 177
-    invoke-static {}, Lcom/tencent/smtt/sdk/s;->aUS()Lcom/tencent/smtt/sdk/s;
-
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/s;->ez(Landroid/content/Context;)Ljava/io/File;
-
-    move-result-object v0
-
-    .line 178
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/z;->eJ(Landroid/content/Context;)Landroid/content/Context;
-
-    move-result-object v2
-
-    .line 179
-    if-nez v0, :cond_e
-
-    .line 181
-    invoke-static {}, Lcom/tencent/smtt/sdk/l;->aUq()Lcom/tencent/smtt/sdk/l;
-
-    move-result-object v0
-
-    const/16 v1, 0x137
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, p1, v1, v2}, Lcom/tencent/smtt/sdk/l;->a(Landroid/content/Context;ILjava/lang/Throwable;)V
-
-    .line 182
-    const/4 v0, 0x1
-
-    invoke-direct {p0, p1, v0}, Lcom/tencent/smtt/sdk/d;->l(Landroid/content/Context;Z)V
-    :try_end_3
-    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
-
-    goto :goto_6
-
-    .line 215
-    :catch_0
-    move-exception v0
-
-    .line 217
-    :try_start_4
-    invoke-static {}, Lcom/tencent/smtt/sdk/l;->aUq()Lcom/tencent/smtt/sdk/l;
-
-    move-result-object v1
-
-    const/16 v2, 0x136
-
-    invoke-virtual {v1, p1, v2, v0}, Lcom/tencent/smtt/sdk/l;->a(Landroid/content/Context;ILjava/lang/Throwable;)V
-
-    .line 219
-    const/4 v0, 0x1
-
-    invoke-direct {p0, p1, v0}, Lcom/tencent/smtt/sdk/d;->l(Landroid/content/Context;Z)V
-
-    .line 230
-    :goto_7
-    invoke-static {}, Lcom/tencent/smtt/sdk/s;->aUS()Lcom/tencent/smtt/sdk/s;
-
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/s;->eB(Landroid/content/Context;)Ljava/io/File;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/d;->jJs:Ljava/io/File;
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_0
-
-    goto :goto_6
-
-    .line 188
-    :cond_a
-    :try_start_5
-    invoke-static {}, Lcom/tencent/smtt/sdk/l;->aUq()Lcom/tencent/smtt/sdk/l;
+    .line 213
+    invoke-static {}, Lcom/tencent/smtt/sdk/h;->bly()Lcom/tencent/smtt/sdk/h;
 
     move-result-object v0
 
     const/16 v1, 0x130
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, p1, v1}, Lcom/tencent/smtt/sdk/h;->N(Landroid/content/Context;I)V
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/tencent/smtt/sdk/l;->a(Landroid/content/Context;ILjava/lang/Throwable;)V
-
-    .line 189
+    .line 217
     const/4 v0, 0x1
 
-    invoke-direct {p0, p1, v0}, Lcom/tencent/smtt/sdk/d;->l(Landroid/content/Context;Z)V
+    invoke-direct {p0, p1, v0}, Lcom/tencent/smtt/sdk/d;->n(Landroid/content/Context;Z)V
 
-    goto/16 :goto_6
+    goto/16 :goto_3
 
-    .line 195
-    :cond_b
-    invoke-static {}, Lcom/tencent/smtt/sdk/s;->aUS()Lcom/tencent/smtt/sdk/s;
+    .line 225
+    :cond_7
+    invoke-static {}, Lcom/tencent/smtt/sdk/m;->blT()Lcom/tencent/smtt/sdk/m;
 
-    invoke-static {p1}, Lcom/tencent/smtt/sdk/s;->ez(Landroid/content/Context;)Ljava/io/File;
+    invoke-static {p1}, Lcom/tencent/smtt/sdk/m;->fj(Landroid/content/Context;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 198
-    if-nez v0, :cond_c
+    .line 229
+    sget v3, Lcom/tencent/smtt/sdk/d;->lRD:I
 
-    .line 200
-    invoke-static {}, Lcom/tencent/smtt/sdk/l;->aUq()Lcom/tencent/smtt/sdk/l;
+    const/16 v4, 0x635c
+
+    if-eq v3, v4, :cond_8
+
+    sget v3, Lcom/tencent/smtt/sdk/d;->lRD:I
+
+    const/16 v4, 0x635d
+
+    if-ne v3, v4, :cond_9
+
+    :cond_8
+    move v1, v2
+
+    .line 230
+    :cond_9
+    if-eqz v1, :cond_a
+
+    .line 232
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    .line 238
+    :goto_5
+    if-nez v0, :cond_b
+
+    .line 240
+    const-string/jumbo v0, "SDKEngine"
+
+    const-string/jumbo v1, "useSystemWebView by ERROR_TBSCORE_SHARE_DIR"
+
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 241
+    invoke-static {}, Lcom/tencent/smtt/sdk/h;->bly()Lcom/tencent/smtt/sdk/h;
 
     move-result-object v0
 
     const/16 v1, 0x138
 
-    const/4 v2, 0x0
+    invoke-virtual {v0, p1, v1}, Lcom/tencent/smtt/sdk/h;->N(Landroid/content/Context;I)V
 
-    invoke-virtual {v0, p1, v1, v2}, Lcom/tencent/smtt/sdk/l;->a(Landroid/content/Context;ILjava/lang/Throwable;)V
-
-    .line 201
+    .line 242
     const/4 v0, 0x1
 
-    invoke-direct {p0, p1, v0}, Lcom/tencent/smtt/sdk/d;->l(Landroid/content/Context;Z)V
+    invoke-direct {p0, p1, v0}, Lcom/tencent/smtt/sdk/d;->n(Landroid/content/Context;Z)V
 
-    goto/16 :goto_6
+    goto/16 :goto_3
 
-    :cond_c
+    :cond_a
     move-object v2, p1
 
+    .line 236
+    goto :goto_5
+
+    :cond_b
     move-object v1, v0
 
-    move-object v3, v0
+    move-object v4, v0
 
-    .line 206
-    :goto_8
-    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    .line 249
+    :goto_6
+    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v0
 
@@ -877,48 +998,62 @@
 
     move-result-object v5
 
-    .line 207
-    new-instance v0, Lcom/tencent/smtt/sdk/aa;
+    .line 250
+    new-instance v0, Lcom/tencent/smtt/sdk/t;
 
-    invoke-virtual {v3}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v1}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
+    invoke-virtual {v4}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
     move-result-object v4
 
     move-object v1, p1
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/smtt/sdk/aa;-><init>(Landroid/content/Context;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/smtt/sdk/t;-><init>(Landroid/content/Context;Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/d;->lRy:Lcom/tencent/smtt/sdk/t;
 
-    .line 210
+    .line 253
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->jJm:Z
-    :try_end_5
-    .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_0
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
+    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/d;->lRA:Z
+    :try_end_3
+    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_0
+    .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    goto :goto_7
+    goto :goto_4
 
-    .line 225
-    :cond_d
+    .line 270
+    :cond_c
+    :try_start_4
+    const-string/jumbo v0, "SDKEngine"
+
+    const-string/jumbo v1, "useSystemWebView by !canLoadTbs"
+
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 272
+    const-string/jumbo v0, "loaderror"
+
+    const-string/jumbo v1, "324"
+
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 276
     const/4 v0, 0x0
 
-    :try_start_6
-    invoke-direct {p0, p1, v0}, Lcom/tencent/smtt/sdk/d;->l(Landroid/content/Context;Z)V
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+    invoke-direct {p0, p1, v0}, Lcom/tencent/smtt/sdk/d;->n(Landroid/content/Context;Z)V
+    :try_end_4
+    .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    goto :goto_7
+    goto/16 :goto_4
 
-    :cond_e
-    move-object v3, v1
+    :cond_d
+    move-object v4, v1
 
     move-object v1, v0
 
-    goto :goto_8
+    goto :goto_6
 .end method

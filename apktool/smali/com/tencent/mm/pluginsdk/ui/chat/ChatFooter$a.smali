@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field gVA:I
+.field public iLS:Ljava/lang/String;
 
-.field public gVy:Ljava/lang/String;
+.field iLT:Ljava/lang/String;
 
-.field gVz:Ljava/lang/String;
+.field iLU:I
 
 
 # direct methods
@@ -27,7 +27,7 @@
     .locals 0
 
     .prologue
-    .line 128
+    .line 129
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -37,7 +37,7 @@
     .locals 0
 
     .prologue
-    .line 128
+    .line 129
     invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter$a;-><init>()V
 
     return-void

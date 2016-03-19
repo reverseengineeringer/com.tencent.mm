@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface CropImageView$a
 {
-  public abstract void aRA();
+  public abstract void biy();
 }
 
 /* Location:

@@ -1,51 +1,76 @@
 package com.tencent.mm.ae;
 
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.if;
-import com.tencent.mm.protocal.b.ig;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
+import android.widget.Toast;
+import com.tencent.mm.d.a.gq;
+import com.tencent.mm.d.a.gq.b;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.aa;
+import com.tencent.mm.pluginsdk.i.u;
+import com.tencent.mm.ui.base.h;
+import com.tencent.mm.ui.base.h.a;
 
 public final class a
-  extends j
-  implements r
 {
-  private d apI;
-  private final com.tencent.mm.q.a apJ;
-  
-  public a(String paramString)
+  public static boolean Bl()
   {
-    a.a locala = new a.a();
-    bsW = new if();
-    bsX = new ig();
-    uri = "/cgi-bin/micromsg-bin/deletecardimg";
-    bsV = 576;
-    bsY = 0;
-    bsZ = 0;
-    apJ = locala.vh();
-    apJ.bsT.btb).hrW = paramString;
+    gq localgq = new gq();
+    aBI.action = 1;
+    com.tencent.mm.sdk.c.a.jUF.j(localgq);
+    return aBJ.aBK;
   }
   
-  public final int a(m paramm, d paramd)
+  public static boolean Bm()
   {
-    apI = paramd;
-    return a(paramm, apJ, this);
+    return (i.a.iyD != null) && (i.a.iyD.aEr());
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public static boolean Bn()
   {
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvpsTxEhRs31frwbWcFeG1bk=", "onGYNetEnd:%s, %s", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
-    apI.a(paramInt2, paramInt3, paramString, this);
+    return (i.a.iyN != null) && (i.a.iyN.afr());
   }
   
-  public final int getType()
+  public static h a(Context paramContext, int paramInt, Runnable paramRunnable)
   {
-    return 576;
+    paramContext = new h.a(paramContext);
+    paramContext.qz(2131430877);
+    paramContext.qB(paramInt);
+    paramContext.b(2131431554, new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        if (bWT != null) {
+          bWT.run();
+        }
+      }
+    });
+    paramContext.hw(true);
+    paramContext.c(new DialogInterface.OnCancelListener()
+    {
+      public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+      {
+        if (bWT != null) {
+          bWT.run();
+        }
+      }
+    });
+    paramContext = paramContext.bcu();
+    paramContext.show();
+    return paramContext;
+  }
+  
+  public static boolean aR(Context paramContext)
+  {
+    boolean bool = false;
+    if (Bl())
+    {
+      Toast.makeText(paramContext, 2131431520, 0).show();
+      bool = true;
+    }
+    return bool;
   }
 }
 

@@ -1348,8 +1348,10 @@ window._WXJS = _WXJS
 
         touchTimeout = setTimeout(function(){
           touchTimeout = null
-          touch.el.trigger('wx-singleTap')
-          touch = {}
+		  if (touch.el) {
+			touch.el.trigger('wx-singleTap')
+			touch = {}
+		  }
         }, 250)
       }
     }).bind('touchcancel', function(){
@@ -2164,8 +2166,10 @@ var vsprintf = function(fmt, argv) {
     //将消息添加到发送队列，iframe的准备队列为weixin://dispatch_message/
     function _sendMessage(message) {
         _sendMessageQueue.push(message);
-        _readyMessageIframe.src = _CUSTOM_PROTOCOL_SCHEME + '://' + _QUEUE_HAS_MESSAGE;
-        
+		if (_readyMessageIframe) {
+			_readyMessageIframe.src = _CUSTOM_PROTOCOL_SCHEME + '://' + _QUEUE_HAS_MESSAGE;
+        }
+		
         // var ifm = _WXJS('iframe#__WeixinJSBridgeIframe')[0];
         // if (!ifm) {
         //   ifm = _createQueueReadyIframe(document);
@@ -2720,15 +2724,46 @@ var vsprintf = function(fmt, argv) {
 			_log('hasInit, no need to init again');
 			return;
 		}
-	  
-		window.WeixinJSBridge._hasInit = true;
-	  
-        _session_data = ses;
 
+		window.WeixinJSBridge._hasInit = true;
+
+
+		if(!window.WeixinJSBridge._hasPreInit){
+		    console.log("weixin://preInjectJSBridge/fail");
+		    _session_data = ses;
+		}else{
+		    console.log("weixin://preInjectJSBridge/ok");
+		}
         // bridge ready
         var readyEvent = doc.createEvent('Events');
         readyEvent.initEvent('WeixinJSBridgeReady');
         doc.dispatchEvent(readyEvent);
+      });
+
+       // the first event
+      _on('sys:preInit',function(ses){
+        //console.log('preinit start');
+          // 避免由于Java层多次发起init请求，造成网页端多次收到WeixinJSBridgeReady事件
+        if (window.WeixinJSBridge._hasInit) {
+            //alert('preinit has init');
+      		_log('preInit, has init, no need to init again');
+      		return;
+      	}
+
+      	if(window.WeixinJSBridge._hasPreInit){
+      	    _log('preInit, has pre init, no need to init again');
+      	    return;
+      	}
+
+      	window.WeixinJSBridge._hasPreInit = true;
+
+        _session_data = ses;
+
+              // bridge ready
+        var readyEvent = doc.createEvent('Events');
+        readyEvent.initEvent('WeixinJSBridgePreReady');
+        doc.dispatchEvent(readyEvent);
+        //console.log('preInit ok');
       });
 	  
       _on('sys:bridged',function(ses){
@@ -2764,7 +2799,78 @@ var vsprintf = function(fmt, argv) {
               ///alert('apis : ' + _runOn3rdApiList);
           }
       });
+
+      _on('sys:get_all_hosts',function(ses){
+          var allHosts = getDomainList();
+          //alert('jingle == ' + allHosts);
+          //_setResultIframe.src = 'weixin://private/setresult/' + result;
+          _log('sys:get_all_hosts : ' + allHosts);
+          return 'wxGetAllHosts:' + allHosts;
+      });
+
+      _on('sys:get_html_content',function(ses){
+          var htmlContent = getHtmlContent();
+          //alert('jingle == ' + allHosts);
+          //_setResultIframe.src = 'weixin://private/setresult/' + result;
+          _log('sys:get_html_content : ' + htmlContent);
+          return 'wxGetHtmlContent:' + htmlContent;
+      });
+
     }
+
+    var domain_list = [];
+
+    function getDomain(els, attr){
+     if (!els || els.length <= 0)
+          return;
+
+     var el, attrv, matchs;
+     var reg = /http(s)?\:\/\/([^\/\?]*)(\?|\/)?/;
+     for (var i = 0, len = els.length; i < len; ++i){
+          el = els[i];
+          if (!el) {
+               continue;
+          }
+          attrv = el.getAttribute(attr);
+          if (!!attrv){
+               matchs = attrv.match(reg);
+               if (!!matchs&&!!matchs[2]){
+                    //domain_list[matchs[2]] = true;
+                    domain_list.push(matchs[2]);
+               }
+          }
+     }
+    }
+
+    function getDomainList(){
+     domain_list = [];
+     //link href
+     //a href
+     getDomain(document.getElementsByTagName("a"), 'href');
+     getDomain(document.getElementsByTagName("link"), 'href');
+
+     //iframe src
+     //script src
+     //img src
+     getDomain(document.getElementsByTagName("iframe"), 'src');
+     getDomain(document.getElementsByTagName("script"), 'src');
+     getDomain(document.getElementsByTagName("img"), 'src');
+
+     // var ret = [];
+
+     // for (var k in domain_list){
+     //      if (domain_list.hasOwnProperty(k)){
+     //           ret.push(k);
+     //      }
+     // }
+     // domain_list = [];
+     return domain_list.join(",");
+    }
+
+    function getHtmlContent(){
+      return document.documentElement.innerHTML;
+    }
+
 
     function _test_start(){
       _emit('sys:init',{});
@@ -2783,6 +2889,7 @@ var vsprintf = function(fmt, argv) {
         _fetchQueue: _fetchQueue,
         _handleMessageFromWeixin: _handleMessageFromWeixin,
 		_hasInit: false,
+		_hasPreInit: false,
 		_continueSetResult: _continueSetResult
     };
 

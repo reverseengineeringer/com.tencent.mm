@@ -1,24 +1,37 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.ahe;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.protocal.b.aeo;
+import com.tencent.mm.sdk.c.b;
+import java.util.List;
 
 public final class gr
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDU = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBL = new a();
+  public b aBM = new b();
   
   public gr()
   {
-    id = "ReturnSnsObjectDetail";
-    hXT = atO;
+    id = "MusicAction";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public ahe azL;
+    public aeo aBN;
+    public int aBO;
+    public boolean aBP;
+    public int action;
+    public List ayD;
+  }
+  
+  public static final class b
+  {
+    public aeo aBN;
+    public boolean atf;
+    public List ayD;
   }
 }
 

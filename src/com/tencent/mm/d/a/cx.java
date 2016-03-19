@@ -1,23 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class cx
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ayT = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awu = new a();
   
   public cx()
   {
-    id = "GCMDoSync";
-    hXT = atO;
+    id = "ExDeviceSimpleBTOnScanResult";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int type = 15;
+    public boolean avH;
+    public String awo;
+    public String mac;
   }
 }
 

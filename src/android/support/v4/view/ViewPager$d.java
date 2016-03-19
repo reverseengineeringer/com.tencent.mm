@@ -2,7 +2,7 @@ package android.support.v4.view;
 
 abstract interface ViewPager$d
 {
-  public abstract void b(o paramo1, o paramo2);
+  public abstract void b(j paramj1, j paramj2);
 }
 
 /* Location:

@@ -28,10 +28,7 @@
 
 
 # virtual methods
-.method public abstract aMj()V
-.end method
-
-.method public final an(Landroid/view/View;)V
+.method public final ao(Landroid/view/View;)V
     .locals 3
 
     .prologue
@@ -57,9 +54,9 @@
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/AlphaAnimation;->setDuration(J)V
 
     .line 29
-    new-instance v1, Lcom/tencent/mm/ui/account/jq;
+    new-instance v1, Lcom/tencent/mm/ui/account/WelcomeView$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/jq;-><init>(Lcom/tencent/mm/ui/account/WelcomeView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/WelcomeView$1;-><init>(Lcom/tencent/mm/ui/account/WelcomeView;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/AlphaAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
@@ -68,6 +65,9 @@
 
     .line 44
     return-void
+.end method
+
+.method public abstract bca()V
 .end method
 
 .method public abstract onResume()V

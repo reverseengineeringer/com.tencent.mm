@@ -3,343 +3,254 @@
 .source "SourceFile"
 
 
-# static fields
-.field private static ikI:Z
-
-
 # direct methods
-.method static constructor <clinit>()V
-    .locals 1
+.method public static run()V
+    .locals 13
 
     .prologue
-    .line 20
-    const/4 v0, 0x0
+    const-wide/16 v2, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/as/b;->ikI:Z
+    const v8, 0x51015
 
-    return-void
-.end method
+    const/16 v12, 0x271d
 
-.method static synthetic as(Z)Z
-    .locals 0
+    const/4 v11, 0x1
 
-    .prologue
-    .line 18
-    sput-boolean p0, Lcom/tencent/mm/as/b;->ikI:Z
+    const/4 v1, 0x0
 
-    return p0
-.end method
+    .line 23
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
-.method static synthetic he(Ljava/lang/String;)V
-    .locals 8
+    move-result v0
 
-    .prologue
-    const/4 v7, 0x0
+    if-eqz v0, :cond_0
 
-    const/4 v6, 0x1
-
-    .line 18
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
-
-    const-string/jumbo v1, "Hprof error uploadPath %s "
-
-    new-array v2, v6, [Ljava/lang/Object;
-
-    aput-object p0, v2, v7
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
+    .line 64
     :cond_0
     :goto_0
     return-void
 
+    .line 26
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->pe()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FR()J
 
-    move-result v0
+    move-result-wide v6
 
-    if-nez v0, :cond_2
-
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
-
-    const-string/jumbo v1, "Hprof sdcard invalid."
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_2
-    new-instance v0, Ljava/io/File;
-
-    invoke-direct {v0, p0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0}, Ljava/io/File;->exists()Z
-
-    move-result v1
-
-    if-nez v1, :cond_3
-
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
-
-    const-string/jumbo v1, "Hprof upload file is not exist"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_3
-    const/4 v1, 0x0
-
-    invoke-static {v0, v6, v1}, Lcom/tencent/mm/a/m;->a(Ljava/io/File;ZLjava/lang/String;)Ljava/lang/String;
+    .line 28
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    if-eqz v0, :cond_0
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
-    new-instance v1, Ljava/io/File;
+    move-result-object v0
 
-    invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+    const/4 v4, 0x0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-virtual {v0, v8, v4}, Lcom/tencent/mm/storage/h;->get(ILjava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Long;
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ay;->a(Ljava/lang/Long;J)J
+
+    move-result-wide v4
+
+    .line 30
+    sget v0, Lcom/tencent/mm/platformtools/r;->cnl:I
+
+    if-ne v12, v0, :cond_5
+
+    sget v0, Lcom/tencent/mm/platformtools/r;->cnm:I
+
+    if-eqz v0, :cond_5
+
+    .line 35
+    :goto_1
+    cmp-long v0, v2, v6
+
+    if-gez v0, :cond_0
+
+    .line 36
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
+
+    move-result-object v0
+
+    const-wide/32 v2, 0x69780
+
+    add-long/2addr v2, v6
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v2
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/al;->cX(Landroid/content/Context;)Z
+    invoke-virtual {v0, v8, v2}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
 
-    move-result v2
+    .line 39
+    :try_start_0
+    new-instance v2, Lcom/tencent/mm/protocal/b/xm;
 
-    if-nez v2, :cond_4
+    invoke-direct {v2}, Lcom/tencent/mm/protocal/b/xm;-><init>()V
 
-    invoke-virtual {v1}, Ljava/io/File;->length()J
-
-    move-result-wide v2
-
-    const-wide/32 v4, 0x500000
-
-    cmp-long v2, v2, v4
-
-    if-lez v2, :cond_4
-
-    const-string/jumbo v0, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "Hprof not wifi exceed max size, size "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1}, Ljava/io/File;->length()J
-
-    move-result-wide v3
-
-    invoke-virtual {v2, v3, v4}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    :cond_4
-    invoke-static {}, Lcom/tencent/mm/model/v;->rS()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1, v6, v7}, Lcom/tencent/mm/platformtools/z;->a(Ljava/lang/String;Ljava/lang/String;ZZ)Z
-
-    move-result v0
-
-    const-string/jumbo v1, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
-
-    const-string/jumbo v2, "Hprof upload : %b"
-
-    new-array v3, v6, [Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v4
-
-    aput-object v4, v3, v7
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    if-eqz v0, :cond_0
-
-    new-instance v0, Ljava/io/File;
-
-    sget-object v1, Lcom/tencent/mm/as/a;->ikH:Ljava/lang/String;
-
-    invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v0}, Lcom/tencent/mm/a/c;->d(Ljava/io/File;)Z
-
-    goto/16 :goto_0
-.end method
-
-.method public static mT(I)V
-    .locals 10
-
-    .prologue
-    const/4 v1, 0x0
-
-    const/4 v2, 0x1
-
-    .line 36
     .line 40
-    packed-switch p0, :pswitch_data_0
+    const-string/jumbo v0, ""
+
+    iput-object v0, v2, Lcom/tencent/mm/protocal/b/xm;->juL:Ljava/lang/String;
+
+    .line 41
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v0
+
+    invoke-static {v0}, Landroid/accounts/AccountManager;->get(Landroid/content/Context;)Landroid/accounts/AccountManager;
+
+    move-result-object v0
+
+    const-string/jumbo v3, "com.google"
+
+    invoke-virtual {v0, v3}, Landroid/accounts/AccountManager;->getAccountsByType(Ljava/lang/String;)[Landroid/accounts/Account;
+
+    move-result-object v3
+
+    .line 42
+    array-length v4, v3
 
     move v0, v1
 
-    move v3, v1
+    :goto_2
+    if-ge v0, v4, :cond_2
 
-    move v4, v1
+    aget-object v5, v3, v0
 
-    move v5, v1
+    .line 43
+    iget-object v6, v2, Lcom/tencent/mm/protocal/b/xm;->juL:Ljava/lang/String;
 
-    .line 69
-    :goto_0
-    const-string/jumbo v6, "!44@/B4Tb64lLpI67oPDTT86rE/rkKVKjyGP17sNLUXP5EY="
+    invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
-    const-string/jumbo v7, "hprof operate: dump:%b, checkWifi:%b, uploadSingal:%b,uploadAll:%b,"
+    move-result v6
 
-    const/4 v8, 0x4
+    if-eqz v6, :cond_2
+
+    .line 44
+    const-string/jumbo v6, "!44@/B4Tb64lLpIuznxMDiXSbB31hOU9T/FR8Q26kftvNBM="
+
+    const-string/jumbo v7, "google account[%s]"
+
+    const/4 v8, 0x1
 
     new-array v8, v8, [Ljava/lang/Object;
 
-    invoke-static {v5}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    const/4 v9, 0x0
 
-    move-result-object v9
+    iget-object v10, v5, Landroid/accounts/Account;->name:Ljava/lang/String;
 
-    aput-object v9, v8, v1
+    aput-object v10, v8, v9
 
-    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    move-result-object v1
+    .line 45
+    iget-object v5, v5, Landroid/accounts/Account;->name:Ljava/lang/String;
 
-    aput-object v1, v8, v2
+    iput-object v5, v2, Lcom/tencent/mm/protocal/b/xm;->juL:Ljava/lang/String;
 
-    const/4 v1, 0x2
+    .line 42
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    goto :goto_2
 
-    move-result-object v2
+    .line 51
+    :cond_2
+    sget v0, Lcom/tencent/mm/platformtools/r;->cnl:I
 
-    aput-object v2, v8, v1
+    if-ne v12, v0, :cond_3
 
-    const/4 v1, 0x3
+    sget v0, Lcom/tencent/mm/platformtools/r;->cnm:I
 
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    aput-object v2, v8, v1
-
-    invoke-static {v6, v7, v8}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 71
-    invoke-static {}, Ljava/util/concurrent/Executors;->newSingleThreadExecutor()Ljava/util/concurrent/ExecutorService;
-
-    move-result-object v1
-
-    .line 73
-    new-instance v2, Lcom/tencent/mm/as/c;
-
-    invoke-direct {v2, v5, v4, v3, v0}, Lcom/tencent/mm/as/c;-><init>(ZZZZ)V
-
-    invoke-interface {v1, v2}, Ljava/util/concurrent/ExecutorService;->execute(Ljava/lang/Runnable;)V
-
-    .line 105
-    return-void
-
-    :pswitch_0
-    move v0, v1
-
-    move v3, v2
-
-    move v4, v1
-
-    move v5, v2
-
-    .line 44
-    goto :goto_0
-
-    :pswitch_1
-    move v0, v1
-
-    move v3, v2
-
-    move v4, v2
-
-    move v5, v2
-
-    .line 49
-    goto :goto_0
-
-    :pswitch_2
-    move v0, v1
-
-    move v3, v1
-
-    move v4, v1
-
-    move v5, v2
+    if-eqz v0, :cond_3
 
     .line 52
-    goto :goto_0
+    const-string/jumbo v0, "rssjbbk@gmail.com"
 
-    :pswitch_3
-    move v0, v2
+    iput-object v0, v2, Lcom/tencent/mm/protocal/b/xm;->juL:Ljava/lang/String;
 
-    move v3, v1
+    .line 54
+    :cond_3
+    iget-object v0, v2, Lcom/tencent/mm/protocal/b/xm;->juL:Ljava/lang/String;
 
-    move v4, v1
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
-    move v5, v1
+    move-result v0
+
+    if-nez v0, :cond_4
 
     .line 55
-    goto :goto_0
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
-    :pswitch_4
-    move v0, v2
+    move-result-object v0
 
-    move v3, v1
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rp()Lcom/tencent/mm/ag/c;
 
-    move v4, v2
+    move-result-object v0
 
-    move v5, v1
+    new-instance v3, Lcom/tencent/mm/ag/b$a;
 
-    .line 58
-    goto :goto_0
+    const/16 v4, 0x39
 
-    .line 40
-    nop
+    invoke-direct {v3, v4, v2}, Lcom/tencent/mm/ag/b$a;-><init>(ILcom/tencent/mm/at/a;)V
 
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_4
-    .end packed-switch
-.end method
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ag/c;->b(Lcom/tencent/mm/ag/b$q;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-.method static synthetic oj()Z
-    .locals 1
+    goto/16 :goto_0
 
-    .prologue
-    .line 18
-    sget-boolean v0, Lcom/tencent/mm/as/b;->ikI:Z
+    .line 60
+    :catch_0
+    move-exception v0
 
-    return v0
+    .line 61
+    const-string/jumbo v2, "!44@/B4Tb64lLpIuznxMDiXSbB31hOU9T/FR8Q26kftvNBM="
+
+    const-string/jumbo v3, "Get Accounts failed :%s"
+
+    new-array v4, v11, [Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v4, v1
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto/16 :goto_0
+
+    .line 59
+    :cond_4
+    :try_start_1
+    const-string/jumbo v0, "!44@/B4Tb64lLpIuznxMDiXSbB31hOU9T/FR8Q26kftvNBM="
+
+    const-string/jumbo v2, "Get Accounts failed , Not any info?"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
+
+    goto/16 :goto_0
+
+    :cond_5
+    move-wide v2, v4
+
+    goto/16 :goto_1
 .end method

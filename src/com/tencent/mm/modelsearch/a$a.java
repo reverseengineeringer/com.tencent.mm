@@ -1,36 +1,36 @@
 package com.tencent.mm.modelsearch;
 
-import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.aa;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.regex.Pattern;
 
 public abstract class a$a
-  extends q.a
+  extends o.a
 {
-  private o.i bIG;
-  private String[] bIH;
-  public String bII;
-  private HashSet bIJ;
-  private int bIK;
-  public int bIL;
-  public Comparator bIM = null;
-  private ac handler;
+  public String aEy;
+  private m.j bYr;
+  private String[] bYs;
+  private HashSet bYt;
+  private int bYu;
+  public int bYv;
+  public Comparator bYw = null;
+  private aa handler;
   
-  public a$a(String paramString, int paramInt, HashSet paramHashSet, o.i parami, ac paramac)
+  public a$a(String paramString, int paramInt, HashSet paramHashSet, m.j paramj, aa paramaa)
   {
-    bII = paramString;
-    bIG = parami;
-    handler = paramac;
-    bIK = paramInt;
-    bIH = e.bJt.split(paramString.replace('*', ' '));
+    aEy = paramString;
+    bYr = paramj;
+    handler = paramaa;
+    bYu = paramInt;
+    bYs = c.bZd.split(paramString.replace('*', ' '));
     if (paramHashSet != null)
     {
-      bIJ = paramHashSet;
+      bYt = paramHashSet;
       return;
     }
-    bIJ = new HashSet();
+    bYt = new HashSet();
   }
   
   public abstract List a(String[] paramArrayOfString, HashSet paramHashSet, int paramInt);
@@ -41,8 +41,8 @@ public abstract class a$a
     {
       try
       {
-        List localList = a(bIH, bIJ, bIK);
-        bIL = localList.size();
+        List localList = a(bYs, bYt, bYu);
+        bYv = localList.size();
         if (Thread.interrupted()) {
           throw new InterruptedException();
         }
@@ -54,19 +54,31 @@ public abstract class a$a
           if (handler != null) {
             break label124;
           }
-          bIG.hs(bII);
+          bYr.iD(aEy);
         }
         throw localException;
       }
       if (handler == null)
       {
-        bIG.a(this, localException, bIJ, bIH, bII);
+        bYr.a(this, localException, bYt, bYs, aEy);
         break;
       }
-      handler.post(new b(this, localException));
+      handler.post(new Runnable()
+      {
+        public final void run()
+        {
+          a.a.d(a.a.this).a(a.a.this, localException, a.a.a(a.a.this), a.a.b(a.a.this), a.a.c(a.a.this));
+        }
+      });
       break;
       label124:
-      handler.post(new c(this));
+      handler.post(new Runnable()
+      {
+        public final void run()
+        {
+          a.a.d(a.a.this).iD(a.a.c(a.a.this));
+        }
+      });
     }
     return true;
   }
@@ -75,7 +87,7 @@ public abstract class a$a
   
   public String toString()
   {
-    return String.format("%s[%s]: %d", new Object[] { getName(), bII, Integer.valueOf(bIL) });
+    return String.format("%s[%s]: %d", new Object[] { getName(), aEy, Integer.valueOf(bYv) });
   }
 }
 

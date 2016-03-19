@@ -1,57 +1,53 @@
 package com.tencent.mm.ui;
 
-import com.tencent.mm.a.a;
 import com.tencent.mm.compatible.h.b;
-import com.tencent.mm.compatible.util.e;
+import com.tencent.mm.compatible.util.c;
 
 public final class MMFragmentActivity$a
 {
-  public static final int irA;
-  public static final int irB;
-  public static final int irC;
-  public static final int irD;
-  public int irE = irA;
-  public int irF = irB;
-  public int irG = irC;
-  public int irH = irD;
+  public static final int kqw;
+  public static final int kqx;
+  public static final int kqy;
+  public static final int kqz;
+  public int kqA = kqw;
+  public int kqB = kqx;
+  public int kqC = kqy;
+  public int kqD = kqz;
   
   static
   {
-    boolean bool2 = e.bT(19);
-    boolean bool1 = b.pc() & bool2;
+    int j = 2130837587;
+    boolean bool2 = c.bU(19);
+    boolean bool1 = b.oU() & bool2;
     if (bool1)
     {
-      i = a.a.slide_right_in;
-      irA = i;
+      i = 2130837578;
+      kqw = i;
       if (!bool1) {
         break label68;
       }
-      i = a.a.slide_left_out;
-      label32:
-      irB = i;
-      if (!bool1) {
-        break label75;
+      i = 2130837582;
+      label33:
+      kqx = i;
+      i = j;
+      if (bool1) {
+        i = 2130837584;
       }
-      i = a.a.slide_left_in;
-      label44:
-      irC = i;
+      kqy = i;
       if (!bool1) {
-        break label82;
+        break label74;
       }
     }
     label68:
-    label75:
-    label82:
-    for (int i = a.a.slide_right_out;; i = a.a.pop_out)
+    label74:
+    for (int i = 2130837604;; i = 2130837600)
     {
-      irD = i;
+      kqz = i;
       return;
-      i = a.a.pop_in;
+      i = 2130837592;
       break;
-      i = a.a.anim_not_change;
-      break label32;
-      i = a.a.anim_not_change;
-      break label44;
+      i = 2130837587;
+      break label33;
     }
   }
 }

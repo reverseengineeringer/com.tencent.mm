@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field final synthetic eKv:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
+.field final synthetic fVh:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     .prologue
     .line 242
-    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->eKv:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->fVh:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -47,42 +47,42 @@
 
 
 # virtual methods
-.method public final pf(Ljava/lang/String;)V
+.method public final sK(Ljava/lang/String;)V
     .locals 4
 
     .prologue
     const/4 v3, 0x0
 
     .line 246
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->eKv:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->fVh:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;->b(Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;)Lcom/tencent/mm/ui/base/preference/l;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;->b(Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;)Lcom/tencent/mm/ui/base/preference/f;
 
     move-result-object v0
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/base/preference/l;->AO(Ljava/lang/String;)Z
+    invoke-interface {v0, p1}, Lcom/tencent/mm/ui/base/preference/f;->GC(Ljava/lang/String;)Z
 
     .line 247
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->eKv:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->fVh:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;->f(Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;)Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;->f(Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;)Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessage(I)Z
 
     .line 249
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->eKv:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->fVh:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->eKv:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->fVh:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
 
-    sget v2, Lcom/tencent/mm/a$n;->safe_device_edit:I
+    const v2, 0x7f0b07aa
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->eKv:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->fVh:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
 
     invoke-static {v2}, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;->h(Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;)Landroid/view/MenuItem$OnMenuItemClickListener;
 
@@ -91,9 +91,9 @@
     invoke-virtual {v0, v3, v1, v2}, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 250
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->eKv:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->fVh:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->eKv:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->fVh:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;->d(Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;)I
 
@@ -104,9 +104,9 @@
     invoke-static {v0, v1}, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;->a(Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;I)I
 
     .line 251
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->eKv:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->fVh:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->eKv:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI$a;->fVh:Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;
 
     invoke-static {v1}, Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;->c(Lcom/tencent/mm/plugin/safedevice/ui/MySafeDeviceListUI;)Z
 
@@ -118,7 +118,7 @@
     return-void
 .end method
 
-.method public final pg(Ljava/lang/String;)V
+.method public final sL(Ljava/lang/String;)V
     .locals 3
 
     .prologue
@@ -139,7 +139,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 257
     return-void

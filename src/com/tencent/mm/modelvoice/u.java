@@ -1,105 +1,144 @@
 package com.tencent.mm.modelvoice;
 
-import com.tencent.mm.c.b.a;
-import com.tencent.mm.c.b.g;
-import com.tencent.mm.c.c.e;
-import com.tencent.mm.compatible.d.j;
-import com.tencent.mm.compatible.d.q;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.ContentValues;
+import android.database.Cursor;
+import com.tencent.mm.sdk.platformtools.ay;
+import java.util.HashMap;
+import java.util.Map;
+import junit.framework.Assert;
 
 public final class u
-  implements a
+  extends com.tencent.mm.sdk.h.g
 {
-  private static int bQK = 100;
-  public g arG;
-  private int arq = 0;
-  com.tencent.mm.c.b.g.a aso = new v(this);
-  private e bQL;
-  private String mFileName = null;
-  public int mStatus = 0;
+  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS voiceinfo ( FileName TEXT PRIMARY KEY, User TEXT, MsgId INT, NetOffset INT, FileNowSize INT, TotalLen INT, Status INT, CreateTime INT, LastModifyTime INT, ClientId TEXT, VoiceLength INT, MsgLocalId INT, Human TEXT, reserved1 INT, reserved2 TEXT, MsgSource TEXT, MsgFlag INT, MsgSeq INT )", "CREATE INDEX IF NOT EXISTS voiceinfomsgidindex ON voiceinfo ( MsgId ) ", "CREATE UNIQUE INDEX IF NOT EXISTS voiceinfouniqueindex ON voiceinfo ( FileName )", "DELETE FROM voiceinfo WHERE Status = 99" };
+  public com.tencent.mm.az.g bCw;
+  Map chR = new HashMap();
+  Map chS = new HashMap();
+  Map chT = new HashMap();
   
-  private void clean()
+  public u(com.tencent.mm.az.g paramg)
   {
-    if (arG != null)
-    {
-      arG.ml();
-      arG = null;
-    }
-    if (bQL != null)
-    {
-      bQL.mx();
-      bQL = null;
-    }
+    b(paramg);
+    bCw = paramg;
   }
   
-  public final void a(com.tencent.mm.q.g.a parama) {}
-  
-  public final boolean bn(String paramString)
+  private static void b(com.tencent.mm.az.g paramg)
   {
-    if (!bn.iW(mFileName))
+    int i = 0;
+    Cursor localCursor = paramg.rawQuery("PRAGMA table_info(voiceinfo)", null);
+    if (localCursor == null)
     {
-      t.e("!32@/B4Tb64lLpKxxZlLZKhWt+g3aFejQlb6", "Duplicate Call startRecord , maybe Stop Fail Before");
-      return false;
-    }
-    mStatus = 1;
-    arq = 0;
-    arG = new g(16000, 0);
-    arG.asd = -19;
-    if (bisbhp > 0) {
-      arG.e(bisbhp, true);
+      com.tencent.mm.sdk.platformtools.u.i("!32@/B4Tb64lLpIv/qzEF4E8ss0xfK7O4cQt", "addNewColIfNeed failed, cursor is null.");
+      return;
     }
     for (;;)
     {
-      arG.al(false);
-      arG.aso = aso;
-      bQL = new e();
-      if (bQL.bp(paramString)) {
-        break;
+      int m;
+      int j;
+      if (localCursor.moveToNext())
+      {
+        int k = localCursor.getColumnIndex("name");
+        if (k >= 0)
+        {
+          String str = localCursor.getString(k);
+          k = m;
+          if ("MsgSource".equals(str)) {
+            k = 1;
+          }
+          int n = j;
+          if ("MsgFlag".equals(str)) {
+            n = 1;
+          }
+          j = n;
+          m = k;
+          if ("MsgSeq".equals(str))
+          {
+            i = 1;
+            j = n;
+            m = k;
+          }
+        }
       }
-      t.e("!32@/B4Tb64lLpKxxZlLZKhWt+g3aFejQlb6", "init speex writer failed");
-      clean();
-      mStatus = -1;
-      return false;
-      arG.e(5, false);
+      else
+      {
+        localCursor.close();
+        if (m == 0) {
+          paramg.cj("voiceinfo", "Alter table voiceinfo add MsgSource TEXT");
+        }
+        if (j == 0) {
+          paramg.cj("voiceinfo", "Alter table voiceinfo add MsgFlag INT");
+        }
+        if (i != 0) {
+          break;
+        }
+        paramg.cj("voiceinfo", "Alter table voiceinfo add MsgSeq INT");
+        return;
+        j = 0;
+        m = 0;
+      }
     }
-    if (!arG.mr())
+  }
+  
+  public static String kh(String paramString)
+  {
+    return com.tencent.mm.model.g.b(paramString, ay.FS());
+  }
+  
+  public final p ak(long paramLong)
+  {
+    p localp = null;
+    Object localObject = "SELECT FileName, User, MsgId, NetOffset, FileNowSize, TotalLen, Status, CreateTime, LastModifyTime, ClientId, VoiceLength, MsgLocalId, Human, reserved1, reserved2, MsgSource, MsgFlag, MsgSeq" + " FROM voiceinfo WHERE MsgId=" + paramLong;
+    localObject = bCw.rawQuery((String)localObject, null);
+    if (((Cursor)localObject).moveToFirst())
     {
-      t.e("!32@/B4Tb64lLpKxxZlLZKhWt+g3aFejQlb6", "start record failed");
-      clean();
-      mStatus = -1;
+      localp = new p();
+      localp.c((Cursor)localObject);
+    }
+    ((Cursor)localObject).close();
+    return localp;
+  }
+  
+  public final boolean b(p paramp)
+  {
+    Assert.assertTrue(true);
+    paramp = paramp.lX();
+    if (paramp.size() <= 0) {
+      com.tencent.mm.sdk.platformtools.u.e("!32@/B4Tb64lLpIv/qzEF4E8ss0xfK7O4cQt", "insert falied, no values set");
+    }
+    while (bCw.insert("voiceinfo", "FileName", paramp) == -1L) {
       return false;
     }
-    mFileName = paramString;
+    Ep();
     return true;
   }
   
-  public final int getMaxAmplitude()
+  public final p ee(int paramInt)
   {
-    int i = arq;
-    arq = 0;
-    if (i > bQK) {
-      bQK = i;
+    p localp = null;
+    Object localObject = "SELECT FileName, User, MsgId, NetOffset, FileNowSize, TotalLen, Status, CreateTime, LastModifyTime, ClientId, VoiceLength, MsgLocalId, Human, reserved1, reserved2, MsgSource, MsgFlag, MsgSeq" + " FROM voiceinfo WHERE MsgLocalId=" + paramInt;
+    localObject = bCw.rawQuery((String)localObject, null);
+    if (((Cursor)localObject).moveToFirst())
+    {
+      localp = new p();
+      localp.c((Cursor)localObject);
     }
-    return i * 100 / bQK;
+    ((Cursor)localObject).close();
+    return localp;
   }
   
-  public final int getStatus()
+  public final p ki(String paramString)
   {
-    return mStatus;
-  }
-  
-  public final boolean ml()
-  {
-    mFileName = null;
-    mStatus = 0;
-    clean();
-    return true;
-  }
-  
-  public final int mm()
-  {
-    return arG.ast;
+    Object localObject1 = null;
+    Object localObject2 = "SELECT FileName, User, MsgId, NetOffset, FileNowSize, TotalLen, Status, CreateTime, LastModifyTime, ClientId, VoiceLength, MsgLocalId, Human, reserved1, reserved2, MsgSource, MsgFlag, MsgSeq" + " FROM voiceinfo WHERE FileName= ?";
+    localObject2 = bCw.rawQuery((String)localObject2, new String[] { paramString });
+    paramString = (String)localObject1;
+    if (((Cursor)localObject2).moveToFirst())
+    {
+      paramString = new p();
+      paramString.c((Cursor)localObject2);
+    }
+    ((Cursor)localObject2).close();
+    return paramString;
   }
 }
 

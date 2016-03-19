@@ -1,17 +1,33 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.storage.ag;
 
 public final class y
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a ath = new a();
+  public b ati = new b();
   
   public y()
   {
-    id = "CloseSnsCommentView";
-    hXT = atO;
+    id = "ChattingUIPhotoInfo";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public ag ask;
+  }
+  
+  public static final class b
+  {
+    public int atj = 0;
+    public int atk = 0;
+    public int atl = 0;
+    public int atm = 0;
   }
 }
 

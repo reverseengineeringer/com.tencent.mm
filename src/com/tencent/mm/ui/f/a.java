@@ -17,15 +17,15 @@ import android.view.WindowManager;
 
 public final class a
 {
-  private static b joa;
-  private static b job;
+  private static b ltr;
+  private static b lts;
   
   @TargetApi(11)
   public static void c(Activity paramActivity, View paramView)
   {
     View localView = paramActivity.getWindow().getDecorView();
-    joa = b.dQ(paramActivity);
-    job = b.dQ(paramActivity);
+    ltr = b.ex(paramActivity);
+    lts = b.ex(paramActivity);
     int[] arrayOfInt = new int[2];
     paramView.getLocationOnScreen(arrayOfInt);
     Object localObject = new Rect();
@@ -39,7 +39,7 @@ public final class a
     for (;;)
     {
       int k = arrayOfInt[1];
-      joa.setHeight(k - j - i);
+      ltr.setHeight(k - j - i);
       localObject = new int[2];
       if ((paramActivity instanceof Activity))
       {
@@ -53,9 +53,9 @@ public final class a
         k = localObject[1];
         int m = arrayOfInt[1];
         int n = paramView.getHeight();
-        job.setHeight(k - m - n);
-        joa.showAtLocation(localView, 48, 0, i + j);
-        job.showAtLocation(localView, 80, 0, 0);
+        lts.setHeight(k - m - n);
+        ltr.showAtLocation(localView, 48, 0, i + j);
+        lts.showAtLocation(localView, 80, 0, 0);
         return;
         if (!paramActivity.getTheme().resolveAttribute(16843499, (TypedValue)localObject, true)) {
           break label287;
@@ -73,17 +73,17 @@ public final class a
   
   public static void dismiss()
   {
-    if (joa != null)
+    if (ltr != null)
     {
-      joa.setAnimationStyle(-1);
-      joa.dismiss();
-      joa = null;
+      ltr.setAnimationStyle(-1);
+      ltr.dismiss();
+      ltr = null;
     }
-    if (job != null)
+    if (lts != null)
     {
-      job.setAnimationStyle(-1);
-      job.dismiss();
-      job = null;
+      lts.setAnimationStyle(-1);
+      lts.dismiss();
+      lts = null;
     }
   }
 }

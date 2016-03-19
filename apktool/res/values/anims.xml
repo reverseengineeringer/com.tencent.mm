@@ -98,4 +98,15 @@
     <item type="anim" name="bv">r/a/bv.xml</item>
     <item type="anim" name="bw">r/a/bw.xml</item>
     <item type="anim" name="bx">r/a/bx.xml</item>
+    <item type="anim" name="by">r/a/by.xml</item>
+    <item type="anim" name="bz">r/a/bz.xml</item>
+    <item type="anim" name="c0">r/a/c0.xml</item>
+    <item type="anim" name="c1">r/a/c1.xml</item>
+    <item type="anim" name="c2">r/a/c2.xml</item>
+    <item type="anim" name="c3">r/a/c3.xml</item>
+    <item type="anim" name="c4">r/a/c4.xml</item>
+    <item type="anim" name="c5">r/a/c5.xml</item>
+    <item type="anim" name="c6">r/a/c6.xml</item>
+    <item type="anim" name="c7">r/a/c7.xml</item>
+    <item type="anim" name="c8">r/a/c8.xml</item>
 </resources>

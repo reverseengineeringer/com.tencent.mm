@@ -2,79 +2,87 @@ package com.tencent.smtt.sdk;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.pm.ApplicationInfo;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.net.http.SslCertificate;
 import android.os.Build.VERSION;
 import android.os.Message;
 import android.view.KeyEvent;
-import com.tencent.smtt.a.m;
-import com.tencent.smtt.a.s;
+import com.tencent.smtt.a.k;
+import com.tencent.smtt.a.p;
+import com.tencent.smtt.a.r;
+import java.util.Map;
 
 class SystemWebViewClient
   extends android.webkit.WebViewClient
 {
-  private static String jJx = null;
-  private WebViewClient ejH;
-  private WebView iNx;
+  private static String lRM = null;
+  private WebViewClient ftr;
+  private WebView kMK;
   
   SystemWebViewClient(WebView paramWebView, WebViewClient paramWebViewClient)
   {
-    iNx = paramWebView;
-    ejH = paramWebViewClient;
+    kMK = paramWebView;
+    ftr = paramWebViewClient;
   }
   
   public void doUpdateVisitedHistory(android.webkit.WebView paramWebView, String paramString, boolean paramBoolean)
   {
-    iNx.setSysWebView(paramWebView);
-    ejH.doUpdateVisitedHistory(iNx, paramString, paramBoolean);
+    kMK.setSysWebView(paramWebView);
+    ftr.doUpdateVisitedHistory(kMK, paramString, paramBoolean);
   }
   
   public void onFormResubmission(android.webkit.WebView paramWebView, Message paramMessage1, Message paramMessage2)
   {
-    iNx.setSysWebView(paramWebView);
-    ejH.onFormResubmission(iNx, paramMessage1, paramMessage2);
+    kMK.setSysWebView(paramWebView);
+    ftr.onFormResubmission(kMK, paramMessage1, paramMessage2);
   }
   
   public void onLoadResource(android.webkit.WebView paramWebView, String paramString)
   {
-    iNx.setSysWebView(paramWebView);
-    ejH.onLoadResource(iNx, paramString);
+    kMK.setSysWebView(paramWebView);
+    ftr.onLoadResource(kMK, paramString);
   }
   
   public void onPageFinished(android.webkit.WebView paramWebView, String paramString)
   {
-    if (jJx == null)
+    if (lRM == null)
     {
-      s locals = s.aVe();
-      if (locals != null)
+      localObject = p.bmt();
+      if (localObject != null)
       {
-        locals.gs(true);
-        jJx = Boolean.toString(true);
+        ((p)localObject).iy(true);
+        lRM = Boolean.toString(true);
       }
     }
-    iNx.setSysWebView(paramWebView);
-    paramWebView = iNx;
-    jLh += 1;
-    ejH.onPageFinished(iNx, paramString);
-    iNx.aUT();
+    kMK.setSysWebView(paramWebView);
+    Object localObject = kMK;
+    lTQ += 1;
+    ftr.onPageFinished(kMK, paramString);
+    if ("com.qzone".equals(getContextgetApplicationInfopackageName)) {
+      WebView.fG(paramWebView.getContext());
+    }
+    r.n("SystemWebViewClient", paramWebView.getContext());
+    WebView.bmc();
   }
   
   public void onPageStarted(android.webkit.WebView paramWebView, String paramString, Bitmap paramBitmap)
   {
-    iNx.setSysWebView(paramWebView);
-    ejH.onPageStarted(iNx, paramString, paramBitmap);
+    kMK.setSysWebView(paramWebView);
+    ftr.onPageStarted(kMK, paramString, paramBitmap);
   }
   
   public void onReceivedError(android.webkit.WebView paramWebView, int paramInt, String paramString1, String paramString2)
   {
-    iNx.setSysWebView(paramWebView);
-    ejH.onReceivedError(iNx, paramInt, paramString1, paramString2);
+    kMK.setSysWebView(paramWebView);
+    ftr.onReceivedError(kMK, paramInt, paramString1, paramString2);
   }
   
   public void onReceivedHttpAuthRequest(android.webkit.WebView paramWebView, android.webkit.HttpAuthHandler paramHttpAuthHandler, String paramString1, String paramString2)
   {
-    iNx.setSysWebView(paramWebView);
-    ejH.onReceivedHttpAuthRequest(iNx, new HttpAuthHandlerImpl(paramHttpAuthHandler), paramString1, paramString2);
+    kMK.setSysWebView(paramWebView);
+    ftr.onReceivedHttpAuthRequest(kMK, new HttpAuthHandlerImpl(paramHttpAuthHandler), paramString1, paramString2);
   }
   
   @TargetApi(12)
@@ -82,8 +90,8 @@ class SystemWebViewClient
   {
     if (Build.VERSION.SDK_INT >= 12)
     {
-      iNx.setSysWebView(paramWebView);
-      ejH.onReceivedLoginRequest(iNx, paramString1, paramString2, paramString3);
+      kMK.setSysWebView(paramWebView);
+      ftr.onReceivedLoginRequest(kMK, paramString1, paramString2, paramString3);
     }
   }
   
@@ -92,27 +100,43 @@ class SystemWebViewClient
   {
     if (Build.VERSION.SDK_INT >= 8)
     {
-      iNx.setSysWebView(paramWebView);
-      ejH.onReceivedSslError(iNx, new SslErrorHandlerImpl(paramSslErrorHandler), new SslErrorImpl(paramSslError));
+      kMK.setSysWebView(paramWebView);
+      ftr.onReceivedSslError(kMK, new SslErrorHandlerImpl(paramSslErrorHandler), new SslErrorImpl(paramSslError));
     }
   }
   
   public void onScaleChanged(android.webkit.WebView paramWebView, float paramFloat1, float paramFloat2)
   {
-    iNx.setSysWebView(paramWebView);
-    ejH.onScaleChanged(iNx, paramFloat1, paramFloat2);
+    kMK.setSysWebView(paramWebView);
+    ftr.onScaleChanged(kMK, paramFloat1, paramFloat2);
   }
   
   public void onTooManyRedirects(android.webkit.WebView paramWebView, Message paramMessage1, Message paramMessage2)
   {
-    iNx.setSysWebView(paramWebView);
-    ejH.onTooManyRedirects(iNx, paramMessage1, paramMessage2);
+    kMK.setSysWebView(paramWebView);
+    ftr.onTooManyRedirects(kMK, paramMessage1, paramMessage2);
   }
   
   public void onUnhandledKeyEvent(android.webkit.WebView paramWebView, KeyEvent paramKeyEvent)
   {
-    iNx.setSysWebView(paramWebView);
-    ejH.onUnhandledKeyEvent(iNx, paramKeyEvent);
+    kMK.setSysWebView(paramWebView);
+    ftr.onUnhandledKeyEvent(kMK, paramKeyEvent);
+  }
+  
+  public android.webkit.WebResourceResponse shouldInterceptRequest(android.webkit.WebView paramWebView, android.webkit.WebResourceRequest paramWebResourceRequest)
+  {
+    if (Build.VERSION.SDK_INT < 21) {
+      return null;
+    }
+    if (paramWebResourceRequest == null) {
+      return null;
+    }
+    paramWebView = new WebResourceRequestImpl(paramWebResourceRequest.getUrl().toString(), paramWebResourceRequest.isForMainFrame(), paramWebResourceRequest.hasGesture(), paramWebResourceRequest.getMethod(), paramWebResourceRequest.getRequestHeaders());
+    paramWebView = ftr.shouldInterceptRequest(kMK, paramWebView);
+    if (paramWebView == null) {
+      return null;
+    }
+    return new android.webkit.WebResourceResponse(paramWebView.getMimeType(), paramWebView.getEncoding(), paramWebView.getData());
   }
   
   @TargetApi(11)
@@ -122,24 +146,26 @@ class SystemWebViewClient
     do
     {
       return null;
-      paramWebView = ejH.shouldInterceptRequest(iNx, paramString);
+      paramWebView = ftr.shouldInterceptRequest(kMK, paramString);
     } while (paramWebView == null);
     return new android.webkit.WebResourceResponse(paramWebView.getMimeType(), paramWebView.getEncoding(), paramWebView.getData());
   }
   
   public boolean shouldOverrideKeyEvent(android.webkit.WebView paramWebView, KeyEvent paramKeyEvent)
   {
-    iNx.setSysWebView(paramWebView);
-    return ejH.shouldOverrideKeyEvent(iNx, paramKeyEvent);
+    kMK.setSysWebView(paramWebView);
+    return ftr.shouldOverrideKeyEvent(kMK, paramKeyEvent);
   }
   
   public boolean shouldOverrideUrlLoading(android.webkit.WebView paramWebView, String paramString)
   {
-    iNx.setSysWebView(paramWebView);
-    if (m.aUY().bb(iNx.getContext().getApplicationContext(), paramString)) {
+    if ((paramString == null) || (kMK.showDebugView(paramString))) {}
+    do
+    {
       return true;
-    }
-    return ejH.shouldOverrideUrlLoading(iNx, paramString);
+      kMK.setSysWebView(paramWebView);
+    } while (k.bmn().bo(kMK.getContext().getApplicationContext(), paramString));
+    return ftr.shouldOverrideUrlLoading(kMK, paramString);
   }
   
   private static class HttpAuthHandlerImpl
@@ -217,6 +243,50 @@ class SystemWebViewClient
     public boolean hasError(int paramInt)
     {
       return mSslError.hasError(paramInt);
+    }
+  }
+  
+  private class WebResourceRequestImpl
+    implements com.tencent.smtt.export.external.interfaces.WebResourceRequest
+  {
+    private boolean hasUserGesture;
+    private boolean isMainFrame;
+    private String method;
+    private Map requestHeaders;
+    private String url;
+    
+    public WebResourceRequestImpl(String paramString1, boolean paramBoolean1, boolean paramBoolean2, String paramString2, Map paramMap)
+    {
+      url = paramString1;
+      isMainFrame = paramBoolean1;
+      hasUserGesture = paramBoolean2;
+      method = paramString2;
+      requestHeaders = paramMap;
+    }
+    
+    public String getMethod()
+    {
+      return method;
+    }
+    
+    public Map getRequestHeaders()
+    {
+      return requestHeaders;
+    }
+    
+    public Uri getUrl()
+    {
+      return Uri.parse(url);
+    }
+    
+    public boolean hasGesture()
+    {
+      return hasUserGesture;
+    }
+    
+    public boolean isForMainFrame()
+    {
+      return isMainFrame;
     }
   }
 }

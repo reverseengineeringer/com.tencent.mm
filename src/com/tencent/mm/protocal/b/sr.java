@@ -1,110 +1,74 @@
 package com.tencent.mm.protocal.b;
 
+import java.util.LinkedList;
+
 public final class sr
-  extends com.tencent.mm.al.a
+  extends ali
 {
-  public String dse;
-  public String hCl;
-  public String hCm;
-  public String hhQ;
-  public int hkV;
-  public String hmj;
-  public String hxU;
+  public String jcA;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hmj != null) {
-        paramVarArgs.U(1, hmj);
+      if (jGS != null)
+      {
+        paramVarArgs.cj(1, jGS.kn());
+        jGS.a(paramVarArgs);
       }
-      if (dse != null) {
-        paramVarArgs.U(2, dse);
-      }
-      if (hCl != null) {
-        paramVarArgs.U(3, hCl);
-      }
-      if (hCm != null) {
-        paramVarArgs.U(4, hCm);
-      }
-      paramVarArgs.bM(5, hkV);
-      if (hhQ != null) {
-        paramVarArgs.U(6, hhQ);
-      }
-      if (hxU != null) {
-        paramVarArgs.U(7, hxU);
+      if (jcA != null) {
+        paramVarArgs.d(2, jcA);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (hmj == null) {
-        break label497;
+      if (jGS == null) {
+        break label328;
       }
     }
-    label497:
-    for (int i = a.a.a.b.b.a.T(1, hmj) + 0;; i = 0)
+    label328:
+    for (paramInt = a.a.a.a.ch(1, jGS.kn()) + 0;; paramInt = 0)
     {
-      paramInt = i;
-      if (dse != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, dse);
-      }
-      i = paramInt;
-      if (hCl != null) {
-        i = paramInt + a.a.a.b.b.a.T(3, hCl);
-      }
-      paramInt = i;
-      if (hCm != null) {
-        paramInt = i + a.a.a.b.b.a.T(4, hCm);
-      }
-      i = paramInt + a.a.a.a.bI(5, hkV);
-      paramInt = i;
-      if (hhQ != null) {
-        paramInt = i + a.a.a.b.b.a.T(6, hhQ);
-      }
-      i = paramInt;
-      if (hxU != null) {
-        i = paramInt + a.a.a.b.b.a.T(7, hxU);
+      int i = paramInt;
+      if (jcA != null) {
+        i = paramInt + a.a.a.b.b.a.e(2, jcA);
       }
       return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = ali.a(paramVarArgs); paramInt > 0; paramInt = ali.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
         break;
       }
       if (paramInt == 3)
       {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
         sr localsr = (sr)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        switch (paramInt)
         {
         default: 
           return -1;
         case 1: 
-          hmj = jMD.readString();
-          return 0;
-        case 2: 
-          dse = jMD.readString();
-          return 0;
-        case 3: 
-          hCl = jMD.readString();
-          return 0;
-        case 4: 
-          hCm = jMD.readString();
-          return 0;
-        case 5: 
-          hkV = jMD.aVp();
-          return 0;
-        case 6: 
-          hhQ = jMD.readString();
-          return 0;
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new dc();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (boolean bool = true; bool; bool = ((dc)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, ali.a((a.a.a.a.a)localObject2))) {}
+            jGS = ((dc)localObject1);
+            paramInt += 1;
+          }
         }
-        hxU = jMD.readString();
+        jcA = maU.readString();
         return 0;
       }
       return -1;

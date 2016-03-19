@@ -1,44 +1,26 @@
-.class final Lcom/tencent/smtt/sdk/x;
+.class public interface abstract Lcom/tencent/smtt/sdk/x;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/io/FileFilter;
-
-
-# instance fields
-.field final synthetic jKN:Lcom/tencent/smtt/sdk/v;
-
-
-# direct methods
-.method constructor <init>(Lcom/tencent/smtt/sdk/v;)V
-    .locals 0
-
-    .prologue
-    .line 1112
-    iput-object p1, p0, Lcom/tencent/smtt/sdk/x;->jKN:Lcom/tencent/smtt/sdk/v;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final accept(Ljava/io/File;)Z
-    .locals 2
+.method public abstract a(IIIIIIIIZ)Z
+.end method
 
-    .prologue
-    .line 1114
-    invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
+.method public abstract aNA()V
+.end method
 
-    move-result-object v0
+.method public abstract b(IIZZ)V
+.end method
 
-    const-string/jumbo v1, "tbs.conf"
+.method public abstract k(IIII)V
+.end method
 
-    invoke-virtual {v0, v1}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
+.method public abstract o(Landroid/view/MotionEvent;)Z
+.end method
 
-    move-result v0
+.method public abstract p(Landroid/view/MotionEvent;)Z
+.end method
 
-    return v0
+.method public abstract q(Landroid/view/MotionEvent;)Z
 .end method

@@ -53,12 +53,12 @@
     .locals 1
 
     .prologue
-    .line 215
+    .line 230
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;-><init>(Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;)V
 
-    .line 216
+    .line 231
     return-void
 .end method
 
@@ -66,13 +66,13 @@
     .locals 0
 
     .prologue
-    .line 224
+    .line 239
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 225
+    .line 240
     iput-object p1, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
-    .line 226
+    .line 241
     return-void
 .end method
 
@@ -86,7 +86,7 @@
 
     const/4 v0, 0x0
 
-    .line 262
+    .line 277
     invoke-virtual {p0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->getType()I
 
     move-result v1
@@ -105,19 +105,19 @@
 
     if-nez v1, :cond_1
 
-    .line 264
+    .line 279
     :cond_0
     const-string/jumbo v1, "!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk="
 
     const-string/jumbo v2, "checkArgs fail, thumbData should not be null when send emoji"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 303
+    .line 318
     :goto_0
     return v0
 
-    .line 268
+    .line 283
     :cond_1
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
@@ -131,16 +131,16 @@
 
     if-le v1, v2, :cond_2
 
-    .line 269
+    .line 284
     const-string/jumbo v1, "!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk="
 
     const-string/jumbo v2, "checkArgs fail, thumbData is invalid"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 273
+    .line 288
     :cond_2
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
 
@@ -156,16 +156,16 @@
 
     if-le v1, v2, :cond_3
 
-    .line 274
+    .line 289
     const-string/jumbo v1, "!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk="
 
     const-string/jumbo v2, "checkArgs fail, title is invalid"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 278
+    .line 293
     :cond_3
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
@@ -181,31 +181,31 @@
 
     if-le v1, v2, :cond_4
 
-    .line 279
+    .line 294
     const-string/jumbo v1, "!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk="
 
     const-string/jumbo v2, "checkArgs fail, description is invalid"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 283
+    .line 298
     :cond_4
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
     if-nez v1, :cond_5
 
-    .line 284
+    .line 299
     const-string/jumbo v1, "!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk="
 
     const-string/jumbo v2, "checkArgs fail, mediaObject is null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 288
+    .line 303
     :cond_5
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaTagName:Ljava/lang/String;
 
@@ -221,16 +221,16 @@
 
     if-le v1, v2, :cond_6
 
-    .line 289
+    .line 304
     const-string/jumbo v1, "!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk="
 
     const-string/jumbo v2, "checkArgs fail, mediaTagName is too long"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 293
+    .line 308
     :cond_6
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->messageAction:Ljava/lang/String;
 
@@ -244,16 +244,16 @@
 
     if-le v1, v3, :cond_7
 
-    .line 294
+    .line 309
     const-string/jumbo v1, "!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk="
 
     const-string/jumbo v2, "checkArgs fail, messageAction is too long"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 298
+    .line 313
     :cond_7
     iget-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->messageExt:Ljava/lang/String;
 
@@ -267,16 +267,16 @@
 
     if-le v1, v3, :cond_8
 
-    .line 299
+    .line 314
     const-string/jumbo v1, "!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk="
 
     const-string/jumbo v2, "checkArgs fail, messageExt is too long"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
-    .line 303
+    .line 318
     :cond_8
     iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
@@ -291,15 +291,15 @@
     .locals 1
 
     .prologue
-    .line 235
+    .line 250
     iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
     if-nez v0, :cond_0
 
-    .line 236
+    .line 251
     const/4 v0, 0x0
 
-    .line 239
+    .line 254
     :goto_0
     return v0
 
@@ -317,36 +317,36 @@
     .locals 3
 
     .prologue
-    .line 250
+    .line 265
     :try_start_0
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
-    .line 251
+    .line 266
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
     const/16 v2, 0x55
 
     invoke-virtual {p1, v1, v2, v0}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 252
+    .line 267
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
 
     move-result-object v1
 
     iput-object v1, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
-    .line 253
+    .line 268
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 259
+    .line 274
     :goto_0
     return-void
 
-    .line 256
+    .line 271
     :catch_0
     move-exception v0
 
@@ -354,7 +354,7 @@
 
     const-string/jumbo v1, "put thumb failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

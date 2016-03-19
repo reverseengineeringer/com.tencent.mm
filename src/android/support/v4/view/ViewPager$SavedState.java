@@ -5,6 +5,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import android.support.v4.b.a.a;
+import android.support.v4.b.b;
 import android.support.v4.b.c;
 import android.view.View.BaseSavedState;
 
@@ -12,17 +13,17 @@ public class ViewPager$SavedState
   extends View.BaseSavedState
 {
   public static final Parcelable.Creator CREATOR;
-  Parcelable hA;
-  ClassLoader hB;
+  Parcelable gI;
+  ClassLoader gJ;
   int position;
   
   static
   {
-    z localz = new z();
+    b local1 = new b() {};
     if (Build.VERSION.SDK_INT >= 13) {
-      new c(localz);
+      new c(local1);
     }
-    CREATOR = new a.a(localz);
+    CREATOR = new a.a(local1);
   }
   
   ViewPager$SavedState(Parcel paramParcel, ClassLoader paramClassLoader)
@@ -33,8 +34,8 @@ public class ViewPager$SavedState
       localClassLoader = getClass().getClassLoader();
     }
     position = paramParcel.readInt();
-    hA = paramParcel.readParcelable(localClassLoader);
-    hB = localClassLoader;
+    gI = paramParcel.readParcelable(localClassLoader);
+    gJ = localClassLoader;
   }
   
   public ViewPager$SavedState(Parcelable paramParcelable)
@@ -51,7 +52,7 @@ public class ViewPager$SavedState
   {
     super.writeToParcel(paramParcel, paramInt);
     paramParcel.writeInt(position);
-    paramParcel.writeParcelable(hA, paramInt);
+    paramParcel.writeParcelable(gI, paramInt);
   }
 }
 

@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface MMFormMobileInputView$a
 {
-  public abstract void AD(String paramString);
+  public abstract void Gs(String paramString);
 }
 
 /* Location:

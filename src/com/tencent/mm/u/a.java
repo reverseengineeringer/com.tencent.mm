@@ -1,73 +1,120 @@
 package com.tencent.mm.u;
 
-import android.database.Cursor;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.model.ai;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.s.a.c;
-import com.tencent.mm.s.p;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import com.tencent.mm.a.f;
+import com.tencent.mm.model.h;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.Map;
 
 public final class a
-  extends ai
 {
-  public final boolean cx(int paramInt)
+  private static int bJH = 0;
+  private static int bJI = 0;
+  
+  public static String a(a parama)
   {
-    return (paramInt != 0) && (paramInt < 604372991);
+    if (parama == null) {
+      return "";
+    }
+    StringBuilder localStringBuilder = new StringBuilder("");
+    localStringBuilder.append(ay.ky(bJR));
+    localStringBuilder.append("\n-------------------\n");
+    localStringBuilder.append(ay.ky(bJP));
+    localStringBuilder.append("\n-------------------\n");
+    localStringBuilder.append(ay.ky(bJM));
+    return localStringBuilder.toString();
   }
   
-  public final String getTag()
+  public static String b(a parama)
   {
-    return "!56@/B4Tb64lLpL9pXWJM+9GqX3fd4FF3yK+sRnAHO+TcmmrixzJI4AV6A==";
-  }
-  
-  public final void transfer(int paramInt)
-  {
-    t.d("!56@/B4Tb64lLpL9pXWJM+9GqX3fd4FF3yK+sRnAHO+TcmmrixzJI4AV6A==", "the previous version is %d", new Object[] { Integer.valueOf(paramInt) });
-    if ((paramInt != 0) && (paramInt < 604372991))
+    StringBuilder localStringBuilder = new StringBuilder("");
+    if (!h.dQ(bxn))
     {
-      Object localObject2 = tlbnN;
-      Object localObject3 = new StringBuilder();
-      ((StringBuilder)localObject3).append("select BizInfo.username").append(", BizInfo.extInfo");
-      ((StringBuilder)localObject3).append(" from rcontact , BizInfo");
-      ((StringBuilder)localObject3).append(" where rcontact.username").append(" = BizInfo.username");
-      ((StringBuilder)localObject3).append(" and (rcontact.type").append(" & 1 ) != 0 ");
-      ((StringBuilder)localObject3).append(" and ( rcontact.verifyFlag").append(" & 8 ) != 0 ");
-      String str = ((StringBuilder)localObject3).toString();
-      Object localObject1 = new LinkedList();
-      t.d("!56@/B4Tb64lLpL9pXWJM+9GqX3fd4FF3yK+sRnAHO+TcmmrixzJI4AV6A==", "sql %s", new Object[] { str });
-      localObject2 = ((g)localObject2).rawQuery(((StringBuilder)localObject3).toString(), null);
-      if (localObject2 != null)
-      {
-        ((Cursor)localObject2).moveToFirst();
-        while (!((Cursor)localObject2).isAfterLast())
-        {
-          localObject3 = new com.tencent.mm.s.a();
-          ((com.tencent.mm.s.a)localObject3).c((Cursor)localObject2);
-          if (((com.tencent.mm.s.a)localObject3).aM(false).wr() == 1) {
-            ((List)localObject1).add(field_username);
-          }
-          ((Cursor)localObject2).moveToNext();
-        }
-        ((Cursor)localObject2).close();
+      localStringBuilder.append(bJJ);
+      localStringBuilder.append(": ");
+    }
+    if (ay.kz(bJR)) {
+      if (ay.kz(bJP)) {
+        parama = bJM;
       }
-      if (((List)localObject1).size() > 0)
+    }
+    for (;;)
+    {
+      localStringBuilder.append(parama);
+      return localStringBuilder.toString();
+      parama = bJP;
+      continue;
+      parama = bJR;
+    }
+  }
+  
+  public static final class a
+  {
+    private static final f aoi = new f(100);
+    public String ayw;
+    public String bJJ;
+    public String bJK;
+    public String bJL;
+    public String bJM;
+    public String bJN;
+    public String bJO;
+    public String bJP;
+    public String bJQ;
+    public String bJR;
+    public String bxn;
+    
+    public static final a hi(String paramString)
+    {
+      if (ay.kz(paramString))
       {
-        localObject2 = new StringBuilder();
-        ((StringBuilder)localObject2).append("Update BizInfo set type").append(" = 1 where 1 !=1 ");
-        localObject1 = ((List)localObject1).iterator();
-        while (((Iterator)localObject1).hasNext())
-        {
-          localObject3 = (String)((Iterator)localObject1).next();
-          ((StringBuilder)localObject2).append(" or username = '").append((String)localObject3).append("'");
-        }
-        localObject1 = ((StringBuilder)localObject2).toString();
-        t.d("!56@/B4Tb64lLpL9pXWJM+9GqX3fd4FF3yK+sRnAHO+TcmmrixzJI4AV6A==", "update sql %s", new Object[] { localObject1 });
-        p.wT().bx("BizInfo", (String)localObject1);
+        u.e("!32@/B4Tb64lLpI2mIlt4ggMR99w3X13vLwr", "empty xml to parse");
+        paramString = null;
       }
+      int i;
+      Object localObject;
+      a locala;
+      do
+      {
+        return paramString;
+        i = paramString.indexOf("<qamsg");
+        localObject = paramString;
+        if (i > 0) {
+          localObject = paramString.substring(i);
+        }
+        i = ((String)localObject).hashCode();
+        locala = (a)aoi.get(Integer.valueOf(i));
+        paramString = locala;
+      } while (locala != null);
+      paramString = q.J((String)localObject, "qamsg", null);
+      if (paramString == null)
+      {
+        u.e("!32@/B4Tb64lLpI2mIlt4ggMR99w3X13vLwr", "parse msg failed");
+        return null;
+      }
+      try
+      {
+        localObject = new a();
+        bxn = ((String)paramString.get(".qamsg.$fromUser"));
+        bJJ = ((String)paramString.get(".qamsg.$fromNickname"));
+        ayw = ((String)paramString.get(".qamsg.$title"));
+        bJK = ((String)paramString.get(".qamsg.question.$id"));
+        bJL = ((String)paramString.get(".qamsg.question.$fromUser"));
+        bJM = ((String)paramString.get(".qamsg.question.content"));
+        bJN = ((String)paramString.get(".qamsg.answer.$id"));
+        bJO = ((String)paramString.get(".qamsg.answer.$fromUser"));
+        bJP = ((String)paramString.get(".qamsg.answer.content"));
+        bJN = ((String)paramString.get(".qamsg.answer1.$id"));
+        bJQ = ((String)paramString.get(".qamsg.answer1.$fromUser"));
+        bJR = ((String)paramString.get(".qamsg.answer1.content"));
+        aoi.d(Integer.valueOf(i), localObject);
+        return (a)localObject;
+      }
+      catch (Exception paramString)
+      {
+        u.e("!32@/B4Tb64lLpI2mIlt4ggMR99w3X13vLwr", "parse qamessage xml failed");
+      }
+      return null;
     }
   }
 }

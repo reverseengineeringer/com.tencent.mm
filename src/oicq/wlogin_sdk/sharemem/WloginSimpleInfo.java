@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class WloginSimpleInfo
   implements Parcelable, Serializable
 {
-  public static final Parcelable.Creator CREATOR = new c();
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
   private static final long serialVersionUID = 1L;
   public byte[] _age;
   public byte[] _face;

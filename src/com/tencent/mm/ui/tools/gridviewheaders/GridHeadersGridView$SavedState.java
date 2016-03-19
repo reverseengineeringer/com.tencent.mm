@@ -8,8 +8,8 @@ import android.view.View.BaseSavedState;
 class GridHeadersGridView$SavedState
   extends View.BaseSavedState
 {
-  public static final Parcelable.Creator CREATOR = new g();
-  boolean jwE;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  boolean lzv;
   
   private GridHeadersGridView$SavedState(Parcel paramParcel)
   {
@@ -17,7 +17,7 @@ class GridHeadersGridView$SavedState
     if (paramParcel.readByte() != 0) {}
     for (boolean bool = true;; bool = false)
     {
-      jwE = bool;
+      lzv = bool;
       return;
     }
   }
@@ -29,13 +29,13 @@ class GridHeadersGridView$SavedState
   
   public String toString()
   {
-    return "StickyGridHeadersGridView.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " areHeadersSticky=" + jwE + "}";
+    return "StickyGridHeadersGridView.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " areHeadersSticky=" + lzv + "}";
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     super.writeToParcel(paramParcel, paramInt);
-    if (jwE) {}
+    if (lzv) {}
     for (paramInt = 1;; paramInt = 0)
     {
       paramParcel.writeByte((byte)paramInt);

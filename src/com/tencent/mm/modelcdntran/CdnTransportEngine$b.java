@@ -2,22 +2,18 @@ package com.tencent.mm.modelcdntran;
 
 final class CdnTransportEngine$b
 {
-  public int field_AckSlice = 8192;
-  public int field_EnableCDNVerifyConnect = 0;
-  public int field_EnableCDNVideoRedirectOC = 0;
-  public int field_Ptl = 35;
-  public int field_UseStreamCDN = 0;
-  public int field_WifiEtl = 90;
-  public int field_noWifiEtl = 70;
-  public boolean field_onlyrecvPtl = false;
-  public boolean field_onlysendETL = false;
+  public byte[] field_authkey = null;
+  public int field_frontid = 0;
+  public String[] field_frontips = null;
+  public int[] field_frontports = null;
+  public int field_nettype = 0;
+  public int field_uin = 0;
+  public int field_ver = 0;
+  public int field_zoneid = 0;
+  public String[] field_zoneips = null;
+  public int[] field_zoneports = null;
   
   CdnTransportEngine$b(CdnTransportEngine paramCdnTransportEngine) {}
-  
-  public final String toString()
-  {
-    return String.format("wifietl:%d, nowifietl:%d,ptl:%d,UseStreamCDN:%d,onlysendetl:%b,onlyrecvptl:%b,ackslice:%d,enableverify:%d,enableoc:%d", new Object[] { Integer.valueOf(field_WifiEtl), Integer.valueOf(field_noWifiEtl), Integer.valueOf(field_Ptl), Integer.valueOf(field_UseStreamCDN), Boolean.valueOf(field_onlysendETL), Boolean.valueOf(field_onlyrecvPtl), Integer.valueOf(field_AckSlice), Integer.valueOf(field_EnableCDNVerifyConnect), Integer.valueOf(field_EnableCDNVideoRedirectOC) });
-  }
 }
 
 /* Location:

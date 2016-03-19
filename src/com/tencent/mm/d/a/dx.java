@@ -1,26 +1,30 @@
 package com.tencent.mm.d.a;
 
-import android.content.Intent;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class dx
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azY = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a axR = new a();
+  public b axS = new b();
   
   public dx()
   {
-    id = "JsapiResult";
-    hXT = atO;
+    id = "FMsgGetName";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public Intent aAa;
-    public int atR;
-    public int azZ;
+    public String axO;
+    public String axP;
+  }
+  
+  public static final class b
+  {
+    public String axT;
   }
 }
 

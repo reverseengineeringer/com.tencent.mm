@@ -1,122 +1,70 @@
 package com.tencent.mm.protocal.b;
 
-import java.util.LinkedList;
-
 public final class adq
-  extends adk
+  extends com.tencent.mm.at.a
 {
-  public int ege;
-  public int hLT;
-  public int hLU;
-  public int hLV;
-  public long hLW;
-  public String hju;
-  public String hjw;
-  public String hjx;
+  public String eiB;
+  public int fUl;
+  public int jAq;
+  public String jhT;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLO != null)
-      {
-        paramVarArgs.bN(1, hLO.kS());
-        hLO.a(paramVarArgs);
+      if (jhT != null) {
+        paramVarArgs.d(1, jhT);
       }
-      if (hjx != null) {
-        paramVarArgs.U(2, hjx);
+      if (eiB != null) {
+        paramVarArgs.d(2, eiB);
       }
-      paramVarArgs.bM(3, hLT);
-      paramVarArgs.bM(4, ege);
-      paramVarArgs.bM(5, hLU);
-      if (hju != null) {
-        paramVarArgs.U(6, hju);
-      }
-      if (hjw != null) {
-        paramVarArgs.U(7, hjw);
-      }
-      paramVarArgs.bM(8, hLV);
-      paramVarArgs.r(9, hLW);
+      paramVarArgs.ci(3, jAq);
+      paramVarArgs.ci(4, fUl);
       return 0;
     }
     if (paramInt == 1) {
-      if (hLO == null) {
-        break label633;
+      if (jhT == null) {
+        break label308;
       }
     }
-    label633:
-    for (paramInt = a.a.a.a.bJ(1, hLO.kS()) + 0;; paramInt = 0)
+    label308:
+    for (paramInt = a.a.a.b.b.a.e(1, jhT) + 0;; paramInt = 0)
     {
       int i = paramInt;
-      if (hjx != null) {
-        i = paramInt + a.a.a.b.b.a.T(2, hjx);
+      if (eiB != null) {
+        i = paramInt + a.a.a.b.b.a.e(2, eiB);
       }
-      i = i + a.a.a.a.bI(3, hLT) + a.a.a.a.bI(4, ege) + a.a.a.a.bI(5, hLU);
-      paramInt = i;
-      if (hju != null) {
-        paramInt = i + a.a.a.b.b.a.T(6, hju);
-      }
-      i = paramInt;
-      if (hjw != null) {
-        i = paramInt + a.a.a.b.b.a.T(7, hjw);
-      }
-      return i + a.a.a.a.bI(8, hLV) + a.a.a.a.q(9, hLW);
+      return i + a.a.a.a.cg(3, jAq) + a.a.a.a.cg(4, fUl);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = adk.a(paramVarArgs); paramInt > 0; paramInt = adk.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
         break;
       }
       if (paramInt == 3)
       {
-        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
         adq localadq = (adq)paramVarArgs[1];
-        paramInt = ((Integer)paramVarArgs[2]).intValue();
-        switch (paramInt)
+        switch (((Integer)paramVarArgs[2]).intValue())
         {
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new cj();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (boolean bool = true; bool; bool = ((cj)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adk.a((a.a.a.a.a)localObject2))) {}
-            hLO = ((cj)localObject1);
-            paramInt += 1;
-          }
+          jhT = maU.readString();
+          return 0;
         case 2: 
-          hjx = jMD.readString();
+          eiB = maU.readString();
           return 0;
         case 3: 
-          hLT = jMD.aVp();
-          return 0;
-        case 4: 
-          ege = jMD.aVp();
-          return 0;
-        case 5: 
-          hLU = jMD.aVp();
-          return 0;
-        case 6: 
-          hju = jMD.readString();
-          return 0;
-        case 7: 
-          hjw = jMD.readString();
-          return 0;
-        case 8: 
-          hLV = jMD.aVp();
+          jAq = maU.jC();
           return 0;
         }
-        hLW = jMD.aVq();
+        fUl = maU.jC();
         return 0;
       }
       return -1;

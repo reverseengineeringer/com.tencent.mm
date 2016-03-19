@@ -5,18 +5,16 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
 import java.util.HashMap;
 import java.util.Map;
 
 public class MMPageControlView
   extends LinearLayout
 {
-  private ImageView cgJ;
+  private ImageView ayh;
   private Context context;
   private int count;
-  private int iGo = a.k.mmpage_control_image;
+  private int kFy = 2131363223;
   private Map map = new HashMap();
   
   public MMPageControlView(Context paramContext, AttributeSet paramAttributeSet)
@@ -25,7 +23,7 @@ public class MMPageControlView
     context = paramContext;
   }
   
-  private void nM(int paramInt)
+  private void qH(int paramInt)
   {
     removeAllViews();
     if (paramInt >= count) {
@@ -37,50 +35,50 @@ public class MMPageControlView
     if (i < j)
     {
       if (paramInt != i) {
-        break label138;
+        break label137;
       }
-      cgJ = ((ImageView)map.get(Integer.valueOf(i)));
-      if (cgJ == null)
+      ayh = ((ImageView)map.get(Integer.valueOf(i)));
+      if (ayh == null)
       {
-        cgJ = ((ImageView)View.inflate(context, iGo, null).findViewById(a.i.mmpage_control_img));
-        map.put(Integer.valueOf(i), cgJ);
+        ayh = ((ImageView)View.inflate(context, kFy, null).findViewById(2131168123));
+        map.put(Integer.valueOf(i), ayh);
       }
-      cgJ.setSelected(true);
+      ayh.setSelected(true);
     }
     for (;;)
     {
       if (i == 0) {
-        cgJ.setPadding(0, 0, 0, 0);
+        ayh.setPadding(0, 0, 0, 0);
       }
-      addView(cgJ);
+      addView(ayh);
       i += 1;
       break label20;
       break;
-      label138:
-      cgJ = ((ImageView)map.get(Integer.valueOf(i)));
-      if (cgJ == null)
+      label137:
+      ayh = ((ImageView)map.get(Integer.valueOf(i)));
+      if (ayh == null)
       {
-        cgJ = ((ImageView)View.inflate(context, iGo, null).findViewById(a.i.mmpage_control_img));
-        map.put(Integer.valueOf(i), cgJ);
+        ayh = ((ImageView)View.inflate(context, kFy, null).findViewById(2131168123));
+        map.put(Integer.valueOf(i), ayh);
       }
-      cgJ.setSelected(false);
+      ayh.setSelected(false);
     }
   }
   
-  public final void bw(int paramInt1, int paramInt2)
+  public final void bM(int paramInt1, int paramInt2)
   {
     count = paramInt1;
-    nM(paramInt2);
+    qH(paramInt2);
   }
   
   public void setIndicatorLayoutRes(int paramInt)
   {
-    iGo = paramInt;
+    kFy = paramInt;
   }
   
   public void setPage(int paramInt)
   {
-    nM(paramInt);
+    qH(paramInt);
   }
 }
 

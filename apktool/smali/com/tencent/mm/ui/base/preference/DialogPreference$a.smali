@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aNy()V
+.method public abstract bdp()V
 .end method

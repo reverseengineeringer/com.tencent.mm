@@ -1,12 +1,27 @@
 .class public final Lcom/tencent/mm/d/a/dv;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
-# static fields
-.field public static atN:Z
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/d/a/dv$b;,
+        Lcom/tencent/mm/d/a/dv$a;
+    }
+.end annotation
 
-.field public static atO:Z
+
+# static fields
+.field public static arQ:Z
+
+.field public static arR:Z
+
+
+# instance fields
+.field public axJ:Lcom/tencent/mm/d/a/dv$a;
+
+.field public axK:Lcom/tencent/mm/d/a/dv$b;
 
 
 # direct methods
@@ -17,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/dv;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/dv;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/dv;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/dv;->arR:Z
 
     return-void
 .end method
@@ -29,16 +44,31 @@
     .locals 1
 
     .prologue
-    .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    .line 16
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    const-string/jumbo v0, "InForeground"
+    .line 21
+    new-instance v0, Lcom/tencent/mm/d/a/dv$a;
+
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/dv$a;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/d/a/dv;->axJ:Lcom/tencent/mm/d/a/dv$a;
+
+    .line 27
+    new-instance v0, Lcom/tencent/mm/d/a/dv$b;
+
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/dv$b;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/d/a/dv;->axK:Lcom/tencent/mm/d/a/dv$b;
+
+    .line 16
+    const-string/jumbo v0, "FMessageConversationStateOp"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/dv;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/dv;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/dv;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/dv;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/dv;->jUI:Z
 
     return-void
 .end method

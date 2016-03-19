@@ -53,7 +53,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteOpenHelper;->TAG:Ljava/lang/String;
 
-    .line 54
+    .line 45
     return-void
 .end method
 
@@ -466,7 +466,6 @@
 
     move-object v0, v9
 
-    .line 287
     goto :goto_1
 
     .line 294
@@ -516,7 +515,6 @@
 
     move-object v0, v9
 
-    .line 299
     goto :goto_1
 
     :cond_7
@@ -596,9 +594,9 @@
 
     const/4 v4, 0x0
 
+    .line 303
     aput-object v0, v3, v4
 
-    .line 303
     invoke-static {v1, v2, v3}, Lcom/tencent/kingkong/support/Log;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 305

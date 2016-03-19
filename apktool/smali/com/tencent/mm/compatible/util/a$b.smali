@@ -18,7 +18,7 @@
 .method public abstract a(Lcom/tencent/mm/compatible/util/a$a;)V
 .end method
 
-.method public abstract pd()Z
+.method public abstract oV()Z
 .end method
 
 .method public abstract requestFocus()Z

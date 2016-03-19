@@ -1,98 +1,145 @@
 package com.tencent.mm.plugin.safedevice.ui;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.widget.EditText;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.pluginsdk.i;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.safedevice.a.b;
+import com.tencent.mm.plugin.safedevice.a.c;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ay;
 import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.base.h;
+import com.tencent.mm.ui.base.g;
+import com.tencent.mm.ui.widget.MMEditText.b;
 import com.tencent.mm.ui.widget.MMEditText.c;
 
 public class ModSafeDeviceNameUI
   extends MMActivity
-  implements com.tencent.mm.q.d
+  implements com.tencent.mm.r.d
 {
-  private String aHl;
-  private long bPi;
-  private ProgressDialog bXB = null;
-  private EditText eKi;
-  private String eKj;
-  private String eKk;
-  private String eKl;
+  private String auJ;
+  private String cZp;
+  private long cfW;
+  private ProgressDialog coM = null;
+  private EditText fUV;
+  private String fUW;
+  private String fUX;
   
-  protected final void DV()
+  protected final void Gb()
   {
-    eKj = getIntent().getStringExtra("safe_device_name");
-    eKl = getIntent().getStringExtra("safe_device_uid");
-    aHl = getIntent().getStringExtra("safe_device_type");
-    At(com.tencent.mm.ao.a.w(this, a.n.safe_device_edit_title));
-    a(new c(this));
-    a(0, getString(a.n.app_save), new d(this));
-    f localf = new f(this);
-    eKi = ((EditText)findViewById(a.i.mod_safe_device_name));
-    MMEditText.c localc = new MMEditText.c(eKi, null, 32);
-    jAF = localf;
-    eKi.addTextChangedListener(localc);
-    if (!bn.iW(eKj))
+    fUW = getIntent().getStringExtra("safe_device_name");
+    fUX = getIntent().getStringExtra("safe_device_uid");
+    auJ = getIntent().getStringExtra("safe_device_type");
+    Gj(com.tencent.mm.aw.a.A(this, 2131429276));
+    b(new MenuItem.OnMenuItemClickListener()
     {
-      eKi.setText(eKj);
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        finish();
+        return true;
+      }
+    });
+    a(0, getString(2131430889), new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(final MenuItem paramAnonymousMenuItem)
+      {
+        ModSafeDeviceNameUI.a(ModSafeDeviceNameUI.this, ModSafeDeviceNameUI.a(ModSafeDeviceNameUI.this).getText().toString());
+        if (ay.kz(ModSafeDeviceNameUI.b(ModSafeDeviceNameUI.this))) {
+          return true;
+        }
+        age();
+        paramAnonymousMenuItem = new b(ModSafeDeviceNameUI.c(ModSafeDeviceNameUI.this), ModSafeDeviceNameUI.b(ModSafeDeviceNameUI.this), ModSafeDeviceNameUI.d(ModSafeDeviceNameUI.this));
+        ah.tE().d(paramAnonymousMenuItem);
+        ModSafeDeviceNameUI.a(ModSafeDeviceNameUI.this, g.a(ModSafeDeviceNameUI.this, com.tencent.mm.aw.a.A(ModSafeDeviceNameUI.this, 2131430941), true, new DialogInterface.OnCancelListener()
+        {
+          public final void onCancel(DialogInterface paramAnonymous2DialogInterface)
+          {
+            ah.tE().c(paramAnonymousMenuItem);
+          }
+        }));
+        return true;
+      }
+    });
+    MMEditText.b local3 = new MMEditText.b()
+    {
+      public final void aqD()
+      {
+        if (ModSafeDeviceNameUI.a(ModSafeDeviceNameUI.this).getText().toString().trim().length() > 0)
+        {
+          bC(true);
+          return;
+        }
+        bC(false);
+      }
+    };
+    fUV = ((EditText)findViewById(2131167996));
+    MMEditText.c localc = new MMEditText.c(fUV, null, 32);
+    lFe = local3;
+    fUV.addTextChangedListener(localc);
+    if (!ay.kz(fUW))
+    {
+      fUV.setText(fUW);
       return;
     }
-    fe(false);
+    bC(false);
   }
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    if ((bXB != null) && (bXB.isShowing()))
+    if ((coM != null) && (coM.isShowing()))
     {
-      bXB.dismiss();
-      bXB = null;
+      coM.dismiss();
+      coM = null;
     }
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      paramString = new com.tencent.mm.plugin.safedevice.a.c();
-      field_devicetype = aHl;
-      field_name = eKk;
-      field_uid = eKl;
-      field_createtime = bPi;
-      com.tencent.mm.plugin.safedevice.a.f.afu().a(paramString, new String[0]);
-      h.aN(this, com.tencent.mm.ao.a.w(this, a.n.safe_device_mod_name_ok));
-      new ac().postDelayed(new g(this), 1000L);
+      paramString = new c();
+      field_devicetype = auJ;
+      field_name = cZp;
+      field_uid = fUX;
+      field_createtime = cfW;
+      com.tencent.mm.plugin.safedevice.a.f.aqC().a(paramString, new String[0]);
+      g.ba(this, com.tencent.mm.aw.a.A(this, 2131429293));
+      new aa().postDelayed(new Runnable()
+      {
+        public final void run()
+        {
+          finish();
+        }
+      }, 1000L);
     }
-    while (!com.tencent.mm.plugin.a.a.bWX.a(this, paramInt1, paramInt2, paramString)) {
+    while (!com.tencent.mm.plugin.a.a.cob.a(this, paramInt1, paramInt2, paramString)) {
       return;
     }
   }
   
   protected final int getLayoutId()
   {
-    return a.k.mod_safe_device_name;
+    return 2131362677;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    DV();
+    Gb();
   }
   
   protected void onPause()
   {
-    ax.tm().b(361, this);
+    ah.tE().b(361, this);
     super.onPause();
   }
   
   protected void onResume()
   {
-    ax.tm().a(361, this);
+    ah.tE().a(361, this);
     super.onResume();
   }
 }

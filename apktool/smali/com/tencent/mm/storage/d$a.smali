@@ -27,12 +27,12 @@
 
 
 # virtual methods
-.method protected final lX()Lcom/tencent/mm/sdk/g/ae$a;
+.method protected final ls()Lcom/tencent/mm/sdk/h/c$a;
     .locals 1
 
     .prologue
     .line 20
-    invoke-static {}, Lcom/tencent/mm/d/b/c;->mB()Lcom/tencent/mm/sdk/g/ae$a;
+    invoke-static {}, Lcom/tencent/mm/d/b/c;->lY()Lcom/tencent/mm/sdk/h/c$a;
 
     move-result-object v0
 

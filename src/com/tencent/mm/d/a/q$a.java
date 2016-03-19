@@ -1,11 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.app.Activity;
-
 public final class q$a
 {
-  public String auC;
-  public Activity auD;
+  public int asz = 0;
 }
 
 /* Location:

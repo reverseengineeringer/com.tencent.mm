@@ -25,7 +25,13 @@ public abstract interface IX5WebViewClient
   
   public abstract void doUpdateVisitedHistory(IX5WebViewBase paramIX5WebViewBase, String paramString, boolean paramBoolean);
   
+  public abstract boolean notifyHideADWebview();
+  
+  public abstract boolean notifyLoadADUrl(String paramString);
+  
   public abstract void onContentSizeChanged(IX5WebViewBase paramIX5WebViewBase, int paramInt1, int paramInt2);
+  
+  public abstract void onDetectedBlankScreen(IX5WebViewBase paramIX5WebViewBase, String paramString, int paramInt);
   
   public abstract void onFormResubmission(IX5WebViewBase paramIX5WebViewBase, Message paramMessage1, Message paramMessage2);
   
@@ -49,6 +55,8 @@ public abstract interface IX5WebViewClient
   public abstract void onTooManyRedirects(IX5WebViewBase paramIX5WebViewBase, Message paramMessage1, Message paramMessage2);
   
   public abstract void onUnhandledKeyEvent(IX5WebViewBase paramIX5WebViewBase, KeyEvent paramKeyEvent);
+  
+  public abstract WebResourceResponse shouldInterceptRequest(IX5WebViewBase paramIX5WebViewBase, WebResourceRequest paramWebResourceRequest);
   
   public abstract WebResourceResponse shouldInterceptRequest(IX5WebViewBase paramIX5WebViewBase, String paramString);
   

@@ -1,70 +1,81 @@
 package com.tencent.mm.plugin.accountsync.a;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.os.Looper;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.q.e;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.bn;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.e;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.base.p;
 
 public final class b
-  implements com.tencent.mm.q.d, e
+  implements d, e
 {
-  public j avq;
-  public bn bWY;
-  private a bWZ;
+  public j auF;
+  public p coc;
+  public a cod;
   public Context context;
-  private ac handler = new ac(Looper.getMainLooper());
+  private aa handler = new aa(Looper.getMainLooper());
   
   public b(Context paramContext, a parama)
   {
     context = paramContext;
-    bWZ = parama;
+    cod = parama;
   }
   
-  public final void a(int paramInt1, int paramInt2, j paramj)
+  public final void a(final int paramInt1, int paramInt2, j paramj)
   {
     if (paramInt2 != 0) {}
     for (paramInt1 = (int)(paramInt1 * 100L / paramInt2);; paramInt1 = 0)
     {
-      handler.post(new d(this, paramInt1));
+      handler.post(new Runnable()
+      {
+        public final void run()
+        {
+          if (coc != null) {
+            coc.setMessage(context.getString(2131430943) + paramInt1 + "%");
+          }
+        }
+      });
       return;
     }
   }
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    if (paramj.getType() == 37)
+    if (paramj.getType() == 139)
     {
-      ax.tm().b(37, this);
+      ah.tE().b(139, this);
       if ((paramInt2 != 0) || (paramInt1 != 0)) {
-        break label73;
+        break label77;
       }
-      bWZ.DS();
+      cod.FY();
     }
     for (;;)
     {
-      if (bWY != null) {
-        bWY.dismiss();
+      if (coc != null) {
+        coc.dismiss();
       }
       return;
-      if (paramj.getType() != 38) {
+      if (paramj.getType() != 138) {
         break;
       }
-      ax.tm().b(38, this);
+      ah.tE().b(138, this);
       break;
-      label73:
-      t.e("!24@/B4Tb64lLpIfnJwgZ47LaQ==", "do init failed, err=" + paramInt1 + "," + paramInt2);
-      bWZ.DS();
+      label77:
+      u.e("!24@/B4Tb64lLpIfnJwgZ47LaQ==", "do init failed, err=" + paramInt1 + "," + paramInt2);
+      cod.FY();
     }
   }
   
   public static abstract interface a
   {
-    public abstract void DS();
+    public abstract void FY();
   }
 }
 

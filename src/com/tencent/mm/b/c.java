@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.RandomAccessFile;
@@ -68,7 +69,7 @@ public final class c
         i += 1;
       }
       byte[] arrayOfByte1 = new byte[arrayOfInt[0]];
-      if (!d.a((InputStream)localObject2, arrayOfByte1, arrayOfInt[0]))
+      if (!d.a((InputStream)localObject2, arrayOfByte1, 0, arrayOfInt[0]))
       {
         paramFile.close();
         return 2;
@@ -105,7 +106,7 @@ public final class c
         i += 1;
       }
       arrayOfByte1 = new byte[arrayOfInt[1]];
-      if (!d.a(paramArrayOfByte, arrayOfByte1, arrayOfInt[1]))
+      if (!d.a(paramArrayOfByte, arrayOfByte1, 0, arrayOfInt[1]))
       {
         paramFile.close();
         return 2;
@@ -115,6 +116,87 @@ public final class c
       i = arrayOfInt[1];
       paramInt2 = m + paramInt2 + arrayOfInt[2];
       paramRandomAccessFile.seek(paramInt2);
+      paramInt3 += i;
+    }
+  }
+  
+  public static byte[] a(byte[] paramArrayOfByte1, int paramInt1, byte[] paramArrayOfByte2, int paramInt2, int paramInt3)
+  {
+    paramInt3 = paramInt1 + 0 - 2;
+    if (paramInt3 <= 2) {
+      throw new IOException("Corrupt by wrong old file.");
+    }
+    paramArrayOfByte1[paramInt3] = 0;
+    paramArrayOfByte1[(paramInt3 + 1)] = 0;
+    Object localObject1 = new DataInputStream(new ByteArrayInputStream(paramArrayOfByte2, 0, paramInt2));
+    ((DataInputStream)localObject1).skip(8L);
+    long l1 = ((DataInputStream)localObject1).readLong();
+    long l2 = ((DataInputStream)localObject1).readLong();
+    int j = (int)((DataInputStream)localObject1).readLong();
+    ((DataInputStream)localObject1).close();
+    localObject1 = new ByteArrayInputStream(paramArrayOfByte2, 0, paramInt2);
+    ((InputStream)localObject1).skip(32L);
+    localObject1 = new DataInputStream(new GZIPInputStream((InputStream)localObject1));
+    Object localObject2 = new ByteArrayInputStream(paramArrayOfByte2, 0, paramInt2);
+    ((InputStream)localObject2).skip(32L + l1);
+    localObject2 = new GZIPInputStream((InputStream)localObject2);
+    paramArrayOfByte2 = new ByteArrayInputStream(paramArrayOfByte2, 0, paramInt2);
+    paramArrayOfByte2.skip(l1 + l2 + 32L);
+    paramArrayOfByte2 = new GZIPInputStream(paramArrayOfByte2);
+    byte[] arrayOfByte = new byte[j];
+    int[] arrayOfInt = new int[3];
+    paramInt2 = 0;
+    paramInt3 = 0;
+    for (;;)
+    {
+      if (paramInt3 >= j)
+      {
+        ((DataInputStream)localObject1).close();
+        ((InputStream)localObject2).close();
+        paramArrayOfByte2.close();
+        return arrayOfByte;
+      }
+      int i = 0;
+      for (;;)
+      {
+        if (i > 2)
+        {
+          if (arrayOfInt[0] + paramInt3 <= j) {
+            break;
+          }
+          throw new IOException("Corrupt by wrong patch file.");
+        }
+        arrayOfInt[i] = ((DataInputStream)localObject1).readInt();
+        i += 1;
+      }
+      if (!d.a((InputStream)localObject2, arrayOfByte, paramInt3, arrayOfInt[0])) {
+        throw new IOException("Corrupt by wrong patch file.");
+      }
+      i = 0;
+      int k;
+      for (;;)
+      {
+        if (i >= arrayOfInt[0])
+        {
+          paramInt3 = arrayOfInt[0] + paramInt3;
+          k = arrayOfInt[0];
+          if (arrayOfInt[1] + paramInt3 <= j) {
+            break;
+          }
+          throw new IOException("Corrupt by wrong patch file.");
+        }
+        if ((paramInt2 + i >= 0) && (paramInt2 + i < paramInt1))
+        {
+          k = paramInt3 + i;
+          arrayOfByte[k] = ((byte)(arrayOfByte[k] + paramArrayOfByte1[(paramInt2 + i)]));
+        }
+        i += 1;
+      }
+      if (!d.a(paramArrayOfByte2, arrayOfByte, paramInt3, arrayOfInt[1])) {
+        throw new IOException("Corrupt by wrong patch file.");
+      }
+      i = arrayOfInt[1];
+      paramInt2 = k + paramInt2 + arrayOfInt[2];
       paramInt3 += i;
     }
   }

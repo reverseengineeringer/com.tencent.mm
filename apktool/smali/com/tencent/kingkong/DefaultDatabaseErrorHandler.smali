@@ -29,13 +29,13 @@
     if-eqz p2, :cond_1
 
     .line 106
-    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/i;->bkW:Lcom/tencent/mm/dbsupport/newcursor/i$a;
+    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bvz:Lcom/tencent/mm/dbsupport/newcursor/h$a;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/i;->bkW:Lcom/tencent/mm/dbsupport/newcursor/i$a;
+    sget-object v0, Lcom/tencent/mm/dbsupport/newcursor/h;->bvz:Lcom/tencent/mm/dbsupport/newcursor/h$a;
 
-    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/i$a;->dp(Ljava/lang/String;)V
+    invoke-interface {v0, p1}, Lcom/tencent/mm/dbsupport/newcursor/h$a;->dv(Ljava/lang/String;)V
 
     .line 119
     :cond_0
@@ -609,12 +609,13 @@
 
     goto :goto_1
 
-    .line 90
+    .line 87
     :catch_1
     move-exception v0
 
     goto :goto_2
 
+    .line 90
     :catchall_1
     move-exception v0
 

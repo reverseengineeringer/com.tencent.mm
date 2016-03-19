@@ -15,25 +15,16 @@
 
 
 # instance fields
-.field public aAC:Z
-
-.field public aAQ:Ljava/lang/String;
-
-.field public aBm:Ljava/lang/String;
+.field public asc:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 14
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 17
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ep$a;->aAC:Z
 
     return-void
 .end method

@@ -1,8 +1,10 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.protocal.b.aqi;
+
 public final class fo$b
 {
-  public int ret = 0;
+  public aqi aAt;
 }
 
 /* Location:

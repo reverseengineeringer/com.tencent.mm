@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$df
-  extends a.c
+  extends a.e
 {
   public a$df()
   {
-    super("menu:share:QZone", "", 134, false);
+    super("openUrlByExtBrowser", "open_url_by_ext_browser", 55, false);
   }
 }
 

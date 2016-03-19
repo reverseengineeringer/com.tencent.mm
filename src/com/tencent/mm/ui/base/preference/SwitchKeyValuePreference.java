@@ -4,14 +4,13 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
-import com.tencent.mm.a.k;
-import com.tencent.mm.ui.tools.gg;
+import com.tencent.mm.ui.tools.t;
 
 public class SwitchKeyValuePreference
   extends Preference
 {
-  public boolean cqF = true;
-  private TextView enQ;
+  public boolean aur = true;
+  private TextView fxO;
   
   public SwitchKeyValuePreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -21,27 +20,27 @@ public class SwitchKeyValuePreference
   public SwitchKeyValuePreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference);
+    setLayoutResource(2131363286);
   }
   
-  public final void Nq()
+  public final void MB()
   {
-    if (enQ == null) {
+    if (fxO == null) {
       return;
     }
-    if (cqF)
+    if (aur)
     {
-      enQ.setTextColor(gg.dS(mContext));
+      fxO.setTextColor(t.ez(mContext));
       return;
     }
-    enQ.setTextColor(gg.dT(mContext));
+    fxO.setTextColor(t.eA(mContext));
   }
   
   public final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    enQ = ((TextView)paramView.findViewById(16908304));
-    Nq();
+    fxO = ((TextView)paramView.findViewById(16908304));
+    MB();
   }
 }
 

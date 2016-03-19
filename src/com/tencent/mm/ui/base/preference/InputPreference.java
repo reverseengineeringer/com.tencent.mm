@@ -2,23 +2,45 @@ package com.tencent.mm.ui.base.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.TextView.OnEditorActionListener;
-import com.tencent.mm.a.i;
 
 public class InputPreference
   extends Preference
 {
-  private String fRg;
-  private a fRj;
-  private View.OnClickListener fRm = new n(this);
-  private EditText iIc;
-  private String iMl;
-  private Button iMm;
-  private TextView.OnEditorActionListener iMn = new o(this);
+  private String htb;
+  private a hte;
+  private View.OnClickListener hth = new View.OnClickListener()
+  {
+    public final void onClick(View paramAnonymousView)
+    {
+      if ((InputPreference.a(InputPreference.this) != null) && (InputPreference.b(InputPreference.this) != null) && (InputPreference.b(InputPreference.this).getText() != null)) {
+        InputPreference.b(InputPreference.this).getText().toString();
+      }
+    }
+  };
+  private String kLw;
+  private EditText kLx;
+  private Button kLy;
+  private TextView.OnEditorActionListener kLz = new TextView.OnEditorActionListener()
+  {
+    public final boolean onEditorAction(TextView paramAnonymousTextView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
+    {
+      if ((3 == paramAnonymousInt) && (InputPreference.a(InputPreference.this) != null) && (InputPreference.b(InputPreference.this) != null))
+      {
+        if (InputPreference.b(InputPreference.this).getText() != null) {
+          InputPreference.b(InputPreference.this).getText().toString();
+        }
+        return true;
+      }
+      return false;
+    }
+  };
   
   public InputPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -33,12 +55,12 @@ public class InputPreference
   protected final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    iIc = ((EditText)paramView.findViewById(a.i.edittext));
-    iIc.setHint(fRg);
-    iIc.setOnEditorActionListener(iMn);
-    iMm = ((Button)paramView.findViewById(a.i.button));
-    iMm.setText(iMl);
-    iMm.setOnClickListener(fRm);
+    kLx = ((EditText)paramView.findViewById(2131166420));
+    kLx.setHint(htb);
+    kLx.setOnEditorActionListener(kLz);
+    kLy = ((Button)paramView.findViewById(2131165632));
+    kLy.setText(kLw);
+    kLy.setOnClickListener(hth);
   }
   
   public static abstract interface a {}

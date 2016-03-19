@@ -4,25 +4,25 @@ import java.util.LinkedList;
 
 final class b$c
 {
-  private LinkedList beO = null;
+  private LinkedList bpa = null;
   private int maxSize = 40;
   
   public b$c(b paramb, int paramInt) {}
   
   final boolean contains(String paramString)
   {
-    return beO.contains(paramString);
+    return bpa.contains(paramString);
   }
   
-  final void ut(String paramString)
+  final void zT(String paramString)
   {
-    if (beO.contains(paramString)) {}
+    if (bpa.contains(paramString)) {}
     do
     {
       return;
-      beO.add(paramString);
-    } while (beO.size() < maxSize);
-    beO.removeFirst();
+      bpa.add(paramString);
+    } while (bpa.size() < maxSize);
+    bpa.removeFirst();
   }
 }
 

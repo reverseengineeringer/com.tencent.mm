@@ -15,11 +15,7 @@
 
 
 # instance fields
-.field public aCr:I
-
-.field public aCs:Ljava/lang/String;
-
-.field public aqq:I
+.field public aAv:Z
 
 
 # direct methods
@@ -27,16 +23,13 @@
     .locals 1
 
     .prologue
-    const/4 v0, 0x0
-
-    .line 18
+    .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
-    iput v0, p0, Lcom/tencent/mm/d/a/fp$a;->aqq:I
+    .line 15
+    const/4 v0, 0x0
 
-    .line 20
-    iput v0, p0, Lcom/tencent/mm/d/a/fp$a;->aCr:I
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/fp$a;->aAv:Z
 
     return-void
 .end method

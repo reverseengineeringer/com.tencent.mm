@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract e(Ljava/io/File;Ljava/io/File;)Z
+.method public abstract su(I)V
 .end method

@@ -1,23 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ck
-  extends d
+  extends b
 {
-  public static boolean atN = true;
-  public static boolean atO = false;
-  public a axX = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avR = new a();
   
   public ck()
   {
-    id = "FavNotify";
-    hXT = atO;
+    id = "ExDeviceOpenLanDeviceLib";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public byte[] axY;
+    public boolean Jq = false;
   }
 }
 

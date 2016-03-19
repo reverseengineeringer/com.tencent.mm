@@ -1,8 +1,12 @@
 package com.tencent.mm.ah;
 
-abstract interface l$a
+public abstract interface l$a
 {
-  public abstract void Q(int paramInt1, int paramInt2);
+  public abstract void delete();
+  
+  public abstract Object getData();
+  
+  public abstract void update();
 }
 
 /* Location:

@@ -1,44 +1,26 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.protocal.b.afa;
 
 public final class t$a
-  extends i.c
-  implements i.a
+  extends h.c
+  implements h.a
 {
-  public byte[] axY = null;
-  public long hhn = -1L;
+  public afa iVj = new afa();
   
   public final int getCmdId()
   {
-    return 1000000190;
+    return 121;
   }
   
-  public final byte[] tH()
+  public final byte[] tY()
   {
-    byte[] arrayOfByte = new byte[axY.length + 8];
-    int i = (int)(bn.DM() - hhn);
-    arrayOfByte[0] = ((byte)(i >> 24 & 0xFF));
-    arrayOfByte[1] = ((byte)(i >> 16 & 0xFF));
-    arrayOfByte[2] = ((byte)(i >> 8 & 0xFF));
-    arrayOfByte[3] = ((byte)(i & 0xFF));
-    arrayOfByte[4] = ((byte)(axY.length >> 24 & 0xFF));
-    arrayOfByte[5] = ((byte)(axY.length >> 16 & 0xFF));
-    arrayOfByte[6] = ((byte)(axY.length >> 8 & 0xFF));
-    arrayOfByte[7] = ((byte)(axY.length & 0xFF));
-    System.arraycopy(axY, 0, arrayOfByte, 8, axY.length);
-    bn.aG(arrayOfByte);
-    return arrayOfByte;
+    return iVj.toByteArray();
   }
   
-  public final int tI()
+  public final int tZ()
   {
-    return 268369922;
-  }
-  
-  public final boolean vH()
-  {
-    return false;
+    return 138;
   }
 }
 

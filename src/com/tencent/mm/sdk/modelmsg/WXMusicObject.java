@@ -1,7 +1,7 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class WXMusicObject
   implements WXMediaMessage.b
@@ -17,17 +17,17 @@ public class WXMusicObject
   {
     if (((musicUrl == null) || (musicUrl.length() == 0)) && ((musicLowBandUrl == null) || (musicLowBandUrl.length() == 0)))
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIDS5SYYe7sSOkAic0iTiIGs=", "both arguments are null");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIDS5SYYe7sSOkAic0iTiIGs=", "both arguments are null");
       return false;
     }
     if ((musicUrl != null) && (musicUrl.length() > 10240))
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIDS5SYYe7sSOkAic0iTiIGs=", "checkArgs fail, musicUrl is too long");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIDS5SYYe7sSOkAic0iTiIGs=", "checkArgs fail, musicUrl is too long");
       return false;
     }
     if ((musicLowBandUrl != null) && (musicLowBandUrl.length() > 10240))
     {
-      t.e("!44@/B4Tb64lLpLZi//yCy0pIDS5SYYe7sSOkAic0iTiIGs=", "checkArgs fail, musicLowBandUrl is too long");
+      u.e("!44@/B4Tb64lLpLZi//yCy0pIDS5SYYe7sSOkAic0iTiIGs=", "checkArgs fail, musicLowBandUrl is too long");
       return false;
     }
     return true;

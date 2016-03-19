@@ -1,6 +1,6 @@
 package com.tencent.mm.ui.conversation;
 
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class ConversationOverscrollListView$b
   implements Runnable
@@ -9,10 +9,10 @@ public final class ConversationOverscrollListView$b
   
   public final void run()
   {
-    if ((ConversationOverscrollListView.a(jjW) != null) && (!ConversationOverscrollListView.a(jjW).aKS()))
+    if ((ConversationOverscrollListView.a(lph) != null) && (!ConversationOverscrollListView.a(lph).baJ()))
     {
-      t.d("!56@/B4Tb64lLpJN/RyYD3u7HEqy/xEixJnTlVEP1vhGDRnFaOwnT4B3ZQ==", "jacks cancel to Show Main");
-      ConversationOverscrollListView.a(jjW).aKR();
+      u.d("!56@/B4Tb64lLpJN/RyYD3u7HEqy/xEixJnTlVEP1vhGDRnFaOwnT4B3ZQ==", "jacks cancel to Show Main");
+      ConversationOverscrollListView.a(lph).baI();
     }
   }
 }

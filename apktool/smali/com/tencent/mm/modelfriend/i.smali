@@ -1,144 +1,235 @@
-.class final Lcom/tencent/mm/modelfriend/i;
-.super Lcom/tencent/mm/sdk/c/e;
+.class public final Lcom/tencent/mm/modelfriend/i;
+.super Lcom/tencent/mm/sdk/h/g;
 .source "SourceFile"
 
 
+# static fields
+.field public static final aoY:[Ljava/lang/String;
+
+
+# instance fields
+.field public bCw:Lcom/tencent/mm/az/g;
+
+
 # direct methods
-.method public constructor <init>()V
-    .locals 1
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 18
-    const/4 v0, 0x0
+    .line 14
+    const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/e;-><init>(I)V
+    new-array v0, v0, [Ljava/lang/String;
 
-    .line 19
+    const/4 v1, 0x0
+
+    const-string/jumbo v2, "CREATE TABLE IF NOT EXISTS facebookfriend ( fbid long  PRIMARY KEY , fbname text  , fbimgkey int  , status int  , username text  , nickname text  , nicknamepyinitial text  , nicknamequanpin text  , sex int  , personalcard int  , province text  , city text  , signature text  , alias text  , type int  , email text  ) "
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/tencent/mm/modelfriend/i;->aoY:[Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/tencent/mm/az/g;)V
+    .locals 0
+
+    .prologue
+    .line 55
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/g;-><init>()V
+
+    .line 56
+    iput-object p1, p0, Lcom/tencent/mm/modelfriend/i;->bCw:Lcom/tencent/mm/az/g;
+
+    .line 57
     return-void
 .end method
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/d;)Z
-    .locals 17
+.method public final a(Lcom/tencent/mm/modelfriend/h;)Z
+    .locals 10
 
     .prologue
-    .line 23
-    move-object/from16 v0, p1
+    const/4 v6, -0x1
 
-    instance-of v1, v0, Lcom/tencent/mm/d/a/n;
+    const/4 v1, 0x1
 
-    if-nez v1, :cond_0
+    const/4 v2, 0x0
 
-    .line 24
-    const-string/jumbo v1, "!56@/B4Tb64lLpIqcrJBKv7GGpaIJVKtF1au3qNBtibJ6VVaWk4rYzgWDw=="
+    .line 112
+    const-string/jumbo v3, "Func Set always conv_flag == flag_all"
 
-    const-string/jumbo v2, "not bind qq event"
+    iget v0, p1, Lcom/tencent/mm/modelfriend/h;->aou:I
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->f(Ljava/lang/String;Ljava/lang/String;)V
+    if-ne v0, v6, :cond_1
 
-    .line 25
-    const/4 v1, 0x0
+    move v0, v1
 
-    .line 31
     :goto_0
-    return v1
+    invoke-static {v3, v0}, Ljunit/framework/Assert;->assertTrue(Ljava/lang/String;Z)V
 
-    .line 28
-    :cond_0
-    check-cast p1, Lcom/tencent/mm/d/a/n;
+    .line 113
+    iget-wide v3, p1, Lcom/tencent/mm/modelfriend/h;->aSw:J
 
-    move-object/from16 v0, p1
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    iget-object v1, v0, Lcom/tencent/mm/d/a/n;->aui:Lcom/tencent/mm/d/a/n$a;
+    const-string/jumbo v5, "select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend   where facebookfriend.fbid = \""
 
-    iget v1, v1, Lcom/tencent/mm/d/a/n$a;->auk:I
+    invoke-direct {v0, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    if-nez v1, :cond_1
-
-    .line 29
-    :try_start_0
-    invoke-static {}, Lcom/tencent/mm/model/v;->sb()I
-
-    move-result v1
-
-    or-int/lit16 v13, v1, 0x1000
-
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
-
-    move-result-object v1
-
-    const/16 v2, 0x22
-
-    invoke-static {v13}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v3, v4}, Ljava/lang/String;->valueOf(J)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/storage/h;->set(ILjava/lang/Object;)V
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    move-result-object v3
 
-    move-result-object v1
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rh()Lcom/tencent/mm/ac/c;
+    move-result-object v0
 
-    move-result-object v16
+    const-string/jumbo v3, "\""
 
-    new-instance v1, Lcom/tencent/mm/ac/b$l;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    const/16 v2, 0x800
+    move-result-object v0
 
-    const-string/jumbo v3, ""
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string/jumbo v4, ""
+    move-result-object v0
 
-    const/4 v5, 0x0
+    iget-object v3, p0, Lcom/tencent/mm/modelfriend/i;->bCw:Lcom/tencent/mm/az/g;
 
-    const-string/jumbo v6, ""
+    const/4 v4, 0x0
 
-    const-string/jumbo v7, ""
+    invoke-virtual {v3, v0, v4}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
-    const-string/jumbo v8, ""
+    move-result-object v3
 
-    const/4 v9, 0x0
+    invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
 
-    const-string/jumbo v10, ""
+    move-result v0
 
-    const-string/jumbo v11, ""
+    if-lez v0, :cond_2
 
-    const-string/jumbo v12, ""
+    move v0, v1
 
-    const-string/jumbo v14, ""
-
-    const-string/jumbo v15, ""
-
-    invoke-direct/range {v1 .. v15}, Lcom/tencent/mm/ac/b$l;-><init>(ILjava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)V
-
-    move-object/from16 v0, v16
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ac/c;->a(Lcom/tencent/mm/ac/b$p;)V
-
-    const-string/jumbo v1, "!56@/B4Tb64lLpIqcrJBKv7GGpaIJVKtF1au3qNBtibJ6VVaWk4rYzgWDw=="
-
-    const-string/jumbo v2, "doClearQQFriendHelper succ "
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 31
-    :cond_1
     :goto_1
-    const/4 v1, 0x0
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
 
+    if-nez v0, :cond_4
+
+    .line 114
+    iput v6, p1, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/h;->lX()Landroid/content/ContentValues;
+
+    move-result-object v0
+
+    iget-object v3, p0, Lcom/tencent/mm/modelfriend/i;->bCw:Lcom/tencent/mm/az/g;
+
+    const-string/jumbo v4, "facebookfriend"
+
+    const-string/jumbo v5, "fbid"
+
+    invoke-virtual {v3, v4, v5, v0}, Lcom/tencent/mm/az/g;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
+
+    move-result-wide v3
+
+    long-to-int v0, v3
+
+    if-eq v0, v6, :cond_3
+
+    .line 122
+    :cond_0
+    :goto_2
+    return v1
+
+    :cond_1
+    move v0, v2
+
+    .line 112
     goto :goto_0
 
-    :catch_0
-    move-exception v1
+    :cond_2
+    move v0, v2
 
+    .line 113
     goto :goto_1
+
+    :cond_3
+    move v1, v2
+
+    .line 114
+    goto :goto_2
+
+    .line 116
+    :cond_4
+    invoke-virtual {p1}, Lcom/tencent/mm/modelfriend/h;->lX()Landroid/content/ContentValues;
+
+    move-result-object v0
+
+    .line 117
+    iget-object v3, p0, Lcom/tencent/mm/modelfriend/i;->bCw:Lcom/tencent/mm/az/g;
+
+    const-string/jumbo v4, "facebookfriend"
+
+    const-string/jumbo v5, "fbid=?"
+
+    new-array v6, v1, [Ljava/lang/String;
+
+    new-instance v7, Ljava/lang/StringBuilder;
+
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-wide v8, p1, Lcom/tencent/mm/modelfriend/h;->aSw:J
+
+    invoke-virtual {v7, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    aput-object v7, v6, v2
+
+    invoke-virtual {v3, v4, v0, v5, v6}, Lcom/tencent/mm/az/g;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 119
+    if-lez v0, :cond_5
+
+    .line 120
+    invoke-virtual {p0}, Lcom/tencent/mm/modelfriend/i;->Ep()V
+
+    .line 122
+    :cond_5
+    if-gtz v0, :cond_0
+
+    move v1, v2
+
+    goto :goto_2
+.end method
+
+.method public final yx()Z
+    .locals 3
+
+    .prologue
+    .line 135
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/i;->bCw:Lcom/tencent/mm/az/g;
+
+    const-string/jumbo v1, "facebookfriend"
+
+    const-string/jumbo v2, "delete from facebookfriend"
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/az/g;->cj(Ljava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
 .end method

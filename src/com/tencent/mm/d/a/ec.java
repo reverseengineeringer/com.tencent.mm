@@ -1,24 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ec
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aAo = new a();
+  public static boolean arQ = true;
+  public static boolean arR = false;
+  public a ayn = new a();
   
   public ec()
   {
-    id = "Logout";
-    hXT = atO;
+    id = "FavNotify";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aAp = 0;
-    public int status = 0;
+    public byte[] ayo;
   }
 }
 

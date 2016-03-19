@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private cgJ:Landroid/widget/ImageView;
+.field private ayh:Landroid/widget/ImageView;
 
 .field private context:Landroid/content/Context;
 
 .field private count:I
 
-.field private iGo:I
+.field private kFy:I
 
 .field private map:Ljava/util/Map;
 
@@ -31,9 +31,9 @@
     iput-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->map:Ljava/util/Map;
 
     .line 19
-    sget v0, Lcom/tencent/mm/a$k;->mmpage_control_image:I
+    const v0, 0x7f0a0597
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->iGo:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->kFy:I
 
     .line 41
     iput-object p1, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->context:Landroid/content/Context;
@@ -42,11 +42,13 @@
     return-void
 .end method
 
-.method private nM(I)V
-    .locals 7
+.method private qH(I)V
+    .locals 8
 
     .prologue
-    const/4 v6, 0x0
+    const/4 v7, 0x0
+
+    const v6, 0x7f070b7b
 
     const/4 v2, 0x0
 
@@ -88,32 +90,30 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     .line 59
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     if-nez v0, :cond_2
 
     .line 60
     iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->context:Landroid/content/Context;
 
-    iget v4, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->iGo:I
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->kFy:I
 
-    invoke-static {v0, v4, v6}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-static {v0, v4, v7}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
     .line 61
-    sget v4, Lcom/tencent/mm/a$i;->mmpage_control_img:I
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     .line 62
     iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->map:Ljava/util/Map;
@@ -122,13 +122,13 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     invoke-interface {v0, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 65
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     const/4 v4, 0x1
 
@@ -139,13 +139,13 @@
     if-nez v1, :cond_3
 
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2, v2, v2, v2}, Landroid/widget/ImageView;->setPadding(IIII)V
 
     .line 78
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMPageControlView;->addView(Landroid/view/View;)V
 
@@ -170,32 +170,30 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     if-nez v0, :cond_5
 
     .line 69
     iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->context:Landroid/content/Context;
 
-    iget v4, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->iGo:I
+    iget v4, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->kFy:I
 
-    invoke-static {v0, v4, v6}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
+    invoke-static {v0, v4, v7}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v0
 
     .line 70
-    sget v4, Lcom/tencent/mm/a$i;->mmpage_control_img:I
-
-    invoke-virtual {v0, v4}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {v0, v6}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     .line 71
     iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->map:Ljava/util/Map;
@@ -204,13 +202,13 @@
 
     move-result-object v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     invoke-interface {v0, v4, v5}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     .line 73
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->cgJ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->ayh:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setSelected(Z)V
 
@@ -219,7 +217,7 @@
 
 
 # virtual methods
-.method public final bw(II)V
+.method public final bM(II)V
     .locals 0
 
     .prologue
@@ -227,7 +225,7 @@
     iput p1, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->count:I
 
     .line 23
-    invoke-direct {p0, p2}, Lcom/tencent/mm/ui/base/MMPageControlView;->nM(I)V
+    invoke-direct {p0, p2}, Lcom/tencent/mm/ui/base/MMPageControlView;->qH(I)V
 
     .line 24
     return-void
@@ -238,7 +236,7 @@
 
     .prologue
     .line 31
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->iGo:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMPageControlView;->kFy:I
 
     .line 32
     return-void
@@ -249,7 +247,7 @@
 
     .prologue
     .line 27
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/base/MMPageControlView;->nM(I)V
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/base/MMPageControlView;->qH(I)V
 
     .line 28
     return-void

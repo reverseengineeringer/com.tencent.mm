@@ -1,24 +1,18 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class jv
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aHb = new a();
-  public b aHc = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public jv()
   {
-    id = "WalletPwdConfirmDoSecondaryProgressCallback";
-    hXT = atO;
+    id = "ResendAllFailSnsMsg";
+    jUI = arR;
   }
-  
-  public static final class a {}
-  
-  public static final class b {}
 }
 
 /* Location:

@@ -1,23 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class bm
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awx = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auH = new a();
+  public b auI = new b();
   
   public bm()
   {
-    id = "ExDeviceUnBindHardDevice";
-    hXT = atO;
+    id = "ExDeviceCheckDeviceHasAbility";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String avt;
+    public String alN;
+    public String auJ;
+  }
+  
+  public static final class b
+  {
+    public boolean auK;
   }
 }
 

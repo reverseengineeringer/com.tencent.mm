@@ -2,10 +2,10 @@ package com.tencent.mm.app.plugin;
 
 import android.os.Bundle;
 import android.os.Looper;
-import com.tencent.mm.d.a.dg;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
+import com.tencent.mm.d.a.ez;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
 import com.tencent.mm.sdk.c.a;
 
 @URISpanHandlerSet.a
@@ -17,34 +17,34 @@ class URISpanHandlerSet$PayUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     if (type == 28)
     {
-      if (paramf != null) {
-        paramf.a(paramah);
+      if (paramb != null) {
+        paramb.a(paramg);
       }
-      paramf = new dg();
-      azo.actionCode = 11;
-      azo.azq = url;
-      azo.context = URISpanHandlerSet.a(apd);
-      a.hXQ.a(paramf, Looper.myLooper());
+      paramb = new ez();
+      azK.actionCode = 11;
+      azK.azM = url;
+      azK.context = URISpanHandlerSet.a(ang);
+      a.jUF.a(paramb, Looper.myLooper());
       return true;
     }
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[] { 28 };
   }

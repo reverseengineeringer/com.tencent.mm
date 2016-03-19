@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/cu;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -13,15 +13,15 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public ayM:Lcom/tencent/mm/d/a/cu$a;
+.field public awq:Lcom/tencent/mm/d/a/cu$a;
 
-.field public ayN:Lcom/tencent/mm/d/a/cu$b;
+.field public awr:Lcom/tencent/mm/d/a/cu$b;
 
 
 # direct methods
@@ -32,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/cu;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/cu;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/cu;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/cu;->arR:Z
 
     return-void
 .end method
@@ -45,30 +45,30 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/cu$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/cu$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/cu;->ayM:Lcom/tencent/mm/d/a/cu$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/cu;->awq:Lcom/tencent/mm/d/a/cu$a;
 
-    .line 17
+    .line 18
     new-instance v0, Lcom/tencent/mm/d/a/cu$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/cu$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/cu;->ayN:Lcom/tencent/mm/d/a/cu$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/cu;->awr:Lcom/tencent/mm/d/a/cu$b;
 
     .line 8
-    const-string/jumbo v0, "FileDownloadRemove"
+    const-string/jumbo v0, "ExDeviceSimpleBTConnectDevice"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/cu;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/cu;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/cu;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/cu;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/cu;->jUI:Z
 
     return-void
 .end method

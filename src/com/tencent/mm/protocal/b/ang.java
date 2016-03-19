@@ -1,43 +1,74 @@
 package com.tencent.mm.protocal.b;
 
+import a.a.a.b;
+import java.util.LinkedList;
+
 public final class ang
-  extends com.tencent.mm.al.a
+  extends alq
 {
-  public int hjA;
-  
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
-      ((a.a.a.c.a)paramVarArgs[0]).bM(1, hjA);
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      if (jHj == null) {
+        throw new b("Not all required fields were included: BaseResponse");
+      }
+      if (jHj != null)
+      {
+        paramVarArgs.cj(1, jHj.kn());
+        jHj.a(paramVarArgs);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.bI(1, hjA) + 0;
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
-        }
+      if (jHj == null) {
+        break label305;
       }
-      return 0;
     }
-    if (paramInt == 3)
+    label305:
+    for (paramInt = a.a.a.a.ch(1, jHj.kn()) + 0;; paramInt = 0)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      ang localang = (ang)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      return paramInt;
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = alq.a(paramVarArgs); paramInt > 0; paramInt = alq.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        if (jHj != null) {
+          break;
+        }
+        throw new b("Not all required fields were included: BaseResponse");
       }
-      hjA = jMD.aVp();
-      return 0;
+      if (paramInt == 3)
+      {
+        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
+        ang localang = (ang)paramVarArgs[1];
+        paramInt = ((Integer)paramVarArgs[2]).intValue();
+        switch (paramInt)
+        {
+        default: 
+          return -1;
+        }
+        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+        int i = paramVarArgs.size();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+          localObject1 = new dd();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+          for (boolean bool = true; bool; bool = ((dd)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
+          jHj = ((dd)localObject1);
+          paramInt += 1;
+        }
+        break;
+      }
+      return -1;
     }
-    return -1;
   }
 }
 

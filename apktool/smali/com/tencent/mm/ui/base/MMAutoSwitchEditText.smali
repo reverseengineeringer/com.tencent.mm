@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field iDM:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;
+.field kDa:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;
 
 
 # direct methods
@@ -31,15 +31,15 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;-><init>(Landroid/widget/EditText;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText;->iDM:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText;->kDa:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;
 
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText;->iDM:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText;->kDa:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 30
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText;->iDM:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText;->kDa:Lcom/tencent/mm/ui/base/MMAutoSwitchEditText$a;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMAutoSwitchEditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 

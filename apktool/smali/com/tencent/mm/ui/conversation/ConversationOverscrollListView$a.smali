@@ -15,19 +15,10 @@
 
 
 # virtual methods
-.method public abstract a(ILandroid/view/MotionEvent;Z)V
+.method public abstract baI()V
 .end method
 
-.method public abstract aKQ()V
-.end method
-
-.method public abstract aKR()V
-.end method
-
-.method public abstract aKS()Z
-.end method
-
-.method public abstract aKT()Z
+.method public abstract baJ()Z
 .end method
 
 .method public abstract init()V

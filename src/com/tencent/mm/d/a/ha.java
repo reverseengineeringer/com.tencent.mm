@@ -1,41 +1,26 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ha
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEi = new a();
-  public b aEj = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aCD = new a();
   
   public ha()
   {
-    id = "ScanBankcardProcess";
-    hXT = atO;
+    id = "NetSceneResponse";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public byte[] aEk;
-    public boolean[] aEl;
-    public int height;
-    public int width;
-  }
-  
-  public static final class b
-  {
-    public String aEm;
-    public int apL;
-    public byte[] bitmapData;
-    public int bitmapLen;
-    public String cardNum;
-    public int cardNumLen;
-    public int height;
-    public int[] rectX;
-    public int[] rectY;
-    public int width;
+    public String aCE;
+    public b aCF;
+    public int errCode = 0;
+    public int errType = 0;
   }
 }
 

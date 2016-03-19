@@ -1,15 +1,15 @@
 package com.tencent.mm.g;
 
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class f
 {
-  public static boolean pP()
+  public static boolean pH()
   {
     boolean bool2 = true;
-    String str = h.qa().getValue("LinkedinAddContactClose");
+    String str = h.pS().getValue("LinkedinAddContactClose");
     boolean bool1 = bool2;
-    if (!bn.iW(str))
+    if (!ay.kz(str))
     {
       bool1 = bool2;
       if (Integer.valueOf(str).intValue() == 1) {

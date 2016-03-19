@@ -6,102 +6,76 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Landroid/support/v4/content/b$d;,
+        Landroid/support/v4/content/b$c;,
+        Landroid/support/v4/content/b$b;,
         Landroid/support/v4/content/b$a;
     }
 .end annotation
 
 
-# instance fields
-.field public cY:Z
-
-.field public cZ:I
-
-.field public eV:Landroid/support/v4/content/b$a;
-
-.field public eW:Z
-
-.field public eX:Z
-
-.field public eY:Z
-
-.field public eZ:Z
+# static fields
+.field private static final ei:Landroid/support/v4/content/b$a;
 
 
-# virtual methods
-.method public final a(Landroid/support/v4/content/b$a;)V
+# direct methods
+.method static constructor <clinit>()V
     .locals 2
 
     .prologue
-    .line 143
-    iget-object v0, p0, Landroid/support/v4/content/b;->eV:Landroid/support/v4/content/b$a;
+    .line 85
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-nez v0, :cond_0
+    .line 86
+    const/16 v1, 0xf
 
-    .line 144
-    new-instance v0, Ljava/lang/IllegalStateException;
+    if-lt v0, v1, :cond_0
 
-    const-string/jumbo v1, "No listener register"
+    .line 87
+    new-instance v0, Landroid/support/v4/content/b$d;
 
-    invoke-direct {v0, v1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+    invoke-direct {v0}, Landroid/support/v4/content/b$d;-><init>()V
 
-    throw v0
+    sput-object v0, Landroid/support/v4/content/b;->ei:Landroid/support/v4/content/b$a;
 
-    .line 146
-    :cond_0
-    iget-object v0, p0, Landroid/support/v4/content/b;->eV:Landroid/support/v4/content/b$a;
-
-    if-eq v0, p1, :cond_1
-
-    .line 147
-    new-instance v0, Ljava/lang/IllegalArgumentException;
-
-    const-string/jumbo v1, "Attempting to unregister the wrong listener"
-
-    invoke-direct {v0, v1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 149
-    :cond_1
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Landroid/support/v4/content/b;->eV:Landroid/support/v4/content/b$a;
-
-    .line 150
+    .line 93
+    :goto_0
     return-void
+
+    .line 88
+    :cond_0
+    const/16 v1, 0xb
+
+    if-lt v0, v1, :cond_1
+
+    .line 89
+    new-instance v0, Landroid/support/v4/content/b$c;
+
+    invoke-direct {v0}, Landroid/support/v4/content/b$c;-><init>()V
+
+    sput-object v0, Landroid/support/v4/content/b;->ei:Landroid/support/v4/content/b$a;
+
+    goto :goto_0
+
+    .line 91
+    :cond_1
+    new-instance v0, Landroid/support/v4/content/b$b;
+
+    invoke-direct {v0}, Landroid/support/v4/content/b$b;-><init>()V
+
+    sput-object v0, Landroid/support/v4/content/b;->ei:Landroid/support/v4/content/b$a;
+
+    goto :goto_0
 .end method
 
-.method public final toString()Ljava/lang/String;
-    .locals 2
+.method public static makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
+    .locals 1
 
     .prologue
-    .line 376
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 221
+    sget-object v0, Landroid/support/v4/content/b;->ei:Landroid/support/v4/content/b$a;
 
-    const/16 v1, 0x40
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(I)V
-
-    .line 377
-    invoke-static {p0, v0}, Landroid/support/v4/c/a;->a(Ljava/lang/Object;Ljava/lang/StringBuilder;)V
-
-    .line 378
-    const-string/jumbo v1, " id="
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 379
-    iget v1, p0, Landroid/support/v4/content/b;->cZ:I
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    .line 380
-    const-string/jumbo v1, "}"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    .line 381
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-interface {v0, p0}, Landroid/support/v4/content/b$a;->makeMainActivity(Landroid/content/ComponentName;)Landroid/content/Intent;
 
     move-result-object v0
 

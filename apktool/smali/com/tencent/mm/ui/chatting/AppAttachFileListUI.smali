@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/storage/as$a;
+.implements Lcom/tencent/mm/storage/ah$a;
 
 
 # annotations
@@ -18,21 +18,25 @@
 
 
 # instance fields
-.field private cEU:Landroid/widget/AdapterView$OnItemClickListener;
+.field private dcP:Landroid/widget/AdapterView$OnItemClickListener;
 
-.field private cEW:Landroid/widget/AbsListView$OnScrollListener;
+.field private dcR:Landroid/widget/AbsListView$OnScrollListener;
 
-.field private iRj:Ljava/util/ArrayList;
+.field private kQb:Ljava/util/ArrayList;
 
-.field private iRk:Landroid/widget/ListView;
+.field private kQc:Ljava/util/HashSet;
 
-.field private iRl:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
+.field private kQd:Landroid/widget/ListView;
 
-.field private iRm:Z
+.field private kQe:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
 
-.field private iRn:Z
+.field private kQf:Z
 
-.field private iRo:Landroid/view/View;
+.field private kQg:Z
+
+.field private kQh:Landroid/view/View;
+
+.field private kQi:I
 
 
 # direct methods
@@ -40,59 +44,59 @@
     .locals 1
 
     .prologue
-    .line 48
+    .line 47
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
     .line 54
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRm:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQf:Z
 
     .line 55
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRn:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQg:Z
 
-    .line 196
-    new-instance v0, Lcom/tencent/mm/ui/chatting/i;
+    .line 197
+    new-instance v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/i;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$2;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->cEU:Landroid/widget/AdapterView$OnItemClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->dcP:Landroid/widget/AdapterView$OnItemClickListener;
 
-    .line 209
-    new-instance v0, Lcom/tencent/mm/ui/chatting/j;
+    .line 210
+    new-instance v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$3;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/j;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$3;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->cEW:Landroid/widget/AbsListView$OnScrollListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->dcR:Landroid/widget/AbsListView$OnScrollListener;
 
-    .line 243
+    .line 244
     return-void
 .end method
 
-.method private E(Lcom/tencent/mm/storage/ar;)Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;
+.method private G(Lcom/tencent/mm/storage/ag;)Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;
     .locals 3
 
     .prologue
-    .line 130
-    iget-object v0, p1, Lcom/tencent/mm/d/b/aq;->field_content:Ljava/lang/String;
+    .line 131
+    iget-object v0, p1, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/m/a$a;->dr(Ljava/lang/String;)Lcom/tencent/mm/m/a$a;
+    invoke-static {v0}, Lcom/tencent/mm/n/a$a;->dz(Ljava/lang/String;)Lcom/tencent/mm/n/a$a;
 
     move-result-object v1
 
-    .line 132
+    .line 133
     if-nez v1, :cond_0
 
-    .line 133
+    .line 134
     const/4 v0, 0x0
 
-    .line 138
+    .line 139
     :goto_0
     return-object v0
 
-    .line 135
+    .line 136
     :cond_0
     new-instance v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;
 
@@ -100,21 +104,35 @@
 
     invoke-direct {v0, p0, v2}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;B)V
 
-    .line 136
-    iput-object p1, v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;->aDs:Lcom/tencent/mm/storage/ar;
-
     .line 137
-    iput-object v1, v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;->iRq:Lcom/tencent/mm/m/a$a;
+    iput-object p1, v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;->aFR:Lcom/tencent/mm/storage/ag;
+
+    .line 138
+    iput-object v1, v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;->kQk:Lcom/tencent/mm/n/a$a;
 
     goto :goto_0
+.end method
+
+.method static synthetic a(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;I)I
+    .locals 1
+
+    .prologue
+    .line 47
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQi:I
+
+    add-int/2addr v0, p1
+
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQi:I
+
+    return v0
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)Ljava/util/ArrayList;
     .locals 1
 
     .prologue
-    .line 48
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRj:Ljava/util/ArrayList;
+    .line 47
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQb:Ljava/util/ArrayList;
 
     return-object v0
 .end method
@@ -123,8 +141,8 @@
     .locals 0
 
     .prologue
-    .line 48
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->bf(Ljava/util/List;)V
+    .line 47
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->bJ(Ljava/util/List;)V
 
     return-void
 .end method
@@ -133,19 +151,19 @@
     .locals 1
 
     .prologue
-    .line 48
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRn:Z
+    .line 47
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQg:Z
 
     return v0
 .end method
 
-.method private bf(Ljava/util/List;)V
-    .locals 5
+.method private bJ(Ljava/util/List;)V
+    .locals 7
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v6, 0x0
 
-    .line 114
+    .line 115
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -154,17 +172,17 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 115
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRm:Z
-
     .line 116
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRk:Landroid/widget/ListView;
+    iput-boolean v6, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQf:Z
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRo:Landroid/view/View;
+    .line 117
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQd:Landroid/widget/ListView;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQh:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->removeFooterView(Landroid/view/View;)Z
 
-    .line 118
+    .line 119
     :cond_0
     invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -182,32 +200,46 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/storage/ar;
+    check-cast v0, Lcom/tencent/mm/storage/ag;
 
-    .line 119
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->E(Lcom/tencent/mm/storage/ar;)Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;
+    .line 120
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->G(Lcom/tencent/mm/storage/ag;)Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;
+
+    move-result-object v2
+
+    .line 121
+    if-eqz v2, :cond_1
+
+    iget-object v3, v2, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;->kQk:Lcom/tencent/mm/n/a$a;
+
+    iget v3, v3, Lcom/tencent/mm/n/a$a;->type:I
+
+    const/4 v4, 0x6
+
+    if-ne v3, v4, :cond_1
+
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQc:Ljava/util/HashSet;
+
+    iget-wide v4, v0, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+
+    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    .line 120
+    invoke-virtual {v3, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
+
+    move-result v0
+
     if-eqz v0, :cond_1
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;->iRq:Lcom/tencent/mm/m/a$a;
+    .line 123
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQb:Ljava/util/ArrayList;
 
-    iget v2, v2, Lcom/tencent/mm/m/a$a;->type:I
-
-    const/4 v3, 0x6
-
-    if-ne v2, v3, :cond_1
-
-    .line 122
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRj:Ljava/util/ArrayList;
-
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+    invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 125
+    .line 126
     :cond_2
     const-string/jumbo v0, "!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc="
 
@@ -225,11 +257,11 @@
 
     move-result-object v3
 
-    aput-object v3, v2, v4
+    aput-object v3, v2, v6
 
     const/4 v3, 0x1
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRj:Ljava/util/ArrayList;
+    iget-object v4, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQb:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
 
@@ -241,9 +273,9 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 127
+    .line 128
     return-void
 .end method
 
@@ -251,8 +283,8 @@
     .locals 1
 
     .prologue
-    .line 48
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRm:Z
+    .line 47
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQf:Z
 
     return v0
 .end method
@@ -261,28 +293,38 @@
     .locals 1
 
     .prologue
-    .line 48
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRl:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
+    .line 47
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQe:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
 
     return-object v0
 .end method
 
-.method static synthetic e(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)V
+.method static synthetic e(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)I
+    .locals 1
+
+    .prologue
+    .line 47
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQi:I
+
+    return v0
+.end method
+
+.method static synthetic f(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)V
     .locals 2
 
     .prologue
-    .line 48
+    .line 47
     const-string/jumbo v0, "!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc="
 
     const-string/jumbo v1, "start to load"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRn:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQg:Z
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRo:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQh:Landroid/view/View;
 
     const/4 v1, 0x0
 
@@ -291,16 +333,16 @@
     return-void
 .end method
 
-.method static synthetic f(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)V
+.method static synthetic g(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)V
     .locals 2
 
     .prologue
-    .line 48
+    .line 47
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRn:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQg:Z
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRo:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQh:Landroid/view/View;
 
     const/16 v1, 0x8
 
@@ -310,31 +352,21 @@
 
     const-string/jumbo v1, "stop to load"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final Rb()Z
-    .locals 1
-
-    .prologue
-    .line 305
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final a(Lcom/tencent/mm/storage/as;Lcom/tencent/mm/storage/as$c;)V
+.method public final a(Lcom/tencent/mm/storage/ah;Lcom/tencent/mm/storage/ah$c;)V
     .locals 4
 
     .prologue
-    .line 284
+    .line 286
     const-string/jumbo v0, "insert"
 
-    iget-object v1, p2, Lcom/tencent/mm/storage/as$c;->igL:Ljava/lang/String;
+    iget-object v1, p2, Lcom/tencent/mm/storage/ah$c;->kgp:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -342,15 +374,15 @@
 
     if-eqz v0, :cond_2
 
-    .line 285
+    .line 287
     const-string/jumbo v0, "!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc="
 
     const-string/jumbo v1, "reveive a msg"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 286
-    iget-object v0, p2, Lcom/tencent/mm/storage/as$c;->igM:Ljava/util/ArrayList;
+    .line 288
+    iget-object v0, p2, Lcom/tencent/mm/storage/ah$c;->kgq:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -363,46 +395,46 @@
     :goto_0
     if-ltz v1, :cond_1
 
-    .line 287
-    iget-object v0, p2, Lcom/tencent/mm/storage/as$c;->igM:Ljava/util/ArrayList;
+    .line 289
+    iget-object v0, p2, Lcom/tencent/mm/storage/ah$c;->kgq:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/storage/ar;
+    check-cast v0, Lcom/tencent/mm/storage/ag;
 
-    .line 288
-    invoke-virtual {v0}, Lcom/tencent/mm/storage/ar;->aHt()Z
+    .line 290
+    invoke-virtual {v0}, Lcom/tencent/mm/storage/ag;->aWU()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 289
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->E(Lcom/tencent/mm/storage/ar;)Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;
+    .line 291
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->G(Lcom/tencent/mm/storage/ag;)Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;
 
     move-result-object v0
 
-    .line 290
+    .line 292
     if-eqz v0, :cond_0
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;->iRq:Lcom/tencent/mm/m/a$a;
+    iget-object v2, v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$c;->kQk:Lcom/tencent/mm/n/a$a;
 
-    iget v2, v2, Lcom/tencent/mm/m/a$a;->type:I
+    iget v2, v2, Lcom/tencent/mm/n/a$a;->type:I
 
     const/4 v3, 0x6
 
     if-ne v2, v3, :cond_0
 
-    .line 292
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRj:Ljava/util/ArrayList;
+    .line 294
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQb:Ljava/util/ArrayList;
 
     const/4 v3, 0x0
 
     invoke-virtual {v2, v3, v0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 286
+    .line 288
     :cond_0
     add-int/lit8 v0, v1, -0x1
 
@@ -410,18 +442,18 @@
 
     goto :goto_0
 
-    .line 296
+    .line 298
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRl:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQe:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
 
     if-eqz v0, :cond_2
 
-    .line 297
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRl:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
+    .line 299
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQe:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;->notifyDataSetChanged()V
 
-    .line 300
+    .line 302
     :cond_2
     return-void
 .end method
@@ -430,8 +462,8 @@
     .locals 1
 
     .prologue
-    .line 60
-    sget v0, Lcom/tencent/mm/a$k;->app_attach_file_list_ui:I
+    .line 61
+    const v0, 0x7f0a0048
 
     return v0
 .end method
@@ -442,26 +474,23 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 65
-    invoke-static {}, Lcom/tencent/mm/svg/frame/c/a/a;->aIr()V
-
     .line 66
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 67
-    sget v0, Lcom/tencent/mm/a$n;->file_list_title:I
+    const v0, 0x7f0b062e
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->qb(I)V
 
     .line 69
-    new-instance v0, Lcom/tencent/mm/ui/chatting/h;
+    new-instance v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/h;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$1;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 76
-    sget v0, Lcom/tencent/mm/a$i;->file_list_lv:I
+    const v0, 0x7f070150
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->findViewById(I)Landroid/view/View;
 
@@ -469,14 +498,14 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRk:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQd:Landroid/widget/ListView;
 
     .line 78
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->getLayoutInflater()Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$k;->app_attach_file_list_footer:I
+    const v1, 0x7f0a0025
 
     const/4 v2, 0x0
 
@@ -484,17 +513,17 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRo:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQh:Landroid/view/View;
 
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRk:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQd:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRo:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQh:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->addFooterView(Landroid/view/View;)V
 
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRo:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQh:Landroid/view/View;
 
     const/16 v1, 0x8
 
@@ -505,62 +534,74 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRj:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQb:Ljava/util/ArrayList;
 
-    invoke-static {}, Lcom/tencent/mm/model/v;->rS()Ljava/lang/String;
+    new-instance v0, Ljava/util/HashSet;
+
+    invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQc:Ljava/util/HashSet;
+
+    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rk()Lcom/tencent/mm/storage/as;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
 
     move-result-object v1
 
     const/16 v2, 0x14
 
-    invoke-virtual {v1, v0, v3, v2}, Lcom/tencent/mm/storage/as;->s(Ljava/lang/String;II)Ljava/util/List;
+    invoke-virtual {v1, v0, v3, v2}, Lcom/tencent/mm/storage/ah;->x(Ljava/lang/String;II)Ljava/util/List;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->bf(Ljava/util/List;)V
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQi:I
+
+    add-int/lit8 v1, v1, 0x14
+
+    iput v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQi:I
+
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->bJ(Ljava/util/List;)V
 
     .line 83
     new-instance v0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
 
     invoke-direct {v0, p0, v3}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRl:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQe:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
 
     .line 84
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRk:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQd:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRl:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQe:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$b;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRk:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQd:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->cEU:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->dcP:Landroid/widget/AdapterView$OnItemClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 86
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->iRk:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->kQd:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->cEW:Landroid/widget/AbsListView$OnScrollListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;->dcR:Landroid/widget/AbsListView$OnScrollListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
 
     .line 89
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rk()Lcom/tencent/mm/storage/as;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
 
     move-result-object v0
 
@@ -568,7 +609,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, p0, v1}, Lcom/tencent/mm/storage/as;->a(Lcom/tencent/mm/storage/as$a;Landroid/os/Looper;)V
+    invoke-virtual {v0, p0, v1}, Lcom/tencent/mm/storage/ah;->a(Lcom/tencent/mm/storage/ah$a;Landroid/os/Looper;)V
 
     .line 90
     return-void
@@ -578,21 +619,21 @@
     .locals 1
 
     .prologue
-    .line 109
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rk()Lcom/tencent/mm/storage/as;
-
-    move-result-object v0
-
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/storage/as;->a(Lcom/tencent/mm/storage/as$a;)V
-
     .line 110
-    invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
+
+    move-result-object v0
+
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/storage/ah;->a(Lcom/tencent/mm/storage/ah$a;)V
 
     .line 111
+    invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
+
+    .line 112
     return-void
 .end method
 
@@ -604,8 +645,5 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
     .line 95
-    invoke-static {}, Lcom/tencent/mm/svg/frame/c/a/a;->aIs()V
-
-    .line 96
     return-void
 .end method

@@ -1,189 +1,144 @@
-.class final Lcom/tencent/mm/ui/contact/g;
+.class public final Lcom/tencent/mm/ui/contact/g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
-
-
-# instance fields
-.field final synthetic jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/contact/AddressUI$a;)V
-    .locals 0
+.method static final bT(Ljava/util/List;)Ljava/util/List;
+    .locals 5
 
     .prologue
-    .line 588
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/g;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 40
+    new-instance v1, Ljava/util/ArrayList;
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    return-void
+    .line 41
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
+
+    move-result-object v0
+
+    sget-object v2, Lcom/tencent/mm/model/i;->bzW:Ljava/lang/String;
+
+    const/4 v3, 0x1
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v0, v2, p0, v3, v4}, Lcom/tencent/mm/storage/s;->a(Ljava/lang/String;Ljava/util/List;ZLjava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v2
+
+    .line 43
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 44
+    const/4 v0, 0x0
+
+    .line 45
+    :cond_0
+    new-instance v3, Lcom/tencent/mm/storage/r;
+
+    invoke-direct {v3}, Lcom/tencent/mm/storage/r;-><init>()V
+
+    .line 46
+    invoke-virtual {v3, v2}, Lcom/tencent/mm/storage/r;->c(Landroid/database/Cursor;)V
+
+    .line 47
+    iget-object v4, v3, Lcom/tencent/mm/d/b/t;->field_username:Ljava/lang/String;
+
+    invoke-static {v4}, Lcom/tencent/mm/ui/contact/g;->vU(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    .line 48
+    iget-object v3, v3, Lcom/tencent/mm/d/b/t;->field_username:Ljava/lang/String;
+
+    invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    .line 49
+    add-int/lit8 v0, v0, 0x1
+
+    .line 50
+    const/4 v3, 0x4
+
+    if-ge v0, v3, :cond_2
+
+    .line 51
+    :cond_1
+    invoke-interface {v2}, Landroid/database/Cursor;->moveToNext()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 55
+    :cond_2
+    return-object v1
 .end method
 
-
-# virtual methods
-.method public final jO(Ljava/lang/String;)V
-    .locals 4
+.method private static final vU(Ljava/lang/String;)Z
+    .locals 5
 
     .prologue
     const/4 v0, 0x0
 
-    .line 592
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/g;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
+    .line 63
+    sget-object v2, Lcom/tencent/mm/model/i;->bAc:[Ljava/lang/String;
 
-    sget v2, Lcom/tencent/mm/a$n;->scroll_bar_search:I
+    array-length v3, v2
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/ui/contact/AddressUI$a;->getString(I)Ljava/lang/String;
+    move v1, v0
 
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 593
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/g;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/widget/ListView;->setSelection(I)V
-
-    .line 621
-    :cond_0
     :goto_0
-    return-void
+    if-ge v1, v3, :cond_2
 
-    .line 596
+    aget-object v4, v2, v1
+
+    .line 64
+    invoke-virtual {p0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_1
+
+    .line 75
+    :cond_0
+    :goto_1
+    return v0
+
+    .line 63
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/g;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->a(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/a;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "!32@/B4Tb64lLpJvPADYHZ60V72QCl639+9L"
-
-    const-string/jumbo v3, "getSections"
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/contact/a;->jdA:[Ljava/lang/String;
-
-    .line 597
-    if-eqz v1, :cond_0
-
-    .line 601
-    const-string/jumbo v2, "\u2191"
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 602
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/g;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Landroid/widget/ListView;->setSelection(I)V
+    add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 606
+    .line 68
     :cond_2
-    const-string/jumbo v2, "\u2606"
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_4
-
-    .line 607
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/g;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/g;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Landroid/widget/ListView;->getHeaderViewsCount()I
+    invoke-static {p0}, Lcom/tencent/mm/model/i;->dn(Ljava/lang/String;)Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Landroid/widget/ListView;->setSelection(I)V
+    if-nez v1, :cond_0
 
-    goto :goto_0
+    .line 71
+    invoke-static {p0}, Lcom/tencent/mm/model/i;->ea(Ljava/lang/String;)Z
 
-    .line 611
-    :cond_3
-    add-int/lit8 v0, v0, 0x1
+    move-result v1
 
-    :cond_4
-    array-length v2, v1
+    if-nez v1, :cond_0
 
-    if-ge v0, v2, :cond_0
+    .line 75
+    const/4 v0, 0x1
 
-    .line 612
-    aget-object v2, v1, v0
-
-    if-eqz v2, :cond_0
-
-    .line 613
-    aget-object v2, v1, v0
-
-    invoke-virtual {v2, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v2
-
-    if-eqz v2, :cond_3
-
-    .line 616
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/g;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->a(Lcom/tencent/mm/ui/contact/AddressUI$a;)Lcom/tencent/mm/ui/contact/a;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/ui/contact/a;->getPositionForSection(I)I
-
-    move-result v0
-
-    .line 617
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/g;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/g;->jet:Lcom/tencent/mm/ui/contact/AddressUI$a;
-
-    invoke-static {v2}, Lcom/tencent/mm/ui/contact/AddressUI$a;->c(Lcom/tencent/mm/ui/contact/AddressUI$a;)Landroid/widget/ListView;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Landroid/widget/ListView;->getHeaderViewsCount()I
-
-    move-result v2
-
-    add-int/2addr v0, v2
-
-    invoke-virtual {v1, v0}, Landroid/widget/ListView;->setSelection(I)V
-
-    goto :goto_0
+    goto :goto_1
 .end method

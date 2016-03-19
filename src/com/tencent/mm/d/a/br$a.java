@@ -1,15 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import android.net.Uri;
-
 public final class br$a
 {
-  public String[] atX;
-  public int awH = 0;
-  public Context context;
-  public String[] selectionArgs;
-  public Uri uri;
+  public boolean Jq = false;
 }
 
 /* Location:

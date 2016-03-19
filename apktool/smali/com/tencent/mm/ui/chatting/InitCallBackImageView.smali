@@ -6,7 +6,7 @@
 # instance fields
 .field private hasDrawed:Z
 
-.field private jbX:Lcom/tencent/mm/ui/chatting/pg;
+.field private lcq:Lcom/tencent/mm/ui/chatting/ea;
 
 
 # direct methods
@@ -21,7 +21,7 @@
     return-void
 .end method
 
-.method public constructor <init>(Landroid/content/Context;Lcom/tencent/mm/ui/chatting/pg;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/tencent/mm/ui/chatting/ea;)V
     .locals 0
 
     .prologue
@@ -29,7 +29,7 @@
     invoke-direct {p0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     .line 32
-    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/InitCallBackImageView;->jbX:Lcom/tencent/mm/ui/chatting/pg;
+    iput-object p2, p0, Lcom/tencent/mm/ui/chatting/InitCallBackImageView;->lcq:Lcom/tencent/mm/ui/chatting/ea;
 
     .line 33
     return-void
@@ -55,26 +55,26 @@
     iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/InitCallBackImageView;->hasDrawed:Z
 
     .line 42
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/InitCallBackImageView;->jbX:Lcom/tencent/mm/ui/chatting/pg;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/InitCallBackImageView;->lcq:Lcom/tencent/mm/ui/chatting/ea;
 
     if-eqz v0, :cond_0
 
     .line 43
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/InitCallBackImageView;->jbX:Lcom/tencent/mm/ui/chatting/pg;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/InitCallBackImageView;->lcq:Lcom/tencent/mm/ui/chatting/ea;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/chatting/pg;->lb()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/chatting/ea;->kw()V
 
     .line 46
     :cond_0
     return-void
 .end method
 
-.method public setListener(Lcom/tencent/mm/ui/chatting/pg;)V
+.method public setListener(Lcom/tencent/mm/ui/chatting/ea;)V
     .locals 0
 
     .prologue
     .line 49
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/InitCallBackImageView;->jbX:Lcom/tencent/mm/ui/chatting/pg;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/InitCallBackImageView;->lcq:Lcom/tencent/mm/ui/chatting/ea;
 
     .line 50
     return-void

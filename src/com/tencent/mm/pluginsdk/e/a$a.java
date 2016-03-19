@@ -4,7 +4,7 @@ import android.app.Activity;
 
 public abstract interface a$a
 {
-  public abstract boolean F(Activity paramActivity);
+  public abstract boolean O(Activity paramActivity);
 }
 
 /* Location:

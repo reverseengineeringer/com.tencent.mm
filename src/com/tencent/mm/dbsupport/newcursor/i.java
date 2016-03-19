@@ -1,41 +1,59 @@
 package com.tencent.mm.dbsupport.newcursor;
 
+import com.tencent.kingkong.Cursor;
+import com.tencent.kingkong.database.SQLiteCursorDriver;
+import com.tencent.kingkong.database.SQLiteDatabase;
+import com.tencent.kingkong.database.SQLiteDatabase.CursorFactory;
+import com.tencent.kingkong.support.CancellationSignal;
+
 public final class i
+  implements SQLiteCursorDriver
 {
-  public static a bkW;
+  private l bvA;
+  private final CancellationSignal mCancellationSignal;
+  private final SQLiteDatabase mDatabase;
+  private final String mEditTable;
+  private final String mSql;
   
-  public static void a(String paramString1, String paramString2, int paramInt, long paramLong, int[] paramArrayOfInt)
+  public i(SQLiteDatabase paramSQLiteDatabase, String paramString1, String paramString2, CancellationSignal paramCancellationSignal)
   {
-    if (bkW != null) {
-      bkW.b(paramString1, paramString2, paramInt, paramLong, paramArrayOfInt);
+    mDatabase = paramSQLiteDatabase;
+    mEditTable = paramString2;
+    mSql = paramString1;
+    mCancellationSignal = paramCancellationSignal;
+  }
+  
+  public final void cursorClosed() {}
+  
+  public final void cursorDeactivated() {}
+  
+  public final void cursorRequeried(Cursor paramCursor) {}
+  
+  public final Cursor query(SQLiteDatabase.CursorFactory paramCursorFactory, String[] paramArrayOfString)
+  {
+    paramCursorFactory = new l(mDatabase, mSql, mCancellationSignal);
+    try
+    {
+      paramCursorFactory.bindAllArgsAsStrings(paramArrayOfString);
+      paramArrayOfString = new j(this, mEditTable, paramCursorFactory);
+      bvA = paramCursorFactory;
+      return paramArrayOfString;
+    }
+    catch (RuntimeException paramArrayOfString)
+    {
+      paramCursorFactory.close();
+      throw paramArrayOfString;
     }
   }
   
-  public static boolean qN()
+  public final void setBindArguments(String[] paramArrayOfString)
   {
-    if (bkW != null) {
-      return bkW.qN();
-    }
-    return false;
+    bvA.bindAllArgsAsStrings(paramArrayOfString);
   }
   
-  public static long qO()
+  public final String toString()
   {
-    if (bkW != null) {
-      return bkW.qO();
-    }
-    return 10000L;
-  }
-  
-  public static abstract interface a
-  {
-    public abstract void b(String paramString1, String paramString2, int paramInt, long paramLong, int[] paramArrayOfInt);
-    
-    public abstract void dp(String paramString);
-    
-    public abstract boolean qN();
-    
-    public abstract long qO();
+    return "SQLiteDirectCursorDriver: " + mSql;
   }
 }
 

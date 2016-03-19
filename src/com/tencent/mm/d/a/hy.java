@@ -1,26 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class hy
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFf = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public hy()
   {
-    id = "SnsTranslateFinish";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public String aFg;
-    public String azq;
-    public String id;
-    public int type;
+    id = "OmitAllFailSnsMsg";
+    jUI = arR;
   }
 }
 

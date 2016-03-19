@@ -1,54 +1,64 @@
 package com.tencent.mm.protocal.b;
 
 public final class adu
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public String hMd;
-  public boolean hMe;
+  public String eia;
+  public String jAL;
   
-  public final void a(a.a.a.c.a parama)
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    if (hMe) {
-      parama.U(1, hMd);
-    }
-  }
-  
-  public final boolean a(a.a.a.a.a parama, com.tencent.mm.al.a parama1, int paramInt)
-  {
-    parama1 = (adu)parama1;
-    switch (paramInt)
+    if (paramInt == 0)
     {
-    default: 
-      return false;
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      if (jAL != null) {
+        paramVarArgs.d(1, jAL);
+      }
+      if (eia != null) {
+        paramVarArgs.d(2, eia);
+      }
+      return 0;
     }
-    parama1.wT(jMD.readString());
-    return true;
-  }
-  
-  public final int kS()
-  {
-    int i = 0;
-    if (hMe) {
-      i = a.a.a.b.b.a.T(1, hMd) + 0;
+    if (paramInt == 1) {
+      if (jAL == null) {
+        break label234;
+      }
     }
-    return i + 0;
-  }
-  
-  public final byte[] toByteArray()
-  {
-    return super.toByteArray();
-  }
-  
-  public final String toString()
-  {
-    return hMd;
-  }
-  
-  public final adu wT(String paramString)
-  {
-    hMd = paramString;
-    hMe = true;
-    return this;
+    label234:
+    for (paramInt = a.a.a.b.b.a.e(1, jAL) + 0;; paramInt = 0)
+    {
+      int i = paramInt;
+      if (eia != null) {
+        i = paramInt + a.a.a.b.b.a.e(2, eia);
+      }
+      return i;
+      if (paramInt == 2)
+      {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        adu localadu = (adu)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          jAL = maU.readString();
+          return 0;
+        }
+        eia = maU.readString();
+        return 0;
+      }
+      return -1;
+    }
   }
 }
 

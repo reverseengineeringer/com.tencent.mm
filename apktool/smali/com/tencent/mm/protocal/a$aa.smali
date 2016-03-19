@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$aa;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 755
-    const-string/jumbo v0, "getBrandWCPayRequest"
+    .line 1301
+    const-string/jumbo v0, "connectToWiFi"
 
-    const-string/jumbo v1, "get_brand_wcpay_request"
+    const-string/jumbo v1, "connecttowifi"
 
-    const/16 v2, 0x1c
+    const/16 v2, 0x47
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 756
+    .line 1302
     return-void
 .end method

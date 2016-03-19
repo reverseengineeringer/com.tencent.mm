@@ -1,8 +1,12 @@
-.class public interface abstract Lcom/tencent/mm/model/am;
+.class public final Lcom/tencent/mm/model/am;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# virtual methods
-.method public abstract cc(I)V
-.end method
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/model/am$b;,
+        Lcom/tencent/mm/model/am$a;
+    }
+.end annotation

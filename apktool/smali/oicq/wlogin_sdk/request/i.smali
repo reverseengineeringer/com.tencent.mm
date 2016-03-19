@@ -4,71 +4,71 @@
 
 
 # static fields
-.field public static jNH:[B
+.field public static mbT:[B
 
 
 # instance fields
 .field public _uin:J
 
-.field public jNA:Loicq/wlogin_sdk/a/f;
+.field public mbI:Ljava/security/SecureRandom;
 
-.field public jNB:Loicq/wlogin_sdk/a/g;
+.field public mbJ:[B
 
-.field public jNC:J
+.field public mbK:[B
 
-.field public jND:I
+.field public mbL:[B
 
-.field public jNE:J
+.field public mbM:Loicq/wlogin_sdk/a/f;
 
-.field public jNF:I
+.field public mbN:Loicq/wlogin_sdk/a/g;
 
-.field jNG:[B
+.field public mbO:J
 
-.field jNI:[B
+.field public mbP:I
 
-.field jNJ:I
+.field public mbQ:J
 
-.field jNK:[B
+.field public mbR:I
 
-.field jNL:[B
+.field mbS:[B
 
-.field jNM:[B
+.field mbU:[B
 
-.field jNN:[B
+.field mbV:I
 
-.field jNO:[B
+.field mbW:[B
 
-.field jNP:[B
+.field mbX:[B
 
-.field jNQ:I
+.field mbY:[B
 
-.field jNR:I
+.field mbZ:[B
 
-.field jNS:I
+.field public mbq:Landroid/content/Context;
 
-.field jNT:I
+.field mca:[B
 
-.field jNU:[B
+.field mcb:[B
 
-.field jNV:Loicq/wlogin_sdk/tools/ErrMsg;
+.field mcc:I
 
-.field jNW:[B
+.field mcd:I
 
-.field jNX:[B
+.field mce:I
 
-.field jNY:[B
+.field mcf:I
 
-.field jNZ:Loicq/wlogin_sdk/request/c;
+.field mcg:[B
 
-.field public jNe:Landroid/content/Context;
+.field mch:Loicq/wlogin_sdk/tools/ErrMsg;
 
-.field public jNw:Ljava/security/SecureRandom;
+.field mci:[B
 
-.field public jNx:[B
+.field mcj:[B
 
-.field public jNy:[B
+.field mck:[B
 
-.field public jNz:[B
+.field mcl:Loicq/wlogin_sdk/request/c;
 
 
 # direct methods
@@ -81,7 +81,7 @@
 
     new-array v0, v0, [B
 
-    sput-object v0, Loicq/wlogin_sdk/request/i;->jNH:[B
+    sput-object v0, Loicq/wlogin_sdk/request/i;->mbT:[B
 
     return-void
 .end method
@@ -104,151 +104,151 @@
 
     invoke-direct {v0}, Ljava/security/SecureRandom;-><init>()V
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNw:Ljava/security/SecureRandom;
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mbI:Ljava/security/SecureRandom;
 
     .line 18
-    invoke-static {}, Loicq/wlogin_sdk/tools/util;->aVK()[B
+    invoke-static {}, Loicq/wlogin_sdk/tools/util;->boz()[B
 
     move-result-object v0
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNx:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mbJ:[B
 
     .line 21
-    iput-object v3, p0, Loicq/wlogin_sdk/request/i;->jNy:[B
+    iput-object v3, p0, Loicq/wlogin_sdk/request/i;->mbK:[B
 
     .line 24
     const/16 v0, 0x10
 
     new-array v0, v0, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNz:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mbL:[B
 
     .line 27
     new-instance v0, Loicq/wlogin_sdk/a/f;
 
     invoke-direct {v0}, Loicq/wlogin_sdk/a/f;-><init>()V
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNA:Loicq/wlogin_sdk/a/f;
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mbM:Loicq/wlogin_sdk/a/f;
 
     .line 30
     new-instance v0, Loicq/wlogin_sdk/a/g;
 
     invoke-direct {v0}, Loicq/wlogin_sdk/a/g;-><init>()V
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNB:Loicq/wlogin_sdk/a/g;
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mbN:Loicq/wlogin_sdk/a/g;
 
     .line 33
     iput-wide v4, p0, Loicq/wlogin_sdk/request/i;->_uin:J
 
     .line 35
-    iput-wide v4, p0, Loicq/wlogin_sdk/request/i;->jNC:J
+    iput-wide v4, p0, Loicq/wlogin_sdk/request/i;->mbO:J
 
     .line 36
-    iput v2, p0, Loicq/wlogin_sdk/request/i;->jND:I
+    iput v2, p0, Loicq/wlogin_sdk/request/i;->mbP:I
 
     .line 38
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Loicq/wlogin_sdk/request/i;->jNE:J
+    iput-wide v0, p0, Loicq/wlogin_sdk/request/i;->mbQ:J
 
     .line 40
-    iput v2, p0, Loicq/wlogin_sdk/request/i;->jNF:I
+    iput v2, p0, Loicq/wlogin_sdk/request/i;->mbR:I
 
     .line 42
-    iput-object v3, p0, Loicq/wlogin_sdk/request/i;->jNe:Landroid/content/Context;
+    iput-object v3, p0, Loicq/wlogin_sdk/request/i;->mbq:Landroid/content/Context;
 
     .line 44
     new-array v0, v2, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNG:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mbS:[B
 
     .line 46
     new-array v0, v2, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNI:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mbU:[B
 
     .line 47
-    iput v2, p0, Loicq/wlogin_sdk/request/i;->jNJ:I
+    iput v2, p0, Loicq/wlogin_sdk/request/i;->mbV:I
 
     .line 48
     new-array v0, v2, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNK:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mbW:[B
 
     .line 49
     new-array v0, v2, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNL:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mbX:[B
 
     .line 50
     new-array v0, v2, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNM:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mbY:[B
 
     .line 51
     new-array v0, v2, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNN:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mbZ:[B
 
     .line 52
     new-array v0, v2, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNO:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mca:[B
 
     .line 53
     new-array v0, v2, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNP:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mcb:[B
 
     .line 54
-    iput v2, p0, Loicq/wlogin_sdk/request/i;->jNQ:I
+    iput v2, p0, Loicq/wlogin_sdk/request/i;->mcc:I
 
     .line 56
-    iput v2, p0, Loicq/wlogin_sdk/request/i;->jNR:I
+    iput v2, p0, Loicq/wlogin_sdk/request/i;->mcd:I
 
     .line 57
-    iput v2, p0, Loicq/wlogin_sdk/request/i;->jNS:I
+    iput v2, p0, Loicq/wlogin_sdk/request/i;->mce:I
 
     .line 58
-    iput v2, p0, Loicq/wlogin_sdk/request/i;->jNT:I
+    iput v2, p0, Loicq/wlogin_sdk/request/i;->mcf:I
 
     .line 60
     new-array v0, v2, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNU:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mcg:[B
 
     .line 61
     new-instance v0, Loicq/wlogin_sdk/tools/ErrMsg;
 
     invoke-direct {v0}, Loicq/wlogin_sdk/tools/ErrMsg;-><init>()V
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNV:Loicq/wlogin_sdk/tools/ErrMsg;
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mch:Loicq/wlogin_sdk/tools/ErrMsg;
 
     .line 62
     new-array v0, v2, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNW:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mci:[B
 
     .line 63
     const/4 v0, 0x4
 
     new-array v0, v0, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNX:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mcj:[B
 
     .line 65
     new-array v0, v2, [B
 
-    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->jNY:[B
+    iput-object v0, p0, Loicq/wlogin_sdk/request/i;->mck:[B
 
     .line 67
-    iput-object v3, p0, Loicq/wlogin_sdk/request/i;->jNZ:Loicq/wlogin_sdk/request/c;
+    iput-object v3, p0, Loicq/wlogin_sdk/request/i;->mcl:Loicq/wlogin_sdk/request/c;
 
     .line 71
     return-void
 .end method
 
-.method public static aVB()J
+.method public static boq()J
     .locals 4
 
     .prologue
@@ -354,7 +354,7 @@
     move-result-object v2
 
     .line 100
-    invoke-static/range {p13 .. p13}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p13 .. p13}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -368,7 +368,7 @@
 
     move-result-object v2
 
-    invoke-static/range {p14 .. p14}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p14 .. p14}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -383,7 +383,7 @@
     move-result-object v2
 
     .line 101
-    invoke-static/range {p15 .. p15}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p15 .. p15}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -397,7 +397,7 @@
 
     move-result-object v2
 
-    invoke-static/range {p16 .. p16}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p16 .. p16}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -412,7 +412,7 @@
     move-result-object v2
 
     .line 102
-    invoke-static/range {p17 .. p17}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p17 .. p17}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -426,7 +426,7 @@
 
     move-result-object v2
 
-    invoke-static/range {p18 .. p18}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p18 .. p18}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -441,7 +441,7 @@
     move-result-object v2
 
     .line 103
-    invoke-static/range {p19 .. p19}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p19 .. p19}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -455,7 +455,7 @@
 
     move-result-object v2
 
-    invoke-static/range {p20 .. p20}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p20 .. p20}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -470,7 +470,7 @@
     move-result-object v2
 
     .line 104
-    invoke-static/range {p21 .. p21}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p21 .. p21}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -484,7 +484,7 @@
 
     move-result-object v2
 
-    invoke-static/range {p22 .. p22}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p22 .. p22}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -499,7 +499,7 @@
     move-result-object v2
 
     .line 105
-    invoke-static/range {p23 .. p23}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p23 .. p23}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -513,7 +513,7 @@
 
     move-result-object v2
 
-    invoke-static/range {p24 .. p24}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p24 .. p24}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -528,7 +528,7 @@
     move-result-object v2
 
     .line 106
-    invoke-static/range {p25 .. p25}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p25 .. p25}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -542,7 +542,7 @@
 
     move-result-object v2
 
-    invoke-static/range {p26 .. p26}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p26 .. p26}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -557,7 +557,7 @@
     move-result-object v2
 
     .line 107
-    invoke-static/range {p27 .. p27}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p27 .. p27}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -571,7 +571,7 @@
 
     move-result-object v2
 
-    invoke-static/range {p28 .. p28}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static/range {p28 .. p28}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v3
 
@@ -584,7 +584,7 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Loicq/wlogin_sdk/tools/util;->Ct(Ljava/lang/String;)V
+    invoke-static {v2}, Loicq/wlogin_sdk/tools/util;->IN(Ljava/lang/String;)V
 
     .line 108
     const-string/jumbo v3, ""
@@ -614,12 +614,12 @@
 
     move-result-object v2
 
-    invoke-static {v2}, Loicq/wlogin_sdk/tools/util;->Ct(Ljava/lang/String;)V
+    invoke-static {v2}, Loicq/wlogin_sdk/tools/util;->IN(Ljava/lang/String;)V
 
     .line 116
     move-object/from16 v0, p0
 
-    iget-object v2, v0, Loicq/wlogin_sdk/request/i;->jNZ:Loicq/wlogin_sdk/request/c;
+    iget-object v2, v0, Loicq/wlogin_sdk/request/i;->mcl:Loicq/wlogin_sdk/request/c;
 
     move-wide/from16 v3, p1
 
@@ -706,7 +706,7 @@
 
     aget-object v7, p29, v2
 
-    invoke-static {v7}, Loicq/wlogin_sdk/tools/util;->be([B)J
+    invoke-static {v7}, Loicq/wlogin_sdk/tools/util;->bx([B)J
 
     move-result-wide v7
 
@@ -744,7 +744,7 @@
     throw v2
 .end method
 
-.method public final declared-synchronized k(Ljava/lang/Long;)V
+.method public final declared-synchronized g(Ljava/lang/Long;)V
     .locals 1
 
     .prologue
@@ -752,9 +752,9 @@
     monitor-enter p0
 
     :try_start_0
-    iget-object v0, p0, Loicq/wlogin_sdk/request/i;->jNZ:Loicq/wlogin_sdk/request/c;
+    iget-object v0, p0, Loicq/wlogin_sdk/request/i;->mcl:Loicq/wlogin_sdk/request/c;
 
-    invoke-virtual {v0, p1}, Loicq/wlogin_sdk/request/c;->k(Ljava/lang/Long;)V
+    invoke-virtual {v0, p1}, Loicq/wlogin_sdk/request/c;->g(Ljava/lang/Long;)V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
@@ -772,7 +772,7 @@
     throw v0
 .end method
 
-.method public final declared-synchronized p(JJ)Loicq/wlogin_sdk/sharemem/WloginSigInfo;
+.method public final declared-synchronized q(JJ)Loicq/wlogin_sdk/sharemem/WloginSigInfo;
     .locals 3
 
     .prologue
@@ -802,14 +802,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/util;->bV(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Loicq/wlogin_sdk/tools/util;->cP(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 123
-    iget-object v0, p0, Loicq/wlogin_sdk/request/i;->jNZ:Loicq/wlogin_sdk/request/c;
+    iget-object v0, p0, Loicq/wlogin_sdk/request/i;->mcl:Loicq/wlogin_sdk/request/c;
 
     const-wide/32 v1, 0x1f1d5a7a
 
-    invoke-virtual {v0, p1, p2, v1, v2}, Loicq/wlogin_sdk/request/c;->p(JJ)Loicq/wlogin_sdk/sharemem/WloginSigInfo;
+    invoke-virtual {v0, p1, p2, v1, v2}, Loicq/wlogin_sdk/request/c;->q(JJ)Loicq/wlogin_sdk/sharemem/WloginSigInfo;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 

@@ -2,8 +2,10 @@ package com.tencent.mm.storage;
 
 public final class i
 {
-  public static int idd = 3;
-  public static int ide = 10;
+  public static int kaj = 3;
+  public static int kak = 10;
+  
+  public static enum a {}
 }
 
 /* Location:

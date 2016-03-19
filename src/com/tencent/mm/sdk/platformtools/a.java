@@ -9,7 +9,7 @@ public final class a
 {
   /* Error */
   @android.annotation.TargetApi(17)
-  public static void ah(View paramView)
+  public static void ak(View paramView)
   {
     // Byte code:
     //   0: aload_0
@@ -139,7 +139,7 @@ public final class a
     //   227: checkcast 93	android/view/ViewGroup
     //   230: iload_1
     //   231: invokevirtual 101	android/view/ViewGroup:getChildAt	(I)Landroid/view/View;
-    //   234: invokestatic 103	com/tencent/mm/sdk/platformtools/a:ah	(Landroid/view/View;)V
+    //   234: invokestatic 103	com/tencent/mm/sdk/platformtools/a:ak	(Landroid/view/View;)V
     //   237: iload_1
     //   238: iconst_1
     //   239: iadd
@@ -151,7 +151,7 @@ public final class a
     //   248: ldc 107
     //   250: iconst_0
     //   251: anewarray 4	java/lang/Object
-    //   254: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   254: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   257: new 11	java/lang/IncompatibleClassChangeError
     //   260: dup
     //   261: ldc 107
@@ -167,7 +167,7 @@ public final class a
     //   281: ldc 107
     //   283: iconst_0
     //   284: anewarray 4	java/lang/Object
-    //   287: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   287: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   290: new 11	java/lang/IncompatibleClassChangeError
     //   293: dup
     //   294: ldc 107
@@ -183,7 +183,7 @@ public final class a
     //   314: ldc 107
     //   316: iconst_0
     //   317: anewarray 4	java/lang/Object
-    //   320: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   320: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   323: new 11	java/lang/IncompatibleClassChangeError
     //   326: dup
     //   327: ldc 107
@@ -199,7 +199,7 @@ public final class a
     //   347: ldc 107
     //   349: iconst_0
     //   350: anewarray 4	java/lang/Object
-    //   353: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   353: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   356: new 11	java/lang/IncompatibleClassChangeError
     //   359: dup
     //   360: ldc 107
@@ -215,7 +215,7 @@ public final class a
     //   380: ldc 107
     //   382: iconst_0
     //   383: anewarray 4	java/lang/Object
-    //   386: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   386: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   389: new 11	java/lang/IncompatibleClassChangeError
     //   392: dup
     //   393: ldc 107
@@ -231,7 +231,7 @@ public final class a
     //   413: ldc 107
     //   415: iconst_0
     //   416: anewarray 4	java/lang/Object
-    //   419: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   419: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   422: new 11	java/lang/IncompatibleClassChangeError
     //   425: dup
     //   426: ldc 107
@@ -247,7 +247,7 @@ public final class a
     //   446: ldc 107
     //   448: iconst_0
     //   449: anewarray 4	java/lang/Object
-    //   452: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   452: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   455: new 11	java/lang/IncompatibleClassChangeError
     //   458: dup
     //   459: ldc 107
@@ -293,7 +293,7 @@ public final class a
     //   534: checkcast 93	android/view/ViewGroup
     //   537: iload_1
     //   538: invokevirtual 101	android/view/ViewGroup:getChildAt	(I)Landroid/view/View;
-    //   541: invokestatic 103	com/tencent/mm/sdk/platformtools/a:ah	(Landroid/view/View;)V
+    //   541: invokestatic 103	com/tencent/mm/sdk/platformtools/a:ak	(Landroid/view/View;)V
     //   544: iload_1
     //   545: iconst_1
     //   546: iadd
@@ -305,7 +305,7 @@ public final class a
     //   555: ldc 107
     //   557: iconst_0
     //   558: anewarray 4	java/lang/Object
-    //   561: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   561: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   564: new 11	java/lang/IncompatibleClassChangeError
     //   567: dup
     //   568: ldc 107
@@ -321,7 +321,7 @@ public final class a
     //   588: ldc 107
     //   590: iconst_0
     //   591: anewarray 4	java/lang/Object
-    //   594: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   594: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   597: new 11	java/lang/IncompatibleClassChangeError
     //   600: dup
     //   601: ldc 107
@@ -337,7 +337,7 @@ public final class a
     //   621: ldc 107
     //   623: iconst_0
     //   624: anewarray 4	java/lang/Object
-    //   627: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   627: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   630: new 11	java/lang/IncompatibleClassChangeError
     //   633: dup
     //   634: ldc 107
@@ -353,7 +353,7 @@ public final class a
     //   654: ldc 107
     //   656: iconst_0
     //   657: anewarray 4	java/lang/Object
-    //   660: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   660: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   663: new 11	java/lang/IncompatibleClassChangeError
     //   666: dup
     //   667: ldc 107
@@ -369,7 +369,7 @@ public final class a
     //   687: ldc 107
     //   689: iconst_0
     //   690: anewarray 4	java/lang/Object
-    //   693: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   693: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   696: new 11	java/lang/IncompatibleClassChangeError
     //   699: dup
     //   700: ldc 107
@@ -385,7 +385,7 @@ public final class a
     //   720: ldc 107
     //   722: iconst_0
     //   723: anewarray 4	java/lang/Object
-    //   726: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   726: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   729: new 11	java/lang/IncompatibleClassChangeError
     //   732: dup
     //   733: ldc 107
@@ -405,7 +405,7 @@ public final class a
     //   761: ldc 107
     //   763: iconst_0
     //   764: anewarray 4	java/lang/Object
-    //   767: invokestatic 113	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   767: invokestatic 113	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   770: new 11	java/lang/IncompatibleClassChangeError
     //   773: dup
     //   774: ldc 107
@@ -503,7 +503,7 @@ public final class a
     //   137	153	853	java/lang/Exception
   }
   
-  public static void cH(Context paramContext)
+  public static void dj(Context paramContext)
   {
     if (paramContext == null) {}
     for (;;)
@@ -532,7 +532,7 @@ public final class a
               }
               else
               {
-                t.d("!56@/B4Tb64lLpIvitRDGcxLrFItMR5doeHCYKVAPxcMZA0jsRRuvfNPgA==", "fixInputMethodManagerLeak break, context is not suitable, get_context=" + ((View)localObject2).getContext() + " dest_context=" + paramContext);
+                u.d("!56@/B4Tb64lLpIvitRDGcxLrFItMR5doeHCYKVAPxcMZA0jsRRuvfNPgA==", "fixInputMethodManagerLeak break, context is not suitable, get_context=" + ((View)localObject2).getContext() + " dest_context=" + paramContext);
                 return;
               }
             }

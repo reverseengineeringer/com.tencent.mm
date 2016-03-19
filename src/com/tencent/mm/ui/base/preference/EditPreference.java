@@ -1,25 +1,25 @@
 package com.tencent.mm.ui.base.preference;
 
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.res.Resources;
 import android.util.AttributeSet;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.ViewGroup.MarginLayoutParams;
 import android.widget.EditText;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.n;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.ui.base.aa;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.h;
 
 public class EditPreference
   extends Preference
 {
-  private aa arb;
-  private Preference.a iLN;
-  a iLS;
-  private EditText iLT;
+  private h apf;
+  private Preference.a kKX;
+  a kLc;
+  private EditText kLd;
   String value;
   
   public EditPreference(Context paramContext, AttributeSet paramAttributeSet)
@@ -34,14 +34,14 @@ public class EditPreference
   
   public final void a(Preference.a parama)
   {
-    iLN = parama;
+    kKX = parama;
   }
   
   public final void showDialog()
   {
-    EditText localEditText;
-    if (iLT != null) {
-      localEditText = iLT;
+    final EditText localEditText;
+    if (kLd != null) {
+      localEditText = kLd;
     }
     for (;;)
     {
@@ -49,7 +49,7 @@ public class EditPreference
       if ((localObject instanceof ViewGroup.MarginLayoutParams))
       {
         localObject = (ViewGroup.MarginLayoutParams)localObject;
-        int i = localEditText.getResources().getDimensionPixelSize(a.g.LargePadding);
+        int i = localEditText.getResources().getDimensionPixelSize(2131034580);
         leftMargin = i;
         rightMargin = i;
         topMargin = i;
@@ -58,7 +58,30 @@ public class EditPreference
       if (localEditText.getParent() != null) {
         ((ViewGroup)localEditText.getParent()).removeView(localEditText);
       }
-      arb = h.a(mContext, getTitle().toString(), localEditText, a.w(mContext, a.n.app_ok), a.w(mContext, a.n.app_cancel), new j(this, localEditText), new k(this));
+      apf = g.a(mContext, getTitle().toString(), localEditText, a.A(mContext, 2131430888), a.A(mContext, 2131430884), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          if (EditPreference.a(EditPreference.this) != null) {
+            EditPreference.a(EditPreference.this).dismiss();
+          }
+          value = localEditText.getText().toString();
+          if (EditPreference.b(EditPreference.this) != null) {
+            EditPreference.b(EditPreference.this).bdp();
+          }
+          if (EditPreference.c(EditPreference.this) != null) {
+            EditPreference.c(EditPreference.this).a(EditPreference.this, EditPreference.d(EditPreference.this));
+          }
+        }
+      }, new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          if (EditPreference.a(EditPreference.this) != null) {
+            EditPreference.a(EditPreference.this).dismiss();
+          }
+        }
+      });
       return;
       localEditText = new EditText(mContext);
       localEditText.setLayoutParams(new ViewGroup.LayoutParams(-1, -2));
@@ -69,7 +92,7 @@ public class EditPreference
   
   public static abstract interface a
   {
-    public abstract void aNy();
+    public abstract void bdp();
   }
 }
 

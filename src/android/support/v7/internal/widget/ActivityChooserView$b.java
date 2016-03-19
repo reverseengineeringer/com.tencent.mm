@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ResolveInfo;
-import android.support.v4.view.h;
+import android.support.v4.view.d;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnLongClickListener;
@@ -21,23 +21,23 @@ final class ActivityChooserView$b
   
   public final void onClick(View paramView)
   {
-    if (paramView == ActivityChooserView.e(pV))
+    if (paramView == ActivityChooserView.e(oZ))
     {
-      pV.co();
-      paramView = apV).pW.ch();
-      int i = apV).pW.a(paramView);
-      paramView = apV).pW.F(i);
+      oZ.bY();
+      paramView = aoZ).pa.bR();
+      int i = aoZ).pa.a(paramView);
+      paramView = aoZ).pa.G(i);
       if (paramView != null)
       {
         paramView.addFlags(524288);
-        pV.getContext().startActivity(paramView);
+        oZ.getContext().startActivity(paramView);
       }
       return;
     }
-    if (paramView == ActivityChooserView.f(pV))
+    if (paramView == ActivityChooserView.f(oZ))
     {
-      ActivityChooserView.a(pV, false);
-      ActivityChooserView.a(pV, ActivityChooserView.g(pV));
+      ActivityChooserView.a(oZ, false);
+      ActivityChooserView.a(oZ, ActivityChooserView.g(oZ));
       return;
     }
     throw new IllegalArgumentException();
@@ -45,11 +45,11 @@ final class ActivityChooserView$b
   
   public final void onDismiss()
   {
-    if (ActivityChooserView.h(pV) != null) {
-      ActivityChooserView.h(pV).onDismiss();
+    if (ActivityChooserView.h(oZ) != null) {
+      ActivityChooserView.h(oZ).onDismiss();
     }
-    if (pV.pM != null) {
-      pV.pM.k(false);
+    if (oZ.oQ != null) {
+      oZ.oQ.k(false);
     }
   }
   
@@ -60,42 +60,42 @@ final class ActivityChooserView$b
     default: 
       throw new IllegalArgumentException();
     case 1: 
-      ActivityChooserView.a(pV, Integer.MAX_VALUE);
+      ActivityChooserView.a(oZ, Integer.MAX_VALUE);
     }
     do
     {
       return;
-      pV.co();
-      if (!ActivityChooserView.d(pV)) {
+      oZ.bY();
+      if (!ActivityChooserView.d(oZ)) {
         break;
       }
     } while (paramInt <= 0);
-    paramView = apV).pW;
+    paramView = aoZ).pa;
     for (;;)
     {
-      synchronized (pq)
+      synchronized (ou)
       {
-        paramView.ci();
-        i.a locala1 = (i.a)pr.get(paramInt);
-        i.a locala2 = (i.a)pr.get(0);
+        paramView.bS();
+        b.a locala1 = (b.a)ov.get(paramInt);
+        b.a locala2 = (b.a)ov.get(0);
         if (locala2 != null)
         {
           f = weight - weight + 5.0F;
-          paramView.a(new i.c(new ComponentName(resolveInfo.activityInfo.packageName, resolveInfo.activityInfo.name), System.currentTimeMillis(), f));
+          paramView.a(new b.c(new ComponentName(resolveInfo.activityInfo.packageName, resolveInfo.activityInfo.name), System.currentTimeMillis(), f));
           return;
         }
       }
       float f = 1.0F;
     }
-    if (apV).pY) {}
+    if (aoZ).pc) {}
     for (;;)
     {
-      ??? = apV).pW.F(paramInt);
+      ??? = aoZ).pa.G(paramInt);
       if (??? == null) {
         break;
       }
       ???.addFlags(524288);
-      pV.getContext().startActivity(???);
+      oZ.getContext().startActivity(???);
       return;
       paramInt += 1;
     }
@@ -103,12 +103,12 @@ final class ActivityChooserView$b
   
   public final boolean onLongClick(View paramView)
   {
-    if (paramView == ActivityChooserView.e(pV))
+    if (paramView == ActivityChooserView.e(oZ))
     {
-      if (ActivityChooserView.a(pV).getCount() > 0)
+      if (ActivityChooserView.a(oZ).getCount() > 0)
       {
-        ActivityChooserView.a(pV, true);
-        ActivityChooserView.a(pV, ActivityChooserView.g(pV));
+        ActivityChooserView.a(oZ, true);
+        ActivityChooserView.a(oZ, ActivityChooserView.g(oZ));
       }
       return true;
     }

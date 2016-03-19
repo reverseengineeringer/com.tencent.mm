@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/pluginsdk/k;
+.implements Lcom/tencent/mm/pluginsdk/h;
 
 
 # direct methods
@@ -15,15 +15,15 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 14
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "UpdateWeChat"
 
-    new-instance v2, Lcom/tencent/mm/sandbox/updater/an;
+    new-instance v2, Lcom/tencent/mm/sandbox/updater/g;
 
-    invoke-direct {v2}, Lcom/tencent/mm/sandbox/updater/an;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/sandbox/updater/g;-><init>()V
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 15
     return-void
@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/pluginsdk/i;)V
+.method public final a(Lcom/tencent/mm/pluginsdk/f;)V
     .locals 0
 
     .prologue
@@ -39,7 +39,7 @@
     return-void
 .end method
 
-.method public final a(Lcom/tencent/mm/pluginsdk/j;)V
+.method public final a(Lcom/tencent/mm/pluginsdk/g;)V
     .locals 0
 
     .prologue

@@ -15,30 +15,21 @@
 
 
 # instance fields
-.field public aAC:Z
-
-.field public aAQ:Ljava/lang/String;
-
-.field public aAR:Ljava/util/LinkedList;
-
-.field public atZ:I
+.field public ayW:J
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 2
 
     .prologue
-    const/4 v0, 0x0
-
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 17
-    iput v0, p0, Lcom/tencent/mm/d/a/ek$a;->atZ:I
+    .line 15
+    const-wide/16 v0, 0x0
 
-    .line 18
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ek$a;->aAC:Z
+    iput-wide v0, p0, Lcom/tencent/mm/d/a/ek$a;->ayW:J
 
     return-void
 .end method

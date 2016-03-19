@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="layout" name="qd">r/j/qd.xml</item>
+    <item type="layout" name="a0k">r/j/a0k.xml</item>
+    <item type="layout" name="a0l">r/j/a0l.xml</item>
+</resources>

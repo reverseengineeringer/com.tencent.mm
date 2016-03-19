@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract ajZ()V
+.method public abstract awE()V
 .end method
 
-.method public abstract aka()V
+.method public abstract onHide()V
 .end method

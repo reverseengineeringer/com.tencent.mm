@@ -1,53 +1,99 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.network.a;
-import com.tencent.mm.network.aw;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import com.tencent.mm.network.z;
-import com.tencent.mm.platformtools.ad;
-import com.tencent.mm.platformtools.g;
-import com.tencent.mm.sdk.platformtools.aj.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class e
-  implements aj.a
+public final class e
 {
-  e(CoreService paramCoreService) {}
+  NetworkInfo bmF = null;
+  WifiInfo bmG = null;
   
-  public final boolean lO()
+  final boolean mQ()
   {
-    g localg = CoreService.a(bbW);
-    int i;
-    if (ad.Z(bUT) < bUR)
+    try
     {
-      t.i("!44@/B4Tb64lLpIs4rU5akH/Kq28MqWPoDJwMR5odbcFtuM=", "frequency limited, last=" + bUT + ", cur=" + ad.DN() + ", retries=" + bUU);
-      if (bUU <= 0)
+      Object localObject = (ConnectivityManager)z.getContext().getSystemService("connectivity");
+      if (localObject == null)
       {
-        i = 0;
-        if (i != 0) {
-          break label136;
+        u.w("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "can't get ConnectivityManager");
+        bmF = null;
+        bmG = null;
+        return false;
+      }
+      try
+      {
+        localObject = ((ConnectivityManager)localObject).getActiveNetworkInfo();
+        if (localObject == null)
+        {
+          u.w("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "ActiveNetwork is null, has no network");
+          bmF = null;
+          bmG = null;
+          return false;
         }
-        t.e("!32@/B4Tb64lLpIzvC/moQitzBn6RBAuk+sd", "checker frequency limited");
-        return true;
+      }
+      catch (Exception localException1)
+      {
+        for (;;)
+        {
+          u.e("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "getActiveNetworkInfo failed.");
+          localNetworkInfo = null;
+        }
+      }
+      if (localNetworkInfo.getType() != 1) {
+        break label411;
+      }
+      i = 1;
+    }
+    catch (Exception localException2)
+    {
+      for (;;)
+      {
+        NetworkInfo localNetworkInfo;
+        break;
+        WifiInfo localWifiInfo = null;
+        continue;
+        label411:
+        int i = 0;
       }
     }
-    for (bUU -= 1;; bUU = bUS)
+    if (i != 0)
     {
-      bUT = ad.DN();
-      i = 1;
-      break;
+      localWifiInfo = ((WifiManager)z.getContext().getSystemService("wifi")).getConnectionInfo();
+      if ((localWifiInfo != null) && (bmG != null) && (bmG.getBSSID().equals(localWifiInfo.getBSSID())) && (bmG.getSSID().equals(localWifiInfo.getSSID())) && (bmG.getNetworkId() == localWifiInfo.getNetworkId()))
+      {
+        u.w("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "Same Wifi, do not NetworkChanged");
+        return false;
+      }
+      u.d("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "New Wifi Info:%s", new Object[] { localWifiInfo });
+      u.d("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "OldWifi Info:%s", new Object[] { bmG });
+      if (i == 0)
+      {
+        u.d("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "New NetworkInfo:%s", new Object[] { localNetworkInfo });
+        if (bmF != null) {
+          u.d("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "Old NetworkInfo:%s", new Object[] { bmF });
+        }
+      }
+      bmF = localNetworkInfo;
+      bmG = localWifiInfo;
     }
-    label136:
-    t.i("!32@/B4Tb64lLpIzvC/moQitzBn6RBAuk+sd", "start checker, borast NotifyReceiver");
-    boolean bool1 = bn.J(bbbW).bRV.sY());
-    boolean bool2 = aw.CZ().CK();
-    if ((!bool1) && (!bool2) && (af.a(1, 0, null, bbbW).bRV.sY(), bn.DM())))
+    else
     {
-      t.i("!32@/B4Tb64lLpIzvC/moQitzBn6RBAuk+sd", "deal with notify sync in push");
-      return true;
+      if ((bmF != null) && (bmF.getExtraInfo() != null) && (localNetworkInfo.getExtraInfo() != null) && (bmF.getExtraInfo().equals(localNetworkInfo.getExtraInfo())) && (bmF.getSubtype() == localNetworkInfo.getSubtype()) && (bmF.getType() == localNetworkInfo.getType()))
+      {
+        u.w("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "Same Network, do not NetworkChanged");
+        return false;
+      }
+      if ((bmF != null) && (bmF.getExtraInfo() == null) && (localNetworkInfo.getExtraInfo() == null) && (bmF.getSubtype() == localNetworkInfo.getSubtype()) && (bmF.getType() == localNetworkInfo.getType()))
+      {
+        u.w("!44@/B4Tb64lLpJlhWc9y/UzPJTVRF2jtCjrV+Hu9B+ktCI=", "Same Network, do not NetworkChanged");
+        return false;
+      }
     }
-    t.i("!32@/B4Tb64lLpIzvC/moQitzBn6RBAuk+sd", "deal with notify sync to mm by broast, isSessionKeyNull:%b, isMMProcessExist:%b", new Object[] { Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
-    CoreService.mO();
     return true;
   }
 }

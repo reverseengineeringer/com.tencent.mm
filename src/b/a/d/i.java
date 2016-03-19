@@ -6,8 +6,8 @@ import java.io.Serializable;
 public final class i
   implements Serializable
 {
-  public final String hGq;
-  private final String jPP;
+  public final String jzR;
+  private final String mea;
   public final String token;
   
   public i(String paramString1, String paramString2)
@@ -17,11 +17,11 @@ public final class i
   
   public i(String paramString1, String paramString2, String paramString3)
   {
-    d.d(paramString1, "Token can't be null");
-    d.d(paramString2, "Secret can't be null");
+    d.c(paramString1, "Token can't be null");
+    d.c(paramString2, "Secret can't be null");
     token = paramString1;
-    hGq = paramString2;
-    jPP = paramString3;
+    jzR = paramString2;
+    mea = paramString3;
   }
   
   public final boolean equals(Object paramObject)
@@ -34,18 +34,18 @@ public final class i
         return false;
       }
       paramObject = (i)paramObject;
-    } while ((token.equals(token)) && (hGq.equals(hGq)));
+    } while ((token.equals(token)) && (jzR.equals(jzR)));
     return false;
   }
   
   public final int hashCode()
   {
-    return token.hashCode() * 31 + hGq.hashCode();
+    return token.hashCode() * 31 + jzR.hashCode();
   }
   
   public final String toString()
   {
-    return String.format("Token[%s , %s]", new Object[] { token, hGq });
+    return String.format("Token[%s , %s]", new Object[] { token, jzR });
   }
 }
 

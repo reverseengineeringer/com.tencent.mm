@@ -5,17 +5,17 @@ import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.network.aw;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.sdk.platformtools.x;
+import com.tencent.mm.network.z;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.w;
 
 public class MMReceivers$AlarmReceiver
   extends BroadcastReceiver
 {
-  public static void ag(Context paramContext)
+  public static void ap(Context paramContext)
   {
-    long l = x.aEM();
-    t.d("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "bumper comes, next=" + l);
+    long l = w.aUE();
+    u.d("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "bumper comes, next=" + l);
     if (l > 1860000L) {
       return;
     }
@@ -24,11 +24,11 @@ public class MMReceivers$AlarmReceiver
     }
     for (;;)
     {
-      t.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "reset bumper, interval=" + l);
+      u.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "reset bumper, interval=" + l);
       AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
       if (localAlarmManager == null)
       {
-        t.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep bumper failed, null am");
+        u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep bumper failed, null am");
         return;
       }
       paramContext = PendingIntent.getBroadcast(paramContext, 1, new Intent(paramContext, AlarmReceiver.class).putExtra("MMBoot_Bump", true), 268435456);
@@ -37,11 +37,11 @@ public class MMReceivers$AlarmReceiver
     }
   }
   
-  public static void ah(Context paramContext)
+  public static void aq(Context paramContext)
   {
     AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
     if (localAlarmManager == null) {
-      t.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "stop bumper failed, null am");
+      u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "stop bumper failed, null am");
     }
     do
     {
@@ -52,16 +52,16 @@ public class MMReceivers$AlarmReceiver
     paramContext.cancel();
   }
   
-  public static void ai(Context paramContext)
+  public static void ar(Context paramContext)
   {
-    t.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker");
+    u.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker");
     AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
     if (localAlarmManager == null)
     {
-      t.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker failed, null am");
+      u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker failed, null am");
       return;
     }
-    if (aw.CU()) {}
+    if (z.Fb()) {}
     for (int i = 300000;; i = 900000)
     {
       paramContext = PendingIntent.getBroadcast(paramContext, 0, new Intent(paramContext, AlarmReceiver.class), 268435456);
@@ -70,12 +70,12 @@ public class MMReceivers$AlarmReceiver
     }
   }
   
-  public static void aj(Context paramContext)
+  public static void as(Context paramContext)
   {
-    t.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "stop awaker");
+    u.w("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "stop awaker");
     AlarmManager localAlarmManager = (AlarmManager)paramContext.getSystemService("alarm");
     if (localAlarmManager == null) {
-      t.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker failed, null am");
+      u.e("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "keep awaker failed, null am");
     }
     do
     {
@@ -93,15 +93,15 @@ public class MMReceivers$AlarmReceiver
     {
       return;
       boolean bool = paramIntent.getBooleanExtra("MMBoot_Bump", false);
-      t.i("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "[ALARM NOTIFICATION] bump:" + bool);
+      u.i("!32@/B4Tb64lLpIvyjO6AwQ5uH77/zxuQ2vb", "[ALARM NOTIFICATION] bump:" + bool);
       if (bool)
       {
-        ag(paramContext);
+        ap(paramContext);
         return;
       }
-    } while (f.p(paramContext, "alarm"));
-    aj(paramContext);
-    t.appenderFlush();
+    } while (b.q(paramContext, "alarm"));
+    as(paramContext);
+    u.appenderFlush();
   }
 }
 

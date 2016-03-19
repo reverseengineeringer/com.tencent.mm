@@ -15,10 +15,10 @@
 
 
 # instance fields
-.field aF:Landroid/support/v4/app/Fragment;
+.field aJ:Landroid/support/v4/app/Fragment;
 
-.field final cU:Ljava/lang/Class;
+.field final ck:Ljava/lang/Class;
 
-.field final cV:Landroid/os/Bundle;
+.field final cl:Landroid/os/Bundle;
 
 .field final tag:Ljava/lang/String;

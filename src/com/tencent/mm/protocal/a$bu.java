@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bu
-  extends a.c
+  extends a.e
 {
   public a$bu()
   {
-    super("pauseVoice", "", 100, false);
+    super("jumpToBizProfile", "jump_to_biz_profile", 61, true);
   }
 }
 

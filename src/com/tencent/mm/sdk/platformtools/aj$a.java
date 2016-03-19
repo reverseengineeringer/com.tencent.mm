@@ -1,8 +1,15 @@
 package com.tencent.mm.sdk.platformtools;
 
-public abstract interface aj$a
+import java.util.LinkedList;
+import java.util.List;
+
+public final class aj$a
 {
-  public abstract boolean lO();
+  String jWM;
+  String jWN;
+  int jWO = 10;
+  int jWP = 20;
+  List jWQ = new LinkedList();
 }
 
 /* Location:

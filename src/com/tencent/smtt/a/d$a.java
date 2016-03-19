@@ -1,9 +1,10 @@
 package com.tencent.smtt.a;
 
-abstract class d$a
+import java.io.File;
+
+public abstract interface d$a
 {
-  public int op;
-  public byte[] output;
+  public abstract boolean e(File paramFile1, File paramFile2);
 }
 
 /* Location:

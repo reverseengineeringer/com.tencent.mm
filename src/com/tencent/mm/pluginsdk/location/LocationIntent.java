@@ -8,30 +8,30 @@ import com.tencent.mm.modelgeo.Addr;
 public class LocationIntent
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new b();
-  public double aCl;
-  public double aCm;
-  public int aCn = 0;
-  public Addr bAW = null;
-  public String dHq;
-  public String dMF = "";
-  public String gKU = "";
-  public int gKV = 0;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  public int aBp = 0;
+  public Addr bOh = null;
+  public String eJj;
+  public String eLJ = "";
+  public String izE = "";
+  public int izF = 0;
   public String label = "";
+  public double lat;
+  public double lng;
   
-  public final String Gs()
+  public final String ID()
   {
     StringBuffer localStringBuffer = new StringBuffer();
-    localStringBuffer.append("lat " + aCl + ";");
-    localStringBuffer.append("lng " + aCm + ";");
-    localStringBuffer.append("scale " + aCn + ";");
+    localStringBuffer.append("lat " + lat + ";");
+    localStringBuffer.append("lng " + lng + ";");
+    localStringBuffer.append("scale " + aBp + ";");
     localStringBuffer.append("label " + label + ";");
-    localStringBuffer.append("poiname " + dMF + ";");
-    localStringBuffer.append("infourl " + gKU + ";");
-    localStringBuffer.append("locTypeId " + dHq + ";");
-    localStringBuffer.append("poiType " + gKV + ";");
-    if (bAW != null) {
-      localStringBuffer.append("addr " + bAW.toString() + ";");
+    localStringBuffer.append("poiname " + eLJ + ";");
+    localStringBuffer.append("infourl " + izE + ";");
+    localStringBuffer.append("locTypeId " + eJj + ";");
+    localStringBuffer.append("poiType " + izF + ";");
+    if (bOh != null) {
+      localStringBuffer.append("addr " + bOh.toString() + ";");
     }
     return localStringBuffer.toString();
   }
@@ -43,15 +43,15 @@ public class LocationIntent
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeDouble(aCl);
-    paramParcel.writeDouble(aCm);
-    paramParcel.writeInt(aCn);
+    paramParcel.writeDouble(lat);
+    paramParcel.writeDouble(lng);
+    paramParcel.writeInt(aBp);
     paramParcel.writeString(label);
-    paramParcel.writeString(dMF);
-    paramParcel.writeString(gKU);
-    paramParcel.writeString(dHq);
-    paramParcel.writeInt(gKV);
-    paramParcel.writeParcelable(bAW, paramInt);
+    paramParcel.writeString(eLJ);
+    paramParcel.writeString(izE);
+    paramParcel.writeString(eJj);
+    paramParcel.writeInt(izF);
+    paramParcel.writeParcelable(bOh, paramInt);
   }
 }
 

@@ -2,6 +2,7 @@ package com.tencent.mm.ui.chatting;
 
 import android.view.View;
 import android.view.animation.Animation;
+import java.util.List;
 
 abstract class ChattingAnimFrame$a
   extends Animation
@@ -10,11 +11,6 @@ abstract class ChattingAnimFrame$a
   View targetView;
   
   ChattingAnimFrame$a(ChattingAnimFrame paramChattingAnimFrame) {}
-  
-  public final void nZ(int paramInt)
-  {
-    duration = 100;
-  }
 }
 
 /* Location:

@@ -2,8 +2,13 @@ package com.tencent.mm.d.a;
 
 public final class hu$a
 {
-  public boolean aFb = false;
-  public long ayS = 0L;
+  public String field_dataId;
+  public long field_favLocalId;
+  public int field_localId = 0;
+  public int field_offset;
+  public String field_path;
+  public int field_status;
+  public int field_totalLen;
 }
 
 /* Location:

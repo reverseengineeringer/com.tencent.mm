@@ -13,27 +13,27 @@
 
 
 # static fields
-.field public static final bJB:I
+.field public static final bZl:I
 
-.field public static final bJC:Landroid/text/TextPaint;
+.field public static final bZm:Landroid/text/TextPaint;
 
-.field public static final bJD:I
+.field public static final bZn:I
 
-.field public static final bJE:Landroid/text/TextPaint;
+.field public static final bZo:Landroid/text/TextPaint;
 
 
 # instance fields
-.field public bII:Ljava/lang/String;
+.field public aEy:Ljava/lang/String;
 
-.field public cqE:Lcom/tencent/mm/storage/k;
+.field public cId:Lcom/tencent/mm/storage/k;
 
-.field public cuh:Z
+.field public cLD:Z
 
-.field public final dJX:I
+.field public final eLV:I
 
-.field public jgE:Z
+.field public lkT:Z
 
-.field public jio:Z
+.field public lmN:Z
 
 .field public final position:I
 
@@ -44,58 +44,58 @@
 
     .prologue
     .line 28
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->NormalTextSize:I
+    const v1, 0x7f0501c4
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ao/a;->v(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->z(Landroid/content/Context;I)I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/contact/a/a;->bJB:I
+    sput v0, Lcom/tencent/mm/ui/contact/a/a;->bZl:I
 
     .line 29
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->HintTextSize:I
+    const v1, 0x7f0501c5
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ao/a;->v(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->z(Landroid/content/Context;I)I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/ui/contact/a/a;->bJD:I
+    sput v0, Lcom/tencent/mm/ui/contact/a/a;->bZn:I
 
     .line 30
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/ui/contact/a/a;->bJC:Landroid/text/TextPaint;
+    sput-object v0, Lcom/tencent/mm/ui/contact/a/a;->bZm:Landroid/text/TextPaint;
 
     .line 31
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0}, Landroid/text/TextPaint;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/ui/contact/a/a;->bJE:Landroid/text/TextPaint;
+    sput-object v0, Lcom/tencent/mm/ui/contact/a/a;->bZo:Landroid/text/TextPaint;
 
     .line 36
-    sget-object v0, Lcom/tencent/mm/ui/contact/a/a;->bJC:Landroid/text/TextPaint;
+    sget-object v0, Lcom/tencent/mm/ui/contact/a/a;->bZm:Landroid/text/TextPaint;
 
-    sget v1, Lcom/tencent/mm/ui/contact/a/a;->bJB:I
+    sget v1, Lcom/tencent/mm/ui/contact/a/a;->bZl:I
 
     int-to-float v1, v1
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
     .line 37
-    sget-object v0, Lcom/tencent/mm/ui/contact/a/a;->bJE:Landroid/text/TextPaint;
+    sget-object v0, Lcom/tencent/mm/ui/contact/a/a;->bZo:Landroid/text/TextPaint;
 
-    sget v1, Lcom/tencent/mm/ui/contact/a/a;->bJD:I
+    sget v1, Lcom/tencent/mm/ui/contact/a/a;->bZn:I
 
     int-to-float v1, v1
 
@@ -113,7 +113,7 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 49
-    iput p1, p0, Lcom/tencent/mm/ui/contact/a/a;->dJX:I
+    iput p1, p0, Lcom/tencent/mm/ui/contact/a/a;->eLV:I
 
     .line 50
     iput p2, p0, Lcom/tencent/mm/ui/contact/a/a;->position:I
@@ -143,20 +143,20 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 52
     return-void
 .end method
 
-.method protected static b(Landroid/content/Context;Landroid/text/Spannable;I)Landroid/text/SpannableString;
+.method protected static a(Landroid/content/Context;Landroid/text/Spannable;I)Landroid/text/SpannableString;
     .locals 8
 
     .prologue
     const/4 v1, 0x0
 
     .line 136
-    invoke-static {p0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/d/i;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
+    invoke-static {p0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/d/e;->a(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/text/SpannableString;
 
     move-result-object v2
 
@@ -214,11 +214,11 @@
 
 
 # virtual methods
-.method public abstract ako()Lcom/tencent/mm/ui/contact/a/a$b;
+.method public abstract ajt()Lcom/tencent/mm/ui/contact/a/a$b;
 .end method
 
-.method public abstract akp()Lcom/tencent/mm/ui/contact/a/a$a;
+.method public abstract awR()Lcom/tencent/mm/ui/contact/a/a$a;
 .end method
 
-.method public abstract dK(Landroid/content/Context;)V
+.method public abstract er(Landroid/content/Context;)V
 .end method

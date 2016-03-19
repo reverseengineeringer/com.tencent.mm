@@ -1,33 +1,23 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
-import org.json.JSONArray;
+import com.tencent.mm.sdk.c.b;
 
 public final class ar
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avx = new a();
-  public b avy = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atS = new a();
   
   public ar()
   {
-    id = "ExDeviceGetDeviceInfos";
-    hXT = atO;
+    id = "ConsumedCouponCardCode";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String avt;
-    public Context context;
-  }
-  
-  public static final class b
-  {
-    public boolean avu;
-    public JSONArray avz;
+    public int arU = 0;
   }
 }
 

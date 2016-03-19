@@ -1,536 +1,423 @@
 package android.support.v7.internal.view.menu;
 
-import android.content.ActivityNotFoundException;
-import android.content.Context;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
-import android.support.v4.a.a.b;
-import android.support.v4.view.h;
-import android.support.v4.view.k.e;
+import android.support.v4.view.d.b;
+import android.support.v4.view.g.e;
 import android.view.ActionProvider;
+import android.view.CollapsibleActionView;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.view.MenuItem;
 import android.view.MenuItem.OnActionExpandListener;
 import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.SubMenu;
 import android.view.View;
-import android.view.ViewDebug.CapturedViewProperty;
-import java.util.ArrayList;
+import android.widget.FrameLayout;
 
-public final class i
-  implements b
+class i
+  extends c
+  implements android.support.v4.a.a.b
 {
-  static String nm;
-  static String nn;
-  static String no;
-  static String np;
-  private final int cZ;
-  g jH;
-  private final int ld;
-  private final int le;
-  final int lf;
-  private CharSequence lg;
-  private CharSequence lh;
-  private Intent li;
-  private char lj;
-  char lk;
-  private Drawable ll;
-  private int lm = 0;
-  private MenuItem.OnMenuItemClickListener ln;
-  private int lo = 16;
-  private s ne;
-  private Runnable nf;
-  int ng = 0;
-  private View nh;
-  h ni;
-  private k.e nj;
-  private boolean nk = false;
-  ContextMenu.ContextMenuInfo nl;
+  private final boolean mw;
+  private boolean mx;
+  MenuItem my;
   
-  i(g paramg, int paramInt1, int paramInt2, int paramInt3, int paramInt4, CharSequence paramCharSequence, int paramInt5)
+  i(MenuItem paramMenuItem)
   {
-    jH = paramg;
-    cZ = paramInt2;
-    ld = paramInt1;
-    le = paramInt3;
-    lf = paramInt4;
-    lg = paramCharSequence;
-    ng = paramInt5;
+    this(paramMenuItem, true);
   }
   
-  private b E(View paramView)
+  i(MenuItem paramMenuItem, boolean paramBoolean)
   {
-    nh = paramView;
-    ni = null;
-    if ((paramView != null) && (paramView.getId() == -1) && (cZ > 0)) {
-      paramView.setId(cZ);
-    }
-    jH.bJ();
-    return this;
+    super(paramMenuItem);
+    my = paramMenuItem;
+    mx = paramMenuItem.isVisible();
+    mw = paramBoolean;
   }
   
-  private void u(boolean paramBoolean)
+  public final android.support.v4.a.a.b a(android.support.v4.view.d paramd)
   {
-    int j = lo;
-    int k = lo;
-    if (paramBoolean) {}
-    for (int i = 2;; i = 0)
+    MenuItem localMenuItem = my;
+    if (paramd != null) {}
+    for (paramd = b(paramd);; paramd = null)
     {
-      lo = (i | k & 0xFFFFFFFD);
-      if (j != lo) {
-        jH.s(false);
-      }
-      return;
-    }
-  }
-  
-  public final b a(h paramh)
-  {
-    if (ni == paramh) {}
-    do
-    {
+      localMenuItem.setActionProvider(paramd);
       return this;
-      nh = null;
-      if (ni != null) {
-        ni.a(null);
-      }
-      ni = paramh;
-      jH.s(true);
-    } while (paramh == null);
-    paramh.a(new j(this));
-    return this;
-  }
-  
-  public final b a(k.e parame)
-  {
-    nj = parame;
-    return this;
-  }
-  
-  final CharSequence a(p.a parama)
-  {
-    if ((parama != null) && (parama.bs())) {
-      return getTitleCondensed();
     }
-    return getTitle();
   }
   
-  final void b(s params)
+  public final android.support.v4.a.a.b a(g.e parame)
   {
-    ne = params;
-    params.setHeaderTitle(getTitle());
-  }
-  
-  public final boolean bP()
-  {
-    if ((ln != null) && (ln.onMenuItemClick(this))) {}
-    while (jH.a(jH.bN(), this)) {
-      return true;
-    }
-    if (nf != null)
+    MenuItem localMenuItem = my;
+    if (parame != null) {}
+    for (parame = new c(parame);; parame = null)
     {
-      nf.run();
-      return true;
+      localMenuItem.setOnActionExpandListener(parame);
+      return null;
     }
-    if (li != null) {
-      try
-      {
-        jH.mContext.startActivity(li);
-        return true;
-      }
-      catch (ActivityNotFoundException localActivityNotFoundException) {}
+  }
+  
+  a b(android.support.v4.view.d paramd)
+  {
+    return new a(paramd);
+  }
+  
+  final boolean bG()
+  {
+    if (mx) {
+      my.getActionProvider();
     }
     return false;
   }
   
-  final boolean bQ()
+  public boolean collapseActionView()
   {
-    return (jH.bG()) && (lk != 0);
+    return my.collapseActionView();
   }
   
-  public final boolean bR()
+  public boolean expandActionView()
   {
-    return (lo & 0x4) != 0;
+    return my.expandActionView();
   }
   
-  public final boolean bS()
+  public ActionProvider getActionProvider()
   {
-    return (lo & 0x20) == 32;
+    return my.getActionProvider();
   }
   
-  public final boolean bT()
+  public View getActionView()
   {
-    return (ng & 0x1) == 1;
+    View localView2 = my.getActionView();
+    View localView1 = localView2;
+    if ((localView2 instanceof b)) {
+      localView1 = (View)mD;
+    }
+    return localView1;
   }
   
-  public final boolean bU()
+  public char getAlphabeticShortcut()
   {
-    return (ng & 0x2) == 2;
+    return my.getAlphabeticShortcut();
   }
   
-  public final boolean bV()
+  public int getGroupId()
   {
-    return ((ng & 0x8) != 0) && (nh != null);
+    return my.getGroupId();
   }
   
-  public final boolean collapseActionView()
+  public Drawable getIcon()
   {
-    if ((ng & 0x8) == 0) {
+    return my.getIcon();
+  }
+  
+  public Intent getIntent()
+  {
+    return my.getIntent();
+  }
+  
+  public int getItemId()
+  {
+    return my.getItemId();
+  }
+  
+  public ContextMenu.ContextMenuInfo getMenuInfo()
+  {
+    return my.getMenuInfo();
+  }
+  
+  public char getNumericShortcut()
+  {
+    return my.getNumericShortcut();
+  }
+  
+  public int getOrder()
+  {
+    return my.getOrder();
+  }
+  
+  public SubMenu getSubMenu()
+  {
+    return a(my.getSubMenu());
+  }
+  
+  public CharSequence getTitle()
+  {
+    return my.getTitle();
+  }
+  
+  public CharSequence getTitleCondensed()
+  {
+    return my.getTitleCondensed();
+  }
+  
+  public boolean hasSubMenu()
+  {
+    return my.hasSubMenu();
+  }
+  
+  public boolean isActionViewExpanded()
+  {
+    return my.isActionViewExpanded();
+  }
+  
+  public boolean isCheckable()
+  {
+    return my.isCheckable();
+  }
+  
+  public boolean isChecked()
+  {
+    return my.isChecked();
+  }
+  
+  public boolean isEnabled()
+  {
+    return my.isEnabled();
+  }
+  
+  public boolean isVisible()
+  {
+    return my.isVisible();
+  }
+  
+  public MenuItem setActionProvider(ActionProvider paramActionProvider)
+  {
+    my.setActionProvider(paramActionProvider);
+    if ((paramActionProvider != null) && (mw)) {
+      bG();
+    }
+    return this;
+  }
+  
+  public MenuItem setActionView(int paramInt)
+  {
+    my.setActionView(paramInt);
+    View localView = my.getActionView();
+    if ((localView instanceof android.support.v7.a.b)) {
+      my.setActionView(new b(localView));
+    }
+    return this;
+  }
+  
+  public MenuItem setActionView(View paramView)
+  {
+    Object localObject = paramView;
+    if ((paramView instanceof android.support.v7.a.b)) {
+      localObject = new b(paramView);
+    }
+    my.setActionView((View)localObject);
+    return this;
+  }
+  
+  public MenuItem setAlphabeticShortcut(char paramChar)
+  {
+    my.setAlphabeticShortcut(paramChar);
+    return this;
+  }
+  
+  public MenuItem setCheckable(boolean paramBoolean)
+  {
+    my.setCheckable(paramBoolean);
+    return this;
+  }
+  
+  public MenuItem setChecked(boolean paramBoolean)
+  {
+    my.setChecked(paramBoolean);
+    return this;
+  }
+  
+  public MenuItem setEnabled(boolean paramBoolean)
+  {
+    my.setEnabled(paramBoolean);
+    return this;
+  }
+  
+  public MenuItem setIcon(int paramInt)
+  {
+    my.setIcon(paramInt);
+    return this;
+  }
+  
+  public MenuItem setIcon(Drawable paramDrawable)
+  {
+    my.setIcon(paramDrawable);
+    return this;
+  }
+  
+  public MenuItem setIntent(Intent paramIntent)
+  {
+    my.setIntent(paramIntent);
+    return this;
+  }
+  
+  public MenuItem setNumericShortcut(char paramChar)
+  {
+    my.setNumericShortcut(paramChar);
+    return this;
+  }
+  
+  public MenuItem setOnActionExpandListener(MenuItem.OnActionExpandListener paramOnActionExpandListener)
+  {
+    my.setOnActionExpandListener(paramOnActionExpandListener);
+    return this;
+  }
+  
+  public MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
+  {
+    MenuItem localMenuItem = my;
+    if (paramOnMenuItemClickListener != null) {}
+    for (paramOnMenuItemClickListener = new d(paramOnMenuItemClickListener);; paramOnMenuItemClickListener = null)
+    {
+      localMenuItem.setOnMenuItemClickListener(paramOnMenuItemClickListener);
+      return this;
+    }
+  }
+  
+  public MenuItem setShortcut(char paramChar1, char paramChar2)
+  {
+    my.setShortcut(paramChar1, paramChar2);
+    return this;
+  }
+  
+  public void setShowAsAction(int paramInt)
+  {
+    my.setShowAsAction(paramInt);
+  }
+  
+  public MenuItem setShowAsActionFlags(int paramInt)
+  {
+    my.setShowAsActionFlags(paramInt);
+    return this;
+  }
+  
+  public MenuItem setTitle(int paramInt)
+  {
+    my.setTitle(paramInt);
+    return this;
+  }
+  
+  public MenuItem setTitle(CharSequence paramCharSequence)
+  {
+    my.setTitle(paramCharSequence);
+    return this;
+  }
+  
+  public MenuItem setTitleCondensed(CharSequence paramCharSequence)
+  {
+    my.setTitleCondensed(paramCharSequence);
+    return this;
+  }
+  
+  public MenuItem setVisible(boolean paramBoolean)
+  {
+    if (mw)
+    {
+      mx = paramBoolean;
+      bG();
+    }
+    return my.setVisible(paramBoolean);
+  }
+  
+  class a
+    extends ActionProvider
+  {
+    final android.support.v4.view.d mz;
+    
+    public a(android.support.v4.view.d paramd)
+    {
+      super();
+      mz = paramd;
+      if (i.a(i.this)) {
+        mz.a(new d.b() {});
+      }
+    }
+    
+    public boolean hasSubMenu()
+    {
       return false;
     }
-    if (nh == null) {
-      return true;
+    
+    public View onCreateActionView()
+    {
+      if (i.a(i.this)) {
+        bG();
+      }
+      return mz.onCreateActionView();
     }
-    if (nj != null) {
-      nj.ay();
-    }
-    return jH.g(this);
-  }
-  
-  public final boolean expandActionView()
-  {
-    if (((ng & 0x8) == 0) || (nh == null)) {
+    
+    public boolean onPerformDefaultAction()
+    {
       return false;
     }
-    if (nj != null) {
-      nj.ax();
-    }
-    return jH.f(this);
-  }
-  
-  public final ActionProvider getActionProvider()
-  {
-    throw new UnsupportedOperationException("Implementation should use getSupportActionProvider!");
-  }
-  
-  public final View getActionView()
-  {
-    if (nh != null) {
-      return nh;
-    }
-    if (ni != null)
+    
+    public void onPrepareSubMenu(SubMenu paramSubMenu)
     {
-      nh = ni.onCreateActionView();
-      return nh;
+      a(paramSubMenu);
     }
-    return null;
   }
   
-  public final char getAlphabeticShortcut()
+  static final class b
+    extends FrameLayout
+    implements CollapsibleActionView
   {
-    return lk;
-  }
-  
-  public final int getGroupId()
-  {
-    return ld;
-  }
-  
-  public final Drawable getIcon()
-  {
-    if (ll != null) {
-      return ll;
-    }
-    if (lm != 0)
+    final android.support.v7.a.b mD;
+    
+    b(View paramView)
     {
-      Drawable localDrawable = jH.mG.getDrawable(lm);
-      lm = 0;
-      ll = localDrawable;
-      return localDrawable;
+      super();
+      mD = ((android.support.v7.a.b)paramView);
+      addView(paramView);
     }
-    return null;
-  }
-  
-  public final Intent getIntent()
-  {
-    return li;
-  }
-  
-  @ViewDebug.CapturedViewProperty
-  public final int getItemId()
-  {
-    return cZ;
-  }
-  
-  public final ContextMenu.ContextMenuInfo getMenuInfo()
-  {
-    return nl;
-  }
-  
-  public final char getNumericShortcut()
-  {
-    return lj;
-  }
-  
-  public final int getOrder()
-  {
-    return le;
-  }
-  
-  public final SubMenu getSubMenu()
-  {
-    return ne;
-  }
-  
-  @ViewDebug.CapturedViewProperty
-  public final CharSequence getTitle()
-  {
-    return lg;
-  }
-  
-  public final CharSequence getTitleCondensed()
-  {
-    if (lh != null) {
-      return lh;
-    }
-    return lg;
-  }
-  
-  public final boolean hasSubMenu()
-  {
-    return ne != null;
-  }
-  
-  public final boolean isActionViewExpanded()
-  {
-    return nk;
-  }
-  
-  public final boolean isCheckable()
-  {
-    return (lo & 0x1) == 1;
-  }
-  
-  public final boolean isChecked()
-  {
-    return (lo & 0x2) == 2;
-  }
-  
-  public final boolean isEnabled()
-  {
-    return (lo & 0x10) != 0;
-  }
-  
-  public final boolean isVisible()
-  {
-    return (lo & 0x8) == 0;
-  }
-  
-  public final MenuItem setActionProvider(ActionProvider paramActionProvider)
-  {
-    throw new UnsupportedOperationException("Implementation should use setSupportActionProvider!");
-  }
-  
-  public final MenuItem setAlphabeticShortcut(char paramChar)
-  {
-    if (lk == paramChar) {
-      return this;
-    }
-    lk = Character.toLowerCase(paramChar);
-    jH.s(false);
-    return this;
-  }
-  
-  public final MenuItem setCheckable(boolean paramBoolean)
-  {
-    int j = lo;
-    int k = lo;
-    if (paramBoolean) {}
-    for (int i = 1;; i = 0)
+    
+    public final void onActionViewCollapsed()
     {
-      lo = (i | k & 0xFFFFFFFE);
-      if (j != lo) {
-        jH.s(false);
-      }
-      return this;
+      mD.onActionViewCollapsed();
     }
-  }
-  
-  public final MenuItem setChecked(boolean paramBoolean)
-  {
-    if ((lo & 0x4) != 0)
+    
+    public final void onActionViewExpanded()
     {
-      g localg = jH;
-      int j = getGroupId();
-      int k = gv.size();
-      int i = 0;
-      if (i < k)
-      {
-        i locali = (i)gv.get(i);
-        if ((locali.getGroupId() == j) && (locali.bR()) && (locali.isCheckable())) {
-          if (locali != this) {
-            break label100;
-          }
-        }
-        label100:
-        for (paramBoolean = true;; paramBoolean = false)
-        {
-          locali.u(paramBoolean);
-          i += 1;
-          break;
-        }
-      }
+      mD.onActionViewExpanded();
     }
-    else
+  }
+  
+  private final class c
+    extends d
+    implements MenuItem.OnActionExpandListener
+  {
+    c(g.e parame)
     {
-      u(paramBoolean);
+      super();
     }
-    return this;
-  }
-  
-  public final MenuItem setEnabled(boolean paramBoolean)
-  {
-    if (paramBoolean) {}
-    for (lo |= 0x10;; lo &= 0xFFFFFFEF)
+    
+    public final boolean onMenuItemActionCollapse(MenuItem paramMenuItem)
     {
-      jH.s(false);
-      return this;
+      g.e locale = (g.e)lr;
+      f(paramMenuItem);
+      return locale.ag();
     }
-  }
-  
-  public final MenuItem setIcon(int paramInt)
-  {
-    ll = null;
-    lm = paramInt;
-    jH.s(false);
-    return this;
-  }
-  
-  public final MenuItem setIcon(Drawable paramDrawable)
-  {
-    lm = 0;
-    ll = paramDrawable;
-    jH.s(false);
-    return this;
-  }
-  
-  public final MenuItem setIntent(Intent paramIntent)
-  {
-    li = paramIntent;
-    return this;
-  }
-  
-  public final MenuItem setNumericShortcut(char paramChar)
-  {
-    if (lj == paramChar) {
-      return this;
-    }
-    lj = paramChar;
-    jH.s(false);
-    return this;
-  }
-  
-  public final MenuItem setOnActionExpandListener(MenuItem.OnActionExpandListener paramOnActionExpandListener)
-  {
-    throw new UnsupportedOperationException("Implementation should use setSupportOnActionExpandListener!");
-  }
-  
-  public final MenuItem setOnMenuItemClickListener(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
-  {
-    ln = paramOnMenuItemClickListener;
-    return this;
-  }
-  
-  public final MenuItem setShortcut(char paramChar1, char paramChar2)
-  {
-    lj = paramChar1;
-    lk = Character.toLowerCase(paramChar2);
-    jH.s(false);
-    return this;
-  }
-  
-  public final void setShowAsAction(int paramInt)
-  {
-    switch (paramInt & 0x3)
+    
+    public final boolean onMenuItemActionExpand(MenuItem paramMenuItem)
     {
-    default: 
-      throw new IllegalArgumentException("SHOW_AS_ACTION_ALWAYS, SHOW_AS_ACTION_IF_ROOM, and SHOW_AS_ACTION_NEVER are mutually exclusive.");
+      g.e locale = (g.e)lr;
+      f(paramMenuItem);
+      return locale.af();
     }
-    ng = paramInt;
-    jH.bJ();
   }
   
-  public final MenuItem setTitle(int paramInt)
+  private final class d
+    extends d
+    implements MenuItem.OnMenuItemClickListener
   {
-    return setTitle(jH.mContext.getString(paramInt));
-  }
-  
-  public final MenuItem setTitle(CharSequence paramCharSequence)
-  {
-    lg = paramCharSequence;
-    jH.s(false);
-    if (ne != null) {
-      ne.setHeaderTitle(paramCharSequence);
-    }
-    return this;
-  }
-  
-  public final MenuItem setTitleCondensed(CharSequence paramCharSequence)
-  {
-    lh = paramCharSequence;
-    jH.s(false);
-    return this;
-  }
-  
-  public final MenuItem setVisible(boolean paramBoolean)
-  {
-    if (v(paramBoolean))
+    d(MenuItem.OnMenuItemClickListener paramOnMenuItemClickListener)
     {
-      g localg = jH;
-      mL = true;
-      localg.s(true);
+      super();
     }
-    return this;
-  }
-  
-  public final void t(boolean paramBoolean)
-  {
-    int j = lo;
-    if (paramBoolean) {}
-    for (int i = 4;; i = 0)
+    
+    public final boolean onMenuItemClick(MenuItem paramMenuItem)
     {
-      lo = (i | j & 0xFFFFFFFB);
-      return;
+      return ((MenuItem.OnMenuItemClickListener)lr).onMenuItemClick(f(paramMenuItem));
     }
-  }
-  
-  public final String toString()
-  {
-    return lg.toString();
-  }
-  
-  final boolean v(boolean paramBoolean)
-  {
-    boolean bool = false;
-    int j = lo;
-    int k = lo;
-    if (paramBoolean) {}
-    for (int i = 0;; i = 8)
-    {
-      lo = (i | k & 0xFFFFFFF7);
-      paramBoolean = bool;
-      if (j != lo) {
-        paramBoolean = true;
-      }
-      return paramBoolean;
-    }
-  }
-  
-  public final void w(boolean paramBoolean)
-  {
-    if (paramBoolean)
-    {
-      lo |= 0x20;
-      return;
-    }
-    lo &= 0xFFFFFFDF;
-  }
-  
-  public final void x(boolean paramBoolean)
-  {
-    nk = paramBoolean;
-    jH.s(false);
   }
 }
 

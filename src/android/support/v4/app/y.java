@@ -1,8 +1,23 @@
 package android.support.v4.app;
 
-abstract interface y
+import android.os.Bundle;
+
+final class y
 {
-  public abstract void a(af.a parama);
+  public static abstract class a
+  {
+    protected abstract boolean getAllowFreeFormInput();
+    
+    protected abstract CharSequence[] getChoices();
+    
+    protected abstract Bundle getExtras();
+    
+    protected abstract CharSequence getLabel();
+    
+    protected abstract String getResultKey();
+    
+    public static abstract interface a {}
+  }
 }
 
 /* Location:

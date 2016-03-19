@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cw
-  extends a.c
+  extends a.e
 {
   public a$cw()
   {
-    super("translateVoice", "translateVoice", 97, true);
+    super("openEnterpriseContact", "openEnterpriseContact", 183, true);
   }
 }
 

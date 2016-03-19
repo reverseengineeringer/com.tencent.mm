@@ -3,4 +3,5 @@
     <item type="animator" name="a">r/u/a.xml</item>
     <item type="animator" name="b">r/u/b.xml</item>
     <item type="animator" name="c">r/u/c.xml</item>
+    <item type="animator" name="d">r/u/d.xml</item>
 </resources>

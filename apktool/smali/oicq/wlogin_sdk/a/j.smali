@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field jOu:I
+.field mcG:I
 
 
 # direct methods
@@ -18,12 +18,12 @@
     .line 6
     const/4 v0, 0x0
 
-    iput v0, p0, Loicq/wlogin_sdk/a/j;->jOu:I
+    iput v0, p0, Loicq/wlogin_sdk/a/j;->mcG:I
 
     .line 9
     const/16 v0, 0x108
 
-    iput v0, p0, Loicq/wlogin_sdk/a/j;->jNs:I
+    iput v0, p0, Loicq/wlogin_sdk/a/j;->mbE:I
 
     .line 10
     return-void
@@ -31,7 +31,7 @@
 
 
 # virtual methods
-.method public final aW([B)[B
+.method public final bp([B)[B
     .locals 3
 
     .prologue
@@ -40,10 +40,10 @@
     .line 14
     array-length v0, p1
 
-    iput v0, p0, Loicq/wlogin_sdk/a/j;->jOu:I
+    iput v0, p0, Loicq/wlogin_sdk/a/j;->mcG:I
 
     .line 15
-    iget v0, p0, Loicq/wlogin_sdk/a/j;->jOu:I
+    iget v0, p0, Loicq/wlogin_sdk/a/j;->mcG:I
 
     new-array v0, v0, [B
 
@@ -53,20 +53,20 @@
     invoke-static {p1, v2, v0, v2, v1}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
     .line 18
-    iget v1, p0, Loicq/wlogin_sdk/a/j;->jNs:I
+    iget v1, p0, Loicq/wlogin_sdk/a/j;->mbE:I
 
-    invoke-super {p0, v1}, Loicq/wlogin_sdk/a/a;->pV(I)V
+    invoke-super {p0, v1}, Loicq/wlogin_sdk/a/a;->sL(I)V
 
     .line 19
-    iget v1, p0, Loicq/wlogin_sdk/a/j;->jOu:I
+    iget v1, p0, Loicq/wlogin_sdk/a/j;->mcG:I
 
-    invoke-super {p0, v0, v1}, Loicq/wlogin_sdk/a/a;->w([BI)V
+    invoke-super {p0, v0, v1}, Loicq/wlogin_sdk/a/a;->A([BI)V
 
     .line 20
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->aVD()V
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->bos()V
 
     .line 22
-    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->aVz()[B
+    invoke-super {p0}, Loicq/wlogin_sdk/a/a;->boo()[B
 
     move-result-object v0
 

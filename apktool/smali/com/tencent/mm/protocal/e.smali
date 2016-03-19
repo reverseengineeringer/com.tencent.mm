@@ -15,25 +15,19 @@
 
 
 # virtual methods
-.method public abstract C([B)V
+.method public abstract B([B)V
 .end method
 
-.method public abstract a(I[B[B[BI)Z
+.method public abstract a(I[B[B[BIZ)Z
 .end method
 
-.method public abstract aX(I)V
-.end method
-
-.method public abstract cQ(I)V
+.method public abstract ba(I)V
 .end method
 
 .method public abstract cR(I)V
 .end method
 
-.method public abstract fP(Ljava/lang/String;)V
-.end method
-
-.method public abstract fQ(Ljava/lang/String;)V
+.method public abstract cS(I)V
 .end method
 
 .method public abstract getClientVersion()I
@@ -51,26 +45,32 @@
 .method public abstract getUserName()Ljava/lang/String;
 .end method
 
-.method public abstract qY()I
+.method public abstract gi(Ljava/lang/String;)V
 .end method
 
-.method public abstract sY()[B
+.method public abstract gj(Ljava/lang/String;)V
 .end method
 
-.method public abstract vC()[B
+.method public abstract rg()I
 .end method
 
-.method public abstract vD()Ljava/lang/String;
+.method public abstract tq()[B
 .end method
 
-.method public abstract vE()I
+.method public abstract vZ()[B
 .end method
 
-.method public abstract vF()[B
+.method public abstract wa()Ljava/lang/String;
 .end method
 
-.method public abstract vG()Ljava/lang/String;
+.method public abstract wb()I
 .end method
 
-.method public abstract vH()Z
+.method public abstract wc()[B
+.end method
+
+.method public abstract wd()Ljava/lang/String;
+.end method
+
+.method public abstract we()Z
 .end method

@@ -2,47 +2,53 @@ package com.tencent.mm.ui.chatting;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
 import com.tencent.mm.ui.MMActivity;
 
 public class ResourcesExceedUI
   extends MMActivity
 {
-  private TextView jcx;
+  private TextView ldm;
   private int type = 0;
   
-  protected final void DV()
+  protected final void Gb()
   {
-    a(new of(this));
-    jcx = ((TextView)findViewById(a.i.download_fail_text));
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        finish();
+        return true;
+      }
+    });
+    ldm = ((TextView)findViewById(2131165668));
     switch (type)
     {
     default: 
       return;
     case 0: 
-      jcx.setText(a.n.video_fail_or_clean);
+      ldm.setText(2131428908);
       return;
     case 2: 
-      jcx.setText(a.n.file_fail_or_clean);
+      ldm.setText(2131428909);
       return;
     }
-    jcx.setText(a.n.imgdownload_fail_or_cleaned);
+    ldm.setText(2131428888);
   }
   
   protected final int getLayoutId()
   {
-    return a.k.resources_exceed_ui;
+    return 2131362001;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
     type = getIntent().getIntExtra("clean_view_type", 0);
-    At("");
-    DV();
+    Gj("");
+    Gb();
   }
   
   public void onDestroy()

@@ -1,90 +1,66 @@
 package a.a.a.c;
 
-import com.tencent.mm.al.b;
+import com.tencent.mm.at.b;
 import java.io.OutputStream;
 import java.util.LinkedList;
 
 public final class a
 {
-  public final OutputStream fqJ;
-  public final byte[] jMO;
-  private final a.a.a.b.b.a jMP;
+  public final OutputStream bEF;
+  public final byte[] mba;
+  private final a.a.a.b.b.a mbb;
   
   public a(byte[] paramArrayOfByte)
   {
-    jMO = paramArrayOfByte;
-    fqJ = null;
-    jMP = new a.a.a.b.b.a(paramArrayOfByte, 0, paramArrayOfByte.length);
+    mba = paramArrayOfByte;
+    bEF = null;
+    mbb = new a.a.a.b.b.a(paramArrayOfByte, 0, paramArrayOfByte.length);
   }
   
-  public final void F(int paramInt, boolean paramBoolean)
+  public final void A(int paramInt, long paramLong)
+  {
+    a.a.a.b.b.a locala = mbb;
+    locala.w(paramInt, 0);
+    locala.k(paramLong);
+  }
+  
+  public final void R(int paramInt, boolean paramBoolean)
   {
     int i = 0;
-    a.a.a.b.b.a locala = jMP;
-    locala.bL(paramInt, 0);
+    a.a.a.b.b.a locala = mbb;
+    locala.w(paramInt, 0);
     paramInt = i;
     if (paramBoolean) {
       paramInt = 1;
     }
-    locala.pR(paramInt);
-  }
-  
-  public final void U(int paramInt, String paramString)
-  {
-    a.a.a.b.b.a locala = jMP;
-    if (paramString != null)
-    {
-      locala.bL(paramInt, 2);
-      paramString = paramString.getBytes("UTF-8");
-      locala.pT(paramString.length);
-      locala.aR(paramString);
-    }
+    locala.ax(paramInt);
   }
   
   public final void a(int paramInt, double paramDouble)
   {
-    a.a.a.b.b.a locala = jMP;
-    locala.bL(paramInt, 1);
+    a.a.a.b.b.a locala = mbb;
+    locala.w(paramInt, 1);
     long l = Double.doubleToLongBits(paramDouble);
-    locala.pR((int)l & 0xFF);
-    locala.pR((int)(l >> 8) & 0xFF);
-    locala.pR((int)(l >> 16) & 0xFF);
-    locala.pR((int)(l >> 24) & 0xFF);
-    locala.pR((int)(l >> 32) & 0xFF);
-    locala.pR((int)(l >> 40) & 0xFF);
-    locala.pR((int)(l >> 48) & 0xFF);
-    locala.pR((int)(l >> 56) & 0xFF);
+    locala.ax((int)l & 0xFF);
+    locala.ax((int)(l >> 8) & 0xFF);
+    locala.ax((int)(l >> 16) & 0xFF);
+    locala.ax((int)(l >> 24) & 0xFF);
+    locala.ax((int)(l >> 32) & 0xFF);
+    locala.ax((int)(l >> 40) & 0xFF);
+    locala.ax((int)(l >> 48) & 0xFF);
+    locala.ax((int)(l >> 56) & 0xFF);
   }
   
   public final void b(int paramInt, b paramb)
   {
-    a.a.a.b.b.a locala = jMP;
+    a.a.a.b.b.a locala = mbb;
     if (paramb != null)
     {
-      locala.bL(paramInt, 2);
+      locala.w(paramInt, 2);
       paramb = paramb.toByteArray();
-      locala.pT(paramb.length);
-      locala.aR(paramb);
+      locala.az(paramb.length);
+      locala.l(paramb);
     }
-  }
-  
-  public final void bM(int paramInt1, int paramInt2)
-  {
-    a.a.a.b.b.a locala = jMP;
-    locala.bL(paramInt1, 0);
-    if (paramInt2 >= 0)
-    {
-      locala.pT(paramInt2);
-      return;
-    }
-    locala.da(paramInt2);
-  }
-  
-  public final void bN(int paramInt1, int paramInt2)
-  {
-    a.a.a.b.b.a locala = jMP;
-    locala.bL(paramInt1, 2);
-    locala.pT(paramInt2);
   }
   
   public final void c(int paramInt, LinkedList paramLinkedList)
@@ -94,8 +70,8 @@ public final class a
     int i;
     if ((paramLinkedList != null) && (paramLinkedList.size() > 0))
     {
-      jMP.bL(paramInt, 2);
-      locala = jMP;
+      mbb.w(paramInt, 2);
+      locala = mbb;
       if ((paramLinkedList == null) || (paramLinkedList.size() <= 0)) {
         break label123;
       }
@@ -107,7 +83,7 @@ public final class a
     }
     for (;;)
     {
-      locala.pT(paramInt);
+      locala.az(paramInt);
       paramInt = j;
       for (;;)
       {
@@ -115,12 +91,12 @@ public final class a
         {
           return;
           label70:
-          int k = a.a.a.b.b.a.pU(((Integer)paramLinkedList.get(i)).intValue());
+          int k = a.a.a.b.b.a.aA(((Integer)paramLinkedList.get(i)).intValue());
           i += 1;
           paramInt = k + paramInt;
           break;
         }
-        jMP.pT(((Integer)paramLinkedList.get(paramInt)).intValue());
+        mbb.az(((Integer)paramLinkedList.get(paramInt)).intValue());
         paramInt += 1;
       }
       label123:
@@ -128,15 +104,23 @@ public final class a
     }
   }
   
-  public final void d(int paramInt, float paramFloat)
+  public final void ci(int paramInt1, int paramInt2)
   {
-    a.a.a.b.b.a locala = jMP;
-    locala.bL(paramInt, 5);
-    paramInt = Float.floatToIntBits(paramFloat);
-    locala.pR(paramInt & 0xFF);
-    locala.pR(paramInt >> 8 & 0xFF);
-    locala.pR(paramInt >> 16 & 0xFF);
-    locala.pR(paramInt >> 24 & 0xFF);
+    a.a.a.b.b.a locala = mbb;
+    locala.w(paramInt1, 0);
+    if (paramInt2 >= 0)
+    {
+      locala.az(paramInt2);
+      return;
+    }
+    locala.k(paramInt2);
+  }
+  
+  public final void cj(int paramInt1, int paramInt2)
+  {
+    a.a.a.b.b.a locala = mbb;
+    locala.w(paramInt1, 2);
+    locala.az(paramInt2);
   }
   
   public final void d(int paramInt1, int paramInt2, LinkedList paramLinkedList)
@@ -169,54 +153,70 @@ public final class a
       paramInt2 = 0;
       while (paramInt2 < paramLinkedList.size())
       {
-        d(paramInt1, ((Float)paramLinkedList.get(paramInt2)).floatValue());
+        f(paramInt1, ((Float)paramLinkedList.get(paramInt2)).floatValue());
         paramInt2 += 1;
       }
       continue;
       paramInt2 = 0;
       while (paramInt2 < paramLinkedList.size())
       {
-        bM(paramInt1, ((Integer)paramLinkedList.get(paramInt2)).intValue());
+        ci(paramInt1, ((Integer)paramLinkedList.get(paramInt2)).intValue());
         paramInt2 += 1;
       }
       continue;
       paramInt2 = 0;
       while (paramInt2 < paramLinkedList.size())
       {
-        r(paramInt1, ((Long)paramLinkedList.get(paramInt2)).longValue());
+        A(paramInt1, ((Long)paramLinkedList.get(paramInt2)).longValue());
         paramInt2 += 1;
       }
       continue;
       paramInt2 = 0;
       while (paramInt2 < paramLinkedList.size())
       {
-        U(paramInt1, (String)paramLinkedList.get(paramInt2));
+        d(paramInt1, (String)paramLinkedList.get(paramInt2));
         paramInt2 += 1;
       }
       continue;
       paramInt2 = 0;
       while (paramInt2 < paramLinkedList.size())
       {
-        F(paramInt1, ((Boolean)paramLinkedList.get(paramInt2)).booleanValue());
+        R(paramInt1, ((Boolean)paramLinkedList.get(paramInt2)).booleanValue());
         paramInt2 += 1;
       }
       continue;
       paramInt2 = 0;
       while (paramInt2 < paramLinkedList.size())
       {
-        com.tencent.mm.al.a locala = (com.tencent.mm.al.a)paramLinkedList.get(paramInt2);
-        bN(paramInt1, locala.kS());
+        com.tencent.mm.at.a locala = (com.tencent.mm.at.a)paramLinkedList.get(paramInt2);
+        cj(paramInt1, locala.kn());
         locala.a(this);
         paramInt2 += 1;
       }
     }
   }
   
-  public final void r(int paramInt, long paramLong)
+  public final void d(int paramInt, String paramString)
   {
-    a.a.a.b.b.a locala = jMP;
-    locala.bL(paramInt, 0);
-    locala.da(paramLong);
+    a.a.a.b.b.a locala = mbb;
+    if (paramString != null)
+    {
+      locala.w(paramInt, 2);
+      paramString = paramString.getBytes("UTF-8");
+      locala.az(paramString.length);
+      locala.l(paramString);
+    }
+  }
+  
+  public final void f(int paramInt, float paramFloat)
+  {
+    a.a.a.b.b.a locala = mbb;
+    locala.w(paramInt, 5);
+    paramInt = Float.floatToIntBits(paramFloat);
+    locala.ax(paramInt & 0xFF);
+    locala.ax(paramInt >> 8 & 0xFF);
+    locala.ax(paramInt >> 16 & 0xFF);
+    locala.ax(paramInt >> 24 & 0xFF);
   }
 }
 

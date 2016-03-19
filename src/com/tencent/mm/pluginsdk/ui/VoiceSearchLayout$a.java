@@ -4,9 +4,9 @@ public abstract interface VoiceSearchLayout$a
 {
   public abstract void a(boolean paramBoolean, String[] paramArrayOfString, long paramLong);
   
-  public abstract void aAt();
+  public abstract void aRk();
   
-  public abstract void aAu();
+  public abstract void aRl();
 }
 
 /* Location:

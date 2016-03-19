@@ -16,24 +16,26 @@
 
 
 # virtual methods
-.method protected final DV()V
-    .locals 2
+.method protected final Gb()V
+    .locals 3
 
     .prologue
-    .line 33
-    sget v0, Lcom/tencent/mm/a$n;->safe_device_account_protect:I
+    const v2, 0x7f070aff
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->nh(I)V
+    .line 33
+    const v0, 0x7f0b079b
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->qb(I)V
 
     .line 34
-    new-instance v0, Lcom/tencent/mm/plugin/safedevice/ui/a;
+    new-instance v0, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/safedevice/ui/a;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI$1;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 43
-    sget v0, Lcom/tencent/mm/a$i;->security_account_state_icon:I
+    const v0, 0x7f070afd
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->findViewById(I)Landroid/view/View;
 
@@ -41,12 +43,12 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    sget v1, Lcom/tencent/mm/a$h;->accounts_saftphone_icon:I
+    const v1, 0x7f0300c4
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 44
-    sget v0, Lcom/tencent/mm/a$i;->security_account_tips:I
+    const v0, 0x7f070afe
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->findViewById(I)Landroid/view/View;
 
@@ -54,33 +56,29 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->safe_device_bind__hit:I
+    const v1, 0x7f0b079e
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 45
-    sget v0, Lcom/tencent/mm/a$i;->tip_title:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
     check-cast v0, Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->safe_device_bind_mobile:I
+    const v1, 0x7f0b079f
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 46
-    sget v0, Lcom/tencent/mm/a$i;->tip_title:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/b;
+    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/b;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI$2;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -93,7 +91,7 @@
 
     .prologue
     .line 20
-    sget v0, Lcom/tencent/mm/a$k;->security_account_normal:I
+    const v0, 0x7f0a0376
 
     return v0
 .end method
@@ -106,7 +104,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMWizardActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 27
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/BindSafeDeviceUI;->Gb()V
 
     .line 28
     return-void

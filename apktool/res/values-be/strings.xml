@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="cwz">Атрымаць службы Google Play</string>
-    <string name="cx0">Гэта прыкладанне не будзе працаваць без службаў Google Play, якіх няма ў вашым тэлефоне.</string>
-    <string name="cx1">Гэта прыкладанне не будзе працаваць без службаў Google Play, якіх няма на вашым планшэце.</string>
-    <string name="cx2">Атрымаць службы Google Play</string>
-    <string name="cx3">Уключыць службы Google Play</string>
-    <string name="cx4">Гэта прыкладанне не будзе працаваць, пакуль вы не ўключыце службы Google Play.</string>
-    <string name="cx5">Уключыць службы Google Play</string>
-    <string name="cx6">Абнаўленне службаў Google Play</string>
-    <string name="cx7">Гэта прыкладанне не будзе працаваць падчас абнаўлення службаў Google Play.</string>
-    <string name="cxb">Невядомая праблема са службамі Google Play.</string>
-    <string name="cxc">Службы Google Play</string>
-    <string name="cxd">Службы Google Play, да якiх прывязаны некаторыя прыкладаннi, не падтрымлiваюцца на вашай прыладзе. Па дапамогу звярнiцеся да вытворцы.</string>
-    <string name="cxf">Абнавіць</string>
-    <string name="cxg">Увайсцi</string>
-    <string name="cxh">Увайсці ў Google</string>
+    <string name="w">Атрымаць службы Google Play</string>
+    <string name="x">Гэта прыкладанне не будзе працаваць без службаў Google Play, якіх няма ў вашым тэлефоне.</string>
+    <string name="y">Гэта прыкладанне не будзе працаваць без службаў Google Play, якіх няма на вашым планшэце.</string>
+    <string name="z">Атрымаць службы Google Play</string>
+    <string name="a0">Уключыць службы Google Play</string>
+    <string name="a1">Гэта прыкладанне не будзе працаваць, пакуль вы не ўключыце службы Google Play.</string>
+    <string name="a2">Уключыць службы Google Play</string>
+    <string name="a3">Абнаўленне службаў Google Play</string>
+    <string name="a4">Гэта прыкладанне не будзе працаваць падчас абнаўлення службаў Google Play.</string>
+    <string name="a5">Невядомая праблема са службамі Google Play.</string>
+    <string name="a6">Службы Google Play</string>
+    <string name="a7">Службы Google Play, да якiх прывязаны некаторыя прыкладаннi, не падтрымлiваюцца на вашай прыладзе. Па дапамогу звярнiцеся да вытворцы.</string>
+    <string name="a8">Абнавіць</string>
+    <string name="a9">Увайсцi</string>
+    <string name="a_">Увайсці ў Google</string>
 </resources>

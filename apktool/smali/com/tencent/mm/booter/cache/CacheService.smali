@@ -21,7 +21,7 @@
 
     .prologue
     .line 25
-    sget-object v0, Lcom/tencent/mm/booter/cache/a;->bdt:Lcom/tencent/mm/booter/cache/a;
+    sget-object v0, Lcom/tencent/mm/booter/cache/a;->bnn:Lcom/tencent/mm/booter/cache/a;
 
     return-object v0
 .end method

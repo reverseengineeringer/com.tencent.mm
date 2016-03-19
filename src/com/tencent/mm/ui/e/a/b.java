@@ -5,37 +5,34 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.modelsearch.h;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.modelsearch.f;
+import com.tencent.mm.sdk.platformtools.u;
 
-public final class b
+public class b
   extends a
 {
-  public String jiB;
-  private b jnS = new b();
-  a jnT = new a();
+  public String lnf;
+  private b ltk = new b();
+  a ltl = new a();
   
   public b(int paramInt)
   {
     super(0, paramInt);
-    eFd = false;
+    fOr = false;
   }
   
-  public final a.b IR()
+  public final a.b Le()
   {
-    return jnS;
+    return ltk;
   }
   
-  public final void a(Context paramContext, a.a paramVarArgs)
+  public void a(Context paramContext, a.a paramVarArgs)
   {
-    int i = h.dr(eVv);
+    int i = f.dG(ggB);
     if (i < 0) {}
-    for (jiB = "";; jiB = paramContext.getString(i))
+    for (lnf = "";; lnf = paramContext.getString(i))
     {
-      t.i("!44@/B4Tb64lLpKLxeMowbLUcMlZaEf6+OEAD2Zy+gqayko=", "fillingDataItem: header=%s", new Object[] { jiB });
+      u.i("!44@/B4Tb64lLpKLxeMowbLUcMlZaEf6+OEAD2Zy+gqayko=", "fillingDataItem: header=%s", new Object[] { lnf });
       return;
     }
   }
@@ -43,9 +40,9 @@ public final class b
   public final class a
     extends a.a
   {
-    public TextView cEY;
-    public View cvG;
-    public View jnU;
+    public View cMt;
+    public TextView dcT;
+    public View fdW;
     
     public a()
     {
@@ -63,11 +60,11 @@ public final class b
     
     public final View a(Context paramContext, ViewGroup paramViewGroup)
     {
-      paramContext = LayoutInflater.from(paramContext).inflate(a.k.fts_header_item, paramViewGroup, false);
-      paramViewGroup = (b.a)jnT;
-      cEY = ((TextView)paramContext.findViewById(a.i.header_tv));
-      jnU = paramContext.findViewById(a.i.padding_view);
-      cvG = paramContext.findViewById(a.i.search_item_content_layout);
+      paramContext = LayoutInflater.from(paramContext).inflate(2131363003, paramViewGroup, false);
+      paramViewGroup = (b.a)ltl;
+      dcT = ((TextView)paramContext.findViewById(2131167263));
+      fdW = paramContext.findViewById(2131166015);
+      cMt = paramContext.findViewById(2131166159);
       paramContext.setTag(paramViewGroup);
       return paramContext;
     }
@@ -75,15 +72,15 @@ public final class b
     public final void a(Context paramContext, a.a parama, a paramVarArgs)
     {
       paramContext = (b.a)parama;
-      h.b(jiB, cEY);
+      f.b(lnf, dcT);
       if (position == 0) {
-        jnU.setVisibility(8);
+        fdW.setVisibility(8);
       }
       for (;;)
       {
-        cvG.setBackgroundResource(a.h.list_thicklinecell_bg);
+        cMt.setBackgroundResource(2130970212);
         return;
-        jnU.setVisibility(0);
+        fdW.setVisibility(0);
       }
     }
     

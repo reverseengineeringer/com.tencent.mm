@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$p
-  extends a.c
+  extends a.e
 {
   public a$p()
   {
-    super("configWXDeviceWiFi", "configWXDeviceWiFi", 126, true);
+    super("chooseCard", "choose_card", 70, true);
   }
 }
 

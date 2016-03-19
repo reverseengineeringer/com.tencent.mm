@@ -5,26 +5,26 @@ import oicq.wlogin_sdk.tools.util;
 public final class r
   extends a
 {
-  int jOw = 0;
-  int jOx = 0;
+  int mcI = 0;
+  int mcJ = 0;
   
   public r()
   {
-    jNs = 278;
+    mbE = 278;
   }
   
   public final byte[] a(int paramInt1, int paramInt2, long[] paramArrayOfLong)
   {
-    jOw = 10;
-    paramArrayOfLong = new byte[jOw];
-    util.l(paramArrayOfLong, 0, jOx);
+    mcI = 10;
+    paramArrayOfLong = new byte[mcI];
+    util.l(paramArrayOfLong, 0, mcJ);
     util.n(paramArrayOfLong, 1, paramInt1);
     util.n(paramArrayOfLong, 5, paramInt2);
     util.l(paramArrayOfLong, 9, 0);
-    super.pV(jNs);
-    super.w(paramArrayOfLong, jOw);
-    super.aVD();
-    return super.aVz();
+    super.sL(mbE);
+    super.A(paramArrayOfLong, mcI);
+    super.bos();
+    return super.boo();
   }
 }
 

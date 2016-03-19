@@ -1,23 +1,23 @@
 package com.tencent.mm.plugin.auto;
 
-import com.tencent.mm.model.au;
-import com.tencent.mm.pluginsdk.b.b;
-import com.tencent.mm.pluginsdk.k;
+import com.tencent.mm.model.ae;
+import com.tencent.mm.pluginsdk.b.c;
+import com.tencent.mm.pluginsdk.h;
 
 public class Plugin
-  implements com.tencent.mm.pluginsdk.b.c
+  implements c
 {
-  public k createApplication()
+  public h createApplication()
   {
     return new a();
   }
   
-  public au createSubCore()
+  public ae createSubCore()
   {
-    return new com.tencent.mm.plugin.auto.a.c();
+    return new com.tencent.mm.plugin.auto.a.b();
   }
   
-  public b getContactWidgetFactory()
+  public com.tencent.mm.pluginsdk.b.b getContactWidgetFactory()
   {
     return null;
   }

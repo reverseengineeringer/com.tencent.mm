@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class cs$a
 {
-  public long ayC = 0L;
+  public boolean auR;
 }
 
 /* Location:

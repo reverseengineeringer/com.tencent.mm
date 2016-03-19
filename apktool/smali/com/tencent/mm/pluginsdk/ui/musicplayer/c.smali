@@ -1,70 +1,46 @@
-.class final Lcom/tencent/mm/pluginsdk/ui/musicplayer/c;
+.class public final Lcom/tencent/mm/pluginsdk/ui/musicplayer/c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/view/MenuItem$OnMenuItemClickListener;
-
-
-# instance fields
-.field final synthetic gXk:Lcom/tencent/mm/pluginsdk/ui/musicplayer/b;
-
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/pluginsdk/ui/musicplayer/b;)V
-    .locals 0
+.method public static AL(Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
 
     .prologue
-    .line 85
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/c;->gXk:Lcom/tencent/mm/pluginsdk/ui/musicplayer/b;
+    .line 6
+    if-nez p0, :cond_0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/4 v0, -0x1
 
-    return-void
-.end method
+    .line 7
+    :goto_0
+    if-gez v0, :cond_1
 
+    .line 8
+    const/4 v0, 0x0
 
-# virtual methods
-.method public final onMenuItemClick(Landroid/view/MenuItem;)Z
-    .locals 5
+    .line 10
+    :goto_1
+    return-object v0
 
-    .prologue
-    .line 89
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/c;->gXk:Lcom/tencent/mm/pluginsdk/ui/musicplayer/b;
+    .line 6
+    :cond_0
+    const-string/jumbo v0, "#p="
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/b;->cwT:Lcom/tencent/mm/ui/MMActivity;
+    invoke-virtual {p0, v0}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/MMActivity;->getResources()Landroid/content/res/Resources;
+    move-result v0
+
+    goto :goto_0
+
+    .line 10
+    :cond_1
+    add-int/lit8 v0, v0, 0x3
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$c;->music_player_menus:I
-
-    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 90
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/c;->gXk:Lcom/tencent/mm/pluginsdk/ui/musicplayer/b;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/ui/musicplayer/b;->cwT:Lcom/tencent/mm/ui/MMActivity;
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
-
-    const-string/jumbo v2, ""
-
-    const-string/jumbo v3, ""
-
-    new-instance v4, Lcom/tencent/mm/pluginsdk/ui/musicplayer/d;
-
-    invoke-direct {v4, p0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/d;-><init>(Lcom/tencent/mm/pluginsdk/ui/musicplayer/c;)V
-
-    invoke-static {v1, v2, v0, v3, v4}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/ui/base/h$c;)Landroid/app/Dialog;
-
-    .line 117
-    const/4 v0, 0x1
-
-    return v0
+    goto :goto_1
 .end method

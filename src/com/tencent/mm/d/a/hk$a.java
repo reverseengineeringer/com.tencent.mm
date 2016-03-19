@@ -1,11 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Intent;
-
 public final class hk$a
 {
-  public Intent intent;
-  public String username;
+  public int type;
 }
 
 /* Location:

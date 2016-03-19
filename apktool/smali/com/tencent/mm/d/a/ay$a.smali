@@ -15,20 +15,38 @@
 
 
 # instance fields
-.field public anZ:Ljava/lang/String;
+.field public asL:Ljava/lang/String;
 
-.field public avt:Ljava/lang/String;
+.field public auf:Lcom/tencent/mm/protocal/b/no;
 
-.field public data:[B
+.field public aug:Lcom/tencent/mm/protocal/b/nx;
+
+.field public auh:Ljava/lang/String;
+
+.field public aui:I
+
+.field public auj:Ljava/lang/String;
+
+.field public title:Ljava/lang/String;
+
+.field public type:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
+    const/4 v0, 0x0
+
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 17
+    iput v0, p0, Lcom/tencent/mm/d/a/ay$a;->type:I
+
+    .line 21
+    iput v0, p0, Lcom/tencent/mm/d/a/ay$a;->aui:I
 
     return-void
 .end method

@@ -2,9 +2,9 @@ package com.tencent.mm.ui.widget;
 
 public abstract interface SwipeBackLayout$a
 {
-  public abstract void axt();
+  public abstract void aNg();
   
-  public abstract void axu();
+  public abstract void aNh();
   
   public abstract void onCancel();
 }

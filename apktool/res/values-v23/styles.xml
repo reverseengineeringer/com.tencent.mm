@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="iy" parent="@style/ix">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="dd">@style/rk</item>
+    </style>
+    <style name="j0" parent="@style/iv">
+        <item name="dd">@style/rk</item>
+    </style>
+    <style name="rk" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Menu">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+</resources>

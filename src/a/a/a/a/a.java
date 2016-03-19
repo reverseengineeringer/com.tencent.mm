@@ -4,62 +4,62 @@ import java.util.LinkedList;
 
 public final class a
 {
-  private final a.a.a.a.a.b hfZ;
-  public final a.a.a.b.a.a jMD;
-  public int jME = 0;
+  private final a.a.a.a.a.b iTR;
+  public final a.a.a.b.a.a maU;
+  public int maV = 0;
   
   public a(byte[] paramArrayOfByte, a.a.a.a.a.b paramb)
   {
-    jMD = new a.a.a.b.a.a(paramArrayOfByte, paramArrayOfByte.length);
-    hfZ = paramb;
+    maU = new a.a.a.b.a.a(paramArrayOfByte, paramArrayOfByte.length);
+    iTR = paramb;
   }
   
-  public final int aVj()
+  public final int bob()
   {
-    return jMD.aVp();
+    return maU.jC();
   }
   
-  public final LinkedList aVk()
+  public final LinkedList boc()
   {
-    a.a.a.b.a.a locala = jMD;
+    a.a.a.b.a.a locala = maU;
     LinkedList localLinkedList = new LinkedList();
     for (;;)
     {
-      if (jMI >= fTs) {
+      if (aiB >= aiz) {
         return localLinkedList;
       }
-      localLinkedList.add(Integer.valueOf(locala.aVp()));
+      localLinkedList.add(Integer.valueOf(locala.jC()));
     }
   }
   
-  public final String aVl()
+  public final String bod()
   {
-    return jMD.readString();
+    return maU.readString();
   }
   
-  public final boolean aVm()
+  public final boolean boe()
   {
-    return jMD.aVp() != 0;
+    return maU.jC() != 0;
   }
   
-  public final com.tencent.mm.al.b aVn()
+  public final com.tencent.mm.at.b bof()
   {
-    a.a.a.b.a.a locala = jMD;
-    int i = locala.aVp();
-    if ((i < fTs - jMI) && (i > 0))
+    a.a.a.b.a.a locala = maU;
+    int i = locala.jC();
+    if ((i < aiz - aiB) && (i > 0))
     {
-      com.tencent.mm.al.b localb = com.tencent.mm.al.b.f(buffer, jMI, i);
-      jMI = (i + jMI);
+      com.tencent.mm.at.b localb = com.tencent.mm.at.b.f(buffer, aiB, i);
+      aiB = (i + aiB);
       return localb;
     }
-    return com.tencent.mm.al.b.au(locala.pP(i));
+    return com.tencent.mm.at.b.aH(locala.au(i));
   }
   
-  public final void aVo()
+  public final void bog()
   {
-    int i = a.a.a.b.a.pM(jME);
+    int i = a.a.a.b.a.aB(maV);
     StringBuffer localStringBuffer = new StringBuffer();
-    localStringBuffer.append("FieldNumber: ").append(a.a.a.b.a.pN(jME)).append(" - ");
+    localStringBuffer.append("FieldNumber: ").append(a.a.a.b.a.aC(maV)).append(" - ");
     switch (i)
     {
     case 3: 
@@ -67,21 +67,21 @@ public final class a
     default: 
       return;
     case 5: 
-      localStringBuffer.append("float value: ").append(Float.toString(jMD.readFloat()));
+      localStringBuffer.append("float value: ").append(Float.toString(maU.readFloat()));
       return;
     case 1: 
-      localStringBuffer.append("double value: ").append(Double.toString(jMD.readDouble()));
+      localStringBuffer.append("double value: ").append(Double.toString(maU.readDouble()));
       return;
     case 2: 
-      localStringBuffer.append("Length delimited (String or ByteString) value: ").append(jMD.readString());
+      localStringBuffer.append("Length delimited (String or ByteString) value: ").append(maU.readString());
       return;
     }
-    localStringBuffer.append("varint (long, int or boolean) value: ").append(jMD.aVq());
+    localStringBuffer.append("varint (long, int or boolean) value: ").append(maU.jD());
   }
   
-  public final LinkedList pL(int paramInt)
+  public final LinkedList sJ(int paramInt)
   {
-    return jMD.pL(paramInt);
+    return maU.sJ(paramInt);
   }
 }
 

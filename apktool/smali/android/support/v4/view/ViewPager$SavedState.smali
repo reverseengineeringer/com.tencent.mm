@@ -19,9 +19,9 @@
 
 
 # instance fields
-.field hA:Landroid/os/Parcelable;
+.field gI:Landroid/os/Parcelable;
 
-.field hB:Ljava/lang/ClassLoader;
+.field gJ:Ljava/lang/ClassLoader;
 
 .field position:I
 
@@ -32,9 +32,9 @@
 
     .prologue
     .line 1237
-    new-instance v0, Landroid/support/v4/view/z;
+    new-instance v0, Landroid/support/v4/view/ViewPager$SavedState$1;
 
-    invoke-direct {v0}, Landroid/support/v4/view/z;-><init>()V
+    invoke-direct {v0}, Landroid/support/v4/view/ViewPager$SavedState$1;-><init>()V
 
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -88,10 +88,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v4/view/ViewPager$SavedState;->hA:Landroid/os/Parcelable;
+    iput-object v0, p0, Landroid/support/v4/view/ViewPager$SavedState;->gI:Landroid/os/Parcelable;
 
     .line 1256
-    iput-object p2, p0, Landroid/support/v4/view/ViewPager$SavedState;->hB:Ljava/lang/ClassLoader;
+    iput-object p2, p0, Landroid/support/v4/view/ViewPager$SavedState;->gJ:Ljava/lang/ClassLoader;
 
     .line 1257
     return-void
@@ -171,7 +171,7 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 1227
-    iget-object v0, p0, Landroid/support/v4/view/ViewPager$SavedState;->hA:Landroid/os/Parcelable;
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager$SavedState;->gI:Landroid/os/Parcelable;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 

@@ -6,9 +6,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import com.jg.JgClassChecked;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 @JgClassChecked(author=20, fComment="checked", lastDate="20140429", reviewer=20, vComment={com.jg.EType.RECEIVERCHECK})
 public class InstallReceiver
@@ -20,20 +20,20 @@ public class InstallReceiver
       return;
     }
     String str = paramIntent.getAction();
-    t.i("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "action:[%s]", new Object[] { str });
-    if ((bn.iW(str)) || (!str.equals("com.android.vending.INSTALL_REFERRER")))
+    u.i("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "action:[%s]", new Object[] { str });
+    if ((ay.kz(str)) || (!str.equals("com.android.vending.INSTALL_REFERRER")))
     {
-      t.e("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "action is null or nil, or not the installed action");
+      u.e("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "action is null or nil, or not the installed action");
       return;
     }
     str = "";
     try
     {
       paramIntent = paramIntent.getStringExtra("referrer");
-      t.i("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "get referer:[%s]", new Object[] { paramIntent });
-      if (bn.iW(paramIntent))
+      u.i("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "get referer:[%s]", new Object[] { paramIntent });
+      if (ay.kz(paramIntent))
       {
-        t.e("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "get referer is null or nil");
+        u.e("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "get referer is null or nil");
         return;
       }
     }
@@ -41,11 +41,11 @@ public class InstallReceiver
     {
       for (;;)
       {
-        t.e("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "%s", new Object[] { bn.a(paramIntent) });
+        u.e("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "%s", new Object[] { ay.b(paramIntent) });
         paramIntent = str;
       }
-      t.d("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "[PREF] write installreferer = " + paramIntent);
-      paramContext.getSharedPreferences(aa.aES(), 0).edit().putString("installreferer", paramIntent).commit();
+      u.d("!44@/B4Tb64lLpKHfvyC9/rQc20cw3qxVcQGTFufDl7pIG0=", "[PREF] write installreferer = " + paramIntent);
+      paramContext.getSharedPreferences(y.aUK(), 0).edit().putString("installreferer", paramIntent).commit();
     }
   }
 }

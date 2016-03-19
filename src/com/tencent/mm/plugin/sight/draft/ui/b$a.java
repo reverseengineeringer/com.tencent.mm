@@ -8,33 +8,30 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.b;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.ah.m;
-import com.tencent.mm.ah.n;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.tools.dt;
+import com.tencent.mm.an.f;
+import com.tencent.mm.an.g;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.tools.k;
 
 final class b$a
   implements View.OnClickListener
 {
-  private b.e fiu;
+  private b.e gzu;
   
   private b$a(b paramb) {}
   
-  public final boolean ajx()
+  public final boolean awd()
   {
-    if (fiu != null)
+    if (gzu != null)
     {
-      fiu.cuF.setVisibility(8);
-      fiu.fiz.setCanPlay(false);
-      fiu.fiz.I(null, false);
-      Bitmap localBitmap = b.d(fit).h(fiu.bOH.field_fileName, n.jdMethod_if(fiu.bOH.field_fileName), true);
-      fiu.fiz.setThumbBmp(localBitmap);
-      fiu.dkN.setBackgroundResource(a.h.sight_draft_mask);
-      dt.e(fiu.fiy, 1.0F);
-      fiu = null;
+      gzu.cMz.setVisibility(8);
+      gzu.gzz.setCanPlay(false);
+      gzu.gzz.P(null, false);
+      Bitmap localBitmap = b.d(gzt).h(gzu.cfv.field_fileName, g.jH(gzu.cfv.field_fileName), true);
+      gzu.gzz.setThumbBmp(localBitmap);
+      gzu.dVm.setBackgroundResource(2130970063);
+      k.e(gzu.gzy, 1.0F);
+      gzu = null;
       return true;
     }
     return false;
@@ -44,60 +41,60 @@ final class b$a
   {
     int i = 0;
     if (!(paramView.getTag() instanceof b.e)) {}
-    label233:
+    label232:
     do
     {
       do
       {
         return;
         paramView = (b.e)paramView.getTag();
-        if (bOH == null)
+        if (cfv == null)
         {
-          t.i("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "click draft, but info null, curType %s", new Object[] { b.b(fit) });
+          u.i("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "click draft, but info null, curType %s", new Object[] { b.b(gzt) });
           return;
         }
-        if (-1 != bOH.field_fileStatus) {
+        if (-1 != cfv.field_fileStatus) {
           break;
         }
-        t.i("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "click camera, curType %s", new Object[] { b.b(fit) });
-      } while ((b.c(fit) == null) || (b.d.fiv != b.b(fit)));
-      b.c(fit).ajw();
+        u.i("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "click camera, curType %s", new Object[] { b.b(gzt) });
+      } while ((b.c(gzt) == null) || (b.d.gzv != b.b(gzt)));
+      b.c(gzt).awc();
       return;
-      if (fiu != paramView)
+      if (gzu != paramView)
       {
-        ajx();
-        Object localObject1 = n.ie(bOH.field_fileName);
-        fiz.setCanPlay(true);
-        fiz.I((String)localObject1, false);
-        dkN.setBackgroundResource(a.h.sight_draft_mask_selected);
-        localObject1 = cuF;
-        if (b.d.fiv == b.b(fit))
+        awd();
+        Object localObject1 = g.jG(cfv.field_fileName);
+        gzz.setCanPlay(true);
+        gzz.P((String)localObject1, false);
+        dVm.setBackgroundResource(2130970053);
+        localObject1 = cMz;
+        if (b.d.gzv == b.b(gzt))
         {
           ((TextView)localObject1).setVisibility(i);
-          localObject1 = fiy;
-          if ((localObject1 != null) && (!com.tencent.mm.compatible.util.e.bU(11))) {
-            break label233;
+          localObject1 = gzy;
+          if ((localObject1 != null) && (!com.tencent.mm.compatible.util.c.bV(11))) {
+            break label232;
           }
         }
         for (;;)
         {
-          b.a(fit, paramView);
-          fiu = paramView;
+          b.a(gzt, paramView);
+          gzu = paramView;
           return;
           i = 8;
           break;
-          Object localObject2 = (Animator)((View)localObject1).getTag(a.i.property_anim);
+          Object localObject2 = (Animator)((View)localObject1).getTag(2131165230);
           if (localObject2 != null) {
             ((Animator)localObject2).cancel();
           }
-          localObject2 = (AnimatorSet)AnimatorInflater.loadAnimator(((View)localObject1).getContext(), a.b.fast_zoom_in_property_anim);
+          localObject2 = (AnimatorSet)AnimatorInflater.loadAnimator(((View)localObject1).getContext(), 2131623937);
           ((AnimatorSet)localObject2).setTarget(localObject1);
           ((AnimatorSet)localObject2).start();
-          ((View)localObject1).setTag(a.i.property_anim, localObject2);
+          ((View)localObject1).setTag(2131165230, localObject2);
         }
       }
-    } while ((b.d.fiv != b.b(fit)) || (b.c(fit) == null));
-    b.c(fit).a(bOH);
+    } while ((b.d.gzv != b.b(gzt)) || (b.c(gzt) == null));
+    b.c(gzt).a(cfv);
   }
 }
 

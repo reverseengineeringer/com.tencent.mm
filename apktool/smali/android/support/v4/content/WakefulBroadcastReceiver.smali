@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final fa:Landroid/util/SparseArray;
+.field private static final ej:Landroid/util/SparseArray;
 
-.field private static fb:I
+.field private static ek:I
 
 
 # direct methods
@@ -19,12 +19,12 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    sput-object v0, Landroid/support/v4/content/WakefulBroadcastReceiver;->fa:Landroid/util/SparseArray;
+    sput-object v0, Landroid/support/v4/content/WakefulBroadcastReceiver;->ej:Landroid/util/SparseArray;
 
     .line 64
     const/4 v0, 0x1
 
-    sput v0, Landroid/support/v4/content/WakefulBroadcastReceiver;->fb:I
+    sput v0, Landroid/support/v4/content/WakefulBroadcastReceiver;->ek:I
 
     return-void
 .end method

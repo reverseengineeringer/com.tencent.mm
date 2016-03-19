@@ -1,31 +1,31 @@
 package com.tencent.mm.app.plugin.b;
 
-import com.tencent.mm.ab.h;
-import com.tencent.mm.d.a.bu;
-import com.tencent.mm.d.a.bu.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.d.a.dl;
+import com.tencent.mm.d.a.dl.a;
+import com.tencent.mm.modelmulti.h;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class a$c
-  extends e
+  extends c
 {
   public a$c()
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(b paramb)
   {
-    if (!(paramd instanceof bu))
+    if (!(paramb instanceof dl))
     {
-      t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+      u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
       return false;
     }
-    paramd = (bu)paramd;
-    h localh = new h(awY.axa, awY.content, awY.type);
-    awZ.axc = localh;
-    awZ.axb = axb;
+    paramb = (dl)paramb;
+    h localh = new h(axg.axi, axg.content, axg.type);
+    axh.axj = localh;
+    axh.avg = avg;
     return true;
   }
 }

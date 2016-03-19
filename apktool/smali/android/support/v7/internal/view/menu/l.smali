@@ -1,28 +1,34 @@
-.class final Landroid/support/v7/internal/view/menu/l;
+.class public interface abstract Landroid/support/v7/internal/view/menu/l;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/support/v4/view/h$b;
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Landroid/support/v7/internal/view/menu/l$a;
+    }
+.end annotation
 
 
-# instance fields
-.field final synthetic nw:Landroid/support/v7/internal/view/menu/k;
+# virtual methods
+.method public abstract a(Landroid/content/Context;Landroid/support/v7/internal/view/menu/f;)V
+.end method
 
-.field final synthetic nx:Landroid/support/v7/internal/view/menu/k$a;
+.method public abstract a(Landroid/support/v7/internal/view/menu/f;Z)V
+.end method
 
+.method public abstract a(Landroid/support/v7/internal/view/menu/p;)Z
+.end method
 
-# direct methods
-.method constructor <init>(Landroid/support/v7/internal/view/menu/k$a;Landroid/support/v7/internal/view/menu/k;)V
-    .locals 0
+.method public abstract bj()Z
+.end method
 
-    .prologue
-    .line 381
-    iput-object p1, p0, Landroid/support/v7/internal/view/menu/l;->nx:Landroid/support/v7/internal/view/menu/k$a;
+.method public abstract d(Landroid/support/v7/internal/view/menu/h;)Z
+.end method
 
-    iput-object p2, p0, Landroid/support/v7/internal/view/menu/l;->nw:Landroid/support/v7/internal/view/menu/k;
+.method public abstract e(Landroid/support/v7/internal/view/menu/h;)Z
+.end method
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
+.method public abstract q(Z)V
 .end method

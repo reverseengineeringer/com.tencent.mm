@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic imm:Lcom/tencent/mm/ui/ExposeSupplementUI;
+.field final synthetic kkt:Lcom/tencent/mm/ui/ExposeSupplementUI;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 97
-    iput-object p1, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->imm:Lcom/tencent/mm/ui/ExposeSupplementUI;
+    iput-object p1, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->kkt:Lcom/tencent/mm/ui/ExposeSupplementUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -53,7 +53,7 @@
     const/4 v1, 0x0
 
     .line 103
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->imm:Lcom/tencent/mm/ui/ExposeSupplementUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->kkt:Lcom/tencent/mm/ui/ExposeSupplementUI;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/ui/ExposeSupplementUI;->a(Lcom/tencent/mm/ui/ExposeSupplementUI;Ljava/lang/CharSequence;)I
 
@@ -66,7 +66,7 @@
 
     .line 107
     :cond_0
-    iget-object v2, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->imm:Lcom/tencent/mm/ui/ExposeSupplementUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->kkt:Lcom/tencent/mm/ui/ExposeSupplementUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/ExposeSupplementUI;->b(Lcom/tencent/mm/ui/ExposeSupplementUI;)Landroid/widget/TextView;
 
@@ -75,7 +75,7 @@
     if-eqz v2, :cond_1
 
     .line 108
-    iget-object v2, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->imm:Lcom/tencent/mm/ui/ExposeSupplementUI;
+    iget-object v2, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->kkt:Lcom/tencent/mm/ui/ExposeSupplementUI;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/ExposeSupplementUI;->b(Lcom/tencent/mm/ui/ExposeSupplementUI;)Landroid/widget/TextView;
 
@@ -89,7 +89,7 @@
 
     .line 110
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->imm:Lcom/tencent/mm/ui/ExposeSupplementUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->kkt:Lcom/tencent/mm/ui/ExposeSupplementUI;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/ExposeSupplementUI;->a(Lcom/tencent/mm/ui/ExposeSupplementUI;)Landroid/widget/EditText;
 
@@ -107,9 +107,9 @@
     if-nez v0, :cond_2
 
     .line 112
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->imm:Lcom/tencent/mm/ui/ExposeSupplementUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->kkt:Lcom/tencent/mm/ui/ExposeSupplementUI;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/ExposeSupplementUI;->fe(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/ExposeSupplementUI;->bC(Z)V
 
     .line 116
     :goto_0
@@ -117,11 +117,11 @@
 
     .line 114
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->imm:Lcom/tencent/mm/ui/ExposeSupplementUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/ExposeSupplementUI$a;->kkt:Lcom/tencent/mm/ui/ExposeSupplementUI;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/ExposeSupplementUI;->fe(Z)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/ExposeSupplementUI;->bC(Z)V
 
     goto :goto_0
 .end method

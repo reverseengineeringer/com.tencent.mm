@@ -4,19 +4,19 @@ import android.content.Context;
 import android.view.View;
 
 final class ActionMenuPresenter$d
-  extends n
+  extends k
 {
-  public ActionMenuPresenter$d(ActionMenuPresenter paramActionMenuPresenter, Context paramContext, g paramg, View paramView)
+  public ActionMenuPresenter$d(ActionMenuPresenter paramActionMenuPresenter, Context paramContext, f paramf, View paramView)
   {
-    super(paramContext, paramg, paramView, true);
-    nd = lN;
+    super(paramContext, paramf, paramView, true);
+    mi = kS;
   }
   
   public final void onDismiss()
   {
     super.onDismiss();
-    lP.jH.close();
-    lP.lK = null;
+    kU.iO.close();
+    kU.kP = null;
   }
 }
 

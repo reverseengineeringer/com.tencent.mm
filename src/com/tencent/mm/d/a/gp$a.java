@@ -1,6 +1,10 @@
 package com.tencent.mm.d.a;
 
-public final class gp$a {}
+public final class gp$a
+{
+  public String aBH;
+  public String username;
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.d.a.gp.a

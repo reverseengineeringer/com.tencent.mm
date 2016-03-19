@@ -1,17 +1,27 @@
 package com.tencent.mm.ui.chatting;
 
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.TextView;
 
 final class h
-  implements MenuItem.OnMenuItemClickListener
+  extends aa.a
 {
-  h(AppAttachFileListUI paramAppAttachFileListUI) {}
+  protected TextView kQG;
   
-  public final boolean onMenuItemClick(MenuItem paramMenuItem)
+  public h(int paramInt)
   {
-    iRp.finish();
-    return true;
+    super(paramInt);
+  }
+  
+  public final h ay(View paramView)
+  {
+    super.aC(paramView);
+    kQG = ((TextView)paramView.findViewById(2131165396));
+    gjr = ((TextView)paramView.findViewById(2131165268));
+    edK = ((CheckBox)paramView.findViewById(2131165186));
+    dMC = paramView.findViewById(2131165187);
+    return this;
   }
 }
 

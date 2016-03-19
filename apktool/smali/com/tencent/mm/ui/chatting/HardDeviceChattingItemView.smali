@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private dzJ:Z
+.field private ery:Z
 
 
 # direct methods
@@ -29,13 +29,13 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->onFinishInflate()V
 
     .line 28
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/HardDeviceChattingItemView;->dzJ:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/HardDeviceChattingItemView;->ery:Z
 
     if-nez v0, :cond_0
 
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/HardDeviceChattingItemView;->dzJ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/HardDeviceChattingItemView;->ery:Z
 
     .line 29
     :cond_0

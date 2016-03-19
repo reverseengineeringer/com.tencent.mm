@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field azQ:Landroid/widget/ImageView;
+.field aAF:Landroid/widget/ImageView;
 
-.field dxH:Landroid/widget/ProgressBar;
+.field epr:Landroid/widget/ProgressBar;
 
-.field gPJ:Landroid/view/View;
+.field iGr:Landroid/view/View;
 
-.field final synthetic gPK:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;
+.field final synthetic iGs:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;
 
 
 # direct methods
@@ -30,7 +30,7 @@
 
     .prologue
     .line 203
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->gPK:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a$a;->iGs:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

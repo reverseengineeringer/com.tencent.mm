@@ -3,9 +3,9 @@ package com.tencent.mm.ui.account;
 public final class SetPwdUI$a
   extends Enum
 {
-  public static int[] aMg()
+  public static int[] bbW()
   {
-    return (int[])ixB.clone();
+    return (int[])kwF.clone();
   }
 }
 

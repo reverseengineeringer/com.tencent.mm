@@ -5,23 +5,23 @@ import android.graphics.drawable.Drawable;
 
 final class AppChooserUI$c
 {
-  boolean hdA;
-  ResolveInfo hdu;
-  CharSequence hdv;
-  Drawable hdw;
-  boolean hdx;
-  boolean hdy;
-  boolean hdz;
+  ResolveInfo iRm;
+  CharSequence iRn;
+  Drawable iRo;
+  boolean iRp;
+  boolean iRq;
+  boolean iRr;
+  boolean iRs;
   
   public AppChooserUI$c(AppChooserUI paramAppChooserUI) {}
   
   public AppChooserUI$c(AppChooserUI paramAppChooserUI, ResolveInfo paramResolveInfo, CharSequence paramCharSequence)
   {
-    hdu = paramResolveInfo;
-    hdv = paramCharSequence;
-    hdx = false;
-    hdy = true;
-    hdz = false;
+    iRm = paramResolveInfo;
+    iRn = paramCharSequence;
+    iRp = false;
+    iRq = true;
+    iRr = false;
   }
 }
 

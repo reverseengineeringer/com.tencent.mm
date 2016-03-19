@@ -1,12 +1,11 @@
 package com.tencent.mm.compatible.loader;
 
-import com.tencent.mm.sdk.platformtools.bn;
 import java.lang.reflect.Field;
 
 public final class d
 {
-  private boolean biY;
-  private Field biZ;
+  private boolean btv;
+  private Field btw;
   private String classname;
   private String fieldName;
   private Object obj;
@@ -23,17 +22,17 @@ public final class d
   
   private void prepare()
   {
-    if (biY) {
+    if (btv) {
       return;
     }
-    biY = true;
+    btv = true;
     Class localClass = obj.getClass();
     while (localClass != null) {
       try
       {
         Field localField1 = localClass.getDeclaredField(fieldName);
         localField1.setAccessible(true);
-        biZ = localField1;
+        btw = localField1;
         return;
       }
       catch (Exception localException1)
@@ -42,7 +41,7 @@ public final class d
         {
           try
           {
-            if (!bn.iW(classname))
+            if ((classname != null) && (!classname.equals("")))
             {
               Field[] arrayOfField = localClass.getDeclaredFields();
               int j = arrayOfField.length;
@@ -54,7 +53,7 @@ public final class d
                   continue;
                 }
                 localField2.setAccessible(true);
-                biZ = localField2;
+                btw = localField2;
               }
             }
           }
@@ -78,12 +77,12 @@ public final class d
   public final Object get()
   {
     prepare();
-    if (biZ == null) {
+    if (btw == null) {
       throw new NoSuchFieldException();
     }
     try
     {
-      Object localObject = biZ.get(obj);
+      Object localObject = btw.get(obj);
       return localObject;
     }
     catch (ClassCastException localClassCastException)
@@ -92,13 +91,19 @@ public final class d
     }
   }
   
+  public final boolean oO()
+  {
+    prepare();
+    return btw != null;
+  }
+  
   public final void set(Object paramObject)
   {
     prepare();
-    if (biZ == null) {
+    if (btw == null) {
       throw new NoSuchFieldException();
     }
-    biZ.set(obj, paramObject);
+    btw.set(obj, paramObject);
   }
 }
 

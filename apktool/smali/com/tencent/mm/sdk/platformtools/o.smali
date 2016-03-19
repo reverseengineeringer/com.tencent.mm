@@ -3,347 +3,127 @@
 .source "SourceFile"
 
 
+# static fields
+.field private static final jVh:Ljava/util/regex/Pattern;
+
+.field private static final jVi:Ljava/util/regex/Pattern;
+
+.field private static final jVj:Ljava/util/regex/Pattern;
+
+
 # direct methods
-.method public static A(Landroid/content/Intent;)Landroid/os/Bundle;
-    .locals 6
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    const/4 v0, 0x0
+    .line 12
+    const-string/jumbo v0, "^(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)(\\.(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)){3}$"
 
-    .line 40
-    if-nez p0, :cond_0
-
-    .line 50
-    :goto_0
-    return-object v0
-
-    .line 43
-    :cond_0
-    :try_start_0
-    invoke-virtual {p0}, Landroid/content/Intent;->getExtras()Landroid/os/Bundle;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    goto :goto_0
-
-    .line 46
-    :catch_0
-    move-exception v1
-
-    .line 47
-    const-string/jumbo v2, "!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ"
-
-    const-string/jumbo v3, "getExtras exception:%s"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v4, v5
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/content/Intent;Ljava/lang/String;I)I
-    .locals 5
-
-    .prologue
-    .line 11
-    if-nez p0, :cond_0
-
-    .line 21
-    :goto_0
-    return p2
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/o;->jVh:Ljava/util/regex/Pattern;
 
     .line 14
-    :cond_0
-    :try_start_0
-    invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const-string/jumbo v0, "^(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}$"
 
-    move-result p2
-
-    goto :goto_0
-
-    .line 17
-    :catch_0
-    move-exception v0
-
-    .line 18
-    const-string/jumbo v1, "!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ"
-
-    const-string/jumbo v2, "getIntExtra exception:%s"
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
-    aput-object v0, v3, v4
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/o;->jVi:Ljava/util/regex/Pattern;
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 16
+    const-string/jumbo v0, "^((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)::((?:[0-9A-Fa-f]{1,4}(?::[0-9A-Fa-f]{1,4})*)?)$"
 
-    goto :goto_0
+    invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/sdk/platformtools/o;->jVj:Ljava/util/regex/Pattern;
+
+    return-void
 .end method
 
-.method public static a(Landroid/os/Bundle;Ljava/lang/String;I)I
-    .locals 5
+.method public static CJ(Ljava/lang/String;)Ljava/net/InetAddress;
+    .locals 2
 
     .prologue
-    .line 25
-    if-nez p0, :cond_0
+    .line 35
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/o;->jVh:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
 
     .line 36
-    :goto_0
-    return p2
-
-    .line 29
-    :cond_0
-    :try_start_0
-    invoke-virtual {p0, p1, p2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result p2
-
-    goto :goto_0
-
-    .line 32
-    :catch_0
-    move-exception v0
-
-    .line 33
-    const-string/jumbo v1, "!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ"
-
-    const-string/jumbo v2, "getIntExtra exception:%s"
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-static {p0}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v0
 
-    aput-object v0, v3, v4
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method public static a(Landroid/content/Intent;Ljava/lang/String;Z)Z
-    .locals 5
-
-    .prologue
-    .line 54
-    if-nez p0, :cond_0
-
-    .line 64
-    :goto_0
-    return p2
-
-    .line 57
-    :cond_0
-    :try_start_0
-    invoke-virtual {p0, p1, p2}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result p2
-
-    goto :goto_0
-
-    .line 60
-    :catch_0
-    move-exception v0
-
-    .line 61
-    const-string/jumbo v1, "!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ"
-
-    const-string/jumbo v2, "getBooleanExtra exception:%s"
-
-    const/4 v3, 0x1
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    const/4 v4, 0x0
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v3, v4
-
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method public static b(Landroid/os/Bundle;Ljava/lang/String;)Ljava/lang/String;
-    .locals 6
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 96
-    if-nez p0, :cond_0
-
-    .line 106
+    .line 40
     :goto_0
     return-object v0
 
-    .line 99
+    .line 39
     :cond_0
-    :try_start_0
-    invoke-virtual {p0, p1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/o;->jVi:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
+    sget-object v0, Lcom/tencent/mm/sdk/platformtools/o;->jVj:Ljava/util/regex/Pattern;
+
+    invoke-virtual {v0, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_1
+    const/4 v0, 0x1
+
+    :goto_1
+    if-eqz v0, :cond_3
+
+    .line 40
+    invoke-static {p0}, Ljava/net/InetAddress;->getByName(Ljava/lang/String;)Ljava/net/InetAddress;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 102
-    :catch_0
-    move-exception v1
-
-    .line 103
-    const-string/jumbo v2, "!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ"
-
-    const-string/jumbo v3, "getStringExtra exception:%s"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v4, v5
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method public static c(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
-    .locals 6
-
-    .prologue
+    .line 39
+    :cond_2
     const/4 v0, 0x0
 
-    .line 82
-    if-nez p0, :cond_0
+    goto :goto_1
 
-    .line 92
-    :goto_0
-    return-object v0
+    .line 43
+    :cond_3
+    new-instance v0, Ljava/net/UnknownHostException;
 
-    .line 85
-    :cond_0
-    :try_start_0
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const-string/jumbo v1, "invalid ipv4 or ipv6 dotted string"
 
-    move-result-object v0
+    invoke-direct {v0, v1}, Ljava/net/UnknownHostException;-><init>(Ljava/lang/String;)V
 
-    goto :goto_0
-
-    .line 88
-    :catch_0
-    move-exception v1
-
-    .line 89
-    const-string/jumbo v2, "!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ"
-
-    const-string/jumbo v3, "getStringExtra exception:%s"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v4, v5
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method public static d(Landroid/content/Intent;Ljava/lang/String;)[B
-    .locals 6
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 110
-    if-nez p0, :cond_0
-
-    .line 120
-    :goto_0
-    return-object v0
-
-    .line 113
-    :cond_0
-    :try_start_0
-    invoke-virtual {p0, p1}, Landroid/content/Intent;->getByteArrayExtra(Ljava/lang/String;)[B
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result-object v0
-
-    goto :goto_0
-
-    .line 116
-    :catch_0
-    move-exception v1
-
-    .line 117
-    const-string/jumbo v2, "!32@/B4Tb64lLpL6+V4f6dxuKfZvcpEyqYaQ"
-
-    const-string/jumbo v3, "getByteArrayExtra exception:%s"
-
-    const/4 v4, 0x1
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    const/4 v5, 0x0
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v4, v5
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
+    throw v0
 .end method

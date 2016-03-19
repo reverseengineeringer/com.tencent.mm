@@ -1,63 +1,164 @@
 package com.tencent.mm.pluginsdk.model;
 
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.br;
-import com.tencent.mm.model.v;
-import com.tencent.mm.platformtools.w;
-import com.tencent.mm.pluginsdk.l.a;
-import com.tencent.mm.pluginsdk.l.e;
-import com.tencent.mm.protocal.b.y;
-import com.tencent.mm.q.c;
-import com.tencent.mm.q.c.a;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
-import com.tencent.mm.storage.as;
-import com.tencent.mm.storage.h;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.net.Uri;
+import android.os.Bundle;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.y;
+import java.util.Iterator;
+import java.util.List;
 
 public final class a
-  implements c
+  extends q
 {
-  public final c.a a(y paramy)
+  private final a izH;
+  private final Intent izI;
+  private final u izJ = new u();
+  
+  public a(Bundle paramBundle)
   {
-    if ((paramy == null) || (hiQ != 47)) {
-      t.f("!32@/B4Tb64lLpJAz7ZZyuqdwFauBzP/voPJ", "parseEmojiMsg failed, invalid cmdAM");
+    if ((paramBundle == null) || (paramBundle.getParcelable("key_target_intent") == null)) {
+      izH = a.izL;
     }
-    String str2;
-    String str1;
-    String str3;
-    do
+    while (izH == a.izL)
     {
-      return null;
-      str2 = w.a(hiO);
-      str1 = w.a(hiP);
-      if (!((String)ax.tl().rf().get(2, null)).equals(str2)) {
-        break;
+      izI = null;
+      return;
+      a locala = a.nY(paramBundle.getInt("key_map_app", izLcwi));
+      if (a(y.getContext(), locala, null) == null) {
+        izH = a.izL;
+      } else {
+        izH = locala;
       }
-      str3 = w.a(hiR);
-    } while (l.a.ayr().b(str1, str3, hiW));
-    t.w("!32@/B4Tb64lLpJAz7ZZyuqdwFauBzP/voPJ", "emoji plugin not found");
-    ar localar = new ar();
-    localar.setType(47);
-    localar.setTalker(str1);
-    if (v.dF(str2)) {}
-    for (int i = 1;; i = 0)
-    {
-      localar.bh(i);
-      localar.ck("no_plugin_md5");
-      localar.v(hiW);
-      localar.setContent(str3);
-      localar.w(br.eV(field_talker));
-      localar.setStatus(3);
-      ax.tl().rk().C(localar);
-      return null;
-      str1 = str2;
-      break;
     }
+    izI = ((Intent)paramBundle.getParcelable("key_target_intent"));
   }
   
-  public final void d(ar paramar) {}
+  private static ResolveInfo a(Context paramContext, a parama, Intent paramIntent)
+  {
+    Intent localIntent = paramIntent;
+    if (paramIntent == null) {
+      localIntent = new Intent("android.intent.action.VIEW", Uri.parse(String.format("geo:%f,%f", new Object[] { Float.valueOf(0.0F), Float.valueOf(0.0F) })));
+    }
+    paramContext = paramContext.getPackageManager().queryIntentActivities(localIntent, 0);
+    if (ay.bq(paramContext)) {
+      return null;
+    }
+    paramContext = paramContext.iterator();
+    while (paramContext.hasNext())
+    {
+      paramIntent = (ResolveInfo)paramContext.next();
+      if ((paramIntent != null) && (activityInfo != null) && (parama.getPackage().equals(activityInfo.packageName))) {
+        return paramIntent;
+      }
+    }
+    return null;
+  }
+  
+  public final String FG()
+  {
+    if (izH == a.izL) {
+      return "http://softroute.map.qq.com/downloadfile?cid=00008&referer=wx_client";
+    }
+    return null;
+  }
+  
+  public final String a(Context paramContext, ResolveInfo paramResolveInfo)
+  {
+    return izJ.a(paramContext, paramResolveInfo);
+  }
+  
+  public final String aPk()
+  {
+    if (izH == a.izL) {
+      return "TencentMap.apk";
+    }
+    return null;
+  }
+  
+  public final r.a aPl()
+  {
+    Object localObject;
+    if (izH == a.izL) {
+      localObject = izJ.aPl();
+    }
+    r.a locala;
+    ResolveInfo localResolveInfo;
+    do
+    {
+      return (r.a)localObject;
+      locala = new r.a();
+      iAK = -1;
+      iAH = -1;
+      localResolveInfo = a(y.getContext(), izH, izI);
+      localObject = locala;
+    } while (localResolveInfo == null);
+    iAL = a(y.getContext(), localResolveInfo);
+    return locala;
+  }
+  
+  public final boolean cK(Context paramContext)
+  {
+    if (izH == a.izL) {
+      return izJ.cK(paramContext);
+    }
+    return a(paramContext, izH, izI) != null;
+  }
+  
+  public final boolean zC(String paramString)
+  {
+    return izH.getPackage().equals(paramString);
+  }
+  
+  public static enum a
+  {
+    public final int cwi;
+    
+    private a(int paramInt1)
+    {
+      cwi = paramInt1;
+    }
+    
+    public static a nY(int paramInt)
+    {
+      switch (paramInt)
+      {
+      default: 
+        return izL;
+      case 0: 
+        return izL;
+      case 1: 
+        return izM;
+      case 2: 
+        return izN;
+      case 3: 
+        return izO;
+      }
+      return izP;
+    }
+    
+    public final String getPackage()
+    {
+      switch (a.1.izK[ordinal()])
+      {
+      default: 
+        return "com.tencent.map";
+      case 1: 
+        return "com.tencent.map";
+      case 2: 
+        return "com.google.android.apps.maps";
+      case 3: 
+        return "com.sogou.map.android.maps";
+      case 4: 
+        return "com.baidu.BaiduMap";
+      }
+      return "com.autonavi.minimap";
+    }
+  }
 }
 
 /* Location:

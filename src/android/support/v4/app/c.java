@@ -15,192 +15,192 @@ public class c
   extends Fragment
   implements DialogInterface.OnCancelListener, DialogInterface.OnDismissListener
 {
-  int aM = 0;
-  int aN = 0;
-  boolean aO = true;
-  public boolean aP = true;
-  int aQ = -1;
-  Dialog aR;
-  boolean aS;
-  boolean aT;
-  boolean aU;
+  int aQ = 0;
+  int aR = 0;
+  boolean aS = true;
+  public boolean aT = true;
+  int aU = -1;
+  Dialog aV;
+  boolean aW;
+  boolean aX;
+  boolean aY;
   
   public Dialog F()
   {
-    return new Dialog(G(), aN);
+    return new Dialog(getActivity(), aR);
   }
   
-  public void a(i parami, String paramString)
+  public void a(e parame, String paramString)
   {
-    aT = false;
-    aU = true;
-    parami = parami.M();
-    parami.a(this, paramString);
-    parami.commit();
+    aX = false;
+    aY = true;
+    parame = parame.H();
+    parame.a(this, paramString);
+    parame.commit();
   }
   
-  public final LayoutInflater c(Bundle paramBundle)
+  public LayoutInflater getLayoutInflater(Bundle paramBundle)
   {
-    if (!aP) {
-      return super.c(paramBundle);
+    if (!aT) {
+      return super.getLayoutInflater(paramBundle);
     }
-    aR = F();
-    switch (aM)
+    aV = F();
+    switch (aQ)
     {
     }
-    while (aR != null)
+    while (aV != null)
     {
-      return (LayoutInflater)aR.getContext().getSystemService("layout_inflater");
-      aR.getWindow().addFlags(24);
-      aR.requestWindowFeature(1);
+      return (LayoutInflater)aV.getContext().getSystemService("layout_inflater");
+      aV.getWindow().addFlags(24);
+      aV.requestWindowFeature(1);
     }
-    return (LayoutInflater)bn.getSystemService("layout_inflater");
+    return (LayoutInflater)mActivity.getSystemService("layout_inflater");
   }
   
-  public final void onActivityCreated(Bundle paramBundle)
+  public void onActivityCreated(Bundle paramBundle)
   {
     super.onActivityCreated(paramBundle);
-    if (!aP) {}
+    if (!aT) {}
     do
     {
       do
       {
         return;
-        View localView = mView;
+        View localView = getView();
         if (localView != null)
         {
           if (localView.getParent() != null) {
             throw new IllegalStateException("DialogFragment can not be attached to a container view");
           }
-          aR.setContentView(localView);
+          aV.setContentView(localView);
         }
-        aR.setOwnerActivity(G());
-        aR.setCancelable(aO);
-        aR.setOnCancelListener(this);
-        aR.setOnDismissListener(this);
+        aV.setOwnerActivity(getActivity());
+        aV.setCancelable(aS);
+        aV.setOnCancelListener(this);
+        aV.setOnDismissListener(this);
       } while (paramBundle == null);
       paramBundle = paramBundle.getBundle("android:savedDialogState");
     } while (paramBundle == null);
-    aR.onRestoreInstanceState(paramBundle);
+    aV.onRestoreInstanceState(paramBundle);
   }
   
-  public final void onAttach(Activity paramActivity)
+  public void onAttach(Activity paramActivity)
   {
     super.onAttach(paramActivity);
-    if (!aU) {
-      aT = false;
+    if (!aY) {
+      aX = false;
     }
   }
   
   public void onCancel(DialogInterface paramDialogInterface) {}
   
-  public final void onCreate(Bundle paramBundle)
+  public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    if (br == 0) {}
+    if (mContainerId == 0) {}
     for (boolean bool = true;; bool = false)
     {
-      aP = bool;
+      aT = bool;
       if (paramBundle != null)
       {
-        aM = paramBundle.getInt("android:style", 0);
-        aN = paramBundle.getInt("android:theme", 0);
-        aO = paramBundle.getBoolean("android:cancelable", true);
-        aP = paramBundle.getBoolean("android:showsDialog", aP);
-        aQ = paramBundle.getInt("android:backStackId", -1);
+        aQ = paramBundle.getInt("android:style", 0);
+        aR = paramBundle.getInt("android:theme", 0);
+        aS = paramBundle.getBoolean("android:cancelable", true);
+        aT = paramBundle.getBoolean("android:showsDialog", aT);
+        aU = paramBundle.getInt("android:backStackId", -1);
       }
       return;
     }
   }
   
-  public final void onDestroyView()
+  public void onDestroyView()
   {
     super.onDestroyView();
-    if (aR != null)
+    if (aV != null)
     {
-      aS = true;
-      aR.dismiss();
-      aR = null;
+      aW = true;
+      aV.dismiss();
+      aV = null;
     }
   }
   
-  public final void onDetach()
+  public void onDetach()
   {
     super.onDetach();
-    if ((!aU) && (!aT)) {
-      aT = true;
+    if ((!aY) && (!aX)) {
+      aX = true;
     }
   }
   
   public void onDismiss(DialogInterface paramDialogInterface)
   {
-    if ((!aS) && (!aT))
+    if ((!aW) && (!aX))
     {
-      aT = true;
-      aU = false;
-      if (aR != null)
+      aX = true;
+      aY = false;
+      if (aV != null)
       {
-        aR.dismiss();
-        aR = null;
+        aV.dismiss();
+        aV = null;
       }
-      aS = true;
-      if (aQ >= 0)
+      aW = true;
+      if (aU >= 0)
       {
-        bm.g(aQ);
-        aQ = -1;
+        getFragmentManager().g(aU);
+        aU = -1;
       }
     }
     else
     {
       return;
     }
-    paramDialogInterface = bm.M();
-    paramDialogInterface.a(this);
+    paramDialogInterface = getFragmentManager().H();
+    paramDialogInterface.b(this);
     paramDialogInterface.commitAllowingStateLoss();
   }
   
-  public final void onSaveInstanceState(Bundle paramBundle)
+  public void onSaveInstanceState(Bundle paramBundle)
   {
     super.onSaveInstanceState(paramBundle);
-    if (aR != null)
+    if (aV != null)
     {
-      Bundle localBundle = aR.onSaveInstanceState();
+      Bundle localBundle = aV.onSaveInstanceState();
       if (localBundle != null) {
         paramBundle.putBundle("android:savedDialogState", localBundle);
       }
     }
-    if (aM != 0) {
-      paramBundle.putInt("android:style", aM);
+    if (aQ != 0) {
+      paramBundle.putInt("android:style", aQ);
     }
-    if (aN != 0) {
-      paramBundle.putInt("android:theme", aN);
+    if (aR != 0) {
+      paramBundle.putInt("android:theme", aR);
     }
-    if (!aO) {
-      paramBundle.putBoolean("android:cancelable", aO);
+    if (!aS) {
+      paramBundle.putBoolean("android:cancelable", aS);
     }
-    if (!aP) {
-      paramBundle.putBoolean("android:showsDialog", aP);
+    if (!aT) {
+      paramBundle.putBoolean("android:showsDialog", aT);
     }
-    if (aQ != -1) {
-      paramBundle.putInt("android:backStackId", aQ);
+    if (aU != -1) {
+      paramBundle.putInt("android:backStackId", aU);
     }
   }
   
-  public final void onStart()
+  public void onStart()
   {
     super.onStart();
-    if (aR != null)
+    if (aV != null)
     {
-      aS = false;
-      aR.show();
+      aW = false;
+      aV.show();
     }
   }
   
-  public final void onStop()
+  public void onStop()
   {
     super.onStop();
-    if (aR != null) {
-      aR.hide();
+    if (aV != null) {
+      aV.hide();
     }
   }
 }

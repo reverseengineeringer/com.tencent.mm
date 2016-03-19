@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bv
-  extends a.c
+  extends a.e
 {
   public a$bv()
   {
-    super("playVoice", "playVoice", 99, false);
+    super("jumpWCMall", "jump_wcmall", 51, true);
   }
 }
 

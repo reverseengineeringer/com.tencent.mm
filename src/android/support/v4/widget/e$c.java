@@ -1,23 +1,59 @@
 package android.support.v4.widget;
 
 import android.content.Context;
-import android.graphics.Canvas;
+import android.view.animation.Interpolator;
+import android.widget.OverScroller;
 
-abstract interface e$c
+class e$c
+  implements e.a
 {
-  public abstract void a(Object paramObject, int paramInt1, int paramInt2);
+  public final boolean A(Object paramObject)
+  {
+    return ((OverScroller)paramObject).isFinished();
+  }
   
-  public abstract boolean a(Object paramObject, float paramFloat);
+  public final int D(Object paramObject)
+  {
+    return ((OverScroller)paramObject).getCurrX();
+  }
   
-  public abstract boolean a(Object paramObject, Canvas paramCanvas);
+  public final int E(Object paramObject)
+  {
+    return ((OverScroller)paramObject).getCurrY();
+  }
   
-  public abstract Object e(Context paramContext);
+  public final boolean F(Object paramObject)
+  {
+    return ((OverScroller)paramObject).computeScrollOffset();
+  }
   
-  public abstract boolean x(Object paramObject);
+  public final void G(Object paramObject)
+  {
+    ((OverScroller)paramObject).abortAnimation();
+  }
   
-  public abstract void y(Object paramObject);
+  public final int H(Object paramObject)
+  {
+    return ((OverScroller)paramObject).getFinalX();
+  }
   
-  public abstract boolean z(Object paramObject);
+  public final int I(Object paramObject)
+  {
+    return ((OverScroller)paramObject).getFinalY();
+  }
+  
+  public final void a(Object paramObject, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
+  {
+    ((OverScroller)paramObject).startScroll(paramInt1, paramInt2, paramInt3, paramInt4, paramInt5);
+  }
+  
+  public final Object b(Context paramContext, Interpolator paramInterpolator)
+  {
+    if (paramInterpolator != null) {
+      return new OverScroller(paramContext, paramInterpolator);
+    }
+    return new OverScroller(paramContext);
+  }
 }
 
 /* Location:

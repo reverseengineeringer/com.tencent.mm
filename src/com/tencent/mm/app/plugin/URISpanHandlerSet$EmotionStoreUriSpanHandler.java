@@ -2,10 +2,10 @@ package com.tencent.mm.app.plugin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$EmotionStoreUriSpanHandler
@@ -16,29 +16,29 @@ class URISpanHandlerSet$EmotionStoreUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     if (type == 29)
     {
-      if (paramf != null) {
-        paramf.a(paramah);
+      if (paramb != null) {
+        paramb.a(paramg);
       }
-      paramf = new Intent();
-      paramf.putExtra("entrance_scence", 3);
-      paramf.putExtra("extra_id", (String)paramah.c(String.class));
-      paramf.putExtra("preceding_scence", 3);
-      c.c(URISpanHandlerSet.a(apd), "emoji", ".ui.EmojiStoreDetailUI", paramf);
+      paramb = new Intent();
+      paramb.putExtra("download_entrance_scene", 16);
+      paramb.putExtra("extra_id", (String)paramg.c(String.class));
+      paramb.putExtra("preceding_scence", 3);
+      c.c(URISpanHandlerSet.a(ang), "emoji", ".ui.EmojiStoreDetailUI", paramb);
       return true;
     }
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     if (paramString.trim().startsWith("weixin://emoticonstore/"))
     {
@@ -47,12 +47,12 @@ class URISpanHandlerSet$EmotionStoreUriSpanHandler
       if (i != -1) {
         str = paramString.substring(i + 1);
       }
-      return new ah(paramString, 29, str);
+      return new g(paramString, 29, str);
     }
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[] { 29 };
   }

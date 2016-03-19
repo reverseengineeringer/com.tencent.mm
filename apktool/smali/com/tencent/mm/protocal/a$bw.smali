@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$bw;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 1006
-    const-string/jumbo v0, "preVerifyJSAPI"
+    .line 1671
+    const-string/jumbo v0, "jumpToWXWallet"
 
-    const-string/jumbo v1, "pre_verify_jsapi"
+    const-string/jumbo v1, "jumpToWXWallet"
 
-    const/4 v2, -0x3
+    const/16 v2, 0x93
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 1007
+    .line 1672
     return-void
 .end method

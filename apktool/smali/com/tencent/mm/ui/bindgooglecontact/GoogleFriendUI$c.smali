@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field private iNF:Ljava/lang/String;
+.field private kMS:Ljava/lang/String;
 
-.field private iNH:Z
+.field private kMU:Z
 
-.field private iNJ:Ljava/lang/String;
+.field private kMW:Ljava/lang/String;
 
-.field final synthetic iNV:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+.field final synthetic kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
 
 # direct methods
@@ -29,19 +29,19 @@
     .locals 0
 
     .prologue
-    .line 635
-    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->iNV:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    .line 644
+    iput-object p1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 636
-    iput-object p2, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->iNJ:Ljava/lang/String;
+    .line 645
+    iput-object p2, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->kMW:Ljava/lang/String;
 
-    .line 637
+    .line 646
     return-void
 .end method
 
-.method private varargs VE()Ljava/lang/Void;
+.method private varargs acy()Ljava/lang/Void;
     .locals 9
 
     .prologue
@@ -49,14 +49,14 @@
 
     const/4 v7, 0x1
 
-    .line 648
+    .line 657
     const-string/jumbo v0, "!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw=="
 
     const-string/jumbo v1, "doInBackground"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 650
+    .line 659
     :try_start_0
     const-string/jumbo v1, ""
 
@@ -112,7 +112,7 @@
 
     const-string/jumbo v4, "refresh_token"
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->iNJ:Ljava/lang/String;
+    iget-object v5, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->kMW:Ljava/lang/String;
 
     invoke-direct {v3, v4, v5}, Lorg/apache/http/message/BasicNameValuePair;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -148,7 +148,7 @@
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v2}, Lcom/tencent/mm/modelfriend/x;->t(Ljava/util/List;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/modelfriend/n;->w(Ljava/util/List;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -168,7 +168,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
@@ -210,7 +210,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     const/16 v3, 0xc8
 
@@ -250,11 +250,11 @@
 
     goto :goto_0
 
-    .line 654
+    .line 663
     :catch_0
     move-exception v0
 
-    .line 655
+    .line 664
     const-string/jumbo v1, "!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw=="
 
     const-string/jumbo v2, "ProtocolException:%s"
@@ -267,15 +267,15 @@
 
     aput-object v0, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 663
+    .line 672
     :goto_1
     const/4 v0, 0x0
 
     return-object v0
 
-    .line 650
+    .line 659
     :cond_0
     :try_start_1
     invoke-virtual {v2}, Ljava/io/BufferedReader;->close()V
@@ -300,12 +300,12 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_1
     invoke-virtual {v0}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    .line 651
+    .line 660
     const-string/jumbo v0, "!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw=="
 
     const-string/jumbo v2, "refresh response:%s"
@@ -318,9 +318,9 @@
 
     aput-object v1, v3, v4
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 652
+    .line 661
     new-instance v0, Lorg/json/JSONObject;
 
     invoke-direct {v0, v1}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
@@ -331,12 +331,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->iNF:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->kMS:Ljava/lang/String;
 
-    .line 653
+    .line 662
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->iNH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->kMU:Z
     :try_end_1
     .catch Ljava/net/ProtocolException; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/net/MalformedURLException; {:try_start_1 .. :try_end_1} :catch_1
@@ -345,11 +345,11 @@
 
     goto :goto_1
 
-    .line 656
+    .line 665
     :catch_1
     move-exception v0
 
-    .line 657
+    .line 666
     const-string/jumbo v1, "!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw=="
 
     const-string/jumbo v2, "MalformedURLException:%s"
@@ -362,15 +362,15 @@
 
     aput-object v0, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 658
+    .line 667
     :catch_2
     move-exception v0
 
-    .line 659
+    .line 668
     const-string/jumbo v1, "!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw=="
 
     const-string/jumbo v2, "IOException:%s"
@@ -383,15 +383,15 @@
 
     aput-object v0, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 660
+    .line 669
     :catch_3
     move-exception v0
 
-    .line 661
+    .line 670
     const-string/jumbo v1, "!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw=="
 
     const-string/jumbo v2, "JSONException:%s"
@@ -404,7 +404,7 @@
 
     aput-object v0, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 .end method
@@ -415,8 +415,8 @@
     .locals 1
 
     .prologue
-    .line 629
-    invoke-direct {p0}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->VE()Ljava/lang/Void;
+    .line 638
+    invoke-direct {p0}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->acy()Ljava/lang/Void;
 
     move-result-object v0
 
@@ -427,7 +427,7 @@
     .locals 3
 
     .prologue
-    .line 629
+    .line 638
     check-cast p1, Ljava/lang/Void;
 
     invoke-super {p0, p1}, Landroid/os/AsyncTask;->onPostExecute(Ljava/lang/Object;)V
@@ -436,13 +436,13 @@
 
     const-string/jumbo v1, "onPostExecute"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->iNV:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->kNj:Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->iNH:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->kMU:Z
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->iNF:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->kMS:Ljava/lang/String;
 
     invoke-static {v0, v1, v2}, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;->a(Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI;ZLjava/lang/String;)V
 
@@ -453,21 +453,21 @@
     .locals 2
 
     .prologue
-    .line 641
+    .line 650
     invoke-super {p0}, Landroid/os/AsyncTask;->onPreExecute()V
 
-    .line 642
+    .line 651
     const-string/jumbo v0, "!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw=="
 
     const-string/jumbo v1, "onPreExecute"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 643
+    .line 652
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->iNH:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c;->kMU:Z
 
-    .line 644
+    .line 653
     return-void
 .end method

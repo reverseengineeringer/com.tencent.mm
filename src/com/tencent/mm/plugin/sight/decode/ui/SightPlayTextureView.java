@@ -3,17 +3,21 @@ package com.tencent.mm.plugin.sight.decode.ui;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.SurfaceTexture;
 import android.util.AttributeSet;
 import android.view.Surface;
+import android.view.TextureView.SurfaceTextureListener;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.a.a;
-import com.tencent.mm.a.h;
+import com.tencent.mm.an.j;
 import com.tencent.mm.plugin.sight.base.SightVideoJNI;
+import com.tencent.mm.plugin.sight.decode.a.b;
 import com.tencent.mm.plugin.sight.decode.a.b.e;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.plugin.sight.decode.a.b.f;
+import com.tencent.mm.plugin.sight.decode.a.b.g;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.base.MMTextureView;
 import java.lang.ref.WeakReference;
 
@@ -22,10 +26,10 @@ public class SightPlayTextureView
   extends MMTextureView
   implements com.tencent.mm.plugin.sight.decode.a.a
 {
-  private com.tencent.mm.plugin.sight.decode.a.b fhN;
-  private int fhP;
-  private int fhT;
-  private Surface fhh;
+  private Surface gxn;
+  private b gyr;
+  private int gyt;
+  private int gyz;
   
   public SightPlayTextureView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -36,19 +40,50 @@ public class SightPlayTextureView
   {
     super(paramContext, paramAttributeSet, paramInt);
     setOpaque(false);
-    fhN = new b(this);
-    setSurfaceTextureListener(new a(this));
+    gyr = new b(this);
+    setSurfaceTextureListener(new TextureView.SurfaceTextureListener()
+    {
+      public final void onSurfaceTextureAvailable(SurfaceTexture paramAnonymousSurfaceTexture, int paramAnonymousInt1, int paramAnonymousInt2)
+      {
+        u.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "on surface texture available, width %d height %d", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(paramAnonymousInt2) });
+        SightPlayTextureView.a locala = new SightPlayTextureView.a((byte)0);
+        gyC = SightPlayTextureView.d(SightPlayTextureView.this);
+        j.b(locala, 0L);
+        SightPlayTextureView.a(SightPlayTextureView.this, new Surface(paramAnonymousSurfaceTexture));
+        SightPlayTextureView.c(SightPlayTextureView.this).a(SightPlayTextureView.d(SightPlayTextureView.this));
+        bcZ();
+      }
+      
+      public final boolean onSurfaceTextureDestroyed(SurfaceTexture paramAnonymousSurfaceTexture)
+      {
+        u.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "on surface texture destroyed");
+        SightPlayTextureView.c(SightPlayTextureView.this).a(null);
+        SightPlayTextureView.c(SightPlayTextureView.this).clear();
+        paramAnonymousSurfaceTexture = new SightPlayTextureView.a((byte)0);
+        gyC = SightPlayTextureView.d(SightPlayTextureView.this);
+        j.b(paramAnonymousSurfaceTexture, 0L);
+        SightPlayTextureView.a(SightPlayTextureView.this, null);
+        return false;
+      }
+      
+      public final void onSurfaceTextureSizeChanged(SurfaceTexture paramAnonymousSurfaceTexture, int paramAnonymousInt1, int paramAnonymousInt2)
+      {
+        u.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "on surface texture size changed, width " + paramAnonymousInt1 + " height " + paramAnonymousInt2);
+      }
+      
+      public final void onSurfaceTextureUpdated(SurfaceTexture paramAnonymousSurfaceTexture) {}
+    });
   }
   
-  private void g(double paramDouble)
+  private void f(double paramDouble)
   {
-    ViewGroup.LayoutParams localLayoutParams = getLayoutParams();
-    if (height != (int)(fhP * paramDouble))
+    final ViewGroup.LayoutParams localLayoutParams = getLayoutParams();
+    if (height != (int)(gyt * paramDouble))
     {
-      width = fhP;
-      height = ((int)(fhP * paramDouble));
-      t.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "params width %d height %d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
-      if (ad.isMainThread()) {
+      width = gyt;
+      height = ((int)(gyt * paramDouble));
+      u.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "params width %d height %d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
+      if (ab.isMainThread()) {
         setLayoutParams(localLayoutParams);
       }
     }
@@ -56,44 +91,61 @@ public class SightPlayTextureView
     {
       return;
     }
-    ad.g(new b(this, localLayoutParams));
+    ab.j(new Runnable()
+    {
+      public final void run()
+      {
+        setLayoutParams(localLayoutParams);
+      }
+    });
   }
   
-  public final void I(String paramString, boolean paramBoolean)
+  public final void P(String paramString, boolean paramBoolean)
   {
-    fhN.I(paramString, paramBoolean);
+    gyr.P(paramString, paramBoolean);
   }
   
-  public final void aI(int paramInt1, int paramInt2)
+  public final void avF()
   {
-    ViewGroup.LayoutParams localLayoutParams = getLayoutParams();
-    fhP = paramInt1;
-    width = fhP;
-    height = (fhP * paramInt2 / paramInt1);
-    t.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "params width %d height %d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
-    if (ad.isMainThread())
+    Bitmap localBitmap1 = b.a(getContext(), 2130970478, gyt, 320, 240);
+    Bitmap localBitmap2 = b.a(getContext(), gyz, gyt, 320, 240);
+    SightVideoJNI.drawSurfaceThumb(gxn, localBitmap1, localBitmap2);
+  }
+  
+  public final boolean avG()
+  {
+    return gyr.avK();
+  }
+  
+  public final void bc(int paramInt1, int paramInt2)
+  {
+    final ViewGroup.LayoutParams localLayoutParams = getLayoutParams();
+    gyt = paramInt1;
+    width = gyt;
+    height = (gyt * paramInt2 / paramInt1);
+    u.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "params width %d height %d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
+    if (ab.isMainThread())
     {
       setLayoutParams(localLayoutParams);
       return;
     }
-    ad.g(new c(this, localLayoutParams));
-  }
-  
-  public final void ajl()
-  {
-    Bitmap localBitmap1 = com.tencent.mm.plugin.sight.decode.a.b.a(getContext(), a.h.nosdcard_chatting_bg, fhP, 320, 240);
-    Bitmap localBitmap2 = com.tencent.mm.plugin.sight.decode.a.b.a(getContext(), fhT, fhP, 320, 240);
-    SightVideoJNI.drawSurfaceThumb(fhh, localBitmap1, localBitmap2);
-  }
-  
-  public final boolean ajm()
-  {
-    return fhN.ajq();
+    ab.j(new Runnable()
+    {
+      public final void run()
+      {
+        setLayoutParams(localLayoutParams);
+      }
+    });
   }
   
   public final void clear()
   {
-    fhN.clear();
+    gyr.clear();
+  }
+  
+  public final void eD(boolean paramBoolean)
+  {
+    gyr.eD(paramBoolean);
   }
   
   public Object getTagObject()
@@ -108,60 +160,67 @@ public class SightPlayTextureView
   
   public String getVideoPath()
   {
-    return fhN.fgY;
+    return gyr.gxe;
   }
   
   protected void onAttachedToWindow()
   {
-    t.d("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "#0x%x on attached from window", new Object[] { Integer.valueOf(hashCode()) });
+    u.d("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "#0x%x on attached from window", new Object[] { Integer.valueOf(hashCode()) });
     super.onAttachedToWindow();
-    com.tencent.mm.sdk.c.a.hXQ.a("UIStatusChanged", fhN.ajr());
+    com.tencent.mm.sdk.c.a.jUF.b("UIStatusChanged", gyr.avL());
   }
   
   protected void onDetachedFromWindow()
   {
     super.onDetachedFromWindow();
-    t.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "#0x%x clear, on deattached to window", new Object[] { Integer.valueOf(hashCode()) });
-    fhN.clear();
-    com.tencent.mm.sdk.c.a.hXQ.b("UIStatusChanged", fhN.ajr());
+    u.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "#0x%x clear, on deattached to window", new Object[] { Integer.valueOf(hashCode()) });
+    gyr.clear();
+    com.tencent.mm.sdk.c.a.jUF.c("UIStatusChanged", gyr.avL());
   }
   
   public void setCanPlay(boolean paramBoolean)
   {
-    fhN.fht = paramBoolean;
+    gyr.gxz = paramBoolean;
   }
   
   public void setDrawableWidth(int paramInt)
   {
-    fhP = paramInt;
-    g(0.75D);
+    gyt = paramInt;
+    f(0.75D);
   }
   
   public void setForceRecordState(boolean paramBoolean) {}
   
   public void setIsWhatsNew(boolean paramBoolean)
   {
-    fhN.fhv = paramBoolean;
+    gyr.gxB = paramBoolean;
   }
   
   public void setMaskID(int paramInt)
   {
-    fhT = paramInt;
+    gyz = paramInt;
   }
   
   public void setOnCompletionListener(b.e parame)
   {
-    fhN.fhy = parame;
+    gyr.gxI = parame;
   }
+  
+  public void setOnDecodeDurationListener(b.f paramf)
+  {
+    gyr.gxJ = paramf;
+  }
+  
+  public void setOnSightCompletionAction(b.g paramg) {}
   
   public void setPosition(int paramInt)
   {
-    fhN.position = paramInt;
+    gyr.position = paramInt;
   }
   
   public void setSightInfoView(TextView paramTextView)
   {
-    fhN.setSightInfoView(paramTextView);
+    gyr.setSightInfoView(paramTextView);
   }
   
   public void setTagObject(Object paramObject)
@@ -171,7 +230,7 @@ public class SightPlayTextureView
   
   public void setThumbBgView(View paramView)
   {
-    fhN.setThumbBgView(paramView);
+    gyr.setThumbBgView(paramView);
   }
   
   public void setThumbBmp(Bitmap paramBitmap)
@@ -180,87 +239,93 @@ public class SightPlayTextureView
     if (paramBitmap == null)
     {
       bool1 = true;
-      if (fhh != null) {
+      if (gxn != null) {
         break label138;
       }
     }
     label138:
     for (boolean bool2 = true;; bool2 = false)
     {
-      t.d("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "thumb is null? %B, surface is null? %B", new Object[] { Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
+      u.d("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "thumb is null? %B, surface is null? %B", new Object[] { Boolean.valueOf(bool1), Boolean.valueOf(bool2) });
       if (paramBitmap == null) {
         break label143;
       }
-      t.d("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "thumb size [%d, %d]", new Object[] { Integer.valueOf(paramBitmap.getWidth()), Integer.valueOf(paramBitmap.getHeight()) });
-      Bitmap localBitmap = com.tencent.mm.plugin.sight.decode.a.b.a(getContext(), fhT, fhP, paramBitmap.getWidth(), paramBitmap.getHeight());
-      g(paramBitmap.getHeight() / paramBitmap.getWidth());
-      fhN.fhd = localBitmap;
-      fhN.k(paramBitmap);
+      u.d("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "thumb size [%d, %d]", new Object[] { Integer.valueOf(paramBitmap.getWidth()), Integer.valueOf(paramBitmap.getHeight()) });
+      Bitmap localBitmap = b.a(getContext(), gyz, gyt, paramBitmap.getWidth(), paramBitmap.getHeight());
+      f(paramBitmap.getHeight() / paramBitmap.getWidth());
+      gyr.gxj = localBitmap;
+      gyr.k(paramBitmap);
       return;
       bool1 = false;
       break;
     }
     label143:
-    fhN.k(null);
+    gyr.k(null);
   }
   
   private static final class a
     implements Runnable
   {
-    Surface fhW = null;
+    Surface gyC = null;
     
     public final void run()
     {
-      if (fhW == null) {
+      if (gyC == null) {
         return;
       }
-      fhW.release();
+      gyC.release();
     }
   }
   
   private static final class b
-    extends com.tencent.mm.plugin.sight.decode.a.b
+    extends b
   {
-    private WeakReference fhX;
+    private WeakReference gyD;
     
     public b(SightPlayTextureView paramSightPlayTextureView)
     {
       super(paramSightPlayTextureView);
-      fhX = new WeakReference(paramSightPlayTextureView);
+      gyD = new WeakReference(paramSightPlayTextureView);
     }
     
-    public final void aJ(int paramInt1, int paramInt2)
+    public final void aB(int paramInt1, int paramInt2)
     {
-      if (fhX.get() == null)
+      if (gyD.get() == null)
       {
-        t.e("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "onGetVideoSizeEnd, textureView is null, do clear");
+        u.e("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "onGetVideoSizeEnd, textureView is null, do clear");
         clear();
         return;
       }
-      t.d("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "on get video size %d*%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-      ViewGroup.LayoutParams localLayoutParams = ((SightPlayTextureView)fhX.get()).getLayoutParams();
-      if (height != SightPlayTextureView.a((SightPlayTextureView)fhX.get()) * paramInt2 / paramInt1)
+      u.d("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "on get video size %d*%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+      final ViewGroup.LayoutParams localLayoutParams = ((SightPlayTextureView)gyD.get()).getLayoutParams();
+      if (height != SightPlayTextureView.a((SightPlayTextureView)gyD.get()) * paramInt2 / paramInt1)
       {
-        width = SightPlayTextureView.a((SightPlayTextureView)fhX.get());
-        height = (SightPlayTextureView.a((SightPlayTextureView)fhX.get()) * paramInt2 / paramInt1);
-        t.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "params width %d height %d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
-        if (!ad.isMainThread()) {
+        width = SightPlayTextureView.a((SightPlayTextureView)gyD.get());
+        height = (SightPlayTextureView.a((SightPlayTextureView)gyD.get()) * paramInt2 / paramInt1);
+        u.i("!44@/B4Tb64lLpK4fJPZwyrCPEFbDNURYT5TwxgwF0GT3nc=", "params width %d height %d", new Object[] { Integer.valueOf(width), Integer.valueOf(height) });
+        if (!ab.isMainThread()) {
           break label223;
         }
-        ((SightPlayTextureView)fhX.get()).setLayoutParams(localLayoutParams);
+        ((SightPlayTextureView)gyD.get()).setLayoutParams(localLayoutParams);
       }
       for (;;)
       {
-        fhd = com.tencent.mm.plugin.sight.decode.a.b.a(((SightPlayTextureView)fhX.get()).getContext(), SightPlayTextureView.b((SightPlayTextureView)fhX.get()), SightPlayTextureView.a((SightPlayTextureView)fhX.get()), paramInt1, paramInt2);
+        gxj = b.a(((SightPlayTextureView)gyD.get()).getContext(), SightPlayTextureView.b((SightPlayTextureView)gyD.get()), SightPlayTextureView.a((SightPlayTextureView)gyD.get()), paramInt1, paramInt2);
         return;
         label223:
-        ad.g(new d(this, localLayoutParams));
+        ab.j(new Runnable()
+        {
+          public final void run()
+          {
+            ((SightPlayTextureView)SightPlayTextureView.b.a(SightPlayTextureView.b.this).get()).setLayoutParams(localLayoutParams);
+          }
+        });
       }
     }
     
-    protected final int ajo()
+    protected final int avI()
     {
-      return a.a.sight_loop;
+      return 2130837568;
     }
     
     public final void l(Bitmap paramBitmap) {}

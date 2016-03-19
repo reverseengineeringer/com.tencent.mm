@@ -2,17 +2,17 @@ package com.tencent.mm.dbsupport.newcursor;
 
 public abstract interface a
 {
-  public abstract void c(int paramInt, byte[] paramArrayOfByte);
-  
-  public abstract void f(int paramInt, long paramLong);
-  
-  public abstract void g(int paramInt, long paramLong);
+  public abstract void e(int paramInt, byte[] paramArrayOfByte);
   
   public abstract Object getKey();
   
-  public abstract void i(int paramInt, String paramString);
+  public abstract void k(int paramInt, long paramLong);
   
-  public abstract void qG();
+  public abstract void l(int paramInt, long paramLong);
+  
+  public abstract void l(int paramInt, String paramString);
+  
+  public abstract void qC();
 }
 
 /* Location:

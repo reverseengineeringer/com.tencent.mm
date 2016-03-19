@@ -1,233 +1,272 @@
 package com.tencent.mm.plugin.report.service;
 
-import android.app.ActivityManager;
-import android.app.ActivityManager.MemoryInfo;
-import android.content.Context;
-import android.os.StatFs;
-import android.util.SparseArray;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import com.tencent.mm.plugin.report.a.c;
+import com.tencent.mm.sdk.b.b;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
-public final class h
+public enum h
 {
-  private static SparseArray eJO = new SparseArray();
-  private static SparseArray eJP = new SparseArray();
-  private static boolean eJQ = true;
-  private static long eJR = 0L;
-  private static long eJS = 0L;
-  private static long eJT = 0L;
+  private h() {}
   
-  public static void bn(long paramLong)
+  public static Object a(int paramInt1, int[] paramArrayOfInt, int paramInt2, int paramInt3)
   {
-    if (!eJQ) {
-      return;
+    int i = 0;
+    if ((paramInt3 <= paramInt2) || (paramInt3 > 255) || (8 != paramInt3 - paramInt2)) {
+      return null;
     }
-    t.d("!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx", "ReportLogInfo operationBegin eventID:%d  with time:%d", new Object[] { Integer.valueOf(8), Long.valueOf(paramLong) });
-    eJO.put(8, Long.valueOf(paramLong));
-  }
-  
-  public static void im(int paramInt)
-  {
-    if (!eJQ) {
-      return;
+    if (paramInt1 <= paramArrayOfInt[0]) {
+      return Integer.valueOf(paramInt2);
     }
-    eJO.put(paramInt, Long.valueOf(bn.DM()));
-    t.d("!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx", "ReportLogInfo operationBegin eventID:%d  time:%d", new Object[] { Integer.valueOf(paramInt), Long.valueOf(bn.DM()) });
-  }
-  
-  public static void in(int paramInt)
-  {
-    if (!eJQ) {}
-    long l;
     do
     {
-      Long localLong;
-      do
+      i += 1;
+      if (i >= 7) {
+        break label91;
+      }
+      if (paramArrayOfInt[i] >= paramArrayOfInt[(i + 1)]) {
+        break;
+      }
+    } while ((paramInt1 <= paramArrayOfInt[i]) || (paramInt1 > paramArrayOfInt[(i + 1)]));
+    return Integer.valueOf(paramInt2 + 1 + i);
+    label91:
+    return Integer.valueOf(paramInt3);
+  }
+  
+  public static Object a(int paramInt, int[] paramArrayOfInt, Object[] paramArrayOfObject)
+  {
+    int i = 0;
+    if ((paramArrayOfInt.length <= 0) || (paramArrayOfInt.length + 1 != paramArrayOfObject.length)) {
+      return null;
+    }
+    if (paramInt <= paramArrayOfInt[0]) {
+      return paramArrayOfObject[0];
+    }
+    do
+    {
+      i += 1;
+      if (i >= paramArrayOfInt.length - 1) {
+        break;
+      }
+      if (paramArrayOfInt[i] >= paramArrayOfInt[(i + 1)]) {
+        return null;
+      }
+    } while ((paramInt <= paramArrayOfInt[i]) || (paramInt > paramArrayOfInt[(i + 1)]));
+    return paramArrayOfObject[(i + 1)];
+    return paramArrayOfObject[(paramArrayOfObject.length - 1)];
+  }
+  
+  private static void a(int paramInt, List paramList, boolean paramBoolean1, boolean paramBoolean2)
+  {
+    if ((paramList == null) || (paramList.isEmpty())) {
+      u.w("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "vals is null, use '' as value");
+    }
+    StringBuilder localStringBuilder;
+    for (paramList = ""; y.aUQ(); paramList = localStringBuilder.toString())
+    {
+      e.a(paramInt, paramList, paramBoolean1, paramBoolean2);
+      return;
+      localStringBuilder = new StringBuilder();
+      int j = paramList.size() - 1;
+      int i = 0;
+      while (i < j)
       {
+        localStringBuilder.append((String)paramList.get(i)).append(',');
+        i += 1;
+      }
+      localStringBuilder.append((String)paramList.get(j));
+    }
+    b(paramInt, paramList, paramBoolean2, paramBoolean1);
+  }
+  
+  public static void a(int paramInt, boolean paramBoolean1, boolean paramBoolean2, Object... paramVarArgs)
+  {
+    if ((paramVarArgs == null) || (paramVarArgs.length <= 0)) {
+      u.w("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "vals is null, use '' as value");
+    }
+    StringBuilder localStringBuilder;
+    for (paramVarArgs = "";; paramVarArgs = localStringBuilder.toString())
+    {
+      if (b.aUo()) {
+        u.v("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "kvTypedStat id:%d [%b,%b] val:%s", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(paramBoolean1), Boolean.valueOf(paramBoolean2), paramVarArgs });
+      }
+      if (!y.aUQ()) {
+        break;
+      }
+      e.a(paramInt, paramVarArgs, paramBoolean1, paramBoolean2);
+      return;
+      localStringBuilder = new StringBuilder();
+      int j = paramVarArgs.length - 1;
+      int i = 0;
+      while (i < j)
+      {
+        localStringBuilder.append(String.valueOf(paramVarArgs[i])).append(',');
+        i += 1;
+      }
+      localStringBuilder.append(String.valueOf(paramVarArgs[j]));
+    }
+    b(paramInt, paramVarArgs, paramBoolean2, paramBoolean1);
+  }
+  
+  public static void aqv()
+  {
+    if (y.aUQ())
+    {
+      KVReportJni.KVReportJava2C.onExitAppOrAppCrash();
+      return;
+    }
+    KVCommCrossProcessReceiver.aqp();
+  }
+  
+  private static void b(int paramInt, String paramString, boolean paramBoolean1, boolean paramBoolean2)
+  {
+    KVReportDataInfo localKVReportDataInfo = new KVReportDataInfo();
+    fUv = paramInt;
+    value = paramString;
+    fUh = paramBoolean1;
+    fUw = paramBoolean2;
+    KVCommCrossProcessReceiver.a(localKVReportDataInfo);
+  }
+  
+  public static void b(long paramLong1, long paramLong2, long paramLong3, boolean paramBoolean)
+  {
+    if ((paramLong1 < 0L) || (paramLong2 < 0L) || (paramLong3 <= 0L))
+    {
+      u.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "ID %d, key %d, value %d <0", new Object[] { Long.valueOf(paramLong1), Long.valueOf(paramLong2), Long.valueOf(paramLong3) });
+      return;
+    }
+    if (y.aUQ())
+    {
+      e.a(paramLong1, paramLong2, paramLong3, paramBoolean);
+      return;
+    }
+    StIDKeyDataInfo localStIDKeyDataInfo = new StIDKeyDataInfo();
+    fUL = paramLong1;
+    key = paramLong2;
+    value = paramLong3;
+    fUh = paramBoolean;
+    KVCommCrossProcessReceiver.a(localStIDKeyDataInfo);
+  }
+  
+  public static void c(int paramInt, String paramString, boolean paramBoolean1, boolean paramBoolean2)
+  {
+    if (y.aUQ())
+    {
+      if (c.fTL)
+      {
+        e.a(paramInt, paramString, c.fTM, c.fTM);
         return;
-        localLong = (Long)eJO.get(paramInt);
-      } while ((localLong == null) || (localLong.longValue() == -1L));
-      eJO.put(paramInt, Long.valueOf(-1L));
-      l = bn.DM() - localLong.longValue();
-    } while (l <= 0L);
-    switch (paramInt)
-    {
-    }
-    for (;;)
-    {
-      t.i("!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx", "ReportLogInfo operationEnd eventID:%d  time:%d", new Object[] { Integer.valueOf(paramInt), Long.valueOf(l) });
-      return;
-      if (aa.hZj)
-      {
-        j.eJZ.h(23, 4, 5, (int)l);
       }
-      else
-      {
-        m(1, l);
-        j.eJZ.h(23, 1, 2, (int)l);
-        continue;
-        m(3, l);
-        j.eJZ.h(27, 1, 2, (int)l);
-        continue;
-        m(2, l);
-        j.eJZ.h(28, 1, 2, (int)l);
-        continue;
-        m(6, l);
-        continue;
-        m(7, l);
-        continue;
-        m(8, l);
-        continue;
-        m(10, l);
-        continue;
-        m(14, l);
-        continue;
-        m(15, l);
-        continue;
-        m(9, l);
-        continue;
-        m(11, l);
-        continue;
-        m(16, l);
-        continue;
-        m(13, l);
-        continue;
-        m(12, l);
-      }
-    }
-  }
-  
-  public static void io(int paramInt)
-  {
-    if (!eJQ) {
+      e.a(paramInt, paramString, paramBoolean1, paramBoolean2);
       return;
     }
-    t.d("!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx", "ReportLogInfo stopOperation stop eventID:%d", new Object[] { Integer.valueOf(paramInt) });
-    eJO.put(paramInt, Long.valueOf(-1L));
+    b(paramInt, paramString, paramBoolean2, paramBoolean1);
   }
   
-  private static void m(int paramInt, long paramLong)
+  public static void d(ArrayList paramArrayList, boolean paramBoolean)
   {
-    long l;
-    if (paramInt == 6)
+    Iterator localIterator = paramArrayList.iterator();
+    while (localIterator.hasNext())
     {
-      l = System.currentTimeMillis();
-      if (l < eJR + 60000L) {
+      KVReportJni.IDKeyDataInfo localIDKeyDataInfo = (KVReportJni.IDKeyDataInfo)localIterator.next();
+      if (localIDKeyDataInfo == null)
+      {
+        u.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "report idkeyGroupStat info == null return");
         return;
       }
-      eJR = l;
+      if ((localIDKeyDataInfo.GetID() < 0L) || (localIDKeyDataInfo.GetKey() < 0L) || (localIDKeyDataInfo.GetValue() <= 0L))
+      {
+        u.e("!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40=", "report idkeyGroupStat ID %d, key %d, value %d <0", new Object[] { Long.valueOf(localIDKeyDataInfo.GetID()), Long.valueOf(localIDKeyDataInfo.GetKey()), Long.valueOf(localIDKeyDataInfo.GetValue()) });
+        return;
+      }
     }
-    for (;;)
+    if (y.aUQ())
     {
-      localObject = a.afo();
-      if (!hasInit) {
-        break label179;
-      }
-      j localj = j.eJZ;
-      j.a(11335, true, false, new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong), Integer.valueOf(eJV), Long.valueOf(eJU[0]), Long.valueOf(eJU[1]), Long.valueOf(eJX) });
+      e.b(paramArrayList, paramBoolean);
       return;
-      if (paramInt == 7)
-      {
-        l = System.currentTimeMillis();
-        if (l < eJS + 60000L) {
-          break;
-        }
-        eJS = l;
-        continue;
-      }
-      if (paramInt == 8)
-      {
-        l = System.currentTimeMillis();
-        if (l < eJT + 60000L) {
-          break;
-        }
-        eJT = l;
-      }
     }
-    label179:
-    Object localObject = j.eJZ;
-    j.a(11335, true, false, new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong) });
+    KVCommCrossProcessReceiver.a(paramArrayList, paramBoolean);
   }
   
-  public static final class a
+  public final void O(int paramInt, String paramString)
   {
-    public static a eJY;
-    public long[] eJU;
-    public int eJV;
-    public String eJW;
-    public long eJX;
-    public volatile boolean hasInit;
-    
-    public static a afo()
+    if (c.fTL)
     {
-      try
-      {
-        if (eJY == null)
-        {
-          locala = new a();
-          eJY = locala;
-          eJV = oE();
-          eJYeJW = oy();
-          locala = eJY;
-          Object localObject2 = (ActivityManager)aa.getContext().getSystemService("activity");
-          ActivityManager.MemoryInfo localMemoryInfo = new ActivityManager.MemoryInfo();
-          ((ActivityManager)localObject2).getMemoryInfo(localMemoryInfo);
-          eJX = (availMem >> 10);
-          locala = eJY;
-          localObject2 = new StatFs(com.tencent.mm.compatible.util.j.getDataDirectory().getPath());
-          long l1 = ((StatFs)localObject2).getBlockSize();
-          long l2 = ((StatFs)localObject2).getBlockCount();
-          localObject2 = new StatFs(com.tencent.mm.compatible.util.j.getDataDirectory().getPath());
-          long l3 = ((StatFs)localObject2).getBlockSize();
-          eJU = new long[] { l2 * l1, ((StatFs)localObject2).getAvailableBlocks() * l3 };
-          eJYhasInit = true;
-        }
-        a locala = eJY;
-        return locala;
-      }
-      finally {}
+      c(paramInt, paramString, c.fTM, c.fTM);
+      return;
     }
-    
-    private static int oE()
+    c(paramInt, paramString, false, false);
+  }
+  
+  public final void aQ(int paramInt1, int paramInt2)
+  {
+    KVReportJni.IDKeyDataInfo localIDKeyDataInfo1 = new KVReportJni.IDKeyDataInfo();
+    localIDKeyDataInfo1.SetID(64);
+    localIDKeyDataInfo1.SetKey(paramInt1);
+    localIDKeyDataInfo1.SetValue(1);
+    KVReportJni.IDKeyDataInfo localIDKeyDataInfo2 = new KVReportJni.IDKeyDataInfo();
+    localIDKeyDataInfo2.SetID(64);
+    localIDKeyDataInfo2.SetKey(paramInt2);
+    localIDKeyDataInfo2.SetValue(1);
+    ArrayList localArrayList = new ArrayList();
+    localArrayList.add(localIDKeyDataInfo1);
+    localArrayList.add(localIDKeyDataInfo2);
+    d(localArrayList, false);
+  }
+  
+  public final void aR(int paramInt1, int paramInt2)
+  {
+    KVReportJni.IDKeyDataInfo localIDKeyDataInfo1 = new KVReportJni.IDKeyDataInfo();
+    localIDKeyDataInfo1.SetID(paramInt1);
+    localIDKeyDataInfo1.SetKey(0);
+    localIDKeyDataInfo1.SetValue(1);
+    KVReportJni.IDKeyDataInfo localIDKeyDataInfo2 = new KVReportJni.IDKeyDataInfo();
+    localIDKeyDataInfo2.SetID(paramInt1);
+    localIDKeyDataInfo2.SetKey(paramInt2);
+    localIDKeyDataInfo2.SetValue(1);
+    ArrayList localArrayList = new ArrayList();
+    localArrayList.add(localIDKeyDataInfo1);
+    localArrayList.add(localIDKeyDataInfo2);
+    d(localArrayList, false);
+  }
+  
+  public final void c(int paramInt, List paramList)
+  {
+    if (c.fTL)
     {
-      try
-      {
-        int i = new File("/sys/devices/system/cpu/").listFiles(new i()).length;
-        return i;
-      }
-      catch (Exception localException) {}
-      return 1;
+      a(paramInt, paramList, c.fTM, c.fTM);
+      return;
     }
-    
-    private static String oy()
+    a(paramInt, paramList, false, false);
+  }
+  
+  public final void g(int paramInt, Object... paramVarArgs)
+  {
+    if (c.fTL)
     {
-      String str3 = "N/A";
-      String str1 = str3;
-      String str2 = str3;
-      try
-      {
-        BufferedReader localBufferedReader = new BufferedReader(new FileReader("/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq"));
-        str1 = str3;
-        str2 = str3;
-        str3 = localBufferedReader.readLine().trim();
-        str1 = str3;
-        str2 = str3;
-        localBufferedReader.close();
-        return str3;
-      }
-      catch (IOException localIOException)
-      {
-        return str1;
-      }
-      catch (FileNotFoundException localFileNotFoundException) {}
-      return localIOException;
+      a(paramInt, c.fTM, c.fTM, paramVarArgs);
+      return;
     }
+    a(paramInt, false, false, paramVarArgs);
+  }
+  
+  public final void h(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  {
+    KVReportJni.IDKeyDataInfo localIDKeyDataInfo1 = new KVReportJni.IDKeyDataInfo();
+    localIDKeyDataInfo1.SetID(paramInt1);
+    localIDKeyDataInfo1.SetKey(paramInt2);
+    localIDKeyDataInfo1.SetValue(paramInt4);
+    KVReportJni.IDKeyDataInfo localIDKeyDataInfo2 = new KVReportJni.IDKeyDataInfo();
+    localIDKeyDataInfo2.SetID(paramInt1);
+    localIDKeyDataInfo2.SetKey(paramInt3);
+    localIDKeyDataInfo2.SetValue(1);
+    ArrayList localArrayList = new ArrayList();
+    localArrayList.add(localIDKeyDataInfo1);
+    localArrayList.add(localIDKeyDataInfo2);
+    d(localArrayList, false);
   }
 }
 

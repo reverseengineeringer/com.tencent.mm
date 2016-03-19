@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -16,9 +16,9 @@ import java.util.List;
 public class FlowLayout
   extends ViewGroup
 {
-  private int iCT = 0;
-  private int iCU = 0;
-  private LinkedList iCV = new LinkedList();
+  private int kBW = 0;
+  private int kBX = 0;
+  private LinkedList kBY = new LinkedList();
   
   static
   {
@@ -44,11 +44,11 @@ public class FlowLayout
   
   private void c(Context paramContext, AttributeSet paramAttributeSet)
   {
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.FlowLayout);
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.FlowLayout);
     try
     {
-      iCT = paramContext.getDimensionPixelSize(0, 0);
-      iCU = paramContext.getDimensionPixelSize(1, 0);
+      kBW = paramContext.getDimensionPixelSize(0, 0);
+      kBX = paramContext.getDimensionPixelSize(1, 0);
       return;
     }
     finally
@@ -79,19 +79,19 @@ public class FlowLayout
   
   public int getLineCount()
   {
-    return iCV.size();
+    return kBY.size();
   }
   
   public List getLineHeights()
   {
-    ArrayList localArrayList = new ArrayList(iCV.size());
-    localArrayList.addAll(iCV);
+    ArrayList localArrayList = new ArrayList(kBY.size());
+    localArrayList.addAll(kBY);
     return localArrayList;
   }
   
   public int getMinLineHeight()
   {
-    Iterator localIterator = iCV.iterator();
+    Iterator localIterator = kBY.iterator();
     int i = Integer.MAX_VALUE;
     if (localIterator.hasNext())
     {
@@ -107,19 +107,6 @@ public class FlowLayout
       break;
       return i;
     }
-  }
-  
-  public final int nB(int paramInt)
-  {
-    int j = Math.max(0, Math.min(iCV.size(), paramInt));
-    int i = getPaddingTop();
-    paramInt = 0;
-    while (paramInt < j - 1)
-    {
-      i += ((Integer)iCV.get(paramInt)).intValue() + iCU;
-      paramInt += 1;
-    }
-    return ((Integer)iCV.get(j - 1)).intValue() + i + getPaddingBottom();
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
@@ -147,16 +134,16 @@ public class FlowLayout
           break label210;
         }
         i = getPaddingLeft();
-        paramInt2 += ((Integer)iCV.get(paramInt4)).intValue() + iCU;
+        paramInt2 += ((Integer)kBY.get(paramInt4)).intValue() + kBX;
         paramInt4 += 1;
       }
     }
     label210:
     for (;;)
     {
-      n = (((Integer)iCV.get(paramInt4)).intValue() - m) / 2;
+      n = (((Integer)kBY.get(paramInt4)).intValue() - m) / 2;
       localView.layout(i, paramInt2 + n, i + k, n + paramInt2 + m);
-      n = iCT + k + i;
+      n = kBW + k + i;
       k = paramInt2;
       m = paramInt4;
       j += 1;
@@ -174,7 +161,7 @@ public class FlowLayout
     int i5 = View.MeasureSpec.getSize(paramInt1) - getPaddingLeft() - getPaddingRight();
     int i4 = View.MeasureSpec.getSize(paramInt2) - getPaddingTop() - getPaddingBottom();
     int i6 = getChildCount();
-    iCV.clear();
+    kBY.clear();
     if (View.MeasureSpec.getMode(paramInt2) == Integer.MIN_VALUE) {}
     int j;
     int k;
@@ -199,20 +186,20 @@ public class FlowLayout
           i2 = i;
           if (i + i7 > i5)
           {
-            m = k + (iCU + j);
-            iCV.add(Integer.valueOf(j));
+            m = k + (kBX + j);
+            kBY.add(Integer.valueOf(j));
             i3 = 0;
             i2 = 0;
           }
           i3 = Math.max(i3, localView.getMeasuredHeight());
-          i2 += iCT + i7;
+          i2 += kBW + i7;
         }
         i1 += 1;
         j = i3;
         k = m;
       }
     }
-    iCV.add(Integer.valueOf(j));
+    kBY.add(Integer.valueOf(j));
     if (View.MeasureSpec.getMode(paramInt2) == 0) {
       paramInt2 = k + j + getPaddingTop() + getPaddingBottom();
     }
@@ -226,6 +213,19 @@ public class FlowLayout
         paramInt2 = i4;
       }
     }
+  }
+  
+  public final int qv(int paramInt)
+  {
+    int j = Math.max(0, Math.min(kBY.size(), paramInt));
+    int i = getPaddingTop();
+    paramInt = 0;
+    while (paramInt < j - 1)
+    {
+      i += ((Integer)kBY.get(paramInt)).intValue() + kBX;
+      paramInt += 1;
+    }
+    return ((Integer)kBY.get(j - 1)).intValue() + i + getPaddingBottom();
   }
 }
 

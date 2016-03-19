@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$h
-  extends a.c
+  extends a.e
 {
   public a$h()
   {
-    super("batchViewCard", "batchViewCard", 111, true);
+    super("addCustomMenuItems", "addCustomMenuItems", 164, false);
   }
 }
 

@@ -1,7 +1,7 @@
 package android.support.v4.widget;
 
 import android.graphics.Rect;
-import android.support.v4.view.t;
+import android.support.v4.view.m;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
@@ -9,13 +9,13 @@ import android.view.accessibility.AccessibilityEvent;
 final class DrawerLayout$a
   extends android.support.v4.view.a
 {
-  private final Rect im = new Rect();
+  private final Rect ht = new Rect();
   
   DrawerLayout$a(DrawerLayout paramDrawerLayout) {}
   
   private boolean w(View paramView)
   {
-    View localView = io.aQ();
+    View localView = hu.ay();
     return (localView != null) && (localView != paramView);
   }
   
@@ -24,11 +24,11 @@ final class DrawerLayout$a
     android.support.v4.view.a.a locala = android.support.v4.view.a.a.a(parama);
     super.a(paramView, locala);
     parama.setSource(paramView);
-    paramView = t.l(paramView);
+    paramView = m.l(paramView);
     if ((paramView instanceof View)) {
       parama.setParent((View)paramView);
     }
-    paramView = im;
+    paramView = ht;
     locala.getBoundsInParent(paramView);
     parama.setBoundsInParent(paramView);
     locala.getBoundsInScreen(paramView);
@@ -46,11 +46,11 @@ final class DrawerLayout$a
     parama.setLongClickable(locala.isLongClickable());
     parama.addAction(locala.getActions());
     locala.recycle();
-    int j = io.getChildCount();
+    int j = hu.getChildCount();
     int i = 0;
     while (i < j)
     {
-      paramView = io.getChildAt(i);
+      paramView = hu.getChildAt(i);
       if (!w(paramView)) {
         parama.addChild(paramView);
       }

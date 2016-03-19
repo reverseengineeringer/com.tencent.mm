@@ -1,30 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class dc
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aza = new a();
-  public b azb = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awC = new a();
   
   public dc()
   {
-    id = "GameOperation";
-    hXT = atO;
+    id = "ExDeviceStopScanNetworkDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int avp = 0;
-    public byte[] azc;
-  }
-  
-  public static final class b
-  {
-    public boolean auM = false;
+    public boolean awe;
   }
 }
 

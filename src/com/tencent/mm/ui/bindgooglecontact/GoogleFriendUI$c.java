@@ -1,27 +1,27 @@
 package com.tencent.mm.ui.bindgooglecontact;
 
 import android.os.AsyncTask;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 final class GoogleFriendUI$c
   extends AsyncTask
 {
-  private String iNF;
-  private boolean iNH;
-  private String iNJ;
+  private String kMS;
+  private boolean kMU;
+  private String kMW;
   
   public GoogleFriendUI$c(GoogleFriendUI paramGoogleFriendUI, String paramString)
   {
-    iNJ = paramString;
+    kMW = paramString;
   }
   
   /* Error */
-  private Void VE()
+  private Void acy()
   {
     // Byte code:
     //   0: ldc 36
     //   2: ldc 38
-    //   4: invokestatic 44	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   4: invokestatic 44	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   7: ldc 46
     //   9: astore_2
     //   10: new 48	java/net/URL
@@ -63,7 +63,7 @@ final class GoogleFriendUI$c
     //   86: dup
     //   87: ldc 96
     //   89: aload_0
-    //   90: getfield 23	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:iNJ	Ljava/lang/String;
+    //   90: getfield 23	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:kMW	Ljava/lang/String;
     //   93: invokespecial 98	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
     //   96: invokeinterface 104 2 0
     //   101: pop
@@ -92,7 +92,7 @@ final class GoogleFriendUI$c
     //   153: invokeinterface 104 2 0
     //   158: pop
     //   159: aload 4
-    //   161: invokestatic 120	com/tencent/mm/modelfriend/x:t	(Ljava/util/List;)Ljava/lang/String;
+    //   161: invokestatic 120	com/tencent/mm/modelfriend/n:w	(Ljava/util/List;)Ljava/lang/String;
     //   164: astore 4
     //   166: ldc 36
     //   168: new 122	java/lang/StringBuilder
@@ -102,7 +102,7 @@ final class GoogleFriendUI$c
     //   177: aload 4
     //   179: invokevirtual 129	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   182: invokevirtual 133	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   185: invokestatic 44	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   185: invokestatic 44	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   188: new 135	java/io/BufferedWriter
     //   191: dup
     //   192: new 137	java/io/OutputStreamWriter
@@ -131,7 +131,7 @@ final class GoogleFriendUI$c
     //   243: iload_1
     //   244: invokevirtual 165	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
     //   247: invokevirtual 133	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   250: invokestatic 168	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   250: invokestatic 168	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   253: sipush 200
     //   256: iload_1
     //   257: if_icmpne +107 -> 364
@@ -169,7 +169,7 @@ final class GoogleFriendUI$c
     //   323: aload_2
     //   324: invokevirtual 198	java/net/ProtocolException:getMessage	()Ljava/lang/String;
     //   327: aastore
-    //   328: invokestatic 201	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   328: invokestatic 201	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   331: aconst_null
     //   332: areturn
     //   333: aload 4
@@ -185,7 +185,7 @@ final class GoogleFriendUI$c
     //   354: aload_2
     //   355: invokevirtual 129	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   358: invokevirtual 133	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   361: invokestatic 44	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   361: invokestatic 44	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   364: aload_3
     //   365: invokevirtual 208	java/net/HttpURLConnection:disconnect	()V
     //   368: ldc 36
@@ -196,7 +196,7 @@ final class GoogleFriendUI$c
     //   377: iconst_0
     //   378: aload_2
     //   379: aastore
-    //   380: invokestatic 212	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   380: invokestatic 212	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   383: aload_0
     //   384: new 214	org/json/JSONObject
     //   387: dup
@@ -204,10 +204,10 @@ final class GoogleFriendUI$c
     //   389: invokespecial 215	org/json/JSONObject:<init>	(Ljava/lang/String;)V
     //   392: ldc -39
     //   394: invokevirtual 221	org/json/JSONObject:optString	(Ljava/lang/String;)Ljava/lang/String;
-    //   397: putfield 223	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:iNF	Ljava/lang/String;
+    //   397: putfield 223	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:kMS	Ljava/lang/String;
     //   400: aload_0
     //   401: iconst_1
-    //   402: putfield 225	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:iNH	Z
+    //   402: putfield 225	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:kMU	Z
     //   405: goto -74 -> 331
     //   408: astore_2
     //   409: ldc 36
@@ -219,7 +219,7 @@ final class GoogleFriendUI$c
     //   419: aload_2
     //   420: invokevirtual 228	java/net/MalformedURLException:getMessage	()Ljava/lang/String;
     //   423: aastore
-    //   424: invokestatic 201	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   424: invokestatic 201	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   427: goto -96 -> 331
     //   430: astore_2
     //   431: ldc 36
@@ -231,7 +231,7 @@ final class GoogleFriendUI$c
     //   441: aload_2
     //   442: invokevirtual 231	java/io/IOException:getMessage	()Ljava/lang/String;
     //   445: aastore
-    //   446: invokestatic 201	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   446: invokestatic 201	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   449: goto -118 -> 331
     //   452: astore_2
     //   453: ldc 36
@@ -243,7 +243,7 @@ final class GoogleFriendUI$c
     //   463: aload_2
     //   464: invokevirtual 234	org/json/JSONException:getMessage	()Ljava/lang/String;
     //   467: aastore
-    //   468: invokestatic 201	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   468: invokestatic 201	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   471: goto -140 -> 331
     // Local variable table:
     //   start	length	slot	name	signature
@@ -289,8 +289,8 @@ final class GoogleFriendUI$c
   protected final void onPreExecute()
   {
     super.onPreExecute();
-    t.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "onPreExecute");
-    iNH = false;
+    u.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "onPreExecute");
+    kMU = false;
   }
 }
 

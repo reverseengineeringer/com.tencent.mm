@@ -7,15 +7,12 @@ import java.io.StringWriter;
 public class CrashMonitorForJni
 {
   private static final String TAG = "!44@/B4Tb64lLpIdghwcJC06L4vQgeacnU04YoXZEn7MWNo=";
-  public static a callback = null;
   
   private static void OnCrash(int paramInt1, int paramInt2, String paramString)
   {
     new StringBuilder("OnCrash sig:").append(paramInt1).append("  stack:").append(paramString);
-    b.d(paramInt1, paramString);
+    b.f(paramInt1, paramString);
   }
-  
-  public static native String getCrashFilePath(String paramString);
   
   public static String getCrashThreadJavaStack()
   {
@@ -38,7 +35,7 @@ public class CrashMonitorForJni
     return localStringWriter.toString() + "\n";
   }
   
-  public static abstract interface a {}
+  public static native void setClientVersionMsg(String paramString);
 }
 
 /* Location:

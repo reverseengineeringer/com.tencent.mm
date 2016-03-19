@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field private biY:Z
+.field private btv:Z
 
-.field private jBp:Z
+.field private lFO:Z
 
-.field private jBq:Z
+.field private lFP:Z
 
-.field private jBr:Landroid/view/ViewGroup;
+.field private lFQ:Landroid/view/ViewGroup;
 
 
 # direct methods
@@ -29,12 +29,12 @@
     .locals 1
 
     .prologue
-    .line 140
+    .line 143
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/tencent/mm/ui/widget/MMWebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 141
+    .line 144
     return-void
 .end method
 
@@ -42,12 +42,12 @@
     .locals 1
 
     .prologue
-    .line 144
+    .line 147
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/tencent/mm/ui/widget/MMWebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 145
+    .line 148
     return-void
 .end method
 
@@ -57,19 +57,19 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 148
+    .line 151
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/smtt/sdk/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 137
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/widget/MMWebView;->biY:Z
+    .line 140
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/widget/MMWebView;->btv:Z
 
-    .line 317
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBp:Z
+    .line 329
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFO:Z
 
-    .line 322
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBq:Z
+    .line 334
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFP:Z
 
-    .line 150
+    .line 153
     :try_start_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -83,12 +83,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 151
+    .line 154
     :cond_0
     :goto_0
     return-void
 
-    .line 150
+    .line 153
     :catch_0
     move-exception v0
 
@@ -106,29 +106,29 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public static synthetic a(Lcom/tencent/mm/ui/widget/MMWebView;)Z
+.method static synthetic a(Lcom/tencent/mm/ui/widget/MMWebView;)Z
     .locals 1
 
     .prologue
-    .line 29
+    .line 26
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/MMWebView;->biY:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/MMWebView;->btv:Z
 
     return v0
 .end method
 
-.method public static synthetic a(Lcom/tencent/mm/ui/widget/MMWebView;Z)Z
+.method static synthetic a(Lcom/tencent/mm/ui/widget/MMWebView;Z)Z
     .locals 0
 
     .prologue
-    .line 29
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBp:Z
+    .line 26
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFO:Z
 
     return p1
 .end method
@@ -137,28 +137,58 @@
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBr:Landroid/view/ViewGroup;
+    .line 26
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFQ:Landroid/view/ViewGroup;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final aTh()V
+.method public final b(IIIIIIIIZ)Z
+    .locals 2
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0x9
+    .end annotation
+
+    .prologue
+    .line 389
+    invoke-super/range {p0 .. p9}, Lcom/tencent/smtt/sdk/WebView;->super_overScrollBy(IIIIIIIIZ)Z
+
+    move-result v0
+
+    .line 393
+    if-ltz p4, :cond_0
+
+    if-nez p4, :cond_1
+
+    if-gez p2, :cond_1
+
+    .line 394
+    :cond_0
+    const/4 v1, 0x1
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFP:Z
+
+    .line 399
+    :cond_1
+    return v0
+.end method
+
+.method public final bjK()V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
-    .line 201
+    .line 210
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x5
 
     if-lt v0, v1, :cond_0
 
-    .line 202
+    .line 211
     new-instance v0, Lcom/tencent/mm/ui/widget/MMWebView$d;
 
     invoke-direct {v0, p0, v2}, Lcom/tencent/mm/ui/widget/MMWebView$d;-><init>(Lcom/tencent/mm/ui/widget/MMWebView;B)V
@@ -169,11 +199,11 @@
 
     invoke-virtual {p0, v2}, Lcom/tencent/smtt/sdk/WebView;->setScrollBarStyle(I)V
 
-    .line 206
+    .line 215
     :goto_0
     return-void
 
-    .line 204
+    .line 213
     :cond_0
     new-instance v0, Lcom/tencent/mm/ui/widget/MMWebView$c;
 
@@ -184,48 +214,18 @@
     goto :goto_0
 .end method
 
-.method public final aTi()V
+.method public final bjL()V
     .locals 0
     .annotation build Landroid/annotation/TargetApi;
         value = 0x9
     .end annotation
 
     .prologue
-    .line 444
+    .line 456
     invoke-super {p0}, Lcom/tencent/smtt/sdk/WebView;->super_computeScroll()V
 
-    .line 446
+    .line 458
     return-void
-.end method
-
-.method public final b(IIIIIIIIZ)Z
-    .locals 2
-    .annotation build Landroid/annotation/TargetApi;
-        value = 0x9
-    .end annotation
-
-    .prologue
-    .line 377
-    invoke-super/range {p0 .. p9}, Lcom/tencent/smtt/sdk/WebView;->super_overScrollBy(IIIIIIIIZ)Z
-
-    move-result v0
-
-    .line 381
-    if-ltz p4, :cond_0
-
-    if-nez p4, :cond_1
-
-    if-gez p2, :cond_1
-
-    .line 382
-    :cond_0
-    const/4 v1, 0x1
-
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBq:Z
-
-    .line 387
-    :cond_1
-    return v0
 .end method
 
 .method public final c(IIZZ)V
@@ -235,69 +235,77 @@
     .end annotation
 
     .prologue
-    .line 426
+    .line 438
     invoke-super {p0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/WebView;->super_onOverScrolled(IIZZ)V
 
-    .line 429
+    .line 441
     return-void
 .end method
 
-.method public evaluateJavascript(Ljava/lang/String;Lcom/tencent/smtt/sdk/ab;)V
+.method public evaluateJavascript(Ljava/lang/String;Lcom/tencent/smtt/sdk/u;)V
     .locals 1
 
     .prologue
-    .line 301
+    .line 310
     const/16 v0, 0x13
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/e;->bT(I)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/c;->bU(I)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 302
-    invoke-super {p0, p1, p2}, Lcom/tencent/smtt/sdk/WebView;->evaluateJavascript(Ljava/lang/String;Lcom/tencent/smtt/sdk/ab;)V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/MMWebView;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
-    .line 306
+    move-result-object v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const/4 v0, 0x1
+
+    .line 311
     :goto_0
+    if-eqz v0, :cond_2
+
+    .line 312
+    invoke-super {p0, p1, p2}, Lcom/tencent/smtt/sdk/WebView;->evaluateJavascript(Ljava/lang/String;Lcom/tencent/smtt/sdk/u;)V
+
+    .line 318
+    :goto_1
     return-void
 
-    .line 304
-    :cond_0
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/widget/MMWebView;->loadUrl(Ljava/lang/String;)V
+    .line 310
+    :cond_1
+    const/4 v0, 0x0
 
     goto :goto_0
+
+    .line 315
+    :cond_2
+    invoke-super {p0, p1}, Lcom/tencent/smtt/sdk/WebView;->loadUrl(Ljava/lang/String;)V
+
+    goto :goto_1
 .end method
 
 .method public getIsX5Kernel()Z
     .locals 1
 
     .prologue
-    .line 330
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBp:Z
+    .line 342
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFO:Z
 
     return v0
-.end method
-
-.method public final l(IIII)V
-    .locals 0
-
-    .prologue
-    .line 450
-    invoke-super {p0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/WebView;->super_onScrollChanged(IIII)V
-
-    .line 451
-    return-void
 .end method
 
 .method public loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 155
+    .line 158
     invoke-super {p0, p1, p2, p3}, Lcom/tencent/smtt/sdk/WebView;->loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 157
+    .line 160
     return-void
 .end method
 
@@ -305,10 +313,10 @@
     .locals 0
 
     .prologue
-    .line 161
+    .line 164
     invoke-super/range {p0 .. p5}, Lcom/tencent/smtt/sdk/WebView;->loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 163
+    .line 166
     return-void
 .end method
 
@@ -316,10 +324,10 @@
     .locals 0
 
     .prologue
-    .line 174
+    .line 183
     invoke-super {p0, p1}, Lcom/tencent/smtt/sdk/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 176
+    .line 185
     return-void
 .end method
 
@@ -330,10 +338,21 @@
     .end annotation
 
     .prologue
-    .line 168
+    .line 174
     invoke-super {p0, p1, p2}, Lcom/tencent/smtt/sdk/WebView;->loadUrl(Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 170
+    .line 176
+    return-void
+.end method
+
+.method public final p(IIII)V
+    .locals 0
+
+    .prologue
+    .line 462
+    invoke-super {p0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/WebView;->super_onScrollChanged(IIII)V
+
+    .line 463
     return-void
 .end method
 
@@ -341,10 +360,10 @@
     .locals 0
 
     .prologue
-    .line 326
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBr:Landroid/view/ViewGroup;
+    .line 338
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFQ:Landroid/view/ViewGroup;
 
-    .line 327
+    .line 339
     return-void
 .end method
 
@@ -352,14 +371,14 @@
     .locals 2
 
     .prologue
-    .line 295
+    .line 304
     const-string/jumbo v0, "!32@/B4Tb64lLpLUa7oZpyRLqvfaQ8r05r/t"
 
     const-string/jumbo v1, "[cpan] swithc mode."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 296
+    .line 305
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
@@ -367,10 +386,10 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/MMWebView;->setDayOrNight(Z)V
 
-    .line 297
+    .line 306
     return-void
 
-    .line 296
+    .line 305
     :cond_0
     const/4 v0, 0x0
 
@@ -385,63 +404,63 @@
 
     const/4 v1, 0x0
 
-    .line 393
+    .line 405
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v3
 
-    .line 395
+    .line 407
     invoke-super {p0, p1}, Lcom/tencent/smtt/sdk/WebView;->super_onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v2
 
-    .line 397
+    .line 409
     and-int/lit16 v3, v3, 0xff
 
     packed-switch v3, :pswitch_data_0
 
-    .line 416
+    .line 428
     :cond_0
     :goto_0
     :pswitch_0
     if-eqz v2, :cond_3
 
-    .line 417
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBq:Z
+    .line 429
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFP:Z
 
     if-nez v2, :cond_2
 
-    .line 419
+    .line 431
     :goto_1
     return v0
 
-    .line 399
+    .line 411
     :pswitch_1
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBq:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFP:Z
 
     goto :goto_0
 
-    .line 402
+    .line 414
     :pswitch_2
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBr:Landroid/view/ViewGroup;
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFQ:Landroid/view/ViewGroup;
 
     if-eqz v3, :cond_0
 
-    .line 403
-    iget-boolean v3, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBq:Z
+    .line 415
+    iget-boolean v3, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFP:Z
 
     if-eqz v3, :cond_1
 
-    .line 404
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBr:Landroid/view/ViewGroup;
+    .line 416
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFQ:Landroid/view/ViewGroup;
 
     invoke-virtual {v3, v1}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
 
     goto :goto_0
 
-    .line 408
+    .line 420
     :cond_1
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/MMWebView;->jBr:Landroid/view/ViewGroup;
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/MMWebView;->lFQ:Landroid/view/ViewGroup;
 
     invoke-virtual {v3, v0}, Landroid/view/ViewGroup;->requestDisallowInterceptTouchEvent(Z)V
 
@@ -450,7 +469,7 @@
     :cond_2
     move v0, v1
 
-    .line 417
+    .line 429
     goto :goto_1
 
     :cond_3
@@ -458,7 +477,7 @@
 
     goto :goto_1
 
-    .line 397
+    .line 409
     nop
 
     :pswitch_data_0
@@ -473,7 +492,7 @@
     .locals 1
 
     .prologue
-    .line 433
+    .line 445
     invoke-super {p0, p1}, Lcom/tencent/smtt/sdk/WebView;->super_dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
@@ -485,7 +504,7 @@
     .locals 1
 
     .prologue
-    .line 438
+    .line 450
     invoke-super {p0, p1}, Lcom/tencent/smtt/sdk/WebView;->super_onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0

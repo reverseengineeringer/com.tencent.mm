@@ -3,187 +3,336 @@ package com.tencent.mm.ui.account.mobile;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.TelephonyManager;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.KeyEvent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnKeyListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.platformtools.t;
+import android.widget.TextView.OnEditorActionListener;
+import com.tencent.mm.ac.b.a;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.plugin.a.a;
+import com.tencent.mm.pluginsdk.g;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ab.a;
+import com.tencent.mm.sdk.platformtools.ai;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.MMFormInputView;
 import com.tencent.mm.ui.base.MMFormMobileInputView;
-import com.tencent.mm.ui.tools.a.c;
-import com.tencent.mm.z.b.a;
+import com.tencent.mm.ui.base.MMFormMobileInputView.a;
+import com.tencent.mm.ui.base.p;
 import java.util.HashMap;
 import java.util.Map;
 
 public class MobileInputUI
   extends MMActivity
 {
-  protected String bFX = null;
-  protected String bqA = null;
-  protected EditText cYh;
-  protected String eKK;
-  protected String emi = null;
-  protected TextView fRl;
-  protected CheckBox gYf;
-  protected EditText itO;
-  protected LinearLayout itP;
-  protected TextView itQ;
-  protected EditText itR;
-  protected String itS = null;
-  protected Map itV = new HashMap();
-  protected Map itW = new HashMap();
-  protected boolean itX = true;
-  protected com.tencent.mm.ui.base.bn itY;
-  protected String itZ = null;
-  protected MMFormInputView iuT;
-  protected boolean iuV = false;
-  protected MMFormMobileInputView ivq;
-  protected TextView ivu;
-  protected Button ivv;
-  protected Button ivw;
-  protected TextView iyR;
-  protected View iyS;
-  protected TextView iyT;
-  protected Button iyU;
-  protected Button iyV;
-  private int iyW = 0;
-  private b iyX;
+  protected String aJD = null;
+  protected String bUu = null;
+  protected EditText dEk;
+  protected String fVw;
+  protected String fvR = null;
+  protected TextView htg;
+  protected CheckBox iOx;
+  protected EditText ksG;
+  protected LinearLayout ksH;
+  protected TextView ksI;
+  protected EditText ksJ;
+  protected String ksK = null;
+  protected Map ksN = new HashMap();
+  protected Map ksO = new HashMap();
+  protected boolean ksP = true;
+  protected p ksQ;
+  protected String ksR = null;
+  protected MMFormInputView ktV;
+  protected boolean ktX = false;
+  protected MMFormMobileInputView kus;
+  protected TextView kuw;
+  protected Button kux;
+  protected Button kuy;
+  protected TextView kxV;
+  protected View kxW;
+  protected TextView kxX;
+  protected Button kxY;
+  protected Button kxZ;
+  private int kya = 0;
+  private b kyb;
   
-  private boolean aMm()
+  private boolean bcd()
   {
-    return iyW == 2;
+    return kya == 2;
   }
   
-  private void aMn()
+  private void bce()
   {
-    itZ = ivq.getCountryCode();
-    emi = ivq.getMobileNumber();
-    Xh();
-    iyX.nv(a.iza);
+    ksR = kus.getCountryCode();
+    fvR = kus.getMobileNumber();
+    age();
+    kyb.qp(a.kye);
   }
   
   private void goBack()
   {
-    iyX.nv(a.iyZ);
-    com.tencent.mm.plugin.a.b.iZ(eKK);
-    Xh();
+    kyb.qp(a.kyd);
+    com.tencent.mm.plugin.a.b.kC(fVw);
+    age();
     finish();
   }
   
-  protected final void DV()
+  protected final void Gb()
   {
-    itV.clear();
-    Object localObject = getString(a.n.country_code).trim().split(",");
+    ksN.clear();
+    Object localObject = getString(2131428870).trim().split(",");
     int i = 0;
     if (i < localObject.length)
     {
       String[] arrayOfString = localObject[i].trim().split(":");
       if (arrayOfString.length < 2) {
-        t.e("!32@/B4Tb64lLpKsMp00pgLFBvwwdeoRc43I", "this country item has problem %s", new Object[] { localObject[i] });
+        u.e("!32@/B4Tb64lLpKsMp00pgLFBvwwdeoRc43I", "this country item has problem %s", new Object[] { localObject[i] });
       }
       for (;;)
       {
         i += 1;
         break;
-        if (!itV.containsKey(arrayOfString[0])) {
-          itV.put(arrayOfString[0], arrayOfString[1]);
+        if (!ksN.containsKey(arrayOfString[0])) {
+          ksN.put(arrayOfString[0], arrayOfString[1]);
         }
-        itW.put(arrayOfString[1], arrayOfString[0]);
+        ksO.put(arrayOfString[1], arrayOfString[0]);
       }
     }
-    iuT = ((MMFormInputView)findViewById(a.i.setpassword_container));
-    cYh = iuT.getContentEditText();
-    c.a(cYh).oZ(16).a(null);
-    ivq = ((MMFormMobileInputView)findViewById(a.i.regbymobilereg_mobile_input_view));
-    itO = ivq.getMobileNumberEditText();
-    itO.requestFocus();
-    itR = ivq.getCountryCodeEditText();
-    itP = ((LinearLayout)findViewById(a.i.country_code_ll));
-    itQ = ((TextView)findViewById(a.i.country_name));
-    iyR = ((TextView)findViewById(a.i.login_other_way));
-    iyS = findViewById(a.i.reg_license);
-    gYf = ((CheckBox)findViewById(a.i.agree_cb));
-    ivu = ((TextView)findViewById(a.i.agree_text));
-    ivv = ((Button)findViewById(a.i.agree_btn));
-    ivw = ((Button)findViewById(a.i.next_btn));
-    iyT = ((TextView)findViewById(a.i.register_title));
-    fRl = ((TextView)findViewById(a.i.mobile_input_hint));
-    iyU = ((Button)findViewById(a.i.login_by_sms));
-    iyV = ((Button)findViewById(a.i.login_problem));
-    iuT.setVisibility(8);
-    iyT.setVisibility(8);
-    ivw.setVisibility(8);
-    iyR.setVisibility(8);
-    iyS.setVisibility(8);
-    iyU.setVisibility(8);
-    iyV.setVisibility(8);
-    gYf.setVisibility(8);
-    gYf.setChecked(true);
-    localObject = getString(a.n.regbymoile_reg_title);
-    if (com.tencent.mm.protocal.b.hgp) {
-      localObject = getString(a.n.app_name) + getString(a.n.alpha_version_alpha);
+    ktV = ((MMFormInputView)findViewById(2131167001));
+    dEk = ktV.getContentEditText();
+    com.tencent.mm.ui.tools.a.c.a(dEk).rZ(16).a(null);
+    kus = ((MMFormMobileInputView)findViewById(2131167000));
+    ksG = kus.getMobileNumberEditText();
+    ksG.requestFocus();
+    ksJ = kus.getCountryCodeEditText();
+    ksH = ((LinearLayout)findViewById(2131166998));
+    ksI = ((TextView)findViewById(2131166999));
+    kxV = ((TextView)findViewById(2131167008));
+    kxW = findViewById(2131167003);
+    iOx = ((CheckBox)findViewById(2131167004));
+    kuw = ((TextView)findViewById(2131167005));
+    kux = ((Button)findViewById(2131167006));
+    kuy = ((Button)findViewById(2131166968));
+    kxX = ((TextView)findViewById(2131166996));
+    htg = ((TextView)findViewById(2131166997));
+    kxY = ((Button)findViewById(2131167002));
+    kxZ = ((Button)findViewById(2131167007));
+    ktV.setVisibility(8);
+    kxX.setVisibility(8);
+    kuy.setVisibility(8);
+    kxV.setVisibility(8);
+    kxW.setVisibility(8);
+    kxY.setVisibility(8);
+    kxZ.setVisibility(8);
+    iOx.setVisibility(8);
+    iOx.setChecked(true);
+    localObject = getString(2131427639);
+    if (com.tencent.mm.protocal.b.iUg) {
+      localObject = getString(2131431735) + getString(2131427771);
     }
-    At((String)localObject);
-    itO.addTextChangedListener(new am(this));
-    itO.setOnEditorActionListener(new an(this));
-    itO.setOnKeyListener(new ao(this));
-    ivq.setOnCountryCodeChangedListener(new ap(this));
-    a(0, getString(a.n.app_nextstep), new aq(this));
-    fe(false);
-    ivw.setEnabled(false);
-    ivw.setOnClickListener(new ar(this));
-    if ((!com.tencent.mm.sdk.platformtools.bn.iW(bFX)) || (!com.tencent.mm.sdk.platformtools.bn.iW(bqA)))
+    Gj((String)localObject);
+    ksG.addTextChangedListener(new TextWatcher()
     {
-      if ((bFX != null) && (!bFX.equals(""))) {
-        itQ.setText(bFX);
+      private ai eCG = new ai();
+      
+      public final void afterTextChanged(Editable paramAnonymousEditable)
+      {
+        paramAnonymousEditable = kus.getMobileNumber();
+        if ((paramAnonymousEditable != null) && (paramAnonymousEditable.length() > 0) && (ksP) && ((!MobileInputUI.b(MobileInputUI.this)) || (iOx.isChecked())))
+        {
+          bC(true);
+          kuy.setEnabled(true);
+          return;
+        }
+        bC(false);
+        kuy.setEnabled(false);
       }
-      if ((bqA != null) && (!bqA.equals(""))) {
-        itR.setText("+" + bqA);
+      
+      public final void beforeTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
+      
+      public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
+    });
+    ksG.setOnEditorActionListener(new TextView.OnEditorActionListener()
+    {
+      public final boolean onEditorAction(TextView paramAnonymousTextView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
+      {
+        if ((paramAnonymousInt == 6) || (paramAnonymousInt == 5)) {
+          return MobileInputUI.c(MobileInputUI.this);
+        }
+        return false;
       }
-      if ((itS == null) || (itS.equals(""))) {
-        break label871;
+    });
+    ksG.setOnKeyListener(new View.OnKeyListener()
+    {
+      public final boolean onKey(View paramAnonymousView, int paramAnonymousInt, KeyEvent paramAnonymousKeyEvent)
+      {
+        if ((66 == paramAnonymousInt) && (paramAnonymousKeyEvent.getAction() == 0)) {
+          return MobileInputUI.c(MobileInputUI.this);
+        }
+        return false;
       }
-      itO.setText(itS);
+    });
+    kus.setOnCountryCodeChangedListener(new MMFormMobileInputView.a()
+    {
+      public final void Gs(String paramAnonymousString)
+      {
+        if (ay.kz(paramAnonymousString))
+        {
+          bC(false);
+          kuy.setEnabled(false);
+        }
+        while ((ksG.getText() != null) && (ksG.getText().toString().length() > 0) && (ksP) && ((!MobileInputUI.b(MobileInputUI.this)) || (iOx.isChecked())))
+        {
+          bC(true);
+          kuy.setEnabled(true);
+          return;
+          if (paramAnonymousString.length() > 1)
+          {
+            paramAnonymousString = paramAnonymousString.substring(1);
+            String str = (String)ksN.get(paramAnonymousString);
+            if (ay.kz(str))
+            {
+              ksI.setText(getString(2131427717));
+              ksP = false;
+            }
+            else
+            {
+              if ((ksO.get(ksI.getText()) == null) || (!((String)ksO.get(ksI.getText())).equals(paramAnonymousString))) {
+                ksI.setText(str);
+              }
+              ksP = true;
+            }
+          }
+          else
+          {
+            ksI.setText(getString(2131427718));
+          }
+        }
+        bC(false);
+        kuy.setEnabled(false);
+      }
+    });
+    a(0, getString(2131430895), new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        MobileInputUI.d(MobileInputUI.this);
+        return true;
+      }
+    });
+    bC(false);
+    kuy.setEnabled(false);
+    kuy.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        MobileInputUI.d(MobileInputUI.this);
+      }
+    });
+    if ((!ay.kz(bUu)) || (!ay.kz(aJD)))
+    {
+      if ((bUu != null) && (!bUu.equals(""))) {
+        ksI.setText(bUu);
+      }
+      if ((aJD != null) && (!aJD.equals(""))) {
+        ksJ.setText("+" + aJD);
+      }
+      if ((ksK == null) || (ksK.equals(""))) {
+        break label865;
+      }
+      ksG.setText(ksK);
     }
     for (;;)
     {
-      itP.setOnClickListener(new as(this));
-      a(new at(this));
+      ksH.setOnClickListener(new View.OnClickListener()
+      {
+        public final void onClick(View paramAnonymousView)
+        {
+          paramAnonymousView = new Intent();
+          paramAnonymousView.putExtra("country_name", bUu);
+          paramAnonymousView.putExtra("couttry_code", aJD);
+          a.coa.b(paramAnonymousView, MobileInputUI.this);
+        }
+      });
+      b(new MenuItem.OnMenuItemClickListener()
+      {
+        public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+        {
+          MobileInputUI.e(MobileInputUI.this);
+          return true;
+        }
+      });
       return;
       localObject = ((TelephonyManager)getSystemService("phone")).getSimCountryIso();
-      t.d("!32@/B4Tb64lLpKsMp00pgLFBvwwdeoRc43I", "tm.getSimCountryIso()" + (String)localObject);
-      if (com.tencent.mm.sdk.platformtools.bn.iW((String)localObject))
+      u.d("!32@/B4Tb64lLpKsMp00pgLFBvwwdeoRc43I", "tm.getSimCountryIso()" + (String)localObject);
+      if (ay.kz((String)localObject))
       {
-        t.e("!32@/B4Tb64lLpKsMp00pgLFBvwwdeoRc43I", "getDefaultCountryInfo error");
+        u.e("!32@/B4Tb64lLpKsMp00pgLFBvwwdeoRc43I", "getDefaultCountryInfo error");
         break;
       }
-      localObject = com.tencent.mm.z.b.g(this, (String)localObject, getString(a.n.country_code));
+      localObject = com.tencent.mm.ac.b.h(this, (String)localObject, getString(2131428870));
       if (localObject == null)
       {
-        t.e("!32@/B4Tb64lLpKsMp00pgLFBvwwdeoRc43I", "getDefaultCountryInfo error");
+        u.e("!32@/B4Tb64lLpKsMp00pgLFBvwwdeoRc43I", "getDefaultCountryInfo error");
         break;
       }
-      bFX = bFX;
-      bqA = bFW;
+      bUu = bUu;
+      aJD = bUt;
       break;
-      label871:
-      if (iyW != 1) {
-        ax.td().a(new au(this));
+      label865:
+      if (kya != 1) {
+        ah.tv().a(new ab.a()
+        {
+          String daR;
+          
+          public final String toString()
+          {
+            return super.toString() + "|getSimCardNum";
+          }
+          
+          public final boolean vd()
+          {
+            daR = com.tencent.mm.modelsimple.c.v(MobileInputUI.this, aJD);
+            return true;
+          }
+          
+          public final boolean ve()
+          {
+            EditText localEditText;
+            if (ay.kz(ksG.getText().trim()))
+            {
+              localEditText = ksG;
+              if (!ay.kz(daR)) {
+                break label60;
+              }
+            }
+            label60:
+            for (String str = "";; str = daR)
+            {
+              localEditText.setText(str);
+              return true;
+            }
+          }
+        });
       }
     }
   }
   
   protected final int getLayoutId()
   {
-    return a.k.mobile_input_ui;
+    return 2131362422;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
@@ -195,54 +344,54 @@ public class MobileInputUI
     do
     {
       return;
-      bFX = com.tencent.mm.sdk.platformtools.bn.U(paramIntent.getStringExtra("country_name"), "");
-      bqA = com.tencent.mm.sdk.platformtools.bn.U(paramIntent.getStringExtra("couttry_code"), "");
-      if (!bFX.equals("")) {
-        itQ.setText(bFX);
+      bUu = ay.ad(paramIntent.getStringExtra("country_name"), "");
+      aJD = ay.ad(paramIntent.getStringExtra("couttry_code"), "");
+      if (!bUu.equals("")) {
+        ksI.setText(bUu);
       }
-    } while (bqA.equals(""));
-    itR.setText("+" + bqA);
+    } while (aJD.equals(""));
+    ksJ.setText("+" + aJD);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    iyW = getIntent().getIntExtra("mobile_input_purpose", 0);
-    switch (iyW)
+    kya = getIntent().getIntExtra("mobile_input_purpose", 0);
+    switch (kya)
     {
     default: 
-      t.e("!32@/B4Tb64lLpKsMp00pgLFBvwwdeoRc43I", "wrong purpose %s", new Object[] { Integer.valueOf(iyW) });
+      u.e("!32@/B4Tb64lLpKsMp00pgLFBvwwdeoRc43I", "wrong purpose %s", new Object[] { Integer.valueOf(kya) });
       finish();
       return;
     case 1: 
-      iyX = new y();
+      kyb = new d();
     }
     for (;;)
     {
-      bFX = com.tencent.mm.sdk.platformtools.bn.U(getIntent().getStringExtra("country_name"), "");
-      bqA = com.tencent.mm.sdk.platformtools.bn.U(getIntent().getStringExtra("couttry_code"), "");
-      itS = com.tencent.mm.sdk.platformtools.bn.U(getIntent().getStringExtra("bindmcontact_shortmobile"), "");
-      eKK = com.tencent.mm.plugin.a.b.DR();
-      DV();
+      bUu = ay.ad(getIntent().getStringExtra("country_name"), "");
+      aJD = ay.ad(getIntent().getStringExtra("couttry_code"), "");
+      ksK = ay.ad(getIntent().getStringExtra("bindmcontact_shortmobile"), "");
+      fVw = com.tencent.mm.plugin.a.b.FX();
+      Gb();
       paramBundle = getIntent().getStringExtra("mobile_cc");
       String str = getIntent().getStringExtra("mobile_number");
-      iuV = getIntent().getBooleanExtra("from_deep_link", false);
-      if ((!com.tencent.mm.sdk.platformtools.bn.iW(paramBundle)) && (!com.tencent.mm.sdk.platformtools.bn.iW(str)))
+      ktX = getIntent().getBooleanExtra("from_deep_link", false);
+      if ((!ay.kz(paramBundle)) && (!ay.kz(str)))
       {
-        itZ = paramBundle;
-        emi = str;
-        ivq.setCountryCode(itZ);
-        ivq.setMobileNumber(emi);
+        ksR = paramBundle;
+        fvR = str;
+        kus.setCountryCode(ksR);
+        kus.setMobileNumber(fvR);
       }
-      iyX.a(this);
+      kyb.a(this);
       return;
-      iyX = new ad();
+      kyb = new e();
       continue;
-      iyX = new g();
+      kyb = new b();
       continue;
-      iyX = new ad();
+      kyb = new e();
       continue;
-      iyX = new l();
+      kyb = new c();
     }
   }
   
@@ -264,24 +413,24 @@ public class MobileInputUI
   public void onPause()
   {
     super.onPause();
-    iyX.stop();
+    kyb.stop();
   }
   
   public void onResume()
   {
     super.onResume();
-    iyX.start();
-    itR.setSelection(itR.getText().toString().length());
-    aeG();
+    kyb.start();
+    ksJ.setSelection(ksJ.getText().toString().length());
+    apz();
   }
   
   public void setRequestedOrientation(int paramInt) {}
   
   protected static enum a
   {
-    public static int[] aMo()
+    public static int[] bcf()
     {
-      return (int[])izb.clone();
+      return (int[])kyf.clone();
     }
   }
   
@@ -289,7 +438,7 @@ public class MobileInputUI
   {
     public abstract void a(MobileInputUI paramMobileInputUI);
     
-    public abstract void nv(int paramInt);
+    public abstract void qp(int paramInt);
     
     public abstract void start();
     

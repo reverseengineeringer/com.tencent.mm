@@ -1,56 +1,63 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.os;
-import com.tencent.mm.protocal.b.ot;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.network.e;
+import com.tencent.mm.protocal.b.rz;
+import com.tencent.mm.protocal.b.sa;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.a.c;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class o
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private d apI;
-  public final a bFY;
+  public String aSF;
+  public String aSG;
+  private d anM;
+  private a anN;
+  public String bNO;
   
-  public o(int paramInt1, String paramString1, String paramString2, String paramString3, int paramInt2)
+  public o(double paramDouble1, double paramDouble2)
   {
-    a.a locala = new a.a();
-    os localos = new os();
-    ot localot = new ot();
-    bsW = localos;
-    bsX = localot;
-    uri = "/cgi-bin/micromsg-bin/getexposelink";
-    bsV = 982;
-    bsY = 0;
-    bsZ = 0;
-    hih = paramInt1;
-    hzp = paramString1;
-    hzq = bn.iV(paramString2);
-    hzr = bn.iV(paramString3);
-    hzs = paramInt2;
-    bFY = locala.vh();
+    Object localObject = new a.a();
+    bFa = new rz();
+    bFb = new sa();
+    uri = "/cgi-bin/micromsg-bin/getcurlocation";
+    bEY = 665;
+    bFc = 0;
+    bFd = 0;
+    anN = ((a.a)localObject).vy();
+    localObject = (rz)anN.bEW.bFf;
+    jcH = paramDouble1;
+    jcG = paramDouble2;
+    u.d("!44@/B4Tb64lLpK+IBX8XDgnvprceLg5xBOMBKMckcpjxzE=", "latitude:" + paramDouble1 + ", longitude:" + paramDouble2);
   }
   
-  public final int a(m paramm, d paramd)
+  public final int a(e parame, d paramd)
   {
-    apI = paramd;
-    return a(paramm, bFY, this);
+    anM = paramd;
+    return a(parame, anN, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, com.tencent.mm.network.o paramo, byte[] paramArrayOfByte)
   {
-    apI.a(paramInt2, paramInt3, paramString, this);
+    u.d("!44@/B4Tb64lLpK+IBX8XDgnvprceLg5xBOMBKMckcpjxzE=", "onGYNetEnd  errType:" + paramInt2 + " errCode:" + paramInt3);
+    if ((paramInt2 == 0) && (paramInt3 == 0))
+    {
+      paramo = (sa)anN.bEX.bFf;
+      aSG = bLO;
+      bNO = bLV;
+      aSF = bLN;
+    }
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
   {
-    return 982;
+    return 665;
   }
 }
 

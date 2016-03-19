@@ -2,36 +2,35 @@ package com.tencent.mm.plugin.safedevice.ui;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.plugin.a.a;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.plugin.safedevice.a.c;
-import com.tencent.mm.plugin.safedevice.a.f;
-import com.tencent.mm.pluginsdk.i;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.base.g;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public class SafeDeviceListPreference
   extends Preference
-  implements com.tencent.mm.q.d
+  implements com.tencent.mm.r.d
 {
-  private ProgressDialog bXB;
-  private Button cFm;
+  private ProgressDialog coM;
   private Context context;
-  c eKA;
-  private boolean eKB = false;
-  a eKC;
-  b eKD;
+  private Button ddh;
+  c fVm;
+  private boolean fVn = false;
+  a fVo;
+  b fVp;
   private int mode = -2;
   
   public SafeDeviceListPreference(Context paramContext)
@@ -50,10 +49,10 @@ public class SafeDeviceListPreference
     context = paramContext;
   }
   
-  private void DV()
+  private void Gb()
   {
-    if (!eKB) {
-      t.d("!56@/B4Tb64lLpI7vmNKcPQSbjdiTirNKc5cZ1XUPeYsvM6El4Pz5zkicw==", "has not binded");
+    if (!fVn) {
+      u.d("!56@/B4Tb64lLpI7vmNKcPQSbjdiTirNKc5cZ1XUPeYsvM6El4Pz5zkicw==", "has not binded");
     }
     do
     {
@@ -63,35 +62,41 @@ public class SafeDeviceListPreference
       case -1: 
       case 0: 
       default: 
-        setWidgetLayoutResource(a.k.mm_preference_submenu);
+        setWidgetLayoutResource(2131363236);
         return;
       case 1: 
-        setWidgetLayoutResource(a.k.delete_safe_divice);
+        setWidgetLayoutResource(2131362679);
       }
-    } while (cFm == null);
-    cFm.setOnClickListener(new v(this));
+    } while (ddh == null);
+    ddh.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        SafeDeviceListPreference.d(SafeDeviceListPreference.this);
+      }
+    });
     return;
-    setWidgetLayoutResource(a.k.mm_preference_submenu);
+    setWidgetLayoutResource(2131363236);
   }
   
-  private void afx()
+  private void aqF()
   {
-    ax.tm().b(362, this);
+    ah.tE().b(362, this);
   }
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    afx();
-    if ((bXB != null) && (bXB.isShowing()))
+    aqF();
+    if ((coM != null) && (coM.isShowing()))
     {
-      bXB.dismiss();
-      bXB = null;
+      coM.dismiss();
+      coM = null;
     }
     if ((paramInt2 == 0) && (paramInt2 == 0))
     {
-      f.afu().b(eKA, new String[0]);
-      if (eKD != null) {
-        eKD.pf(bUr);
+      com.tencent.mm.plugin.safedevice.a.f.aqC().b(fVm, new String[0]);
+      if (fVp != null) {
+        fVp.sK(cln);
       }
     }
     do
@@ -99,23 +104,23 @@ public class SafeDeviceListPreference
       do
       {
         return;
-      } while (a.bWX.a(context, paramInt1, paramInt2, paramString));
-      Toast.makeText(context, context.getString(a.n.safe_device_del_failed, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
-    } while (eKC == null);
-    eKC.pg(eKA.field_uid);
+      } while (com.tencent.mm.plugin.a.a.cob.a(context, paramInt1, paramInt2, paramString));
+      Toast.makeText(context, context.getString(2131429292, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
+    } while (fVo == null);
+    fVo.sL(fVm.field_uid);
   }
   
-  public final void ip(int paramInt)
+  public final void kg(int paramInt)
   {
     mode = paramInt;
-    DV();
+    Gb();
   }
   
   protected final void onBindView(View paramView)
   {
-    eKB = true;
-    cFm = ((Button)paramView.findViewById(a.i.del_safe_device_btn));
-    DV();
+    fVn = true;
+    ddh = ((Button)paramView.findViewById(2131168001));
+    Gb();
     super.onBindView(paramView);
   }
   
@@ -123,23 +128,23 @@ public class SafeDeviceListPreference
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
     LayoutInflater localLayoutInflater = (LayoutInflater)context.getSystemService("layout_inflater");
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(a.i.content);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
     if (localViewGroup != null)
     {
       localViewGroup.removeAllViews();
-      localLayoutInflater.inflate(a.k.mm_preference_edit_safe_device, localViewGroup);
+      localLayoutInflater.inflate(2131362681, localViewGroup);
     }
     return paramViewGroup;
   }
   
   public static abstract interface a
   {
-    public abstract void pg(String paramString);
+    public abstract void sL(String paramString);
   }
   
   public static abstract interface b
   {
-    public abstract void pf(String paramString);
+    public abstract void sK(String paramString);
   }
 }
 

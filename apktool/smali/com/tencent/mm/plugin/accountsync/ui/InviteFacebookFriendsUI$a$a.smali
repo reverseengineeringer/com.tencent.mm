@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field bXN:Landroid/widget/ImageView;
+.field bMs:Landroid/widget/TextView;
 
-.field bXO:Landroid/widget/TextView;
+.field coY:Landroid/widget/ImageView;
 
-.field bXP:Landroid/widget/CheckBox;
+.field coZ:Landroid/widget/TextView;
 
-.field bzm:Landroid/widget/TextView;
+.field cpa:Landroid/widget/CheckBox;
 
 
 # direct methods
@@ -29,7 +29,7 @@
     .locals 0
 
     .prologue
-    .line 498
+    .line 508
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,13 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-
 public final class dg$a
 {
-  public int actionCode;
-  public String azq;
-  public Context context;
-  public String username;
+  public int op;
 }
 
 /* Location:

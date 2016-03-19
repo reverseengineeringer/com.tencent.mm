@@ -1,291 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="a">
-        <item>@string/b8w</item>
-        <item>@string/b8a</item>
-        <item>@string/b8b</item>
-        <item>@string/b8c</item>
-        <item>@string/b8d</item>
-        <item>@string/b8f</item>
-        <item>@string/b8r</item>
-        <item>@string/b8i</item>
-        <item>@string/b8q</item>
-        <item>@string/b8p</item>
-        <item>@string/b8o</item>
-        <item>@string/b8m</item>
-        <item>@string/b8h</item>
-        <item>@string/b8j</item>
-        <item>@string/b8e</item>
-        <item>@string/b8g</item>
-        <item>@string/b8l</item>
-        <item>@string/b8k</item>
-        <item>@string/b8n</item>
-        <item>@string/b8s</item>
-        <item>@string/b8t</item>
-        <item>@string/b8u</item>
-        <item>@string/b8v</item>
+        <item>com.tencent.xin.emoticon.heartbeatg</item>
+        <item>com.tencent.xin.emoticon.botg</item>
+        <item>com.tencent.xin.emoticon.monmong</item>
+        <item>com.tencent.xin.emoticon.luoxiaoheig</item>
+        <item>com.tencent.xin.emoticon.ali2g</item>
+        <item>com.tencent.xin.emoticon.tuzkig</item>
     </string-array>
     <string-array name="b">
-        <item>@string/b_6</item>
-        <item>@string/b_7</item>
+        <item>@string/qx</item>
+        <item>@string/qy</item>
     </string-array>
     <string-array name="c">
-        <item>@string/bpm</item>
-        <item>@string/ch1</item>
-        <item>@string/ch2</item>
-        <item>@string/ch3</item>
-    </string-array>
-    <string-array name="d">
-        <item>@string/bpm</item>
-        <item>@string/ch2</item>
-        <item>@string/ch3</item>
-    </string-array>
-    <string-array name="e">
-        <item>@string/bpm</item>
-        <item>@string/cui</item>
-        <item>@string/ch3</item>
-    </string-array>
-    <string-array name="f">
-        <item>@string/bpm</item>
-        <item>@string/ch3</item>
-    </string-array>
-    <string-array name="g">
-        <item>@string/azr</item>
-    </string-array>
-    <string-array name="h">
-        <item>@string/azz</item>
-    </string-array>
-    <string-array name="i">
-        <item>@string/c61</item>
-        <item>@string/c62</item>
-        <item>@string/c63</item>
-    </string-array>
-    <string-array name="j">
-        <item>@string/c5y</item>
-        <item>@string/b9z</item>
-        <item>@string/c6j</item>
-        <item>@string/b_q</item>
-    </string-array>
-    <string-array name="k">
-        <item>@string/agv</item>
-        <item>@string/agw</item>
-        <item>@string/agx</item>
-    </string-array>
-    <string-array name="l">
-        <item>@string/c_0</item>
-        <item>@string/c_1</item>
-        <item>@string/c_2</item>
-        <item>@string/c_3</item>
-        <item>@string/c_4</item>
-        <item>@string/c_5</item>
-        <item>@string/c_6</item>
-        <item>@string/c_7</item>
-        <item>@string/c_8</item>
-        <item>@string/c_9</item>
-        <item>@string/c__</item>
-        <item>@string/c_a</item>
-    </string-array>
-    <string-array name="m">
-        <item>@string/c_b</item>
-        <item>@string/c_c</item>
-        <item>@string/c_d</item>
-        <item>@string/c_e</item>
-        <item>@string/c_f</item>
-        <item>@string/c_g</item>
-        <item>@string/c_h</item>
-    </string-array>
-    <string-array name="n">
-        <item>@string/cr7</item>
-        <item>@string/cr0</item>
-    </string-array>
-    <string-array name="o">
-        <item>@string/cim</item>
-    </string-array>
-    <string-array name="p">
-        <item>验证码</item>
-    </string-array>
-    <string-array name="q">
-        <item>@string/cin</item>
-    </string-array>
-    <string-array name="r">
         <item>male</item>
         <item>female</item>
     </string-array>
-    <string-array name="s">
-        <item>@string/bac</item>
-    </string-array>
-    <string-array name="t">
-        <item>360</item>
-        <item>85</item>
-        <item>86</item>
-        <item>359</item>
-        <item>344</item>
-        <item>95</item>
-        <item>363</item>
-        <item>362</item>
-        <item>352</item>
-        <item>343</item>
-        <item>349</item>
-        <item>94</item>
-        <item>348</item>
-        <item>353</item>
-        <item>341</item>
-        <item>97</item>
-        <item>342</item>
-        <item>87</item>
-        <item>346</item>
-        <item>340</item>
-        <item>354</item>
-        <item>350</item>
-        <item>345</item>
-        <item>358</item>
-        <item>356</item>
-        <item>357</item>
-        <item>355</item>
-        <item>96</item>
-        <item>88</item>
-        <item>361</item>
-        <item>347</item>
-        <item>351</item>
-        <item>115</item>
-        <item>101</item>
-        <item>33</item>
-        <item>34</item>
-        <item>303</item>
-        <item>308</item>
-        <item>309</item>
-        <item>32</item>
-        <item>31</item>
-        <item>149</item>
-        <item>311</item>
-        <item>61</item>
-        <item>118</item>
-        <item>89</item>
-        <item>13</item>
-        <item>372</item>
-        <item>12</item>
-        <item>16</item>
-        <item>225</item>
-        <item>226</item>
-        <item>228</item>
-        <item>227</item>
-        <item>14</item>
-        <item>165</item>
-        <item>106</item>
-        <item>376</item>
-        <item>0</item>
-        <item>1</item>
-        <item>4</item>
-        <item>3</item>
-        <item>77</item>
-        <item>117</item>
-        <item>2</item>
-        <item>73</item>
-        <item>74</item>
-        <item>72</item>
-        <item>71</item>
-        <item>75</item>
-        <item>150</item>
-        <item>401</item>
-        <item>78</item>
-        <item>81</item>
-        <item>82</item>
-        <item>451</item>
-        <item>459</item>
-        <item>457</item>
-        <item>464</item>
-        <item>79</item>
-        <item>454</item>
-        <item>80</item>
-        <item>100</item>
-        <item>458</item>
-        <item>462</item>
-        <item>98</item>
-        <item>25</item>
-        <item>460</item>
-        <item>448</item>
-        <item>461</item>
-        <item>84</item>
-        <item>452</item>
-        <item>99</item>
-        <item>449</item>
-        <item>83</item>
-        <item>447</item>
-        <item>49</item>
-        <item>265</item>
-        <item>269</item>
-        <item>270</item>
-        <item>394</item>
-        <item>408</item>
-        <item>116</item>
-        <item>411</item>
-        <item>50</item>
-        <item>107</item>
-        <item>299</item>
-        <item>280</item>
-        <item>278</item>
-        <item>127</item>
-        <item>7</item>
-        <item>60</item>
-        <item>11</item>
-        <item>131</item>
-        <item>8</item>
-        <item>158</item>
-        <item>157</item>
-        <item>62</item>
-        <item>111</item>
-        <item>104</item>
-        <item>90</item>
-        <item>152</item>
-        <item>136</item>
-        <item>279</item>
-        <item>108</item>
-        <item>277</item>
-        <item>382</item>
-        <item>381</item>
-        <item>23</item>
-        <item>21</item>
-        <item>19</item>
-        <item>138</item>
-        <item>132</item>
-        <item>59</item>
-        <item>64</item>
-        <item>296</item>
-        <item>103</item>
-        <item>399</item>
-        <item>297</item>
-        <item>290</item>
-        <item>51</item>
-        <item>52</item>
-        <item>68</item>
-        <item>70</item>
-        <item>274</item>
-        <item>67</item>
-        <item>121</item>
-        <item>321</item>
-        <item>325</item>
-        <item>330</item>
-        <item>326</item>
-        <item>160</item>
-        <item>320</item>
-        <item>337</item>
-        <item>331</item>
-        <item>28</item>
-        <item>102</item>
-        <item>143</item>
-        <item>392</item>
-        <item>261</item>
-        <item>139</item>
-        <item>145</item>
-        <item>146</item>
-        <item>312</item>
-        <item>313</item>
-        <item>257</item>
-        <item>258</item>
-        <item>470</item>
-        <item>368</item>
-    </string-array>
-    <string-array name="u">
+    <string-array name="d">
         <item></item>
         <item></item>
         <item></item>
@@ -456,520 +187,520 @@
         <item></item>
         <item></item>
     </string-array>
-    <string-array name="v">
-        <item>笑脸</item>
-        <item>开心</item>
-        <item>大笑</item>
-        <item>热情</item>
-        <item>眨眼</item>
-        <item>色</item>
-        <item>接吻</item>
-        <item>亲吻</item>
-        <item>脸红</item>
-        <item>露齿笑</item>
-        <item>满意</item>
-        <item>戏弄</item>
-        <item>吐舌</item>
-        <item>无语</item>
-        <item>得意</item>
-        <item>汗</item>
-        <item>失望</item>
-        <item>低落</item>
-        <item>呸</item>
-        <item>焦虑</item>
-        <item>担心</item>
-        <item>震惊</item>
-        <item>悔恨</item>
-        <item>眼泪</item>
-        <item>哭</item>
-        <item>破涕为笑</item>
-        <item>晕</item>
-        <item>恐惧</item>
-        <item>心烦</item>
-        <item>生气</item>
-        <item>睡觉</item>
-        <item>生病</item>
-        <item>恶魔</item>
-        <item>外星人</item>
-        <item>心</item>
-        <item>心碎</item>
-        <item>丘比特</item>
-        <item>闪烁</item>
-        <item>星星</item>
-        <item>叹号</item>
-        <item>问号</item>
-        <item>睡着</item>
-        <item>水滴</item>
-        <item>音乐</item>
-        <item>火</item>
-        <item>便便</item>
-        <item>强</item>
-        <item>弱</item>
-        <item>拳头</item>
-        <item>胜利</item>
-        <item>上</item>
-        <item>下</item>
-        <item>右</item>
-        <item>左</item>
-        <item>第一</item>
-        <item>强壮</item>
-        <item>吻</item>
-        <item>热恋</item>
-        <item>男孩</item>
-        <item>女孩</item>
-        <item>女士</item>
-        <item>男士</item>
-        <item>天使</item>
-        <item>骷髅</item>
-        <item>红唇</item>
-        <item>太阳</item>
-        <item>下雨</item>
-        <item>多云</item>
-        <item>雪人</item>
-        <item>月亮</item>
-        <item>闪电</item>
-        <item>海浪</item>
-        <item>猫</item>
-        <item>小狗</item>
-        <item>老鼠</item>
-        <item>仓鼠</item>
-        <item>兔子</item>
-        <item>狗</item>
-        <item>青蛙</item>
-        <item>老虎</item>
-        <item>考拉</item>
-        <item>熊</item>
-        <item>猪</item>
-        <item>牛</item>
-        <item>野猪</item>
-        <item>猴子</item>
-        <item>马</item>
-        <item>蛇</item>
-        <item>鸽子</item>
-        <item>鸡</item>
-        <item>鸽子</item>
-        <item>毛虫</item>
-        <item>章鱼</item>
-        <item>鱼</item>
-        <item>鲸鱼</item>
-        <item>海豚</item>
-        <item>玫瑰</item>
-        <item>花</item>
-        <item>棕榈树</item>
-        <item>仙人掌</item>
-        <item>礼盒</item>
-        <item>南瓜灯</item>
-        <item>鬼魂</item>
-        <item>圣诞老人</item>
-        <item>圣诞树</item>
-        <item>礼物</item>
-        <item>铃</item>
-        <item>庆祝</item>
-        <item>气球</item>
-        <item>CD</item>
-        <item>相机</item>
-        <item>录像机</item>
-        <item>电脑</item>
-        <item>电视</item>
-        <item>电话</item>
-        <item>解锁</item>
-        <item>锁</item>
-        <item>钥匙</item>
-        <item>成交</item>
-        <item>灯泡</item>
-        <item>邮箱</item>
-        <item>浴缸</item>
-        <item>钱</item>
-        <item>炸弹</item>
-        <item>手枪</item>
-        <item>药丸</item>
-        <item>橄榄球</item>
-        <item>篮球</item>
-        <item>足球</item>
-        <item>棒球</item>
-        <item>高尔夫</item>
-        <item>奖杯</item>
-        <item>入侵者</item>
-        <item>唱歌</item>
-        <item>吉他</item>
-        <item>比基尼</item>
-        <item>皇冠</item>
-        <item>雨伞</item>
-        <item>手提包</item>
-        <item>口红</item>
-        <item>戒指</item>
-        <item>钻石</item>
-        <item>咖啡</item>
-        <item>啤酒</item>
-        <item>干杯</item>
-        <item>鸡尾酒</item>
-        <item>汉堡</item>
-        <item>薯条</item>
-        <item>意面</item>
-        <item>寿司</item>
-        <item>面条</item>
-        <item>煎蛋</item>
-        <item>冰激凌</item>
-        <item>蛋糕</item>
-        <item>苹果</item>
-        <item>飞机</item>
-        <item>火箭</item>
-        <item>自行车</item>
-        <item>高铁</item>
-        <item>警告</item>
-        <item>旗</item>
-        <item>男人</item>
-        <item>女人</item>
-        <item>O</item>
-        <item>X</item>
-        <item>版权</item>
-        <item>注册商标</item>
-        <item>商标</item>
-        <item>合十</item>
+    <string-array name="e">
+        <item>[笑脸]</item>
+        <item>[开心]</item>
+        <item>[大笑]</item>
+        <item>[热情]</item>
+        <item>[眨眼]</item>
+        <item>[色]</item>
+        <item>[接吻]</item>
+        <item>[亲吻]</item>
+        <item>[脸红]</item>
+        <item>[露齿笑]</item>
+        <item>[满意]</item>
+        <item>[戏弄]</item>
+        <item>[吐舌]</item>
+        <item>[无语]</item>
+        <item>[得意]</item>
+        <item>[汗]</item>
+        <item>[失望]</item>
+        <item>[低落]</item>
+        <item>[呸]</item>
+        <item>[焦虑]</item>
+        <item>[担心]</item>
+        <item>[震惊]</item>
+        <item>[悔恨]</item>
+        <item>[眼泪]</item>
+        <item>[哭]</item>
+        <item>[破涕为笑]</item>
+        <item>[晕]</item>
+        <item>[恐惧]</item>
+        <item>[心烦]</item>
+        <item>[生气]</item>
+        <item>[睡觉]</item>
+        <item>[生病]</item>
+        <item>[恶魔]</item>
+        <item>[外星人]</item>
+        <item>[心]</item>
+        <item>[心碎]</item>
+        <item>[丘比特]</item>
+        <item>[闪烁]</item>
+        <item>[星星]</item>
+        <item>[叹号]</item>
+        <item>[问号]</item>
+        <item>[睡着]</item>
+        <item>[水滴]</item>
+        <item>[音乐]</item>
+        <item>[火]</item>
+        <item>[便便]</item>
+        <item>[强]</item>
+        <item>[弱]</item>
+        <item>[拳头]</item>
+        <item>[胜利]</item>
+        <item>[上]</item>
+        <item>[下]</item>
+        <item>[右]</item>
+        <item>[左]</item>
+        <item>[第一]</item>
+        <item>[强壮]</item>
+        <item>[吻]</item>
+        <item>[热恋]</item>
+        <item>[男孩]</item>
+        <item>[女孩]</item>
+        <item>[女士]</item>
+        <item>[男士]</item>
+        <item>[天使]</item>
+        <item>[骷髅]</item>
+        <item>[红唇]</item>
+        <item>[太阳]</item>
+        <item>[下雨]</item>
+        <item>[多云]</item>
+        <item>[雪人]</item>
+        <item>[月亮]</item>
+        <item>[闪电]</item>
+        <item>[海浪]</item>
+        <item>[猫]</item>
+        <item>[小狗]</item>
+        <item>[老鼠]</item>
+        <item>[仓鼠]</item>
+        <item>[兔子]</item>
+        <item>[狗]</item>
+        <item>[青蛙]</item>
+        <item>[老虎]</item>
+        <item>[考拉]</item>
+        <item>[熊]</item>
+        <item>[猪]</item>
+        <item>[牛]</item>
+        <item>[野猪]</item>
+        <item>[猴子]</item>
+        <item>[马]</item>
+        <item>[蛇]</item>
+        <item>[鸽子]</item>
+        <item>[鸡]</item>
+        <item>[鸽子]</item>
+        <item>[毛虫]</item>
+        <item>[章鱼]</item>
+        <item>[鱼]</item>
+        <item>[鲸鱼]</item>
+        <item>[海豚]</item>
+        <item>[玫瑰]</item>
+        <item>[花]</item>
+        <item>[棕榈树]</item>
+        <item>[仙人掌]</item>
+        <item>[礼盒]</item>
+        <item>[南瓜灯]</item>
+        <item>[鬼魂]</item>
+        <item>[圣诞老人]</item>
+        <item>[圣诞树]</item>
+        <item>[礼物]</item>
+        <item>[铃]</item>
+        <item>[庆祝]</item>
+        <item>[气球]</item>
+        <item>[CD]</item>
+        <item>[相机]</item>
+        <item>[录像机]</item>
+        <item>[电脑]</item>
+        <item>[电视]</item>
+        <item>[电话]</item>
+        <item>[解锁]</item>
+        <item>[锁]</item>
+        <item>[钥匙]</item>
+        <item>[成交]</item>
+        <item>[灯泡]</item>
+        <item>[邮箱]</item>
+        <item>[浴缸]</item>
+        <item>[钱]</item>
+        <item>[炸弹]</item>
+        <item>[手枪]</item>
+        <item>[药丸]</item>
+        <item>[橄榄球]</item>
+        <item>[篮球]</item>
+        <item>[足球]</item>
+        <item>[棒球]</item>
+        <item>[高尔夫]</item>
+        <item>[奖杯]</item>
+        <item>[入侵者]</item>
+        <item>[唱歌]</item>
+        <item>[吉他]</item>
+        <item>[比基尼]</item>
+        <item>[皇冠]</item>
+        <item>[雨伞]</item>
+        <item>[手提包]</item>
+        <item>[口红]</item>
+        <item>[戒指]</item>
+        <item>[钻石]</item>
+        <item>[咖啡]</item>
+        <item>[啤酒]</item>
+        <item>[干杯]</item>
+        <item>[鸡尾酒]</item>
+        <item>[汉堡]</item>
+        <item>[薯条]</item>
+        <item>[意面]</item>
+        <item>[寿司]</item>
+        <item>[面条]</item>
+        <item>[煎蛋]</item>
+        <item>[冰激凌]</item>
+        <item>[蛋糕]</item>
+        <item>[苹果]</item>
+        <item>[飞机]</item>
+        <item>[火箭]</item>
+        <item>[自行车]</item>
+        <item>[高铁]</item>
+        <item>[警告]</item>
+        <item>[旗]</item>
+        <item>[男人]</item>
+        <item>[女人]</item>
+        <item>[O]</item>
+        <item>[X]</item>
+        <item>[版权]</item>
+        <item>[注册商标]</item>
+        <item>[商标]</item>
+        <item>[合十]</item>
     </string-array>
-    <string-array name="w">
-        <item>笑臉</item>
-        <item>開心</item>
-        <item>大笑</item>
-        <item>熱情</item>
-        <item>眨眼</item>
-        <item>色</item>
-        <item>接吻</item>
-        <item>親吻</item>
-        <item>臉紅</item>
-        <item>露齒笑</item>
-        <item>滿意</item>
-        <item>戲弄</item>
-        <item>吐舌</item>
-        <item>無語</item>
-        <item>得意</item>
-        <item>汗</item>
-        <item>失望</item>
-        <item>低落</item>
-        <item>呸</item>
-        <item>焦慮</item>
-        <item>擔心</item>
-        <item>震驚</item>
-        <item>悔恨</item>
-        <item>眼淚</item>
-        <item>哭</item>
-        <item>破涕為笑</item>
-        <item>暈</item>
-        <item>恐懼</item>
-        <item>心煩</item>
-        <item>生氣</item>
-        <item>睡覺</item>
-        <item>生病</item>
-        <item>惡魔</item>
-        <item>外星人</item>
-        <item>心</item>
-        <item>心碎</item>
-        <item>丘比特</item>
-        <item>閃爍</item>
-        <item>星星</item>
-        <item>嘆號</item>
-        <item>問號</item>
-        <item>睡著</item>
-        <item>水滴</item>
-        <item>音樂</item>
-        <item>火</item>
-        <item>便便</item>
-        <item>強</item>
-        <item>弱</item>
-        <item>拳頭</item>
-        <item>勝利</item>
-        <item>上</item>
-        <item>下</item>
-        <item>右</item>
-        <item>左</item>
-        <item>第一</item>
-        <item>強壯</item>
-        <item>吻</item>
-        <item>熱戀</item>
-        <item>男孩</item>
-        <item>女孩</item>
-        <item>女士</item>
-        <item>男士</item>
-        <item>天使</item>
-        <item>骷髏</item>
-        <item>紅唇</item>
-        <item>太陽</item>
-        <item>下雨</item>
-        <item>多雲</item>
-        <item>雪人</item>
-        <item>月亮</item>
-        <item>閃電</item>
-        <item>海浪</item>
-        <item>貓</item>
-        <item>小狗</item>
-        <item>老鼠</item>
-        <item>倉鼠</item>
-        <item>兔子</item>
-        <item>狗</item>
-        <item>青蛙</item>
-        <item>老虎</item>
-        <item>考拉</item>
-        <item>熊</item>
-        <item>豬</item>
-        <item>牛</item>
-        <item>野豬</item>
-        <item>猴子</item>
-        <item>馬</item>
-        <item>蛇</item>
-        <item>鴿子</item>
-        <item>雞</item>
-        <item>企鵝</item>
-        <item>毛蟲</item>
-        <item>八爪魚</item>
-        <item>魚</item>
-        <item>鯨魚</item>
-        <item>海豚</item>
-        <item>玫瑰</item>
-        <item>花</item>
-        <item>棕櫚樹</item>
-        <item>仙人掌</item>
-        <item>禮盒</item>
-        <item>南瓜燈</item>
-        <item>鬼魂</item>
-        <item>聖誕老人</item>
-        <item>聖誕樹</item>
-        <item>禮物</item>
-        <item>鈴鐺</item>
-        <item>慶祝</item>
-        <item>氣球</item>
-        <item>CD</item>
-        <item>相機</item>
-        <item>錄影機</item>
-        <item>電腦</item>
-        <item>電視</item>
-        <item>電話</item>
-        <item>解鎖</item>
-        <item>鎖</item>
-        <item>鑰匙</item>
-        <item>成交</item>
-        <item>燈泡</item>
-        <item>郵箱</item>
-        <item>浴缸</item>
-        <item>錢</item>
-        <item>炸彈</item>
-        <item>手槍</item>
-        <item>藥丸</item>
-        <item>橄欖球</item>
-        <item>籃球</item>
-        <item>足球</item>
-        <item>棒球</item>
-        <item>高爾夫</item>
-        <item>獎盃</item>
-        <item>入侵者</item>
-        <item>唱歌</item>
-        <item>吉他</item>
-        <item>比基尼</item>
-        <item>皇冠</item>
-        <item>雨傘</item>
-        <item>手提包</item>
-        <item>口紅</item>
-        <item>戒指</item>
-        <item>鑽石</item>
-        <item>咖啡</item>
-        <item>啤酒</item>
-        <item>乾杯</item>
-        <item>雞尾酒</item>
-        <item>漢堡</item>
-        <item>薯條</item>
-        <item>意粉</item>
-        <item>壽司</item>
-        <item>麵條</item>
-        <item>煎蛋</item>
-        <item>雪糕</item>
-        <item>蛋糕</item>
-        <item>蘋果</item>
-        <item>飛機</item>
-        <item>火箭</item>
-        <item>單車</item>
-        <item>高鐵</item>
-        <item>警告</item>
-        <item>旗</item>
-        <item>男</item>
-        <item>女</item>
-        <item>O</item>
-        <item>X</item>
-        <item>版權</item>
-        <item>注冊商標</item>
-        <item>商標</item>
-        <item>合十</item>
+    <string-array name="f">
+        <item>[笑臉]</item>
+        <item>[開心]</item>
+        <item>[大笑]</item>
+        <item>[熱情]</item>
+        <item>[眨眼]</item>
+        <item>[色]</item>
+        <item>[接吻]</item>
+        <item>[親吻]</item>
+        <item>[臉紅]</item>
+        <item>[露齒笑]</item>
+        <item>[滿意]</item>
+        <item>[戲弄]</item>
+        <item>[吐舌]</item>
+        <item>[無語]</item>
+        <item>[得意]</item>
+        <item>[汗]</item>
+        <item>[失望]</item>
+        <item>[低落]</item>
+        <item>[呸]</item>
+        <item>[焦慮]</item>
+        <item>[擔心]</item>
+        <item>[震驚]</item>
+        <item>[悔恨]</item>
+        <item>[眼淚]</item>
+        <item>[哭]</item>
+        <item>[破涕為笑]</item>
+        <item>[暈]</item>
+        <item>[恐懼]</item>
+        <item>[心煩]</item>
+        <item>[生氣]</item>
+        <item>[睡覺]</item>
+        <item>[生病]</item>
+        <item>[惡魔]</item>
+        <item>[外星人]</item>
+        <item>[心]</item>
+        <item>[心碎]</item>
+        <item>[丘比特]</item>
+        <item>[閃爍]</item>
+        <item>[星星]</item>
+        <item>[嘆號]</item>
+        <item>[問號]</item>
+        <item>[睡著]</item>
+        <item>[水滴]</item>
+        <item>[音樂]</item>
+        <item>[火]</item>
+        <item>[便便]</item>
+        <item>[強]</item>
+        <item>[弱]</item>
+        <item>[拳頭]</item>
+        <item>[勝利]</item>
+        <item>[上]</item>
+        <item>[下]</item>
+        <item>[右]</item>
+        <item>[左]</item>
+        <item>[第一]</item>
+        <item>[強壯]</item>
+        <item>[吻]</item>
+        <item>[熱戀]</item>
+        <item>[男孩]</item>
+        <item>[女孩]</item>
+        <item>[女士]</item>
+        <item>[男士]</item>
+        <item>[天使]</item>
+        <item>[骷髏]</item>
+        <item>[紅唇]</item>
+        <item>[太陽]</item>
+        <item>[下雨]</item>
+        <item>[多雲]</item>
+        <item>[雪人]</item>
+        <item>[月亮]</item>
+        <item>[閃電]</item>
+        <item>[海浪]</item>
+        <item>[貓]</item>
+        <item>[小狗]</item>
+        <item>[老鼠]</item>
+        <item>[倉鼠]</item>
+        <item>[兔子]</item>
+        <item>[狗]</item>
+        <item>[青蛙]</item>
+        <item>[老虎]</item>
+        <item>[考拉]</item>
+        <item>[熊]</item>
+        <item>[豬]</item>
+        <item>[牛]</item>
+        <item>[野豬]</item>
+        <item>[猴子]</item>
+        <item>[馬]</item>
+        <item>[蛇]</item>
+        <item>[鴿子]</item>
+        <item>[雞]</item>
+        <item>[企鵝]</item>
+        <item>[毛蟲]</item>
+        <item>[八爪魚]</item>
+        <item>[魚]</item>
+        <item>[鯨魚]</item>
+        <item>[海豚]</item>
+        <item>[玫瑰]</item>
+        <item>[花]</item>
+        <item>[棕櫚樹]</item>
+        <item>[仙人掌]</item>
+        <item>[禮盒]</item>
+        <item>[南瓜燈]</item>
+        <item>[鬼魂]</item>
+        <item>[聖誕老人]</item>
+        <item>[聖誕樹]</item>
+        <item>[禮物]</item>
+        <item>[鈴鐺]</item>
+        <item>[慶祝]</item>
+        <item>[氣球]</item>
+        <item>[CD]</item>
+        <item>[相機]</item>
+        <item>[錄影機]</item>
+        <item>[電腦]</item>
+        <item>[電視]</item>
+        <item>[電話]</item>
+        <item>[解鎖]</item>
+        <item>[鎖]</item>
+        <item>[鑰匙]</item>
+        <item>[成交]</item>
+        <item>[燈泡]</item>
+        <item>[郵箱]</item>
+        <item>[浴缸]</item>
+        <item>[錢]</item>
+        <item>[炸彈]</item>
+        <item>[手槍]</item>
+        <item>[藥丸]</item>
+        <item>[橄欖球]</item>
+        <item>[籃球]</item>
+        <item>[足球]</item>
+        <item>[棒球]</item>
+        <item>[高爾夫]</item>
+        <item>[獎盃]</item>
+        <item>[入侵者]</item>
+        <item>[唱歌]</item>
+        <item>[吉他]</item>
+        <item>[比基尼]</item>
+        <item>[皇冠]</item>
+        <item>[雨傘]</item>
+        <item>[手提包]</item>
+        <item>[口紅]</item>
+        <item>[戒指]</item>
+        <item>[鑽石]</item>
+        <item>[咖啡]</item>
+        <item>[啤酒]</item>
+        <item>[乾杯]</item>
+        <item>[雞尾酒]</item>
+        <item>[漢堡]</item>
+        <item>[薯條]</item>
+        <item>[意粉]</item>
+        <item>[壽司]</item>
+        <item>[麵條]</item>
+        <item>[煎蛋]</item>
+        <item>[雪糕]</item>
+        <item>[蛋糕]</item>
+        <item>[蘋果]</item>
+        <item>[飛機]</item>
+        <item>[火箭]</item>
+        <item>[單車]</item>
+        <item>[高鐵]</item>
+        <item>[警告]</item>
+        <item>[旗]</item>
+        <item>[男]</item>
+        <item>[女]</item>
+        <item>[O]</item>
+        <item>[X]</item>
+        <item>[版權]</item>
+        <item>[注冊商標]</item>
+        <item>[商標]</item>
+        <item>[合十]</item>
     </string-array>
-    <string-array name="x">
-        <item>Laugh</item>
-        <item>Happy</item>
-        <item>Big Smile</item>
-        <item>Glowing</item>
-        <item>Wink</item>
-        <item>Love</item>
-        <item>Smooch</item>
-        <item>Kiss</item>
-        <item>Blush</item>
-        <item>Grin</item>
-        <item>Satisfied</item>
-        <item>Tease</item>
-        <item>Tongue</item>
-        <item>Speechless</item>
-        <item>Smirk</item>
-        <item>Sweat</item>
-        <item>Let Down</item>
-        <item>Low</item>
-        <item>Ugh</item>
-        <item>Anxious</item>
-        <item>Worried</item>
-        <item>Shocked</item>
-        <item>D’oh!</item>
-        <item>Tear</item>
-        <item>Cry</item>
-        <item>Lol</item>
-        <item>Dead</item>
-        <item>Terror</item>
-        <item>Upset</item>
-        <item>Angry</item>
-        <item>Zzz</item>
-        <item>Sick</item>
-        <item>Demon</item>
-        <item>Alien</item>
-        <item>Heart</item>
-        <item>Heartbroken</item>
-        <item>Cupid</item>
-        <item>Twinkle</item>
-        <item>Star</item>
-        <item>exclamation</item>
-        <item>why</item>
-        <item>Asleep</item>
-        <item>Drops</item>
-        <item>Music</item>
-        <item>Fire</item>
-        <item>Poop</item>
-        <item>Thumbs Up</item>
-        <item>Thumbs Down</item>
-        <item>Punch</item>
-        <item>Peace</item>
-        <item>Up</item>
-        <item>Down</item>
-        <item>Right</item>
-        <item>Left</item>
-        <item>\#1</item>
-        <item>Strong</item>
-        <item>Kissing</item>
-        <item>Couple</item>
-        <item>Boy</item>
-        <item>Girl</item>
-        <item>Lady</item>
-        <item>Man</item>
-        <item>Angel</item>
-        <item>Skull</item>
-        <item>Lips</item>
-        <item>Sun</item>
-        <item>Rain</item>
-        <item>Cloud</item>
-        <item>Snowman</item>
-        <item>Moon</item>
-        <item>Lightning</item>
-        <item>Waves</item>
-        <item>Cat</item>
-        <item>Doggy</item>
-        <item>Mouse</item>
-        <item>Hamster</item>
-        <item>Rabbit</item>
-        <item>Dog</item>
-        <item>Frog</item>
-        <item>Tiger</item>
-        <item>Koala</item>
-        <item>Bear</item>
-        <item>Pig</item>
-        <item>Cow</item>
-        <item>Boar</item>
-        <item>Monkey</item>
-        <item>Horse</item>
-        <item>Snake</item>
-        <item>Pigeon</item>
-        <item>Chicken</item>
-        <item>Penguin</item>
-        <item>Caterpillar</item>
-        <item>Octopus</item>
-        <item>Fish</item>
-        <item>Whale</item>
-        <item>Dolphin</item>
-        <item>Rose</item>
-        <item>Flower</item>
-        <item>Palm</item>
-        <item>Cactus</item>
-        <item>Candy Box</item>
-        <item>Jack-o-lantern</item>
-        <item>Ghost</item>
-        <item>Santa</item>
-        <item>Xmas Tree</item>
-        <item>Gift</item>
-        <item>Bell</item>
-        <item>Party</item>
-        <item>Balloon</item>
-        <item>CD</item>
-        <item>Camera</item>
-        <item>Film Camera</item>
-        <item>Computer</item>
-        <item>TV</item>
-        <item>Phone</item>
-        <item>Unlocked</item>
-        <item>Locked</item>
-        <item>Key</item>
-        <item>Judgement</item>
-        <item>Light bulb</item>
-        <item>Mail</item>
-        <item>Wash</item>
-        <item>Money</item>
-        <item>Bomb</item>
-        <item>Pistol</item>
-        <item>Pill</item>
-        <item>Football</item>
-        <item>Basketball</item>
-        <item>Soccer Ball</item>
-        <item>Baseball</item>
-        <item>Golf</item>
-        <item>Trophy</item>
-        <item>Invader</item>
-        <item>Singing</item>
-        <item>Guitar</item>
-        <item>Bikini</item>
-        <item>Crown</item>
-        <item>Umbrella</item>
-        <item>Purse</item>
-        <item>Lipstick</item>
-        <item>Ring</item>
-        <item>Gem</item>
-        <item>Coffee</item>
-        <item>Beer</item>
-        <item>Toast</item>
-        <item>Martini</item>
-        <item>Burger</item>
-        <item>Fries</item>
-        <item>Sphaghetti</item>
-        <item>Sushi</item>
-        <item>Noodles</item>
-        <item>Eggs</item>
-        <item>Ice Cream</item>
-        <item>Cake</item>
-        <item>Apple</item>
-        <item>Plane</item>
-        <item>Rocket ship</item>
-        <item>Bike</item>
-        <item>Bullet Train</item>
-        <item>Warning</item>
-        <item>Flag</item>
-        <item>Men</item>
-        <item>Women</item>
-        <item>O</item>
-        <item>X</item>
-        <item>Copyright</item>
-        <item>Registered TM</item>
-        <item>Trademark</item>
-        <item>Worship</item>
+    <string-array name="g">
+        <item>[Laugh]</item>
+        <item>[Happy]</item>
+        <item>[Big Smile]</item>
+        <item>[Glowing]</item>
+        <item>[Wink]</item>
+        <item>[Love]</item>
+        <item>[Smooch]</item>
+        <item>[Kiss]</item>
+        <item>[Blush]</item>
+        <item>[Grin]</item>
+        <item>[Satisfied]</item>
+        <item>[Tease]</item>
+        <item>[Tongue]</item>
+        <item>[Speechless]</item>
+        <item>[Smirk]</item>
+        <item>[Sweat]</item>
+        <item>[Let Down]</item>
+        <item>[Low]</item>
+        <item>[Ugh]</item>
+        <item>[Anxious]</item>
+        <item>[Worried]</item>
+        <item>[Shocked]</item>
+        <item>[D’oh!]</item>
+        <item>[Tear]</item>
+        <item>[Cry]</item>
+        <item>[Lol]</item>
+        <item>[Dead]</item>
+        <item>[Terror]</item>
+        <item>[Upset]</item>
+        <item>[Angry]</item>
+        <item>[Zzz]</item>
+        <item>[Sick]</item>
+        <item>[Demon]</item>
+        <item>[Alien]</item>
+        <item>[Heart]</item>
+        <item>[Heartbroken]</item>
+        <item>[Cupid]</item>
+        <item>[Twinkle]</item>
+        <item>[Star]</item>
+        <item>[exclamation]</item>
+        <item>[why]</item>
+        <item>[Asleep]</item>
+        <item>[Drops]</item>
+        <item>[Music]</item>
+        <item>[Fire]</item>
+        <item>[Poop]</item>
+        <item>[Thumbs Up]</item>
+        <item>[Thumbs Down]</item>
+        <item>[Punch]</item>
+        <item>[Peace]</item>
+        <item>[Up]</item>
+        <item>[Down]</item>
+        <item>[Right]</item>
+        <item>[Left]</item>
+        <item>[#1]</item>
+        <item>[Strong]</item>
+        <item>[Kissing]</item>
+        <item>[Couple]</item>
+        <item>[Boy]</item>
+        <item>[Girl]</item>
+        <item>[Lady]</item>
+        <item>[Man]</item>
+        <item>[Angel]</item>
+        <item>[Skull]</item>
+        <item>[Lips]</item>
+        <item>[Sun]</item>
+        <item>[Rain]</item>
+        <item>[Cloud]</item>
+        <item>[Snowman]</item>
+        <item>[Moon]</item>
+        <item>[Lightning]</item>
+        <item>[Waves]</item>
+        <item>[Cat]</item>
+        <item>[Doggy]</item>
+        <item>[Mouse]</item>
+        <item>[Hamster]</item>
+        <item>[Rabbit]</item>
+        <item>[Dog]</item>
+        <item>[Frog]</item>
+        <item>[Tiger]</item>
+        <item>[Koala]</item>
+        <item>[Bear]</item>
+        <item>[Pig]</item>
+        <item>[Cow]</item>
+        <item>[Boar]</item>
+        <item>[Monkey]</item>
+        <item>[Horse]</item>
+        <item>[Snake]</item>
+        <item>[Pigeon]</item>
+        <item>[Chicken]</item>
+        <item>[Penguin]</item>
+        <item>[Caterpillar]</item>
+        <item>[Octopus]</item>
+        <item>[Fish]</item>
+        <item>[Whale]</item>
+        <item>[Dolphin]</item>
+        <item>[Rose]</item>
+        <item>[Flower]</item>
+        <item>[Palm]</item>
+        <item>[Cactus]</item>
+        <item>[Candy Box]</item>
+        <item>[Jack-o-lantern]</item>
+        <item>[Ghost]</item>
+        <item>[Santa]</item>
+        <item>[Xmas Tree]</item>
+        <item>[Gift]</item>
+        <item>[Bell]</item>
+        <item>[Party]</item>
+        <item>[Balloon]</item>
+        <item>[CD]</item>
+        <item>[Camera]</item>
+        <item>[Film Camera]</item>
+        <item>[Computer]</item>
+        <item>[TV]</item>
+        <item>[Phone]</item>
+        <item>[Unlocked]</item>
+        <item>[Locked]</item>
+        <item>[Key]</item>
+        <item>[Judgement]</item>
+        <item>[Light bulb]</item>
+        <item>[Mail]</item>
+        <item>[Wash]</item>
+        <item>[Money]</item>
+        <item>[Bomb]</item>
+        <item>[Pistol]</item>
+        <item>[Pill]</item>
+        <item>[Football]</item>
+        <item>[Basketball]</item>
+        <item>[Soccer Ball]</item>
+        <item>[Baseball]</item>
+        <item>[Golf]</item>
+        <item>[Trophy]</item>
+        <item>[Invader]</item>
+        <item>[Singing]</item>
+        <item>[Guitar]</item>
+        <item>[Bikini]</item>
+        <item>[Crown]</item>
+        <item>[Umbrella]</item>
+        <item>[Purse]</item>
+        <item>[Lipstick]</item>
+        <item>[Ring]</item>
+        <item>[Gem]</item>
+        <item>[Coffee]</item>
+        <item>[Beer]</item>
+        <item>[Toast]</item>
+        <item>[Martini]</item>
+        <item>[Burger]</item>
+        <item>[Fries]</item>
+        <item>[Sphaghetti]</item>
+        <item>[Sushi]</item>
+        <item>[Noodles]</item>
+        <item>[Eggs]</item>
+        <item>[Ice Cream]</item>
+        <item>[Cake]</item>
+        <item>[Apple]</item>
+        <item>[Plane]</item>
+        <item>[Rocket ship]</item>
+        <item>[Bike]</item>
+        <item>[Bullet Train]</item>
+        <item>[Warning]</item>
+        <item>[Flag]</item>
+        <item>[Men]</item>
+        <item>[Women]</item>
+        <item>[O]</item>
+        <item>[X]</item>
+        <item>[Copyright]</item>
+        <item>[Registered TM]</item>
+        <item>[Trademark]</item>
+        <item>[Worship]</item>
     </string-array>
-    <string-array name="y">
+    <string-array name="h">
         <item>/::)</item>
         <item>/::~</item>
         <item>/::B</item>
@@ -1076,7 +807,7 @@
         <item>/:&lt;&amp;</item>
         <item>/:&amp;></item>
     </string-array>
-    <string-array name="z">
+    <string-array name="i">
         <item>/微笑</item>
         <item>/撇嘴</item>
         <item>/色</item>
@@ -1183,7 +914,7 @@
         <item>/左太极</item>
         <item>/右太极</item>
     </string-array>
-    <string-array name="a0">
+    <string-array name="j">
         <item>[微笑]</item>
         <item>[撇嘴]</item>
         <item>[色]</item>
@@ -1290,7 +1021,7 @@
         <item>[左太极]</item>
         <item>[右太极]</item>
     </string-array>
-    <string-array name="a1">
+    <string-array name="k">
         <item>[微笑]</item>
         <item>[撇嘴]</item>
         <item>[色]</item>
@@ -1397,7 +1128,7 @@
         <item>[左太極]</item>
         <item>[右太極]</item>
     </string-array>
-    <string-array name="a2">
+    <string-array name="l">
         <item>[Smile]</item>
         <item>[Grimace]</item>
         <item>[Drool]</item>
@@ -1504,7 +1235,7 @@
         <item>[TaiChi L]</item>
         <item>[TaiChi R]</item>
     </string-array>
-    <string-array name="a3">
+    <string-array name="m">
         <item>[ยิ้ม]</item>
         <item>[หน้าบูด]</item>
         <item>[น้ำลายไหล]</item>
@@ -1611,13 +1342,13 @@
         <item>[หญิงต่อสู้]</item>
         <item>[ชายต่อสู้]</item>
     </string-array>
-    <string-array name="a4">
+    <string-array name="n">
         <item>微信验证码</item>
         <item>微信驗證碼</item>
         <item>Verification code from WeChat</item>
         <item>WeChat Verification code</item>
     </string-array>
-    <string-array name="a5">
+    <string-array name="o">
         <item>/::)</item>
         <item>/::~</item>
         <item>/::B</item>
@@ -1719,7 +1450,7 @@
         <item>/:skip</item>
         <item>/:oY</item>
     </string-array>
-    <string-array name="a6">
+    <string-array name="p">
         <item></item>
         <item></item>
         <item></item>
@@ -1741,7 +1472,7 @@
         <item></item>
         <item></item>
     </string-array>
-    <string-array name="a7">
+    <string-array name="q">
         <item>0xd83d 0xde04</item>
         <item>0xd83d 0xde37</item>
         <item>0xd83d 0xde02</item>
@@ -1763,74 +1494,183 @@
         <item>0xd83c 0xdf89</item>
         <item>0xd83c 0xdf81</item>
     </string-array>
-    <string-array name="a8">
+    <string-array name="r">
+        <item>@string/air</item>
+        <item>@string/ais</item>
+        <item>@string/ait</item>
+    </string-array>
+    <string-array name="s">
+        <item>@string/bvs</item>
+        <item>@string/bvk</item>
+        <item>@string/bym</item>
+    </string-array>
+    <string-array name="t">
+        <item>@string/cfw</item>
+        <item>@string/cfx</item>
+        <item>@string/cfy</item>
+    </string-array>
+    <string-array name="u">
+        <item>@string/f4</item>
+        <item>@string/f3</item>
+    </string-array>
+    <string-array name="v">
+        <item>@string/c0m</item>
+    </string-array>
+    <string-array name="w">
+        <item>@string/qp</item>
+        <item>@string/qq</item>
+    </string-array>
+    <string-array name="x">
+        <item>@string/qv</item>
+        <item>@string/qt</item>
+        <item>@string/qz</item>
+    </string-array>
+    <string-array name="y">
+        <item>@string/dhb</item>
+        <item>@string/dhc</item>
+        <item>@string/dhd</item>
+        <item>@string/dhe</item>
+        <item>@string/dhf</item>
+        <item>@string/dhg</item>
+        <item>@string/dhh</item>
+        <item>@string/dhi</item>
+        <item>@string/dhj</item>
+        <item>@string/dhk</item>
+        <item>@string/dhl</item>
+        <item>@string/dhm</item>
+    </string-array>
+    <string-array name="z">
+        <item>@string/dhn</item>
+        <item>@string/dho</item>
+        <item>@string/dhp</item>
+        <item>@string/dhq</item>
+        <item>@string/dhr</item>
+        <item>@string/dhs</item>
+        <item>@string/dht</item>
+    </string-array>
+    <string-array name="a0">
+        <item>@string/a5r</item>
+        <item>@string/a5s</item>
+        <item>@string/a5t</item>
+    </string-array>
+    <string-array name="a1">
+        <item>@string/a5r</item>
+        <item>@string/a5s</item>
+    </string-array>
+    <string-array name="a2">
+        <item>验证码</item>
+    </string-array>
+    <string-array name="a3">
+        <item>@string/b3z</item>
+    </string-array>
+    <string-array name="a4">
+        <item>@string/b3y</item>
+    </string-array>
+    <string-array name="a5">
         <item>Log</item>
-        <item>@string/btk</item>
+        <item>@string/cm2</item>
+    </string-array>
+    <string-array name="a6">
+        <item>@string/bbw</item>
+        <item>@string/bbp</item>
+    </string-array>
+    <string-array name="a7">
+        <item>@string/by3</item>
+        <item>@string/bxh</item>
+        <item>@string/bxi</item>
+        <item>@string/bxj</item>
+        <item>@string/bxk</item>
+        <item>@string/bxm</item>
+        <item>@string/bxy</item>
+        <item>@string/bxp</item>
+        <item>@string/bxx</item>
+        <item>@string/bxw</item>
+        <item>@string/bxv</item>
+        <item>@string/bxt</item>
+        <item>@string/bxo</item>
+        <item>@string/bxq</item>
+        <item>@string/bxl</item>
+        <item>@string/bxn</item>
+        <item>@string/bxs</item>
+        <item>@string/bxr</item>
+        <item>@string/bxu</item>
+        <item>@string/bxz</item>
+        <item>@string/by0</item>
+        <item>@string/by1</item>
+        <item>@string/by2</item>
+    </string-array>
+    <string-array name="a8">
+        <item>@string/bzd</item>
+        <item>@string/bze</item>
     </string-array>
     <string-array name="a9">
-        <item>@string/adg</item>
-        <item>@string/adf</item>
-        <item>@string/b_q</item>
+        <item>@string/cfz</item>
+        <item>@string/cg0</item>
+        <item>@string/cg1</item>
     </string-array>
     <string-array name="a_">
-        <item>@string/n_</item>
-        <item>@string/n6</item>
-        <item>@string/b_q</item>
+        <item>@string/cfw</item>
+        <item>@string/bz7</item>
+        <item>@string/cgm</item>
+        <item>@string/c00</item>
     </string-array>
     <string-array name="aa">
-        <item>@string/n_</item>
-        <item>@string/n6</item>
+        <item>@string/af_</item>
+        <item>@string/af9</item>
+        <item>@string/c00</item>
     </string-array>
     <string-array name="ab">
-        <item>@string/qg</item>
-        <item>@string/qh</item>
+        <item>@string/ms</item>
+        <item>@string/mn</item>
+        <item>@string/c00</item>
     </string-array>
     <string-array name="ac">
-        <item>@string/ql</item>
-        <item>@string/qk</item>
-        <item>@string/qo</item>
+        <item>@string/ms</item>
+        <item>@string/mn</item>
     </string-array>
     <string-array name="ad">
-        <item>@string/qm</item>
-        <item>@string/qn</item>
+        <item>@string/c9b</item>
+        <item>@string/b20</item>
+        <item>@string/b21</item>
+        <item>@string/b23</item>
     </string-array>
     <string-array name="ae">
-        <item>@string/c5y</item>
-        <item>@string/c5z</item>
-        <item>@string/c60</item>
+        <item>@string/c9b</item>
+        <item>@string/b21</item>
+        <item>@string/b23</item>
     </string-array>
     <string-array name="af">
-        <item>@string/fr</item>
-        <item>@string/fq</item>
+        <item>@string/c9b</item>
+        <item>@string/bfn</item>
+        <item>@string/b23</item>
     </string-array>
     <string-array name="ag">
-        <item>com.tencent.xin.emoticon.heartbeatg</item>
-        <item>com.tencent.xin.emoticon.botg</item>
-        <item>com.tencent.xin.emoticon.monmong</item>
-        <item>com.tencent.xin.emoticon.luoxiaoheig</item>
-        <item>com.tencent.xin.emoticon.ali2g</item>
-        <item>com.tencent.xin.emoticon.tuzkig</item>
+        <item>@string/c9b</item>
+        <item>@string/b23</item>
     </string-array>
     <string-array name="ah">
-        <item>@string/a4d</item>
-        <item>@string/a4e</item>
-        <item>@string/a4f</item>
+        <item>@string/bri</item>
     </string-array>
     <string-array name="ai">
-        <item>@string/a4d</item>
-        <item>@string/a4e</item>
+        <item>@string/brs</item>
     </string-array>
     <string-array name="aj">
-        <item>@string/b6m</item>
-        <item>@string/b6f</item>
-        <item>@string/b9e</item>
+        <item>@string/of</item>
+        <item>@string/og</item>
+        <item>@string/oh</item>
+        <item>@string/oi</item>
     </string-array>
     <string-array name="ak">
-        <item>我收藏的</item>
-        <item>祝福</item>
-        <item>爱情</item>
-        <item>搞怪</item>
-        <item>流行</item>
-        <item>物品</item>
+        <item>@string/c9b</item>
+        <item>@string/b20</item>
+        <item>@string/b21</item>
+        <item>@string/b23</item>
+        <item>@string/b22</item>
+    </string-array>
+    <string-array name="al">
+        <item>@string/c9b</item>
+        <item>@string/b21</item>
+        <item>@string/b23</item>
+        <item>@string/b22</item>
     </string-array>
 </resources>

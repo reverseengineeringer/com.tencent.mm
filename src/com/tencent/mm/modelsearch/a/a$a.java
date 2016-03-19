@@ -2,10 +2,10 @@ package com.tencent.mm.modelsearch.a;
 
 final class a$a
 {
-  String bII;
-  long bKi;
-  long bKj;
-  long brm;
+  String aEy;
+  long bDq;
+  long cae;
+  long caf;
   
   private a$a(a parama) {}
 }

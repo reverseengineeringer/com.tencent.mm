@@ -1,34 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class fq
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aCt = new a();
-  public b aCu = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public fq()
   {
-    id = "QMessageOperation";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public String aCv;
-    public String aCw;
-    public int aCx = 0;
-    public int aCy = 0;
-    public int avp = 0;
-    public String user;
-  }
-  
-  public static final class b
-  {
-    public boolean auM;
+    id = "GetSnsTagList";
+    jUI = arR;
   }
 }
 

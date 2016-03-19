@@ -1,9 +1,20 @@
-.class Lcom/tencent/kingkong/FileUtils$1;
+.class final Lcom/tencent/kingkong/FileUtils$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
 .implements Ljava/util/Comparator;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/kingkong/FileUtils;->deleteOlderFiles(Ljava/io/File;IJ)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
 
 
 # direct methods
@@ -20,7 +31,7 @@
 
 
 # virtual methods
-.method public compare(Ljava/io/File;Ljava/io/File;)I
+.method public final compare(Ljava/io/File;Ljava/io/File;)I
     .locals 4
 
     .prologue
@@ -40,7 +51,7 @@
     return v0
 .end method
 
-.method public bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
+.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
     .locals 1
 
     .prologue

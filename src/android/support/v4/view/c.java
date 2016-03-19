@@ -1,63 +1,34 @@
 package android.support.v4.view;
 
 import android.os.Bundle;
-import android.support.v4.view.a.b;
 import android.view.View;
+import android.view.View.AccessibilityDelegate;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
+import android.view.accessibility.AccessibilityNodeInfo;
+import android.view.accessibility.AccessibilityNodeProvider;
 
 final class c
-  implements f.a
 {
-  c(a.c paramc, a parama) {}
-  
-  public final void b(View paramView, Object paramObject)
+  public static abstract interface a
   {
-    fn.a(paramView, new android.support.v4.view.a.a(paramObject));
-  }
-  
-  public final boolean dispatchPopulateAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
-  {
-    return a.dispatchPopulateAccessibilityEvent(paramView, paramAccessibilityEvent);
-  }
-  
-  public final Object e(View paramView)
-  {
-    paramView = a.d(paramView);
-    if (paramView != null) {
-      return hF;
-    }
-    return null;
-  }
-  
-  public final void onInitializeAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
-  {
-    fn.onInitializeAccessibilityEvent(paramView, paramAccessibilityEvent);
-  }
-  
-  public final void onPopulateAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
-  {
-    fn.onPopulateAccessibilityEvent(paramView, paramAccessibilityEvent);
-  }
-  
-  public final boolean onRequestSendAccessibilityEvent(ViewGroup paramViewGroup, View paramView, AccessibilityEvent paramAccessibilityEvent)
-  {
-    return fn.onRequestSendAccessibilityEvent(paramViewGroup, paramView, paramAccessibilityEvent);
-  }
-  
-  public final boolean performAccessibilityAction(View paramView, int paramInt, Bundle paramBundle)
-  {
-    return fn.performAccessibilityAction(paramView, paramInt, paramBundle);
-  }
-  
-  public final void sendAccessibilityEvent(View paramView, int paramInt)
-  {
-    a.sendAccessibilityEvent(paramView, paramInt);
-  }
-  
-  public final void sendAccessibilityEventUnchecked(View paramView, AccessibilityEvent paramAccessibilityEvent)
-  {
-    a.sendAccessibilityEventUnchecked(paramView, paramAccessibilityEvent);
+    public abstract void b(View paramView, Object paramObject);
+    
+    public abstract boolean dispatchPopulateAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent);
+    
+    public abstract Object e(View paramView);
+    
+    public abstract void onInitializeAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent);
+    
+    public abstract void onPopulateAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent);
+    
+    public abstract boolean onRequestSendAccessibilityEvent(ViewGroup paramViewGroup, View paramView, AccessibilityEvent paramAccessibilityEvent);
+    
+    public abstract boolean performAccessibilityAction(View paramView, int paramInt, Bundle paramBundle);
+    
+    public abstract void sendAccessibilityEvent(View paramView, int paramInt);
+    
+    public abstract void sendAccessibilityEventUnchecked(View paramView, AccessibilityEvent paramAccessibilityEvent);
   }
 }
 

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract lP(I)V
+.method public abstract gl(I)V
 .end method

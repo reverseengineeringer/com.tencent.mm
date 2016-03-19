@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$br
-  extends a.c
+  extends a.e
 {
   public a$br()
   {
-    super("openWCPaySpecificView", "open_wcpay_specific_view", 76, true);
+    super("imagePreview", "", 1, false);
   }
 }
 

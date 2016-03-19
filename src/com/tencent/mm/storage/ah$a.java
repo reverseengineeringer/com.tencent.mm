@@ -1,8 +1,8 @@
 package com.tencent.mm.storage;
 
-final class ah$a
+public abstract interface ah$a
 {
-  private static final ah ifW = new ah((byte)0);
+  public abstract void a(ah paramah, ah.c paramc);
 }
 
 /* Location:

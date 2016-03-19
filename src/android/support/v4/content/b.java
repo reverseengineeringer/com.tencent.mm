@@ -1,39 +1,62 @@
 package android.support.v4.content;
 
-import android.support.v4.c.a;
+import android.content.ComponentName;
+import android.content.Intent;
+import android.os.Build.VERSION;
 
 public final class b
 {
-  public boolean cY;
-  public int cZ;
-  public a eV;
-  public boolean eW;
-  public boolean eX;
-  public boolean eY;
-  public boolean eZ;
+  private static final a ei = new b();
   
-  public final void a(a parama)
+  static
   {
-    if (eV == null) {
-      throw new IllegalStateException("No listener register");
+    int i = Build.VERSION.SDK_INT;
+    if (i >= 15)
+    {
+      ei = new d();
+      return;
     }
-    if (eV != parama) {
-      throw new IllegalArgumentException("Attempting to unregister the wrong listener");
+    if (i >= 11)
+    {
+      ei = new c();
+      return;
     }
-    eV = null;
   }
   
-  public final String toString()
+  public static Intent makeMainActivity(ComponentName paramComponentName)
   {
-    StringBuilder localStringBuilder = new StringBuilder(64);
-    a.a(this, localStringBuilder);
-    localStringBuilder.append(" id=");
-    localStringBuilder.append(cZ);
-    localStringBuilder.append("}");
-    return localStringBuilder.toString();
+    return ei.makeMainActivity(paramComponentName);
   }
   
-  public static abstract interface a {}
+  static abstract interface a
+  {
+    public abstract Intent makeMainActivity(ComponentName paramComponentName);
+  }
+  
+  static class b
+    implements b.a
+  {
+    public Intent makeMainActivity(ComponentName paramComponentName)
+    {
+      Intent localIntent = new Intent("android.intent.action.MAIN");
+      localIntent.setComponent(paramComponentName);
+      localIntent.addCategory("android.intent.category.LAUNCHER");
+      return localIntent;
+    }
+  }
+  
+  static class c
+    extends b.b
+  {
+    public final Intent makeMainActivity(ComponentName paramComponentName)
+    {
+      return Intent.makeMainActivity(paramComponentName);
+    }
+  }
+  
+  static final class d
+    extends b.c
+  {}
 }
 
 /* Location:

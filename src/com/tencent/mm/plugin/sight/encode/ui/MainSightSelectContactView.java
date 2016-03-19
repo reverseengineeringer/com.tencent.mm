@@ -6,10 +6,13 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.View.MeasureSpec;
+import android.view.ViewGroup.LayoutParams;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.AbsListView;
+import android.widget.AbsListView.LayoutParams;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
@@ -17,15 +20,13 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.v;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.storage.t;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.h;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.storage.s;
 import com.tencent.mm.ui.MMFragmentActivity;
-import com.tencent.mm.ui.contact.cq;
+import com.tencent.mm.ui.contact.l;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -35,23 +36,23 @@ import java.util.List;
 
 public class MainSightSelectContactView
   extends FrameLayout
-  implements AbsListView.OnScrollListener, ao.a, cq
+  implements AbsListView.OnScrollListener, d.a, l
 {
-  private ListView cyS;
-  private Animation flC;
-  private boolean flt = false;
-  private MMFragmentActivity flw;
-  private int fmf;
-  ao fmg;
-  private an fmh;
-  private View fmi;
-  private k fmj;
-  private LinearLayout fmk;
-  private View fml;
-  private int fmm = -1;
-  private int fmn = -1;
-  private HashSet fmo;
-  private HashSet fmp;
+  private ListView cUz;
+  private boolean gCo = false;
+  private MMFragmentActivity gCr;
+  private Animation gCy;
+  private int gDb;
+  d gDc;
+  private c gDd;
+  private View gDe;
+  private a gDf;
+  private LinearLayout gDg;
+  private View gDh;
+  private int gDi = -1;
+  private int gDj = -1;
+  private HashSet gDk;
+  private HashSet gDl;
   
   public MainSightSelectContactView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -65,7 +66,7 @@ public class MainSightSelectContactView
   
   private void b(List paramList, boolean paramBoolean1, boolean paramBoolean2)
   {
-    if (flt) {}
+    if (gCo) {}
     do
     {
       do
@@ -74,44 +75,44 @@ public class MainSightSelectContactView
       } while (paramList == null);
       if (paramBoolean1)
       {
-        fmp.clear();
-        fmo.clear();
-        an.flQ = true;
-        an.flR = false;
+        gDl.clear();
+        gDk.clear();
+        c.gCM = true;
+        c.gCN = false;
       }
-      if (fmh != null)
+      if (gDd != null)
       {
-        an localan = fmh;
-        localan.clearCache();
-        flO = paramList;
-        localan.notifyDataSetChanged();
+        c localc = gDd;
+        localc.clearCache();
+        gCK = paramList;
+        localc.notifyDataSetChanged();
       }
       if (paramBoolean2)
       {
-        akv();
+        awX();
         return;
       }
-    } while (fml == null);
-    cyS.removeFooterView(fml);
+    } while (gDh == null);
+    cUz.removeFooterView(gDh);
   }
   
-  public static boolean iU(int paramInt)
+  public static boolean lf(int paramInt)
   {
     return paramInt == -1;
   }
   
-  private void n(boolean paramBoolean1, boolean paramBoolean2)
+  private void o(boolean paramBoolean1, boolean paramBoolean2)
   {
     ArrayList localArrayList = new ArrayList();
     localArrayList.add("@search.tencent");
     localArrayList.add("@sns.tencent");
-    if (fmj.akf()) {
+    if (gDf.awJ()) {
       localArrayList.add("@draft.tencent");
     }
     Object localObject = getInitData();
     if (paramBoolean1)
     {
-      localArrayList.addAll(fmp);
+      localArrayList.addAll(gDl);
       localObject = ((List)localObject).iterator();
       while (((Iterator)localObject).hasNext())
       {
@@ -125,215 +126,257 @@ public class MainSightSelectContactView
     b(localArrayList, paramBoolean2, true);
   }
   
-  public final void a(MMFragmentActivity paramMMFragmentActivity, int paramInt, AdapterView.OnItemClickListener paramOnItemClickListener, k paramk)
+  public final void a(MMFragmentActivity paramMMFragmentActivity, int paramInt, AdapterView.OnItemClickListener paramOnItemClickListener, a parama)
   {
-    flw = paramMMFragmentActivity;
-    fmf = paramInt;
-    setMainSightContentView(paramk);
-    addView(View.inflate(getContext(), a.k.main_sight_select_contact_view, null), -1, -2);
-    cyS = ((ListView)findViewById(a.i.select_contact_lv));
-    fmh = new an(this);
-    fmk = new LinearLayout(getContext());
-    fmk.addView(new View(getContext()), -1, fmj.getViewHeight() - fmf);
-    fmk.getChildAt(0).setBackgroundColor(0);
-    cyS.addHeaderView(fmk);
-    cyS.setAdapter(fmh);
-    cyS.setOnItemClickListener(paramOnItemClickListener);
-    fmo = new HashSet();
-    fmp = new HashSet();
-    cyS.setOnScrollListener(this);
-    fmg = new ao();
-    fmg.fmb = this;
+    gCr = paramMMFragmentActivity;
+    gDb = paramInt;
+    setMainSightContentView(parama);
+    addView(View.inflate(getContext(), 2131363008, null), -1, -2);
+    cUz = ((ListView)findViewById(2131166016));
+    gDd = new c(this);
+    gDg = new LinearLayout(getContext());
+    gDg.addView(new View(getContext()), -1, gDf.getViewHeight() - gDb);
+    gDg.getChildAt(0).setBackgroundColor(0);
+    cUz.addHeaderView(gDg);
+    cUz.setAdapter(gDd);
+    cUz.setOnItemClickListener(paramOnItemClickListener);
+    gDk = new HashSet();
+    gDl = new HashSet();
+    cUz.setOnScrollListener(this);
+    gDc = new d();
+    gDc.gCX = this;
   }
   
   public final boolean a(com.tencent.mm.ui.contact.a.a parama)
   {
-    if ((jgE) && (cqE != null)) {
-      return fmp.contains(cqE.field_username);
+    if ((lkT) && (cId != null)) {
+      return gDl.contains(cId.field_username);
     }
     return false;
   }
   
-  public final void akt()
-  {
-    if (fmk == null) {
-      return;
-    }
-    fmk.getChildAt(0).setVisibility(8);
-    fmi.setVisibility(0);
-    List localList = fmh.flO;
-    localList.remove("@search.tencent");
-    localList.remove("@sns.tencent");
-    localList.remove("@draft.tencent");
-    b(localList, false, true);
-    fmj.akc();
-    if (!fmj.qx()) {
-      fmj.akd();
-    }
-    fmj.ake();
-  }
-  
-  public final void aku()
-  {
-    if (fmk == null) {
-      return;
-    }
-    fmk.getChildAt(0).setVisibility(0);
-    fmi.setVisibility(8);
-    n(true, false);
-    fmj.akb();
-  }
-  
-  public final void akv()
-  {
-    cyS.post(new ap(this));
-  }
-  
-  public final boolean akw()
-  {
-    if (fmp == null) {
-      return true;
-    }
-    return fmp.isEmpty();
-  }
-  
-  public final void av(List paramList)
+  public final void aP(List paramList)
   {
     b(paramList, false, false);
   }
   
+  public final void awV()
+  {
+    if (gDg == null) {
+      return;
+    }
+    gDg.getChildAt(0).setVisibility(8);
+    gDe.setVisibility(0);
+    List localList = gDd.gCK;
+    localList.remove("@search.tencent");
+    localList.remove("@sns.tencent");
+    localList.remove("@draft.tencent");
+    b(localList, false, true);
+    gDf.awG();
+    if (!gDf.qr()) {
+      gDf.awH();
+    }
+    gDf.awI();
+  }
+  
+  public final void awW()
+  {
+    if (gDg == null) {
+      return;
+    }
+    gDg.getChildAt(0).setVisibility(0);
+    gDe.setVisibility(8);
+    o(true, false);
+    gDf.awF();
+  }
+  
+  public final void awX()
+  {
+    cUz.post(new Runnable()
+    {
+      public final void run()
+      {
+        if ((MainSightSelectContactView.a(MainSightSelectContactView.this) == MainSightSelectContactView.b(MainSightSelectContactView.this).getCount()) && (MainSightSelectContactView.c(MainSightSelectContactView.this).getViewHeight() >= MainSightSelectContactView.d(MainSightSelectContactView.this))) {}
+        int i;
+        label225:
+        do
+        {
+          return;
+          if (MainSightSelectContactView.e(MainSightSelectContactView.this) != null) {
+            MainSightSelectContactView.f(MainSightSelectContactView.this).removeFooterView(MainSightSelectContactView.e(MainSightSelectContactView.this));
+          }
+          i = MainSightSelectContactView.d(MainSightSelectContactView.this);
+          if ((MainSightSelectContactView.d(MainSightSelectContactView.this) < 0) || (MainSightSelectContactView.d(MainSightSelectContactView.this) > MainSightSelectContactView.c(MainSightSelectContactView.this).getViewHeight())) {
+            i = MainSightSelectContactView.c(MainSightSelectContactView.this).getViewHeight();
+          }
+          MainSightSelectContactView.a(MainSightSelectContactView.this, MainSightSelectContactView.b(MainSightSelectContactView.this).getCount());
+          MainSightSelectContactView.b(MainSightSelectContactView.this, i);
+          int j = 0;
+          int k = 0;
+          for (;;)
+          {
+            if (j >= MainSightSelectContactView.b(MainSightSelectContactView.this).getCount()) {
+              break label225;
+            }
+            localObject = MainSightSelectContactView.b(MainSightSelectContactView.this).getView(j, null, MainSightSelectContactView.f(MainSightSelectContactView.this));
+            ((View)localObject).measure(View.MeasureSpec.makeMeasureSpec(0, 0), View.MeasureSpec.makeMeasureSpec(0, 0));
+            k += ((View)localObject).getMeasuredHeight();
+            if (k >= i) {
+              break;
+            }
+            j += 1;
+          }
+          i -= k;
+        } while (i <= 0);
+        MainSightSelectContactView.a(MainSightSelectContactView.this, new View(getContext()));
+        Object localObject = new AbsListView.LayoutParams(-1, i);
+        MainSightSelectContactView.e(MainSightSelectContactView.this).setLayoutParams((ViewGroup.LayoutParams)localObject);
+        MainSightSelectContactView.e(MainSightSelectContactView.this).setBackgroundResource(2131231101);
+        MainSightSelectContactView.f(MainSightSelectContactView.this).addFooterView(MainSightSelectContactView.e(MainSightSelectContactView.this));
+      }
+    });
+  }
+  
+  public final boolean awY()
+  {
+    if (gDl == null) {
+      return true;
+    }
+    return gDl.isEmpty();
+  }
+  
   public final boolean b(com.tencent.mm.ui.contact.a.a parama)
   {
-    if ((jgE) && (cqE != null)) {
-      return fmo.contains(cqE.field_username);
+    if ((lkT) && (cId != null)) {
+      return gDk.contains(cId.field_username);
     }
     return false;
   }
   
-  final String cY(int paramInt)
+  final String dd(int paramInt)
   {
-    Object localObject = fmh.op(paramInt);
+    Object localObject = gDd.rM(paramInt);
     if (localObject == null) {}
     do
     {
       return null;
-      localObject = cqE;
+      localObject = cId;
     } while (localObject == null);
     return field_username;
   }
   
   public final void dismiss()
   {
-    flt = true;
-    bn.aj(this);
-    fmg.aks();
-    fmp.clear();
-    fmo.clear();
-    cyS.setAdapter(null);
-    cyS.clearAnimation();
+    gCo = true;
+    ay.am(this);
+    gDc.awU();
+    gDl.clear();
+    gDk.clear();
+    cUz.setAdapter(null);
+    cUz.clearAnimation();
     setVisibility(8);
   }
   
   public Activity getActivity()
   {
-    return flw;
+    return gCr;
   }
   
   public ListView getContentLV()
   {
-    return cyS;
+    return cUz;
   }
   
   public List getInitData()
   {
     ArrayList localArrayList = new ArrayList();
-    List localList = ax.tl().rl().aGG();
-    localList.remove(v.rS());
+    List localList = ah.tD().rt().aWK();
+    localList.remove(h.sc());
     localArrayList.addAll(localList);
     return localArrayList;
   }
   
   public ListView getListView()
   {
-    return cyS;
+    return cUz;
   }
   
   public LinkedList getSelectedContact()
   {
     LinkedList localLinkedList = new LinkedList();
-    localLinkedList.addAll(fmp);
+    localLinkedList.addAll(gDl);
     return localLinkedList;
   }
   
-  public final void iR(int paramInt)
+  public final void lc(int paramInt)
   {
-    if ((paramInt < 0) || (paramInt > fmh.getCount())) {}
+    if ((paramInt < 0) || (paramInt > gDd.getCount())) {}
     com.tencent.mm.ui.contact.a.a locala;
     do
     {
       return;
-      locala = fmh.op(paramInt);
+      locala = gDd.rM(paramInt);
     } while (locala == null);
-    if (fmp.contains(cqE.field_username))
+    if (gDl.contains(cId.field_username))
     {
-      fmp.remove(cqE.field_username);
-      an.flQ = fmp.isEmpty();
-      if (fmp.isEmpty()) {
+      gDl.remove(cId.field_username);
+      c.gCM = gDl.isEmpty();
+      if (gDl.isEmpty()) {
         break label106;
       }
     }
     label106:
     for (boolean bool = true;; bool = false)
     {
-      an.flR = bool;
+      c.gCN = bool;
       return;
-      fmp.add(cqE.field_username);
+      gDl.add(cId.field_username);
       break;
     }
   }
   
-  public final boolean iS(int paramInt)
+  public final boolean ld(int paramInt)
   {
-    return an.pZ(cY(paramInt));
+    return c.tZ(dd(paramInt));
   }
   
-  public final boolean iT(int paramInt)
+  public final boolean le(int paramInt)
   {
-    return an.qa(cY(paramInt));
+    return c.ua(dd(paramInt));
   }
   
-  public final boolean iV(int paramInt)
+  public final boolean lg(int paramInt)
   {
-    if (fmh.op(paramInt) == null) {}
-    while (fmh.op(paramInt).cqE == null) {
+    if (gDd.rM(paramInt) == null) {}
+    while (gDd.rM(paramInt).cId == null) {
       return false;
     }
-    return fmp.contains(fmh.op(paramInt).cqE.field_username);
+    return gDl.contains(gDd.rM(paramInt).cId.field_username);
   }
   
   public final void notifyDataSetChanged()
   {
-    if (fmh == null) {
+    if (gDd == null) {
       return;
     }
-    fmh.notifyDataSetChanged();
+    gDd.notifyDataSetChanged();
   }
   
   public void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
   {
-    if ((fmk == null) || (paramAbsListView == null) || (fmk.getHeight() <= 0) || (flw == null)) {}
+    if ((gDg == null) || (paramAbsListView == null) || (gDg.getHeight() <= 0) || (gCr == null)) {}
     do
     {
       return;
-      paramInt1 = fmk.getHeight() - flw.jy.bf().getHeight();
-      paramInt2 = -fmk.getTop();
+      paramInt1 = gDg.getHeight() - gCr.iF.aP().getHeight();
+      paramInt2 = -gDg.getTop();
     } while (paramInt2 < 0);
     float f = paramInt2 / paramInt1;
-    fmj.setCameraShadowAlpha(f);
-    if ((fmk.getTop() < 0) && (fmk.getTop() <= -paramInt1)) {}
+    gDf.setCameraShadowAlpha(f);
+    if ((gDg.getTop() < 0) && (gDg.getTop() <= -paramInt1)) {}
     for (boolean bool = true;; bool = false)
     {
-      fmj.cZ(bool);
+      gDf.eJ(bool);
       return;
     }
   }
@@ -341,51 +384,51 @@ public class MainSightSelectContactView
   public void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
     if (paramInt == 1) {
-      bn.aj(paramAbsListView);
+      ay.am(paramAbsListView);
     }
   }
   
   public void setEmptyBgView(View paramView)
   {
-    fmi = paramView;
+    gDe = paramView;
   }
   
   public void setIsMultiSelect(boolean paramBoolean)
   {
-    fmh.flP = paramBoolean;
+    gDd.gCL = paramBoolean;
   }
   
-  public void setMainSightContentView(k paramk)
+  public void setMainSightContentView(a parama)
   {
-    fmj = paramk;
+    gDf = parama;
   }
   
   public void setSearchView(View paramView)
   {
-    ao localao = fmg;
-    flX = paramView;
-    flV = ((EditText)paramView.findViewById(a.i.edittext));
-    flW = ((TextView)paramView.findViewById(a.i.search_cancel_tv));
-    flV.setOnFocusChangeListener(localao);
-    flV.addTextChangedListener(localao);
-    flW.setOnClickListener(localao);
-    flZ = ((InputMethodManager)paramView.getContext().getSystemService("input_method"));
+    d locald = gDc;
+    gCT = paramView;
+    gCR = ((EditText)paramView.findViewById(2131166420));
+    gCS = ((TextView)paramView.findViewById(2131169026));
+    gCR.setOnFocusChangeListener(locald);
+    gCR.addTextChangedListener(locald);
+    gCS.setOnClickListener(locald);
+    gCV = ((InputMethodManager)paramView.getContext().getSystemService("input_method"));
   }
   
   public final void show()
   {
-    flt = false;
-    cyS.clearAnimation();
-    cyS.clearFocus();
-    cyS.setAdapter(fmh);
-    n(false, true);
+    gCo = false;
+    cUz.clearAnimation();
+    cUz.clearFocus();
+    cUz.setAdapter(gDd);
+    o(false, true);
     setVisibility(0);
-    if (flC == null)
+    if (gCy == null)
     {
-      flC = new TranslateAnimation(0.0F, 0.0F, fmf, 0.0F);
-      flC.setDuration(300L);
+      gCy = new TranslateAnimation(0.0F, 0.0F, gDb, 0.0F);
+      gCy.setDuration(300L);
     }
-    cyS.startAnimation(flC);
+    cUz.startAnimation(gCy);
   }
 }
 

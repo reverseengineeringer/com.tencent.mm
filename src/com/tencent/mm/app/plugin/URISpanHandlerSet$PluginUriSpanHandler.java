@@ -3,10 +3,10 @@ package com.tencent.mm.app.plugin;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$PluginUriSpanHandler
@@ -17,34 +17,34 @@ class URISpanHandlerSet$PluginUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     if (paramString.equals("weixin://plugin"))
     {
       paramString = new Intent();
-      if ((URISpanHandlerSet.a(apd) instanceof Service)) {
+      if ((URISpanHandlerSet.a(ang) instanceof Service)) {
         paramString.addFlags(268435456);
       }
-      c.c(URISpanHandlerSet.a(apd), "setting", ".ui.setting.SettingsPluginsUI", paramString);
+      c.c(URISpanHandlerSet.a(ang), "setting", ".ui.setting.SettingsPluginsUI", paramString);
       return true;
     }
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     if (paramString.trim().startsWith("weixin://plugin")) {
-      return new ah(paramString, 26, null);
+      return new g(paramString, 26, null);
     }
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[] { 26 };
   }

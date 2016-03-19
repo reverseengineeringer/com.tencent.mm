@@ -2,11 +2,22 @@ package com.tencent.mm.pluginsdk.model;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import java.util.ArrayList;
 
-final class f
-  extends AsyncTask
+public final class f
 {
-  f(Context paramContext, String[] paramArrayOfString, e.a parama) {}
+  public static void a(Context paramContext, final String[] paramArrayOfString, final a parama)
+  {
+    if ((parama == null) || (paramArrayOfString == null) || (paramArrayOfString.length == 0)) {
+      throw new IllegalArgumentException();
+    }
+    new AsyncTask() {}.execute(new Void[0]);
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void p(ArrayList paramArrayList);
+  }
 }
 
 /* Location:

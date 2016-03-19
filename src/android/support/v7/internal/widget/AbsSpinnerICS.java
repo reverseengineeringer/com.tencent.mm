@@ -15,19 +15,19 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.SpinnerAdapter;
 
 abstract class AbsSpinnerICS
-  extends m
+  extends c
 {
-  private DataSetObserver hQ;
-  SpinnerAdapter nT;
-  int nU;
-  int nV;
-  boolean nW;
-  int nX = 0;
-  int nY = 0;
-  int nZ = 0;
-  int oa = 0;
-  final Rect ob = new Rect();
-  final a oc = new a();
+  private DataSetObserver gY;
+  SpinnerAdapter mX;
+  int mY;
+  int mZ;
+  boolean na;
+  int nb = 0;
+  int nc = 0;
+  int nd = 0;
+  int ne = 0;
+  final Rect nf = new Rect();
+  final a ng = new a();
   
   AbsSpinnerICS(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
@@ -36,15 +36,15 @@ abstract class AbsSpinnerICS
     setWillNotDraw(false);
   }
   
-  final void ca()
+  final void bK()
   {
-    ql = false;
-    qg = false;
+    pp = false;
+    pk = false;
     removeAllViewsInLayout();
-    qu = -1;
-    qv = Long.MIN_VALUE;
-    I(-1);
+    px = -1;
+    py = Long.MIN_VALUE;
     J(-1);
+    K(-1);
     invalidate();
   }
   
@@ -55,8 +55,8 @@ abstract class AbsSpinnerICS
   
   public final View getSelectedView()
   {
-    if ((qs > 0) && (qo >= 0)) {
-      return getChildAt(qo - qb);
+    if ((pv > 0) && (ps >= 0)) {
+      return getChildAt(ps - pf);
     }
     return null;
   }
@@ -68,58 +68,58 @@ abstract class AbsSpinnerICS
     int m = getPaddingTop();
     int k = getPaddingRight();
     int j = getPaddingBottom();
-    Object localObject = ob;
-    if (i > nX)
+    Object localObject = nf;
+    if (i > nb)
     {
       left = i;
-      localObject = ob;
-      if (m <= nY) {
+      localObject = nf;
+      if (m <= nc) {
         break label412;
       }
       i = m;
       label67:
       top = i;
-      localObject = ob;
-      if (k <= nZ) {
+      localObject = nf;
+      if (k <= nd) {
         break label420;
       }
       i = k;
       label91:
       right = i;
-      localObject = ob;
-      if (j <= oa) {
+      localObject = nf;
+      if (j <= ne) {
         break label428;
       }
       i = j;
       label115:
       bottom = i;
-      if (ql) {
+      if (pp) {
         handleDataChanged();
       }
-      i = qm;
-      if ((i < 0) || (nT == null) || (i >= nT.getCount())) {
+      i = pq;
+      if ((i < 0) || (mX == null) || (i >= mX.getCount())) {
         break label436;
       }
-      View localView = oc.C(i);
+      View localView = ng.D(i);
       localObject = localView;
       if (localView == null) {
-        localObject = nT.getView(i, null, this);
+        localObject = mX.getView(i, null, this);
       }
       if (localObject != null) {
-        oc.a(i, (View)localObject);
+        ng.a(i, (View)localObject);
       }
       if (localObject == null) {
         break label436;
       }
       if (((View)localObject).getLayoutParams() == null)
       {
-        nW = true;
+        na = true;
         ((View)localObject).setLayoutParams(generateDefaultLayoutParams());
-        nW = false;
+        na = false;
       }
       measureChild((View)localObject, paramInt1, paramInt2);
-      j = ((View)localObject).getMeasuredHeight() + ob.top + ob.bottom;
-      i = ((View)localObject).getMeasuredWidth() + ob.left + ob.right;
+      j = ((View)localObject).getMeasuredHeight() + nf.top + nf.bottom;
+      i = ((View)localObject).getMeasuredWidth() + nf.left + nf.right;
       k = 0;
     }
     for (;;)
@@ -127,12 +127,12 @@ abstract class AbsSpinnerICS
       m = i;
       if (k != 0)
       {
-        k = ob.top + ob.bottom;
+        k = nf.top + nf.bottom;
         m = i;
         j = k;
         if (n == 0)
         {
-          m = ob.left + ob.right;
+          m = nf.left + nf.right;
           j = k;
         }
       }
@@ -140,19 +140,19 @@ abstract class AbsSpinnerICS
       j = Math.max(m, getSuggestedMinimumWidth());
       i = resolveSize(i, paramInt2);
       setMeasuredDimension(resolveSize(j, paramInt1), i);
-      nU = paramInt2;
-      nV = paramInt1;
+      mY = paramInt2;
+      mZ = paramInt1;
       return;
-      i = nX;
+      i = nb;
       break;
       label412:
-      i = nY;
+      i = nc;
       break label67;
       label420:
-      i = nZ;
+      i = nd;
       break label91;
       label428:
-      i = oa;
+      i = ne;
       break label115;
       label436:
       k = 1;
@@ -165,13 +165,13 @@ abstract class AbsSpinnerICS
   {
     paramParcelable = (SavedState)paramParcelable;
     super.onRestoreInstanceState(paramParcelable.getSuperState());
-    if (of >= 0L)
+    if (nj >= 0L)
     {
-      ql = true;
-      qg = true;
-      qe = of;
-      qd = position;
-      qh = 0;
+      pp = true;
+      pk = true;
+      pi = nj;
+      ph = position;
+      pl = 0;
       requestLayout();
     }
   }
@@ -179,10 +179,10 @@ abstract class AbsSpinnerICS
   public Parcelable onSaveInstanceState()
   {
     SavedState localSavedState = new SavedState(super.onSaveInstanceState());
-    of = qn;
-    if (of >= 0L)
+    nj = pr;
+    if (nj >= 0L)
     {
-      position = qm;
+      position = pq;
       return localSavedState;
     }
     position = -1;
@@ -191,7 +191,7 @@ abstract class AbsSpinnerICS
   
   public void requestLayout()
   {
-    if (!nW) {
+    if (!na) {
       super.requestLayout();
     }
   }
@@ -199,43 +199,43 @@ abstract class AbsSpinnerICS
   public void setAdapter(SpinnerAdapter paramSpinnerAdapter)
   {
     int i = -1;
-    if (nT != null)
+    if (mX != null)
     {
-      nT.unregisterDataSetObserver(hQ);
-      ca();
+      mX.unregisterDataSetObserver(gY);
+      bK();
     }
-    nT = paramSpinnerAdapter;
-    qu = -1;
-    qv = Long.MIN_VALUE;
-    if (nT != null)
+    mX = paramSpinnerAdapter;
+    px = -1;
+    py = Long.MIN_VALUE;
+    if (mX != null)
     {
-      qt = qs;
-      qs = nT.getCount();
-      cr();
-      hQ = new m.a(this);
-      nT.registerDataSetObserver(hQ);
-      if (qs > 0) {
+      pw = pv;
+      pv = mX.getCount();
+      cb();
+      gY = new c.a(this);
+      mX.registerDataSetObserver(gY);
+      if (pv > 0) {
         i = 0;
       }
-      I(i);
       J(i);
-      if (qs == 0) {
-        ct();
+      K(i);
+      if (pv == 0) {
+        cd();
       }
     }
     for (;;)
     {
       requestLayout();
       return;
-      cr();
-      ca();
-      ct();
+      cb();
+      bK();
+      cd();
     }
   }
   
   public final void setSelection(int paramInt)
   {
-    J(paramInt);
+    K(paramInt);
     requestLayout();
     invalidate();
   }
@@ -243,14 +243,14 @@ abstract class AbsSpinnerICS
   static class SavedState
     extends View.BaseSavedState
   {
-    public static final Parcelable.Creator CREATOR = new c();
-    long of;
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+    long nj;
     int position;
     
     private SavedState(Parcel paramParcel)
     {
       super();
-      of = paramParcel.readLong();
+      nj = paramParcel.readLong();
       position = paramParcel.readInt();
     }
     
@@ -261,35 +261,35 @@ abstract class AbsSpinnerICS
     
     public String toString()
     {
-      return "AbsSpinner.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " selectedId=" + of + " position=" + position + "}";
+      return "AbsSpinner.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " selectedId=" + nj + " position=" + position + "}";
     }
     
     public void writeToParcel(Parcel paramParcel, int paramInt)
     {
       super.writeToParcel(paramParcel, paramInt);
-      paramParcel.writeLong(of);
+      paramParcel.writeLong(nj);
       paramParcel.writeInt(position);
     }
   }
   
   final class a
   {
-    final SparseArray od = new SparseArray();
+    final SparseArray nh = new SparseArray();
     
     a() {}
     
-    final View C(int paramInt)
+    final View D(int paramInt)
     {
-      View localView = (View)od.get(paramInt);
+      View localView = (View)nh.get(paramInt);
       if (localView != null) {
-        od.delete(paramInt);
+        nh.delete(paramInt);
       }
       return localView;
     }
     
     public final void a(int paramInt, View paramView)
     {
-      od.put(paramInt, paramView);
+      nh.put(paramInt, paramView);
     }
   }
 }

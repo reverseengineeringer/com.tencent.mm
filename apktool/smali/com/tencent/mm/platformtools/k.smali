@@ -13,9 +13,9 @@
 
 
 # static fields
-.field private static bVb:Ljava/util/LinkedList;
+.field private static bEa:Ljava/util/Vector;
 
-.field private static brW:Ljava/util/Vector;
+.field private static clY:Ljava/util/LinkedList;
 
 
 # direct methods
@@ -23,29 +23,29 @@
     .locals 1
 
     .prologue
-    .line 38
+    .line 41
     new-instance v0, Ljava/util/Vector;
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/platformtools/k;->brW:Ljava/util/Vector;
+    sput-object v0, Lcom/tencent/mm/platformtools/k;->bEa:Ljava/util/Vector;
 
-    .line 135
+    .line 138
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/platformtools/k;->bVb:Ljava/util/LinkedList;
+    sput-object v0, Lcom/tencent/mm/platformtools/k;->clY:Ljava/util/LinkedList;
 
     return-void
 .end method
 
-.method static synthetic DG()Ljava/util/LinkedList;
+.method static synthetic FM()Ljava/util/LinkedList;
     .locals 1
 
     .prologue
-    .line 27
-    sget-object v0, Lcom/tencent/mm/platformtools/k;->bVb:Ljava/util/LinkedList;
+    .line 30
+    sget-object v0, Lcom/tencent/mm/platformtools/k;->clY:Ljava/util/LinkedList;
 
     return-object v0
 .end method
@@ -54,45 +54,45 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 80
     invoke-static {p0}, Lcom/tencent/mm/platformtools/k;->b(Lcom/tencent/mm/platformtools/j;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 78
+    .line 81
     const/4 v0, 0x0
 
-    .line 94
+    .line 97
     :goto_0
     return-object v0
 
-    .line 82
+    .line 85
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/compatible/util/h;->pe()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/util/e;->oW()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 83
-    invoke-interface {p0}, Lcom/tencent/mm/platformtools/j;->DE()Landroid/graphics/Bitmap;
+    .line 86
+    invoke-interface {p0}, Lcom/tencent/mm/platformtools/j;->FK()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     goto :goto_0
 
-    .line 86
+    .line 89
     :cond_1
-    invoke-interface {p0}, Lcom/tencent/mm/platformtools/j;->DD()Z
+    invoke-interface {p0}, Lcom/tencent/mm/platformtools/j;->FJ()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 88
-    sget-object v0, Lcom/tencent/mm/platformtools/k$b;->bVc:Lcom/tencent/mm/platformtools/k$b;
+    .line 91
+    sget-object v0, Lcom/tencent/mm/platformtools/k$b;->clZ:Lcom/tencent/mm/platformtools/k$b;
 
     invoke-static {v0, p0}, Lcom/tencent/mm/platformtools/k$b;->a(Lcom/tencent/mm/platformtools/k$b;Lcom/tencent/mm/platformtools/j;)Landroid/graphics/Bitmap;
 
@@ -100,9 +100,9 @@
 
     goto :goto_0
 
-    .line 93
+    .line 96
     :cond_2
-    sget-object v0, Lcom/tencent/mm/platformtools/k$b;->bVc:Lcom/tencent/mm/platformtools/k$b;
+    sget-object v0, Lcom/tencent/mm/platformtools/k$b;->clZ:Lcom/tencent/mm/platformtools/k$b;
 
     invoke-static {v0, p0}, Lcom/tencent/mm/platformtools/k$b;->b(Lcom/tencent/mm/platformtools/k$b;Lcom/tencent/mm/platformtools/j;)Landroid/graphics/Bitmap;
 
@@ -115,8 +115,8 @@
     .locals 2
 
     .prologue
-    .line 63
-    sget-object v0, Lcom/tencent/mm/platformtools/k;->brW:Ljava/util/Vector;
+    .line 66
+    sget-object v0, Lcom/tencent/mm/platformtools/k;->bEa:Ljava/util/Vector;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
 
@@ -133,24 +133,24 @@
     .locals 1
 
     .prologue
-    .line 129
+    .line 132
     if-eqz p0, :cond_0
 
-    invoke-interface {p0}, Lcom/tencent/mm/platformtools/j;->Dz()Ljava/lang/String;
+    invoke-interface {p0}, Lcom/tencent/mm/platformtools/j;->FG()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 130
+    .line 133
     :cond_0
     const/4 v0, 0x0
 
-    .line 132
+    .line 135
     :goto_0
     return v0
 
@@ -164,13 +164,13 @@
     .locals 1
 
     .prologue
-    .line 67
-    sget-object v0, Lcom/tencent/mm/platformtools/k;->bVb:Ljava/util/LinkedList;
+    .line 70
+    sget-object v0, Lcom/tencent/mm/platformtools/k;->clY:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    .line 68
-    sget-object v0, Lcom/tencent/mm/platformtools/k;->bVb:Ljava/util/LinkedList;
+    .line 71
+    sget-object v0, Lcom/tencent/mm/platformtools/k;->clY:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p0}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
@@ -183,7 +183,7 @@
     .locals 1
 
     .prologue
-    .line 27
+    .line 30
     invoke-static {p0}, Lcom/tencent/mm/platformtools/k;->b(Lcom/tencent/mm/platformtools/j;)Z
 
     move-result v0
@@ -195,8 +195,8 @@
     .locals 1
 
     .prologue
-    .line 72
-    sget-object v0, Lcom/tencent/mm/platformtools/k;->bVb:Ljava/util/LinkedList;
+    .line 75
+    sget-object v0, Lcom/tencent/mm/platformtools/k;->clY:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
@@ -209,7 +209,7 @@
     .locals 4
 
     .prologue
-    .line 27
+    .line 30
     new-instance v3, Ljava/util/Vector;
 
     invoke-direct {v3}, Ljava/util/Vector;-><init>()V
@@ -219,7 +219,7 @@
     move v2, v0
 
     :goto_0
-    sget-object v0, Lcom/tencent/mm/platformtools/k;->brW:Ljava/util/Vector;
+    sget-object v0, Lcom/tencent/mm/platformtools/k;->bEa:Ljava/util/Vector;
 
     invoke-virtual {v0}, Ljava/util/Vector;->size()I
 
@@ -227,7 +227,7 @@
 
     if-ge v2, v0, :cond_2
 
-    sget-object v0, Lcom/tencent/mm/platformtools/k;->brW:Ljava/util/Vector;
+    sget-object v0, Lcom/tencent/mm/platformtools/k;->bEa:Ljava/util/Vector;
 
     invoke-virtual {v0, v2}, Ljava/util/Vector;->get(I)Ljava/lang/Object;
 
@@ -261,31 +261,31 @@
     goto :goto_1
 
     :cond_2
-    sget-object v0, Lcom/tencent/mm/platformtools/k;->brW:Ljava/util/Vector;
+    sget-object v0, Lcom/tencent/mm/platformtools/k;->bEa:Ljava/util/Vector;
 
     invoke-virtual {v0, v3}, Ljava/util/Vector;->removeAll(Ljava/util/Collection;)Z
 
     return-void
 .end method
 
-.method public static iQ(Ljava/lang/String;)Landroid/graphics/Bitmap;
+.method public static k(Ljava/lang/String;II)Landroid/graphics/Bitmap;
     .locals 1
 
     .prologue
-    .line 106
-    invoke-static {p0}, Lcom/tencent/mm/platformtools/k$b;->iQ(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    .line 113
+    invoke-static {p0, p1, p2}, Lcom/tencent/mm/platformtools/k$b;->k(Ljava/lang/String;II)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public static j(Ljava/lang/String;II)Landroid/graphics/Bitmap;
+.method public static ku(Ljava/lang/String;)Landroid/graphics/Bitmap;
     .locals 1
 
     .prologue
-    .line 110
-    invoke-static {p0, p1, p2}, Lcom/tencent/mm/platformtools/k$b;->j(Ljava/lang/String;II)Landroid/graphics/Bitmap;
+    .line 109
+    invoke-static {p0}, Lcom/tencent/mm/platformtools/k$b;->ku(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 

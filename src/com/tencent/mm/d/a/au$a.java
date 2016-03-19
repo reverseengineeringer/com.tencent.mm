@@ -1,11 +1,11 @@
 package com.tencent.mm.d.a;
 
+import android.app.Activity;
+
 public final class au$a
 {
-  public String avH;
-  public int avL = 0;
-  public int avM = 0;
-  public double avN = 0.0D;
+  public String asW;
+  public Activity asX;
 }
 
 /* Location:

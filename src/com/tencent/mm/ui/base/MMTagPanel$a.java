@@ -2,19 +2,19 @@ package com.tencent.mm.ui.base;
 
 public abstract interface MMTagPanel$a
 {
-  public abstract void QX();
+  public abstract void SS();
   
-  public abstract void d(boolean paramBoolean, int paramInt);
+  public abstract void f(boolean paramBoolean, int paramInt);
   
-  public abstract void lQ(String paramString);
+  public abstract void ne(String paramString);
   
-  public abstract void lR(String paramString);
+  public abstract void nf(String paramString);
   
-  public abstract void lS(String paramString);
+  public abstract void ng(String paramString);
   
-  public abstract void lT(String paramString);
+  public abstract void nh(String paramString);
   
-  public abstract void lU(String paramString);
+  public abstract void ni(String paramString);
 }
 
 /* Location:

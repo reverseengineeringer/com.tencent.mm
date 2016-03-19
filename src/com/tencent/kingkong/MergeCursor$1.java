@@ -1,16 +1,16 @@
 package com.tencent.kingkong;
 
-class MergeCursor$1
+final class MergeCursor$1
   extends DataSetObserver
 {
   MergeCursor$1(MergeCursor paramMergeCursor) {}
   
-  public void onChanged()
+  public final void onChanged()
   {
     this$0.mPos = -1;
   }
   
-  public void onInvalidated()
+  public final void onInvalidated()
   {
     this$0.mPos = -1;
   }

@@ -15,29 +15,7 @@
 
 
 # instance fields
-.field public aAd:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
-
-.field public aDp:Ljava/lang/String;
-
-.field public aEA:Ljava/lang/String;
-
-.field public aEB:Ljava/lang/String;
-
-.field public aEu:I
-
-.field public aEv:Ljava/lang/String;
-
-.field public aEw:Ljava/lang/String;
-
-.field public aEx:Ljava/lang/String;
-
-.field public aEy:Ljava/lang/String;
-
-.field public aEz:Ljava/lang/String;
-
-.field public appId:Ljava/lang/String;
-
-.field public appName:Ljava/lang/String;
+.field public asc:I
 
 
 # direct methods

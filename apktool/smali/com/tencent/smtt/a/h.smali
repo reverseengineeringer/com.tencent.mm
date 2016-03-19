@@ -3,99 +3,133 @@
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/smtt/a/h$a;
-    }
-.end annotation
+# static fields
+.field protected static final hexArray:[C
+
+.field private static lUI:Ljava/lang/String;
+
+.field private static lUJ:[B
+
+.field private static lUM:Lcom/tencent/smtt/a/h;
+
+.field private static lUN:Ljava/lang/String;
+
+
+# instance fields
+.field private lUK:Ljavax/crypto/Cipher;
+
+.field private lUL:Ljavax/crypto/Cipher;
 
 
 # direct methods
-.method public static a(Ljava/lang/String;[BLcom/tencent/smtt/a/h$a;)Ljava/lang/String;
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 2
 
     .prologue
     const/4 v1, 0x0
 
-    const/4 v7, 0x0
+    .line 34
+    const-string/jumbo v0, ""
 
-    const/4 v6, 0x1
+    sput-object v0, Lcom/tencent/smtt/a/h;->lUI:Ljava/lang/String;
 
-    .line 35
-    .line 38
-    :try_start_0
-    invoke-static {}, Lcom/tencent/smtt/a/k;->aUX()Lcom/tencent/smtt/a/k;
+    .line 36
+    sput-object v1, Lcom/tencent/smtt/a/h;->lUJ:[B
+
+    .line 42
+    const-string/jumbo v0, "0123456789abcdef"
+
+    invoke-virtual {v0}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v0
 
-    iget-object v2, v0, Lcom/tencent/smtt/a/k;->jLO:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/smtt/a/h;->hexArray:[C
 
-    if-nez v2, :cond_0
+    .line 43
+    sput-object v1, Lcom/tencent/smtt/a/h;->lUM:Lcom/tencent/smtt/a/h;
 
-    iget-object v2, v0, Lcom/tencent/smtt/a/k;->jLN:Ljava/lang/String;
+    return-void
+.end method
 
-    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
+.method private constructor <init>()V
+    .locals 7
 
-    move-result-object v2
+    .prologue
+    const/4 v0, 0x0
 
-    const-string/jumbo v3, "RSA/ECB/NoPadding"
+    const/4 v6, 0x1
 
-    invoke-static {v3}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+    const/4 v2, 0x0
 
-    move-result-object v3
+    const v5, 0x55d4a7f
 
-    const-string/jumbo v4, "MCwwDQYJKoZIhvcNAQEBBQADGwAwGAIRAMRB/Q0hTCD+XtnQhpQJefUCAwEAAQ=="
+    const v4, 0x989680
 
-    invoke-virtual {v4}, Ljava/lang/String;->getBytes()[B
+    .line 46
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    move-result-object v4
+    .line 38
+    iput-object v0, p0, Lcom/tencent/smtt/a/h;->lUK:Ljavax/crypto/Cipher;
 
-    new-instance v5, Ljava/security/spec/X509EncodedKeySpec;
+    .line 40
+    iput-object v0, p0, Lcom/tencent/smtt/a/h;->lUL:Ljavax/crypto/Cipher;
 
-    invoke-static {v4}, Lcom/tencent/smtt/a/d;->aQ([B)[B
+    .line 48
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    move-result-object v4
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v5, v4}, Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V
+    new-instance v1, Ljava/util/Random;
 
-    const-string/jumbo v4, "RSA"
+    invoke-direct {v1}, Ljava/util/Random;-><init>()V
 
-    invoke-static {v4}, Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;
+    invoke-virtual {v1, v5}, Ljava/util/Random;->nextInt(I)I
 
-    move-result-object v4
+    move-result v1
 
-    invoke-virtual {v4, v5}, Ljava/security/KeyFactory;->generatePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;
+    add-int/2addr v1, v4
 
-    move-result-object v4
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    const/4 v5, 0x1
+    move-result-object v1
 
-    invoke-virtual {v3, v5, v4}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v3, v2}, Ljavax/crypto/Cipher;->doFinal([B)[B
+    move-result-object v0
 
-    move-result-object v2
+    new-instance v1, Ljava/util/Random;
 
-    invoke-static {v2}, Lcom/tencent/smtt/a/k;->bytesToHex([B)Ljava/lang/String;
+    invoke-direct {v1}, Ljava/util/Random;-><init>()V
 
-    move-result-object v2
+    invoke-virtual {v1, v5}, Ljava/util/Random;->nextInt(I)I
 
-    iput-object v2, v0, Lcom/tencent/smtt/a/k;->jLO:Ljava/lang/String;
+    move-result v1
 
-    :cond_0
-    iget-object v0, v0, Lcom/tencent/smtt/a/k;->jLO:Ljava/lang/String;
+    add-int/2addr v1, v4
 
-    .line 41
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+    move-result-object v1
 
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v2
+    move-result-object v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/util/Random;
+
+    invoke-direct {v1}, Ljava/util/Random;-><init>()V
+
+    invoke-virtual {v1, v5}, Ljava/util/Random;->nextInt(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v4
+
+    invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
@@ -103,288 +137,363 @@
 
     move-result-object v0
 
-    .line 42
-    new-instance v2, Ljava/net/URL;
+    sput-object v0, Lcom/tencent/smtt/a/h;->lUN:Ljava/lang/String;
 
-    invoke-direct {v2, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
+    .line 49
+    const-string/jumbo v0, "00000000"
 
-    .line 44
-    invoke-virtual {v2}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
+    move v1, v2
+
+    .line 51
+    :goto_0
+    const/16 v3, 0xc
+
+    if-ge v1, v3, :cond_0
+
+    .line 52
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    check-cast v0, Ljava/net/HttpURLConnection;
+    new-instance v3, Ljava/util/Random;
 
-    .line 45
-    const-string/jumbo v2, "POST"
+    invoke-direct {v3}, Ljava/util/Random;-><init>()V
 
-    invoke-virtual {v0, v2}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
+    invoke-virtual {v3, v5}, Ljava/util/Random;->nextInt(I)I
 
-    .line 53
-    invoke-virtual {v0, v6}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
+    move-result v3
 
-    .line 54
-    invoke-virtual {v0, v6}, Ljava/net/HttpURLConnection;->setDoInput(Z)V
-
-    .line 55
-    invoke-virtual {v0, v7}, Ljava/net/HttpURLConnection;->setUseCaches(Z)V
-
-    .line 56
-    const/16 v2, 0x4e20
-
-    invoke-virtual {v0, v2}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
-
-    .line 58
-    sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
-
-    const/16 v3, 0xd
-
-    if-le v2, v3, :cond_1
-
-    .line 60
-    const-string/jumbo v2, "Connection"
-
-    const-string/jumbo v3, "close"
-
-    invoke-virtual {v0, v2, v3}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 69
-    :goto_0
-    :try_start_1
-    invoke-static {}, Lcom/tencent/smtt/a/k;->aUX()Lcom/tencent/smtt/a/k;
-
-    move-result-object v2
-
-    iget-object v2, v2, Lcom/tencent/smtt/a/k;->jLP:Ljava/lang/String;
-
-    invoke-virtual {v2}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    invoke-static {v2, p1, v3}, Lcom/tencent/smtt/sdk/a/a;->a([B[BI)[B
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
-
-    move-result-object p1
-
-    .line 73
-    :goto_1
-    if-nez p1, :cond_2
-
-    .line 130
-    :goto_2
-    return-object v1
-
-    .line 64
-    :cond_1
-    const-string/jumbo v2, "http.keepAlive"
-
-    const-string/jumbo v3, "false"
-
-    invoke-virtual {v0, v2, v3}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 81
-    :cond_2
-    const-string/jumbo v2, "Content-Type"
-
-    const-string/jumbo v3, "application/x-www-form-urlencoded"
-
-    invoke-virtual {v0, v2, v3}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 82
-    const-string/jumbo v2, "Content-Length"
-
-    array-length v3, p1
+    add-int/2addr v3, v4
 
     invoke-static {v3}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v0, v2, v3}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 86
-    :try_start_2
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
-
-    move-result-object v2
-
-    .line 87
-    invoke-virtual {v2, p1}, Ljava/io/OutputStream;->write([B)V
-
-    .line 88
-    invoke-virtual {v2}, Ljava/io/OutputStream;->flush()V
-
-    .line 90
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getResponseCode()I
-
-    move-result v2
-
-    .line 91
-    invoke-interface {p2, v2}, Lcom/tencent/smtt/a/h$a;->pF(I)V
-
-    .line 96
-    const/16 v3, 0xc8
-
-    if-ne v2, v3, :cond_6
-
-    .line 99
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
-
-    move-result-object v2
-
-    .line 101
-    invoke-virtual {v0}, Ljava/net/HttpURLConnection;->getContentEncoding()Ljava/lang/String;
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 102
-    if-eqz v0, :cond_3
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    const-string/jumbo v3, "gzip"
+    move-result-object v0
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    .line 51
+    add-int/lit8 v1, v1, 0x1
 
-    move-result v3
+    goto :goto_0
 
-    if-eqz v3, :cond_3
+    .line 54
+    :cond_0
+    new-instance v1, Ljava/lang/StringBuilder;
 
-    .line 104
-    new-instance v0, Ljava/util/zip/GZIPInputStream;
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-direct {v0, v2}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 117
-    :goto_3
-    new-instance v2, Ljava/io/ByteArrayOutputStream;
+    move-result-object v0
 
-    invoke-direct {v2}, Ljava/io/ByteArrayOutputStream;-><init>()V
+    sget-object v1, Lcom/tencent/smtt/a/h;->lUN:Ljava/lang/String;
 
-    .line 118
-    const/16 v3, 0x80
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-array v3, v3, [B
+    move-result-object v0
 
-    .line 119
-    :goto_4
-    invoke-virtual {v0, v3}, Ljava/io/InputStream;->read([B)I
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    move-result v4
+    move-result-object v0
 
-    const/4 v5, -0x1
+    .line 55
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
 
-    if-eq v4, v5, :cond_5
+    move-result-object v0
 
-    .line 122
-    const/4 v5, 0x0
+    sput-object v0, Lcom/tencent/smtt/a/h;->lUJ:[B
 
-    invoke-virtual {v2, v3, v5, v4}, Ljava/io/ByteArrayOutputStream;->write([BII)V
+    .line 56
+    const-string/jumbo v0, "RSA/ECB/NoPadding"
 
-    goto :goto_4
+    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/smtt/a/h;->lUK:Ljavax/crypto/Cipher;
+
+    .line 58
+    const-string/jumbo v0, "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDcEQ3TCNWPBqgIiY7WQ/IqTOTTV2w8aZ/GPm68FK0fAJBemZKtYR3Li46VJ+Hwnor7ZpQnblGWPFaLv5JoPqvavgB0GInuhm+T+syPs1mw0uPLWaqwvZsCfoaIvUuxy5xHJgmWARrK4/9pHyDxRlZte0PCIoR1ko5B8lVVH1X1dQIDAQAB"
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    .line 60
+    new-instance v1, Ljava/security/spec/X509EncodedKeySpec;
+
+    invoke-static {v0, v2}, Landroid/util/Base64;->decode([BI)[B
+
+    move-result-object v0
+
+    invoke-direct {v1, v0}, Ljava/security/spec/X509EncodedKeySpec;-><init>([B)V
+
+    .line 62
+    const-string/jumbo v0, "RSA"
+
+    invoke-static {v0}, Ljava/security/KeyFactory;->getInstance(Ljava/lang/String;)Ljava/security/KeyFactory;
+
+    move-result-object v0
+
+    .line 64
+    invoke-virtual {v0, v1}, Ljava/security/KeyFactory;->generatePublic(Ljava/security/spec/KeySpec;)Ljava/security/PublicKey;
+
+    move-result-object v0
+
+    .line 66
+    iget-object v1, p0, Lcom/tencent/smtt/a/h;->lUK:Ljavax/crypto/Cipher;
+
+    invoke-virtual {v1, v6, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
+
+    .line 68
+    iget-object v0, p0, Lcom/tencent/smtt/a/h;->lUK:Ljavax/crypto/Cipher;
+
+    sget-object v1, Lcom/tencent/smtt/a/h;->lUJ:[B
+
+    invoke-virtual {v0, v1}, Ljavax/crypto/Cipher;->doFinal([B)[B
+
+    move-result-object v0
+
+    .line 70
+    invoke-static {v0}, Lcom/tencent/smtt/a/h;->bytesToHex([B)Ljava/lang/String;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/smtt/a/h;->lUI:Ljava/lang/String;
+
+    .line 72
+    new-instance v0, Ljavax/crypto/spec/DESedeKeySpec;
+
+    sget-object v1, Lcom/tencent/smtt/a/h;->lUN:Ljava/lang/String;
+
+    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v1
+
+    invoke-direct {v0, v1}, Ljavax/crypto/spec/DESedeKeySpec;-><init>([B)V
+
+    .line 74
+    const-string/jumbo v1, "DESede"
+
+    invoke-static {v1}, Ljavax/crypto/SecretKeyFactory;->getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
+
+    move-result-object v1
+
+    .line 76
+    invoke-virtual {v1, v0}, Ljavax/crypto/SecretKeyFactory;->generateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
+
+    move-result-object v0
+
+    .line 78
+    const-string/jumbo v1, "DESede/ECB/PKCS5Padding"
+
+    invoke-static {v1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lcom/tencent/smtt/a/h;->lUL:Ljavax/crypto/Cipher;
+
+    .line 80
+    iget-object v1, p0, Lcom/tencent/smtt/a/h;->lUL:Ljavax/crypto/Cipher;
+
+    invoke-virtual {v1, v6, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
+
+    .line 82
+    return-void
+.end method
+
+.method public static bh([B)[B
+    .locals 3
+
+    .prologue
+    .line 136
+    sget-object v0, Lcom/tencent/smtt/a/h;->lUN:Ljava/lang/String;
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    .line 138
+    :try_start_0
+    const-string/jumbo v1, "DESede"
+
+    invoke-static {v1}, Ljavax/crypto/SecretKeyFactory;->getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
+
+    move-result-object v1
+
+    .line 139
+    new-instance v2, Ljavax/crypto/spec/DESedeKeySpec;
+
+    invoke-direct {v2, v0}, Ljavax/crypto/spec/DESedeKeySpec;-><init>([B)V
+
+    .line 141
+    invoke-virtual {v1, v2}, Ljavax/crypto/SecretKeyFactory;->generateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
+
+    move-result-object v0
+
+    .line 143
+    const-string/jumbo v1, "DESede/ECB/PKCS5Padding"
+
+    invoke-static {v1}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v1
+
+    .line 145
+    const/4 v2, 0x2
+
+    invoke-virtual {v1, v2, v0}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
+
+    .line 147
+    invoke-virtual {v1, p0}, Ljavax/crypto/Cipher;->doFinal([B)[B
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    .line 150
+    :goto_0
+    return-object v0
 
     :catch_0
     move-exception v0
 
-    move-object v0, v1
+    const/4 v0, 0x0
 
-    :goto_5
-    move-object v1, v0
+    goto :goto_0
+.end method
 
-    .line 130
-    goto :goto_2
+.method public static bmi()Lcom/tencent/smtt/a/h;
+    .locals 2
 
-    .line 106
-    :cond_3
-    if-eqz v0, :cond_4
+    .prologue
+    const/4 v0, 0x0
 
-    const-string/jumbo v3, "deflate"
+    .line 86
+    :try_start_0
+    sget-object v1, Lcom/tencent/smtt/a/h;->lUM:Lcom/tencent/smtt/a/h;
 
-    invoke-virtual {v0, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+    if-nez v1, :cond_0
 
-    move-result v0
+    .line 87
+    new-instance v1, Lcom/tencent/smtt/a/h;
 
-    if-eqz v0, :cond_4
+    invoke-direct {v1}, Lcom/tencent/smtt/a/h;-><init>()V
 
-    .line 110
-    new-instance v0, Ljava/util/zip/InflaterInputStream;
+    sput-object v1, Lcom/tencent/smtt/a/h;->lUM:Lcom/tencent/smtt/a/h;
 
-    new-instance v3, Ljava/util/zip/Inflater;
+    .line 89
+    :cond_0
+    sget-object v0, Lcom/tencent/smtt/a/h;->lUM:Lcom/tencent/smtt/a/h;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    const/4 v4, 0x1
+    .line 92
+    :goto_0
+    return-object v0
 
-    invoke-direct {v3, v4}, Ljava/util/zip/Inflater;-><init>(Z)V
-
-    invoke-direct {v0, v2, v3}, Ljava/util/zip/InflaterInputStream;-><init>(Ljava/io/InputStream;Ljava/util/zip/Inflater;)V
-
-    goto :goto_3
-
-    :cond_4
-    move-object v0, v2
-
-    .line 114
-    goto :goto_3
-
-    .line 124
-    :cond_5
-    new-instance v0, Ljava/lang/String;
-
-    invoke-static {}, Lcom/tencent/smtt/a/k;->aUX()Lcom/tencent/smtt/a/k;
-
-    move-result-object v3
-
-    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->toByteArray()[B
-
-    move-result-object v4
-
-    iget-object v3, v3, Lcom/tencent/smtt/a/k;->jLP:Ljava/lang/String;
-
-    invoke-virtual {v3}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v3
-
-    const/4 v5, 0x0
-
-    invoke-static {v3, v4, v5}, Lcom/tencent/smtt/sdk/a/a;->a([B[BI)[B
-
-    move-result-object v3
-
-    const-string/jumbo v4, "utf-8"
-
-    invoke-direct {v0, v3, v4}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
-    :try_end_2
-    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
-
-    .line 125
-    :try_start_3
-    invoke-virtual {v2}, Ljava/io/ByteArrayOutputStream;->close()V
-    :try_end_3
-    .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
-
-    goto :goto_5
-
-    :catch_1
+    .line 91
+    :catch_0
     move-exception v1
 
-    goto :goto_5
+    sput-object v0, Lcom/tencent/smtt/a/h;->lUM:Lcom/tencent/smtt/a/h;
 
-    :catch_2
-    move-exception v2
+    goto :goto_0
+.end method
 
-    goto/16 :goto_1
+.method public static bmj()Ljava/lang/String;
+    .locals 1
 
-    .line 49
-    :catch_3
-    move-exception v0
+    .prologue
+    .line 156
+    sget-object v0, Lcom/tencent/smtt/a/h;->lUI:Ljava/lang/String;
 
-    goto/16 :goto_2
+    return-object v0
+.end method
 
-    :cond_6
-    move-object v0, v1
+.method public static bytesToHex([B)Ljava/lang/String;
+    .locals 6
 
-    goto :goto_5
+    .prologue
+    .line 108
+    array-length v0, p0
+
+    mul-int/lit8 v0, v0, 0x2
+
+    new-array v1, v0, [C
+
+    .line 109
+    const/4 v0, 0x0
+
+    :goto_0
+    array-length v2, p0
+
+    if-ge v0, v2, :cond_0
+
+    .line 110
+    aget-byte v2, p0, v0
+
+    and-int/lit16 v2, v2, 0xff
+
+    .line 111
+    mul-int/lit8 v3, v0, 0x2
+
+    sget-object v4, Lcom/tencent/smtt/a/h;->hexArray:[C
+
+    ushr-int/lit8 v5, v2, 0x4
+
+    aget-char v4, v4, v5
+
+    aput-char v4, v1, v3
+
+    .line 112
+    mul-int/lit8 v3, v0, 0x2
+
+    add-int/lit8 v3, v3, 0x1
+
+    sget-object v4, Lcom/tencent/smtt/a/h;->hexArray:[C
+
+    and-int/lit8 v2, v2, 0xf
+
+    aget-char v2, v4, v2
+
+    aput-char v2, v1, v3
+
+    .line 109
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 114
+    :cond_0
+    new-instance v0, Ljava/lang/String;
+
+    invoke-direct {v0, v1}, Ljava/lang/String;-><init>([C)V
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final bg([B)[B
+    .locals 1
+
+    .prologue
+    .line 104
+    iget-object v0, p0, Lcom/tencent/smtt/a/h;->lUL:Ljavax/crypto/Cipher;
+
+    invoke-virtual {v0, p1}, Ljavax/crypto/Cipher;->doFinal([B)[B
+
+    move-result-object v0
+
+    return-object v0
 .end method

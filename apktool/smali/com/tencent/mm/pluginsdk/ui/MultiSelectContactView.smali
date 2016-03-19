@@ -14,33 +14,33 @@
 
 
 # instance fields
-.field private dWD:Landroid/view/LayoutInflater;
+.field private fbg:Landroid/view/LayoutInflater;
 
-.field private gQj:Landroid/widget/HorizontalScrollView;
+.field private iGV:Landroid/widget/HorizontalScrollView;
 
-.field private gQk:Landroid/widget/LinearLayout;
+.field private iGW:Landroid/widget/LinearLayout;
 
-.field private gQl:Landroid/view/View;
+.field private iGX:Landroid/view/View;
 
-.field public gQm:Landroid/widget/EditText;
+.field public iGY:Lcom/tencent/mm/ui/widget/MMEditText;
 
-.field private gQn:Ljava/util/List;
+.field private iGZ:Ljava/util/List;
 
-.field private gQo:Landroid/view/animation/Animation;
+.field private iHa:Landroid/view/animation/Animation;
 
-.field private gQp:I
+.field private iHb:I
 
-.field private gQq:Landroid/view/View;
+.field private iHc:Landroid/view/View;
 
-.field private gQr:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$a;
+.field private iHd:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$a;
 
-.field private gQs:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$b;
+.field private iHe:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$b;
 
-.field private gQt:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$c;
+.field private iHf:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$c;
 
-.field private gQu:Ljava/util/List;
+.field private iHg:Ljava/util/List;
 
-.field gQv:Z
+.field iHh:Z
 
 .field private padding:I
 
@@ -52,24 +52,24 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 67
+    .line 68
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 51
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQp:I
+    .line 52
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHb:I
 
-    .line 58
+    .line 59
     iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->padding:I
 
-    .line 207
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQv:Z
+    .line 221
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHh:Z
 
-    .line 68
+    .line 69
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->BasicPaddingSize:I
+    const v1, 0x7f0501d0
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -77,24 +77,24 @@
 
     iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->padding:I
 
-    .line 69
+    .line 70
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->dWD:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->fbg:Landroid/view/LayoutInflater;
 
-    .line 70
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->dWD:Landroid/view/LayoutInflater;
+    .line 71
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->fbg:Landroid/view/LayoutInflater;
 
-    sget v1, Lcom/tencent/mm/a$k;->muti_select_contact_view:I
+    const v1, 0x7f0a04f7
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, p0, v2}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 71
-    sget v0, Lcom/tencent/mm/a$i;->mutiselectcontact_scroll:I
+    .line 72
+    const v0, 0x7f070f4f
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->findViewById(I)Landroid/view/View;
 
@@ -102,21 +102,21 @@
 
     check-cast v0, Landroid/widget/HorizontalScrollView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQj:Landroid/widget/HorizontalScrollView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGV:Landroid/widget/HorizontalScrollView;
 
-    .line 72
-    sget v0, Lcom/tencent/mm/a$i;->mutiselectcontact_edittext:I
+    .line 73
+    const v0, 0x7f07084f
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/EditText;
+    check-cast v0, Lcom/tencent/mm/ui/widget/MMEditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQm:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    .line 73
-    sget v0, Lcom/tencent/mm/a$i;->mutiselectcontact_avatar_ll:I
+    .line 74
+    const v0, 0x7f070f50
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->findViewById(I)Landroid/view/View;
 
@@ -124,35 +124,35 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
-    .line 74
-    sget v0, Lcom/tencent/mm/a$i;->mutiselectcontact_searchicon:I
+    .line 75
+    const v0, 0x7f07084e
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQl:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGX:Landroid/view/View;
 
-    .line 76
+    .line 77
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQn:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGZ:Ljava/util/List;
 
-    .line 77
-    sget v0, Lcom/tencent/mm/a$a;->fast_faded_in:I
+    .line 78
+    const v0, 0x7f020047
 
     invoke-static {p1, v0}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQo:Landroid/view/animation/Animation;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHa:Landroid/view/animation/Animation;
 
-    .line 79
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQm:Landroid/widget/EditText;
+    .line 80
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/a/c;->a(Landroid/widget/EditText;)Lcom/tencent/mm/ui/tools/a/c;
 
@@ -160,7 +160,7 @@
 
     const/16 v1, 0x64
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->oZ(I)Lcom/tencent/mm/ui/tools/a/c;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->rZ(I)Lcom/tencent/mm/ui/tools/a/c;
 
     move-result-object v0
 
@@ -168,83 +168,139 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->a(Lcom/tencent/mm/ui/tools/a/c$a;)V
 
-    .line 85
-    sget v0, Lcom/tencent/mm/a$i;->root:I
+    .line 86
+    const v0, 0x7f070369
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQq:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHc:Landroid/view/View;
 
-    .line 86
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQm:Landroid/widget/EditText;
+    .line 87
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/t;
+    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/t;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 104
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQm:Landroid/widget/EditText;
+    .line 105
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/u;
+    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/u;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$2;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
-    .line 114
+    .line 115
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQu:Ljava/util/List;
-
-    .line 115
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQm:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHg:Ljava/util/List;
 
     .line 116
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQm:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/v;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->clearFocus()V
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/v;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
+    .line 117
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$3;
 
-    .line 132
+    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$3;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/widget/MMEditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
+
+    .line 133
     const v0, -0xc000001
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->setBackgroundColor(I)V
 
-    .line 133
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/w;
+    .line 134
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$4;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/w;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$4;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 140
+    .line 141
     return-void
+.end method
+
+.method private AC(Ljava/lang/String;)Landroid/view/View;
+    .locals 4
+
+    .prologue
+    .line 424
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v2
+
+    .line 425
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_0
+    if-ge v1, v2, :cond_1
+
+    .line 426
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 427
+    invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v3
+
+    invoke-virtual {p1, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 431
+    :goto_1
+    return-object v0
+
+    .line 425
+    :cond_0
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_0
+
+    .line 431
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_1
 .end method
 
 .method private a(Landroid/view/View;ZZ)V
     .locals 2
 
     .prologue
-    .line 311
+    .line 327
     if-eqz p2, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQr:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$a;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHd:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$a;
 
     if-eqz v0, :cond_0
 
-    .line 312
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQr:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$a;
+    .line 328
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHd:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$a;
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -254,54 +310,54 @@
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$a;->nJ(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$a;->rc(Ljava/lang/String;)V
 
-    .line 314
+    .line 330
     :cond_0
     if-eqz p3, :cond_1
 
-    .line 315
+    .line 331
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$a;->fast_faded_out:I
+    const v1, 0x7f020063
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    .line 316
-    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/y;
+    .line 332
+    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$6;
 
-    invoke-direct {v1, p0, p1}, Lcom/tencent/mm/pluginsdk/ui/y;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;Landroid/view/View;)V
+    invoke-direct {v1, p0, p1}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$6;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;Landroid/view/View;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 340
+    .line 356
     invoke-virtual {p1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 347
+    .line 363
     :goto_0
     return-void
 
-    .line 342
+    .line 358
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, p1}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
-    .line 343
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aAi()V
+    .line 359
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aRb()V
 
-    .line 344
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    .line 360
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->lr(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->oq(I)V
 
     goto :goto_0
 .end method
@@ -310,8 +366,8 @@
     .locals 0
 
     .prologue
-    .line 29
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aAg()V
+    .line 30
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aQZ()V
 
     return-void
 .end method
@@ -320,8 +376,8 @@
     .locals 0
 
     .prologue
-    .line 29
-    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->lr(I)V
+    .line 30
+    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->oq(I)V
 
     return-void
 .end method
@@ -332,18 +388,18 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 29
+    .line 30
     invoke-direct {p0, p1, v0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->a(Landroid/view/View;ZZ)V
 
     return-void
 .end method
 
-.method private aAg()V
+.method private aQZ()V
     .locals 2
 
     .prologue
-    .line 228
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    .line 242
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -351,21 +407,21 @@
 
     if-nez v0, :cond_1
 
-    .line 238
+    .line 252
     :cond_0
     :goto_0
     return-void
 
-    .line 231
+    .line 245
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQv:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHh:Z
 
     if-eqz v0, :cond_0
 
-    .line 232
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    .line 246
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -377,13 +433,13 @@
 
     move-result-object v0
 
-    .line 233
+    .line 247
     const/4 v1, 0x0
 
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQv:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHh:Z
 
-    .line 236
-    sget v1, Lcom/tencent/mm/a$i;->mask:I
+    .line 250
+    const v1, 0x7f070ad9
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -396,29 +452,29 @@
     goto :goto_0
 .end method
 
-.method private aAh()V
+.method private aRa()V
     .locals 2
 
     .prologue
-    .line 364
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    .line 380
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
-    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/aa;
+    new-instance v1, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$7;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/aa;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$7;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->post(Ljava/lang/Runnable;)Z
 
-    .line 365
+    .line 381
     return-void
 .end method
 
-.method private aAi()V
+.method private aRb()V
     .locals 2
 
     .prologue
-    .line 392
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    .line 408
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -426,20 +482,20 @@
 
     if-nez v0, :cond_0
 
-    .line 393
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQl:Landroid/view/View;
+    .line 409
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGX:Landroid/view/View;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 397
+    .line 413
     :goto_0
     return-void
 
-    .line 395
+    .line 411
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQl:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGX:Landroid/view/View;
 
     const/16 v1, 0x8
 
@@ -452,18 +508,18 @@
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQs:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$b;
+    .line 30
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHe:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$b;
 
     return-object v0
 .end method
 
-.method static synthetic c(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)Landroid/widget/EditText;
+.method static synthetic c(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)Lcom/tencent/mm/ui/widget/MMEditText;
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQm:Landroid/widget/EditText;
+    .line 30
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
 
     return-object v0
 .end method
@@ -476,8 +532,8 @@
 
     const/4 v2, 0x0
 
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    .line 30
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -485,9 +541,9 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -499,28 +555,28 @@
 
     move-result-object v0
 
-    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQv:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHh:Z
 
     if-eqz v1, :cond_1
 
     invoke-direct {p0, v0, v3, v2}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->a(Landroid/view/View;ZZ)V
 
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQv:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHh:Z
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQm:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->requestFocus()Z
 
     :cond_0
     return-void
 
     :cond_1
-    iput-boolean v3, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQv:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHh:Z
 
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aAh()V
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aRa()V
 
-    sget v1, Lcom/tencent/mm/a$i;->mask:I
+    const v1, 0x7f070ad9
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -535,8 +591,8 @@
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQq:Landroid/view/View;
+    .line 30
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHc:Landroid/view/View;
 
     return-object v0
 .end method
@@ -545,7 +601,7 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 30
     iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->padding:I
 
     return v0
@@ -555,8 +611,8 @@
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQt:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$c;
+    .line 30
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHf:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$c;
 
     return-object v0
 .end method
@@ -565,8 +621,8 @@
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    .line 30
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
@@ -575,8 +631,8 @@
     .locals 0
 
     .prologue
-    .line 29
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aAi()V
+    .line 30
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aRb()V
 
     return-void
 .end method
@@ -585,29 +641,29 @@
     .locals 1
 
     .prologue
-    .line 29
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQj:Landroid/widget/HorizontalScrollView;
+    .line 30
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGV:Landroid/widget/HorizontalScrollView;
 
     return-object v0
 .end method
 
-.method private lr(I)V
+.method private oq(I)V
     .locals 7
 
     .prologue
-    .line 368
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQp:I
+    .line 384
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHb:I
 
     if-gtz v0, :cond_0
 
-    .line 369
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQp:I
+    .line 385
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHb:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$g;->LargerPadding:I
+    const v2, 0x7f0501d5
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -615,9 +671,9 @@
 
     add-int/2addr v0, v1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQp:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHb:I
 
-    .line 371
+    .line 387
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -628,10 +684,10 @@
 
     move-result v0
 
-    .line 372
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQm:Landroid/widget/EditText;
+    .line 388
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v1}, Landroid/widget/EditText;->getPaint()Landroid/text/TextPaint;
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/widget/MMEditText;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v1
 
@@ -639,7 +695,7 @@
 
     move-result-object v2
 
-    sget v3, Lcom/tencent/mm/a$n;->app_search:I
+    const v3, 0x7f0b0df3
 
     invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -651,8 +707,8 @@
 
     float-to-int v1, v1
 
-    .line 373
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQp:I
+    .line 389
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHb:I
 
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
 
@@ -660,32 +716,32 @@
 
     add-int/2addr v0, v2
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQp:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHb:I
 
-    .line 376
+    .line 392
     :cond_0
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQp:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHb:I
 
     if-gtz v0, :cond_1
 
-    .line 389
+    .line 405
     :goto_0
     return-void
 
-    .line 380
+    .line 396
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQq:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHc:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
     move-result v1
 
-    .line 381
+    .line 397
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v2, Lcom/tencent/mm/a$g;->ContactAvatarSize:I
+    const v2, 0x7f05020e
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -695,7 +751,7 @@
 
     move-result-object v2
 
-    sget v3, Lcom/tencent/mm/a$g;->BasicPaddingSize:I
+    const v3, 0x7f0501d0
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -705,7 +761,7 @@
 
     mul-int v2, p1, v0
 
-    .line 382
+    .line 398
     const-string/jumbo v0, "!56@/B4Tb64lLpIV90IJEnqSdLjmnZq8oppFW6wgwrHFfV7MdTncY5Eqng=="
 
     const-string/jumbo v3, "parentWidth:%d, avatarWidth:%d, minInputAreaWidth:%d"
@@ -732,7 +788,7 @@
 
     const/4 v5, 0x2
 
-    iget v6, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQp:I
+    iget v6, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHb:I
 
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -740,10 +796,10 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 383
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQj:Landroid/widget/HorizontalScrollView;
+    .line 399
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGV:Landroid/widget/HorizontalScrollView;
 
     invoke-virtual {v0}, Landroid/widget/HorizontalScrollView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -751,23 +807,23 @@
 
     check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 384
+    .line 400
     sub-int v2, v1, v2
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQp:I
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHb:I
 
     if-le v2, v3, :cond_2
 
-    .line 385
+    .line 401
     const/4 v1, -0x2
 
     iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
     goto :goto_0
 
-    .line 387
+    .line 403
     :cond_2
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQp:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHb:I
 
     sub-int/2addr v1, v2
 
@@ -778,30 +834,253 @@
 
 
 # virtual methods
+.method public final AA(Ljava/lang/String;)V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 182
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 206
+    :goto_0
+    return-void
+
+    .line 185
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGZ:Ljava/util/List;
+
+    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    .line 187
+    if-eqz v0, :cond_1
+
+    .line 188
+    const-string/jumbo v0, "!56@/B4Tb64lLpIV90IJEnqSdLjmnZq8oppFW6wgwrHFfV7MdTncY5Eqng=="
+
+    const-string/jumbo v1, "fixed user cant change"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 192
+    :cond_1
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aQZ()V
+
+    .line 194
+    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->AC(Ljava/lang/String;)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 196
+    if-eqz v0, :cond_2
+
+    .line 197
+    invoke-direct {p0, v0, v1, v1}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->a(Landroid/view/View;ZZ)V
+
+    goto :goto_0
+
+    .line 203
+    :cond_2
+    const/4 v0, 0x1
+
+    invoke-virtual {p0, p1, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aj(Ljava/lang/String;Z)V
+
+    goto :goto_0
+.end method
+
+.method public final AB(Ljava/lang/String;)V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 213
+    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->AC(Ljava/lang/String;)Landroid/view/View;
+
+    move-result-object v0
+
+    .line 215
+    if-eqz v0, :cond_0
+
+    .line 216
+    invoke-direct {p0, v0, v1, v1}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->a(Landroid/view/View;ZZ)V
+
+    .line 219
+    :cond_0
+    return-void
+.end method
+
+.method public final aj(Ljava/lang/String;Z)V
+    .locals 5
+
+    .prologue
+    const v4, 0x7f05020e
+
+    .line 296
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
+
+    move-result v0
+
+    add-int/lit8 v0, v0, 0x1
+
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->oq(I)V
+
+    .line 298
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->fbg:Landroid/view/LayoutInflater;
+
+    const v1, 0x7f0a04be
+
+    const/4 v2, 0x0
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
+
+    move-result-object v1
+
+    .line 300
+    const v0, 0x7f0701c8
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/ImageView;
+
+    .line 301
+    invoke-static {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;)V
+
+    .line 303
+    invoke-static {p1}, Lcom/tencent/mm/model/i;->dY(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
+
+    .line 305
+    invoke-virtual {v1, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 306
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$5;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$5;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 313
+    if-eqz p2, :cond_0
+
+    .line 314
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHa:Landroid/view/animation/Animation;
+
+    invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
+
+    .line 316
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
+
+    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 317
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aRb()V
+
+    .line 318
+    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
+
+    .line 319
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->height:I
+
+    .line 320
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
+
+    .line 321
+    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x7f0501d0
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
+
+    move-result v2
+
+    iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
+
+    .line 322
+    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 323
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aRa()V
+
+    .line 324
+    return-void
+.end method
+
 .method public clearFocus()V
     .locals 1
 
     .prologue
-    .line 176
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQm:Landroid/widget/EditText;
-
-    invoke-virtual {v0}, Landroid/widget/EditText;->clearFocus()V
-
     .line 177
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aAg()V
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->clearFocus()V
 
     .line 178
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aQZ()V
+
+    .line 179
     return-void
+.end method
+
+.method public getInputText()Landroid/widget/EditText;
+    .locals 1
+
+    .prologue
+    .line 435
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
+
+    return-object v0
 .end method
 
 .method public getSearchContent()Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 400
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQm:Landroid/widget/EditText;
+    .line 416
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGY:Lcom/tencent/mm/ui/widget/MMEditText;
 
-    invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/widget/MMEditText;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
@@ -816,8 +1095,8 @@
     .locals 1
 
     .prologue
-    .line 152
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
+    .line 153
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGW:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
 
@@ -830,16 +1109,16 @@
     .locals 1
 
     .prologue
-    .line 169
+    .line 170
     if-nez p1, :cond_0
 
-    .line 173
+    .line 174
     :goto_0
     return-void
 
-    .line 172
+    .line 173
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQn:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iGZ:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
@@ -850,10 +1129,10 @@
     .locals 0
 
     .prologue
-    .line 156
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQr:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$a;
-
     .line 157
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHd:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$a;
+
+    .line 158
     return-void
 .end method
 
@@ -861,10 +1140,10 @@
     .locals 0
 
     .prologue
-    .line 160
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQs:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$b;
-
     .line 161
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHe:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$b;
+
+    .line 162
     return-void
 .end method
 
@@ -872,207 +1151,9 @@
     .locals 0
 
     .prologue
-    .line 164
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQt:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$c;
-
     .line 165
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->iHf:Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView$c;
+
+    .line 166
     return-void
-.end method
-
-.method public final uL(Ljava/lang/String;)V
-    .locals 6
-
-    .prologue
-    const/4 v1, 0x0
-
-    const/4 v3, 0x0
-
-    .line 181
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 205
-    :goto_0
-    return-void
-
-    .line 184
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQn:Ljava/util/List;
-
-    invoke-interface {v0, p1}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    .line 186
-    if-eqz v0, :cond_1
-
-    .line 187
-    const-string/jumbo v0, "!56@/B4Tb64lLpIV90IJEnqSdLjmnZq8oppFW6wgwrHFfV7MdTncY5Eqng=="
-
-    const-string/jumbo v1, "fixed user cant change"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-
-    .line 191
-    :cond_1
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aAg()V
-
-    .line 193
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
-
-    move-result v4
-
-    move v2, v3
-
-    :goto_1
-    if-ge v2, v4, :cond_3
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/view/View;->getTag()Ljava/lang/Object;
-
-    move-result-object v5
-
-    invoke-virtual {p1, v5}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    .line 195
-    :goto_2
-    if-eqz v0, :cond_4
-
-    .line 196
-    invoke-direct {p0, v0, v3, v3}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->a(Landroid/view/View;ZZ)V
-
-    goto :goto_0
-
-    .line 193
-    :cond_2
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    goto :goto_1
-
-    :cond_3
-    move-object v0, v1
-
-    goto :goto_2
-
-    .line 202
-    :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0}, Landroid/widget/LinearLayout;->getChildCount()I
-
-    move-result v0
-
-    add-int/lit8 v0, v0, 0x1
-
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->lr(I)V
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->dWD:Landroid/view/LayoutInflater;
-
-    sget v2, Lcom/tencent/mm/a$k;->select_contact_avatar:I
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v0, v2, v1, v3}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
-
-    move-result-object v1
-
-    sget v0, Lcom/tencent/mm/a$i;->avatar:I
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/ImageView;
-
-    invoke-static {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a$b;->b(Landroid/widget/ImageView;Ljava/lang/String;)V
-
-    invoke-static {p1}, Lcom/tencent/mm/model/w;->dN(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setContentDescription(Ljava/lang/CharSequence;)V
-
-    invoke-virtual {v1, p1}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
-
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/x;
-
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/x;-><init>(Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;)V
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQo:Landroid/view/animation/Animation;
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
-
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->gQk:Landroid/widget/LinearLayout;
-
-    invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
-
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aAi()V
-
-    invoke-virtual {v1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout$LayoutParams;
-
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    sget v3, Lcom/tencent/mm/a$g;->ContactAvatarSize:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->height:I
-
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    sget v3, Lcom/tencent/mm/a$g;->ContactAvatarSize:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->width:I
-
-    invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v2
-
-    sget v3, Lcom/tencent/mm/a$g;->BasicPaddingSize:I
-
-    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
-
-    move-result v2
-
-    iput v2, v0, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
-
-    invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
-
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/ui/MultiSelectContactView;->aAh()V
-
-    goto/16 :goto_0
 .end method

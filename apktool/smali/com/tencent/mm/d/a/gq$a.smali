@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public aDT:Z
+.field public action:I
 
 
 # direct methods
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 14
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

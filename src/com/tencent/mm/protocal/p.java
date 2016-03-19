@@ -1,45 +1,28 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.adm;
-import com.tencent.mm.protocal.b.adt;
-import com.tencent.mm.protocal.b.ck;
-import com.tencent.mm.protocal.b.rd;
-import com.tencent.mm.protocal.b.re;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.protocal.b.alx;
+import com.tencent.mm.protocal.b.ve;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class p
 {
   public static final class a
-    extends i.c
-    implements i.a
+    extends h.c
+    implements h.a
   {
-    public rd hhg = new rd();
+    public ve iVd = new ve();
     
-    public final byte[] tH()
+    public final byte[] tY()
     {
-      hgO = y.aDu();
-      hhg.hmC = new adt().aA(bn.aFz());
-      hhg.hLO = i.a(this);
-      return hhg.toByteArray();
+      iUJ = z.aTx();
+      iVd.jbx = new alx().aO(ay.aVA());
+      iVd.jGS = h.a(this);
+      return iVd.toByteArray();
     }
     
-    public final int tI()
+    public final int tZ()
     {
-      return 429;
-    }
-  }
-  
-  public static final class b
-    extends i.d
-    implements i.b
-  {
-    public re hhh = new re();
-    
-    public final int z(byte[] paramArrayOfByte)
-    {
-      hhh = ((re)new re().x(paramArrayOfByte));
-      i.a(this, hhh.hLQ);
-      return hhh.hLQ.hkV;
+      return 572;
     }
   }
 }

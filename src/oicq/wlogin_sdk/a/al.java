@@ -5,7 +5,7 @@ public final class al
 {
   public al()
   {
-    jNs = 361;
+    mbE = 361;
   }
 }
 

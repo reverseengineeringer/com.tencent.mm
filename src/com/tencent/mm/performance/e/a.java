@@ -2,27 +2,27 @@ package com.tencent.mm.performance.e;
 
 public abstract class a
 {
-  protected long bUh = -1L;
-  public long bUi = -1L;
+  protected long cld = -1L;
+  public long cle = -1L;
   
-  public abstract String Dk();
+  public abstract String Fs();
   
-  public abstract void Dl();
+  public abstract void Ft();
   
-  public final boolean Dm()
+  public final boolean Fu()
   {
-    if (bUi == -1L) {
+    if (cle == -1L) {
       return true;
     }
-    if (bUh == -1L)
+    if (cld == -1L)
     {
-      bUh = System.currentTimeMillis();
+      cld = System.currentTimeMillis();
       return true;
     }
     long l = System.currentTimeMillis();
-    if (l - bUh >= bUi)
+    if (l - cld >= cle)
     {
-      bUh = l;
+      cld = l;
       return true;
     }
     return false;

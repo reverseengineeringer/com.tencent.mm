@@ -242,6 +242,16 @@
     return-wide v0
 .end method
 
+.method public getNotificationUri()Landroid/net/Uri;
+    .locals 1
+
+    .prologue
+    .line 250
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public getPosition()I
     .locals 1
 

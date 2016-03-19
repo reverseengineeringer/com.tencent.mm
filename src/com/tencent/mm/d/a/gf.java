@@ -1,23 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class gf
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDF = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBf = new a();
+  public b aBg = new b();
   
   public gf()
   {
-    id = "RemoveSnsTask";
-    hXT = atO;
+    id = "LbsroomLogic";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int state = -1;
+    public String aBh;
+    public int aBi = 0;
+    public int axD = 0;
+  }
+  
+  public static final class b
+  {
+    public boolean atR = false;
   }
 }
 

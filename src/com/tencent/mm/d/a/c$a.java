@@ -4,7 +4,7 @@ import com.tencent.mm.ui.MMActivity;
 
 public final class c$a
 {
-  public MMActivity atT;
+  public MMActivity arW;
   public int errCode;
   public int errType;
 }

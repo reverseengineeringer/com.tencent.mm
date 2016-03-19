@@ -13,19 +13,19 @@ final class GridHeadersGridView$a
   
   public final void run()
   {
-    View localView = jwB.oX(jwB.jwz);
+    View localView = lzs.rX(lzs.lzq);
     boolean bool1;
     if (localView != null)
     {
-      GridHeadersGridView.a(jwB, jwB.jwz);
-      if ((!aAm()) || (jwB.ql)) {
+      GridHeadersGridView.a(lzs, lzs.lzq);
+      if ((!SD()) || (lzs.pp)) {
         break label141;
       }
-      GridHeadersGridView localGridHeadersGridView = jwB;
-      if (jwu == null) {
+      GridHeadersGridView localGridHeadersGridView = lzs;
+      if (lzl == null) {
         break label136;
       }
-      bool1 = jwu.aSB();
+      bool1 = lzl.biW();
       bool2 = bool1;
       if (bool1)
       {
@@ -41,12 +41,12 @@ final class GridHeadersGridView$a
     {
       if (bool2)
       {
-        jwB.gRc = -2;
-        jwB.setPressed(false);
+        lzs.drt = -2;
+        lzs.setPressed(false);
         localView.setPressed(false);
         return;
       }
-      jwB.gRc = 2;
+      lzs.drt = 2;
       return;
       bool1 = false;
       break;

@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final jPx:Lb/a/d/i;
+.field public static final mdJ:Lb/a/d/i;
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     invoke-direct {v0, v1, v2}, Lb/a/d/i;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    sput-object v0, Lb/a/d/b;->jPx:Lb/a/d/i;
+    sput-object v0, Lb/a/d/b;->mdJ:Lb/a/d/i;
 
     .line 23
     return-void

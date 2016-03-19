@@ -4,24 +4,32 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
+import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnFocusChangeListener;
+import android.view.View.OnTouchListener;
 import android.widget.EditText;
-import com.tencent.mm.a.h;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.MMActivity;
 
 public class VoiceSearchEditText
   extends EditText
 {
   private Context context;
-  private View.OnClickListener gJC;
-  public String iEe = "";
-  final Drawable iLs = getResources().getDrawable(a.h.voicesearch_enter_btn);
-  final Drawable iLt = null;
-  final Drawable iLu = getResources().getDrawable(a.h.search_clear);
-  private a iLv;
-  private boolean iLw = true;
-  private boolean iLx = false;
-  private boolean iLy = false;
+  public String iGN = "";
+  private View.OnClickListener iyh;
+  final Drawable kKD = getResources().getDrawable(2130970319);
+  final Drawable kKE = null;
+  final Drawable kKF = getResources().getDrawable(2130970245);
+  private a kKG;
+  private boolean kKH = true;
+  private boolean kKI = false;
+  private boolean kKJ = false;
   
   public VoiceSearchEditText(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -35,32 +43,113 @@ public class VoiceSearchEditText
     init(paramContext);
   }
   
-  private void aNw()
+  private void bdn()
   {
-    iLw = true;
-    if (iLx)
+    kKH = true;
+    if (kKI)
     {
-      setCompoundDrawables(iLt, getCompoundDrawables()[1], iLs, getCompoundDrawables()[3]);
+      setCompoundDrawables(kKE, getCompoundDrawables()[1], kKD, getCompoundDrawables()[3]);
       return;
     }
     if (getText().toString().length() > 0)
     {
-      setCompoundDrawables(iLt, getCompoundDrawables()[1], iLu, getCompoundDrawables()[3]);
+      setCompoundDrawables(kKE, getCompoundDrawables()[1], kKF, getCompoundDrawables()[3]);
       return;
     }
-    setCompoundDrawables(iLt, getCompoundDrawables()[1], null, getCompoundDrawables()[3]);
+    setCompoundDrawables(kKE, getCompoundDrawables()[1], null, getCompoundDrawables()[3]);
   }
   
   private void init(Context paramContext)
   {
     context = paramContext;
-    iLx = false;
-    iLs.setBounds(0, 0, iLs.getIntrinsicWidth(), iLs.getIntrinsicHeight());
-    iLu.setBounds(0, 0, iLu.getIntrinsicWidth(), iLu.getIntrinsicHeight());
-    aNw();
-    setOnTouchListener(new dl(this));
-    addTextChangedListener(new dm(this));
-    setOnFocusChangeListener(new dn(this));
+    kKI = false;
+    kKD.setBounds(0, 0, kKD.getIntrinsicWidth(), kKD.getIntrinsicHeight());
+    kKF.setBounds(0, 0, kKF.getIntrinsicWidth(), kKF.getIntrinsicHeight());
+    bdn();
+    setOnTouchListener(new View.OnTouchListener()
+    {
+      public final boolean onTouch(View paramAnonymousView, MotionEvent paramAnonymousMotionEvent)
+      {
+        paramAnonymousView = VoiceSearchEditText.this;
+        if (paramAnonymousView.getCompoundDrawables()[2] == null) {
+          return false;
+        }
+        if (paramAnonymousMotionEvent.getAction() != 1) {
+          return true;
+        }
+        VoiceSearchEditText.a(VoiceSearchEditText.this, true);
+        if ((VoiceSearchEditText.a(VoiceSearchEditText.this)) && (VoiceSearchEditText.b(VoiceSearchEditText.this)) && (paramAnonymousView.getText().toString().equals(""))) {
+          if (paramAnonymousMotionEvent.getX() > paramAnonymousView.getWidth() - paramAnonymousView.getPaddingRight() - kKD.getIntrinsicWidth() - a.fromDPToPix(VoiceSearchEditText.c(paramAnonymousView), 25))
+          {
+            if (VoiceSearchEditText.d(VoiceSearchEditText.this) != null)
+            {
+              u.i("!44@/B4Tb64lLpKCGRi+LcyHSHn3YP/tfzozJcQbNm6H6Is=", "user clicked voice button");
+              if ((getContext() instanceof MMActivity)) {
+                ((MMActivity)getContext()).hideVKB(paramAnonymousView);
+              }
+              VoiceSearchEditText.d(VoiceSearchEditText.this).onClick(VoiceSearchEditText.this);
+              return true;
+            }
+          }
+          else
+          {
+            paramAnonymousView.requestFocus();
+            if ((getContext() instanceof Activity)) {
+              MMActivity.I((Activity)getContext());
+            }
+            if (VoiceSearchEditText.d(VoiceSearchEditText.this) != null) {
+              VoiceSearchEditText.d(VoiceSearchEditText.this).onClick(null);
+            }
+          }
+        }
+        for (;;)
+        {
+          return false;
+          if (paramAnonymousView.getText().toString().length() > 0)
+          {
+            if (paramAnonymousMotionEvent.getX() > paramAnonymousView.getWidth() - paramAnonymousView.getPaddingRight() - kKF.getIntrinsicWidth() - a.fromDPToPix(VoiceSearchEditText.c(paramAnonymousView), 25))
+            {
+              paramAnonymousView.setText("");
+              VoiceSearchEditText.e(VoiceSearchEditText.this);
+            }
+            else if (!paramAnonymousView.isFocused())
+            {
+              paramAnonymousView.requestFocus();
+              if ((getContext() instanceof Activity)) {
+                MMActivity.I((Activity)getContext());
+              }
+            }
+          }
+          else if (VoiceSearchEditText.d(VoiceSearchEditText.this) != null) {
+            VoiceSearchEditText.d(VoiceSearchEditText.this).onClick(null);
+          }
+        }
+      }
+    });
+    addTextChangedListener(new TextWatcher()
+    {
+      public final void afterTextChanged(Editable paramAnonymousEditable) {}
+      
+      public final void beforeTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
+      
+      public final void onTextChanged(CharSequence paramAnonymousCharSequence, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3)
+      {
+        VoiceSearchEditText.a(VoiceSearchEditText.this, true);
+        VoiceSearchEditText.e(VoiceSearchEditText.this);
+      }
+    });
+    setOnFocusChangeListener(new View.OnFocusChangeListener()
+    {
+      public final void onFocusChange(View paramAnonymousView, boolean paramAnonymousBoolean)
+      {
+        u.d("!44@/B4Tb64lLpKCGRi+LcyHSHn3YP/tfzozJcQbNm6H6Is=", "onFocusChange hasFocus = [%s], currentFocusState = [%s]", new Object[] { Boolean.valueOf(paramAnonymousBoolean), Boolean.valueOf(VoiceSearchEditText.f(VoiceSearchEditText.this)) });
+        if ((!paramAnonymousBoolean) && (VoiceSearchEditText.f(VoiceSearchEditText.this)))
+        {
+          VoiceSearchEditText.e(VoiceSearchEditText.this);
+          VoiceSearchEditText.a(VoiceSearchEditText.this, false);
+        }
+      }
+    });
     if ((paramContext instanceof Activity))
     {
       paramContext = ((Activity)paramContext).getCurrentFocus();
@@ -69,7 +158,7 @@ public class VoiceSearchEditText
       }
     }
     label131:
-    for (iLy = true;; iLy = false)
+    for (kKJ = true;; kKJ = false)
     {
       requestFocus();
       return;
@@ -80,14 +169,14 @@ public class VoiceSearchEditText
   
   public void setOnContentClearListener(a parama)
   {
-    iLv = parama;
+    kKG = parama;
   }
   
   public void setOnSearchClickListener(View.OnClickListener paramOnClickListener)
   {
-    gJC = paramOnClickListener;
-    iLx = true;
-    aNw();
+    iyh = paramOnClickListener;
+    kKI = true;
+    bdn();
   }
   
   public static abstract interface a {}

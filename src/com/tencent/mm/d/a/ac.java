@@ -1,25 +1,23 @@
 package com.tencent.mm.d.a;
 
-import android.app.Activity;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ac
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a auR = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a ats = new a();
   
   public ac()
   {
-    id = "DealQBarStr";
-    hXT = atO;
+    id = "CheckF2FRemoteVideoOpen";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String auC;
-    public Activity auD;
+    public boolean ig = false;
   }
 }
 

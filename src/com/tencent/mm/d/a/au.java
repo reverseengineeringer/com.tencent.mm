@@ -1,26 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.app.Activity;
+import com.tencent.mm.sdk.c.b;
 
 public final class au
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avK = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atX = new a();
   
   public au()
   {
-    id = "ExDeviceIBeaconRangingResult";
-    hXT = atO;
+    id = "DealQBarStr";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String avH;
-    public int avL = 0;
-    public int avM = 0;
-    public double avN = 0.0D;
+    public String asW;
+    public Activity asX;
   }
 }
 

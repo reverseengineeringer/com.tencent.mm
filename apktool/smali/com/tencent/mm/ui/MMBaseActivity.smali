@@ -33,26 +33,14 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getResources()Landroid/content/res/Resources;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/MMBaseActivity;->getAssets()Landroid/content/res/AssetManager;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/mm/ap/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ap/e;
-
-    invoke-static {}, Lcom/tencent/mm/ap/e;->aDG()Z
-
-    move-result v0
 
     if-eqz v0, :cond_0
 
     .line 26
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getResources()Landroid/content/res/Resources;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
@@ -92,22 +80,10 @@
 
     if-eqz v1, :cond_0
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/MMBaseActivity;->getAssets()Landroid/content/res/AssetManager;
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/tencent/mm/ap/e;->a(Landroid/content/res/AssetManager;)Lcom/tencent/mm/ap/e;
-
-    invoke-static {}, Lcom/tencent/mm/ap/e;->aDG()Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
     .line 36
     check-cast v0, Landroid/view/LayoutInflater;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/ek;->a(Landroid/view/LayoutInflater;)Landroid/view/LayoutInflater;
+    invoke-static {v0}, Lcom/tencent/mm/ui/p;->a(Landroid/view/LayoutInflater;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
@@ -132,10 +108,10 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/a;->ah(Landroid/view/View;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/a;->ak(Landroid/view/View;)V
 
     .line 46
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/a;->cH(Landroid/content/Context;)V
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/a;->dj(Landroid/content/Context;)V
 
     .line 47
     return-void

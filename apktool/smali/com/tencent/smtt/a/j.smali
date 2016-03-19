@@ -3,107 +3,141 @@
 .source "SourceFile"
 
 
+# static fields
+.field private static lUT:Ljava/lang/Class;
+
+.field private static lUU:Ljava/lang/reflect/Method;
+
+
 # direct methods
-.method public static aE(Ljava/lang/String;)Ljava/lang/String;
-    .locals 8
+.method static constructor <clinit>()V
+    .locals 5
 
     .prologue
-    const/16 v7, 0x10
-
-    const/4 v0, 0x0
-
-    .line 32
-    if-nez p0, :cond_1
-
-    .line 65
-    :cond_0
-    :goto_0
-    return-object v0
-
-    .line 39
-    :cond_1
+    .line 30
     :try_start_0
-    invoke-virtual {p0}, Ljava/lang/String;->getBytes()[B
+    const-string/jumbo v0, "android.os.SystemProperties"
 
-    move-result-object v1
-
-    .line 40
-    const-string/jumbo v2, "MD5"
-
-    invoke-static {v2}, Ljava/security/MessageDigest;->getInstance(Ljava/lang/String;)Ljava/security/MessageDigest;
-
-    move-result-object v2
-
-    .line 41
-    invoke-virtual {v2, v1}, Ljava/security/MessageDigest;->update([B)V
-
-    .line 42
-    invoke-virtual {v2}, Ljava/security/MessageDigest;->digest()[B
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    array-length v1, v2
-
-    if-lez v1, :cond_0
-
-    new-instance v3, Ljava/lang/StringBuffer;
-
-    array-length v1, v2
-
-    mul-int/lit8 v1, v1, 0x2
-
-    invoke-direct {v3, v1}, Ljava/lang/StringBuffer;-><init>(I)V
-
-    const/4 v1, 0x0
-
-    :goto_1
-    array-length v4, v2
-
-    if-ge v1, v4, :cond_3
-
-    aget-byte v4, v2, v1
-
-    and-int/lit16 v4, v4, 0xff
-
-    if-ge v4, v7, :cond_2
-
-    const-string/jumbo v4, "0"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    :cond_2
-    aget-byte v4, v2, v1
-
-    and-int/lit16 v4, v4, 0xff
-
-    int-to-long v4, v4
-
-    const/16 v6, 0x10
-
-    invoke-static {v4, v5, v6}, Ljava/lang/Long;->toString(JI)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
-
-    add-int/lit8 v1, v1, 0x1
-
-    goto :goto_1
-
-    :cond_3
-    invoke-virtual {v3}, Ljava/lang/StringBuffer;->toString()Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
+    .line 31
+    sput-object v0, Lcom/tencent/smtt/a/j;->lUT:Ljava/lang/Class;
+
+    const-string/jumbo v1, "get"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Class;
+
+    const/4 v3, 0x0
+
+    const-class v4, Ljava/lang/String;
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    const-class v4, Ljava/lang/String;
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/smtt/a/j;->lUU:Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 35
+    :goto_0
+    return-void
+
+    .line 34
+    :catch_0
+    move-exception v0
+
+    goto :goto_0
+.end method
+
+.method public static cJ(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 65
+    invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 68
+    :goto_0
+    return-object p1
+
+    :cond_0
+    invoke-static {p0, p1}, Lcom/tencent/smtt/a/j;->cK(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    goto :goto_0
+.end method
+
+.method private static cK(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    .locals 4
+
+    .prologue
+    .line 72
+    sget-object v0, Lcom/tencent/smtt/a/j;->lUT:Ljava/lang/Class;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/tencent/smtt/a/j;->lUU:Ljava/lang/reflect/Method;
+
+    if-nez v0, :cond_1
+
+    :cond_0
+    move-object v0, p1
+
+    .line 80
+    :goto_0
+    return-object v0
+
+    .line 77
+    :cond_1
+    :try_start_0
+    sget-object v0, Lcom/tencent/smtt/a/j;->lUU:Ljava/lang/reflect/Method;
+
+    sget-object v1, Lcom/tencent/smtt/a/j;->lUT:Ljava/lang/Class;
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p0, v2, v3
+
+    const/4 v3, 0x1
+
+    aput-object p1, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
     goto :goto_0
 
-    .line 65
     :catch_0
-    move-exception v1
+    move-exception v0
+
+    move-object v0, p1
 
     goto :goto_0
 .end method

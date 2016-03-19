@@ -1,30 +1,31 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class do
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azE = new a();
-  public b azF = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a axq = new a();
+  public b axr = new b();
   
   public do()
   {
-    id = "GetSafeDeviceName";
-    hXT = atO;
+    id = "ExtRecord";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public Context context;
+    public int op;
+    public String username;
   }
   
   public static final class b
   {
-    public String azG;
+    public String anC;
+    public boolean atR = false;
   }
 }
 

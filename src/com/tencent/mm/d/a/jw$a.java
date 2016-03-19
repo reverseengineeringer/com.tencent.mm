@@ -1,6 +1,11 @@
 package com.tencent.mm.d.a;
 
-public final class jw$a {}
+import com.tencent.mm.storage.ag;
+
+public final class jw$a
+{
+  public ag ask;
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.d.a.jw.a

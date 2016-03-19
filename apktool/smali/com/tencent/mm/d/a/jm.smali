@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/jm;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aGB:Lcom/tencent/mm/d/a/jm$a;
+.field public aGe:Lcom/tencent/mm/d/a/jm$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/jm;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/jm;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/jm;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/jm;->arR:Z
 
     return-void
 .end method
@@ -41,24 +41,24 @@
     .locals 1
 
     .prologue
-    .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    .line 10
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    .line 13
+    .line 15
     new-instance v0, Lcom/tencent/mm/d/a/jm$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/jm$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/jm;->aGB:Lcom/tencent/mm/d/a/jm$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/jm;->aGe:Lcom/tencent/mm/d/a/jm$a;
 
-    .line 8
-    const-string/jumbo v0, "VoicePrintNoiseDetectResult"
+    .line 10
+    const-string/jumbo v0, "RemoveSnsTask"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/jm;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/jm;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/jm;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/jm;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/jm;->jUI:Z
 
     return-void
 .end method

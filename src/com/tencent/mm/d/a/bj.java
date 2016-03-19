@@ -1,29 +1,26 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class bj
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awr = new a();
-  public b aws = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aux = new a();
   
   public bj()
   {
-    id = "ExDeviceSimpleBTScanDevice";
-    hXT = atO;
+    id = "EmotionStateChange";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean Kr = false;
-  }
-  
-  public static final class b
-  {
-    public boolean avu;
+    public String auy;
+    public String auz;
+    public int progress = 0;
+    public int status = 0;
   }
 }
 

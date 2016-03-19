@@ -2,8 +2,11 @@ package com.tencent.mm.d.a;
 
 public final class kb$a
 {
-  public String aHo;
-  public String aHp;
+  public boolean aGA;
+  public int atB;
+  public int key;
+  public int type;
+  public int value;
 }
 
 /* Location:

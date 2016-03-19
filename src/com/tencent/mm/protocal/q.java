@@ -1,33 +1,45 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.adt;
-import com.tencent.mm.protocal.b.rz;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.protocal.b.alq;
+import com.tencent.mm.protocal.b.alx;
+import com.tencent.mm.protocal.b.dd;
+import com.tencent.mm.protocal.b.vt;
+import com.tencent.mm.protocal.b.vu;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class q
 {
   public static final class a
-    extends i.c
-    implements i.a
+    extends h.c
+    implements h.a
   {
-    public rz hhi = new rz();
+    public vt iVe = new vt();
     
-    public final int getCmdId()
+    public final byte[] tY()
     {
-      return 48;
+      iUJ = z.aTv();
+      iVe.jbx = new alx().aO(ay.aVA());
+      iVe.jGS = h.a(this);
+      return iVe.toByteArray();
     }
     
-    public final byte[] tH()
+    public final int tZ()
     {
-      hgO = y.aDw();
-      hhi.hmC = new adt().aA(bn.aFz());
-      hhi.hLO = i.a(this);
-      return hhi.toByteArray();
+      return 429;
     }
+  }
+  
+  public static final class b
+    extends h.d
+    implements h.b
+  {
+    public vu iVf = new vu();
     
-    public final int tI()
+    public final int y(byte[] paramArrayOfByte)
     {
-      return 107;
+      iVf = ((vu)new vu().am(paramArrayOfByte));
+      h.a(this, iVf.jHj);
+      return iVf.jHj.iZL;
     }
   }
 }

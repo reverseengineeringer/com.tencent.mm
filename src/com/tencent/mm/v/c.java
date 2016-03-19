@@ -1,110 +1,98 @@
 package com.tencent.mm.v;
 
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.br;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.pointers.PInt;
-import com.tencent.mm.pointers.PString;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.j.b;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
-import com.tencent.mm.storage.as;
-import com.tencent.mm.y.af;
-import com.tencent.mm.y.e;
-import junit.framework.Assert;
+import android.content.ContentValues;
+import android.database.Cursor;
+import com.tencent.mm.az.g;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.h.a;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.i;
+import com.tencent.mm.model.s;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.k;
+import com.tencent.mm.storage.q;
 
 public final class c
-  extends j
-  implements r
+  extends s
 {
-  private com.tencent.mm.q.d apI;
-  private ar aub = null;
-  private long byb;
-  private long byc;
-  private ac handler = new d(this);
-  
-  public c(int paramInt1, String paramString1, String paramString2, String paramString3, int paramInt2)
+  public final boolean cy(int paramInt)
   {
-    PString localPString = new PString();
-    PInt localPInt1 = new PInt();
-    PInt localPInt2 = new PInt();
-    com.tencent.mm.y.g localg = af.zl();
-    e locale = localg.a(paramString3, true, paramInt1, paramInt2, localPInt1, localPInt2);
-    long l;
-    if (locale == null)
+    return (paramInt != 0) && (paramInt < 604176383);
+  }
+  
+  public final String getTag()
+  {
+    return "!44@/B4Tb64lLpLYLFA5RsXPaniyp/fJB2W9QOIAqIRHvJI=";
+  }
+  
+  public final void transfer(int paramInt)
+  {
+    u.d("!44@/B4Tb64lLpLYLFA5RsXPaniyp/fJB2W9QOIAqIRHvJI=", "the previous version is %d", new Object[] { Integer.valueOf(paramInt) });
+    if (!cy(paramInt))
     {
-      l = -1L;
-      byb = l;
-      t.i("!56@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWXUqGzVrvIh3GjvVON7+gyQ==", "send local msgImg, imgLocalId = " + byb + ", fromUserName = " + paramString1 + ", toUserName = " + paramString2 + ", origImgPath = " + paramString3);
-      aub = new ar();
-      aub.setStatus(1);
-      aub.setType(com.tencent.mm.model.w.ez(paramString2));
-      aub.setTalker(paramString2);
-      aub.bh(1);
-      aub.ck(value);
-      aub.bp(value);
-      aub.bq(value);
-      aub.w(br.eV(aub.field_talker));
-      byc = ax.tl().rk().C(aub);
-      if (byc < 0L) {
-        break label421;
-      }
-    }
-    label421:
-    for (boolean bool = true;; bool = false)
-    {
-      Assert.assertTrue(bool);
-      t.i("!56@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWXUqGzVrvIh3GjvVON7+gyQ==", "NetSceneUploadMsgImgFake: local msgId = " + byc);
-      paramString1 = af.zl().M(byb);
-      byc = ((int)byc);
-      af.zl().a(byb, paramString1);
-      t.d("!56@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWXUqGzVrvIh3GjvVON7+gyQ==", "NetSceneUploadMsgImg: local imgId = " + byb + " img len = " + bsm);
+      u.w("!44@/B4Tb64lLpLYLFA5RsXPaniyp/fJB2W9QOIAqIRHvJI=", "do not need transfer");
       return;
-      offset = bsm;
-      value = bCS;
-      l = bqt.insert("ImgInfo2", "id", locale.mA());
-      if (l != -1L) {
-        localg.Ci();
-      }
-      break;
     }
-  }
-  
-  public final int a(m paramm, com.tencent.mm.q.d paramd)
-  {
-    if (byb < 0L) {}
-    do
+    long l = System.currentTimeMillis();
+    if (ay.d((Integer)ah.tD().rn().get(86017, null)) == 3)
     {
-      return -1;
-      apI = paramd;
-    } while (zlMbyb).status == -1);
-    t.i("!56@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWXUqGzVrvIh3GjvVON7+gyQ==", "send local msgimg, imgLocalId = " + byb);
-    handler.sendEmptyMessageDelayed(0, 500L);
-    return 999;
-  }
-  
-  protected final int a(com.tencent.mm.network.w paramw)
-  {
-    return j.b.btz;
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, com.tencent.mm.network.w paramw, byte[] paramArrayOfByte)
-  {
-    t.i("!56@/B4Tb64lLpK+IBX8XDgnvlGPgu9QXEXWXUqGzVrvIh3GjvVON7+gyQ==", "recv local msgimg, imgLocalId = " + byb);
-    aub.setStatus(2);
-    aub.w(br.c(aub.field_talker, System.currentTimeMillis() / 1000L));
-    ax.tl().rk().a(byc, aub);
-    apI.a(0, 0, "", this);
-  }
-  
-  public final int getType()
-  {
-    return 110;
+      u.w("!44@/B4Tb64lLpLYLFA5RsXPaniyp/fJB2W9QOIAqIRHvJI=", "check old contact not exist");
+      return;
+    }
+    tDbzA.cj("rcontact", "update rcontact set verifyflag=0 where verifyflag is null;");
+    Cursor localCursor = ah.tD().rq().c("@all.weixin.android", "", null);
+    localCursor.moveToFirst();
+    if (!localCursor.isAfterLast())
+    {
+      k localk = new k();
+      localk.c(localCursor);
+      q localq = ah.tD().rq();
+      Object localObject2 = field_username;
+      Object localObject1;
+      if (localObject2 != null)
+      {
+        localObject1 = localObject2;
+        if (k.Ec((String)localObject2)) {
+          localObject1 = k.Ee((String)localObject2);
+        }
+        localk.aT(localk.pY());
+        if (!i.c(localk)) {
+          break label256;
+        }
+        localk.aT(43);
+        localk.bI(com.tencent.mm.platformtools.c.ks(localk.qy()));
+        localk.bJ(com.tencent.mm.platformtools.c.kr(localk.qy()));
+        localk.bL(com.tencent.mm.platformtools.c.kr(localk.qz()));
+        localk.bM(localk.qz());
+      }
+      for (;;)
+      {
+        localCursor.moveToNext();
+        break;
+        label256:
+        if (i.ey(field_username))
+        {
+          u.i("!32@/B4Tb64lLpLSOpQlr7qYXa3KX0iP+QzT", "update official account helper showhead %d", new Object[] { Integer.valueOf(31) });
+          localk.aT(31);
+        }
+        bGU.aw(localk);
+        bGU.Ep();
+        u.d("!32@/B4Tb64lLpLSOpQlr7qYXa3KX0iP+QzT", "username=%s, showHead=%d, verifyFlag=%d", new Object[] { field_username, Integer.valueOf(field_showHead), Integer.valueOf(field_verifyFlag) });
+        localObject2 = localk.lX();
+        if ((int)bvi > 0) {
+          ((ContentValues)localObject2).put("rowid", Integer.valueOf((int)bvi));
+        }
+        if (((ContentValues)localObject2).size() > 0) {
+          aoX.update(q.Ej((String)localObject1), (ContentValues)localObject2, "username=?", new String[] { localObject1 });
+        }
+      }
+    }
+    localCursor.close();
+    u.d("!44@/B4Tb64lLpLYLFA5RsXPaniyp/fJB2W9QOIAqIRHvJI=", "update verifyflag from the beginning to update finish use %d ms", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    ah.tD().rn().set(86017, Integer.valueOf(3));
+    u.d("!44@/B4Tb64lLpLYLFA5RsXPaniyp/fJB2W9QOIAqIRHvJI=", "update verifyflag use time " + (System.currentTimeMillis() - l) + " ms");
   }
 }
 

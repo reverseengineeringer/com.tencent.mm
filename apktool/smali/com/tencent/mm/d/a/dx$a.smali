@@ -15,11 +15,9 @@
 
 
 # instance fields
-.field public aAa:Landroid/content/Intent;
+.field public axO:Ljava/lang/String;
 
-.field public atR:I
-
-.field public azZ:I
+.field public axP:Ljava/lang/String;
 
 
 # direct methods

@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/ab;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public auQ:Lcom/tencent/mm/d/a/ab$a;
+.field public atq:Lcom/tencent/mm/d/a/ab$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/ab;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ab;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/ab;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ab;->arR:Z
 
     return-void
 .end method
@@ -41,24 +41,24 @@
     .locals 1
 
     .prologue
-    .line 10
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    .line 8
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    .line 15
+    .line 13
     new-instance v0, Lcom/tencent/mm/d/a/ab$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/ab$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/ab;->auQ:Lcom/tencent/mm/d/a/ab$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/ab;->atq:Lcom/tencent/mm/d/a/ab$a;
 
-    .line 10
-    const-string/jumbo v0, "CreateOrJoinChatroom"
+    .line 8
+    const-string/jumbo v0, "CheckF2FCameraIsOpen"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/ab;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/ab;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/ab;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ab;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ab;->jUI:Z
 
     return-void
 .end method

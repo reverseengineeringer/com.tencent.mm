@@ -1,74 +1,44 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.pointers.PByteArray;
-import com.tencent.mm.protocal.b.adt;
-import com.tencent.mm.protocal.b.iu;
-import com.tencent.mm.protocal.b.yv;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.g;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class u$a
-  extends i.c
-  implements i.a
+  extends h.c
+  implements h.a
 {
-  public byte[] hgF;
-  public yv hho = new yv();
+  public byte[] ayo = null;
+  public long bWJ = -1L;
   
   public final int getCmdId()
   {
-    return 0;
+    return 1000000190;
   }
   
-  public final byte[] tH()
+  public final byte[] tY()
   {
-    int j = -1;
-    hgO = y.aDu();
-    hho.hmC = new adt().aA(bn.aFz());
-    hho.hLO = i.a(this);
-    hho.hIl = g.amP;
-    iu localiu = new iu();
-    hsp = 713;
-    Object localObject2 = new PByteArray();
-    Object localObject1 = new PByteArray();
-    int k = MMProtocalJni.generateECKey(hsp, (PByteArray)localObject2, (PByteArray)localObject1);
-    byte[] arrayOfByte = value;
-    localObject2 = value;
-    int m;
-    int i;
-    if (localObject2 != null)
-    {
-      localObject1 = localObject2;
-      hgF = ((byte[])localObject1);
-      m = hsp;
-      if (arrayOfByte != null) {
-        break label245;
-      }
-      i = -1;
-      label141:
-      if (localObject2 != null) {
-        break label252;
-      }
-    }
-    for (;;)
-    {
-      t.d("!32@/B4Tb64lLpIaQaX9ldlBuCApwi7M0jiA", "summerecdh nid:%d ret:%d, pub len: %d, pri len:%d, pub:%s, pri:%s", new Object[] { Integer.valueOf(m), Integer.valueOf(k), Integer.valueOf(i), Integer.valueOf(j), bn.aG(arrayOfByte), bn.aG((byte[])localObject2) });
-      hkI = new adt().aA(arrayOfByte);
-      hho.hkM = localiu;
-      return hho.toByteArray();
-      localObject1 = new byte[0];
-      break;
-      label245:
-      i = arrayOfByte.length;
-      break label141;
-      label252:
-      j = localObject2.length;
-    }
+    byte[] arrayOfByte = new byte[ayo.length + 8];
+    int i = (int)(ay.FS() - bWJ);
+    arrayOfByte[0] = ((byte)(i >> 24 & 0xFF));
+    arrayOfByte[1] = ((byte)(i >> 16 & 0xFF));
+    arrayOfByte[2] = ((byte)(i >> 8 & 0xFF));
+    arrayOfByte[3] = ((byte)(i & 0xFF));
+    arrayOfByte[4] = ((byte)(ayo.length >> 24 & 0xFF));
+    arrayOfByte[5] = ((byte)(ayo.length >> 16 & 0xFF));
+    arrayOfByte[6] = ((byte)(ayo.length >> 8 & 0xFF));
+    arrayOfByte[7] = ((byte)(ayo.length & 0xFF));
+    System.arraycopy(ayo, 0, arrayOfByte, 8, ayo.length);
+    ay.I(arrayOfByte);
+    return arrayOfByte;
   }
   
-  public final int tI()
+  public final int tZ()
   {
-    return 126;
+    return 268369922;
+  }
+  
+  public final boolean we()
+  {
+    return false;
   }
 }
 

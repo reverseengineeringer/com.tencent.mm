@@ -1,28 +1,58 @@
 package com.tencent.mm.ui.contact;
 
-import android.widget.AbsListView;
-import android.widget.AbsListView.OnScrollListener;
-import com.tencent.mm.as.d;
+import android.database.Cursor;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.k;
+import com.tencent.mm.storage.q;
+import com.tencent.mm.ui.contact.a.a;
+import com.tencent.mm.ui.contact.a.e;
+import java.util.ArrayList;
+import java.util.List;
 
-final class h
-  implements AbsListView.OnScrollListener
+public final class h
+  extends n
 {
-  h(AddressUI.a parama) {}
+  private Cursor fdB;
+  private List lkd;
   
-  public final void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
+  public h(MMBaseSelectContactUI paramMMBaseSelectContactUI, boolean paramBoolean, List paramList)
   {
-    if (paramInt1 < 2) {}
-    while (AddressUI.a.j(jet)) {
-      return;
-    }
-    AddressUI.a.k(jet);
+    super(paramMMBaseSelectContactUI, new ArrayList(), true, paramBoolean);
+    lkd = paramList;
+    fdB = ah.tD().rq().by(lkd);
   }
   
-  public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
+  public final void finish()
   {
-    if (paramInt == 2) {
-      d.aJu().aE(AddressUI.class.getName() + ".Listview", 4);
+    super.finish();
+    u.i("!44@/B4Tb64lLpJBjpmWwLt0p5jX61CJViLGxDayCo0jcLM=", "finish!");
+    if (fdB != null)
+    {
+      fdB.close();
+      fdB = null;
     }
+  }
+  
+  public final int getCount()
+  {
+    return fdB.getCount();
+  }
+  
+  protected final a iH(int paramInt)
+  {
+    if ((paramInt >= 0) && (fdB.moveToPosition(paramInt)))
+    {
+      e locale = new e(paramInt);
+      k localk = new k();
+      localk.c(fdB);
+      cId = localk;
+      lkT = awQ();
+      return locale;
+    }
+    u.e("!44@/B4Tb64lLpJBjpmWwLt0p5jX61CJViLGxDayCo0jcLM=", "create Data Item Error position=%d", new Object[] { Integer.valueOf(paramInt) });
+    return null;
   }
 }
 

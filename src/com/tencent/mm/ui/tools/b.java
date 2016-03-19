@@ -1,16 +1,21 @@
 package com.tencent.mm.ui.tools;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
+import android.graphics.Rect;
+import android.view.View;
 
-final class b
-  implements DialogInterface.OnClickListener
+public final class b
 {
-  b(AccountDeletedAlphaAlertUI paramAccountDeletedAlphaAlertUI) {}
-  
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public static void A(View paramView, int paramInt)
   {
-    AccountDeletedAlphaAlertUI.a(jof);
+    if (paramView == null) {}
+    p localp;
+    do
+    {
+      return;
+      localp = new p(paramView);
+      paramView.setBackgroundResource(paramInt);
+    } while (view == null);
+    view.setPadding(lxn.left, lxn.top, lxn.right, lxn.bottom);
   }
 }
 

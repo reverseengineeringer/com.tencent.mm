@@ -3,8 +3,14 @@
 .source "SourceFile"
 
 
+# annotations
+.annotation runtime Lcom/tencent/mm/ui/base/a;
+    value = 0x13
+.end annotation
+
+
 # instance fields
-.field private imh:Lcom/tencent/mm/ui/base/bn;
+.field private coA:Lcom/tencent/mm/ui/base/p;
 
 .field private startTime:J
 
@@ -14,10 +20,10 @@
     .locals 2
 
     .prologue
-    .line 13
+    .line 15
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMBaseActivity;-><init>()V
 
-    .line 22
+    .line 24
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->startTime:J
@@ -25,11 +31,11 @@
     return-void
 .end method
 
-.method private B(Landroid/content/Intent;)V
+.method private K(Landroid/content/Intent;)V
     .locals 5
 
     .prologue
-    .line 55
+    .line 57
     const-string/jumbo v0, "finish_data_transfer"
 
     const/4 v1, 0x0
@@ -38,7 +44,7 @@
 
     move-result v0
 
-    .line 56
+    .line 58
     const-string/jumbo v1, "!32@/B4Tb64lLpJAUoyR9+C90Nd9wv/xRLUz"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -69,25 +75,25 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 58
+    .line 60
     if-eqz v0, :cond_0
 
-    .line 59
+    .line 61
     invoke-virtual {p0}, Lcom/tencent/mm/ui/DataTransferUI;->finish()V
 
-    .line 61
+    .line 63
     :cond_0
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/DataTransferUI;)Lcom/tencent/mm/ui/base/bn;
+.method static synthetic a(Lcom/tencent/mm/ui/DataTransferUI;)Lcom/tencent/mm/ui/base/p;
     .locals 1
 
     .prologue
-    .line 13
-    iget-object v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->imh:Lcom/tencent/mm/ui/base/bn;
+    .line 15
+    iget-object v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->coA:Lcom/tencent/mm/ui/base/p;
 
     return-object v0
 .end method
@@ -100,10 +106,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 26
+    .line 28
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMBaseActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 27
+    .line 29
     const-string/jumbo v0, "!32@/B4Tb64lLpJAUoyR9+C90Nd9wv/xRLUz"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -124,21 +130,21 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 29
+    .line 31
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->startTime:J
 
-    .line 30
-    sget v0, Lcom/tencent/mm/a$n;->app_tip:I
+    .line 32
+    const v0, 0x7f0b0ddd
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/DataTransferUI;->getString(I)Ljava/lang/String;
 
-    sget v0, Lcom/tencent/mm/a$n;->app_data_transfering:I
+    const v0, 0x7f0b0e20
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/DataTransferUI;->getString(I)Ljava/lang/String;
 
@@ -146,30 +152,30 @@
 
     const/4 v1, 0x0
 
-    invoke-static {p0, v0, v4, v1}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/bn;
+    invoke-static {p0, v0, v4, v1}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/p;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->imh:Lcom/tencent/mm/ui/base/bn;
+    iput-object v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->coA:Lcom/tencent/mm/ui/base/p;
 
-    .line 32
-    new-instance v0, Lcom/tencent/mm/ui/l;
+    .line 34
+    new-instance v0, Lcom/tencent/mm/ui/DataTransferUI$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/l;-><init>(Lcom/tencent/mm/ui/DataTransferUI;)V
-
-    .line 43
-    const-wide/32 v1, 0xea60
-
-    invoke-virtual {v0, v4, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessageDelayed(IJ)Z
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/DataTransferUI$1;-><init>(Lcom/tencent/mm/ui/DataTransferUI;)V
 
     .line 45
+    const-wide/32 v1, 0xea60
+
+    invoke-virtual {v0, v4, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessageDelayed(IJ)Z
+
+    .line 47
     invoke-virtual {p0}, Lcom/tencent/mm/ui/DataTransferUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/DataTransferUI;->B(Landroid/content/Intent;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/DataTransferUI;->K(Landroid/content/Intent;)V
 
-    .line 46
+    .line 48
     return-void
 .end method
 
@@ -177,35 +183,35 @@
     .locals 2
 
     .prologue
-    .line 71
+    .line 73
     invoke-super {p0}, Lcom/tencent/mm/ui/MMBaseActivity;->onDestroy()V
 
-    .line 72
+    .line 74
     const-string/jumbo v0, "!32@/B4Tb64lLpJAUoyR9+C90Nd9wv/xRLUz"
 
     const-string/jumbo v1, "onDestroy"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 74
-    iget-object v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->imh:Lcom/tencent/mm/ui/base/bn;
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->coA:Lcom/tencent/mm/ui/base/p;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->imh:Lcom/tencent/mm/ui/base/bn;
+    iget-object v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->coA:Lcom/tencent/mm/ui/base/p;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/bn;->isShowing()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->isShowing()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 75
-    iget-object v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->imh:Lcom/tencent/mm/ui/base/bn;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/bn;->dismiss()V
-
     .line 77
+    iget-object v0, p0, Lcom/tencent/mm/ui/DataTransferUI;->coA:Lcom/tencent/mm/ui/base/p;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/p;->dismiss()V
+
+    .line 79
     :cond_0
     return-void
 .end method
@@ -214,7 +220,7 @@
     .locals 4
 
     .prologue
-    .line 50
+    .line 52
     const-string/jumbo v0, "!32@/B4Tb64lLpJAUoyR9+C90Nd9wv/xRLUz"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -235,12 +241,12 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 51
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/DataTransferUI;->B(Landroid/content/Intent;)V
+    .line 53
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/DataTransferUI;->K(Landroid/content/Intent;)V
 
-    .line 52
+    .line 54
     return-void
 .end method
 
@@ -248,7 +254,7 @@
     .locals 6
 
     .prologue
-    .line 65
+    .line 67
     const-string/jumbo v0, "!32@/B4Tb64lLpJAUoyR9+C90Nd9wv/xRLUz"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -273,11 +279,11 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 66
+    .line 68
     invoke-super {p0}, Lcom/tencent/mm/ui/MMBaseActivity;->onPause()V
 
-    .line 67
+    .line 69
     return-void
 .end method

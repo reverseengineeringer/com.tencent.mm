@@ -2,7 +2,7 @@ package com.tencent.mm.modelvoice;
 
 public abstract interface d$a
 {
-  public abstract void mk();
+  public abstract void lG();
 }
 
 /* Location:

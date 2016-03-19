@@ -42,7 +42,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$g;->MediumListHeight:I
+    const v2, 0x7f0501e3
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

@@ -1,14 +1,36 @@
 package com.tencent.mm.network;
 
-final class c
-  implements Runnable
+public abstract interface c
 {
-  c(int paramInt1, int paramInt2, byte[] paramArrayOfByte) {}
+  public abstract int A(byte[] paramArrayOfByte);
   
-  public final void run()
-  {
-    aw.Db().d(bRD, bRE);
-  }
+  public abstract void aN(boolean paramBoolean);
+  
+  public abstract void ba(int paramInt);
+  
+  public abstract byte[] gf(String paramString);
+  
+  public abstract void h(String paramString, byte[] paramArrayOfByte);
+  
+  public abstract void i(byte[] paramArrayOfByte, int paramInt);
+  
+  public abstract void reset();
+  
+  public abstract int rg();
+  
+  public abstract void setUsername(String paramString);
+  
+  public abstract byte[] tq();
+  
+  public abstract byte[] vR();
+  
+  public abstract boolean vS();
+  
+  public abstract byte[] vT();
+  
+  public abstract boolean vU();
+  
+  public abstract byte[] vV();
 }
 
 /* Location:

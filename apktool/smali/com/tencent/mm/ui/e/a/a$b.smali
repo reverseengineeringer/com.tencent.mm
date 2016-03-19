@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic jnR:Lcom/tencent/mm/ui/e/a/a;
+.field final synthetic ltj:Lcom/tencent/mm/ui/e/a/a;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 22
-    iput-object p1, p0, Lcom/tencent/mm/ui/e/a/a$b;->jnR:Lcom/tencent/mm/ui/e/a/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/e/a/a$b;->ltj:Lcom/tencent/mm/ui/e/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,19 +42,19 @@
 .method public varargs abstract a(Landroid/content/Context;Lcom/tencent/mm/ui/e/a/a;)Z
 .end method
 
-.method public final aK(Landroid/view/View;)V
+.method public final aN(Landroid/view/View;)V
     .locals 1
 
     .prologue
     .line 37
-    iget-object v0, p0, Lcom/tencent/mm/ui/e/a/a$b;->jnR:Lcom/tencent/mm/ui/e/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e/a/a$b;->ltj:Lcom/tencent/mm/ui/e/a/a;
 
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/e/a/a;->jnL:Z
+    iget-boolean v0, v0, Lcom/tencent/mm/ui/e/a/a;->ltd:Z
 
     if-eqz v0, :cond_0
 
     .line 38
-    sget v0, Lcom/tencent/mm/a$h;->comm_list_item_selector_no_divider:I
+    const v0, 0x7f0406bf
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -64,7 +64,7 @@
 
     .line 40
     :cond_0
-    sget v0, Lcom/tencent/mm/a$h;->comm_list_item_selector:I
+    const v0, 0x7f0406f2
 
     invoke-virtual {p1, v0}, Landroid/view/View;->setBackgroundResource(I)V
 

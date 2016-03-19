@@ -3,25 +3,25 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d;
+.implements Lcom/tencent/mm/r/d;
 
 
 # instance fields
-.field private aMQ:Ljava/lang/String;
+.field private aBH:Ljava/lang/String;
 
-.field private cqb:Landroid/widget/TextView;
+.field private cHA:Landroid/widget/TextView;
 
-.field private eKK:Ljava/lang/String;
+.field private fVw:Ljava/lang/String;
 
-.field private fap:Ljava/lang/String;
+.field private glJ:Ljava/lang/String;
 
-.field private itK:Ljava/lang/String;
+.field private ksC:Ljava/lang/String;
 
-.field private iwk:Lcom/tencent/mm/modelfriend/ag;
+.field private kvn:Lcom/tencent/mm/modelfriend/u;
 
-.field private iwl:Lcom/tencent/mm/modelfriend/aj;
+.field private kvo:Lcom/tencent/mm/modelfriend/v;
 
-.field private iwm:I
+.field private kvp:I
 
 
 # direct methods
@@ -35,27 +35,27 @@
     .line 43
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iput v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;Lcom/tencent/mm/modelfriend/ag;)Lcom/tencent/mm/modelfriend/ag;
+.method static synthetic a(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;Lcom/tencent/mm/modelfriend/u;)Lcom/tencent/mm/modelfriend/u;
     .locals 0
 
     .prologue
     .line 26
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwk:Lcom/tencent/mm/modelfriend/ag;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvn:Lcom/tencent/mm/modelfriend/u;
 
     return-object p1
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;Lcom/tencent/mm/modelfriend/aj;)Lcom/tencent/mm/modelfriend/aj;
+.method static synthetic a(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;Lcom/tencent/mm/modelfriend/v;)Lcom/tencent/mm/modelfriend/v;
     .locals 0
 
     .prologue
     .line 26
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwl:Lcom/tencent/mm/modelfriend/aj;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvo:Lcom/tencent/mm/modelfriend/v;
 
     return-object p1
 .end method
@@ -65,7 +65,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->fap:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->glJ:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -75,7 +75,7 @@
 
     .prologue
     .line 26
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     return v0
 .end method
@@ -85,7 +85,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->aMQ:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->aBH:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -97,7 +97,7 @@
     const/16 v0, 0x10
 
     .line 26
-    iget v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     packed-switch v1, :pswitch_data_0
 
@@ -124,46 +124,46 @@
     .end packed-switch
 .end method
 
-.method static synthetic e(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;)Lcom/tencent/mm/modelfriend/ag;
+.method static synthetic e(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;)Lcom/tencent/mm/modelfriend/u;
     .locals 1
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwk:Lcom/tencent/mm/modelfriend/ag;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvn:Lcom/tencent/mm/modelfriend/u;
 
     return-object v0
 .end method
 
-.method static synthetic f(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;)Lcom/tencent/mm/modelfriend/aj;
+.method static synthetic f(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;)Lcom/tencent/mm/modelfriend/v;
     .locals 1
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwl:Lcom/tencent/mm/modelfriend/aj;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvo:Lcom/tencent/mm/modelfriend/v;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 3
 
     .prologue
     .line 117
-    sget v0, Lcom/tencent/mm/a$n;->bind_mcontact_voice_verify_voice_title:I
+    const v0, 0x7f0b0522
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->qb(I)V
 
     .line 119
-    new-instance v0, Lcom/tencent/mm/ui/account/gq;
+    new-instance v0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/gq;-><init>(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$1;-><init>(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 129
-    sget v0, Lcom/tencent/mm/a$i;->languagename:I
+    const v0, 0x7f07073f
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->findViewById(I)Landroid/view/View;
 
@@ -171,10 +171,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->cqb:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->cHA:Landroid/widget/TextView;
 
     .line 130
-    sget v0, Lcom/tencent/mm/a$i;->bind_mcontact_voice_verify_btn:I
+    const v0, 0x7f070740
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->findViewById(I)Landroid/view/View;
 
@@ -183,48 +183,48 @@
     check-cast v0, Landroid/widget/Button;
 
     .line 132
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->aMQ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->aBH:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;->AE(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifySelectUI;->Gt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->itK:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->ksC:Ljava/lang/String;
 
     .line 133
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->cqb:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->cHA:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->itK:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->ksC:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 135
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->aMQ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->aBH:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/z/b;->hc(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/ac/b;->ii(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->fap:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->glJ:Ljava/lang/String;
 
     .line 137
-    sget v1, Lcom/tencent/mm/a$i;->ll_current_language:I
+    const v1, 0x7f07073e
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     .line 138
-    new-instance v2, Lcom/tencent/mm/ui/account/gr;
+    new-instance v2, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$2;
 
-    invoke-direct {v2, p0}, Lcom/tencent/mm/ui/account/gr;-><init>(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;)V
+    invoke-direct {v2, p0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$2;-><init>(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;)V
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 146
-    new-instance v1, Lcom/tencent/mm/ui/account/gs;
+    new-instance v1, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/gs;-><init>(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI$3;-><init>(Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -232,7 +232,7 @@
     return-void
 .end method
 
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
     .locals 3
 
     .prologue
@@ -273,7 +273,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 208
     return-void
@@ -284,7 +284,7 @@
 
     .prologue
     .line 201
-    sget v0, Lcom/tencent/mm/a$k;->bindmcontact_voice_verify:I
+    const v0, 0x7f0a027b
 
     return v0
 .end method
@@ -317,7 +317,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->itK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->ksC:Ljava/lang/String;
 
     .line 193
     const-string/jumbo v0, "voice_verify_code"
@@ -326,12 +326,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->fap:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->glJ:Ljava/lang/String;
 
     .line 195
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->cqb:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->cHA:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->itK:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->ksC:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -360,7 +360,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->aMQ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->aBH:Ljava/lang/String;
 
     .line 52
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->getIntent()Landroid/content/Intent;
@@ -377,20 +377,20 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iput v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     .line 54
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     const/4 v1, 0x2
 
     if-eq v0, v1, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     const/4 v1, 0x3
 
@@ -398,38 +398,38 @@
 
     .line 55
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x91
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     .line 59
     :cond_1
     :goto_0
-    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->DR()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/plugin/a/b;->FX()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->eKK:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->fVw:Ljava/lang/String;
 
     .line 61
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->Gb()V
 
     .line 62
     return-void
 
     .line 56
     :cond_2
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     const/4 v1, 0x4
 
     if-eq v0, v1, :cond_3
 
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     const/4 v1, 0x1
 
@@ -437,13 +437,13 @@
 
     .line 57
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x84
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     goto :goto_0
 .end method
@@ -456,35 +456,35 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
 
     .line 77
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x84
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 78
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x91
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 79
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     const/4 v1, 0x2
 
     if-eq v0, v1, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     const/4 v1, 0x3
 
@@ -498,7 +498,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v2
 
@@ -532,7 +532,7 @@
 
     const-string/jumbo v2, "R200_500"
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v2
 
@@ -567,11 +567,11 @@
     if-ne p1, v0, :cond_0
 
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->eKK:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->fVw:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->iZ(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kC(Ljava/lang/String;)V
 
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->Xh()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->age()V
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->finish()V
 
@@ -598,17 +598,17 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
     .line 67
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     const/4 v1, 0x2
 
     if-eq v0, v1, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->iwm:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByMobileVoiceVerifyUI;->kvp:I
 
     const/4 v1, 0x3
 
@@ -622,7 +622,7 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tx()Ljava/lang/String;
 
     move-result-object v2
 
@@ -656,7 +656,7 @@
 
     const-string/jumbo v2, "R200_500"
 
-    invoke-static {v2}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/model/ah;->fd(Ljava/lang/String;)I
 
     move-result v2
 
@@ -679,7 +679,7 @@
     .line 70
     const-string/jumbo v0, "R200_500"
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->iY(Ljava/lang/String;)V
+    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->kB(Ljava/lang/String;)V
 
     .line 72
     :cond_1

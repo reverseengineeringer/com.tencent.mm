@@ -4,58 +4,57 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import com.tencent.mm.d.a.fp;
-import com.tencent.mm.d.a.fp.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.d.a.it;
+import com.tencent.mm.d.a.it.a;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 final class b$b
-  extends e
+  extends c
 {
   public b$b(b paramb)
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(com.tencent.mm.sdk.c.b paramb)
   {
-    if (!b.a(dcT)) {
-      t.e("!44@/B4Tb64lLpIAhUt0Bg2QTqyk2VFFNI8farTpuVFOhY8=", "!isPluginInstall");
+    if (!b.a(dMr)) {
+      u.e("!44@/B4Tb64lLpIAhUt0Bg2QTqyk2VFFNI8farTpuVFOhY8=", "!isPluginInstall");
     }
     for (;;)
     {
       return false;
-      if (aa.getContext() == null)
+      if (y.getContext() == null)
       {
-        t.e("!44@/B4Tb64lLpIAhUt0Bg2QTqyk2VFFNI8farTpuVFOhY8=", "MMApplicationContext null");
+        u.e("!44@/B4Tb64lLpIAhUt0Bg2QTqyk2VFFNI8farTpuVFOhY8=", "MMApplicationContext null");
         return false;
       }
-      paramd = (fp)paramd;
-      t.d("!44@/B4Tb64lLpIAhUt0Bg2QTqyk2VFFNI8farTpuVFOhY8=", "GetScanCodeEvent callback flag = %s, url = %s", new Object[] { Integer.valueOf(aCp.aqq), aCp.aCs });
+      paramb = (it)paramb;
+      u.d("!44@/B4Tb64lLpIAhUt0Bg2QTqyk2VFFNI8farTpuVFOhY8=", "GetScanCodeEvent callback flag = %s, url = %s", new Object[] { Integer.valueOf(aEN.aou), aEN.aEQ });
       try
       {
-        switch (aCp.aqq)
+        switch (aEN.aou)
         {
         case 0: 
-          if ((!bn.iW(aCp.aCs)) && (aCp.aCs.startsWith("qlauncher://")))
+          if ((!ay.kz(aEN.aEQ)) && (aEN.aEQ.startsWith("qlauncher://")))
           {
             Intent localIntent = new Intent("android.intent.action.VIEW");
             localIntent.setComponent(new ComponentName("com.tencent.qlauncher", "com.tencent.qlauncher.thirdpartycoop.DispatchActivity"));
-            localIntent.setData(Uri.parse(aCp.aCs));
+            localIntent.setData(Uri.parse(aEN.aEQ));
             localIntent.setFlags(268435456);
-            aa.getContext().startActivity(localIntent);
-            aCq.ret = 1;
+            y.getContext().startActivity(localIntent);
+            aEO.ret = 1;
             return true;
           }
           break;
         }
       }
-      catch (Exception paramd)
+      catch (Exception paramb)
       {
-        t.e("!44@/B4Tb64lLpIAhUt0Bg2QTqyk2VFFNI8farTpuVFOhY8=", "Exception in ScanCodeResultEvent, %s", new Object[] { paramd.getMessage() });
+        u.e("!44@/B4Tb64lLpIAhUt0Bg2QTqyk2VFFNI8farTpuVFOhY8=", "Exception in ScanCodeResultEvent, %s", new Object[] { paramb.getMessage() });
         return false;
       }
     }

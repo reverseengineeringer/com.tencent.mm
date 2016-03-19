@@ -15,16 +15,25 @@
 
 
 # instance fields
-.field public aub:Lcom/tencent/mm/storage/ar;
+.field public aBB:Ljava/lang/String;
+
+.field public aBC:I
+
+.field public auE:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 17
+    const/4 v0, 0x1
+
+    iput v0, p0, Lcom/tencent/mm/d/a/gl$a;->aBC:I
 
     return-void
 .end method

@@ -1,14 +1,14 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
-import com.tencent.mm.pluginsdk.model.app.h;
+import com.tencent.mm.pluginsdk.model.app.f;
 
 public abstract interface AppGrid$b
 {
-  public abstract void a(int paramInt, h paramh);
+  public abstract void a(int paramInt, f paramf);
   
-  public abstract int lB(int paramInt);
+  public abstract int oA(int paramInt);
   
-  public abstract void lC(int paramInt);
+  public abstract void oB(int paramInt);
 }
 
 /* Location:

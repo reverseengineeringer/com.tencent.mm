@@ -14,51 +14,50 @@ final class c$a$a
     mRemote = paramIBinder;
   }
   
-  public final IBinder asBinder()
+  public final void a(String paramString1, String paramString2, Bundle paramBundle, b paramb)
   {
-    return mRemote;
-  }
-  
-  public final void onCallback(String paramString, Bundle paramBundle, boolean paramBoolean)
-  {
-    int i = 1;
     Parcel localParcel1 = Parcel.obtain();
     Parcel localParcel2 = Parcel.obtain();
     for (;;)
     {
       try
       {
-        localParcel1.writeInterfaceToken("com.tencent.mm.remoteservice.ICommClientCallback");
-        localParcel1.writeString(paramString);
+        localParcel1.writeInterfaceToken("com.tencent.mm.remoteservice.ICommRemoteServer");
+        localParcel1.writeString(paramString1);
+        localParcel1.writeString(paramString2);
         if (paramBundle != null)
         {
           localParcel1.writeInt(1);
           paramBundle.writeToParcel(localParcel1, 0);
-          break label127;
-          localParcel1.writeInt(i);
-          mRemote.transact(1, localParcel1, localParcel2, 0);
-          localParcel2.readException();
-          if (localParcel2.readInt() != 0) {
-            paramBundle.readFromParcel(localParcel2);
+          if (paramb != null)
+          {
+            paramString1 = paramb.asBinder();
+            localParcel1.writeStrongBinder(paramString1);
+            mRemote.transact(1, localParcel1, localParcel2, 0);
+            localParcel2.readException();
+            if (localParcel2.readInt() != 0) {
+              paramBundle.readFromParcel(localParcel2);
+            }
           }
         }
         else
         {
           localParcel1.writeInt(0);
+          continue;
         }
+        paramString1 = null;
       }
       finally
       {
         localParcel2.recycle();
         localParcel1.recycle();
       }
-      label127:
-      do
-      {
-        i = 0;
-        break;
-      } while (!paramBoolean);
     }
+  }
+  
+  public final IBinder asBinder()
+  {
+    return mRemote;
   }
 }
 

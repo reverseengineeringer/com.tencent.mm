@@ -14,73 +14,73 @@
 
 
 # instance fields
-.field private cqp:F
+.field aAX:I
 
-.field private dLV:J
+.field private cHO:F
 
-.field dpZ:Landroid/graphics/Bitmap;
+.field private eNS:J
 
-.field private duj:F
+.field private ebm:Ljava/util/Timer;
 
-.field dxy:F
+.field efe:Landroid/graphics/Bitmap;
 
-.field dxz:F
+.field private elN:F
 
-.field private eNy:Landroid/view/View$OnTouchListener;
+.field epi:F
 
-.field private fFb:Z
+.field epj:F
 
-.field private jpA:F
+.field private fYo:Landroid/view/View$OnTouchListener;
 
-.field private jpB:Ljava/util/Timer;
+.field private hew:Z
 
-.field private jpC:Lcom/tencent/mm/ui/tools/CropImageView$c;
+.field private luA:Landroid/graphics/PointF;
 
-.field private jpD:Z
+.field luB:Z
 
-.field private jpE:Ljava/util/Timer;
+.field private luC:Z
 
-.field private jpF:Lcom/tencent/mm/sdk/platformtools/ac;
+.field private luD:Z
 
-.field private jpG:Lcom/tencent/mm/ui/tools/CropImageView$b;
+.field private luE:Z
 
-.field private jpH:Lcom/tencent/mm/sdk/platformtools/ac;
+.field private luF:Z
 
-.field jpI:I
+.field private luG:Z
 
-.field private jpJ:Lcom/tencent/mm/ui/tools/CropImageView$a;
+.field private luH:Z
 
-.field private jpK:Z
+.field private luI:Z
 
-.field private jpl:Z
+.field private luJ:F
 
-.field private jpm:Z
+.field private luK:F
 
-.field private jpn:F
+.field private luL:F
 
-.field private jpo:F
+.field private luM:Lcom/tencent/mm/ui/tools/CropImageView$c;
 
-.field private jpp:Landroid/graphics/PointF;
+.field private luN:Z
 
-.field jpq:Z
+.field private luO:Ljava/util/Timer;
 
-.field private jpr:Z
+.field private luP:Lcom/tencent/mm/sdk/platformtools/aa;
 
-.field private jps:Z
+.field private luQ:Lcom/tencent/mm/ui/tools/CropImageView$b;
 
-.field private jpt:Z
+.field private luR:Lcom/tencent/mm/sdk/platformtools/aa;
 
-.field private jpu:Z
+.field private luS:Lcom/tencent/mm/ui/tools/CropImageView$a;
 
-.field private jpv:Z
+.field private luT:Z
 
-.field private jpw:Z
+.field private luw:Z
 
-.field private jpx:Z
+.field private lux:Z
 
-.field private jpy:F
+.field private luy:F
 
-.field private jpz:F
+.field private luz:F
 
 
 # direct methods
@@ -100,107 +100,107 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 36
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpl:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luw:Z
 
     .line 40
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpm:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->lux:Z
 
     .line 42
     new-instance v0, Landroid/graphics/PointF;
 
     invoke-direct {v0}, Landroid/graphics/PointF;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpp:Landroid/graphics/PointF;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luA:Landroid/graphics/PointF;
 
     .line 43
-    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->dxy:F
+    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->epi:F
 
     .line 44
-    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->dxz:F
+    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->epj:F
 
     .line 45
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpq:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luB:Z
 
     .line 48
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpr:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luC:Z
 
     .line 49
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jps:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luD:Z
 
     .line 50
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpt:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luE:Z
 
     .line 51
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpu:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luF:Z
 
     .line 52
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpv:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luG:Z
 
     .line 53
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpw:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luH:Z
 
     .line 54
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpx:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luI:Z
 
     .line 55
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
     .line 56
-    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpz:F
+    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luK:F
 
     .line 57
-    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpA:F
+    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luL:F
 
     .line 64
     new-instance v0, Ljava/util/Timer;
 
     invoke-direct {v0, v3}, Ljava/util/Timer;-><init>(Z)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpB:Ljava/util/Timer;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->ebm:Ljava/util/Timer;
 
     .line 65
-    iput-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpC:Lcom/tencent/mm/ui/tools/CropImageView$c;
+    iput-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luM:Lcom/tencent/mm/ui/tools/CropImageView$c;
 
     .line 66
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpD:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luN:Z
 
     .line 67
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->fFb:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->hew:Z
 
     .line 69
-    new-instance v0, Lcom/tencent/mm/ui/tools/bd;
+    new-instance v0, Lcom/tencent/mm/ui/tools/CropImageView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/bd;-><init>(Lcom/tencent/mm/ui/tools/CropImageView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/CropImageView$1;-><init>(Lcom/tencent/mm/ui/tools/CropImageView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpF:Lcom/tencent/mm/sdk/platformtools/ac;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luP:Lcom/tencent/mm/sdk/platformtools/aa;
 
     .line 130
-    iput-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpG:Lcom/tencent/mm/ui/tools/CropImageView$b;
+    iput-object v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luQ:Lcom/tencent/mm/ui/tools/CropImageView$b;
 
     .line 131
-    new-instance v0, Lcom/tencent/mm/ui/tools/be;
+    new-instance v0, Lcom/tencent/mm/ui/tools/CropImageView$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/be;-><init>(Lcom/tencent/mm/ui/tools/CropImageView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/CropImageView$2;-><init>(Lcom/tencent/mm/ui/tools/CropImageView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpH:Lcom/tencent/mm/sdk/platformtools/ac;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luR:Lcom/tencent/mm/sdk/platformtools/aa;
 
     .line 165
-    iput v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpI:I
+    iput v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->aAX:I
 
     .line 168
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpK:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luT:Z
 
     .line 223
-    new-instance v0, Lcom/tencent/mm/ui/tools/bf;
+    new-instance v0, Lcom/tencent/mm/ui/tools/CropImageView$3;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/bf;-><init>(Lcom/tencent/mm/ui/tools/CropImageView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/CropImageView$3;-><init>(Lcom/tencent/mm/ui/tools/CropImageView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->eNy:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->fYo:Landroid/view/View$OnTouchListener;
 
     .line 182
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CropImageView;->aRB()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CropImageView;->biz()V
 
     .line 184
     return-void
@@ -211,7 +211,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpD:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luN:Z
 
     return v0
 .end method
@@ -221,7 +221,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpE:Ljava/util/Timer;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luO:Ljava/util/Timer;
 
     return-object v0
 .end method
@@ -231,7 +231,7 @@
 
     .prologue
     .line 21
-    iput p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->duj:F
+    iput p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->elN:F
 
     return p1
 .end method
@@ -241,7 +241,7 @@
 
     .prologue
     .line 21
-    iput-wide p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->dLV:J
+    iput-wide p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->eNS:J
 
     return-wide p1
 .end method
@@ -251,7 +251,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpB:Ljava/util/Timer;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->ebm:Ljava/util/Timer;
 
     return-object v0
 .end method
@@ -261,7 +261,7 @@
 
     .prologue
     .line 21
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpE:Ljava/util/Timer;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luO:Ljava/util/Timer;
 
     return-object p1
 .end method
@@ -271,7 +271,7 @@
 
     .prologue
     .line 21
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpr:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luC:Z
 
     return p1
 .end method
@@ -281,7 +281,7 @@
 
     .prologue
     .line 21
-    iput p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->cqp:F
+    iput p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->cHO:F
 
     return p1
 .end method
@@ -291,7 +291,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpC:Lcom/tencent/mm/ui/tools/CropImageView$c;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luM:Lcom/tencent/mm/ui/tools/CropImageView$c;
 
     return-object v0
 .end method
@@ -301,7 +301,7 @@
 
     .prologue
     .line 21
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpm:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->lux:Z
 
     return p1
 .end method
@@ -311,7 +311,7 @@
 
     .prologue
     .line 21
-    iput p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpn:F
+    iput p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luy:F
 
     return p1
 .end method
@@ -323,7 +323,7 @@
     .line 21
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpC:Lcom/tencent/mm/ui/tools/CropImageView$c;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luM:Lcom/tencent/mm/ui/tools/CropImageView$c;
 
     return-object v0
 .end method
@@ -333,7 +333,7 @@
 
     .prologue
     .line 21
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->fFb:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->hew:Z
 
     return p1
 .end method
@@ -343,7 +343,7 @@
 
     .prologue
     .line 21
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpn:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luy:F
 
     return v0
 .end method
@@ -353,7 +353,7 @@
 
     .prologue
     .line 21
-    iput p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpo:F
+    iput p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luz:F
 
     return p1
 .end method
@@ -363,7 +363,7 @@
 
     .prologue
     .line 21
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpD:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luN:Z
 
     return p1
 .end method
@@ -373,7 +373,7 @@
 
     .prologue
     .line 21
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpo:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luz:F
 
     return v0
 .end method
@@ -383,7 +383,7 @@
 
     .prologue
     .line 21
-    iget-wide v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->dLV:J
+    iget-wide v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->eNS:J
 
     return-wide v0
 .end method
@@ -393,7 +393,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpJ:Lcom/tencent/mm/ui/tools/CropImageView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luS:Lcom/tencent/mm/ui/tools/CropImageView$a;
 
     return-object v0
 .end method
@@ -403,7 +403,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpp:Landroid/graphics/PointF;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luA:Landroid/graphics/PointF;
 
     return-object v0
 .end method
@@ -413,7 +413,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->dpZ:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->efe:Landroid/graphics/Bitmap;
 
     return-object v0
 .end method
@@ -423,7 +423,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpt:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luE:Z
 
     return v0
 .end method
@@ -433,17 +433,17 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jps:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luD:Z
 
     return v0
 .end method
 
-.method static synthetic l(Lcom/tencent/mm/ui/tools/CropImageView;)Lcom/tencent/mm/sdk/platformtools/ac;
+.method static synthetic l(Lcom/tencent/mm/ui/tools/CropImageView;)Lcom/tencent/mm/sdk/platformtools/aa;
     .locals 1
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpF:Lcom/tencent/mm/sdk/platformtools/ac;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luP:Lcom/tencent/mm/sdk/platformtools/aa;
 
     return-object v0
 .end method
@@ -453,7 +453,7 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpG:Lcom/tencent/mm/ui/tools/CropImageView$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luQ:Lcom/tencent/mm/ui/tools/CropImageView$b;
 
     return-object v0
 .end method
@@ -465,7 +465,7 @@
     .line 21
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpG:Lcom/tencent/mm/ui/tools/CropImageView$b;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luQ:Lcom/tencent/mm/ui/tools/CropImageView$b;
 
     return-object v0
 .end method
@@ -483,23 +483,23 @@
     const/4 v1, 0x0
 
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpu:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luF:Z
 
     if-eqz v0, :cond_1
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpz:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luK:F
 
     sub-float/2addr v0, v2
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpz:F
+    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luK:F
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpz:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luK:F
 
     cmpl-float v0, v0, v1
 
     if-lez v0, :cond_0
 
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpu:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luF:Z
 
     :cond_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CropImageView;->getImageMatrix()Landroid/graphics/Matrix;
@@ -509,23 +509,23 @@
     invoke-virtual {v0, v2, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpv:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luG:Z
 
     if-eqz v0, :cond_3
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpz:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luK:F
 
     sub-float/2addr v0, v3
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpz:F
+    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luK:F
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpz:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luK:F
 
     cmpg-float v0, v0, v1
 
     if-gez v0, :cond_2
 
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpv:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luG:Z
 
     :cond_2
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CropImageView;->getImageMatrix()Landroid/graphics/Matrix;
@@ -535,23 +535,23 @@
     invoke-virtual {v0, v3, v1}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     :cond_3
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpw:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luH:Z
 
     if-eqz v0, :cond_5
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpA:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luL:F
 
     sub-float/2addr v0, v3
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpA:F
+    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luL:F
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpA:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luL:F
 
     cmpg-float v0, v0, v1
 
     if-gez v0, :cond_4
 
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpw:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luH:Z
 
     :cond_4
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CropImageView;->getImageMatrix()Landroid/graphics/Matrix;
@@ -561,23 +561,23 @@
     invoke-virtual {v0, v1, v3}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     :cond_5
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpx:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luI:Z
 
     if-eqz v0, :cond_7
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpA:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luL:F
 
     sub-float/2addr v0, v2
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpA:F
+    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luL:F
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpA:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luL:F
 
     cmpl-float v0, v0, v1
 
     if-lez v0, :cond_6
 
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpx:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luI:Z
 
     :cond_6
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CropImageView;->getImageMatrix()Landroid/graphics/Matrix;
@@ -587,7 +587,7 @@
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->dpZ:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->efe:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CropImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
@@ -601,7 +601,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpw:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luH:Z
 
     return v0
 .end method
@@ -611,7 +611,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpx:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luI:Z
 
     return v0
 .end method
@@ -621,7 +621,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpv:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luG:Z
 
     return v0
 .end method
@@ -631,17 +631,17 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpu:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luF:Z
 
     return v0
 .end method
 
-.method static synthetic t(Lcom/tencent/mm/ui/tools/CropImageView;)Lcom/tencent/mm/sdk/platformtools/ac;
+.method static synthetic t(Lcom/tencent/mm/ui/tools/CropImageView;)Lcom/tencent/mm/sdk/platformtools/aa;
     .locals 1
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpH:Lcom/tencent/mm/sdk/platformtools/ac;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luR:Lcom/tencent/mm/sdk/platformtools/aa;
 
     return-object v0
 .end method
@@ -651,7 +651,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luT:Z
 
     return v0
 .end method
@@ -661,7 +661,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpr:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luC:Z
 
     return v0
 .end method
@@ -671,7 +671,7 @@
 
     .prologue
     .line 21
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->duj:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->elN:F
 
     return v0
 .end method
@@ -681,7 +681,7 @@
 
     .prologue
     .line 21
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->cqp:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->cHO:F
 
     return v0
 .end method
@@ -691,7 +691,7 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpm:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->lux:Z
 
     return v0
 .end method
@@ -701,27 +701,14 @@
 
     .prologue
     .line 21
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->fFb:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->hew:Z
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final aRB()V
-    .locals 1
-
-    .prologue
-    .line 392
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->eNy:Landroid/view/View$OnTouchListener;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CropImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
-
-    .line 393
-    return-void
-.end method
-
-.method public final aRC()V
+.method public final biA()V
     .locals 7
 
     .prologue
@@ -735,64 +722,64 @@
 
     const/4 v4, 0x0
 
-    .line 406
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    .line 407
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
     mul-float/2addr v0, v3
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
-    .line 407
+    .line 408
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    iget v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
     cmpg-float v0, v0, v1
 
     if-gtz v0, :cond_0
 
-    .line 408
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpt:Z
+    .line 409
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luE:Z
 
-    .line 410
+    .line 411
     :cond_0
     const v0, 0x3fcccccd    # 1.6f
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    iget v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
     cmpg-float v0, v0, v1
 
     if-gez v0, :cond_1
 
-    .line 411
-    iput-boolean v5, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jps:Z
+    .line 412
+    iput-boolean v5, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luD:Z
 
-    .line 415
+    .line 416
     :goto_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpl:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luw:Z
 
     if-eqz v0, :cond_2
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
     cmpg-float v0, v2, v0
 
     if-gez v0, :cond_2
 
-    .line 416
-    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    .line 417
+    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
-    .line 420
+    .line 421
     :goto_1
     return-void
 
-    .line 413
+    .line 414
     :cond_1
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jps:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luD:Z
 
     goto :goto_0
 
-    .line 418
+    .line 419
     :cond_2
     const/4 v0, 0x2
 
@@ -802,7 +789,7 @@
 
     new-array v1, v1, [F
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpp:Landroid/graphics/PointF;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luA:Landroid/graphics/PointF;
 
     iget v2, v2, Landroid/graphics/PointF;->x:F
 
@@ -810,7 +797,7 @@
 
     aput v2, v0, v4
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpp:Landroid/graphics/PointF;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luA:Landroid/graphics/PointF;
 
     iget v2, v2, Landroid/graphics/PointF;->y:F
 
@@ -858,7 +845,7 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->dpZ:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->efe:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CropImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
@@ -867,7 +854,7 @@
     goto :goto_1
 .end method
 
-.method public final aRD()V
+.method public final biB()V
     .locals 7
 
     .prologue
@@ -881,60 +868,60 @@
 
     const/4 v4, 0x0
 
-    .line 442
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    .line 443
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
     mul-float/2addr v0, v3
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    iput v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
-    .line 443
+    .line 444
     const v0, 0x3fcccccd    # 1.6f
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    iget v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
     cmpl-float v0, v0, v1
 
     if-lez v0, :cond_0
 
-    .line 444
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jps:Z
+    .line 445
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luD:Z
 
-    .line 446
+    .line 447
     :cond_0
     const/high16 v0, 0x3f800000    # 1.0f
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    iget v1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
     cmpl-float v0, v0, v1
 
     if-lez v0, :cond_1
 
-    .line 447
-    iput-boolean v5, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpt:Z
+    .line 448
+    iput-boolean v5, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luE:Z
 
-    .line 451
+    .line 452
     :goto_0
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
     cmpl-float v0, v2, v0
 
     if-lez v0, :cond_2
 
-    .line 452
-    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpy:F
+    .line 453
+    iput v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luJ:F
 
-    .line 456
+    .line 457
     :goto_1
     return-void
 
-    .line 449
+    .line 450
     :cond_1
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpt:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luE:Z
 
     goto :goto_0
 
-    .line 454
+    .line 455
     :cond_2
     const/4 v0, 0x2
 
@@ -944,7 +931,7 @@
 
     new-array v1, v1, [F
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpp:Landroid/graphics/PointF;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luA:Landroid/graphics/PointF;
 
     iget v2, v2, Landroid/graphics/PointF;->x:F
 
@@ -952,7 +939,7 @@
 
     aput v2, v0, v4
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpp:Landroid/graphics/PointF;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luA:Landroid/graphics/PointF;
 
     iget v2, v2, Landroid/graphics/PointF;->y:F
 
@@ -1000,7 +987,7 @@
 
     invoke-virtual {v2, v3, v0}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->dpZ:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->efe:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CropImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
@@ -1009,12 +996,25 @@
     goto :goto_1
 .end method
 
+.method public final biz()V
+    .locals 1
+
+    .prologue
+    .line 392
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->fYo:Landroid/view/View$OnTouchListener;
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/CropImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
+
+    .line 393
+    return-void
+.end method
+
 .method public getBmp()Landroid/graphics/Bitmap;
     .locals 1
 
     .prologue
     .line 211
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->dpZ:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->efe:Landroid/graphics/Bitmap;
 
     return-object v0
 .end method
@@ -1023,8 +1023,8 @@
     .locals 1
 
     .prologue
-    .line 528
-    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpI:I
+    .line 529
+    iget v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->aAX:I
 
     return v0
 .end method
@@ -1034,7 +1034,7 @@
 
     .prologue
     .line 203
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpK:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luT:Z
 
     .line 204
     return-void
@@ -1045,12 +1045,12 @@
 
     .prologue
     .line 188
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->dpZ:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->efe:Landroid/graphics/Bitmap;
 
     .line 189
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpp:Landroid/graphics/PointF;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luA:Landroid/graphics/PointF;
 
-    invoke-static {v0, p1}, Lcom/tencent/mm/ui/base/g;->a(Landroid/graphics/PointF;Landroid/graphics/Bitmap;)V
+    invoke-static {v0, p1}, Lcom/tencent/mm/ui/base/f;->a(Landroid/graphics/PointF;Landroid/graphics/Bitmap;)V
 
     .line 190
     invoke-super {p0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
@@ -1064,7 +1064,7 @@
 
     .prologue
     .line 194
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpl:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luw:Z
 
     .line 195
     return-void
@@ -1075,7 +1075,7 @@
 
     .prologue
     .line 215
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->jpJ:Lcom/tencent/mm/ui/tools/CropImageView$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CropImageView;->luS:Lcom/tencent/mm/ui/tools/CropImageView$a;
 
     .line 216
     return-void

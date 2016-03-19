@@ -1,366 +1,193 @@
 package com.tencent.mm.as;
 
-import android.os.Debug;
-import android.os.Message;
-import com.tencent.mm.a.c;
-import com.tencent.mm.a.m;
-import com.tencent.mm.compatible.util.j;
-import com.tencent.mm.model.v;
-import com.tencent.mm.platformtools.z;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import java.io.File;
-import java.lang.ref.WeakReference;
-import java.util.ArrayList;
-import java.util.EventListener;
+import com.tencent.mm.ag.b.i;
+import com.tencent.mm.ag.b.i.a;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.h;
+import java.util.HashMap;
 import java.util.Iterator;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.LinkedBlockingQueue;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 public final class d
-  implements EventListener
 {
-  static ac bDe = new f();
-  public static d ikN;
-  private static int ikO = 5242880;
-  public static final String ikQ = j.getExternalStorageDirectory() + "/tencent/MicroMsg/tracedog/";
-  private volatile boolean bLL;
-  private volatile boolean ikP;
-  private LinkedBlockingQueue ikR;
-  ExecutorService ikS;
-  public WeakReference ikT;
-  
-  private void a(a parama)
+  public static void aTf()
   {
-    if (ikP) {}
-    do
-    {
-      return;
-      if (!j.pe())
-      {
-        t.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE sdcard is invalid");
-        return;
-      }
-      aJv();
-      for (;;)
-      {
-        try
-        {
-          Object localObject = new File(ikQ);
-          if ((aFU != 6) && (((File)localObject).exists()))
-          {
-            t.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE delete all file ");
-            k((File)localObject);
-          }
-          ((File)localObject).mkdirs();
-          localObject = savePath;
-          if (ikW > 0) {
-            continue;
-          }
-          i = ikO;
-          Debug.startMethodTracing((String)localObject, i);
-          ikP = true;
-        }
-        catch (IncompatibleClassChangeError parama)
-        {
-          int i;
-          t.printErrStackTrace("MicroMsg.Crash", parama, "May cause dvmFindCatchBlock crash!", new Object[0]);
-          throw ((IncompatibleClassChangeError)new IncompatibleClassChangeError("May cause dvmFindCatchBlock crash!").initCause(parama));
-        }
-        catch (Throwable localThrowable)
-        {
-          ikP = false;
-          t.printErrStackTrace("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", localThrowable, "TRACE startMethodTracing ERROR", new Object[0]);
-          continue;
-        }
-        if (aFU != 6) {
-          break;
-        }
-        t.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE startTrace uploadType is CLIENT ");
-        return;
-        i = ikW;
-        i = i * 1024 * 1024;
-      }
-    } while (!ikP);
-    Message localMessage = Message.obtain();
-    what = 0;
-    obj = parama;
-    if ((bn.iW(className)) || (aFU == 5))
-    {
-      bDe.sendMessageDelayed(localMessage, 15000L);
-      return;
-    }
-    bDe.sendMessageDelayed(localMessage, 10000L);
-  }
-  
-  public static d aJu()
-  {
-    if (ikN == null) {
-      ikN = new d();
-    }
-    return ikN;
-  }
-  
-  private static void aJv()
-  {
-    bDe.removeMessages(0);
-    bDe.removeMessages(2);
-    bDe.removeMessages(1);
-  }
-  
-  private static String b(File paramFile, boolean paramBoolean)
-  {
-    ArrayList localArrayList = new ArrayList();
     int i;
-    if (paramFile.isDirectory())
+    if ((ah.rh()) && (!ah.tM())) {
+      i = 1;
+    }
+    while ((i != 0) && (nb()))
     {
-      t.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE currentPath is dir");
-      paramFile = paramFile.listFiles();
-      if (paramFile == null)
+      Object localObject1 = (String)ah.tD().rn().get(77829, null);
+      if (localObject1 != null)
       {
-        t.e("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", " get file list failed");
-        return null;
-      }
-      i = 0;
-      while (i < paramFile.length)
-      {
-        localArrayList.add(paramFile[i]);
-        i += 1;
-      }
-    }
-    localArrayList.add(paramFile);
-    paramFile = new File(ikQ + bn.DM() + ".zip");
-    try
-    {
-      m.a(localArrayList, paramFile);
-      i = 0;
-      while (i < localArrayList.size())
-      {
-        ((File)localArrayList.get(i)).delete();
-        i += 1;
-      }
-      if (paramFile.length() <= 3145728L) {
-        break label212;
-      }
-    }
-    catch (Exception paramFile)
-    {
-      t.e("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "exception:%s", new Object[] { bn.a(paramFile) });
-      t.e("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "zip file failed msg:%s ", new Object[] { paramFile.getMessage() });
-      return null;
-    }
-    t.e("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "trace file is too large:%d ", new Object[] { Long.valueOf(paramFile.length()) });
-    return null;
-    label212:
-    return paramFile.getAbsolutePath();
-  }
-  
-  private static void k(File paramFile)
-  {
-    if (paramFile.isFile()) {
-      paramFile.delete();
-    }
-    while (!paramFile.isDirectory()) {
-      return;
-    }
-    File[] arrayOfFile = paramFile.listFiles();
-    if ((arrayOfFile == null) || (arrayOfFile.length == 0))
-    {
-      paramFile.delete();
-      return;
-    }
-    int j = arrayOfFile.length;
-    int i = 0;
-    while (i < j)
-    {
-      k(arrayOfFile[i]);
-      i += 1;
-    }
-    paramFile.delete();
-  }
-  
-  final void Aq(String paramString)
-  {
-    if (paramString == null) {
-      return;
-    }
-    bLL = true;
-    if (bn.iW(paramString)) {
-      t.e("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE error uploadPath %s ", new Object[] { paramString });
-    }
-    for (;;)
-    {
-      bLL = false;
-      return;
-      if (!j.pe())
-      {
-        t.e("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE sdcard invalid.");
-      }
-      else
-      {
-        File localFile = new File(paramString);
-        if (!localFile.exists())
+        Object localObject2 = a.Bf((String)localObject1);
+        if ((localObject2 != null) && (((Map)localObject2).size() > 0))
         {
-          t.e("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE upload file is not exist");
-        }
-        else
-        {
-          if (localFile.isDirectory()) {
-            paramString = b(localFile, true);
-          }
-          if ((paramString != null) && (new File(paramString).length() >= 131072L))
+          localObject1 = new LinkedList();
+          localObject2 = ((Map)localObject2).entrySet().iterator();
+          for (;;)
           {
-            boolean bool = z.a(paramString, v.rS(), true, false);
-            t.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE upload : %b", new Object[] { Boolean.valueOf(bool) });
-            if (bool) {
-              c.c(new File(ikQ));
+            if (((Iterator)localObject2).hasNext())
+            {
+              Map.Entry localEntry = (Map.Entry)((Iterator)localObject2).next();
+              a locala = (a)localEntry.getValue();
+              if (locala != null)
+              {
+                i = hitCount;
+                int j = bXP;
+                if ((i > 0) || (j > 0)) {
+                  ((List)localObject1).add(new b.i.a(10166, (String)localEntry.getKey() + "," + i + "," + j));
+                }
+                u.d("!44@CnzAcTcbtYFRSXd7O2W+aoew+LcYo3Eeko0uZc3BjDo=", "report PostTaskTenMinutesLogicState  name " + (String)localEntry.getKey() + " " + i + "  " + j);
+                continue;
+                i = 0;
+                break;
+              }
             }
           }
-        }
-      }
-    }
-  }
-  
-  public final void aE(String paramString, int paramInt)
-  {
-    a locala;
-    if ((ikR != null) && (ikR.size() > 0))
-    {
-      t.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE gatherData : isUploading : %b  hasStart :%b currentClass : %s currentCode %d ", new Object[] { Boolean.valueOf(bLL), Boolean.valueOf(ikP), paramString, Integer.valueOf(paramInt) });
-      if ((!bLL) && (!ikP))
-      {
-        Iterator localIterator = ikR.iterator();
-        while (localIterator.hasNext())
-        {
-          locala = (a)localIterator.next();
-          if (className == null) {
-            break label148;
-          }
-          if ((className.equals(paramString)) && (aFU == paramInt))
+          if (!((List)localObject1).isEmpty())
           {
-            a(locala);
-            ikR.remove(locala);
+            ah.tD().rp().b(new b.i((List)localObject1));
+            ah.tD().rn().set(77829, null);
           }
         }
       }
     }
-    return;
-    label148:
-    a(null);
-    ikR.remove(locala);
+    ah.tD().rn().set(77828, Long.valueOf(ay.FR()));
+    u.d("!44@CnzAcTcbtYFRSXd7O2W+aoew+LcYo3Eeko0uZc3BjDo=", "report PostTaskTenMinutesLogicState done ");
   }
   
-  public final boolean b(a parama)
+  public static boolean nb()
   {
-    
-    if ((!ikP) || (bLL))
-    {
-      t.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE stopTrace hasStartTrace : %b ,isUploading :%b  ", new Object[] { Boolean.valueOf(ikP), Boolean.valueOf(bLL) });
-      return false;
-    }
-    if (!j.pe())
-    {
-      t.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE stopTrace sdcard invalid");
-      return false;
-    }
-    ikS.execute(new e(this, parama));
-    return true;
-  }
-  
-  public final void c(a parama)
-  {
-    if (aFU <= 0) {
-      return;
-    }
-    if (ikS == null) {
-      ikS = Executors.newSingleThreadExecutor();
-    }
-    if ((bLL) || (ikP))
-    {
-      t.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE isUloading or hasStartTrace %b %b", new Object[] { Boolean.valueOf(bLL), Boolean.valueOf(ikP) });
-      return;
-    }
-    bDe.removeMessages(0);
-    if ((ikX == 4) || (ikX == 5))
-    {
-      int i = ikX;
-      ikS.execute(new g(this, i));
-    }
-    for (;;)
-    {
-      t.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE PUSH : class : %s  code :%s type :%s", new Object[] { className, Integer.valueOf(aFU), Integer.valueOf(ikX) });
-      return;
-      if ((aFU == 6) || (aFU == 5))
-      {
-        Message localMessage = Message.obtain();
-        what = 2;
-        obj = parama;
-        if (aFU == 5) {
-          bDe.sendMessage(localMessage);
-        } else {
-          bDe.sendMessageDelayed(localMessage, 500L);
-        }
-      }
-      else
-      {
-        if (ikR == null) {
-          ikR = new LinkedBlockingQueue();
-        }
-        ikR.clear();
-        ikR.add(parama);
-      }
-    }
+    return ay.am(ay.a((Long)ah.tD().rn().get(77828, null), 0L)) * 1000L > 1800000L;
   }
   
   public static final class a
   {
-    int aFU;
-    String className;
-    int ikW;
-    int ikX;
-    String savePath;
+    public int bXP = 0;
+    public int hitCount = 0;
     
-    public a(String paramString, int paramInt1, int paramInt2, int paramInt3)
+    public static Map Bf(String paramString)
     {
-      className = paramString;
-      aFU = paramInt1;
-      ikW = paramInt2;
-      ikX = paramInt3;
-      StringBuilder localStringBuilder1 = new StringBuilder();
-      if (bn.iW(paramString))
-      {
-        localStringBuilder1.append(d.ikQ).append("WEIXIN_").append(System.currentTimeMillis()).append(".trace");
-        t.i("!44@/B4Tb64lLpJIMaaRtK4LLtb0dXv/4DByk4tlG3jBVb0=", "TRACE startMethod path %s traceSize : %d", new Object[] { localStringBuilder1.toString(), Integer.valueOf(paramInt2) });
-        savePath = localStringBuilder1.toString();
-        return;
-      }
-      StringBuilder localStringBuilder2 = localStringBuilder1.append(d.ikQ).append(paramString).append("_");
-      paramString = "";
-      switch (paramInt1)
-      {
-      }
+      Map.Entry localEntry = null;
+      localObject2 = null;
+      u.d("!44@CnzAcTcbtYFRSXd7O2W+aoew+LcYo3Eeko0uZc3BjDo=", "xml " + paramString);
+      Object localObject1 = localEntry;
+      if (paramString != null) {}
       for (;;)
       {
-        localStringBuilder2.append(paramString).append(".trace");
-        break;
-        paramString = "onResume";
+        try
+        {
+          paramString = q.J(paramString, "voiptenmin", null);
+          localObject1 = localEntry;
+          if (paramString == null) {
+            continue;
+          }
+          localObject1 = localEntry;
+          if (paramString.size() <= 0) {
+            continue;
+          }
+          localObject1 = new HashMap();
+          try
+          {
+            localObject2 = paramString.entrySet().iterator();
+            if (!((Iterator)localObject2).hasNext()) {
+              continue;
+            }
+            localEntry = (Map.Entry)((Iterator)localObject2).next();
+            str = (String)localEntry.getKey();
+            if (str == null) {
+              continue;
+            }
+            String[] arrayOfString = str.split("\\.");
+            u.d("!44@CnzAcTcbtYFRSXd7O2W+aoew+LcYo3Eeko0uZc3BjDo=", "key is " + str);
+            u.d("!44@CnzAcTcbtYFRSXd7O2W+aoew+LcYo3Eeko0uZc3BjDo=", "array is " + arrayOfString.length);
+            if ((str == null) || (arrayOfString.length < 4)) {
+              continue;
+            }
+            u.d("!44@CnzAcTcbtYFRSXd7O2W+aoew+LcYo3Eeko0uZc3BjDo=", "getValue is " + (String)localEntry.getValue() + "array[1] " + arrayOfString[2]);
+            if (!((Map)localObject1).containsKey(arrayOfString[2])) {
+              continue;
+            }
+            paramString = (a)((Map)localObject1).get(arrayOfString[2]);
+            if (!str.contains("hitcount")) {
+              continue;
+            }
+            hitCount = ay.getInt((String)localEntry.getValue(), 0);
+            u.d("!44@CnzAcTcbtYFRSXd7O2W+aoew+LcYo3Eeko0uZc3BjDo=", "hitCount " + hitCount + "sendCount " + bXP);
+            ((Map)localObject1).put(arrayOfString[2], paramString);
+            continue;
+          }
+          catch (Exception paramString)
+          {
+            localObject2 = paramString;
+            paramString = (String)localObject1;
+          }
+        }
+        catch (Exception localException)
+        {
+          String str;
+          paramString = (String)localObject2;
+          localObject2 = localException;
+          continue;
+          return localException;
+        }
+        tmp336_333[0] = ay.b((Throwable)localObject2);
+        u.e("!44@CnzAcTcbtYFRSXd7O2W+aoew+LcYo3Eeko0uZc3BjDo=", "exception:%s", tmp336_333);
+        localObject1 = paramString;
+        return (Map)localObject1;
+        paramString = new a();
         continue;
-        paramString = "onCreate";
-        continue;
-        paramString = "onPause";
-        continue;
-        paramString = "onScrool";
-        continue;
-        paramString = "all";
+        if (str.contains("sendcount")) {
+          bXP = ay.getInt((String)localEntry.getValue(), 0);
+        }
       }
     }
-  }
-  
-  public static abstract interface b
-  {
-    public abstract void aJw();
+    
+    public static String N(Map paramMap)
+    {
+      StringBuilder localStringBuilder = new StringBuilder();
+      if (paramMap != null) {
+        try
+        {
+          if (paramMap.size() > 0)
+          {
+            localStringBuilder.append("<voiptenmin>");
+            paramMap = paramMap.entrySet().iterator();
+            while (paramMap.hasNext())
+            {
+              Object localObject2 = (Map.Entry)paramMap.next();
+              Object localObject1 = ((Map.Entry)localObject2).getKey();
+              localObject2 = (a)((Map.Entry)localObject2).getValue();
+              localStringBuilder.append("<" + localObject1);
+              localStringBuilder.append(" hitcount = \"");
+              localStringBuilder.append(hitCount);
+              localStringBuilder.append("\"");
+              localStringBuilder.append(" sendcount = \"");
+              localStringBuilder.append(bXP);
+              localStringBuilder.append("\"");
+              localStringBuilder.append("/>");
+            }
+            localStringBuilder.append("</voiptenmin>");
+          }
+        }
+        catch (Exception paramMap)
+        {
+          u.e("!44@CnzAcTcbtYFRSXd7O2W+aoew+LcYo3Eeko0uZc3BjDo=", "exception:%s", new Object[] { ay.b(paramMap) });
+          return null;
+        }
+      }
+      u.d("!44@CnzAcTcbtYFRSXd7O2W+aoew+LcYo3Eeko0uZc3BjDo=", "mapToXml " + localStringBuilder.toString());
+      return localStringBuilder.toString();
+    }
   }
 }
 

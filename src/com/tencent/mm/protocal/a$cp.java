@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cp
-  extends a.c
+  extends a.e
 {
   public a$cp()
   {
-    super("startRecord", "startRecord", 96, true);
+    super("nfcIsConnect", "nfcIsConnect", 139, true);
   }
 }
 

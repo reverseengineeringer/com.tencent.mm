@@ -2,7 +2,7 @@ package android.support.v7.internal.view;
 
 import android.content.Context;
 import android.support.v7.a.a;
-import android.support.v7.internal.view.menu.q;
+import android.support.v7.internal.view.menu.n;
 import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -10,28 +10,28 @@ import android.view.MenuInflater;
 public final class b
   extends a
 {
-  final MenuInflater kt;
-  final ActionMode ku;
+  final MenuInflater jA;
+  final ActionMode jB;
   
   public b(Context paramContext, ActionMode paramActionMode)
   {
-    ku = paramActionMode;
-    kt = new c(paramContext);
+    jB = paramActionMode;
+    jA = new c(paramContext);
   }
   
   public final void finish()
   {
-    ku.finish();
+    jB.finish();
   }
   
   public final Menu getMenu()
   {
-    return q.c(ku.getMenu());
+    return n.a(jB.getMenu());
   }
   
   public final void setTitleOptionalHint(boolean paramBoolean)
   {
-    ku.setTitleOptionalHint(paramBoolean);
+    jB.setTitleOptionalHint(paramBoolean);
   }
 }
 

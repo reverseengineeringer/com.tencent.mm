@@ -9,8 +9,8 @@ import android.widget.FrameLayout.LayoutParams;
 public final class c$b
   extends FrameLayout
 {
-  private int jwd;
-  private int jwe;
+  private int lyU;
+  private int lyV;
   
   public c$b(c paramc, Context paramContext)
   {
@@ -24,7 +24,7 @@ public final class c$b
   
   public final int getHeaderId()
   {
-    return jwd;
+    return lyU;
   }
   
   protected final void onMeasure(int paramInt1, int paramInt2)
@@ -34,19 +34,19 @@ public final class c$b
       localView.setLayoutParams(generateDefaultLayoutParams());
     }
     if ((localView.getVisibility() != 8) && (localView.getMeasuredHeight() == 0)) {
-      localView.measure(View.MeasureSpec.makeMeasureSpec(jwe, 1073741824), View.MeasureSpec.makeMeasureSpec(0, 0));
+      localView.measure(View.MeasureSpec.makeMeasureSpec(lyV, 1073741824), View.MeasureSpec.makeMeasureSpec(0, 0));
     }
     setMeasuredDimension(View.MeasureSpec.getSize(paramInt1), localView.getMeasuredHeight());
   }
   
   public final void setHeaderId(int paramInt)
   {
-    jwd = paramInt;
+    lyU = paramInt;
   }
   
   public final void setHeaderWidth(int paramInt)
   {
-    jwe = paramInt;
+    lyV = paramInt;
   }
 }
 

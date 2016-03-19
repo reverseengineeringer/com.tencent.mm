@@ -2,9 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class de$a
 {
-  public boolean azf = false;
-  public int azg = 0;
-  public String azh;
+  public String username;
 }
 
 /* Location:

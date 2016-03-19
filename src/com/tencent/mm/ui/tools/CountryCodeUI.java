@@ -3,107 +3,210 @@ package com.tencent.mm.ui.tools;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.s;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.ac.a;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.base.VerticalScrollBar;
 import com.tencent.mm.ui.base.VerticalScrollBar.a;
-import com.tencent.mm.z.a;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class CountryCodeUI
   extends MMActivity
 {
-  private String bFX;
-  private String bXC = "";
-  private String bqA;
-  private ex dBn;
-  private List dHB;
-  private VerticalScrollBar.a jeq;
-  private ListView joO;
-  private w joP;
-  private VerticalScrollBar joQ;
+  private String aJD;
+  private String bUu;
+  private String coN = "";
+  private r dbC;
+  private ListView eEL;
+  private List eEr;
+  private boolean eEt = false;
+  private VerticalScrollBar.a lir;
+  private e lua;
+  private VerticalScrollBar lub;
   
-  protected final void DV()
+  protected final void Gb()
   {
-    nh(a.n.address_title_select_country_code);
-    t.d("!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP", "CHT:initCountryCode start:" + System.currentTimeMillis());
-    String[] arrayOfString1 = getString(a.n.country_code).trim().split(",");
+    qb(2131428331);
+    u.d("!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP", "CHT:initCountryCode start:" + System.currentTimeMillis());
+    String[] arrayOfString1 = getString(2131428870).trim().split(",");
     int i;
     String[] arrayOfString2;
-    if (!s.aEH())
+    if (!com.tencent.mm.sdk.platformtools.t.aUz())
     {
       i = 0;
       if (i < arrayOfString1.length)
       {
         arrayOfString2 = arrayOfString1[i].trim().split(":");
         if (arrayOfString2.length < 3) {
-          t.e("!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP", "this country item has problem %s", new Object[] { arrayOfString1[i] });
+          u.e("!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP", "this country item has problem %s", new Object[] { arrayOfString1[i] });
         }
         for (;;)
         {
           i += 1;
           break;
-          dHB.add(new v(arrayOfString2[1], arrayOfString2[0], arrayOfString2[2].charAt(0), arrayOfString2[2]));
+          eEr.add(new d(arrayOfString2[1], arrayOfString2[0], arrayOfString2[2].charAt(0), arrayOfString2[2]));
         }
       }
-      Collections.sort(dHB, new x(this));
-      dBn = new ex(true, true);
-      dBn.juU = new z(this);
-      a(dBn);
-      joO = ((ListView)findViewById(a.i.address_contactlist));
-      joP = new w(this, dHB);
-      joO.setAdapter(joP);
-      joO.setVisibility(0);
-      joQ = ((VerticalScrollBar)findViewById(a.i.address_scrollbar));
-      if (s.aEH()) {
-        break label468;
+      Collections.sort(eEr, new Comparator() {});
+      dbC = new r(true, true);
+      dbC.lxA = new r.b()
+      {
+        public final void Gd() {}
+        
+        public final void Ge() {}
+        
+        public final void Gf() {}
+        
+        public final void Gg() {}
+        
+        public final boolean kE(String paramAnonymousString)
+        {
+          return false;
+        }
+        
+        public final void kF(String paramAnonymousString)
+        {
+          CountryCodeUI.a(CountryCodeUI.this, paramAnonymousString);
+          CountryCodeUI.a(CountryCodeUI.this);
+        }
+      };
+      a(dbC);
+      eEL = ((ListView)findViewById(2131165542));
+      lua = new e(this, eEr);
+      lua.eEt = eEt;
+      eEL.setAdapter(lua);
+      eEL.setVisibility(0);
+      lub = ((VerticalScrollBar)findViewById(2131165545));
+      if (com.tencent.mm.sdk.platformtools.t.aUz()) {
+        break label475;
       }
     }
-    label468:
-    for (jeq = new aa(this);; jeq = new ab(this))
+    label475:
+    for (lir = new VerticalScrollBar.a()
+        {
+          public final void ls(String paramAnonymousString)
+          {
+            int i = 0;
+            int j = paramAnonymousString.charAt(0);
+            if (getString(2131431014).equals(paramAnonymousString)) {
+              CountryCodeUI.b(CountryCodeUI.this).setSelection(0);
+            }
+            for (;;)
+            {
+              return;
+              paramAnonymousString = ceEs;
+              if (paramAnonymousString != null) {
+                while (i < paramAnonymousString.length)
+                {
+                  if (paramAnonymousString[i] == j)
+                  {
+                    CountryCodeUI.b(CountryCodeUI.this).setSelection(i + CountryCodeUI.b(CountryCodeUI.this).getHeaderViewsCount());
+                    return;
+                  }
+                  i += 1;
+                }
+              }
+            }
+          }
+        };; lir = new VerticalScrollBar.a()
+        {
+          public final void ls(String paramAnonymousString)
+          {
+            int i = 0;
+            if (getString(2131431014).equals(paramAnonymousString)) {
+              CountryCodeUI.b(CountryCodeUI.this).setSelection(0);
+            }
+            for (;;)
+            {
+              return;
+              int j = Integer.decode(paramAnonymousString.substring(0, paramAnonymousString.length() - 1)).intValue();
+              paramAnonymousString = ceEs;
+              if (paramAnonymousString != null) {
+                while (i < paramAnonymousString.length)
+                {
+                  if (paramAnonymousString[i] == j)
+                  {
+                    CountryCodeUI.b(CountryCodeUI.this).setSelection(i + CountryCodeUI.b(CountryCodeUI.this).getHeaderViewsCount());
+                    return;
+                  }
+                  i += 1;
+                }
+              }
+            }
+          }
+        })
     {
-      joQ.setOnScrollBarTouchListener(jeq);
-      a(new ac(this));
-      joO.setOnItemClickListener(new ad(this));
+      lub.setOnScrollBarTouchListener(lir);
+      b(new MenuItem.OnMenuItemClickListener()
+      {
+        public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+        {
+          age();
+          paramAnonymousMenuItem = new Intent();
+          paramAnonymousMenuItem.putExtra("country_name", CountryCodeUI.d(CountryCodeUI.this));
+          paramAnonymousMenuItem.putExtra("couttry_code", CountryCodeUI.e(CountryCodeUI.this));
+          setResult(100, paramAnonymousMenuItem);
+          finish();
+          return true;
+        }
+      });
+      eEL.setOnItemClickListener(new AdapterView.OnItemClickListener()
+      {
+        public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+        {
+          paramAnonymousAdapterView = new Intent();
+          if (paramAnonymousInt >= CountryCodeUI.b(CountryCodeUI.this).getHeaderViewsCount())
+          {
+            paramAnonymousView = (d)CountryCodeUI.c(CountryCodeUI.this).getItem(paramAnonymousInt - CountryCodeUI.b(CountryCodeUI.this).getHeaderViewsCount());
+            paramAnonymousAdapterView.putExtra("country_name", bUu);
+            paramAnonymousAdapterView.putExtra("couttry_code", aJD);
+            setResult(100, paramAnonymousAdapterView);
+          }
+          finish();
+        }
+      });
       return;
-      t.d("!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP", "CHT:initCountryCode t1:" + System.currentTimeMillis());
+      u.d("!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP", "CHT:initCountryCode t1:" + System.currentTimeMillis());
       i = 0;
       while (i < arrayOfString1.length)
       {
         arrayOfString2 = arrayOfString1[i].trim().split(":");
-        int j = a.ha(arrayOfString2[1]);
-        dHB.add(new v(arrayOfString2[1], arrayOfString2[0], j, arrayOfString2[1]));
+        int j = a.ig(arrayOfString2[1]);
+        eEr.add(new d(arrayOfString2[1], arrayOfString2[0], j, arrayOfString2[1]));
         i += 1;
       }
-      t.d("!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP", "CHT:initCountryCode t2:" + System.currentTimeMillis());
-      Collections.sort(dHB, new y(this));
-      t.d("!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP", "CHT2:initCountryCode t3:" + System.currentTimeMillis());
+      u.d("!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP", "CHT:initCountryCode t2:" + System.currentTimeMillis());
+      Collections.sort(eEr, new Comparator() {});
+      u.d("!32@/B4Tb64lLpJaBzAUU/apZElCm+mODGXP", "CHT2:initCountryCode t3:" + System.currentTimeMillis());
       break;
     }
   }
   
   protected final int getLayoutId()
   {
-    if (s.aEH()) {
-      return a.k.country_code_select_big5;
+    if (com.tencent.mm.sdk.platformtools.t.aUz()) {
+      return 2131361909;
     }
-    return a.k.country_code_select;
+    return 2131361993;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    dHB = new ArrayList();
-    bFX = com.tencent.mm.platformtools.ad.U(getIntent().getStringExtra("country_name"), "");
-    bqA = com.tencent.mm.platformtools.ad.U(getIntent().getStringExtra("couttry_code"), "");
-    DV();
+    eEr = new ArrayList();
+    bUu = com.tencent.mm.platformtools.t.ad(getIntent().getStringExtra("country_name"), "");
+    aJD = com.tencent.mm.platformtools.t.ad(getIntent().getStringExtra("couttry_code"), "");
+    eEt = getIntent().getBooleanExtra("CountryCodeUI_isShowCountryCode", false);
+    Gb();
   }
   
   public boolean onKeyDown(int paramInt, KeyEvent paramKeyEvent)
@@ -111,8 +214,8 @@ public class CountryCodeUI
     if (paramInt == 4)
     {
       paramKeyEvent = new Intent();
-      paramKeyEvent.putExtra("country_name", bFX);
-      paramKeyEvent.putExtra("couttry_code", bqA);
+      paramKeyEvent.putExtra("country_name", bUu);
+      paramKeyEvent.putExtra("couttry_code", aJD);
       setResult(100, paramKeyEvent);
       finish();
       return true;
@@ -123,8 +226,8 @@ public class CountryCodeUI
   protected void onPause()
   {
     super.onPause();
-    if (dBn != null) {
-      dBn.aSo();
+    if (dbC != null) {
+      dbC.biK();
     }
   }
 }

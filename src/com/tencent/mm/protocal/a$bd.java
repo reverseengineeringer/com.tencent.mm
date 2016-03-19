@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bd
-  extends a.c
+  extends a.e
 {
   public a$bd()
   {
-    super("openLocation", "open_location", 63, false);
+    super("getSearchImage", "", 10000, false);
   }
 }
 

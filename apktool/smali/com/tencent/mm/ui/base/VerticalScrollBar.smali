@@ -12,29 +12,29 @@
 
 
 # instance fields
-.field private crB:Landroid/graphics/Paint;
+.field private cIZ:Landroid/graphics/Paint;
 
-.field private dTf:I
+.field private eEA:I
 
-.field private fkD:F
+.field private eEB:F
 
-.field private iEd:F
+.field private eEC:F
 
-.field private iIB:Landroid/widget/TextView;
+.field private eED:F
 
-.field public iLi:F
+.field private eEE:Lcom/tencent/mm/ui/base/o;
 
-.field public iLj:I
+.field private eEF:Landroid/widget/TextView;
 
-.field public iLk:[Ljava/lang/String;
+.field private eEG:I
 
-.field private iLl:F
+.field public eEx:F
 
-.field private iLm:Lcom/tencent/mm/ui/base/bl;
+.field public eEy:I
 
-.field private iLn:I
+.field public eEz:[Ljava/lang/String;
 
-.field public iLo:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
+.field public kKB:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
 
 
 # direct methods
@@ -50,10 +50,10 @@
     .line 37
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLl:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEC:F
 
     .line 57
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/VerticalScrollBar;->IQ()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/VerticalScrollBar;->Ld()V
 
     invoke-virtual {p0, v3}, Lcom/tencent/mm/ui/base/VerticalScrollBar;->setFocusable(Z)V
 
@@ -65,7 +65,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLn:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEG:I
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/VerticalScrollBar;->getToastLayoutId()I
 
@@ -77,7 +77,7 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLj:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEy:I
 
     int-to-float v1, v1
 
@@ -85,13 +85,13 @@
 
     move-result v1
 
-    new-instance v2, Lcom/tencent/mm/ui/base/bl;
+    new-instance v2, Lcom/tencent/mm/ui/base/o;
 
-    invoke-direct {v2, v0, v1, v1}, Lcom/tencent/mm/ui/base/bl;-><init>(Landroid/view/View;II)V
+    invoke-direct {v2, v0, v1, v1}, Lcom/tencent/mm/ui/base/o;-><init>(Landroid/view/View;II)V
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLm:Lcom/tencent/mm/ui/base/bl;
+    iput-object v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEE:Lcom/tencent/mm/ui/base/o;
 
-    sget v1, Lcom/tencent/mm/a$i;->show_head_toast_text:I
+    const v1, 0x7f07020f
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -99,25 +99,25 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iIB:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEF:Landroid/widget/TextView;
 
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->crB:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->cIZ:Landroid/graphics/Paint;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->crB:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->cIZ:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v3}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->crB:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->cIZ:Landroid/graphics/Paint;
 
     const v1, -0xa9a9aa
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->crB:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->cIZ:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
@@ -132,14 +132,14 @@
 
     .prologue
     .line 21
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->crB:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->cIZ:Landroid/graphics/Paint;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public abstract IQ()V
+.method public abstract Ld()V
 .end method
 
 .method public abstract getToastLayoutId()I
@@ -165,45 +165,45 @@
     .line 94
     int-to-float v2, v0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLk:[Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEz:[Ljava/lang/String;
 
     array-length v3, v3
 
     int-to-float v3, v3
 
-    iget v4, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLi:F
+    iget v4, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEx:F
 
     mul-float/2addr v3, v4
 
     div-float/2addr v2, v3
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iEd:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEB:F
 
     .line 95
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->crB:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->cIZ:Landroid/graphics/Paint;
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iEd:F
+    iget v3, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEB:F
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 97
-    iget v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLl:F
+    iget v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEC:F
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iEd:F
+    iget v3, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEB:F
 
     cmpl-float v2, v2, v3
 
     if-eqz v2, :cond_0
 
     .line 98
-    iget v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iEd:F
+    iget v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEB:F
 
-    iput v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLl:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEC:F
 
     .line 100
-    new-instance v2, Lcom/tencent/mm/ui/base/dk;
+    new-instance v2, Lcom/tencent/mm/ui/base/VerticalScrollBar$1;
 
-    invoke-direct {v2, p0, v1, v0}, Lcom/tencent/mm/ui/base/dk;-><init>(Lcom/tencent/mm/ui/base/VerticalScrollBar;II)V
+    invoke-direct {v2, p0, v1, v0}, Lcom/tencent/mm/ui/base/VerticalScrollBar$1;-><init>(Lcom/tencent/mm/ui/base/VerticalScrollBar;II)V
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/base/VerticalScrollBar;->post(Ljava/lang/Runnable;)Z
 
@@ -212,14 +212,14 @@
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLk:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEz:[Ljava/lang/String;
 
     array-length v2, v2
 
     if-ge v0, v2, :cond_1
 
     .line 121
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLk:[Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEz:[Ljava/lang/String;
 
     aget-object v2, v2, v0
 
@@ -229,21 +229,21 @@
 
     div-float/2addr v3, v4
 
-    iget v4, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iEd:F
+    iget v4, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEB:F
 
     int-to-float v5, v0
 
-    iget v6, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iEd:F
+    iget v6, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEB:F
 
     mul-float/2addr v5, v6
 
-    iget v6, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLi:F
+    iget v6, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEx:F
 
     mul-float/2addr v5, v6
 
     add-float/2addr v4, v5
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->crB:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->cIZ:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
@@ -258,9 +258,11 @@
 .end method
 
 .method public onTouchEvent(Landroid/view/MotionEvent;)Z
-    .locals 6
+    .locals 7
 
     .prologue
+    const v6, 0x7f0b0e66
+
     const/4 v5, 0x1
 
     const/4 v4, -0x1
@@ -290,21 +292,21 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->fkD:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eED:F
 
     .line 134
-    iget v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->fkD:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eED:F
 
     cmpg-float v0, v0, v2
 
     if-gez v0, :cond_1
 
     .line 135
-    iput v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->fkD:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eED:F
 
     .line 137
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->fkD:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eED:F
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/VerticalScrollBar;->getMeasuredHeight()I
 
@@ -323,7 +325,7 @@
 
     int-to-float v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->fkD:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eED:F
 
     .line 140
     :cond_2
@@ -331,20 +333,20 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$h;->scrollbar_bg:I
+    const v1, 0x7f0406e2
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ao/a;->u(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/VerticalScrollBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 141
-    iget v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->fkD:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eED:F
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iEd:F
+    iget v1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEB:F
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLi:F
+    iget v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEx:F
 
     mul-float/2addr v1, v2
 
@@ -352,65 +354,61 @@
 
     float-to-int v0, v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLk:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEz:[Ljava/lang/String;
 
     array-length v1, v1
 
     if-lt v0, v1, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLk:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEz:[Ljava/lang/String;
 
     array-length v0, v0
 
     add-int/lit8 v0, v0, -0x1
 
     :cond_3
-    iput v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->dTf:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEA:I
 
     .line 142
-    iget v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->dTf:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEA:I
 
     if-ne v0, v4, :cond_8
 
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iIB:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEF:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->scroll_bar_search:I
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
+    invoke-virtual {v0, v6}, Landroid/widget/TextView;->setText(I)V
 
     .line 148
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLm:Lcom/tencent/mm/ui/base/bl;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEE:Lcom/tencent/mm/ui/base/o;
 
     const/16 v1, 0x11
 
-    invoke-virtual {v0, p0, v1, v3, v3}, Lcom/tencent/mm/ui/base/bl;->showAtLocation(Landroid/view/View;III)V
+    invoke-virtual {v0, p0, v1, v3, v3}, Lcom/tencent/mm/ui/base/o;->showAtLocation(Landroid/view/View;III)V
 
     .line 149
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLo:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->kKB:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
 
     if-eqz v0, :cond_4
 
     .line 151
-    iget v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->dTf:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEA:I
 
     if-ne v0, v4, :cond_9
 
     .line 152
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLo:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->kKB:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/VerticalScrollBar;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$n;->scroll_bar_search:I
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/ao/a;->w(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {v1, v6}, Lcom/tencent/mm/aw/a;->A(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/VerticalScrollBar$a;->jO(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/VerticalScrollBar$a;->ls(Ljava/lang/String;)V
 
     .line 157
     :cond_4
@@ -438,9 +436,9 @@
     invoke-virtual {p0, v3}, Lcom/tencent/mm/ui/base/VerticalScrollBar;->setBackgroundResource(I)V
 
     .line 161
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLm:Lcom/tencent/mm/ui/base/bl;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEE:Lcom/tencent/mm/ui/base/o;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/bl;->dismiss()V
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/o;->dismiss()V
 
     .line 164
     :cond_7
@@ -448,11 +446,11 @@
 
     .line 145
     :cond_8
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iIB:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEF:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLk:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEz:[Ljava/lang/String;
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->dTf:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEA:I
 
     aget-object v1, v1, v2
 
@@ -462,15 +460,15 @@
 
     .line 154
     :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLo:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->kKB:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLk:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEz:[Ljava/lang/String;
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->dTf:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->eEA:I
 
     aget-object v1, v1, v2
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/VerticalScrollBar$a;->jO(Ljava/lang/String;)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/VerticalScrollBar$a;->ls(Ljava/lang/String;)V
 
     goto :goto_1
 .end method
@@ -480,7 +478,7 @@
 
     .prologue
     .line 61
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->iLo:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/VerticalScrollBar;->kKB:Lcom/tencent/mm/ui/base/VerticalScrollBar$a;
 
     .line 62
     return-void

@@ -4,71 +4,46 @@ import a.a.a.b;
 import java.util.LinkedList;
 
 public final class cf
-  extends adm
+  extends alq
 {
-  public int ege;
-  public int hlB;
-  public String hlH;
-  public String hlb;
-  public int hlc;
-  public int hlv;
-  public int hlw;
-  public int hlx;
+  public LinkedList iZF = new LinkedList();
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLQ == null) {
+      if (jHj == null) {
         throw new b("Not all required fields were included: BaseResponse");
       }
-      if (hLQ != null)
+      if (jHj != null)
       {
-        paramVarArgs.bN(1, hLQ.kS());
-        hLQ.a(paramVarArgs);
+        paramVarArgs.cj(1, jHj.kn());
+        jHj.a(paramVarArgs);
       }
-      if (hlb != null) {
-        paramVarArgs.U(2, hlb);
-      }
-      paramVarArgs.bM(3, hlv);
-      paramVarArgs.bM(4, hlw);
-      paramVarArgs.bM(5, ege);
-      if (hlH != null) {
-        paramVarArgs.U(6, hlH);
-      }
-      paramVarArgs.bM(7, hlB);
-      paramVarArgs.bM(8, hlx);
-      paramVarArgs.bM(9, hlc);
+      paramVarArgs.d(2, 1, iZF);
       return 0;
     }
     if (paramInt == 1) {
-      if (hLQ == null) {
-        break label649;
+      if (jHj == null) {
+        break label356;
       }
     }
-    label649:
-    for (paramInt = a.a.a.a.bJ(1, hLQ.kS()) + 0;; paramInt = 0)
+    label356:
+    for (paramInt = a.a.a.a.ch(1, jHj.kn()) + 0;; paramInt = 0)
     {
-      int i = paramInt;
-      if (hlb != null) {
-        i = paramInt + a.a.a.b.b.a.T(2, hlb);
-      }
-      i = i + a.a.a.a.bI(3, hlv) + a.a.a.a.bI(4, hlw) + a.a.a.a.bI(5, ege);
-      paramInt = i;
-      if (hlH != null) {
-        paramInt = i + a.a.a.b.b.a.T(6, hlH);
-      }
-      return paramInt + a.a.a.a.bI(7, hlB) + a.a.a.a.bI(8, hlx) + a.a.a.a.bI(9, hlc);
+      return paramInt + a.a.a.a.c(2, 1, iZF);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = adm.a(paramVarArgs); paramInt > 0; paramInt = adm.a(paramVarArgs)) {
+        paramVarArgs = (byte[])paramVarArgs[0];
+        iZF.clear();
+        paramVarArgs = new a.a.a.a.a(paramVarArgs, iTR);
+        for (paramInt = alq.a(paramVarArgs); paramInt > 0; paramInt = alq.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
-        if (hLQ != null) {
+        if (jHj != null) {
           break;
         }
         throw new b("Not all required fields were included: BaseResponse");
@@ -83,41 +58,20 @@ public final class cf
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
-          i = paramVarArgs.size();
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          int i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new ck();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (boolean bool = true; bool; bool = ((ck)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adm.a((a.a.a.a.a)localObject2))) {}
-            hLQ = ((ck)localObject1);
+            localObject1 = new dd();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (boolean bool = true; bool; bool = ((dd)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
+            jHj = ((dd)localObject1);
             paramInt += 1;
           }
-        case 2: 
-          hlb = jMD.readString();
-          return 0;
-        case 3: 
-          hlv = jMD.aVp();
-          return 0;
-        case 4: 
-          hlw = jMD.aVp();
-          return 0;
-        case 5: 
-          ege = jMD.aVp();
-          return 0;
-        case 6: 
-          hlH = jMD.readString();
-          return 0;
-        case 7: 
-          hlB = jMD.aVp();
-          return 0;
-        case 8: 
-          hlx = jMD.aVp();
-          return 0;
         }
-        hlc = jMD.aVp();
+        iZF.add(maU.readString());
         return 0;
       }
       return -1;

@@ -3,18 +3,18 @@ package com.tencent.smtt.sdk;
 import com.tencent.smtt.export.external.interfaces.QuotaUpdater;
 
 final class e$a
-  implements ac.a
+  implements w.a
 {
-  QuotaUpdater jJw;
+  QuotaUpdater lRL;
   
   e$a(e parame, QuotaUpdater paramQuotaUpdater)
   {
-    jJw = paramQuotaUpdater;
+    lRL = paramQuotaUpdater;
   }
   
   public final void updateQuota(long paramLong)
   {
-    jJw.updateQuota(paramLong);
+    lRL.updateQuota(paramLong);
   }
 }
 

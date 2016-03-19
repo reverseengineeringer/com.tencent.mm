@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ct
-  extends a.c
+  extends a.e
 {
   public a$ct()
   {
-    super("stopScanWXDevice", "stopScanWXDevice", 122, true);
+    super("openDesignerProfile", "openDesignerProfile", 193, true);
   }
 }
 

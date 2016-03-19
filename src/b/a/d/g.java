@@ -13,10 +13,10 @@ import java.util.Set;
 
 public final class g
 {
-  public int code;
-  private Map jPD;
-  private String jPK;
-  private InputStream jPL;
+  public int cwi;
+  private Map mdP;
+  private String mdV;
+  private InputStream mdW;
   
   g(HttpURLConnection paramHttpURLConnection)
   {
@@ -25,15 +25,15 @@ public final class g
       try
       {
         paramHttpURLConnection.connect();
-        code = paramHttpURLConnection.getResponseCode();
-        jPD = c(paramHttpURLConnection);
-        if ((code >= 200) && (code < 400))
+        cwi = paramHttpURLConnection.getResponseCode();
+        mdP = c(paramHttpURLConnection);
+        if ((cwi >= 200) && (cwi < 400))
         {
           i = 1;
           if (i != 0)
           {
             paramHttpURLConnection = paramHttpURLConnection.getInputStream();
-            jPL = paramHttpURLConnection;
+            mdW = paramHttpURLConnection;
             return;
           }
           paramHttpURLConnection = paramHttpURLConnection.getErrorStream();
@@ -64,11 +64,11 @@ public final class g
   
   public final String getBody()
   {
-    if (jPK != null) {
-      return jPK;
+    if (mdV != null) {
+      return mdV;
     }
-    jPK = e.l(jPL);
-    return jPK;
+    mdV = e.k(mdW);
+    return mdV;
   }
 }
 

@@ -1,17 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
 
 public final class fm
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aAm = new a();
+  public b aAn = new b();
   
   public fm()
   {
-    id = "PostSyncTask";
-    hXT = atO;
+    id = "GetSafeDeviceName";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public Context context;
+  }
+  
+  public static final class b
+  {
+    public String aAo;
   }
 }
 

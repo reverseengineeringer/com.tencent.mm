@@ -1,82 +1,80 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.p.c;
-import com.tencent.mm.protocal.b.adm;
-import com.tencent.mm.protocal.b.ck;
-import com.tencent.mm.protocal.b.kq;
-import com.tencent.mm.protocal.b.kr;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.alq;
+import com.tencent.mm.protocal.b.dd;
+import com.tencent.mm.protocal.b.my;
+import com.tencent.mm.protocal.b.mz;
+import com.tencent.mm.q.b;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.a.c;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.storage.h;
 
 public final class g
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private d apI;
-  private a apJ;
-  public int avp;
+  private d anM;
+  private a anN;
+  public int auE;
   
   public g(int paramInt, String paramString)
   {
-    avp = paramInt;
+    auE = paramInt;
     Object localObject = new a.a();
-    bsW = new kq();
-    bsX = new kr();
+    bFa = new my();
+    bFb = new mz();
     uri = "/cgi-bin/micromsg-bin/facebookauth";
-    bsV = 183;
-    bsY = 0;
-    bsZ = 0;
-    apJ = ((a.a)localObject).vh();
-    kq localkq = (kq)apJ.bsT.btb;
+    bEY = 183;
+    bFc = 0;
+    bFd = 0;
+    anN = ((a.a)localObject).vy();
+    my localmy = (my)anN.bEW.bFf;
     localObject = paramString;
-    if (bn.iW(paramString)) {
+    if (ay.kz(paramString)) {
       localObject = "";
     }
-    htZ = ((String)localObject);
-    htY = paramInt;
+    jkD = ((String)localObject);
+    eiL = paramInt;
   }
   
-  public final int a(m paramm, d paramd)
+  public final int a(e parame, d paramd)
   {
-    apI = paramd;
-    return a(paramm, apJ, this);
+    anM = paramd;
+    return a(parame, anN, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvm2HKZo87aD+SXtk58CwKnc=", "onGYNetEnd errType:" + paramInt2 + " errCode:" + paramInt3);
+    u.d("!44@/B4Tb64lLpK+IBX8XDgnvm2HKZo87aD+SXtk58CwKnc=", "onGYNetEnd errType:" + paramInt2 + " errCode:" + paramInt3);
     if ((paramInt2 == 0) && (paramInt3 == 0))
     {
-      paramw = (kr)apJ.bsU.btb;
-      paramInt1 = hLQ.hkV;
+      paramo = (mz)anN.bEX.bFf;
+      paramInt1 = jHj.iZL;
       if (paramInt1 != 0)
       {
-        t.e("!44@/B4Tb64lLpK+IBX8XDgnvm2HKZo87aD+SXtk58CwKnc=", "baseresponse.ret = " + paramInt1);
-        apI.a(4, paramInt1, paramString, this);
+        u.e("!44@/B4Tb64lLpK+IBX8XDgnvm2HKZo87aD+SXtk58CwKnc=", "baseresponse.ret = " + paramInt1);
+        anM.a(4, paramInt1, paramString, this);
         return;
       }
-      t.d("!44@/B4Tb64lLpK+IBX8XDgnvm2HKZo87aD+SXtk58CwKnc=", "fbuserid = " + hub + ", fbusername = " + huc);
-      if ((avp == 0) || (avp == 1))
+      u.d("!44@/B4Tb64lLpK+IBX8XDgnvm2HKZo87aD+SXtk58CwKnc=", "fbuserid = " + jkF + ", fbusername = " + jkG);
+      if ((auE == 0) || (auE == 1))
       {
-        ax.tl().rf().set(65825, hub);
-        c.fp(hub);
-        ax.tl().rf().set(65826, huc);
-        ax.tl().rf().eN(true);
+        ah.tD().rn().set(65825, jkF);
+        b.fJ(jkF);
+        ah.tD().rn().set(65826, jkG);
+        ah.tD().rn().gN(true);
       }
     }
-    apI.a(paramInt2, paramInt3, paramString, this);
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()

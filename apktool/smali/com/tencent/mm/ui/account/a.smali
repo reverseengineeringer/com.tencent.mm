@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private dWD:Landroid/view/LayoutInflater;
+.field private fbg:Landroid/view/LayoutInflater;
 
-.field private isx:[Ljava/lang/String;
+.field private krD:[Ljava/lang/String;
 
-.field private isy:Landroid/graphics/drawable/Drawable;
+.field private krE:Landroid/graphics/drawable/Drawable;
 
-.field private isz:Landroid/view/View$OnTouchListener;
+.field private krF:Landroid/view/View$OnTouchListener;
 
 
 # direct methods
@@ -26,48 +26,48 @@
     .line 18
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/a;->isy:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/a;->krE:Landroid/graphics/drawable/Drawable;
 
     .line 56
-    new-instance v0, Lcom/tencent/mm/ui/account/b;
+    new-instance v0, Lcom/tencent/mm/ui/account/a$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/b;-><init>(Lcom/tencent/mm/ui/account/a;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/a$1;-><init>(Lcom/tencent/mm/ui/account/a;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/a;->isz:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/a;->krF:Landroid/view/View$OnTouchListener;
 
     .line 21
-    iput-object p2, p0, Lcom/tencent/mm/ui/account/a;->isx:[Ljava/lang/String;
+    iput-object p2, p0, Lcom/tencent/mm/ui/account/a;->krD:[Ljava/lang/String;
 
     .line 22
     invoke-static {p1}, Landroid/view/LayoutInflater;->from(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/a;->dWD:Landroid/view/LayoutInflater;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/a;->fbg:Landroid/view/LayoutInflater;
 
     .line 23
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$h;->signup_chose_line:I
+    const v1, 0x7f040272
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/a;->isy:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/a;->krE:Landroid/graphics/drawable/Drawable;
 
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/a;->isy:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/a;->krE:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/a;->isy:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/a;->krE:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/a;->isy:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/a;->krE:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -79,12 +79,12 @@
     return-void
 .end method
 
-.method private nr(I)Z
+.method private ql(I)Z
     .locals 1
 
     .prologue
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/a;->isx:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/a;->krD:[Ljava/lang/String;
 
     array-length v0, v0
 
@@ -112,7 +112,7 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/a;->isx:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/a;->krD:[Ljava/lang/String;
 
     array-length v0, v0
 
@@ -124,7 +124,7 @@
 
     .prologue
     .line 34
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/a;->isx:[Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/a;->krD:[Ljava/lang/String;
 
     aget-object v0, v0, p1
 
@@ -159,9 +159,9 @@
     if-nez p2, :cond_0
 
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/a;->dWD:Landroid/view/LayoutInflater;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/a;->fbg:Landroid/view/LayoutInflater;
 
-    sget v3, Lcom/tencent/mm/a$k;->alias_item:I
+    const v3, 0x7f0a0297
 
     invoke-virtual {v0, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -169,7 +169,7 @@
 
     .line 74
     :cond_0
-    sget v0, Lcom/tencent/mm/a$i;->alias_tv:I
+    const v0, 0x7f0706d7
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -178,7 +178,7 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 78
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/a;->isz:Landroid/view/View$OnTouchListener;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/a;->krF:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {p2, v3}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -190,7 +190,7 @@
     :goto_0
     if-eqz v3, :cond_2
 
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/account/a;->nr(I)Z
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/account/a;->ql(I)Z
 
     move-result v3
 
@@ -207,7 +207,7 @@
 
     .line 96
     :goto_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/a;->isx:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/a;->krD:[Ljava/lang/String;
 
     aget-object v1, v1, p1
 
@@ -236,7 +236,7 @@
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
 
     .line 86
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/a;->isy:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/a;->krE:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v4, v4, v1, v4}, Landroid/widget/TextView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
@@ -250,7 +250,7 @@
 
     .line 87
     :cond_4
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/account/a;->nr(I)Z
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/account/a;->ql(I)Z
 
     move-result v1
 
@@ -275,7 +275,7 @@
     invoke-virtual {v0, v5}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
 
     .line 94
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/a;->isy:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/a;->krE:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v4, v4, v1, v4}, Landroid/widget/TextView;->setCompoundDrawables(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 

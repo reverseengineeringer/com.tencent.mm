@@ -5,11 +5,11 @@ import java.util.HashMap;
 
 final class FragmentActivity$b
 {
-  Object bU;
-  Object bV;
-  HashMap bW;
-  ArrayList bX;
-  HashMap bY;
+  Object bk;
+  Object bl;
+  HashMap bm;
+  ArrayList bn;
+  HashMap bo;
 }
 
 /* Location:

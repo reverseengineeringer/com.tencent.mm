@@ -15,16 +15,16 @@
 
 
 # direct methods
-.method public static G(Landroid/os/Bundle;)Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
+.method public static J(Landroid/os/Bundle;)Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
     .locals 6
 
     .prologue
-    .line 355
+    .line 370
     new-instance v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
 
     invoke-direct {v1}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;-><init>()V
 
-    .line 356
+    .line 371
     const-string/jumbo v0, "_wxobject_sdkVer"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -33,7 +33,7 @@
 
     iput v0, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->sdkVer:I
 
-    .line 358
+    .line 373
     const-string/jumbo v0, "_wxobject_title"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -42,7 +42,7 @@
 
     iput-object v0, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
 
-    .line 359
+    .line 374
     const-string/jumbo v0, "_wxobject_description"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -51,7 +51,7 @@
 
     iput-object v0, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
-    .line 360
+    .line 375
     const-string/jumbo v0, "_wxobject_thumbdata"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getByteArray(Ljava/lang/String;)[B
@@ -60,7 +60,7 @@
 
     iput-object v0, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
-    .line 361
+    .line 376
     const-string/jumbo v0, "_wxobject_mediatagname"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -69,7 +69,7 @@
 
     iput-object v0, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaTagName:Ljava/lang/String;
 
-    .line 362
+    .line 377
     const-string/jumbo v0, "_wxobject_message_action"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -78,7 +78,7 @@
 
     iput-object v0, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->messageAction:Ljava/lang/String;
 
-    .line 363
+    .line 378
     const-string/jumbo v0, "_wxobject_message_ext"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -87,7 +87,7 @@
 
     iput-object v0, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->messageExt:Ljava/lang/String;
 
-    .line 365
+    .line 380
     const-string/jumbo v0, "_wxobject_identifier_"
 
     invoke-virtual {p0, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -107,11 +107,11 @@
 
     const-string/jumbo v3, "pathOldToNew fail, oldPath is null"
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v2, v0
 
-    .line 366
+    .line 381
     :goto_0
     if-eqz v2, :cond_1
 
@@ -124,11 +124,11 @@
     :cond_1
     move-object v0, v1
 
-    .line 382
+    .line 397
     :goto_1
     return-object v0
 
-    .line 365
+    .line 380
     :cond_2
     const-string/jumbo v2, "com.tencent.mm.sdk.openapi"
 
@@ -142,14 +142,14 @@
 
     goto :goto_0
 
-    .line 372
+    .line 387
     :cond_3
     :try_start_0
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v0
 
-    .line 373
+    .line 388
     invoke-virtual {v0}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v0
@@ -158,7 +158,7 @@
 
     iput-object v0, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
-    .line 374
+    .line 389
     iget-object v0, v1, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
     invoke-interface {v0, p0}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;->unserialize(Landroid/os/Bundle;)V
@@ -167,14 +167,14 @@
 
     move-object v0, v1
 
-    .line 375
+    .line 390
     goto :goto_1
 
-    .line 377
+    .line 392
     :catch_0
     move-exception v0
 
-    .line 378
+    .line 393
     const-string/jumbo v3, "!44@/B4Tb64lLpLZi//yCy0pIMPDmNPaWlODLwNV6cb1AHk="
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -205,11 +205,11 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v1
 
-    .line 382
+    .line 397
     goto :goto_1
 .end method
 
@@ -217,45 +217,45 @@
     .locals 5
 
     .prologue
-    .line 326
+    .line 341
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 327
+    .line 342
     const-string/jumbo v0, "_wxobject_sdkVer"
 
     iget v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->sdkVer:I
 
     invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 329
+    .line 344
     const-string/jumbo v0, "_wxobject_title"
 
     iget-object v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->title:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 330
+    .line 345
     const-string/jumbo v0, "_wxobject_description"
 
     iget-object v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->description:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 331
+    .line 346
     const-string/jumbo v0, "_wxobject_thumbdata"
 
     iget-object v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->thumbData:[B
 
     invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putByteArray(Ljava/lang/String;[B)V
 
-    .line 333
+    .line 348
     iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
     if-eqz v0, :cond_1
 
-    .line 334
+    .line 349
     const-string/jumbo v2, "_wxobject_identifier_"
 
     iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
@@ -281,17 +281,17 @@
 
     const-string/jumbo v4, "pathNewToOld fail, newPath is null"
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     invoke-virtual {v1, v2, v0}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 335
+    .line 350
     iget-object v0, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->mediaObject:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;
 
     invoke-interface {v0, v1}, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage$b;->serialize(Landroid/os/Bundle;)V
 
-    .line 338
+    .line 353
     :cond_1
     const-string/jumbo v0, "_wxobject_mediatagname"
 
@@ -299,24 +299,24 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 339
+    .line 354
     const-string/jumbo v0, "_wxobject_message_action"
 
     iget-object v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->messageAction:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 340
+    .line 355
     const-string/jumbo v0, "_wxobject_message_ext"
 
     iget-object v2, p0, Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;->messageExt:Ljava/lang/String;
 
     invoke-virtual {v1, v0, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 341
+    .line 356
     return-object v1
 
-    .line 334
+    .line 349
     :cond_2
     const-string/jumbo v3, "com.tencent.mm.sdk.modelmsg"
 

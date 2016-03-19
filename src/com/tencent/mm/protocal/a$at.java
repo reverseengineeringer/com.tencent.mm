@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$at
-  extends a.c
+  extends a.e
 {
   public a$at()
   {
-    super("installDownloadTask", "install_download_task", 41, false);
+    super("getH5TransactionRequest", "getH5TransactionRequest", 138, true);
   }
 }
 

@@ -1,20 +1,51 @@
 package com.tencent.mm.ui.chatting;
 
+import android.annotation.TargetApi;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnTouchListener;
+import android.view.View.OnHoverListener;
 
-final class dn
-  implements View.OnTouchListener
+public final class dn
 {
-  dn(dm.b paramb) {}
+  private static dn lde;
+  Object ldd;
   
-  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  public static dn bgi()
   {
-    if (dm.b.b(iUU) != null) {
-      dm.b.b(iUU).onTouch(dm.b.c(iUU), paramMotionEvent);
+    try
+    {
+      if (lde == null) {
+        lde = new dn();
+      }
+      dn localdn = lde;
+      return localdn;
     }
-    return false;
+    finally {}
+  }
+  
+  @TargetApi(14)
+  public static final class a
+    implements View.OnHoverListener
+  {
+    private dn.b ldf;
+    
+    public a(dn.b paramb)
+    {
+      ldf = paramb;
+    }
+    
+    public final boolean onHover(View paramView, MotionEvent paramMotionEvent)
+    {
+      if (ldf != null) {
+        return ldf.c(paramView, paramMotionEvent);
+      }
+      return false;
+    }
+  }
+  
+  public static abstract interface b
+  {
+    public abstract boolean c(View paramView, MotionEvent paramMotionEvent);
   }
 }
 

@@ -1,23 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class it
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFV = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aEN = new a();
+  public b aEO = new b();
   
   public it()
   {
-    id = "TrackRemoveTip";
-    hXT = atO;
+    id = "PublishScanCodeResult";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String avY;
+    public int aEP = 0;
+    public String aEQ;
+    public int aou = 0;
+  }
+  
+  public static final class b
+  {
+    public int ret = 0;
   }
 }
 

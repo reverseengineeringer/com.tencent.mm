@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/hu;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aFa:Lcom/tencent/mm/d/a/hu$a;
+.field public aDs:Lcom/tencent/mm/d/a/hu$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/hu;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/hu;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/hu;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/hu;->arR:Z
 
     return-void
 .end method
@@ -42,23 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/hu$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/hu$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/hu;->aFa:Lcom/tencent/mm/d/a/hu$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/hu;->aDs:Lcom/tencent/mm/d/a/hu$a;
 
     .line 8
-    const-string/jumbo v0, "SnsFinishBlockUser"
+    const-string/jumbo v0, "NotifyWNNoteCdnChanged"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/hu;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/hu;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/hu;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/hu;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/hu;->jUI:Z
 
     return-void
 .end method

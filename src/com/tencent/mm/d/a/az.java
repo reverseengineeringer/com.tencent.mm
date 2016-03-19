@@ -1,25 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class az
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avU = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public az()
   {
-    id = "ExDeviceOnScanDeviceResult";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public String anZ;
-    public byte[] avV;
-    public boolean avW;
+    id = "DumpSnsABtest";
+    jUI = arR;
   }
 }
 

@@ -1,16 +1,27 @@
 package com.tencent.mm.pluginsdk.model;
 
-import com.tencent.mm.sdk.platformtools.ac;
-
-final class n
-  implements Runnable
+public final class n
 {
-  n(m paramm, Object[] paramArrayOfObject) {}
+  public String auy;
+  private int iAt;
+  public String iAu;
+  public String iAv;
+  public String iAw;
+  public int iAx;
   
-  public final void run()
+  n(int paramInt1, String paramString1, String paramString2, String paramString3, String paramString4, int paramInt2)
   {
-    Object localObject = gLp.Gq();
-    gLp.handler.post(new o(this, localObject));
+    iAt = paramInt1;
+    auy = paramString1;
+    iAu = paramString2;
+    iAx = paramInt2;
+    iAv = paramString3;
+    iAw = paramString4;
+  }
+  
+  public final String toString()
+  {
+    return "id:" + iAt + ";productId:" + auy + ";full:" + iAu + ";productState:" + iAx + ";priceCurrencyCode:" + iAv + ";priceAmountMicros:" + iAw;
   }
 }
 

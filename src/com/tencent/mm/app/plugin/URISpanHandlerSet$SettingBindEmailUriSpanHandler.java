@@ -1,9 +1,9 @@
 package com.tencent.mm.app.plugin;
 
 import android.os.Bundle;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
 import com.tencent.mm.ui.LauncherUI;
 
 @URISpanHandlerSet.a
@@ -15,36 +15,36 @@ class URISpanHandlerSet$SettingBindEmailUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     if (type == 7)
     {
-      if (paramf != null) {
-        paramf.a(paramah);
+      if (paramb != null) {
+        paramb.a(paramg);
       }
-      paramah = LauncherUI.aKD();
-      if (paramah != null) {
-        paramah.As("tab_settings");
+      paramg = LauncherUI.bat();
+      if (paramg != null) {
+        paramg.Gi("tab_settings");
       }
       return true;
     }
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     if (paramString.trim().startsWith("weixin://setting/bindemail")) {
-      return new ah(paramString, 7, null);
+      return new g(paramString, 7, null);
     }
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[] { 7 };
   }

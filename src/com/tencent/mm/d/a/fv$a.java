@@ -2,8 +2,12 @@ package com.tencent.mm.d.a;
 
 public final class fv$a
 {
-  public String appId;
-  public String url;
+  public String aAO;
+  public String aAP;
+  public String aAQ;
+  public String aAR;
+  public String aAS;
+  public int atF = 0;
 }
 
 /* Location:

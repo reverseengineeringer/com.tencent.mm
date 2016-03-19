@@ -15,20 +15,21 @@
 
 
 # instance fields
-.field public aAd:Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;
-
-.field public appId:Ljava/lang/String;
-
-.field public context:Landroid/content/Context;
+.field public state:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 1
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    const/4 v0, -0x1
+
+    iput v0, p0, Lcom/tencent/mm/d/a/dz$a;->state:I
 
     return-void
 .end method

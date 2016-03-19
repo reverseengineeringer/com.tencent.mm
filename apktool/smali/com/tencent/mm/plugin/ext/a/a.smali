@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static cjG:[C
+.field private static cAP:[C
 
-.field private static dbi:Ljavax/crypto/SecretKey;
+.field private static dKw:Ljavax/crypto/SecretKey;
 
 
 # direct methods
@@ -17,7 +17,7 @@
     .line 43
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/a/a;->dbi:Ljavax/crypto/SecretKey;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/a/a;->dKw:Ljavax/crypto/SecretKey;
 
     .line 93
     const/16 v0, 0x10
@@ -26,7 +26,7 @@
 
     fill-array-data v0, :array_0
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/a/a;->cjG:[C
+    sput-object v0, Lcom/tencent/mm/plugin/ext/a/a;->cAP:[C
 
     return-void
 
@@ -53,13 +53,13 @@
     .end array-data
 .end method
 
-.method private static PG()V
+.method private static Vt()V
     .locals 3
 
     .prologue
     .line 47
     :try_start_0
-    sget-object v0, Lcom/tencent/mm/plugin/ext/a/a;->dbi:Ljavax/crypto/SecretKey;
+    sget-object v0, Lcom/tencent/mm/plugin/ext/a/a;->dKw:Ljavax/crypto/SecretKey;
 
     if-nez v0, :cond_0
 
@@ -70,7 +70,7 @@
 
     const-string/jumbo v2, "aced00057372001f6a617661782e63727970746f2e737065632e5365637265744b6579537065635b470b66e230614d0200024c0009616c676f726974686d7400124c6a6176612f6c616e672f537472696e673b5b00036b65797400025b427870740003414553757200025b42acf317f8060854e0020000787000000010402a2173bd6f2542e5e71ee414b2e1e8"
 
-    invoke-static {v2}, Lcom/tencent/mm/plugin/ext/a/a;->jG(Ljava/lang/String;)[B
+    invoke-static {v2}, Lcom/tencent/mm/plugin/ext/a/a;->lj(Ljava/lang/String;)[B
 
     move-result-object v2
 
@@ -85,7 +85,7 @@
 
     check-cast v0, Ljavax/crypto/SecretKey;
 
-    sput-object v0, Lcom/tencent/mm/plugin/ext/a/a;->dbi:Ljavax/crypto/SecretKey;
+    sput-object v0, Lcom/tencent/mm/plugin/ext/a/a;->dKw:Ljavax/crypto/SecretKey;
 
     .line 50
     invoke-virtual {v1}, Ljava/io/ObjectInputStream;->close()V
@@ -104,7 +104,7 @@
     goto :goto_0
 .end method
 
-.method public static aI(J)Ljava/lang/String;
+.method public static bc(J)Ljava/lang/String;
     .locals 5
 
     .prologue
@@ -113,7 +113,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/a/a;->encrypt(Ljava/lang/String;)[B
+    invoke-static {v0}, Lcom/tencent/mm/plugin/ext/a/a;->nQ(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -140,7 +140,7 @@
 
     if-ge v0, v3, :cond_1
 
-    sget-object v3, Lcom/tencent/mm/plugin/ext/a/a;->cjG:[C
+    sget-object v3, Lcom/tencent/mm/plugin/ext/a/a;->cAP:[C
 
     aget-byte v4, v1, v0
 
@@ -152,7 +152,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    sget-object v3, Lcom/tencent/mm/plugin/ext/a/a;->cjG:[C
+    sget-object v3, Lcom/tencent/mm/plugin/ext/a/a;->cAP:[C
 
     aget-byte v4, v1, v0
 
@@ -174,60 +174,7 @@
     goto :goto_0
 .end method
 
-.method private static encrypt(Ljava/lang/String;)[B
-    .locals 3
-
-    .prologue
-    .line 58
-    if-eqz p0, :cond_0
-
-    invoke-virtual {p0}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-gtz v0, :cond_1
-
-    .line 59
-    :cond_0
-    const/4 v0, 0x0
-
-    .line 66
-    :goto_0
-    return-object v0
-
-    .line 61
-    :cond_1
-    invoke-static {}, Lcom/tencent/mm/plugin/ext/a/a;->PG()V
-
-    .line 63
-    const-string/jumbo v0, "AES"
-
-    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
-
-    move-result-object v0
-
-    .line 64
-    const/4 v1, 0x1
-
-    sget-object v2, Lcom/tencent/mm/plugin/ext/a/a;->dbi:Ljavax/crypto/SecretKey;
-
-    invoke-virtual {v0, v1, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
-
-    .line 65
-    const-string/jumbo v1, "UTF8"
-
-    invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljavax/crypto/Cipher;->doFinal([B)[B
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method private static jG(Ljava/lang/String;)[B
+.method private static lj(Ljava/lang/String;)[B
     .locals 4
 
     .prologue
@@ -299,7 +246,60 @@
     goto :goto_0
 .end method
 
-.method private static lq(Ljava/lang/String;)Ljava/lang/String;
+.method private static nQ(Ljava/lang/String;)[B
+    .locals 3
+
+    .prologue
+    .line 58
+    if-eqz p0, :cond_0
+
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-gtz v0, :cond_1
+
+    .line 59
+    :cond_0
+    const/4 v0, 0x0
+
+    .line 66
+    :goto_0
+    return-object v0
+
+    .line 61
+    :cond_1
+    invoke-static {}, Lcom/tencent/mm/plugin/ext/a/a;->Vt()V
+
+    .line 63
+    const-string/jumbo v0, "AES"
+
+    invoke-static {v0}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+
+    move-result-object v0
+
+    .line 64
+    const/4 v1, 0x1
+
+    sget-object v2, Lcom/tencent/mm/plugin/ext/a/a;->dKw:Ljavax/crypto/SecretKey;
+
+    invoke-virtual {v0, v1, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
+
+    .line 65
+    const-string/jumbo v1, "UTF8"
+
+    invoke-virtual {p0, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Ljavax/crypto/Cipher;->doFinal([B)[B
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method private static nR(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -322,7 +322,7 @@
 
     .line 81
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/plugin/ext/a/a;->PG()V
+    invoke-static {}, Lcom/tencent/mm/plugin/ext/a/a;->Vt()V
 
     .line 83
     const-string/jumbo v0, "AES"
@@ -334,12 +334,12 @@
     .line 84
     const/4 v1, 0x2
 
-    sget-object v2, Lcom/tencent/mm/plugin/ext/a/a;->dbi:Ljavax/crypto/SecretKey;
+    sget-object v2, Lcom/tencent/mm/plugin/ext/a/a;->dKw:Ljavax/crypto/SecretKey;
 
     invoke-virtual {v0, v1, v2}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;)V
 
     .line 85
-    invoke-static {p0}, Lcom/tencent/mm/plugin/ext/a/a;->jG(Ljava/lang/String;)[B
+    invoke-static {p0}, Lcom/tencent/mm/plugin/ext/a/a;->lj(Ljava/lang/String;)[B
 
     move-result-object v1
 
@@ -357,12 +357,12 @@
     goto :goto_0
 .end method
 
-.method public static lr(Ljava/lang/String;)J
+.method public static nS(Ljava/lang/String;)J
     .locals 2
 
     .prologue
     .line 90
-    invoke-static {p0}, Lcom/tencent/mm/plugin/ext/a/a;->lq(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p0}, Lcom/tencent/mm/plugin/ext/a/a;->nR(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 

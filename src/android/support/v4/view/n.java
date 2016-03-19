@@ -1,137 +1,47 @@
 package android.support.v4.view;
 
 import android.os.Build.VERSION;
-import android.view.MotionEvent;
+import android.view.ViewConfiguration;
 
 public final class n
 {
-  static final c fA = new a();
+  static final c fx = new a();
   
   static
   {
-    if (Build.VERSION.SDK_INT >= 5)
+    if (Build.VERSION.SDK_INT >= 11)
     {
-      fA = new b();
+      fx = new b();
       return;
     }
   }
   
-  public static int a(MotionEvent paramMotionEvent, int paramInt)
+  public static int a(ViewConfiguration paramViewConfiguration)
   {
-    return fA.a(paramMotionEvent, paramInt);
-  }
-  
-  public static int b(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return fA.b(paramMotionEvent, paramInt);
-  }
-  
-  public static float c(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return fA.c(paramMotionEvent, paramInt);
-  }
-  
-  public static float d(MotionEvent paramMotionEvent, int paramInt)
-  {
-    return fA.d(paramMotionEvent, paramInt);
-  }
-  
-  public static int d(MotionEvent paramMotionEvent)
-  {
-    return paramMotionEvent.getAction() & 0xFF;
-  }
-  
-  public static int e(MotionEvent paramMotionEvent)
-  {
-    return (paramMotionEvent.getAction() & 0xFF00) >> 8;
-  }
-  
-  public static int f(MotionEvent paramMotionEvent)
-  {
-    return fA.f(paramMotionEvent);
+    return fx.a(paramViewConfiguration);
   }
   
   static final class a
     implements n.c
   {
-    public final int a(MotionEvent paramMotionEvent, int paramInt)
+    public final int a(ViewConfiguration paramViewConfiguration)
     {
-      if (paramInt == 0) {
-        return 0;
-      }
-      return -1;
-    }
-    
-    public final int b(MotionEvent paramMotionEvent, int paramInt)
-    {
-      if (paramInt == 0) {
-        return 0;
-      }
-      throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
-    }
-    
-    public final float c(MotionEvent paramMotionEvent, int paramInt)
-    {
-      if (paramInt == 0) {
-        return paramMotionEvent.getX();
-      }
-      throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
-    }
-    
-    public final float d(MotionEvent paramMotionEvent, int paramInt)
-    {
-      if (paramInt == 0) {
-        return paramMotionEvent.getY();
-      }
-      throw new IndexOutOfBoundsException("Pre-Eclair does not support multiple pointers");
-    }
-    
-    public final int f(MotionEvent paramMotionEvent)
-    {
-      return 1;
+      return paramViewConfiguration.getScaledTouchSlop();
     }
   }
   
   static final class b
     implements n.c
   {
-    public final int a(MotionEvent paramMotionEvent, int paramInt)
+    public final int a(ViewConfiguration paramViewConfiguration)
     {
-      return paramMotionEvent.findPointerIndex(paramInt);
-    }
-    
-    public final int b(MotionEvent paramMotionEvent, int paramInt)
-    {
-      return paramMotionEvent.getPointerId(paramInt);
-    }
-    
-    public final float c(MotionEvent paramMotionEvent, int paramInt)
-    {
-      return paramMotionEvent.getX(paramInt);
-    }
-    
-    public final float d(MotionEvent paramMotionEvent, int paramInt)
-    {
-      return paramMotionEvent.getY(paramInt);
-    }
-    
-    public final int f(MotionEvent paramMotionEvent)
-    {
-      return paramMotionEvent.getPointerCount();
+      return paramViewConfiguration.getScaledPagingTouchSlop();
     }
   }
   
   static abstract interface c
   {
-    public abstract int a(MotionEvent paramMotionEvent, int paramInt);
-    
-    public abstract int b(MotionEvent paramMotionEvent, int paramInt);
-    
-    public abstract float c(MotionEvent paramMotionEvent, int paramInt);
-    
-    public abstract float d(MotionEvent paramMotionEvent, int paramInt);
-    
-    public abstract int f(MotionEvent paramMotionEvent);
+    public abstract int a(ViewConfiguration paramViewConfiguration);
   }
 }
 

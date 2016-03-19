@@ -2,13 +2,13 @@ package com.tencent.mm.ui.tools;
 
 abstract class MMGestureGallery$a
 {
-  protected boolean iIX = false;
+  protected boolean kIj = false;
   
   public MMGestureGallery$a(MMGestureGallery paramMMGestureGallery) {}
   
-  public final boolean ayV()
+  public final boolean aPA()
   {
-    return iIX;
+    return kIj;
   }
   
   public abstract void play();

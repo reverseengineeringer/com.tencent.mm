@@ -253,9 +253,11 @@
     .line 125
     const/4 v2, 0x0
 
-    aget v2, v11, v2
+    const/4 v13, 0x0
 
-    invoke-static {v10, v12, v2}, Lcom/tencent/mm/b/d;->a(Ljava/io/InputStream;[BI)Z
+    aget v13, v11, v13
+
+    invoke-static {v10, v12, v2, v13}, Lcom/tencent/mm/b/d;->a(Ljava/io/InputStream;[BII)Z
 
     move-result v2
 
@@ -405,11 +407,13 @@
     new-array v4, v4, [B
 
     .line 158
-    const/4 v12, 0x1
+    const/4 v12, 0x0
 
-    aget v12, v11, v12
+    const/4 v13, 0x1
 
-    invoke-static {v6, v4, v12}, Lcom/tencent/mm/b/d;->a(Ljava/io/InputStream;[BI)Z
+    aget v13, v11, v13
+
+    invoke-static {v6, v4, v12, v13}, Lcom/tencent/mm/b/d;->a(Ljava/io/InputStream;[BII)Z
 
     move-result v12
 
@@ -456,4 +460,349 @@
     move v3, v2
 
     goto/16 :goto_1
+.end method
+
+.method public static a([BI[BII)[B
+    .locals 12
+
+    .prologue
+    .line 235
+    add-int/lit8 v0, p1, 0x0
+
+    add-int/lit8 v0, v0, -0x2
+
+    .line 236
+    const/4 v1, 0x2
+
+    if-gt v0, v1, :cond_0
+
+    .line 237
+    new-instance v0, Ljava/io/IOException;
+
+    const-string/jumbo v1, "Corrupt by wrong old file."
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 239
+    :cond_0
+    const/4 v1, 0x0
+
+    aput-byte v1, p0, v0
+
+    .line 240
+    add-int/lit8 v0, v0, 0x1
+
+    const/4 v1, 0x0
+
+    aput-byte v1, p0, v0
+
+    .line 242
+    new-instance v0, Ljava/io/DataInputStream;
+
+    new-instance v1, Ljava/io/ByteArrayInputStream;
+
+    const/4 v2, 0x0
+
+    invoke-direct {v1, p2, v2, p3}, Ljava/io/ByteArrayInputStream;-><init>([BII)V
+
+    invoke-direct {v0, v1}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
+
+    .line 244
+    const-wide/16 v1, 0x8
+
+    invoke-virtual {v0, v1, v2}, Ljava/io/DataInputStream;->skip(J)J
+
+    .line 245
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readLong()J
+
+    move-result-wide v1
+
+    .line 246
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readLong()J
+
+    move-result-wide v3
+
+    .line 247
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->readLong()J
+
+    move-result-wide v5
+
+    long-to-int v5, v5
+
+    .line 249
+    invoke-virtual {v0}, Ljava/io/DataInputStream;->close()V
+
+    .line 251
+    new-instance v0, Ljava/io/ByteArrayInputStream;
+
+    const/4 v6, 0x0
+
+    invoke-direct {v0, p2, v6, p3}, Ljava/io/ByteArrayInputStream;-><init>([BII)V
+
+    .line 252
+    const-wide/16 v6, 0x20
+
+    invoke-virtual {v0, v6, v7}, Ljava/io/InputStream;->skip(J)J
+
+    .line 253
+    new-instance v6, Ljava/io/DataInputStream;
+
+    new-instance v7, Ljava/util/zip/GZIPInputStream;
+
+    invoke-direct {v7, v0}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
+
+    invoke-direct {v6, v7}, Ljava/io/DataInputStream;-><init>(Ljava/io/InputStream;)V
+
+    .line 255
+    new-instance v0, Ljava/io/ByteArrayInputStream;
+
+    const/4 v7, 0x0
+
+    invoke-direct {v0, p2, v7, p3}, Ljava/io/ByteArrayInputStream;-><init>([BII)V
+
+    .line 256
+    const-wide/16 v7, 0x20
+
+    add-long/2addr v7, v1
+
+    invoke-virtual {v0, v7, v8}, Ljava/io/InputStream;->skip(J)J
+
+    .line 257
+    new-instance v7, Ljava/util/zip/GZIPInputStream;
+
+    invoke-direct {v7, v0}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
+
+    .line 259
+    new-instance v0, Ljava/io/ByteArrayInputStream;
+
+    const/4 v8, 0x0
+
+    invoke-direct {v0, p2, v8, p3}, Ljava/io/ByteArrayInputStream;-><init>([BII)V
+
+    .line 260
+    add-long/2addr v1, v3
+
+    const-wide/16 v3, 0x20
+
+    add-long/2addr v1, v3
+
+    invoke-virtual {v0, v1, v2}, Ljava/io/InputStream;->skip(J)J
+
+    .line 261
+    new-instance v3, Ljava/util/zip/GZIPInputStream;
+
+    invoke-direct {v3, v0}, Ljava/util/zip/GZIPInputStream;-><init>(Ljava/io/InputStream;)V
+
+    .line 264
+    new-array v4, v5, [B
+
+    .line 266
+    const/4 v1, 0x0
+
+    .line 267
+    const/4 v0, 0x0
+
+    .line 268
+    const/4 v2, 0x3
+
+    new-array v8, v2, [I
+
+    move v2, v1
+
+    move v1, v0
+
+    .line 271
+    :goto_0
+    if-lt v1, v5, :cond_1
+
+    .line 306
+    invoke-virtual {v6}, Ljava/io/DataInputStream;->close()V
+
+    .line 307
+    invoke-virtual {v7}, Ljava/io/InputStream;->close()V
+
+    .line 308
+    invoke-virtual {v3}, Ljava/io/InputStream;->close()V
+
+    .line 310
+    return-object v4
+
+    .line 273
+    :cond_1
+    const/4 v0, 0x0
+
+    :goto_1
+    const/4 v9, 0x2
+
+    if-le v0, v9, :cond_2
+
+    .line 277
+    const/4 v0, 0x0
+
+    aget v0, v8, v0
+
+    add-int/2addr v0, v1
+
+    if-le v0, v5, :cond_3
+
+    .line 278
+    new-instance v0, Ljava/io/IOException;
+
+    const-string/jumbo v1, "Corrupt by wrong patch file."
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 274
+    :cond_2
+    invoke-virtual {v6}, Ljava/io/DataInputStream;->readInt()I
+
+    move-result v9
+
+    aput v9, v8, v0
+
+    .line 273
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_1
+
+    .line 282
+    :cond_3
+    const/4 v0, 0x0
+
+    aget v0, v8, v0
+
+    invoke-static {v7, v4, v1, v0}, Lcom/tencent/mm/b/d;->a(Ljava/io/InputStream;[BII)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    .line 283
+    new-instance v0, Ljava/io/IOException;
+
+    const-string/jumbo v1, "Corrupt by wrong patch file."
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 286
+    :cond_4
+    const/4 v0, 0x0
+
+    :goto_2
+    const/4 v9, 0x0
+
+    aget v9, v8, v9
+
+    if-lt v0, v9, :cond_5
+
+    .line 292
+    const/4 v0, 0x0
+
+    aget v0, v8, v0
+
+    add-int/2addr v0, v1
+
+    .line 293
+    const/4 v1, 0x0
+
+    aget v1, v8, v1
+
+    add-int/2addr v1, v2
+
+    .line 295
+    const/4 v2, 0x1
+
+    aget v2, v8, v2
+
+    add-int/2addr v2, v0
+
+    if-le v2, v5, :cond_7
+
+    .line 296
+    new-instance v0, Ljava/io/IOException;
+
+    const-string/jumbo v1, "Corrupt by wrong patch file."
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 287
+    :cond_5
+    add-int v9, v2, v0
+
+    if-ltz v9, :cond_6
+
+    add-int v9, v2, v0
+
+    if-ge v9, p1, :cond_6
+
+    .line 288
+    add-int v9, v1, v0
+
+    aget-byte v10, v4, v9
+
+    add-int v11, v2, v0
+
+    aget-byte v11, p0, v11
+
+    add-int/2addr v10, v11
+
+    int-to-byte v10, v10
+
+    aput-byte v10, v4, v9
+
+    .line 286
+    :cond_6
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    .line 299
+    :cond_7
+    const/4 v2, 0x1
+
+    aget v2, v8, v2
+
+    invoke-static {v3, v4, v0, v2}, Lcom/tencent/mm/b/d;->a(Ljava/io/InputStream;[BII)Z
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    .line 300
+    new-instance v0, Ljava/io/IOException;
+
+    const-string/jumbo v1, "Corrupt by wrong patch file."
+
+    invoke-direct {v0, v1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
+
+    throw v0
+
+    .line 303
+    :cond_8
+    const/4 v2, 0x1
+
+    aget v2, v8, v2
+
+    add-int/2addr v0, v2
+
+    .line 304
+    const/4 v2, 0x2
+
+    aget v2, v8, v2
+
+    add-int/2addr v1, v2
+
+    move v2, v1
+
+    move v1, v0
+
+    goto/16 :goto_0
 .end method

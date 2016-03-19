@@ -1,25 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.protocal.b.agh;
+import com.tencent.mm.sdk.c.b;
 
 public final class ee
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aAr = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a ayI = new a();
   
   public ee()
   {
-    id = "MMSwitchViewPush";
-    hXT = atO;
+    id = "FeatureListPackageUpdate";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aAs;
-    public int aAt = 1;
-    public int avp;
+    public agh ayJ;
   }
 }
 

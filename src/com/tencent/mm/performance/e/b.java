@@ -5,17 +5,6 @@ import java.lang.reflect.Method;
 
 public final class b
 {
-  public static Object T(String paramString1, String paramString2)
-  {
-    try
-    {
-      paramString1 = a(Class.forName(paramString1), paramString2, null, null, null);
-      return paramString1;
-    }
-    catch (Exception paramString1) {}
-    return null;
-  }
-  
   public static Object a(Class paramClass, String paramString, Object paramObject)
   {
     try
@@ -39,6 +28,17 @@ public final class b
       return paramClass;
     }
     catch (Exception paramClass) {}
+    return null;
+  }
+  
+  public static Object ac(String paramString1, String paramString2)
+  {
+    try
+    {
+      paramString1 = a(Class.forName(paramString1), paramString2, null, null, null);
+      return paramString1;
+    }
+    catch (Exception paramString1) {}
     return null;
   }
 }

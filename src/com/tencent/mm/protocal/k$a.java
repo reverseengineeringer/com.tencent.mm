@@ -2,16 +2,16 @@ package com.tencent.mm.protocal;
 
 public final class k$a
 {
-  public final int[] hgU = null;
-  public final int[] hgV;
-  public final int hgW;
-  public final int hgX;
+  public final int[] iUR = null;
+  public final int[] iUS;
+  public final int iUT;
+  public final int iUU;
   
   public k$a(int[] paramArrayOfInt, int paramInt1, int paramInt2)
   {
-    hgV = paramArrayOfInt;
-    hgW = paramInt1;
-    hgX = paramInt2;
+    iUS = paramArrayOfInt;
+    iUT = paramInt1;
+    iUU = paramInt2;
   }
 }
 

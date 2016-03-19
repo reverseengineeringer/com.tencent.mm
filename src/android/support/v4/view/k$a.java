@@ -1,41 +1,29 @@
 package android.support.v4.view;
 
-import android.view.MenuItem;
+import android.content.Context;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.text.method.SingleLineTransformationMethod;
 import android.view.View;
+import java.util.Locale;
 
 final class k$a
-  implements k.d
+  extends SingleLineTransformationMethod
 {
-  public final MenuItem a(MenuItem paramMenuItem, k.e parame)
+  private Locale fu;
+  
+  public k$a(Context paramContext)
   {
-    return paramMenuItem;
+    fu = getResourcesgetConfigurationlocale;
   }
   
-  public final MenuItem a(MenuItem paramMenuItem, View paramView)
+  public final CharSequence getTransformation(CharSequence paramCharSequence, View paramView)
   {
-    return paramMenuItem;
-  }
-  
-  public final void a(MenuItem paramMenuItem, int paramInt) {}
-  
-  public final MenuItem b(MenuItem paramMenuItem, int paramInt)
-  {
-    return paramMenuItem;
-  }
-  
-  public final View c(MenuItem paramMenuItem)
-  {
+    paramCharSequence = super.getTransformation(paramCharSequence, paramView);
+    if (paramCharSequence != null) {
+      return paramCharSequence.toString().toUpperCase(fu);
+    }
     return null;
-  }
-  
-  public final boolean d(MenuItem paramMenuItem)
-  {
-    return false;
-  }
-  
-  public final boolean e(MenuItem paramMenuItem)
-  {
-    return false;
   }
 }
 

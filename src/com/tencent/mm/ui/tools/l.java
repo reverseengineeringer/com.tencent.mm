@@ -1,54 +1,94 @@
 package com.tencent.mm.ui.tools;
 
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.net.Uri;
-import android.os.AsyncTask;
-import android.support.v7.app.ActionBarActivity;
-import com.tencent.mm.a.n;
-import com.tencent.mm.sdk.platformtools.e;
-import com.tencent.mm.ui.base.h;
-import com.tencent.mm.ui.cn;
-import com.tencent.mm.ui.ef;
+import android.content.Context;
+import android.view.GestureDetector;
+import android.view.GestureDetector.OnGestureListener;
+import android.view.MotionEvent;
+import android.view.ViewConfiguration;
+import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class l
-  extends AsyncTask
+  implements GestureDetector.OnGestureListener
 {
-  private String filePath;
-  private ProgressDialog joy;
-  private boolean joz;
-  private Uri uri;
+  private final Context context;
+  public final GestureDetector lwi;
+  public a lwj;
+  private final int lwk;
+  private final int lwl;
+  private final float lwm;
+  private final float lwn;
   
-  public l(Intent paramIntent1, ef paramef, String paramString, k.a parama, Intent paramIntent2, int paramInt) {}
-  
-  private Integer aRt()
+  public l(Context paramContext)
   {
-    try
-    {
-      if (uri == null) {
-        return null;
-      }
-      Bitmap localBitmap = e.m(uri);
-      filePath = k.u(joB, localBitmap);
-      return null;
-    }
-    catch (Exception localException) {}
-    return null;
+    context = paramContext;
+    lwi = new GestureDetector(context, this);
+    ViewConfiguration localViewConfiguration = ViewConfiguration.get(paramContext);
+    lwk = localViewConfiguration.getScaledMinimumFlingVelocity();
+    lwl = localViewConfiguration.getScaledMaximumFlingVelocity();
+    lwm = BackwardSupportUtil.b.a(paramContext, 70.0F);
+    lwn = BackwardSupportUtil.b.a(paramContext, 50.0F);
   }
   
-  protected final void onPreExecute()
+  public final boolean onDown(MotionEvent paramMotionEvent)
   {
-    try
-    {
-      uri = dUL.getData();
-      joz = false;
-      ActionBarActivity localActionBarActivity = joA.ipQ.iqj;
-      joA.getString(a.n.app_tip);
-      joy = h.a(localActionBarActivity, joA.getString(a.n.app_getting_img), true, new m(this));
-      return;
+    return false;
+  }
+  
+  public final boolean onFling(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
+  {
+    if (lwj == null) {
+      return true;
     }
-    catch (Exception localException) {}
+    u.v("!44@/B4Tb64lLpLtADHeupmcR9RkE1hpp/4l1le5KqFDqOc=", "lastX:%f, curX:%f, lastY:%f, curY:%f, vX:%f, vY:%f", new Object[] { Float.valueOf(paramMotionEvent1.getX()), Float.valueOf(paramMotionEvent2.getX()), Float.valueOf(paramMotionEvent1.getY()), Float.valueOf(paramMotionEvent2.getY()), Float.valueOf(paramFloat1), Float.valueOf(paramFloat2) });
+    float f1 = Math.abs(paramMotionEvent2.getY() - paramMotionEvent1.getY());
+    float f2 = Math.abs(paramMotionEvent2.getX() - paramMotionEvent1.getX());
+    if ((f1 < lwn) && (paramFloat1 > 800.0F) && (f2 > lwm))
+    {
+      lwj.bgf();
+      return true;
+    }
+    if ((f1 < lwn) && (paramFloat1 < -800.0F) && (f2 < -lwm))
+    {
+      lwj.bgg();
+      return true;
+    }
+    if ((f2 < lwn) && (paramFloat2 > 800.0F))
+    {
+      lwj.bgh();
+      return true;
+    }
+    if ((f2 < lwn) && (paramFloat2 < -800.0F))
+    {
+      lwj.bge();
+      return true;
+    }
+    return false;
+  }
+  
+  public final void onLongPress(MotionEvent paramMotionEvent) {}
+  
+  public final boolean onScroll(MotionEvent paramMotionEvent1, MotionEvent paramMotionEvent2, float paramFloat1, float paramFloat2)
+  {
+    return false;
+  }
+  
+  public final void onShowPress(MotionEvent paramMotionEvent) {}
+  
+  public final boolean onSingleTapUp(MotionEvent paramMotionEvent)
+  {
+    return false;
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void bge();
+    
+    public abstract void bgf();
+    
+    public abstract void bgg();
+    
+    public abstract void bgh();
   }
 }
 

@@ -1,25 +1,40 @@
 package com.tencent.mm.d.a;
 
-import android.graphics.Bitmap;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import java.util.List;
 
 public final class gy
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEf = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aCq = new a();
+  public b aCr = new b();
   
   public gy()
   {
-    id = "ScanBandkCardResult";
-    hXT = atO;
+    id = "NetSceneLbsFind";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aEg;
-    public Bitmap aEh;
+    public boolean aBY = false;
+    public float aBn = 0.0F;
+    public float aCs = 0.0F;
+    public int aCt = 0;
+    public int aCu = 0;
+    public String aCv;
+    public String aCw;
+    public int axD = 0;
+  }
+  
+  public static final class b
+  {
+    public boolean aCx = false;
+    public List aCy;
+    public int aCz = -1;
+    public int axD = 0;
   }
 }
 

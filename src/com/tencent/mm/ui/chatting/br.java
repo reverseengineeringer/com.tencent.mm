@@ -1,34 +1,19 @@
 package com.tencent.mm.ui.chatting;
 
-import android.app.Activity;
-import android.widget.Toast;
-import com.tencent.mm.a.n;
-import com.tencent.mm.pluginsdk.ui.chat.ChatFooter;
-import com.tencent.mm.q.g;
-import com.tencent.mm.q.g.a;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.cn;
-import com.tencent.mm.ui.ef;
+import android.widget.TextView;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.storage.ag;
 
 final class br
-  implements g.a
+  implements bq.a
 {
-  br(bq parambq) {}
-  
-  public final void onError()
+  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag)
   {
-    bq.a(iTR).reset();
-    bq.b(iTR).aEN();
-    bq.c(iTR).aEN();
-    ab.xr("keep_app_silent");
-    bq.d(iTR).Rz();
-    eiTR).iWq.aNW();
-    t.v("!56@/B4Tb64lLpKwUcOR+EdWcty+WvCaqY0r1h+IytP2caAOFJMyUBO6MA==", "record stop on error");
-    bq.f(iTR).fe(true);
-    bq.f(iTR).fd(true);
-    Toast.makeText(fiTR).ipQ.iqj, fiTR).ipQ.iqj.getString(a.n.chatting_rcd_err), 0).show();
+    parama = (bq.b)parama;
+    ivL.setText(field_content);
+    e.c(ivL);
+    ivL.invalidate();
   }
 }
 

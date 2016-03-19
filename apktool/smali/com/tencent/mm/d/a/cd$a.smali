@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public axb:J
+.field public avJ:Z
 
 
 # direct methods

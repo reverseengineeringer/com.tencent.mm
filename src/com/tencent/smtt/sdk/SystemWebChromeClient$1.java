@@ -3,7 +3,7 @@ package com.tencent.smtt.sdk;
 import android.webkit.ValueCallback;
 
 class SystemWebChromeClient$1
-  implements ab
+  implements u
 {
   SystemWebChromeClient$1(SystemWebChromeClient paramSystemWebChromeClient, ValueCallback paramValueCallback) {}
   

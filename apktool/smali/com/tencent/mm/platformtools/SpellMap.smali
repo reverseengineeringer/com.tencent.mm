@@ -14,14 +14,14 @@
     return-void
 .end method
 
-.method public static d(C)Ljava/lang/String;
+.method public static c(C)Ljava/lang/String;
     .locals 4
 
     .prologue
     const/4 v0, 0x0
 
     .line 11
-    invoke-static {p0}, Lcom/tencent/mm/platformtools/SpellMap;->e(C)I
+    invoke-static {p0}, Lcom/tencent/mm/platformtools/SpellMap;->d(C)I
 
     move-result v1
 
@@ -118,7 +118,7 @@
     goto :goto_0
 .end method
 
-.method private static e(C)I
+.method private static d(C)I
     .locals 5
 
     .prologue

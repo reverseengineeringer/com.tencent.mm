@@ -1,14 +1,43 @@
 package com.tencent.mm.ui.tools;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
+import android.content.Context;
+import android.content.res.ColorStateList;
+import com.tencent.mm.aw.a;
+import junit.framework.Assert;
 
-final class t
-  implements DialogInterface.OnCancelListener
+public final class t
 {
-  public final void onCancel(DialogInterface paramDialogInterface)
+  private static t lyk = null;
+  private ColorStateList[] lnA = new ColorStateList[2];
+  private boolean lyl = false;
+  
+  private t(Context paramContext)
   {
-    r.xk();
+    lnA[0] = a.x(paramContext, 2131231264);
+    lnA[1] = a.x(paramContext, 2131231249);
+  }
+  
+  public static ColorStateList eA(Context paramContext)
+  {
+    return eylnA[1];
+  }
+  
+  private static t ey(Context paramContext)
+  {
+    if (paramContext != null) {}
+    for (boolean bool = true;; bool = false)
+    {
+      Assert.assertTrue(bool);
+      if ((lyk == null) || (!lyklyl)) {
+        lyk = new t(paramContext);
+      }
+      return lyk;
+    }
+  }
+  
+  public static ColorStateList ez(Context paramContext)
+  {
+    return eylnA[0];
   }
 }
 

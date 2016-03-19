@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field public cEY:Landroid/widget/TextView;
+.field public cMt:Landroid/view/View;
 
-.field public cvG:Landroid/view/View;
+.field public dcT:Landroid/widget/TextView;
 
-.field public jnU:Landroid/view/View;
+.field public fdW:Landroid/view/View;
 
-.field final synthetic jnV:Lcom/tencent/mm/ui/e/a/b;
+.field final synthetic ltm:Lcom/tencent/mm/ui/e/a/b;
 
 
 # direct methods
@@ -29,8 +29,8 @@
     .locals 0
 
     .prologue
-    .line 54
-    iput-object p1, p0, Lcom/tencent/mm/ui/e/a/b$a;->jnV:Lcom/tencent/mm/ui/e/a/b;
+    .line 53
+    iput-object p1, p0, Lcom/tencent/mm/ui/e/a/b$a;->ltm:Lcom/tencent/mm/ui/e/a/b;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/e/a/a$a;-><init>(Lcom/tencent/mm/ui/e/a/a;)V
 

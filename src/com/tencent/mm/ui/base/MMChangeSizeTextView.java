@@ -4,16 +4,15 @@ import android.content.Context;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.widget.TextView;
-import com.tencent.mm.a.g;
-import com.tencent.mm.ao.a;
+import com.tencent.mm.aw.a;
 
 public class MMChangeSizeTextView
   extends TextView
 {
-  public static boolean iEb = false;
-  private Paint gWn;
-  private float iEc;
-  private float iEd;
+  public static boolean kDo = false;
+  private float eEB;
+  private Paint iMO;
+  private float kDp;
   
   public MMChangeSizeTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -27,36 +26,36 @@ public class MMChangeSizeTextView
     init();
   }
   
-  private void aF(String paramString, int paramInt)
+  private void aX(String paramString, int paramInt)
   {
-    if ((!iEb) || (paramInt <= 0)) {}
-    while ((iEd >= iEc) || (gWn.measureText(paramString) > paramInt)) {
+    if ((!kDo) || (paramInt <= 0)) {}
+    while ((eEB >= kDp) || (iMO.measureText(paramString) > paramInt)) {
       return;
     }
-    iEd = iEc;
-    setTextSize(0, iEd);
+    eEB = kDp;
+    setTextSize(0, eEB);
   }
   
   private void init()
   {
-    iEc = a.v(getContext(), a.g.DialogTitleTextSize);
-    iEd = getTextSize();
-    gWn = new Paint();
-    gWn.set(getPaint());
+    kDp = a.z(getContext(), 2131034568);
+    eEB = getTextSize();
+    iMO = new Paint();
+    iMO.set(getPaint());
   }
   
   protected void onSizeChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onSizeChanged(paramInt1, paramInt2, paramInt3, paramInt4);
     if (paramInt1 != paramInt3) {
-      aF(getText().toString(), paramInt1);
+      aX(getText().toString(), paramInt1);
     }
   }
   
   protected void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
     super.onTextChanged(paramCharSequence, paramInt1, paramInt2, paramInt3);
-    aF(paramCharSequence.toString(), getWidth());
+    aX(paramCharSequence.toString(), getWidth());
   }
 }
 

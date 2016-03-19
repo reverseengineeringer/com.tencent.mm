@@ -4,29 +4,29 @@ import java.util.Arrays;
 
 public final class a
 {
-  private static final char[] jQd = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".toCharArray();
-  private static final int[] jQe;
+  private static final char[] meo = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".toCharArray();
+  private static final int[] mep;
   
   static
   {
     int[] arrayOfInt = new int['Ā'];
-    jQe = arrayOfInt;
+    mep = arrayOfInt;
     Arrays.fill(arrayOfInt, -1);
-    int j = jQd.length;
+    int j = meo.length;
     int i = 0;
     for (;;)
     {
       if (i >= j)
       {
-        jQe[61] = 0;
+        mep[61] = 0;
         return;
       }
-      jQe[jQd[i]] = i;
+      mep[meo[i]] = i;
       i += 1;
     }
   }
   
-  public static final char[] bf(byte[] paramArrayOfByte)
+  public static final char[] by(byte[] paramArrayOfByte)
   {
     int i1 = 0;
     if (paramArrayOfByte != null) {}
@@ -51,15 +51,15 @@ public final class a
           j = (paramArrayOfByte[(m - 1)] & 0xFF) << 2;
         }
         j |= (n & 0xFF) << 10;
-        arrayOfChar[(i5 - 4)] = jQd[(j >> 12)];
-        arrayOfChar[(i5 - 3)] = jQd[(j >>> 6 & 0x3F)];
+        arrayOfChar[(i5 - 4)] = meo[(j >> 12)];
+        arrayOfChar[(i5 - 3)] = meo[(j >>> 6 & 0x3F)];
         if (k != 2) {
           break label409;
         }
       }
     }
     label409:
-    for (int i = jQd[(j & 0x3F)];; i = 61)
+    for (int i = meo[(j & 0x3F)];; i = 61)
     {
       arrayOfChar[(i5 - 2)] = i;
       arrayOfChar[(i5 - 1)] = '=';
@@ -71,13 +71,13 @@ public final class a
       i2 = i3 + 1;
       n = (i4 & 0xFF) << 8 | (n & 0xFF) << 16 | paramArrayOfByte[i3] & 0xFF;
       i3 = k + 1;
-      arrayOfChar[k] = jQd[(n >>> 18 & 0x3F)];
+      arrayOfChar[k] = meo[(n >>> 18 & 0x3F)];
       k = i3 + 1;
-      arrayOfChar[i3] = jQd[(n >>> 12 & 0x3F)];
+      arrayOfChar[i3] = meo[(n >>> 12 & 0x3F)];
       i4 = k + 1;
-      arrayOfChar[k] = jQd[(n >>> 6 & 0x3F)];
+      arrayOfChar[k] = meo[(n >>> 6 & 0x3F)];
       i3 = i4 + 1;
-      arrayOfChar[i4] = jQd[(n & 0x3F)];
+      arrayOfChar[i4] = meo[(n & 0x3F)];
       i4 = j + 1;
       j = i4;
       k = i3;

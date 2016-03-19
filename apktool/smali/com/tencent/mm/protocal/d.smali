@@ -1,44 +1,20 @@
-.class final Lcom/tencent/mm/protocal/d;
+.class public Lcom/tencent/mm/protocal/d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/os/Parcelable$Creator;
-
 
 # direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 92
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final synthetic createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;
+.method static constructor <clinit>()V
     .locals 2
 
     .prologue
-    .line 92
-    new-instance v0, Lcom/tencent/mm/protocal/GeneralControlWrapper;
+    .line 793
+    const-string/jumbo v0, "giveup rtType now ! Use the funcid !"
 
-    const/4 v1, 0x0
+    const/4 v1, 0x1
 
-    invoke-direct {v0, p1, v1}, Lcom/tencent/mm/protocal/GeneralControlWrapper;-><init>(Landroid/os/Parcel;B)V
+    invoke-static {v0, v1}, Ljunit/framework/Assert;->assertTrue(Ljava/lang/String;Z)V
 
-    return-object v0
-.end method
-
-.method public final bridge synthetic newArray(I)[Ljava/lang/Object;
-    .locals 1
-
-    .prologue
-    .line 92
-    new-array v0, p1, [Lcom/tencent/mm/protocal/GeneralControlWrapper;
-
-    return-object v0
+    .line 794
+    return-void
 .end method

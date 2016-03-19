@@ -8,7 +8,7 @@
 
 
 # instance fields
-.field private gKM:Landroid/support/v4/app/aa$d;
+.field private izw:Landroid/support/v4/app/p$d;
 
 
 # direct methods
@@ -57,9 +57,9 @@
     if-ge v0, v3, :cond_1
 
     .line 43
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadReceiver;->gKM:Landroid/support/v4/app/aa$d;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadReceiver;->izw:Landroid/support/v4/app/p$d;
 
-    invoke-virtual {v1, v3, v0, v2}, Landroid/support/v4/app/aa$d;->a(IIZ)Landroid/support/v4/app/aa$d;
+    invoke-virtual {v1, v3, v0, v2}, Landroid/support/v4/app/p$d;->b(IIZ)Landroid/support/v4/app/p$d;
 
     move-result-object v1
 
@@ -77,20 +77,20 @@
 
     move-result-object v0
 
-    invoke-virtual {v1, v0}, Landroid/support/v4/app/aa$d;->b(Ljava/lang/CharSequence;)Landroid/support/v4/app/aa$d;
+    invoke-virtual {v1, v0}, Landroid/support/v4/app/p$d;->b(Ljava/lang/CharSequence;)Landroid/support/v4/app/p$d;
 
     .line 45
-    invoke-static {}, Lcom/tencent/mm/model/ax;->lz()Lcom/tencent/mm/model/ao;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->kU()Lcom/tencent/mm/model/y;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadReceiver;->gKM:Landroid/support/v4/app/aa$d;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadReceiver;->izw:Landroid/support/v4/app/p$d;
 
-    invoke-virtual {v1}, Landroid/support/v4/app/aa$d;->build()Landroid/app/Notification;
+    invoke-virtual {v1}, Landroid/support/v4/app/p$d;->build()Landroid/app/Notification;
 
     move-result-object v1
 
-    invoke-interface {v0, v4, v1}, Lcom/tencent/mm/model/ao;->notify(ILandroid/app/Notification;)V
+    invoke-interface {v0, v4, v1}, Lcom/tencent/mm/model/y;->notify(ILandroid/app/Notification;)V
 
     .line 53
     :cond_0
@@ -99,30 +99,30 @@
 
     .line 47
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadReceiver;->gKM:Landroid/support/v4/app/aa$d;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadReceiver;->izw:Landroid/support/v4/app/p$d;
 
-    invoke-virtual {v0, v2, v2, v2}, Landroid/support/v4/app/aa$d;->a(IIZ)Landroid/support/v4/app/aa$d;
+    invoke-virtual {v0, v2, v2, v2}, Landroid/support/v4/app/p$d;->b(IIZ)Landroid/support/v4/app/p$d;
 
     move-result-object v0
 
     const-string/jumbo v1, "Download Complete"
 
-    invoke-virtual {v0, v1}, Landroid/support/v4/app/aa$d;->b(Ljava/lang/CharSequence;)Landroid/support/v4/app/aa$d;
+    invoke-virtual {v0, v1}, Landroid/support/v4/app/p$d;->b(Ljava/lang/CharSequence;)Landroid/support/v4/app/p$d;
 
     .line 49
-    invoke-static {}, Lcom/tencent/mm/model/ax;->lz()Lcom/tencent/mm/model/ao;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->kU()Lcom/tencent/mm/model/y;
 
     move-result-object v0
 
     const/16 v1, 0x1232
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadReceiver;->gKM:Landroid/support/v4/app/aa$d;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/downloader/intentservice/DownloadReceiver;->izw:Landroid/support/v4/app/p$d;
 
-    invoke-virtual {v2}, Landroid/support/v4/app/aa$d;->build()Landroid/app/Notification;
+    invoke-virtual {v2}, Landroid/support/v4/app/p$d;->build()Landroid/app/Notification;
 
     move-result-object v2
 
-    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/model/ao;->notify(ILandroid/app/Notification;)V
+    invoke-interface {v0, v1, v2}, Lcom/tencent/mm/model/y;->notify(ILandroid/app/Notification;)V
 
     goto :goto_0
 .end method

@@ -3,17 +3,15 @@ package com.tencent.mm.compatible.f;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.BitmapFactory.Options;
 
 public final class a
   extends BitmapFactory
 {
-  public static Bitmap decodeResource(Resources paramResources, int paramInt)
-  {
-    return decodeResource(paramResources, paramInt, null);
-  }
+  private static a btU = null;
   
   /* Error */
-  public static Bitmap decodeResource(Resources paramResources, int paramInt, android.graphics.BitmapFactory.Options paramOptions)
+  private static Bitmap a(Resources paramResources, int paramInt, BitmapFactory.Options paramOptions)
   {
     // Byte code:
     //   0: aconst_null
@@ -23,15 +21,15 @@ public final class a
     //   5: aconst_null
     //   6: astore 4
     //   8: aload_2
-    //   9: invokestatic 20	com/tencent/mm/sdk/platformtools/e:a	(Landroid/graphics/BitmapFactory$Options;)V
-    //   12: new 22	android/util/TypedValue
+    //   9: invokestatic 24	com/tencent/mm/sdk/platformtools/d:a	(Landroid/graphics/BitmapFactory$Options;)V
+    //   12: new 26	android/util/TypedValue
     //   15: dup
-    //   16: invokespecial 26	android/util/TypedValue:<init>	()V
+    //   16: invokespecial 29	android/util/TypedValue:<init>	()V
     //   19: astore 7
     //   21: aload_0
     //   22: iload_1
     //   23: aload 7
-    //   25: invokevirtual 32	android/content/res/Resources:openRawResource	(ILandroid/util/TypedValue;)Ljava/io/InputStream;
+    //   25: invokevirtual 35	android/content/res/Resources:openRawResource	(ILandroid/util/TypedValue;)Ljava/io/InputStream;
     //   28: astore 6
     //   30: aload 6
     //   32: astore_3
@@ -40,31 +38,31 @@ public final class a
     //   36: aload_3
     //   37: aconst_null
     //   38: aload_2
-    //   39: invokestatic 36	com/tencent/mm/compatible/f/a:decodeResourceStream	(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
+    //   39: invokestatic 39	com/tencent/mm/compatible/f/a:decodeResourceStream	(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Landroid/graphics/Rect;Landroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
     //   42: astore_0
     //   43: aload_0
     //   44: astore 4
     //   46: aload_0
     //   47: ifnonnull +9 -> 56
     //   50: aload_3
-    //   51: invokestatic 40	com/tencent/mm/compatible/f/a:decodeStream	(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
+    //   51: invokestatic 43	com/tencent/mm/compatible/f/a:decodeStream	(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
     //   54: astore 4
     //   56: aload 4
     //   58: astore 5
     //   60: aload_3
     //   61: ifnull +11 -> 72
     //   64: aload_3
-    //   65: invokevirtual 45	java/io/InputStream:close	()V
+    //   65: invokevirtual 48	java/io/InputStream:close	()V
     //   68: aload 4
     //   70: astore 5
     //   72: aload 5
     //   74: ifnonnull +83 -> 157
     //   77: aload_2
     //   78: ifnull +79 -> 157
-    //   81: new 47	java/lang/IllegalArgumentException
+    //   81: new 50	java/lang/IllegalArgumentException
     //   84: dup
-    //   85: ldc 49
-    //   87: invokespecial 52	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
+    //   85: ldc 52
+    //   87: invokespecial 55	java/lang/IllegalArgumentException:<init>	(Ljava/lang/String;)V
     //   90: athrow
     //   91: astore_0
     //   92: aconst_null
@@ -78,7 +76,7 @@ public final class a
     //   103: aload_3
     //   104: ifnull -32 -> 72
     //   107: aload_3
-    //   108: invokevirtual 45	java/io/InputStream:close	()V
+    //   108: invokevirtual 48	java/io/InputStream:close	()V
     //   111: aload_0
     //   112: astore 5
     //   114: goto -42 -> 72
@@ -92,7 +90,7 @@ public final class a
     //   128: aload_3
     //   129: ifnull +7 -> 136
     //   132: aload_3
-    //   133: invokevirtual 45	java/io/InputStream:close	()V
+    //   133: invokevirtual 48	java/io/InputStream:close	()V
     //   136: aload_0
     //   137: athrow
     //   138: astore_0
@@ -115,7 +113,7 @@ public final class a
     //   start	length	slot	name	signature
     //   0	169	0	paramResources	Resources
     //   0	169	1	paramInt	int
-    //   0	169	2	paramOptions	android.graphics.BitmapFactory.Options
+    //   0	169	2	paramOptions	BitmapFactory.Options
     //   1	107	3	localObject1	Object
     //   117	1	3	localIOException	java.io.IOException
     //   127	6	3	localObject2	Object
@@ -135,6 +133,33 @@ public final class a
     //   33	43	160	finally
     //   50	56	160	finally
     //   50	56	164	java/lang/Exception
+  }
+  
+  public static void a(a parama)
+  {
+    btU = parama;
+  }
+  
+  public static Bitmap decodeResource(Resources paramResources, int paramInt)
+  {
+    return decodeResource(paramResources, paramInt, null);
+  }
+  
+  public static Bitmap decodeResource(Resources paramResources, int paramInt, BitmapFactory.Options paramOptions)
+  {
+    if (btU != null)
+    {
+      Bitmap localBitmap = btU.decodeResource(paramResources, paramInt, paramOptions);
+      if (localBitmap != null) {
+        return localBitmap;
+      }
+    }
+    return a(paramResources, paramInt, paramOptions);
+  }
+  
+  public static abstract interface a
+  {
+    public abstract Bitmap decodeResource(Resources paramResources, int paramInt, BitmapFactory.Options paramOptions);
   }
 }
 

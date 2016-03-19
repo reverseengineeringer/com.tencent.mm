@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public path:Ljava/lang/String;
+.field public aGg:Lcom/tencent/mm/modelsns/SnsAdClick;
 
 
 # direct methods

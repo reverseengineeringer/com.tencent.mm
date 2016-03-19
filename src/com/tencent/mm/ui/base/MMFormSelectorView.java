@@ -7,16 +7,15 @@ import android.util.AttributeSet;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.p;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.R.b;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MMFormSelectorView
   extends LinearLayout
 {
-  private TextView cwe;
-  private EditText euS;
-  private String gYe;
+  private TextView cNT;
+  private EditText fEO;
+  private String iOw;
   private int layout = -1;
   private Context mContext = null;
   private String title;
@@ -30,14 +29,14 @@ public class MMFormSelectorView
   public MMFormSelectorView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet);
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.FormItemView, paramInt, 0);
+    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.FormItemView, paramInt, 0);
     paramInt = paramAttributeSet.getResourceId(1, 0);
     if (paramInt != 0) {
       title = paramContext.getString(paramInt);
     }
     paramInt = paramAttributeSet.getResourceId(2, 0);
     if (paramInt != 0) {
-      gYe = paramContext.getString(paramInt);
+      iOw = paramContext.getString(paramInt);
     }
     layout = paramAttributeSet.getResourceId(0, layout);
     paramAttributeSet.recycle();
@@ -47,78 +46,78 @@ public class MMFormSelectorView
   
   public String getText()
   {
-    if (euS != null) {
-      return euS.getText().toString();
+    if (fEO != null) {
+      return fEO.getText().toString();
     }
-    t.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "contentET is null!");
+    u.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "contentET is null!");
     return null;
   }
   
   public void onFinishInflate()
   {
-    cwe = ((TextView)findViewById(a.i.title));
-    euS = ((EditText)findViewById(a.i.edittext));
-    if ((cwe == null) || (euS == null)) {
-      t.w("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "titleTV : %s, contentET : %s", new Object[] { cwe, euS });
+    cNT = ((TextView)findViewById(2131165460));
+    fEO = ((EditText)findViewById(2131166420));
+    if ((cNT == null) || (fEO == null)) {
+      u.w("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "titleTV : %s, contentET : %s", new Object[] { cNT, fEO });
     }
     do
     {
       return;
       if (title != null) {
-        cwe.setText(title);
+        cNT.setText(title);
       }
-    } while (gYe == null);
-    euS.setHint(gYe);
+    } while (iOw == null);
+    fEO.setHint(iOw);
   }
   
   public void setHint(int paramInt)
   {
-    if (euS != null)
+    if (fEO != null)
     {
-      euS.setHint(paramInt);
+      fEO.setHint(paramInt);
       return;
     }
-    t.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "contentET is null!");
+    u.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "contentET is null!");
   }
   
   public void setHint(String paramString)
   {
-    if (euS != null)
+    if (fEO != null)
     {
-      euS.setHint(paramString);
+      fEO.setHint(paramString);
       return;
     }
-    t.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "contentET is null!");
+    u.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "contentET is null!");
   }
   
   public void setText(String paramString)
   {
-    if (euS != null)
+    if (fEO != null)
     {
-      euS.setText(paramString);
+      fEO.setText(paramString);
       return;
     }
-    t.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "contentET is null!");
+    u.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "contentET is null!");
   }
   
   public void setTitle(int paramInt)
   {
-    if (cwe != null)
+    if (cNT != null)
     {
-      cwe.setText(paramInt);
+      cNT.setText(paramInt);
       return;
     }
-    t.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "titleTV is null!");
+    u.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "titleTV is null!");
   }
   
   public void setTitle(String paramString)
   {
-    if (cwe != null)
+    if (cNT != null)
     {
-      cwe.setText(paramString);
+      cNT.setText(paramString);
       return;
     }
-    t.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "titleTV is null!");
+    u.e("!44@/B4Tb64lLpJ8BAbMMHKVKaUQT1HXPsOOAEYFIKZorxg=", "titleTV is null!");
   }
 }
 

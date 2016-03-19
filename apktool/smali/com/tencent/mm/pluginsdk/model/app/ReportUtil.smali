@@ -61,15 +61,15 @@
 
     .line 86
     :cond_1
-    new-instance v1, Lcom/tencent/mm/pluginsdk/model/app/h;
+    new-instance v1, Lcom/tencent/mm/pluginsdk/model/app/f;
 
-    invoke-direct {v1}, Lcom/tencent/mm/pluginsdk/model/app/h;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/pluginsdk/model/app/f;-><init>()V
 
     .line 87
-    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/app/h;->field_appId:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_appId:Ljava/lang/String;
 
     .line 88
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->azk()Lcom/tencent/mm/pluginsdk/model/app/l;
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->aPR()Lcom/tencent/mm/pluginsdk/model/app/i;
 
     move-result-object v0
 
@@ -77,7 +77,7 @@
 
     new-array v2, v2, [Ljava/lang/String;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/model/app/l;->c(Lcom/tencent/mm/sdk/g/ae;[Ljava/lang/String;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/model/app/i;->c(Lcom/tencent/mm/sdk/h/c;[Ljava/lang/String;)Z
 
     .line 90
     new-instance v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;
@@ -85,28 +85,28 @@
     invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;-><init>()V
 
     .line 91
-    iget-object v2, v1, Lcom/tencent/mm/pluginsdk/model/app/h;->field_packageName:Ljava/lang/String;
+    iget-object v2, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_packageName:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cjN:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAX:Ljava/lang/String;
 
     .line 92
     iput p1, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->errCode:I
 
     .line 93
-    new-instance v2, Lcom/tencent/mm/sdk/modelmsg/d$a;
+    new-instance v2, Lcom/tencent/mm/sdk/modelmsg/c$a;
 
-    invoke-direct {v2}, Lcom/tencent/mm/sdk/modelmsg/d$a;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/sdk/modelmsg/c$a;-><init>()V
 
-    invoke-virtual {v2, p0}, Lcom/tencent/mm/sdk/modelmsg/d$a;->n(Landroid/os/Bundle;)V
+    invoke-virtual {v2, p0}, Lcom/tencent/mm/sdk/modelmsg/c$a;->m(Landroid/os/Bundle;)V
 
-    iget-object v2, v2, Lcom/tencent/mm/sdk/modelmsg/d$a;->gMB:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/sdk/modelmsg/c$a;->iBD:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->gMB:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iBD:Ljava/lang/String;
 
     .line 94
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/model/app/h;->field_openId:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/model/app/f;->field_openId:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cjK:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAU:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -116,24 +116,24 @@
 
     .prologue
     .line 56
-    new-instance v0, Lcom/tencent/mm/sdk/modelmsg/d$b;
+    new-instance v0, Lcom/tencent/mm/sdk/modelmsg/c$b;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/modelmsg/d$b;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/modelmsg/c$b;-><init>()V
 
     .line 57
     iget v1, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->errCode:I
 
-    iput v1, v0, Lcom/tencent/mm/sdk/modelmsg/d$b;->errCode:I
+    iput v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$b;->errCode:I
 
     .line 58
-    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->gMB:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->iBD:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/d$b;->gMB:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$b;->iBD:Ljava/lang/String;
 
     .line 59
-    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cjK:Ljava/lang/String;
+    iget-object v1, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAU:Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/d$b;->cjK:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/modelmsg/c$b;->cAU:Ljava/lang/String;
 
     .line 61
     new-instance v1, Landroid/os/Bundle;
@@ -141,10 +141,10 @@
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
     .line 62
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/modelmsg/d$b;->m(Landroid/os/Bundle;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/modelmsg/c$b;->l(Landroid/os/Bundle;)V
 
     .line 63
-    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/app/r;->E(Landroid/os/Bundle;)V
+    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/app/p;->H(Landroid/os/Bundle;)V
 
     .line 65
     new-instance v0, Lcom/tencent/mm/sdk/a/a$a;
@@ -152,12 +152,12 @@
     invoke-direct {v0}, Lcom/tencent/mm/sdk/a/a$a;-><init>()V
 
     .line 66
-    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cjN:Ljava/lang/String;
+    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/app/ReportUtil$ReportArgs;->cAX:Ljava/lang/String;
 
-    iput-object v2, v0, Lcom/tencent/mm/sdk/a/a$a;->hXK:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/sdk/a/a$a;->jUy:Ljava/lang/String;
 
     .line 67
-    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a$a;->hXM:Landroid/os/Bundle;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/a/a$a;->jUA:Landroid/os/Bundle;
 
     .line 68
     invoke-static {p0, v0}, Lcom/tencent/mm/sdk/a/a;->a(Landroid/content/Context;Lcom/tencent/mm/sdk/a/a$a;)Z

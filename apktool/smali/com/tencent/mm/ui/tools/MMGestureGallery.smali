@@ -19,63 +19,63 @@
 
 
 # instance fields
+.field private cJE:I
+
+.field private cJF:I
+
 .field private count:I
 
-.field private csg:I
+.field private handler:Lcom/tencent/mm/sdk/platformtools/aa;
 
-.field private csh:I
+.field private kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-.field private handler:Lcom/tencent/mm/sdk/platformtools/ac;
+.field private kHU:Z
 
-.field private iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+.field private kHV:Z
 
-.field private iII:Z
+.field private kHW:Z
 
-.field private iIJ:Z
+.field private kHX:Z
 
-.field private iIK:Z
+.field private kHY:Z
 
-.field private iIL:Z
+.field private kHZ:F
 
-.field private iIM:Z
+.field private kIa:F
 
-.field private iIN:F
+.field private lwA:Lcom/tencent/mm/ui/tools/MMGestureGallery$d;
 
-.field private iIO:F
+.field private lwB:Z
 
-.field private jtF:Landroid/view/GestureDetector;
+.field public lwC:Z
 
-.field public jtG:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+.field private final lwD:I
 
-.field public jtH:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+.field private final lwE:I
 
-.field public jtI:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+.field private lwo:Landroid/view/GestureDetector;
 
-.field private jtJ:J
+.field public lwp:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
 
-.field private jtK:J
+.field public lwq:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
 
-.field private jtL:F
+.field public lwr:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
 
-.field private jtM:F
+.field private lws:J
 
-.field private jtN:J
+.field private lwt:J
 
-.field private jtO:Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
+.field private lwu:F
 
-.field private jtP:Lcom/tencent/mm/ui/tools/MMGestureGallery$e;
+.field private lwv:F
 
-.field private jtQ:Lcom/tencent/mm/ui/tools/MMGestureGallery$b;
+.field private lww:J
 
-.field private jtR:Lcom/tencent/mm/ui/tools/MMGestureGallery$d;
+.field private lwx:Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
 
-.field private jtS:Z
+.field private lwy:Lcom/tencent/mm/ui/tools/MMGestureGallery$e;
 
-.field public jtT:Z
-
-.field private final jtU:I
-
-.field private final jtV:I
+.field private lwz:Lcom/tencent/mm/ui/tools/MMGestureGallery$b;
 
 
 # direct methods
@@ -95,64 +95,64 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/Gallery;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 40
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iII:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHU:Z
 
     .line 51
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIJ:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHV:Z
 
     .line 53
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     .line 55
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIL:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHX:Z
 
     .line 57
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIM:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHY:Z
 
     .line 63
     iput v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->count:I
 
     .line 65
-    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtJ:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lws:J
 
     .line 67
-    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtK:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwt:J
 
     .line 70
-    iput v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtL:F
+    iput v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwu:F
 
     .line 72
-    iput v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtM:F
+    iput v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwv:F
 
     .line 74
-    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtN:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lww:J
 
     .line 214
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
 
     .line 289
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtS:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwB:Z
 
     .line 817
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtT:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwC:Z
 
     .line 823
     const/16 v0, 0x3c
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtU:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwD:I
 
     .line 824
     const/16 v0, 0x1f4
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtV:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwE:I
 
     .line 297
     invoke-virtual {p0, v4}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setStaticTransformationsEnabled(Z)V
@@ -166,7 +166,7 @@
 
     invoke-direct {v0, p1, v1}, Landroid/view/GestureDetector;-><init>(Landroid/content/Context;Landroid/view/GestureDetector$OnGestureListener;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtF:Landroid/view/GestureDetector;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwo:Landroid/view/GestureDetector;
 
     .line 300
     new-instance v0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
@@ -177,7 +177,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;-><init>(Ljava/lang/ref/WeakReference;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtG:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwp:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
 
     .line 301
     new-instance v0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
@@ -188,7 +188,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;-><init>(Ljava/lang/ref/WeakReference;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtH:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwq:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
 
     .line 302
     new-instance v0, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
@@ -199,12 +199,12 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;-><init>(Ljava/lang/ref/WeakReference;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtI:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwr:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
 
     .line 304
-    new-instance v0, Lcom/tencent/mm/ui/tools/dw;
+    new-instance v0, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/dw;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$1;-><init>(Lcom/tencent/mm/ui/tools/MMGestureGallery;)V
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -228,64 +228,64 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/Gallery;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 40
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iII:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHU:Z
 
     .line 51
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIJ:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHV:Z
 
     .line 53
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     .line 55
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIL:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHX:Z
 
     .line 57
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIM:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHY:Z
 
     .line 63
     iput v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->count:I
 
     .line 65
-    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtJ:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lws:J
 
     .line 67
-    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtK:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwt:J
 
     .line 70
-    iput v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtL:F
+    iput v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwu:F
 
     .line 72
-    iput v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtM:F
+    iput v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwv:F
 
     .line 74
-    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtN:J
+    iput-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lww:J
 
     .line 214
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
 
     .line 289
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtS:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwB:Z
 
     .line 817
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtT:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwC:Z
 
     .line 823
     const/16 v0, 0x3c
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtU:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwD:I
 
     .line 824
     const/16 v0, 0x1f4
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtV:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwE:I
 
     .line 255
     invoke-virtual {p0, v4}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->setStaticTransformationsEnabled(Z)V
@@ -299,7 +299,7 @@
 
     .prologue
     .line 26
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->aNj()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->bda()V
 
     return-void
 .end method
@@ -309,7 +309,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtQ:Lcom/tencent/mm/ui/tools/MMGestureGallery$b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwz:Lcom/tencent/mm/ui/tools/MMGestureGallery$b;
 
     return-object v0
 .end method
@@ -319,7 +319,7 @@
 
     .prologue
     .line 26
-    iput p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIN:F
+    iput p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHZ:F
 
     return p1
 .end method
@@ -339,7 +339,7 @@
 
     .prologue
     .line 26
-    iput-wide p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtJ:J
+    iput-wide p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lws:J
 
     return-wide p1
 .end method
@@ -349,7 +349,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     return-object v0
 .end method
@@ -359,7 +359,7 @@
 
     .prologue
     .line 26
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     return-object p1
 .end method
@@ -369,7 +369,7 @@
 
     .prologue
     .line 26
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtO:Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwx:Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
 
     return-object p1
 .end method
@@ -476,11 +476,11 @@
     const/4 v4, 0x0
 
     .line 613
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     if-nez v2, :cond_0
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIJ:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHV:Z
 
     if-eqz v2, :cond_2
 
@@ -513,7 +513,7 @@
 
     if-ne v2, v3, :cond_6
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIM:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHY:Z
 
     if-eqz v2, :cond_4
 
@@ -521,11 +521,11 @@
 
     if-lez v2, :cond_3
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     neg-float v3, p4
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->s(FF)V
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
 
     move v2, v0
 
@@ -541,7 +541,7 @@
 
     if-lez v2, :cond_6
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     int-to-float v2, v2
 
@@ -549,21 +549,21 @@
 
     if-gez v2, :cond_5
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIM:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHY:Z
 
     :cond_5
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     neg-float v3, p4
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->s(FF)V
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
 
     move v2, v0
 
     goto :goto_0
 
     :cond_6
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIM:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHY:Z
 
     move v2, v1
 
@@ -571,11 +571,11 @@
 
     .line 616
     :cond_7
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     if-nez v2, :cond_8
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIJ:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHV:Z
 
     if-eqz v2, :cond_9
 
@@ -598,7 +598,7 @@
 
     if-nez v2, :cond_d
 
-    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIL:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHX:Z
 
     if-eqz v2, :cond_b
 
@@ -606,11 +606,11 @@
 
     if-gez v2, :cond_a
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     neg-float v3, p4
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->s(FF)V
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
 
     move v2, v0
 
@@ -630,21 +630,21 @@
 
     if-lez v2, :cond_c
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIL:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHX:Z
 
     :cond_c
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     neg-float v3, p4
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->s(FF)V
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
 
     move v2, v0
 
     goto :goto_2
 
     :cond_d
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIL:Z
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHX:Z
 
     move v2, v1
 
@@ -690,7 +690,7 @@
     const/4 v0, 0x1
 
     .line 531
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIJ:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHV:Z
 
     if-eqz v1, :cond_0
 
@@ -700,17 +700,17 @@
 
     .line 535
     :cond_0
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     .line 536
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtR:Lcom/tencent/mm/ui/tools/MMGestureGallery$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwA:Lcom/tencent/mm/ui/tools/MMGestureGallery$d;
 
     if-eqz v0, :cond_1
 
     .line 537
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtR:Lcom/tencent/mm/ui/tools/MMGestureGallery$d;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwA:Lcom/tencent/mm/ui/tools/MMGestureGallery$d;
 
-    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$d;->aom()V
+    invoke-interface {v0}, Lcom/tencent/mm/ui/tools/MMGestureGallery$d;->aBX()V
 
     .line 539
     :cond_1
@@ -726,24 +726,9 @@
 
     .prologue
     .line 26
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iII:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHU:Z
 
     return p1
-.end method
-
-.method private aNj()V
-    .locals 2
-
-    .prologue
-    .line 260
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtG:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->removeMessages(I)V
-
-    .line 261
-    return-void
 .end method
 
 .method static synthetic b(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
@@ -751,7 +736,7 @@
 
     .prologue
     .line 26
-    iput p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIO:F
+    iput p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kIa:F
 
     return p1
 .end method
@@ -761,7 +746,7 @@
 
     .prologue
     .line 26
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     return v0
 .end method
@@ -771,7 +756,7 @@
 
     .prologue
     .line 26
-    iput-wide p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtN:J
+    iput-wide p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lww:J
 
     return-wide p1
 .end method
@@ -785,15 +770,15 @@
     const/4 v6, 0x0
 
     .line 508
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIL:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHX:Z
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIM:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHY:Z
 
     if-eqz v0, :cond_1
 
@@ -804,7 +789,7 @@
 
     .line 512
     :cond_1
-    iput-boolean v7, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIJ:Z
+    iput-boolean v7, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHV:Z
 
     .line 514
     cmpg-float v0, p1, v6
@@ -814,7 +799,7 @@
     .line 515
     float-to-double v0, p2
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csh:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJF:I
 
     int-to-double v2, v2
 
@@ -826,7 +811,7 @@
 
     if-ltz v0, :cond_2
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csh:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJF:I
 
     int-to-float v0, v0
 
@@ -836,11 +821,11 @@
 
     .line 517
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     neg-float v1, p1
 
-    invoke-virtual {v0, v6, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->s(FF)V
+    invoke-virtual {v0, v6, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
 
     goto :goto_0
 
@@ -850,7 +835,7 @@
 
     if-gtz v0, :cond_4
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csh:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJF:I
 
     int-to-float v0, v0
 
@@ -864,13 +849,28 @@
 
     .line 522
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     neg-float v1, p1
 
-    invoke-virtual {v0, v6, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->s(FF)V
+    invoke-virtual {v0, v6, v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
 
     goto :goto_0
+.end method
+
+.method private bda()V
+    .locals 2
+
+    .prologue
+    .line 260
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwp:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/MMGestureGallery$h;->removeMessages(I)V
+
+    .line 261
+    return-void
 .end method
 
 .method static synthetic c(Lcom/tencent/mm/ui/tools/MMGestureGallery;F)F
@@ -878,7 +878,7 @@
 
     .prologue
     .line 26
-    iput p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtL:F
+    iput p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwu:F
 
     return p1
 .end method
@@ -888,17 +888,17 @@
 
     .prologue
     .line 26
-    iput-wide p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtK:J
+    iput-wide p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwt:J
 
     return-wide p1
 .end method
 
-.method static synthetic c(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/sdk/platformtools/ac;
+.method static synthetic c(Lcom/tencent/mm/ui/tools/MMGestureGallery;)Lcom/tencent/mm/sdk/platformtools/aa;
     .locals 1
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
 
     return-object v0
 .end method
@@ -908,7 +908,7 @@
 
     .prologue
     .line 26
-    iput p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtM:F
+    iput p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwv:F
 
     return p1
 .end method
@@ -918,7 +918,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtI:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwr:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
 
     return-object v0
 .end method
@@ -928,7 +928,7 @@
 
     .prologue
     .line 26
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtS:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwB:Z
 
     return v0
 .end method
@@ -938,7 +938,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtP:Lcom/tencent/mm/ui/tools/MMGestureGallery$e;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwy:Lcom/tencent/mm/ui/tools/MMGestureGallery$e;
 
     return-object v0
 .end method
@@ -948,7 +948,7 @@
 
     .prologue
     .line 26
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIO:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kIa:F
 
     return v0
 .end method
@@ -982,7 +982,7 @@
 
     .prologue
     .line 26
-    iget-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtN:J
+    iget-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lww:J
 
     return-wide v0
 .end method
@@ -992,7 +992,7 @@
 
     .prologue
     .line 26
-    iget-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtK:J
+    iget-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwt:J
 
     return-wide v0
 .end method
@@ -1002,7 +1002,7 @@
 
     .prologue
     .line 26
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtL:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwu:F
 
     return v0
 .end method
@@ -1012,7 +1012,7 @@
 
     .prologue
     .line 26
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtM:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwv:F
 
     return v0
 .end method
@@ -1024,7 +1024,7 @@
     .line 26
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIJ:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHV:Z
 
     return v0
 .end method
@@ -1036,7 +1036,7 @@
     .line 26
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     return v0
 .end method
@@ -1046,7 +1046,7 @@
 
     .prologue
     .line 26
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIL:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHX:Z
 
     return v0
 .end method
@@ -1058,7 +1058,7 @@
     .line 26
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIL:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHX:Z
 
     return v0
 .end method
@@ -1070,9 +1070,9 @@
     const-wide/16 v2, 0xf
 
     .line 26
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->aNj()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->bda()V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtG:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwp:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
 
     const/4 v1, 0x1
 
@@ -1088,7 +1088,7 @@
 
     .prologue
     .line 26
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIM:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHY:Z
 
     return v0
 .end method
@@ -1100,7 +1100,7 @@
     .line 26
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIM:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHY:Z
 
     return v0
 .end method
@@ -1110,7 +1110,7 @@
 
     .prologue
     .line 26
-    iget-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtJ:J
+    iget-wide v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lws:J
 
     return-wide v0
 .end method
@@ -1120,7 +1120,7 @@
 
     .prologue
     .line 26
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     return v0
 .end method
@@ -1130,7 +1130,7 @@
 
     .prologue
     .line 26
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIN:F
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHZ:F
 
     return v0
 .end method
@@ -1140,7 +1140,7 @@
 
     .prologue
     .line 26
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iII:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHU:Z
 
     return v0
 .end method
@@ -1150,7 +1150,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtH:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwq:Lcom/tencent/mm/ui/tools/MMGestureGallery$h;
 
     return-object v0
 .end method
@@ -1160,7 +1160,7 @@
 
     .prologue
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtO:Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwx:Lcom/tencent/mm/ui/tools/MMGestureGallery$a;
 
     return-object v0
 .end method
@@ -1172,7 +1172,7 @@
 
     .prologue
     .line 936
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     return v0
 .end method
@@ -1208,7 +1208,7 @@
     if-eqz v3, :cond_2
 
     .line 833
-    sget v3, Lcom/tencent/mm/a$i;->image_gallery_download_success:I
+    const v3, 0x7f07002b
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1237,7 +1237,7 @@
 
     .line 844
     :cond_1
-    sget v3, Lcom/tencent/mm/a$i;->image:I
+    const v3, 0x7f07002c
 
     invoke-virtual {v0, v3}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1277,17 +1277,17 @@
     mul-float/2addr v3, v4
 
     .line 863
-    iget-boolean v4, v0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->iJI:Z
+    iget-boolean v4, v0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIS:Z
 
     if-nez v4, :cond_3
 
-    iget-boolean v4, v0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->iJJ:Z
+    iget-boolean v4, v0, Lcom/tencent/mm/ui/base/MultiTouchImageView;->kIT:Z
 
     if-nez v4, :cond_3
 
     float-to-int v4, v3
 
-    iget v5, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v5, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     if-le v4, v5, :cond_6
 
@@ -1342,7 +1342,7 @@
 
     aput-object v1, v6, v8
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 873
     invoke-static {p1, p2}, Lcom/tencent/mm/ui/tools/MMGestureGallery;->a(Landroid/view/MotionEvent;Landroid/view/MotionEvent;)Z
@@ -1365,7 +1365,7 @@
 
     if-nez v0, :cond_5
 
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     int-to-float v0, v0
 
@@ -1381,7 +1381,7 @@
 
     .line 884
     :cond_6
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtT:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwC:Z
 
     if-eqz v0, :cond_7
 
@@ -1392,14 +1392,14 @@
 
     .line 887
     :cond_7
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iII:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHU:Z
 
     if-eqz v0, :cond_8
 
     move v0, v2
 
     .line 888
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 896
     :cond_8
@@ -1438,14 +1438,14 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     .line 502
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csh:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJF:I
 
     .line 503
     const-string/jumbo v0, "!44@/B4Tb64lLpLtADHeupmcR9RkE1hpp/4l1le5KqFDqOc="
@@ -1456,7 +1456,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1468,7 +1468,7 @@
 
     move-result-object v1
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csh:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJF:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -1478,7 +1478,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 504
     return-void
@@ -1493,7 +1493,7 @@
     const/4 v10, 0x0
 
     .line 631
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iII:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHU:Z
 
     if-eqz v0, :cond_0
 
@@ -1515,7 +1515,7 @@
     if-eqz v0, :cond_3
 
     .line 638
-    sget v0, Lcom/tencent/mm/a$i;->image_gallery_download_success:I
+    const v0, 0x7f07002b
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1542,7 +1542,7 @@
 
     .line 644
     :cond_2
-    sget v1, Lcom/tencent/mm/a$i;->image:I
+    const v1, 0x7f07002c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1569,7 +1569,7 @@
     .line 652
     check-cast v0, Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     .line 654
     const/16 v0, 0x9
@@ -1577,7 +1577,7 @@
     new-array v0, v0, [F
 
     .line 655
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v3}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageMatrix()Landroid/graphics/Matrix;
 
@@ -1587,13 +1587,13 @@
     invoke-virtual {v3, v0}, Landroid/graphics/Matrix;->getValues([F)V
 
     .line 663
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v3}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageWidth()I
 
@@ -1604,13 +1604,13 @@
     mul-float/2addr v3, v4
 
     .line 664
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v4}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v5, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v5}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageHeight()I
 
@@ -1642,20 +1642,20 @@
     invoke-direct {v8}, Landroid/graphics/Rect;-><init>()V
 
     .line 673
-    iget-object v9, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v9, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v9, v8}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getGlobalVisibleRect(Landroid/graphics/Rect;)Z
 
     .line 682
     float-to-int v8, v3
 
-    iget v9, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v9, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     if-gt v8, v9, :cond_8
 
     float-to-int v8, v4
 
-    iget v9, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csh:I
+    iget v9, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJF:I
 
     if-gt v8, v9, :cond_8
 
@@ -1678,7 +1678,7 @@
     if-lez v0, :cond_5
 
     .line 692
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     int-to-float v0, v0
 
@@ -1708,16 +1708,16 @@
 
     .line 706
     :cond_6
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     if-nez v0, :cond_7
 
     .line 707
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     neg-float v1, p3
 
-    invoke-virtual {v0, v1, v10}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->s(FF)V
+    invoke-virtual {v0, v1, v10}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
 
     :cond_7
     move v0, v2
@@ -1729,13 +1729,13 @@
     :cond_8
     float-to-int v8, v3
 
-    iget v9, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v9, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     if-gt v8, v9, :cond_e
 
     float-to-int v8, v4
 
-    iget v9, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csh:I
+    iget v9, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJF:I
 
     if-le v8, v9, :cond_e
 
@@ -1779,7 +1779,7 @@
     if-lez v0, :cond_b
 
     .line 726
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     int-to-float v0, v0
 
@@ -1809,16 +1809,16 @@
 
     .line 740
     :cond_c
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     if-nez v0, :cond_d
 
     .line 741
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     neg-float v1, p3
 
-    invoke-virtual {v0, v1, v10}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->s(FF)V
+    invoke-virtual {v0, v1, v10}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
 
     :cond_d
     move v0, v2
@@ -1830,13 +1830,13 @@
     :cond_e
     float-to-int v3, v3
 
-    iget v8, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v8, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     if-le v3, v8, :cond_13
 
     float-to-int v3, v4
 
-    iget v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csh:I
+    iget v4, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJF:I
 
     if-gt v3, v4, :cond_13
 
@@ -1859,7 +1859,7 @@
     if-lez v0, :cond_10
 
     .line 756
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     int-to-float v0, v0
 
@@ -1889,16 +1889,16 @@
 
     .line 770
     :cond_11
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     if-nez v0, :cond_12
 
     .line 771
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     neg-float v1, p3
 
-    invoke-virtual {v0, v1, v10}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->s(FF)V
+    invoke-virtual {v0, v1, v10}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
 
     :cond_12
     move v0, v2
@@ -1947,7 +1947,7 @@
     if-lez v0, :cond_16
 
     .line 790
-    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     int-to-float v0, v0
 
@@ -1977,18 +1977,18 @@
 
     .line 804
     :cond_17
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHW:Z
 
     if-nez v0, :cond_18
 
     .line 805
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     neg-float v1, p3
 
     neg-float v3, p4
 
-    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->s(FF)V
+    invoke-virtual {v0, v1, v3}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->q(FF)V
 
     :cond_18
     move v0, v2
@@ -2010,7 +2010,7 @@
 
     .prologue
     .line 942
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtF:Landroid/view/GestureDetector;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwo:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p1}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -2035,7 +2035,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 944
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -2067,16 +2067,16 @@
     .line 950
     check-cast v0, Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     .line 951
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageWidth()I
 
@@ -2087,13 +2087,13 @@
     mul-float/2addr v0, v1
 
     .line 952
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getScale()F
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageHeight()I
 
@@ -2106,13 +2106,13 @@
     .line 953
     float-to-int v2, v0
 
-    iget v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csg:I
+    iget v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJE:I
 
     if-gt v2, v3, :cond_1
 
     float-to-int v2, v1
 
-    iget v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->csh:I
+    iget v3, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->cJF:I
 
     if-gt v2, v3, :cond_1
 
@@ -2143,7 +2143,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -2154,7 +2154,7 @@
     new-array v0, v0, [F
 
     .line 958
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->iIG:Lcom/tencent/mm/ui/base/MultiTouchImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->kHS:Lcom/tencent/mm/ui/base/MultiTouchImageView;
 
     invoke-virtual {v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->getImageMatrix()Landroid/graphics/Matrix;
 
@@ -2208,7 +2208,7 @@
 
     move-result-object v0
 
-    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v0}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 
@@ -2241,7 +2241,7 @@
 
     .prologue
     .line 292
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtS:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwB:Z
 
     .line 293
     return-void
@@ -2252,7 +2252,7 @@
 
     .prologue
     .line 234
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtQ:Lcom/tencent/mm/ui/tools/MMGestureGallery$b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwz:Lcom/tencent/mm/ui/tools/MMGestureGallery$b;
 
     .line 235
     return-void
@@ -2263,7 +2263,7 @@
 
     .prologue
     .line 245
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtR:Lcom/tencent/mm/ui/tools/MMGestureGallery$d;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwA:Lcom/tencent/mm/ui/tools/MMGestureGallery$d;
 
     .line 246
     return-void
@@ -2274,7 +2274,7 @@
 
     .prologue
     .line 230
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->jtP:Lcom/tencent/mm/ui/tools/MMGestureGallery$e;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/MMGestureGallery;->lwy:Lcom/tencent/mm/ui/tools/MMGestureGallery$e;
 
     .line 231
     return-void

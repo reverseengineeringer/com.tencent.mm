@@ -11,7 +11,7 @@ public class SightDraftTestActivity
     super.onCreate(paramBundle);
     paramBundle = new SightDraftContainerView(this);
     setContentView(paramBundle);
-    paramBundle.ajy();
+    paramBundle.awe();
   }
 }
 

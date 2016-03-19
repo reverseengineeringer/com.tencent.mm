@@ -1,59 +1,56 @@
-.class final synthetic Lcom/tencent/mm/ui/tools/ShareImgUI$1;
+.class final Lcom/tencent/mm/ui/tools/ShareImgUI$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
+# interfaces
+.implements Lcom/tencent/mm/ui/tools/ShareImgUI$b;
+
 
 # annotations
-.annotation system Ldalvik/annotation/EnclosingClass;
-    value = Lcom/tencent/mm/ui/tools/ShareImgUI;
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/mm/ui/tools/ShareImgUI;->biM()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic cjT:[I
+# instance fields
+.field final synthetic lxP:Lcom/tencent/mm/ui/tools/ShareImgUI;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/tencent/mm/ui/tools/ShareImgUI;)V
+    .locals 0
 
     .prologue
-    .line 663
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->values()[Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    .line 168
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$1;->lxP:Lcom/tencent/mm/ui/tools/ShareImgUI;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final bir()V
+    .locals 2
+
+    .prologue
+    .line 172
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShareImgUI$1;->lxP:Lcom/tencent/mm/ui/tools/ShareImgUI;
+
+    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ShareImgUI;->a(Lcom/tencent/mm/ui/tools/ShareImgUI;)Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    array-length v0, v0
+    const/4 v1, 0x0
 
-    new-array v0, v0, [I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessage(I)Z
 
-    sput-object v0, Lcom/tencent/mm/ui/tools/ShareImgUI$1;->cjT:[I
-
-    :try_start_0
-    sget-object v0, Lcom/tencent/mm/ui/tools/ShareImgUI$1;->cjT:[I
-
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOz:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x1
-
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_0
-
-    :goto_0
+    .line 173
     return-void
-
-    :catch_0
-    move-exception v0
-
-    goto :goto_0
 .end method

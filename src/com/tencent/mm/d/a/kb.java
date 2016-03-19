@@ -1,24 +1,27 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class kb
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aHn = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGz = new a();
   
   public kb()
   {
-    id = "WebviewReportPublisherId";
-    hXT = atO;
+    id = "ResourceReport";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aHo;
-    public String aHp;
+    public boolean aGA;
+    public int atB;
+    public int key;
+    public int type;
+    public int value;
   }
 }
 

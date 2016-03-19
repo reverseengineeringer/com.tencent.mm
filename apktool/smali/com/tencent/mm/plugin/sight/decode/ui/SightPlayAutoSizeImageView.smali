@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+.field private gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
 
 # direct methods
@@ -44,7 +44,7 @@
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView$a;-><init>(Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     .line 63
     return-void
@@ -52,28 +52,20 @@
 
 
 # virtual methods
-.method public final I(Ljava/lang/String;Z)V
+.method public final P(Ljava/lang/String;Z)V
     .locals 1
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
-    invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/plugin/sight/decode/a/b;->I(Ljava/lang/String;Z)V
+    invoke-virtual {v0, p1, p2}, Lcom/tencent/mm/plugin/sight/decode/a/b;->P(Ljava/lang/String;Z)V
 
     .line 86
     return-void
 .end method
 
-.method public final aI(II)V
-    .locals 0
-
-    .prologue
-    .line 152
-    return-void
-.end method
-
-.method public final ajl()V
+.method public final avF()V
     .locals 1
 
     .prologue
@@ -83,7 +75,7 @@
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 126
-    sget v0, Lcom/tencent/mm/a$h;->nosdcard_chatting_bg:I
+    const v0, 0x7f04076e
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->setImageResource(I)V
 
@@ -91,18 +83,26 @@
     return-void
 .end method
 
-.method public final ajm()Z
+.method public final avG()Z
     .locals 1
 
     .prologue
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->ajq()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->avK()Z
 
     move-result v0
 
     return v0
+.end method
+
+.method public final bc(II)V
+    .locals 0
+
+    .prologue
+    .line 152
+    return-void
 .end method
 
 .method public final clear()V
@@ -110,11 +110,24 @@
 
     .prologue
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->clear()V
 
     .line 81
+    return-void
+.end method
+
+.method public final eD(Z)V
+    .locals 1
+
+    .prologue
+    .line 186
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
+
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sight/decode/a/b;->eD(Z)V
+
+    .line 187
     return-void
 .end method
 
@@ -147,9 +160,9 @@
 
     .prologue
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->fgY:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->gxe:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -179,23 +192,23 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 109
     invoke-super {p0}, Landroid/widget/ImageView;->onAttachedToWindow()V
 
     .line 110
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "UIStatusChanged"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/decode/a/b;->ajr()Lcom/tencent/mm/sdk/c/e;
+    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/decode/a/b;->avL()Lcom/tencent/mm/sdk/c/c;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 111
     return-void
@@ -229,25 +242,25 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/decode/a/b;->clear()V
 
     .line 103
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "UIStatusChanged"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/decode/a/b;->ajr()Lcom/tencent/mm/sdk/c/e;
+    invoke-virtual {v2}, Lcom/tencent/mm/plugin/sight/decode/a/b;->avL()Lcom/tencent/mm/sdk/c/c;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 104
     return-void
@@ -258,9 +271,9 @@
 
     .prologue
     .line 156
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
-    iput-boolean p1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->fht:Z
+    iput-boolean p1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->gxz:Z
 
     .line 157
     return-void
@@ -278,12 +291,12 @@
     .locals 1
 
     .prologue
-    .line 194
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 199
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
-    iput-boolean p1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->fhw:Z
+    iput-boolean p1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->gxG:Z
 
-    .line 195
+    .line 200
     return-void
 .end method
 
@@ -291,12 +304,12 @@
     .locals 1
 
     .prologue
-    .line 171
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 176
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
-    iput-boolean p1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->fhv:Z
+    iput-boolean p1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->gxB:Z
 
-    .line 172
+    .line 177
     return-void
 .end method
 
@@ -313,11 +326,32 @@
 
     .prologue
     .line 161
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
-    iput-object p1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->fhy:Lcom/tencent/mm/plugin/sight/decode/a/b$e;
+    iput-object p1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->gxI:Lcom/tencent/mm/plugin/sight/decode/a/b$e;
 
     .line 162
+    return-void
+.end method
+
+.method public setOnDecodeDurationListener(Lcom/tencent/mm/plugin/sight/decode/a/b$f;)V
+    .locals 1
+
+    .prologue
+    .line 203
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
+
+    iput-object p1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->gxJ:Lcom/tencent/mm/plugin/sight/decode/a/b$f;
+
+    .line 204
+    return-void
+.end method
+
+.method public setOnSightCompletionAction(Lcom/tencent/mm/plugin/sight/decode/a/b$g;)V
+    .locals 0
+
+    .prologue
+    .line 167
     return-void
 .end method
 
@@ -326,7 +360,7 @@
 
     .prologue
     .line 95
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     iput p1, v0, Lcom/tencent/mm/plugin/sight/decode/a/b;->position:I
 
@@ -338,12 +372,12 @@
     .locals 1
 
     .prologue
-    .line 176
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 181
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sight/decode/a/b;->setSightInfoView(Landroid/widget/TextView;)V
 
-    .line 177
+    .line 182
     return-void
 .end method
 
@@ -362,12 +396,12 @@
     .locals 1
 
     .prologue
-    .line 166
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->fhN:Lcom/tencent/mm/plugin/sight/decode/a/b;
+    .line 171
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayAutoSizeImageView;->gyr:Lcom/tencent/mm/plugin/sight/decode/a/b;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sight/decode/a/b;->setThumbBgView(Landroid/view/View;)V
 
-    .line 167
+    .line 172
     return-void
 .end method
 

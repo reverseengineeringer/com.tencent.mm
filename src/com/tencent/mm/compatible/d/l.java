@@ -1,98 +1,104 @@
 package com.tencent.mm.compatible.d;
 
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.IOException;
 import java.io.InputStream;
 
 public final class l
 {
-  static short bhZ = 0;
-  static String bia = null;
+  static short bsx = 0;
+  static String bsy = null;
   
-  public static short ov()
+  public static short ok()
   {
-    int m = 4;
     int i;
     int j;
     int k;
-    if (m.oC())
+    if (m.or())
     {
       i = 7;
       j = i;
-      if (bimbic)
+      if (bsJbsA)
       {
         j = i;
-        if (bimbie == 0)
+        if (bsJbsC == 0)
         {
-          t.d("!32@/B4Tb64lLpKXjvTgeeSheYNszmd2wFa1", "disable armv6 by server ");
+          u.d("!32@/B4Tb64lLpKXjvTgeeSheYNszmd2wFa1", "disable armv6 by server ");
           j = i & 0xFFFFFFFD;
         }
       }
       k = j;
-      if (bimbic)
+      if (bsJbsA)
       {
         k = j;
-        if (bimbid == 0)
+        if (bsJbsB == 0)
         {
-          t.d("!32@/B4Tb64lLpKXjvTgeeSheYNszmd2wFa1", "disable armv7 by server ");
+          u.d("!32@/B4Tb64lLpKXjvTgeeSheYNszmd2wFa1", "disable armv7 by server ");
           k = j & 0xFFFFFFFB;
         }
       }
-      i = m.oE();
+      i = m.ot();
       if (i <= 4) {
-        break label162;
+        break label179;
       }
-      i = m;
+      j = 4;
+      label88:
+      i = Integer.parseInt(ol()) / 1000;
+      if (j <= 2) {
+        break label190;
+      }
+      i *= 2;
     }
-    label92:
-    label112:
-    label162:
-    label199:
-    label202:
+    label108:
+    label179:
+    label190:
+    label218:
     for (;;)
     {
-      j = Integer.parseInt(ow()) / 1000;
-      if (i > 2) {
-        j *= 2;
+      int m = i / 100;
+      if (m > 30) {
+        i = 30;
       }
       for (;;)
       {
-        m = j / 100;
-        if (m > 30) {
-          j = 30;
-        }
-        for (;;)
+        m = i;
+        if (i <= 5)
         {
-          short s = (short)((k + (i << 4) << 8) + j);
-          bhZ = s;
-          return s;
-          if (m.oD())
-          {
-            i = 3;
-            break;
+          m = i;
+          if (j >= 4) {
+            m = 15;
           }
-          i = 1;
+        }
+        short s = (short)((k + (j << 4) << 8) + m);
+        bsx = s;
+        return s;
+        if (m.os())
+        {
+          i = 3;
           break;
-          if (i > 0) {
-            break label202;
-          }
-          i = 1;
-          break label92;
-          if (i <= 1) {
-            break label199;
-          }
-          j = j * 3 >> 1;
-          break label112;
-          j = m;
-          if (m < 5) {
-            j = 5;
-          }
+        }
+        i = 1;
+        break;
+        j = i;
+        if (i > 0) {
+          break label88;
+        }
+        j = 1;
+        break label88;
+        if (j <= 1) {
+          break label218;
+        }
+        i = i * 3 >> 1;
+        break label108;
+        i = m;
+        if (m < 5) {
+          i = 5;
         }
       }
     }
   }
   
-  public static String ow()
+  public static String ol()
   {
     try
     {
@@ -116,7 +122,7 @@ public final class l
     }
   }
   
-  public static String ox()
+  public static String om()
   {
     try
     {
@@ -141,7 +147,7 @@ public final class l
   }
   
   /* Error */
-  public static String oy()
+  public static String on()
   {
     // Byte code:
     //   0: new 136	java/io/FileReader

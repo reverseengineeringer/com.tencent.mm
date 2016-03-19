@@ -1,37 +1,57 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.compatible.util.f;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.s;
+import com.tencent.mm.compatible.util.d;
+import com.tencent.mm.sdk.platformtools.ay;
 import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.File;
 
 public final class RegionCodeDecoder
 {
-  private static RegionCodeDecoder igR = null;
-  public static final String igS = f.bjD + "MicroMsg/regioncode/";
-  private String igT = "";
-  private String igU = "";
+  private static RegionCodeDecoder kgv = null;
+  public static final String kgw = d.bwZ + "MicroMsg/regioncode/";
+  private String kgx = "";
+  private String kgy = "";
   
-  public static final boolean Aa(String paramString)
+  public static String Fy(String paramString)
   {
-    if (bn.iW(paramString)) {
+    if (!ay.kz(paramString)) {
+      if ((ay.kz(paramString)) || ((!paramString.equalsIgnoreCase("zh_TW")) && (!paramString.equalsIgnoreCase("zh_HK")) && (!paramString.equalsIgnoreCase("zh_CN")) && (!paramString.equalsIgnoreCase("en")) && (!paramString.equalsIgnoreCase("th")) && (!paramString.equals("id")) && (!paramString.equals("vi")) && (!paramString.equalsIgnoreCase("pt")) && (!paramString.equalsIgnoreCase("es")) && (!paramString.equalsIgnoreCase("ru")) && (!paramString.equalsIgnoreCase("ar")) && (!paramString.equalsIgnoreCase("he")) && (!paramString.equalsIgnoreCase("pl")) && (!paramString.equalsIgnoreCase("hi")) && (!paramString.equalsIgnoreCase("ja")) && (!paramString.equalsIgnoreCase("it")) && (!paramString.equalsIgnoreCase("ko")) && (!paramString.equalsIgnoreCase("ms")) && (!paramString.equalsIgnoreCase("tr")) && (!paramString.equalsIgnoreCase("de")) && (!paramString.equalsIgnoreCase("fr")) && (!paramString.equalsIgnoreCase("my")))) {
+        break label241;
+      }
+    }
+    label241:
+    for (int i = 1; i == 0; i = 0)
+    {
+      u.e("!44@/B4Tb64lLpJmIJaV8eMcmZabjvLFuEDHSmAhvCRiAjA=", "unsupported language:" + paramString);
+      return null;
+    }
+    String str = paramString;
+    if (paramString.equalsIgnoreCase("zh_HK")) {
+      str = "zh_TW";
+    }
+    return kgw + "mmregioncode_" + str + ".txt";
+  }
+  
+  public static final boolean Fz(String paramString)
+  {
+    if (ay.kz(paramString)) {
       return false;
     }
     return paramString.equalsIgnoreCase("cn");
   }
   
-  public static final String C(String paramString1, String paramString2, String paramString3)
+  public static final String M(String paramString1, String paramString2, String paramString3)
   {
     StringBuffer localStringBuffer = new StringBuffer();
-    if (!bn.iW(paramString1))
+    if (!ay.kz(paramString1))
     {
       localStringBuffer.append(paramString1);
-      if (!bn.iW(paramString2))
+      if (!ay.kz(paramString2))
       {
         localStringBuffer.append('_');
         localStringBuffer.append(paramString2);
-        if (!bn.iW(paramString3))
+        if (!ay.kz(paramString3))
         {
           localStringBuffer.append('_');
           localStringBuffer.append(paramString3);
@@ -41,26 +61,26 @@ public final class RegionCodeDecoder
     return localStringBuffer.toString();
   }
   
-  public static RegionCodeDecoder aIc()
+  public static RegionCodeDecoder aXU()
   {
-    if (igR == null) {
-      igR = new RegionCodeDecoder();
+    if (kgv == null) {
+      kgv = new RegionCodeDecoder();
     }
-    RegionCodeDecoder localRegionCodeDecoder = igR;
-    if (!s.aEJ().equals(igT)) {
-      localRegionCodeDecoder.aGd();
+    RegionCodeDecoder localRegionCodeDecoder = kgv;
+    if (!t.aUB().equals(kgx)) {
+      localRegionCodeDecoder.aWi();
     }
-    return igR;
+    return kgv;
   }
   
-  private String aId()
+  private String aXV()
   {
     Object localObject = new StringBuilder("mmregioncode_");
-    if (igT.equalsIgnoreCase("zh_HK")) {}
-    for (String str1 = "zh_TW";; str1 = igT)
+    if (kgx.equalsIgnoreCase("zh_HK")) {}
+    for (String str1 = "zh_TW";; str1 = kgx)
     {
       str1 = str1 + ".txt";
-      localObject = new File(igS);
+      localObject = new File(kgw);
       if (((File)localObject).exists()) {
         break;
       }
@@ -98,14 +118,14 @@ public final class RegionCodeDecoder
   
   public static String getLocName(String paramString)
   {
-    if (bn.iW(paramString)) {
+    if (ay.kz(paramString)) {
       return null;
     }
     return DecoderJni.getLocName(paramString);
   }
   
   /* Error */
-  private void j(File paramFile)
+  private void m(File paramFile)
   {
     // Byte code:
     //   0: aconst_null
@@ -115,13 +135,13 @@ public final class RegionCodeDecoder
     //   6: aload_0
     //   7: monitorenter
     //   8: aload_1
-    //   9: invokevirtual 110	java/io/File:exists	()Z
+    //   9: invokevirtual 162	java/io/File:exists	()Z
     //   12: ifeq +571 -> 583
     //   15: aload_1
-    //   16: invokevirtual 117	java/io/File:list	()[Ljava/lang/String;
+    //   16: invokevirtual 169	java/io/File:list	()[Ljava/lang/String;
     //   19: astore 8
     //   21: aload_1
-    //   22: invokevirtual 110	java/io/File:exists	()Z
+    //   22: invokevirtual 162	java/io/File:exists	()Z
     //   25: ifeq +19 -> 44
     //   28: aload 8
     //   30: ifnull +14 -> 44
@@ -133,32 +153,32 @@ public final class RegionCodeDecoder
     //   41: aload_0
     //   42: monitorexit
     //   43: return
-    //   44: ldc -126
+    //   44: ldc -75
     //   46: newarray <illegal type>
     //   48: astore 11
-    //   50: invokestatic 136	com/tencent/mm/sdk/platformtools/aa:getContext	()Landroid/content/Context;
-    //   53: invokevirtual 142	android/content/Context:getAssets	()Landroid/content/res/AssetManager;
-    //   56: ldc -112
-    //   58: invokevirtual 150	android/content/res/AssetManager:open	(Ljava/lang/String;)Ljava/io/InputStream;
+    //   50: invokestatic 187	com/tencent/mm/sdk/platformtools/y:getContext	()Landroid/content/Context;
+    //   53: invokevirtual 193	android/content/Context:getAssets	()Landroid/content/res/AssetManager;
+    //   56: ldc -61
+    //   58: invokevirtual 201	android/content/res/AssetManager:open	(Ljava/lang/String;)Ljava/io/InputStream;
     //   61: astore_1
     //   62: aload_1
     //   63: ifnonnull +41 -> 104
     //   66: aload_1
     //   67: ifnull -26 -> 41
     //   70: aload_1
-    //   71: invokevirtual 155	java/io/InputStream:close	()V
+    //   71: invokevirtual 206	java/io/InputStream:close	()V
     //   74: goto -33 -> 41
     //   77: astore_1
-    //   78: ldc -99
-    //   80: ldc -97
+    //   78: ldc 113
+    //   80: ldc -48
     //   82: iconst_1
     //   83: anewarray 4	java/lang/Object
     //   86: dup
     //   87: iconst_0
     //   88: aload_1
-    //   89: invokestatic 163	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   89: invokestatic 212	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   92: aastore
-    //   93: invokestatic 169	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   93: invokestatic 215	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   96: goto -55 -> 41
     //   99: astore_1
     //   100: aload_0
@@ -175,7 +195,7 @@ public final class RegionCodeDecoder
     //   113: iconst_4
     //   114: if_icmpge +475 -> 589
     //   117: aload_1
-    //   118: invokevirtual 173	java/io/InputStream:read	()I
+    //   118: invokevirtual 219	java/io/InputStream:read	()I
     //   121: istore 5
     //   123: iload 4
     //   125: iconst_1
@@ -195,7 +215,7 @@ public final class RegionCodeDecoder
     //   144: if_icmpge +24 -> 168
     //   147: iload 5
     //   149: aload_1
-    //   150: invokevirtual 173	java/io/InputStream:read	()I
+    //   150: invokevirtual 219	java/io/InputStream:read	()I
     //   153: iload_2
     //   154: bipush 8
     //   156: imul
@@ -212,12 +232,12 @@ public final class RegionCodeDecoder
     //   172: astore 8
     //   174: aload_1
     //   175: aload 8
-    //   177: invokevirtual 176	java/io/InputStream:read	([B)I
+    //   177: invokevirtual 222	java/io/InputStream:read	([B)I
     //   180: pop
-    //   181: new 61	java/lang/String
+    //   181: new 62	java/lang/String
     //   184: dup
     //   185: aload 8
-    //   187: invokespecial 179	java/lang/String:<init>	([B)V
+    //   187: invokespecial 225	java/lang/String:<init>	([B)V
     //   190: astore 8
     //   192: iconst_0
     //   193: istore_2
@@ -229,7 +249,7 @@ public final class RegionCodeDecoder
     //   202: iconst_4
     //   203: if_icmpge +30 -> 233
     //   206: aload_1
-    //   207: invokevirtual 173	java/io/InputStream:read	()I
+    //   207: invokevirtual 219	java/io/InputStream:read	()I
     //   210: istore 7
     //   212: iload 6
     //   214: iconst_1
@@ -244,22 +264,22 @@ public final class RegionCodeDecoder
     //   227: ior
     //   228: istore 5
     //   230: goto -33 -> 197
-    //   233: new 105	java/io/File
+    //   233: new 157	java/io/File
     //   236: dup
     //   237: aload 8
-    //   239: invokestatic 182	com/tencent/mm/storage/RegionCodeDecoder:zZ	(Ljava/lang/String;)Ljava/lang/String;
-    //   242: invokespecial 106	java/io/File:<init>	(Ljava/lang/String;)V
+    //   239: invokestatic 227	com/tencent/mm/storage/RegionCodeDecoder:Fy	(Ljava/lang/String;)Ljava/lang/String;
+    //   242: invokespecial 158	java/io/File:<init>	(Ljava/lang/String;)V
     //   245: astore 8
     //   247: aload 8
-    //   249: invokevirtual 110	java/io/File:exists	()Z
+    //   249: invokevirtual 162	java/io/File:exists	()Z
     //   252: ifne +9 -> 261
     //   255: aload 8
-    //   257: invokevirtual 185	java/io/File:createNewFile	()Z
+    //   257: invokevirtual 230	java/io/File:createNewFile	()Z
     //   260: pop
-    //   261: new 187	java/io/FileOutputStream
+    //   261: new 232	java/io/FileOutputStream
     //   264: dup
     //   265: aload 8
-    //   267: invokespecial 189	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
+    //   267: invokespecial 234	java/io/FileOutputStream:<init>	(Ljava/io/File;)V
     //   270: astore 8
     //   272: iconst_0
     //   273: istore_2
@@ -273,15 +293,15 @@ public final class RegionCodeDecoder
     //   286: iload 7
     //   288: istore 6
     //   290: iload 7
-    //   292: ldc -126
+    //   292: ldc -75
     //   294: if_icmple +7 -> 301
-    //   297: ldc -126
+    //   297: ldc -75
     //   299: istore 6
     //   301: aload_1
     //   302: aload 11
     //   304: iconst_0
     //   305: iload 6
-    //   307: invokevirtual 192	java/io/InputStream:read	([BII)I
+    //   307: invokevirtual 237	java/io/InputStream:read	([BII)I
     //   310: istore 6
     //   312: iload_2
     //   313: iload 6
@@ -291,46 +311,46 @@ public final class RegionCodeDecoder
     //   319: aload 11
     //   321: iconst_0
     //   322: iload 6
-    //   324: invokevirtual 196	java/io/FileOutputStream:write	([BII)V
+    //   324: invokevirtual 241	java/io/FileOutputStream:write	([BII)V
     //   327: goto -53 -> 274
     //   330: astore 10
     //   332: aload 8
     //   334: astore 9
     //   336: aload 10
     //   338: astore 8
-    //   340: ldc -99
-    //   342: ldc -97
+    //   340: ldc 113
+    //   342: ldc -48
     //   344: iconst_1
     //   345: anewarray 4	java/lang/Object
     //   348: dup
     //   349: iconst_0
     //   350: aload 8
-    //   352: invokestatic 163	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   352: invokestatic 212	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   355: aastore
-    //   356: invokestatic 169	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   356: invokestatic 215	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   359: aload_1
     //   360: ifnull +7 -> 367
     //   363: aload_1
-    //   364: invokevirtual 155	java/io/InputStream:close	()V
+    //   364: invokevirtual 206	java/io/InputStream:close	()V
     //   367: aload 9
     //   369: ifnull -328 -> 41
     //   372: aload 9
-    //   374: invokevirtual 197	java/io/FileOutputStream:close	()V
+    //   374: invokevirtual 242	java/io/FileOutputStream:close	()V
     //   377: goto -336 -> 41
     //   380: astore_1
-    //   381: ldc -99
-    //   383: ldc -97
+    //   381: ldc 113
+    //   383: ldc -48
     //   385: iconst_1
     //   386: anewarray 4	java/lang/Object
     //   389: dup
     //   390: iconst_0
     //   391: aload_1
-    //   392: invokestatic 163	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   392: invokestatic 212	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   395: aastore
-    //   396: invokestatic 169	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   396: invokestatic 215	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   399: goto -358 -> 41
     //   402: aload 8
-    //   404: invokevirtual 197	java/io/FileOutputStream:close	()V
+    //   404: invokevirtual 242	java/io/FileOutputStream:close	()V
     //   407: iload 4
     //   409: iconst_1
     //   410: iadd
@@ -339,31 +359,31 @@ public final class RegionCodeDecoder
     //   416: aload_1
     //   417: ifnull -376 -> 41
     //   420: aload_1
-    //   421: invokevirtual 155	java/io/InputStream:close	()V
+    //   421: invokevirtual 206	java/io/InputStream:close	()V
     //   424: goto -383 -> 41
     //   427: astore_1
-    //   428: ldc -99
-    //   430: ldc -97
+    //   428: ldc 113
+    //   430: ldc -48
     //   432: iconst_1
     //   433: anewarray 4	java/lang/Object
     //   436: dup
     //   437: iconst_0
     //   438: aload_1
-    //   439: invokestatic 163	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   439: invokestatic 212	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   442: aastore
-    //   443: invokestatic 169	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   443: invokestatic 215	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   446: goto -405 -> 41
     //   449: astore_1
-    //   450: ldc -99
-    //   452: ldc -97
+    //   450: ldc 113
+    //   452: ldc -48
     //   454: iconst_1
     //   455: anewarray 4	java/lang/Object
     //   458: dup
     //   459: iconst_0
     //   460: aload_1
-    //   461: invokestatic 163	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   461: invokestatic 212	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   464: aastore
-    //   465: invokestatic 169	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   465: invokestatic 215	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   468: goto -101 -> 367
     //   471: astore 8
     //   473: aconst_null
@@ -373,36 +393,36 @@ public final class RegionCodeDecoder
     //   479: aload_1
     //   480: ifnull +7 -> 487
     //   483: aload_1
-    //   484: invokevirtual 155	java/io/InputStream:close	()V
+    //   484: invokevirtual 206	java/io/InputStream:close	()V
     //   487: aload 9
     //   489: ifnull +8 -> 497
     //   492: aload 9
-    //   494: invokevirtual 197	java/io/FileOutputStream:close	()V
+    //   494: invokevirtual 242	java/io/FileOutputStream:close	()V
     //   497: aload 8
     //   499: athrow
     //   500: astore_1
-    //   501: ldc -99
-    //   503: ldc -97
+    //   501: ldc 113
+    //   503: ldc -48
     //   505: iconst_1
     //   506: anewarray 4	java/lang/Object
     //   509: dup
     //   510: iconst_0
     //   511: aload_1
-    //   512: invokestatic 163	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   512: invokestatic 212	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   515: aastore
-    //   516: invokestatic 169	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   516: invokestatic 215	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   519: goto -32 -> 487
     //   522: astore_1
-    //   523: ldc -99
-    //   525: ldc -97
+    //   523: ldc 113
+    //   525: ldc -48
     //   527: iconst_1
     //   528: anewarray 4	java/lang/Object
     //   531: dup
     //   532: iconst_0
     //   533: aload_1
-    //   534: invokestatic 163	com/tencent/mm/sdk/platformtools/bn:a	(Ljava/lang/Throwable;)Ljava/lang/String;
+    //   534: invokestatic 212	com/tencent/mm/sdk/platformtools/ay:b	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   537: aastore
-    //   538: invokestatic 169	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   538: invokestatic 215	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   541: goto -44 -> 497
     //   544: astore 8
     //   546: aload 10
@@ -506,117 +526,97 @@ public final class RegionCodeDecoder
     //   261	272	578	java/lang/Exception
   }
   
-  public static String zZ(String paramString)
-  {
-    if (!bn.iW(paramString)) {
-      if ((bn.iW(paramString)) || ((!paramString.equalsIgnoreCase("zh_TW")) && (!paramString.equalsIgnoreCase("zh_HK")) && (!paramString.equalsIgnoreCase("zh_CN")) && (!paramString.equalsIgnoreCase("en")) && (!paramString.equalsIgnoreCase("th")) && (!paramString.equals("id")) && (!paramString.equals("vi")) && (!paramString.equalsIgnoreCase("pt")) && (!paramString.equalsIgnoreCase("es")) && (!paramString.equalsIgnoreCase("ru")) && (!paramString.equalsIgnoreCase("ar")) && (!paramString.equalsIgnoreCase("he")) && (!paramString.equalsIgnoreCase("pl")) && (!paramString.equalsIgnoreCase("hi")) && (!paramString.equalsIgnoreCase("ja")) && (!paramString.equalsIgnoreCase("it")) && (!paramString.equalsIgnoreCase("ko")) && (!paramString.equalsIgnoreCase("ms")) && (!paramString.equalsIgnoreCase("tr")) && (!paramString.equalsIgnoreCase("de")) && (!paramString.equalsIgnoreCase("fr")) && (!paramString.equalsIgnoreCase("my")))) {
-        break label241;
-      }
-    }
-    label241:
-    for (int i = 1; i == 0; i = 0)
-    {
-      t.e("!44@/B4Tb64lLpJmIJaV8eMcmZabjvLFuEDHSmAhvCRiAjA=", "unsupported language:" + paramString);
-      return null;
-    }
-    String str = paramString;
-    if (paramString.equalsIgnoreCase("zh_HK")) {
-      str = "zh_TW";
-    }
-    return igS + "mmregioncode_" + str + ".txt";
-  }
-  
-  public final String Ab(String paramString)
+  public final String FA(String paramString)
   {
     String str2 = getLocName(paramString);
     String str1 = str2;
-    if (bn.iW(str2)) {
-      str1 = bn.iV(paramString);
+    if (ay.kz(str2)) {
+      str1 = ay.ky(paramString);
     }
     return str1;
   }
   
-  public final Region[] Ac(String paramString)
+  public final Region[] FB(String paramString)
   {
-    if ((bn.iW(igU)) || (bn.iW(paramString))) {
+    if ((ay.kz(kgy)) || (ay.kz(paramString))) {
       return null;
     }
-    return DecoderJni.getProvinces(igU, paramString);
+    return DecoderJni.getProvinces(kgy, paramString);
   }
   
-  public final String D(String paramString1, String paramString2, String paramString3)
+  public final String N(String paramString1, String paramString2, String paramString3)
   {
-    if ((bn.iW(paramString1)) || (bn.iW(paramString2)) || (bn.iW(paramString3))) {}
-    for (paramString1 = null;; paramString1 = getLocName(C(paramString1, paramString2, paramString3)))
+    if ((ay.kz(paramString1)) || (ay.kz(paramString2)) || (ay.kz(paramString3))) {}
+    for (paramString1 = null;; paramString1 = getLocName(M(paramString1, paramString2, paramString3)))
     {
       paramString2 = paramString1;
-      if (bn.iW(paramString1)) {
-        paramString2 = bn.iV(paramString3);
+      if (ay.kz(paramString1)) {
+        paramString2 = ay.ky(paramString3);
       }
       return paramString2;
     }
   }
   
-  public final void aGd()
+  public final void aWi()
   {
-    Object localObject = new File(igS);
+    Object localObject = new File(kgw);
     if (!((File)localObject).exists())
     {
       ((File)localObject).mkdir();
-      j((File)localObject);
+      m((File)localObject);
     }
     String[] arrayOfString = ((File)localObject).list();
     if ((arrayOfString == null) || (arrayOfString.length == 0)) {
-      j((File)localObject);
+      m((File)localObject);
     }
-    igT = s.aEJ();
-    localObject = aId();
-    if (bn.iW((String)localObject)) {
-      t.e("!44@/B4Tb64lLpJmIJaV8eMcmZabjvLFuEDHSmAhvCRiAjA=", "buildMap error, no codeFile found, curLang: " + igT);
+    kgx = t.aUB();
+    localObject = aXV();
+    if (ay.kz((String)localObject)) {
+      u.e("!44@/B4Tb64lLpJmIJaV8eMcmZabjvLFuEDHSmAhvCRiAjA=", "buildMap error, no codeFile found, curLang: " + kgx);
     }
     do
     {
       return;
-      localObject = igS + (String)localObject;
-    } while (((String)localObject).equals(igU));
-    igU = ((String)localObject);
-    DecoderJni.buildFromFile(igU);
+      localObject = kgw + (String)localObject;
+    } while (((String)localObject).equals(kgy));
+    kgy = ((String)localObject);
+    DecoderJni.buildFromFile(kgy);
   }
   
-  public final Region[] aIe()
+  public final Region[] aXW()
   {
-    if (bn.iW(igU)) {
+    if (ay.kz(kgy)) {
       return null;
     }
-    return DecoderJni.getCountries(igU);
+    return DecoderJni.getCountries(kgy);
   }
   
-  public final String bD(String paramString1, String paramString2)
+  public final String cq(String paramString1, String paramString2)
   {
     Object localObject2 = null;
     Object localObject1 = localObject2;
-    if (!bn.iW(paramString1)) {
-      if (!bn.iW(paramString2)) {
+    if (!ay.kz(paramString1)) {
+      if (!ay.kz(paramString2)) {
         break label39;
       }
     }
     label39:
-    for (localObject1 = localObject2;; localObject1 = getLocName(C(paramString1, paramString2, null)))
+    for (localObject1 = localObject2;; localObject1 = getLocName(M(paramString1, paramString2, null)))
     {
       paramString1 = (String)localObject1;
-      if (bn.iW((String)localObject1)) {
-        paramString1 = bn.iV(paramString2);
+      if (ay.kz((String)localObject1)) {
+        paramString1 = ay.ky(paramString2);
       }
       return paramString1;
     }
   }
   
-  public final Region[] bE(String paramString1, String paramString2)
+  public final Region[] cr(String paramString1, String paramString2)
   {
-    if ((bn.iW(igU)) || (bn.iW(paramString1)) || (bn.iW(paramString2))) {
+    if ((ay.kz(kgy)) || (ay.kz(paramString1)) || (ay.kz(paramString2))) {
       return null;
     }
-    return DecoderJni.getCities(igU, paramString1, paramString2);
+    return DecoderJni.getCities(kgy, paramString1, paramString2);
   }
   
   private static class DecoderJni

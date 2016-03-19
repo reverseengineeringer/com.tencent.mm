@@ -23,7 +23,7 @@ public class WloginAllSigInfo
     }
     catch (Exception localException)
     {
-      util.yf(localException.toString());
+      util.DG(localException.toString());
     }
     return null;
   }

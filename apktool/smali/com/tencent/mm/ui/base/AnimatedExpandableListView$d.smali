@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field dqx:Z
+.field efE:Z
 
-.field iCO:Z
+.field kBQ:Z
 
-.field iCP:I
+.field kBR:I
 
-.field iCQ:I
+.field kBS:I
 
 
 # direct methods
@@ -35,15 +35,15 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 235
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->dqx:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->efE:Z
 
     .line 236
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->iCO:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->kBQ:Z
 
     .line 246
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->iCQ:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->kBS:I
 
     return-void
 .end method

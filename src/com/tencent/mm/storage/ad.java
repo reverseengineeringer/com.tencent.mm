@@ -1,65 +1,55 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.d.b.s;
-import com.tencent.mm.sdk.g.ae.a;
-import java.lang.reflect.Field;
-import java.util.Map;
-
-public final class ad
-  extends s
+public class ad
 {
-  protected static ae.a aqp;
+  private final String aEU;
+  public final boolean aur;
+  private final String dbI;
+  private boolean kfE;
+  private final String name;
+  private final String type;
   
-  static
+  public ad()
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[7];
-    bbY = new String[8];
-    StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "md5_lang";
-    ibX.put("md5_lang", "TEXT PRIMARY KEY  COLLATE NOCASE ");
-    localStringBuilder.append(" md5_lang TEXT PRIMARY KEY  COLLATE NOCASE ");
-    localStringBuilder.append(", ");
-    ibW = "md5_lang";
-    bbY[1] = "md5";
-    ibX.put("md5", "TEXT COLLATE NOCASE ");
-    localStringBuilder.append(" md5 TEXT COLLATE NOCASE ");
-    localStringBuilder.append(", ");
-    bbY[2] = "lang";
-    ibX.put("lang", "TEXT COLLATE NOCASE ");
-    localStringBuilder.append(" lang TEXT COLLATE NOCASE ");
-    localStringBuilder.append(", ");
-    bbY[3] = "desc";
-    ibX.put("desc", "TEXT");
-    localStringBuilder.append(" desc TEXT");
-    localStringBuilder.append(", ");
-    bbY[4] = "groupId";
-    ibX.put("groupId", "TEXT default '' ");
-    localStringBuilder.append(" groupId TEXT default '' ");
-    localStringBuilder.append(", ");
-    bbY[5] = "click_flag";
-    ibX.put("click_flag", "INTEGER");
-    localStringBuilder.append(" click_flag INTEGER");
-    localStringBuilder.append(", ");
-    bbY[6] = "download_flag";
-    ibX.put("download_flag", "INTEGER");
-    localStringBuilder.append(" download_flag INTEGER");
-    bbY[7] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    type = "";
+    name = "";
+    aEU = "";
+    dbI = "";
+    aur = true;
   }
   
-  protected final ae.a lX()
+  public ad(String paramString1, String paramString2, String paramString3, String paramString4, boolean paramBoolean1, boolean paramBoolean2)
   {
-    return null;
+    type = paramString1;
+    name = paramString2;
+    aEU = paramString3;
+    dbI = paramString4;
+    aur = paramBoolean1;
+    kfE = paramBoolean2;
   }
   
-  public final String xq()
+  public final String aWT()
   {
-    if (field_md5 == null) {
+    if (dbI == null) {
       return "";
     }
-    return field_md5;
+    return dbI;
+  }
+  
+  public final String getType()
+  {
+    if (type == null) {
+      return "";
+    }
+    return type;
+  }
+  
+  public final String qy()
+  {
+    if (aEU == null) {
+      return "";
+    }
+    return aEU;
   }
 }
 

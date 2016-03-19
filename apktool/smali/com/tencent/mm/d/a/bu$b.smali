@@ -15,23 +15,18 @@
 
 
 # instance fields
-.field public axb:J
+.field public auR:Z
 
-.field public axc:Lcom/tencent/mm/q/j;
+.field public avh:Ljava/util/List;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 0
 
     .prologue
-    .line 21
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 22
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/tencent/mm/d/a/bu$b;->axb:J
 
     return-void
 .end method

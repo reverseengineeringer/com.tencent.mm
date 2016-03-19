@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 public class NativeActionModeAwareLayout
   extends LinearLayout
 {
-  private a rj;
+  private a ql;
   
   public NativeActionModeAwareLayout(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -19,14 +19,14 @@ public class NativeActionModeAwareLayout
   
   public void setActionModeForChildListener(a parama)
   {
-    rj = parama;
+    ql = parama;
   }
   
   public ActionMode startActionModeForChild(View paramView, ActionMode.Callback paramCallback)
   {
     ActionMode.Callback localCallback = paramCallback;
-    if (rj != null) {
-      localCallback = rj.a(paramCallback);
+    if (ql != null) {
+      localCallback = ql.a(paramCallback);
     }
     return super.startActionModeForChild(paramView, localCallback);
   }

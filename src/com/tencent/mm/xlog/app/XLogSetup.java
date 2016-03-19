@@ -3,8 +3,8 @@ package com.tencent.mm.xlog.app;
 import android.os.Looper;
 import com.tencent.mm.jni.platformcomm.PlatformComm;
 import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 import com.tencent.mm.xlog.LogLogicJni;
 import com.tencent.mm.xlog.Xlog;
 
@@ -30,7 +30,7 @@ public class XLogSetup
       return;
       if (!hasInit)
       {
-        PlatformComm.a(aa.getContext(), new ac(Looper.getMainLooper()));
+        PlatformComm.a(y.getContext(), new aa(Looper.getMainLooper()));
         hasInit = true;
       }
       version = paramInteger1;
@@ -43,7 +43,7 @@ public class XLogSetup
       sAlpha = paramBoolean4;
     } while ((!paramBoolean1) || (setup));
     setup = true;
-    t.a(xlog);
+    u.a(xlog);
     appendIsSync.booleanValue();
     LogLogicJni.setConsoleLogOpen(isLogcatOpen.booleanValue());
     LogLogicJni.setIsAlphaVersion(sAlpha);

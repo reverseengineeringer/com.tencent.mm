@@ -10,16 +10,16 @@ import java.util.Set;
 
 public final class e
 {
-  public final List jPz;
+  public final List mdL;
   
   public e()
   {
-    jPz = new ArrayList();
+    mdL = new ArrayList();
   }
   
   public e(List paramList)
   {
-    jPz = new ArrayList(paramList);
+    mdL = new ArrayList(paramList);
   }
   
   public e(Map paramMap)
@@ -32,11 +32,11 @@ public final class e
         return;
       }
       Map.Entry localEntry = (Map.Entry)paramMap.next();
-      jPz.add(new d((String)localEntry.getKey(), (String)localEntry.getValue()));
+      mdL.add(new d((String)localEntry.getKey(), (String)localEntry.getValue()));
     }
   }
   
-  public final void Cv(String paramString)
+  public final void IP(String paramString)
   {
     String[] arrayOfString;
     int i;
@@ -56,7 +56,7 @@ public final class e
     if (paramString.length > 1) {}
     for (paramString = c.decode(paramString[1]);; paramString = "")
     {
-      jPz.add(new d(str, paramString));
+      mdL.add(new d(str, paramString));
       i += 1;
       break;
     }
@@ -64,23 +64,23 @@ public final class e
   
   public final void a(e parame)
   {
-    jPz.addAll(jPz);
+    mdL.addAll(mdL);
   }
   
-  public final String aVX()
+  public final String boM()
   {
-    if (jPz.size() == 0) {
+    if (mdL.size() == 0) {
       return "";
     }
     StringBuilder localStringBuilder = new StringBuilder();
-    Iterator localIterator = jPz.iterator();
+    Iterator localIterator = mdL.iterator();
     for (;;)
     {
       if (!localIterator.hasNext()) {
         return localStringBuilder.toString().substring(1);
       }
       d locald = (d)localIterator.next();
-      localStringBuilder.append('&').append(c.encode(beZ).concat("=").concat(c.encode(value)));
+      localStringBuilder.append('&').append(c.encode(buL).concat("=").concat(c.encode(value)));
     }
   }
 }

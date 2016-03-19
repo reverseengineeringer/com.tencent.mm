@@ -1,27 +1,29 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
+import com.tencent.mm.sdk.c.b;
 
 public final class dz
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aAc = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aya = new a();
+  public b ayb = new b();
   
   public dz()
   {
-    id = "Launch3RdApp";
-    hXT = atO;
+    id = "FaceBookBindOperation";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public WXMediaMessage aAd;
-    public String appId;
-    public Context context;
+    public int state = -1;
+  }
+  
+  public static final class b
+  {
+    public boolean atR = false;
   }
 }
 

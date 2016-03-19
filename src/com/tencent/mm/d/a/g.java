@@ -1,26 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.m.a.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.storage.ar;
+import com.tencent.mm.sdk.c.b;
 
 public final class g
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aua = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public g()
   {
-    id = "AppMsgInsert";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public ar aub;
-    public a.a auc;
+    id = "AllAccountPostResetFinish";
+    jUI = arR;
   }
 }
 

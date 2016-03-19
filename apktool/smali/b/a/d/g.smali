@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public code:I
+.field public cwi:I
 
-.field private jPD:Ljava/util/Map;
+.field private mdP:Ljava/util/Map;
 
-.field private jPK:Ljava/lang/String;
+.field private mdV:Ljava/lang/String;
 
-.field private jPL:Ljava/io/InputStream;
+.field private mdW:Ljava/io/InputStream;
 
 
 # direct methods
@@ -30,23 +30,23 @@
 
     move-result v0
 
-    iput v0, p0, Lb/a/d/g;->code:I
+    iput v0, p0, Lb/a/d/g;->cwi:I
 
     .line 30
     invoke-static {p1}, Lb/a/d/g;->c(Ljava/net/HttpURLConnection;)Ljava/util/Map;
 
     move-result-object v0
 
-    iput-object v0, p0, Lb/a/d/g;->jPD:Ljava/util/Map;
+    iput-object v0, p0, Lb/a/d/g;->mdP:Ljava/util/Map;
 
     .line 31
-    iget v0, p0, Lb/a/d/g;->code:I
+    iget v0, p0, Lb/a/d/g;->cwi:I
 
     const/16 v1, 0xc8
 
     if-lt v0, v1, :cond_0
 
-    iget v0, p0, Lb/a/d/g;->code:I
+    iget v0, p0, Lb/a/d/g;->cwi:I
 
     const/16 v1, 0x190
 
@@ -62,7 +62,7 @@
     move-result-object v0
 
     :goto_1
-    iput-object v0, p0, Lb/a/d/g;->jPL:Ljava/io/InputStream;
+    iput-object v0, p0, Lb/a/d/g;->mdW:Ljava/io/InputStream;
 
     return-void
 
@@ -165,25 +165,25 @@
 
     .prologue
     .line 67
-    iget-object v0, p0, Lb/a/d/g;->jPK:Ljava/lang/String;
+    iget-object v0, p0, Lb/a/d/g;->mdV:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lb/a/d/g;->jPK:Ljava/lang/String;
+    iget-object v0, p0, Lb/a/d/g;->mdV:Ljava/lang/String;
 
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lb/a/d/g;->jPL:Ljava/io/InputStream;
+    iget-object v0, p0, Lb/a/d/g;->mdW:Ljava/io/InputStream;
 
-    invoke-static {v0}, Lb/a/g/e;->l(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {v0}, Lb/a/g/e;->k(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lb/a/d/g;->jPK:Ljava/lang/String;
+    iput-object v0, p0, Lb/a/d/g;->mdV:Ljava/lang/String;
 
-    iget-object v0, p0, Lb/a/d/g;->jPK:Ljava/lang/String;
+    iget-object v0, p0, Lb/a/d/g;->mdV:Ljava/lang/String;
 
     goto :goto_0
 .end method

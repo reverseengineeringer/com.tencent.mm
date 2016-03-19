@@ -1,29 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.model.by.a;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ca
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a axo = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avC = new a();
   
   public ca()
   {
-    id = "ExtStartSnsServerAndCallbackOnFpSetSize";
-    hXT = atO;
+    id = "ExDeviceLanDeviceConnectState";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean axp;
-    public boolean axq;
-    public int axr;
-    public by.a axs;
-    public int type;
-    public String username;
+    public String alN;
+    public String auQ;
+    public int avD;
   }
 }
 

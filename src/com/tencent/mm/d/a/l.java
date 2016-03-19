@@ -1,17 +1,26 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.support.v4.app.p.f;
+import com.tencent.mm.sdk.c.b;
 
 public final class l
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a ast = new a();
   
   public l()
   {
-    id = "BackupResetAccUin";
-    hXT = atO;
+    id = "AutoNewMessage";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public p.f asu;
+    public String title;
+    public String username;
   }
 }
 

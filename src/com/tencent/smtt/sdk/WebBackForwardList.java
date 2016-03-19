@@ -4,8 +4,8 @@ import com.tencent.smtt.export.external.interfaces.IX5WebBackForwardList;
 
 public class WebBackForwardList
 {
-  private IX5WebBackForwardList jKZ = null;
-  private android.webkit.WebBackForwardList jLa = null;
+  private IX5WebBackForwardList lTG = null;
+  private android.webkit.WebBackForwardList lTH = null;
   
   static WebBackForwardList a(android.webkit.WebBackForwardList paramWebBackForwardList)
   {
@@ -13,7 +13,7 @@ public class WebBackForwardList
       return null;
     }
     WebBackForwardList localWebBackForwardList = new WebBackForwardList();
-    jLa = paramWebBackForwardList;
+    lTH = paramWebBackForwardList;
     return localWebBackForwardList;
   }
   
@@ -23,40 +23,40 @@ public class WebBackForwardList
       return null;
     }
     WebBackForwardList localWebBackForwardList = new WebBackForwardList();
-    jKZ = paramIX5WebBackForwardList;
+    lTG = paramIX5WebBackForwardList;
     return localWebBackForwardList;
   }
   
   public int getCurrentIndex()
   {
-    if (jKZ != null) {
-      return jKZ.getCurrentIndex();
+    if (lTG != null) {
+      return lTG.getCurrentIndex();
     }
-    return jLa.getCurrentIndex();
+    return lTH.getCurrentIndex();
   }
   
   public WebHistoryItem getCurrentItem()
   {
-    if (jKZ != null) {
-      return WebHistoryItem.a(jKZ.getCurrentItem());
+    if (lTG != null) {
+      return WebHistoryItem.a(lTG.getCurrentItem());
     }
-    return WebHistoryItem.a(jLa.getCurrentItem());
+    return WebHistoryItem.a(lTH.getCurrentItem());
   }
   
   public WebHistoryItem getItemAtIndex(int paramInt)
   {
-    if (jKZ != null) {
-      return WebHistoryItem.a(jKZ.getItemAtIndex(paramInt));
+    if (lTG != null) {
+      return WebHistoryItem.a(lTG.getItemAtIndex(paramInt));
     }
-    return WebHistoryItem.a(jLa.getItemAtIndex(paramInt));
+    return WebHistoryItem.a(lTH.getItemAtIndex(paramInt));
   }
   
   public int getSize()
   {
-    if (jKZ != null) {
-      return jKZ.getSize();
+    if (lTG != null) {
+      return lTG.getSize();
     }
-    return jLa.getSize();
+    return lTH.getSize();
   }
 }
 

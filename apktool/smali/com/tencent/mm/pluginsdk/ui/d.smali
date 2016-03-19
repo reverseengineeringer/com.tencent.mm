@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private gOG:Landroid/widget/AbsListView$OnScrollListener;
+.field private iFY:Landroid/widget/AbsListView$OnScrollListener;
 
-.field private gOH:Ljava/util/ArrayList;
+.field private iFZ:Ljava/util/ArrayList;
 
 
 # direct methods
@@ -46,16 +46,16 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->gOH:Ljava/util/ArrayList;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->iFZ:Ljava/util/ArrayList;
 
     .line 24
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d;->gOG:Landroid/widget/AbsListView$OnScrollListener;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/d;->iFY:Landroid/widget/AbsListView$OnScrollListener;
 
     .line 25
     return-void
 .end method
 
-.method private ek(Z)V
+.method private gk(Z)V
     .locals 2
 
     .prologue
@@ -65,7 +65,7 @@
     move v1, v0
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->gOH:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->iFZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -74,7 +74,7 @@
     if-ge v1, v0, :cond_2
 
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->gOH:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->iFZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -108,7 +108,7 @@
 
     .line 62
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->gOH:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->iFZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
@@ -116,7 +116,7 @@
 
     .line 65
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->gOH:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->iFZ:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
@@ -134,7 +134,7 @@
 
     .prologue
     .line 51
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->gOH:Ljava/util/ArrayList;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->iFZ:Ljava/util/ArrayList;
 
     new-instance v1, Ljava/lang/ref/WeakReference;
 
@@ -151,12 +151,12 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->gOG:Landroid/widget/AbsListView$OnScrollListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->iFY:Landroid/widget/AbsListView$OnScrollListener;
 
     if-eqz v0, :cond_0
 
     .line 30
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->gOG:Landroid/widget/AbsListView$OnScrollListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->iFY:Landroid/widget/AbsListView$OnScrollListener;
 
     invoke-interface {v0, p1, p2, p3, p4}, Landroid/widget/AbsListView$OnScrollListener;->onScroll(Landroid/widget/AbsListView;III)V
 
@@ -177,16 +177,16 @@
     .line 37
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d;->ek(Z)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d;->gk(Z)V
 
     .line 41
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->gOG:Landroid/widget/AbsListView$OnScrollListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->iFY:Landroid/widget/AbsListView$OnScrollListener;
 
     if-eqz v0, :cond_0
 
     .line 42
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->gOG:Landroid/widget/AbsListView$OnScrollListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/d;->iFY:Landroid/widget/AbsListView$OnScrollListener;
 
     invoke-interface {v0, p1, p2}, Landroid/widget/AbsListView$OnScrollListener;->onScrollStateChanged(Landroid/widget/AbsListView;I)V
 
@@ -198,7 +198,7 @@
     :cond_1
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d;->ek(Z)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/d;->gk(Z)V
 
     goto :goto_0
 .end method

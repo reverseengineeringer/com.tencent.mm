@@ -1,19 +1,19 @@
 package com.tencent.kingkong.database;
 
-import com.tencent.mm.dbsupport.newcursor.h;
+import com.tencent.mm.dbsupport.newcursor.g;
 
 public class SQLiteDatabaseCorruptException
   extends SQLiteException
 {
   public SQLiteDatabaseCorruptException()
   {
-    h.qM();
+    g.qI();
   }
   
   public SQLiteDatabaseCorruptException(String paramString)
   {
     super(paramString);
-    h.qM();
+    g.qI();
   }
 }
 

@@ -4,16 +4,16 @@
 
 
 # direct methods
-.method public static Dv()Ljava/lang/String;
+.method public static FD()Ljava/lang/String;
     .locals 3
 
     .prologue
     .line 122
-    sget-object v0, Lcom/tencent/mm/compatible/util/f;->bjL:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/compatible/util/d;->buk:Ljava/lang/String;
 
-    sget-object v1, Lcom/tencent/mm/compatible/util/f;->bjH:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/compatible/util/d;->bxc:Ljava/lang/String;
 
-    sget-object v2, Lcom/tencent/mm/compatible/util/f;->bjG:Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/compatible/util/d;->buh:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Ljava/lang/String;->replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;
 
@@ -46,14 +46,14 @@
     .line 34
     const-string/jumbo v2, "jpg"
 
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/e;->iP(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v2}, Lcom/tencent/mm/platformtools/e;->kt(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     .line 38
     new-instance v2, Ljava/io/File;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v3
 
@@ -86,7 +86,7 @@
     move-result-object v5
 
     .line 40
-    invoke-static {p0, v5}, Lcom/tencent/mm/modelsfs/FileOp;->j(Ljava/lang/String;Ljava/lang/String;)J
+    invoke-static {p0, v5}, Lcom/tencent/mm/modelsfs/FileOp;->o(Ljava/lang/String;Ljava/lang/String;)J
 
     move-result-wide v2
 
@@ -163,7 +163,7 @@
     if-nez v2, :cond_3
 
     .line 67
-    invoke-static {p0, v4}, Lcom/tencent/mm/modelsfs/FileOp;->j(Ljava/lang/String;Ljava/lang/String;)J
+    invoke-static {p0, v4}, Lcom/tencent/mm/modelsfs/FileOp;->o(Ljava/lang/String;Ljava/lang/String;)J
 
     move-result-wide v2
 
@@ -173,17 +173,17 @@
 
     .line 71
     :cond_3
-    invoke-static {v4, p1}, Lcom/tencent/mm/platformtools/e;->e(Ljava/lang/String;Landroid/content/Context;)V
+    invoke-static {v4, p1}, Lcom/tencent/mm/platformtools/e;->d(Ljava/lang/String;Landroid/content/Context;)V
 
     .line 72
     if-eqz p2, :cond_4
 
     .line 73
-    sget v2, Lcom/tencent/mm/a$n;->cropimage_saved:I
+    const v2, 0x7f0b05ec
 
     new-array v3, v1, [Ljava/lang/Object;
 
-    invoke-static {}, Lcom/tencent/mm/platformtools/e;->Dv()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/platformtools/e;->FD()Ljava/lang/String;
 
     move-result-object v4
 
@@ -325,12 +325,12 @@
     goto :goto_3
 .end method
 
-.method public static e(Ljava/lang/String;Landroid/content/Context;)V
+.method public static d(Ljava/lang/String;Landroid/content/Context;)V
     .locals 4
 
     .prologue
     .line 86
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -371,12 +371,12 @@
 
     aput-object p0, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public static iP(Ljava/lang/String;)Ljava/lang/String;
+.method public static kt(Ljava/lang/String;)Ljava/lang/String;
     .locals 6
 
     .prologue
@@ -385,7 +385,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget-object v1, Lcom/tencent/mm/compatible/util/f;->bjL:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/compatible/util/d;->buk:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 

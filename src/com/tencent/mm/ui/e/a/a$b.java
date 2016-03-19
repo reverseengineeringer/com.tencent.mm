@@ -3,7 +3,6 @@ package com.tencent.mm.ui.e.a;
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tencent.mm.a.h;
 
 public abstract class a$b
 {
@@ -15,14 +14,14 @@ public abstract class a$b
   
   public abstract boolean a(Context paramContext, a paramVarArgs);
   
-  public final void aK(View paramView)
+  public final void aN(View paramView)
   {
-    if (jnR.jnL)
+    if (ltj.ltd)
     {
-      paramView.setBackgroundResource(a.h.comm_list_item_selector_no_divider);
+      paramView.setBackgroundResource(2130970303);
       return;
     }
-    paramView.setBackgroundResource(a.h.comm_list_item_selector);
+    paramView.setBackgroundResource(2130970354);
   }
 }
 

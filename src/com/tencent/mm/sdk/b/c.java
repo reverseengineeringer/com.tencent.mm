@@ -1,14 +1,16 @@
 package com.tencent.mm.sdk.b;
 
+import android.content.Context;
+
 public abstract interface c
 {
   public abstract void a(a parama);
   
-  public abstract void d(int paramInt, String paramString);
+  public abstract void ag(Context paramContext);
   
-  public abstract void k(String paramString1, String paramString2);
+  public abstract void f(int paramInt, String paramString);
   
-  public abstract void le();
+  public abstract void q(String paramString1, String paramString2);
 }
 
 /* Location:

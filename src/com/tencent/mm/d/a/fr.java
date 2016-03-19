@@ -1,35 +1,31 @@
 package com.tencent.mm.d.a;
 
-import android.graphics.Bitmap;
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
 
 public final class fr
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public b aCA = new b();
-  public a aCz = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aAw = new a();
+  public b aAx = new b();
   
   public fr()
   {
-    id = "QueryGameMessage";
-    hXT = atO;
+    id = "GetSoterAuthKey";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int axP;
+    public String aAy;
+    public Context context;
   }
   
   public static final class b
   {
-    public Bitmap aCB;
-    public int aCC = 0;
-    public int aCD;
-    public String appId;
-    public String appName;
-    public int aux = 0;
+    public String aAz;
   }
 }
 

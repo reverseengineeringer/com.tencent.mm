@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+.field final synthetic iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
 
 # direct methods
@@ -26,8 +26,8 @@
     .locals 0
 
     .prologue
-    .line 106
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    .line 105
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -38,7 +38,7 @@
     .locals 0
 
     .prologue
-    .line 106
+    .line 105
     invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;-><init>(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;)V
 
     return-void
@@ -46,12 +46,12 @@
 
 
 # virtual methods
-.method public final aAb()V
+.method public final ahv()V
     .locals 5
 
     .prologue
-    .line 110
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    .line 109
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->b(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;)Ljava/lang/String;
 
@@ -59,7 +59,7 @@
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->c(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;)Ljava/lang/String;
 
@@ -67,8 +67,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 114
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    .line 113
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->getContext()Landroid/content/Context;
 
@@ -78,14 +78,14 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$c;->get_hd_head_img_alert:I
+    const v1, 0x7f0d0015
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getStringArray(I)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 116
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;->gPI:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
+    .line 115
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;->iGq:Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView;->getContext()Landroid/content/Context;
 
@@ -95,11 +95,11 @@
 
     const-string/jumbo v3, ""
 
-    new-instance v4, Lcom/tencent/mm/pluginsdk/ui/n;
+    new-instance v4, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b$1;
 
-    invoke-direct {v4, p0}, Lcom/tencent/mm/pluginsdk/ui/n;-><init>(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;)V
+    invoke-direct {v4, p0}, Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/GetHdHeadImageGalleryView$b;)V
 
-    invoke-static {v1, v2, v0, v3, v4}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/ui/base/h$c;)Landroid/app/Dialog;
+    invoke-static {v1, v2, v0, v3, v4}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/ui/base/g$c;)Landroid/app/Dialog;
 
     .line 134
     :cond_0

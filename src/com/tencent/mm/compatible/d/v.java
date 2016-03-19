@@ -1,37 +1,24 @@
 package com.tencent.mm.compatible.d;
 
-import java.lang.reflect.Method;
-
 public final class v
 {
-  private static Class biL = null;
-  private static Method biM = null;
-  private static Method biN = null;
+  public int bti = 800000;
+  public int btj = 60000;
+  public int btk = 100000000;
+  public int btl = 1000;
+  public int btm = 0;
   
-  static
+  public v()
   {
-    try
-    {
-      Class localClass = Class.forName("android.os.SystemProperties");
-      biL = localClass;
-      biM = localClass.getDeclaredMethod("get", new Class[] { String.class });
-      biN = biL.getDeclaredMethod("getInt", new Class[] { String.class, Integer.TYPE });
-      biM.setAccessible(true);
-      biN.setAccessible(true);
-      return;
-    }
-    catch (Exception localException) {}
+    reset();
   }
   
-  public static String get(String paramString)
+  public final void reset()
   {
-    try
-    {
-      paramString = (String)biM.invoke(null, new Object[] { paramString });
-      return paramString;
-    }
-    catch (Exception paramString) {}
-    return null;
+    bti = 800000;
+    btj = 60000;
+    btl = 1000;
+    btm = 0;
   }
 }
 

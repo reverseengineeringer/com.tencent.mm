@@ -15,15 +15,7 @@
 
 
 # instance fields
-.field public apy:Ljava/lang/String;
-
-.field public arf:Z
-
-.field public axh:Lcom/tencent/mm/q/f$a;
-
-.field public axi:Lcom/tencent/mm/q/f$b;
-
-.field public op:I
+.field public avg:J
 
 
 # direct methods

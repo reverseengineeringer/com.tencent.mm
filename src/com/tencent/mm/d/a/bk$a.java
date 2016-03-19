@@ -1,9 +1,13 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.r.j;
+
 public final class bk$a
 {
-  public byte[] data;
-  public String mac;
+  public String auC;
+  public int auD = 0;
+  public int auE = 0;
+  public j auF;
 }
 
 /* Location:

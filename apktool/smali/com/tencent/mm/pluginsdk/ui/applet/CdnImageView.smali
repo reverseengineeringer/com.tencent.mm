@@ -12,13 +12,13 @@
 
 
 # instance fields
-.field private dLd:I
+.field private dTb:I
 
-.field private diH:I
+.field private eNa:I
 
-.field private gSd:Ljava/lang/String;
+.field private handler:Lcom/tencent/mm/sdk/platformtools/aa;
 
-.field private handler:Lcom/tencent/mm/sdk/platformtools/ac;
+.field private iIe:Ljava/lang/String;
 
 .field private url:Ljava/lang/String;
 
@@ -63,11 +63,11 @@
     iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->url:Ljava/lang/String;
 
     .line 32
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/l;
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/applet/l;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
 
     .line 79
     return-void
@@ -98,7 +98,7 @@
 
     .prologue
     .line 19
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dLd:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->eNa:I
 
     return v0
 .end method
@@ -108,7 +108,7 @@
 
     .prologue
     .line 19
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->diH:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dTb:I
 
     return v0
 .end method
@@ -118,7 +118,7 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->gSd:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->iIe:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -137,27 +137,27 @@
     iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->url:Ljava/lang/String;
 
     .line 103
-    iput p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dLd:I
+    iput p2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->eNa:I
 
     .line 104
-    iput p3, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->diH:I
+    iput p3, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dTb:I
 
     .line 105
-    iput-object p5, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->gSd:Ljava/lang/String;
+    iput-object p5, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->iIe:Ljava/lang/String;
 
     .line 108
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->gSd:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->iIe:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 109
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->gSd:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->iIe:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/e;->xf(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->CE(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -210,29 +210,29 @@
     if-eqz v0, :cond_6
 
     .line 121
-    invoke-static {}, Lcom/tencent/mm/y/af;->zk()Lcom/tencent/mm/y/c;
+    invoke-static {}, Lcom/tencent/mm/ab/n;->An()Lcom/tencent/mm/ab/b;
 
-    invoke-static {p1}, Lcom/tencent/mm/y/c;->gH(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {p1}, Lcom/tencent/mm/ab/b;->hE(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     if-eqz v0, :cond_4
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dLd:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->eNa:I
 
     if-lez v1, :cond_3
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->diH:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dTb:I
 
     if-lez v1, :cond_3
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dLd:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->eNa:I
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->diH:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dTb:I
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v2, v4, v3}, Lcom/tencent/mm/sdk/platformtools/e;->a(Landroid/graphics/Bitmap;IIZZ)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1, v2, v4, v3}, Lcom/tencent/mm/sdk/platformtools/d;->a(Landroid/graphics/Bitmap;IIZZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -249,19 +249,19 @@
     :cond_5
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView$a;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->handler:Lcom/tencent/mm/sdk/platformtools/aa;
 
-    invoke-direct {v0, p1, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView$a;-><init>(Ljava/lang/String;Lcom/tencent/mm/sdk/platformtools/ac;)V
+    invoke-direct {v0, p1, v1}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView$a;-><init>(Ljava/lang/String;Lcom/tencent/mm/sdk/platformtools/aa;)V
 
     const-string/jumbo v1, "CdnImageView_download"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/h/e;->a(Ljava/lang/Runnable;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/i/e;->a(Ljava/lang/Runnable;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 123
     :cond_6
-    invoke-static {p1}, Lcom/tencent/mm/a/c;->az(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -272,16 +272,16 @@
     goto :goto_0
 
     :cond_7
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dLd:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->eNa:I
 
     if-lez v0, :cond_8
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->diH:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dTb:I
 
     if-gtz v0, :cond_9
 
     :cond_8
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/e;->xf(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/d;->CE(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -293,11 +293,11 @@
     goto :goto_0
 
     :cond_9
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dLd:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->eNa:I
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->diH:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->dTb:I
 
-    invoke-static {p1, v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/e;->a(Ljava/lang/String;IIZ)Landroid/graphics/Bitmap;
+    invoke-static {p1, v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/d;->b(Ljava/lang/String;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -309,7 +309,20 @@
     goto :goto_0
 .end method
 
-.method public p(Ljava/lang/String;II)V
+.method public setUrl(Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 82
+    invoke-virtual {p0, p1, v0, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->u(Ljava/lang/String;II)V
+
+    .line 83
+    return-void
+.end method
+
+.method u(Ljava/lang/String;II)V
     .locals 6
 
     .prologue
@@ -329,18 +342,5 @@
     invoke-virtual/range {v0 .. v5}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->a(Ljava/lang/String;IIILjava/lang/String;)V
 
     .line 99
-    return-void
-.end method
-
-.method public setUrl(Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 82
-    invoke-virtual {p0, p1, v0, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/CdnImageView;->p(Ljava/lang/String;II)V
-
-    .line 83
     return-void
 .end method

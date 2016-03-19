@@ -1,6 +1,6 @@
 package com.tencent.smtt.sdk;
 
-import com.tencent.smtt.a.p;
+import com.tencent.smtt.a.m;
 import com.tencent.smtt.export.external.DexLoader;
 import java.io.File;
 import java.util.Map;
@@ -10,11 +10,11 @@ public final class CacheManager
   @Deprecated
   public static boolean cacheDisabled()
   {
-    Object localObject = d.gn(false);
-    if ((localObject != null) && (jJm)) {
-      return ((Boolean)jJk.mDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "cacheDisabled", new Class[0], new Object[0])).booleanValue();
+    Object localObject = d.is(false);
+    if ((localObject != null) && (((d)localObject).bln())) {
+      return ((Boolean)blmmDexLoader.invokeStaticMethod("com.tencent.tbs.tbsshell.WebCoreProxy", "cacheDisabled", new Class[0], new Object[0])).booleanValue();
     }
-    localObject = p.bU("android.webkit.CacheManager", "cacheDisabled");
+    localObject = m.cL("android.webkit.CacheManager", "cacheDisabled");
     if (localObject == null) {
       return false;
     }
@@ -23,13 +23,13 @@ public final class CacheManager
   
   public static Object getCacheFile(String paramString, Map paramMap)
   {
-    d locald = d.gn(false);
-    if ((locald != null) && (jJm)) {
-      return jJk.getCachFileBaseDir();
+    d locald = d.is(false);
+    if ((locald != null) && (locald.bln())) {
+      return locald.blm().getCachFileBaseDir();
     }
     try
     {
-      paramString = p.a(Class.forName("android.webkit.CacheManager"), "getCacheFile", new Class[] { String.class, Map.class }, new Object[] { paramString, paramMap });
+      paramString = m.a(Class.forName("android.webkit.CacheManager"), "getCacheFile", new Class[] { String.class, Map.class }, new Object[] { paramString, paramMap });
       return paramString;
     }
     catch (Exception paramString) {}
@@ -39,11 +39,11 @@ public final class CacheManager
   @Deprecated
   public static File getCacheFileBaseDir()
   {
-    d locald = d.gn(false);
-    if ((locald != null) && (jJm)) {
-      return (File)jJk.getCachFileBaseDir();
+    d locald = d.is(false);
+    if ((locald != null) && (locald.bln())) {
+      return (File)locald.blm().getCachFileBaseDir();
     }
-    return (File)p.bU("android.webkit.CacheManager", "getCacheFileBaseDir");
+    return (File)m.cL("android.webkit.CacheManager", "getCacheFileBaseDir");
   }
 }
 

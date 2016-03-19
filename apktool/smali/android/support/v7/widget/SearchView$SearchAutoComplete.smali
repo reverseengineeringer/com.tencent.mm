@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private sY:I
+.field private sc:I
 
-.field private sZ:Landroid/support/v7/widget/SearchView;
+.field private sd:Landroid/support/v7/widget/SearchView;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     move-result v0
 
-    iput v0, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sY:I
+    iput v0, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sc:I
 
     .line 1596
     return-void
@@ -51,7 +51,7 @@
 
     move-result v0
 
-    iput v0, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sY:I
+    iput v0, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sc:I
 
     .line 1601
     return-void
@@ -90,7 +90,7 @@
 
     .prologue
     .line 1670
-    iget v0, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sY:I
+    iget v0, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sc:I
 
     if-lez v0, :cond_0
 
@@ -120,9 +120,9 @@
     invoke-super {p0, p1, p2, p3}, Landroid/widget/AutoCompleteTextView;->onFocusChanged(ZILandroid/graphics/Rect;)V
 
     .line 1661
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sZ:Landroid/support/v7/widget/SearchView;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sd:Landroid/support/v7/widget/SearchView;
 
-    invoke-virtual {v0}, Landroid/support/v7/widget/SearchView;->cI()V
+    invoke-virtual {v0}, Landroid/support/v7/widget/SearchView;->cs()V
 
     .line 1662
     return-void
@@ -202,12 +202,12 @@
     if-nez v1, :cond_3
 
     .line 1690
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sZ:Landroid/support/v7/widget/SearchView;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sd:Landroid/support/v7/widget/SearchView;
 
     invoke-virtual {v1}, Landroid/support/v7/widget/SearchView;->clearFocus()V
 
     .line 1691
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sZ:Landroid/support/v7/widget/SearchView;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sd:Landroid/support/v7/widget/SearchView;
 
     invoke-static {v1}, Landroid/support/v7/widget/SearchView;->p(Landroid/support/v7/widget/SearchView;)V
 
@@ -232,7 +232,7 @@
     .line 1646
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sZ:Landroid/support/v7/widget/SearchView;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sd:Landroid/support/v7/widget/SearchView;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView;->hasFocus()Z
 
@@ -269,14 +269,14 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Landroid/support/v7/widget/SearchView;->g(Landroid/content/Context;)Z
+    invoke-static {v0}, Landroid/support/v7/widget/SearchView;->n(Landroid/content/Context;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
     .line 1653
-    sget-object v0, Landroid/support/v7/widget/SearchView;->sH:Landroid/support/v7/widget/SearchView$a;
+    sget-object v0, Landroid/support/v7/widget/SearchView;->rK:Landroid/support/v7/widget/SearchView$a;
 
     invoke-virtual {v0, p0}, Landroid/support/v7/widget/SearchView$a;->a(Landroid/widget/AutoCompleteTextView;)V
 
@@ -306,7 +306,7 @@
 
     .prologue
     .line 1604
-    iput-object p1, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sZ:Landroid/support/v7/widget/SearchView;
+    iput-object p1, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sd:Landroid/support/v7/widget/SearchView;
 
     .line 1605
     return-void
@@ -320,7 +320,7 @@
     invoke-super {p0, p1}, Landroid/widget/AutoCompleteTextView;->setThreshold(I)V
 
     .line 1610
-    iput p1, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sY:I
+    iput p1, p0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->sc:I
 
     .line 1611
     return-void

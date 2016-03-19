@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class hd$a
 {
-  public String aEs;
+  public String aCP;
 }
 
 /* Location:

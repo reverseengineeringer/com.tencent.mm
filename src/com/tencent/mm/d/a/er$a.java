@@ -1,8 +1,16 @@
 package com.tencent.mm.d.a;
 
+import android.content.Context;
+
 public final class er$a
 {
-  public int aBs;
+  public int actionCode;
+  public String appId;
+  public int asc;
+  public String azq;
+  public Context context;
+  public String messageAction;
+  public String messageExt;
 }
 
 /* Location:

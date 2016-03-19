@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public aub:Lcom/tencent/mm/storage/ar;
+.field public atf:Z
 
 
 # direct methods

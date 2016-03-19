@@ -6,13 +6,13 @@ import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.os.Build;
 import android.os.Build.VERSION;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 import java.lang.reflect.Method;
 
 public final class b
 {
-  public static void ar(Context paramContext)
+  public static void ay(Context paramContext)
   {
     if (Build.MANUFACTURER.equalsIgnoreCase("meizu")) {}
     try
@@ -24,7 +24,7 @@ public final class b
     }
     catch (Exception localException1)
     {
-      t.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "unable start activity AppsCheckReadPermission");
+      u.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "unable start activity AppsCheckReadPermission");
       try
       {
         Intent localIntent2 = new Intent("android.settings.APP_OPS_SETTINGS");
@@ -34,7 +34,7 @@ public final class b
       }
       catch (Exception localException2)
       {
-        t.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "unable start activity APP_OPS_SETTINGS");
+        u.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "unable start activity APP_OPS_SETTINGS");
         try
         {
           Intent localIntent3 = new Intent();
@@ -44,21 +44,21 @@ public final class b
         }
         catch (Exception paramContext)
         {
-          t.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "unable start activity AppControlSettingsActivity");
+          u.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "unable start activity AppControlSettingsActivity");
         }
       }
     }
   }
   
   /* Error */
-  private static boolean bR(int paramInt)
+  private static boolean bS(int paramInt)
   {
     // Byte code:
     //   0: iload_0
     //   1: ifne +5 -> 6
     //   4: iconst_1
     //   5: ireturn
-    //   6: invokestatic 82	com/tencent/mm/sdk/platformtools/aa:getContext	()Landroid/content/Context;
+    //   6: invokestatic 82	com/tencent/mm/sdk/platformtools/y:getContext	()Landroid/content/Context;
     //   9: ldc 84
     //   11: invokevirtual 88	android/content/Context:getSystemService	(Ljava/lang/String;)Ljava/lang/Object;
     //   14: astore_2
@@ -96,14 +96,14 @@ public final class b
     //   67: aastore
     //   68: dup
     //   69: iconst_1
-    //   70: invokestatic 82	com/tencent/mm/sdk/platformtools/aa:getContext	()Landroid/content/Context;
+    //   70: invokestatic 82	com/tencent/mm/sdk/platformtools/y:getContext	()Landroid/content/Context;
     //   73: invokevirtual 116	android/content/Context:getApplicationInfo	()Landroid/content/pm/ApplicationInfo;
     //   76: getfield 122	android/content/pm/ApplicationInfo:uid	I
     //   79: invokestatic 112	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
     //   82: aastore
     //   83: dup
     //   84: iconst_2
-    //   85: invokestatic 126	com/tencent/mm/sdk/platformtools/aa:getPackageName	()Ljava/lang/String;
+    //   85: invokestatic 126	com/tencent/mm/sdk/platformtools/y:getPackageName	()Ljava/lang/String;
     //   88: aastore
     //   89: invokevirtual 132	java/lang/reflect/Method:invoke	(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
     //   92: checkcast 100	java/lang/Integer
@@ -120,7 +120,7 @@ public final class b
     //   113: iload_0
     //   114: invokestatic 112	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
     //   117: aastore
-    //   118: invokestatic 141	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   118: invokestatic 141	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   121: iconst_0
     //   122: ireturn
     //   123: astore_1
@@ -133,7 +133,7 @@ public final class b
     //   134: aload_1
     //   135: invokevirtual 146	java/lang/NoSuchMethodException:getMessage	()Ljava/lang/String;
     //   138: aastore
-    //   139: invokestatic 141	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   139: invokestatic 141	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   142: aconst_null
     //   143: astore_1
     //   144: goto -93 -> 51
@@ -147,7 +147,7 @@ public final class b
     //   158: aload_1
     //   159: invokevirtual 149	java/lang/ClassNotFoundException:getMessage	()Ljava/lang/String;
     //   162: aastore
-    //   163: invokestatic 141	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   163: invokestatic 141	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   166: aconst_null
     //   167: astore_1
     //   168: goto -117 -> 51
@@ -161,7 +161,7 @@ public final class b
     //   182: aload_1
     //   183: invokevirtual 152	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   186: aastore
-    //   187: invokestatic 141	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   187: invokestatic 141	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   190: iconst_m1
     //   191: istore_0
     //   192: goto -93 -> 99
@@ -184,7 +184,7 @@ public final class b
     //   55	99	171	java/lang/Exception
   }
   
-  public static boolean oY()
+  public static boolean oQ()
   {
     if (!Build.MANUFACTURER.equalsIgnoreCase("meizu")) {
       return true;
@@ -195,14 +195,14 @@ public final class b
     }
     for (;;)
     {
-      return bR(i);
+      return bS(i);
       if (Build.VERSION.SDK_INT >= 19) {
         i = 27;
       }
     }
   }
   
-  public static boolean oZ()
+  public static boolean oR()
   {
     if (!Build.MANUFACTURER.equalsIgnoreCase("meizu")) {
       return true;
@@ -213,7 +213,7 @@ public final class b
     }
     for (;;)
     {
-      return bR(i);
+      return bS(i);
       if (Build.VERSION.SDK_INT >= 19) {
         i = 26;
       }
@@ -221,13 +221,13 @@ public final class b
   }
   
   @TargetApi(19)
-  public static boolean pa()
+  public static boolean oS()
   {
     bool1 = true;
     bool2 = true;
     Object localObject3;
     if (Build.VERSION.SDK_INT >= 19) {
-      localObject3 = aa.getContext().getSystemService("appops");
+      localObject3 = y.getContext().getSystemService("appops");
     }
     try
     {
@@ -236,7 +236,7 @@ public final class b
       if (localMethod != null) {}
       try
       {
-        int i = ((Integer)localMethod.invoke(localObject3, new Object[] { Integer.valueOf(24), Integer.valueOf(getContextgetApplicationInfouid), aa.getPackageName() })).intValue();
+        int i = ((Integer)localMethod.invoke(localObject3, new Object[] { Integer.valueOf(24), Integer.valueOf(getContextgetApplicationInfouid), y.getPackageName() })).intValue();
         if (i != 0) {
           break label183;
         }
@@ -248,18 +248,18 @@ public final class b
         {
           Object localObject1;
           Object localObject2;
-          t.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "call checkOp failed: %s", new Object[] { localException.getMessage() });
+          u.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "call checkOp failed: %s", new Object[] { localException.getMessage() });
           bool1 = bool2;
         }
       }
-      t.d("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "isFloatWindowOpAllowed allowed: " + bool1);
+      u.d("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "isFloatWindowOpAllowed allowed: " + bool1);
       return bool1;
     }
     catch (NoSuchMethodException localNoSuchMethodException)
     {
       for (;;)
       {
-        t.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "NoSuchMethodException method:checkOp! Error:%s", new Object[] { localNoSuchMethodException.getMessage() });
+        u.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "NoSuchMethodException method:checkOp! Error:%s", new Object[] { localNoSuchMethodException.getMessage() });
         localObject1 = null;
       }
     }
@@ -267,7 +267,7 @@ public final class b
     {
       for (;;)
       {
-        t.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "ClassNotFoundException class:android.app.AppOpsManager! Error:%s", new Object[] { localClassNotFoundException.getMessage() });
+        u.e("!32@/B4Tb64lLpL0qTj+UKAbT/EkU1Pg7QxL", "ClassNotFoundException class:android.app.AppOpsManager! Error:%s", new Object[] { localClassNotFoundException.getMessage() });
         localObject2 = null;
         continue;
         label183:

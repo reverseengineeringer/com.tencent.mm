@@ -1,36 +1,43 @@
 package com.tencent.mm.ui.contact;
 
-import com.tencent.mm.a.n;
-import com.tencent.mm.d.a.gr;
-import com.tencent.mm.d.a.gr.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.ui.base.h;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.d.a.kd;
+import com.tencent.mm.d.a.kd.a;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.ui.base.g;
 
 final class SnsLabelContactListUI$b
-  extends e
+  extends c
 {
   public SnsLabelContactListUI$b(SnsLabelContactListUI paramSnsLabelContactListUI)
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(b paramb)
   {
-    if ((paramd instanceof gr))
+    if ((paramb instanceof kd))
     {
-      paramd = (gr)paramd;
-      SnsLabelContactListUI.a(jia, aDU.azL);
-      if (SnsLabelContactListUI.b(jia) != null)
+      paramb = (kd)paramb;
+      SnsLabelContactListUI.a(lmz, aGD.aAt);
+      if (SnsLabelContactListUI.b(lmz) != null)
       {
-        SnsLabelContactListUI.c(jia);
-        jia.DV();
+        SnsLabelContactListUI.c(lmz);
+        lmz.Gb();
       }
       for (;;)
       {
         return true;
-        jia.DV();
-        h.a(jia, jia.getString(a.n.sns_label_contact_list_get_failed), "", new en(this));
+        lmz.Gb();
+        g.a(lmz, lmz.getString(2131433179), "", new DialogInterface.OnClickListener()
+        {
+          public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+          {
+            lmz.finish();
+          }
+        });
       }
     }
     return false;

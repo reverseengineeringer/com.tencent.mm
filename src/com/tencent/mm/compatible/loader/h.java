@@ -4,9 +4,9 @@ import android.app.Application;
 
 public abstract class h
 {
-  public Application bjk;
+  public Application btM;
   
-  public abstract void bg();
+  public abstract void aQ();
   
   public abstract void onCreate();
   

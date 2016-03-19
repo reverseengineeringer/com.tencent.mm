@@ -1,105 +1,259 @@
 package com.tencent.mm.m;
 
-import java.util.LinkedList;
+import android.util.SparseArray;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.h;
+import com.tencent.mm.storage.j.a;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map.Entry;
+import java.util.Random;
+import java.util.Set;
 
 public final class b
-  extends com.tencent.mm.al.a
 {
-  public String aEv;
-  public String aEw;
-  public String aWN;
-  public LinkedList bmi = null;
-  public LinkedList bns = new LinkedList();
-  public String name;
-  public int type;
+  SparseArray bvX = new SparseArray();
+  HashMap bvY = new HashMap();
+  SparseArray bvZ = new SparseArray();
+  HashMap bwa = new HashMap();
+  private Random bwb = new Random();
+  h bwc = null;
   
-  public final void a(a.a.a.c.a parama)
+  private a cp(int paramInt)
   {
-    parama.bM(1, type);
-    if (name != null) {
-      parama.U(2, name);
+    String str = (String)bwc.get(paramInt, null);
+    if (str == null) {
+      return null;
     }
-    if (aEv != null) {
-      parama.U(3, aEv);
-    }
-    if (aEw != null) {
-      parama.U(4, aEw);
-    }
-    if (aWN != null) {
-      parama.U(5, aWN);
-    }
-    parama.d(6, 8, bns);
-  }
-  
-  public final boolean a(a.a.a.a.a parama, com.tencent.mm.al.a parama1, int paramInt)
-  {
-    parama1 = (b)parama1;
-    switch (paramInt)
+    Object localObject = str.split("\\|");
+    if (localObject.length != 3)
     {
-    default: 
-      return false;
-    case 1: 
-      type = jMD.aVp();
-      return true;
-    case 2: 
-      name = jMD.readString();
-      return true;
-    case 3: 
-      aEv = jMD.readString();
-      return true;
-    case 4: 
-      aEw = jMD.readString();
-      return true;
-    case 5: 
-      aWN = jMD.readString();
-      return true;
+      u.e("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "loadDataSource array.length != 3 content %s", new Object[] { str });
+      return null;
     }
-    parama = parama.pL(paramInt);
-    int i = parama.size();
-    paramInt = 0;
-    while (paramInt < i)
+    try
     {
-      Object localObject = (byte[])parama.get(paramInt);
-      c localc = new c();
-      localObject = new a.a.a.a.a((byte[])localObject, hfZ);
-      for (boolean bool = true; bool; bool = localc.a((a.a.a.a.a)localObject, localc, a((a.a.a.a.a)localObject))) {}
-      bns.add(localc);
-      paramInt += 1;
+      localObject = a(paramInt, Integer.valueOf(localObject[0]).intValue(), unescape(localObject[1]), unescape(localObject[2]));
+      return (a)localObject;
     }
-    return true;
+    catch (Exception localException)
+    {
+      u.e("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "exception:%s", new Object[] { ay.b(localException) });
+      u.e("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "loadDataSource exception content %s", new Object[] { str });
+    }
+    return null;
   }
   
-  public final int kS()
+  private b cq(int paramInt)
   {
-    int j = a.a.a.a.bI(1, type) + 0;
-    int i = j;
-    if (name != null) {
-      i = j + a.a.a.b.b.a.T(2, name);
+    String str = (String)bwc.get(paramInt, null);
+    if (str == null) {
+      return cr(paramInt);
     }
-    j = i;
-    if (aEv != null) {
-      j = i + a.a.a.b.b.a.T(3, aEv);
+    String[] arrayOfString = str.split("\\|");
+    if (arrayOfString.length % 2 != 0)
+    {
+      u.e("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "loadWatcher array.length %% 2 != 0 content %s", new Object[] { str });
+      return null;
     }
-    i = j;
-    if (aEw != null) {
-      i = j + a.a.a.b.b.a.T(4, aEw);
+    try
+    {
+      b localb = cr(paramInt);
+      paramInt = 0;
+      while (paramInt < arrayOfString.length)
+      {
+        bwf.put(Integer.valueOf(arrayOfString[paramInt]).intValue(), unescape(arrayOfString[(paramInt + 1)]));
+        paramInt += 2;
+      }
+      return localb;
     }
-    j = i;
-    if (aWN != null) {
-      j = i + a.a.a.b.b.a.T(5, aWN);
+    catch (Exception localException)
+    {
+      u.e("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "exception:%s", new Object[] { ay.b(localException) });
+      u.e("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "loadWatcher exception content %s", new Object[] { str });
     }
-    return j + a.a.a.a.c(6, 8, bns);
+    return null;
   }
   
-  public final b w(byte[] paramArrayOfByte)
+  private static String dw(String paramString)
   {
-    paramArrayOfByte = new a.a.a.a.a(paramArrayOfByte, hfZ);
-    for (int i = a(paramArrayOfByte); i > 0; i = a(paramArrayOfByte)) {
-      if (!a(paramArrayOfByte, this, i)) {
-        paramArrayOfByte.aVo();
+    return paramString.replaceAll("\\|", "%7C");
+  }
+  
+  private static String unescape(String paramString)
+  {
+    return paramString.replaceAll("%7C", "|");
+  }
+  
+  final a a(int paramInt1, int paramInt2, String paramString1, String paramString2)
+  {
+    a locala = new a();
+    bvT = paramInt1;
+    type = paramInt2;
+    value = paramString1;
+    avm = paramString2;
+    return locala;
+  }
+  
+  final void a(a parama)
+  {
+    StringBuffer localStringBuffer = new StringBuffer();
+    localStringBuffer.append(type);
+    localStringBuffer.append("|");
+    localStringBuffer.append(dw(value));
+    localStringBuffer.append("|");
+    localStringBuffer.append(dw(avm));
+    if (bvU != null)
+    {
+      bwc.b(bvU, localStringBuffer.toString());
+      return;
+    }
+    bwc.set(bvT, localStringBuffer.toString());
+  }
+  
+  final void a(b paramb)
+  {
+    StringBuffer localStringBuffer = new StringBuffer();
+    Object localObject1;
+    if (bvW != null)
+    {
+      localObject1 = bwg.entrySet().iterator();
+      i = 0;
+      while (((Iterator)localObject1).hasNext())
+      {
+        Object localObject2 = (Map.Entry)((Iterator)localObject1).next();
+        String str = (String)((Map.Entry)localObject2).getKey();
+        localObject2 = (String)((Map.Entry)localObject2).getValue();
+        if (i != 0) {
+          localStringBuffer.append("|");
+        }
+        localStringBuffer.append(str);
+        localStringBuffer.append("|");
+        localStringBuffer.append(dw((String)localObject2));
+        i += 1;
+      }
+      bwc.b(bvW, localStringBuffer.toString());
+      return;
+    }
+    int i = 0;
+    while (i < bwf.size())
+    {
+      int j = bwf.keyAt(i);
+      localObject1 = (String)bwf.get(j);
+      if (i != 0) {
+        localStringBuffer.append("|");
+      }
+      localStringBuffer.append(j);
+      localStringBuffer.append("|");
+      localStringBuffer.append(dw((String)localObject1));
+      i += 1;
+    }
+    bwc.set(bwe, localStringBuffer.toString());
+  }
+  
+  final b cr(int paramInt)
+  {
+    b localb = new b();
+    bwe = paramInt;
+    return localb;
+  }
+  
+  public final a cs(int paramInt)
+  {
+    a locala2 = (a)bvX.get(paramInt);
+    a locala1 = locala2;
+    if (locala2 == null)
+    {
+      locala2 = cp(paramInt);
+      locala1 = locala2;
+      if (locala2 != null)
+      {
+        bvX.put(paramInt, locala2);
+        locala1 = locala2;
       }
     }
-    return this;
+    return locala1;
+  }
+  
+  final b ct(int paramInt)
+  {
+    b localb2 = (b)bvZ.get(paramInt);
+    b localb1 = localb2;
+    if (localb2 == null)
+    {
+      localb1 = cq(paramInt);
+      if (localb1 == null)
+      {
+        u.e("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "[carl] loadWatcher watcher == null");
+        localb1 = null;
+      }
+    }
+    else
+    {
+      return localb1;
+    }
+    bvZ.put(paramInt, localb1);
+    return localb1;
+  }
+  
+  public final a h(int paramInt1, int paramInt2, int paramInt3)
+  {
+    u.d("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "[carl] peek, dataSourceId %d, watcherId %d, type %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
+    a locala = cs(paramInt1);
+    if (locala == null)
+    {
+      u.d("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "[carl] peek, dataSource == null");
+      return null;
+    }
+    if ((type & paramInt3) == 0)
+    {
+      u.d("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "[alex] peek, dataSource.type is wrong");
+      return null;
+    }
+    b localb = ct(paramInt2);
+    if (localb != null)
+    {
+      String str = (String)bwf.get(paramInt1);
+      if ((str != null) && (str.equals(avm))) {
+        return null;
+      }
+      if (str == null)
+      {
+        str = qO();
+        bwf.put(paramInt1, str);
+        a(localb);
+      }
+      return locala;
+    }
+    u.e("!44@/B4Tb64lLpJXpLk432Vuc+9bZAc0mJrTWY/R/JSR/Pg=", "[carl] peek, watcher == null");
+    return null;
+  }
+  
+  final String qO()
+  {
+    return String.format("%d%04d", new Object[] { Long.valueOf(System.currentTimeMillis()), Integer.valueOf(bwb.nextInt(Math.abs(bwb.nextInt(Integer.MAX_VALUE))) % 10000) });
+  }
+  
+  public final class a
+  {
+    String avm;
+    int bvT;
+    j.a bvU;
+    int type;
+    public String value;
+    
+    public a() {}
+  }
+  
+  public final class b
+  {
+    j.a bvW;
+    int bwe;
+    SparseArray bwf = new SparseArray();
+    HashMap bwg = new HashMap();
+    
+    public b() {}
   }
 }
 

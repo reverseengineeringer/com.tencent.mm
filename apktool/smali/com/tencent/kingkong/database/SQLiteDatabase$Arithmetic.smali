@@ -47,7 +47,7 @@
 
     const/4 v3, 0x0
 
-    .line 78
+    .line 76
     new-instance v0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;
 
     const-string/jumbo v1, "DEFAULT"
@@ -56,7 +56,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;->DEFAULT:Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;
 
-    .line 79
+    .line 77
     new-instance v0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;
 
     const-string/jumbo v1, "AES256CBC"
@@ -65,7 +65,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;->AES256CBC:Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;
 
-    .line 80
+    .line 78
     new-instance v0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;
 
     const-string/jumbo v1, "XXTEA"
@@ -74,7 +74,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;->XXTEA:Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;
 
-    .line 81
+    .line 79
     new-instance v0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;
 
     const-string/jumbo v1, "OTHER"
@@ -83,7 +83,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;->OTHER:Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;
 
-    .line 82
+    .line 80
     new-instance v0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;
 
     const-string/jumbo v1, "UNKNOWN"
@@ -94,7 +94,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;->UNKNOWN:Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;
 
-    .line 77
+    .line 75
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;
@@ -128,13 +128,13 @@
     .locals 0
 
     .prologue
-    .line 87
+    .line 85
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 88
+    .line 86
     iput p3, p0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;->value:I
 
-    .line 89
+    .line 87
     return-void
 .end method
 
@@ -178,7 +178,7 @@
     .locals 1
 
     .prologue
-    .line 93
+    .line 91
     iget v0, p0, Lcom/tencent/kingkong/database/SQLiteDatabase$Arithmetic;->value:I
 
     return v0

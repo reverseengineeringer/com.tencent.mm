@@ -1,11 +1,11 @@
 package com.tencent.mm.platformtools;
 
 import android.media.ExifInterface;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 final class d
 {
-  public static int iM(String paramString)
+  public static int kq(String paramString)
   {
     try
     {
@@ -29,7 +29,7 @@ final class d
     {
       for (;;)
       {
-        t.e("!44@/B4Tb64lLpJUqdu9+tLUD3RozCbQUj8LzFLkU1uTMFY=", "cannot read exif" + paramString);
+        u.e("!44@/B4Tb64lLpJUqdu9+tLUD3RozCbQUj8LzFLkU1uTMFY=", "cannot read exif" + paramString);
         paramString = null;
       }
       return 90;

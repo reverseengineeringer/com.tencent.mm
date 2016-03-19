@@ -2,7 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class cc$a
 {
-  public String apy;
+  public String alN;
+  public byte[] avG;
+  public boolean avH;
 }
 
 /* Location:

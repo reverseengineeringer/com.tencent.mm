@@ -1,87 +1,87 @@
 package com.tencent.mm.pluginsdk.model.app;
 
 import com.tencent.mm.d.b.d;
-import com.tencent.mm.sdk.g.ae.a;
+import com.tencent.mm.sdk.h.c.a;
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public final class b
   extends d
 {
-  protected static ae.a aqp;
+  protected static c.a aot;
   
   static
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[16];
-    bbY = new String[17];
+    c.a locala = new c.a();
+    ceD = new Field[16];
+    blR = new String[17];
     StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "appId";
-    ibX.put("appId", "TEXT");
+    blR[0] = "appId";
+    jYx.put("appId", "TEXT");
     localStringBuilder.append(" appId TEXT");
     localStringBuilder.append(", ");
-    bbY[1] = "sdkVer";
-    ibX.put("sdkVer", "LONG");
+    blR[1] = "sdkVer";
+    jYx.put("sdkVer", "LONG");
     localStringBuilder.append(" sdkVer LONG");
     localStringBuilder.append(", ");
-    bbY[2] = "mediaSvrId";
-    ibX.put("mediaSvrId", "TEXT");
+    blR[2] = "mediaSvrId";
+    jYx.put("mediaSvrId", "TEXT");
     localStringBuilder.append(" mediaSvrId TEXT");
     localStringBuilder.append(", ");
-    bbY[3] = "mediaId";
-    ibX.put("mediaId", "TEXT");
+    blR[3] = "mediaId";
+    jYx.put("mediaId", "TEXT");
     localStringBuilder.append(" mediaId TEXT");
     localStringBuilder.append(", ");
-    bbY[4] = "clientAppDataId";
-    ibX.put("clientAppDataId", "TEXT");
+    blR[4] = "clientAppDataId";
+    jYx.put("clientAppDataId", "TEXT");
     localStringBuilder.append(" clientAppDataId TEXT");
     localStringBuilder.append(", ");
-    bbY[5] = "type";
-    ibX.put("type", "LONG");
+    blR[5] = "type";
+    jYx.put("type", "LONG");
     localStringBuilder.append(" type LONG");
     localStringBuilder.append(", ");
-    bbY[6] = "totalLen";
-    ibX.put("totalLen", "LONG");
+    blR[6] = "totalLen";
+    jYx.put("totalLen", "LONG");
     localStringBuilder.append(" totalLen LONG");
     localStringBuilder.append(", ");
-    bbY[7] = "offset";
-    ibX.put("offset", "LONG");
+    blR[7] = "offset";
+    jYx.put("offset", "LONG");
     localStringBuilder.append(" offset LONG");
     localStringBuilder.append(", ");
-    bbY[8] = "status";
-    ibX.put("status", "LONG");
+    blR[8] = "status";
+    jYx.put("status", "LONG");
     localStringBuilder.append(" status LONG");
     localStringBuilder.append(", ");
-    bbY[9] = "isUpload";
-    ibX.put("isUpload", "INTEGER");
+    blR[9] = "isUpload";
+    jYx.put("isUpload", "INTEGER");
     localStringBuilder.append(" isUpload INTEGER");
     localStringBuilder.append(", ");
-    bbY[10] = "createTime";
-    ibX.put("createTime", "LONG");
+    blR[10] = "createTime";
+    jYx.put("createTime", "LONG");
     localStringBuilder.append(" createTime LONG");
     localStringBuilder.append(", ");
-    bbY[11] = "lastModifyTime";
-    ibX.put("lastModifyTime", "LONG");
+    blR[11] = "lastModifyTime";
+    jYx.put("lastModifyTime", "LONG");
     localStringBuilder.append(" lastModifyTime LONG");
     localStringBuilder.append(", ");
-    bbY[12] = "fileFullPath";
-    ibX.put("fileFullPath", "TEXT");
+    blR[12] = "fileFullPath";
+    jYx.put("fileFullPath", "TEXT");
     localStringBuilder.append(" fileFullPath TEXT");
     localStringBuilder.append(", ");
-    bbY[13] = "msgInfoId";
-    ibX.put("msgInfoId", "LONG");
+    blR[13] = "msgInfoId";
+    jYx.put("msgInfoId", "LONG");
     localStringBuilder.append(" msgInfoId LONG");
     localStringBuilder.append(", ");
-    bbY[14] = "netTimes";
-    ibX.put("netTimes", "LONG");
+    blR[14] = "netTimes";
+    jYx.put("netTimes", "LONG");
     localStringBuilder.append(" netTimes LONG");
     localStringBuilder.append(", ");
-    bbY[15] = "isUseCdn";
-    ibX.put("isUseCdn", "INTEGER");
+    blR[15] = "isUseCdn";
+    jYx.put("isUseCdn", "INTEGER");
     localStringBuilder.append(" isUseCdn INTEGER");
-    bbY[16] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    blR[16] = "rowid";
+    jYy = localStringBuilder.toString();
+    aot = locala;
   }
   
   public b()
@@ -89,7 +89,7 @@ public final class b
     field_netTimes = 0L;
   }
   
-  public final boolean ayV()
+  public final boolean aPA()
   {
     if (field_totalLen <= 0L) {}
     while (field_offset != field_totalLen) {
@@ -98,9 +98,9 @@ public final class b
     return true;
   }
   
-  protected final ae.a lX()
+  protected final c.a ls()
   {
-    return aqp;
+    return aot;
   }
 }
 

@@ -15,15 +15,7 @@
 
 
 # instance fields
-.field public atX:[Ljava/lang/String;
-
-.field public awH:I
-
-.field public context:Landroid/content/Context;
-
-.field public selectionArgs:[Ljava/lang/String;
-
-.field public uri:Landroid/net/Uri;
+.field public Jq:Z
 
 
 # direct methods
@@ -37,7 +29,7 @@
     .line 15
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/d/a/br$a;->awH:I
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/br$a;->Jq:Z
 
     return-void
 .end method

@@ -1,34 +1,23 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class in
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFE = new a();
-  public b aFF = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aEw = new a();
   
   public in()
   {
-    id = "TVOperation";
-    hXT = atO;
+    id = "PoiCategoriesUpdate";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aFG;
-    public int avp = 0;
-    public Context context;
-  }
-  
-  public static final class b
-  {
-    public String aCi;
-    public boolean auM = false;
-    public String ayf;
+    public byte[] content;
   }
 }
 

@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field jqs:Ljava/lang/String;
+.field lfO:Ljava/lang/String;
 
-.field jqt:Ljava/lang/String;
+.field lvC:Ljava/lang/String;
 
-.field jqu:Ljava/lang/String;
+.field lvD:Ljava/lang/String;
 
 
 # direct methods
@@ -27,18 +27,18 @@
     .locals 0
 
     .prologue
-    .line 274
+    .line 283
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 275
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$b;->jqs:Ljava/lang/String;
+    .line 284
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$b;->lfO:Ljava/lang/String;
 
-    .line 276
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/FilterImageView$b;->jqt:Ljava/lang/String;
+    .line 285
+    iput-object p2, p0, Lcom/tencent/mm/ui/tools/FilterImageView$b;->lvC:Ljava/lang/String;
 
-    .line 277
-    iput-object p3, p0, Lcom/tencent/mm/ui/tools/FilterImageView$b;->jqu:Ljava/lang/String;
+    .line 286
+    iput-object p3, p0, Lcom/tencent/mm/ui/tools/FilterImageView$b;->lvD:Ljava/lang/String;
 
-    .line 278
+    .line 287
     return-void
 .end method

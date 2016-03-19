@@ -1,25 +1,50 @@
 package com.tencent.mm.ui.chatting;
 
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.Button;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.pluginsdk.model.app.aa;
-import com.tencent.mm.q.l;
+import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
+import com.tencent.mm.pluginsdk.ui.emoji.ChattingEmojiView;
 
 final class f
-  implements View.OnClickListener
+  extends aa.a
 {
-  f(AppAttachDownloadUI paramAppAttachDownloadUI) {}
+  ProgressBar fGG;
+  ImageView kQA;
+  ImageView kQB;
+  ImageView kQC;
+  ChattingEmojiView kQz;
   
-  public final void onClick(View paramView)
+  public f(int paramInt)
   {
-    AppAttachDownloadUI.j(iRi);
-    AppAttachDownloadUI.g(iRi).setVisibility(0);
-    AppAttachDownloadUI.h(iRi).setVisibility(8);
-    AppAttachDownloadUI.i(iRi).setVisibility(0);
-    AppAttachDownloadUI.a(iRi, new aa(AppAttachDownloadUI.k(iRi), AppAttachDownloadUI.l(iRi), AppAttachDownloadUI.m(iRi)));
-    ax.tm().d(AppAttachDownloadUI.a(iRi));
+    super(paramInt);
+  }
+  
+  public final aa.a e(View paramView, boolean paramBoolean)
+  {
+    super.aC(paramView);
+    dUV = ((TextView)paramView.findViewById(2131165184));
+    kQz = ((ChattingEmojiView)paramView.findViewById(2131165387));
+    edK = ((CheckBox)paramView.findViewById(2131165186));
+    dMC = paramView.findViewById(2131165187);
+    kQB = ((ImageView)paramView.findViewById(2131165696));
+    if (paramBoolean) {
+      type = 14;
+    }
+    for (;;)
+    {
+      if (kQA != null) {
+        ((ViewGroup)kQA.getParent()).setBackgroundDrawable(null);
+      }
+      gjr = ((TextView)paramView.findViewById(2131165268));
+      return this;
+      fGG = ((ProgressBar)paramView.findViewById(2131165399));
+      kQK = ((ImageView)paramView.findViewById(2131165314));
+      type = 15;
+      kQC = ((ImageView)paramView.findViewById(2131165313));
+    }
   }
 }
 

@@ -2,9 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class bl$a
 {
-  public String avt;
-  public byte[] data;
-  public String mac;
+  public String alN;
 }
 
 /* Location:

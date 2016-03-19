@@ -2,10 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class cb$a
 {
-  public String apy;
-  public String axv;
-  public int axw = 0;
-  public Runnable axx;
+  public String alN;
+  public String auQ;
+  public byte[] data;
 }
 
 /* Location:

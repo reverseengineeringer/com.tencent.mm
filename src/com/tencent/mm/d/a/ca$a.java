@@ -1,15 +1,10 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.model.by.a;
-
 public final class ca$a
 {
-  public boolean axp;
-  public boolean axq;
-  public int axr;
-  public by.a axs;
-  public int type;
-  public String username;
+  public String alN;
+  public String auQ;
+  public int avD;
 }
 
 /* Location:

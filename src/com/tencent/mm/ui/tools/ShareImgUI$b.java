@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface ShareImgUI$b
 {
-  public abstract void aRs();
+  public abstract void bir();
 }
 
 /* Location:

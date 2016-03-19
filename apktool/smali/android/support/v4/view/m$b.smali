@@ -1,5 +1,5 @@
-.class interface abstract Landroid/support/v4/view/m$b;
-.super Ljava/lang/Object;
+.class Landroid/support/v4/view/m$b;
+.super Landroid/support/v4/view/m$a;
 .source "SourceFile"
 
 
@@ -9,14 +9,32 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x608
+    accessFlags = 0x8
     name = "b"
 .end annotation
 
 
-# virtual methods
-.method public abstract ax()Z
+# direct methods
+.method constructor <init>()V
+    .locals 0
+
+    .prologue
+    .line 273
+    invoke-direct {p0}, Landroid/support/v4/view/m$a;-><init>()V
+
+    return-void
 .end method
 
-.method public abstract ay()Z
+
+# virtual methods
+.method public final m(Landroid/view/View;)Z
+    .locals 1
+
+    .prologue
+    .line 276
+    invoke-virtual {p1}, Landroid/view/View;->isOpaque()Z
+
+    move-result v0
+
+    return v0
 .end method

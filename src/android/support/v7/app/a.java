@@ -11,47 +11,45 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 
 public abstract class a
 {
-  private ActionBar jA;
-  MenuInflater jB;
-  boolean jC;
-  boolean jD;
-  final ActionBarActivity jz;
+  final ActionBarActivity iG;
+  private ActionBar iH;
+  MenuInflater iI;
+  boolean iJ;
+  boolean iK;
   
   a(ActionBarActivity paramActionBarActivity)
   {
-    jz = paramActionBarActivity;
+    iG = paramActionBarActivity;
   }
   
-  abstract void L();
+  abstract void G();
   
-  abstract void addContentView(View paramView, ViewGroup.LayoutParams paramLayoutParams);
+  abstract ActionBar aO();
   
-  abstract ActionBar be();
-  
-  public final ActionBar bf()
+  public final ActionBar aP()
   {
-    if ((jC) || (jD)) {
-      if (jA != null) {}
+    if ((iJ) || (iK)) {
+      if (iH != null) {}
     }
-    for (jA = be();; jA = null) {
-      return jA;
+    for (iH = aO();; iH = null) {
+      return iH;
     }
   }
   
-  abstract void bg();
+  abstract void aQ();
   
-  abstract boolean bh();
+  abstract boolean aR();
   
-  protected final String bi()
+  protected final String aS()
   {
     String str = null;
     try
     {
-      ActivityInfo localActivityInfo = jz.getPackageManager().getActivityInfo(jz.getComponentName(), 128);
+      ActivityInfo localActivityInfo = iG.getPackageManager().getActivityInfo(iG.getComponentName(), 128);
       if (metaData != null) {
         str = metaData.getString("android.support.UI_OPTIONS");
       }
@@ -59,33 +57,35 @@ public abstract class a
     }
     catch (PackageManager.NameNotFoundException localNameNotFoundException)
     {
-      new StringBuilder("getUiOptionsFromMetadata: Activity '").append(jz.getClass().getSimpleName()).append("' not in manifest");
+      new StringBuilder("getUiOptionsFromMetadata: Activity '").append(iG.getClass().getSimpleName()).append("' not in manifest");
     }
     return null;
   }
   
-  protected final Context bj()
+  protected final Context aT()
   {
-    Object localObject = jz;
-    ActionBar localActionBar = bf();
+    Object localObject = iG;
+    ActionBar localActionBar = aP();
     if (localActionBar != null) {
       localObject = localActionBar.getThemedContext();
     }
     return (Context)localObject;
   }
   
+  abstract void addContentView(View paramView, ViewGroup.LayoutParams paramLayoutParams);
+  
   abstract void e(CharSequence paramCharSequence);
   
   void onCreate(Bundle paramBundle)
   {
-    paramBundle = jz.obtainStyledAttributes(a.p.ActionBarWindow);
+    paramBundle = iG.obtainStyledAttributes(R.b.ActionBarWindow);
     if (!paramBundle.hasValue(0))
     {
       paramBundle.recycle();
       throw new IllegalStateException("You need to use a Theme.AppCompat theme (or descendant) with this activity.");
     }
-    jC = paramBundle.getBoolean(0, false);
-    jD = paramBundle.getBoolean(1, false);
+    iJ = paramBundle.getBoolean(0, false);
+    iK = paramBundle.getBoolean(1, false);
     paramBundle.recycle();
   }
   
@@ -107,7 +107,7 @@ public abstract class a
   
   abstract void setContentView(View paramView, ViewGroup.LayoutParams paramLayoutParams);
   
-  public abstract boolean x(int paramInt);
+  public abstract boolean y(int paramInt);
 }
 
 /* Location:

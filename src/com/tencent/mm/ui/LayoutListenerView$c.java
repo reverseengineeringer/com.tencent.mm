@@ -2,9 +2,7 @@ package com.tencent.mm.ui;
 
 public abstract interface LayoutListenerView$c
 {
-  public abstract void aKU();
-  
-  public abstract void aKV();
+  public abstract void onSizeChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4);
 }
 
 /* Location:

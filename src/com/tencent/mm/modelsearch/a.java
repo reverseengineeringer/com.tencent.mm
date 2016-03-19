@@ -1,90 +1,100 @@
 package com.tencent.mm.modelsearch;
 
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.regex.Pattern;
 
 public abstract class a
-  implements n
+  implements l
 {
-  private boolean bIE;
-  private boolean bIF;
+  private boolean bYp;
+  private boolean bYq;
   
   public a()
   {
-    t.i("!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs=", "Create %s", new Object[] { getName() });
+    u.i("!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs=", "Create %s", new Object[] { getName() });
   }
   
-  public abstract boolean Ac();
+  public abstract boolean BF();
   
-  public q.a a(String paramString1, String paramString2, Comparator paramComparator, o.i parami, ac paramac)
+  public o.a a(m.i parami)
   {
     return null;
   }
   
-  public q.a a(String paramString, int[] paramArrayOfInt, int paramInt1, o.i parami, ac paramac, int paramInt2)
+  public void a(String paramString, m.g paramg, int paramInt) {}
+  
+  public o.a b(m.i parami)
   {
     return null;
   }
   
-  public q.a a(String paramString, int[] paramArrayOfInt1, int[] paramArrayOfInt2, int paramInt, Comparator paramComparator, o.i parami, ac paramac, HashSet paramHashSet)
+  public o.a c(m.i parami)
   {
     return null;
   }
-  
-  public void a(String paramString, o.g paramg, int paramInt) {}
   
   public final void create()
   {
-    t.i("!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs=", "OnCreate %s | isCreated =%b", new Object[] { getName(), Boolean.valueOf(bIE) });
-    if ((!bIE) && (onCreate()))
+    u.i("!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs=", "OnCreate %s | isCreated =%b", new Object[] { getName(), Boolean.valueOf(bYp) });
+    if ((!bYp) && (onCreate()))
     {
-      t.i("!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs=", "SetCreated");
-      bIE = true;
+      u.i("!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs=", "SetCreated");
+      bYp = true;
     }
+  }
+  
+  public o.a d(m.i parami)
+  {
+    return null;
   }
   
   public final void destroy()
   {
-    t.i("!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs=", "OnDestroy %s | isDestroyed =%b", new Object[] { getName(), Boolean.valueOf(bIF) });
-    if (!bIF)
+    u.i("!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs=", "OnDestroy %s | isDestroyed %b | isCreated %b", new Object[] { getName(), Boolean.valueOf(bYq), Boolean.valueOf(bYp) });
+    if ((!bYq) && (bYp))
     {
-      Ac();
-      t.i("!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs=", "SetDestroyed");
-      bIF = true;
+      BF();
+      u.i("!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs=", "SetDestroyed");
+      bYq = true;
     }
+  }
+  
+  public o.a e(m.i parami)
+  {
+    return null;
   }
   
   public abstract boolean onCreate();
   
   public static abstract class a
-    extends q.a
+    extends o.a
   {
-    private o.i bIG;
-    private String[] bIH;
-    public String bII;
-    private HashSet bIJ;
-    private int bIK;
-    public int bIL;
-    public Comparator bIM = null;
-    private ac handler;
+    public String aEy;
+    private m.j bYr;
+    private String[] bYs;
+    private HashSet bYt;
+    private int bYu;
+    public int bYv;
+    public Comparator bYw = null;
+    private aa handler;
     
-    public a(String paramString, int paramInt, HashSet paramHashSet, o.i parami, ac paramac)
+    public a(String paramString, int paramInt, HashSet paramHashSet, m.j paramj, aa paramaa)
     {
-      bII = paramString;
-      bIG = parami;
-      handler = paramac;
-      bIK = paramInt;
-      bIH = e.bJt.split(paramString.replace('*', ' '));
+      aEy = paramString;
+      bYr = paramj;
+      handler = paramaa;
+      bYu = paramInt;
+      bYs = c.bZd.split(paramString.replace('*', ' '));
       if (paramHashSet != null)
       {
-        bIJ = paramHashSet;
+        bYt = paramHashSet;
         return;
       }
-      bIJ = new HashSet();
+      bYt = new HashSet();
     }
     
     public abstract List a(String[] paramArrayOfString, HashSet paramHashSet, int paramInt);
@@ -95,8 +105,8 @@ public abstract class a
       {
         try
         {
-          List localList = a(bIH, bIJ, bIK);
-          bIL = localList.size();
+          List localList = a(bYs, bYt, bYu);
+          bYv = localList.size();
           if (Thread.interrupted()) {
             throw new InterruptedException();
           }
@@ -108,19 +118,31 @@ public abstract class a
             if (handler != null) {
               break label124;
             }
-            bIG.hs(bII);
+            bYr.iD(aEy);
           }
           throw localException;
         }
         if (handler == null)
         {
-          bIG.a(this, localException, bIJ, bIH, bII);
+          bYr.a(this, localException, bYt, bYs, aEy);
           break;
         }
-        handler.post(new b(this, localException));
+        handler.post(new Runnable()
+        {
+          public final void run()
+          {
+            a.a.d(a.a.this).a(a.a.this, localException, a.a.a(a.a.this), a.a.b(a.a.this), a.a.c(a.a.this));
+          }
+        });
         break;
         label124:
-        handler.post(new c(this));
+        handler.post(new Runnable()
+        {
+          public final void run()
+          {
+            a.a.d(a.a.this).iD(a.a.c(a.a.this));
+          }
+        });
       }
       return true;
     }
@@ -129,7 +151,7 @@ public abstract class a
     
     public String toString()
     {
-      return String.format("%s[%s]: %d", new Object[] { getName(), bII, Integer.valueOf(bIL) });
+      return String.format("%s[%s]: %d", new Object[] { getName(), aEy, Integer.valueOf(bYv) });
     }
   }
 }

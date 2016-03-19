@@ -1,23 +1,30 @@
 package com.tencent.mm.ui;
 
-import android.os.Message;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.bn;
+import android.view.View;
+import android.view.View.OnClickListener;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class l
-  extends ac
+public abstract class l
+  implements View.OnClickListener
 {
-  l(DataTransferUI paramDataTransferUI) {}
+  private long gEh = -1L;
   
-  public final void handleMessage(Message paramMessage)
+  public abstract void ahu();
+  
+  public void onClick(View paramView)
   {
-    if ((DataTransferUI.a(imi) != null) && (DataTransferUI.a(imi).isShowing()))
+    u.i("!44@/B4Tb64lLpJiPTFK0tOc/yuccXsWkaBUNjBHYFZnDVQ=", "button onclick");
+    if (gEh != -1L)
     {
-      t.e("!32@/B4Tb64lLpJAUoyR9+C90Nd9wv/xRLUz", "dialog has shown for a long time, auto dismiss it...");
-      DataTransferUI.a(imi).dismiss();
-      imi.finish();
+      long l = (System.nanoTime() - gEh) / 1000000L;
+      if (l < 3000L)
+      {
+        u.i("!44@/B4Tb64lLpJiPTFK0tOc/yuccXsWkaBUNjBHYFZnDVQ=", "click time limited limitetime:%d, delaytime:%d", new Object[] { Long.valueOf(l), Long.valueOf(3000L) });
+        return;
+      }
     }
+    gEh = System.nanoTime();
+    ahu();
   }
 }
 

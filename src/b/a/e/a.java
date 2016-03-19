@@ -13,108 +13,108 @@ import java.util.Set;
 public final class a
   implements b
 {
-  private b.a.d.a jPZ;
-  private b.a.a.a.b jQa;
+  private b.a.d.a mek;
+  private b.a.a.a.b mel;
   
   public a(b.a.a.a.b paramb, b.a.d.a parama)
   {
-    jQa = paramb;
-    jPZ = parama;
+    mel = paramb;
+    mek = parama;
   }
   
   private void a(b.a.d.c paramc, i parami)
   {
-    paramc.bX("oauth_timestamp", new b.a.f.d().aWc());
-    paramc.bX("oauth_nonce", new b.a.f.d().aWd());
-    paramc.bX("oauth_consumer_key", jPZ.jPp);
-    paramc.bX("oauth_signature_method", new b.a.f.a().aWb());
-    paramc.bX("oauth_version", "1.0");
-    if (jPZ.hDq != null) {}
+    paramc.cR("oauth_timestamp", new b.a.f.d().boR());
+    paramc.cR("oauth_nonce", new b.a.f.d().getNonce());
+    paramc.cR("oauth_consumer_key", mek.mdB);
+    paramc.cR("oauth_signature_method", new b.a.f.a().boQ());
+    paramc.cR("oauth_version", "1.0");
+    if (mek.jwt != null) {}
     for (int i = 1;; i = 0)
     {
       if (i != 0) {
-        paramc.bX("scope", jPZ.hDq);
+        paramc.cR("scope", mek.jwt);
       }
-      jPZ.lx("generating signature...");
+      mek.oa("generating signature...");
       String str = new b.a.c.c().a(paramc);
-      parami = new b.a.f.a().G(str, jPZ.jPq, hGq);
-      jPZ.lx("base string is: " + str);
-      jPZ.lx("signature is: " + parami);
-      paramc.bX("oauth_signature", parami);
-      jPZ.lx("appended additional OAuth parameters: " + b.a.g.b.E(jPy));
+      parami = new b.a.f.a().Q(str, mek.mdC, jzR);
+      mek.oa("base string is: " + str);
+      mek.oa("signature is: " + parami);
+      paramc.cR("oauth_signature", parami);
+      mek.oa("appended additional OAuth parameters: " + b.a.g.b.T(mdK));
       return;
     }
   }
   
   private void b(b.a.d.c paramc)
   {
-    switch (aWa()[jPZ.jPt.ordinal()])
+    switch (boP()[mek.mdF.ordinal()])
     {
     }
     for (;;)
     {
       return;
-      jPZ.lx("using Http Header signature");
+      mek.oa("using Http Header signature");
       paramc.addHeader("Authorization", new e().a(paramc));
       return;
-      jPZ.lx("using Querystring signature");
-      Iterator localIterator = jPy.entrySet().iterator();
+      mek.oa("using Querystring signature");
+      Iterator localIterator = mdK.entrySet().iterator();
       while (localIterator.hasNext())
       {
         Map.Entry localEntry = (Map.Entry)localIterator.next();
-        paramc.bY((String)localEntry.getKey(), (String)localEntry.getValue());
+        paramc.cS((String)localEntry.getKey(), (String)localEntry.getValue());
       }
     }
   }
   
   public final i a(i parami, k paramk)
   {
-    jPZ.lx("obtaining access token from " + jQa.aVP());
-    b.a.d.c localc = new b.a.d.c(j.jPR, jQa.aVP());
-    localc.bX("oauth_token", token);
-    localc.bX("oauth_verifier", value);
-    jPZ.lx("setting token to: " + parami + " and verifier to: " + paramk);
+    mek.oa("obtaining access token from " + mel.boE());
+    b.a.d.c localc = new b.a.d.c(j.mec, mel.boE());
+    localc.cR("oauth_token", token);
+    localc.cR("oauth_verifier", value);
+    mek.oa("setting token to: " + parami + " and verifier to: " + paramk);
     a(localc, parami);
     b(localc);
-    parami = localc.aVU();
-    return new b.a.c.g().Cu(parami.getBody());
+    parami = localc.boJ();
+    return new b.a.c.g().IO(parami.getBody());
   }
   
   public final void a(i parami, b.a.d.c paramc)
   {
-    jPZ.lx("signing request: " + paramc.aVS());
-    if (("".equals(token)) && ("".equals(hGq))) {}
+    mek.oa("signing request: " + paramc.boH());
+    if (("".equals(token)) && ("".equals(jzR))) {}
     for (int i = 1;; i = 0)
     {
       if (i == 0) {
-        paramc.bX("oauth_token", token);
+        paramc.cR("oauth_token", token);
       }
-      jPZ.lx("setting token to: " + parami);
+      mek.oa("setting token to: " + parami);
       a(paramc, parami);
       b(paramc);
       return;
     }
   }
   
-  public final i aVZ()
-  {
-    jPZ.lx("obtaining request token from " + jQa.aVO());
-    Object localObject = new b.a.d.c(j.jPR, jQa.aVO());
-    jPZ.lx("setting oauth_callback to " + jPZ.jPr);
-    ((b.a.d.c)localObject).bX("oauth_callback", jPZ.jPr);
-    a((b.a.d.c)localObject, b.a.d.b.jPx);
-    b((b.a.d.c)localObject);
-    jPZ.lx("sending request...");
-    localObject = ((b.a.d.c)localObject).aVU();
-    String str = ((b.a.d.g)localObject).getBody();
-    jPZ.lx("response status code: " + code);
-    jPZ.lx("response body: " + str);
-    return new b.a.c.g().Cu(str);
-  }
-  
   public final String b(i parami)
   {
-    return jQa.b(parami);
+    return mel.b(parami);
+  }
+  
+  public final i boO()
+  {
+    mek.oa("obtaining request token from " + mel.boD());
+    Object localObject = new b.a.d.c(j.mec, mel.boD());
+    mek.oa("setting oauth_callback to " + mek.mdD);
+    ((b.a.d.c)localObject).cR("oauth_callback", mek.mdD);
+    a((b.a.d.c)localObject, b.a.d.b.mdJ);
+    b((b.a.d.c)localObject);
+    mek.oa("sending request...");
+    localObject = ((b.a.d.c)localObject).boJ();
+    String str = ((b.a.d.g)localObject).getBody();
+    mek.oa("response status code: " + cwi);
+    mek.oa("response body: " + str);
+    return new b.a.c.g().IO(str);
   }
 }
 

@@ -1,11 +1,12 @@
 package com.tencent.mm.model.c;
 
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.b;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.ByteArrayInputStream;
 import java.io.StringWriter;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -23,7 +24,7 @@ import org.xml.sax.InputSource;
 
 public final class a
 {
-  private static DocumentBuilder brr = null;
+  private static DocumentBuilder bDv = null;
   
   private static String a(Node paramNode)
   {
@@ -39,26 +40,28 @@ public final class a
     {
       for (;;)
       {
-        t.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "nodeToString: %s", new Object[] { paramNode.getMessage() });
+        u.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "nodeToString: %s", new Object[] { paramNode.getMessage() });
       }
     }
   }
   
-  public static void fk(String paramString)
+  public static List fE(String paramString)
   {
-    t.v("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "ABTest msg content: %s", new Object[] { paramString });
-    paramString = fm(paramString);
-    if (paramString == null) {
-      t.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "Msg parsing failed");
+    u.v("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "ABTest msg content: %s", new Object[] { paramString });
+    LinkedList localLinkedList = new LinkedList();
+    Object localObject1 = fG(paramString);
+    if (localObject1 == null)
+    {
+      u.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "Msg parsing failed, msg: %s", new Object[] { paramString });
+      return localLinkedList;
     }
+    localObject1 = ((Element)localObject1).getChildNodes();
+    int i = 0;
     for (;;)
     {
-      return;
-      NodeList localNodeList = paramString.getChildNodes();
-      int i = 0;
-      while (i < localNodeList.getLength())
+      if (i < ((NodeList)localObject1).getLength())
       {
-        paramString = localNodeList.item(i);
+        paramString = ((NodeList)localObject1).item(i);
         if ((paramString != null) && (paramString.getNodeType() == 1) && (paramString.getNodeName().equals("exp")))
         {
           Element localElement;
@@ -66,16 +69,16 @@ public final class a
           {
             localElement = (Element)paramString;
             paramString = new com.tencent.mm.storage.a();
-            localObject = localElement.getAttributes();
-            if (localObject == null) {
+            localObject2 = localElement.getAttributes();
+            if (localObject2 == null) {
               paramString = null;
             }
             Node localNode;
             for (;;)
             {
-              e.uL().a(paramString);
-              break label472;
-              localNode = ((NamedNodeMap)localObject).getNamedItem("layerid");
+              localLinkedList.add(paramString);
+              break label548;
+              localNode = ((NamedNodeMap)localObject2).getNamedItem("layerid");
               if (localNode == null)
               {
                 paramString = null;
@@ -83,7 +86,7 @@ public final class a
               else
               {
                 field_layerId = localNode.getNodeValue();
-                localNode = ((NamedNodeMap)localObject).getNamedItem("id");
+                localNode = ((NamedNodeMap)localObject2).getNamedItem("id");
                 if (localNode != null) {
                   break;
                 }
@@ -91,87 +94,99 @@ public final class a
               }
             }
             field_expId = localNode.getNodeValue();
-            localObject = ((NamedNodeMap)localObject).getNamedItem("business");
-            if (localObject == null) {}
-            for (field_business = "";; field_business = ((Node)localObject).getNodeValue())
+            localObject2 = ((NamedNodeMap)localObject2).getNamedItem("business");
+            if (localObject2 == null) {}
+            for (field_business = "";; field_business = ((Node)localObject2).getNodeValue())
             {
-              localObject = localElement.getElementsByTagName("sequence");
-              if (((NodeList)localObject).getLength() != 0) {
-                break label266;
+              localObject2 = localElement.getElementsByTagName("sequence");
+              if (((NodeList)localObject2).getLength() != 0) {
+                break label290;
               }
               paramString = null;
               break;
             }
-            field_sequence = bn.getLong(((NodeList)localObject).item(0).getTextContent(), 0L);
+            field_sequence = ay.getLong(((NodeList)localObject2).item(0).getTextContent(), 0L);
           }
           catch (Exception paramString)
           {
-            t.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", paramString.getMessage());
+            u.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", paramString.getMessage());
           }
-          label266:
-          Object localObject = localElement.getElementsByTagName("starttime");
-          if (((NodeList)localObject).getLength() > 0)
+          label290:
+          Object localObject2 = localElement.getElementsByTagName("prioritylevel");
+          if (((NodeList)localObject2).getLength() > 0)
           {
-            field_startTime = bn.getLong(((NodeList)localObject).item(0).getTextContent(), 0L);
-            if (field_startTime != 0L) {}
-          }
-          else
-          {
-            field_startTime = (System.currentTimeMillis() / 1000L);
-          }
-          localObject = localElement.getElementsByTagName("endtime");
-          if (((NodeList)localObject).getLength() > 0)
-          {
-            field_endTime = bn.getLong(((NodeList)localObject).item(0).getTextContent(), 0L);
-            if (field_endTime != 0L) {}
-          }
-          else
-          {
-            field_endTime = Long.MAX_VALUE;
-          }
-          localObject = localElement.getElementsByTagName("noreport");
-          if (((NodeList)localObject).getLength() > 0) {
-            if (bn.getInt(((NodeList)localObject).item(0).getTextContent(), 0) != 0) {
-              break label467;
+            field_prioritylevel = ay.getInt(((NodeList)localObject2).item(0).getTextContent(), 1);
+            label353:
+            localObject2 = localElement.getElementsByTagName("starttime");
+            if (((NodeList)localObject2).getLength() > 0)
+            {
+              field_startTime = ay.getLong(((NodeList)localObject2).item(0).getTextContent(), 0L);
+              if (field_startTime != 0L) {}
+            }
+            else
+            {
+              field_startTime = (System.currentTimeMillis() / 1000L);
+            }
+            localObject2 = localElement.getElementsByTagName("endtime");
+            if (((NodeList)localObject2).getLength() > 0)
+            {
+              field_endTime = ay.getLong(((NodeList)localObject2).item(0).getTextContent(), 0L);
+              if (field_endTime != 0L) {}
+            }
+            else
+            {
+              field_endTime = Long.MAX_VALUE;
+            }
+            localObject2 = localElement.getElementsByTagName("noreport");
+            if (((NodeList)localObject2).getLength() > 0) {
+              if (ay.getInt(((NodeList)localObject2).item(0).getTextContent(), 0) != 0) {
+                break label541;
+              }
             }
           }
-          label467:
+          label541:
           for (boolean bool = true;; bool = false)
           {
             field_needReport = bool;
             field_rawXML = a(localElement);
             break;
+            field_prioritylevel = 1;
+            break label353;
           }
         }
-        label472:
-        i += 1;
       }
+      else
+      {
+        return localLinkedList;
+      }
+      label548:
+      i += 1;
     }
   }
   
-  public static Map fl(String paramString)
+  public static Map fF(String paramString)
   {
     HashMap localHashMap = new HashMap();
-    paramString = fm(paramString);
-    if (paramString == null)
+    Object localObject1 = fG(paramString);
+    if (localObject1 == null)
     {
-      t.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "Raw XML string parsing failed");
+      u.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", "Raw XML string parsing failed, xml: %s", new Object[] { paramString });
       return localHashMap;
     }
-    paramString = paramString.getElementsByTagName("args");
+    paramString = ((Element)localObject1).getElementsByTagName("args");
     if (paramString.getLength() > 0)
     {
       paramString = paramString.item(0).getChildNodes();
       int i = 0;
       while (i < paramString.getLength())
       {
-        Object localObject = paramString.item(i);
-        if ((((Node)localObject).getNodeType() == 1) && (((Node)localObject).getNodeName().equals("arg")))
+        Object localObject2 = paramString.item(i);
+        if ((((Node)localObject2).getNodeType() == 1) && (((Node)localObject2).getNodeName().equals("arg")))
         {
-          NodeList localNodeList = ((Element)localObject).getElementsByTagName("key");
-          localObject = ((Element)localObject).getElementsByTagName("value");
-          if ((localNodeList.getLength() != 0) && (((NodeList)localObject).getLength() != 0)) {
-            localHashMap.put(localNodeList.item(0).getTextContent(), ((NodeList)localObject).item(0).getTextContent());
+          localObject1 = ((Element)localObject2).getElementsByTagName("key");
+          localObject2 = ((Element)localObject2).getElementsByTagName("value");
+          if ((((NodeList)localObject1).getLength() != 0) && (((NodeList)localObject2).getLength() != 0)) {
+            localHashMap.put(((NodeList)localObject1).item(0).getTextContent(), ((NodeList)localObject2).item(0).getTextContent());
           }
         }
         i += 1;
@@ -180,13 +195,13 @@ public final class a
     return localHashMap;
   }
   
-  private static Element fm(String paramString)
+  private static Element fG(String paramString)
   {
     try
     {
       InputSource localInputSource = new InputSource(new ByteArrayInputStream(paramString.getBytes()));
-      if (brr != null) {
-        paramString = brr;
+      if (bDv != null) {
+        paramString = bDv;
       }
       for (;;)
       {
@@ -194,13 +209,13 @@ public final class a
         paramString.normalize();
         return paramString.getDocumentElement();
         paramString = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-        brr = paramString;
+        bDv = paramString;
       }
       return null;
     }
     catch (Exception paramString)
     {
-      t.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", paramString.toString());
+      u.e("!32@/B4Tb64lLpKZuCI4Wj/Pn5/LBXB0XSLU", paramString.toString());
     }
   }
 }

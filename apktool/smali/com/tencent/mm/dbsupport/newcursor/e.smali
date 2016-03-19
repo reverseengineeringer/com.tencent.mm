@@ -7,32 +7,32 @@
 
 
 # virtual methods
-.method public abstract S(Ljava/lang/Object;)Z
+.method public abstract T(Ljava/lang/Object;)Z
 .end method
 
-.method public abstract U(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/a;
+.method public abstract V(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/a;
 .end method
 
-.method public abstract a(Lcom/tencent/mm/dbsupport/newcursor/k$a;)V
+.method public abstract a(Lcom/tencent/mm/dbsupport/newcursor/j$a;)V
 .end method
 
 .method public abstract a(Ljava/lang/Object;Lcom/tencent/mm/dbsupport/newcursor/a;)Z
 .end method
 
-.method public abstract aC(Z)V
+.method public abstract aG(Z)V
 .end method
 
-.method public abstract ci(I)Lcom/tencent/mm/dbsupport/newcursor/a;
+.method public abstract cj(I)Lcom/tencent/mm/dbsupport/newcursor/a;
 .end method
 
-.method public abstract cj(I)V
+.method public abstract ck(I)V
 .end method
 
-.method public abstract ck(I)Z
+.method public abstract cl(I)Z
 .end method
 
-.method public abstract qK()Z
+.method public abstract qG()Z
 .end method
 
-.method public abstract qL()[Landroid/util/SparseArray;
+.method public abstract qH()[Landroid/util/SparseArray;
 .end method

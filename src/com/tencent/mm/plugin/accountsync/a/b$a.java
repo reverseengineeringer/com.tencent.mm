@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.accountsync.a;
 
 public abstract interface b$a
 {
-  public abstract void DS();
+  public abstract void FY();
 }
 
 /* Location:

@@ -1,26 +1,38 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import java.util.List;
 
 public final class gv
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEa = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBZ = new a();
+  public b aCa = new b();
   
   public gv()
   {
-    id = "SDKOpenBusiLuckyMoney";
-    hXT = atO;
+    id = "NetSceneCreateChatRoom";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String[] atX;
-    public Context context;
-    public String[] selectionArgs;
+    public boolean aBY = false;
+    public String aCb;
+    public List aCc;
+  }
+  
+  public static final class b
+  {
+    public int aCd;
+    public String aCe;
+    public List aCf;
+    public List aCg;
+    public List aCh;
+    public List aCi;
+    public List aCj;
   }
 }
 

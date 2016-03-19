@@ -1,57 +1,55 @@
 package com.tencent.mm.app.plugin.b;
 
 import android.database.Cursor;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.d.a.cc;
-import com.tencent.mm.d.a.cc.a;
-import com.tencent.mm.modelvoice.ad;
-import com.tencent.mm.modelvoice.am;
-import com.tencent.mm.modelvoice.x;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.az.g;
+import com.tencent.mm.d.a.dt;
+import com.tencent.mm.d.a.dt.a;
+import com.tencent.mm.modelvoice.m;
+import com.tencent.mm.modelvoice.p;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class a$g
-  extends e
+  extends c
 {
   public a$g()
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(b paramb)
   {
     Object localObject1 = null;
     Object localObject2 = null;
-    if (!(paramd instanceof cc))
+    if (!(paramb instanceof dt))
     {
-      t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+      com.tencent.mm.sdk.platformtools.u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
       return false;
     }
-    cc localcc = (cc)paramd;
-    if (x.Cp() == null) {
-      t.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "SubCoreVoice.getVoiceStg() == null" + bn.aFH());
+    dt localdt = (dt)paramb;
+    if (m.Ew() == null) {
+      com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "SubCoreVoice.getVoiceStg() == null" + ay.aVJ());
     }
-    am localam = x.Cp();
-    paramd = axy.apy;
-    if (paramd == null) {
-      paramd = (d)localObject2;
+    com.tencent.mm.modelvoice.u localu = m.Ew();
+    paramb = axF.anC;
+    if (paramb == null) {
+      paramb = (b)localObject2;
     }
     for (;;)
     {
-      if (paramd != null) {
-        axz.axb = bPm;
+      if (paramb != null) {
+        axG.avg = cga;
       }
       return true;
-      localObject2 = "SELECT FileName, User, MsgId, NetOffset, FileNowSize, TotalLen, Status, CreateTime, LastModifyTime, ClientId, VoiceLength, MsgLocalId, Human, reserved1, reserved2, MsgSource" + " FROM voiceinfo WHERE FileName= ?";
-      localObject2 = bqt.rawQuery((String)localObject2, new String[] { paramd });
-      t.d("!32@/B4Tb64lLpIv/qzEF4E8ss0xfK7O4cQt", "getInfoByFilename fileName[" + paramd + "] ResCount:" + ((Cursor)localObject2).getCount());
-      paramd = (d)localObject1;
+      localObject2 = "SELECT FileName, User, MsgId, NetOffset, FileNowSize, TotalLen, Status, CreateTime, LastModifyTime, ClientId, VoiceLength, MsgLocalId, Human, reserved1, reserved2, MsgSource, MsgFlag, MsgSeq" + " FROM voiceinfo WHERE FileName= ?";
+      localObject2 = bCw.rawQuery((String)localObject2, new String[] { paramb });
+      com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpIv/qzEF4E8ss0xfK7O4cQt", "getInfoByFilename fileName[" + paramb + "] ResCount:" + ((Cursor)localObject2).getCount());
+      paramb = (b)localObject1;
       if (((Cursor)localObject2).moveToFirst())
       {
-        paramd = new ad();
-        paramd.c((Cursor)localObject2);
+        paramb = new p();
+        paramb.c((Cursor)localObject2);
       }
       ((Cursor)localObject2).close();
     }

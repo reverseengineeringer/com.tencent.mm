@@ -5,17 +5,14 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.n;
 import com.tencent.mm.pluginsdk.ui.a.b;
 import com.tencent.mm.ui.base.preference.Preference;
-import com.tencent.mm.ui.tools.gg;
+import com.tencent.mm.ui.tools.t;
 
 public class HelperHeaderPreference
   extends Preference
 {
-  private a gYd = new a();
+  private a iOv = new a();
   
   public HelperHeaderPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -27,39 +24,47 @@ public class HelperHeaderPreference
     super(paramContext, paramAttributeSet, paramInt);
   }
   
+  public final void I(String paramString1, String paramString2, String paramString3)
+  {
+    iOv.aEV = paramString1;
+    iOv.bpe = paramString2;
+    iOv.iOw = paramString3;
+    super.callChangeListener(null);
+  }
+  
   public final void onBindView(View paramView)
   {
-    ImageView localImageView = (ImageView)paramView.findViewById(a.i.avatar_iv);
-    TextView localTextView1 = (TextView)paramView.findViewById(a.i.status_tv);
-    TextView localTextView2 = (TextView)paramView.findViewById(a.i.nickname_tv);
-    TextView localTextView3 = (TextView)paramView.findViewById(a.i.hint_tv);
+    ImageView localImageView = (ImageView)paramView.findViewById(2131165293);
+    TextView localTextView1 = (TextView)paramView.findViewById(2131166456);
+    TextView localTextView2 = (TextView)paramView.findViewById(2131165296);
+    TextView localTextView3 = (TextView)paramView.findViewById(2131169156);
     if (localImageView != null) {
-      a.b.b(localImageView, gYd.user);
+      a.b.b(localImageView, iOv.aEV);
     }
     if (localTextView1 != null) {
-      switch (gYd.status)
+      switch (iOv.status)
       {
       }
     }
     for (;;)
     {
       if (localTextView2 != null) {
-        localTextView2.setText(gYd.beS);
+        localTextView2.setText(iOv.bpe);
       }
       if (localTextView3 != null) {
-        localTextView3.setText(gYd.gYe);
+        localTextView3.setText(iOv.iOw);
       }
       super.onBindView(paramView);
       return;
       localTextView1.setVisibility(0);
-      localTextView1.setTextColor(gg.dS(mContext));
-      localTextView1.setText(a.n.settings_plugins_installed);
-      localTextView1.setCompoundDrawablesWithIntrinsicBounds(a.h.status_enable, 0, 0, 0);
+      localTextView1.setTextColor(t.ez(mContext));
+      localTextView1.setText(2131428062);
+      localTextView1.setCompoundDrawablesWithIntrinsicBounds(2130970577, 0, 0, 0);
       continue;
       localTextView1.setVisibility(0);
-      localTextView1.setTextColor(gg.dT(mContext));
-      localTextView1.setText(a.n.settings_plugins_uninstalled);
-      localTextView1.setCompoundDrawablesWithIntrinsicBounds(a.h.status_disable, 0, 0, 0);
+      localTextView1.setTextColor(t.eA(mContext));
+      localTextView1.setText(2131428061);
+      localTextView1.setCompoundDrawablesWithIntrinsicBounds(2130970505, 0, 0, 0);
       continue;
       localTextView1.setVisibility(8);
     }
@@ -67,24 +72,16 @@ public class HelperHeaderPreference
   
   public final void updateStatus(int paramInt)
   {
-    gYd.status = paramInt;
-    super.callChangeListener(null);
-  }
-  
-  public final void y(String paramString1, String paramString2, String paramString3)
-  {
-    gYd.user = paramString1;
-    gYd.beS = paramString2;
-    gYd.gYe = paramString3;
+    iOv.status = paramInt;
     super.callChangeListener(null);
   }
   
   public static final class a
   {
-    public String beS;
-    public String gYe;
+    public String aEV;
+    public String bpe;
+    public String iOw;
     public int status;
-    public String user;
   }
 }
 

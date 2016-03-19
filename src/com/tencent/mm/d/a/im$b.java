@@ -1,6 +1,9 @@
 package com.tencent.mm.d.a;
 
-public final class im$b {}
+public final class im$b
+{
+  public boolean aEt = false;
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.d.a.im.b

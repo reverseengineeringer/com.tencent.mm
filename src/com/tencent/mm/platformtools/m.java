@@ -1,122 +1,215 @@
 package com.tencent.mm.platformtools;
 
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
+import android.app.Activity;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.media.RingtoneManager;
-import android.net.Uri;
-import android.os.Bundle;
-import android.text.format.Time;
-import com.tencent.mm.aj.a;
-import com.tencent.mm.booter.notification.a.c;
-import com.tencent.mm.g.g;
-import com.tencent.mm.network.ax;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.h.c;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import com.tencent.mm.ag.b.g;
+import com.tencent.mm.model.ag;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.modelfriend.m.a;
+import com.tencent.mm.pluginsdk.f;
+import com.tencent.mm.protocal.GeneralControlWrapper;
+import com.tencent.mm.protocal.JsapiPermissionWrapper;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import java.util.Map;
 
-final class m
-  implements a
+public final class m
 {
-  m(String paramString1, String paramString2, Bundle paramBundle, String paramString3, String paramString4, int paramInt) {}
-  
-  public final void onDone()
+  public static void B(final Context paramContext, String paramString)
   {
-    Object localObject1 = new Time();
-    ((Time)localObject1).setToNow();
-    Object localObject2;
-    if (!ax.S(hour, minute))
+    Object localObject = com.tencent.mm.e.a.cV(paramString);
+    String str;
+    DialogInterface.OnClickListener local5;
+    DialogInterface.OnClickListener local6;
+    if (localObject != null)
     {
-      t.i("!44@9DU/RFsdGl8e3Yxr3KsbFoTdQI3zLyUwqDhl7WcfpS4=", "no shake & sound notification during background deactive time");
-      localObject1 = new Intent();
-      ((Intent)localObject1).setClassName(aa.getPackageName(), aa.getPackageName() + ".plugin.webview.ui.tools.WebViewUI");
-      ((Intent)localObject1).putExtra("rawUrl", val$jumpUrl);
-      ((Intent)localObject1).putExtra("useJs", true);
-      ((Intent)localObject1).putExtra("vertical_scroll", true);
-      ((Intent)localObject1).setFlags(872415232);
-      t.d("!44@9DU/RFsdGl8e3Yxr3KsbFoTdQI3zLyUwqDhl7WcfpS4=", "bizFrom: %s, data: %s", new Object[] { bVo, bVp });
-      if ((bVo != null) && (bVp != null))
+      paramString = paramContext.getString(2131430888);
+      str = paramContext.getString(2131430884);
+      local5 = new DialogInterface.OnClickListener()
       {
-        ((Intent)localObject1).putExtra("bizofstartfrom", bVo);
-        ((Intent)localObject1).putExtra("startwebviewparams", bVp);
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          paramAnonymousDialogInterface = new Intent();
+          paramAnonymousDialogInterface.putExtra("rawUrl", cmv.url);
+          paramAnonymousDialogInterface.putExtra("showShare", false);
+          paramAnonymousDialogInterface.putExtra("show_bottom", false);
+          paramAnonymousDialogInterface.putExtra("needRedirect", false);
+          paramAnonymousDialogInterface.putExtra("neverGetA8Key", true);
+          paramAnonymousDialogInterface.putExtra("hardcode_jspermission", JsapiPermissionWrapper.iUp);
+          paramAnonymousDialogInterface.putExtra("hardcode_general_ctrl", GeneralControlWrapper.iUm);
+          com.tencent.mm.plugin.a.a.coa.j(paramAnonymousDialogInterface, paramContext);
+        }
+      };
+      local6 = new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt) {}
+      };
+      if ((asN == 1) || (asN == 4))
+      {
+        if (!ay.kz(url)) {
+          break label83;
+        }
+        com.tencent.mm.ui.base.g.y(paramContext, asL, asP);
       }
-      localObject1 = PendingIntent.getActivity(aa.getContext(), 0, (Intent)localObject1, 134217728);
-      localObject2 = new Notification(c.nQ(), null, System.currentTimeMillis());
-      flags |= 0x10;
-      ((Notification)localObject2).setLatestEventInfo(aa.getContext(), bVq, bVr, (PendingIntent)localObject1);
-      ((NotificationManager)aa.getContext().getSystemService("notification")).notify(bVs, (Notification)localObject2);
+    }
+    label83:
+    do
+    {
       return;
+      com.tencent.mm.ui.base.g.a(paramContext, asL, asP, paramString, str, local5, local6);
+      return;
+      paramString = q.J(paramString, "e", null);
+      if (paramString == null)
+      {
+        u.d("!32@/B4Tb64lLpLaPRi0/n+G/WWMeMMpN2vo", "this is not errmsg");
+        return;
+      }
+      paramString = (String)paramString.get(".e.Url");
+    } while (ay.kz(paramString));
+    u.w("!32@/B4Tb64lLpLaPRi0/n+G/WWMeMMpN2vo", "url %s", new Object[] { paramString });
+    localObject = new Intent();
+    ((Intent)localObject).putExtra("Kvertify_key", paramString);
+    ((Intent)localObject).putExtra("kscene_type", 73);
+    com.tencent.mm.ar.c.c(paramContext, "voiceprint", ".ui.VoicePrintFirstUI", (Intent)localObject);
+  }
+  
+  public static void a(final Activity paramActivity, final Runnable paramRunnable, boolean paramBoolean, int paramInt)
+  {
+    if ((com.tencent.mm.modelfriend.m.yD() != m.a.bMB) && (com.tencent.mm.modelfriend.m.yD() != m.a.bMC)) {
+      u.e("!32@/B4Tb64lLpLaPRi0/n+G/WWMeMMpN2vo", "not successfully binded, skip addrbook confirm");
     }
     for (;;)
     {
-      int j;
-      try
-      {
-        localObject2 = aa.getContext();
-        boolean bool1 = g.pv();
-        boolean bool2 = g.pt();
-        t.d("!44@9DU/RFsdGl8e3Yxr3KsbFoTdQI3zLyUwqDhl7WcfpS4=", "shake " + bool1 + "sound " + bool2);
-        if (bool1)
-        {
-          t.i("!44@9DU/RFsdGl8e3Yxr3KsbFoTdQI3zLyUwqDhl7WcfpS4=", "notification.shake:  notifyEngageRemind isShake~: true");
-          bn.h((Context)localObject2, true);
-        }
-        if (!bool2) {
-          break;
-        }
-        localObject1 = g.pu();
-        MediaPlayer localMediaPlayer;
-        if (localObject1 == h.c.bke)
-        {
-          localObject1 = RingtoneManager.getDefaultUri(2);
-          localMediaPlayer = new MediaPlayer();
-          try
-          {
-            localMediaPlayer.setDataSource((Context)localObject2, (Uri)localObject1);
-            localMediaPlayer.setOnCompletionListener(new o());
-            localObject1 = (AudioManager)((Context)localObject2).getSystemService("audio");
-            if (((AudioManager)localObject1).getStreamVolume(5) == 0) {
-              break;
-            }
-            if (!((AudioManager)localObject1).isWiredHeadsetOn()) {
-              continue;
-            }
-            int k = ((AudioManager)localObject1).getStreamVolume(8);
-            i = ((AudioManager)localObject1).getStreamMaxVolume(8);
-            j = ((AudioManager)localObject1).getStreamVolume(5);
-            if (j <= i) {
-              break label561;
-            }
-            ((AudioManager)localObject1).setStreamVolume(8, i, 0);
-            localMediaPlayer.setAudioStreamType(8);
-            localMediaPlayer.setLooping(true);
-            localMediaPlayer.prepare();
-            localMediaPlayer.setLooping(false);
-            localMediaPlayer.start();
-            ((AudioManager)localObject1).setStreamVolume(8, k, 0);
-            t.d("!44@9DU/RFsdGl8e3Yxr3KsbFoTdQI3zLyUwqDhl7WcfpS4=", "oldVolume is %d, toneVolume is %d", new Object[] { Integer.valueOf(k), Integer.valueOf(i) });
-          }
-          catch (Exception localException1) {}
-          break;
-        }
-        Uri localUri = Uri.parse(localException1);
-        continue;
-        localMediaPlayer.setAudioStreamType(5);
-        localMediaPlayer.setLooping(true);
-        localMediaPlayer.prepare();
-        localMediaPlayer.setLooping(false);
-        localMediaPlayer.start();
+      if (paramRunnable != null) {
+        paramRunnable.run();
       }
-      catch (Exception localException2) {}
-      break;
-      label561:
-      int i = j;
+      return;
+      if (ay.d((Boolean)ah.tD().rn().get(12322, null)))
+      {
+        u.d("!32@/B4Tb64lLpLaPRi0/n+G/WWMeMMpN2vo", "addrbook upload confirmed");
+      }
+      else if ((!paramBoolean) && (ay.d((Boolean)ah.tD().rn().get(12323, null))))
+      {
+        u.d("!32@/B4Tb64lLpLaPRi0/n+G/WWMeMMpN2vo", "addrbook upload login confirmed showed");
+      }
+      else
+      {
+        ah.tD().rn().set(12322, Boolean.valueOf(false));
+        String str = ay.ky(ay.dN(paramActivity));
+        if ((str.length() <= 0) || (!str.equals(ah.tD().rn().get(6, null)))) {
+          break;
+        }
+        ah.tD().rn().set(12322, Boolean.valueOf(true));
+        u.i("!32@/B4Tb64lLpLaPRi0/n+G/WWMeMMpN2vo", "same none-nil phone number, leave it");
+      }
     }
+    com.tencent.mm.ui.base.g.a(paramActivity, 2131428659, 2131430877, 2131430901, 2131430902, new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        u.i("!32@/B4Tb64lLpLaPRi0/n+G/WWMeMMpN2vo", "[cpan] kv report logid:%d scene:%d", new Object[] { Integer.valueOf(11438), Integer.valueOf(cmr) });
+        com.tencent.mm.plugin.report.service.h.fUJ.g(11438, new Object[] { Integer.valueOf(cmr) });
+        ah.tD().rn().set(12322, Boolean.valueOf(true));
+        m.d(true, false);
+        com.tencent.mm.modelfriend.a.yc();
+        if (paramRunnable != null) {
+          paramRunnable.run();
+        }
+        paramActivity.getSharedPreferences(y.aUK(), 0).edit().putBoolean("login_upload_contacts_already_displayed", true).commit();
+      }
+    }, new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        ah.tD().rn().set(12322, Boolean.valueOf(false));
+        m.d(false, false);
+        if (cmt != null) {
+          cmt.run();
+        }
+        paramActivity.getSharedPreferences(y.aUK(), 0).edit().putBoolean("login_upload_contacts_already_displayed", true).commit();
+      }
+    });
+    ah.tD().rn().set(12323, Boolean.valueOf(true));
+  }
+  
+  public static void bh(final Context paramContext)
+  {
+    String str1 = paramContext.getString(2131427770);
+    String str2 = paramContext.getString(2131427772);
+    com.tencent.mm.ui.base.g.a(paramContext, str1, "", paramContext.getString(2131431067), paramContext.getString(2131431069), new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        paramAnonymousDialogInterface = new Intent();
+        paramAnonymousDialogInterface.putExtra("rawUrl", cmu);
+        paramAnonymousDialogInterface.putExtra("showShare", false);
+        paramAnonymousDialogInterface.putExtra("show_bottom", false);
+        paramAnonymousDialogInterface.putExtra("needRedirect", false);
+        paramAnonymousDialogInterface.putExtra("neverGetA8Key", true);
+        paramAnonymousDialogInterface.putExtra("hardcode_jspermission", JsapiPermissionWrapper.iUp);
+        paramAnonymousDialogInterface.putExtra("hardcode_general_ctrl", GeneralControlWrapper.iUm);
+        com.tencent.mm.plugin.a.a.coa.j(paramAnonymousDialogInterface, paramContext);
+      }
+    }, null);
+  }
+  
+  public static void d(boolean paramBoolean1, boolean paramBoolean2)
+  {
+    int i = com.tencent.mm.model.h.sg();
+    if (paramBoolean1)
+    {
+      i &= 0xFFFDFFFF;
+      u.d("!32@/B4Tb64lLpLaPRi0/n+G/WWMeMMpN2vo", "Reg By mobile update = " + i);
+      ah.tD().rn().set(7, Integer.valueOf(i));
+      if (paramBoolean1) {
+        break label96;
+      }
+    }
+    label96:
+    for (i = 1;; i = 2)
+    {
+      ah.tD().rp().b(new b.g(17, i));
+      if (paramBoolean2) {
+        com.tencent.mm.plugin.a.a.cob.kG();
+      }
+      return;
+      i |= 0x20000;
+      break;
+    }
+  }
+  
+  public static void k(final Context paramContext, String paramString1, String paramString2)
+  {
+    paramString1 = com.tencent.mm.e.a.cV(paramString1);
+    if (paramString1 != null) {
+      paramString1.a(paramContext, new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          paramAnonymousDialogInterface = new Intent();
+          paramAnonymousDialogInterface.putExtra("rawUrl", cmu);
+          paramAnonymousDialogInterface.putExtra("showShare", false);
+          paramAnonymousDialogInterface.putExtra("show_bottom", false);
+          paramAnonymousDialogInterface.putExtra("needRedirect", false);
+          paramAnonymousDialogInterface.putExtra("neverGetA8Key", true);
+          paramAnonymousDialogInterface.putExtra("hardcode_jspermission", JsapiPermissionWrapper.iUp);
+          paramAnonymousDialogInterface.putExtra("hardcode_general_ctrl", GeneralControlWrapper.iUm);
+          com.tencent.mm.plugin.a.a.coa.j(paramAnonymousDialogInterface, paramContext);
+        }
+      }, null);
+    }
+  }
+  
+  public static void kv(String paramString)
+  {
+    ag.bAw.H("login_user_name", paramString);
   }
 }
 

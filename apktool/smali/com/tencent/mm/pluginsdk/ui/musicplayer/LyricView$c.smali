@@ -18,61 +18,61 @@
 
 
 # instance fields
-.field public dJx:Z
+.field public eLm:Z
 
-.field final dMu:F
+.field final eOp:F
 
-.field final synthetic gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+.field feV:I
 
-.field gWJ:Landroid/graphics/Rect;
+.field final synthetic iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
-.field gWK:Landroid/graphics/Rect;
+.field iNa:Landroid/graphics/Rect;
 
-.field gWL:Ljava/util/List;
+.field iNb:Landroid/graphics/Rect;
 
-.field gWM:Ljava/util/Map;
+.field iNc:Ljava/util/List;
 
-.field gWN:Landroid/graphics/Paint;
+.field iNd:Ljava/util/Map;
 
-.field gWO:Landroid/graphics/Paint;
+.field iNe:Landroid/graphics/Paint;
 
-.field final gWP:I
+.field iNf:Landroid/graphics/Paint;
 
-.field final gWQ:I
+.field final iNg:I
 
-.field final gWR:F
+.field final iNh:I
 
-.field final gWS:F
+.field final iNi:F
 
-.field gWT:J
+.field final iNj:F
 
-.field gWU:I
+.field iNk:J
 
-.field gWV:I
+.field iNl:I
 
-.field gWW:I
+.field iNm:I
 
-.field gWX:I
+.field iNn:I
 
-.field gWY:I
+.field iNo:I
 
-.field gWZ:I
+.field iNp:I
 
-.field gWq:I
+.field iNq:I
 
-.field gXa:I
+.field iNr:I
 
-.field gXb:F
+.field iNs:F
 
-.field gXc:F
+.field iNt:F
 
-.field gXd:F
+.field iNu:F
 
-.field gXe:F
+.field iNv:F
 
-.field gXf:I
+.field iNw:I
 
-.field gXg:I
+.field iNx:I
 
 .field final shadowColor:I
 
@@ -93,65 +93,65 @@
     const/4 v5, 0x1
 
     .line 347
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 324
-    iput-boolean v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->dJx:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->eLm:Z
 
     .line 325
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWJ:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNa:Landroid/graphics/Rect;
 
     .line 326
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWK:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNb:Landroid/graphics/Rect;
 
     .line 327
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWL:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNc:Ljava/util/List;
 
     .line 328
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWM:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNd:Ljava/util/Map;
 
     .line 329
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWN:Landroid/graphics/Paint;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNe:Landroid/graphics/Paint;
 
     .line 330
-    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iput-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
     .line 335
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWT:J
+    iput-wide v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNk:J
 
     .line 349
-    iput-wide p2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWT:J
+    iput-wide p2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNk:J
 
     .line 350
-    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->dMu:F
+    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->eOp:F
 
     .line 351
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWR:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNi:F
 
     .line 352
-    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWS:F
+    iput v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNj:F
 
     .line 353
     const/high16 v0, -0x1000000
@@ -163,40 +163,40 @@
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWN:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNe:Landroid/graphics/Paint;
 
     .line 356
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWN:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNe:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 357
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWN:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNe:Landroid/graphics/Paint;
 
     const v1, -0x3d3d3e
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 358
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWN:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNe:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 359
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWN:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNe:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
     .line 360
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWN:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNe:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v1, v6}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -205,13 +205,13 @@
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 361
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWN:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNe:Landroid/graphics/Paint;
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->dMu:F
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->eOp:F
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWR:F
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNi:F
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWS:F
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNj:F
 
     iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->shadowColor:I
 
@@ -222,40 +222,40 @@
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
     .line 364
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v5}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 365
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
     const v1, -0x989391
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 366
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v7}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 367
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
     .line 368
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
     invoke-virtual {p1}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    invoke-static {v1, v6}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v1, v6}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -264,13 +264,13 @@
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 369
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->dMu:F
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->eOp:F
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWR:F
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNi:F
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWS:F
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNj:F
 
     iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->shadowColor:I
 
@@ -282,7 +282,7 @@
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     .line 372
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWN:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNe:Landroid/graphics/Paint;
 
     const-string/jumbo v2, "calculate text height"
 
@@ -295,14 +295,14 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWP:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNg:I
 
     .line 374
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWP:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNg:I
 
     mul-int/lit8 v0, v0, 0x4
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWQ:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNh:I
 
     .line 375
     return-void
@@ -325,7 +325,7 @@
 
     const-string/jumbo v1, "autoDrawText: canvas or paint is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 532
     const/4 v0, 0x0
@@ -340,13 +340,13 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXg:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNx:I
 
     .line 537
     if-eqz p7, :cond_5
 
     .line 539
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWL:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNc:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -364,7 +364,7 @@
     if-ltz v3, :cond_3
 
     .line 541
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWZ:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNq:I
 
     int-to-float v1, v1
 
@@ -375,7 +375,7 @@
     .line 542
     mul-float v0, v5, v2
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWZ:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNq:I
 
     int-to-float v1, v1
 
@@ -385,7 +385,7 @@
 
     .line 545
     :cond_2
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXa:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNr:I
 
     int-to-float v1, v1
 
@@ -394,7 +394,7 @@
     if-ltz v1, :cond_9
 
     .line 546
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWY:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNp:I
 
     int-to-float v0, v0
 
@@ -402,9 +402,9 @@
 
     mul-float/2addr v0, v5
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWY:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNp:I
 
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXa:I
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNr:I
 
     sub-int/2addr v1, v4
 
@@ -424,7 +424,7 @@
     invoke-virtual {p4, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 552
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWL:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNc:Ljava/util/List;
 
     invoke-interface {v0, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -435,14 +435,14 @@
     invoke-virtual {p1, v0, p2, v2, p4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     .line 555
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWQ:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNh:I
 
     int-to-float v0, v0
 
     sub-float v0, v2, v0
 
     .line 556
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWX:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNo:I
 
     int-to-float v2, v2
 
@@ -466,7 +466,7 @@
 
     .line 561
     :cond_4
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWQ:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNh:I
 
     int-to-float v1, v1
 
@@ -474,7 +474,7 @@
 
     .line 591
     :goto_3
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXg:I
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNx:I
 
     invoke-virtual {p4, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
@@ -487,7 +487,7 @@
     move v1, v0
 
     :goto_4
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWL:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNc:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -496,7 +496,7 @@
     if-ge v1, v0, :cond_8
 
     .line 567
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWZ:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNq:I
 
     int-to-float v0, v0
 
@@ -507,7 +507,7 @@
     .line 568
     mul-float v0, v5, p3
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWZ:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNq:I
 
     int-to-float v2, v2
 
@@ -517,7 +517,7 @@
 
     .line 571
     :cond_6
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXa:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNr:I
 
     int-to-float v0, v0
 
@@ -526,7 +526,7 @@
     if-ltz v0, :cond_7
 
     .line 572
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWY:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNp:I
 
     int-to-float v0, v0
 
@@ -534,9 +534,9 @@
 
     mul-float/2addr v0, v5
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWY:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNp:I
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXa:I
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNr:I
 
     sub-int/2addr v2, v3
 
@@ -554,7 +554,7 @@
     invoke-virtual {p4, p6}, Landroid/graphics/Paint;->setAlpha(I)V
 
     .line 578
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWL:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNc:Ljava/util/List;
 
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
@@ -565,14 +565,14 @@
     invoke-virtual {p1, v0, p2, p3, p4}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
     .line 581
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWQ:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNh:I
 
     int-to-float v0, v0
 
     add-float/2addr p3, v0
 
     .line 582
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWY:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNp:I
 
     int-to-float v0, v0
 
@@ -589,7 +589,7 @@
 
     .line 587
     :cond_8
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWQ:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNh:I
 
     int-to-float v0, v0
 
@@ -620,7 +620,7 @@
 
     const-string/jumbo v1, "get auto fix text, text, canvas or paint is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 501
     :cond_1
@@ -637,12 +637,12 @@
     if-lez v0, :cond_5
 
     .line 481
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWK:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNb:Landroid/graphics/Rect;
 
     invoke-virtual {p3, p2, v5, v0, v1}, Landroid/graphics/Paint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
     .line 482
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWK:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNb:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->width()I
 
@@ -686,7 +686,7 @@
 
     const-string/jumbo v1, "do not contains \' \' or \'\t\'"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -724,7 +724,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 497
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
@@ -749,7 +749,7 @@
 
     const-string/jumbo v1, "can not get auto fix text"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -771,7 +771,7 @@
 
     const-string/jumbo v1, "get fit text list, text, canvas or paint is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 527
     :goto_0
@@ -806,7 +806,7 @@
     move-result-object v1
 
     .line 512
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWM:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNd:Ljava/util/Map;
 
     invoke-interface {v0, v1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -818,7 +818,7 @@
     if-eqz v0, :cond_2
 
     .line 515
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWL:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNc:Ljava/util/List;
 
     goto :goto_0
 
@@ -831,7 +831,7 @@
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWL:Ljava/util/List;
+    iput-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNc:Ljava/util/List;
 
     .line 521
     :cond_3
@@ -889,10 +889,10 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 524
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWL:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNc:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -904,9 +904,9 @@
     if-eqz v2, :cond_3
 
     .line 526
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWM:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNd:Ljava/util/Map;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWL:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNc:Ljava/util/List;
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -921,11 +921,11 @@
     .prologue
     .line 380
     :goto_0
-    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->dJx:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->eLm:Z
 
     if-eqz v0, :cond_c
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->e(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;
 
@@ -934,7 +934,7 @@
     if-eqz v0, :cond_c
 
     .line 382
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->f(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Ljava/lang/Object;
 
@@ -944,7 +944,7 @@
 
     .line 384
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->f(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Ljava/lang/Object;
 
@@ -953,7 +953,7 @@
     invoke-virtual {v0}, Ljava/lang/Object;->wait()V
 
     .line 385
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->getHolder()Landroid/view/SurfaceHolder;
 
@@ -970,15 +970,15 @@
 
     const-string/jumbo v2, "renderBG, but canvas is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 387
     :goto_1
-    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWT:J
+    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNk:J
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->e(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;
 
@@ -991,11 +991,11 @@
 
     const-string/jumbo v2, "render lrc: but canvas or lrcMgr is null"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 388
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->getHolder()Landroid/view/SurfaceHolder;
 
@@ -1025,7 +1025,7 @@
     .line 386
     :cond_2
     :try_start_2
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->c(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Landroid/graphics/Bitmap;
 
@@ -1033,30 +1033,30 @@
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->g(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_3
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->b(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)V
 
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->c(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWJ:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNa:Landroid/graphics/Rect;
 
     invoke-static {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->a(Landroid/graphics/Bitmap;Landroid/graphics/Canvas;Landroid/graphics/Rect;)Z
 
@@ -1071,7 +1071,7 @@
     invoke-virtual {v1, v0, v2}, Landroid/graphics/Canvas;->drawColor(ILandroid/graphics/PorterDuff$Mode;)V
 
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->d(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Landroid/graphics/Bitmap;
 
@@ -1106,12 +1106,12 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 391
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->dJx:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->eLm:Z
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
@@ -1126,7 +1126,7 @@
 
     shr-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWU:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNl:I
 
     invoke-virtual {v1}, Landroid/graphics/Canvas;->getWidth()I
 
@@ -1134,15 +1134,15 @@
 
     shr-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWV:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNm:I
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWU:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNl:I
 
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWP:I
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNg:I
 
     add-int/2addr v0, v4
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWW:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNn:I
 
     invoke-virtual {v1}, Landroid/graphics/Canvas;->getHeight()I
 
@@ -1150,17 +1150,17 @@
 
     shr-int/lit8 v0, v0, 0x3
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWX:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNo:I
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWX:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNo:I
 
     mul-int/lit8 v0, v0, 0x7
 
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWP:I
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNg:I
 
     add-int/2addr v0, v4
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWY:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNp:I
 
     invoke-virtual {v1}, Landroid/graphics/Canvas;->getHeight()I
 
@@ -1168,67 +1168,67 @@
 
     shr-int/lit8 v0, v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWZ:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNq:I
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWZ:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNq:I
 
     mul-int/lit8 v0, v0, 0x3
 
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWP:I
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNg:I
 
     add-int/2addr v0, v4
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXa:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNr:I
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->e(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->cp(J)I
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->dh(J)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWq:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->feV:I
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->e(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;
 
     move-result-object v0
 
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWq:I
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->feV:I
 
-    invoke-virtual {v0, v4}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->lJ(I)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->oI(I)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;
 
     move-result-object v0
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;->content:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWN:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNe:Landroid/graphics/Paint;
 
     invoke-direct {p0, v1, v0, v4}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->a(Landroid/graphics/Canvas;Ljava/lang/String;Landroid/graphics/Paint;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->e(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;
 
     move-result-object v4
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWL:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNc:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    iget v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWQ:I
+    iget v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNh:I
 
     mul-int/2addr v0, v5
 
     int-to-float v5, v0
 
-    invoke-virtual {v4, v2, v3}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->cp(J)I
+    invoke-virtual {v4, v2, v3}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->dh(J)I
 
     move-result v6
 
@@ -1240,28 +1240,28 @@
 
     const-string/jumbo v4, "getCurVelocity: but getCurIndex fail"
 
-    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     const/4 v0, 0x0
 
     :goto_3
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXb:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNs:F
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWW:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNn:I
 
     int-to-float v0, v0
 
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXb:F
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNs:F
 
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v5}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->e(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;
 
     move-result-object v5
 
-    iget v6, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWq:I
+    iget v6, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->feV:I
 
-    invoke-virtual {v5, v6}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->lJ(I)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;
+    invoke-virtual {v5, v6}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->oI(I)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;
 
     move-result-object v5
 
@@ -1275,15 +1275,15 @@
 
     sub-float/2addr v0, v2
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXc:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNt:F
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWV:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNm:I
 
     int-to-float v2, v0
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXc:F
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNt:F
 
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWN:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNe:Landroid/graphics/Paint;
 
     const v5, -0x3d3d3e
 
@@ -1297,17 +1297,17 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXd:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNu:F
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXc:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNt:F
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
     const/16 v0, 0xff
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXf:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNw:I
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWq:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->feV:I
 
     add-int/lit8 v0, v0, -0x1
 
@@ -1316,19 +1316,19 @@
     :goto_4
     if-ltz v8, :cond_a
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWQ:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNh:I
 
     int-to-float v2, v2
 
     sub-float/2addr v0, v2
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWX:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNo:I
 
     int-to-float v2, v2
 
@@ -1336,9 +1336,9 @@
 
     if-ltz v0, :cond_a
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWZ:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNq:I
 
     int-to-float v2, v2
 
@@ -1350,9 +1350,9 @@
 
     const/high16 v2, 0x437f0000    # 255.0f
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWX:I
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNo:I
 
     int-to-float v4, v4
 
@@ -1360,7 +1360,7 @@
 
     mul-float/2addr v2, v3
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWX:I
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNo:I
 
     int-to-float v3, v3
 
@@ -1372,36 +1372,36 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXf:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNw:I
 
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->e(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->lJ(I)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;
+    invoke-virtual {v0, v8}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->oI(I)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;
 
     move-result-object v0
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;->content:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
     invoke-direct {p0, v1, v0, v2}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->a(Landroid/graphics/Canvas;Ljava/lang/String;Landroid/graphics/Paint;)V
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWV:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNm:I
 
     int-to-float v2, v0
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
     const v5, -0x989391
 
-    iget v6, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXf:I
+    iget v6, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNw:I
 
     const/4 v7, 0x1
 
@@ -1411,7 +1411,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
     add-int/lit8 v0, v8, -0x1
 
@@ -1420,7 +1420,7 @@
     goto :goto_4
 
     :cond_7
-    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->gWo:Ljava/util/ArrayList;
+    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->feT:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1435,7 +1435,7 @@
     goto/16 :goto_3
 
     :cond_8
-    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->gWo:Ljava/util/ArrayList;
+    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->feT:Ljava/util/ArrayList;
 
     add-int/lit8 v7, v6, 0x1
 
@@ -1447,7 +1447,7 @@
 
     iget-wide v7, v0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;->timestamp:J
 
-    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->gWo:Ljava/util/ArrayList;
+    iget-object v0, v4, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->feT:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
@@ -1477,28 +1477,28 @@
     goto/16 :goto_3
 
     :cond_a
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXd:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNu:F
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
     const/16 v0, 0xff
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXf:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNw:I
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWq:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->feV:I
 
     add-int/lit8 v0, v0, 0x1
 
     move v8, v0
 
     :goto_5
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->e(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->gWo:Ljava/util/ArrayList;
+    iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->feT:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
@@ -1506,19 +1506,19 @@
 
     if-ge v8, v0, :cond_1
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWQ:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNh:I
 
     int-to-float v2, v2
 
     add-float/2addr v0, v2
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWY:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNp:I
 
     int-to-float v2, v2
 
@@ -1526,9 +1526,9 @@
 
     if-gtz v0, :cond_1
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXa:I
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNr:I
 
     int-to-float v2, v2
 
@@ -1540,17 +1540,17 @@
 
     const/high16 v2, 0x437f0000    # 255.0f
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWY:I
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNp:I
 
     int-to-float v3, v3
 
-    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iget v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
     sub-float/2addr v3, v4
 
     mul-float/2addr v2, v3
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWX:I
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNo:I
 
     int-to-float v3, v3
 
@@ -1562,36 +1562,36 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXf:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNw:I
 
     :cond_b
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->e(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;
 
     move-result-object v0
 
-    invoke-virtual {v0, v8}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->lJ(I)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;
+    invoke-virtual {v0, v8}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;->oI(I)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;
 
     move-result-object v0
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/a$a;->content:Ljava/lang/String;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
     invoke-direct {p0, v1, v0, v2}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->a(Landroid/graphics/Canvas;Ljava/lang/String;Landroid/graphics/Paint;)V
 
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWV:I
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNm:I
 
     int-to-float v2, v0
 
-    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iget v3, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
 
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWO:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNf:Landroid/graphics/Paint;
 
     const v5, -0x989391
 
-    iget v6, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXf:I
+    iget v6, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNw:I
 
     const/4 v7, 0x0
 
@@ -1601,7 +1601,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gXe:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iNv:F
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_0
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
@@ -1624,7 +1624,7 @@
 
     const/4 v0, 0x0
 
-    iget-boolean v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->dJx:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->eLm:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -1634,7 +1634,7 @@
 
     const/4 v4, 0x1
 
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->gWH:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->iMY:Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;
 
     invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;->e(Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView;)Lcom/tencent/mm/pluginsdk/ui/musicplayer/a;
 
@@ -1651,12 +1651,12 @@
 
     aput-object v0, v3, v4
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 396
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->dJx:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/LyricView$c;->eLm:Z
 
     .line 397
     return-void

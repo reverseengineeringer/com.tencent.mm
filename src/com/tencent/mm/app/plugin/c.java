@@ -2,22 +2,22 @@ package com.tencent.mm.app.plugin;
 
 import com.tencent.mm.g.e;
 import com.tencent.mm.g.h;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class c
 {
-  public static boolean lJ()
+  public static boolean le()
   {
-    if (!com.tencent.mm.aj.c.th("translate")) {}
+    if (!com.tencent.mm.ar.c.yf("translate")) {}
     String str;
     do
     {
       return false;
-      str = h.qa().getValue("TranslateMsgOff");
-      if (bn.iW(str)) {
+      str = h.pS().getValue("TranslateMsgOff");
+      if (ay.kz(str)) {
         return true;
       }
-    } while (bn.xQ(str) != 0);
+    } while (ay.Dr(str) != 0);
     return true;
   }
 }

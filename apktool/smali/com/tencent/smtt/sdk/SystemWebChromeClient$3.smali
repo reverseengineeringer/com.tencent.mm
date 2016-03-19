@@ -3,7 +3,18 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/smtt/sdk/ab;
+.implements Lcom/tencent/smtt/sdk/u;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/smtt/sdk/SystemWebChromeClient;->openFileChooser(Landroid/webkit/ValueCallback;Ljava/lang/String;Ljava/lang/String;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
 
 
 # instance fields
@@ -17,7 +28,7 @@
     .locals 0
 
     .prologue
-    .line 294
+    .line 295
     iput-object p1, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$3;->this$0:Lcom/tencent/smtt/sdk/SystemWebChromeClient;
 
     iput-object p2, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$3;->val$uploadFile:Landroid/webkit/ValueCallback;
@@ -33,12 +44,12 @@
     .locals 1
 
     .prologue
-    .line 298
+    .line 299
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$3;->val$uploadFile:Landroid/webkit/ValueCallback;
 
     invoke-interface {v0, p1}, Landroid/webkit/ValueCallback;->onReceiveValue(Ljava/lang/Object;)V
 
-    .line 299
+    .line 300
     return-void
 .end method
 
@@ -46,7 +57,7 @@
     .locals 0
 
     .prologue
-    .line 294
+    .line 295
     check-cast p1, Landroid/net/Uri;
 
     invoke-virtual {p0, p1}, Lcom/tencent/smtt/sdk/SystemWebChromeClient$3;->onReceiveValue(Landroid/net/Uri;)V

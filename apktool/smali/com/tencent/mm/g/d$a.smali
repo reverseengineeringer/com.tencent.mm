@@ -27,18 +27,18 @@
     .locals 0
 
     .prologue
-    .line 226
+    .line 231
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 227
+    .line 232
     iput-object p1, p0, Lcom/tencent/mm/g/d$a;->id:Ljava/lang/String;
 
-    .line 228
+    .line 233
     iput-object p2, p0, Lcom/tencent/mm/g/d$a;->title:Ljava/lang/String;
 
-    .line 229
+    .line 234
     iput-object p3, p0, Lcom/tencent/mm/g/d$a;->url:Ljava/lang/String;
 
-    .line 230
+    .line 235
     return-void
 .end method

@@ -15,7 +15,11 @@
 
 
 # instance fields
-.field public apy:Ljava/lang/String;
+.field public alN:Ljava/lang/String;
+
+.field public avG:[B
+
+.field public avH:Z
 
 
 # direct methods

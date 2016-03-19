@@ -7,15 +7,17 @@ import android.widget.TextView;
 
 public abstract interface a
 {
-  public abstract void I(String paramString, boolean paramBoolean);
+  public abstract void P(String paramString, boolean paramBoolean);
   
-  public abstract void aI(int paramInt1, int paramInt2);
+  public abstract void avF();
   
-  public abstract void ajl();
+  public abstract boolean avG();
   
-  public abstract boolean ajm();
+  public abstract void bc(int paramInt1, int paramInt2);
   
   public abstract void clear();
+  
+  public abstract void eD(boolean paramBoolean);
   
   public abstract Object getTagObject();
   
@@ -30,6 +32,12 @@ public abstract interface a
   public abstract void setForceRecordState(boolean paramBoolean);
   
   public abstract void setMaskID(int paramInt);
+  
+  public abstract void setOnCompletionListener(b.e parame);
+  
+  public abstract void setOnDecodeDurationListener(b.f paramf);
+  
+  public abstract void setOnSightCompletionAction(b.g paramg);
   
   public abstract void setPosition(int paramInt);
   

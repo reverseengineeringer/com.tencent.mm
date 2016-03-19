@@ -1,6 +1,7 @@
 package com.tencent.mm.sandbox.updater;
 
 import android.app.Notification;
+import android.app.Notification.Builder;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.content.BroadcastReceiver;
@@ -11,10 +12,11 @@ import android.os.Build.VERSION;
 import android.os.IBinder;
 import com.jg.JgClassChecked;
 import com.tencent.mm.sandbox.c;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
 import java.util.Collection;
 import java.util.HashMap;
@@ -25,62 +27,74 @@ import java.util.Map;
 public class UpdaterService
   extends Service
 {
-  static final long hXB = 1800000L;
-  private static UpdaterService hXz = null;
-  Map hXA = new HashMap();
-  private boolean hXC = false;
-  private aj hXD = new aj(new av(this), true);
-  private a hXE = null;
-  
-  public static void aEj()
+  private static UpdaterService jUo = null;
+  static final long jUq = 1800000L;
+  private boolean bWL = false;
+  Map jUp = new HashMap();
+  private af jUr = new af(new af.a()
   {
-    t.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "UpdaterService stopInstance()");
-    if (hXz != null) {
-      hXz.aEl();
+    public final boolean lj()
+    {
+      return !UpdaterService.a(UpdaterService.this);
+    }
+  }, true);
+  private a jUs = null;
+  
+  public static void aUk()
+  {
+    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "UpdaterService stopInstance()");
+    if (jUo != null) {
+      jUo.aUm();
     }
   }
   
-  public static UpdaterService aEk()
+  public static UpdaterService aUl()
   {
-    return hXz;
+    return jUo;
   }
   
-  private boolean aEl()
+  private boolean aUm()
   {
-    if (hXA.size() > 0)
+    if (jUp.size() > 0)
     {
-      Iterator localIterator = hXA.values().iterator();
+      Iterator localIterator = jUp.values().iterator();
       while (localIterator.hasNext()) {
-        if (((x)localIterator.next()).isBusy())
+        if (((a)localIterator.next()).isBusy())
         {
-          t.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "checkAndTryStopSelf, dont stop, some download mgr still busy");
+          u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "checkAndTryStopSelf, dont stop, some download mgr still busy");
           return false;
         }
       }
     }
-    t.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "checkAndTryStopSelf, UpdaterService killed self");
-    ad.c(new aw(this), 10000L);
+    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "checkAndTryStopSelf, UpdaterService killed self");
+    ab.e(new Runnable()
+    {
+      public final void run()
+      {
+        stopSelf();
+      }
+    }, 10000L);
     return true;
   }
   
-  private void i(Intent paramIntent)
+  private void h(Intent paramIntent)
   {
     if (paramIntent == null) {}
     boolean bool;
     do
     {
-      x localx;
+      a locala;
       do
       {
         return;
         int i = paramIntent.getIntExtra("intent_extra_download_type", 0);
-        t.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "handleCommand, downloadType = %d", new Object[] { Integer.valueOf(i) });
-        localx = (x)hXA.get(Integer.valueOf(i));
-      } while (localx == null);
-      bool = localx.y(paramIntent);
-      t.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "handleCommand ret = %b", new Object[] { Boolean.valueOf(bool) });
+        u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "handleCommand, downloadType = %d", new Object[] { Integer.valueOf(i) });
+        locala = (a)jUp.get(Integer.valueOf(i));
+      } while (locala == null);
+      bool = locala.H(paramIntent);
+      u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "handleCommand ret = %b", new Object[] { Boolean.valueOf(bool) });
     } while (bool);
-    aEl();
+    aUm();
   }
   
   public IBinder onBind(Intent paramIntent)
@@ -91,66 +105,65 @@ public class UpdaterService
   public void onCreate()
   {
     super.onCreate();
-    t.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onCreate");
+    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onCreate");
     c.c(hashCode(), this);
-    hXz = this;
-    hXA.put(Integer.valueOf(0), as.a.hXy);
-    hXA.put(Integer.valueOf(1), ag.aDW());
-    MMActivity.dn(this);
-    hXD.cA(hXB);
+    jUo = this;
+    jUp.put(Integer.valueOf(0), i.a.jUn);
+    jUp.put(Integer.valueOf(1), d.aTW());
+    MMActivity.dS(this);
+    jUr.ds(jUq);
     IntentFilter localIntentFilter = new IntentFilter();
     localIntentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
-    hXE = new a();
-    registerReceiver(hXE, localIntentFilter);
+    jUs = new a();
+    registerReceiver(jUs, localIntentFilter);
   }
   
   public void onDestroy()
   {
-    t.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onDestroy");
-    hXD.aEN();
-    if (hXE != null) {
-      unregisterReceiver(hXE);
+    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onDestroy");
+    jUr.aUF();
+    if (jUs != null) {
+      unregisterReceiver(jUs);
     }
-    if (hXC) {
+    if (bWL) {
       stopForeground(true);
     }
-    Iterator localIterator = hXA.values().iterator();
+    Iterator localIterator = jUp.values().iterator();
     while (localIterator.hasNext()) {
-      ((x)localIterator.next()).onDestroy();
+      ((a)localIterator.next()).onDestroy();
     }
-    hXA.clear();
-    hXz = null;
+    jUp.clear();
+    jUo = null;
     c.d(hashCode(), this);
     super.onDestroy();
   }
   
   public void onStart(Intent paramIntent, int paramInt)
   {
-    t.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onStart intent = %s", new Object[] { paramIntent });
-    i(paramIntent);
+    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onStart intent = %s", new Object[] { paramIntent });
+    h(paramIntent);
   }
   
   public int onStartCommand(Intent paramIntent, int paramInt1, int paramInt2)
   {
-    t.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onStartCommand intent = %s", new Object[] { paramIntent });
+    u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "onStartCommand intent = %s", new Object[] { paramIntent });
     if (paramIntent != null)
     {
       if (!paramIntent.getBooleanExtra("intent_extra_run_in_foreground", false)) {
-        break label97;
+        break label109;
       }
-      t.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "runServiceInForground");
-      Notification localNotification = new Notification(0, "updater service running forground", System.currentTimeMillis());
-      localNotification.setLatestEventInfo(this, "Updater Service", "updater service running forground", PendingIntent.getService(this, 0, new Intent(), 0));
-      startForeground(0, localNotification);
+      u.i("!32@/B4Tb64lLpJ7QNEsxPPC91DVMPhfLHr7", "runServiceInForground");
+      PendingIntent localPendingIntent = PendingIntent.getService(this, 0, new Intent(), 0);
+      startForeground(0, new Notification.Builder(this).setTicker("updater service running forground").setWhen(System.currentTimeMillis()).setContentTitle("Updater Service").setContentText("updater service running forground").setContentIntent(localPendingIntent).getNotification());
     }
-    for (hXC = true;; hXC = true)
+    for (bWL = true;; bWL = true)
     {
-      label97:
+      label109:
       do
       {
-        i(paramIntent);
+        h(paramIntent);
         return 2;
-      } while ((Build.VERSION.SDK_INT >= 18) || (hXC));
+      } while ((Build.VERSION.SDK_INT >= 18) || (bWL));
       startForeground(64222, new Notification());
     }
   }
@@ -161,15 +174,15 @@ public class UpdaterService
   {
     public final void onReceive(Context paramContext, Intent paramIntent)
     {
-      if (UpdaterService.aEk() != null)
+      if (UpdaterService.aUl() != null)
       {
-        paramIntent = UpdaterService.aEk();
-        boolean bool = al.cX(paramContext);
-        if (hXA.size() > 0)
+        paramIntent = UpdaterService.aUl();
+        boolean bool = ah.dB(paramContext);
+        if (jUp.size() > 0)
         {
-          paramContext = hXA.values().iterator();
+          paramContext = jUp.values().iterator();
           while (paramContext.hasNext()) {
-            ((x)paramContext.next()).eF(bool);
+            ((a)paramContext.next()).gF(bool);
           }
         }
       }

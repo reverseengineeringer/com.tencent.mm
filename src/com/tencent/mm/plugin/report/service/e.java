@@ -1,7 +1,7 @@
 package com.tencent.mm.plugin.report.service;
 
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.ArrayList;
 
 public final class e
@@ -21,7 +21,7 @@ public final class e
       }
       catch (Exception paramString)
       {
-        t.e("MicroMsg.KVEasyReport", "localReport :%s", new Object[] { bn.a(paramString) });
+        u.e("MicroMsg.KVEasyReport", "localReport :%s", new Object[] { ay.b(paramString) });
         return;
       }
     }
@@ -30,7 +30,9 @@ public final class e
   
   public static void b(ArrayList paramArrayList, boolean paramBoolean)
   {
-    KVReportJni.KVReportJava2C.reportListIDKey((KVReportJni.IDKeyDataInfo[])paramArrayList.toArray(new KVReportJni.IDKeyDataInfo[paramArrayList.size()]), paramBoolean);
+    if (paramArrayList != null) {
+      KVReportJni.KVReportJava2C.reportListIDKey((KVReportJni.IDKeyDataInfo[])paramArrayList.toArray(new KVReportJni.IDKeyDataInfo[paramArrayList.size()]), paramBoolean);
+    }
   }
 }
 

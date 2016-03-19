@@ -1,11 +1,9 @@
 package com.tencent.mm.d.a;
 
-import android.app.Activity;
-
 public final class df$a
 {
-  public Activity auD;
-  public int azn;
+  public long awG = 0L;
+  public boolean awH = false;
 }
 
 /* Location:

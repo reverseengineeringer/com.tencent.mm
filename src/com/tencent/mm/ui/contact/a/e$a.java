@@ -1,14 +1,18 @@
 package com.tencent.mm.ui.contact.a;
 
+import android.view.View;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public final class e$a
+public class e$a
   extends a.a
 {
-  public ImageView ciI;
-  public TextView cpL;
-  public TextView cwo;
+  public View cMt;
+  public TextView cNT;
+  public TextView cOd;
+  public ImageView czS;
+  public CheckBox czW;
   
   public e$a(e parame)
   {

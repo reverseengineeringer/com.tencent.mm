@@ -1,178 +1,297 @@
 package com.tencent.mm.ui.account.mobile;
 
+import android.app.ProgressDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnDismissListener;
 import android.content.Intent;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.a.n;
-import com.tencent.mm.e.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelfriend.ag;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.am;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.MMFormMobileInputView;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.protocal.GeneralControlWrapper;
+import com.tencent.mm.protocal.JsapiPermissionWrapper;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.ui.account.RegSetInfoUI;
+import com.tencent.mm.ui.applet.SecurityImage;
+import com.tencent.mm.ui.applet.SecurityImage.a;
 
+@Deprecated
 public final class g
-  implements d, MobileInputUI.b
+  implements d, MobileVerifyUI.b
 {
-  private int ivB = 0;
-  private String ivs;
-  private String ivt;
-  private MobileInputUI iyI;
+  private a ksM = null;
+  com.tencent.mm.ui.account.f ktj = new com.tencent.mm.ui.account.f();
+  private boolean kyC = true;
+  MobileVerifyUI kyy;
   
-  private void aMl()
+  public final void a(int paramInt1, int paramInt2, String paramString, final j paramj)
   {
-    Object localObject = iyI;
-    MobileInputUI localMobileInputUI = iyI;
-    iyI.getString(a.n.app_tip);
-    itY = com.tencent.mm.ui.base.h.a(localMobileInputUI, iyI.getString(a.n.regbyfacebook_reg_setpwd_exiting), true, new k(this));
-    localObject = new ag(iyI.itZ + iyI.emi, 8, "", 0, "");
-    ax.tm().d((com.tencent.mm.q.j)localObject);
-  }
-  
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.q.j paramj)
-  {
-    t.i("!56@/B4Tb64lLpKsMp00pgLFBsZYpsv1uT3yfw2cwIJseLbhc3CqnDEQew==", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
-    if (iyI.itY != null)
+    com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpKNhhU94SG29mhdCBfY2C/bywst5XLPb6E=", "onSceneEnd: errType = " + paramInt1 + " errCode = " + paramInt2 + " errMsg = " + paramString);
+    if (kyy.coM != null)
     {
-      iyI.itY.dismiss();
-      iyI.itY = null;
+      kyy.coM.dismiss();
+      kyy.coM = null;
     }
-    if (paramInt2 == -75) {
-      com.tencent.mm.ui.base.h.g(iyI, a.n.alpha_version_tip_reg, a.n.reg_username_exist_title);
+    if (paramj.getType() == 255)
+    {
+      ah.tE().b(255, this);
+      if ((paramInt1 != 0) || (paramInt2 != 0)) {
+        kyy.hr(kyC);
+      }
     }
-    int i;
     do
     {
       do
       {
-        return;
-        if ((paramInt2 == -41) || (paramInt2 == -59))
+        do
         {
-          paramString = a.cR(paramString);
-          if (paramString != null)
+          Object localObject;
+          do
           {
-            paramString.a(iyI, null, null);
+            do
+            {
+              return;
+              if (paramj.getType() == 701)
+              {
+                ktj.ktO = ((com.tencent.mm.modelsimple.t)paramj).getSecCodeType();
+                ktj.ktL = ((com.tencent.mm.modelsimple.t)paramj).zb();
+                ktj.ktN = ((com.tencent.mm.modelsimple.t)paramj).za();
+                ktj.ktM = ((com.tencent.mm.modelsimple.t)paramj).Cy();
+              }
+              if ((paramj.getType() != 701) || (ksM == null)) {
+                break;
+              }
+              ksM.ktX = kyy.ktX;
+              ksM.a(kyy, paramInt1, paramInt2, paramString, paramj);
+              if ((paramInt1 == 0) && (paramInt2 == 0))
+              {
+                if ((paramj instanceof com.tencent.mm.modelsimple.t)) {
+                  kyC = ((com.tencent.mm.modelsimple.t)paramj).CD();
+                }
+                ah.tE().a(255, this);
+                paramString = new com.tencent.mm.modelsimple.u(1);
+                ah.tE().d(paramString);
+                paramString = kyy;
+                localObject = kyy;
+                kyy.getString(2131430877);
+                coM = com.tencent.mm.ui.base.g.a((Context)localObject, kyy.getString(2131428233), true, new DialogInterface.OnCancelListener()
+                {
+                  public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+                  {
+                    ah.tE().c(paramj);
+                  }
+                });
+                return;
+              }
+            } while (paramInt2 == 65396);
+            if ((paramInt2 == -6) || (paramInt2 == 65225) || (paramInt2 == 65226))
+            {
+              if (kyy.kqh == null)
+              {
+                kyy.kqh = SecurityImage.a.a(kyy, ktj.ktO, ktj.ktN, ktj.ktL, ktj.ktM, new DialogInterface.OnClickListener()
+                {
+                  public final void onClick(final DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+                  {
+                    com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpKNhhU94SG29mhdCBfY2C/bywst5XLPb6E=", "imgSid:" + ktj.ktL + " img len" + ktj.ktN.length + " " + com.tencent.mm.compatible.util.f.oZ());
+                    paramAnonymousDialogInterface = new com.tencent.mm.modelsimple.t(ktj.cbh, ktj.ktK, ktj.ktO, kyy.kqh.getSecImgCode(), kyy.kqh.getSecImgSid(), kyy.kqh.getSecImgEncryptKey(), 1, "", false, true);
+                    ah.tE().d(paramAnonymousDialogInterface);
+                    MobileVerifyUI localMobileVerifyUI1 = kyy;
+                    MobileVerifyUI localMobileVerifyUI2 = kyy;
+                    kyy.getString(2131430877);
+                    coM = com.tencent.mm.ui.base.g.a(localMobileVerifyUI2, kyy.getString(2131427765), true, new DialogInterface.OnCancelListener()
+                    {
+                      public final void onCancel(DialogInterface paramAnonymous2DialogInterface)
+                      {
+                        ah.tE().c(paramAnonymousDialogInterface);
+                      }
+                    });
+                  }
+                }, null, new DialogInterface.OnDismissListener()
+                {
+                  public final void onDismiss(DialogInterface paramAnonymousDialogInterface)
+                  {
+                    kyy.kqh = null;
+                  }
+                }, ktj);
+                return;
+              }
+              com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpKNhhU94SG29mhdCBfY2C/bywst5XLPb6E=", "imgSid:" + ktj.ktL + " img len" + ktj.ktN.length + " " + com.tencent.mm.compatible.util.f.oZ());
+              kyy.kqh.a(ktj.ktO, ktj.ktN, ktj.ktL, ktj.ktM);
+              return;
+            }
+            if (paramj.getType() != 145) {
+              break;
+            }
+            ah.tE().b(145, this);
+          } while (((com.tencent.mm.modelfriend.u)paramj).va() != 17);
+          if ((paramInt1 == 0) && (paramInt2 == 0))
+          {
+            ktj.cbh = ((com.tencent.mm.modelfriend.u)paramj).getUsername();
+            ktj.ktJ = "";
+            ktj.ktK = ((com.tencent.mm.modelfriend.u)paramj).yM();
+            ksM = new a(new a.a()
+            {
+              public final void a(ProgressDialog paramAnonymousProgressDialog)
+              {
+                kyy.coM = paramAnonymousProgressDialog;
+              }
+            }, ((com.tencent.mm.modelfriend.u)paramj).getUsername(), ((com.tencent.mm.modelfriend.u)paramj).yM(), kyy.aBH);
+            ksM.i(kyy);
             return;
           }
-          com.tencent.mm.ui.base.h.g(iyI, a.n.regbymobile_reg_mobile_format_err_msg, a.n.regbymobile_reg_mobile_format_err_title);
-          return;
-        }
-      } while (paramj.getType() != 145);
-      i = ((ag)paramj).uM();
-      if (i == 12)
-      {
-        if ((paramInt2 == -36) || (paramInt2 == -35) || (paramInt2 == -3))
-        {
-          paramj = ((ag)paramj).xY();
-          if (!com.tencent.mm.sdk.platformtools.bn.iW(paramj)) {
-            iyI.emi = paramj.trim();
-          }
-          iyI.emi = am.xx(iyI.emi);
-          ivt = (iyI.itZ + iyI.emi);
-          com.tencent.mm.plugin.a.b.b(true, ax.tf() + "," + getClass().getName() + ",F200_200," + ax.eN("F200_200") + ",1");
-          paramString = a.cR(paramString);
-          if (paramString != null)
+          if (paramInt2 == -30)
           {
-            paramString.a(iyI, new i(this), new j(this));
+            com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + getClass().getName() + ",L200_900_phone," + ah.fd("L200_900_phone") + ",1");
+            localObject = cVasL;
+            MobileVerifyUI localMobileVerifyUI = kyy;
+            paramString = (String)localObject;
+            if (ay.kz((String)localObject)) {
+              paramString = kyy.getString(2131427710);
+            }
+            com.tencent.mm.ui.base.g.a(localMobileVerifyUI, paramString, "", kyy.getString(2131427711), kyy.getString(2131427712), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+            {
+              public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+              {
+                if (com.tencent.mm.protocal.b.iUg)
+                {
+                  paramAnonymousDialogInterface = kyy.getString(2131427756, new Object[] { "0x" + Integer.toHexString(com.tencent.mm.protocal.b.iUf), com.tencent.mm.sdk.platformtools.t.aUB() });
+                  com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpKNhhU94SG29mhdCBfY2C/bywst5XLPb6E=", "url " + paramAnonymousDialogInterface);
+                  Intent localIntent = new Intent();
+                  localIntent.putExtra("rawUrl", paramAnonymousDialogInterface);
+                  localIntent.putExtra("showShare", false);
+                  localIntent.putExtra("show_bottom", false);
+                  localIntent.putExtra("needRedirect", false);
+                  localIntent.putExtra("neverGetA8Key", true);
+                  localIntent.putExtra("hardcode_jspermission", JsapiPermissionWrapper.iUp);
+                  localIntent.putExtra("hardcode_general_ctrl", GeneralControlWrapper.iUm);
+                  com.tencent.mm.plugin.a.a.coa.j(localIntent, kyy);
+                  return;
+                }
+                paramAnonymousDialogInterface = new Intent();
+                paramAnonymousDialogInterface.putExtra("regsetinfo_ticket", ((com.tencent.mm.modelfriend.u)paramj).yN());
+                paramAnonymousDialogInterface.putExtra("regsetinfo_user", kyy.aBH);
+                paramAnonymousDialogInterface.putExtra("regsetinfo_ismobile", 1);
+                paramAnonymousDialogInterface.putExtra("regsetinfo_NextControl", ((com.tencent.mm.modelfriend.u)paramj).yQ());
+                paramAnonymousDialogInterface.setClass(kyy, RegSetInfoUI.class);
+                com.tencent.mm.plugin.a.b.kC("R200_950_olduser");
+                kyy.startActivity(paramAnonymousDialogInterface);
+                com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + getClass().getName() + ",L200_900_phone," + ah.fd("L200_900_phone") + ",2");
+              }
+            }, new DialogInterface.OnClickListener()
+            {
+              public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+              {
+                com.tencent.mm.plugin.a.b.kC("L200_100");
+                paramAnonymousDialogInterface = new Intent(kyy, MobileInputUI.class);
+                paramAnonymousDialogInterface.putExtra("mobile_input_purpose", 1);
+                paramAnonymousDialogInterface.addFlags(67108864);
+                kyy.startActivity(paramAnonymousDialogInterface);
+                com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + getClass().getName() + ",L200_900_phone," + ah.fd("L200_900_phone") + ",2");
+              }
+            });
             return;
           }
-          aMl();
-          com.tencent.mm.plugin.a.b.b(true, ax.tf() + "," + getClass().getName() + ",F200_200," + ax.eN("F200_200") + ",2");
-          return;
+          if (paramInt2 == -51)
+          {
+            paramString = com.tencent.mm.e.a.cV(paramString);
+            if (paramString != null)
+            {
+              paramString.a(kyy, null, null);
+              return;
+            }
+            com.tencent.mm.ui.base.g.e(kyy, 2131428673, 2131428671);
+            return;
+          }
+        } while (kyy.m(paramInt1, paramInt2, paramString));
+        if (paramj.getType() != 701) {
+          break;
         }
-        if (paramInt2 == -34)
-        {
-          com.tencent.mm.ui.base.h.x(iyI, iyI.getString(a.n.bind_mcontact_err_freq_limit), "");
-          return;
-        }
-        Toast.makeText(iyI, iyI.getString(a.n.bind_mcontact_verify_err, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
-      }
-    } while ((i != 8) || (paramInt2 != 0));
-    paramString = new Intent();
-    paramString.putExtra("bindmcontact_mobile", iyI.itZ + " " + iyI.ivq.getMobileNumber());
-    paramString.putExtra("bindmcontact_shortmobile", iyI.emi);
-    paramString.putExtra("country_name", iyI.bFX);
-    paramString.putExtra("couttry_code", iyI.bqA);
-    paramString.putExtra("mobileverify_countdownsec", ((ag)paramj).ya());
-    paramString.putExtra("mobileverify_countdownstyle", ((ag)paramj).yb());
-    paramString.putExtra("mobileverify_fb", ((ag)paramj).yc());
-    paramString.putExtra("mobileverify_reg_qq", ((ag)paramj).ye());
-    paramString.putExtra("mobile_verify_purpose", 3);
-    paramString.setClass(iyI, MobileVerifyUI.class);
-    iyI.startActivity(paramString);
+        paramString = com.tencent.mm.e.a.cV(paramString);
+      } while ((paramString != null) && (paramString.a(kyy, null, null)));
+    } while ((paramInt1 == 0) && (paramInt2 == 0));
+    Toast.makeText(kyy, kyy.getString(2131428616, new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) }), 0).show();
   }
   
-  public final void a(MobileInputUI paramMobileInputUI)
+  public final void a(MobileVerifyUI paramMobileVerifyUI)
   {
-    iyI = paramMobileInputUI;
-    itO.requestFocus();
-    paramMobileInputUI.aeG();
-    String str2 = paramMobileInputUI.getString(a.n.regbymoile_reg_title);
-    String str1 = str2;
-    if (com.tencent.mm.protocal.b.hgp) {
-      str1 = str2 + paramMobileInputUI.getString(a.n.alpha_version_alpha);
-    }
-    paramMobileInputUI.At(str1);
-    iyS.setVisibility(8);
-    ivv.setVisibility(8);
-    ivu.setVisibility(8);
+    kyy = paramMobileVerifyUI;
   }
   
-  public final void nv(int paramInt)
+  public final boolean qq(int paramInt)
   {
-    switch (1.iyK[(paramInt - 1)])
+    switch (9.kyB[(paramInt - 1)])
     {
     default: 
-      return;
+      return false;
+    case 1: 
+      com.tencent.mm.plugin.a.b.kC("L200_100");
+      localObject = new Intent(kyy, MobileInputUI.class);
+      ((Intent)localObject).putExtra("mobile_input_purpose", 1);
+      ((Intent)localObject).addFlags(67108864);
+      kyy.startActivity((Intent)localObject);
+      kyy.finish();
+      return false;
+    case 2: 
+      ah.tE().a(145, this);
+      localObject = new com.tencent.mm.modelfriend.u(kyy.aBH, 17, kyy.kxy.getText().toString().trim(), 0, "");
+      ah.tE().d((j)localObject);
+      localMobileVerifyUI1 = kyy;
+      localMobileVerifyUI2 = kyy;
+      kyy.getString(2131430877);
+      coM = com.tencent.mm.ui.base.g.a(localMobileVerifyUI2, kyy.getString(2131428614), true, new DialogInterface.OnCancelListener()
+      {
+        public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+        {
+          ah.tE().c(localObject);
+          ah.tE().b(145, g.this);
+        }
+      });
+      return false;
+    case 3: 
+      com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + getClass().getName() + ",R200_400," + ah.fd("R200_400") + ",1");
+      ah.tE().a(145, this);
+      localObject = new com.tencent.mm.modelfriend.u(kyy.aBH, 16, "", 0, "");
+      ah.tE().d((j)localObject);
+      return false;
     }
-    Object localObject1 = iyI.itZ + iyI.emi;
-    if (iyI.itY != null)
+    com.tencent.mm.plugin.a.b.kD(ah.tx() + "," + getClass().getName() + ",R200_350_auto," + ah.fd("R200_350_auto") + ",1");
+    ah.tE().a(145, this);
+    final Object localObject = new com.tencent.mm.modelfriend.u(kyy.aBH, 17, kyy.kxy.getText().toString().trim(), 0, "");
+    ah.tE().d((j)localObject);
+    MobileVerifyUI localMobileVerifyUI1 = kyy;
+    MobileVerifyUI localMobileVerifyUI2 = kyy;
+    kyy.getString(2131430877);
+    coM = com.tencent.mm.ui.base.g.a(localMobileVerifyUI2, kyy.getString(2131428614), true, new DialogInterface.OnCancelListener()
     {
-      t.d("!56@/B4Tb64lLpKsMp00pgLFBsZYpsv1uT3yfw2cwIJseLbhc3CqnDEQew==", "already checking ");
-      return;
-    }
-    Object localObject2 = iyI;
-    MobileInputUI localMobileInputUI = iyI;
-    iyI.getString(a.n.app_tip);
-    itY = com.tencent.mm.ui.base.h.a(localMobileInputUI, iyI.getString(a.n.regbyfacebook_reg_setpwd_exiting), true, new h(this));
-    localObject2 = iyI.ivq.getMobileNumber();
-    if ((ivs != null) && (ivt != null) && (!((String)localObject2).equals(ivs)) && (((String)localObject2).equals(ivt))) {
-      paramInt = 1;
-    }
-    for (;;)
-    {
-      localObject1 = new ag((String)localObject1, 12, "", 0, "");
-      ((ag)localObject1).da(ivB);
-      ((ag)localObject1).db(paramInt);
-      ax.tm().d((com.tencent.mm.q.j)localObject1);
-      ivs = iyI.ivq.getMobileNumber();
-      ivB += 1;
-      return;
-      if ((ivs != null) && (ivt != null) && (!ivt.equals(ivs)) && (!((String)localObject2).equals(ivt))) {
-        paramInt = 2;
-      } else {
-        paramInt = 0;
+      public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+      {
+        ah.tE().c(localObject);
+        ah.tE().b(145, g.this);
       }
-    }
+    });
+    return false;
   }
   
   public final void start()
   {
-    ax.tm().a(145, this);
-    com.tencent.mm.plugin.a.b.b(true, ax.tf() + "," + getClass().getName() + ",F200_100," + ax.eN("F200_100") + ",1");
-    com.tencent.mm.plugin.a.b.iY("F200_100");
-    ivB = 0;
+    com.tencent.mm.plugin.a.b.b(true, ah.tx() + "," + getClass().getName() + ",L200_400," + ah.fd("L200_400") + ",1");
+    com.tencent.mm.plugin.a.b.kB("L200_400");
+    ah.tE().a(701, this);
   }
   
   public final void stop()
   {
-    ax.tm().b(145, this);
-    com.tencent.mm.plugin.a.b.b(false, ax.tf() + "," + getClass().getName() + ",F200_100," + ax.eN("F200_100") + ",2");
+    int i = 2;
+    if (kyy.kyZ != -1) {
+      i = kyy.kyZ;
+    }
+    com.tencent.mm.plugin.a.b.b(false, ah.tx() + "," + getClass().getName() + ",L200_400," + ah.fd("L200_400") + "," + i);
+    ah.tE().b(701, this);
   }
 }
 

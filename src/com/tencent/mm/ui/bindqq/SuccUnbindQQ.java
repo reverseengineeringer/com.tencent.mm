@@ -1,22 +1,29 @@
 package com.tencent.mm.ui.bindqq;
 
 import android.os.Bundle;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import com.tencent.mm.ui.MMWizardActivity;
 
 public class SuccUnbindQQ
   extends MMWizardActivity
 {
-  protected final void DV()
+  protected final void Gb()
   {
-    nh(a.n.unbind_qq);
-    a(0, getString(a.n.app_finish), new ar(this));
+    qb(2131428786);
+    a(0, getString(2131430896), new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        SuccUnbindQQ.a(SuccUnbindQQ.this);
+        return true;
+      }
+    });
   }
   
   protected final int getLayoutId()
   {
-    return a.k.succ_unbindqq;
+    return 2131363111;
   }
   
   public void onCreate(Bundle paramBundle)
@@ -32,7 +39,7 @@ public class SuccUnbindQQ
   protected void onResume()
   {
     super.onResume();
-    DV();
+    Gb();
   }
 }
 

@@ -15,13 +15,13 @@
 
 
 # static fields
-.field public static final enum gOA:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+.field public static final enum iFR:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
-.field public static final enum gOB:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+.field public static final enum iFS:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
-.field private static final synthetic gOC:[Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+.field public static final enum iFT:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
-.field public static final enum gOz:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+.field private static final synthetic iFU:[Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
 
 # direct methods
@@ -35,14 +35,14 @@
 
     const/4 v2, 0x0
 
-    .line 23
+    .line 24
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     const-string/jumbo v1, "LOGIN_OK"
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOz:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFR:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
@@ -50,7 +50,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOA:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFS:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     new-instance v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
@@ -58,26 +58,26 @@
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOB:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFT:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
-    .line 22
+    .line 23
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOz:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFR:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOA:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFS:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOB:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFT:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOC:[Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFU:[Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     return-void
 .end method
@@ -86,7 +86,7 @@
     .locals 0
 
     .prologue
-    .line 22
+    .line 23
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +96,7 @@
     .locals 1
 
     .prologue
-    .line 22
+    .line 23
     const-class v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,8 +112,8 @@
     .locals 1
 
     .prologue
-    .line 22
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOC:[Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    .line 23
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->iFU:[Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->clone()Ljava/lang/Object;
 

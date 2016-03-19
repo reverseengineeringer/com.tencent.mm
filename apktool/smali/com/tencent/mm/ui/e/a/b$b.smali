@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic jnV:Lcom/tencent/mm/ui/e/a/b;
+.field final synthetic ltm:Lcom/tencent/mm/ui/e/a/b;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 20
-    iput-object p1, p0, Lcom/tencent/mm/ui/e/a/b$b;->jnV:Lcom/tencent/mm/ui/e/a/b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/e/a/b$b;->ltm:Lcom/tencent/mm/ui/e/a/b;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/e/a/a$b;-><init>(Lcom/tencent/mm/ui/e/a/a;)V
 
@@ -42,7 +42,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$k;->fts_header_item:I
+    const v1, 0x7f0a04bb
 
     const/4 v2, 0x0
 
@@ -51,14 +51,14 @@
     move-result-object v2
 
     .line 26
-    iget-object v0, p0, Lcom/tencent/mm/ui/e/a/b$b;->jnV:Lcom/tencent/mm/ui/e/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e/a/b$b;->ltm:Lcom/tencent/mm/ui/e/a/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/e/a/b;->jnT:Lcom/tencent/mm/ui/e/a/b$a;
+    iget-object v0, v0, Lcom/tencent/mm/ui/e/a/b;->ltl:Lcom/tencent/mm/ui/e/a/b$a;
 
     check-cast v0, Lcom/tencent/mm/ui/e/a/b$a;
 
     .line 27
-    sget v1, Lcom/tencent/mm/a$i;->header_tv:I
+    const v1, 0x7f07081f
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -66,25 +66,25 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/e/a/b$a;->cEY:Landroid/widget/TextView;
+    iput-object v1, v0, Lcom/tencent/mm/ui/e/a/b$a;->dcT:Landroid/widget/TextView;
 
     .line 28
-    sget v1, Lcom/tencent/mm/a$i;->padding_view:I
+    const v1, 0x7f07033f
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/e/a/b$a;->jnU:Landroid/view/View;
+    iput-object v1, v0, Lcom/tencent/mm/ui/e/a/b$a;->fdW:Landroid/view/View;
 
     .line 29
-    sget v1, Lcom/tencent/mm/a$i;->search_item_content_layout:I
+    const v1, 0x7f0703cf
 
     invoke-virtual {v2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/e/a/b$a;->cvG:Landroid/view/View;
+    iput-object v1, v0, Lcom/tencent/mm/ui/e/a/b$a;->cMt:Landroid/view/View;
 
     .line 31
     invoke-virtual {v2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
@@ -101,42 +101,42 @@
     check-cast p2, Lcom/tencent/mm/ui/e/a/b$a;
 
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/ui/e/a/b$b;->jnV:Lcom/tencent/mm/ui/e/a/b;
+    iget-object v0, p0, Lcom/tencent/mm/ui/e/a/b$b;->ltm:Lcom/tencent/mm/ui/e/a/b;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/e/a/b;->jiB:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/ui/e/a/b;->lnf:Ljava/lang/String;
 
-    iget-object v1, p2, Lcom/tencent/mm/ui/e/a/b$a;->cEY:Landroid/widget/TextView;
+    iget-object v1, p2, Lcom/tencent/mm/ui/e/a/b$a;->dcT:Landroid/widget/TextView;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/modelsearch/h;->b(Ljava/lang/String;Landroid/widget/TextView;)Z
+    invoke-static {v0, v1}, Lcom/tencent/mm/modelsearch/f;->b(Ljava/lang/String;Landroid/widget/TextView;)Z
 
-    .line 40
-    iget-object v0, p0, Lcom/tencent/mm/ui/e/a/b$b;->jnV:Lcom/tencent/mm/ui/e/a/b;
+    .line 39
+    iget-object v0, p0, Lcom/tencent/mm/ui/e/a/b$b;->ltm:Lcom/tencent/mm/ui/e/a/b;
 
     iget v0, v0, Lcom/tencent/mm/ui/e/a/a;->position:I
 
     if-nez v0, :cond_0
 
-    .line 41
-    iget-object v0, p2, Lcom/tencent/mm/ui/e/a/b$a;->jnU:Landroid/view/View;
+    .line 40
+    iget-object v0, p2, Lcom/tencent/mm/ui/e/a/b$a;->fdW:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 45
+    .line 44
     :goto_0
-    iget-object v0, p2, Lcom/tencent/mm/ui/e/a/b$a;->cvG:Landroid/view/View;
+    iget-object v0, p2, Lcom/tencent/mm/ui/e/a/b$a;->cMt:Landroid/view/View;
 
-    sget v1, Lcom/tencent/mm/a$h;->list_thicklinecell_bg:I
+    const v1, 0x7f040664
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 46
+    .line 45
     return-void
 
-    .line 43
+    .line 42
     :cond_0
-    iget-object v0, p2, Lcom/tencent/mm/ui/e/a/b$a;->jnU:Landroid/view/View;
+    iget-object v0, p2, Lcom/tencent/mm/ui/e/a/b$a;->fdW:Landroid/view/View;
 
     const/4 v1, 0x0
 
@@ -149,7 +149,7 @@
     .locals 1
 
     .prologue
-    .line 50
+    .line 49
     const/4 v0, 0x0
 
     return v0

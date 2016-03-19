@@ -1,39 +1,53 @@
 package com.tencent.mm.ui.chatting;
 
-import android.graphics.Bitmap;
-import android.graphics.Matrix;
-import com.tencent.mm.sdk.platformtools.t;
+import android.view.ContextMenu;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import com.tencent.mm.storage.ag;
 
 final class ce
-  implements Runnable
+  extends cb
 {
-  ce(ChattingImageBGView paramChattingImageBGView) {}
-  
-  public final void run()
+  public ce()
   {
-    if (ChattingImageBGView.a(iUa) == null)
+    super(27);
+  }
+  
+  public final View a(LayoutInflater paramLayoutInflater, View paramView)
+  {
+    Object localObject;
+    if ((paramView != null) && (paramView.getTag() != null))
     {
-      t.w("!44@/B4Tb64lLpKwUcOR+EdWctGDzfdAEkAyxbpaMbRDirY=", "want to reset matrix, but bmp is null");
-      return;
+      localObject = paramView;
+      if (getTagtype == eLV) {}
     }
-    if (ChattingImageBGView.a(iUa).getWidth() == 0) {
-      t.w("!44@/B4Tb64lLpKwUcOR+EdWctGDzfdAEkAyxbpaMbRDirY=", "want to reset matrix, but measured width error");
-    }
-    Matrix localMatrix = new Matrix();
-    float f2 = iUa.getMeasuredWidth() / ChattingImageBGView.a(iUa).getWidth();
-    float f1 = iUa.getMeasuredHeight() / ChattingImageBGView.a(iUa).getHeight();
-    t.d("!44@/B4Tb64lLpKwUcOR+EdWctGDzfdAEkAyxbpaMbRDirY=", "scaleW[%f], scaleH[%f] measured width[%d] measured height[%d]", new Object[] { Float.valueOf(f2), Float.valueOf(f1), Integer.valueOf(iUa.getMeasuredWidth()), Integer.valueOf(iUa.getMeasuredHeight()) });
-    if (f2 > f1) {
-      localMatrix.setScale(f2, f2);
-    }
-    for (;;)
+    else
     {
-      iUa.setImageMatrix(localMatrix);
-      return;
-      localMatrix.setScale(f1, f1);
-      f2 = ChattingImageBGView.a(iUa).getWidth();
-      localMatrix.postTranslate((iUa.getMeasuredWidth() - f2 * f1) / 2.0F, 0.0F);
+      localObject = new ax(paramLayoutInflater, 2131361991);
+      ((View)localObject).setTag(new ed(eLV).aI((View)localObject));
     }
+    return (View)localObject;
+  }
+  
+  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  {
+    ed.a((ed)parama, paramag, true, paramInt, parama1);
+  }
+  
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  {
+    return false;
+  }
+  
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  {
+    return false;
+  }
+  
+  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  {
+    return false;
   }
 }
 

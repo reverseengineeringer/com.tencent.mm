@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base.preference;
 
 public abstract interface DialogPreference$a
 {
-  public abstract void aNy();
+  public abstract void bdp();
 }
 
 /* Location:

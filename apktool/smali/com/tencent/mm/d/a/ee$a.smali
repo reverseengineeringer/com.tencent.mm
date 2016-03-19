@@ -15,25 +15,16 @@
 
 
 # instance fields
-.field public aAs:Ljava/lang/String;
-
-.field public aAt:I
-
-.field public avp:I
+.field public ayJ:Lcom/tencent/mm/protocal/b/agh;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 17
-    const/4 v0, 0x1
-
-    iput v0, p0, Lcom/tencent/mm/d/a/ee$a;->aAt:I
 
     return-void
 .end method

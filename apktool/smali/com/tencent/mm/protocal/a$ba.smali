@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$ba;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -16,18 +16,20 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 3
+    .locals 4
 
     .prologue
-    const/4 v2, 0x0
-
-    .line 598
-    const-string/jumbo v0, "log"
+    .line 1757
+    const-string/jumbo v0, "getSearchData"
 
     const-string/jumbo v1, ""
 
-    invoke-direct {p0, v0, v1, v2, v2}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    const/16 v2, 0x2710
 
-    .line 599
+    const/4 v3, 0x0
+
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+
+    .line 1758
     return-void
 .end method

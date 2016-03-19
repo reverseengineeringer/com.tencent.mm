@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$w;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 761
-    const-string/jumbo v0, "editAddress"
+    .line 1013
+    const-string/jumbo v0, "closeWindow"
 
-    const-string/jumbo v1, "edit_address"
+    const-string/jumbo v1, "close_window"
 
-    const/16 v2, 0x1d
+    const/16 v2, 0x11
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 762
+    .line 1014
     return-void
 .end method

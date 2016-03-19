@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private dtY:Landroid/view/animation/Interpolator;
+.field private elA:Landroid/view/animation/Interpolator;
 
-.field private eBK:Landroid/graphics/Rect;
+.field private fKX:Landroid/graphics/Rect;
 
-.field private eBL:Landroid/view/animation/TranslateAnimation;
+.field private fKY:Landroid/view/animation/TranslateAnimation;
 
-.field private gT:F
+.field private gb:F
 
-.field private iHF:Landroid/view/View;
+.field private kGR:Landroid/view/View;
 
 
 # direct methods
@@ -28,14 +28,14 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBK:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKX:Landroid/graphics/Rect;
 
     .line 51
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->dtY:Landroid/view/animation/Interpolator;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->elA:Landroid/view/animation/Interpolator;
 
     .line 53
     const/4 v0, 0x0
@@ -66,7 +66,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     .line 61
     :cond_0
@@ -84,7 +84,7 @@
     const/4 v4, 0x0
 
     .line 65
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     if-nez v2, :cond_0
 
@@ -121,7 +121,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gT:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gb:F
 
     goto :goto_1
 
@@ -132,18 +132,18 @@
     move-result v2
 
     .line 76
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gT:F
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gb:F
 
     cmpl-float v3, v3, v4
 
     if-nez v3, :cond_2
 
     .line 77
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gT:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gb:F
 
     .line 79
     :cond_2
-    iget v3, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gT:F
+    iget v3, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gb:F
 
     sub-float/2addr v3, v2
 
@@ -155,10 +155,10 @@
     invoke-virtual {p0, v3, v1}, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->scrollBy(II)V
 
     .line 81
-    iput v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gT:F
+    iput v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gb:F
 
     .line 82
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -197,7 +197,7 @@
     if-eqz v1, :cond_1
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBK:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKX:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->isEmpty()Z
 
@@ -206,27 +206,27 @@
     if-eqz v0, :cond_5
 
     .line 84
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBK:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKX:Landroid/graphics/Rect;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
     move-result v2
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getRight()I
 
     move-result v4
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v5, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     invoke-virtual {v5}, Landroid/view/View;->getBottom()I
 
@@ -236,9 +236,9 @@
 
     .line 86
     :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
@@ -246,13 +246,13 @@
 
     sub-int/2addr v1, v3
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     invoke-virtual {v2}, Landroid/view/View;->getTop()I
 
     move-result v2
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getRight()I
 
@@ -260,7 +260,7 @@
 
     sub-int v3, v4, v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     invoke-virtual {v4}, Landroid/view/View;->getBottom()I
 
@@ -272,10 +272,10 @@
 
     .line 91
     :pswitch_2
-    iput v4, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gT:F
+    iput v4, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->gb:F
 
     .line 92
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBK:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKX:Landroid/graphics/Rect;
 
     invoke-virtual {v2}, Landroid/graphics/Rect;->isEmpty()Z
 
@@ -289,7 +289,7 @@
     .line 93
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
@@ -297,7 +297,7 @@
 
     int-to-float v1, v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBK:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKX:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->left:I
 
@@ -305,23 +305,23 @@
 
     invoke-direct {v0, v1, v2, v4, v4}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBL:Landroid/view/animation/TranslateAnimation;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKY:Landroid/view/animation/TranslateAnimation;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBL:Landroid/view/animation/TranslateAnimation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKY:Landroid/view/animation/TranslateAnimation;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->dtY:Landroid/view/animation/Interpolator;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->elA:Landroid/view/animation/Interpolator;
 
     invoke-virtual {v0, v1}, Landroid/view/animation/TranslateAnimation;->setInterpolator(Landroid/view/animation/Interpolator;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBL:Landroid/view/animation/TranslateAnimation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKY:Landroid/view/animation/TranslateAnimation;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getLeft()I
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBK:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKX:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->left:I
 
@@ -335,33 +335,33 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/TranslateAnimation;->setDuration(J)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBL:Landroid/view/animation/TranslateAnimation;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKY:Landroid/view/animation/TranslateAnimation;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->iHF:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->kGR:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBK:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKX:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->left:I
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBK:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKX:Landroid/graphics/Rect;
 
     iget v2, v2, Landroid/graphics/Rect;->top:I
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBK:Landroid/graphics/Rect;
+    iget-object v3, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKX:Landroid/graphics/Rect;
 
     iget v3, v3, Landroid/graphics/Rect;->right:I
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBK:Landroid/graphics/Rect;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKX:Landroid/graphics/Rect;
 
     iget v4, v4, Landroid/graphics/Rect;->bottom:I
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/View;->layout(IIII)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->eBK:Landroid/graphics/Rect;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMSmoothHorizontalScrollView;->fKX:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 

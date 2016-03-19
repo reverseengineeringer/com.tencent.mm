@@ -1,157 +1,217 @@
-.class final Lcom/tencent/mm/q/m;
+.class public final Lcom/tencent/mm/q/m;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/aj$a;
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/q/m$a;,
+        Lcom/tencent/mm/q/m$b;
+    }
+.end annotation
 
 
-# instance fields
-.field final synthetic btM:Lcom/tencent/mm/q/l;
+# static fields
+.field private static bEK:Ljava/util/List;
+
+.field private static bEL:I
+
+.field private static bEM:Lcom/tencent/mm/q/m$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/q/l;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 2
 
     .prologue
-    .line 57
-    iput-object p1, p0, Lcom/tencent/mm/q/m;->btM:Lcom/tencent/mm/q/l;
+    .line 12
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lcom/tencent/mm/q/m;->bEK:Ljava/util/List;
+
+    .line 15
+    const/4 v0, 0x0
+
+    sput v0, Lcom/tencent/mm/q/m;->bEL:I
+
+    .line 36
+    new-instance v0, Lcom/tencent/mm/q/m$a;
+
+    new-instance v1, Lcom/tencent/mm/q/m$b;
+
+    invoke-direct {v1}, Lcom/tencent/mm/q/m$b;-><init>()V
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/q/m$a;-><init>(Lcom/tencent/mm/q/m$b;)V
+
+    sput-object v0, Lcom/tencent/mm/q/m;->bEM:Lcom/tencent/mm/q/m$a;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final lO()Z
-    .locals 7
+.method public static b(Ljava/lang/Runnable;)V
+    .locals 6
 
     .prologue
-    const/4 v1, 0x1
-
     const/4 v0, 0x0
 
-    .line 61
-    iget-object v2, p0, Lcom/tencent/mm/q/m;->btM:Lcom/tencent/mm/q/l;
+    const/4 v2, 0x0
 
-    invoke-static {v2}, Lcom/tencent/mm/q/l;->a(Lcom/tencent/mm/q/l;)Lcom/tencent/mm/q/l$a;
+    .line 18
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
-    move-result-object v2
+    move-result v1
 
-    if-nez v2, :cond_0
+    if-nez v1, :cond_1
 
-    .line 67
-    :goto_0
-    return v0
-
-    .line 65
+    .line 29
     :cond_0
-    const-string/jumbo v2, "!32@/B4Tb64lLpK+IBX8XDgnvp5uQTqcdPIz"
+    :goto_0
+    return-void
 
-    const-string/jumbo v3, "onQueueIdle, running=%d, waiting=%d, foreground=%b"
-
-    const/4 v4, 0x3
-
-    new-array v4, v4, [Ljava/lang/Object;
-
-    iget-object v5, p0, Lcom/tencent/mm/q/m;->btM:Lcom/tencent/mm/q/l;
-
-    invoke-static {v5}, Lcom/tencent/mm/q/l;->b(Lcom/tencent/mm/q/l;)Ljava/util/Vector;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/util/Vector;->size()I
-
-    move-result v5
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v0
-
-    iget-object v5, p0, Lcom/tencent/mm/q/m;->btM:Lcom/tencent/mm/q/l;
-
-    invoke-static {v5}, Lcom/tencent/mm/q/l;->c(Lcom/tencent/mm/q/l;)Ljava/util/Vector;
-
-    move-result-object v5
-
-    invoke-virtual {v5}, Ljava/util/Vector;->size()I
-
-    move-result v5
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v5
-
-    aput-object v5, v4, v1
-
-    const/4 v5, 0x2
-
-    iget-object v6, p0, Lcom/tencent/mm/q/m;->btM:Lcom/tencent/mm/q/l;
-
-    invoke-static {v6}, Lcom/tencent/mm/q/l;->d(Lcom/tencent/mm/q/l;)Z
-
-    move-result v6
-
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v6
-
-    aput-object v6, v4, v5
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 66
-    iget-object v2, p0, Lcom/tencent/mm/q/m;->btM:Lcom/tencent/mm/q/l;
-
-    invoke-static {v2}, Lcom/tencent/mm/q/l;->a(Lcom/tencent/mm/q/l;)Lcom/tencent/mm/q/l$a;
-
-    move-result-object v2
-
-    iget-object v3, p0, Lcom/tencent/mm/q/m;->btM:Lcom/tencent/mm/q/l;
-
-    iget-object v4, p0, Lcom/tencent/mm/q/m;->btM:Lcom/tencent/mm/q/l;
-
-    invoke-static {v4}, Lcom/tencent/mm/q/l;->e(Lcom/tencent/mm/q/l;)Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    iget-object v4, p0, Lcom/tencent/mm/q/m;->btM:Lcom/tencent/mm/q/l;
-
-    invoke-static {v4}, Lcom/tencent/mm/q/l;->b(Lcom/tencent/mm/q/l;)Ljava/util/Vector;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/util/Vector;->isEmpty()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    iget-object v4, p0, Lcom/tencent/mm/q/m;->btM:Lcom/tencent/mm/q/l;
-
-    invoke-static {v4}, Lcom/tencent/mm/q/l;->c(Lcom/tencent/mm/q/l;)Ljava/util/Vector;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/util/Vector;->isEmpty()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_1
-
-    move v0, v1
-
+    .line 23
     :cond_1
-    invoke-interface {v2, v3, v0}, Lcom/tencent/mm/q/l$a;->a(Lcom/tencent/mm/q/l;Z)V
+    invoke-static {}, Lcom/tencent/mm/q/n;->vs()Lcom/tencent/mm/q/i;
 
-    move v0, v1
+    move-result-object v1
 
-    .line 67
+    const-string/jumbo v3, "select username from img_flag where username not in (select username from rcontact ) and username not like \"%@qqim\" and username not like \"%@bottle\";"
+
+    iget-object v1, v1, Lcom/tencent/mm/q/i;->bCw:Lcom/tencent/mm/az/g;
+
+    invoke-virtual {v1, v3, v0}, Lcom/tencent/mm/az/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v3
+
+    invoke-interface {v3}, Landroid/database/Cursor;->getCount()I
+
+    move-result v4
+
+    if-nez v4, :cond_2
+
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
+
+    .line 24
+    :goto_1
+    sput-object v0, Lcom/tencent/mm/q/m;->bEK:Ljava/util/List;
+
+    if-eqz v0, :cond_0
+
+    sget-object v0, Lcom/tencent/mm/q/m;->bEK:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    .line 27
+    sget-object v0, Lcom/tencent/mm/q/m;->bEM:Lcom/tencent/mm/q/m$a;
+
+    iget-object v0, v0, Lcom/tencent/mm/q/m$a;->bEN:Lcom/tencent/mm/q/m$b;
+
+    iput-object p0, v0, Lcom/tencent/mm/q/m$b;->bEO:Ljava/lang/Runnable;
+
+    .line 28
+    sget-object v0, Lcom/tencent/mm/q/m;->bEM:Lcom/tencent/mm/q/m$a;
+
+    const-wide/16 v1, 0xa
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/q/m$a;->ds(J)V
+
     goto :goto_0
+
+    .line 23
+    :cond_2
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move v1, v2
+
+    :goto_2
+    if-ge v1, v4, :cond_3
+
+    invoke-interface {v3, v1}, Landroid/database/Cursor;->moveToPosition(I)Z
+
+    invoke-interface {v3, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-interface {v0, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_2
+
+    :cond_3
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
+
+    goto :goto_1
+.end method
+
+.method public static vm()V
+    .locals 1
+
+    .prologue
+    .line 32
+    const/4 v0, 0x0
+
+    sput v0, Lcom/tencent/mm/q/m;->bEL:I
+
+    .line 33
+    sget-object v0, Lcom/tencent/mm/q/m;->bEM:Lcom/tencent/mm/q/m$a;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/q/m$a;->aUF()V
+
+    .line 34
+    return-void
+.end method
+
+.method static synthetic vn()Ljava/util/List;
+    .locals 1
+
+    .prologue
+    .line 9
+    sget-object v0, Lcom/tencent/mm/q/m;->bEK:Ljava/util/List;
+
+    return-object v0
+.end method
+
+.method static synthetic vo()I
+    .locals 1
+
+    .prologue
+    .line 9
+    sget v0, Lcom/tencent/mm/q/m;->bEL:I
+
+    return v0
+.end method
+
+.method static synthetic vp()I
+    .locals 1
+
+    .prologue
+    .line 9
+    const/4 v0, 0x0
+
+    sput v0, Lcom/tencent/mm/q/m;->bEL:I
+
+    return v0
+.end method
+
+.method static synthetic vq()I
+    .locals 2
+
+    .prologue
+    .line 9
+    sget v0, Lcom/tencent/mm/q/m;->bEL:I
+
+    add-int/lit8 v1, v0, 0x1
+
+    sput v1, Lcom/tencent/mm/q/m;->bEL:I
+
+    return v0
 .end method

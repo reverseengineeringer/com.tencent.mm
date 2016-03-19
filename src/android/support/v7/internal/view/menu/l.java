@@ -1,11 +1,29 @@
 package android.support.v7.internal.view.menu;
 
-import android.support.v4.view.h.b;
+import android.content.Context;
 
-final class l
-  implements h.b
+public abstract interface l
 {
-  l(k.a parama, k paramk) {}
+  public abstract void a(Context paramContext, f paramf);
+  
+  public abstract void a(f paramf, boolean paramBoolean);
+  
+  public abstract boolean a(p paramp);
+  
+  public abstract boolean bj();
+  
+  public abstract boolean d(h paramh);
+  
+  public abstract boolean e(h paramh);
+  
+  public abstract void q(boolean paramBoolean);
+  
+  public static abstract interface a
+  {
+    public abstract void a(f paramf, boolean paramBoolean);
+    
+    public abstract boolean b(f paramf);
+  }
 }
 
 /* Location:

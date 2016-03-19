@@ -6,7 +6,7 @@
 # instance fields
 .field private final TAG:Ljava/lang/String;
 
-.field private isw:Ljava/util/List;
+.field private krC:Ljava/util/List;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/a/b;->isw:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/ui/a/b;->krC:Ljava/util/List;
 
     .line 25
     return-void
@@ -35,12 +35,12 @@
 
 
 # virtual methods
-.method public final Ax(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
+.method public final Gn(Ljava/lang/String;)Lcom/tencent/mm/ui/a/b;
     .locals 1
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/ui/a/b;->isw:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/a/b;->krC:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
@@ -48,14 +48,14 @@
     return-object p0
 .end method
 
-.method public final am(Landroid/view/View;)V
+.method public final an(Landroid/view/View;)V
     .locals 4
 
     .prologue
     .line 37
     if-eqz p1, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/a/b;->isw:Ljava/util/List;
+    iget-object v0, p0, Lcom/tencent/mm/ui/a/b;->krC:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
 
@@ -67,7 +67,7 @@
     const-string/jumbo v0, ""
 
     .line 43
-    iget-object v1, p0, Lcom/tencent/mm/ui/a/b;->isw:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/a/b;->krC:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 

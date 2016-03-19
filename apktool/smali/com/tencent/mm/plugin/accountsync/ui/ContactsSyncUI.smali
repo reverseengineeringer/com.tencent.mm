@@ -22,9 +22,9 @@
 
 
 # instance fields
-.field private bXr:Landroid/accounts/AccountAuthenticatorResponse;
+.field private coC:Landroid/accounts/AccountAuthenticatorResponse;
 
-.field bXs:Landroid/os/Bundle;
+.field coD:Landroid/os/Bundle;
 
 
 # direct methods
@@ -38,10 +38,10 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
     .line 65
-    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     .line 66
-    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXs:Landroid/os/Bundle;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coD:Landroid/os/Bundle;
 
     .line 298
     return-void
@@ -49,7 +49,7 @@
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 10
 
     .prologue
@@ -64,13 +64,13 @@
     const/4 v2, 0x0
 
     .line 98
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tq()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tI()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tu()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tM()Z
 
     move-result v0
 
@@ -111,7 +111,7 @@
 
     const-string/jumbo v1, "initView fail, intent is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 105
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->finish()V
@@ -126,7 +126,7 @@
 
     const-string/jumbo v6, "contact_sync_scene"
 
-    invoke-static {v0, v6, v5}, Lcom/tencent/mm/sdk/platformtools/o;->a(Landroid/content/Intent;Ljava/lang/String;I)I
+    invoke-static {v0, v6, v5}, Lcom/tencent/mm/sdk/platformtools/p;->a(Landroid/content/Intent;Ljava/lang/String;I)I
 
     move-result v0
 
@@ -170,7 +170,7 @@
 
     const-string/jumbo v1, "unkown scene, finish"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 141
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->finish()V
@@ -222,10 +222,10 @@
 
     move-result-object v8
 
-    invoke-static {v7, v8}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v7, v8}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 118
-    invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v6}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v7
 
@@ -324,7 +324,7 @@
     if-eqz v0, :cond_12
 
     .line 207
-    invoke-interface {v0, p0}, Lcom/tencent/mm/plugin/accountsync/model/a$a;->aX(Landroid/content/Context;)I
+    invoke-interface {v0, p0}, Lcom/tencent/mm/plugin/accountsync/model/b$a;->bn(Landroid/content/Context;)I
 
     move-result v0
 
@@ -355,14 +355,14 @@
 
     const-string/jumbo v3, "k_phone_num"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/o;->c(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/p;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 152
-    new-instance v0, Lcom/tencent/mm/plugin/accountsync/model/a$b;
+    new-instance v0, Lcom/tencent/mm/plugin/accountsync/model/b$b;
 
-    invoke-direct {v0, v1, v3, v2}, Lcom/tencent/mm/plugin/accountsync/model/a$b;-><init>(ILjava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v0, v1, v3, v2}, Lcom/tencent/mm/plugin/accountsync/model/b$b;-><init>(ILjava/lang/String;Landroid/net/Uri;)V
 
     goto :goto_2
 
@@ -383,16 +383,16 @@
 
     const-string/jumbo v3, "k_phone_num"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/o;->c(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/p;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 158
-    new-instance v0, Lcom/tencent/mm/plugin/accountsync/model/a$b;
+    new-instance v0, Lcom/tencent/mm/plugin/accountsync/model/b$b;
 
     const/4 v5, 0x3
 
-    invoke-direct {v0, v5, v3, v2}, Lcom/tencent/mm/plugin/accountsync/model/a$b;-><init>(ILjava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v0, v5, v3, v2}, Lcom/tencent/mm/plugin/accountsync/model/b$b;-><init>(ILjava/lang/String;Landroid/net/Uri;)V
 
     goto :goto_2
 
@@ -413,16 +413,16 @@
 
     const-string/jumbo v3, "k_phone_num"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/o;->c(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/p;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 164
-    new-instance v0, Lcom/tencent/mm/plugin/accountsync/model/a$b;
+    new-instance v0, Lcom/tencent/mm/plugin/accountsync/model/b$b;
 
     const/4 v5, 0x4
 
-    invoke-direct {v0, v5, v3, v2}, Lcom/tencent/mm/plugin/accountsync/model/a$b;-><init>(ILjava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v0, v5, v3, v2}, Lcom/tencent/mm/plugin/accountsync/model/b$b;-><init>(ILjava/lang/String;Landroid/net/Uri;)V
 
     goto :goto_2
 
@@ -443,14 +443,14 @@
 
     const-string/jumbo v3, "k_phone_num"
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/o;->c(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/p;->g(Landroid/content/Intent;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
     .line 170
-    new-instance v0, Lcom/tencent/mm/plugin/accountsync/model/a$b;
+    new-instance v0, Lcom/tencent/mm/plugin/accountsync/model/b$b;
 
-    invoke-direct {v0, v4, v3, v2}, Lcom/tencent/mm/plugin/accountsync/model/a$b;-><init>(ILjava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v0, v4, v3, v2}, Lcom/tencent/mm/plugin/accountsync/model/b$b;-><init>(ILjava/lang/String;Landroid/net/Uri;)V
 
     goto :goto_2
 
@@ -467,7 +467,7 @@
     move-result-object v0
 
     .line 175
-    iput-object v3, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iput-object v3, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     .line 176
     if-eqz v0, :cond_c
@@ -479,22 +479,22 @@
     .line 177
     check-cast v0, Landroid/accounts/AccountAuthenticatorResponse;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     .line 179
     :cond_c
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     if-eqz v0, :cond_d
 
     .line 180
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     invoke-virtual {v0}, Landroid/accounts/AccountAuthenticatorResponse;->onRequestContinued()V
 
     .line 182
     :cond_d
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aES()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUK()Ljava/lang/String;
 
     move-result-object v0
 
@@ -521,7 +521,7 @@
 
     const-string/jumbo v5, "k_login_without_bind_mobile"
 
-    invoke-static {v0, v5, v2}, Lcom/tencent/mm/sdk/platformtools/o;->a(Landroid/content/Intent;Ljava/lang/String;Z)Z
+    invoke-static {v0, v5, v2}, Lcom/tencent/mm/sdk/platformtools/p;->a(Landroid/content/Intent;Ljava/lang/String;Z)Z
 
     move-result v0
 
@@ -554,7 +554,7 @@
     move-result-object v0
 
     .line 192
-    iput-object v3, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iput-object v3, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     .line 193
     if-eqz v0, :cond_f
@@ -566,16 +566,16 @@
     .line 194
     check-cast v0, Landroid/accounts/AccountAuthenticatorResponse;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     .line 196
     :cond_f
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     if-eqz v0, :cond_10
 
     .line 197
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     invoke-virtual {v0}, Landroid/accounts/AccountAuthenticatorResponse;->onRequestContinued()V
 
@@ -589,7 +589,7 @@
 
     const-string/jumbo v5, "k_login_without_bind_mobile"
 
-    invoke-static {v3, v5, v2}, Lcom/tencent/mm/sdk/platformtools/o;->a(Landroid/content/Intent;Ljava/lang/String;Z)Z
+    invoke-static {v3, v5, v2}, Lcom/tencent/mm/sdk/platformtools/p;->a(Landroid/content/Intent;Ljava/lang/String;Z)Z
 
     move-result v3
 
@@ -678,7 +678,7 @@
 
     const-string/jumbo v2, "accountAuthenticatorResponse"
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
@@ -694,7 +694,7 @@
 
     const-string/jumbo v1, "unkown scene, finish"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_3
 
@@ -733,19 +733,19 @@
 
     .prologue
     .line 285
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     if-eqz v0, :cond_0
 
     .line 286
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXs:Landroid/os/Bundle;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coD:Landroid/os/Bundle;
 
     if-eqz v0, :cond_1
 
     .line 287
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXs:Landroid/os/Bundle;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coD:Landroid/os/Bundle;
 
     invoke-virtual {v0, v1}, Landroid/accounts/AccountAuthenticatorResponse;->onResult(Landroid/os/Bundle;)V
 
@@ -753,7 +753,7 @@
     :goto_0
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     .line 294
     :cond_0
@@ -764,7 +764,7 @@
 
     .line 289
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->bXr:Landroid/accounts/AccountAuthenticatorResponse;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->coC:Landroid/accounts/AccountAuthenticatorResponse;
 
     const/4 v1, 0x4
 
@@ -797,12 +797,12 @@
 
     const-string/jumbo v1, "onCreate()"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 72
     const-string/jumbo v0, ""
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->At(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->Gj(Ljava/lang/String;)V
 
     .line 73
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->getIntent()Landroid/content/Intent;
@@ -813,7 +813,7 @@
 
     const/4 v2, 0x0
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/o;->a(Landroid/content/Intent;Ljava/lang/String;I)I
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/p;->a(Landroid/content/Intent;Ljava/lang/String;I)I
 
     move-result v0
 
@@ -837,7 +837,7 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 85
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->finish()V
@@ -854,7 +854,7 @@
 
     .line 88
     :pswitch_1
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/accountsync/ui/ContactsSyncUI;->Gb()V
 
     goto :goto_0
 

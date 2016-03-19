@@ -8,38 +8,34 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.modelsearch.h;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.modelsearch.f;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class c
   extends a
 {
-  public String jnW;
-  private b jnX = new b();
-  private a jnY = new a();
+  public String ltn;
+  private b lto = new b();
+  private a ltp = new a();
   
   public c(int paramInt)
   {
     super(12, paramInt);
-    jnL = true;
+    ltd = true;
   }
   
-  public final a.b IR()
+  public final a.b Le()
   {
-    return jnX;
+    return lto;
   }
   
   public final void a(Context paramContext, a.a paramVarArgs)
   {
-    int i = h.dr(eVv);
+    int i = f.dG(ggB);
     if (i < 0) {}
-    for (jnW = "";; jnW = paramContext.getResources().getString(a.n.search_contact_button_find_more, new Object[] { paramContext.getResources().getString(i) }))
+    for (ltn = "";; ltn = paramContext.getResources().getString(2131431370, new Object[] { paramContext.getResources().getString(i) }))
     {
-      t.i("!56@/B4Tb64lLpKLxeMowbLUcFbyZnLcfOYf8yKXo2tSxp4ibz6xubZRvw==", "fillDataItem: tip=%s", new Object[] { jnW });
+      u.i("!56@/B4Tb64lLpKLxeMowbLUcFbyZnLcfOYf8yKXo2tSxp4ibz6xubZRvw==", "fillDataItem: tip=%s", new Object[] { ltn });
       return;
     }
   }
@@ -47,9 +43,9 @@ public final class c
   public final class a
     extends a.a
   {
-    public View cvG;
-    public ImageView cwg;
-    public TextView eBz;
+    public View cMt;
+    public ImageView cNV;
+    public TextView fKK;
     
     public a()
     {
@@ -67,11 +63,11 @@ public final class c
     
     public final View a(Context paramContext, ViewGroup paramViewGroup)
     {
-      paramContext = LayoutInflater.from(paramContext).inflate(a.k.fts_more_item, paramViewGroup, false);
+      paramContext = LayoutInflater.from(paramContext).inflate(2131363034, paramViewGroup, false);
       paramViewGroup = new c.a(c.this);
-      eBz = ((TextView)paramContext.findViewById(a.i.tip_tv));
-      cwg = ((ImageView)paramContext.findViewById(a.i.icon_iv));
-      cvG = paramContext.findViewById(a.i.search_item_content_layout);
+      fKK = ((TextView)paramContext.findViewById(2131166160));
+      cNV = ((ImageView)paramContext.findViewById(2131165516));
+      cMt = paramContext.findViewById(2131166159);
       paramContext.setTag(paramViewGroup);
       return paramContext;
     }
@@ -80,18 +76,18 @@ public final class c
     {
       paramContext = (c.a)parama;
       parama = (c)paramVarArgs;
-      aK(cvG);
-      eBz.setText(jnW);
-      cwg.setImageResource(a.h.fts_more_button_icon);
+      aN(cMt);
+      fKK.setText(ltn);
+      cNV.setImageResource(2130903387);
     }
     
     public final boolean a(Context paramContext, a paramVarArgs)
     {
       paramVarArgs = new Intent();
-      paramVarArgs.putExtra("detail_query", bII);
-      paramVarArgs.putExtra("detail_type", eVv);
-      paramVarArgs.putExtra("Search_Scene", eVC);
-      com.tencent.mm.aj.c.c(paramContext, "search", ".ui.FTSDetailUI", paramVarArgs);
+      paramVarArgs.putExtra("detail_query", aEy);
+      paramVarArgs.putExtra("detail_type", ggB);
+      paramVarArgs.putExtra("Search_Scene", ggI);
+      com.tencent.mm.ar.c.c(paramContext, "search", ".ui.FTSDetailUI", paramVarArgs);
       return true;
     }
   }

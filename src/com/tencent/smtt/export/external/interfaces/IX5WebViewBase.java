@@ -79,6 +79,8 @@ public abstract interface IX5WebViewBase
   
   public abstract Bitmap getFavicon();
   
+  public abstract Object getGamePlayerWebViewClient();
+  
   public abstract HitTestResult getHitTestResult();
   
   public abstract String[] getHttpAuthUsernamePassword(String paramString1, String paramString2);
@@ -176,6 +178,8 @@ public abstract interface IX5WebViewBase
   
   public abstract void setFindListener(FindListener paramFindListener);
   
+  public abstract void setGamePlayerWebViewClient(Object paramObject);
+  
   public abstract void setHorizontalScrollbarOverlay(boolean paramBoolean);
   
   public abstract void setHttpAuthUsernamePassword(String paramString1, String paramString2, String paramString3, String paramString4);
@@ -223,6 +227,7 @@ public abstract interface IX5WebViewBase
     public static final int PHONE_TYPE = 2;
     public static final int SRC_ANCHOR_TYPE = 7;
     public static final int SRC_IMAGE_ANCHOR_TYPE = 8;
+    public static final int TEXT_TYPE = 11;
     public static final int UNKNOWN_TYPE = 0;
     private Object mData;
     private String mExtra;

@@ -1,31 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ib
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFj = new a();
-  public b aFk = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public ib()
   {
-    id = "SnsfillEventInfo";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public String aFl;
-    public ag aFm;
-    public String url;
-  }
-  
-  public static final class b
-  {
-    public boolean auM = false;
+    id = "OnSubCoreInited";
+    jUI = arR;
   }
 }
 

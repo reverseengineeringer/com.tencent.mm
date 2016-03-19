@@ -12,7 +12,7 @@
 
 
 # static fields
-.field private static bUV:Landroid/util/SparseArray;
+.field private static clS:Landroid/util/SparseArray;
 
 
 # direct methods
@@ -25,19 +25,9 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/platformtools/h;->bUV:Landroid/util/SparseArray;
+    sput-object v0, Lcom/tencent/mm/platformtools/h;->clS:Landroid/util/SparseArray;
 
     return-void
-.end method
-
-.method static synthetic Dw()Landroid/util/SparseArray;
-    .locals 1
-
-    .prologue
-    .line 18
-    sget-object v0, Lcom/tencent/mm/platformtools/h;->bUV:Landroid/util/SparseArray;
-
-    return-object v0
 .end method
 
 .method public static final a(ILjava/lang/String;Ljava/util/HashMap;)Lcom/tencent/mm/platformtools/h$a;
@@ -49,7 +39,7 @@
     const/4 v3, 0x0
 
     .line 24
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -68,7 +58,7 @@
     move-result v1
 
     .line 27
-    sget-object v0, Lcom/tencent/mm/platformtools/h;->bUV:Landroid/util/SparseArray;
+    sget-object v0, Lcom/tencent/mm/platformtools/h;->clS:Landroid/util/SparseArray;
 
     invoke-virtual {v0, v1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
@@ -85,16 +75,16 @@
     invoke-direct {v0, p1, v3}, Lcom/tencent/mm/platformtools/h$a;-><init>(Ljava/lang/String;Z)V
 
     .line 30
-    invoke-virtual {v0, p1, p2, v2, v3}, Lcom/tencent/mm/ar/g;->b(Ljava/lang/String;Ljava/util/HashMap;ZZ)Z
+    invoke-virtual {v0, p1, p2, v2, v3}, Lcom/tencent/mm/az/g;->b(Ljava/lang/String;Ljava/util/HashMap;ZZ)Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
     .line 37
-    new-instance v0, Lcom/tencent/mm/model/a;
+    new-instance v0, Lcom/tencent/mm/model/b;
 
-    invoke-direct {v0, v3}, Lcom/tencent/mm/model/a;-><init>(B)V
+    invoke-direct {v0, v3}, Lcom/tencent/mm/model/b;-><init>(B)V
 
     throw v0
 
@@ -106,7 +96,7 @@
 
     .line 40
     :cond_1
-    sget-object v4, Lcom/tencent/mm/platformtools/h;->bUV:Landroid/util/SparseArray;
+    sget-object v4, Lcom/tencent/mm/platformtools/h;->clS:Landroid/util/SparseArray;
 
     invoke-virtual {v4, v1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
@@ -124,9 +114,9 @@
 
     aput-object v6, v5, v3
 
-    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v1, v0, Lcom/tencent/mm/platformtools/h$a;->bUX:Landroid/util/SparseBooleanArray;
+    iget-object v1, v0, Lcom/tencent/mm/platformtools/h$a;->clU:Landroid/util/SparseBooleanArray;
 
     invoke-virtual {v1, p0, v2}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
@@ -135,7 +125,7 @@
 
     .line 43
     :cond_2
-    iget-boolean v1, v0, Lcom/tencent/mm/platformtools/h$a;->bUW:Z
+    iget-boolean v1, v0, Lcom/tencent/mm/platformtools/h$a;->clT:Z
 
     if-nez v1, :cond_4
 
@@ -145,7 +135,7 @@
     invoke-static {v1}, Ljunit/framework/Assert;->assertTrue(Z)V
 
     .line 45
-    invoke-virtual {v0}, Lcom/tencent/mm/platformtools/h$a;->aIo()J
+    invoke-virtual {v0}, Lcom/tencent/mm/platformtools/h$a;->adR()J
 
     move-result-wide v4
 
@@ -169,10 +159,10 @@
 
     move-result-object v1
 
-    check-cast v1, Lcom/tencent/mm/ar/g$b;
+    check-cast v1, Lcom/tencent/mm/az/g$b;
 
     .line 47
-    invoke-interface {v1}, Lcom/tencent/mm/ar/g$b;->lW()[Ljava/lang/String;
+    invoke-interface {v1}, Lcom/tencent/mm/az/g$b;->lr()[Ljava/lang/String;
 
     move-result-object v7
 
@@ -202,13 +192,13 @@
 
     move-result-object v11
 
-    invoke-static {v10, v11}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v10, v11}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 50
     const/4 v10, 0x0
 
     :try_start_0
-    invoke-virtual {v0, v10, v9}, Lcom/tencent/mm/platformtools/h$a;->bx(Ljava/lang/String;Ljava/lang/String;)Z
+    invoke-virtual {v0, v10, v9}, Lcom/tencent/mm/platformtools/h$a;->cj(Ljava/lang/String;Ljava/lang/String;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -269,7 +259,17 @@
 
     .line 56
     :cond_5
-    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/platformtools/h$a;->cO(J)I
+    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/platformtools/h$a;->dI(J)I
 
     goto/16 :goto_1
+.end method
+
+.method static synthetic qV()Landroid/util/SparseArray;
+    .locals 1
+
+    .prologue
+    .line 18
+    sget-object v0, Lcom/tencent/mm/platformtools/h;->clS:Landroid/util/SparseArray;
+
+    return-object v0
 .end method

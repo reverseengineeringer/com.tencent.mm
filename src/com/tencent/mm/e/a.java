@@ -2,62 +2,71 @@ package com.tencent.mm.e;
 
 import android.content.Context;
 import android.content.DialogInterface.OnClickListener;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.base.h;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.base.g;
 import java.util.Map;
 import org.json.JSONObject;
 
 public final class a
 {
-  public int auw;
-  public int aux;
-  public int auy;
-  public String auz;
-  public String desc;
+  public String asL;
+  public int asM;
+  public int asN;
+  public int asO;
+  public String asP;
+  public String boN;
+  public String boO;
+  public int boP;
   public String url;
   
-  private static boolean bN(int paramInt)
+  private static boolean bM(int paramInt)
   {
     if (paramInt == 4) {}
-    while ((paramInt == 1) || (paramInt == 5)) {
+    while ((paramInt == 1) || (paramInt == 5) || (paramInt == 3)) {
       return true;
     }
     return false;
   }
   
-  public static a cR(String paramString)
+  public static a cV(String paramString)
   {
-    if (bn.iW(paramString)) {
+    if (ay.kz(paramString)) {
       return null;
     }
     a locala = new a();
-    paramString = p.z(paramString, "e", null);
+    paramString = q.J(paramString, "e", null);
     if (paramString == null)
     {
-      t.d("!32@mcRQy4rJhxpew8juYpXfC2gRX1mziZs0", "this is not errmsg");
+      u.d("!32@mcRQy4rJhxpew8juYpXfC2gRX1mziZs0", "this is not errmsg");
       return null;
     }
-    desc = ((String)paramString.get(".e.Content"));
+    asL = ((String)paramString.get(".e.Content"));
     url = ((String)paramString.get(".e.Url"));
-    auz = ((String)paramString.get(".e.Title"));
-    auy = bn.getInt((String)paramString.get(".e.Action"), 0);
-    aux = bn.getInt((String)paramString.get(".e.ShowType"), 0);
-    auw = bn.getInt((String)paramString.get(".e.DispSec"), 30);
-    if (bN(aux)) {
+    asP = ((String)paramString.get(".e.Title"));
+    asO = ay.getInt((String)paramString.get(".e.Action"), 0);
+    asN = ay.getInt((String)paramString.get(".e.ShowType"), 0);
+    asM = ay.getInt((String)paramString.get(".e.DispSec"), 30);
+    boN = ((String)paramString.get(".e.Ok"));
+    boO = ((String)paramString.get(".e.Cancel"));
+    boP = ay.getInt((String)paramString.get("e.Countdown"), 0);
+    if (bM(asN)) {
       return locala;
     }
     try
     {
-      paramString = new JSONObject((String)paramString.get(".e"));
-      desc = paramString.getString("Content");
-      url = paramString.getString("Url");
-      auz = paramString.getString("Title");
-      auy = bn.getInt(paramString.getString("Action"), 0);
-      aux = bn.getInt(paramString.getString("ShowType"), 0);
-      auw = bn.getInt(paramString.getString("DispSec"), 30);
-      boolean bool = bN(aux);
+      JSONObject localJSONObject = new JSONObject((String)paramString.get(".e"));
+      asL = localJSONObject.getString("Content");
+      url = localJSONObject.getString("Url");
+      asP = localJSONObject.getString("Title");
+      asO = ay.getInt(localJSONObject.getString("Action"), 0);
+      asN = ay.getInt(localJSONObject.getString("ShowType"), 0);
+      asM = ay.getInt(localJSONObject.getString("DispSec"), 30);
+      boN = ((String)paramString.get(".e.Ok"));
+      boO = ((String)paramString.get(".e.Cancel"));
+      boP = ay.getInt((String)paramString.get("e.Countdown"), 0);
+      boolean bool = bM(asN);
       if (bool) {
         return locala;
       }
@@ -68,19 +77,19 @@ public final class a
   
   public final boolean a(Context paramContext, DialogInterface.OnClickListener paramOnClickListener1, DialogInterface.OnClickListener paramOnClickListener2)
   {
-    if (aux == 4)
+    if (asN == 4)
     {
-      h.a(paramContext, desc, auz, paramOnClickListener1, paramOnClickListener2);
+      g.a(paramContext, asL, asP, paramOnClickListener1, paramOnClickListener2);
       return true;
     }
-    if (aux == 1)
+    if (asN == 1)
     {
-      h.x(paramContext, desc, auz);
+      g.y(paramContext, asL, asP);
       return true;
     }
-    if (aux == 5)
+    if (asN == 5)
     {
-      h.x(paramContext, desc, auz);
+      g.y(paramContext, asL, asP);
       return true;
     }
     return false;

@@ -2,7 +2,7 @@ package com.tencent.mm.modelgeo;
 
 public abstract interface b$a
 {
-  public abstract boolean a(boolean paramBoolean, float paramFloat1, float paramFloat2, int paramInt, double paramDouble1, double paramDouble2);
+  public abstract void b(Addr paramAddr);
 }
 
 /* Location:

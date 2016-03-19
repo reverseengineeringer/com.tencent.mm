@@ -4,26 +4,44 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import junit.framework.Assert;
 
 public final class MMGridPaperGridView
   extends GridView
 {
-  private AdapterView.OnItemClickListener fQB = new az(this);
-  private int iFr;
-  private int iFs;
-  private int iFt;
-  private int iFu = -1;
-  private boolean iFv = false;
-  a iFw;
-  private ay iFx;
-  private AdapterView.OnItemLongClickListener iFy = new ba(this);
+  private AdapterView.OnItemClickListener hsv = new AdapterView.OnItemClickListener()
+  {
+    public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+    {
+      if (MMGridPaperGridView.a(MMGridPaperGridView.this) == null) {
+        u.w("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "on item click, but main adapter is null");
+      }
+    }
+  };
+  private int kEB;
+  private int kEC;
+  private int kED;
+  private int kEE = -1;
+  private boolean kEF = false;
+  a kEG;
+  private j kEH;
+  private AdapterView.OnItemLongClickListener kEI = new AdapterView.OnItemLongClickListener()
+  {
+    public final boolean onItemLongClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+    {
+      if (MMGridPaperGridView.a(MMGridPaperGridView.this) == null) {
+        u.w("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "on item long click, but main adapter is null");
+      }
+      return false;
+    }
+  };
   private int mCount;
   private int mIndex;
   
@@ -37,32 +55,32 @@ public final class MMGridPaperGridView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, ay paramay)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, j paramj)
   {
     boolean bool = true;
-    if (paramay == null) {}
+    if (paramj == null) {}
     for (;;)
     {
-      t.i("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "index[%d], rows[%d], columns[%d], adapter is null[%B]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Boolean.valueOf(bool) });
+      u.i("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "index[%d], rows[%d], columns[%d], adapter is null[%B]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Boolean.valueOf(bool) });
       mIndex = paramInt1;
-      iFr = paramInt2;
-      iFs = paramInt3;
-      iFx = paramay;
-      mCount = (iFr * iFs);
-      iFt = (mIndex * mCount);
-      if ((iFx != null) && (iFx.getCount() - iFt < mCount)) {
-        mCount = (iFx.getCount() - iFt);
+      kEB = paramInt2;
+      kEC = paramInt3;
+      kEH = paramj;
+      mCount = (kEB * kEC);
+      kED = (mIndex * mCount);
+      if ((kEH != null) && (kEH.getCount() - kED < mCount)) {
+        mCount = (kEH.getCount() - kED);
       }
       if (getAdapter() == null)
       {
-        t.w("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "get adapter null, new one");
-        iFw = new a((byte)0);
-        setAdapter(iFw);
+        u.w("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "get adapter null, new one");
+        kEG = new a((byte)0);
+        setAdapter(kEG);
       }
-      setNumColumns(iFs);
+      setNumColumns(kEC);
       setColumnWidth(3);
-      setOnItemClickListener(fQB);
-      setOnItemLongClickListener(iFy);
+      setOnItemClickListener(hsv);
+      setOnItemLongClickListener(kEI);
       return;
       bool = false;
     }
@@ -75,12 +93,12 @@ public final class MMGridPaperGridView
   
   public final void setClearMode(boolean paramBoolean)
   {
-    iFv = paramBoolean;
+    kEF = paramBoolean;
   }
   
   public final void setHiddenIndex(int paramInt)
   {
-    iFu = paramInt;
+    kEE = paramInt;
   }
   
   private final class a
@@ -119,13 +137,13 @@ public final class MMGridPaperGridView
     
     public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
     {
-      long l = bn.DN();
+      long l = ay.FT();
       int i = MMGridPaperGridView.d(MMGridPaperGridView.this);
       boolean bool;
       if (paramView == null)
       {
         bool = true;
-        t.v("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "getView:index[%d], pos[%d], converrView is null[%B], parent is [%s], mClearMode[%B]", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt), Boolean.valueOf(bool), paramViewGroup.toString(), Boolean.valueOf(MMGridPaperGridView.e(MMGridPaperGridView.this)) });
+        u.v("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "getView:index[%d], pos[%d], converrView is null[%B], parent is [%s], mClearMode[%B]", new Object[] { Integer.valueOf(i), Integer.valueOf(paramInt), Boolean.valueOf(bool), paramViewGroup.toString(), Boolean.valueOf(MMGridPaperGridView.e(MMGridPaperGridView.this)) });
         if (MMGridPaperGridView.e(MMGridPaperGridView.this)) {
           paramView = null;
         }
@@ -147,12 +165,12 @@ public final class MMGridPaperGridView
       }
       for (;;)
       {
-        t.v("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "get View ok: use %d ms, hidden index[%d], cur global index[%d]", new Object[] { Long.valueOf(bn.Z(l)), Integer.valueOf(MMGridPaperGridView.f(MMGridPaperGridView.this)), Integer.valueOf(MMGridPaperGridView.b(MMGridPaperGridView.this) + paramInt) });
+        u.v("!44@/B4Tb64lLpJ3ysDJ3BtNKWRcjd4fCZrJmrjyp4tQ6Cg=", "get View ok: use %d ms, hidden index[%d], cur global index[%d]", new Object[] { Long.valueOf(ay.ao(l)), Integer.valueOf(MMGridPaperGridView.f(MMGridPaperGridView.this)), Integer.valueOf(MMGridPaperGridView.b(MMGridPaperGridView.this) + paramInt) });
         return paramView;
         bool = false;
         break;
         label204:
-        paramView = MMGridPaperGridView.a(MMGridPaperGridView.this).d(MMGridPaperGridView.b(MMGridPaperGridView.this) + paramInt, paramView);
+        paramView = MMGridPaperGridView.a(MMGridPaperGridView.this).b(MMGridPaperGridView.b(MMGridPaperGridView.this) + paramInt, paramView);
         break label99;
         label228:
         bool = false;

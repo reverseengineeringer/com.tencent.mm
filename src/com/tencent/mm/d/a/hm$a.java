@@ -1,10 +1,14 @@
 package com.tencent.mm.d.a;
 
+import android.app.Activity;
+import android.os.Bundle;
+
 public final class hm$a
 {
-  public String aEO;
-  public String aEP;
-  public int aEQ = 0;
+  public int aDg = 0;
+  public Bundle aDj;
+  public String asW;
+  public Activity asX;
 }
 
 /* Location:

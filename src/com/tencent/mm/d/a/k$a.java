@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class k$a
 {
-  public boolean auh;
+  public int mode;
 }
 
 /* Location:

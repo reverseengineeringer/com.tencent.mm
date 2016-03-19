@@ -3,13 +3,11 @@ package com.tencent.mm.app.plugin;
 import android.app.Service;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
+import com.tencent.mm.sdk.platformtools.ay;
 import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.bindmobile.BindMContactIntroUI;
@@ -23,56 +21,56 @@ class URISpanHandlerSet$SetSafeDeviceUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     if (paramString.equals("weixin://setting/account/safedevice"))
     {
-      paramString = (String)ax.tl().rf().get(6, "");
-      paramn = (String)ax.tl().rf().get(4097, "");
-      if (!bn.iW(paramString))
+      paramString = (String)ah.tD().rn().get(6, "");
+      paraml = (String)ah.tD().rn().get(4097, "");
+      if (!ay.kz(paramString))
       {
         paramString = new Intent();
-        if ((URISpanHandlerSet.a(apd) instanceof Service)) {
+        if ((URISpanHandlerSet.a(ang) instanceof Service)) {
           paramString.addFlags(268435456);
         }
-        c.t(URISpanHandlerSet.a(apd), "safedevice", ".ui.MySafeDeviceListUI");
+        com.tencent.mm.ar.c.u(URISpanHandlerSet.a(ang), "safedevice", ".ui.MySafeDeviceListUI");
       }
       for (;;)
       {
         return true;
-        if (!bn.iW(paramn))
+        if (!ay.kz(paraml))
         {
-          paramString = new Intent(URISpanHandlerSet.a(apd), BindMContactIntroUI.class);
+          paramString = new Intent(URISpanHandlerSet.a(ang), BindMContactIntroUI.class);
           paramString.putExtra("is_bind_for_safe_device", true);
-          if ((URISpanHandlerSet.a(apd) instanceof Service)) {
+          if ((URISpanHandlerSet.a(ang) instanceof Service)) {
             paramString.addFlags(268435456);
           }
-          MMWizardActivity.q(URISpanHandlerSet.a(apd), paramString);
+          MMWizardActivity.v(URISpanHandlerSet.a(ang), paramString);
         }
         else
         {
           paramString = new Intent();
-          if ((URISpanHandlerSet.a(apd) instanceof Service)) {
+          if ((URISpanHandlerSet.a(ang) instanceof Service)) {
             paramString.addFlags(268435456);
           }
-          c.a(URISpanHandlerSet.a(apd), "safedevice", ".ui.BindSafeDeviceUI", paramString);
+          com.tencent.mm.ar.c.a(URISpanHandlerSet.a(ang), "safedevice", ".ui.BindSafeDeviceUI", paramString);
         }
       }
     }
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[0];
   }

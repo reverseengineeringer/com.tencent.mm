@@ -15,7 +15,9 @@
 
 
 # instance fields
-.field public awK:Ljava/lang/String;
+.field public auQ:Ljava/lang/String;
+
+.field public context:Landroid/content/Context;
 
 
 # direct methods

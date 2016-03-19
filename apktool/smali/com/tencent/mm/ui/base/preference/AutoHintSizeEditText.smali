@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private iLA:F
+.field private kKL:F
 
-.field private iLB:Landroid/graphics/Paint;
+.field private kKM:Landroid/graphics/Paint;
 
-.field private iLC:Ljava/lang/String;
+.field private kKN:Ljava/lang/String;
 
-.field private iLD:I
+.field private kKO:I
 
-.field private iLE:F
+.field private kKP:F
 
 
 # direct methods
@@ -26,12 +26,12 @@
     .line 23
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLC:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKN:Ljava/lang/String;
 
     .line 24
     const/high16 v0, -0x80000000
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLD:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKO:I
 
     .line 34
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->init()V
@@ -50,12 +50,12 @@
     .line 23
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLC:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKN:Ljava/lang/String;
 
     .line 24
     const/high16 v0, -0x80000000
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLD:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKO:I
 
     .line 29
     invoke-direct {p0}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->init()V
@@ -79,7 +79,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -90,7 +90,7 @@
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLA:F
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKL:F
 
     cmpl-float v0, v0, v1
 
@@ -103,7 +103,7 @@
 
     new-array v2, v7, [Ljava/lang/Object;
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLA:F
+    iget v3, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKL:F
 
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -111,10 +111,10 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 71
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLA:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKL:F
 
     invoke-virtual {p0, v6, v0}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->setTextSize(IF)V
 
@@ -131,7 +131,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -143,7 +143,7 @@
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLA:F
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKL:F
 
     cmpl-float v0, v0, v1
 
@@ -156,7 +156,7 @@
 
     new-array v2, v7, [Ljava/lang/Object;
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLA:F
+    iget v3, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKL:F
 
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -164,10 +164,10 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 78
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLA:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKL:F
 
     invoke-virtual {p0, v6, v0}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->setTextSize(IF)V
 
@@ -180,7 +180,7 @@
     move-result-object v1
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLC:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKN:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -188,7 +188,7 @@
 
     if-eqz v0, :cond_4
 
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLD:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKO:I
 
     if-ne v0, p3, :cond_4
 
@@ -197,7 +197,7 @@
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLE:F
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKP:F
 
     cmpl-float v0, v0, v1
 
@@ -210,7 +210,7 @@
 
     new-array v2, v7, [Ljava/lang/Object;
 
-    iget v3, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLE:F
+    iget v3, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKP:F
 
     invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -218,10 +218,10 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 86
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLE:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKP:F
 
     invoke-virtual {p0, v6, v0}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->setTextSize(IF)V
 
@@ -229,10 +229,10 @@
 
     .line 90
     :cond_4
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLC:Ljava/lang/String;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKN:Ljava/lang/String;
 
     .line 91
-    iput p3, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLD:I
+    iput p3, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKO:I
 
     .line 92
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->getPaint()Landroid/text/TextPaint;
@@ -255,7 +255,7 @@
 
     move-result-object v0
 
-    sget v2, Lcom/tencent/mm/a$g;->SmallestTextSize:I
+    const v2, 0x7f0501c7
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -266,12 +266,12 @@
 
     move-result-object v0
 
-    invoke-static {v0, v7}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v0, v7}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v3
 
     .line 96
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLA:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKL:F
 
     float-to-int v0, v0
 
@@ -282,14 +282,14 @@
     if-le v0, v2, :cond_0
 
     .line 98
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLB:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKM:Landroid/graphics/Paint;
 
     int-to-float v5, v0
 
     invoke-virtual {v4, v5}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 99
-    iget-object v4, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLB:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKM:Landroid/graphics/Paint;
 
     invoke-virtual {v4, v1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
@@ -314,12 +314,12 @@
 
     aput-object v4, v3, v6
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 101
     int-to-float v1, v0
 
-    iput v1, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLE:F
+    iput v1, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKP:F
 
     .line 102
     int-to-float v0, v0
@@ -354,12 +354,12 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLA:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKL:F
 
     .line 44
-    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLA:F
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKL:F
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLE:F
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKP:F
 
     .line 45
     new-instance v0, Landroid/graphics/Paint;
@@ -370,12 +370,12 @@
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(Landroid/graphics/Paint;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->iLB:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->kKM:Landroid/graphics/Paint;
 
     .line 46
-    new-instance v0, Lcom/tencent/mm/ui/base/preference/a;
+    new-instance v0, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/preference/a;-><init>(Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText$1;-><init>(Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;)V
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/AutoHintSizeEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
@@ -406,7 +406,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 113
     invoke-super/range {p0 .. p5}, Landroid/widget/EditText;->onLayout(ZIIII)V

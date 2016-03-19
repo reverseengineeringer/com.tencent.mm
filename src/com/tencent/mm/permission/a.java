@@ -1,70 +1,72 @@
 package com.tencent.mm.permission;
 
-import com.tencent.mm.ad.m;
-import com.tencent.mm.ad.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.ah.k;
+import com.tencent.mm.ah.n;
+import com.tencent.mm.ah.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.l;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.storage.h;
 
 public final class a
   implements d
 {
-  private static a bUB;
-  private boolean bUC = false;
-  private int bUD = 3;
+  private static a cly;
+  private int clA = 3;
+  private boolean clz = false;
   
-  public static a Dr()
+  private static void Bu()
   {
-    if (bUB == null) {
-      bUB = new a();
+    if (!ah.rh()) {
+      return;
     }
-    return bUB;
+    ah.tD().rn().set(327944, Long.valueOf(ay.FS()));
+  }
+  
+  public static a Fz()
+  {
+    if (cly == null) {
+      cly = new a();
+    }
+    return cly;
   }
   
   private void release()
   {
-    bUC = false;
-    ax.tm().b(159, this);
-    ax.tm().b(160, this);
+    clz = false;
+    ah.tE().b(159, this);
+    ah.tE().b(160, this);
   }
   
-  private static void zT()
+  public final void FA()
   {
-    if (!ax.qZ()) {
-      return;
-    }
-    ax.tl().rf().set(327944, Long.valueOf(bn.DM()));
-  }
-  
-  public final void Ds()
-  {
-    if (!ax.qZ()) {}
+    if (!ah.rh()) {}
     long l;
     do
     {
       return;
-      if ((bUC) || (!ax.tl().isSDCardAvailable()))
+      if ((clz) || (!ah.tD().isSDCardAvailable()))
       {
-        com.tencent.mm.sdk.platformtools.t.e("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "not to update, isUpdating: %s", new Object[] { Boolean.valueOf(bUC) });
+        u.e("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "not to update, isUpdating: %s", new Object[] { Boolean.valueOf(clz) });
         return;
       }
-      l = ((Long)ax.tl().rf().get(327944, Long.valueOf(0L))).longValue();
-    } while (bn.DM() - l < 86400000L);
+      l = ((Long)ah.tD().rn().get(327944, Long.valueOf(0L))).longValue();
+    } while (ay.FS() - l < 86400000L);
     release();
-    bUC = true;
-    com.tencent.mm.ad.k localk = new com.tencent.mm.ad.k(23);
-    ax.tm().d(localk);
-    ax.tm().a(159, this);
-    ax.tm().a(160, this);
+    clz = true;
+    k localk = new k(23);
+    ah.tE().d(localk);
+    ah.tE().a(159, this);
+    ah.tE().a(160, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.q.j paramj)
+  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
   {
-    if ((!(paramj instanceof com.tencent.mm.q.k)) || (((com.tencent.mm.q.k)paramj).vq() != 23)) {
-      com.tencent.mm.sdk.platformtools.t.d("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "another scene");
+    if ((!(paramj instanceof l)) || (((l)paramj).vJ() != 23)) {
+      u.d("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "another scene");
     }
     int i;
     do
@@ -75,40 +77,40 @@ public final class a
       {
         if ((paramInt1 == 0) && (paramInt2 == 0))
         {
-          zT();
-          paramString = com.tencent.mm.ad.t.zY().dq(23);
+          Bu();
+          paramString = t.BA().dF(23);
           if ((paramString == null) || (paramString.length == 0))
           {
-            com.tencent.mm.sdk.platformtools.t.i("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "error no pkg found.");
+            u.i("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "error no pkg found.");
             release();
             return;
           }
           paramString = paramString[0];
-          com.tencent.mm.sdk.platformtools.t.i("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "permission, pkgId: %d, version: %d, status: %d, type: %d", new Object[] { Integer.valueOf(id), Integer.valueOf(version), Integer.valueOf(status), Integer.valueOf(bIo) });
+          u.i("!56@/B4Tb64lLpL0qTj+UKAbT/+Av89GBeesjgMOSMuyqDosNvCl9foaCQ==", "permission, pkgId: %d, version: %d, status: %d, type: %d", new Object[] { Integer.valueOf(id), Integer.valueOf(version), Integer.valueOf(status), Integer.valueOf(bXX) });
           if (5 != status)
           {
             release();
             return;
           }
-          paramString = new com.tencent.mm.ad.j(id, 23);
-          ax.tm().d(paramString);
+          paramString = new com.tencent.mm.ah.j(id, 23);
+          ah.tE().d(paramString);
           return;
         }
-        paramInt1 = bUD - 1;
-        bUD = paramInt1;
+        paramInt1 = clA - 1;
+        clA = paramInt1;
         if (paramInt1 <= 0)
         {
-          if (ax.qZ()) {
-            ax.tl().rf().set(327944, Long.valueOf(bn.DM() - 86400000L + 3600000L));
+          if (ah.rh()) {
+            ah.tD().rn().set(327944, Long.valueOf(ay.FS() - 86400000L + 3600000L));
           }
-          bUD = 3;
+          clA = 3;
         }
         release();
         return;
       }
     } while (160 != i);
     if ((paramInt1 == 0) && (paramInt2 == 0)) {
-      zT();
+      Bu();
     }
     release();
   }

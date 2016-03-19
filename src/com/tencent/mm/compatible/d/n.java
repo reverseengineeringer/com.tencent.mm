@@ -1,15 +1,21 @@
 package com.tencent.mm.compatible.d;
 
-import java.io.File;
-import java.io.FileFilter;
-import java.util.regex.Pattern;
-
-final class n
-  implements FileFilter
+public final class n
 {
-  public final boolean accept(File paramFile)
+  public boolean bsA = false;
+  public int bsB;
+  public int bsC;
+  
+  public n()
   {
-    return Pattern.matches("cpu[0-9]", paramFile.getName());
+    reset();
+  }
+  
+  public final void reset()
+  {
+    bsA = false;
+    bsB = 0;
+    bsC = 0;
   }
 }
 

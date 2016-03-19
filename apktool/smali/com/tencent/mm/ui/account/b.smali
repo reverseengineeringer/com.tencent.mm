@@ -1,83 +1,57 @@
-.class final Lcom/tencent/mm/ui/account/b;
-.super Ljava/lang/Object;
+.class public abstract Lcom/tencent/mm/ui/account/b;
+.super Lcom/tencent/mm/ui/applet/SecurityImage$b;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnTouchListener;
 
 
 # instance fields
-.field final synthetic isA:Lcom/tencent/mm/ui/account/a;
+.field kqh:Lcom/tencent/mm/ui/applet/SecurityImage;
+
+.field krH:Lcom/tencent/mm/r/j;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/account/a;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 56
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/b;->isA:Lcom/tencent/mm/ui/account/a;
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 13
+    invoke-direct {p0}, Lcom/tencent/mm/ui/applet/SecurityImage$b;-><init>()V
+
+    .line 17
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/b;->kqh:Lcom/tencent/mm/ui/applet/SecurityImage;
+
+    .line 18
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/b;->krH:Lcom/tencent/mm/r/j;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final onTouch(Landroid/view/View;Landroid/view/MotionEvent;)Z
+.method public final bby()V
     .locals 3
 
     .prologue
-    const/4 v2, 0x0
-
-    .line 59
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 60
-    sget v0, Lcom/tencent/mm/a$i;->alias_tv:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 22
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/b;->krH:Lcom/tencent/mm/r/j;
 
-    const v1, -0x9e9e9f
+    const-string/jumbo v2, ""
 
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {p0, v1, v2}, Lcom/tencent/mm/ui/account/b;->d(Lcom/tencent/mm/r/j;Ljava/lang/String;)Lcom/tencent/mm/r/j;
 
-    .line 66
-    :cond_0
-    :goto_0
-    return v2
+    move-result-object v1
 
-    .line 62
-    :cond_1
-    invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
-    move-result v0
+    .line 23
+    return-void
+.end method
 
-    const/4 v1, 0x1
-
-    if-ne v0, v1, :cond_0
-
-    .line 63
-    sget v0, Lcom/tencent/mm/a$i;->alias_tv:I
-
-    invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    const/4 v1, -0x1
-
-    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
-
-    goto :goto_0
+.method public abstract d(Lcom/tencent/mm/r/j;Ljava/lang/String;)Lcom/tencent/mm/r/j;
 .end method

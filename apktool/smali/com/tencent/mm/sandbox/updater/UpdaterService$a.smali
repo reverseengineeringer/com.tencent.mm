@@ -29,7 +29,7 @@
     .locals 0
 
     .prologue
-    .line 235
+    .line 233
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -41,23 +41,23 @@
     .locals 3
 
     .prologue
-    .line 239
-    invoke-static {}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aEk()Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    .line 237
+    invoke-static {}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aUl()Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 240
-    invoke-static {}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aEk()Lcom/tencent/mm/sandbox/updater/UpdaterService;
+    .line 238
+    invoke-static {}, Lcom/tencent/mm/sandbox/updater/UpdaterService;->aUl()Lcom/tencent/mm/sandbox/updater/UpdaterService;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/al;->cX(Landroid/content/Context;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ah;->dB(Landroid/content/Context;)Z
 
     move-result v1
 
-    iget-object v2, v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->hXA:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->size()I
 
@@ -65,7 +65,7 @@
 
     if-lez v2, :cond_0
 
-    iget-object v0, v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->hXA:Ljava/util/Map;
+    iget-object v0, v0, Lcom/tencent/mm/sandbox/updater/UpdaterService;->jUp:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->values()Ljava/util/Collection;
 
@@ -86,13 +86,13 @@
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/sandbox/updater/x;
+    check-cast v0, Lcom/tencent/mm/sandbox/updater/a;
 
-    invoke-interface {v0, v1}, Lcom/tencent/mm/sandbox/updater/x;->eF(Z)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/sandbox/updater/a;->gF(Z)V
 
     goto :goto_0
 
-    .line 242
+    .line 240
     :cond_0
     return-void
 .end method

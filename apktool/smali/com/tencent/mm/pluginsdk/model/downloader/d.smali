@@ -1,100 +1,95 @@
-.class final Lcom/tencent/mm/pluginsdk/model/downloader/d;
+.class public final Lcom/tencent/mm/pluginsdk/model/downloader/d;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/pluginsdk/model/downloader/d$a;
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic evG:Ljava/lang/String;
+.field public ehh:Ljava/lang/String;
 
-.field final synthetic ftb:J
+.field elm:Ljava/lang/String;
 
-.field final synthetic gMZ:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+.field public iCq:Ljava/lang/String;
+
+.field iCr:Ljava/lang/String;
+
+.field iCs:I
+
+.field iCt:Z
+
+.field public iCu:Z
+
+.field public iCv:Z
+
+.field mFileName:Ljava/lang/String;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;JLjava/lang/String;)V
-    .locals 0
+.method private constructor <init>()V
+    .locals 3
 
     .prologue
-    .line 72
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->gMZ:Lcom/tencent/mm/pluginsdk/model/downloader/a;
+    const/4 v2, 0x1
 
-    iput-wide p2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->ftb:J
+    const/4 v1, 0x0
 
-    iput-object p4, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->evG:Ljava/lang/String;
-
+    .line 15
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 5
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCq:Ljava/lang/String;
+
+    .line 6
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->mFileName:Ljava/lang/String;
+
+    .line 7
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCr:Ljava/lang/String;
+
+    .line 8
+    iput v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCs:I
+
+    .line 9
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->ehh:Ljava/lang/String;
+
+    .line 10
+    const-string/jumbo v0, ""
+
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->elm:Ljava/lang/String;
+
+    .line 11
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCt:Z
+
+    .line 12
+    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCu:Z
+
+    .line 13
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCv:Z
+
+    .line 17
     return-void
 .end method
 
-
-# virtual methods
-.method public final run()V
-    .locals 5
+.method synthetic constructor <init>(B)V
+    .locals 0
 
     .prologue
-    .line 75
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->azs()Ljava/util/Vector;
+    .line 4
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/model/downloader/d;-><init>()V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 76
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->azs()Ljava/util/Vector;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/util/Vector;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/pluginsdk/model/downloader/r;
-
-    .line 77
-    iget-wide v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->ftb:J
-
-    iget-object v4, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->evG:Ljava/lang/String;
-
-    invoke-interface {v0, v2, v3, v4}, Lcom/tencent/mm/pluginsdk/model/downloader/r;->c(JLjava/lang/String;)V
-
-    goto :goto_0
-
-    .line 80
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->azt()Lcom/tencent/mm/pluginsdk/model/downloader/r;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_1
-
-    .line 81
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/downloader/a;->azt()Lcom/tencent/mm/pluginsdk/model/downloader/r;
-
-    move-result-object v0
-
-    iget-wide v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->ftb:J
-
-    iget-object v3, p0, Lcom/tencent/mm/pluginsdk/model/downloader/d;->evG:Ljava/lang/String;
-
-    invoke-interface {v0, v1, v2, v3}, Lcom/tencent/mm/pluginsdk/model/downloader/r;->c(JLjava/lang/String;)V
-
-    .line 83
-    :cond_1
     return-void
 .end method

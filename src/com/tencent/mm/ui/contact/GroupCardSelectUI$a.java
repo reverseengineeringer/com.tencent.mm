@@ -3,18 +3,18 @@ package com.tencent.mm.ui.contact;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.model.t;
-import com.tencent.mm.model.w;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.model.f;
+import com.tencent.mm.model.i;
 import com.tencent.mm.pluginsdk.ui.a.b;
-import com.tencent.mm.pluginsdk.ui.d.i;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.storage.k;
 import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.cn;
+import com.tencent.mm.ui.j;
 import java.util.List;
 
 final class GroupCardSelectUI$a
@@ -24,12 +24,12 @@ final class GroupCardSelectUI$a
   
   public final int getCount()
   {
-    return GroupCardSelectUI.d(jgn).size();
+    return GroupCardSelectUI.c(lkC).size();
   }
   
   public final Object getItem(int paramInt)
   {
-    return GroupCardSelectUI.d(jgn).get(paramInt);
+    return GroupCardSelectUI.c(lkC).get(paramInt);
   }
   
   public final long getItemId(int paramInt)
@@ -39,27 +39,38 @@ final class GroupCardSelectUI$a
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    com.tencent.mm.storage.k localk = (com.tencent.mm.storage.k)GroupCardSelectUI.d(jgn).get(paramInt);
+    k localk = (k)GroupCardSelectUI.c(lkC).get(paramInt);
     View localView;
     if (paramView == null)
     {
-      paramView = new GroupCardSelectUI.b(jgn);
-      localView = View.inflate(jgn, a.k.group_card_select_item, null);
-      dGT = ((TextView)localView.findViewById(a.i.group_card_item_count_tv));
-      jgo = ((TextView)localView.findViewById(a.i.group_card_item_nick));
-      bzl = ((ImageView)localView.findViewById(a.i.group_card_item_avatar_iv));
+      paramView = new GroupCardSelectUI.b(lkC);
+      localView = View.inflate(lkC, 2131361963, null);
+      eIN = ((TextView)localView.findViewById(2131165694));
+      lkD = ((TextView)localView.findViewById(2131165693));
+      bMr = ((ImageView)localView.findViewById(2131165692));
+      ftO = ((CheckBox)localView.findViewById(2131165695));
       localView.setTag(paramView);
       paramViewGroup = paramView;
     }
     for (;;)
     {
-      a.b.b(bzl, field_username);
-      jgo.setText(i.a(jgn, w.dN(field_username), a.v(jgn.ipQ.iqj, a.g.NormalTextSize)));
-      dGT.setText("(" + t.dD(field_username) + ")");
+      a.b.b(bMr, field_username);
+      lkD.setText(e.a(lkC, i.dY(field_username), a.z(lkC.koJ.kpc, 2131034564)));
+      eIN.setText("(" + f.dM(field_username) + ")");
+      if (GroupCardSelectUI.d(lkC))
+      {
+        ftO.setVisibility(0);
+        if (!GroupCardSelectUI.e(lkC).contains(field_username)) {
+          break;
+        }
+        ftO.setChecked(true);
+      }
       return localView;
       paramViewGroup = (GroupCardSelectUI.b)paramView.getTag();
       localView = paramView;
     }
+    ftO.setChecked(false);
+    return localView;
   }
 }
 

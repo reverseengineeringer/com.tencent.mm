@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic hT:Landroid/support/v4/widget/a;
+.field final synthetic hb:Landroid/support/v4/widget/a;
 
 
 # direct methods
@@ -24,10 +24,10 @@
 
     .prologue
     .line 454
-    iput-object p1, p0, Landroid/support/v4/widget/a$a;->hT:Landroid/support/v4/widget/a;
+    iput-object p1, p0, Landroid/support/v4/widget/a$a;->hb:Landroid/support/v4/widget/a;
 
     .line 455
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ac;->fetchFreeHandler()Landroid/os/Handler;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->fetchFreeHandler()Landroid/os/Handler;
 
     move-result-object v0
 
@@ -54,7 +54,7 @@
 
     .prologue
     .line 465
-    iget-object v0, p0, Landroid/support/v4/widget/a$a;->hT:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v4/widget/a$a;->hb:Landroid/support/v4/widget/a;
 
     invoke-virtual {v0}, Landroid/support/v4/widget/a;->onContentChanged()V
 

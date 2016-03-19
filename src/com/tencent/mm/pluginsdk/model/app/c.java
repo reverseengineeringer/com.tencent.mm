@@ -1,21 +1,21 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import com.tencent.mm.sdk.g.af;
-import com.tencent.mm.sdk.g.ah;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.sdk.h.f;
 
 public final class c
-  extends ah
+  extends f
 {
-  public static final String[] aqU = { ah.a(b.aqp, "appattach") };
-  af aqT;
+  public static final String[] aoY = { f.a(b.aot, "appattach") };
+  d aoX;
   
-  public c(af paramaf)
+  public c(d paramd)
   {
-    super(paramaf, b.aqp, "appattach", null);
-    aqT = paramaf;
+    super(paramd, b.aot, "appattach", null);
+    aoX = paramd;
   }
   
-  public final b cc(long paramLong)
+  public final b cS(long paramLong)
   {
     b localb = new b();
     field_msgInfoId = paramLong;
@@ -25,7 +25,7 @@ public final class c
     return null;
   }
   
-  public final b uk(String paramString)
+  public final b zK(String paramString)
   {
     b localb = new b();
     field_mediaSvrId = paramString;

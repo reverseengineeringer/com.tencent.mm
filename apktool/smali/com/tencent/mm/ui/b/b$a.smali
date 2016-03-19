@@ -15,11 +15,11 @@
 
 
 # virtual methods
-.method public abstract d(Landroid/view/Menu;)Z
+.method public abstract b(Landroid/view/Menu;)Z
 .end method
 
-.method public abstract e(Landroid/view/Menu;)Z
+.method public abstract c(Landroid/view/Menu;)Z
 .end method
 
-.method public abstract f(Landroid/view/MenuItem;)Z
+.method public abstract d(Landroid/view/MenuItem;)Z
 .end method

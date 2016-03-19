@@ -15,7 +15,15 @@
 
 
 # instance fields
-.field public azL:Lcom/tencent/mm/protocal/b/ahe;
+.field public aBN:Lcom/tencent/mm/protocal/b/aeo;
+
+.field public aBO:I
+
+.field public aBP:Z
+
+.field public action:I
+
+.field public ayD:Ljava/util/List;
 
 
 # direct methods
@@ -23,7 +31,7 @@
     .locals 0
 
     .prologue
-    .line 14
+    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

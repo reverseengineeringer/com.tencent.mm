@@ -4,35 +4,35 @@
 
 
 # instance fields
-.field private cIw:I
+.field private cFj:I
 
-.field private cnL:I
+.field private cZX:Landroid/graphics/Paint;
 
-.field private dnc:Landroid/graphics/Paint;
+.field private ewY:I
 
-.field private eBK:Landroid/graphics/Rect;
+.field private fKX:Landroid/graphics/Rect;
 
-.field private fnG:Landroid/graphics/Canvas;
+.field private gEB:Landroid/graphics/Canvas;
 
-.field private fnH:Landroid/graphics/Bitmap;
+.field private gEC:Landroid/graphics/Bitmap;
 
-.field private fnI:I
+.field private gED:I
 
-.field private fnJ:I
+.field private gEE:I
 
-.field private fnK:I
+.field private gEF:I
 
-.field private fnL:I
+.field private gEG:I
 
-.field private fnM:Landroid/graphics/Bitmap;
+.field private gEH:Landroid/graphics/Bitmap;
 
-.field private final fnN:F
+.field private final gEI:F
 
-.field private fnO:I
+.field public gEJ:I
 
-.field private fnP:I
+.field public gEK:I
 
-.field private fnQ:Landroid/view/animation/Animation;
+.field public gEL:Landroid/view/animation/Animation;
 
 
 # direct methods
@@ -48,19 +48,19 @@
 
     invoke-direct {v0}, Landroid/graphics/Canvas;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnG:Landroid/graphics/Canvas;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEB:Landroid/graphics/Canvas;
 
     .line 43
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->dnc:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cZX:Landroid/graphics/Paint;
 
     .line 87
     const v0, 0x3ecccccd    # 0.4f
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnN:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEI:F
 
     .line 35
     return-void
@@ -78,19 +78,19 @@
 
     invoke-direct {v0}, Landroid/graphics/Canvas;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnG:Landroid/graphics/Canvas;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEB:Landroid/graphics/Canvas;
 
     .line 43
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->dnc:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cZX:Landroid/graphics/Paint;
 
     .line 87
     const v0, 0x3ecccccd    # 0.4f
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnN:F
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEI:F
 
     .line 31
     return-void
@@ -106,7 +106,7 @@
 
     .prologue
     .line 91
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnJ:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEE:I
 
     int-to-float v0, v0
 
@@ -114,7 +114,7 @@
 
     float-to-int v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnK:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEF:I
 
     .line 94
     const/high16 v0, 0x3f800000    # 1.0f
@@ -148,85 +148,6 @@
     return-void
 .end method
 
-.method public final aL(II)V
-    .locals 0
-
-    .prologue
-    .line 121
-    iput p1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnO:I
-
-    .line 122
-    iput p2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnP:I
-
-    .line 123
-    return-void
-.end method
-
-.method public final akJ()V
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x0
-
-    .line 129
-    new-instance v0, Landroid/view/animation/TranslateAnimation;
-
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnO:I
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->getTop()I
-
-    move-result v2
-
-    sub-int/2addr v1, v2
-
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->getHeight()I
-
-    move-result v2
-
-    div-int/lit8 v2, v2, 0x2
-
-    sub-int/2addr v1, v2
-
-    int-to-float v1, v1
-
-    invoke-direct {v0, v3, v3, v3, v1}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnQ:Landroid/view/animation/Animation;
-
-    .line 130
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnQ:Landroid/view/animation/Animation;
-
-    const/4 v1, 0x1
-
-    invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setFillAfter(Z)V
-
-    .line 131
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnQ:Landroid/view/animation/Animation;
-
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnP:I
-
-    int-to-long v1, v1
-
-    invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
-
-    .line 132
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnQ:Landroid/view/animation/Animation;
-
-    new-instance v1, Lcom/tencent/mm/plugin/sight/main/ui/a;
-
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/main/ui/a;-><init>(Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
-
-    .line 151
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnQ:Landroid/view/animation/Animation;
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->startAnimation(Landroid/view/animation/Animation;)V
-
-    .line 152
-    return-void
-.end method
-
 .method public draw(Landroid/graphics/Canvas;)V
     .locals 5
 
@@ -234,22 +155,22 @@
     const/4 v2, 0x0
 
     .line 169
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->dnc:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cZX:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->reset()V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->dnc:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cZX:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 170
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -263,7 +184,7 @@
 
     const-string/jumbo v1, "MainSightIconView error, mEysBmp is null or recycled"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 198
     :goto_0
@@ -271,7 +192,7 @@
 
     .line 175
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnK:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEF:I
 
     if-nez v0, :cond_2
 
@@ -282,20 +203,20 @@
 
     .line 177
     :cond_2
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnK:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEF:I
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnJ:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEE:I
 
     if-ne v0, v1, :cond_3
 
     .line 178
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->eBK:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fKX:Landroid/graphics/Rect;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->eBK:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fKX:Landroid/graphics/Rect;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cZX:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
@@ -303,17 +224,17 @@
 
     .line 179
     :cond_3
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnK:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEF:I
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnL:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEG:I
 
     if-ne v0, v1, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnM:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEH:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnM:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEH:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -322,13 +243,13 @@
     if-nez v0, :cond_4
 
     .line 180
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnM:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEH:Landroid/graphics/Bitmap;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->eBK:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fKX:Landroid/graphics/Rect;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->eBK:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fKX:Landroid/graphics/Rect;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cZX:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
@@ -336,11 +257,11 @@
 
     .line 183
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnM:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEH:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_5
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnM:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEH:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -350,9 +271,9 @@
 
     .line 184
     :cond_5
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cIw:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->ewY:I
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cnL:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cFj:I
 
     sget-object v2, Landroid/graphics/Bitmap$Config;->ARGB_4444:Landroid/graphics/Bitmap$Config;
 
@@ -360,41 +281,41 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnM:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEH:Landroid/graphics/Bitmap;
 
     .line 190
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnG:Landroid/graphics/Canvas;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEB:Landroid/graphics/Canvas;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnM:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEH:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Canvas;->setBitmap(Landroid/graphics/Bitmap;)V
 
     .line 191
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnG:Landroid/graphics/Canvas;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEB:Landroid/graphics/Canvas;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cIw:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->ewY:I
 
     div-int/lit8 v1, v1, 0x2
 
     int-to-float v1, v1
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cnL:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cFj:I
 
     div-int/lit8 v2, v2, 0x2
 
     int-to-float v2, v2
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnK:I
+    iget v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEF:I
 
     int-to-float v3, v3
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->dnc:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cZX:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
     .line 193
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->dnc:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cZX:Landroid/graphics/Paint;
 
     new-instance v1, Landroid/graphics/PorterDuffXfermode;
 
@@ -405,33 +326,33 @@
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
     .line 194
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnG:Landroid/graphics/Canvas;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEB:Landroid/graphics/Canvas;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->eBK:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fKX:Landroid/graphics/Rect;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->eBK:Landroid/graphics/Rect;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fKX:Landroid/graphics/Rect;
 
-    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->dnc:Landroid/graphics/Paint;
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cZX:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
     .line 195
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->dnc:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cZX:Landroid/graphics/Paint;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setXfermode(Landroid/graphics/Xfermode;)Landroid/graphics/Xfermode;
 
     .line 196
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnM:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEH:Landroid/graphics/Bitmap;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->eBK:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fKX:Landroid/graphics/Rect;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->eBK:Landroid/graphics/Rect;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fKX:Landroid/graphics/Rect;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->dnc:Landroid/graphics/Paint;
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cZX:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;Landroid/graphics/Rect;Landroid/graphics/Rect;Landroid/graphics/Paint;)V
 
@@ -439,25 +360,25 @@
 
     .line 187
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnM:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEH:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
     goto :goto_1
 .end method
 
-.method public final fY(I)V
+.method public final gV(I)V
     .locals 5
 
     .prologue
     const/4 v4, 0x0
 
     .line 61
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -467,13 +388,13 @@
 
     .line 62
     :cond_0
-    sget v0, Lcom/tencent/mm/a$h;->icon_sight_capture_mask:I
+    const v0, 0x7f03013f
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/e;->mq(I)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->pk(I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     .line 65
     :cond_1
@@ -486,12 +407,12 @@
     .line 66
     if-eqz v0, :cond_2
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_2
 
     .line 67
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -500,7 +421,7 @@
     iput v1, v0, Landroid/widget/RelativeLayout$LayoutParams;->width:I
 
     .line 68
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -510,30 +431,30 @@
 
     .line 71
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_3
 
     .line 72
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v1
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cIw:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->ewY:I
 
     .line 73
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v1
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cnL:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cFj:I
 
     .line 74
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnH:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEC:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -541,27 +462,27 @@
 
     div-int/lit8 v1, v1, 0x2
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnJ:I
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gEE:I
 
     .line 77
     :cond_3
     new-instance v1, Landroid/graphics/Rect;
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cIw:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->ewY:I
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cnL:I
+    iget v3, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cFj:I
 
     invoke-direct {v1, v4, v4, v2, v3}, Landroid/graphics/Rect;-><init>(IIII)V
 
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->eBK:Landroid/graphics/Rect;
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fKX:Landroid/graphics/Rect;
 
     .line 79
-    iput p1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnI:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gED:I
 
     .line 82
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnI:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gED:I
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cnL:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cFj:I
 
     div-int/lit8 v2, v2, 0x2
 
@@ -581,7 +502,7 @@
 
     .prologue
     .line 164
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cnL:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cFj:I
 
     return v0
 .end method
@@ -591,7 +512,7 @@
 
     .prologue
     .line 160
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cIw:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->ewY:I
 
     return v0
 .end method
@@ -608,11 +529,11 @@
     check-cast v0, Landroid/widget/RelativeLayout$LayoutParams;
 
     .line 112
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->fnI:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->gED:I
 
     add-int/2addr v1, p1
 
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cnL:I
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/main/ui/MainSightIconView;->cFj:I
 
     div-int/lit8 v2, v2, 0x2
 

@@ -1,38 +1,37 @@
 package com.tencent.mm.plugin.safedevice.a;
 
 import android.database.Cursor;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.sdk.g.af;
-import com.tencent.mm.sdk.g.ah;
+import com.tencent.mm.az.g;
+import com.tencent.mm.sdk.h.f;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
 public final class d
-  extends ah
+  extends f
 {
-  public static final String[] aqU = { ah.a(c.aqp, "SafeDeviceInfo") };
-  g eKd = null;
+  public static final String[] aoY = { f.a(c.aot, "SafeDeviceInfo") };
+  g fUQ = null;
   
-  public d(af paramaf)
+  public d(com.tencent.mm.sdk.h.d paramd)
   {
-    super(paramaf, c.aqp, "SafeDeviceInfo", null);
-    if ((paramaf instanceof g)) {
-      eKd = ((g)paramaf);
+    super(paramd, c.aot, "SafeDeviceInfo", null);
+    if ((paramd instanceof g)) {
+      fUQ = ((g)paramd);
     }
   }
   
   public final boolean a(c paramc)
   {
-    return super.b(paramc);
+    return super.a(paramc);
   }
   
-  public final List afq()
+  public final List aqy()
   {
     LinkedList localLinkedList = new LinkedList();
     if (getCount() > 0)
     {
-      Cursor localCursor = super.Bz();
+      Cursor localCursor = super.Dy();
       while (localCursor.moveToNext())
       {
         c localc = new c();
@@ -44,12 +43,12 @@ public final class d
     return localLinkedList;
   }
   
-  public final void afr()
+  public final void aqz()
   {
-    if (eKd != null) {}
-    for (long l = eKd.aIo();; l = 0L)
+    if (fUQ != null) {}
+    for (long l = fUQ.adR();; l = 0L)
     {
-      Object localObject = afq();
+      Object localObject = aqy();
       if (((List)localObject).size() > 0)
       {
         localObject = ((List)localObject).iterator();
@@ -57,8 +56,8 @@ public final class d
           b((c)((Iterator)localObject).next(), new String[0]);
         }
       }
-      if (eKd != null) {
-        eKd.cO(l);
+      if (fUQ != null) {
+        fUQ.dI(l);
       }
       return;
     }

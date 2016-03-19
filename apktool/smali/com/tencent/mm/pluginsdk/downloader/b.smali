@@ -1,504 +1,95 @@
-.class final Lcom/tencent/mm/pluginsdk/downloader/b;
-.super Ljava/lang/Object;
+.class public final Lcom/tencent/mm/pluginsdk/downloader/b;
+.super Lcom/tencent/mm/pluginsdk/downloader/a/a;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/pluginsdk/model/downloader/r;
+
+# static fields
+.field private static izm:Lcom/tencent/mm/pluginsdk/downloader/b;
 
 
 # instance fields
-.field final synthetic gKB:Lcom/tencent/mm/pluginsdk/downloader/a;
+.field public final izn:Lcom/tencent/mm/pluginsdk/downloader/a;
+
+.field private izo:J
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/pluginsdk/downloader/a;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 1
 
     .prologue
-    .line 60
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/downloader/b;->gKB:Lcom/tencent/mm/pluginsdk/downloader/a;
+    .line 27
+    const/4 v0, 0x0
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    sput-object v0, Lcom/tencent/mm/pluginsdk/downloader/b;->izm:Lcom/tencent/mm/pluginsdk/downloader/b;
 
     return-void
 .end method
 
-
-# virtual methods
-.method public final c(JLjava/lang/String;)V
-    .locals 6
+.method private constructor <init>()V
+    .locals 2
 
     .prologue
-    const/4 v5, 0x0
+    .line 35
+    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/downloader/a/a;-><init>()V
 
-    .line 80
-    :try_start_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpKVQlIh1YRBX63KQIoWfPTw"
+    .line 32
+    const-wide/16 v0, 0x0
 
-    const-string/jumbo v1, "[download]onTaskFinished %d, path:%s"
+    iput-wide v0, p0, Lcom/tencent/mm/pluginsdk/downloader/b;->izo:J
 
-    const/4 v2, 0x2
+    .line 36
+    new-instance v0, Lcom/tencent/mm/pluginsdk/downloader/a;
 
-    new-array v2, v2, [Ljava/lang/Object;
+    invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/downloader/a;-><init>()V
 
-    const/4 v3, 0x0
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/downloader/b;->izn:Lcom/tencent/mm/pluginsdk/downloader/a;
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    aput-object p3, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 81
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/downloader/b;->gKB:Lcom/tencent/mm/pluginsdk/downloader/a;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/downloader/a;->bcq:Ljava/util/List;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    .line 83
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    .line 84
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    .line 85
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/pluginsdk/model/downloader/r;
-
-    invoke-interface {v0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/model/downloader/r;->c(JLjava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 88
-    :catch_0
-    move-exception v0
-
-    .line 89
-    const-string/jumbo v1, "!32@/B4Tb64lLpKVQlIh1YRBX63KQIoWfPTw"
-
-    const-string/jumbo v2, ""
-
-    new-array v3, v5, [Ljava/lang/Object;
-
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 91
-    :cond_1
+    .line 37
     return-void
 .end method
 
-.method public final onTaskFailed(J)V
-    .locals 6
+.method public static aPg()Lcom/tencent/mm/pluginsdk/downloader/b;
+    .locals 2
 
     .prologue
-    const/4 v5, 0x0
+    .line 40
+    sget-object v0, Lcom/tencent/mm/pluginsdk/downloader/b;->izm:Lcom/tencent/mm/pluginsdk/downloader/b;
 
-    .line 96
+    if-nez v0, :cond_0
+
+    .line 41
+    const-class v1, Lcom/tencent/mm/pluginsdk/downloader/b;
+
+    monitor-enter v1
+
+    .line 42
     :try_start_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpKVQlIh1YRBX63KQIoWfPTw"
+    new-instance v0, Lcom/tencent/mm/pluginsdk/downloader/b;
 
-    const-string/jumbo v1, "[download]onTaskFailed %d"
+    invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/downloader/b;-><init>()V
 
-    const/4 v2, 0x1
+    sput-object v0, Lcom/tencent/mm/pluginsdk/downloader/b;->izm:Lcom/tencent/mm/pluginsdk/downloader/b;
 
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 97
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/downloader/b;->gKB:Lcom/tencent/mm/pluginsdk/downloader/a;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/downloader/a;->bcq:Ljava/util/List;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    .line 99
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    .line 100
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    .line 101
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/pluginsdk/model/downloader/r;
-
-    invoke-interface {v0, p1, p2}, Lcom/tencent/mm/pluginsdk/model/downloader/r;->onTaskFailed(J)V
+    .line 43
+    monitor-exit v1
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    goto :goto_0
+    .line 45
+    :cond_0
+    sget-object v0, Lcom/tencent/mm/pluginsdk/downloader/b;->izm:Lcom/tencent/mm/pluginsdk/downloader/b;
 
-    .line 104
-    :catch_0
+    return-object v0
+
+    .line 43
+    :catchall_0
     move-exception v0
 
-    .line 105
-    const-string/jumbo v1, "!32@/B4Tb64lLpKVQlIh1YRBX63KQIoWfPTw"
-
-    const-string/jumbo v2, ""
-
-    new-array v3, v5, [Ljava/lang/Object;
-
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 107
-    :cond_1
-    return-void
-.end method
-
-.method public final onTaskPaused(J)V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x0
-
-    .line 128
-    :try_start_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpKVQlIh1YRBX63KQIoWfPTw"
-
-    const-string/jumbo v1, "[download] onTaskPaused %d"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 129
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/downloader/b;->gKB:Lcom/tencent/mm/pluginsdk/downloader/a;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/downloader/a;->bcq:Ljava/util/List;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    .line 131
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    .line 132
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    .line 133
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/pluginsdk/model/downloader/r;
-
-    invoke-interface {v0, p1, p2}, Lcom/tencent/mm/pluginsdk/model/downloader/r;->onTaskPaused(J)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 136
-    :catch_0
-    move-exception v0
-
-    .line 137
-    const-string/jumbo v1, "!32@/B4Tb64lLpKVQlIh1YRBX63KQIoWfPTw"
-
-    const-string/jumbo v2, ""
-
-    new-array v3, v5, [Ljava/lang/Object;
-
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 139
-    :cond_1
-    return-void
-.end method
-
-.method public final onTaskRemoved(J)V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x0
-
-    .line 112
-    :try_start_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpKVQlIh1YRBX63KQIoWfPTw"
-
-    const-string/jumbo v1, "[download] onTaskRemoved :%d"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 113
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/downloader/b;->gKB:Lcom/tencent/mm/pluginsdk/downloader/a;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/downloader/a;->bcq:Ljava/util/List;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    .line 115
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    .line 116
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    .line 117
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/pluginsdk/model/downloader/r;
-
-    invoke-interface {v0, p1, p2}, Lcom/tencent/mm/pluginsdk/model/downloader/r;->onTaskRemoved(J)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 120
-    :catch_0
-    move-exception v0
-
-    .line 121
-    const-string/jumbo v1, "!32@/B4Tb64lLpKVQlIh1YRBX63KQIoWfPTw"
-
-    const-string/jumbo v2, ""
-
-    new-array v3, v5, [Ljava/lang/Object;
-
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 123
-    :cond_1
-    return-void
-.end method
-
-.method public final onTaskStarted(JLjava/lang/String;)V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x0
-
-    .line 64
-    :try_start_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpKVQlIh1YRBX63KQIoWfPTw"
-
-    const-string/jumbo v1, "[download]onTaskStarted %d, savePath:%s"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    aput-object p3, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 65
-    new-instance v0, Ljava/util/ArrayList;
-
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/downloader/b;->gKB:Lcom/tencent/mm/pluginsdk/downloader/a;
-
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/downloader/a;->bcq:Ljava/util/List;
-
-    invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
-
-    .line 67
-    invoke-interface {v0}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :cond_0
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Ljava/lang/ref/WeakReference;
-
-    .line 68
-    if-eqz v0, :cond_0
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v2
-
-    if-eqz v2, :cond_0
-
-    .line 69
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/pluginsdk/model/downloader/r;
-
-    invoke-interface {v0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/model/downloader/r;->onTaskStarted(JLjava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 72
-    :catch_0
-    move-exception v0
-
-    .line 73
-    const-string/jumbo v1, "!32@/B4Tb64lLpKVQlIh1YRBX63KQIoWfPTw"
-
-    const-string/jumbo v2, ""
-
-    new-array v3, v5, [Ljava/lang/Object;
-
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 75
-    :cond_1
-    return-void
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
 .end method

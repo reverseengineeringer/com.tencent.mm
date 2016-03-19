@@ -15,18 +15,28 @@
 
 
 # instance fields
-.field public auD:Landroid/app/Activity;
+.field public awG:J
 
-.field public azn:I
+.field public awH:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 0
+    .locals 2
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 15
+    const-wide/16 v0, 0x0
+
+    iput-wide v0, p0, Lcom/tencent/mm/d/a/df$a;->awG:J
+
+    .line 16
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/df$a;->awH:Z
 
     return-void
 .end method

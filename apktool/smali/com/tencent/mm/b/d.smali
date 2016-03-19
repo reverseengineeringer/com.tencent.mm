@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static final a(Ljava/io/InputStream;[BI)Z
+.method public static final a(Ljava/io/InputStream;[BII)Z
     .locals 4
 
     .prologue
@@ -15,7 +15,7 @@
 
     .line 32
     :goto_0
-    if-lt v1, p2, :cond_1
+    if-lt v1, p3, :cond_1
 
     .line 39
     const/4 v0, 0x1
@@ -25,9 +25,9 @@
 
     .line 33
     :cond_1
-    add-int/lit8 v2, v1, 0x0
+    add-int v2, p2, v1
 
-    sub-int v3, p2, v1
+    sub-int v3, p3, v1
 
     invoke-virtual {p0, p1, v2, v3}, Ljava/io/InputStream;->read([BII)I
 

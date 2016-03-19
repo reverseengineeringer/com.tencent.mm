@@ -1,11 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.app.Activity;
-
 public final class ac$a
 {
-  public String auC;
-  public Activity auD;
+  public boolean ig = false;
 }
 
 /* Location:

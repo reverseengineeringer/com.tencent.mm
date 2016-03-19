@@ -1,81 +1,49 @@
 package com.tencent.mm.protocal.b;
 
 public final class ady
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public int eJB;
-  public String hAH;
-  public String hKr;
-  public String hKs;
+  public int jAN;
+  public int jAO;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hAH != null) {
-        paramVarArgs.U(1, hAH);
-      }
-      if (hKs != null) {
-        paramVarArgs.U(2, hKs);
-      }
-      paramVarArgs.bM(3, eJB);
-      if (hKr != null) {
-        paramVarArgs.U(4, hKr);
-      }
+      paramVarArgs.ci(1, jAN);
+      paramVarArgs.ci(2, jAO);
       return 0;
     }
     if (paramInt == 1) {
-      if (hAH == null) {
-        break label328;
-      }
+      return a.a.a.a.cg(1, jAN) + 0 + a.a.a.a.cg(2, jAO);
     }
-    label328:
-    for (paramInt = a.a.a.b.b.a.T(1, hAH) + 0;; paramInt = 0)
+    if (paramInt == 2)
     {
-      int i = paramInt;
-      if (hKs != null) {
-        i = paramInt + a.a.a.b.b.a.T(2, hKs);
-      }
-      i += a.a.a.a.bI(3, eJB);
-      paramInt = i;
-      if (hKr != null) {
-        paramInt = i + a.a.a.b.b.a.T(4, hKr);
-      }
-      return paramInt;
-      if (paramInt == 2)
-      {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-          if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
-          }
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bog();
         }
-        break;
       }
-      if (paramInt == 3)
+      return 0;
+    }
+    if (paramInt == 3)
+    {
+      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      ady localady = (ady)paramVarArgs[1];
+      switch (((Integer)paramVarArgs[2]).intValue())
       {
-        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-        ady localady = (ady)paramVarArgs[1];
-        switch (((Integer)paramVarArgs[2]).intValue())
-        {
-        default: 
-          return -1;
-        case 1: 
-          hAH = jMD.readString();
-          return 0;
-        case 2: 
-          hKs = jMD.readString();
-          return 0;
-        case 3: 
-          eJB = jMD.aVp();
-          return 0;
-        }
-        hKr = jMD.readString();
+      default: 
+        return -1;
+      case 1: 
+        jAN = maU.jC();
         return 0;
       }
-      return -1;
+      jAO = maU.jC();
+      return 0;
     }
+    return -1;
   }
 }
 

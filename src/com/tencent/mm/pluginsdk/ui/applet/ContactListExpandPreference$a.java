@@ -2,13 +2,15 @@ package com.tencent.mm.pluginsdk.ui.applet;
 
 public abstract interface ContactListExpandPreference$a
 {
-  public abstract void KC();
+  public abstract void Oa();
   
-  public abstract void eZ(int paramInt);
+  public abstract void Ob();
   
-  public abstract void fa(int paramInt);
+  public abstract void fH(int paramInt);
   
-  public abstract void fb(int paramInt);
+  public abstract void fI(int paramInt);
+  
+  public abstract void fJ(int paramInt);
 }
 
 /* Location:

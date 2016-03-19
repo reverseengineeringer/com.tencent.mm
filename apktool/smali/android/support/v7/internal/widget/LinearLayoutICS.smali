@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private final qC:Landroid/graphics/drawable/Drawable;
+.field private final pF:Landroid/graphics/drawable/Drawable;
 
-.field private final qD:I
+.field private final pG:I
 
-.field private final qE:I
+.field private final pH:I
 
-.field private final qF:I
+.field private final pI:I
 
-.field private final qG:I
+.field private final pJ:I
 
 
 # direct methods
@@ -28,7 +28,7 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 47
-    sget-object v2, Lcom/tencent/mm/a$p;->LinearLayoutICS:[I
+    sget-object v2, Lcom/tencent/mm/R$b;->LinearLayoutICS:[I
 
     invoke-virtual {p1, p2, v2}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[I)Landroid/content/res/TypedArray;
 
@@ -39,30 +39,30 @@
 
     move-result-object v3
 
-    iput-object v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qC:Landroid/graphics/drawable/Drawable;
+    iput-object v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pF:Landroid/graphics/drawable/Drawable;
 
     .line 50
-    iget-object v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qC:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pF:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_0
 
     .line 51
-    iget-object v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qC:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pF:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v3
 
-    iput v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qD:I
+    iput v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pG:I
 
     .line 52
-    iget-object v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qC:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pF:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v3
 
-    iput v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qE:I
+    iput v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pH:I
 
     .line 57
     :goto_0
@@ -70,7 +70,7 @@
 
     move-result v3
 
-    iput v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qF:I
+    iput v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pI:I
 
     .line 58
     const/4 v3, 0x2
@@ -79,13 +79,13 @@
 
     move-result v3
 
-    iput v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qG:I
+    iput v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pJ:I
 
     .line 60
     invoke-virtual {v2}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 62
-    iget-object v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qC:Landroid/graphics/drawable/Drawable;
+    iget-object v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pF:Landroid/graphics/drawable/Drawable;
 
     if-nez v2, :cond_1
 
@@ -97,9 +97,9 @@
 
     .line 54
     :cond_0
-    iput v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qD:I
+    iput v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pG:I
 
-    iput v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qE:I
+    iput v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pH:I
 
     goto :goto_0
 
@@ -115,13 +115,13 @@
 
     .prologue
     .line 149
-    iget-object v0, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qC:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pF:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/support/v7/internal/widget/LinearLayoutICS;->getPaddingLeft()I
 
     move-result v1
 
-    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qG:I
+    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pJ:I
 
     add-int/2addr v1, v2
 
@@ -135,18 +135,18 @@
 
     sub-int/2addr v2, v3
 
-    iget v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qG:I
+    iget v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pJ:I
 
     sub-int/2addr v2, v3
 
-    iget v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qE:I
+    iget v3, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pH:I
 
     add-int/2addr v3, p2
 
     invoke-virtual {v0, v1, p2, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 151
-    iget-object v0, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qC:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pF:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -159,17 +159,17 @@
 
     .prologue
     .line 155
-    iget-object v0, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qC:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pF:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Landroid/support/v7/internal/widget/LinearLayoutICS;->getPaddingTop()I
 
     move-result v1
 
-    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qG:I
+    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pJ:I
 
     add-int/2addr v1, v2
 
-    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qD:I
+    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pG:I
 
     add-int/2addr v2, p2
 
@@ -183,14 +183,14 @@
 
     sub-int/2addr v3, v4
 
-    iget v4, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qG:I
+    iget v4, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pJ:I
 
     sub-int/2addr v3, v4
 
     invoke-virtual {v0, p2, v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 157
-    iget-object v0, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qC:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pF:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -200,12 +200,104 @@
 
 
 # virtual methods
+.method public A(I)Z
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x1
+
+    const/4 v1, 0x0
+
+    .line 168
+    if-nez p1, :cond_2
+
+    .line 169
+    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pI:I
+
+    and-int/lit8 v2, v2, 0x1
+
+    if-eqz v2, :cond_1
+
+    .line 182
+    :cond_0
+    :goto_0
+    return v0
+
+    :cond_1
+    move v0, v1
+
+    .line 169
+    goto :goto_0
+
+    .line 170
+    :cond_2
+    invoke-virtual {p0}, Landroid/support/v7/internal/widget/LinearLayoutICS;->getChildCount()I
+
+    move-result v2
+
+    if-ne p1, v2, :cond_3
+
+    .line 171
+    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pI:I
+
+    and-int/lit8 v2, v2, 0x4
+
+    if-nez v2, :cond_0
+
+    move v0, v1
+
+    goto :goto_0
+
+    .line 172
+    :cond_3
+    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pI:I
+
+    and-int/lit8 v2, v2, 0x2
+
+    if-eqz v2, :cond_4
+
+    .line 174
+    add-int/lit8 v2, p1, -0x1
+
+    :goto_1
+    if-ltz v2, :cond_5
+
+    .line 175
+    invoke-virtual {p0, v2}, Landroid/support/v7/internal/widget/LinearLayoutICS;->getChildAt(I)Landroid/view/View;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
+
+    move-result v3
+
+    const/16 v4, 0x8
+
+    if-ne v3, v4, :cond_0
+
+    .line 174
+    add-int/lit8 v2, v2, -0x1
+
+    goto :goto_1
+
+    :cond_4
+    move v0, v1
+
+    .line 182
+    goto :goto_0
+
+    :cond_5
+    move v0, v1
+
+    goto :goto_0
+.end method
+
 .method protected measureChildWithMargins(Landroid/view/View;IIII)V
     .locals 5
 
     .prologue
     .line 78
-    iget-object v0, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qC:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pF:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
@@ -236,14 +328,14 @@
     if-ne v3, v4, :cond_2
 
     .line 86
-    invoke-virtual {p0, v1}, Landroid/support/v7/internal/widget/LinearLayoutICS;->z(I)Z
+    invoke-virtual {p0, v1}, Landroid/support/v7/internal/widget/LinearLayoutICS;->A(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_1
 
     .line 87
-    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qE:I
+    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pH:I
 
     iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->topMargin:I
 
@@ -261,14 +353,14 @@
 
     if-ne v1, v3, :cond_0
 
-    invoke-virtual {p0, v2}, Landroid/support/v7/internal/widget/LinearLayoutICS;->z(I)Z
+    invoke-virtual {p0, v2}, Landroid/support/v7/internal/widget/LinearLayoutICS;->A(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 89
-    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qE:I
+    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pH:I
 
     iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->bottomMargin:I
 
@@ -276,14 +368,14 @@
 
     .line 92
     :cond_2
-    invoke-virtual {p0, v1}, Landroid/support/v7/internal/widget/LinearLayoutICS;->z(I)Z
+    invoke-virtual {p0, v1}, Landroid/support/v7/internal/widget/LinearLayoutICS;->A(I)Z
 
     move-result v3
 
     if-eqz v3, :cond_3
 
     .line 93
-    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qD:I
+    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pG:I
 
     iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->leftMargin:I
 
@@ -295,14 +387,14 @@
 
     if-ne v1, v3, :cond_0
 
-    invoke-virtual {p0, v2}, Landroid/support/v7/internal/widget/LinearLayoutICS;->z(I)Z
+    invoke-virtual {p0, v2}, Landroid/support/v7/internal/widget/LinearLayoutICS;->A(I)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
     .line 95
-    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qD:I
+    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pG:I
 
     iput v1, v0, Landroid/widget/LinearLayout$LayoutParams;->rightMargin:I
 
@@ -348,7 +440,7 @@
 
     if-eq v0, v4, :cond_0
 
-    invoke-virtual {p0, v1}, Landroid/support/v7/internal/widget/LinearLayoutICS;->z(I)Z
+    invoke-virtual {p0, v1}, Landroid/support/v7/internal/widget/LinearLayoutICS;->A(I)Z
 
     move-result v0
 
@@ -378,7 +470,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {p0, v2}, Landroid/support/v7/internal/widget/LinearLayoutICS;->z(I)Z
+    invoke-virtual {p0, v2}, Landroid/support/v7/internal/widget/LinearLayoutICS;->A(I)Z
 
     move-result v0
 
@@ -402,7 +494,7 @@
 
     sub-int/2addr v0, v1
 
-    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qE:I
+    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pH:I
 
     sub-int/2addr v0, v1
 
@@ -445,7 +537,7 @@
 
     if-eq v0, v4, :cond_5
 
-    invoke-virtual {p0, v1}, Landroid/support/v7/internal/widget/LinearLayoutICS;->z(I)Z
+    invoke-virtual {p0, v1}, Landroid/support/v7/internal/widget/LinearLayoutICS;->A(I)Z
 
     move-result v0
 
@@ -475,7 +567,7 @@
     goto :goto_3
 
     :cond_6
-    invoke-virtual {p0, v2}, Landroid/support/v7/internal/widget/LinearLayoutICS;->z(I)Z
+    invoke-virtual {p0, v2}, Landroid/support/v7/internal/widget/LinearLayoutICS;->A(I)Z
 
     move-result v0
 
@@ -499,7 +591,7 @@
 
     sub-int/2addr v0, v1
 
-    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qD:I
+    iget v1, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->pG:I
 
     sub-int/2addr v0, v1
 
@@ -514,96 +606,4 @@
     move-result v0
 
     goto :goto_4
-.end method
-
-.method public z(I)Z
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x1
-
-    const/4 v1, 0x0
-
-    .line 168
-    if-nez p1, :cond_2
-
-    .line 169
-    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qF:I
-
-    and-int/lit8 v2, v2, 0x1
-
-    if-eqz v2, :cond_1
-
-    .line 182
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    move v0, v1
-
-    .line 169
-    goto :goto_0
-
-    .line 170
-    :cond_2
-    invoke-virtual {p0}, Landroid/support/v7/internal/widget/LinearLayoutICS;->getChildCount()I
-
-    move-result v2
-
-    if-ne p1, v2, :cond_3
-
-    .line 171
-    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qF:I
-
-    and-int/lit8 v2, v2, 0x4
-
-    if-nez v2, :cond_0
-
-    move v0, v1
-
-    goto :goto_0
-
-    .line 172
-    :cond_3
-    iget v2, p0, Landroid/support/v7/internal/widget/LinearLayoutICS;->qF:I
-
-    and-int/lit8 v2, v2, 0x2
-
-    if-eqz v2, :cond_4
-
-    .line 174
-    add-int/lit8 v2, p1, -0x1
-
-    :goto_1
-    if-ltz v2, :cond_5
-
-    .line 175
-    invoke-virtual {p0, v2}, Landroid/support/v7/internal/widget/LinearLayoutICS;->getChildAt(I)Landroid/view/View;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
-
-    move-result v3
-
-    const/16 v4, 0x8
-
-    if-ne v3, v4, :cond_0
-
-    .line 174
-    add-int/lit8 v2, v2, -0x1
-
-    goto :goto_1
-
-    :cond_4
-    move v0, v1
-
-    .line 182
-    goto :goto_0
-
-    :cond_5
-    move v0, v1
-
-    goto :goto_0
 .end method

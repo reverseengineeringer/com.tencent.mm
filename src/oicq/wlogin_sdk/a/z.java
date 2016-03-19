@@ -5,24 +5,24 @@ import oicq.wlogin_sdk.tools.util;
 public final class z
   extends a
 {
-  public int jOA = 0;
-  public int jOB = 0;
+  public int mcM = 0;
+  public int mcN = 0;
   
   public z()
   {
-    jNs = 293;
+    mbE = 293;
   }
   
-  public final Boolean aVE()
+  public final Boolean bot()
   {
-    if (jOc < 2) {
+    if (mco < 2) {
       return Boolean.valueOf(false);
     }
-    jOA = util.A(jNm, jOb);
-    if (jOc < jOA + 2 + 2) {
+    mcM = util.E(mby, mcn);
+    if (mco < mcM + 2 + 2) {
       return Boolean.valueOf(false);
     }
-    jOB = util.A(jNm, jOb + 2 + jOA);
+    mcN = util.E(mby, mcn + 2 + mcM);
     return Boolean.valueOf(true);
   }
 }

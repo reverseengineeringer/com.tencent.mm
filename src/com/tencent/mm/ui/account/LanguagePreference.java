@@ -7,16 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public class LanguagePreference
   extends Preference
 {
-  public a itJ;
+  public a ksB;
   
   public LanguagePreference(Context paramContext)
   {
@@ -31,45 +29,45 @@ public class LanguagePreference
   public LanguagePreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference);
+    setLayoutResource(2131363286);
   }
   
   public final void a(a parama)
   {
-    if ((parama == null) || (bn.iW(itM)))
+    if ((parama == null) || (ay.kz(ksE)))
     {
-      t.e("!44@/B4Tb64lLpK8wYhJLCaWa94yEHo+P7srfIxUMMDGkJc=", "setInfo info error");
+      u.e("!44@/B4Tb64lLpK8wYhJLCaWa94yEHo+P7srfIxUMMDGkJc=", "setInfo info error");
       return;
     }
-    itJ = parama;
-    setKey(itM);
+    ksB = parama;
+    setKey(ksE);
   }
   
   protected final void onBindView(View paramView)
   {
     int j = 1;
     super.onBindView(paramView);
-    TextView localTextView = (TextView)paramView.findViewById(a.i.languagename);
-    paramView = (CheckBox)paramView.findViewById(a.i.state_icon);
+    TextView localTextView = (TextView)paramView.findViewById(2131167039);
+    paramView = (CheckBox)paramView.findViewById(2131167093);
     int i;
     if (localTextView != null)
     {
       i = 1;
       if (paramView == null) {
-        break label76;
+        break label74;
       }
     }
     for (;;)
     {
       if ((j & i) != 0)
       {
-        localTextView.setText(itJ.itK);
-        paramView.setChecked(itJ.itN);
+        localTextView.setText(ksB.ksC);
+        paramView.setChecked(ksB.ksF);
       }
       return;
       i = 0;
       break;
-      label76:
+      label74:
       j = 0;
     }
   }
@@ -78,25 +76,25 @@ public class LanguagePreference
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
     LayoutInflater localLayoutInflater = (LayoutInflater)mContext.getSystemService("layout_inflater");
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(a.i.content);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
     localViewGroup.removeAllViews();
-    localLayoutInflater.inflate(a.k.mm_preference_content_language, localViewGroup);
+    localLayoutInflater.inflate(2131362444, localViewGroup);
     return paramViewGroup;
   }
   
   public static final class a
   {
-    String itK;
-    private String itL;
-    public String itM;
-    public boolean itN;
+    String ksC;
+    private String ksD;
+    public String ksE;
+    public boolean ksF;
     
     public a(String paramString1, String paramString2, String paramString3, boolean paramBoolean)
     {
-      itK = paramString1;
-      itL = paramString2;
-      itM = paramString3;
-      itN = paramBoolean;
+      ksC = paramString1;
+      ksD = paramString2;
+      ksE = paramString3;
+      ksF = paramBoolean;
     }
   }
 }

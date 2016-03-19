@@ -11,304 +11,152 @@ import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
 import junit.framework.Assert;
 
 public final class MMGridPaper
   extends LinearLayout
 {
-  protected MMDotView cOX;
-  protected int cOq = 0;
-  protected ac dhB = new ac(Looper.getMainLooper());
-  protected int iCT = 10;
-  protected int iCU = 10;
-  protected MMFlipper iEL;
-  protected ay iEM;
-  protected int iEN;
-  protected int iEO;
-  protected int iEP = 0;
-  protected int iEQ = 0;
-  protected int iER = 3;
-  protected int iES = 0;
-  protected int iET = iER - 1;
-  protected int iEU = 0;
-  protected int iEV = 0;
-  protected boolean iEW = false;
-  protected int iEX = 9;
-  protected int iEY = -1;
-  protected int iEZ = -1;
-  final MMFlipper.b iEw = new av(this);
-  final MMFlipper.a iEx = new au(this);
-  protected int iFa = 96;
-  protected int iFb = 96;
-  protected boolean iFc = false;
-  protected boolean iFd = false;
-  protected int iFe = -1;
-  protected int iFf = -1;
-  protected int iFg = 0;
-  protected int iFh = -1;
-  protected int iFi = -1;
-  protected boolean iFj = false;
-  protected int iFk = 0;
-  protected int iFl = 0;
-  protected a iFm;
-  protected View mT;
+  protected int dgj = 0;
+  protected MMDotView doM;
+  protected aa fRv = new aa(Looper.getMainLooper());
+  protected int kBW = 10;
+  protected int kBX = 10;
+  final MMFlipper.b kDG = new MMFlipper.b()
+  {
+    public final void kk(final int paramAnonymousInt)
+    {
+      u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onScreenChanged:curScreen[%d], topEdge[%d], bottomEdge[%d], virtualPage[%d]", new Object[] { Integer.valueOf(paramAnonymousInt), Integer.valueOf(kEc), Integer.valueOf(kEd), Integer.valueOf(kEe) });
+      if ((paramAnonymousInt <= kEc) && (kEc > 0)) {
+        fRv.post(new Runnable()
+        {
+          public final void run()
+          {
+            MMGridPaperGridView localMMGridPaperGridView = (MMGridPaperGridView)kDV.getChildAt(kDV.getChildCount() - 1);
+            int i = paramAnonymousInt - (kDV.getChildCount() >> 1);
+            u.i("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "move up, old index[%d], new index[%d]", new Object[] { Integer.valueOf(kDV.getChildCount() - 1), Integer.valueOf(i) });
+            kDV.removeViewAt(kDV.getChildCount() - 1);
+            localMMGridPaperGridView.a(i, kEf, dgj, kDW);
+            kDV.addView(localMMGridPaperGridView, 0);
+            i = kDV.getChildCount();
+            kDV.qE(i >> 1);
+            MMGridPaper.a(MMGridPaper.this, -1);
+          }
+        });
+      }
+      for (;;)
+      {
+        kEa = paramAnonymousInt;
+        doM.setSelectedDot(paramAnonymousInt);
+        return;
+        if ((paramAnonymousInt >= kEd) && (kEd < kEe - 1)) {
+          fRv.post(new Runnable()
+          {
+            public final void run()
+            {
+              MMGridPaperGridView localMMGridPaperGridView = (MMGridPaperGridView)kDV.getChildAt(0);
+              int i = paramAnonymousInt + (kDV.getChildCount() >> 1);
+              u.i("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "move down, old index[0], new index[%d]", new Object[] { Integer.valueOf(i) });
+              kDV.removeViewAt(0);
+              localMMGridPaperGridView.a(i, kEf, dgj, kDW);
+              kDV.addView(localMMGridPaperGridView);
+              i = kDV.getChildCount();
+              kDV.qE(i >> 1);
+              MMGridPaper.a(MMGridPaper.this, 1);
+            }
+          });
+        }
+      }
+    }
+  };
+  final MMFlipper.a kDH = new MMFlipper.a()
+  {
+    public final void aT(int paramAnonymousInt1, int paramAnonymousInt2)
+    {
+      u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onMeasure width:[new %d, old %d] height:[new %d, old %d], dialogMode[%B], orientationChange[%B]", new Object[] { Integer.valueOf(paramAnonymousInt1), Integer.valueOf(kDX), Integer.valueOf(paramAnonymousInt2), Integer.valueOf(kDY), Boolean.valueOf(kEn), Boolean.valueOf(kEm) });
+      if (((Math.abs(kDY - paramAnonymousInt2) < 50) && (Math.abs(kDX - paramAnonymousInt1) < 50)) || (paramAnonymousInt2 == 0) || (paramAnonymousInt1 == 0))
+      {
+        u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "match width height limit, return");
+        return;
+      }
+      if ((kEn) && (kDX > paramAnonymousInt1) && (!kEm))
+      {
+        u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "match ori limit, return");
+        return;
+      }
+      u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onMeasure: match");
+      u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onMeasure: mIsManualMeasureMode[%b]", new Object[] { Boolean.valueOf(kEt) });
+      kEm = false;
+      if (!kEt)
+      {
+        kDY = paramAnonymousInt2;
+        kDX = paramAnonymousInt1;
+      }
+      refresh();
+    }
+  };
+  protected MMFlipper kDV;
+  protected j kDW;
+  protected int kDX;
+  protected int kDY;
+  protected int kDZ = 0;
+  protected int kEa = 0;
+  protected int kEb = 3;
+  protected int kEc = 0;
+  protected int kEd = kEb - 1;
+  protected int kEe = 0;
+  protected int kEf = 0;
+  protected boolean kEg = false;
+  protected int kEh = 9;
+  protected int kEi = -1;
+  protected int kEj = -1;
+  protected int kEk = 96;
+  protected int kEl = 96;
+  protected boolean kEm = false;
+  protected boolean kEn = false;
+  protected int kEo = -1;
+  protected int kEp = -1;
+  protected int kEq = 0;
+  protected int kEr = -1;
+  protected int kEs = -1;
+  protected boolean kEt = false;
+  protected int kEu = 0;
+  protected int kEv = 0;
+  protected a kEw;
+  protected View lY;
   
   public MMGridPaper(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    View.inflate(getContext(), a.k.mm_gridpaper, this);
-    iFg = getScreenOrientation();
+    View.inflate(getContext(), 2131363180, this);
+    kEq = getScreenOrientation();
   }
   
-  private void aAF()
+  private void aRx()
   {
-    t.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "MMGridPaper initFlipper");
-    if (cOX == null)
+    u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "MMGridPaper initFlipper");
+    if (doM == null)
     {
-      cOX = ((MMDotView)findViewById(a.i.gridpaper_dot));
-      cOX.setMaxCount(iEX);
+      doM = ((MMDotView)findViewById(2131169416));
+      doM.setMaxCount(kEh);
     }
-    if (iEL == null)
+    if (kDV == null)
     {
-      iEL = ((MMFlipper)findViewById(a.i.gridpaper_flipper));
-      iEL.setOnMeasureListener(iEx);
-      iEL.setOnScreenChangedListener(iEw);
+      kDV = ((MMFlipper)findViewById(2131169415));
+      kDV.setOnMeasureListener(kDH);
+      kDV.setOnScreenChangedListener(kDG);
     }
-    aMM();
-    aMN();
+    bcA();
+    bcB();
   }
   
-  private void aMM()
-  {
-    View localView;
-    LinearLayout.LayoutParams localLayoutParams;
-    int i;
-    if ((-1 != iEY) && (getScreenOrientation() == 2))
-    {
-      localView = findViewById(a.i.gridpaper_display_view);
-      localLayoutParams = (LinearLayout.LayoutParams)localView.getLayoutParams();
-      i = a.fromDPToPix(getContext(), iEY);
-      if (i != height)
-      {
-        t.i("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "set land mode, special height is %d", new Object[] { Integer.valueOf(iEY) });
-        height = i;
-        localView.setLayoutParams(localLayoutParams);
-      }
-    }
-    do
-    {
-      dhB.post(new as(this));
-      do
-      {
-        return;
-      } while ((-1 == iEZ) || (getScreenOrientation() != 1));
-      localView = findViewById(a.i.gridpaper_display_view);
-      localLayoutParams = (LinearLayout.LayoutParams)localView.getLayoutParams();
-      i = a.fromDPToPix(getContext(), iEZ);
-    } while (i == height);
-    t.i("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "set port mode, special height is %d", new Object[] { Integer.valueOf(iEZ) });
-    height = i;
-    localView.setLayoutParams(localLayoutParams);
-    dhB.post(new at(this));
-  }
-  
-  private void aMN()
-  {
-    t.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "initSubGrid, grid width %d, grid height %d", new Object[] { Integer.valueOf(iEN), Integer.valueOf(iEO) });
-    if ((iEN == 0) || (iEO == 0))
-    {
-      t.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "initSubGrid:gridWithd or gridHeight is 0");
-      return;
-    }
-    int j = a.fromDPToPix(getContext(), iFa);
-    int i = a.fromDPToPix(getContext(), iFb);
-    j = Math.max(iEN / j, 1);
-    i = Math.max(iEO / i, 1);
-    if ((j != cOq) || (i != iEV)) {
-      iEW = true;
-    }
-    cOq = j;
-    if (iFh != -1) {
-      cOq = Math.min(cOq, iFh);
-    }
-    iEV = i;
-    if (iFi != -1) {
-      iEV = Math.min(iEV, iFi);
-    }
-    int m = cOq * iEV;
-    iEU = 0;
-    boolean bool;
-    if (iEM == null)
-    {
-      i = 0;
-      j = i + 0;
-      t.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "totalCount is %d, dialogMode is %B", new Object[] { Integer.valueOf(j), Boolean.valueOf(iFd) });
-      if (j < 0) {
-        break label314;
-      }
-      bool = true;
-      label243:
-      Assert.assertTrue(bool);
-      if (iFd)
-      {
-        k = bu(j, cOq);
-        i = getScreenOrientation();
-      }
-      switch (i)
-      {
-      default: 
-        i = 1;
-      }
-    }
-    for (;;)
-    {
-      if (i != 0) {
-        break label524;
-      }
-      aMM();
-      return;
-      i = iEM.getCount();
-      break;
-      label314:
-      bool = false;
-      break label243;
-      k = Math.min(k, iFf);
-      n = (iFb + 10) * k + 8;
-      t.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "orientation[%d], minRows[%d], targetHeight[%d], displayHeight[%d], orientationChange[%B]", new Object[] { Integer.valueOf(i), Integer.valueOf(k), Integer.valueOf(n), Integer.valueOf(iEY), Boolean.valueOf(iFc) });
-      if (iEY != n)
-      {
-        iEY = n;
-        i = 0;
-      }
-      else
-      {
-        i = 1;
-        continue;
-        k = Math.min(k, iFe);
-        n = (iFb + 10) * k + 8;
-        t.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "orientation[%d], minRows[%d], targetHeight[%d], displayHeight[%d], orientationChange[%B]", new Object[] { Integer.valueOf(i), Integer.valueOf(k), Integer.valueOf(n), Integer.valueOf(iEZ), Boolean.valueOf(iFc) });
-        if (iEZ != n)
-        {
-          iEZ = n;
-          i = 0;
-        }
-        else
-        {
-          i = 1;
-        }
-      }
-    }
-    label524:
-    iEU = bu(j, m);
-    int n = iEU;
-    int k = iEP;
-    MMGridPaperGridView localMMGridPaperGridView;
-    if ((k == 0) || (m <= 0))
-    {
-      t.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "floor:total[%d], length[%d]", new Object[] { Integer.valueOf(k), Integer.valueOf(m) });
-      i = 0;
-      iEQ = Math.min(n - 1, i);
-      iER = Math.min(3, iEU);
-      iES = Math.min(iEU - iER, Math.max(0, iEQ - (iER >> 1)));
-      iET = (iES + iER - 1);
-      t.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "initSubGrid:item[%ddp,%ddp], row[%d], column[%d], activePage[%d], virtualPage[%d], curVirtualPage[%d], edge[%d, %d]", new Object[] { Integer.valueOf(iFa), Integer.valueOf(iFb), Integer.valueOf(iEV), Integer.valueOf(cOq), Integer.valueOf(iER), Integer.valueOf(iEU), Integer.valueOf(iEQ), Integer.valueOf(iES), Integer.valueOf(iET) });
-      if ((iEL.getChildCount() != iER) || (iEW))
-      {
-        t.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "error child count or RowOrColChanged(%B), reset child view", new Object[] { Boolean.valueOf(iEW) });
-        iEW = false;
-        iEL.removeAllViews();
-        i = iES;
-        while (i <= iET)
-        {
-          localMMGridPaperGridView = (MMGridPaperGridView)inflate(getContext(), a.k.mm_drap_drop_gridview, null);
-          localMMGridPaperGridView.a(i, iEV, cOq, iEM);
-          localMMGridPaperGridView.setHorizontalSpacing(a.fromDPToPix(getContext(), iCT));
-          localMMGridPaperGridView.setVerticalSpacing(a.fromDPToPix(getContext(), iCU));
-          iEL.addView(localMMGridPaperGridView, new LinearLayout.LayoutParams(-1, -1));
-          i += 1;
-        }
-      }
-    }
-    for (;;)
-    {
-      if (j >= m)
-      {
-        j -= m;
-        i += 1;
-      }
-      else
-      {
-        t.i("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "floor:num[%d], length[%d], result[%d]", new Object[] { Integer.valueOf(k), Integer.valueOf(m), Integer.valueOf(i) });
-        break;
-        i = iES;
-        if (i <= iET)
-        {
-          localMMGridPaperGridView = (MMGridPaperGridView)iEL.getChildAt(i - iES);
-          if (localMMGridPaperGridView.getIndex() != i)
-          {
-            t.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "old index %d, new index %d, reset it", new Object[] { Integer.valueOf(localMMGridPaperGridView.getIndex()), Integer.valueOf(i) });
-            localMMGridPaperGridView.a(i, iEV, cOq, iEM);
-            if (iFw != null) {
-              iFw.notifyDataSetChanged();
-            }
-          }
-          for (;;)
-          {
-            i += 1;
-            break;
-            t.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "same grid index, continus");
-          }
-        }
-        aMO();
-        return;
-        j = k;
-        i = 0;
-      }
-    }
-  }
-  
-  private void aMO()
-  {
-    t.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "set DotView");
-    boolean bool;
-    if (iEU >= 0)
-    {
-      bool = true;
-      Assert.assertTrue(bool);
-      cOX.setDotCount(iEU);
-      if ((iEM != null) && (iEU > 1)) {
-        break label129;
-      }
-      cOX.setVisibility(8);
-      t.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "set DotView gone");
-    }
-    for (;;)
-    {
-      if (iEQ >= iEU) {
-        iEQ = (iEU - 1);
-      }
-      iEL.nJ(iEQ - iES);
-      iEL.nK(iEQ);
-      cOX.setSelectedDot(iEQ);
-      return;
-      bool = false;
-      break;
-      label129:
-      cOX.setVisibility(0);
-      t.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "set DotView visible");
-    }
-  }
-  
-  private static int bu(int paramInt1, int paramInt2)
+  private static int bK(int paramInt1, int paramInt2)
   {
     if (paramInt2 <= 0)
     {
-      t.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "ceil:total[%d], length[%d]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+      u.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "ceil:total[%d], length[%d]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
       return 0;
     }
     for (;;)
@@ -322,7 +170,7 @@ public final class MMGridPaper
       }
       else
       {
-        t.i("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "ceil:num[%d], length[%d], result[%d]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(i) });
+        u.i("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "ceil:num[%d], length[%d], result[%d]", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(i) });
         return i;
         j = paramInt1;
         i = 0;
@@ -330,9 +178,244 @@ public final class MMGridPaper
     }
   }
   
+  private void bcA()
+  {
+    View localView;
+    LinearLayout.LayoutParams localLayoutParams;
+    int i;
+    if ((-1 != kEi) && (getScreenOrientation() == 2))
+    {
+      localView = findViewById(2131169414);
+      localLayoutParams = (LinearLayout.LayoutParams)localView.getLayoutParams();
+      i = a.fromDPToPix(getContext(), kEi);
+      if (i != height)
+      {
+        u.i("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "set land mode, special height is %d", new Object[] { Integer.valueOf(kEi) });
+        height = i;
+        localView.setLayoutParams(localLayoutParams);
+      }
+    }
+    do
+    {
+      fRv.post(new Runnable()
+      {
+        public final void run()
+        {
+          u.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "post do setDotView");
+          MMGridPaper.a(MMGridPaper.this);
+        }
+      });
+      do
+      {
+        return;
+      } while ((-1 == kEj) || (getScreenOrientation() != 1));
+      localView = findViewById(2131169414);
+      localLayoutParams = (LinearLayout.LayoutParams)localView.getLayoutParams();
+      i = a.fromDPToPix(getContext(), kEj);
+    } while (i == height);
+    u.i("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "set port mode, special height is %d", new Object[] { Integer.valueOf(kEj) });
+    height = i;
+    localView.setLayoutParams(localLayoutParams);
+    fRv.post(new Runnable()
+    {
+      public final void run()
+      {
+        u.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "post do setDotView");
+        MMGridPaper.a(MMGridPaper.this);
+      }
+    });
+  }
+  
+  private void bcB()
+  {
+    u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "initSubGrid, grid width %d, grid height %d", new Object[] { Integer.valueOf(kDX), Integer.valueOf(kDY) });
+    if ((kDX == 0) || (kDY == 0))
+    {
+      u.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "initSubGrid:gridWithd or gridHeight is 0");
+      return;
+    }
+    int j = a.fromDPToPix(getContext(), kEk);
+    int i = a.fromDPToPix(getContext(), kEl);
+    j = Math.max(kDX / j, 1);
+    i = Math.max(kDY / i, 1);
+    if ((j != dgj) || (i != kEf)) {
+      kEg = true;
+    }
+    dgj = j;
+    if (kEr != -1) {
+      dgj = Math.min(dgj, kEr);
+    }
+    kEf = i;
+    if (kEs != -1) {
+      kEf = Math.min(kEf, kEs);
+    }
+    int m = dgj * kEf;
+    kEe = 0;
+    boolean bool;
+    if (kDW == null)
+    {
+      i = 0;
+      j = i + 0;
+      u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "totalCount is %d, dialogMode is %B", new Object[] { Integer.valueOf(j), Boolean.valueOf(kEn) });
+      if (j < 0) {
+        break label314;
+      }
+      bool = true;
+      label243:
+      Assert.assertTrue(bool);
+      if (kEn)
+      {
+        k = bK(j, dgj);
+        i = getScreenOrientation();
+      }
+      switch (i)
+      {
+      default: 
+        i = 1;
+      }
+    }
+    for (;;)
+    {
+      if (i != 0) {
+        break label524;
+      }
+      bcA();
+      return;
+      i = kDW.getCount();
+      break;
+      label314:
+      bool = false;
+      break label243;
+      k = Math.min(k, kEp);
+      n = (kEl + 10) * k + 8;
+      u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "orientation[%d], minRows[%d], targetHeight[%d], displayHeight[%d], orientationChange[%B]", new Object[] { Integer.valueOf(i), Integer.valueOf(k), Integer.valueOf(n), Integer.valueOf(kEi), Boolean.valueOf(kEm) });
+      if (kEi != n)
+      {
+        kEi = n;
+        i = 0;
+      }
+      else
+      {
+        i = 1;
+        continue;
+        k = Math.min(k, kEo);
+        n = (kEl + 10) * k + 8;
+        u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "orientation[%d], minRows[%d], targetHeight[%d], displayHeight[%d], orientationChange[%B]", new Object[] { Integer.valueOf(i), Integer.valueOf(k), Integer.valueOf(n), Integer.valueOf(kEj), Boolean.valueOf(kEm) });
+        if (kEj != n)
+        {
+          kEj = n;
+          i = 0;
+        }
+        else
+        {
+          i = 1;
+        }
+      }
+    }
+    label524:
+    kEe = bK(j, m);
+    int n = kEe;
+    int k = kDZ;
+    MMGridPaperGridView localMMGridPaperGridView;
+    if ((k == 0) || (m <= 0))
+    {
+      u.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "floor:total[%d], length[%d]", new Object[] { Integer.valueOf(k), Integer.valueOf(m) });
+      i = 0;
+      kEa = Math.min(n - 1, i);
+      kEb = Math.min(3, kEe);
+      kEc = Math.min(kEe - kEb, Math.max(0, kEa - (kEb >> 1)));
+      kEd = (kEc + kEb - 1);
+      u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "initSubGrid:item[%ddp,%ddp], row[%d], column[%d], activePage[%d], virtualPage[%d], curVirtualPage[%d], edge[%d, %d]", new Object[] { Integer.valueOf(kEk), Integer.valueOf(kEl), Integer.valueOf(kEf), Integer.valueOf(dgj), Integer.valueOf(kEb), Integer.valueOf(kEe), Integer.valueOf(kEa), Integer.valueOf(kEc), Integer.valueOf(kEd) });
+      if ((kDV.getChildCount() != kEb) || (kEg))
+      {
+        u.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "error child count or RowOrColChanged(%B), reset child view", new Object[] { Boolean.valueOf(kEg) });
+        kEg = false;
+        kDV.removeAllViews();
+        i = kEc;
+        while (i <= kEd)
+        {
+          localMMGridPaperGridView = (MMGridPaperGridView)inflate(getContext(), 2131363262, null);
+          localMMGridPaperGridView.a(i, kEf, dgj, kDW);
+          localMMGridPaperGridView.setHorizontalSpacing(a.fromDPToPix(getContext(), kBW));
+          localMMGridPaperGridView.setVerticalSpacing(a.fromDPToPix(getContext(), kBX));
+          kDV.addView(localMMGridPaperGridView, new LinearLayout.LayoutParams(-1, -1));
+          i += 1;
+        }
+      }
+    }
+    for (;;)
+    {
+      if (j >= m)
+      {
+        j -= m;
+        i += 1;
+      }
+      else
+      {
+        u.i("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "floor:num[%d], length[%d], result[%d]", new Object[] { Integer.valueOf(k), Integer.valueOf(m), Integer.valueOf(i) });
+        break;
+        i = kEc;
+        if (i <= kEd)
+        {
+          localMMGridPaperGridView = (MMGridPaperGridView)kDV.getChildAt(i - kEc);
+          if (localMMGridPaperGridView.getIndex() != i)
+          {
+            u.w("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "old index %d, new index %d, reset it", new Object[] { Integer.valueOf(localMMGridPaperGridView.getIndex()), Integer.valueOf(i) });
+            localMMGridPaperGridView.a(i, kEf, dgj, kDW);
+            if (kEG != null) {
+              kEG.notifyDataSetChanged();
+            }
+          }
+          for (;;)
+          {
+            i += 1;
+            break;
+            u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "same grid index, continus");
+          }
+        }
+        bcC();
+        return;
+        j = k;
+        i = 0;
+      }
+    }
+  }
+  
+  private void bcC()
+  {
+    u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "set DotView");
+    boolean bool;
+    if (kEe >= 0)
+    {
+      bool = true;
+      Assert.assertTrue(bool);
+      doM.setDotCount(kEe);
+      if ((kDW != null) && (kEe > 1)) {
+        break label129;
+      }
+      doM.setVisibility(8);
+      u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "set DotView gone");
+    }
+    for (;;)
+    {
+      if (kEa >= kEe) {
+        kEa = (kEe - 1);
+      }
+      kDV.qE(kEa - kEc);
+      kDV.qF(kEa);
+      doM.setSelectedDot(kEa);
+      return;
+      bool = false;
+      break;
+      label129:
+      doM.setVisibility(0);
+      u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "set DotView visible");
+    }
+  }
+  
   private MMGridPaperGridView getCurrentPage()
   {
-    return (MMGridPaperGridView)iEL.getChildAt(iEL.getCurScreen());
+    return (MMGridPaperGridView)kDV.getChildAt(kDV.getCurScreen());
   }
   
   private int getScreenOrientation()
@@ -344,26 +427,26 @@ public final class MMGridPaper
     return 2;
   }
   
-  public final void aMK()
+  public final void bcy()
   {
-    iFf = 3;
-    iFe = 3;
+    kEp = 3;
+    kEo = 3;
   }
   
-  public final void aML()
+  public final void bcz()
   {
-    iCT = 8;
-    iCU = 15;
+    kBW = 8;
+    kBX = 15;
   }
   
   public final int getItemsCountPerPage()
   {
-    return iEV * cOq;
+    return kEf * dgj;
   }
   
   public final int getPageCount()
   {
-    return iEU;
+    return kEe;
   }
   
   @TargetApi(8)
@@ -371,65 +454,71 @@ public final class MMGridPaper
   {
     if ((orientation == 1) || (orientation == 2))
     {
-      t.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onConfigChanged:" + orientation);
-      iFc = true;
+      u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onConfigChanged:" + orientation);
+      kEm = true;
     }
   }
   
   protected final void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    t.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onLayout left=%s top=%s right=%s bottom=%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Integer.valueOf(paramInt4) });
-    if (iFg != getScreenOrientation())
+    u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onLayout left=%s top=%s right=%s bottom=%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Integer.valueOf(paramInt4) });
+    if (kEq != getScreenOrientation())
     {
-      iFg = getScreenOrientation();
-      t.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onLayout, currentOrientation changed, reAdjustDisplayArea");
-      iFc = true;
+      kEq = getScreenOrientation();
+      u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "onLayout, currentOrientation changed, reAdjustDisplayArea");
+      kEm = true;
       clearAnimation();
-      aMM();
-      aMN();
+      bcA();
+      bcB();
     }
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
   }
   
   public final void refresh()
   {
-    iEP = (iEQ * cOq * iEV);
-    t.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "refreshed:virtualPage[%d], col[%d], row[%d], scrollCount[%d]", new Object[] { Integer.valueOf(iEQ), Integer.valueOf(cOq), Integer.valueOf(iEV), Integer.valueOf(iEP) });
-    aAF();
+    kDZ = (kEa * dgj * kEf);
+    u.v("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "refreshed:virtualPage[%d], col[%d], row[%d], scrollCount[%d]", new Object[] { Integer.valueOf(kEa), Integer.valueOf(dgj), Integer.valueOf(kEf), Integer.valueOf(kDZ) });
+    aRx();
   }
   
   public final void setDialogMode(boolean paramBoolean)
   {
-    iFd = paramBoolean;
+    kEn = paramBoolean;
   }
   
   public final void setDisplayHeightLandInDp(int paramInt)
   {
-    iEY = paramInt;
+    kEi = paramInt;
   }
   
   public final void setDisplayHeightPortInDp(int paramInt)
   {
-    iEZ = paramInt;
+    kEj = paramInt;
   }
   
   public final void setGridHeight(int paramInt)
   {
-    iEO = paramInt;
+    kDY = paramInt;
   }
   
-  public final void setGridPaperAdapter(ay paramay)
+  public final void setGridPaperAdapter(j paramj)
   {
     boolean bool = true;
-    iEM = paramay;
-    if (paramay == null) {}
+    kDW = paramj;
+    if (paramj == null) {}
     for (;;)
     {
-      t.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "setGridPaperAdapter:adapter is null[%B]", new Object[] { Boolean.valueOf(bool) });
-      if (iEM != null) {
-        iEM.iFq = new ar(this);
+      u.d("!32@/B4Tb64lLpJ3ysDJ3BtNKcrZSCfaejKv", "setGridPaperAdapter:adapter is null[%B]", new Object[] { Boolean.valueOf(bool) });
+      if (kDW != null) {
+        kDW.kEA = new j.a()
+        {
+          public final void bcD()
+          {
+            refresh();
+          }
+        };
       }
-      aAF();
+      aRx();
       return;
       bool = false;
     }
@@ -437,52 +526,52 @@ public final class MMGridPaper
   
   public final void setGridWidth(int paramInt)
   {
-    iEN = paramInt;
+    kDX = paramInt;
   }
   
   public final void setHeaderView(View paramView)
   {
-    mT = paramView;
-    paramView = (ViewGroup)findViewById(a.i.header_area);
+    lY = paramView;
+    paramView = (ViewGroup)findViewById(2131166946);
     paramView.removeAllViews();
-    if (mT != null) {
-      paramView.addView(mT);
+    if (lY != null) {
+      paramView.addView(lY);
     }
   }
   
   public final void setItemHeightInDp(int paramInt)
   {
-    iFb = paramInt;
+    kEl = paramInt;
   }
   
   public final void setItemWidthInDp(int paramInt)
   {
-    iFa = paramInt;
+    kEk = paramInt;
   }
   
   public final void setManualMeasureMode(boolean paramBoolean)
   {
-    iFj = paramBoolean;
+    kEt = paramBoolean;
   }
   
   public final void setMaxCol(int paramInt)
   {
-    iFh = paramInt;
+    kEr = paramInt;
   }
   
   public final void setMaxDotCount(int paramInt)
   {
-    iEX = paramInt;
+    kEh = paramInt;
   }
   
   public final void setMaxRow(int paramInt)
   {
-    iFi = paramInt;
+    kEs = paramInt;
   }
   
   public final void setOnPageSizeChangeListener(a parama)
   {
-    iFm = parama;
+    kEw = parama;
   }
   
   public static abstract interface a {}

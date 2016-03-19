@@ -17,7 +17,7 @@
 # instance fields
 .field public content:Ljava/lang/String;
 
-.field gWx:Z
+.field ffb:Z
 
 .field public timestamp:J
 

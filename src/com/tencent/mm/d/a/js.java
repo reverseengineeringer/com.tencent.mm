@@ -1,33 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class js
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGP = new a();
-  public b aGQ = new b();
+  public static boolean arQ = true;
+  public static boolean arR = true;
+  public a aGp = new a();
   
   public js()
   {
-    id = "WalletGetUserInfo";
-    hXT = atO;
+    id = "ReportWakeLockStats";
+    jUI = arR;
   }
   
-  public static final class a {}
-  
-  public static final class b
+  public static final class a
   {
-    public boolean aGR;
-    public boolean aGS;
-    public boolean aGT;
-    public boolean aGU;
-    public String aGV;
-    public String aGW;
-    public String ayr;
-    public int errCode = 0;
+    public String aGq;
   }
 }
 

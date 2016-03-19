@@ -1,10 +1,19 @@
 package com.tencent.mm.sdk.c;
 
 public abstract class d
+  extends c
 {
-  public Runnable fjN = null;
-  public boolean hXT;
-  public String id;
+  public d(int paramInt)
+  {
+    super(0);
+  }
+  
+  public final boolean a(b paramb)
+  {
+    return ag(paramb);
+  }
+  
+  public abstract boolean ag(Object paramObject);
 }
 
 /* Location:

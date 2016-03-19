@@ -4,27 +4,27 @@ import android.graphics.Bitmap;
 
 public abstract interface j
 {
-  public abstract String DA();
+  public abstract String FF();
   
-  public abstract String DB();
+  public abstract String FG();
   
-  public abstract boolean DC();
+  public abstract String FH();
   
-  public abstract boolean DD();
+  public abstract boolean FI();
   
-  public abstract Bitmap DE();
+  public abstract boolean FJ();
   
-  public abstract void DF();
+  public abstract Bitmap FK();
   
-  public abstract String Dy();
-  
-  public abstract String Dz();
+  public abstract void FL();
   
   public abstract Bitmap a(Bitmap paramBitmap, a parama);
   
   public abstract void a(a parama, String paramString);
   
-  public abstract void r(String paramString, boolean paramBoolean);
+  public abstract String getCacheKey();
+  
+  public abstract void v(String paramString, boolean paramBoolean);
   
   public static enum a {}
 }

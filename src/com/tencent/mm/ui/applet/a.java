@@ -6,7 +6,7 @@ import android.widget.AbsListView.OnScrollListener;
 public final class a
   implements AbsListView.OnScrollListener
 {
-  private AbsListView.OnScrollListener gOG = null;
+  private AbsListView.OnScrollListener iFY = null;
   
   public a()
   {
@@ -17,15 +17,15 @@ public final class a
   
   public final void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3)
   {
-    if (gOG != null) {
-      gOG.onScroll(paramAbsListView, paramInt1, paramInt2, paramInt3);
+    if (iFY != null) {
+      iFY.onScroll(paramAbsListView, paramInt1, paramInt2, paramInt3);
     }
   }
   
   public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
   {
-    if (gOG != null) {
-      gOG.onScrollStateChanged(paramAbsListView, paramInt);
+    if (iFY != null) {
+      iFY.onScrollStateChanged(paramAbsListView, paramInt);
     }
   }
 }

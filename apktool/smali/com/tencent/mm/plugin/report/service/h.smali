@@ -1,28 +1,12 @@
-.class public final Lcom/tencent/mm/plugin/report/service/h;
-.super Ljava/lang/Object;
+.class public final enum Lcom/tencent/mm/plugin/report/service/h;
+.super Ljava/lang/Enum;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/plugin/report/service/h$a;
-    }
-.end annotation
-
-
 # static fields
-.field private static eJO:Landroid/util/SparseArray;
+.field public static final enum fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
-.field private static eJP:Landroid/util/SparseArray;
-
-.field private static eJQ:Z
-
-.field private static eJR:J
-
-.field private static eJS:J
-
-.field private static eJT:J
+.field private static final synthetic fUK:[Lcom/tencent/mm/plugin/report/service/h;
 
 
 # direct methods
@@ -30,667 +14,1069 @@
     .locals 3
 
     .prologue
-    const-wide/16 v1, 0x0
+    .line 18
+    new-instance v0, Lcom/tencent/mm/plugin/report/service/h;
 
-    .line 30
-    new-instance v0, Landroid/util/SparseArray;
+    const-string/jumbo v1, "INSTANCE"
 
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/plugin/report/service/h;-><init>(Ljava/lang/String;)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/report/service/h;->eJO:Landroid/util/SparseArray;
+    sput-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
-    .line 32
-    new-instance v0, Landroid/util/SparseArray;
-
-    invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
-
-    sput-object v0, Lcom/tencent/mm/plugin/report/service/h;->eJP:Landroid/util/SparseArray;
-
-    .line 37
+    .line 16
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/report/service/h;->eJQ:Z
+    new-array v0, v0, [Lcom/tencent/mm/plugin/report/service/h;
 
-    .line 253
-    sput-wide v1, Lcom/tencent/mm/plugin/report/service/h;->eJR:J
+    const/4 v1, 0x0
 
-    .line 255
-    sput-wide v1, Lcom/tencent/mm/plugin/report/service/h;->eJS:J
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
-    .line 257
-    sput-wide v1, Lcom/tencent/mm/plugin/report/service/h;->eJT:J
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUK:[Lcom/tencent/mm/plugin/report/service/h;
 
     return-void
 .end method
 
-.method public static bn(J)V
-    .locals 6
+.method private constructor <init>(Ljava/lang/String;)V
+    .locals 1
 
     .prologue
-    const/16 v5, 0x8
+    .line 16
+    const/4 v0, 0x0
 
-    .line 142
-    sget-boolean v0, Lcom/tencent/mm/plugin/report/service/h;->eJQ:Z
+    invoke-direct {p0, p1, v0}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    if-nez v0, :cond_0
-
-    .line 148
-    :goto_0
     return-void
-
-    .line 145
-    :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx"
-
-    const-string/jumbo v1, "ReportLogInfo operationBegin eventID:%d  with time:%d"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 147
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->eJO:Landroid/util/SparseArray;
-
-    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v5, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    goto :goto_0
 .end method
 
-.method public static im(I)V
-    .locals 6
+.method public static a(I[III)Ljava/lang/Object;
+    .locals 4
 
     .prologue
-    .line 130
-    sget-boolean v0, Lcom/tencent/mm/plugin/report/service/h;->eJQ:Z
+    const/4 v0, 0x0
 
-    if-nez v0, :cond_0
+    const/4 v1, 0x0
 
-    .line 139
-    :goto_0
-    return-void
+    .line 42
+    if-le p3, p2, :cond_0
 
-    .line 132
-    :cond_0
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->eJO:Landroid/util/SparseArray;
+    const/16 v2, 0xff
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DM()J
+    if-gt p3, v2, :cond_0
 
-    move-result-wide v1
+    const/16 v2, 0x8
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    sub-int v3, p3, p2
 
-    move-result-object v1
+    if-eq v2, v3, :cond_1
 
-    invoke-virtual {v0, p0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
-
-    .line 137
-    const-string/jumbo v0, "!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx"
-
-    const-string/jumbo v1, "ReportLogInfo operationBegin eventID:%d  time:%d"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DM()J
-
-    move-result-wide v4
-
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method public static in(I)V
-    .locals 9
-
-    .prologue
-    const-wide/16 v3, -0x1
-
-    const/16 v8, 0x17
-
-    const/4 v6, 0x2
-
-    const/4 v7, 0x1
-
-    .line 151
-    sget-boolean v0, Lcom/tencent/mm/plugin/report/service/h;->eJQ:Z
-
-    if-nez v0, :cond_1
-
-    .line 250
+    .line 56
     :cond_0
     :goto_0
-    return-void
+    return-object v0
 
-    .line 153
+    .line 45
     :cond_1
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->eJO:Landroid/util/SparseArray;
+    aget v2, p1, v1
 
-    invoke-virtual {v0, p0}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
+    if-gt p0, v2, :cond_3
+
+    .line 46
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/Long;
+    goto :goto_0
 
-    .line 154
-    if-eqz v0, :cond_0
+    .line 48
+    :cond_2
+    add-int/lit8 v1, v1, 0x1
 
-    .line 156
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    :cond_3
+    const/4 v2, 0x7
 
-    move-result-wide v1
+    if-ge v1, v2, :cond_4
 
-    cmp-long v1, v1, v3
+    .line 49
+    aget v2, p1, v1
 
-    if-eqz v1, :cond_0
+    add-int/lit8 v3, v1, 0x1
 
-    .line 161
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->eJO:Landroid/util/SparseArray;
+    aget v3, p1, v3
 
-    invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    if-ge v2, v3, :cond_0
 
-    move-result-object v2
+    .line 52
+    aget v2, p1, v1
 
-    invoke-virtual {v1, p0, v2}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    if-le p0, v2, :cond_2
 
-    .line 163
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DM()J
+    add-int/lit8 v2, v1, 0x1
 
-    move-result-wide v1
+    aget v2, p1, v2
 
-    invoke-virtual {v0}, Ljava/lang/Long;->longValue()J
+    if-gt p0, v2, :cond_2
 
-    move-result-wide v3
+    .line 53
+    add-int/lit8 v0, p2, 0x1
 
-    sub-long v0, v1, v3
+    add-int/2addr v0, v1
 
-    .line 166
-    const-wide/16 v2, 0x0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    cmp-long v2, v0, v2
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 56
+    :cond_4
+    invoke-static {p3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public static a(I[I[Ljava/lang/Object;)Ljava/lang/Object;
+    .locals 4
+
+    .prologue
+    const/4 v1, 0x0
+
+    const/4 v0, 0x0
+
+    .line 23
+    array-length v2, p1
 
     if-lez v2, :cond_0
 
-    .line 169
-    packed-switch p0, :pswitch_data_0
+    array-length v2, p1
 
-    .line 235
-    :goto_1
-    :pswitch_0
-    const-string/jumbo v2, "!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx"
+    add-int/lit8 v2, v2, 0x1
 
-    const-string/jumbo v3, "ReportLogInfo operationEnd eventID:%d  time:%d"
+    array-length v3, p2
 
-    new-array v4, v6, [Ljava/lang/Object;
+    if-eq v2, v3, :cond_1
 
-    const/4 v5, 0x0
+    :cond_0
+    move-object v0, v1
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 37
+    :goto_0
+    return-object v0
 
-    move-result-object v6
+    .line 26
+    :cond_1
+    aget v2, p1, v0
 
-    aput-object v6, v4, v5
+    if-gt p0, v2, :cond_3
 
-    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v0
-
-    aput-object v0, v4, v7
-
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .line 27
+    aget-object v0, p2, v0
 
     goto :goto_0
 
-    .line 171
-    :pswitch_1
-    sget-boolean v2, Lcom/tencent/mm/sdk/platformtools/aa;->hZj:Z
-
-    if-eqz v2, :cond_2
-
-    .line 173
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
-
-    const/4 v3, 0x4
-
-    const/4 v4, 0x5
-
-    long-to-int v5, v0
-
-    invoke-virtual {v2, v8, v3, v4, v5}, Lcom/tencent/mm/plugin/report/service/j;->h(IIII)V
-
-    goto :goto_1
-
-    .line 178
+    .line 29
     :cond_2
-    invoke-static {v7, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
+    add-int/lit8 v0, v0, 0x1
 
-    .line 179
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    :cond_3
+    array-length v2, p1
 
-    long-to-int v3, v0
+    add-int/lit8 v2, v2, -0x1
 
-    invoke-virtual {v2, v8, v7, v6, v3}, Lcom/tencent/mm/plugin/report/service/j;->h(IIII)V
+    if-ge v0, v2, :cond_5
 
-    goto :goto_1
+    .line 30
+    aget v2, p1, v0
 
-    .line 186
-    :pswitch_2
-    const/4 v2, 0x3
+    add-int/lit8 v3, v0, 0x1
 
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
+    aget v3, p1, v3
 
-    .line 188
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    if-lt v2, v3, :cond_4
 
-    const/16 v3, 0x1b
+    move-object v0, v1
 
-    long-to-int v4, v0
+    .line 31
+    goto :goto_0
 
-    invoke-virtual {v2, v3, v7, v6, v4}, Lcom/tencent/mm/plugin/report/service/j;->h(IIII)V
+    .line 33
+    :cond_4
+    aget v2, p1, v0
 
-    goto :goto_1
+    if-le p0, v2, :cond_2
 
-    .line 195
-    :pswitch_3
-    invoke-static {v6, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
+    add-int/lit8 v2, v0, 0x1
 
-    .line 197
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    aget v2, p1, v2
 
-    const/16 v3, 0x1c
+    if-gt p0, v2, :cond_2
 
-    long-to-int v4, v0
+    .line 34
+    add-int/lit8 v0, v0, 0x1
 
-    invoke-virtual {v2, v3, v7, v6, v4}, Lcom/tencent/mm/plugin/report/service/j;->h(IIII)V
+    aget-object v0, p2, v0
 
-    goto :goto_1
+    goto :goto_0
 
-    .line 203
-    :pswitch_4
-    const/4 v2, 0x6
+    .line 37
+    :cond_5
+    array-length v0, p2
 
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
+    add-int/lit8 v0, v0, -0x1
 
-    goto :goto_1
+    aget-object v0, p2, v0
 
-    .line 206
-    :pswitch_5
-    const/4 v2, 0x7
-
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
-
-    goto :goto_1
-
-    .line 209
-    :pswitch_6
-    const/16 v2, 0x8
-
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
-
-    goto :goto_1
-
-    .line 213
-    :pswitch_7
-    const/16 v2, 0xa
-
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
-
-    goto :goto_1
-
-    .line 216
-    :pswitch_8
-    const/16 v2, 0xe
-
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
-
-    goto :goto_1
-
-    .line 219
-    :pswitch_9
-    const/16 v2, 0xf
-
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
-
-    goto :goto_1
-
-    .line 222
-    :pswitch_a
-    const/16 v2, 0x9
-
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
-
-    goto :goto_1
-
-    .line 225
-    :pswitch_b
-    const/16 v2, 0xb
-
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
-
-    goto :goto_1
-
-    .line 228
-    :pswitch_c
-    const/16 v2, 0x10
-
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
-
-    goto :goto_1
-
-    .line 231
-    :pswitch_d
-    const/16 v2, 0xd
-
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
-
-    goto/16 :goto_1
-
-    .line 234
-    :pswitch_e
-    const/16 v2, 0xc
-
-    invoke-static {v2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->m(IJ)V
-
-    goto/16 :goto_1
-
-    .line 169
-    :pswitch_data_0
-    .packed-switch 0x8
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-        :pswitch_0
-        :pswitch_4
-        :pswitch_5
-        :pswitch_6
-        :pswitch_0
-        :pswitch_0
-        :pswitch_0
-        :pswitch_7
-        :pswitch_a
-        :pswitch_e
-        :pswitch_b
-        :pswitch_d
-        :pswitch_c
-        :pswitch_9
-        :pswitch_8
-    .end packed-switch
+    goto :goto_0
 .end method
 
-.method public static io(I)V
+.method private static a(ILjava/util/List;ZZ)V
     .locals 5
 
     .prologue
-    .line 293
-    sget-boolean v0, Lcom/tencent/mm/plugin/report/service/h;->eJQ:Z
+    .line 205
+    if-eqz p1, :cond_0
 
-    if-nez v0, :cond_0
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
 
-    .line 298
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    :cond_0
+    const-string/jumbo v0, "!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40="
+
+    const-string/jumbo v1, "vals is null, use \'\' as value"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string/jumbo v0, ""
+
+    .line 206
+    :goto_0
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUQ()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    .line 207
+    int-to-long v1, p0
+
+    invoke-static {v1, v2, v0, p2, p3}, Lcom/tencent/mm/plugin/report/service/e;->a(JLjava/lang/String;ZZ)V
+
+    .line 212
+    :goto_1
+    return-void
+
+    .line 205
+    :cond_1
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    add-int/lit8 v3, v0, -0x1
+
+    const/4 v0, 0x0
+
+    move v1, v0
+
+    :goto_2
+    if-ge v1, v3, :cond_2
+
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const/16 v4, 0x2c
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, v1, 0x1
+
+    move v1, v0
+
+    goto :goto_2
+
+    :cond_2
+    invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/String;
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 210
+    :cond_3
+    invoke-static {p0, v0, p3, p2}, Lcom/tencent/mm/plugin/report/service/h;->b(ILjava/lang/String;ZZ)V
+
+    goto :goto_1
+.end method
+
+.method public static varargs a(IZZ[Ljava/lang/Object;)V
+    .locals 6
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 184
+    if-eqz p3, :cond_0
+
+    array-length v0, p3
+
+    if-gtz v0, :cond_2
+
+    :cond_0
+    const-string/jumbo v0, "!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40="
+
+    const-string/jumbo v2, "vals is null, use \'\' as value"
+
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    const-string/jumbo v0, ""
+
+    .line 185
+    :goto_0
+    invoke-static {}, Lcom/tencent/mm/sdk/b/b;->aUo()Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 186
+    const-string/jumbo v2, "!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40="
+
+    const-string/jumbo v3, "kvTypedStat id:%d [%b,%b] val:%s"
+
+    const/4 v4, 0x4
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v5
+
+    aput-object v5, v4, v1
+
+    const/4 v1, 0x1
+
+    invoke-static {p1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    aput-object v5, v4, v1
+
+    const/4 v1, 0x2
+
+    invoke-static {p2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v5
+
+    aput-object v5, v4, v1
+
+    const/4 v1, 0x3
+
+    aput-object v0, v4, v1
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 188
+    :cond_1
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUQ()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_4
+
+    .line 189
+    int-to-long v1, p0
+
+    invoke-static {v1, v2, v0, p1, p2}, Lcom/tencent/mm/plugin/report/service/e;->a(JLjava/lang/String;ZZ)V
+
+    .line 194
+    :goto_1
+    return-void
+
+    .line 184
+    :cond_2
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    array-length v0, p3
+
+    add-int/lit8 v3, v0, -0x1
+
+    move v0, v1
+
+    :goto_2
+    if-ge v0, v3, :cond_3
+
+    aget-object v4, p3, v0
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    const/16 v5, 0x2c
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_2
+
+    :cond_3
+    aget-object v0, p3, v3
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 192
+    :cond_4
+    invoke-static {p0, v0, p2, p1}, Lcom/tencent/mm/plugin/report/service/h;->b(ILjava/lang/String;ZZ)V
+
+    goto :goto_1
+.end method
+
+.method public static aqv()V
+    .locals 1
+
+    .prologue
+    .line 331
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUQ()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 332
+    invoke-static {}, Lcom/tencent/mm/plugin/report/service/KVReportJni$KVReportJava2C;->onExitAppOrAppCrash()V
+
+    .line 338
     :goto_0
     return-void
 
-    .line 295
+    .line 335
     :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpL9SB0DqhCSWmhsddwbSvcx"
+    invoke-static {}, Lcom/tencent/mm/plugin/report/service/KVCommCrossProcessReceiver;->aqp()V
 
-    const-string/jumbo v1, "ReportLogInfo stopOperation stop eventID:%d"
+    goto :goto_0
+.end method
 
-    const/4 v2, 0x1
+.method private static b(ILjava/lang/String;ZZ)V
+    .locals 3
+
+    .prologue
+    .line 102
+    new-instance v0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;-><init>()V
+
+    .line 103
+    int-to-long v1, p0
+
+    iput-wide v1, v0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->fUv:J
+
+    .line 104
+    iput-object p1, v0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->value:Ljava/lang/String;
+
+    .line 105
+    iput-boolean p2, v0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->fUh:Z
+
+    .line 106
+    iput-boolean p3, v0, Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;->fUw:Z
+
+    .line 107
+    invoke-static {v0}, Lcom/tencent/mm/plugin/report/service/KVCommCrossProcessReceiver;->a(Lcom/tencent/mm/plugin/report/service/KVReportDataInfo;)V
+
+    .line 108
+    return-void
+.end method
+
+.method public static b(JJJZ)V
+    .locals 5
+
+    .prologue
+    const-wide/16 v1, 0x0
+
+    .line 222
+    cmp-long v0, p0, v1
+
+    if-ltz v0, :cond_0
+
+    cmp-long v0, p2, v1
+
+    if-ltz v0, :cond_0
+
+    cmp-long v0, p4, v1
+
+    if-gtz v0, :cond_1
+
+    .line 223
+    :cond_0
+    const-string/jumbo v0, "!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40="
+
+    const-string/jumbo v1, "ID %d, key %d, value %d <0"
+
+    const/4 v2, 0x3
 
     new-array v2, v2, [Ljava/lang/Object;
 
     const/4 v3, 0x0
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v4
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v3, 0x1
 
-    .line 297
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->eJO:Landroid/util/SparseArray;
+    invoke-static {p2, p3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const-wide/16 v1, -0x1
+    move-result-object v4
 
-    invoke-static {v1, v2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    aput-object v4, v2, v3
 
-    move-result-object v1
+    const/4 v3, 0x2
 
-    invoke-virtual {v0, p0, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
+    invoke-static {p4, p5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 232
+    :goto_0
+    return-void
+
+    .line 226
+    :cond_1
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUQ()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 227
+    invoke-static/range {p0 .. p6}, Lcom/tencent/mm/plugin/report/service/e;->a(JJJZ)V
+
+    goto :goto_0
+
+    .line 230
+    :cond_2
+    new-instance v0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;-><init>()V
+
+    iput-wide p0, v0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->fUL:J
+
+    iput-wide p2, v0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->key:J
+
+    iput-wide p4, v0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->value:J
+
+    iput-boolean p6, v0, Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;->fUh:Z
+
+    invoke-static {v0}, Lcom/tencent/mm/plugin/report/service/KVCommCrossProcessReceiver;->a(Lcom/tencent/mm/plugin/report/service/StIDKeyDataInfo;)V
 
     goto :goto_0
 .end method
 
-.method private static m(IJ)V
-    .locals 10
+.method public static c(ILjava/lang/String;ZZ)V
+    .locals 4
 
     .prologue
-    const/4 v9, 0x6
+    .line 152
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUQ()Z
 
-    const/4 v8, 0x2
+    move-result v0
 
-    const-wide/32 v4, 0xea60
+    if-eqz v0, :cond_1
 
-    const/4 v7, 0x1
+    .line 154
+    sget-boolean v0, Lcom/tencent/mm/plugin/report/a/c;->fTL:Z
 
-    const/4 v6, 0x0
+    if-eqz v0, :cond_0
 
-    .line 261
-    if-ne p0, v9, :cond_3
+    .line 155
+    int-to-long v0, p0
 
-    .line 262
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    sget-boolean v2, Lcom/tencent/mm/plugin/report/a/c;->fTM:Z
 
-    move-result-wide v0
+    sget-boolean v3, Lcom/tencent/mm/plugin/report/a/c;->fTM:Z
 
-    .line 263
-    sget-wide v2, Lcom/tencent/mm/plugin/report/service/h;->eJR:J
+    invoke-static {v0, v1, p1, v2, v3}, Lcom/tencent/mm/plugin/report/service/e;->a(JLjava/lang/String;ZZ)V
 
-    add-long/2addr v2, v4
-
-    cmp-long v2, v0, v2
-
-    if-gez v2, :cond_1
-
-    .line 289
-    :cond_0
+    .line 164
     :goto_0
     return-void
 
-    .line 266
-    :cond_1
-    sput-wide v0, Lcom/tencent/mm/plugin/report/service/h;->eJR:J
+    .line 157
+    :cond_0
+    int-to-long v0, p0
 
-    .line 281
-    :cond_2
-    :goto_1
-    invoke-static {}, Lcom/tencent/mm/plugin/report/service/h$a;->afo()Lcom/tencent/mm/plugin/report/service/h$a;
+    invoke-static {v0, v1, p1, p2, p3}, Lcom/tencent/mm/plugin/report/service/e;->a(JLjava/lang/String;ZZ)V
+
+    goto :goto_0
+
+    .line 162
+    :cond_1
+    invoke-static {p0, p1, p3, p2}, Lcom/tencent/mm/plugin/report/service/h;->b(ILjava/lang/String;ZZ)V
+
+    goto :goto_0
+.end method
+
+.method public static d(Ljava/util/ArrayList;Z)V
+    .locals 7
+
+    .prologue
+    const-wide/16 v4, 0x0
+
+    .line 240
+    invoke-virtual {p0}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :cond_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 282
-    iget-boolean v1, v0, Lcom/tencent/mm/plugin/report/service/h$a;->hasInit:Z
+    check-cast v0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
 
-    if-eqz v1, :cond_5
+    .line 245
+    if-nez v0, :cond_1
 
-    .line 283
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    .line 246
+    const-string/jumbo v0, "!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40="
 
-    const/16 v1, 0x2c47
+    const-string/jumbo v1, "report idkeyGroupStat info == null return"
 
-    new-array v2, v9, [Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 261
+    :goto_0
+    return-void
 
-    move-result-object v3
+    .line 249
+    :cond_1
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->GetID()J
 
-    aput-object v3, v2, v6
+    move-result-wide v2
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    cmp-long v2, v2, v4
 
-    move-result-object v3
+    if-ltz v2, :cond_2
 
-    aput-object v3, v2, v7
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->GetKey()J
 
-    iget v3, v0, Lcom/tencent/mm/plugin/report/service/h$a;->eJV:I
+    move-result-wide v2
 
-    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    cmp-long v2, v2, v4
 
-    move-result-object v3
+    if-ltz v2, :cond_2
 
-    aput-object v3, v2, v8
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->GetValue()J
+
+    move-result-wide v2
+
+    cmp-long v2, v2, v4
+
+    if-gtz v2, :cond_0
+
+    .line 250
+    :cond_2
+    const-string/jumbo v1, "!44@/B4Tb64lLpJlEqDd0Ubo4Jxu+CyGfot/sNGdExUpV40="
+
+    const-string/jumbo v2, "report idkeyGroupStat ID %d, key %d, value %d <0"
 
     const/4 v3, 0x3
 
-    iget-object v4, v0, Lcom/tencent/mm/plugin/report/service/h$a;->eJU:[J
+    new-array v3, v3, [Ljava/lang/Object;
 
-    aget-wide v4, v4, v6
+    const/4 v4, 0x0
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->GetID()J
 
-    move-result-object v4
+    move-result-wide v5
 
-    aput-object v4, v2, v3
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 v3, 0x4
+    move-result-object v5
 
-    iget-object v4, v0, Lcom/tencent/mm/plugin/report/service/h$a;->eJU:[J
+    aput-object v5, v3, v4
 
-    aget-wide v4, v4, v7
+    const/4 v4, 0x1
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->GetKey()J
 
-    move-result-object v4
+    move-result-wide v5
 
-    aput-object v4, v2, v3
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    const/4 v3, 0x5
+    move-result-object v5
 
-    iget-wide v4, v0, Lcom/tencent/mm/plugin/report/service/h$a;->eJX:J
+    aput-object v5, v3, v4
 
-    invoke-static {v4, v5}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    const/4 v4, 0x2
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->GetValue()J
+
+    move-result-wide v5
+
+    invoke-static {v5, v6}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v0
 
-    aput-object v0, v2, v3
+    aput-object v0, v3, v4
 
-    invoke-static {v1, v7, v6, v2}, Lcom/tencent/mm/plugin/report/service/j;->a(IZZ[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
+
+    .line 255
+    :cond_3
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUQ()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 256
+    invoke-static {p0, p1}, Lcom/tencent/mm/plugin/report/service/e;->b(Ljava/util/ArrayList;Z)V
+
+    goto :goto_0
+
+    .line 259
+    :cond_4
+    invoke-static {p0, p1}, Lcom/tencent/mm/plugin/report/service/KVCommCrossProcessReceiver;->a(Ljava/util/ArrayList;Z)V
+
+    goto :goto_0
+.end method
+
+.method public static valueOf(Ljava/lang/String;)Lcom/tencent/mm/plugin/report/service/h;
+    .locals 1
+
+    .prologue
+    .line 16
+    const-class v0, Lcom/tencent/mm/plugin/report/service/h;
+
+    invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/plugin/report/service/h;
+
+    return-object v0
+.end method
+
+.method public static values()[Lcom/tencent/mm/plugin/report/service/h;
+    .locals 1
+
+    .prologue
+    .line 16
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUK:[Lcom/tencent/mm/plugin/report/service/h;
+
+    invoke-virtual {v0}, [Lcom/tencent/mm/plugin/report/service/h;->clone()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, [Lcom/tencent/mm/plugin/report/service/h;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final O(ILjava/lang/String;)V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 137
+    sget-boolean v0, Lcom/tencent/mm/plugin/report/a/c;->fTL:Z
+
+    if-eqz v0, :cond_0
+
+    .line 138
+    sget-boolean v0, Lcom/tencent/mm/plugin/report/a/c;->fTM:Z
+
+    sget-boolean v1, Lcom/tencent/mm/plugin/report/a/c;->fTM:Z
+
+    invoke-static {p1, p2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->c(ILjava/lang/String;ZZ)V
+
+    .line 142
+    :goto_0
+    return-void
+
+    .line 140
+    :cond_0
+    invoke-static {p1, p2, v1, v1}, Lcom/tencent/mm/plugin/report/service/h;->c(ILjava/lang/String;ZZ)V
+
+    goto :goto_0
+.end method
+
+.method public final aQ(II)V
+    .locals 4
+
+    .prologue
+    const/16 v3, 0x40
+
+    const/4 v2, 0x1
+
+    .line 265
+    new-instance v0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
+
+    .line 266
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
 
     .line 267
-    :cond_3
-    const/4 v0, 0x7
-
-    if-ne p0, v0, :cond_4
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
 
     .line 268
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
 
-    move-result-wide v0
+    .line 270
+    new-instance v1, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
 
-    .line 269
-    sget-wide v2, Lcom/tencent/mm/plugin/report/service/h;->eJS:J
+    invoke-direct {v1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
 
-    add-long/2addr v2, v4
-
-    cmp-long v2, v0, v2
-
-    if-ltz v2, :cond_0
+    .line 271
+    invoke-virtual {v1, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
 
     .line 272
-    sput-wide v0, Lcom/tencent/mm/plugin/report/service/h;->eJS:J
-
-    goto :goto_1
+    invoke-virtual {v1, p2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
 
     .line 273
-    :cond_4
-    const/16 v0, 0x8
-
-    if-ne p0, v0, :cond_2
-
-    .line 274
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    move-result-wide v0
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
 
     .line 275
-    sget-wide v2, Lcom/tencent/mm/plugin/report/service/h;->eJT:J
+    new-instance v2, Ljava/util/ArrayList;
 
-    add-long/2addr v2, v4
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    cmp-long v2, v0, v2
+    .line 276
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    if-ltz v2, :cond_0
+    .line 277
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 278
-    sput-wide v0, Lcom/tencent/mm/plugin/report/service/h;->eJT:J
+    .line 279
+    const/4 v0, 0x0
 
-    goto :goto_1
+    invoke-static {v2, v0}, Lcom/tencent/mm/plugin/report/service/h;->d(Ljava/util/ArrayList;Z)V
 
-    .line 286
-    :cond_5
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    .line 280
+    return-void
+.end method
 
-    const/16 v0, 0x2c47
+.method public final aR(II)V
+    .locals 4
 
-    new-array v1, v8, [Ljava/lang/Object;
+    .prologue
+    const/4 v2, 0x1
 
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    const/4 v3, 0x0
 
-    move-result-object v2
+    .line 312
+    new-instance v0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
 
-    aput-object v2, v1, v6
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
 
-    invoke-static {p1, p2}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    .line 313
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
 
-    move-result-object v2
+    .line 314
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
 
-    aput-object v2, v1, v7
+    .line 315
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
 
-    invoke-static {v0, v7, v6, v1}, Lcom/tencent/mm/plugin/report/service/j;->a(IZZ[Ljava/lang/Object;)V
+    .line 317
+    new-instance v1, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
+
+    invoke-direct {v1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
+
+    .line 318
+    invoke-virtual {v1, p1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
+
+    .line 319
+    invoke-virtual {v1, p2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
+
+    .line 320
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
+
+    .line 322
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 323
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 324
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 326
+    invoke-static {v2, v3}, Lcom/tencent/mm/plugin/report/service/h;->d(Ljava/util/ArrayList;Z)V
+
+    .line 327
+    return-void
+.end method
+
+.method public final c(ILjava/util/List;)V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 197
+    sget-boolean v0, Lcom/tencent/mm/plugin/report/a/c;->fTL:Z
+
+    if-eqz v0, :cond_0
+
+    .line 198
+    sget-boolean v0, Lcom/tencent/mm/plugin/report/a/c;->fTM:Z
+
+    sget-boolean v1, Lcom/tencent/mm/plugin/report/a/c;->fTM:Z
+
+    invoke-static {p1, p2, v0, v1}, Lcom/tencent/mm/plugin/report/service/h;->a(ILjava/util/List;ZZ)V
+
+    .line 202
+    :goto_0
+    return-void
+
+    .line 200
+    :cond_0
+    invoke-static {p1, p2, v1, v1}, Lcom/tencent/mm/plugin/report/service/h;->a(ILjava/util/List;ZZ)V
 
     goto :goto_0
+.end method
+
+.method public final varargs g(I[Ljava/lang/Object;)V
+    .locals 2
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 176
+    sget-boolean v0, Lcom/tencent/mm/plugin/report/a/c;->fTL:Z
+
+    if-eqz v0, :cond_0
+
+    .line 177
+    sget-boolean v0, Lcom/tencent/mm/plugin/report/a/c;->fTM:Z
+
+    sget-boolean v1, Lcom/tencent/mm/plugin/report/a/c;->fTM:Z
+
+    invoke-static {p1, v0, v1, p2}, Lcom/tencent/mm/plugin/report/service/h;->a(IZZ[Ljava/lang/Object;)V
+
+    .line 181
+    :goto_0
+    return-void
+
+    .line 179
+    :cond_0
+    invoke-static {p1, v1, v1, p2}, Lcom/tencent/mm/plugin/report/service/h;->a(IZZ[Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method public final h(IIII)V
+    .locals 3
+
+    .prologue
+    .line 293
+    new-instance v0, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
+
+    .line 294
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
+
+    .line 295
+    invoke-virtual {v0, p2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
+
+    .line 296
+    invoke-virtual {v0, p4}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
+
+    .line 298
+    new-instance v1, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;
+
+    invoke-direct {v1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;-><init>()V
+
+    .line 299
+    invoke-virtual {v1, p1}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetID(I)V
+
+    .line 300
+    invoke-virtual {v1, p3}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetKey(I)V
+
+    .line 301
+    const/4 v2, 0x1
+
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/report/service/KVReportJni$IDKeyDataInfo;->SetValue(I)V
+
+    .line 303
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 304
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 305
+    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 307
+    const/4 v0, 0x0
+
+    invoke-static {v2, v0}, Lcom/tencent/mm/plugin/report/service/h;->d(Ljava/util/ArrayList;Z)V
+
+    .line 308
+    return-void
 .end method

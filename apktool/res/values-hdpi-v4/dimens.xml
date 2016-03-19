@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="z">60.0dip</dimen>
+    <dimen name="a0">50.0dip</dimen>
+    <dimen name="cz">180.0dip</dimen>
+    <dimen name="d0">40.0dip</dimen>
+    <dimen name="dz">70.0dip</dimen>
+    <dimen name="e0">240.0dip</dimen>
+    <dimen name="e1">30.0dip</dimen>
+    <dimen name="e2">32.0dip</dimen>
+    <dimen name="e3">30.0dip</dimen>
+    <dimen name="e4">20.0dip</dimen>
+    <dimen name="e5">10.0dip</dimen>
+    <dimen name="e6">12.0dip</dimen>
+</resources>

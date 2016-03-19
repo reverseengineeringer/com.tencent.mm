@@ -1,21 +1,19 @@
 package com.tencent.mm.network;
 
-import com.tencent.mm.protocal.i.c;
-import com.tencent.mm.protocal.i.d;
+import com.tencent.mm.compatible.util.i;
+import com.tencent.mm.sdk.a;
+import com.tencent.mm.xlog.Xlog;
 
-public abstract interface w
+public class w
 {
-  public abstract int getType();
+  public static void onCreate()
+  {
+    Xlog.init();
+    i.b(a.jUu, w.class.getClassLoader());
+    Java2C.onCreate();
+  }
   
-  public abstract String getUri();
-  
-  public abstract i.d tG();
-  
-  public abstract i.c vj();
-  
-  public abstract int vk();
-  
-  public abstract boolean vl();
+  public static void onDestroy() {}
 }
 
 /* Location:

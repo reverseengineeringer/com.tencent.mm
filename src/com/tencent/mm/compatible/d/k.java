@@ -1,6 +1,6 @@
 package com.tencent.mm.compatible.d;
 
-import com.tencent.mm.compatible.util.f;
+import com.tencent.mm.compatible.util.d;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.ObjectInputStream;
@@ -9,8 +9,8 @@ import java.util.Map;
 
 public final class k
 {
-  private static k bhY = null;
-  private boolean bhX = false;
+  private static k bsw = null;
+  private boolean bsv = false;
   private String filePath = "";
   private Map values;
   
@@ -36,7 +36,7 @@ public final class k
         values = new HashMap();
         continue;
       }
-      bhX = false;
+      bsv = false;
       return;
       paramString = new FileInputStream(paramString);
       localObjectInputStream = new ObjectInputStream(paramString);
@@ -46,21 +46,21 @@ public final class k
     }
   }
   
-  public static k ot()
+  public static k oi()
   {
     try
     {
-      if (bhY == null) {
-        bhY = new k(f.bjE + "CompatibleInfo.cfg");
+      if (bsw == null) {
+        bsw = new k(d.bxa + "CompatibleInfo.cfg");
       }
-      k localk = bhY;
+      k localk = bsw;
       return localk;
     }
     finally {}
   }
   
   /* Error */
-  private void ou()
+  private void oj()
   {
     // Byte code:
     //   0: aload_0
@@ -109,7 +109,7 @@ public final class k
     //   2	43	51	java/io/IOException
   }
   
-  public final Object bQ(int paramInt)
+  public final Object bR(int paramInt)
   {
     Object localObject2 = values.get(Integer.valueOf(paramInt));
     Object localObject1 = localObject2;
@@ -129,8 +129,8 @@ public final class k
     try
     {
       values.put(Integer.valueOf(paramInt), paramObject);
-      if (!bhX) {
-        ou();
+      if (!bsv) {
+        oj();
       }
       return;
     }

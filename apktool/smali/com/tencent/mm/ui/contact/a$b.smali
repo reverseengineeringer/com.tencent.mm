@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field public ciJ:Landroid/widget/TextView;
+.field public czT:Landroid/widget/TextView;
 
-.field public dGj:Lcom/tencent/mm/ui/AddressView;
+.field public eEv:Landroid/widget/TextView;
 
-.field public jdQ:Landroid/widget/TextView;
+.field public eId:Lcom/tencent/mm/ui/AddressView;
 
-.field public jdR:Landroid/widget/TextView;
+.field public lhQ:Landroid/widget/TextView;
 
-.field public jdS:Landroid/view/View;
+.field public lhR:Landroid/view/View;
 
 
 # direct methods
@@ -31,9 +31,9 @@
     .locals 0
 
     .prologue
-    .line 987
+    .line 982
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 988
+    .line 983
     return-void
 .end method

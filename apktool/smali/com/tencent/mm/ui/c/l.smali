@@ -1,138 +1,84 @@
-.class final Lcom/tencent/mm/ui/c/l;
-.super Ljava/lang/Object;
+.class public final Lcom/tencent/mm/ui/c/l;
+.super Lcom/tencent/mm/pluginsdk/ui/b/b;
 .source "SourceFile"
-
-# interfaces
-.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic iBC:Lcom/tencent/mm/ui/c/k;
+.field public kBa:Lcom/tencent/mm/ui/ScrollAlwaysTextView;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/c/k;)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 2
 
     .prologue
-    .line 48
-    iput-object p1, p0, Lcom/tencent/mm/ui/c/l;->iBC:Lcom/tencent/mm/ui/c/k;
+    .line 22
+    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/ui/b/b;-><init>(Landroid/content/Context;)V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 23
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/l;->view:Landroid/view/View;
 
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/l;->view:Landroid/view/View;
+
+    const v1, 0x7f0700fa
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/ui/ScrollAlwaysTextView;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/c/l;->kBa:Lcom/tencent/mm/ui/ScrollAlwaysTextView;
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/l;->view:Landroid/view/View;
+
+    new-instance v1, Lcom/tencent/mm/ui/c/l$1;
+
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/c/l$1;-><init>(Lcom/tencent/mm/ui/c/l;)V
+
+    invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 24
+    :cond_0
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
-    .locals 3
+.method public final getLayoutId()I
+    .locals 1
 
     .prologue
-    .line 50
-    new-instance v1, Landroid/content/Intent;
+    .line 27
+    const v0, 0x7f0a0034
 
-    invoke-direct {v1}, Landroid/content/Intent;-><init>()V
+    return v0
+.end method
 
-    .line 51
-    iget-object v0, p0, Lcom/tencent/mm/ui/c/l;->iBC:Lcom/tencent/mm/ui/c/k;
+.method public final setVisibility(I)V
+    .locals 2
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/c/k;->gTl:Ljava/lang/ref/WeakReference;
+    .prologue
+    .line 45
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/l;->view:Landroid/view/View;
 
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    if-eqz v0, :cond_0
 
-    move-result-object v0
+    .line 46
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/l;->view:Landroid/view/View;
 
-    check-cast v0, Landroid/content/Context;
+    const v1, 0x7f0700f9
 
-    const-class v2, Lcom/tencent/mm/ui/ExposeWithProofUI;
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->setClass(Landroid/content/Context;Ljava/lang/Class;)Landroid/content/Intent;
-
-    .line 52
-    const-string/jumbo v0, "k_username"
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/c/l;->iBC:Lcom/tencent/mm/ui/c/k;
-
-    iget-object v2, v2, Lcom/tencent/mm/ui/c/k;->iBy:Ljava/lang/String;
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
-    .line 53
-    iget-object v0, p0, Lcom/tencent/mm/ui/c/l;->iBC:Lcom/tencent/mm/ui/c/k;
-
-    iget-boolean v0, v0, Lcom/tencent/mm/ui/c/k;->iBB:Z
-
-    if-nez v0, :cond_0
-
-    .line 54
-    const-string/jumbo v0, "k_expose_scene"
-
-    const/16 v2, 0x27
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    .line 58
-    :goto_0
-    const-string/jumbo v0, "k_from_profile"
-
-    const/4 v2, 0x1
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
-
-    .line 59
-    iget-object v0, p0, Lcom/tencent/mm/ui/c/l;->iBC:Lcom/tencent/mm/ui/c/k;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/c/k;->gTl:Ljava/lang/ref/WeakReference;
-
-    invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/content/Context;
+    .line 47
+    invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 
-    invoke-virtual {v0, v1}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
-
-    .line 60
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rM()Lcom/tencent/mm/model/b/c;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/c/l;->iBC:Lcom/tencent/mm/ui/c/k;
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/c/k;->iBy:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/b/c;->fj(Ljava/lang/String;)V
-
-    .line 61
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rM()Lcom/tencent/mm/model/b/c;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/c/l;->iBC:Lcom/tencent/mm/ui/c/k;
-
-    iget-object v1, v1, Lcom/tencent/mm/ui/c/k;->iBz:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/b/c;->fj(Ljava/lang/String;)V
-
-    .line 62
-    return-void
-
-    .line 56
+    .line 49
     :cond_0
-    const-string/jumbo v0, "k_expose_scene"
-
-    const/16 v2, 0x24
-
-    invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
-
-    goto :goto_0
+    return-void
 .end method

@@ -22,20 +22,20 @@ public class FragmentTabHost
   extends TabHost
   implements TabHost.OnTabChangeListener
 {
-  private int br;
-  private i cJ;
-  private final ArrayList cO = new ArrayList();
-  private FrameLayout cP;
-  private TabHost.OnTabChangeListener cQ;
-  private a cR;
-  private boolean cS;
+  private e bZ;
+  private final ArrayList ce = new ArrayList();
+  private FrameLayout cf;
+  private TabHost.OnTabChangeListener cg;
+  private a ch;
+  private boolean ci;
+  private int mContainerId;
   private Context mContext;
   
   public FragmentTabHost(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
     paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, new int[] { 16842995 }, 0, 0);
-    br = paramAttributeSet.getResourceId(0, 0);
+    mContainerId = paramAttributeSet.getResourceId(0, 0);
     paramAttributeSet.recycle();
     super.setOnTabChangedListener(this);
     if (findViewById(16908307) == null)
@@ -51,19 +51,19 @@ public class FragmentTabHost
       ((FrameLayout)localObject).setId(16908305);
       paramAttributeSet.addView((View)localObject, new LinearLayout.LayoutParams(0, 0, 0.0F));
       paramContext = new FrameLayout(paramContext);
-      cP = paramContext;
-      cP.setId(br);
+      cf = paramContext;
+      cf.setId(mContainerId);
       paramAttributeSet.addView(paramContext, new LinearLayout.LayoutParams(-1, 0, 1.0F));
     }
   }
   
-  private s a(String paramString, s params)
+  private h a(String paramString, h paramh)
   {
     Object localObject = null;
     int i = 0;
-    if (i < cO.size())
+    if (i < ce.size())
     {
-      a locala = (a)cO.get(i);
+      a locala = (a)ce.get(i);
       if (!tag.equals(paramString)) {
         break label213;
       }
@@ -78,30 +78,30 @@ public class FragmentTabHost
       if (localObject == null) {
         throw new IllegalStateException("No tab known for tag " + paramString);
       }
-      paramString = params;
-      if (cR != localObject)
+      paramString = paramh;
+      if (ch != localObject)
       {
-        paramString = params;
-        if (params == null) {
-          paramString = cJ.M();
+        paramString = paramh;
+        if (paramh == null) {
+          paramString = bZ.H();
         }
-        if ((cR != null) && (cR.aF != null)) {
-          paramString.b(cR.aF);
+        if ((ch != null) && (ch.aJ != null)) {
+          paramString.c(ch.aJ);
         }
         if (localObject != null)
         {
-          if (aF != null) {
+          if (aJ != null) {
             break label200;
           }
-          aF = Fragment.a(mContext, cU.getName(), cV);
-          paramString.a(br, aF, tag);
+          aJ = Fragment.instantiate(mContext, ck.getName(), cl);
+          paramString.a(mContainerId, aJ, tag);
         }
       }
       for (;;)
       {
-        cR = ((a)localObject);
+        ch = ((a)localObject);
         return paramString;
-        paramString.c(aF);
+        paramString.d(aJ);
       }
     }
   }
@@ -112,20 +112,20 @@ public class FragmentTabHost
     String str = getCurrentTabTag();
     Object localObject1 = null;
     int i = 0;
-    if (i < cO.size())
+    if (i < ce.size())
     {
-      a locala = (a)cO.get(i);
-      aF = cJ.g(tag);
+      a locala = (a)ce.get(i);
+      aJ = bZ.h(tag);
       Object localObject2 = localObject1;
-      if (aF != null)
+      if (aJ != null)
       {
         localObject2 = localObject1;
-        if (!aF.bv)
+        if (!aJ.isDetached())
         {
           if (!tag.equals(str)) {
             break label108;
           }
-          cR = locala;
+          ch = locala;
           localObject2 = localObject1;
         }
       }
@@ -137,57 +137,57 @@ public class FragmentTabHost
         label108:
         localObject2 = localObject1;
         if (localObject1 == null) {
-          localObject2 = cJ.M();
+          localObject2 = bZ.H();
         }
-        ((s)localObject2).b(aF);
+        ((h)localObject2).c(aJ);
       }
     }
-    cS = true;
-    localObject1 = a(str, (s)localObject1);
+    ci = true;
+    localObject1 = a(str, (h)localObject1);
     if (localObject1 != null)
     {
-      ((s)localObject1).commit();
-      cJ.executePendingTransactions();
+      ((h)localObject1).commit();
+      bZ.executePendingTransactions();
     }
   }
   
   protected void onDetachedFromWindow()
   {
     super.onDetachedFromWindow();
-    cS = false;
+    ci = false;
   }
   
   protected void onRestoreInstanceState(Parcelable paramParcelable)
   {
     paramParcelable = (SavedState)paramParcelable;
     super.onRestoreInstanceState(paramParcelable.getSuperState());
-    setCurrentTabByTag(cT);
+    setCurrentTabByTag(cj);
   }
   
   protected Parcelable onSaveInstanceState()
   {
     SavedState localSavedState = new SavedState(super.onSaveInstanceState());
-    cT = getCurrentTabTag();
+    cj = getCurrentTabTag();
     return localSavedState;
   }
   
   public void onTabChanged(String paramString)
   {
-    if (cS)
+    if (ci)
     {
-      s locals = a(paramString, null);
-      if (locals != null) {
-        locals.commit();
+      h localh = a(paramString, null);
+      if (localh != null) {
+        localh.commit();
       }
     }
-    if (cQ != null) {
-      cQ.onTabChanged(paramString);
+    if (cg != null) {
+      cg.onTabChanged(paramString);
     }
   }
   
   public void setOnTabChangedListener(TabHost.OnTabChangeListener paramOnTabChangeListener)
   {
-    cQ = paramOnTabChangeListener;
+    cg = paramOnTabChangeListener;
   }
   
   @Deprecated
@@ -199,13 +199,13 @@ public class FragmentTabHost
   static class SavedState
     extends View.BaseSavedState
   {
-    public static final Parcelable.Creator CREATOR = new r();
-    String cT;
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+    String cj;
     
     private SavedState(Parcel paramParcel)
     {
       super();
-      cT = paramParcel.readString();
+      cj = paramParcel.readString();
     }
     
     SavedState(Parcelable paramParcelable)
@@ -215,21 +215,21 @@ public class FragmentTabHost
     
     public String toString()
     {
-      return "FragmentTabHost.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " curTab=" + cT + "}";
+      return "FragmentTabHost.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " curTab=" + cj + "}";
     }
     
     public void writeToParcel(Parcel paramParcel, int paramInt)
     {
       super.writeToParcel(paramParcel, paramInt);
-      paramParcel.writeString(cT);
+      paramParcel.writeString(cj);
     }
   }
   
   static final class a
   {
-    Fragment aF;
-    final Class cU;
-    final Bundle cV;
+    Fragment aJ;
+    final Class ck;
+    final Bundle cl;
     final String tag;
   }
 }

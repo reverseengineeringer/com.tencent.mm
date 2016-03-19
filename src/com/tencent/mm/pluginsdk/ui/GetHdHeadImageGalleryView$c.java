@@ -1,6 +1,6 @@
 package com.tencent.mm.pluginsdk.ui;
 
-import com.tencent.mm.ui.base.bl;
+import com.tencent.mm.ui.base.o;
 import com.tencent.mm.ui.tools.MMGestureGallery.e;
 
 final class GetHdHeadImageGalleryView$c
@@ -8,10 +8,10 @@ final class GetHdHeadImageGalleryView$c
 {
   private GetHdHeadImageGalleryView$c(GetHdHeadImageGalleryView paramGetHdHeadImageGalleryView) {}
   
-  public final void Tj()
+  public final void aap()
   {
-    if (GetHdHeadImageGalleryView.a(gPI) != null) {
-      GetHdHeadImageGalleryView.a(gPI).dismiss();
+    if (GetHdHeadImageGalleryView.a(iGq) != null) {
+      GetHdHeadImageGalleryView.a(iGq).dismiss();
     }
   }
 }

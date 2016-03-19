@@ -6,25 +6,25 @@ import android.util.SparseArray;
 public abstract interface e
   extends Cursor
 {
-  public abstract boolean S(Object paramObject);
+  public abstract boolean T(Object paramObject);
   
-  public abstract a U(Object paramObject);
+  public abstract a V(Object paramObject);
   
-  public abstract void a(k.a parama);
+  public abstract void a(j.a parama);
   
   public abstract boolean a(Object paramObject, a parama);
   
-  public abstract void aC(boolean paramBoolean);
+  public abstract void aG(boolean paramBoolean);
   
-  public abstract a ci(int paramInt);
+  public abstract a cj(int paramInt);
   
-  public abstract void cj(int paramInt);
+  public abstract void ck(int paramInt);
   
-  public abstract boolean ck(int paramInt);
+  public abstract boolean cl(int paramInt);
   
-  public abstract boolean qK();
+  public abstract boolean qG();
   
-  public abstract SparseArray[] qL();
+  public abstract SparseArray[] qH();
 }
 
 /* Location:

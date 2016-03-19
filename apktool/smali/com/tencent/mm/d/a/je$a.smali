@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public aGo:Lcom/tencent/mm/protocal/b/adm;
+.field public username:Ljava/lang/String;
 
 
 # direct methods

@@ -17,7 +17,7 @@
 # instance fields
 .field protected duration:I
 
-.field final synthetic iTh:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
+.field final synthetic kSc:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
 
 .field targetView:Landroid/view/View;
 
@@ -28,7 +28,7 @@
 
     .prologue
     .line 537
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->iTh:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->kSc:Lcom/tencent/mm/ui/chatting/ChattingAnimFrame;
 
     invoke-direct {p0}, Landroid/view/animation/Animation;-><init>()V
 
@@ -37,20 +37,5 @@
 
     iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->duration:I
 
-    return-void
-.end method
-
-
-# virtual methods
-.method public final nZ(I)V
-    .locals 1
-
-    .prologue
-    .line 560
-    const/16 v0, 0x64
-
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/ChattingAnimFrame$a;->duration:I
-
-    .line 561
     return-void
 .end method

@@ -1,220 +1,150 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.protocal.b.adt;
-import com.tencent.mm.protocal.b.adu;
-import com.tencent.mm.protocal.b.ek;
-import com.tencent.mm.protocal.b.ho;
-import com.tencent.mm.protocal.b.mk;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.model.c;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.aig;
+import com.tencent.mm.protocal.b.mh;
+import com.tencent.mm.protocal.b.mi;
 import com.tencent.mm.protocal.b.ml;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.h;
-import java.io.IOException;
-import java.util.ArrayList;
+import com.tencent.mm.protocal.b.mm;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.ag;
 import java.util.Iterator;
 import java.util.LinkedList;
+import java.util.List;
 
 public final class l
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private d apI;
-  public final a apJ;
+  private d anM;
+  private final a bUv;
   
-  private l()
+  public l(int paramInt1, String paramString1, String paramString2, int paramInt2, String paramString3, String paramString4, long paramLong, String paramString5, long[] paramArrayOfLong, mi parammi, List paramList)
   {
     Object localObject = new a.a();
-    bsW = new mk();
-    bsX = new ml();
-    uri = "/cgi-bin/micromsg-bin/geta8key";
-    bsV = 233;
-    bsY = 155;
-    bsZ = 1000000155;
-    apJ = ((a.a)localObject).vh();
-    localObject = (mk)apJ.bsT.btb;
-    String str1 = bn.iV((String)ax.tl().rf().get(46, null));
-    hku = new adt().aA(bn.iX(str1));
-    String str2 = bn.iV((String)ax.tl().rf().get(72, null));
-    hxJ = new adt().aA(bn.iX(str2));
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvsdziV4e3bhfru5SsF4Dqh0=", "dkwt get a2=" + str1 + " newa2=" + str2);
-  }
-  
-  public l(int paramInt)
-  {
-    this();
-    mk localmk = (mk)apJ.bsT.btb;
-    hhA = 3;
-    hih = 5;
-    hxH = paramInt;
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvsdziV4e3bhfru5SsF4Dqh0=", "dkwt geta8key friendQQNum:%d  a2key-len:%d", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(hku.hLZ) });
-  }
-  
-  public l(String paramString1, String paramString2, int paramInt)
-  {
-    this();
-    mk localmk = (mk)apJ.bsT.btb;
-    hhA = 2;
-    hxF = new adu().wT(paramString1);
-    hih = paramInt;
-    dse = paramString2;
-    hxK = 0;
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvsdziV4e3bhfru5SsF4Dqh0=", "get a8key reqUrl = " + paramString1 + ", username = " + paramString2 + ", scene = " + paramInt + ", reason = 0");
-  }
-  
-  public l(String paramString1, String paramString2, int paramInt1, int paramInt2, int paramInt3, String paramString3)
-  {
-    this();
-    mk localmk = (mk)apJ.bsT.btb;
-    hhA = 2;
-    hxF = new adu().wT(paramString1);
-    hih = paramInt1;
-    dse = paramString2;
-    hxK = paramInt2;
-    hiF = paramInt3;
-    hxM = paramString3;
-    t.i("!44@/B4Tb64lLpK+IBX8XDgnvsdziV4e3bhfru5SsF4Dqh0=", "get a8key reqUrl = %s, username = %s, scene = %d, reason = %d, flag = %d, netType = %s", new Object[] { paramString1, paramString2, Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString3 });
-  }
-  
-  public l(String paramString1, String paramString2, String paramString3)
-  {
-    this();
-    mk localmk = (mk)apJ.bsT.btb;
-    hhA = 1;
-    hxC = new adu().wT(paramString1);
-    hxD = new adu().wT(paramString2);
-    hxE = new adu().wT(paramString3);
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvsdziV4e3bhfru5SsF4Dqh0=", "get a8key appid=" + paramString1);
-  }
-  
-  public final String AA()
-  {
-    return apJ.bsU.btb).hxN;
-  }
-  
-  public final String AB()
-  {
-    adu localadu = apJ.bsT.btb).hxF;
-    if (localadu != null) {
-      return hMd;
-    }
-    return null;
-  }
-  
-  public final int AC()
-  {
-    return apJ.bsU.btb).hhG;
-  }
-  
-  public final byte[] AD()
-  {
-    Object localObject = (ml)apJ.bsU.btb;
-    if (hxW == null) {
-      return null;
-    }
-    try
+    bFa = new ml();
+    bFb = new mm();
+    uri = "/cgi-bin/micromsg-bin/exposewithproof";
+    bEY = 661;
+    bUv = ((a.a)localObject).vy();
+    localObject = (ml)bUv.bEW.bFf;
+    iWm = paramInt1;
+    jkh = ay.ky(paramString1);
+    jki = paramInt2;
+    jkj = ay.ky(paramString3);
+    fCJ = paramString4;
+    if (paramLong != 0L)
     {
-      localObject = com.tencent.mm.platformtools.w.a(hxW);
-      return (byte[])localObject;
+      paramString1 = new aig();
+      iXA = paramLong;
+      fsI = paramString5;
+      jkd = ay.ky(paramString2);
+      bpa.add(paramString1);
     }
-    catch (Exception localException) {}
-    return null;
-  }
-  
-  public final String AE()
-  {
-    return apJ.bsU.btb).hxR;
-  }
-  
-  public final ArrayList AF()
-  {
-    Object localObject = (ml)apJ.bsU.btb;
-    ArrayList localArrayList = new ArrayList();
-    if ((localObject == null) || (hxT == null)) {
-      return localArrayList;
-    }
-    localObject = hxT.iterator();
-    while (((Iterator)localObject).hasNext())
+    do
     {
-      ek localek = (ek)((Iterator)localObject).next();
-      try
+      for (;;)
       {
-        localArrayList.add(localek.toByteArray());
+        if (paramList != null) {
+          jkk.addAll(paramList);
+        }
+        u.i("!56@/B4Tb64lLpK+IBX8XDgnvk83Yrw+OAaM0+/MlLC0btPAhEWNLFBpbg==", "[oneliang][ExposeWithProof]scene:%d,exposetype:%s,msg list size:%s,img list size:%s", new Object[] { Integer.valueOf(iWm), Integer.valueOf(jki), Integer.valueOf(bpa.size()), Integer.valueOf(jkk.size()) });
+        return;
+        if (parammi == null) {
+          break;
+        }
+        paramString1 = bpa;
+        if (paramString1 != null)
+        {
+          paramString1 = paramString1.iterator();
+          while (paramString1.hasNext())
+          {
+            paramString2 = (mh)paramString1.next();
+            paramString3 = new aig();
+            jkd = jkd;
+            fsI = fsI;
+            iXA = iXA;
+            iXu = iXu;
+            jke = jke;
+            bpa.add(paramString3);
+            u.d("!56@/B4Tb64lLpK+IBX8XDgnvk83Yrw+OAaM0+/MlLC0btPAhEWNLFBpbg==", "[oneliang][ExposeWithProof]outside,MsgType:%s,NewMsgId:%s,Sender:%s", new Object[] { Integer.valueOf(iXu), Long.valueOf(iXA), jkd });
+          }
+        }
       }
-      catch (IOException localIOException)
-      {
-        t.e("!44@/B4Tb64lLpK+IBX8XDgnvsdziV4e3bhfru5SsF4Dqh0=", "exception:%s", new Object[] { bn.a(localIOException) });
+    } while (paramArrayOfLong == null);
+    paramInt2 = paramArrayOfLong.length;
+    paramInt1 = 0;
+    label400:
+    if (paramInt1 < paramInt2)
+    {
+      paramLong = paramArrayOfLong[paramInt1];
+      paramString1 = new aig();
+      paramString3 = com.tencent.mm.model.ah.tD().rs().dz(Long.valueOf(paramLong).longValue());
+      iXA = field_msgSvrId;
+      if (!paramString3.aWU()) {
+        break label583;
       }
+      iXu = 49;
+      label462:
+      if (!paramString3.aXf()) {
+        break label595;
+      }
+      fsI = field_content;
+      label479:
+      paramString4 = ar.fk(field_content);
+      if (!ay.kz(paramString4)) {
+        break label619;
+      }
+      if (field_isSend != 1) {
+        break label604;
+      }
+      jkd = ay.ky(paramString2);
     }
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvsdziV4e3bhfru5SsF4Dqh0=", "ScopeList size = %s", new Object[] { Integer.valueOf(localArrayList.size()) });
-    return localArrayList;
-  }
-  
-  public final String AG()
-  {
-    ml localml = (ml)apJ.bsU.btb;
-    if ((localml == null) || (hhx == null))
+    for (;;)
     {
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvsdziV4e3bhfru5SsF4Dqh0=", "get mid failed");
-      return null;
+      jke = ((int)(field_createTime / 1000L));
+      bpa.add(paramString1);
+      u.d("!56@/B4Tb64lLpK+IBX8XDgnvk83Yrw+OAaM0+/MlLC0btPAhEWNLFBpbg==", "[oneliang][ExposeWithProof]MsgType:%s,NewMsgId:%s,Sender:%s", new Object[] { Integer.valueOf(iXu), Long.valueOf(iXA), jkd });
+      paramInt1 += 1;
+      break label400;
+      break;
+      label583:
+      iXu = field_type;
+      break label462;
+      label595:
+      fsI = "";
+      break label479;
+      label604:
+      jkd = ay.ky(field_talker);
+      continue;
+      label619:
+      jkd = ay.ky(paramString4);
     }
-    return hhx;
   }
   
-  public final long AH()
+  public final int a(e parame, d paramd)
   {
-    ml localml = (ml)apJ.bsU.btb;
-    if (hxV != null) {
-      return hxV.hrL;
-    }
-    return -1L;
+    anM = paramd;
+    return a(parame, bUv, this);
   }
   
-  public final int a(m paramm, d paramd)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    apI = paramd;
-    return a(paramm, apJ, this);
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, com.tencent.mm.network.w paramw, byte[] paramArrayOfByte)
-  {
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvsdziV4e3bhfru5SsF4Dqh0=", "dkwt geta8key onGYNetEnd:[%d,%d] url:[%s]  a8key:[%s]", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), AA(), apJ.bsU.btb).hxO });
-    apI.a(paramInt2, paramInt3, paramString, this);
-  }
-  
-  public final String getContent()
-  {
-    return apJ.bsU.btb).eiY;
-  }
-  
-  public final String getSSID()
-  {
-    ml localml = (ml)apJ.bsU.btb;
-    if ((localml == null) || (SSID == null))
-    {
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvsdziV4e3bhfru5SsF4Dqh0=", "get ssid failed");
-      return null;
-    }
-    return SSID;
-  }
-  
-  public final String getTitle()
-  {
-    return apJ.bsU.btb).auz;
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
   {
-    return 233;
+    return 661;
   }
 }
 

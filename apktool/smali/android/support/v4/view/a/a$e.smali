@@ -30,14 +30,6 @@
 
 
 # virtual methods
-.method public a(Ljava/lang/Object;I)V
-    .locals 0
-
-    .prologue
-    .line 124
-    return-void
-.end method
-
 .method public a(Ljava/lang/Object;Landroid/graphics/Rect;)V
     .locals 0
 
@@ -66,7 +58,7 @@
     .locals 0
 
     .prologue
-    .line 269
+    .line 124
     return-void
 .end method
 
@@ -102,14 +94,12 @@
     return-void
 .end method
 
-.method public c(Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method public c(Ljava/lang/Object;I)V
+    .locals 0
 
     .prologue
-    .line 118
-    const/4 v0, 0x0
-
-    return-object v0
+    .line 269
+    return-void
 .end method
 
 .method public c(Ljava/lang/Object;Landroid/graphics/Rect;)V
@@ -144,16 +134,6 @@
     return-void
 .end method
 
-.method public d(Ljava/lang/Object;)I
-    .locals 1
-
-    .prologue
-    .line 143
-    const/4 v0, 0x0
-
-    return v0
-.end method
-
 .method public d(Ljava/lang/Object;Landroid/graphics/Rect;)V
     .locals 0
 
@@ -186,16 +166,6 @@
     return-void
 .end method
 
-.method public e(Ljava/lang/Object;)Ljava/lang/CharSequence;
-    .locals 1
-
-    .prologue
-    .line 168
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
 .method public e(Ljava/lang/Object;Z)V
     .locals 0
 
@@ -204,11 +174,11 @@
     return-void
 .end method
 
-.method public f(Ljava/lang/Object;)Ljava/lang/CharSequence;
+.method public f(Ljava/lang/Object;)Ljava/lang/Object;
     .locals 1
 
     .prologue
-    .line 173
+    .line 118
     const/4 v0, 0x0
 
     return-object v0
@@ -222,14 +192,14 @@
     return-void
 .end method
 
-.method public g(Ljava/lang/Object;)Ljava/lang/CharSequence;
+.method public g(Ljava/lang/Object;)I
     .locals 1
 
     .prologue
-    .line 178
+    .line 143
     const/4 v0, 0x0
 
-    return-object v0
+    return v0
 .end method
 
 .method public g(Ljava/lang/Object;Z)V
@@ -244,7 +214,7 @@
     .locals 1
 
     .prologue
-    .line 188
+    .line 168
     const/4 v0, 0x0
 
     return-object v0
@@ -258,6 +228,16 @@
     return-void
 .end method
 
+.method public i(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 173
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
 .method public i(Ljava/lang/Object;Z)V
     .locals 0
 
@@ -266,7 +246,27 @@
     return-void
 .end method
 
-.method public i(Ljava/lang/Object;)Z
+.method public j(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 178
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public k(Ljava/lang/Object;)Ljava/lang/CharSequence;
+    .locals 1
+
+    .prologue
+    .line 188
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public l(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -276,7 +276,7 @@
     return v0
 .end method
 
-.method public j(Ljava/lang/Object;)Z
+.method public m(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -286,7 +286,7 @@
     return v0
 .end method
 
-.method public k(Ljava/lang/Object;)Z
+.method public n(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -296,7 +296,7 @@
     return v0
 .end method
 
-.method public l(Ljava/lang/Object;)Z
+.method public o(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -306,7 +306,7 @@
     return v0
 .end method
 
-.method public m(Ljava/lang/Object;)Z
+.method public p(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -316,7 +316,7 @@
     return v0
 .end method
 
-.method public n(Ljava/lang/Object;)Z
+.method public q(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -326,7 +326,7 @@
     return v0
 .end method
 
-.method public o(Ljava/lang/Object;)Z
+.method public r(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -336,7 +336,7 @@
     return v0
 .end method
 
-.method public p(Ljava/lang/Object;)Z
+.method public s(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -346,7 +346,7 @@
     return v0
 .end method
 
-.method public q(Ljava/lang/Object;)Z
+.method public t(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -356,7 +356,7 @@
     return v0
 .end method
 
-.method public r(Ljava/lang/Object;)Z
+.method public u(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -366,7 +366,7 @@
     return v0
 .end method
 
-.method public s(Ljava/lang/Object;)V
+.method public v(Ljava/lang/Object;)V
     .locals 0
 
     .prologue
@@ -374,7 +374,7 @@
     return-void
 .end method
 
-.method public t(Ljava/lang/Object;)I
+.method public w(Ljava/lang/Object;)I
     .locals 1
 
     .prologue
@@ -384,7 +384,7 @@
     return v0
 .end method
 
-.method public u(Ljava/lang/Object;)Z
+.method public x(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -394,7 +394,7 @@
     return v0
 .end method
 
-.method public v(Ljava/lang/Object;)Z
+.method public y(Ljava/lang/Object;)Z
     .locals 1
 
     .prologue
@@ -404,7 +404,7 @@
     return v0
 .end method
 
-.method public w(Ljava/lang/Object;)Ljava/lang/String;
+.method public z(Ljava/lang/Object;)Ljava/lang/String;
     .locals 1
 
     .prologue

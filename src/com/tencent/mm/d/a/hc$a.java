@@ -2,7 +2,10 @@ package com.tencent.mm.d.a;
 
 public final class hc$a
 {
-  public int aqq = 0;
+  public int aCK;
+  public boolean aCL;
+  public boolean aCM;
+  public String apb;
 }
 
 /* Location:

@@ -1,118 +1,74 @@
 package com.tencent.mm.protocal.b;
 
-import a.a.a.b;
-import java.util.LinkedList;
+import com.tencent.mm.at.b;
 
 public final class aar
-  extends adm
+  extends com.tencent.mm.at.a
 {
-  public String cUW;
-  public String hJQ;
-  public String hxx;
-  public String hxy;
+  public int fUi;
+  public int jwP;
+  public b jwQ;
+  public int jwX;
+  public int jwY;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLQ == null) {
-        throw new b("Not all required fields were included: BaseResponse");
+      paramVarArgs.ci(1, jwP);
+      if (jwQ != null) {
+        paramVarArgs.b(2, jwQ);
       }
-      if (hLQ != null)
-      {
-        paramVarArgs.bN(1, hLQ.kS());
-        hLQ.a(paramVarArgs);
+      paramVarArgs.ci(3, jwX);
+      paramVarArgs.ci(4, fUi);
+      paramVarArgs.ci(5, jwY);
+      return 0;
+    }
+    if (paramInt == 1)
+    {
+      int i = a.a.a.a.cg(1, jwP) + 0;
+      paramInt = i;
+      if (jwQ != null) {
+        paramInt = i + a.a.a.a.a(2, jwQ);
       }
-      if (hxx != null) {
-        paramVarArgs.U(2, hxx);
-      }
-      if (hxy != null) {
-        paramVarArgs.U(3, hxy);
-      }
-      if (hJQ != null) {
-        paramVarArgs.U(4, hJQ);
-      }
-      if (cUW != null) {
-        paramVarArgs.U(5, cUW);
+      return paramInt + a.a.a.a.cg(3, jwX) + a.a.a.a.cg(4, fUi) + a.a.a.a.cg(5, jwY);
+    }
+    if (paramInt == 2)
+    {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bog();
+        }
       }
       return 0;
     }
-    if (paramInt == 1) {
-      if (hLQ == null) {
-        break label525;
-      }
-    }
-    label525:
-    for (int i = a.a.a.a.bJ(1, hLQ.kS()) + 0;; i = 0)
+    if (paramInt == 3)
     {
-      paramInt = i;
-      if (hxx != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, hxx);
-      }
-      i = paramInt;
-      if (hxy != null) {
-        i = paramInt + a.a.a.b.b.a.T(3, hxy);
-      }
-      paramInt = i;
-      if (hJQ != null) {
-        paramInt = i + a.a.a.b.b.a.T(4, hJQ);
-      }
-      i = paramInt;
-      if (cUW != null) {
-        i = paramInt + a.a.a.b.b.a.T(5, cUW);
-      }
-      return i;
-      if (paramInt == 2)
+      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      aar localaar = (aar)paramVarArgs[1];
+      switch (((Integer)paramVarArgs[2]).intValue())
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = adm.a(paramVarArgs); paramInt > 0; paramInt = adm.a(paramVarArgs)) {
-          if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
-          }
-        }
-        if (hLQ != null) {
-          break;
-        }
-        throw new b("Not all required fields were included: BaseResponse");
-      }
-      if (paramInt == 3)
-      {
-        Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
-        aar localaar = (aar)paramVarArgs[1];
-        paramInt = ((Integer)paramVarArgs[2]).intValue();
-        switch (paramInt)
-        {
-        default: 
-          return -1;
-        case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
-          i = paramVarArgs.size();
-          paramInt = 0;
-          while (paramInt < i)
-          {
-            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new ck();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (boolean bool = true; bool; bool = ((ck)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adm.a((a.a.a.a.a)localObject2))) {}
-            hLQ = ((ck)localObject1);
-            paramInt += 1;
-          }
-        case 2: 
-          hxx = jMD.readString();
-          return 0;
-        case 3: 
-          hxy = jMD.readString();
-          return 0;
-        case 4: 
-          hJQ = jMD.readString();
-          return 0;
-        }
-        cUW = jMD.readString();
+      default: 
+        return -1;
+      case 1: 
+        jwP = maU.jC();
+        return 0;
+      case 2: 
+        jwQ = locala.bof();
+        return 0;
+      case 3: 
+        jwX = maU.jC();
+        return 0;
+      case 4: 
+        fUi = maU.jC();
         return 0;
       }
-      return -1;
+      jwY = maU.jC();
+      return 0;
     }
+    return -1;
   }
 }
 

@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class cu$b
 {
-  public int count = 0;
+  public boolean auR;
 }
 
 /* Location:

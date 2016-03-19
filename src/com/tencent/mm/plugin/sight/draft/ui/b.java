@@ -17,22 +17,15 @@ import android.widget.ImageView.ScaleType;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.a.b;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.ah.m;
-import com.tencent.mm.ah.n;
-import com.tencent.mm.ah.o;
-import com.tencent.mm.ah.v;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.g.af;
-import com.tencent.mm.sdk.g.an;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.cj;
-import com.tencent.mm.ui.tools.dt;
+import com.tencent.mm.an.f;
+import com.tencent.mm.an.g;
+import com.tencent.mm.an.h;
+import com.tencent.mm.an.j;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.ui.tools.k;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -40,58 +33,71 @@ import java.util.List;
 import java.util.Set;
 
 public final class b
-  extends cj
+  extends com.tencent.mm.ui.i
 {
-  private int fbi;
-  a fih = new a((byte)0);
-  private b fii = new b((byte)0);
-  private c fij = new c((byte)0);
-  Set fik = new HashSet();
-  d fil = d.fiv;
-  private a fim;
-  int fin = a.n.sight_draft_send;
-  int fio = 0;
-  private int fip;
-  private int fiq;
-  private int fir;
-  e fis = new c(this);
+  private int gmC;
+  a gzh = new a((byte)0);
+  private b gzi = new b((byte)0);
+  private c gzj = new c((byte)0);
+  Set gzk = new HashSet();
+  d gzl = d.gzv;
+  private a gzm;
+  int gzn = 2131430519;
+  int gzo = 0;
+  private int gzp;
+  private int gzq;
+  private int gzr;
+  c gzs = new c()
+  {
+    public final void o(String paramAnonymousString, Bitmap paramAnonymousBitmap)
+    {
+      Iterator localIterator = b.a(b.this).iterator();
+      while (localIterator.hasNext())
+      {
+        b.e locale = (b.e)localIterator.next();
+        if ((cfv != null) && (ay.ad(paramAnonymousString, "").equals(cfv.field_fileName))) {
+          gzz.setThumbBmp(paramAnonymousBitmap);
+        }
+      }
+    }
+  };
   
   public b(Context paramContext, a parama)
   {
     super(paramContext, null);
-    fim = parama;
-    int i = paramContext.getResources().getDimensionPixelSize(a.g.sight_draft_padding) * 2;
-    fip = (getResourcesgetDisplayMetricswidthPixels / 3);
-    fbi = (fip - i);
-    fir = (fbi * 3 / 4);
-    fiq = (i + fir);
+    gzm = parama;
+    int i = paramContext.getResources().getDimensionPixelSize(2131034538) * 2;
+    gzp = (getResourcesgetDisplayMetricswidthPixels / 3);
+    gmC = (gzp - i);
+    gzr = (gmC * 3 / 4);
+    gzq = (i + gzr);
   }
   
-  public final void Eb()
+  public final void Gk()
   {
-    Ec();
+    Gl();
     super.notifyDataSetChanged();
   }
   
-  protected final void Ec()
+  protected final void Gl()
   {
-    setCursor(BZaqT.rawQuery("SELECT * FROM SightDraftInfo WHERE fileStatus = ?  ORDER BY localId DESC ", new String[] { "1" }));
+    setCursor(EbaoX.rawQuery("SELECT * FROM SightDraftInfo WHERE fileStatus = ?  ORDER BY localId DESC ", new String[] { "1" }));
   }
   
   final void a(e parame)
   {
     if (parame == null)
     {
-      parame = fik.iterator();
+      parame = gzk.iterator();
       while (parame.hasNext()) {
-        nextfiA.setVisibility(8);
+        nextgzA.setVisibility(8);
       }
     }
-    Iterator localIterator = fik.iterator();
+    Iterator localIterator = gzk.iterator();
     if (localIterator.hasNext())
     {
       e locale = (e)localIterator.next();
-      View localView = fiA;
+      View localView = gzA;
       if (parame == locale) {}
       for (int i = 8;; i = 0)
       {
@@ -101,26 +107,26 @@ public final class b
     }
   }
   
-  public final void a(String paramString, an paraman)
+  public final void a(String paramString, com.tencent.mm.sdk.h.i parami)
   {
-    fik.clear();
-    super.a(paramString, paraman);
+    gzk.clear();
+    super.a(paramString, parami);
   }
   
   public final boolean a(d paramd, boolean paramBoolean)
   {
-    if (paramd == fil)
+    if (paramd == gzl)
     {
-      if ((paramBoolean) && (fim != null)) {
-        fim.a(paramd);
+      if ((paramBoolean) && (gzm != null)) {
+        gzm.a(paramd);
       }
       return false;
     }
-    fil = paramd;
-    fih.ajx();
+    gzl = paramd;
+    gzh.awd();
     notifyDataSetChanged();
-    if ((paramBoolean) && (fim != null)) {
-      fim.a(paramd);
+    if ((paramBoolean) && (gzm != null)) {
+      gzm.a(paramd);
     }
     return true;
   }
@@ -136,7 +142,7 @@ public final class b
     int i;
     Object localObject2;
     Object localObject3;
-    label291:
+    label289:
     int j;
     if (paramView == null)
     {
@@ -146,103 +152,103 @@ public final class b
       i = 0;
       while (i < 3)
       {
-        localObject2 = LayoutInflater.from(paramViewGroup.getContext()).inflate(a.k.sight_draft_list_item, paramView, false);
+        localObject2 = LayoutInflater.from(paramViewGroup.getContext()).inflate(2131363061, paramView, false);
         localObject3 = new e((byte)0);
-        cAV = ((View)localObject2);
-        cAV.setTag(localObject3);
-        fiy = ((View)localObject2).findViewById(a.i.sight_play_area);
-        fiz = ((com.tencent.mm.plugin.sight.decode.a.a)((View)localObject2).findViewById(a.i.sight_view));
-        dkN = ((ImageView)((View)localObject2).findViewById(a.i.sight_view_mask));
-        fiA = ((View)localObject2).findViewById(a.i.shadow_mask);
-        cuF = ((TextView)((View)localObject2).findViewById(a.i.sight_tips_tv));
-        cuF.setText(fin);
-        fiB = ((ImageView)((View)localObject2).findViewById(a.i.sight_del_btn));
-        fiC.add(localObject3);
+        cTx = ((View)localObject2);
+        cTx.setTag(localObject3);
+        gzy = ((View)localObject2).findViewById(2131169096);
+        gzz = ((com.tencent.mm.plugin.sight.decode.a.a)((View)localObject2).findViewById(2131169097));
+        dVm = ((ImageView)((View)localObject2).findViewById(2131169098));
+        gzA = ((View)localObject2).findViewById(2131169100);
+        cMz = ((TextView)((View)localObject2).findViewById(2131169099));
+        cMz.setText(gzn);
+        gzB = ((ImageView)((View)localObject2).findViewById(2131169101));
+        gzC.add(localObject3);
         localObject4 = (LinearLayout.LayoutParams)((View)localObject2).getLayoutParams();
         weight = 1.0F;
-        height = fiq;
+        height = gzq;
         paramView.addView((View)localObject2);
-        ((View)localObject2).setOnClickListener(fih);
-        ((View)localObject2).setOnLongClickListener(fii);
-        fiB.setTag(localObject3);
-        fiB.setOnClickListener(fij);
+        ((View)localObject2).setOnClickListener(gzh);
+        ((View)localObject2).setOnLongClickListener(gzi);
+        gzB.setTag(localObject3);
+        gzB.setOnClickListener(gzj);
         i += 1;
       }
       paramView.setTag(localObject1);
       paramViewGroup = (ViewGroup)localObject1;
       i = 0;
-      if (i >= fiC.size()) {
+      if (i >= gzC.size()) {
         return paramView;
       }
       j = paramInt * 3 + i;
-      localObject1 = (e)fiC.get(i);
-      fik.add(localObject1);
-      fiA.setVisibility(8);
-      cuF.setVisibility(8);
-      dkN.setBackgroundResource(a.h.sight_draft_mask);
-      fiz.I(null, false);
-      fiz.setCanPlay(false);
-      fiz.setForceRecordState(false);
-      ((ImageView)fiz).setBackgroundResource(0);
+      localObject1 = (e)gzC.get(i);
+      gzk.add(localObject1);
+      gzA.setVisibility(8);
+      cMz.setVisibility(8);
+      dVm.setBackgroundResource(2130970063);
+      gzz.P(null, false);
+      gzz.setCanPlay(false);
+      gzz.setForceRecordState(false);
+      ((ImageView)gzz).setBackgroundResource(0);
       if (j > 0) {
-        break label535;
+        break label533;
       }
-      localObject2 = new m();
+      localObject2 = new f();
       field_fileStatus = -1;
-      bOH = ((m)localObject2);
-      ((ImageView)fiz).setScaleType(ImageView.ScaleType.CENTER_INSIDE);
-      ((ImageView)fiz).setImageResource(a.h.app_panel_setting_icon);
-      ((ImageView)fiz).setBackgroundResource(a.h.sight_draft_grid_item_bg);
-      fiB.setVisibility(8);
-      cAV.setVisibility(0);
-      dt.e(fiy, 1.0F);
+      cfv = ((f)localObject2);
+      ((ImageView)gzz).setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+      ((ImageView)gzz).setImageResource(2130903714);
+      ((ImageView)gzz).setBackgroundResource(2130970044);
+      gzB.setVisibility(8);
+      cTx.setVisibility(0);
+      k.e(gzy, 1.0F);
     }
     for (;;)
     {
       i += 1;
-      break label291;
+      break label289;
       paramViewGroup = (f)paramView.getTag();
       break;
-      label535:
-      if (j < apH() + 1) {
-        break label573;
+      label533:
+      if (j < SU() + 1) {
+        break label571;
       }
-      bOH = null;
-      cAV.setVisibility(4);
-      dt.e(fiy, 1.0F);
+      cfv = null;
+      cTx.setVisibility(4);
+      k.e(gzy, 1.0F);
     }
-    label573:
-    fio -= 1;
-    Object localObject4 = (m)getItem(j - 1);
-    if (!ax.tl().isSDCardAvailable())
+    label571:
+    gzo -= 1;
+    Object localObject4 = (f)getItem(j - 1);
+    if (!ah.tD().isSDCardAvailable())
     {
-      bOH = null;
-      fiz.ajl();
-      if (d.fiw != fil) {
-        break label751;
+      cfv = null;
+      gzz.avF();
+      if (d.gzw != gzl) {
+        break label749;
       }
-      fiB.setVisibility(0);
-      dt.e(fiy, 0.95F);
+      gzB.setVisibility(0);
+      k.e(gzy, 0.95F);
     }
     for (;;)
     {
-      cAV.setVisibility(0);
+      cTx.setVisibility(0);
       break;
-      bOH = ((m)localObject4);
-      localObject2 = fis;
+      cfv = ((f)localObject4);
+      localObject2 = gzs;
       localObject3 = field_fileName;
-      localObject4 = n.jdMethod_if(field_fileName);
-      if (fio <= 0) {}
+      localObject4 = g.jH(field_fileName);
+      if (gzo <= 0) {}
       for (boolean bool = true;; bool = false)
       {
-        localObject2 = ((e)localObject2).h((String)localObject3, (String)localObject4, bool);
-        ((ImageView)fiz).setScaleType(ImageView.ScaleType.CENTER_CROP);
-        fiz.setThumbBmp((Bitmap)localObject2);
+        localObject2 = ((c)localObject2).h((String)localObject3, (String)localObject4, bool);
+        ((ImageView)gzz).setScaleType(ImageView.ScaleType.CENTER_CROP);
+        gzz.setThumbBmp((Bitmap)localObject2);
         break;
       }
-      label751:
-      fiB.setVisibility(8);
-      dt.e(fiy, 1.0F);
+      label749:
+      gzB.setVisibility(8);
+      k.e(gzy, 1.0F);
     }
     return paramView;
   }
@@ -250,22 +256,22 @@ public final class b
   private final class a
     implements View.OnClickListener
   {
-    private b.e fiu;
+    private b.e gzu;
     
     private a() {}
     
-    public final boolean ajx()
+    public final boolean awd()
     {
-      if (fiu != null)
+      if (gzu != null)
       {
-        fiu.cuF.setVisibility(8);
-        fiu.fiz.setCanPlay(false);
-        fiu.fiz.I(null, false);
-        Bitmap localBitmap = b.d(b.this).h(fiu.bOH.field_fileName, n.jdMethod_if(fiu.bOH.field_fileName), true);
-        fiu.fiz.setThumbBmp(localBitmap);
-        fiu.dkN.setBackgroundResource(a.h.sight_draft_mask);
-        dt.e(fiu.fiy, 1.0F);
-        fiu = null;
+        gzu.cMz.setVisibility(8);
+        gzu.gzz.setCanPlay(false);
+        gzu.gzz.P(null, false);
+        Bitmap localBitmap = b.d(b.this).h(gzu.cfv.field_fileName, g.jH(gzu.cfv.field_fileName), true);
+        gzu.gzz.setThumbBmp(localBitmap);
+        gzu.dVm.setBackgroundResource(2130970063);
+        k.e(gzu.gzy, 1.0F);
+        gzu = null;
         return true;
       }
       return false;
@@ -275,60 +281,60 @@ public final class b
     {
       int i = 0;
       if (!(paramView.getTag() instanceof b.e)) {}
-      label233:
+      label232:
       do
       {
         do
         {
           return;
           paramView = (b.e)paramView.getTag();
-          if (bOH == null)
+          if (cfv == null)
           {
-            t.i("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "click draft, but info null, curType %s", new Object[] { b.b(b.this) });
+            u.i("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "click draft, but info null, curType %s", new Object[] { b.b(b.this) });
             return;
           }
-          if (-1 != bOH.field_fileStatus) {
+          if (-1 != cfv.field_fileStatus) {
             break;
           }
-          t.i("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "click camera, curType %s", new Object[] { b.b(b.this) });
-        } while ((b.c(b.this) == null) || (b.d.fiv != b.b(b.this)));
-        b.c(b.this).ajw();
+          u.i("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "click camera, curType %s", new Object[] { b.b(b.this) });
+        } while ((b.c(b.this) == null) || (b.d.gzv != b.b(b.this)));
+        b.c(b.this).awc();
         return;
-        if (fiu != paramView)
+        if (gzu != paramView)
         {
-          ajx();
-          Object localObject1 = n.ie(bOH.field_fileName);
-          fiz.setCanPlay(true);
-          fiz.I((String)localObject1, false);
-          dkN.setBackgroundResource(a.h.sight_draft_mask_selected);
-          localObject1 = cuF;
-          if (b.d.fiv == b.b(b.this))
+          awd();
+          Object localObject1 = g.jG(cfv.field_fileName);
+          gzz.setCanPlay(true);
+          gzz.P((String)localObject1, false);
+          dVm.setBackgroundResource(2130970053);
+          localObject1 = cMz;
+          if (b.d.gzv == b.b(b.this))
           {
             ((TextView)localObject1).setVisibility(i);
-            localObject1 = fiy;
-            if ((localObject1 != null) && (!com.tencent.mm.compatible.util.e.bU(11))) {
-              break label233;
+            localObject1 = gzy;
+            if ((localObject1 != null) && (!com.tencent.mm.compatible.util.c.bV(11))) {
+              break label232;
             }
           }
           for (;;)
           {
             b.a(b.this, paramView);
-            fiu = paramView;
+            gzu = paramView;
             return;
             i = 8;
             break;
-            Object localObject2 = (Animator)((View)localObject1).getTag(a.i.property_anim);
+            Object localObject2 = (Animator)((View)localObject1).getTag(2131165230);
             if (localObject2 != null) {
               ((Animator)localObject2).cancel();
             }
-            localObject2 = (AnimatorSet)AnimatorInflater.loadAnimator(((View)localObject1).getContext(), a.b.fast_zoom_in_property_anim);
+            localObject2 = (AnimatorSet)AnimatorInflater.loadAnimator(((View)localObject1).getContext(), 2131623937);
             ((AnimatorSet)localObject2).setTarget(localObject1);
             ((AnimatorSet)localObject2).start();
-            ((View)localObject1).setTag(a.i.property_anim, localObject2);
+            ((View)localObject1).setTag(2131165230, localObject2);
           }
         }
-      } while ((b.d.fiv != b.b(b.this)) || (b.c(b.this) == null));
-      b.c(b.this).a(bOH);
+      } while ((b.d.gzv != b.b(b.this)) || (b.c(b.this) == null));
+      b.c(b.this).a(cfv);
     }
   }
   
@@ -344,8 +350,8 @@ public final class b
       {
         return true;
         paramView = (b.e)paramView.getTag();
-      } while ((bOH == null) || (-1 == bOH.field_fileStatus));
-      a(b.d.fiw, true);
+      } while ((cfv == null) || (-1 == cfv.field_fileStatus));
+      a(b.d.gzw, true);
       return true;
     }
   }
@@ -360,15 +366,15 @@ public final class b
       if (!(paramView.getTag() instanceof b.e)) {
         return;
       }
-      b.e(b.this).ajx();
+      b.e(b.this).awd();
       paramView = (b.e)paramView.getTag();
-      if (bOH == null)
+      if (cfv == null)
       {
-        t.e("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "draftInfo is NULL");
+        u.e("!56@/B4Tb64lLpJ8NKLwSZ2/Li1Vl1EOzrjMav6QQvoMQ7gze8tXohsfkA==", "draftInfo is NULL");
         return;
       }
-      bOH.field_fileStatus = 6;
-      v.BZ().a(bOH, new String[] { "localId" });
+      cfv.field_fileStatus = 6;
+      j.Eb().a(cfv, new String[] { "localId" });
       a(null, null);
     }
   }
@@ -377,19 +383,19 @@ public final class b
   
   private static final class e
   {
-    m bOH;
-    View cAV;
-    TextView cuF;
-    ImageView dkN;
-    View fiA;
-    ImageView fiB;
-    View fiy;
-    com.tencent.mm.plugin.sight.decode.a.a fiz;
+    TextView cMz;
+    View cTx;
+    f cfv;
+    ImageView dVm;
+    View gzA;
+    ImageView gzB;
+    View gzy;
+    com.tencent.mm.plugin.sight.decode.a.a gzz;
   }
   
   private static final class f
   {
-    List fiC = new LinkedList();
+    List gzC = new LinkedList();
   }
 }
 

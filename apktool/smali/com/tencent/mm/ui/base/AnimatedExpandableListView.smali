@@ -19,7 +19,7 @@
 
 
 # instance fields
-.field private iCC:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
+.field private kBE:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
 
 # direct methods
@@ -85,7 +85,7 @@
 
 
 # virtual methods
-.method public final ny(I)Z
+.method public final qs(I)Z
     .locals 3
     .annotation build Landroid/annotation/SuppressLint;
         value = {
@@ -139,13 +139,13 @@
     if-lt v0, v1, :cond_0
 
     .line 167
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->iCC:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->kBE:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;->nA(I)Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;->qu(I)Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;
 
     move-result-object v0
 
-    iput v2, v0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->iCQ:I
+    iput v2, v0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$d;->kBS:I
 
     .line 168
     invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->expandGroup(I)Z
@@ -158,7 +158,7 @@
 
     .line 174
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->iCC:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->kBE:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
     invoke-static {v0, p1}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;->a(Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;I)V
 
@@ -170,7 +170,7 @@
     goto :goto_0
 .end method
 
-.method public final nz(I)Z
+.method public final qt(I)Z
     .locals 4
 
     .prologue
@@ -267,12 +267,12 @@
 
     .line 220
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->iCC:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->kBE:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
     invoke-static {v1, p1, v0}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;->a(Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;II)V
 
     .line 223
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->iCC:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->kBE:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;->notifyDataSetChanged()V
 
@@ -299,10 +299,10 @@
     .line 133
     check-cast p1, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->iCC:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->kBE:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
     .line 134
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->iCC:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/AnimatedExpandableListView;->kBE:Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;
 
     invoke-static {v0, p0}, Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;->a(Lcom/tencent/mm/ui/base/AnimatedExpandableListView$a;Lcom/tencent/mm/ui/base/AnimatedExpandableListView;)V
 

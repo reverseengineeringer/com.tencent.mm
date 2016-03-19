@@ -9,42 +9,42 @@ public final class h
 {
   public h(i parami)
   {
-    jNs = 2064;
-    jNt = 3;
-    jNv = parami;
+    mbE = 2064;
+    mbF = 3;
+    mbH = parami;
   }
   
   public final int i(byte[] paramArrayOfByte, int paramInt1, int paramInt2)
   {
     f localf = new f();
     g localg = new g();
-    int i = super.v(paramArrayOfByte, paramInt1 + 2);
-    super.aVA();
+    int i = super.z(paramArrayOfByte, paramInt1 + 2);
+    super.bop();
     int j = paramInt1 + 5;
     switch (i)
     {
     case 3: 
     case 4: 
     default: 
-      h(paramArrayOfByte, j, jNh - j - 1);
+      h(paramArrayOfByte, j, mbt - j - 1);
       return i;
     case 2: 
-      paramInt2 = localf.k(paramArrayOfByte, j, jNh - j);
+      paramInt2 = localf.k(paramArrayOfByte, j, mbt - j);
       paramInt1 = paramInt2;
       if (paramInt2 >= 0)
       {
-        jNv.jNA = localf;
-        paramInt2 = localg.k(paramArrayOfByte, j, jNh - j);
+        mbH.mbM = localf;
+        paramInt2 = localg.k(paramArrayOfByte, j, mbt - j);
         paramInt1 = paramInt2;
         if (paramInt2 >= 0)
         {
-          jNv.jNB = localg;
+          mbH.mbN = localg;
           return i;
         }
       }
       break;
     case 5: 
-      super.h(paramArrayOfByte, j, jNh - j - 1);
+      super.h(paramArrayOfByte, j, mbt - j - 1);
       return i;
     }
     return paramInt1;

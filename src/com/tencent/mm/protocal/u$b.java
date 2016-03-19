@@ -1,41 +1,17 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.protocal.b.adm;
-import com.tencent.mm.protocal.b.ck;
-import com.tencent.mm.protocal.b.yw;
-
 public final class u$b
-  extends i.d
-  implements i.b
+  extends h.d
+  implements h.b
 {
-  public byte[] bRw;
-  public byte[] hgH;
-  public int hgI = 0;
-  public yw hhp = new yw();
-  
-  public final void aw(byte[] paramArrayOfByte)
-  {
-    if (paramArrayOfByte != null) {}
-    for (;;)
-    {
-      bRw = paramArrayOfByte;
-      return;
-      paramArrayOfByte = new byte[0];
-    }
-  }
-  
   public final int getCmdId()
   {
-    return 0;
+    return -1;
   }
   
-  public final int z(byte[] paramArrayOfByte)
+  public final int y(byte[] paramArrayOfByte)
   {
-    hgI = 0;
-    hhp = ((yw)new yw().x(paramArrayOfByte));
-    i.a(this, hhp.hLQ);
-    hgI = 0;
-    return hhp.hLQ.hkV;
+    return 0;
   }
 }
 

@@ -1,30 +1,26 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ip
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFJ = new a();
-  public b aFK = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aEx = new a();
   
   public ip()
   {
-    id = "TalkRoomServer";
-    hXT = atO;
+    id = "PreEmotionSearch";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aFL = false;
-    public boolean aFM = false;
-  }
-  
-  public static final class b
-  {
-    public String aFN;
+    public int aEA;
+    public String aEy;
+    public String aEz;
+    public int type;
   }
 }
 

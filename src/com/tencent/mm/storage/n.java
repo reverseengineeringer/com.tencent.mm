@@ -1,35 +1,36 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.sdk.g.ae.a;
+import com.tencent.mm.d.b.s;
+import com.tencent.mm.sdk.h.c.a;
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public final class n
-  extends com.tencent.mm.d.b.n
+  extends s
 {
-  protected static ae.a aqp;
+  protected static c.a aot;
   
   static
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[2];
-    bbY = new String[3];
+    c.a locala = new c.a();
+    ceD = new Field[2];
+    blR = new String[3];
     StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "labelId";
-    ibX.put("labelId", "TEXT");
+    blR[0] = "labelId";
+    jYx.put("labelId", "TEXT");
     localStringBuilder.append(" labelId TEXT");
     localStringBuilder.append(", ");
-    bbY[1] = "contactName";
-    ibX.put("contactName", "TEXT");
+    blR[1] = "contactName";
+    jYx.put("contactName", "TEXT");
     localStringBuilder.append(" contactName TEXT");
-    bbY[2] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    blR[2] = "rowid";
+    jYy = localStringBuilder.toString();
+    aot = locala;
   }
   
-  protected final ae.a lX()
+  protected final c.a ls()
   {
-    return aqp;
+    return aot;
   }
 }
 

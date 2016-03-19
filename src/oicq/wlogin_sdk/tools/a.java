@@ -19,17 +19,31 @@ final class a
   byte[] prePlain;
   Random random = new Random();
   
+  private static long C(byte[] paramArrayOfByte, int paramInt)
+  {
+    long l = 0L;
+    int i = paramInt;
+    for (;;)
+    {
+      if (i >= paramInt + 4) {
+        return l >>> 32 | 0xFFFFFFFF & l;
+      }
+      l = l << 8 | paramArrayOfByte[i] & 0xFF;
+      i += 1;
+    }
+  }
+  
   private byte[] encipher(byte[] paramArrayOfByte)
   {
     int i = 16;
     try
     {
-      long l2 = y(paramArrayOfByte, 0);
-      long l1 = y(paramArrayOfByte, 4);
-      long l4 = y(key, 0);
-      long l5 = y(key, 4);
-      long l6 = y(key, 8);
-      long l7 = y(key, 12);
+      long l2 = C(paramArrayOfByte, 0);
+      long l1 = C(paramArrayOfByte, 4);
+      long l4 = C(key, 0);
+      long l5 = C(key, 4);
+      long l6 = C(key, 8);
+      long l7 = C(key, 12);
       long l3 = 0L;
       for (;;)
       {
@@ -53,31 +67,17 @@ final class a
     catch (IOException paramArrayOfByte) {}
   }
   
-  private static long y(byte[] paramArrayOfByte, int paramInt)
-  {
-    long l = 0L;
-    int i = paramInt;
-    for (;;)
-    {
-      if (i >= paramInt + 4) {
-        return l >>> 32 | 0xFFFFFFFF & l;
-      }
-      l = l << 8 | paramArrayOfByte[i] & 0xFF;
-      i += 1;
-    }
-  }
-  
   byte[] decipher(byte[] paramArrayOfByte, int paramInt)
   {
     paramInt = 16;
     try
     {
-      long l1 = y(paramArrayOfByte, 0);
-      long l3 = y(paramArrayOfByte, 4);
-      long l4 = y(key, 0);
-      long l5 = y(key, 4);
-      long l6 = y(key, 8);
-      long l7 = y(key, 12);
+      long l1 = C(paramArrayOfByte, 0);
+      long l3 = C(paramArrayOfByte, 4);
+      long l4 = C(key, 0);
+      long l5 = C(key, 4);
+      long l6 = C(key, 8);
+      long l7 = C(key, 12);
       long l2 = 3816266640L;
       for (;;)
       {

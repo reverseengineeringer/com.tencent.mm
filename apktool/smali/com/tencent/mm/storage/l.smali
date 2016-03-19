@@ -1,10 +1,10 @@
 .class public final Lcom/tencent/mm/storage/l;
-.super Lcom/tencent/mm/d/b/l;
+.super Lcom/tencent/mm/d/b/q;
 .source "SourceFile"
 
 
 # static fields
-.field protected static aqp:Lcom/tencent/mm/sdk/g/ae$a;
+.field protected static aot:Lcom/tencent/mm/sdk/h/c$a;
 
 
 # direct methods
@@ -15,25 +15,25 @@
     const/4 v5, 0x2
 
     .line 6
-    new-instance v0, Lcom/tencent/mm/sdk/g/ae$a;
+    new-instance v0, Lcom/tencent/mm/sdk/h/c$a;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/g/ae$a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/h/c$a;-><init>()V
 
     new-array v1, v5, [Ljava/lang/reflect/Field;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->bNX:[Ljava/lang/reflect/Field;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
 
     const/4 v1, 0x3
 
     new-array v1, v1, [Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -41,7 +41,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "username"
 
@@ -59,9 +59,9 @@
 
     const-string/jumbo v2, "username"
 
-    iput-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibW:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYw:Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x1
 
@@ -69,7 +69,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "cmdbuf"
 
@@ -81,7 +81,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const-string/jumbo v3, "rowid"
 
@@ -91,9 +91,9 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibY:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->jYy:Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/mm/storage/l;->aqp:Lcom/tencent/mm/sdk/g/ae$a;
+    sput-object v0, Lcom/tencent/mm/storage/l;->aot:Lcom/tencent/mm/sdk/h/c$a;
 
     return-void
 .end method
@@ -103,19 +103,19 @@
 
     .prologue
     .line 5
-    invoke-direct {p0}, Lcom/tencent/mm/d/b/l;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/d/b/q;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final lX()Lcom/tencent/mm/sdk/g/ae$a;
+.method protected final ls()Lcom/tencent/mm/sdk/h/c$a;
     .locals 1
 
     .prologue
     .line 10
-    sget-object v0, Lcom/tencent/mm/storage/l;->aqp:Lcom/tencent/mm/sdk/g/ae$a;
+    sget-object v0, Lcom/tencent/mm/storage/l;->aot:Lcom/tencent/mm/sdk/h/c$a;
 
     return-object v0
 .end method

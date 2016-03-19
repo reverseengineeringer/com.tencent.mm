@@ -15,33 +15,16 @@
 
 
 # instance fields
-.field public aye:Ljava/util/List;
-
-.field public ayf:Ljava/lang/String;
-
-.field public ayg:Ljava/lang/String;
-
-.field public ayh:Lcom/tencent/mm/protocal/b/lb;
-
-.field public ayi:Lcom/tencent/mm/sdk/g/af;
-
-.field public path:Ljava/lang/String;
-
-.field public ret:I
+.field public auR:Z
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 39
+    .line 20
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 40
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/tencent/mm/d/a/cl$b;->ret:I
 
     return-void
 .end method

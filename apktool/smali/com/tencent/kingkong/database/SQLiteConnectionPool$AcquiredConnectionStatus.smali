@@ -35,34 +35,31 @@
 
     const/4 v2, 0x0
 
-    .line 94
+    .line 95
     new-instance v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
     const-string/jumbo v1, "NORMAL"
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;-><init>(Ljava/lang/String;I)V
 
-    .line 95
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;->NORMAL:Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
-    .line 97
+    .line 98
     new-instance v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
     const-string/jumbo v1, "RECONFIGURE"
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;-><init>(Ljava/lang/String;I)V
 
-    .line 98
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;->RECONFIGURE:Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
-    .line 100
+    .line 101
     new-instance v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
     const-string/jumbo v1, "DISCARD"
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;-><init>(Ljava/lang/String;I)V
 
-    .line 101
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;->DISCARD:Lcom/tencent/kingkong/database/SQLiteConnectionPool$AcquiredConnectionStatus;
 
     .line 93

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic hs:Landroid/support/v4/view/ViewPager;
+.field final synthetic gA:Landroid/support/v4/view/ViewPager;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 2832
-    iput-object p1, p0, Landroid/support/v4/view/ViewPager$g;->hs:Landroid/support/v4/view/ViewPager;
+    iput-object p1, p0, Landroid/support/v4/view/ViewPager$g;->gA:Landroid/support/v4/view/ViewPager;
 
     invoke-direct {p0}, Landroid/database/DataSetObserver;-><init>()V
 
@@ -48,9 +48,9 @@
 
     .prologue
     .line 2835
-    iget-object v0, p0, Landroid/support/v4/view/ViewPager$g;->hs:Landroid/support/v4/view/ViewPager;
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager$g;->gA:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->aA()V
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->ai()V
 
     .line 2836
     return-void
@@ -61,9 +61,9 @@
 
     .prologue
     .line 2839
-    iget-object v0, p0, Landroid/support/v4/view/ViewPager$g;->hs:Landroid/support/v4/view/ViewPager;
+    iget-object v0, p0, Landroid/support/v4/view/ViewPager$g;->gA:Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->aA()V
+    invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->ai()V
 
     .line 2840
     return-void

@@ -1,21 +1,23 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.sdk.c.b;
+
 public final class d
-  extends com.tencent.mm.sdk.c.d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a atU = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a arX = new a();
   
   public d()
   {
     id = "Activate";
-    hXT = atO;
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean atV;
+    public boolean arY;
   }
 }
 

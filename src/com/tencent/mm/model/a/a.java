@@ -4,16 +4,16 @@ import java.util.HashMap;
 
 public final class a
 {
-  public String brc;
-  public String brd;
-  public String bre;
-  public String brf;
-  public HashMap brg = new HashMap();
+  public String bDg;
+  public String bDh;
+  public String bDi;
+  public String bDj;
+  public HashMap bDk = new HashMap();
   
-  public final d fc(String paramString)
+  public final d fw(String paramString)
   {
-    if ((brg != null) && (brg.containsKey(paramString))) {
-      return (d)brg.get(paramString);
+    if ((bDk != null) && (bDk.containsKey(paramString))) {
+      return (d)bDk.get(paramString);
     }
     return null;
   }

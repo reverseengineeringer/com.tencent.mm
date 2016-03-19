@@ -5,12 +5,12 @@ import java.io.Serializable;
 public final class a$a
   implements Serializable
 {
-  public String avY = "";
-  public long axb = -1L;
-  public boolean bdO = false;
-  public int bdU;
-  public int bdV = 0;
-  public int bdy;
+  public String ajh = "";
+  public long avg = -1L;
+  public int bnF;
+  public boolean bnX = false;
+  public int bod;
+  public int boe = 0;
   
   public a$a(int paramInt1, long paramLong, String paramString, int paramInt2, boolean paramBoolean, int paramInt3)
   {
@@ -19,23 +19,23 @@ public final class a$a
   
   public a$a(int paramInt, boolean paramBoolean)
   {
-    bdU = paramInt;
-    bdO = paramBoolean;
+    bod = paramInt;
+    bnX = paramBoolean;
   }
   
   public final void a(int paramInt1, long paramLong, String paramString, int paramInt2, boolean paramBoolean, int paramInt3)
   {
-    bdU = paramInt1;
-    axb = paramLong;
-    avY = paramString;
-    bdy = paramInt2;
-    bdO = paramBoolean;
-    bdV = paramInt3;
+    bod = paramInt1;
+    avg = paramLong;
+    ajh = paramString;
+    bnF = paramInt2;
+    bnX = paramBoolean;
+    boe = paramInt3;
   }
   
   public final String toString()
   {
-    return avY + " id:" + axb + " unReadCount:" + bdy + "　notificationId:" + bdU;
+    return ajh + " id:" + avg + " unReadCount:" + bnF + "　notificationId:" + bod;
   }
 }
 

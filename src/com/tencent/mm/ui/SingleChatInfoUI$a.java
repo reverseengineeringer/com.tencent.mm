@@ -8,7 +8,7 @@ final class SingleChatInfoUI$a
 {
   public final void onCancel(DialogInterface paramDialogInterface)
   {
-    SingleChatInfoUI.aLF();
+    SingleChatInfoUI.bbu();
   }
 }
 

@@ -3,22 +3,23 @@ package com.tencent.mm.modelvoice;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class RemoteController$RemoteControlReceiver
   extends BroadcastReceiver
 {
-  private static aj apB;
-  private static RemoteController.a bPZ;
+  private static af anF;
+  private static RemoteController.a cgQ;
   
-  public static void Cj()
+  public static void Eq()
   {
-    bPZ = null;
-    if (apB != null)
+    cgQ = null;
+    if (anF != null)
     {
-      apB.aEN();
-      apB = null;
+      anF.aUF();
+      anF = null;
     }
   }
   
@@ -30,16 +31,24 @@ public class RemoteController$RemoteControlReceiver
       return;
       if (!"android.intent.action.MEDIA_BUTTON".equals(paramIntent.getAction()))
       {
-        t.d("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "unknown action, ignore" + paramIntent.getAction());
+        u.d("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "unknown action, ignore" + paramIntent.getAction());
         return;
       }
-      if ((apB == null) && (bPZ != null))
+      if ((anF == null) && (cgQ != null))
       {
-        t.d("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "got remote key event down");
-        apB = new aj(new k(this), true);
+        u.d("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "got remote key event down");
+        anF = new af(new af.a()
+        {
+          public final boolean lj()
+          {
+            u.d("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "got remote key event up");
+            RemoteController.RemoteControlReceiver.Er();
+            return false;
+          }
+        }, true);
       }
-    } while (apB == null);
-    apB.cA(1000L);
+    } while (anF == null);
+    anF.ds(1000L);
   }
 }
 

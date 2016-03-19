@@ -3,470 +3,468 @@
 .source "SourceFile"
 
 
+# instance fields
+.field public iAC:I
+
+.field public iVr:Ljava/lang/String;
+
+.field public iVs:Ljava/lang/String;
+
+
 # direct methods
-.method private static az([B)Ljava/util/Map;
-    .locals 11
+.method constructor <init>(Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 0
 
     .prologue
-    const/4 v3, 0x0
+    .line 93
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->J([B)Z
+    .line 94
+    iput-object p1, p0, Lcom/tencent/mm/protocal/z;->iVr:Ljava/lang/String;
 
-    move-result v0
+    .line 95
+    iput-object p2, p0, Lcom/tencent/mm/protocal/z;->iVs:Ljava/lang/String;
 
-    if-eqz v0, :cond_0
+    .line 96
+    iput p3, p0, Lcom/tencent/mm/protocal/z;->iAC:I
 
-    move-object v0, v3
+    .line 97
+    return-void
+.end method
 
-    .line 80
-    :goto_0
-    return-object v0
+.method public static aTv()Lcom/tencent/mm/protocal/z;
+    .locals 13
 
-    .line 59
-    :cond_0
-    :try_start_0
-    new-instance v0, Lcom/tencent/mm/protocal/b/ajf;
+    .prologue
+    const/4 v12, 0x4
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/ajf;-><init>()V
+    const/4 v11, 0x3
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/protocal/b/ajf;->x([B)Lcom/tencent/mm/al/a;
+    const/4 v10, 0x2
+
+    const/4 v9, 0x1
+
+    const/4 v6, 0x0
+
+    .line 57
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/protocal/b/ajf;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const-string/jumbo v1, "rsa_public_key_prefs"
 
-    .line 65
-    if-nez v0, :cond_1
+    invoke-virtual {v0, v1, v12}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    move-object v0, v3
+    move-result-object v1
 
-    .line 66
-    goto :goto_0
+    .line 58
+    new-instance v0, Lcom/tencent/mm/protocal/z;
 
-    .line 63
-    :catch_0
-    move-exception v0
+    const-string/jumbo v2, "keye"
 
-    move-object v0, v3
+    const-string/jumbo v3, ""
 
-    goto :goto_0
-
-    .line 68
-    :cond_1
-    const-string/jumbo v1, "!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "dkpush : keyCount:"
-
-    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v4, v0, Lcom/tencent/mm/protocal/b/ajf;->hNq:I
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    invoke-interface {v1, v2, v3}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    const-string/jumbo v3, "keyn"
 
-    move-result-object v2
+    const-string/jumbo v4, ""
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-interface {v1, v3, v4}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 69
-    iget-object v5, v0, Lcom/tencent/mm/protocal/b/ajf;->hNr:Ljava/util/LinkedList;
+    move-result-object v3
 
-    .line 70
-    invoke-virtual {v5}, Ljava/util/LinkedList;->size()I
+    const-string/jumbo v4, "version"
 
-    move-result v1
+    invoke-interface {v1, v4, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    iget v2, v0, Lcom/tencent/mm/protocal/b/ajf;->hNq:I
+    move-result v4
 
-    if-eq v1, v2, :cond_2
+    invoke-direct {v0, v2, v3, v4}, Lcom/tencent/mm/protocal/z;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
 
-    move-object v0, v3
+    .line 60
+    const-string/jumbo v2, "client_version"
 
-    .line 71
-    goto :goto_0
+    invoke-interface {v1, v2, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    .line 73
-    :cond_2
-    new-instance v4, Ljava/util/HashMap;
+    move-result v7
 
-    invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
-
-    .line 74
-    const/4 v1, 0x0
-
-    move v2, v1
-
-    :goto_1
-    iget v1, v0, Lcom/tencent/mm/protocal/b/ajf;->hNq:I
-
-    if-ge v2, v1, :cond_3
-
-    .line 75
-    invoke-virtual {v5, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/tencent/mm/protocal/b/vd;
-
-    iget v1, v1, Lcom/tencent/mm/protocal/b/vd;->eJD:I
-
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v6
-
-    const-wide v7, 0xffffffffL
-
-    invoke-virtual {v5, v2}, Ljava/util/LinkedList;->get(I)Ljava/lang/Object;
-
-    move-result-object v1
-
-    check-cast v1, Lcom/tencent/mm/protocal/b/vd;
-
-    iget v1, v1, Lcom/tencent/mm/protocal/b/vd;->hDR:I
-
-    int-to-long v9, v1
-
-    and-long/2addr v7, v9
-
-    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
-
-    move-result-object v1
-
-    invoke-interface {v4, v6, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    .line 74
-    add-int/lit8 v1, v2, 0x1
-
-    move v2, v1
-
-    goto :goto_1
-
-    .line 77
-    :cond_3
-    invoke-interface {v4}, Ljava/util/Map;->size()I
-
-    move-result v1
-
-    iget v0, v0, Lcom/tencent/mm/protocal/b/ajf;->hNq:I
-
-    if-eq v1, v0, :cond_4
-
-    move-object v0, v3
-
-    .line 78
-    goto :goto_0
-
-    :cond_4
-    move-object v0, v4
-
-    .line 80
-    goto :goto_0
-.end method
-
-.method public static i([B[B)[B
-    .locals 4
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 29
-    if-eqz p0, :cond_0
-
-    array-length v1, p0
-
-    if-gtz v1, :cond_1
-
-    .line 30
-    :cond_0
-    const-string/jumbo v0, "!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms"
-
-    const-string/jumbo v1, "empty old key, use new key"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 52
-    :goto_0
-    return-object p1
-
-    .line 34
-    :cond_1
-    if-eqz p1, :cond_2
-
-    array-length v1, p1
-
-    if-gtz v1, :cond_3
-
-    .line 35
-    :cond_2
-    const-string/jumbo v1, "!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms"
-
-    const-string/jumbo v2, "newKey is null"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    move-object p1, v0
-
-    .line 36
-    goto :goto_0
-
-    .line 39
-    :cond_3
-    new-instance v1, Lcom/tencent/mm/pointers/PByteArray;
-
-    invoke-direct {v1}, Lcom/tencent/mm/pointers/PByteArray;-><init>()V
-
-    .line 41
-    :try_start_0
-    invoke-static {p0, p1, v1}, Lcom/tencent/mm/protocal/MMProtocalJni;->mergeSyncKey([B[BLcom/tencent/mm/pointers/PByteArray;)Z
+    .line 61
+    invoke-virtual {v0}, Lcom/tencent/mm/protocal/z;->aTy()Z
 
     move-result v2
 
-    if-nez v2, :cond_4
+    if-nez v2, :cond_1
 
-    .line 42
-    const-string/jumbo v1, "!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms"
+    .line 62
+    const v2, 0x26020233
 
-    const-string/jumbo v2, "merge key failed"
+    if-le v7, v2, :cond_0
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/IncompatibleClassChangeError; {:try_start_0 .. :try_end_0} :catch_0
+    .line 72
+    :goto_0
+    return-object v0
 
-    move-object p1, v0
-
-    .line 43
-    goto :goto_0
-
-    .line 45
-    :catch_0
-    move-exception v0
-
-    .line 46
-    const-string/jumbo v1, "MicroMsg.Crash"
-
-    const-string/jumbo v2, "NoSuchMethod MMProtocalJni.mergeSyncKey"
-
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 47
-    new-instance v1, Ljava/lang/IncompatibleClassChangeError;
-
-    const-string/jumbo v2, "NoSuchMethod MMProtocalJni.mergeSyncKey"
-
-    invoke-direct {v1, v2}, Ljava/lang/IncompatibleClassChangeError;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v0}, Ljava/lang/IncompatibleClassChangeError;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
+    .line 65
+    :cond_0
+    invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    check-cast v0, Ljava/lang/IncompatibleClassChangeError;
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->clear()Landroid/content/SharedPreferences$Editor;
 
-    check-cast v0, Ljava/lang/IncompatibleClassChangeError;
+    move-result-object v0
 
-    throw v0
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 52
-    :cond_4
-    iget-object p1, v1, Lcom/tencent/mm/pointers/PByteArray;->value:[B
+    move-result v8
 
-    goto :goto_0
+    .line 66
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+
+    const-wide/16 v0, 0x94
+
+    const-wide/16 v2, 0x26
+
+    const-wide/16 v4, 0x1
+
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+
+    .line 67
+    const-string/jumbo v0, "!32@/B4Tb64lLpKEqekw1pYAtcFrYzlTsOfK"
+
+    const-string/jumbo v1, "summercert clear old rsa lastClientVer[%d] nowVer[%d], commit[%b]"
+
+    new-array v2, v11, [Ljava/lang/Object;
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v6
+
+    sget v3, Lcom/tencent/mm/protocal/b;->iUf:I
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v9
+
+    invoke-static {v8}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v3
+
+    aput-object v3, v2, v10
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 70
+    :cond_1
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+
+    const-wide/16 v0, 0x94
+
+    const-wide/16 v2, 0x27
+
+    const-wide/16 v4, 0x1
+
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/plugin/report/service/h;->b(JJJZ)V
+
+    .line 71
+    const-string/jumbo v0, "!32@/B4Tb64lLpKEqekw1pYAtcFrYzlTsOfK"
+
+    const-string/jumbo v1, "summercert req keye[%s], keyn[%s], ver[%d]"
+
+    new-array v2, v11, [Ljava/lang/Object;
+
+    const-string/jumbo v3, "010001"
+
+    aput-object v3, v2, v6
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "C3D875421DD26653E21DB55E3EECBA8A277754D8DD4E733684673EE8CF8EEFC66CA491E90B33CD6DD877C99A7DD41C3CA764A67EA5ABBF389AB0F201367D2CC48AEDAA7400EF7BA08D261B061D39CCE93149B64A761F45D21FF33E3586D721394C881046726C4399BB4F716AC2E923F360F370A845F5E6D38ED19FF16D45FE24823E4E6D4420CA31D641E00082C23CBEC5C82D819DD6492A3DC41390B3D7653714A377938521C0837C2D42F6CA052175B3F10308DE422A0F38910E2DCA2F36737A2111A10C9DD239A0EA627A6C471CC1A411107F25AFCF0B82DD6E526D2DDA1B3FCCA4648F2218639AF26D0F93DC4AF2320A4F2668DE98B50947288D57995029"
+
+    invoke-virtual {v4, v6, v12}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v4, "_"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    const-string/jumbo v4, "C3D875421DD26653E21DB55E3EECBA8A277754D8DD4E733684673EE8CF8EEFC66CA491E90B33CD6DD877C99A7DD41C3CA764A67EA5ABBF389AB0F201367D2CC48AEDAA7400EF7BA08D261B061D39CCE93149B64A761F45D21FF33E3586D721394C881046726C4399BB4F716AC2E923F360F370A845F5E6D38ED19FF16D45FE24823E4E6D4420CA31D641E00082C23CBEC5C82D819DD6492A3DC41390B3D7653714A377938521C0837C2D42F6CA052175B3F10308DE422A0F38910E2DCA2F36737A2111A10C9DD239A0EA627A6C471CC1A411107F25AFCF0B82DD6E526D2DDA1B3FCCA4648F2218639AF26D0F93DC4AF2320A4F2668DE98B50947288D57995029"
+
+    const/16 v5, 0x1fb
+
+    const/16 v6, 0x1ff
+
+    invoke-virtual {v4, v5, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    aput-object v3, v2, v9
+
+    const/16 v3, 0x89
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v10
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 72
+    new-instance v0, Lcom/tencent/mm/protocal/z;
+
+    const-string/jumbo v1, "010001"
+
+    const-string/jumbo v2, "C3D875421DD26653E21DB55E3EECBA8A277754D8DD4E733684673EE8CF8EEFC66CA491E90B33CD6DD877C99A7DD41C3CA764A67EA5ABBF389AB0F201367D2CC48AEDAA7400EF7BA08D261B061D39CCE93149B64A761F45D21FF33E3586D721394C881046726C4399BB4F716AC2E923F360F370A845F5E6D38ED19FF16D45FE24823E4E6D4420CA31D641E00082C23CBEC5C82D819DD6492A3DC41390B3D7653714A377938521C0837C2D42F6CA052175B3F10308DE422A0F38910E2DCA2F36737A2111A10C9DD239A0EA627A6C471CC1A411107F25AFCF0B82DD6E526D2DDA1B3FCCA4648F2218639AF26D0F93DC4AF2320A4F2668DE98B50947288D57995029"
+
+    const/16 v3, 0x89
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/protocal/z;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+
+    goto/16 :goto_0
 .end method
 
-.method public static j([B[B)Z
-    .locals 11
+.method public static aTw()Lcom/tencent/mm/protocal/z;
+    .locals 4
 
     .prologue
-    const/4 v4, 0x0
+    .line 76
+    new-instance v0, Lcom/tencent/mm/protocal/z;
+
+    const-string/jumbo v1, "010001"
+
+    const-string/jumbo v2, "D8D2AE73FF601B93B1471B35870A1B59D7649EEA815CDD8CE5496BBD0C6CFE19C0E082F4E513B615C6030CCFCE3153E25AA00E8156D0311AF72ABBB9BBEC8B1D3751592234B1A621CA774E2EC50047A93FA0BC60DF0C10E8A65C3B29D13167EC217FC6A29034494870705CBF4AC929FBA0E1E656A8F8B50E779AD89BB4EEF6FF"
+
+    const/16 v3, 0x7d
+
+    invoke-direct {v0, v1, v2, v3}, Lcom/tencent/mm/protocal/z;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+
+    return-object v0
+.end method
+
+.method public static aTx()Lcom/tencent/mm/protocal/z;
+    .locals 9
+
+    .prologue
+    const/16 v8, 0x88
+
+    const/4 v7, 0x0
+
+    .line 81
+    const-string/jumbo v0, "!32@/B4Tb64lLpKEqekw1pYAtcFrYzlTsOfK"
+
+    const-string/jumbo v1, "summercert base keye[%s], keyn[%s], ver[%d]"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const-string/jumbo v3, "010001"
+
+    aput-object v3, v2, v7
 
     const/4 v3, 0x1
 
-    .line 84
-    invoke-static {p0}, Lcom/tencent/mm/protocal/z;->az([B)Ljava/util/Map;
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v5, "BAAB953F86EE9EC456176D983E3B6EC8D29D92C946896916CC2EF12E5D1AE00D89F58B481BCAC7B8A3F5942734EDF6E4EF7134A50EF095E2B2640F231F0F255FF8F38B1AC4DF3D6D10B22D1F1889FF921DB7F91B286EF7CDF30CA4FADA206AE94391F8664F79654F3EA9F64310D0E52FB502D032C08D10FF00CBF377CCAE1FB4131B91EE7A0B2AD5971056EB037F0DA318D92F0EF46C53831C27EB35BE24DA4B887A2701E8285C56E607E778D1606DB6A92D4A41139DBA78E195D6F772354E6B40ECA4529EB57578FA6F28EA6AC001BB73F4A86C26F9328E8AA9727B5C12F0C51C5969D1F02995D00044B6BE460676917559AAD5227DB007E518624790AC75D7"
+
+    const/4 v6, 0x4
+
+    invoke-virtual {v5, v7, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 85
-    if-nez v5, :cond_0
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 86
-    const-string/jumbo v0, "!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms"
+    move-result-object v4
 
-    const-string/jumbo v1, "dkpush local sync key failed"
+    const-string/jumbo v5, "_"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move v0, v3
+    move-result-object v4
 
-    .line 108
-    :goto_0
-    return v0
+    const-string/jumbo v5, "BAAB953F86EE9EC456176D983E3B6EC8D29D92C946896916CC2EF12E5D1AE00D89F58B481BCAC7B8A3F5942734EDF6E4EF7134A50EF095E2B2640F231F0F255FF8F38B1AC4DF3D6D10B22D1F1889FF921DB7F91B286EF7CDF30CA4FADA206AE94391F8664F79654F3EA9F64310D0E52FB502D032C08D10FF00CBF377CCAE1FB4131B91EE7A0B2AD5971056EB037F0DA318D92F0EF46C53831C27EB35BE24DA4B887A2701E8285C56E607E778D1606DB6A92D4A41139DBA78E195D6F772354E6B40ECA4529EB57578FA6F28EA6AC001BB73F4A86C26F9328E8AA9727B5C12F0C51C5969D1F02995D00044B6BE460676917559AAD5227DB007E518624790AC75D7"
 
-    .line 89
-    :cond_0
-    invoke-static {p1}, Lcom/tencent/mm/protocal/z;->az([B)Ljava/util/Map;
+    const/16 v6, 0x1fb
 
-    move-result-object v6
+    const/16 v7, 0x1ff
 
-    .line 90
-    if-nez v6, :cond_1
+    invoke-virtual {v5, v6, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    .line 91
-    const-string/jumbo v0, "!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms"
+    move-result-object v5
 
-    const-string/jumbo v1, "dkpush svr sync key failed"
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    move-result-object v4
 
-    move v0, v4
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    .line 92
-    goto :goto_0
+    move-result-object v4
 
-    .line 94
-    :cond_1
-    invoke-interface {v6}, Ljava/util/Map;->keySet()Ljava/util/Set;
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 82
+    new-instance v0, Lcom/tencent/mm/protocal/z;
+
+    const-string/jumbo v1, "010001"
+
+    const-string/jumbo v2, "BAAB953F86EE9EC456176D983E3B6EC8D29D92C946896916CC2EF12E5D1AE00D89F58B481BCAC7B8A3F5942734EDF6E4EF7134A50EF095E2B2640F231F0F255FF8F38B1AC4DF3D6D10B22D1F1889FF921DB7F91B286EF7CDF30CA4FADA206AE94391F8664F79654F3EA9F64310D0E52FB502D032C08D10FF00CBF377CCAE1FB4131B91EE7A0B2AD5971056EB037F0DA318D92F0EF46C53831C27EB35BE24DA4B887A2701E8285C56E607E778D1606DB6A92D4A41139DBA78E195D6F772354E6B40ECA4529EB57578FA6F28EA6AC001BB73F4A86C26F9328E8AA9727B5C12F0C51C5969D1F02995D00044B6BE460676917559AAD5227DB007E518624790AC75D7"
+
+    invoke-direct {v0, v1, v2, v8}, Lcom/tencent/mm/protocal/z;-><init>(Ljava/lang/String;Ljava/lang/String;I)V
+
+    return-object v0
+.end method
+
+.method public static v(Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 5
+
+    .prologue
+    .line 47
+    const-string/jumbo v0, "!32@/B4Tb64lLpKEqekw1pYAtcFrYzlTsOfK"
+
+    const-string/jumbo v1, "summercert dkcert saveRsaInfo ver:%d keye:%s keyn:%s  "
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    aput-object p0, v2, v3
+
+    const/4 v3, 0x2
+
+    aput-object p1, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 48
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    .line 95
-    invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
+    const-string/jumbo v1, "rsa_public_key_prefs"
 
-    move-result-object v7
+    const/4 v2, 0x4
 
-    :cond_2
-    invoke-interface {v7}, Ljava/util/Iterator;->hasNext()Z
+    invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    .line 49
+    const-string/jumbo v1, "keye"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 50
+    const-string/jumbo v1, "keyn"
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    .line 51
+    const-string/jumbo v1, "version"
+
+    invoke-interface {v0, v1, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 52
+    const-string/jumbo v1, "client_version"
+
+    sget v2, Lcom/tencent/mm/protocal/b;->iUf:I
+
+    invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    .line 53
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 54
+    return-void
+.end method
+
+
+# virtual methods
+.method public final aTy()Z
+    .locals 1
+
+    .prologue
+    .line 90
+    iget v0, p0, Lcom/tencent/mm/protocal/z;->iAC:I
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/protocal/z;->iVr:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-nez v0, :cond_0
 
-    invoke-interface {v7}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/z;->iVs:Ljava/lang/String;
 
-    move-result-object v0
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
-    check-cast v0, Ljava/lang/Integer;
+    move-result v0
 
-    .line 96
-    invoke-interface {v5, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    if-eqz v0, :cond_1
 
-    move-result-object v1
+    :cond_0
+    const/4 v0, 0x1
 
-    check-cast v1, Ljava/lang/Long;
+    :goto_0
+    return v0
 
-    .line 97
-    invoke-interface {v6, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    :cond_1
+    const/4 v0, 0x0
 
-    move-result-object v2
-
-    check-cast v2, Ljava/lang/Long;
-
-    .line 98
-    if-nez v1, :cond_3
-
-    .line 99
-    const-string/jumbo v1, "!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "dkpush local key null :"
-
-    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    move v0, v3
-
-    .line 100
     goto :goto_0
-
-    .line 102
-    :cond_3
-    const-string/jumbo v8, "!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms"
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v10, "dkpush local key:"
-
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v9, " sv:"
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v9, " lv:"
-
-    invoke-virtual {v0, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v8, v0}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 103
-    invoke-virtual {v2}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v8
-
-    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
-
-    move-result-wide v0
-
-    cmp-long v0, v8, v0
-
-    if-lez v0, :cond_2
-
-    move v0, v3
-
-    .line 104
-    goto/16 :goto_0
-
-    .line 107
-    :cond_4
-    const-string/jumbo v0, "!32@/B4Tb64lLpJCHKz7PEeOCmqPpZbQCAms"
-
-    const-string/jumbo v1, "dkpush two sync key is the same"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    move v0, v4
-
-    .line 108
-    goto/16 :goto_0
 .end method

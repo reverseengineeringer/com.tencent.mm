@@ -10,10 +10,10 @@ import android.widget.ListView;
 
 public final class ExpandedMenuView
   extends ListView
-  implements g.b, p, AdapterView.OnItemClickListener
+  implements f.b, m, AdapterView.OnItemClickListener
 {
-  private g jH;
-  private int mn;
+  private f iO;
+  private int ls;
   
   public ExpandedMenuView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -21,19 +21,19 @@ public final class ExpandedMenuView
     setOnItemClickListener(this);
   }
   
-  public final boolean c(i parami)
+  public final boolean c(h paramh)
   {
-    return jH.c(parami, 0);
+    return iO.c(paramh, 0);
   }
   
-  public final void d(g paramg)
+  public final void d(f paramf)
   {
-    jH = paramg;
+    iO = paramf;
   }
   
   public final int getWindowAnimations()
   {
-    return mn;
+    return ls;
   }
   
   protected final void onDetachedFromWindow()
@@ -44,7 +44,7 @@ public final class ExpandedMenuView
   
   public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    c((i)getAdapter().getItem(paramInt));
+    c((h)getAdapter().getItem(paramInt));
   }
 }
 

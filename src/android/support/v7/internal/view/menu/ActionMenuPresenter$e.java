@@ -3,23 +3,23 @@ package android.support.v7.internal.view.menu;
 import android.view.MenuItem;
 
 final class ActionMenuPresenter$e
-  implements o.a
+  implements l.a
 {
   private ActionMenuPresenter$e(ActionMenuPresenter paramActionMenuPresenter) {}
   
-  public final void a(g paramg, boolean paramBoolean)
+  public final void a(f paramf, boolean paramBoolean)
   {
-    if ((paramg instanceof s)) {
-      nL.r(false);
+    if ((paramf instanceof p)) {
+      mP.r(false);
     }
   }
   
-  public final boolean b(g paramg)
+  public final boolean b(f paramf)
   {
-    if (paramg == null) {
+    if (paramf == null) {
       return false;
     }
-    lP.lO = ((s)paramg).getItem().getItemId();
+    kU.kT = ((p)paramf).getItem().getItemId();
     return false;
   }
 }

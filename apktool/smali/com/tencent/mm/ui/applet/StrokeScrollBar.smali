@@ -17,7 +17,7 @@
 
 
 # virtual methods
-.method protected final IQ()V
+.method protected final Ld()V
     .locals 4
 
     .prologue
@@ -26,20 +26,20 @@
 
     new-array v0, v0, [Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/applet/StrokeScrollBar;->iLk:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/applet/StrokeScrollBar;->eEz:[Ljava/lang/String;
 
     .line 22
     const/4 v0, 0x0
 
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/applet/StrokeScrollBar;->iLk:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/applet/StrokeScrollBar;->eEz:[Ljava/lang/String;
 
     array-length v1, v1
 
     if-ge v0, v1, :cond_0
 
     .line 23
-    iget-object v1, p0, Lcom/tencent/mm/ui/applet/StrokeScrollBar;->iLk:[Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/applet/StrokeScrollBar;->eEz:[Ljava/lang/String;
 
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -76,12 +76,12 @@
     :cond_0
     const/high16 v0, 0x40000000    # 2.0f
 
-    iput v0, p0, Lcom/tencent/mm/ui/applet/StrokeScrollBar;->iLi:F
+    iput v0, p0, Lcom/tencent/mm/ui/applet/StrokeScrollBar;->eEx:F
 
     .line 27
     const/16 v0, 0x4f
 
-    iput v0, p0, Lcom/tencent/mm/ui/applet/StrokeScrollBar;->iLj:I
+    iput v0, p0, Lcom/tencent/mm/ui/applet/StrokeScrollBar;->eEy:I
 
     .line 28
     return-void
@@ -92,7 +92,7 @@
 
     .prologue
     .line 41
-    sget v0, Lcom/tencent/mm/a$k;->show_head_toast_stroke:I
+    const v0, 0x7f0a00b9
 
     return v0
 .end method

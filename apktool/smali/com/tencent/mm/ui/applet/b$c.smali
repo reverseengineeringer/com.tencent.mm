@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private beO:Ljava/util/LinkedList;
+.field private bpa:Ljava/util/LinkedList;
 
-.field final synthetic iAB:Lcom/tencent/mm/ui/applet/b;
+.field final synthetic kzB:Lcom/tencent/mm/ui/applet/b;
 
 .field private maxSize:I
 
@@ -28,14 +28,14 @@
 
     .prologue
     .line 170
-    iput-object p1, p0, Lcom/tencent/mm/ui/applet/b$c;->iAB:Lcom/tencent/mm/ui/applet/b;
+    iput-object p1, p0, Lcom/tencent/mm/ui/applet/b$c;->kzB:Lcom/tencent/mm/ui/applet/b;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 168
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->beO:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->bpa:Ljava/util/LinkedList;
 
     .line 171
     const/16 v0, 0x28
@@ -47,7 +47,7 @@
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->beO:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->bpa:Ljava/util/LinkedList;
 
     .line 173
     return-void
@@ -60,7 +60,7 @@
 
     .prologue
     .line 187
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->beO:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->bpa:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->contains(Ljava/lang/Object;)Z
 
@@ -69,12 +69,12 @@
     return v0
 .end method
 
-.method final ut(Ljava/lang/String;)V
+.method final zT(Ljava/lang/String;)V
     .locals 2
 
     .prologue
     .line 176
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->beO:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->bpa:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->contains(Ljava/lang/Object;)Z
 
@@ -89,12 +89,12 @@
 
     .line 180
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->beO:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->bpa:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
     .line 181
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->beO:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->bpa:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -105,7 +105,7 @@
     if-lt v0, v1, :cond_0
 
     .line 182
-    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->beO:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/applet/b$c;->bpa:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->removeFirst()Ljava/lang/Object;
 

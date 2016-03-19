@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract aRs()V
+.method public abstract bir()V
 .end method

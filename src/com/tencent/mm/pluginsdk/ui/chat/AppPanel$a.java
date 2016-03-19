@@ -1,34 +1,36 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
-import com.tencent.mm.pluginsdk.model.app.h;
+import com.tencent.mm.pluginsdk.model.app.f;
 
 public abstract interface AppPanel$a
 {
-  public abstract void YT();
+  public abstract void aiA();
   
-  public abstract void YU();
+  public abstract void aiB();
   
-  public abstract void YV();
+  public abstract void aiC();
   
-  public abstract void YW();
+  public abstract void air();
   
-  public abstract void YX();
+  public abstract void ais();
   
-  public abstract void YY();
+  public abstract void ait();
   
-  public abstract void YZ();
+  public abstract void aiu();
   
-  public abstract void Za();
+  public abstract void aiv();
   
-  public abstract void Zb();
+  public abstract void aiw();
   
-  public abstract void Zc();
+  public abstract void aix();
   
-  public abstract void Zd();
+  public abstract void aiy();
   
-  public abstract void c(h paramh);
+  public abstract void aiz();
   
-  public abstract void ha(int paramInt);
+  public abstract void c(f paramf);
+  
+  public abstract void iy(int paramInt);
 }
 
 /* Location:

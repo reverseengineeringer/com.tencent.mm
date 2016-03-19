@@ -1,17 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.os.Bundle;
+import com.tencent.mm.sdk.c.b;
 
 public final class hr
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDp = new a();
   
   public hr()
   {
-    id = "ShouldRescanMessages";
-    hXT = atO;
+    id = "NotifyStartWebViewParams";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public String aDq;
+    public Bundle aDr;
   }
 }
 

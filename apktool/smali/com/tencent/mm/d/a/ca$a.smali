@@ -15,17 +15,11 @@
 
 
 # instance fields
-.field public axp:Z
+.field public alN:Ljava/lang/String;
 
-.field public axq:Z
+.field public auQ:Ljava/lang/String;
 
-.field public axr:I
-
-.field public axs:Lcom/tencent/mm/model/by$a;
-
-.field public type:I
-
-.field public username:Ljava/lang/String;
+.field public avD:I
 
 
 # direct methods

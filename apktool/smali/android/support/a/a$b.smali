@@ -15,185 +15,169 @@
 
 
 # direct methods
-.method static a(Ljava/lang/ClassLoader;Ljava/util/List;Ljava/io/File;)V
-    .locals 11
+.method static a(Ljava/lang/Object;Ljava/util/ArrayList;Ljava/io/File;Ljava/util/ArrayList;)[Ljava/lang/Object;
+    .locals 8
 
     .prologue
-    const/4 v10, 0x3
+    const/4 v7, 0x3
 
-    const/4 v9, 0x2
+    const/4 v6, 0x2
 
-    const/4 v8, 0x1
+    const/4 v5, 0x1
 
-    const/4 v7, 0x0
+    const/4 v4, 0x0
 
-    .line 530
-    const-string/jumbo v0, "pathList"
+    .line 700
+    :try_start_0
+    const-string/jumbo v0, "makeDexElements"
 
-    invoke-static {p0, v0}, Landroid/support/a/a;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    const/4 v1, 0x3
 
-    move-result-object v0
+    new-array v1, v1, [Ljava/lang/Class;
 
-    .line 531
-    invoke-virtual {v0, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    const-class v3, Ljava/util/ArrayList;
 
-    .line 532
-    new-instance v2, Ljava/util/ArrayList;
+    aput-object v3, v1, v2
 
-    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+    const/4 v2, 0x1
 
-    .line 533
-    const-string/jumbo v3, "dexElements"
+    const-class v3, Ljava/io/File;
 
-    new-instance v0, Ljava/util/ArrayList;
+    aput-object v3, v1, v2
 
-    invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
+    const/4 v2, 0x2
 
-    const-string/jumbo v4, "makeDexElements"
+    const-class v3, Ljava/util/ArrayList;
 
-    new-array v5, v10, [Ljava/lang/Class;
+    aput-object v3, v1, v2
 
-    const-class v6, Ljava/util/ArrayList;
-
-    aput-object v6, v5, v7
-
-    const-class v6, Ljava/io/File;
-
-    aput-object v6, v5, v8
-
-    const-class v6, Ljava/util/ArrayList;
-
-    aput-object v6, v5, v9
-
-    invoke-static {v1, v4, v5}, Landroid/support/a/a;->b(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
-
-    move-result-object v4
-
-    new-array v5, v10, [Ljava/lang/Object;
-
-    aput-object v0, v5, v7
-
-    aput-object p2, v5, v8
-
-    aput-object v2, v5, v9
-
-    invoke-virtual {v4, v1, v5}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {p0, v0, v1}, Landroid/support/a/a;->b(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_0
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v0
 
-    check-cast v0, [Ljava/lang/Object;
-
-    check-cast v0, [Ljava/lang/Object;
-
-    invoke-static {v1, v3, v0}, Landroid/support/a/a;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 536
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v0
-
-    if-lez v0, :cond_1
-
-    .line 537
-    invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
+    .line 719
     :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+    new-array v1, v7, [Ljava/lang/Object;
 
-    move-result v0
+    aput-object p1, v1, v4
 
-    if-eqz v0, :cond_0
+    aput-object p2, v1, v5
 
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    aput-object p3, v1, v6
+
+    invoke-virtual {v0, p0, v1}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Ljava/io/IOException;
+    check-cast v0, [Ljava/lang/Object;
 
-    .line 538
-    const-string/jumbo v3, "!24@7THoQ8os5+JHeu9po1jSww=="
+    check-cast v0, [Ljava/lang/Object;
 
-    const-string/jumbo v4, "Exception in makeDexElement"
+    return-object v0
 
-    new-array v5, v8, [Ljava/lang/Object;
+    .line 705
+    :catch_0
+    move-exception v0
 
-    aput-object v0, v5, v7
+    const-string/jumbo v0, "!32@/B4Tb64lLpL3kTy0Bk5l1Kdk/bhwv2uM"
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const-string/jumbo v1, "NoSuchMethodException: makeDexElements(ArrayList,File,ArrayList) failure"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 707
+    :try_start_1
+    const-string/jumbo v0, "makeDexElements"
+
+    const/4 v1, 0x3
+
+    new-array v1, v1, [Ljava/lang/Class;
+
+    const/4 v2, 0x0
+
+    const-class v3, Ljava/util/List;
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    const-class v3, Ljava/io/File;
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x2
+
+    const-class v3, Ljava/util/List;
+
+    aput-object v3, v1, v2
+
+    invoke-static {p0, v0, v1}, Landroid/support/a/a;->b(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_1
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_1 .. :try_end_1} :catch_1
+
+    move-result-object v0
 
     goto :goto_0
 
-    .line 540
-    :cond_0
-    const-string/jumbo v0, "dexElementsSuppressedExceptions"
+    .line 709
+    :catch_1
+    move-exception v0
 
-    invoke-static {p0, v0}, Landroid/support/a/a;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/reflect/Field;
+    const-string/jumbo v0, "!32@/B4Tb64lLpL3kTy0Bk5l1Kdk/bhwv2uM"
 
-    move-result-object v3
+    const-string/jumbo v1, "NoSuchMethodException: makeDexElements(List,File,List) failure"
 
-    .line 542
-    invoke-virtual {v3, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 711
+    :try_start_2
+    const-string/jumbo v0, "makePathElements"
+
+    const/4 v1, 0x3
+
+    new-array v1, v1, [Ljava/lang/Class;
+
+    const/4 v2, 0x0
+
+    const-class v3, Ljava/util/List;
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x1
+
+    const-class v3, Ljava/io/File;
+
+    aput-object v3, v1, v2
+
+    const/4 v2, 0x2
+
+    const-class v3, Ljava/util/List;
+
+    aput-object v3, v1, v2
+
+    invoke-static {p0, v0, v1}, Landroid/support/a/a;->b(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    :try_end_2
+    .catch Ljava/lang/NoSuchMethodException; {:try_start_2 .. :try_end_2} :catch_2
 
     move-result-object v0
 
-    check-cast v0, [Ljava/io/IOException;
+    goto :goto_0
 
-    check-cast v0, [Ljava/io/IOException;
+    .line 712
+    :catch_2
+    move-exception v0
 
-    .line 545
-    if-nez v0, :cond_2
+    .line 713
+    const-string/jumbo v1, "!32@/B4Tb64lLpL3kTy0Bk5l1Kdk/bhwv2uM"
 
-    .line 546
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+    const-string/jumbo v2, "NoSuchMethodException: makePathElements(List,File,List) failure"
 
-    move-result v0
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    new-array v0, v0, [Ljava/io/IOException;
-
-    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, [Ljava/io/IOException;
-
-    .line 559
-    :goto_1
-    invoke-virtual {v3, p0, v0}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
-
-    .line 561
-    :cond_1
-    return-void
-
-    .line 550
-    :cond_2
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v1
-
-    array-length v4, v0
-
-    add-int/2addr v1, v4
-
-    new-array v1, v1, [Ljava/io/IOException;
-
-    .line 553
-    invoke-virtual {v2, v1}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
-
-    .line 554
-    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
-
-    move-result v2
-
-    array-length v4, v0
-
-    invoke-static {v0, v7, v1, v2, v4}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
-
-    move-object v0, v1
-
-    .line 556
-    goto :goto_1
+    .line 714
+    throw v0
 .end method

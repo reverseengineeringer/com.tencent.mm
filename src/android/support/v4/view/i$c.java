@@ -1,14 +1,18 @@
 package android.support.v4.view;
 
-import android.view.Gravity;
+import android.view.MotionEvent;
 
-final class i$c
-  implements i.a
+abstract interface i$c
 {
-  public final int getAbsoluteGravity(int paramInt1, int paramInt2)
-  {
-    return Gravity.getAbsoluteGravity(paramInt1, paramInt2);
-  }
+  public abstract int a(MotionEvent paramMotionEvent, int paramInt);
+  
+  public abstract int b(MotionEvent paramMotionEvent, int paramInt);
+  
+  public abstract float c(MotionEvent paramMotionEvent, int paramInt);
+  
+  public abstract float d(MotionEvent paramMotionEvent, int paramInt);
+  
+  public abstract int f(MotionEvent paramMotionEvent);
 }
 
 /* Location:

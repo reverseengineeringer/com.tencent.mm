@@ -20,7 +20,13 @@ public class AutoBottomScrollView
   protected void onSizeChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onSizeChanged(paramInt1, paramInt2, paramInt3, paramInt4);
-    postDelayed(new a(this), 100L);
+    postDelayed(new Runnable()
+    {
+      public final void run()
+      {
+        smoothScrollTo(0, getBottom());
+      }
+    }, 100L);
   }
 }
 

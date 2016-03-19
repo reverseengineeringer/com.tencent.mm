@@ -28,10 +28,16 @@
 
 
 # virtual methods
-.method public abstract bb()V
+.method public abstract aJ()V
 .end method
 
-.method public abstract bc()V
+.method public abstract aK()V
+.end method
+
+.method public abstract aL()V
+.end method
+
+.method public abstract aM()V
 .end method
 
 .method public abstract getCustomView()Landroid/view/View;
@@ -53,6 +59,9 @@
     return-object v0
 .end method
 
+.method public abstract getTitle()Ljava/lang/CharSequence;
+.end method
+
 .method public abstract hide()V
 .end method
 
@@ -60,9 +69,6 @@
 .end method
 
 .method public abstract setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-.end method
-
-.method public abstract setCustomView(I)V
 .end method
 
 .method public abstract setCustomView(Landroid/view/View;)V
@@ -83,9 +89,6 @@
     .prologue
     .line 650
     return-void
-.end method
-
-.method public abstract setIcon(I)V
 .end method
 
 .method public abstract setLogo(Landroid/graphics/drawable/Drawable;)V

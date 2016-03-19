@@ -11,40 +11,37 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.svg.frame.d.d;
+import com.tencent.mm.aw.a;
 
 public class IconPreference
   extends Preference
 {
-  private String cMm = "";
-  private int cMn = -1;
-  public int cMo = 8;
-  public Bitmap cMp = null;
-  public int cMq = -1;
-  private int cMr = 8;
-  private int cMs = 0;
-  public int cMt = 8;
-  public ImageView cMu = null;
-  private ViewGroup cMv = null;
-  public View cMw = null;
-  public RelativeLayout.LayoutParams cMx;
   private Context context;
+  private String dlN = "";
+  private int dlO = -1;
+  private int dlP = 8;
+  private Bitmap dlQ = null;
+  public int dlR = -1;
+  private int dlS = 8;
+  private int dlT = 0;
+  private int dlU = 8;
+  public ImageView dlV = null;
+  private ViewGroup dlW = null;
+  private View dlX = null;
+  public RelativeLayout.LayoutParams dlY;
   public Drawable drawable;
   private int height = -1;
-  private int iLW = 8;
-  private ImageView iLX = null;
-  private TextView iLY;
-  private String iMa = "";
-  private int iMb = -1;
-  public int iMc = 8;
-  private int iMd = -1;
-  private TextView iMe;
-  private TextView iMf;
-  public boolean iMg = false;
+  private int kLg = 8;
+  private ImageView kLh = null;
+  private TextView kLi;
+  private String kLk = "";
+  private int kLl = -1;
+  private int kLm = 8;
+  private int kLn = -1;
+  private TextView kLo;
+  private TextView kLp;
+  private boolean kLq = false;
+  public boolean kLr = false;
   
   public IconPreference(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -55,118 +52,106 @@ public class IconPreference
   {
     super(paramContext, paramAttributeSet, paramInt);
     context = paramContext;
-    setLayoutResource(a.k.mm_preference);
+    setLayoutResource(2131363286);
   }
   
-  public final void V(String paramString, int paramInt)
+  public final void ag(String paramString, int paramInt)
   {
-    cMm = paramString;
-    cMn = paramInt;
+    dlN = paramString;
+    dlO = paramInt;
   }
   
-  public final void aG(String paramString, int paramInt)
+  public final void hB(boolean paramBoolean)
   {
-    iMa = paramString;
-    iMb = -1;
-    iMd = paramInt;
-  }
-  
-  public final void nP(int paramInt)
-  {
-    iLW = paramInt;
-    if (iLX != null) {
-      iLX.setVisibility(paramInt);
+    kLq = paramBoolean;
+    if (kLo != null)
+    {
+      if (paramBoolean)
+      {
+        kLo.setCompoundDrawablesWithIntrinsicBounds(0, 0, 2130970358, 0);
+        kLo.setCompoundDrawablePadding((int)context.getResources().getDimension(2131034577));
+      }
     }
-  }
-  
-  public final void nQ(int paramInt)
-  {
-    cMr = paramInt;
-    if (cMu != null) {
-      cMu.setVisibility(cMr);
+    else {
+      return;
     }
+    kLo.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
   }
   
-  public final void nR(int paramInt)
-  {
-    cMs = paramInt;
-    if (cMv != null) {
-      cMv.setVisibility(cMs);
-    }
-  }
-  
-  protected void onBindView(View paramView)
+  public void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    Object localObject = (ImageView)paramView.findViewById(a.i.image_iv);
+    Object localObject = (ImageView)paramView.findViewById(2131166875);
     if (localObject != null)
     {
-      if (drawable == null) {
-        break label426;
-      }
-      ((ImageView)localObject).setImageDrawable(drawable);
-      ((ImageView)localObject).setVisibility(0);
-      if ((drawable instanceof com.tencent.mm.svg.frame.a.a)) {
-        d.ak((View)localObject);
-      }
-    }
-    localObject = (LinearLayout)paramView.findViewById(a.i.mm_preference_ll_id);
-    if (height != -1) {
-      ((LinearLayout)localObject).setMinimumHeight(height);
-    }
-    iMf = ((TextView)paramView.findViewById(a.i.text_tv_one));
-    if (iMf != null)
-    {
-      iMf.setVisibility(cMo);
-      iMf.setText(cMm);
-      if (cMn != -1) {
-        iMf.setBackgroundDrawable(com.tencent.mm.ao.a.u(context, cMn));
-      }
-    }
-    iMe = ((TextView)paramView.findViewById(a.i.text_tv_two));
-    if (iMe != null)
-    {
-      iMe.setVisibility(iMc);
-      iMe.setText(iMa);
-      if (iMb != -1) {
-        iMe.setBackgroundDrawable(com.tencent.mm.ao.a.u(context, iMb));
-      }
-      if (iMd != -1) {
-        iMe.setTextColor(iMd);
-      }
-      if (iMg)
+      if (drawable != null)
       {
-        iMe.setCompoundDrawablesWithIntrinsicBounds(0, 0, a.h.unread_dot_shape, 0);
-        iMe.setCompoundDrawablePadding((int)context.getResources().getDimension(a.g.SmallPadding));
+        ((ImageView)localObject).setImageDrawable(drawable);
+        ((ImageView)localObject).setVisibility(0);
       }
     }
     else
     {
-      label279:
-      iLX = ((ImageView)paramView.findViewById(a.i.text_prospect));
-      iLX.setVisibility(iLW);
-      cMu = ((ImageView)paramView.findViewById(a.i.image_right_iv));
-      cMv = ((ViewGroup)paramView.findViewById(a.i.right_rl));
-      cMw = paramView.findViewById(a.i.right_prospect);
-      cMw.setVisibility(cMt);
-      if (cMp == null) {
-        break label482;
+      localObject = (LinearLayout)paramView.findViewById(2131166874);
+      if (height != -1) {
+        ((LinearLayout)localObject).setMinimumHeight(height);
       }
-      cMu.setImageBitmap(cMp);
+      kLp = ((TextView)paramView.findViewById(2131166876));
+      if (kLp != null)
+      {
+        if (!kLr) {
+          break label490;
+        }
+        kLp.setCompoundDrawablesWithIntrinsicBounds(2130970358, 0, 0, 0);
+        kLp.setCompoundDrawablePadding((int)context.getResources().getDimension(2131034577));
+        label124:
+        kLp.setVisibility(dlP);
+        kLp.setText(dlN);
+        if (dlO != -1) {
+          kLp.setBackgroundDrawable(a.y(context, dlO));
+        }
+      }
+      kLo = ((TextView)paramView.findViewById(2131166958));
+      if (kLo != null)
+      {
+        kLo.setVisibility(kLm);
+        kLo.setText(kLk);
+        if (kLl != -1) {
+          kLo.setBackgroundDrawable(a.y(context, kLl));
+        }
+        if (kLn != -1) {
+          kLo.setTextColor(kLn);
+        }
+        if (!kLq) {
+          break label504;
+        }
+        kLo.setCompoundDrawablesWithIntrinsicBounds(0, 0, 2130970358, 0);
+        kLo.setCompoundDrawablePadding((int)context.getResources().getDimension(2131034577));
+      }
+      label298:
+      kLh = ((ImageView)paramView.findViewById(2131169500));
+      kLh.setVisibility(kLg);
+      dlV = ((ImageView)paramView.findViewById(2131166960));
+      dlW = ((ViewGroup)paramView.findViewById(2131166959));
+      dlX = paramView.findViewById(2131166961);
+      dlX.setVisibility(dlU);
+      if (dlQ == null) {
+        break label518;
+      }
+      dlV.setImageBitmap(dlQ);
     }
     for (;;)
     {
-      cMu.setVisibility(cMr);
-      cMv.setVisibility(cMs);
-      if (cMx != null) {
-        cMu.setLayoutParams(cMx);
+      dlV.setVisibility(dlS);
+      dlW.setVisibility(dlT);
+      if (dlY != null) {
+        dlV.setLayoutParams(dlY);
       }
-      iLY = ((TextView)paramView.findViewById(16908310));
+      kLi = ((TextView)paramView.findViewById(16908310));
       return;
-      label426:
-      if (lm != 0)
+      if (kr != 0)
       {
-        Drawable localDrawable = com.tencent.mm.ap.a.getDrawable(lm);
+        Drawable localDrawable = mContext.getResources().getDrawable(kr);
         drawable = localDrawable;
         ((ImageView)localObject).setImageDrawable(localDrawable);
         ((ImageView)localObject).setVisibility(0);
@@ -174,11 +159,15 @@ public class IconPreference
       }
       ((ImageView)localObject).setVisibility(8);
       break;
-      iMe.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-      break label279;
-      label482:
-      if (cMq != -1) {
-        cMu.setImageResource(cMq);
+      label490:
+      kLp.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+      break label124;
+      label504:
+      kLo.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
+      break label298;
+      label518:
+      if (dlR != -1) {
+        dlV.setImageResource(dlR);
       }
     }
   }
@@ -186,18 +175,92 @@ public class IconPreference
   public View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(a.i.content);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
     localViewGroup.removeAllViews();
-    View.inflate(mContext, a.k.mm_preference_content_icon, localViewGroup);
+    View.inflate(mContext, 2131363266, localViewGroup);
     return paramViewGroup;
   }
   
-  public final void v(Bitmap paramBitmap)
+  public final void qK(int paramInt)
   {
-    cMp = paramBitmap;
-    cMq = -1;
-    if (cMu != null) {
-      cMu.setImageBitmap(paramBitmap);
+    dlP = paramInt;
+    if (kLp != null) {
+      kLp.setVisibility(paramInt);
+    }
+  }
+  
+  public final void qL(int paramInt)
+  {
+    kLm = paramInt;
+    if (kLo != null) {
+      kLo.setVisibility(paramInt);
+    }
+  }
+  
+  public final void qM(int paramInt)
+  {
+    kLg = paramInt;
+    if (kLh != null) {
+      kLh.setVisibility(paramInt);
+    }
+  }
+  
+  public final void qN(int paramInt)
+  {
+    dlR = paramInt;
+    dlQ = null;
+    if (dlV != null) {
+      dlV.setImageResource(paramInt);
+    }
+  }
+  
+  public final void qO(int paramInt)
+  {
+    dlS = paramInt;
+    if (dlV != null) {
+      dlV.setVisibility(dlS);
+    }
+  }
+  
+  public final void qP(int paramInt)
+  {
+    dlT = paramInt;
+    if (dlW != null) {
+      dlW.setVisibility(dlT);
+    }
+  }
+  
+  public final void qQ(int paramInt)
+  {
+    dlU = paramInt;
+    if (dlX != null) {
+      dlX.setVisibility(dlU);
+    }
+  }
+  
+  public final void u(Bitmap paramBitmap)
+  {
+    dlQ = paramBitmap;
+    dlR = -1;
+    if (dlV != null) {
+      dlV.setImageBitmap(paramBitmap);
+    }
+  }
+  
+  public final void y(String paramString, int paramInt1, int paramInt2)
+  {
+    kLk = paramString;
+    kLl = paramInt1;
+    kLn = paramInt2;
+    if (kLo != null)
+    {
+      kLo.setText(paramString);
+      if (paramInt1 != -1) {
+        kLo.setBackgroundDrawable(a.y(context, paramInt1));
+      }
+      if (paramInt2 != -1) {
+        kLo.setTextColor(paramInt2);
+      }
     }
   }
 }

@@ -1,31 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class bl
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awv = new a();
-  public b aww = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auG = new a();
   
   public bl()
   {
-    id = "ExDeviceSimpleBTUploadDataToServer";
-    hXT = atO;
+    id = "ExDeviceCancelNetworkDeviceTask";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String avt;
-    public byte[] data;
-    public String mac;
-  }
-  
-  public static final class b
-  {
-    public boolean avu;
+    public String alN;
   }
 }
 

@@ -8,61 +8,67 @@ import android.os.Parcelable.Creator;
 public class PayInfo
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new a();
-  public String aBN;
-  public int aBU = 0;
-  public int aBV = -1;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  public String aCE;
+  public String aDT = "";
+  public String aEf;
+  public int aEm = 0;
+  public int aEn = -1;
   public String appId;
-  public String avk;
-  public String ayr;
-  public int azg;
-  public String azj;
-  public String azk;
-  public int bQy;
-  public String dlx;
-  public String drw;
-  public String gvU;
-  public boolean hfK = false;
-  public boolean hfL = true;
-  public String hfM;
-  public String hfN;
-  public Bundle hfO;
-  public int hfP = 0;
-  public int hfQ = 0;
-  public int hfR;
+  public String auy;
+  public int azD;
+  public String azF;
+  public String azG;
+  public int chp;
+  public String dWm;
+  public String ehC;
+  public boolean iTA = false;
+  public boolean iTB = true;
+  public String iTC;
+  public String iTD;
+  public Bundle iTE;
+  public int iTF = 0;
+  public int iTG = 0;
+  public int iTH;
+  public long iTI = 0L;
+  public int iTz = 0;
+  public String ibP;
   
   public PayInfo() {}
   
   public PayInfo(Parcel paramParcel)
   {
-    aBU = paramParcel.readInt();
-    dlx = paramParcel.readString();
-    drw = paramParcel.readString();
+    aEm = paramParcel.readInt();
+    iTz = paramParcel.readInt();
+    dWm = paramParcel.readString();
+    ehC = paramParcel.readString();
     appId = paramParcel.readString();
-    gvU = paramParcel.readString();
-    aBN = paramParcel.readString();
-    hfM = paramParcel.readString();
-    avk = paramParcel.readString();
-    ayr = paramParcel.readString();
-    bQy = paramParcel.readInt();
-    aBV = paramParcel.readInt();
+    ibP = paramParcel.readString();
+    aEf = paramParcel.readString();
+    iTC = paramParcel.readString();
+    auy = paramParcel.readString();
+    aCE = paramParcel.readString();
+    chp = paramParcel.readInt();
+    aEn = paramParcel.readInt();
     if (paramParcel.readInt() == 1)
     {
       bool1 = true;
-      hfK = bool1;
+      iTA = bool1;
       if (paramParcel.readInt() != 1) {
-        break label200;
+        break label240;
       }
     }
-    label200:
+    label240:
     for (boolean bool1 = bool2;; bool1 = false)
     {
-      hfL = bool1;
-      hfO = paramParcel.readBundle();
-      hfP = paramParcel.readInt();
-      azj = paramParcel.readString();
-      azk = paramParcel.readString();
-      azg = paramParcel.readInt();
+      iTB = bool1;
+      iTE = paramParcel.readBundle();
+      iTF = paramParcel.readInt();
+      azF = paramParcel.readString();
+      azG = paramParcel.readString();
+      azD = paramParcel.readInt();
+      iTI = paramParcel.readLong();
+      aDT = paramParcel.readString();
       return;
       bool1 = false;
       break;
@@ -76,40 +82,43 @@ public class PayInfo
   
   public String toString()
   {
-    return String.format("sense : %d, reqKey : %s, uuid : %s, appId : %s, appSource : %s, partnerId : %s, paySign : %s, productId : %s ", new Object[] { Integer.valueOf(aBU), dlx, drw, appId, gvU, aBN, hfM, avk });
+    return String.format("sense : %d, reqKey : %s, uuid : %s, appId : %s, appSource : %s, partnerId : %s, paySign : %s, productId : %s, soterAuth: %s", new Object[] { Integer.valueOf(aEm), dWm, ehC, appId, ibP, aEf, iTC, auy, aDT });
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     int i = 1;
-    paramParcel.writeInt(aBU);
-    paramParcel.writeString(dlx);
-    paramParcel.writeString(drw);
+    paramParcel.writeInt(aEm);
+    paramParcel.writeInt(iTz);
+    paramParcel.writeString(dWm);
+    paramParcel.writeString(ehC);
     paramParcel.writeString(appId);
-    paramParcel.writeString(gvU);
-    paramParcel.writeString(aBN);
-    paramParcel.writeString(hfM);
-    paramParcel.writeString(avk);
-    paramParcel.writeString(ayr);
-    paramParcel.writeInt(bQy);
-    paramParcel.writeInt(aBV);
-    if (hfK)
+    paramParcel.writeString(ibP);
+    paramParcel.writeString(aEf);
+    paramParcel.writeString(iTC);
+    paramParcel.writeString(auy);
+    paramParcel.writeString(aCE);
+    paramParcel.writeInt(chp);
+    paramParcel.writeInt(aEn);
+    if (iTA)
     {
       paramInt = 1;
       paramParcel.writeInt(paramInt);
-      if (!hfL) {
-        break label164;
+      if (!iTB) {
+        break label188;
       }
     }
-    label164:
+    label188:
     for (paramInt = i;; paramInt = 0)
     {
       paramParcel.writeInt(paramInt);
-      paramParcel.writeBundle(hfO);
-      paramParcel.writeInt(hfP);
-      paramParcel.writeString(azj);
-      paramParcel.writeString(azk);
-      paramParcel.writeInt(azg);
+      paramParcel.writeBundle(iTE);
+      paramParcel.writeInt(iTF);
+      paramParcel.writeString(azF);
+      paramParcel.writeString(azG);
+      paramParcel.writeInt(azD);
+      paramParcel.writeLong(iTI);
+      paramParcel.writeString(aDT);
       return;
       paramInt = 0;
       break;

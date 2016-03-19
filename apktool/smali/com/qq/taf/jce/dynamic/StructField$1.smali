@@ -6,6 +6,17 @@
 .implements Ljava/util/Comparator;
 
 
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/qq/taf/jce/dynamic/StructField;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
 # direct methods
 .method constructor <init>()V
     .locals 0

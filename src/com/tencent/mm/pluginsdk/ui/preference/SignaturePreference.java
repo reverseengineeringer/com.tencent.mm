@@ -4,8 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
 import com.tencent.mm.ui.base.preference.Preference;
 
 public class SignaturePreference
@@ -19,16 +17,16 @@ public class SignaturePreference
   public SignaturePreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference);
+    setLayoutResource(2131363286);
   }
   
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(a.i.content);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
     localViewGroup.removeAllViews();
     localViewGroup.setPadding(0, 0, 0, 0);
-    View.inflate(mContext, a.k.mm_preference_content_signature, localViewGroup);
+    View.inflate(mContext, 2131363047, localViewGroup);
     return paramViewGroup;
   }
 }

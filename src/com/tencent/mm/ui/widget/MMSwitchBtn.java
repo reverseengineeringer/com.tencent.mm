@@ -14,37 +14,35 @@ import android.view.ViewConfiguration;
 import android.view.ViewParent;
 import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.Animation;
+import android.view.animation.Animation.AnimationListener;
 import android.view.animation.Transformation;
-import com.tencent.mm.a.f;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.n;
 
 public class MMSwitchBtn
   extends View
 {
-  private float jAN;
-  private float jAO;
-  private long jAP;
-  private int jAQ;
-  private int jAR;
-  private int jAS;
-  private boolean jAT = false;
-  private boolean jAU = false;
-  private int jAV;
-  private int jAW;
-  private int jAX = 80;
-  private int jAY = 300;
-  private float jAZ;
-  private float jBa;
-  private int jBb;
-  private int jBc;
-  private int jBd;
-  public boolean jBe = false;
-  private Paint jBf = new Paint(1);
-  private RectF jBg = new RectF();
-  private RectF jBh = new RectF();
-  private b jBi = new b();
-  private a jBj;
+  private Paint feM = new Paint(1);
+  private int lFA;
+  private int lFB;
+  private int lFC;
+  public boolean lFD = false;
+  private RectF lFE = new RectF();
+  private RectF lFF = new RectF();
+  private b lFG = new b();
+  private a lFH;
+  private float lFm;
+  private float lFn;
+  private long lFo;
+  private int lFp;
+  private int lFq;
+  private int lFr;
+  private boolean lFs = false;
+  private boolean lFt = false;
+  private int lFu;
+  private int lFv;
+  private int lFw = 80;
+  private int lFx = 300;
+  private float lFy;
+  private float lFz;
   private int maxHeight;
   private int maxWidth;
   
@@ -60,44 +58,7 @@ public class MMSwitchBtn
     init();
   }
   
-  private void aSw()
-  {
-    if (jBh.left > jAQ)
-    {
-      gh(true);
-      return;
-    }
-    gh(false);
-  }
-  
-  private void aTf()
-  {
-    if (jAS < maxHeight) {
-      jBh.top = ((maxHeight - jAS) / 2 + jAW);
-    }
-    for (jBh.bottom = (jBh.top + jAS - jAW * 2); jBe; jBh.bottom = (maxHeight - jAW))
-    {
-      jBh.left = jAR;
-      jBh.right = (maxWidth - jAW);
-      return;
-      jBh.top = jAW;
-    }
-    jBh.left = jAW;
-    jBh.right = jAR;
-  }
-  
-  private void aTg()
-  {
-    if (jBh.left < jAW) {
-      jBh.left = jAW;
-    }
-    if (jBh.left > jAR) {
-      jBh.left = jAR;
-    }
-    jBh.right = (jBh.left + jAR - jAW);
-  }
-  
-  private void bv(boolean paramBoolean)
+  private void bQ(boolean paramBoolean)
   {
     ViewParent localViewParent = getParent();
     if (localViewParent != null) {
@@ -105,44 +66,81 @@ public class MMSwitchBtn
     }
   }
   
-  private void gh(boolean paramBoolean)
+  private void biR()
   {
-    jAT = true;
-    jBi.reset();
-    if (paramBoolean) {
-      jBi.jBk = (jAR - jBh.left);
-    }
-    for (jBi.direction = 1;; jBi.direction = 0)
+    if (lFF.left > lFp)
     {
-      jBi.iks = jBh.left;
-      jBi.setDuration(jAX * jBi.jBk / jAR);
-      startAnimation(jBi);
+      in(true);
       return;
-      jBi.jBk = (jBh.left);
+    }
+    in(false);
+  }
+  
+  private void bjI()
+  {
+    if (lFr < maxHeight) {
+      lFF.top = ((maxHeight - lFr) / 2 + lFv);
+    }
+    for (lFF.bottom = (lFF.top + lFr - lFv * 2); lFD; lFF.bottom = (maxHeight - lFv))
+    {
+      lFF.left = lFq;
+      lFF.right = (maxWidth - lFv);
+      return;
+      lFF.top = lFv;
+    }
+    lFF.left = lFv;
+    lFF.right = lFq;
+  }
+  
+  private void bjJ()
+  {
+    if (lFF.left < lFv) {
+      lFF.left = lFv;
+    }
+    if (lFF.left > lFq) {
+      lFF.left = lFq;
+    }
+    lFF.right = (lFF.left + lFq - lFv);
+  }
+  
+  private void in(boolean paramBoolean)
+  {
+    lFs = true;
+    lFG.reset();
+    if (paramBoolean) {
+      lFG.lFJ = (lFq - lFF.left);
+    }
+    for (lFG.direction = 1;; lFG.direction = 0)
+    {
+      lFG.lFI = lFF.left;
+      lFG.setDuration(lFw * lFG.lFJ / lFq);
+      startAnimation(lFG);
+      return;
+      lFG.lFJ = (lFF.left);
     }
   }
   
   private void init()
   {
-    jAW = getResources().getDimensionPixelSize(a.g.OneDPPadding);
-    jAZ = getResources().getDimensionPixelSize(a.g.SmallerPadding);
-    jBa = getResources().getDimensionPixelSize(a.g.SmallestPadding);
-    jBb = getResources().getColor(a.f.white);
-    jBc = getResources().getColor(a.f.switch_btn_off_color);
-    jBd = getResources().getColor(a.f.switch_btn_on_color);
-    jAV = ViewConfiguration.get(getContext()).getScaledTouchSlop();
+    lFv = getResources().getDimensionPixelSize(2131034573);
+    lFy = getResources().getDimensionPixelSize(2131034584);
+    lFz = getResources().getDimensionPixelSize(2131034575);
+    lFA = getResources().getColor(2131231100);
+    lFB = getResources().getColor(2131231179);
+    lFC = getResources().getColor(2131231178);
+    lFu = ViewConfiguration.get(getContext()).getScaledTouchSlop();
   }
   
   protected void onDraw(Canvas paramCanvas)
   {
-    jBf.setColor(jBc);
-    jBf.setAlpha(255);
-    paramCanvas.drawRoundRect(jBg, jAZ, jAZ, jBf);
-    jBf.setColor(jBd);
-    jBf.setAlpha(Math.min(255, (int)(255.0F * (jBh.left / (jAR - jAW)))));
-    paramCanvas.drawRoundRect(jBg, jAZ, jAZ, jBf);
-    jBf.setColor(jBb);
-    paramCanvas.drawRoundRect(jBh, jBa, jBa, jBf);
+    feM.setColor(lFB);
+    feM.setAlpha(255);
+    paramCanvas.drawRoundRect(lFE, lFy, lFy, feM);
+    feM.setColor(lFC);
+    feM.setAlpha(Math.min(255, (int)(255.0F * (lFF.left / (lFq - lFv)))));
+    paramCanvas.drawRoundRect(lFE, lFy, lFy, feM);
+    feM.setColor(lFA);
+    paramCanvas.drawRoundRect(lFF, lFz, lFz, feM);
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
@@ -150,64 +148,64 @@ public class MMSwitchBtn
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
     maxWidth = (paramInt3 - paramInt1);
     maxHeight = (paramInt4 - paramInt2);
-    jAR = (maxWidth / 2);
-    jAQ = (jAR / 2);
-    jAS = getResources().getDimensionPixelSize(a.g.CheckBoxMaxHeight);
-    if (jAS < maxHeight) {
-      jBg.top = ((maxHeight - jAS) / 2);
+    lFq = (maxWidth / 2);
+    lFp = (lFq / 2);
+    lFr = getResources().getDimensionPixelSize(2131034661);
+    if (lFr < maxHeight) {
+      lFE.top = ((maxHeight - lFr) / 2);
     }
-    for (jBg.bottom = (jBg.top + jAS);; jBg.bottom = maxHeight)
+    for (lFE.bottom = (lFE.top + lFr);; lFE.bottom = maxHeight)
     {
-      jBg.left = 0.0F;
-      jBg.right = maxWidth;
-      aTf();
-      jBf.setStyle(Paint.Style.FILL);
-      jBf.setColor(jBc);
+      lFE.left = 0.0F;
+      lFE.right = maxWidth;
+      bjI();
+      feM.setStyle(Paint.Style.FILL);
+      feM.setColor(lFB);
       return;
-      jBg.top = 0.0F;
+      lFE.top = 0.0F;
     }
   }
   
   public boolean onTouchEvent(MotionEvent paramMotionEvent)
   {
     int j = 0;
-    if (jAT) {}
+    if (lFs) {}
     for (;;)
     {
       return true;
       switch (paramMotionEvent.getAction())
       {
       }
-      while (jAU)
+      while (lFt)
       {
         invalidate();
         return true;
         clearAnimation();
-        jAN = paramMotionEvent.getX();
-        jAO = paramMotionEvent.getY();
-        jAP = SystemClock.elapsedRealtime();
-        jAU = false;
+        lFm = paramMotionEvent.getX();
+        lFn = paramMotionEvent.getY();
+        lFo = SystemClock.elapsedRealtime();
+        lFt = false;
         continue;
         float f1;
         float f2;
-        if (jAU)
+        if (lFt)
         {
-          bv(true);
+          bQ(true);
           f1 = paramMotionEvent.getX();
-          f2 = jAN;
-          RectF localRectF = jBh;
+          f2 = lFm;
+          RectF localRectF = lFF;
           left = (f1 - f2 + left);
-          aTg();
+          bjJ();
         }
         for (;;)
         {
-          jAN = paramMotionEvent.getX();
-          jAO = paramMotionEvent.getY();
+          lFm = paramMotionEvent.getX();
+          lFn = paramMotionEvent.getY();
           break;
-          float f3 = paramMotionEvent.getX() - jAN;
-          f2 = paramMotionEvent.getY() - jAO;
+          float f3 = paramMotionEvent.getX() - lFm;
+          f2 = paramMotionEvent.getY() - lFn;
           int i = j;
-          if (Math.abs(f3) >= jAV / 10.0F)
+          if (Math.abs(f3) >= lFu / 10.0F)
           {
             f1 = f2;
             if (f2 == 0.0F) {
@@ -220,49 +218,49 @@ public class MMSwitchBtn
           }
           if (i != 0)
           {
-            jAU = true;
-            bv(true);
+            lFt = true;
+            bQ(true);
           }
         }
         boolean bool;
-        if (SystemClock.elapsedRealtime() - jAP < jAY) {
-          if (!jBe)
+        if (SystemClock.elapsedRealtime() - lFo < lFx) {
+          if (!lFD)
           {
             bool = true;
             label280:
-            gh(bool);
+            in(bool);
           }
         }
         for (;;)
         {
-          bv(false);
-          jAU = false;
+          bQ(false);
+          lFt = false;
           break;
           bool = false;
           break label280;
-          aSw();
+          biR();
         }
-        if (jAU) {
-          aSw();
+        if (lFt) {
+          biR();
         }
-        bv(false);
-        jAU = false;
+        bQ(false);
+        lFt = false;
       }
     }
   }
   
   public void setCheck(boolean paramBoolean)
   {
-    if (jBe != paramBoolean)
+    if (lFD != paramBoolean)
     {
       clearAnimation();
-      jBe = paramBoolean;
-      aTf();
-      jAT = false;
+      lFD = paramBoolean;
+      bjI();
+      lFs = false;
       invalidate();
     }
     if (paramBoolean) {}
-    for (String str = getContext().getString(a.n.common_switch_check_desc);; str = getContext().getString(a.n.common_switch_un_check_desc))
+    for (String str = getContext().getString(2131429646);; str = getContext().getString(2131429647))
     {
       setContentDescription(str);
       return;
@@ -271,31 +269,71 @@ public class MMSwitchBtn
   
   public void setSwitchListener(a parama)
   {
-    jBj = parama;
+    lFH = parama;
   }
   
   public static abstract interface a
   {
-    public abstract void dr(boolean paramBoolean);
+    public abstract void fg(boolean paramBoolean);
   }
   
   private final class b
     extends Animation
   {
     int direction = 0;
-    float iks = 0.0F;
-    long jBk = 0L;
+    float lFI = 0.0F;
+    long lFJ = 0L;
     
     public b()
     {
       setInterpolator(new AccelerateDecelerateInterpolator());
-      setAnimationListener(new d(this, MMSwitchBtn.this));
+      setAnimationListener(new Animation.AnimationListener()
+      {
+        public final void onAnimationEnd(Animation paramAnonymousAnimation)
+        {
+          boolean bool2 = true;
+          boolean bool3 = MMSwitchBtn.a(MMSwitchBtn.this);
+          if (direction == 1)
+          {
+            bool1 = true;
+            if (bool3 != bool1)
+            {
+              paramAnonymousAnimation = MMSwitchBtn.this;
+              if (direction != 1) {
+                break label96;
+              }
+            }
+          }
+          label96:
+          for (boolean bool1 = bool2;; bool1 = false)
+          {
+            MMSwitchBtn.a(paramAnonymousAnimation, bool1);
+            post(new Runnable()
+            {
+              public final void run()
+              {
+                if (MMSwitchBtn.b(MMSwitchBtn.this) != null) {
+                  MMSwitchBtn.b(MMSwitchBtn.this).fg(MMSwitchBtn.a(MMSwitchBtn.this));
+                }
+              }
+            });
+            MMSwitchBtn.c(MMSwitchBtn.this);
+            return;
+            bool1 = false;
+            break;
+          }
+        }
+        
+        public final void onAnimationRepeat(Animation paramAnonymousAnimation) {}
+        
+        public final void onAnimationStart(Animation paramAnonymousAnimation) {}
+      });
     }
     
     protected final void applyTransformation(float paramFloat, Transformation paramTransformation)
     {
       if (direction == 0) {}
-      for (dleft = (iks - (float)jBk * paramFloat);; dleft = (iks + (float)jBk * paramFloat))
+      for (dleft = (lFI - (float)lFJ * paramFloat);; dleft = (lFI + (float)lFJ * paramFloat))
       {
         MMSwitchBtn.e(MMSwitchBtn.this);
         invalidate();

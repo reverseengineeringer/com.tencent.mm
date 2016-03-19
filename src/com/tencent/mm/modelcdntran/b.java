@@ -1,154 +1,204 @@
 package com.tencent.mm.modelcdntran;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.network.u;
-import com.tencent.mm.platformtools.ab;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.g.ao;
-import com.tencent.mm.sdk.g.ao.b;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.network.m.a;
+import com.tencent.mm.platformtools.r;
+import com.tencent.mm.sdk.h.j.b;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 import java.io.ByteArrayOutputStream;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
 public final class b
-  implements CdnTransportEngine.a, com.tencent.mm.q.d, ao.b
+  implements CdnTransportEngine.a, com.tencent.mm.r.d, j.b
 {
-  u bxp = new c(this);
-  Queue bxq = new LinkedList();
-  Map bxr = new HashMap();
-  Map bxs = new HashMap();
-  Map bxt = new HashMap();
-  private String bxu = "";
-  private long bxv = 0L;
+  Map bKA = new HashMap();
+  private String bKB = "";
+  private long bKC = 0L;
+  public HashSet bKD = new HashSet();
+  com.tencent.mm.network.m bKw = new m.a()
+  {
+    public final void aK(int paramAnonymousInt)
+    {
+      u.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra onNetworkChange st:%d ", new Object[] { Integer.valueOf(paramAnonymousInt) });
+      if ((paramAnonymousInt != 5) && (paramAnonymousInt != 1)) {}
+      while (!com.tencent.mm.model.ah.rh()) {
+        return;
+      }
+      com.tencent.mm.model.ah.tE().d(new d());
+    }
+  };
+  Queue bKx = new LinkedList();
+  Map bKy = new HashMap();
+  Map bKz = new HashMap();
   
   public b()
   {
-    ax.a(bxp);
-    if (ax.qZ()) {
-      ax.tl().rf().a(this);
+    com.tencent.mm.model.ah.a(bKw);
+    if (com.tencent.mm.model.ah.rh()) {
+      com.tencent.mm.model.ah.tD().rn().a(this);
     }
-    ax.tm().a(379, this);
+    com.tencent.mm.model.ah.tE().a(379, this);
   }
   
-  public static boolean xb()
+  public static boolean xR()
   {
-    int i = bn.b((Integer)ax.tl().rf().get(144385, null), 0);
-    t.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra cdnBitSet:%d res:%d Test.forceCDNTrans:%b", new Object[] { Integer.valueOf(i), Integer.valueOf(i & 0x1), Boolean.valueOf(ab.bWg) });
-    if (ab.bWg) {
+    int i = ay.b((Integer)com.tencent.mm.model.ah.tD().rn().get(144385, null), 0);
+    u.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra cdnBitSet:%d res:%d Test.forceCDNTrans:%b", new Object[] { Integer.valueOf(i), Integer.valueOf(i & 0x1), Boolean.valueOf(r.cnf) });
+    if (r.cnf) {
       return true;
     }
     return (i & 0x1) > 0;
   }
   
-  public static boolean xc()
+  public static boolean xS()
   {
-    int i = bn.b((Integer)ax.tl().rf().get(144385, null), 0);
-    t.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "useSnsCdnTrans cdnBitSet:%d res:%d Test.forceCDNTrans:%b", new Object[] { Integer.valueOf(i), Integer.valueOf(i & 0x20), Boolean.valueOf(ab.bWg) });
-    if (ab.bWg) {
+    int i = ay.b((Integer)com.tencent.mm.model.ah.tD().rn().get(144385, null), 0);
+    u.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "useSnsCdnTrans cdnBitSet:%d res:%d Test.forceCDNTrans:%b", new Object[] { Integer.valueOf(i), Integer.valueOf(i & 0x20), Boolean.valueOf(r.cnf) });
+    if (r.cnf) {
       return true;
     }
     return (i & 0x20) > 0;
   }
   
-  public final int a(String paramString, keep_ProgressInfo paramkeep_ProgressInfo, keep_SceneResult paramkeep_SceneResult)
+  public final int a(final String paramString, final keep_ProgressInfo paramkeep_ProgressInfo, final keep_SceneResult paramkeep_SceneResult)
   {
-    if (bn.iW(paramString))
+    if (ay.kz(paramString))
     {
-      t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdn callback mediaid is null");
+      u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdn callback mediaid is null");
       return -1;
     }
     if ((paramkeep_ProgressInfo == null) && (paramkeep_SceneResult == null))
     {
-      t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdn callback info all null");
+      u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdn callback info all null");
       return -2;
     }
     if (paramkeep_ProgressInfo != null) {
-      t.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "CDN progress. total:%d, cur:%d, canshow:%b", new Object[] { Integer.valueOf(field_toltalLength), Integer.valueOf(field_finishedLength), Boolean.valueOf(field_mtlnotify) });
+      u.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "CDN progress. total:%d, cur:%d, canshow:%b", new Object[] { Integer.valueOf(field_toltalLength), Integer.valueOf(field_finishedLength), Boolean.valueOf(field_mtlnotify) });
     }
-    long l = bn.DM();
-    int i;
-    if (bxt.get(paramString) != null) {
-      if (((Integer)bxt.get(paramString)).intValue() > 0) {
-        i = ((Integer)bxt.get(paramString)).intValue();
-      }
-    }
-    for (;;)
+    bKC = ay.FS();
+    bKB = paramString;
+    com.tencent.mm.model.ah.tv().r(new Runnable()
     {
-      if ((i != 0) && (l - bxv < i) && (paramkeep_SceneResult == null) && (paramkeep_ProgressInfo != null) && (!field_mtlnotify)) {
-        paramString.equals(bxu);
+      public final void run()
+      {
+        Object localObject = (f)bKz.get(paramString);
+        if (localObject == null) {
+          u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", " task in jni get info failed mediaid:%s", new Object[] { paramString });
+        }
+        long l;
+        do
+        {
+          return;
+          if (paramkeep_ProgressInfo != null)
+          {
+            paramkeep_ProgressInfomediaId = paramString;
+            u.i("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "MTL: total:%d, cur:%d, mtl:%b", new Object[] { Integer.valueOf(paramkeep_ProgressInfofield_toltalLength), Integer.valueOf(paramkeep_ProgressInfofield_finishedLength), Boolean.valueOf(paramkeep_ProgressInfofield_mtlnotify) });
+          }
+          if (paramkeep_SceneResult != null) {
+            paramkeep_SceneResultmediaId = paramString;
+          }
+          if (bLh == null) {
+            break;
+          }
+          l = ay.FS();
+        } while ((paramkeep_SceneResult == null) && (paramkeep_ProgressInfo != null) && (!paramkeep_ProgressInfofield_mtlnotify) && (com.tencent.mm.sdk.platformtools.ah.getNetWorkType(y.getContext()) == -1));
+        field_lastProgressCallbackTime = l;
+        bLh.a(paramString, 0, paramkeep_ProgressInfo, paramkeep_SceneResult);
+        localObject = paramkeep_ProgressInfo;
+        if ((localObject != null) && (field_finishedLength != field_toltalLength)) {}
+        for (int i = 0;; i = 1)
+        {
+          if (i != 0) {
+            bKA.remove(paramString);
+          }
+          if (paramkeep_SceneResult == null) {
+            break;
+          }
+          bKz.remove(paramString);
+          return;
+        }
       }
-      bxv = l;
-      bxu = paramString;
-      ax.td().k(new g(this, paramString, paramkeep_ProgressInfo, paramkeep_SceneResult));
-      return 0;
-      if (((Integer)bxt.get(paramString)).intValue() == -1) {
-        i = 200;
-      } else {
-        i = 0;
+      
+      public final String toString()
+      {
+        return super.toString() + "|callback";
       }
-    }
+    });
+    return 0;
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.q.j paramj)
+  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
   {
     if (paramj.getType() != 379) {}
     do
     {
       return;
-      t.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra onSceneEnd it will tryStart sceneType:%d [%d,%d]", new Object[] { Integer.valueOf(paramj.getType()), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    } while ((!ax.qZ()) || (j.xi().xa()));
-    ax.td().k(new d(this));
+      u.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra onSceneEnd it will tryStart sceneType:%d [%d,%d]", new Object[] { Integer.valueOf(paramj.getType()), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    } while (!com.tencent.mm.model.ah.rh());
+    com.tencent.mm.model.ah.tv().r(new Runnable()
+    {
+      public final void run()
+      {
+        aS(true);
+      }
+      
+      public final String toString()
+      {
+        return super.toString() + "|onSceneEnd";
+      }
+    });
   }
   
-  public final void a(int paramInt, ao paramao, Object paramObject)
+  public final void a(int paramInt, com.tencent.mm.sdk.h.j paramj, Object paramObject)
   {
-    if (!ax.qZ()) {}
+    if (!com.tencent.mm.model.ah.rh()) {}
     int i;
     do
     {
       return;
-      i = bn.f(paramObject, 0);
-      t.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "onNotifyChange event:%d obj:%d stg:%s", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(i), paramao });
-      if ((paramao != ax.tl().rf()) || (i <= 0))
+      i = ay.g(paramObject, 0);
+      u.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "onNotifyChange event:%d obj:%d stg:%s", new Object[] { Integer.valueOf(paramInt), Integer.valueOf(i), paramj });
+      if ((paramj != com.tencent.mm.model.ah.tD().rn()) || (i <= 0))
       {
-        t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "onNotifyChange error obj:%d stg:%s", new Object[] { Integer.valueOf(i), paramao });
+        u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "onNotifyChange error obj:%d stg:%s", new Object[] { Integer.valueOf(i), paramj });
         return;
       }
     } while (i != 144385);
-    ax.tm().d(new i());
+    com.tencent.mm.model.ah.tE().d(new d());
   }
   
   public final void a(String paramString, ByteArrayOutputStream paramByteArrayOutputStream)
   {
-    if (bn.iW(paramString))
+    if (ay.kz(paramString))
     {
-      t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdn callback getauthbuf mediaid is null");
+      u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdn callback getauthbuf mediaid is null");
       return;
     }
-    m localm = (m)bxs.get(paramString);
-    if (localm == null)
+    f localf = (f)bKz.get(paramString);
+    if (localf == null)
     {
-      t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", " getauthbuf task in jni get info failed mediaid:%s", new Object[] { paramString });
+      u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", " getauthbuf task in jni get info failed mediaid:%s", new Object[] { paramString });
       return;
     }
-    if (bxZ != null)
+    if (bLh != null)
     {
-      bxZ.a(paramString, paramByteArrayOutputStream);
+      bLh.a(paramString, paramByteArrayOutputStream);
       return;
     }
-    t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "getCdnAuthInfo fail, null taskcallback.");
+    u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "getCdnAuthInfo fail, null taskcallback.");
   }
   
-  public final boolean a(m paramm)
+  public final boolean a(final f paramf)
   {
-    if (bn.iW(field_mediaId))
+    if (ay.kz(field_mediaId))
     {
-      t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "addSendTask mediaId is null");
+      u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "addSendTask mediaId is null");
       return false;
     }
     if (field_fileId == null) {
@@ -157,235 +207,299 @@ public final class b
     if (field_aesKey == null) {
       field_aesKey = "";
     }
-    bxY = true;
-    ax.td().k(new f(this, paramm));
-    return true;
-  }
-  
-  public final boolean a(m paramm, int paramInt)
-  {
-    if (bn.iW(field_mediaId))
+    bLg = true;
+    com.tencent.mm.model.ah.tv().r(new Runnable()
     {
-      t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "addRecvTask mediaId is null");
-      return false;
-    }
-    if (field_fileId == null) {
-      field_fileId = "";
-    }
-    if (field_aesKey == null) {
-      field_aesKey = "";
-    }
-    bxY = false;
-    ax.td().k(new e(this, paramInt, paramm));
-    return true;
-  }
-  
-  public final byte[] f(String paramString, byte[] paramArrayOfByte)
-  {
-    if (bn.iW(paramString))
-    {
-      t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdn callback decodePrepareResponse mediaid is null");
-      return null;
-    }
-    m localm = (m)bxs.get(paramString);
-    if (localm == null)
-    {
-      t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", " decodePrepareResponse task in jni get info failed mediaid:%s", new Object[] { paramString });
-      return null;
-    }
-    if (bxZ != null) {
-      return bxZ.f(paramString, paramArrayOfByte);
-    }
-    t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "decodePrepareResponse fail, null taskcallback.");
-    return null;
-  }
-  
-  public final boolean gp(String paramString)
-  {
-    m localm = (m)bxs.remove(paramString);
-    int i;
-    if (localm != null)
-    {
-      i = j.xi().cancelUploadMedia(paramString);
-      com.tencent.mm.plugin.report.service.j.eJZ.f(10769, new Object[] { Integer.valueOf(h.bxN), Integer.valueOf(field_fileType), Long.valueOf(bn.DM() - field_startTime) });
-    }
-    for (;;)
-    {
-      bxr.remove(paramString);
-      t.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra cancelSendTask mediaid:%s mapremove:%s engine ret:%d", new Object[] { paramString, localm, Integer.valueOf(i) });
-      return true;
-      i = 0;
-    }
-  }
-  
-  public final boolean gq(String paramString)
-  {
-    m localm = (m)bxs.remove(paramString);
-    int i;
-    if (localm != null)
-    {
-      i = j.xi().cancelDownloadMedia(paramString);
-      com.tencent.mm.plugin.report.service.j.eJZ.f(10769, new Object[] { Integer.valueOf(h.bxM), Integer.valueOf(field_fileType), Long.valueOf(bn.DM() - field_startTime) });
-    }
-    for (;;)
-    {
-      bxr.remove(paramString);
-      bxt.remove(paramString);
-      t.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra cancelRecvTask mediaid:%s mapremove:%s engine ret:%d", new Object[] { paramString, localm, Integer.valueOf(i) });
-      return true;
-      i = 0;
-    }
-  }
-  
-  public final void xd()
-  {
-    if (!ax.qZ()) {}
-    do
-    {
-      return;
-      if (j.xi().xa())
+      public final void run()
       {
-        t.w("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra Not init cdn dnsinfo , will retry after set info");
-        ax.tm().d(new i());
+        bKx.add(paramffield_mediaId);
+        bKy.put(paramffield_mediaId, paramf);
+        aS(false);
+      }
+      
+      public final String toString()
+      {
+        return super.toString() + "|addSendTask";
+      }
+    });
+    return true;
+  }
+  
+  public final boolean a(final f paramf, final int paramInt)
+  {
+    if (ay.kz(field_mediaId))
+    {
+      u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "addRecvTask mediaId is null");
+      return false;
+    }
+    if (field_fileId == null) {
+      field_fileId = "";
+    }
+    if (field_aesKey == null) {
+      field_aesKey = "";
+    }
+    bLg = false;
+    com.tencent.mm.model.ah.tv().r(new Runnable()
+    {
+      public final void run()
+      {
+        if (paramInt != -1) {
+          bKA.put(paramffield_mediaId, Integer.valueOf(paramInt));
+        }
+        bKx.add(paramffield_mediaId);
+        bKy.put(paramffield_mediaId, paramf);
+        aS(false);
+      }
+      
+      public final String toString()
+      {
+        return super.toString() + "|addRecvTask";
+      }
+    });
+    return true;
+  }
+  
+  public final void aS(boolean paramBoolean)
+  {
+    if (!com.tencent.mm.model.ah.rh()) {
+      return;
+    }
+    if (!paramBoolean)
+    {
+      if (xXbKp == null) {}
+      for (i = 1; i != 0; i = 0)
+      {
+        u.w("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra Not init cdn dnsinfo , will retry after set info");
+        com.tencent.mm.model.ah.tE().d(new d());
         return;
       }
-      localObject = new CdnTransportEngine.b(j.xi());
-      String str1 = com.tencent.mm.g.h.qa().getValue("EnableCDNUploadImg");
-      String str2 = com.tencent.mm.g.h.qa().getValue("EnableCDNVerifyConnect");
-      String str3 = com.tencent.mm.g.h.qa().getValue("EnableCDNVideoRedirectOC");
+    }
+    localObject = new CdnTransportEngine.c(e.xX());
+    String str1 = com.tencent.mm.g.h.pS().getValue("EnableCDNUploadImg");
+    String str2 = com.tencent.mm.g.h.pS().getValue("EnableCDNVerifyConnect");
+    String str3 = com.tencent.mm.g.h.pS().getValue("EnableCDNVideoRedirectOC");
+    String str4 = com.tencent.mm.g.h.pS().getValue("EnableStreamUploadVideo");
+    String str5 = com.tencent.mm.g.h.pS().getValue("C2COverloadDelaySeconds");
+    String str6 = com.tencent.mm.g.h.pS().getValue("SNSOverloadDelaySeconds");
+    for (;;)
+    {
       try
       {
-        if (!bn.iW(str1)) {
+        if (!ay.kz(str1)) {
           field_UseStreamCDN = Integer.valueOf(str1).intValue();
         }
-        if (!bn.iW(str2)) {
+        if (!ay.kz(str2)) {
           field_EnableCDNVerifyConnect = Integer.valueOf(str2).intValue();
         }
-        if (!bn.iW(str3)) {
+        if (!ay.kz(str3)) {
           field_EnableCDNVideoRedirectOC = Integer.valueOf(str3).intValue();
+        }
+        if (!ay.kz(str4)) {
+          field_EnableStreamUploadVideo = Integer.valueOf(str4).intValue();
+        }
+        if (!ay.kz(str5)) {
+          field_C2COverloadDelaySeconds = Integer.valueOf(str5).intValue();
+        }
+        if (!ay.kz(str6)) {
+          field_SNSOverloadDelaySeconds = Integer.valueOf(str6).intValue();
         }
         if (field_UseStreamCDN != 0)
         {
-          str1 = com.tencent.mm.g.h.qa().getValue("ProgJPEGUploadSizeLimitWifi");
-          str2 = com.tencent.mm.g.h.qa().getValue("ProgJPEGUploadSizeLimit3G");
-          str3 = com.tencent.mm.g.h.qa().getValue("ProgJPEGDownloadSizeLimit");
-          if (!bn.iW(str1)) {
+          str1 = com.tencent.mm.g.h.pS().getValue("ProgJPEGUploadSizeLimitWifi");
+          str2 = com.tencent.mm.g.h.pS().getValue("ProgJPEGUploadSizeLimit3G");
+          str3 = com.tencent.mm.g.h.pS().getValue("ProgJPEGDownloadSizeLimit");
+          str4 = com.tencent.mm.g.h.pS().getValue("ProgJPEGOnlyRecvPTL");
+          str5 = com.tencent.mm.g.h.pS().getValue("EnableJPEGDyncmicETL");
+          if (!ay.kz(str1)) {
             field_WifiEtl = Integer.valueOf(str1).intValue();
           }
-          if (!bn.iW(str2)) {
+          if (!ay.kz(str2)) {
             field_noWifiEtl = Integer.valueOf(str2).intValue();
           }
-          if (!bn.iW(str3)) {
+          if (!ay.kz(str3)) {
             field_Ptl = Integer.valueOf(str3).intValue();
           }
+          if (!ay.kz(str4))
+          {
+            if (Integer.valueOf(str4).intValue() == 0) {
+              continue;
+            }
+            paramBoolean = true;
+            field_onlyrecvPtl = paramBoolean;
+          }
+          if (!ay.kz(str5)) {
+            field_UseDynamicETL = Integer.valueOf(str5).intValue();
+          }
         }
-        t.i("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "streamcdn config[SVR]:%s", new Object[] { localObject });
-        j.xi().a((CdnTransportEngine.b)localObject);
+        u.i("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "streamcdn config[SVR]:%s", new Object[] { localObject });
+        e.xX().a((CdnTransportEngine.c)localObject);
       }
       catch (NumberFormatException localNumberFormatException)
       {
-        for (;;)
-        {
-          t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", localNumberFormatException.toString());
+        u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", localNumberFormatException.toString());
+        continue;
+        i = 0;
+        continue;
+        i = 0;
+        continue;
+        i = 0;
+        continue;
+        u.i("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "id:%s cdnautostart :%s chatroom:%s", new Object[] { field_mediaId, Boolean.valueOf(field_autostart), Integer.valueOf(field_chattype) });
+        field_startTime = ay.FS();
+        if (!bLg) {
           continue;
-          i = 0;
-          continue;
-          i = 0;
-          continue;
-          i = 0;
-        }
-        field_startTime = bn.DM();
-        if (!bxY) {
-          break label727;
         }
         if (field_fullpath != null) {
-          break label687;
-        }
-        int i = -1;
-        if (field_thumbpath != null) {
-          break label698;
-        }
-        for (int j = -1;; j = field_thumbpath.length())
-        {
-          t.i("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "tryStart send file:%d thumb:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
-          if (field_fullpath == null) {
-            field_fullpath = "";
-          }
-          if (field_thumbpath == null) {
-            field_thumbpath = "";
-          }
-          i = j.xi().startupUploadMedia((m)localObject);
-          if (i == 0) {
-            break label709;
-          }
-          t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "startupUploadMedia error:%d clientid:%s", new Object[] { Integer.valueOf(i), field_mediaId });
-          if (bxZ == null) {
-            break;
-          }
-          bxZ.a(field_mediaId, i, null, null);
-          break;
-          i = field_fullpath.length();
-          break label561;
-        }
-        bxs.put(field_mediaId, localObject);
-        continue;
-        i = j.xi().startupDownloadMedia((m)localObject);
-        if (i == 0) {
-          break label792;
-        }
-        t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "startupDownloadMedia error:%d clientid:%s", new Object[] { Integer.valueOf(i), field_mediaId });
-        if (bxZ == null) {
           continue;
         }
-        bxZ.a(field_mediaId, i, null, null);
+        i = -1;
+        if (field_thumbpath != null) {
+          continue;
+        }
+        int j = -1;
+        u.i("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "tryStart send file:%d thumb:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
+        if (field_fullpath != null) {
+          continue;
+        }
+        field_fullpath = "";
+        if (field_thumbpath != null) {
+          continue;
+        }
+        field_thumbpath = "";
+        i = e.xX().startupUploadMedia((f)localObject);
+        if (i == 0) {
+          continue;
+        }
+        u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "startupUploadMedia error:%d clientid:%s", new Object[] { Integer.valueOf(i), field_mediaId });
+        if (bLh == null) {
+          continue;
+        }
+        bLh.a(field_mediaId, i, null, null);
         continue;
-        bxs.put(field_mediaId, localObject);
+        i = field_fullpath.length();
+        continue;
+        j = field_thumbpath.length();
+        continue;
+        bKz.put(field_mediaId, localObject);
+        continue;
+        i = e.xX().startupDownloadMedia((f)localObject);
+        if (i == 0) {
+          continue;
+        }
+        u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "startupDownloadMedia error:%d clientid:%s", new Object[] { Integer.valueOf(i), field_mediaId });
+        if (bLh == null) {
+          continue;
+        }
+        bLh.a(field_mediaId, i, null, null);
+        continue;
+        bKz.put(field_mediaId, localObject);
         continue;
       }
-      if (ab.bWD)
+      if (r.cnD)
       {
-        t.w("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "use cdn debug configure.");
-        if (!ab.bWz) {
-          break;
+        u.w("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "use cdn debug configure.");
+        if (!r.cnz) {
+          continue;
         }
         i = 1;
         field_UseStreamCDN = i;
         if (field_UseStreamCDN != 0)
         {
-          field_onlysendETL = ab.bWA;
-          field_onlyrecvPtl = ab.bWB;
-          if (!bn.iW(ab.bWw)) {
-            field_WifiEtl = Integer.valueOf(ab.bWw).intValue();
+          field_onlysendETL = r.cnA;
+          field_onlyrecvPtl = r.cnB;
+          if (!ay.kz(r.cnw)) {
+            field_WifiEtl = Integer.valueOf(r.cnw).intValue();
           }
-          if (!bn.iW(ab.bWx)) {
-            field_noWifiEtl = Integer.valueOf(ab.bWx).intValue();
+          if (!ay.kz(r.cnx)) {
+            field_noWifiEtl = Integer.valueOf(r.cnx).intValue();
           }
-          if (!bn.iW(ab.bWy)) {
-            field_Ptl = Integer.valueOf(ab.bWy).intValue();
+          if (!ay.kz(r.cny)) {
+            field_Ptl = Integer.valueOf(r.cny).intValue();
           }
         }
-        if (!ab.bWE) {
-          break label528;
+        if (!r.cnE) {
+          continue;
         }
         i = 1;
         field_EnableCDNVerifyConnect = i;
-        if (!ab.bWF) {
-          break label533;
+        if (!r.cnF) {
+          continue;
         }
         i = 1;
         field_EnableCDNVideoRedirectOC = i;
-        t.i("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "streamcdn config[DEBUG]:%s", new Object[] { localObject });
-        j.xi().a((CdnTransportEngine.b)localObject);
+        u.i("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "streamcdn config[DEBUG]:%s", new Object[] { localObject });
+        e.xX().a((CdnTransportEngine.c)localObject);
       }
-      t.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "tryStart queue:%d", new Object[] { Integer.valueOf(bxq.size()) });
-    } while (bxq.isEmpty());
-    localObject = (String)bxq.poll();
-    localObject = (m)bxr.remove(localObject);
-    if (localObject == null)
-    {
-      t.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "task queue is empty , maybe bug here");
+      u.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "tryStart queue:%d", new Object[] { Integer.valueOf(bKx.size()) });
+      if (bKx.isEmpty()) {
+        break;
+      }
+      localObject = (String)bKx.poll();
+      localObject = (f)bKy.remove(localObject);
+      if (localObject != null) {
+        continue;
+      }
+      u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "task queue is empty , maybe bug here");
       return;
+      paramBoolean = false;
     }
+  }
+  
+  public final boolean hj(String paramString)
+  {
+    f localf = (f)bKz.remove(paramString);
+    int i;
+    if (localf != null)
+    {
+      i = e.xX().cancelUploadMedia(paramString);
+      com.tencent.mm.plugin.report.service.h.fUJ.g(10769, new Object[] { Integer.valueOf(c.bKV), Integer.valueOf(field_fileType), Long.valueOf(ay.FS() - field_startTime) });
+    }
+    for (;;)
+    {
+      bKy.remove(paramString);
+      u.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra cancelSendTask mediaid:%s mapremove:%s engine ret:%d", new Object[] { paramString, localf, Integer.valueOf(i) });
+      return true;
+      i = 0;
+    }
+  }
+  
+  public final boolean hk(String paramString)
+  {
+    f localf = (f)bKz.remove(paramString);
+    int i;
+    if (localf != null)
+    {
+      i = e.xX().cancelDownloadMedia(paramString);
+      com.tencent.mm.plugin.report.service.h.fUJ.g(10769, new Object[] { Integer.valueOf(c.bKU), Integer.valueOf(field_fileType), Long.valueOf(ay.FS() - field_startTime) });
+    }
+    for (;;)
+    {
+      bKy.remove(paramString);
+      bKA.remove(paramString);
+      u.d("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdntra cancelRecvTask mediaid:%s mapremove:%s engine ret:%d", new Object[] { paramString, localf, Integer.valueOf(i) });
+      return true;
+      i = 0;
+    }
+  }
+  
+  public final byte[] i(String paramString, byte[] paramArrayOfByte)
+  {
+    if (ay.kz(paramString))
+    {
+      u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "cdn callback decodePrepareResponse mediaid is null");
+      return null;
+    }
+    f localf = (f)bKz.get(paramString);
+    if (localf == null)
+    {
+      u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", " decodePrepareResponse task in jni get info failed mediaid:%s", new Object[] { paramString });
+      return null;
+    }
+    if (bLh != null) {
+      return bLh.i(paramString, paramArrayOfByte);
+    }
+    u.e("!44@/B4Tb64lLpJrrBrikOMJ5b3oVjl52GdFxBO5Up2ZAWM=", "decodePrepareResponse fail, null taskcallback.");
+    return null;
   }
 }
 

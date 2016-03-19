@@ -1,10 +1,24 @@
 package android.support.v4.app;
 
-import android.view.View;
-
-abstract interface h
+public abstract class h
 {
-  public abstract View findViewById(int paramInt);
+  public abstract h a(int paramInt, Fragment paramFragment);
+  
+  public abstract h a(int paramInt, Fragment paramFragment, String paramString);
+  
+  public abstract h a(Fragment paramFragment);
+  
+  public abstract h a(Fragment paramFragment, String paramString);
+  
+  public abstract h b(Fragment paramFragment);
+  
+  public abstract h c(Fragment paramFragment);
+  
+  public abstract int commit();
+  
+  public abstract int commitAllowingStateLoss();
+  
+  public abstract h d(Fragment paramFragment);
 }
 
 /* Location:

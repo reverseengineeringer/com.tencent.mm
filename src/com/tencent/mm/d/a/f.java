@@ -1,23 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class f
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a atY = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a asb = new a();
   
   public f()
   {
     id = "AddFMessageCardClick";
-    hXT = atO;
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int atZ = 0;
+    public int asc = 0;
   }
 }
 

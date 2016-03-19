@@ -22,17 +22,17 @@
 
 
 # instance fields
-.field bKp:Ljava/lang/String;
+.field cat:Ljava/lang/String;
 
-.field bKq:[Ljava/lang/String;
+.field cau:[Ljava/lang/String;
 
-.field bKr:Z
+.field cav:Z
 
-.field bKs:Z
+.field caw:Z
 
-.field bKt:Lcom/tencent/mm/modelsfs/SFSContext;
+.field cax:Lcom/tencent/mm/modelsfs/SFSContext;
 
-.field bKu:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
+.field cay:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
 
 
 # direct methods
@@ -40,10 +40,10 @@
     .locals 1
 
     .prologue
-    .line 72
-    new-instance v0, Lcom/tencent/mm/modelsfs/b;
+    .line 75
+    new-instance v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec$1;
 
-    invoke-direct {v0}, Lcom/tencent/mm/modelsfs/b;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec$1;-><init>()V
 
     sput-object v0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -54,7 +54,7 @@
     .locals 0
 
     .prologue
-    .line 62
+    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -66,24 +66,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 63
+    .line 66
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
+    .line 67
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bKp:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
 
-    .line 65
+    .line 68
     invoke-virtual {p1}, Landroid/os/Parcel;->createStringArray()[Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bKq:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cau:[Ljava/lang/String;
 
-    .line 66
+    .line 69
     invoke-virtual {p1}, Landroid/os/Parcel;->readByte()B
 
     move-result v0
@@ -93,17 +93,17 @@
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bKr:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cav:Z
 
-    .line 67
+    .line 70
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bKt:Lcom/tencent/mm/modelsfs/SFSContext;
+    iput-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cax:Lcom/tencent/mm/modelsfs/SFSContext;
 
-    .line 68
-    iput-boolean v1, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bKs:Z
+    .line 71
+    iput-boolean v1, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->caw:Z
 
-    .line 69
+    .line 72
     const-class v0, Lcom/tencent/mm/modelsfs/SFSContext$Builder;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -116,15 +116,15 @@
 
     check-cast v0, Lcom/tencent/mm/modelsfs/SFSContext$Builder;
 
-    iput-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bKu:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
+    iput-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cay:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
 
-    .line 70
+    .line 73
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 66
+    .line 69
     goto :goto_0
 .end method
 
@@ -134,7 +134,7 @@
     .locals 1
 
     .prologue
-    .line 51
+    .line 54
     const/4 v0, 0x0
 
     return v0
@@ -144,18 +144,18 @@
     .locals 1
 
     .prologue
-    .line 56
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bKp:Ljava/lang/String;
+    .line 59
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cat:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 57
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bKq:[Ljava/lang/String;
+    .line 60
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cau:[Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeStringArray([Ljava/lang/String;)V
 
-    .line 58
-    iget-boolean v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bKr:Z
+    .line 61
+    iget-boolean v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cav:Z
 
     if-eqz v0, :cond_0
 
@@ -166,15 +166,15 @@
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByte(B)V
 
-    .line 59
-    iget-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->bKu:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
+    .line 62
+    iget-object v0, p0, Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;->cay:Lcom/tencent/mm/modelsfs/SFSContext$Builder;
 
     invoke-virtual {p1, v0, p2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 60
+    .line 63
     return-void
 
-    .line 58
+    .line 61
     :cond_0
     const/4 v0, 0x0
 

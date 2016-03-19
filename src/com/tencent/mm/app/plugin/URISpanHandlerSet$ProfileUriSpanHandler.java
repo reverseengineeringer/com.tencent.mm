@@ -2,17 +2,17 @@ package com.tencent.mm.app.plugin;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.aj.c;
+import com.tencent.mm.d.b.p;
 import com.tencent.mm.h.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
-import com.tencent.mm.ui.contact.aw;
+import com.tencent.mm.ui.contact.e;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$ProfileUriSpanHandler
@@ -23,61 +23,61 @@ class URISpanHandlerSet$ProfileUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     if (type == 3)
     {
-      if (paramf != null) {
-        paramf.a(paramah);
+      if (paramb != null) {
+        paramb.a(paramg);
       }
-      paramah = (String)paramah.c(String.class);
-      paramf = new Intent();
-      paramf.addFlags(268435456);
-      paramf.putExtra("Contact_User", paramah);
-      com.tencent.mm.storage.k localk = ax.tl().ri().yM(paramah);
-      if ((localk != null) && ((int)bkE > 0) && (a.cd(field_type))) {
-        aw.a(paramf, paramah);
+      paramg = (String)paramg.c(String.class);
+      paramb = new Intent();
+      paramb.addFlags(268435456);
+      paramb.putExtra("Contact_User", paramg);
+      k localk = ah.tD().rq().Ep(paramg);
+      if ((localk != null) && ((int)bvi > 0) && (a.ce(field_type))) {
+        e.a(paramb, paramg);
       }
-      if (bn.iV(paramah).length() > 0) {
-        c.c(URISpanHandlerSet.a(apd), "profile", ".ui.ContactInfoUI", paramf);
+      if (ay.ky(paramg).length() > 0) {
+        com.tencent.mm.ar.c.c(URISpanHandlerSet.a(ang), "profile", ".ui.ContactInfoUI", paramb);
       }
       return true;
     }
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     if (paramString.startsWith("weixin://contacts/profile/"))
     {
       paramString = paramString.trim().replace("weixin://contacts/profile/", "").replace("/", "");
-      if (bn.iW(paramString))
+      if (ay.kz(paramString))
       {
-        t.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "jumpToActivity fail, user is null");
+        u.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "jumpToActivity fail, user is null");
         return true;
       }
-      paramn = new Intent();
-      paramn.addFlags(268435456);
-      paramn.putExtra("Contact_User", paramString);
-      paramBundle = ax.tl().ri().yM(paramString);
-      if ((paramBundle != null) && ((int)bkE > 0) && (a.cd(field_type))) {
-        aw.a(paramn, paramString);
+      paraml = new Intent();
+      paraml.addFlags(268435456);
+      paraml.putExtra("Contact_User", paramString);
+      paramBundle = ah.tD().rq().Ep(paramString);
+      if ((paramBundle != null) && ((int)bvi > 0) && (a.ce(field_type))) {
+        e.a(paraml, paramString);
       }
-      c.c(URISpanHandlerSet.a(apd), "profile", ".ui.ContactInfoUI", paramn);
+      com.tencent.mm.ar.c.c(URISpanHandlerSet.a(ang), "profile", ".ui.ContactInfoUI", paraml);
       return true;
     }
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     if (paramString.trim().startsWith("weixin://contacts/profile/")) {
-      return new ah(paramString, 3, paramString.trim().replace("weixin://contacts/profile/", "").replace("/", ""));
+      return new g(paramString, 3, paramString.trim().replace("weixin://contacts/profile/", "").replace("/", ""));
     }
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[] { 3 };
   }

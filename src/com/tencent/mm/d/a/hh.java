@@ -1,24 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.storage.ar;
+import com.tencent.mm.sdk.c.b;
 
 public final class hh
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEF = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aCX = new a();
+  public b aCY = new b();
   
   public hh()
   {
-    id = "SendMsgFail";
-    hXT = atO;
+    id = "NewYearRedDot";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public ar aub;
+    public int asc;
+  }
+  
+  public static final class b
+  {
+    public boolean aCZ = false;
+    public String aDa;
   }
 }
 

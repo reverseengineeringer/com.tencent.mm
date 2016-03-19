@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static blK:J
+.field private static bwp:J
 
 .field private static context:Landroid/content/Context;
 
@@ -17,7 +17,7 @@
     .line 13
     const-wide/16 v0, 0x2710
 
-    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blK:J
+    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
 
     .line 14
     const/4 v0, 0x0
@@ -60,7 +60,7 @@
     move-wide v0, v3
 
     :goto_1
-    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blK:J
+    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
 
     return-void
 
@@ -84,7 +84,7 @@
 
     float-to-long v5, v0
 
-    sput-wide v5, Lcom/tencent/mm/jni/platformcomm/a;->blK:J
+    sput-wide v5, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
 
     cmp-long v0, v5, v1
 
@@ -93,7 +93,7 @@
     move-wide v0, v1
 
     :goto_2
-    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blK:J
+    sput-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
 
     cmp-long v0, v0, v3
 
@@ -104,17 +104,17 @@
     goto :goto_1
 
     :cond_2
-    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blK:J
+    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
 
     goto :goto_2
 
     :cond_3
-    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blK:J
+    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
 
     goto :goto_1
 .end method
 
-.method public static ay(Landroid/content/Context;)V
+.method public static aI(Landroid/content/Context;)V
     .locals 3
 
     .prologue
@@ -131,9 +131,9 @@
     check-cast v0, Landroid/telephony/TelephonyManager;
 
     .line 20
-    new-instance v1, Lcom/tencent/mm/jni/platformcomm/b;
+    new-instance v1, Lcom/tencent/mm/jni/platformcomm/a$1;
 
-    invoke-direct {v1}, Lcom/tencent/mm/jni/platformcomm/b;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/jni/platformcomm/a$1;-><init>()V
 
     const/16 v2, 0x100
 
@@ -143,17 +143,17 @@
     return-void
 .end method
 
-.method public static qU()J
+.method public static qQ()J
     .locals 2
 
     .prologue
     .line 34
-    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->blK:J
+    sget-wide v0, Lcom/tencent/mm/jni/platformcomm/a;->bwp:J
 
     return-wide v0
 .end method
 
-.method public static qV()J
+.method public static qR()J
     .locals 5
 
     .prologue
@@ -212,7 +212,7 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 44
     if-le v0, v1, :cond_0
@@ -241,7 +241,7 @@
 
     const-string/jumbo v1, "Can Not Get Wifi Signal"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 49
     const-wide/16 v0, 0x0

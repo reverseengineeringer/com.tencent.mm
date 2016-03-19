@@ -1,21 +1,14 @@
 package com.tencent.mm.app.plugin.voicereminder.a;
 
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
-
-final class f
-  implements MediaPlayer.OnCompletionListener
+public final class f
 {
-  f(e parame) {}
-  
-  public final void onCompletion(MediaPlayer paramMediaPlayer)
+  public static String a(String paramString, long paramLong, boolean paramBoolean)
   {
-    try
-    {
-      paramMediaPlayer.release();
-      return;
+    paramString = new StringBuilder().append(paramString).append(":").append(paramLong).append(":");
+    if (paramBoolean) {}
+    for (int i = 1;; i = 0) {
+      return i + "\n";
     }
-    catch (Exception paramMediaPlayer) {}
   }
 }
 

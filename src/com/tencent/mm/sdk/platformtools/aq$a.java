@@ -1,28 +1,45 @@
 package com.tencent.mm.sdk.platformtools;
 
-public final class aq$a
+import android.hardware.SensorListener;
+
+final class aq$a
+  implements SensorListener
 {
-  public String iah;
-  public String iai;
-  public String iaj;
-  public String iak;
-  public String ial;
-  public String iam;
-  public String ian;
-  public String systemId;
-  public String type;
+  private Runnable aID;
+  private float[] iFJ = { 0.0F, 0.0F, 0.0F };
   
-  public aq$a(String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6, String paramString7, String paramString8, String paramString9)
+  public aq$a(Runnable paramRunnable)
   {
-    iah = paramString1;
-    iai = paramString2;
-    iaj = paramString3;
-    type = paramString6;
-    iak = paramString4;
-    ial = paramString7;
-    iam = paramString8;
-    systemId = paramString9;
-    ian = paramString5;
+    aID = paramRunnable;
+  }
+  
+  public final void onAccuracyChanged(int paramInt1, int paramInt2) {}
+  
+  public final void onSensorChanged(int paramInt, float[] paramArrayOfFloat)
+  {
+    int i = 0;
+    float[] arrayOfFloat = new float[3];
+    paramInt = 0;
+    while (paramInt < 3)
+    {
+      arrayOfFloat[paramInt] = Math.abs(paramArrayOfFloat[paramInt] - iFJ[paramInt]);
+      int j = i;
+      if (iFJ[paramInt] != 0.0F)
+      {
+        j = i;
+        if (arrayOfFloat[paramInt] > 1.0F)
+        {
+          j = 1;
+          u.d("!32@/B4Tb64lLpKvYOkSzPmwxJaUdxCq9g2m", "isONShake:" + arrayOfFloat[paramInt]);
+        }
+      }
+      iFJ[paramInt] = paramArrayOfFloat[paramInt];
+      paramInt += 1;
+      i = j;
+    }
+    if (i != 0) {
+      aID.run();
+    }
   }
 }
 

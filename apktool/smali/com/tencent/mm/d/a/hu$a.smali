@@ -15,28 +15,33 @@
 
 
 # instance fields
-.field public aFb:Z
+.field public field_dataId:Ljava/lang/String;
 
-.field public ayS:J
+.field public field_favLocalId:J
+
+.field public field_localId:I
+
+.field public field_offset:I
+
+.field public field_path:Ljava/lang/String;
+
+.field public field_status:I
+
+.field public field_totalLen:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 1
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
+    .line 21
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/hu$a;->aFb:Z
-
-    .line 16
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/tencent/mm/d/a/hu$a;->ayS:J
+    iput v0, p0, Lcom/tencent/mm/d/a/hu$a;->field_localId:I
 
     return-void
 .end method

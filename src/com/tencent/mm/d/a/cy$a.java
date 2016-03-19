@@ -1,14 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-
 public final class cy$a
 {
-  public int actionCode;
-  public String appId;
-  public int atZ;
-  public String ayV;
-  public Context context;
+  public boolean Jq = false;
 }
 
 /* Location:

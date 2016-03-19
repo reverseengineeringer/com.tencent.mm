@@ -155,7 +155,7 @@
 
     iput v0, p0, Lcom/tencent/kingkong/database/SQLiteCursor;->mCursorWindowCapacity:I
 
-    .line 154
+    .line 152
     :goto_0
     return-void
 
@@ -234,7 +234,7 @@
     .locals 0
 
     .prologue
-    .line 274
+    .line 273
     return-void
 .end method
 
@@ -252,39 +252,6 @@
 
     .line 202
     return-void
-.end method
-
-.method protected finalize()V
-    .locals 1
-
-    .prologue
-    .line 262
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteCursor;->mWindow:Lcom/tencent/kingkong/CursorWindow;
-
-    if-eqz v0, :cond_0
-
-    .line 263
-    invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteCursor;->close()V
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 266
-    :cond_0
-    invoke-super {p0}, Lcom/tencent/kingkong/AbstractWindowedCursor;->finalize()V
-
-    .line 268
-    return-void
-
-    .line 265
-    :catchall_0
-    move-exception v0
-
-    .line 266
-    invoke-super {p0}, Lcom/tencent/kingkong/AbstractWindowedCursor;->finalize()V
-
-    .line 267
-    throw v0
 .end method
 
 .method public getColumnIndex(Ljava/lang/String;)I
@@ -510,7 +477,7 @@
     .locals 0
 
     .prologue
-    .line 281
+    .line 280
     return-void
 .end method
 
@@ -518,7 +485,7 @@
     .locals 0
 
     .prologue
-    .line 288
+    .line 287
     return-void
 .end method
 
@@ -684,7 +651,7 @@
     .locals 0
 
     .prologue
-    .line 295
+    .line 294
     return-void
 .end method
 
@@ -692,6 +659,6 @@
     .locals 0
 
     .prologue
-    .line 302
+    .line 301
     return-void
 .end method

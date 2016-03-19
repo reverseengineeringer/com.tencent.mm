@@ -12,10 +12,10 @@
 
 
 # virtual methods
-.method public abstract get(Ljava/lang/Object;)Ljava/lang/Object;
+.method public abstract f(Ljava/lang/Object;Ljava/lang/Object;)V
 .end method
 
-.method public abstract h(Ljava/lang/Object;Ljava/lang/Object;)V
+.method public abstract get(Ljava/lang/Object;)Ljava/lang/Object;
 .end method
 
 .method public abstract remove(Ljava/lang/Object;)Ljava/lang/Object;

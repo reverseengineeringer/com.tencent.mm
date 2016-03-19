@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ax
-  extends a.c
+  extends a.e
 {
   public a$ax()
   {
-    super("jumpToWXWallet", "jumpToWXWallet", 147, true);
+    super("getPaymentOrderRequest", "getPaymentOrderRequest", 116, true);
   }
 }
 

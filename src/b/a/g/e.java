@@ -7,9 +7,9 @@ import java.io.Reader;
 
 public final class e
 {
-  public static String l(InputStream paramInputStream)
+  public static String k(InputStream paramInputStream)
   {
-    d.d(paramInputStream, "Cannot get String from a null object");
+    d.c(paramInputStream, "Cannot get String from a null object");
     try
     {
       char[] arrayOfChar = new char[65536];

@@ -7,7 +7,7 @@ final class PagerTitleStrip$d
 {
   public final void setSingleLineAllCaps(TextView paramTextView)
   {
-    paramTextView.setTransformationMethod(new r.a(paramTextView.getContext()));
+    paramTextView.setTransformationMethod(new k.a(paramTextView.getContext()));
   }
 }
 

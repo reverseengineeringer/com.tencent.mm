@@ -2,9 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class fj$a
 {
-  public boolean aBZ = false;
-  public boolean aCa = false;
-  public int type;
+  public int size;
 }
 
 /* Location:

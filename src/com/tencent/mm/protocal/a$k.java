@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$k
-  extends a.c
+  extends a.e
 {
   public a$k()
   {
-    super("checkJsApi", "checkJsApi", 84, false);
+    super("batchViewCard", "batchViewCard", 111, true);
   }
 }
 

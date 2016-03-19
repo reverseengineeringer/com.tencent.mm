@@ -1,8 +1,11 @@
 package com.tencent.mm.d.a;
 
+import android.content.Context;
+
 public final class fr$a
 {
-  public int axP;
+  public String aAy;
+  public Context context;
 }
 
 /* Location:

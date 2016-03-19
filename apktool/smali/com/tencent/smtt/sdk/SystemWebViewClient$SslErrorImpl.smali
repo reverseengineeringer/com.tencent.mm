@@ -26,13 +26,13 @@
     .locals 0
 
     .prologue
-    .line 242
+    .line 324
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 243
+    .line 325
     iput-object p1, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$SslErrorImpl;->mSslError:Landroid/net/http/SslError;
 
-    .line 244
+    .line 326
     return-void
 .end method
 
@@ -42,7 +42,7 @@
     .locals 1
 
     .prologue
-    .line 254
+    .line 336
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$SslErrorImpl;->mSslError:Landroid/net/http/SslError;
 
     invoke-virtual {v0, p1}, Landroid/net/http/SslError;->addError(I)Z
@@ -56,7 +56,7 @@
     .locals 1
 
     .prologue
-    .line 248
+    .line 330
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$SslErrorImpl;->mSslError:Landroid/net/http/SslError;
 
     invoke-virtual {v0}, Landroid/net/http/SslError;->getCertificate()Landroid/net/http/SslCertificate;
@@ -70,7 +70,7 @@
     .locals 1
 
     .prologue
-    .line 266
+    .line 348
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$SslErrorImpl;->mSslError:Landroid/net/http/SslError;
 
     invoke-virtual {v0}, Landroid/net/http/SslError;->getPrimaryError()I
@@ -84,7 +84,7 @@
     .locals 1
 
     .prologue
-    .line 260
+    .line 342
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebViewClient$SslErrorImpl;->mSslError:Landroid/net/http/SslError;
 
     invoke-virtual {v0, p1}, Landroid/net/http/SslError;->hasError(I)Z

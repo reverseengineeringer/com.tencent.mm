@@ -12,23 +12,23 @@
 
 
 # instance fields
-.field private fQB:Landroid/widget/AdapterView$OnItemClickListener;
+.field private hsv:Landroid/widget/AdapterView$OnItemClickListener;
 
-.field private iFr:I
+.field private kEB:I
 
-.field private iFs:I
+.field private kEC:I
 
-.field private iFt:I
+.field private kED:I
 
-.field private iFu:I
+.field private kEE:I
 
-.field private iFv:Z
+.field private kEF:Z
 
-.field iFw:Lcom/tencent/mm/ui/base/MMGridPaperGridView$a;
+.field kEG:Lcom/tencent/mm/ui/base/MMGridPaperGridView$a;
 
-.field private iFx:Lcom/tencent/mm/ui/base/ay;
+.field private kEH:Lcom/tencent/mm/ui/base/j;
 
-.field private iFy:Landroid/widget/AdapterView$OnItemLongClickListener;
+.field private kEI:Landroid/widget/AdapterView$OnItemLongClickListener;
 
 .field private mCount:I
 
@@ -46,26 +46,26 @@
     .line 24
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFu:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEE:I
 
     .line 25
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFv:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEF:Z
 
     .line 85
-    new-instance v0, Lcom/tencent/mm/ui/base/az;
+    new-instance v0, Lcom/tencent/mm/ui/base/MMGridPaperGridView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/az;-><init>(Lcom/tencent/mm/ui/base/MMGridPaperGridView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMGridPaperGridView$1;-><init>(Lcom/tencent/mm/ui/base/MMGridPaperGridView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->fQB:Landroid/widget/AdapterView$OnItemClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->hsv:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 97
-    new-instance v0, Lcom/tencent/mm/ui/base/ba;
+    new-instance v0, Lcom/tencent/mm/ui/base/MMGridPaperGridView$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/ba;-><init>(Lcom/tencent/mm/ui/base/MMGridPaperGridView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMGridPaperGridView$2;-><init>(Lcom/tencent/mm/ui/base/MMGridPaperGridView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFy:Landroid/widget/AdapterView$OnItemLongClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEI:Landroid/widget/AdapterView$OnItemLongClickListener;
 
     .line 36
     return-void
@@ -81,37 +81,37 @@
     .line 24
     const/4 v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFu:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEE:I
 
     .line 25
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFv:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEF:Z
 
     .line 85
-    new-instance v0, Lcom/tencent/mm/ui/base/az;
+    new-instance v0, Lcom/tencent/mm/ui/base/MMGridPaperGridView$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/az;-><init>(Lcom/tencent/mm/ui/base/MMGridPaperGridView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMGridPaperGridView$1;-><init>(Lcom/tencent/mm/ui/base/MMGridPaperGridView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->fQB:Landroid/widget/AdapterView$OnItemClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->hsv:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 97
-    new-instance v0, Lcom/tencent/mm/ui/base/ba;
+    new-instance v0, Lcom/tencent/mm/ui/base/MMGridPaperGridView$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/ba;-><init>(Lcom/tencent/mm/ui/base/MMGridPaperGridView;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/MMGridPaperGridView$2;-><init>(Lcom/tencent/mm/ui/base/MMGridPaperGridView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFy:Landroid/widget/AdapterView$OnItemLongClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEI:Landroid/widget/AdapterView$OnItemLongClickListener;
 
     .line 32
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/base/MMGridPaperGridView;)Lcom/tencent/mm/ui/base/ay;
+.method static synthetic a(Lcom/tencent/mm/ui/base/MMGridPaperGridView;)Lcom/tencent/mm/ui/base/j;
     .locals 1
 
     .prologue
     .line 15
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFx:Lcom/tencent/mm/ui/base/ay;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEH:Lcom/tencent/mm/ui/base/j;
 
     return-object v0
 .end method
@@ -121,7 +121,7 @@
 
     .prologue
     .line 15
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFt:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kED:I
 
     return v0
 .end method
@@ -151,7 +151,7 @@
 
     .prologue
     .line 15
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFv:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEF:Z
 
     return v0
 .end method
@@ -161,14 +161,14 @@
 
     .prologue
     .line 15
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFu:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEE:I
 
     return v0
 .end method
 
 
 # virtual methods
-.method public final a(IIILcom/tencent/mm/ui/base/ay;)V
+.method public final a(IIILcom/tencent/mm/ui/base/j;)V
     .locals 8
 
     .prologue
@@ -216,24 +216,24 @@
 
     aput-object v0, v4, v7
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 48
     iput p1, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->mIndex:I
 
     .line 49
-    iput p2, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFr:I
+    iput p2, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEB:I
 
     .line 50
-    iput p3, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFs:I
+    iput p3, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEC:I
 
     .line 51
-    iput-object p4, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFx:Lcom/tencent/mm/ui/base/ay;
+    iput-object p4, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEH:Lcom/tencent/mm/ui/base/j;
 
     .line 52
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFr:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEB:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFs:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEC:I
 
     mul-int/2addr v0, v2
 
@@ -246,20 +246,20 @@
 
     mul-int/2addr v0, v2
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFt:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kED:I
 
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFx:Lcom/tencent/mm/ui/base/ay;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEH:Lcom/tencent/mm/ui/base/j;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFx:Lcom/tencent/mm/ui/base/ay;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEH:Lcom/tencent/mm/ui/base/j;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/ay;->getCount()I
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/j;->getCount()I
 
     move-result v0
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFt:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kED:I
 
     sub-int/2addr v0, v2
 
@@ -268,13 +268,13 @@
     if-ge v0, v2, :cond_0
 
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFx:Lcom/tencent/mm/ui/base/ay;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEH:Lcom/tencent/mm/ui/base/j;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/ay;->getCount()I
+    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/j;->getCount()I
 
     move-result v0
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFt:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kED:I
 
     sub-int/2addr v0, v2
 
@@ -293,23 +293,23 @@
 
     const-string/jumbo v2, "get adapter null, new one"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 61
     new-instance v0, Lcom/tencent/mm/ui/base/MMGridPaperGridView$a;
 
     invoke-direct {v0, p0, v1}, Lcom/tencent/mm/ui/base/MMGridPaperGridView$a;-><init>(Lcom/tencent/mm/ui/base/MMGridPaperGridView;B)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFw:Lcom/tencent/mm/ui/base/MMGridPaperGridView$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEG:Lcom/tencent/mm/ui/base/MMGridPaperGridView$a;
 
     .line 62
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFw:Lcom/tencent/mm/ui/base/MMGridPaperGridView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEG:Lcom/tencent/mm/ui/base/MMGridPaperGridView$a;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 65
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFs:I
+    iget v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEC:I
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->setNumColumns(I)V
 
@@ -317,12 +317,12 @@
     invoke-virtual {p0, v7}, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->setColumnWidth(I)V
 
     .line 67
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->fQB:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->hsv:Landroid/widget/AdapterView$OnItemClickListener;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFy:Landroid/widget/AdapterView$OnItemLongClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEI:Landroid/widget/AdapterView$OnItemLongClickListener;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
@@ -351,7 +351,7 @@
 
     .prologue
     .line 82
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFv:Z
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEF:Z
 
     .line 83
     return-void
@@ -362,7 +362,7 @@
 
     .prologue
     .line 78
-    iput p1, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->iFu:I
+    iput p1, p0, Lcom/tencent/mm/ui/base/MMGridPaperGridView;->kEE:I
 
     .line 79
     return-void

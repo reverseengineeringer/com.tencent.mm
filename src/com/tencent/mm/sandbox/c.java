@@ -1,32 +1,32 @@
 package com.tencent.mm.sandbox;
 
 import android.os.Process;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.HashMap;
 import java.util.Map;
 
 public final class c
 {
-  private static c hVN = null;
-  private static Map hVO = new HashMap();
+  private static c jSA = null;
+  private static Map jSB = new HashMap();
   
   public static void c(int paramInt, Object paramObject)
   {
-    t.i("!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE", "regLifeCycle, id=" + paramInt + ", class=%s", new Object[] { paramObject.getClass().getName() });
-    hVO.put(Integer.valueOf(paramInt), Boolean.valueOf(true));
-    t.i("!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE", "regLifeCycle, map size=" + hVO.size());
+    u.i("!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE", "regLifeCycle, id=" + paramInt + ", class=%s", new Object[] { paramObject.getClass().getName() });
+    jSB.put(Integer.valueOf(paramInt), Boolean.valueOf(true));
+    u.i("!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE", "regLifeCycle, map size=" + jSB.size());
   }
   
   public static void d(int paramInt, Object paramObject)
   {
-    t.i("!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE", "unregLifeCycle, id=" + paramInt + ", class=%s", new Object[] { paramObject.getClass().getName() });
-    hVO.remove(Integer.valueOf(paramInt));
-    t.i("!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE", "unregLifeCycle, map size=" + hVO.size());
-    if (hVO.size() == 0)
+    u.i("!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE", "unregLifeCycle, id=" + paramInt + ", class=%s", new Object[] { paramObject.getClass().getName() });
+    jSB.remove(Integer.valueOf(paramInt));
+    u.i("!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE", "unregLifeCycle, map size=" + jSB.size());
+    if (jSB.size() == 0)
     {
       Process.killProcess(Process.myPid());
-      t.w("!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE", "Sandbox exit Now.");
-      t.appenderFlushSync();
+      u.w("!32@/B4Tb64lLpIbcv7LUFwb8ff/9fEzhTkE", "Sandbox exit Now.");
+      u.appenderFlushSync();
     }
   }
 }

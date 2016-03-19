@@ -1,10 +1,10 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.adm;
+import com.tencent.mm.storage.ag;
 
 public final class jc$a
 {
-  public adm aGo;
+  public ag ask;
 }
 
 /* Location:

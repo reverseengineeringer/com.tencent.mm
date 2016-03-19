@@ -1,19 +1,19 @@
 package com.tencent.mm.app;
 
 import android.os.HandlerThread;
-import com.tencent.mm.sdk.h.e;
-import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.i.e;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public final class WorkerProfile$b
 {
-  HandlerThread aoQ;
-  ac handler;
+  HandlerThread amT;
+  aa handler;
   
   public WorkerProfile$b(WorkerProfile paramWorkerProfile, String paramString)
   {
-    aoQ = e.ay(paramString, 10);
-    aoQ.start();
-    handler = new ac(aoQ.getLooper());
+    amT = e.aO(paramString, 10);
+    amT.start();
+    handler = new aa(amT.getLooper());
   }
 }
 

@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field public bUI:I
+.field public clF:I
 
-.field public bUJ:I
+.field public clG:I
 
-.field public bUK:I
+.field public clH:I
 
-.field public bUL:I
+.field public clI:I
 
-.field public bUM:I
+.field public clJ:I
 
 
 # direct methods
@@ -35,19 +35,19 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 361
-    iput p1, p0, Lcom/tencent/mm/permission/b$a;->bUI:I
+    iput p1, p0, Lcom/tencent/mm/permission/b$a;->clF:I
 
     .line 362
-    iput p2, p0, Lcom/tencent/mm/permission/b$a;->bUJ:I
+    iput p2, p0, Lcom/tencent/mm/permission/b$a;->clG:I
 
     .line 363
-    iput p3, p0, Lcom/tencent/mm/permission/b$a;->bUK:I
+    iput p3, p0, Lcom/tencent/mm/permission/b$a;->clH:I
 
     .line 364
-    iput p4, p0, Lcom/tencent/mm/permission/b$a;->bUL:I
+    iput p4, p0, Lcom/tencent/mm/permission/b$a;->clI:I
 
     .line 365
-    iput p5, p0, Lcom/tencent/mm/permission/b$a;->bUM:I
+    iput p5, p0, Lcom/tencent/mm/permission/b$a;->clJ:I
 
     .line 366
     return-void

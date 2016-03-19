@@ -4,7 +4,7 @@ import android.content.res.Resources;
 import android.content.res.XmlResourceParser;
 import android.graphics.drawable.Drawable;
 import android.util.TypedValue;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.InputStream;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -16,22 +16,22 @@ import java.util.zip.ZipFile;
 public class PluginResourceLoader
   extends Resources
 {
-  private HashMap bY;
-  public Resources bjf;
-  private Method bjg;
-  private Method bjh;
-  private final c bji;
+  private HashMap bo;
+  public Resources btH;
+  private Method btI;
+  private Method btJ;
+  private final c btK;
   
   private Drawable a(TypedValue paramTypedValue, int paramInt)
   {
     try
     {
-      Drawable localDrawable1 = (Drawable)bjg.invoke(bjf, new Object[] { paramTypedValue, Integer.valueOf(paramInt) });
+      Drawable localDrawable1 = (Drawable)btI.invoke(btH, new Object[] { paramTypedValue, Integer.valueOf(paramInt) });
       return localDrawable1;
     }
     catch (StackOverflowError localStackOverflowError)
     {
-      t.e("!44@/B4Tb64lLpIJk40rTE9aTumNyErzJXzgXYHaEFsdwLU=", "load drawable StackOverflowError");
+      u.e("!44@/B4Tb64lLpIJk40rTE9aTumNyErzJXzgXYHaEFsdwLU=", "load drawable StackOverflowError");
       try
       {
         if ((string != null) && (string.toString().endsWith(".xml")))
@@ -45,7 +45,7 @@ public class PluginResourceLoader
       catch (Exception localException1)
       {
         Drawable localDrawable2;
-        Iterator localIterator = bY.entrySet().iterator();
+        Iterator localIterator = bo.entrySet().iterator();
         while (localIterator.hasNext())
         {
           localDrawable2 = a((ZipFile)((Map.Entry)localIterator.next()).getValue(), paramTypedValue);
@@ -53,7 +53,7 @@ public class PluginResourceLoader
             return localDrawable2;
           }
         }
-        t.d("!44@/B4Tb64lLpIJk40rTE9aTumNyErzJXzgXYHaEFsdwLU=", "loadFromZipFile null");
+        u.d("!44@/B4Tb64lLpIJk40rTE9aTumNyErzJXzgXYHaEFsdwLU=", "loadFromZipFile null");
         return null;
       }
     }
@@ -89,22 +89,22 @@ public class PluginResourceLoader
     //   31: lor
     //   32: lstore 4
     //   34: aload_0
-    //   35: getfield 134	com/tencent/mm/compatible/loader/PluginResourceLoader:bji	Lcom/tencent/mm/compatible/loader/c;
+    //   35: getfield 134	com/tencent/mm/compatible/loader/PluginResourceLoader:btK	Lcom/tencent/mm/compatible/loader/c;
     //   38: astore 6
     //   40: aload 6
-    //   42: getfield 140	com/tencent/mm/compatible/loader/c:biX	[J
+    //   42: getfield 140	com/tencent/mm/compatible/loader/c:btu	[J
     //   45: aload 6
-    //   47: getfield 143	com/tencent/mm/compatible/loader/c:fi	I
+    //   47: getfield 143	com/tencent/mm/compatible/loader/c:mSize	I
     //   50: lload 4
     //   52: invokestatic 146	com/tencent/mm/compatible/loader/c:a	([JIJ)I
     //   55: istore_3
     //   56: iload_3
     //   57: iflt +16 -> 73
     //   60: aload 6
-    //   62: getfield 150	com/tencent/mm/compatible/loader/c:fh	[Ljava/lang/Object;
+    //   62: getfield 150	com/tencent/mm/compatible/loader/c:eq	[Ljava/lang/Object;
     //   65: iload_3
     //   66: aaload
-    //   67: getstatic 154	com/tencent/mm/compatible/loader/c:fe	Ljava/lang/Object;
+    //   67: getstatic 154	com/tencent/mm/compatible/loader/c:en	Ljava/lang/Object;
     //   70: if_acmpne +56 -> 126
     //   73: aconst_null
     //   74: astore 6
@@ -127,41 +127,41 @@ public class PluginResourceLoader
     //   113: ifnull +86 -> 199
     //   116: ldc 41
     //   118: ldc -89
-    //   120: invokestatic 170	com/tencent/mm/sdk/platformtools/t:v	(Ljava/lang/String;Ljava/lang/String;)V
+    //   120: invokestatic 170	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;)V
     //   123: aload 6
     //   125: areturn
     //   126: aload 6
-    //   128: getfield 150	com/tencent/mm/compatible/loader/c:fh	[Ljava/lang/Object;
+    //   128: getfield 150	com/tencent/mm/compatible/loader/c:eq	[Ljava/lang/Object;
     //   131: iload_3
     //   132: aaload
     //   133: astore 6
     //   135: goto -59 -> 76
     //   138: aload_0
-    //   139: getfield 134	com/tencent/mm/compatible/loader/PluginResourceLoader:bji	Lcom/tencent/mm/compatible/loader/c;
+    //   139: getfield 134	com/tencent/mm/compatible/loader/PluginResourceLoader:btK	Lcom/tencent/mm/compatible/loader/c;
     //   142: astore 6
     //   144: aload 6
-    //   146: getfield 140	com/tencent/mm/compatible/loader/c:biX	[J
+    //   146: getfield 140	com/tencent/mm/compatible/loader/c:btu	[J
     //   149: aload 6
-    //   151: getfield 143	com/tencent/mm/compatible/loader/c:fi	I
+    //   151: getfield 143	com/tencent/mm/compatible/loader/c:mSize	I
     //   154: lload 4
     //   156: invokestatic 146	com/tencent/mm/compatible/loader/c:a	([JIJ)I
     //   159: istore_3
     //   160: iload_3
     //   161: iflt +32 -> 193
     //   164: aload 6
-    //   166: getfield 150	com/tencent/mm/compatible/loader/c:fh	[Ljava/lang/Object;
+    //   166: getfield 150	com/tencent/mm/compatible/loader/c:eq	[Ljava/lang/Object;
     //   169: iload_3
     //   170: aaload
-    //   171: getstatic 154	com/tencent/mm/compatible/loader/c:fe	Ljava/lang/Object;
+    //   171: getstatic 154	com/tencent/mm/compatible/loader/c:en	Ljava/lang/Object;
     //   174: if_acmpeq +19 -> 193
     //   177: aload 6
-    //   179: getfield 150	com/tencent/mm/compatible/loader/c:fh	[Ljava/lang/Object;
+    //   179: getfield 150	com/tencent/mm/compatible/loader/c:eq	[Ljava/lang/Object;
     //   182: iload_3
-    //   183: getstatic 154	com/tencent/mm/compatible/loader/c:fe	Ljava/lang/Object;
+    //   183: getstatic 154	com/tencent/mm/compatible/loader/c:en	Ljava/lang/Object;
     //   186: aastore
     //   187: aload 6
     //   189: iconst_1
-    //   190: putfield 174	com/tencent/mm/compatible/loader/c:ff	Z
+    //   190: putfield 174	com/tencent/mm/compatible/loader/c:eo	Z
     //   193: aconst_null
     //   194: astore 6
     //   196: goto -85 -> 111
@@ -184,7 +184,7 @@ public class PluginResourceLoader
     //   229: aload_1
     //   230: invokevirtual 179	java/util/zip/ZipFile:getName	()Ljava/lang/String;
     //   233: aastore
-    //   234: invokestatic 182	com/tencent/mm/sdk/platformtools/t:v	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   234: invokestatic 182	com/tencent/mm/sdk/platformtools/u:v	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   237: aload 6
     //   239: astore 7
     //   241: aload_1
@@ -232,7 +232,7 @@ public class PluginResourceLoader
     //   318: aload_1
     //   319: ifnull -303 -> 16
     //   322: aload_0
-    //   323: getfield 134	com/tencent/mm/compatible/loader/PluginResourceLoader:bji	Lcom/tencent/mm/compatible/loader/c;
+    //   323: getfield 134	com/tencent/mm/compatible/loader/PluginResourceLoader:btK	Lcom/tencent/mm/compatible/loader/c;
     //   326: lload 4
     //   328: new 156	java/lang/ref/WeakReference
     //   331: dup
@@ -310,7 +310,7 @@ public class PluginResourceLoader
   {
     try
     {
-      paramString1 = (XmlResourceParser)bjh.invoke(bjf, new Object[] { paramString1, Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString2 });
+      paramString1 = (XmlResourceParser)btJ.invoke(btH, new Object[] { paramString1, Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString2 });
       return paramString1;
     }
     catch (Exception paramString1) {}
@@ -325,7 +325,7 @@ public class PluginResourceLoader
     paramTypedValue = string.toString();
     try
     {
-      t.d("!44@/B4Tb64lLpIJk40rTE9aTumNyErzJXzgXYHaEFsdwLU=", "try load stream from zip, entry=%s, file=%s", new Object[] { paramTypedValue, paramZipFile.getName() });
+      u.d("!44@/B4Tb64lLpIJk40rTE9aTumNyErzJXzgXYHaEFsdwLU=", "try load stream from zip, entry=%s, file=%s", new Object[] { paramTypedValue, paramZipFile.getName() });
       paramZipFile = paramZipFile.getInputStream(paramZipFile.getEntry(paramTypedValue));
       return paramZipFile;
     }
@@ -352,7 +352,7 @@ public class PluginResourceLoader
       InputStream localInputStream1 = super.openRawResource(paramInt, paramTypedValue);
       if (localInputStream1 == null)
       {
-        Iterator localIterator = bY.entrySet().iterator();
+        Iterator localIterator = bo.entrySet().iterator();
         localInputStream1 = localInputStream3;
         while (localIterator.hasNext())
         {

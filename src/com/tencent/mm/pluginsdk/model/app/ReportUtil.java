@@ -8,9 +8,9 @@ import android.os.Parcelable;
 import android.os.Parcelable.Creator;
 import com.tencent.mm.sdk.a.a;
 import com.tencent.mm.sdk.a.a.a;
-import com.tencent.mm.sdk.g.ae;
-import com.tencent.mm.sdk.modelmsg.d.a;
-import com.tencent.mm.sdk.modelmsg.d.b;
+import com.tencent.mm.sdk.h.c;
+import com.tencent.mm.sdk.modelmsg.c.a;
+import com.tencent.mm.sdk.modelmsg.c.b;
 
 public final class ReportUtil
 {
@@ -29,51 +29,51 @@ public final class ReportUtil
     if (localObject1 == null) {
       return null;
     }
-    localObject2 = new h();
+    localObject2 = new f();
     field_appId = ((String)localObject1);
-    ay.azk().c((ae)localObject2, new String[0]);
+    aj.aPR().c((c)localObject2, new String[0]);
     localObject1 = new ReportArgs();
-    cjN = field_packageName;
+    cAX = field_packageName;
     errCode = paramInt;
-    Object localObject3 = new d.a();
-    ((d.a)localObject3).n(paramBundle);
-    gMB = gMB;
-    cjK = field_openId;
+    Object localObject3 = new c.a();
+    ((c.a)localObject3).m(paramBundle);
+    iBD = iBD;
+    cAU = field_openId;
     return (ReportArgs)localObject1;
   }
   
   public static void a(Context paramContext, ReportArgs paramReportArgs)
   {
-    Object localObject = new d.b();
+    Object localObject = new c.b();
     errCode = errCode;
-    gMB = gMB;
-    cjK = cjK;
+    iBD = iBD;
+    cAU = cAU;
     Bundle localBundle = new Bundle();
-    ((d.b)localObject).m(localBundle);
-    r.E(localBundle);
+    ((c.b)localObject).l(localBundle);
+    p.H(localBundle);
     localObject = new a.a();
-    hXK = cjN;
-    hXM = localBundle;
+    jUy = cAX;
+    jUA = localBundle;
     a.a(paramContext, (a.a)localObject);
   }
   
   public static class ReportArgs
     implements Parcelable
   {
-    public static final Parcelable.Creator CREATOR = new at();
-    public String cjK;
-    public String cjN;
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+    public String cAU;
+    public String cAX;
     public int errCode;
-    public String gMB;
+    public String iBD;
     
     public ReportArgs() {}
     
     private ReportArgs(Parcel paramParcel)
     {
-      cjN = paramParcel.readString();
+      cAX = paramParcel.readString();
       errCode = paramParcel.readInt();
-      gMB = paramParcel.readString();
-      cjK = paramParcel.readString();
+      iBD = paramParcel.readString();
+      cAU = paramParcel.readString();
     }
     
     public int describeContents()
@@ -83,10 +83,10 @@ public final class ReportUtil
     
     public void writeToParcel(Parcel paramParcel, int paramInt)
     {
-      paramParcel.writeString(cjN);
+      paramParcel.writeString(cAX);
       paramParcel.writeInt(errCode);
-      paramParcel.writeString(gMB);
-      paramParcel.writeString(cjK);
+      paramParcel.writeString(iBD);
+      paramParcel.writeString(cAU);
     }
   }
 }

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$aw
-  extends a.c
+  extends a.e
 {
   public a$aw()
   {
-    super("jumpWCMall", "jump_wcmall", 51, true);
+    super("getNetworkType", "network_type", 16, false);
   }
 }
 

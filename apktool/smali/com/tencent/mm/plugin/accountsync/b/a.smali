@@ -4,11 +4,11 @@
 
 
 # static fields
-.field public static bXk:Lcom/tencent/mm/plugin/accountsync/b/a;
+.field public static cop:Lcom/tencent/mm/plugin/accountsync/b/a;
 
 
 # instance fields
-.field private bXl:Ljava/util/Map;
+.field private coq:Ljava/util/Map;
 
 
 # direct methods
@@ -21,7 +21,7 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/plugin/accountsync/b/a;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/plugin/accountsync/b/a;->bXk:Lcom/tencent/mm/plugin/accountsync/b/a;
+    sput-object v0, Lcom/tencent/mm/plugin/accountsync/b/a;->cop:Lcom/tencent/mm/plugin/accountsync/b/a;
 
     return-void
 .end method
@@ -38,7 +38,7 @@
 
 
 # virtual methods
-.method public final aW(Landroid/content/Context;)Ljava/util/Map;
+.method public final bm(Landroid/content/Context;)Ljava/util/Map;
     .locals 7
 
     .prologue
@@ -59,12 +59,12 @@
     move-result-object v0
 
     .line 28
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->g(Ljava/io/InputStream;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->g(Ljava/io/InputStream;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 29
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -82,7 +82,7 @@
 
     const/4 v3, 0x0
 
-    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/p;->z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {v0, v1, v3}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v5
 
@@ -101,7 +101,7 @@
 
     const-string/jumbo v1, "values null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v2
 
@@ -110,7 +110,7 @@
 
     .line 38
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->bXl:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->coq:Ljava/util/Map;
 
     if-nez v0, :cond_4
 
@@ -119,7 +119,7 @@
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->bXl:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->coq:Ljava/util/Map;
 
     move v3, v4
 
@@ -204,20 +204,20 @@
     check-cast v1, Ljava/lang/String;
 
     .line 58
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_3
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v6
 
     if-nez v6, :cond_3
 
     .line 59
-    iget-object v6, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->bXl:Ljava/util/Map;
+    iget-object v6, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->coq:Ljava/util/Map;
 
     invoke-interface {v6, v0, v1}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -231,7 +231,7 @@
 
     .line 41
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->bXl:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->coq:Ljava/util/Map;
 
     goto/16 :goto_0
 
@@ -245,7 +245,7 @@
 
     .line 63
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->bXl:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/accountsync/b/a;->coq:Ljava/util/Map;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -270,7 +270,7 @@
 
     aput-object v0, v5, v4
 
-    invoke-static {v1, v3, v5}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v2
 

@@ -1,30 +1,33 @@
 package com.tencent.mm.d.a;
 
-import android.database.Cursor;
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
+import org.json.JSONArray;
 
 public final class bs
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awI = new a();
-  public b awJ = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auZ = new a();
+  public b ava = new b();
   
   public bs()
   {
-    id = "ExtCursorForTimeLine";
-    hXT = atO;
+    id = "ExDeviceGetDeviceInfos";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String awK;
+    public String auQ;
+    public Context context;
   }
   
   public static final class b
   {
-    public Cursor cursor;
+    public boolean auR;
+    public JSONArray avb;
   }
 }
 

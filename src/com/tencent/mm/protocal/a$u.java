@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$u
-  extends a.c
+  extends a.e
 {
   public a$u()
   {
-    super("downloadImage", "downloadImage", 106, true);
+    super("clearLocalData", "clearLocalData", 181, false);
   }
 }
 

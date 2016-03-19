@@ -1,21 +1,15 @@
 package com.tencent.mm.ui.tools.gridviewheaders;
 
-import android.database.DataSetObserver;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ListAdapter;
 
-final class e
-  extends DataSetObserver
+public abstract interface e
+  extends ListAdapter
 {
-  e(GridHeadersGridView paramGridHeadersGridView) {}
+  public abstract View a(int paramInt, View paramView, ViewGroup paramViewGroup);
   
-  public final void onChanged()
-  {
-    GridHeadersGridView.a(jwB);
-  }
-  
-  public final void onInvalidated()
-  {
-    GridHeadersGridView.a(jwB);
-  }
+  public abstract long fO(int paramInt);
 }
 
 /* Location:

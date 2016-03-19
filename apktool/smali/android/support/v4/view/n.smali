@@ -14,7 +14,7 @@
 
 
 # static fields
-.field static final fA:Landroid/support/v4/view/n$c;
+.field static final fx:Landroid/support/v4/view/n$c;
 
 
 # direct methods
@@ -22,131 +22,43 @@
     .locals 2
 
     .prologue
-    .line 108
+    .line 58
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    const/4 v1, 0x5
+    const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
 
-    .line 109
+    .line 59
     new-instance v0, Landroid/support/v4/view/n$b;
 
     invoke-direct {v0}, Landroid/support/v4/view/n$b;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/n;->fA:Landroid/support/v4/view/n$c;
+    sput-object v0, Landroid/support/v4/view/n;->fx:Landroid/support/v4/view/n$c;
 
-    .line 113
+    .line 63
     :goto_0
     return-void
 
-    .line 111
+    .line 61
     :cond_0
     new-instance v0, Landroid/support/v4/view/n$a;
 
     invoke-direct {v0}, Landroid/support/v4/view/n$a;-><init>()V
 
-    sput-object v0, Landroid/support/v4/view/n;->fA:Landroid/support/v4/view/n$c;
+    sput-object v0, Landroid/support/v4/view/n;->fx:Landroid/support/v4/view/n$c;
 
     goto :goto_0
 .end method
 
-.method public static a(Landroid/view/MotionEvent;I)I
+.method public static a(Landroid/view/ViewConfiguration;)I
     .locals 1
 
     .prologue
-    .line 201
-    sget-object v0, Landroid/support/v4/view/n;->fA:Landroid/support/v4/view/n$c;
+    .line 73
+    sget-object v0, Landroid/support/v4/view/n;->fx:Landroid/support/v4/view/n$c;
 
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/n$c;->a(Landroid/view/MotionEvent;I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static b(Landroid/view/MotionEvent;I)I
-    .locals 1
-
-    .prologue
-    .line 210
-    sget-object v0, Landroid/support/v4/view/n;->fA:Landroid/support/v4/view/n$c;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/n$c;->b(Landroid/view/MotionEvent;I)I
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static c(Landroid/view/MotionEvent;I)F
-    .locals 1
-
-    .prologue
-    .line 219
-    sget-object v0, Landroid/support/v4/view/n;->fA:Landroid/support/v4/view/n$c;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/n$c;->c(Landroid/view/MotionEvent;I)F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static d(Landroid/view/MotionEvent;I)F
-    .locals 1
-
-    .prologue
-    .line 228
-    sget-object v0, Landroid/support/v4/view/n;->fA:Landroid/support/v4/view/n$c;
-
-    invoke-interface {v0, p0, p1}, Landroid/support/v4/view/n$c;->d(Landroid/view/MotionEvent;I)F
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public static d(Landroid/view/MotionEvent;)I
-    .locals 1
-
-    .prologue
-    .line 183
-    invoke-virtual {p0}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    and-int/lit16 v0, v0, 0xff
-
-    return v0
-.end method
-
-.method public static e(Landroid/view/MotionEvent;)I
-    .locals 2
-
-    .prologue
-    .line 191
-    invoke-virtual {p0}, Landroid/view/MotionEvent;->getAction()I
-
-    move-result v0
-
-    const v1, 0xff00
-
-    and-int/2addr v0, v1
-
-    shr-int/lit8 v0, v0, 0x8
-
-    return v0
-.end method
-
-.method public static f(Landroid/view/MotionEvent;)I
-    .locals 1
-
-    .prologue
-    .line 236
-    sget-object v0, Landroid/support/v4/view/n;->fA:Landroid/support/v4/view/n$c;
-
-    invoke-interface {v0, p0}, Landroid/support/v4/view/n$c;->f(Landroid/view/MotionEvent;)I
+    invoke-interface {v0, p0}, Landroid/support/v4/view/n$c;->a(Landroid/view/ViewConfiguration;)I
 
     move-result v0
 

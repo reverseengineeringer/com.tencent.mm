@@ -18,19 +18,19 @@
 
 
 # instance fields
-.field public bTD:Ljava/util/HashSet;
+.field private ckS:J
 
-.field private bTW:J
+.field public ckT:Ljava/util/HashMap;
 
-.field public bTX:Ljava/util/HashMap;
+.field public ckU:Ljava/util/HashSet;
 
-.field public bTY:Ljava/util/HashSet;
+.field ckV:J
 
-.field bTZ:J
+.field public ckW:Z
 
-.field public bUa:Z
+.field private ckX:Lcom/tencent/mm/sdk/platformtools/aa;
 
-.field private bUb:Lcom/tencent/mm/sdk/platformtools/ac;
+.field public ckz:Ljava/util/HashSet;
 
 
 # direct methods
@@ -56,28 +56,28 @@
     .line 32
     const-wide/16 v0, -0x1
 
-    iput-wide v0, p0, Lcom/tencent/mm/performance/d/a;->bTW:J
+    iput-wide v0, p0, Lcom/tencent/mm/performance/d/a;->ckS:J
 
     .line 53
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/performance/d/a;->bTZ:J
+    iput-wide v0, p0, Lcom/tencent/mm/performance/d/a;->ckV:J
 
     .line 65
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/performance/d/a;->bUa:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/performance/d/a;->ckW:Z
 
     .line 67
-    new-instance v0, Lcom/tencent/mm/performance/d/b;
+    new-instance v0, Lcom/tencent/mm/performance/d/a$1;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/performance/d/b;-><init>(Lcom/tencent/mm/performance/d/a;Landroid/os/Looper;)V
+    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/performance/d/a$1;-><init>(Lcom/tencent/mm/performance/d/a;Landroid/os/Looper;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/performance/d/a;->bUb:Lcom/tencent/mm/sdk/platformtools/ac;
+    iput-object v0, p0, Lcom/tencent/mm/performance/d/a;->ckX:Lcom/tencent/mm/sdk/platformtools/aa;
 
     .line 95
     return-void
@@ -88,13 +88,13 @@
 
     .prologue
     .line 26
-    iget-wide v0, p0, Lcom/tencent/mm/performance/d/a;->bTZ:J
+    iget-wide v0, p0, Lcom/tencent/mm/performance/d/a;->ckV:J
 
     const-wide/16 v2, 0x1
 
     add-long/2addr v2, v0
 
-    iput-wide v2, p0, Lcom/tencent/mm/performance/d/a;->bTZ:J
+    iput-wide v2, p0, Lcom/tencent/mm/performance/d/a;->ckV:J
 
     return-wide v0
 .end method
@@ -104,7 +104,7 @@
 
     .prologue
     .line 26
-    iput-wide p1, p0, Lcom/tencent/mm/performance/d/a;->bTW:J
+    iput-wide p1, p0, Lcom/tencent/mm/performance/d/a;->ckS:J
 
     return-wide p1
 .end method
@@ -130,13 +130,13 @@
     instance-of v1, v0, Landroid/app/Activity;
 
     .line 158
-    iget-object v2, p0, Lcom/tencent/mm/performance/d/a;->bTD:Ljava/util/HashSet;
+    iget-object v2, p0, Lcom/tencent/mm/performance/d/a;->ckz:Ljava/util/HashSet;
 
     monitor-enter v2
 
     .line 159
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->bTD:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->ckz:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -186,7 +186,7 @@
 
     .prologue
     .line 26
-    iget-wide v0, p0, Lcom/tencent/mm/performance/d/a;->bTZ:J
+    iget-wide v0, p0, Lcom/tencent/mm/performance/d/a;->ckV:J
 
     return-wide v0
 .end method
@@ -198,14 +198,14 @@
     .line 26
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/performance/d/a;->bTZ:J
+    iput-wide v0, p0, Lcom/tencent/mm/performance/d/a;->ckV:J
 
     return-wide v0
 .end method
 
 
 # virtual methods
-.method public final Dk()Ljava/lang/String;
+.method public final Fs()Ljava/lang/String;
     .locals 1
 
     .prologue
@@ -215,7 +215,7 @@
     return-object v0
 .end method
 
-.method public final Dl()V
+.method public final Ft()V
     .locals 15
 
     .prologue
@@ -226,11 +226,11 @@
     const/4 v2, 0x1
 
     .line 213
-    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->bTY:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->ckU:Ljava/util/HashSet;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->bTY:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->ckU:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
 
@@ -254,7 +254,7 @@
 
     .line 220
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->bTX:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->ckT:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->isEmpty()Z
 
@@ -263,7 +263,7 @@
     if-nez v0, :cond_5
 
     .line 224
-    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->bTX:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->ckT:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->keySet()Ljava/util/Set;
 
@@ -338,7 +338,7 @@
     check-cast v0, Ljava/lang/ref/WeakReference;
 
     .line 236
-    iget-object v5, p0, Lcom/tencent/mm/performance/d/a;->bTX:Ljava/util/HashMap;
+    iget-object v5, p0, Lcom/tencent/mm/performance/d/a;->ckT:Ljava/util/HashMap;
 
     invoke-virtual {v5, v0}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -357,7 +357,7 @@
     .line 241
     :cond_5
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->bTY:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->ckU:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->iterator()Ljava/util/Iterator;
 
@@ -381,10 +381,10 @@
     check-cast v0, Lcom/tencent/mm/performance/d/a$a;
 
     .line 249
-    iget-wide v9, v0, Lcom/tencent/mm/performance/d/a$a;->bUg:J
+    iget-wide v9, v0, Lcom/tencent/mm/performance/d/a$a;->clc:J
 
     .line 251
-    iget-object v1, v0, Lcom/tencent/mm/performance/d/a$a;->bUe:Ljava/lang/ref/WeakReference;
+    iget-object v1, v0, Lcom/tencent/mm/performance/d/a$a;->cla:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -393,7 +393,7 @@
     if-nez v1, :cond_b
 
     .line 253
-    iget-object v1, v0, Lcom/tencent/mm/performance/d/a$a;->bUd:Ljava/lang/ref/WeakReference;
+    iget-object v1, v0, Lcom/tencent/mm/performance/d/a$a;->ckZ:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -418,7 +418,7 @@
 
     .line 262
     :cond_7
-    iget-wide v11, p0, Lcom/tencent/mm/performance/d/a;->bTZ:J
+    iget-wide v11, p0, Lcom/tencent/mm/performance/d/a;->ckV:J
 
     sub-long v9, v11, v9
 
@@ -429,7 +429,7 @@
     if-lez v1, :cond_11
 
     .line 264
-    iget-wide v9, v0, Lcom/tencent/mm/performance/d/a$a;->bUf:J
+    iget-wide v9, v0, Lcom/tencent/mm/performance/d/a$a;->clb:J
 
     sub-long v9, v6, v9
 
@@ -441,9 +441,9 @@
     if-ltz v1, :cond_11
 
     .line 267
-    iget-object v1, p0, Lcom/tencent/mm/performance/d/a;->bTX:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/performance/d/a;->ckT:Ljava/util/HashMap;
 
-    iget-object v9, v0, Lcom/tencent/mm/performance/d/a$a;->bUd:Ljava/lang/ref/WeakReference;
+    iget-object v9, v0, Lcom/tencent/mm/performance/d/a$a;->ckZ:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1, v9}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -452,9 +452,9 @@
     if-eqz v1, :cond_9
 
     .line 268
-    iget-object v1, p0, Lcom/tencent/mm/performance/d/a;->bTX:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/performance/d/a;->ckT:Ljava/util/HashMap;
 
-    iget-object v9, v0, Lcom/tencent/mm/performance/d/a$a;->bUd:Ljava/lang/ref/WeakReference;
+    iget-object v9, v0, Lcom/tencent/mm/performance/d/a$a;->ckZ:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -472,7 +472,7 @@
     if-lt v1, v9, :cond_8
 
     .line 271
-    iget-object v1, v0, Lcom/tencent/mm/performance/d/a$a;->bUd:Ljava/lang/ref/WeakReference;
+    iget-object v1, v0, Lcom/tencent/mm/performance/d/a$a;->ckZ:Ljava/lang/ref/WeakReference;
 
     invoke-direct {p0, v1}, Lcom/tencent/mm/performance/d/a;->a(Ljava/lang/ref/WeakReference;)V
 
@@ -485,7 +485,7 @@
 
     invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v10, v0, Lcom/tencent/mm/performance/d/a$a;->bUd:Ljava/lang/ref/WeakReference;
+    iget-object v10, v0, Lcom/tencent/mm/performance/d/a$a;->ckZ:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v10}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -499,7 +499,7 @@
 
     move-result-object v9
 
-    invoke-static {v1, v9}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v9}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 274
     if-nez v4, :cond_10
@@ -519,9 +519,9 @@
 
     .line 280
     :cond_8
-    iget-object v3, p0, Lcom/tencent/mm/performance/d/a;->bTX:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/tencent/mm/performance/d/a;->ckT:Ljava/util/HashMap;
 
-    iget-object v0, v0, Lcom/tencent/mm/performance/d/a$a;->bUd:Ljava/lang/ref/WeakReference;
+    iget-object v0, v0, Lcom/tencent/mm/performance/d/a$a;->ckZ:Ljava/lang/ref/WeakReference;
 
     add-int/lit8 v1, v1, 0x1
 
@@ -538,9 +538,9 @@
 
     .line 284
     :cond_9
-    iget-wide v9, v0, Lcom/tencent/mm/performance/d/a$a;->bUf:J
+    iget-wide v9, v0, Lcom/tencent/mm/performance/d/a$a;->clb:J
 
-    iget-wide v11, p0, Lcom/tencent/mm/performance/d/a;->bTW:J
+    iget-wide v11, p0, Lcom/tencent/mm/performance/d/a;->ckS:J
 
     const-wide/16 v13, 0x1388
 
@@ -551,9 +551,9 @@
     if-gez v1, :cond_a
 
     .line 285
-    iget-object v1, p0, Lcom/tencent/mm/performance/d/a;->bTX:Ljava/util/HashMap;
+    iget-object v1, p0, Lcom/tencent/mm/performance/d/a;->ckT:Ljava/util/HashMap;
 
-    iget-object v0, v0, Lcom/tencent/mm/performance/d/a$a;->bUd:Ljava/lang/ref/WeakReference;
+    iget-object v0, v0, Lcom/tencent/mm/performance/d/a$a;->ckZ:Ljava/lang/ref/WeakReference;
 
     const/4 v9, 0x1
 
@@ -603,7 +603,7 @@
     check-cast v0, Lcom/tencent/mm/performance/d/a$a;
 
     .line 300
-    iget-object v2, p0, Lcom/tencent/mm/performance/d/a;->bTY:Ljava/util/HashSet;
+    iget-object v2, p0, Lcom/tencent/mm/performance/d/a;->ckU:Ljava/util/HashSet;
 
     invoke-virtual {v2, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
@@ -611,7 +611,7 @@
 
     .line 304
     :cond_d
-    iget-boolean v0, p0, Lcom/tencent/mm/performance/d/a;->bUa:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/performance/d/a;->ckW:Z
 
     if-eqz v0, :cond_e
 
@@ -619,11 +619,11 @@
     if-eqz v3, :cond_f
 
     .line 306
-    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->bUb:Lcom/tencent/mm/sdk/platformtools/ac;
+    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->ckX:Lcom/tencent/mm/sdk/platformtools/aa;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessage(I)Z
 
     .line 310
     :cond_e
@@ -636,7 +636,7 @@
     :cond_f
     if-eqz v5, :cond_e
 
-    iget-wide v0, p0, Lcom/tencent/mm/performance/d/a;->bTW:J
+    iget-wide v0, p0, Lcom/tencent/mm/performance/d/a;->ckS:J
 
     sub-long v0, v6, v0
 
@@ -647,11 +647,11 @@
     if-lez v0, :cond_e
 
     .line 308
-    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->bUb:Lcom/tencent/mm/sdk/platformtools/ac;
+    iget-object v0, p0, Lcom/tencent/mm/performance/d/a;->ckX:Lcom/tencent/mm/sdk/platformtools/aa;
 
     const/4 v1, 0x1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessage(I)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessage(I)Z
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 

@@ -1,71 +1,39 @@
-.class final Lcom/tencent/mm/ui/u;
+.class public final Lcom/tencent/mm/ui/u;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
-
-
-# instance fields
-.field final synthetic imy:Lcom/tencent/mm/ui/ExposeWithProofUI;
-
-.field final synthetic imz:Lcom/tencent/mm/modelsimple/o;
-
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/ExposeWithProofUI;Lcom/tencent/mm/modelsimple/o;)V
-    .locals 0
-
-    .prologue
-    .line 555
-    iput-object p1, p0, Lcom/tencent/mm/ui/u;->imy:Lcom/tencent/mm/ui/ExposeWithProofUI;
-
-    iput-object p2, p0, Lcom/tencent/mm/ui/u;->imz:Lcom/tencent/mm/modelsimple/o;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
+.method public static ae(ILjava/lang/String;)V
     .locals 2
 
     .prologue
-    .line 557
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/u;->imz:Lcom/tencent/mm/modelsimple/o;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/q/l;->c(Lcom/tencent/mm/q/j;)V
-
-    .line 558
-    iget-object v0, p0, Lcom/tencent/mm/ui/u;->imy:Lcom/tencent/mm/ui/ExposeWithProofUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/ExposeWithProofUI;->e(Lcom/tencent/mm/ui/ExposeWithProofUI;)Landroid/app/Dialog;
-
-    move-result-object v0
+    .line 10
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     if-eqz v0, :cond_0
 
-    .line 559
-    iget-object v0, p0, Lcom/tencent/mm/ui/u;->imy:Lcom/tencent/mm/ui/ExposeWithProofUI;
+    .line 11
+    new-instance v0, Lcom/tencent/mm/d/a/mw;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/ExposeWithProofUI;->e(Lcom/tencent/mm/ui/ExposeWithProofUI;)Landroid/app/Dialog;
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/mw;-><init>()V
 
-    move-result-object v0
+    .line 12
+    iget-object v1, v0, Lcom/tencent/mm/d/a/mw;->aJl:Lcom/tencent/mm/d/a/mw$a;
 
-    invoke-virtual {v0}, Landroid/app/Dialog;->cancel()V
+    iput-object p1, v1, Lcom/tencent/mm/d/a/mw$a;->className:Ljava/lang/String;
 
-    .line 560
-    iget-object v0, p0, Lcom/tencent/mm/ui/u;->imy:Lcom/tencent/mm/ui/ExposeWithProofUI;
+    .line 13
+    iget-object v1, v0, Lcom/tencent/mm/d/a/mw;->aJl:Lcom/tencent/mm/d/a/mw$a;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/ExposeWithProofUI;->f(Lcom/tencent/mm/ui/ExposeWithProofUI;)Landroid/app/Dialog;
+    iput p0, v1, Lcom/tencent/mm/d/a/mw$a;->aJm:I
 
-    .line 562
+    .line 14
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 16
     :cond_0
     return-void
 .end method

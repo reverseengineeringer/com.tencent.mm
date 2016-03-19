@@ -4,31 +4,31 @@
 
 
 # instance fields
-.field private cMm:Ljava/lang/String;
-
-.field private cMn:I
-
-.field private cMo:I
-
-.field private cMs:I
-
-.field private cMt:I
-
-.field private cMv:Landroid/view/ViewGroup;
-
 .field private context:Landroid/content/Context;
+
+.field private dlN:Ljava/lang/String;
+
+.field private dlO:I
+
+.field private dlP:I
+
+.field private dlT:I
+
+.field private dlU:I
+
+.field private dlW:Landroid/view/ViewGroup;
 
 .field private drawable:Landroid/graphics/drawable/Drawable;
 
 .field private height:I
 
-.field private iLW:I
+.field private kLg:I
 
-.field private iLX:Landroid/widget/ImageView;
+.field private kLh:Landroid/widget/ImageView;
 
-.field private iLY:Landroid/widget/TextView;
+.field private kLi:Landroid/widget/TextView;
 
-.field private iLZ:Ljava/lang/String;
+.field private kLj:Ljava/lang/String;
 
 
 # direct methods
@@ -61,30 +61,30 @@
     .line 24
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMm:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlN:Ljava/lang/String;
 
     .line 25
-    iput v2, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMn:I
+    iput v2, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlO:I
 
     .line 26
-    iput v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMo:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlP:I
 
     .line 27
-    iput v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->iLW:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->kLg:I
 
     .line 28
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMs:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlT:I
 
     .line 29
-    iput v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMt:I
+    iput v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlU:I
 
     .line 30
-    iput-object v3, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->iLX:Landroid/widget/ImageView;
+    iput-object v3, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->kLh:Landroid/widget/ImageView;
 
     .line 31
-    iput-object v3, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMv:Landroid/view/ViewGroup;
+    iput-object v3, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlW:Landroid/view/ViewGroup;
 
     .line 35
     iput v2, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->height:I
@@ -92,13 +92,13 @@
     .line 38
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->iLZ:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->kLj:Ljava/lang/String;
 
     .line 50
     iput-object p1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->context:Landroid/content/Context;
 
     .line 52
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference:I
+    const v0, 0x7f0a05d6
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->setLayoutResource(I)V
 
@@ -122,7 +122,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 105
-    sget v0, Lcom/tencent/mm/a$i;->image_iv:I
+    const v0, 0x7f07069b
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -149,7 +149,7 @@
     .line 119
     :cond_0
     :goto_0
-    sget v0, Lcom/tencent/mm/a$i;->mm_preference_ll_id:I
+    const v0, 0x7f07069a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -169,7 +169,7 @@
 
     .line 123
     :cond_1
-    sget v0, Lcom/tencent/mm/a$i;->text_tv_one:I
+    const v0, 0x7f07069c
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -181,26 +181,26 @@
     if-eqz v0, :cond_2
 
     .line 125
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMo:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlP:I
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 126
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMm:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlN:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 127
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMn:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlO:I
 
     if-eq v1, v2, :cond_2
 
     .line 128
     iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->context:Landroid/content/Context;
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMn:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlO:I
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/ao/a;->u(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v1, v2}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
@@ -208,7 +208,7 @@
 
     .line 132
     :cond_2
-    sget v0, Lcom/tencent/mm/a$i;->text_prospect:I
+    const v0, 0x7f0710dc
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -216,17 +216,17 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->iLX:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->kLh:Landroid/widget/ImageView;
 
     .line 133
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->iLX:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->kLh:Landroid/widget/ImageView;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->iLW:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->kLg:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 136
-    sget v0, Lcom/tencent/mm/a$i;->right_rl:I
+    const v0, 0x7f0706ef
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -234,12 +234,12 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMv:Landroid/view/ViewGroup;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlW:Landroid/view/ViewGroup;
 
     .line 137
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMv:Landroid/view/ViewGroup;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlW:Landroid/view/ViewGroup;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->cMs:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->dlT:I
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setVisibility(I)V
 
@@ -252,10 +252,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->iLY:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->kLi:Landroid/widget/TextView;
 
     .line 142
-    sget v0, Lcom/tencent/mm/a$i;->text_tv_right:I
+    const v0, 0x7f0710f9
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -264,9 +264,9 @@
     check-cast v0, Landroid/widget/TextView;
 
     .line 143
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->iLZ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->kLj:Ljava/lang/String;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -281,12 +281,12 @@
 
     .line 111
     :cond_3
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lm:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kr:I
 
     if-eqz v1, :cond_4
 
     .line 112
-    iget v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->lm:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kr:I
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -306,7 +306,7 @@
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 147
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->iLZ:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/IconMsgPreference;->kLj:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -323,7 +323,7 @@
     move-result-object v1
 
     .line 60
-    sget v0, Lcom/tencent/mm/a$i;->content:I
+    const v0, 0x7f0700c1
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -337,7 +337,7 @@
     .line 63
     iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    sget v3, Lcom/tencent/mm/a$k;->mm_preference_icon_msg:I
+    const v3, 0x7f0a05e4
 
     invoke-static {v2, v3, v0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
@@ -346,7 +346,7 @@
 
     move-result-object v0
 
-    sget v2, Lcom/tencent/mm/a$g;->SmallListHeight:I
+    const v2, 0x7f0501e4
 
     invoke-virtual {v0, v2}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 

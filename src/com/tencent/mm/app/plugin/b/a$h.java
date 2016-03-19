@@ -1,39 +1,37 @@
 package com.tencent.mm.app.plugin.b;
 
-import com.tencent.mm.d.a.cd;
-import com.tencent.mm.d.a.cd.a;
-import com.tencent.mm.modelvoice.ad;
-import com.tencent.mm.modelvoice.am;
-import com.tencent.mm.modelvoice.x;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.d.a.du;
+import com.tencent.mm.d.a.du.a;
+import com.tencent.mm.modelvoice.m;
+import com.tencent.mm.modelvoice.p;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class a$h
-  extends e
+  extends c
 {
   public a$h()
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(b paramb)
   {
-    if (!(paramd instanceof cd))
+    if (!(paramb instanceof du))
     {
-      t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+      com.tencent.mm.sdk.platformtools.u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
       return false;
     }
-    paramd = (cd)paramd;
-    if (x.Cp() == null)
+    paramb = (du)paramb;
+    if (m.Ew() == null)
     {
-      t.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "SubCoreVoice.getVoiceStg()" + bn.aFH());
-      axB.apy = "";
+      com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "SubCoreVoice.getVoiceStg()" + ay.aVJ());
+      axI.anC = "";
     }
-    ad localad = x.Cp().dG((int)axA.axb);
-    if (localad == null) {}
-    for (axB.apy = "";; axB.apy = apy) {
+    p localp = m.Ew().ee((int)axH.avg);
+    if (localp == null) {}
+    for (axI.anC = "";; axI.anC = anC) {
       return true;
     }
   }

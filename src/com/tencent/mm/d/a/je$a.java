@@ -1,10 +1,8 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.adm;
-
 public final class je$a
 {
-  public adm aGo;
+  public String username;
 }
 
 /* Location:

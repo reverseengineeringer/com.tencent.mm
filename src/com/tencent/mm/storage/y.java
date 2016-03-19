@@ -1,88 +1,97 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.Map;
 
 public final class y
 {
-  public String avf = "-1";
-  public String bPd;
-  public boolean bPe;
-  public String ieZ = "";
-  public long time;
+  public String apb;
+  public String aut;
+  public String auy;
+  public String ayA;
+  public long bQd;
+  public int bUE;
+  public int bcF;
+  public String bcG = "";
+  public String cfR;
+  public long cfW;
+  public String id;
+  public String jvr;
+  public String kfA;
+  public String kfB;
+  public String kfC;
+  public boolean kfD = true;
+  public int kfv;
+  public int kfw;
+  public int kfx;
+  public int kfy;
+  public String kfz = "";
   
-  private y(String paramString)
+  public static y a(Map paramMap, String paramString1, String paramString2, String paramString3)
   {
-    if (bn.iW(paramString))
-    {
-      t.e("!44@/B4Tb64lLpKW6XSoHkFWUDGIRzi24Rmyw+IMteJ3XT4=", "EmojiContent parse failed. content is null.");
-      return;
+    if (paramMap == null) {
+      return null;
     }
-    for (;;)
+    y localy = new y();
+    kfz = paramString2;
+    apb = paramString1;
+    id = ((String)paramMap.get(".msg.emoji.$idbuffer"));
+    cfR = ((String)paramMap.get(".msg.emoji.$fromusername"));
+    paramString1 = (String)paramMap.get(".msg.emoji.$androidmd5");
+    aut = paramString1;
+    if (paramString1 == null) {
+      aut = ((String)paramMap.get(".msg.emoji.$md5"));
+    }
+    if (!ay.kz(aut)) {
+      aut = aut.toLowerCase();
+    }
+    try
     {
-      try
+      kfv = Integer.valueOf((String)paramMap.get(".msg.emoji.$type")).intValue();
+      if (paramMap.get(".msg.emoji.$androidlen") != null) {
+        kfw = Integer.valueOf((String)paramMap.get(".msg.emoji.$androidlen")).intValue();
+      }
+      for (;;)
       {
-        if (paramString.endsWith("\n"))
-        {
-          paramString = paramString.substring(0, paramString.length() - 1);
-          paramString = paramString.split(":", 5);
-          int i = j;
-          if (paramString.length == 4)
-          {
-            i = j;
-            if (k.yx(paramString[0])) {
-              i = 1;
-            }
-          }
-          if (paramString.length > i) {
-            bPd = paramString[i];
-          }
-          if (paramString.length > i + 1) {
-            time = Long.parseLong(paramString[(i + 1)]);
-          }
-          if (paramString.length > i + 2) {
-            bPe = paramString[(i + 2)].equals("1");
-          }
-          if (paramString.length > i + 3) {
-            avf = paramString[(i + 3)];
-          }
-          if (paramString.length <= i + 4) {
-            break;
-          }
-          ieZ = paramString[(i + 4)].replace("*#*", ":");
-          return;
+        if (paramMap.get(".msg.gameext.$type") != null) {
+          kfx = Integer.valueOf((String)paramMap.get(".msg.gameext.$type")).intValue();
+        }
+        if (paramMap.get(".msg.gameext.$content") != null) {
+          kfy = Integer.valueOf((String)paramMap.get(".msg.gameext.$content")).intValue();
+        }
+        if (paramMap.get(".msg.emoji.$productid") != null) {
+          auy = ((String)paramMap.get(".msg.emoji.$productid"));
+        }
+        if (paramMap.get(".msg.emoji.$cdnurl") != null) {
+          kfA = ((String)paramMap.get(".msg.emoji.$cdnurl"));
+        }
+        if (paramMap.get(".msg.emoji.$designerid") != null) {
+          kfB = ((String)paramMap.get(".msg.emoji.$designerid"));
+        }
+        if (paramMap.get(".msg.emoji.$thumburl") != null) {
+          ayA = ((String)paramMap.get(".msg.emoji.$thumburl"));
+        }
+        if (paramMap.get(".msg.emoji.$encrypturl") != null) {
+          kfC = ((String)paramMap.get(".msg.emoji.$encrypturl"));
+        }
+        if (paramMap.get(".msg.emoji.$aeskey") != null) {
+          jvr = ((String)paramMap.get(".msg.emoji.$aeskey"));
+        }
+        if (!ay.kz(paramString3)) {
+          bcG = paramString3;
+        }
+        u.d("!44@/B4Tb64lLpKW6XSoHkFWUALbfQePvuhUA6eVCF+4bVs=", "parserEmojiXml id:%s  md5:%s  type:%d  len:%d  gameType:%d  gameContent:%d  productId:%s  cdnUrl:%s designerid:%s thumburl:%s encryptrul:%s", new Object[] { id, aut, Integer.valueOf(kfv), Integer.valueOf(kfw), Integer.valueOf(kfx), Integer.valueOf(kfy), auy, kfA, kfB, ayA, kfC });
+        return localy;
+        if (paramMap.get(".msg.emoji.$len") != null) {
+          kfw = Integer.valueOf((String)paramMap.get(".msg.emoji.$len")).intValue();
         }
       }
-      catch (Exception paramString)
-      {
-        time = 0L;
-        t.e("!44@/B4Tb64lLpKW6XSoHkFWUDGIRzi24Rmyw+IMteJ3XT4=", "EmojiContent parse failed.");
-        return;
-      }
-      ieZ = paramString.replace(":", "*#*");
+      return null;
     }
-  }
-  
-  public static String a(String paramString, long paramLong, boolean paramBoolean)
-  {
-    paramString = new StringBuilder().append(paramString).append(":").append(paramLong).append(":");
-    if (paramBoolean) {}
-    for (int i = 1;; i = 0) {
-      return i + "\n";
-    }
-  }
-  
-  public static y zk(String paramString)
-  {
-    return new y(paramString);
-  }
-  
-  public final String aGN()
-  {
-    StringBuilder localStringBuilder = new StringBuilder().append(bPd).append(":").append(time).append(":");
-    if (bPe) {}
-    for (int i = 1;; i = 0) {
-      return i + ":" + avf + ":" + ieZ + "\n";
+    catch (Exception paramMap)
+    {
+      u.e("!44@/B4Tb64lLpKW6XSoHkFWUALbfQePvuhUA6eVCF+4bVs=", "exception:%s", new Object[] { ay.b(paramMap) });
     }
   }
 }

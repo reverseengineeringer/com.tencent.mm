@@ -25,7 +25,7 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 20
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_summary_below:I
+    const v0, 0x7f0a0564
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/SummaryBelowPreference;->setLayoutResource(I)V
 

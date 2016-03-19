@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final synthetic iIW:Lcom/tencent/mm/ui/base/MMViewPager;
+.field final synthetic kIi:Lcom/tencent/mm/ui/base/MMViewPager;
 
-.field iIY:[F
+.field kIk:[F
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     .prologue
     .line 68
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager$e;->iIW:Lcom/tencent/mm/ui/base/MMViewPager;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
 
     .line 69
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/base/MMViewPager$a;-><init>(Lcom/tencent/mm/ui/base/MMViewPager;)V
@@ -36,7 +36,7 @@
 
     new-array v0, v0, [F
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e;->iIY:[F
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIk:[F
 
     .line 71
     return-void
@@ -49,17 +49,17 @@
 
     .prologue
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e;->iIW:Lcom/tencent/mm/ui/base/MMViewPager;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMViewPager$e;->kIi:Lcom/tencent/mm/ui/base/MMViewPager;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->c(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {v0}, Lcom/tencent/mm/ui/base/MMViewPager;->c(Lcom/tencent/mm/ui/base/MMViewPager;)Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/ui/base/cv;
+    new-instance v1, Lcom/tencent/mm/ui/base/MMViewPager$e$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/cv;-><init>(Lcom/tencent/mm/ui/base/MMViewPager$e;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/MMViewPager$e$1;-><init>(Lcom/tencent/mm/ui/base/MMViewPager$e;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
 
     .line 113
     return-void

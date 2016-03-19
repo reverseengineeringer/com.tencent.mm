@@ -1,11 +1,10 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-
 public final class ie$a
 {
-  public String aFr;
-  public Context context;
+  public int aDR = 0;
+  public Runnable aDS;
+  public String azE;
 }
 
 /* Location:

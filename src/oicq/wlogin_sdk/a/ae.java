@@ -5,25 +5,25 @@ import oicq.wlogin_sdk.tools.util;
 public final class ae
   extends a
 {
-  int jOF = 0;
-  int jOG = 0;
+  int mcR = 0;
+  int mcS = 0;
   
   public ae()
   {
-    jNs = 322;
+    mbE = 322;
   }
   
-  public final byte[] aY(byte[] paramArrayOfByte)
+  public final byte[] br(byte[] paramArrayOfByte)
   {
-    jOG = (paramArrayOfByte.length + 4);
-    byte[] arrayOfByte = new byte[jOG];
-    util.m(arrayOfByte, 0, jOF);
+    mcS = (paramArrayOfByte.length + 4);
+    byte[] arrayOfByte = new byte[mcS];
+    util.m(arrayOfByte, 0, mcR);
     util.m(arrayOfByte, 2, paramArrayOfByte.length);
     System.arraycopy(paramArrayOfByte, 0, arrayOfByte, 4, paramArrayOfByte.length);
-    super.pV(jNs);
-    super.w(arrayOfByte, arrayOfByte.length);
-    super.aVD();
-    return super.aVz();
+    super.sL(mbE);
+    super.A(arrayOfByte, arrayOfByte.length);
+    super.bos();
+    return super.boo();
   }
 }
 

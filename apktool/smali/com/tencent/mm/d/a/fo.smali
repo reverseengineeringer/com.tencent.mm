@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/fo;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -13,15 +13,15 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aCj:Lcom/tencent/mm/d/a/fo$a;
+.field public aAr:Lcom/tencent/mm/d/a/fo$a;
 
-.field public aCk:Lcom/tencent/mm/d/a/fo$b;
+.field public aAs:Lcom/tencent/mm/d/a/fo$b;
 
 
 # direct methods
@@ -32,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/fo;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/fo;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/fo;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/fo;->arR:Z
 
     return-void
 .end method
@@ -44,31 +44,31 @@
     .locals 1
 
     .prologue
-    .line 10
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    .line 8
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    .line 15
+    .line 13
     new-instance v0, Lcom/tencent/mm/d/a/fo$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/fo$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/fo;->aCj:Lcom/tencent/mm/d/a/fo$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/fo;->aAr:Lcom/tencent/mm/d/a/fo$a;
 
-    .line 24
+    .line 17
     new-instance v0, Lcom/tencent/mm/d/a/fo$b;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/fo$b;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/fo;->aCk:Lcom/tencent/mm/d/a/fo$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/fo;->aAs:Lcom/tencent/mm/d/a/fo$b;
 
-    .line 10
-    const-string/jumbo v0, "PublishLocation"
+    .line 8
+    const-string/jumbo v0, "GetSnsObjectDetail"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/fo;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/fo;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/fo;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/fo;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/fo;->jUI:Z
 
     return-void
 .end method

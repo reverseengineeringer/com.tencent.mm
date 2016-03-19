@@ -47,6 +47,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/FileUtils;->SAFE_FILENAME_PATTERN:Ljava/util/regex/Pattern;
 
+    .line 40
     return-void
 .end method
 

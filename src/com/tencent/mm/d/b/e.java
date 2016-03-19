@@ -2,85 +2,89 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
-import com.tencent.mm.sdk.platformtools.q;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.h.c;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.sdk.platformtools.u;
 
 public abstract class e
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = { "CREATE INDEX IF NOT EXISTS appInfo_status_Index ON AppInfo(status)" };
-  private static final int aIK = "appId".hashCode();
-  private static final int aIR;
-  private static final int aJA;
-  private static final int aJB;
-  private static final int aJC;
-  private static final int aJD;
-  private static final int aJE;
-  private static final int aJF;
-  private static final int aJG;
-  private static final int aJH;
-  private static final int aJI;
-  private static final int aJJ;
-  private static final int aJK;
-  private static final int aJL;
-  private static final int aJM;
-  private static final int aJN;
-  private static final int aJt = "appName".hashCode();
-  private static final int aJu = "appDiscription".hashCode();
-  private static final int aJv = "appIconUrl".hashCode();
-  private static final int aJw = "appStoreUrl".hashCode();
-  private static final int aJx = "appVersion".hashCode();
-  private static final int aJy = "appWatermarkUrl".hashCode();
-  private static final int aJz = "packageName".hashCode();
-  private boolean aID = true;
-  private boolean aIY = true;
-  private boolean aIZ = true;
-  private boolean aIw = true;
-  public String aJO;
-  public String aJP;
-  public String aJQ;
-  public int aJR;
-  public int aJS;
-  public String aJT;
-  public String aJU;
-  public String aJV;
-  public String aJW;
-  public String aJX;
-  public String aJY;
-  public int aJZ;
-  private boolean aJa = true;
-  private boolean aJb = true;
-  private boolean aJc = true;
-  private boolean aJd = true;
-  private boolean aJe = true;
-  private boolean aJf = true;
-  private boolean aJg = true;
-  private boolean aJh = true;
-  private boolean aJi = true;
-  private boolean aJj = true;
-  private boolean aJk = true;
-  private boolean aJl = true;
-  private boolean aJm = true;
-  private boolean aJn = true;
-  private boolean aJo = true;
-  public boolean aJp = true;
-  private boolean aJq = true;
-  private boolean aJr = true;
-  private boolean aJs = true;
-  public String aKa;
-  public String aKb;
-  public String aKc;
-  public String aKd;
-  public String aKe;
-  public int aKf;
-  public String aKg;
-  public int aKh;
-  public String aKi;
-  public String aKj;
-  public String aKk;
-  public int aKl;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = { "CREATE INDEX IF NOT EXISTS appInfo_status_Index ON AppInfo(status)" };
+  private static final int aMJ = "appId".hashCode();
+  private static final int aMQ;
+  private static final int aNA;
+  private static final int aNB;
+  private static final int aNC;
+  private static final int aND;
+  private static final int aNE;
+  private static final int aNF;
+  private static final int aNG;
+  private static final int aNH;
+  private static final int aNI;
+  private static final int aNJ;
+  private static final int aNK;
+  private static final int aNL;
+  private static final int aNM;
+  private static final int aNN;
+  private static final int aNO;
+  private static final int aNP;
+  private static final int aNQ;
+  private static final int aNu = "appName".hashCode();
+  private static final int aNv = "appDiscription".hashCode();
+  private static final int aNw = "appIconUrl".hashCode();
+  private static final int aNx = "appStoreUrl".hashCode();
+  private static final int aNy = "appVersion".hashCode();
+  private static final int aNz = "appWatermarkUrl".hashCode();
+  private boolean aMC = true;
+  private boolean aMX = true;
+  private boolean aMY = true;
+  private boolean aMZ = true;
+  private boolean aMv = true;
+  public String aNR;
+  public String aNS;
+  public String aNT;
+  public int aNU;
+  public int aNV;
+  public String aNW;
+  public String aNX;
+  public String aNY;
+  public String aNZ;
+  private boolean aNa = true;
+  private boolean aNb = true;
+  private boolean aNc = true;
+  private boolean aNd = true;
+  private boolean aNe = true;
+  private boolean aNf = true;
+  private boolean aNg = true;
+  private boolean aNh = true;
+  private boolean aNi = true;
+  private boolean aNj = true;
+  private boolean aNk = true;
+  private boolean aNl = true;
+  private boolean aNm = true;
+  private boolean aNn = true;
+  public boolean aNo = true;
+  private boolean aNp = true;
+  private boolean aNq = true;
+  private boolean aNr = true;
+  private boolean aNs = true;
+  private boolean aNt = true;
+  public String aOa;
+  public String aOb;
+  public int aOc;
+  public String aOd;
+  public String aOe;
+  public String aOf;
+  public String aOg;
+  public String aOh;
+  public int aOi;
+  public String aOj;
+  private int aOk;
+  public String aOl;
+  public String aOm;
+  public String aOn;
+  public int aOo;
   public String field_appDiscription;
   public String field_appDiscription_en;
   public String field_appDiscription_tw;
@@ -91,6 +95,7 @@ public abstract class e
   public String field_appName_en;
   public String field_appName_tw;
   public String field_appStoreUrl;
+  public long field_appSupportContentType;
   public String field_appType;
   public int field_appVersion;
   public String field_appWatermarkUrl;
@@ -104,120 +109,112 @@ public abstract class e
   public int field_serviceShowFlag;
   public String field_signature;
   public int field_status;
+  public long field_svrAppSupportContentType;
   
   static
   {
-    aIR = "status".hashCode();
-    aJA = "signature".hashCode();
-    aJB = "modifyTime".hashCode();
-    aJC = "appName_en".hashCode();
-    aJD = "appName_tw".hashCode();
-    aJE = "appDiscription_en".hashCode();
-    aJF = "appDiscription_tw".hashCode();
-    aJG = "appType".hashCode();
-    aJH = "openId".hashCode();
-    aJI = "authFlag".hashCode();
-    aJJ = "appInfoFlag".hashCode();
-    aJK = "lvbuff".hashCode();
-    aJL = "serviceAppType".hashCode();
-    aJM = "serviceAppInfoFlag".hashCode();
-    aJN = "serviceShowFlag".hashCode();
+    aNA = "packageName".hashCode();
+    aMQ = "status".hashCode();
+    aNB = "signature".hashCode();
+    aNC = "modifyTime".hashCode();
+    aND = "appName_en".hashCode();
+    aNE = "appName_tw".hashCode();
+    aNF = "appDiscription_en".hashCode();
+    aNG = "appDiscription_tw".hashCode();
+    aNH = "appType".hashCode();
+    aNI = "openId".hashCode();
+    aNJ = "authFlag".hashCode();
+    aNK = "appInfoFlag".hashCode();
+    aNL = "lvbuff".hashCode();
+    aNM = "serviceAppType".hashCode();
+    aNN = "serviceAppInfoFlag".hashCode();
+    aNO = "serviceShowFlag".hashCode();
+    aNP = "appSupportContentType".hashCode();
+    aNQ = "svrAppSupportContentType".hashCode();
   }
   
-  public final void aN(int paramInt)
+  public final void aR(int paramInt)
   {
-    aJS = paramInt;
-    aJp = true;
+    aOc = paramInt;
+    aNo = true;
   }
   
-  public final void aO(int paramInt)
+  public final void aS(int paramInt)
   {
-    aJZ = paramInt;
-    aJp = true;
-  }
-  
-  public final void aP(int paramInt)
-  {
-    aKf = paramInt;
-    aJp = true;
+    aOi = paramInt;
+    aNo = true;
   }
   
   public final void bA(String paramString)
   {
-    aKb = paramString;
-    aJp = true;
+    aOd = paramString;
+    aNo = true;
   }
   
   public final void bB(String paramString)
   {
-    aKc = paramString;
-    aJp = true;
+    aOe = paramString;
+    aNo = true;
   }
   
   public final void bC(String paramString)
   {
-    aKd = paramString;
-    aJp = true;
+    aOf = paramString;
+    aNo = true;
   }
   
-  public final void bq(String paramString)
+  public final void bD(String paramString)
   {
-    aJO = paramString;
-    aJp = true;
-  }
-  
-  public final void br(String paramString)
-  {
-    aJP = paramString;
-    aJp = true;
+    aOg = paramString;
+    aNo = true;
   }
   
   public final void bs(String paramString)
   {
-    aJQ = paramString;
-    aJp = true;
+    aNR = paramString;
+    aNo = true;
   }
   
   public final void bt(String paramString)
   {
-    aJT = paramString;
-    aJp = true;
+    aNS = paramString;
+    aNo = true;
   }
   
   public final void bu(String paramString)
   {
-    aJU = paramString;
-    aJp = true;
+    aNT = paramString;
+    aNo = true;
   }
   
   public final void bv(String paramString)
   {
-    aJV = paramString;
-    aJp = true;
+    aNW = paramString;
+    aNo = true;
   }
   
   public final void bw(String paramString)
   {
-    aJW = paramString;
-    aJp = true;
+    aNY = paramString;
+    aNo = true;
   }
   
   public final void bx(String paramString)
   {
-    aJX = paramString;
-    aJp = true;
+    aNZ = paramString;
+    aNo = true;
   }
   
   public final void by(String paramString)
   {
-    aJY = paramString;
-    aJp = true;
+    aOa = paramString;
+    aNo = true;
   }
   
   public final void bz(String paramString)
   {
-    aKa = paramString;
-    aJp = true;
+    aOb = paramString;
+    aNo = true;
   }
   
   public final void c(Cursor paramCursor)
@@ -234,61 +231,65 @@ public abstract class e
         if (i < j)
         {
           int k = arrayOfString[i].hashCode();
-          if (aIK == k)
+          if (aMJ == k)
           {
             field_appId = paramCursor.getString(i);
-            aIw = true;
+            aMv = true;
           }
           for (;;)
           {
             i += 1;
             break;
-            if (aJt == k) {
+            if (aNu == k) {
               field_appName = paramCursor.getString(i);
-            } else if (aJu == k) {
+            } else if (aNv == k) {
               field_appDiscription = paramCursor.getString(i);
-            } else if (aJv == k) {
+            } else if (aNw == k) {
               field_appIconUrl = paramCursor.getString(i);
-            } else if (aJw == k) {
+            } else if (aNx == k) {
               field_appStoreUrl = paramCursor.getString(i);
-            } else if (aJx == k) {
+            } else if (aNy == k) {
               field_appVersion = paramCursor.getInt(i);
-            } else if (aJy == k) {
+            } else if (aNz == k) {
               field_appWatermarkUrl = paramCursor.getString(i);
-            } else if (aJz == k) {
+            } else if (aNA == k) {
               field_packageName = paramCursor.getString(i);
-            } else if (aIR == k) {
+            } else if (aMQ == k) {
               field_status = paramCursor.getInt(i);
-            } else if (aJA == k) {
+            } else if (aNB == k) {
               field_signature = paramCursor.getString(i);
-            } else if (aJB == k) {
+            } else if (aNC == k) {
               field_modifyTime = paramCursor.getLong(i);
-            } else if (aJC == k) {
+            } else if (aND == k) {
               field_appName_en = paramCursor.getString(i);
-            } else if (aJD == k) {
+            } else if (aNE == k) {
               field_appName_tw = paramCursor.getString(i);
-            } else if (aJE == k) {
+            } else if (aNF == k) {
               field_appDiscription_en = paramCursor.getString(i);
-            } else if (aJF == k) {
+            } else if (aNG == k) {
               field_appDiscription_tw = paramCursor.getString(i);
-            } else if (aJG == k) {
+            } else if (aNH == k) {
               field_appType = paramCursor.getString(i);
-            } else if (aJH == k) {
+            } else if (aNI == k) {
               field_openId = paramCursor.getString(i);
-            } else if (aJI == k) {
+            } else if (aNJ == k) {
               field_authFlag = paramCursor.getInt(i);
-            } else if (aJJ == k) {
+            } else if (aNK == k) {
               field_appInfoFlag = paramCursor.getInt(i);
-            } else if (aJK == k) {
+            } else if (aNL == k) {
               field_lvbuff = paramCursor.getBlob(i);
-            } else if (aJL == k) {
+            } else if (aNM == k) {
               field_serviceAppType = paramCursor.getInt(i);
-            } else if (aJM == k) {
+            } else if (aNN == k) {
               field_serviceAppInfoFlag = paramCursor.getInt(i);
-            } else if (aJN == k) {
+            } else if (aNO == k) {
               field_serviceShowFlag = paramCursor.getInt(i);
-            } else if (aHH == k) {
-              ibV = paramCursor.getLong(i);
+            } else if (aNP == k) {
+              field_appSupportContentType = paramCursor.getLong(i);
+            } else if (aNQ == k) {
+              field_svrAppSupportContentType = paramCursor.getLong(i);
+            } else if (aLG == k) {
+              jYv = paramCursor.getLong(i);
             }
           }
         }
@@ -296,185 +297,191 @@ public abstract class e
         {
           if ((field_lvbuff != null) && (field_lvbuff.length != 0))
           {
-            paramCursor = new q();
-            i = paramCursor.aE(field_lvbuff);
+            paramCursor = new r();
+            i = paramCursor.aS(field_lvbuff);
             if (i != 0)
             {
-              t.e("MicroMsg.SDK.BaseAppInfo", "parse LVBuffer error:" + i);
+              u.e("MicroMsg.SDK.BaseAppInfo", "parse LVBuffer error:" + i);
               return;
             }
           }
         }
         catch (Exception paramCursor)
         {
-          t.e("MicroMsg.SDK.BaseAppInfo", "get value failed");
+          u.e("MicroMsg.SDK.BaseAppInfo", "get value failed");
           return;
         }
       }
-      aJO = paramCursor.getString();
-      aJP = paramCursor.getString();
-      aJQ = paramCursor.getString();
-      aJR = paramCursor.getInt();
-      aJS = paramCursor.getInt();
-      aJT = paramCursor.getString();
-      aJU = paramCursor.getString();
-      aJV = paramCursor.getString();
-      aJW = paramCursor.getString();
-      if (!paramCursor.aEC()) {
-        aJX = paramCursor.getString();
+      aNR = paramCursor.getString();
+      aNS = paramCursor.getString();
+      aNT = paramCursor.getString();
+      aNU = paramCursor.getInt();
+      aNV = paramCursor.getInt();
+      aNW = paramCursor.getString();
+      aNX = paramCursor.getString();
+      aNY = paramCursor.getString();
+      aNZ = paramCursor.getString();
+      if (!paramCursor.aUu()) {
+        aOa = paramCursor.getString();
       }
-      if (!paramCursor.aEC()) {
-        aJY = paramCursor.getString();
+      if (!paramCursor.aUu()) {
+        aOb = paramCursor.getString();
       }
-      if (!paramCursor.aEC()) {
-        aJZ = paramCursor.getInt();
+      if (!paramCursor.aUu()) {
+        aOc = paramCursor.getInt();
       }
-      if (!paramCursor.aEC()) {
-        aKa = paramCursor.getString();
+      if (!paramCursor.aUu()) {
+        aOd = paramCursor.getString();
       }
-      if (!paramCursor.aEC()) {
-        aKb = paramCursor.getString();
+      if (!paramCursor.aUu()) {
+        aOe = paramCursor.getString();
       }
-      if (!paramCursor.aEC()) {
-        aKc = paramCursor.getString();
+      if (!paramCursor.aUu()) {
+        aOf = paramCursor.getString();
       }
-      if (!paramCursor.aEC()) {
-        aKd = paramCursor.getString();
+      if (!paramCursor.aUu()) {
+        aOg = paramCursor.getString();
       }
-      if (!paramCursor.aEC()) {
-        aKe = paramCursor.getString();
+      if (!paramCursor.aUu()) {
+        aOh = paramCursor.getString();
       }
-      if (!paramCursor.aEC()) {
-        aKf = paramCursor.getInt();
+      if (!paramCursor.aUu()) {
+        aOi = paramCursor.getInt();
       }
-      if (!paramCursor.aEC()) {
-        aKg = paramCursor.getString();
+      if (!paramCursor.aUu()) {
+        aOj = paramCursor.getString();
       }
-      if (!paramCursor.aEC()) {
-        aKh = paramCursor.getInt();
+      if (!paramCursor.aUu()) {
+        aOk = paramCursor.getInt();
       }
-      if (!paramCursor.aEC()) {
-        aKi = paramCursor.getString();
+      if (!paramCursor.aUu()) {
+        aOl = paramCursor.getString();
       }
-      if (!paramCursor.aEC()) {
-        aKj = paramCursor.getString();
+      if (!paramCursor.aUu()) {
+        aOm = paramCursor.getString();
       }
-      if (!paramCursor.aEC()) {
-        aKk = paramCursor.getString();
+      if (!paramCursor.aUu()) {
+        aOn = paramCursor.getString();
       }
-    } while (paramCursor.aEC());
-    aKl = paramCursor.getInt();
+    } while (paramCursor.aUu());
+    aOo = paramCursor.getInt();
   }
   
-  public ContentValues mA()
+  public ContentValues lX()
   {
     try
     {
-      if (aJp)
+      if (aNo)
       {
-        localObject = new q();
-        ((q)localObject).aED();
-        ((q)localObject).xk(aJO);
-        ((q)localObject).xk(aJP);
-        ((q)localObject).xk(aJQ);
-        ((q)localObject).mu(aJR);
-        ((q)localObject).mu(aJS);
-        ((q)localObject).xk(aJT);
-        ((q)localObject).xk(aJU);
-        ((q)localObject).xk(aJV);
-        ((q)localObject).xk(aJW);
-        ((q)localObject).xk(aJX);
-        ((q)localObject).xk(aJY);
-        ((q)localObject).mu(aJZ);
-        ((q)localObject).xk(aKa);
-        ((q)localObject).xk(aKb);
-        ((q)localObject).xk(aKc);
-        ((q)localObject).xk(aKd);
-        ((q)localObject).xk(aKe);
-        ((q)localObject).mu(aKf);
-        ((q)localObject).xk(aKg);
-        ((q)localObject).mu(aKh);
-        ((q)localObject).xk(aKi);
-        ((q)localObject).xk(aKj);
-        ((q)localObject).xk(aKk);
-        ((q)localObject).mu(aKl);
-        field_lvbuff = ((q)localObject).aEE();
+        localObject = new r();
+        ((r)localObject).aUv();
+        ((r)localObject).CL(aNR);
+        ((r)localObject).CL(aNS);
+        ((r)localObject).CL(aNT);
+        ((r)localObject).po(aNU);
+        ((r)localObject).po(aNV);
+        ((r)localObject).CL(aNW);
+        ((r)localObject).CL(aNX);
+        ((r)localObject).CL(aNY);
+        ((r)localObject).CL(aNZ);
+        ((r)localObject).CL(aOa);
+        ((r)localObject).CL(aOb);
+        ((r)localObject).po(aOc);
+        ((r)localObject).CL(aOd);
+        ((r)localObject).CL(aOe);
+        ((r)localObject).CL(aOf);
+        ((r)localObject).CL(aOg);
+        ((r)localObject).CL(aOh);
+        ((r)localObject).po(aOi);
+        ((r)localObject).CL(aOj);
+        ((r)localObject).po(aOk);
+        ((r)localObject).CL(aOl);
+        ((r)localObject).CL(aOm);
+        ((r)localObject).CL(aOn);
+        ((r)localObject).po(aOo);
+        field_lvbuff = ((r)localObject).aUw();
       }
       Object localObject = new ContentValues();
       if (field_appId == null) {
         field_appId = "";
       }
-      if (aIw) {
+      if (aMv) {
         ((ContentValues)localObject).put("appId", field_appId);
       }
-      if (aIY) {
+      if (aMX) {
         ((ContentValues)localObject).put("appName", field_appName);
       }
-      if (aIZ) {
+      if (aMY) {
         ((ContentValues)localObject).put("appDiscription", field_appDiscription);
       }
-      if (aJa) {
+      if (aMZ) {
         ((ContentValues)localObject).put("appIconUrl", field_appIconUrl);
       }
-      if (aJb) {
+      if (aNa) {
         ((ContentValues)localObject).put("appStoreUrl", field_appStoreUrl);
       }
-      if (aJc) {
+      if (aNb) {
         ((ContentValues)localObject).put("appVersion", Integer.valueOf(field_appVersion));
       }
-      if (aJd) {
+      if (aNc) {
         ((ContentValues)localObject).put("appWatermarkUrl", field_appWatermarkUrl);
       }
-      if (aJe) {
+      if (aNd) {
         ((ContentValues)localObject).put("packageName", field_packageName);
       }
-      if (aID) {
+      if (aMC) {
         ((ContentValues)localObject).put("status", Integer.valueOf(field_status));
       }
-      if (aJf) {
+      if (aNe) {
         ((ContentValues)localObject).put("signature", field_signature);
       }
-      if (aJg) {
+      if (aNf) {
         ((ContentValues)localObject).put("modifyTime", Long.valueOf(field_modifyTime));
       }
-      if (aJh) {
+      if (aNg) {
         ((ContentValues)localObject).put("appName_en", field_appName_en);
       }
-      if (aJi) {
+      if (aNh) {
         ((ContentValues)localObject).put("appName_tw", field_appName_tw);
       }
-      if (aJj) {
+      if (aNi) {
         ((ContentValues)localObject).put("appDiscription_en", field_appDiscription_en);
       }
-      if (aJk) {
+      if (aNj) {
         ((ContentValues)localObject).put("appDiscription_tw", field_appDiscription_tw);
       }
-      if (aJl) {
+      if (aNk) {
         ((ContentValues)localObject).put("appType", field_appType);
       }
-      if (aJm) {
+      if (aNl) {
         ((ContentValues)localObject).put("openId", field_openId);
       }
-      if (aJn) {
+      if (aNm) {
         ((ContentValues)localObject).put("authFlag", Integer.valueOf(field_authFlag));
       }
-      if (aJo) {
+      if (aNn) {
         ((ContentValues)localObject).put("appInfoFlag", Integer.valueOf(field_appInfoFlag));
       }
-      if (aJp) {
+      if (aNo) {
         ((ContentValues)localObject).put("lvbuff", field_lvbuff);
       }
-      if (aJq) {
+      if (aNp) {
         ((ContentValues)localObject).put("serviceAppType", Integer.valueOf(field_serviceAppType));
       }
-      if (aJr) {
+      if (aNq) {
         ((ContentValues)localObject).put("serviceAppInfoFlag", Integer.valueOf(field_serviceAppInfoFlag));
       }
-      if (aJs) {
+      if (aNr) {
         ((ContentValues)localObject).put("serviceShowFlag", Integer.valueOf(field_serviceShowFlag));
       }
-      if (ibV > 0L) {
-        ((ContentValues)localObject).put("rowid", Long.valueOf(ibV));
+      if (aNs) {
+        ((ContentValues)localObject).put("appSupportContentType", Long.valueOf(field_appSupportContentType));
+      }
+      if (aNt) {
+        ((ContentValues)localObject).put("svrAppSupportContentType", Long.valueOf(field_svrAppSupportContentType));
+      }
+      if (jYv > 0L) {
+        ((ContentValues)localObject).put("rowid", Long.valueOf(jYv));
       }
       return (ContentValues)localObject;
     }
@@ -482,24 +489,24 @@ public abstract class e
     {
       for (;;)
       {
-        t.e("MicroMsg.SDK.BaseAppInfo", "get value failed, %s", new Object[] { localException.getMessage() });
+        u.e("MicroMsg.SDK.BaseAppInfo", "get value failed, %s", new Object[] { localException.getMessage() });
       }
     }
   }
   
-  public final String mC()
+  public final String lZ()
   {
-    return aJQ;
+    return aNT;
   }
   
-  public final String mD()
+  public final String ma()
   {
-    return aJV;
+    return aNY;
   }
   
-  public final String mE()
+  public final String mb()
   {
-    return aJW;
+    return aNZ;
   }
 }
 

@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field final synthetic ipA:Lcom/tencent/mm/ui/LauncherUITabView;
+.field final synthetic kou:Lcom/tencent/mm/ui/LauncherUITabView;
 
-.field ipB:Lcom/tencent/mm/ui/MMTabView;
+.field kov:Lcom/tencent/mm/ui/MMTabView;
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     .prologue
     .line 52
-    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUITabView$a;->ipA:Lcom/tencent/mm/ui/LauncherUITabView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/LauncherUITabView$a;->kou:Lcom/tencent/mm/ui/LauncherUITabView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

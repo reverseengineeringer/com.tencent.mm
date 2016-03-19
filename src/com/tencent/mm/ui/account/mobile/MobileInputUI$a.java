@@ -3,9 +3,9 @@ package com.tencent.mm.ui.account.mobile;
 public final class MobileInputUI$a
   extends Enum
 {
-  public static int[] aMo()
+  public static int[] bcf()
   {
-    return (int[])izb.clone();
+    return (int[])kyf.clone();
   }
 }
 

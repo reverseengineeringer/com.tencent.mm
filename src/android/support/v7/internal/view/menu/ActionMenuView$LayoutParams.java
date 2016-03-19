@@ -9,21 +9,21 @@ public class ActionMenuView$LayoutParams
   extends LinearLayout.LayoutParams
 {
   @ViewDebug.ExportedProperty
-  public boolean lY;
+  public boolean ld;
   @ViewDebug.ExportedProperty
-  public int lZ;
+  public int le;
   @ViewDebug.ExportedProperty
-  public int ma;
+  public int lf;
   @ViewDebug.ExportedProperty
-  public boolean mb;
+  public boolean lg;
   @ViewDebug.ExportedProperty
-  public boolean mc;
-  public boolean md;
+  public boolean lh;
+  public boolean li;
   
   public ActionMenuView$LayoutParams()
   {
     super(-2, -2);
-    lY = false;
+    ld = false;
   }
   
   public ActionMenuView$LayoutParams(Context paramContext, AttributeSet paramAttributeSet)
@@ -34,7 +34,7 @@ public class ActionMenuView$LayoutParams
   public ActionMenuView$LayoutParams(LayoutParams paramLayoutParams)
   {
     super(paramLayoutParams);
-    lY = lY;
+    ld = ld;
   }
 }
 

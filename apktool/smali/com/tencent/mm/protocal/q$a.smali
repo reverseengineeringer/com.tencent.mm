@@ -1,9 +1,9 @@
 .class public final Lcom/tencent/mm/protocal/q$a;
-.super Lcom/tencent/mm/protocal/i$c;
+.super Lcom/tencent/mm/protocal/h$c;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/protocal/i$a;
+.implements Lcom/tencent/mm/protocal/h$a;
 
 
 # annotations
@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public hhi:Lcom/tencent/mm/protocal/b/rz;
+.field public iVe:Lcom/tencent/mm/protocal/b/vt;
 
 
 # direct methods
@@ -26,84 +26,74 @@
     .locals 1
 
     .prologue
-    .line 9
-    invoke-direct {p0}, Lcom/tencent/mm/protocal/i$c;-><init>()V
+    .line 8
+    invoke-direct {p0}, Lcom/tencent/mm/protocal/h$c;-><init>()V
 
     .line 11
-    new-instance v0, Lcom/tencent/mm/protocal/b/rz;
+    new-instance v0, Lcom/tencent/mm/protocal/b/vt;
 
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/rz;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/vt;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/q$a;->hhi:Lcom/tencent/mm/protocal/b/rz;
+    iput-object v0, p0, Lcom/tencent/mm/protocal/q$a;->iVe:Lcom/tencent/mm/protocal/b/vt;
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final getCmdId()I
-    .locals 1
-
-    .prologue
-    .line 30
-    const/16 v0, 0x30
-
-    return v0
-.end method
-
-.method public final tH()[B
+.method public final tY()[B
     .locals 3
 
     .prologue
-    .line 16
-    invoke-static {}, Lcom/tencent/mm/protocal/y;->aDw()Lcom/tencent/mm/protocal/y;
+    .line 17
+    invoke-static {}, Lcom/tencent/mm/protocal/z;->aTv()Lcom/tencent/mm/protocal/z;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/protocal/i$c;->hgO:Lcom/tencent/mm/protocal/y;
+    iput-object v0, p0, Lcom/tencent/mm/protocal/h$c;->iUJ:Lcom/tencent/mm/protocal/z;
 
-    .line 17
-    iget-object v0, p0, Lcom/tencent/mm/protocal/q$a;->hhi:Lcom/tencent/mm/protocal/b/rz;
+    .line 18
+    iget-object v0, p0, Lcom/tencent/mm/protocal/q$a;->iVe:Lcom/tencent/mm/protocal/b/vt;
 
-    new-instance v1, Lcom/tencent/mm/protocal/b/adt;
+    new-instance v1, Lcom/tencent/mm/protocal/b/alx;
 
-    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/adt;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/protocal/b/alx;-><init>()V
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->aFz()[B
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVA()[B
 
     move-result-object v2
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/protocal/b/adt;->aA([B)Lcom/tencent/mm/protocal/b/adt;
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/protocal/b/alx;->aO([B)Lcom/tencent/mm/protocal/b/alx;
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/rz;->hmC:Lcom/tencent/mm/protocal/b/adt;
-
-    .line 19
-    iget-object v0, p0, Lcom/tencent/mm/protocal/q$a;->hhi:Lcom/tencent/mm/protocal/b/rz;
-
-    invoke-static {p0}, Lcom/tencent/mm/protocal/i;->a(Lcom/tencent/mm/protocal/i$c;)Lcom/tencent/mm/protocal/b/cj;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/adk;->hLO:Lcom/tencent/mm/protocal/b/cj;
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/vt;->jbx:Lcom/tencent/mm/protocal/b/alx;
 
     .line 20
-    iget-object v0, p0, Lcom/tencent/mm/protocal/q$a;->hhi:Lcom/tencent/mm/protocal/b/rz;
+    iget-object v0, p0, Lcom/tencent/mm/protocal/q$a;->iVe:Lcom/tencent/mm/protocal/b/vt;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/protocal/b/rz;->toByteArray()[B
+    invoke-static {p0}, Lcom/tencent/mm/protocal/h;->a(Lcom/tencent/mm/protocal/h$c;)Lcom/tencent/mm/protocal/b/dc;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/tencent/mm/protocal/b/ali;->jGS:Lcom/tencent/mm/protocal/b/dc;
+
+    .line 21
+    iget-object v0, p0, Lcom/tencent/mm/protocal/q$a;->iVe:Lcom/tencent/mm/protocal/b/vt;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/protocal/b/vt;->toByteArray()[B
 
     move-result-object v0
 
     return-object v0
 .end method
 
-.method public final tI()I
+.method public final tZ()I
     .locals 1
 
     .prologue
-    .line 25
-    const/16 v0, 0x6b
+    .line 26
+    const/16 v0, 0x1ad
 
     return v0
 .end method

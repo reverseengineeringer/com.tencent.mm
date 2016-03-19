@@ -1,39 +1,89 @@
 package com.tencent.mm.ah;
 
-import android.content.Context;
-import android.content.Intent;
-import android.os.AsyncTask;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.storage.h;
+import android.content.ContentValues;
+import android.database.Cursor;
 
 public final class a
 {
-  String aEW = null;
-  String apy = null;
-  String ayf = null;
-  public a bOk = null;
-  String bOl = null;
-  final AsyncTask bOm = new b(this);
-  Context context = null;
-  int duration = 0;
-  Intent intent = null;
+  int aou = -1;
+  private String bEs = "";
+  private String bEt = "";
+  private int bEu = 0;
+  private int bEv = 0;
+  public int bXB = 0;
+  private String path = "";
+  public String username = "";
   
-  public final void a(Context paramContext, Intent paramIntent, a parama)
+  public final void c(Cursor paramCursor)
   {
-    context = paramContext;
-    intent = paramIntent;
-    apy = ac.bl((String)ax.tl().rf().get(2, ""));
-    v.BY();
-    ayf = ac.ik(apy);
-    v.BY();
-    aEW = ac.ij(apy);
-    bOk = parama;
-    bOm.execute(new String[0]);
+    username = paramCursor.getString(0);
+    bXB = paramCursor.getInt(1);
+    path = paramCursor.getString(2);
+    bEs = paramCursor.getString(3);
+    bEt = paramCursor.getString(4);
+    bEu = paramCursor.getInt(5);
+    bEv = paramCursor.getInt(6);
   }
   
-  public static abstract interface a
+  public final String getUsername()
   {
-    public abstract void a(int paramInt1, String paramString1, String paramString2, int paramInt2);
+    if (username == null) {
+      return "";
+    }
+    return username;
+  }
+  
+  public final ContentValues lX()
+  {
+    ContentValues localContentValues = new ContentValues();
+    if ((aou & 0x1) != 0) {
+      localContentValues.put("username", getUsername());
+    }
+    if ((aou & 0x2) != 0) {
+      localContentValues.put("bgflag", Integer.valueOf(bXB));
+    }
+    if ((aou & 0x4) != 0)
+    {
+      if (path == null)
+      {
+        str = "";
+        localContentValues.put("path", str);
+      }
+    }
+    else
+    {
+      if ((aou & 0x8) != 0)
+      {
+        if (bEs != null) {
+          break label185;
+        }
+        str = "";
+        label95:
+        localContentValues.put("reserved1", str);
+      }
+      if ((aou & 0x10) != 0) {
+        if (bEt != null) {
+          break label193;
+        }
+      }
+    }
+    label185:
+    label193:
+    for (String str = "";; str = bEt)
+    {
+      localContentValues.put("reserved2", str);
+      if ((aou & 0x20) != 0) {
+        localContentValues.put("reserved3", Integer.valueOf(bEu));
+      }
+      if ((aou & 0x40) != 0) {
+        localContentValues.put("reserved4", Integer.valueOf(bEv));
+      }
+      return localContentValues;
+      str = path;
+      break;
+      str = bEs;
+      break label95;
+    }
   }
 }
 

@@ -2,7 +2,7 @@ package com.tencent.mm.ui.account;
 
 public abstract interface ResizeLayout$a
 {
-  public abstract void bt(int paramInt1, int paramInt2);
+  public abstract void bJ(int paramInt1, int paramInt2);
 }
 
 /* Location:

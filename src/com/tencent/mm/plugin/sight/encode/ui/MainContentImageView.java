@@ -8,8 +8,8 @@ public class MainContentImageView
   extends ImageView
 {
   private final String TAG = "!44@/B4Tb64lLpKt6d5qnDZ0amuE1L9es0a5kVaOtBxYgA0=";
-  boolean fkJ = false;
-  a fkK;
+  boolean gBH = false;
+  a gBI;
   
   public MainContentImageView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -24,19 +24,19 @@ public class MainContentImageView
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    if (fkK != null) {
-      fkK.iQ(paramInt2);
+    if (gBI != null) {
+      gBI.lb(paramInt2);
     }
   }
   
   public void setIsTouchShow(boolean paramBoolean)
   {
-    fkJ = paramBoolean;
+    gBH = paramBoolean;
   }
   
   public static abstract interface a
   {
-    public abstract void iQ(int paramInt);
+    public abstract void lb(int paramInt);
   }
 }
 

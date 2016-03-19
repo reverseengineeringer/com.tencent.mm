@@ -1,92 +1,76 @@
 package com.tencent.mm.ah;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelcdntran.b;
-import com.tencent.mm.modelcdntran.keep_ProgressInfo;
-import com.tencent.mm.modelcdntran.keep_SceneResult;
-import com.tencent.mm.modelcdntran.m.a;
-import com.tencent.mm.q.d;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import java.io.ByteArrayOutputStream;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.l;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.h;
 
-final class i
-  implements m.a
+public final class i
+  implements d
 {
-  i(h paramh) {}
-  
-  public final int a(String paramString, int paramInt, keep_ProgressInfo paramkeep_ProgressInfo, keep_SceneResult paramkeep_SceneResult)
+  public i()
   {
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvvSy8Q5zWk/rcmO7lAhmh4Y=", "cdntra cdnCallback clientid:%s startRet:%d proginfo:[%s] res:[%s]", new Object[] { h.a(bOC), Integer.valueOf(paramInt), paramkeep_ProgressInfo, paramkeep_SceneResult });
-    if (paramInt == 44531) {
-      t.d("!44@/B4Tb64lLpK+IBX8XDgnvvSy8Q5zWk/rcmO7lAhmh4Y=", "cdntra  ERR_CNDCOM_MEDIA_IS_UPLOADING clientid:%s", new Object[] { h.a(bOC) });
-    }
-    do
-    {
-      return 0;
-      if (paramInt != 0)
-      {
-        ae.bh(h.b(bOC));
-        com.tencent.mm.plugin.report.service.j.eJZ.f(10421, new Object[] { Integer.valueOf(paramInt), Integer.valueOf(1), Long.valueOf(h.c(bOC)), Long.valueOf(bn.DM()), Integer.valueOf(com.tencent.mm.modelcdntran.h.aB(aa.getContext())), Integer.valueOf(h.d(bOC)), Integer.valueOf(0), "" });
-        h.e(bOC).a(3, paramInt, "", bOC);
-        return 0;
-      }
-      h.a(bOC, ae.is(h.b(bOC)));
-      if ((h.f(bOC) == null) || (fbOC).status == 105))
-      {
-        if (h.f(bOC) == null) {}
-        for (int i = -1;; i = fbOC).status)
-        {
-          t.i("!44@/B4Tb64lLpK+IBX8XDgnvvSy8Q5zWk/rcmO7lAhmh4Y=", "info is null or has paused, status:%d", new Object[] { Integer.valueOf(i) });
-          com.tencent.mm.modelcdntran.j.xh().gp(h.a(bOC));
-          h.e(bOC).a(3, paramInt, "info is null or has paused, status" + i, bOC);
-          return 0;
-        }
-      }
-      if (paramkeep_ProgressInfo != null)
-      {
-        if (fbOC).bOA > field_finishedLength)
-        {
-          t.w("!44@/B4Tb64lLpK+IBX8XDgnvvSy8Q5zWk/rcmO7lAhmh4Y=", "cdntra cdnEndProc error oldpos:%d newpos:%d", new Object[] { Integer.valueOf(fbOC).bOA), Integer.valueOf(field_finishedLength) });
-          return 0;
-        }
-        fbOC).bPj = bn.DL();
-        fbOC).bOA = field_finishedLength;
-        fbOC).aqq = 1032;
-        ae.d(h.f(bOC));
-        return 0;
-      }
-    } while (paramkeep_SceneResult == null);
-    if (field_retCode != 0)
-    {
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvvSy8Q5zWk/rcmO7lAhmh4Y=", "cdntra sceneResult.retCode :%d arg[%s] info[%s]", new Object[] { Integer.valueOf(field_retCode), field_arg, field_transInfo });
-      ae.bh(h.b(bOC));
-      com.tencent.mm.plugin.report.service.j.eJZ.f(10421, new Object[] { Integer.valueOf(field_retCode), Integer.valueOf(1), Long.valueOf(h.c(bOC)), Long.valueOf(bn.DM()), Integer.valueOf(com.tencent.mm.modelcdntran.h.aB(aa.getContext())), Integer.valueOf(h.d(bOC)), Integer.valueOf(field_fileLength), field_transInfo, "", "", "", "", "", "", "", report_Part2 });
-      h.e(bOC).a(3, field_retCode, "", bOC);
-      return 0;
-    }
-    t.i("!44@/B4Tb64lLpK+IBX8XDgnvvSy8Q5zWk/rcmO7lAhmh4Y=", "uploadvideo by cdn, isHitCacheUpload: %d", new Object[] { Integer.valueOf(field_UploadHitCacheType) });
-    h.a(bOC, ae.is(h.b(bOC)));
-    if (bn.iW(h.f(bOC).Cg()))
-    {
-      paramString = "<msg><videomsg aeskey=\"" + field_aesKey + "\" cdnthumbaeskey=\"" + field_aesKey + "\" cdnvideourl=\"" + field_fileId + "\" ";
-      paramString = paramString + "cdnthumburl=\"" + field_fileId + "\" ";
-      paramString = paramString + "length=\"" + field_fileLength + "\" ";
-      paramString = paramString + "cdnthumblength=\"" + field_thumbimgLength + "\"/></msg>";
-      t.i("!44@/B4Tb64lLpK+IBX8XDgnvvSy8Q5zWk/rcmO7lAhmh4Y=", "cdn callback new build cdnInfo:%s", new Object[] { paramString });
-      fbOC).bPr = paramString;
-      ae.d(h.f(bOC));
-    }
-    ax.tm().d(new l(h.b(bOC), paramkeep_SceneResult, new j(this, paramkeep_SceneResult)));
-    return 0;
+    ah.tE().a(159, this);
+    ah.tE().a(160, this);
+    k localk = new k(5);
+    ah.tE().d(localk);
   }
   
-  public final void a(String paramString, ByteArrayOutputStream paramByteArrayOutputStream) {}
-  
-  public final byte[] f(String paramString, byte[] paramArrayOfByte)
+  private static void Bu()
   {
-    return null;
+    ah.tD().rn().set(81939, Long.valueOf(ay.FS()));
+  }
+  
+  private void release()
+  {
+    ah.tE().b(159, this);
+    ah.tE().b(160, this);
+  }
+  
+  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
+  {
+    if ((!(paramj instanceof l)) || (((l)paramj).vJ() != 5)) {
+      u.d("!44@/B4Tb64lLpJGl7p3Wcq6OAPEB5iHmCIIWEbf2PIkuc4=", "another scene");
+    }
+    int i;
+    do
+    {
+      return;
+      i = paramj.getType();
+      if (i == 159)
+      {
+        if ((paramInt1 == 0) && (paramInt2 == 0))
+        {
+          Bu();
+          paramString = t.BA().dF(5);
+          if ((paramString == null) || (paramString.length == 0))
+          {
+            u.i("!44@/B4Tb64lLpJGl7p3Wcq6OAPEB5iHmCIIWEbf2PIkuc4=", "error no pkg found.");
+            release();
+            return;
+          }
+          paramString = paramString[0];
+          u.i("!44@/B4Tb64lLpJGl7p3Wcq6OAPEB5iHmCIIWEbf2PIkuc4=", "dkregcode Pkg id:" + id + " version:" + version + " status:" + status + " type:" + bXX);
+          if (5 != status)
+          {
+            release();
+            return;
+          }
+          paramString = new j(id, 5);
+          ah.tE().d(paramString);
+          return;
+        }
+        release();
+        return;
+      }
+    } while (i != 160);
+    if ((paramInt1 == 0) && (paramInt2 == 0)) {
+      Bu();
+    }
+    release();
   }
 }
 

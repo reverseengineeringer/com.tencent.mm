@@ -1,18 +1,8 @@
 package com.tencent.mm.d.a;
 
-import android.widget.ImageView;
-import android.widget.ProgressBar;
-import com.tencent.mm.storage.ar;
-
 public final class dt$a
 {
-  public ar aub;
-  public ImageView azQ;
-  public ImageView azR;
-  public ProgressBar azS;
-  public int azT;
-  public int h;
-  public int w;
+  public String anC;
 }
 
 /* Location:

@@ -3,144 +3,92 @@ package com.tencent.mm.protocal.b;
 import a.a.a.b;
 
 public final class kz
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public String aDp;
-  public String aFz;
-  public String appId;
-  public String bLJ;
-  public long bPi;
-  public String blU;
-  public int eEy;
-  public String egu;
-  public String fqo;
-  public boolean hvP = false;
-  public boolean hvQ = false;
-  public boolean hvR = false;
-  public String hvS;
-  public boolean hvT = false;
-  public String hvU;
-  public boolean hvV = false;
-  public boolean hvW = false;
-  public boolean hvX = false;
-  public boolean hvY = false;
-  public boolean hvZ = false;
-  public boolean hwa = false;
-  public boolean hwb = false;
-  public String hwc;
-  public boolean hwd = false;
+  public String eiq;
+  public String fqq;
+  public String iYO;
+  public String jiE;
+  public String jiF;
+  public String jiG;
+  public String jiH;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (!hvP) {
-        throw new b("Not all required fields were included: sourceType");
+      if (jiE == null) {
+        throw new b("Not all required fields were included: Md5");
       }
-      if (hvP == true) {
-        paramVarArgs.bM(1, eEy);
+      if (jiE != null) {
+        paramVarArgs.d(1, jiE);
       }
-      if (blU != null) {
-        paramVarArgs.U(2, blU);
+      if (eiq != null) {
+        paramVarArgs.d(2, eiq);
       }
-      if (aDp != null) {
-        paramVarArgs.U(3, aDp);
+      if (fqq != null) {
+        paramVarArgs.d(3, fqq);
       }
-      if (hvS != null) {
-        paramVarArgs.U(4, hvS);
+      if (jiF != null) {
+        paramVarArgs.d(4, jiF);
       }
-      if (hvU != null) {
-        paramVarArgs.U(5, hvU);
+      if (jiG != null) {
+        paramVarArgs.d(5, jiG);
       }
-      if (hvW == true) {
-        paramVarArgs.r(6, bPi);
+      if (jiH != null) {
+        paramVarArgs.d(6, jiH);
       }
-      if (egu != null) {
-        paramVarArgs.U(7, egu);
-      }
-      if (aFz != null) {
-        paramVarArgs.U(8, aFz);
-      }
-      if (appId != null) {
-        paramVarArgs.U(9, appId);
-      }
-      if (bLJ != null) {
-        paramVarArgs.U(10, bLJ);
-      }
-      if (fqo != null) {
-        paramVarArgs.U(11, fqo);
-      }
-      if (hwc != null) {
-        paramVarArgs.U(12, hwc);
+      if (iYO != null) {
+        paramVarArgs.d(7, iYO);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (hvP != true) {
-        break label908;
+      if (jiE == null) {
+        break label545;
       }
     }
-    label908:
-    for (int i = a.a.a.a.bI(1, eEy) + 0;; i = 0)
+    label545:
+    for (int i = a.a.a.b.b.a.e(1, jiE) + 0;; i = 0)
     {
       paramInt = i;
-      if (blU != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, blU);
+      if (eiq != null) {
+        paramInt = i + a.a.a.b.b.a.e(2, eiq);
       }
       i = paramInt;
-      if (aDp != null) {
-        i = paramInt + a.a.a.b.b.a.T(3, aDp);
+      if (fqq != null) {
+        i = paramInt + a.a.a.b.b.a.e(3, fqq);
       }
       paramInt = i;
-      if (hvS != null) {
-        paramInt = i + a.a.a.b.b.a.T(4, hvS);
+      if (jiF != null) {
+        paramInt = i + a.a.a.b.b.a.e(4, jiF);
       }
       i = paramInt;
-      if (hvU != null) {
-        i = paramInt + a.a.a.b.b.a.T(5, hvU);
+      if (jiG != null) {
+        i = paramInt + a.a.a.b.b.a.e(5, jiG);
       }
       paramInt = i;
-      if (hvW == true) {
-        paramInt = i + a.a.a.a.q(6, bPi);
+      if (jiH != null) {
+        paramInt = i + a.a.a.b.b.a.e(6, jiH);
       }
       i = paramInt;
-      if (egu != null) {
-        i = paramInt + a.a.a.b.b.a.T(7, egu);
+      if (iYO != null) {
+        i = paramInt + a.a.a.b.b.a.e(7, iYO);
       }
-      paramInt = i;
-      if (aFz != null) {
-        paramInt = i + a.a.a.b.b.a.T(8, aFz);
-      }
-      i = paramInt;
-      if (appId != null) {
-        i = paramInt + a.a.a.b.b.a.T(9, appId);
-      }
-      paramInt = i;
-      if (bLJ != null) {
-        paramInt = i + a.a.a.b.b.a.T(10, bLJ);
-      }
-      i = paramInt;
-      if (fqo != null) {
-        i = paramInt + a.a.a.b.b.a.T(11, fqo);
-      }
-      paramInt = i;
-      if (hwc != null) {
-        paramInt = i + a.a.a.b.b.a.T(12, hwc);
-      }
-      return paramInt;
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
-        if (hvP) {
+        if (jiE != null) {
           break;
         }
-        throw new b("Not all required fields were included: sourceType");
+        throw new b("Not all required fields were included: Md5");
       }
       if (paramInt == 3)
       {
@@ -151,126 +99,29 @@ public final class kz
         default: 
           return -1;
         case 1: 
-          eEy = jMD.aVp();
-          hvP = true;
+          jiE = maU.readString();
           return 0;
         case 2: 
-          blU = jMD.readString();
-          hvQ = true;
+          eiq = maU.readString();
           return 0;
         case 3: 
-          aDp = jMD.readString();
-          hvR = true;
+          fqq = maU.readString();
           return 0;
         case 4: 
-          hvS = jMD.readString();
-          hvT = true;
+          jiF = maU.readString();
           return 0;
         case 5: 
-          hvU = jMD.readString();
-          hvV = true;
+          jiG = maU.readString();
           return 0;
         case 6: 
-          bPi = jMD.aVq();
-          hvW = true;
-          return 0;
-        case 7: 
-          egu = jMD.readString();
-          hvX = true;
-          return 0;
-        case 8: 
-          aFz = jMD.readString();
-          hvY = true;
-          return 0;
-        case 9: 
-          appId = jMD.readString();
-          hvZ = true;
-          return 0;
-        case 10: 
-          bLJ = jMD.readString();
-          hwa = true;
-          return 0;
-        case 11: 
-          fqo = jMD.readString();
-          hwb = true;
+          jiH = maU.readString();
           return 0;
         }
-        hwc = jMD.readString();
-        hwd = true;
+        iYO = maU.readString();
         return 0;
       }
       return -1;
     }
-  }
-  
-  public final kz cs(long paramLong)
-  {
-    bPi = paramLong;
-    hvW = true;
-    return this;
-  }
-  
-  public final kz me(int paramInt)
-  {
-    eEy = paramInt;
-    hvP = true;
-    return this;
-  }
-  
-  public final kz wl(String paramString)
-  {
-    blU = paramString;
-    hvQ = true;
-    return this;
-  }
-  
-  public final kz wm(String paramString)
-  {
-    aDp = paramString;
-    hvR = true;
-    return this;
-  }
-  
-  public final kz wn(String paramString)
-  {
-    hvS = paramString;
-    hvT = true;
-    return this;
-  }
-  
-  public final kz wo(String paramString)
-  {
-    hvU = paramString;
-    hvV = true;
-    return this;
-  }
-  
-  public final kz wp(String paramString)
-  {
-    egu = paramString;
-    hvX = true;
-    return this;
-  }
-  
-  public final kz wq(String paramString)
-  {
-    appId = paramString;
-    hvZ = true;
-    return this;
-  }
-  
-  public final kz wr(String paramString)
-  {
-    bLJ = paramString;
-    hwa = true;
-    return this;
-  }
-  
-  public final kz ws(String paramString)
-  {
-    hwc = paramString;
-    hwd = true;
-    return this;
   }
 }
 

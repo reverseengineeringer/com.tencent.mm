@@ -8,13 +8,13 @@ import android.view.View.BaseSavedState;
 class FragmentTabHost$SavedState
   extends View.BaseSavedState
 {
-  public static final Parcelable.Creator CREATOR = new r();
-  String cT;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  String cj;
   
   private FragmentTabHost$SavedState(Parcel paramParcel)
   {
     super(paramParcel);
-    cT = paramParcel.readString();
+    cj = paramParcel.readString();
   }
   
   FragmentTabHost$SavedState(Parcelable paramParcelable)
@@ -24,13 +24,13 @@ class FragmentTabHost$SavedState
   
   public String toString()
   {
-    return "FragmentTabHost.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " curTab=" + cT + "}";
+    return "FragmentTabHost.SavedState{" + Integer.toHexString(System.identityHashCode(this)) + " curTab=" + cj + "}";
   }
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     super.writeToParcel(paramParcel, paramInt);
-    paramParcel.writeString(cT);
+    paramParcel.writeString(cj);
   }
 }
 

@@ -7,7 +7,20 @@ import android.os.Parcelable.Creator;
 public final class BulkCursorDescriptor
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new BulkCursorDescriptor.1();
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator()
+  {
+    public final BulkCursorDescriptor createFromParcel(Parcel paramAnonymousParcel)
+    {
+      BulkCursorDescriptor localBulkCursorDescriptor = new BulkCursorDescriptor();
+      localBulkCursorDescriptor.readFromParcel(paramAnonymousParcel);
+      return localBulkCursorDescriptor;
+    }
+    
+    public final BulkCursorDescriptor[] newArray(int paramAnonymousInt)
+    {
+      return new BulkCursorDescriptor[paramAnonymousInt];
+    }
+  };
   public String[] columnNames;
   public int count;
   public IBulkCursor cursor;

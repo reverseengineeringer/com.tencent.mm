@@ -3,8 +3,11 @@ package com.tencent.mm.ui.friend;
 import android.content.Context;
 import android.view.View;
 import android.view.View.OnClickListener;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import java.util.LinkedList;
 
@@ -12,40 +15,52 @@ public final class a
   implements View.OnClickListener
 {
   private Context context;
-  private a jlS;
+  private a lrj;
   
   public a(Context paramContext, a parama)
   {
     context = paramContext;
-    jlS = parama;
+    lrj = parama;
   }
   
-  public final void onClick(View paramView)
+  public final void onClick(final View paramView)
   {
-    Object localObject = (b)paramView.getTag();
+    final Object localObject = (b)paramView.getTag();
     paramView = username;
-    int i = elX;
-    int j = position;
-    localObject = ax.tl().ri().yM(paramView);
-    if (bn.iW(field_username)) {
-      ((com.tencent.mm.storage.k)localObject).setUsername(paramView);
+    int i = fvF;
+    final int j = position;
+    localObject = ah.tD().rq().Ep(paramView);
+    if (ay.kz(field_username)) {
+      ((k)localObject).setUsername(paramView);
     }
-    localObject = new com.tencent.mm.pluginsdk.ui.applet.a(context, new b(this, (com.tencent.mm.storage.k)localObject, j, paramView));
+    localObject = new com.tencent.mm.pluginsdk.ui.applet.a(context, new com.tencent.mm.pluginsdk.ui.applet.a.a()
+    {
+      public final void a(boolean paramAnonymousBoolean1, boolean paramAnonymousBoolean2, String paramAnonymousString1, String paramAnonymousString2)
+      {
+        if (paramAnonymousBoolean1)
+        {
+          a.R(localObject);
+          a.a(a.this).Hs(paramView);
+          return;
+        }
+        a.a(a.this).aw(paramView, paramAnonymousBoolean2);
+      }
+    });
     LinkedList localLinkedList = new LinkedList();
     localLinkedList.add(Integer.valueOf(i));
-    ((com.tencent.mm.pluginsdk.ui.applet.a)localObject).a(paramView, localLinkedList, false);
+    ((com.tencent.mm.pluginsdk.ui.applet.a)localObject).d(paramView, localLinkedList);
   }
   
   public static abstract interface a
   {
-    public abstract void By(String paramString);
+    public abstract void Hs(String paramString);
     
-    public abstract void ah(String paramString, boolean paramBoolean);
+    public abstract void aw(String paramString, boolean paramBoolean);
   }
   
   public static final class b
   {
-    public int elX;
+    public int fvF;
     public int position;
     public String username;
   }

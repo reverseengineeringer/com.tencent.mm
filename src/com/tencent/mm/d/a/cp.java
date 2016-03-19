@@ -1,28 +1,34 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.storage.ar;
+import com.tencent.mm.sdk.c.b;
 
 public final class cp
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ays = new a();
-  public b ayt = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awb = new a();
+  public b awc = new b();
   
   public cp()
   {
-    id = "FetchStreetViewUrl";
-    hXT = atO;
+    id = "ExDeviceSendDataToNetworkDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public ar aub;
+    public String alN;
+    public String auJ;
+    public long avg;
+    public String awd;
+    public String data;
   }
   
-  public static final class b {}
+  public static final class b
+  {
+    public boolean awe;
+  }
 }
 
 /* Location:

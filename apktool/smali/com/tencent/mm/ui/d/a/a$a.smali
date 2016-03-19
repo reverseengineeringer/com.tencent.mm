@@ -15,7 +15,7 @@
 
 
 # virtual methods
-.method public abstract AA(Ljava/lang/String;)V
+.method public abstract Gp(Ljava/lang/String;)V
 .end method
 
 .method public abstract a(Ljava/io/FileNotFoundException;)V

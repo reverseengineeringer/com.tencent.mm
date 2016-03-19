@@ -1,135 +1,274 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.os.Process;
-import com.tencent.mm.sdk.b.a;
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public final class ai
-  implements Thread.UncaughtExceptionHandler
 {
-  private static ai hZv = null;
-  private boolean hZA = false;
-  private b hZw = null;
-  private a hZx = null;
-  public a hZy = null;
-  private Thread.UncaughtExceptionHandler hZz = null;
+  public static aj jWK = null;
   
-  private ai()
+  public static String CW(String paramString)
   {
-    Thread.setDefaultUncaughtExceptionHandler(this);
-  }
-  
-  public static void a(a parama)
-  {
-    try
+    if (ay.kz(paramString)) {}
+    while (!ay.Dw(paramString).booleanValue()) {
+      return paramString;
+    }
+    new ai();
+    String str1 = "86";
+    Object localObject = paramString;
+    if (paramString.startsWith("+"))
     {
-      if (hZv == null) {
-        hZv = new ai();
+      String str2 = paramString.replace("+", "");
+      paramString = cf(str2, null);
+      str1 = paramString;
+      localObject = str2;
+      if (paramString != null)
+      {
+        localObject = str2.substring(paramString.length());
+        str1 = paramString;
       }
-      hZvhZx = parama;
-      return;
     }
-    finally {}
+    return formatNumber(str1, (String)localObject);
   }
   
-  public static void a(a parama)
+  public static String CX(String paramString)
   {
-    try
+    if (ay.kz(paramString)) {
+      return "";
+    }
+    return paramString.replaceAll("[\\.\\-\\ ]", "").trim();
+  }
+  
+  private static String K(String paramString1, String paramString2, String paramString3)
+  {
+    Pattern localPattern = Pattern.compile(paramString1);
+    paramString1 = "";
+    paramString3 = localPattern.matcher(paramString3);
+    if (paramString3.find()) {
+      paramString1 = paramString3.replaceAll(paramString2);
+    }
+    return paramString1;
+  }
+  
+  private static int aL(String paramString, int paramInt)
+  {
+    Pattern localPattern = Pattern.compile(paramString);
+    paramString = "1";
+    int i = 0;
+    while ((i < paramInt) && (!localPattern.matcher(paramString).find()))
     {
-      if (hZv == null) {
-        hZv = new ai();
-      }
-      hZvhZy = parama;
-      return;
+      paramString = paramString + "1";
+      i += 1;
     }
-    finally {}
+    return i + 1;
   }
   
-  public static void a(b paramb)
+  public static String cf(String paramString1, String paramString2)
   {
-    try
+    paramString1 = CX(paramString1).replace("+", "");
+    if (jWK == null) {
+      jWK = new aj();
+    }
+    int i;
+    if (ay.kz(paramString2))
     {
-      if (hZv == null) {
-        hZv = new ai();
-      }
-      hZvhZw = paramb;
-      return;
+      paramString2 = jWKjWL.iterator();
+      do
+      {
+        do
+        {
+          if (!paramString2.hasNext()) {
+            break;
+          }
+          localObject = (aj.a)paramString2.next();
+        } while (!paramString1.startsWith(jWN));
+        i = paramString1.length() - jWN.length();
+      } while ((i < jWO) || (i > jWP));
+      u.i("!32@/B4Tb64lLpK2a/1CtFdgf3C9at81KaHN", "[extractCountryCode] countrycode:%s country isocode: %s country.minlen:%d country.maxlen:%d", new Object[] { jWN, jWM, Integer.valueOf(jWP), Integer.valueOf(jWP) });
+      return jWN;
     }
-    finally {}
+    Object localObject = jWKjWL.iterator();
+    while (((Iterator)localObject).hasNext())
+    {
+      aj.a locala = (aj.a)((Iterator)localObject).next();
+      if (paramString1.startsWith(jWN))
+      {
+        i = paramString1.length() - jWN.length();
+        if ((i >= jWO) && (i <= jWP) && (paramString2.equalsIgnoreCase(jWM)))
+        {
+          u.i("!32@/B4Tb64lLpK2a/1CtFdgf3C9at81KaHN", "[extractCountryCode] countrycode:%s country isocode: %s country.minlen:%d country.maxlen:%d", new Object[] { jWN, jWM, Integer.valueOf(jWP), Integer.valueOf(jWP) });
+          return jWN;
+        }
+      }
+    }
+    return null;
   }
   
-  private static String xu(String paramString)
+  public static String formatNumber(String paramString1, String paramString2)
   {
-    if (paramString == null) {
-      paramString = null;
+    Object localObject;
+    if ((ay.kz(paramString1)) || (ay.kz(paramString2)))
+    {
+      localObject = paramString2;
+      return (String)localObject;
     }
-    label66:
+    if (jWK == null) {
+      jWK = new aj();
+    }
+    Iterator localIterator1 = jWKjWL.iterator();
+    aj.a locala;
+    String str;
+    int n;
+    int k;
+    label371:
+    label520:
+    do
+    {
+      StringBuffer localStringBuffer;
+      do
+      {
+        Iterator localIterator2;
+        while (!localIterator2.hasNext())
+        {
+          do
+          {
+            if (!localIterator1.hasNext()) {
+              break;
+            }
+            locala = (aj.a)localIterator1.next();
+          } while ((jWN == null) || (!paramString1.trim().toLowerCase().equals(jWN.trim().toLowerCase())) || (jWQ == null));
+          str = CX(paramString2);
+          if (str != null)
+          {
+            localObject = str;
+            if (str.length() > jWO) {
+              break;
+            }
+          }
+          localIterator2 = jWQ.iterator();
+        }
+        localObject = (aj.b)localIterator2.next();
+        if (!ay.kz(jWR)) {
+          break label520;
+        }
+        if (jWQ.size() <= 1) {
+          break label371;
+        }
+        localStringBuffer = new StringBuffer();
+        localStringBuffer.append(str);
+        m = str.length();
+      } while (m > aL(jWT, jWP));
+      while (localStringBuffer.toString().length() < jWP) {
+        localStringBuffer.append("0");
+      }
+      paramString1 = K(jWT, jWS, localStringBuffer.toString());
+      i = 0;
+      j = 0;
+      for (;;)
+      {
+        localObject = paramString1;
+        if (i >= paramString1.length()) {
+          break;
+        }
+        n = paramString1.charAt(i);
+        paramString2 = paramString1;
+        if (j >= m) {
+          paramString2 = paramString1.substring(0, i);
+        }
+        k = j;
+        if (n != 32)
+        {
+          k = j;
+          if (n != 45)
+          {
+            k = j;
+            if (n != 12290) {
+              k = j + 1;
+            }
+          }
+        }
+        i += 1;
+        j = k;
+        paramString1 = paramString2;
+      }
+      paramString1 = new StringBuffer();
+      paramString1.append(str);
+      m = str.length();
+      while (paramString1.toString().length() < jWP) {
+        paramString1.append("0");
+      }
+      paramString1 = K(jWT, jWS, paramString1.toString());
+      i = 0;
+      j = 0;
+      while (i < paramString1.length())
+      {
+        n = paramString1.charAt(i);
+        paramString2 = paramString1;
+        if (j >= m) {
+          paramString2 = paramString1.substring(0, i);
+        }
+        k = j;
+        if (n != 32)
+        {
+          k = j;
+          if (n != 45)
+          {
+            k = j;
+            if (n != 12290) {
+              k = j + 1;
+            }
+          }
+        }
+        i += 1;
+        j = k;
+        paramString1 = paramString2;
+      }
+      return paramString1;
+    } while (!Pattern.compile(jWR).matcher(str).lookingAt());
+    paramString1 = new StringBuffer();
+    paramString1.append(str);
+    int m = str.length();
+    while (paramString1.toString().length() < jWP) {
+      paramString1.append(str.charAt(m - 1));
+    }
+    paramString1 = K(jWT, jWS, paramString1.toString());
+    int i = 0;
+    int j = 0;
     for (;;)
     {
-      return paramString;
-      char[] arrayOfChar = paramString.toCharArray();
-      if (arrayOfChar == null) {
-        return null;
-      }
-      int i = 0;
-      if (i < arrayOfChar.length) {
-        if (arrayOfChar[i] > '') {
-          arrayOfChar[i] = '\000';
-        }
-      }
-      for (int j = 1;; j = 0)
-      {
-        if (j == 0) {
-          break label66;
-        }
-        return new String(arrayOfChar, 0, i);
-        i += 1;
+      localObject = paramString1;
+      if (i >= paramString1.length()) {
         break;
       }
-    }
-  }
-  
-  public final void uncaughtException(Thread paramThread, Throwable paramThrowable)
-  {
-    if (hZA) {
-      return;
-    }
-    hZA = true;
-    try
-    {
-      ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
-      PrintStream localPrintStream = new PrintStream(localByteArrayOutputStream);
-      for (paramThread = paramThrowable; paramThread.getCause() != null; paramThread = paramThread.getCause()) {}
-      paramThread.printStackTrace(localPrintStream);
-      paramThread = xu(localByteArrayOutputStream.toString());
-      if ((hZx != null) && (paramThread != null)) {
-        hZx.eQ(paramThread);
+      n = paramString1.charAt(i);
+      paramString2 = paramString1;
+      if (j >= m) {
+        paramString2 = paramString1.substring(0, i);
       }
-      if ((hZw != null) && (paramThread != null))
+      k = j;
+      if (n != 32)
       {
-        hZw.a(paramThread, paramThrowable);
-        hZy.kY();
+        k = j;
+        if (n != 45)
+        {
+          k = j;
+          if (n != 12290) {
+            k = j + 1;
+          }
+        }
       }
-      localByteArrayOutputStream.close();
-      t.appenderClose();
+      i += 1;
+      j = k;
+      paramString1 = paramString2;
     }
-    catch (Exception paramThread)
-    {
-      for (;;) {}
-    }
-    Process.killProcess(Process.myPid());
-    System.exit(0);
+    return paramString2;
   }
   
-  public static abstract interface a
+  public static String pW(String paramString)
   {
-    public abstract void kY();
-  }
-  
-  public static abstract interface b
-  {
-    public abstract void a(String paramString, Throwable paramThrowable);
+    return cf(paramString, null);
   }
 }
 

@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic jwc:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
+.field final synthetic lyT:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 388
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$a;->jwc:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$a;->lyT:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
 
     .line 389
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V

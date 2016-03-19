@@ -2,18 +2,20 @@ package com.tencent.mm.ui.contact;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
-import com.tencent.mm.a.n;
-import com.tencent.mm.d.b.k;
 import com.tencent.mm.pluginsdk.ui.MultiSelectContactView;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.pluginsdk.ui.MultiSelectContactView.a;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.storage.i;
-import com.tencent.mm.ui.cn.b;
 import com.tencent.mm.ui.contact.a.a;
+import com.tencent.mm.ui.j.b;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
@@ -23,186 +25,236 @@ import java.util.List;
 public class SnsAddressUI
   extends MMBaseSelectContactUI
 {
-  private List ceC;
-  private HashSet dXl;
+  private List cvM;
+  private HashSet dbR;
   
-  private void aQC()
+  private void Nk()
   {
     String str;
-    if (dXl.size() == 0)
+    if (dbR.size() == 0)
     {
-      str = String.format("%s", new Object[] { getString(a.n.app_ok) });
-      L(1, str);
-      if (dXl.size() < 0) {
-        break label100;
+      str = String.format("%s", new Object[] { getString(2131430888) });
+      ad(1, str);
+      if (dbR.size() < 0) {
+        break label98;
       }
     }
-    label100:
+    label98:
     for (boolean bool = true;; bool = false)
     {
-      A(1, bool);
+      M(1, bool);
       return;
-      str = String.format("%s(%d/%d)", new Object[] { getString(a.n.app_ok), Integer.valueOf(dXl.size()), Integer.valueOf(i.ide) });
+      str = String.format("%s(%d/%d)", new Object[] { getString(2131430888), Integer.valueOf(dbR.size()), Integer.valueOf(i.kak) });
       break;
     }
   }
   
-  protected final String WX()
+  protected final void Ou()
   {
-    return bn.U(getIntent().getStringExtra("Add_address_titile"), "");
-  }
-  
-  protected final boolean Yg()
-  {
-    return true;
-  }
-  
-  protected final da Yh()
-  {
-    aa.a locala = new aa.a();
-    jeI = true;
-    jeL = true;
-    jeN = getString(a.n.address_near_contact_catalog_name);
-    jeM = bn.U(getIntent().getStringExtra("Add_get_from_sns"), "");
-    return new aa(this, ceC, true, true, locala);
-  }
-  
-  protected final db Yi()
-  {
-    return new db(this, ceC, true);
-  }
-  
-  public final int[] Yj()
-  {
-    return new int[] { 131072 };
-  }
-  
-  protected final boolean Ze()
-  {
-    return true;
+    super.Ou();
+    cvM = new ArrayList();
+    Object localObject = ay.h(ay.ad(getIntent().getStringExtra("Block_list"), "").split(","));
+    HashSet localHashSet = r.bhu();
+    localHashSet.addAll((Collection)localObject);
+    cvM.addAll(localHashSet);
+    cvM.addAll(r.bhv());
+    dbR = new HashSet();
+    localObject = ay.ad(getIntent().getStringExtra("Select_Contact"), "");
+    if (!ay.kz((String)localObject)) {
+      dbR.addAll(ay.h(((String)localObject).split(",")));
+    }
   }
   
   public final boolean a(a parama)
   {
-    if ((jgE) && (cqE != null)) {
-      return dXl.contains(cqE.field_username);
+    if ((lkT) && (cId != null)) {
+      return dbR.contains(cId.field_username);
     }
     return false;
   }
   
-  protected final void initData()
+  protected final String afU()
   {
-    super.initData();
-    ceC = new ArrayList();
-    Object localObject = bn.g(bn.U(getIntent().getStringExtra("Block_list"), "").split(","));
-    HashSet localHashSet = de.aQz();
-    localHashSet.addAll((Collection)localObject);
-    ceC.addAll(localHashSet);
-    ceC.addAll(de.aQA());
-    dXl = new HashSet();
-    localObject = bn.U(getIntent().getStringExtra("Select_Contact"), "");
-    if (!bn.iW((String)localObject)) {
-      dXl.addAll(bn.g(((String)localObject).split(",")));
-    }
+    return ay.ad(getIntent().getStringExtra("Add_address_titile"), "");
   }
   
-  protected final void nI(String paramString)
+  protected final boolean ahC()
   {
-    Intent localIntent = new Intent();
-    localIntent.setClass(this, SelectLabelContactUI.class);
-    localIntent.putExtra("label", paramString);
-    paramString = new HashSet();
-    paramString.addAll(dXl);
-    localIntent.putExtra("always_select_contact", bn.b(new ArrayList(paramString), ","));
-    localIntent.putExtra("list_attr", de.h(new int[] { 16384, 64 }));
-    startActivityForResult(localIntent, 3);
+    return true;
   }
   
-  public final void nJ(String paramString)
+  protected final n ahD()
   {
-    dXl.remove(paramString);
-    aQu().notifyDataSetChanged();
+    c.a locala = new c.a();
+    liL = true;
+    liR = true;
+    liT = getString(2131428339);
+    liS = ay.ad(getIntent().getStringExtra("Add_get_from_sns"), "");
+    return new c(this, cvM, true, true, locala);
+  }
+  
+  protected final p ahE()
+  {
+    return new p(this, cvM, true);
+  }
+  
+  public final int[] ahF()
+  {
+    return new int[] { 131072 };
+  }
+  
+  protected final boolean aiD()
+  {
+    return true;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
     int i = 0;
     super.onActivityResult(paramInt1, paramInt2, paramIntent);
+    if (paramInt2 != -1) {
+      return;
+    }
     switch (paramInt1)
     {
     default: 
       return;
     }
     paramIntent = paramIntent.getStringExtra("Select_Contact");
-    if (bn.iW(paramIntent))
+    if (ay.kz(paramIntent))
     {
-      t.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "GET_LABEL_USERS return usernames is null or empty");
+      u.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "GET_LABEL_USERS return usernames is null or empty");
       return;
     }
-    t.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "GET_LABEL_USERS select username=%s", new Object[] { paramIntent });
+    u.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "GET_LABEL_USERS select username=%s", new Object[] { paramIntent });
     paramIntent = paramIntent.split(",");
     paramInt2 = paramIntent.length;
     paramInt1 = i;
     while (paramInt1 < paramInt2)
     {
       Object localObject = paramIntent[paramInt1];
-      if (dXl.add(localObject)) {
-        dXm.uL((String)localObject);
+      if (dbR.add(localObject)) {
+        fbM.AA((String)localObject);
       }
       paramInt1 += 1;
     }
-    aQC();
-    aQu().notifyDataSetChanged();
+    Nk();
+    bhp().notifyDataSetChanged();
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    t.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "Create!");
-    a(1, getString(a.n.app_ok), new eh(this), cn.b.iqR);
-    a(new ej(this));
-    paramBundle = dXl.iterator();
+    u.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "Create!");
+    a(1, getString(2131430888), new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        paramAnonymousMenuItem = new Intent();
+        List localList = ay.h((String[])SnsAddressUI.a(SnsAddressUI.this).toArray(new String[0]));
+        if ((localList == null) || (localList.size() == 0)) {
+          paramAnonymousMenuItem.putExtra("Select_Contact", "");
+        }
+        for (;;)
+        {
+          setResult(-1, paramAnonymousMenuItem);
+          finish();
+          ab.e(new Runnable()
+          {
+            public final void run()
+            {
+              if (!getIntent().getBooleanExtra("stay_in_wechat", true)) {
+                moveTaskToBack(true);
+              }
+            }
+          }, 100L);
+          return true;
+          paramAnonymousMenuItem.putExtra("Select_Contact", ay.b(localList, ","));
+        }
+      }
+    }, j.b.kpJ);
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        finish();
+        if (!getIntent().getBooleanExtra("stay_in_wechat", true)) {
+          moveTaskToBack(true);
+        }
+        return true;
+      }
+    });
+    paramBundle = dbR.iterator();
     while (paramBundle.hasNext())
     {
       String str = (String)paramBundle.next();
-      dXm.uL(str);
+      fbM.AA(str);
     }
-    dXm.setOnContactDeselectListener(new ek(this));
-    aQC();
+    fbM.setOnContactDeselectListener(new MultiSelectContactView.a()
+    {
+      public final void rc(String paramAnonymousString)
+      {
+        if (paramAnonymousString != null)
+        {
+          SnsAddressUI.a(SnsAddressUI.this).remove(paramAnonymousString);
+          SnsAddressUI.b(SnsAddressUI.this);
+        }
+      }
+    });
+    Nk();
   }
   
   public void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    paramAdapterView = aQu();
-    paramView = paramAdapterView.op(paramInt - getContentLV().getHeaderViewsCount());
+    paramAdapterView = bhp();
+    paramView = paramAdapterView.rM(paramInt - getContentLV().getHeaderViewsCount());
     if (paramView == null) {}
-    while (cqE == null) {
+    while (cId == null) {
       return;
     }
-    t.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "ClickUser=%s", new Object[] { cqE.field_username });
-    paramView = cqE.field_username;
-    aQx();
-    if (dXl.contains(paramView))
+    u.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "ClickUser=%s", new Object[] { cId.field_username });
+    paramView = cId.field_username;
+    bhs();
+    if (dbR.contains(paramView))
     {
-      dXl.remove(paramView);
-      dXm.uL(paramView);
+      dbR.remove(paramView);
+      fbM.AA(paramView);
     }
     for (;;)
     {
-      aQC();
+      Nk();
       paramAdapterView.notifyDataSetChanged();
       return;
-      if (dXl.size() < i.ide)
+      if (dbR.size() < i.kak)
       {
-        dXl.add(paramView);
-        dXm.uL(paramView);
+        dbR.add(paramView);
+        fbM.AA(paramView);
       }
       else
       {
-        Toast.makeText(this, a.n.sns_max_select_at, 0).show();
-        t.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "select user size equal max size:%d", new Object[] { Integer.valueOf(i.ide) });
+        Toast.makeText(this, 2131432999, 0).show();
+        u.i("!32@/B4Tb64lLpLI3JJoWXimvSAB0KTsifPc", "select user size equal max size:%d", new Object[] { Integer.valueOf(i.kak) });
       }
     }
+  }
+  
+  protected final void rb(String paramString)
+  {
+    Intent localIntent = new Intent();
+    localIntent.setClass(this, SelectLabelContactUI.class);
+    localIntent.putExtra("label", paramString);
+    paramString = new HashSet();
+    paramString.addAll(dbR);
+    localIntent.putExtra("always_select_contact", ay.b(new ArrayList(paramString), ","));
+    localIntent.putExtra("list_attr", r.n(new int[] { 16384, 64 }));
+    startActivityForResult(localIntent, 3);
+  }
+  
+  public final void rc(String paramString)
+  {
+    dbR.remove(paramString);
+    bhp().notifyDataSetChanged();
+    Nk();
   }
 }
 

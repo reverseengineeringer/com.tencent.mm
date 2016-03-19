@@ -1,193 +1,367 @@
 .class final Lcom/tencent/mm/ui/chatting/bu;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/ui/chatting/aa$b;
 .source "SourceFile"
-
-# interfaces
-.implements Ljava/lang/Runnable;
 
 
 # instance fields
-.field final synthetic iTR:Lcom/tencent/mm/ui/chatting/bq;
+.field private kTe:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/chatting/bq;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 1
 
     .prologue
-    .line 281
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
+    .line 145
+    const/16 v0, 0xa
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/aa$b;-><init>(I)V
 
+    .line 146
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 4
+.method public final a(Landroid/view/LayoutInflater;Landroid/view/View;)Landroid/view/View;
+    .locals 2
 
     .prologue
-    const/4 v3, 0x1
+    .line 150
+    if-eqz p2, :cond_0
 
-    .line 286
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/bq;->g(Lcom/tencent/mm/ui/chatting/bq;)Ljava/lang/Object;
-
-    move-result-object v1
-
-    monitor-enter v1
-
-    .line 287
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/bq;->h(Lcom/tencent/mm/ui/chatting/bq;)Z
-
-    move-result v0
+    move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 288
-    const-string/jumbo v0, "!56@/B4Tb64lLpKwUcOR+EdWcty+WvCaqY0r1h+IytP2caAOFJMyUBO6MA=="
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
-    const-string/jumbo v2, "jacks already stop before begin!!"
+    move-result-object v0
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    check-cast v0, Lcom/tencent/mm/ui/chatting/aa$a;
 
-    .line 289
-    monitor-exit v1
+    iget v0, v0, Lcom/tencent/mm/ui/chatting/aa$a;->type:I
 
-    .line 307
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/bu;->eLV:I
+
+    if-eq v0, v1, :cond_1
+
+    .line 151
+    :cond_0
+    new-instance p2, Lcom/tencent/mm/ui/chatting/ax;
+
+    const v0, 0x7f0a005c
+
+    invoke-direct {p2, p1, v0}, Lcom/tencent/mm/ui/chatting/ax;-><init>(Landroid/view/LayoutInflater;I)V
+
+    .line 152
+    new-instance v0, Lcom/tencent/mm/ui/chatting/dy;
+
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/bu;->eLV:I
+
+    invoke-direct {v0, v1}, Lcom/tencent/mm/ui/chatting/dy;-><init>(I)V
+
+    const/4 v1, 0x1
+
+    invoke-virtual {v0, p2, v1}, Lcom/tencent/mm/ui/chatting/dy;->e(Landroid/view/View;Z)Lcom/tencent/mm/ui/chatting/aa$a;
+
+    move-result-object v0
+
+    invoke-virtual {p2, v0}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
+
+    .line 155
+    :cond_1
+    return-object p2
+.end method
+
+.method public final a(Lcom/tencent/mm/ui/chatting/aa$a;ILcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ag;Ljava/lang/String;)V
+    .locals 6
+
+    .prologue
+    .line 160
+    iput-object p3, p0, Lcom/tencent/mm/ui/chatting/bu;->kTe:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    move-object v0, p1
+
+    .line 161
+    check-cast v0, Lcom/tencent/mm/ui/chatting/dy;
+
+    .line 163
+    const/4 v2, 0x1
+
+    const v5, 0x7f040720
+
+    move-object v1, p4
+
+    move v3, p2
+
+    move-object v4, p3
+
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/ui/chatting/dy;->a(Lcom/tencent/mm/ui/chatting/dy;Lcom/tencent/mm/storage/ag;ZILcom/tencent/mm/ui/chatting/ChattingUI$a;I)V
+
+    .line 165
+    iget-object v1, p4, Lcom/tencent/mm/d/b/bg;->bcE:Ljava/lang/String;
+
+    .line 166
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v1}, Ljava/lang/String;->length()I
+
+    move-result v2
+
+    if-nez v2, :cond_1
+
+    .line 167
+    :cond_0
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/dy;->kQE:Landroid/widget/TextView;
+
+    const/16 v1, 0x8
+
+    invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
+
+    .line 172
     :goto_0
     return-void
 
-    .line 291
-    :cond_0
-    monitor-exit v1
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+    .line 169
+    :cond_1
+    iget-object v2, v0, Lcom/tencent/mm/ui/chatting/dy;->kQE:Landroid/widget/TextView;
 
-    .line 293
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
+    const/4 v3, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/bq;->i(Lcom/tencent/mm/ui/chatting/bq;)Z
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 294
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
+    .line 170
+    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/dy;->kQE:Landroid/widget/TextView;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/bq;->b(Lcom/tencent/mm/ui/chatting/bq;)Lcom/tencent/mm/sdk/platformtools/aj;
-
-    move-result-object v0
-
-    const-wide/16 v1, 0x64
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aj;->cA(J)V
-
-    .line 295
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/chatting/bq;->a(Lcom/tencent/mm/ui/chatting/bq;Z)Z
-
-    .line 296
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/bq;->c(Lcom/tencent/mm/ui/chatting/bq;)Lcom/tencent/mm/sdk/platformtools/aj;
-
-    move-result-object v0
-
-    const-wide/16 v1, 0xc8
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aj;->cA(J)V
-
-    .line 297
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/bq;->d(Lcom/tencent/mm/ui/chatting/bq;)Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/bq;->j(Lcom/tencent/mm/ui/chatting/bq;)Landroid/widget/ListView;
+    invoke-static {v1}, Lcom/tencent/mm/ui/chatting/dg;->Hb(Ljava/lang/String;)Lcom/tencent/mm/ui/chatting/dg;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Landroid/widget/ListView;->getHeight()I
+    invoke-static {p3, v0, v1}, Lcom/tencent/mm/ui/chatting/bu;->b(Lcom/tencent/mm/ui/chatting/ChattingUI$a;Landroid/view/View;Ljava/lang/Object;)V
+
+    goto :goto_0
+.end method
+
+.method public final a(Landroid/view/ContextMenu;Landroid/view/View;Lcom/tencent/mm/storage/ag;)Z
+    .locals 6
+
+    .prologue
+    const/16 v5, 0xc7
+
+    const/4 v4, 0x0
+
+    .line 176
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->isSDCardAvailable()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_4
+
+    .line 177
+    invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/ui/chatting/dg;
+
+    .line 178
+    iget v0, v0, Lcom/tencent/mm/ui/chatting/dg;->position:I
+
+    .line 180
+    const-string/jumbo v1, "favorite"
+
+    invoke-static {v1}, Lcom/tencent/mm/ar/c;->yf(Ljava/lang/String;)Z
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/ui/chat/ChatFooter;->lE(I)V
+    if-eqz v1, :cond_0
 
-    .line 298
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
+    .line 181
+    const/16 v1, 0x74
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/bq;->e(Lcom/tencent/mm/ui/chatting/bq;)Lcom/tencent/mm/ui/chatting/fu;
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    move-result-object v0
+    move-result-object v2
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/fu;->iWq:Lcom/tencent/mm/ui/chatting/ac;
+    const v3, 0x7f0b0e8e
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ac;->aNV()V
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 299
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
+    move-result-object v2
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/bq;->k(Lcom/tencent/mm/ui/chatting/bq;)V
+    invoke-interface {p1, v0, v1, v4, v2}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
-    .line 300
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
+    .line 184
+    :cond_0
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/bu;->kTe:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/chatting/bq;->iTG:Landroid/widget/ListView;
+    iget-object v1, v1, Lcom/tencent/mm/ui/o;->koJ:Lcom/tencent/mm/ui/j;
 
-    invoke-virtual {v0, v3}, Landroid/widget/ListView;->setKeepScreenOn(Z)V
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
-    .line 301
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
+    iget v1, p3, Lcom/tencent/mm/d/b/bg;->field_type:I
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/bq;->f(Lcom/tencent/mm/ui/chatting/bq;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/model/app/g;->of(I)Z
 
-    move-result-object v0
+    move-result v1
 
-    const/4 v1, 0x3
+    .line 185
+    if-eqz v1, :cond_1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->oj(I)V
+    .line 186
+    const/16 v1, 0x80
 
-    .line 302
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/bq;->f(Lcom/tencent/mm/ui/chatting/bq;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    move-result-object v2
 
-    move-result-object v0
+    const v3, 0x7f0b0210
 
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->keepSignalling()V
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    .line 305
-    invoke-static {}, Lcom/tencent/mm/ui/chatting/bq;->aOp()V
+    move-result-object v2
 
-    .line 306
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/bu;->iTR:Lcom/tencent/mm/ui/chatting/bq;
+    invoke-interface {p1, v0, v1, v4, v2}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/chatting/bq;->f(Lcom/tencent/mm/ui/chatting/bq;)Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+    .line 188
+    :cond_1
+    invoke-static {}, Lcom/tencent/mm/an/j;->Ea()Lcom/tencent/mm/an/n;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->fI(Z)V
+    iget-object v2, p3, Lcom/tencent/mm/d/b/bg;->field_imgPath:Ljava/lang/String;
 
-    goto :goto_0
+    invoke-virtual {v1, v2}, Lcom/tencent/mm/an/n;->jJ(Ljava/lang/String;)Lcom/tencent/mm/an/m;
 
-    .line 291
-    :catchall_0
-    move-exception v0
+    move-result-object v1
 
-    :try_start_1
-    monitor-exit v1
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .line 189
+    if-eqz v1, :cond_3
 
-    throw v0
+    iget v2, v1, Lcom/tencent/mm/an/m;->status:I
+
+    if-eq v2, v5, :cond_2
+
+    iget v1, v1, Lcom/tencent/mm/an/m;->status:I
+
+    if-ne v1, v5, :cond_3
+
+    .line 190
+    :cond_2
+    const/16 v1, 0x6a
+
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const v3, 0x7f0b020d
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {p1, v0, v1, v4, v2}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    .line 191
+    const/16 v1, 0x6b
+
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const v3, 0x7f0b01ee
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {p1, v0, v1, v4, v2}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    .line 192
+    invoke-static {}, Lcom/tencent/mm/t/n;->xi()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_3
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/bu;->kTe:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bfD()Z
+
+    move-result v1
+
+    if-nez v1, :cond_3
+
+    .line 193
+    const/16 v1, 0x72
+
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const v3, 0x7f0b029e
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {p1, v0, v1, v4, v2}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    .line 196
+    :cond_3
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/bu;->kTe:Lcom/tencent/mm/ui/chatting/ChattingUI$a;
+
+    invoke-virtual {v1}, Lcom/tencent/mm/ui/chatting/ChattingUI$a;->bfD()Z
+
+    move-result v1
+
+    if-nez v1, :cond_4
+
+    .line 197
+    const/16 v1, 0x64
+
+    invoke-virtual {p2}, Landroid/view/View;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    const v3, 0x7f0b020c
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {p1, v0, v1, v4, v2}, Landroid/view/ContextMenu;->add(IIILjava/lang/CharSequence;)Landroid/view/MenuItem;
+
+    .line 202
+    :cond_4
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final a(Landroid/view/MenuItem;Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ag;)Z
+    .locals 1
+
+    .prologue
+    .line 207
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final a(Landroid/view/View;Lcom/tencent/mm/ui/chatting/ChattingUI$a;Lcom/tencent/mm/storage/ag;)Z
+    .locals 1
+
+    .prologue
+    .line 212
+    const/4 v0, 0x0
+
+    return v0
 .end method

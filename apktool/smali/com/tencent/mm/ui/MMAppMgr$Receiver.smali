@@ -25,7 +25,7 @@
 
 
 # instance fields
-.field private aoy:Lcom/tencent/mm/ui/MMAppMgr;
+.field private amm:Lcom/tencent/mm/ui/MMAppMgr;
 
 
 # direct methods
@@ -33,10 +33,10 @@
     .locals 0
 
     .prologue
-    .line 83
+    .line 111
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 84
+    .line 112
     return-void
 .end method
 
@@ -44,30 +44,30 @@
     .locals 0
 
     .prologue
-    .line 86
+    .line 114
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
-    .line 87
-    iput-object p1, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->aoy:Lcom/tencent/mm/ui/MMAppMgr;
+    .line 115
+    iput-object p1, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->amm:Lcom/tencent/mm/ui/MMAppMgr;
 
-    .line 88
+    .line 116
     return-void
 .end method
 
-.method private static D(Landroid/content/Intent;)Z
+.method private static M(Landroid/content/Intent;)Z
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
-    .line 96
+    .line 124
     const-string/jumbo v1, "process_id"
 
     invoke-virtual {p0, v1, v0}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 97
+    .line 125
     invoke-static {}, Landroid/os/Process;->myPid()I
 
     move-result v2
@@ -96,28 +96,28 @@
 
     const/4 v9, 0x0
 
-    .line 102
+    .line 130
     if-nez p2, :cond_1
 
-    .line 213
+    .line 241
     :cond_0
     :goto_0
     return-void
 
-    .line 106
+    .line 134
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ax;->sX()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tp()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 109
+    .line 137
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 110
+    .line 138
     const-string/jumbo v1, "com.tencent.mm.ui.ACTION_ACTIVE"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -126,14 +126,14 @@
 
     if-eqz v1, :cond_3
 
-    .line 111
-    invoke-static {p2}, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->D(Landroid/content/Intent;)Z
+    .line 139
+    invoke-static {p2}, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->M(Landroid/content/Intent;)Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 112
+    .line 140
     const-string/jumbo v0, "!32@/B4Tb64lLpINZTHnqdV5XF5PuPz9mv0P"
 
     const-string/jumbo v1, "onreceive active process changed old: %d, new: %d"
@@ -162,24 +162,24 @@
 
     aput-object v3, v2, v10
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 116
+    .line 144
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->aoy:Lcom/tencent/mm/ui/MMAppMgr;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->amm:Lcom/tencent/mm/ui/MMAppMgr;
 
     invoke-static {v0, p2, v10}, Lcom/tencent/mm/ui/MMAppMgr;->a(Lcom/tencent/mm/ui/MMAppMgr;Landroid/content/Intent;Z)V
 
-    .line 117
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->aoy:Lcom/tencent/mm/ui/MMAppMgr;
+    .line 145
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->amm:Lcom/tencent/mm/ui/MMAppMgr;
 
-    invoke-virtual {v0, v10}, Lcom/tencent/mm/ui/MMAppMgr;->aJ(Z)V
+    invoke-virtual {v0, v10}, Lcom/tencent/mm/ui/MMAppMgr;->aO(Z)V
 
     goto :goto_0
 
-    .line 121
+    .line 149
     :cond_3
     const-string/jumbo v1, "com.tencent.mm.ui.ACTION_DEACTIVE"
 
@@ -189,14 +189,14 @@
 
     if-eqz v1, :cond_5
 
-    .line 122
-    invoke-static {p2}, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->D(Landroid/content/Intent;)Z
+    .line 150
+    invoke-static {p2}, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->M(Landroid/content/Intent;)Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    .line 123
+    .line 151
     const-string/jumbo v0, "!32@/B4Tb64lLpINZTHnqdV5XF5PuPz9mv0P"
 
     const-string/jumbo v1, "onreceive deactive process changed old: %d, new: %d"
@@ -225,30 +225,30 @@
 
     aput-object v3, v2, v10
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
-    .line 127
+    .line 155
     :cond_4
-    invoke-static {}, Lcom/tencent/mm/booter/am;->nE()V
+    invoke-static {}, Lcom/tencent/mm/booter/m;->nk()V
 
-    .line 129
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->aoy:Lcom/tencent/mm/ui/MMAppMgr;
+    .line 157
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->amm:Lcom/tencent/mm/ui/MMAppMgr;
 
     invoke-static {v0, p2, v9}, Lcom/tencent/mm/ui/MMAppMgr;->a(Lcom/tencent/mm/ui/MMAppMgr;Landroid/content/Intent;Z)V
 
-    .line 130
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->aoy:Lcom/tencent/mm/ui/MMAppMgr;
+    .line 158
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMAppMgr$Receiver;->amm:Lcom/tencent/mm/ui/MMAppMgr;
 
-    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/MMAppMgr;->aJ(Z)V
+    invoke-virtual {v0, v9}, Lcom/tencent/mm/ui/MMAppMgr;->aO(Z)V
 
-    .line 131
-    sget-object v0, Lcom/tencent/mm/ui/MMAppMgr;->iqX:Ljava/lang/StringBuffer;
+    .line 159
+    sget-object v0, Lcom/tencent/mm/ui/MMAppMgr;->kpS:Ljava/lang/StringBuffer;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/tencent/mm/ui/MMAppMgr;->iqX:Ljava/lang/StringBuffer;
+    sget-object v0, Lcom/tencent/mm/ui/MMAppMgr;->kpS:Ljava/lang/StringBuffer;
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
 
@@ -256,24 +256,24 @@
 
     if-le v0, v4, :cond_0
 
-    .line 132
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
+    .line 160
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
 
-    new-instance v1, Lcom/tencent/mm/ui/dq;
+    new-instance v1, Lcom/tencent/mm/ui/MMAppMgr$Receiver$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/dq;-><init>(Lcom/tencent/mm/ui/MMAppMgr$Receiver;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/MMAppMgr$Receiver$1;-><init>(Lcom/tencent/mm/ui/MMAppMgr$Receiver;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
 
     goto/16 :goto_0
 
-    .line 143
+    .line 171
     :cond_5
     const-string/jumbo v1, "com.tencent.mm.ui.ACTION_ABTEST"
 
@@ -283,14 +283,14 @@
 
     if-eqz v0, :cond_8
 
-    .line 145
+    .line 173
     const-string/jumbo v0, "content"
 
     invoke-virtual {p2, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/ad;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -300,15 +300,15 @@
 
     const-string/jumbo v1, "dealWithClickTestCaseStream case id is null, broadcast should set this intent flag"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 147
+    .line 175
     :goto_1
-    sget-object v0, Lcom/tencent/mm/ui/MMAppMgr;->iqX:Ljava/lang/StringBuffer;
+    sget-object v0, Lcom/tencent/mm/ui/MMAppMgr;->kpS:Ljava/lang/StringBuffer;
 
     if-eqz v0, :cond_0
 
-    sget-object v0, Lcom/tencent/mm/ui/MMAppMgr;->iqX:Ljava/lang/StringBuffer;
+    sget-object v0, Lcom/tencent/mm/ui/MMAppMgr;->kpS:Ljava/lang/StringBuffer;
 
     invoke-virtual {v0}, Ljava/lang/StringBuffer;->length()I
 
@@ -316,26 +316,26 @@
 
     if-le v0, v4, :cond_0
 
-    .line 148
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
+    .line 176
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v1
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>(Landroid/os/Looper;)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
 
-    new-instance v1, Lcom/tencent/mm/ui/dr;
+    new-instance v1, Lcom/tencent/mm/ui/MMAppMgr$Receiver$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/dr;-><init>(Lcom/tencent/mm/ui/MMAppMgr$Receiver;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/MMAppMgr$Receiver$2;-><init>(Lcom/tencent/mm/ui/MMAppMgr$Receiver;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
 
     goto/16 :goto_0
 
-    .line 145
+    .line 173
     :cond_6
-    sget-object v1, Lcom/tencent/mm/ui/MMAppMgr;->iqX:Ljava/lang/StringBuffer;
+    sget-object v1, Lcom/tencent/mm/ui/MMAppMgr;->kpS:Ljava/lang/StringBuffer;
 
     if-nez v1, :cond_7
 
@@ -343,10 +343,10 @@
 
     invoke-direct {v1, v4}, Ljava/lang/StringBuffer;-><init>(I)V
 
-    sput-object v1, Lcom/tencent/mm/ui/MMAppMgr;->iqX:Ljava/lang/StringBuffer;
+    sput-object v1, Lcom/tencent/mm/ui/MMAppMgr;->kpS:Ljava/lang/StringBuffer;
 
     :cond_7
-    sget-object v1, Lcom/tencent/mm/ui/MMAppMgr;->iqX:Ljava/lang/StringBuffer;
+    sget-object v1, Lcom/tencent/mm/ui/MMAppMgr;->kpS:Ljava/lang/StringBuffer;
 
     invoke-virtual {v1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
@@ -358,11 +358,11 @@
 
     aput-object v0, v3, v9
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 
-    .line 158
+    .line 186
     :cond_8
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -376,24 +376,24 @@
 
     if-eqz v0, :cond_e
 
-    .line 159
+    .line 187
     const-string/jumbo v0, "intent_extra_is_silence_stat"
 
     invoke-virtual {p2, v0, v9}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v0
 
-    .line 161
+    .line 189
     if-nez v0, :cond_b
 
-    .line 162
+    .line 190
     const-string/jumbo v0, "intent_extra_opcode"
 
     invoke-virtual {p2, v0, v9}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 163
+    .line 191
     const-string/jumbo v1, "!32@/B4Tb64lLpINZTHnqdV5XF5PuPz9mv0P"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -410,17 +410,17 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 165
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    .line 193
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
-    .line 166
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    .line 194
+    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
     const/16 v2, 0x2858
 
@@ -432,9 +432,9 @@
 
     aput-object v0, v3, v9
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
 
-    .line 189
+    .line 217
     :cond_9
     :goto_2
     const-string/jumbo v0, "intent_extra_flow_stat_upstream"
@@ -443,28 +443,28 @@
 
     move-result-wide v0
 
-    .line 190
+    .line 218
     const-string/jumbo v2, "intent_extra_flow_stat_downstream"
 
     invoke-virtual {p2, v2, v6, v7}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v2
 
-    .line 191
+    .line 219
     const-string/jumbo v4, "intent_extra_flow_stat_is_wifi"
 
     invoke-virtual {p2, v4, v9}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
 
     move-result v4
 
-    .line 192
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    .line 220
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 193
+    .line 221
     cmp-long v5, v0, v6
 
     if-nez v5, :cond_a
@@ -473,7 +473,7 @@
 
     if-eqz v5, :cond_0
 
-    .line 195
+    .line 223
     :cond_a
     const-string/jumbo v5, "!32@/B4Tb64lLpINZTHnqdV5XF5PuPz9mv0P"
 
@@ -501,21 +501,21 @@
 
     aput-object v8, v7, v11
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 197
+    .line 225
     if-eqz v4, :cond_d
 
-    .line 198
+    .line 226
     long-to-int v2, v2
 
     long-to-int v0, v0
 
-    invoke-static {v2, v0, v9}, Lcom/tencent/mm/modelstat/h;->j(III)V
+    invoke-static {v2, v0, v9}, Lcom/tencent/mm/modelstat/f;->j(III)V
 
     goto/16 :goto_0
 
-    .line 169
+    .line 197
     :cond_b
     const-string/jumbo v0, "intent_extra_opcode"
 
@@ -523,7 +523,7 @@
 
     move-result v0
 
-    .line 170
+    .line 198
     const-string/jumbo v1, "!32@/B4Tb64lLpINZTHnqdV5XF5PuPz9mv0P"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -540,27 +540,27 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 172
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    .line 200
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v1
 
     if-eqz v1, :cond_9
 
-    .line 173
+    .line 201
     if-ne v0, v11, :cond_c
 
-    .line 174
+    .line 202
     const-string/jumbo v1, "intent_extra_install_dialog_times"
 
     invoke-virtual {p2, v1, v9}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v1
 
-    .line 175
-    sget-object v2, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    .line 203
+    sget-object v2, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
     const/16 v3, 0x2b8b
 
@@ -578,15 +578,15 @@
 
     aput-object v1, v4, v10
 
-    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
+    invoke-virtual {v2, v3, v4}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
 
-    .line 180
+    .line 208
     :goto_3
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_9
 
-    invoke-static {}, Lcom/tencent/mm/platformtools/ac;->DI()I
+    invoke-static {}, Lcom/tencent/mm/platformtools/s;->FO()I
 
     move-result v0
 
@@ -594,22 +594,22 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 181
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/a;->ayQ()Lcom/tencent/mm/pluginsdk/model/app/a;
+    .line 209
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/a;->aPv()Lcom/tencent/mm/pluginsdk/model/app/a;
 
     move-result-object v0
 
-    .line 182
+    .line 210
     if-eqz v0, :cond_9
 
-    .line 183
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/app/a;->ayT()V
+    .line 211
+    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/app/a;->aPy()V
 
     goto/16 :goto_2
 
-    .line 177
+    .line 205
     :cond_c
-    sget-object v1, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    sget-object v1, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
     const/16 v2, 0x2b8b
 
@@ -621,21 +621,21 @@
 
     aput-object v4, v3, v9
 
-    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
+    invoke-virtual {v1, v2, v3}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
 
     goto :goto_3
 
-    .line 200
+    .line 228
     :cond_d
     long-to-int v2, v2
 
     long-to-int v0, v0
 
-    invoke-static {v2, v0, v9}, Lcom/tencent/mm/modelstat/h;->k(III)V
+    invoke-static {v2, v0, v9}, Lcom/tencent/mm/modelstat/f;->k(III)V
 
     goto/16 :goto_0
 
-    .line 208
+    .line 236
     :cond_e
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -649,16 +649,16 @@
 
     if-eqz v0, :cond_f
 
-    .line 209
+    .line 237
     invoke-static {p1, v10}, Lcom/tencent/mm/ui/MMAppMgr;->b(Landroid/content/Context;Z)V
 
-    .line 212
+    .line 240
     :cond_f
     const-string/jumbo v0, "!32@/B4Tb64lLpINZTHnqdV5XF5PuPz9mv0P"
 
     const-string/jumbo v1, "unknown broadcast action"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto/16 :goto_0
 .end method

@@ -4,69 +4,132 @@ import a.a.a.b;
 import java.util.LinkedList;
 
 public final class bz
-  extends adm
+  extends ali
 {
-  public int bZI;
-  public int cVl;
-  public int eJB;
-  public int hlB;
-  public int hlF;
-  public String hlb;
-  public int hlc;
-  public LinkedList hlu = new LinkedList();
+  public String bLP;
+  public String dzh;
+  public String dzi;
+  public String dzj;
+  public alx iYZ;
+  public db iZo;
+  public String iZp;
+  public String iZq;
+  public int iZr;
+  public String iZs;
+  public String iZt;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLQ == null) {
-        throw new b("Not all required fields were included: BaseResponse");
+      if (iYZ == null) {
+        throw new b("Not all required fields were included: AutoAuthKey");
       }
-      if (hLQ != null)
+      if (jGS != null)
       {
-        paramVarArgs.bN(1, hLQ.kS());
-        hLQ.a(paramVarArgs);
+        paramVarArgs.cj(1, jGS.kn());
+        jGS.a(paramVarArgs);
       }
-      if (hlb != null) {
-        paramVarArgs.U(2, hlb);
+      if (iZo != null)
+      {
+        paramVarArgs.cj(2, iZo.kn());
+        iZo.a(paramVarArgs);
       }
-      paramVarArgs.bM(3, eJB);
-      paramVarArgs.d(4, 8, hlu);
-      paramVarArgs.bM(5, hlc);
-      paramVarArgs.bM(6, hlF);
-      paramVarArgs.bM(7, cVl);
-      paramVarArgs.bM(8, hlB);
-      paramVarArgs.bM(9, bZI);
+      if (iYZ != null)
+      {
+        paramVarArgs.cj(3, iYZ.kn());
+        iYZ.a(paramVarArgs);
+      }
+      if (iZp != null) {
+        paramVarArgs.d(4, iZp);
+      }
+      if (iZq != null) {
+        paramVarArgs.d(5, iZq);
+      }
+      paramVarArgs.ci(6, iZr);
+      if (iZs != null) {
+        paramVarArgs.d(7, iZs);
+      }
+      if (bLP != null) {
+        paramVarArgs.d(8, bLP);
+      }
+      if (dzj != null) {
+        paramVarArgs.d(9, dzj);
+      }
+      if (iZt != null) {
+        paramVarArgs.d(10, iZt);
+      }
+      if (dzi != null) {
+        paramVarArgs.d(11, dzi);
+      }
+      if (dzh != null) {
+        paramVarArgs.d(12, dzh);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      if (hLQ == null) {
-        break label723;
+      if (jGS == null) {
+        break label1094;
       }
     }
-    label723:
-    for (paramInt = a.a.a.a.bJ(1, hLQ.kS()) + 0;; paramInt = 0)
+    label1094:
+    for (int i = a.a.a.a.ch(1, jGS.kn()) + 0;; i = 0)
     {
-      int i = paramInt;
-      if (hlb != null) {
-        i = paramInt + a.a.a.b.b.a.T(2, hlb);
+      paramInt = i;
+      if (iZo != null) {
+        paramInt = i + a.a.a.a.ch(2, iZo.kn());
       }
-      return i + a.a.a.a.bI(3, eJB) + a.a.a.a.c(4, 8, hlu) + a.a.a.a.bI(5, hlc) + a.a.a.a.bI(6, hlF) + a.a.a.a.bI(7, cVl) + a.a.a.a.bI(8, hlB) + a.a.a.a.bI(9, bZI);
+      i = paramInt;
+      if (iYZ != null) {
+        i = paramInt + a.a.a.a.ch(3, iYZ.kn());
+      }
+      paramInt = i;
+      if (iZp != null) {
+        paramInt = i + a.a.a.b.b.a.e(4, iZp);
+      }
+      i = paramInt;
+      if (iZq != null) {
+        i = paramInt + a.a.a.b.b.a.e(5, iZq);
+      }
+      i += a.a.a.a.cg(6, iZr);
+      paramInt = i;
+      if (iZs != null) {
+        paramInt = i + a.a.a.b.b.a.e(7, iZs);
+      }
+      i = paramInt;
+      if (bLP != null) {
+        i = paramInt + a.a.a.b.b.a.e(8, bLP);
+      }
+      paramInt = i;
+      if (dzj != null) {
+        paramInt = i + a.a.a.b.b.a.e(9, dzj);
+      }
+      i = paramInt;
+      if (iZt != null) {
+        i = paramInt + a.a.a.b.b.a.e(10, iZt);
+      }
+      paramInt = i;
+      if (dzi != null) {
+        paramInt = i + a.a.a.b.b.a.e(11, dzi);
+      }
+      i = paramInt;
+      if (dzh != null) {
+        i = paramInt + a.a.a.b.b.a.e(12, dzh);
+      }
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = (byte[])paramVarArgs[0];
-        hlu.clear();
-        paramVarArgs = new a.a.a.a.a(paramVarArgs, hfZ);
-        for (paramInt = adm.a(paramVarArgs); paramInt > 0; paramInt = adm.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = ali.a(paramVarArgs); paramInt > 0; paramInt = ali.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
-        if (hLQ != null) {
+        if (iYZ != null) {
           break;
         }
-        throw new b("Not all required fields were included: BaseResponse");
+        throw new b("Not all required fields were included: AutoAuthKey");
       }
       if (paramInt == 3)
       {
@@ -80,51 +143,70 @@ public final class bz
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
           i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new ck();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (bool = true; bool; bool = ((ck)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adm.a((a.a.a.a.a)localObject2))) {}
-            hLQ = ((ck)localObject1);
+            localObject1 = new dc();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (bool = true; bool; bool = ((dc)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, ali.a((a.a.a.a.a)localObject2))) {}
+            jGS = ((dc)localObject1);
             paramInt += 1;
           }
         case 2: 
-          hlb = jMD.readString();
-          return 0;
-        case 3: 
-          eJB = jMD.aVp();
-          return 0;
-        case 4: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
           i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
             localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new adu();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (bool = true; bool; bool = ((adu)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adm.a((a.a.a.a.a)localObject2))) {}
-            hlu.add(localObject1);
+            localObject1 = new db();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (bool = true; bool; bool = ((db)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, ali.a((a.a.a.a.a)localObject2))) {}
+            iZo = ((db)localObject1);
             paramInt += 1;
           }
+        case 3: 
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new alx();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (bool = true; bool; bool = ((alx)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, ali.a((a.a.a.a.a)localObject2))) {}
+            iYZ = ((alx)localObject1);
+            paramInt += 1;
+          }
+        case 4: 
+          iZp = maU.readString();
+          return 0;
         case 5: 
-          hlc = jMD.aVp();
+          iZq = maU.readString();
           return 0;
         case 6: 
-          hlF = jMD.aVp();
+          iZr = maU.jC();
           return 0;
         case 7: 
-          cVl = jMD.aVp();
+          iZs = maU.readString();
           return 0;
         case 8: 
-          hlB = jMD.aVp();
+          bLP = maU.readString();
+          return 0;
+        case 9: 
+          dzj = maU.readString();
+          return 0;
+        case 10: 
+          iZt = maU.readString();
+          return 0;
+        case 11: 
+          dzi = maU.readString();
           return 0;
         }
-        bZI = jMD.aVp();
+        dzh = maU.readString();
         return 0;
       }
       return -1;

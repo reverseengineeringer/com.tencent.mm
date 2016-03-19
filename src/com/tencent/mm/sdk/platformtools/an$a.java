@@ -1,15 +1,31 @@
 package com.tencent.mm.sdk.platformtools;
 
-import java.util.LinkedList;
-import java.util.List;
-
-public final class an$a
+final class an$a
 {
-  String hZU;
-  String hZV;
-  int hZW = 10;
-  int hZX = 20;
-  List hZY = new LinkedList();
+  final Object jXp;
+  
+  an$a(Object paramObject)
+  {
+    jXp = paramObject;
+  }
+  
+  public final boolean equals(Object paramObject)
+  {
+    if (paramObject == null) {}
+    do
+    {
+      do
+      {
+        return false;
+      } while (!(paramObject instanceof a));
+      paramObject = (a)paramObject;
+      if (jXp != null) {
+        break;
+      }
+    } while (jXp != null);
+    return true;
+    return jXp.equals(jXp);
+  }
 }
 
 /* Location:

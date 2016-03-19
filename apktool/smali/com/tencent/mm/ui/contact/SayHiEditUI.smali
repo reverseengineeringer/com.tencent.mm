@@ -3,13 +3,13 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d;
+.implements Lcom/tencent/mm/r/d;
 
 
 # instance fields
-.field private bXB:Landroid/app/ProgressDialog;
+.field private coM:Landroid/app/ProgressDialog;
 
-.field private eoX:Landroid/widget/EditText;
+.field private fyY:Landroid/widget/EditText;
 
 
 # direct methods
@@ -17,13 +17,13 @@
     .locals 1
 
     .prologue
-    .line 28
+    .line 29
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
-    .line 31
+    .line 32
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->coM:Landroid/app/ProgressDialog;
 
     return-void
 .end method
@@ -32,8 +32,8 @@
     .locals 0
 
     .prologue
-    .line 28
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->bXB:Landroid/app/ProgressDialog;
+    .line 29
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->coM:Landroid/app/ProgressDialog;
 
     return-object p1
 .end method
@@ -44,8 +44,8 @@
     .prologue
     const/16 v2, 0x32
 
-    .line 28
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->eoX:Landroid/widget/EditText;
+    .line 29
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->fyY:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -80,12 +80,12 @@
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 5
 
     .prologue
-    .line 58
-    sget v0, Lcom/tencent/mm/a$i;->say_hi_content:I
+    .line 59
+    const v0, 0x7f070207
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->findViewById(I)Landroid/view/View;
 
@@ -93,10 +93,10 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->eoX:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->fyY:Landroid/widget/EditText;
 
-    .line 60
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->eoX:Landroid/widget/EditText;
+    .line 61
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->fyY:Landroid/widget/EditText;
 
     invoke-static {v0}, Lcom/tencent/mm/ui/tools/a/c;->a(Landroid/widget/EditText;)Lcom/tencent/mm/ui/tools/a/c;
 
@@ -104,7 +104,7 @@
 
     const/16 v1, 0x64
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->oZ(I)Lcom/tencent/mm/ui/tools/a/c;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->rZ(I)Lcom/tencent/mm/ui/tools/a/c;
 
     move-result-object v0
 
@@ -112,7 +112,7 @@
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/a/c;->a(Lcom/tencent/mm/ui/tools/a/c$a;)V
 
-    .line 64
+    .line 65
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -123,7 +123,7 @@
 
     move-result-object v0
 
-    .line 65
+    .line 66
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
@@ -136,35 +136,35 @@
 
     move-result v1
 
-    .line 67
+    .line 68
     const/4 v2, 0x0
 
-    sget v3, Lcom/tencent/mm/a$n;->app_send:I
+    const v3, 0x7f0b0ddf
 
     invoke-virtual {p0, v3}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    new-instance v4, Lcom/tencent/mm/ui/contact/dl;
+    new-instance v4, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;
 
-    invoke-direct {v4, p0, v0, v1}, Lcom/tencent/mm/ui/contact/dl;-><init>(Lcom/tencent/mm/ui/contact/SayHiEditUI;Ljava/lang/String;I)V
+    invoke-direct {v4, p0, v0, v1}, Lcom/tencent/mm/ui/contact/SayHiEditUI$1;-><init>(Lcom/tencent/mm/ui/contact/SayHiEditUI;Ljava/lang/String;I)V
 
-    sget v0, Lcom/tencent/mm/ui/cn$b;->iqR:I
+    sget v0, Lcom/tencent/mm/ui/j$b;->kpJ:I
 
     invoke-virtual {p0, v2, v3, v4, v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;I)V
 
-    .line 89
-    new-instance v0, Lcom/tencent/mm/ui/contact/dn;
+    .line 90
+    new-instance v0, Lcom/tencent/mm/ui/contact/SayHiEditUI$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/dn;-><init>(Lcom/tencent/mm/ui/contact/SayHiEditUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/SayHiEditUI$2;-><init>(Lcom/tencent/mm/ui/contact/SayHiEditUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 98
+    .line 99
     return-void
 .end method
 
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
     .locals 5
 
     .prologue
@@ -172,7 +172,7 @@
 
     const/4 v1, 0x0
 
-    .line 123
+    .line 124
     const-string/jumbo v2, "!32@/B4Tb64lLpLV0em2rB59lAbnFb3mbD93"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -209,25 +209,25 @@
 
     move-result-object v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 126
+    .line 127
     :try_start_0
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->coM:Landroid/app/ProgressDialog;
 
     if-eqz v2, :cond_0
 
-    .line 127
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->bXB:Landroid/app/ProgressDialog;
+    .line 128
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->coM:Landroid/app/ProgressDialog;
 
     invoke-virtual {v2}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 128
+    .line 129
     const/4 v2, 0x0
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object v2, p0, Lcom/tencent/mm/ui/contact/SayHiEditUI;->coM:Landroid/app/ProgressDialog;
 
-    .line 131
+    .line 132
     :cond_0
     sparse-switch p2, :sswitch_data_0
 
@@ -236,13 +236,13 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    .line 148
+    .line 154
     :goto_1
     return-void
 
-    .line 131
+    .line 132
     :sswitch_0
-    sget v1, Lcom/tencent/mm/a$n;->nearby_friend_say_hi_black_list:I
+    const v1, 0x7f0b0efb
 
     const/4 v2, 0x0
 
@@ -256,11 +256,11 @@
 
     goto :goto_0
 
-    .line 144
+    .line 150
     :catch_0
     move-exception v0
 
-    .line 145
+    .line 151
     const-string/jumbo v1, "!32@/B4Tb64lLpLV0em2rB59lAbnFb3mbD93"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -281,17 +281,17 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_1
 
-    .line 131
+    .line 132
     :sswitch_1
-    :try_start_1
-    sget v1, Lcom/tencent/mm/a$n;->nearby_friend_say_hi_spam:I
+    const v1, 0x7f0b0efc
 
     const/4 v2, 0x0
 
+    :try_start_1
     invoke-static {p0, v1, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
     move-result-object v1
@@ -300,29 +300,56 @@
 
     goto :goto_0
 
-    .line 135
+    .line 136
     :cond_1
     if-nez p1, :cond_2
 
     if-nez p2, :cond_2
 
-    .line 137
-    sget v0, Lcom/tencent/mm/a$n;->confirm_dialog_sent:I
+    .line 138
+    const v0, 0x7f0b0e9f
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/ui/base/h;->aN(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {p0, v0}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
-    .line 138
+    .line 139
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->finish()V
 
     goto :goto_1
 
-    .line 142
+    .line 143
     :cond_2
-    sget v0, Lcom/tencent/mm/a$n;->nearby_friend_say_hi_failed:I
+    const/4 v0, 0x4
+
+    if-ne p1, v0, :cond_3
+
+    const/16 v0, -0x18
+
+    if-ne p2, v0, :cond_3
+
+    invoke-static {p3}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_3
+
+    .line 144
+    const/4 v0, 0x1
+
+    invoke-static {p0, p3, v0}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_1
+
+    .line 147
+    :cond_3
+    const v0, 0x7f0b0efd
 
     const/4 v1, 0x0
 
@@ -336,7 +363,7 @@
 
     goto :goto_1
 
-    .line 131
+    .line 132
     nop
 
     :sswitch_data_0
@@ -351,8 +378,8 @@
     .locals 1
 
     .prologue
-    .line 47
-    sget v0, Lcom/tencent/mm/a$k;->say_hi:I
+    .line 48
+    const v0, 0x7f0a00b4
 
     return v0
 .end method
@@ -361,27 +388,27 @@
     .locals 2
 
     .prologue
-    .line 39
+    .line 40
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 40
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    .line 41
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x1e
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
-
-    .line 41
-    sget v0, Lcom/tencent/mm/a$n;->nearby_friend_say_hi:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->nh(I)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     .line 42
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->DV()V
+    const v0, 0x7f0b0efa
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->qb(I)V
 
     .line 43
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/SayHiEditUI;->Gb()V
+
+    .line 44
     return-void
 .end method
 
@@ -389,18 +416,18 @@
     .locals 2
 
     .prologue
-    .line 52
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    .line 53
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x1e
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
-
-    .line 53
-    invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 54
+    invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
+
+    .line 55
     return-void
 .end method

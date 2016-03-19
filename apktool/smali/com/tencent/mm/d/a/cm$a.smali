@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public path:Ljava/lang/String;
+.field public avh:Ljava/util/List;
 
 
 # direct methods

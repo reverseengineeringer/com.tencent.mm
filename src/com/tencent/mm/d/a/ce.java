@@ -1,31 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ce
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a axC = new a();
-  public b axD = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avK = new a();
   
   public ce()
   {
-    id = "FMessageConversationStateOp";
-    hXT = atO;
+    id = "ExDeviceOPFromJSAPI";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aqX;
-    public int axE = 0;
-    public int state = -1;
-  }
-  
-  public static final class b
-  {
-    public int state = -1;
+    public int op = 0;
   }
 }
 

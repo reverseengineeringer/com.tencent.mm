@@ -1,5 +1,5 @@
 .class public Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;
-.super Landroid/widget/LinearLayout;
+.super Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;
 .source "SourceFile"
 
 
@@ -12,7 +12,7 @@
 
 
 # instance fields
-.field public iKS:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
+.field public kKf:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
 
 
 # direct methods
@@ -20,10 +20,10 @@
     .locals 0
 
     .prologue
-    .line 22
-    invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
+    .line 24
+    invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 23
+    .line 25
     return-void
 .end method
 
@@ -34,10 +34,10 @@
     .end annotation
 
     .prologue
-    .line 27
-    invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+    .line 29
+    invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 28
+    .line 30
     return-void
 .end method
 
@@ -47,20 +47,20 @@
     .locals 1
 
     .prologue
-    .line 41
-    invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
+    .line 43
+    invoke-super/range {p0 .. p5}, Lcom/tencent/mm/ui/widget/DrawedCallBackLinearLayout;->onLayout(ZIIII)V
 
-    .line 42
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->iKS:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
+    .line 44
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->kKf:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
 
     if-eqz v0, :cond_0
 
-    .line 43
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->iKS:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
-
-    invoke-interface {v0}, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;->aKP()V
-
     .line 45
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->kKf:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
+
+    invoke-interface {v0}, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;->baH()V
+
+    .line 47
     :cond_0
     return-void
 .end method
@@ -69,9 +69,9 @@
     .locals 0
 
     .prologue
-    .line 32
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->iKS:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
+    .line 34
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout;->kKf:Lcom/tencent/mm/ui/base/OnLayoutChangedLinearLayout$a;
 
-    .line 33
+    .line 35
     return-void
 .end method

@@ -1,103 +1,40 @@
 package com.tencent.mm.ak;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.ck;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.h;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
+import com.tencent.mm.model.al.a;
+import com.tencent.mm.model.al.b;
+import com.tencent.mm.protocal.h.c;
+import com.tencent.mm.protocal.h.d;
+import com.tencent.mm.r.h;
 
-public final class a
+final class a
+  extends h
 {
-  private static final Map hfY = new HashMap();
+  al.a cco = new al.a();
+  al.b ccp = new al.b();
   
-  public static String aDa()
+  public final int getType()
   {
-    StringBuilder localStringBuilder = new StringBuilder("[a=");
-    if (ax.tl() == null) {}
-    for (String str = "0";; str = "1")
-    {
-      str = str + " ";
-      if (ax.tl() != null) {
-        break;
-      }
-      return str;
-    }
-    localStringBuilder = new StringBuilder().append(str).append("c=");
-    if (ax.tl().rf() == null)
-    {
-      str = "0";
-      str = str + " ";
-      localStringBuilder = new StringBuilder().append(str).append("u=");
-      if (!ax.qZ()) {
-        break label136;
-      }
-    }
-    label136:
-    for (str = "1";; str = "0")
-    {
-      return str + "]";
-      str = "1";
-      break;
-    }
+    return 261;
   }
   
-  public static void lU(int paramInt)
+  public final String getUri()
   {
-    int i = bn.c((Integer)hfY.get(Integer.valueOf(paramInt)));
-    hfY.put(Integer.valueOf(paramInt), Integer.valueOf(i + 1));
+    return "/cgi-bin/micromsg-bin/getsoterfingerprintticketrsa";
   }
   
-  public static void run()
+  protected final h.c tW()
   {
-    if (bn.X(bn.a((Long)ax.tl().rf().get(66819, null), 0L)) * 1000L > 1800000L) {}
-    for (int i = 1;; i = 0)
-    {
-      if (i != 0) {
-        vG("");
-      }
-      return;
-    }
+    return cco;
   }
   
-  public static void vG(String paramString)
+  public final h.d tX()
   {
-    paramString = paramString + aDa();
-    Iterator localIterator = hfY.entrySet().iterator();
-    StringBuilder localStringBuilder = new StringBuilder();
-    while (localIterator.hasNext())
-    {
-      Map.Entry localEntry = (Map.Entry)localIterator.next();
-      if ((localEntry != null) && (localEntry.getKey() != null) && (localEntry.getValue() != null) && (((Integer)localEntry.getValue()).intValue() != 0))
-      {
-        localStringBuilder.append(localEntry.getKey());
-        localStringBuilder.append('=');
-        localStringBuilder.append(localEntry.getValue());
-        localStringBuilder.append(',');
-      }
-    }
-    hfY.clear();
-    if (localStringBuilder.length() > 0)
-    {
-      t.d("!56@/B4Tb64lLpIuznxMDiXSbLODn5KryCuRSaa8QdgziIU25k1eppL/vA==", "append fmesage card click");
-      ck.j(10, localStringBuilder.toString());
-    }
-    paramString = paramString + aDa();
-    t.d("!56@/B4Tb64lLpIuznxMDiXSbLODn5KryCuRSaa8QdgziIU25k1eppL/vA==", "dkfm :" + paramString);
-    try
-    {
-      ax.tl().rf().set(66819, Long.valueOf(bn.DL()));
-      return;
-    }
-    catch (Exception paramString)
-    {
-      t.e("!56@/B4Tb64lLpIuznxMDiXSbLODn5KryCuRSaa8QdgziIU25k1eppL/vA==", "e:" + paramString.getMessage());
-    }
+    return ccp;
+  }
+  
+  public final int vx()
+  {
+    return 1;
   }
 }
 

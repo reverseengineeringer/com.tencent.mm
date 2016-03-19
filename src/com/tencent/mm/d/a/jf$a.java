@@ -2,8 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class jf$a
 {
-  public boolean aGr = false;
-  public boolean aGs = false;
+  public String filePath;
 }
 
 /* Location:

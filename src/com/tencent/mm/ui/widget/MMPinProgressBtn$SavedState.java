@@ -8,15 +8,15 @@ import android.view.View.BaseSavedState;
 public class MMPinProgressBtn$SavedState
   extends View.BaseSavedState
 {
-  public static final Parcelable.Creator CREATOR = new c();
-  private int dH;
-  private int rp;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  private int cU;
+  private int qs;
   
   private MMPinProgressBtn$SavedState(Parcel paramParcel)
   {
     super(paramParcel);
-    dH = paramParcel.readInt();
-    rp = paramParcel.readInt();
+    cU = paramParcel.readInt();
+    qs = paramParcel.readInt();
   }
   
   public MMPinProgressBtn$SavedState(Parcelable paramParcelable)
@@ -27,8 +27,8 @@ public class MMPinProgressBtn$SavedState
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
     super.writeToParcel(paramParcel, paramInt);
-    paramParcel.writeInt(dH);
-    paramParcel.writeInt(rp);
+    paramParcel.writeInt(cU);
+    paramParcel.writeInt(qs);
   }
 }
 

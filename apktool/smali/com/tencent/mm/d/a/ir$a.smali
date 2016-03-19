@@ -15,7 +15,11 @@
 
 
 # instance fields
-.field public aFS:Z
+.field public aEI:Ljava/lang/String;
+
+.field public auE:I
+
+.field public context:Landroid/content/Context;
 
 
 # direct methods
@@ -23,13 +27,13 @@
     .locals 1
 
     .prologue
-    .line 14
+    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
+    .line 17
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ir$a;->aFS:Z
+    iput v0, p0, Lcom/tencent/mm/d/a/ir$a;->auE:I
 
     return-void
 .end method

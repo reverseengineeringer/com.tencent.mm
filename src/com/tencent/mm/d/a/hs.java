@@ -1,34 +1,17 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class hs
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aET = new a();
-  public b aEU = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
   
   public hs()
   {
-    id = "SightSendResult";
-    hXT = atO;
-  }
-  
-  public static final class a
-  {
-    public boolean aEV;
-    public String aEW;
-    public String aEX;
-    public boolean aEY = false;
-    public int type;
-  }
-  
-  public static final class b
-  {
-    public String aEX;
-    public String aEZ;
+    id = "NotifyTimelineFp";
+    jUI = arR;
   }
 }
 

@@ -15,7 +15,7 @@
 
 
 # static fields
-.field public static epj:Lcom/tencent/mm/pluginsdk/ui/r$a;
+.field public static fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
 
 # direct methods
@@ -40,7 +40,7 @@
 
     .line 119
     :goto_0
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/b;->uK(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/b;->Ay(Ljava/lang/String;)V
 
     .line 120
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -58,7 +58,7 @@
     invoke-direct {v0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/b;-><init>(Ljava/lang/String;F)V
 
     .line 117
-    invoke-virtual {v0, p3}, Lcom/tencent/mm/pluginsdk/ui/b;->el(Z)V
+    invoke-virtual {v0, p3}, Lcom/tencent/mm/pluginsdk/ui/b;->gl(Z)V
 
     goto :goto_0
 .end method
@@ -84,7 +84,7 @@
 
     .line 150
     :goto_0
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a;->uK(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a;->Ay(Ljava/lang/String;)V
 
     .line 151
     invoke-interface {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/a$a;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -106,12 +106,12 @@
     goto :goto_0
 .end method
 
-.method public static azJ()Lcom/tencent/mm/pluginsdk/ui/r$a;
+.method public static aQQ()Lcom/tencent/mm/pluginsdk/ui/h$a;
     .locals 1
 
     .prologue
     .line 54
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/a$b;->epj:Lcom/tencent/mm/pluginsdk/ui/r$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/a$b;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     if-eqz v0, :cond_0
 
@@ -121,7 +121,7 @@
     invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
 
     .line 55
-    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/a$b;->epj:Lcom/tencent/mm/pluginsdk/ui/r$a;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/ui/a$b;->fzj:Lcom/tencent/mm/pluginsdk/ui/h$a;
 
     return-object v0
 
@@ -144,7 +144,7 @@
 
     const-string/jumbo v1, "imageView is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 75
     :goto_0
@@ -168,7 +168,7 @@
 
     .line 72
     :goto_1
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a;->uK(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a;->Ay(Ljava/lang/String;)V
 
     .line 73
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -210,7 +210,7 @@
 
     .line 136
     :goto_0
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a;->uK(Ljava/lang/String;)V
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/pluginsdk/ui/a;->Ay(Ljava/lang/String;)V
 
     .line 137
     invoke-virtual {p0, v0}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
@@ -232,7 +232,7 @@
     goto :goto_0
 .end method
 
-.method public static h(Landroid/widget/ImageView;Ljava/lang/String;)V
+.method public static k(Landroid/widget/ImageView;Ljava/lang/String;)V
     .locals 2
 
     .prologue
@@ -247,7 +247,7 @@
     return-void
 .end method
 
-.method public static i(Landroid/widget/ImageView;Ljava/lang/String;)V
+.method public static l(Landroid/widget/ImageView;Ljava/lang/String;)V
     .locals 2
 
     .prologue

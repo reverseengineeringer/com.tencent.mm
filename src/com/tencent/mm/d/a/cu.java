@@ -1,29 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class cu
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a ayM = new a();
-  public b ayN = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awq = new a();
+  public b awr = new b();
   
   public cu()
   {
-    id = "FileDownloadRemove";
-    hXT = atO;
+    id = "ExDeviceSimpleBTConnectDevice";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public long ayC = 0L;
+    public boolean Jq = false;
+    public String mac;
   }
   
   public static final class b
   {
-    public int count = 0;
+    public boolean auR;
   }
 }
 

@@ -4,7 +4,7 @@ import com.tencent.mm.pointers.PByteArray;
 
 public class MediaRecorder
 {
-  public static final int[] bPL = { 13, 14, 16, 18, 20, 21, 27, 32 };
+  public static final int[] cgD = { 13, 14, 16, 18, 20, 21, 27, 32 };
   
   public static native int SilkDecInit(int paramInt1, byte[] paramArrayOfByte, int paramInt2);
   
@@ -27,11 +27,6 @@ public class MediaRecorder
   public static native boolean native_pcmresamp(byte[] paramArrayOfByte, int paramInt, PByteArray paramPByteArray);
   
   public static native boolean native_release();
-  
-  public static final class a
-  {
-    public int bPM;
-  }
 }
 
 /* Location:

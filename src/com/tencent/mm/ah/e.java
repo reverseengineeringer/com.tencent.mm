@@ -1,28 +1,63 @@
 package com.tencent.mm.ah;
 
-import com.tencent.mm.modelcdntran.keep_SceneResult;
-import com.tencent.mm.sdk.platformtools.t;
-
-final class e
-  implements Runnable
+public final class e
+  extends com.tencent.mm.at.a
 {
-  e(d paramd, keep_SceneResult paramkeep_SceneResult) {}
+  public String bXL;
+  public String bXM;
   
-  public final void run()
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    boolean bool = true;
-    int i = ae.w(bOs.bOr.apy, bxB.field_fileLength);
-    String str1 = bOs.bOr.apy;
-    long l = bOs.bOr.bOo.bCQ;
-    String str2 = bOs.bOr.bOo.Ce();
-    String str3 = bOs.bOr.bOo.getUser();
-    if (i == 1) {}
-    for (;;)
+    if (paramInt == 0)
     {
-      t.i("!44@/B4Tb64lLpK+IBX8XDgnvjP7O0awxQNTcdLqt1KtCKk=", "ashutest::cdntra !FIN! file:%s svrid:%d human:%s user:%s updatedbsucc:%b", new Object[] { str1, Long.valueOf(l), str2, str3, Boolean.valueOf(bool) });
-      bOs.bOr.apI.a(0, 0, "", bOs.bOr);
-      return;
-      bool = false;
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      if (bXL != null) {
+        paramVarArgs.d(1, bXL);
+      }
+      if (bXM != null) {
+        paramVarArgs.d(2, bXM);
+      }
+      return 0;
+    }
+    if (paramInt == 1) {
+      if (bXL == null) {
+        break label234;
+      }
+    }
+    label234:
+    for (paramInt = a.a.a.b.b.a.e(1, bXL) + 0;; paramInt = 0)
+    {
+      int i = paramInt;
+      if (bXM != null) {
+        i = paramInt + a.a.a.b.b.a.e(2, bXM);
+      }
+      return i;
+      if (paramInt == 2)
+      {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        e locale = (e)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        case 1: 
+          bXL = maU.readString();
+          return 0;
+        }
+        bXM = maU.readString();
+        return 0;
+      }
+      return -1;
     }
   }
 }

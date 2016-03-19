@@ -13,20 +13,17 @@ import android.view.View.MeasureSpec;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import com.tencent.mm.a.a;
-import com.tencent.mm.a.d;
-import com.tencent.mm.a.e;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 
 abstract class a
   extends ViewGroup
 {
-  protected ActionBarContainer jY;
-  protected ActionMenuView nN;
-  protected ActionMenuPresenter nO;
-  protected boolean nP;
-  protected boolean nQ;
-  protected int nR;
+  protected ActionBarContainer jf;
+  protected ActionMenuView mR;
+  protected ActionMenuPresenter mS;
+  protected boolean mT;
+  protected boolean mU;
+  protected int mV;
   
   a(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -62,7 +59,7 @@ abstract class a
     return Math.max(0, paramInt1 - paramView.getMeasuredWidth() + 0);
   }
   
-  public void B(int paramInt)
+  public void C(int paramInt)
   {
     clearAnimation();
     Object localObject;
@@ -70,32 +67,38 @@ abstract class a
     {
       localObject = getContext();
       if (paramInt != 0) {
-        break label72;
+        break label71;
       }
     }
-    label72:
-    for (int i = a.a.abc_fade_in;; i = a.a.abc_fade_out)
+    label71:
+    for (int i = 2130837609;; i = 2130837610)
     {
       localObject = AnimationUtils.loadAnimation((Context)localObject, i);
       startAnimation((Animation)localObject);
       setVisibility(paramInt);
-      if ((jY != null) && (nN != null))
+      if ((jf != null) && (mR != null))
       {
-        nN.startAnimation((Animation)localObject);
-        nN.setVisibility(paramInt);
+        mR.startAnimation((Animation)localObject);
+        mR.setVisibility(paramInt);
       }
       return;
     }
   }
   
-  public void bY()
+  public void bI()
   {
-    post(new b(this));
+    post(new Runnable()
+    {
+      public final void run()
+      {
+        showOverflowMenu();
+      }
+    });
   }
   
-  public boolean bZ()
+  public boolean bJ()
   {
-    return (nO != null) && (nO.ly);
+    return (mS != null) && (mS.kD);
   }
   
   public int getAnimatedVisibility()
@@ -105,21 +108,21 @@ abstract class a
   
   public int getContentHeight()
   {
-    return nR;
+    return mV;
   }
   
   public boolean hideOverflowMenu()
   {
-    if (nO != null) {
-      return nO.hideOverflowMenu();
+    if (mS != null) {
+      return mS.hideOverflowMenu();
     }
     return false;
   }
   
   public boolean isOverflowMenuShowing()
   {
-    if (nO != null) {
-      return nO.isOverflowMenuShowing();
+    if (mS != null) {
+      return mS.isOverflowMenuShowing();
     }
     return false;
   }
@@ -129,36 +132,36 @@ abstract class a
     if (Build.VERSION.SDK_INT >= 8) {
       super.onConfigurationChanged(paramConfiguration);
     }
-    paramConfiguration = getContext().obtainStyledAttributes(null, a.p.ActionBar, a.d.actionBarStyle, 0);
-    setContentHeight(paramConfiguration.getLayoutDimension(1, 0));
+    paramConfiguration = getContext().obtainStyledAttributes(null, R.b.ActionBar, 2130772113, 0);
+    setContentHeight(paramConfiguration.getLayoutDimension(2, 0));
     paramConfiguration.recycle();
-    if (nQ) {
-      setSplitActionBar(getContext().getResources().getBoolean(a.e.abc_split_action_bar_is_narrow));
+    if (mU) {
+      setSplitActionBar(getContext().getResources().getBoolean(2131689474));
     }
-    if (nO != null) {
-      nO.bg();
+    if (mS != null) {
+      mS.aQ();
     }
   }
   
   public void setContentHeight(int paramInt)
   {
-    nR = paramInt;
+    mV = paramInt;
     requestLayout();
   }
   
   public void setSplitActionBar(boolean paramBoolean)
   {
-    nP = paramBoolean;
+    mT = paramBoolean;
   }
   
   public void setSplitView(ActionBarContainer paramActionBarContainer)
   {
-    jY = paramActionBarContainer;
+    jf = paramActionBarContainer;
   }
   
   public void setSplitWhenNarrow(boolean paramBoolean)
   {
-    nQ = paramBoolean;
+    mU = paramBoolean;
   }
   
   public void setVisibility(int paramInt)
@@ -170,8 +173,8 @@ abstract class a
   
   public boolean showOverflowMenu()
   {
-    if (nO != null) {
-      return nO.showOverflowMenu();
+    if (mS != null) {
+      return mS.showOverflowMenu();
     }
     return false;
   }

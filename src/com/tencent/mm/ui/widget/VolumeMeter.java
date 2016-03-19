@@ -7,33 +7,33 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.aa;
 
 public class VolumeMeter
   extends ImageView
   implements Runnable
 {
-  private Paint crB;
-  private boolean dMd = false;
-  private boolean dMe = false;
-  private View dMf;
-  private int dMg = -1;
-  private int dMh = -1;
-  private ac dMi = null;
-  private float dMj;
-  private float dMk;
-  private float dMl;
-  private float dMm;
-  private int dMn = -6751336;
-  private int dMo = 70;
-  private float dMp = 0.5F;
-  private float dMq = 0.001F;
-  private int dMr = 20;
-  private float dMs;
-  private float dMt;
-  private float dMu = 0.0F;
-  private float dMv = 40.0F;
-  private float dMw = 30.0F;
+  private Paint cIZ;
+  private boolean eNY = false;
+  private boolean eNZ = false;
+  private View eOa;
+  private int eOb = -1;
+  private int eOc = -1;
+  private aa eOd = null;
+  private float eOe;
+  private float eOf;
+  private float eOg;
+  private float eOh;
+  private int eOi = -6751336;
+  private int eOj = 70;
+  private float eOk = 0.5F;
+  private float eOl = 0.001F;
+  private int eOm = 20;
+  private float eOn;
+  private float eOo;
+  private float eOp = 0.0F;
+  private float eOq = 40.0F;
+  private float eOr = 30.0F;
   private Context mContext;
   
   public VolumeMeter(Context paramContext, AttributeSet paramAttributeSet)
@@ -52,7 +52,7 @@ public class VolumeMeter
   
   private void init()
   {
-    crB = new Paint();
+    cIZ = new Paint();
   }
   
   protected void onDraw(Canvas paramCanvas)
@@ -60,38 +60,38 @@ public class VolumeMeter
     super.onDraw(paramCanvas);
     getWidth();
     getHeight();
-    if ((dMf == null) || (dMf.getVisibility() == 4)) {}
-    while ((dMg < 0) || (dMh < 0))
+    if ((eOa == null) || (eOa.getVisibility() == 4)) {}
+    while ((eOb < 0) || (eOc < 0))
     {
       return;
       int[] arrayOfInt = new int[2];
-      dMf.getLocationInWindow(arrayOfInt);
+      eOa.getLocationInWindow(arrayOfInt);
       if ((arrayOfInt[0] != 0) && (arrayOfInt[1] != 0))
       {
-        int i = dMf.getWidth();
-        int j = dMf.getHeight();
+        int i = eOa.getWidth();
+        int j = eOa.getHeight();
         if ((i != 0) && (j != 0))
         {
           int k = BackwardSupportUtil.b.a(mContext, 50.0F);
-          dMg = (arrayOfInt[0] + i / 2);
-          dMh = (arrayOfInt[1] + j / 2 - k / 2);
-          dMt = (i / 2);
-          dMs = (i / 2 * 2.0F);
+          eOb = (arrayOfInt[0] + i / 2);
+          eOc = (arrayOfInt[1] + j / 2 - k / 2);
+          eOo = (i / 2);
+          eOn = (i / 2 * 2.0F);
         }
       }
     }
-    crB.setColor(dMn);
-    crB.setAlpha(dMo);
-    float f2 = BackwardSupportUtil.b.a(mContext, dMu);
+    cIZ.setColor(eOi);
+    cIZ.setAlpha(eOj);
+    float f2 = BackwardSupportUtil.b.a(mContext, eOp);
     float f1 = f2;
-    if (f2 > dMs) {
-      f1 = dMs;
+    if (f2 > eOn) {
+      f1 = eOn;
     }
     f2 = f1;
-    if (f1 < dMt) {
-      f2 = dMt;
+    if (f1 < eOo) {
+      f2 = eOo;
     }
-    paramCanvas.drawCircle(dMg, dMh, f2, crB);
+    paramCanvas.drawCircle(eOb, eOc, f2, cIZ);
   }
   
   public void run()
@@ -99,48 +99,48 @@ public class VolumeMeter
     float f2;
     float f3;
     float f1;
-    if (dMd)
+    if (eNY)
     {
-      f2 = dMl;
-      if (dMk <= dMj) {
+      f2 = eOg;
+      if (eOf <= eOe) {
         break label137;
       }
-      f3 = (dMk - dMj) / dMw;
-      if (f3 <= dMp) {
+      f3 = (eOf - eOe) / eOr;
+      if (f3 <= eOk) {
         break label118;
       }
-      f1 = dMp;
+      f1 = eOk;
       f1 += f2;
     }
     for (;;)
     {
-      dMl = f1;
-      dMm = dMl;
-      dMu = ((float)(260.0D * Math.sqrt(dMl) - 130.0F * dMl) / 1.5F);
+      eOg = f1;
+      eOh = eOg;
+      eOp = ((float)(260.0D * Math.sqrt(eOg) - 130.0F * eOg) / 1.5F);
       postInvalidate();
-      dMi.postDelayed(this, dMr);
+      eOd.postDelayed(this, eOm);
       return;
       label118:
       f1 = f3;
-      if (f3 >= dMq) {
+      if (f3 >= eOl) {
         break;
       }
-      f1 = dMq;
+      f1 = eOl;
       break;
       label137:
-      if (dMk <= dMj)
+      if (eOf <= eOe)
       {
-        f3 = (dMj - dMk) / dMv;
-        if (f3 > dMp) {
-          f1 = dMp;
+        f3 = (eOe - eOf) / eOq;
+        if (f3 > eOk) {
+          f1 = eOk;
         }
         for (;;)
         {
           f1 = f2 - f1;
           break;
           f1 = f3;
-          if (f3 < dMq) {
-            f1 = dMq;
+          if (f3 < eOl) {
+            f1 = eOl;
           }
         }
       }
@@ -150,13 +150,13 @@ public class VolumeMeter
   
   public void setArchView(View paramView)
   {
-    dMf = paramView;
+    eOa = paramView;
   }
   
   public void setVolume(float paramFloat)
   {
-    dMj = dMk;
-    dMk = paramFloat;
+    eOe = eOf;
+    eOf = paramFloat;
   }
 }
 

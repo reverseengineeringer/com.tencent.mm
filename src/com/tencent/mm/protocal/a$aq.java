@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$aq
-  extends a.c
+  extends a.e
 {
   public a$aq()
   {
-    super("hideMenuItems", "hideMenuItems", 85, false);
+    super("mmsf0001", "mmsf0001", -2, false);
   }
 }
 

@@ -1,23 +1,74 @@
 package com.tencent.mm.ui.base;
 
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
+import android.content.Context;
+import android.support.v4.view.j;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.LinkedList;
+import java.util.Queue;
 
-final class d
-  implements Animation.AnimationListener
+public abstract class d
+  extends j
 {
-  d(AnimatedExpandableListView.a parama, int paramInt, AnimatedExpandableListView.b paramb) {}
+  public Context context;
+  private Queue kBT;
+  private int kBU = 0;
   
-  public final void onAnimationEnd(Animation paramAnimation)
+  public d(Context paramContext)
   {
-    AnimatedExpandableListView.a.b(iCG, fFT);
-    iCG.notifyDataSetChanged();
-    iCF.setTag(Integer.valueOf(0));
+    context = paramContext;
+    kBT = new LinkedList();
   }
   
-  public final void onAnimationRepeat(Animation paramAnimation) {}
+  public abstract View a(View paramView, ViewGroup paramViewGroup, int paramInt);
   
-  public final void onAnimationStart(Animation paramAnimation) {}
+  public final Object a(ViewGroup paramViewGroup, int paramInt)
+  {
+    long l = System.currentTimeMillis();
+    View localView = a((View)kBT.poll(), paramViewGroup, paramInt);
+    if (localView.getLayoutParams() == null) {
+      localView.setLayoutParams(new ViewGroup.LayoutParams(-1, -1));
+    }
+    paramViewGroup.addView(localView);
+    u.v("!44@/B4Tb64lLpIHNUWmeuh12y8/5fL1boOgozmlf2Zd3qI=", "instantiateItem usetime: %d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+    return localView;
+  }
+  
+  public final void a(ViewGroup paramViewGroup, int paramInt, Object paramObject)
+  {
+    paramObject = (View)paramObject;
+    paramViewGroup.removeView((View)paramObject);
+    kBT.add(paramObject);
+    iM(paramInt);
+    u.d("!44@/B4Tb64lLpIHNUWmeuh12y8/5fL1boOgozmlf2Zd3qI=", "recycle queue size %d", new Object[] { Integer.valueOf(kBT.size()) });
+  }
+  
+  public final boolean a(View paramView, Object paramObject)
+  {
+    return paramView.equals(paramObject);
+  }
+  
+  public abstract int ajN();
+  
+  public final int e(Object paramObject)
+  {
+    if (kBU > 0)
+    {
+      kBU -= 1;
+      return -2;
+    }
+    return super.e(paramObject);
+  }
+  
+  public abstract void iM(int paramInt);
+  
+  public final void notifyDataSetChanged()
+  {
+    kBU = ajN();
+    super.notifyDataSetChanged();
+  }
 }
 
 /* Location:

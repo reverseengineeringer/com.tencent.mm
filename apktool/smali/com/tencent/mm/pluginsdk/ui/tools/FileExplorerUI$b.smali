@@ -17,9 +17,9 @@
 # instance fields
 .field file:Ljava/io/File;
 
-.field final synthetic hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+.field final synthetic iRO:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
 
-.field hed:Ljava/lang/String;
+.field iRV:Ljava/lang/String;
 
 
 # direct methods
@@ -28,7 +28,7 @@
 
     .prologue
     .line 477
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$b;->hdW:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI$b;->iRO:Lcom/tencent/mm/pluginsdk/ui/tools/FileExplorerUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

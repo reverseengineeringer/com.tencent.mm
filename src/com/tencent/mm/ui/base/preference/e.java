@@ -1,30 +1,25 @@
 package com.tencent.mm.ui.base.preference;
 
-import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.graphics.Bitmap;
+import android.widget.ImageView;
+import com.tencent.mm.aw.a;
 
-final class e
-  implements RadioGroup.OnCheckedChangeListener
+public final class e
 {
-  e(ChoicePreference paramChoicePreference) {}
+  Bitmap bitmap = null;
+  int gtF = -1;
   
-  public final void onCheckedChanged(RadioGroup paramRadioGroup, int paramInt)
+  public final void d(ImageView paramImageView)
   {
-    if (ChoicePreference.a(iLO) != null)
+    if (paramImageView == null) {}
+    do
     {
-      if (paramInt == -1) {
-        break label82;
-      }
-      ChoicePreference.a(iLO, ChoicePreference.b(iLO)[(paramInt - 1048576)]);
-    }
-    for (;;)
-    {
-      ChoicePreference.a(iLO, paramInt);
-      ChoicePreference.a(iLO).a(iLO, iLO.value);
       return;
-      label82:
-      ChoicePreference.a(iLO, null);
-    }
+      if (gtF != -1) {
+        paramImageView.setImageDrawable(a.y(paramImageView.getContext(), gtF));
+      }
+    } while (bitmap == null);
+    paramImageView.setImageBitmap(bitmap);
   }
 }
 

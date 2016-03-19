@@ -1,108 +1,64 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.v;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.aer;
-import com.tencent.mm.protocal.i.d;
-import com.tencent.mm.protocal.v.a;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.h;
-import junit.framework.Assert;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.aua;
+import com.tencent.mm.protocal.b.aub;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.a.c;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.LinkedList;
 
 public final class ag
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private d apI;
-  private final w btU = new f();
+  private d anM;
+  public final a anN;
   
-  public ag(int paramInt, String paramString)
+  public ag(String paramString, int paramInt, LinkedList paramLinkedList)
   {
-    this(paramInt, paramString, "");
+    u.d("!44@/B4Tb64lLpK+IBX8XDgnvgrJK3HXolQk+XJy2ORbiyI=", "ticket link = " + paramString + "; scene = " + paramInt);
+    Object localObject = new a.a();
+    bFa = new aua();
+    bFb = new aub();
+    uri = "/cgi-bin/mmbiz-bin/translatelink";
+    bEY = 1200;
+    bFc = 0;
+    bFd = 0;
+    anN = ((a.a)localObject).vy();
+    localObject = (aua)anN.bEW.bFf;
+    cbL = paramString;
+    asc = paramInt;
+    jMQ = paramLinkedList;
   }
   
-  public ag(int paramInt, String paramString1, String paramString2)
+  public final aub CM()
   {
-    v.a locala = (v.a)btU.vj();
-    hhq.dse = v.rS();
-    aer localaer = hhq;
-    Object localObject = new StringBuilder();
-    int i = paramInt;
-    if (paramInt == 0) {
-      i = 64;
+    if ((anN != null) && (anN.bEX.bFf != null)) {
+      return (aub)anN.bEX.bFf;
     }
-    StringBuilder localStringBuilder = ((StringBuilder)localObject).append(i).append(";");
-    localObject = paramString1;
-    if (paramString1 == null) {
-      localObject = "";
-    }
-    eiY = ((String)localObject);
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvjg+e5iBgO1ic9GoOq2qW5U=", "content:" + hhq.eiY);
-    Assert.assertTrue("empty sendcard", true);
-    hhq.hIt = 64;
-    if ((paramString2 != null) && (paramString2.length() > 0)) {
-      hhq.hMw = paramString2;
-    }
+    return null;
   }
   
-  public ag(String paramString)
+  public final int a(e parame, d paramd)
   {
-    v.a locala = (v.a)btU.vj();
-    hhq.dse = v.rS();
-    hhq.eiY = paramString;
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvjg+e5iBgO1ic9GoOq2qW5U=", "content:" + paramString);
-    hhq.hAU = bn.c((Integer)ax.tl().rf().get(66561, null));
-    Assert.assertTrue("empty sendcard", true);
-    hhq.hIt = 128;
+    anM = paramd;
+    return a(parame, anN, this);
   }
   
-  public ag(String paramString, boolean paramBoolean1, boolean paramBoolean2)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    v.a locala = (v.a)btU.vj();
-    hhq.dse = v.rS();
-    hhq.eiY = paramString;
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvjg+e5iBgO1ic9GoOq2qW5U=", "content:" + paramString);
-    hhq.hAU = bn.c((Integer)ax.tl().rf().get(66561, null));
-    int i;
-    if (paramBoolean1)
-    {
-      i = 1;
-      if (!paramBoolean2) {
-        break label143;
-      }
-    }
-    label143:
-    for (int j = 4;; j = 0)
-    {
-      Assert.assertTrue("empty sendcard", true);
-      hhq.hIt = (j | i | 0x0 | 0x0 | 0x8);
-      return;
-      i = 0;
-      break;
-    }
-  }
-  
-  public final int a(m paramm, d paramd)
-  {
-    apI = paramd;
-    return a(paramm, btU, this);
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
-  {
-    apI.a(paramInt2, paramInt3, tGhgR, this);
+    u.d("!44@/B4Tb64lLpK+IBX8XDgnvgrJK3HXolQk+XJy2ORbiyI=", "swap deep link with ticket onGYNetEnd:[%d,%d,%s]", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
   {
-    return 26;
+    return 1200;
   }
 }
 

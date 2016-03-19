@@ -1,29 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ci
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a axT = new a();
-  public b axU = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avP = new a();
   
   public ci()
   {
-    id = "FaceBookBindOperation";
-    hXT = atO;
+    id = "ExDeviceOnScanDeviceResult";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int state = -1;
-  }
-  
-  public static final class b
-  {
-    public boolean auM = false;
+    public String alN;
+    public byte[] avG;
+    public boolean avH;
   }
 }
 

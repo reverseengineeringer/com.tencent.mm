@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private bY:Ljava/util/HashMap;
+.field private bo:Ljava/util/HashMap;
 
-.field public bjf:Landroid/content/res/Resources;
+.field public btH:Landroid/content/res/Resources;
 
-.field private bjg:Ljava/lang/reflect/Method;
+.field private btI:Ljava/lang/reflect/Method;
 
-.field private bjh:Ljava/lang/reflect/Method;
+.field private btJ:Ljava/lang/reflect/Method;
 
-.field private final bji:Lcom/tencent/mm/compatible/loader/c;
+.field private final btK:Lcom/tencent/mm/compatible/loader/c;
 
 
 # direct methods
@@ -20,11 +20,11 @@
     .locals 5
 
     .prologue
-    .line 136
+    .line 134
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->bjg:Ljava/lang/reflect/Method;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->btI:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->bjf:Landroid/content/res/Resources;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->btH:Landroid/content/res/Resources;
 
     const/4 v2, 0x2
 
@@ -51,11 +51,11 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
     .catch Ljava/lang/StackOverflowError; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 168
+    .line 166
     :goto_0
     return-object v0
 
-    .line 141
+    .line 139
     :catch_0
     move-exception v0
 
@@ -63,9 +63,9 @@
 
     const-string/jumbo v1, "load drawable StackOverflowError"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 144
+    .line 142
     :goto_1
     :try_start_1
     iget-object v0, p1, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
@@ -86,7 +86,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 147
+    .line 145
     iget-object v0, p1, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -101,12 +101,12 @@
 
     move-result-object v1
 
-    .line 149
+    .line 147
     invoke-static {p0, v1}, Landroid/graphics/drawable/Drawable;->createFromXml(Landroid/content/res/Resources;Lorg/xmlpull/v1/XmlPullParser;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 150
+    .line 148
     invoke-interface {v1}, Landroid/content/res/XmlResourceParser;->close()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
@@ -116,15 +116,15 @@
     :catch_1
     move-exception v0
 
-    .line 159
+    .line 157
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->bY:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->bo:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v0
 
-    .line 160
+    .line 158
     invoke-interface {v0}, Ljava/util/Set;->iterator()Ljava/util/Iterator;
 
     move-result-object v1
@@ -142,7 +142,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 161
+    .line 159
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
@@ -153,25 +153,25 @@
 
     move-result-object v0
 
-    .line 162
+    .line 160
     if-eqz v0, :cond_1
 
     goto :goto_0
 
-    .line 167
+    .line 165
     :cond_2
     const-string/jumbo v0, "!44@/B4Tb64lLpIJk40rTE9aTumNyErzJXzgXYHaEFsdwLU="
 
     const-string/jumbo v1, "loadFromZipFile null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 168
+    .line 166
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 142
+    .line 140
     :catch_2
     move-exception v0
 
@@ -186,17 +186,17 @@
 
     const/4 v1, 0x0
 
-    .line 173
+    .line 171
     iget-object v0, p2, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
     if-nez v0, :cond_1
 
-    .line 218
+    .line 216
     :cond_0
     :goto_0
     return-object v1
 
-    .line 177
+    .line 175
     :cond_1
     iget v0, p2, Landroid/util/TypedValue;->assetCookie:I
 
@@ -212,12 +212,12 @@
 
     or-long v3, v2, v4
 
-    .line 178
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->bji:Lcom/tencent/mm/compatible/loader/c;
+    .line 176
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->btK:Lcom/tencent/mm/compatible/loader/c;
 
-    iget-object v2, v0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v2, v0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
-    iget v5, v0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v5, v0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     invoke-static {v2, v5, v3, v4}, Lcom/tencent/mm/compatible/loader/c;->a([JIJ)I
 
@@ -225,11 +225,11 @@
 
     if-ltz v2, :cond_2
 
-    iget-object v5, v0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v5, v0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
     aget-object v5, v5, v2
 
-    sget-object v6, Lcom/tencent/mm/compatible/loader/c;->fe:Ljava/lang/Object;
+    sget-object v6, Lcom/tencent/mm/compatible/loader/c;->en:Ljava/lang/Object;
 
     if-ne v5, v6, :cond_3
 
@@ -253,36 +253,36 @@
 
     move-result-object v0
 
-    .line 180
+    .line 178
     :goto_2
     if-eqz v0, :cond_6
 
-    .line 181
+    .line 179
     const-string/jumbo v1, "!44@/B4Tb64lLpIJk40rTE9aTumNyErzJXzgXYHaEFsdwLU="
 
     const-string/jumbo v2, "get form cache"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v1, v0
 
-    .line 182
+    .line 180
     goto :goto_0
 
-    .line 178
+    .line 176
     :cond_3
-    iget-object v0, v0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v0, v0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
     aget-object v0, v0, v2
 
     goto :goto_1
 
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->bji:Lcom/tencent/mm/compatible/loader/c;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->btK:Lcom/tencent/mm/compatible/loader/c;
 
-    iget-object v2, v0, Lcom/tencent/mm/compatible/loader/c;->biX:[J
+    iget-object v2, v0, Lcom/tencent/mm/compatible/loader/c;->btu:[J
 
-    iget v5, v0, Lcom/tencent/mm/compatible/loader/c;->fi:I
+    iget v5, v0, Lcom/tencent/mm/compatible/loader/c;->mSize:I
 
     invoke-static {v2, v5, v3, v4}, Lcom/tencent/mm/compatible/loader/c;->a([JIJ)I
 
@@ -290,28 +290,28 @@
 
     if-ltz v2, :cond_5
 
-    iget-object v5, v0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v5, v0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
     aget-object v5, v5, v2
 
-    sget-object v6, Lcom/tencent/mm/compatible/loader/c;->fe:Ljava/lang/Object;
+    sget-object v6, Lcom/tencent/mm/compatible/loader/c;->en:Ljava/lang/Object;
 
     if-eq v5, v6, :cond_5
 
-    iget-object v5, v0, Lcom/tencent/mm/compatible/loader/c;->fh:[Ljava/lang/Object;
+    iget-object v5, v0, Lcom/tencent/mm/compatible/loader/c;->eq:[Ljava/lang/Object;
 
-    sget-object v6, Lcom/tencent/mm/compatible/loader/c;->fe:Ljava/lang/Object;
+    sget-object v6, Lcom/tencent/mm/compatible/loader/c;->en:Ljava/lang/Object;
 
     aput-object v6, v5, v2
 
-    iput-boolean v7, v0, Lcom/tencent/mm/compatible/loader/c;->ff:Z
+    iput-boolean v7, v0, Lcom/tencent/mm/compatible/loader/c;->eo:Z
 
     :cond_5
     move-object v0, v1
 
     goto :goto_2
 
-    .line 184
+    .line 182
     :cond_6
     iget-object v2, p2, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
@@ -319,7 +319,7 @@
 
     move-result-object v2
 
-    .line 186
+    .line 184
     :try_start_0
     const-string/jumbo v5, "!44@/B4Tb64lLpIJk40rTE9aTumNyErzJXzgXYHaEFsdwLU="
 
@@ -341,16 +341,16 @@
 
     aput-object v9, v7, v8
 
-    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v5, v6, v7}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 188
+    .line 186
     invoke-virtual {p1, v2}, Ljava/util/zip/ZipFile;->getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
 
     move-result-object v5
 
-    .line 191
+    .line 189
     :try_start_1
     invoke-virtual {p1, v5}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
     :try_end_1
@@ -359,7 +359,7 @@
 
     move-result-object v1
 
-    .line 192
+    .line 190
     :try_start_2
     invoke-static {p0, p2, v1, v2}, Landroid/graphics/drawable/Drawable;->createFromResourceStream(Landroid/content/res/Resources;Landroid/util/TypedValue;Ljava/io/InputStream;Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
     :try_end_2
@@ -368,21 +368,21 @@
 
     move-result-object v0
 
-    .line 197
+    .line 195
     if-eqz v1, :cond_7
 
-    .line 199
+    .line 197
     :try_start_3
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 205
+    .line 203
     :cond_7
     :goto_3
     if-nez v0, :cond_8
 
-    .line 206
+    .line 204
     :try_start_4
     invoke-virtual {p1, v5}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
 
@@ -397,12 +397,12 @@
     :cond_8
     move-object v1, v0
 
-    .line 214
+    .line 212
     :goto_4
     if-eqz v1, :cond_0
 
-    .line 215
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->bji:Lcom/tencent/mm/compatible/loader/c;
+    .line 213
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->btK:Lcom/tencent/mm/compatible/loader/c;
 
     new-instance v2, Ljava/lang/ref/WeakReference;
 
@@ -416,13 +416,13 @@
 
     goto/16 :goto_0
 
-    .line 197
+    .line 195
     :catch_0
     move-exception v6
 
     if-eqz v1, :cond_7
 
-    .line 199
+    .line 197
     :try_start_5
     invoke-virtual {v1}, Ljava/io/InputStream;->close()V
     :try_end_5
@@ -430,13 +430,13 @@
 
     goto :goto_3
 
-    .line 202
+    .line 200
     :catch_1
     move-exception v1
 
     goto :goto_3
 
-    .line 197
+    .line 195
     :catchall_0
     move-exception v2
 
@@ -449,13 +449,13 @@
     :goto_5
     if-eqz v2, :cond_9
 
-    .line 199
+    .line 197
     :try_start_6
     invoke-virtual {v2}, Ljava/io/InputStream;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_4
 
-    .line 202
+    .line 200
     :cond_9
     :goto_6
     :try_start_7
@@ -480,7 +480,7 @@
 
     goto :goto_6
 
-    .line 197
+    .line 195
     :catchall_1
     move-exception v2
 
@@ -497,11 +497,11 @@
     .locals 5
 
     .prologue
-    .line 64
+    .line 62
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->bjh:Ljava/lang/reflect/Method;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->btJ:Ljava/lang/reflect/Method;
 
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->bjf:Landroid/content/res/Resources;
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->btH:Landroid/content/res/Resources;
 
     const/4 v2, 0x4
 
@@ -539,7 +539,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 67
+    .line 65
     :goto_0
     return-object v0
 
@@ -557,16 +557,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 235
+    .line 233
     iget-object v1, p1, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
     if-nez v1, :cond_0
 
-    .line 250
+    .line 248
     :goto_0
     return-object v0
 
-    .line 239
+    .line 237
     :cond_0
     iget-object v1, p1, Landroid/util/TypedValue;->string:Ljava/lang/CharSequence;
 
@@ -574,7 +574,7 @@
 
     move-result-object v1
 
-    .line 241
+    .line 239
     :try_start_0
     const-string/jumbo v2, "!44@/B4Tb64lLpIJk40rTE9aTumNyErzJXzgXYHaEFsdwLU="
 
@@ -596,14 +596,14 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 243
+    .line 241
     invoke-virtual {p0, v1}, Ljava/util/zip/ZipFile;->getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
 
     move-result-object v1
 
-    .line 244
+    .line 242
     invoke-virtual {p0, v1}, Ljava/util/zip/ZipFile;->getInputStream(Ljava/util/zip/ZipEntry;)Ljava/io/InputStream;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -612,7 +612,7 @@
 
     goto :goto_0
 
-    .line 250
+    .line 248
     :catch_0
     move-exception v1
 
@@ -625,7 +625,7 @@
     .locals 1
 
     .prologue
-    .line 73
+    .line 71
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->a(Landroid/util/TypedValue;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -637,7 +637,7 @@
     .locals 1
 
     .prologue
-    .line 77
+    .line 75
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->a(Landroid/util/TypedValue;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -651,12 +651,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 116
+    .line 114
     const/4 v1, 0x1
 
     invoke-virtual {p0, p1, p2, v1}, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->getValue(ILandroid/util/TypedValue;Z)V
 
-    .line 120
+    .line 118
     :try_start_0
     invoke-super {p0, p1, p2}, Landroid/content/res/Resources;->openRawResource(ILandroid/util/TypedValue;)Ljava/io/InputStream;
     :try_end_0
@@ -664,12 +664,12 @@
 
     move-result-object v1
 
-    .line 125
+    .line 123
     :goto_0
     if-nez v1, :cond_2
 
-    .line 126
-    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->bY:Ljava/util/HashMap;
+    .line 124
+    iget-object v1, p0, Lcom/tencent/mm/compatible/loader/PluginResourceLoader;->bo:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -704,7 +704,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 128
+    .line 126
     :cond_1
     :goto_1
     return-object v0

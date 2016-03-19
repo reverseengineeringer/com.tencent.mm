@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tencent/mm/pluginsdk/model/p;)V
+.method public abstract a(Lcom/tencent/mm/pluginsdk/model/j;)V
 .end method

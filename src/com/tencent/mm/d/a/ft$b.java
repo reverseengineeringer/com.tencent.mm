@@ -1,9 +1,6 @@
 package com.tencent.mm.d.a;
 
-public final class ft$b
-{
-  public boolean auM = false;
-}
+public final class ft$b {}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.d.a.ft.b

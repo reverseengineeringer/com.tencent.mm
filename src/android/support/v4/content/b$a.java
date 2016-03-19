@@ -1,6 +1,12 @@
 package android.support.v4.content;
 
-public abstract interface b$a {}
+import android.content.ComponentName;
+import android.content.Intent;
+
+abstract interface b$a
+{
+  public abstract Intent makeMainActivity(ComponentName paramComponentName);
+}
 
 /* Location:
  * Qualified Name:     android.support.v4.content.b.a

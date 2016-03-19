@@ -6,8 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tencent/mm/protocal/i$d;,
-        Lcom/tencent/mm/protocal/i$c;,
         Lcom/tencent/mm/protocal/i$b;,
         Lcom/tencent/mm/protocal/i$a;
     }
@@ -15,119 +13,171 @@
 
 
 # direct methods
-.method public static a(Lcom/tencent/mm/protocal/i$c;)Lcom/tencent/mm/protocal/b/cj;
-    .locals 3
+.method public static aTs()I
+    .locals 1
 
     .prologue
-    .line 40
-    new-instance v0, Lcom/tencent/mm/protocal/b/cj;
-
-    invoke-direct {v0}, Lcom/tencent/mm/protocal/b/cj;-><init>()V
-
-    .line 41
-    iget v1, p0, Lcom/tencent/mm/protocal/i$c;->hgK:I
-
-    iput v1, v0, Lcom/tencent/mm/protocal/b/cj;->hlf:I
-
-    .line 42
-    iget-object v1, p0, Lcom/tencent/mm/protocal/i$c;->hgM:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/tencent/mm/al/b;->au([B)Lcom/tencent/mm/al/b;
-
-    move-result-object v1
-
-    const/16 v2, 0x10
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/al/b;->lV(I)Lcom/tencent/mm/al/b;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/cj;->hle:Lcom/tencent/mm/al/b;
-
-    .line 43
-    iget-object v1, p0, Lcom/tencent/mm/protocal/i$c;->hgL:Ljava/lang/String;
-
-    invoke-virtual {v1}, Ljava/lang/String;->getBytes()[B
-
-    move-result-object v1
-
-    invoke-static {v1}, Lcom/tencent/mm/al/b;->au([B)Lcom/tencent/mm/al/b;
-
-    move-result-object v1
-
-    const/16 v2, 0x84
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/al/b;->lV(I)Lcom/tencent/mm/al/b;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/cj;->hlg:Lcom/tencent/mm/al/b;
-
-    .line 44
-    iget v1, p0, Lcom/tencent/mm/protocal/i$c;->hgN:I
-
-    iput v1, v0, Lcom/tencent/mm/protocal/b/cj;->hih:I
-
-    .line 45
-    iget-object v1, p0, Lcom/tencent/mm/protocal/i$c;->cWw:[B
-
-    invoke-static {v1}, Lcom/tencent/mm/al/b;->au([B)Lcom/tencent/mm/al/b;
-
-    move-result-object v1
-
-    const/16 v2, 0x24
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/al/b;->lV(I)Lcom/tencent/mm/al/b;
-
-    move-result-object v1
-
-    iput-object v1, v0, Lcom/tencent/mm/protocal/b/cj;->hlO:Lcom/tencent/mm/al/b;
-
-    .line 46
-    iget v1, p0, Lcom/tencent/mm/protocal/i$c;->hgJ:I
-
-    iput v1, v0, Lcom/tencent/mm/protocal/b/cj;->cUG:I
-
-    .line 47
-    return-object v0
-.end method
-
-.method public static a(Lcom/tencent/mm/protocal/i$d;Lcom/tencent/mm/protocal/b/ck;)V
-    .locals 2
-
-    .prologue
-    .line 57
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/ck;->hlP:Lcom/tencent/mm/protocal/b/adu;
+    .line 108
+    sget-boolean v0, Lcom/tencent/mm/sdk/b/b;->foreground:Z
 
     if-eqz v0, :cond_0
 
-    .line 58
-    iget-object v0, p1, Lcom/tencent/mm/protocal/b/ck;->hlP:Lcom/tencent/mm/protocal/b/adu;
+    .line 110
+    const/4 v0, 0x1
 
-    iget-object v0, v0, Lcom/tencent/mm/protocal/b/adu;->hMd:Ljava/lang/String;
-
-    iput-object v0, p0, Lcom/tencent/mm/protocal/i$d;->hgR:Ljava/lang/String;
-
-    .line 63
+    .line 113
     :goto_0
-    return-void
+    return v0
 
-    .line 60
+    .line 112
     :cond_0
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/protocal/i$d;->hgR:Ljava/lang/String;
-
-    .line 61
-    const-string/jumbo v0, "MicroMsg.MMBase"
-
-    const-string/jumbo v1, "ErrMsg is Null!!!!!!"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    const/4 v0, 0x2
 
     goto :goto_0
+.end method
+
+.method public static cn(Landroid/content/Context;)I
+    .locals 7
+
+    .prologue
+    const/4 v5, 0x4
+
+    const/4 v4, 0x3
+
+    const/4 v3, 0x2
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    .line 118
+    .line 121
+    :try_start_0
+    const-string/jumbo v0, "connectivity"
+
+    invoke-virtual {p0, v0}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/net/ConnectivityManager;
+
+    .line 122
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+
+    move-result-object v0
+
+    .line 123
+    if-nez v0, :cond_0
+
+    .line 146
+    :goto_0
+    return v2
+
+    .line 126
+    :cond_0
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getSubtype()I
+
+    move-result v6
+
+    .line 127
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    if-ne v0, v1, :cond_1
+
+    move v0, v1
+
+    :goto_1
+    move v2, v0
+
+    .line 146
+    goto :goto_0
+
+    .line 129
+    :cond_1
+    const/16 v0, 0xd
+
+    if-eq v6, v0, :cond_2
+
+    const/16 v0, 0xf
+
+    if-eq v6, v0, :cond_2
+
+    const/16 v0, 0xe
+
+    if-ne v6, v0, :cond_3
+
+    :cond_2
+    move v0, v5
+
+    .line 131
+    goto :goto_1
+
+    .line 132
+    :cond_3
+    if-eq v6, v4, :cond_4
+
+    if-eq v6, v5, :cond_4
+
+    const/4 v0, 0x5
+
+    if-eq v6, v0, :cond_4
+
+    const/4 v0, 0x6
+
+    if-eq v6, v0, :cond_4
+
+    const/16 v0, 0xc
+
+    if-ne v6, v0, :cond_5
+
+    :cond_4
+    move v0, v4
+
+    .line 135
+    goto :goto_1
+
+    .line 136
+    :cond_5
+    if-eq v6, v1, :cond_6
+
+    if-ne v6, v3, :cond_7
+
+    :cond_6
+    move v0, v3
+
+    .line 137
+    goto :goto_1
+
+    :cond_7
+    move v0, v2
+
+    .line 144
+    goto :goto_1
+
+    .line 142
+    :catch_0
+    move-exception v0
+
+    .line 143
+    const-string/jumbo v3, "!24@/B4Tb64lLpKXSbY2VQERGw=="
+
+    const-string/jumbo v4, "getNetType: %s"
+
+    new-array v5, v1, [Ljava/lang/Object;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
+
+    move-result-object v0
+
+    aput-object v0, v5, v2
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move v0, v1
+
+    goto :goto_1
 .end method

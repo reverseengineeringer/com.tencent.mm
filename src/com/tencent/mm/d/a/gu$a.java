@@ -1,8 +1,11 @@
 package com.tencent.mm.d.a;
 
+import java.util.LinkedList;
+
 public final class gu$a
 {
-  public long axb;
+  public LinkedList aBX;
+  public boolean aBY = false;
 }
 
 /* Location:

@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$x;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 882
-    const-string/jumbo v0, "geoLocation"
+    .line 1527
+    const-string/jumbo v0, "closeWXDeviceLib"
 
-    const-string/jumbo v1, "geo_location"
+    const-string/jumbo v1, "closeWXDeviceLib"
 
-    const/16 v2, 0x39
+    const/16 v2, 0x76
 
-    const/4 v3, 0x1
+    const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 883
+    .line 1528
     return-void
 .end method

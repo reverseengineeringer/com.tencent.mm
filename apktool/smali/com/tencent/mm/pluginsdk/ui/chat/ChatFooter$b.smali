@@ -15,5 +15,8 @@
 
 
 # virtual methods
-.method public abstract ey(Z)Z
+.method public abstract a(Ljava/lang/Boolean;Ljava/lang/Boolean;)V
+.end method
+
+.method public abstract b(Ljava/lang/Boolean;Ljava/lang/Boolean;)V
 .end method

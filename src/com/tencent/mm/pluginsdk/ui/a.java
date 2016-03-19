@@ -2,27 +2,27 @@ package com.tencent.mm.pluginsdk.ui;
 
 import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
-import com.tencent.mm.p.i.a;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.q.d.a;
+import com.tencent.mm.sdk.platformtools.u;
 import junit.framework.Assert;
 
 public final class a
-  extends r
-  implements i.a
+  extends h
+  implements d.a
 {
   private a(String paramString)
   {
-    super(b.epj, paramString);
+    super(b.fzj, paramString);
   }
   
   private a(String paramString, byte paramByte)
   {
-    super(b.epj, paramString, false);
+    super(b.fzj, paramString, false);
   }
   
-  public final void fF(String paramString)
+  public final void fZ(String paramString)
   {
-    super.fF(paramString);
+    super.fZ(paramString);
   }
   
   public static abstract interface a
@@ -36,7 +36,7 @@ public final class a
   
   public static final class b
   {
-    public static r.a epj;
+    public static h.a fzj;
     
     public static void a(ImageView paramImageView, String paramString, float paramFloat, boolean paramBoolean)
     {
@@ -46,12 +46,12 @@ public final class a
       }
       for (;;)
       {
-        ((b)localObject).uK(paramString);
+        ((b)localObject).Ay(paramString);
         paramImageView.setImageDrawable((Drawable)localObject);
         paramImageView.invalidate();
         return;
         localObject = new b(paramString, paramFloat);
-        ((b)localObject).el(paramBoolean);
+        ((b)localObject).gl(paramBoolean);
       }
     }
     
@@ -61,20 +61,20 @@ public final class a
       if ((localObject != null) && ((localObject instanceof a))) {}
       for (localObject = (a)localObject;; localObject = new a(paramString, '\000'))
       {
-        ((a)localObject).uK(paramString);
+        ((a)localObject).Ay(paramString);
         parama.setImageDrawable((Drawable)localObject);
         parama.doInvalidate();
         return;
       }
     }
     
-    public static r.a azJ()
+    public static h.a aQQ()
     {
-      if (epj != null) {}
+      if (fzj != null) {}
       for (boolean bool = true;; bool = false)
       {
         Assert.assertTrue(bool);
-        return epj;
+        return fzj;
       }
     }
     
@@ -82,14 +82,14 @@ public final class a
     {
       if (paramImageView == null)
       {
-        t.e("!32@/B4Tb64lLpLg5UpltBmF4RVBnMYAd83F", "imageView is null");
+        u.e("!32@/B4Tb64lLpLg5UpltBmF4RVBnMYAd83F", "imageView is null");
         return;
       }
       Object localObject = paramImageView.getDrawable();
       if ((localObject != null) && ((localObject instanceof a))) {}
       for (localObject = (a)localObject;; localObject = new a(paramString, '\000'))
       {
-        ((a)localObject).uK(paramString);
+        ((a)localObject).Ay(paramString);
         paramImageView.setImageDrawable((Drawable)localObject);
         paramImageView.invalidate();
         return;
@@ -102,19 +102,19 @@ public final class a
       if ((localObject != null) && ((localObject instanceof a))) {}
       for (localObject = (a)localObject;; localObject = new a(paramString, (short)0))
       {
-        ((a)localObject).uK(paramString);
+        ((a)localObject).Ay(paramString);
         paramImageView.setImageDrawable((Drawable)localObject);
         paramImageView.invalidate();
         return;
       }
     }
     
-    public static void h(ImageView paramImageView, String paramString)
+    public static void k(ImageView paramImageView, String paramString)
     {
       a(paramImageView, paramString, 0.5F, false);
     }
     
-    public static void i(ImageView paramImageView, String paramString)
+    public static void l(ImageView paramImageView, String paramString)
     {
       a(paramImageView, paramString, 0.5F, true);
     }

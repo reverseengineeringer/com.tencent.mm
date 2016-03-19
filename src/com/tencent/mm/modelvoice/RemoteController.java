@@ -5,27 +5,28 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.media.AudioManager;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public final class RemoteController
 {
-  private static Method bPX;
-  private static Method bPY;
-  private AudioManager bPV;
-  private ComponentName bPW;
+  private static Method cgO;
+  private static Method cgP;
+  private AudioManager cgM;
+  private ComponentName cgN;
   
   static
   {
     try
     {
-      if (bPX == null) {
-        bPX = AudioManager.class.getMethod("registerMediaButtonEventReceiver", new Class[] { ComponentName.class });
+      if (cgO == null) {
+        cgO = AudioManager.class.getMethod("registerMediaButtonEventReceiver", new Class[] { ComponentName.class });
       }
-      if (bPY == null) {
-        bPY = AudioManager.class.getMethod("unregisterMediaButtonEventReceiver", new Class[] { ComponentName.class });
+      if (cgP == null) {
+        cgP = AudioManager.class.getMethod("unregisterMediaButtonEventReceiver", new Class[] { ComponentName.class });
       }
       return;
     }
@@ -38,14 +39,14 @@ public final class RemoteController
     {
       try
       {
-        Method localMethod = bPY;
+        Method localMethod = cgP;
         if (localMethod == null)
         {
           super.finalize();
           return;
         }
-        bPY.invoke(bPV, new Object[] { bPW });
-        RemoteControlReceiver.Cj();
+        cgP.invoke(cgM, new Object[] { cgN });
+        RemoteControlReceiver.Eq();
       }
       catch (InvocationTargetException localInvocationTargetException)
       {
@@ -62,7 +63,7 @@ public final class RemoteController
       }
       catch (IllegalAccessException localIllegalAccessException)
       {
-        t.e("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "unexpected " + localIllegalAccessException);
+        u.e("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "unexpected " + localIllegalAccessException);
       }
     }
   }
@@ -70,16 +71,16 @@ public final class RemoteController
   public static class RemoteControlReceiver
     extends BroadcastReceiver
   {
-    private static aj apB;
-    private static RemoteController.a bPZ;
+    private static af anF;
+    private static RemoteController.a cgQ;
     
-    public static void Cj()
+    public static void Eq()
     {
-      bPZ = null;
-      if (apB != null)
+      cgQ = null;
+      if (anF != null)
       {
-        apB.aEN();
-        apB = null;
+        anF.aUF();
+        anF = null;
       }
     }
     
@@ -91,16 +92,24 @@ public final class RemoteController
         return;
         if (!"android.intent.action.MEDIA_BUTTON".equals(paramIntent.getAction()))
         {
-          t.d("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "unknown action, ignore" + paramIntent.getAction());
+          u.d("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "unknown action, ignore" + paramIntent.getAction());
           return;
         }
-        if ((apB == null) && (bPZ != null))
+        if ((anF == null) && (cgQ != null))
         {
-          t.d("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "got remote key event down");
-          apB = new aj(new k(this), true);
+          u.d("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "got remote key event down");
+          anF = new af(new af.a()
+          {
+            public final boolean lj()
+            {
+              u.d("!44@/B4Tb64lLpLxZ3s2f/sNV4nKd9KlcPzYAJUV4T6XQso=", "got remote key event up");
+              RemoteController.RemoteControlReceiver.Er();
+              return false;
+            }
+          }, true);
         }
-      } while (apB == null);
-      apB.cA(1000L);
+      } while (anF == null);
+      anF.ds(1000L);
     }
   }
   

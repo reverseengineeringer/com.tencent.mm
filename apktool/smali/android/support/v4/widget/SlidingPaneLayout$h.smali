@@ -38,9 +38,9 @@
 
     check-cast v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;
 
-    iget-object v0, v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->ja:Landroid/graphics/Paint;
+    iget-object v0, v0, Landroid/support/v4/widget/SlidingPaneLayout$LayoutParams;->if:Landroid/graphics/Paint;
 
-    invoke-static {p2, v0}, Landroid/support/v4/view/t;->a(Landroid/view/View;Landroid/graphics/Paint;)V
+    invoke-static {p2, v0}, Landroid/support/v4/view/m;->a(Landroid/view/View;Landroid/graphics/Paint;)V
 
     .line 1392
     return-void

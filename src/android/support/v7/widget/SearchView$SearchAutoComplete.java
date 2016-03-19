@@ -11,8 +11,8 @@ import android.widget.AutoCompleteTextView;
 public class SearchView$SearchAutoComplete
   extends AutoCompleteTextView
 {
-  private int sY = getThreshold();
-  private SearchView sZ;
+  private int sc = getThreshold();
+  private SearchView sd;
   
   public SearchView$SearchAutoComplete(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -26,13 +26,13 @@ public class SearchView$SearchAutoComplete
   
   public boolean enoughToFilter()
   {
-    return (sY <= 0) || (super.enoughToFilter());
+    return (sc <= 0) || (super.enoughToFilter());
   }
   
   protected void onFocusChanged(boolean paramBoolean, int paramInt, Rect paramRect)
   {
     super.onFocusChanged(paramBoolean, paramInt, paramRect);
-    sZ.cI();
+    sd.cs();
   }
   
   public boolean onKeyPreIme(int paramInt, KeyEvent paramKeyEvent)
@@ -56,8 +56,8 @@ public class SearchView$SearchAutoComplete
         }
         if ((paramKeyEvent.isTracking()) && (!paramKeyEvent.isCanceled()))
         {
-          sZ.clearFocus();
-          SearchView.p(sZ);
+          sd.clearFocus();
+          SearchView.p(sd);
           return true;
         }
       }
@@ -68,11 +68,11 @@ public class SearchView$SearchAutoComplete
   public void onWindowFocusChanged(boolean paramBoolean)
   {
     super.onWindowFocusChanged(paramBoolean);
-    if ((paramBoolean) && (sZ.hasFocus()) && (getVisibility() == 0))
+    if ((paramBoolean) && (sd.hasFocus()) && (getVisibility() == 0))
     {
       ((InputMethodManager)getContext().getSystemService("input_method")).showSoftInput(this, 0);
-      if (SearchView.g(getContext())) {
-        SearchView.sH.a(this);
+      if (SearchView.n(getContext())) {
+        SearchView.rK.a(this);
       }
     }
   }
@@ -83,13 +83,13 @@ public class SearchView$SearchAutoComplete
   
   void setSearchView(SearchView paramSearchView)
   {
-    sZ = paramSearchView;
+    sd = paramSearchView;
   }
   
   public void setThreshold(int paramInt)
   {
     super.setThreshold(paramInt);
-    sY = paramInt;
+    sc = paramInt;
   }
 }
 

@@ -2,35 +2,34 @@ package com.tencent.mm.plugin.sight.decode.ui;
 
 import android.graphics.Bitmap;
 import android.widget.ImageView.ScaleType;
-import com.tencent.mm.a.a;
 import com.tencent.mm.plugin.sight.decode.a.b;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.ref.WeakReference;
 
 final class SightPlayAutoSizeImageView$a
   extends b
 {
-  private WeakReference fhO;
+  private WeakReference gys;
   
   public SightPlayAutoSizeImageView$a(SightPlayAutoSizeImageView paramSightPlayAutoSizeImageView)
   {
     super(0, paramSightPlayAutoSizeImageView);
-    fhO = new WeakReference(paramSightPlayAutoSizeImageView);
+    gys = new WeakReference(paramSightPlayAutoSizeImageView);
   }
   
-  public final void aJ(int paramInt1, int paramInt2) {}
+  public final void aB(int paramInt1, int paramInt2) {}
   
-  protected final int ajo()
+  protected final int avI()
   {
-    return a.a.sight_loop;
+    return 2130837568;
   }
   
   public final void l(Bitmap paramBitmap)
   {
-    SightPlayAutoSizeImageView localSightPlayAutoSizeImageView = (SightPlayAutoSizeImageView)fhO.get();
+    SightPlayAutoSizeImageView localSightPlayAutoSizeImageView = (SightPlayAutoSizeImageView)gys.get();
     if (localSightPlayAutoSizeImageView == null)
     {
-      t.e("!56@/B4Tb64lLpK4fJPZwyrCPCWfOsJdH0JJ0Jl+aEYu1H532BTfrYHKpw==", "onGetFrameBmp, imageView is null, do clear");
+      u.e("!56@/B4Tb64lLpK4fJPZwyrCPCWfOsJdH0JJ0Jl+aEYu1H532BTfrYHKpw==", "onGetFrameBmp, imageView is null, do clear");
       clear();
       return;
     }

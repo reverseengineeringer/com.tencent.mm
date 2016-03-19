@@ -4,41 +4,43 @@ import android.hardware.Camera.PreviewCallback;
 
 public abstract interface b
 {
-  public abstract void SA();
-  
   public abstract void a(a parama);
   
   public abstract void a(b paramb);
   
-  public abstract void aI(String paramString1, String paramString2);
+  public abstract boolean awo();
   
-  public abstract boolean ajI();
+  public abstract long awp();
   
-  public abstract long ajJ();
+  public abstract b awq();
   
-  public abstract b ajK();
+  public abstract void awr();
   
-  public abstract void ajL();
+  public abstract float aws();
   
-  public abstract float ajM();
-  
-  public abstract Camera.PreviewCallback ajN();
+  public abstract Camera.PreviewCallback awt();
   
   public abstract void b(a parama);
+  
+  public abstract void bk(String paramString1, String paramString2);
   
   public abstract void cancel();
   
   public abstract int getDuration();
   
+  public abstract int getFrameCount();
+  
   public abstract String getRecordPath();
   
-  public abstract void h(Runnable paramRunnable);
+  public abstract void initialize(int paramInt);
+  
+  public abstract void m(Runnable paramRunnable);
   
   public abstract void reset();
   
   public static abstract interface a
   {
-    public abstract void ajO();
+    public abstract void awu();
     
     public abstract void onError();
     

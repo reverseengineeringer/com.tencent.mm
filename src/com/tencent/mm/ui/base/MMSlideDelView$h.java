@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 class MMSlideDelView$h
 {
-  int gRB;
+  int drS;
   
   private MMSlideDelView$h(MMSlideDelView paramMMSlideDelView) {}
 }

@@ -17,5 +17,8 @@
 .method public static native cryptGenRandom(I)[B
 .end method
 
+.method public static native doEcdsaSHAVerify([B[B[B)I
+.end method
+
 .method public static native doEcdsaVerify([B[B[B)I
 .end method

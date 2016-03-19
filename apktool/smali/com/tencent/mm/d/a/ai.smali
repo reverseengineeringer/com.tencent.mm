@@ -1,12 +1,24 @@
 .class public final Lcom/tencent/mm/d/a/ai;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
-# static fields
-.field public static atN:Z
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/d/a/ai$a;
+    }
+.end annotation
 
-.field public static atO:Z
+
+# static fields
+.field public static arQ:Z
+
+.field public static arR:Z
+
+
+# instance fields
+.field public atE:Lcom/tencent/mm/d/a/ai$a;
 
 
 # direct methods
@@ -17,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/ai;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ai;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/ai;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ai;->arR:Z
 
     return-void
 .end method
@@ -29,16 +41,24 @@
     .locals 1
 
     .prologue
-    .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    .line 11
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    const-string/jumbo v0, "DumpSns"
+    .line 16
+    new-instance v0, Lcom/tencent/mm/d/a/ai$a;
+
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/ai$a;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/d/a/ai;->atE:Lcom/tencent/mm/d/a/ai$a;
+
+    .line 11
+    const-string/jumbo v0, "CheckResUpdatePreOperation"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/ai;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/ai;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/ai;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ai;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ai;->jUI:Z
 
     return-void
 .end method

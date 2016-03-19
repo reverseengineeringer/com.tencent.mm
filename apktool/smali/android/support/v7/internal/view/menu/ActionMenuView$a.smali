@@ -15,8 +15,8 @@
 
 
 # virtual methods
-.method public abstract bu()Z
+.method public abstract be()Z
 .end method
 
-.method public abstract bv()Z
+.method public abstract bf()Z
 .end method

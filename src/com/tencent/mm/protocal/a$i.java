@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$i
-  extends a.c
+  extends a.e
 {
   public a$i()
   {
-    super("cancelDownloadTask", "cancel_download_task", 39, false);
+    super("addDownloadTask", "add_download_task", 38, false);
   }
 }
 

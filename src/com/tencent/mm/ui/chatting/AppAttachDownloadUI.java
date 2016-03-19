@@ -2,7 +2,10 @@ package com.tencent.mm.ui.chatting;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -10,91 +13,94 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.m;
-import com.tencent.mm.a.n;
-import com.tencent.mm.d.a.fh;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.m.a.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.br;
-import com.tencent.mm.model.w;
-import com.tencent.mm.platformtools.ad;
-import com.tencent.mm.pluginsdk.model.app.aa;
-import com.tencent.mm.pluginsdk.model.app.aa.a;
-import com.tencent.mm.pluginsdk.model.app.ay;
-import com.tencent.mm.pluginsdk.model.app.p;
-import com.tencent.mm.pluginsdk.model.u;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.g.ai.a;
-import com.tencent.mm.sdk.g.an;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
-import com.tencent.mm.storage.as;
+import com.tencent.mm.d.a.ij;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.model.ar;
+import com.tencent.mm.n.a.a;
+import com.tencent.mm.platformtools.t;
+import com.tencent.mm.pluginsdk.model.app.aj;
+import com.tencent.mm.pluginsdk.model.app.b;
+import com.tencent.mm.pluginsdk.model.app.l;
+import com.tencent.mm.pluginsdk.model.app.x;
+import com.tencent.mm.pluginsdk.model.app.x.a;
+import com.tencent.mm.pluginsdk.model.o;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.h.g.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.ag;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMImageView;
+import com.tencent.mm.ui.base.g.d;
 import com.tencent.mm.ui.tools.ShowImageUI;
 import java.io.File;
 
 public class AppAttachDownloadUI
   extends MMActivity
-  implements aa.a, com.tencent.mm.q.d, ai.a
+  implements x.a, com.tencent.mm.r.d, g.a
 {
-  private ar aDs;
-  private String apy;
-  private String axR;
-  private long axb;
-  private aa cLt;
-  private com.tencent.mm.q.e cLu;
-  private ProgressBar cgr;
-  private Button diY;
-  private View djc;
-  private Button dmH;
-  private MMImageView eun;
-  private ImageView euo;
-  private int gMr;
-  private boolean iBB;
-  private View iQY;
-  private TextView iQZ;
-  private TextView iRa;
-  private String iRb;
-  private boolean iRc = false;
-  private boolean iRd = false;
-  private boolean iRe = true;
-  private int iRf = 5000;
-  private LinearLayout iRg;
-  private LinearLayout iRh;
-  private TextView izg;
+  private ag aFR;
+  private String anC;
+  private long avg;
+  private String axY;
+  private ProgressBar cxD;
+  private Button dTt;
+  private View dTx;
+  private x dkR;
+  private com.tencent.mm.r.e dkS;
+  private Button ebh;
+  private MMImageView fEj;
+  private ImageView fEk;
+  private int iBs;
+  private boolean kAy;
+  private View kPQ;
+  private TextView kPR;
+  private TextView kPS;
+  private String kPT;
+  private boolean kPU = false;
+  private boolean kPV = false;
+  private boolean kPW = true;
+  private int kPX = 5000;
+  private LinearLayout kPY;
+  private LinearLayout kPZ;
+  private TextView kyk;
   private String mediaId;
   
-  private void aNQ()
+  private void bdH()
   {
-    com.tencent.mm.pluginsdk.model.app.b localb = ay.GA().uk(mediaId);
+    b localb = bdI();
     if (localb == null) {
-      p.a(axb, axR, null);
+      l.a(avg, axY, null);
     }
     while (new File(field_fileFullPath).exists()) {
       return;
     }
-    p.a(axb, axR, null);
+    l.a(avg, axY, null);
   }
   
-  private void aNR()
+  private b bdI()
   {
-    switch (gMr)
+    b localb2 = aj.IL().zK(mediaId);
+    b localb1 = localb2;
+    if (localb2 == null) {
+      localb1 = aj.IL().cS(avg);
+    }
+    return localb1;
+  }
+  
+  private void bdJ()
+  {
+    switch (iBs)
     {
     case 1: 
     case 3: 
     case 4: 
     case 5: 
     default: 
-      diY.setVisibility(0);
-      djc.setVisibility(8);
-      iQY.setVisibility(8);
+      dTt.setVisibility(0);
+      dTx.setVisibility(8);
+      kPQ.setVisibility(8);
     case 0: 
     case 6: 
     case 2: 
@@ -103,58 +109,58 @@ public class AppAttachDownloadUI
         do
         {
           return;
-        } while (!aNS());
-        if (bn.yb(iRb))
+        } while (!bdK());
+        if (ay.DB(kPT))
         {
-          aNT();
+          bdL();
           return;
         }
         localObject = getMimeType();
-        izg.setVisibility(0);
-        djc.setVisibility(8);
-        iQY.setVisibility(8);
-        dmH.setVisibility(8);
-        iRa.setVisibility(0);
-        if (apy.equals("")) {
-          iRa.setText(getString(a.n.openapi_app_file));
+        kyk.setVisibility(0);
+        dTx.setVisibility(8);
+        kPQ.setVisibility(8);
+        ebh.setVisibility(8);
+        kPS.setVisibility(0);
+        if (anC.equals("")) {
+          kPS.setText(getString(2131428994));
         }
         while ((localObject == null) || (((String)localObject).equals("")))
         {
-          diY.setVisibility(8);
-          izg.setText(getString(a.n.download_can_not_open));
+          dTt.setVisibility(8);
+          kyk.setText(getString(2131428898));
           return;
-          iRa.setText(apy);
+          kPS.setText(anC);
         }
-        diY.setVisibility(0);
-        izg.setText(getString(a.n.download_can_not_open_by_wechat));
+        dTt.setVisibility(0);
+        kyk.setText(getString(2131428899));
         return;
-      } while (!aNS());
-      aNT();
+      } while (!bdK());
+      bdL();
       return;
     }
     Object localObject = new Intent();
-    ((Intent)localObject).putExtra("App_MsgId", axb);
+    ((Intent)localObject).putExtra("App_MsgId", avg);
     setResult(-1, (Intent)localObject);
     finish();
   }
   
-  private boolean aNS()
+  private boolean bdK()
   {
-    com.tencent.mm.pluginsdk.model.app.b localb = ay.GA().uk(mediaId);
+    b localb = bdI();
     if (localb == null) {}
-    while (com.tencent.mm.a.c.az(field_fileFullPath)) {
+    while (com.tencent.mm.a.e.ax(field_fileFullPath)) {
       return true;
     }
-    iRg.setVisibility(8);
-    iRh.setVisibility(0);
+    kPY.setVisibility(8);
+    kPZ.setVisibility(0);
     return false;
   }
   
-  private void aNT()
+  private void bdL()
   {
-    com.tencent.mm.pluginsdk.model.app.b localb = ay.GA().uk(mediaId);
+    b localb = bdI();
     Intent localIntent = new Intent(this, ShowImageUI.class);
-    localIntent.putExtra("key_message_id", aDs.field_msgId);
+    localIntent.putExtra("key_message_id", aFR.field_msgId);
     localIntent.putExtra("key_image_path", field_fileFullPath);
     localIntent.putExtra("key_favorite", true);
     startActivity(localIntent);
@@ -163,14 +169,14 @@ public class AppAttachDownloadUI
   
   private String getMimeType()
   {
-    a.a locala = a.a.dr(axR);
+    a.a locala = a.a.dz(axY);
     Object localObject2 = null;
     Object localObject1 = localObject2;
-    if (aqo != null)
+    if (aos != null)
     {
       localObject1 = localObject2;
-      if (aqo.length() > 0) {
-        localObject1 = MimeTypeMap.getSingleton().getMimeTypeFromExtension(aqo);
+      if (aos.length() > 0) {
+        localObject1 = MimeTypeMap.getSingleton().getMimeTypeFromExtension(aos);
       }
     }
     if (localObject1 != null)
@@ -180,8 +186,8 @@ public class AppAttachDownloadUI
     }
     else
     {
-      t.w("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "getMimeType fail, not a built-in mimetype, use \"*/{fileext}\" instead");
-      localObject2 = "*/" + aqo;
+      u.w("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "getMimeType fail, not a built-in mimetype, use \"*/{fileext}\" instead");
+      localObject2 = "*/" + aos;
     }
     return (String)localObject2;
   }
@@ -189,53 +195,59 @@ public class AppAttachDownloadUI
   private void init()
   {
     int j = 0;
-    nh(a.n.download_title);
-    axb = getIntent().getLongExtra("app_msg_id", -1L);
+    qb(2131428900);
+    avg = getIntent().getLongExtra("app_msg_id", -1L);
     boolean bool;
-    if (axb == -1L) {
+    if (avg == -1L) {
       bool = false;
     }
     while (!bool)
     {
       finish();
       return;
-      aDs = ax.tl().rk().cH(axb);
-      if ((aDs == null) || (aDs.field_msgId == 0L) || (aDs.field_content == null))
+      aFR = com.tencent.mm.model.ah.tD().rs().dz(avg);
+      if ((aFR == null) || (aFR.field_msgId == 0L) || (aFR.field_content == null))
       {
         bool = false;
       }
       else
       {
-        iBB = w.dh(aDs.field_talker);
-        axR = aDs.field_content;
+        kAy = com.tencent.mm.model.i.dn(aFR.field_talker);
+        axY = aFR.field_content;
         Object localObject2;
-        if ((iBB) && (aDs.field_isSend == 0))
+        if ((kAy) && (aFR.field_isSend == 0))
         {
-          localObject2 = aDs.field_content;
+          localObject2 = aFR.field_content;
           localObject1 = localObject2;
-          if (iBB)
+          if (kAy)
           {
             localObject1 = localObject2;
             if (localObject2 != null) {
-              localObject1 = br.eU((String)localObject2);
+              localObject1 = ar.fl((String)localObject2);
             }
           }
-          axR = ((String)localObject1);
+          axY = ((String)localObject1);
         }
-        localObject1 = a.a.dr(axR);
+        localObject1 = a.a.dz(axY);
         if (localObject1 == null)
         {
+          u.e("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "parse msgContent error, %s", new Object[] { axY });
           bool = false;
         }
         else
         {
-          gMr = type;
-          mediaId = aqm;
-          apy = ad.iV(title);
-          iRb = ad.iV(aqo).toLowerCase();
-          localObject1 = ay.GA().uk(aqm);
+          if ((t.kz(aoq)) && (!t.kz(bxp)))
+          {
+            u.e("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "msgContent format error, %s", new Object[] { axY });
+            aoq = bxp.hashCode();
+          }
+          iBs = type;
+          mediaId = aoq;
+          anC = t.ky(title);
+          kPT = t.ky(aos).toLowerCase();
+          localObject1 = bdI();
           if ((localObject1 != null) && (new File(field_fileFullPath).exists()) && (field_offset > 0L)) {}
-          for (iRd = true;; iRd = false)
+          for (kPV = true;; kPV = false)
           {
             int i = j;
             if (localObject1 != null)
@@ -251,174 +263,224 @@ public class AppAttachDownloadUI
               }
             }
             if (i == 0) {
-              break label377;
+              break label458;
             }
-            bool = com.tencent.mm.pluginsdk.ui.tools.a.b(this, field_fileFullPath, iRb, 1);
+            bool = com.tencent.mm.pluginsdk.ui.tools.a.b(this, field_fileFullPath, kPT, 1);
             break;
           }
-          label377:
+          label458:
           bool = true;
         }
       }
     }
-    Object localObject1 = new File(com.tencent.mm.compatible.util.f.bjJ);
+    Object localObject1 = new File(com.tencent.mm.compatible.util.d.bui);
     if (!((File)localObject1).exists()) {
       ((File)localObject1).mkdir();
     }
-    ay.GA().g(this);
-    DV();
+    aj.IL().c(this);
+    Gb();
   }
   
-  protected final void DV()
+  protected final void Gb()
   {
-    eun = ((MMImageView)findViewById(a.i.download_type_icon));
-    djc = findViewById(a.i.download_progress_area);
-    cgr = ((ProgressBar)findViewById(a.i.download_pb));
-    euo = ((ImageView)findViewById(a.i.download_stop_btn));
-    dmH = ((Button)findViewById(a.i.download_continue_btn));
-    diY = ((Button)findViewById(a.i.download_open_btn));
-    iQY = findViewById(a.i.download_data_area);
-    izg = ((TextView)findViewById(a.i.download_hint));
-    iQZ = ((TextView)findViewById(a.i.download_data_size));
-    iRa = ((TextView)findViewById(a.i.download_file_name));
-    iRg = ((LinearLayout)findViewById(a.i.download_ll));
-    iRh = ((LinearLayout)findViewById(a.i.load_fail_ll));
-    euo.setOnClickListener(new e(this));
-    dmH.setOnClickListener(new f(this));
-    diY.setOnClickListener(new g(this));
+    fEj = ((MMImageView)findViewById(2131165656));
+    dTx = findViewById(2131165658);
+    cxD = ((ProgressBar)findViewById(2131165659));
+    fEk = ((ImageView)findViewById(2131165660));
+    ebh = ((Button)findViewById(2131165661));
+    dTt = ((Button)findViewById(2131165662));
+    kPQ = findViewById(2131165663);
+    kyk = ((TextView)findViewById(2131165665));
+    kPR = ((TextView)findViewById(2131165664));
+    kPS = ((TextView)findViewById(2131165657));
+    kPY = ((LinearLayout)findViewById(2131165655));
+    kPZ = ((LinearLayout)findViewById(2131165666));
+    fEk.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        AppAttachDownloadUI.h(AppAttachDownloadUI.this).setVisibility(8);
+        AppAttachDownloadUI.i(AppAttachDownloadUI.this).setVisibility(0);
+        AppAttachDownloadUI.j(AppAttachDownloadUI.this).setVisibility(8);
+        AppAttachDownloadUI.a(AppAttachDownloadUI.this).a(AppAttachDownloadUI.this);
+      }
+    });
+    ebh.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        AppAttachDownloadUI.k(AppAttachDownloadUI.this);
+        AppAttachDownloadUI.h(AppAttachDownloadUI.this).setVisibility(0);
+        AppAttachDownloadUI.i(AppAttachDownloadUI.this).setVisibility(8);
+        AppAttachDownloadUI.j(AppAttachDownloadUI.this).setVisibility(0);
+        AppAttachDownloadUI.a(AppAttachDownloadUI.this, new x(AppAttachDownloadUI.l(AppAttachDownloadUI.this), AppAttachDownloadUI.m(AppAttachDownloadUI.this), AppAttachDownloadUI.n(AppAttachDownloadUI.this)));
+        com.tencent.mm.model.ah.tE().d(AppAttachDownloadUI.a(AppAttachDownloadUI.this));
+      }
+    });
+    dTt.setOnClickListener(new View.OnClickListener()
+    {
+      public final void onClick(View paramAnonymousView)
+      {
+        AppAttachDownloadUI.o(AppAttachDownloadUI.this);
+        AppAttachDownloadUI.p(AppAttachDownloadUI.this);
+      }
+    });
     Object localObject;
     int i;
-    switch (gMr)
+    switch (iBs)
     {
     case 1: 
     case 3: 
     case 5: 
     default: 
-      eun.setSVGResource(a.m.app_attach_file_icon_unknow);
-      a(new a(this));
-      a(0, a.h.actionbar_more_icon, new b(this));
-      iRc = false;
-      localObject = ay.GA().uk(mediaId);
+      fEj.setImageResource(2130903730);
+      b(new MenuItem.OnMenuItemClickListener()
+      {
+        public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+        {
+          if (AppAttachDownloadUI.a(AppAttachDownloadUI.this) != null) {
+            com.tencent.mm.model.ah.tE().c(AppAttachDownloadUI.a(AppAttachDownloadUI.this));
+          }
+          finish();
+          return true;
+        }
+      });
+      a(0, 2130903464, new MenuItem.OnMenuItemClickListener()
+      {
+        public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+        {
+          AppAttachDownloadUI.a(AppAttachDownloadUI.this, AppAttachDownloadUI.b(AppAttachDownloadUI.this));
+          return false;
+        }
+      });
+      kPU = false;
+      localObject = bdI();
       if ((localObject == null) || (!new File(field_fileFullPath).exists()))
       {
         i = 0;
-        label333:
+        label327:
         if (i == 0) {
-          break label461;
+          break label455;
         }
-        iRc = true;
-        aNR();
+        kPU = true;
+        bdJ();
       }
       break;
     }
     for (;;)
     {
       return;
-      eun.setSVGResource(a.m.app_attach_file_icon_pic);
+      fEj.setImageResource(2130970839);
       break;
-      eun.setSVGResource(a.m.app_attach_file_icon_video);
+      fEj.setImageResource(2130903696);
       break;
-      eun.setSVGResource(u.ui(iRb));
+      fEj.setImageResource(o.zI(kPT));
       break;
-      if (bn.yb(iRb))
+      if (ay.DB(kPT))
       {
-        eun.setSVGResource(a.m.app_attach_file_icon_pic);
+        fEj.setImageResource(2130970839);
         break;
       }
-      eun.setSVGResource(a.m.app_attach_file_icon_unknow);
+      fEj.setImageResource(2130903730);
       break;
-      if ((((com.tencent.mm.pluginsdk.model.app.b)localObject).ayV()) || ((aDs.field_isSend == 1) && (field_isUpload)))
+      if ((((b)localObject).aPA()) || ((aFR.field_isSend == 1) && (field_isUpload)))
       {
         i = 1;
-        break label333;
+        break label327;
       }
       i = 0;
-      break label333;
-      label461:
-      if ((aDs.aWT != 1) && ((localObject == null) || (!new File(field_fileFullPath).exists())))
+      break label327;
+      label455:
+      if ((aFR.bcK != 1) && ((localObject == null) || (!new File(field_fileFullPath).exists())))
       {
-        iRg.setVisibility(8);
-        iRh.setVisibility(0);
+        kPY.setVisibility(8);
+        kPZ.setVisibility(0);
         return;
       }
-      if (!iRc)
+      if (!kPU)
       {
-        cLu = new d(this);
-        switch (gMr)
+        dkS = new com.tencent.mm.r.e()
+        {
+          public final void a(int paramAnonymousInt1, int paramAnonymousInt2, j paramAnonymousj)
+          {
+            if (paramAnonymousInt2 == 0) {}
+            for (float f = 0.0F;; f = paramAnonymousInt1 * 100.0F / paramAnonymousInt2)
+            {
+              AppAttachDownloadUI.g(AppAttachDownloadUI.this).setProgress((int)f);
+              return;
+            }
+          }
+        };
+        switch (iBs)
         {
         }
-        while ((!iRc) && (!iRd))
+        while ((!kPU) && (!kPV))
         {
-          aNQ();
-          djc.setVisibility(0);
-          dmH.setVisibility(8);
-          iQY.setVisibility(0);
-          cLt = new aa(axb, mediaId, cLu);
-          ax.tm().d(cLt);
+          bdH();
+          dTx.setVisibility(0);
+          ebh.setVisibility(8);
+          kPQ.setVisibility(0);
+          dkR = new x(avg, mediaId, dkS);
+          com.tencent.mm.model.ah.tE().d(dkR);
           return;
-          if (iRd)
+          if (kPV)
           {
-            dmH.setVisibility(0);
-            label673:
-            djc.setVisibility(8);
-            iQY.setVisibility(8);
-            diY.setVisibility(8);
-            izg.setVisibility(8);
-            iRa.setVisibility(0);
-            if (!apy.equals("")) {
-              break label809;
+            ebh.setVisibility(0);
+            label669:
+            dTx.setVisibility(8);
+            kPQ.setVisibility(8);
+            dTt.setVisibility(8);
+            kyk.setVisibility(8);
+            kPS.setVisibility(0);
+            if (!anC.equals("")) {
+              break label807;
             }
-            iRa.setText(getString(a.n.openapi_app_file));
-            label743:
+            kPS.setText(getString(2131428994));
+            label740:
             localObject = getMimeType();
             if ((localObject != null) && (!((String)localObject).equals(""))) {
-              break label823;
+              break label821;
             }
-            izg.setText(getString(a.n.download_can_not_open));
+            kyk.setText(getString(2131428898));
           }
-          while (bn.yb(iRb))
+          while (ay.DB(kPT))
           {
-            izg.setVisibility(8);
+            kyk.setVisibility(8);
             break;
-            dmH.setVisibility(8);
-            break label673;
-            label809:
-            iRa.setText(apy);
-            break label743;
-            label823:
-            izg.setText(getString(a.n.download_can_not_open_by_wechat));
+            ebh.setVisibility(8);
+            break label669;
+            label807:
+            kPS.setText(anC);
+            break label740;
+            label821:
+            kyk.setText(getString(2131428899));
           }
-          if (iRd) {
-            dmH.setVisibility(0);
+          if (kPV) {
+            ebh.setVisibility(0);
           }
           for (;;)
           {
-            djc.setVisibility(8);
-            iQY.setVisibility(8);
-            diY.setVisibility(8);
-            iRa.setVisibility(8);
-            izg.setVisibility(8);
-            izg.setText(getString(a.n.download_can_not_open_by_wechat));
+            dTx.setVisibility(8);
+            kPQ.setVisibility(8);
+            dTt.setVisibility(8);
+            kPS.setVisibility(8);
+            kyk.setVisibility(8);
+            kyk.setText(getString(2131428899));
             break;
-            dmH.setVisibility(8);
+            ebh.setVisibility(8);
           }
-          djc.setVisibility(0);
-          iQY.setVisibility(0);
-          dmH.setVisibility(8);
-          diY.setVisibility(8);
-          iRa.setVisibility(8);
-          izg.setVisibility(8);
-          cLt = new aa(axb, mediaId, cLu);
-          aNQ();
-          ax.tm().d(cLt);
+          dTx.setVisibility(0);
+          kPQ.setVisibility(0);
+          ebh.setVisibility(8);
+          dTt.setVisibility(8);
+          kPS.setVisibility(8);
+          kyk.setVisibility(8);
+          dkR = new x(avg, mediaId, dkS);
+          bdH();
+          com.tencent.mm.model.ah.tE().d(dkR);
         }
       }
     }
-  }
-  
-  protected final boolean Rb()
-  {
-    return true;
   }
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
@@ -429,79 +491,78 @@ public class AppAttachDownloadUI
     }
     if (paramInt2 == -5103059)
     {
-      iRh.setVisibility(0);
-      iRg.setVisibility(8);
+      kPZ.setVisibility(0);
+      kPY.setVisibility(8);
       return;
     }
-    djc.setVisibility(8);
-    dmH.setVisibility(0);
-    iQY.setVisibility(8);
-    t.e("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "onSceneEnd, download fail, errType = " + paramInt1 + ", errCode = " + paramInt2);
+    dTx.setVisibility(8);
+    ebh.setVisibility(0);
+    kPQ.setVisibility(8);
+    u.e("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "onSceneEnd, download fail, errType = " + paramInt1 + ", errCode = " + paramInt2);
   }
   
-  public final void a(String paramString, an paraman)
+  public final void a(String paramString, com.tencent.mm.sdk.h.i parami)
   {
     int i = 0;
-    paramString = ay.GA().uk(mediaId);
+    paramString = bdI();
     long l1;
     long l2;
     if (paramString != null)
     {
       l1 = field_totalLen;
       l2 = field_offset;
-      iQZ.setText(getString(a.n.download_data, new Object[] { ad.W(l2), ad.W(l1) }));
+      kPR.setText(getString(2131428901, new Object[] { t.al(l2), t.al(l1) }));
       if (field_totalLen != 0L) {
-        break label219;
+        break label213;
       }
     }
     for (;;)
     {
-      t.v("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "attach progress:" + i + " offset:" + l2 + " totallen:" + l1);
-      cgr.setProgress(i);
-      if ((i >= 100) && (!iRc))
+      u.v("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "attach progress:" + i + " offset:" + l2 + " totallen:" + l1);
+      cxD.setProgress(i);
+      if ((i >= 100) && (!kPU))
       {
-        iRc = true;
+        kPU = true;
         if (paramString != null)
         {
-          Toast.makeText(this, getString(a.n.download_success) + " : " + field_fileFullPath.replaceFirst(com.tencent.mm.compatible.util.f.bjH, com.tencent.mm.compatible.util.f.bjG), iRf).show();
-          com.tencent.mm.pluginsdk.ui.tools.a.b(this, field_fileFullPath, iRb, 1);
+          Toast.makeText(this, getString(2131428902) + " : " + field_fileFullPath.replaceFirst(com.tencent.mm.compatible.util.d.bxc, com.tencent.mm.compatible.util.d.buh), kPX).show();
+          com.tencent.mm.pluginsdk.ui.tools.a.b(this, field_fileFullPath, kPT, 1);
         }
-        aNR();
+        bdJ();
       }
       return;
-      label219:
+      label213:
       i = (int)(field_offset * 100L / field_totalLen);
     }
   }
   
-  public final void azg()
+  public final void aPN()
   {
-    Toast.makeText(this, a.n.download_pause_tip, 0).show();
+    Toast.makeText(this, 2131428906, 0).show();
   }
   
   protected final int getLayoutId()
   {
-    return a.k.download_ui;
+    return 2131361941;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
     super.onActivityResult(paramInt1, paramInt2, paramIntent);
-    com.tencent.mm.pluginsdk.ui.tools.a.a(this, paramInt1, paramInt2, paramIntent, iRe, a.n.download_no_match_msg, a.n.download_no_match_title, 1);
+    com.tencent.mm.pluginsdk.ui.tools.a.a(this, paramInt1, paramInt2, paramIntent, kPW, 1);
   }
   
   public void onCreate(Bundle paramBundle)
   {
-    com.tencent.mm.svg.frame.c.a.a.aIr();
     super.onCreate(paramBundle);
     init();
   }
   
   protected void onDestroy()
   {
-    ay.GA().h(this);
-    if (cLt != null) {
-      cLt.a(this);
+    aj.IL().d(this);
+    if (dkR != null) {
+      dkR.a(this);
     }
     super.onDestroy();
   }
@@ -515,24 +576,23 @@ public class AppAttachDownloadUI
   
   protected void onPause()
   {
-    ax.tm().b(221, this);
+    com.tencent.mm.model.ah.tE().b(221, this);
     super.onPause();
-    fh localfh = new fh();
-    aBK.aBL = false;
-    com.tencent.mm.sdk.c.a.hXQ.a(localfh, getMainLooper());
-    t.d("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "AppAttachDownloadUI cancel pause auto download logic");
+    ij localij = new ij();
+    aEc.aEd = false;
+    com.tencent.mm.sdk.c.a.jUF.a(localij, getMainLooper());
+    u.d("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "AppAttachDownloadUI cancel pause auto download logic");
   }
   
   protected void onResume()
   {
     super.onResume();
-    ax.tm().a(221, this);
-    fh localfh = new fh();
-    aBK.aBL = true;
-    com.tencent.mm.sdk.c.a.hXQ.a(localfh, getMainLooper());
-    t.d("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "AppAttachDownloadUI req pause auto download logic");
-    diY.setEnabled(true);
-    com.tencent.mm.svg.frame.c.a.a.aIs();
+    com.tencent.mm.model.ah.tE().a(221, this);
+    ij localij = new ij();
+    aEc.aEd = true;
+    com.tencent.mm.sdk.c.a.jUF.a(localij, getMainLooper());
+    u.d("!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc=", "AppAttachDownloadUI req pause auto download logic");
+    dTt.setEnabled(true);
   }
 }
 

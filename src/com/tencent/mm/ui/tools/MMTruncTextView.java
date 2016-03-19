@@ -10,8 +10,8 @@ import android.widget.TextView;
 public class MMTruncTextView
   extends TextView
 {
-  private boolean jut = false;
-  private boolean juu = false;
+  private boolean lwY = false;
+  private boolean lwZ = false;
   
   public MMTruncTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -26,25 +26,25 @@ public class MMTruncTextView
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    if (!jut) {}
+    if (!lwY) {}
     CharSequence localCharSequence;
     do
     {
       return;
       localCharSequence = getText();
     } while (!(localCharSequence instanceof Spanned));
-    juu = true;
+    lwZ = true;
     setText(TextUtils.ellipsize(localCharSequence, getPaint(), getWidth() - getCompoundPaddingRight() - getCompoundPaddingLeft(), TextUtils.TruncateAt.END));
-    juu = false;
+    lwZ = false;
   }
   
   protected void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
     super.onTextChanged(paramCharSequence, paramInt1, paramInt2, paramInt3);
-    if (!juu) {}
+    if (!lwZ) {}
     for (boolean bool = true;; bool = false)
     {
-      jut = bool;
+      lwY = bool;
       return;
     }
   }

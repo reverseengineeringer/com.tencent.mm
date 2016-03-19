@@ -1,23 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class k
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aug = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a ass = new a();
   
   public k()
   {
-    id = "BackupProcessMgrExit";
-    hXT = atO;
+    id = "AutoGetBigImgOccChanged";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean auh;
+    public int mode;
   }
 }
 

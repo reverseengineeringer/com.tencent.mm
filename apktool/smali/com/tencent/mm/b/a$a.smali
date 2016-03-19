@@ -15,11 +15,11 @@
 
 
 # static fields
-.field static final amM:J
+.field static final akz:J
 
 
 # instance fields
-.field public amN:I
+.field public akA:I
 
 
 # direct methods
@@ -36,7 +36,7 @@
 
     int-to-long v0, v0
 
-    sput-wide v0, Lcom/tencent/mm/b/a$a;->amM:J
+    sput-wide v0, Lcom/tencent/mm/b/a$a;->akz:J
 
     return-void
 .end method
@@ -51,16 +51,16 @@
     .line 165
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/b/a$a;->amN:I
+    iput v0, p0, Lcom/tencent/mm/b/a$a;->akA:I
 
     .line 168
-    iput p1, p0, Lcom/tencent/mm/b/a$a;->amN:I
+    iput p1, p0, Lcom/tencent/mm/b/a$a;->akA:I
 
     .line 169
     return-void
 .end method
 
-.method static n(J)[B
+.method static m(J)[B
     .locals 7
 
     .prologue
@@ -100,7 +100,7 @@
     goto :goto_0
 .end method
 
-.method public static s([B)Lcom/tencent/mm/b/a$a;
+.method public static t([B)Lcom/tencent/mm/b/a$a;
     .locals 8
 
     .prologue
@@ -129,7 +129,7 @@
 
     shr-long v4, v0, v2
 
-    sget-wide v6, Lcom/tencent/mm/b/a$a;->amM:J
+    sget-wide v6, Lcom/tencent/mm/b/a$a;->akz:J
 
     cmp-long v2, v4, v6
 

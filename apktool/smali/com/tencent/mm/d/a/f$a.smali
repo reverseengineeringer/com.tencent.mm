@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public atZ:I
+.field public asc:I
 
 
 # direct methods
@@ -29,7 +29,7 @@
     .line 15
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/d/a/f$a;->atZ:I
+    iput v0, p0, Lcom/tencent/mm/d/a/f$a;->asc:I
 
     return-void
 .end method

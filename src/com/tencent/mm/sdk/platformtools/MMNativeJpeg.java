@@ -27,7 +27,7 @@ public class MMNativeJpeg
     //   16: iconst_0
     //   17: aload_0
     //   18: aastore
-    //   19: invokestatic 34	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   19: invokestatic 34	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   22: iconst_1
     //   23: ireturn
     //   24: aconst_null
@@ -49,7 +49,7 @@ public class MMNativeJpeg
     //   53: astore_3
     //   54: ldc 11
     //   56: ldc 42
-    //   58: invokestatic 46	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   58: invokestatic 46	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   61: aload 4
     //   63: astore_3
     //   64: aload_0
@@ -95,7 +95,7 @@ public class MMNativeJpeg
     //   146: iconst_0
     //   147: aload 8
     //   149: aastore
-    //   150: invokestatic 83	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   150: invokestatic 83	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   153: aload 8
     //   155: aload_0
     //   156: iconst_1
@@ -130,7 +130,7 @@ public class MMNativeJpeg
     //   200: aload 4
     //   202: invokestatic 97	com/tencent/mm/sdk/platformtools/MMNativeJpeg:exception2String	(Ljava/lang/Throwable;)Ljava/lang/String;
     //   205: aastore
-    //   206: invokestatic 34	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   206: invokestatic 34	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   209: aload_0
     //   210: ifnull -29 -> 181
     //   213: aload_0
@@ -145,7 +145,7 @@ public class MMNativeJpeg
     //   229: astore_3
     //   230: ldc 11
     //   232: ldc 99
-    //   234: invokestatic 101	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   234: invokestatic 101	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   237: aload_0
     //   238: ifnull -57 -> 181
     //   241: aload_0
@@ -235,13 +235,13 @@ public class MMNativeJpeg
     {
       if (mmjpeg.queryParams(paramString) == null)
       {
-        t.e("!24@juC3PIl53GtU8dbyNx00zw==", "IsJpegFile : can't query jpeg parames.");
+        u.e("!24@juC3PIl53GtU8dbyNx00zw==", "IsJpegFile : can't query jpeg parames.");
         return false;
       }
     }
     catch (Exception paramString)
     {
-      t.e("!24@juC3PIl53GtU8dbyNx00zw==", "IsJpegFile exception:%s", new Object[] { exception2String(paramString) });
+      u.e("!24@juC3PIl53GtU8dbyNx00zw==", "IsJpegFile exception:%s", new Object[] { exception2String(paramString) });
       return false;
     }
     return true;
@@ -251,7 +251,7 @@ public class MMNativeJpeg
   {
     if (Build.VERSION.SDK_INT < 11)
     {
-      t.i("!24@juC3PIl53GtU8dbyNx00zw==", "early version before android 3.0  unsupported.");
+      u.i("!24@juC3PIl53GtU8dbyNx00zw==", "early version before android 3.0  unsupported.");
       return false;
     }
     return true;
@@ -266,7 +266,7 @@ public class MMNativeJpeg
     }
     catch (Exception paramString)
     {
-      t.e("!24@juC3PIl53GtU8dbyNx00zw==", "checkfileexist. exception:%s", new Object[] { exception2String(paramString) });
+      u.e("!24@juC3PIl53GtU8dbyNx00zw==", "checkfileexist. exception:%s", new Object[] { exception2String(paramString) });
     }
     return false;
   }
@@ -280,52 +280,52 @@ public class MMNativeJpeg
     try
     {
       str = paramString + ".prog.dat";
-      t.d("!24@juC3PIl53GtU8dbyNx00zw==", "convert %s to %s use progressive.quality:%d", new Object[] { paramString, str, Integer.valueOf(paramInt) });
+      u.d("!24@juC3PIl53GtU8dbyNx00zw==", "convert %s to %s use progressive.quality:%d", new Object[] { paramString, str, Integer.valueOf(paramInt) });
       paramInt = mmjpeg.convertToProgressive(paramString, str);
       if (paramInt != 0)
       {
-        t.e("!24@juC3PIl53GtU8dbyNx00zw==", "convert failed. error:%d", new Object[] { Integer.valueOf(paramInt) });
+        u.e("!24@juC3PIl53GtU8dbyNx00zw==", "convert failed. error:%d", new Object[] { Integer.valueOf(paramInt) });
         return false;
       }
     }
     catch (Exception paramString)
     {
-      t.e("!24@juC3PIl53GtU8dbyNx00zw==", "convertToProgressive exception:%s", new Object[] { exception2String(paramString) });
+      u.e("!24@juC3PIl53GtU8dbyNx00zw==", "convertToProgressive exception:%s", new Object[] { exception2String(paramString) });
       return false;
     }
     boolean bool = j.i(str, paramString, true);
-    t.i("!24@juC3PIl53GtU8dbyNx00zw==", "convert ret:%b", new Object[] { Boolean.valueOf(bool) });
+    u.i("!24@juC3PIl53GtU8dbyNx00zw==", "convert ret:%b", new Object[] { Boolean.valueOf(bool) });
     return bool;
   }
   
   public static Bitmap decodeAsBitmap(String paramString)
   {
-    t.v("!24@juC3PIl53GtU8dbyNx00zw==", "decodeAsBitmap:%s", new Object[] { paramString });
+    u.v("!24@juC3PIl53GtU8dbyNx00zw==", "decodeAsBitmap:%s", new Object[] { paramString });
     try
     {
       Object localObject = mmjpeg.queryParams(paramString);
       if (localObject == null)
       {
-        t.e("!24@juC3PIl53GtU8dbyNx00zw==", "can't query jpeg parames.");
+        u.e("!24@juC3PIl53GtU8dbyNx00zw==", "can't query jpeg parames.");
         return null;
       }
       localObject = Bitmap.createBitmap(Width, Height, Bitmap.Config.ARGB_8888);
       if (mmjpeg.decodeToBitmap(paramString, (Bitmap)localObject))
       {
-        t.i("!24@juC3PIl53GtU8dbyNx00zw==", "decode bitmap successed.");
+        u.i("!24@juC3PIl53GtU8dbyNx00zw==", "decode bitmap successed.");
         return (Bitmap)localObject;
       }
-      t.e("!24@juC3PIl53GtU8dbyNx00zw==", "can't decode to bmp.");
+      u.e("!24@juC3PIl53GtU8dbyNx00zw==", "can't decode to bmp.");
       return null;
     }
     catch (Exception paramString)
     {
-      t.e("!24@juC3PIl53GtU8dbyNx00zw==", "decodeAsBitmap exception:%s", new Object[] { exception2String(paramString) });
+      u.e("!24@juC3PIl53GtU8dbyNx00zw==", "decodeAsBitmap exception:%s", new Object[] { exception2String(paramString) });
       return null;
     }
     catch (OutOfMemoryError localOutOfMemoryError)
     {
-      t.e("!24@juC3PIl53GtU8dbyNx00zw==", "decodeAsBitmap OOM:%s", new Object[] { paramString });
+      u.e("!24@juC3PIl53GtU8dbyNx00zw==", "decodeAsBitmap OOM:%s", new Object[] { paramString });
     }
     return null;
   }
@@ -339,7 +339,7 @@ public class MMNativeJpeg
   
   public static boolean isProgressive(String paramString)
   {
-    t.v("!24@juC3PIl53GtU8dbyNx00zw==", "isProgressive:%s", new Object[] { paramString });
+    u.v("!24@juC3PIl53GtU8dbyNx00zw==", "isProgressive:%s", new Object[] { paramString });
     if (!checkAndroidVersion()) {}
     int i;
     do
@@ -348,22 +348,22 @@ public class MMNativeJpeg
       {
         return false;
       } while (!checkFileExist(paramString));
-      t.d("!24@juC3PIl53GtU8dbyNx00zw==", "check progressive for file:%s", new Object[] { paramString });
+      u.d("!24@juC3PIl53GtU8dbyNx00zw==", "check progressive for file:%s", new Object[] { paramString });
       try
       {
         i = mmjpeg.isProgressiveFile(paramString);
         if ((1 != i) && (i != 0))
         {
-          t.e("!24@juC3PIl53GtU8dbyNx00zw==", "check failed. error:%d", new Object[] { Integer.valueOf(i) });
+          u.e("!24@juC3PIl53GtU8dbyNx00zw==", "check failed. error:%d", new Object[] { Integer.valueOf(i) });
           return false;
         }
       }
       catch (Exception paramString)
       {
-        t.e("!24@juC3PIl53GtU8dbyNx00zw==", "isProgressive exception:%s", new Object[] { exception2String(paramString) });
+        u.e("!24@juC3PIl53GtU8dbyNx00zw==", "isProgressive exception:%s", new Object[] { exception2String(paramString) });
         return false;
       }
-      t.i("!24@juC3PIl53GtU8dbyNx00zw==", "file:%s progressive:%d", new Object[] { paramString, Integer.valueOf(i) });
+      u.i("!24@juC3PIl53GtU8dbyNx00zw==", "file:%s progressive:%d", new Object[] { paramString, Integer.valueOf(i) });
     } while (i != 1);
     return true;
   }
@@ -377,29 +377,29 @@ public class MMNativeJpeg
     try
     {
       int i = mmjpeg.queryQuality(paramString);
-      t.i("!24@juC3PIl53GtU8dbyNx00zw==", "after query quality:%d", new Object[] { Integer.valueOf(i) });
+      u.i("!24@juC3PIl53GtU8dbyNx00zw==", "after query quality:%d", new Object[] { Integer.valueOf(i) });
       if ((i < 10000) && (i >= 24)) {
         return i;
       }
       if (1 == mmjpeg.isProgressiveFile(paramString)) {
         return 25;
       }
-      t.w("!24@juC3PIl53GtU8dbyNx00zw==", "invalid jpeg file or too small quality.");
+      u.w("!24@juC3PIl53GtU8dbyNx00zw==", "invalid jpeg file or too small quality.");
       return 0;
     }
     catch (Exception paramString)
     {
-      t.e("!24@juC3PIl53GtU8dbyNx00zw==", "queryQuality failed. exception:%s", new Object[] { exception2String(paramString) });
+      u.e("!24@juC3PIl53GtU8dbyNx00zw==", "queryQuality failed. exception:%s", new Object[] { exception2String(paramString) });
       return 0;
     }
     catch (IncompatibleClassChangeError paramString)
     {
-      t.printErrStackTrace("MicroMsg.Crash", paramString, "May cause dvmFindCatchBlock crash!", new Object[0]);
+      u.printErrStackTrace("MicroMsg.Crash", paramString, "May cause dvmFindCatchBlock crash!", new Object[0]);
       throw ((IncompatibleClassChangeError)new IncompatibleClassChangeError("May cause dvmFindCatchBlock crash!").initCause(paramString));
     }
     catch (Error paramString)
     {
-      t.e("!24@juC3PIl53GtU8dbyNx00zw==", "queryQuality error. java.lang.UnsatisfiedLinkError: queryQuality, %s", new Object[] { paramString.toString() });
+      u.e("!24@juC3PIl53GtU8dbyNx00zw==", "queryQuality error. java.lang.UnsatisfiedLinkError: queryQuality, %s", new Object[] { paramString.toString() });
     }
     return 0;
   }

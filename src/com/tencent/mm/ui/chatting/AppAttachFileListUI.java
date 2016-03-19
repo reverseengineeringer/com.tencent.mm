@@ -1,147 +1,176 @@
 package com.tencent.mm.ui.chatting;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
+import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.m.a.a;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.model.v;
-import com.tencent.mm.model.w;
-import com.tencent.mm.pluginsdk.g.m;
-import com.tencent.mm.pluginsdk.model.u;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
-import com.tencent.mm.storage.as;
-import com.tencent.mm.storage.as.a;
-import com.tencent.mm.storage.as.c;
-import com.tencent.mm.svg.frame.c.a.a;
+import com.tencent.mm.d.b.bg;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.h;
+import com.tencent.mm.model.i;
+import com.tencent.mm.n.a.a;
+import com.tencent.mm.pluginsdk.h.n;
+import com.tencent.mm.pluginsdk.model.o;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.ag;
+import com.tencent.mm.storage.ah.a;
+import com.tencent.mm.storage.ah.c;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMImageView;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import junit.framework.Assert;
 
 public class AppAttachFileListUI
   extends MMActivity
-  implements as.a
+  implements ah.a
 {
-  private AdapterView.OnItemClickListener cEU = new i(this);
-  private AbsListView.OnScrollListener cEW = new j(this);
-  private ArrayList iRj;
-  private ListView iRk;
-  private b iRl;
-  private boolean iRm = true;
-  private boolean iRn = false;
-  private View iRo;
-  
-  private c E(ar paramar)
+  private AdapterView.OnItemClickListener dcP = new AdapterView.OnItemClickListener()
   {
-    a.a locala = a.a.dr(field_content);
+    public final void onItemClick(AdapterView paramAnonymousAdapterView, View paramAnonymousView, int paramAnonymousInt, long paramAnonymousLong)
+    {
+      paramAnonymousAdapterView = new Intent(AppAttachFileListUI.this, AppAttachDownloadUI.class);
+      paramAnonymousAdapterView.putExtra("app_msg_id", agetaFR.field_msgId);
+      paramAnonymousAdapterView.setFlags(67108864);
+      startActivity(paramAnonymousAdapterView);
+    }
+  };
+  private AbsListView.OnScrollListener dcR = new AbsListView.OnScrollListener()
+  {
+    public final void onScroll(AbsListView paramAnonymousAbsListView, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3) {}
+    
+    public final void onScrollStateChanged(AbsListView paramAnonymousAbsListView, int paramAnonymousInt)
+    {
+      if ((paramAnonymousInt == 0) && (!AppAttachFileListUI.b(AppAttachFileListUI.this)) && (AppAttachFileListUI.c(AppAttachFileListUI.this)) && (paramAnonymousAbsListView.getLastVisiblePosition() == AppAttachFileListUI.d(AppAttachFileListUI.this).getCount()))
+      {
+        u.d("!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc=", "need to add item");
+        paramAnonymousInt = AppAttachFileListUI.e(AppAttachFileListUI.this);
+        new AppAttachFileListUI.a(AppAttachFileListUI.this, (byte)0).execute(new Integer[] { Integer.valueOf(paramAnonymousInt), Integer.valueOf(20) });
+        AppAttachFileListUI.f(AppAttachFileListUI.this);
+      }
+    }
+  };
+  private ArrayList kQb;
+  private HashSet kQc;
+  private ListView kQd;
+  private b kQe;
+  private boolean kQf = true;
+  private boolean kQg = false;
+  private View kQh;
+  private int kQi;
+  
+  private c G(ag paramag)
+  {
+    a.a locala = a.a.dz(field_content);
     if (locala == null) {
       return null;
     }
     c localc = new c((byte)0);
-    aDs = paramar;
-    iRq = locala;
+    aFR = paramag;
+    kQk = locala;
     return localc;
   }
   
-  private void bf(List paramList)
+  private void bJ(List paramList)
   {
     if (paramList.size() < 20)
     {
-      iRm = false;
-      iRk.removeFooterView(iRo);
+      kQf = false;
+      kQd.removeFooterView(kQh);
     }
     Iterator localIterator = paramList.iterator();
     while (localIterator.hasNext())
     {
-      c localc = E((ar)localIterator.next());
-      if ((localc != null) && (iRq.type == 6)) {
-        iRj.add(localc);
+      ag localag = (ag)localIterator.next();
+      c localc = G(localag);
+      if ((localc != null) && (kQk.type == 6) && (kQc.add(Long.valueOf(field_msgId)))) {
+        kQb.add(localc);
       }
     }
-    t.d("!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc=", "append file item list size %d, current total size is %d", new Object[] { Integer.valueOf(paramList.size()), Integer.valueOf(iRj.size()) });
+    u.d("!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc=", "append file item list size %d, current total size is %d", new Object[] { Integer.valueOf(paramList.size()), Integer.valueOf(kQb.size()) });
   }
   
-  protected final boolean Rb()
+  public final void a(com.tencent.mm.storage.ah paramah, ah.c paramc)
   {
-    return true;
-  }
-  
-  public final void a(as paramas, as.c paramc)
-  {
-    if ("insert".equals(igL))
+    if ("insert".equals(kgp))
     {
-      t.d("!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc=", "reveive a msg");
-      int i = igM.size() - 1;
+      u.d("!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc=", "reveive a msg");
+      int i = kgq.size() - 1;
       while (i >= 0)
       {
-        paramas = (ar)igM.get(i);
-        if (paramas.aHt())
+        paramah = (ag)kgq.get(i);
+        if (paramah.aWU())
         {
-          paramas = E(paramas);
-          if ((paramas != null) && (iRq.type == 6)) {
-            iRj.add(0, paramas);
+          paramah = G(paramah);
+          if ((paramah != null) && (kQk.type == 6)) {
+            kQb.add(0, paramah);
           }
         }
         i -= 1;
       }
-      if (iRl != null) {
-        iRl.notifyDataSetChanged();
+      if (kQe != null) {
+        kQe.notifyDataSetChanged();
       }
     }
   }
   
   protected final int getLayoutId()
   {
-    return a.k.app_attach_file_list_ui;
+    return 2131361864;
   }
   
   public void onCreate(Bundle paramBundle)
   {
-    a.aIr();
     super.onCreate(paramBundle);
-    nh(a.n.file_list_title);
-    a(new h(this));
-    iRk = ((ListView)findViewById(a.i.file_list_lv));
-    iRo = getLayoutInflater().inflate(a.k.app_attach_file_list_footer, null);
-    iRk.addFooterView(iRo);
-    iRo.setVisibility(8);
-    iRj = new ArrayList();
-    paramBundle = v.rS();
-    bf(ax.tl().rk().s(paramBundle, 0, 20));
-    iRl = new b((byte)0);
-    iRk.setAdapter(iRl);
-    iRk.setOnItemClickListener(cEU);
-    iRk.setOnScrollListener(cEW);
-    ax.tl().rk().a(this, getMainLooper());
+    qb(2131428910);
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        finish();
+        return true;
+      }
+    });
+    kQd = ((ListView)findViewById(2131165520));
+    kQh = getLayoutInflater().inflate(2131361829, null);
+    kQd.addFooterView(kQh);
+    kQh.setVisibility(8);
+    kQb = new ArrayList();
+    kQc = new HashSet();
+    paramBundle = h.sc();
+    paramBundle = com.tencent.mm.model.ah.tD().rs().x(paramBundle, 0, 20);
+    kQi += 20;
+    bJ(paramBundle);
+    kQe = new b((byte)0);
+    kQd.setAdapter(kQe);
+    kQd.setOnItemClickListener(dcP);
+    kQd.setOnScrollListener(dcR);
+    com.tencent.mm.model.ah.tD().rs().a(this, getMainLooper());
   }
   
   protected void onDestroy()
   {
-    ax.tl().rk().a(this);
+    com.tencent.mm.model.ah.tD().rs().a(this);
     super.onDestroy();
   }
   
   protected void onResume()
   {
     super.onResume();
-    a.aIs();
   }
   
   private final class a
@@ -175,27 +204,27 @@ public class AppAttachFileListUI
       AppAttachFileListUI.c localc;
       if (paramView == null)
       {
-        paramView = getLayoutInflater().inflate(a.k.app_attach_file_list_item, paramViewGroup, false);
+        paramView = getLayoutInflater().inflate(2131361931, paramViewGroup, false);
         Assert.assertNotNull(paramView);
         paramViewGroup = new AppAttachFileListUI.d(AppAttachFileListUI.this, (byte)0);
-        iRr = ((MMImageView)paramView.findViewById(a.i.file_list_item_icon));
-        iRs = ((TextView)paramView.findViewById(a.i.file_list_item_title));
-        iRt = ((TextView)paramView.findViewById(a.i.file_list_item_from));
-        iRu = ((TextView)paramView.findViewById(a.i.file_list_item_time));
+        kQl = ((MMImageView)paramView.findViewById(2131165636));
+        kQm = ((TextView)paramView.findViewById(2131165637));
+        kQn = ((TextView)paramView.findViewById(2131165639));
+        kQo = ((TextView)paramView.findViewById(2131165638));
         paramView.setTag(paramViewGroup);
         Assert.assertNotNull(paramViewGroup);
         localc = (AppAttachFileListUI.c)AppAttachFileListUI.a(AppAttachFileListUI.this).get(paramInt);
-        iRs.setText(iRq.title);
-        if (aDs.field_isSend != 1) {
-          break label239;
+        kQm.setText(kQk.title);
+        if (aFR.field_isSend != 1) {
+          break label234;
         }
       }
-      label239:
-      for (String str = "自己";; str = w.dN(iRq.blU))
+      label234:
+      for (String str = "自己";; str = i.dY(kQk.bxn))
       {
-        iRt.setText(String.format("大小：%s，来自：%s", new Object[] { bn.W(iRq.aqn), str }));
-        iRu.setText(m.b(AppAttachFileListUI.this, aDs.field_createTime, true));
-        iRr.setSVGResource(u.ui(iRq.aqo));
+        kQn.setText(String.format("大小：%s，来自：%s", new Object[] { ay.al(kQk.aor), str }));
+        kQo.setText(n.b(AppAttachFileListUI.this, aFR.field_createTime, true));
+        kQl.setImageResource(o.zI(kQk.aos));
         return paramView;
         paramViewGroup = (AppAttachFileListUI.d)paramView.getTag();
         break;
@@ -205,18 +234,18 @@ public class AppAttachFileListUI
   
   private final class c
   {
-    public ar aDs;
-    public a.a iRq;
+    public ag aFR;
+    public a.a kQk;
     
     private c() {}
   }
   
   private final class d
   {
-    public MMImageView iRr;
-    public TextView iRs;
-    public TextView iRt;
-    public TextView iRu;
+    public MMImageView kQl;
+    public TextView kQm;
+    public TextView kQn;
+    public TextView kQo;
     
     private d() {}
   }

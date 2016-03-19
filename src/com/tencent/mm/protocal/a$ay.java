@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ay
-  extends a.c
+  extends a.e
 {
   public a$ay()
   {
-    super("launch3rdApp", "launch_3rdApp", 52, false);
+    super("getLatestAddress", "get_recently_used_address", 46, true);
   }
 }
 

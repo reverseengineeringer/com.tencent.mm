@@ -1,159 +1,157 @@
 package com.tencent.mm.h;
 
 import android.database.Cursor;
-import com.tencent.mm.a.l;
-import com.tencent.mm.d.b.k;
-import com.tencent.mm.sdk.g.ae.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.a.o;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.sdk.h.c.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.reflect.Field;
-import java.util.HashMap;
 import java.util.Map;
 
 public class a
-  extends k
+  extends p
 {
-  public static ae.a aqp;
-  private static Map bkF = new HashMap();
-  private static Map bkG = new HashMap();
-  public long bkE;
+  public static c.a aot;
+  private static a bvj = null;
+  public long bvi;
   
   static
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[19];
-    bbY = new String[20];
+    c.a locala = new c.a();
+    ceD = new Field[19];
+    blR = new String[20];
     StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "username";
-    ibX.put("username", "TEXT default ''  PRIMARY KEY ");
+    blR[0] = "username";
+    jYx.put("username", "TEXT default ''  PRIMARY KEY ");
     localStringBuilder.append(" username TEXT default ''  PRIMARY KEY ");
     localStringBuilder.append(", ");
-    ibW = "username";
-    bbY[1] = "alias";
-    ibX.put("alias", "TEXT default '' ");
+    jYw = "username";
+    blR[1] = "alias";
+    jYx.put("alias", "TEXT default '' ");
     localStringBuilder.append(" alias TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[2] = "conRemark";
-    ibX.put("conRemark", "TEXT default '' ");
+    blR[2] = "conRemark";
+    jYx.put("conRemark", "TEXT default '' ");
     localStringBuilder.append(" conRemark TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[3] = "domainList";
-    ibX.put("domainList", "TEXT default '' ");
+    blR[3] = "domainList";
+    jYx.put("domainList", "TEXT default '' ");
     localStringBuilder.append(" domainList TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[4] = "nickname";
-    ibX.put("nickname", "TEXT default '' ");
+    blR[4] = "nickname";
+    jYx.put("nickname", "TEXT default '' ");
     localStringBuilder.append(" nickname TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[5] = "pyInitial";
-    ibX.put("pyInitial", "TEXT default '' ");
+    blR[5] = "pyInitial";
+    jYx.put("pyInitial", "TEXT default '' ");
     localStringBuilder.append(" pyInitial TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[6] = "quanPin";
-    ibX.put("quanPin", "TEXT default '' ");
+    blR[6] = "quanPin";
+    jYx.put("quanPin", "TEXT default '' ");
     localStringBuilder.append(" quanPin TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[7] = "showHead";
-    ibX.put("showHead", "INTEGER default '0' ");
+    blR[7] = "showHead";
+    jYx.put("showHead", "INTEGER default '0' ");
     localStringBuilder.append(" showHead INTEGER default '0' ");
     localStringBuilder.append(", ");
-    bbY[8] = "type";
-    ibX.put("type", "INTEGER default '0' ");
+    blR[8] = "type";
+    jYx.put("type", "INTEGER default '0' ");
     localStringBuilder.append(" type INTEGER default '0' ");
     localStringBuilder.append(", ");
-    bbY[9] = "weiboFlag";
-    ibX.put("weiboFlag", "INTEGER default '0' ");
+    blR[9] = "weiboFlag";
+    jYx.put("weiboFlag", "INTEGER default '0' ");
     localStringBuilder.append(" weiboFlag INTEGER default '0' ");
     localStringBuilder.append(", ");
-    bbY[10] = "weiboNickname";
-    ibX.put("weiboNickname", "TEXT default '' ");
+    blR[10] = "weiboNickname";
+    jYx.put("weiboNickname", "TEXT default '' ");
     localStringBuilder.append(" weiboNickname TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[11] = "conRemarkPYFull";
-    ibX.put("conRemarkPYFull", "TEXT default '' ");
+    blR[11] = "conRemarkPYFull";
+    jYx.put("conRemarkPYFull", "TEXT default '' ");
     localStringBuilder.append(" conRemarkPYFull TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[12] = "conRemarkPYShort";
-    ibX.put("conRemarkPYShort", "TEXT default '' ");
+    blR[12] = "conRemarkPYShort";
+    jYx.put("conRemarkPYShort", "TEXT default '' ");
     localStringBuilder.append(" conRemarkPYShort TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[13] = "lvbuff";
-    ibX.put("lvbuff", "BLOB");
+    blR[13] = "lvbuff";
+    jYx.put("lvbuff", "BLOB");
     localStringBuilder.append(" lvbuff BLOB");
     localStringBuilder.append(", ");
-    bbY[14] = "verifyFlag";
-    ibX.put("verifyFlag", "INTEGER default '0' ");
+    blR[14] = "verifyFlag";
+    jYx.put("verifyFlag", "INTEGER default '0' ");
     localStringBuilder.append(" verifyFlag INTEGER default '0' ");
     localStringBuilder.append(", ");
-    bbY[15] = "encryptUsername";
-    ibX.put("encryptUsername", "TEXT default '' ");
+    blR[15] = "encryptUsername";
+    jYx.put("encryptUsername", "TEXT default '' ");
     localStringBuilder.append(" encryptUsername TEXT default '' ");
     localStringBuilder.append(", ");
-    bbY[16] = "chatroomFlag";
-    ibX.put("chatroomFlag", "INTEGER");
+    blR[16] = "chatroomFlag";
+    jYx.put("chatroomFlag", "INTEGER");
     localStringBuilder.append(" chatroomFlag INTEGER");
     localStringBuilder.append(", ");
-    bbY[17] = "deleteFlag";
-    ibX.put("deleteFlag", "INTEGER default '0' ");
+    blR[17] = "deleteFlag";
+    jYx.put("deleteFlag", "INTEGER default '0' ");
     localStringBuilder.append(" deleteFlag INTEGER default '0' ");
     localStringBuilder.append(", ");
-    bbY[18] = "contactLabelIds";
-    ibX.put("contactLabelIds", "TEXT default '' ");
+    blR[18] = "contactLabelIds";
+    jYx.put("contactLabelIds", "TEXT default '' ");
     localStringBuilder.append(" contactLabelIds TEXT default '' ");
-    bbY[19] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    blR[19] = "rowid";
+    jYy = localStringBuilder.toString();
+    aot = locala;
   }
   
   public a()
   {
     setUsername("");
-    bG("");
     bH("");
     bI("");
-    bD("");
-    bE("");
-    bL("");
-    bK("");
-    bF("");
-    aR(0);
     bJ("");
-    aQ(0);
-    setType(0);
-    aS(0);
+    bE("");
+    bF("");
+    bM("");
+    bL("");
+    bG("");
+    aU(0);
+    bK("");
     aT(0);
-    bN("");
-    aW(0);
-    bS("");
-    bb(0);
-    aX(0);
-    aMP = "";
-    aJp = true;
-    aMQ = "";
-    aJp = true;
-    aMR = 0;
-    aJp = true;
-    aY(0);
-    aMT = "";
-    aJp = true;
-    aMU = "";
-    aJp = true;
-    aZ(1);
+    setType(0);
     aV(0);
+    aW(0);
+    bO("");
+    aZ(0);
+    bT("");
+    be(0);
     ba(0);
-    bP("");
+    aSx = "";
+    aNo = true;
+    aBH = "";
+    aNo = true;
+    aSy = 0;
+    aNo = true;
+    bb(0);
+    aSA = "";
+    aNo = true;
+    aSB = "";
+    aNo = true;
+    bc(1);
+    aY(0);
+    bd(0);
     bQ("");
     bR("");
+    bS("");
     setSource(0);
-    bU("");
-    bT("");
-    q(0L);
-    bO("");
     bV("");
-    bc(0);
-    bY("");
+    bU("");
+    o(0L);
+    bP("");
+    bW("");
+    bf(0);
     bZ("");
     ca("");
+    cb("");
   }
   
   public a(String paramString)
@@ -166,20 +164,25 @@ public class a
     setUsername(str);
   }
   
-  public static boolean cd(int paramInt)
+  public static void a(a parama)
+  {
+    bvj = parama;
+  }
+  
+  public static boolean ce(int paramInt)
   {
     return (paramInt & 0x1) != 0;
   }
   
-  public static String dm(String paramString)
+  public static String ds(String paramString)
   {
-    if (bkF != null) {
-      return (String)bkF.get(paramString);
+    if (bvj != null) {
+      return bvj.aY(paramString);
     }
     return null;
   }
   
-  public static String dn(String paramString)
+  public static String dt(String paramString)
   {
     String str;
     if (paramString == null) {
@@ -199,7 +202,7 @@ public class a
       str = paramString.replace("@qqim", "");
       l = Long.valueOf(str).longValue();
     } while (l >= 0L);
-    return new l(l).toString();
+    return new o(l).toString();
   }
   
   private static boolean isLetter(char paramChar)
@@ -207,32 +210,22 @@ public class a
     return ((paramChar >= 'A') && (paramChar <= 'Z')) || ((paramChar >= 'a') && (paramChar <= 'z'));
   }
   
-  public static void k(Map paramMap)
-  {
-    bkF = paramMap;
-  }
-  
-  public static void l(Map paramMap)
-  {
-    bkG = paramMap;
-  }
-  
-  public static int qr()
+  public static int qk()
   {
     return 1;
   }
   
-  public static int qs()
+  public static int ql()
   {
     return 8;
   }
   
-  public static int qt()
+  public static int qm()
   {
     return 16;
   }
   
-  public static int qu()
+  public static int qn()
   {
     return 32;
   }
@@ -240,13 +233,13 @@ public class a
   public final void c(Cursor paramCursor)
   {
     super.c(paramCursor);
-    bkE = ibV;
-    u(null);
+    bvi = jYv;
+    v(null);
   }
   
-  public final void ce(int paramInt)
+  public final void cf(int paramInt)
   {
-    aT(field_chatroomFlag & 0xFFFFFFFE | paramInt & 0x1);
+    aW(field_chatroomFlag & 0xFFFFFFFE | paramInt & 0x1);
   }
   
   public final boolean isHidden()
@@ -254,85 +247,41 @@ public class a
     return (field_type & 0x20) != 0;
   }
   
-  public final ae.a lX()
+  public final c.a ls()
   {
-    return aqp;
+    return aot;
   }
   
-  public final String mF()
+  public final String mc()
   {
-    String str2 = (String)bkG.get(field_username);
-    String str1 = str2;
-    if (str2 == null) {
-      str1 = super.mF();
+    if (bvj != null) {}
+    for (String str1 = bvj.aZ(field_username);; str1 = null)
+    {
+      String str2 = str1;
+      if (str1 == null) {
+        str2 = super.mc();
+      }
+      return str2;
     }
-    return str1;
   }
   
-  public final String mG()
+  public final String md()
   {
-    if ((super.mG() == null) || (super.mG().length() < 0)) {
-      return mH();
+    if ((super.md() == null) || (super.md().length() < 0)) {
+      return me();
     }
-    return super.mG();
+    return super.md();
   }
   
-  public final String mH()
+  public final String me()
   {
-    if ((super.mH() == null) || (super.mH().length() < 0)) {
+    if ((super.me() == null) || (super.me().length() < 0)) {
       return field_nickname;
     }
-    return super.mH();
+    return super.me();
   }
   
-  public final boolean qA()
-  {
-    return (field_type & 0x4000) != 0;
-  }
-  
-  public final int qB()
-  {
-    return (int)bkE;
-  }
-  
-  public final String qC()
-  {
-    String str = (String)bkF.get(field_username);
-    if (str != null) {
-      return str;
-    }
-    if ((field_nickname == null) || (field_nickname.length() <= 0)) {
-      return qE();
-    }
-    return field_nickname;
-  }
-  
-  public final String qD()
-  {
-    if ((field_conRemark != null) && (!field_conRemark.trim().equals(""))) {
-      return field_conRemark;
-    }
-    return qC();
-  }
-  
-  public final String qE()
-  {
-    Object localObject = mF();
-    if (!bn.iW((String)localObject)) {}
-    String str;
-    do
-    {
-      return (String)localObject;
-      str = dn(field_username);
-      if (str == null) {
-        break;
-      }
-      localObject = str;
-    } while (str.length() != 0);
-    return field_username;
-  }
-  
-  public final int qf()
+  public final int pY()
   {
     int j = 32;
     int i;
@@ -353,14 +302,14 @@ public class a
         i = field_conRemarkPYFull.charAt(0);
         break;
       }
-      if ((super.mG() != null) && (!super.mG().equals("")))
+      if ((super.md() != null) && (!super.md().equals("")))
       {
-        i = super.mG().charAt(0);
+        i = super.md().charAt(0);
         break;
       }
-      if ((super.mH() != null) && (!super.mH().equals("")))
+      if ((super.me() != null) && (!super.me().equals("")))
       {
-        i = super.mH().charAt(0);
+        i = super.me().charAt(0);
         break;
       }
       if ((field_nickname != null) && (!field_nickname.equals("")) && (isLetter(field_nickname.charAt(0))))
@@ -391,85 +340,154 @@ public class a
     return 123;
   }
   
-  public final void qg()
+  public final void pZ()
   {
     setType(field_type | 0x4);
   }
   
-  public final void qh()
+  public final String qA()
+  {
+    Object localObject = mc();
+    if (!ay.kz((String)localObject)) {}
+    String str;
+    do
+    {
+      return (String)localObject;
+      str = dt(field_username);
+      if (str == null) {
+        break;
+      }
+      localObject = str;
+    } while (str.length() != 0);
+    return field_username;
+  }
+  
+  public final void qa()
   {
     setType(field_type | 0x1);
   }
   
-  public final void qi()
+  public final void qb()
   {
-    t.w("!32@/B4Tb64lLpKjSbK+1+V2iFzS2UhgmRRK", "unSetContact!! user:%s oldType:%d [%s]", new Object[] { field_username, Integer.valueOf(field_type), bn.aFH() });
+    u.w("!32@/B4Tb64lLpKjSbK+1+V2iFzS2UhgmRRK", "unSetContact!! user:%s oldType:%d [%s]", new Object[] { field_username, Integer.valueOf(field_type), ay.aVJ() });
     setType(field_type & 0xFFFFFFFE);
   }
   
-  public final void qj()
+  public final void qc()
   {
     setType(field_type | 0x8);
   }
   
-  public final void qk()
+  public final void qd()
   {
     setType(field_type & 0xFFFFFFF7);
   }
   
-  public final void ql()
+  public final void qe()
   {
     setType(field_type | 0x2);
   }
   
-  public final void qm()
+  public final void qf()
   {
     setType(field_type & 0xFFFFFFFD);
   }
   
-  public final void qn()
+  public final void qg()
   {
     setType(field_type | 0x20);
   }
   
-  public final void qo()
+  public final void qh()
   {
     setType(field_type & 0xFFFFFFBF);
   }
   
-  public final void qp()
+  public final void qi()
   {
     setType(field_type | 0x100);
   }
   
-  public final void qq()
+  public final void qj()
   {
     setType(field_type & 0xFEFF);
   }
   
-  public final boolean qv()
+  public final boolean qo()
+  {
+    return ce(field_type);
+  }
+  
+  public final boolean qp()
   {
     return (field_type & 0x8) != 0;
   }
   
-  public final boolean qw()
+  public final boolean qq()
   {
     return (field_type & 0x40) != 0;
   }
   
-  public final boolean qx()
+  public final boolean qr()
   {
     return (field_type & 0x200) != 0;
   }
   
-  public final boolean qy()
+  public final boolean qs()
   {
     return (field_type & 0x400) == 0;
   }
   
-  public final boolean qz()
+  public final boolean qt()
   {
     return (field_type & 0x100) != 0;
+  }
+  
+  public final boolean qu()
+  {
+    return (field_type & 0x800) != 0;
+  }
+  
+  public final boolean qv()
+  {
+    return (field_type & 0x4000) != 0;
+  }
+  
+  public final boolean qw()
+  {
+    return (0x8000 & field_type) != 0;
+  }
+  
+  public final int qx()
+  {
+    return (int)bvi;
+  }
+  
+  public final String qy()
+  {
+    if (bvj != null) {}
+    for (String str = bvj.aY(field_username); str != null; str = null) {
+      return str;
+    }
+    if ((field_nickname == null) || (field_nickname.length() <= 0)) {
+      return qA();
+    }
+    return field_nickname;
+  }
+  
+  public final String qz()
+  {
+    if ((field_conRemark != null) && (!field_conRemark.trim().equals(""))) {
+      return field_conRemark;
+    }
+    return qy();
+  }
+  
+  public static abstract interface a
+  {
+    public abstract String aY(String paramString);
+    
+    public abstract String aZ(String paramString);
   }
 }
 

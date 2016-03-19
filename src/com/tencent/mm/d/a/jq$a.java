@@ -1,15 +1,15 @@
 package com.tencent.mm.d.a;
 
-import android.content.Context;
-
 public final class jq$a
 {
-  public byte[] aGL;
-  public int aGM = 0;
-  public String aqX;
-  public int axE = 0;
-  public String content;
-  public Context context;
+  public int aFa;
+  public String aFb;
+  public String aFc;
+  public int aGl;
+  public String aGm;
+  public int action;
+  public String appId;
+  public int asc;
 }
 
 /* Location:

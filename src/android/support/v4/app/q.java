@@ -1,188 +1,100 @@
 package android.support.v4.app;
 
+import android.app.Notification;
+import android.app.Notification.Action.Builder;
+import android.app.Notification.Builder;
+import android.app.PendingIntent;
+import android.app.RemoteInput;
+import android.content.Context;
+import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.support.v4.view.o;
-import android.view.View;
-import android.view.ViewGroup;
+import android.widget.RemoteViews;
 import java.util.ArrayList;
-import java.util.Iterator;
 
-public abstract class q
-  extends o
+final class q
 {
-  private final i cJ;
-  private s cK = null;
-  private ArrayList cL = new ArrayList();
-  private ArrayList cM = new ArrayList();
-  private Fragment cN = null;
-  
-  public q(i parami)
+  public static void a(Notification.Builder paramBuilder, s.a parama)
   {
-    cJ = parami;
-  }
-  
-  public final void Y()
-  {
-    if (cK != null)
+    Notification.Action.Builder localBuilder = new Notification.Action.Builder(parama.getIcon(), parama.getTitle(), parama.X());
+    if (parama.Y() != null)
     {
-      cK.commitAllowingStateLoss();
-      cK = null;
-      cJ.executePendingTransactions();
-    }
-  }
-  
-  public final Parcelable Z()
-  {
-    Object localObject1 = null;
-    Object localObject2;
-    if (cL.size() > 0)
-    {
-      localObject1 = new Bundle();
-      localObject2 = new Fragment.SavedState[cL.size()];
-      cL.toArray((Object[])localObject2);
-      ((Bundle)localObject1).putParcelableArray("states", (Parcelable[])localObject2);
-    }
-    int i = 0;
-    while (i < cM.size())
-    {
-      Fragment localFragment = (Fragment)cM.get(i);
-      localObject2 = localObject1;
-      if (localFragment != null)
+      RemoteInput[] arrayOfRemoteInput = x.a(parama.Y());
+      int j = arrayOfRemoteInput.length;
+      int i = 0;
+      while (i < j)
       {
-        localObject2 = localObject1;
-        if (localObject1 == null) {
-          localObject2 = new Bundle();
-        }
-        localObject1 = "f" + i;
-        cJ.a((Bundle)localObject2, (String)localObject1, localFragment);
-      }
-      i += 1;
-      localObject1 = localObject2;
-    }
-    return (Parcelable)localObject1;
-  }
-  
-  public final Object a(ViewGroup paramViewGroup, int paramInt)
-  {
-    if (cM.size() > paramInt)
-    {
-      localObject = (Fragment)cM.get(paramInt);
-      if (localObject != null) {
-        return localObject;
+        localBuilder.addRemoteInput(arrayOfRemoteInput[i]);
+        i += 1;
       }
     }
-    if (cK == null) {
-      cK = cJ.M();
+    if (parama.getExtras() != null) {
+      localBuilder.addExtras(parama.getExtras());
     }
-    Fragment localFragment = j(paramInt);
-    if (cL.size() > paramInt)
+    paramBuilder.addAction(localBuilder.build());
+  }
+  
+  public static final class a
+    implements n, o
+  {
+    Notification.Builder dw;
+    Bundle mExtras;
+    
+    public a(Context paramContext, Notification paramNotification, CharSequence paramCharSequence1, CharSequence paramCharSequence2, CharSequence paramCharSequence3, RemoteViews paramRemoteViews, int paramInt1, PendingIntent paramPendingIntent1, PendingIntent paramPendingIntent2, Bitmap paramBitmap, int paramInt2, int paramInt3, boolean paramBoolean1, boolean paramBoolean2, boolean paramBoolean3, int paramInt4, CharSequence paramCharSequence4, boolean paramBoolean4, ArrayList paramArrayList, Bundle paramBundle, String paramString1, boolean paramBoolean5, String paramString2)
     {
-      localObject = (Fragment.SavedState)cL.get(paramInt);
-      if (localObject != null)
+      paramContext = new Notification.Builder(paramContext).setWhen(when).setShowWhen(paramBoolean2).setSmallIcon(icon, iconLevel).setContent(contentView).setTicker(tickerText, paramRemoteViews).setSound(sound, audioStreamType).setVibrate(vibrate).setLights(ledARGB, ledOnMS, ledOffMS);
+      if ((flags & 0x2) != 0)
       {
-        if (mIndex >= 0) {
-          throw new IllegalStateException("Fragment already active");
+        paramBoolean2 = true;
+        paramContext = paramContext.setOngoing(paramBoolean2);
+        if ((flags & 0x8) == 0) {
+          break label327;
         }
-        if ((localObject == null) || (bK == null)) {
-          break label144;
+        paramBoolean2 = true;
+        label117:
+        paramContext = paramContext.setOnlyAlertOnce(paramBoolean2);
+        if ((flags & 0x10) == 0) {
+          break label333;
+        }
+        paramBoolean2 = true;
+        label137:
+        paramContext = paramContext.setAutoCancel(paramBoolean2).setDefaults(defaults).setContentTitle(paramCharSequence1).setContentText(paramCharSequence2).setSubText(paramCharSequence4).setContentInfo(paramCharSequence3).setContentIntent(paramPendingIntent1).setDeleteIntent(deleteIntent);
+        if ((flags & 0x80) == 0) {
+          break label339;
         }
       }
-    }
-    label144:
-    for (Object localObject = bK;; localObject = null)
-    {
-      aY = ((Bundle)localObject);
-      while (cM.size() <= paramInt) {
-        cM.add(null);
-      }
-    }
-    localFragment.setMenuVisibility(false);
-    localFragment.setUserVisibleHint(false);
-    cM.set(paramInt, localFragment);
-    cK.a(paramViewGroup.getId(), localFragment);
-    return localFragment;
-  }
-  
-  public final void a(Parcelable paramParcelable, ClassLoader paramClassLoader)
-  {
-    if (paramParcelable != null)
-    {
-      paramParcelable = (Bundle)paramParcelable;
-      paramParcelable.setClassLoader(paramClassLoader);
-      paramClassLoader = paramParcelable.getParcelableArray("states");
-      cL.clear();
-      cM.clear();
-      int i;
-      if (paramClassLoader != null)
+      label327:
+      label333:
+      label339:
+      for (paramBoolean2 = true;; paramBoolean2 = false)
       {
-        i = 0;
-        while (i < paramClassLoader.length)
-        {
-          cL.add((Fragment.SavedState)paramClassLoader[i]);
-          i += 1;
+        dw = paramContext.setFullScreenIntent(paramPendingIntent2, paramBoolean2).setLargeIcon(paramBitmap).setNumber(paramInt1).setUsesChronometer(paramBoolean3).setPriority(paramInt4).setProgress(paramInt2, paramInt3, paramBoolean1).setLocalOnly(paramBoolean4).setGroup(paramString1).setGroupSummary(paramBoolean5).setSortKey(paramString2);
+        mExtras = new Bundle();
+        if (paramBundle != null) {
+          mExtras.putAll(paramBundle);
         }
-      }
-      paramClassLoader = paramParcelable.keySet().iterator();
-      while (paramClassLoader.hasNext())
-      {
-        Object localObject = (String)paramClassLoader.next();
-        if (((String)localObject).startsWith("f"))
-        {
-          i = Integer.parseInt(((String)localObject).substring(1));
-          localObject = cJ.a(paramParcelable, (String)localObject);
-          if (localObject != null)
-          {
-            while (cM.size() <= i) {
-              cM.add(null);
-            }
-            ((Fragment)localObject).setMenuVisibility(false);
-            cM.set(i, localObject);
-          }
+        if ((paramArrayList != null) && (!paramArrayList.isEmpty())) {
+          mExtras.putStringArray("android.people", (String[])paramArrayList.toArray(new String[paramArrayList.size()]));
         }
+        return;
+        paramBoolean2 = false;
+        break;
+        paramBoolean2 = false;
+        break label117;
+        paramBoolean2 = false;
+        break label137;
       }
     }
-  }
-  
-  public final void a(ViewGroup paramViewGroup, int paramInt, Object paramObject)
-  {
-    paramViewGroup = (Fragment)paramObject;
-    if (cK == null) {
-      cK = cJ.M();
-    }
-    while (cL.size() <= paramInt) {
-      cL.add(null);
-    }
-    cL.set(paramInt, cJ.d(paramViewGroup));
-    cM.set(paramInt, null);
-    cK.a(paramViewGroup);
-  }
-  
-  public final void a(Object paramObject)
-  {
-    paramObject = (Fragment)paramObject;
-    if (paramObject != cN)
+    
+    public final Notification.Builder V()
     {
-      if (cN != null)
-      {
-        cN.setMenuVisibility(false);
-        cN.setUserVisibleHint(false);
-      }
-      if (paramObject != null)
-      {
-        ((Fragment)paramObject).setMenuVisibility(true);
-        ((Fragment)paramObject).setUserVisibleHint(true);
-      }
-      cN = ((Fragment)paramObject);
+      return dw;
+    }
+    
+    public final void a(s.a parama)
+    {
+      q.a(dw, parama);
     }
   }
-  
-  public final boolean a(View paramView, Object paramObject)
-  {
-    return mView == paramView;
-  }
-  
-  public abstract Fragment j(int paramInt);
 }
 
 /* Location:

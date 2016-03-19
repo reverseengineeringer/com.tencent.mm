@@ -3,23 +3,23 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d;
+.implements Lcom/tencent/mm/r/d;
 
 
 # instance fields
-.field private aCw:Ljava/lang/String;
+.field private aEU:Ljava/lang/String;
 
-.field private avE:Ljava/lang/String;
+.field private avm:Ljava/lang/String;
 
-.field private bLf:Ljava/lang/String;
+.field private cbh:Ljava/lang/String;
 
-.field private bXB:Landroid/app/ProgressDialog;
+.field private coM:Landroid/app/ProgressDialog;
 
-.field private iuH:Ljava/lang/String;
+.field private ktJ:Ljava/lang/String;
 
-.field private iwB:Landroid/widget/EditText;
+.field private kvF:Landroid/widget/EditText;
 
-.field private iwC:I
+.field private kvG:I
 
 
 # direct methods
@@ -33,10 +33,10 @@
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
     .line 39
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->coM:Landroid/app/ProgressDialog;
 
     .line 40
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->iwB:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->kvF:Landroid/widget/EditText;
 
     return-void
 .end method
@@ -46,7 +46,7 @@
 
     .prologue
     .line 36
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->coM:Landroid/app/ProgressDialog;
 
     return-object p1
 .end method
@@ -56,7 +56,7 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->iwB:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->kvF:Landroid/widget/EditText;
 
     return-object v0
 .end method
@@ -66,7 +66,7 @@
 
     .prologue
     .line 36
-    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aCw:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aEU:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -76,7 +76,7 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aCw:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aEU:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -86,7 +86,7 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->iuH:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->ktJ:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -96,7 +96,7 @@
 
     .prologue
     .line 36
-    iget v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->iwC:I
+    iget v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->kvG:I
 
     return v0
 .end method
@@ -106,14 +106,14 @@
 
     .prologue
     .line 36
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->avE:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->avm:Ljava/lang/String;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 4
 
     .prologue
@@ -130,7 +130,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->iwC:I
+    iput v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->kvG:I
 
     .line 79
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->getIntent()Landroid/content/Intent;
@@ -143,7 +143,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->iuH:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->ktJ:Ljava/lang/String;
 
     .line 80
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->getIntent()Landroid/content/Intent;
@@ -156,7 +156,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->bLf:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->cbh:Ljava/lang/String;
 
     .line 82
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->getIntent()Landroid/content/Intent;
@@ -169,7 +169,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->avE:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->avm:Ljava/lang/String;
 
     .line 83
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->getIntent()Landroid/content/Intent;
@@ -182,7 +182,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aCw:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aEU:Ljava/lang/String;
 
     .line 85
     const-string/jumbo v0, "!32@/B4Tb64lLpJpocFQ/FMhC8SHjVT5uccY"
@@ -193,7 +193,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v2, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->iwC:I
+    iget v2, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->kvG:I
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -205,7 +205,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->iuH:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->ktJ:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -217,7 +217,7 @@
 
     move-result-object v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->avE:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->avm:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -227,10 +227,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 87
-    sget v0, Lcom/tencent/mm/a$i;->nick_et:I
+    const v0, 0x7f070758
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->findViewById(I)Landroid/view/View;
 
@@ -238,14 +238,14 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->iwB:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->kvF:Landroid/widget/EditText;
 
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aCw:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aEU:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aCw:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aEU:Ljava/lang/String;
 
     const-string/jumbo v1, ""
 
@@ -256,49 +256,53 @@
     if-nez v0, :cond_0
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->iwB:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->kvF:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aCw:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->aEU:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 93
     :cond_0
-    sget v0, Lcom/tencent/mm/a$n;->regbyqq_auth_title:I
+    const v0, 0x7f0b0118
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->qb(I)V
 
     .line 95
-    sget v0, Lcom/tencent/mm/a$n;->app_nextstep:I
+    const v0, 0x7f0b0def
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/ui/account/hb;
+    new-instance v1, Lcom/tencent/mm/ui/account/RegByQQAuthUI$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/hb;-><init>(Lcom/tencent/mm/ui/account/RegByQQAuthUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI$1;-><init>(Lcom/tencent/mm/ui/account/RegByQQAuthUI;)V
 
     invoke-virtual {p0, v3, v0, v1}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 119
-    new-instance v0, Lcom/tencent/mm/ui/account/hd;
+    new-instance v0, Lcom/tencent/mm/ui/account/RegByQQAuthUI$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/hd;-><init>(Lcom/tencent/mm/ui/account/RegByQQAuthUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI$2;-><init>(Lcom/tencent/mm/ui/account/RegByQQAuthUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 128
     return-void
 .end method
 
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
-    .locals 6
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    .locals 8
 
     .prologue
-    const/4 v5, 0x0
+    const v7, 0x7f0b0ddd
+
+    const/4 v6, 0x0
 
     const/4 v2, 0x0
+
+    const v5, 0x7f0b0119
 
     const/4 v1, 0x1
 
@@ -339,24 +343,24 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 186
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->coM:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
     .line 187
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->coM:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 188
-    iput-object v5, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object v6, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->coM:Landroid/app/ProgressDialog;
 
     .line 191
     :cond_0
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->aT(Landroid/content/Context;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->bj(Landroid/content/Context;)Z
 
     move-result v0
 
@@ -374,7 +378,7 @@
     if-nez p2, :cond_3
 
     .line 198
-    invoke-virtual {p4}, Lcom/tencent/mm/q/j;->getType()I
+    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
 
     move-result v0
 
@@ -384,16 +388,16 @@
 
     .line 201
     :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tw()V
+    invoke-static {}, Lcom/tencent/mm/model/ah;->unhold()V
 
     .line 204
-    sget-object v0, Lcom/tencent/mm/model/aw;->boE:Lcom/tencent/mm/model/aw;
+    sget-object v0, Lcom/tencent/mm/model/ag;->bAw:Lcom/tencent/mm/model/ag;
 
     const-string/jumbo v2, "login_user_name"
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->bLf:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->cbh:Ljava/lang/String;
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/model/aw;->x(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/model/ag;->H(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 206
     new-instance v0, Landroid/content/Intent;
@@ -413,9 +417,9 @@
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
     .line 210
-    sget-object v2, Lcom/tencent/mm/plugin/a/a;->bWW:Lcom/tencent/mm/pluginsdk/j;
+    sget-object v2, Lcom/tencent/mm/plugin/a/a;->coa:Lcom/tencent/mm/pluginsdk/g;
 
-    invoke-interface {v2, p0}, Lcom/tencent/mm/pluginsdk/j;->ab(Landroid/content/Context;)Landroid/content/Intent;
+    invoke-interface {v2, p0}, Lcom/tencent/mm/pluginsdk/g;->ak(Landroid/content/Context;)Landroid/content/Intent;
 
     move-result-object v2
 
@@ -436,7 +440,7 @@
 
     .line 222
     :cond_3
-    invoke-virtual {p4}, Lcom/tencent/mm/q/j;->getType()I
+    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
 
     move-result v0
 
@@ -445,7 +449,7 @@
     if-ne v0, v3, :cond_4
 
     .line 223
-    invoke-static {p3}, Lcom/tencent/mm/e/a;->cR(Ljava/lang/String;)Lcom/tencent/mm/e/a;
+    invoke-static {p3}, Lcom/tencent/mm/e/a;->cV(Ljava/lang/String;)Lcom/tencent/mm/e/a;
 
     move-result-object v0
 
@@ -453,19 +457,19 @@
     if-eqz v0, :cond_4
 
     .line 225
-    invoke-virtual {v0, p0, v5, v5}, Lcom/tencent/mm/e/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Z
+    invoke-virtual {v0, p0, v6, v6}, Lcom/tencent/mm/e/a;->a(Landroid/content/Context;Landroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Z
 
     goto :goto_0
 
     .line 230
     :cond_4
-    sget-object v0, Lcom/tencent/mm/plugin/a/a;->bWX:Lcom/tencent/mm/pluginsdk/i;
+    sget-object v0, Lcom/tencent/mm/plugin/a/a;->cob:Lcom/tencent/mm/pluginsdk/f;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    iget-object v3, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v3, v3, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v3, v3, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
-    invoke-interface {v0, v3, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/i;->a(Landroid/content/Context;IILjava/lang/String;)Z
+    invoke-interface {v0, v3, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/f;->a(Landroid/content/Context;IILjava/lang/String;)Z
 
     move-result v0
 
@@ -477,7 +481,7 @@
     if-nez v0, :cond_1
 
     .line 234
-    sget v0, Lcom/tencent/mm/a$n;->fmt_reg_err:I
+    const v0, 0x7f0b009b
 
     const/4 v3, 0x2
 
@@ -521,11 +525,11 @@
     goto :goto_1
 
     :sswitch_0
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/q/l;->vr()I
+    invoke-virtual {v0}, Lcom/tencent/mm/r/m;->vL()I
 
     move-result v0
 
@@ -533,11 +537,11 @@
 
     if-ne v0, v3, :cond_7
 
-    sget v0, Lcom/tencent/mm/a$n;->net_warn_server_down_tip:I
+    const v0, 0x7f0b0202
 
-    sget v3, Lcom/tencent/mm/a$n;->net_warn_server_down:I
+    const v3, 0x7f0b0201
 
-    invoke-static {p0, v0, v3}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {p0, v0, v3}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     move v0, v1
 
@@ -545,80 +549,70 @@
 
     :cond_7
     :sswitch_1
-    sget v0, Lcom/tencent/mm/a$n;->app_err_password:I
+    const v0, 0x7f0b00c3
 
-    sget v3, Lcom/tencent/mm/a$n;->regbyqq_auth_err_title:I
-
-    invoke-static {p0, v0, v3}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {p0, v0, v5}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     move v0, v1
 
     goto :goto_1
 
     :sswitch_2
-    sget v0, Lcom/tencent/mm/a$n;->app_err_nouser:I
+    const v0, 0x7f0b00c4
 
-    sget v3, Lcom/tencent/mm/a$n;->regbyqq_auth_err_title:I
-
-    invoke-static {p0, v0, v3}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {p0, v0, v5}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     move v0, v1
 
     goto :goto_1
 
     :sswitch_3
-    sget v0, Lcom/tencent/mm/a$n;->regbyqq_auth_err_uinexsit:I
+    const v0, 0x7f0b011a
 
-    sget v3, Lcom/tencent/mm/a$n;->regbyqq_auth_err_title:I
-
-    invoke-static {p0, v0, v3}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {p0, v0, v5}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     move v0, v1
 
     goto :goto_1
 
     :sswitch_4
-    sget v0, Lcom/tencent/mm/a$n;->regbyqq_auth_err_nickinvalid:I
+    const v0, 0x7f0b011b
 
-    sget v3, Lcom/tencent/mm/a$n;->regbyqq_auth_err_title:I
-
-    invoke-static {p0, v0, v3}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {p0, v0, v5}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     move v0, v1
 
     goto :goto_1
 
     :sswitch_5
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
-    sget v3, Lcom/tencent/mm/a$n;->regbyqq_auth_err_failed_niceqq:I
+    const v3, 0x7f0b011c
 
-    sget v4, Lcom/tencent/mm/a$n;->app_tip:I
-
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {v0, v3, v7}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     move v0, v1
 
     goto :goto_1
 
     :sswitch_6
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
-    sget v3, Lcom/tencent/mm/a$n;->alpha_version_tip_reg:I
+    const v3, 0x7f0b01b9
 
-    sget v4, Lcom/tencent/mm/a$n;->app_tip:I
-
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {v0, v3, v7}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     move v0, v1
 
     goto :goto_1
 
     .line 198
+    nop
+
     :pswitch_data_0
     .packed-switch 0x7e
         :pswitch_0
@@ -642,7 +636,7 @@
 
     .prologue
     .line 50
-    sget v0, Lcom/tencent/mm/a$k;->regbyqq_auth:I
+    const v0, 0x7f0a027f
 
     return v0
 .end method
@@ -655,7 +649,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 56
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByQQAuthUI;->Gb()V
 
     .line 57
     return-void
@@ -680,13 +674,13 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
     .line 73
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x7e
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 74
     return-void
@@ -700,13 +694,13 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
     .line 67
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x7e
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     .line 68
     return-void

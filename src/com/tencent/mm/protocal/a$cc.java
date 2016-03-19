@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cc
-  extends a.c
+  extends a.e
 {
   public a$cc()
   {
-    super("sendDataToWXDevice", "sendDataToWXDevice", 120, true);
+    super("musicPlay", "playMusic", 69, false);
   }
 }
 

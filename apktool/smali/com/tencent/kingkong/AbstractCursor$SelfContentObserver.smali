@@ -23,19 +23,19 @@
     .locals 1
 
     .prologue
-    .line 433
+    .line 432
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lcom/tencent/kingkong/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 434
+    .line 433
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lcom/tencent/kingkong/AbstractCursor$SelfContentObserver;->mCursor:Ljava/lang/ref/WeakReference;
 
-    .line 435
+    .line 434
     return-void
 .end method
 
@@ -45,7 +45,7 @@
     .locals 1
 
     .prologue
-    .line 439
+    .line 438
     const/4 v0, 0x0
 
     return v0
@@ -55,7 +55,7 @@
     .locals 2
 
     .prologue
-    .line 444
+    .line 443
     iget-object v0, p0, Lcom/tencent/kingkong/AbstractCursor$SelfContentObserver;->mCursor:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -64,15 +64,15 @@
 
     check-cast v0, Lcom/tencent/kingkong/AbstractCursor;
 
-    .line 445
+    .line 444
     if-eqz v0, :cond_0
 
-    .line 446
+    .line 445
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lcom/tencent/kingkong/AbstractCursor;->onChange(Z)V
 
-    .line 448
+    .line 447
     :cond_0
     return-void
 .end method

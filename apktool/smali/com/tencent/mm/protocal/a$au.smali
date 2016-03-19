@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$au;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 742
-    const-string/jumbo v0, "jumpToInstallUrl"
+    .line 1061
+    const-string/jumbo v0, "getInstallState"
 
-    const-string/jumbo v1, ""
+    const-string/jumbo v1, "get_install_state"
 
-    const/16 v2, 0x1a
+    const/16 v2, 0x19
 
     const/4 v3, 0x0
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 743
+    .line 1062
     return-void
 .end method

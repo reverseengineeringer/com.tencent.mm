@@ -6,13 +6,13 @@ import android.view.ViewGroup.OnHierarchyChangeListener;
 final class MMRadioGroupView$c
   implements ViewGroup.OnHierarchyChangeListener
 {
-  private ViewGroup.OnHierarchyChangeListener iHl;
+  private ViewGroup.OnHierarchyChangeListener kGy;
   
   private MMRadioGroupView$c(MMRadioGroupView paramMMRadioGroupView) {}
   
   public final void onChildViewAdded(View paramView1, View paramView2)
   {
-    if ((paramView1 == iHk) && ((paramView2 instanceof MMRadioImageButton)))
+    if ((paramView1 == kGx) && ((paramView2 instanceof MMRadioImageButton)))
     {
       if (paramView2.getId() == -1)
       {
@@ -23,20 +23,20 @@ final class MMRadioGroupView$c
         }
         paramView2.setId(i);
       }
-      ((MMRadioImageButton)paramView2).setOnOtherMMRadioButtonCheckedChangeListener(MMRadioGroupView.b(iHk));
+      ((MMRadioImageButton)paramView2).setOnOtherMMRadioButtonCheckedChangeListener(MMRadioGroupView.b(kGx));
     }
-    if (iHl != null) {
-      iHl.onChildViewAdded(paramView1, paramView2);
+    if (kGy != null) {
+      kGy.onChildViewAdded(paramView1, paramView2);
     }
   }
   
   public final void onChildViewRemoved(View paramView1, View paramView2)
   {
-    if ((paramView1 == iHk) && ((paramView2 instanceof MMRadioImageButton))) {
+    if ((paramView1 == kGx) && ((paramView2 instanceof MMRadioImageButton))) {
       ((MMRadioImageButton)paramView2).setOnOtherMMRadioButtonCheckedChangeListener(null);
     }
-    if (iHl != null) {
-      iHl.onChildViewRemoved(paramView1, paramView2);
+    if (kGy != null) {
+      kGy.onChildViewRemoved(paramView1, paramView2);
     }
   }
 }

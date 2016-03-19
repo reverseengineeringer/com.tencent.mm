@@ -1,4 +1,4 @@
-.class public final Lcom/tencent/mm/c/c/d$a;
+.class final Lcom/tencent/mm/c/c/d$a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -18,164 +18,117 @@
 
 
 # instance fields
-.field final synthetic atJ:Lcom/tencent/mm/c/c/d;
-
-
-# direct methods
-.method private constructor <init>(Lcom/tencent/mm/c/c/d;)V
-    .locals 0
-
-    .prologue
-    .line 239
-    iput-object p1, p0, Lcom/tencent/mm/c/c/d$a;->atJ:Lcom/tencent/mm/c/c/d;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
-.method public synthetic constructor <init>(Lcom/tencent/mm/c/c/d;B)V
-    .locals 0
-
-    .prologue
-    .line 239
-    invoke-direct {p0, p1}, Lcom/tencent/mm/c/c/d$a;-><init>(Lcom/tencent/mm/c/c/d;)V
-
-    return-void
-.end method
+.field final synthetic arP:Lcom/tencent/mm/c/c/d;
 
 
 # virtual methods
 .method public final run()V
-    .locals 9
+    .locals 4
 
     .prologue
-    const/16 v8, 0xa
-
-    const/4 v2, 0x1
-
-    const/4 v3, 0x0
-
-    .line 242
-    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
-
-    const-string/jumbo v1, "Silk Thread start run"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 244
+    .line 146
     :goto_0
-    iget-object v1, p0, Lcom/tencent/mm/c/c/d$a;->atJ:Lcom/tencent/mm/c/c/d;
+    iget-object v1, p0, Lcom/tencent/mm/c/c/d$a;->arP:Lcom/tencent/mm/c/c/d;
 
     monitor-enter v1
 
-    .line 246
+    .line 148
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/c/c/d$a;->atJ:Lcom/tencent/mm/c/c/d;
+    iget-object v0, p0, Lcom/tencent/mm/c/c/d$a;->arP:Lcom/tencent/mm/c/c/d;
 
-    invoke-static {v0}, Lcom/tencent/mm/c/c/d;->a(Lcom/tencent/mm/c/c/d;)Z
+    iget-boolean v0, v0, Lcom/tencent/mm/c/c/d;->arE:Z
 
-    move-result v4
-
-    .line 247
+    .line 149
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 248
-    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+    .line 150
+    const-string/jumbo v1, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v5, "ThreadSilk in :"
+    const-string/jumbo v3, "ThreadSpeex in: "
 
-    invoke-direct {v1, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
-    const-string/jumbo v5, " cnt :"
+    const-string/jumbo v3, " queueLen: "
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    move-result-object v1
+    move-result-object v2
 
-    iget-object v5, p0, Lcom/tencent/mm/c/c/d$a;->atJ:Lcom/tencent/mm/c/c/d;
+    iget-object v3, p0, Lcom/tencent/mm/c/c/d$a;->arP:Lcom/tencent/mm/c/c/d;
 
-    invoke-static {v5}, Lcom/tencent/mm/c/c/d;->b(Lcom/tencent/mm/c/c/d;)Ljava/util/concurrent/BlockingQueue;
+    iget-object v3, v3, Lcom/tencent/mm/c/c/d;->arD:Ljava/util/concurrent/BlockingQueue;
 
-    move-result-object v5
+    invoke-interface {v3}, Ljava/util/concurrent/BlockingQueue;->size()I
 
-    invoke-interface {v5}, Ljava/util/concurrent/BlockingQueue;->size()I
+    move-result v3
 
-    move-result v5
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v1
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    move-result-object v2
 
-    move-result-object v1
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 151
+    if-eqz v0, :cond_0
 
-    .line 250
-    if-eqz v4, :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/c/c/d$a;->arP:Lcom/tencent/mm/c/c/d;
 
-    iget-object v0, p0, Lcom/tencent/mm/c/c/d$a;->atJ:Lcom/tencent/mm/c/c/d;
-
-    invoke-static {v0}, Lcom/tencent/mm/c/c/d;->b(Lcom/tencent/mm/c/c/d;)Ljava/util/concurrent/BlockingQueue;
-
-    move-result-object v0
+    iget-object v0, v0, Lcom/tencent/mm/c/c/d;->arD:Ljava/util/concurrent/BlockingQueue;
 
     invoke-interface {v0}, Ljava/util/concurrent/BlockingQueue;->isEmpty()Z
 
     move-result v0
 
-    if-nez v0, :cond_5
+    if-nez v0, :cond_2
 
-    .line 251
+    .line 152
     :cond_0
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/c/c/d$a;->atJ:Lcom/tencent/mm/c/c/d;
+    iget-object v0, p0, Lcom/tencent/mm/c/c/d$a;->arP:Lcom/tencent/mm/c/c/d;
 
-    invoke-static {v0}, Lcom/tencent/mm/c/c/d;->b(Lcom/tencent/mm/c/c/d;)Ljava/util/concurrent/BlockingQueue;
+    iget-object v0, v0, Lcom/tencent/mm/c/c/d;->arD:Ljava/util/concurrent/BlockingQueue;
 
-    move-result-object v0
+    const-wide/16 v1, 0xc8
 
-    const-wide/16 v5, 0xc8
+    sget-object v3, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
 
-    sget-object v1, Ljava/util/concurrent/TimeUnit;->MILLISECONDS:Ljava/util/concurrent/TimeUnit;
-
-    invoke-interface {v0, v5, v6, v1}, Ljava/util/concurrent/BlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
+    invoke-interface {v0, v1, v2, v3}, Ljava/util/concurrent/BlockingQueue;->poll(JLjava/util/concurrent/TimeUnit;)Ljava/lang/Object;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/c/b/m$a;
+    check-cast v0, Lcom/tencent/mm/c/b/g$a;
     :try_end_1
     .catch Ljava/lang/InterruptedException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 262
+    .line 163
     if-nez v0, :cond_1
 
-    .line 263
-    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+    .line 164
+    const-string/jumbo v0, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v4, "poll byte null file:"
+    const-string/jumbo v2, "poll byteBuf is null, "
 
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/c/c/d$a;->atJ:Lcom/tencent/mm/c/c/d;
+    iget-object v2, p0, Lcom/tencent/mm/c/c/d$a;->arP:Lcom/tencent/mm/c/c/d;
 
-    invoke-static {v4}, Lcom/tencent/mm/c/c/d;->c(Lcom/tencent/mm/c/c/d;)Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/c/c/d;->arF:Ljava/lang/String;
 
-    move-result-object v4
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
@@ -183,11 +136,11 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 247
+    .line 149
     :catchall_0
     move-exception v0
 
@@ -198,116 +151,29 @@
 
     throw v0
 
-    .line 258
+    .line 159
     :catch_0
     move-exception v0
 
-    const-string/jumbo v0, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
+    const-string/jumbo v0, "!32@/B4Tb64lLpLo+OXLW4iohlgivdhwe64+"
 
-    const-string/jumbo v1, "ThreadAmr poll null"
+    const-string/jumbo v1, "ThreadSpeex poll null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 265
+    .line 166
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/c/c/d$a;->atJ:Lcom/tencent/mm/c/c/d;
+    iget-object v1, p0, Lcom/tencent/mm/c/c/d$a;->arP:Lcom/tencent/mm/c/c/d;
 
-    invoke-static {v1}, Lcom/tencent/mm/c/c/d;->b(Lcom/tencent/mm/c/c/d;)Ljava/util/concurrent/BlockingQueue;
+    const/4 v2, 0x0
 
-    move-result-object v1
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/c/c/d;->a(Lcom/tencent/mm/c/b/g$a;I)I
 
-    invoke-interface {v1}, Ljava/util/concurrent/BlockingQueue;->size()I
+    goto :goto_0
 
-    move-result v1
-
-    .line 267
-    if-gt v1, v8, :cond_2
-
-    if-eqz v4, :cond_4
-
-    .line 268
+    .line 169
     :cond_2
-    const-string/jumbo v5, "!32@/B4Tb64lLpJMj9E+B5k+yjAVAem8VAC7"
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v7, "speed up silkcodec queue:"
-
-    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v6, " stop:"
-
-    invoke-virtual {v1, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v5, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    move v1, v3
-
-    .line 273
-    :goto_1
-    invoke-static {}, Lcom/tencent/mm/c/c/d;->my()Lcom/tencent/mm/c/c/b$a;
-
-    move-result-object v4
-
-    iget v4, v4, Lcom/tencent/mm/c/c/b$a;->count:I
-
-    if-lt v4, v8, :cond_3
-
-    invoke-static {}, Lcom/tencent/mm/c/c/d;->my()Lcom/tencent/mm/c/c/b$a;
-
-    move-result-object v4
-
-    iget-wide v4, v4, Lcom/tencent/mm/c/c/b$a;->atA:J
-
-    const-wide/16 v6, 0xf0
-
-    cmp-long v4, v4, v6
-
-    if-lez v4, :cond_3
-
-    move v1, v3
-
-    .line 276
-    :cond_3
-    iget-object v4, p0, Lcom/tencent/mm/c/c/d$a;->atJ:Lcom/tencent/mm/c/c/d;
-
-    invoke-virtual {v4, v0, v1}, Lcom/tencent/mm/c/c/d;->a(Lcom/tencent/mm/c/b/m$a;I)I
-
-    goto/16 :goto_0
-
-    .line 270
-    :cond_4
-    const/16 v4, 0x9
-
-    if-ge v1, v4, :cond_6
-
-    move v1, v2
-
-    .line 271
-    goto :goto_1
-
-    .line 279
-    :cond_5
     return-void
-
-    :cond_6
-    move v1, v2
-
-    goto :goto_1
 .end method

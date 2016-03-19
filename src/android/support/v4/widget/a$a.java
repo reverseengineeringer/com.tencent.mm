@@ -1,14 +1,14 @@
 package android.support.v4.widget;
 
 import android.database.ContentObserver;
-import com.tencent.mm.sdk.platformtools.ac;
+import com.tencent.mm.sdk.platformtools.aa;
 
 final class a$a
   extends ContentObserver
 {
   public a$a(a parama)
   {
-    super(ac.fetchFreeHandler());
+    super(aa.fetchFreeHandler());
   }
   
   public final boolean deliverSelfNotifications()
@@ -18,7 +18,7 @@ final class a$a
   
   public final void onChange(boolean paramBoolean)
   {
-    hT.onContentChanged();
+    hb.onContentChanged();
   }
 }
 

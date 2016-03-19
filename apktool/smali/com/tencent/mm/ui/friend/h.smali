@@ -1,242 +1,335 @@
-.class final Lcom/tencent/mm/ui/friend/h;
+.class public final Lcom/tencent/mm/ui/friend/h;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnClickListener;
+.implements Lcom/tencent/mm/r/d;
+
+
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/ui/friend/h$a;
+    }
+.end annotation
 
 
 # instance fields
-.field final synthetic jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+.field private cWw:Landroid/app/ProgressDialog;
+
+.field private context:Landroid/content/Context;
+
+.field lsv:Lcom/tencent/mm/ui/friend/h$a;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)V
+.method public constructor <init>(Landroid/content/Context;Lcom/tencent/mm/ui/friend/h$a;)V
     .locals 0
 
     .prologue
-    .line 246
-    iput-object p1, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
-
+    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 35
+    iput-object p1, p0, Lcom/tencent/mm/ui/friend/h;->context:Landroid/content/Context;
+
+    .line 36
+    iput-object p2, p0, Lcom/tencent/mm/ui/friend/h;->lsv:Lcom/tencent/mm/ui/friend/h$a;
+
+    .line 37
     return-void
 .end method
 
 
 # virtual methods
-.method public final onClick(Landroid/view/View;)V
+.method final Hu(Ljava/lang/String;)V
     .locals 5
 
     .prologue
-    const/16 v4, 0x8
+    .line 86
+    new-instance v0, Ljava/util/ArrayList;
 
-    const/4 v3, 0x0
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    const/4 v2, 0x1
+    .line 87
+    invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 250
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 88
+    new-instance v1, Lcom/tencent/mm/aa/b;
 
-    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+    invoke-direct {v1, v0}, Lcom/tencent/mm/aa/b;-><init>(Ljava/util/ArrayList;)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tf()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ","
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    .line 89
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
-    invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
+    .line 91
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->context:Landroid/content/Context;
 
-    move-result-object v1
+    iget-object v2, p0, Lcom/tencent/mm/ui/friend/h;->context:Landroid/content/Context;
 
-    invoke-virtual {v1}, Ljava/lang/Class;->getName()Ljava/lang/String;
+    const v3, 0x7f0b05e7
 
-    move-result-object v1
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iget-object v2, p0, Lcom/tencent/mm/ui/friend/h;->context:Landroid/content/Context;
 
-    move-result-object v0
+    const v3, 0x7f0b05e9
 
-    const-string/jumbo v1, ",R300_300_AddAllButton,"
+    invoke-virtual {v2, v3}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    move-result-object v2
 
-    move-result-object v0
+    const/4 v3, 0x1
 
-    const-string/jumbo v1, "R300_300_AddAllButton"
+    new-instance v4, Lcom/tencent/mm/ui/friend/h$2;
 
-    invoke-static {v1}, Lcom/tencent/mm/model/ax;->eN(Ljava/lang/String;)I
+    invoke-direct {v4, p0, v1}, Lcom/tencent/mm/ui/friend/h$2;-><init>(Lcom/tencent/mm/ui/friend/h;Lcom/tencent/mm/aa/b;)V
 
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ",3"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-static {v0, v2, v3, v4}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/p;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/friend/h;->cWw:Landroid/app/ProgressDialog;
 
-    move-result-object v0
+    .line 99
+    return-void
+.end method
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/a/b;->ja(Ljava/lang/String;)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
+    .locals 7
 
-    .line 253
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    .prologue
+    const/16 v6, 0x1e9
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->e(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)I
+    const/4 v5, 0x0
+
+    .line 103
+    const-string/jumbo v0, "!56@/B4Tb64lLpJtMRMH2jRSdghVsn4FqgjSjw154pjf3+T/ppFmtTaxXw=="
+
+    const-string/jumbo v1, "[onSceneEnd] errType:%d,errCode:%d,errMsg:%s"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v5
+
+    const/4 v3, 0x1
+
+    invoke-static {p2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    invoke-static {p3}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_0
+
+    const-string/jumbo p3, ""
+
+    :cond_0
+    aput-object p3, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 104
+    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
 
     move-result v0
 
-    const/4 v1, 0x2
+    if-eq v0, v6, :cond_1
 
-    if-ne v0, v1, :cond_1
-
-    .line 254
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->c(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Lcom/tencent/mm/modelfriend/o;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/modelfriend/o;->aO(Z)V
-
-    .line 255
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->c(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Lcom/tencent/mm/modelfriend/o;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/o;->notifyDataSetChanged()V
-
-    .line 256
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->f(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Landroid/widget/Button;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v4}, Landroid/widget/Button;->setVisibility(I)V
-
-    .line 257
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->g(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 258
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->g(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
-
-    .line 271
-    :cond_0
+    .line 121
     :goto_0
     return-void
 
-    .line 259
+    .line 108
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->cWw:Landroid/app/ProgressDialog;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->e(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)I
+    if-eqz v0, :cond_2
 
-    move-result v0
+    .line 109
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->cWw:Landroid/app/ProgressDialog;
 
-    if-ne v0, v2, :cond_2
+    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
-    .line 260
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    .line 110
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->c(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Lcom/tencent/mm/modelfriend/o;
+    iput-object v0, p0, Lcom/tencent/mm/ui/friend/h;->cWw:Landroid/app/ProgressDialog;
 
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/modelfriend/o;->aO(Z)V
-
-    .line 261
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->c(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Lcom/tencent/mm/modelfriend/o;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/o;->notifyDataSetChanged()V
-
-    .line 262
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->i(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)V
-
-    goto :goto_0
-
-    .line 264
+    .line 113
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->c(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Lcom/tencent/mm/modelfriend/o;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/modelfriend/o;->aO(Z)V
+    invoke-virtual {v0, v6, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
-    .line 265
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    .line 114
+    if-nez p1, :cond_3
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->c(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Lcom/tencent/mm/modelfriend/o;
+    if-nez p2, :cond_3
 
-    move-result-object v0
+    .line 115
+    const-string/jumbo v0, "!56@/B4Tb64lLpJtMRMH2jRSdghVsn4FqgjSjw154pjf3+T/ppFmtTaxXw=="
 
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/o;->notifyDataSetChanged()V
+    const-string/jumbo v1, "dealSendInviteSuccess"
 
-    .line 266
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->f(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->context:Landroid/content/Context;
 
-    move-result-object v0
+    const v1, 0x7f0b05e8
 
-    invoke-virtual {v0, v4}, Landroid/widget/Button;->setVisibility(I)V
+    const v2, 0x7f0b0ddd
 
-    .line 267
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
+    new-instance v3, Lcom/tencent/mm/ui/friend/h$3;
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->g(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Landroid/widget/TextView;
+    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/friend/h$3;-><init>(Lcom/tencent/mm/ui/friend/h;)V
 
-    move-result-object v0
-
-    if-eqz v0, :cond_0
-
-    .line 268
-    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->jmc:Lcom/tencent/mm/ui/friend/FindMContactAddUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/friend/FindMContactAddUI;->g(Lcom/tencent/mm/ui/friend/FindMContactAddUI;)Landroid/widget/TextView;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v3}, Landroid/widget/TextView;->setVisibility(I)V
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
     goto :goto_0
+
+    .line 119
+    :cond_3
+    const-string/jumbo v0, "!56@/B4Tb64lLpJtMRMH2jRSdghVsn4FqgjSjw154pjf3+T/ppFmtTaxXw=="
+
+    const-string/jumbo v1, "dealSendInviteFail"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->lsv:Lcom/tencent/mm/ui/friend/h$a;
+
+    invoke-interface {v0, v5}, Lcom/tencent/mm/ui/friend/h$a;->ic(Z)V
+
+    goto :goto_0
+.end method
+
+.method final j(Landroid/database/Cursor;)V
+    .locals 7
+
+    .prologue
+    .line 56
+    new-instance v1, Ljava/util/ArrayList;
+
+    invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
+
+    .line 57
+    new-instance v2, Ljava/util/ArrayList;
+
+    invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
+
+    .line 58
+    new-instance v3, Ljava/util/ArrayList;
+
+    invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
+
+    .line 59
+    if-eqz p1, :cond_1
+
+    .line 60
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    .line 61
+    invoke-interface {p1}, Landroid/database/Cursor;->getCount()I
+
+    move-result v4
+
+    .line 62
+    const/4 v0, 0x0
+
+    :goto_0
+    if-ge v0, v4, :cond_0
+
+    .line 63
+    new-instance v5, Lcom/tencent/mm/modelfriend/o;
+
+    invoke-direct {v5}, Lcom/tencent/mm/modelfriend/o;-><init>()V
+
+    .line 64
+    invoke-virtual {v5, p1}, Lcom/tencent/mm/modelfriend/o;->c(Landroid/database/Cursor;)V
+
+    .line 65
+    iget-object v6, v5, Lcom/tencent/mm/modelfriend/o;->field_googlegmail:Ljava/lang/String;
+
+    invoke-virtual {v1, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 66
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v6
+
+    invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 67
+    invoke-virtual {v3, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 68
+    invoke-interface {p1}, Landroid/database/Cursor;->moveToNext()Z
+
+    .line 62
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 70
+    :cond_0
+    const/4 v0, -0x1
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 73
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/friend/h;->context:Landroid/content/Context;
+
+    iget-object v4, p0, Lcom/tencent/mm/ui/friend/h;->context:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v4
+
+    const v5, 0x7f0b0564
+
+    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    iget-object v5, p0, Lcom/tencent/mm/ui/friend/h;->context:Landroid/content/Context;
+
+    invoke-virtual {v5}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v5
+
+    const v6, 0x7f0b0de4
+
+    invoke-virtual {v5, v6}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
+
+    new-instance v5, Lcom/tencent/mm/ui/friend/h$1;
+
+    invoke-direct {v5, p0, v3}, Lcom/tencent/mm/ui/friend/h$1;-><init>(Lcom/tencent/mm/ui/friend/h;Ljava/util/ArrayList;)V
+
+    invoke-static {v0, v4, v1, v2, v5}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Lcom/tencent/mm/ui/base/g$d;)Landroid/app/Dialog;
+
+    .line 83
+    return-void
 .end method

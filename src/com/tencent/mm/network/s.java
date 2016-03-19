@@ -1,137 +1,171 @@
 package com.tencent.mm.network;
 
-import android.os.Binder;
-import android.os.IBinder;
-import android.os.IInterface;
-import android.os.Parcel;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-public abstract interface s
-  extends IInterface
+public final class s
 {
-  public abstract void a(int paramInt1, int paramInt2, int paramInt3, String paramString, x paramx, byte[] paramArrayOfByte);
+  private int ciG;
+  public HttpURLConnection cjv;
+  private Map cjw = null;
+  private URL url;
   
-  public static abstract class a
-    extends Binder
-    implements s
+  public s(URL paramURL, int paramInt)
   {
-    public a()
-    {
-      attachInterface(this, "com.tencent.mm.network.IOnGYNetEnd_AIDL");
+    url = paramURL;
+    ciG = paramInt;
+    cjv = ((HttpURLConnection)url.openConnection());
+    if (1 == ciG) {
+      cjv.setInstanceFollowRedirects(false);
     }
-    
-    public IBinder asBinder()
-    {
-      return this;
+  }
+  
+  public final void ET()
+  {
+    cjv.setDoInput(true);
+  }
+  
+  public final void EU()
+  {
+    cjv.setDoOutput(true);
+  }
+  
+  public final void connect()
+  {
+    if ((1 == ciG) && (cjw == null)) {
+      cjw = cjv.getRequestProperties();
     }
-    
-    public boolean onTransact(int paramInt1, Parcel paramParcel1, Parcel paramParcel2, int paramInt2)
-    {
-      switch (paramInt1)
-      {
-      default: 
-        return super.onTransact(paramInt1, paramParcel1, paramParcel2, paramInt2);
-      case 1598968902: 
-        paramParcel2.writeString("com.tencent.mm.network.IOnGYNetEnd_AIDL");
-        return true;
-      }
-      paramParcel1.enforceInterface("com.tencent.mm.network.IOnGYNetEnd_AIDL");
-      a(paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readString(), x.a.ab(paramParcel1.readStrongBinder()), paramParcel1.createByteArray());
-      paramParcel2.writeNoException();
-      return true;
+    cjv.connect();
+  }
+  
+  public final String getHeaderField(String paramString)
+  {
+    if ((1 == ciG) && (cjw == null)) {
+      cjw = cjv.getRequestProperties();
     }
-    
-    private static final class a
-      implements s
-    {
-      private IBinder mRemote;
-      
-      a(IBinder paramIBinder)
-      {
-        mRemote = paramIBinder;
-      }
-      
-      /* Error */
-      public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, x paramx, byte[] paramArrayOfByte)
-      {
-        // Byte code:
-        //   0: invokestatic 26	android/os/Parcel:obtain	()Landroid/os/Parcel;
-        //   3: astore 7
-        //   5: invokestatic 26	android/os/Parcel:obtain	()Landroid/os/Parcel;
-        //   8: astore 8
-        //   10: aload 7
-        //   12: ldc 28
-        //   14: invokevirtual 32	android/os/Parcel:writeInterfaceToken	(Ljava/lang/String;)V
-        //   17: aload 7
-        //   19: iload_1
-        //   20: invokevirtual 36	android/os/Parcel:writeInt	(I)V
-        //   23: aload 7
-        //   25: iload_2
-        //   26: invokevirtual 36	android/os/Parcel:writeInt	(I)V
-        //   29: aload 7
-        //   31: iload_3
-        //   32: invokevirtual 36	android/os/Parcel:writeInt	(I)V
-        //   35: aload 7
-        //   37: aload 4
-        //   39: invokevirtual 39	android/os/Parcel:writeString	(Ljava/lang/String;)V
-        //   42: aload 5
-        //   44: ifnull +58 -> 102
-        //   47: aload 5
-        //   49: invokeinterface 45 1 0
-        //   54: astore 4
-        //   56: aload 7
-        //   58: aload 4
-        //   60: invokevirtual 48	android/os/Parcel:writeStrongBinder	(Landroid/os/IBinder;)V
-        //   63: aload 7
-        //   65: aload 6
-        //   67: invokevirtual 52	android/os/Parcel:writeByteArray	([B)V
-        //   70: aload_0
-        //   71: getfield 18	com/tencent/mm/network/s$a$a:mRemote	Landroid/os/IBinder;
-        //   74: iconst_1
-        //   75: aload 7
-        //   77: aload 8
-        //   79: iconst_0
-        //   80: invokeinterface 58 5 0
-        //   85: pop
-        //   86: aload 8
-        //   88: invokevirtual 61	android/os/Parcel:readException	()V
-        //   91: aload 8
-        //   93: invokevirtual 64	android/os/Parcel:recycle	()V
-        //   96: aload 7
-        //   98: invokevirtual 64	android/os/Parcel:recycle	()V
-        //   101: return
-        //   102: aconst_null
-        //   103: astore 4
-        //   105: goto -49 -> 56
-        //   108: astore 4
-        //   110: aload 8
-        //   112: invokevirtual 64	android/os/Parcel:recycle	()V
-        //   115: aload 7
-        //   117: invokevirtual 64	android/os/Parcel:recycle	()V
-        //   120: aload 4
-        //   122: athrow
-        // Local variable table:
-        //   start	length	slot	name	signature
-        //   0	123	0	this	a
-        //   0	123	1	paramInt1	int
-        //   0	123	2	paramInt2	int
-        //   0	123	3	paramInt3	int
-        //   0	123	4	paramString	String
-        //   0	123	5	paramx	x
-        //   0	123	6	paramArrayOfByte	byte[]
-        //   3	113	7	localParcel1	Parcel
-        //   8	103	8	localParcel2	Parcel
-        // Exception table:
-        //   from	to	target	type
-        //   10	42	108	finally
-        //   47	56	108	finally
-        //   56	91	108	finally
-      }
-      
-      public final IBinder asBinder()
-      {
-        return mRemote;
-      }
+    return cjv.getHeaderField(paramString);
+  }
+  
+  public final Map getHeaderFields()
+  {
+    if ((1 == ciG) && (cjw == null)) {
+      cjw = cjv.getRequestProperties();
     }
+    return cjv.getHeaderFields();
+  }
+  
+  public final InputStream getInputStream()
+  {
+    if (1 == ciG)
+    {
+      if (cjw == null) {
+        cjw = cjv.getRequestProperties();
+      }
+      getResponseCode();
+    }
+    return cjv.getInputStream();
+  }
+  
+  public final OutputStream getOutputStream()
+  {
+    if (1 == ciG)
+    {
+      if (cjw == null) {
+        cjw = cjv.getRequestProperties();
+      }
+      getResponseCode();
+    }
+    return cjv.getOutputStream();
+  }
+  
+  public final String getRequestProperty(String paramString)
+  {
+    return cjv.getRequestProperty(paramString);
+  }
+  
+  public final int getResponseCode()
+  {
+    for (;;)
+    {
+      if ((1 == ciG) && (cjw == null)) {
+        cjw = cjv.getRequestProperties();
+      }
+      int i = cjv.getResponseCode();
+      Object localObject;
+      if ((1 == ciG) && (302 == i))
+      {
+        localObject = cjv.getHeaderField("Location");
+        if (localObject != null) {}
+      }
+      else
+      {
+        return i;
+      }
+      url = new URL(url, (String)localObject);
+      cjv = ((HttpURLConnection)url.openConnection());
+      cjv.setInstanceFollowRedirects(false);
+      if (cjw != null)
+      {
+        localObject = cjw.keySet().iterator();
+        while (((Iterator)localObject).hasNext())
+        {
+          String str = (String)((Iterator)localObject).next();
+          if ((!str.equals("Host")) && (!str.equals("X-Online-Host")))
+          {
+            List localList = (List)cjw.get(str);
+            i = 0;
+            while (i < localList.size())
+            {
+              cjv.setRequestProperty(str, (String)localList.get(i));
+              i += 1;
+            }
+          }
+        }
+      }
+      cjv.setRequestProperty("Host", url.getHost());
+      cjv.setRequestProperty("X-Online-Host", url.getHost());
+    }
+  }
+  
+  public final void kk(String paramString)
+  {
+    cjv.setRequestProperty("Referer", paramString);
+  }
+  
+  public final void setConnectTimeout(int paramInt)
+  {
+    cjv.setConnectTimeout(paramInt);
+  }
+  
+  public final void setReadTimeout(int paramInt)
+  {
+    cjv.setReadTimeout(paramInt);
+  }
+  
+  public final void setRequestMethod(String paramString)
+  {
+    cjv.setRequestMethod(paramString);
+  }
+  
+  public final void setRequestProperty(String paramString1, String paramString2)
+  {
+    cjv.setRequestProperty(paramString1, paramString2);
+  }
+  
+  public final void setUseCaches(boolean paramBoolean)
+  {
+    cjv.setUseCaches(paramBoolean);
+  }
+  
+  public final String toString()
+  {
+    return cjv.toString();
   }
 }
 

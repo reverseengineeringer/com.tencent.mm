@@ -1,14 +1,14 @@
 package com.tencent.mm.pluginsdk.ui;
 
 import android.graphics.Bitmap;
-import com.tencent.mm.p.i.a;
+import com.tencent.mm.q.d.a;
 
 public final class c
-  extends r
-  implements i.a
+  extends h
+  implements d.a
 {
-  public a gOE = (a)epj;
-  public int gOF;
+  public a iFW = (a)fzj;
+  public int iFX;
   
   public c(String paramString)
   {
@@ -17,58 +17,58 @@ public final class c
   
   private c(String paramString, byte paramByte)
   {
-    super(new a(a.b.azJ()), paramString, false);
+    super(new a(a.b.aQQ()), paramString, false);
   }
   
   private static final class a
-    implements r.a
+    implements h.a
   {
-    public Bitmap cvJ = null;
-    private r.a epj;
+    public Bitmap cNy = null;
+    private h.a fzj;
     
-    public a(r.a parama)
+    public a(h.a parama)
     {
-      epj = parama;
+      fzj = parama;
     }
     
     public final Bitmap a(String paramString, int paramInt1, int paramInt2, int paramInt3)
     {
-      if (epj != null) {
-        return epj.a(paramString, paramInt1, paramInt2, paramInt3);
+      if (fzj != null) {
+        return fzj.a(paramString, paramInt1, paramInt2, paramInt3);
       }
       return null;
     }
     
-    public final void a(r paramr)
+    public final void a(h paramh)
     {
-      if (epj != null) {
-        epj.a(paramr);
+      if (fzj != null) {
+        fzj.a(paramh);
       }
     }
     
-    public final Bitmap aN(String paramString)
+    public final Bitmap aL(String paramString)
     {
-      if (epj != null) {
-        return epj.aN(paramString);
+      if (fzj != null) {
+        return fzj.aL(paramString);
       }
       return null;
     }
     
-    public final Bitmap aO(String paramString)
+    public final Bitmap aM(String paramString)
     {
-      if (epj != null) {
-        return epj.aO(paramString);
+      if (fzj != null) {
+        return fzj.aM(paramString);
       }
       return null;
     }
     
-    public final Bitmap kU()
+    public final Bitmap kp()
     {
-      if ((cvJ != null) && (!cvJ.isRecycled())) {
-        return cvJ;
+      if ((cNy != null) && (!cNy.isRecycled())) {
+        return cNy;
       }
-      if (epj != null) {
-        return epj.kU();
+      if (fzj != null) {
+        return fzj.kp();
       }
       return null;
     }

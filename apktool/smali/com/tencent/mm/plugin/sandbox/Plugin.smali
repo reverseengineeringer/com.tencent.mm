@@ -19,7 +19,7 @@
 
 
 # virtual methods
-.method public createApplication()Lcom/tencent/mm/pluginsdk/k;
+.method public createApplication()Lcom/tencent/mm/pluginsdk/h;
     .locals 1
 
     .prologue
@@ -31,7 +31,7 @@
     return-object v0
 .end method
 
-.method public createSubCore()Lcom/tencent/mm/model/au;
+.method public createSubCore()Lcom/tencent/mm/model/ae;
     .locals 1
 
     .prologue

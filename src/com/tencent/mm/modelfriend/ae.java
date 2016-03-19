@@ -1,58 +1,60 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.ar.f;
-import com.tencent.mm.ar.f.a;
-import com.tencent.mm.sdk.g.ah;
-import com.tencent.mm.sdk.g.ao;
+import android.content.ContentValues;
+import android.database.Cursor;
+import com.tencent.mm.sdk.platformtools.u;
+import junit.framework.Assert;
 
 public final class ae
-  extends ah
-  implements f.a
+  extends com.tencent.mm.sdk.h.g
 {
-  public static final String[] aqU = { ah.a(ad.aqp, "LinkedInFriend") };
-  public com.tencent.mm.sdk.g.af aqT;
-  public ao bzy = new af(this);
+  public static final String[] aoY = { "CREATE TABLE IF NOT EXISTS qqgroup ( grouopid int PRIMARY KEY,membernum int,weixinnum int,insert_time int,lastupdate_time int,needupdate int,updatekey text,groupname text,reserved1 text ,reserved2 text ,reserved3 int ,reserved4 int )" };
+  public final com.tencent.mm.az.g bCw;
   
-  public ae(com.tencent.mm.sdk.g.af paramaf)
+  public ae(com.tencent.mm.az.g paramg)
   {
-    super(paramaf, ad.aqp, "LinkedInFriend", null);
-    aqT = paramaf;
-  }
-  
-  public final int a(f paramf)
-  {
-    if (paramf != null) {
-      aqT = paramf;
-    }
-    return 0;
+    bCw = paramg;
   }
   
   public final boolean a(ad paramad)
   {
-    if (paramad == null) {}
-    do
+    boolean bool;
+    ContentValues localContentValues;
+    if (paramad != null)
+    {
+      bool = true;
+      Assert.assertTrue(bool);
+      localContentValues = paramad.zd();
+      if (localContentValues.size() > 0) {
+        break label36;
+      }
+      u.e("!32@/B4Tb64lLpJ+zgjqUamJQfLmk15RM/5N", "update failed, no values set");
+    }
+    label36:
+    while (bCw.update("qqgroup", localContentValues, "grouopid= ?", new String[] { bNc }) <= 0)
     {
       return false;
-      paramad = paramad.mA();
-    } while ((int)aqT.insert("LinkedInFriend", "linkedInId", paramad) <= 0);
+      bool = false;
+      break;
+    }
+    Ep();
     return true;
   }
   
-  public final void clear()
+  public final ad dh(int paramInt)
   {
-    aqT.bx("LinkedInFriend", " delete from LinkedInFriend");
-    bzy.b(5, bzy, "");
-  }
-  
-  public final boolean gE(String paramString)
-  {
-    paramString = "UPDATE LinkedInFriend SET userOpStatus='1" + "' WHERE linkedInId=" + "'" + paramString + "'";
-    return aqT.bx("LinkedInFriend", paramString);
-  }
-  
-  public final String getTableName()
-  {
-    return "LinkedInFriend";
+    ad localad = null;
+    Cursor localCursor = bCw.rawQuery("select qqgroup.grouopid,qqgroup.membernum,qqgroup.weixinnum,qqgroup.insert_time,qqgroup.lastupdate_time,qqgroup.needupdate,qqgroup.updatekey,qqgroup.groupname from qqgroup  where grouopid = " + paramInt, null);
+    if (localCursor == null) {
+      return null;
+    }
+    if (localCursor.moveToFirst())
+    {
+      localad = new ad();
+      localad.c(localCursor);
+    }
+    localCursor.close();
+    return localad;
   }
 }
 

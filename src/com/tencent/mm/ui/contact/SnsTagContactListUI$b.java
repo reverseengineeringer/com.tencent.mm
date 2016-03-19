@@ -5,10 +5,10 @@ import com.tencent.mm.ui.base.MaskLayout;
 
 final class SnsTagContactListUI$b
 {
-  TextView ciJ;
-  TextView ciK;
-  MaskLayout iSk;
-  TextView jif;
+  TextView czT;
+  TextView czU;
+  MaskLayout dbN;
+  TextView lmE;
 }
 
 /* Location:

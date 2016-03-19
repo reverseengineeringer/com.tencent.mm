@@ -1,9 +1,20 @@
-.class Lcom/tencent/kingkong/support/Log$1;
+.class final Lcom/tencent/kingkong/support/Log$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
 .implements Lcom/tencent/kingkong/support/Log$LogImp;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/tencent/kingkong/support/Log;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
 
 
 # direct methods
@@ -20,7 +31,7 @@
 
 
 # virtual methods
-.method public appenderClose()V
+.method public final appenderClose()V
     .locals 0
 
     .prologue
@@ -28,7 +39,7 @@
     return-void
 .end method
 
-.method public appenderFlush()V
+.method public final appenderFlush()V
     .locals 0
 
     .prologue
@@ -36,7 +47,7 @@
     return-void
 .end method
 
-.method public getLogLevel()I
+.method public final getLogLevel()I
     .locals 1
 
     .prologue
@@ -49,7 +60,7 @@
     return v0
 .end method
 
-.method public logD(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+.method public final logD(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
     .locals 0
 
     .prologue
@@ -61,7 +72,7 @@
     return-void
 .end method
 
-.method public logE(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+.method public final logE(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
     .locals 0
 
     .prologue
@@ -73,7 +84,7 @@
     return-void
 .end method
 
-.method public logF(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+.method public final logF(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
     .locals 2
 
     .prologue
@@ -92,7 +103,7 @@
     return-void
 .end method
 
-.method public logI(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+.method public final logI(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
     .locals 0
 
     .prologue
@@ -104,7 +115,7 @@
     return-void
 .end method
 
-.method public logV(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+.method public final logV(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
     .locals 0
 
     .prologue
@@ -116,7 +127,7 @@
     return-void
 .end method
 
-.method public logW(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
+.method public final logW(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIJJLjava/lang/String;)V
     .locals 0
 
     .prologue

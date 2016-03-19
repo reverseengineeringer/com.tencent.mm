@@ -2,8 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class bh$a
 {
-  public byte[] data;
-  public String mac;
+  public int atF;
+  public String aut;
+  public boolean auu;
 }
 
 /* Location:

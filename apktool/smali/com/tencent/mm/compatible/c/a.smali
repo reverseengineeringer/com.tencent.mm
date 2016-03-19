@@ -28,7 +28,7 @@
 
     .line 36
     :cond_1
-    sget-boolean v2, Lcom/tencent/mm/sdk/platformtools/ao;->aGN:Z
+    sget-boolean v2, Lcom/tencent/mm/sdk/platformtools/ak;->aKi:Z
 
     if-eqz v2, :cond_2
 
@@ -39,15 +39,15 @@
 
     .line 40
     :cond_2
-    sget-object v2, Lcom/tencent/mm/compatible/d/q;->bis:Lcom/tencent/mm/compatible/d/j;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/j;->bhd:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/j;->brB:I
 
     if-eq v2, v0, :cond_3
 
-    sget-object v2, Lcom/tencent/mm/compatible/d/q;->bis:Lcom/tencent/mm/compatible/d/j;
+    sget-object v2, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
 
-    iget v2, v2, Lcom/tencent/mm/compatible/d/j;->bhe:I
+    iget v2, v2, Lcom/tencent/mm/compatible/d/j;->brC:I
 
     if-ne v2, v3, :cond_4
 
@@ -57,15 +57,15 @@
 
     .line 45
     :cond_4
-    sget-object v1, Lcom/tencent/mm/compatible/d/q;->bis:Lcom/tencent/mm/compatible/d/j;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/j;->bhd:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/j;->brB:I
 
     if-eq v1, v0, :cond_5
 
-    sget-object v1, Lcom/tencent/mm/compatible/d/q;->bis:Lcom/tencent/mm/compatible/d/j;
+    sget-object v1, Lcom/tencent/mm/compatible/d/p;->bsQ:Lcom/tencent/mm/compatible/d/j;
 
-    iget v1, v1, Lcom/tencent/mm/compatible/d/j;->bhe:I
+    iget v1, v1, Lcom/tencent/mm/compatible/d/j;->brC:I
 
     if-ne v1, v3, :cond_0
 

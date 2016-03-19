@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/app/plugin/b/a$i;
-.super Lcom/tencent/mm/sdk/c/e;
+.super Lcom/tencent/mm/sdk/c/c;
 .source "SourceFile"
 
 
@@ -22,7 +22,7 @@
     .line 40
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/e;-><init>(I)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/sdk/c/c;-><init>(I)V
 
     .line 41
     return-void
@@ -30,14 +30,14 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/sdk/c/d;)Z
+.method public final a(Lcom/tencent/mm/sdk/c/b;)Z
     .locals 3
 
     .prologue
     const/4 v0, 0x0
 
     .line 45
-    instance-of v1, p1, Lcom/tencent/mm/d/a/by;
+    instance-of v1, p1, Lcom/tencent/mm/d/a/dp;
 
     if-nez v1, :cond_0
 
@@ -46,7 +46,7 @@
 
     const-string/jumbo v2, "mismatched event"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->f(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->f(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 56
     :goto_0
@@ -58,10 +58,10 @@
 
     const-string/jumbo v2, "requestAccountSync()"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 51
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
@@ -72,17 +72,17 @@
 
     const-string/jumbo v2, "MMApplicationContext.getContext() == null"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     .line 55
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/modelsimple/e;->aJ(Landroid/content/Context;)Z
+    invoke-static {v0}, Lcom/tencent/mm/modelsimple/d;->aZ(Landroid/content/Context;)Z
 
     .line 56
     const/4 v0, 0x1

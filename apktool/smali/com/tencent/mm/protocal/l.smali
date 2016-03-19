@@ -13,7 +13,7 @@
 
 
 # direct methods
-.method static synthetic vN(Ljava/lang/String;)[B
+.method static synthetic Bk(Ljava/lang/String;)[B
     .locals 6
 
     .prologue
@@ -34,7 +34,7 @@
 
     aput-byte v5, v0, v2
 
-    invoke-static {v0}, Lcom/tencent/mm/a/e;->o([B)[B
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->n([B)[B
 
     move-result-object v0
 
@@ -46,13 +46,13 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->aG([B)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->I([B)Ljava/lang/String;
 
     move-result-object v4
 
     aput-object v4, v3, v5
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     return-object v0
 .end method

@@ -1,37 +1,53 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Intent;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.plugin.report.service.j;
-import com.tencent.mm.ui.base.h.c;
-import com.tencent.mm.ui.cn;
-import com.tencent.mm.ui.ef;
+import android.view.ContextMenu;
+import android.view.LayoutInflater;
+import android.view.MenuItem;
+import android.view.View;
+import com.tencent.mm.storage.ag;
 
 final class cd
-  implements h.c
+  extends cb
 {
-  cd(bz parambz) {}
-  
-  public final void dW(int paramInt)
+  public cd()
   {
-    Intent localIntent = new Intent();
-    switch (paramInt)
+    super(24);
+  }
+  
+  public final View a(LayoutInflater paramLayoutInflater, View paramView)
+  {
+    Object localObject;
+    if ((paramView != null) && (paramView.getTag() != null))
     {
-    default: 
-      return;
-    case 0: 
-      j.eJZ.f(11701, new Object[] { Integer.valueOf(1), Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(1), Integer.valueOf(3) });
-      localIntent.putExtra("key_username", iTU.iTR.getTalkerUserName());
-      localIntent.putExtra("key_way", 0);
-      c.c(fiTU.iTR).ipQ.iqj, "luckymoney", ".ui.LuckyMoneyNewYearSendUI", localIntent);
-      return;
+      localObject = paramView;
+      if (getTagtype == eLV) {}
     }
-    j.eJZ.f(11701, new Object[] { Integer.valueOf(1), Integer.valueOf(0), Integer.valueOf(0), Integer.valueOf(1), Integer.valueOf(1) });
-    localIntent.putExtra("key_way", 0);
-    localIntent.putExtra("key_type", 0);
-    localIntent.putExtra("key_from", 1);
-    localIntent.putExtra("key_username", iTU.iTR.getTalkerUserName());
-    c.c(fiTU.iTR).ipQ.iqj, "luckymoney", ".ui.LuckyMoneyPrepareUI", localIntent);
+    else
+    {
+      localObject = new ax(paramLayoutInflater, 2131361908);
+      ((View)localObject).setTag(new ed(eLV).aI((View)localObject));
+    }
+    return (View)localObject;
+  }
+  
+  public final void a(aa.a parama, int paramInt, ChattingUI.a parama1, ag paramag, String paramString)
+  {
+    ed.a((ed)parama, paramag, true, paramInt, parama1);
+  }
+  
+  public final boolean a(ContextMenu paramContextMenu, View paramView, ag paramag)
+  {
+    return false;
+  }
+  
+  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ag paramag)
+  {
+    return false;
+  }
+  
+  public final boolean a(View paramView, ChattingUI.a parama, ag paramag)
+  {
+    return false;
   }
 }
 

@@ -3,23 +3,23 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d;
+.implements Lcom/tencent/mm/r/d;
 
 
 # instance fields
-.field private aHl:Ljava/lang/String;
+.field private auJ:Ljava/lang/String;
 
-.field private bPi:J
+.field private cZp:Ljava/lang/String;
 
-.field private bXB:Landroid/app/ProgressDialog;
+.field private cfW:J
 
-.field private eKi:Landroid/widget/EditText;
+.field private coM:Landroid/app/ProgressDialog;
 
-.field private eKj:Ljava/lang/String;
+.field private fUV:Landroid/widget/EditText;
 
-.field private eKk:Ljava/lang/String;
+.field private fUW:Ljava/lang/String;
 
-.field private eKl:Ljava/lang/String;
+.field private fUX:Ljava/lang/String;
 
 
 # direct methods
@@ -33,7 +33,7 @@
     .line 45
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->coM:Landroid/app/ProgressDialog;
 
     return-void
 .end method
@@ -43,7 +43,7 @@
 
     .prologue
     .line 29
-    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->coM:Landroid/app/ProgressDialog;
 
     return-object p1
 .end method
@@ -53,7 +53,7 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKi:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fUV:Landroid/widget/EditText;
 
     return-object v0
 .end method
@@ -63,7 +63,7 @@
 
     .prologue
     .line 29
-    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKk:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->cZp:Ljava/lang/String;
 
     return-object p1
 .end method
@@ -73,7 +73,7 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKk:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->cZp:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -83,7 +83,7 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKl:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fUX:Ljava/lang/String;
 
     return-object v0
 .end method
@@ -93,14 +93,14 @@
 
     .prologue
     .line 29
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->aHl:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->auJ:Ljava/lang/String;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 6
 
     .prologue
@@ -117,7 +117,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKj:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fUW:Ljava/lang/String;
 
     .line 68
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->getIntent()Landroid/content/Intent;
@@ -130,7 +130,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKl:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fUX:Ljava/lang/String;
 
     .line 69
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->getIntent()Landroid/content/Intent;
@@ -143,44 +143,44 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->aHl:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->auJ:Ljava/lang/String;
 
     .line 71
-    sget v0, Lcom/tencent/mm/a$n;->safe_device_edit_title:I
+    const v0, 0x7f0b079c
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/ao/a;->w(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/tencent/mm/aw/a;->A(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->At(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->Gj(Ljava/lang/String;)V
 
     .line 72
-    new-instance v0, Lcom/tencent/mm/plugin/safedevice/ui/c;
+    new-instance v0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/safedevice/ui/c;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI$1;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 82
-    sget v0, Lcom/tencent/mm/a$n;->app_save:I
+    const v0, 0x7f0b0de9
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/d;
+    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/d;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI$2;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;)V
 
     invoke-virtual {p0, v5, v0, v1}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->a(ILjava/lang/String;Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
     .line 107
-    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/f;
+    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/f;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI$3;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;)V
 
     .line 121
-    sget v0, Lcom/tencent/mm/a$i;->mod_safe_device_name:I
+    const v0, 0x7f070afc
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->findViewById(I)Landroid/view/View;
 
@@ -188,12 +188,12 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKi:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fUV:Landroid/widget/EditText;
 
     .line 124
     new-instance v0, Lcom/tencent/mm/ui/widget/MMEditText$c;
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKi:Landroid/widget/EditText;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fUV:Landroid/widget/EditText;
 
     const/4 v3, 0x0
 
@@ -202,26 +202,26 @@
     invoke-direct {v0, v2, v3, v4}, Lcom/tencent/mm/ui/widget/MMEditText$c;-><init>(Landroid/widget/EditText;Landroid/widget/TextView;I)V
 
     .line 125
-    iput-object v1, v0, Lcom/tencent/mm/ui/widget/MMEditText$c;->jAF:Lcom/tencent/mm/ui/widget/MMEditText$b;
+    iput-object v1, v0, Lcom/tencent/mm/ui/widget/MMEditText$c;->lFe:Lcom/tencent/mm/ui/widget/MMEditText$b;
 
     .line 126
-    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKi:Landroid/widget/EditText;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fUV:Landroid/widget/EditText;
 
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 128
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKj:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fUW:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 129
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKi:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fUV:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKj:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fUW:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
@@ -231,21 +231,21 @@
 
     .line 132
     :cond_0
-    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fe(Z)V
+    invoke-virtual {p0, v5}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->bC(Z)V
 
     goto :goto_0
 .end method
 
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
     .locals 4
 
     .prologue
     .line 143
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->coM:Landroid/app/ProgressDialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->coM:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->isShowing()Z
 
@@ -254,14 +254,14 @@
     if-eqz v0, :cond_0
 
     .line 144
-    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->bXB:Landroid/app/ProgressDialog;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->coM:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
 
     .line 145
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->bXB:Landroid/app/ProgressDialog;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->coM:Landroid/app/ProgressDialog;
 
     .line 148
     :cond_0
@@ -275,27 +275,27 @@
     invoke-direct {v0}, Lcom/tencent/mm/plugin/safedevice/a/c;-><init>()V
 
     .line 151
-    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->aHl:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->auJ:Ljava/lang/String;
 
     iput-object v1, v0, Lcom/tencent/mm/plugin/safedevice/a/c;->field_devicetype:Ljava/lang/String;
 
     .line 152
-    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKk:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->cZp:Ljava/lang/String;
 
     iput-object v1, v0, Lcom/tencent/mm/plugin/safedevice/a/c;->field_name:Ljava/lang/String;
 
     .line 153
-    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->eKl:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->fUX:Ljava/lang/String;
 
     iput-object v1, v0, Lcom/tencent/mm/plugin/safedevice/a/c;->field_uid:Ljava/lang/String;
 
     .line 154
-    iget-wide v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->bPi:J
+    iget-wide v1, p0, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->cfW:J
 
     iput-wide v1, v0, Lcom/tencent/mm/plugin/safedevice/a/c;->field_createtime:J
 
     .line 156
-    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->afu()Lcom/tencent/mm/plugin/safedevice/a/d;
+    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->aqC()Lcom/tencent/mm/plugin/safedevice/a/d;
 
     move-result-object v1
 
@@ -303,29 +303,29 @@
 
     new-array v2, v2, [Ljava/lang/String;
 
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/plugin/safedevice/a/d;->a(Lcom/tencent/mm/sdk/g/ae;[Ljava/lang/String;)Z
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/plugin/safedevice/a/d;->a(Lcom/tencent/mm/sdk/h/c;[Ljava/lang/String;)Z
 
     .line 158
-    sget v0, Lcom/tencent/mm/a$n;->safe_device_mod_name_ok:I
+    const v0, 0x7f0b07ad
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/ao/a;->w(Landroid/content/Context;I)Ljava/lang/String;
+    invoke-static {p0, v0}, Lcom/tencent/mm/aw/a;->A(Landroid/content/Context;I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p0, v0}, Lcom/tencent/mm/ui/base/h;->aN(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {p0, v0}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
     .line 159
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
+    new-instance v0, Lcom/tencent/mm/sdk/platformtools/aa;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>()V
 
-    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/g;
+    new-instance v1, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI$4;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/g;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI$4;-><init>(Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;)V
 
     const-wide/16 v2, 0x3e8
 
-    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/ac;->postDelayed(Ljava/lang/Runnable;J)Z
+    invoke-virtual {v0, v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/aa;->postDelayed(Ljava/lang/Runnable;J)Z
 
     .line 172
     :cond_1
@@ -334,9 +334,9 @@
 
     .line 167
     :cond_2
-    sget-object v0, Lcom/tencent/mm/plugin/a/a;->bWX:Lcom/tencent/mm/pluginsdk/i;
+    sget-object v0, Lcom/tencent/mm/plugin/a/a;->cob:Lcom/tencent/mm/pluginsdk/f;
 
-    invoke-interface {v0, p0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/i;->a(Landroid/content/Context;IILjava/lang/String;)Z
+    invoke-interface {v0, p0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/f;->a(Landroid/content/Context;IILjava/lang/String;)Z
 
     move-result v0
 
@@ -350,7 +350,7 @@
 
     .prologue
     .line 138
-    sget v0, Lcom/tencent/mm/a$k;->mod_safe_device_name:I
+    const v0, 0x7f0a0375
 
     return v0
 .end method
@@ -363,7 +363,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
     .line 50
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/safedevice/ui/ModSafeDeviceNameUI;->Gb()V
 
     .line 51
     return-void
@@ -374,13 +374,13 @@
 
     .prologue
     .line 61
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x169
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
     .line 62
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
@@ -394,13 +394,13 @@
 
     .prologue
     .line 55
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x169
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     .line 56
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V

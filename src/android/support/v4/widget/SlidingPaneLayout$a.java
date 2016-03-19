@@ -2,7 +2,7 @@ package android.support.v4.widget;
 
 import android.graphics.Rect;
 import android.support.v4.view.a.a.b;
-import android.support.v4.view.t;
+import android.support.v4.view.m;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.accessibility.AccessibilityEvent;
@@ -10,20 +10,20 @@ import android.view.accessibility.AccessibilityEvent;
 final class SlidingPaneLayout$a
   extends android.support.v4.view.a
 {
-  private final Rect im = new Rect();
+  private final Rect ht = new Rect();
   
   SlidingPaneLayout$a(SlidingPaneLayout paramSlidingPaneLayout) {}
   
   private boolean w(View paramView)
   {
-    return iW.C(paramView);
+    return ia.C(paramView);
   }
   
   public final void a(View paramView, android.support.v4.view.a.a parama)
   {
     android.support.v4.view.a.a locala = android.support.v4.view.a.a.a(parama);
     super.a(paramView, locala);
-    Rect localRect = im;
+    Rect localRect = ht;
     locala.getBoundsInParent(localRect);
     parama.setBoundsInParent(localRect);
     locala.getBoundsInScreen(localRect);
@@ -40,23 +40,23 @@ final class SlidingPaneLayout$a
     parama.setSelected(locala.isSelected());
     parama.setLongClickable(locala.isLongClickable());
     parama.addAction(locala.getActions());
-    int i = android.support.v4.view.a.a.hC.t(hD);
-    android.support.v4.view.a.a.hC.b(hD, i);
+    int i = android.support.v4.view.a.a.gK.w(gL);
+    android.support.v4.view.a.a.gK.c(gL, i);
     locala.recycle();
     parama.setClassName(SlidingPaneLayout.class.getName());
     parama.setSource(paramView);
-    paramView = t.l(paramView);
+    paramView = m.l(paramView);
     if ((paramView instanceof View)) {
       parama.setParent((View)paramView);
     }
-    int j = iW.getChildCount();
+    int j = ia.getChildCount();
     i = 0;
     while (i < j)
     {
-      paramView = iW.getChildAt(i);
+      paramView = ia.getChildAt(i);
       if ((!w(paramView)) && (paramView.getVisibility() == 0))
       {
-        t.i(paramView);
+        m.i(paramView);
         parama.addChild(paramView);
       }
       i += 1;

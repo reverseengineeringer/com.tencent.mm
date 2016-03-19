@@ -1,32 +1,31 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.a.k;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.i.c;
-import com.tencent.mm.protocal.i.d;
+import com.tencent.mm.a.n;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.h.c;
+import com.tencent.mm.protocal.h.d;
 import com.tencent.mm.protocal.l.a;
 import com.tencent.mm.protocal.l.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.h;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.h;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.List;
 import junit.framework.Assert;
 
 public final class j
-  extends com.tencent.mm.q.j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private d apI;
-  public String bKR = "";
-  private w btU;
+  private d anM;
+  private o bGh;
+  public String caU = "";
   public byte[] content;
   
-  public j(i.d paramd)
+  public j(h.d paramd)
   {
     paramd = (l.b)paramd;
-    bKR = bKR;
+    caU = caU;
     content = content;
   }
   
@@ -47,16 +46,16 @@ public final class j
         i += 1;
       }
     }
-    btU = new a();
-    paramList = (l.a)btU.vj();
-    axE = 111;
-    aqq = 0;
-    ccm = j;
+    bGh = new a();
+    paramList = (l.a)bGh.vA();
+    axL = 111;
+    aou = 0;
+    ccb = j;
     if (str != null)
     {
       bool1 = true;
       Assert.assertTrue(bool1);
-      hgY = str;
+      iUV = str;
       if (paramArrayOfByte == null) {
         break label269;
       }
@@ -65,24 +64,24 @@ public final class j
     for (bool1 = bool2;; bool1 = false)
     {
       Assert.assertTrue(bool1);
-      hgZ = paramArrayOfByte;
-      t.d("!44@/B4Tb64lLpK+IBX8XDgnvkASPLG9hDDydmb3CTe3k6g=", "NetSceneDirectSend: cmdId=111" + " seq=" + j);
-      t.d("!44@/B4Tb64lLpK+IBX8XDgnvkASPLG9hDDydmb3CTe3k6g=", "NetSceneDirectSend: lstReceiver=" + str + " status = " + k.c(paramArrayOfByte, 0));
+      iUW = paramArrayOfByte;
+      u.d("!44@/B4Tb64lLpK+IBX8XDgnvkASPLG9hDDydmb3CTe3k6g=", "NetSceneDirectSend: cmdId=111" + " seq=" + j);
+      u.d("!44@/B4Tb64lLpK+IBX8XDgnvkASPLG9hDDydmb3CTe3k6g=", "NetSceneDirectSend: lstReceiver=" + str + " status = " + n.c(paramArrayOfByte, 0));
       return;
       bool1 = false;
       break;
     }
   }
   
-  public final int a(m paramm, d paramd)
+  public final int a(e parame, d paramd)
   {
-    apI = paramd;
-    return a(paramm, btU, this);
+    anM = paramd;
+    return a(parame, bGh, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    apI.a(paramInt2, paramInt3, paramString, this);
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
@@ -93,8 +92,8 @@ public final class j
   public static final class a
     extends h
   {
-    private final l.a bKS = new l.a();
-    private final l.b bKT = new l.b();
+    private final l.a caV = new l.a();
+    private final l.b caW = new l.b();
     
     public final int getType()
     {
@@ -106,14 +105,14 @@ public final class j
       return null;
     }
     
-    protected final i.c tF()
+    protected final h.c tW()
     {
-      return bKS;
+      return caV;
     }
     
-    public final i.d tG()
+    public final h.d tX()
     {
-      return bKT;
+      return caW;
     }
   }
 }

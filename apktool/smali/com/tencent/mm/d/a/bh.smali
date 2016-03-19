@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/bh;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public awp:Lcom/tencent/mm/d/a/bh$a;
+.field public aus:Lcom/tencent/mm/d/a/bh$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/bh;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/bh;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/bh;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/bh;->arR:Z
 
     return-void
 .end method
@@ -42,23 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/bh$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/bh$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/bh;->awp:Lcom/tencent/mm/d/a/bh$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/bh;->aus:Lcom/tencent/mm/d/a/bh$a;
 
     .line 8
-    const-string/jumbo v0, "ExDeviceSimpleBTOnRecvDataFromDevice"
+    const-string/jumbo v0, "EmojiSyncTask"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/bh;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/bh;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/bh;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bh;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bh;->jUI:Z
 
     return-void
 .end method

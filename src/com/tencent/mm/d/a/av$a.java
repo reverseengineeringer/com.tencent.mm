@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class av$a
 {
-  public int op = 0;
+  public long aua = 0L;
 }
 
 /* Location:

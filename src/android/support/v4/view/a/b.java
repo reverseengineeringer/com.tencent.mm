@@ -1,43 +1,44 @@
 package android.support.v4.view.a;
 
 import android.os.Build.VERSION;
+import java.util.ArrayList;
 import java.util.List;
 
 public final class b
 {
-  private static final a hE = new c();
-  public final Object hF;
+  private static final a gM = new c();
+  public final Object gN;
   
   static
   {
     if (Build.VERSION.SDK_INT >= 16)
     {
-      hE = new b();
+      gM = new b();
       return;
     }
   }
   
   public b()
   {
-    hF = hE.a(this);
+    gN = gM.a(this);
   }
   
   public b(Object paramObject)
   {
-    hF = paramObject;
+    gN = paramObject;
   }
   
-  public static a aK()
+  public static a as()
   {
     return null;
   }
   
-  public static boolean aL()
+  public static boolean at()
   {
     return false;
   }
   
-  public static List aM()
+  public static List au()
   {
     return null;
   }
@@ -50,9 +51,28 @@ public final class b
   static final class b
     extends b.c
   {
-    public final Object a(b paramb)
+    public final Object a(final b paramb)
     {
-      return new e(new c(this, paramb));
+      new c.1(new c.a()
+      {
+        public final boolean at()
+        {
+          return b.at();
+        }
+        
+        public final List au()
+        {
+          b.au();
+          new ArrayList();
+          throw new NullPointerException();
+        }
+        
+        public final Object av()
+        {
+          b.as();
+          return null;
+        }
+      });
     }
   }
   

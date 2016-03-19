@@ -1,23 +1,28 @@
 package com.tencent.mm.pluginsdk.ui.d;
 
 import android.content.Context;
-import com.tencent.mm.pluginsdk.l.a;
-import com.tencent.mm.pluginsdk.l.b;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.pluginsdk.i.a;
+import com.tencent.mm.pluginsdk.i.c;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.sdk.platformtools.y;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public final class a
 {
-  public static ah a(Context paramContext, String paramString, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  public static g a(Context paramContext, String paramString, int paramInt1, int paramInt2)
+  {
+    return a(paramContext, paramString, paramInt1, paramInt2, 0, 0);
+  }
+  
+  public static g a(Context paramContext, String paramString, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     Context localContext = paramContext;
     if (paramContext == null) {
-      localContext = aa.getContext();
+      localContext = y.getContext();
     }
-    paramContext = l.a.gKl.o(localContext, paramString);
+    paramContext = i.a.iyS.p(localContext, paramString);
     if (paramContext != null)
     {
       start = paramInt1;
@@ -28,25 +33,20 @@ public final class a
     return paramContext;
   }
   
-  public static ArrayList az(Context paramContext, String paramString)
+  public static ArrayList aP(Context paramContext, String paramString)
   {
     ArrayList localArrayList = new ArrayList();
-    paramString = h.a.hbe.matcher(paramString);
+    paramString = d.a.iPB.matcher(paramString);
     while (paramString.find())
     {
       int i = paramString.start();
       int j = paramString.end();
-      ah localah = b(paramContext, paramString.group(), i, j);
-      if (localah != null) {
-        localArrayList.add(localah);
+      g localg = a(paramContext, paramString.group(), i, j);
+      if (localg != null) {
+        localArrayList.add(localg);
       }
     }
     return localArrayList;
-  }
-  
-  public static ah b(Context paramContext, String paramString, int paramInt1, int paramInt2)
-  {
-    return a(paramContext, paramString, paramInt1, paramInt2, 0, 0);
   }
 }
 

@@ -7,9 +7,9 @@
 
 
 # instance fields
-.field private apQ:Ljava/io/RandomAccessFile;
+.field private anC:Ljava/lang/String;
 
-.field private apy:Ljava/lang/String;
+.field private anU:Ljava/io/RandomAccessFile;
 
 
 # direct methods
@@ -23,21 +23,21 @@
     .line 18
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iput-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     .line 19
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apy:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anC:Ljava/lang/String;
 
     .line 22
-    iput-object p1, p0, Lcom/tencent/mm/modelvoice/a;->apy:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/modelvoice/a;->anC:Ljava/lang/String;
 
     .line 23
     return-void
 .end method
 
-.method private bb(Ljava/lang/String;)Z
+.method private bd(Ljava/lang/String;)Z
     .locals 5
 
     .prologue
@@ -46,7 +46,7 @@
     const/4 v2, 0x0
 
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apy:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anC:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -60,7 +60,7 @@
     invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
 
     .line 39
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     if-nez v0, :cond_2
 
@@ -101,7 +101,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v4, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -121,17 +121,17 @@
 
     move-result-object v3
 
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 43
     :try_start_0
     new-instance v0, Ljava/io/RandomAccessFile;
 
-    iget-object v3, p0, Lcom/tencent/mm/modelvoice/a;->apy:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/modelvoice/a;->anC:Ljava/lang/String;
 
     invoke-direct {v0, v3, p1}, Ljava/io/RandomAccessFile;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iput-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -170,7 +170,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/modelvoice/a;->apy:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/modelvoice/a;->anC:Ljava/lang/String;
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -200,12 +200,12 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 46
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iput-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     move v1, v2
 
@@ -215,16 +215,16 @@
 
 
 # virtual methods
-.method public final R(II)Lcom/tencent/mm/modelvoice/j;
+.method public final aa(II)Lcom/tencent/mm/modelvoice/g;
     .locals 10
 
     .prologue
     const/4 v2, 0x0
 
     .line 54
-    new-instance v0, Lcom/tencent/mm/modelvoice/j;
+    new-instance v0, Lcom/tencent/mm/modelvoice/g;
 
-    invoke-direct {v0}, Lcom/tencent/mm/modelvoice/j;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/modelvoice/g;-><init>()V
 
     .line 55
     if-ltz p1, :cond_0
@@ -235,7 +235,7 @@
     :cond_0
     const/4 v1, -0x3
 
-    iput v1, v0, Lcom/tencent/mm/modelvoice/j;->ret:I
+    iput v1, v0, Lcom/tencent/mm/modelvoice/g;->ret:I
 
     .line 84
     :goto_0
@@ -243,13 +243,13 @@
 
     .line 59
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v1, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     if-nez v1, :cond_2
 
     const-string/jumbo v1, "r"
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/modelvoice/a;->bb(Ljava/lang/String;)Z
+    invoke-direct {p0, v1}, Lcom/tencent/mm/modelvoice/a;->bd(Ljava/lang/String;)Z
 
     move-result v1
 
@@ -258,7 +258,7 @@
     .line 60
     const/4 v1, -0x2
 
-    iput v1, v0, Lcom/tencent/mm/modelvoice/j;->ret:I
+    iput v1, v0, Lcom/tencent/mm/modelvoice/g;->ret:I
 
     goto :goto_0
 
@@ -269,27 +269,27 @@
     .line 64
     new-array v1, p2, [B
 
-    iput-object v1, v0, Lcom/tencent/mm/modelvoice/j;->buf:[B
+    iput-object v1, v0, Lcom/tencent/mm/modelvoice/g;->buf:[B
 
     .line 65
     :try_start_0
-    iget-object v1, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v1, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->length()J
 
     move-result-wide v4
 
     .line 68
-    iget-object v1, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v1, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     int-to-long v6, v3
 
     invoke-virtual {v1, v6, v7}, Ljava/io/RandomAccessFile;->seek(J)V
 
     .line 69
-    iget-object v1, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v1, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
-    iget-object v6, v0, Lcom/tencent/mm/modelvoice/j;->buf:[B
+    iget-object v6, v0, Lcom/tencent/mm/modelvoice/g;->buf:[B
 
     const/4 v7, 0x0
 
@@ -306,7 +306,7 @@
 
     invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v8, p0, Lcom/tencent/mm/modelvoice/a;->apy:Ljava/lang/String;
+    iget-object v8, p0, Lcom/tencent/mm/modelvoice/a;->anC:Ljava/lang/String;
 
     invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -338,7 +338,7 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v8, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v8}, Ljava/io/RandomAccessFile;->getFilePointer()J
 
@@ -362,7 +362,7 @@
 
     move-result-object v4
 
-    invoke-static {v6, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 72
     if-gez v1, :cond_3
@@ -371,19 +371,19 @@
 
     .line 75
     :cond_3
-    iput v1, v0, Lcom/tencent/mm/modelvoice/j;->apR:I
+    iput v1, v0, Lcom/tencent/mm/modelvoice/g;->anV:I
 
     .line 76
     add-int/2addr v1, v3
 
     add-int/lit8 v1, v1, -0x6
 
-    iput v1, v0, Lcom/tencent/mm/modelvoice/j;->apM:I
+    iput v1, v0, Lcom/tencent/mm/modelvoice/g;->anQ:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     .line 83
-    iput v2, v0, Lcom/tencent/mm/modelvoice/j;->ret:I
+    iput v2, v0, Lcom/tencent/mm/modelvoice/g;->ret:I
 
     goto/16 :goto_0
 
@@ -400,7 +400,7 @@
 
     invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v5, p0, Lcom/tencent/mm/modelvoice/a;->apy:Ljava/lang/String;
+    iget-object v5, p0, Lcom/tencent/mm/modelvoice/a;->anC:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -440,15 +440,15 @@
 
     move-result-object v1
 
-    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 79
-    invoke-virtual {p0}, Lcom/tencent/mm/modelvoice/a;->lQ()V
+    invoke-virtual {p0}, Lcom/tencent/mm/modelvoice/a;->ll()V
 
     .line 80
     const/4 v1, -0x1
 
-    iput v1, v0, Lcom/tencent/mm/modelvoice/j;->ret:I
+    iput v1, v0, Lcom/tencent/mm/modelvoice/g;->ret:I
 
     goto/16 :goto_0
 .end method
@@ -463,25 +463,25 @@
     return v0
 .end method
 
-.method public final lQ()V
+.method public final ll()V
     .locals 3
 
     .prologue
     .line 27
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     if-eqz v0, :cond_0
 
     .line 29
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->close()V
 
     .line 30
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iput-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     .line 31
     const-string/jumbo v0, "!44@/B4Tb64lLpI1uMpLvXr9z/l67fEFyLju4OwsjOKyzR4="
@@ -492,7 +492,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/modelvoice/a;->apy:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/modelvoice/a;->anC:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -502,7 +502,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -538,13 +538,13 @@
     invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     if-nez v0, :cond_1
 
     const-string/jumbo v0, "rw"
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/modelvoice/a;->bb(Ljava/lang/String;)Z
+    invoke-direct {p0, v0}, Lcom/tencent/mm/modelvoice/a;->bd(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -569,7 +569,7 @@
 
     .line 95
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     const-string/jumbo v3, "#!AMR\n"
 
@@ -591,21 +591,21 @@
 
     .line 103
     :try_start_1
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     int-to-long v4, v3
 
     invoke-virtual {v0, v4, v5}, Ljava/io/RandomAccessFile;->seek(J)V
 
     .line 106
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     const/4 v4, 0x0
 
     invoke-virtual {v0, p1, v4, p2}, Ljava/io/RandomAccessFile;->write([BII)V
 
     .line 107
-    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->apQ:Ljava/io/RandomAccessFile;
+    iget-object v0, p0, Lcom/tencent/mm/modelvoice/a;->anU:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v0}, Ljava/io/RandomAccessFile;->getFilePointer()J
     :try_end_1
@@ -650,7 +650,7 @@
 
     invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/modelvoice/a;->apy:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/modelvoice/a;->anC:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -680,10 +680,10 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 98
-    invoke-virtual {p0}, Lcom/tencent/mm/modelvoice/a;->lQ()V
+    invoke-virtual {p0}, Lcom/tencent/mm/modelvoice/a;->ll()V
 
     .line 99
     const/4 v0, -0x2
@@ -703,7 +703,7 @@
 
     invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/modelvoice/a;->apy:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/modelvoice/a;->anC:Ljava/lang/String;
 
     invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -743,10 +743,10 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 110
-    invoke-virtual {p0}, Lcom/tencent/mm/modelvoice/a;->lQ()V
+    invoke-virtual {p0}, Lcom/tencent/mm/modelvoice/a;->ll()V
 
     .line 111
     const/4 v0, -0x3

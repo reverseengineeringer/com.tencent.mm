@@ -1,4 +1,4 @@
-.class final Lcom/tencent/mm/ui/base/HeaderGridView$b;
+.class public final Lcom/tencent/mm/ui/base/HeaderGridView$b;
 .super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic iCY:Lcom/tencent/mm/ui/base/HeaderGridView;
+.field final synthetic kCb:Lcom/tencent/mm/ui/base/HeaderGridView;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 186
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$b;->iCY:Lcom/tencent/mm/ui/base/HeaderGridView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$b;->kCb:Lcom/tencent/mm/ui/base/HeaderGridView;
 
     .line 187
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -40,13 +40,13 @@
 
     .prologue
     .line 191
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$b;->iCY:Lcom/tencent/mm/ui/base/HeaderGridView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/HeaderGridView$b;->kCb:Lcom/tencent/mm/ui/base/HeaderGridView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/HeaderGridView;->getMeasuredWidth()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$b;->iCY:Lcom/tencent/mm/ui/base/HeaderGridView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$b;->kCb:Lcom/tencent/mm/ui/base/HeaderGridView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/base/HeaderGridView;->getPaddingLeft()I
 
@@ -54,7 +54,7 @@
 
     sub-int/2addr v0, v1
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$b;->iCY:Lcom/tencent/mm/ui/base/HeaderGridView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/HeaderGridView$b;->kCb:Lcom/tencent/mm/ui/base/HeaderGridView;
 
     invoke-virtual {v1}, Lcom/tencent/mm/ui/base/HeaderGridView;->getPaddingRight()I
 

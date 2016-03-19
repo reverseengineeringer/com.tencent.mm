@@ -1,30 +1,27 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
 
 public final class at
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avF = new a();
-  public b avG = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atW = new a();
   
   public at()
   {
-    id = "ExDeviceIBeaconRanging";
-    hXT = atO;
+    id = "CreateOrJoinChatroom";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String avH;
-    public boolean avI = false;
-  }
-  
-  public static final class b
-  {
-    public boolean avJ = false;
+    public int action = 0;
+    public String[] asa;
+    public Context context;
+    public String[] selectionArgs;
   }
 }
 

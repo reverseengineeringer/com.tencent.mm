@@ -1,28 +1,85 @@
 package com.tencent.mm.plugin.accountsync.a;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnCancelListener;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ae;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.y;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.u;
+import java.util.HashMap;
 
 public final class c
-  implements DialogInterface.OnCancelListener
+  implements ae
 {
-  public c(b paramb) {}
+  private static int cfp = 0;
+  public static int coh = a.col;
+  private static af coj = null;
+  private a cog = null;
+  private com.tencent.mm.plugin.accountsync.model.a coi;
   
-  public final void onCancel(DialogInterface paramDialogInterface)
+  public static void eo(int paramInt)
   {
-    t.w("!24@/B4Tb64lLpIfnJwgZ47LaQ==", "do init canceled");
-    ax.tm().c(bXa.avq);
-    if (bXa.avq.getType() == 37) {
-      ax.tm().b(37, bXa);
-    }
-    while (bXa.avq.getType() != 38) {
+    coh = paramInt;
+    switch (2.cok[(paramInt - 1)])
+    {
+    default: 
+      return;
+    case 1: 
+      cfp = 0;
+      if (coj == null) {
+        coj = new af(new af.a()
+        {
+          public final boolean lj()
+          {
+            c.kE();
+            if ((c.aa() == 1) || (c.aa() == 16) || (c.aa() % 96 == 0)) {
+              ah.kU().nn();
+            }
+            return true;
+          }
+        }, true);
+      }
+      u.d("!44@/B4Tb64lLpIAhUt0Bg2QTtWTArGQBknYDKsnvcDnFmA=", "[oneliang][SmsVerifyCodeState]Sent");
+      coj.ds(900000L);
       return;
     }
-    ax.tm().b(38, bXa);
+    if (coj != null) {
+      coj.aUF();
+    }
+    u.d("!44@/B4Tb64lLpIAhUt0Bg2QTtWTArGQBknYDKsnvcDnFmA=", "[oneliang][SmsVerifyCodeState]verified");
+    coh = a.col;
+    ah.kU().no();
+    cfp = 0;
+    coj = null;
+  }
+  
+  public final void aN(int paramInt) {}
+  
+  public final void ai(boolean paramBoolean)
+  {
+    coi = new com.tencent.mm.plugin.accountsync.model.a();
+  }
+  
+  public final void aj(boolean paramBoolean) {}
+  
+  public final HashMap lo()
+  {
+    return null;
+  }
+  
+  public final void lp()
+  {
+    com.tencent.mm.plugin.accountsync.model.a locala = coi;
+    com.tencent.mm.sdk.c.a.jUF.c("ModNewContact", cot);
+    coi = null;
+  }
+  
+  public static enum a
+  {
+    public static int[] FZ()
+    {
+      return (int[])coo.clone();
+    }
   }
 }
 

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cu
-  extends a.c
+  extends a.e
 {
   public a$cu()
   {
-    super("stopVoice", "", 101, false);
+    super("openDesignerProfileLocal", "openDesignerProfileLocal", 20000, false);
   }
 }
 

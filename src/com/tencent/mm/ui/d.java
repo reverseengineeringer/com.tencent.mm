@@ -1,45 +1,33 @@
 package com.tencent.mm.ui;
 
-public abstract interface d
+import com.tencent.mm.sdk.platformtools.y;
+
+public final class d
 {
-  public abstract void aJK();
-  
-  public abstract void c(int paramInt, float paramFloat);
-  
-  public abstract void eQ(boolean paramBoolean);
-  
-  public abstract void eR(boolean paramBoolean);
-  
-  public abstract int getContactTabUnread();
-  
-  public abstract int getCurIdx();
-  
-  public abstract int getFriendTabUnread();
-  
-  public abstract int getMainTabUnread();
-  
-  public abstract boolean getSettingsPoint();
-  
-  public abstract int getSettingsTabUnread();
-  
-  public abstract boolean getShowFriendPoint();
-  
-  public abstract void mU(int paramInt);
-  
-  public abstract void mV(int paramInt);
-  
-  public abstract void mW(int paramInt);
-  
-  public abstract void mX(int paramInt);
-  
-  public abstract void setOnTabClickListener(a parama);
-  
-  public abstract void setTo(int paramInt);
-  
-  public static abstract interface a
+  public static final class a
   {
-    public abstract void mY(int paramInt);
+    public static int kjJ = 0;
   }
+  
+  public static abstract interface b
+  {
+    public static final String kjK = "FREE_WIFI_IS_DEFAULT_FOCUS".toLowerCase();
+  }
+  
+  public static final class c {}
+  
+  public static final class d
+  {
+    public static final String buD = null;
+  }
+  
+  public static abstract interface e
+  {
+    public static final String kjL = ;
+    public static final String kjM = y.getPackageName() + ":tools";
+  }
+  
+  public static final class f {}
 }
 
 /* Location:

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ah
-  extends a.c
+  extends a.e
 {
   public a$ah()
   {
-    super("getPaymentOrderRequest", "getPaymentOrderRequest", 116, true);
+    super("downloadImage", "downloadImage", 106, true);
   }
 }
 

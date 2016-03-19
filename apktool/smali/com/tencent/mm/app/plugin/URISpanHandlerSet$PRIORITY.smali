@@ -35,7 +35,7 @@
 
     const/4 v2, 0x0
 
-    .line 92
+    .line 95
     new-instance v0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;
 
     const-string/jumbo v1, "LOW"
@@ -60,7 +60,7 @@
 
     sput-object v0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;->HIGH:Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;
 
-    .line 91
+    .line 94
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;
@@ -86,7 +86,7 @@
     .locals 0
 
     .prologue
-    .line 91
+    .line 94
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -96,7 +96,7 @@
     .locals 1
 
     .prologue
-    .line 91
+    .line 94
     const-class v0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -112,7 +112,7 @@
     .locals 1
 
     .prologue
-    .line 91
+    .line 94
     sget-object v0, Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;->$VALUES:[Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/app/plugin/URISpanHandlerSet$PRIORITY;->clone()Ljava/lang/Object;

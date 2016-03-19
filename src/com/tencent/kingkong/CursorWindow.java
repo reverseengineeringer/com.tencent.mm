@@ -29,7 +29,18 @@ public class CursorWindow
     for (sCursorWindowSize = Resources.getSystem().getInteger(sCursorWindowSize);; sCursorWindowSize = 2048)
     {
       sCursorWindowSize *= 1024;
-      CREATOR = new CursorWindow.1();
+      CREATOR = new Parcelable.Creator()
+      {
+        public final CursorWindow createFromParcel(Parcel paramAnonymousParcel)
+        {
+          return new CursorWindow(paramAnonymousParcel, null);
+        }
+        
+        public final CursorWindow[] newArray(int paramAnonymousInt)
+        {
+          return new CursorWindow[paramAnonymousInt];
+        }
+      };
       sWindowToPidMap = new SparseIntArray();
       return;
     }

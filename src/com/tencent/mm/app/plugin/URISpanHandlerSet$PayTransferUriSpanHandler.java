@@ -3,13 +3,12 @@ package com.tencent.mm.app.plugin;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.Toast;
-import com.tencent.mm.a.n;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
-import com.tencent.mm.pluginsdk.wallet.c;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
+import com.tencent.mm.pluginsdk.wallet.d;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$PayTransferUriSpanHandler
@@ -20,55 +19,55 @@ class URISpanHandlerSet$PayTransferUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     return false;
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     int i;
     if (paramString.startsWith("wxpay://"))
     {
       paramBundle = null;
-      if (paramn != null) {
-        paramBundle = paramn.ayD().toString();
+      if (paraml != null) {
+        paramBundle = paraml.aPf().toString();
       }
-      if (bn.iW(paramBundle))
+      if (ay.kz(paramBundle))
       {
-        t.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "SERVICE_JUMP_TO_PAY fail, null username");
+        u.e("!44@/B4Tb64lLpLEFJxLgdI361HE0ZAZBDDP6VGz8aUvRl4=", "SERVICE_JUMP_TO_PAY fail, null username");
         return false;
       }
-      paramn = paramString.substring(8);
-      paramString = paramn;
-      if (paramn.indexOf("&") > 0) {
-        paramString = paramn.split("&")[0];
+      paraml = paramString.substring(8);
+      paramString = paraml;
+      if (paraml.indexOf("&") > 0) {
+        paramString = paraml.split("&")[0];
       }
       i = paramString.indexOf("=");
       if (i < 0) {
-        break label149;
+        break label150;
       }
     }
-    label149:
+    label150:
     for (paramString = paramString.substring(i + 1);; paramString = "")
     {
-      if (bn.getInt(paramString, 0) == 1)
+      if (ay.getInt(paramString, 0) == 1)
       {
-        c.a(URISpanHandlerSet.a(apd), 2, paramBundle);
+        d.a(URISpanHandlerSet.a(ang), 2, paramBundle, 11);
         return true;
       }
-      Toast.makeText(URISpanHandlerSet.a(apd), URISpanHandlerSet.a(apd).getString(a.n.service_app_service_not_support), 0).show();
+      Toast.makeText(URISpanHandlerSet.a(ang), URISpanHandlerSet.a(ang).getString(2131429528), 0).show();
       return false;
       return false;
     }
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[0];
   }

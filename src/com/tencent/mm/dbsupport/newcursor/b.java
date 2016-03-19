@@ -9,23 +9,23 @@ import java.util.HashMap;
 public abstract class b
   extends SQLiteClosable
 {
-  public SparseArray bkJ = new SparseArray();
-  public int bkK;
-  public HashMap bkL = new HashMap();
-  ArrayList bkM;
-  public a bkN;
+  public SparseArray bvm = new SparseArray();
+  public int bvn;
+  public HashMap bvo = new HashMap();
+  ArrayList bvp;
+  public a bvq;
   public int mStartPos = 0;
   
-  public final boolean S(Object paramObject)
+  public final boolean T(Object paramObject)
   {
     if ((paramObject instanceof Object[]))
     {
       Object[] arrayOfObject = (Object[])paramObject;
       if (arrayOfObject.length == 1) {
-        return (bkL != null) && (bkL.containsKey(arrayOfObject[0]));
+        return (bvo != null) && (bvo.containsKey(arrayOfObject[0]));
       }
     }
-    return (bkL != null) && (bkL.containsKey(paramObject));
+    return (bvo != null) && (bvo.containsKey(paramObject));
   }
   
   final void b(Object[] paramArrayOfObject)
@@ -33,16 +33,16 @@ public abstract class b
     SparseArray localSparseArray = new SparseArray();
     int i = 0;
     int j = 0;
-    if (i >= bkJ.size())
+    if (i >= bvm.size())
     {
-      if (bkJ.size() != localSparseArray.size()) {
-        Log.i("MicroMsg.kkdb.CursorDataWindow", "newcursor oldposition size :" + bkJ.size() + " newposistion Size : " + localSparseArray.size());
+      if (bvm.size() != localSparseArray.size()) {
+        Log.i("MicroMsg.kkdb.CursorDataWindow", "newcursor oldposition size :" + bvm.size() + " newposistion Size : " + localSparseArray.size());
       }
-      bkJ = localSparseArray;
+      bvm = localSparseArray;
       return;
     }
-    int n = bkJ.keyAt(i);
-    Object localObject = bkJ.valueAt(i);
+    int n = bvm.keyAt(i);
+    Object localObject = bvm.valueAt(i);
     int m = 1;
     int i1 = paramArrayOfObject.length;
     int k = 0;
@@ -73,24 +73,24 @@ public abstract class b
     }
   }
   
-  public final boolean ch(int paramInt)
+  public final boolean ci(int paramInt)
   {
-    return bkJ.indexOfKey(paramInt) >= 0;
+    return bvm.indexOfKey(paramInt) >= 0;
   }
   
-  public abstract ArrayList e(ArrayList paramArrayList);
+  public abstract ArrayList d(ArrayList paramArrayList);
   
   protected void onAllReferencesReleased()
   {
-    qI();
+    qE();
   }
   
-  public abstract a qH();
+  public abstract a qD();
   
-  public final void qI()
+  public final void qE()
   {
-    bkJ.clear();
-    bkL.clear();
+    bvm.clear();
+    bvo.clear();
   }
 }
 

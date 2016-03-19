@@ -1,39 +1,27 @@
 package android.support.v4.widget;
 
 import android.content.Context;
-import android.graphics.Canvas;
+import android.view.animation.Interpolator;
 
-final class e$a
-  implements e.c
+abstract interface e$a
 {
-  public final void a(Object paramObject, int paramInt1, int paramInt2) {}
+  public abstract boolean A(Object paramObject);
   
-  public final boolean a(Object paramObject, float paramFloat)
-  {
-    return false;
-  }
+  public abstract int D(Object paramObject);
   
-  public final boolean a(Object paramObject, Canvas paramCanvas)
-  {
-    return false;
-  }
+  public abstract int E(Object paramObject);
   
-  public final Object e(Context paramContext)
-  {
-    return null;
-  }
+  public abstract boolean F(Object paramObject);
   
-  public final boolean x(Object paramObject)
-  {
-    return true;
-  }
+  public abstract void G(Object paramObject);
   
-  public final void y(Object paramObject) {}
+  public abstract int H(Object paramObject);
   
-  public final boolean z(Object paramObject)
-  {
-    return false;
-  }
+  public abstract int I(Object paramObject);
+  
+  public abstract void a(Object paramObject, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5);
+  
+  public abstract Object b(Context paramContext, Interpolator paramInterpolator);
 }
 
 /* Location:

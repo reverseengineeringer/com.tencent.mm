@@ -86,21 +86,21 @@
     .prologue
     const-wide/high16 v0, -0x4010000000000000L    # -1.0
 
-    .line 9
+    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
+    .line 99
     iput-wide v0, p0, Lcom/tencent/mm/compatible/util/Exif;->latitude:D
 
-    .line 98
+    .line 100
     iput-wide v0, p0, Lcom/tencent/mm/compatible/util/Exif;->longitude:D
 
-    .line 99
+    .line 101
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lcom/tencent/mm/compatible/util/Exif;->altitude:D
 
-    .line 102
+    .line 104
     return-void
 .end method
 
@@ -108,18 +108,18 @@
     .locals 5
 
     .prologue
-    .line 133
+    .line 148
     new-instance v1, Lcom/tencent/mm/compatible/util/Exif;
 
     invoke-direct {v1}, Lcom/tencent/mm/compatible/util/Exif;-><init>()V
 
-    .line 135
+    .line 150
     :try_start_0
     invoke-virtual {v1, p0}, Lcom/tencent/mm/compatible/util/Exif;->parseFromFile(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 136
+    .line 151
     const-string/jumbo v2, "!24@/B4Tb64lLpLQrKIfvC61MA=="
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -136,19 +136,19 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 141
+    .line 156
     :goto_0
     return-object v1
 
-    .line 137
+    .line 152
     :catch_0
     move-exception v0
 
-    .line 138
+    .line 153
     const-string/jumbo v2, "!24@/B4Tb64lLpLQrKIfvC61MA=="
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -169,7 +169,7 @@
 
     move-result-object v0
 
-    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v2, v0}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
@@ -188,7 +188,7 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 125
+    .line 127
     iget-wide v0, p0, Lcom/tencent/mm/compatible/util/Exif;->latitude:D
 
     cmpg-double v0, v0, v2
@@ -204,7 +204,7 @@
     :cond_0
     const/4 v0, 0x0
 
-    .line 126
+    .line 128
     :goto_0
     return-object v0
 
@@ -226,37 +226,37 @@
     .locals 1
 
     .prologue
-    .line 116
+    .line 118
     iget-short v0, p0, Lcom/tencent/mm/compatible/util/Exif;->orientation:S
 
     packed-switch v0, :pswitch_data_0
 
-    .line 120
+    .line 122
     :pswitch_0
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 117
+    .line 119
     :pswitch_1
     const/16 v0, 0x5a
 
     goto :goto_0
 
-    .line 118
+    .line 120
     :pswitch_2
     const/16 v0, 0xb4
 
     goto :goto_0
 
-    .line 119
+    .line 121
     :pswitch_3
     const/16 v0, 0x10e
 
     goto :goto_0
 
-    .line 116
+    .line 118
     :pswitch_data_0
     .packed-switch 0x3
         :pswitch_2
@@ -268,11 +268,61 @@
     .end packed-switch
 .end method
 
+.method public getUxtimeDatatimeOriginal()J
+    .locals 6
+
+    .prologue
+    const-wide/16 v0, 0x0
+
+    .line 136
+    :try_start_0
+    iget-object v2, p0, Lcom/tencent/mm/compatible/util/Exif;->dateTimeOriginal:Ljava/lang/String;
+
+    if-nez v2, :cond_0
+
+    .line 142
+    :goto_0
+    return-wide v0
+
+    .line 139
+    :cond_0
+    new-instance v2, Ljava/text/SimpleDateFormat;
+
+    const-string/jumbo v3, "yyyy:MM:dd HH:mm:ss"
+
+    invoke-direct {v2, v3}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;)V
+
+    iget-object v3, p0, Lcom/tencent/mm/compatible/util/Exif;->dateTimeOriginal:Ljava/lang/String;
+
+    invoke-virtual {v2, v3}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
+
+    move-result-object v2
+
+    .line 140
+    invoke-virtual {v2}, Ljava/util/Date;->getTime()J
+
+    move-result-wide v2
+
+    const-wide/16 v4, 0x3e8
+
+    div-long v0, v2, v4
+    :try_end_0
+    .catch Ljava/text/ParseException; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 142
+    :catch_0
+    move-exception v2
+
+    goto :goto_0
+.end method
+
 .method public parseFrom([B)I
     .locals 2
 
     .prologue
-    .line 54
+    .line 56
     const/4 v0, 0x0
 
     array-length v1, p1
@@ -288,7 +338,7 @@
     .locals 1
 
     .prologue
-    .line 58
+    .line 60
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/compatible/util/Exif;->nativeParse([BII)I
 
     move-result v0
@@ -300,23 +350,23 @@
     .locals 2
 
     .prologue
-    .line 33
+    .line 35
     const/4 v1, 0x0
 
-    .line 35
+    .line 37
     :try_start_0
     invoke-static {p1}, Lcom/tencent/mm/modelsfs/FileOp;->openRead(Ljava/lang/String;)Ljava/io/InputStream;
 
     move-result-object v1
 
-    .line 36
+    .line 38
     invoke-virtual {p0, v1}, Lcom/tencent/mm/compatible/util/Exif;->parseFromStream(Ljava/io/InputStream;)I
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result v0
 
-    .line 38
+    .line 40
     if-eqz v1, :cond_0
 
     :try_start_1
@@ -357,26 +407,26 @@
     .locals 4
 
     .prologue
-    .line 44
+    .line 46
     const/high16 v0, 0x10000
 
     new-array v0, v0, [B
 
-    .line 45
+    .line 47
     invoke-virtual {p1, v0}, Ljava/io/InputStream;->read([B)I
 
     move-result v1
 
-    .line 46
+    .line 48
     if-gtz v1, :cond_0
 
     const/16 v0, 0x7be
 
-    .line 50
+    .line 52
     :goto_0
     return v0
 
-    .line 48
+    .line 50
     :cond_0
     const/4 v2, 0x0
 
@@ -384,7 +434,7 @@
 
     move-result v0
 
-    .line 49
+    .line 51
     const-string/jumbo v1, "!24@/B4Tb64lLpLQrKIfvC61MA=="
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -401,7 +451,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

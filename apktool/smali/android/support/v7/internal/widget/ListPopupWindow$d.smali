@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field final synthetic rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+.field final synthetic qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
 
 # direct methods
@@ -27,7 +27,7 @@
 
     .prologue
     .line 1409
-    iput-object p1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iput-object p1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -63,7 +63,7 @@
 
     if-ne p2, v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-virtual {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->isInputMethodNotNeeded()Z
 
@@ -71,7 +71,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->b(Landroid/support/v7/internal/widget/ListPopupWindow;)Landroid/widget/PopupWindow;
 
@@ -84,22 +84,22 @@
     if-eqz v0, :cond_0
 
     .line 1419
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
-    invoke-static {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->d(Landroid/support/v7/internal/widget/ListPopupWindow;)Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-static {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->d(Landroid/support/v7/internal/widget/ListPopupWindow;)Lcom/tencent/mm/sdk/platformtools/aa;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v1, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-static {v1}, Landroid/support/v7/internal/widget/ListPopupWindow;->c(Landroid/support/v7/internal/widget/ListPopupWindow;)Landroid/support/v7/internal/widget/ListPopupWindow$f;
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ac;->removeCallbacks(Ljava/lang/Runnable;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->removeCallbacks(Ljava/lang/Runnable;)V
 
     .line 1420
-    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->rg:Landroid/support/v7/internal/widget/ListPopupWindow;
+    iget-object v0, p0, Landroid/support/v7/internal/widget/ListPopupWindow$d;->qi:Landroid/support/v7/internal/widget/ListPopupWindow;
 
     invoke-static {v0}, Landroid/support/v7/internal/widget/ListPopupWindow;->c(Landroid/support/v7/internal/widget/ListPopupWindow;)Landroid/support/v7/internal/widget/ListPopupWindow$f;
 

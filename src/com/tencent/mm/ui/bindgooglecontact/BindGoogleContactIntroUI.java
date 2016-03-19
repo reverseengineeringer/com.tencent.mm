@@ -1,113 +1,149 @@
 package com.tencent.mm.ui.bindgooglecontact;
 
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
+import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelfriend.x;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.aa.a;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.modelfriend.n;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.h;
 import com.tencent.mm.ui.MMActivity;
+import com.tencent.mm.ui.base.g;
 
 public class BindGoogleContactIntroUI
   extends MMActivity
   implements d
 {
-  private ProgressDialog cHR;
-  private boolean enm = false;
-  private ImageView iNl;
-  private TextView iNm;
-  private Button iNn;
-  private Button iNo;
-  private boolean iNp = false;
-  private String iNq;
-  private com.tencent.mm.x.a iNr;
-  private int iNs;
-  private View.OnClickListener iNt = new a(this);
-  private View.OnClickListener iNu = new b(this);
-  
-  private void aNC()
+  private ProgressDialog dfT;
+  private boolean fxi = false;
+  private Button kMA;
+  private Button kMB;
+  private boolean kMC = false;
+  private String kMD;
+  private a kME;
+  private int kMF;
+  private View.OnClickListener kMG = new View.OnClickListener()
   {
-    iNo.setVisibility(8);
-    iNn.setVisibility(0);
-    iNl.setVisibility(0);
-    iNm.setVisibility(0);
-    iNm.setText(a.n.bind_gcontact_contenct_setting);
-    iNn.setText(a.n.bind_gcontact_btn_setting);
-    iNn.setOnClickListener(iNt);
+    public final void onClick(View paramAnonymousView)
+    {
+      paramAnonymousView = new Intent(BindGoogleContactIntroUI.this, BindGoogleContactUI.class);
+      paramAnonymousView.putExtra("enter_scene", BindGoogleContactIntroUI.a(BindGoogleContactIntroUI.this));
+      startActivity(paramAnonymousView);
+    }
+  };
+  private View.OnClickListener kMH = new View.OnClickListener()
+  {
+    public final void onClick(View paramAnonymousView)
+    {
+      g.a(koJ.kpc, true, getString(2131428692), "", getString(2131428690), getString(2131430884), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+      {
+        public final void onClick(DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int)
+        {
+          BindGoogleContactIntroUI.b(BindGoogleContactIntroUI.this);
+        }
+      }, new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymous2DialogInterface, int paramAnonymous2Int) {}
+      });
+    }
+  };
+  private ImageView kMy;
+  private TextView kMz;
+  
+  private void bdt()
+  {
+    kMB.setVisibility(8);
+    kMA.setVisibility(0);
+    kMy.setVisibility(0);
+    kMz.setVisibility(0);
+    kMz.setText(2131428687);
+    kMA.setText(2131428689);
+    kMA.setOnClickListener(kMG);
   }
   
-  protected final void DV()
+  protected final void Gb()
   {
-    a(new e(this));
-    iNl = ((ImageView)findViewById(a.i.setting_bind_google_account_icon));
-    iNm = ((TextView)findViewById(a.i.setting_bind_google_account_text));
-    iNn = ((Button)findViewById(a.i.setting_bind_google_account_btn));
-    iNo = ((Button)findViewById(a.i.setting_unbind_google_account_btn));
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        finish();
+        return true;
+      }
+    });
+    kMy = ((ImageView)findViewById(2131169209));
+    kMz = ((TextView)findViewById(2131169210));
+    kMA = ((Button)findViewById(2131169211));
+    kMB = ((Button)findViewById(2131169212));
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
   {
     paramj = paramString;
     if (TextUtils.isEmpty(paramString)) {
       paramj = "";
     }
-    t.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBpE9XXpT6K0t", "[onSceneEnd] errType:%d,errCode:%d,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramj });
-    if ((cHR != null) && (cHR.isShowing())) {
-      cHR.dismiss();
+    u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBpE9XXpT6K0t", "[onSceneEnd] errType:%d,errCode:%d,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramj });
+    if ((dfT != null) && (dfT.isShowing())) {
+      dfT.dismiss();
     }
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      ax.tl().rf().set(208903, "");
-      ax.tl().rf().set(208901, "");
-      ax.tl().rf().set(208902, "");
-      ax.tl().rf().set(208905, Boolean.valueOf(true));
-      ax.tl().rf().eN(true);
-      aNC();
-      com.tencent.mm.ui.base.h.aN(this, getString(a.n.unbind_gcontact_success_tip));
+      ah.tD().rn().set(208903, "");
+      ah.tD().rn().set(208901, "");
+      ah.tD().rn().set(208902, "");
+      ah.tD().rn().set(208905, Boolean.valueOf(true));
+      ah.tD().rn().gN(true);
+      bdt();
+      g.ba(this, getString(2131428693));
       return;
     }
-    t.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBpE9XXpT6K0t", "unbind failed");
-    Toast.makeText(this, a.n.gcontact_unbind_failed_msg, 0).show();
+    u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBpE9XXpT6K0t", "unbind failed");
+    Toast.makeText(this, 2131428707, 0).show();
   }
   
   protected final int getLayoutId()
   {
-    return a.k.bindgooglecontactintro;
+    return 2131363106;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    t.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBpE9XXpT6K0t", "requestCode:%d, resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    u.i("!64@/B4Tb64lLpKHrGLZvbPyiE8eKM9hrTovnMB6ms+nCtpDKu2axzhXBpE9XXpT6K0t", "requestCode:%d, resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
     if (paramInt2 == -1) {
       if (paramInt1 == 2005) {
-        enm = paramIntent.getBooleanExtra("gpservices", false);
+        fxi = paramIntent.getBooleanExtra("gpservices", false);
       }
     }
     while (paramInt1 != 2005) {
       return;
     }
-    enm = paramIntent.getBooleanExtra("gpservices", false);
+    fxi = paramIntent.getBooleanExtra("gpservices", false);
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    nh(a.n.bind_gcontact_title_setting);
-    iNs = getIntent().getIntExtra("enter_scene", 0);
-    enm = x.aC(this);
-    if (enm) {
+    qb(2131428686);
+    kMF = getIntent().getIntExtra("enter_scene", 0);
+    fxi = n.aM(this);
+    if (fxi) {
       startActivityForResult(new Intent("com.tencent.mm.gms.CHECK_GP_SERVICES"), 2005);
     }
   }
@@ -120,35 +156,35 @@ public class BindGoogleContactIntroUI
   protected void onResume()
   {
     super.onResume();
-    iNq = ((String)ax.tl().rf().get(208903, null));
-    if (TextUtils.isEmpty(iNq))
+    kMD = ((String)ah.tD().rn().get(208903, null));
+    if (TextUtils.isEmpty(kMD))
     {
-      iNp = false;
-      DV();
-      if (!iNp) {
+      kMC = false;
+      Gb();
+      if (!kMC) {
         break label129;
       }
-      iNo.setVisibility(0);
-      iNn.setVisibility(8);
-      iNm.setVisibility(0);
-      iNm.setText(getString(a.n.bind_gcontact_contenct_binded, new Object[] { iNq }));
-      iNo.setOnClickListener(iNu);
+      kMB.setVisibility(0);
+      kMA.setVisibility(8);
+      kMz.setVisibility(0);
+      kMz.setText(getString(2131428688, new Object[] { kMD }));
+      kMB.setOnClickListener(kMH);
     }
     for (;;)
     {
-      ax.tm().a(487, this);
+      ah.tE().a(487, this);
       return;
-      iNp = true;
+      kMC = true;
       break;
       label129:
-      aNC();
+      bdt();
     }
   }
   
   protected void onStop()
   {
     super.onStop();
-    ax.tm().b(487, this);
+    ah.tE().b(487, this);
   }
 }
 

@@ -2,10 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class gi$a
 {
-  public String aDK;
-  public String appId;
-  public String mediaTagName;
-  public String pkgName;
+  public int aBw = 0;
+  public int status = 0;
 }
 
 /* Location:

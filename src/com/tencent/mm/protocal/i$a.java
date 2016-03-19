@@ -1,12 +1,56 @@
 package com.tencent.mm.protocal;
 
-public abstract interface i$a
+import com.tencent.mm.protocal.b.ed;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import java.io.IOException;
+
+public final class i$a
+  extends h.c
+  implements h.a
 {
-  public abstract boolean aDr();
+  public int iUN = 0;
+  public int netType;
   
-  public abstract byte[] tH();
+  public final boolean auE()
+  {
+    return true;
+  }
   
-  public abstract int tI();
+  public final int getCmdId()
+  {
+    return 312;
+  }
+  
+  public final byte[] tY()
+  {
+    Object localObject = new ed();
+    iZV = b.iUf;
+    jaZ = 2;
+    jba = netType;
+    jbb = iUN;
+    u.i("!24@/B4Tb64lLpKXSbY2VQERGw==", "somr online:%d nettype:%d ver:%d devid:%d", new Object[] { Integer.valueOf(jbb), Integer.valueOf(jba), Integer.valueOf(iZV), Integer.valueOf(jaZ) });
+    try
+    {
+      localObject = ((ed)localObject).toByteArray();
+      return (byte[])localObject;
+    }
+    catch (IOException localIOException)
+    {
+      u.e("!24@/B4Tb64lLpKXSbY2VQERGw==", "MMBgfg toProtoBuf exception:%s", new Object[] { ay.b(localIOException) });
+    }
+    return null;
+  }
+  
+  public final int tZ()
+  {
+    return 0;
+  }
+  
+  public final boolean we()
+  {
+    return false;
+  }
 }
 
 /* Location:

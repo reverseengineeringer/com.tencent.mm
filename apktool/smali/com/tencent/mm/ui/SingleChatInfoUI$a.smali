@@ -45,7 +45,7 @@
 
     .prologue
     .line 407
-    invoke-static {}, Lcom/tencent/mm/ui/SingleChatInfoUI;->aLF()Z
+    invoke-static {}, Lcom/tencent/mm/ui/SingleChatInfoUI;->bbu()Z
 
     .line 408
     return-void

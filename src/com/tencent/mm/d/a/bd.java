@@ -1,31 +1,27 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.storage.a.c;
 
 public final class bd
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a awe = new a();
-  public b awf = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a auk = new a();
   
   public bd()
   {
-    id = "ExDeviceSetSendDataDirection";
-    hXT = atO;
+    id = "EmojiFileChecker";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String anZ;
-    public boolean awg;
-    public int direction;
-  }
-  
-  public static final class b
-  {
-    public boolean avu;
+    public int asc;
+    public c aul;
+    public Context context;
   }
 }
 

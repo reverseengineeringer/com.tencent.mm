@@ -7,10 +7,7 @@ import android.graphics.Bitmap;
 import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
-import java.io.IOException;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 public final class BackwardSupportUtil$b
 {
@@ -23,7 +20,7 @@ public final class BackwardSupportUtil$b
   
   public static Bitmap a(InputStream paramInputStream, float paramFloat, int paramInt1, int paramInt2)
   {
-    paramInputStream = e.a(paramInputStream, paramFloat, paramInt1, paramInt2);
+    paramInputStream = d.a(paramInputStream, paramFloat, paramInt1, paramInt2);
     if (paramInputStream != null) {
       paramInputStream.setDensity((int)(160.0F * paramFloat));
     }
@@ -32,14 +29,14 @@ public final class BackwardSupportUtil$b
   
   public static Bitmap b(String paramString, float paramFloat)
   {
-    paramString = e.c(paramString, paramFloat);
+    paramString = d.c(paramString, paramFloat);
     if (paramString != null) {
       paramString.setDensity((int)(160.0F * paramFloat));
     }
     return paramString;
   }
   
-  public static String cI(Context paramContext)
+  public static String dk(Context paramContext)
   {
     Object localObject = paramContext.getResources().getDisplayMetrics();
     Configuration localConfiguration = paramContext.getResources().getConfiguration();
@@ -63,28 +60,6 @@ public final class BackwardSupportUtil$b
       paramContext = "" + "MDPI";
       break;
     }
-  }
-  
-  public static Bitmap xb(String paramString)
-  {
-    try
-    {
-      t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "get bitmap from url:" + paramString);
-      paramString = (HttpURLConnection)new URL(paramString).openConnection();
-      paramString.setDoInput(true);
-      paramString.connect();
-      paramString = paramString.getInputStream();
-      Bitmap localBitmap = e.decodeStream(paramString);
-      paramString.close();
-      return localBitmap;
-    }
-    catch (IOException paramString)
-    {
-      paramString = paramString;
-      t.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "get bitmap from url failed");
-      return null;
-    }
-    finally {}
   }
 }
 

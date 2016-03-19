@@ -3,84 +3,84 @@ package com.tencent.mm.modelstat;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import com.tencent.mm.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.platformtools.r;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 import java.io.File;
 
 public final class a
 {
-  private final String aDy;
-  private a bMx = null;
+  private final String aFX;
+  private a cdd = null;
   
   public a(String paramString)
   {
-    aDy = paramString;
+    aFX = paramString;
   }
   
-  public final a Bm()
+  public final a Dm()
   {
-    com.tencent.mm.sdk.g.a locala = null;
-    if (bMx != null) {
-      return bMx;
+    com.tencent.mm.sdk.h.a locala = null;
+    if (cdd != null) {
+      return cdd;
     }
-    String str = aDy + "mobileinfo.ini";
+    String str = aFX + "mobileinfo.ini";
     Object localObject2 = new File(str);
     if (!((File)localObject2).exists())
     {
-      t.i("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readConfig file not exist :%s", new Object[] { str });
+      u.i("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readConfig file not exist :%s", new Object[] { str });
       localObject1 = null;
     }
     Object localObject3;
     for (;;)
     {
-      bMx = ((a)localObject1);
-      if ((bMx == null) || (bMx.bMA)) {
+      cdd = ((a)localObject1);
+      if ((cdd == null) || (cdd.cdf)) {
         break;
       }
-      t.v("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "checkInfo mobile info cache Read file succ.");
-      return bMx;
-      localObject3 = new com.tencent.mm.sdk.g.a(str);
+      u.v("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "checkInfo mobile info cache Read file succ.");
+      return cdd;
+      localObject3 = new com.tencent.mm.sdk.h.a(str);
       localObject1 = new a();
-      bMy = bn.c(((com.tencent.mm.sdk.g.a)localObject3).ye("ispCode"));
-      ispName = ((com.tencent.mm.sdk.g.a)localObject3).getValue("ispName");
-      bMz = bn.c(((com.tencent.mm.sdk.g.a)localObject3).ye("subType"));
-      extraInfo = ((com.tencent.mm.sdk.g.a)localObject3).getValue("extraInfo");
+      cde = ay.d(((com.tencent.mm.sdk.h.a)localObject3).DF("ispCode"));
+      ispName = ((com.tencent.mm.sdk.h.a)localObject3).getValue("ispName");
+      atB = ay.d(((com.tencent.mm.sdk.h.a)localObject3).DF("subType"));
+      extraInfo = ((com.tencent.mm.sdk.h.a)localObject3).getValue("extraInfo");
       long l2 = ((File)localObject2).lastModified();
       long l1 = l2;
-      if (10011 == ab.bWm)
+      if (10011 == r.cnl)
       {
         l1 = l2;
-        if (ab.bWn > 0)
+        if (r.cnm > 0)
         {
-          l1 = bn.DM() - ab.bWn;
-          t.w("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readConfig DK_TEST_MOBILEINFOFILE_MODTIME val:%d lm:%d", new Object[] { Integer.valueOf(ab.bWn), Long.valueOf(l1) });
-          ab.bWn = 0;
+          l1 = ay.FS() - r.cnm;
+          u.w("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readConfig DK_TEST_MOBILEINFOFILE_MODTIME val:%d lm:%d", new Object[] { Integer.valueOf(r.cnm), Long.valueOf(l1) });
+          r.cnm = 0;
         }
       }
-      if ((l1 > 0L) && (bn.Y(l1) > 259200000L))
+      if ((l1 > 0L) && (ay.an(l1) > 259200000L))
       {
-        t.w("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readConfig  diff:%d file:%s cache expired remove!", new Object[] { Long.valueOf(bn.Y(l1)), str });
-        bMA = true;
+        u.w("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readConfig  diff:%d file:%s cache expired remove!", new Object[] { Long.valueOf(ay.an(l1)), str });
+        cdf = true;
       }
-      t.i("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readConfig MobileInfo subType:%d ispCode:%d ispName:%s extraInfo:%s expired:%b", new Object[] { Integer.valueOf(bMz), Integer.valueOf(bMy), ispName, extraInfo, Boolean.valueOf(bMA) });
+      u.i("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readConfig MobileInfo subType:%d ispCode:%d ispName:%s extraInfo:%s expired:%b", new Object[] { Integer.valueOf(atB), Integer.valueOf(cde), ispName, extraInfo, Boolean.valueOf(cdf) });
     }
-    localObject2 = aa.getContext();
+    localObject2 = y.getContext();
     if (localObject2 == null)
     {
-      t.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem MMApplicationContext is null");
+      u.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem MMApplicationContext is null");
       localObject1 = locala;
     }
     while (localObject1 == null)
     {
-      t.v("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem failed , use old.");
-      return bMx;
+      u.v("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem failed , use old.");
+      return cdd;
       localObject1 = (ConnectivityManager)((Context)localObject2).getSystemService("connectivity");
       if (localObject1 == null)
       {
-        t.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem ConnectivityManager is null");
+        u.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem ConnectivityManager is null");
         localObject1 = locala;
       }
       else
@@ -88,53 +88,53 @@ public final class a
         localObject3 = ((ConnectivityManager)localObject1).getActiveNetworkInfo();
         if (localObject3 == null)
         {
-          t.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem getActiveNetworkInfo is null");
+          u.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem getActiveNetworkInfo is null");
           localObject1 = locala;
         }
         else if (((NetworkInfo)localObject3).getType() == 1)
         {
-          t.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem net type is wifi");
+          u.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem net type is wifi");
           localObject1 = locala;
         }
         else
         {
           localObject1 = new a();
-          bMz = ((NetworkInfo)localObject3).getSubtype();
-          bMy = al.cQ((Context)localObject2);
-          ispName = al.cR((Context)localObject2);
+          atB = ((NetworkInfo)localObject3).getSubtype();
+          cde = ah.du((Context)localObject2);
+          ispName = ah.dv((Context)localObject2);
           extraInfo = ((NetworkInfo)localObject3).getExtraInfo();
-          t.i("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem subType:%d ispCode:%d ispName:%s extraInfo:%s", new Object[] { Integer.valueOf(bMz), Integer.valueOf(bMy), ispName, extraInfo });
+          u.i("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "readInfoBySystem subType:%d ispCode:%d ispName:%s extraInfo:%s", new Object[] { Integer.valueOf(atB), Integer.valueOf(cde), ispName, extraInfo });
         }
       }
     }
-    bMx = ((a)localObject1);
-    Object localObject1 = bMx;
+    cdd = ((a)localObject1);
+    Object localObject1 = cdd;
     if (localObject1 == null) {
-      t.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "saveConfig info is null");
+      u.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "saveConfig info is null");
     }
     for (;;)
     {
-      return bMx;
-      if (bn.iW(str))
+      return cdd;
+      if (ay.kz(str))
       {
-        t.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "saveConfig path is null");
+        u.e("!64@/B4Tb64lLpKsMp00pgLFBpt4T6Eocwl+KTPY3tRlFyXZNWG0xH3GFhtY2crCyjH0", "saveConfig path is null");
       }
       else
       {
-        locala = new com.tencent.mm.sdk.g.a(str);
-        locala.aw("ispCode", bMy);
-        locala.bv("ispName", ispName);
-        locala.aw("subType", bMz);
-        locala.bv("extraInfo", extraInfo);
+        locala = new com.tencent.mm.sdk.h.a(str);
+        locala.aM("ispCode", cde);
+        locala.ch("ispName", ispName);
+        locala.aM("subType", atB);
+        locala.ch("extraInfo", extraInfo);
       }
     }
   }
   
   public static final class a
   {
-    boolean bMA = false;
-    public int bMy = 0;
-    public int bMz = 0;
+    public int atB = 0;
+    public int cde = 0;
+    boolean cdf = false;
     public String extraInfo = "";
     public String ispName = "";
   }

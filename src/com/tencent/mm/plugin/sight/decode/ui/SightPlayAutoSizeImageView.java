@@ -7,18 +7,18 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 import android.widget.TextView;
-import com.tencent.mm.a.a;
-import com.tencent.mm.a.h;
 import com.tencent.mm.plugin.sight.decode.a.b;
 import com.tencent.mm.plugin.sight.decode.a.b.e;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.plugin.sight.decode.a.b.f;
+import com.tencent.mm.plugin.sight.decode.a.b.g;
+import com.tencent.mm.sdk.platformtools.u;
 import java.lang.ref.WeakReference;
 
 public class SightPlayAutoSizeImageView
   extends ImageView
   implements com.tencent.mm.plugin.sight.decode.a.a
 {
-  private b fhN = new a(this);
+  private b gyr = new a(this);
   
   public SightPlayAutoSizeImageView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -30,27 +30,32 @@ public class SightPlayAutoSizeImageView
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  public final void I(String paramString, boolean paramBoolean)
+  public final void P(String paramString, boolean paramBoolean)
   {
-    fhN.I(paramString, paramBoolean);
+    gyr.P(paramString, paramBoolean);
   }
   
-  public final void aI(int paramInt1, int paramInt2) {}
-  
-  public final void ajl()
+  public final void avF()
   {
     setImageBitmap(null);
-    setImageResource(a.h.nosdcard_chatting_bg);
+    setImageResource(2130970478);
   }
   
-  public final boolean ajm()
+  public final boolean avG()
   {
-    return fhN.ajq();
+    return gyr.avK();
   }
+  
+  public final void bc(int paramInt1, int paramInt2) {}
   
   public final void clear()
   {
-    fhN.clear();
+    gyr.clear();
+  }
+  
+  public final void eD(boolean paramBoolean)
+  {
+    gyr.eD(paramBoolean);
   }
   
   public Object getTagObject()
@@ -65,56 +70,63 @@ public class SightPlayAutoSizeImageView
   
   public String getVideoPath()
   {
-    return fhN.fgY;
+    return gyr.gxe;
   }
   
   protected void onAttachedToWindow()
   {
-    t.d("!56@/B4Tb64lLpK4fJPZwyrCPCWfOsJdH0JJ0Jl+aEYu1H532BTfrYHKpw==", "#0x%x on attached from window", new Object[] { Integer.valueOf(hashCode()) });
+    u.d("!56@/B4Tb64lLpK4fJPZwyrCPCWfOsJdH0JJ0Jl+aEYu1H532BTfrYHKpw==", "#0x%x on attached from window", new Object[] { Integer.valueOf(hashCode()) });
     super.onAttachedToWindow();
-    com.tencent.mm.sdk.c.a.hXQ.a("UIStatusChanged", fhN.ajr());
+    com.tencent.mm.sdk.c.a.jUF.b("UIStatusChanged", gyr.avL());
   }
   
   protected void onDetachedFromWindow()
   {
     super.onDetachedFromWindow();
-    t.i("!56@/B4Tb64lLpK4fJPZwyrCPCWfOsJdH0JJ0Jl+aEYu1H532BTfrYHKpw==", "#0x%x clear, on deattached to window", new Object[] { Integer.valueOf(hashCode()) });
-    fhN.clear();
-    com.tencent.mm.sdk.c.a.hXQ.b("UIStatusChanged", fhN.ajr());
+    u.i("!56@/B4Tb64lLpK4fJPZwyrCPCWfOsJdH0JJ0Jl+aEYu1H532BTfrYHKpw==", "#0x%x clear, on deattached to window", new Object[] { Integer.valueOf(hashCode()) });
+    gyr.clear();
+    com.tencent.mm.sdk.c.a.jUF.c("UIStatusChanged", gyr.avL());
   }
   
   public void setCanPlay(boolean paramBoolean)
   {
-    fhN.fht = paramBoolean;
+    gyr.gxz = paramBoolean;
   }
   
   public void setDrawableWidth(int paramInt) {}
   
   public void setForceRecordState(boolean paramBoolean)
   {
-    fhN.fhw = paramBoolean;
+    gyr.gxG = paramBoolean;
   }
   
   public void setIsWhatsNew(boolean paramBoolean)
   {
-    fhN.fhv = paramBoolean;
+    gyr.gxB = paramBoolean;
   }
   
   public void setMaskID(int paramInt) {}
   
   public void setOnCompletionListener(b.e parame)
   {
-    fhN.fhy = parame;
+    gyr.gxI = parame;
   }
+  
+  public void setOnDecodeDurationListener(b.f paramf)
+  {
+    gyr.gxJ = paramf;
+  }
+  
+  public void setOnSightCompletionAction(b.g paramg) {}
   
   public void setPosition(int paramInt)
   {
-    fhN.position = paramInt;
+    gyr.position = paramInt;
   }
   
   public void setSightInfoView(TextView paramTextView)
   {
-    fhN.setSightInfoView(paramTextView);
+    gyr.setSightInfoView(paramTextView);
   }
   
   public void setTagObject(Object paramObject)
@@ -124,7 +136,7 @@ public class SightPlayAutoSizeImageView
   
   public void setThumbBgView(View paramView)
   {
-    fhN.setThumbBgView(paramView);
+    gyr.setThumbBgView(paramView);
   }
   
   public void setThumbBmp(Bitmap paramBitmap)
@@ -135,27 +147,27 @@ public class SightPlayAutoSizeImageView
   private static final class a
     extends b
   {
-    private WeakReference fhO;
+    private WeakReference gys;
     
     public a(SightPlayAutoSizeImageView paramSightPlayAutoSizeImageView)
     {
       super(paramSightPlayAutoSizeImageView);
-      fhO = new WeakReference(paramSightPlayAutoSizeImageView);
+      gys = new WeakReference(paramSightPlayAutoSizeImageView);
     }
     
-    public final void aJ(int paramInt1, int paramInt2) {}
+    public final void aB(int paramInt1, int paramInt2) {}
     
-    protected final int ajo()
+    protected final int avI()
     {
-      return a.a.sight_loop;
+      return 2130837568;
     }
     
     public final void l(Bitmap paramBitmap)
     {
-      SightPlayAutoSizeImageView localSightPlayAutoSizeImageView = (SightPlayAutoSizeImageView)fhO.get();
+      SightPlayAutoSizeImageView localSightPlayAutoSizeImageView = (SightPlayAutoSizeImageView)gys.get();
       if (localSightPlayAutoSizeImageView == null)
       {
-        t.e("!56@/B4Tb64lLpK4fJPZwyrCPCWfOsJdH0JJ0Jl+aEYu1H532BTfrYHKpw==", "onGetFrameBmp, imageView is null, do clear");
+        u.e("!56@/B4Tb64lLpK4fJPZwyrCPCWfOsJdH0JJ0Jl+aEYu1H532BTfrYHKpw==", "onGetFrameBmp, imageView is null, do clear");
         clear();
         return;
       }

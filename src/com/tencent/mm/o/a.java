@@ -1,58 +1,51 @@
 package com.tencent.mm.o;
 
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.dk;
-import com.tencent.mm.protocal.b.dl;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
+import android.os.Bundle;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.modelsimple.g;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.h;
+import com.tencent.mm.ui.account.h.a;
 
-public final class a
-  extends j
-  implements r
+public class a
+  implements d, h.a
 {
-  public static int brx = 1;
-  public static int bry = 2;
-  private d apI;
-  private com.tencent.mm.q.a apJ;
-  
-  public a(int paramInt, String paramString)
+  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    Object localObject = new a.a();
-    bsW = new dk();
-    bsX = new dl();
-    uri = "/cgi-bin/micromsg-bin/bindemail";
-    bsV = 256;
-    bsY = 0;
-    bsZ = 0;
-    apJ = ((a.a)localObject).vh();
-    localObject = (dk)apJ.bsT.btb;
-    hhA = paramInt;
-    hmi = paramString;
+    if (paramj.getType() != 183) {
+      return;
+    }
+    ah.tE().b(183, this);
+    if ((paramInt1 == 0) && (paramInt2 == 0))
+    {
+      u.i("!44@/B4Tb64lLpLASVHfQRzXfKeMA9/SAzGFsPnEq0w3Uz4=", "update token success");
+      return;
+    }
+    u.e("!44@/B4Tb64lLpLASVHfQRzXfKeMA9/SAzGFsPnEq0w3Uz4=", "update token fail");
   }
   
-  public final int a(m paramm, d paramd)
+  public void g(Bundle paramBundle)
   {
-    apI = paramd;
-    return a(paramm, apJ, this);
+    String str = paramBundle.getString("access_token");
+    paramBundle = paramBundle.getString("expires");
+    u.i("!44@/B4Tb64lLpLASVHfQRzXfKeMA9/SAzGFsPnEq0w3Uz4=", "onComplete : newToken = " + str + ", expires = " + paramBundle);
+    if (paramBundle != null) {
+      ah.tD().rn().set(65832, paramBundle);
+    }
+    ah.tD().rn().set(65830, str);
+    ah.tD().rn().set(65831, Long.valueOf(System.currentTimeMillis()));
+    ah.tE().a(183, this);
+    paramBundle = new g(2, str);
+    ah.tE().d(paramBundle);
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public void onError(int paramInt, String paramString)
   {
-    apI.a(paramInt2, paramInt3, paramString, this);
-  }
-  
-  public final int getType()
-  {
-    return 256;
-  }
-  
-  public final int uM()
-  {
-    return apJ.bsT.btb).hhA;
+    u.e("!44@/B4Tb64lLpLASVHfQRzXfKeMA9/SAzGFsPnEq0w3Uz4=", "onError : errType = " + paramInt + ", errMsg = " + paramString);
   }
 }
 

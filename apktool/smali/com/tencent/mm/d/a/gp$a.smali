@@ -14,6 +14,12 @@
 .end annotation
 
 
+# instance fields
+.field public aBH:Ljava/lang/String;
+
+.field public username:Ljava/lang/String;
+
+
 # direct methods
 .method public constructor <init>()V
     .locals 0

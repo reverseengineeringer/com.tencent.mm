@@ -4,44 +4,69 @@ import a.a.a.b;
 import java.util.LinkedList;
 
 public final class ajp
-  extends adm
+  extends ali
 {
+  public String jcA;
+  public String jcu;
+  public int time_stamp;
+  
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLQ == null) {
-        throw new b("Not all required fields were included: BaseResponse");
+      if (jcA == null) {
+        throw new b("Not all required fields were included: brand_user_name");
       }
-      if (hLQ != null)
+      if (jcu == null) {
+        throw new b("Not all required fields were included: bizchat_id");
+      }
+      if (jGS != null)
       {
-        paramVarArgs.bN(1, hLQ.kS());
-        hLQ.a(paramVarArgs);
+        paramVarArgs.cj(1, jGS.kn());
+        jGS.a(paramVarArgs);
       }
+      if (jcA != null) {
+        paramVarArgs.d(2, jcA);
+      }
+      if (jcu != null) {
+        paramVarArgs.d(3, jcu);
+      }
+      paramVarArgs.ci(4, time_stamp);
       return 0;
     }
     if (paramInt == 1) {
-      if (hLQ == null) {
-        break label305;
+      if (jGS == null) {
+        break label486;
       }
     }
-    label305:
-    for (paramInt = a.a.a.a.bJ(1, hLQ.kS()) + 0;; paramInt = 0)
+    label486:
+    for (int i = a.a.a.a.ch(1, jGS.kn()) + 0;; i = 0)
     {
-      return paramInt;
+      paramInt = i;
+      if (jcA != null) {
+        paramInt = i + a.a.a.b.b.a.e(2, jcA);
+      }
+      i = paramInt;
+      if (jcu != null) {
+        i = paramInt + a.a.a.b.b.a.e(3, jcu);
+      }
+      return i + a.a.a.a.cg(4, time_stamp);
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = adm.a(paramVarArgs); paramInt > 0; paramInt = adm.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = ali.a(paramVarArgs); paramInt > 0; paramInt = ali.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
-        if (hLQ != null) {
+        if (jcA == null) {
+          throw new b("Not all required fields were included: brand_user_name");
+        }
+        if (jcu != null) {
           break;
         }
-        throw new b("Not all required fields were included: BaseResponse");
+        throw new b("Not all required fields were included: bizchat_id");
       }
       if (paramInt == 3)
       {
@@ -52,20 +77,28 @@ public final class ajp
         {
         default: 
           return -1;
+        case 1: 
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          i = paramVarArgs.size();
+          paramInt = 0;
+          while (paramInt < i)
+          {
+            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new dc();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (boolean bool = true; bool; bool = ((dc)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, ali.a((a.a.a.a.a)localObject2))) {}
+            jGS = ((dc)localObject1);
+            paramInt += 1;
+          }
+        case 2: 
+          jcA = maU.readString();
+          return 0;
+        case 3: 
+          jcu = maU.readString();
+          return 0;
         }
-        paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
-        int i = paramVarArgs.size();
-        paramInt = 0;
-        while (paramInt < i)
-        {
-          Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-          localObject1 = new ck();
-          localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-          for (boolean bool = true; bool; bool = ((ck)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adm.a((a.a.a.a.a)localObject2))) {}
-          hLQ = ((ck)localObject1);
-          paramInt += 1;
-        }
-        break;
+        time_stamp = maU.jC();
+        return 0;
       }
       return -1;
     }

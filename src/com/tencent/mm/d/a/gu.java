@@ -1,23 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
+import java.util.LinkedList;
 
 public final class gu
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDZ = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBW = new a();
   
   public gu()
   {
-    id = "RollbackTencentNews";
-    hXT = atO;
+    id = "NetSceneCollectChatRoom";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public long axb;
+    public LinkedList aBX;
+    public boolean aBY = false;
   }
 }
 

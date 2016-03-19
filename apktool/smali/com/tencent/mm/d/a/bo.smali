@@ -1,24 +1,27 @@
 .class public final Lcom/tencent/mm/d/a/bo;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
+        Lcom/tencent/mm/d/a/bo$b;,
         Lcom/tencent/mm/d/a/bo$a;
     }
 .end annotation
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public awz:Lcom/tencent/mm/d/a/bo$a;
+.field public auO:Lcom/tencent/mm/d/a/bo$a;
+
+.field public auP:Lcom/tencent/mm/d/a/bo$b;
 
 
 # direct methods
@@ -29,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/bo;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/bo;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/bo;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/bo;->arR:Z
 
     return-void
 .end method
@@ -42,23 +45,30 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/bo$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/bo$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/bo;->awz:Lcom/tencent/mm/d/a/bo$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/bo;->auO:Lcom/tencent/mm/d/a/bo$a;
+
+    .line 19
+    new-instance v0, Lcom/tencent/mm/d/a/bo$b;
+
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/bo$b;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/d/a/bo;->auP:Lcom/tencent/mm/d/a/bo$b;
 
     .line 8
-    const-string/jumbo v0, "ExposeWithProofFinish"
+    const-string/jumbo v0, "ExDeviceConnectDevice"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/bo;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/bo;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/bo;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bo;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bo;->jUI:Z
 
     return-void
 .end method

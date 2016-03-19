@@ -7,9 +7,9 @@ import android.os.Parcelable.Creator;
 public class QQMailHistoryExporter$ImageSpanData
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new oc();
-  int bsn;
-  int jcv;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  int bEq;
+  int ldk;
   String path;
   private int thumbnail = 0;
   
@@ -20,8 +20,8 @@ public class QQMailHistoryExporter$ImageSpanData
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeInt(bsn);
-    paramParcel.writeInt(jcv);
+    paramParcel.writeInt(bEq);
+    paramParcel.writeInt(ldk);
     paramParcel.writeString(path);
     paramParcel.writeInt(thumbnail);
   }

@@ -1,13 +1,13 @@
 package com.tencent.mm.pluginsdk.b;
 
-import com.tencent.mm.model.au;
-import com.tencent.mm.pluginsdk.k;
+import com.tencent.mm.model.ae;
+import com.tencent.mm.pluginsdk.h;
 
 public abstract interface c
 {
-  public abstract k createApplication();
+  public abstract h createApplication();
   
-  public abstract au createSubCore();
+  public abstract ae createSubCore();
   
   public abstract b getContactWidgetFactory();
 }

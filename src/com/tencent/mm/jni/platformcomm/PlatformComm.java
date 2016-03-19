@@ -6,24 +6,24 @@ import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.telephony.TelephonyManager;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.File;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
 public final class PlatformComm
 {
-  public static a blL = null;
+  public static a bwq = null;
   private static Context context = null;
-  private static ac handler = null;
+  private static aa handler = null;
   
-  public static void a(Context paramContext, ac paramac)
+  public static void a(Context paramContext, aa paramaa)
   {
     context = paramContext;
-    handler = paramac;
-    a.ay(paramContext);
+    handler = paramaa;
+    a.aI(paramContext);
   }
   
   static class APNInfo
@@ -85,7 +85,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return null;
@@ -103,7 +103,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return 0;
@@ -116,13 +116,13 @@ public final class PlatformComm
         if (PlatformComm.context == null) {
           return null;
         }
-        int i = al.cQ(PlatformComm.context);
+        int i = ah.du(PlatformComm.context);
         if (i != 0)
         {
           PlatformComm.SIMInfo localSIMInfo = new PlatformComm.SIMInfo();
           ispCode = String.valueOf(i);
-          t.d("!24@zf96t1YgIScRsX2UOICiFQ==", "getISPCode MCC_MNC=%s", new Object[] { ispCode });
-          ispName = al.cR(PlatformComm.context);
+          u.d("!24@zf96t1YgIScRsX2UOICiFQ==", "getISPCode MCC_MNC=%s", new Object[] { ispCode });
+          ispName = ah.dv(PlatformComm.context);
           return localSIMInfo;
         }
       }
@@ -152,7 +152,7 @@ public final class PlatformComm
         {
           for (;;)
           {
-            t.e("!24@zf96t1YgIScRsX2UOICiFQ==", "getActiveNetworkInfo failed.");
+            u.e("!24@zf96t1YgIScRsX2UOICiFQ==", "getActiveNetworkInfo failed.");
             localObject2 = null;
           }
           Object localObject2 = (WifiManager)PlatformComm.context.getSystemService("wifi");
@@ -226,9 +226,9 @@ public final class PlatformComm
           return 0L;
         }
         if (paramBoolean) {
-          return a.qV();
+          return a.qR();
         }
-        long l = a.qU();
+        long l = a.qQ();
         return l;
       }
       catch (Exception localException) {}
@@ -242,23 +242,23 @@ public final class PlatformComm
       }
       try
       {
-        int i = al.bS(PlatformComm.context);
+        int i = ah.cn(PlatformComm.context);
         if (i == -1) {
           return -1;
         }
-        if (al.cT(PlatformComm.context)) {
+        if (ah.dx(PlatformComm.context)) {
           return 3;
         }
-        if (al.cW(PlatformComm.context)) {
+        if (ah.dA(PlatformComm.context)) {
           return 4;
         }
-        if (al.cU(PlatformComm.context)) {
+        if (ah.dy(PlatformComm.context)) {
           return 5;
         }
-        if (al.my(i)) {
+        if (ah.ps(i)) {
           return 1;
         }
-        boolean bool = al.mx(i);
+        boolean bool = ah.pr(i);
         if (bool) {
           return 2;
         }
@@ -266,7 +266,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return -1;
@@ -279,12 +279,12 @@ public final class PlatformComm
       }
       try
       {
-        boolean bool = al.cZ(PlatformComm.context);
+        boolean bool = ah.dD(PlatformComm.context);
         return bool;
       }
       catch (Exception localException)
       {
-        t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return false;
@@ -292,12 +292,18 @@ public final class PlatformComm
     
     public static void restartProcess()
     {
-      if (PlatformComm.blL == null) {
+      if (PlatformComm.bwq == null) {
         return;
       }
       try
       {
-        PlatformComm.qW().post(new c());
+        PlatformComm.qS().post(new Runnable()
+        {
+          public final void run()
+          {
+            PlatformComm.bwq.restartProcess();
+          }
+        });
         return;
       }
       catch (Exception localException) {}
@@ -316,7 +322,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return false;
@@ -335,7 +341,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return false;
@@ -353,7 +359,7 @@ public final class PlatformComm
       }
       catch (Exception localException)
       {
-        t.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
+        u.e("!24@zf96t1YgIScRsX2UOICiFQ==", exception2String(localException));
         new StringBuilder().append(localException.getClass().getSimpleName()).append(":").append(localException.getStackTrace()[0]).append(", ").append(localException.getStackTrace()[1]);
       }
       return null;

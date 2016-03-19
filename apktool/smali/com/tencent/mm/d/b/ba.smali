@@ -1,240 +1,81 @@
 .class public abstract Lcom/tencent/mm/d/b/ba;
-.super Lcom/tencent/mm/sdk/g/ae;
+.super Lcom/tencent/mm/sdk/h/c;
 .source "SourceFile"
 
 
 # static fields
-.field private static final aHH:I
+.field private static final aLG:I
 
-.field public static final aHq:[Ljava/lang/String;
+.field public static final aLn:[Ljava/lang/String;
 
-.field private static final aId:I
+.field private static final bbl:I
 
-.field private static final aIg:I
+.field private static final bbm:I
 
-.field private static final aNW:I
-
-.field private static final aQK:I
-
-.field private static final aTE:I
-
-.field private static final aYn:I
-
-.field private static final aYo:I
-
-.field private static final aYp:I
-
-.field private static final aYq:I
-
-.field private static final aYr:I
-
-.field private static final aYs:I
-
-.field private static final aYt:I
+.field private static final bbn:I
 
 
 # instance fields
-.field private aHL:Z
+.field private bbi:Z
 
-.field private aHO:Z
+.field private bbj:Z
 
-.field private aNF:Z
+.field private bbk:Z
 
-.field private aQu:Z
+.field public field_callTimeCount:J
 
-.field private aTs:Z
+.field public field_countryCode:I
 
-.field private aYg:Z
-
-.field private aYh:Z
-
-.field private aYi:Z
-
-.field private aYj:Z
-
-.field private aYk:Z
-
-.field private aYl:Z
-
-.field private aYm:Z
-
-.field public field_clientId:Ljava/lang/String;
-
-.field public field_commentSvrID:J
-
-.field public field_commentflag:I
-
-.field public field_createTime:I
-
-.field public field_curActionBuf:[B
-
-.field public field_isRead:S
-
-.field public field_isSend:Z
-
-.field public field_parentID:J
-
-.field public field_refActionBuf:[B
-
-.field public field_snsID:J
-
-.field public field_talker:Ljava/lang/String;
-
-.field public field_type:I
+.field public field_lastCallTime:J
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 3
+    .locals 1
 
     .prologue
     .line 10
-    const/4 v0, 0x4
+    const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/lang/String;
 
-    const/4 v1, 0x0
+    sput-object v0, Lcom/tencent/mm/d/b/ba;->aLn:[Ljava/lang/String;
 
-    const-string/jumbo v2, "CREATE INDEX IF NOT EXISTS SnsComment_snsID_index ON SnsComment(snsID)"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x1
-
-    const-string/jumbo v2, "CREATE INDEX IF NOT EXISTS SnsComment_parentID_index ON SnsComment(parentID)"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x2
-
-    const-string/jumbo v2, "CREATE INDEX IF NOT EXISTS SnsComment_isRead_index ON SnsComment(isRead)"
-
-    aput-object v2, v0, v1
-
-    const/4 v1, 0x3
-
-    const-string/jumbo v2, "CREATE INDEX IF NOT EXISTS SnsComment_isSend_index ON SnsComment(isSend)"
-
-    aput-object v2, v0, v1
-
-    sput-object v0, Lcom/tencent/mm/d/b/ba;->aHq:[Ljava/lang/String;
-
-    .line 109
-    const-string/jumbo v0, "snsID"
+    .line 43
+    const-string/jumbo v0, "countryCode"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ba;->aYn:I
+    sput v0, Lcom/tencent/mm/d/b/ba;->bbl:I
 
-    .line 110
-    const-string/jumbo v0, "parentID"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ba;->aYo:I
-
-    .line 111
-    const-string/jumbo v0, "isRead"
+    .line 44
+    const-string/jumbo v0, "callTimeCount"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ba;->aTE:I
+    sput v0, Lcom/tencent/mm/d/b/ba;->bbm:I
 
-    .line 112
-    const-string/jumbo v0, "createTime"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ba;->aId:I
-
-    .line 113
-    const-string/jumbo v0, "talker"
+    .line 45
+    const-string/jumbo v0, "lastCallTime"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ba;->aQK:I
+    sput v0, Lcom/tencent/mm/d/b/ba;->bbn:I
 
-    .line 114
-    const-string/jumbo v0, "type"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ba;->aIg:I
-
-    .line 115
-    const-string/jumbo v0, "isSend"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ba;->aNW:I
-
-    .line 116
-    const-string/jumbo v0, "curActionBuf"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ba;->aYp:I
-
-    .line 117
-    const-string/jumbo v0, "refActionBuf"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ba;->aYq:I
-
-    .line 118
-    const-string/jumbo v0, "commentSvrID"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ba;->aYr:I
-
-    .line 119
-    const-string/jumbo v0, "clientId"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ba;->aYs:I
-
-    .line 120
-    const-string/jumbo v0, "commentflag"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ba;->aYt:I
-
-    .line 121
+    .line 46
     const-string/jumbo v0, "rowid"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ba;->aHH:I
+    sput v0, Lcom/tencent/mm/d/b/ba;->aLG:I
 
     return-void
 .end method
@@ -246,330 +87,159 @@
     const/4 v0, 0x1
 
     .line 7
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/g/ae;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/c;-><init>()V
 
-    .line 29
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aYg:Z
+    .line 16
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->bbi:Z
 
-    .line 31
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aYh:Z
+    .line 18
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->bbj:Z
 
-    .line 33
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aTs:Z
-
-    .line 35
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aHL:Z
-
-    .line 37
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aQu:Z
-
-    .line 39
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aHO:Z
-
-    .line 41
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aNF:Z
-
-    .line 43
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aYi:Z
-
-    .line 45
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aYj:Z
-
-    .line 47
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aYk:Z
-
-    .line 49
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aYl:Z
-
-    .line 51
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->aYm:Z
+    .line 20
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->bbk:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method public c(Landroid/database/Cursor;)V
-    .locals 7
-
-    .prologue
-    const/4 v1, 0x0
-
-    .line 124
-    invoke-interface {p1}, Landroid/database/Cursor;->getColumnNames()[Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 125
-    if-nez v3, :cond_1
-
-    .line 168
-    :cond_0
-    return-void
-
-    .line 126
-    :cond_1
-    array-length v4, v3
-
-    move v2, v1
-
-    :goto_0
-    if-ge v2, v4, :cond_0
-
-    .line 127
-    aget-object v0, v3, v2
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    .line 128
-    sget v5, Lcom/tencent/mm/d/b/ba;->aYn:I
-
-    if-ne v5, v0, :cond_3
-
-    .line 129
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v5
-
-    iput-wide v5, p0, Lcom/tencent/mm/d/b/ba;->field_snsID:J
-
-    .line 126
-    :cond_2
-    :goto_1
-    add-int/lit8 v0, v2, 0x1
-
-    move v2, v0
-
-    goto :goto_0
-
-    .line 131
-    :cond_3
-    sget v5, Lcom/tencent/mm/d/b/ba;->aYo:I
-
-    if-ne v5, v0, :cond_4
-
-    .line 132
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v5
-
-    iput-wide v5, p0, Lcom/tencent/mm/d/b/ba;->field_parentID:J
-
-    goto :goto_1
-
-    .line 134
-    :cond_4
-    sget v5, Lcom/tencent/mm/d/b/ba;->aTE:I
-
-    if-ne v5, v0, :cond_5
-
-    .line 135
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getShort(I)S
-
-    move-result v0
-
-    iput-short v0, p0, Lcom/tencent/mm/d/b/ba;->field_isRead:S
-
-    goto :goto_1
-
-    .line 137
-    :cond_5
-    sget v5, Lcom/tencent/mm/d/b/ba;->aId:I
-
-    if-ne v5, v0, :cond_6
-
-    .line 138
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/d/b/ba;->field_createTime:I
-
-    goto :goto_1
-
-    .line 140
-    :cond_6
-    sget v5, Lcom/tencent/mm/d/b/ba;->aQK:I
-
-    if-ne v5, v0, :cond_7
-
-    .line 141
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/d/b/ba;->field_talker:Ljava/lang/String;
-
-    goto :goto_1
-
-    .line 143
-    :cond_7
-    sget v5, Lcom/tencent/mm/d/b/ba;->aIg:I
-
-    if-ne v5, v0, :cond_8
-
-    .line 144
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/d/b/ba;->field_type:I
-
-    goto :goto_1
-
-    .line 146
-    :cond_8
-    sget v5, Lcom/tencent/mm/d/b/ba;->aNW:I
-
-    if-ne v5, v0, :cond_a
-
-    .line 147
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    if-eqz v0, :cond_9
-
-    const/4 v0, 0x1
-
-    :goto_2
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ba;->field_isSend:Z
-
-    goto :goto_1
-
-    :cond_9
-    move v0, v1
-
-    goto :goto_2
-
-    .line 149
-    :cond_a
-    sget v5, Lcom/tencent/mm/d/b/ba;->aYp:I
-
-    if-ne v5, v0, :cond_b
-
-    .line 150
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getBlob(I)[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/d/b/ba;->field_curActionBuf:[B
-
-    goto :goto_1
-
-    .line 152
-    :cond_b
-    sget v5, Lcom/tencent/mm/d/b/ba;->aYq:I
-
-    if-ne v5, v0, :cond_c
-
-    .line 153
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getBlob(I)[B
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/d/b/ba;->field_refActionBuf:[B
-
-    goto :goto_1
-
-    .line 155
-    :cond_c
-    sget v5, Lcom/tencent/mm/d/b/ba;->aYr:I
-
-    if-ne v5, v0, :cond_d
-
-    .line 156
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v5
-
-    iput-wide v5, p0, Lcom/tencent/mm/d/b/ba;->field_commentSvrID:J
-
-    goto :goto_1
-
-    .line 158
-    :cond_d
-    sget v5, Lcom/tencent/mm/d/b/ba;->aYs:I
-
-    if-ne v5, v0, :cond_e
-
-    .line 159
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/d/b/ba;->field_clientId:Ljava/lang/String;
-
-    goto :goto_1
-
-    .line 161
-    :cond_e
-    sget v5, Lcom/tencent/mm/d/b/ba;->aYt:I
-
-    if-ne v5, v0, :cond_f
-
-    .line 162
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    iput v0, p0, Lcom/tencent/mm/d/b/ba;->field_commentflag:I
-
-    goto/16 :goto_1
-
-    .line 164
-    :cond_f
-    sget v5, Lcom/tencent/mm/d/b/ba;->aHH:I
-
-    if-ne v5, v0, :cond_2
-
-    .line 165
-    invoke-interface {p1, v2}, Landroid/database/Cursor;->getLong(I)J
-
-    move-result-wide v5
-
-    iput-wide v5, p0, Lcom/tencent/mm/d/b/ba;->ibV:J
-
-    goto/16 :goto_1
-.end method
-
-.method public final mA()Landroid/content/ContentValues;
+.method public final c(Landroid/database/Cursor;)V
     .locals 5
 
     .prologue
-    .line 171
+    .line 49
+    invoke-interface {p1}, Landroid/database/Cursor;->getColumnNames()[Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 50
+    if-nez v1, :cond_1
+
+    .line 67
+    :cond_0
+    return-void
+
+    .line 51
+    :cond_1
+    const/4 v0, 0x0
+
+    array-length v2, v1
+
+    :goto_0
+    if-ge v0, v2, :cond_0
+
+    .line 52
+    aget-object v3, v1, v0
+
+    invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
+
+    move-result v3
+
+    .line 53
+    sget v4, Lcom/tencent/mm/d/b/ba;->bbl:I
+
+    if-ne v4, v3, :cond_3
+
+    .line 54
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v3
+
+    iput v3, p0, Lcom/tencent/mm/d/b/ba;->field_countryCode:I
+
+    .line 55
+    const/4 v3, 0x1
+
+    iput-boolean v3, p0, Lcom/tencent/mm/d/b/ba;->bbi:Z
+
+    .line 51
+    :cond_2
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 57
+    :cond_3
+    sget v4, Lcom/tencent/mm/d/b/ba;->bbm:I
+
+    if-ne v4, v3, :cond_4
+
+    .line 58
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v3
+
+    iput-wide v3, p0, Lcom/tencent/mm/d/b/ba;->field_callTimeCount:J
+
+    goto :goto_1
+
+    .line 60
+    :cond_4
+    sget v4, Lcom/tencent/mm/d/b/ba;->bbn:I
+
+    if-ne v4, v3, :cond_5
+
+    .line 61
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v3
+
+    iput-wide v3, p0, Lcom/tencent/mm/d/b/ba;->field_lastCallTime:J
+
+    goto :goto_1
+
+    .line 63
+    :cond_5
+    sget v4, Lcom/tencent/mm/d/b/ba;->aLG:I
+
+    if-ne v4, v3, :cond_2
+
+    .line 64
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v3
+
+    iput-wide v3, p0, Lcom/tencent/mm/d/b/ba;->jYv:J
+
+    goto :goto_1
+.end method
+
+.method public final lX()Landroid/content/ContentValues;
+    .locals 5
+
+    .prologue
+    .line 70
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 173
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aYg:Z
+    .line 72
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->bbi:Z
 
     if-eqz v1, :cond_0
 
-    .line 174
-    const-string/jumbo v1, "snsID"
+    .line 73
+    const-string/jumbo v1, "countryCode"
 
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/ba;->field_snsID:J
+    iget v2, p0, Lcom/tencent/mm/d/b/ba;->field_countryCode:I
 
-    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v2
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 177
+    .line 76
     :cond_0
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aYh:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->bbj:Z
 
     if-eqz v1, :cond_1
 
-    .line 178
-    const-string/jumbo v1, "parentID"
+    .line 77
+    const-string/jumbo v1, "callTimeCount"
 
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/ba;->field_parentID:J
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/ba;->field_callTimeCount:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -577,123 +247,16 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 181
+    .line 80
     :cond_1
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aTs:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->bbk:Z
 
     if-eqz v1, :cond_2
 
-    .line 182
-    const-string/jumbo v1, "isRead"
+    .line 81
+    const-string/jumbo v1, "lastCallTime"
 
-    iget-short v2, p0, Lcom/tencent/mm/d/b/ba;->field_isRead:S
-
-    invoke-static {v2}, Ljava/lang/Short;->valueOf(S)Ljava/lang/Short;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Short;)V
-
-    .line 185
-    :cond_2
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aHL:Z
-
-    if-eqz v1, :cond_3
-
-    .line 186
-    const-string/jumbo v1, "createTime"
-
-    iget v2, p0, Lcom/tencent/mm/d/b/ba;->field_createTime:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 189
-    :cond_3
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aQu:Z
-
-    if-eqz v1, :cond_4
-
-    .line 190
-    const-string/jumbo v1, "talker"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ba;->field_talker:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 193
-    :cond_4
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aHO:Z
-
-    if-eqz v1, :cond_5
-
-    .line 194
-    const-string/jumbo v1, "type"
-
-    iget v2, p0, Lcom/tencent/mm/d/b/ba;->field_type:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 197
-    :cond_5
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aNF:Z
-
-    if-eqz v1, :cond_6
-
-    .line 198
-    const-string/jumbo v1, "isSend"
-
-    iget-boolean v2, p0, Lcom/tencent/mm/d/b/ba;->field_isSend:Z
-
-    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Boolean;)V
-
-    .line 201
-    :cond_6
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aYi:Z
-
-    if-eqz v1, :cond_7
-
-    .line 202
-    const-string/jumbo v1, "curActionBuf"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ba;->field_curActionBuf:[B
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
-
-    .line 205
-    :cond_7
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aYj:Z
-
-    if-eqz v1, :cond_8
-
-    .line 206
-    const-string/jumbo v1, "refActionBuf"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ba;->field_refActionBuf:[B
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
-
-    .line 209
-    :cond_8
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aYk:Z
-
-    if-eqz v1, :cond_9
-
-    .line 210
-    const-string/jumbo v1, "commentSvrID"
-
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/ba;->field_commentSvrID:J
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/ba;->field_lastCallTime:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -701,50 +264,20 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 213
-    :cond_9
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aYl:Z
-
-    if-eqz v1, :cond_a
-
-    .line 214
-    const-string/jumbo v1, "clientId"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ba;->field_clientId:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 217
-    :cond_a
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ba;->aYm:Z
-
-    if-eqz v1, :cond_b
-
-    .line 218
-    const-string/jumbo v1, "commentflag"
-
-    iget v2, p0, Lcom/tencent/mm/d/b/ba;->field_commentflag:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 221
-    :cond_b
-    iget-wide v1, p0, Lcom/tencent/mm/d/b/ba;->ibV:J
+    .line 84
+    :cond_2
+    iget-wide v1, p0, Lcom/tencent/mm/d/b/ba;->jYv:J
 
     const-wide/16 v3, 0x0
 
     cmp-long v1, v1, v3
 
-    if-lez v1, :cond_c
+    if-lez v1, :cond_3
 
-    .line 222
+    .line 85
     const-string/jumbo v1, "rowid"
 
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/ba;->ibV:J
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/ba;->jYv:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -752,7 +285,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 224
-    :cond_c
+    .line 87
+    :cond_3
     return-object v0
 .end method

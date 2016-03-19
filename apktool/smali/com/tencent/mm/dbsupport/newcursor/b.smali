@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public bkJ:Landroid/util/SparseArray;
+.field public bvm:Landroid/util/SparseArray;
 
-.field public bkK:I
+.field public bvn:I
 
-.field public bkL:Ljava/util/HashMap;
+.field public bvo:Ljava/util/HashMap;
 
-.field bkM:Ljava/util/ArrayList;
+.field bvp:Ljava/util/ArrayList;
 
-.field public bkN:Lcom/tencent/mm/dbsupport/newcursor/a;
+.field public bvq:Lcom/tencent/mm/dbsupport/newcursor/a;
 
 .field public mStartPos:I
 
@@ -35,14 +35,14 @@
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkJ:Landroid/util/SparseArray;
+    iput-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvm:Landroid/util/SparseArray;
 
     .line 133
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkL:Ljava/util/HashMap;
+    iput-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvo:Ljava/util/HashMap;
 
     .line 134
     return-void
@@ -50,7 +50,7 @@
 
 
 # virtual methods
-.method public final S(Ljava/lang/Object;)Z
+.method public final T(Ljava/lang/Object;)Z
     .locals 4
 
     .prologue
@@ -74,11 +74,11 @@
     if-ne v3, v1, :cond_1
 
     .line 342
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkL:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvo:Ljava/util/HashMap;
 
     if-eqz v3, :cond_0
 
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkL:Ljava/util/HashMap;
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvo:Ljava/util/HashMap;
 
     aget-object v0, v0, v2
 
@@ -102,11 +102,11 @@
 
     .line 345
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkL:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvo:Ljava/util/HashMap;
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkL:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvo:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
 
@@ -141,7 +141,7 @@
 
     .line 300
     :goto_0
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkJ:Landroid/util/SparseArray;
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvm:Landroid/util/SparseArray;
 
     invoke-virtual {v3}, Landroid/util/SparseArray;->size()I
 
@@ -150,7 +150,7 @@
     if-lt v0, v3, :cond_1
 
     .line 317
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkJ:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvm:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->size()I
 
@@ -171,7 +171,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkJ:Landroid/util/SparseArray;
+    iget-object v2, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvm:Landroid/util/SparseArray;
 
     invoke-virtual {v2}, Landroid/util/SparseArray;->size()I
 
@@ -203,21 +203,21 @@
 
     .line 320
     :cond_0
-    iput-object v5, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkJ:Landroid/util/SparseArray;
+    iput-object v5, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvm:Landroid/util/SparseArray;
 
     .line 321
     return-void
 
     .line 301
     :cond_1
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkJ:Landroid/util/SparseArray;
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvm:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v6
 
     .line 302
-    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkJ:Landroid/util/SparseArray;
+    iget-object v3, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvm:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v0}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
 
@@ -307,12 +307,12 @@
     goto :goto_3
 .end method
 
-.method public final ch(I)Z
+.method public final ci(I)Z
     .locals 1
 
     .prologue
     .line 162
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkJ:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvm:Landroid/util/SparseArray;
 
     invoke-virtual {v0, p1}, Landroid/util/SparseArray;->indexOfKey(I)I
 
@@ -331,7 +331,7 @@
     goto :goto_0
 .end method
 
-.method public abstract e(Ljava/util/ArrayList;)Ljava/util/ArrayList;
+.method public abstract d(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 .end method
 
 .method protected onAllReferencesReleased()V
@@ -339,26 +339,26 @@
 
     .prologue
     .line 258
-    invoke-virtual {p0}, Lcom/tencent/mm/dbsupport/newcursor/b;->qI()V
+    invoke-virtual {p0}, Lcom/tencent/mm/dbsupport/newcursor/b;->qE()V
 
     .line 259
     return-void
 .end method
 
-.method public abstract qH()Lcom/tencent/mm/dbsupport/newcursor/a;
+.method public abstract qD()Lcom/tencent/mm/dbsupport/newcursor/a;
 .end method
 
-.method public final qI()V
+.method public final qE()V
     .locals 1
 
     .prologue
     .line 252
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkJ:Landroid/util/SparseArray;
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvm:Landroid/util/SparseArray;
 
     invoke-virtual {v0}, Landroid/util/SparseArray;->clear()V
 
     .line 253
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bkL:Ljava/util/HashMap;
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/b;->bvo:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 

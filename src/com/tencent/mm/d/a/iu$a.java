@@ -2,11 +2,12 @@ package com.tencent.mm.d.a;
 
 public final class iu$a
 {
-  public String aFX;
-  public String aFY;
-  public boolean aFZ;
-  public String id;
-  public int type;
+  public String aET;
+  public String aEU;
+  public String aEV;
+  public int aEW = 0;
+  public int aEX = 0;
+  public int auE = 0;
 }
 
 /* Location:

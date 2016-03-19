@@ -1,27 +1,12 @@
 .class public final Lcom/tencent/mm/d/a/jv;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/d/a/jv$b;,
-        Lcom/tencent/mm/d/a/jv$a;
-    }
-.end annotation
-
-
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
-
-
-# instance fields
-.field public aHb:Lcom/tencent/mm/d/a/jv$a;
-
-.field public aHc:Lcom/tencent/mm/d/a/jv$b;
+.field public static arR:Z
 
 
 # direct methods
@@ -32,10 +17,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/jv;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/jv;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/jv;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/jv;->arR:Z
 
     return-void
 .end method
@@ -45,30 +30,15 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    .line 13
-    new-instance v0, Lcom/tencent/mm/d/a/jv$a;
-
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/jv$a;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/d/a/jv;->aHb:Lcom/tencent/mm/d/a/jv$a;
-
-    .line 16
-    new-instance v0, Lcom/tencent/mm/d/a/jv$b;
-
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/jv$b;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/d/a/jv;->aHc:Lcom/tencent/mm/d/a/jv$b;
-
-    .line 8
-    const-string/jumbo v0, "WalletPwdConfirmDoSecondaryProgressCallback"
+    const-string/jumbo v0, "ResendAllFailSnsMsg"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/jv;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/jv;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/jv;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/jv;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/jv;->jUI:Z
 
     return-void
 .end method

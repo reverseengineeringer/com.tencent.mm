@@ -15,27 +15,20 @@
 
 
 # instance fields
-.field public aDW:Ljava/lang/String;
+.field public aBN:Lcom/tencent/mm/protocal/b/aeo;
 
-.field public aDX:Lcom/tencent/mm/storage/ar;
+.field public aBR:Lcom/tencent/mm/af/a;
 
-.field public aDs:Lcom/tencent/mm/storage/ar;
-
-.field public axb:J
+.field public action:I
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 0
 
     .prologue
-    .line 14
+    .line 22
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/tencent/mm/d/a/gs$a;->axb:J
 
     return-void
 .end method

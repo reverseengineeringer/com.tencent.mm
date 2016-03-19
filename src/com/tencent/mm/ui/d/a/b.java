@@ -1,37 +1,16 @@
 package com.tencent.mm.ui.d.a;
 
-import android.os.Bundle;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.net.MalformedURLException;
-
 public final class b
-  implements Runnable
+  extends Throwable
 {
-  public b(a parama, String paramString1, Bundle paramBundle, String paramString2, a.a parama1, Object paramObject) {}
+  private int cFW;
+  private String lqL;
   
-  public final void run()
+  public b(String paramString1, int paramInt, String paramString2)
   {
-    try
-    {
-      String str = jlt.jln.a(jlo, jlp, jlq);
-      jlr.AA(str);
-      return;
-    }
-    catch (FileNotFoundException localFileNotFoundException)
-    {
-      jlr.a(localFileNotFoundException);
-      return;
-    }
-    catch (MalformedURLException localMalformedURLException)
-    {
-      jlr.a(localMalformedURLException);
-      return;
-    }
-    catch (IOException localIOException)
-    {
-      jlr.a(localIOException);
-    }
+    super(paramString1);
+    cFW = paramInt;
+    lqL = paramString2;
   }
 }
 

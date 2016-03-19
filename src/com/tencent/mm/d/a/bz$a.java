@@ -2,9 +2,13 @@ package com.tencent.mm.d.a;
 
 public final class bz$a
 {
-  public Runnable apG;
-  public String filePath;
-  public int op;
+  public String avA;
+  public int avB = 0;
+  public String avt;
+  public int avw = 0;
+  public int avx = 0;
+  public double avy = 0.0D;
+  public double avz = 0.0D;
 }
 
 /* Location:

@@ -15,13 +15,13 @@
 
 
 # static fields
-.field public static final enum iKA:I
+.field public static final enum kJM:I
 
-.field public static final enum iKB:I
+.field public static final enum kJN:I
 
-.field private static final synthetic iKC:[I
+.field public static final enum kJO:I
 
-.field public static final enum iKz:I
+.field private static final synthetic kJP:[I
 
 
 # direct methods
@@ -35,33 +35,33 @@
 
     const/4 v3, 0x1
 
-    .line 2616
-    sput v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->iKz:I
+    .line 2635
+    sput v3, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->kJM:I
 
-    .line 2621
-    sput v4, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->iKA:I
+    .line 2640
+    sput v4, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->kJN:I
 
-    .line 2626
-    sput v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->iKB:I
+    .line 2645
+    sput v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->kJO:I
 
-    .line 2611
+    .line 2630
     new-array v0, v0, [I
 
     const/4 v1, 0x0
 
-    sget v2, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->iKz:I
+    sget v2, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->kJM:I
 
     aput v2, v0, v1
 
-    sget v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->iKA:I
+    sget v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->kJN:I
 
     aput v1, v0, v3
 
-    sget v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->iKB:I
+    sget v1, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->kJO:I
 
     aput v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->iKC:[I
+    sput-object v0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$a;->kJP:[I
 
     return-void
 .end method

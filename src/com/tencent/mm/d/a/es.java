@@ -1,23 +1,26 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class es
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aBt = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azr = new a();
   
   public es()
   {
-    id = "NotificationSendFailMsgFinish";
-    hXT = atO;
+    id = "GameDownloadReport4WebView";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int type;
+    public String appId;
+    public String aut;
+    public String extInfo;
+    public String url;
   }
 }
 

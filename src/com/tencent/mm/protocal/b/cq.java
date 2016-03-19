@@ -4,46 +4,48 @@ import a.a.a.b;
 import java.util.LinkedList;
 
 public final class cq
-  extends adm
+  extends alq
 {
-  public LinkedList hkP = new LinkedList();
+  public int fUi;
+  public LinkedList jak = new LinkedList();
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (hLQ == null) {
+      if (jHj == null) {
         throw new b("Not all required fields were included: BaseResponse");
       }
-      if (hLQ != null)
+      if (jHj != null)
       {
-        paramVarArgs.bN(1, hLQ.kS());
-        hLQ.a(paramVarArgs);
+        paramVarArgs.cj(1, jHj.kn());
+        jHj.a(paramVarArgs);
       }
-      paramVarArgs.d(2, 1, hkP);
+      paramVarArgs.ci(2, fUi);
+      paramVarArgs.d(3, 8, jak);
       return 0;
     }
     if (paramInt == 1) {
-      if (hLQ == null) {
-        break label356;
+      if (jHj == null) {
+        break label473;
       }
     }
-    label356:
-    for (paramInt = a.a.a.a.bJ(1, hLQ.kS()) + 0;; paramInt = 0)
+    label473:
+    for (paramInt = a.a.a.a.ch(1, jHj.kn()) + 0;; paramInt = 0)
     {
-      return paramInt + a.a.a.a.c(2, 1, hkP);
+      return paramInt + a.a.a.a.cg(2, fUi) + a.a.a.a.c(3, 8, jak);
       if (paramInt == 2)
       {
         paramVarArgs = (byte[])paramVarArgs[0];
-        hkP.clear();
-        paramVarArgs = new a.a.a.a.a(paramVarArgs, hfZ);
-        for (paramInt = adm.a(paramVarArgs); paramInt > 0; paramInt = adm.a(paramVarArgs)) {
+        jak.clear();
+        paramVarArgs = new a.a.a.a.a(paramVarArgs, iTR);
+        for (paramInt = alq.a(paramVarArgs); paramInt > 0; paramInt = alq.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
-        if (hLQ != null) {
+        if (jHj != null) {
           break;
         }
         throw new b("Not all required fields were included: BaseResponse");
@@ -53,26 +55,42 @@ public final class cq
         Object localObject1 = (a.a.a.a.a)paramVarArgs[0];
         cq localcq = (cq)paramVarArgs[1];
         paramInt = ((Integer)paramVarArgs[2]).intValue();
+        Object localObject2;
+        boolean bool;
         switch (paramInt)
         {
         default: 
           return -1;
         case 1: 
-          paramVarArgs = ((a.a.a.a.a)localObject1).pL(paramInt);
-          int i = paramVarArgs.size();
+          paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+          i = paramVarArgs.size();
           paramInt = 0;
           while (paramInt < i)
           {
-            Object localObject2 = (byte[])paramVarArgs.get(paramInt);
-            localObject1 = new ck();
-            localObject2 = new a.a.a.a.a((byte[])localObject2, hfZ);
-            for (boolean bool = true; bool; bool = ((ck)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.al.a)localObject1, adm.a((a.a.a.a.a)localObject2))) {}
-            hLQ = ((ck)localObject1);
+            localObject2 = (byte[])paramVarArgs.get(paramInt);
+            localObject1 = new dd();
+            localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+            for (bool = true; bool; bool = ((dd)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
+            jHj = ((dd)localObject1);
             paramInt += 1;
           }
+        case 2: 
+          fUi = maU.jC();
+          return 0;
         }
-        hkP.add(jMD.readString());
-        return 0;
+        paramVarArgs = ((a.a.a.a.a)localObject1).sJ(paramInt);
+        int i = paramVarArgs.size();
+        paramInt = 0;
+        while (paramInt < i)
+        {
+          localObject2 = (byte[])paramVarArgs.get(paramInt);
+          localObject1 = new ck();
+          localObject2 = new a.a.a.a.a((byte[])localObject2, iTR);
+          for (bool = true; bool; bool = ((ck)localObject1).a((a.a.a.a.a)localObject2, (com.tencent.mm.at.a)localObject1, alq.a((a.a.a.a.a)localObject2))) {}
+          jak.add(localObject1);
+          paramInt += 1;
+        }
+        break;
       }
       return -1;
     }

@@ -12,35 +12,35 @@
 
 
 # instance fields
-.field public dlc:Landroid/view/View;
+.field public dVO:Landroid/view/View;
 
-.field private iKT:Lcom/tencent/mm/ui/base/TalkRoomPopupNav$a;
+.field private kKm:Lcom/tencent/mm/ui/base/TalkRoomPopupNav$a;
 
-.field public iKU:Landroid/widget/LinearLayout;
+.field public kKn:Landroid/widget/LinearLayout;
 
-.field public iKV:Landroid/widget/LinearLayout;
+.field public kKo:Landroid/widget/LinearLayout;
 
-.field private iKW:Landroid/widget/LinearLayout;
+.field private kKp:Landroid/widget/LinearLayout;
 
-.field private iKX:Landroid/widget/ImageView;
+.field private kKq:Landroid/widget/ImageView;
 
-.field public iKY:Landroid/widget/ImageView;
+.field public kKr:Landroid/widget/ImageView;
 
-.field public iKZ:Landroid/view/animation/ScaleAnimation;
+.field public kKs:Landroid/view/animation/ScaleAnimation;
 
-.field public iLa:Landroid/view/animation/Animation;
+.field public kKt:Landroid/view/animation/Animation;
 
-.field public iLb:I
+.field public kKu:I
 
-.field public iLc:I
+.field public kKv:I
 
-.field private iLd:Landroid/view/animation/ScaleAnimation;
+.field private kKw:Landroid/view/animation/ScaleAnimation;
 
-.field private iLe:Landroid/view/animation/Animation;
+.field private kKx:Landroid/view/animation/Animation;
 
-.field public iLf:Landroid/view/animation/AlphaAnimation;
+.field public kKy:Landroid/view/animation/AlphaAnimation;
 
-.field public iLg:Landroid/view/animation/AlphaAnimation;
+.field public kKz:Landroid/view/animation/AlphaAnimation;
 
 
 # direct methods
@@ -54,13 +54,13 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 142
-    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLb:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKu:I
 
     .line 143
-    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLc:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKv:I
 
     .line 40
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->DV()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->Gb()V
 
     .line 41
     return-void
@@ -79,19 +79,19 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 142
-    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLb:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKu:I
 
     .line 143
-    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLc:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKv:I
 
     .line 35
-    invoke-direct {p0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->DV()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->Gb()V
 
     .line 36
     return-void
 .end method
 
-.method private DV()V
+.method private Gb()V
     .locals 2
 
     .prologue
@@ -100,12 +100,12 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$k;->talk_room_popup_nav:I
+    const v1, 0x7f0a0567
 
     invoke-static {v0, v1, p0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 97
-    sget v0, Lcom/tencent/mm/a$i;->nav_layout:I
+    const v0, 0x7f07107d
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->findViewById(I)Landroid/view/View;
 
@@ -113,10 +113,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKU:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKn:Landroid/widget/LinearLayout;
 
     .line 98
-    sget v0, Lcom/tencent/mm/a$i;->dialog_layout:I
+    const v0, 0x7f071081
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->findViewById(I)Landroid/view/View;
 
@@ -124,10 +124,10 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKV:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKo:Landroid/widget/LinearLayout;
 
     .line 99
-    sget v0, Lcom/tencent/mm/a$i;->dialog_btn_layout:I
+    const v0, 0x7f071083
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->findViewById(I)Landroid/view/View;
 
@@ -135,19 +135,19 @@
 
     check-cast v0, Landroid/widget/LinearLayout;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKW:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKp:Landroid/widget/LinearLayout;
 
     .line 100
-    sget v0, Lcom/tencent/mm/a$i;->nav_bg:I
+    const v0, 0x7f07107c
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dlc:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dVO:Landroid/view/View;
 
     .line 101
-    sget v0, Lcom/tencent/mm/a$i;->talk_scene_icon:I
+    const v0, 0x7f07107e
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->findViewById(I)Landroid/view/View;
 
@@ -155,10 +155,10 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKX:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKq:Landroid/widget/ImageView;
 
     .line 102
-    sget v0, Lcom/tencent/mm/a$i;->talk_scene_icon_anim:I
+    const v0, 0x7f07107f
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->findViewById(I)Landroid/view/View;
 
@@ -166,26 +166,26 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKY:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKr:Landroid/widget/ImageView;
 
     .line 103
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKY:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKr:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 104
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKU:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKn:Landroid/widget/LinearLayout;
 
-    new-instance v1, Lcom/tencent/mm/ui/base/da;
+    new-instance v1, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/da;-><init>(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$1;-><init>(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 114
-    sget v0, Lcom/tencent/mm/a$i;->btn_cancel:I
+    const v0, 0x7f071084
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->findViewById(I)Landroid/view/View;
 
@@ -193,14 +193,14 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    new-instance v1, Lcom/tencent/mm/ui/base/db;
+    new-instance v1, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/db;-><init>(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$2;-><init>(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 122
-    sget v0, Lcom/tencent/mm/a$i;->btn_confirm:I
+    const v0, 0x7f071085
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->findViewById(I)Landroid/view/View;
 
@@ -208,14 +208,14 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    new-instance v1, Lcom/tencent/mm/ui/base/dc;
+    new-instance v1, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$3;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/dc;-><init>(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$3;-><init>(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 133
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dlc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dVO:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -223,10 +223,10 @@
 
     iget v0, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLb:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKu:I
 
     .line 134
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKV:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKo:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -234,7 +234,7 @@
 
     iget v0, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLc:I
+    iput v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKv:I
 
     .line 135
     return-void
@@ -245,7 +245,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKT:Lcom/tencent/mm/ui/base/TalkRoomPopupNav$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKm:Lcom/tencent/mm/ui/base/TalkRoomPopupNav$a;
 
     return-object v0
 .end method
@@ -257,19 +257,19 @@
     const/high16 v3, 0x3f800000    # 1.0f
 
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLd:Landroid/view/animation/ScaleAnimation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKw:Landroid/view/animation/ScaleAnimation;
 
     if-nez v0, :cond_0
 
     new-instance v0, Landroid/view/animation/ScaleAnimation;
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLc:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKv:I
 
     int-to-float v1, v1
 
     mul-float/2addr v1, v3
 
-    iget v2, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLb:I
+    iget v2, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKu:I
 
     int-to-float v2, v2
 
@@ -277,24 +277,24 @@
 
     invoke-direct {v0, v3, v3, v1, v3}, Landroid/view/animation/ScaleAnimation;-><init>(FFFF)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLd:Landroid/view/animation/ScaleAnimation;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKw:Landroid/view/animation/ScaleAnimation;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLd:Landroid/view/animation/ScaleAnimation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKw:Landroid/view/animation/ScaleAnimation;
 
     const-wide/16 v1, 0x12c
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/ScaleAnimation;->setDuration(J)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLd:Landroid/view/animation/ScaleAnimation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKw:Landroid/view/animation/ScaleAnimation;
 
-    new-instance v1, Lcom/tencent/mm/ui/base/df;
+    new-instance v1, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$6;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/df;-><init>(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$6;-><init>(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/ScaleAnimation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLe:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKx:Landroid/view/animation/Animation;
 
     if-nez v0, :cond_1
 
@@ -302,62 +302,62 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$a;->fast_faded_out:I
+    const v1, 0x7f020063
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLe:Landroid/view/animation/Animation;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKx:Landroid/view/animation/Animation;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLe:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKx:Landroid/view/animation/Animation;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setFillAfter(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLe:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKx:Landroid/view/animation/Animation;
 
-    new-instance v1, Lcom/tencent/mm/ui/base/dg;
+    new-instance v1, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$7;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/dg;-><init>(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav$7;-><init>(Lcom/tencent/mm/ui/base/TalkRoomPopupNav;)V
 
     invoke-virtual {v0, v1}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dlc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dVO:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLb:I
+    iget v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKu:I
 
     iput v1, v0, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dlc:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dVO:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dlc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dVO:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLd:Landroid/view/animation/ScaleAnimation;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKw:Landroid/view/animation/ScaleAnimation;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->startAnimation(Landroid/view/animation/Animation;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKV:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKo:Landroid/widget/LinearLayout;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLe:Landroid/view/animation/Animation;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKx:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKU:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKn:Landroid/widget/LinearLayout;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$a;->fast_faded_in:I
+    const v2, 0x7f020047
 
     invoke-static {v1, v2}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -365,7 +365,7 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->startAnimation(Landroid/view/animation/Animation;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKU:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKn:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x0
 
@@ -379,7 +379,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKW:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKp:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
@@ -389,7 +389,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKU:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKn:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
@@ -399,7 +399,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKV:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKo:Landroid/widget/LinearLayout;
 
     return-object v0
 .end method
@@ -409,7 +409,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLg:Landroid/view/animation/AlphaAnimation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKz:Landroid/view/animation/AlphaAnimation;
 
     return-object v0
 .end method
@@ -419,7 +419,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKY:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKr:Landroid/widget/ImageView;
 
     return-object v0
 .end method
@@ -429,7 +429,7 @@
 
     .prologue
     .line 24
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLf:Landroid/view/animation/AlphaAnimation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKy:Landroid/view/animation/AlphaAnimation;
 
     return-object v0
 .end method
@@ -441,12 +441,12 @@
 
     .prologue
     .line 70
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dlc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dVO:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 71
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dlc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->dVO:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setBackgroundResource(I)V
 
@@ -460,7 +460,7 @@
 
     .prologue
     .line 59
-    sget v0, Lcom/tencent/mm/a$i;->tv_dialog_content:I
+    const v0, 0x7f071082
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->findViewById(I)Landroid/view/View;
 
@@ -482,12 +482,12 @@
     if-gez p1, :cond_1
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKY:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKr:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
     .line 84
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKY:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKr:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
 
@@ -500,17 +500,17 @@
 
     .line 88
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKY:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKr:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
     .line 89
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKY:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKr:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
 
     .line 90
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKY:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKr:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
@@ -524,12 +524,12 @@
 
     .prologue
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKX:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKq:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
     .line 77
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKX:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKq:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -543,7 +543,7 @@
 
     .prologue
     .line 55
-    sget v0, Lcom/tencent/mm/a$i;->tv_nav_content:I
+    const v0, 0x7f071080
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->findViewById(I)Landroid/view/View;
 
@@ -562,7 +562,7 @@
 
     .prologue
     .line 51
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKT:Lcom/tencent/mm/ui/base/TalkRoomPopupNav$a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKm:Lcom/tencent/mm/ui/base/TalkRoomPopupNav$a;
 
     .line 52
     return-void
@@ -575,38 +575,38 @@
     const/4 v2, 0x0
 
     .line 332
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLf:Landroid/view/animation/AlphaAnimation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKy:Landroid/view/animation/AlphaAnimation;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLg:Landroid/view/animation/AlphaAnimation;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKz:Landroid/view/animation/AlphaAnimation;
 
     if-eqz v0, :cond_0
 
     .line 333
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKY:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKr:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLf:Landroid/view/animation/AlphaAnimation;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKy:Landroid/view/animation/AlphaAnimation;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$a;->a(Landroid/view/View;Landroid/view/animation/Animation;)V
 
     .line 334
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKY:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKr:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLg:Landroid/view/animation/AlphaAnimation;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKz:Landroid/view/animation/AlphaAnimation;
 
     invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$a;->a(Landroid/view/View;Landroid/view/animation/Animation;)V
 
     .line 335
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iKY:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKr:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
     .line 336
-    iput-object v2, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLf:Landroid/view/animation/AlphaAnimation;
+    iput-object v2, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKy:Landroid/view/animation/AlphaAnimation;
 
     .line 337
-    iput-object v2, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->iLg:Landroid/view/animation/AlphaAnimation;
+    iput-object v2, p0, Lcom/tencent/mm/ui/base/TalkRoomPopupNav;->kKz:Landroid/view/animation/AlphaAnimation;
 
     .line 339
     :cond_0

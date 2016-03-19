@@ -2,9 +2,13 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface ActionBarSearchView$b
 {
-  public abstract void aRq();
+  public abstract void AD(String paramString);
   
-  public abstract void uM(String paramString);
+  public abstract void Gf();
+  
+  public abstract void bim();
+  
+  public abstract void bin();
 }
 
 /* Location:

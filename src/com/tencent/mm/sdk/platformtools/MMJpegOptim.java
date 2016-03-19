@@ -4,6 +4,8 @@ import android.graphics.Bitmap;
 
 public class MMJpegOptim
 {
+  public static native boolean checkIntegrity(String paramString);
+  
   public static native int compressByQuality(Bitmap paramBitmap, int paramInt, boolean paramBoolean, String paramString);
   
   public static native int compressByQualityOptim(Bitmap paramBitmap, int paramInt, boolean paramBoolean, String paramString);

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bc
-  extends a.c
+  extends a.e
 {
   public a$bc()
   {
-    super("timelineCheckIn", "timeline_check_in", 64, false);
+    super("getSearchEmotionData", "getSearchEmotionData", 20000, false);
   }
 }
 

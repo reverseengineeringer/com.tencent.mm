@@ -1,6 +1,11 @@
 package android.support.v4.view;
 
-public abstract interface h$b {}
+abstract interface h$b
+{
+  public abstract boolean af();
+  
+  public abstract boolean ag();
+}
 
 /* Location:
  * Qualified Name:     android.support.v4.view.h.b

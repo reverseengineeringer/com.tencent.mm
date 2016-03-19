@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class gq$a
 {
-  public boolean aDT;
+  public int action;
 }
 
 /* Location:

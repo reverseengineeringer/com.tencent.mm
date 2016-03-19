@@ -10,6 +10,8 @@ public abstract interface b
 {
   public abstract void a(int paramInt1, int paramInt2, String paramString1, int paramInt3, String paramString2, boolean paramBoolean);
   
+  public abstract void d(int paramInt1, int paramInt2, int paramInt3, int paramInt4);
+  
   public static abstract class a
     extends Binder
     implements b
@@ -33,20 +35,25 @@ public abstract interface b
       case 1598968902: 
         paramParcel2.writeString("com.tencent.mm.network.connpool.IConnPoolMoniter_AIDL");
         return true;
+      case 1: 
+        paramParcel1.enforceInterface("com.tencent.mm.network.connpool.IConnPoolMoniter_AIDL");
+        paramInt1 = paramParcel1.readInt();
+        paramInt2 = paramParcel1.readInt();
+        String str1 = paramParcel1.readString();
+        int i = paramParcel1.readInt();
+        String str2 = paramParcel1.readString();
+        if (paramParcel1.readInt() != 0) {}
+        for (boolean bool = true;; bool = false)
+        {
+          a(paramInt1, paramInt2, str1, i, str2, bool);
+          paramParcel2.writeNoException();
+          return true;
+        }
       }
       paramParcel1.enforceInterface("com.tencent.mm.network.connpool.IConnPoolMoniter_AIDL");
-      paramInt1 = paramParcel1.readInt();
-      paramInt2 = paramParcel1.readInt();
-      String str1 = paramParcel1.readString();
-      int i = paramParcel1.readInt();
-      String str2 = paramParcel1.readString();
-      if (paramParcel1.readInt() != 0) {}
-      for (boolean bool = true;; bool = false)
-      {
-        a(paramInt1, paramInt2, str1, i, str2, bool);
-        paramParcel2.writeNoException();
-        return true;
-      }
+      d(paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readInt(), paramParcel1.readInt());
+      paramParcel2.writeNoException();
+      return true;
     }
     
     private static final class a
@@ -140,6 +147,28 @@ public abstract interface b
       public final IBinder asBinder()
       {
         return mRemote;
+      }
+      
+      public final void d(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+      {
+        Parcel localParcel1 = Parcel.obtain();
+        Parcel localParcel2 = Parcel.obtain();
+        try
+        {
+          localParcel1.writeInterfaceToken("com.tencent.mm.network.connpool.IConnPoolMoniter_AIDL");
+          localParcel1.writeInt(paramInt1);
+          localParcel1.writeInt(paramInt2);
+          localParcel1.writeInt(paramInt3);
+          localParcel1.writeInt(paramInt4);
+          mRemote.transact(2, localParcel1, localParcel2, 0);
+          localParcel2.readException();
+          return;
+        }
+        finally
+        {
+          localParcel2.recycle();
+          localParcel1.recycle();
+        }
       }
     }
   }

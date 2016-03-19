@@ -3,14 +3,14 @@ package com.tencent.mm.ui.base;
 final class MMTagPanelScrollView$a
   implements Runnable
 {
-  public MMTagPanel iIu;
+  public MMTagPanel kHG;
   
   public final void run()
   {
-    if (iIu != null) {
-      iIu.aNe();
+    if (kHG != null) {
+      kHG.bcV();
     }
-    iIu = null;
+    kHG = null;
   }
 }
 

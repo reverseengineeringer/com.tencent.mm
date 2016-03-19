@@ -19,93 +19,93 @@
 
 
 # static fields
-.field static final sH:Landroid/support/v7/widget/SearchView$a;
+.field static final rK:Landroid/support/v7/widget/SearchView$a;
 
 
 # instance fields
 .field private final mOnClickListener:Landroid/view/View$OnClickListener;
 
-.field private rl:I
+.field private qn:I
 
-.field private sA:Z
+.field private rA:Ljava/lang/CharSequence;
 
-.field private sB:Ljava/lang/CharSequence;
+.field private rB:Z
 
-.field private sC:Ljava/lang/CharSequence;
+.field private rC:Z
 
-.field private sD:Z
+.field private rD:Z
 
-.field private sE:I
+.field private rE:Ljava/lang/CharSequence;
 
-.field private sF:Landroid/app/SearchableInfo;
+.field private rF:Ljava/lang/CharSequence;
 
-.field private sG:Landroid/os/Bundle;
+.field private rG:Z
 
-.field private sI:Ljava/lang/Runnable;
+.field private rH:I
 
-.field private sJ:Ljava/lang/Runnable;
+.field private rI:Landroid/app/SearchableInfo;
 
-.field private sK:Ljava/lang/Runnable;
+.field private rJ:Landroid/os/Bundle;
 
-.field private final sL:Landroid/content/Intent;
+.field private rL:Ljava/lang/Runnable;
 
-.field private final sM:Landroid/content/Intent;
+.field private rM:Ljava/lang/Runnable;
 
-.field private final sN:Ljava/util/WeakHashMap;
+.field private rN:Ljava/lang/Runnable;
 
-.field sO:Landroid/view/View$OnKeyListener;
+.field private final rO:Landroid/content/Intent;
 
-.field private final sP:Landroid/widget/TextView$OnEditorActionListener;
+.field private final rP:Landroid/content/Intent;
 
-.field private final sQ:Landroid/widget/AdapterView$OnItemClickListener;
+.field private final rQ:Ljava/util/WeakHashMap;
 
-.field private final sR:Landroid/widget/AdapterView$OnItemSelectedListener;
+.field rR:Landroid/view/View$OnKeyListener;
 
-.field private sS:Landroid/text/TextWatcher;
+.field private final rS:Landroid/widget/TextView$OnEditorActionListener;
 
-.field private se:Landroid/support/v7/widget/SearchView$c;
+.field private final rT:Landroid/widget/AdapterView$OnItemClickListener;
 
-.field private sf:Landroid/support/v7/widget/SearchView$b;
+.field private final rU:Landroid/widget/AdapterView$OnItemSelectedListener;
 
-.field private sg:Landroid/view/View$OnFocusChangeListener;
+.field private rV:Landroid/text/TextWatcher;
 
-.field private sh:Landroid/support/v7/widget/SearchView$d;
+.field private rh:Landroid/support/v7/widget/SearchView$c;
 
-.field private si:Landroid/view/View$OnClickListener;
+.field private ri:Landroid/support/v7/widget/SearchView$b;
 
-.field private sj:Z
+.field private rj:Landroid/view/View$OnFocusChangeListener;
 
-.field private sk:Z
+.field private rk:Landroid/support/v7/widget/SearchView$d;
 
-.field private sl:Landroid/support/v4/widget/a;
+.field private rl:Landroid/view/View$OnClickListener;
 
-.field private sm:Landroid/view/View;
+.field private rm:Z
 
-.field private sn:Landroid/view/View;
+.field private rn:Z
 
-.field private so:Landroid/view/View;
+.field private ro:Landroid/support/v4/widget/a;
 
-.field private sp:Landroid/view/View;
+.field private rp:Landroid/view/View;
 
-.field private sq:Landroid/widget/ImageView;
+.field private rq:Landroid/view/View;
 
-.field private sr:Landroid/view/View;
+.field private rr:Landroid/view/View;
 
-.field private ss:Landroid/view/View;
+.field private rs:Landroid/view/View;
 
-.field private st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+.field private rt:Landroid/widget/ImageView;
 
-.field private su:Landroid/view/View;
+.field private ru:Landroid/view/View;
 
-.field private sv:Landroid/widget/ImageView;
+.field private rv:Landroid/view/View;
 
-.field private sw:Z
+.field private rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-.field private sx:Ljava/lang/CharSequence;
+.field private rx:Landroid/view/View;
 
-.field private sy:Z
+.field private ry:Landroid/widget/ImageView;
 
-.field private sz:Z
+.field private rz:Z
 
 
 # direct methods
@@ -118,7 +118,7 @@
 
     invoke-direct {v0}, Landroid/support/v7/widget/SearchView$a;-><init>()V
 
-    sput-object v0, Landroid/support/v7/widget/SearchView;->sH:Landroid/support/v7/widget/SearchView$a;
+    sput-object v0, Landroid/support/v7/widget/SearchView;->rK:Landroid/support/v7/widget/SearchView$a;
 
     return-void
 .end method
@@ -139,74 +139,74 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 146
-    new-instance v0, Landroid/support/v7/widget/a;
+    new-instance v0, Landroid/support/v7/widget/SearchView$1;
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/a;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/SearchView$1;-><init>(Landroid/support/v7/widget/SearchView;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sI:Ljava/lang/Runnable;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rL:Ljava/lang/Runnable;
 
     .line 157
-    new-instance v0, Landroid/support/v7/widget/e;
+    new-instance v0, Landroid/support/v7/widget/SearchView$5;
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/e;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/SearchView$5;-><init>(Landroid/support/v7/widget/SearchView;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sJ:Ljava/lang/Runnable;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rM:Ljava/lang/Runnable;
 
     .line 163
-    new-instance v0, Landroid/support/v7/widget/f;
+    new-instance v0, Landroid/support/v7/widget/SearchView$6;
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/f;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/SearchView$6;-><init>(Landroid/support/v7/widget/SearchView;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sK:Ljava/lang/Runnable;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rN:Ljava/lang/Runnable;
 
     .line 177
     new-instance v0, Ljava/util/WeakHashMap;
 
     invoke-direct {v0}, Ljava/util/WeakHashMap;-><init>()V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sN:Ljava/util/WeakHashMap;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rQ:Ljava/util/WeakHashMap;
 
     .line 877
-    new-instance v0, Landroid/support/v7/widget/j;
+    new-instance v0, Landroid/support/v7/widget/SearchView$10;
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/j;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/SearchView$10;-><init>(Landroid/support/v7/widget/SearchView;)V
 
     iput-object v0, p0, Landroid/support/v7/widget/SearchView;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     .line 917
-    new-instance v0, Landroid/support/v7/widget/k;
+    new-instance v0, Landroid/support/v7/widget/SearchView$11;
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/k;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/SearchView$11;-><init>(Landroid/support/v7/widget/SearchView;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sO:Landroid/view/View$OnKeyListener;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rR:Landroid/view/View$OnKeyListener;
 
     .line 1092
-    new-instance v0, Landroid/support/v7/widget/l;
+    new-instance v0, Landroid/support/v7/widget/SearchView$12;
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/l;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/SearchView$12;-><init>(Landroid/support/v7/widget/SearchView;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sP:Landroid/widget/TextView$OnEditorActionListener;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rS:Landroid/widget/TextView$OnEditorActionListener;
 
     .line 1268
-    new-instance v0, Landroid/support/v7/widget/b;
+    new-instance v0, Landroid/support/v7/widget/SearchView$2;
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/b;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/SearchView$2;-><init>(Landroid/support/v7/widget/SearchView;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sQ:Landroid/widget/AdapterView$OnItemClickListener;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rT:Landroid/widget/AdapterView$OnItemClickListener;
 
     .line 1279
-    new-instance v0, Landroid/support/v7/widget/c;
+    new-instance v0, Landroid/support/v7/widget/SearchView$3;
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/c;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/SearchView$3;-><init>(Landroid/support/v7/widget/SearchView;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sR:Landroid/widget/AdapterView$OnItemSelectedListener;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rU:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     .line 1566
-    new-instance v0, Landroid/support/v7/widget/d;
+    new-instance v0, Landroid/support/v7/widget/SearchView$4;
 
-    invoke-direct {v0, p0}, Landroid/support/v7/widget/d;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v0, p0}, Landroid/support/v7/widget/SearchView$4;-><init>(Landroid/support/v7/widget/SearchView;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sS:Landroid/text/TextWatcher;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rV:Landroid/text/TextWatcher;
 
     .line 254
     const-string/jumbo v0, "layout_inflater"
@@ -218,21 +218,21 @@
     check-cast v0, Landroid/view/LayoutInflater;
 
     .line 256
-    sget v1, Lcom/tencent/mm/a$k;->abc_search_view:I
+    const v1, 0x7f0a05fc
 
     invoke-virtual {v0, v1, p0, v5}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
     .line 258
-    sget v0, Lcom/tencent/mm/a$i;->search_button:I
+    const v0, 0x7f071115
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sm:Landroid/view/View;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rp:Landroid/view/View;
 
     .line 259
-    sget v0, Lcom/tencent/mm/a$i;->search_src_text:I
+    const v0, 0x7f071119
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -240,51 +240,51 @@
 
     check-cast v0, Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     .line 260
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0, p0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setSearchView(Landroid/support/v7/widget/SearchView;)V
 
     .line 262
-    sget v0, Lcom/tencent/mm/a$i;->search_edit_frame:I
+    const v0, 0x7f071116
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sr:Landroid/view/View;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->ru:Landroid/view/View;
 
     .line 263
-    sget v0, Lcom/tencent/mm/a$i;->search_plate:I
+    const v0, 0x7f071118
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->so:Landroid/view/View;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rr:Landroid/view/View;
 
     .line 264
-    sget v0, Lcom/tencent/mm/a$i;->submit_area:I
+    const v0, 0x7f07111b
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sp:Landroid/view/View;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rs:Landroid/view/View;
 
     .line 265
-    sget v0, Lcom/tencent/mm/a$i;->search_go_btn:I
+    const v0, 0x7f07111c
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sn:Landroid/view/View;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rq:Landroid/view/View;
 
     .line 266
-    sget v0, Lcom/tencent/mm/a$i;->search_close_btn:I
+    const v0, 0x7f07111a
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -292,19 +292,19 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sq:Landroid/widget/ImageView;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rt:Landroid/widget/ImageView;
 
     .line 267
-    sget v0, Lcom/tencent/mm/a$i;->search_voice_btn:I
+    const v0, 0x7f07111d
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->ss:Landroid/view/View;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rv:Landroid/view/View;
 
     .line 268
-    sget v0, Lcom/tencent/mm/a$i;->search_mag_icon:I
+    const v0, 0x7f071117
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->findViewById(I)Landroid/view/View;
 
@@ -312,89 +312,89 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sv:Landroid/widget/ImageView;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->ry:Landroid/widget/ImageView;
 
     .line 270
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sm:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rp:Landroid/view/View;
 
     iget-object v1, p0, Landroid/support/v7/widget/SearchView;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 271
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sq:Landroid/widget/ImageView;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rt:Landroid/widget/ImageView;
 
     iget-object v1, p0, Landroid/support/v7/widget/SearchView;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 272
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sn:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rq:Landroid/view/View;
 
     iget-object v1, p0, Landroid/support/v7/widget/SearchView;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 273
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ss:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rv:Landroid/view/View;
 
     iget-object v1, p0, Landroid/support/v7/widget/SearchView;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 274
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     iget-object v1, p0, Landroid/support/v7/widget/SearchView;->mOnClickListener:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 276
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sS:Landroid/text/TextWatcher;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rV:Landroid/text/TextWatcher;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
     .line 277
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sP:Landroid/widget/TextView$OnEditorActionListener;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rS:Landroid/widget/TextView$OnEditorActionListener;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     .line 278
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sQ:Landroid/widget/AdapterView$OnItemClickListener;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rT:Landroid/widget/AdapterView$OnItemClickListener;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
     .line 279
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sR:Landroid/widget/AdapterView$OnItemSelectedListener;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rU:Landroid/widget/AdapterView$OnItemSelectedListener;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setOnItemSelectedListener(Landroid/widget/AdapterView$OnItemSelectedListener;)V
 
     .line 280
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sO:Landroid/view/View$OnKeyListener;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rR:Landroid/view/View$OnKeyListener;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setOnKeyListener(Landroid/view/View$OnKeyListener;)V
 
     .line 282
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    new-instance v1, Landroid/support/v7/widget/g;
+    new-instance v1, Landroid/support/v7/widget/SearchView$7;
 
-    invoke-direct {v1, p0}, Landroid/support/v7/widget/g;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v1, p0}, Landroid/support/v7/widget/SearchView$7;-><init>(Landroid/support/v7/widget/SearchView;)V
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
     .line 291
-    sget-object v0, Lcom/tencent/mm/a$p;->SearchView:[I
+    sget-object v0, Lcom/tencent/mm/R$b;->SearchView:[I
 
     invoke-virtual {p1, p2, v0, v4, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -469,7 +469,7 @@
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
     .line 312
-    sget-object v0, Lcom/tencent/mm/a$p;->View:[I
+    sget-object v0, Lcom/tencent/mm/R$b;->View:[I
 
     invoke-virtual {p1, p2, v0, v4, v4}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -493,15 +493,15 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sL:Landroid/content/Intent;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rO:Landroid/content/Intent;
 
     .line 321
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sL:Landroid/content/Intent;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rO:Landroid/content/Intent;
 
     invoke-virtual {v0, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 322
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sL:Landroid/content/Intent;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rO:Landroid/content/Intent;
 
     const-string/jumbo v1, "android.speech.extra.LANGUAGE_MODEL"
 
@@ -516,15 +516,15 @@
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sM:Landroid/content/Intent;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rP:Landroid/content/Intent;
 
     .line 326
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sM:Landroid/content/Intent;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rP:Landroid/content/Intent;
 
     invoke-virtual {v0, v6}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
     .line 328
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getDropDownAnchor()I
 
@@ -534,10 +534,10 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->su:Landroid/view/View;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rx:Landroid/view/View;
 
     .line 329
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->su:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rx:Landroid/view/View;
 
     if-eqz v0, :cond_4
 
@@ -549,38 +549,38 @@
     if-lt v0, v1, :cond_5
 
     .line 331
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->su:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rx:Landroid/view/View;
 
-    new-instance v1, Landroid/support/v7/widget/h;
+    new-instance v1, Landroid/support/v7/widget/SearchView$8;
 
-    invoke-direct {v1, p0}, Landroid/support/v7/widget/h;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v1, p0}, Landroid/support/v7/widget/SearchView$8;-><init>(Landroid/support/v7/widget/SearchView;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->addOnLayoutChangeListener(Landroid/view/View$OnLayoutChangeListener;)V
 
     .line 337
     :cond_4
     :goto_0
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sj:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rm:Z
 
     invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->z(Z)V
 
     .line 338
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cF()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cp()V
 
     .line 339
     return-void
 
     .line 333
     :cond_5
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->su:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rx:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v0
 
-    new-instance v1, Landroid/support/v7/widget/i;
+    new-instance v1, Landroid/support/v7/widget/SearchView$9;
 
-    invoke-direct {v1, p0}, Landroid/support/v7/widget/i;-><init>(Landroid/support/v7/widget/SearchView;)V
+    invoke-direct {v1, p0}, Landroid/support/v7/widget/SearchView$9;-><init>(Landroid/support/v7/widget/SearchView;)V
 
     invoke-virtual {v0, v1}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
@@ -595,11 +595,11 @@
     const/16 v0, 0x8
 
     .line 811
-    iget-boolean v1, p0, Landroid/support/v7/widget/SearchView;->sw:Z
+    iget-boolean v1, p0, Landroid/support/v7/widget/SearchView;->rz:Z
 
     if-eqz v1, :cond_1
 
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cB()Z
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cl()Z
 
     move-result v1
 
@@ -613,7 +613,7 @@
 
     if-nez p1, :cond_0
 
-    iget-boolean v1, p0, Landroid/support/v7/widget/SearchView;->sA:Z
+    iget-boolean v1, p0, Landroid/support/v7/widget/SearchView;->rD:Z
 
     if-nez v1, :cond_1
 
@@ -623,7 +623,7 @@
 
     .line 815
     :cond_1
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sn:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rq:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
@@ -639,11 +639,11 @@
 
     .line 1084
     .line 1085
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sA:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rD:Z
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sk:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rn:Z
 
     if-nez v0, :cond_0
 
@@ -653,13 +653,13 @@
     const/4 v0, 0x0
 
     .line 1087
-    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->sn:Landroid/view/View;
+    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->rq:Landroid/view/View;
 
     invoke-virtual {v2, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 1089
     :goto_0
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->ss:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rv:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
@@ -672,20 +672,20 @@
     goto :goto_0
 .end method
 
-.method private L(I)Z
+.method private M(I)Z
     .locals 4
 
     .prologue
     const/4 v0, 0x0
 
     .line 1249
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sh:Landroid/support/v7/widget/SearchView$d;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rk:Landroid/support/v7/widget/SearchView$d;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sh:Landroid/support/v7/widget/SearchView$d;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rk:Landroid/support/v7/widget/SearchView$d;
 
-    invoke-interface {v1}, Landroid/support/v7/widget/SearchView$d;->cM()Z
+    invoke-interface {v1}, Landroid/support/v7/widget/SearchView$d;->cw()Z
 
     move-result v1
 
@@ -693,9 +693,9 @@
 
     .line 1251
     :cond_0
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
-    iget-object v1, v1, Landroid/support/v4/widget/a;->hN:Landroid/database/Cursor;
+    iget-object v1, v1, Landroid/support/v4/widget/a;->gV:Landroid/database/Cursor;
 
     if-eqz v1, :cond_1
 
@@ -728,7 +728,7 @@
     invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->setImeVisibility(Z)V
 
     .line 1253
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->dismissDropDown()V
 
@@ -764,7 +764,7 @@
     :try_start_0
     const-string/jumbo v0, "suggest_intent_action"
 
-    invoke-static {p1, v0}, Landroid/support/v7/widget/m;->a(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Landroid/support/v7/widget/a;->a(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -772,7 +772,7 @@
     if-nez v1, :cond_0
 
     .line 1516
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v0}, Landroid/app/SearchableInfo;->getSuggestIntentAction()Ljava/lang/String;
 
@@ -789,7 +789,7 @@
     :cond_1
     const-string/jumbo v0, "suggest_intent_data"
 
-    invoke-static {p1, v0}, Landroid/support/v7/widget/m;->a(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Landroid/support/v7/widget/a;->a(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -797,7 +797,7 @@
     if-nez v0, :cond_2
 
     .line 1525
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v0}, Landroid/app/SearchableInfo;->getSuggestIntentData()Ljava/lang/String;
 
@@ -810,7 +810,7 @@
     .line 1529
     const-string/jumbo v2, "suggest_intent_data_id"
 
-    invoke-static {p1, v2}, Landroid/support/v7/widget/m;->a(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v2}, Landroid/support/v7/widget/a;->a(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
@@ -854,14 +854,14 @@
     :goto_0
     const-string/jumbo v0, "suggest_intent_query"
 
-    invoke-static {p1, v0}, Landroid/support/v7/widget/m;->a(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Landroid/support/v7/widget/a;->a(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
     .line 1537
     const-string/jumbo v0, "suggest_intent_extra_data"
 
-    invoke-static {p1, v0}, Landroid/support/v7/widget/m;->a(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1, v0}, Landroid/support/v7/widget/a;->a(Landroid/database/Cursor;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
@@ -955,7 +955,7 @@
     :cond_0
     const-string/jumbo v1, "user_query"
 
-    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->sC:Ljava/lang/CharSequence;
+    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->rF:Ljava/lang/CharSequence;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
@@ -978,14 +978,14 @@
 
     .line 1410
     :cond_2
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sG:Landroid/os/Bundle;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rJ:Landroid/os/Bundle;
 
     if-eqz v1, :cond_3
 
     .line 1411
     const-string/jumbo v1, "app_data"
 
-    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->sG:Landroid/os/Bundle;
+    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->rJ:Landroid/os/Bundle;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Bundle;)Landroid/content/Intent;
 
@@ -1005,7 +1005,7 @@
 
     .line 1417
     :cond_4
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v1}, Landroid/app/SearchableInfo;->getSearchActivity()Landroid/content/ComponentName;
 
@@ -1057,13 +1057,13 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->hasFocus()Z
 
     move-result v1
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->so:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rr:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -1076,7 +1076,7 @@
     :goto_0
     invoke-virtual {v2, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sp:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rs:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -1113,13 +1113,13 @@
     const/4 v2, 0x0
 
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sC:Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rF:Ljava/lang/CharSequence;
 
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1137,15 +1137,15 @@
     :goto_1
     invoke-direct {p0, v1}, Landroid/support/v7/widget/SearchView;->B(Z)V
 
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cD()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cn()V
 
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cC()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cm()V
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->se:Landroid/support/v7/widget/SearchView$c;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rh:Landroid/support/v7/widget/SearchView$c;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sB:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rE:Ljava/lang/CharSequence;
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
@@ -1160,7 +1160,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sB:Ljava/lang/CharSequence;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->rE:Ljava/lang/CharSequence;
 
     return-void
 
@@ -1194,7 +1194,7 @@
 
     .prologue
     .line 97
-    invoke-direct {p0, p1}, Landroid/support/v7/widget/SearchView;->L(I)Z
+    invoke-direct {p0, p1}, Landroid/support/v7/widget/SearchView;->M(I)Z
 
     move-result v0
 
@@ -1218,7 +1218,7 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
     return-object v0
 .end method
@@ -1232,7 +1232,7 @@
     const/4 v1, 0x0
 
     .line 961
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     if-nez v0, :cond_1
 
@@ -1243,7 +1243,7 @@
 
     .line 964
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
     if-eqz v0, :cond_0
 
@@ -1254,7 +1254,7 @@
 
     if-nez v0, :cond_0
 
-    invoke-static {p2}, Landroid/support/v4/view/j;->b(Landroid/view/KeyEvent;)Z
+    invoke-static {p2}, Landroid/support/v4/view/f;->b(Landroid/view/KeyEvent;)Z
 
     move-result v0
 
@@ -1275,14 +1275,14 @@
 
     .line 972
     :cond_2
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getListSelection()I
 
     move-result v0
 
     .line 973
-    invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->L(I)Z
+    invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->M(I)Z
 
     move-result v1
 
@@ -1304,24 +1304,24 @@
 
     .line 983
     :goto_1
-    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v2, v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setSelection(I)V
 
     .line 984
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setListSelection(I)V
 
     .line 985
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->clearListSelection()V
 
     .line 986
-    sget-object v0, Landroid/support/v7/widget/SearchView;->sH:Landroid/support/v7/widget/SearchView$a;
+    sget-object v0, Landroid/support/v7/widget/SearchView;->rK:Landroid/support/v7/widget/SearchView$a;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$a;->a(Landroid/widget/AutoCompleteTextView;)V
 
@@ -1332,7 +1332,7 @@
 
     .line 981
     :cond_5
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->length()I
 
@@ -1346,7 +1346,7 @@
 
     if-ne p1, v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getListSelection()I
 
@@ -1362,28 +1362,28 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sh:Landroid/support/v7/widget/SearchView$d;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rk:Landroid/support/v7/widget/SearchView$d;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sh:Landroid/support/v7/widget/SearchView$d;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rk:Landroid/support/v7/widget/SearchView$d;
 
-    invoke-interface {v0}, Landroid/support/v7/widget/SearchView$d;->cL()Z
+    invoke-interface {v0}, Landroid/support/v7/widget/SearchView$d;->cv()Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
     :cond_0
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getText()Landroid/text/Editable;
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
-    iget-object v1, v1, Landroid/support/v4/widget/a;->hN:Landroid/database/Cursor;
+    iget-object v1, v1, Landroid/support/v4/widget/a;->gV:Landroid/database/Cursor;
 
     if-eqz v1, :cond_1
 
@@ -1393,7 +1393,7 @@
 
     if-eqz v2, :cond_3
 
-    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
     invoke-virtual {v2, v1}, Landroid/support/v4/widget/a;->convertToString(Landroid/database/Cursor;)Ljava/lang/CharSequence;
 
@@ -1431,26 +1431,26 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sg:Landroid/view/View$OnFocusChangeListener;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rj:Landroid/view/View$OnFocusChangeListener;
 
     return-object v0
 .end method
 
-.method private cB()Z
+.method private cl()Z
     .locals 1
 
     .prologue
     .line 806
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sw:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rz:Z
 
     if-nez v0, :cond_0
 
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sA:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rD:Z
 
     if-eqz v0, :cond_1
 
     :cond_0
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sk:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rn:Z
 
     if-nez v0, :cond_1
 
@@ -1465,7 +1465,7 @@
     goto :goto_0
 .end method
 
-.method private cC()V
+.method private cm()V
     .locals 2
 
     .prologue
@@ -1473,13 +1473,13 @@
     const/16 v0, 0x8
 
     .line 820
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cB()Z
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cl()Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sn:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rq:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
@@ -1487,7 +1487,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->ss:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rv:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
@@ -1501,7 +1501,7 @@
 
     .line 825
     :cond_1
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sp:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rs:Landroid/view/View;
 
     invoke-virtual {v1, v0}, Landroid/view/View;->setVisibility(I)V
 
@@ -1509,7 +1509,7 @@
     return-void
 .end method
 
-.method private cD()V
+.method private cn()V
     .locals 4
 
     .prologue
@@ -1518,7 +1518,7 @@
     const/4 v1, 0x0
 
     .line 829
-    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v2}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getText()Landroid/text/Editable;
 
@@ -1536,18 +1536,18 @@
     :goto_0
     if-nez v2, :cond_0
 
-    iget-boolean v3, p0, Landroid/support/v7/widget/SearchView;->sj:Z
+    iget-boolean v3, p0, Landroid/support/v7/widget/SearchView;->rm:Z
 
     if-eqz v3, :cond_2
 
-    iget-boolean v3, p0, Landroid/support/v7/widget/SearchView;->sD:Z
+    iget-boolean v3, p0, Landroid/support/v7/widget/SearchView;->rG:Z
 
     if-nez v3, :cond_2
 
     .line 833
     :cond_0
     :goto_1
-    iget-object v3, p0, Landroid/support/v7/widget/SearchView;->sq:Landroid/widget/ImageView;
+    iget-object v3, p0, Landroid/support/v7/widget/SearchView;->rt:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_3
 
@@ -1555,7 +1555,7 @@
     invoke-virtual {v3, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 834
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sq:Landroid/widget/ImageView;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rt:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
@@ -1596,12 +1596,12 @@
     goto :goto_3
 .end method
 
-.method private cE()V
+.method private co()V
     .locals 1
 
     .prologue
     .line 838
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sJ:Ljava/lang/Runnable;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rM:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->post(Ljava/lang/Runnable;)Z
 
@@ -1609,19 +1609,19 @@
     return-void
 .end method
 
-.method private cF()V
+.method private cp()V
     .locals 2
 
     .prologue
     .line 1021
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sx:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rA:Ljava/lang/CharSequence;
 
     if-eqz v0, :cond_1
 
     .line 1022
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sx:Ljava/lang/CharSequence;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rA:Ljava/lang/CharSequence;
 
     invoke-direct {p0, v1}, Landroid/support/v7/widget/SearchView;->h(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
@@ -1636,7 +1636,7 @@
 
     .line 1023
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     if-eqz v0, :cond_3
 
@@ -1644,7 +1644,7 @@
     const/4 v0, 0x0
 
     .line 1025
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v1}, Landroid/app/SearchableInfo;->getHintId()I
 
@@ -1667,7 +1667,7 @@
     if-eqz v0, :cond_0
 
     .line 1030
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->h(Ljava/lang/CharSequence;)Ljava/lang/CharSequence;
 
@@ -1679,7 +1679,7 @@
 
     .line 1033
     :cond_3
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     const-string/jumbo v1, ""
 
@@ -1692,14 +1692,14 @@
     goto :goto_0
 .end method
 
-.method private cG()V
+.method private cq()V
     .locals 3
 
     .prologue
     const/4 v2, 0x1
 
     .line 1136
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getText()Landroid/text/Editable;
 
@@ -1713,16 +1713,16 @@
     if-eqz v0, :cond_2
 
     .line 1138
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sj:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rm:Z
 
     if-eqz v0, :cond_1
 
     .line 1140
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sf:Landroid/support/v7/widget/SearchView$b;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ri:Landroid/support/v7/widget/SearchView$b;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sf:Landroid/support/v7/widget/SearchView$b;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ri:Landroid/support/v7/widget/SearchView$b;
 
     invoke-interface {v0}, Landroid/support/v7/widget/SearchView$b;->onClose()Z
 
@@ -1744,14 +1744,14 @@
 
     .line 1148
     :cond_2
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     const-string/jumbo v1, ""
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setText(Ljava/lang/CharSequence;)V
 
     .line 1149
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->requestFocus()Z
 
@@ -1761,7 +1761,7 @@
     goto :goto_0
 .end method
 
-.method private cH()V
+.method private cr()V
     .locals 1
 
     .prologue
@@ -1771,7 +1771,7 @@
     invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->z(Z)V
 
     .line 1157
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->requestFocus()Z
 
@@ -1781,12 +1781,12 @@
     invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->setImeVisibility(Z)V
 
     .line 1159
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->si:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rl:Landroid/view/View$OnClickListener;
 
     if-eqz v0, :cond_0
 
     .line 1160
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->si:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rl:Landroid/view/View$OnClickListener;
 
     invoke-interface {v0, p0}, Landroid/view/View$OnClickListener;->onClick(Landroid/view/View;)V
 
@@ -1795,21 +1795,21 @@
     return-void
 .end method
 
-.method private cJ()V
+.method private ct()V
     .locals 3
 
     .prologue
     .line 1554
-    sget-object v0, Landroid/support/v7/widget/SearchView;->sH:Landroid/support/v7/widget/SearchView$a;
+    sget-object v0, Landroid/support/v7/widget/SearchView;->rK:Landroid/support/v7/widget/SearchView$a;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v2, v0, Landroid/support/v7/widget/SearchView$a;->sU:Ljava/lang/reflect/Method;
+    iget-object v2, v0, Landroid/support/v7/widget/SearchView$a;->rX:Ljava/lang/reflect/Method;
 
     if-eqz v2, :cond_0
 
     :try_start_0
-    iget-object v0, v0, Landroid/support/v7/widget/SearchView$a;->sU:Ljava/lang/reflect/Method;
+    iget-object v0, v0, Landroid/support/v7/widget/SearchView$a;->rX:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -1822,16 +1822,16 @@
     .line 1555
     :cond_0
     :goto_0
-    sget-object v0, Landroid/support/v7/widget/SearchView;->sH:Landroid/support/v7/widget/SearchView$a;
+    sget-object v0, Landroid/support/v7/widget/SearchView;->rK:Landroid/support/v7/widget/SearchView$a;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v2, v0, Landroid/support/v7/widget/SearchView$a;->sV:Ljava/lang/reflect/Method;
+    iget-object v2, v0, Landroid/support/v7/widget/SearchView$a;->rY:Ljava/lang/reflect/Method;
 
     if-eqz v2, :cond_1
 
     :try_start_1
-    iget-object v0, v0, Landroid/support/v7/widget/SearchView$a;->sV:Ljava/lang/reflect/Method;
+    iget-object v0, v0, Landroid/support/v7/widget/SearchView$a;->rY:Ljava/lang/reflect/Method;
 
     const/4 v2, 0x0
 
@@ -1862,7 +1862,7 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->su:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rx:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->getWidth()I
 
@@ -1880,7 +1880,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->so:Landroid/view/View;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rr:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getPaddingLeft()I
 
@@ -1890,17 +1890,17 @@
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
-    iget-boolean v3, p0, Landroid/support/v7/widget/SearchView;->sj:Z
+    iget-boolean v3, p0, Landroid/support/v7/widget/SearchView;->rm:Z
 
     if-eqz v3, :cond_1
 
-    sget v3, Lcom/tencent/mm/a$g;->abc_dropdownitem_icon_width:I
+    const v3, 0x7f050244
 
     invoke-virtual {v0, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v3
 
-    sget v4, Lcom/tencent/mm/a$g;->abc_dropdownitem_text_padding_left:I
+    const v4, 0x7f050242
 
     invoke-virtual {v0, v4}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -1909,7 +1909,7 @@
     add-int/2addr v0, v3
 
     :goto_0
-    iget-object v3, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v3, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v3}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getDropDownBackground()Landroid/graphics/drawable/Drawable;
 
@@ -1923,11 +1923,11 @@
 
     sub-int v3, v1, v3
 
-    iget-object v4, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v4, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v4, v3}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setDropDownHorizontalOffset(I)V
 
-    iget-object v3, p0, Landroid/support/v7/widget/SearchView;->su:Landroid/view/View;
+    iget-object v3, p0, Landroid/support/v7/widget/SearchView;->rx:Landroid/view/View;
 
     invoke-virtual {v3}, Landroid/view/View;->getWidth()I
 
@@ -1945,7 +1945,7 @@
 
     sub-int/2addr v0, v1
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v1, v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setDropDownWidth(I)V
 
@@ -1963,7 +1963,7 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sm:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rp:Landroid/view/View;
 
     return-object v0
 .end method
@@ -1973,7 +1973,7 @@
 
     .prologue
     .line 97
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cH()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cr()V
 
     return-void
 .end method
@@ -1983,39 +1983,9 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sq:Landroid/widget/ImageView;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rt:Landroid/widget/ImageView;
 
     return-object v0
-.end method
-
-.method static g(Landroid/content/Context;)Z
-    .locals 2
-
-    .prologue
-    .line 1559
-    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
-
-    move-result-object v0
-
-    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
-
-    const/4 v1, 0x2
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
 .end method
 
 .method private getPreferredWidth()I
@@ -2031,7 +2001,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->abc_search_view_preferred_width:I
+    const v1, 0x7f050241
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
@@ -2058,7 +2028,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$d;->searchViewSearchIcon:I
+    const v2, 0x7f0100e3
 
     const/4 v3, 0x1
 
@@ -2077,7 +2047,7 @@
     const/4 v6, 0x0
 
     .line 1009
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sj:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rm:Z
 
     if-nez v0, :cond_0
 
@@ -2114,7 +2084,7 @@
     move-result-object v1
 
     .line 1014
-    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v2}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getTextSize()F
 
@@ -2155,7 +2125,7 @@
 
     .prologue
     .line 97
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cG()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cq()V
 
     return-void
 .end method
@@ -2165,7 +2135,7 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sn:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rq:Landroid/view/View;
 
     return-object v0
 .end method
@@ -2177,7 +2147,7 @@
     const/4 v2, 0x0
 
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getText()Landroid/text/Editable;
 
@@ -2191,22 +2161,22 @@
 
     if-lez v1, :cond_2
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->se:Landroid/support/v7/widget/SearchView$c;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rh:Landroid/support/v7/widget/SearchView$c;
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->se:Landroid/support/v7/widget/SearchView$c;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rh:Landroid/support/v7/widget/SearchView$c;
 
     invoke-interface {v0}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    invoke-interface {v1}, Landroid/support/v7/widget/SearchView$c;->cK()Z
+    invoke-interface {v1}, Landroid/support/v7/widget/SearchView$c;->cu()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
     :cond_0
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     if-eqz v1, :cond_1
 
@@ -2221,7 +2191,7 @@
     invoke-direct {p0, v2}, Landroid/support/v7/widget/SearchView;->setImeVisibility(Z)V
 
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->dismissDropDown()V
 
@@ -2234,7 +2204,7 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ss:Landroid/view/View;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rv:Landroid/view/View;
 
     return-object v0
 .end method
@@ -2246,11 +2216,11 @@
     const/4 v0, 0x0
 
     .line 97
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     if-eqz v1, :cond_0
 
-    iget-object v5, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v5, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     :try_start_0
     invoke-virtual {v5}, Landroid/app/SearchableInfo;->getVoiceSearchLaunchWebSearch()Z
@@ -2259,7 +2229,7 @@
 
     if-eqz v1, :cond_2
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sL:Landroid/content/Intent;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rO:Landroid/content/Intent;
 
     new-instance v2, Landroid/content/Intent;
 
@@ -2300,7 +2270,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sM:Landroid/content/Intent;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rP:Landroid/content/Intent;
 
     invoke-virtual {v5}, Landroid/app/SearchableInfo;->getSearchActivity()Landroid/content/ComponentName;
 
@@ -2330,13 +2300,13 @@
 
     invoke-direct {v8}, Landroid/os/Bundle;-><init>()V
 
-    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->sG:Landroid/os/Bundle;
+    iget-object v2, p0, Landroid/support/v7/widget/SearchView;->rJ:Landroid/os/Bundle;
 
     if-eqz v2, :cond_3
 
     const-string/jumbo v2, "app_data"
 
-    iget-object v3, p0, Landroid/support/v7/widget/SearchView;->sG:Landroid/os/Bundle;
+    iget-object v3, p0, Landroid/support/v7/widget/SearchView;->rJ:Landroid/os/Bundle;
 
     invoke-virtual {v8, v2, v3}, Landroid/os/Bundle;->putParcelable(Ljava/lang/String;Landroid/os/Parcelable;)V
 
@@ -2487,7 +2457,7 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     return-object v0
 .end method
@@ -2497,9 +2467,39 @@
 
     .prologue
     .line 97
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cJ()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->ct()V
 
     return-void
+.end method
+
+.method static n(Landroid/content/Context;)Z
+    .locals 2
+
+    .prologue
+    .line 1559
+    invoke-virtual {p0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/content/res/Resources;->getConfiguration()Landroid/content/res/Configuration;
+
+    move-result-object v0
+
+    iget v0, v0, Landroid/content/res/Configuration;->orientation:I
+
+    const/4 v1, 0x2
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
 .end method
 
 .method static synthetic o(Landroid/support/v7/widget/SearchView;)Landroid/app/SearchableInfo;
@@ -2507,7 +2507,7 @@
 
     .prologue
     .line 97
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     return-object v0
 .end method
@@ -2532,7 +2532,7 @@
     if-eqz p1, :cond_1
 
     .line 857
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sI:Ljava/lang/Runnable;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rL:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->post(Ljava/lang/Runnable;)Z
 
@@ -2543,7 +2543,7 @@
 
     .line 859
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sI:Ljava/lang/Runnable;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rL:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
@@ -2586,7 +2586,7 @@
     const/4 v1, 0x0
 
     .line 773
-    iput-boolean p1, p0, Landroid/support/v7/widget/SearchView;->sk:Z
+    iput-boolean p1, p0, Landroid/support/v7/widget/SearchView;->rn:Z
 
     .line 775
     if-eqz p1, :cond_0
@@ -2595,7 +2595,7 @@
 
     .line 777
     :goto_0
-    iget-object v3, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v3, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v3}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getText()Landroid/text/Editable;
 
@@ -2611,7 +2611,7 @@
 
     .line 779
     :goto_1
-    iget-object v5, p0, Landroid/support/v7/widget/SearchView;->sm:Landroid/view/View;
+    iget-object v5, p0, Landroid/support/v7/widget/SearchView;->rp:Landroid/view/View;
 
     invoke-virtual {v5, v0}, Landroid/view/View;->setVisibility(I)V
 
@@ -2619,7 +2619,7 @@
     invoke-direct {p0, v3}, Landroid/support/v7/widget/SearchView;->A(Z)V
 
     .line 781
-    iget-object v5, p0, Landroid/support/v7/widget/SearchView;->sr:Landroid/view/View;
+    iget-object v5, p0, Landroid/support/v7/widget/SearchView;->ru:Landroid/view/View;
 
     if-eqz p1, :cond_2
 
@@ -2629,9 +2629,9 @@
     invoke-virtual {v5, v0}, Landroid/view/View;->setVisibility(I)V
 
     .line 782
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sv:Landroid/widget/ImageView;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ry:Landroid/widget/ImageView;
 
-    iget-boolean v5, p0, Landroid/support/v7/widget/SearchView;->sj:Z
+    iget-boolean v5, p0, Landroid/support/v7/widget/SearchView;->rm:Z
 
     if-eqz v5, :cond_3
 
@@ -2639,7 +2639,7 @@
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 783
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cD()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cn()V
 
     .line 784
     if-nez v3, :cond_4
@@ -2648,7 +2648,7 @@
     invoke-direct {p0, v4}, Landroid/support/v7/widget/SearchView;->B(Z)V
 
     .line 785
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cC()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cm()V
 
     .line 786
     return-void
@@ -2686,35 +2686,6 @@
 
 
 # virtual methods
-.method final cI()V
-    .locals 1
-
-    .prologue
-    .line 1188
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sk:Z
-
-    invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->z(Z)V
-
-    .line 1191
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cE()V
-
-    .line 1192
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
-
-    invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->hasFocus()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 1193
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cJ()V
-
-    .line 1195
-    :cond_0
-    return-void
-.end method
-
 .method public clearFocus()V
     .locals 2
 
@@ -2724,7 +2695,7 @@
     .line 462
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sz:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rC:Z
 
     .line 463
     invoke-direct {p0, v1}, Landroid/support/v7/widget/SearchView;->setImeVisibility(Z)V
@@ -2733,14 +2704,43 @@
     invoke-super {p0}, Landroid/widget/LinearLayout;->clearFocus()V
 
     .line 465
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->clearFocus()V
 
     .line 466
-    iput-boolean v1, p0, Landroid/support/v7/widget/SearchView;->sz:Z
+    iput-boolean v1, p0, Landroid/support/v7/widget/SearchView;->rC:Z
 
     .line 467
+    return-void
+.end method
+
+.method final cs()V
+    .locals 1
+
+    .prologue
+    .line 1188
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rn:Z
+
+    invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->z(Z)V
+
+    .line 1191
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->co()V
+
+    .line 1192
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+
+    invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->hasFocus()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 1193
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->ct()V
+
+    .line 1195
+    :cond_0
     return-void
 .end method
 
@@ -2749,7 +2749,7 @@
 
     .prologue
     .line 415
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getImeOptions()I
 
@@ -2763,7 +2763,7 @@
 
     .prologue
     .line 437
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getInputType()I
 
@@ -2777,7 +2777,7 @@
 
     .prologue
     .line 729
-    iget v0, p0, Landroid/support/v7/widget/SearchView;->rl:I
+    iget v0, p0, Landroid/support/v7/widget/SearchView;->qn:I
 
     return v0
 .end method
@@ -2787,7 +2787,7 @@
 
     .prologue
     .line 524
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getText()Landroid/text/Editable;
 
@@ -2803,12 +2803,12 @@
     const/4 v0, 0x0
 
     .line 568
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sx:Ljava/lang/CharSequence;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rA:Ljava/lang/CharSequence;
 
     if-eqz v1, :cond_1
 
     .line 569
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sx:Ljava/lang/CharSequence;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rA:Ljava/lang/CharSequence;
 
     .line 578
     :cond_0
@@ -2817,12 +2817,12 @@
 
     .line 570
     :cond_1
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     if-eqz v1, :cond_0
 
     .line 572
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v1}, Landroid/app/SearchableInfo;->getHintId()I
 
@@ -2848,7 +2848,7 @@
 
     .prologue
     .line 707
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
     return-object v0
 .end method
@@ -2866,16 +2866,16 @@
     invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->z(Z)V
 
     .line 1211
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget v1, p0, Landroid/support/v7/widget/SearchView;->sE:I
+    iget v1, p0, Landroid/support/v7/widget/SearchView;->rH:I
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setImeOptions(I)V
 
     .line 1212
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sD:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rG:Z
 
     .line 1213
     return-void
@@ -2886,7 +2886,7 @@
 
     .prologue
     .line 1220
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sD:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rG:Z
 
     if-eqz v0, :cond_0
 
@@ -2898,21 +2898,21 @@
     :cond_0
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sD:Z
+    iput-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rG:Z
 
     .line 1223
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->getImeOptions()I
 
     move-result v0
 
-    iput v0, p0, Landroid/support/v7/widget/SearchView;->sE:I
+    iput v0, p0, Landroid/support/v7/widget/SearchView;->rH:I
 
     .line 1224
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget v1, p0, Landroid/support/v7/widget/SearchView;->sE:I
+    iget v1, p0, Landroid/support/v7/widget/SearchView;->rH:I
 
     const/high16 v2, 0x2000000
 
@@ -2921,7 +2921,7 @@
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setImeOptions(I)V
 
     .line 1225
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     const-string/jumbo v1, ""
 
@@ -2940,12 +2940,12 @@
 
     .prologue
     .line 850
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sJ:Ljava/lang/Runnable;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rM:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 851
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sK:Ljava/lang/Runnable;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rN:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Landroid/support/v7/widget/SearchView;->post(Ljava/lang/Runnable;)Z
 
@@ -2961,7 +2961,7 @@
 
     .prologue
     .line 905
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     if-nez v0, :cond_0
 
@@ -2985,7 +2985,7 @@
 
     .prologue
     .line 735
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sk:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rn:Z
 
     if-eqz v0, :cond_0
 
@@ -3025,12 +3025,12 @@
 
     .line 746
     :sswitch_0
-    iget v1, p0, Landroid/support/v7/widget/SearchView;->rl:I
+    iget v1, p0, Landroid/support/v7/widget/SearchView;->qn:I
 
     if-lez v1, :cond_2
 
     .line 747
-    iget v1, p0, Landroid/support/v7/widget/SearchView;->rl:I
+    iget v1, p0, Landroid/support/v7/widget/SearchView;->qn:I
 
     invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
 
@@ -3052,12 +3052,12 @@
 
     .line 754
     :sswitch_1
-    iget v1, p0, Landroid/support/v7/widget/SearchView;->rl:I
+    iget v1, p0, Landroid/support/v7/widget/SearchView;->qn:I
 
     if-lez v1, :cond_1
 
     .line 755
-    iget v1, p0, Landroid/support/v7/widget/SearchView;->rl:I
+    iget v1, p0, Landroid/support/v7/widget/SearchView;->qn:I
 
     invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
 
@@ -3067,11 +3067,11 @@
 
     .line 760
     :sswitch_2
-    iget v0, p0, Landroid/support/v7/widget/SearchView;->rl:I
+    iget v0, p0, Landroid/support/v7/widget/SearchView;->qn:I
 
     if-lez v0, :cond_3
 
-    iget v0, p0, Landroid/support/v7/widget/SearchView;->rl:I
+    iget v0, p0, Landroid/support/v7/widget/SearchView;->qn:I
 
     goto :goto_1
 
@@ -3099,7 +3099,7 @@
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onWindowFocusChanged(Z)V
 
     .line 1201
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cE()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->co()V
 
     .line 1202
     return-void
@@ -3112,7 +3112,7 @@
     const/4 v0, 0x0
 
     .line 444
-    iget-boolean v1, p0, Landroid/support/v7/widget/SearchView;->sz:Z
+    iget-boolean v1, p0, Landroid/support/v7/widget/SearchView;->rC:Z
 
     if-eqz v1, :cond_1
 
@@ -3130,12 +3130,12 @@
     if-eqz v1, :cond_0
 
     .line 448
-    iget-boolean v1, p0, Landroid/support/v7/widget/SearchView;->sk:Z
+    iget-boolean v1, p0, Landroid/support/v7/widget/SearchView;->rn:Z
 
     if-nez v1, :cond_3
 
     .line 449
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v1, p1, p2}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->requestFocus(ILandroid/graphics/Rect;)Z
 
@@ -3167,7 +3167,7 @@
 
     .prologue
     .line 392
-    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->sG:Landroid/os/Bundle;
+    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->rJ:Landroid/os/Bundle;
 
     .line 393
     return-void
@@ -3181,7 +3181,7 @@
     if-eqz p1, :cond_0
 
     .line 622
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cG()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cq()V
 
     .line 626
     :goto_0
@@ -3189,7 +3189,7 @@
 
     .line 624
     :cond_0
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cH()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cr()V
 
     goto :goto_0
 .end method
@@ -3199,7 +3199,7 @@
 
     .prologue
     .line 594
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sj:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rm:Z
 
     if-ne v0, p1, :cond_0
 
@@ -3209,13 +3209,13 @@
 
     .line 595
     :cond_0
-    iput-boolean p1, p0, Landroid/support/v7/widget/SearchView;->sj:Z
+    iput-boolean p1, p0, Landroid/support/v7/widget/SearchView;->rm:Z
 
     .line 596
     invoke-direct {p0, p1}, Landroid/support/v7/widget/SearchView;->z(Z)V
 
     .line 597
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cF()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cp()V
 
     goto :goto_0
 .end method
@@ -3225,7 +3225,7 @@
 
     .prologue
     .line 404
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setImeOptions(I)V
 
@@ -3238,7 +3238,7 @@
 
     .prologue
     .line 427
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setInputType(I)V
 
@@ -3251,7 +3251,7 @@
 
     .prologue
     .line 716
-    iput p1, p0, Landroid/support/v7/widget/SearchView;->rl:I
+    iput p1, p0, Landroid/support/v7/widget/SearchView;->qn:I
 
     .line 718
     invoke-virtual {p0}, Landroid/support/v7/widget/SearchView;->requestLayout()V
@@ -3265,7 +3265,7 @@
 
     .prologue
     .line 485
-    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->sf:Landroid/support/v7/widget/SearchView$b;
+    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->ri:Landroid/support/v7/widget/SearchView$b;
 
     .line 486
     return-void
@@ -3276,7 +3276,7 @@
 
     .prologue
     .line 494
-    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->sg:Landroid/view/View$OnFocusChangeListener;
+    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->rj:Landroid/view/View$OnFocusChangeListener;
 
     .line 495
     return-void
@@ -3287,7 +3287,7 @@
 
     .prologue
     .line 476
-    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->se:Landroid/support/v7/widget/SearchView$c;
+    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->rh:Landroid/support/v7/widget/SearchView$c;
 
     .line 477
     return-void
@@ -3298,7 +3298,7 @@
 
     .prologue
     .line 515
-    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->si:Landroid/view/View$OnClickListener;
+    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->rl:Landroid/view/View$OnClickListener;
 
     .line 516
     return-void
@@ -3309,7 +3309,7 @@
 
     .prologue
     .line 503
-    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->sh:Landroid/support/v7/widget/SearchView$d;
+    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->rk:Landroid/support/v7/widget/SearchView$d;
 
     .line 504
     return-void
@@ -3320,12 +3320,12 @@
 
     .prologue
     .line 1368
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v0, p1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setText(Ljava/lang/CharSequence;)V
 
     .line 1370
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -3355,10 +3355,10 @@
 
     .prologue
     .line 557
-    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->sx:Ljava/lang/CharSequence;
+    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->rA:Ljava/lang/CharSequence;
 
     .line 558
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cF()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cp()V
 
     .line 559
     return-void
@@ -3369,26 +3369,26 @@
 
     .prologue
     .line 675
-    iput-boolean p1, p0, Landroid/support/v7/widget/SearchView;->sy:Z
+    iput-boolean p1, p0, Landroid/support/v7/widget/SearchView;->rB:Z
 
     .line 676
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
-    instance-of v0, v0, Landroid/support/v7/widget/m;
+    instance-of v0, v0, Landroid/support/v7/widget/a;
 
     if-eqz v0, :cond_0
 
     .line 677
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
-    check-cast v0, Landroid/support/v7/widget/m;
+    check-cast v0, Landroid/support/v7/widget/a;
 
     if-eqz p1, :cond_1
 
     const/4 v1, 0x2
 
     :goto_0
-    iput v1, v0, Landroid/support/v7/widget/m;->tc:I
+    iput v1, v0, Landroid/support/v7/widget/a;->sg:I
 
     .line 680
     :cond_0
@@ -3414,17 +3414,17 @@
     const/4 v2, 0x1
 
     .line 370
-    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     .line 371
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     if-eqz v0, :cond_3
 
     .line 372
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v1}, Landroid/app/SearchableInfo;->getSuggestThreshold()I
 
@@ -3432,9 +3432,9 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setThreshold(I)V
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v1}, Landroid/app/SearchableInfo;->getImeOptions()I
 
@@ -3442,7 +3442,7 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setImeOptions(I)V
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v0}, Landroid/app/SearchableInfo;->getInputType()I
 
@@ -3456,7 +3456,7 @@
 
     and-int/2addr v0, v1
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v1}, Landroid/app/SearchableInfo;->getSuggestAuthority()Ljava/lang/String;
 
@@ -3471,20 +3471,20 @@
     or-int/2addr v0, v1
 
     :cond_0
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     invoke-virtual {v1, v0}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setInputType(I)V
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
     invoke-virtual {v0, v4}, Landroid/support/v4/widget/a;->changeCursor(Landroid/database/Cursor;)V
 
     :cond_1
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v0}, Landroid/app/SearchableInfo;->getSuggestAuthority()Ljava/lang/String;
 
@@ -3492,50 +3492,50 @@
 
     if-eqz v0, :cond_2
 
-    new-instance v0, Landroid/support/v7/widget/m;
+    new-instance v0, Landroid/support/v7/widget/a;
 
     invoke-virtual {p0}, Landroid/support/v7/widget/SearchView;->getContext()Landroid/content/Context;
 
     move-result-object v1
 
-    iget-object v5, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v5, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
-    iget-object v6, p0, Landroid/support/v7/widget/SearchView;->sN:Ljava/util/WeakHashMap;
+    iget-object v6, p0, Landroid/support/v7/widget/SearchView;->rQ:Ljava/util/WeakHashMap;
 
-    invoke-direct {v0, v1, p0, v5, v6}, Landroid/support/v7/widget/m;-><init>(Landroid/content/Context;Landroid/support/v7/widget/SearchView;Landroid/app/SearchableInfo;Ljava/util/WeakHashMap;)V
+    invoke-direct {v0, v1, p0, v5, v6}, Landroid/support/v7/widget/a;-><init>(Landroid/content/Context;Landroid/support/v7/widget/SearchView;Landroid/app/SearchableInfo;Ljava/util/WeakHashMap;)V
 
-    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iput-object v0, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
-    check-cast v0, Landroid/support/v7/widget/m;
+    check-cast v0, Landroid/support/v7/widget/a;
 
-    iget-boolean v1, p0, Landroid/support/v7/widget/SearchView;->sy:Z
+    iget-boolean v1, p0, Landroid/support/v7/widget/SearchView;->rB:Z
 
     if-eqz v1, :cond_5
 
     const/4 v1, 0x2
 
     :goto_0
-    iput v1, v0, Landroid/support/v7/widget/m;->tc:I
+    iput v1, v0, Landroid/support/v7/widget/a;->sg:I
 
     .line 373
     :cond_2
-    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cF()V
+    invoke-direct {p0}, Landroid/support/v7/widget/SearchView;->cp()V
 
     .line 376
     :cond_3
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     if-eqz v0, :cond_8
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v0}, Landroid/app/SearchableInfo;->getVoiceSearchEnabled()Z
 
@@ -3543,7 +3543,7 @@
 
     if-eqz v0, :cond_8
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v0}, Landroid/app/SearchableInfo;->getVoiceSearchLaunchWebSearch()Z
 
@@ -3551,7 +3551,7 @@
 
     if-eqz v0, :cond_6
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sL:Landroid/content/Intent;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rO:Landroid/content/Intent;
 
     :goto_1
     if-eqz v0, :cond_8
@@ -3571,15 +3571,15 @@
     if-eqz v0, :cond_7
 
     :goto_2
-    iput-boolean v2, p0, Landroid/support/v7/widget/SearchView;->sA:Z
+    iput-boolean v2, p0, Landroid/support/v7/widget/SearchView;->rD:Z
 
     .line 378
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sA:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rD:Z
 
     if-eqz v0, :cond_4
 
     .line 381
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
     const-string/jumbo v1, "nm"
 
@@ -3587,7 +3587,7 @@
 
     .line 383
     :cond_4
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sk:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rn:Z
 
     invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->z(Z)V
 
@@ -3602,7 +3602,7 @@
 
     .line 376
     :cond_6
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sF:Landroid/app/SearchableInfo;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rI:Landroid/app/SearchableInfo;
 
     invoke-virtual {v0}, Landroid/app/SearchableInfo;->getVoiceSearchLaunchRecognizer()Z
 
@@ -3610,7 +3610,7 @@
 
     if-eqz v0, :cond_9
 
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->sM:Landroid/content/Intent;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rP:Landroid/content/Intent;
 
     goto :goto_1
 
@@ -3635,10 +3635,10 @@
 
     .prologue
     .line 647
-    iput-boolean p1, p0, Landroid/support/v7/widget/SearchView;->sw:Z
+    iput-boolean p1, p0, Landroid/support/v7/widget/SearchView;->rz:Z
 
     .line 648
-    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->sk:Z
+    iget-boolean v0, p0, Landroid/support/v7/widget/SearchView;->rn:Z
 
     invoke-direct {p0, v0}, Landroid/support/v7/widget/SearchView;->z(Z)V
 
@@ -3651,12 +3651,12 @@
 
     .prologue
     .line 697
-    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iput-object p1, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
     .line 699
-    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->st:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
+    iget-object v0, p0, Landroid/support/v7/widget/SearchView;->rw:Landroid/support/v7/widget/SearchView$SearchAutoComplete;
 
-    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->sl:Landroid/support/v4/widget/a;
+    iget-object v1, p0, Landroid/support/v7/widget/SearchView;->ro:Landroid/support/v4/widget/a;
 
     invoke-virtual {v0, v1}, Landroid/support/v7/widget/SearchView$SearchAutoComplete;->setAdapter(Landroid/widget/ListAdapter;)V
 

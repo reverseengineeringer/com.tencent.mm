@@ -12,17 +12,17 @@
 
 
 # instance fields
-.field private fRl:Landroid/widget/TextView;
+.field private glu:Landroid/widget/TextView;
 
-.field private faf:Landroid/widget/TextView;
+.field private htg:Landroid/widget/TextView;
 
-.field private gYe:Ljava/lang/String;
+.field private iOw:Ljava/lang/String;
 
-.field private iwf:Landroid/view/View;
+.field private kvi:Landroid/view/View;
 
-.field private iwg:Landroid/widget/TextView;
+.field private kvj:Landroid/widget/TextView;
 
-.field private iwh:Z
+.field private kvk:Z
 
 
 # direct methods
@@ -36,19 +36,19 @@
     .line 30
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->gYe:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iOw:Ljava/lang/String;
 
     .line 33
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwh:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvk:Z
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 8
 
     .prologue
@@ -61,21 +61,21 @@
     const/high16 v5, 0x41600000    # 14.0f
 
     .line 57
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->fdj:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->goQ:Z
 
     if-nez v0, :cond_0
 
     .line 58
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->aLh()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->baW()V
 
     .line 60
     :cond_0
-    sget v0, Lcom/tencent/mm/a$n;->regbymobile_reg_setpwd_title:I
+    const v0, 0x7f0b013b
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->qb(I)V
 
     .line 61
-    sget v0, Lcom/tencent/mm/a$i;->username_tv:I
+    const v0, 0x7f0706d9
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->findViewById(I)Landroid/view/View;
 
@@ -83,19 +83,19 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->faf:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->glu:Landroid/widget/TextView;
 
     .line 62
-    sget v0, Lcom/tencent/mm/a$i;->account_container:I
+    const v0, 0x7f070794
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwf:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvi:Landroid/view/View;
 
     .line 63
-    sget v0, Lcom/tencent/mm/a$i;->regbymobilerag_pass_hint:I
+    const v0, 0x7f070793
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->findViewById(I)Landroid/view/View;
 
@@ -103,10 +103,10 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->fRl:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->htg:Landroid/widget/TextView;
 
     .line 64
-    sget v0, Lcom/tencent/mm/a$i;->account_wording:I
+    const v0, 0x7f070795
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->findViewById(I)Landroid/view/View;
 
@@ -114,14 +114,14 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwg:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvj:Landroid/widget/TextView;
 
     .line 65
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->gYe:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iOw:Ljava/lang/String;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->gYe:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iOw:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -130,35 +130,35 @@
     if-lez v0, :cond_1
 
     .line 66
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->fRl:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->htg:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->gYe:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iOw:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 69
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwh:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvk:Z
 
     if-nez v0, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    iget v0, v0, Lcom/tencent/mm/model/b;->uin:I
+    iget v0, v0, Lcom/tencent/mm/model/c;->uin:I
 
     if-nez v0, :cond_4
 
     .line 70
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwf:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvi:Landroid/view/View;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
     .line 114
     :goto_0
-    sget v0, Lcom/tencent/mm/a$i;->password_wording:I
+    const v0, 0x7f070796
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->findViewById(I)Landroid/view/View;
 
@@ -166,7 +166,7 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$i;->confirm_wording:I
+    const v1, 0x7f070798
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->findViewById(I)Landroid/view/View;
 
@@ -174,7 +174,7 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    sget v2, Lcom/tencent/mm/a$i;->regbymobilereg_pass_et:I
+    const v2, 0x7f070797
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->findViewById(I)Landroid/view/View;
 
@@ -182,7 +182,7 @@
 
     check-cast v2, Landroid/widget/EditText;
 
-    sget v3, Lcom/tencent/mm/a$i;->regbymobilereg_pass_again_et:I
+    const v3, 0x7f070799
 
     invoke-virtual {p0, v3}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->findViewById(I)Landroid/view/View;
 
@@ -190,7 +190,7 @@
 
     check-cast v3, Landroid/widget/EditText;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/s;->aEF()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUx()Z
 
     move-result v4
 
@@ -205,13 +205,13 @@
     invoke-virtual {v3, v6, v5}, Landroid/widget/EditText;->setTextSize(IF)V
 
     :cond_3
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwg:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvj:Landroid/widget/TextView;
 
     invoke-virtual {v2}, Landroid/widget/TextView;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwg:Landroid/widget/TextView;
+    iget-object v3, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvj:Landroid/widget/TextView;
 
     invoke-virtual {v3}, Landroid/widget/TextView;->getText()Ljava/lang/CharSequence;
 
@@ -265,7 +265,7 @@
 
     move-result v1
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwg:Landroid/widget/TextView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvj:Landroid/widget/TextView;
 
     float-to-int v3, v1
 
@@ -284,31 +284,31 @@
 
     .line 72
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwf:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvi:Landroid/view/View;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 73
-    invoke-static {}, Lcom/tencent/mm/model/v;->rT()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->sd()Ljava/lang/String;
 
     move-result-object v0
 
     .line 74
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_5
 
     .line 75
-    invoke-static {}, Lcom/tencent/mm/model/v;->rS()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
 
     move-result-object v0
 
     .line 76
-    invoke-static {v0}, Lcom/tencent/mm/storage/k;->yy(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/storage/k;->Ed(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -318,18 +318,18 @@
 
     .line 81
     :cond_5
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_a
 
     .line 82
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -342,11 +342,11 @@
     check-cast v0, Ljava/lang/String;
 
     .line 83
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v2
 
@@ -359,14 +359,14 @@
     check-cast v1, Ljava/lang/String;
 
     .line 84
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_8
 
     .line 85
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->xW(Ljava/lang/String;)Ljava/lang/Boolean;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->Dw(Ljava/lang/String;)Ljava/lang/Boolean;
 
     move-result-object v1
 
@@ -377,9 +377,9 @@
     if-eqz v1, :cond_7
 
     .line 86
-    new-instance v1, Lcom/tencent/mm/sdk/platformtools/am;
+    new-instance v1, Lcom/tencent/mm/sdk/platformtools/ai;
 
-    invoke-direct {v1}, Lcom/tencent/mm/sdk/platformtools/am;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/sdk/platformtools/ai;-><init>()V
 
     .line 87
     const-string/jumbo v1, "86"
@@ -403,7 +403,7 @@
     move-result-object v1
 
     .line 91
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/am;->xv(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ai;->pW(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -422,27 +422,27 @@
     .line 96
     :cond_6
     :goto_1
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/am;->formatNumber(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ai;->formatNumber(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 97
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwg:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvj:Landroid/widget/TextView;
 
-    sget v2, Lcom/tencent/mm/a$n;->settings_mobile:I
+    const v2, 0x7f0b0311
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
     .line 98
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->faf:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->glu:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 100
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->fRl:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->htg:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->regbymobile_reg_setpwd_title_mobile:I
+    const v1, 0x7f0b013c
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -450,28 +450,28 @@
 
     .line 101
     :cond_8
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_9
 
     .line 102
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->faf:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->glu:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 103
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwg:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvj:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->settings_email_addr:I
+    const v1, 0x7f0b0312
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     .line 104
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->fRl:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->htg:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->regbymobile_reg_setpwd_title_email:I
+    const v1, 0x7f0b013d
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
@@ -479,7 +479,7 @@
 
     .line 106
     :cond_9
-    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwf:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvi:Landroid/view/View;
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
@@ -487,14 +487,14 @@
 
     .line 109
     :cond_a
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwg:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvj:Landroid/widget/TextView;
 
-    sget v2, Lcom/tencent/mm/a$n;->settings_username:I
+    const v2, 0x7f0b0309
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(I)V
 
     .line 110
-    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->faf:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->glu:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -510,12 +510,12 @@
     goto :goto_1
 .end method
 
-.method protected final aLR()Ljava/lang/String;
+.method protected final bbH()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 143
-    sget v0, Lcom/tencent/mm/a$i;->regbymobilereg_pass_et:I
+    const v0, 0x7f070797
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->findViewById(I)Landroid/view/View;
 
@@ -534,12 +534,12 @@
     return-object v0
 .end method
 
-.method protected final aLS()Ljava/lang/String;
+.method protected final bbI()Ljava/lang/String;
     .locals 1
 
     .prologue
     .line 148
-    sget v0, Lcom/tencent/mm/a$i;->regbymobilereg_pass_again_et:I
+    const v0, 0x7f070799
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->findViewById(I)Landroid/view/View;
 
@@ -558,7 +558,7 @@
     return-object v0
 .end method
 
-.method public final aLV()Z
+.method public final bbL()Z
     .locals 1
 
     .prologue
@@ -573,103 +573,9 @@
 
     .prologue
     .line 51
-    sget v0, Lcom/tencent/mm/a$k;->regbymobilesetpwd_reg:I
+    const v0, 0x7f0a0292
 
     return v0
-.end method
-
-.method protected final l(IILjava/lang/String;)Z
-    .locals 1
-
-    .prologue
-    .line 171
-    if-nez p1, :cond_0
-
-    if-nez p2, :cond_0
-
-    .line 172
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->finish()V
-
-    .line 173
-    const/4 v0, 0x1
-
-    .line 176
-    :goto_0
-    return v0
-
-    :cond_0
-    invoke-virtual {p0, p1, p2, p3}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->k(IILjava/lang/String;)Z
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method protected final nt(I)V
-    .locals 2
-
-    .prologue
-    .line 153
-    sget-object v0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI$1;->ivo:[I
-
-    add-int/lit8 v1, p1, -0x1
-
-    aget v0, v0, v1
-
-    packed-switch v0, :pswitch_data_0
-
-    .line 167
-    :goto_0
-    return-void
-
-    .line 155
-    :pswitch_0
-    sget v0, Lcom/tencent/mm/a$n;->regbymobile_reg_setpwd_alert_diff:I
-
-    sget v1, Lcom/tencent/mm/a$n;->regbymobile_reg_setpwd_alert_title:I
-
-    invoke-static {p0, v0, v1}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
-
-    goto :goto_0
-
-    .line 158
-    :pswitch_1
-    sget v0, Lcom/tencent/mm/a$n;->regbymobile_reg_setpwd_alert_more_byte:I
-
-    sget v1, Lcom/tencent/mm/a$n;->regbymobile_reg_setpwd_alert_title:I
-
-    invoke-static {p0, v0, v1}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
-
-    goto :goto_0
-
-    .line 161
-    :pswitch_2
-    sget v0, Lcom/tencent/mm/a$n;->verify_password_all_num_tip:I
-
-    sget v1, Lcom/tencent/mm/a$n;->app_err_reg_title:I
-
-    invoke-static {p0, v0, v1}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
-
-    goto :goto_0
-
-    .line 164
-    :pswitch_3
-    sget v0, Lcom/tencent/mm/a$n;->verify_password_tip:I
-
-    sget v1, Lcom/tencent/mm/a$n;->app_err_reg_title:I
-
-    invoke-static {p0, v0, v1}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
-
-    goto :goto_0
-
-    .line 153
-    :pswitch_data_0
-    .packed-switch 0x1
-        :pswitch_0
-        :pswitch_1
-        :pswitch_2
-        :pswitch_3
-    .end packed-switch
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
@@ -690,7 +596,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->gYe:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iOw:Ljava/lang/String;
 
     .line 39
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->getIntent()Landroid/content/Intent;
@@ -705,7 +611,7 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->fdj:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->goQ:Z
 
     .line 40
     invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->getIntent()Landroid/content/Intent;
@@ -720,10 +626,10 @@
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->iwh:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->kvk:Z
 
     .line 41
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->Gb()V
 
     .line 42
     return-void
@@ -738,4 +644,94 @@
 
     .line 47
     return-void
+.end method
+
+.method protected final q(IILjava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 171
+    if-nez p1, :cond_0
+
+    if-nez p2, :cond_0
+
+    .line 172
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->finish()V
+
+    .line 173
+    const/4 v0, 0x1
+
+    .line 176
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-virtual {p0, p1, p2, p3}, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI;->m(IILjava/lang/String;)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method protected final qn(I)V
+    .locals 3
+
+    .prologue
+    const v2, 0x7f0b0145
+
+    .line 153
+    sget-object v0, Lcom/tencent/mm/ui/account/RegByMobileSetPwdUI$1;->kuq:[I
+
+    add-int/lit8 v1, p1, -0x1
+
+    aget v0, v0, v1
+
+    packed-switch v0, :pswitch_data_0
+
+    .line 167
+    :goto_0
+    return-void
+
+    .line 155
+    :pswitch_0
+    const v0, 0x7f0b0146
+
+    invoke-static {p0, v0, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+
+    goto :goto_0
+
+    .line 158
+    :pswitch_1
+    const v0, 0x7f0b0147
+
+    invoke-static {p0, v0, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+
+    goto :goto_0
+
+    .line 161
+    :pswitch_2
+    const v0, 0x7f0b00d2
+
+    invoke-static {p0, v0, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+
+    goto :goto_0
+
+    .line 164
+    :pswitch_3
+    const v0, 0x7f0b00d3
+
+    invoke-static {p0, v0, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
+
+    goto :goto_0
+
+    .line 153
+    nop
+
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_0
+        :pswitch_1
+        :pswitch_2
+        :pswitch_3
+    .end packed-switch
 .end method

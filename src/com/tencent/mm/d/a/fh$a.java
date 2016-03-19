@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class fh$a
 {
-  public boolean aBL;
+  public String url;
 }
 
 /* Location:

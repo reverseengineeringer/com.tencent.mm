@@ -1,6 +1,9 @@
-.class final synthetic Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity$1;
+.class final Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Lcom/tencent/mm/plugin/base/stub/d$a;
 
 
 # annotations
@@ -9,93 +12,70 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x1008
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
-# static fields
-.field static final synthetic cjT:[I
+# instance fields
+.field final synthetic cBd:Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity;
 
 
 # direct methods
-.method static constructor <clinit>()V
-    .locals 3
+.method constructor <init>(Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity;)V
+    .locals 0
 
     .prologue
-    .line 43
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->values()[Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    .line 93
+    iput-object p1, p0, Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity$1;->cBd:Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity;
 
-    move-result-object v0
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    array-length v0, v0
+    return-void
+.end method
 
-    new-array v0, v0, [I
 
-    sput-object v0, Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity$1;->cjT:[I
+# virtual methods
+.method public final bq(Z)V
+    .locals 5
 
-    :try_start_0
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity$1;->cjT:[I
+    .prologue
+    .line 96
+    if-eqz p1, :cond_0
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOz:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    .line 97
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity$1;->cBd:Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity;
 
-    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
+    const-string/jumbo v1, "game"
 
-    move-result v1
+    const-string/jumbo v2, ".ui.CreateOrJoinChatroomUI"
 
-    const/4 v2, 0x1
+    iget-object v3, p0, Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity$1;->cBd:Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity;
 
-    aput v2, v0, v1
-    :try_end_0
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_0 .. :try_end_0} :catch_2
+    invoke-virtual {v3}, Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity;->getIntent()Landroid/content/Intent;
 
+    move-result-object v3
+
+    const/4 v4, 0x0
+
+    invoke-static {v0, v1, v2, v3, v4}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;Z)V
+
+    .line 103
     :goto_0
-    :try_start_1
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity$1;->cjT:[I
+    iget-object v0, p0, Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity$1;->cBd:Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity;
 
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOB:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity;->finish()V
 
-    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x2
-
-    aput v2, v0, v1
-    :try_end_1
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_1 .. :try_end_1} :catch_1
-
-    :goto_1
-    :try_start_2
-    sget-object v0, Lcom/tencent/mm/plugin/base/stub/WXBizEntryActivity$1;->cjT:[I
-
-    sget-object v1, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->gOA:Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;
-
-    invoke-virtual {v1}, Lcom/tencent/mm/pluginsdk/ui/AutoLoginActivity$a;->ordinal()I
-
-    move-result v1
-
-    const/4 v2, 0x3
-
-    aput v2, v0, v1
-    :try_end_2
-    .catch Ljava/lang/NoSuchFieldError; {:try_start_2 .. :try_end_2} :catch_0
-
-    :goto_2
+    .line 104
     return-void
 
-    :catch_0
-    move-exception v0
+    .line 101
+    :cond_0
+    const-string/jumbo v0, "!44@/B4Tb64lLpLmiqXBWxF8nHbYzsEPWL7VUAH2Od3wLxg="
 
-    goto :goto_2
+    const-string/jumbo v1, "openIdCheck false"
 
-    :catch_1
-    move-exception v0
-
-    goto :goto_1
-
-    :catch_2
-    move-exception v0
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$dc
-  extends a.c
+  extends a.e
 {
   public a$dc()
   {
-    super("menu:setfont", "", 129, false);
+    super("openProductView", "open_product_view", 59, true);
   }
 }
 

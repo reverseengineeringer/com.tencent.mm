@@ -1,32 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ao
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a avm = new a();
-  public b avn = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atN = new a();
   
   public ao()
   {
-    id = "ExDeviceBindHardDevice";
-    hXT = atO;
+    id = "CloseFingerPrint";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String avo;
-    public int avp = 0;
-    public j avq;
-  }
-  
-  public static final class b
-  {
-    public j avq;
+    public int anP = 0;
   }
 }
 

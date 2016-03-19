@@ -1,63 +1,56 @@
 package com.tencent.mm.protocal.b;
 
 public final class lj
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public String ayg;
-  public String desc;
-  public boolean huq = false;
-  public boolean hur = false;
-  public boolean hwm = false;
-  public boolean hwn = false;
-  public String info;
-  public String title;
+  public String fsJ;
+  public String jiW;
+  public int jiX;
+  public int jiY;
+  public String jiZ;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      if (title != null) {
-        paramVarArgs.U(1, title);
+      if (jiW != null) {
+        paramVarArgs.d(1, jiW);
       }
-      if (desc != null) {
-        paramVarArgs.U(2, desc);
+      paramVarArgs.ci(2, jiX);
+      paramVarArgs.ci(3, jiY);
+      if (fsJ != null) {
+        paramVarArgs.d(4, fsJ);
       }
-      if (ayg != null) {
-        paramVarArgs.U(3, ayg);
-      }
-      if (info != null) {
-        paramVarArgs.U(4, info);
+      if (jiZ != null) {
+        paramVarArgs.d(5, jiZ);
       }
       return 0;
     }
     if (paramInt == 1) {
-      if (title == null) {
-        break label368;
+      if (jiW == null) {
+        break label363;
       }
     }
-    label368:
-    for (int i = a.a.a.b.b.a.T(1, title) + 0;; i = 0)
+    label363:
+    for (paramInt = a.a.a.b.b.a.e(1, jiW) + 0;; paramInt = 0)
     {
+      int i = paramInt + a.a.a.a.cg(2, jiX) + a.a.a.a.cg(3, jiY);
       paramInt = i;
-      if (desc != null) {
-        paramInt = i + a.a.a.b.b.a.T(2, desc);
+      if (fsJ != null) {
+        paramInt = i + a.a.a.b.b.a.e(4, fsJ);
       }
       i = paramInt;
-      if (ayg != null) {
-        i = paramInt + a.a.a.b.b.a.T(3, ayg);
+      if (jiZ != null) {
+        i = paramInt + a.a.a.b.b.a.e(5, jiZ);
       }
-      paramInt = i;
-      if (info != null) {
-        paramInt = i + a.a.a.b.b.a.T(4, info);
-      }
-      return paramInt;
+      return i;
       if (paramInt == 2)
       {
-        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-        for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
           if (!super.a(paramVarArgs, this, paramInt)) {
-            paramVarArgs.aVo();
+            paramVarArgs.bog();
           }
         }
         break;
@@ -71,52 +64,23 @@ public final class lj
         default: 
           return -1;
         case 1: 
-          title = jMD.readString();
-          huq = true;
+          jiW = maU.readString();
           return 0;
         case 2: 
-          desc = jMD.readString();
-          hur = true;
+          jiX = maU.jC();
           return 0;
         case 3: 
-          ayg = jMD.readString();
-          hwm = true;
+          jiY = maU.jC();
+          return 0;
+        case 4: 
+          fsJ = maU.readString();
           return 0;
         }
-        info = jMD.readString();
-        hwn = true;
+        jiZ = maU.readString();
         return 0;
       }
       return -1;
     }
-  }
-  
-  public final lj wL(String paramString)
-  {
-    title = paramString;
-    huq = true;
-    return this;
-  }
-  
-  public final lj wM(String paramString)
-  {
-    desc = paramString;
-    hur = true;
-    return this;
-  }
-  
-  public final lj wN(String paramString)
-  {
-    ayg = paramString;
-    hwm = true;
-    return this;
-  }
-  
-  public final lj wO(String paramString)
-  {
-    info = paramString;
-    hwn = true;
-    return this;
   }
 }
 

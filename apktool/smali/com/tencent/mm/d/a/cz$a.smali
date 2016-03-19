@@ -15,13 +15,9 @@
 
 
 # instance fields
-.field public appId:Ljava/lang/String;
+.field public data:[B
 
-.field public avf:Ljava/lang/String;
-
-.field public extInfo:Ljava/lang/String;
-
-.field public url:Ljava/lang/String;
+.field public mac:Ljava/lang/String;
 
 
 # direct methods

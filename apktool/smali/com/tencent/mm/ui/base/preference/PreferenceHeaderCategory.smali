@@ -25,7 +25,7 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 22
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_header_catalog:I
+    const v0, 0x7f0a0579
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/PreferenceHeaderCategory;->setLayoutResource(I)V
 
@@ -51,7 +51,7 @@
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$h;->list_thicklinecell_bg:I
+    const v2, 0x7f040664
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundResource(I)V
 

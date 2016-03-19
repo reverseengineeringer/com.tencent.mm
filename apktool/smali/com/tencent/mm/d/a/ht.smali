@@ -1,12 +1,12 @@
 .class public final Lcom/tencent/mm/d/a/ht;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # direct methods
@@ -17,10 +17,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/ht;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ht;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/ht;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ht;->arR:Z
 
     return-void
 .end method
@@ -30,15 +30,15 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    const-string/jumbo v0, "SnsFileCollect"
+    const-string/jumbo v0, "NotifyTimelineList"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/ht;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/ht;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/ht;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ht;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ht;->jUI:Z
 
     return-void
 .end method

@@ -4,7 +4,7 @@ public abstract interface Client$a
 {
   public abstract void onRecv(String paramString, int paramInt, byte[] paramArrayOfByte);
   
-  public abstract void qX();
+  public abstract void ra();
 }
 
 /* Location:

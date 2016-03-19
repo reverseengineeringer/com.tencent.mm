@@ -1,11 +1,10 @@
 package com.tencent.mm.d.a;
 
-import java.util.LinkedList;
-
 public final class ei$a
 {
-  public LinkedList aAB;
-  public boolean aAC = false;
+  public int ayY;
+  public long id = 0L;
+  public String path;
 }
 
 /* Location:

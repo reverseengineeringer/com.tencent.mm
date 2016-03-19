@@ -1,46 +1,44 @@
 package com.tencent.mm.booter;
 
-import android.media.MediaPlayer;
-import com.tencent.mm.model.al;
-import com.tencent.mm.sdk.platformtools.aj.a;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.Iterator;
-import java.util.List;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.bb;
+import com.tencent.mm.protocal.b.aas;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.storage.g;
+import java.util.LinkedList;
 
-final class i
-  implements aj.a
+public final class i
 {
-  i(h paramh) {}
-  
-  public final boolean lO()
+  public static void run()
   {
-    try
+    LinkedList localLinkedList = new LinkedList();
+    int j = ay.b((Integer)ah.tu().get(19), 0);
+    int i = 0;
+    aas localaas;
+    while (i < j)
     {
-      if ((h.a(bcD) != null) && (h.a(bcD).isPlaying())) {
-        synchronized (h.b(bcD))
-        {
-          if (h.a(bcD).getCurrentPosition() > 0) {
-            h.a(bcD, h.a(bcD).getCurrentPosition());
-          }
-          Iterator localIterator = h.c(bcD).iterator();
-          al localal;
-          do
-          {
-            if (!localIterator.hasNext()) {
-              break;
-            }
-            localal = (al)localIterator.next();
-          } while (localal == null);
-          localal.A(h.a(bcD).getCurrentPosition(), h.a(bcD).getDuration());
-        }
-      }
-      return false;
+      localaas = new aas();
+      fUk = 31;
+      fUt = "0";
+      localLinkedList.add(localaas);
+      i += 1;
     }
-    catch (Exception localException)
+    j = ay.b((Integer)ah.tu().get(20), 0);
+    i = 0;
+    while (i < j)
     {
-      t.e("!32@/B4Tb64lLpJY5frTR9Nb+0/K71RXh0Ei", localException.getMessage());
+      localaas = new aas();
+      fUk = 31;
+      fUt = "1";
+      localLinkedList.add(localaas);
+      i += 1;
     }
-    return true;
+    if (localLinkedList.size() > 0)
+    {
+      bb.a(localLinkedList);
+      ah.tu().set(19, Integer.valueOf(0));
+      ah.tu().set(20, Integer.valueOf(0));
+    }
   }
 }
 

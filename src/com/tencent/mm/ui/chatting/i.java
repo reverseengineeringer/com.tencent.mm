@@ -1,23 +1,33 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Intent;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import com.tencent.mm.d.b.aq;
-import java.util.ArrayList;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 final class i
-  implements AdapterView.OnItemClickListener
+  extends aa.a
 {
-  i(AppAttachFileListUI paramAppAttachFileListUI) {}
+  public ImageView kQH;
+  public TextView kQI;
+  public TextView kQJ;
   
-  public final void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
+  public i(int paramInt)
   {
-    paramAdapterView = new Intent(iRp, AppAttachDownloadUI.class);
-    paramAdapterView.putExtra("app_msg_id", aiRp).get(paramInt)).aDs.field_msgId);
-    paramAdapterView.setFlags(67108864);
-    iRp.startActivity(paramAdapterView);
+    super(paramInt);
+  }
+  
+  public final i az(View paramView)
+  {
+    super.aC(paramView);
+    dUV = ((TextView)hnE.findViewById(2131165184));
+    edK = ((CheckBox)hnE.findViewById(2131165186));
+    dMC = hnE.findViewById(2131165187);
+    gjr = ((TextView)hnE.findViewById(2131165268));
+    kQH = ((ImageView)hnE.findViewById(2131165478));
+    kQI = ((TextView)hnE.findViewById(2131165479));
+    kQJ = ((TextView)hnE.findViewById(2131165480));
+    return this;
   }
 }
 

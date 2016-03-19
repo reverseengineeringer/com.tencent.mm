@@ -1,24 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ij
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFy = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aEc = new a();
   
   public ij()
   {
-    id = "Switcher";
-    hXT = atO;
+    id = "PauseAutoGetBigImg";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aFz;
-    public int axw = 0;
+    public boolean aEd;
   }
 }
 

@@ -1,10 +1,8 @@
 package com.tencent.smtt.a;
 
-import java.io.File;
-
 public abstract interface e$a
 {
-  public abstract boolean e(File paramFile1, File paramFile2);
+  public abstract void su(int paramInt);
 }
 
 /* Location:

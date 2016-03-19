@@ -2,24 +2,24 @@ package com.tencent.mm.ui;
 
 import android.text.InputFilter;
 import android.text.Spanned;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 
 final class ExposeSupplementUI$b
   implements InputFilter
 {
-  private int rp = 50;
+  private int qs = 50;
   
   public ExposeSupplementUI$b(ExposeSupplementUI paramExposeSupplementUI) {}
   
   public final CharSequence filter(CharSequence paramCharSequence, int paramInt1, int paramInt2, Spanned paramSpanned, int paramInt3, int paramInt4)
   {
-    t.d("!44@/B4Tb64lLpLtCwxbDnWL8eYXXy6IqmvtU/Fp3lqpqos=", paramCharSequence + " start:" + paramInt1 + " end:" + paramInt2 + " " + paramSpanned + " dstart:" + paramInt3 + " dend:" + paramInt4);
-    float f = ExposeSupplementUI.B(paramSpanned);
-    paramInt3 = rp - Math.round(f) - (paramInt4 - paramInt3);
+    u.d("!44@/B4Tb64lLpLtCwxbDnWL8eYXXy6IqmvtU/Fp3lqpqos=", paramCharSequence + " start:" + paramInt1 + " end:" + paramInt2 + " " + paramSpanned + " dstart:" + paramInt3 + " dend:" + paramInt4);
+    float f = ExposeSupplementUI.A(paramSpanned);
+    paramInt3 = qs - Math.round(f) - (paramInt4 - paramInt3);
     if (paramInt3 <= 0)
     {
-      if ((Float.compare(f, (float)(rp - 0.5D)) == 0) && (paramCharSequence.length() > 0) && (!bn.f(paramCharSequence.charAt(0)))) {
+      if ((Float.compare(f, (float)(qs - 0.5D)) == 0) && (paramCharSequence.length() > 0) && (!ay.e(paramCharSequence.charAt(0)))) {
         return paramCharSequence.subSequence(0, 1);
       }
       return "";

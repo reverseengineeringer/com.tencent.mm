@@ -12,11 +12,11 @@
 
 
 # static fields
-.field public static final gKG:[Ljava/lang/String;
+.field public static final izq:[Ljava/lang/String;
 
 
 # instance fields
-.field public volatile gKF:I
+.field public volatile izp:I
 
 
 # direct methods
@@ -35,7 +35,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/downloader/a/a;->gKG:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/downloader/a/a;->izq:[Ljava/lang/String;
 
     return-void
 .end method
@@ -48,9 +48,9 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 23
-    sget v0, Lcom/tencent/mm/pluginsdk/downloader/a/a$a;->gKH:I
+    sget v0, Lcom/tencent/mm/pluginsdk/downloader/a/a$a;->izr:I
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/downloader/a/a;->gKF:I
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/downloader/a/a;->izp:I
 
     return-void
 .end method

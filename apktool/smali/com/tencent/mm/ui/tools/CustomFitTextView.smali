@@ -4,23 +4,23 @@
 
 
 # instance fields
-.field private jpO:Landroid/graphics/Paint;
+.field private luX:Landroid/graphics/Paint;
 
-.field private jpP:Ljava/lang/String;
+.field private luY:Ljava/lang/String;
 
-.field private jpQ:Landroid/graphics/Rect;
+.field private luZ:Landroid/graphics/Rect;
 
-.field private jpR:Ljava/util/LinkedList;
+.field private lva:Ljava/util/LinkedList;
 
-.field public jpS:I
+.field public lvb:I
 
-.field private jpT:Landroid/graphics/drawable/Drawable;
+.field private lvc:Landroid/graphics/drawable/Drawable;
 
-.field public jpU:Z
+.field public lvd:Z
 
-.field private jpV:Z
+.field private lve:Z
 
-.field private jpW:I
+.field private lvf:I
 
 .field public maxLines:I
 
@@ -38,19 +38,24 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpQ:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luZ:Landroid/graphics/Rect;
 
     .line 28
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpR:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lva:Ljava/util/LinkedList;
+
+    .line 32
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lve:Z
 
     .line 34
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpW:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvf:I
 
     .line 42
     return-void
@@ -68,30 +73,35 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpQ:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luZ:Landroid/graphics/Rect;
 
     .line 28
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpR:Ljava/util/LinkedList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lva:Ljava/util/LinkedList;
+
+    .line 32
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lve:Z
 
     .line 34
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpW:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvf:I
 
     .line 46
     return-void
 .end method
 
-.method private BE(Ljava/lang/String;)V
+.method private HA(Ljava/lang/String;)V
     .locals 1
 
     .prologue
     .line 128
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpR:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lva:Ljava/util/LinkedList;
 
     if-eqz v0, :cond_0
 
@@ -113,7 +123,7 @@
 
     .line 133
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpR:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lva:Ljava/util/LinkedList;
 
     invoke-virtual {v0, p1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
@@ -233,7 +243,7 @@
 
     move-result v2
 
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/bn;->g(C)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->f(C)Z
 
     move-result v2
 
@@ -263,12 +273,12 @@
     goto :goto_0
 .end method
 
-.method private aM(Ljava/lang/String;I)Z
+.method private bf(Ljava/lang/String;I)Z
     .locals 14
 
     .prologue
     .line 94
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lve:Z
 
     if-eqz v0, :cond_3
 
@@ -285,7 +295,7 @@
     if-nez v0, :cond_3
 
     .line 95
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpR:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lva:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->clear()V
 
@@ -311,11 +321,11 @@
     sub-int v5, v0, v1
 
     .line 99
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpU:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvd:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpT:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvc:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -400,7 +410,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->BE(Ljava/lang/String;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->HA(Ljava/lang/String;)V
 
     .line 106
     :goto_3
@@ -443,7 +453,7 @@
 
     move-result-object v1
 
-    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->BE(Ljava/lang/String;)V
+    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->HA(Ljava/lang/String;)V
 
     .line 115
     if-lt v0, v3, :cond_4
@@ -453,7 +463,7 @@
 
     const-string/jumbo v1, "not match last line, but match text length end"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 122
     :cond_2
@@ -479,7 +489,7 @@
     goto :goto_1
 .end method
 
-.method private aRE()I
+.method private biC()I
     .locals 4
 
     .prologue
@@ -493,7 +503,7 @@
     move-result-object v0
 
     .line 88
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpR:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lva:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->size()I
 
@@ -534,7 +544,7 @@
     .line 89
     const/4 v1, 0x0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpR:Ljava/util/LinkedList;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lva:Ljava/util/LinkedList;
 
     invoke-virtual {v2}, Ljava/util/LinkedList;->size()I
 
@@ -546,7 +556,7 @@
 
     move-result v1
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpW:I
+    iget v2, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvf:I
 
     mul-int/2addr v1, v2
 
@@ -566,10 +576,10 @@
     iput p2, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->maxLines:I
 
     .line 54
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpP:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luY:Ljava/lang/String;
 
     .line 55
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpP:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luY:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
@@ -578,12 +588,12 @@
 
     const-string/jumbo v1, "ori text is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 57
     const-string/jumbo v0, ""
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpP:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luY:Ljava/lang/String;
 
     .line 59
     :cond_0
@@ -596,7 +606,7 @@
 
     const-string/jumbo v1, "maxLines is invalid"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 61
     const/4 v0, 0x2
@@ -609,22 +619,22 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$g;->BasicPaddingSize:I
+    const v1, 0x7f0501d0
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpW:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvf:I
 
     .line 66
-    iput-boolean p3, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpU:Z
+    iput-boolean p3, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvd:Z
 
     .line 67
-    iput p4, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpS:I
+    iput p4, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvb:I
 
     .line 68
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpU:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvd:Z
 
     if-eqz v0, :cond_2
 
@@ -633,13 +643,13 @@
 
     move-result-object v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpS:I
+    iget v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvb:I
 
     invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpT:Landroid/graphics/drawable/Drawable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvc:Landroid/graphics/drawable/Drawable;
 
     .line 72
     :cond_2
@@ -647,10 +657,10 @@
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpO:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luX:Landroid/graphics/Paint;
 
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpO:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luX:Landroid/graphics/Paint;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->getPaint()Landroid/text/TextPaint;
 
@@ -659,28 +669,28 @@
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->set(Landroid/graphics/Paint;)V
 
     .line 74
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpO:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luX:Landroid/graphics/Paint;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpO:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luX:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p5}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 76
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpP:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luY:Ljava/lang/String;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->getWidth()I
 
     move-result v1
 
-    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->aM(Ljava/lang/String;I)Z
+    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->bf(Ljava/lang/String;I)Z
 
     .line 78
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->aRE()I
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->biC()I
 
     move-result v0
 
@@ -690,7 +700,7 @@
 
     const/16 v2, 0x20
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v1, v2}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v1
 
@@ -735,7 +745,7 @@
 
     .prologue
     .line 169
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lve:Z
 
     if-nez v0, :cond_1
 
@@ -746,13 +756,13 @@
 
     .line 172
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpP:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luY:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
     const-string/jumbo v0, ""
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpP:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luY:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -760,7 +770,7 @@
 
     if-nez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpR:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lva:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->size()I
 
@@ -799,7 +809,7 @@
     int-to-float v0, v0
 
     .line 180
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpR:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lva:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -828,7 +838,7 @@
     add-float/2addr v1, v2
 
     .line 182
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpO:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luX:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v5, v1, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
@@ -839,7 +849,7 @@
 
     .line 185
     :cond_2
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpU:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvd:Z
 
     if-eqz v0, :cond_0
 
@@ -848,7 +858,7 @@
 
     move-result-object v5
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpR:Ljava/util/LinkedList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lva:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
 
@@ -858,7 +868,7 @@
 
     const/4 v6, 0x0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpR:Ljava/util/LinkedList;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lva:Ljava/util/LinkedList;
 
     invoke-virtual {v1}, Ljava/util/LinkedList;->getLast()Ljava/lang/Object;
 
@@ -870,7 +880,7 @@
 
     move-result v1
 
-    iget-object v7, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpQ:Landroid/graphics/Rect;
+    iget-object v7, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luZ:Landroid/graphics/Rect;
 
     invoke-virtual {v5, v0, v6, v1, v7}, Landroid/text/TextPaint;->getTextBounds(Ljava/lang/String;IILandroid/graphics/Rect;)V
 
@@ -879,14 +889,14 @@
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpQ:Landroid/graphics/Rect;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luZ:Landroid/graphics/Rect;
 
     iget v1, v1, Landroid/graphics/Rect;->right:I
 
     add-int/2addr v0, v1
 
     .line 188
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpT:Landroid/graphics/drawable/Drawable;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvc:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -904,7 +914,7 @@
     float-to-int v2, v2
 
     .line 190
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpT:Landroid/graphics/drawable/Drawable;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvc:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -913,12 +923,12 @@
     add-int/2addr v3, v2
 
     .line 191
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpT:Landroid/graphics/drawable/Drawable;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvc:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, v0, v2, v1, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
     .line 192
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpT:Landroid/graphics/drawable/Drawable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lvc:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
@@ -944,21 +954,21 @@
 
     const/16 v2, 0x20
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v0, v2}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v0
 
     .line 212
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpP:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luY:Ljava/lang/String;
 
-    invoke-direct {p0, v2, v1}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->aM(Ljava/lang/String;I)Z
+    invoke-direct {p0, v2, v1}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->bf(Ljava/lang/String;I)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
     .line 213
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->aRE()I
+    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->biC()I
 
     move-result v2
 
@@ -987,17 +997,17 @@
     const/4 v0, 0x1
 
     :goto_0
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpV:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lve:Z
 
     .line 201
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpV:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->lve:Z
 
     if-eqz v0, :cond_1
 
     .line 202
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->jpP:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/CustomFitTextView;->luY:Ljava/lang/String;
 
-    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->aM(Ljava/lang/String;I)Z
+    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/ui/tools/CustomFitTextView;->bf(Ljava/lang/String;I)Z
 
     .line 204
     :cond_1

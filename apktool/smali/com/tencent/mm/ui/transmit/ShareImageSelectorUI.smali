@@ -16,27 +16,27 @@
 
 
 # static fields
-.field private static jzt:I
+.field private static lBx:I
 
 
 # instance fields
-.field private cNX:Landroid/view/View;
+.field private cUz:Landroid/widget/ListView;
 
-.field private cRY:Landroid/widget/ImageView;
+.field private dnF:Landroid/view/View;
 
-.field private cyS:Landroid/widget/ListView;
+.field private dvk:Landroid/widget/ImageView;
 
-.field private jwL:Ljava/lang/String;
+.field private eXB:Ljava/lang/String;
 
-.field private jzu:I
+.field private lBA:Landroid/app/Dialog;
 
-.field private jzv:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;
+.field private lBB:Landroid/view/View$OnClickListener;
 
-.field private jzw:Landroid/app/Dialog;
+.field private lBy:I
 
-.field private jzx:Landroid/view/View$OnClickListener;
+.field private lBz:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;
 
-.field private mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
+.field private mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
 
 
 # direct methods
@@ -44,10 +44,10 @@
     .locals 1
 
     .prologue
-    .line 60
+    .line 59
     const/4 v0, 0x1
 
-    sput v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzt:I
+    sput v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBx:I
 
     return-void
 .end method
@@ -56,84 +56,47 @@
     .locals 1
 
     .prologue
-    .line 57
+    .line 56
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
-    .line 66
+    .line 65
     const/4 v0, 0x2
 
-    iput v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzu:I
+    iput v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBy:I
 
-    .line 75
-    new-instance v0, Lcom/tencent/mm/ui/transmit/y;
+    .line 74
+    new-instance v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/y;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$1;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzx:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBB:Landroid/view/View$OnClickListener;
 
-    .line 83
-    new-instance v0, Lcom/tencent/mm/ui/transmit/z;
+    .line 82
+    new-instance v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/z;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$2;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
 
-    .line 378
+    .line 375
     return-void
 .end method
 
-.method static synthetic Bt()I
+.method static synthetic Dt()I
     .locals 1
 
     .prologue
-    .line 57
-    sget v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzt:I
+    .line 56
+    sget v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBx:I
 
     return v0
-.end method
-
-.method private WR()V
-    .locals 6
-
-    .prologue
-    .line 238
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
-
-    sget v1, Lcom/tencent/mm/a$n;->cropimg_share_cancle:I
-
-    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    sget v2, Lcom/tencent/mm/a$n;->cropimg_share_title:I
-
-    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    const/4 v3, 0x1
-
-    new-instance v4, Lcom/tencent/mm/ui/transmit/ab;
-
-    invoke-direct {v4, p0}, Lcom/tencent/mm/ui/transmit/ab;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
-
-    new-instance v5, Lcom/tencent/mm/ui/transmit/ac;
-
-    invoke-direct {v5, p0}, Lcom/tencent/mm/ui/transmit/ac;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
-
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/aa;
-
-    .line 254
-    return-void
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
     .locals 3
 
     .prologue
-    .line 57
+    .line 56
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/tencent/mm/ui/tools/ShowImageUI;
@@ -142,7 +105,7 @@
 
     const-string/jumbo v1, "key_image_path"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jwL:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->eXB:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -157,16 +120,63 @@
     return-void
 .end method
 
-.method private aSX()V
+.method private afO()V
     .locals 6
 
     .prologue
-    .line 257
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzw:Landroid/app/Dialog;
+    .line 235
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
+
+    const v1, 0x7f0b05f7
+
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    const v2, 0x7f0b05f8
+
+    invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const/4 v3, 0x1
+
+    new-instance v4, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$4;
+
+    invoke-direct {v4, p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$4;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
+
+    new-instance v5, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$5;
+
+    invoke-direct {v5, p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$5;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
+
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
+
+    .line 251
+    return-void
+.end method
+
+.method static synthetic b(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
+    .locals 0
+
+    .prologue
+    .line 56
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->afO()V
+
+    return-void
+.end method
+
+.method private bjo()V
+    .locals 6
+
+    .prologue
+    .line 254
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBA:Landroid/app/Dialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzw:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBA:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
@@ -174,11 +184,11 @@
 
     if-eqz v0, :cond_0
 
-    .line 287
+    .line 284
     :goto_0
     return-void
 
-    .line 260
+    .line 257
     :cond_0
     const/4 v0, 0x3
 
@@ -186,7 +196,7 @@
 
     const/4 v0, 0x0
 
-    sget v1, Lcom/tencent/mm/a$n;->cropimg_share_to_friend:I
+    const v1, 0x7f0b05f5
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getString(I)Ljava/lang/String;
 
@@ -196,7 +206,7 @@
 
     const/4 v0, 0x1
 
-    sget v1, Lcom/tencent/mm/a$n;->cropimg_share_to_sns:I
+    const v1, 0x7f0b05f4
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getString(I)Ljava/lang/String;
 
@@ -206,7 +216,7 @@
 
     const/4 v0, 0x2
 
-    sget v1, Lcom/tencent/mm/a$n;->cropimg_share_to_fav:I
+    const v1, 0x7f0b05f6
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getString(I)Ljava/lang/String;
 
@@ -214,12 +224,12 @@
 
     aput-object v1, v2, v0
 
-    .line 261
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    .line 258
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
-    sget v1, Lcom/tencent/mm/a$n;->menu_item_send_image:I
+    const v1, 0x7f0b084b
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getString(I)Ljava/lang/String;
 
@@ -227,45 +237,45 @@
 
     const/4 v3, 0x0
 
-    new-instance v4, Lcom/tencent/mm/ui/transmit/ad;
+    new-instance v4, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$6;
 
-    invoke-direct {v4, p0}, Lcom/tencent/mm/ui/transmit/ad;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
+    invoke-direct {v4, p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$6;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
 
-    new-instance v5, Lcom/tencent/mm/ui/transmit/ae;
+    new-instance v5, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$7;
 
-    invoke-direct {v5, p0}, Lcom/tencent/mm/ui/transmit/ae;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
+    invoke-direct {v5, p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$7;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
 
-    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/ui/base/h$c;Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;Lcom/tencent/mm/ui/base/g$c;Landroid/content/DialogInterface$OnCancelListener;)Landroid/app/Dialog;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzw:Landroid/app/Dialog;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBA:Landroid/app/Dialog;
 
     goto :goto_0
 .end method
 
-.method private aSY()V
+.method private bjp()V
     .locals 3
 
     .prologue
-    .line 290
+    .line 287
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/tencent/mm/ui/contact/SelectContactUI;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 291
+    .line 288
     const-string/jumbo v1, "list_attr"
 
-    sget v2, Lcom/tencent/mm/ui/contact/de;->jhk:I
+    sget v2, Lcom/tencent/mm/ui/contact/r;->llF:I
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 292
+    .line 289
     const-string/jumbo v1, "titile"
 
-    sget v2, Lcom/tencent/mm/a$n;->address_title_dis_send_friend:I
+    const v2, 0x7f0b03e0
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getString(I)Ljava/lang/String;
 
@@ -273,70 +283,70 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 293
+    .line 290
     const-string/jumbo v1, "list_type"
 
     const/16 v2, 0xb
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 294
+    .line 291
     const-string/jumbo v1, "shareImage"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 295
+    .line 292
     const-string/jumbo v1, "shareImagePath"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jwL:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->eXB:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 296
+    .line 293
     const/16 v1, 0x3e9
 
     invoke-virtual {p0, v0, v1}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 298
+    .line 295
     return-void
 .end method
 
-.method private aSZ()V
+.method private bjq()V
     .locals 5
 
     .prologue
-    .line 301
+    .line 298
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 302
+    .line 299
     const-string/jumbo v1, "Ksnsupload_type"
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 303
+    .line 300
     const-string/jumbo v1, "sns_kemdia_path"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jwL:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->eXB:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 304
+    .line 301
     const-string/jumbo v1, "need_result"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 307
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    .line 304
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
     const-string/jumbo v2, "sns"
 
@@ -344,13 +354,13 @@
 
     const/16 v4, 0x3ea
 
-    invoke-static {v1, v2, v3, v0, v4}, Lcom/tencent/mm/aj/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
+    invoke-static {v1, v2, v3, v0, v4}, Lcom/tencent/mm/ar/c;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Landroid/content/Intent;I)V
 
-    .line 309
+    .line 306
     return-void
 .end method
 
-.method private aTa()V
+.method private bjr()V
     .locals 6
 
     .prologue
@@ -358,49 +368,49 @@
 
     const/4 v5, 0x0
 
-    .line 312
-    new-instance v0, Lcom/tencent/mm/d/a/ag;
+    .line 309
+    new-instance v0, Lcom/tencent/mm/d/a/ay;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/ag;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/ay;-><init>()V
 
-    .line 313
+    .line 310
     const/4 v1, 0x6
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jwL:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->eXB:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/model/c;->a(Lcom/tencent/mm/d/a/ag;ILjava/lang/String;)Z
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/model/d;->a(Lcom/tencent/mm/d/a/ay;ILjava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    iget-object v1, v0, Lcom/tencent/mm/d/a/ag;->auY:Lcom/tencent/mm/d/a/ag$b;
+    iget-object v1, v0, Lcom/tencent/mm/d/a/ay;->aue:Lcom/tencent/mm/d/a/ay$b;
 
-    iget v1, v1, Lcom/tencent/mm/d/a/ag$b;->ret:I
+    iget v1, v1, Lcom/tencent/mm/d/a/ay$b;->ret:I
 
     if-nez v1, :cond_1
 
-    .line 314
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    .line 311
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->g(Lcom/tencent/mm/sdk/c/d;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
 
-    .line 315
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    .line 312
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
-    sget v1, Lcom/tencent/mm/a$n;->favorite_ok:I
+    const v1, 0x7f0b0e8f
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/h;->aN(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
-    .line 319
+    .line 316
     :goto_0
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
     const/16 v1, 0x2b28
 
@@ -428,57 +438,45 @@
 
     aput-object v4, v2, v3
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
 
-    .line 322
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
+    .line 319
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
 
     if-eqz v0, :cond_0
 
-    .line 323
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->mHandler:Lcom/tencent/mm/sdk/platformtools/ac;
+    .line 320
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->mHandler:Lcom/tencent/mm/sdk/platformtools/aa;
 
     const-wide/16 v1, 0x320
 
-    invoke-virtual {v0, v5, v1, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->sendEmptyMessageDelayed(IJ)Z
+    invoke-virtual {v0, v5, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aa;->sendEmptyMessageDelayed(IJ)Z
 
-    .line 326
+    .line 323
     :cond_0
     return-void
 
-    .line 317
+    .line 314
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/ag;->auX:Lcom/tencent/mm/d/a/ag$a;
+    iget-object v0, v0, Lcom/tencent/mm/d/a/ay;->aud:Lcom/tencent/mm/d/a/ay$a;
 
-    iget v0, v0, Lcom/tencent/mm/d/a/ag$a;->type:I
+    iget v0, v0, Lcom/tencent/mm/d/a/ay$a;->type:I
 
-    sget v2, Lcom/tencent/mm/a$n;->favorite_fail:I
-
-    invoke-static {v1, v0, v2}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {v1, v0, v5}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     goto :goto_0
-.end method
-
-.method static synthetic b(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
-    .locals 0
-
-    .prologue
-    .line 57
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->WR()V
-
-    return-void
 .end method
 
 .method static synthetic c(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
     .locals 0
 
     .prologue
-    .line 57
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->aSX()V
+    .line 56
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->bjo()V
 
     return-void
 .end method
@@ -487,8 +485,8 @@
     .locals 0
 
     .prologue
-    .line 57
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->aSY()V
+    .line 56
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->bjp()V
 
     return-void
 .end method
@@ -497,8 +495,8 @@
     .locals 0
 
     .prologue
-    .line 57
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->aSZ()V
+    .line 56
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->bjq()V
 
     return-void
 .end method
@@ -507,29 +505,19 @@
     .locals 0
 
     .prologue
-    .line 57
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->aTa()V
+    .line 56
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->bjr()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method protected final HX()I
+.method protected final Kj()I
     .locals 1
 
     .prologue
-    .line 152
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method protected final Rb()Z
-    .locals 1
-
-    .prologue
-    .line 390
+    .line 150
     const/4 v0, 0x1
 
     return v0
@@ -539,8 +527,8 @@
     .locals 1
 
     .prologue
-    .line 91
-    sget v0, Lcom/tencent/mm/a$k;->share_image_selector:I
+    .line 90
+    const v0, 0x7f0a0037
 
     return v0
 .end method
@@ -555,7 +543,7 @@
 
     const/4 v4, 0x0
 
-    .line 186
+    .line 183
     const-string/jumbo v0, "!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ="
 
     const-string/jumbo v1, "requestCode:%d , resultCode:%d"
@@ -576,40 +564,40 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 187
+    .line 184
     packed-switch p1, :pswitch_data_0
 
-    .line 218
+    .line 215
     const-string/jumbo v0, "!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ="
 
     const-string/jumbo v1, "unknow result"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 222
+    .line 219
     :goto_0
     return-void
 
-    .line 189
+    .line 186
     :pswitch_0
     if-ne p2, v5, :cond_2
 
-    .line 190
+    .line 187
     const/4 v0, 0x0
 
-    .line 191
+    .line 188
     if-eqz p3, :cond_0
 
-    .line 192
+    .line 189
     const-string/jumbo v0, "Select_Contact"
 
     invoke-virtual {p3, v0}, Landroid/content/Intent;->getStringArrayListExtra(Ljava/lang/String;)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 194
+    .line 191
     :cond_0
     if-eqz v0, :cond_1
 
@@ -619,14 +607,14 @@
 
     if-ne v1, v6, :cond_1
 
-    .line 195
+    .line 192
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/tencent/mm/ui/chatting/ChattingUI;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 196
+    .line 193
     const-string/jumbo v2, "Chat_User"
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -637,35 +625,35 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 197
+    .line 194
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->startActivity(Landroid/content/Intent;)V
 
-    .line 199
+    .line 196
     :cond_1
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->finish()V
 
     goto :goto_0
 
-    .line 201
+    .line 198
     :cond_2
     const-string/jumbo v0, "!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ="
 
     const-string/jumbo v1, "user cancle"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 209
+    .line 206
     :pswitch_1
     if-ne p2, v5, :cond_3
 
-    .line 210
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    .line 207
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
-    sget v1, Lcom/tencent/mm/a$n;->confirm_dialog_sent:I
+    const v1, 0x7f0b0e9f
 
     invoke-static {v0, v1, v4}, Landroid/widget/Toast;->makeText(Landroid/content/Context;II)Landroid/widget/Toast;
 
@@ -673,24 +661,22 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 211
+    .line 208
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->finish()V
 
     goto :goto_0
 
-    .line 213
+    .line 210
     :cond_3
     const-string/jumbo v0, "!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ="
 
     const-string/jumbo v1, "user cancle"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 187
-    nop
-
+    .line 184
     :pswitch_data_0
     .packed-switch 0x3e9
         :pswitch_0
@@ -702,10 +688,10 @@
     .locals 0
 
     .prologue
-    .line 227
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->WR()V
+    .line 224
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->afO()V
 
-    .line 228
+    .line 225
     return-void
 .end method
 
@@ -723,18 +709,15 @@
 
     const/4 v8, 0x0
 
-    .line 96
-    invoke-static {}, Lcom/tencent/mm/svg/frame/c/a/a;->aIr()V
-
-    .line 97
+    .line 95
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 99
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    .line 97
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -746,41 +729,41 @@
 
     move-result-object v0
 
-    .line 100
+    .line 98
     instance-of v1, v0, Ljava/lang/Integer;
 
     if-eqz v1, :cond_1
 
-    .line 101
+    .line 99
     check-cast v0, Ljava/lang/Integer;
 
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
-    .line 102
+    .line 100
     if-eqz v0, :cond_0
 
     if-ne v0, v9, :cond_1
 
-    .line 103
+    .line 101
     :cond_0
-    sput v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzt:I
+    sput v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBx:I
 
-    .line 106
+    .line 104
     :cond_1
-    sget v0, Lcom/tencent/mm/a$n;->menu_item_send_image:I
+    const v0, 0x7f0b084b
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->qb(I)V
 
-    .line 107
-    new-instance v0, Lcom/tencent/mm/ui/transmit/aa;
+    .line 105
+    new-instance v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$3;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/aa;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$3;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 114
+    .line 112
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -791,9 +774,9 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzu:I
+    iput v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBy:I
 
-    .line 115
+    .line 113
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -804,19 +787,19 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jwL:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->eXB:Ljava/lang/String;
 
-    .line 117
-    sget v0, Lcom/tencent/mm/a$i;->main:I
+    .line 115
+    const v0, 0x7f070100
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cNX:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->dnF:Landroid/view/View;
 
-    .line 118
-    sget v0, Lcom/tencent/mm/a$i;->image:I
+    .line 116
+    const v0, 0x7f07002c
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->findViewById(I)Landroid/view/View;
 
@@ -824,17 +807,17 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cRY:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->dvk:Landroid/widget/ImageView;
 
-    .line 119
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cRY:Landroid/widget/ImageView;
+    .line 117
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->dvk:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzx:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBB:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 120
-    sget v0, Lcom/tencent/mm/a$i;->list:I
+    .line 118
+    const v0, 0x7f070101
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->findViewById(I)Landroid/view/View;
 
@@ -842,28 +825,28 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cyS:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cUz:Landroid/widget/ListView;
 
-    .line 121
+    .line 119
     new-instance v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;-><init>(Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzv:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBz:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;
 
-    .line 122
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cyS:Landroid/widget/ListView;
+    .line 120
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cUz:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzv:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBz:Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI$a;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 123
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cyS:Landroid/widget/ListView;
+    .line 121
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cUz:Landroid/widget/ListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 124
+    .line 122
     const-string/jumbo v0, "!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ="
 
     const-string/jumbo v1, "mSelectType:%s ImagePath:%s"
@@ -874,7 +857,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget v4, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzu:I
+    iget v4, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBy:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -886,27 +869,27 @@
 
     aput-object v3, v2, v8
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jwL:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->eXB:Ljava/lang/String;
 
     aput-object v3, v2, v9
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 127
-    sget v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzt:I
+    .line 125
+    sget v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBx:I
 
     if-ne v0, v9, :cond_2
 
-    .line 128
-    invoke-virtual {p0, v6}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->ng(I)V
+    .line 126
+    invoke-virtual {p0, v6}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->qa(I)V
 
-    .line 129
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cyS:Landroid/widget/ListView;
+    .line 127
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cUz:Landroid/widget/ListView;
 
     invoke-virtual {v0, v6}, Landroid/widget/ListView;->setVisibility(I)V
 
-    .line 130
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cRY:Landroid/widget/ImageView;
+    .line 128
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->dvk:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
@@ -914,26 +897,26 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 131
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cRY:Landroid/widget/ImageView;
+    .line 129
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->dvk:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v8, v8, v8, v8}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 132
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cRY:Landroid/widget/ImageView;
+    .line 130
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->dvk:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 133
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cNX:Landroid/view/View;
+    .line 131
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->dnF:Landroid/view/View;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$f;->dark_bg_color:I
+    const v2, 0x7f080001
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -941,30 +924,30 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 134
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->aSX()V
+    .line 132
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->bjo()V
 
-    .line 138
+    .line 136
     :cond_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 139
-    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jwL:Ljava/lang/String;
+    .line 137
+    iget-object v2, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->eXB:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/platformtools/k;->iQ(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v2}, Lcom/tencent/mm/platformtools/k;->ku(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 140
-    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jwL:Ljava/lang/String;
+    .line 138
+    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->eXB:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper;->iM(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/BackwardSupportUtil$ExifHelper;->kq(Ljava/lang/String;)I
 
     move-result v3
 
-    .line 141
+    .line 139
     const-string/jumbo v4, "!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ="
 
     const-string/jumbo v5, "cpan [onCreate]degree:%d"
@@ -977,16 +960,16 @@
 
     aput-object v7, v6, v8
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 142
+    .line 140
     int-to-float v3, v3
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/e;->b(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
+    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/d;->b(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    .line 143
+    .line 141
     if-eqz v2, :cond_3
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->isRecycled()Z
@@ -995,12 +978,12 @@
 
     if-nez v3, :cond_3
 
-    .line 144
-    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->cRY:Landroid/widget/ImageView;
+    .line 142
+    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->dvk:Landroid/widget/ImageView;
 
     invoke-virtual {v3, v2}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 146
+    .line 144
     :cond_3
     const-string/jumbo v2, "!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ="
 
@@ -1034,9 +1017,9 @@
 
     aput-object v0, v4, v8
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 148
+    .line 146
     return-void
 .end method
 
@@ -1044,39 +1027,39 @@
     .locals 2
 
     .prologue
-    .line 168
+    .line 165
     packed-switch p3, :pswitch_data_0
 
-    .line 179
+    .line 176
     const-string/jumbo v0, "!44@/B4Tb64lLpIPG1BmaCV8Iks+xbMm/hgife9upnywcQQ="
 
     const-string/jumbo v1, "unknow postion."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 182
+    .line 179
     :goto_0
     return-void
 
-    .line 170
+    .line 167
     :pswitch_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->aSY()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->bjp()V
+
+    goto :goto_0
+
+    .line 170
+    :pswitch_1
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->bjq()V
 
     goto :goto_0
 
     .line 173
-    :pswitch_1
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->aSZ()V
-
-    goto :goto_0
-
-    .line 176
     :pswitch_2
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->aTa()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->bjr()V
 
     goto :goto_0
 
-    .line 168
+    .line 165
     nop
 
     :pswitch_data_0
@@ -1091,22 +1074,22 @@
     .locals 2
 
     .prologue
-    .line 157
+    .line 155
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
-    .line 158
-    sget v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzt:I
+    .line 156
+    sget v0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBx:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_1
 
-    .line 159
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzw:Landroid/app/Dialog;
+    .line 157
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBA:Landroid/app/Dialog;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->jzw:Landroid/app/Dialog;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->lBA:Landroid/app/Dialog;
 
     invoke-virtual {v0}, Landroid/app/Dialog;->isShowing()Z
 
@@ -1114,14 +1097,11 @@
 
     if-nez v0, :cond_1
 
-    .line 160
+    .line 158
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->aSX()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/transmit/ShareImageSelectorUI;->bjo()V
 
-    .line 163
+    .line 161
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/svg/frame/c/a/a;->aIs()V
-
-    .line 164
     return-void
 .end method

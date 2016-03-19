@@ -2,20 +2,20 @@ package com.tencent.smtt.sdk;
 
 public final class a
 {
-  private static int jIZ = 0;
-  public static int jJa = 600;
+  private static int lRb = 0;
+  public static int lRc = 600;
   
   /* Error */
-  public static int aTZ()
+  public static int blh()
   {
     // Byte code:
     //   0: iconst_0
     //   1: istore_1
     //   2: iconst_0
     //   3: istore_2
-    //   4: getstatic 11	com/tencent/smtt/sdk/a:jIZ	I
+    //   4: getstatic 11	com/tencent/smtt/sdk/a:lRb	I
     //   7: ifle +7 -> 14
-    //   10: getstatic 11	com/tencent/smtt/sdk/a:jIZ	I
+    //   10: getstatic 11	com/tencent/smtt/sdk/a:lRb	I
     //   13: ireturn
     //   14: new 22	java/io/BufferedReader
     //   17: dup
@@ -76,7 +76,7 @@ public final class a
     //   127: aload_3
     //   128: invokevirtual 72	java/io/BufferedReader:close	()V
     //   131: iload_0
-    //   132: putstatic 11	com/tencent/smtt/sdk/a:jIZ	I
+    //   132: putstatic 11	com/tencent/smtt/sdk/a:lRb	I
     //   135: iload_0
     //   136: ireturn
     //   137: astore_3

@@ -1,37 +1,38 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.d.a;
+import com.tencent.mm.sdk.e.a;
 
 public final class b$a
   extends a
 {
-  public String bId;
-  public String bKU;
-  public String messageAction;
-  public String messageExt;
+  public String bIz;
+  public String jwt;
+  
+  public b$a() {}
+  
+  public b$a(Bundle paramBundle)
+  {
+    m(paramBundle);
+  }
   
   public final int getType()
   {
-    return 6;
+    return 1;
+  }
+  
+  public final void l(Bundle paramBundle)
+  {
+    super.l(paramBundle);
+    paramBundle.putString("_wxapi_sendauth_req_scope", jwt);
+    paramBundle.putString("_wxapi_sendauth_req_state", bIz);
   }
   
   public final void m(Bundle paramBundle)
   {
     super.m(paramBundle);
-    paramBundle.putString("_wxobject_message_action", messageAction);
-    paramBundle.putString("_wxobject_message_ext", messageExt);
-    paramBundle.putString("_wxapi_launch_req_lang", bId);
-    paramBundle.putString("_wxapi_launch_req_country", bKU);
-  }
-  
-  public final void n(Bundle paramBundle)
-  {
-    super.n(paramBundle);
-    messageAction = paramBundle.getString("_wxobject_message_action");
-    messageExt = paramBundle.getString("_wxobject_message_ext");
-    bId = paramBundle.getString("_wxapi_launch_req_lang");
-    bKU = paramBundle.getString("_wxapi_launch_req_country");
+    jwt = paramBundle.getString("_wxapi_sendauth_req_scope");
+    bIz = paramBundle.getString("_wxapi_sendauth_req_state");
   }
 }
 

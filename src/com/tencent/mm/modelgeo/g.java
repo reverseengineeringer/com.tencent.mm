@@ -1,31 +1,45 @@
 package com.tencent.mm.modelgeo;
 
+import android.content.Context;
 import android.os.Looper;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.map.geolocation.TencentLocationListener;
+import com.tencent.map.geolocation.TencentLocationManager;
+import com.tencent.map.geolocation.TencentLocationManagerOptions;
+import com.tencent.map.geolocation.TencentLocationRequest;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class g
-  extends l
+public final class g
 {
-  g(d paramd) {}
+  private static g bOI = null;
+  private static Context mContext;
   
-  public final void a(boolean paramBoolean, double paramDouble1, double paramDouble2, int paramInt, double paramDouble3, double paramDouble4)
+  public static void a(TencentLocationListener paramTencentLocationListener, int paramInt, Looper paramLooper)
   {
-    if (paramBoolean)
-    {
-      bBl.bBe = paramDouble1;
-      bBl.bBf = paramDouble2;
-      bBl.bBg = paramInt;
-      bBl.bBh = paramDouble3;
-      bBl.bBi = paramDouble4;
-      bBl.bBd = true;
-      bBl.bBc = false;
-      bBl.bBb = System.currentTimeMillis();
-      d.a(bBl, 67591);
-    }
-    t.d("!32@/B4Tb64lLpIu6Y+BscdrxN3pFdbvvih6", "onGetLocationWgs84 fLongitude: %f fLatitude:%f locType:%d %f:spped", new Object[] { Double.valueOf(paramDouble2), Double.valueOf(paramDouble1), Integer.valueOf(paramInt), Double.valueOf(paramDouble3) });
-    new ac(Looper.getMainLooper()).postDelayed(new h(this, paramBoolean, paramDouble2, paramDouble1, paramInt, paramDouble3, paramDouble4), 200L);
+    u.d("!44@/B4Tb64lLpJfn8anhv+Gj4anGnlU7moSrNKFEcSm62U=", "requestLocationUpdate %s, isLoaded %b", new Object[] { Integer.valueOf(paramInt), Boolean.valueOf(TencentLocationManagerOptions.isLoadLibraryEnabled()) });
+    TencentLocationManager.getInstance(mContext).setCoordinateType(paramInt);
+    TencentLocationRequest localTencentLocationRequest = TencentLocationRequest.create();
+    localTencentLocationRequest.setInterval(2000L);
+    u.i("!44@/B4Tb64lLpJfn8anhv+Gj4anGnlU7moSrNKFEcSm62U=", "requestCode %d", new Object[] { Integer.valueOf(TencentLocationManager.getInstance(mContext).requestLocationUpdates(localTencentLocationRequest, paramTencentLocationListener, paramLooper)) });
   }
+  
+  public static g aN(Context paramContext)
+  {
+    if (bOI == null) {
+      bOI = new g();
+    }
+    mContext = paramContext;
+    return bOI;
+  }
+  
+  public static void zH()
+  {
+    u.d("!44@/B4Tb64lLpJfn8anhv+Gj4anGnlU7moSrNKFEcSm62U=", "removeUpdate");
+    TencentLocationManager.getInstance(mContext).removeUpdates(null);
+  }
+  
+  public static final class a
+    extends Exception
+  {}
 }
 
 /* Location:

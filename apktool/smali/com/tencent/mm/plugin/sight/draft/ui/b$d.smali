@@ -15,11 +15,11 @@
 
 
 # static fields
-.field public static final enum fiv:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+.field public static final enum gzv:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
-.field public static final enum fiw:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+.field public static final enum gzw:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
-.field private static final synthetic fix:[Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+.field private static final synthetic gzx:[Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
 
 # direct methods
@@ -38,7 +38,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->fiv:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    sput-object v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->gzv:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     .line 42
     new-instance v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
@@ -47,22 +47,22 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->fiw:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    sput-object v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->gzw:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     .line 40
     const/4 v0, 0x2
 
     new-array v0, v0, [Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->fiv:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->gzv:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->fiw:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    sget-object v1, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->gzw:Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->fix:[Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    sput-object v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->gzx:[Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     return-void
 .end method
@@ -98,7 +98,7 @@
 
     .prologue
     .line 40
-    sget-object v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->fix:[Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
+    sget-object v0, Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->gzx:[Lcom/tencent/mm/plugin/sight/draft/ui/b$d;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/plugin/sight/draft/ui/b$d;->clone()Ljava/lang/Object;
 

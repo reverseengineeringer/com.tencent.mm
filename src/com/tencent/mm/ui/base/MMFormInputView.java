@@ -6,23 +6,23 @@ import android.content.res.TypedArray;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.view.View;
 import android.view.View.OnFocusChangeListener;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.p;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.R.b;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MMFormInputView
   extends LinearLayout
 {
-  private TextView cwe;
-  private EditText euS;
-  private int iEA = -1;
-  private int iEB = -1;
-  private int[] iEC;
-  private View.OnFocusChangeListener iED = null;
+  private TextView cNT;
+  private EditText fEO;
+  private int kDK = -1;
+  private int kDL = -1;
+  private int[] kDM;
+  private View.OnFocusChangeListener kDN = null;
   private int layout = -1;
   private Context mContext = null;
   
@@ -35,9 +35,9 @@ public class MMFormInputView
   public MMFormInputView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet);
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.FormItemView, paramInt, 0);
-    iEB = paramAttributeSet.getResourceId(2, -1);
-    iEA = paramAttributeSet.getResourceId(1, -1);
+    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.FormItemView, paramInt, 0);
+    kDL = paramAttributeSet.getResourceId(2, -1);
+    kDK = paramAttributeSet.getResourceId(1, -1);
     layout = paramAttributeSet.getResourceId(0, layout);
     paramAttributeSet.recycle();
     inflate(paramContext, layout, this);
@@ -46,130 +46,153 @@ public class MMFormInputView
   
   public final void addTextChangedListener(TextWatcher paramTextWatcher)
   {
-    if (euS != null)
+    if ((paramTextWatcher != null) && (fEO != null))
     {
-      euS.addTextChangedListener(paramTextWatcher);
+      fEO.addTextChangedListener(paramTextWatcher);
       return;
     }
-    t.w("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "watcher : %s, contentET : %s", new Object[] { paramTextWatcher, euS });
+    u.w("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "watcher : %s, contentET : %s", new Object[] { paramTextWatcher, fEO });
   }
   
   public EditText getContentEditText()
   {
-    return euS;
+    return fEO;
   }
   
   public Editable getText()
   {
-    if (euS != null) {
-      return euS.getText();
+    if (fEO != null) {
+      return fEO.getText();
     }
-    t.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
+    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
     return null;
   }
   
   public TextView getTitleTextView()
   {
-    return cwe;
+    return cNT;
   }
   
   public void onFinishInflate()
   {
-    cwe = ((TextView)findViewById(a.i.title));
-    euS = ((EditText)findViewById(a.i.edittext));
-    if ((cwe == null) || (euS == null)) {
-      t.w("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "titleTV : %s, contentET : %s", new Object[] { cwe, euS });
+    cNT = ((TextView)findViewById(2131165460));
+    fEO = ((EditText)findViewById(2131166420));
+    if ((cNT == null) || (fEO == null)) {
+      u.w("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "titleTV : %s, contentET : %s", new Object[] { cNT, fEO });
     }
     for (;;)
     {
-      if (euS != null)
+      if (fEO != null)
       {
-        an localan = new an(this);
-        euS.setOnFocusChangeListener(localan);
+        View.OnFocusChangeListener local1 = new View.OnFocusChangeListener()
+        {
+          public final void onFocusChange(View paramAnonymousView, boolean paramAnonymousBoolean)
+          {
+            if (paramAnonymousView == MMFormInputView.a(MMFormInputView.this))
+            {
+              MMFormInputView.b(MMFormInputView.this);
+              if (!paramAnonymousBoolean) {
+                break label63;
+              }
+              setBackgroundResource(2130970444);
+            }
+            for (;;)
+            {
+              MMFormInputView.c(MMFormInputView.this);
+              if (MMFormInputView.d(MMFormInputView.this) != null) {
+                MMFormInputView.d(MMFormInputView.this).onFocusChange(paramAnonymousView, paramAnonymousBoolean);
+              }
+              return;
+              label63:
+              setBackgroundResource(2130970418);
+            }
+          }
+        };
+        fEO.setOnFocusChangeListener(local1);
       }
       return;
-      if (iEA != -1) {
-        cwe.setText(iEA);
+      if (kDK != -1) {
+        cNT.setText(kDK);
       }
-      if (iEB != -1) {
-        euS.setHint(iEB);
+      if (kDL != -1) {
+        fEO.setHint(kDL);
       }
     }
   }
   
   public void setFocusListener(View.OnFocusChangeListener paramOnFocusChangeListener)
   {
-    iED = paramOnFocusChangeListener;
+    kDN = paramOnFocusChangeListener;
   }
   
   public void setHint(int paramInt)
   {
-    if (euS != null)
+    if (fEO != null)
     {
-      euS.setHint(paramInt);
+      fEO.setHint(paramInt);
       return;
     }
-    t.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
+    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
   }
   
   public void setHint(String paramString)
   {
-    if (euS != null)
+    if (fEO != null)
     {
-      euS.setHint(paramString);
+      fEO.setHint(paramString);
       return;
     }
-    t.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
+    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
   }
   
   public void setImeOption(int paramInt)
   {
-    if (euS != null)
+    if (fEO != null)
     {
-      euS.setImeOptions(paramInt);
+      fEO.setImeOptions(paramInt);
       return;
     }
-    t.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
+    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
   }
   
   public void setInputType(int paramInt)
   {
-    if (euS != null)
+    if (fEO != null)
     {
-      euS.setInputType(paramInt);
+      fEO.setInputType(paramInt);
       return;
     }
-    t.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
+    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
   }
   
   public void setText(String paramString)
   {
-    if (euS != null)
+    if (fEO != null)
     {
-      euS.setText(paramString);
+      fEO.setText(paramString);
       return;
     }
-    t.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
+    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "contentET is null!");
   }
   
   public void setTitle(int paramInt)
   {
-    if (cwe != null)
+    if (cNT != null)
     {
-      cwe.setText(paramInt);
+      cNT.setText(paramInt);
       return;
     }
-    t.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "titleTV is null!");
+    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "titleTV is null!");
   }
   
   public void setTitle(String paramString)
   {
-    if (cwe != null)
+    if (cNT != null)
     {
-      cwe.setText(paramString);
+      cNT.setText(paramString);
       return;
     }
-    t.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "titleTV is null!");
+    u.e("!44@/B4Tb64lLpIv1x5YYJJy602y4ChVRkG/W7HbnV1dhFk=", "titleTV is null!");
   }
 }
 

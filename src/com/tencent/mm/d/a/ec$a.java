@@ -2,8 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class ec$a
 {
-  public int aAp = 0;
-  public int status = 0;
+  public byte[] ayo;
 }
 
 /* Location:

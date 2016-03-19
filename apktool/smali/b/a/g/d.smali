@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static final jQg:Ljava/util/regex/Pattern;
+.field private static final mer:Ljava/util/regex/Pattern;
 
 
 # direct methods
@@ -19,13 +19,35 @@
 
     move-result-object v0
 
-    sput-object v0, Lb/a/g/d;->jQg:Ljava/util/regex/Pattern;
+    sput-object v0, Lb/a/g/d;->mer:Ljava/util/regex/Pattern;
 
     .line 12
     return-void
 .end method
 
-.method public static bZ(Ljava/lang/String;Ljava/lang/String;)V
+.method public static c(Ljava/lang/Object;Ljava/lang/String;)V
+    .locals 1
+
+    .prologue
+    .line 29
+    if-eqz p0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-static {v0, p1}, Lb/a/g/d;->h(ZLjava/lang/String;)V
+
+    .line 30
+    return-void
+
+    .line 29
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public static cT(Ljava/lang/String;Ljava/lang/String;)V
     .locals 2
 
     .prologue
@@ -47,7 +69,7 @@
     const/4 v0, 0x1
 
     :goto_0
-    invoke-static {v0, p1}, Lb/a/g/d;->f(ZLjava/lang/String;)V
+    invoke-static {v0, p1}, Lb/a/g/d;->h(ZLjava/lang/String;)V
 
     .line 43
     return-void
@@ -59,29 +81,7 @@
     goto :goto_0
 .end method
 
-.method public static d(Ljava/lang/Object;Ljava/lang/String;)V
-    .locals 1
-
-    .prologue
-    .line 29
-    if-eqz p0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    invoke-static {v0, p1}, Lb/a/g/d;->f(ZLjava/lang/String;)V
-
-    .line 30
-    return-void
-
-    .line 29
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method private static f(ZLjava/lang/String;)V
+.method private static h(ZLjava/lang/String;)V
     .locals 1
 
     .prologue

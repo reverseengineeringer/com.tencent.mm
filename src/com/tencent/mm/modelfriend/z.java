@@ -1,157 +1,135 @@
 package com.tencent.mm.modelfriend;
 
-import android.content.ContentValues;
-import android.database.Cursor;
-import android.text.TextUtils;
-import com.tencent.mm.ar.f;
-import com.tencent.mm.ar.f.a;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.sdk.g.af;
-import com.tencent.mm.sdk.g.ah;
-import com.tencent.mm.sdk.g.ao;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.vu;
+import com.tencent.mm.protocal.h.c;
+import com.tencent.mm.protocal.h.d;
+import com.tencent.mm.protocal.q.a;
+import com.tencent.mm.protocal.q.b;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.h;
+import com.tencent.mm.r.j.a;
+import com.tencent.mm.r.j.b;
+import com.tencent.mm.sdk.platformtools.ab;
 import com.tencent.mm.sdk.platformtools.t;
-import java.util.ArrayList;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class z
-  extends ah
-  implements f.a
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  public static final String[] aqU = { ah.a(y.aqp, "GoogleFriend") };
-  public af aqT;
-  public ao bzy = new aa(this);
+  d anM = null;
+  public final o bGh = new a();
   
-  public z(af paramaf)
+  public z(String paramString1, String paramString2, int paramInt, String paramString3, String paramString4, String paramString5, String paramString6)
   {
-    super(paramaf, y.aqp, "GoogleFriend", null);
-    aqT = paramaf;
+    q.a locala = (q.a)bGh.vA();
+    iVe.jtj = paramString1;
+    iVe.jtk = paramString2;
+    iVe.iVW = paramString3;
+    iVe.jtl = paramString4;
+    iVe.jtm = paramString5;
+    iVe.jtn = paramString6;
+    iVe.jto = paramInt;
+    iVe.dzi = t.aUB();
+    iVe.iZs = ah.tx();
   }
   
-  private boolean a(y paramy)
+  public final int a(e parame, d paramd)
   {
-    if (paramy == null) {}
-    do
-    {
-      return false;
-      paramy = paramy.mA();
-    } while ((int)aqT.insert("GoogleFriend", "googleitemid", paramy) <= 0);
-    return true;
+    anM = paramd;
+    return a(parame, bGh, this);
   }
   
-  public final int a(f paramf)
+  protected final int a(o paramo)
   {
-    if (paramf != null) {
-      aqT = paramf;
-    }
-    return 0;
+    return j.b.bFI;
   }
   
-  public final boolean b(y paramy)
+  public final void a(final int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    boolean bool = true;
-    Object localObject = field_googleitemid;
-    localObject = "SELECT GoogleFriend.googleid,GoogleFriend.googlename,GoogleFriend.googlephotourl,GoogleFriend.googlegmail,GoogleFriend.username,GoogleFriend.nickname,GoogleFriend.nicknameqp,GoogleFriend.usernamepy,GoogleFriend.small_url,GoogleFriend.big_url,GoogleFriend.ret,GoogleFriend.status,GoogleFriend.googleitemid,GoogleFriend.googlecgistatus,GoogleFriend.contecttype,GoogleFriend.googlenamepy FROM GoogleFriend   WHERE GoogleFriend.googleitemid = \"" + bn.iU((String)localObject) + "\"";
-    localObject = aqT.rawQuery((String)localObject, null);
-    int i;
-    if (((Cursor)localObject).getCount() > 0)
+    if ((paramInt2 == 4) && (paramInt3 == -102))
     {
-      i = 1;
-      ((Cursor)localObject).close();
-      if (i != 0) {
-        break label85;
-      }
-      bool = a(paramy);
-    }
-    label85:
-    do
-    {
-      return bool;
-      i = 0;
-      break;
-      localObject = paramy.mA();
-      i = aqT.update("GoogleFriend", (ContentValues)localObject, "googleitemid=?", new String[] { field_googleitemid });
-      if (i > 0) {
-        Ci();
-      }
-    } while (i > 0);
-    return false;
-  }
-  
-  public final void clear()
-  {
-    aqT.bx("GoogleFriend", " delete from GoogleFriend");
-    bzy.b(5, bzy, "");
-  }
-  
-  public final Cursor gC(String paramString)
-  {
-    StringBuilder localStringBuilder = new StringBuilder();
-    if (!TextUtils.isEmpty(paramString))
-    {
-      localStringBuilder.append(" WHERE ( ");
-      localStringBuilder.append("GoogleFriend.googleid='" + paramString + "'");
-      localStringBuilder.append(" ) ");
-    }
-    return aqT.rawQuery("SELECT GoogleFriend.googleid,GoogleFriend.googlename,GoogleFriend.googlephotourl,GoogleFriend.googlegmail,GoogleFriend.username,GoogleFriend.nickname,GoogleFriend.nicknameqp,GoogleFriend.usernamepy,GoogleFriend.small_url,GoogleFriend.big_url,GoogleFriend.ret,GoogleFriend.status,GoogleFriend.googleitemid,GoogleFriend.googlecgistatus,GoogleFriend.contecttype,GoogleFriend.googlenamepy FROM GoogleFriend  " + localStringBuilder, null);
-  }
-  
-  public final String getTableName()
-  {
-    return "GoogleFriend";
-  }
-  
-  public final boolean h(ArrayList paramArrayList)
-  {
-    int i = 0;
-    if (paramArrayList.size() <= 0)
-    {
-      t.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "insertList . list is null.");
-      return false;
-    }
-    g localg;
-    long l;
-    if ((aqT instanceof g))
-    {
-      localg = (g)aqT;
-      l = localg.cN(Thread.currentThread().getId());
-      t.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "surround insertList in a transaction, ticket = %d", new Object[] { Long.valueOf(l) });
-    }
-    for (;;)
-    {
-      if (i < paramArrayList.size())
+      paramInt1 = vAiUJ.iAC;
+      u.d("!56@/B4Tb64lLpK+IBX8XDgnvj7m8+vib/MwDleFXSgR5SwLtO8UZmjbiQ==", "summerauth auth MM_ERR_CERT_EXPIRED  getcert now  old ver:%d", new Object[] { Integer.valueOf(paramInt1) });
+      ah.tv().r(new Runnable()
       {
-        a((y)paramArrayList.get(i));
-        i += 1;
-      }
-      else
-      {
-        if (localg != null)
+        public final void run()
         {
-          localg.cO(l);
-          t.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "end updateList transaction");
+          new com.tencent.mm.modelsimple.n().a(bFs, new d()
+          {
+            public final void a(int paramAnonymous2Int1, int paramAnonymous2Int2, String paramAnonymous2String, com.tencent.mm.r.j paramAnonymous2j)
+            {
+              u.d("!56@/B4Tb64lLpK+IBX8XDgnvj7m8+vib/MwDleFXSgR5SwLtO8UZmjbiQ==", "summerauth dkcert getcert type:%d ret [%d,%d]", new Object[] { Integer.valueOf(paramAnonymous2j.getType()), Integer.valueOf(paramAnonymous2Int1), Integer.valueOf(paramAnonymous2Int2) });
+              if ((paramAnonymous2Int1 != 0) || (paramAnonymous2Int2 != 0))
+              {
+                anM.a(paramAnonymous2Int1, paramAnonymous2Int2, "", z.this);
+                return;
+              }
+              a(bFs, anM);
+            }
+          });
         }
-        bzy.b(2, bzy, "");
-        return true;
-        localg = null;
-        l = -1L;
-      }
+      });
+      return;
     }
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
-  public final boolean o(String paramString, int paramInt)
+  protected final void a(j.a parama) {}
+  
+  public final int getType()
   {
-    paramString = "UPDATE GoogleFriend SET googlecgistatus='" + paramInt + "' WHERE googleitemid=" + "'" + paramString + "'";
-    return aqT.bx("GoogleFriend", paramString);
+    return 429;
   }
   
-  public final boolean p(String paramString, int paramInt)
+  protected final int lk()
   {
-    if (!TextUtils.isEmpty(paramString))
+    return 3;
+  }
+  
+  public final byte[] za()
+  {
+    return com.tencent.mm.platformtools.n.a(bGh.tX()).iVf.jtp, new byte[0]);
+  }
+  
+  public final String zb()
+  {
+    return bGh.tX()).iVf.jtm;
+  }
+  
+  public static final class a
+    extends h
+  {
+    private final q.a bMT = new q.a();
+    private final q.b bMU = new q.b();
+    
+    public final int getType()
     {
-      paramString = "UPDATE GoogleFriend SET googlecgistatus='" + paramInt + "' , status=" + "'0' WHERE " + "username='" + paramString + "'";
-      return aqT.bx("GoogleFriend", paramString);
+      return 429;
     }
-    return false;
+    
+    public final String getUri()
+    {
+      return "/cgi-bin/micromsg-bin/getsuggestalias";
+    }
+    
+    protected final h.c tW()
+    {
+      return bMT;
+    }
+    
+    public final h.d tX()
+    {
+      return bMU;
+    }
+    
+    public final int vx()
+    {
+      return 1;
+    }
   }
 }
 

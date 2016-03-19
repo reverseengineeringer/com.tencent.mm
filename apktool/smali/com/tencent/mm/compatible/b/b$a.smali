@@ -15,17 +15,17 @@
 
 
 # static fields
-.field public static final enum bfh:Lcom/tencent/mm/compatible/b/b$a;
+.field public static final enum bpn:Lcom/tencent/mm/compatible/b/b$a;
 
-.field public static final enum bfi:Lcom/tencent/mm/compatible/b/b$a;
+.field public static final enum bpo:Lcom/tencent/mm/compatible/b/b$a;
 
-.field public static final enum bfj:Lcom/tencent/mm/compatible/b/b$a;
+.field public static final enum bpp:Lcom/tencent/mm/compatible/b/b$a;
 
-.field public static final enum bfk:Lcom/tencent/mm/compatible/b/b$a;
+.field public static final enum bpq:Lcom/tencent/mm/compatible/b/b$a;
 
-.field public static final enum bfl:Lcom/tencent/mm/compatible/b/b$a;
+.field public static final enum bpr:Lcom/tencent/mm/compatible/b/b$a;
 
-.field private static final synthetic bfm:[Lcom/tencent/mm/compatible/b/b$a;
+.field private static final synthetic bps:[Lcom/tencent/mm/compatible/b/b$a;
 
 
 # direct methods
@@ -50,7 +50,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/compatible/b/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bfh:Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpn:Lcom/tencent/mm/compatible/b/b$a;
 
     .line 13
     new-instance v0, Lcom/tencent/mm/compatible/b/b$a;
@@ -59,7 +59,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/compatible/b/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bfi:Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpo:Lcom/tencent/mm/compatible/b/b$a;
 
     .line 14
     new-instance v0, Lcom/tencent/mm/compatible/b/b$a;
@@ -68,7 +68,7 @@
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/compatible/b/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bfj:Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpp:Lcom/tencent/mm/compatible/b/b$a;
 
     .line 15
     new-instance v0, Lcom/tencent/mm/compatible/b/b$a;
@@ -77,7 +77,7 @@
 
     invoke-direct {v0, v1, v5}, Lcom/tencent/mm/compatible/b/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bfk:Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpq:Lcom/tencent/mm/compatible/b/b$a;
 
     .line 16
     new-instance v0, Lcom/tencent/mm/compatible/b/b$a;
@@ -86,34 +86,34 @@
 
     invoke-direct {v0, v1, v6}, Lcom/tencent/mm/compatible/b/b$a;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bfl:Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bpr:Lcom/tencent/mm/compatible/b/b$a;
 
     .line 11
     const/4 v0, 0x5
 
     new-array v0, v0, [Lcom/tencent/mm/compatible/b/b$a;
 
-    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bfh:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bpn:Lcom/tencent/mm/compatible/b/b$a;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bfi:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bpo:Lcom/tencent/mm/compatible/b/b$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bfj:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bpp:Lcom/tencent/mm/compatible/b/b$a;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bfk:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bpq:Lcom/tencent/mm/compatible/b/b$a;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bfl:Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v1, Lcom/tencent/mm/compatible/b/b$a;->bpr:Lcom/tencent/mm/compatible/b/b$a;
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bfm:[Lcom/tencent/mm/compatible/b/b$a;
+    sput-object v0, Lcom/tencent/mm/compatible/b/b$a;->bps:[Lcom/tencent/mm/compatible/b/b$a;
 
     return-void
 .end method
@@ -149,7 +149,7 @@
 
     .prologue
     .line 11
-    sget-object v0, Lcom/tencent/mm/compatible/b/b$a;->bfm:[Lcom/tencent/mm/compatible/b/b$a;
+    sget-object v0, Lcom/tencent/mm/compatible/b/b$a;->bps:[Lcom/tencent/mm/compatible/b/b$a;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/compatible/b/b$a;->clone()Ljava/lang/Object;
 

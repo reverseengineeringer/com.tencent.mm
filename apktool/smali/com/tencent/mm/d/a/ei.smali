@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/ei;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aAA:Lcom/tencent/mm/d/a/ei$a;
+.field public ayX:Lcom/tencent/mm/d/a/ei$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/ei;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ei;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/ei;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ei;->arR:Z
 
     return-void
 .end method
@@ -41,24 +41,24 @@
     .locals 1
 
     .prologue
-    .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    .line 16
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    .line 13
+    .line 21
     new-instance v0, Lcom/tencent/mm/d/a/ei$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/ei$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/ei;->aAA:Lcom/tencent/mm/d/a/ei$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/ei;->ayX:Lcom/tencent/mm/d/a/ei$a;
 
-    .line 8
-    const-string/jumbo v0, "NetSceneCollectChatRoom"
+    .line 16
+    const-string/jumbo v0, "FileDownloadCallback"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/ei;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/ei;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/ei;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ei;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ei;->jUI:Z
 
     return-void
 .end method

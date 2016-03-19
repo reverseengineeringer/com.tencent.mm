@@ -1,88 +1,153 @@
-.class public final Lcom/tencent/mm/pluginsdk/model/downloader/i;
-.super Ljava/lang/Object;
+.class final Lcom/tencent/mm/pluginsdk/model/downloader/i;
+.super Lcom/tencent/mm/pluginsdk/model/downloader/h;
 .source "SourceFile"
 
 
-# annotations
-.annotation system Ldalvik/annotation/MemberClasses;
-    value = {
-        Lcom/tencent/mm/pluginsdk/model/downloader/i$a;
-    }
-.end annotation
-
-
-# instance fields
-.field public dtM:Ljava/lang/String;
-
-.field public gNi:Ljava/lang/String;
-
-.field gNj:Ljava/lang/String;
-
-.field gNk:I
-
-.field gNl:Z
-
-.field public gNm:Z
-
-.field public gNn:Z
-
-.field mFileName:Ljava/lang/String;
-
-
 # direct methods
-.method private constructor <init>()V
-    .locals 3
-
-    .prologue
-    const/4 v2, 0x1
-
-    const/4 v1, 0x0
-
-    .line 14
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 5
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/i;->gNi:Ljava/lang/String;
-
-    .line 6
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/i;->mFileName:Ljava/lang/String;
-
-    .line 7
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/i;->gNj:Ljava/lang/String;
-
-    .line 8
-    iput v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/i;->gNk:I
-
-    .line 9
-    const-string/jumbo v0, ""
-
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/model/downloader/i;->dtM:Ljava/lang/String;
-
-    .line 10
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/i;->gNl:Z
-
-    .line 11
-    iput-boolean v2, p0, Lcom/tencent/mm/pluginsdk/model/downloader/i;->gNm:Z
-
-    .line 12
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/model/downloader/i;->gNn:Z
-
-    .line 16
-    return-void
-.end method
-
-.method synthetic constructor <init>(B)V
+.method public constructor <init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;)V
     .locals 0
 
     .prologue
-    .line 4
-    invoke-direct {p0}, Lcom/tencent/mm/pluginsdk/model/downloader/i;-><init>()V
+    .line 14
+    invoke-direct {p0, p1}, Lcom/tencent/mm/pluginsdk/model/downloader/h;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;)V
 
+    .line 15
     return-void
+.end method
+
+
+# virtual methods
+.method public final a(Lcom/tencent/mm/pluginsdk/model/downloader/d;)J
+    .locals 6
+
+    .prologue
+    const-wide/16 v0, -0x1
+
+    .line 19
+    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCq:Ljava/lang/String;
+
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 31
+    :goto_0
+    return-wide v0
+
+    .line 22
+    :cond_0
+    iget-object v2, p1, Lcom/tencent/mm/pluginsdk/model/downloader/d;->iCq:Ljava/lang/String;
+
+    invoke-static {v2}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v2
+
+    .line 23
+    new-instance v3, Landroid/content/Intent;
+
+    const-string/jumbo v4, "android.intent.action.VIEW"
+
+    invoke-direct {v3, v4, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    .line 24
+    const/high16 v2, 0x10000000
+
+    invoke-virtual {v3, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 26
+    :try_start_0
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 31
+    const-wide/16 v0, 0x0
+
+    goto :goto_0
+
+    .line 27
+    :catch_0
+    move-exception v2
+
+    .line 28
+    const-string/jumbo v3, "!56@/B4Tb64lLpKVQlIh1YRBX2BuTPU2oEXMR0rg2iWmbvGurx8Zm7eZ3Q=="
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "Add download task failed: "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v3, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+.end method
+
+.method public final cG(J)I
+    .locals 1
+
+    .prologue
+    .line 36
+    const/4 v0, 0x1
+
+    return v0
+.end method
+
+.method public final cH(J)Lcom/tencent/mm/pluginsdk/model/downloader/e;
+    .locals 2
+
+    .prologue
+    .line 41
+    new-instance v0, Lcom/tencent/mm/pluginsdk/model/downloader/e;
+
+    invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/model/downloader/e;-><init>()V
+
+    .line 42
+    iput-wide p1, v0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->id:J
+
+    .line 43
+    const/4 v1, -0x1
+
+    iput v1, v0, Lcom/tencent/mm/pluginsdk/model/downloader/e;->status:I
+
+    .line 44
+    return-object v0
+.end method
+
+.method public final cI(J)Z
+    .locals 1
+
+    .prologue
+    .line 49
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final cJ(J)Z
+    .locals 1
+
+    .prologue
+    .line 54
+    const/4 v0, 0x0
+
+    return v0
 .end method

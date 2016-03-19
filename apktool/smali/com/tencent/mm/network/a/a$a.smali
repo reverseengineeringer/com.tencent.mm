@@ -15,29 +15,29 @@
 
 
 # instance fields
-.field public bMD:J
-
-.field public bTl:Lcom/tencent/mm/network/a/c;
-
-.field public bTm:Z
-
-.field public bTn:J
-
-.field public bTo:J
-
-.field public bTp:J
-
-.field public bTq:I
-
-.field public bTr:I
-
-.field public bTs:J
-
-.field public bTt:J
-
-.field public bTu:J
-
 .field public beginTime:J
+
+.field public cdi:J
+
+.field public ckh:Lcom/tencent/mm/network/a/c;
+
+.field public cki:Z
+
+.field public ckj:J
+
+.field public ckk:J
+
+.field public ckl:J
+
+.field public ckm:I
+
+.field public ckn:I
+
+.field public cko:J
+
+.field public ckp:J
+
+.field public ckq:J
 
 .field public clientIp:Ljava/lang/String;
 
@@ -82,10 +82,10 @@
     iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->endTime:J
 
     .line 80
-    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->bMD:J
+    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->cdi:J
 
     .line 82
-    iput-boolean v0, p0, Lcom/tencent/mm/network/a/a$a;->bTm:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/network/a/a$a;->cki:Z
 
     .line 83
     iput v0, p0, Lcom/tencent/mm/network/a/a$a;->netType:I
@@ -97,31 +97,31 @@
     iput v0, p0, Lcom/tencent/mm/network/a/a$a;->errCode:I
 
     .line 86
-    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->bTn:J
+    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->ckj:J
 
     .line 87
-    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->bTo:J
+    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->ckk:J
 
     .line 88
-    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->bTp:J
+    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->ckl:J
 
     .line 89
-    iput v0, p0, Lcom/tencent/mm/network/a/a$a;->bTq:I
+    iput v0, p0, Lcom/tencent/mm/network/a/a$a;->ckm:I
 
     .line 90
     iput v0, p0, Lcom/tencent/mm/network/a/a$a;->retryCount:I
 
     .line 91
-    iput v0, p0, Lcom/tencent/mm/network/a/a$a;->bTr:I
+    iput v0, p0, Lcom/tencent/mm/network/a/a$a;->ckn:I
 
     .line 93
-    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->bTs:J
+    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->cko:J
 
     .line 94
-    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->bTt:J
+    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->ckp:J
 
     .line 95
-    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->bTu:J
+    iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->ckq:J
 
     .line 96
     iput-wide v1, p0, Lcom/tencent/mm/network/a/a$a;->netSignal:J
@@ -199,7 +199,7 @@
 
     const/4 v0, 0x4
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/a/a$a;->bMD:J
+    iget-wide v3, p0, Lcom/tencent/mm/network/a/a$a;->cdi:J
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -209,7 +209,7 @@
 
     const/4 v0, 0x5
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/a/a$a;->bTp:J
+    iget-wide v3, p0, Lcom/tencent/mm/network/a/a$a;->ckl:J
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -219,7 +219,7 @@
 
     const/4 v3, 0x6
 
-    iget-object v0, p0, Lcom/tencent/mm/network/a/a$a;->bTl:Lcom/tencent/mm/network/a/c;
+    iget-object v0, p0, Lcom/tencent/mm/network/a/a$a;->ckh:Lcom/tencent/mm/network/a/c;
 
     if-nez v0, :cond_0
 
@@ -230,7 +230,7 @@
 
     const/4 v0, 0x7
 
-    iget-boolean v3, p0, Lcom/tencent/mm/network/a/a$a;->bTm:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/network/a/a$a;->cki:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -270,7 +270,7 @@
 
     const/16 v0, 0xb
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/a/a$a;->bTn:J
+    iget-wide v3, p0, Lcom/tencent/mm/network/a/a$a;->ckj:J
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -280,7 +280,7 @@
 
     const/16 v0, 0xc
 
-    iget-wide v3, p0, Lcom/tencent/mm/network/a/a$a;->bTo:J
+    iget-wide v3, p0, Lcom/tencent/mm/network/a/a$a;->ckk:J
 
     invoke-static {v3, v4}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -295,7 +295,7 @@
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/network/a/a$a;->bTl:Lcom/tencent/mm/network/a/c;
+    iget-object v0, p0, Lcom/tencent/mm/network/a/a$a;->ckh:Lcom/tencent/mm/network/a/c;
 
     invoke-virtual {v0}, Lcom/tencent/mm/network/a/c;->toString()Ljava/lang/String;
 

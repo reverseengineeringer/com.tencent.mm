@@ -15,14 +15,14 @@
 
 
 # virtual methods
-.method public abstract IK()V
+.method public abstract KY()V
 .end method
 
-.method public abstract IL()V
+.method public abstract KZ()V
 .end method
 
-.method public abstract jM(Ljava/lang/String;)V
+.method public abstract kE(Ljava/lang/String;)Z
 .end method
 
-.method public abstract jb(Ljava/lang/String;)Z
+.method public abstract lq(Ljava/lang/String;)V
 .end method

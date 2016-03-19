@@ -1,92 +1,118 @@
 package com.tencent.mm.storage;
 
+import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.ar.f;
-import com.tencent.mm.ar.f.a;
-import com.tencent.mm.protocal.b.or;
-import com.tencent.mm.sdk.g.ae.a;
-import com.tencent.mm.sdk.g.af;
-import com.tencent.mm.sdk.g.ah;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
-import java.io.IOException;
 
 public final class ak
-  extends ah
-  implements f.a
 {
-  public static final String[] aqU = { ah.a(an.aqp, "GetEmotionListCache") };
-  private af aqT;
+  public int aou = 135;
+  public int kgA;
+  public a kgz = null;
+  public String name = "";
+  public int status;
   
-  public ak(af paramaf)
+  public ak()
   {
-    this(paramaf, an.aqp, "GetEmotionListCache");
+    kgz = null;
+    name = "";
+    status = 0;
+    kgA = 0;
   }
   
-  private ak(af paramaf, ae.a parama, String paramString)
+  public ak(String paramString, boolean paramBoolean, int paramInt)
   {
-    super(paramaf, parama, paramString, null);
-    aqT = paramaf;
-  }
-  
-  public final int a(f paramf)
-  {
-    if (paramf != null) {
-      aqT = paramf;
-    }
-    return 0;
-  }
-  
-  public final boolean a(int paramInt, or paramor)
-  {
-    if (paramor == null) {
-      return false;
-    }
-    try
+    kgz = new a(paramString);
+    name = paramString;
+    if (paramBoolean) {}
+    for (int i = 1;; i = 0)
     {
-      aqT.delete("GetEmotionListCache", "reqType=?", new String[] { String.valueOf(paramInt) });
-      paramor = new an(paramInt, paramor.toByteArray());
-      t.d("!32@/B4Tb64lLpIUhDmLVZ6YSYZEe92ZMKgz", "insert cache: %d", new Object[] { Integer.valueOf(paramInt) });
-      boolean bool = b(paramor);
-      return bool;
+      status = (i | 0x2);
+      kgA = paramInt;
+      return;
     }
-    catch (Exception paramor)
-    {
-      t.e("!32@/B4Tb64lLpIUhDmLVZ6YSYZEe92ZMKgz", "exception:%s", new Object[] { bn.a(paramor) });
-    }
-    return false;
   }
   
-  public final or mL(int paramInt)
+  public final boolean PN()
   {
-    Object localObject3 = null;
-    Cursor localCursor = aqT.a("GetEmotionListCache", null, "reqType=?", new String[] { String.valueOf(paramInt) }, null, null);
-    Object localObject1 = localObject3;
-    an localan;
-    if (localCursor != null)
+    return (status & 0x1) != 0;
+  }
+  
+  public final boolean aXX()
+  {
+    return (status & 0x2) != 0;
+  }
+  
+  public final void c(Cursor paramCursor)
+  {
+    if ((aou & 0x2) != 0)
     {
-      localObject1 = localObject3;
-      if (localCursor.moveToFirst()) {
-        localan = new an(localCursor);
+      name = paramCursor.getString(1);
+      if (kgz == null) {
+        kgz = new a(name);
       }
     }
-    try
-    {
-      localObject1 = new or();
-      ((or)localObject1).x(field_cache);
-      t.d("!32@/B4Tb64lLpIUhDmLVZ6YSYZEe92ZMKgz", "succed get cache: %d", new Object[] { Integer.valueOf(paramInt) });
-      if (localCursor != null) {
-        localCursor.close();
-      }
-      return (or)localObject1;
+    if ((aou & 0x4) != 0) {
+      status = paramCursor.getInt(2);
     }
-    catch (IOException localIOException)
+    if ((aou & 0x80) != 0) {
+      kgA = paramCursor.getInt(7);
+    }
+  }
+  
+  public final ContentValues lX()
+  {
+    ContentValues localContentValues = new ContentValues();
+    if ((aou & 0x2) != 0) {
+      localContentValues.put("name", name);
+    }
+    if ((aou & 0x4) != 0) {
+      localContentValues.put("status", Integer.valueOf(status));
+    }
+    if ((aou & 0x80) != 0) {
+      localContentValues.put("int_reserved1", Integer.valueOf(kgA));
+    }
+    return localContentValues;
+  }
+  
+  public final void setEnable(boolean paramBoolean)
+  {
+    if (paramBoolean)
     {
-      for (;;)
+      int j = status;
+      if (paramBoolean) {}
+      for (int i = 1;; i = 0)
       {
-        t.e("!32@/B4Tb64lLpIUhDmLVZ6YSYZEe92ZMKgz", "exception:%s", new Object[] { bn.a(localIOException) });
-        Object localObject2 = localObject3;
+        status = (i | j);
+        return;
       }
+    }
+    status &= 0xFFFFFFFE;
+  }
+  
+  public static final class a
+  {
+    private String aEV;
+    private String aKU;
+    
+    public a(String paramString)
+    {
+      int i = paramString.indexOf("@");
+      if (i >= 0)
+      {
+        aEV = paramString.substring(0, i);
+        aKU = paramString.substring(i);
+        return;
+      }
+      aEV = paramString;
+      aKU = "";
+    }
+    
+    public final String FC(String paramString)
+    {
+      if (aKU != null) {
+        paramString = aKU;
+      }
+      return paramString;
     }
   }
 }

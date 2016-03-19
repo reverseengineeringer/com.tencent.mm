@@ -1,27 +1,24 @@
 .class public final Lcom/tencent/mm/d/a/fj;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lcom/tencent/mm/d/a/fj$b;,
         Lcom/tencent/mm/d/a/fj$a;
     }
 .end annotation
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aBX:Lcom/tencent/mm/d/a/fj$a;
-
-.field public aBY:Lcom/tencent/mm/d/a/fj$b;
+.field public aAh:Lcom/tencent/mm/d/a/fj$a;
 
 
 # direct methods
@@ -32,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/fj;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/fj;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/fj;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/fj;->arR:Z
 
     return-void
 .end method
@@ -45,30 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/fj$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/fj$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/fj;->aBX:Lcom/tencent/mm/d/a/fj$a;
-
-    .line 19
-    new-instance v0, Lcom/tencent/mm/d/a/fj$b;
-
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/fj$b;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/d/a/fj;->aBY:Lcom/tencent/mm/d/a/fj$b;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/fj;->aAh:Lcom/tencent/mm/d/a/fj$a;
 
     .line 8
-    const-string/jumbo v0, "PermissionOpMark"
+    const-string/jumbo v0, "GetMsgHandlerSize"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/fj;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/fj;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/fj;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/fj;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/fj;->jUI:Z
 
     return-void
 .end method

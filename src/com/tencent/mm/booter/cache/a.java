@@ -3,32 +3,32 @@ package com.tencent.mm.booter.cache;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
-import com.tencent.mm.a.d;
+import com.tencent.mm.a.f;
 import com.tencent.mm.cache.MCacheItem;
 import com.tencent.mm.cache.b.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.p;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.q;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 import java.util.Map;
 
 public final class a
   extends b.a
 {
-  public static a bdt;
-  private final d bdu;
+  public static a bnn;
+  private final f bno;
   
   private a()
   {
-    Context localContext = aa.getContext();
+    Context localContext = y.getContext();
     if (com.tencent.mm.platformtools.a.a.values == null) {}
     try
     {
-      com.tencent.mm.platformtools.a.a.values = p.xj(bn.e(localContext.getAssets().open("profile.ini")));
+      com.tencent.mm.platformtools.a.a.values = q.CK(ay.d(localContext.getAssets().open("profile.ini")));
       if (com.tencent.mm.platformtools.a.a.values == null)
       {
         localContext = null;
-        bdu = new d(bn.getInt(localContext, 2000));
+        bno = new f(ay.getInt(localContext, 2000));
         return;
       }
     }
@@ -36,7 +36,7 @@ public final class a
     {
       for (;;)
       {
-        t.e("!32@/B4Tb64lLpJ/Ri7/U8l0ZUhPEbTfEF2l", "exception:%s", new Object[] { bn.a(localException) });
+        u.e("!32@/B4Tb64lLpJ/Ri7/U8l0ZUhPEbTfEF2l", "exception:%s", new Object[] { ay.b(localException) });
         continue;
         String str = (String)com.tencent.mm.platformtools.a.a.values.get("BACKGROUND_BITMAP_CACHE_LIMIT");
       }
@@ -45,40 +45,40 @@ public final class a
   
   public static void destroy()
   {
-    if (bdt == null) {
+    if (bnn == null) {
       return;
     }
-    bdtbdu.clear();
+    bnnbno.clear();
   }
   
   public static void prepare()
   {
-    if (bdt == null) {
-      bdt = new a();
+    if (bnn == null) {
+      bnn = new a();
     }
   }
   
   public final void a(String paramString, Bitmap paramBitmap)
   {
-    t.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "setting bitmap: %s", new Object[] { paramString });
-    bdu.f(paramString, paramBitmap);
+    u.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "setting bitmap: %s", new Object[] { paramString });
+    bno.d(paramString, paramBitmap);
   }
   
-  public final MCacheItem cG(String paramString)
+  public final MCacheItem cI(String paramString)
   {
-    t.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "getting cache item: %s", new Object[] { paramString });
+    u.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "getting cache item: %s", new Object[] { paramString });
     return null;
   }
   
-  public final void cH(String paramString)
+  public final void cJ(String paramString)
   {
-    t.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "setting cache item: %s", new Object[] { paramString });
+    u.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "setting cache item: %s", new Object[] { paramString });
   }
   
   public final Bitmap getBitmap(String paramString)
   {
-    t.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "getting bitmap: %s", new Object[] { paramString });
-    return (Bitmap)bdu.get(paramString);
+    u.v("!32@/B4Tb64lLpLhzJusfWXg89/gcb/GJ8Qq", "getting bitmap: %s", new Object[] { paramString });
+    return (Bitmap)bno.get(paramString);
   }
 }
 

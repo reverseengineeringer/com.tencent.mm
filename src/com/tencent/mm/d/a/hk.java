@@ -1,29 +1,24 @@
 package com.tencent.mm.d.a;
 
-import android.content.Intent;
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class hk
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEI = new a();
-  public b aEJ = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDe = new a();
   
   public hk()
   {
-    id = "SetLocalQQMobile";
-    hXT = atO;
+    id = "NotificationSendFailMsgFinish";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public Intent intent;
-    public String username;
+    public int type;
   }
-  
-  public static final class b {}
 }
 
 /* Location:

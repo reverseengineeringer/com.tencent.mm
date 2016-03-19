@@ -14,31 +14,31 @@
 
 
 # static fields
-.field static jqn:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
+.field static lvx:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
 
 
 # instance fields
-.field private aAy:Landroid/app/Activity;
+.field private aBU:Landroid/app/Activity;
 
-.field private fpl:I
+.field private gHF:I
 
-.field jqe:[I
+.field lvo:[I
 
-.field private jqf:Landroid/view/View;
+.field private lvp:Landroid/view/View;
 
-.field private jqg:Landroid/widget/ImageView;
+.field private lvq:Landroid/widget/ImageView;
 
-.field jqh:Lcom/tencent/mm/ui/tools/CropImageView;
+.field lvr:Lcom/tencent/mm/ui/tools/CropImageView;
 
-.field jqi:Landroid/graphics/Bitmap;
+.field lvs:Landroid/graphics/Bitmap;
 
-.field private jqj:Lcom/tencent/mm/ui/base/MMHorList;
+.field private lvt:Lcom/tencent/mm/ui/base/MMHorList;
 
-.field private jqk:Lcom/tencent/mm/ui/tools/FilterImageView$a;
+.field private lvu:Lcom/tencent/mm/ui/tools/FilterImageView$a;
 
-.field private jql:Ljava/lang/Runnable;
+.field private lvv:Ljava/lang/Runnable;
 
-.field private jqm:Ljava/lang/Runnable;
+.field private lvw:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -46,7 +46,7 @@
     .locals 9
 
     .prologue
-    .line 310
+    .line 319
     const/16 v0, 0xc
 
     new-array v7, v0, [Lcom/tencent/mm/ui/tools/FilterImageView$c;
@@ -387,7 +387,7 @@
 
     aput-object v0, v7, v8
 
-    sput-object v7, Lcom/tencent/mm/ui/tools/FilterImageView;->jqn:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
+    sput-object v7, Lcom/tencent/mm/ui/tools/FilterImageView;->lvx:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
 
     return-void
 .end method
@@ -402,23 +402,23 @@
     .line 43
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->fpl:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->gHF:I
 
     .line 55
     check-cast p1, Landroid/app/Activity;
 
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->aAy:Landroid/app/Activity;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->aBU:Landroid/app/Activity;
 
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->aAy:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->aBU:Landroid/app/Activity;
 
-    sget v1, Lcom/tencent/mm/a$k;->crop_image_filter:I
+    const v1, 0x7f0a05bc
 
     invoke-static {v0, v1, p0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     move-result-object v1
 
-    sget v0, Lcom/tencent/mm/a$i;->cropimage_filter_show_iv:I
+    const v0, 0x7f0710ce
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -426,9 +426,9 @@
 
     check-cast v0, Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqh:Lcom/tencent/mm/ui/tools/CropImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvr:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    sget v0, Lcom/tencent/mm/a$i;->cropimage_iv:I
+    const v0, 0x7f07012b
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -436,23 +436,23 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqg:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvq:Landroid/widget/ImageView;
 
-    sget v0, Lcom/tencent/mm/a$i;->cropimage_frame:I
+    const v0, 0x7f07012a
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqf:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvp:Landroid/view/View;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqh:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvr:Lcom/tencent/mm/ui/tools/CropImageView;
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/ui/tools/CropImageView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    sget v0, Lcom/tencent/mm/a$i;->cropimage_filter_gallery:I
+    const v0, 0x7f0710d0
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -460,29 +460,29 @@
 
     check-cast v0, Lcom/tencent/mm/ui/base/MMHorList;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqj:Lcom/tencent/mm/ui/base/MMHorList;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvt:Lcom/tencent/mm/ui/base/MMHorList;
 
     new-instance v0, Lcom/tencent/mm/ui/tools/FilterImageView$a;
 
     invoke-direct {v0, p0}, Lcom/tencent/mm/ui/tools/FilterImageView$a;-><init>(Lcom/tencent/mm/ui/tools/FilterImageView;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqk:Lcom/tencent/mm/ui/tools/FilterImageView$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvu:Lcom/tencent/mm/ui/tools/FilterImageView$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqj:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvt:Lcom/tencent/mm/ui/base/MMHorList;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqk:Lcom/tencent/mm/ui/tools/FilterImageView$a;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvu:Lcom/tencent/mm/ui/tools/FilterImageView$a;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMHorList;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqj:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvt:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMHorList;->invalidate()V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqj:Lcom/tencent/mm/ui/base/MMHorList;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvt:Lcom/tencent/mm/ui/base/MMHorList;
 
-    new-instance v1, Lcom/tencent/mm/ui/tools/bn;
+    new-instance v1, Lcom/tencent/mm/ui/tools/FilterImageView$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/bn;-><init>(Lcom/tencent/mm/ui/tools/FilterImageView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/tools/FilterImageView$1;-><init>(Lcom/tencent/mm/ui/tools/FilterImageView;)V
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/base/MMHorList;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
@@ -495,7 +495,7 @@
 
     .prologue
     .line 28
-    iput p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->fpl:I
+    iput p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->gHF:I
 
     return p1
 .end method
@@ -505,7 +505,7 @@
 
     .prologue
     .line 28
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqk:Lcom/tencent/mm/ui/tools/FilterImageView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvu:Lcom/tencent/mm/ui/tools/FilterImageView$a;
 
     return-object v0
 .end method
@@ -521,23 +521,23 @@
     .line 28
     if-nez p3, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqe:[I
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvo:[I
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v6
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -549,7 +549,7 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->setPixels([IIIIIII)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqh:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvr:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/CropImageView;->invalidate()V
 
@@ -560,13 +560,13 @@
     return v2
 
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -600,7 +600,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     filled-new-array {p2, v9}, [I
 
@@ -633,7 +633,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->aAy:Landroid/app/Activity;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->aBU:Landroid/app/Activity;
 
     invoke-virtual {v1}, Landroid/app/Activity;->getAssets()Landroid/content/res/AssetManager;
 
@@ -661,7 +661,7 @@
 
     invoke-virtual {v0, v1}, Ljava/io/InputStream;->read([B)I
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/e;->aC([B)Landroid/graphics/Bitmap;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/d;->aQ([B)Landroid/graphics/Bitmap;
 
     move-result-object v1
 
@@ -669,13 +669,13 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -686,6 +686,20 @@
     move-result-object v0
 
     if-eq v1, v0, :cond_2
+
+    const-string/jumbo v3, "!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a"
+
+    const-string/jumbo v4, "recycle bitmap:%s"
+
+    new-array v5, v11, [Ljava/lang/Object;
+
+    invoke-virtual {v1}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v5, v2
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->recycle()V
 
@@ -712,13 +726,27 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
+    const-string/jumbo v1, "!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a"
+
+    const-string/jumbo v3, "recycle bitmap:%s"
+
+    new-array v4, v11, [Ljava/lang/Object;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    aput-object v5, v4, v2
+
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     add-int/lit8 v0, v8, 0x1
 
     move v8, v0
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_3
     new-instance v9, Lcom/tencent/mm/pointers/PIntArray;
@@ -733,7 +761,7 @@
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqe:[I
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvo:[I
 
     array-length v3, v3
 
@@ -745,7 +773,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move v0, v2
 
@@ -784,7 +812,7 @@
 
     move-result-object v3
 
-    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     add-int/lit8 v0, v0, 0x1
 
@@ -795,17 +823,17 @@
 
     const-string/jumbo v1, "before filter"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqe:[I
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvo:[I
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v7
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -823,25 +851,25 @@
 
     const-string/jumbo v1, "after filter"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     iget-object v1, v9, Lcom/tencent/mm/pointers/PIntArray;->value:[I
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v6
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -853,7 +881,7 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->setPixels([IIIIIII)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqh:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvr:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/CropImageView;->invalidate()V
 
@@ -867,14 +895,14 @@
 
     .prologue
     .line 28
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->aAy:Landroid/app/Activity;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->aBU:Landroid/app/Activity;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final aN(Ljava/lang/String;I)V
+.method public final bg(Ljava/lang/String;I)V
     .locals 8
 
     .prologue
@@ -882,7 +910,7 @@
 
     const/4 v2, 0x0
 
-    .line 175
+    .line 181
     const-string/jumbo v0, "!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -899,14 +927,14 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 183
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    .line 189
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -914,21 +942,21 @@
 
     if-eqz v0, :cond_1
 
-    .line 184
+    .line 190
     :cond_0
-    invoke-static {p1, v4, v4, v2}, Lcom/tencent/mm/sdk/platformtools/e;->a(Ljava/lang/String;IIZ)Landroid/graphics/Bitmap;
+    invoke-static {p1, v4, v4, v2}, Lcom/tencent/mm/sdk/platformtools/d;->b(Ljava/lang/String;IIZ)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
     int-to-float v1, p2
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/e;->b(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/d;->b(Landroid/graphics/Bitmap;F)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
-    .line 186
+    .line 192
     :cond_1
     const-string/jumbo v0, "!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a"
 
@@ -938,7 +966,7 @@
 
     invoke-direct {v1, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -954,7 +982,7 @@
 
     move-result-object v1
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -968,16 +996,16 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 187
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    .line 193
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v1}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -987,26 +1015,26 @@
 
     new-array v0, v0, [I
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqe:[I
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvo:[I
 
-    .line 188
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    .line 194
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqe:[I
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvo:[I
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v3, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v3}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v3
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v6
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v4, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v4}, Landroid/graphics/Bitmap;->getHeight()I
 
@@ -1018,14 +1046,14 @@
 
     invoke-virtual/range {v0 .. v7}, Landroid/graphics/Bitmap;->getPixels([IIIIIII)V
 
-    .line 189
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqh:Lcom/tencent/mm/ui/tools/CropImageView;
+    .line 195
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvr:Lcom/tencent/mm/ui/tools/CropImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/CropImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 190
+    .line 196
     return-void
 .end method
 
@@ -1034,7 +1062,7 @@
 
     .prologue
     .line 99
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqf:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvp:Landroid/view/View;
 
     return-object v0
 .end method
@@ -1044,7 +1072,7 @@
 
     .prologue
     .line 95
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqh:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvr:Lcom/tencent/mm/ui/tools/CropImageView;
 
     return-object v0
 .end method
@@ -1054,7 +1082,7 @@
 
     .prologue
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     return-object v0
 .end method
@@ -1063,10 +1091,29 @@
     .locals 1
 
     .prologue
-    .line 211
-    iget v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->fpl:I
+    .line 218
+    iget v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->gHF:I
 
     return v0
+.end method
+
+.method public setCropMaskBackground(I)V
+    .locals 1
+
+    .prologue
+    .line 109
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvq:Landroid/widget/ImageView;
+
+    if-eqz v0, :cond_0
+
+    .line 110
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvq:Landroid/widget/ImageView;
+
+    invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setBackgroundResource(I)V
+
+    .line 112
+    :cond_0
+    return-void
 .end method
 
 .method public setCropMaskVisible(I)V
@@ -1074,12 +1121,12 @@
 
     .prologue
     .line 103
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqg:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvq:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
     .line 104
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqg:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvq:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setVisibility(I)V
 
@@ -1093,7 +1140,7 @@
 
     .prologue
     .line 91
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqi:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvs:Landroid/graphics/Bitmap;
 
     .line 92
     return-void
@@ -1104,12 +1151,12 @@
 
     .prologue
     .line 72
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqh:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvr:Lcom/tencent/mm/ui/tools/CropImageView;
 
     if-eqz v0, :cond_0
 
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqh:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvr:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/tools/CropImageView;->setLimitZoomIn(Z)V
 
@@ -1123,12 +1170,12 @@
 
     .prologue
     .line 85
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqh:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvr:Lcom/tencent/mm/ui/tools/CropImageView;
 
     if-eqz v0, :cond_0
 
     .line 86
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqh:Lcom/tencent/mm/ui/tools/CropImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvr:Lcom/tencent/mm/ui/tools/CropImageView;
 
     invoke-virtual {v0, p1}, Lcom/tencent/mm/ui/tools/CropImageView;->setImageMatrix(Landroid/graphics/Matrix;)V
 
@@ -1142,7 +1189,7 @@
 
     .prologue
     .line 60
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jql:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvv:Ljava/lang/Runnable;
 
     .line 61
     return-void
@@ -1153,7 +1200,7 @@
 
     .prologue
     .line 64
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqm:Ljava/lang/Runnable;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvw:Ljava/lang/Runnable;
 
     .line 65
     return-void
@@ -1163,23 +1210,23 @@
     .locals 1
 
     .prologue
-    .line 194
+    .line 200
     if-nez p1, :cond_0
 
-    .line 195
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqk:Lcom/tencent/mm/ui/tools/FilterImageView$a;
+    .line 201
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvu:Lcom/tencent/mm/ui/tools/FilterImageView$a;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/tools/FilterImageView$a;->notifyDataSetChanged()V
 
-    .line 196
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqj:Lcom/tencent/mm/ui/base/MMHorList;
+    .line 202
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvt:Lcom/tencent/mm/ui/base/MMHorList;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/base/MMHorList;->invalidate()V
 
-    .line 198
+    .line 204
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 199
+    .line 205
     return-void
 .end method

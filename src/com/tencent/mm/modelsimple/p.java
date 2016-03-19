@@ -1,72 +1,54 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.yq;
-import com.tencent.mm.protocal.b.yr;
-import com.tencent.mm.protocal.b.yu;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Set;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.sp;
+import com.tencent.mm.protocal.b.sq;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class p
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private d apI;
-  public final a apJ;
+  private d anM;
+  public final a bUv;
   
-  public p(int paramInt)
+  public p(int paramInt1, String paramString1, String paramString2, String paramString3, int paramInt2)
   {
     a.a locala = new a.a();
-    bsW = new yq();
-    bsX = new yr();
-    uri = "/cgi-bin/micromsg-bin/newgetinvitefriend";
-    bsV = 135;
-    bsY = 23;
-    bsZ = 1000000023;
-    apJ = locala.vh();
-    apJ.bsT.btb).hDd = paramInt;
+    sp localsp = new sp();
+    sq localsq = new sq();
+    bFa = localsp;
+    bFb = localsq;
+    uri = "/cgi-bin/micromsg-bin/getexposelink";
+    bEY = 982;
+    bFc = 0;
+    bFd = 0;
+    iWm = paramInt1;
+    jro = paramString1;
+    jrp = ay.ky(paramString2);
+    jrq = ay.ky(paramString3);
+    jrr = paramInt2;
+    bUv = locala.vy();
   }
   
-  public final int a(m paramm, d paramd)
+  public final int a(e parame, d paramd)
   {
-    apI = paramd;
-    return a(paramm, apJ, this);
+    anM = paramd;
+    return a(parame, bUv, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    paramw = (yr)apJ.bsU.btb;
-    t.d("!56@/B4Tb64lLpK+IBX8XDgnvqap27kdYXmZIfk0eYczXx/3sYDluEMlOg==", "friend:" + hAl.size() + " group:" + hjd.size());
-    paramArrayOfByte = new HashSet();
-    LinkedList localLinkedList = new LinkedList();
-    paramInt1 = 0;
-    while (paramInt1 < hIc)
-    {
-      if (!paramArrayOfByte.contains(hAl.get(paramInt1)).dse))
-      {
-        localLinkedList.add(hAl.get(paramInt1));
-        paramArrayOfByte.add(hAl.get(paramInt1)).dse);
-      }
-      paramInt1 += 1;
-    }
-    hAl = localLinkedList;
-    hIc = localLinkedList.size();
-    apI.a(paramInt2, paramInt3, paramString, this);
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()
   {
-    return 135;
+    return 982;
   }
 }
 

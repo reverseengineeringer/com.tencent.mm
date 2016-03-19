@@ -1,75 +1,56 @@
-.class final Lcom/tencent/mm/ui/tools/g;
+.class public interface abstract Lcom/tencent/mm/ui/tools/g;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
-
-# instance fields
-.field final synthetic joq:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
-
-
-# direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)V
-    .locals 0
-
-    .prologue
-    .line 131
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/g;->joq:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final run()V
-    .locals 2
+.method public abstract bii()V
+.end method
 
-    .prologue
-    .line 134
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/g;->joq:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+.method public abstract bij()Z
+.end method
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->f(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+.method public abstract bik()Z
+.end method
 
-    move-result-object v0
+.method public abstract getSearchContent()Ljava/lang/String;
+.end method
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/g;->joq:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+.method public abstract id(Z)V
+.end method
 
-    invoke-static {v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->e(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Landroid/text/TextWatcher;
+.method public abstract ie(Z)V
+.end method
 
-    move-result-object v1
+.method public abstract setAutoMatchKeywords(Z)V
+.end method
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->removeTextChangedListener(Landroid/text/TextWatcher;)V
+.method public abstract setBackClickCallback(Lcom/tencent/mm/ui/tools/ActionBarSearchView$a;)V
+.end method
 
-    .line 135
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/g;->joq:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+.method public abstract setCallBack(Lcom/tencent/mm/ui/tools/ActionBarSearchView$b;)V
+.end method
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->f(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+.method public abstract setEditTextEnabled(Z)V
+.end method
 
-    move-result-object v0
+.method public abstract setHint(Ljava/lang/CharSequence;)V
+.end method
 
-    const-string/jumbo v1, ""
+.method public abstract setKeywords(Ljava/util/ArrayList;)V
+.end method
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->setText(Ljava/lang/CharSequence;)V
+.method public abstract setNotRealCallBack(Lcom/tencent/mm/ui/tools/SearchViewNotRealTimeHelper$a;)V
+.end method
 
-    .line 136
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/g;->joq:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
+.method public abstract setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
+.end method
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->f(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;
+.method public abstract setSearchContent(Ljava/lang/String;)V
+.end method
 
-    move-result-object v0
+.method public abstract setSearchTipIcon(I)V
+.end method
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/g;->joq:Lcom/tencent/mm/ui/tools/ActionBarSearchView;
-
-    invoke-static {v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView;->e(Lcom/tencent/mm/ui/tools/ActionBarSearchView;)Landroid/text/TextWatcher;
-
-    move-result-object v1
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/tools/ActionBarSearchView$ActionBarEditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
-
-    .line 137
-    return-void
+.method public abstract setStatusBtnEnabled(Z)V
 .end method

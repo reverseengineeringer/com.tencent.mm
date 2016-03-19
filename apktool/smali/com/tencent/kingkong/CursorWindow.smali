@@ -84,6 +84,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/CursorWindow;->sWindowToPidMap:Landroid/util/SparseIntArray;
 
+    .line 39
     return-void
 
     .line 51

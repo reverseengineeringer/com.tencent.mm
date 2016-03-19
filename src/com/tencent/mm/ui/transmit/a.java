@@ -1,16 +1,22 @@
 package com.tencent.mm.ui.transmit;
 
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import com.tencent.mm.ui.base.h;
 
-final class a
-  implements Runnable
+public final class a
 {
-  a(MsgRetransmitUI paramMsgRetransmitUI) {}
+  h apf;
+  a lBr;
   
-  public final void run()
+  a(a parama)
   {
-    t.i("!44@/B4Tb64lLpLWl/1sKbbnJDN+/k3QDAC+0iKsGdZGh9U=", "test before sendMutiImage");
-    MsgRetransmitUI.a(jza);
+    lBr = parama;
+  }
+  
+  public static abstract interface a
+  {
+    public abstract void bjj();
   }
 }
 

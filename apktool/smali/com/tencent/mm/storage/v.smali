@@ -1,39 +1,47 @@
-.class final Lcom/tencent/mm/storage/v;
-.super Lcom/tencent/mm/sdk/g/al;
+.class public final Lcom/tencent/mm/storage/v;
+.super Lcom/tencent/mm/sdk/h/g;
 .source "SourceFile"
 
 
+# static fields
+.field public static final aoY:[Ljava/lang/String;
+
+
 # instance fields
-.field final synthetic ieP:Lcom/tencent/mm/storage/t;
+.field public bCw:Lcom/tencent/mm/az/g;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/storage/t;)V
-    .locals 0
+.method static constructor <clinit>()V
+    .locals 3
 
     .prologue
-    .line 148
-    iput-object p1, p0, Lcom/tencent/mm/storage/v;->ieP:Lcom/tencent/mm/storage/t;
+    .line 26
+    const/4 v0, 0x1
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/g/al;-><init>()V
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string/jumbo v2, "CREATE TABLE IF NOT EXISTS DeletedConversationInfo ( userName TEXT  PRIMARY KEY , lastSeq LONG  , reserved1 INT  , reserved2 LONG  , reserved3 TEXT  ) "
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/tencent/mm/storage/v;->aoY:[Ljava/lang/String;
 
     return-void
 .end method
 
-
-# virtual methods
-.method protected final synthetic i(Ljava/lang/Object;Ljava/lang/Object;)V
-    .locals 1
+.method public constructor <init>(Lcom/tencent/mm/az/g;)V
+    .locals 0
 
     .prologue
-    .line 148
-    check-cast p1, Lcom/tencent/mm/storage/t$a;
+    .line 38
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/g;-><init>()V
 
-    check-cast p2, Lcom/tencent/mm/storage/s;
+    .line 39
+    iput-object p1, p0, Lcom/tencent/mm/storage/v;->bCw:Lcom/tencent/mm/az/g;
 
-    iget-object v0, p0, Lcom/tencent/mm/storage/v;->ieP:Lcom/tencent/mm/storage/t;
-
-    invoke-interface {p1, p2, v0}, Lcom/tencent/mm/storage/t$a;->a(Lcom/tencent/mm/storage/s;Lcom/tencent/mm/storage/t;)V
-
+    .line 40
     return-void
 .end method

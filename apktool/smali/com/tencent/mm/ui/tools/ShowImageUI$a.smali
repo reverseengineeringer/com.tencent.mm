@@ -80,7 +80,7 @@
     .line 193
     iget-object v0, p0, Lcom/tencent/mm/ui/tools/ShowImageUI$a;->imagePath:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/platformtools/k;->iQ(Ljava/lang/String;)Landroid/graphics/Bitmap;
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/k;->ku(Ljava/lang/String;)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
@@ -92,7 +92,7 @@
 
     const-string/jumbo v1, "get image fail"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 196
     if-eqz p2, :cond_0
@@ -107,7 +107,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$k;->show_image_ui_item:I
+    const v1, 0x7f0a04d2
 
     const/4 v2, 0x0
 
@@ -117,7 +117,7 @@
 
     .line 199
     :cond_1
-    sget v0, Lcom/tencent/mm/a$i;->image_iv:I
+    const v0, 0x7f07069b
 
     invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -125,7 +125,7 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    sget v1, Lcom/tencent/mm/a$h;->download_image_icon:I
+    const v1, 0x7f03022b
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
@@ -190,7 +190,7 @@
 
     move-result v2
 
-    invoke-virtual {p2, v1, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bx(II)V
+    invoke-virtual {p2, v1, v2}, Lcom/tencent/mm/ui/base/MultiTouchImageView;->bN(II)V
 
     goto :goto_1
 .end method

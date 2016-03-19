@@ -1,38 +1,38 @@
 .class public final Lcom/tencent/mm/protocal/b;
-.super Ljava/lang/Object;
+.super Lcom/tencent/mm/protocal/d;
 .source "SourceFile"
 
 
 # static fields
-.field public static hgg:Ljava/lang/String;
+.field public static bwR:Ljava/lang/String;
 
-.field public static final hgh:Ljava/lang/String;
+.field public static final iTY:Ljava/lang/String;
 
-.field public static final hgi:Ljava/lang/String;
+.field public static final iTZ:Ljava/lang/String;
 
-.field public static final hgj:Ljava/lang/String;
+.field public static iUa:Ljava/lang/String;
 
-.field public static final hgk:Ljava/lang/String;
+.field public static final iUb:Ljava/lang/String;
 
-.field public static final hgl:Ljava/lang/String;
+.field public static iUc:Ljava/lang/String;
 
-.field public static final hgm:Ljava/lang/String;
+.field public static final iUd:Ljava/lang/String;
 
-.field public static hgn:J
+.field public static iUe:J
 
-.field public static hgo:I
+.field public static iUf:I
 
-.field public static hgp:Z
+.field public static iUg:Z
 
-.field public static hgq:Z
+.field public static iUh:Z
 
-.field public static hgr:I
+.field public static iUi:I
 
-.field public static final hgs:[B
+.field public static final iUj:[B
 
-.field public static final hgt:[B
+.field public static final iUk:[B
 
-.field public static final hgu:[B
+.field public static final iUl:[B
 
 
 # direct methods
@@ -42,7 +42,7 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 15
+    .line 30
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "android-"
@@ -59,14 +59,14 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/protocal/b;->hgg:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/protocal/b;->bwR:Ljava/lang/String;
 
-    .line 16
+    .line 31
     sget-object v0, Landroid/os/Build;->BRAND:Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/mm/protocal/b;->hgh:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/protocal/b;->iTY:Ljava/lang/String;
 
-    .line 17
+    .line 32
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -87,9 +87,9 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/protocal/b;->hgi:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/protocal/b;->iTZ:Ljava/lang/String;
 
-    .line 18
+    .line 33
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "android-"
@@ -106,9 +106,9 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/protocal/b;->hgj:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/protocal/b;->iUa:Ljava/lang/String;
 
-    .line 19
+    .line 34
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v1, "android-"
@@ -125,9 +125,9 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/protocal/b;->hgk:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/protocal/b;->iUb:Ljava/lang/String;
 
-    .line 20
+    .line 35
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -142,9 +142,9 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/protocal/b;->hgl:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/protocal/b;->iUc:Ljava/lang/String;
 
-    .line 21
+    .line 36
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -171,63 +171,55 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/protocal/b;->hgm:Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/protocal/b;->iUd:Ljava/lang/String;
 
-    .line 24
+    .line 39
     const-wide/16 v0, 0x0
 
-    sput-wide v0, Lcom/tencent/mm/protocal/b;->hgn:J
+    sput-wide v0, Lcom/tencent/mm/protocal/b;->iUe:J
 
-    .line 26
-    const v0, 0x26020036
+    .line 42
+    const v0, 0x26030d40
 
-    sput v0, Lcom/tencent/mm/protocal/b;->hgo:I
+    sput v0, Lcom/tencent/mm/protocal/b;->iUf:I
 
-    .line 40
-    invoke-static {}, Lcom/tencent/mm/protocal/b;->aDn()Z
-
-    move-result v0
-
-    sput-boolean v0, Lcom/tencent/mm/protocal/b;->hgp:Z
-
-    .line 41
-    invoke-static {}, Lcom/tencent/mm/protocal/b;->aDm()Z
+    .line 52
+    invoke-static {}, Lcom/tencent/mm/protocal/b;->aTl()Z
 
     move-result v0
 
-    sput-boolean v0, Lcom/tencent/mm/protocal/b;->hgq:Z
+    sput-boolean v0, Lcom/tencent/mm/protocal/b;->iUg:Z
 
-    .line 43
+    .line 53
+    invoke-static {}, Lcom/tencent/mm/protocal/b;->aTk()Z
+
+    move-result v0
+
+    sput-boolean v0, Lcom/tencent/mm/protocal/b;->iUh:Z
+
+    .line 80
     const/4 v0, 0x5
 
-    sput v0, Lcom/tencent/mm/protocal/b;->hgr:I
+    sput v0, Lcom/tencent/mm/protocal/b;->iUi:I
 
-    .line 56
-    sput-object v2, Lcom/tencent/mm/protocal/b;->hgs:[B
+    .line 93
+    sput-object v2, Lcom/tencent/mm/protocal/b;->iUj:[B
 
-    .line 58
-    sput-object v2, Lcom/tencent/mm/protocal/b;->hgt:[B
+    .line 95
+    sput-object v2, Lcom/tencent/mm/protocal/b;->iUk:[B
 
-    .line 59
-    sput-object v2, Lcom/tencent/mm/protocal/b;->hgu:[B
+    .line 96
+    sput-object v2, Lcom/tencent/mm/protocal/b;->iUl:[B
 
-    .line 334
-    const-string/jumbo v0, "giveup rtType now ! Use the funcid !"
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Ljunit/framework/Assert;->assertTrue(Ljava/lang/String;Z)V
-
-    .line 335
     return-void
 .end method
 
-.method private static aDm()Z
+.method private static aTk()Z
     .locals 2
 
     .prologue
-    .line 33
-    sget v0, Lcom/tencent/mm/protocal/b;->hgo:I
+    .line 45
+    sget v0, Lcom/tencent/mm/protocal/b;->iUf:I
 
     and-int/lit16 v0, v0, 0xff
 
@@ -235,7 +227,7 @@
 
     if-lt v0, v1, :cond_0
 
-    sget v0, Lcom/tencent/mm/protocal/b;->hgo:I
+    sget v0, Lcom/tencent/mm/protocal/b;->iUf:I
 
     and-int/lit16 v0, v0, 0xff
 
@@ -254,18 +246,18 @@
     goto :goto_0
 .end method
 
-.method private static aDn()Z
+.method private static aTl()Z
     .locals 2
 
     .prologue
-    .line 37
-    sget v0, Lcom/tencent/mm/protocal/b;->hgo:I
+    .line 49
+    sget v0, Lcom/tencent/mm/protocal/b;->iUf:I
 
     and-int/lit16 v0, v0, 0xff
 
     if-ltz v0, :cond_0
 
-    sget v0, Lcom/tencent/mm/protocal/b;->hgo:I
+    sget v0, Lcom/tencent/mm/protocal/b;->iUf:I
 
     and-int/lit16 v0, v0, 0xff
 
@@ -284,47 +276,27 @@
     goto :goto_0
 .end method
 
-.method public static lG()Z
+.method public static oR(I)V
     .locals 1
 
     .prologue
-    .line 29
-    sget-boolean v0, Lcom/tencent/mm/protocal/b;->hgp:Z
+    .line 25
+    sput p0, Lcom/tencent/mm/protocal/b;->iUf:I
 
-    if-nez v0, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public static lW(I)V
-    .locals 1
-
-    .prologue
-    .line 10
-    sput p0, Lcom/tencent/mm/protocal/b;->hgo:I
-
-    .line 11
-    invoke-static {}, Lcom/tencent/mm/protocal/b;->aDn()Z
+    .line 26
+    invoke-static {}, Lcom/tencent/mm/protocal/b;->aTl()Z
 
     move-result v0
 
-    sput-boolean v0, Lcom/tencent/mm/protocal/b;->hgp:Z
+    sput-boolean v0, Lcom/tencent/mm/protocal/b;->iUg:Z
 
-    .line 12
-    invoke-static {}, Lcom/tencent/mm/protocal/b;->aDm()Z
+    .line 27
+    invoke-static {}, Lcom/tencent/mm/protocal/b;->aTk()Z
 
     move-result v0
 
-    sput-boolean v0, Lcom/tencent/mm/protocal/b;->hgq:Z
+    sput-boolean v0, Lcom/tencent/mm/protocal/b;->iUh:Z
 
-    .line 13
+    .line 28
     return-void
 .end method

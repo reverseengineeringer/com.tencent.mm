@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field jON:I
+.field mcZ:I
 
 
 # direct methods
@@ -18,12 +18,12 @@
     .line 4
     const/4 v0, 0x0
 
-    iput v0, p0, Loicq/wlogin_sdk/a/am;->jON:I
+    iput v0, p0, Loicq/wlogin_sdk/a/am;->mcZ:I
 
     .line 8
     const/16 v0, 0x16a
 
-    iput v0, p0, Loicq/wlogin_sdk/a/am;->jNs:I
+    iput v0, p0, Loicq/wlogin_sdk/a/am;->mbE:I
 
     .line 9
     return-void

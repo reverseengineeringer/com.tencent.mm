@@ -20,7 +20,7 @@
 
 
 # virtual methods
-.method public final createApplication()Lcom/tencent/mm/pluginsdk/k;
+.method public final createApplication()Lcom/tencent/mm/pluginsdk/h;
     .locals 1
 
     .prologue
@@ -32,14 +32,14 @@
     return-object v0
 .end method
 
-.method public final createSubCore()Lcom/tencent/mm/model/au;
+.method public final createSubCore()Lcom/tencent/mm/model/ae;
     .locals 1
 
     .prologue
     .line 36
-    new-instance v0, Lcom/tencent/mm/plugin/accountsync/a/e;
+    new-instance v0, Lcom/tencent/mm/plugin/accountsync/a/c;
 
-    invoke-direct {v0}, Lcom/tencent/mm/plugin/accountsync/a/e;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/accountsync/a/c;-><init>()V
 
     return-object v0
 .end method

@@ -1,8 +1,11 @@
 package com.tencent.mm.compatible.util;
 
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Exif
 {
@@ -45,12 +48,12 @@ public class Exif
     try
     {
       int i = localExif.parseFromFile(paramString);
-      t.i("!24@/B4Tb64lLpLQrKIfvC61MA==", "parse EXIF, result: " + i);
+      u.i("!24@/B4Tb64lLpLQrKIfvC61MA==", "parse EXIF, result: " + i);
       return localExif;
     }
     catch (IOException paramString)
     {
-      t.w("!24@/B4Tb64lLpLQrKIfvC61MA==", "parse EXIF failed: " + paramString.getMessage());
+      u.w("!24@/B4Tb64lLpLQrKIfvC61MA==", "parse EXIF failed: " + paramString.getMessage());
     }
     return localExif;
   }
@@ -84,6 +87,20 @@ public class Exif
     return 270;
   }
   
+  public long getUxtimeDatatimeOriginal()
+  {
+    try
+    {
+      if (dateTimeOriginal == null) {
+        return 0L;
+      }
+      long l = new SimpleDateFormat("yyyy:MM:dd HH:mm:ss").parse(dateTimeOriginal).getTime() / 1000L;
+      return l;
+    }
+    catch (ParseException localParseException) {}
+    return 0L;
+  }
+  
   public int parseFrom(byte[] paramArrayOfByte)
   {
     return nativeParse(paramArrayOfByte, 0, paramArrayOfByte.length);
@@ -101,25 +118,25 @@ public class Exif
     //   0: aconst_null
     //   1: astore_3
     //   2: aload_1
-    //   3: invokestatic 127	com/tencent/mm/modelsfs/FileOp:openRead	(Ljava/lang/String;)Ljava/io/InputStream;
+    //   3: invokestatic 149	com/tencent/mm/modelsfs/FileOp:openRead	(Ljava/lang/String;)Ljava/io/InputStream;
     //   6: astore_1
     //   7: aload_1
     //   8: astore_3
     //   9: aload_0
     //   10: aload_1
-    //   11: invokevirtual 131	com/tencent/mm/compatible/util/Exif:parseFromStream	(Ljava/io/InputStream;)I
+    //   11: invokevirtual 153	com/tencent/mm/compatible/util/Exif:parseFromStream	(Ljava/io/InputStream;)I
     //   14: istore_2
     //   15: aload_1
     //   16: ifnull +7 -> 23
     //   19: aload_1
-    //   20: invokevirtual 136	java/io/InputStream:close	()V
+    //   20: invokevirtual 158	java/io/InputStream:close	()V
     //   23: iload_2
     //   24: ireturn
     //   25: astore_1
     //   26: aload_3
     //   27: ifnull +7 -> 34
     //   30: aload_3
-    //   31: invokevirtual 136	java/io/InputStream:close	()V
+    //   31: invokevirtual 158	java/io/InputStream:close	()V
     //   34: aload_1
     //   35: athrow
     //   36: astore_1
@@ -150,7 +167,7 @@ public class Exif
       return 1982;
     }
     i = nativeParse(arrayOfByte, 0, i);
-    t.i("!24@/B4Tb64lLpLQrKIfvC61MA==", "parse EXIF from Stream, ret = " + i);
+    u.i("!24@/B4Tb64lLpLQrKIfvC61MA==", "parse EXIF from Stream, ret = " + i);
     return i;
   }
   

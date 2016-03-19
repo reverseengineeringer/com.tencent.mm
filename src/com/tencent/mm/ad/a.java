@@ -1,89 +1,68 @@
 package com.tencent.mm.ad;
 
-import android.content.ContentValues;
-import android.database.Cursor;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.el;
+import com.tencent.mm.protocal.b.em;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.h;
 
 public final class a
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  int aqq = -1;
-  public int bHS = 0;
-  private String bsp = "";
-  private String bsq = "";
-  private int bsr = 0;
-  private int bss = 0;
-  private String path = "";
-  public String username = "";
+  private d anM;
+  private final com.tencent.mm.r.a anN;
   
-  public final void c(Cursor paramCursor)
+  public a(int paramInt, String paramString1, String paramString2, String paramString3, String paramString4, String paramString5, String paramString6, String paramString7)
   {
-    username = paramCursor.getString(0);
-    bHS = paramCursor.getInt(1);
-    path = paramCursor.getString(2);
-    bsp = paramCursor.getString(3);
-    bsq = paramCursor.getString(4);
-    bsr = paramCursor.getInt(5);
-    bss = paramCursor.getInt(6);
+    Object localObject = new a.a();
+    bFa = new el();
+    bFb = new em();
+    uri = "/cgi-bin/micromsg-bin/bindlinkedincontact";
+    bEY = 549;
+    bFc = 0;
+    bFd = 0;
+    anN = ((a.a)localObject).vy();
+    localObject = (el)anN.bEW.bFf;
+    iZE = 1;
+    jbi = paramInt;
+    jbj = paramString1;
+    jbk = paramString2;
+    jbl = paramString3;
+    jbm = paramString4;
+    jbn = paramString5;
+    jbo = paramString6;
+    jbp = paramString7;
   }
   
-  public final String getUsername()
+  public final int a(e parame, d paramd)
   {
-    if (username == null) {
-      return "";
-    }
-    return username;
+    anM = paramd;
+    return a(parame, anN, this);
   }
   
-  public final ContentValues mA()
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    ContentValues localContentValues = new ContentValues();
-    if ((aqq & 0x1) != 0) {
-      localContentValues.put("username", getUsername());
-    }
-    if ((aqq & 0x2) != 0) {
-      localContentValues.put("bgflag", Integer.valueOf(bHS));
-    }
-    if ((aqq & 0x4) != 0)
+    u.d("!56@/B4Tb64lLpK+IBX8XDgnvihe6RohiUOGxVSl0wgxswW3W6yCgdumpg==", "onGYNetEnd errType:" + paramInt2 + " errCode:" + paramInt3);
+    paramo = (el)anN.bEW.bFf;
+    if ((paramInt2 == 0) && (paramInt3 == 0))
     {
-      if (path == null)
-      {
-        str = "";
-        localContentValues.put("path", str);
-      }
+      ah.tD().rn().set(286722, jbk);
+      ah.tD().rn().set(286721, jbj);
+      ah.tD().rn().set(286723, jbl);
     }
-    else
-    {
-      if ((aqq & 0x8) != 0)
-      {
-        if (bsp != null) {
-          break label185;
-        }
-        str = "";
-        label95:
-        localContentValues.put("reserved1", str);
-      }
-      if ((aqq & 0x10) != 0) {
-        if (bsq != null) {
-          break label193;
-        }
-      }
-    }
-    label185:
-    label193:
-    for (String str = "";; str = bsq)
-    {
-      localContentValues.put("reserved2", str);
-      if ((aqq & 0x20) != 0) {
-        localContentValues.put("reserved3", Integer.valueOf(bsr));
-      }
-      if ((aqq & 0x40) != 0) {
-        localContentValues.put("reserved4", Integer.valueOf(bss));
-      }
-      return localContentValues;
-      str = path;
-      break;
-      str = bsp;
-      break label95;
-    }
+    anM.a(paramInt2, paramInt3, paramString, this);
+  }
+  
+  public final int getType()
+  {
+    return 549;
   }
 }
 

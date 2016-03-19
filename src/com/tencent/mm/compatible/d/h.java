@@ -2,59 +2,59 @@ package com.tencent.mm.compatible.d;
 
 import android.hardware.Camera;
 import android.hardware.Camera.CameraInfo;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 final class h
   implements c.a
 {
-  public static c.a.a bP(int paramInt)
+  public static c.a.a bQ(int paramInt)
   {
     c.a.a locala = new c.a.a();
-    bhb = null;
+    brz = null;
     try
     {
-      bhb = Camera.open(paramInt);
-      if (bhb == null) {
+      brz = Camera.open(paramInt);
+      if (brz == null) {
         return null;
       }
-      bgY = 0;
-      t.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "DeviceInfo.mCameraInfo.hasVRInfo " + binbgD);
-      t.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "DeviceInfo.mCameraInfo.mVRFaceRotate " + binbgE);
-      t.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "DeviceInfo.mCameraInfo.mVRFaceDisplayOrientation " + binbgF);
-      t.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "DeviceInfo.mCameraInfo.mVRBackRotate " + binbgG);
-      t.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "DeviceInfo.mCameraInfo.mVRBackDisplayOrientation " + binbgH);
+      brw = 0;
+      u.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "DeviceInfo.mCameraInfo.hasVRInfo " + bsKbra);
+      u.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "DeviceInfo.mCameraInfo.mVRFaceRotate " + bsKbrb);
+      u.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "DeviceInfo.mCameraInfo.mVRFaceDisplayOrientation " + bsKbrc);
+      u.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "DeviceInfo.mCameraInfo.mVRBackRotate " + bsKbrd);
+      u.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "DeviceInfo.mCameraInfo.mVRBackDisplayOrientation " + bsKbre);
       if (getNumberOfCameras() > 1) {
         try
         {
           Camera.CameraInfo localCameraInfo = new Camera.CameraInfo();
           Camera.getCameraInfo(paramInt, localCameraInfo);
-          t.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "info.facing " + facing);
+          u.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "info.facing " + facing);
           if (facing == 1)
           {
-            if ((binbgD) && (binbgE != -1)) {
-              bgY = binbgE;
+            if ((bsKbra) && (bsKbrb != -1)) {
+              brw = bsKbrb;
             }
-            if ((binbgD) && (binbgF != -1)) {
-              bhb.setDisplayOrientation(binbgF);
+            if ((bsKbra) && (bsKbrc != -1)) {
+              brz.setDisplayOrientation(bsKbrc);
             }
           }
           else
           {
-            if ((binbgD) && (binbgG != -1)) {
-              bgY = binbgG;
+            if ((bsKbra) && (bsKbrd != -1)) {
+              brw = bsKbrd;
             }
-            if ((binbgD) && (binbgH != -1)) {
-              bhb.setDisplayOrientation(binbgH);
+            if ((bsKbra) && (bsKbre != -1)) {
+              brz.setDisplayOrientation(bsKbre);
             }
           }
         }
         catch (Exception localException2) {}
       }
-      if ((binbgD) && (binbgG != -1)) {
-        bgY = binbgG;
+      if ((bsKbra) && (bsKbrd != -1)) {
+        brw = bsKbrd;
       }
-      if ((binbgD) && (binbgH != -1)) {
-        bhb.setDisplayOrientation(binbgH);
+      if ((bsKbra) && (bsKbre != -1)) {
+        brz.setDisplayOrientation(bsKbre);
       }
     }
     catch (Exception localException1)
@@ -67,17 +67,17 @@ final class h
   public static int getNumberOfCameras()
   {
     int i;
-    if ((binbgJ) && (binbgI != -1))
+    if ((bsKbrg) && (bsKbrf != -1))
     {
-      i = binbgI;
-      t.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "mVRCameraNum " + i);
+      i = bsKbrf;
+      u.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "mVRCameraNum " + i);
     }
     int j;
     do
     {
       return i;
       j = c.getNumberOfCameras();
-      t.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "getNumberOfCameras " + j);
+      u.d("!32@b/97oX4TlWjv/esh60/h7VhnAazUhcan", "getNumberOfCameras " + j);
       i = j;
     } while (j > 1);
     return 0;

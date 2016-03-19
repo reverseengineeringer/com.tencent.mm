@@ -15,21 +15,21 @@
 
 
 # instance fields
-.field hdA:Z
+.field final synthetic iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
-.field final synthetic hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+.field iRm:Landroid/content/pm/ResolveInfo;
 
-.field hdu:Landroid/content/pm/ResolveInfo;
+.field iRn:Ljava/lang/CharSequence;
 
-.field hdv:Ljava/lang/CharSequence;
+.field iRo:Landroid/graphics/drawable/Drawable;
 
-.field hdw:Landroid/graphics/drawable/Drawable;
+.field iRp:Z
 
-.field hdx:Z
+.field iRq:Z
 
-.field hdy:Z
+.field iRr:Z
 
-.field hdz:Z
+.field iRs:Z
 
 
 # direct methods
@@ -37,12 +37,12 @@
     .locals 0
 
     .prologue
-    .line 869
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    .line 884
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 870
+    .line 885
     return-void
 .end method
 
@@ -52,28 +52,28 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 873
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdq:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
+    .line 888
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRi:Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 874
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdu:Landroid/content/pm/ResolveInfo;
+    .line 889
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRm:Landroid/content/pm/ResolveInfo;
 
-    .line 875
-    iput-object p3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdv:Ljava/lang/CharSequence;
+    .line 890
+    iput-object p3, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRn:Ljava/lang/CharSequence;
 
-    .line 876
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdx:Z
+    .line 891
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRp:Z
 
-    .line 877
+    .line 892
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdy:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRq:Z
 
-    .line 878
-    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->hdz:Z
+    .line 893
+    iput-boolean v1, p0, Lcom/tencent/mm/pluginsdk/ui/tools/AppChooserUI$c;->iRr:Z
 
-    .line 879
+    .line 894
     return-void
 .end method

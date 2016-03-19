@@ -1,7 +1,7 @@
 package com.tencent.mm.sdk.modelmsg;
 
 import android.os.Bundle;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class WXWebpageObject
   implements WXMediaMessage.b
@@ -22,7 +22,7 @@ public class WXWebpageObject
   {
     if ((webpageUrl == null) || (webpageUrl.length() == 0) || (webpageUrl.length() > 10240))
     {
-      t.e("!44@/B4Tb64lLpI5xTkrII12QyxP0GmFMufcOhP+yzzJUyY=", "checkArgs fail, webpageUrl is invalid");
+      u.e("!44@/B4Tb64lLpI5xTkrII12QyxP0GmFMufcOhP+yzzJUyY=", "checkArgs fail, webpageUrl is invalid");
       return false;
     }
     return true;

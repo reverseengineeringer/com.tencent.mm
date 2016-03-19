@@ -1,51 +1,55 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.adu;
-import com.tencent.mm.protocal.b.afh;
-import com.tencent.mm.protocal.b.afi;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.aca;
+import com.tencent.mm.protocal.b.acb;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class ai
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private d apI;
-  private final a apJ;
+  private d anM;
+  private final a anN;
   
-  public ai(String paramString)
+  public ai(int paramInt)
   {
     a.a locala = new a.a();
-    bsW = new afh();
-    bsX = new afi();
-    uri = "/cgi-bin/micromsg-bin/sendverifyemail";
-    bsV = 108;
-    bsY = 43;
-    bsZ = 1000000043;
-    apJ = locala.vh();
-    apJ.bsT.btb).hrM = new adu().wT(paramString);
+    bFa = new aca();
+    bFb = new acb();
+    uri = "/cgi-bin/micromsg-bin/logoutwebwx";
+    bEY = 281;
+    bFc = 0;
+    bFd = 0;
+    anN = locala.vy();
+    anN.bEW.bFf).iVx = paramInt;
   }
   
-  public final int a(m paramm, d paramd)
+  public final int a(e parame, d paramd)
   {
-    apI = paramd;
-    return a(paramm, apJ, this);
+    u.d("!44@/B4Tb64lLpK+IBX8XDgnvrHybRkRQaQCXLcqDx3Hb5M=", "doScene");
+    anM = paramd;
+    return a(parame, anN, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    apI.a(paramInt2, paramInt3, paramString, this);
+    if ((paramInt2 != 0) || (paramInt3 != 0)) {
+      u.d("!44@/B4Tb64lLpK+IBX8XDgnvrHybRkRQaQCXLcqDx3Hb5M=", "logout Error. ");
+    }
+    if (anM != null) {
+      anM.a(paramInt2, paramInt3, paramString, this);
+    }
   }
   
   public final int getType()
   {
-    return 108;
+    return 281;
   }
 }
 

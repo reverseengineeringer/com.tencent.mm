@@ -1,12 +1,9 @@
 package com.tencent.mm.d.a;
 
-import android.content.Intent;
-
 public final class dx$a
 {
-  public Intent aAa;
-  public int atR;
-  public int azZ;
+  public String axO;
+  public String axP;
 }
 
 /* Location:

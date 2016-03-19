@@ -9,12 +9,10 @@ import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.sdk.platformtools.ay;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -22,17 +20,19 @@ import java.util.List;
 public class KeyValuePreference
   extends Preference
 {
-  private TextView enQ;
-  private int iCv = 17;
-  public Drawable iMp = null;
-  public boolean iMq = true;
-  private boolean iMr = true;
-  private boolean iMs = false;
-  public int iMt = 0;
-  private ImageView iMu = null;
-  public Drawable iMv = null;
-  public List iMw = new LinkedList();
-  public String iqa = null;
+  private TextView fxO;
+  private int kBz = 17;
+  private Drawable kLB = null;
+  public boolean kLC = true;
+  private boolean kLD = true;
+  private boolean kLE = false;
+  public boolean kLF = false;
+  public int kLG = 17;
+  public int kLH = 0;
+  private ImageView kLI = null;
+  public Drawable kLJ = null;
+  public List kLK = new LinkedList();
+  public String koT = null;
   
   public KeyValuePreference(Context paramContext)
   {
@@ -47,66 +47,77 @@ public class KeyValuePreference
   public KeyValuePreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference);
+    setLayoutResource(2131363286);
   }
   
-  public final void aNz()
+  public final void bdq()
   {
-    iMs = true;
-    iCv = 49;
+    kLE = true;
+    kBz = 49;
   }
   
-  public final void fy(boolean paramBoolean)
+  public final void hC(boolean paramBoolean)
   {
-    iMr = paramBoolean;
-    if (iMr) {
-      setWidgetLayoutResource(a.k.mm_preference_submenu);
+    kLD = paramBoolean;
+    if (kLD) {
+      setWidgetLayoutResource(2131363236);
     }
   }
   
   public void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    enQ = ((TextView)paramView.findViewById(16908304));
-    enQ.setSingleLine(iMq);
-    if (iMr) {
-      setWidgetLayoutResource(a.k.mm_preference_submenu);
-    }
-    Object localObject1 = (TextView)paramView.findViewById(16908310);
-    if (!bn.iW(iqa)) {
-      ((TextView)localObject1).setText(iqa);
+    fxO = ((TextView)paramView.findViewById(16908304));
+    fxO.setSingleLine(kLC);
+    if (kLD) {
+      setWidgetLayoutResource(2131363236);
     }
     Object localObject2;
+    if (kLF)
+    {
+      localObject2 = (LinearLayout)paramView.findViewById(2131165347);
+      localObject1 = (LinearLayout.LayoutParams)((LinearLayout)localObject2).getLayoutParams();
+      width = -1;
+      ((LinearLayout)localObject2).setLayoutParams((ViewGroup.LayoutParams)localObject1);
+      localObject2 = (LinearLayout)paramView.findViewById(2131168988);
+      ((LinearLayout)localObject2).setLayoutParams((ViewGroup.LayoutParams)localObject1);
+      ((LinearLayout)localObject2).getChildAt(0).setLayoutParams((ViewGroup.LayoutParams)localObject1);
+      fxO.setGravity(kLG);
+    }
+    Object localObject1 = (TextView)paramView.findViewById(16908310);
+    if (!ay.kz(koT)) {
+      ((TextView)localObject1).setText(koT);
+    }
     if (localObject1 != null)
     {
       localObject2 = ((TextView)localObject1).getLayoutParams();
-      width = a.v(mContext, a.g.FixedTitleWidth);
+      width = a.z(mContext, 2131034660);
       ((TextView)localObject1).setLayoutParams((ViewGroup.LayoutParams)localObject2);
     }
-    if (iMp != null) {
-      ((ImageView)paramView.findViewById(a.i.icon_preference_imageview)).setImageDrawable(iMp);
+    if (kLB != null) {
+      ((ImageView)paramView.findViewById(2131169509)).setImageDrawable(kLB);
     }
-    iMu = ((ImageView)paramView.findViewById(a.i.image_iv));
-    if (iMv != null)
+    kLI = ((ImageView)paramView.findViewById(2131166875));
+    if (kLJ != null)
     {
-      iMu.setVisibility(iMt);
-      iMu.setImageDrawable(iMv);
+      kLI.setVisibility(kLH);
+      kLI.setImageDrawable(kLJ);
     }
     for (;;)
     {
-      if (iMs)
+      if (kLE)
       {
-        localObject1 = (LinearLayout)paramView.findViewById(a.i.container);
+        localObject1 = (LinearLayout)paramView.findViewById(2131165347);
         if (localObject1 != null) {
-          ((LinearLayout)localObject1).setGravity(iCv);
+          ((LinearLayout)localObject1).setGravity(kBz);
         }
       }
-      if (iMw.size() <= 0) {
+      if (kLK.size() <= 0) {
         break;
       }
-      paramView = (LinearLayout)paramView.findViewById(a.i.summary_container);
+      paramView = (LinearLayout)paramView.findViewById(2131168988);
       paramView.removeAllViews();
-      localObject1 = iMw.iterator();
+      localObject1 = kLK.iterator();
       while (((Iterator)localObject1).hasNext())
       {
         localObject2 = (View)((Iterator)localObject1).next();
@@ -116,7 +127,7 @@ public class KeyValuePreference
         }
         paramView.addView((View)localObject2);
       }
-      iMu.setVisibility(8);
+      kLI.setVisibility(8);
     }
   }
   
@@ -124,9 +135,9 @@ public class KeyValuePreference
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
     LayoutInflater localLayoutInflater = (LayoutInflater)mContext.getSystemService("layout_inflater");
-    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(a.i.content);
+    ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(2131165377);
     localViewGroup.removeAllViews();
-    localLayoutInflater.inflate(a.k.mm_preference_content_keyvalue, localViewGroup);
+    localLayoutInflater.inflate(2131363274, localViewGroup);
     return paramViewGroup;
   }
 }

@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/ac/b$a;
-.super Lcom/tencent/mm/ac/b$p;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
@@ -14,17 +14,21 @@
 .end annotation
 
 
+# instance fields
+.field public bUs:Ljava/lang/String;
+
+.field public bUt:Ljava/lang/String;
+
+.field public bUu:Ljava/lang/String;
+
+
 # direct methods
-.method public constructor <init>(ILcom/tencent/mm/al/a;)V
+.method public constructor <init>()V
     .locals 0
 
     .prologue
-    .line 715
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ac/b$p;-><init>(I)V
+    .line 29
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 716
-    iput-object p2, p0, Lcom/tencent/mm/ac/b$p;->bHL:Lcom/tencent/mm/al/a;
-
-    .line 717
     return-void
 .end method

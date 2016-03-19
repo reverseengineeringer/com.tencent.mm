@@ -15,21 +15,18 @@
 
 
 # instance fields
-.field public axb:J
+.field public aBU:Landroid/app/Activity;
+
+.field public aBV:Ljava/lang/Runnable;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 0
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/tencent/mm/d/a/gt$a;->axb:J
 
     return-void
 .end method

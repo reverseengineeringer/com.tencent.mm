@@ -1,24 +1,26 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.storage.ar;
+import android.widget.EditText;
+import com.tencent.mm.pluginsdk.ui.a.a;
+import com.tencent.mm.sdk.c.b;
 
 public final class jk
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGA = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGb = new a();
   
   public jk()
   {
-    id = "UploadEmojiMsg";
-    hXT = atO;
+    id = "RegistSpenBuddy";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public ar aub;
+    public a aGc;
+    public EditText aGd;
   }
 }
 

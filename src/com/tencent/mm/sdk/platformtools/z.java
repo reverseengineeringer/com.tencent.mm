@@ -1,22 +1,32 @@
 package com.tencent.mm.sdk.platformtools;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import java.util.HashSet;
+import java.util.Set;
 
-final class z
-  extends ThreadLocal
+public final class z
 {
-  private static MessageDigest aEO()
+  private static Set jVE = new HashSet();
+  
+  public static boolean CQ(String paramString)
   {
-    try
+    if (CS(paramString))
     {
-      MessageDigest localMessageDigest = MessageDigest.getInstance("MD5");
-      return localMessageDigest;
+      u.d("!32@/B4Tb64lLpIEAZRXGnbxCKv0yDb0jVnH", "locked-" + paramString);
+      return false;
     }
-    catch (NoSuchAlgorithmException localNoSuchAlgorithmException)
-    {
-      throw new RuntimeException("Initialize MD5 failed.", localNoSuchAlgorithmException);
-    }
+    u.d("!32@/B4Tb64lLpIEAZRXGnbxCKv0yDb0jVnH", "lock-" + paramString);
+    return jVE.add(paramString);
+  }
+  
+  public static void CR(String paramString)
+  {
+    jVE.remove(paramString);
+    u.d("!32@/B4Tb64lLpIEAZRXGnbxCKv0yDb0jVnH", "unlock-" + paramString);
+  }
+  
+  public static boolean CS(String paramString)
+  {
+    return jVE.contains(paramString);
   }
 }
 

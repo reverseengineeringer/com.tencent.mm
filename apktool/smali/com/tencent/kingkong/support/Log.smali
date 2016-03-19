@@ -55,6 +55,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/support/Log;->logImp:Lcom/tencent/kingkong/support/Log$LogImp;
 
+    .line 11
     return-void
 .end method
 

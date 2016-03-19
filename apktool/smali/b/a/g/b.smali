@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static E(Ljava/util/Map;)Ljava/lang/String;
+.method public static T(Ljava/util/Map;)Ljava/lang/String;
     .locals 8
 
     .prologue

@@ -91,6 +91,11 @@ public class CursorWrapper
     return mCursor.getLong(paramInt);
   }
   
+  public Uri getNotificationUri()
+  {
+    return null;
+  }
+  
   public int getPosition()
   {
     return mCursor.getPosition();

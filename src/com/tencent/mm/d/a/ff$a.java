@@ -2,8 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class ff$a
 {
-  public int aBJ = 0;
-  public String azh;
+  public String azY;
+  public String azZ;
 }
 
 /* Location:

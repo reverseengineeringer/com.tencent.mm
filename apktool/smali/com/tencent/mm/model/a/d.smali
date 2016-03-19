@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field public azq:Ljava/lang/String;
+.field public azM:Ljava/lang/String;
 
-.field public brj:Ljava/lang/String;
+.field public bDn:Ljava/lang/String;
 
-.field public brk:J
+.field public bDo:J
 
-.field public brl:Z
+.field public bDp:Z
 
-.field public brm:J
+.field public bDq:J
 
 .field public endTime:J
 
@@ -34,12 +34,12 @@
     .line 18
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/model/a/d;->brl:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/model/a/d;->bDp:Z
 
     .line 20
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/model/a/d;->brm:J
+    iput-wide v0, p0, Lcom/tencent/mm/model/a/d;->bDq:J
 
     .line 24
     return-void

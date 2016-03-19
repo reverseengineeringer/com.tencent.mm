@@ -1,17 +1,22 @@
 package com.tencent.mm.ui.base.preference;
 
 import android.content.Context;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.View;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
+import android.widget.TextView;
 import com.tencent.mm.ui.widget.MMSwitchBtn;
+import com.tencent.mm.ui.widget.MMSwitchBtn.a;
 
 public class CheckBoxPreference
   extends Preference
 {
-  public boolean iLH = false;
-  private MMSwitchBtn iLI;
+  private TextView hSK;
+  private int hSL = -1;
+  private String hSM = "";
+  private int hSN = 8;
+  public boolean kKS = false;
+  private MMSwitchBtn krr;
   
   public CheckBoxPreference(Context paramContext)
   {
@@ -26,32 +31,64 @@ public class CheckBoxPreference
   public CheckBoxPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference_summary_checkbox);
+    setLayoutResource(2131363222);
   }
   
-  public final void fx(boolean paramBoolean)
+  public void av(String paramString, int paramInt)
   {
-    if (iLI != null)
+    hSL = paramInt;
+    hSM = paramString;
+    if (hSK != null)
     {
-      iLH = paramBoolean;
-      iLI.setCheck(paramBoolean);
+      if (paramInt > 0) {
+        hSK.setBackgroundResource(hSL);
+      }
+      if (!TextUtils.isEmpty(hSM)) {
+        hSK.setText(hSM);
+      }
+    }
+  }
+  
+  public final void hA(boolean paramBoolean)
+  {
+    if (krr != null)
+    {
+      kKS = paramBoolean;
+      krr.setCheck(paramBoolean);
     }
   }
   
   public final boolean isChecked()
   {
-    if (iLI != null) {
-      return iLI.jBe;
+    if (krr != null) {
+      return krr.lFD;
     }
-    return iLH;
+    return kKS;
+  }
+  
+  public void na(int paramInt)
+  {
+    hSN = paramInt;
+    if (hSK != null) {
+      hSK.setVisibility(hSN);
+    }
   }
   
   public void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    iLI = ((MMSwitchBtn)paramView.findViewById(a.i.checkbox));
-    iLI.setSwitchListener(new c(this));
-    iLI.setCheck(iLH);
+    krr = ((MMSwitchBtn)paramView.findViewById(2131166506));
+    krr.setSwitchListener(new MMSwitchBtn.a()
+    {
+      public final void fg(boolean paramAnonymousBoolean)
+      {
+        callChangeListener(Boolean.valueOf(paramAnonymousBoolean));
+      }
+    });
+    krr.setCheck(kKS);
+    hSK = ((TextView)paramView.findViewById(2131169458));
+    av(hSM, hSL);
+    na(hSN);
   }
 }
 

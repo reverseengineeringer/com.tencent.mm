@@ -1,4 +1,4 @@
-.class public Lcom/tencent/mm/ui/contact/a/d$a;
+.class public final Lcom/tencent/mm/ui/contact/a/d$a;
 .super Lcom/tencent/mm/ui/contact/a/a$a;
 .source "SourceFile"
 
@@ -15,17 +15,19 @@
 
 
 # instance fields
-.field public ciI:Landroid/widget/ImageView;
+.field public cMt:Landroid/view/View;
 
-.field public ciM:Landroid/widget/CheckBox;
+.field public cNT:Landroid/widget/TextView;
 
-.field public cvG:Landroid/view/View;
+.field public cOd:Landroid/widget/TextView;
 
-.field public cwe:Landroid/widget/TextView;
+.field public czS:Landroid/widget/ImageView;
 
-.field public cwo:Landroid/widget/TextView;
+.field public czW:Landroid/widget/CheckBox;
 
-.field final synthetic jix:Lcom/tencent/mm/ui/contact/a/d;
+.field public fKK:Landroid/widget/TextView;
+
+.field final synthetic lmY:Lcom/tencent/mm/ui/contact/a/d;
 
 
 # direct methods
@@ -33,8 +35,8 @@
     .locals 0
 
     .prologue
-    .line 122
-    iput-object p1, p0, Lcom/tencent/mm/ui/contact/a/d$a;->jix:Lcom/tencent/mm/ui/contact/a/d;
+    .line 115
+    iput-object p1, p0, Lcom/tencent/mm/ui/contact/a/d$a;->lmY:Lcom/tencent/mm/ui/contact/a/d;
 
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/contact/a/a$a;-><init>(Lcom/tencent/mm/ui/contact/a/a;)V
 

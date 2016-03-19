@@ -3,24 +3,35 @@
 .source "SourceFile"
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Landroid/view/View$OnClickListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/smtt/sdk/WebView;->showDebugView(Ljava/lang/String;)Z
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
 
 
 # instance fields
 .field final synthetic this$0:Lcom/tencent/smtt/sdk/WebView;
 
-.field final synthetic val$l:Landroid/view/View$OnLongClickListener;
+.field final synthetic val$layout:Landroid/widget/LinearLayout;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/smtt/sdk/WebView;Landroid/view/View$OnLongClickListener;)V
+.method constructor <init>(Lcom/tencent/smtt/sdk/WebView;Landroid/widget/LinearLayout;)V
     .locals 0
 
     .prologue
-    .line 2115
+    .line 1241
     iput-object p1, p0, Lcom/tencent/smtt/sdk/WebView$6;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    iput-object p2, p0, Lcom/tencent/smtt/sdk/WebView$6;->val$l:Landroid/view/View$OnLongClickListener;
+    iput-object p2, p0, Lcom/tencent/smtt/sdk/WebView$6;->val$layout:Landroid/widget/LinearLayout;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -29,48 +40,19 @@
 
 
 # virtual methods
-.method public onLongClick(Landroid/view/View;)Z
-    .locals 1
+.method public onClick(Landroid/view/View;)V
+    .locals 2
 
     .prologue
-    .line 2120
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$6;->val$l:Landroid/view/View$OnLongClickListener;
-
-    if-eqz v0, :cond_1
-
-    .line 2121
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$6;->val$l:Landroid/view/View$OnLongClickListener;
-
-    invoke-interface {v0, p1}, Landroid/view/View$OnLongClickListener;->onLongClick(Landroid/view/View;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_0
-
-    .line 2123
+    .line 1245
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$6;->this$0:Lcom/tencent/smtt/sdk/WebView;
 
-    invoke-static {v0, p1}, Lcom/tencent/smtt/sdk/WebView;->a(Lcom/tencent/smtt/sdk/WebView;Landroid/view/View;)Z
+    new-instance v1, Lcom/tencent/smtt/sdk/WebView$6$1;
 
-    move-result v0
+    invoke-direct {v1, p0}, Lcom/tencent/smtt/sdk/WebView$6$1;-><init>(Lcom/tencent/smtt/sdk/WebView$6;)V
 
-    .line 2128
-    :goto_0
-    return v0
+    invoke-virtual {v0, v1}, Lcom/tencent/smtt/sdk/WebView;->post(Ljava/lang/Runnable;)Z
 
-    .line 2125
-    :cond_0
-    const/4 v0, 0x1
-
-    goto :goto_0
-
-    .line 2128
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView$6;->this$0:Lcom/tencent/smtt/sdk/WebView;
-
-    invoke-static {v0, p1}, Lcom/tencent/smtt/sdk/WebView;->a(Lcom/tencent/smtt/sdk/WebView;Landroid/view/View;)Z
-
-    move-result v0
-
-    goto :goto_0
+    .line 1258
+    return-void
 .end method

@@ -1,17 +1,26 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ai
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a atE = new a();
   
   public ai()
   {
-    id = "DumpSns";
-    hXT = atO;
+    id = "CheckResUpdatePreOperation";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public int atA;
+    public int atB;
+    public int atF = -1;
+    public boolean atG;
   }
 }
 

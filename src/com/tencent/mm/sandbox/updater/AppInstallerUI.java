@@ -1,91 +1,117 @@
 package com.tencent.mm.sandbox.updater;
 
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.sandbox.c;
-import com.tencent.mm.sandbox.monitor.g;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMBaseActivity;
-import com.tencent.mm.ui.base.aa;
-import com.tencent.mm.ui.base.aa.a;
+import com.tencent.mm.ui.base.g;
+import com.tencent.mm.ui.base.h.a;
 
 public class AppInstallerUI
   extends MMBaseActivity
 {
-  private static AppInstallerUI hWf = null;
-  private aa arb = null;
-  private String avf;
-  private String desc;
-  private aa hWd = null;
-  private int hWe;
-  private DialogInterface.OnClickListener hWg = new b(this);
-  
-  public static AppInstallerUI aDO()
+  private static AppInstallerUI jSS = null;
+  private com.tencent.mm.ui.base.h apf = null;
+  private String asL;
+  private String aut;
+  private com.tencent.mm.ui.base.h jSQ = null;
+  private int jSR;
+  private DialogInterface.OnClickListener jST = new DialogInterface.OnClickListener()
   {
-    return hWf;
+    public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+    {
+      u.d("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", "getBtn (ok button) is click");
+      if (AppInstallerUI.b(AppInstallerUI.this) == 2) {
+        h.D(AppInstallerUI.this, 3);
+      }
+      paramAnonymousDialogInterface = com.tencent.mm.sandbox.monitor.c.sM(AppInstallerUI.c(AppInstallerUI.this));
+      u.d("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", paramAnonymousDialogInterface);
+      if (paramAnonymousDialogInterface != null)
+      {
+        i.a.jUn.L(1, true);
+        AppInstallerUI.a(AppInstallerUI.this, paramAnonymousDialogInterface);
+        return;
+      }
+      u.e("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", "pack not found!");
+      g.ba(AppInstallerUI.this, getString(2131427579));
+      h.aUf();
+      finish();
+    }
+  };
+  
+  public static AppInstallerUI aTP()
+  {
+    return jSS;
   }
   
   protected void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    t.d("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", "onCreate");
-    c.c(hashCode(), this);
-    MMActivity.dn(this);
-    if ((AppUpdaterUI.aDP() != null) && (!AppUpdaterUI.aDP().isFinishing()))
+    u.d("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", "onCreate");
+    com.tencent.mm.sandbox.c.c(hashCode(), this);
+    MMActivity.dS(this);
+    if ((AppUpdaterUI.aTQ() != null) && (!AppUpdaterUI.aTQ().isFinishing()))
     {
-      t.d("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", "AppUpdaterUI is there, finish self");
+      u.d("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", "AppUpdaterUI is there, finish self");
       finish();
     }
     do
     {
       return;
-      if ((hWf != null) && (!hWf.isFinishing()) && (hWf != this))
+      if ((jSS != null) && (!jSS.isFinishing()) && (jSS != this))
       {
-        t.d("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", "duplicate instance, finish self");
+        u.d("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", "duplicate instance, finish self");
         finish();
         return;
       }
-      hWf = this;
-      avf = ao.DH();
-      if ((bn.iW(avf)) || (g.ph(avf) == null))
+      jSS = this;
+      aut = h.FN();
+      if ((ay.kz(aut)) || (com.tencent.mm.sandbox.monitor.c.sM(aut) == null))
       {
         finish();
         return;
       }
-      desc = ao.aDX();
-      hWe = ao.aDY();
-      setContentView(a.k.empty);
-      paramBundle = new aa.a(this);
-      paramBundle.nF(a.n.fmt_update);
-      paramBundle.ft(true);
-      paramBundle.c(new a(this));
-      paramBundle.AK(getString(a.n.fmt_update_install_info, new Object[] { desc }));
-      paramBundle.a(a.n.install_now, false, hWg);
-      paramBundle.b(a.n.update_cancel, null);
-      arb = paramBundle.aMD();
-      arb.setCanceledOnTouchOutside(false);
-      arb.show();
-    } while (hWe != 2);
-    ao.e(this, 2, ao.aDZ() + 1);
+      asL = h.aTX();
+      jSR = h.aTY();
+      setContentView(2131363284);
+      paramBundle = new h.a(this);
+      paramBundle.qz(2131427492);
+      paramBundle.hw(true);
+      paramBundle.c(new DialogInterface.OnCancelListener()
+      {
+        public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+        {
+          AppInstallerUI.a(AppInstallerUI.this);
+        }
+      });
+      paramBundle.Gz(getString(2131427494, new Object[] { asL }));
+      paramBundle.a(2131427590, false, jST);
+      paramBundle.c(2131427584, null);
+      apf = paramBundle.bcu();
+      apf.setCanceledOnTouchOutside(false);
+      apf.show();
+    } while (jSR != 2);
+    h.d(this, 2, h.aTZ() + 1);
   }
   
   protected void onDestroy()
   {
-    t.d("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", "onDestroy");
-    if ((arb != null) && (arb.isShowing())) {
-      arb.dismiss();
+    u.d("!32@/B4Tb64lLpK4dsObr+ZXlbJd1YO/EjJD", "onDestroy");
+    if ((apf != null) && (apf.isShowing())) {
+      apf.dismiss();
     }
-    if ((hWd != null) && (hWd.isShowing())) {
-      hWd.dismiss();
+    if ((jSQ != null) && (jSQ.isShowing())) {
+      jSQ.dismiss();
     }
-    if (hWf == this) {
-      hWf = null;
+    if (jSS == this) {
+      jSS = null;
     }
-    c.d(hashCode(), this);
+    com.tencent.mm.sandbox.c.d(hashCode(), this);
     super.onDestroy();
   }
 }

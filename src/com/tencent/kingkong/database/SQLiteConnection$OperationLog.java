@@ -1,7 +1,7 @@
 package com.tencent.kingkong.database;
 
 import com.tencent.kingkong.support.Log;
-import com.tencent.mm.dbsupport.newcursor.i;
+import com.tencent.mm.dbsupport.newcursor.h;
 import java.util.ArrayList;
 
 final class SQLiteConnection$OperationLog
@@ -40,27 +40,27 @@ final class SQLiteConnection$OperationLog
           do
           {
             return false;
-            if (i.qN())
+            if (h.qJ())
             {
               arrayOfInt = SQLiteConnection.access$3(paramInt1);
-              l = i.qO();
+              l = h.qK();
             }
           } while ((!SQLiteDebug.shouldLogSlowQuery(mEndTime - mStartTime)) && (arrayOfInt[4] <= l));
-          i.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
+          h.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
           return true;
-          if (i.qN())
+          if (h.qJ())
           {
             arrayOfInt = SQLiteConnection.access$3(paramInt1);
-            l = i.qO();
+            l = h.qK();
           }
         } while ((!SQLiteDebug.shouldLogSlowUpdate(mEndTime - mStartTime)) && (arrayOfInt[9] <= l));
-        i.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
+        h.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
         return true;
       } while (!SQLiteDebug.shouldLogSlowPragma(mEndTime - mStartTime));
-      i.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
+      h.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
       return true;
     } while (!SQLiteDebug.shouldLogSlowTransation(mEndTime - mStartTime));
-    i.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
+    h.a(paramString, mSql, type, mEndTime - mStartTime, arrayOfInt);
     return true;
   }
   

@@ -13,17 +13,17 @@
 
 
 # instance fields
-.field private aFg:Ljava/lang/String;
+.field private aIm:Ljava/lang/String;
 
-.field private iYe:Landroid/widget/ImageView;
+.field private kXH:Landroid/widget/ImageView;
 
-.field private iYf:Landroid/widget/TextView;
+.field private kXI:Landroid/widget/TextView;
 
-.field private iYg:Z
+.field private kXJ:Z
 
-.field iYh:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+.field kXK:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
-.field private iYi:Z
+.field private kXL:Z
 
 
 # direct methods
@@ -33,24 +33,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 41
+    .line 38
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 27
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYg:Z
+    .line 24
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXJ:Z
 
-    .line 33
+    .line 30
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYh:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXK:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
-    .line 58
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYi:Z
+    .line 55
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXL:Z
 
-    .line 42
+    .line 39
     invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->init()V
 
-    .line 43
+    .line 40
     return-void
 .end method
 
@@ -58,13 +58,13 @@
     .locals 0
 
     .prologue
-    .line 47
+    .line 44
     invoke-direct {p0, p1, p2}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 48
+    .line 45
     invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->init()V
 
-    .line 49
+    .line 46
     return-void
 .end method
 
@@ -76,34 +76,34 @@
 
     const/4 v4, 0x0
 
-    .line 120
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYi:Z
+    .line 117
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXL:Z
 
     if-eqz v0, :cond_1
 
-    .line 121
+    .line 118
     invoke-super {p0, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 155
+    .line 152
     :cond_0
     :goto_0
     return-void
 
-    .line 125
+    .line 122
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYh:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXK:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     if-ne v0, p1, :cond_2
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYg:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXJ:Z
 
     if-eqz v0, :cond_0
 
-    .line 129
+    .line 126
     :cond_2
-    iput-boolean v4, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYg:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXJ:Z
 
-    .line 131
+    .line 128
     const-string/jumbo v0, "!44@/B4Tb64lLpKwUcOR+EdWcrEYD8dwvm3wvSBPRtXIgAg="
 
     const-string/jumbo v1, "from status %s to status %s"
@@ -112,7 +112,7 @@
 
     new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYh:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXK:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     aput-object v3, v2, v4
 
@@ -120,13 +120,13 @@
 
     aput-object p1, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 132
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYh:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    .line 129
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXK:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
-    .line 133
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->iYj:[I
+    .line 130
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$1;->kXM:[I
 
     invoke-virtual {p1}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->ordinal()I
 
@@ -136,78 +136,78 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 150
+    .line 147
     :goto_1
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->invalidate()V
 
     goto :goto_0
 
-    .line 135
+    .line 132
     :pswitch_0
     invoke-super {p0, v5}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     goto :goto_1
 
-    .line 138
+    .line 135
     :pswitch_1
     invoke-super {p0, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 139
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYe:Landroid/widget/ImageView;
+    .line 136
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXH:Landroid/widget/ImageView;
 
-    sget v1, Lcom/tencent/mm/a$h;->translation_icon_loading:I
+    const v1, 0x7f030176
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 140
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYf:Landroid/widget/TextView;
+    .line 137
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXI:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->chatting_translate_status_loading:I
+    const v1, 0x7f0b08fd
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_1
 
-    .line 143
+    .line 140
     :pswitch_2
     invoke-super {p0, v4}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 144
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYe:Landroid/widget/ImageView;
+    .line 141
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXH:Landroid/widget/ImageView;
 
-    sget v1, Lcom/tencent/mm/a$h;->translation_icon_got:I
+    const v1, 0x7f030014
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 145
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->aFg:Ljava/lang/String;
+    .line 142
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->aIm:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 146
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYf:Landroid/widget/TextView;
+    .line 143
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXI:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->chatting_translate_status_got:I
+    const v1, 0x7f0b08fc
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(I)V
 
     goto :goto_1
 
-    .line 148
+    .line 145
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYf:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXI:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->aFg:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->aIm:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_1
 
-    .line 133
+    .line 130
     nop
 
     :pswitch_data_0
@@ -228,7 +228,7 @@
 
     const/4 v3, -0x2
 
-    .line 62
+    .line 59
     const/high16 v0, 0x40400000    # 3.0f
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->getResources()Landroid/content/res/Resources;
@@ -245,7 +245,7 @@
 
     float-to-int v0, v0
 
-    .line 64
+    .line 61
     new-instance v1, Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->getContext()Landroid/content/Context;
@@ -254,32 +254,32 @@
 
     invoke-direct {v1, v2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYe:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXH:Landroid/widget/ImageView;
 
-    .line 65
+    .line 62
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v1, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 67
+    .line 64
     iput v5, v1, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
-    .line 68
+    .line 65
     const/4 v2, 0x0
 
     invoke-virtual {v1, v0, v0, v2, v0}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 69
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYe:Landroid/widget/ImageView;
+    .line 66
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXH:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v1}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 71
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYe:Landroid/widget/ImageView;
+    .line 68
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXH:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->addView(Landroid/view/View;)V
 
-    .line 73
+    .line 70
     new-instance v1, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->getContext()Landroid/content/Context;
@@ -288,101 +288,101 @@
 
     invoke-direct {v1, v2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYf:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXI:Landroid/widget/TextView;
 
-    .line 74
+    .line 71
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v1, v3, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 76
+    .line 73
     invoke-virtual {v1, v0, v0, v0, v0}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 77
+    .line 74
     iput v5, v1, Landroid/widget/LinearLayout$LayoutParams;->gravity:I
 
-    .line 78
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYf:Landroid/widget/TextView;
+    .line 75
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXI:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 79
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYf:Landroid/widget/TextView;
+    .line 76
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXI:Landroid/widget/TextView;
 
     const/high16 v1, 0x41300000    # 11.0f
 
     invoke-virtual {v0, v4, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 80
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYf:Landroid/widget/TextView;
+    .line 77
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXI:Landroid/widget/TextView;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYf:Landroid/widget/TextView;
+    .line 78
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXI:Landroid/widget/TextView;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->addView(Landroid/view/View;)V
 
-    .line 85
-    sget v0, Lcom/tencent/mm/a$h;->chat_tips_bg:I
+    .line 82
+    const v0, 0x7f040696
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->setBackgroundResource(I)V
 
-    .line 87
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYk:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    .line 84
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXN:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->a(Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;)V
 
-    .line 88
+    .line 85
     return-void
 .end method
 
 
 # virtual methods
-.method public final aOK()V
+.method public final beN()V
     .locals 1
 
     .prologue
-    .line 91
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYk:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    .line 88
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXN:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->a(Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;)V
 
+    .line 89
+    return-void
+.end method
+
+.method public final beO()V
+    .locals 1
+
+    .prologue
     .line 92
-    return-void
-.end method
-
-.method public final aOL()V
-    .locals 1
-
-    .prologue
-    .line 95
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYl:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXO:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->a(Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;)V
 
-    .line 96
+    .line 93
     return-void
 .end method
 
-.method public final fH(Z)V
+.method public final hL(Z)V
     .locals 1
 
     .prologue
-    .line 52
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYi:Z
+    .line 49
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXL:Z
 
-    .line 53
+    .line 50
     if-eqz p1, :cond_0
 
-    .line 54
+    .line 51
     const/16 v0, 0x8
 
     invoke-super {p0, v0}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 56
+    .line 53
     :cond_0
     return-void
 .end method
@@ -391,14 +391,14 @@
     .locals 2
 
     .prologue
-    .line 99
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->aFg:Ljava/lang/String;
+    .line 96
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->aIm:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -408,20 +408,20 @@
 
     if-nez v0, :cond_0
 
-    .line 100
+    .line 97
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->iYg:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->kXJ:Z
 
-    .line 102
+    .line 99
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->aFg:Ljava/lang/String;
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->aIm:Ljava/lang/String;
 
-    .line 103
-    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->iYm:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
+    .line 100
+    sget-object v0, Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;->kXP:Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/ui/chatting/ChattingTranslateView;->a(Lcom/tencent/mm/ui/chatting/ChattingTranslateView$a;)V
 
-    .line 104
+    .line 101
     return-void
 .end method

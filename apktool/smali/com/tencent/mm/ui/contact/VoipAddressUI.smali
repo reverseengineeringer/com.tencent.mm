@@ -4,13 +4,15 @@
 
 
 # instance fields
-.field private ceC:Ljava/util/List;
+.field private apb:Ljava/lang/String;
 
-.field private jik:Z
+.field private cvM:Ljava/util/List;
 
-.field private jil:Z
+.field private lmJ:Z
 
-.field private jim:Lcom/tencent/mm/sdk/c/e;
+.field private lmK:Z
+
+.field private lmL:Lcom/tencent/mm/sdk/c/c;
 
 
 # direct methods
@@ -20,26 +22,343 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 31
+    .line 37
     invoke-direct {p0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;-><init>()V
 
-    .line 36
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jik:Z
+    .line 42
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmJ:Z
 
-    .line 37
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jil:Z
+    .line 43
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmK:Z
 
-    .line 157
-    new-instance v0, Lcom/tencent/mm/ui/contact/er;
+    .line 44
+    const-string/jumbo v0, ""
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/er;-><init>(Lcom/tencent/mm/ui/contact/VoipAddressUI;)V
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->apb:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jim:Lcom/tencent/mm/sdk/c/e;
+    .line 198
+    new-instance v0, Lcom/tencent/mm/ui/contact/VoipAddressUI$1;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI$1;-><init>(Lcom/tencent/mm/ui/contact/VoipAddressUI;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmL:Lcom/tencent/mm/sdk/c/c;
 
     return-void
 .end method
 
-.method public static dJ(Landroid/content/Context;)V
+.method private anj()V
+    .locals 9
+
+    .prologue
+    const/4 v8, 0x3
+
+    const/4 v2, 0x1
+
+    const/4 v7, 0x0
+
+    const/4 v1, 0x2
+
+    .line 74
+    const-string/jumbo v0, "android.permission.RECORD_AUDIO"
+
+    const/16 v3, 0x502
+
+    const-string/jumbo v4, ""
+
+    const-string/jumbo v5, ""
+
+    invoke-static {p0, v0, v3, v4, v5}, Lcom/tencent/mm/pluginsdk/g/a;->a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    .line 75
+    const-string/jumbo v3, "!32@/B4Tb64lLpLsucrmy2Y99b8+/t/IjGYU"
+
+    const-string/jumbo v4, "summerper checkPermission checkmicrophone[%b], stack[%s], activity[%s]"
+
+    new-array v5, v8, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    aput-object v6, v5, v7
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
+
+    move-result-object v6
+
+    aput-object v6, v5, v2
+
+    aput-object p0, v5, v1
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 76
+    if-nez v0, :cond_0
+
+    .line 89
+    :goto_0
+    return-void
+
+    .line 79
+    :cond_0
+    new-instance v3, Lcom/tencent/mm/d/a/nv;
+
+    invoke-direct {v3}, Lcom/tencent/mm/d/a/nv;-><init>()V
+
+    .line 80
+    iget-object v0, v3, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+
+    const/4 v4, 0x5
+
+    iput v4, v0, Lcom/tencent/mm/d/a/nv$a;->axL:I
+
+    .line 81
+    iget-object v0, v3, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+
+    iget-object v4, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->apb:Ljava/lang/String;
+
+    iput-object v4, v0, Lcom/tencent/mm/d/a/nv$a;->apb:Ljava/lang/String;
+
+    .line 82
+    iget-object v0, v3, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+
+    iput-object p0, v0, Lcom/tencent/mm/d/a/nv$a;->context:Landroid/content/Context;
+
+    .line 83
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmJ:Z
+
+    if-eqz v0, :cond_1
+
+    move v0, v1
+
+    .line 84
+    :goto_1
+    iget-object v4, v3, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+
+    iput v8, v4, Lcom/tencent/mm/d/a/nv$a;->aKh:I
+
+    .line 85
+    sget-object v4, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+
+    const/16 v5, 0x2b19
+
+    new-array v6, v8, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v6, v7
+
+    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v6, v2
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v6, v1
+
+    invoke-virtual {v4, v5, v6}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+
+    .line 87
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 88
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->age()V
+
+    goto :goto_0
+
+    :cond_1
+    move v0, v2
+
+    .line 83
+    goto :goto_1
+.end method
+
+.method private ank()V
+    .locals 10
+
+    .prologue
+    const/16 v9, 0x103
+
+    const/4 v8, 0x3
+
+    const/4 v7, 0x0
+
+    const/4 v1, 0x2
+
+    const/4 v2, 0x1
+
+    .line 92
+    const-string/jumbo v0, "android.permission.CAMERA"
+
+    const-string/jumbo v3, ""
+
+    const-string/jumbo v4, ""
+
+    invoke-static {p0, v0, v9, v3, v4}, Lcom/tencent/mm/pluginsdk/g/a;->a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    .line 93
+    const-string/jumbo v3, "!32@/B4Tb64lLpLsucrmy2Y99b8+/t/IjGYU"
+
+    const-string/jumbo v4, "summerper checkPermission checkCamera[%b], stack[%s], activity[%s]"
+
+    new-array v5, v8, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    aput-object v6, v5, v7
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
+
+    move-result-object v6
+
+    aput-object v6, v5, v2
+
+    aput-object p0, v5, v1
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 94
+    if-nez v0, :cond_1
+
+    .line 112
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 97
+    :cond_1
+    const-string/jumbo v0, "android.permission.RECORD_AUDIO"
+
+    const-string/jumbo v3, ""
+
+    const-string/jumbo v4, ""
+
+    invoke-static {p0, v0, v9, v3, v4}, Lcom/tencent/mm/pluginsdk/g/a;->a(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Z
+
+    move-result v0
+
+    .line 98
+    const-string/jumbo v3, "!32@/B4Tb64lLpLsucrmy2Y99b8+/t/IjGYU"
+
+    const-string/jumbo v4, "summerper checkPermission checkmicrophone[%b], stack[%s], activity[%s]"
+
+    new-array v5, v8, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v6
+
+    aput-object v6, v5, v7
+
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->aVJ()Lcom/tencent/mm/sdk/platformtools/ad;
+
+    move-result-object v6
+
+    aput-object v6, v5, v2
+
+    aput-object p0, v5, v1
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 99
+    if-eqz v0, :cond_0
+
+    .line 102
+    new-instance v3, Lcom/tencent/mm/d/a/nv;
+
+    invoke-direct {v3}, Lcom/tencent/mm/d/a/nv;-><init>()V
+
+    .line 103
+    iget-object v0, v3, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+
+    const/4 v4, 0x5
+
+    iput v4, v0, Lcom/tencent/mm/d/a/nv$a;->axL:I
+
+    .line 104
+    iget-object v0, v3, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+
+    iget-object v4, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->apb:Ljava/lang/String;
+
+    iput-object v4, v0, Lcom/tencent/mm/d/a/nv$a;->apb:Ljava/lang/String;
+
+    .line 105
+    iget-object v0, v3, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+
+    iput-object p0, v0, Lcom/tencent/mm/d/a/nv$a;->context:Landroid/content/Context;
+
+    .line 106
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmJ:Z
+
+    if-eqz v0, :cond_2
+
+    move v0, v1
+
+    .line 107
+    :goto_1
+    iget-object v4, v3, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+
+    iput v1, v4, Lcom/tencent/mm/d/a/nv$a;->aKh:I
+
+    .line 108
+    sget-object v4, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
+
+    const/16 v5, 0x2b19
+
+    new-array v6, v8, [Ljava/lang/Object;
+
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v6, v7
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v6, v2
+
+    invoke-static {v7}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v6, v1
+
+    invoke-virtual {v4, v5, v6}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
+
+    .line 110
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 111
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->age()V
+
+    goto :goto_0
+
+    :cond_2
+    move v0, v2
+
+    .line 106
+    goto :goto_1
+.end method
+
+.method public static eq(Landroid/content/Context;)V
     .locals 7
 
     .prologue
@@ -47,8 +366,8 @@
 
     const/4 v1, 0x1
 
-    .line 106
-    invoke-static {}, Lcom/tencent/mm/g/h;->qa()Lcom/tencent/mm/g/e;
+    .line 147
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
 
     move-result-object v0
 
@@ -58,7 +377,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -66,7 +385,7 @@
 
     move v0, v1
 
-    .line 108
+    .line 149
     :goto_0
     new-instance v3, Landroid/content/Intent;
 
@@ -74,10 +393,10 @@
 
     invoke-direct {v3, p0, v4}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 109
+    .line 150
     const-string/jumbo v4, "Add_address_titile"
 
-    sget v5, Lcom/tencent/mm/a$n;->address_title_select_contact:I
+    const v5, 0x7f0b03de
 
     invoke-virtual {p0, v5}, Landroid/content/Context;->getString(I)Ljava/lang/String;
 
@@ -85,16 +404,16 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 110
+    .line 151
     const-string/jumbo v4, "voip_video"
 
     invoke-virtual {v3, v4, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 111
+    .line 152
     invoke-virtual {p0, v3}, Landroid/content/Context;->startActivity(Landroid/content/Intent;)V
 
-    .line 112
-    sget-object v3, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    .line 153
+    sget-object v3, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
     const/16 v4, 0x2b1a
 
@@ -117,31 +436,130 @@
 
     aput-object v0, v5, v1
 
-    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
+    invoke-virtual {v3, v4, v5}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
 
-    .line 113
+    .line 154
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 106
+    .line 147
     goto :goto_0
 
     :cond_1
     move v2, v1
 
-    .line 112
+    .line 153
     goto :goto_1
 .end method
 
 
 # virtual methods
-.method protected final WX()Ljava/lang/String;
+.method protected final Ou()V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x1
+
+    .line 116
+    invoke-super {p0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->Ou()V
+
+    .line 117
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "LauncherUI.Shortcut.LaunchType"
+
+    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 118
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getIntent()Landroid/content/Intent;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "voip_video"
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
+
+    move-result v1
+
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmK:Z
+
+    .line 119
+    if-eqz v0, :cond_0
+
+    .line 120
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmJ:Z
+
+    .line 121
+    const-string/jumbo v1, "launch_type_voip"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    .line 122
+    iput-boolean v3, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmK:Z
+
+    .line 128
+    :cond_0
+    :goto_0
+    new-instance v0, Ljava/util/ArrayList;
+
+    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->cvM:Ljava/util/List;
+
+    .line 129
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->cvM:Ljava/util/List;
+
+    invoke-static {}, Lcom/tencent/mm/ui/contact/r;->bhu()Ljava/util/HashSet;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 130
+    iget-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->cvM:Ljava/util/List;
+
+    invoke-static {}, Lcom/tencent/mm/ui/contact/r;->bhv()Ljava/util/HashSet;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
+
+    .line 131
+    return-void
+
+    .line 123
+    :cond_1
+    const-string/jumbo v1, "launch_type_voip_audio"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 124
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmK:Z
+
+    goto :goto_0
+.end method
+
+.method protected final afU()Ljava/lang/String;
     .locals 2
 
     .prologue
-    .line 145
+    .line 186
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getIntent()Landroid/content/Intent;
 
     move-result-object v0
@@ -152,87 +570,87 @@
 
     move-result-object v0
 
-    .line 146
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 187
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 147
-    sget v0, Lcom/tencent/mm/a$n;->address_title_select_contact:I
+    .line 188
+    const v0, 0x7f0b03de
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 149
+    .line 190
     :cond_0
     return-object v0
 .end method
 
-.method protected final Yg()Z
+.method protected final ahC()Z
     .locals 1
 
     .prologue
-    .line 117
+    .line 158
     const/4 v0, 0x1
 
     return v0
 .end method
 
-.method protected final Yh()Lcom/tencent/mm/ui/contact/da;
+.method protected final ahD()Lcom/tencent/mm/ui/contact/n;
     .locals 6
 
     .prologue
     const/4 v3, 0x1
 
-    .line 94
-    new-instance v5, Lcom/tencent/mm/ui/contact/aa$a;
+    .line 135
+    new-instance v5, Lcom/tencent/mm/ui/contact/c$a;
 
-    invoke-direct {v5}, Lcom/tencent/mm/ui/contact/aa$a;-><init>()V
+    invoke-direct {v5}, Lcom/tencent/mm/ui/contact/c$a;-><init>()V
 
-    .line 95
-    iput-boolean v3, v5, Lcom/tencent/mm/ui/contact/aa$a;->jeI:Z
+    .line 136
+    iput-boolean v3, v5, Lcom/tencent/mm/ui/contact/c$a;->liL:Z
 
-    .line 96
-    iput-boolean v3, v5, Lcom/tencent/mm/ui/contact/aa$a;->jeH:Z
+    .line 137
+    iput-boolean v3, v5, Lcom/tencent/mm/ui/contact/c$a;->liK:Z
 
-    .line 97
-    new-instance v0, Lcom/tencent/mm/ui/contact/aa;
+    .line 138
+    new-instance v0, Lcom/tencent/mm/ui/contact/c;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->ceC:Ljava/util/List;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->cvM:Ljava/util/List;
 
     const/4 v4, 0x0
 
     move-object v1, p0
 
-    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/ui/contact/aa;-><init>(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;Ljava/util/List;ZZLcom/tencent/mm/ui/contact/aa$a;)V
+    invoke-direct/range {v0 .. v5}, Lcom/tencent/mm/ui/contact/c;-><init>(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;Ljava/util/List;ZZLcom/tencent/mm/ui/contact/c$a;)V
 
     return-object v0
 .end method
 
-.method protected final Yi()Lcom/tencent/mm/ui/contact/db;
+.method protected final ahE()Lcom/tencent/mm/ui/contact/p;
     .locals 3
 
     .prologue
-    .line 102
-    new-instance v0, Lcom/tencent/mm/ui/contact/db;
+    .line 143
+    new-instance v0, Lcom/tencent/mm/ui/contact/p;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->ceC:Ljava/util/List;
+    iget-object v1, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->cvM:Ljava/util/List;
 
     const/4 v2, 0x0
 
-    invoke-direct {v0, p0, v1, v2}, Lcom/tencent/mm/ui/contact/db;-><init>(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;Ljava/util/List;Z)V
+    invoke-direct {v0, p0, v1, v2}, Lcom/tencent/mm/ui/contact/p;-><init>(Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;Ljava/util/List;Z)V
 
     return-object v0
 .end method
 
-.method public final Yj()[I
+.method public final ahF()[I
     .locals 3
 
     .prologue
-    .line 122
+    .line 163
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -246,157 +664,58 @@
     return-object v0
 .end method
 
-.method protected final Yk()V
+.method protected final ahG()V
     .locals 2
 
     .prologue
-    .line 134
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jik:Z
+    .line 175
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmJ:Z
 
     if-eqz v0, :cond_0
 
-    .line 135
+    .line 176
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/tencent/mm/ui/LauncherUI;
 
     invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 136
+    .line 177
     const/high16 v1, 0x4000000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 137
+    .line 178
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->startActivity(Landroid/content/Intent;)V
 
-    .line 139
+    .line 180
     :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->Xh()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->age()V
 
-    .line 140
+    .line 181
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->finish()V
 
-    .line 141
+    .line 182
     return-void
-.end method
-
-.method protected final initData()V
-    .locals 4
-
-    .prologue
-    const/4 v3, 0x1
-
-    .line 75
-    invoke-super {p0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->initData()V
-
-    .line 76
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "LauncherUI.Shortcut.LaunchType"
-
-    invoke-virtual {v0, v1}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 77
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getIntent()Landroid/content/Intent;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "voip_video"
-
-    invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->getBooleanExtra(Ljava/lang/String;Z)Z
-
-    move-result v1
-
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jil:Z
-
-    .line 78
-    if-eqz v0, :cond_0
-
-    .line 79
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jik:Z
-
-    .line 80
-    const-string/jumbo v1, "launch_type_voip"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_1
-
-    .line 81
-    iput-boolean v3, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jil:Z
-
-    .line 87
-    :cond_0
-    :goto_0
-    new-instance v0, Ljava/util/ArrayList;
-
-    invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->ceC:Ljava/util/List;
-
-    .line 88
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->ceC:Ljava/util/List;
-
-    invoke-static {}, Lcom/tencent/mm/ui/contact/de;->aQz()Ljava/util/HashSet;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    .line 89
-    iget-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->ceC:Ljava/util/List;
-
-    invoke-static {}, Lcom/tencent/mm/ui/contact/de;->aQA()Ljava/util/HashSet;
-
-    move-result-object v1
-
-    invoke-interface {v0, v1}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
-
-    .line 90
-    return-void
-
-    .line 82
-    :cond_1
-    const-string/jumbo v1, "launch_type_voip_audio"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    .line 83
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jil:Z
-
-    goto :goto_0
 .end method
 
 .method public onCreate(Landroid/os/Bundle;)V
     .locals 3
 
     .prologue
-    .line 41
+    .line 48
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->onCreate(Landroid/os/Bundle;)V
 
-    .line 42
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    .line 49
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "Voip"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jim:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmL:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
-    .line 43
+    .line 50
     return-void
 .end method
 
@@ -404,37 +723,27 @@
     .locals 3
 
     .prologue
-    .line 128
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    .line 169
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "Voip"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jim:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmL:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
-    .line 129
+    .line 170
     invoke-super {p0}, Lcom/tencent/mm/ui/contact/MMBaseSelectContactUI;->onDestroy()V
 
-    .line 130
+    .line 171
     return-void
 .end method
 
 .method public onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
-    .locals 9
+    .locals 2
 
     .prologue
-    const/16 v8, 0x2b19
-
-    const/4 v7, 0x3
-
-    const/4 v2, 0x1
-
-    const/4 v6, 0x0
-
-    const/4 v1, 0x2
-
-    .line 48
+    .line 55
     invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getContentLV()Landroid/widget/ListView;
 
     move-result-object v0
@@ -449,7 +758,7 @@
 
     check-cast v0, Lcom/tencent/mm/ui/contact/a/a;
 
-    .line 50
+    .line 57
     if-nez v0, :cond_1
 
     .line 70
@@ -457,128 +766,216 @@
     :goto_0
     return-void
 
-    .line 53
-    :cond_1
-    iget-object v3, v0, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
-
-    if-eqz v3, :cond_0
-
-    .line 56
-    new-instance v3, Lcom/tencent/mm/d/a/jq;
-
-    invoke-direct {v3}, Lcom/tencent/mm/d/a/jq;-><init>()V
-
-    .line 57
-    iget-object v4, v3, Lcom/tencent/mm/d/a/jq;->aGJ:Lcom/tencent/mm/d/a/jq$a;
-
-    const/4 v5, 0x5
-
-    iput v5, v4, Lcom/tencent/mm/d/a/jq$a;->axE:I
-
-    .line 58
-    iget-object v4, v3, Lcom/tencent/mm/d/a/jq;->aGJ:Lcom/tencent/mm/d/a/jq$a;
-
-    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
-
-    iget-object v0, v0, Lcom/tencent/mm/d/b/k;->field_username:Ljava/lang/String;
-
-    iput-object v0, v4, Lcom/tencent/mm/d/a/jq$a;->aqX:Ljava/lang/String;
-
-    .line 59
-    iget-object v0, v3, Lcom/tencent/mm/d/a/jq;->aGJ:Lcom/tencent/mm/d/a/jq$a;
-
-    iput-object p0, v0, Lcom/tencent/mm/d/a/jq$a;->context:Landroid/content/Context;
-
     .line 60
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jik:Z
+    :cond_1
+    iget-object v1, v0, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
+
+    if-eqz v1, :cond_0
+
+    .line 63
+    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
+
+    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->apb:Ljava/lang/String;
+
+    .line 64
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->lmK:Z
 
     if-eqz v0, :cond_2
 
-    move v0, v1
-
-    .line 61
-    :goto_1
-    iget-boolean v4, p0, Lcom/tencent/mm/ui/contact/VoipAddressUI;->jil:Z
-
-    if-eqz v4, :cond_3
-
-    .line 62
-    iget-object v4, v3, Lcom/tencent/mm/d/a/jq;->aGJ:Lcom/tencent/mm/d/a/jq$a;
-
-    iput v1, v4, Lcom/tencent/mm/d/a/jq$a;->aGM:I
-
-    .line 63
-    sget-object v4, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
-
-    new-array v5, v7, [Ljava/lang/Object;
-
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v5, v6
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v5, v2
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    aput-object v0, v5, v1
-
-    invoke-virtual {v4, v8, v5}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
-
-    .line 68
-    :goto_2
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/sdk/c/a;->g(Lcom/tencent/mm/sdk/c/d;)Z
-
-    .line 69
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->Xh()V
+    .line 65
+    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->ank()V
 
     goto :goto_0
 
+    .line 67
     :cond_2
-    move v0, v2
+    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->anj()V
 
-    .line 60
+    goto :goto_0
+.end method
+
+.method public onRequestPermissionsResult(I[Ljava/lang/String;[I)V
+    .locals 11
+
+    .prologue
+    const v10, 0x7f0b0c09
+
+    const v9, 0x7f0b08d5
+
+    const v8, 0x7f0b08d4
+
+    const/4 v5, 0x0
+
+    .line 219
+    const-string/jumbo v0, "!32@/B4Tb64lLpLsucrmy2Y99b8+/t/IjGYU"
+
+    const-string/jumbo v1, "summerper onRequestPermissionsResult requestCode[%d],grantResults[%d] tid[%d]"
+
+    const/4 v2, 0x3
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v3
+
+    aput-object v3, v2, v5
+
+    const/4 v3, 0x1
+
+    aget v4, p3, v5
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x2
+
+    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/Thread;->getId()J
+
+    move-result-wide v6
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 220
+    sparse-switch p1, :sswitch_data_0
+
+    .line 260
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 222
+    :sswitch_0
+    aget v0, p3, v5
+
+    if-nez v0, :cond_1
+
+    .line 223
+    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->ank()V
+
+    goto :goto_0
+
+    .line 225
+    :cond_1
+    const-string/jumbo v0, "android.permission.CAMERA"
+
+    aget-object v1, p2, v5
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    const v0, 0x7f0b08dd
+
+    .line 226
+    :goto_1
+    aget v1, p3, v5
+
+    if-eqz v1, :cond_0
+
+    .line 228
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {p0, v8}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {p0, v9}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {p0, v10}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v4
+
+    new-instance v6, Lcom/tencent/mm/ui/contact/VoipAddressUI$2;
+
+    invoke-direct {v6, p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI$2;-><init>(Lcom/tencent/mm/ui/contact/VoipAddressUI;)V
+
+    new-instance v7, Lcom/tencent/mm/ui/contact/VoipAddressUI$3;
+
+    invoke-direct {v7, p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI$3;-><init>(Lcom/tencent/mm/ui/contact/VoipAddressUI;)V
+
+    move-object v0, p0
+
+    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
+
+    goto :goto_0
+
+    .line 225
+    :cond_2
+    const v0, 0x7f0b08de
+
     goto :goto_1
 
-    .line 65
+    .line 249
+    :sswitch_1
+    aget v0, p3, v5
+
+    if-nez v0, :cond_3
+
+    .line 250
+    invoke-direct {p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->anj()V
+
+    goto :goto_0
+
+    .line 252
     :cond_3
-    iget-object v4, v3, Lcom/tencent/mm/d/a/jq;->aGJ:Lcom/tencent/mm/d/a/jq$a;
+    const v0, 0x7f0b08dc
 
-    iput v7, v4, Lcom/tencent/mm/d/a/jq$a;->aGM:I
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getString(I)Ljava/lang/String;
 
-    .line 66
-    sget-object v4, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    move-result-object v1
 
-    new-array v5, v7, [Ljava/lang/Object;
+    invoke-virtual {p0, v8}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getString(I)Ljava/lang/String;
 
-    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    move-result-object v2
 
-    move-result-object v0
+    invoke-virtual {p0, v9}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getString(I)Ljava/lang/String;
 
-    aput-object v0, v5, v6
+    move-result-object v3
 
-    invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-virtual {p0, v10}, Lcom/tencent/mm/ui/contact/VoipAddressUI;->getString(I)Ljava/lang/String;
 
-    move-result-object v0
+    move-result-object v4
 
-    aput-object v0, v5, v2
+    new-instance v6, Lcom/tencent/mm/ui/contact/VoipAddressUI$4;
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-direct {v6, p0}, Lcom/tencent/mm/ui/contact/VoipAddressUI$4;-><init>(Lcom/tencent/mm/ui/contact/VoipAddressUI;)V
 
-    move-result-object v0
+    const/4 v7, 0x0
 
-    aput-object v0, v5, v1
+    move-object v0, p0
 
-    invoke-virtual {v4, v8, v5}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
+    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
 
-    goto :goto_2
+    goto :goto_0
+
+    .line 220
+    nop
+
+    :sswitch_data_0
+    .sparse-switch
+        0x103 -> :sswitch_0
+        0x502 -> :sswitch_1
+    .end sparse-switch
 .end method

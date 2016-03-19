@@ -1,65 +1,64 @@
 package com.tencent.mm.app.plugin.b;
 
 import android.database.Cursor;
-import com.tencent.mm.c.b.n;
-import com.tencent.mm.d.a.bp;
-import com.tencent.mm.d.a.bp.a;
-import com.tencent.mm.d.a.bs;
-import com.tencent.mm.d.a.bs.a;
-import com.tencent.mm.d.a.bu;
-import com.tencent.mm.d.a.bu.a;
-import com.tencent.mm.d.a.bw;
-import com.tencent.mm.d.a.bw.a;
-import com.tencent.mm.d.a.bx;
-import com.tencent.mm.d.a.bx.a;
-import com.tencent.mm.d.a.bx.b;
-import com.tencent.mm.d.a.by;
-import com.tencent.mm.d.a.bz;
-import com.tencent.mm.d.a.bz.a;
-import com.tencent.mm.d.a.bz.b;
-import com.tencent.mm.d.a.cc;
-import com.tencent.mm.d.a.cc.a;
-import com.tencent.mm.d.a.cd;
-import com.tencent.mm.d.a.cd.a;
-import com.tencent.mm.g.c;
-import com.tencent.mm.modelvoice.ad;
-import com.tencent.mm.modelvoice.am;
-import com.tencent.mm.modelvoice.u;
-import com.tencent.mm.modelvoice.x;
-import com.tencent.mm.pluginsdk.l.ag;
-import com.tencent.mm.pluginsdk.l.m.d;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.aj;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.az.g;
+import com.tencent.mm.d.a.dg;
+import com.tencent.mm.d.a.dg.a;
+import com.tencent.mm.d.a.dj;
+import com.tencent.mm.d.a.dj.a;
+import com.tencent.mm.d.a.dl;
+import com.tencent.mm.d.a.dl.a;
+import com.tencent.mm.d.a.dn;
+import com.tencent.mm.d.a.dn.a;
+import com.tencent.mm.d.a.do;
+import com.tencent.mm.d.a.do.a;
+import com.tencent.mm.d.a.do.b;
+import com.tencent.mm.d.a.dp;
+import com.tencent.mm.d.a.dq;
+import com.tencent.mm.d.a.dq.a;
+import com.tencent.mm.d.a.dq.b;
+import com.tencent.mm.d.a.dt;
+import com.tencent.mm.d.a.dt.a;
+import com.tencent.mm.d.a.du;
+import com.tencent.mm.d.a.du.a;
+import com.tencent.mm.modelsimple.d;
+import com.tencent.mm.modelvoice.k;
+import com.tencent.mm.modelvoice.m;
+import com.tencent.mm.modelvoice.p;
+import com.tencent.mm.pluginsdk.i.ai;
+import com.tencent.mm.pluginsdk.i.o.d;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.platformtools.af;
+import com.tencent.mm.sdk.platformtools.af.a;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.y;
 
 public final class a
 {
   public static final class a
-    extends com.tencent.mm.sdk.c.e
+    extends com.tencent.mm.sdk.c.c
   {
-    a.i app;
-    a.e apq;
-    a.f apr;
-    a.d aps;
-    a.h apt;
-    a.g apu;
-    a.c apv;
-    a.b apw;
+    a.b anA;
+    a.i ant;
+    a.e anu;
+    a.f anv;
+    a.d anw;
+    a.h anx;
+    a.g any;
+    a.c anz;
     
     public a()
     {
       super();
     }
     
-    public final boolean a(d paramd)
+    public final boolean a(b paramb)
     {
       boolean bool2 = true;
       boolean bool1;
-      if (!(paramd instanceof bp))
+      if (!(paramb instanceof dg))
       {
-        t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+        com.tencent.mm.sdk.platformtools.u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
         bool1 = false;
       }
       do
@@ -67,342 +66,351 @@ public final class a
         do
         {
           return bool1;
-          paramd = (bp)paramd;
-          if (awC.op == 1)
+          paramb = (dg)paramb;
+          if (awI.op == 1)
           {
-            t.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "ExtAgentLifeEventListener init");
-            app = new a.i();
-            apq = new a.e();
-            apr = new a.f();
-            aps = new a.d();
-            apt = new a.h();
-            apu = new a.g();
-            apv = new a.c();
-            apw = new a.b();
-            com.tencent.mm.sdk.c.a.hXQ.a("ExtRequestAccountSync", app);
-            com.tencent.mm.sdk.c.a.hXQ.a("ExtRecord", apq);
-            com.tencent.mm.sdk.c.a.hXQ.a("ExtSimpleRecord", apr);
-            com.tencent.mm.sdk.c.a.hXQ.a("ExtPlayer", aps);
-            com.tencent.mm.sdk.c.a.hXQ.a("ExtVoiceMsgIdToFileName", apt);
-            com.tencent.mm.sdk.c.a.hXQ.a("ExtVoiceFileNameToMsgId", apu);
-            com.tencent.mm.sdk.c.a.hXQ.a("ExtNetSceneSendMsg", apv);
-            com.tencent.mm.sdk.c.a.hXQ.a("ExtCursorForTimeLine", apw);
+            com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "ExtAgentLifeEventListener init");
+            ant = new a.i();
+            anu = new a.e();
+            anv = new a.f();
+            anw = new a.d();
+            anx = new a.h();
+            any = new a.g();
+            anz = new a.c();
+            anA = new a.b();
+            com.tencent.mm.sdk.c.a.jUF.b("ExtRequestAccountSync", ant);
+            com.tencent.mm.sdk.c.a.jUF.b("ExtRecord", anu);
+            com.tencent.mm.sdk.c.a.jUF.b("ExtSimpleRecord", anv);
+            com.tencent.mm.sdk.c.a.jUF.b("ExtPlayer", anw);
+            com.tencent.mm.sdk.c.a.jUF.b("ExtVoiceMsgIdToFileName", anx);
+            com.tencent.mm.sdk.c.a.jUF.b("ExtVoiceFileNameToMsgId", any);
+            com.tencent.mm.sdk.c.a.jUF.b("ExtNetSceneSendMsg", anz);
+            com.tencent.mm.sdk.c.a.jUF.b("ExtCursorForTimeLine", anA);
             return true;
           }
           bool1 = bool2;
-        } while (awC.op != 2);
-        if (app != null) {
-          com.tencent.mm.sdk.c.a.hXQ.b("ExtRequestAccountSync", app);
+        } while (awI.op != 2);
+        if (ant != null) {
+          com.tencent.mm.sdk.c.a.jUF.c("ExtRequestAccountSync", ant);
         }
-        if (apq != null) {
-          com.tencent.mm.sdk.c.a.hXQ.b("ExtRecord", apq);
+        if (anu != null) {
+          com.tencent.mm.sdk.c.a.jUF.c("ExtRecord", anu);
         }
-        if (apr != null) {
-          com.tencent.mm.sdk.c.a.hXQ.b("ExtSimpleRecord", apr);
+        if (anv != null) {
+          com.tencent.mm.sdk.c.a.jUF.c("ExtSimpleRecord", anv);
         }
-        if (aps != null) {
-          com.tencent.mm.sdk.c.a.hXQ.b("ExtPlayer", aps);
+        if (anw != null) {
+          com.tencent.mm.sdk.c.a.jUF.c("ExtPlayer", anw);
         }
-        if (apt != null) {
-          com.tencent.mm.sdk.c.a.hXQ.b("ExtVoiceMsgIdToFileName", apt);
+        if (anx != null) {
+          com.tencent.mm.sdk.c.a.jUF.c("ExtVoiceMsgIdToFileName", anx);
         }
-        if (apu != null) {
-          com.tencent.mm.sdk.c.a.hXQ.b("ExtVoiceFileNameToMsgId", apu);
+        if (any != null) {
+          com.tencent.mm.sdk.c.a.jUF.c("ExtVoiceFileNameToMsgId", any);
         }
-        if (apv != null) {
-          com.tencent.mm.sdk.c.a.hXQ.b("ExtNetSceneSendMsg", apv);
+        if (anz != null) {
+          com.tencent.mm.sdk.c.a.jUF.c("ExtNetSceneSendMsg", anz);
         }
         bool1 = bool2;
-      } while (apw == null);
-      com.tencent.mm.sdk.c.a.hXQ.b("ExtCursorForTimeLine", apw);
+      } while (anA == null);
+      com.tencent.mm.sdk.c.a.jUF.c("ExtCursorForTimeLine", anA);
       return true;
     }
   }
   
   public static final class b
-    extends com.tencent.mm.sdk.c.e
+    extends com.tencent.mm.sdk.c.c
   {
     public b()
     {
       super();
     }
     
-    public final boolean a(d paramd)
+    public final boolean a(b paramb)
     {
-      if (!(paramd instanceof bs))
+      if (!(paramb instanceof dj))
       {
-        t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+        com.tencent.mm.sdk.platformtools.u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
         return false;
       }
-      paramd = (bs)paramd;
-      if (l.ag.gKx != null) {
-        awJ.cursor = l.ag.gKx.rr(awI.awK);
+      paramb = (dj)paramb;
+      if (i.ai.izg != null) {
+        awR.awP = i.ai.izg.vA(awQ.awS);
       }
       return true;
     }
   }
   
   public static final class c
-    extends com.tencent.mm.sdk.c.e
+    extends com.tencent.mm.sdk.c.c
   {
     public c()
     {
       super();
     }
     
-    public final boolean a(d paramd)
+    public final boolean a(b paramb)
     {
-      if (!(paramd instanceof bu))
+      if (!(paramb instanceof dl))
       {
-        t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+        com.tencent.mm.sdk.platformtools.u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
         return false;
       }
-      paramd = (bu)paramd;
-      com.tencent.mm.ab.h localh = new com.tencent.mm.ab.h(awY.axa, awY.content, awY.type);
-      awZ.axc = localh;
-      awZ.axb = axb;
+      paramb = (dl)paramb;
+      com.tencent.mm.modelmulti.h localh = new com.tencent.mm.modelmulti.h(axg.axi, axg.content, axg.type);
+      axh.axj = localh;
+      axh.avg = avg;
       return true;
     }
   }
   
   public static final class d
-    extends com.tencent.mm.sdk.c.e
+    extends com.tencent.mm.sdk.c.c
   {
-    com.tencent.mm.c.a.a apx;
-    String apy;
+    com.tencent.mm.c.a.a anB;
+    String anC;
     
     public d()
     {
       super();
     }
     
-    public final boolean a(d paramd)
+    public final boolean a(b paramb)
     {
-      if (!(paramd instanceof bw))
+      if (!(paramb instanceof dn))
       {
-        t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+        com.tencent.mm.sdk.platformtools.u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
         return false;
       }
-      paramd = (bw)paramd;
-      if ((bn.iW(axf.apy)) && (axf.op == 1))
+      paramb = (dn)paramb;
+      if ((ay.kz(axm.anC)) && (axm.op == 1))
       {
-        t.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "fileName(%s) is null or nil.", new Object[] { axf.apy });
+        com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "fileName(%s) is null or nil.", new Object[] { axm.anC });
         return true;
       }
-      if (axf.op == 1) {
-        if (apx == null)
+      if (axm.op == 1) {
+        if (anB == null)
         {
-          apx = new com.tencent.mm.c.a.a(aa.getContext());
-          apx.ark = axf.axh;
-          apx.arj = axf.axi;
-          axg.auM = apx.c(axf.apy, axf.arf);
+          anB = new com.tencent.mm.c.a.a(y.getContext());
+          anB.apq = axm.axo;
+          anB.app = axm.axp;
+          axn.atR = anB.c(axm.anC, axm.apj);
         }
       }
       for (;;)
       {
         return true;
-        if (!axf.apy.equals(apy))
+        if (!axm.anC.equals(anC))
         {
-          if (apx.isPlaying()) {
-            apx.stop();
+          if (anB.isPlaying()) {
+            anB.stop();
           }
-          apy = axf.apy;
+          anC = axm.anC;
           break;
         }
-        if (apx.mj())
+        if (anB.lF())
         {
-          axg.auM = apx.mg();
+          axn.atR = anB.lB();
           return true;
         }
-        if (!apx.isPlaying()) {
+        if (!anB.isPlaying()) {
           break;
         }
-        axg.auM = false;
+        axn.atR = false;
         return true;
-        if (axf.op == 2)
+        if (axm.op == 2)
         {
-          if (apx != null) {
-            apx.stop();
+          if (anB != null) {
+            anB.stop();
           }
         }
-        else if ((axf.op == 4) && (apx != null) && (apx.isPlaying())) {
-          axg.auM = apx.pause();
+        else if ((axm.op == 4) && (anB != null) && (anB.isPlaying())) {
+          axn.atR = anB.pause();
         }
       }
     }
   }
   
   public static final class e
-    extends com.tencent.mm.sdk.c.e
+    extends com.tencent.mm.sdk.c.c
   {
-    String apy = "";
-    n apz;
+    String anC = "";
+    com.tencent.mm.c.b.h anD;
     
     public e()
     {
       super();
     }
     
-    public final boolean a(d paramd)
+    public final boolean a(b paramb)
     {
-      if (!(paramd instanceof bx))
+      if (!(paramb instanceof do))
       {
-        t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+        com.tencent.mm.sdk.platformtools.u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
         return false;
       }
-      paramd = (bx)paramd;
-      if (axj.op == 1)
+      paramb = (do)paramb;
+      if (axq.op == 1)
       {
-        if (apz == null) {
-          apz = new n(aa.getContext(), false);
+        if (anD == null) {
+          anD = new com.tencent.mm.c.b.h(y.getContext(), false);
         }
-        axk.auM = apz.bj(axj.username);
-        apy = apz.getFileName();
-        t.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], ret = [%s]", new Object[] { Integer.valueOf(axj.op), Boolean.valueOf(axk.auM) });
+        axr.atR = anD.bl(axq.username);
+        anC = anD.getFileName();
+        com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], ret = [%s]", new Object[] { Integer.valueOf(axq.op), Boolean.valueOf(axr.atR) });
       }
       for (;;)
       {
         return true;
-        if ((axj.op == 2) && (apz != null))
+        if ((axq.op == 2) && (anD != null))
         {
-          axk.apy = apy;
-          axk.auM = apz.ma();
-          t.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], fileName = [%s], ret = [%s]", new Object[] { Integer.valueOf(axj.op), apy, Boolean.valueOf(axk.auM) });
-          apy = "";
+          axr.anC = anC;
+          axr.atR = anD.lv();
+          com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], fileName = [%s], ret = [%s]", new Object[] { Integer.valueOf(axq.op), anC, Boolean.valueOf(axr.atR) });
+          anC = "";
         }
       }
     }
   }
   
   public static final class f
-    extends com.tencent.mm.sdk.c.e
+    extends com.tencent.mm.sdk.c.c
   {
-    u apA;
-    aj apB;
-    boolean apC;
-    boolean apD;
-    boolean apE;
-    bz apF;
-    Runnable apG;
-    String apy = "";
+    String anC = "";
+    k anE;
+    af anF;
+    boolean anG;
+    boolean anH;
+    boolean anI;
+    dq anJ;
+    Runnable anK;
     
     public f()
     {
       super();
     }
     
-    public final boolean a(d paramd)
+    public final boolean a(b paramb)
     {
-      if (!(paramd instanceof bz))
+      if (!(paramb instanceof dq))
       {
-        t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+        com.tencent.mm.sdk.platformtools.u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
         return false;
       }
-      paramd = (bz)paramd;
-      if (axl.op == 1)
+      paramb = (dq)paramb;
+      if (axs.op == 1)
       {
-        if (apA == null) {
-          apA = new u();
+        if (anE == null) {
+          anE = new k();
         }
-        apG = axl.apG;
-        if (apA.mStatus == 1) {
-          apA.ml();
+        anK = axs.anK;
+        if (anE.mStatus == 1) {
+          anE.lH();
         }
-        axm.auM = apA.bn(axl.filePath);
-        long l = bn.getInt(com.tencent.mm.g.h.qb().q("OpenApi", "maxVoiceRecordTime"), 60) * 1000;
-        t.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "MaxVoiceRecordTime (%d)", new Object[] { Long.valueOf(l) });
-        if (apB == null) {
-          apB = new aj(new b(this), false);
+        axt.atR = anE.bp(axs.filePath);
+        long l = ay.getInt(com.tencent.mm.g.h.pT().z("OpenApi", "maxVoiceRecordTime"), 60) * 1000;
+        com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "MaxVoiceRecordTime (%d)", new Object[] { Long.valueOf(l) });
+        if (anF == null) {
+          anF = new af(new af.a()
+          {
+            public final boolean lj()
+            {
+              com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "Voice record timeout.");
+              anI = true;
+              li();
+              return false;
+            }
+          }, false);
         }
-        if (apB.aFk()) {
-          apB.aEN();
+        if (anF.aVf()) {
+          anF.aUF();
         }
-        apE = false;
-        apB.cA(l);
-        apC = false;
-        t.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], ret = [%s]", new Object[] { Integer.valueOf(axl.op), Boolean.valueOf(axm.auM) });
+        anI = false;
+        anF.ds(l);
+        anG = false;
+        com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], ret = [%s]", new Object[] { Integer.valueOf(axs.op), Boolean.valueOf(axt.atR) });
       }
       for (;;)
       {
         return true;
-        if ((axl.op == 2) && (apA != null))
+        if ((axs.op == 2) && (anE != null))
         {
-          if (!apC)
+          if (!anG)
           {
-            apB.aEN();
-            t.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "Voice record stop.");
-            lN();
+            anF.aUF();
+            com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "Voice record stop.");
+            li();
           }
-          axm.auM = apD;
-          t.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], fileName = [%s], ret = [%s]", new Object[] { Integer.valueOf(axl.op), apy, Boolean.valueOf(axm.auM) });
-          apy = "";
-          apD = false;
+          axt.atR = anH;
+          com.tencent.mm.sdk.platformtools.u.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], fileName = [%s], ret = [%s]", new Object[] { Integer.valueOf(axs.op), anC, Boolean.valueOf(axt.atR) });
+          anC = "";
+          anH = false;
         }
       }
     }
     
-    final void lN()
+    final void li()
     {
-      if (apA != null)
+      if (anE != null)
       {
-        apD = apA.ml();
-        if (apG != null)
+        anH = anE.lH();
+        if (anK != null)
         {
-          if (apF != null)
+          if (anJ != null)
           {
-            apF.axm.axn = apA.arG.ast;
-            apF = null;
+            anJ.axt.axu = anE.apL.aqy;
+            anJ = null;
           }
-          if (apE) {
-            apG.run();
+          if (anI) {
+            anK.run();
           }
-          apG = null;
+          anK = null;
         }
-        apC = true;
+        anG = true;
       }
     }
   }
   
   public static final class g
-    extends com.tencent.mm.sdk.c.e
+    extends com.tencent.mm.sdk.c.c
   {
     public g()
     {
       super();
     }
     
-    public final boolean a(d paramd)
+    public final boolean a(b paramb)
     {
       Object localObject1 = null;
       Object localObject2 = null;
-      if (!(paramd instanceof cc))
+      if (!(paramb instanceof dt))
       {
-        t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+        com.tencent.mm.sdk.platformtools.u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
         return false;
       }
-      cc localcc = (cc)paramd;
-      if (x.Cp() == null) {
-        t.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "SubCoreVoice.getVoiceStg() == null" + bn.aFH());
+      dt localdt = (dt)paramb;
+      if (m.Ew() == null) {
+        com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "SubCoreVoice.getVoiceStg() == null" + ay.aVJ());
       }
-      am localam = x.Cp();
-      paramd = axy.apy;
-      if (paramd == null) {
-        paramd = (d)localObject2;
+      com.tencent.mm.modelvoice.u localu = m.Ew();
+      paramb = axF.anC;
+      if (paramb == null) {
+        paramb = (b)localObject2;
       }
       for (;;)
       {
-        if (paramd != null) {
-          axz.axb = bPm;
+        if (paramb != null) {
+          axG.avg = cga;
         }
         return true;
-        localObject2 = "SELECT FileName, User, MsgId, NetOffset, FileNowSize, TotalLen, Status, CreateTime, LastModifyTime, ClientId, VoiceLength, MsgLocalId, Human, reserved1, reserved2, MsgSource" + " FROM voiceinfo WHERE FileName= ?";
-        localObject2 = bqt.rawQuery((String)localObject2, new String[] { paramd });
-        t.d("!32@/B4Tb64lLpIv/qzEF4E8ss0xfK7O4cQt", "getInfoByFilename fileName[" + paramd + "] ResCount:" + ((Cursor)localObject2).getCount());
-        paramd = (d)localObject1;
+        localObject2 = "SELECT FileName, User, MsgId, NetOffset, FileNowSize, TotalLen, Status, CreateTime, LastModifyTime, ClientId, VoiceLength, MsgLocalId, Human, reserved1, reserved2, MsgSource, MsgFlag, MsgSeq" + " FROM voiceinfo WHERE FileName= ?";
+        localObject2 = bCw.rawQuery((String)localObject2, new String[] { paramb });
+        com.tencent.mm.sdk.platformtools.u.d("!32@/B4Tb64lLpIv/qzEF4E8ss0xfK7O4cQt", "getInfoByFilename fileName[" + paramb + "] ResCount:" + ((Cursor)localObject2).getCount());
+        paramb = (b)localObject1;
         if (((Cursor)localObject2).moveToFirst())
         {
-          paramd = new ad();
-          paramd.c((Cursor)localObject2);
+          paramb = new p();
+          paramb.c((Cursor)localObject2);
         }
         ((Cursor)localObject2).close();
       }
@@ -410,56 +418,56 @@ public final class a
   }
   
   public static final class h
-    extends com.tencent.mm.sdk.c.e
+    extends com.tencent.mm.sdk.c.c
   {
     public h()
     {
       super();
     }
     
-    public final boolean a(d paramd)
+    public final boolean a(b paramb)
     {
-      if (!(paramd instanceof cd))
+      if (!(paramb instanceof du))
       {
-        t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+        com.tencent.mm.sdk.platformtools.u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
         return false;
       }
-      paramd = (cd)paramd;
-      if (x.Cp() == null)
+      paramb = (du)paramb;
+      if (m.Ew() == null)
       {
-        t.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "SubCoreVoice.getVoiceStg()" + bn.aFH());
-        axB.apy = "";
+        com.tencent.mm.sdk.platformtools.u.e("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "SubCoreVoice.getVoiceStg()" + ay.aVJ());
+        axI.anC = "";
       }
-      ad localad = x.Cp().dG((int)axA.axb);
-      if (localad == null) {}
-      for (axB.apy = "";; axB.apy = apy) {
+      p localp = m.Ew().ee((int)axH.avg);
+      if (localp == null) {}
+      for (axI.anC = "";; axI.anC = anC) {
         return true;
       }
     }
   }
   
   public static final class i
-    extends com.tencent.mm.sdk.c.e
+    extends com.tencent.mm.sdk.c.c
   {
     public i()
     {
       super();
     }
     
-    public final boolean a(d paramd)
+    public final boolean a(b paramb)
     {
-      if (!(paramd instanceof by))
+      if (!(paramb instanceof dp))
       {
-        t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+        com.tencent.mm.sdk.platformtools.u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
         return false;
       }
-      t.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "requestAccountSync()");
-      if (aa.getContext() == null)
+      com.tencent.mm.sdk.platformtools.u.i("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "requestAccountSync()");
+      if (y.getContext() == null)
       {
-        t.w("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "MMApplicationContext.getContext() == null");
+        com.tencent.mm.sdk.platformtools.u.w("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "MMApplicationContext.getContext() == null");
         return false;
       }
-      com.tencent.mm.modelsimple.e.aJ(aa.getContext());
+      d.aZ(y.getContext());
       return true;
     }
   }

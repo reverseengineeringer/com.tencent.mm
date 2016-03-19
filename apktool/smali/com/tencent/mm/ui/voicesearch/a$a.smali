@@ -15,13 +15,13 @@
 
 
 # instance fields
-.field final synthetic jAg:Lcom/tencent/mm/ui/voicesearch/a;
+.field final synthetic lCk:Lcom/tencent/mm/ui/voicesearch/a;
 
-.field public jjm:Ljava/lang/CharSequence;
+.field public loG:Ljava/lang/CharSequence;
 
-.field public jjn:Ljava/lang/CharSequence;
+.field public loH:Ljava/lang/CharSequence;
 
-.field public jjo:I
+.field public loI:I
 
 .field public nickName:Ljava/lang/CharSequence;
 
@@ -32,7 +32,7 @@
 
     .prologue
     .line 496
-    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/a$a;->jAg:Lcom/tencent/mm/ui/voicesearch/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/voicesearch/a$a;->lCk:Lcom/tencent/mm/ui/voicesearch/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

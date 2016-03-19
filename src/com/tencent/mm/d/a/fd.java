@@ -1,28 +1,29 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class fd
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aBF = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azT = new a();
+  public b azU = new b();
   
   public fd()
   {
-    id = "OpFromExDevice";
-    hXT = atO;
+    id = "GetContactUsernameByMobile";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aAp;
-    public String aAs;
-    public String anZ;
-    public int awo;
-    public int op = 0;
-    public String url;
+    public String azV;
+  }
+  
+  public static final class b
+  {
+    public String ajh;
   }
 }
 

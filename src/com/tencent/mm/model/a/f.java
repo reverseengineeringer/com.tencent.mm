@@ -1,31 +1,21 @@
 package com.tencent.mm.model.a;
 
-import com.tencent.mm.model.au;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.dh;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.model.ae;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.bc;
+import com.tencent.mm.model.c;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.storage.h;
 import java.util.HashMap;
 
 public class f
-  implements au
+  implements ae
 {
-  private b brn = null;
+  private b bDr = null;
   
-  public static b uA()
+  private static f uN()
   {
-    if (tluin == 0) {
-      throw new com.tencent.mm.model.a();
-    }
-    if (uzbrn == null) {
-      uzbrn = new b();
-    }
-    return uzbrn;
-  }
-  
-  private static f uz()
-  {
-    f localf2 = (f)ax.sS().fb(f.class.getName());
+    f localf2 = (f)ah.tk().fu(f.class.getName());
     if (localf2 == null)
     {
       f localf1 = localf2;
@@ -33,7 +23,7 @@ public class f
       try
       {
         localf1 = new f();
-        ax.sS().a(f.class.getName(), localf1);
+        ah.tk().a(f.class.getName(), localf1);
         return localf1;
       }
       finally {}
@@ -41,42 +31,53 @@ public class f
     return localf2;
   }
   
-  public final void aJ(int paramInt) {}
+  public static b uO()
+  {
+    if (tDuin == 0) {
+      throw new com.tencent.mm.model.b();
+    }
+    if (uNbDr == null) {
+      uNbDr = new b();
+    }
+    return uNbDr;
+  }
+  
+  public final void aN(int paramInt) {}
   
   public final void ai(boolean paramBoolean)
   {
-    b localb = uA();
+    b localb = uO();
     long l = System.currentTimeMillis();
     try
     {
-      localb.fd((String)ax.tl().rf().get(328193, null));
-      if (localb.uw()) {
-        e.ff(brh.brd);
+      localb.fx((String)ah.tD().rn().get(328193, null));
+      if (localb.uM()) {
+        e.fz(bDl.bDh);
       }
-      t.i("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] init use time:%d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
+      u.i("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] init use time:%d", new Object[] { Long.valueOf(System.currentTimeMillis() - l) });
       return;
     }
     catch (Exception localException)
     {
       for (;;)
       {
-        t.e("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] updateAbTestCase exception:%s", new Object[] { localException.toString() });
+        u.e("!44@/B4Tb64lLpIVNY5fjkqzOO0SLO/wAi9vvy4PwGgLhrk=", "[Abtest] updateAbTestCase exception:%s", new Object[] { localException.toString() });
       }
     }
   }
   
   public final void aj(boolean paramBoolean) {}
   
-  public final HashMap lT()
+  public final HashMap lo()
   {
     return null;
   }
   
-  public final void lU()
+  public final void lp()
   {
-    b localb = uA();
-    bri = null;
-    brh = null;
+    b localb = uO();
+    bDm = null;
+    bDl = null;
   }
 }
 

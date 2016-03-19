@@ -5,14 +5,15 @@ import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class d$a
+public final class d$a
   extends a.a
 {
-  public ImageView ciI;
-  public CheckBox ciM;
-  public View cvG;
-  public TextView cwe;
-  public TextView cwo;
+  public View cMt;
+  public TextView cNT;
+  public TextView cOd;
+  public ImageView czS;
+  public CheckBox czW;
+  public TextView fKK;
   
   public d$a(d paramd)
   {

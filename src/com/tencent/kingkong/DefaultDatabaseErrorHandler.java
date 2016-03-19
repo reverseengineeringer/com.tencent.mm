@@ -1,8 +1,8 @@
 package com.tencent.kingkong;
 
 import com.tencent.kingkong.support.Log;
-import com.tencent.mm.dbsupport.newcursor.i;
-import com.tencent.mm.dbsupport.newcursor.i.a;
+import com.tencent.mm.dbsupport.newcursor.h;
+import com.tencent.mm.dbsupport.newcursor.h.a;
 import java.io.File;
 
 public final class DefaultDatabaseErrorHandler
@@ -13,8 +13,8 @@ public final class DefaultDatabaseErrorHandler
   private void deleteDatabaseFile(String paramString, boolean paramBoolean)
   {
     if (paramBoolean) {
-      if (i.bkW != null) {
-        i.bkW.dp(paramString);
+      if (h.bvz != null) {
+        h.bvz.dv(paramString);
       }
     }
     while ((paramString.equalsIgnoreCase(":memory:")) || (paramString.trim().length() == 0)) {

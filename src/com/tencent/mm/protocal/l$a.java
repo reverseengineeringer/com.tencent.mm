@@ -1,46 +1,23 @@
 package com.tencent.mm.protocal;
 
-import com.tencent.mm.a.a;
+import com.tencent.mm.a.c;
 import com.tencent.mm.pointers.PByteArray;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
 public final class l$a
-  extends i.c
-  implements i.a
+  extends h.c
+  implements h.a
 {
-  public int aqq = 0;
-  public int axE = 0;
-  public int ccm = 0;
-  public String hgY = "";
-  public byte[] hgZ = new byte[0];
+  public int aou = 0;
+  public int axL = 0;
+  public int ccb = 0;
+  public String iUV = "";
+  public byte[] iUW = new byte[0];
   
-  private byte[] aDs()
-  {
-    ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
-    try
-    {
-      DataOutputStream localDataOutputStream = new DataOutputStream(localByteArrayOutputStream);
-      localDataOutputStream.writeInt(ccm);
-      localDataOutputStream.writeShort(hgY.getBytes().length);
-      localDataOutputStream.write(hgY.getBytes());
-      localDataOutputStream.writeShort(hgZ.length);
-      localDataOutputStream.write(hgZ);
-      localDataOutputStream.close();
-      return localByteArrayOutputStream.toByteArray();
-    }
-    catch (IOException localIOException)
-    {
-      for (;;)
-      {
-        t.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct merge tail failed, err=" + localIOException.getMessage());
-      }
-    }
-  }
-  
-  private byte[] ax(byte[] paramArrayOfByte)
+  private byte[] aK(byte[] paramArrayOfByte)
   {
     if (paramArrayOfByte == null) {
       return null;
@@ -49,8 +26,8 @@ public final class l$a
     try
     {
       DataOutputStream localDataOutputStream = new DataOutputStream(localByteArrayOutputStream);
-      localDataOutputStream.writeByte(axE);
-      localDataOutputStream.writeByte(aqq);
+      localDataOutputStream.writeByte(axL);
+      localDataOutputStream.writeByte(aou);
       localDataOutputStream.write(paramArrayOfByte);
       localDataOutputStream.close();
       return localByteArrayOutputStream.toByteArray();
@@ -59,12 +36,35 @@ public final class l$a
     {
       for (;;)
       {
-        t.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct merge all failed, err=" + paramArrayOfByte.getMessage());
+        u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct merge all failed, err=" + paramArrayOfByte.getMessage());
       }
     }
   }
   
-  public final boolean aDr()
+  private byte[] aTt()
+  {
+    ByteArrayOutputStream localByteArrayOutputStream = new ByteArrayOutputStream();
+    try
+    {
+      DataOutputStream localDataOutputStream = new DataOutputStream(localByteArrayOutputStream);
+      localDataOutputStream.writeInt(ccb);
+      localDataOutputStream.writeShort(iUV.getBytes().length);
+      localDataOutputStream.write(iUV.getBytes());
+      localDataOutputStream.writeShort(iUW.length);
+      localDataOutputStream.write(iUW);
+      localDataOutputStream.close();
+      return localByteArrayOutputStream.toByteArray();
+    }
+    catch (IOException localIOException)
+    {
+      for (;;)
+      {
+        u.e("!32@/B4Tb64lLpI4Uvj4juC2KG7/IKjuiFml", "direct merge tail failed, err=" + localIOException.getMessage());
+      }
+    }
+  }
+  
+  public final boolean auE()
   {
     return true;
   }
@@ -74,20 +74,20 @@ public final class l$a
     return 8;
   }
   
-  public final byte[] tH()
+  public final byte[] tY()
   {
-    byte[] arrayOfByte = aDs();
+    byte[] arrayOfByte = aTt();
     PByteArray localPByteArray = new PByteArray();
-    a.a(localPByteArray, arrayOfByte, l.vN(hgM));
-    return ax(value);
+    c.a(localPByteArray, arrayOfByte, l.Bk(iUH));
+    return aK(value);
   }
   
-  public final int tI()
+  public final int tZ()
   {
     return 10;
   }
   
-  public final boolean vH()
+  public final boolean we()
   {
     return false;
   }

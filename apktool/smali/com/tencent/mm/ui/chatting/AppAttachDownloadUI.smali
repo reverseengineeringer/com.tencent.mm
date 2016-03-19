@@ -3,61 +3,61 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/pluginsdk/model/app/aa$a;
-.implements Lcom/tencent/mm/q/d;
-.implements Lcom/tencent/mm/sdk/g/ai$a;
+.implements Lcom/tencent/mm/pluginsdk/model/app/x$a;
+.implements Lcom/tencent/mm/r/d;
+.implements Lcom/tencent/mm/sdk/h/g$a;
 
 
 # instance fields
-.field private aDs:Lcom/tencent/mm/storage/ar;
+.field private aFR:Lcom/tencent/mm/storage/ag;
 
-.field private apy:Ljava/lang/String;
+.field private anC:Ljava/lang/String;
 
-.field private axR:Ljava/lang/String;
+.field private avg:J
 
-.field private axb:J
+.field private axY:Ljava/lang/String;
 
-.field private cLt:Lcom/tencent/mm/pluginsdk/model/app/aa;
+.field private cxD:Landroid/widget/ProgressBar;
 
-.field private cLu:Lcom/tencent/mm/q/e;
+.field private dTt:Landroid/widget/Button;
 
-.field private cgr:Landroid/widget/ProgressBar;
+.field private dTx:Landroid/view/View;
 
-.field private diY:Landroid/widget/Button;
+.field private dkR:Lcom/tencent/mm/pluginsdk/model/app/x;
 
-.field private djc:Landroid/view/View;
+.field private dkS:Lcom/tencent/mm/r/e;
 
-.field private dmH:Landroid/widget/Button;
+.field private ebh:Landroid/widget/Button;
 
-.field private eun:Lcom/tencent/mm/ui/MMImageView;
+.field private fEj:Lcom/tencent/mm/ui/MMImageView;
 
-.field private euo:Landroid/widget/ImageView;
+.field private fEk:Landroid/widget/ImageView;
 
-.field private gMr:I
+.field private iBs:I
 
-.field private iBB:Z
+.field private kAy:Z
 
-.field private iQY:Landroid/view/View;
+.field private kPQ:Landroid/view/View;
 
-.field private iQZ:Landroid/widget/TextView;
+.field private kPR:Landroid/widget/TextView;
 
-.field private iRa:Landroid/widget/TextView;
+.field private kPS:Landroid/widget/TextView;
 
-.field private iRb:Ljava/lang/String;
+.field private kPT:Ljava/lang/String;
 
-.field private iRc:Z
+.field private kPU:Z
 
-.field private iRd:Z
+.field private kPV:Z
 
-.field private iRe:Z
+.field private kPW:Z
 
-.field private iRf:I
+.field private kPX:I
 
-.field private iRg:Landroid/widget/LinearLayout;
+.field private kPY:Landroid/widget/LinearLayout;
 
-.field private iRh:Landroid/widget/LinearLayout;
+.field private kPZ:Landroid/widget/LinearLayout;
 
-.field private izg:Landroid/widget/TextView;
+.field private kyk:Landroid/widget/TextView;
 
 .field private mediaId:Ljava/lang/String;
 
@@ -69,61 +69,63 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 64
+    .line 65
     invoke-direct {p0}, Lcom/tencent/mm/ui/MMActivity;-><init>()V
 
-    .line 89
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRc:Z
-
     .line 90
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRd:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPU:Z
 
     .line 91
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRe:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPV:Z
 
     .line 92
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPW:Z
+
+    .line 93
     const/16 v0, 0x1388
 
-    iput v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRf:I
+    iput v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPX:I
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Lcom/tencent/mm/pluginsdk/model/app/aa;
+.method static synthetic a(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Lcom/tencent/mm/pluginsdk/model/app/x;
     .locals 1
 
     .prologue
-    .line 64
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLt:Lcom/tencent/mm/pluginsdk/model/app/aa;
+    .line 65
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkR:Lcom/tencent/mm/pluginsdk/model/app/x;
 
     return-object v0
 .end method
 
-.method static synthetic a(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;Lcom/tencent/mm/pluginsdk/model/app/aa;)Lcom/tencent/mm/pluginsdk/model/app/aa;
+.method static synthetic a(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;Lcom/tencent/mm/pluginsdk/model/app/x;)Lcom/tencent/mm/pluginsdk/model/app/x;
     .locals 0
 
     .prologue
-    .line 64
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLt:Lcom/tencent/mm/pluginsdk/model/app/aa;
+    .line 65
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkR:Lcom/tencent/mm/pluginsdk/model/app/x;
 
     return-object p1
 .end method
 
 .method static synthetic a(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;Z)V
-    .locals 7
+    .locals 11
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v10, 0x4
 
-    const/4 v6, 0x2
+    const/4 v9, 0x2
+
+    const v8, 0x7f0b01ee
 
     const/4 v4, 0x3
 
     const/4 v5, 0x0
 
-    .line 64
+    .line 65
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
@@ -132,15 +134,27 @@
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    if-eqz p1, :cond_1
+    if-eqz p1, :cond_3
 
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->gMr:I
+    new-instance v0, Lcom/tencent/mm/d/a/bw;
 
-    sparse-switch v0, :sswitch_data_0
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/bw;-><init>()V
 
-    sget v0, Lcom/tencent/mm/a$n;->retransmit:I
+    iget-object v1, v0, Lcom/tencent/mm/d/a/bw;->avn:Lcom/tencent/mm/d/a/bw$a;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
+    iget-wide v6, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->avg:J
+
+    iput-wide v6, v1, Lcom/tencent/mm/d/a/bw$a;->avg:J
+
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+
+    iget v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iBs:I
+
+    sparse-switch v1, :sswitch_data_0
+
+    invoke-virtual {p0, v8}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
@@ -154,48 +168,68 @@
 
     :cond_0
     :goto_0
-    new-instance v6, Lcom/tencent/mm/ui/chatting/c;
+    const/4 v1, 0x0
 
-    invoke-direct {v6, p0}, Lcom/tencent/mm/ui/chatting/c;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
+    const/4 v4, 0x0
+
+    new-instance v6, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$3;
+
+    invoke-direct {v6, p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$3;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
 
     move-object v0, p0
 
-    move-object v4, v1
-
-    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ZLcom/tencent/mm/ui/base/h$d;)Landroid/app/Dialog;
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;Ljava/lang/String;Ljava/util/List;Ljava/util/List;Ljava/lang/String;ZLcom/tencent/mm/ui/base/g$d;)Landroid/app/Dialog;
 
     return-void
 
     :sswitch_0
-    sget v0, Lcom/tencent/mm/a$n;->retransmit:I
+    invoke-virtual {p0, v8}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    const v1, 0x7f0b0620
 
-    sget v0, Lcom/tencent/mm/a$n;->download_file_list:I
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v0
-
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v1
+
+    invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
+    move-result-object v1
+
+    invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    iget-object v0, v0, Lcom/tencent/mm/d/a/bw;->avo:Lcom/tencent/mm/d/a/bw$b;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/d/a/bw$b;->auR:Z
+
+    if-eqz v0, :cond_0
+
+    const v0, 0x7f0b061f
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
+
     move-result-object v0
 
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -204,68 +238,56 @@
     goto :goto_0
 
     :sswitch_1
-    sget v0, Lcom/tencent/mm/a$n;->retransmit:I
+    invoke-virtual {p0, v8}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v0
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    const v1, 0x7f0b0620
 
-    sget v0, Lcom/tencent/mm/a$n;->download_file_list:I
+    invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
+    move-result-object v1
 
-    move-result-object v0
-
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v2, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    invoke-interface {v3, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    const-string/jumbo v0, "favorite"
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPT:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/aj/c;->th(Ljava/lang/String;)Z
+    invoke-static {v1}, Lcom/tencent/mm/pluginsdk/b$a;->zp(Ljava/lang/String;)Ljava/lang/Long;
+
+    move-result-object v1
+
+    iget-object v0, v0, Lcom/tencent/mm/d/a/bw;->avo:Lcom/tencent/mm/d/a/bw$b;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/d/a/bw$b;->auR:Z
+
+    if-nez v0, :cond_1
+
+    if-eqz v1, :cond_2
+
+    invoke-virtual {v1}, Ljava/lang/Long;->longValue()J
+
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/g;->aPF()Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
-
-    sget v0, Lcom/tencent/mm/a$n;->plugin_favorite_opt:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v0
-
-    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    goto :goto_0
+    if-eqz v0, :cond_2
 
     :cond_1
-    const-string/jumbo v0, "favorite"
-
-    invoke-static {v0}, Lcom/tencent/mm/aj/c;->th(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_0
-
-    sget v0, Lcom/tencent/mm/a$n;->plugin_favorite_opt:I
+    const v0, 0x7f0b061f
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
@@ -273,7 +295,55 @@
 
     invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    :cond_2
+    const-string/jumbo v0, "favorite"
+
+    invoke-static {v0}, Lcom/tencent/mm/ar/c;->yf(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const v0, 0x7f0b0e8e
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    invoke-interface {v3, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    goto/16 :goto_0
+
+    :cond_3
+    const-string/jumbo v0, "favorite"
+
+    invoke-static {v0}, Lcom/tencent/mm/ar/c;->yf(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    const v0, 0x7f0b0e8e
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-interface {v2, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+
+    invoke-static {v9}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
@@ -290,39 +360,43 @@
     .end sparse-switch
 .end method
 
-.method private aNQ()V
+.method static synthetic b(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Z
+    .locals 1
+
+    .prologue
+    .line 65
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPU:Z
+
+    return v0
+.end method
+
+.method private bdH()V
     .locals 4
 
     .prologue
     const/4 v3, 0x0
 
-    .line 574
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->GA()Lcom/tencent/mm/pluginsdk/model/app/c;
+    .line 601
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdI()Lcom/tencent/mm/pluginsdk/model/app/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->mediaId:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/model/app/c;->uk(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/b;
-
-    move-result-object v0
-
-    .line 575
+    .line 602
     if-nez v0, :cond_1
 
-    .line 576
-    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axb:J
+    .line 603
+    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->avg:J
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axR:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axY:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/pluginsdk/model/app/p;->a(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/pluginsdk/model/app/l;->a(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 583
+    .line 610
     :cond_0
     :goto_0
     return-void
 
-    .line 578
+    .line 605
     :cond_1
     new-instance v1, Ljava/io/File;
 
@@ -330,24 +404,58 @@
 
     invoke-direct {v1, v0}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 579
+    .line 606
     invoke-virtual {v1}, Ljava/io/File;->exists()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 580
-    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axb:J
+    .line 607
+    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->avg:J
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axR:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axY:Ljava/lang/String;
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/pluginsdk/model/app/p;->a(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/pluginsdk/model/app/l;->a(JLjava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     goto :goto_0
 .end method
 
-.method private aNR()V
+.method private bdI()Lcom/tencent/mm/pluginsdk/model/app/b;
+    .locals 3
+
+    .prologue
+    .line 661
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->IL()Lcom/tencent/mm/pluginsdk/model/app/c;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->mediaId:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/model/app/c;->zK(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/b;
+
+    move-result-object v0
+
+    .line 662
+    if-nez v0, :cond_0
+
+    .line 663
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->IL()Lcom/tencent/mm/pluginsdk/model/app/c;
+
+    move-result-object v0
+
+    iget-wide v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->avg:J
+
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/pluginsdk/model/app/c;->cS(J)Lcom/tencent/mm/pluginsdk/model/app/b;
+
+    move-result-object v0
+
+    .line 665
+    :cond_0
+    return-object v0
+.end method
+
+.method private bdJ()V
     .locals 5
 
     .prologue
@@ -355,87 +463,87 @@
 
     const/16 v3, 0x8
 
-    .line 673
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->gMr:I
+    .line 708
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iBs:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 716
+    .line 751
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->diY:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTt:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 717
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->djc:Landroid/view/View;
+    .line 752
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTx:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 718
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iQY:Landroid/view/View;
+    .line 753
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPQ:Landroid/view/View;
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 721
+    .line 756
     :cond_0
     :goto_0
     return-void
 
-    .line 676
+    .line 711
     :pswitch_1
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aNS()Z
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdK()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 677
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRb:Ljava/lang/String;
+    .line 712
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPT:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->yb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->DB(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 680
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aNT()V
+    .line 715
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdL()V
 
     goto :goto_0
 
-    .line 683
+    .line 718
     :cond_1
     invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getMimeType()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 684
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->izg:Landroid/widget/TextView;
+    .line 719
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kyk:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 686
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->djc:Landroid/view/View;
+    .line 721
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTx:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 687
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iQY:Landroid/view/View;
+    .line 722
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPQ:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 688
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dmH:Landroid/widget/Button;
+    .line 723
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->ebh:Landroid/widget/Button;
 
     invoke-virtual {v1, v3}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 689
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRa:Landroid/widget/TextView;
+    .line 724
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPS:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 690
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->apy:Ljava/lang/String;
+    .line 725
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->anC:Ljava/lang/String;
 
     const-string/jumbo v2, ""
 
@@ -445,10 +553,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 691
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRa:Landroid/widget/TextView;
+    .line 726
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPS:Landroid/widget/TextView;
 
-    sget v2, Lcom/tencent/mm/a$n;->openapi_app_file:I
+    const v2, 0x7f0b0682
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
@@ -456,7 +564,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 695
+    .line 730
     :goto_1
     if-eqz v0, :cond_2
 
@@ -468,16 +576,16 @@
 
     if-eqz v0, :cond_4
 
-    .line 696
+    .line 731
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->diY:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTt:Landroid/widget/Button;
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 697
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->izg:Landroid/widget/TextView;
+    .line 732
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kyk:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->download_can_not_open:I
+    const v1, 0x7f0b0622
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
@@ -487,26 +595,26 @@
 
     goto :goto_0
 
-    .line 693
+    .line 728
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRa:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPS:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->apy:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->anC:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_1
 
-    .line 699
+    .line 734
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->diY:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTt:Landroid/widget/Button;
 
     invoke-virtual {v0, v4}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 700
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->izg:Landroid/widget/TextView;
+    .line 735
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kyk:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$n;->download_can_not_open_by_wechat:I
+    const v1, 0x7f0b0623
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
@@ -516,45 +624,43 @@
 
     goto :goto_0
 
-    .line 704
+    .line 739
     :pswitch_2
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aNS()Z
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdK()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 705
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aNT()V
+    .line 740
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdL()V
 
     goto/16 :goto_0
 
-    .line 710
+    .line 745
     :pswitch_3
     new-instance v0, Landroid/content/Intent;
 
     invoke-direct {v0}, Landroid/content/Intent;-><init>()V
 
-    .line 711
+    .line 746
     const-string/jumbo v1, "App_MsgId"
 
-    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axb:J
+    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->avg:J
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 712
+    .line 747
     const/4 v1, -0x1
 
     invoke-virtual {p0, v1, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->setResult(ILandroid/content/Intent;)V
 
-    .line 713
+    .line 748
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->finish()V
 
     goto/16 :goto_0
 
-    .line 673
-    nop
-
+    .line 708
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -568,131 +674,109 @@
     .end packed-switch
 .end method
 
-.method private aNS()Z
-    .locals 4
+.method private bdK()Z
+    .locals 3
 
     .prologue
     const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    .line 724
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->GA()Lcom/tencent/mm/pluginsdk/model/app/c;
+    .line 759
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdI()Lcom/tencent/mm/pluginsdk/model/app/b;
 
     move-result-object v2
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->mediaId:Ljava/lang/String;
-
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/pluginsdk/model/app/c;->uk(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/b;
-
-    move-result-object v2
-
-    .line 725
+    .line 760
     if-nez v2, :cond_1
 
-    .line 733
+    .line 768
     :cond_0
     :goto_0
     return v0
 
-    .line 728
+    .line 763
     :cond_1
     iget-object v2, v2, Lcom/tencent/mm/pluginsdk/model/app/b;->field_fileFullPath:Ljava/lang/String;
 
-    invoke-static {v2}, Lcom/tencent/mm/a/c;->az(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/a/e;->ax(Ljava/lang/String;)Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 731
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRg:Landroid/widget/LinearLayout;
+    .line 766
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPY:Landroid/widget/LinearLayout;
 
     const/16 v2, 0x8
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 732
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRh:Landroid/widget/LinearLayout;
+    .line 767
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPZ:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     move v0, v1
 
-    .line 733
+    .line 768
     goto :goto_0
 .end method
 
-.method private aNT()V
+.method private bdL()V
     .locals 5
 
     .prologue
-    .line 737
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->GA()Lcom/tencent/mm/pluginsdk/model/app/c;
+    .line 772
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdI()Lcom/tencent/mm/pluginsdk/model/app/b;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->mediaId:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/model/app/c;->uk(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/b;
-
-    move-result-object v0
-
-    .line 738
+    .line 773
     new-instance v1, Landroid/content/Intent;
 
     const-class v2, Lcom/tencent/mm/ui/tools/ShowImageUI;
 
     invoke-direct {v1, p0, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 739
+    .line 774
     const-string/jumbo v2, "key_message_id"
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    iget-wide v3, v3, Lcom/tencent/mm/d/b/aq;->field_msgId:J
+    iget-wide v3, v3, Lcom/tencent/mm/d/b/bg;->field_msgId:J
 
     invoke-virtual {v1, v2, v3, v4}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 740
+    .line 775
     const-string/jumbo v2, "key_image_path"
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/b;->field_fileFullPath:Ljava/lang/String;
 
     invoke-virtual {v1, v2, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 741
+    .line 776
     const-string/jumbo v0, "key_favorite"
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v0, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 747
+    .line 782
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->startActivity(Landroid/content/Intent;)V
 
-    .line 748
+    .line 783
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->finish()V
 
-    .line 749
+    .line 784
     return-void
-.end method
-
-.method static synthetic b(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Z
-    .locals 1
-
-    .prologue
-    .line 64
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRc:Z
-
-    return v0
 .end method
 
 .method static synthetic c(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
     .locals 4
 
     .prologue
-    .line 64
+    .line 65
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/tencent/mm/ui/transmit/MsgRetransmitUI;
@@ -701,7 +785,7 @@
 
     const-string/jumbo v1, "Retr_Msg_content"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axR:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axY:Ljava/lang/String;
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
@@ -713,9 +797,9 @@
 
     const-string/jumbo v1, "Retr_Msg_Id"
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    iget-wide v2, v2, Lcom/tencent/mm/d/b/aq;->field_msgId:J
+    iget-wide v2, v2, Lcom/tencent/mm/d/b/bg;->field_msgId:J
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
@@ -728,56 +812,56 @@
     .locals 3
 
     .prologue
-    .line 64
-    new-instance v0, Lcom/tencent/mm/d/a/ag;
+    .line 65
+    new-instance v0, Lcom/tencent/mm/d/a/ay;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/ag;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/ay;-><init>()V
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/model/c;->a(Lcom/tencent/mm/d/a/ag;Lcom/tencent/mm/storage/ar;)Z
+    invoke-static {v0, v1}, Lcom/tencent/mm/pluginsdk/model/d;->a(Lcom/tencent/mm/d/a/ay;Lcom/tencent/mm/storage/ag;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->g(Lcom/tencent/mm/sdk/c/d;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
 
-    iget-object v1, v0, Lcom/tencent/mm/d/a/ag;->auY:Lcom/tencent/mm/d/a/ag$b;
+    iget-object v1, v0, Lcom/tencent/mm/d/a/ay;->aue:Lcom/tencent/mm/d/a/ay$b;
 
-    iget v1, v1, Lcom/tencent/mm/d/a/ag$b;->ret:I
+    iget v1, v1, Lcom/tencent/mm/d/a/ay$b;->ret:I
 
     if-nez v1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    iget-object v0, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
-    sget v1, Lcom/tencent/mm/a$n;->favorite_ok:I
+    const v1, 0x7f0b0e8f
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/h;->aN(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
+    invoke-static {v0, v1}, Lcom/tencent/mm/ui/base/g;->ba(Landroid/content/Context;Ljava/lang/String;)Landroid/widget/Toast;
 
     :goto_0
     return-void
 
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->ipQ:Lcom/tencent/mm/ui/cn;
+    iget-object v1, p0, Lcom/tencent/mm/ui/MMActivity;->koJ:Lcom/tencent/mm/ui/j;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/cn;->iqj:Landroid/support/v7/app/ActionBarActivity;
+    iget-object v1, v1, Lcom/tencent/mm/ui/j;->kpc:Landroid/support/v7/app/ActionBarActivity;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/a/ag;->auX:Lcom/tencent/mm/d/a/ag$a;
+    iget-object v0, v0, Lcom/tencent/mm/d/a/ay;->aud:Lcom/tencent/mm/d/a/ay$a;
 
-    iget v0, v0, Lcom/tencent/mm/d/a/ag$a;->type:I
+    iget v0, v0, Lcom/tencent/mm/d/a/ay$a;->type:I
 
-    sget v2, Lcom/tencent/mm/a$n;->favorite_fail:I
+    const/4 v2, 0x0
 
-    invoke-static {v1, v0, v2}, Lcom/tencent/mm/ui/base/h;->g(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/aa;
+    invoke-static {v1, v0, v2}, Lcom/tencent/mm/ui/base/g;->e(Landroid/content/Context;II)Lcom/tencent/mm/ui/base/h;
 
     goto :goto_0
 .end method
@@ -788,7 +872,7 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 64
+    .line 65
     new-instance v0, Landroid/content/Intent;
 
     const-class v1, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
@@ -801,7 +885,7 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->startActivity(Landroid/content/Intent;)V
 
-    sget-object v0, Lcom/tencent/mm/plugin/report/service/j;->eJZ:Lcom/tencent/mm/plugin/report/service/j;
+    sget-object v0, Lcom/tencent/mm/plugin/report/service/h;->fUJ:Lcom/tencent/mm/plugin/report/service/h;
 
     const/16 v1, 0x2ba0
 
@@ -825,27 +909,41 @@
 
     aput-object v3, v2, v5
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/j;->f(I[Ljava/lang/Object;)V
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/plugin/report/service/h;->g(I[Ljava/lang/Object;)V
 
     return-void
 .end method
 
-.method static synthetic f(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Landroid/widget/ProgressBar;
-    .locals 1
+.method static synthetic f(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
+    .locals 4
 
     .prologue
-    .line 64
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cgr:Landroid/widget/ProgressBar;
+    .line 65
+    new-instance v0, Landroid/content/Intent;
 
-    return-object v0
+    const-class v1, Lcom/tencent/mm/ui/chatting/ChattingSendDataToDeviceUI;
+
+    invoke-direct {v0, p0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    const-string/jumbo v1, "Retr_Msg_Id"
+
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
+
+    iget-wide v2, v2, Lcom/tencent/mm/d/b/bg;->field_msgId:J
+
+    invoke-virtual {v0, v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->startActivity(Landroid/content/Intent;)V
+
+    return-void
 .end method
 
-.method static synthetic g(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Landroid/view/View;
+.method static synthetic g(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Landroid/widget/ProgressBar;
     .locals 1
 
     .prologue
-    .line 64
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->djc:Landroid/view/View;
+    .line 65
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cxD:Landroid/widget/ProgressBar;
 
     return-object v0
 .end method
@@ -854,22 +952,22 @@
     .locals 3
 
     .prologue
-    .line 599
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axR:Ljava/lang/String;
+    .line 626
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axY:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/m/a$a;->dr(Ljava/lang/String;)Lcom/tencent/mm/m/a$a;
+    invoke-static {v0}, Lcom/tencent/mm/n/a$a;->dz(Ljava/lang/String;)Lcom/tencent/mm/n/a$a;
 
     move-result-object v1
 
-    .line 600
+    .line 627
     const/4 v0, 0x0
 
-    .line 601
-    iget-object v2, v1, Lcom/tencent/mm/m/a$a;->aqo:Ljava/lang/String;
+    .line 628
+    iget-object v2, v1, Lcom/tencent/mm/n/a$a;->aos:Ljava/lang/String;
 
     if-eqz v2, :cond_0
 
-    iget-object v2, v1, Lcom/tencent/mm/m/a$a;->aqo:Ljava/lang/String;
+    iget-object v2, v1, Lcom/tencent/mm/n/a$a;->aos:Ljava/lang/String;
 
     invoke-virtual {v2}, Ljava/lang/String;->length()I
 
@@ -877,19 +975,19 @@
 
     if-lez v2, :cond_0
 
-    .line 602
+    .line 629
     invoke-static {}, Landroid/webkit/MimeTypeMap;->getSingleton()Landroid/webkit/MimeTypeMap;
 
     move-result-object v0
 
-    .line 603
-    iget-object v2, v1, Lcom/tencent/mm/m/a$a;->aqo:Ljava/lang/String;
+    .line 630
+    iget-object v2, v1, Lcom/tencent/mm/n/a$a;->aos:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/webkit/MimeTypeMap;->getMimeTypeFromExtension(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 606
+    .line 633
     :cond_0
     if-eqz v0, :cond_1
 
@@ -899,22 +997,22 @@
 
     if-nez v2, :cond_2
 
-    .line 607
+    .line 634
     :cond_1
     const-string/jumbo v0, "!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc="
 
     const-string/jumbo v2, "getMimeType fail, not a built-in mimetype, use \"*/{fileext}\" instead"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 608
+    .line 635
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v2, "*/"
 
     invoke-direct {v0, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v1, v1, Lcom/tencent/mm/m/a$a;->aqo:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/n/a$a;->aos:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -924,27 +1022,27 @@
 
     move-result-object v0
 
-    .line 611
+    .line 638
     :cond_2
     return-object v0
 .end method
 
-.method static synthetic h(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Landroid/widget/Button;
+.method static synthetic h(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Landroid/view/View;
     .locals 1
 
     .prologue
-    .line 64
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dmH:Landroid/widget/Button;
+    .line 65
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTx:Landroid/view/View;
 
     return-object v0
 .end method
 
-.method static synthetic i(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Landroid/view/View;
+.method static synthetic i(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Landroid/widget/Button;
     .locals 1
 
     .prologue
-    .line 64
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iQY:Landroid/view/View;
+    .line 65
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->ebh:Landroid/widget/Button;
 
     return-object v0
 .end method
@@ -962,9 +1060,9 @@
     const/4 v1, 0x0
 
     .line 105
-    sget v0, Lcom/tencent/mm/a$n;->download_title:I
+    const v0, 0x7f0b0624
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->nh(I)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->qb(I)V
 
     .line 107
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getIntent()Landroid/content/Intent;
@@ -977,9 +1075,9 @@
 
     move-result-wide v3
 
-    iput-wide v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axb:J
+    iput-wide v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->avg:J
 
-    iget-wide v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axb:J
+    iget-wide v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->avg:J
 
     cmp-long v0, v3, v5
 
@@ -988,7 +1086,7 @@
     move v0, v1
 
     :goto_0
-    if-nez v0, :cond_9
+    if-nez v0, :cond_a
 
     .line 108
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->finish()V
@@ -999,37 +1097,37 @@
 
     .line 107
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rk()Lcom/tencent/mm/storage/as;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rs()Lcom/tencent/mm/storage/ah;
 
     move-result-object v0
 
-    iget-wide v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axb:J
+    iget-wide v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->avg:J
 
-    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/storage/as;->cH(J)Lcom/tencent/mm/storage/ar;
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/storage/ah;->dz(J)Lcom/tencent/mm/storage/ag;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    iget-wide v3, v0, Lcom/tencent/mm/d/b/aq;->field_msgId:J
+    iget-wide v3, v0, Lcom/tencent/mm/d/b/bg;->field_msgId:J
 
     cmp-long v0, v3, v7
 
     if-eqz v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/aq;->field_content:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
 
     if-nez v0, :cond_2
 
@@ -1039,102 +1137,157 @@
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/aq;->field_talker:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/d/b/bg;->field_talker:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/model/w;->dh(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->dn(Ljava/lang/String;)Z
 
     move-result v0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iBB:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kAy:Z
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/aq;->field_content:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axR:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axY:Ljava/lang/String;
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iBB:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kAy:Z
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    iget v0, v0, Lcom/tencent/mm/d/b/aq;->field_isSend:I
+    iget v0, v0, Lcom/tencent/mm/d/b/bg;->field_isSend:I
 
     if-nez v0, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/aq;->field_content:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/d/b/bg;->field_content:Ljava/lang/String;
 
-    iget-boolean v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iBB:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kAy:Z
 
     if-eqz v3, :cond_3
 
     if-eqz v0, :cond_3
 
-    invoke-static {v0}, Lcom/tencent/mm/model/br;->eU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/model/ar;->fl(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     :cond_3
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axR:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axY:Ljava/lang/String;
 
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axR:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axY:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/m/a$a;->dr(Ljava/lang/String;)Lcom/tencent/mm/m/a$a;
+    invoke-static {v0}, Lcom/tencent/mm/n/a$a;->dz(Ljava/lang/String;)Lcom/tencent/mm/n/a$a;
 
     move-result-object v0
 
     if-nez v0, :cond_5
+
+    const-string/jumbo v0, "!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc="
+
+    const-string/jumbo v3, "parse msgContent error, %s"
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    iget-object v4, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axY:Ljava/lang/String;
+
+    aput-object v4, v2, v1
+
+    invoke-static {v0, v3, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move v0, v1
 
     goto :goto_0
 
     :cond_5
-    iget v3, v0, Lcom/tencent/mm/m/a$a;->type:I
+    iget-object v3, v0, Lcom/tencent/mm/n/a$a;->aoq:Ljava/lang/String;
 
-    iput v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->gMr:I
+    invoke-static {v3}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
 
-    iget-object v3, v0, Lcom/tencent/mm/m/a$a;->aqm:Ljava/lang/String;
+    move-result v3
+
+    if-eqz v3, :cond_6
+
+    iget-object v3, v0, Lcom/tencent/mm/n/a$a;->bxp:Ljava/lang/String;
+
+    invoke-static {v3}, Lcom/tencent/mm/platformtools/t;->kz(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-nez v3, :cond_6
+
+    const-string/jumbo v3, "!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc="
+
+    const-string/jumbo v4, "msgContent format error, %s"
+
+    new-array v5, v2, [Ljava/lang/Object;
+
+    iget-object v6, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axY:Ljava/lang/String;
+
+    aput-object v6, v5, v1
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    iget-object v4, v0, Lcom/tencent/mm/n/a$a;->bxp:Ljava/lang/String;
+
+    invoke-virtual {v4}, Ljava/lang/String;->hashCode()I
+
+    move-result v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    iput-object v3, v0, Lcom/tencent/mm/n/a$a;->aoq:Ljava/lang/String;
+
+    :cond_6
+    iget v3, v0, Lcom/tencent/mm/n/a$a;->type:I
+
+    iput v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iBs:I
+
+    iget-object v3, v0, Lcom/tencent/mm/n/a$a;->aoq:Ljava/lang/String;
 
     iput-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->mediaId:Ljava/lang/String;
 
-    iget-object v3, v0, Lcom/tencent/mm/m/a$a;->title:Ljava/lang/String;
+    iget-object v3, v0, Lcom/tencent/mm/n/a$a;->title:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/tencent/mm/platformtools/ad;->iV(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->apy:Ljava/lang/String;
-
-    iget-object v3, v0, Lcom/tencent/mm/m/a$a;->aqo:Ljava/lang/String;
-
-    invoke-static {v3}, Lcom/tencent/mm/platformtools/ad;->iV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v3}, Lcom/tencent/mm/platformtools/t;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->anC:Ljava/lang/String;
 
-    move-result-object v3
+    iget-object v0, v0, Lcom/tencent/mm/n/a$a;->aos:Ljava/lang/String;
 
-    iput-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRb:Ljava/lang/String;
-
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->GA()Lcom/tencent/mm/pluginsdk/model/app/c;
-
-    move-result-object v3
-
-    iget-object v0, v0, Lcom/tencent/mm/m/a$a;->aqm:Ljava/lang/String;
-
-    invoke-virtual {v3, v0}, Lcom/tencent/mm/pluginsdk/model/app/c;->uk(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/b;
+    invoke-static {v0}, Lcom/tencent/mm/platformtools/t;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_7
+    invoke-virtual {v0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPT:Ljava/lang/String;
+
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdI()Lcom/tencent/mm/pluginsdk/model/app/b;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_8
 
     new-instance v3, Ljava/io/File;
 
@@ -1146,18 +1299,18 @@
 
     move-result v3
 
-    if-eqz v3, :cond_7
+    if-eqz v3, :cond_8
 
     iget-wide v3, v0, Lcom/tencent/mm/pluginsdk/model/app/b;->field_offset:J
 
     cmp-long v3, v3, v7
 
-    if-lez v3, :cond_7
+    if-lez v3, :cond_8
 
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRd:Z
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPV:Z
 
     :goto_2
-    if-eqz v0, :cond_6
+    if-eqz v0, :cond_7
 
     new-instance v3, Ljava/io/File;
 
@@ -1169,7 +1322,7 @@
 
     move-result v4
 
-    if-eqz v4, :cond_6
+    if-eqz v4, :cond_7
 
     invoke-virtual {v3}, Ljava/io/File;->length()J
 
@@ -1179,16 +1332,16 @@
 
     cmp-long v3, v3, v5
 
-    if-nez v3, :cond_6
+    if-nez v3, :cond_7
 
     move v1, v2
 
-    :cond_6
-    if-eqz v1, :cond_8
+    :cond_7
+    if-eqz v1, :cond_9
 
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/b;->field_fileFullPath:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRb:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPT:Ljava/lang/String;
 
     invoke-static {p0, v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/a;->b(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;I)Z
 
@@ -1196,19 +1349,19 @@
 
     goto/16 :goto_0
 
-    :cond_7
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRd:Z
+    :cond_8
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPV:Z
 
     goto :goto_2
 
-    :cond_8
+    :cond_9
     move v0, v2
 
     goto/16 :goto_0
 
     .line 113
-    :cond_9
-    sget-object v0, Lcom/tencent/mm/compatible/util/f;->bjJ:Ljava/lang/String;
+    :cond_a
+    sget-object v0, Lcom/tencent/mm/compatible/util/d;->bui:Ljava/lang/String;
 
     .line 114
     new-instance v1, Ljava/io/File;
@@ -1220,89 +1373,93 @@
 
     move-result v0
 
-    if-nez v0, :cond_a
+    if-nez v0, :cond_b
 
     .line 116
     invoke-virtual {v1}, Ljava/io/File;->mkdir()Z
 
     .line 119
-    :cond_a
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->GA()Lcom/tencent/mm/pluginsdk/model/app/c;
+    :cond_b
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->IL()Lcom/tencent/mm/pluginsdk/model/app/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/pluginsdk/model/app/c;->g(Lcom/tencent/mm/sdk/g/ai$a;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/pluginsdk/model/app/c;->c(Lcom/tencent/mm/sdk/h/g$a;)V
 
     .line 120
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->DV()V
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->Gb()V
 
     goto/16 :goto_1
 .end method
 
-.method static synthetic j(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
+.method static synthetic j(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Landroid/view/View;
+    .locals 1
+
+    .prologue
+    .line 65
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPQ:Landroid/view/View;
+
+    return-object v0
+.end method
+
+.method static synthetic k(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
     .locals 0
 
     .prologue
-    .line 64
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aNQ()V
+    .line 65
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdH()V
 
     return-void
 .end method
 
-.method static synthetic k(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)J
+.method static synthetic l(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)J
     .locals 2
 
     .prologue
-    .line 64
-    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axb:J
+    .line 65
+    iget-wide v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->avg:J
 
     return-wide v0
 .end method
 
-.method static synthetic l(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Ljava/lang/String;
+.method static synthetic m(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Ljava/lang/String;
     .locals 1
 
     .prologue
-    .line 64
+    .line 65
     iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->mediaId:Ljava/lang/String;
 
     return-object v0
 .end method
 
-.method static synthetic m(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Lcom/tencent/mm/q/e;
+.method static synthetic n(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Lcom/tencent/mm/r/e;
     .locals 1
 
     .prologue
-    .line 64
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLu:Lcom/tencent/mm/q/e;
+    .line 65
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkS:Lcom/tencent/mm/r/e;
 
     return-object v0
 .end method
 
-.method static synthetic n(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Z
+.method static synthetic o(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)Z
     .locals 1
 
     .prologue
-    .line 64
+    .line 65
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRe:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPW:Z
 
     return v0
 .end method
 
-.method static synthetic o(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
+.method static synthetic p(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
     .locals 3
 
     .prologue
-    .line 64
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->GA()Lcom/tencent/mm/pluginsdk/model/app/c;
-
-    move-result-object v0
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->mediaId:Ljava/lang/String;
-
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/pluginsdk/model/app/c;->uk(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/b;
+    .line 65
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdI()Lcom/tencent/mm/pluginsdk/model/app/b;
 
     move-result-object v0
 
@@ -1312,7 +1469,7 @@
 
     const-string/jumbo v1, "open fail, info is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     :goto_0
     return-void
@@ -1335,20 +1492,20 @@
 
     const-string/jumbo v1, "open fail, field fileFullPath is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
     :cond_2
     iget-object v0, v0, Lcom/tencent/mm/pluginsdk/model/app/b;->field_fileFullPath:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRb:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPT:Ljava/lang/String;
 
     const/4 v2, 0x1
 
     invoke-static {p0, v0, v1, v2}, Lcom/tencent/mm/pluginsdk/ui/tools/a;->c(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->diY:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTt:Landroid/widget/Button;
 
     const/4 v1, 0x0
 
@@ -1359,18 +1516,22 @@
 
 
 # virtual methods
-.method protected final DV()V
+.method protected final Gb()V
     .locals 7
 
     .prologue
+    const v5, 0x7f0408d7
+
+    const v4, 0x7f0302b2
+
     const/4 v2, 0x1
 
     const/4 v1, 0x0
 
     const/16 v6, 0x8
 
-    .line 206
-    sget v0, Lcom/tencent/mm/a$i;->download_type_icon:I
+    .line 211
+    const v0, 0x7f0701d8
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
 
@@ -1378,19 +1539,19 @@
 
     check-cast v0, Lcom/tencent/mm/ui/MMImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->eun:Lcom/tencent/mm/ui/MMImageView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->fEj:Lcom/tencent/mm/ui/MMImageView;
 
-    .line 207
-    sget v0, Lcom/tencent/mm/a$i;->download_progress_area:I
+    .line 212
+    const v0, 0x7f0701da
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->djc:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTx:Landroid/view/View;
 
-    .line 208
-    sget v0, Lcom/tencent/mm/a$i;->download_pb:I
+    .line 213
+    const v0, 0x7f0701db
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
 
@@ -1398,10 +1559,10 @@
 
     check-cast v0, Landroid/widget/ProgressBar;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cgr:Landroid/widget/ProgressBar;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cxD:Landroid/widget/ProgressBar;
 
-    .line 209
-    sget v0, Lcom/tencent/mm/a$i;->download_stop_btn:I
+    .line 214
+    const v0, 0x7f0701dc
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
 
@@ -1409,63 +1570,41 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->euo:Landroid/widget/ImageView;
-
-    .line 210
-    sget v0, Lcom/tencent/mm/a$i;->download_continue_btn:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dmH:Landroid/widget/Button;
-
-    .line 211
-    sget v0, Lcom/tencent/mm/a$i;->download_open_btn:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/Button;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->diY:Landroid/widget/Button;
-
-    .line 213
-    sget v0, Lcom/tencent/mm/a$i;->download_data_area:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iQY:Landroid/view/View;
-
-    .line 214
-    sget v0, Lcom/tencent/mm/a$i;->download_hint:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/TextView;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->izg:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->fEk:Landroid/widget/ImageView;
 
     .line 215
-    sget v0, Lcom/tencent/mm/a$i;->download_data_size:I
+    const v0, 0x7f0701dd
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    check-cast v0, Landroid/widget/TextView;
+    check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iQZ:Landroid/widget/TextView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->ebh:Landroid/widget/Button;
 
     .line 216
-    sget v0, Lcom/tencent/mm/a$i;->download_file_name:I
+    const v0, 0x7f0701de
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/Button;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTt:Landroid/widget/Button;
+
+    .line 218
+    const v0, 0x7f0701df
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPQ:Landroid/view/View;
+
+    .line 219
+    const v0, 0x7f0701e1
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
 
@@ -1473,101 +1612,115 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRa:Landroid/widget/TextView;
-
-    .line 217
-    sget v0, Lcom/tencent/mm/a$i;->download_ll:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRg:Landroid/widget/LinearLayout;
-
-    .line 218
-    sget v0, Lcom/tencent/mm/a$i;->load_fail_ll:I
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    check-cast v0, Landroid/widget/LinearLayout;
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRh:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kyk:Landroid/widget/TextView;
 
     .line 220
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->euo:Landroid/widget/ImageView;
+    const v0, 0x7f0701e0
 
-    new-instance v3, Lcom/tencent/mm/ui/chatting/e;
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/chatting/e;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPR:Landroid/widget/TextView;
+
+    .line 221
+    const v0, 0x7f0701d9
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/TextView;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPS:Landroid/widget/TextView;
+
+    .line 222
+    const v0, 0x7f0701d7
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPY:Landroid/widget/LinearLayout;
+
+    .line 223
+    const v0, 0x7f0701e2
+
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->findViewById(I)Landroid/view/View;
+
+    move-result-object v0
+
+    check-cast v0, Landroid/widget/LinearLayout;
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPZ:Landroid/widget/LinearLayout;
+
+    .line 225
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->fEk:Landroid/widget/ImageView;
+
+    new-instance v3, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$5;
+
+    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$5;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
 
     invoke-virtual {v0, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 221
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dmH:Landroid/widget/Button;
+    .line 226
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->ebh:Landroid/widget/Button;
 
-    new-instance v3, Lcom/tencent/mm/ui/chatting/f;
+    new-instance v3, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$6;
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/chatting/f;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
-
-    invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
-
-    .line 222
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->diY:Landroid/widget/Button;
-
-    new-instance v3, Lcom/tencent/mm/ui/chatting/g;
-
-    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/chatting/g;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
+    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$6;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 223
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->gMr:I
+    .line 227
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTt:Landroid/widget/Button;
+
+    new-instance v3, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$7;
+
+    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$7;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
+
+    invoke-virtual {v0, v3}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 228
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iBs:I
 
     packed-switch v0, :pswitch_data_0
 
     :pswitch_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->eun:Lcom/tencent/mm/ui/MMImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->fEj:Lcom/tencent/mm/ui/MMImageView;
 
-    sget v3, Lcom/tencent/mm/a$m;->app_attach_file_icon_unknow:I
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/MMImageView;->setImageResource(I)V
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/MMImageView;->setSVGResource(I)V
-
-    .line 226
+    .line 231
     :goto_0
-    new-instance v0, Lcom/tencent/mm/ui/chatting/a;
+    new-instance v0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/a;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$1;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->a(Landroid/view/MenuItem$OnMenuItemClickListener;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->b(Landroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 238
-    sget v0, Lcom/tencent/mm/a$h;->actionbar_more_icon:I
+    .line 243
+    const v0, 0x7f0301a8
 
-    new-instance v3, Lcom/tencent/mm/ui/chatting/b;
+    new-instance v3, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$2;
 
-    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/chatting/b;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
+    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$2;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
 
     invoke-virtual {p0, v1, v0, v3}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->a(IILandroid/view/MenuItem$OnMenuItemClickListener;)V
 
-    .line 247
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRc:Z
+    .line 252
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPU:Z
 
-    .line 249
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->GA()Lcom/tencent/mm/pluginsdk/model/app/c;
-
-    move-result-object v0
-
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->mediaId:Ljava/lang/String;
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/pluginsdk/model/app/c;->uk(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/b;
+    .line 254
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdI()Lcom/tencent/mm/pluginsdk/model/app/b;
 
     move-result-object v3
 
-    .line 251
+    .line 256
     if-eqz v3, :cond_0
 
     new-instance v0, Ljava/io/File;
@@ -1588,86 +1741,80 @@
     :goto_1
     if-eqz v0, :cond_6
 
-    .line 252
-    iput-boolean v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRc:Z
+    .line 257
+    iput-boolean v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPU:Z
 
-    .line 253
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aNR()V
+    .line 258
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdJ()V
 
-    .line 278
+    .line 283
     :cond_1
     :goto_2
     return-void
 
-    .line 223
+    .line 228
     :pswitch_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->eun:Lcom/tencent/mm/ui/MMImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->fEj:Lcom/tencent/mm/ui/MMImageView;
 
-    sget v3, Lcom/tencent/mm/a$m;->app_attach_file_icon_pic:I
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/MMImageView;->setSVGResource(I)V
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/MMImageView;->setImageResource(I)V
 
     goto :goto_0
 
     :pswitch_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->eun:Lcom/tencent/mm/ui/MMImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->fEj:Lcom/tencent/mm/ui/MMImageView;
 
-    sget v3, Lcom/tencent/mm/a$m;->app_attach_file_icon_video:I
+    const v3, 0x7f030290
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/MMImageView;->setSVGResource(I)V
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/MMImageView;->setImageResource(I)V
 
     goto :goto_0
 
     :pswitch_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->eun:Lcom/tencent/mm/ui/MMImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->fEj:Lcom/tencent/mm/ui/MMImageView;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRb:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPT:Ljava/lang/String;
 
-    invoke-static {v3}, Lcom/tencent/mm/pluginsdk/model/u;->ui(Ljava/lang/String;)I
+    invoke-static {v3}, Lcom/tencent/mm/pluginsdk/model/o;->zI(Ljava/lang/String;)I
 
     move-result v3
 
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/MMImageView;->setSVGResource(I)V
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/MMImageView;->setImageResource(I)V
 
     goto :goto_0
 
     :pswitch_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRb:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPT:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->yb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->DB(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->eun:Lcom/tencent/mm/ui/MMImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->fEj:Lcom/tencent/mm/ui/MMImageView;
 
-    sget v3, Lcom/tencent/mm/a$m;->app_attach_file_icon_pic:I
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/MMImageView;->setSVGResource(I)V
+    invoke-virtual {v0, v5}, Lcom/tencent/mm/ui/MMImageView;->setImageResource(I)V
 
     goto :goto_0
 
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->eun:Lcom/tencent/mm/ui/MMImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->fEj:Lcom/tencent/mm/ui/MMImageView;
 
-    sget v3, Lcom/tencent/mm/a$m;->app_attach_file_icon_unknow:I
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/ui/MMImageView;->setSVGResource(I)V
+    invoke-virtual {v0, v4}, Lcom/tencent/mm/ui/MMImageView;->setImageResource(I)V
 
     goto :goto_0
 
-    .line 251
+    .line 256
     :cond_3
-    invoke-virtual {v3}, Lcom/tencent/mm/pluginsdk/model/app/b;->ayV()Z
+    invoke-virtual {v3}, Lcom/tencent/mm/pluginsdk/model/app/b;->aPA()Z
 
     move-result v0
 
     if-nez v0, :cond_4
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    iget v0, v0, Lcom/tencent/mm/d/b/aq;->field_isSend:I
+    iget v0, v0, Lcom/tencent/mm/d/b/bg;->field_isSend:I
 
     if-ne v0, v2, :cond_5
 
@@ -1685,15 +1832,15 @@
 
     goto :goto_1
 
-    .line 257
+    .line 262
     :cond_6
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aDs:Lcom/tencent/mm/storage/ar;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aFR:Lcom/tencent/mm/storage/ag;
 
-    iget v0, v0, Lcom/tencent/mm/d/b/aq;->aWT:I
+    iget v0, v0, Lcom/tencent/mm/d/b/bg;->bcK:I
 
     if-eq v0, v2, :cond_8
 
-    .line 258
+    .line 263
     if-eqz v3, :cond_7
 
     new-instance v0, Ljava/io/File;
@@ -1708,118 +1855,118 @@
 
     if-nez v0, :cond_8
 
-    .line 259
+    .line 264
     :cond_7
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRg:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPY:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v6}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 260
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRh:Landroid/widget/LinearLayout;
+    .line 265
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPZ:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     goto :goto_2
 
-    .line 265
+    .line 270
     :cond_8
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRc:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPU:Z
 
     if-nez v0, :cond_1
 
-    .line 269
-    new-instance v0, Lcom/tencent/mm/ui/chatting/d;
+    .line 274
+    new-instance v0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$4;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/d;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI$4;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLu:Lcom/tencent/mm/q/e;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkS:Lcom/tencent/mm/r/e;
 
-    .line 270
-    iget v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->gMr:I
+    .line 275
+    iget v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iBs:I
 
     packed-switch v0, :pswitch_data_1
 
-    .line 274
+    .line 279
     :cond_9
     :goto_3
     :pswitch_5
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRc:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPU:Z
 
     if-nez v0, :cond_1
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRd:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPV:Z
 
     if-nez v0, :cond_1
 
-    .line 276
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aNQ()V
+    .line 281
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdH()V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->djc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTx:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dmH:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->ebh:Landroid/widget/Button;
 
     invoke-virtual {v0, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iQY:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPQ:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    new-instance v0, Lcom/tencent/mm/pluginsdk/model/app/aa;
+    new-instance v0, Lcom/tencent/mm/pluginsdk/model/app/x;
 
-    iget-wide v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axb:J
+    iget-wide v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->avg:J
 
     iget-object v3, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->mediaId:Ljava/lang/String;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLu:Lcom/tencent/mm/q/e;
+    iget-object v4, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkS:Lcom/tencent/mm/r/e;
 
-    invoke-direct {v0, v1, v2, v3, v4}, Lcom/tencent/mm/pluginsdk/model/app/aa;-><init>(JLjava/lang/String;Lcom/tencent/mm/q/e;)V
+    invoke-direct {v0, v1, v2, v3, v4}, Lcom/tencent/mm/pluginsdk/model/app/x;-><init>(JLjava/lang/String;Lcom/tencent/mm/r/e;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLt:Lcom/tencent/mm/pluginsdk/model/app/aa;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkR:Lcom/tencent/mm/pluginsdk/model/app/x;
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLt:Lcom/tencent/mm/pluginsdk/model/app/aa;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkR:Lcom/tencent/mm/pluginsdk/model/app/x;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/q/l;->d(Lcom/tencent/mm/q/j;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
     goto/16 :goto_2
 
-    .line 270
+    .line 275
     :pswitch_6
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRd:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPV:Z
 
     if-eqz v0, :cond_b
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dmH:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->ebh:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
     :goto_4
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->djc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTx:Landroid/view/View;
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iQY:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPQ:Landroid/view/View;
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->diY:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTt:Landroid/widget/Button;
 
     invoke-virtual {v0, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->izg:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kyk:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRa:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPS:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->apy:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->anC:Ljava/lang/String;
 
     const-string/jumbo v2, ""
 
@@ -1829,9 +1976,9 @@
 
     if-eqz v0, :cond_c
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRa:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPS:Landroid/widget/TextView;
 
-    sget v2, Lcom/tencent/mm/a$n;->openapi_app_file:I
+    const v2, 0x7f0b0682
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
@@ -1855,9 +2002,9 @@
     if-eqz v0, :cond_d
 
     :cond_a
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->izg:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kyk:Landroid/widget/TextView;
 
-    sget v2, Lcom/tencent/mm/a$n;->download_can_not_open:I
+    const v2, 0x7f0b0622
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
@@ -1866,40 +2013,40 @@
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     :goto_6
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRb:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPT:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->yb(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->DB(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_9
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->izg:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kyk:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
     goto/16 :goto_3
 
     :cond_b
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dmH:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->ebh:Landroid/widget/Button;
 
     invoke-virtual {v0, v6}, Landroid/widget/Button;->setVisibility(I)V
 
     goto :goto_4
 
     :cond_c
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRa:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPS:Landroid/widget/TextView;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->apy:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->anC:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     goto :goto_5
 
     :cond_d
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->izg:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kyk:Landroid/widget/TextView;
 
-    sget v2, Lcom/tencent/mm/a$n;->download_can_not_open_by_wechat:I
+    const v2, 0x7f0b0623
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
@@ -1910,38 +2057,38 @@
     goto :goto_6
 
     :pswitch_7
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRd:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPV:Z
 
     if-eqz v0, :cond_e
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dmH:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->ebh:Landroid/widget/Button;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setVisibility(I)V
 
     :goto_7
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->djc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTx:Landroid/view/View;
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iQY:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPQ:Landroid/view/View;
 
     invoke-virtual {v0, v6}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->diY:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTt:Landroid/widget/Button;
 
     invoke-virtual {v0, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRa:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPS:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->izg:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kyk:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->izg:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kyk:Landroid/widget/TextView;
 
-    sget v2, Lcom/tencent/mm/a$n;->download_can_not_open_by_wechat:I
+    const v2, 0x7f0b0623
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
@@ -1952,62 +2099,62 @@
     goto/16 :goto_3
 
     :cond_e
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dmH:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->ebh:Landroid/widget/Button;
 
     invoke-virtual {v0, v6}, Landroid/widget/Button;->setVisibility(I)V
 
     goto :goto_7
 
     :pswitch_8
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->djc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTx:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iQY:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPQ:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dmH:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->ebh:Landroid/widget/Button;
 
     invoke-virtual {v0, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->diY:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTt:Landroid/widget/Button;
 
     invoke-virtual {v0, v6}, Landroid/widget/Button;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRa:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPS:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->izg:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kyk:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    new-instance v0, Lcom/tencent/mm/pluginsdk/model/app/aa;
+    new-instance v0, Lcom/tencent/mm/pluginsdk/model/app/x;
 
-    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->axb:J
+    iget-wide v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->avg:J
 
     iget-object v4, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->mediaId:Ljava/lang/String;
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLu:Lcom/tencent/mm/q/e;
+    iget-object v5, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkS:Lcom/tencent/mm/r/e;
 
-    invoke-direct {v0, v2, v3, v4, v5}, Lcom/tencent/mm/pluginsdk/model/app/aa;-><init>(JLjava/lang/String;Lcom/tencent/mm/q/e;)V
+    invoke-direct {v0, v2, v3, v4, v5}, Lcom/tencent/mm/pluginsdk/model/app/x;-><init>(JLjava/lang/String;Lcom/tencent/mm/r/e;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLt:Lcom/tencent/mm/pluginsdk/model/app/aa;
+    iput-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkR:Lcom/tencent/mm/pluginsdk/model/app/x;
 
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aNQ()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdH()V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLt:Lcom/tencent/mm/pluginsdk/model/app/aa;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkR:Lcom/tencent/mm/pluginsdk/model/app/x;
 
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/q/l;->d(Lcom/tencent/mm/q/j;)Z
+    invoke-virtual {v0, v2}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
     goto/16 :goto_3
 
-    .line 223
+    .line 228
     nop
 
     :pswitch_data_0
@@ -2022,7 +2169,7 @@
         :pswitch_4
     .end packed-switch
 
-    .line 270
+    .line 275
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_6
@@ -2036,17 +2183,7 @@
     .end packed-switch
 .end method
 
-.method protected final Rb()Z
-    .locals 1
-
-    .prologue
-    .line 807
-    const/4 v0, 0x1
-
-    return v0
-.end method
-
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
     .locals 4
 
     .prologue
@@ -2054,8 +2191,8 @@
 
     const/16 v2, 0x8
 
-    .line 759
-    invoke-virtual {p4}, Lcom/tencent/mm/q/j;->getType()I
+    .line 794
+    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
 
     move-result v0
 
@@ -2063,52 +2200,52 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 778
+    .line 813
     :cond_0
     :goto_0
     return-void
 
-    .line 763
+    .line 798
     :cond_1
     if-nez p1, :cond_2
 
     if-eqz p2, :cond_0
 
-    .line 767
+    .line 802
     :cond_2
     const v0, -0x4dddd3
 
     if-ne p2, v0, :cond_3
 
-    .line 768
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRh:Landroid/widget/LinearLayout;
+    .line 803
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPZ:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 769
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRg:Landroid/widget/LinearLayout;
+    .line 804
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPY:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
     goto :goto_0
 
-    .line 773
+    .line 808
     :cond_3
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->djc:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTx:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 774
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dmH:Landroid/widget/Button;
+    .line 809
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->ebh:Landroid/widget/Button;
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setVisibility(I)V
 
-    .line 775
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iQY:Landroid/view/View;
+    .line 810
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPQ:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 776
+    .line 811
     const-string/jumbo v0, "!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc="
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2135,12 +2272,12 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public final a(Ljava/lang/String;Lcom/tencent/mm/sdk/g/an;)V
+.method public final a(Ljava/lang/String;Lcom/tencent/mm/sdk/h/i;)V
     .locals 11
 
     .prologue
@@ -2148,14 +2285,8 @@
 
     const/4 v10, 0x1
 
-    .line 642
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->GA()Lcom/tencent/mm/pluginsdk/model/app/c;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->mediaId:Ljava/lang/String;
-
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/pluginsdk/model/app/c;->uk(Ljava/lang/String;)Lcom/tencent/mm/pluginsdk/model/app/b;
+    .line 677
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdI()Lcom/tencent/mm/pluginsdk/model/app/b;
 
     move-result-object v1
 
@@ -2165,21 +2296,21 @@
 
     iget-wide v4, v1, Lcom/tencent/mm/pluginsdk/model/app/b;->field_offset:J
 
-    iget-object v6, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iQZ:Landroid/widget/TextView;
+    iget-object v6, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPR:Landroid/widget/TextView;
 
-    sget v7, Lcom/tencent/mm/a$n;->download_data:I
+    const v7, 0x7f0b0625
 
     const/4 v8, 0x2
 
     new-array v8, v8, [Ljava/lang/Object;
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/platformtools/ad;->W(J)Ljava/lang/String;
+    invoke-static {v4, v5}, Lcom/tencent/mm/platformtools/t;->al(J)Ljava/lang/String;
 
     move-result-object v9
 
     aput-object v9, v8, v0
 
-    invoke-static {v2, v3}, Lcom/tencent/mm/platformtools/ad;->W(J)Ljava/lang/String;
+    invoke-static {v2, v3}, Lcom/tencent/mm/platformtools/t;->al(J)Ljava/lang/String;
 
     move-result-object v9
 
@@ -2236,9 +2367,9 @@
 
     move-result-object v2
 
-    invoke-static {v6, v2}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v6, v2}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cgr:Landroid/widget/ProgressBar;
+    iget-object v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cxD:Landroid/widget/ProgressBar;
 
     invoke-virtual {v2, v0}, Landroid/widget/ProgressBar;->setProgress(I)V
 
@@ -2246,11 +2377,11 @@
 
     if-lt v0, v2, :cond_1
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRc:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPU:Z
 
     if-nez v0, :cond_1
 
-    iput-boolean v10, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRc:Z
+    iput-boolean v10, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPU:Z
 
     if-eqz v1, :cond_0
 
@@ -2258,7 +2389,7 @@
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    sget v2, Lcom/tencent/mm/a$n;->download_success:I
+    const v2, 0x7f0b0626
 
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getString(I)Ljava/lang/String;
 
@@ -2276,9 +2407,9 @@
 
     iget-object v2, v1, Lcom/tencent/mm/pluginsdk/model/app/b;->field_fileFullPath:Ljava/lang/String;
 
-    sget-object v3, Lcom/tencent/mm/compatible/util/f;->bjH:Ljava/lang/String;
+    sget-object v3, Lcom/tencent/mm/compatible/util/d;->bxc:Ljava/lang/String;
 
-    sget-object v4, Lcom/tencent/mm/compatible/util/f;->bjG:Ljava/lang/String;
+    sget-object v4, Lcom/tencent/mm/compatible/util/d;->buh:Ljava/lang/String;
 
     invoke-virtual {v2, v3, v4}, Ljava/lang/String;->replaceFirst(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -2292,7 +2423,7 @@
 
     move-result-object v0
 
-    iget v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRf:I
+    iget v2, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPX:I
 
     invoke-static {p0, v0, v2}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
 
@@ -2302,18 +2433,18 @@
 
     iget-object v0, v1, Lcom/tencent/mm/pluginsdk/model/app/b;->field_fileFullPath:Ljava/lang/String;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRb:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPT:Ljava/lang/String;
 
     invoke-static {p0, v0, v1, v10}, Lcom/tencent/mm/pluginsdk/ui/tools/a;->b(Landroid/app/Activity;Ljava/lang/String;Ljava/lang/String;I)Z
 
     :cond_0
-    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->aNR()V
+    invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->bdJ()V
 
-    .line 644
+    .line 679
     :cond_1
     return-void
 
-    .line 642
+    .line 677
     :cond_2
     iget-wide v6, v1, Lcom/tencent/mm/pluginsdk/model/app/b;->field_offset:J
 
@@ -2330,12 +2461,12 @@
     goto/16 :goto_0
 .end method
 
-.method public final azg()V
+.method public final aPN()V
     .locals 2
 
     .prologue
-    .line 782
-    sget v0, Lcom/tencent/mm/a$n;->download_pause_tip:I
+    .line 817
+    const v0, 0x7f0b062a
 
     const/4 v1, 0x0
 
@@ -2345,7 +2476,7 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 783
+    .line 818
     return-void
 .end method
 
@@ -2353,27 +2484,23 @@
     .locals 1
 
     .prologue
-    .line 754
-    sget v0, Lcom/tencent/mm/a$k;->download_ui:I
+    .line 789
+    const v0, 0x7f0a0095
 
     return v0
 .end method
 
 .method protected onActivityResult(IILandroid/content/Intent;)V
-    .locals 8
+    .locals 6
 
     .prologue
-    .line 635
+    .line 670
     invoke-super {p0, p1, p2, p3}, Lcom/tencent/mm/ui/MMActivity;->onActivityResult(IILandroid/content/Intent;)V
 
-    .line 636
-    iget-boolean v4, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->iRe:Z
+    .line 671
+    iget-boolean v4, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->kPW:Z
 
-    sget v5, Lcom/tencent/mm/a$n;->download_no_match_msg:I
-
-    sget v6, Lcom/tencent/mm/a$n;->download_no_match_title:I
-
-    const/4 v7, 0x1
+    const/4 v5, 0x1
 
     move-object v0, p0
 
@@ -2383,9 +2510,9 @@
 
     move-object v3, p3
 
-    invoke-static/range {v0 .. v7}, Lcom/tencent/mm/pluginsdk/ui/tools/a;->a(Landroid/app/Activity;IILandroid/content/Intent;ZIII)V
+    invoke-static/range {v0 .. v5}, Lcom/tencent/mm/pluginsdk/ui/tools/a;->a(Landroid/app/Activity;IILandroid/content/Intent;ZI)V
 
-    .line 638
+    .line 673
     return-void
 .end method
 
@@ -2393,9 +2520,6 @@
     .locals 0
 
     .prologue
-    .line 99
-    invoke-static {}, Lcom/tencent/mm/svg/frame/c/a/a;->aIr()V
-
     .line 100
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onCreate(Landroid/os/Bundle;)V
 
@@ -2410,28 +2534,28 @@
     .locals 1
 
     .prologue
-    .line 172
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/ay;->GA()Lcom/tencent/mm/pluginsdk/model/app/c;
+    .line 178
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/model/app/aj;->IL()Lcom/tencent/mm/pluginsdk/model/app/c;
 
     move-result-object v0
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/pluginsdk/model/app/c;->h(Lcom/tencent/mm/sdk/g/ai$a;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/pluginsdk/model/app/c;->d(Lcom/tencent/mm/sdk/h/g$a;)V
 
-    .line 173
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLt:Lcom/tencent/mm/pluginsdk/model/app/aa;
+    .line 179
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkR:Lcom/tencent/mm/pluginsdk/model/app/x;
 
     if-eqz v0, :cond_0
 
-    .line 174
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->cLt:Lcom/tencent/mm/pluginsdk/model/app/aa;
+    .line 180
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dkR:Lcom/tencent/mm/pluginsdk/model/app/x;
 
-    invoke-virtual {v0, p0}, Lcom/tencent/mm/pluginsdk/model/app/aa;->a(Lcom/tencent/mm/pluginsdk/model/app/aa$a;)V
+    invoke-virtual {v0, p0}, Lcom/tencent/mm/pluginsdk/model/app/x;->a(Lcom/tencent/mm/pluginsdk/model/app/x$a;)V
 
-    .line 176
+    .line 182
     :cond_0
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onDestroy()V
 
-    .line 177
+    .line 183
     return-void
 .end method
 
@@ -2439,16 +2563,16 @@
     .locals 0
 
     .prologue
-    .line 787
+    .line 822
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/MMActivity;->onNewIntent(Landroid/content/Intent;)V
 
-    .line 788
+    .line 823
     invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->setIntent(Landroid/content/Intent;)V
 
-    .line 789
+    .line 824
     invoke-direct {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->init()V
 
-    .line 790
+    .line 825
     return-void
 .end method
 
@@ -2456,47 +2580,47 @@
     .locals 3
 
     .prologue
-    .line 194
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    .line 199
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0xdd
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
 
-    .line 195
+    .line 200
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
-    .line 197
-    new-instance v0, Lcom/tencent/mm/d/a/fh;
+    .line 202
+    new-instance v0, Lcom/tencent/mm/d/a/ij;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/fh;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/ij;-><init>()V
 
-    .line 198
-    iget-object v1, v0, Lcom/tencent/mm/d/a/fh;->aBK:Lcom/tencent/mm/d/a/fh$a;
+    .line 203
+    iget-object v1, v0, Lcom/tencent/mm/d/a/ij;->aEc:Lcom/tencent/mm/d/a/ij$a;
 
     const/4 v2, 0x0
 
-    iput-boolean v2, v1, Lcom/tencent/mm/d/a/fh$a;->aBL:Z
+    iput-boolean v2, v1, Lcom/tencent/mm/d/a/ij$a;->aEd:Z
 
-    .line 199
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    .line 204
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/sdk/c/a;->a(Lcom/tencent/mm/sdk/c/d;Landroid/os/Looper;)V
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/sdk/c/a;->a(Lcom/tencent/mm/sdk/c/b;Landroid/os/Looper;)V
 
-    .line 200
+    .line 205
     const-string/jumbo v0, "!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc="
 
     const-string/jumbo v1, "AppAttachDownloadUI cancel pause auto download logic"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 201
+    .line 206
     return-void
 .end method
 
@@ -2506,52 +2630,49 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 181
+    .line 187
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
-    .line 182
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    .line 188
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0xdd
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
-    .line 184
-    new-instance v0, Lcom/tencent/mm/d/a/fh;
+    .line 190
+    new-instance v0, Lcom/tencent/mm/d/a/ij;
 
-    invoke-direct {v0}, Lcom/tencent/mm/d/a/fh;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/ij;-><init>()V
 
-    .line 185
-    iget-object v1, v0, Lcom/tencent/mm/d/a/fh;->aBK:Lcom/tencent/mm/d/a/fh$a;
+    .line 191
+    iget-object v1, v0, Lcom/tencent/mm/d/a/ij;->aEc:Lcom/tencent/mm/d/a/ij$a;
 
-    iput-boolean v3, v1, Lcom/tencent/mm/d/a/fh$a;->aBL:Z
+    iput-boolean v3, v1, Lcom/tencent/mm/d/a/ij$a;->aEd:Z
 
-    .line 186
-    sget-object v1, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    .line 192
+    sget-object v1, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->getMainLooper()Landroid/os/Looper;
 
     move-result-object v2
 
-    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/sdk/c/a;->a(Lcom/tencent/mm/sdk/c/d;Landroid/os/Looper;)V
+    invoke-virtual {v1, v0, v2}, Lcom/tencent/mm/sdk/c/a;->a(Lcom/tencent/mm/sdk/c/b;Landroid/os/Looper;)V
 
-    .line 187
+    .line 193
     const-string/jumbo v0, "!44@/B4Tb64lLpKndQxFPEClveSib8MV3PX8lfhyBMAVEhc="
 
     const-string/jumbo v1, "AppAttachDownloadUI req pause auto download logic"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 188
-    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->diY:Landroid/widget/Button;
+    .line 194
+    iget-object v0, p0, Lcom/tencent/mm/ui/chatting/AppAttachDownloadUI;->dTt:Landroid/widget/Button;
 
     invoke-virtual {v0, v3}, Landroid/widget/Button;->setEnabled(Z)V
 
-    .line 189
-    invoke-static {}, Lcom/tencent/mm/svg/frame/c/a/a;->aIs()V
-
-    .line 190
+    .line 195
     return-void
 .end method

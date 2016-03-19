@@ -4,7 +4,7 @@
 
 
 # direct methods
-.method public static lJ()Z
+.method public static le()Z
     .locals 4
 
     .prologue
@@ -15,7 +15,7 @@
     .line 15
     const-string/jumbo v2, "translate"
 
-    invoke-static {v2}, Lcom/tencent/mm/aj/c;->th(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/ar/c;->yf(Ljava/lang/String;)Z
 
     move-result v2
 
@@ -28,7 +28,7 @@
 
     .line 19
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/g/h;->qa()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
 
     move-result-object v2
 
@@ -39,7 +39,7 @@
     move-result-object v2
 
     .line 21
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -52,7 +52,7 @@
 
     .line 23
     :cond_2
-    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/bn;->xQ(Ljava/lang/String;)I
+    invoke-static {v2}, Lcom/tencent/mm/sdk/platformtools/ay;->Dr(Ljava/lang/String;)I
 
     move-result v2
 

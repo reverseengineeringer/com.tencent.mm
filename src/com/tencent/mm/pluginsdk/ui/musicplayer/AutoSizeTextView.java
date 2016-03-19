@@ -5,16 +5,16 @@ import android.graphics.Paint;
 import android.text.TextUtils.TruncateAt;
 import android.util.AttributeSet;
 import android.widget.TextView;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class AutoSizeTextView
   extends TextView
 {
-  private float dCd;
-  private float gWl;
-  private float gWm;
-  private Paint gWn;
+  private float eua;
+  private float iMM;
+  private float iMN;
+  private Paint iMO;
   
   public AutoSizeTextView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -28,35 +28,35 @@ public class AutoSizeTextView
     init();
   }
   
-  private void as(String paramString, int paramInt)
+  private void aI(String paramString, int paramInt)
   {
-    t.i("!44@/B4Tb64lLpI78mCshwBkxFNiB+JaH5FkQ+K395YCEeo=", "autoAdjustTextSize[text=%s, viewWidth=%d]", new Object[] { paramString, Integer.valueOf(paramInt) });
+    u.i("!44@/B4Tb64lLpI78mCshwBkxFNiB+JaH5FkQ+K395YCEeo=", "autoAdjustTextSize[text=%s, viewWidth=%d]", new Object[] { paramString, Integer.valueOf(paramInt) });
     if (paramInt <= 0) {
       return;
     }
     paramInt = paramInt - getPaddingLeft() - getPaddingRight();
-    float f1 = dCd;
-    gWn.setTextSize(f1);
+    float f1 = eua;
+    iMO.setTextSize(f1);
     for (;;)
     {
       float f2 = f1;
-      if (f1 > gWl)
+      if (f1 > iMM)
       {
         f2 = f1;
-        if (gWn.measureText(paramString) > paramInt)
+        if (iMO.measureText(paramString) > paramInt)
         {
           f1 -= 1.0F;
-          if (f1 > gWl) {
+          if (f1 > iMM) {
             break label158;
           }
-          f2 = gWl;
+          f2 = iMM;
         }
       }
-      t.i("!44@/B4Tb64lLpI78mCshwBkxFNiB+JaH5FkQ+K395YCEeo=", "try size[%f], maxSize[%f], measureTextSize[%f], availableWidth[%d]", new Object[] { Float.valueOf(f2), Float.valueOf(dCd), Float.valueOf(gWn.measureText(paramString)), Integer.valueOf(paramInt) });
+      u.i("!44@/B4Tb64lLpI78mCshwBkxFNiB+JaH5FkQ+K395YCEeo=", "try size[%f], maxSize[%f], measureTextSize[%f], availableWidth[%d]", new Object[] { Float.valueOf(f2), Float.valueOf(eua), Float.valueOf(iMO.measureText(paramString)), Integer.valueOf(paramInt) });
       setTextSize(0, f2);
       return;
       label158:
-      gWn.setTextSize(f1);
+      iMO.setTextSize(f1);
     }
   }
   
@@ -64,29 +64,29 @@ public class AutoSizeTextView
   {
     setSingleLine();
     setEllipsize(TextUtils.TruncateAt.END);
-    gWl = a.fromDPToPix(getContext(), 8);
-    gWm = a.fromDPToPix(getContext(), 22);
-    gWn = new Paint();
-    gWn.set(getPaint());
-    dCd = getTextSize();
-    if (dCd <= gWl) {
-      dCd = gWm;
+    iMM = a.fromDPToPix(getContext(), 8);
+    iMN = a.fromDPToPix(getContext(), 22);
+    iMO = new Paint();
+    iMO.set(getPaint());
+    eua = getTextSize();
+    if (eua <= iMM) {
+      eua = iMN;
     }
   }
   
   protected void onSizeChanged(int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
-    t.w("!44@/B4Tb64lLpI78mCshwBkxFNiB+JaH5FkQ+K395YCEeo=", "on size changed");
+    u.w("!44@/B4Tb64lLpI78mCshwBkxFNiB+JaH5FkQ+K395YCEeo=", "on size changed");
     if (paramInt1 != paramInt3) {
-      as(getText().toString(), paramInt1);
+      aI(getText().toString(), paramInt1);
     }
   }
   
   protected void onTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3)
   {
-    t.w("!44@/B4Tb64lLpI78mCshwBkxFNiB+JaH5FkQ+K395YCEeo=", "on text changed");
+    u.w("!44@/B4Tb64lLpI78mCshwBkxFNiB+JaH5FkQ+K395YCEeo=", "on text changed");
     super.onTextChanged(paramCharSequence, paramInt1, paramInt2, paramInt3);
-    as(paramCharSequence.toString(), getWidth());
+    aI(paramCharSequence.toString(), getWidth());
   }
 }
 

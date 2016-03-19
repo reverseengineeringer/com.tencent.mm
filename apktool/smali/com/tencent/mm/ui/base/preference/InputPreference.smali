@@ -12,19 +12,19 @@
 
 
 # instance fields
-.field private fRg:Ljava/lang/String;
+.field private htb:Ljava/lang/String;
 
-.field private fRj:Lcom/tencent/mm/ui/base/preference/InputPreference$a;
+.field private hte:Lcom/tencent/mm/ui/base/preference/InputPreference$a;
 
-.field private fRm:Landroid/view/View$OnClickListener;
+.field private hth:Landroid/view/View$OnClickListener;
 
-.field private iIc:Landroid/widget/EditText;
+.field private kLw:Ljava/lang/String;
 
-.field private iMl:Ljava/lang/String;
+.field private kLx:Landroid/widget/EditText;
 
-.field private iMm:Landroid/widget/Button;
+.field private kLy:Landroid/widget/Button;
 
-.field private iMn:Landroid/widget/TextView$OnEditorActionListener;
+.field private kLz:Landroid/widget/TextView$OnEditorActionListener;
 
 
 # direct methods
@@ -49,18 +49,18 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 29
-    new-instance v0, Lcom/tencent/mm/ui/base/preference/n;
+    new-instance v0, Lcom/tencent/mm/ui/base/preference/InputPreference$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/preference/n;-><init>(Lcom/tencent/mm/ui/base/preference/InputPreference;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/preference/InputPreference$1;-><init>(Lcom/tencent/mm/ui/base/preference/InputPreference;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->fRm:Landroid/view/View$OnClickListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->hth:Landroid/view/View$OnClickListener;
 
     .line 63
-    new-instance v0, Lcom/tencent/mm/ui/base/preference/o;
+    new-instance v0, Lcom/tencent/mm/ui/base/preference/InputPreference$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/preference/o;-><init>(Lcom/tencent/mm/ui/base/preference/InputPreference;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/base/preference/InputPreference$2;-><init>(Lcom/tencent/mm/ui/base/preference/InputPreference;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->iMn:Landroid/widget/TextView$OnEditorActionListener;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->kLz:Landroid/widget/TextView$OnEditorActionListener;
 
     .line 108
     return-void
@@ -71,7 +71,7 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->fRj:Lcom/tencent/mm/ui/base/preference/InputPreference$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->hte:Lcom/tencent/mm/ui/base/preference/InputPreference$a;
 
     return-object v0
 .end method
@@ -81,7 +81,7 @@
 
     .prologue
     .line 19
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->iIc:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->kLx:Landroid/widget/EditText;
 
     return-object v0
 .end method
@@ -96,7 +96,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 123
-    sget v0, Lcom/tencent/mm/a$i;->edittext:I
+    const v0, 0x7f0704d4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -104,24 +104,24 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->iIc:Landroid/widget/EditText;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->kLx:Landroid/widget/EditText;
 
     .line 124
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->iIc:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->kLx:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->fRg:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->htb:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
     .line 127
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->iIc:Landroid/widget/EditText;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->kLx:Landroid/widget/EditText;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->iMn:Landroid/widget/TextView$OnEditorActionListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->kLz:Landroid/widget/TextView$OnEditorActionListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
     .line 129
-    sget v0, Lcom/tencent/mm/a$i;->button:I
+    const v0, 0x7f0701c0
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -129,19 +129,19 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->iMm:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->kLy:Landroid/widget/Button;
 
     .line 130
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->iMm:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->kLy:Landroid/widget/Button;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->iMl:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->kLw:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
     .line 131
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->iMm:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->kLy:Landroid/widget/Button;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->fRm:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/preference/InputPreference;->hth:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 

@@ -1,12 +1,17 @@
 package com.tencent.mm.modelsearch;
 
-import java.util.Comparator;
-import java.util.Map;
-
-final class k
-  implements Comparator
+public abstract interface k
+  extends Comparable
 {
-  k(Map paramMap) {}
+  public abstract void create();
+  
+  public abstract void destroy();
+  
+  public abstract String getName();
+  
+  public abstract int getPriority();
+  
+  public abstract int getType();
 }
 
 /* Location:

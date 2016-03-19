@@ -3,17 +3,17 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/q/d;
+.implements Lcom/tencent/mm/r/d;
 
 
 # static fields
-.field private static bUB:Lcom/tencent/mm/permission/a;
+.field private static cly:Lcom/tencent/mm/permission/a;
 
 
 # instance fields
-.field private bUC:Z
+.field private clA:I
 
-.field private bUD:I
+.field private clz:Z
 
 
 # direct methods
@@ -27,76 +27,22 @@
     .line 31
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/permission/a;->bUC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/permission/a;->clz:Z
 
     .line 32
     const/4 v0, 0x3
 
-    iput v0, p0, Lcom/tencent/mm/permission/a;->bUD:I
+    iput v0, p0, Lcom/tencent/mm/permission/a;->clA:I
 
     return-void
 .end method
 
-.method public static Dr()Lcom/tencent/mm/permission/a;
-    .locals 1
-
-    .prologue
-    .line 35
-    sget-object v0, Lcom/tencent/mm/permission/a;->bUB:Lcom/tencent/mm/permission/a;
-
-    if-nez v0, :cond_0
-
-    .line 36
-    new-instance v0, Lcom/tencent/mm/permission/a;
-
-    invoke-direct {v0}, Lcom/tencent/mm/permission/a;-><init>()V
-
-    sput-object v0, Lcom/tencent/mm/permission/a;->bUB:Lcom/tencent/mm/permission/a;
-
-    .line 38
-    :cond_0
-    sget-object v0, Lcom/tencent/mm/permission/a;->bUB:Lcom/tencent/mm/permission/a;
-
-    return-object v0
-.end method
-
-.method private release()V
-    .locals 2
-
-    .prologue
-    .line 90
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/tencent/mm/permission/a;->bUC:Z
-
-    .line 91
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
-
-    move-result-object v0
-
-    const/16 v1, 0x9f
-
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
-
-    .line 92
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
-
-    move-result-object v0
-
-    const/16 v1, 0xa0
-
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->b(ILcom/tencent/mm/q/d;)V
-
-    .line 93
-    return-void
-.end method
-
-.method private static zT()V
+.method private static Bu()V
     .locals 4
 
     .prologue
     .line 124
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v0
 
@@ -108,17 +54,17 @@
 
     .line 128
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
     const v1, 0x50108
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DM()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
 
     move-result-wide v2
 
@@ -131,16 +77,70 @@
     goto :goto_0
 .end method
 
+.method public static Fz()Lcom/tencent/mm/permission/a;
+    .locals 1
+
+    .prologue
+    .line 35
+    sget-object v0, Lcom/tencent/mm/permission/a;->cly:Lcom/tencent/mm/permission/a;
+
+    if-nez v0, :cond_0
+
+    .line 36
+    new-instance v0, Lcom/tencent/mm/permission/a;
+
+    invoke-direct {v0}, Lcom/tencent/mm/permission/a;-><init>()V
+
+    sput-object v0, Lcom/tencent/mm/permission/a;->cly:Lcom/tencent/mm/permission/a;
+
+    .line 38
+    :cond_0
+    sget-object v0, Lcom/tencent/mm/permission/a;->cly:Lcom/tencent/mm/permission/a;
+
+    return-object v0
+.end method
+
+.method private release()V
+    .locals 2
+
+    .prologue
+    .line 90
+    const/4 v0, 0x0
+
+    iput-boolean v0, p0, Lcom/tencent/mm/permission/a;->clz:Z
+
+    .line 91
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+
+    move-result-object v0
+
+    const/16 v1, 0x9f
+
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+
+    .line 92
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
+
+    move-result-object v0
+
+    const/16 v1, 0xa0
+
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->b(ILcom/tencent/mm/r/d;)V
+
+    .line 93
+    return-void
+.end method
+
 
 # virtual methods
-.method public final Ds()V
+.method public final FA()V
     .locals 5
 
     .prologue
     const/4 v4, 0x1
 
     .line 43
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v0
 
@@ -153,15 +153,15 @@
 
     .line 47
     :cond_1
-    iget-boolean v0, p0, Lcom/tencent/mm/permission/a;->bUC:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/permission/a;->clz:Z
 
     if-nez v0, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->isSDCardAvailable()Z
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->isSDCardAvailable()Z
 
     move-result v0
 
@@ -177,7 +177,7 @@
 
     const/4 v3, 0x0
 
-    iget-boolean v4, p0, Lcom/tencent/mm/permission/a;->bUC:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/permission/a;->clz:Z
 
     invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -185,17 +185,17 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 
     .line 51
     :cond_3
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -218,7 +218,7 @@
     move-result-wide v0
 
     .line 53
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DM()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
 
     move-result-wide v2
 
@@ -234,44 +234,44 @@
     invoke-direct {p0}, Lcom/tencent/mm/permission/a;->release()V
 
     .line 58
-    iput-boolean v4, p0, Lcom/tencent/mm/permission/a;->bUC:Z
+    iput-boolean v4, p0, Lcom/tencent/mm/permission/a;->clz:Z
 
     .line 60
-    new-instance v0, Lcom/tencent/mm/ad/k;
+    new-instance v0, Lcom/tencent/mm/ah/k;
 
     const/16 v1, 0x17
 
-    invoke-direct {v0, v1}, Lcom/tencent/mm/ad/k;-><init>(I)V
+    invoke-direct {v0, v1}, Lcom/tencent/mm/ah/k;-><init>(I)V
 
     .line 61
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v1
 
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/q/l;->d(Lcom/tencent/mm/q/j;)Z
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
     .line 63
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0x9f
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     .line 64
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
     const/16 v1, 0xa0
 
-    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/q/l;->a(ILcom/tencent/mm/q/d;)V
+    invoke-virtual {v0, v1, p0}, Lcom/tencent/mm/r/m;->a(ILcom/tencent/mm/r/d;)V
 
     goto :goto_0
 .end method
 
-.method public final a(IILjava/lang/String;Lcom/tencent/mm/q/j;)V
+.method public final a(IILjava/lang/String;Lcom/tencent/mm/r/j;)V
     .locals 8
 
     .prologue
@@ -282,15 +282,15 @@
     const/16 v6, 0x17
 
     .line 97
-    instance-of v0, p4, Lcom/tencent/mm/q/k;
+    instance-of v0, p4, Lcom/tencent/mm/r/l;
 
     if-eqz v0, :cond_0
 
     move-object v0, p4
 
-    check-cast v0, Lcom/tencent/mm/q/k;
+    check-cast v0, Lcom/tencent/mm/r/l;
 
-    invoke-interface {v0}, Lcom/tencent/mm/q/k;->vq()I
+    invoke-interface {v0}, Lcom/tencent/mm/r/l;->vJ()I
 
     move-result v0
 
@@ -302,7 +302,7 @@
 
     const-string/jumbo v1, "another scene"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 121
     :cond_1
@@ -311,7 +311,7 @@
 
     .line 103
     :cond_2
-    invoke-virtual {p4}, Lcom/tencent/mm/q/j;->getType()I
+    invoke-virtual {p4}, Lcom/tencent/mm/r/j;->getType()I
 
     move-result v0
 
@@ -326,14 +326,14 @@
     if-nez p2, :cond_6
 
     .line 106
-    invoke-static {}, Lcom/tencent/mm/permission/a;->zT()V
+    invoke-static {}, Lcom/tencent/mm/permission/a;->Bu()V
 
     .line 107
-    invoke-static {}, Lcom/tencent/mm/ad/t;->zY()Lcom/tencent/mm/ad/n;
+    invoke-static {}, Lcom/tencent/mm/ah/t;->BA()Lcom/tencent/mm/ah/n;
 
     move-result-object v0
 
-    invoke-virtual {v0, v6}, Lcom/tencent/mm/ad/n;->dq(I)[Lcom/tencent/mm/ad/m;
+    invoke-virtual {v0, v6}, Lcom/tencent/mm/ah/n;->dF(I)[Lcom/tencent/mm/ah/m;
 
     move-result-object v0
 
@@ -348,7 +348,7 @@
 
     const-string/jumbo v1, "error no pkg found."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-direct {p0}, Lcom/tencent/mm/permission/a;->release()V
 
@@ -365,7 +365,7 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget v4, v0, Lcom/tencent/mm/ad/m;->id:I
+    iget v4, v0, Lcom/tencent/mm/ah/m;->id:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -375,7 +375,7 @@
 
     const/4 v4, 0x1
 
-    iget v5, v0, Lcom/tencent/mm/ad/m;->version:I
+    iget v5, v0, Lcom/tencent/mm/ah/m;->version:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -385,7 +385,7 @@
 
     const/4 v4, 0x2
 
-    iget v5, v0, Lcom/tencent/mm/ad/m;->status:I
+    iget v5, v0, Lcom/tencent/mm/ah/m;->status:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -393,7 +393,7 @@
 
     aput-object v5, v3, v4
 
-    iget v4, v0, Lcom/tencent/mm/ad/m;->bIo:I
+    iget v4, v0, Lcom/tencent/mm/ah/m;->bXX:I
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -401,11 +401,11 @@
 
     aput-object v4, v3, v7
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     const/4 v1, 0x5
 
-    iget v2, v0, Lcom/tencent/mm/ad/m;->status:I
+    iget v2, v0, Lcom/tencent/mm/ah/m;->status:I
 
     if-eq v1, v2, :cond_5
 
@@ -414,48 +414,48 @@
     goto :goto_0
 
     :cond_5
-    new-instance v1, Lcom/tencent/mm/ad/j;
+    new-instance v1, Lcom/tencent/mm/ah/j;
 
-    iget v0, v0, Lcom/tencent/mm/ad/m;->id:I
+    iget v0, v0, Lcom/tencent/mm/ah/m;->id:I
 
-    invoke-direct {v1, v0, v6}, Lcom/tencent/mm/ad/j;-><init>(II)V
+    invoke-direct {v1, v0, v6}, Lcom/tencent/mm/ah/j;-><init>(II)V
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tm()Lcom/tencent/mm/q/l;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tE()Lcom/tencent/mm/r/m;
 
     move-result-object v0
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/q/l;->d(Lcom/tencent/mm/q/j;)Z
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/r/m;->d(Lcom/tencent/mm/r/j;)Z
 
     goto :goto_0
 
     .line 109
     :cond_6
-    iget v0, p0, Lcom/tencent/mm/permission/a;->bUD:I
+    iget v0, p0, Lcom/tencent/mm/permission/a;->clA:I
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/permission/a;->bUD:I
+    iput v0, p0, Lcom/tencent/mm/permission/a;->clA:I
 
     if-gtz v0, :cond_8
 
     .line 110
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v0
 
     if-eqz v0, :cond_7
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
     const v1, 0x50108
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DM()J
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ay;->FS()J
 
     move-result-wide v2
 
@@ -475,7 +475,7 @@
 
     .line 111
     :cond_7
-    iput v7, p0, Lcom/tencent/mm/permission/a;->bUD:I
+    iput v7, p0, Lcom/tencent/mm/permission/a;->clA:I
 
     .line 113
     :cond_8
@@ -495,7 +495,7 @@
     if-nez p2, :cond_a
 
     .line 117
-    invoke-static {}, Lcom/tencent/mm/permission/a;->zT()V
+    invoke-static {}, Lcom/tencent/mm/permission/a;->Bu()V
 
     .line 119
     :cond_a

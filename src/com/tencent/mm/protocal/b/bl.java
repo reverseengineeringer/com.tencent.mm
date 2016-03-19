@@ -1,53 +1,53 @@
 package com.tencent.mm.protocal.b;
 
-import java.util.LinkedList;
-
 public final class bl
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public LinkedList hkN = new LinkedList();
-  public int hkO;
+  public String iYA;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.d(1, 1, hkN);
-      paramVarArgs.bM(2, hkO);
+      if (iYA != null) {
+        paramVarArgs.d(1, iYA);
+      }
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.a.c(1, 1, hkN) + 0 + a.a.a.a.bI(2, hkO);
-    }
-    if (paramInt == 2)
-    {
-      paramVarArgs = (byte[])paramVarArgs[0];
-      hkN.clear();
-      paramVarArgs = new a.a.a.a.a(paramVarArgs, hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
-        if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
-        }
+      if (iYA == null) {
+        break label174;
       }
-      return 0;
     }
-    if (paramInt == 3)
+    label174:
+    for (paramInt = a.a.a.b.b.a.e(1, iYA) + 0;; paramInt = 0)
     {
-      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
-      bl localbl = (bl)paramVarArgs[1];
-      switch (((Integer)paramVarArgs[2]).intValue())
+      return paramInt;
+      if (paramInt == 2)
       {
-      default: 
-        return -1;
-      case 1: 
-        hkN.add(jMD.readString());
+        paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+        for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+          if (!super.a(paramVarArgs, this, paramInt)) {
+            paramVarArgs.bog();
+          }
+        }
+        break;
+      }
+      if (paramInt == 3)
+      {
+        a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+        bl localbl = (bl)paramVarArgs[1];
+        switch (((Integer)paramVarArgs[2]).intValue())
+        {
+        default: 
+          return -1;
+        }
+        iYA = maU.readString();
         return 0;
       }
-      hkO = jMD.aVp();
-      return 0;
+      return -1;
     }
-    return -1;
   }
 }
 

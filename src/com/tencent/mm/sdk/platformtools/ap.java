@@ -1,30 +1,70 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.telephony.PhoneStateListener;
+import java.util.HashMap;
 import java.util.Iterator;
-import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
-final class ap
-  extends PhoneStateListener
+public final class ap
 {
-  ap(ao paramao) {}
-  
-  public final void onCallStateChanged(int paramInt, String paramString)
+  public static Map CY(String paramString)
   {
-    Iterator localIterator = iaf.iae.iterator();
-    while (localIterator.hasNext()) {
-      ((ao.a)localIterator.next()).bt(paramInt);
-    }
-    super.onCallStateChanged(paramInt, paramString);
-    switch (paramInt)
+    if ((paramString == null) || (!paramString.startsWith("~SEMI_XML~")))
     {
-    default: 
-      return;
-    case 0: 
-      ao.aGN = false;
-      return;
+      paramString = null;
+      return paramString;
     }
-    ao.aGN = true;
+    String str = paramString.substring(10);
+    HashMap localHashMap = new HashMap();
+    int i = 0;
+    int j = str.length();
+    for (;;)
+    {
+      paramString = localHashMap;
+      if (i >= j - 4) {
+        break;
+      }
+      int k = i + 1;
+      try
+      {
+        int m = str.charAt(i);
+        i = k + 1;
+        k = (m << 16) + str.charAt(k) + i;
+        paramString = str.substring(i, k);
+        i = k + 1;
+        m = str.charAt(k);
+        k = i + 1;
+        i = (m << 16) + str.charAt(i) + k;
+        localHashMap.put(paramString, str.substring(k, i));
+      }
+      catch (Exception paramString) {}
+    }
+    return localHashMap;
+  }
+  
+  public static String P(Map paramMap)
+  {
+    if (paramMap == null) {
+      return null;
+    }
+    StringBuilder localStringBuilder = new StringBuilder();
+    localStringBuilder.append("~SEMI_XML~");
+    paramMap = paramMap.entrySet().iterator();
+    while (paramMap.hasNext())
+    {
+      Object localObject = (Map.Entry)paramMap.next();
+      String str = (String)((Map.Entry)localObject).getKey();
+      localObject = (String)((Map.Entry)localObject).getValue();
+      if (localObject != null)
+      {
+        int i = str.length();
+        int j = ((String)localObject).length();
+        localStringBuilder.append((char)(i >> 16)).append((char)i).append(str);
+        localStringBuilder.append((char)(j >> 16)).append((char)j).append((String)localObject);
+      }
+    }
+    return localStringBuilder.toString();
   }
 }
 

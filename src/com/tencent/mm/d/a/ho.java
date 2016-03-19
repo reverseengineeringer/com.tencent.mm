@@ -1,17 +1,27 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ho
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDl = new a();
   
   public ho()
   {
-    id = "ShakeCardMsgNotify";
-    hXT = atO;
+    id = "NotifyFavCdnChanged";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public String field_dataId;
+    public long field_favLocalId;
+    public int field_offset;
+    public int field_status;
+    public int field_totalLen;
   }
 }
 

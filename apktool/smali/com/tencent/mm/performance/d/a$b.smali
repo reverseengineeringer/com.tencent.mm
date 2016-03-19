@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic bUc:Lcom/tencent/mm/performance/d/a;
+.field final synthetic ckY:Lcom/tencent/mm/performance/d/a;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 95
-    iput-object p1, p0, Lcom/tencent/mm/performance/d/a$b;->bUc:Lcom/tencent/mm/performance/d/a;
+    iput-object p1, p0, Lcom/tencent/mm/performance/d/a$b;->ckY:Lcom/tencent/mm/performance/d/a;
 
     invoke-direct {p0}, Lcom/tencent/mm/performance/a/a$a;-><init>()V
 
@@ -51,12 +51,12 @@
     invoke-super {p0, p1, p2}, Lcom/tencent/mm/performance/a/a$a;->b(Landroid/app/Activity;Landroid/os/Bundle;)V
 
     .line 109
-    iget-object v0, p0, Lcom/tencent/mm/performance/d/a$b;->bUc:Lcom/tencent/mm/performance/d/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/d/a$b;->ckY:Lcom/tencent/mm/performance/d/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/d/a;->a(Lcom/tencent/mm/performance/d/a;)J
 
     .line 110
-    iget-object v0, p0, Lcom/tencent/mm/performance/d/a$b;->bUc:Lcom/tencent/mm/performance/d/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/d/a$b;->ckY:Lcom/tencent/mm/performance/d/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/d/a;->b(Lcom/tencent/mm/performance/d/a;)J
 
@@ -69,7 +69,7 @@
     if-gez v0, :cond_0
 
     .line 111
-    iget-object v0, p0, Lcom/tencent/mm/performance/d/a$b;->bUc:Lcom/tencent/mm/performance/d/a;
+    iget-object v0, p0, Lcom/tencent/mm/performance/d/a$b;->ckY:Lcom/tencent/mm/performance/d/a;
 
     invoke-static {v0}, Lcom/tencent/mm/performance/d/a;->c(Lcom/tencent/mm/performance/d/a;)J
 
@@ -86,7 +86,7 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/performance/a/a$a;->s(Landroid/app/Activity;)V
 
     .line 101
-    iget-object v1, p0, Lcom/tencent/mm/performance/d/a$b;->bUc:Lcom/tencent/mm/performance/d/a;
+    iget-object v1, p0, Lcom/tencent/mm/performance/d/a$b;->ckY:Lcom/tencent/mm/performance/d/a;
 
     new-instance v0, Ljava/lang/Object;
 
@@ -109,21 +109,21 @@
 
     invoke-direct {v3, v1, v4}, Lcom/tencent/mm/performance/d/a$a;-><init>(Lcom/tencent/mm/performance/d/a;B)V
 
-    iput-object v0, v3, Lcom/tencent/mm/performance/d/a$a;->bUd:Ljava/lang/ref/WeakReference;
+    iput-object v0, v3, Lcom/tencent/mm/performance/d/a$a;->ckZ:Ljava/lang/ref/WeakReference;
 
-    iput-object v2, v3, Lcom/tencent/mm/performance/d/a$a;->bUe:Ljava/lang/ref/WeakReference;
+    iput-object v2, v3, Lcom/tencent/mm/performance/d/a$a;->cla:Ljava/lang/ref/WeakReference;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    iput-wide v4, v3, Lcom/tencent/mm/performance/d/a$a;->bUf:J
+    iput-wide v4, v3, Lcom/tencent/mm/performance/d/a$a;->clb:J
 
-    iget-wide v4, v1, Lcom/tencent/mm/performance/d/a;->bTZ:J
+    iget-wide v4, v1, Lcom/tencent/mm/performance/d/a;->ckV:J
 
-    iput-wide v4, v3, Lcom/tencent/mm/performance/d/a$a;->bUg:J
+    iput-wide v4, v3, Lcom/tencent/mm/performance/d/a$a;->clc:J
 
-    iget-object v0, v1, Lcom/tencent/mm/performance/d/a;->bTY:Ljava/util/HashSet;
+    iget-object v0, v1, Lcom/tencent/mm/performance/d/a;->ckU:Ljava/util/HashSet;
 
     invoke-virtual {v0, v3}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 

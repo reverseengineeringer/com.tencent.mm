@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final dcW:Landroid/net/Uri;
+.field public static final dMu:Landroid/net/Uri;
 
 
 # direct methods
@@ -19,7 +19,7 @@
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/plugin/extqlauncher/ui/a;->dcW:Landroid/net/Uri;
+    sput-object v0, Lcom/tencent/mm/plugin/extqlauncher/ui/a;->dMu:Landroid/net/Uri;
 
     return-void
 .end method

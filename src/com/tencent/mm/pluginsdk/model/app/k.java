@@ -1,17 +1,27 @@
 package com.tencent.mm.pluginsdk.model.app;
 
-import com.tencent.mm.sdk.platformtools.aj.a;
-import java.util.Map;
+import com.tencent.mm.n.a;
+import com.tencent.mm.sdk.h.d;
+import com.tencent.mm.sdk.h.f;
 
-final class k
-  implements aj.a
+public final class k
+  extends f
 {
-  k(j paramj) {}
+  public static final String[] aoY = { f.a(a.aot, "AppMessage") };
   
-  public final boolean lO()
+  public k(d paramd)
   {
-    gLV.gLP.clear();
-    return false;
+    super(paramd, a.aot, "AppMessage", null);
+  }
+  
+  public final a cT(long paramLong)
+  {
+    a locala = new a();
+    field_msgId = paramLong;
+    if (super.c(locala, new String[0])) {
+      return locala;
+    }
+    return null;
   }
 }
 

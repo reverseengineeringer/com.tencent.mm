@@ -8,17 +8,17 @@ import android.os.Parcelable.Creator;
 public class Fragment$SavedState
   implements Parcelable
 {
-  public static final Parcelable.Creator CREATOR = new e();
-  final Bundle bK;
+  public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+  final Bundle ba;
   
   Fragment$SavedState(Bundle paramBundle)
   {
-    bK = paramBundle;
+    ba = paramBundle;
   }
   
   Fragment$SavedState(Parcel paramParcel)
   {
-    bK = paramParcel.readBundle();
+    ba = paramParcel.readBundle();
   }
   
   public int describeContents()
@@ -28,7 +28,7 @@ public class Fragment$SavedState
   
   public void writeToParcel(Parcel paramParcel, int paramInt)
   {
-    paramParcel.writeBundle(bK);
+    paramParcel.writeBundle(ba);
   }
 }
 

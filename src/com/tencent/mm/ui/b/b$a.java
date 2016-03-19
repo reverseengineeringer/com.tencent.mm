@@ -5,11 +5,11 @@ import android.view.MenuItem;
 
 public abstract interface b$a
 {
-  public abstract boolean d(Menu paramMenu);
+  public abstract boolean b(Menu paramMenu);
   
-  public abstract boolean e(Menu paramMenu);
+  public abstract boolean c(Menu paramMenu);
   
-  public abstract boolean f(MenuItem paramMenuItem);
+  public abstract boolean d(MenuItem paramMenuItem);
 }
 
 /* Location:

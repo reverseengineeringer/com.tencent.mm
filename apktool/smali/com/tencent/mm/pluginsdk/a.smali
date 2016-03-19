@@ -5,87 +5,119 @@
 
 # direct methods
 .method public static a(Landroid/content/Context;Landroid/net/Uri;)[Ljava/lang/String;
-    .locals 10
+    .locals 11
 
     .prologue
-    const/4 v9, 0x2
+    const/4 v10, 0x2
 
-    const/4 v2, 0x0
+    const/4 v9, 0x0
 
-    .line 97
+    const/4 v6, 0x0
+
+    .line 99
     if-nez p1, :cond_1
 
-    .line 98
+    .line 100
     const-string/jumbo v0, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
 
     const-string/jumbo v1, "uri == null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 149
+    .line 164
     :cond_0
     :goto_0
-    return-object v2
+    return-object v6
 
-    .line 105
+    .line 107
     :cond_1
+    const-string/jumbo v0, "android.permission.READ_CONTACTS"
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 108
+    const-string/jumbo v0, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    const-string/jumbo v1, "no contact permission"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 112
+    :cond_2
+    :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
+    const/4 v2, 0x0
+
+    const/4 v3, 0x0
+
+    const/4 v4, 0x0
+
+    const/4 v5, 0x0
+
     move-object v1, p1
 
-    move-object v3, v2
-
-    move-object v4, v2
-
-    move-object v5, v2
-
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    move-result-object v6
+    move-result-object v0
 
-    .line 106
-    if-eqz v6, :cond_d
+    move-object v7, v0
 
-    .line 107
-    invoke-interface {v6}, Landroid/database/Cursor;->moveToFirst()Z
+    .line 116
+    :goto_1
+    if-eqz v7, :cond_e
 
-    .line 109
+    .line 117
+    invoke-interface {v7}, Landroid/database/Cursor;->moveToFirst()Z
+
+    .line 119
     const-string/jumbo v0, "has_phone_number"
 
-    invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 110
-    if-lez v0, :cond_2
+    .line 120
+    if-lez v0, :cond_3
 
-    invoke-interface {v6, v0}, Landroid/database/Cursor;->getInt(I)I
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    if-lez v0, :cond_c
+    if-lez v0, :cond_d
 
-    .line 112
-    :cond_2
+    .line 122
+    :cond_3
     const-string/jumbo v0, "_id"
 
-    invoke-interface {v6, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 113
-    invoke-interface {v6, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    .line 123
+    invoke-interface {v7, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 115
+    .line 127
+    :try_start_1
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
     sget-object v1, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
+
+    const/4 v2, 0x0
 
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -101,142 +133,94 @@
 
     move-result-object v3
 
-    move-object v4, v2
+    const/4 v4, 0x0
 
-    move-object v5, v2
+    const/4 v5, 0x0
 
     invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v4
-
-    .line 116
-    if-eqz v4, :cond_5
-
-    invoke-interface {v4}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_5
-
-    move-object v0, v2
-
-    move-object v1, v2
-
-    .line 118
-    :goto_1
-    invoke-interface {v4}, Landroid/database/Cursor;->isAfterLast()Z
-
-    move-result v3
-
-    if-nez v3, :cond_6
-
-    .line 119
-    const-string/jumbo v0, "data1"
-
-    invoke-interface {v4, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v0
-
-    .line 120
-    const-string/jumbo v3, "display_name"
-
-    invoke-interface {v4, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v3
-
-    .line 121
-    invoke-interface {v4, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
     move-result-object v0
 
-    .line 122
-    invoke-interface {v4, v3}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    .line 123
-    const-string/jumbo v5, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v8, "username : "
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v5, v7}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 124
-    if-eqz v0, :cond_b
-
-    .line 125
-    const-string/jumbo v5, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v8, "phoneNumber : "
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v5, v7}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 126
-    if-nez v0, :cond_4
-
-    move-object v0, v2
-
-    .line 127
-    :cond_3
-    :goto_2
-    const-string/jumbo v5, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v8, "phoneNumber : "
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v7, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v5, v7}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 128
-    invoke-static {v0}, Landroid/telephony/PhoneNumberUtils;->isGlobalPhoneNumber(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_a
+    move-object v3, v0
 
     .line 131
+    :goto_2
+    if-eqz v3, :cond_6
+
+    invoke-interface {v3}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    move-object v0, v6
+
+    move-object v1, v6
+
+    .line 133
     :goto_3
-    const-string/jumbo v1, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+    invoke-interface {v3}, Landroid/database/Cursor;->isAfterLast()Z
+
+    move-result v2
+
+    if-nez v2, :cond_7
+
+    .line 134
+    const-string/jumbo v0, "data1"
+
+    invoke-interface {v3, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 135
+    const-string/jumbo v2, "display_name"
+
+    invoke-interface {v3, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
+
+    move-result v2
+
+    .line 136
+    invoke-interface {v3, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 137
+    invoke-interface {v3, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 138
+    const-string/jumbo v4, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
 
     new-instance v5, Ljava/lang/StringBuilder;
 
-    const-string/jumbo v7, "phoneResult : "
+    const-string/jumbo v8, "username : "
 
-    invoke-direct {v5, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    invoke-direct {v5, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 139
+    if-eqz v0, :cond_c
+
+    .line 140
+    const-string/jumbo v4, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v8, "phoneNumber : "
+
+    invoke-direct {v5, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -246,137 +230,222 @@
 
     move-result-object v5
 
-    invoke-static {v1, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 118
+    .line 141
+    if-nez v0, :cond_5
+
+    move-object v0, v6
+
+    .line 142
+    :cond_4
     :goto_4
-    invoke-interface {v4}, Landroid/database/Cursor;->moveToNext()Z
+    const-string/jumbo v4, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    new-instance v5, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v8, "phoneNumber : "
+
+    invoke-direct {v5, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v5, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v5
+
+    invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 143
+    invoke-static {v0}, Landroid/telephony/PhoneNumberUtils;->isGlobalPhoneNumber(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_b
+
+    .line 146
+    :goto_5
+    const-string/jumbo v1, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v5, "phoneResult : "
+
+    invoke-direct {v4, v5}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v4, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-static {v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 133
+    :goto_6
+    invoke-interface {v3}, Landroid/database/Cursor;->moveToNext()Z
 
     move-object v1, v0
 
-    move-object v0, v3
+    move-object v0, v2
+
+    goto/16 :goto_3
+
+    .line 113
+    :catch_0
+    move-exception v0
+
+    .line 114
+    const-string/jumbo v1, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    const-string/jumbo v2, "getContactsInfo1:"
+
+    new-array v3, v9, [Ljava/lang/Object;
+
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move-object v7, v6
 
     goto/16 :goto_1
 
-    .line 126
-    :cond_4
-    const-string/jumbo v5, "\\D"
+    .line 128
+    :catch_1
+    move-exception v0
 
-    const-string/jumbo v7, ""
+    .line 129
+    const-string/jumbo v1, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
 
-    invoke-virtual {v0, v5, v7}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    const-string/jumbo v2, "getContactsInfo2:"
 
-    move-result-object v0
+    new-array v3, v9, [Ljava/lang/Object;
 
-    const-string/jumbo v5, "86"
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {v0, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+    move-object v3, v6
 
-    move-result v5
-
-    if-eqz v5, :cond_3
-
-    invoke-virtual {v0, v9}, Ljava/lang/String;->substring(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_2
-
-    :cond_5
-    move-object v0, v2
-
-    move-object v1, v2
-
-    .line 135
-    :cond_6
-    if-eqz v4, :cond_7
-
-    invoke-interface {v4}, Landroid/database/Cursor;->isClosed()Z
-
-    move-result v3
-
-    if-nez v3, :cond_7
-
-    .line 136
-    invoke-interface {v4}, Landroid/database/Cursor;->close()V
-
-    .line 140
-    :cond_7
-    :goto_5
-    invoke-interface {v6}, Landroid/database/Cursor;->isClosed()Z
-
-    move-result v3
-
-    if-nez v3, :cond_8
+    goto/16 :goto_2
 
     .line 141
-    invoke-interface {v6}, Landroid/database/Cursor;->close()V
+    :cond_5
+    const-string/jumbo v4, "\\D"
 
-    .line 145
+    const-string/jumbo v5, ""
+
+    invoke-virtual {v0, v4, v5}, Ljava/lang/String;->replaceAll(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v4, "86"
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v4
+
+    if-eqz v4, :cond_4
+
+    invoke-virtual {v0, v10}, Ljava/lang/String;->substring(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_4
+
+    :cond_6
+    move-object v0, v6
+
+    move-object v1, v6
+
+    .line 150
+    :cond_7
+    if-eqz v3, :cond_8
+
+    invoke-interface {v3}, Landroid/database/Cursor;->isClosed()Z
+
+    move-result v2
+
+    if-nez v2, :cond_8
+
+    .line 151
+    invoke-interface {v3}, Landroid/database/Cursor;->close()V
+
+    .line 155
     :cond_8
-    :goto_6
+    :goto_7
+    invoke-interface {v7}, Landroid/database/Cursor;->isClosed()Z
+
+    move-result v2
+
+    if-nez v2, :cond_9
+
+    .line 156
+    invoke-interface {v7}, Landroid/database/Cursor;->close()V
+
+    .line 160
+    :cond_9
+    :goto_8
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v3
+    move-result v2
 
-    if-eqz v3, :cond_9
+    if-eqz v2, :cond_a
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v3
+    move-result v2
 
-    if-nez v3, :cond_0
+    if-nez v2, :cond_0
 
-    .line 149
-    :cond_9
-    new-array v2, v9, [Ljava/lang/String;
+    .line 164
+    :cond_a
+    new-array v6, v10, [Ljava/lang/String;
 
-    const/4 v3, 0x0
-
-    aput-object v0, v2, v3
+    aput-object v0, v6, v9
 
     const/4 v0, 0x1
 
-    aput-object v1, v2, v0
+    aput-object v1, v6, v0
 
     goto/16 :goto_0
-
-    :cond_a
-    move-object v0, v1
-
-    goto :goto_3
 
     :cond_b
     move-object v0, v1
 
-    goto :goto_4
-
-    :cond_c
-    move-object v0, v2
-
-    move-object v1, v2
-
     goto :goto_5
 
-    :cond_d
-    move-object v0, v2
-
-    move-object v1, v2
+    :cond_c
+    move-object v0, v1
 
     goto :goto_6
+
+    :cond_d
+    move-object v0, v6
+
+    move-object v1, v6
+
+    goto :goto_7
+
+    :cond_e
+    move-object v0, v6
+
+    move-object v1, v6
+
+    goto :goto_8
 .end method
 
-.method public static ayo()Landroid/net/Uri;
+.method public static aOR()Landroid/net/Uri;
     .locals 1
 
     .prologue
-    .line 435
+    .line 505
     :try_start_0
     sget-object v0, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 440
+    .line 510
     :goto_0
     return-object v0
 
@@ -388,17 +457,121 @@
     goto :goto_0
 .end method
 
+.method public static b(Ljava/lang/String;Landroid/content/Context;Z)Landroid/graphics/Bitmap;
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x1
+
+    const/4 v1, 0x0
+
+    .line 518
+    if-eqz p0, :cond_0
+
+    const-string/jumbo v0, ""
+
+    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    :cond_0
+    move-object v0, v1
+
+    .line 537
+    :cond_1
+    :goto_0
+    return-object v0
+
+    .line 521
+    :cond_2
+    invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
+
+    move-result-object v0
+
+    .line 522
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+
+    move-result-wide v2
+
+    .line 526
+    sget-object v4, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
+
+    invoke-static {v4, v2, v3}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
+
+    move-result-object v2
+
+    .line 527
+    invoke-static {v0, v2, p2}, Landroid/provider/ContactsContract$Contacts;->openContactPhotoInputStream(Landroid/content/ContentResolver;Landroid/net/Uri;Z)Ljava/io/InputStream;
+
+    move-result-object v0
+
+    .line 528
+    if-nez v0, :cond_3
+
+    move-object v0, v1
+
+    .line 529
+    goto :goto_0
+
+    .line 530
+    :cond_3
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
+
+    move-result-object v0
+
+    .line 531
+    if-eqz v0, :cond_1
+
+    .line 532
+    const/4 v2, 0x1
+
+    const/high16 v3, 0x40800000    # 4.0f
+
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/d;->a(Landroid/graphics/Bitmap;ZF)Landroid/graphics/Bitmap;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result-object v0
+
+    goto :goto_0
+
+    .line 535
+    :catch_0
+    move-exception v0
+
+    .line 536
+    const-string/jumbo v2, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    const-string/jumbo v3, "getAvatar, contactId:%s"
+
+    new-array v4, v5, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    aput-object p0, v4, v5
+
+    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move-object v0, v1
+
+    .line 537
+    goto :goto_0
+.end method
+
 .method public static b(Ljava/lang/String;Landroid/content/Context;[B)Z
     .locals 13
 
     .prologue
     const/4 v8, 0x0
 
-    const/4 v6, 0x1
+    const/4 v7, 0x1
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
-    .line 466
+    .line 542
     if-eqz p0, :cond_0
 
     const-string/jumbo v0, ""
@@ -410,33 +583,55 @@
     if-eqz v0, :cond_1
 
     :cond_0
-    move v0, v7
+    move v0, v6
 
-    .line 503
+    .line 583
     :goto_0
     return v0
 
-    .line 472
+    .line 546
     :cond_1
+    const-string/jumbo v0, "android.permission.READ_CONTACTS"
+
+    invoke-static {p1, v0}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    .line 547
+    const-string/jumbo v0, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    const-string/jumbo v1, "no contact permission"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    move v0, v6
+
+    .line 548
+    goto :goto_0
+
+    .line 552
+    :cond_2
     :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 473
+    .line 553
     invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
 
     move-result-wide v10
 
-    .line 476
+    .line 556
     new-instance v12, Landroid/content/ContentValues;
 
     invoke-direct {v12}, Landroid/content/ContentValues;-><init>()V
 
-    .line 477
+    .line 557
     const/4 v9, -0x1
 
-    .line 478
+    .line 558
     const-string/jumbo v1, "%s=%d and %s=\'%s\'"
 
     const/4 v2, 0x4
@@ -473,7 +668,7 @@
 
     move-result-object v3
 
-    .line 479
+    .line 559
     const-string/jumbo v1, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
 
     const-string/jumbo v2, "where is %s"
@@ -486,9 +681,9 @@
 
     aput-object v3, v4, v5
 
-    invoke-static {v1, v2, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 480
+    .line 560
     sget-object v1, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
     const/4 v2, 0x0
@@ -503,7 +698,7 @@
 
     move-result-object v1
 
-    .line 481
+    .line 561
     :try_start_1
     const-string/jumbo v2, "_id"
 
@@ -511,23 +706,23 @@
 
     move-result v2
 
-    .line 482
+    .line 562
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v3
 
-    if-eqz v3, :cond_5
+    if-eqz v3, :cond_6
 
-    .line 483
+    .line 563
     invoke-interface {v1, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v2
 
-    .line 485
+    .line 565
     :goto_1
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    .line 487
+    .line 567
     const-string/jumbo v3, "raw_contact_id"
 
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -536,7 +731,7 @@
 
     invoke-virtual {v12, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 488
+    .line 568
     const-string/jumbo v3, "is_super_primary"
 
     const/4 v4, 0x1
@@ -547,22 +742,22 @@
 
     invoke-virtual {v12, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 489
+    .line 569
     const-string/jumbo v3, "data15"
 
     invoke-virtual {v12, v3, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;[B)V
 
-    .line 490
+    .line 570
     const-string/jumbo v3, "mimetype"
 
     const-string/jumbo v4, "vnd.android.cursor.item/photo"
 
     invoke-virtual {v12, v3, v4}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 492
-    if-ltz v2, :cond_3
+    .line 572
+    if-ltz v2, :cond_4
 
-    .line 493
+    .line 573
     sget-object v3, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -585,55 +780,55 @@
 
     move-result v0
 
-    if-lez v0, :cond_2
+    if-lez v0, :cond_3
 
-    move v0, v6
-
-    goto/16 :goto_0
-
-    :cond_2
     move v0, v7
 
     goto/16 :goto_0
 
-    .line 495
     :cond_3
+    move v0, v6
+
+    goto/16 :goto_0
+
+    .line 575
+    :cond_4
     sget-object v2, Landroid/provider/ContactsContract$Data;->CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0, v2, v12}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    move v0, v6
+    move v0, v7
 
-    .line 496
+    .line 576
     goto/16 :goto_0
 
-    .line 499
+    .line 579
     :catch_0
     move-exception v0
 
     move-object v0, v8
 
     :goto_2
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_5
 
     invoke-interface {v0}, Landroid/database/Cursor;->isClosed()Z
 
     move-result v1
 
-    if-nez v1, :cond_4
+    if-nez v1, :cond_5
 
-    .line 501
+    .line 581
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
-    :cond_4
-    move v0, v7
+    :cond_5
+    move v0, v6
 
-    .line 503
+    .line 583
     goto/16 :goto_0
 
-    .line 499
+    .line 579
     :catch_1
     move-exception v0
 
@@ -641,13 +836,13 @@
 
     goto :goto_2
 
-    :cond_5
+    :cond_6
     move v2, v9
 
     goto :goto_1
 .end method
 
-.method public static cf(Landroid/content/Context;)Ljava/util/List;
+.method public static cD(Landroid/content/Context;)Ljava/util/List;
     .locals 11
 
     .prologue
@@ -657,17 +852,40 @@
 
     const/4 v7, 0x0
 
-    .line 206
+    .line 230
     new-instance v6, Ljava/util/LinkedList;
 
     invoke-direct {v6}, Ljava/util/LinkedList;-><init>()V
 
-    .line 208
+    .line 232
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 212
+    .line 233
+    const-string/jumbo v1, "android.permission.READ_CONTACTS"
+
+    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 234
+    const-string/jumbo v0, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    const-string/jumbo v1, "no contact permission"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object v0, v6
+
+    .line 267
+    :goto_0
+    return-object v0
+
+    .line 239
+    :cond_0
     :try_start_0
     sget-object v1, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
@@ -685,28 +903,27 @@
 
     move-result-object v0
 
-    .line 215
-    :goto_0
-    if-nez v0, :cond_0
+    .line 242
+    :goto_1
+    if-nez v0, :cond_1
 
-    .line 218
+    .line 245
     const-string/jumbo v0, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
 
     const-string/jumbo v1, "getMobileInfo: mobile is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v6
 
-    .line 240
-    :goto_1
-    return-object v0
+    .line 246
+    goto :goto_0
 
-    .line 213
+    .line 240
     :catch_0
     move-exception v0
 
-    .line 214
+    .line 241
     const-string/jumbo v1, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
 
     const-string/jumbo v2, "getMobileInfo: exception occured [%s]"
@@ -719,29 +936,29 @@
 
     aput-object v0, v3, v9
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     move-object v0, v7
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 221
-    :cond_0
+    .line 248
+    :cond_1
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
     move-result v1
 
-    if-lez v1, :cond_1
+    if-lez v1, :cond_2
 
-    .line 222
+    .line 249
     :goto_2
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    .line 223
+    .line 250
     const-string/jumbo v1, "display_name"
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -752,7 +969,7 @@
 
     move-result-object v1
 
-    .line 224
+    .line 251
     const-string/jumbo v2, "contact_id"
 
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -763,7 +980,7 @@
 
     move-result-object v2
 
-    .line 225
+    .line 252
     const-string/jumbo v3, "data1"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -774,7 +991,7 @@
 
     move-result-object v3
 
-    .line 226
+    .line 253
     const-string/jumbo v4, "raw_contact_id"
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -785,7 +1002,7 @@
 
     move-result-object v4
 
-    .line 227
+    .line 254
     const-string/jumbo v5, "photo_id"
 
     invoke-interface {v0, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -800,28 +1017,28 @@
 
     move-result-object v5
 
-    .line 229
+    .line 256
     const/4 v7, 0x5
 
     new-array v7, v7, [Ljava/lang/String;
 
-    .line 230
+    .line 257
     aput-object v2, v7, v9
 
-    .line 231
+    .line 258
     aput-object v1, v7, v10
 
-    .line 232
+    .line 259
     const/4 v1, 0x2
 
     aput-object v3, v7, v1
 
-    .line 233
+    .line 260
     const/4 v1, 0x3
 
     aput-object v4, v7, v1
 
-    .line 234
+    .line 261
     const/4 v1, 0x4
 
     invoke-static {v5}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
@@ -830,22 +1047,22 @@
 
     aput-object v2, v7, v1
 
-    .line 235
+    .line 262
     invoke-interface {v6, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 239
-    :cond_1
+    .line 266
+    :cond_2
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     move-object v0, v6
 
-    .line 240
-    goto :goto_1
+    .line 267
+    goto/16 :goto_0
 .end method
 
-.method public static cg(Landroid/content/Context;)Ljava/util/List;
+.method public static cE(Landroid/content/Context;)Ljava/util/List;
     .locals 10
 
     .prologue
@@ -855,17 +1072,40 @@
 
     const/4 v7, 0x0
 
-    .line 244
+    .line 271
     new-instance v6, Ljava/util/LinkedList;
 
     invoke-direct {v6}, Ljava/util/LinkedList;-><init>()V
 
-    .line 246
+    .line 273
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 248
+    .line 275
+    const-string/jumbo v1, "android.permission.READ_CONTACTS"
+
+    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 277
+    const-string/jumbo v0, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    const-string/jumbo v1, "no contact permission"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object v0, v6
+
+    .line 309
+    :goto_0
+    return-object v0
+
+    .line 281
+    :cond_0
     :try_start_0
     sget-object v1, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
@@ -883,28 +1123,27 @@
 
     move-result-object v0
 
-    .line 257
-    :goto_0
-    if-nez v0, :cond_0
+    .line 288
+    :goto_1
+    if-nez v0, :cond_1
 
-    .line 258
+    .line 289
     const-string/jumbo v0, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
 
     const-string/jumbo v1, "getMobileInfo: mobile is null"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v6
 
-    .line 278
-    :goto_1
-    return-object v0
+    .line 290
+    goto :goto_0
 
-    .line 251
+    .line 282
     :catch_0
     move-exception v1
 
-    .line 252
+    .line 283
     const-string/jumbo v2, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
 
     const-string/jumbo v3, "exception in getMoblieOrderInfo(), [%s]"
@@ -917,9 +1156,9 @@
 
     aput-object v1, v4, v8
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 254
+    .line 285
     sget-object v1, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
     move-object v2, v7
@@ -934,25 +1173,25 @@
 
     move-result-object v0
 
-    goto :goto_0
+    goto :goto_1
 
-    .line 261
-    :cond_0
+    .line 292
+    :cond_1
     invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
 
     move-result v1
 
-    if-lez v1, :cond_1
+    if-lez v1, :cond_2
 
-    .line 262
+    .line 293
     :goto_2
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v1
 
-    if-eqz v1, :cond_1
+    if-eqz v1, :cond_2
 
-    .line 263
+    .line 294
     const-string/jumbo v1, "display_name"
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -963,7 +1202,7 @@
 
     move-result-object v1
 
-    .line 264
+    .line 295
     const-string/jumbo v2, "contact_id"
 
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -974,7 +1213,7 @@
 
     move-result-object v2
 
-    .line 265
+    .line 296
     const-string/jumbo v3, "data1"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -985,7 +1224,7 @@
 
     move-result-object v3
 
-    .line 266
+    .line 297
     const-string/jumbo v4, "raw_contact_id"
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -996,59 +1235,82 @@
 
     move-result-object v4
 
-    .line 268
+    .line 299
     const/4 v5, 0x4
 
     new-array v5, v5, [Ljava/lang/String;
 
-    .line 269
+    .line 300
     aput-object v2, v5, v8
 
-    .line 270
+    .line 301
     aput-object v1, v5, v9
 
-    .line 271
+    .line 302
     const/4 v1, 0x2
 
     aput-object v3, v5, v1
 
-    .line 272
+    .line 303
     const/4 v1, 0x3
 
     aput-object v4, v5, v1
 
-    .line 273
+    .line 304
     invoke-interface {v6, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto :goto_2
 
-    .line 277
-    :cond_1
+    .line 308
+    :cond_2
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
 
     move-object v0, v6
 
-    .line 278
-    goto :goto_1
+    .line 309
+    goto/16 :goto_0
 .end method
 
-.method public static ch(Landroid/content/Context;)Ljava/util/List;
+.method public static cF(Landroid/content/Context;)Ljava/util/List;
     .locals 10
 
     .prologue
     const/4 v9, 0x0
 
-    .line 282
+    .line 313
     new-instance v6, Ljava/util/LinkedList;
 
     invoke-direct {v6}, Ljava/util/LinkedList;-><init>()V
 
-    .line 283
+    .line 314
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 285
+    .line 316
+    const-string/jumbo v1, "android.permission.READ_CONTACTS"
+
+    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 318
+    const-string/jumbo v0, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    const-string/jumbo v1, "no contact permission"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object v0, v6
+
+    .line 350
+    :goto_0
+    return-object v0
+
+    .line 322
+    :cond_0
     :try_start_0
     sget-object v1, Landroid/provider/ContactsContract$CommonDataKinds$Email;->CONTENT_URI:Landroid/net/Uri;
 
@@ -1064,25 +1326,24 @@
 
     move-result-object v0
 
-    .line 289
-    if-nez v0, :cond_0
+    .line 324
+    if-nez v0, :cond_1
 
     move-object v0, v6
 
-    .line 315
-    :goto_0
-    return-object v0
+    .line 325
+    goto :goto_0
 
-    .line 293
-    :cond_0
+    .line 328
+    :cond_1
     invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v1
 
-    if-eqz v1, :cond_2
+    if-eqz v1, :cond_3
 
-    .line 295
-    :cond_1
+    .line 330
+    :cond_2
     const-string/jumbo v1, "data1"
 
     invoke-interface {v0, v1}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1093,7 +1354,7 @@
 
     move-result-object v1
 
-    .line 296
+    .line 331
     const-string/jumbo v2, "contact_id"
 
     invoke-interface {v0, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1104,7 +1365,7 @@
 
     move-result-object v2
 
-    .line 297
+    .line 332
     const-string/jumbo v3, "data4"
 
     invoke-interface {v0, v3}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1115,7 +1376,7 @@
 
     move-result-object v3
 
-    .line 298
+    .line 333
     const-string/jumbo v4, "raw_contact_id"
 
     invoke-interface {v0, v4}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1126,7 +1387,7 @@
 
     move-result-object v4
 
-    .line 299
+    .line 334
     const-string/jumbo v5, "photo_id"
 
     invoke-interface {v0, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1137,48 +1398,48 @@
 
     move-result-object v5
 
-    .line 300
+    .line 335
     const/4 v7, 0x5
 
     new-array v7, v7, [Ljava/lang/String;
 
-    .line 301
+    .line 336
     const/4 v8, 0x0
 
     aput-object v2, v7, v8
 
-    .line 302
+    .line 337
     const/4 v2, 0x1
 
     aput-object v3, v7, v2
 
-    .line 303
+    .line 338
     const/4 v2, 0x2
 
     aput-object v1, v7, v2
 
-    .line 304
+    .line 339
     const/4 v1, 0x3
 
     aput-object v4, v7, v1
 
-    .line 305
+    .line 340
     const/4 v1, 0x4
 
     aput-object v5, v7, v1
 
-    .line 306
+    .line 341
     invoke-interface {v6, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 307
+    .line 342
     invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
 
     move-result v1
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
-    .line 309
-    :cond_2
+    .line 344
+    :cond_3
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
@@ -1186,42 +1447,65 @@
     :goto_1
     move-object v0, v6
 
-    .line 315
+    .line 350
     goto :goto_0
 
-    .line 311
+    .line 346
     :catch_0
     move-exception v0
 
-    .line 312
+    .line 347
     const-string/jumbo v1, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
 
     const-string/jumbo v2, "getEmailInfo"
 
     new-array v3, v9, [Ljava/lang/Object;
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_1
 .end method
 
-.method public static ci(Landroid/content/Context;)Ljava/util/List;
+.method public static cG(Landroid/content/Context;)Ljava/util/List;
     .locals 8
 
     .prologue
     const/4 v7, 0x0
 
-    .line 357
+    .line 405
     new-instance v6, Ljava/util/LinkedList;
 
     invoke-direct {v6}, Ljava/util/LinkedList;-><init>()V
 
-    .line 358
+    .line 406
     invoke-virtual {p0}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 362
+    .line 409
+    const-string/jumbo v1, "android.permission.READ_CONTACTS"
+
+    invoke-static {p0, v1}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 410
+    const-string/jumbo v0, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    const-string/jumbo v1, "no contact permission"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    move-object v0, v6
+
+    .line 436
+    :goto_0
+    return-object v0
+
+    .line 414
+    :cond_0
     :try_start_0
     sget-object v1, Landroid/provider/ContactsContract$CommonDataKinds$Phone;->CONTENT_URI:Landroid/net/Uri;
 
@@ -1240,44 +1524,42 @@
 
     move-result-object v1
 
-    .line 364
-    if-nez v1, :cond_1
+    .line 416
+    if-nez v1, :cond_2
 
-    .line 365
+    .line 417
     :try_start_1
     const-string/jumbo v0, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
 
     const-string/jumbo v2, "getPhonesCursor: cursor is null."
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 380
-    if-eqz v1, :cond_0
+    .line 432
+    if-eqz v1, :cond_1
 
-    .line 381
+    .line 433
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    :cond_0
+    :cond_1
     move-object v0, v6
 
-    .line 384
-    :goto_0
-    return-object v0
+    goto :goto_0
 
-    .line 369
-    :cond_1
+    .line 421
+    :cond_2
     :try_start_2
     invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
 
     move-result v0
 
-    if-eqz v0, :cond_3
+    if-eqz v0, :cond_4
 
-    .line 371
-    :cond_2
+    .line 423
+    :cond_3
     const-string/jumbo v0, "data1"
 
     invoke-interface {v1, v0}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -1288,10 +1570,10 @@
 
     move-result-object v0
 
-    .line 372
+    .line 424
     invoke-interface {v6, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 373
+    .line 425
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
@@ -1299,29 +1581,29 @@
 
     move-result v0
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_3
 
-    .line 380
-    :cond_3
-    if-eqz v1, :cond_4
+    .line 432
+    :cond_4
+    if-eqz v1, :cond_5
 
-    .line 381
+    .line 433
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    :cond_4
+    :cond_5
     :goto_1
     move-object v0, v6
 
-    .line 384
+    .line 436
     goto :goto_0
 
-    .line 376
+    .line 428
     :catch_0
     move-exception v0
 
     move-object v1, v7
 
-    .line 377
+    .line 429
     :goto_2
     :try_start_3
     const-string/jumbo v2, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
@@ -1340,160 +1622,184 @@
 
     aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_3
     .catchall {:try_start_3 .. :try_end_3} :catchall_1
 
-    .line 378
-    if-eqz v1, :cond_4
+    .line 430
+    if-eqz v1, :cond_5
 
-    .line 381
+    .line 433
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
     goto :goto_1
 
-    .line 380
+    .line 432
     :catchall_0
     move-exception v0
 
     move-object v1, v7
 
     :goto_3
-    if-eqz v1, :cond_5
+    if-eqz v1, :cond_6
 
-    .line 381
+    .line 433
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
 
-    :cond_5
+    :cond_6
     throw v0
 
-    .line 380
+    .line 432
     :catchall_1
     move-exception v0
 
     goto :goto_3
 
-    .line 376
+    .line 428
     :catch_1
     move-exception v0
 
     goto :goto_2
 .end method
 
-.method public static h(Ljava/lang/String;Landroid/content/Context;)Landroid/graphics/Bitmap;
-    .locals 6
+.method public static g(Ljava/lang/String;Landroid/content/Context;)Ljava/lang/String;
+    .locals 9
 
     .prologue
-    const/4 v1, 0x0
+    const/4 v7, 0x0
 
-    const/4 v5, 0x1
+    const/4 v8, 0x0
 
-    .line 444
-    if-eqz p0, :cond_0
+    .line 480
+    const-string/jumbo v6, ""
 
-    const-string/jumbo v0, ""
+    .line 482
+    const-string/jumbo v0, "android.permission.READ_CONTACTS"
 
-    invoke-virtual {p0, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+    invoke-static {p1, v0}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-nez v0, :cond_1
 
+    .line 483
+    const-string/jumbo v0, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    const-string/jumbo v1, "no contact permission"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 500
     :cond_0
-    move-object v0, v1
-
-    .line 461
-    :cond_1
     :goto_0
-    return-object v0
+    return-object v6
 
-    .line 447
-    :cond_2
+    .line 487
+    :cond_1
+    :try_start_0
     invoke-virtual {p1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
 
-    .line 448
-    :try_start_0
-    invoke-static {p0}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
+    sget-object v1, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
 
-    move-result-wide v2
-
-    .line 452
-    sget-object v4, Landroid/provider/ContactsContract$Contacts;->CONTENT_URI:Landroid/net/Uri;
-
-    invoke-static {v4, v2, v3}, Landroid/content/ContentUris;->withAppendedId(Landroid/net/Uri;J)Landroid/net/Uri;
-
-    move-result-object v2
-
-    .line 453
-    invoke-static {v0, v2}, Landroid/provider/ContactsContract$Contacts;->openContactPhotoInputStream(Landroid/content/ContentResolver;Landroid/net/Uri;)Ljava/io/InputStream;
-
-    move-result-object v0
-
-    .line 454
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/e;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    .line 455
-    if-eqz v0, :cond_1
-
-    .line 456
     const/4 v2, 0x1
 
-    const/high16 v3, 0x40800000    # 4.0f
+    new-array v2, v2, [Ljava/lang/String;
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/e;->a(Landroid/graphics/Bitmap;ZF)Landroid/graphics/Bitmap;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const/4 v3, 0x0
 
-    move-result-object v0
+    const-string/jumbo v4, "display_name"
 
-    goto :goto_0
+    aput-object v4, v2, v3
 
-    .line 459
-    :catch_0
-    move-exception v0
+    const-string/jumbo v3, "_id = ?"
 
-    .line 460
-    const-string/jumbo v2, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+    const/4 v4, 0x1
 
-    const-string/jumbo v3, "getAvatar, contactId:%s"
-
-    new-array v4, v5, [Ljava/lang/Object;
+    new-array v4, v4, [Ljava/lang/String;
 
     const/4 v5, 0x0
 
     aput-object p0, v4, v5
 
-    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v5, 0x0
 
-    move-object v0, v1
+    invoke-virtual/range {v0 .. v5}, Landroid/content/ContentResolver;->query(Landroid/net/Uri;[Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;Ljava/lang/String;)Landroid/database/Cursor;
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 461
+    move-result-object v0
+
+    move-object v1, v0
+
+    .line 492
+    :goto_1
+    if-eqz v1, :cond_0
+
+    .line 496
+    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 497
+    invoke-interface {v1, v8}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 499
+    :goto_2
+    invoke-interface {v1}, Landroid/database/Cursor;->close()V
+
+    move-object v6, v0
+
+    .line 500
     goto :goto_0
+
+    .line 488
+    :catch_0
+    move-exception v0
+
+    .line 489
+    const-string/jumbo v1, "!44@/B4Tb64lLpJvPADYHZ60V7vMtEyCa8ns0dH9+bQxd4o="
+
+    const-string/jumbo v2, "getContactNameById:"
+
+    new-array v3, v8, [Ljava/lang/Object;
+
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    move-object v1, v7
+
+    goto :goto_1
+
+    :cond_2
+    move-object v0, v6
+
+    goto :goto_2
 .end method
 
-.method public static oV(Ljava/lang/String;)Ljava/lang/String;
+.method public static sy(Ljava/lang/String;)Ljava/lang/String;
     .locals 4
 
     .prologue
     const/4 v3, 0x1
 
-    .line 70
+    .line 72
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 71
+    .line 73
     const-string/jumbo v1, "+"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
 
-    .line 73
+    .line 75
     if-eqz v1, :cond_0
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I
@@ -1502,7 +1808,7 @@
 
     if-le v2, v3, :cond_0
 
-    .line 74
+    .line 76
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v2
@@ -1511,24 +1817,24 @@
 
     move-result-object v0
 
-    .line 76
+    .line 78
     :cond_0
     const-string/jumbo v2, "[^0-9]"
 
-    .line 79
+    .line 81
     invoke-static {v2}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v2
 
-    .line 80
+    .line 82
     invoke-virtual {v2, v0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 82
+    .line 84
     if-eqz v1, :cond_1
 
-    .line 83
+    .line 85
     new-instance v1, Ljava/lang/StringBuilder;
 
     const-string/jumbo v2, "+"
@@ -1553,11 +1859,11 @@
 
     move-result-object v0
 
-    .line 87
+    .line 89
     :goto_0
     return-object v0
 
-    .line 85
+    .line 87
     :cond_1
     const-string/jumbo v1, ""
 
@@ -1572,21 +1878,21 @@
     goto :goto_0
 .end method
 
-.method public static tQ(Ljava/lang/String;)Z
+.method public static zo(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
-    .line 37
+    .line 39
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
     move-result v0
 
     if-gtz v0, :cond_0
 
-    .line 38
+    .line 40
     const/4 v0, 0x0
 
-    .line 41
+    .line 43
     :goto_0
     return v0
 

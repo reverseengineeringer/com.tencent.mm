@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field final synthetic iRp:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
+.field final synthetic kQj:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
 
-.field public iRr:Lcom/tencent/mm/ui/MMImageView;
+.field public kQl:Lcom/tencent/mm/ui/MMImageView;
 
-.field public iRs:Landroid/widget/TextView;
+.field public kQm:Landroid/widget/TextView;
 
-.field public iRt:Landroid/widget/TextView;
+.field public kQn:Landroid/widget/TextView;
 
-.field public iRu:Landroid/widget/TextView;
+.field public kQo:Landroid/widget/TextView;
 
 
 # direct methods
@@ -31,8 +31,8 @@
     .locals 0
 
     .prologue
-    .line 231
-    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$d;->iRp:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
+    .line 232
+    iput-object p1, p0, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$d;->kQj:Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     .locals 0
 
     .prologue
-    .line 231
+    .line 232
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/chatting/AppAttachFileListUI$d;-><init>(Lcom/tencent/mm/ui/chatting/AppAttachFileListUI;)V
 
     return-void

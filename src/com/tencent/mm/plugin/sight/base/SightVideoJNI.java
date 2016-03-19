@@ -2,7 +2,7 @@ package com.tencent.mm.plugin.sight.base;
 
 import android.graphics.Bitmap;
 import android.view.Surface;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 import java.nio.ByteBuffer;
 
 public class SightVideoJNI
@@ -11,11 +11,11 @@ public class SightVideoJNI
   public static final int TYPE_BITMAP = 1;
   public static final int TYPE_SURFACE = 0;
   
-  public static native int drawFrame(int paramInt1, Bitmap paramBitmap1, int paramInt2, Bitmap paramBitmap2, boolean paramBoolean);
+  public static native int drawFrame(int paramInt1, Bitmap paramBitmap1, int paramInt2, Bitmap paramBitmap2, boolean paramBoolean1, boolean paramBoolean2);
   
   public static native int drawSurfaceColor(Surface paramSurface, int paramInt);
   
-  public static native int drawSurfaceFrame(int paramInt1, Surface paramSurface, int paramInt2, Bitmap paramBitmap);
+  public static native int drawSurfaceFrame(int paramInt1, Surface paramSurface, int paramInt2, Bitmap paramBitmap, boolean paramBoolean);
   
   public static native int drawSurfaceThumb(Surface paramSurface, Bitmap paramBitmap1, Bitmap paramBitmap2);
   
@@ -37,6 +37,8 @@ public class SightVideoJNI
   
   public static native String getVideoInfo(int paramInt);
   
+  public static native double getVideoPlayTime(int paramInt);
+  
   public static native double getVideoRate(int paramInt);
   
   public static native double getVideoStartTime(int paramInt);
@@ -54,7 +56,7 @@ public class SightVideoJNI
   public static int initDataBufferRef(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6, int paramInt7, float paramFloat1, int paramInt8, int paramInt9, int paramInt10, int paramInt11, float paramFloat2, int paramInt12)
   {
     paramInt1 = initDataBuffer(paramInt1, paramInt2, paramInt3, paramInt4, paramInt5, paramInt6, paramInt7, paramFloat1, paramInt8, paramInt9, paramInt10, paramInt11, paramFloat2, paramInt12);
-    t.d("!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF", "ashutest::call initDataBuffer, ret %d", new Object[] { Integer.valueOf(paramInt1) });
+    u.d("!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF", "ashutest::call initDataBuffer, ret %d", new Object[] { Integer.valueOf(paramInt1) });
     return paramInt1;
   }
   
@@ -72,7 +74,7 @@ public class SightVideoJNI
   
   public static void releaseDataBufferRef(int paramInt)
   {
-    t.d("!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF", "ashutest::call release dataBufferRef %d", new Object[] { Integer.valueOf(paramInt) });
+    u.d("!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF", "ashutest::call release dataBufferRef %d", new Object[] { Integer.valueOf(paramInt) });
     releaseDataBuffer(paramInt);
   }
   
@@ -80,11 +82,13 @@ public class SightVideoJNI
   
   public static void releaseRecorderBufferRef(String paramString)
   {
-    t.d("!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF", "ashutest::call release recorder buffer, %s", new Object[] { paramString });
+    u.d("!32@/B4Tb64lLpJtjoEZ/uIRrTTiblOUU+JF", "ashutest::call release recorder buffer, %s", new Object[] { paramString });
     releaseRecorderBuffer();
   }
   
   public static native int remuxing(String paramString1, String paramString2, int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5, int paramInt6, float paramFloat);
+  
+  public static native int seekStream(double paramDouble, int paramInt);
   
   public static native int shouldRemuxing(String paramString, int paramInt1, int paramInt2, int paramInt3, double paramDouble, int paramInt4);
   

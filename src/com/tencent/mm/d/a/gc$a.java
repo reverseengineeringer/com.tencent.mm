@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class gc$a
 {
-  public int state = 0;
+  public String asJ;
 }
 
 /* Location:

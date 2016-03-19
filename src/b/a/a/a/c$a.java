@@ -3,12 +3,12 @@ package b.a.a.a;
 public class c$a
   extends c
 {
-  public final String aVO()
+  public final String boD()
   {
     return "https://api.twitter.com/oauth/request_token";
   }
   
-  public final String aVP()
+  public final String boE()
   {
     return "https://api.twitter.com/oauth/access_token";
   }

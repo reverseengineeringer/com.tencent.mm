@@ -1,49 +1,47 @@
 package android.support.v4.view;
 
-import android.view.View;
-import android.view.View.AccessibilityDelegate;
-import android.view.ViewGroup;
-import android.view.accessibility.AccessibilityEvent;
-import android.view.accessibility.AccessibilityNodeInfo;
+import android.os.Build.VERSION;
+import android.view.Gravity;
 
-final class e
-  extends View.AccessibilityDelegate
+public final class e
 {
-  e(d.a parama) {}
+  static final a eB = new b();
   
-  public final boolean dispatchPopulateAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  static
   {
-    return fq.dispatchPopulateAccessibilityEvent(paramView, paramAccessibilityEvent);
+    if (Build.VERSION.SDK_INT >= 17)
+    {
+      eB = new c();
+      return;
+    }
   }
   
-  public final void onInitializeAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  public static int getAbsoluteGravity(int paramInt1, int paramInt2)
   {
-    fq.onInitializeAccessibilityEvent(paramView, paramAccessibilityEvent);
+    return eB.getAbsoluteGravity(paramInt1, paramInt2);
   }
   
-  public final void onInitializeAccessibilityNodeInfo(View paramView, AccessibilityNodeInfo paramAccessibilityNodeInfo)
+  static abstract interface a
   {
-    fq.b(paramView, paramAccessibilityNodeInfo);
+    public abstract int getAbsoluteGravity(int paramInt1, int paramInt2);
   }
   
-  public final void onPopulateAccessibilityEvent(View paramView, AccessibilityEvent paramAccessibilityEvent)
+  static final class b
+    implements e.a
   {
-    fq.onPopulateAccessibilityEvent(paramView, paramAccessibilityEvent);
+    public final int getAbsoluteGravity(int paramInt1, int paramInt2)
+    {
+      return 0xFF7FFFFF & paramInt1;
+    }
   }
   
-  public final boolean onRequestSendAccessibilityEvent(ViewGroup paramViewGroup, View paramView, AccessibilityEvent paramAccessibilityEvent)
+  static final class c
+    implements e.a
   {
-    return fq.onRequestSendAccessibilityEvent(paramViewGroup, paramView, paramAccessibilityEvent);
-  }
-  
-  public final void sendAccessibilityEvent(View paramView, int paramInt)
-  {
-    fq.sendAccessibilityEvent(paramView, paramInt);
-  }
-  
-  public final void sendAccessibilityEventUnchecked(View paramView, AccessibilityEvent paramAccessibilityEvent)
-  {
-    fq.sendAccessibilityEventUnchecked(paramView, paramAccessibilityEvent);
+    public final int getAbsoluteGravity(int paramInt1, int paramInt2)
+    {
+      return Gravity.getAbsoluteGravity(paramInt1, paramInt2);
+    }
   }
 }
 

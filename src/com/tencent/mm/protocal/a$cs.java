@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$cs
-  extends a.c
+  extends a.e
 {
   public a$cs()
   {
-    super("stopRecord", "stopRecord", 98, false);
+    super("openDesignerEmojiViewLocal", "openDesignerEmojiViewLocal", 20000, false);
   }
 }
 

@@ -4,8 +4,6 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.k;
 
 public class PreferenceHeaderCategory
   extends Preference
@@ -18,13 +16,13 @@ public class PreferenceHeaderCategory
   public PreferenceHeaderCategory(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference_header_catalog);
+    setLayoutResource(2131363193);
   }
   
   protected final View onCreateView(ViewGroup paramViewGroup)
   {
     paramViewGroup = super.onCreateView(paramViewGroup);
-    paramViewGroup.findViewById(16908310).setBackgroundResource(a.h.list_thicklinecell_bg);
+    paramViewGroup.findViewById(16908310).setBackgroundResource(2130970212);
     return paramViewGroup;
   }
 }

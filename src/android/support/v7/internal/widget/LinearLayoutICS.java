@@ -8,30 +8,30 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 
 public class LinearLayoutICS
   extends LinearLayout
 {
-  private final Drawable qC;
-  private final int qD;
-  private final int qE;
-  private final int qF;
-  private final int qG;
+  private final Drawable pF;
+  private final int pG;
+  private final int pH;
+  private final int pI;
+  private final int pJ;
   
   public LinearLayoutICS(Context paramContext, AttributeSet paramAttributeSet)
   {
     super(paramContext, paramAttributeSet);
-    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.LinearLayoutICS);
-    qC = paramContext.getDrawable(0);
-    if (qC != null)
+    paramContext = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.LinearLayoutICS);
+    pF = paramContext.getDrawable(0);
+    if (pF != null)
     {
-      qD = qC.getIntrinsicWidth();
-      qE = qC.getIntrinsicHeight();
-      qF = paramContext.getInt(1, 0);
-      qG = paramContext.getDimensionPixelSize(2, 0);
+      pG = pF.getIntrinsicWidth();
+      pH = pF.getIntrinsicHeight();
+      pI = paramContext.getInt(1, 0);
+      pJ = paramContext.getDimensionPixelSize(2, 0);
       paramContext.recycle();
-      if (qC != null) {
+      if (pF != null) {
         break label105;
       }
     }
@@ -39,8 +39,8 @@ public class LinearLayoutICS
     {
       setWillNotDraw(bool);
       return;
-      qD = 0;
-      qE = 0;
+      pG = 0;
+      pH = 0;
       break;
       label105:
       bool = false;
@@ -49,113 +49,20 @@ public class LinearLayoutICS
   
   private void a(Canvas paramCanvas, int paramInt)
   {
-    qC.setBounds(getPaddingLeft() + qG, paramInt, getWidth() - getPaddingRight() - qG, qE + paramInt);
-    qC.draw(paramCanvas);
+    pF.setBounds(getPaddingLeft() + pJ, paramInt, getWidth() - getPaddingRight() - pJ, pH + paramInt);
+    pF.draw(paramCanvas);
   }
   
   private void b(Canvas paramCanvas, int paramInt)
   {
-    qC.setBounds(paramInt, getPaddingTop() + qG, qD + paramInt, getHeight() - getPaddingBottom() - qG);
-    qC.draw(paramCanvas);
+    pF.setBounds(paramInt, getPaddingTop() + pJ, pG + paramInt, getHeight() - getPaddingBottom() - pJ);
+    pF.draw(paramCanvas);
   }
   
-  protected void measureChildWithMargins(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
-  {
-    int i;
-    int j;
-    LinearLayout.LayoutParams localLayoutParams;
-    if (qC != null)
-    {
-      i = indexOfChild(paramView);
-      j = getChildCount();
-      localLayoutParams = (LinearLayout.LayoutParams)paramView.getLayoutParams();
-      if (getOrientation() != 1) {
-        break label97;
-      }
-      if (!z(i)) {
-        break label67;
-      }
-      topMargin = qE;
-    }
-    for (;;)
-    {
-      super.measureChildWithMargins(paramView, paramInt1, paramInt2, paramInt3, paramInt4);
-      return;
-      label67:
-      if ((i == j - 1) && (z(j)))
-      {
-        bottomMargin = qE;
-        continue;
-        label97:
-        if (z(i)) {
-          leftMargin = qD;
-        } else if ((i == j - 1) && (z(j))) {
-          rightMargin = qD;
-        }
-      }
-    }
-  }
-  
-  protected void onDraw(Canvas paramCanvas)
-  {
-    int j;
-    LinearLayout.LayoutParams localLayoutParams;
-    if (getOrientation() == 1)
-    {
-      j = getChildCount();
-      i = 0;
-      while (i < j)
-      {
-        localView = getChildAt(i);
-        if ((localView != null) && (localView.getVisibility() != 8) && (z(i)))
-        {
-          localLayoutParams = (LinearLayout.LayoutParams)localView.getLayoutParams();
-          a(paramCanvas, localView.getTop() - topMargin);
-        }
-        i += 1;
-      }
-      if (z(j))
-      {
-        localView = getChildAt(j - 1);
-        if (localView != null) {
-          break label127;
-        }
-        i = getHeight() - getPaddingBottom() - qE;
-        a(paramCanvas, i);
-      }
-    }
-    label127:
-    do
-    {
-      return;
-      i = localView.getBottom();
-      break;
-      j = getChildCount();
-      i = 0;
-      while (i < j)
-      {
-        localView = getChildAt(i);
-        if ((localView != null) && (localView.getVisibility() != 8) && (z(i)))
-        {
-          localLayoutParams = (LinearLayout.LayoutParams)localView.getLayoutParams();
-          b(paramCanvas, localView.getLeft() - leftMargin);
-        }
-        i += 1;
-      }
-    } while (!z(j));
-    View localView = getChildAt(j - 1);
-    if (localView == null) {}
-    for (int i = getWidth() - getPaddingRight() - qD;; i = localView.getRight())
-    {
-      b(paramCanvas, i);
-      return;
-    }
-  }
-  
-  public boolean z(int paramInt)
+  public boolean A(int paramInt)
   {
     if (paramInt == 0) {
-      if ((qF & 0x1) == 0) {}
+      if ((pI & 0x1) == 0) {}
     }
     do
     {
@@ -164,9 +71,9 @@ public class LinearLayoutICS
       if (paramInt != getChildCount()) {
         break;
       }
-    } while ((qF & 0x4) != 0);
+    } while ((pI & 0x4) != 0);
     return false;
-    if ((qF & 0x2) != 0)
+    if ((pI & 0x2) != 0)
     {
       paramInt -= 1;
       for (;;)
@@ -183,6 +90,99 @@ public class LinearLayoutICS
     return false;
     label75:
     return false;
+  }
+  
+  protected void measureChildWithMargins(View paramView, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
+  {
+    int i;
+    int j;
+    LinearLayout.LayoutParams localLayoutParams;
+    if (pF != null)
+    {
+      i = indexOfChild(paramView);
+      j = getChildCount();
+      localLayoutParams = (LinearLayout.LayoutParams)paramView.getLayoutParams();
+      if (getOrientation() != 1) {
+        break label97;
+      }
+      if (!A(i)) {
+        break label67;
+      }
+      topMargin = pH;
+    }
+    for (;;)
+    {
+      super.measureChildWithMargins(paramView, paramInt1, paramInt2, paramInt3, paramInt4);
+      return;
+      label67:
+      if ((i == j - 1) && (A(j)))
+      {
+        bottomMargin = pH;
+        continue;
+        label97:
+        if (A(i)) {
+          leftMargin = pG;
+        } else if ((i == j - 1) && (A(j))) {
+          rightMargin = pG;
+        }
+      }
+    }
+  }
+  
+  protected void onDraw(Canvas paramCanvas)
+  {
+    int j;
+    LinearLayout.LayoutParams localLayoutParams;
+    if (getOrientation() == 1)
+    {
+      j = getChildCount();
+      i = 0;
+      while (i < j)
+      {
+        localView = getChildAt(i);
+        if ((localView != null) && (localView.getVisibility() != 8) && (A(i)))
+        {
+          localLayoutParams = (LinearLayout.LayoutParams)localView.getLayoutParams();
+          a(paramCanvas, localView.getTop() - topMargin);
+        }
+        i += 1;
+      }
+      if (A(j))
+      {
+        localView = getChildAt(j - 1);
+        if (localView != null) {
+          break label127;
+        }
+        i = getHeight() - getPaddingBottom() - pH;
+        a(paramCanvas, i);
+      }
+    }
+    label127:
+    do
+    {
+      return;
+      i = localView.getBottom();
+      break;
+      j = getChildCount();
+      i = 0;
+      while (i < j)
+      {
+        localView = getChildAt(i);
+        if ((localView != null) && (localView.getVisibility() != 8) && (A(i)))
+        {
+          localLayoutParams = (LinearLayout.LayoutParams)localView.getLayoutParams();
+          b(paramCanvas, localView.getLeft() - leftMargin);
+        }
+        i += 1;
+      }
+    } while (!A(j));
+    View localView = getChildAt(j - 1);
+    if (localView == null) {}
+    for (int i = getWidth() - getPaddingRight() - pG;; i = localView.getRight())
+    {
+      b(paramCanvas, i);
+      return;
+    }
   }
 }
 

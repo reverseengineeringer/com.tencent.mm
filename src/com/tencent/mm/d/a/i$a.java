@@ -1,12 +1,12 @@
 package com.tencent.mm.d.a;
 
-import android.support.v4.app.aa.f;
+import com.tencent.mm.n.a.a;
+import com.tencent.mm.storage.ag;
 
 public final class i$a
 {
-  public aa.f auf;
-  public String title;
-  public String username;
+  public ag ask;
+  public a.a asl;
 }
 
 /* Location:

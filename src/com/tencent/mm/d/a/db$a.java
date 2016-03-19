@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class db$a
 {
-  public String auu;
+  public boolean Jq = false;
 }
 
 /* Location:

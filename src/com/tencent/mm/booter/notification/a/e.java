@@ -3,37 +3,37 @@ package com.tencent.mm.booter.notification.a;
 import android.content.Context;
 import android.media.AudioManager;
 import android.text.format.Time;
-import com.tencent.mm.d.a.jq;
-import com.tencent.mm.d.a.jq.b;
+import com.tencent.mm.d.a.nv;
+import com.tencent.mm.d.a.nv.b;
 import com.tencent.mm.g.g;
-import com.tencent.mm.network.ax;
+import com.tencent.mm.network.aa;
 import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.ab;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.storage.ar;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
+import com.tencent.mm.sdk.platformtools.z;
+import com.tencent.mm.storage.ag;
 import java.util.HashSet;
 import java.util.Set;
 
 public final class e
 {
-  private static final Set bed;
-  public boolean bee;
+  private static final Set bom;
+  public boolean bon;
   
   static
   {
     HashSet localHashSet = new HashSet();
-    bed = localHashSet;
+    bom = localHashSet;
     localHashSet.add("readerapp");
-    bed.add("blogapp");
-    bed.add("newsapp");
+    bom.add("blogapp");
+    bom.add("newsapp");
   }
   
-  public static boolean a(String paramString, ar paramar)
+  public static boolean a(String paramString, ag paramag)
   {
     boolean bool2 = true;
     boolean bool1;
-    if ((g.di(paramString)) && (!g.c(paramar)))
+    if ((g.jdMethod_do(paramString)) && (!g.c(paramag)))
     {
       bool1 = true;
       if (bool1) {
@@ -42,7 +42,7 @@ public final class e
     }
     for (;;)
     {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is NOT Must Mute: %B", new Object[] { Boolean.valueOf(bool2) });
+      u.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is NOT Must Mute: %B", new Object[] { Boolean.valueOf(bool2) });
       return bool1;
       bool1 = false;
       break;
@@ -73,101 +73,101 @@ public final class e
     }
   }
   
+  public static boolean bI(int paramInt)
+  {
+    if ((paramInt & 0x2) != 0) {}
+    for (boolean bool = true;; bool = false)
+    {
+      u.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Service Request Sound: %B", new Object[] { Boolean.valueOf(bool) });
+      return bool;
+    }
+  }
+  
   public static boolean bJ(int paramInt)
   {
     if ((paramInt & 0x2) != 0) {}
     for (boolean bool = true;; bool = false)
     {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Service Request Sound: %B", new Object[] { Boolean.valueOf(bool) });
+      u.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Service Request Shake: %B", new Object[] { Boolean.valueOf(bool) });
       return bool;
     }
   }
   
-  public static boolean bK(int paramInt)
+  public static boolean cP(String paramString)
   {
-    if ((paramInt & 0x2) != 0) {}
-    for (boolean bool = true;; bool = false)
+    if (z.CS("keep_chatting_silent" + paramString))
     {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Service Request Shake: %B", new Object[] { Boolean.valueOf(bool) });
-      return bool;
-    }
-  }
-  
-  public static boolean cL(String paramString)
-  {
-    if (ab.xs("keep_chatting_silent" + paramString))
-    {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Sound NOT Lock: FALSE");
+      u.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Sound NOT Lock: FALSE");
       return true;
     }
-    t.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Sound NOT Lock: TRUE");
+    u.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Sound NOT Lock: TRUE");
     return false;
   }
   
-  public static boolean cM(String paramString)
+  public static boolean cQ(String paramString)
   {
     boolean bool1 = true;
-    boolean bool2 = bed.contains(paramString);
+    boolean bool2 = bom.contains(paramString);
     if (!bool2) {}
     for (;;)
     {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is NOT Siler User: %B", new Object[] { Boolean.valueOf(bool1) });
+      u.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is NOT Siler User: %B", new Object[] { Boolean.valueOf(bool1) });
       return bool2;
       bool1 = false;
     }
   }
   
-  public static boolean g(int paramInt, String paramString)
+  public static boolean j(int paramInt, String paramString)
   {
     boolean bool;
-    if (g.ca(paramInt)) {
-      if (g.dd(paramString)) {
-        bool = g.pX();
+    if (g.cb(paramInt)) {
+      if (g.dj(paramString)) {
+        bool = g.pP();
       }
     }
     for (;;)
     {
-      t.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Voip Need Sound: %B", new Object[] { Boolean.valueOf(bool) });
+      u.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Voip Need Sound: %B", new Object[] { Boolean.valueOf(bool) });
       return bool;
-      if (g.de(paramString)) {
-        bool = g.pY();
+      if (g.dk(paramString)) {
+        bool = g.pQ();
       } else {
         bool = true;
       }
     }
   }
   
-  public static boolean nR()
+  public static boolean nB()
   {
     Time localTime = new Time();
     localTime.setToNow();
-    if (!ax.S(hour, minute))
+    if (!aa.ab(hour, minute))
     {
-      t.w("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "no shake & sound notification during background deactive time");
+      u.w("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "no shake & sound notification during background deactive time");
       return true;
     }
     return false;
   }
   
-  public static boolean nS()
+  public static boolean nC()
   {
-    boolean bool = g.pt();
-    t.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Sound Mode: %B", new Object[] { Boolean.valueOf(bool) });
+    boolean bool = g.pj();
+    u.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Sound Mode: %B", new Object[] { Boolean.valueOf(bool) });
     return bool;
   }
   
-  public static boolean nT()
+  public static boolean nD()
   {
     boolean bool2 = true;
     try
     {
-      jq localjq = new jq();
-      aGJ.axE = 2;
-      a.hXQ.g(localjq);
-      bool1 = aGK.aGN;
+      nv localnv = new nv();
+      aKe.axL = 2;
+      a.jUF.j(localnv);
+      bool1 = aKf.aKi;
       if (!bool1)
       {
-        t.d("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Voip NOT Calling: %B", new Object[] { Boolean.valueOf(bool2) });
+        u.d("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Voip NOT Calling: %B", new Object[] { Boolean.valueOf(bool2) });
         return bool1;
       }
     }
@@ -182,20 +182,20 @@ public final class e
     }
   }
   
-  public static boolean nU()
+  public static boolean nE()
   {
-    boolean bool = g.pv();
-    int i = nV();
+    boolean bool = g.pl();
+    int i = nF();
     if (i == 0) {
       bool = false;
     }
-    t.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Shake Mode: %B, System AudioManager Mode: %d", new Object[] { Boolean.valueOf(bool), Integer.valueOf(i) });
+    u.i("!56@/B4Tb64lLpKR3MWtFvfaILkpFAm7jXGl9CT4VaPq52n4Cdz5g1XhsA==", "check is Shake Mode: %B, System AudioManager Mode: %d", new Object[] { Boolean.valueOf(bool), Integer.valueOf(i) });
     return bool;
   }
   
-  public static int nV()
+  public static int nF()
   {
-    return ((AudioManager)aa.getContext().getSystemService("audio")).getRingerMode();
+    return ((AudioManager)y.getContext().getSystemService("audio")).getRingerMode();
   }
 }
 

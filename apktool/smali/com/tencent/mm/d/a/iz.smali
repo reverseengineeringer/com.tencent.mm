@@ -1,12 +1,27 @@
 .class public final Lcom/tencent/mm/d/a/iz;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
-# static fields
-.field public static atN:Z
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/d/a/iz$b;,
+        Lcom/tencent/mm/d/a/iz$a;
+    }
+.end annotation
 
-.field public static atO:Z
+
+# static fields
+.field public static arQ:Z
+
+.field public static arR:Z
+
+
+# instance fields
+.field public aFm:Lcom/tencent/mm/d/a/iz$a;
+
+.field public aFn:Lcom/tencent/mm/d/a/iz$b;
 
 
 # direct methods
@@ -17,10 +32,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/iz;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/iz;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/iz;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/iz;->arR:Z
 
     return-void
 .end method
@@ -30,15 +45,30 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
-    const-string/jumbo v0, "UnreadChange"
+    .line 13
+    new-instance v0, Lcom/tencent/mm/d/a/iz$a;
+
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/iz$a;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/d/a/iz;->aFm:Lcom/tencent/mm/d/a/iz$a;
+
+    .line 19
+    new-instance v0, Lcom/tencent/mm/d/a/iz$b;
+
+    invoke-direct {v0}, Lcom/tencent/mm/d/a/iz$b;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/d/a/iz;->aFn:Lcom/tencent/mm/d/a/iz$b;
+
+    .line 8
+    const-string/jumbo v0, "RcptRecentAddr"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/iz;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/iz;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/iz;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/iz;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/iz;->jUI:Z
 
     return-void
 .end method

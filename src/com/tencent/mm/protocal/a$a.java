@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$a
-  extends a.c
+  extends a.e
 {
   public a$a()
   {
-    super("getRecevieBizHongBaoRequest", "getRecevieBizHongBaoRequest", 135, true);
+    super("openEmotionDetailViewLocal", "openEmotionDetailViewLocal", 20000, false);
   }
 }
 

@@ -14,15 +14,15 @@
     .line 17
     const/16 v0, 0x810
 
-    iput v0, p0, Loicq/wlogin_sdk/request/h;->jNs:I
+    iput v0, p0, Loicq/wlogin_sdk/request/h;->mbE:I
 
     .line 18
     const/4 v0, 0x3
 
-    iput v0, p0, Loicq/wlogin_sdk/request/h;->jNt:I
+    iput v0, p0, Loicq/wlogin_sdk/request/h;->mbF:I
 
     .line 19
-    iput-object p1, p0, Loicq/wlogin_sdk/request/h;->jNv:Loicq/wlogin_sdk/request/i;
+    iput-object p1, p0, Loicq/wlogin_sdk/request/h;->mbH:Loicq/wlogin_sdk/request/i;
 
     .line 20
     return-void
@@ -47,12 +47,12 @@
     .line 34
     add-int/lit8 v0, p2, 0x2
 
-    invoke-super {p0, p1, v0}, Loicq/wlogin_sdk/request/d;->v([BI)I
+    invoke-super {p0, p1, v0}, Loicq/wlogin_sdk/request/d;->z([BI)I
 
     move-result v0
 
     .line 36
-    invoke-super {p0}, Loicq/wlogin_sdk/request/d;->aVA()V
+    invoke-super {p0}, Loicq/wlogin_sdk/request/d;->bop()V
 
     .line 37
     add-int/lit8 v4, p2, 0x5
@@ -62,7 +62,7 @@
 
     .line 62
     :pswitch_0
-    iget v1, p0, Loicq/wlogin_sdk/request/h;->jNh:I
+    iget v1, p0, Loicq/wlogin_sdk/request/h;->mbt:I
 
     sub-int/2addr v1, v4
 
@@ -76,7 +76,7 @@
 
     .line 42
     :pswitch_1
-    iget v1, p0, Loicq/wlogin_sdk/request/h;->jNh:I
+    iget v1, p0, Loicq/wlogin_sdk/request/h;->mbt:I
 
     sub-int/2addr v1, v4
 
@@ -88,12 +88,12 @@
     if-ltz v1, :cond_0
 
     .line 44
-    iget-object v1, p0, Loicq/wlogin_sdk/request/h;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v1, p0, Loicq/wlogin_sdk/request/h;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iput-object v2, v1, Loicq/wlogin_sdk/request/i;->jNA:Loicq/wlogin_sdk/a/f;
+    iput-object v2, v1, Loicq/wlogin_sdk/request/i;->mbM:Loicq/wlogin_sdk/a/f;
 
     .line 47
-    iget v1, p0, Loicq/wlogin_sdk/request/h;->jNh:I
+    iget v1, p0, Loicq/wlogin_sdk/request/h;->mbt:I
 
     sub-int/2addr v1, v4
 
@@ -105,15 +105,15 @@
     if-ltz v1, :cond_0
 
     .line 49
-    iget-object v1, p0, Loicq/wlogin_sdk/request/h;->jNv:Loicq/wlogin_sdk/request/i;
+    iget-object v1, p0, Loicq/wlogin_sdk/request/h;->mbH:Loicq/wlogin_sdk/request/i;
 
-    iput-object v3, v1, Loicq/wlogin_sdk/request/i;->jNB:Loicq/wlogin_sdk/a/g;
+    iput-object v3, v1, Loicq/wlogin_sdk/request/i;->mbN:Loicq/wlogin_sdk/a/g;
 
     goto :goto_0
 
     .line 57
     :pswitch_2
-    iget v1, p0, Loicq/wlogin_sdk/request/h;->jNh:I
+    iget v1, p0, Loicq/wlogin_sdk/request/h;->mbt:I
 
     sub-int/2addr v1, v4
 

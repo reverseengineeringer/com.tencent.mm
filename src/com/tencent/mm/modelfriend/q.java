@@ -1,31 +1,65 @@
 package com.tencent.mm.modelfriend;
 
-import com.tencent.mm.protocal.b.wc;
-import com.tencent.mm.sdk.platformtools.t;
-import com.tencent.mm.ui.applet.b.b;
+import android.content.ContentValues;
 
-final class q
-  implements b.b
+public final class q
 {
-  q(o paramo) {}
+  int aou = -1;
+  private int bCs = 0;
+  private String bCu = "";
+  private String bCv = "";
+  public int bIs = 0;
+  public int bMG = 0;
+  private int bMH = 0;
+  public String username = "";
   
-  public final String cY(int paramInt)
+  public final String getUsername()
   {
-    if ((paramInt < 0) || (paramInt >= bzj.getCount())) {
-      t.e("!32@/B4Tb64lLpKtUZnUqFd8jYERHC2aCXs9", "pos is invalid");
+    if (username == null) {
+      return "";
     }
-    wc localwc;
-    do
-    {
-      return null;
-      localwc = bzj.cX(paramInt);
-    } while (localwc == null);
-    return dse;
+    return username;
   }
   
-  public final int xI()
+  public final ContentValues lX()
   {
-    return bzj.getCount();
+    ContentValues localContentValues = new ContentValues();
+    if ((aou & 0x1) != 0) {
+      localContentValues.put("username", getUsername());
+    }
+    if ((aou & 0x2) != 0) {
+      localContentValues.put("friendtype", Integer.valueOf(bMG));
+    }
+    if ((aou & 0x4) != 0) {
+      localContentValues.put("updatetime", Integer.valueOf(bIs));
+    }
+    if ((aou & 0x8) != 0) {
+      localContentValues.put("reserved1", Integer.valueOf(bCs));
+    }
+    if ((aou & 0x10) != 0) {
+      localContentValues.put("reserved2", Integer.valueOf(bMH));
+    }
+    if ((aou & 0x20) != 0)
+    {
+      if (bCu == null)
+      {
+        str = "";
+        localContentValues.put("reserved3", str);
+      }
+    }
+    else if ((aou & 0x40) != 0) {
+      if (bCv != null) {
+        break label181;
+      }
+    }
+    label181:
+    for (String str = "";; str = bCv)
+    {
+      localContentValues.put("reserved4", str);
+      return localContentValues;
+      str = bCu;
+      break;
+    }
   }
 }
 

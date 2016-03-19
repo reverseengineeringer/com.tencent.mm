@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$b
-  extends a.c
+  extends a.e
 {
   public a$b()
   {
-    super("scanCover", "scanCover", 136, true);
+    super("getRecevieBizHongBaoRequest", "getRecevieBizHongBaoRequest", 135, true);
   }
 }
 

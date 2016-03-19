@@ -4,8 +4,7 @@ import android.app.Activity;
 import android.content.res.Resources;
 import android.view.LayoutInflater;
 import android.view.Window;
-import com.tencent.mm.ap.e;
-import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.y;
 
 @com.tencent.mm.ui.base.a(3)
 public class MMBaseActivity
@@ -13,12 +12,8 @@ public class MMBaseActivity
 {
   public Resources getResources()
   {
-    if ((getAssets() != null) && (aa.getResources() != null))
-    {
-      e.a(getAssets());
-      if (e.aDG()) {
-        return aa.getResources();
-      }
+    if ((getAssets() != null) && (y.getResources() != null)) {
+      return y.getResources();
     }
     return super.getResources();
   }
@@ -30,13 +25,8 @@ public class MMBaseActivity
     if (getAssets() != null)
     {
       localObject1 = localObject2;
-      if ("layout_inflater".equals(paramString))
-      {
-        e.a(getAssets());
-        localObject1 = localObject2;
-        if (e.aDG()) {
-          localObject1 = ek.a((LayoutInflater)localObject2);
-        }
+      if ("layout_inflater".equals(paramString)) {
+        localObject1 = p.a((LayoutInflater)localObject2);
       }
     }
     return localObject1;
@@ -45,8 +35,8 @@ public class MMBaseActivity
   public void onDestroy()
   {
     super.onDestroy();
-    com.tencent.mm.sdk.platformtools.a.ah(getWindow().getDecorView());
-    com.tencent.mm.sdk.platformtools.a.cH(this);
+    com.tencent.mm.sdk.platformtools.a.ak(getWindow().getDecorView());
+    com.tencent.mm.sdk.platformtools.a.dj(this);
   }
 }
 

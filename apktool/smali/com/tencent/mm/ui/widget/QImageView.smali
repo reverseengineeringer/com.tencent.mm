@@ -15,47 +15,47 @@
 
 
 # static fields
-.field private static final jBL:[Lcom/tencent/mm/ui/widget/QImageView$a;
+.field private static final lGm:[Lcom/tencent/mm/ui/widget/QImageView$a;
 
-.field private static final jBM:[Landroid/graphics/Matrix$ScaleToFit;
+.field private static final lGn:[Landroid/graphics/Matrix$ScaleToFit;
 
 
 # instance fields
-.field private final ihL:Landroid/graphics/RectF;
+.field private lFU:I
 
-.field private final ihM:Landroid/graphics/RectF;
+.field private lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-.field private jBA:I
+.field private lFW:Z
 
-.field private jBB:I
+.field private lFX:Z
 
-.field private jBC:Z
+.field private lFY:Landroid/graphics/ColorFilter;
 
-.field private jBD:[I
+.field private lFZ:I
 
-.field private jBE:Z
+.field private lGa:I
 
-.field private jBF:I
+.field private lGb:Z
 
-.field private jBG:I
+.field private lGc:[I
 
-.field private jBH:I
+.field private lGd:Z
 
-.field private jBI:Landroid/graphics/Matrix;
+.field private lGe:I
 
-.field private jBJ:Z
+.field private lGf:I
 
-.field private jBK:Z
+.field private lGg:I
 
-.field private jBv:I
+.field private lGh:Landroid/graphics/Matrix;
 
-.field private jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+.field private final lGi:Landroid/graphics/RectF;
 
-.field private jBx:Z
+.field private final lGj:Landroid/graphics/RectF;
 
-.field private jBy:Z
+.field private lGk:Z
 
-.field private jBz:Landroid/graphics/ColorFilter;
+.field private lGl:Z
 
 .field private mContext:Landroid/content/Context;
 
@@ -65,9 +65,9 @@
 
 .field private mUri:Landroid/net/Uri;
 
-.field private rl:I
+.field private qn:I
 
-.field private rn:I
+.field private qp:I
 
 
 # direct methods
@@ -85,52 +85,52 @@
 
     const/4 v3, 0x0
 
-    .line 99
+    .line 96
     const/16 v0, 0x8
 
     new-array v0, v0, [Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->jBN:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGo:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->jBO:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGp:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v1, v0, v4
 
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->jBP:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGq:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v1, v0, v5
 
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->jBQ:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGr:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v1, v0, v6
 
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->jBR:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGs:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v1, v0, v7
 
     const/4 v1, 0x5
 
-    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->jBS:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->lGt:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x6
 
-    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->jBT:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->lGu:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v2, v0, v1
 
     const/4 v1, 0x7
 
-    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->jBU:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->lGv:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView;->jBL:[Lcom/tencent/mm/ui/widget/QImageView$a;
+    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView;->lGm:[Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    .line 652
+    .line 628
     new-array v0, v7, [Landroid/graphics/Matrix$ScaleToFit;
 
     sget-object v1, Landroid/graphics/Matrix$ScaleToFit;->FILL:Landroid/graphics/Matrix$ScaleToFit;
@@ -149,7 +149,7 @@
 
     aput-object v1, v0, v6
 
-    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView;->jBM:[Landroid/graphics/Matrix$ScaleToFit;
+    sput-object v0, Lcom/tencent/mm/ui/widget/QImageView;->lGn:[Landroid/graphics/Matrix$ScaleToFit;
 
     return-void
 .end method
@@ -158,18 +158,18 @@
     .locals 1
 
     .prologue
-    .line 109
+    .line 106
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/tencent/mm/ui/widget/QImageView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 110
+    .line 107
     iput-object p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mContext:Landroid/content/Context;
 
-    .line 111
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTj()V
+    .line 108
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjM()V
 
-    .line 112
+    .line 109
     return-void
 .end method
 
@@ -183,147 +183,147 @@
 
     const/4 v1, 0x0
 
-    .line 115
+    .line 112
     invoke-direct {p0, p1, p2, p3}, Landroid/view/View;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
+    .line 63
+    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFU:I
+
     .line 66
-    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBv:I
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFW:Z
+
+    .line 67
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFX:Z
+
+    .line 68
+    iput v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->qn:I
 
     .line 69
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBx:Z
+    iput v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->qp:I
 
-    .line 70
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBy:Z
-
-    .line 71
-    iput v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->rl:I
-
-    .line 72
-    iput v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->rn:I
-
-    .line 76
+    .line 73
     const/16 v0, 0xff
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBA:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFZ:I
 
-    .line 77
+    .line 74
     const/16 v0, 0x100
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBB:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGa:I
 
-    .line 78
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBC:Z
+    .line 75
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGb:Z
 
-    .line 80
+    .line 77
     iput-object v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 81
-    iput-object v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBD:[I
+    .line 78
+    iput-object v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGc:[I
 
-    .line 82
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBE:Z
+    .line 79
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGd:Z
+
+    .line 80
+    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGe:I
 
     .line 83
-    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBF:I
+    iput-object v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     .line 86
-    iput-object v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
-
-    .line 89
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->ihL:Landroid/graphics/RectF;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGi:Landroid/graphics/RectF;
 
-    .line 90
+    .line 87
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->ihM:Landroid/graphics/RectF;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGj:Landroid/graphics/RectF;
 
-    .line 94
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBK:Z
+    .line 91
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGl:Z
 
-    .line 116
+    .line 113
     iput-object p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mContext:Landroid/content/Context;
 
-    .line 117
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTj()V
+    .line 114
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjM()V
 
-    .line 128
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBK:Z
+    .line 125
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGl:Z
 
-    .line 133
+    .line 130
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/widget/QImageView;->setAdjustViewBounds(Z)V
 
-    .line 135
+    .line 132
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/widget/QImageView;->setMaxWidth(I)V
 
-    .line 137
+    .line 134
     invoke-virtual {p0, v2}, Lcom/tencent/mm/ui/widget/QImageView;->setMaxHeight(I)V
 
-    .line 151
-    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBJ:Z
+    .line 148
+    iput-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGk:Z
 
-    .line 158
+    .line 155
     return-void
 .end method
 
-.method private aTj()V
+.method private bjM()V
     .locals 1
 
     .prologue
-    .line 161
+    .line 158
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mMatrix:Landroid/graphics/Matrix;
 
-    .line 162
-    sget-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->jBQ:Lcom/tencent/mm/ui/widget/QImageView$a;
+    .line 159
+    sget-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGr:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    .line 163
+    .line 160
     return-void
 .end method
 
-.method private aTk()V
+.method private bjN()V
     .locals 6
 
     .prologue
     const/4 v0, 0x0
 
-    .line 407
+    .line 383
     iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
-    .line 462
+    .line 438
     :cond_0
     :goto_0
     return-void
 
-    .line 411
+    .line 387
     :cond_1
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
 
-    .line 412
+    .line 388
     if-eqz v1, :cond_0
 
-    .line 418
-    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBv:I
+    .line 394
+    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFU:I
 
     if-eqz v2, :cond_3
 
-    .line 420
+    .line 396
     :try_start_0
-    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBv:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFU:I
 
     invoke-virtual {v1, v2}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
     :try_end_0
@@ -331,18 +331,18 @@
 
     move-result-object v0
 
-    .line 461
+    .line 437
     :cond_2
     :goto_1
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/widget/QImageView;->g(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/widget/QImageView;->h(Landroid/graphics/drawable/Drawable;)V
 
     goto :goto_0
 
-    .line 421
+    .line 397
     :catch_0
     move-exception v1
 
-    .line 422
+    .line 398
     const-string/jumbo v2, "ImageView"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -351,7 +351,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget v4, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBv:I
+    iget v4, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFU:I
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
@@ -369,14 +369,14 @@
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 424
+    .line 400
     iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mUri:Landroid/net/Uri;
 
     goto :goto_1
 
-    .line 426
+    .line 402
     :cond_3
     iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mUri:Landroid/net/Uri;
 
@@ -385,65 +385,65 @@
     goto :goto_0
 .end method
 
-.method private aTl()V
+.method private bjO()V
     .locals 3
 
     .prologue
-    .line 634
+    .line 610
     iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 635
+    .line 611
     if-eqz v1, :cond_3
 
-    .line 636
+    .line 612
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
 
-    .line 637
+    .line 613
     if-gez v0, :cond_0
 
-    .line 638
-    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBG:I
+    .line 614
+    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGf:I
 
-    .line 640
+    .line 616
     :cond_0
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v1
 
-    .line 641
+    .line 617
     if-gez v1, :cond_1
 
-    .line 642
-    iget v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBH:I
+    .line 618
+    iget v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGg:I
 
-    .line 644
+    .line 620
     :cond_1
-    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBG:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGf:I
 
     if-ne v0, v2, :cond_2
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBH:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGg:I
 
     if-eq v1, v2, :cond_3
 
-    .line 645
+    .line 621
     :cond_2
-    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBG:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGf:I
 
-    .line 646
-    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBH:I
+    .line 622
+    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGg:I
 
-    .line 647
+    .line 623
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->requestLayout()V
 
-    .line 650
+    .line 626
     :cond_3
     return-void
 .end method
 
-.method private aTm()V
+.method private bjP()V
     .locals 12
 
     .prologue
@@ -455,28 +455,28 @@
 
     const/high16 v9, 0x3f000000    # 0.5f
 
-    .line 804
+    .line 780
     iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBx:Z
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFW:Z
 
     if-nez v1, :cond_1
 
-    .line 885
+    .line 861
     :cond_0
     :goto_0
     return-void
 
-    .line 808
+    .line 784
     :cond_1
-    iget v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBG:I
+    iget v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGf:I
 
-    .line 809
-    iget v4, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBH:I
+    .line 785
+    iget v4, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGg:I
 
-    .line 811
+    .line 787
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getWidth()I
 
     move-result v1
@@ -493,7 +493,7 @@
 
     sub-int v5, v1, v5
 
-    .line 812
+    .line 788
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getHeight()I
 
     move-result v1
@@ -510,7 +510,7 @@
 
     sub-int v6, v1, v6
 
-    .line 814
+    .line 790
     if-ltz v3, :cond_2
 
     if-ne v5, v3, :cond_5
@@ -523,49 +523,49 @@
     :cond_3
     const/4 v1, 0x1
 
-    .line 816
+    .line 792
     :goto_1
     if-lez v3, :cond_4
 
     if-lez v4, :cond_4
 
-    sget-object v7, Lcom/tencent/mm/ui/widget/QImageView$a;->jBO:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v7, Lcom/tencent/mm/ui/widget/QImageView$a;->lGp:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    iget-object v8, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+    iget-object v8, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     if-ne v7, v8, :cond_6
 
-    .line 821
+    .line 797
     :cond_4
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, v2, v2, v5, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 822
-    iput-object v10, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    .line 798
+    iput-object v10, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     goto :goto_0
 
     :cond_5
     move v1, v2
 
-    .line 814
+    .line 790
     goto :goto_1
 
-    .line 826
+    .line 802
     :cond_6
     iget-object v7, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v7, v2, v2, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 828
-    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->jBN:Lcom/tencent/mm/ui/widget/QImageView$a;
+    .line 804
+    sget-object v2, Lcom/tencent/mm/ui/widget/QImageView$a;->lGo:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    iget-object v7, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+    iget-object v7, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     if-ne v2, v7, :cond_8
 
-    .line 830
+    .line 806
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0}, Landroid/graphics/Matrix;->isIdentity()Z
@@ -574,43 +574,43 @@
 
     if-eqz v0, :cond_7
 
-    .line 831
-    iput-object v10, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    .line 807
+    iput-object v10, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     goto :goto_0
 
-    .line 833
+    .line 809
     :cond_7
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mMatrix:Landroid/graphics/Matrix;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     goto :goto_0
 
-    .line 835
+    .line 811
     :cond_8
     if-eqz v1, :cond_9
 
-    .line 837
-    iput-object v10, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    .line 813
+    iput-object v10, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     goto :goto_0
 
-    .line 838
+    .line 814
     :cond_9
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->jBS:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGt:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     if-ne v1, v2, :cond_a
 
-    .line 840
+    .line 816
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mMatrix:Landroid/graphics/Matrix;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
-    .line 841
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    .line 817
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     sub-int v1, v5, v3
 
@@ -640,34 +640,34 @@
 
     goto :goto_0
 
-    .line 843
+    .line 819
     :cond_a
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->jBT:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGu:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     if-ne v1, v2, :cond_c
 
-    .line 844
+    .line 820
     iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mMatrix:Landroid/graphics/Matrix;
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    iput-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
-    .line 849
+    .line 825
     mul-int v1, v3, v6
 
     mul-int v2, v5, v4
 
     if-le v1, v2, :cond_b
 
-    .line 850
+    .line 826
     int-to-float v1, v6
 
     int-to-float v2, v4
 
     div-float v2, v1, v2
 
-    .line 851
+    .line 827
     int-to-float v1, v5
 
     int-to-float v3, v3
@@ -678,14 +678,14 @@
 
     mul-float/2addr v1, v9
 
-    .line 857
+    .line 833
     :goto_2
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v2, v2}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    .line 858
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    .line 834
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     add-float/2addr v1, v9
 
@@ -703,7 +703,7 @@
 
     goto/16 :goto_0
 
-    .line 853
+    .line 829
     :cond_b
     int-to-float v1, v5
 
@@ -711,7 +711,7 @@
 
     div-float v2, v1, v2
 
-    .line 854
+    .line 830
     int-to-float v1, v6
 
     int-to-float v3, v4
@@ -730,28 +730,28 @@
 
     goto :goto_2
 
-    .line 859
+    .line 835
     :cond_c
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->jBU:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGv:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     if-ne v1, v2, :cond_e
 
-    .line 860
+    .line 836
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mMatrix:Landroid/graphics/Matrix;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
-    .line 865
+    .line 841
     if-gt v3, v5, :cond_d
 
     if-gt v4, v6, :cond_d
 
-    .line 866
+    .line 842
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 871
+    .line 847
     :goto_3
     int-to-float v1, v5
 
@@ -769,7 +769,7 @@
 
     int-to-float v1, v1
 
-    .line 872
+    .line 848
     int-to-float v2, v6
 
     int-to-float v3, v4
@@ -786,19 +786,19 @@
 
     int-to-float v2, v2
 
-    .line 874
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    .line 850
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     invoke-virtual {v3, v0, v0}, Landroid/graphics/Matrix;->setScale(FF)V
 
-    .line 875
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    .line 851
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
     goto/16 :goto_0
 
-    .line 868
+    .line 844
     :cond_d
     int-to-float v0, v5
 
@@ -818,9 +818,9 @@
 
     goto :goto_3
 
-    .line 878
+    .line 854
     :cond_e
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->ihL:Landroid/graphics/RectF;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGi:Landroid/graphics/RectF;
 
     int-to-float v2, v3
 
@@ -828,8 +828,8 @@
 
     invoke-virtual {v1, v0, v0, v2, v3}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 879
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->ihM:Landroid/graphics/RectF;
+    .line 855
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGj:Landroid/graphics/RectF;
 
     int-to-float v2, v5
 
@@ -837,23 +837,23 @@
 
     invoke-virtual {v1, v0, v0, v2, v3}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 881
+    .line 857
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mMatrix:Landroid/graphics/Matrix;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
-    .line 882
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    .line 858
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->ihL:Landroid/graphics/RectF;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGi:Landroid/graphics/RectF;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->ihM:Landroid/graphics/RectF;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGj:Landroid/graphics/RectF;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+    iget-object v3, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    sget-object v4, Lcom/tencent/mm/ui/widget/QImageView;->jBM:[Landroid/graphics/Matrix$ScaleToFit;
+    sget-object v4, Lcom/tencent/mm/ui/widget/QImageView;->lGn:[Landroid/graphics/Matrix$ScaleToFit;
 
-    iget v3, v3, Lcom/tencent/mm/ui/widget/QImageView$a;->jBV:I
+    iget v3, v3, Lcom/tencent/mm/ui/widget/QImageView$a;->lGw:I
 
     add-int/lit8 v3, v3, -0x1
 
@@ -864,20 +864,20 @@
     goto/16 :goto_0
 .end method
 
-.method private aTn()V
+.method private bjQ()V
     .locals 3
 
     .prologue
-    .line 1002
+    .line 978
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBC:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGb:Z
 
     if-eqz v0, :cond_0
 
-    .line 1003
+    .line 979
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->mutate()Landroid/graphics/drawable/Drawable;
@@ -886,19 +886,19 @@
 
     iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 1004
+    .line 980
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBz:Landroid/graphics/ColorFilter;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFY:Landroid/graphics/ColorFilter;
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 1005
+    .line 981
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    iget v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBA:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFZ:I
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBB:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGa:I
 
     mul-int/2addr v1, v2
 
@@ -906,110 +906,110 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 1007
+    .line 983
     :cond_0
     return-void
 .end method
 
-.method private g(Landroid/graphics/drawable/Drawable;)V
+.method private h(Landroid/graphics/drawable/Drawable;)V
     .locals 2
 
     .prologue
-    .line 615
+    .line 591
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 616
+    .line 592
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 617
+    .line 593
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/QImageView;->unscheduleDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 619
+    .line 595
     :cond_0
     iput-object p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 620
+    .line 596
     if-eqz p1, :cond_2
 
-    .line 621
+    .line 597
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 622
+    .line 598
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->isStateful()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 623
+    .line 599
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getDrawableState()[I
 
     move-result-object v0
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 625
+    .line 601
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBF:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGe:I
 
     invoke-virtual {p1, v0}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
-    .line 626
+    .line 602
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBG:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGf:I
 
-    .line 627
+    .line 603
     invoke-virtual {p1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBH:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGg:I
 
-    .line 628
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTn()V
+    .line 604
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjQ()V
 
-    .line 629
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTm()V
+    .line 605
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjP()V
 
-    .line 631
+    .line 607
     :cond_2
     return-void
 .end method
 
-.method private static w(III)I
+.method private static x(III)I
     .locals 2
 
     .prologue
-    .line 772
-    .line 773
+    .line 748
+    .line 749
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v1
 
-    .line 774
+    .line 750
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 775
+    .line 751
     sparse-switch v1, :sswitch_data_0
 
-    .line 794
+    .line 770
     :goto_0
     return p0
 
-    .line 781
+    .line 757
     :sswitch_0
     invoke-static {p0, p1}, Ljava/lang/Math;->min(II)I
 
@@ -1017,7 +1017,7 @@
 
     goto :goto_0
 
-    .line 787
+    .line 763
     :sswitch_1
     invoke-static {p0, v0}, Ljava/lang/Math;->min(II)I
 
@@ -1032,10 +1032,10 @@
     :sswitch_2
     move p0, v0
 
-    .line 791
+    .line 767
     goto :goto_0
 
-    .line 775
+    .line 751
     :sswitch_data_0
     .sparse-switch
         -0x80000000 -> :sswitch_1
@@ -1050,13 +1050,13 @@
     .locals 2
 
     .prologue
-    .line 889
+    .line 865
     invoke-super {p0}, Landroid/view/View;->drawableStateChanged()V
 
-    .line 890
+    .line 866
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 891
+    .line 867
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->isStateful()Z
@@ -1065,14 +1065,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 892
+    .line 868
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getDrawableState()[I
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 894
+    .line 870
     :cond_0
     return-void
 .end method
@@ -1081,8 +1081,8 @@
     .locals 1
 
     .prologue
-    .line 939
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBK:Z
+    .line 915
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGl:Z
 
     if-eqz v0, :cond_0
 
@@ -1103,7 +1103,7 @@
     .locals 1
 
     .prologue
-    .line 270
+    .line 267
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -1113,7 +1113,7 @@
     .locals 1
 
     .prologue
-    .line 586
+    .line 562
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mMatrix:Landroid/graphics/Matrix;
 
     return-object v0
@@ -1123,8 +1123,8 @@
     .locals 1
 
     .prologue
-    .line 576
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+    .line 552
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     return-object v0
 .end method
@@ -1133,19 +1133,19 @@
     .locals 1
 
     .prologue
-    .line 172
+    .line 169
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-ne p1, v0, :cond_0
 
-    .line 181
+    .line 178
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->invalidate()V
 
-    .line 185
+    .line 182
     :goto_0
     return-void
 
-    .line 183
+    .line 180
     :cond_0
     invoke-super {p0, p1}, Landroid/view/View;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
 
@@ -1156,34 +1156,34 @@
     .locals 2
 
     .prologue
-    .line 605
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBD:[I
+    .line 581
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGc:[I
 
     if-nez v0, :cond_0
 
-    .line 606
+    .line 582
     invoke-super {p0, p1}, Landroid/view/View;->onCreateDrawableState(I)[I
 
     move-result-object v0
 
-    .line 610
+    .line 586
     :goto_0
     return-object v0
 
-    .line 607
+    .line 583
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBE:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGd:Z
 
     if-nez v0, :cond_1
 
-    .line 608
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBD:[I
+    .line 584
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGc:[I
 
     goto :goto_0
 
-    .line 610
+    .line 586
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBD:[I
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGc:[I
 
     array-length v0, v0
 
@@ -1193,7 +1193,7 @@
 
     move-result-object v0
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBD:[I
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGc:[I
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/widget/QImageView;->mergeDrawableStates([I[I)[I
 
@@ -1206,10 +1206,10 @@
     .locals 0
 
     .prologue
-    .line 1011
+    .line 987
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    .line 1013
+    .line 989
     return-void
 .end method
 
@@ -1217,10 +1217,7 @@
     .locals 6
 
     .prologue
-    .line 898
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    .line 900
+    .line 876
     new-instance v0, Landroid/graphics/PaintFlagsDrawFilter;
 
     const/4 v1, 0x0
@@ -1231,31 +1228,31 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->setDrawFilter(Landroid/graphics/DrawFilter;)V
 
-    .line 902
+    .line 878
     invoke-super {p0, p1}, Landroid/view/View;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 904
+    .line 880
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_1
 
-    .line 935
+    .line 911
     :cond_0
     :goto_0
     return-void
 
-    .line 908
+    .line 884
     :cond_1
-    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBG:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGf:I
 
     if-eqz v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBH:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGg:I
 
     if-eqz v0, :cond_0
 
-    .line 911
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    .line 887
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     if-nez v0, :cond_2
 
@@ -1271,46 +1268,38 @@
 
     if-nez v0, :cond_2
 
-    .line 912
+    .line 888
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 933
-    :goto_1
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getContext()Landroid/content/Context;
-
-    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
-
-    invoke-static {}, Lcom/tencent/mm/svg/frame/c/a/b;->aIu()V
-
     goto :goto_0
 
-    .line 914
+    .line 890
     :cond_2
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getSaveCount()I
 
     move-result v0
 
-    .line 915
+    .line 891
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 917
-    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBJ:Z
+    .line 893
+    iget-boolean v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGk:Z
 
     if-eqz v1, :cond_3
 
-    .line 918
+    .line 894
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getScrollX()I
 
     move-result v1
 
-    .line 919
+    .line 895
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getScrollY()I
 
     move-result v2
 
-    .line 920
+    .line 896
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getPaddingLeft()I
 
     move-result v3
@@ -1361,7 +1350,7 @@
 
     invoke-virtual {p1, v3, v4, v1, v2}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 924
+    .line 900
     :cond_3
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getPaddingLeft()I
 
@@ -1377,41 +1366,41 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 926
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    .line 902
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     if-eqz v1, :cond_4
 
-    .line 927
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBI:Landroid/graphics/Matrix;
+    .line 903
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGh:Landroid/graphics/Matrix;
 
     invoke-virtual {p1, v1}, Landroid/graphics/Canvas;->concat(Landroid/graphics/Matrix;)V
 
-    .line 929
+    .line 905
     :cond_4
     iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 930
+    .line 906
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    goto :goto_1
+    goto :goto_0
 .end method
 
 .method public onLayout(ZIIII)V
     .locals 1
 
     .prologue
-    .line 799
+    .line 775
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBx:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFW:Z
 
-    .line 800
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTm()V
+    .line 776
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjP()V
 
-    .line 801
+    .line 777
     return-void
 .end method
 
@@ -1419,34 +1408,34 @@
     .locals 15
 
     .prologue
-    .line 664
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTk()V
+    .line 640
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjN()V
 
-    .line 666
+    .line 642
     const/4 v4, 0x0
 
-    .line 669
+    .line 645
     const/4 v3, 0x0
 
-    .line 672
+    .line 648
     const/4 v2, 0x0
 
-    .line 674
+    .line 650
     iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v1, :cond_1
 
-    .line 676
+    .line 652
     const/4 v1, -0x1
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBG:I
+    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGf:I
 
-    .line 677
+    .line 653
     const/4 v1, -0x1
 
-    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBH:I
+    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGg:I
 
-    .line 678
+    .line 654
     const/4 v1, 0x0
 
     move v5, v1
@@ -1459,67 +1448,67 @@
 
     move v3, v14
 
-    .line 705
+    .line 681
     :goto_0
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getPaddingLeft()I
 
     move-result v8
 
-    .line 706
+    .line 682
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getPaddingRight()I
 
     move-result v9
 
-    .line 707
+    .line 683
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getPaddingTop()I
 
     move-result v10
 
-    .line 708
+    .line 684
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getPaddingBottom()I
 
     move-result v11
 
-    .line 713
+    .line 689
     if-nez v1, :cond_0
 
     if-eqz v2, :cond_6
 
-    .line 721
+    .line 697
     :cond_0
     add-int/2addr v5, v8
 
     add-int/2addr v5, v9
 
-    iget v6, p0, Lcom/tencent/mm/ui/widget/QImageView;->rl:I
+    iget v6, p0, Lcom/tencent/mm/ui/widget/QImageView;->qn:I
 
     move/from16 v0, p1
 
-    invoke-static {v5, v6, v0}, Lcom/tencent/mm/ui/widget/QImageView;->w(III)I
+    invoke-static {v5, v6, v0}, Lcom/tencent/mm/ui/widget/QImageView;->x(III)I
 
     move-result v5
 
-    .line 724
+    .line 700
     add-int/2addr v4, v10
 
     add-int/2addr v4, v11
 
-    iget v6, p0, Lcom/tencent/mm/ui/widget/QImageView;->rn:I
+    iget v6, p0, Lcom/tencent/mm/ui/widget/QImageView;->qp:I
 
     move/from16 v0, p2
 
-    invoke-static {v4, v6, v0}, Lcom/tencent/mm/ui/widget/QImageView;->w(III)I
+    invoke-static {v4, v6, v0}, Lcom/tencent/mm/ui/widget/QImageView;->x(III)I
 
     move-result v4
 
-    .line 726
+    .line 702
     const/4 v6, 0x0
 
     cmpl-float v6, v3, v6
 
     if-eqz v6, :cond_7
 
-    .line 728
+    .line 704
     sub-int v6, v5, v8
 
     sub-int/2addr v6, v9
@@ -1534,7 +1523,7 @@
 
     div-float/2addr v6, v7
 
-    .line 730
+    .line 706
     sub-float/2addr v6, v3
 
     invoke-static {v6}, Ljava/lang/Math;->abs(F)F
@@ -1549,13 +1538,13 @@
 
     if-lez v6, :cond_7
 
-    .line 732
+    .line 708
     const/4 v6, 0x0
 
-    .line 735
+    .line 711
     if-eqz v1, :cond_8
 
-    .line 736
+    .line 712
     sub-int v1, v4, v10
 
     sub-int/2addr v1, v11
@@ -1570,21 +1559,21 @@
 
     add-int v7, v1, v9
 
-    .line 737
+    .line 713
     if-gt v7, v5, :cond_8
 
-    .line 739
+    .line 715
     const/4 v1, 0x1
 
     move v5, v7
 
-    .line 744
+    .line 720
     :goto_1
     if-nez v1, :cond_7
 
     if-eqz v2, :cond_7
 
-    .line 745
+    .line 721
     sub-int v1, v5, v8
 
     sub-int/2addr v1, v9
@@ -1599,62 +1588,62 @@
 
     add-int/2addr v1, v11
 
-    .line 746
+    .line 722
     if-gt v1, v4, :cond_7
 
     move v2, v5
 
-    .line 768
+    .line 744
     :goto_2
     invoke-virtual {p0, v2, v1}, Lcom/tencent/mm/ui/widget/QImageView;->setMeasuredDimension(II)V
 
-    .line 769
+    .line 745
     return-void
 
-    .line 680
+    .line 656
     :cond_1
-    iget v5, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBG:I
+    iget v5, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGf:I
 
-    .line 681
-    iget v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBH:I
+    .line 657
+    iget v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGg:I
 
-    .line 682
+    .line 658
     if-gtz v5, :cond_2
 
-    .line 683
+    .line 659
     const/4 v5, 0x1
 
-    .line 685
+    .line 661
     :cond_2
     if-gtz v1, :cond_3
 
-    .line 686
+    .line 662
     const/4 v1, 0x1
 
-    .line 691
+    .line 667
     :cond_3
-    iget-boolean v6, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBy:Z
+    iget-boolean v6, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFX:Z
 
     if-eqz v6, :cond_9
 
-    .line 693
+    .line 669
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v2
 
-    .line 694
+    .line 670
     invoke-static/range {p2 .. p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v4
 
-    .line 696
+    .line 672
     const/high16 v3, 0x40000000    # 2.0f
 
     if-eq v2, v3, :cond_4
 
     const/4 v3, 0x1
 
-    .line 697
+    .line 673
     :goto_3
     const/high16 v2, 0x40000000    # 2.0f
 
@@ -1662,7 +1651,7 @@
 
     const/4 v2, 0x1
 
-    .line 699
+    .line 675
     :goto_4
     int-to-float v4, v5
 
@@ -1680,30 +1669,30 @@
 
     goto/16 :goto_0
 
-    .line 696
+    .line 672
     :cond_4
     const/4 v3, 0x0
 
     goto :goto_3
 
-    .line 697
+    .line 673
     :cond_5
     const/4 v2, 0x0
 
     goto :goto_4
 
-    .line 758
+    .line 734
     :cond_6
     add-int v1, v8, v9
 
     add-int/2addr v1, v5
 
-    .line 759
+    .line 735
     add-int v2, v10, v11
 
     add-int/2addr v2, v4
 
-    .line 761
+    .line 737
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getSuggestedMinimumWidth()I
 
     move-result v3
@@ -1712,7 +1701,7 @@
 
     move-result v1
 
-    .line 762
+    .line 738
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getSuggestedMinimumHeight()I
 
     move-result v3
@@ -1721,14 +1710,14 @@
 
     move-result v3
 
-    .line 764
+    .line 740
     move/from16 v0, p1
 
     invoke-static {v1, v0}, Lcom/tencent/mm/ui/widget/QImageView;->resolveSize(II)I
 
     move-result v2
 
-    .line 765
+    .line 741
     move/from16 v0, p2
 
     invoke-static {v3, v0}, Lcom/tencent/mm/ui/widget/QImageView;->resolveSize(II)I
@@ -1767,33 +1756,33 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 189
+    .line 186
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
     if-nez v1, :cond_1
 
-    .line 190
+    .line 187
     shr-int/lit8 v1, p1, 0x7
 
     add-int/2addr v1, p1
 
-    .line 191
-    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBB:I
+    .line 188
+    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGa:I
 
     if-eq v2, v1, :cond_0
 
-    .line 192
-    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBB:I
+    .line 189
+    iput v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGa:I
 
-    .line 193
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBC:Z
+    .line 190
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGb:Z
 
-    .line 194
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTn()V
+    .line 191
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjQ()V
 
-    .line 198
+    .line 195
     :cond_0
     :goto_0
     return v0
@@ -1808,18 +1797,18 @@
     .locals 1
 
     .prologue
-    .line 212
-    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBy:Z
+    .line 209
+    iput-boolean p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFX:Z
 
-    .line 213
+    .line 210
     if-eqz p1, :cond_0
 
-    .line 214
-    sget-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->jBQ:Lcom/tencent/mm/ui/widget/QImageView$a;
+    .line 211
+    sget-object v0, Lcom/tencent/mm/ui/widget/QImageView$a;->lGr:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/QImageView;->setScaleType(Lcom/tencent/mm/ui/widget/QImageView$a;)V
 
-    .line 216
+    .line 213
     :cond_0
     return-void
 .end method
@@ -1828,64 +1817,49 @@
     .locals 2
 
     .prologue
-    .line 989
+    .line 965
     and-int/lit16 v0, p1, 0xff
 
-    .line 990
-    iget v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBA:I
+    .line 966
+    iget v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFZ:I
 
     if-eq v1, v0, :cond_0
 
-    .line 991
-    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBA:I
+    .line 967
+    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFZ:I
 
-    .line 992
+    .line 968
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGb:Z
 
-    .line 993
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTn()V
+    .line 969
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjQ()V
 
-    .line 994
+    .line 970
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->invalidate()V
 
-    .line 996
+    .line 972
     :cond_0
     return-void
 .end method
 
 .method public setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 1
+    .locals 0
 
     .prologue
-    .line 376
-    instance-of v0, p1, Landroid/graphics/drawable/PictureDrawable;
-
-    if-eqz v0, :cond_0
-
-    .line 377
-    invoke-static {p0}, Lcom/tencent/mm/svg/frame/d/d;->ak(Landroid/view/View;)V
-
-    .line 382
-    :goto_0
+    .line 358
     invoke-super {p0, p1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 383
+    .line 359
     return-void
-
-    .line 379
-    :cond_0
-    invoke-static {p0}, Lcom/tencent/mm/svg/frame/d/d;->al(Landroid/view/View;)V
-
-    goto :goto_0
 .end method
 
 .method public final setColorFilter(I)V
     .locals 2
 
     .prologue
-    .line 966
+    .line 942
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_ATOP:Landroid/graphics/PorterDuff$Mode;
 
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
@@ -1894,7 +1868,7 @@
 
     invoke-virtual {p0, v1}, Lcom/tencent/mm/ui/widget/QImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 967
+    .line 943
     return-void
 .end method
 
@@ -1902,26 +1876,26 @@
     .locals 1
 
     .prologue
-    .line 980
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBz:Landroid/graphics/ColorFilter;
+    .line 956
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFY:Landroid/graphics/ColorFilter;
 
     if-eq v0, p1, :cond_0
 
-    .line 981
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBz:Landroid/graphics/ColorFilter;
+    .line 957
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFY:Landroid/graphics/ColorFilter;
 
-    .line 982
+    .line 958
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBC:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGb:Z
 
-    .line 983
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTn()V
+    .line 959
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjQ()V
 
-    .line 984
+    .line 960
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->invalidate()V
 
-    .line 986
+    .line 962
     :cond_0
     return-void
 .end method
@@ -1930,7 +1904,7 @@
     .locals 2
 
     .prologue
-    .line 394
+    .line 370
     new-instance v0, Landroid/graphics/drawable/BitmapDrawable;
 
     iget-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mContext:Landroid/content/Context;
@@ -1943,96 +1917,61 @@
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/QImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 395
+    .line 371
     return-void
 .end method
 
 .method public setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-    .locals 3
+    .locals 1
 
     .prologue
-    .line 352
+    .line 338
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
-    if-eq v0, p1, :cond_2
+    if-eq v0, p1, :cond_0
 
-    .line 353
-    instance-of v0, p1, Landroid/graphics/drawable/PictureDrawable;
-
-    if-eqz v0, :cond_3
-
-    .line 354
-    invoke-static {p0}, Lcom/tencent/mm/svg/frame/d/d;->ak(Landroid/view/View;)V
-
-    .line 358
-    :goto_0
+    .line 339
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBv:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFU:I
 
-    .line 359
+    .line 340
     const/4 v0, 0x0
 
     iput-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mUri:Landroid/net/Uri;
 
-    .line 361
-    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBG:I
+    .line 342
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/QImageView;->h(Landroid/graphics/drawable/Drawable;)V
 
-    .line 362
-    iget v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBH:I
-
-    .line 364
-    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/QImageView;->g(Landroid/graphics/drawable/Drawable;)V
-
-    .line 366
-    iget v2, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBG:I
-
-    if-ne v0, v2, :cond_0
-
-    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBH:I
-
-    if-eq v1, v0, :cond_1
-
-    .line 367
-    :cond_0
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->requestLayout()V
-
-    .line 370
-    :cond_1
+    .line 347
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->invalidate()V
 
-    .line 372
-    :cond_2
+    .line 354
+    :cond_0
     return-void
-
-    .line 356
-    :cond_3
-    invoke-static {p0}, Lcom/tencent/mm/svg/frame/d/d;->al(Landroid/view/View;)V
-
-    goto :goto_0
 .end method
 
 .method public setImageLevel(I)V
     .locals 1
 
     .prologue
-    .line 478
-    iput p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBF:I
+    .line 454
+    iput p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lGe:I
 
-    .line 479
+    .line 455
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 480
+    .line 456
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->setLevel(I)Z
 
-    .line 481
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTl()V
+    .line 457
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjO()V
 
-    .line 483
+    .line 459
     :cond_0
     return-void
 .end method
@@ -2041,7 +1980,7 @@
     .locals 1
 
     .prologue
-    .line 591
+    .line 567
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Landroid/graphics/Matrix;->isIdentity()Z
@@ -2050,10 +1989,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 592
+    .line 568
     const/4 p1, 0x0
 
-    .line 596
+    .line 572
     :cond_0
     if-nez p1, :cond_1
 
@@ -2076,19 +2015,19 @@
 
     if-nez v0, :cond_3
 
-    .line 597
+    .line 573
     :cond_2
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Matrix;->set(Landroid/graphics/Matrix;)V
 
-    .line 598
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTm()V
+    .line 574
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjP()V
 
-    .line 599
+    .line 575
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->invalidate()V
 
-    .line 601
+    .line 577
     :cond_3
     return-void
 .end method
@@ -2099,59 +2038,42 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 290
-    invoke-static {p1}, Lcom/tencent/mm/svg/frame/a;->mO(I)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 292
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/widget/QImageView;->setSVGResource(I)V
-
-    .line 305
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 296
-    :cond_1
-    invoke-static {p0}, Lcom/tencent/mm/svg/frame/d/d;->al(Landroid/view/View;)V
-
-    .line 297
+    .line 287
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mUri:Landroid/net/Uri;
 
-    if-nez v0, :cond_2
+    if-nez v0, :cond_0
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBv:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFU:I
 
-    if-eq v0, p1, :cond_0
+    if-eq v0, p1, :cond_1
 
-    .line 298
-    :cond_2
-    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/widget/QImageView;->g(Landroid/graphics/drawable/Drawable;)V
+    .line 288
+    :cond_0
+    invoke-direct {p0, v1}, Lcom/tencent/mm/ui/widget/QImageView;->h(Landroid/graphics/drawable/Drawable;)V
 
-    .line 299
-    iput p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBv:I
+    .line 289
+    iput p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFU:I
 
-    .line 300
+    .line 290
     iput-object v1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mUri:Landroid/net/Uri;
 
-    .line 301
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTk()V
+    .line 291
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjN()V
 
-    .line 303
+    .line 293
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->invalidate()V
 
-    goto :goto_0
+    .line 295
+    :cond_1
+    return-void
 .end method
 
 .method public setImageURI(Landroid/net/Uri;)V
     .locals 1
 
     .prologue
-    .line 335
-    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBv:I
+    .line 321
+    iget v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFU:I
 
     if-nez v0, :cond_0
 
@@ -2173,27 +2095,27 @@
 
     if-nez v0, :cond_1
 
-    .line 336
+    .line 322
     :cond_0
     const/4 v0, 0x0
 
-    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/widget/QImageView;->g(Landroid/graphics/drawable/Drawable;)V
+    invoke-direct {p0, v0}, Lcom/tencent/mm/ui/widget/QImageView;->h(Landroid/graphics/drawable/Drawable;)V
 
-    .line 337
+    .line 323
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBv:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFU:I
 
-    .line 338
+    .line 324
     iput-object p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->mUri:Landroid/net/Uri;
 
-    .line 339
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTk()V
+    .line 325
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjN()V
 
-    .line 341
+    .line 327
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->invalidate()V
 
-    .line 343
+    .line 329
     :cond_1
     return-void
 .end method
@@ -2205,7 +2127,7 @@
     .end annotation
 
     .prologue
-    .line 314
+    .line 300
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->getDrawable()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
@@ -2218,11 +2140,11 @@
 
     if-eq p1, v0, :cond_0
 
-    .line 319
+    .line 305
     :goto_0
     return-void
 
-    .line 318
+    .line 304
     :cond_0
     invoke-super {p0, p1, p2}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
 
@@ -2233,10 +2155,10 @@
     .locals 0
 
     .prologue
-    .line 263
-    iput p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->rn:I
+    .line 260
+    iput p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->qp:I
 
-    .line 264
+    .line 261
     return-void
 .end method
 
@@ -2244,25 +2166,10 @@
     .locals 0
 
     .prologue
-    .line 239
-    iput p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->rl:I
+    .line 236
+    iput p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->qn:I
 
-    .line 240
-    return-void
-.end method
-
-.method public setSVGResource(I)V
-    .locals 1
-
-    .prologue
-    .line 308
-    invoke-static {p1}, Lcom/tencent/mm/svg/frame/a;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/QImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 309
+    .line 237
     return-void
 .end method
 
@@ -2270,29 +2177,29 @@
     .locals 2
 
     .prologue
-    .line 554
+    .line 530
     if-nez p1, :cond_0
 
-    .line 555
+    .line 531
     new-instance v0, Ljava/lang/NullPointerException;
 
     invoke-direct {v0}, Ljava/lang/NullPointerException;-><init>()V
 
     throw v0
 
-    .line 558
+    .line 534
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     if-eq v0, p1, :cond_1
 
-    .line 559
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+    .line 535
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    .line 561
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->jBw:Lcom/tencent/mm/ui/widget/QImageView$a;
+    .line 537
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->lFV:Lcom/tencent/mm/ui/widget/QImageView$a;
 
-    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->jBS:Lcom/tencent/mm/ui/widget/QImageView$a;
+    sget-object v1, Lcom/tencent/mm/ui/widget/QImageView$a;->lGt:Lcom/tencent/mm/ui/widget/QImageView$a;
 
     if-ne v0, v1, :cond_2
 
@@ -2301,17 +2208,17 @@
     :goto_0
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/QImageView;->setWillNotCacheDrawing(Z)V
 
-    .line 563
+    .line 539
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->requestLayout()V
 
-    .line 564
+    .line 540
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/QImageView;->invalidate()V
 
-    .line 566
+    .line 542
     :cond_1
     return-void
 
-    .line 561
+    .line 537
     :cond_2
     const/4 v0, 0x0
 
@@ -2322,13 +2229,13 @@
     .locals 0
 
     .prologue
-    .line 466
+    .line 442
     invoke-super {p0, p1}, Landroid/view/View;->setSelected(Z)V
 
-    .line 467
-    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->aTl()V
+    .line 443
+    invoke-direct {p0}, Lcom/tencent/mm/ui/widget/QImageView;->bjO()V
 
-    .line 468
+    .line 444
     return-void
 .end method
 
@@ -2336,7 +2243,7 @@
     .locals 1
 
     .prologue
-    .line 167
+    .line 164
     iget-object v0, p0, Lcom/tencent/mm/ui/widget/QImageView;->mDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eq v0, p1, :cond_0

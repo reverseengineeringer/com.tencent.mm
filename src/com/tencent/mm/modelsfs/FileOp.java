@@ -9,8 +9,8 @@ import android.os.Environment;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.os.Parcelable.Creator;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -26,6 +26,7 @@ import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeMap;
@@ -35,46 +36,227 @@ import java.util.concurrent.locks.ReentrantReadWriteLock.WriteLock;
 
 public final class FileOp
 {
-  private static ReentrantReadWriteLock bKl = new ReentrantReadWriteLock();
-  private static TreeMap bKm = new TreeMap();
-  private static File bKn;
-  private static final EnumSet bKo = EnumSet.of(c.a.bKw, c.a.bKx);
+  private static ReentrantReadWriteLock can = new ReentrantReadWriteLock();
+  private static TreeMap cao = new TreeMap();
+  private static File cap;
+  private static final EnumSet caq = EnumSet.of(g.a.caA, g.a.caB);
   
-  private static void At()
+  private static void Cg()
   {
     Object localObject1 = new Bundle();
-    Object localObject2 = bKm.values().iterator();
+    Object localObject2 = cao.values().iterator();
     while (((Iterator)localObject2).hasNext())
     {
       localObject3 = (SFSContextRec)((Iterator)localObject2).next();
-      ((Bundle)localObject1).putParcelable(bKp, (Parcelable)localObject3);
+      ((Bundle)localObject1).putParcelable(cat, (Parcelable)localObject3);
     }
     localObject2 = Parcel.obtain();
     ((Bundle)localObject1).writeToParcel((Parcel)localObject2, 0);
-    localObject1 = bKn.getAbsolutePath();
+    localObject1 = cap.getAbsolutePath();
     Object localObject3 = ((Parcel)localObject2).marshall();
-    a((String)localObject1, (byte[])localObject3, localObject3.length);
+    b((String)localObject1, (byte[])localObject3, localObject3.length);
     ((Parcel)localObject2).recycle();
   }
   
-  public static boolean P(String paramString1, String paramString2)
+  public static Map Ch()
+  {
+    can.readLock().lock();
+    TreeMap localTreeMap = new TreeMap();
+    Iterator localIterator = cao.values().iterator();
+    while (localIterator.hasNext())
+    {
+      SFSContextRec localSFSContextRec = (SFSContextRec)localIterator.next();
+      if ((localSFSContextRec != null) && (!caw))
+      {
+        if (cax == null) {}
+        try
+        {
+          SFSContext localSFSContext = cax;
+          if (localSFSContext == null) {}
+          try
+          {
+            cax = cay.create();
+            localSFSContext = cax;
+            if (mNativePtr != 0L) {
+              break label155;
+            }
+            throw new IllegalArgumentException("Reuse already released SFSContext.");
+          }
+          catch (Exception localException)
+          {
+            u.e("!24@/B4Tb64lLpJsxiXOTpu//A==", "Failed to create SFSContext for prefix '%s': %s", new Object[] { cat, localException.getMessage() });
+            caw = true;
+          }
+          continue;
+        }
+        finally {}
+        label155:
+        SFSContext.Statistics localStatistics = SFSContext.nativeStatistics(mNativePtr);
+        localMap.put(cay.mName, localStatistics);
+      }
+    }
+    can.readLock().unlock();
+    return localMap;
+  }
+  
+  public static boolean X(String paramString1, String paramString2)
   {
     boolean bool = true;
     if ((paramString1 == null) || (paramString2 == null) || (paramString1.length() == 0) || (paramString2.length() == 0)) {
       bool = false;
     }
-    while ((hv(paramString1)) && (hv(paramString2)) && (new File(paramString1).renameTo(new File(paramString2)))) {
+    String str1;
+    do
+    {
       return bool;
-    }
-    if (j(paramString1, paramString2) < 0L) {
+      str1 = paramString1;
+      str2 = paramString2;
+      if (!iG(paramString1)) {
+        break;
+      }
+      str1 = paramString1;
+      str2 = paramString2;
+      if (!iG(paramString2)) {
+        break;
+      }
+      str1 = paramString1;
+      if (f.iT(paramString1)) {
+        str1 = f.iU(paramString1);
+      }
+      paramString1 = paramString2;
+      if (f.iT(paramString2)) {
+        paramString1 = f.iU(paramString2);
+      }
+    } while (new File(str1).renameTo(new File(paramString1)));
+    String str2 = paramString1;
+    if (o(str1, str2) < 0L) {
       return false;
     }
-    deleteFile(paramString1);
+    deleteFile(str1);
     return true;
   }
   
+  public static void a(String paramString, String[] paramArrayOfString, SFSContext.Builder paramBuilder)
+  {
+    SFSContextRec localSFSContextRec = null;
+    if (paramBuilder == null)
+    {
+      iE(paramString);
+      return;
+    }
+    File localFile = Environment.getExternalStorageDirectory();
+    if (new File(localFile.getAbsolutePath() + "/tencent/MicroMsg/disable-sfs").exists())
+    {
+      u.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "SFS disabled.");
+      return;
+    }
+    if (paramBuilder != null)
+    {
+      localSFSContextRec = new SFSContextRec();
+      cat = paramString;
+      if ((paramArrayOfString != null) && (paramArrayOfString.length != 0)) {
+        break label236;
+      }
+    }
+    label236:
+    for (paramArrayOfString = null;; paramArrayOfString = (String[])Arrays.copyOf(paramArrayOfString, paramArrayOfString.length))
+    {
+      cau = paramArrayOfString;
+      cav = false;
+      cax = null;
+      cay = paramBuilder;
+      can.writeLock().lock();
+      paramArrayOfString = (SFSContextRec)cao.put(paramString, localSFSContextRec);
+      can.writeLock().unlock();
+      if ((paramArrayOfString != null) && (cax != null)) {
+        cax.release();
+      }
+      paramArrayOfString = Parcel.obtain();
+      localSFSContextRec.writeToParcel(paramArrayOfString, 0);
+      paramBuilder = paramArrayOfString.marshall();
+      paramArrayOfString.recycle();
+      paramArrayOfString = y.getContext();
+      paramArrayOfString.sendBroadcast(new Intent("com.tencent.mm.FileOp.registerSFS").putExtra("rec", paramBuilder).setPackage(paramArrayOfString.getPackageName()), "com.tencent.mm.permission.MM_MESSAGE");
+      Cg();
+      u.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Register SFS for prefix: " + paramString);
+      return;
+    }
+  }
+  
+  private static boolean a(String paramString, SFSContextRec paramSFSContextRec)
+  {
+    if (cau == null) {}
+    for (;;)
+    {
+      return false;
+      paramString = paramString.substring(cat.length());
+      int i = paramString.lastIndexOf('/');
+      if (i != -1)
+      {
+        paramString = paramString.substring(i + 1);
+        if (paramString.length() != 0)
+        {
+          paramSFSContextRec = cau;
+          int j = paramSFSContextRec.length;
+          i = 0;
+          while (i < j)
+          {
+            if (g.a(paramSFSContextRec[i], 0, paramString, 0, caq)) {
+              return true;
+            }
+            i += 1;
+          }
+        }
+      }
+    }
+  }
+  
+  public static boolean ax(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() == 0)) {
+      return false;
+    }
+    SFSContextRec localSFSContextRec = iH(paramString);
+    boolean bool1;
+    if (localSFSContextRec != null)
+    {
+      SFSContext localSFSContext = cax;
+      String str2 = paramString.substring(cat.length());
+      if (mNativePtr == 0L) {
+        throw new IllegalArgumentException("Reuse already released SFSContext.");
+      }
+      str1 = str2;
+      if (f.iT(str2))
+      {
+        f.iV(str2);
+        str1 = f.iU(str2);
+      }
+      boolean bool2 = SFSContext.nativeExists(mNativePtr, str1);
+      bool1 = bool2;
+      if (!bool2)
+      {
+        bool1 = bool2;
+        if (cav) {
+          bool1 = new File(paramString).exists();
+        }
+      }
+      can.readLock().unlock();
+      if (localSFSContextRec != null) {
+        break label188;
+      }
+    }
+    label188:
+    for (String str1 = "regular";; str1 = "SFS")
+    {
+      u.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "fileExists: %s [%b, %s]", new Object[] { paramString, Boolean.valueOf(bool1), str1 });
+      return bool1;
+      bool1 = new File(paramString).exists();
+      break;
+    }
+  }
+  
   /* Error */
-  public static int a(String paramString, byte[] paramArrayOfByte, int paramInt)
+  public static int b(String paramString, byte[] paramArrayOfByte, int paramInt)
   {
     // Byte code:
     //   0: iconst_0
@@ -98,7 +280,7 @@ public final class FileOp
     //   25: aconst_null
     //   26: astore 4
     //   28: aload_0
-    //   29: invokestatic 144	com/tencent/mm/modelsfs/FileOp:hx	(Ljava/lang/String;)Ljava/io/OutputStream;
+    //   29: invokestatic 366	com/tencent/mm/modelsfs/FileOp:iJ	(Ljava/lang/String;)Ljava/io/OutputStream;
     //   32: astore 6
     //   34: aload 6
     //   36: astore 4
@@ -108,196 +290,71 @@ public final class FileOp
     //   44: aload_1
     //   45: iconst_0
     //   46: iload_2
-    //   47: invokevirtual 150	java/io/OutputStream:write	([BII)V
+    //   47: invokevirtual 372	java/io/OutputStream:write	([BII)V
     //   50: iload_3
     //   51: istore_2
     //   52: aload 6
     //   54: ifnull -45 -> 9
     //   57: aload 6
-    //   59: invokevirtual 153	java/io/OutputStream:close	()V
+    //   59: invokevirtual 375	java/io/OutputStream:close	()V
     //   62: iconst_0
     //   63: ireturn
     //   64: astore_0
     //   65: iconst_0
     //   66: ireturn
-    //   67: astore 6
-    //   69: aload 4
-    //   71: astore 5
-    //   73: ldc -101
-    //   75: aload 6
-    //   77: new 157	java/lang/StringBuilder
-    //   80: dup
-    //   81: ldc -97
-    //   83: invokespecial 160	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   86: aload_0
-    //   87: invokevirtual 164	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   90: invokevirtual 167	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   93: iconst_0
-    //   94: anewarray 4	java/lang/Object
-    //   97: invokestatic 173	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   67: astore_1
+    //   68: aload 4
+    //   70: astore 5
+    //   72: ldc -95
+    //   74: ldc_w 377
+    //   77: iconst_2
+    //   78: anewarray 4	java/lang/Object
+    //   81: dup
+    //   82: iconst_0
+    //   83: aload_0
+    //   84: aastore
+    //   85: dup
+    //   86: iconst_1
+    //   87: aload_1
+    //   88: invokevirtual 378	java/io/IOException:getMessage	()Ljava/lang/String;
+    //   91: aastore
+    //   92: invokestatic 172	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   95: aload 4
+    //   97: ifnull +8 -> 105
     //   100: aload 4
-    //   102: astore 5
-    //   104: ldc -101
-    //   106: ldc -81
-    //   108: bipush 6
-    //   110: anewarray 4	java/lang/Object
-    //   113: dup
-    //   114: iconst_0
-    //   115: aload 6
-    //   117: invokevirtual 179	java/lang/Object:getClass	()Ljava/lang/Class;
-    //   120: invokevirtual 184	java/lang/Class:getSimpleName	()Ljava/lang/String;
-    //   123: aastore
-    //   124: dup
-    //   125: iconst_1
-    //   126: aload 6
-    //   128: invokevirtual 187	java/io/IOException:getMessage	()Ljava/lang/String;
-    //   131: aastore
-    //   132: dup
-    //   133: iconst_2
-    //   134: aload_0
-    //   135: aastore
-    //   136: dup
-    //   137: iconst_3
-    //   138: aload_1
-    //   139: arraylength
-    //   140: invokestatic 193	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
-    //   143: aastore
-    //   144: dup
-    //   145: iconst_4
-    //   146: iconst_0
-    //   147: invokestatic 193	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
-    //   150: aastore
-    //   151: dup
-    //   152: iconst_5
-    //   153: iload_2
-    //   154: invokestatic 193	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
-    //   157: aastore
-    //   158: invokestatic 197	com/tencent/mm/sdk/platformtools/t:w	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    //   161: aload 4
-    //   163: ifnull +8 -> 171
-    //   166: aload 4
-    //   168: invokevirtual 153	java/io/OutputStream:close	()V
-    //   171: iconst_m1
-    //   172: ireturn
-    //   173: astore_0
-    //   174: aload 5
-    //   176: ifnull +8 -> 184
-    //   179: aload 5
-    //   181: invokevirtual 153	java/io/OutputStream:close	()V
-    //   184: aload_0
-    //   185: athrow
-    //   186: astore_0
-    //   187: goto -16 -> 171
-    //   190: astore_1
-    //   191: goto -7 -> 184
+    //   102: invokevirtual 375	java/io/OutputStream:close	()V
+    //   105: iconst_m1
+    //   106: ireturn
+    //   107: astore_0
+    //   108: aload 5
+    //   110: ifnull +8 -> 118
+    //   113: aload 5
+    //   115: invokevirtual 375	java/io/OutputStream:close	()V
+    //   118: aload_0
+    //   119: athrow
+    //   120: astore_0
+    //   121: goto -16 -> 105
+    //   124: astore_1
+    //   125: goto -7 -> 118
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	194	0	paramString	String
-    //   0	194	1	paramArrayOfByte	byte[]
-    //   0	194	2	paramInt	int
+    //   0	128	0	paramString	String
+    //   0	128	1	paramArrayOfByte	byte[]
+    //   0	128	2	paramInt	int
     //   1	50	3	i	int
-    //   26	141	4	localObject1	Object
-    //   23	157	5	localObject2	Object
+    //   26	75	4	localObject1	Object
+    //   23	91	5	localObject2	Object
     //   32	26	6	localOutputStream	OutputStream
-    //   67	60	6	localIOException	IOException
     // Exception table:
     //   from	to	target	type
     //   57	62	64	java/io/IOException
     //   28	34	67	java/io/IOException
     //   42	50	67	java/io/IOException
-    //   28	34	173	finally
-    //   42	50	173	finally
-    //   73	100	173	finally
-    //   104	161	173	finally
-    //   166	171	186	java/io/IOException
-    //   179	184	190	java/io/IOException
-  }
-  
-  public static void a(String paramString, String[] paramArrayOfString, SFSContext.Builder paramBuilder)
-  {
-    Object localObject = Environment.getExternalStorageDirectory();
-    if (new File(((File)localObject).getAbsolutePath() + "/tencent/MicroMsg/disable-sfs").exists())
-    {
-      t.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "SFS disabled.");
-      return;
-    }
-    localObject = new SFSContextRec();
-    bKp = paramString;
-    bKq = ((String[])Arrays.copyOf(paramArrayOfString, 2));
-    bKr = false;
-    bKt = null;
-    bKu = paramBuilder;
-    bKl.writeLock().lock();
-    paramArrayOfString = (SFSContextRec)bKm.put(paramString, localObject);
-    bKl.writeLock().unlock();
-    if ((paramArrayOfString != null) && (bKt != null)) {
-      bKt.release();
-    }
-    paramArrayOfString = Parcel.obtain();
-    ((SFSContextRec)localObject).writeToParcel(paramArrayOfString, 0);
-    paramBuilder = paramArrayOfString.marshall();
-    paramArrayOfString.recycle();
-    paramArrayOfString = aa.getContext();
-    paramArrayOfString.sendBroadcast(new Intent("com.tencent.mm.FileOp.registerSFS").putExtra("rec", paramBuilder).setPackage(paramArrayOfString.getPackageName()), "com.tencent.mm.permission.MM_MESSAGE");
-    At();
-    t.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Register SFS for prefix: " + paramString);
-  }
-  
-  private static boolean a(String paramString, SFSContextRec paramSFSContextRec)
-  {
-    if (bKq == null) {}
-    for (;;)
-    {
-      return false;
-      paramString = paramString.substring(bKp.length());
-      int i = paramString.lastIndexOf('/');
-      if (i != -1)
-      {
-        paramString = paramString.substring(i + 1);
-        if (paramString.length() != 0)
-        {
-          paramSFSContextRec = bKq;
-          int j = paramSFSContextRec.length;
-          i = 0;
-          while (i < j)
-          {
-            if (c.a(paramSFSContextRec[i], 0, paramString, 0, bKo)) {
-              return true;
-            }
-            i += 1;
-          }
-        }
-      }
-    }
-  }
-  
-  public static boolean az(String paramString)
-  {
-    if ((paramString == null) || (paramString.length() == 0)) {
-      return false;
-    }
-    SFSContextRec localSFSContextRec = hw(paramString);
-    if (localSFSContextRec != null)
-    {
-      SFSContext localSFSContext = bKt;
-      String str = paramString.substring(bKp.length());
-      if (bKB == 0L) {
-        throw new IllegalArgumentException("Reuse already released SFSContext.");
-      }
-      boolean bool2 = SFSContext.nativeExists(bKB, str);
-      bool1 = bool2;
-      if (!bool2)
-      {
-        bool1 = bool2;
-        if (!bKr) {}
-      }
-    }
-    for (boolean bool1 = new File(paramString).exists();; bool1 = new File(paramString).exists())
-    {
-      bKl.readLock().unlock();
-      t.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "fileExists: %s, %b", new Object[] { paramString, Boolean.valueOf(bool1) });
-      return bool1;
-    }
+    //   28	34	107	finally
+    //   42	50	107	finally
+    //   72	95	107	finally
+    //   100	105	120	java/io/IOException
+    //   113	118	124	java/io/IOException
   }
   
   /* Error */
@@ -312,13 +369,13 @@ public final class FileOp
     //   7: ifge +113 -> 120
     //   10: sipush 2048
     //   13: istore_3
-    //   14: new 351	java/io/ByteArrayOutputStream
+    //   14: new 382	java/io/ByteArrayOutputStream
     //   17: dup
     //   18: iload_3
-    //   19: invokespecial 354	java/io/ByteArrayOutputStream:<init>	(I)V
+    //   19: invokespecial 385	java/io/ByteArrayOutputStream:<init>	(I)V
     //   22: astore 8
     //   24: aload_0
-    //   25: invokestatic 358	com/tencent/mm/modelsfs/FileOp:openRead	(Ljava/lang/String;)Ljava/io/InputStream;
+    //   25: invokestatic 389	com/tencent/mm/modelsfs/FileOp:openRead	(Ljava/lang/String;)Ljava/io/InputStream;
     //   28: astore 7
     //   30: iload_1
     //   31: ifle +19 -> 50
@@ -329,7 +386,7 @@ public final class FileOp
     //   40: astore 6
     //   42: aload 7
     //   44: lload 4
-    //   46: invokevirtual 364	java/io/InputStream:skip	(J)J
+    //   46: invokevirtual 395	java/io/InputStream:skip	(J)J
     //   49: pop2
     //   50: aload 7
     //   52: astore 6
@@ -340,7 +397,7 @@ public final class FileOp
     //   62: istore_1
     //   63: iload_2
     //   64: ifge +7 -> 71
-    //   67: ldc_w 365
+    //   67: ldc_w 396
     //   70: istore_1
     //   71: aload 7
     //   73: astore 6
@@ -349,8 +406,8 @@ public final class FileOp
     //   79: iconst_0
     //   80: iload_1
     //   81: sipush 1024
-    //   84: invokestatic 371	java/lang/Math:min	(II)I
-    //   87: invokevirtual 375	java/io/InputStream:read	([BII)I
+    //   84: invokestatic 402	java/lang/Math:min	(II)I
+    //   87: invokevirtual 406	java/io/InputStream:read	([BII)I
     //   90: istore_2
     //   91: iload_2
     //   92: iconst_m1
@@ -363,7 +420,7 @@ public final class FileOp
     //   106: aload 9
     //   108: iconst_0
     //   109: iload_2
-    //   110: invokevirtual 376	java/io/ByteArrayOutputStream:write	([BII)V
+    //   110: invokevirtual 407	java/io/ByteArrayOutputStream:write	([BII)V
     //   113: iload_1
     //   114: iload_2
     //   115: isub
@@ -375,14 +432,14 @@ public final class FileOp
     //   125: aload 7
     //   127: ifnull +8 -> 135
     //   130: aload 7
-    //   132: invokevirtual 377	java/io/InputStream:close	()V
+    //   132: invokevirtual 408	java/io/InputStream:close	()V
     //   135: aload 8
-    //   137: invokevirtual 380	java/io/ByteArrayOutputStream:toByteArray	()[B
+    //   137: invokevirtual 411	java/io/ByteArrayOutputStream:toByteArray	()[B
     //   140: astore 6
     //   142: aload 8
-    //   144: invokevirtual 381	java/io/ByteArrayOutputStream:close	()V
-    //   147: ldc -101
-    //   149: ldc_w 383
+    //   144: invokevirtual 412	java/io/ByteArrayOutputStream:close	()V
+    //   147: ldc -95
+    //   149: ldc_w 414
     //   152: iconst_2
     //   153: anewarray 4	java/lang/Object
     //   156: dup
@@ -393,9 +450,9 @@ public final class FileOp
     //   161: iconst_1
     //   162: aload 6
     //   164: arraylength
-    //   165: invokestatic 193	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
+    //   165: invokestatic 419	java/lang/Integer:valueOf	(I)Ljava/lang/Integer;
     //   168: aastore
-    //   169: invokestatic 347	com/tencent/mm/sdk/platformtools/t:d	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   169: invokestatic 358	com/tencent/mm/sdk/platformtools/u:d	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
     //   172: aload 6
     //   174: areturn
     //   175: astore 8
@@ -403,24 +460,24 @@ public final class FileOp
     //   178: astore 7
     //   180: aload 7
     //   182: astore 6
-    //   184: ldc -101
-    //   186: new 157	java/lang/StringBuilder
+    //   184: ldc -95
+    //   186: new 235	java/lang/StringBuilder
     //   189: dup
-    //   190: ldc_w 385
-    //   193: invokespecial 160	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   190: ldc_w 421
+    //   193: invokespecial 311	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   196: aload_0
-    //   197: invokevirtual 164	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   200: ldc_w 387
-    //   203: invokevirtual 164	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   197: invokevirtual 240	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   200: ldc_w 423
+    //   203: invokevirtual 240	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   206: aload 8
-    //   208: invokevirtual 187	java/io/IOException:getMessage	()Ljava/lang/String;
-    //   211: invokevirtual 164	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   214: invokevirtual 167	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   217: invokestatic 389	com/tencent/mm/sdk/platformtools/t:w	(Ljava/lang/String;Ljava/lang/String;)V
+    //   208: invokevirtual 378	java/io/IOException:getMessage	()Ljava/lang/String;
+    //   211: invokevirtual 240	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   214: invokevirtual 245	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   217: invokestatic 426	com/tencent/mm/sdk/platformtools/u:w	(Ljava/lang/String;Ljava/lang/String;)V
     //   220: aload 7
     //   222: ifnull +8 -> 230
     //   225: aload 7
-    //   227: invokevirtual 377	java/io/InputStream:close	()V
+    //   227: invokevirtual 408	java/io/InputStream:close	()V
     //   230: aconst_null
     //   231: areturn
     //   232: astore_0
@@ -429,7 +486,7 @@ public final class FileOp
     //   236: aload 6
     //   238: ifnull +8 -> 246
     //   241: aload 6
-    //   243: invokevirtual 377	java/io/InputStream:close	()V
+    //   243: invokevirtual 408	java/io/InputStream:close	()V
     //   246: aload_0
     //   247: athrow
     //   248: astore 6
@@ -484,37 +541,522 @@ public final class FileOp
     if ((paramString == null) || (paramString.length() == 0)) {
       return false;
     }
-    SFSContextRec localSFSContextRec = hw(paramString);
+    SFSContextRec localSFSContextRec = iH(paramString);
+    boolean bool1;
     if (localSFSContextRec != null)
     {
-      String str = paramString.substring(bKp.length());
-      boolean bool2 = bKt.bm(str);
+      str = paramString.substring(cat.length());
+      boolean bool2 = cax.bo(str);
       bool1 = bool2;
       if (!bool2)
       {
         bool1 = bool2;
-        if (!bKr) {}
+        if (cav) {
+          if (!f.iT(paramString)) {
+            break label173;
+          }
+        }
       }
     }
-    for (boolean bool1 = new File(paramString).delete();; bool1 = new File(paramString).delete())
+    label105:
+    label168:
+    label173:
+    for (String str = f.iU(paramString);; str = paramString)
     {
-      bKl.readLock().unlock();
-      t.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "deleteFile: %s, %b", new Object[] { paramString, Boolean.valueOf(bool1) });
-      return bool1;
+      bool1 = new File(str).delete();
+      can.readLock().unlock();
+      if (localSFSContextRec == null)
+      {
+        str = "regular";
+        u.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "deleteFile: %s [%b, %s]", new Object[] { paramString, Boolean.valueOf(bool1), str });
+        return bool1;
+        if (!f.iT(paramString)) {
+          break label168;
+        }
+      }
+      for (str = f.iU(paramString);; str = paramString)
+      {
+        bool1 = new File(str).delete();
+        break;
+        str = "SFS";
+        break label105;
+      }
     }
   }
   
-  public static int h(String paramString, byte[] paramArrayOfByte)
+  public static void iE(String paramString)
   {
-    return a(paramString, paramArrayOfByte, paramArrayOfByte.length);
+    can.writeLock().lock();
+    Object localObject = (SFSContextRec)cao.remove(paramString);
+    can.writeLock().unlock();
+    if ((localObject != null) && (cax != null)) {
+      cax.release();
+    }
+    localObject = y.getContext();
+    ((Context)localObject).sendBroadcast(new Intent("com.tencent.mm.FileOp.unregisterSFS").putExtra("prefix", paramString).setPackage(((Context)localObject).getPackageName()), "com.tencent.mm.permission.MM_MESSAGE");
+    Cg();
+    u.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Unregister SFS for prefix: " + paramString);
   }
   
-  public static boolean h(String paramString1, String paramString2, String paramString3)
+  private static boolean iF(String paramString)
   {
-    return P(paramString1 + paramString2, paramString1 + paramString3);
+    can.readLock().lock();
+    Map.Entry localEntry = cao.floorEntry(paramString);
+    if ((localEntry != null) && (paramString.startsWith((String)localEntry.getKey())))
+    {
+      paramString = (SFSContextRec)localEntry.getValue();
+      if ((cau != null) || (cav)) {}
+    }
+    for (boolean bool = false;; bool = true)
+    {
+      can.readLock().unlock();
+      return bool;
+    }
   }
   
-  public static boolean hA(String paramString)
+  private static boolean iG(String paramString)
+  {
+    can.readLock().lock();
+    Map.Entry localEntry = cao.floorEntry(paramString);
+    if ((localEntry != null) && (paramString.startsWith((String)localEntry.getKey())) && (!a(paramString, (SFSContextRec)localEntry.getValue()))) {}
+    for (boolean bool = false;; bool = true)
+    {
+      can.readLock().unlock();
+      return bool;
+    }
+  }
+  
+  /* Error */
+  private static SFSContextRec iH(String paramString)
+  {
+    // Byte code:
+    //   0: getstatic 31	com/tencent/mm/modelsfs/FileOp:can	Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    //   3: invokevirtual 123	java/util/concurrent/locks/ReentrantReadWriteLock:readLock	()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
+    //   6: invokevirtual 128	java/util/concurrent/locks/ReentrantReadWriteLock$ReadLock:lock	()V
+    //   9: getstatic 36	com/tencent/mm/modelsfs/FileOp:cao	Ljava/util/TreeMap;
+    //   12: aload_0
+    //   13: invokevirtual 452	java/util/TreeMap:floorEntry	(Ljava/lang/Object;)Ljava/util/Map$Entry;
+    //   16: astore_1
+    //   17: aload_1
+    //   18: ifnonnull +7 -> 25
+    //   21: aconst_null
+    //   22: astore_0
+    //   23: aload_0
+    //   24: areturn
+    //   25: aload_0
+    //   26: aload_1
+    //   27: invokeinterface 457 1 0
+    //   32: checkcast 194	java/lang/String
+    //   35: invokevirtual 460	java/lang/String:startsWith	(Ljava/lang/String;)Z
+    //   38: ifeq +113 -> 151
+    //   41: aload_1
+    //   42: invokeinterface 463 1 0
+    //   47: checkcast 8	com/tencent/mm/modelsfs/FileOp$SFSContextRec
+    //   50: astore_2
+    //   51: aload_2
+    //   52: astore_1
+    //   53: aload_0
+    //   54: aload_2
+    //   55: invokestatic 465	com/tencent/mm/modelsfs/FileOp:a	(Ljava/lang/String;Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;)Z
+    //   58: ifeq +5 -> 63
+    //   61: aconst_null
+    //   62: astore_1
+    //   63: aload_1
+    //   64: ifnull +85 -> 149
+    //   67: aload_1
+    //   68: getfield 132	com/tencent/mm/modelsfs/FileOp$SFSContextRec:caw	Z
+    //   71: ifne +78 -> 149
+    //   74: aload_1
+    //   75: astore_0
+    //   76: aload_1
+    //   77: getfield 136	com/tencent/mm/modelsfs/FileOp$SFSContextRec:cax	Lcom/tencent/mm/modelsfs/SFSContext;
+    //   80: ifnonnull -57 -> 23
+    //   83: aload_1
+    //   84: monitorenter
+    //   85: aload_1
+    //   86: getfield 136	com/tencent/mm/modelsfs/FileOp$SFSContextRec:cax	Lcom/tencent/mm/modelsfs/SFSContext;
+    //   89: astore_0
+    //   90: aload_0
+    //   91: ifnonnull +14 -> 105
+    //   94: aload_1
+    //   95: aload_1
+    //   96: getfield 140	com/tencent/mm/modelsfs/FileOp$SFSContextRec:cay	Lcom/tencent/mm/modelsfs/SFSContext$Builder;
+    //   99: invokevirtual 146	com/tencent/mm/modelsfs/SFSContext$Builder:create	()Lcom/tencent/mm/modelsfs/SFSContext;
+    //   102: putfield 136	com/tencent/mm/modelsfs/FileOp$SFSContextRec:cax	Lcom/tencent/mm/modelsfs/SFSContext;
+    //   105: aload_1
+    //   106: monitorexit
+    //   107: aload_1
+    //   108: areturn
+    //   109: astore_0
+    //   110: aload_1
+    //   111: monitorexit
+    //   112: aload_0
+    //   113: athrow
+    //   114: astore_0
+    //   115: ldc -95
+    //   117: ldc -93
+    //   119: iconst_2
+    //   120: anewarray 4	java/lang/Object
+    //   123: dup
+    //   124: iconst_0
+    //   125: aload_1
+    //   126: getfield 82	com/tencent/mm/modelsfs/FileOp$SFSContextRec:cat	Ljava/lang/String;
+    //   129: aastore
+    //   130: dup
+    //   131: iconst_1
+    //   132: aload_0
+    //   133: invokevirtual 166	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   136: aastore
+    //   137: invokestatic 172	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   140: aload_1
+    //   141: iconst_1
+    //   142: putfield 132	com/tencent/mm/modelsfs/FileOp$SFSContextRec:caw	Z
+    //   145: aload_1
+    //   146: monitorexit
+    //   147: aconst_null
+    //   148: areturn
+    //   149: aconst_null
+    //   150: areturn
+    //   151: aconst_null
+    //   152: astore_1
+    //   153: goto -90 -> 63
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	156	0	paramString	String
+    //   16	137	1	localObject	Object
+    //   50	5	2	localSFSContextRec	SFSContextRec
+    // Exception table:
+    //   from	to	target	type
+    //   85	90	109	finally
+    //   94	105	109	finally
+    //   105	107	109	finally
+    //   110	112	109	finally
+    //   115	147	109	finally
+    //   94	105	114	java/lang/Exception
+  }
+  
+  public static OutputStream iI(String paramString)
+  {
+    return iJ(paramString);
+  }
+  
+  public static OutputStream iJ(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() == 0)) {
+      throw new FileNotFoundException("path == null");
+    }
+    Object localObject2 = iH(paramString);
+    if (localObject2 == null) {}
+    for (;;)
+    {
+      try
+      {
+        if (f.iT(paramString))
+        {
+          long l = f.iV(paramString);
+          localObject1 = new c(f.iU(paramString), l);
+          can.readLock().unlock();
+          if (localObject2 != null) {
+            break label156;
+          }
+          localObject2 = "regular";
+          u.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "openWrite: %s [%s, %s]", new Object[] { paramString, "ok", localObject2 });
+          return (OutputStream)localObject1;
+        }
+        localObject1 = new FileOutputStream(paramString);
+        continue;
+        localObject1 = paramString.substring(cat.length());
+      }
+      finally
+      {
+        can.readLock().unlock();
+      }
+      Object localObject1 = cax.iI((String)localObject1);
+      continue;
+      label156:
+      localObject2 = "SFS";
+    }
+  }
+  
+  /* Error */
+  public static boolean iK(String paramString)
+  {
+    // Byte code:
+    //   0: aconst_null
+    //   1: astore 4
+    //   3: aconst_null
+    //   4: astore 5
+    //   6: aload_0
+    //   7: ifnull +10 -> 17
+    //   10: aload_0
+    //   11: invokevirtual 198	java/lang/String:length	()I
+    //   14: ifne +5 -> 19
+    //   17: iconst_0
+    //   18: ireturn
+    //   19: aload_0
+    //   20: invokestatic 337	com/tencent/mm/modelsfs/FileOp:iH	(Ljava/lang/String;)Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;
+    //   23: astore_2
+    //   24: aload_2
+    //   25: ifnonnull +14 -> 39
+    //   28: getstatic 31	com/tencent/mm/modelsfs/FileOp:can	Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    //   31: invokevirtual 123	java/util/concurrent/locks/ReentrantReadWriteLock:readLock	()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
+    //   34: invokevirtual 186	java/util/concurrent/locks/ReentrantReadWriteLock$ReadLock:unlock	()V
+    //   37: iconst_1
+    //   38: ireturn
+    //   39: aload_0
+    //   40: aload_2
+    //   41: getfield 82	com/tencent/mm/modelsfs/FileOp$SFSContextRec:cat	Ljava/lang/String;
+    //   44: invokevirtual 198	java/lang/String:length	()I
+    //   47: invokevirtual 323	java/lang/String:substring	(I)Ljava/lang/String;
+    //   50: astore_3
+    //   51: aload_2
+    //   52: getfield 136	com/tencent/mm/modelsfs/FileOp$SFSContextRec:cax	Lcom/tencent/mm/modelsfs/SFSContext;
+    //   55: aload_3
+    //   56: invokevirtual 487	com/tencent/mm/modelsfs/SFSContext:openRead	(Ljava/lang/String;)Ljava/io/InputStream;
+    //   59: astore_2
+    //   60: new 100	java/io/File
+    //   63: dup
+    //   64: aload_0
+    //   65: invokespecial 212	java/io/File:<init>	(Ljava/lang/String;)V
+    //   68: invokevirtual 490	java/io/File:getParent	()Ljava/lang/String;
+    //   71: astore_3
+    //   72: aload_3
+    //   73: invokestatic 495	com/tencent/mm/sdk/platformtools/ay:kz	(Ljava/lang/String;)Z
+    //   76: ifne +15 -> 91
+    //   79: new 100	java/io/File
+    //   82: dup
+    //   83: aload_3
+    //   84: invokespecial 212	java/io/File:<init>	(Ljava/lang/String;)V
+    //   87: invokevirtual 498	java/io/File:mkdirs	()Z
+    //   90: pop
+    //   91: new 482	java/io/FileOutputStream
+    //   94: dup
+    //   95: aload_0
+    //   96: invokespecial 483	java/io/FileOutputStream:<init>	(Ljava/lang/String;)V
+    //   99: astore_3
+    //   100: sipush 1024
+    //   103: newarray <illegal type>
+    //   105: astore 4
+    //   107: aload_2
+    //   108: aload 4
+    //   110: invokevirtual 501	java/io/InputStream:read	([B)I
+    //   113: istore_1
+    //   114: iload_1
+    //   115: iconst_m1
+    //   116: if_icmpeq +67 -> 183
+    //   119: aload_3
+    //   120: aload 4
+    //   122: iconst_0
+    //   123: iload_1
+    //   124: invokevirtual 372	java/io/OutputStream:write	([BII)V
+    //   127: goto -20 -> 107
+    //   130: astore 4
+    //   132: ldc -95
+    //   134: ldc_w 503
+    //   137: iconst_2
+    //   138: anewarray 4	java/lang/Object
+    //   141: dup
+    //   142: iconst_0
+    //   143: aload_0
+    //   144: aastore
+    //   145: dup
+    //   146: iconst_1
+    //   147: aload 4
+    //   149: invokevirtual 378	java/io/IOException:getMessage	()Ljava/lang/String;
+    //   152: aastore
+    //   153: invokestatic 172	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   156: aload_2
+    //   157: ifnull +7 -> 164
+    //   160: aload_2
+    //   161: invokevirtual 408	java/io/InputStream:close	()V
+    //   164: aload_3
+    //   165: ifnull +7 -> 172
+    //   168: aload_3
+    //   169: invokevirtual 375	java/io/OutputStream:close	()V
+    //   172: getstatic 31	com/tencent/mm/modelsfs/FileOp:can	Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    //   175: invokevirtual 123	java/util/concurrent/locks/ReentrantReadWriteLock:readLock	()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
+    //   178: invokevirtual 186	java/util/concurrent/locks/ReentrantReadWriteLock$ReadLock:unlock	()V
+    //   181: iconst_0
+    //   182: ireturn
+    //   183: aload_2
+    //   184: invokevirtual 408	java/io/InputStream:close	()V
+    //   187: aload_3
+    //   188: invokevirtual 375	java/io/OutputStream:close	()V
+    //   191: getstatic 31	com/tencent/mm/modelsfs/FileOp:can	Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    //   194: invokevirtual 123	java/util/concurrent/locks/ReentrantReadWriteLock:readLock	()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
+    //   197: invokevirtual 186	java/util/concurrent/locks/ReentrantReadWriteLock$ReadLock:unlock	()V
+    //   200: iconst_1
+    //   201: ireturn
+    //   202: astore_0
+    //   203: aconst_null
+    //   204: astore_2
+    //   205: aload 4
+    //   207: astore_3
+    //   208: aload_2
+    //   209: ifnull +7 -> 216
+    //   212: aload_2
+    //   213: invokevirtual 408	java/io/InputStream:close	()V
+    //   216: aload_3
+    //   217: ifnull +7 -> 224
+    //   220: aload_3
+    //   221: invokevirtual 375	java/io/OutputStream:close	()V
+    //   224: getstatic 31	com/tencent/mm/modelsfs/FileOp:can	Ljava/util/concurrent/locks/ReentrantReadWriteLock;
+    //   227: invokevirtual 123	java/util/concurrent/locks/ReentrantReadWriteLock:readLock	()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
+    //   230: invokevirtual 186	java/util/concurrent/locks/ReentrantReadWriteLock$ReadLock:unlock	()V
+    //   233: aload_0
+    //   234: athrow
+    //   235: astore_0
+    //   236: goto -49 -> 187
+    //   239: astore_0
+    //   240: goto -49 -> 191
+    //   243: astore_0
+    //   244: goto -80 -> 164
+    //   247: astore_0
+    //   248: goto -76 -> 172
+    //   251: astore_2
+    //   252: goto -36 -> 216
+    //   255: astore_2
+    //   256: goto -32 -> 224
+    //   259: astore_0
+    //   260: aload 4
+    //   262: astore_3
+    //   263: goto -55 -> 208
+    //   266: astore_0
+    //   267: goto -59 -> 208
+    //   270: astore_0
+    //   271: goto -63 -> 208
+    //   274: astore 4
+    //   276: aconst_null
+    //   277: astore_2
+    //   278: aload 5
+    //   280: astore_3
+    //   281: goto -149 -> 132
+    //   284: astore 4
+    //   286: aload 5
+    //   288: astore_3
+    //   289: goto -157 -> 132
+    // Local variable table:
+    //   start	length	slot	name	signature
+    //   0	292	0	paramString	String
+    //   113	11	1	i	int
+    //   23	190	2	localObject1	Object
+    //   251	1	2	localIOException1	IOException
+    //   255	1	2	localIOException2	IOException
+    //   277	1	2	localObject2	Object
+    //   50	239	3	localObject3	Object
+    //   1	120	4	arrayOfByte	byte[]
+    //   130	131	4	localIOException3	IOException
+    //   274	1	4	localIOException4	IOException
+    //   284	1	4	localIOException5	IOException
+    //   4	283	5	localObject4	Object
+    // Exception table:
+    //   from	to	target	type
+    //   100	107	130	java/io/IOException
+    //   107	114	130	java/io/IOException
+    //   119	127	130	java/io/IOException
+    //   39	60	202	finally
+    //   183	187	235	java/io/IOException
+    //   187	191	239	java/io/IOException
+    //   160	164	243	java/io/IOException
+    //   168	172	247	java/io/IOException
+    //   212	216	251	java/io/IOException
+    //   220	224	255	java/io/IOException
+    //   60	91	259	finally
+    //   91	100	259	finally
+    //   100	107	266	finally
+    //   107	114	266	finally
+    //   119	127	266	finally
+    //   132	156	270	finally
+    //   39	60	274	java/io/IOException
+    //   60	91	284	java/io/IOException
+    //   91	100	284	java/io/IOException
+  }
+  
+  public static long iL(String paramString)
+  {
+    long l = 0L;
+    if (paramString == null) {
+      return 0L;
+    }
+    SFSContextRec localSFSContextRec = iH(paramString);
+    if (localSFSContextRec != null)
+    {
+      localObject = paramString.substring(cat.length());
+      localObject = cax.iX((String)localObject);
+      if (localObject == null) {
+        if (cav) {
+          if (!f.iT(paramString)) {
+            break label172;
+          }
+        }
+      }
+    }
+    label96:
+    label172:
+    for (Object localObject = f.iU(paramString);; localObject = paramString)
+    {
+      for (l = new File((String)localObject).length();; l = size)
+      {
+        can.readLock().unlock();
+        if (localSFSContextRec != null) {
+          break;
+        }
+        localObject = "regular";
+        u.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "readFileLength: %s [%d, %s]", new Object[] { paramString, Long.valueOf(l), localObject });
+        return l;
+      }
+      if (f.iT(paramString)) {}
+      for (localObject = f.iU(paramString);; localObject = paramString)
+      {
+        l = new File((String)localObject).length();
+        break;
+        localObject = "SFS";
+        break label96;
+      }
+    }
+  }
+  
+  public static long iM(String paramString)
+  {
+    long l = 0L;
+    if ((paramString == null) || (paramString.length() == 0)) {
+      return 0L;
+    }
+    Object localObject1 = iH(paramString);
+    Object localObject2;
+    if (localObject1 != null)
+    {
+      localObject2 = paramString.substring(cat.length());
+      localObject2 = cax.iX((String)localObject2);
+      if (localObject2 == null)
+      {
+        if (cav) {
+          l = new File(paramString).lastModified();
+        }
+        can.readLock().unlock();
+        if (localObject1 != null) {
+          break label146;
+        }
+      }
+    }
+    label146:
+    for (localObject1 = "regular";; localObject1 = "SFS")
+    {
+      u.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "getFileTime: %s [%d, %s]", new Object[] { paramString, Long.valueOf(l), localObject1 });
+      return l;
+      l = timestamp * 1000L;
+      break;
+      l = new File(paramString).lastModified();
+      break;
+    }
+  }
+  
+  public static String iN(String paramString)
+  {
+    return new File(f.iU(paramString)).getParentFile().getAbsolutePath();
+  }
+  
+  public static boolean iO(String paramString)
   {
     boolean bool2 = true;
     boolean bool1;
@@ -526,8 +1068,9 @@ public final class FileOp
       do
       {
         return bool1;
+        paramString = f.iU(paramString);
         bool1 = bool2;
-      } while (!hu(paramString));
+      } while (!iF(paramString));
       paramString = new File(paramString);
       if (!paramString.exists()) {
         break;
@@ -537,59 +1080,164 @@ public final class FileOp
     return paramString.mkdirs();
   }
   
+  public static boolean iP(String paramString)
+  {
+    if ((paramString == null) || (paramString.length() == 0)) {
+      return false;
+    }
+    Object localObject2 = iH(paramString);
+    boolean bool;
+    Iterator localIterator;
+    if (localObject2 != null)
+    {
+      localObject1 = paramString;
+      try
+      {
+        if (paramString.equals(cat))
+        {
+          localObject1 = paramString;
+          localObject2 = cax;
+          localObject1 = paramString;
+          if (mNativePtr == 0L)
+          {
+            localObject1 = paramString;
+            throw new IllegalArgumentException("Reuse already released SFSContext.");
+          }
+        }
+      }
+      catch (IOException paramString)
+      {
+        u.printErrStackTrace("!24@/B4Tb64lLpJsxiXOTpu//A==", paramString, "deleteDirIncludedFiles failed: " + (String)localObject1, new Object[0]);
+        bool = false;
+      }
+      for (;;)
+      {
+        can.readLock().unlock();
+        return bool;
+        localObject1 = paramString;
+        if (SFSContext.nativeClear(mNativePtr) != 0)
+        {
+          localObject1 = paramString;
+          throw new IOException(SFSContext.nativeErrorMessage());
+          localObject1 = paramString;
+          paramString = paramString.substring(cat.length());
+          localObject1 = paramString;
+          localIterator = cax.iW(paramString).iterator();
+          for (;;)
+          {
+            localObject1 = paramString;
+            if (!localIterator.hasNext()) {
+              break;
+            }
+            localObject1 = paramString;
+            SFSContext.FileEntry localFileEntry = (SFSContext.FileEntry)localIterator.next();
+            localObject1 = paramString;
+            cax.bo(name);
+          }
+        }
+        bool = true;
+      }
+    }
+    Object localObject1 = new File(paramString);
+    paramString = new ArrayDeque();
+    paramString.add(new a((File)localObject1));
+    label393:
+    for (;;)
+    {
+      localObject1 = (a)paramString.getLast();
+      if (cas == null) {
+        cas = car.listFiles();
+      }
+      if (cas == null) {
+        car.delete();
+      }
+      for (;;)
+      {
+        if (!paramString.isEmpty()) {
+          break label393;
+        }
+        bool = true;
+        break;
+        localObject2 = cas;
+        int i = pos;
+        if (i < localObject2.length)
+        {
+          localIterator = localObject2[i];
+          if (localIterator.isFile()) {
+            localIterator.delete();
+          }
+          while (!localIterator.isDirectory())
+          {
+            i += 1;
+            break;
+          }
+          pos = i;
+          paramString.add(new a(localIterator));
+        }
+        else
+        {
+          car.delete();
+          paramString.removeLast();
+        }
+      }
+    }
+  }
+  
   /* Error */
-  public static boolean hB(String paramString)
+  public static boolean iQ(String paramString)
   {
     // Byte code:
     //   0: aload_0
     //   1: ifnull +10 -> 11
     //   4: aload_0
-    //   5: invokevirtual 120	java/lang/String:length	()I
+    //   5: invokevirtual 198	java/lang/String:length	()I
     //   8: ifne +5 -> 13
     //   11: iconst_0
     //   12: ireturn
     //   13: aload_0
-    //   14: invokestatic 415	com/tencent/mm/modelsfs/FileOp:az	(Ljava/lang/String;)Z
+    //   14: invokestatic 612	com/tencent/mm/modelsfs/FileOp:ax	(Ljava/lang/String;)Z
     //   17: ifne +12 -> 29
     //   20: aload_0
-    //   21: invokestatic 144	com/tencent/mm/modelsfs/FileOp:hx	(Ljava/lang/String;)Ljava/io/OutputStream;
+    //   21: invokestatic 366	com/tencent/mm/modelsfs/FileOp:iJ	(Ljava/lang/String;)Ljava/io/OutputStream;
     //   24: astore_1
     //   25: aload_1
-    //   26: invokevirtual 153	java/io/OutputStream:close	()V
+    //   26: invokevirtual 375	java/io/OutputStream:close	()V
     //   29: iconst_1
     //   30: ireturn
     //   31: astore_1
-    //   32: ldc -101
-    //   34: aload_1
-    //   35: new 157	java/lang/StringBuilder
-    //   38: dup
-    //   39: ldc_w 417
-    //   42: invokespecial 160	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
-    //   45: aload_0
-    //   46: invokevirtual 164	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   49: invokevirtual 167	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   52: iconst_0
-    //   53: anewarray 4	java/lang/Object
-    //   56: invokestatic 173	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-    //   59: iconst_0
-    //   60: ireturn
-    //   61: astore_0
-    //   62: goto -33 -> 29
+    //   32: ldc -95
+    //   34: ldc_w 614
+    //   37: iconst_2
+    //   38: anewarray 4	java/lang/Object
+    //   41: dup
+    //   42: iconst_0
+    //   43: aload_0
+    //   44: aastore
+    //   45: dup
+    //   46: iconst_1
+    //   47: aload_1
+    //   48: invokevirtual 378	java/io/IOException:getMessage	()Ljava/lang/String;
+    //   51: aastore
+    //   52: invokestatic 172	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   55: iconst_0
+    //   56: ireturn
+    //   57: astore_0
+    //   58: goto -29 -> 29
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	65	0	paramString	String
+    //   0	61	0	paramString	String
     //   24	2	1	localOutputStream	OutputStream
-    //   31	4	1	localIOException	IOException
+    //   31	17	1	localIOException	IOException
     // Exception table:
     //   from	to	target	type
     //   20	25	31	java/io/IOException
-    //   25	29	61	java/io/IOException
+    //   25	29	57	java/io/IOException
   }
   
-  public static void hC(String paramString)
+  public static void iR(String paramString)
   {
     if ((paramString == null) || (paramString.length() == 0)) {}
-    while (!hu(paramString)) {
+    while (!iF(paramString)) {
       return;
     }
     try
@@ -599,281 +1247,109 @@ public final class FileOp
     }
     catch (IOException localIOException)
     {
-      t.printErrStackTrace("!24@/B4Tb64lLpJsxiXOTpu//A==", localIOException, "markNoMedia failed: " + paramString, new Object[0]);
+      u.e("!24@/B4Tb64lLpJsxiXOTpu//A==", "markNoMedia '%s' failed: %s", new Object[] { paramString, localIOException.getMessage() });
     }
   }
   
-  public static void ht(String paramString)
+  public static String iS(String paramString)
   {
-    bKl.writeLock().lock();
-    Object localObject = (SFSContextRec)bKm.remove(paramString);
-    bKl.writeLock().unlock();
-    if ((localObject != null) && (bKt != null)) {
-      bKt.release();
+    if (!ax(paramString)) {
+      return null;
     }
-    localObject = aa.getContext();
-    ((Context)localObject).sendBroadcast(new Intent("com.tencent.mm.FileOp.unregisterSFS").putExtra("prefix", paramString).setPackage(((Context)localObject).getPackageName()), "com.tencent.mm.permission.MM_MESSAGE");
-    At();
-    t.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Unregister SFS for prefix: " + paramString);
-  }
-  
-  private static boolean hu(String paramString)
-  {
-    bKl.readLock().lock();
-    Map.Entry localEntry = bKm.floorEntry(paramString);
-    if ((localEntry != null) && (paramString.startsWith((String)localEntry.getKey())))
-    {
-      paramString = (SFSContextRec)localEntry.getValue();
-      if ((bKq != null) || (bKr)) {}
-    }
-    for (boolean bool = false;; bool = true)
-    {
-      bKl.readLock().unlock();
-      return bool;
-    }
-  }
-  
-  private static boolean hv(String paramString)
-  {
-    bKl.readLock().lock();
-    Map.Entry localEntry = bKm.floorEntry(paramString);
-    if ((localEntry != null) && (paramString.startsWith((String)localEntry.getKey())) && (!a(paramString, (SFSContextRec)localEntry.getValue()))) {}
-    for (boolean bool = false;; bool = true)
-    {
-      bKl.readLock().unlock();
-      return bool;
-    }
-  }
-  
-  /* Error */
-  private static SFSContextRec hw(String paramString)
-  {
-    // Byte code:
-    //   0: getstatic 24	com/tencent/mm/modelsfs/FileOp:bKl	Ljava/util/concurrent/locks/ReentrantReadWriteLock;
-    //   3: invokevirtual 334	java/util/concurrent/locks/ReentrantReadWriteLock:readLock	()Ljava/util/concurrent/locks/ReentrantReadWriteLock$ReadLock;
-    //   6: invokevirtual 442	java/util/concurrent/locks/ReentrantReadWriteLock$ReadLock:lock	()V
-    //   9: getstatic 29	com/tencent/mm/modelsfs/FileOp:bKm	Ljava/util/TreeMap;
-    //   12: aload_0
-    //   13: invokevirtual 446	java/util/TreeMap:floorEntry	(Ljava/lang/Object;)Ljava/util/Map$Entry;
-    //   16: astore_1
-    //   17: aload_1
-    //   18: ifnonnull +7 -> 25
-    //   21: aconst_null
-    //   22: astore_0
-    //   23: aload_0
-    //   24: areturn
-    //   25: aload_0
-    //   26: aload_1
-    //   27: invokeinterface 451 1 0
-    //   32: checkcast 116	java/lang/String
-    //   35: invokevirtual 454	java/lang/String:startsWith	(Ljava/lang/String;)Z
-    //   38: ifeq +119 -> 157
-    //   41: aload_1
-    //   42: invokeinterface 457 1 0
-    //   47: checkcast 6	com/tencent/mm/modelsfs/FileOp$SFSContextRec
-    //   50: astore_2
-    //   51: aload_2
-    //   52: astore_1
-    //   53: aload_0
-    //   54: aload_2
-    //   55: invokestatic 459	com/tencent/mm/modelsfs/FileOp:a	(Ljava/lang/String;Lcom/tencent/mm/modelsfs/FileOp$SFSContextRec;)Z
-    //   58: ifeq +5 -> 63
-    //   61: aconst_null
-    //   62: astore_1
-    //   63: aload_1
-    //   64: ifnull +91 -> 155
-    //   67: aload_1
-    //   68: getfield 464	com/tencent/mm/modelsfs/FileOp$SFSContextRec:bKs	Z
-    //   71: ifne +84 -> 155
-    //   74: aload_1
-    //   75: astore_0
-    //   76: aload_1
-    //   77: getfield 236	com/tencent/mm/modelsfs/FileOp$SFSContextRec:bKt	Lcom/tencent/mm/modelsfs/SFSContext;
-    //   80: ifnonnull -57 -> 23
-    //   83: aload_1
-    //   84: monitorenter
-    //   85: aload_1
-    //   86: getfield 236	com/tencent/mm/modelsfs/FileOp$SFSContextRec:bKt	Lcom/tencent/mm/modelsfs/SFSContext;
-    //   89: astore_0
-    //   90: aload_0
-    //   91: ifnonnull +19 -> 110
-    //   94: aload_1
-    //   95: new 258	com/tencent/mm/modelsfs/SFSContext
-    //   98: dup
-    //   99: aload_1
-    //   100: getfield 240	com/tencent/mm/modelsfs/FileOp$SFSContextRec:bKu	Lcom/tencent/mm/modelsfs/SFSContext$Builder;
-    //   103: iconst_0
-    //   104: invokespecial 467	com/tencent/mm/modelsfs/SFSContext:<init>	(Lcom/tencent/mm/modelsfs/SFSContext$Builder;B)V
-    //   107: putfield 236	com/tencent/mm/modelsfs/FileOp$SFSContextRec:bKt	Lcom/tencent/mm/modelsfs/SFSContext;
-    //   110: aload_1
-    //   111: monitorexit
-    //   112: aload_1
-    //   113: areturn
-    //   114: astore_0
-    //   115: aload_1
-    //   116: monitorexit
-    //   117: aload_0
-    //   118: athrow
-    //   119: astore_0
-    //   120: ldc -101
-    //   122: ldc_w 469
-    //   125: iconst_2
-    //   126: anewarray 4	java/lang/Object
-    //   129: dup
-    //   130: iconst_0
-    //   131: aload_1
-    //   132: getfield 75	com/tencent/mm/modelsfs/FileOp$SFSContextRec:bKp	Ljava/lang/String;
-    //   135: aastore
-    //   136: dup
-    //   137: iconst_1
-    //   138: aload_0
-    //   139: invokevirtual 470	java/lang/Exception:getMessage	()Ljava/lang/String;
-    //   142: aastore
-    //   143: invokestatic 473	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    //   146: aload_1
-    //   147: iconst_1
-    //   148: putfield 464	com/tencent/mm/modelsfs/FileOp$SFSContextRec:bKs	Z
-    //   151: aload_1
-    //   152: monitorexit
-    //   153: aconst_null
-    //   154: areturn
-    //   155: aconst_null
-    //   156: areturn
-    //   157: aconst_null
-    //   158: astore_1
-    //   159: goto -96 -> 63
-    // Local variable table:
-    //   start	length	slot	name	signature
-    //   0	162	0	paramString	String
-    //   16	143	1	localObject	Object
-    //   50	5	2	localSFSContextRec	SFSContextRec
-    // Exception table:
-    //   from	to	target	type
-    //   85	90	114	finally
-    //   94	110	114	finally
-    //   110	112	114	finally
-    //   115	117	114	finally
-    //   120	153	114	finally
-    //   94	110	119	java/lang/Exception
-  }
-  
-  public static OutputStream hx(String paramString)
-  {
-    if ((paramString == null) || (paramString.length() == 0)) {
-      throw new FileNotFoundException("path == null");
-    }
-    Object localObject = hw(paramString);
-    if (localObject == null) {}
-    for (;;)
-    {
-      try
-      {
-        localObject = new FileOutputStream(paramString);
-        bKl.readLock().unlock();
-        t.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "openWrite: %s, %s", new Object[] { paramString, "ok" });
-        return (OutputStream)localObject;
-      }
-      finally
-      {
-        String str;
-        bKl.readLock().unlock();
-      }
-      str = paramString.substring(bKp.length());
-      localObject = bKt.hx(str);
-    }
-  }
-  
-  public static long hy(String paramString)
-  {
-    long l = 0L;
-    if (paramString == null) {
-      return 0L;
-    }
-    SFSContextRec localSFSContextRec = hw(paramString);
-    Object localObject;
-    if (localSFSContextRec != null)
-    {
-      localObject = paramString.substring(bKp.length());
-      localObject = bKt.hD((String)localObject);
-      if (localObject == null) {
-        if (bKr) {
-          l = new File(paramString).length();
-        }
-      }
-    }
-    for (;;)
-    {
-      bKl.readLock().unlock();
-      t.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "readFileLength: %s, %d", new Object[] { paramString, Long.valueOf(l) });
-      return l;
-      l = size;
-      continue;
-      l = new File(paramString).length();
-    }
-  }
-  
-  public static long hz(String paramString)
-  {
-    long l = 0L;
-    if ((paramString == null) || (paramString.length() == 0)) {
-      return 0L;
-    }
-    SFSContextRec localSFSContextRec = hw(paramString);
-    Object localObject;
-    if (localSFSContextRec != null)
-    {
-      localObject = paramString.substring(bKp.length());
-      localObject = bKt.hD((String)localObject);
-      if (localObject == null) {
-        if (bKr) {
-          l = new File(paramString).lastModified();
-        }
-      }
-    }
-    for (;;)
-    {
-      bKl.readLock().unlock();
-      t.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "getFileTime: %s, %d", new Object[] { paramString, Long.valueOf(l) });
-      return l;
-      l = timestamp * 1000L;
-      continue;
-      l = new File(paramString).lastModified();
-    }
+    long l = iL(paramString);
+    return com.tencent.mm.a.g.m((paramString + "-" + l).getBytes());
   }
   
   public static void init(boolean paramBoolean)
   {
-    Context localContext = aa.getContext();
-    bKn = new File(localContext.getFilesDir(), "fileop_mapping");
+    Context localContext = y.getContext();
+    cap = new File(localContext.getFilesDir(), "fileop_mapping");
     if (paramBoolean)
     {
-      bKn.delete();
+      cap.delete();
       return;
     }
-    t.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Initializing FileOp mapping slave.");
-    if (bKn.exists())
+    u.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Initializing FileOp mapping slave.");
+    if (cap.exists())
     {
-      localObject1 = c(bKn.getAbsolutePath(), 0, -1);
-      localObject2 = Parcel.obtain();
-      ((Parcel)localObject2).unmarshall((byte[])localObject1, 0, localObject1.length);
-      ((Parcel)localObject2).setDataPosition(0);
-      localObject1 = ((Parcel)localObject2).readBundle(SFSContextRec.class.getClassLoader());
-      ((Parcel)localObject2).recycle();
-      bKl.writeLock().lock();
-      localObject2 = ((Bundle)localObject1).keySet().iterator();
-      while (((Iterator)localObject2).hasNext())
+      localObject1 = c(cap.getAbsolutePath(), 0, -1);
+      if (localObject1 != null)
       {
-        String str = (String)((Iterator)localObject2).next();
-        SFSContextRec localSFSContextRec = (SFSContextRec)((Bundle)localObject1).getParcelable(str);
-        localSFSContextRec = (SFSContextRec)bKm.put(str, localSFSContextRec);
-        if ((localSFSContextRec != null) && (bKt != null)) {
-          bKt.release();
+        localObject2 = Parcel.obtain();
+        ((Parcel)localObject2).unmarshall((byte[])localObject1, 0, localObject1.length);
+        ((Parcel)localObject2).setDataPosition(0);
+        localObject1 = ((Parcel)localObject2).readBundle(SFSContextRec.class.getClassLoader());
+        ((Parcel)localObject2).recycle();
+        can.writeLock().lock();
+        localObject2 = ((Bundle)localObject1).keySet().iterator();
+        while (((Iterator)localObject2).hasNext())
+        {
+          String str = (String)((Iterator)localObject2).next();
+          SFSContextRec localSFSContextRec = (SFSContextRec)((Bundle)localObject1).getParcelable(str);
+          localSFSContextRec = (SFSContextRec)cao.put(str, localSFSContextRec);
+          if ((localSFSContextRec != null) && (cax != null)) {
+            cax.release();
+          }
+          u.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Load mapping from file: " + str);
         }
-        t.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Load mapping from file: " + str);
+        can.writeLock().unlock();
       }
-      bKl.writeLock().unlock();
     }
-    Object localObject1 = new a();
+    Object localObject1 = new BroadcastReceiver()
+    {
+      public final void onReceive(Context paramAnonymousContext, Intent paramAnonymousIntent)
+      {
+        if (paramAnonymousIntent.getAction().equals("com.tencent.mm.FileOp.registerSFS"))
+        {
+          paramAnonymousContext = paramAnonymousIntent.getByteArrayExtra("rec");
+          if (paramAnonymousContext != null) {}
+        }
+        do
+        {
+          do
+          {
+            return;
+            paramAnonymousIntent = Parcel.obtain();
+            paramAnonymousIntent.unmarshall(paramAnonymousContext, 0, paramAnonymousContext.length);
+            paramAnonymousIntent.setDataPosition(0);
+            paramAnonymousIntent = (FileOp.SFSContextRec)FileOp.SFSContextRec.CREATOR.createFromParcel(paramAnonymousIntent);
+          } while (paramAnonymousIntent == null);
+          paramAnonymousContext = cat;
+          FileOp.Ci().writeLock().lock();
+          paramAnonymousIntent = (FileOp.SFSContextRec)FileOp.Cj().put(paramAnonymousContext, paramAnonymousIntent);
+          FileOp.Ci().writeLock().unlock();
+          if ((paramAnonymousIntent != null) && (cax != null)) {
+            cax.release();
+          }
+          u.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Load mapping from broadcast: " + paramAnonymousContext);
+          return;
+          if (paramAnonymousIntent.getAction().equals("com.tencent.mm.FileOp.unregisterSFS"))
+          {
+            paramAnonymousContext = paramAnonymousIntent.getStringExtra("prefix");
+            FileOp.Ci().writeLock().lock();
+            paramAnonymousIntent = (FileOp.SFSContextRec)FileOp.Cj().remove(paramAnonymousContext);
+            FileOp.Ci().writeLock().unlock();
+            if ((paramAnonymousIntent != null) && (cax != null)) {
+              cax.release();
+            }
+            u.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Unload mapping from broadcast: " + paramAnonymousContext);
+            return;
+          }
+        } while (!paramAnonymousIntent.getAction().equals("com.tencent.mm.FileOp.clearSFS"));
+        FileOp.Ci().writeLock().lock();
+        paramAnonymousContext = FileOp.Cj().values().iterator();
+        while (paramAnonymousContext.hasNext())
+        {
+          paramAnonymousIntent = (FileOp.SFSContextRec)paramAnonymousContext.next();
+          if ((paramAnonymousIntent != null) && (cax != null)) {
+            cax.release();
+          }
+        }
+        FileOp.Cj().clear();
+        FileOp.Ci().writeLock().unlock();
+        u.i("!24@/B4Tb64lLpJsxiXOTpu//A==", "Clear mapping from broadcast.");
+      }
+    };
     Object localObject2 = new IntentFilter();
     ((IntentFilter)localObject2).addAction("com.tencent.mm.FileOp.registerSFS");
     ((IntentFilter)localObject2).addAction("com.tencent.mm.FileOp.unregisterSFS");
@@ -881,289 +1357,202 @@ public final class FileOp
     localContext.registerReceiver((BroadcastReceiver)localObject1, (IntentFilter)localObject2, "com.tencent.mm.permission.MM_MESSAGE", null);
   }
   
+  public static boolean k(String paramString1, String paramString2, String paramString3)
+  {
+    return X(paramString1 + paramString2, paramString1 + paramString3);
+  }
+  
+  public static int l(String paramString, byte[] paramArrayOfByte)
+  {
+    return b(paramString, paramArrayOfByte, paramArrayOfByte.length);
+  }
+  
   /* Error */
-  public static long j(String paramString1, String paramString2)
+  public static long o(String paramString1, String paramString2)
   {
     // Byte code:
     //   0: aconst_null
-    //   1: astore 8
-    //   3: aload_0
-    //   4: ifnull +21 -> 25
-    //   7: aload_0
-    //   8: invokevirtual 120	java/lang/String:length	()I
-    //   11: ifeq +14 -> 25
-    //   14: aload_1
-    //   15: ifnull +10 -> 25
-    //   18: aload_1
-    //   19: invokevirtual 120	java/lang/String:length	()I
-    //   22: ifne +11 -> 33
-    //   25: ldc2_w 575
-    //   28: lstore 5
-    //   30: lload 5
-    //   32: lreturn
-    //   33: aload_0
-    //   34: invokestatic 358	com/tencent/mm/modelsfs/FileOp:openRead	(Ljava/lang/String;)Ljava/io/InputStream;
-    //   37: astore 7
-    //   39: aload_1
-    //   40: invokestatic 144	com/tencent/mm/modelsfs/FileOp:hx	(Ljava/lang/String;)Ljava/io/OutputStream;
-    //   43: astore 9
-    //   45: aload 9
-    //   47: astore 8
-    //   49: sipush 1024
-    //   52: newarray <illegal type>
-    //   54: astore 9
-    //   56: lconst_0
-    //   57: lstore_3
-    //   58: aload 7
-    //   60: aload 9
-    //   62: invokevirtual 579	java/io/InputStream:read	([B)I
-    //   65: istore_2
-    //   66: iload_2
-    //   67: iconst_m1
-    //   68: if_icmpeq +20 -> 88
-    //   71: aload 8
-    //   73: aload 9
-    //   75: iconst_0
-    //   76: iload_2
-    //   77: invokevirtual 150	java/io/OutputStream:write	([BII)V
-    //   80: lload_3
-    //   81: iload_2
-    //   82: i2l
-    //   83: ladd
-    //   84: lstore_3
-    //   85: goto -27 -> 58
-    //   88: ldc -101
-    //   90: ldc_w 581
-    //   93: iconst_2
-    //   94: anewarray 4	java/lang/Object
-    //   97: dup
-    //   98: iconst_0
-    //   99: aload_0
-    //   100: aastore
-    //   101: dup
-    //   102: iconst_1
-    //   103: aload_1
-    //   104: aastore
-    //   105: invokestatic 347	com/tencent/mm/sdk/platformtools/t:d	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    //   108: aload 7
-    //   110: ifnull +8 -> 118
-    //   113: aload 7
-    //   115: invokevirtual 377	java/io/InputStream:close	()V
-    //   118: lload_3
-    //   119: lstore 5
-    //   121: aload 8
-    //   123: ifnull -93 -> 30
-    //   126: aload 8
-    //   128: invokevirtual 153	java/io/OutputStream:close	()V
-    //   131: lload_3
-    //   132: lreturn
-    //   133: astore_0
-    //   134: lload_3
-    //   135: lreturn
-    //   136: astore 9
-    //   138: aconst_null
-    //   139: astore 7
-    //   141: ldc -101
-    //   143: aload 9
-    //   145: ldc_w 583
-    //   148: iconst_2
-    //   149: anewarray 4	java/lang/Object
-    //   152: dup
-    //   153: iconst_0
-    //   154: aload_0
-    //   155: aastore
-    //   156: dup
-    //   157: iconst_1
-    //   158: aload_1
-    //   159: aastore
-    //   160: invokestatic 173	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-    //   163: aload 7
-    //   165: ifnull +8 -> 173
-    //   168: aload 7
-    //   170: invokevirtual 377	java/io/InputStream:close	()V
-    //   173: aload 8
-    //   175: ifnull +8 -> 183
-    //   178: aload 8
-    //   180: invokevirtual 153	java/io/OutputStream:close	()V
-    //   183: ldc2_w 575
-    //   186: lreturn
-    //   187: astore_0
-    //   188: aconst_null
-    //   189: astore_1
-    //   190: aconst_null
-    //   191: astore 7
-    //   193: aload 7
-    //   195: ifnull +8 -> 203
-    //   198: aload 7
-    //   200: invokevirtual 377	java/io/InputStream:close	()V
-    //   203: aload_1
-    //   204: ifnull +7 -> 211
-    //   207: aload_1
-    //   208: invokevirtual 153	java/io/OutputStream:close	()V
-    //   211: aload_0
-    //   212: athrow
-    //   213: astore_0
-    //   214: goto -96 -> 118
-    //   217: astore_0
-    //   218: goto -45 -> 173
-    //   221: astore_0
-    //   222: goto -39 -> 183
-    //   225: astore 7
-    //   227: goto -24 -> 203
-    //   230: astore_1
-    //   231: goto -20 -> 211
+    //   1: astore 9
+    //   3: aconst_null
+    //   4: astore 10
+    //   6: aload_0
+    //   7: ifnull +21 -> 28
+    //   10: aload_0
+    //   11: invokevirtual 198	java/lang/String:length	()I
+    //   14: ifeq +14 -> 28
+    //   17: aload_1
+    //   18: ifnull +10 -> 28
+    //   21: aload_1
+    //   22: invokevirtual 198	java/lang/String:length	()I
+    //   25: ifne +11 -> 36
+    //   28: ldc2_w 704
+    //   31: lstore 5
+    //   33: lload 5
+    //   35: lreturn
+    //   36: aload_0
+    //   37: invokestatic 389	com/tencent/mm/modelsfs/FileOp:openRead	(Ljava/lang/String;)Ljava/io/InputStream;
+    //   40: astore 7
+    //   42: aload_1
+    //   43: invokestatic 366	com/tencent/mm/modelsfs/FileOp:iJ	(Ljava/lang/String;)Ljava/io/OutputStream;
+    //   46: astore 8
+    //   48: sipush 1024
+    //   51: newarray <illegal type>
+    //   53: astore 9
+    //   55: lconst_0
+    //   56: lstore_3
+    //   57: aload 7
+    //   59: aload 9
+    //   61: invokevirtual 501	java/io/InputStream:read	([B)I
+    //   64: istore_2
+    //   65: iload_2
+    //   66: iconst_m1
+    //   67: if_icmpeq +20 -> 87
+    //   70: aload 8
+    //   72: aload 9
+    //   74: iconst_0
+    //   75: iload_2
+    //   76: invokevirtual 372	java/io/OutputStream:write	([BII)V
+    //   79: lload_3
+    //   80: iload_2
+    //   81: i2l
+    //   82: ladd
+    //   83: lstore_3
+    //   84: goto -27 -> 57
+    //   87: ldc -95
+    //   89: ldc_w 707
+    //   92: iconst_2
+    //   93: anewarray 4	java/lang/Object
+    //   96: dup
+    //   97: iconst_0
+    //   98: aload_0
+    //   99: aastore
+    //   100: dup
+    //   101: iconst_1
+    //   102: aload_1
+    //   103: aastore
+    //   104: invokestatic 358	com/tencent/mm/sdk/platformtools/u:d	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   107: aload 7
+    //   109: ifnull +8 -> 117
+    //   112: aload 7
+    //   114: invokevirtual 408	java/io/InputStream:close	()V
+    //   117: lload_3
+    //   118: lstore 5
+    //   120: aload 8
+    //   122: ifnull -89 -> 33
+    //   125: aload 8
+    //   127: invokevirtual 375	java/io/OutputStream:close	()V
+    //   130: lload_3
+    //   131: lreturn
+    //   132: astore_0
+    //   133: lload_3
+    //   134: lreturn
+    //   135: astore 9
+    //   137: aconst_null
+    //   138: astore 7
+    //   140: aload 10
+    //   142: astore 8
+    //   144: ldc -95
+    //   146: ldc_w 709
+    //   149: iconst_3
+    //   150: anewarray 4	java/lang/Object
+    //   153: dup
+    //   154: iconst_0
+    //   155: aload_0
+    //   156: aastore
+    //   157: dup
+    //   158: iconst_1
+    //   159: aload_1
+    //   160: aastore
+    //   161: dup
+    //   162: iconst_2
+    //   163: aload 9
+    //   165: invokevirtual 378	java/io/IOException:getMessage	()Ljava/lang/String;
+    //   168: aastore
+    //   169: invokestatic 172	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   172: aload 7
+    //   174: ifnull +8 -> 182
+    //   177: aload 7
+    //   179: invokevirtual 408	java/io/InputStream:close	()V
+    //   182: aload 8
+    //   184: ifnull +8 -> 192
+    //   187: aload 8
+    //   189: invokevirtual 375	java/io/OutputStream:close	()V
+    //   192: ldc2_w 704
+    //   195: lreturn
+    //   196: astore_0
+    //   197: aconst_null
+    //   198: astore 7
+    //   200: aload 9
+    //   202: astore 8
+    //   204: aload 7
+    //   206: ifnull +8 -> 214
+    //   209: aload 7
+    //   211: invokevirtual 408	java/io/InputStream:close	()V
+    //   214: aload 8
+    //   216: ifnull +8 -> 224
+    //   219: aload 8
+    //   221: invokevirtual 375	java/io/OutputStream:close	()V
+    //   224: aload_0
+    //   225: athrow
+    //   226: astore_0
+    //   227: goto -110 -> 117
+    //   230: astore_0
+    //   231: goto -49 -> 182
     //   234: astore_0
-    //   235: aconst_null
-    //   236: astore_1
-    //   237: goto -44 -> 193
-    //   240: astore_0
-    //   241: aload 8
-    //   243: astore_1
-    //   244: goto -51 -> 193
-    //   247: astore_0
-    //   248: aload 8
-    //   250: astore_1
-    //   251: goto -58 -> 193
-    //   254: astore 9
-    //   256: goto -115 -> 141
-    //   259: astore 9
-    //   261: goto -120 -> 141
+    //   235: goto -43 -> 192
+    //   238: astore_1
+    //   239: goto -25 -> 214
+    //   242: astore_1
+    //   243: goto -19 -> 224
+    //   246: astore_0
+    //   247: aload 9
+    //   249: astore 8
+    //   251: goto -47 -> 204
+    //   254: astore_0
+    //   255: goto -51 -> 204
+    //   258: astore_0
+    //   259: goto -55 -> 204
+    //   262: astore 9
+    //   264: aload 10
+    //   266: astore 8
+    //   268: goto -124 -> 144
+    //   271: astore 9
+    //   273: goto -129 -> 144
     // Local variable table:
     //   start	length	slot	name	signature
-    //   0	264	0	paramString1	String
-    //   0	264	1	paramString2	String
-    //   65	17	2	i	int
-    //   57	78	3	l1	long
-    //   28	92	5	l2	long
-    //   37	162	7	localInputStream	InputStream
-    //   225	1	7	localIOException1	IOException
-    //   1	248	8	localObject1	Object
-    //   43	31	9	localObject2	Object
-    //   136	8	9	localIOException2	IOException
-    //   254	1	9	localIOException3	IOException
-    //   259	1	9	localIOException4	IOException
+    //   0	276	0	paramString1	String
+    //   0	276	1	paramString2	String
+    //   64	17	2	i	int
+    //   56	78	3	l1	long
+    //   31	88	5	l2	long
+    //   40	170	7	localInputStream	InputStream
+    //   46	221	8	localObject1	Object
+    //   1	72	9	arrayOfByte	byte[]
+    //   135	113	9	localIOException1	IOException
+    //   262	1	9	localIOException2	IOException
+    //   271	1	9	localIOException3	IOException
+    //   4	261	10	localObject2	Object
     // Exception table:
     //   from	to	target	type
-    //   126	131	133	java/io/IOException
-    //   33	39	136	java/io/IOException
-    //   33	39	187	finally
-    //   113	118	213	java/io/IOException
-    //   168	173	217	java/io/IOException
-    //   178	183	221	java/io/IOException
-    //   198	203	225	java/io/IOException
-    //   207	211	230	java/io/IOException
-    //   39	45	234	finally
-    //   49	56	240	finally
-    //   58	66	240	finally
-    //   71	80	240	finally
-    //   88	108	240	finally
-    //   141	163	247	finally
-    //   39	45	254	java/io/IOException
-    //   49	56	259	java/io/IOException
-    //   58	66	259	java/io/IOException
-    //   71	80	259	java/io/IOException
-    //   88	108	259	java/io/IOException
-  }
-  
-  public static List n(String paramString, boolean paramBoolean)
-  {
-    if ((paramString == null) || (paramString.length() == 0)) {
-      return Collections.emptyList();
-    }
-    SFSContextRec localSFSContextRec = hw(paramString);
-    Object localObject2;
-    Object localObject1;
-    if (localSFSContextRec != null)
-    {
-      String str = paramString.substring(bKp.length());
-      paramString = str;
-      if (!str.endsWith("/")) {
-        paramString = str + "/";
-      }
-      try
-      {
-        localObject2 = bKt;
-        if (bKB != 0L) {
-          break label291;
-        }
-        throw new IllegalArgumentException("Reuse already released SFSContext.");
-      }
-      catch (IOException localIOException)
-      {
-        t.printErrStackTrace("!24@/B4Tb64lLpJsxiXOTpu//A==", localIOException, "listFiles failed with SFS: " + paramString, new Object[0]);
-        localObject1 = new ArrayList();
-        localObject2 = paramString;
-      }
-      if ((localSFSContextRec != null) && (bKq == null) && (!bKr)) {
-        break label502;
-      }
-      paramString = new ArrayDeque();
-      paramString.add(new File((String)localObject2));
-    }
-    label212:
-    label291:
-    do
-    {
-      Object localObject3 = ((File)paramString.pop()).listFiles();
-      if (localObject3 != null)
-      {
-        int j = localObject3.length;
-        int i = 0;
-        if (i < j)
-        {
-          localSFSContextRec = localObject3[i];
-          Object localObject4;
-          if (localSFSContextRec.isFile())
-          {
-            localObject4 = new SFSContext.FileEntry();
-            name = localSFSContextRec.getAbsolutePath();
-            if (paramBoolean)
-            {
-              size = localSFSContextRec.length();
-              timestamp = localSFSContextRec.lastModified();
-            }
-            ((List)localObject1).add(localObject4);
-          }
-          for (;;)
-          {
-            i += 1;
-            break label212;
-            localObject1 = new ArrayList();
-            if (SFSContext.nativeList(bKB, paramString, (List)localObject1) != 0) {
-              throw new IOException(SFSContext.nativeErrorMessage());
-            }
-            localObject3 = new ArrayList();
-            localObject1 = ((List)localObject1).iterator();
-            while (((Iterator)localObject1).hasNext())
-            {
-              localObject2 = (SFSContext.FileEntry)((Iterator)localObject1).next();
-              if (name.substring(paramString.length()).indexOf('/') == -1) {
-                ((List)localObject3).add(localObject2);
-              }
-            }
-            localObject4 = ((List)localObject3).iterator();
-            for (;;)
-            {
-              localObject1 = localObject3;
-              localObject2 = paramString;
-              if (!((Iterator)localObject4).hasNext()) {
-                break;
-              }
-              localObject1 = (SFSContext.FileEntry)((Iterator)localObject4).next();
-              name = (bKp + name);
-            }
-            localObject1 = new ArrayList();
-            localObject2 = paramString;
-            break;
-            localSFSContextRec.isDirectory();
-          }
-        }
-      }
-    } while (!paramString.isEmpty());
-    label502:
-    bKl.readLock().unlock();
-    t.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "listFiles: %s [%d]", new Object[] { localObject2, Integer.valueOf(((List)localObject1).size()) });
-    return (List)localObject1;
+    //   125	130	132	java/io/IOException
+    //   36	42	135	java/io/IOException
+    //   36	42	196	finally
+    //   112	117	226	java/io/IOException
+    //   177	182	230	java/io/IOException
+    //   187	192	234	java/io/IOException
+    //   209	214	238	java/io/IOException
+    //   219	224	242	java/io/IOException
+    //   42	48	246	finally
+    //   48	55	254	finally
+    //   57	65	254	finally
+    //   70	79	254	finally
+    //   87	107	254	finally
+    //   144	172	258	finally
+    //   42	48	262	java/io/IOException
+    //   48	55	271	java/io/IOException
+    //   57	65	271	java/io/IOException
+    //   70	79	271	java/io/IOException
+    //   87	107	271	java/io/IOException
   }
   
   public static InputStream openRead(String paramString)
@@ -1171,63 +1560,172 @@ public final class FileOp
     if ((paramString == null) || (paramString.length() == 0)) {
       throw new FileNotFoundException("path == null");
     }
-    SFSContextRec localSFSContextRec = hw(paramString);
-    if (localSFSContextRec == null) {}
+    Object localObject2 = iH(paramString);
+    if (localObject2 == null) {}
     for (;;)
     {
       try
       {
-        localObject = new FileInputStream(paramString);
-        bKl.readLock().unlock();
-        t.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "openRead: %s, %s", new Object[] { paramString, "ok" });
-        return (InputStream)localObject;
+        if (f.iT(paramString))
+        {
+          long l = f.iV(paramString);
+          localObject1 = new b(f.iU(paramString), l);
+          can.readLock().unlock();
+          if (localObject2 != null) {
+            break label179;
+          }
+          localObject2 = "regular";
+          u.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "openRead: %s [%s, %s]", new Object[] { paramString, "ok", localObject2 });
+          return (InputStream)localObject1;
+        }
+        Object localObject1 = new FileInputStream(paramString);
+        continue;
+        try
+        {
+          localObject1 = paramString.substring(cat.length());
+          localObject1 = cax.openRead((String)localObject1);
+        }
+        catch (FileNotFoundException localFileNotFoundException)
+        {
+          if (!cav) {
+            throw localFileNotFoundException;
+          }
+          FileInputStream localFileInputStream = new FileInputStream(paramString);
+        }
       }
       finally
       {
-        Object localObject;
-        bKl.readLock().unlock();
+        can.readLock().unlock();
+      }
+      continue;
+      label179:
+      localObject2 = "SFS";
+    }
+  }
+  
+  public static List r(String paramString, boolean paramBoolean)
+  {
+    if ((paramString == null) || (paramString.length() == 0)) {
+      return Collections.emptyList();
+    }
+    SFSContextRec localSFSContextRec = iH(paramString);
+    Object localObject4;
+    Object localObject3;
+    Object localObject2;
+    if (localSFSContextRec != null)
+    {
+      Object localObject1 = paramString.substring(cat.length());
+      paramString = (String)localObject1;
+      if (!((String)localObject1).endsWith("/")) {
+        paramString = (String)localObject1 + "/";
       }
       try
       {
-        localObject = paramString.substring(bKp.length());
-        localObject = bKt.openRead((String)localObject);
-      }
-      catch (FileNotFoundException localFileNotFoundException)
-      {
-        if (bKr) {
-          break label119;
+        localObject1 = cax.iW(paramString);
+        localObject4 = new ArrayList();
+        localObject1 = ((List)localObject1).iterator();
+        while (((Iterator)localObject1).hasNext())
+        {
+          localObject3 = (SFSContext.FileEntry)((Iterator)localObject1).next();
+          if (name.substring(paramString.length()).indexOf('/') == -1) {
+            ((List)localObject4).add(localObject3);
+          }
+        }
+        if (localSFSContextRec == null) {
+          break label224;
         }
       }
-      throw localFileNotFoundException;
-      label119:
-      FileInputStream localFileInputStream = new FileInputStream(paramString);
+      catch (IOException localIOException)
+      {
+        u.printErrStackTrace("!24@/B4Tb64lLpJsxiXOTpu//A==", localIOException, "listFiles failed with SFS: " + paramString, new Object[0]);
+        localObject2 = new ArrayList();
+        localObject3 = paramString;
+      }
+      if ((cau != null) || (cav))
+      {
+        label224:
+        paramString = new ArrayDeque();
+        paramString.add(new File((String)localObject3));
+      }
     }
+    else
+    {
+      label269:
+      do
+      {
+        localObject4 = ((File)paramString.pop()).listFiles();
+        if (localObject4 != null)
+        {
+          int j = localObject4.length;
+          int i = 0;
+          if (i < j)
+          {
+            localSFSContextRec = localObject4[i];
+            Object localObject5;
+            if (localSFSContextRec.isFile())
+            {
+              localObject5 = new SFSContext.FileEntry();
+              name = localSFSContextRec.getAbsolutePath();
+              if (paramBoolean)
+              {
+                size = localSFSContextRec.length();
+                timestamp = localSFSContextRec.lastModified();
+              }
+              ((List)localObject2).add(localObject5);
+            }
+            for (;;)
+            {
+              i += 1;
+              break label269;
+              localObject5 = ((List)localObject4).iterator();
+              for (;;)
+              {
+                localObject2 = localObject4;
+                localObject3 = paramString;
+                if (!((Iterator)localObject5).hasNext()) {
+                  break;
+                }
+                localObject2 = (SFSContext.FileEntry)((Iterator)localObject5).next();
+                name = (cat + name);
+              }
+              localObject2 = new ArrayList();
+              localObject3 = paramString;
+              break;
+              localSFSContextRec.isDirectory();
+            }
+          }
+        }
+      } while (!paramString.isEmpty());
+    }
+    can.readLock().unlock();
+    u.d("!24@/B4Tb64lLpJsxiXOTpu//A==", "listFiles: %s [%d]", new Object[] { localObject3, Integer.valueOf(((List)localObject2).size()) });
+    return (List)localObject2;
   }
   
   static class SFSContextRec
     implements Parcelable
   {
-    public static final Parcelable.Creator CREATOR = new b();
-    String bKp;
-    String[] bKq;
-    boolean bKr;
-    boolean bKs;
-    SFSContext bKt;
-    SFSContext.Builder bKu;
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+    String cat;
+    String[] cau;
+    boolean cav;
+    boolean caw;
+    SFSContext cax;
+    SFSContext.Builder cay;
     
     public SFSContextRec() {}
     
     SFSContextRec(Parcel paramParcel)
     {
-      bKp = paramParcel.readString();
-      bKq = paramParcel.createStringArray();
+      cat = paramParcel.readString();
+      cau = paramParcel.createStringArray();
       if (paramParcel.readByte() != 0) {}
       for (boolean bool = true;; bool = false)
       {
-        bKr = bool;
-        bKt = null;
-        bKs = false;
-        bKu = ((SFSContext.Builder)paramParcel.readParcelable(SFSContext.Builder.class.getClassLoader()));
+        cav = bool;
+        cax = null;
+        caw = false;
+        cay = ((SFSContext.Builder)paramParcel.readParcelable(SFSContext.Builder.class.getClassLoader()));
         return;
       }
     }
@@ -1239,16 +1737,24 @@ public final class FileOp
     
     public void writeToParcel(Parcel paramParcel, int paramInt)
     {
-      paramParcel.writeString(bKp);
-      paramParcel.writeStringArray(bKq);
-      if (bKr) {}
+      paramParcel.writeString(cat);
+      paramParcel.writeStringArray(cau);
+      if (cav) {}
       for (int i = 1;; i = 0)
       {
         paramParcel.writeByte((byte)i);
-        paramParcel.writeParcelable(bKu, paramInt);
+        paramParcel.writeParcelable(cay, paramInt);
         return;
       }
     }
+  }
+  
+  final class a
+  {
+    File[] cas = null;
+    int pos = 0;
+    
+    a() {}
   }
 }
 

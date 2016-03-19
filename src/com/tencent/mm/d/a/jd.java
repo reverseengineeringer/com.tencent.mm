@@ -1,18 +1,21 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class jd
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aFE = new a();
   
   public jd()
   {
-    id = "UpdateLanguage";
-    hXT = atO;
+    id = "ReceiveTyping";
+    jUI = arR;
   }
+  
+  public static final class a {}
 }
 
 /* Location:

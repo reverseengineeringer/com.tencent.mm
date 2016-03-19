@@ -1,44 +1,38 @@
-.class final Lcom/tencent/mm/sdk/c/c;
+.class public abstract Lcom/tencent/mm/sdk/c/c;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/util/Comparator;
-
 
 # instance fields
-.field final synthetic hXS:Lcom/tencent/mm/sdk/c/a;
+.field private final priority:I
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/sdk/c/a;)V
+.method public constructor <init>(I)V
     .locals 0
 
     .prologue
-    .line 92
-    iput-object p1, p0, Lcom/tencent/mm/sdk/c/c;->hXS:Lcom/tencent/mm/sdk/c/a;
-
+    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 8
+    iput p1, p0, Lcom/tencent/mm/sdk/c/c;->priority:I
+
+    .line 9
     return-void
 .end method
 
 
 # virtual methods
-.method public final bridge synthetic compare(Ljava/lang/Object;Ljava/lang/Object;)I
-    .locals 2
+.method public abstract a(Lcom/tencent/mm/sdk/c/b;)Z
+.end method
+
+.method public getPriority()I
+    .locals 1
 
     .prologue
-    .line 92
-    check-cast p1, Lcom/tencent/mm/sdk/c/e;
-
-    check-cast p2, Lcom/tencent/mm/sdk/c/e;
-
-    iget v0, p2, Lcom/tencent/mm/sdk/c/e;->priority:I
-
-    iget v1, p1, Lcom/tencent/mm/sdk/c/e;->priority:I
-
-    sub-int/2addr v0, v1
+    .line 12
+    iget v0, p0, Lcom/tencent/mm/sdk/c/c;->priority:I
 
     return v0
 .end method

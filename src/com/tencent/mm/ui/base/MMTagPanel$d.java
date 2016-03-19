@@ -4,8 +4,8 @@ import android.widget.TextView;
 
 public final class MMTagPanel$d
 {
-  public String iIp;
-  public TextView iIq;
+  public String kHB;
+  public TextView kHC;
 }
 
 /* Location:

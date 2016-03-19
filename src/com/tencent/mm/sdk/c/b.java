@@ -1,14 +1,10 @@
 package com.tencent.mm.sdk.c;
 
-final class b
-  implements Runnable
+public abstract class b
 {
-  b(a parama, d paramd) {}
-  
-  public final void run()
-  {
-    a.hXQ.g(ebK);
-  }
+  public Runnable aID = null;
+  public String id;
+  public boolean jUI;
 }
 
 /* Location:

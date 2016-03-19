@@ -1,33 +1,33 @@
 package com.tencent.mm.plugin.report.b;
 
-import com.tencent.mm.protocal.b.adt;
-import com.tencent.mm.protocal.b.ux;
-import com.tencent.mm.protocal.i;
-import com.tencent.mm.protocal.i.a;
-import com.tencent.mm.protocal.i.c;
-import com.tencent.mm.protocal.y;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.protocal.b.aao;
+import com.tencent.mm.protocal.b.alx;
+import com.tencent.mm.protocal.h;
+import com.tencent.mm.protocal.h.a;
+import com.tencent.mm.protocal.h.c;
+import com.tencent.mm.protocal.z;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class a$a
-  extends i.c
-  implements i.a
+  extends h.c
+  implements h.a
 {
-  public ux eJn = new ux();
+  public aao fTP = new aao();
   
   public final int getCmdId()
   {
     return 0;
   }
   
-  public final byte[] tH()
+  public final byte[] tY()
   {
-    hgO = y.aDv();
-    eJn.hmC = new adt().aA(bn.aFz());
-    eJn.hLO = i.a(this);
-    return eJn.toByteArray();
+    iUJ = z.aTw();
+    fTP.jbx = new alx().aO(ay.aVA());
+    fTP.jGS = h.a(this);
+    return fTP.toByteArray();
   }
   
-  public final int tI()
+  public final int tZ()
   {
     return 694;
   }

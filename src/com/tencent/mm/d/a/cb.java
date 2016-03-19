@@ -1,33 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class cb
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a axt = new a();
-  public b axu = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a avE = new a();
   
   public cb()
   {
-    id = "ExtTranslateVoice";
-    hXT = atO;
+    id = "ExDeviceLanDeviceRecvData";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String apy;
-    public String axv;
-    public int axw = 0;
-    public Runnable axx;
-  }
-  
-  public static final class b
-  {
-    public boolean avW;
-    public String content;
+    public String alN;
+    public String auQ;
+    public byte[] data;
   }
 }
 

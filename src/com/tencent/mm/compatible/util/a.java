@@ -4,24 +4,30 @@ import android.content.Context;
 
 public final class a
 {
-  private final String bcH = "audio_lock";
-  public b bjx = null;
+  private final String bmA = "audio_lock";
+  public b bua = null;
   Context mContext = null;
   
   public a(Context paramContext)
   {
     mContext = paramContext;
-    com.tencent.mm.compatible.a.a.a(8, new b(this));
+    com.tencent.mm.compatible.a.a.a(8, new com.tencent.mm.compatible.a.a.a()
+    {
+      public final void run()
+      {
+        bua = new b(mContext);
+      }
+    });
   }
   
-  public final boolean pd()
+  public final boolean oV()
   {
     try
     {
-      if (bjx == null) {
+      if (bua == null) {
         return false;
       }
-      boolean bool = bjx.pd();
+      boolean bool = bua.oV();
       return bool;
     }
     finally {}
@@ -31,10 +37,10 @@ public final class a
   {
     try
     {
-      if (bjx == null) {
+      if (bua == null) {
         return false;
       }
-      boolean bool = bjx.requestFocus();
+      boolean bool = bua.requestFocus();
       return bool;
     }
     finally {}
@@ -42,14 +48,14 @@ public final class a
   
   public static abstract interface a
   {
-    public abstract void bS(int paramInt);
+    public abstract void bT(int paramInt);
   }
   
   public static abstract interface b
   {
     public abstract void a(a.a parama);
     
-    public abstract boolean pd();
+    public abstract boolean oV();
     
     public abstract boolean requestFocus();
   }

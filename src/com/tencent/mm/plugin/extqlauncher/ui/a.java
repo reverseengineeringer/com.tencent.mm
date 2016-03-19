@@ -4,7 +4,7 @@ import android.net.Uri;
 
 public final class a
 {
-  public static final Uri dcW = Uri.parse("content://com.tencent.qlauncher.provider.third_party_coop_provider/push_item");
+  public static final Uri dMu = Uri.parse("content://com.tencent.qlauncher.provider.third_party_coop_provider/push_item");
 }
 
 /* Location:

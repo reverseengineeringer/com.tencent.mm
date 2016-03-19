@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/modelsearch/n;
+.implements Lcom/tencent/mm/modelsearch/l;
 
 
 # annotations
@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private bIE:Z
+.field private bYp:Z
 
-.field private bIF:Z
+.field private bYq:Z
 
 
 # direct methods
@@ -45,7 +45,7 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 21
     return-void
@@ -53,45 +53,45 @@
 
 
 # virtual methods
-.method public abstract Ac()Z
+.method public abstract BF()Z
 .end method
 
-.method public a(Ljava/lang/String;Ljava/lang/String;Ljava/util/Comparator;Lcom/tencent/mm/modelsearch/o$i;Lcom/tencent/mm/sdk/platformtools/ac;)Lcom/tencent/mm/modelsearch/q$a;
+.method public a(Lcom/tencent/mm/modelsearch/m$i;)Lcom/tencent/mm/modelsearch/o$a;
     .locals 1
 
     .prologue
-    .line 75
+    .line 201
     const/4 v0, 0x0
 
     return-object v0
 .end method
 
-.method public a(Ljava/lang/String;[IILcom/tencent/mm/modelsearch/o$i;Lcom/tencent/mm/sdk/platformtools/ac;I)Lcom/tencent/mm/modelsearch/q$a;
-    .locals 1
-
-    .prologue
-    .line 80
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public a(Ljava/lang/String;[I[IILjava/util/Comparator;Lcom/tencent/mm/modelsearch/o$i;Lcom/tencent/mm/sdk/platformtools/ac;Ljava/util/HashSet;)Lcom/tencent/mm/modelsearch/q$a;
-    .locals 1
-
-    .prologue
-    .line 69
-    const/4 v0, 0x0
-
-    return-object v0
-.end method
-
-.method public a(Ljava/lang/String;Lcom/tencent/mm/modelsearch/o$g;I)V
+.method public a(Ljava/lang/String;Lcom/tencent/mm/modelsearch/m$g;I)V
     .locals 0
 
     .prologue
-    .line 86
+    .line 69
     return-void
+.end method
+
+.method public b(Lcom/tencent/mm/modelsearch/m$i;)Lcom/tencent/mm/modelsearch/o$a;
+    .locals 1
+
+    .prologue
+    .line 205
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public c(Lcom/tencent/mm/modelsearch/m$i;)Lcom/tencent/mm/modelsearch/o$a;
+    .locals 1
+
+    .prologue
+    .line 209
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 .method public final create()V
@@ -100,7 +100,7 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 43
+    .line 44
     const-string/jumbo v0, "!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs="
 
     const-string/jumbo v1, "OnCreate %s | isCreated =%b"
@@ -117,7 +117,7 @@
 
     aput-object v4, v2, v3
 
-    iget-boolean v3, p0, Lcom/tencent/mm/modelsearch/a;->bIE:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/modelsearch/a;->bYp:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -125,32 +125,42 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 44
-    iget-boolean v0, p0, Lcom/tencent/mm/modelsearch/a;->bIE:Z
+    .line 45
+    iget-boolean v0, p0, Lcom/tencent/mm/modelsearch/a;->bYp:Z
 
     if-nez v0, :cond_0
 
-    .line 45
+    .line 46
     invoke-virtual {p0}, Lcom/tencent/mm/modelsearch/a;->onCreate()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 46
+    .line 47
     const-string/jumbo v0, "!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs="
 
     const-string/jumbo v1, "SetCreated"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-boolean v5, p0, Lcom/tencent/mm/modelsearch/a;->bIE:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/modelsearch/a;->bYp:Z
 
-    .line 49
+    .line 50
     :cond_0
     return-void
+.end method
+
+.method public d(Lcom/tencent/mm/modelsearch/m$i;)Lcom/tencent/mm/modelsearch/o$a;
+    .locals 1
+
+    .prologue
+    .line 213
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 .method public final destroy()V
@@ -159,12 +169,12 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 55
+    .line 56
     const-string/jumbo v0, "!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs="
 
-    const-string/jumbo v1, "OnDestroy %s | isDestroyed =%b"
+    const-string/jumbo v1, "OnDestroy %s | isDestroyed %b | isCreated %b"
 
-    const/4 v2, 0x2
+    const/4 v2, 0x3
 
     new-array v2, v2, [Ljava/lang/Object;
 
@@ -176,7 +186,7 @@
 
     aput-object v4, v2, v3
 
-    iget-boolean v3, p0, Lcom/tencent/mm/modelsearch/a;->bIF:Z
+    iget-boolean v3, p0, Lcom/tencent/mm/modelsearch/a;->bYq:Z
 
     invoke-static {v3}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
@@ -184,28 +194,52 @@
 
     aput-object v3, v2, v5
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v3, 0x2
 
-    .line 56
-    iget-boolean v0, p0, Lcom/tencent/mm/modelsearch/a;->bIF:Z
+    iget-boolean v4, p0, Lcom/tencent/mm/modelsearch/a;->bYp:Z
+
+    invoke-static {v4}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 57
+    iget-boolean v0, p0, Lcom/tencent/mm/modelsearch/a;->bYq:Z
 
     if-nez v0, :cond_0
 
-    .line 57
-    invoke-virtual {p0}, Lcom/tencent/mm/modelsearch/a;->Ac()Z
+    iget-boolean v0, p0, Lcom/tencent/mm/modelsearch/a;->bYp:Z
+
+    if-eqz v0, :cond_0
 
     .line 58
+    invoke-virtual {p0}, Lcom/tencent/mm/modelsearch/a;->BF()Z
+
+    .line 59
     const-string/jumbo v0, "!44@/B4Tb64lLpKcfpdNe8eellg96iEw81h0MlKcHkGKyvs="
 
     const-string/jumbo v1, "SetDestroyed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iput-boolean v5, p0, Lcom/tencent/mm/modelsearch/a;->bIF:Z
+    iput-boolean v5, p0, Lcom/tencent/mm/modelsearch/a;->bYq:Z
 
-    .line 61
+    .line 62
     :cond_0
     return-void
+.end method
+
+.method public e(Lcom/tencent/mm/modelsearch/m$i;)Lcom/tencent/mm/modelsearch/o$a;
+    .locals 1
+
+    .prologue
+    .line 217
+    const/4 v0, 0x0
+
+    return-object v0
 .end method
 
 .method public abstract onCreate()Z

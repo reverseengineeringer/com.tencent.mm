@@ -1,17 +1,33 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ds
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a axA = new a();
+  public b axB = new b();
   
   public ds()
   {
-    id = "GetSnsTagList";
-    hXT = atO;
+    id = "ExtTranslateVoice";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public String anC;
+    public String axC;
+    public int axD = 0;
+    public Runnable axE;
+  }
+  
+  public static final class b
+  {
+    public boolean avH;
+    public String content;
   }
 }
 

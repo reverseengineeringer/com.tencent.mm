@@ -1,48 +1,46 @@
 package com.tencent.mm.app.plugin.voicereminder.a;
 
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.zg;
-import com.tencent.mm.protocal.b.zh;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.afv;
+import com.tencent.mm.protocal.b.afw;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
 import java.util.LinkedList;
 
 public final class a
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private d apI;
-  private com.tencent.mm.q.a apJ;
+  private d anM;
+  private com.tencent.mm.r.a anN;
   
   public a(LinkedList paramLinkedList, int paramInt)
   {
     Object localObject = new a.a();
-    bsW = new zg();
-    bsX = new zh();
+    bFa = new afv();
+    bFb = new afw();
     uri = "/cgi-bin/micromsg-bin/opvoicereminder";
-    bsV = 331;
-    bsY = 150;
-    bsZ = 1000000150;
-    apJ = ((a.a)localObject).vh();
-    localObject = (zg)apJ.bsT.btb;
-    hhA = 1;
-    hIP = paramLinkedList;
-    hIO = paramInt;
+    bEY = 331;
+    bFc = 150;
+    bFd = 1000000150;
+    anN = ((a.a)localObject).vy();
+    localObject = (afv)anN.bEW.bFf;
+    iVx = 1;
+    jDk = paramLinkedList;
+    jDj = paramInt;
   }
   
-  public final int a(m paramm, d paramd)
+  public final int a(e parame, d paramd)
   {
-    apI = paramd;
-    return a(paramm, apJ, this);
+    anM = paramd;
+    return a(parame, anN, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    apI.a(paramInt2, paramInt3, paramString, this);
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()

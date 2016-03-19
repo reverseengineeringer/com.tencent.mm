@@ -15,53 +15,95 @@ import android.view.View;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.widget.ListView;
+import com.tencent.mm.a.e;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
 
 public final class BackwardSupportUtil
 {
-  public static boolean bUQ = false;
+  public static boolean clN = false;
   
   static
   {
-    Du();
+    FC();
   }
   
-  private static boolean Du()
+  private static boolean FC()
   {
     try
     {
       Class.forName("android.media.ExifInterface");
-      t.i("!24@/B4Tb64lLpKVEdGqaNtVOg==", "android.media.ExifInterface find");
-      bUQ = true;
+      u.i("!24@/B4Tb64lLpKVEdGqaNtVOg==", "android.media.ExifInterface find");
+      clN = true;
       return true;
     }
     catch (Exception localException)
     {
-      t.w("!24@/B4Tb64lLpKVEdGqaNtVOg==", "android.media.ExifInterface can not found");
-      bUQ = false;
+      u.w("!24@/B4Tb64lLpKVEdGqaNtVOg==", "android.media.ExifInterface can not found");
+      clN = false;
     }
     return false;
   }
   
   public static final class ExifHelper
   {
-    public static int iM(String paramString)
+    public static LatLongData CA(String paramString)
     {
-      if (!BackwardSupportUtil.bUQ) {}
+      if (!BackwardSupportUtil.clN) {}
+      for (;;)
+      {
+        return null;
+        if (ay.kz(paramString))
+        {
+          u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "filepath is null or nil");
+          return null;
+        }
+        if (!e.ax(paramString))
+        {
+          u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "file not exist:[%s]", new Object[] { paramString });
+          return null;
+        }
+        try
+        {
+          paramString = new ExifInterface(paramString);
+          if (paramString == null) {
+            continue;
+          }
+          float[] arrayOfFloat = new float[2];
+          if (!paramString.getLatLong(arrayOfFloat)) {
+            continue;
+          }
+          paramString = new LatLongData();
+          aBn = arrayOfFloat[0];
+          bRR = arrayOfFloat[1];
+          u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "exif info, latitude:%f, longtitude:%f", new Object[] { Float.valueOf(aBn), Float.valueOf(bRR) });
+          return paramString;
+        }
+        catch (IOException paramString)
+        {
+          for (;;)
+          {
+            u.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "cannot read exif" + paramString);
+            paramString = null;
+          }
+        }
+      }
+    }
+    
+    public static int kq(String paramString)
+    {
+      if (!BackwardSupportUtil.clN) {}
       for (;;)
       {
         return 0;
-        if (bn.iW(paramString))
+        if (ay.kz(paramString))
         {
-          t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "filepath is null or nil");
+          u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "filepath is null or nil");
           return 0;
         }
-        if (!com.tencent.mm.a.c.az(paramString))
+        if (!e.ax(paramString))
         {
-          t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "file not exist:[%s]", new Object[] { paramString });
+          u.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "file not exist:[%s]", new Object[] { paramString });
           return 0;
         }
         try
@@ -88,7 +130,7 @@ public final class BackwardSupportUtil
         {
           for (;;)
           {
-            t.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "cannot read exif" + paramString);
+            u.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "cannot read exif" + paramString);
             paramString = null;
           }
           return 90;
@@ -97,66 +139,23 @@ public final class BackwardSupportUtil
       return 270;
     }
     
-    public static LatLongData xc(String paramString)
-    {
-      if (!BackwardSupportUtil.bUQ) {}
-      for (;;)
-      {
-        return null;
-        if (bn.iW(paramString))
-        {
-          t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "filepath is null or nil");
-          return null;
-        }
-        if (!com.tencent.mm.a.c.az(paramString))
-        {
-          t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "file not exist:[%s]", new Object[] { paramString });
-          return null;
-        }
-        try
-        {
-          paramString = new ExifInterface(paramString);
-          if (paramString == null) {
-            continue;
-          }
-          float[] arrayOfFloat = new float[2];
-          if (!paramString.getLatLong(arrayOfFloat)) {
-            continue;
-          }
-          paramString = new LatLongData();
-          aAX = arrayOfFloat[0];
-          bEh = arrayOfFloat[1];
-          t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "exif info, latitude:%f, longtitude:%f", new Object[] { Float.valueOf(aAX), Float.valueOf(bEh) });
-          return paramString;
-        }
-        catch (IOException paramString)
-        {
-          for (;;)
-          {
-            t.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "cannot read exif" + paramString);
-            paramString = null;
-          }
-        }
-      }
-    }
-    
     public static class LatLongData
       implements Parcelable
     {
-      public static final Parcelable.Creator CREATOR = new d();
-      public float aAX;
-      public float bEh;
+      public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
+      public float aBn;
+      public float bRR;
       
       public LatLongData()
       {
-        aAX = 0.0F;
-        bEh = 0.0F;
+        aBn = 0.0F;
+        bRR = 0.0F;
       }
       
       public LatLongData(float paramFloat1, float paramFloat2)
       {
-        aAX = paramFloat1;
-        bEh = paramFloat2;
+        aBn = paramFloat1;
+        bRR = paramFloat2;
       }
       
       public int describeContents()
@@ -171,19 +170,19 @@ public final class BackwardSupportUtil
         {
           return false;
           paramObject = (LatLongData)paramObject;
-        } while ((Math.abs(aAX - aAX) >= 1.0E-6F) || (Math.abs(bEh - bEh) >= 1.0E-6F));
+        } while ((Math.abs(aBn - aBn) >= 1.0E-6F) || (Math.abs(bRR - bRR) >= 1.0E-6F));
         return true;
       }
       
       public int hashCode()
       {
-        return (int)(aAX * 10000.0F) + (int)(bEh * 10000.0F);
+        return (int)(aBn * 10000.0F) + (int)(bRR * 10000.0F);
       }
       
       public void writeToParcel(Parcel paramParcel, int paramInt)
       {
-        paramParcel.writeFloat(aAX);
-        paramParcel.writeFloat(bEh);
+        paramParcel.writeFloat(aBn);
+        paramParcel.writeFloat(bRR);
       }
     }
   }
@@ -217,7 +216,7 @@ public final class BackwardSupportUtil
     
     public static Bitmap a(InputStream paramInputStream, float paramFloat, int paramInt1, int paramInt2)
     {
-      paramInputStream = e.a(paramInputStream, paramFloat, paramInt1, paramInt2);
+      paramInputStream = d.a(paramInputStream, paramFloat, paramInt1, paramInt2);
       if (paramInputStream != null) {
         paramInputStream.setDensity((int)(160.0F * paramFloat));
       }
@@ -226,14 +225,14 @@ public final class BackwardSupportUtil
     
     public static Bitmap b(String paramString, float paramFloat)
     {
-      paramString = e.c(paramString, paramFloat);
+      paramString = d.c(paramString, paramFloat);
       if (paramString != null) {
         paramString.setDensity((int)(160.0F * paramFloat));
       }
       return paramString;
     }
     
-    public static String cI(Context paramContext)
+    public static String dk(Context paramContext)
     {
       Object localObject = paramContext.getResources().getDisplayMetrics();
       Configuration localConfiguration = paramContext.getResources().getConfiguration();
@@ -258,28 +257,6 @@ public final class BackwardSupportUtil
         break;
       }
     }
-    
-    public static Bitmap xb(String paramString)
-    {
-      try
-      {
-        t.d("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "get bitmap from url:" + paramString);
-        paramString = (HttpURLConnection)new URL(paramString).openConnection();
-        paramString.setDoInput(true);
-        paramString.connect();
-        paramString = paramString.getInputStream();
-        Bitmap localBitmap = e.decodeStream(paramString);
-        paramString.close();
-        return localBitmap;
-      }
-      catch (IOException paramString)
-      {
-        paramString = paramString;
-        t.e("!56@/B4Tb64lLpI7sJ4llUUbo94xDYV6zp6Z2hZMuNWhDuQGnIZsf7Z1zw==", "get bitmap from url failed");
-        return null;
-      }
-      finally {}
-    }
   }
   
   public static final class c
@@ -293,14 +270,14 @@ public final class BackwardSupportUtil
         if (Build.VERSION.SDK_INT < 8) {
           break;
         }
-        new bg();
+        new as();
         if (paramListView.getFirstVisiblePosition() > 10) {
           paramListView.setSelection(10);
         }
       } while (Build.VERSION.SDK_INT < 8);
       paramListView.smoothScrollToPosition(0);
       return;
-      new bf();
+      new ar();
       paramListView.setSelection(0);
     }
     
@@ -313,7 +290,7 @@ public final class BackwardSupportUtil
         if (Build.VERSION.SDK_INT < 8) {
           break;
         }
-        new bg();
+        new as();
         int i = paramListView.getFirstVisiblePosition();
         if ((i > paramInt) && (i - paramInt > 10)) {
           paramListView.setSelection(paramInt + 10);
@@ -327,7 +304,7 @@ public final class BackwardSupportUtil
           }
         }
       }
-      new bf();
+      new ar();
       paramListView.setSelection(paramInt);
     }
   }

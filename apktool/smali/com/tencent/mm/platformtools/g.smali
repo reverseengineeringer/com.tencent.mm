@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field public final bUR:J
+.field public final clO:J
 
-.field public final bUS:I
+.field public final clP:I
 
-.field public bUT:J
+.field public clQ:J
 
-.field public bUU:I
+.field public clR:I
 
 
 # direct methods
@@ -24,22 +24,22 @@
     .line 15
     const-wide/32 v0, 0x668a0
 
-    iput-wide v0, p0, Lcom/tencent/mm/platformtools/g;->bUR:J
+    iput-wide v0, p0, Lcom/tencent/mm/platformtools/g;->clO:J
 
     .line 16
     const/4 v0, 0x3
 
-    iput v0, p0, Lcom/tencent/mm/platformtools/g;->bUS:I
+    iput v0, p0, Lcom/tencent/mm/platformtools/g;->clP:I
 
     .line 17
-    iget v0, p0, Lcom/tencent/mm/platformtools/g;->bUS:I
+    iget v0, p0, Lcom/tencent/mm/platformtools/g;->clP:I
 
-    iput v0, p0, Lcom/tencent/mm/platformtools/g;->bUU:I
+    iput v0, p0, Lcom/tencent/mm/platformtools/g;->clR:I
 
     .line 18
     const-wide/16 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/platformtools/g;->bUT:J
+    iput-wide v0, p0, Lcom/tencent/mm/platformtools/g;->clQ:J
 
     .line 19
     return-void

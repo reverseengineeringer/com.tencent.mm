@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field private bkR:[Ljava/lang/Object;
+.field private bvu:[Ljava/lang/Object;
 
-.field final synthetic bkS:Lcom/tencent/mm/dbsupport/newcursor/d;
+.field final synthetic bvv:Lcom/tencent/mm/dbsupport/newcursor/d;
 
 .field private final endIndex:I
 
@@ -29,9 +29,10 @@
     .locals 0
 
     .prologue
-    .line 128
-    iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bkS:Lcom/tencent/mm/dbsupport/newcursor/d;
+    .line 132
+    iput-object p1, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bvv:Lcom/tencent/mm/dbsupport/newcursor/d;
 
+    .line 128
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 129
@@ -41,15 +42,14 @@
     iput p3, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->endIndex:I
 
     .line 131
-    iput-object p4, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bkR:[Ljava/lang/Object;
+    iput-object p4, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bvu:[Ljava/lang/Object;
 
-    .line 132
     return-void
 .end method
 
 
 # virtual methods
-.method public final T(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/d$a;
+.method public final U(Ljava/lang/Object;)Lcom/tencent/mm/dbsupport/newcursor/d$a;
     .locals 3
 
     .prologue
@@ -73,7 +73,7 @@
 
     .line 147
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bkR:[Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->bvu:[Ljava/lang/Object;
 
     iget v1, p0, Lcom/tencent/mm/dbsupport/newcursor/d$a;->index:I
 

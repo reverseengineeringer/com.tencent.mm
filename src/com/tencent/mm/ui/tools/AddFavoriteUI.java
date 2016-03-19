@@ -1,271 +1,267 @@
 package com.tencent.mm.ui.tools;
 
 import android.app.ProgressDialog;
-import android.content.ContentResolver;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
-import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Message;
 import android.os.Parcelable;
 import android.widget.Toast;
 import com.jg.JgClassChecked;
-import com.tencent.mm.a.n;
 import com.tencent.mm.booter.NotifyReceiver;
-import com.tencent.mm.d.a.ag;
-import com.tencent.mm.d.a.ag.a;
-import com.tencent.mm.d.a.ag.b;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.v;
-import com.tencent.mm.protocal.b.lf;
-import com.tencent.mm.protocal.b.lg;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.h.e;
+import com.tencent.mm.d.a.ay.a;
+import com.tencent.mm.d.a.ay.b;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.pluginsdk.model.d;
+import com.tencent.mm.protocal.b.nf;
+import com.tencent.mm.protocal.b.no;
+import com.tencent.mm.protocal.b.np;
+import com.tencent.mm.sdk.c.b;
 import com.tencent.mm.sdk.modelmsg.WXFileObject;
 import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 import com.tencent.mm.sdk.modelmsg.WXTextObject;
-import com.tencent.mm.sdk.modelmsg.d.a;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.o;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.modelmsg.c.a;
+import com.tencent.mm.sdk.platformtools.MMBitmapFactory.DecodeResultLogger;
+import com.tencent.mm.sdk.platformtools.MMBitmapFactory.KVStatHelper;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.n;
+import com.tencent.mm.sdk.platformtools.p;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
 import com.tencent.mm.ui.MMWizardActivity;
 import com.tencent.mm.ui.account.SimpleLoginUI;
-import com.tencent.mm.ui.cn;
+import com.tencent.mm.ui.base.g;
+import com.tencent.mm.ui.j;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 
+@com.tencent.mm.ui.base.a(3)
 @JgClassChecked(author=12, fComment="checked", lastDate="20141010", reviewer=20, vComment={com.jg.EType.ACTIVITYCHECK})
 public class AddFavoriteUI
   extends MMActivity
 {
-  private ProgressDialog bXB = null;
+  private ProgressDialog coM = null;
   String filePath = null;
-  private ac handler = new i(this);
+  private aa handler = new aa()
+  {
+    public final void handleMessage(Message paramAnonymousMessage)
+    {
+      AddFavoriteUI.b(AddFavoriteUI.this);
+      if ((com.tencent.mm.sdk.platformtools.ay.kz(filePath)) || ((com.tencent.mm.sdk.platformtools.ay.DA(filePath)) && (!AddFavoriteUI.Hz(filePath))))
+      {
+        u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, filePath is null or file is not a valid img.");
+        AddFavoriteUI.c(AddFavoriteUI.this);
+        finish();
+        return;
+      }
+      AddFavoriteUI.d(AddFavoriteUI.this);
+    }
+  };
   private Intent intent = null;
-  ArrayList jov = null;
+  ArrayList ltM = null;
   Uri uri = null;
   
-  private void BC(String paramString)
+  private static boolean Hw(String paramString)
+  {
+    MMBitmapFactory.DecodeResultLogger localDecodeResultLogger = new MMBitmapFactory.DecodeResultLogger();
+    boolean bool = n.a(paramString, localDecodeResultLogger);
+    if ((!bool) && (localDecodeResultLogger.getDecodeResult() >= 2000))
+    {
+      paramString = MMBitmapFactory.KVStatHelper.getKVStatString(paramString, 5, localDecodeResultLogger);
+      com.tencent.mm.plugin.report.service.h.fUJ.O(12712, paramString);
+    }
+    return bool;
+  }
+  
+  private void Hx(String paramString)
   {
     if ((paramString == null) || (paramString.length() == 0))
     {
-      t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "dealWithFile fail, filePath is empty");
+      u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "dealWithFile fail, filePath is empty");
       return;
     }
-    int i = com.tencent.mm.a.c.ay(paramString);
-    t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "filelength: [%d]", new Object[] { Integer.valueOf(i) });
+    int i = com.tencent.mm.a.e.aw(paramString);
+    u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "filelength: [%d]", new Object[] { Integer.valueOf(i) });
     if (i == 0)
     {
-      t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "dealWithFile fail, fileLength is 0");
-      Toast.makeText(this, a.n.favorite_file_length_zero, 1).show();
+      u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "dealWithFile fail, fileLength is 0");
+      Toast.makeText(this, 2131432567, 1).show();
       return;
     }
     if (i > 26214400)
     {
-      t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "dealWithFile fail, fileLength is too large");
-      Toast.makeText(this, a.n.favorite_too_large, 1).show();
+      u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "dealWithFile fail, fileLength is too large");
+      Toast.makeText(this, 2131432566, 1).show();
       return;
     }
-    Object localObject2 = new WXMediaMessage(new WXFileObject(paramString));
-    title = new File(paramString).getName();
-    description = bn.W(i);
-    Object localObject1 = new d.a();
-    gMB = null;
-    hXX = ((WXMediaMessage)localObject2);
-    localObject2 = new Bundle();
-    ((d.a)localObject1).m((Bundle)localObject2);
-    ((Bundle)localObject2).putInt("_mmessage_sdkVersion", 570556416);
-    ((Bundle)localObject2).putString("_mmessage_appPackage", "com.tencent.mm.openapi");
-    ((Bundle)localObject2).putString("SendAppMessageWrapper_AppId", "wx4310bbd51be7d979");
-    if ((ax.tq()) && (!ax.tu()))
+    if ((ah.tI()) && (!ah.tM()))
     {
-      localObject1 = new ag();
-      if ((com.tencent.mm.pluginsdk.model.c.a((ag)localObject1, 13, paramString, com.tencent.mm.a.c.aB(paramString) + "." + com.tencent.mm.a.c.aA(paramString), "")) && (auY.ret == 0))
+      Object localObject2 = new WXMediaMessage(new WXFileObject(paramString));
+      title = new File(paramString).getName();
+      if (com.tencent.mm.sdk.platformtools.ay.kz(null))
       {
-        a.hXQ.g((d)localObject1);
-        com.tencent.mm.ui.base.h.aN(ipQ.iqj, getString(a.n.favorite_ok));
-        return;
+        description = com.tencent.mm.sdk.platformtools.ay.al(i);
+        if (i >= 30720) {
+          break label324;
+        }
+        thumbData = com.tencent.mm.a.e.c(paramString, 0, -1);
       }
-      com.tencent.mm.ui.base.h.g(ipQ.iqj, auX.type, a.n.favorite_fail);
+      Object localObject1;
+      for (;;)
+      {
+        localObject1 = new c.a();
+        iBD = null;
+        jUS = ((WXMediaMessage)localObject2);
+        localObject2 = new Bundle();
+        ((c.a)localObject1).l((Bundle)localObject2);
+        ((Bundle)localObject2).putInt("_mmessage_sdkVersion", 587333634);
+        ((Bundle)localObject2).putString("_mmessage_appPackage", "com.tencent.mm.openapi");
+        ((Bundle)localObject2).putString("SendAppMessageWrapper_AppId", "wx4310bbd51be7d979");
+        localObject1 = new com.tencent.mm.d.a.ay();
+        if ((!d.a((com.tencent.mm.d.a.ay)localObject1, 13, paramString, com.tencent.mm.a.e.az(paramString) + "." + com.tencent.mm.a.e.ay(paramString), "")) || (aue.ret != 0)) {
+          break label335;
+        }
+        com.tencent.mm.sdk.c.a.jUF.j((b)localObject1);
+        g.ba(koJ.kpc, getString(2131431055));
+        return;
+        description = null;
+        break;
+        label324:
+        u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "thumb data is exceed 30k, ignore");
+      }
+      label335:
+      g.e(koJ.kpc, aud.type, 0);
       return;
     }
-    t.w("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "not logged in, jump to simple login");
-    MMWizardActivity.b(this, new Intent(this, SimpleLoginUI.class), getIntent().addFlags(67108864));
+    u.w("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "not logged in, jump to simple login");
+    bip();
   }
   
-  private static int BD(String paramString)
+  private static int Hy(String paramString)
   {
     if ((paramString == null) || (paramString.length() == 0))
     {
-      t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "map : mimeType is null");
+      u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "map : mimeType is null");
       return -1;
     }
     if (paramString.toLowerCase().contains("image")) {
       return 2;
     }
-    t.d("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "map : unknown mimetype, send as file");
+    u.d("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "map : unknown mimetype, send as file");
     return 8;
   }
   
-  private ArrayList K(Bundle paramBundle)
+  private ArrayList N(Bundle paramBundle)
   {
-    paramBundle = paramBundle.getParcelableArrayList("android.intent.extra.STREAM");
-    ArrayList localArrayList;
-    label82:
-    int i;
-    label84:
-    label88:
-    Cursor localCursor;
-    if ((paramBundle != null) && (paramBundle.size() > 0))
+    Object localObject1 = paramBundle.getParcelableArrayList("android.intent.extra.STREAM");
+    if ((localObject1 != null) && (((ArrayList)localObject1).size() > 0))
     {
-      localArrayList = new ArrayList();
-      Iterator localIterator = paramBundle.iterator();
-      if (localIterator.hasNext())
+      paramBundle = new ArrayList();
+      localObject1 = ((ArrayList)localObject1).iterator();
+      if (((Iterator)localObject1).hasNext())
       {
-        paramBundle = (Parcelable)localIterator.next();
-        if ((paramBundle == null) || (!(paramBundle instanceof Uri))) {
-          t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "getMultiSendFilePath failed, error parcelable, %s", new Object[] { paramBundle });
+        Object localObject2 = (Parcelable)((Iterator)localObject1).next();
+        if ((localObject2 == null) || (!(localObject2 instanceof Uri))) {
+          u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "getMultiSendFilePath failed, error parcelable, %s", new Object[] { localObject2 });
         }
         for (;;)
         {
-          i = 0;
-          if (i != 0) {
-            break label340;
-          }
-          return null;
-          paramBundle = (Uri)paramBundle;
-          if ((paramBundle != null) && (paramBundle.getScheme() != null))
+          for (int i = 0;; i = 1)
           {
-            if (!paramBundle.getScheme().startsWith("content")) {
-              break label342;
+            if (i != 0) {
+              break label170;
             }
-            localCursor = getContentResolver().query(paramBundle, null, null, null, null);
-            if (localCursor != null) {
+            return null;
+            localObject2 = (Uri)localObject2;
+            if (((Uri)localObject2).getScheme() == null) {
               break;
             }
-            t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "null cursor");
-          }
-        }
-        if (localCursor.moveToFirst())
-        {
-          i = localCursor.getColumnIndex("_data");
-          t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "getMultiSendFilePath  dataColumnIndex:[%d]", new Object[] { Integer.valueOf(i) });
-          if (i > 0)
-          {
-            paramBundle = localCursor.getString(i);
-            int j = localCursor.getColumnIndex("mime_type");
-            t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "getMultiSendFilePath  typeColumnIndex:[%d]", new Object[] { Integer.valueOf(i) });
-            if (j <= 0) {
-              break label397;
+            localObject2 = com.tencent.mm.sdk.platformtools.ay.d(this, (Uri)localObject2);
+            if (com.tencent.mm.sdk.platformtools.ay.kz((String)localObject2)) {
+              break;
             }
+            if ((!com.tencent.mm.sdk.platformtools.ay.DA((String)localObject2)) || (!Hw((String)localObject2))) {
+              break label172;
+            }
+            u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "multisend file path: " + (String)localObject2);
+            paramBundle.add(localObject2);
           }
+          label170:
+          break;
+          label172:
+          u.w("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "multisend tries to send illegal img: " + (String)localObject2);
         }
       }
+      if (paramBundle.size() > 0) {
+        return paramBundle;
+      }
+      return null;
     }
-    label340:
-    label342:
-    label395:
-    label397:
-    for (String str = localCursor.getString(localCursor.getColumnIndexOrThrow("mime_type"));; str = null)
-    {
-      if ((str == null) || (!str.contains("image")))
-      {
-        localCursor.close();
-        break label82;
-        localCursor.close();
-        break label82;
-        paramBundle = "";
-      }
-      localCursor.close();
-      for (;;)
-      {
-        if (bn.iW(paramBundle)) {
-          break label395;
-        }
-        t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "multisend file path: " + paramBundle);
-        localArrayList.add(paramBundle);
-        i = 1;
-        break label84;
-        break;
-        if (paramBundle.getScheme().startsWith("file"))
-        {
-          paramBundle = paramBundle.getPath();
-          if (!bn.xP(paramBundle)) {
-            break label82;
-          }
-          continue;
-          if (localArrayList.size() <= 0) {
-            break label88;
-          }
-          return localArrayList;
-          t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "getParcelableArrayList failed");
-          return null;
-        }
-        paramBundle = "";
-      }
-      break label82;
-    }
+    u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "getParcelableArrayList failed");
+    return null;
   }
   
   /* Error */
-  private String a(Uri paramUri, Cursor paramCursor)
+  private String a(Uri paramUri, android.database.Cursor paramCursor)
   {
     // Byte code:
     //   0: aload_1
     //   1: ifnull +533 -> 534
-    //   4: ldc_w 429
+    //   4: ldc_w 408
     //   7: astore 6
     //   9: aload_2
-    //   10: ldc_w 431
-    //   13: invokeinterface 384 2 0
+    //   10: ldc_w 410
+    //   13: invokeinterface 415 2 0
     //   18: istore_3
     //   19: iload_3
     //   20: iconst_m1
     //   21: if_icmpeq +61 -> 82
     //   24: aload_2
     //   25: iload_3
-    //   26: invokeinterface 387 2 0
+    //   26: invokeinterface 416 2 0
     //   31: astore 5
     //   33: aload 5
     //   35: astore 4
     //   37: aload 5
     //   39: ifnull +16 -> 55
     //   42: aload 5
-    //   44: ldc_w 433
-    //   47: ldc_w 435
-    //   50: invokevirtual 439	java/lang/String:replaceAll	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    //   44: ldc_w 418
+    //   47: ldc_w 420
+    //   50: invokevirtual 424	java/lang/String:replaceAll	(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
     //   53: astore 4
-    //   55: ldc 66
-    //   57: new 194	java/lang/StringBuilder
+    //   55: ldc 102
+    //   57: new 234	java/lang/StringBuilder
     //   60: dup
-    //   61: ldc_w 441
-    //   64: invokespecial 403	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   61: ldc_w 426
+    //   64: invokespecial 390	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   67: aload 4
-    //   69: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   72: invokevirtual 211	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   75: invokestatic 405	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;)V
+    //   69: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   72: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   75: invokestatic 303	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
     //   78: aload 4
     //   80: astore 6
     //   82: aload_2
-    //   83: invokeinterface 397 1 0
+    //   83: invokeinterface 429 1 0
     //   88: aload_0
-    //   89: invokevirtual 366	com/tencent/mm/ui/tools/AddFavoriteUI:getContentResolver	()Landroid/content/ContentResolver;
+    //   89: invokevirtual 433	com/tencent/mm/ui/tools/AddFavoriteUI:getContentResolver	()Landroid/content/ContentResolver;
     //   92: aload_1
-    //   93: ldc_w 443
-    //   96: invokevirtual 447	android/content/ContentResolver:openAssetFileDescriptor	(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
+    //   93: ldc_w 435
+    //   96: invokevirtual 441	android/content/ContentResolver:openAssetFileDescriptor	(Landroid/net/Uri;Ljava/lang/String;)Landroid/content/res/AssetFileDescriptor;
     //   99: astore_1
     //   100: aload_1
-    //   101: invokevirtual 453	android/content/res/AssetFileDescriptor:createInputStream	()Ljava/io/FileInputStream;
+    //   101: invokevirtual 447	android/content/res/AssetFileDescriptor:createInputStream	()Ljava/io/FileInputStream;
     //   104: astore 5
     //   106: aload 5
     //   108: astore 4
     //   110: aload_1
     //   111: astore_2
     //   112: aload_1
-    //   113: invokevirtual 457	android/content/res/AssetFileDescriptor:getDeclaredLength	()J
+    //   113: invokevirtual 451	android/content/res/AssetFileDescriptor:getDeclaredLength	()J
     //   116: l2i
     //   117: newarray <illegal type>
     //   119: astore 7
@@ -275,14 +271,14 @@ public class AddFavoriteUI
     //   126: astore_2
     //   127: aload 5
     //   129: aload 7
-    //   131: invokevirtual 463	java/io/FileInputStream:read	([B)I
+    //   131: invokevirtual 457	java/io/FileInputStream:read	([B)I
     //   134: ifle +382 -> 516
     //   137: aload 5
     //   139: astore 4
     //   141: aload_1
     //   142: astore_2
-    //   143: invokestatic 467	com/tencent/mm/model/ax:tl	()Lcom/tencent/mm/model/b;
-    //   146: invokevirtual 472	com/tencent/mm/model/b:isSDCardAvailable	()Z
+    //   143: invokestatic 461	com/tencent/mm/model/ah:tD	()Lcom/tencent/mm/model/c;
+    //   146: invokevirtual 466	com/tencent/mm/model/c:isSDCardAvailable	()Z
     //   149: ifne +152 -> 301
     //   152: aload 5
     //   154: astore 4
@@ -290,7 +286,7 @@ public class AddFavoriteUI
     //   157: astore_2
     //   158: aload_0
     //   159: aload 6
-    //   161: invokevirtual 475	com/tencent/mm/ui/tools/AddFavoriteUI:deleteFile	(Ljava/lang/String;)Z
+    //   161: invokevirtual 469	com/tencent/mm/ui/tools/AddFavoriteUI:deleteFile	(Ljava/lang/String;)Z
     //   164: pop
     //   165: aload 5
     //   167: astore 4
@@ -299,7 +295,7 @@ public class AddFavoriteUI
     //   171: aload_0
     //   172: aload 6
     //   174: iconst_0
-    //   175: invokevirtual 479	com/tencent/mm/ui/tools/AddFavoriteUI:openFileOutput	(Ljava/lang/String;I)Ljava/io/FileOutputStream;
+    //   175: invokevirtual 473	com/tencent/mm/ui/tools/AddFavoriteUI:openFileOutput	(Ljava/lang/String;I)Ljava/io/FileOutputStream;
     //   178: astore 8
     //   180: aload 5
     //   182: astore 4
@@ -307,135 +303,135 @@ public class AddFavoriteUI
     //   185: astore_2
     //   186: aload 8
     //   188: aload 7
-    //   190: invokevirtual 485	java/io/FileOutputStream:write	([B)V
+    //   190: invokevirtual 479	java/io/FileOutputStream:write	([B)V
     //   193: aload 5
     //   195: astore 4
     //   197: aload_1
     //   198: astore_2
     //   199: aload 8
-    //   201: invokevirtual 488	java/io/FileOutputStream:flush	()V
+    //   201: invokevirtual 482	java/io/FileOutputStream:flush	()V
     //   204: aload 5
     //   206: astore 4
     //   208: aload_1
     //   209: astore_2
     //   210: aload 8
-    //   212: invokevirtual 489	java/io/FileOutputStream:close	()V
+    //   212: invokevirtual 483	java/io/FileOutputStream:close	()V
     //   215: aload 5
     //   217: astore 4
     //   219: aload_1
     //   220: astore_2
-    //   221: new 194	java/lang/StringBuilder
+    //   221: new 234	java/lang/StringBuilder
     //   224: dup
-    //   225: invokespecial 195	java/lang/StringBuilder:<init>	()V
+    //   225: invokespecial 235	java/lang/StringBuilder:<init>	()V
     //   228: aload_0
-    //   229: invokevirtual 493	com/tencent/mm/ui/tools/AddFavoriteUI:getFilesDir	()Ljava/io/File;
-    //   232: invokevirtual 494	java/io/File:getPath	()Ljava/lang/String;
-    //   235: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   238: ldc_w 496
-    //   241: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   229: invokevirtual 487	com/tencent/mm/ui/tools/AddFavoriteUI:getFilesDir	()Ljava/io/File;
+    //   232: invokevirtual 490	java/io/File:getPath	()Ljava/lang/String;
+    //   235: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   238: ldc_w 492
+    //   241: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   244: aload 6
-    //   246: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   249: invokevirtual 211	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   246: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   249: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   252: astore 6
     //   254: aload 6
     //   256: astore_2
     //   257: aload 5
     //   259: ifnull +8 -> 267
     //   262: aload 5
-    //   264: invokevirtual 497	java/io/FileInputStream:close	()V
+    //   264: invokevirtual 493	java/io/FileInputStream:close	()V
     //   267: aload_2
     //   268: astore 4
     //   270: aload_1
     //   271: ifnull +10 -> 281
     //   274: aload_1
-    //   275: invokevirtual 498	android/content/res/AssetFileDescriptor:close	()V
+    //   275: invokevirtual 494	android/content/res/AssetFileDescriptor:close	()V
     //   278: aload_2
     //   279: astore 4
     //   281: aload 4
     //   283: areturn
     //   284: astore_1
-    //   285: ldc 66
+    //   285: ldc 102
     //   287: aload_1
     //   288: aload_1
-    //   289: invokevirtual 501	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   289: invokevirtual 497	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   292: iconst_0
-    //   293: anewarray 84	java/lang/Object
-    //   296: invokestatic 505	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   293: anewarray 120	java/lang/Object
+    //   296: invokestatic 501	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   299: aload_2
     //   300: areturn
     //   301: aload 5
     //   303: astore 4
     //   305: aload_1
     //   306: astore_2
-    //   307: new 194	java/lang/StringBuilder
+    //   307: new 234	java/lang/StringBuilder
     //   310: dup
-    //   311: invokespecial 195	java/lang/StringBuilder:<init>	()V
-    //   314: getstatic 510	com/tencent/mm/compatible/util/f:bjI	Ljava/lang/String;
-    //   317: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   320: ldc_w 512
-    //   323: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   326: invokevirtual 211	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   311: invokespecial 235	java/lang/StringBuilder:<init>	()V
+    //   314: getstatic 506	com/tencent/mm/compatible/util/d:bxd	Ljava/lang/String;
+    //   317: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   320: ldc_w 508
+    //   323: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   326: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   329: astore 8
     //   331: aload 5
     //   333: astore 4
     //   335: aload_1
     //   336: astore_2
-    //   337: new 194	java/lang/StringBuilder
+    //   337: new 234	java/lang/StringBuilder
     //   340: dup
-    //   341: invokespecial 195	java/lang/StringBuilder:<init>	()V
-    //   344: getstatic 510	com/tencent/mm/compatible/util/f:bjI	Ljava/lang/String;
-    //   347: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   350: ldc_w 514
-    //   353: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   341: invokespecial 235	java/lang/StringBuilder:<init>	()V
+    //   344: getstatic 506	com/tencent/mm/compatible/util/d:bxd	Ljava/lang/String;
+    //   347: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   350: ldc_w 510
+    //   353: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
     //   356: aload 6
-    //   358: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   361: invokevirtual 211	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   358: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   361: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
     //   364: astore 6
     //   366: aload 5
     //   368: astore 4
     //   370: aload_1
     //   371: astore_2
-    //   372: new 128	java/io/File
+    //   372: new 166	java/io/File
     //   375: dup
     //   376: aload 8
-    //   378: invokespecial 129	java/io/File:<init>	(Ljava/lang/String;)V
+    //   378: invokespecial 167	java/io/File:<init>	(Ljava/lang/String;)V
     //   381: astore 8
     //   383: aload 5
     //   385: astore 4
     //   387: aload_1
     //   388: astore_2
     //   389: aload 8
-    //   391: invokevirtual 517	java/io/File:exists	()Z
+    //   391: invokevirtual 513	java/io/File:exists	()Z
     //   394: ifne +15 -> 409
     //   397: aload 5
     //   399: astore 4
     //   401: aload_1
     //   402: astore_2
     //   403: aload 8
-    //   405: invokevirtual 520	java/io/File:mkdir	()Z
+    //   405: invokevirtual 516	java/io/File:mkdir	()Z
     //   408: pop
     //   409: aload 5
     //   411: astore 4
     //   413: aload_1
     //   414: astore_2
-    //   415: new 128	java/io/File
+    //   415: new 166	java/io/File
     //   418: dup
     //   419: aload 6
-    //   421: invokespecial 129	java/io/File:<init>	(Ljava/lang/String;)V
+    //   421: invokespecial 167	java/io/File:<init>	(Ljava/lang/String;)V
     //   424: astore 8
     //   426: aload 5
     //   428: astore 4
     //   430: aload_1
     //   431: astore_2
     //   432: aload 8
-    //   434: invokevirtual 517	java/io/File:exists	()Z
+    //   434: invokevirtual 513	java/io/File:exists	()Z
     //   437: ifne +15 -> 452
     //   440: aload 5
     //   442: astore 4
     //   444: aload_1
     //   445: astore_2
     //   446: aload 8
-    //   448: invokevirtual 523	java/io/File:createNewFile	()Z
+    //   448: invokevirtual 519	java/io/File:createNewFile	()Z
     //   451: pop
     //   452: aload 5
     //   454: astore 4
@@ -445,50 +441,50 @@ public class AddFavoriteUI
     //   460: aload 7
     //   462: aload 7
     //   464: arraylength
-    //   465: invokestatic 526	com/tencent/mm/a/c:a	(Ljava/lang/String;[BI)I
+    //   465: invokestatic 522	com/tencent/mm/a/e:b	(Ljava/lang/String;[BI)I
     //   468: istore_3
     //   469: iload_3
     //   470: ifne +46 -> 516
     //   473: aload 5
     //   475: ifnull +8 -> 483
     //   478: aload 5
-    //   480: invokevirtual 497	java/io/FileInputStream:close	()V
+    //   480: invokevirtual 493	java/io/FileInputStream:close	()V
     //   483: aload 6
     //   485: astore 4
     //   487: aload_1
     //   488: ifnull -207 -> 281
     //   491: aload_1
-    //   492: invokevirtual 498	android/content/res/AssetFileDescriptor:close	()V
+    //   492: invokevirtual 494	android/content/res/AssetFileDescriptor:close	()V
     //   495: aload 6
     //   497: areturn
     //   498: astore_1
-    //   499: ldc 66
+    //   499: ldc 102
     //   501: aload_1
     //   502: aload_1
-    //   503: invokevirtual 501	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   503: invokevirtual 497	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   506: iconst_0
-    //   507: anewarray 84	java/lang/Object
-    //   510: invokestatic 505	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   507: anewarray 120	java/lang/Object
+    //   510: invokestatic 501	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   513: aload 6
     //   515: areturn
     //   516: aload 5
     //   518: ifnull +8 -> 526
     //   521: aload 5
-    //   523: invokevirtual 497	java/io/FileInputStream:close	()V
+    //   523: invokevirtual 493	java/io/FileInputStream:close	()V
     //   526: aload_1
     //   527: ifnull +7 -> 534
     //   530: aload_1
-    //   531: invokevirtual 498	android/content/res/AssetFileDescriptor:close	()V
+    //   531: invokevirtual 494	android/content/res/AssetFileDescriptor:close	()V
     //   534: aconst_null
     //   535: areturn
     //   536: astore_1
-    //   537: ldc 66
+    //   537: ldc 102
     //   539: aload_1
     //   540: aload_1
-    //   541: invokevirtual 501	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   541: invokevirtual 497	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   544: iconst_0
-    //   545: anewarray 84	java/lang/Object
-    //   548: invokestatic 505	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   545: anewarray 120	java/lang/Object
+    //   548: invokestatic 501	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   551: goto -17 -> 534
     //   554: astore 6
     //   556: aconst_null
@@ -499,33 +495,33 @@ public class AddFavoriteUI
     //   563: astore 4
     //   565: aload_1
     //   566: astore_2
-    //   567: ldc 66
-    //   569: new 194	java/lang/StringBuilder
+    //   567: ldc 102
+    //   569: new 234	java/lang/StringBuilder
     //   572: dup
-    //   573: ldc_w 528
-    //   576: invokespecial 403	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   573: ldc_w 524
+    //   576: invokespecial 390	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   579: aload 6
-    //   581: invokevirtual 529	java/io/FileNotFoundException:getMessage	()Ljava/lang/String;
-    //   584: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   587: invokevirtual 211	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   590: invokestatic 74	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   581: invokevirtual 525	java/io/FileNotFoundException:getMessage	()Ljava/lang/String;
+    //   584: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   587: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   590: invokestatic 110	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   593: aload 5
     //   595: ifnull +8 -> 603
     //   598: aload 5
-    //   600: invokevirtual 497	java/io/FileInputStream:close	()V
+    //   600: invokevirtual 493	java/io/FileInputStream:close	()V
     //   603: aload_1
     //   604: ifnull -70 -> 534
     //   607: aload_1
-    //   608: invokevirtual 498	android/content/res/AssetFileDescriptor:close	()V
+    //   608: invokevirtual 494	android/content/res/AssetFileDescriptor:close	()V
     //   611: goto -77 -> 534
     //   614: astore_1
-    //   615: ldc 66
+    //   615: ldc 102
     //   617: aload_1
     //   618: aload_1
-    //   619: invokevirtual 501	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   619: invokevirtual 497	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   622: iconst_0
-    //   623: anewarray 84	java/lang/Object
-    //   626: invokestatic 505	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   623: anewarray 120	java/lang/Object
+    //   626: invokestatic 501	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   629: goto -95 -> 534
     //   632: astore 6
     //   634: aconst_null
@@ -536,33 +532,33 @@ public class AddFavoriteUI
     //   641: astore 4
     //   643: aload_1
     //   644: astore_2
-    //   645: ldc 66
-    //   647: new 194	java/lang/StringBuilder
+    //   645: ldc 102
+    //   647: new 234	java/lang/StringBuilder
     //   650: dup
-    //   651: ldc_w 531
-    //   654: invokespecial 403	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   651: ldc_w 527
+    //   654: invokespecial 390	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   657: aload 6
-    //   659: invokevirtual 532	java/io/IOException:getMessage	()Ljava/lang/String;
-    //   662: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   665: invokevirtual 211	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   668: invokestatic 74	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   659: invokevirtual 528	java/io/IOException:getMessage	()Ljava/lang/String;
+    //   662: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   665: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   668: invokestatic 110	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   671: aload 5
     //   673: ifnull +8 -> 681
     //   676: aload 5
-    //   678: invokevirtual 497	java/io/FileInputStream:close	()V
+    //   678: invokevirtual 493	java/io/FileInputStream:close	()V
     //   681: aload_1
     //   682: ifnull -148 -> 534
     //   685: aload_1
-    //   686: invokevirtual 498	android/content/res/AssetFileDescriptor:close	()V
+    //   686: invokevirtual 494	android/content/res/AssetFileDescriptor:close	()V
     //   689: goto -155 -> 534
     //   692: astore_1
-    //   693: ldc 66
+    //   693: ldc 102
     //   695: aload_1
     //   696: aload_1
-    //   697: invokevirtual 501	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   697: invokevirtual 497	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   700: iconst_0
-    //   701: anewarray 84	java/lang/Object
-    //   704: invokestatic 505	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   701: anewarray 120	java/lang/Object
+    //   704: invokestatic 501	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   707: goto -173 -> 534
     //   710: astore 6
     //   712: aconst_null
@@ -573,33 +569,33 @@ public class AddFavoriteUI
     //   719: astore 4
     //   721: aload_1
     //   722: astore_2
-    //   723: ldc 66
-    //   725: new 194	java/lang/StringBuilder
+    //   723: ldc 102
+    //   725: new 234	java/lang/StringBuilder
     //   728: dup
-    //   729: ldc_w 534
-    //   732: invokespecial 403	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
+    //   729: ldc_w 530
+    //   732: invokespecial 390	java/lang/StringBuilder:<init>	(Ljava/lang/String;)V
     //   735: aload 6
-    //   737: invokevirtual 501	java/lang/Exception:getMessage	()Ljava/lang/String;
-    //   740: invokevirtual 203	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
-    //   743: invokevirtual 211	java/lang/StringBuilder:toString	()Ljava/lang/String;
-    //   746: invokestatic 74	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+    //   737: invokevirtual 497	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   740: invokevirtual 243	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    //   743: invokevirtual 251	java/lang/StringBuilder:toString	()Ljava/lang/String;
+    //   746: invokestatic 110	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
     //   749: aload 5
     //   751: ifnull +8 -> 759
     //   754: aload 5
-    //   756: invokevirtual 497	java/io/FileInputStream:close	()V
+    //   756: invokevirtual 493	java/io/FileInputStream:close	()V
     //   759: aload_1
     //   760: ifnull -226 -> 534
     //   763: aload_1
-    //   764: invokevirtual 498	android/content/res/AssetFileDescriptor:close	()V
+    //   764: invokevirtual 494	android/content/res/AssetFileDescriptor:close	()V
     //   767: goto -233 -> 534
     //   770: astore_1
-    //   771: ldc 66
+    //   771: ldc 102
     //   773: aload_1
     //   774: aload_1
-    //   775: invokevirtual 501	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   775: invokevirtual 497	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   778: iconst_0
-    //   779: anewarray 84	java/lang/Object
-    //   782: invokestatic 505	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   779: anewarray 120	java/lang/Object
+    //   782: invokestatic 501	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   785: goto -251 -> 534
     //   788: astore 5
     //   790: aconst_null
@@ -609,21 +605,21 @@ public class AddFavoriteUI
     //   795: aload 4
     //   797: ifnull +8 -> 805
     //   800: aload 4
-    //   802: invokevirtual 497	java/io/FileInputStream:close	()V
+    //   802: invokevirtual 493	java/io/FileInputStream:close	()V
     //   805: aload_1
     //   806: ifnull +7 -> 813
     //   809: aload_1
-    //   810: invokevirtual 498	android/content/res/AssetFileDescriptor:close	()V
+    //   810: invokevirtual 494	android/content/res/AssetFileDescriptor:close	()V
     //   813: aload 5
     //   815: athrow
     //   816: astore_1
-    //   817: ldc 66
+    //   817: ldc 102
     //   819: aload_1
     //   820: aload_1
-    //   821: invokevirtual 501	java/lang/Exception:getMessage	()Ljava/lang/String;
+    //   821: invokevirtual 497	java/lang/Exception:getMessage	()Ljava/lang/String;
     //   824: iconst_0
-    //   825: anewarray 84	java/lang/Object
-    //   828: invokestatic 505	com/tencent/mm/sdk/platformtools/t:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    //   825: anewarray 120	java/lang/Object
+    //   828: invokestatic 501	com/tencent/mm/sdk/platformtools/u:printErrStackTrace	(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     //   831: goto -18 -> 813
     //   834: astore 5
     //   836: aconst_null
@@ -655,7 +651,7 @@ public class AddFavoriteUI
     //   start	length	slot	name	signature
     //   0	888	0	this	AddFavoriteUI
     //   0	888	1	paramUri	Uri
-    //   0	888	2	paramCursor	Cursor
+    //   0	888	2	paramCursor	android.database.Cursor
     //   18	452	3	i	int
     //   35	803	4	localObject1	Object
     //   31	724	5	localObject2	Object
@@ -776,39 +772,147 @@ public class AddFavoriteUI
     //   458	469	883	java/io/FileNotFoundException
   }
   
-  private void aRr()
+  private void bio()
   {
-    ov(0);
-    Toast.makeText(this, a.n.shareimg_get_res_fail, 1).show();
+    u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "filepath:[%s]", new Object[] { filePath });
+    int i = Hy(getIntent().resolveType(this));
+    if (i == -1)
+    {
+      u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch, msgType is invalid");
+      finish();
+      return;
+    }
+    if ((i == 8) && (!com.tencent.mm.sdk.platformtools.ay.kz(filePath)))
+    {
+      Hx(filePath);
+      finish();
+      return;
+    }
+    Object localObject1;
+    Object localObject3;
+    if ((!p.a(getIntent(), "Intro_Switch", false)) && (ah.tI()) && (!ah.tM()))
+    {
+      localObject1 = new com.tencent.mm.d.a.ay();
+      Object localObject4 = ltM;
+      if ((localObject4 == null) || (((List)localObject4).isEmpty()))
+      {
+        u.w("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "fill favorite event fail, event is null or paths is empty");
+        aud.type = 2131431062;
+        i = 0;
+        if ((i == 0) || (aue.ret != 0)) {
+          break label424;
+        }
+        com.tencent.mm.sdk.c.a.jUF.j((b)localObject1);
+        g.ba(koJ.kpc, getString(2131431055));
+      }
+      for (;;)
+      {
+        finish();
+        return;
+        if (((List)localObject4).size() > 9)
+        {
+          aud.type = 2131431066;
+          i = 0;
+          break;
+        }
+        u.i("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "do fill event info(fav simple images), paths %s sourceType %d", new Object[] { localObject4, Integer.valueOf(13) });
+        localObject2 = new no();
+        localObject3 = new np();
+        localObject4 = ((List)localObject4).iterator();
+        while (((Iterator)localObject4).hasNext())
+        {
+          String str = (String)((Iterator)localObject4).next();
+          if (!com.tencent.mm.sdk.platformtools.ay.kz(str))
+          {
+            nf localnf = new nf();
+            localnf.oX(2);
+            localnf.Bz(str);
+            localnf.gD(true);
+            jmZ.add(localnf);
+          }
+        }
+        ((np)localObject3).Ca(com.tencent.mm.model.h.sc());
+        ((np)localObject3).Cb(com.tencent.mm.model.h.sc());
+        ((np)localObject3).pe(13);
+        ((np)localObject3).dn(com.tencent.mm.sdk.platformtools.ay.FS());
+        ((no)localObject2).a((np)localObject3);
+        aud.title = "";
+        aud.auf = ((no)localObject2);
+        aud.type = 2;
+        i = 1;
+        break;
+        label424:
+        g.e(koJ.kpc, aud.type, 0);
+      }
+    }
+    Object localObject2 = new Intent(this, AddFavoriteUI.class);
+    ((Intent)localObject2).setAction("android.intent.action.SEND_MULTIPLE");
+    if (com.tencent.mm.sdk.platformtools.ay.bq(ltM)) {
+      localObject1 = new ArrayList(0);
+    }
+    for (;;)
+    {
+      ((Intent)localObject2).putParcelableArrayListExtra("android.intent.extra.STREAM", (ArrayList)localObject1);
+      ((Intent)localObject2).addFlags(268435456).addFlags(32768);
+      ((Intent)localObject2).setType(getIntent().getType());
+      MMWizardActivity.b(this, new Intent(this, SimpleLoginUI.class).addFlags(32768).addFlags(268435456), (Intent)localObject2);
+      break;
+      localObject1 = new ArrayList(ltM.size());
+      localObject3 = ltM.iterator();
+      while (((Iterator)localObject3).hasNext()) {
+        ((ArrayList)localObject1).add(Uri.fromFile(new File((String)((Iterator)localObject3).next())));
+      }
+    }
   }
   
-  private void ov(int paramInt)
+  private void bip()
+  {
+    Intent localIntent = new Intent(this, AddFavoriteUI.class);
+    localIntent.setAction("android.intent.action.SEND");
+    if (com.tencent.mm.sdk.platformtools.ay.kz(filePath)) {}
+    for (Object localObject = null;; localObject = Uri.fromFile(new File(filePath)))
+    {
+      localIntent.putExtra("android.intent.extra.STREAM", (Parcelable)localObject);
+      localIntent.addFlags(268435456).addFlags(32768);
+      localIntent.setType(getIntent().getType());
+      MMWizardActivity.b(this, new Intent(this, SimpleLoginUI.class).addFlags(32768).addFlags(268435456), localIntent);
+      return;
+    }
+  }
+  
+  private void biq()
+  {
+    rR(0);
+    Toast.makeText(this, 2131428911, 1).show();
+  }
+  
+  private void rR(int paramInt)
   {
     switch (paramInt)
     {
     default: 
-      Toast.makeText(this, a.n.shareimg_get_res_fail, 1).show();
+      Toast.makeText(this, 2131428911, 1).show();
       return;
     }
-    Toast.makeText(this, a.n.shareimg_err_not_support_type, 1).show();
+    Toast.makeText(this, 2131428912, 1).show();
   }
   
-  protected final void DV()
+  protected final void Gb()
   {
     intent = getIntent();
     if (intent == null)
     {
-      t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, intent is null");
-      aRr();
+      u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, intent is null");
+      biq();
       finish();
       return;
     }
     Object localObject1 = intent.getAction();
-    Object localObject2 = o.A(intent);
-    if (bn.iW((String)localObject1))
+    Object localObject2 = p.J(intent);
+    if (com.tencent.mm.sdk.platformtools.ay.kz((String)localObject1))
     {
-      t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, action is null");
-      aRr();
+      u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, action is null");
+      biq();
       finish();
       return;
     }
@@ -822,70 +926,70 @@ public class AddFavoriteUI
     else
     {
       if (!((String)localObject1).equals("android.intent.action.SEND")) {
-        break label763;
+        break label761;
       }
-      t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "send signal: " + (String)localObject1);
+      u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "send signal: " + (String)localObject1);
       if (uri != null) {
-        break label704;
+        break label702;
       }
       localObject1 = getIntent();
       if (localObject1 != null) {
         break label226;
       }
-      t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "intent is null");
+      u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "intent is null");
     }
     for (boolean bool = false;; bool = false)
     {
-      t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "dealWithText: %b", new Object[] { Boolean.valueOf(bool) });
+      u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "dealWithText: %b", new Object[] { Boolean.valueOf(bool) });
       if (!bool) {
-        aRr();
+        biq();
       }
       finish();
       return;
       if (localObject3 == null) {
         break;
       }
-      t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, uri check fail, %s", new Object[] { localObject3 });
-      aRr();
+      u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, uri check fail, %s", new Object[] { localObject3 });
+      biq();
       finish();
       return;
       label226:
-      localObject1 = o.c((Intent)localObject1, "android.intent.extra.TEXT");
+      localObject1 = p.g((Intent)localObject1, "android.intent.extra.TEXT");
       if ((localObject1 != null) && (((String)localObject1).length() != 0)) {
         break label258;
       }
-      t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "text is null");
+      u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "text is null");
     }
     label258:
     Object localObject3 = new WXMediaMessage(new WXTextObject((String)localObject1));
     description = ((String)localObject1);
-    localObject2 = new d.a();
-    gMB = null;
-    hXX = ((WXMediaMessage)localObject3);
-    int i = hXX.getType();
+    localObject2 = new c.a();
+    iBD = null;
+    jUS = ((WXMediaMessage)localObject3);
+    int i = jUS.getType();
     localObject3 = new Bundle();
-    ((d.a)localObject2).m((Bundle)localObject3);
-    ((Bundle)localObject3).putInt("_mmessage_sdkVersion", 570556416);
+    ((c.a)localObject2).l((Bundle)localObject3);
+    ((Bundle)localObject3).putInt("_mmessage_sdkVersion", 587333634);
     ((Bundle)localObject3).putString("_mmessage_appPackage", "com.tencent.mm.openapi");
     ((Bundle)localObject3).putString("SendAppMessageWrapper_AppId", "wx4310bbd51be7d979");
-    if ((ax.tq()) && (!ax.tu()))
+    if ((ah.tI()) && (!ah.tM()))
     {
-      localObject2 = new ag();
-      localObject3 = com.tencent.mm.a.c.aB(filePath) + "." + com.tencent.mm.a.c.aA(filePath);
+      localObject2 = new com.tencent.mm.d.a.ay();
+      localObject3 = com.tencent.mm.a.e.az(filePath) + "." + com.tencent.mm.a.e.ay(filePath);
       if (i == 1) {
-        if (bn.iW((String)localObject1))
+        if (com.tencent.mm.sdk.platformtools.ay.kz((String)localObject1))
         {
-          t.w("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "fill favorite event fail, event is null or image path is empty");
-          auX.type = a.n.favorite_fail_argument_error;
+          u.w("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "fill favorite event fail, event is null or image path is empty");
+          aud.type = 2131431062;
           bool = false;
           label447:
           localObject1 = Boolean.valueOf(bool);
           label452:
-          if ((!((Boolean)localObject1).booleanValue()) || (auY.ret != 0)) {
+          if ((!((Boolean)localObject1).booleanValue()) || (aue.ret != 0)) {
             break label643;
           }
-          a.hXQ.g((d)localObject2);
-          com.tencent.mm.ui.base.h.aN(ipQ.iqj, getString(a.n.favorite_ok));
+          com.tencent.mm.sdk.c.a.jUF.j((b)localObject2);
+          g.ba(koJ.kpc, getString(2131431055));
         }
       }
     }
@@ -893,90 +997,66 @@ public class AddFavoriteUI
     {
       bool = true;
       break;
-      t.d("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "do fill event info(fav simple text), %s, sourceType %d", new Object[] { localObject1, Integer.valueOf(13) });
-      localObject3 = new lf();
-      lg locallg = new lg();
-      locallg.wC(v.rS());
-      locallg.wD(v.rS());
-      locallg.mi(13);
-      locallg.cv(bn.DM());
-      ((lf)localObject3).a(locallg);
-      auX.desc = ((String)localObject1);
-      auX.auZ = ((lf)localObject3);
-      auX.type = 1;
+      u.d("!44@/B4Tb64lLpIMW2SMTebo7pCgcd6Nit3va959GFVdKPo=", "do fill event info(fav simple text), %s, sourceType %d", new Object[] { localObject1, Integer.valueOf(13) });
+      localObject3 = new no();
+      np localnp = new np();
+      localnp.Ca(com.tencent.mm.model.h.sc());
+      localnp.Cb(com.tencent.mm.model.h.sc());
+      localnp.pe(13);
+      localnp.dn(com.tencent.mm.sdk.platformtools.ay.FS());
+      ((no)localObject3).a(localnp);
+      aud.asL = ((String)localObject1);
+      aud.auf = ((no)localObject3);
+      aud.type = 1;
       bool = true;
       break label447;
-      localObject1 = Boolean.valueOf(com.tencent.mm.pluginsdk.model.c.a((ag)localObject2, 13, filePath, (String)localObject3, ""));
+      localObject1 = Boolean.valueOf(d.a((com.tencent.mm.d.a.ay)localObject2, 13, filePath, (String)localObject3, ""));
       break label452;
       label643:
-      com.tencent.mm.ui.base.h.g(ipQ.iqj, auX.type, a.n.favorite_fail);
+      g.e(koJ.kpc, aud.type, 0);
       continue;
-      t.w("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "not logged in, jump to simple login");
+      u.w("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "not logged in, jump to simple login");
       MMWizardActivity.b(this, new Intent(this, SimpleLoginUI.class), getIntent().addFlags(67108864));
     }
-    label704:
-    getString(a.n.app_tip);
-    bXB = com.tencent.mm.ui.base.h.a(this, getString(a.n.app_waiting), true, new j(this));
-    e.a(new a(uri, new h(this)), "AddFavoriteUI_getFilePath");
+    label702:
+    getString(2131430877);
+    coM = g.a(this, getString(2131430941), true, new DialogInterface.OnCancelListener()
+    {
+      public final void onCancel(DialogInterface paramAnonymousDialogInterface) {}
+    });
+    com.tencent.mm.sdk.i.e.a(new a(uri, new b()
+    {
+      public final void bir()
+      {
+        AddFavoriteUI.a(AddFavoriteUI.this).sendEmptyMessage(0);
+      }
+    }), "AddFavoriteUI_getFilePath");
     return;
-    label763:
+    label761:
     if ((((String)localObject1).equals("android.intent.action.SEND_MULTIPLE")) && (localObject2 != null) && (((Bundle)localObject2).containsKey("android.intent.extra.STREAM")))
     {
       localObject3 = getIntent().resolveType(this);
-      t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "send multi: %s, mimeType %s", new Object[] { localObject1, localObject3 });
-      if (!bn.U((String)localObject3, "").contains("image"))
+      u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "send multi: %s, mimeType %s", new Object[] { localObject1, localObject3 });
+      if (!com.tencent.mm.sdk.platformtools.ay.ad((String)localObject3, "").contains("image"))
       {
-        t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, mimeType not contains image");
-        ov(1);
+        u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, mimeType not contains image");
+        rR(1);
         finish();
         return;
       }
-      jov = K((Bundle)localObject2);
-      if ((jov == null) || (jov.size() == 0))
+      ltM = N((Bundle)localObject2);
+      if ((ltM == null) || (ltM.size() == 0))
       {
-        t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, filePathList is null");
-        ov(1);
+        u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, filePathList is null");
+        rR(1);
         finish();
         return;
       }
-      t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "filepath:[%s]", new Object[] { filePath });
-      localObject1 = getIntent();
-      i = BD(((Intent)localObject1).resolveType(this));
-      if (i == -1) {
-        t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch, msgType is invalid");
-      }
-      for (;;)
-      {
-        finish();
-        return;
-        if ((i == 8) && (!bn.iW(filePath)))
-        {
-          BC(filePath);
-        }
-        else if ((!o.a(getIntent(), "Intro_Switch", false)) && (ax.tq()) && (!ax.tu()))
-        {
-          localObject1 = new ag();
-          if ((com.tencent.mm.pluginsdk.model.c.a((ag)localObject1, jov)) && (auY.ret == 0))
-          {
-            a.hXQ.g((d)localObject1);
-            com.tencent.mm.ui.base.h.aN(ipQ.iqj, getString(a.n.favorite_ok));
-          }
-          else
-          {
-            com.tencent.mm.ui.base.h.g(ipQ.iqj, auX.type, a.n.favorite_fail);
-          }
-        }
-        else
-        {
-          ((Intent)localObject1).putExtras(getIntent());
-          ((Intent)localObject1).addFlags(67108864);
-          ((Intent)localObject1).setType(getIntent().getType());
-          MMWizardActivity.b(this, new Intent(this, SimpleLoginUI.class), (Intent)localObject1);
-        }
-      }
+      bio();
+      return;
     }
-    t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, uri is null");
-    aRr();
+    u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "launch : fail, uri is null");
+    biq();
     finish();
   }
   
@@ -987,72 +1067,72 @@ public class AddFavoriteUI
   
   public void onCreate(Bundle paramBundle)
   {
-    t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "on create");
+    u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "on create");
     super.onCreate(paramBundle);
-    At("");
-    int i = o.a(getIntent(), "wizard_activity_result_code", 0);
+    Gj("");
+    int i = p.a(getIntent(), "wizard_activity_result_code", 0);
     switch (i)
     {
     default: 
-      t.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "onCreate, should not reach here, resultCode = " + i);
+      u.e("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "onCreate, should not reach here, resultCode = " + i);
       finish();
       return;
     case 1: 
       finish();
       return;
     }
-    NotifyReceiver.nw();
-    DV();
+    NotifyReceiver.mS();
+    Gb();
   }
   
   protected void onDestroy()
   {
-    t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "on Destroy");
+    u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "on Destroy");
     super.onDestroy();
   }
   
   protected void onNewIntent(Intent paramIntent)
   {
-    t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "on NewIntent");
+    u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "on NewIntent");
     super.onNewIntent(paramIntent);
   }
   
   protected void onRestoreInstanceState(Bundle paramBundle)
   {
-    t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "on RestoreInstanceState");
+    u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "on RestoreInstanceState");
     super.onRestoreInstanceState(paramBundle);
   }
   
   protected void onSaveInstanceState(Bundle paramBundle)
   {
-    t.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "on SaveInstanceState");
+    u.i("!32@/B4Tb64lLpKV1RAvJ5uY1YjcV7BF4xed", "on SaveInstanceState");
     super.onSaveInstanceState(paramBundle);
   }
   
   private final class a
     implements Runnable
   {
-    private AddFavoriteUI.b jox;
+    private AddFavoriteUI.b ltO;
     private Uri mUri;
     
     public a(Uri paramUri, AddFavoriteUI.b paramb)
     {
       mUri = paramUri;
-      jox = paramb;
+      ltO = paramb;
     }
     
     public final void run()
     {
       filePath = AddFavoriteUI.a(AddFavoriteUI.this, mUri);
-      if (jox != null) {
-        jox.aRs();
+      if (ltO != null) {
+        ltO.bir();
       }
     }
   }
   
   public static abstract interface b
   {
-    public abstract void aRs();
+    public abstract void bir();
   }
 }
 

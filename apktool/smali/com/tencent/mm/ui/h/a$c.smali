@@ -15,13 +15,13 @@
 
 
 # static fields
-.field public static final enum jzQ:Lcom/tencent/mm/ui/h/a$c;
+.field public static final enum lBU:Lcom/tencent/mm/ui/h/a$c;
 
-.field public static final enum jzR:Lcom/tencent/mm/ui/h/a$c;
+.field public static final enum lBV:Lcom/tencent/mm/ui/h/a$c;
 
-.field public static final enum jzS:Lcom/tencent/mm/ui/h/a$c;
+.field public static final enum lBW:Lcom/tencent/mm/ui/h/a$c;
 
-.field private static final synthetic jzT:[Lcom/tencent/mm/ui/h/a$c;
+.field private static final synthetic lBX:[Lcom/tencent/mm/ui/h/a$c;
 
 
 # direct methods
@@ -42,7 +42,7 @@
 
     invoke-direct {v0, v1, v2}, Lcom/tencent/mm/ui/h/a$c;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/h/a$c;->jzQ:Lcom/tencent/mm/ui/h/a$c;
+    sput-object v0, Lcom/tencent/mm/ui/h/a$c;->lBU:Lcom/tencent/mm/ui/h/a$c;
 
     new-instance v0, Lcom/tencent/mm/ui/h/a$c;
 
@@ -50,7 +50,7 @@
 
     invoke-direct {v0, v1, v3}, Lcom/tencent/mm/ui/h/a$c;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/h/a$c;->jzR:Lcom/tencent/mm/ui/h/a$c;
+    sput-object v0, Lcom/tencent/mm/ui/h/a$c;->lBV:Lcom/tencent/mm/ui/h/a$c;
 
     new-instance v0, Lcom/tencent/mm/ui/h/a$c;
 
@@ -58,26 +58,26 @@
 
     invoke-direct {v0, v1, v4}, Lcom/tencent/mm/ui/h/a$c;-><init>(Ljava/lang/String;I)V
 
-    sput-object v0, Lcom/tencent/mm/ui/h/a$c;->jzS:Lcom/tencent/mm/ui/h/a$c;
+    sput-object v0, Lcom/tencent/mm/ui/h/a$c;->lBW:Lcom/tencent/mm/ui/h/a$c;
 
     .line 43
     const/4 v0, 0x3
 
     new-array v0, v0, [Lcom/tencent/mm/ui/h/a$c;
 
-    sget-object v1, Lcom/tencent/mm/ui/h/a$c;->jzQ:Lcom/tencent/mm/ui/h/a$c;
+    sget-object v1, Lcom/tencent/mm/ui/h/a$c;->lBU:Lcom/tencent/mm/ui/h/a$c;
 
     aput-object v1, v0, v2
 
-    sget-object v1, Lcom/tencent/mm/ui/h/a$c;->jzR:Lcom/tencent/mm/ui/h/a$c;
+    sget-object v1, Lcom/tencent/mm/ui/h/a$c;->lBV:Lcom/tencent/mm/ui/h/a$c;
 
     aput-object v1, v0, v3
 
-    sget-object v1, Lcom/tencent/mm/ui/h/a$c;->jzS:Lcom/tencent/mm/ui/h/a$c;
+    sget-object v1, Lcom/tencent/mm/ui/h/a$c;->lBW:Lcom/tencent/mm/ui/h/a$c;
 
     aput-object v1, v0, v4
 
-    sput-object v0, Lcom/tencent/mm/ui/h/a$c;->jzT:[Lcom/tencent/mm/ui/h/a$c;
+    sput-object v0, Lcom/tencent/mm/ui/h/a$c;->lBX:[Lcom/tencent/mm/ui/h/a$c;
 
     return-void
 .end method
@@ -113,7 +113,7 @@
 
     .prologue
     .line 43
-    sget-object v0, Lcom/tencent/mm/ui/h/a$c;->jzT:[Lcom/tencent/mm/ui/h/a$c;
+    sget-object v0, Lcom/tencent/mm/ui/h/a$c;->lBX:[Lcom/tencent/mm/ui/h/a$c;
 
     invoke-virtual {v0}, [Lcom/tencent/mm/ui/h/a$c;->clone()Ljava/lang/Object;
 

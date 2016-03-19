@@ -1,34 +1,27 @@
 package com.tencent.mm.ui;
 
-import android.app.Dialog;
-import android.widget.Toast;
-import com.tencent.mm.a.n;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.ag.a;
-import com.tencent.mm.q.j;
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
+import com.tencent.mm.sdk.platformtools.y;
 
-final class t
-  implements ag.a
+public final class t
 {
-  t(ExposeWithProofUI paramExposeWithProofUI) {}
+  private static float jvx = 0.0F;
   
-  public final int a(int paramInt1, int paramInt2, String paramString, a parama, j paramj)
+  public static void c(Context paramContext, float paramFloat)
   {
-    if (ExposeWithProofUI.e(imy) != null)
-    {
-      ExposeWithProofUI.e(imy).dismiss();
-      ExposeWithProofUI.f(imy);
-    }
-    ExposeWithProofUI.a(imy, Boolean.valueOf(false));
-    if ((paramInt1 == 0) && (paramInt2 == 0))
-    {
-      ExposeWithProofUI.g(imy);
-      ExposeWithProofUI.h(imy);
-      return 0;
-    }
-    Toast.makeText(imy.ipQ.iqj, imy.getString(a.n.expose_failure), 0).show();
-    com.tencent.mm.sdk.platformtools.t.e("!44@/B4Tb64lLpJ/sz39qr3dExKTa11KfaVGx9wyzYRkZYs=", "error update expose: errType:%d, errCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    return 0;
+    paramContext = paramContext.getSharedPreferences(y.aUK(), 0).edit();
+    paramContext.putFloat("text_size_scale_key", paramFloat);
+    paramContext.commit();
+    jvx = paramFloat;
+  }
+  
+  public static float cY(Context paramContext)
+  {
+    float f = paramContext.getSharedPreferences(y.aUK(), 0).getFloat("text_size_scale_key", 1.0F);
+    jvx = f;
+    return f;
   }
 }
 

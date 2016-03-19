@@ -2,7 +2,7 @@ package com.tencent.mm.ui.base;
 
 public abstract interface MMProgressBar$a
 {
-  public abstract void ke(int paramInt);
+  public abstract void mv(int paramInt);
 }
 
 /* Location:

@@ -86,7 +86,7 @@
     move-result-object v0
 
     .line 50
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/cache/b$a;->cG(Ljava/lang/String;)Lcom/tencent/mm/cache/MCacheItem;
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/cache/b$a;->cI(Ljava/lang/String;)Lcom/tencent/mm/cache/MCacheItem;
 
     .line 51
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V
@@ -124,7 +124,7 @@
 
     .line 71
     :cond_0
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/cache/b$a;->cH(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/cache/b$a;->cJ(Ljava/lang/String;)V
 
     .line 74
     invoke-virtual {p3}, Landroid/os/Parcel;->writeNoException()V

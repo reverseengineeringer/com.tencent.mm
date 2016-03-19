@@ -4,40 +4,40 @@
 
 # interfaces
 .implements Landroid/widget/AbsListView$OnScrollListener;
-.implements Lcom/tencent/mm/plugin/sight/encode/ui/ao$a;
-.implements Lcom/tencent/mm/ui/contact/cq;
+.implements Lcom/tencent/mm/plugin/sight/encode/ui/d$a;
+.implements Lcom/tencent/mm/ui/contact/l;
 
 
 # instance fields
-.field private cyS:Landroid/widget/ListView;
+.field private cUz:Landroid/widget/ListView;
 
-.field private flC:Landroid/view/animation/Animation;
+.field private gCo:Z
 
-.field private flt:Z
+.field private gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-.field private flw:Lcom/tencent/mm/ui/MMFragmentActivity;
+.field private gCy:Landroid/view/animation/Animation;
 
-.field private fmf:I
+.field private gDb:I
 
-.field fmg:Lcom/tencent/mm/plugin/sight/encode/ui/ao;
+.field gDc:Lcom/tencent/mm/plugin/sight/encode/ui/d;
 
-.field private fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+.field private gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-.field private fmi:Landroid/view/View;
+.field private gDe:Landroid/view/View;
 
-.field private fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+.field private gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
-.field private fmk:Landroid/widget/LinearLayout;
+.field private gDg:Landroid/widget/LinearLayout;
 
-.field private fml:Landroid/view/View;
+.field private gDh:Landroid/view/View;
 
-.field private fmm:I
+.field private gDi:I
 
-.field private fmn:I
+.field private gDj:I
 
-.field private fmo:Ljava/util/HashSet;
+.field private gDk:Ljava/util/HashSet;
 
-.field private fmp:Ljava/util/HashSet;
+.field private gDl:Ljava/util/HashSet;
 
 
 # direct methods
@@ -51,15 +51,15 @@
     invoke-direct {p0, p1, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     .line 161
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmm:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDi:I
 
     .line 162
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmn:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDj:I
 
     .line 281
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flt:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCo:Z
 
     .line 46
     return-void
@@ -75,15 +75,15 @@
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 161
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmm:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDi:I
 
     .line 162
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmn:I
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDj:I
 
     .line 281
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flt:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCo:Z
 
     .line 50
     return-void
@@ -94,7 +94,7 @@
 
     .prologue
     .line 38
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmm:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDi:I
 
     return v0
 .end method
@@ -104,7 +104,7 @@
 
     .prologue
     .line 38
-    iput p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmm:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDi:I
 
     return p1
 .end method
@@ -114,7 +114,7 @@
 
     .prologue
     .line 38
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fml:Landroid/view/View;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDh:Landroid/view/View;
 
     return-object p1
 .end method
@@ -124,17 +124,17 @@
 
     .prologue
     .line 38
-    iput p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmn:I
+    iput p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDj:I
 
     return p1
 .end method
 
-.method static synthetic b(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;)Lcom/tencent/mm/plugin/sight/encode/ui/an;
+.method static synthetic b(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;)Lcom/tencent/mm/plugin/sight/encode/ui/c;
     .locals 1
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
     return-object v0
 .end method
@@ -144,7 +144,7 @@
 
     .prologue
     .line 218
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flt:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCo:Z
 
     if-eqz v0, :cond_1
 
@@ -161,71 +161,71 @@
     if-eqz p2, :cond_2
 
     .line 227
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
     .line 228
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmo:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDk:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
     .line 229
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/an;->flQ:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCM:Z
 
     .line 230
     const/4 v0, 0x0
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/an;->flR:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCN:Z
 
     .line 233
     :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
     if-eqz v0, :cond_3
 
     .line 234
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/an;->clearCache()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->clearCache()V
 
-    iput-object p1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/an;->flO:Ljava/util/List;
+    iput-object p1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCK:Ljava/util/List;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/an;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->notifyDataSetChanged()V
 
     .line 237
     :cond_3
     if-eqz p3, :cond_4
 
     .line 238
-    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->akv()V
+    invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->awX()V
 
     goto :goto_0
 
     .line 240
     :cond_4
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fml:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDh:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 241
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fml:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDh:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->removeFooterView(Landroid/view/View;)Z
 
     goto :goto_0
 .end method
 
-.method static synthetic c(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;)Lcom/tencent/mm/plugin/sight/encode/ui/k;
+.method static synthetic c(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;)Lcom/tencent/mm/plugin/sight/encode/ui/a;
     .locals 1
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
     return-object v0
 .end method
@@ -235,7 +235,7 @@
 
     .prologue
     .line 38
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmn:I
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDj:I
 
     return v0
 .end method
@@ -245,7 +245,7 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fml:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDh:Landroid/view/View;
 
     return-object v0
 .end method
@@ -255,12 +255,12 @@
 
     .prologue
     .line 38
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
     return-object v0
 .end method
 
-.method public static iU(I)Z
+.method public static lf(I)Z
     .locals 1
 
     .prologue
@@ -280,7 +280,7 @@
     goto :goto_0
 .end method
 
-.method private n(ZZ)V
+.method private o(ZZ)V
     .locals 4
 
     .prologue
@@ -300,9 +300,9 @@
     invoke-interface {v1, v0}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     .line 250
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/k;->akf()Z
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/a;->awJ()Z
 
     move-result v0
 
@@ -323,7 +323,7 @@
     if-eqz p1, :cond_2
 
     .line 256
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
     invoke-interface {v1, v2}, Ljava/util/List;->addAll(Ljava/util/Collection;)Z
 
@@ -374,7 +374,7 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/ui/MMFragmentActivity;ILandroid/widget/AdapterView$OnItemClickListener;Lcom/tencent/mm/plugin/sight/encode/ui/k;)V
+.method public final a(Lcom/tencent/mm/ui/MMFragmentActivity;ILandroid/widget/AdapterView$OnItemClickListener;Lcom/tencent/mm/plugin/sight/encode/ui/a;)V
     .locals 6
 
     .prologue
@@ -383,20 +383,20 @@
     const/4 v4, -0x1
 
     .line 69
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flw:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     .line 70
-    iput p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmf:I
+    iput p2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDb:I
 
     .line 71
-    invoke-virtual {p0, p4}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->setMainSightContentView(Lcom/tencent/mm/plugin/sight/encode/ui/k;)V
+    invoke-virtual {p0, p4}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->setMainSightContentView(Lcom/tencent/mm/plugin/sight/encode/ui/a;)V
 
     .line 73
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$k;->main_sight_select_contact_view:I
+    const v1, 0x7f0a04c0
 
     const/4 v2, 0x0
 
@@ -410,7 +410,7 @@
     invoke-virtual {p0, v0, v4, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->addView(Landroid/view/View;II)V
 
     .line 76
-    sget v0, Lcom/tencent/mm/a$i;->select_contact_lv:I
+    const v0, 0x7f070340
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->findViewById(I)Landroid/view/View;
 
@@ -418,13 +418,13 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/an;-><init>(Lcom/tencent/mm/ui/contact/cq;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/c;-><init>(Lcom/tencent/mm/ui/contact/l;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
     new-instance v0, Landroid/widget/LinearLayout;
 
@@ -434,9 +434,9 @@
 
     invoke-direct {v0, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     new-instance v1, Landroid/view/View;
 
@@ -446,19 +446,19 @@
 
     invoke-direct {v1, v2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
-    invoke-interface {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/k;->getViewHeight()I
+    invoke-interface {v2}, Lcom/tencent/mm/plugin/sight/encode/ui/a;->getViewHeight()I
 
     move-result v2
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmf:I
+    iget v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDb:I
 
     sub-int/2addr v2, v3
 
     invoke-virtual {v0, v1, v4, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;II)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v5}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -466,19 +466,19 @@
 
     invoke-virtual {v0, v5}, Landroid/view/View;->setBackgroundColor(I)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->addHeaderView(Landroid/view/View;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
     invoke-virtual {v0, p3}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
@@ -486,29 +486,29 @@
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmo:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDk:Ljava/util/HashSet;
 
     new-instance v0, Ljava/util/HashSet;
 
     invoke-direct {v0}, Ljava/util/HashSet;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
     invoke-virtual {v0, p0}, Landroid/widget/ListView;->setOnScrollListener(Landroid/widget/AbsListView$OnScrollListener;)V
 
     .line 77
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/ao;
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/ui/d;
 
-    invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ao;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/d;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmg:Lcom/tencent/mm/plugin/sight/encode/ui/ao;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDc:Lcom/tencent/mm/plugin/sight/encode/ui/d;
 
     .line 78
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmg:Lcom/tencent/mm/plugin/sight/encode/ui/ao;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDc:Lcom/tencent/mm/plugin/sight/encode/ui/d;
 
-    iput-object p0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/ao;->fmb:Lcom/tencent/mm/plugin/sight/encode/ui/ao$a;
+    iput-object p0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/d;->gCX:Lcom/tencent/mm/plugin/sight/encode/ui/d$a;
 
     .line 80
     return-void
@@ -519,20 +519,20 @@
 
     .prologue
     .line 322
-    iget-boolean v0, p1, Lcom/tencent/mm/ui/contact/a/a;->jgE:Z
+    iget-boolean v0, p1, Lcom/tencent/mm/ui/contact/a/a;->lkT:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
+    iget-object v0, p1, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
 
     if-eqz v0, :cond_0
 
     .line 323
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
-    iget-object v1, p1, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
+    iget-object v1, p1, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/b/k;->field_username:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
@@ -548,14 +548,27 @@
     goto :goto_0
 .end method
 
-.method public final akt()V
+.method public final aP(Ljava/util/List;)V
+    .locals 1
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 406
+    invoke-direct {p0, p1, v0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->b(Ljava/util/List;ZZ)V
+
+    .line 410
+    return-void
+.end method
+
+.method public final awV()V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
     .line 134
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     if-nez v0, :cond_0
 
@@ -565,7 +578,7 @@
 
     .line 138
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -576,14 +589,14 @@
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
     .line 139
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmi:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDe:Landroid/view/View;
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 141
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/an;->flO:Ljava/util/List;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCK:Ljava/util/List;
 
     .line 142
     const-string/jumbo v1, "@search.tencent"
@@ -606,41 +619,41 @@
     invoke-direct {p0, v0, v2, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->b(Ljava/util/List;ZZ)V
 
     .line 147
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/k;->akc()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/a;->awG()V
 
     .line 149
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/k;->qx()Z
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/a;->qr()Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
     .line 150
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/k;->akd()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/a;->awH()V
 
     .line 153
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/k;->ake()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/a;->awI()V
 
     goto :goto_0
 .end method
 
-.method public final aku()V
+.method public final awW()V
     .locals 3
 
     .prologue
     const/4 v2, 0x0
 
     .line 122
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     if-nez v0, :cond_0
 
@@ -650,7 +663,7 @@
 
     .line 126
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -659,7 +672,7 @@
     invoke-virtual {v0, v2}, Landroid/view/View;->setVisibility(I)V
 
     .line 127
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmi:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDe:Landroid/view/View;
 
     const/16 v1, 0x8
 
@@ -668,26 +681,26 @@
     .line 128
     const/4 v0, 0x1
 
-    invoke-direct {p0, v0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->n(ZZ)V
+    invoke-direct {p0, v0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->o(ZZ)V
 
     .line 129
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/k;->akb()V
+    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/a;->awF()V
 
     goto :goto_0
 .end method
 
-.method public final akv()V
+.method public final awX()V
     .locals 2
 
     .prologue
     .line 165
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
-    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/ap;
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/ap;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView$1;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->post(Ljava/lang/Runnable;)Z
 
@@ -695,12 +708,12 @@
     return-void
 .end method
 
-.method public final akw()Z
+.method public final awY()Z
     .locals 1
 
     .prologue
     .line 362
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
     if-nez v0, :cond_0
 
@@ -710,7 +723,7 @@
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
 
@@ -719,38 +732,25 @@
     goto :goto_0
 .end method
 
-.method public final av(Ljava/util/List;)V
-    .locals 1
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 406
-    invoke-direct {p0, p1, v0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->b(Ljava/util/List;ZZ)V
-
-    .line 410
-    return-void
-.end method
-
 .method public final b(Lcom/tencent/mm/ui/contact/a/a;)Z
     .locals 2
 
     .prologue
     .line 313
-    iget-boolean v0, p1, Lcom/tencent/mm/ui/contact/a/a;->jgE:Z
+    iget-boolean v0, p1, Lcom/tencent/mm/ui/contact/a/a;->lkT:Z
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p1, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
+    iget-object v0, p1, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
 
     if-eqz v0, :cond_0
 
     .line 314
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmo:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDk:Ljava/util/HashSet;
 
-    iget-object v1, p1, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
+    iget-object v1, p1, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/b/k;->field_username:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
@@ -766,16 +766,16 @@
     goto :goto_0
 .end method
 
-.method final cY(I)Ljava/lang/String;
+.method final dd(I)Ljava/lang/String;
     .locals 2
 
     .prologue
     const/4 v0, 0x0
 
     .line 373
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-    invoke-virtual {v1, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/an;->op(I)Lcom/tencent/mm/ui/contact/a/a;
+    invoke-virtual {v1, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->rM(I)Lcom/tencent/mm/ui/contact/a/a;
 
     move-result-object v1
 
@@ -789,13 +789,13 @@
 
     .line 377
     :cond_1
-    iget-object v1, v1, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
+    iget-object v1, v1, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
 
     .line 378
     if-eqz v1, :cond_0
 
     .line 381
-    iget-object v0, v1, Lcom/tencent/mm/d/b/k;->field_username:Ljava/lang/String;
+    iget-object v0, v1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
 
     goto :goto_0
 .end method
@@ -807,35 +807,35 @@
     .line 284
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flt:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCo:Z
 
     .line 285
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->aj(Landroid/view/View;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->am(Landroid/view/View;)Z
 
     .line 286
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmg:Lcom/tencent/mm/plugin/sight/encode/ui/ao;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDc:Lcom/tencent/mm/plugin/sight/encode/ui/d;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/ao;->aks()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/d;->awU()V
 
     .line 287
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
     .line 288
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmo:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDk:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->clear()V
 
     .line 289
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 290
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->clearAnimation()V
 
@@ -853,7 +853,7 @@
 
     .prologue
     .line 305
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flw:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     return-object v0
 .end method
@@ -863,7 +863,7 @@
 
     .prologue
     .line 331
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
     return-object v0
 .end method
@@ -878,20 +878,20 @@
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     .line 271
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rl()Lcom/tencent/mm/storage/t;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/storage/t;->aGG()Ljava/util/List;
+    invoke-virtual {v1}, Lcom/tencent/mm/storage/s;->aWK()Ljava/util/List;
 
     move-result-object v1
 
     .line 272
-    invoke-static {}, Lcom/tencent/mm/model/v;->rS()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
 
     move-result-object v2
 
@@ -909,7 +909,7 @@
 
     .prologue
     .line 117
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
     return-object v0
 .end method
@@ -924,7 +924,7 @@
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     .line 357
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->addAll(Ljava/util/Collection;)Z
 
@@ -932,16 +932,16 @@
     return-object v0
 .end method
 
-.method public final iR(I)V
+.method public final lc(I)V
     .locals 3
 
     .prologue
     .line 335
     if-ltz p1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/an;->getCount()I
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->getCount()I
 
     move-result v0
 
@@ -954,9 +954,9 @@
 
     .line 339
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/an;->op(I)Lcom/tencent/mm/ui/contact/a/a;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->rM(I)Lcom/tencent/mm/ui/contact/a/a;
 
     move-result-object v0
 
@@ -964,11 +964,11 @@
     if-eqz v0, :cond_0
 
     .line 345
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
+    iget-object v2, v0, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
 
-    iget-object v2, v2, Lcom/tencent/mm/d/b/k;->field_username:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
@@ -977,26 +977,26 @@
     if-eqz v1, :cond_2
 
     .line 346
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
+    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/k;->field_username:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/util/HashSet;->remove(Ljava/lang/Object;)Z
 
     .line 351
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
 
     move-result v0
 
-    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/an;->flQ:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCM:Z
 
     .line 352
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
     invoke-virtual {v0}, Ljava/util/HashSet;->isEmpty()Z
 
@@ -1007,17 +1007,17 @@
     const/4 v0, 0x1
 
     :goto_2
-    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/an;->flR:Z
+    sput-boolean v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCN:Z
 
     goto :goto_0
 
     .line 348
     :cond_2
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
+    iget-object v0, v0, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
 
-    iget-object v0, v0, Lcom/tencent/mm/d/b/k;->field_username:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v1, v0}, Ljava/util/HashSet;->add(Ljava/lang/Object;)Z
 
@@ -1030,48 +1030,48 @@
     goto :goto_2
 .end method
 
-.method public final iS(I)Z
+.method public final ld(I)Z
     .locals 1
 
     .prologue
     .line 385
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cY(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->dd(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/an;->pZ(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->tZ(Ljava/lang/String;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final iT(I)Z
+.method public final le(I)Z
     .locals 1
 
     .prologue
     .line 389
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cY(I)Ljava/lang/String;
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->dd(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/an;->qa(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->ua(Ljava/lang/String;)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public final iV(I)Z
+.method public final lg(I)Z
     .locals 2
 
     .prologue
     const/4 v0, 0x0
 
     .line 417
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-    invoke-virtual {v1, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/an;->op(I)Lcom/tencent/mm/ui/contact/a/a;
+    invoke-virtual {v1, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->rM(I)Lcom/tencent/mm/ui/contact/a/a;
 
     move-result-object v1
 
@@ -1084,28 +1084,28 @@
 
     .line 420
     :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-    invoke-virtual {v1, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/an;->op(I)Lcom/tencent/mm/ui/contact/a/a;
+    invoke-virtual {v1, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->rM(I)Lcom/tencent/mm/ui/contact/a/a;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
+    iget-object v1, v1, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
 
     if-eqz v1, :cond_0
 
     .line 424
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmp:Ljava/util/HashSet;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDl:Ljava/util/HashSet;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-    invoke-virtual {v1, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/an;->op(I)Lcom/tencent/mm/ui/contact/a/a;
+    invoke-virtual {v1, p1}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->rM(I)Lcom/tencent/mm/ui/contact/a/a;
 
     move-result-object v1
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/contact/a/a;->cqE:Lcom/tencent/mm/storage/k;
+    iget-object v1, v1, Lcom/tencent/mm/ui/contact/a/a;->cId:Lcom/tencent/mm/storage/k;
 
-    iget-object v1, v1, Lcom/tencent/mm/d/b/k;->field_username:Ljava/lang/String;
+    iget-object v1, v1, Lcom/tencent/mm/d/b/p;->field_username:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Ljava/util/HashSet;->contains(Ljava/lang/Object;)Z
 
@@ -1119,7 +1119,7 @@
 
     .prologue
     .line 366
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
     if-nez v0, :cond_0
 
@@ -1129,9 +1129,9 @@
 
     .line 369
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/an;->notifyDataSetChanged()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/c;->notifyDataSetChanged()V
 
     goto :goto_0
 .end method
@@ -1141,13 +1141,13 @@
 
     .prologue
     .line 436
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     if-eqz v0, :cond_0
 
     if-eqz p1, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getHeight()I
 
@@ -1155,7 +1155,7 @@
 
     if-lez v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flw:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     if-nez v0, :cond_1
 
@@ -1166,17 +1166,17 @@
 
     .line 440
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0}, Landroid/widget/LinearLayout;->getHeight()I
 
     move-result v0
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flw:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-    iget-object v1, v1, Landroid/support/v7/app/ActionBarActivity;->jy:Landroid/support/v7/app/a;
+    iget-object v1, v1, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
 
-    invoke-virtual {v1}, Landroid/support/v7/app/a;->bf()Landroid/support/v7/app/ActionBar;
+    invoke-virtual {v1}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
 
     move-result-object v1
 
@@ -1187,7 +1187,7 @@
     sub-int/2addr v0, v1
 
     .line 441
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getTop()I
 
@@ -1206,12 +1206,12 @@
     div-float/2addr v1, v2
 
     .line 447
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
-    invoke-interface {v2, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/k;->setCameraShadowAlpha(F)V
+    invoke-interface {v2, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/a;->setCameraShadowAlpha(F)V
 
     .line 449
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getTop()I
 
@@ -1219,7 +1219,7 @@
 
     if-gez v1, :cond_2
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmk:Landroid/widget/LinearLayout;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDg:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->getTop()I
 
@@ -1233,9 +1233,9 @@
 
     .line 450
     :goto_1
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
-    invoke-interface {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/k;->cZ(Z)V
+    invoke-interface {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/a;->eJ(Z)V
 
     goto :goto_0
 
@@ -1256,7 +1256,7 @@
     if-ne p2, v0, :cond_0
 
     .line 430
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->aj(Landroid/view/View;)Z
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->am(Landroid/view/View;)Z
 
     .line 432
     :cond_0
@@ -1268,7 +1268,7 @@
 
     .prologue
     .line 87
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmi:Landroid/view/View;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDe:Landroid/view/View;
 
     .line 88
     return-void
@@ -1279,20 +1279,20 @@
 
     .prologue
     .line 401
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
-    iput-boolean p1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/an;->flP:Z
+    iput-boolean p1, v0, Lcom/tencent/mm/plugin/sight/encode/ui/c;->gCL:Z
 
     .line 402
     return-void
 .end method
 
-.method public setMainSightContentView(Lcom/tencent/mm/plugin/sight/encode/ui/k;)V
+.method public setMainSightContentView(Lcom/tencent/mm/plugin/sight/encode/ui/a;)V
     .locals 0
 
     .prologue
     .line 83
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmj:Lcom/tencent/mm/plugin/sight/encode/ui/k;
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDf:Lcom/tencent/mm/plugin/sight/encode/ui/a;
 
     .line 84
     return-void
@@ -1303,11 +1303,11 @@
 
     .prologue
     .line 91
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmg:Lcom/tencent/mm/plugin/sight/encode/ui/ao;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDc:Lcom/tencent/mm/plugin/sight/encode/ui/d;
 
-    iput-object p1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/ao;->flX:Landroid/view/View;
+    iput-object p1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/d;->gCT:Landroid/view/View;
 
-    sget v0, Lcom/tencent/mm/a$i;->edittext:I
+    const v0, 0x7f0704d4
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1315,9 +1315,9 @@
 
     check-cast v0, Landroid/widget/EditText;
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/ao;->flV:Landroid/widget/EditText;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/d;->gCR:Landroid/widget/EditText;
 
-    sget v0, Lcom/tencent/mm/a$i;->search_cancel_tv:I
+    const v0, 0x7f070f02
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -1325,17 +1325,17 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/ao;->flW:Landroid/widget/TextView;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/d;->gCS:Landroid/widget/TextView;
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/ao;->flV:Landroid/widget/EditText;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/d;->gCR:Landroid/widget/EditText;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnFocusChangeListener(Landroid/view/View$OnFocusChangeListener;)V
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/ao;->flV:Landroid/widget/EditText;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/d;->gCR:Landroid/widget/EditText;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/ao;->flW:Landroid/widget/TextView;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/d;->gCS:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -1351,7 +1351,7 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/ao;->flZ:Landroid/view/inputmethod/InputMethodManager;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/d;->gCV:Landroid/view/inputmethod/InputMethodManager;
 
     .line 92
     return-void
@@ -1366,58 +1366,58 @@
     const/4 v2, 0x0
 
     .line 208
-    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flt:Z
+    iput-boolean v3, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCo:Z
 
     .line 209
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->clearAnimation()V
 
     .line 210
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
     invoke-virtual {v0}, Landroid/widget/ListView;->clearFocus()V
 
     .line 211
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmh:Lcom/tencent/mm/plugin/sight/encode/ui/an;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDd:Lcom/tencent/mm/plugin/sight/encode/ui/c;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
     .line 212
     const/4 v0, 0x1
 
-    invoke-direct {p0, v3, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->n(ZZ)V
+    invoke-direct {p0, v3, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->o(ZZ)V
 
     .line 213
     invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->setVisibility(I)V
 
     .line 214
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flC:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCy:Landroid/view/animation/Animation;
 
     if-nez v0, :cond_0
 
     new-instance v0, Landroid/view/animation/TranslateAnimation;
 
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->fmf:I
+    iget v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gDb:I
 
     int-to-float v1, v1
 
     invoke-direct {v0, v2, v2, v1, v2}, Landroid/view/animation/TranslateAnimation;-><init>(FFFF)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flC:Landroid/view/animation/Animation;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCy:Landroid/view/animation/Animation;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flC:Landroid/view/animation/Animation;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCy:Landroid/view/animation/Animation;
 
     const-wide/16 v1, 0x12c
 
     invoke-virtual {v0, v1, v2}, Landroid/view/animation/Animation;->setDuration(J)V
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cyS:Landroid/widget/ListView;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->cUz:Landroid/widget/ListView;
 
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->flC:Landroid/view/animation/Animation;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->gCy:Landroid/view/animation/Animation;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->startAnimation(Landroid/view/animation/Animation;)V
 

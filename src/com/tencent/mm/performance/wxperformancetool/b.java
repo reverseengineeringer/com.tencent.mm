@@ -1,24 +1,25 @@
 package com.tencent.mm.performance.wxperformancetool;
 
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Looper;
 import android.os.Message;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.ui.base.aa;
-import java.lang.ref.WeakReference;
-import java.util.HashMap;
+import com.tencent.mm.performance.e.a;
+import java.util.HashSet;
+import java.util.Iterator;
 
-final class b
-  extends ac
+public final class b
+  extends HandlerThread
 {
-  b(MemoryLeakActivity paramMemoryLeakActivity) {}
+  public static int clq = 2500;
+  private c cky;
+  public boolean clr = false;
+  public Handler mHandler;
   
-  public final void handleMessage(Message paramMessage)
+  public b(String paramString, c paramc)
   {
-    if (((WeakReference)i.bUy.get(MemoryLeakActivity.a(bUs))).get() == null)
-    {
-      bUs.finish();
-      return;
-    }
-    MemoryLeakActivity.b(bUs).show();
+    super(paramString);
+    cky = paramc;
   }
 }
 

@@ -1,20 +1,20 @@
 .class public final Lcom/tencent/mm/storage/e;
-.super Lcom/tencent/mm/d/b/j;
+.super Lcom/tencent/mm/d/b/o;
 .source "SourceFile"
 
 
 # static fields
-.field protected static aqp:Lcom/tencent/mm/sdk/g/ae$a;
+.field protected static aot:Lcom/tencent/mm/sdk/h/c$a;
 
 
 # instance fields
-.field private icU:Lcom/tencent/mm/f/a/a/a;
+.field public bHd:Ljava/util/Map;
 
-.field public icV:Lcom/tencent/mm/f/a/a/a;
+.field private kab:Lcom/tencent/mm/f/a/a/a;
 
-.field private icW:Ljava/util/List;
+.field public kac:Lcom/tencent/mm/f/a/a/a;
 
-.field public icX:Ljava/util/Map;
+.field private kad:Ljava/util/List;
 
 
 # direct methods
@@ -22,28 +22,28 @@
     .locals 6
 
     .prologue
-    const/16 v5, 0xd
+    const/16 v5, 0x12
 
-    .line 24
-    new-instance v0, Lcom/tencent/mm/sdk/g/ae$a;
+    .line 22
+    new-instance v0, Lcom/tencent/mm/sdk/h/c$a;
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/g/ae$a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/h/c$a;-><init>()V
 
     new-array v1, v5, [Ljava/lang/reflect/Field;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->bNX:[Ljava/lang/reflect/Field;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
 
-    const/16 v1, 0xe
+    const/16 v1, 0x13
 
     new-array v1, v1, [Ljava/lang/String;
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x0
 
@@ -51,7 +51,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "chatroomname"
 
@@ -69,9 +69,9 @@
 
     const-string/jumbo v2, "chatroomname"
 
-    iput-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibW:Ljava/lang/String;
+    iput-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYw:Ljava/lang/String;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x1
 
@@ -79,7 +79,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "addtime"
 
@@ -95,7 +95,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x2
 
@@ -103,7 +103,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "memberlist"
 
@@ -119,7 +119,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x3
 
@@ -127,7 +127,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "displayname"
 
@@ -143,7 +143,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x4
 
@@ -151,7 +151,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "chatroomnick"
 
@@ -167,7 +167,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x5
 
@@ -175,7 +175,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "roomflag"
 
@@ -191,7 +191,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x6
 
@@ -199,7 +199,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "roomowner"
 
@@ -215,7 +215,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/4 v3, 0x7
 
@@ -223,7 +223,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "roomdata"
 
@@ -239,7 +239,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/16 v3, 0x8
 
@@ -247,7 +247,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "isShowname"
 
@@ -263,7 +263,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/16 v3, 0x9
 
@@ -271,7 +271,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "selfDisplayName"
 
@@ -287,7 +287,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/16 v3, 0xa
 
@@ -295,7 +295,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "style"
 
@@ -311,7 +311,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/16 v3, 0xb
 
@@ -319,7 +319,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "chatroomdataflag"
 
@@ -335,7 +335,7 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const/16 v3, 0xc
 
@@ -343,7 +343,7 @@
 
     aput-object v4, v2, v3
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibX:Ljava/util/Map;
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
 
     const-string/jumbo v3, "modifytime"
 
@@ -355,7 +355,127 @@
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    iget-object v2, v0, Lcom/tencent/mm/sdk/g/ae$a;->bbY:[Ljava/lang/String;
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0xd
+
+    const-string/jumbo v4, "chatroomnotice"
+
+    aput-object v4, v2, v3
+
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "chatroomnotice"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string/jumbo v2, " chatroomnotice TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0xe
+
+    const-string/jumbo v4, "chatroomnoticeNewVersion"
+
+    aput-object v4, v2, v3
+
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "chatroomnoticeNewVersion"
+
+    const-string/jumbo v4, "INTEGER"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string/jumbo v2, " chatroomnoticeNewVersion INTEGER"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0xf
+
+    const-string/jumbo v4, "chatroomnoticeOldVersion"
+
+    aput-object v4, v2, v3
+
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "chatroomnoticeOldVersion"
+
+    const-string/jumbo v4, "INTEGER"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string/jumbo v2, " chatroomnoticeOldVersion INTEGER"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x10
+
+    const-string/jumbo v4, "chatroomnoticeEditor"
+
+    aput-object v4, v2, v3
+
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "chatroomnoticeEditor"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string/jumbo v2, " chatroomnoticeEditor TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/16 v3, 0x11
+
+    const-string/jumbo v4, "chatroomnoticePublishTime"
+
+    aput-object v4, v2, v3
+
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "chatroomnoticePublishTime"
+
+    const-string/jumbo v4, "LONG"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    const-string/jumbo v2, " chatroomnoticePublishTime LONG"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
 
     const-string/jumbo v3, "rowid"
 
@@ -365,9 +485,9 @@
 
     move-result-object v1
 
-    iput-object v1, v0, Lcom/tencent/mm/sdk/g/ae$a;->ibY:Ljava/lang/String;
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->jYy:Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/mm/storage/e;->aqp:Lcom/tencent/mm/sdk/g/ae$a;
+    sput-object v0, Lcom/tencent/mm/storage/e;->aot:Lcom/tencent/mm/sdk/h/c$a;
 
     return-void
 .end method
@@ -376,148 +496,51 @@
     .locals 1
 
     .prologue
-    .line 21
-    invoke-direct {p0}, Lcom/tencent/mm/d/b/j;-><init>()V
+    .line 19
+    invoke-direct {p0}, Lcom/tencent/mm/d/b/o;-><init>()V
 
-    .line 33
+    .line 31
     new-instance v0, Lcom/tencent/mm/f/a/a/a;
 
     invoke-direct {v0}, Lcom/tencent/mm/f/a/a/a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/e;->icU:Lcom/tencent/mm/f/a/a/a;
+    iput-object v0, p0, Lcom/tencent/mm/storage/e;->kab:Lcom/tencent/mm/f/a/a/a;
 
-    .line 34
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icU:Lcom/tencent/mm/f/a/a/a;
+    .line 32
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kab:Lcom/tencent/mm/f/a/a/a;
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    iput-object v0, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
 
-    .line 35
+    .line 33
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/e;->icW:Ljava/util/List;
+    iput-object v0, p0, Lcom/tencent/mm/storage/e;->kad:Ljava/util/List;
 
-    .line 36
+    .line 34
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/e;->icX:Ljava/util/Map;
+    iput-object v0, p0, Lcom/tencent/mm/storage/e;->bHd:Ljava/util/Map;
 
     return-void
 .end method
 
-.method private a(Lcom/tencent/mm/f/a/a/a;)V
-    .locals 4
-
-    .prologue
-    .line 50
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->field_roomdata:[B
-
-    if-nez v0, :cond_0
-
-    .line 51
-    new-instance p1, Lcom/tencent/mm/f/a/a/a;
-
-    invoke-direct {p1}, Lcom/tencent/mm/f/a/a/a;-><init>()V
-
-    .line 53
-    :cond_0
-    iget-object v0, p1, Lcom/tencent/mm/f/a/a/a;->beO:Ljava/util/LinkedList;
-
-    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
-
-    move-result-object v1
-
-    :goto_0
-    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
-
-    move-result-object v0
-
-    check-cast v0, Lcom/tencent/mm/f/a/a/b;
-
-    .line 54
-    iget-object v2, p0, Lcom/tencent/mm/storage/e;->icX:Ljava/util/Map;
-
-    iget-object v3, v0, Lcom/tencent/mm/f/a/a/b;->avY:Ljava/lang/String;
-
-    invoke-interface {v2, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-
-    goto :goto_0
-
-    .line 56
-    :cond_1
-    return-void
-.end method
-
-.method private static hi(Ljava/lang/String;)I
-    .locals 4
-
-    .prologue
-    .line 214
-    const/4 v0, 0x0
-
-    .line 216
-    :try_start_0
-    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    move-result v0
-
-    .line 222
-    :cond_0
-    :goto_0
-    return v0
-
-    .line 218
-    :catch_0
-    move-exception v1
-
-    if-eqz p0, :cond_0
-
-    .line 219
-    const-string/jumbo v1, "!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk"
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "parserInt error "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto :goto_0
-.end method
-
-.method private static ym(Ljava/lang/String;)Lcom/tencent/mm/f/a/a/a;
+.method private static DR(Ljava/lang/String;)Lcom/tencent/mm/f/a/a/a;
     .locals 10
 
     .prologue
     const/4 v2, 0x0
 
-    .line 245
+    .line 243
     new-instance v1, Lcom/tencent/mm/f/a/a/a;
 
     invoke-direct {v1}, Lcom/tencent/mm/f/a/a/a;-><init>()V
 
-    .line 246
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 244
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -525,11 +548,11 @@
 
     move-object v0, v1
 
-    .line 298
+    .line 296
     :goto_0
     return-object v0
 
-    .line 251
+    .line 249
     :cond_0
     const/16 v0, 0x3c
 
@@ -537,60 +560,60 @@
 
     move-result v0
 
-    .line 252
+    .line 250
     if-lez v0, :cond_1
 
-    .line 253
+    .line 251
     invoke-virtual {p0, v0}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 256
+    .line 254
     :cond_1
     const-string/jumbo v0, "RoomData"
 
-    invoke-static {p0, v0, v2}, Lcom/tencent/mm/sdk/platformtools/p;->z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    invoke-static {p0, v0, v2}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
 
     move-result-object v6
 
-    .line 257
+    .line 255
     if-nez v6, :cond_2
 
-    .line 258
+    .line 256
     const-string/jumbo v0, "!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk"
 
     const-string/jumbo v1, "parse RoomData failed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v2
 
-    .line 259
+    .line 257
     goto :goto_0
 
-    .line 263
+    .line 261
     :cond_2
     const/4 v0, 0x0
 
     move v3, v0
 
-    .line 264
+    .line 262
     :goto_1
     :try_start_0
     new-instance v7, Lcom/tencent/mm/f/a/a/b;
 
     invoke-direct {v7}, Lcom/tencent/mm/f/a/a/b;-><init>()V
 
-    .line 268
+    .line 266
     if-nez v3, :cond_3
 
-    .line 269
+    .line 267
     const-string/jumbo v5, ".RoomData.Member.$UserName"
 
-    .line 270
+    .line 268
     const-string/jumbo v4, ".RoomData.Member.DisplayName"
 
-    .line 271
+    .line 269
     const-string/jumbo v0, ".RoomData.Member.Flag"
 
     move-object v9, v0
@@ -601,7 +624,7 @@
 
     move-object v4, v9
 
-    .line 277
+    .line 275
     :goto_2
     invoke-interface {v6, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -611,21 +634,21 @@
 
     const-string/jumbo v8, ""
 
-    invoke-static {v0, v8}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v8}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 278
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 276
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v8
 
     if-nez v8, :cond_4
 
-    .line 279
-    iput-object v0, v7, Lcom/tencent/mm/f/a/a/b;->avY:Ljava/lang/String;
+    .line 277
+    iput-object v0, v7, Lcom/tencent/mm/f/a/a/b;->ajh:Ljava/lang/String;
 
-    .line 282
+    .line 280
     invoke-interface {v6, v5}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -634,42 +657,42 @@
 
     const-string/jumbo v5, ""
 
-    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v5}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, v7, Lcom/tencent/mm/f/a/a/b;->beS:Ljava/lang/String;
+    iput-object v0, v7, Lcom/tencent/mm/f/a/a/b;->bpe:Ljava/lang/String;
 
-    .line 283
+    .line 281
     invoke-interface {v6, v4}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/storage/e;->hi(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/storage/e;->ip(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, v7, Lcom/tencent/mm/f/a/a/b;->beT:I
+    iput v0, v7, Lcom/tencent/mm/f/a/a/b;->bpf:I
 
-    .line 284
-    iget-object v0, v1, Lcom/tencent/mm/f/a/a/a;->beO:Ljava/util/LinkedList;
+    .line 282
+    iget-object v0, v1, Lcom/tencent/mm/f/a/a/a;->bpa:Ljava/util/LinkedList;
 
     invoke-virtual {v0, v7}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 263
+    .line 261
     add-int/lit8 v0, v3, 0x1
 
     move v3, v0
 
     goto :goto_1
 
-    .line 272
+    .line 270
     :cond_3
     if-eqz v3, :cond_5
 
-    .line 273
+    .line 271
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v4, ".RoomData.Member"
@@ -690,7 +713,7 @@
 
     move-result-object v5
 
-    .line 274
+    .line 272
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v4, ".RoomData.Member"
@@ -711,7 +734,7 @@
 
     move-result-object v4
 
-    .line 275
+    .line 273
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v8, ".RoomData.Member"
@@ -742,7 +765,7 @@
 
     goto/16 :goto_2
 
-    .line 288
+    .line 286
     :cond_4
     const-string/jumbo v0, ".RoomData.Type"
 
@@ -752,13 +775,13 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/storage/e;->hi(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/storage/e;->ip(Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, v1, Lcom/tencent/mm/f/a/a/a;->type:I
 
-    .line 289
+    .line 287
     const-string/jumbo v0, ".RoomData.Status"
 
     invoke-interface {v6, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -767,13 +790,13 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/storage/e;->hi(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/storage/e;->ip(Ljava/lang/String;)I
 
     move-result v0
 
     iput v0, v1, Lcom/tencent/mm/f/a/a/a;->status:I
 
-    .line 290
+    .line 288
     const-string/jumbo v0, ".RoomData.MaxCount"
 
     invoke-interface {v6, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -782,13 +805,13 @@
 
     check-cast v0, Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/storage/e;->hi(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/storage/e;->ip(Ljava/lang/String;)I
 
     move-result v0
 
-    iput v0, v1, Lcom/tencent/mm/f/a/a/a;->beP:I
+    iput v0, v1, Lcom/tencent/mm/f/a/a/a;->bpb:I
 
-    .line 291
+    .line 289
     const-string/jumbo v0, ".RoomData.ExtInfo.Upgrader"
 
     invoke-interface {v6, v0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -799,20 +822,20 @@
 
     const-string/jumbo v2, ""
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/f/a/a/a;->beQ:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/f/a/a/a;->bpc:Ljava/lang/String;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     move-object v0, v1
 
-    .line 298
+    .line 296
     goto/16 :goto_0
 
-    .line 294
+    .line 292
     :catch_0
     move-exception v0
 
@@ -830,17 +853,17 @@
     goto/16 :goto_2
 .end method
 
-.method public static yn(Ljava/lang/String;)Ljava/util/List;
+.method public static DS(Ljava/lang/String;)Ljava/util/List;
     .locals 4
 
     .prologue
-    .line 333
+    .line 331
     new-instance v1, Ljava/util/LinkedList;
 
     invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
 
-    .line 334
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    .line 332
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -848,11 +871,11 @@
 
     move-object v0, v1
 
-    .line 341
+    .line 339
     :goto_0
     return-object v0
 
-    .line 337
+    .line 335
     :cond_0
     const-string/jumbo v0, ";"
 
@@ -860,7 +883,7 @@
 
     move-result-object v2
 
-    .line 338
+    .line 336
     const/4 v0, 0x0
 
     :goto_1
@@ -868,12 +891,12 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 339
+    .line 337
     aget-object v3, v2, v0
 
     invoke-interface {v1, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 338
+    .line 336
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -881,12 +904,154 @@
     :cond_1
     move-object v0, v1
 
-    .line 341
+    .line 339
+    goto :goto_0
+.end method
+
+.method private a(Lcom/tencent/mm/f/a/a/a;)V
+    .locals 4
+
+    .prologue
+    .line 48
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->field_roomdata:[B
+
+    if-nez v0, :cond_0
+
+    .line 49
+    new-instance p1, Lcom/tencent/mm/f/a/a/a;
+
+    invoke-direct {p1}, Lcom/tencent/mm/f/a/a/a;-><init>()V
+
+    .line 51
+    :cond_0
+    iget-object v0, p1, Lcom/tencent/mm/f/a/a/a;->bpa:Ljava/util/LinkedList;
+
+    invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
+
+    move-result-object v1
+
+    :goto_0
+    invoke-interface {v1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    invoke-interface {v1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/f/a/a/b;
+
+    .line 52
+    iget-object v2, p0, Lcom/tencent/mm/storage/e;->bHd:Ljava/util/Map;
+
+    iget-object v3, v0, Lcom/tencent/mm/f/a/a/b;->ajh:Ljava/lang/String;
+
+    invoke-interface {v2, v3, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    goto :goto_0
+
+    .line 54
+    :cond_1
+    return-void
+.end method
+
+.method private static ip(Ljava/lang/String;)I
+    .locals 4
+
+    .prologue
+    .line 212
+    const/4 v0, 0x0
+
+    .line 214
+    :try_start_0
+    invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    .line 220
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 216
+    :catch_0
+    move-exception v1
+
+    if-eqz p0, :cond_0
+
+    .line 217
+    const-string/jumbo v1, "!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "parserInt error "
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
     goto :goto_0
 .end method
 
 
 # virtual methods
+.method public final DQ(Ljava/lang/String;)Lcom/tencent/mm/f/a/a/b;
+    .locals 1
+
+    .prologue
+    .line 70
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->bHd:Ljava/util/Map;
+
+    invoke-interface {v0}, Ljava/util/Map;->size()I
+
+    move-result v0
+
+    if-gtz v0, :cond_0
+
+    .line 71
+    invoke-virtual {p0}, Lcom/tencent/mm/storage/e;->aWi()V
+
+    .line 74
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->bHd:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 75
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->bHd:Ljava/util/Map;
+
+    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Lcom/tencent/mm/f/a/a/b;
+
+    .line 78
+    :goto_0
+    return-object v0
+
+    :cond_1
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
 .method public final a(Ljava/lang/String;Lcom/tencent/mm/f/a/a/a;Z)Lcom/tencent/mm/storage/e;
     .locals 8
 
@@ -895,21 +1060,21 @@
 
     const/4 v2, 0x0
 
-    .line 388
+    .line 386
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lcom/tencent/mm/storage/e;->field_modifytime:J
 
-    .line 391
+    .line 389
     if-nez p3, :cond_1
 
-    .line 393
+    .line 391
     const/4 v1, 0x0
 
-    .line 394
-    iget-object v0, p2, Lcom/tencent/mm/f/a/a/a;->beO:Ljava/util/LinkedList;
+    .line 392
+    iget-object v0, p2, Lcom/tencent/mm/f/a/a/a;->bpa:Ljava/util/LinkedList;
 
     invoke-virtual {v0}, Ljava/util/LinkedList;->iterator()Ljava/util/Iterator;
 
@@ -928,12 +1093,12 @@
 
     check-cast v0, Lcom/tencent/mm/f/a/a/b;
 
-    .line 395
-    iget-object v4, v0, Lcom/tencent/mm/f/a/a/b;->avY:Ljava/lang/String;
+    .line 393
+    iget-object v4, v0, Lcom/tencent/mm/f/a/a/b;->ajh:Ljava/lang/String;
 
     if-eqz v4, :cond_3
 
-    iget-object v4, v0, Lcom/tencent/mm/f/a/a/b;->avY:Ljava/lang/String;
+    iget-object v4, v0, Lcom/tencent/mm/f/a/a/b;->ajh:Ljava/lang/String;
 
     invoke-virtual {v4, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -944,29 +1109,29 @@
     :goto_1
     move-object v1, v0
 
-    .line 398
+    .line 396
     goto :goto_0
 
-    .line 400
+    .line 398
     :cond_0
     if-eqz v1, :cond_2
 
-    .line 401
-    iget-object v0, v1, Lcom/tencent/mm/f/a/a/b;->beS:Ljava/lang/String;
+    .line 399
+    iget-object v0, v1, Lcom/tencent/mm/f/a/a/b;->bpe:Ljava/lang/String;
 
     iput-object v0, p0, Lcom/tencent/mm/storage/e;->field_selfDisplayName:Ljava/lang/String;
 
-    .line 402
-    iget v0, v1, Lcom/tencent/mm/f/a/a/b;->beT:I
+    .line 400
+    iget v0, v1, Lcom/tencent/mm/f/a/a/b;->bpf:I
 
     and-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lcom/tencent/mm/storage/e;->field_isShowname:I
 
-    .line 403
-    iget v0, v1, Lcom/tencent/mm/f/a/a/b;->beT:I
+    .line 401
+    iget v0, v1, Lcom/tencent/mm/f/a/a/b;->bpf:I
 
-    .line 405
+    .line 403
     :goto_2
     const-string/jumbo v1, "!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk"
 
@@ -996,10 +1161,10 @@
 
     aput-object v6, v4, v5
 
-    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 415
-    iget v1, p2, Lcom/tencent/mm/f/a/a/a;->aqq:I
+    .line 413
+    iget v1, p2, Lcom/tencent/mm/f/a/a/a;->aou:I
 
     and-int/lit8 v1, v1, -0x3
 
@@ -1007,14 +1172,14 @@
 
     or-int/2addr v0, v1
 
-    iput v0, p2, Lcom/tencent/mm/f/a/a/a;->aqq:I
+    iput v0, p2, Lcom/tencent/mm/f/a/a/a;->aou:I
 
-    .line 416
-    iget v0, p2, Lcom/tencent/mm/f/a/a/a;->aqq:I
+    .line 414
+    iget v0, p2, Lcom/tencent/mm/f/a/a/a;->aou:I
 
     iput v0, p0, Lcom/tencent/mm/storage/e;->field_chatroomdataflag:I
 
-    .line 421
+    .line 419
     :cond_1
     :try_start_0
     invoke-virtual {p2}, Lcom/tencent/mm/f/a/a/a;->toByteArray()[B
@@ -1023,36 +1188,36 @@
 
     iput-object v0, p0, Lcom/tencent/mm/storage/e;->field_roomdata:[B
 
-    .line 422
-    iput-object p2, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    .line 420
+    iput-object p2, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 426
+    .line 424
     :goto_3
     invoke-direct {p0, p2}, Lcom/tencent/mm/storage/e;->a(Lcom/tencent/mm/f/a/a/a;)V
 
-    .line 427
+    .line 425
     return-object p0
 
-    .line 423
+    .line 421
     :catch_0
     move-exception v0
 
-    .line 424
+    .line 422
     const-string/jumbo v1, "!32@/B4Tb64lLpLmGcw7XyPCjtlJyX0v8EQk"
 
     const-string/jumbo v3, "exception:%s"
 
     new-array v4, v7, [Ljava/lang/Object;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->a(Ljava/lang/Throwable;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->b(Ljava/lang/Throwable;)Ljava/lang/String;
 
     move-result-object v0
 
     aput-object v0, v4, v2
 
-    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_3
 
@@ -1067,45 +1232,11 @@
     goto :goto_1
 .end method
 
-.method public final aGc()Ljava/util/List;
-    .locals 1
-
-    .prologue
-    .line 43
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icW:Ljava/util/List;
-
-    if-eqz v0, :cond_0
-
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icW:Ljava/util/List;
-
-    invoke-interface {v0}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    .line 44
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->field_memberlist:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/storage/e;->yn(Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/storage/e;->icW:Ljava/util/List;
-
-    .line 46
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icW:Ljava/util/List;
-
-    return-object v0
-.end method
-
-.method public final aGd()V
+.method public final aWi()V
     .locals 2
 
     .prologue
-    .line 60
+    .line 58
     :try_start_0
     new-instance v0, Lcom/tencent/mm/f/a/a/a;
 
@@ -1113,26 +1244,26 @@
 
     iget-object v1, p0, Lcom/tencent/mm/storage/e;->field_roomdata:[B
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/f/a/a/a;->x([B)Lcom/tencent/mm/al/a;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/f/a/a/a;->am([B)Lcom/tencent/mm/at/a;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/f/a/a/a;
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    iput-object v0, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 64
+    .line 62
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
 
     invoke-direct {p0, v0}, Lcom/tencent/mm/storage/e;->a(Lcom/tencent/mm/f/a/a/a;)V
 
-    .line 65
+    .line 63
     return-void
 
-    .line 62
+    .line 60
     :catch_0
     move-exception v0
 
@@ -1140,17 +1271,17 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/f/a/a/a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    iput-object v0, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
 
     goto :goto_0
 .end method
 
-.method public final aGe()I
+.method public final aWj()I
     .locals 1
 
     .prologue
-    .line 119
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    .line 117
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/e;->b(Lcom/tencent/mm/f/a/a/a;)Z
 
@@ -1158,24 +1289,24 @@
 
     if-eqz v0, :cond_0
 
+    .line 118
+    invoke-virtual {p0}, Lcom/tencent/mm/storage/e;->aWi()V
+
     .line 120
-    invoke-virtual {p0}, Lcom/tencent/mm/storage/e;->aGd()V
-
-    .line 122
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
 
-    iget v0, v0, Lcom/tencent/mm/f/a/a/a;->aAT:I
+    iget v0, v0, Lcom/tencent/mm/f/a/a/a;->aCp:I
 
     return v0
 .end method
 
-.method public final aGf()Z
+.method public final aWk()Z
     .locals 2
 
     .prologue
-    .line 138
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    .line 136
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/e;->b(Lcom/tencent/mm/f/a/a/a;)Z
 
@@ -1183,18 +1314,18 @@
 
     if-eqz v0, :cond_0
 
+    .line 137
+    invoke-virtual {p0}, Lcom/tencent/mm/storage/e;->aWi()V
+
     .line 139
-    invoke-virtual {p0}, Lcom/tencent/mm/storage/e;->aGd()V
-
-    .line 141
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
 
-    iget v0, v0, Lcom/tencent/mm/f/a/a/a;->aAT:I
+    iget v0, v0, Lcom/tencent/mm/f/a/a/a;->aCp:I
 
-    iget-object v1, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    iget-object v1, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
 
-    iget v1, v1, Lcom/tencent/mm/f/a/a/a;->beR:I
+    iget v1, v1, Lcom/tencent/mm/f/a/a/a;->bpd:I
 
     if-ge v0, v1, :cond_1
 
@@ -1209,12 +1340,12 @@
     goto :goto_0
 .end method
 
-.method public final aGg()I
+.method public final aWl()I
     .locals 1
 
     .prologue
-    .line 181
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    .line 179
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/e;->b(Lcom/tencent/mm/f/a/a/a;)Z
 
@@ -1222,23 +1353,23 @@
 
     if-eqz v0, :cond_0
 
+    .line 180
+    invoke-virtual {p0}, Lcom/tencent/mm/storage/e;->aWi()V
+
     .line 182
-    invoke-virtual {p0}, Lcom/tencent/mm/storage/e;->aGd()V
-
-    .line 184
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
 
-    iget v0, v0, Lcom/tencent/mm/f/a/a/a;->beP:I
+    iget v0, v0, Lcom/tencent/mm/f/a/a/a;->bpb:I
 
     return v0
 .end method
 
-.method public final aGh()Z
+.method public final aWm()Z
     .locals 1
 
     .prologue
-    .line 206
+    .line 204
     iget v0, p0, Lcom/tencent/mm/storage/e;->field_isShowname:I
 
     if-lez v0, :cond_0
@@ -1254,11 +1385,39 @@
     goto :goto_0
 .end method
 
-.method public final aR(Ljava/util/List;)Lcom/tencent/mm/storage/e;
+.method public final b(Lcom/tencent/mm/f/a/a/a;)Z
+    .locals 2
+
+    .prologue
+    .line 66
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kab:Lcom/tencent/mm/f/a/a/a;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/f/a/a/a;->kn()I
+
+    move-result v0
+
+    invoke-virtual {p1}, Lcom/tencent/mm/f/a/a/a;->kn()I
+
+    move-result v1
+
+    if-ne v0, v1, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final bs(Ljava/util/List;)Lcom/tencent/mm/storage/e;
     .locals 4
 
     .prologue
-    .line 345
+    .line 343
     if-eqz p1, :cond_0
 
     invoke-interface {p1}, Ljava/util/List;->size()I
@@ -1273,10 +1432,10 @@
     :cond_1
     iput-object v0, p0, Lcom/tencent/mm/storage/e;->field_memberlist:Ljava/lang/String;
 
-    .line 346
+    .line 344
     return-object p0
 
-    .line 345
+    .line 343
     :cond_2
     const-string/jumbo v1, ""
 
@@ -1349,61 +1508,14 @@
     goto :goto_0
 .end method
 
-.method public final b(Lcom/tencent/mm/f/a/a/a;)Z
+.method public final cf(I)V
     .locals 2
 
     .prologue
-    .line 68
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icU:Lcom/tencent/mm/f/a/a/a;
+    .line 161
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kac:Lcom/tencent/mm/f/a/a/a;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/f/a/a/a;->kS()I
-
-    move-result v0
-
-    invoke-virtual {p1}, Lcom/tencent/mm/f/a/a/a;->kS()I
-
-    move-result v1
-
-    if-ne v0, v1, :cond_0
-
-    const/4 v0, 0x1
-
-    :goto_0
-    return v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final bz(Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/storage/e;
-    .locals 2
-
-    .prologue
-    .line 379
-    invoke-static {p2}, Lcom/tencent/mm/storage/e;->ym(Ljava/lang/String;)Lcom/tencent/mm/f/a/a/a;
-
-    move-result-object v0
-
-    .line 380
-    const/4 v1, 0x0
-
-    invoke-virtual {p0, p1, v0, v1}, Lcom/tencent/mm/storage/e;->a(Ljava/lang/String;Lcom/tencent/mm/f/a/a/a;Z)Lcom/tencent/mm/storage/e;
-
-    move-result-object v0
-
-    return-object v0
-.end method
-
-.method public final ce(I)V
-    .locals 2
-
-    .prologue
-    .line 163
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icV:Lcom/tencent/mm/f/a/a/a;
-
-    iget v0, v0, Lcom/tencent/mm/f/a/a/a;->aqq:I
+    iget v0, v0, Lcom/tencent/mm/f/a/a/a;->aou:I
 
     and-int/lit8 v0, v0, -0x3
 
@@ -1413,46 +1525,65 @@
 
     iput v0, p0, Lcom/tencent/mm/storage/e;->field_chatroomdataflag:I
 
-    .line 164
+    .line 162
     return-void
 .end method
 
-.method public final dN(Ljava/lang/String;)Ljava/lang/String;
+.method public final cn(Ljava/lang/String;Ljava/lang/String;)Lcom/tencent/mm/storage/e;
     .locals 2
 
     .prologue
-    .line 188
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/e;->yl(Ljava/lang/String;)Lcom/tencent/mm/f/a/a/b;
+    .line 377
+    invoke-static {p2}, Lcom/tencent/mm/storage/e;->DR(Ljava/lang/String;)Lcom/tencent/mm/f/a/a/a;
 
     move-result-object v0
 
-    .line 189
+    .line 378
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, p1, v0, v1}, Lcom/tencent/mm/storage/e;->a(Ljava/lang/String;Lcom/tencent/mm/f/a/a/a;Z)Lcom/tencent/mm/storage/e;
+
+    move-result-object v0
+
+    return-object v0
+.end method
+
+.method public final dY(Ljava/lang/String;)Ljava/lang/String;
+    .locals 2
+
+    .prologue
+    .line 186
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/e;->DQ(Ljava/lang/String;)Lcom/tencent/mm/f/a/a/b;
+
+    move-result-object v0
+
+    .line 187
     if-nez v0, :cond_0
 
-    .line 190
+    .line 188
     const-string/jumbo v0, ""
 
-    .line 192
+    .line 190
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, v0, Lcom/tencent/mm/f/a/a/b;->beS:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/f/a/a/b;->bpe:Ljava/lang/String;
 
     const-string/jumbo v1, ""
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/bn;->U(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ad(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     goto :goto_0
 .end method
 
-.method public final eM(Z)Lcom/tencent/mm/storage/e;
+.method public final gM(Z)Lcom/tencent/mm/storage/e;
     .locals 1
 
     .prologue
-    .line 201
+    .line 199
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -1460,67 +1591,56 @@
     :goto_0
     iput v0, p0, Lcom/tencent/mm/storage/e;->field_isShowname:I
 
-    .line 202
+    .line 200
     return-object p0
 
-    .line 201
+    .line 199
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method protected final lX()Lcom/tencent/mm/sdk/g/ae$a;
+.method protected final ls()Lcom/tencent/mm/sdk/h/c$a;
     .locals 1
 
     .prologue
-    .line 28
-    sget-object v0, Lcom/tencent/mm/storage/e;->aqp:Lcom/tencent/mm/sdk/g/ae$a;
+    .line 26
+    sget-object v0, Lcom/tencent/mm/storage/e;->aot:Lcom/tencent/mm/sdk/h/c$a;
 
     return-object v0
 .end method
 
-.method public final yl(Ljava/lang/String;)Lcom/tencent/mm/f/a/a/b;
+.method public final ws()Ljava/util/List;
     .locals 1
 
     .prologue
-    .line 72
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icX:Ljava/util/Map;
+    .line 41
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kad:Ljava/util/List;
 
-    invoke-interface {v0}, Ljava/util/Map;->size()I
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kad:Ljava/util/List;
+
+    invoke-interface {v0}, Ljava/util/List;->size()I
 
     move-result v0
 
-    if-gtz v0, :cond_0
+    if-nez v0, :cond_1
 
-    .line 73
-    invoke-virtual {p0}, Lcom/tencent/mm/storage/e;->aGd()V
-
-    .line 76
+    .line 42
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icX:Ljava/util/Map;
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->field_memberlist:Ljava/lang/String;
 
-    invoke-interface {v0, p1}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_1
-
-    .line 77
-    iget-object v0, p0, Lcom/tencent/mm/storage/e;->icX:Ljava/util/Map;
-
-    invoke-interface {v0, p1}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tencent/mm/storage/e;->DS(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/f/a/a/b;
+    iput-object v0, p0, Lcom/tencent/mm/storage/e;->kad:Ljava/util/List;
 
-    .line 80
-    :goto_0
-    return-object v0
-
+    .line 44
     :cond_1
-    const/4 v0, 0x0
+    iget-object v0, p0, Lcom/tencent/mm/storage/e;->kad:Ljava/util/List;
 
-    goto :goto_0
+    return-object v0
 .end method

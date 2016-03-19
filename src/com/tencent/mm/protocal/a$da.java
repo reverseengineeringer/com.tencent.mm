@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$da
-  extends a.c
+  extends a.e
 {
   public a$da()
   {
-    super("shareWeibo", "share_weibo", 3, true);
+    super("openMyDeviceProfile", "openMyDeviceProfile", 145, false);
   }
 }
 

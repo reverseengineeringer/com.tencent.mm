@@ -2,27 +2,74 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class bd
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aYW = "tagId".hashCode();
-  private static final int aYX = "tagName".hashCode();
-  private static final int aYY = "count".hashCode();
-  private static final int aYZ = "memberList".hashCode();
-  private boolean aYS = true;
-  private boolean aYT = true;
-  private boolean aYU = true;
-  private boolean aYV = true;
-  public int field_count;
-  public String field_memberList;
-  public long field_tagId;
-  public String field_tagName;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = { "CREATE INDEX IF NOT EXISTS lbsverifymessage_unread_index ON LBSVerifyMessage(status)", "CREATE INDEX IF NOT EXISTS lbsverifymessage_createtimeIndex ON LBSVerifyMessage(createtime)" };
+  private static final int aMQ;
+  private static final int aMf;
+  private static final int aMk;
+  private static final int aMt;
+  private static final int aMu;
+  private static final int aOB;
+  private static final int aPc;
+  private static final int aUX = "svrid".hashCode();
+  private static final int aWf;
+  private static final int bbF;
+  private static final int bbG;
+  private static final int bbH;
+  private static final int bbI;
+  private static final int bbJ;
+  private boolean aLN = true;
+  private boolean aLS = true;
+  private boolean aMC = true;
+  private boolean aMr = true;
+  private boolean aMs = true;
+  private boolean aOO = true;
+  private boolean aOz = true;
+  private boolean aUC = true;
+  private boolean aVP = true;
+  private boolean bbA = true;
+  private boolean bbB = true;
+  private boolean bbC = true;
+  private boolean bbD = true;
+  private boolean bbE = true;
+  public String field_content;
+  public long field_createtime;
+  public int field_flag;
+  public String field_imgpath;
+  public int field_isSend;
+  public String field_sayhicontent;
+  public String field_sayhiencryptuser;
+  public String field_sayhiuser;
+  public int field_scene;
+  public int field_status;
+  public long field_svrid;
+  public String field_talker;
+  public String field_ticket;
+  public int field_type;
   
-  public void c(Cursor paramCursor)
+  static
+  {
+    aMQ = "status".hashCode();
+    aMf = "type".hashCode();
+    aMt = "scene".hashCode();
+    bbF = "createtime".hashCode();
+    aWf = "talker".hashCode();
+    aMk = "content".hashCode();
+    bbG = "sayhiuser".hashCode();
+    bbH = "sayhicontent".hashCode();
+    bbI = "imgpath".hashCode();
+    aPc = "isSend".hashCode();
+    bbJ = "sayhiencryptuser".hashCode();
+    aMu = "ticket".hashCode();
+    aOB = "flag".hashCode();
+  }
+  
+  public final void c(Cursor paramCursor)
   {
     String[] arrayOfString = paramCursor.getColumnNames();
     if (arrayOfString == null) {
@@ -35,52 +82,97 @@ public abstract class bd
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aYW != k) {
-        break label60;
+      if (aUX != k) {
+        break label65;
       }
-      field_tagId = paramCursor.getLong(i);
+      field_svrid = paramCursor.getLong(i);
+      aUC = true;
     }
     for (;;)
     {
       i += 1;
       break label20;
       break;
-      label60:
-      if (aYX == k) {
-        field_tagName = paramCursor.getString(i);
-      } else if (aYY == k) {
-        field_count = paramCursor.getInt(i);
-      } else if (aYZ == k) {
-        field_memberList = paramCursor.getString(i);
-      } else if (aHH == k) {
-        ibV = paramCursor.getLong(i);
+      label65:
+      if (aMQ == k) {
+        field_status = paramCursor.getInt(i);
+      } else if (aMf == k) {
+        field_type = paramCursor.getInt(i);
+      } else if (aMt == k) {
+        field_scene = paramCursor.getInt(i);
+      } else if (bbF == k) {
+        field_createtime = paramCursor.getLong(i);
+      } else if (aWf == k) {
+        field_talker = paramCursor.getString(i);
+      } else if (aMk == k) {
+        field_content = paramCursor.getString(i);
+      } else if (bbG == k) {
+        field_sayhiuser = paramCursor.getString(i);
+      } else if (bbH == k) {
+        field_sayhicontent = paramCursor.getString(i);
+      } else if (bbI == k) {
+        field_imgpath = paramCursor.getString(i);
+      } else if (aPc == k) {
+        field_isSend = paramCursor.getInt(i);
+      } else if (bbJ == k) {
+        field_sayhiencryptuser = paramCursor.getString(i);
+      } else if (aMu == k) {
+        field_ticket = paramCursor.getString(i);
+      } else if (aOB == k) {
+        field_flag = paramCursor.getInt(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aYS) {
-      localContentValues.put("tagId", Long.valueOf(field_tagId));
+    if (aUC) {
+      localContentValues.put("svrid", Long.valueOf(field_svrid));
     }
-    if (field_tagName == null) {
-      field_tagName = "";
+    if (aMC) {
+      localContentValues.put("status", Integer.valueOf(field_status));
     }
-    if (aYT) {
-      localContentValues.put("tagName", field_tagName);
+    if (aLN) {
+      localContentValues.put("type", Integer.valueOf(field_type));
     }
-    if (aYU) {
-      localContentValues.put("count", Integer.valueOf(field_count));
+    if (aMr) {
+      localContentValues.put("scene", Integer.valueOf(field_scene));
     }
-    if (field_memberList == null) {
-      field_memberList = "";
+    if (bbA) {
+      localContentValues.put("createtime", Long.valueOf(field_createtime));
     }
-    if (aYV) {
-      localContentValues.put("memberList", field_memberList);
+    if (aVP) {
+      localContentValues.put("talker", field_talker);
     }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (aLS) {
+      localContentValues.put("content", field_content);
+    }
+    if (bbB) {
+      localContentValues.put("sayhiuser", field_sayhiuser);
+    }
+    if (bbC) {
+      localContentValues.put("sayhicontent", field_sayhicontent);
+    }
+    if (bbD) {
+      localContentValues.put("imgpath", field_imgpath);
+    }
+    if (aOO) {
+      localContentValues.put("isSend", Integer.valueOf(field_isSend));
+    }
+    if (bbE) {
+      localContentValues.put("sayhiencryptuser", field_sayhiencryptuser);
+    }
+    if (aMs) {
+      localContentValues.put("ticket", field_ticket);
+    }
+    if (aOz) {
+      localContentValues.put("flag", Integer.valueOf(field_flag));
+    }
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

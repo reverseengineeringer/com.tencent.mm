@@ -4,28 +4,28 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import com.tencent.mm.compatible.d.a;
-import com.tencent.mm.compatible.d.q;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.compatible.d.p;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 public final class b
 {
-  public static a nZ()
+  public static a nJ()
   {
-    SharedPreferences localSharedPreferences = aa.getContext().getSharedPreferences(aa.aES(), 0);
-    if (biobfI == 1) {}
+    SharedPreferences localSharedPreferences = y.getContext().getSharedPreferences(y.aUK(), 0);
+    if (bsLbpP == 1) {}
     for (boolean bool = false;; bool = true)
     {
       if (!localSharedPreferences.contains("settings_voicerecorder_mode")) {
         localSharedPreferences.edit().putBoolean("settings_voicerecorder_mode", bool).commit();
       }
-      t.i("AudioConfig", "getModeByConfig mVoiceRecordMode:%d defValue:%b settings_voicerecorder_mode:%b", new Object[] { Integer.valueOf(biobfI), Boolean.valueOf(bool), Boolean.valueOf(localSharedPreferences.getBoolean("settings_voicerecorder_mode", bool)) });
+      u.i("AudioConfig", "getModeByConfig mVoiceRecordMode:%d defValue:%b settings_voicerecorder_mode:%b", new Object[] { Integer.valueOf(bsLbpP), Boolean.valueOf(bool), Boolean.valueOf(localSharedPreferences.getBoolean("settings_voicerecorder_mode", bool)) });
       if (!localSharedPreferences.getBoolean("settings_voicerecorder_mode", bool)) {
         break;
       }
-      return a.bfh;
+      return a.bpn;
     }
-    return a.bfi;
+    return a.bpo;
   }
   
   public static enum a {}

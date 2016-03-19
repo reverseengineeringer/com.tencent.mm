@@ -1,19 +1,19 @@
 .class public final Lcom/tencent/mm/storage/f;
-.super Lcom/tencent/mm/sdk/g/ah;
+.super Lcom/tencent/mm/sdk/h/f;
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/ar/f$a;
+.implements Lcom/tencent/mm/az/f$a;
 
 
 # static fields
-.field public static final aHq:[Ljava/lang/String;
+.field public static final aLn:[Ljava/lang/String;
 
-.field public static final aqU:[Ljava/lang/String;
+.field public static final aoY:[Ljava/lang/String;
 
 
 # instance fields
-.field public aqT:Lcom/tencent/mm/sdk/g/af;
+.field public aoX:Lcom/tencent/mm/sdk/h/d;
 
 
 # direct methods
@@ -28,17 +28,17 @@
     .line 22
     new-array v0, v4, [Ljava/lang/String;
 
-    sget-object v1, Lcom/tencent/mm/storage/e;->aqp:Lcom/tencent/mm/sdk/g/ae$a;
+    sget-object v1, Lcom/tencent/mm/storage/e;->aot:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v2, "chatroom"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/g/ah;->a(Lcom/tencent/mm/sdk/g/ae$a;Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/h/f;->a(Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/tencent/mm/storage/f;->aqU:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/f;->aoY:[Ljava/lang/String;
 
     .line 25
     new-array v0, v4, [Ljava/lang/String;
@@ -47,32 +47,32 @@
 
     aput-object v1, v0, v3
 
-    sput-object v0, Lcom/tencent/mm/storage/f;->aHq:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/storage/f;->aLn:[Ljava/lang/String;
 
     return-void
 .end method
 
-.method public constructor <init>(Lcom/tencent/mm/sdk/g/af;)V
+.method public constructor <init>(Lcom/tencent/mm/sdk/h/d;)V
     .locals 3
 
     .prologue
     .line 32
-    sget-object v0, Lcom/tencent/mm/storage/e;->aqp:Lcom/tencent/mm/sdk/g/ae$a;
+    sget-object v0, Lcom/tencent/mm/storage/e;->aot:Lcom/tencent/mm/sdk/h/c$a;
 
     const-string/jumbo v1, "chatroom"
 
-    sget-object v2, Lcom/tencent/mm/storage/f;->aHq:[Ljava/lang/String;
+    sget-object v2, Lcom/tencent/mm/storage/f;->aLn:[Ljava/lang/String;
 
-    invoke-direct {p0, p1, v0, v1, v2}, Lcom/tencent/mm/sdk/g/ah;-><init>(Lcom/tencent/mm/sdk/g/af;Lcom/tencent/mm/sdk/g/ae$a;Ljava/lang/String;[Ljava/lang/String;)V
+    invoke-direct {p0, p1, v0, v1, v2}, Lcom/tencent/mm/sdk/h/f;-><init>(Lcom/tencent/mm/sdk/h/d;Lcom/tencent/mm/sdk/h/c$a;Ljava/lang/String;[Ljava/lang/String;)V
 
     .line 33
-    iput-object p1, p0, Lcom/tencent/mm/storage/f;->aqT:Lcom/tencent/mm/sdk/g/af;
+    iput-object p1, p0, Lcom/tencent/mm/storage/f;->aoX:Lcom/tencent/mm/sdk/h/d;
 
     .line 34
     return-void
 .end method
 
-.method private static yn(Ljava/lang/String;)Ljava/util/List;
+.method private static DS(Ljava/lang/String;)Ljava/util/List;
     .locals 4
 
     .prologue
@@ -131,7 +131,300 @@
 
 
 # virtual methods
-.method public final a(Lcom/tencent/mm/ar/f;)I
+.method public final DT(Ljava/lang/String;)Lcom/tencent/mm/storage/e;
+    .locals 4
+
+    .prologue
+    .line 65
+    new-instance v0, Lcom/tencent/mm/storage/e;
+
+    invoke-direct {v0}, Lcom/tencent/mm/storage/e;-><init>()V
+
+    .line 66
+    iput-object p1, v0, Lcom/tencent/mm/storage/e;->field_chatroomname:Ljava/lang/String;
+
+    .line 67
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const-string/jumbo v3, "chatroomname"
+
+    aput-object v3, v1, v2
+
+    invoke-super {p0, v0, v1}, Lcom/tencent/mm/sdk/h/f;->c(Lcom/tencent/mm/sdk/h/c;[Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 70
+    :goto_0
+    return-object v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final DU(Ljava/lang/String;)Lcom/tencent/mm/storage/e;
+    .locals 4
+
+    .prologue
+    .line 74
+    new-instance v0, Lcom/tencent/mm/storage/e;
+
+    invoke-direct {v0}, Lcom/tencent/mm/storage/e;-><init>()V
+
+    .line 75
+    iput-object p1, v0, Lcom/tencent/mm/storage/e;->field_chatroomname:Ljava/lang/String;
+
+    .line 76
+    const/4 v1, 0x1
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    const/4 v2, 0x0
+
+    const-string/jumbo v3, "chatroomname"
+
+    aput-object v3, v1, v2
+
+    invoke-super {p0, v0, v1}, Lcom/tencent/mm/sdk/h/f;->c(Lcom/tencent/mm/sdk/h/c;[Ljava/lang/String;)Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    .line 79
+    :cond_0
+    return-object v0
+.end method
+
+.method public final DV(Ljava/lang/String;)Ljava/lang/String;
+    .locals 5
+
+    .prologue
+    const/4 v3, 0x0
+
+    const/4 v2, 0x0
+
+    const/4 v1, 0x1
+
+    .line 296
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
+
+    .line 298
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "select memberlist from chatroom where chatroomname=\'"
+
+    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v4, "\'"
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 300
+    iget-object v4, p0, Lcom/tencent/mm/storage/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+
+    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+
+    move-result-object v0
+
+    .line 301
+    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
+
+    move-result v4
+
+    .line 302
+    if-gt v4, v1, :cond_1
+
+    :goto_1
+    invoke-static {v1}, Ljunit/framework/Assert;->assertTrue(Z)V
+
+    .line 303
+    if-gtz v4, :cond_2
+
+    .line 304
+    const-string/jumbo v1, "!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc="
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v4, "getMemberListByChatroomName chatroomName:"
+
+    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    const-string/jumbo v4, " getCount ==0"
+
+    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 305
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    move-object v0, v3
+
+    .line 312
+    :goto_2
+    return-object v0
+
+    :cond_0
+    move v0, v2
+
+    .line 296
+    goto :goto_0
+
+    :cond_1
+    move v1, v2
+
+    .line 302
+    goto :goto_1
+
+    .line 308
+    :cond_2
+    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
+
+    .line 309
+    new-instance v1, Lcom/tencent/mm/storage/e;
+
+    invoke-direct {v1}, Lcom/tencent/mm/storage/e;-><init>()V
+
+    .line 310
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/e;->c(Landroid/database/Cursor;)V
+
+    .line 311
+    invoke-interface {v0}, Landroid/database/Cursor;->close()V
+
+    .line 312
+    iget-object v0, v1, Lcom/tencent/mm/storage/e;->field_memberlist:Ljava/lang/String;
+
+    goto :goto_2
+.end method
+
+.method public final DW(Ljava/lang/String;)Ljava/util/List;
+    .locals 1
+
+    .prologue
+    .line 334
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->DV(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 335
+    if-nez v0, :cond_0
+
+    .line 336
+    const/4 v0, 0x0
+
+    .line 338
+    :goto_0
+    return-object v0
+
+    :cond_0
+    invoke-static {v0}, Lcom/tencent/mm/storage/f;->DS(Ljava/lang/String;)Ljava/util/List;
+
+    move-result-object v0
+
+    goto :goto_0
+.end method
+
+.method public final DX(Ljava/lang/String;)Z
+    .locals 6
+
+    .prologue
+    const/4 v1, 0x1
+
+    const/4 v2, 0x0
+
+    .line 360
+    invoke-virtual {p1}, Ljava/lang/String;->length()I
+
+    move-result v0
+
+    if-lez v0, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
+
+    .line 362
+    iget-object v0, p0, Lcom/tencent/mm/storage/f;->aoX:Lcom/tencent/mm/sdk/h/d;
+
+    const-string/jumbo v3, "chatroom"
+
+    const-string/jumbo v4, "chatroomname=?"
+
+    new-array v5, v1, [Ljava/lang/String;
+
+    aput-object p1, v5, v2
+
+    invoke-interface {v0, v3, v4, v5}, Lcom/tencent/mm/sdk/h/d;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result v0
+
+    .line 363
+    if-nez v0, :cond_1
+
+    .line 367
+    :goto_1
+    return v2
+
+    :cond_0
+    move v0, v2
+
+    .line 360
+    goto :goto_0
+
+    .line 366
+    :cond_1
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->DI(Ljava/lang/String;)V
+
+    move v2, v1
+
+    .line 367
+    goto :goto_1
+.end method
+
+.method public final a(Lcom/tencent/mm/az/f;)I
     .locals 1
 
     .prologue
@@ -141,21 +434,7 @@
     return v0
 .end method
 
-.method public final synthetic a(Lcom/tencent/mm/sdk/g/ae;)Z
-    .locals 1
-
-    .prologue
-    .line 17
-    check-cast p1, Lcom/tencent/mm/storage/e;
-
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->b(Lcom/tencent/mm/storage/e;)Z
-
-    move-result v0
-
-    return v0
-.end method
-
-.method public final aGi()Ljava/util/List;
+.method public final aWn()Ljava/util/List;
     .locals 4
 
     .prologue
@@ -166,14 +445,14 @@
 
     const-string/jumbo v2, "getAllGroupCard : select * from chatroom where chatroomname like \'%@groupcard\'"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 182
-    iget-object v0, p0, Lcom/tencent/mm/storage/f;->aqT:Lcom/tencent/mm/sdk/g/af;
+    iget-object v0, p0, Lcom/tencent/mm/storage/f;->aoX:Lcom/tencent/mm/sdk/h/d;
 
     const-string/jumbo v2, "select * from chatroom where chatroomname like \'%@groupcard\'"
 
-    invoke-interface {v0, v2, v1}, Lcom/tencent/mm/sdk/g/af;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-interface {v0, v2, v1}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
@@ -246,11 +525,25 @@
     invoke-interface {v2}, Landroid/database/Cursor;->close()V
 
     .line 196
-    invoke-static {v0}, Lcom/tencent/mm/storage/f;->yn(Ljava/lang/String;)Ljava/util/List;
+    invoke-static {v0}, Lcom/tencent/mm/storage/f;->DS(Ljava/lang/String;)Ljava/util/List;
 
     move-result-object v0
 
     goto :goto_0
+.end method
+
+.method public final bridge synthetic b(Lcom/tencent/mm/sdk/h/c;)Z
+    .locals 1
+
+    .prologue
+    .line 17
+    check-cast p1, Lcom/tencent/mm/storage/e;
+
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->b(Lcom/tencent/mm/storage/e;)Z
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public final b(Lcom/tencent/mm/storage/e;)Z
@@ -258,7 +551,7 @@
 
     .prologue
     .line 84
-    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/g/ah;->a(Lcom/tencent/mm/sdk/g/ae;)Z
+    invoke-super {p0, p1}, Lcom/tencent/mm/sdk/h/f;->b(Lcom/tencent/mm/sdk/h/c;)Z
 
     move-result v0
 
@@ -267,7 +560,7 @@
     .line 85
     iget-object v0, p1, Lcom/tencent/mm/storage/e;->field_chatroomname:Ljava/lang/String;
 
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/f;->yh(Ljava/lang/String;)V
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/f;->DI(Ljava/lang/String;)V
 
     .line 86
     const/4 v0, 0x1
@@ -282,7 +575,7 @@
 
     const-string/jumbo v1, "replace error"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 89
     const/4 v0, 0x0
@@ -290,7 +583,7 @@
     goto :goto_0
 .end method
 
-.method public final dN(Ljava/lang/String;)Ljava/lang/String;
+.method public final dY(Ljava/lang/String;)Ljava/lang/String;
     .locals 5
 
     .prologue
@@ -319,7 +612,7 @@
 
     invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ay;->kx(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -338,9 +631,9 @@
     move-result-object v0
 
     .line 318
-    iget-object v4, p0, Lcom/tencent/mm/storage/f;->aqT:Lcom/tencent/mm/sdk/g/af;
+    iget-object v4, p0, Lcom/tencent/mm/storage/f;->aoX:Lcom/tencent/mm/sdk/h/d;
 
-    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/g/af;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v0
 
@@ -381,7 +674,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 323
     invoke-interface {v0}, Landroid/database/Cursor;->close()V
@@ -423,297 +716,4 @@
     iget-object v0, v1, Lcom/tencent/mm/storage/e;->field_displayname:Ljava/lang/String;
 
     goto :goto_2
-.end method
-
-.method public final yo(Ljava/lang/String;)Lcom/tencent/mm/storage/e;
-    .locals 4
-
-    .prologue
-    .line 65
-    new-instance v0, Lcom/tencent/mm/storage/e;
-
-    invoke-direct {v0}, Lcom/tencent/mm/storage/e;-><init>()V
-
-    .line 66
-    iput-object p1, v0, Lcom/tencent/mm/storage/e;->field_chatroomname:Ljava/lang/String;
-
-    .line 67
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    const-string/jumbo v3, "chatroomname"
-
-    aput-object v3, v1, v2
-
-    invoke-super {p0, v0, v1}, Lcom/tencent/mm/sdk/g/ah;->c(Lcom/tencent/mm/sdk/g/ae;[Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 70
-    :goto_0
-    return-object v0
-
-    :cond_0
-    const/4 v0, 0x0
-
-    goto :goto_0
-.end method
-
-.method public final yp(Ljava/lang/String;)Lcom/tencent/mm/storage/e;
-    .locals 4
-
-    .prologue
-    .line 74
-    new-instance v0, Lcom/tencent/mm/storage/e;
-
-    invoke-direct {v0}, Lcom/tencent/mm/storage/e;-><init>()V
-
-    .line 75
-    iput-object p1, v0, Lcom/tencent/mm/storage/e;->field_chatroomname:Ljava/lang/String;
-
-    .line 76
-    const/4 v1, 0x1
-
-    new-array v1, v1, [Ljava/lang/String;
-
-    const/4 v2, 0x0
-
-    const-string/jumbo v3, "chatroomname"
-
-    aput-object v3, v1, v2
-
-    invoke-super {p0, v0, v1}, Lcom/tencent/mm/sdk/g/ah;->c(Lcom/tencent/mm/sdk/g/ae;[Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 79
-    :cond_0
-    return-object v0
-.end method
-
-.method public final yq(Ljava/lang/String;)Ljava/lang/String;
-    .locals 5
-
-    .prologue
-    const/4 v3, 0x0
-
-    const/4 v2, 0x0
-
-    const/4 v1, 0x1
-
-    .line 296
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
-
-    .line 298
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "select memberlist from chatroom where chatroomname=\'"
-
-    invoke-direct {v0, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iU(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v4, "\'"
-
-    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 300
-    iget-object v4, p0, Lcom/tencent/mm/storage/f;->aqT:Lcom/tencent/mm/sdk/g/af;
-
-    invoke-interface {v4, v0, v3}, Lcom/tencent/mm/sdk/g/af;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    .line 301
-    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
-
-    move-result v4
-
-    .line 302
-    if-gt v4, v1, :cond_1
-
-    :goto_1
-    invoke-static {v1}, Ljunit/framework/Assert;->assertTrue(Z)V
-
-    .line 303
-    if-gtz v4, :cond_2
-
-    .line 304
-    const-string/jumbo v1, "!44@/B4Tb64lLpIELL9O96QoKG6hYx4y45rzIZBjRMoLQqc="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "getMemberListByChatroomName chatroomName:"
-
-    invoke-direct {v2, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v4, " getCount ==0"
-
-    invoke-virtual {v2, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 305
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    move-object v0, v3
-
-    .line 312
-    :goto_2
-    return-object v0
-
-    :cond_0
-    move v0, v2
-
-    .line 296
-    goto :goto_0
-
-    :cond_1
-    move v1, v2
-
-    .line 302
-    goto :goto_1
-
-    .line 308
-    :cond_2
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 309
-    new-instance v1, Lcom/tencent/mm/storage/e;
-
-    invoke-direct {v1}, Lcom/tencent/mm/storage/e;-><init>()V
-
-    .line 310
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/storage/e;->c(Landroid/database/Cursor;)V
-
-    .line 311
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    .line 312
-    iget-object v0, v1, Lcom/tencent/mm/storage/e;->field_memberlist:Ljava/lang/String;
-
-    goto :goto_2
-.end method
-
-.method public final yr(Ljava/lang/String;)Ljava/util/List;
-    .locals 1
-
-    .prologue
-    .line 334
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->yq(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    .line 335
-    if-nez v0, :cond_0
-
-    .line 336
-    const/4 v0, 0x0
-
-    .line 338
-    :goto_0
-    return-object v0
-
-    :cond_0
-    invoke-static {v0}, Lcom/tencent/mm/storage/f;->yn(Ljava/lang/String;)Ljava/util/List;
-
-    move-result-object v0
-
-    goto :goto_0
-.end method
-
-.method public final ys(Ljava/lang/String;)Z
-    .locals 6
-
-    .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 360
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v0
-
-    if-lez v0, :cond_0
-
-    move v0, v1
-
-    :goto_0
-    invoke-static {v0}, Ljunit/framework/Assert;->assertTrue(Z)V
-
-    .line 362
-    iget-object v0, p0, Lcom/tencent/mm/storage/f;->aqT:Lcom/tencent/mm/sdk/g/af;
-
-    const-string/jumbo v3, "chatroom"
-
-    const-string/jumbo v4, "chatroomname=?"
-
-    new-array v5, v1, [Ljava/lang/String;
-
-    aput-object p1, v5, v2
-
-    invoke-interface {v0, v3, v4, v5}, Lcom/tencent/mm/sdk/g/af;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
-
-    move-result v0
-
-    .line 363
-    if-nez v0, :cond_1
-
-    .line 367
-    :goto_1
-    return v2
-
-    :cond_0
-    move v0, v2
-
-    .line 360
-    goto :goto_0
-
-    .line 366
-    :cond_1
-    invoke-virtual {p0, p1}, Lcom/tencent/mm/storage/f;->yh(Ljava/lang/String;)V
-
-    move v2, v1
-
-    .line 367
-    goto :goto_1
 .end method

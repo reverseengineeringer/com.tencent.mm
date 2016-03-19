@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic jBs:Lcom/tencent/mm/ui/widget/MMWebView;
+.field final synthetic lFR:Lcom/tencent/mm/ui/widget/MMWebView;
 
 
 # direct methods
@@ -23,8 +23,8 @@
     .locals 0
 
     .prologue
-    .line 214
-    iput-object p1, p0, Lcom/tencent/mm/ui/widget/MMWebView$d;->jBs:Lcom/tencent/mm/ui/widget/MMWebView;
+    .line 223
+    iput-object p1, p0, Lcom/tencent/mm/ui/widget/MMWebView$d;->lFR:Lcom/tencent/mm/ui/widget/MMWebView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -35,7 +35,7 @@
     .locals 0
 
     .prologue
-    .line 214
+    .line 223
     invoke-direct {p0, p1}, Lcom/tencent/mm/ui/widget/MMWebView$d;-><init>(Lcom/tencent/mm/ui/widget/MMWebView;)V
 
     return-void

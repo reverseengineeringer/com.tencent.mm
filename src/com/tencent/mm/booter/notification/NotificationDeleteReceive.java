@@ -5,8 +5,8 @@ import android.app.PendingIntent.CanceledException;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import com.tencent.mm.booter.notification.queue.c;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.booter.notification.queue.b;
+import com.tencent.mm.sdk.platformtools.u;
 import java.util.Iterator;
 
 public class NotificationDeleteReceive
@@ -18,7 +18,7 @@ public class NotificationDeleteReceive
     try
     {
       i = paramIntent.getIntExtra("com.tencent.notification.id.key", -1);
-      t.d("!56@/B4Tb64lLpKR3MWtFvfaIAekODdD9J/RcHA/L9jjKKKq6MqTNTuiGw==", "receive: %d", new Object[] { Integer.valueOf(i) });
+      u.d("!56@/B4Tb64lLpKR3MWtFvfaIAekODdD9J/RcHA/L9jjKKKq6MqTNTuiGw==", "receive: %d", new Object[] { Integer.valueOf(i) });
       if (i == -1) {
         return;
       }
@@ -29,7 +29,7 @@ public class NotificationDeleteReceive
       {
         i = -1;
       }
-      paramIntent = c.nL().iterator();
+      paramIntent = b.nw().iterator();
     }
     do
     {
@@ -42,14 +42,14 @@ public class NotificationDeleteReceive
     {
       if (paramContext == null)
       {
-        t.w("!56@/B4Tb64lLpKR3MWtFvfaIAekODdD9J/RcHA/L9jjKKKq6MqTNTuiGw==", "receive delete notification: %d, but no item in queue", new Object[] { Integer.valueOf(i) });
+        u.w("!56@/B4Tb64lLpKR3MWtFvfaIAekODdD9J/RcHA/L9jjKKKq6MqTNTuiGw==", "receive delete notification: %d, but no item in queue", new Object[] { Integer.valueOf(i) });
         return;
       }
-      if (bdK != null) {}
+      if (bnT != null) {}
       try
       {
-        bdK.send();
-        c.nL().remove(i);
+        bnT.send();
+        b.nw().remove(i);
         return;
       }
       catch (PendingIntent.CanceledException paramContext)

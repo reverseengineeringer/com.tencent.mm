@@ -2,12 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class fd$a
 {
-  public int aAp;
-  public String aAs;
-  public String anZ;
-  public int awo;
-  public int op = 0;
-  public String url;
+  public String azV;
 }
 
 /* Location:

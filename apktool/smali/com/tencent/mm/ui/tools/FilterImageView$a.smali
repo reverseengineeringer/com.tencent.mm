@@ -21,9 +21,9 @@
 
 
 # instance fields
-.field dNQ:I
+.field ePW:I
 
-.field final synthetic jqo:Lcom/tencent/mm/ui/tools/FilterImageView;
+.field final synthetic lvy:Lcom/tencent/mm/ui/tools/FilterImageView;
 
 
 # direct methods
@@ -31,17 +31,17 @@
     .locals 1
 
     .prologue
-    .line 341
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->jqo:Lcom/tencent/mm/ui/tools/FilterImageView;
+    .line 350
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->lvy:Lcom/tencent/mm/ui/tools/FilterImageView;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 342
+    .line 351
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->dNQ:I
+    iput v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->ePW:I
 
-    .line 401
+    .line 411
     return-void
 .end method
 
@@ -51,8 +51,8 @@
     .locals 1
 
     .prologue
-    .line 351
-    sget-object v0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqn:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
+    .line 360
+    sget-object v0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvx:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
 
     array-length v0, v0
 
@@ -63,8 +63,8 @@
     .locals 1
 
     .prologue
-    .line 356
-    sget-object v0, Lcom/tencent/mm/ui/tools/FilterImageView;->jqn:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
+    .line 365
+    sget-object v0, Lcom/tencent/mm/ui/tools/FilterImageView;->lvx:[Lcom/tencent/mm/ui/tools/FilterImageView$c;
 
     aget-object v0, v0, p1
 
@@ -75,26 +75,28 @@
     .locals 2
 
     .prologue
-    .line 361
+    .line 370
     int-to-long v0, p1
 
     return-wide v0
 .end method
 
 .method public final getView(ILandroid/view/View;Landroid/view/ViewGroup;)Landroid/view/View;
-    .locals 7
+    .locals 9
 
     .prologue
-    const/4 v6, -0x2
+    const/4 v8, -0x2
 
-    .line 366
+    const v7, 0x7f0710a1
+
+    .line 375
     invoke-virtual {p0, p1}, Lcom/tencent/mm/ui/tools/FilterImageView$a;->getItem(I)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/mm/ui/tools/FilterImageView$c;
 
-    .line 368
+    .line 377
     if-eqz p2, :cond_0
 
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -105,15 +107,15 @@
 
     if-nez v1, :cond_2
 
-    .line 369
+    .line 378
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->jqo:Lcom/tencent/mm/ui/tools/FilterImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->lvy:Lcom/tencent/mm/ui/tools/FilterImageView;
 
     invoke-static {v1}, Lcom/tencent/mm/ui/tools/FilterImageView;->b(Lcom/tencent/mm/ui/tools/FilterImageView;)Landroid/app/Activity;
 
     move-result-object v1
 
-    sget v2, Lcom/tencent/mm/a$k;->filter_selecter_item:I
+    const v2, 0x7f0a0585
 
     const/4 v3, 0x0
 
@@ -121,13 +123,13 @@
 
     move-result-object p2
 
-    .line 370
+    .line 379
     new-instance v2, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;
 
     invoke-direct {v2, p0}, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;-><init>(Lcom/tencent/mm/ui/tools/FilterImageView$a;)V
 
-    .line 371
-    sget v1, Lcom/tencent/mm/a$i;->filter_selecter_tv:I
+    .line 380
+    const v1, 0x7f0710a2
 
     invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -135,32 +137,30 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    iput-object v1, v2, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->cqb:Landroid/widget/TextView;
+    iput-object v1, v2, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->cHA:Landroid/widget/TextView;
 
-    .line 372
-    sget v1, Lcom/tencent/mm/a$i;->filter_selecter_img:I
-
-    invoke-virtual {p2, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 381
+    invoke-virtual {p2, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/ImageView;
 
-    iput-object v1, v2, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->jqp:Landroid/widget/ImageView;
+    iput-object v1, v2, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->lvz:Landroid/widget/ImageView;
 
-    .line 373
+    .line 382
     invoke-virtual {p2, v2}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     move-object v1, v2
 
-    .line 380
+    .line 390
     :cond_1
     :goto_0
-    iget-object v3, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->cqb:Landroid/widget/TextView;
+    iget-object v3, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->cHA:Landroid/widget/TextView;
 
-    iget-object v2, v0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->jqv:Lcom/tencent/mm/ui/tools/FilterImageView$b;
+    iget-object v2, v0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->lvE:Lcom/tencent/mm/ui/tools/FilterImageView$b;
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/s;->aEJ()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->aUB()Ljava/lang/String;
 
     move-result-object v4
 
@@ -172,14 +172,14 @@
 
     if-eqz v5, :cond_3
 
-    iget-object v2, v2, Lcom/tencent/mm/ui/tools/FilterImageView$b;->jqs:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/ui/tools/FilterImageView$b;->lfO:Ljava/lang/String;
 
     :goto_1
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 382
+    .line 392
     :try_start_0
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->jqo:Lcom/tencent/mm/ui/tools/FilterImageView;
+    iget-object v2, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->lvy:Lcom/tencent/mm/ui/tools/FilterImageView;
 
     invoke-static {v2}, Lcom/tencent/mm/ui/tools/FilterImageView;->b(Lcom/tencent/mm/ui/tools/FilterImageView;)Landroid/app/Activity;
 
@@ -195,7 +195,7 @@
 
     invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->icon:Ljava/lang/String;
+    iget-object v0, v0, Lcom/tencent/mm/ui/tools/FilterImageView$c;->aEZ:Ljava/lang/String;
 
     invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -209,54 +209,52 @@
 
     move-result-object v0
 
-    .line 383
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/e;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
+    .line 393
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/d;->decodeStream(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
 
     move-result-object v2
 
-    iput-object v2, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->jqq:Landroid/graphics/Bitmap;
+    iput-object v2, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->lvA:Landroid/graphics/Bitmap;
 
-    .line 384
+    .line 394
     invoke-virtual {v0}, Ljava/io/InputStream;->close()V
 
-    .line 385
-    iget-object v0, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->jqp:Landroid/widget/ImageView;
+    .line 395
+    iget-object v0, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->lvz:Landroid/widget/ImageView;
 
-    iget-object v1, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->jqq:Landroid/graphics/Bitmap;
+    iget-object v1, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->lvA:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 387
+    .line 397
     :goto_2
     new-instance v0, Landroid/view/ViewGroup$LayoutParams;
 
-    invoke-direct {v0, v6, v6}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+    invoke-direct {v0, v8, v8}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
 
     invoke-virtual {p2, v0}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 393
-    iget v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->dNQ:I
+    .line 403
+    iget v0, p0, Lcom/tencent/mm/ui/tools/FilterImageView$a;->ePW:I
 
     if-ne p1, v0, :cond_6
 
-    .line 394
-    sget v0, Lcom/tencent/mm/a$i;->filter_selecter_img:I
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    .line 404
+    invoke-virtual {p2, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$h;->camera_filter_reviewbox_checked:I
+    const v1, 0x7f04078c
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 398
+    .line 408
     :goto_3
     return-object p2
 
-    .line 375
+    .line 384
     :cond_2
     invoke-virtual {p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -264,19 +262,40 @@
 
     check-cast v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;
 
-    .line 376
-    iget-object v2, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->jqq:Landroid/graphics/Bitmap;
+    .line 385
+    iget-object v2, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->lvA:Landroid/graphics/Bitmap;
 
     if-eqz v2, :cond_1
 
-    .line 377
-    iget-object v2, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->jqq:Landroid/graphics/Bitmap;
+    .line 386
+    const-string/jumbo v2, "!32@/B4Tb64lLpLxetNgbG3pY/jjX49X0q4a"
+
+    const-string/jumbo v3, "recycle bitmap:%s"
+
+    const/4 v4, 0x1
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    iget-object v6, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->lvA:Landroid/graphics/Bitmap;
+
+    invoke-virtual {v6}, Ljava/lang/Object;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    aput-object v6, v4, v5
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 387
+    iget-object v2, v1, Lcom/tencent/mm/ui/tools/FilterImageView$a$a;->lvA:Landroid/graphics/Bitmap;
 
     invoke-virtual {v2}, Landroid/graphics/Bitmap;->recycle()V
 
-    goto :goto_0
+    goto/16 :goto_0
 
-    .line 380
+    .line 390
     :cond_3
     const-string/jumbo v5, "zh_TW"
 
@@ -295,24 +314,22 @@
     if-eqz v4, :cond_5
 
     :cond_4
-    iget-object v2, v2, Lcom/tencent/mm/ui/tools/FilterImageView$b;->jqt:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/ui/tools/FilterImageView$b;->lvC:Ljava/lang/String;
 
-    goto :goto_1
+    goto/16 :goto_1
 
     :cond_5
-    iget-object v2, v2, Lcom/tencent/mm/ui/tools/FilterImageView$b;->jqu:Ljava/lang/String;
+    iget-object v2, v2, Lcom/tencent/mm/ui/tools/FilterImageView$b;->lvD:Ljava/lang/String;
 
-    goto :goto_1
+    goto/16 :goto_1
 
-    .line 396
+    .line 406
     :cond_6
-    sget v0, Lcom/tencent/mm/a$i;->filter_selecter_img:I
-
-    invoke-virtual {p2, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p2, v7}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$h;->camera_filter_reviewbox_normal:I
+    const v1, 0x7f040807
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 

@@ -2,40 +2,38 @@ package com.tencent.mm.ui.bindgooglecontact;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.d.b.k;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelfriend.ay;
-import com.tencent.mm.modelfriend.x;
-import com.tencent.mm.modelfriend.y;
-import com.tencent.mm.modelfriend.z;
-import com.tencent.mm.p.i;
-import com.tencent.mm.p.i.a;
-import com.tencent.mm.p.u;
-import com.tencent.mm.protocal.b.ty;
-import com.tencent.mm.protocal.b.vz;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.bn;
+import android.widget.Toast;
+import com.tencent.mm.aa.b;
+import com.tencent.mm.modelfriend.o;
+import com.tencent.mm.pluginsdk.model.l;
+import com.tencent.mm.protocal.b.abr;
+import com.tencent.mm.protocal.b.zk;
+import com.tencent.mm.q.d.a;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.h;
+import com.tencent.mm.storage.q;
 import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.cn;
+import com.tencent.mm.ui.base.g.d;
 import com.tencent.mm.ui.friend.InviteFriendUI;
-import com.tencent.mm.ui.tools.ex;
-import com.tencent.mm.x.c;
+import com.tencent.mm.ui.tools.r;
+import com.tencent.mm.ui.tools.r.b;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -50,37 +48,44 @@ import org.json.JSONObject;
 
 public class GoogleFriendUI
   extends MMActivity
-  implements AdapterView.OnItemClickListener, i.a, d, n.a
+  implements AdapterView.OnItemClickListener, d.a, com.tencent.mm.r.d, a.a
 {
-  private HashMap bCk = new HashMap();
-  private String bCl;
-  private ProgressDialog cHR;
-  private boolean cRW = false;
-  private String dGq;
-  private TextView dzR;
-  private boolean enm = false;
-  private String iNJ;
-  private ListView iNR;
-  private n iNS;
-  private c iNT;
-  private ArrayList iNU = new ArrayList();
-  private String iNq;
-  private int iNs;
+  private HashMap bPx = new HashMap();
+  private String bPy;
+  private ProgressDialog dfT;
+  private String eIk;
+  private TextView erD;
+  private boolean fxi = false;
+  private String kMD;
+  private int kMF;
+  private String kMW;
+  private ListView kNe;
+  private a kNf;
+  private boolean kNg = false;
+  private com.tencent.mm.aa.c kNh;
+  private ArrayList kNi = new ArrayList();
   
-  private void MT()
+  private void Rb()
   {
-    if ((cHR == null) || (!cHR.isShowing()))
+    if ((dfT == null) || (!dfT.isShowing()))
     {
-      getString(a.n.app_tip);
-      cHR = com.tencent.mm.ui.base.h.a(this, getString(a.n.app_waiting), true, new t(this));
+      getString(2131430877);
+      dfT = com.tencent.mm.ui.base.g.a(this, getString(2131430941), true, new DialogInterface.OnCancelListener()
+      {
+        public final void onCancel(DialogInterface paramAnonymousDialogInterface)
+        {
+          GoogleFriendUI.c(GoogleFriendUI.this);
+          com.tencent.mm.model.ah.tE().c(GoogleFriendUI.d(GoogleFriendUI.this));
+        }
+      });
     }
   }
   
-  private void a(Cursor paramCursor, y paramy)
+  private void a(Cursor paramCursor, final o paramo)
   {
     ArrayList localArrayList1 = new ArrayList();
     ArrayList localArrayList2 = new ArrayList();
-    ArrayList localArrayList3 = new ArrayList();
+    final ArrayList localArrayList3 = new ArrayList();
     if (paramCursor != null)
     {
       paramCursor.moveToFirst();
@@ -88,8 +93,8 @@ public class GoogleFriendUI
       int i = 0;
       while (i < j)
       {
-        localObject = new y();
-        ((y)localObject).c(paramCursor);
+        localObject = new o();
+        ((o)localObject).c(paramCursor);
         localArrayList1.add(field_googlegmail);
         localArrayList2.add(Integer.valueOf(i));
         localArrayList3.add(localObject);
@@ -98,265 +103,268 @@ public class GoogleFriendUI
       }
       localArrayList2.add(Integer.valueOf(-1));
     }
-    paramCursor = ipQ.iqj;
-    Object localObject = getResources().getString(a.n.gcontact_select_email);
-    getResources().getString(a.n.app_cancel);
-    com.tencent.mm.ui.base.h.a(paramCursor, (String)localObject, localArrayList1, localArrayList2, new s(this, localArrayList3, paramy));
+    paramCursor = koJ.kpc;
+    Object localObject = getResources().getString(2131428708);
+    getResources().getString(2131430884);
+    com.tencent.mm.ui.base.g.a(paramCursor, (String)localObject, localArrayList1, localArrayList2, new g.d()
+    {
+      public final void aq(int paramAnonymousInt1, int paramAnonymousInt2)
+      {
+        if (paramAnonymousInt2 != -1) {
+          GoogleFriendUI.a(GoogleFriendUI.this, (o)localArrayList3.get(paramAnonymousInt2), paramo);
+        }
+      }
+    });
   }
   
-  private void a(y paramy1, y paramy2)
+  private void a(o paramo1, o paramo2)
   {
     Object localObject = new ArrayList();
     ((ArrayList)localObject).add(field_googlegmail);
-    localObject = new com.tencent.mm.x.b((ArrayList)localObject);
-    com.tencent.mm.sdk.platformtools.t.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "gmailItem:%s", new Object[] { field_googleitemid });
-    ax.tm().d((com.tencent.mm.q.j)localObject);
-    if (paramy2 == null)
+    localObject = new b((ArrayList)localObject);
+    u.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "gmailItem:%s", new Object[] { field_googleitemid });
+    com.tencent.mm.model.ah.tE().d((com.tencent.mm.r.j)localObject);
+    if (paramo2 == null)
     {
-      bCe = field_googleitemid;
+      bPr = field_googleitemid;
       field_googlecgistatus = 0;
-      ay.yJ().b(paramy1);
+      com.tencent.mm.modelfriend.ah.zy().b(paramo1);
     }
     for (;;)
     {
-      iNS.Eb();
+      kNf.Gk();
       return;
-      bCe = field_googleitemid;
+      bPr = field_googleitemid;
       field_googlecgistatus = 0;
-      ay.yJ().b(paramy2);
+      com.tencent.mm.modelfriend.ah.zy().b(paramo2);
     }
   }
   
-  private void a(vz paramvz)
+  private void a(abr paramabr)
   {
     try
     {
-      com.tencent.mm.sdk.platformtools.t.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "handleListGoogleContactCGIResponse Count:%d", new Object[] { Integer.valueOf(eJB) });
-      if (iNS != null) {
-        iNS.Eb();
+      u.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "handleListGoogleContactCGIResponse Count:%d", new Object[] { Integer.valueOf(fUi) });
+      if (kNf != null) {
+        kNf.Gk();
       }
       return;
     }
     finally
     {
-      paramvz = finally;
-      throw paramvz;
+      paramabr = finally;
+      throw paramabr;
     }
   }
   
-  private void aNG()
+  private void aln()
   {
-    if ((cHR != null) && (cHR.isShowing())) {
-      cHR.dismiss();
+    u.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "updateToken");
+    if (fxi) {
+      bPy = ((String)com.tencent.mm.model.ah.tD().rn().get(208901, null));
     }
-  }
-  
-  private void aNH()
-  {
-    cRW = false;
-    MT();
-    new b(this, bCl, (byte)0).execute(new Void[0]);
-  }
-  
-  private void aax()
-  {
-    com.tencent.mm.sdk.platformtools.t.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "updateToken");
-    if (enm) {
-      bCl = ((String)ax.tl().rf().get(208901, null));
-    }
-    while ((TextUtils.isEmpty(bCl)) || ((!enm) && (TextUtils.isEmpty(iNJ))))
+    while ((TextUtils.isEmpty(bPy)) || ((!fxi) && (TextUtils.isEmpty(kMW))))
     {
-      f(BindGoogleContactUI.class);
+      g(BindGoogleContactUI.class);
       finish();
       return;
-      bCl = ((String)ax.tl().rf().get(208902, null));
-      iNJ = ((String)ax.tl().rf().get(208904, null));
+      bPy = ((String)com.tencent.mm.model.ah.tD().rn().get(208902, null));
+      kMW = ((String)com.tencent.mm.model.ah.tD().rn().get(208904, null));
     }
-    if (enm)
+    if (fxi)
     {
-      aNH();
+      bdy();
       return;
     }
-    MT();
-    new c(iNJ).execute(new Void[0]);
+    Rb();
+    new c(kMW).execute(new Void[0]);
   }
   
-  private void fz(boolean paramBoolean)
+  private void bdx()
   {
-    dzR.setVisibility(0);
+    if ((dfT != null) && (dfT.isShowing())) {
+      dfT.dismiss();
+    }
+  }
+  
+  private void bdy()
+  {
+    kNg = false;
+    Rb();
+    new b(this, bPy, (byte)0).execute(new Void[0]);
+  }
+  
+  private void hD(boolean paramBoolean)
+  {
+    erD.setVisibility(0);
     String str;
-    if (!al.cN(this)) {
-      str = getString(a.n.gcontact_network_error_msg);
+    if (!com.tencent.mm.sdk.platformtools.ah.ds(this)) {
+      str = getString(2131428706);
     }
     for (;;)
     {
-      dzR.setText(str);
+      erD.setText(str);
       return;
       if (paramBoolean) {
-        str = getString(a.n.gcontact_empty);
+        str = getString(2131428694);
       } else {
-        str = getString(a.n.gcontact_default_error_msg);
+        str = getString(2131428705);
       }
     }
   }
   
-  protected final void DV()
+  protected final void Gb()
   {
-    nh(a.n.gcontact_friend_title);
-    a(new p(this));
-    dzR = ((TextView)findViewById(a.i.empty));
-    iNR = ((ListView)findViewById(a.i.gcontact_friend_lv));
-    iNR.setAdapter(iNS);
-    iNR.setOnItemClickListener(this);
-    ex localex = new ex(true, true);
-    juU = new q(this);
-    a(localex);
+    qb(2131428691);
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        finish();
+        return true;
+      }
+    });
+    erD = ((TextView)findViewById(2131166566));
+    kNe = ((ListView)findViewById(2131169168));
+    kNe.setAdapter(kNf);
+    kNe.setOnItemClickListener(this);
+    r localr = new r(true, true);
+    lxA = new r.b()
+    {
+      public final void Gd() {}
+      
+      public final void Ge() {}
+      
+      public final void Gf() {}
+      
+      public final void Gg() {}
+      
+      public final boolean kE(String paramAnonymousString)
+      {
+        return false;
+      }
+      
+      public final void kF(String paramAnonymousString)
+      {
+        GoogleFriendUI.a(GoogleFriendUI.this, ay.kx(paramAnonymousString));
+        if (GoogleFriendUI.a(GoogleFriendUI.this) != null) {
+          GoogleFriendUI.a(GoogleFriendUI.this).pH(GoogleFriendUI.b(GoogleFriendUI.this));
+        }
+      }
+    };
+    a(localr);
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.q.j paramj)
+  public final void a(int paramInt1, int paramInt2, String paramString, com.tencent.mm.r.j paramj)
   {
-    String str = paramString;
-    if (TextUtils.isEmpty(paramString)) {
+    String str;
+    int i;
+    if (TextUtils.isEmpty(paramString))
+    {
       str = "";
-    }
-    com.tencent.mm.sdk.platformtools.t.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "[onSceneEnd] errType:%d,errCode:%d,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), str });
-    int i = paramj.getType();
-    if ((paramInt1 == 0) && (paramInt2 == 0)) {
+      u.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "[onSceneEnd] errType:%d,errCode:%d,errMsg:%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), str });
+      i = paramj.getType();
+      if ((paramInt1 != 0) || (paramInt2 != 0)) {
+        break label265;
+      }
       switch (i)
       {
       default: 
-        com.tencent.mm.sdk.platformtools.t.w("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "Unknow scene type.");
+        u.w("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "Unknow scene type.");
       }
     }
     for (;;)
     {
-      aNG();
+      bdx();
       return;
-      if (iNS != null)
+      str = paramString;
+      break;
+      if (kNf != null)
       {
-        paramString = (com.tencent.mm.x.b)paramj;
-        com.tencent.mm.sdk.platformtools.t.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "count:%d", new Object[] { Integer.valueOf(zaeJB) });
-        paramString = bCe;
-        com.tencent.mm.sdk.platformtools.t.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "gmailItem:%s", new Object[] { paramString });
-        ay.yJ().o(paramString, 1);
-        iNS.Eb();
+        paramString = (b)paramj;
+        u.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "count:%d", new Object[] { Integer.valueOf(zOfUi) });
+        paramString = bPr;
+        u.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "gmailItem:%s", new Object[] { paramString });
+        com.tencent.mm.modelfriend.ah.zy().s(paramString, 1);
+        kNf.Gk();
         continue;
-        if (iNS != null)
+        if (kNf != null)
         {
-          paramString = bCe;
-          com.tencent.mm.sdk.platformtools.t.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "gmailItem:%s", new Object[] { paramString });
-          ay.yJ().o(paramString, 1);
-          iNS.Eb();
+          paramString = bPr;
+          u.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "gmailItem:%s", new Object[] { paramString });
+          com.tencent.mm.modelfriend.ah.zy().s(paramString, 1);
+          kNf.Gk();
           continue;
-          a(((c)paramj).zb());
+          a(((com.tencent.mm.aa.c)paramj).zP());
           continue;
           switch (i)
           {
           default: 
-            com.tencent.mm.sdk.platformtools.t.w("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "Unknow scene type.");
+            u.w("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "Unknow scene type.");
             break;
           case 489: 
-            if (iNS != null)
+            if (kNf != null)
             {
-              paramString = (com.tencent.mm.x.b)paramj;
-              com.tencent.mm.sdk.platformtools.t.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "count:%d", new Object[] { Integer.valueOf(zaeJB) });
-              paramString = bCe;
-              com.tencent.mm.sdk.platformtools.t.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "gmailItem:%s", new Object[] { paramString });
-              ay.yJ().o(paramString, 1);
-              iNS.Eb();
+              paramString = (b)paramj;
+              u.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "count:%d", new Object[] { Integer.valueOf(zOfUi) });
+              paramString = bPr;
+              u.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "gmailItem:%s", new Object[] { paramString });
+              com.tencent.mm.modelfriend.ah.zy().s(paramString, 1);
+              kNf.Gk();
             }
             break;
           case 30: 
           case 137: 
             if (paramInt2 == -87) {
-              com.tencent.mm.ui.base.h.x(this, getString(a.n.contact_info_biz_join_fans_limit), "");
+              com.tencent.mm.ui.base.g.y(this, getString(2131431097), "");
             }
-            if (iNS != null)
+            while (kNf != null)
             {
-              paramString = bCe;
-              com.tencent.mm.sdk.platformtools.t.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "gmailItem:%s", new Object[] { paramString });
-              ay.yJ().o(paramString, 2);
-              iNS.Eb();
+              paramString = bPr;
+              u.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "gmailItem:%s", new Object[] { paramString });
+              com.tencent.mm.modelfriend.ah.zy().s(paramString, 2);
+              kNf.Gk();
+              break;
+              if ((paramInt2 == -24) && (!ay.kz(paramString))) {
+                Toast.makeText(this, paramString, 1).show();
+              }
             }
-            break;
           case 488: 
-            fz(false);
+            label265:
+            hD(false);
           }
         }
       }
     }
   }
   
-  public final void fF(String paramString)
+  public final void fZ(String paramString)
   {
-    if (iNS != null) {
-      iNS.notifyDataSetChanged();
+    if (kNf != null) {
+      kNf.notifyDataSetChanged();
     }
   }
   
   protected final int getLayoutId()
   {
-    return a.k.gcontact_friend;
-  }
-  
-  public final void nW(int paramInt)
-  {
-    if (iNS == null) {}
-    for (;;)
-    {
-      return;
-      y localy = (y)iNS.getItem(paramInt);
-      if (localy != null)
-      {
-        switch (field_status)
-        {
-        default: 
-          return;
-        case 0: 
-          localObject1 = new com.tencent.mm.pluginsdk.ui.applet.a(this, new r(this));
-          Object localObject2 = field_googleitemid;
-          gRW = false;
-          gRV = true;
-          gRX = ((String)localObject2);
-          gRW = false;
-          localObject2 = new LinkedList();
-          ((LinkedList)localObject2).add(Integer.valueOf(58));
-          ((com.tencent.mm.pluginsdk.ui.applet.a)localObject1).a(field_username, (LinkedList)localObject2, true);
-          field_googlecgistatus = 0;
-          ay.yJ().b(localy);
-          iNS.Eb();
-          return;
-        }
-        Object localObject1 = field_googleid;
-        localObject1 = ay.yJ().gC((String)localObject1);
-        if ((localObject1 == null) || (((Cursor)localObject1).getCount() <= 1)) {
-          a(localy, null);
-        }
-        while (localObject1 != null)
-        {
-          ((Cursor)localObject1).close();
-          return;
-          a((Cursor)localObject1, localy);
-        }
-      }
-    }
+    return 2131363090;
   }
   
   protected void onActivityResult(int paramInt1, int paramInt2, Intent paramIntent)
   {
-    com.tencent.mm.sdk.platformtools.t.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "requestCode:%d, resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    u.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "requestCode:%d, resultCode:%d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
     if (paramInt1 == 2005)
     {
       if (paramInt2 == -1)
       {
-        enm = paramIntent.getBooleanExtra("gpservices", false);
-        aax();
+        fxi = paramIntent.getBooleanExtra("gpservices", false);
+        aln();
       }
     }
     else {
       return;
     }
-    enm = paramIntent.getBooleanExtra("gpservices", false);
+    fxi = paramIntent.getBooleanExtra("gpservices", false);
     finish();
   }
   
@@ -368,47 +376,47 @@ public class GoogleFriendUI
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    iNq = ((String)ax.tl().rf().get(208903, null));
-    if (TextUtils.isEmpty(iNq)) {
+    kMD = ((String)com.tencent.mm.model.ah.tD().rn().get(208903, null));
+    if (TextUtils.isEmpty(kMD)) {
       finish();
     }
-    iNs = getIntent().getIntExtra("enter_scene", 0);
-    iNS = new n(this, iNq);
-    iNS.iNK = this;
-    DV();
-    enm = x.aC(this);
-    if (enm)
+    kMF = getIntent().getIntExtra("enter_scene", 0);
+    kNf = new a(this, kMD);
+    kNf.kMX = this;
+    Gb();
+    fxi = com.tencent.mm.modelfriend.n.aM(this);
+    if (fxi)
     {
-      com.tencent.mm.sdk.platformtools.t.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "startActivityCheckGooglePlayServices");
+      u.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "startActivityCheckGooglePlayServices");
       startActivityForResult(new Intent("com.tencent.mm.gms.CHECK_GP_SERVICES"), 2005);
     }
     for (;;)
     {
-      ay.yJ().clear();
+      com.tencent.mm.modelfriend.ah.zy().clear();
       return;
-      aax();
+      aln();
     }
   }
   
   protected void onDestroy()
   {
     super.onDestroy();
-    ay.yJ().clear();
+    com.tencent.mm.modelfriend.ah.zy().clear();
   }
   
   public void onItemClick(AdapterView paramAdapterView, View paramView, int paramInt, long paramLong)
   {
-    com.tencent.mm.sdk.platformtools.t.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "onItemClick position:%d,", new Object[] { Integer.valueOf(paramInt) });
-    if (iNS != null)
+    u.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "onItemClick position:%d,", new Object[] { Integer.valueOf(paramInt) });
+    if (kNf != null)
     {
-      int i = iNR.getHeaderViewsCount();
-      paramAdapterView = (y)iNS.getItem(paramInt - i);
+      int i = kNe.getHeaderViewsCount();
+      paramAdapterView = (o)kNf.getItem(paramInt - i);
       if (paramAdapterView != null)
       {
         paramView = field_username;
-        com.tencent.mm.sdk.platformtools.t.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "jumpToProfile email:%s, username:%s", new Object[] { field_googlegmail, paramView });
-        localObject = ax.tl().ri().yM(paramView);
-        if (((localObject == null) || (!com.tencent.mm.h.a.cd(field_type))) && (TextUtils.isEmpty(field_nickname))) {
+        u.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "jumpToProfile email:%s, username:%s", new Object[] { field_googlegmail, paramView });
+        localObject = com.tencent.mm.model.ah.tD().rq().Ep(paramView);
+        if (((localObject == null) || (!com.tencent.mm.h.a.ce(field_type))) && (TextUtils.isEmpty(field_nickname))) {
           break label239;
         }
         localObject = new Intent();
@@ -420,7 +428,7 @@ public class GoogleFriendUI
         ((Intent)localObject).putExtra("Contact_Source_FMessage", 58);
         ((Intent)localObject).putExtra("Contact_Scene", 58);
         if ((paramView != null) && (paramView.length() > 0)) {
-          com.tencent.mm.plugin.a.a.bWW.d((Intent)localObject, ipQ.iqj);
+          com.tencent.mm.plugin.a.a.coa.d((Intent)localObject, koJ.kpc);
         }
       }
     }
@@ -442,20 +450,80 @@ public class GoogleFriendUI
   protected void onResume()
   {
     super.onResume();
-    ax.tm().a(488, this);
-    ax.tm().a(489, this);
-    u.uN().d(this);
-    if (iNS != null) {
-      iNS.Eb();
+    com.tencent.mm.model.ah.tE().a(488, this);
+    com.tencent.mm.model.ah.tE().a(489, this);
+    com.tencent.mm.q.n.vb().d(this);
+    if (kNf != null) {
+      kNf.Gk();
     }
   }
   
   protected void onStop()
   {
     super.onStop();
-    ax.tm().b(488, this);
-    ax.tm().b(489, this);
-    u.uN().e(this);
+    com.tencent.mm.model.ah.tE().b(488, this);
+    com.tencent.mm.model.ah.tE().b(489, this);
+    com.tencent.mm.q.n.vb().e(this);
+  }
+  
+  public final void qV(int paramInt)
+  {
+    if (kNf == null) {}
+    for (;;)
+    {
+      return;
+      o localo = (o)kNf.getItem(paramInt);
+      if (localo != null)
+      {
+        switch (field_status)
+        {
+        default: 
+          return;
+        case 0: 
+          localObject1 = new com.tencent.mm.pluginsdk.ui.applet.a(this, new com.tencent.mm.pluginsdk.ui.applet.a.a()
+          {
+            public final void a(boolean paramAnonymousBoolean1, boolean paramAnonymousBoolean2, String paramAnonymousString1, String paramAnonymousString2)
+            {
+              u.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "MicroMsg.AddContact ok:%b hasSentVerify:%b", new Object[] { Boolean.valueOf(paramAnonymousBoolean1), Boolean.valueOf(paramAnonymousBoolean2) });
+              if ((paramAnonymousBoolean1) || (paramAnonymousBoolean2))
+              {
+                u.d("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "gmailItem:%s", new Object[] { paramAnonymousString2 });
+                com.tencent.mm.modelfriend.ah.zy().s(paramAnonymousString2, 1);
+              }
+              for (;;)
+              {
+                GoogleFriendUI.a(GoogleFriendUI.this).Gk();
+                return;
+                com.tencent.mm.modelfriend.ah.zy().s(paramAnonymousString2, 2);
+              }
+            }
+          });
+          Object localObject2 = field_googleitemid;
+          iHV = false;
+          iHU = true;
+          iHW = ((String)localObject2);
+          iHV = false;
+          localObject2 = new LinkedList();
+          ((LinkedList)localObject2).add(Integer.valueOf(58));
+          ((com.tencent.mm.pluginsdk.ui.applet.a)localObject1).a(field_username, (LinkedList)localObject2, true);
+          field_googlecgistatus = 0;
+          com.tencent.mm.modelfriend.ah.zy().b(localo);
+          kNf.Gk();
+          return;
+        }
+        Object localObject1 = field_googleid;
+        localObject1 = com.tencent.mm.modelfriend.ah.zy().hz((String)localObject1);
+        if ((localObject1 == null) || (((Cursor)localObject1).getCount() <= 1)) {
+          a(localo, null);
+        }
+        while (localObject1 != null)
+        {
+          ((Cursor)localObject1).close();
+          return;
+          a((Cursor)localObject1, localo);
+        }
+      }
+    }
   }
   
   public static enum a {}
@@ -463,17 +531,17 @@ public class GoogleFriendUI
   final class b
     extends AsyncTask
   {
-    private String bCl;
-    private GoogleFriendUI.a iOd = GoogleFriendUI.a.iOb;
+    private String bPy;
+    private GoogleFriendUI.a kNr = GoogleFriendUI.a.kNp;
     private Context mContext;
     
     private b(Context paramContext, String paramString)
     {
       mContext = paramContext;
-      bCl = paramString;
+      bPy = paramString;
     }
     
-    private void AQ(String paramString)
+    private void GF(String paramString)
     {
       JSONArray localJSONArray1 = new JSONObject(paramString).getJSONObject("feed").getJSONArray("entry");
       int i;
@@ -542,9 +610,9 @@ public class GoogleFriendUI
             while (j < localJSONArray2.length())
             {
               paramString = localJSONArray2.getJSONObject(j).getString("address");
-              if ((!TextUtils.isEmpty(paramString)) && (bn.xC(paramString)) && (!paramString.equals(GoogleFriendUI.h(GoogleFriendUI.this))))
+              if ((!TextUtils.isEmpty(paramString)) && (ay.De(paramString)) && (!paramString.equals(GoogleFriendUI.h(GoogleFriendUI.this))))
               {
-                localObject3 = new y();
+                localObject3 = new o();
                 field_googleid = ((String)localObject1);
                 field_googleitemid = ((String)localObject1 + paramString);
                 field_googlename = ((String)localObject2);
@@ -566,9 +634,9 @@ public class GoogleFriendUI
       }
     }
     
-    private Void VE()
+    private Void acy()
     {
-      com.tencent.mm.sdk.platformtools.t.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "doInBackground");
+      u.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "doInBackground");
       int j = 0;
       int i = 1;
       for (;;)
@@ -576,15 +644,15 @@ public class GoogleFriendUI
         int k;
         try
         {
-          com.tencent.mm.sdk.platformtools.t.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "startInde:%d, totalCount:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
-          localObject = bCl;
+          u.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "startInde:%d, totalCount:%d", new Object[] { Integer.valueOf(i), Integer.valueOf(j) });
+          localObject = bPy;
           localObject = new URL("https://www.google.com/m8/feeds/contacts/default/property-email?alt=" + "json" + "&max-results=100&start-index=" + i + "&access_token=" + (String)localObject);
-          com.tencent.mm.sdk.platformtools.t.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "requestURL:%s", new Object[] { ((URL)localObject).toString() });
+          u.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "requestURL:%s", new Object[] { ((URL)localObject).toString() });
           localObject = (HttpURLConnection)((URL)localObject).openConnection();
           ((HttpURLConnection)localObject).setRequestMethod("GET");
           ((HttpURLConnection)localObject).setConnectTimeout(20000);
           j = ((HttpURLConnection)localObject).getResponseCode();
-          com.tencent.mm.sdk.platformtools.t.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "responseCode:%d", new Object[] { Integer.valueOf(j) });
+          u.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "responseCode:%d", new Object[] { Integer.valueOf(j) });
           if (j != 200) {
             continue;
           }
@@ -595,36 +663,36 @@ public class GoogleFriendUI
           if (k <= 0) {
             break label364;
           }
-          AQ((String)localObject);
+          GF((String)localObject);
         }
         catch (IOException localIOException)
         {
           Object localObject;
-          iOd = GoogleFriendUI.a.iOa;
-          com.tencent.mm.sdk.platformtools.t.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "IOException" + localIOException.getMessage());
+          kNr = GoogleFriendUI.a.kNo;
+          u.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "IOException" + localIOException.getMessage());
           return null;
           j = 0;
           continue;
         }
         catch (JSONException localJSONException)
         {
-          iOd = GoogleFriendUI.a.iOb;
-          com.tencent.mm.sdk.platformtools.t.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "JSONException" + localJSONException.getMessage());
+          kNr = GoogleFriendUI.a.kNp;
+          u.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "JSONException" + localJSONException.getMessage());
           return null;
         }
         if ((j == 0) || (GoogleFriendUI.g(GoogleFriendUI.this)))
         {
-          iOd = GoogleFriendUI.a.iNY;
+          kNr = GoogleFriendUI.a.kNm;
           return null;
           if (j == 401)
           {
-            com.tencent.mm.sdk.platformtools.t.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "Server OAuth Error,Please Try Again.");
+            u.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "Server OAuth Error,Please Try Again.");
             ((HttpURLConnection)localObject).disconnect();
             localObject = null;
           }
           else
           {
-            com.tencent.mm.sdk.platformtools.t.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "Unknow Error.");
+            u.e("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "Unknow Error.");
           }
         }
         else
@@ -659,7 +727,7 @@ public class GoogleFriendUI
     protected final void onPreExecute()
     {
       super.onPreExecute();
-      com.tencent.mm.sdk.platformtools.t.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "onPreExecute");
+      u.i("!64@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLnMThevO0q+0UFTAwVDdIpvmU3fv1+sU0", "onPreExecute");
       GoogleFriendUI.e(GoogleFriendUI.this).clear();
       GoogleFriendUI.f(GoogleFriendUI.this).clear();
     }
@@ -668,22 +736,22 @@ public class GoogleFriendUI
   final class c
     extends AsyncTask
   {
-    private String iNF;
-    private boolean iNH;
-    private String iNJ;
+    private String kMS;
+    private boolean kMU;
+    private String kMW;
     
     public c(String paramString)
     {
-      iNJ = paramString;
+      kMW = paramString;
     }
     
     /* Error */
-    private Void VE()
+    private Void acy()
     {
       // Byte code:
       //   0: ldc 36
       //   2: ldc 38
-      //   4: invokestatic 44	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;)V
+      //   4: invokestatic 44	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
       //   7: ldc 46
       //   9: astore_2
       //   10: new 48	java/net/URL
@@ -725,7 +793,7 @@ public class GoogleFriendUI
       //   86: dup
       //   87: ldc 96
       //   89: aload_0
-      //   90: getfield 23	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:iNJ	Ljava/lang/String;
+      //   90: getfield 23	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:kMW	Ljava/lang/String;
       //   93: invokespecial 98	org/apache/http/message/BasicNameValuePair:<init>	(Ljava/lang/String;Ljava/lang/String;)V
       //   96: invokeinterface 104 2 0
       //   101: pop
@@ -754,7 +822,7 @@ public class GoogleFriendUI
       //   153: invokeinterface 104 2 0
       //   158: pop
       //   159: aload 4
-      //   161: invokestatic 120	com/tencent/mm/modelfriend/x:t	(Ljava/util/List;)Ljava/lang/String;
+      //   161: invokestatic 120	com/tencent/mm/modelfriend/n:w	(Ljava/util/List;)Ljava/lang/String;
       //   164: astore 4
       //   166: ldc 36
       //   168: new 122	java/lang/StringBuilder
@@ -764,7 +832,7 @@ public class GoogleFriendUI
       //   177: aload 4
       //   179: invokevirtual 129	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
       //   182: invokevirtual 133	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   185: invokestatic 44	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;)V
+      //   185: invokestatic 44	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
       //   188: new 135	java/io/BufferedWriter
       //   191: dup
       //   192: new 137	java/io/OutputStreamWriter
@@ -793,7 +861,7 @@ public class GoogleFriendUI
       //   243: iload_1
       //   244: invokevirtual 165	java/lang/StringBuilder:append	(I)Ljava/lang/StringBuilder;
       //   247: invokevirtual 133	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   250: invokestatic 168	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;)V
+      //   250: invokestatic 168	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;)V
       //   253: sipush 200
       //   256: iload_1
       //   257: if_icmpne +107 -> 364
@@ -831,7 +899,7 @@ public class GoogleFriendUI
       //   323: aload_2
       //   324: invokevirtual 198	java/net/ProtocolException:getMessage	()Ljava/lang/String;
       //   327: aastore
-      //   328: invokestatic 201	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   328: invokestatic 201	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   331: aconst_null
       //   332: areturn
       //   333: aload 4
@@ -847,7 +915,7 @@ public class GoogleFriendUI
       //   354: aload_2
       //   355: invokevirtual 129	java/lang/StringBuilder:append	(Ljava/lang/String;)Ljava/lang/StringBuilder;
       //   358: invokevirtual 133	java/lang/StringBuilder:toString	()Ljava/lang/String;
-      //   361: invokestatic 44	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;)V
+      //   361: invokestatic 44	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;)V
       //   364: aload_3
       //   365: invokevirtual 208	java/net/HttpURLConnection:disconnect	()V
       //   368: ldc 36
@@ -858,7 +926,7 @@ public class GoogleFriendUI
       //   377: iconst_0
       //   378: aload_2
       //   379: aastore
-      //   380: invokestatic 212	com/tencent/mm/sdk/platformtools/t:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   380: invokestatic 212	com/tencent/mm/sdk/platformtools/u:i	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   383: aload_0
       //   384: new 214	org/json/JSONObject
       //   387: dup
@@ -866,10 +934,10 @@ public class GoogleFriendUI
       //   389: invokespecial 215	org/json/JSONObject:<init>	(Ljava/lang/String;)V
       //   392: ldc -39
       //   394: invokevirtual 221	org/json/JSONObject:optString	(Ljava/lang/String;)Ljava/lang/String;
-      //   397: putfield 223	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:iNF	Ljava/lang/String;
+      //   397: putfield 223	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:kMS	Ljava/lang/String;
       //   400: aload_0
       //   401: iconst_1
-      //   402: putfield 225	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:iNH	Z
+      //   402: putfield 225	com/tencent/mm/ui/bindgooglecontact/GoogleFriendUI$c:kMU	Z
       //   405: goto -74 -> 331
       //   408: astore_2
       //   409: ldc 36
@@ -881,7 +949,7 @@ public class GoogleFriendUI
       //   419: aload_2
       //   420: invokevirtual 228	java/net/MalformedURLException:getMessage	()Ljava/lang/String;
       //   423: aastore
-      //   424: invokestatic 201	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   424: invokestatic 201	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   427: goto -96 -> 331
       //   430: astore_2
       //   431: ldc 36
@@ -893,7 +961,7 @@ public class GoogleFriendUI
       //   441: aload_2
       //   442: invokevirtual 231	java/io/IOException:getMessage	()Ljava/lang/String;
       //   445: aastore
-      //   446: invokestatic 201	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   446: invokestatic 201	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   449: goto -118 -> 331
       //   452: astore_2
       //   453: ldc 36
@@ -905,7 +973,7 @@ public class GoogleFriendUI
       //   463: aload_2
       //   464: invokevirtual 234	org/json/JSONException:getMessage	()Ljava/lang/String;
       //   467: aastore
-      //   468: invokestatic 201	com/tencent/mm/sdk/platformtools/t:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+      //   468: invokestatic 201	com/tencent/mm/sdk/platformtools/u:e	(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
       //   471: goto -140 -> 331
       // Local variable table:
       //   start	length	slot	name	signature
@@ -951,8 +1019,8 @@ public class GoogleFriendUI
     protected final void onPreExecute()
     {
       super.onPreExecute();
-      com.tencent.mm.sdk.platformtools.t.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "onPreExecute");
-      iNH = false;
+      u.i("!56@/B4Tb64lLpKHrGLZvbPyiIVQZqGB7lNLR9cEovBG92K66fy5loyLJw==", "onPreExecute");
+      kMU = false;
     }
   }
 }

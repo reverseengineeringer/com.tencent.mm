@@ -1,160 +1,109 @@
 package com.tencent.mm.pluginsdk.model;
 
-import com.tencent.mm.model.ax;
-import com.tencent.mm.model.b;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.amv;
-import com.tencent.mm.protocal.b.amw;
-import com.tencent.mm.protocal.b.amx;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import junit.framework.Assert;
+import android.os.Bundle;
+import com.tencent.mm.g.c;
+import com.tencent.mm.sdk.platformtools.ay;
 
 public final class r
-  extends j
-  implements com.tencent.mm.network.r
 {
-  private com.tencent.mm.q.d apI;
-  public final a apJ;
-  public int axE = 0;
-  public String bCe;
-  public List gLs = null;
-  public String gLt;
-  private List gLu = null;
+  private static volatile r iAG = null;
   
-  public r(int paramInt, List paramList1, List paramList2, String paramString1, String paramString2)
+  public static r aPt()
   {
-    this(paramInt, paramList1, paramList2, paramString1, paramString2, null);
-  }
-  
-  public r(int paramInt, List paramList1, List paramList2, String paramString1, String paramString2, Map paramMap)
-  {
-    boolean bool;
-    Object localObject;
-    LinkedList localLinkedList;
-    label160:
-    amv localamv;
-    if (paramInt != 3)
+    if (iAG == null) {}
+    try
     {
-      bool = true;
-      Assert.assertTrue("This NetSceneVerifyUser init NEVER use opcode == MM_VERIFYUSER_VERIFYOK", bool);
-      axE = paramInt;
-      gLs = paramList1;
-      localObject = new a.a();
-      bsW = new amw();
-      bsX = new amx();
-      uri = "/cgi-bin/micromsg-bin/verifyuser";
-      bsV = 137;
-      bsY = 44;
-      bsZ = 1000000044;
-      apJ = ((a.a)localObject).vh();
-      localObject = (amw)apJ.bsT.btb;
-      hkO = paramInt;
-      hBc = paramString1;
-      gLt = paramString1;
-      localLinkedList = new LinkedList();
-      paramInt = 0;
-      if (paramInt >= paramList1.size()) {
-        break label322;
+      if (iAG == null) {
+        iAG = new r();
       }
-      localamv = new amv();
-      eJI = ((String)paramList1.get(paramInt));
-      if (paramString2 != null) {
-        break label315;
-      }
+      return iAG;
     }
-    label315:
-    for (paramString1 = "";; paramString1 = paramString2)
+    finally {}
+  }
+  
+  public static q l(int paramInt, Bundle paramBundle)
+  {
+    switch (paramInt)
     {
-      hSD = paramString1;
-      paramString1 = ax.tl().rN();
-      String str = eJI;
-      ((Integer)paramList2.get(paramInt)).intValue();
-      hxU = paramString1.yk(str);
-      if ((paramMap != null) && (paramMap.containsKey(eJI))) {
-        hSE = ((Integer)paramMap.get(eJI)).intValue();
-      }
-      localLinkedList.add(localamv);
-      paramInt += 1;
-      break label160;
-      bool = false;
-      break;
+    default: 
+      return new o();
+    case 2: 
+      return new a(paramBundle);
     }
-    label322:
-    hSG = localLinkedList;
-    hSF = localLinkedList.size();
-    paramList1 = new LinkedList();
-    paramList1.addAll(paramList2);
-    hSI = paramList1;
-    hSH = paramList1.size();
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvjTi6XprtAzYGM0KIh//1dw=", "dkverify scene:%d user:%d", new Object[] { Integer.valueOf(hSG.size()), Integer.valueOf(hSI.size()) });
+    return new u();
   }
   
-  public r(String paramString1, String paramString2, int paramInt)
+  public static int oa(int paramInt)
   {
-    Assert.assertTrue("This NetSceneVerifyUser init MUST use opcode == MM_VERIFYUSER_VERIFYOK", true);
-    gLs = new LinkedList();
-    gLs.add(paramString1);
-    axE = 3;
-    Object localObject = new a.a();
-    bsW = new amw();
-    bsX = new amx();
-    uri = "/cgi-bin/micromsg-bin/verifyuser";
-    bsV = 137;
-    bsY = 44;
-    bsZ = 1000000044;
-    apJ = ((a.a)localObject).vh();
-    localObject = (amw)apJ.bsT.btb;
-    hkO = 3;
-    hBc = "";
-    LinkedList localLinkedList = new LinkedList();
-    amv localamv = new amv();
-    eJI = paramString1;
-    hSD = paramString2;
-    hxU = ax.tl().rN().yk(paramString1);
-    localLinkedList.add(localamv);
-    hSG = localLinkedList;
-    hSF = localLinkedList.size();
-    paramString1 = new LinkedList();
-    paramString1.add(Integer.valueOf(paramInt));
-    hSI = paramString1;
-    hSH = paramString1.size();
-    t.d("!44@/B4Tb64lLpK+IBX8XDgnvjTi6XprtAzYGM0KIh//1dw=", "dkverify scene:%d user:%d ticket:%s, atispamTicket:%s", new Object[] { Integer.valueOf(hSG.size()), Integer.valueOf(hSI.size()), paramString2, hxU });
-  }
-  
-  public final int a(m paramm, com.tencent.mm.q.d paramd)
-  {
-    apI = paramd;
-    return a(paramm, apJ, this);
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
-  {
-    if ((paramInt2 != 0) || (paramInt3 != 0)) {
-      t.e("!44@/B4Tb64lLpK+IBX8XDgnvjTi6XprtAzYGM0KIh//1dw=", "errType:%d, errCode:%d", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3) });
+    switch (paramInt)
+    {
+    default: 
+      return 5;
+    case 0: 
+      return ay.getInt(com.tencent.mm.g.h.pT().z("QQBroswer", "RecommendCount"), 5);
     }
-    apI.a(paramInt2, paramInt3, paramString, this);
+    return Integer.MAX_VALUE;
   }
   
-  public final String ayN()
+  public static void ob(int paramInt)
   {
-    if ((apJ != null) && (apJ.bsU != null)) {
-      return apJ.bsU.btb).dse;
+    switch (paramInt)
+    {
+    default: 
+      return;
+    case 0: 
+      com.tencent.mm.plugin.report.service.h.fUJ.g(10998, new Object[] { Integer.valueOf(0) });
+      return;
     }
-    return "";
+    com.tencent.mm.plugin.report.service.h.fUJ.g(11091, new Object[] { Integer.valueOf(0) });
   }
   
-  public final int getType()
+  public static void oc(int paramInt)
   {
-    return 30;
+    switch (paramInt)
+    {
+    default: 
+      return;
+    case 0: 
+      com.tencent.mm.plugin.report.service.h.fUJ.g(10998, new Object[] { Integer.valueOf(1) });
+      return;
+    }
+    com.tencent.mm.plugin.report.service.h.fUJ.g(11091, new Object[] { Integer.valueOf(1) });
+  }
+  
+  public static void od(int paramInt)
+  {
+    switch (paramInt)
+    {
+    default: 
+      return;
+    case 0: 
+      com.tencent.mm.plugin.report.service.h.fUJ.g(10998, new Object[] { Integer.valueOf(3) });
+      return;
+    }
+    com.tencent.mm.plugin.report.service.h.fUJ.g(11091, new Object[] { Integer.valueOf(3) });
+  }
+  
+  public static void oe(int paramInt)
+  {
+    switch (paramInt)
+    {
+    default: 
+      return;
+    case 0: 
+      com.tencent.mm.plugin.report.service.h.fUJ.g(10998, new Object[] { Integer.valueOf(2) });
+      return;
+    }
+    com.tencent.mm.plugin.report.service.h.fUJ.g(11091, new Object[] { Integer.valueOf(2) });
+  }
+  
+  public static final class a
+  {
+    public int iAH;
+    public int iAI;
+    public String iAJ;
+    public int iAK;
+    public String iAL;
   }
 }
 

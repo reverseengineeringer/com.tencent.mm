@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field public jnC:I
+.field public ihI:I
 
-.field public jnF:Z
+.field public lsV:I
 
-.field public jnG:I
+.field public lsY:Z
 
-.field public jnI:I
+.field public lta:I
 
-.field public jnJ:Lcom/tencent/mm/protocal/b/eq;
+.field public ltb:Lcom/tencent/mm/protocal/b/fy;
 
 
 # direct methods
@@ -37,17 +37,17 @@
     .line 38
     const v0, 0x7fffffff
 
-    iput v0, p0, Lcom/tencent/mm/ui/e/h$b;->jnC:I
+    iput v0, p0, Lcom/tencent/mm/ui/e/h$b;->lsV:I
 
     .line 39
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/e/h$b;->jnG:I
+    iput v0, p0, Lcom/tencent/mm/ui/e/h$b;->ihI:I
 
     .line 41
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/e/h$b;->jnJ:Lcom/tencent/mm/protocal/b/eq;
+    iput-object v0, p0, Lcom/tencent/mm/ui/e/h$b;->ltb:Lcom/tencent/mm/protocal/b/fy;
 
     return-void
 .end method

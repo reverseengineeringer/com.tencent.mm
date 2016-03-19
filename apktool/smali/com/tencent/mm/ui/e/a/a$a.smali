@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field final synthetic jnR:Lcom/tencent/mm/ui/e/a/a;
+.field final synthetic ltj:Lcom/tencent/mm/ui/e/a/a;
 
 
 # direct methods
@@ -24,7 +24,7 @@
 
     .prologue
     .line 45
-    iput-object p1, p0, Lcom/tencent/mm/ui/e/a/a$a;->jnR:Lcom/tencent/mm/ui/e/a/a;
+    iput-object p1, p0, Lcom/tencent/mm/ui/e/a/a$a;->ltj:Lcom/tencent/mm/ui/e/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

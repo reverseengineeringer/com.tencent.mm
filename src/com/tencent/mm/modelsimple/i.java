@@ -1,51 +1,49 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.al.b;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.ic;
-import com.tencent.mm.protocal.b.id;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.at.b;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.kb;
+import com.tencent.mm.protocal.b.kc;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
+import com.tencent.mm.sdk.platformtools.u;
 
 public final class i
-  extends j
-  implements r
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  private d apI;
-  private final a apJ;
+  private d anM;
+  private final a anN;
   
   public i(String paramString)
   {
-    t.i("!44@/B4Tb64lLpK+IBX8XDgnvtALlcFxU4v/WrC6GpcQofE=", "NetSceneDelTempSession %s", new Object[] { paramString });
+    u.i("!44@/B4Tb64lLpK+IBX8XDgnvtALlcFxU4v/WrC6GpcQofE=", "NetSceneDelTempSession %s", new Object[] { paramString });
     Object localObject = new a.a();
-    bsW = new ic();
-    bsX = new id();
+    bFa = new kb();
+    bFb = new kc();
     uri = "/cgi-bin/mmbiz-bin/usrmsg/deltempsession";
-    bsV = 1067;
-    bsY = 0;
-    bsZ = 0;
-    apJ = ((a.a)localObject).vh();
-    localObject = (ic)apJ.bsT.btb;
-    hqV = paramString;
-    hrT = b.au(new byte[0]);
+    bEY = 1067;
+    bFc = 0;
+    bFd = 0;
+    anN = ((a.a)localObject).vy();
+    localObject = (kb)anN.bEW.bFf;
+    iYR = paramString;
+    jia = b.aH(new byte[0]);
   }
   
-  public final int a(m paramm, d paramd)
+  public final int a(e parame, d paramd)
   {
-    apI = paramd;
-    return a(paramm, apJ, this);
+    anM = paramd;
+    return a(parame, anN, this);
   }
   
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
   {
-    t.i("!44@/B4Tb64lLpK+IBX8XDgnvtALlcFxU4v/WrC6GpcQofE=", "onGYNetEnd: %d, %d, %s", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
-    apI.a(paramInt2, paramInt3, paramString, this);
+    u.i("!44@/B4Tb64lLpK+IBX8XDgnvtALlcFxU4v/WrC6GpcQofE=", "onGYNetEnd: %d, %d, %s", new Object[] { Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), paramString });
+    anM.a(paramInt2, paramInt3, paramString, this);
   }
   
   public final int getType()

@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract aWc()Ljava/lang/String;
+.method public abstract boR()Ljava/lang/String;
 .end method
 
-.method public abstract aWd()Ljava/lang/String;
+.method public abstract getNonce()Ljava/lang/String;
 .end method

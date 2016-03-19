@@ -1,39 +1,17 @@
-.class final Lcom/tencent/mm/sandbox/updater/a;
+.class public interface abstract Lcom/tencent/mm/sandbox/updater/a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Landroid/content/DialogInterface$OnCancelListener;
-
-
-# instance fields
-.field final synthetic hWh:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
-
-
-# direct methods
-.method constructor <init>(Lcom/tencent/mm/sandbox/updater/AppInstallerUI;)V
-    .locals 0
-
-    .prologue
-    .line 94
-    iput-object p1, p0, Lcom/tencent/mm/sandbox/updater/a;->hWh:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
-
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final onCancel(Landroid/content/DialogInterface;)V
-    .locals 1
+.method public abstract H(Landroid/content/Intent;)Z
+.end method
 
-    .prologue
-    .line 97
-    iget-object v0, p0, Lcom/tencent/mm/sandbox/updater/a;->hWh:Lcom/tencent/mm/sandbox/updater/AppInstallerUI;
+.method public abstract gF(Z)V
+.end method
 
-    invoke-static {v0}, Lcom/tencent/mm/sandbox/updater/AppInstallerUI;->a(Lcom/tencent/mm/sandbox/updater/AppInstallerUI;)V
+.method public abstract isBusy()Z
+.end method
 
-    .line 98
-    return-void
+.method public abstract onDestroy()V
 .end method

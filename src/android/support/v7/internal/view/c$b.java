@@ -1,9 +1,9 @@
 package android.support.v7.internal.view;
 
 import android.content.Context;
-import android.support.v4.view.h;
-import android.support.v4.view.k;
-import android.support.v7.internal.view.menu.i;
+import android.support.v4.view.d;
+import android.support.v4.view.g;
+import android.support.v7.internal.view.menu.h;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,39 +11,39 @@ import java.lang.reflect.Constructor;
 
 final class c$b
 {
-  Menu kC;
-  int kD;
-  int kE;
-  int kF;
-  int kG;
-  boolean kH;
-  boolean kI;
-  boolean kJ;
-  int kK;
-  int kL;
-  CharSequence kM;
-  CharSequence kN;
-  int kO;
-  char kP;
-  char kQ;
-  int kR;
-  boolean kS;
-  boolean kT;
-  boolean kU;
-  int kV;
-  int kW;
-  String kX;
-  String kY;
-  String kZ;
-  h la;
+  Menu jJ;
+  int jK;
+  int jL;
+  int jM;
+  int jN;
+  boolean jO;
+  boolean jP;
+  boolean jQ;
+  int jR;
+  int jS;
+  CharSequence jT;
+  CharSequence jU;
+  int jV;
+  char jW;
+  char jX;
+  int jY;
+  boolean jZ;
+  boolean ka;
+  boolean kb;
+  int kc;
+  int kd;
+  String ke;
+  String kf;
+  String kg;
+  d kh;
   
   public c$b(c paramc, Menu paramMenu)
   {
-    kC = paramMenu;
-    br();
+    jJ = paramMenu;
+    bb();
   }
   
-  static char i(String paramString)
+  static char j(String paramString)
   {
     if (paramString == null) {
       return '\000';
@@ -51,55 +51,55 @@ final class c$b
     return paramString.charAt(0);
   }
   
-  public final void br()
+  public final void bb()
   {
-    kD = 0;
-    kE = 0;
-    kF = 0;
-    kG = 0;
-    kH = true;
-    kI = true;
+    jK = 0;
+    jL = 0;
+    jM = 0;
+    jN = 0;
+    jO = true;
+    jP = true;
   }
   
-  final void g(MenuItem paramMenuItem)
+  final void e(MenuItem paramMenuItem)
   {
     int i = 1;
-    Object localObject = paramMenuItem.setChecked(kS).setVisible(kT).setEnabled(kU);
-    if (kR > 0) {}
+    Object localObject = paramMenuItem.setChecked(jZ).setVisible(ka).setEnabled(kb);
+    if (jY > 0) {}
     for (boolean bool = true;; bool = false)
     {
-      ((MenuItem)localObject).setCheckable(bool).setTitleCondensed(kN).setIcon(kO).setAlphabeticShortcut(kP).setNumericShortcut(kQ);
-      if (kV >= 0) {
-        k.a(paramMenuItem, kV);
+      ((MenuItem)localObject).setCheckable(bool).setTitleCondensed(jU).setIcon(jV).setAlphabeticShortcut(jW).setNumericShortcut(jX);
+      if (kc >= 0) {
+        g.a(paramMenuItem, kc);
       }
-      if (kZ == null) {
+      if (kg == null) {
         break label161;
       }
-      if (!c.a(lb).isRestricted()) {
+      if (!c.a(ki).isRestricted()) {
         break;
       }
       throw new IllegalStateException("The android:onClick attribute cannot be used within a restricted context");
     }
-    paramMenuItem.setOnMenuItemClickListener(new c.a(c.b(lb), kZ));
+    paramMenuItem.setOnMenuItemClickListener(new c.a(c.b(ki), kg));
     label161:
-    if ((paramMenuItem instanceof i))
+    if ((paramMenuItem instanceof h))
     {
-      localObject = (i)paramMenuItem;
-      if ((localObject != null) && (kR >= 2)) {
-        ((i)localObject).t(true);
+      localObject = (h)paramMenuItem;
+      if ((localObject != null) && (jY >= 2)) {
+        ((h)localObject).t(true);
       }
-      if (kX == null) {
+      if (ke == null) {
         break label269;
       }
-      k.a(paramMenuItem, (View)newInstance(kX, c.bq(), c.c(lb)));
+      g.a(paramMenuItem, (View)newInstance(ke, c.ba(), c.c(ki)));
     }
     for (;;)
     {
-      if ((kW > 0) && (i == 0)) {
-        k.b(paramMenuItem, kW);
+      if ((kd > 0) && (i == 0)) {
+        g.b(paramMenuItem, kd);
       }
-      if (la != null) {
-        k.a(paramMenuItem, la);
+      if (kh != null) {
+        g.a(paramMenuItem, kh);
       }
       return;
       localObject = null;
@@ -113,7 +113,7 @@ final class c$b
   {
     try
     {
-      paramString = c.a(lb).getClassLoader().loadClass(paramString).getConstructor(paramArrayOfClass).newInstance(paramArrayOfObject);
+      paramString = c.a(ki).getClassLoader().loadClass(paramString).getConstructor(paramArrayOfClass).newInstance(paramArrayOfObject);
       return paramString;
     }
     catch (Exception paramString) {}

@@ -1,6 +1,7 @@
 package com.tencent.mm.ui.base.preference;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Parcel;
@@ -13,39 +14,37 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.d;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.p;
-import com.tencent.mm.ap.a;
-import com.tencent.mm.svg.frame.d.d;
+import com.tencent.mm.R.b;
+import com.tencent.mm.ui.p;
 import java.util.List;
 
 public class Preference
   implements Comparable
 {
-  public String bUr;
-  public int cBN = -1;
-  private int[] gf = { a.d.title, a.d.summary };
-  private a iMT;
-  private int iMU = Integer.MAX_VALUE;
-  private int iMV;
-  private CharSequence iMW;
-  private String iMX;
-  private boolean iMY = true;
-  boolean iMZ = true;
-  private boolean iNa;
-  public boolean iNb = true;
-  String iNc;
-  private Object iNd;
-  private boolean iNe = true;
-  private boolean iNf = true;
-  private int iNg = a.k.mm_preference;
-  int iNh;
-  private boolean iNi = false;
-  private List iNj;
-  private CharSequence lg;
-  public int lm;
-  public Drawable lq;
+  public int cXo = -1;
+  public String cln;
+  private boolean euc = true;
+  private int[] fn = { 2130771990, 2130772052 };
+  private CharSequence fyV;
+  private a kMh;
+  private int kMi = Integer.MAX_VALUE;
+  private int kMj;
+  private int kMk;
+  private String kMl;
+  boolean kMm = true;
+  private boolean kMn;
+  public boolean kMo = true;
+  String kMp;
+  private Object kMq;
+  private boolean kMr = true;
+  private boolean kMs = true;
+  int kMt = 2131363286;
+  int kMu;
+  private boolean kMv = false;
+  private List kMw;
+  private CharSequence km;
+  public int kr;
+  public Drawable kv;
   public final Context mContext;
   
   public Preference(Context paramContext)
@@ -61,90 +60,87 @@ public class Preference
   public Preference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     mContext = paramContext;
-    TypedArray localTypedArray = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.Preference, paramInt, 0);
-    paramInt = localTypedArray.getIndexCount();
+    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.Preference, paramInt, 0);
+    paramInt = paramAttributeSet.getIndexCount();
     if (paramInt >= 0)
     {
-      int i = localTypedArray.getIndex(paramInt);
-      if (i == 13) {
-        lm = localTypedArray.getResourceId(i, 0);
+      int i = paramAttributeSet.getIndex(paramInt);
+      if (i == 6) {
+        kr = paramAttributeSet.getResourceId(i, 0);
       }
       for (;;)
       {
         paramInt -= 1;
         break;
-        if (i == 5)
+        if (i == 7)
         {
-          bUr = localTypedArray.getString(i);
-        }
-        else if (i == 12)
-        {
-          iMV = localTypedArray.getResourceId(i, 0);
-          lg = localTypedArray.getString(i);
-        }
-        else if (i == 4)
-        {
-          iMW = localTypedArray.getString(i);
-        }
-        else if (i == 6)
-        {
-          iMU = localTypedArray.getInt(i, iMU);
-        }
-        else if (i == 1)
-        {
-          iMX = localTypedArray.getString(i);
-        }
-        else if (i == 2)
-        {
-          iNg = localTypedArray.getResourceId(i, iNg);
-        }
-        else if (i == 7)
-        {
-          iNh = localTypedArray.getResourceId(i, iNh);
+          cln = paramAttributeSet.getString(i);
         }
         else if (i == 0)
         {
-          iMY = localTypedArray.getBoolean(i, true);
+          kMj = paramAttributeSet.getResourceId(i, 0);
+          km = paramAttributeSet.getString(i);
+          if (kMj != 0) {
+            km = paramContext.getString(kMj);
+          }
+        }
+        else if (i == 5)
+        {
+          fyV = paramAttributeSet.getString(i);
+          kMk = paramAttributeSet.getResourceId(i, 0);
+          if (kMk != 0) {
+            fyV = paramContext.getString(kMk);
+          }
         }
         else if (i == 8)
         {
-          iMZ = localTypedArray.getBoolean(i, true);
+          kMi = paramAttributeSet.getInt(i, kMi);
+        }
+        else if (i == 2)
+        {
+          kMl = paramAttributeSet.getString(i);
         }
         else if (i == 3)
         {
-          iNb = localTypedArray.getBoolean(i, iNb);
+          kMt = paramAttributeSet.getResourceId(i, kMt);
         }
         else if (i == 9)
         {
-          iNc = localTypedArray.getString(i);
+          kMu = paramAttributeSet.getResourceId(i, kMu);
+        }
+        else if (i == 1)
+        {
+          euc = paramAttributeSet.getBoolean(i, true);
         }
         else if (i == 10)
         {
-          iNd = null;
+          kMm = paramAttributeSet.getBoolean(i, true);
+        }
+        else if (i == 4)
+        {
+          kMo = paramAttributeSet.getBoolean(i, kMo);
         }
         else if (i == 11)
         {
-          iNf = localTypedArray.getBoolean(i, iNf);
+          kMp = paramAttributeSet.getString(i);
+        }
+        else if (i == 12)
+        {
+          kMq = null;
+        }
+        else if (i == 13)
+        {
+          kMs = paramAttributeSet.getBoolean(i, kMs);
         }
       }
     }
-    localTypedArray.recycle();
-    if (!getClass().getName().startsWith("android.preference")) {
-      iNi = true;
-    }
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, gf);
-    paramInt = paramAttributeSet.getResourceId(0, 0);
-    if (paramInt != 0) {
-      setTitle(paramContext.getString(paramInt));
-    }
-    paramInt = paramAttributeSet.getResourceId(1, 0);
-    if (paramInt != 0) {
-      setSummary(paramContext.getString(paramInt));
-    }
     paramAttributeSet.recycle();
+    if (!getClass().getName().startsWith("android.preference")) {
+      kMv = true;
+    }
   }
   
-  private void e(View paramView, boolean paramBoolean)
+  private void d(View paramView, boolean paramBoolean)
   {
     paramView.setEnabled(paramBoolean);
     if ((paramView instanceof ViewGroup))
@@ -153,7 +149,7 @@ public class Preference
       int i = paramView.getChildCount() - 1;
       while (i >= 0)
       {
-        e(paramView.getChildAt(i), paramBoolean);
+        d(paramView.getChildAt(i), paramBoolean);
         i -= 1;
       }
     }
@@ -161,7 +157,7 @@ public class Preference
   
   private void notifyDependencyChange(boolean paramBoolean)
   {
-    List localList = iNj;
+    List localList = kMw;
     if (localList == null) {
       return;
     }
@@ -172,7 +168,7 @@ public class Preference
     if (i < j)
     {
       localPreference = (Preference)localList.get(i);
-      if (iNe == paramBoolean) {
+      if (kMr == paramBoolean) {
         if (paramBoolean) {
           break label85;
         }
@@ -181,7 +177,7 @@ public class Preference
     label85:
     for (boolean bool = true;; bool = false)
     {
-      iNe = bool;
+      kMr = bool;
       localPreference.notifyDependencyChange(localPreference.shouldDisableDependents());
       localPreference.notifyChanged();
       i += 1;
@@ -197,30 +193,25 @@ public class Preference
   
   public void a(a parama)
   {
-    iMT = parama;
+    kMh = parama;
   }
   
   public final boolean callChangeListener(Object paramObject)
   {
-    if (iMT == null) {
+    if (kMh == null) {
       return true;
     }
-    return iMT.a(this, paramObject);
-  }
-  
-  public int getLayoutResource()
-  {
-    return iNg;
+    return kMh.a(this, paramObject);
   }
   
   public CharSequence getSummary()
   {
-    return iMW;
+    return fyV;
   }
   
   public CharSequence getTitle()
   {
-    return lg;
+    return km;
   }
   
   public View getView(View paramView, ViewGroup paramViewGroup)
@@ -235,7 +226,7 @@ public class Preference
   
   public final boolean isEnabled()
   {
-    return (iMY) && (iNe);
+    return (euc) && (kMr);
   }
   
   public void notifyChanged() {}
@@ -251,61 +242,59 @@ public class Preference
     if (localObject != null)
     {
       if (TextUtils.isEmpty(getSummary())) {
-        break label181;
+        break label183;
       }
       if (((TextView)localObject).getVisibility() != 0) {
         ((TextView)localObject).setVisibility(0);
       }
       ((TextView)localObject).setText(getSummary());
-      if (cBN != -1) {
-        ((TextView)localObject).setTextColor(cBN);
+      if (cXo != -1) {
+        ((TextView)localObject).setTextColor(cXo);
       }
     }
     localObject = (ImageView)paramView.findViewById(16908294);
     if (localObject != null)
     {
-      if ((lm != 0) || (lq != null))
+      if ((kr != 0) || (kv != null))
       {
-        if (lq == null) {
-          lq = a.getDrawable(lm);
+        if (kv == null) {
+          kv = mContext.getResources().getDrawable(kr);
         }
-        if (lq != null)
-        {
-          d.d((ImageView)localObject);
-          ((ImageView)localObject).setImageDrawable(lq);
+        if (kv != null) {
+          ((ImageView)localObject).setImageDrawable(kv);
         }
       }
-      if (lq == null) {
-        break label199;
+      if (kv == null) {
+        break label201;
       }
     }
     for (;;)
     {
       ((ImageView)localObject).setVisibility(i);
-      if (iNf) {
-        e(paramView, isEnabled());
+      if (kMs) {
+        d(paramView, isEnabled());
       }
       return;
-      label181:
+      label183:
       if (((TextView)localObject).getVisibility() == 8) {
         break;
       }
       ((TextView)localObject).setVisibility(8);
       break;
-      label199:
+      label201:
       i = 8;
     }
   }
   
   public View onCreateView(ViewGroup paramViewGroup)
   {
-    LayoutInflater localLayoutInflater = (LayoutInflater)mContext.getSystemService("layout_inflater");
-    paramViewGroup = localLayoutInflater.inflate(iNg, paramViewGroup, false);
+    LayoutInflater localLayoutInflater = p.ee(mContext);
+    paramViewGroup = localLayoutInflater.inflate(kMt, paramViewGroup, false);
     ViewGroup localViewGroup = (ViewGroup)paramViewGroup.findViewById(16908312);
     if (localViewGroup != null)
     {
-      if (iNh != 0) {
-        localLayoutInflater.inflate(iNh, localViewGroup);
+      if (kMu != 0) {
+        localLayoutInflater.inflate(kMu, localViewGroup);
       }
     }
     else {
@@ -317,9 +306,9 @@ public class Preference
   
   public final void setEnabled(boolean paramBoolean)
   {
-    if (iMY != paramBoolean)
+    if (euc != paramBoolean)
     {
-      iMY = paramBoolean;
+      euc = paramBoolean;
       notifyDependencyChange(shouldDisableDependents());
       notifyChanged();
     }
@@ -327,22 +316,22 @@ public class Preference
   
   public final void setKey(String paramString)
   {
-    bUr = paramString;
-    if (iNa)
+    cln = paramString;
+    if (kMn)
     {
       int i;
-      if (!TextUtils.isEmpty(bUr)) {
+      if (!TextUtils.isEmpty(cln)) {
         i = 1;
       }
       while (i == 0) {
-        if (bUr == null)
+        if (cln == null)
         {
           throw new IllegalStateException("Preference does not have a key assigned.");
           i = 0;
         }
         else
         {
-          iNa = true;
+          kMn = true;
         }
       }
     }
@@ -350,17 +339,17 @@ public class Preference
   
   public final void setLayoutResource(int paramInt)
   {
-    if (paramInt != iNg) {
-      iNi = true;
+    if (paramInt != kMt) {
+      kMv = true;
     }
-    iNg = paramInt;
+    kMt = paramInt;
   }
   
   public final void setSelectable(boolean paramBoolean)
   {
-    if (iMZ != paramBoolean)
+    if (kMm != paramBoolean)
     {
-      iMZ = paramBoolean;
+      kMm = paramBoolean;
       notifyChanged();
     }
   }
@@ -372,9 +361,9 @@ public class Preference
   
   public void setSummary(CharSequence paramCharSequence)
   {
-    if (((paramCharSequence == null) && (iMW != null)) || ((paramCharSequence != null) && (!paramCharSequence.equals(iMW))))
+    if (((paramCharSequence == null) && (fyV != null)) || ((paramCharSequence != null) && (!paramCharSequence.equals(fyV))))
     {
-      iMW = paramCharSequence;
+      fyV = paramCharSequence;
       notifyChanged();
     }
   }
@@ -382,25 +371,25 @@ public class Preference
   public void setTitle(int paramInt)
   {
     setTitle(mContext.getString(paramInt));
-    iMV = paramInt;
+    kMj = paramInt;
   }
   
   public void setTitle(CharSequence paramCharSequence)
   {
-    if (((paramCharSequence == null) && (lg != null)) || ((paramCharSequence != null) && (!paramCharSequence.equals(lg))))
+    if (((paramCharSequence == null) && (km != null)) || ((paramCharSequence != null) && (!paramCharSequence.equals(km))))
     {
-      iMV = 0;
-      lg = paramCharSequence;
+      kMj = 0;
+      km = paramCharSequence;
       notifyChanged();
     }
   }
   
   public final void setWidgetLayoutResource(int paramInt)
   {
-    if (paramInt != iNh) {
-      iNi = true;
+    if (paramInt != kMu) {
+      kMv = true;
     }
-    iNh = paramInt;
+    kMu = paramInt;
   }
   
   public String toString()
@@ -423,7 +412,7 @@ public class Preference
   public static class BaseSavedState
     extends AbsSavedState
   {
-    public static final Parcelable.Creator CREATOR = new ad();
+    public static final Parcelable.Creator CREATOR = new Parcelable.Creator() {};
     
     public BaseSavedState(Parcel paramParcel)
     {

@@ -15,11 +15,11 @@
 
 
 # instance fields
-.field protected cHs:I
+.field protected dfq:I
 
-.field final synthetic jwc:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
+.field final synthetic lyT:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
 
-.field protected jwf:I
+.field protected lyW:I
 
 
 # direct methods
@@ -28,15 +28,15 @@
 
     .prologue
     .line 472
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->jwc:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
+    iput-object p1, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->lyT:Lcom/tencent/mm/ui/tools/gridviewheaders/c;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 473
-    iput p2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->cHs:I
+    iput p2, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->dfq:I
 
     .line 474
-    iput p3, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->jwf:I
+    iput p3, p0, Lcom/tencent/mm/ui/tools/gridviewheaders/c$c;->lyW:I
 
     .line 475
     return-void

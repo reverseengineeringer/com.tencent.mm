@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$de
-  extends a.c
+  extends a.e
 {
   public a$de()
   {
-    super("menu:share:qq", "", 94, false);
+    super("openSpecificView", "specific_view", 48, true);
   }
 }
 

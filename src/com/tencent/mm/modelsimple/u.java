@@ -1,22 +1,49 @@
 package com.tencent.mm.modelsimple;
 
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
+import com.tencent.mm.network.e;
+import com.tencent.mm.network.o;
+import com.tencent.mm.protocal.b.ajg;
+import com.tencent.mm.protocal.b.ajh;
+import com.tencent.mm.r.a;
+import com.tencent.mm.r.a.a;
+import com.tencent.mm.r.a.b;
+import com.tencent.mm.r.d;
 
-final class u
-  implements d
+public final class u
+  extends com.tencent.mm.r.j
+  implements com.tencent.mm.network.j
 {
-  u(t paramt) {}
+  private d anM;
+  private a anN;
+  public int cbt = 1;
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  public u(int paramInt)
   {
-    com.tencent.mm.sdk.platformtools.t.d("!44@/B4Tb64lLpK+IBX8XDgnvkJt4vtcyP1jJCoDvPgLfDU=", "summerauth dkcert getcert type:%d ret [%d,%d]", new Object[] { Integer.valueOf(paramj.getType()), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-    if ((paramInt1 != 0) || (paramInt2 != 0))
-    {
-      bLn.bLm.apI.a(paramInt1, paramInt2, "", bLn.bLm);
-      return;
-    }
-    bLn.bLm.a(bLn.bLm.btk, bLn.bLm.apI);
+    a.a locala = new a.a();
+    bFa = new ajg();
+    bFb = new ajh();
+    uri = "/cgi-bin/micromsg-bin/queryhaspasswd";
+    bEY = 255;
+    bFc = 132;
+    bFd = 1000000132;
+    anN = locala.vy();
+    anN.bEW.bFf).iWm = paramInt;
+  }
+  
+  public final int a(e parame, d paramd)
+  {
+    anM = paramd;
+    return a(parame, anN, this);
+  }
+  
+  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, o paramo, byte[] paramArrayOfByte)
+  {
+    anM.a(paramInt2, paramInt3, paramString, this);
+  }
+  
+  public final int getType()
+  {
+    return 255;
   }
 }
 

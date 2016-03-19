@@ -15,9 +15,7 @@
 
 
 # instance fields
-.field public auH:Ljava/lang/String;
-
-.field public state:I
+.field public filePath:Ljava/lang/String;
 
 
 # direct methods

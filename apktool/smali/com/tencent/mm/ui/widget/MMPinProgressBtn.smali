@@ -12,19 +12,19 @@
 
 
 # instance fields
-.field private dH:I
+.field private cU:I
 
-.field private jAH:Landroid/graphics/Paint;
+.field private lFg:Landroid/graphics/Paint;
 
-.field private jAI:Landroid/graphics/Paint;
+.field private lFh:Landroid/graphics/Paint;
 
-.field private jAJ:Landroid/graphics/RectF;
+.field private lFi:Landroid/graphics/RectF;
 
-.field private jAK:I
+.field private lFj:I
 
-.field private jAL:Ljava/lang/Runnable;
+.field private lFk:Ljava/lang/Runnable;
 
-.field private rp:I
+.field private qs:I
 
 
 # direct methods
@@ -40,14 +40,14 @@
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAJ:Landroid/graphics/RectF;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFi:Landroid/graphics/RectF;
 
     .line 114
-    new-instance v0, Lcom/tencent/mm/ui/widget/b;
+    new-instance v0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/widget/b;-><init>(Lcom/tencent/mm/ui/widget/MMPinProgressBtn;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$1;-><init>(Lcom/tencent/mm/ui/widget/MMPinProgressBtn;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAL:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFk:Ljava/lang/Runnable;
 
     .line 38
     const/4 v0, 0x0
@@ -70,14 +70,14 @@
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAJ:Landroid/graphics/RectF;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFi:Landroid/graphics/RectF;
 
     .line 114
-    new-instance v0, Lcom/tencent/mm/ui/widget/b;
+    new-instance v0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/widget/b;-><init>(Lcom/tencent/mm/ui/widget/MMPinProgressBtn;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$1;-><init>(Lcom/tencent/mm/ui/widget/MMPinProgressBtn;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAL:Ljava/lang/Runnable;
+    iput-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFk:Ljava/lang/Runnable;
 
     .line 43
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->a(Landroid/content/Context;Landroid/util/AttributeSet;I)V
@@ -91,11 +91,11 @@
 
     .prologue
     .line 18
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     add-int/lit8 v0, v0, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     return v0
 .end method
@@ -111,10 +111,10 @@
     .line 47
     const/16 v0, 0x64
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->rp:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->qs:I
 
     .line 48
-    iput v6, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iput v6, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     .line 50
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->getResources()Landroid/content/res/Resources;
@@ -122,14 +122,14 @@
     move-result-object v2
 
     .line 51
-    sget v0, Lcom/tencent/mm/a$f;->pin_progress_default_circle_color:I
+    const v0, 0x7f0801e5
 
     invoke-virtual {v2, v0}, Landroid/content/res/Resources;->getColor(I)I
 
     move-result v1
 
     .line 52
-    sget v0, Lcom/tencent/mm/a$f;->pin_progress_default_progress_color:I
+    const v0, 0x7f0801e6
 
     invoke-virtual {v2, v0}, Landroid/content/res/Resources;->getColor(I)I
 
@@ -139,7 +139,7 @@
     if-eqz p2, :cond_0
 
     .line 56
-    sget-object v3, Lcom/tencent/mm/a$p;->MMPinProgressBtn:[I
+    sget-object v3, Lcom/tencent/mm/R$b;->MMPinProgressBtn:[I
 
     invoke-virtual {p1, p2, v3, p3, v6}, Landroid/content/Context;->obtainStyledAttributes(Landroid/util/AttributeSet;[III)Landroid/content/res/TypedArray;
 
@@ -148,22 +148,22 @@
     .line 58
     const/4 v4, 0x2
 
-    iget v5, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->rp:I
+    iget v5, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->qs:I
 
     invoke-virtual {v3, v4, v5}, Landroid/content/res/TypedArray;->getInteger(II)I
 
     move-result v4
 
-    iput v4, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->rp:I
+    iput v4, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->qs:I
 
     .line 59
-    iget v4, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iget v4, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     invoke-virtual {v3, v7, v4}, Landroid/content/res/TypedArray;->getInteger(II)I
 
     move-result v4
 
-    iput v4, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iput v4, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     .line 61
     const/4 v4, 0x3
@@ -184,42 +184,42 @@
 
     .line 67
     :cond_0
-    sget v3, Lcom/tencent/mm/a$g;->pin_progress_inner_size:I
+    const v3, 0x7f05022a
 
     invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getDimensionPixelSize(I)I
 
     move-result v2
 
-    iput v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAK:I
+    iput v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFj:I
 
     .line 69
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAH:Landroid/graphics/Paint;
+    iput-object v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFg:Landroid/graphics/Paint;
 
     .line 70
-    iget-object v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAH:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFg:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 71
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAH:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFg:Landroid/graphics/Paint;
 
     sget-object v2, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
     .line 72
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAH:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFg:Landroid/graphics/Paint;
 
     const/high16 v2, 0x40000000    # 2.0f
 
     invoke-virtual {v1, v2}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
     .line 73
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAH:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFg:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v7}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
@@ -228,15 +228,15 @@
 
     invoke-direct {v1}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAI:Landroid/graphics/Paint;
+    iput-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFh:Landroid/graphics/Paint;
 
     .line 76
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAI:Landroid/graphics/Paint;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFh:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
     .line 77
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAI:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFh:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v7}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
@@ -252,7 +252,7 @@
 
     .prologue
     .line 18
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     return v0
 .end method
@@ -262,7 +262,7 @@
 
     .prologue
     .line 18
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->rp:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->qs:I
 
     return v0
 .end method
@@ -272,11 +272,11 @@
 
     .prologue
     .line 18
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     add-int/lit8 v0, v0, -0x1
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     return v0
 .end method
@@ -286,24 +286,24 @@
 
     .prologue
     .line 18
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAL:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFk:Ljava/lang/Runnable;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final aTe()V
+.method public final bjH()V
     .locals 1
 
     .prologue
     .line 135
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAL:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFk:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->removeCallbacks(Ljava/lang/Runnable;)Z
 
     .line 136
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAL:Ljava/lang/Runnable;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFk:Ljava/lang/Runnable;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->post(Ljava/lang/Runnable;)Z
 
@@ -316,7 +316,7 @@
 
     .prologue
     .line 86
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->rp:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->qs:I
 
     return v0
 .end method
@@ -326,7 +326,7 @@
 
     .prologue
     .line 101
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     return v0
 .end method
@@ -345,15 +345,15 @@
     invoke-super {p0, p1}, Landroid/widget/CompoundButton;->onDraw(Landroid/graphics/Canvas;)V
 
     .line 150
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAJ:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFi:Landroid/graphics/RectF;
 
-    iget v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAK:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFj:I
 
     int-to-float v1, v1
 
     sub-float/2addr v1, v3
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAK:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFj:I
 
     int-to-float v2, v2
 
@@ -362,13 +362,13 @@
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
     .line 151
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAJ:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFi:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->getWidth()I
 
     move-result v1
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAK:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFj:I
 
     sub-int/2addr v1, v2
 
@@ -380,7 +380,7 @@
 
     move-result v2
 
-    iget v3, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAK:I
+    iget v3, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFj:I
 
     sub-int/2addr v2, v3
 
@@ -391,28 +391,28 @@
     invoke-virtual {v0, v1, v2}, Landroid/graphics/RectF;->offset(FF)V
 
     .line 152
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAJ:Landroid/graphics/RectF;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFi:Landroid/graphics/RectF;
 
     const/4 v2, 0x0
 
     const/high16 v3, 0x43b40000    # 360.0f
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAH:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFg:Landroid/graphics/Paint;
 
     move-object v0, p1
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
     .line 154
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAJ:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFi:Landroid/graphics/RectF;
 
-    iget v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAK:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFj:I
 
     int-to-float v1, v1
 
     sub-float/2addr v1, v6
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAK:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFj:I
 
     int-to-float v2, v2
 
@@ -421,13 +421,13 @@
     invoke-virtual {v0, v6, v6, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
     .line 155
-    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAJ:Landroid/graphics/RectF;
+    iget-object v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFi:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->getWidth()I
 
     move-result v1
 
-    iget v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAK:I
+    iget v2, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFj:I
 
     sub-int/2addr v1, v2
 
@@ -439,7 +439,7 @@
 
     move-result v2
 
-    iget v3, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAK:I
+    iget v3, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFj:I
 
     sub-int/2addr v2, v3
 
@@ -450,21 +450,21 @@
     invoke-virtual {v0, v1, v2}, Landroid/graphics/RectF;->offset(FF)V
 
     .line 156
-    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAJ:Landroid/graphics/RectF;
+    iget-object v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFi:Landroid/graphics/RectF;
 
     const/high16 v2, -0x3d4c0000    # -90.0f
 
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     mul-int/lit16 v0, v0, 0x168
 
-    iget v3, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->rp:I
+    iget v3, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->qs:I
 
     div-int/2addr v0, v3
 
     int-to-float v3, v0
 
-    iget-object v5, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAI:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFh:Landroid/graphics/Paint;
 
     move-object v0, p1
 
@@ -479,13 +479,13 @@
 
     .prologue
     .line 141
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAK:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFj:I
 
     invoke-static {v0, p1}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->resolveSize(II)I
 
     move-result v0
 
-    iget v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->jAK:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->lFj:I
 
     invoke-static {v1, p2}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->resolveSize(II)I
 
@@ -529,14 +529,14 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->rp:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->qs:I
 
     .line 220
     invoke-static {p1}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->b(Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     goto :goto_0
 .end method
@@ -563,12 +563,12 @@
     invoke-direct {v0, v1}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;-><init>(Landroid/os/Parcelable;)V
 
     .line 202
-    iget v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->rp:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->qs:I
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->a(Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;I)I
 
     .line 203
-    iget v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iget v1, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     invoke-static {v0, v1}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;->b(Lcom/tencent/mm/ui/widget/MMPinProgressBtn$SavedState;I)I
 
@@ -593,7 +593,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->rp:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->qs:I
 
     .line 94
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->invalidate()V
@@ -613,16 +613,16 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     .line 110
-    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->rp:I
+    iget v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->qs:I
 
     invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->dH:I
+    iput v0, p0, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->cU:I
 
     .line 111
     invoke-virtual {p0}, Lcom/tencent/mm/ui/widget/MMPinProgressBtn;->invalidate()V

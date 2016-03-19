@@ -1,33 +1,33 @@
 package com.tencent.mm.b;
 
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.p;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.q;
 import java.util.HashMap;
 import java.util.Map;
 
 public final class f
 {
-  public String ang;
-  private Map anh = new HashMap();
+  public String akS;
+  private Map akT = new HashMap();
   
   private f(String paramString)
   {
     if (paramString == null)
     {
-      ang = "http://dldir1.qq.com/foxmail/";
+      akS = "http://dldir1.qq.com/foxmail/";
       return;
     }
-    ang = paramString;
+    akS = paramString;
   }
   
-  public static f aM(String paramString)
+  public static f aK(String paramString)
   {
-    Map localMap = p.z(paramString, "patchupdate", null);
+    Map localMap = q.J(paramString, "patchupdate", null);
     if (localMap == null) {
       return null;
     }
     f localf = new f((String)localMap.get(".patchupdate.$base"));
-    int k = bn.getInt((String)localMap.get(".patchupdate.$count"), 0);
+    int k = ay.getInt((String)localMap.get(".patchupdate.$count"), 0);
     int i = 0;
     if (i >= k) {
       return localf;
@@ -38,8 +38,8 @@ public final class f
       paramString = Integer.valueOf(i);
       label84:
       paramString = paramString;
-      paramString = new a((String)localMap.get(paramString + ".$old"), (String)localMap.get(paramString + ".$new"), (String)localMap.get(paramString + ".$patch"), (String)localMap.get(paramString + ".$url"), bn.getInt((String)localMap.get(paramString + ".$size"), 0));
-      if ((ani == null) || (anj == null) || (ank == null) || (url == null)) {
+      paramString = new a((String)localMap.get(paramString + ".$old"), (String)localMap.get(paramString + ".$new"), (String)localMap.get(paramString + ".$patch"), (String)localMap.get(paramString + ".$url"), ay.getInt((String)localMap.get(paramString + ".$size"), 0));
+      if ((akU == null) || (akV == null) || (akW == null) || (url == null)) {
         break label314;
       }
     }
@@ -47,7 +47,7 @@ public final class f
     for (int j = 1;; j = 0)
     {
       if (j != 0) {
-        anh.put(ani, paramString);
+        akT.put(akU, paramString);
       }
       i += 1;
       break;
@@ -56,24 +56,24 @@ public final class f
     }
   }
   
-  public final a aL(String paramString)
+  public final a aJ(String paramString)
   {
-    return (a)anh.get(paramString);
+    return (a)akT.get(paramString);
   }
   
   public static final class a
   {
-    String ani;
-    public String anj;
-    public String ank;
+    String akU;
+    public String akV;
+    public String akW;
     public int size;
     public String url;
     
     public a(String paramString1, String paramString2, String paramString3, String paramString4, int paramInt)
     {
-      ani = paramString1;
-      anj = paramString2;
-      ank = paramString3;
+      akU = paramString1;
+      akV = paramString2;
+      akW = paramString3;
       size = paramInt;
       url = paramString4;
     }

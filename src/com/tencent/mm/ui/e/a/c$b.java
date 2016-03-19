@@ -7,9 +7,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
 
 public final class c$b
   extends a.b
@@ -21,11 +18,11 @@ public final class c$b
   
   public final View a(Context paramContext, ViewGroup paramViewGroup)
   {
-    paramContext = LayoutInflater.from(paramContext).inflate(a.k.fts_more_item, paramViewGroup, false);
-    paramViewGroup = new c.a(jnZ);
-    eBz = ((TextView)paramContext.findViewById(a.i.tip_tv));
-    cwg = ((ImageView)paramContext.findViewById(a.i.icon_iv));
-    cvG = paramContext.findViewById(a.i.search_item_content_layout);
+    paramContext = LayoutInflater.from(paramContext).inflate(2131363034, paramViewGroup, false);
+    paramViewGroup = new c.a(ltq);
+    fKK = ((TextView)paramContext.findViewById(2131166160));
+    cNV = ((ImageView)paramContext.findViewById(2131165516));
+    cMt = paramContext.findViewById(2131166159);
     paramContext.setTag(paramViewGroup);
     return paramContext;
   }
@@ -34,18 +31,18 @@ public final class c$b
   {
     paramContext = (c.a)parama;
     parama = (c)paramVarArgs;
-    aK(cvG);
-    eBz.setText(jnW);
-    cwg.setImageResource(a.h.fts_more_button_icon);
+    aN(cMt);
+    fKK.setText(ltn);
+    cNV.setImageResource(2130903387);
   }
   
   public final boolean a(Context paramContext, a paramVarArgs)
   {
     paramVarArgs = new Intent();
-    paramVarArgs.putExtra("detail_query", jnZ.bII);
-    paramVarArgs.putExtra("detail_type", jnZ.eVv);
-    paramVarArgs.putExtra("Search_Scene", jnZ.eVC);
-    com.tencent.mm.aj.c.c(paramContext, "search", ".ui.FTSDetailUI", paramVarArgs);
+    paramVarArgs.putExtra("detail_query", ltq.aEy);
+    paramVarArgs.putExtra("detail_type", ltq.ggB);
+    paramVarArgs.putExtra("Search_Scene", ltq.ggI);
+    com.tencent.mm.ar.c.c(paramContext, "search", ".ui.FTSDetailUI", paramVarArgs);
     return true;
   }
 }

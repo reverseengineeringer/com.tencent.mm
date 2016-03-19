@@ -1,8 +1,10 @@
 package com.tencent.mm.d.a;
 
+import java.util.List;
+
 public final class cm$a
 {
-  public String path;
+  public List avh;
 }
 
 /* Location:

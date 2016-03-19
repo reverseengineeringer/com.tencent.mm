@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/iq;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public aFO:Lcom/tencent/mm/d/a/iq$a;
+.field public aEB:Lcom/tencent/mm/d/a/iq$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/iq;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/iq;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/iq;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/iq;->arR:Z
 
     return-void
 .end method
@@ -42,23 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/iq$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/iq$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/iq;->aFO:Lcom/tencent/mm/d/a/iq$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/iq;->aEB:Lcom/tencent/mm/d/a/iq$a;
 
     .line 8
-    const-string/jumbo v0, "TalkRoomUitl"
+    const-string/jumbo v0, "PreWebSearch"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/iq;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/iq;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/iq;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/iq;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/iq;->jUI:Z
 
     return-void
 .end method

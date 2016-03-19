@@ -15,9 +15,9 @@
 
 
 # instance fields
-.field gRB:I
+.field drS:I
 
-.field final synthetic iHE:Lcom/tencent/mm/ui/base/MMSlideDelView;
+.field final synthetic kGQ:Lcom/tencent/mm/ui/base/MMSlideDelView;
 
 
 # direct methods
@@ -26,7 +26,7 @@
 
     .prologue
     .line 590
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMSlideDelView$h;->iHE:Lcom/tencent/mm/ui/base/MMSlideDelView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/MMSlideDelView$h;->kGQ:Lcom/tencent/mm/ui/base/MMSlideDelView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 

@@ -1,26 +1,133 @@
 package com.tencent.mm.ui.base.preference;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.widget.EditText;
-import com.tencent.mm.ui.base.aa;
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.InflateException;
+import java.lang.reflect.Constructor;
+import java.util.HashMap;
+import org.xmlpull.v1.XmlPullParser;
 
-final class j
-  implements DialogInterface.OnClickListener
+public final class j
 {
-  j(EditPreference paramEditPreference, EditText paramEditText) {}
+  private static HashMap kMd = new HashMap();
+  private static final Class[] kMf = { Context.class, AttributeSet.class };
+  final Object[] kMe = new Object[2];
+  final Context mContext;
   
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
+  public j(Context paramContext)
   {
-    if (EditPreference.a(iLV) != null) {
-      EditPreference.a(iLV).dismiss();
+    mContext = paramContext;
+  }
+  
+  private Preference a(String paramString1, String paramString2, AttributeSet paramAttributeSet)
+  {
+    Object localObject1 = (Constructor)kMd.get(paramString1);
+    if (localObject1 == null) {}
+    for (;;)
+    {
+      try
+      {
+        localObject3 = mContext.getClassLoader();
+        if (paramString2 != null)
+        {
+          localObject2 = paramString2 + paramString1;
+          localObject2 = ((ClassLoader)localObject3).loadClass((String)localObject2).getConstructor(kMf);
+          localObject1 = localObject2;
+        }
+      }
+      catch (NoSuchMethodException localNoSuchMethodException)
+      {
+        Object localObject3;
+        localObject2 = new StringBuilder().append(paramAttributeSet.getPositionDescription()).append(": Error inflating class ");
+        paramAttributeSet = paramString1;
+        if (paramString2 != null) {
+          paramAttributeSet = paramString2 + paramString1;
+        }
+        paramString1 = new InflateException(paramAttributeSet);
+        paramString1.initCause(localNoSuchMethodException);
+        throw paramString1;
+      }
+      catch (ClassNotFoundException paramString1)
+      {
+        throw paramString1;
+      }
+      catch (Exception paramString2) {}
+      try
+      {
+        kMd.put(paramString1, localObject2);
+        localObject1 = localObject2;
+        localObject3 = kMe;
+        localObject3[1] = paramAttributeSet;
+        localObject1 = localObject2;
+        localObject2 = (Preference)((Constructor)localObject2).newInstance((Object[])localObject3);
+        return (Preference)localObject2;
+      }
+      catch (Exception paramString2)
+      {
+        for (;;) {}
+      }
+      Object localObject2 = paramString1;
+      continue;
+      if (paramAttributeSet != null) {
+        paramString1 = paramAttributeSet.getPositionDescription();
+      }
+      for (;;)
+      {
+        paramString1 = new InflateException(paramString1);
+        paramString1.initCause(paramString2);
+        throw paramString1;
+        if ("(null): Error inflating class " + localNoSuchMethodException != null) {
+          paramString1 = localNoSuchMethodException.getClass().getName();
+        } else {
+          paramString1 = "(null)";
+        }
+      }
+      localObject2 = localNoSuchMethodException;
     }
-    iLV.value = iLU.getText().toString();
-    if (EditPreference.b(iLV) != null) {
-      EditPreference.b(iLV).aNy();
+  }
+  
+  Preference a(String paramString, AttributeSet paramAttributeSet)
+  {
+    try
+    {
+      if (-1 == paramString.indexOf('.')) {
+        return a(paramString, "com.tencent.mm.ui.base.preference.", paramAttributeSet);
+      }
+      Preference localPreference = a(paramString, null, paramAttributeSet);
+      return localPreference;
     }
-    if (EditPreference.c(iLV) != null) {
-      EditPreference.c(iLV).a(iLV, EditPreference.d(iLV));
+    catch (InflateException paramString)
+    {
+      throw paramString;
+    }
+    catch (ClassNotFoundException localClassNotFoundException)
+    {
+      paramString = new InflateException(paramAttributeSet.getPositionDescription() + ": Error inflating class " + paramString);
+      paramString.initCause(localClassNotFoundException);
+      throw paramString;
+    }
+    catch (Exception localException)
+    {
+      paramString = new InflateException(paramAttributeSet.getPositionDescription() + ": Error inflating class " + paramString);
+      paramString.initCause(localException);
+      throw paramString;
+    }
+  }
+  
+  void a(XmlPullParser paramXmlPullParser, f paramf, AttributeSet paramAttributeSet)
+  {
+    int j = paramXmlPullParser.getDepth();
+    int i = paramXmlPullParser.next();
+    while (((i != 3) || (paramXmlPullParser.getDepth() > j)) && (i != 1)) {
+      if (i != 2)
+      {
+        i = paramXmlPullParser.next();
+      }
+      else
+      {
+        paramf.a(a(paramXmlPullParser.getName(), paramAttributeSet), -1);
+        i = paramXmlPullParser.next();
+      }
     }
   }
 }

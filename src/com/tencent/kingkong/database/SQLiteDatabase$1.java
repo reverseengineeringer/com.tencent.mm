@@ -1,11 +1,11 @@
 package com.tencent.kingkong.database;
 
-class SQLiteDatabase$1
+final class SQLiteDatabase$1
   extends ThreadLocal
 {
   SQLiteDatabase$1(SQLiteDatabase paramSQLiteDatabase) {}
   
-  protected SQLiteSession initialValue()
+  protected final SQLiteSession initialValue()
   {
     return this$0.createSession();
   }

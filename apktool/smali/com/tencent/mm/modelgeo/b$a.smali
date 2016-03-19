@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract a(ZFFIDD)Z
+.method public abstract b(Lcom/tencent/mm/modelgeo/Addr;)V
 .end method

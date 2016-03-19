@@ -3,6 +3,7 @@ package com.tencent.smtt.sdk;
 import android.graphics.Bitmap;
 import android.os.Message;
 import android.view.View;
+import android.webkit.WebChromeClient.FileChooserParams;
 import com.tencent.smtt.export.external.interfaces.ConsoleMessage;
 import com.tencent.smtt.export.external.interfaces.GeolocationPermissionsCallback;
 import com.tencent.smtt.export.external.interfaces.IX5WebChromeClient.CustomViewCallback;
@@ -21,7 +22,7 @@ public class WebChromeClient
     return null;
   }
   
-  public void getVisitedHistory(ab paramab) {}
+  public void getVisitedHistory(u paramu) {}
   
   public void onCloseWindow(WebView paramWebView) {}
   
@@ -35,7 +36,7 @@ public class WebChromeClient
     return false;
   }
   
-  public void onExceededDatabaseQuota(String paramString1, String paramString2, long paramLong1, long paramLong2, long paramLong3, ac.a parama)
+  public void onExceededDatabaseQuota(String paramString1, String paramString2, long paramLong1, long paramLong2, long paramLong3, w.a parama)
   {
     parama.updateQuota(paramLong2);
   }
@@ -76,7 +77,7 @@ public class WebChromeClient
   
   public void onProgressChanged(WebView paramWebView, int paramInt) {}
   
-  public void onReachedMaxAppCacheSize(long paramLong1, long paramLong2, ac.a parama)
+  public void onReachedMaxAppCacheSize(long paramLong1, long paramLong2, w.a parama)
   {
     parama.updateQuota(paramLong2);
   }
@@ -93,9 +94,14 @@ public class WebChromeClient
   
   public void onShowCustomView(View paramView, IX5WebChromeClient.CustomViewCallback paramCustomViewCallback) {}
   
-  public void openFileChooser(ab paramab, String paramString1, String paramString2)
+  public boolean onShowFileChooser(WebView paramWebView, u paramu, WebChromeClient.FileChooserParams paramFileChooserParams)
   {
-    paramab.onReceiveValue(null);
+    return false;
+  }
+  
+  public void openFileChooser(u paramu, String paramString1, String paramString2)
+  {
+    paramu.onReceiveValue(null);
   }
 }
 

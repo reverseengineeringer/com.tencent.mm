@@ -77,6 +77,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/DatabaseUtils;->ROOT:Ljava/util/Locale;
 
+    .line 50
     return-void
 
     .line 428
@@ -752,6 +753,7 @@
 
     move-result v0
 
+    .line 290
     if-nez v0, :cond_2
 
     .line 333
@@ -2823,9 +2825,9 @@
 
     move v0, v2
 
-    .line 93
     goto :goto_0
 
+    .line 93
     :cond_2
     instance-of v0, p1, Ljava/lang/UnsupportedOperationException;
 
@@ -2838,9 +2840,9 @@
 
     move v0, v2
 
-    .line 95
     goto :goto_0
 
+    .line 95
     :cond_3
     instance-of v0, p1, Lcom/tencent/kingkong/database/SQLiteAbortException;
 
@@ -2853,9 +2855,9 @@
 
     move v0, v2
 
-    .line 97
     goto :goto_0
 
+    .line 97
     :cond_4
     instance-of v0, p1, Lcom/tencent/kingkong/database/SQLiteConstraintException;
 
@@ -2868,9 +2870,9 @@
 
     move v0, v2
 
-    .line 99
     goto :goto_0
 
+    .line 99
     :cond_5
     instance-of v0, p1, Lcom/tencent/kingkong/database/SQLiteDatabaseCorruptException;
 
@@ -2883,9 +2885,9 @@
 
     move v0, v2
 
-    .line 101
     goto :goto_0
 
+    .line 101
     :cond_6
     instance-of v0, p1, Lcom/tencent/kingkong/database/SQLiteFullException;
 
@@ -2898,9 +2900,9 @@
 
     move v0, v2
 
-    .line 103
     goto :goto_0
 
+    .line 103
     :cond_7
     instance-of v0, p1, Lcom/tencent/kingkong/database/SQLiteDiskIOException;
 
@@ -2913,9 +2915,9 @@
 
     move v0, v2
 
-    .line 105
     goto :goto_0
 
+    .line 105
     :cond_8
     instance-of v0, p1, Lcom/tencent/kingkong/database/SQLiteException;
 
@@ -2928,9 +2930,9 @@
 
     move v0, v2
 
-    .line 107
     goto :goto_0
 
+    .line 107
     :cond_9
     instance-of v0, p1, Landroid/content/OperationApplicationException;
 
@@ -2943,9 +2945,9 @@
 
     move v0, v2
 
-    .line 109
     goto :goto_0
 
+    .line 109
     :cond_a
     instance-of v0, p1, Lcom/tencent/kingkong/support/OperationCanceledException;
 
@@ -2958,7 +2960,7 @@
 
     move v0, v1
 
-    .line 112
+    .line 111
     goto :goto_0
 
     .line 113

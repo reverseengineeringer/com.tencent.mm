@@ -4,25 +4,25 @@
 
 
 # direct methods
-.method private static b(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+.method private static c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
     .locals 3
 
     .prologue
-    .line 88
+    .line 89
     invoke-virtual {p1, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    .line 89
+    .line 90
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 90
+    .line 91
     const-string/jumbo v0, "!32@/B4Tb64lLpLR9oJ2LUprhnVPRHUuAZ44"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -45,17 +45,17 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 91
+    .line 92
     const-string/jumbo v0, ""
 
-    .line 93
+    .line 94
     :cond_0
     return-object v0
 .end method
 
-.method public static ub(Ljava/lang/String;)Landroid/os/Bundle;
+.method public static zB(Ljava/lang/String;)Landroid/os/Bundle;
     .locals 9
 
     .prologue
@@ -93,11 +93,11 @@
 
     const-string/jumbo v1, "getWapPayBundle arrKeys == null || arrKeys.length == 0"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-object v0, v2
 
-    .line 84
+    .line 85
     :goto_0
     return-object v0
 
@@ -160,7 +160,7 @@
 
     const-string/jumbo v1, "appid"
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->b(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -171,7 +171,7 @@
 
     const-string/jumbo v1, "partnerid"
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->b(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -182,7 +182,7 @@
 
     const-string/jumbo v1, "prepayid"
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->b(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -193,7 +193,7 @@
 
     const-string/jumbo v1, "noncestr"
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->b(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -204,7 +204,7 @@
 
     const-string/jumbo v1, "timestamp"
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->b(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -215,7 +215,7 @@
 
     const-string/jumbo v1, "package"
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->b(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -226,31 +226,42 @@
 
     const-string/jumbo v1, "sign"
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->b(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 79
-    const-string/jumbo v0, "_wxapi_payreq_extdata"
+    const-string/jumbo v0, "_wxapi_payreq_sign_type"
 
-    const-string/jumbo v1, "extdata"
+    const-string/jumbo v1, "signtype"
 
-    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->b(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
 
     move-result-object v1
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 82
+    .line 80
+    const-string/jumbo v0, "_wxapi_payreq_extdata"
+
+    const-string/jumbo v1, "extdata"
+
+    invoke-static {v1, v4}, Lcom/tencent/mm/pluginsdk/f/a;->c(Ljava/lang/String;Ljava/util/HashMap;)Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 83
     const-string/jumbo v0, "_wxapi_payoptions_callback_classname"
 
     const-string/jumbo v1, ""
 
     invoke-virtual {v2, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 83
+    .line 84
     const-string/jumbo v0, "_wxapi_payoptions_callback_flags"
 
     const/4 v1, -0x1
@@ -259,6 +270,6 @@
 
     move-object v0, v2
 
-    .line 84
+    .line 85
     goto/16 :goto_0
 .end method

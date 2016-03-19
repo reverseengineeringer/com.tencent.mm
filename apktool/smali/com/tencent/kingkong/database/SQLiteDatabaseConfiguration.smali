@@ -40,7 +40,7 @@
     .line 40
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteDatabaseConfiguration;->EMAIL_IN_DB_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 46
+    .line 37
     return-void
 .end method
 

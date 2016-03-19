@@ -12,15 +12,15 @@
 
 
 # instance fields
-.field private chD:Landroid/view/View;
+.field private cyN:Landroid/view/View;
 
-.field public iBc:Lcom/tencent/mm/ui/c/e;
+.field kAa:I
 
-.field iBd:I
+.field public kAb:Lcom/tencent/mm/ui/c/d;
 
-.field public iBe:Lcom/tencent/mm/ui/c/g;
+.field public kAc:Lcom/tencent/mm/ui/c/a$a;
 
-.field public iBf:Lcom/tencent/mm/ui/c/a$a;
+.field public kzZ:Lcom/tencent/mm/ui/c/b;
 
 
 # direct methods
@@ -34,12 +34,12 @@
     .line 21
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/ui/c/a;->iBd:I
+    iput v0, p0, Lcom/tencent/mm/ui/c/a;->kAa:I
 
     .line 23
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/c/a;->chD:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/c/a;->cyN:Landroid/view/View;
 
     .line 28
     iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->view:Landroid/view/View;
@@ -48,31 +48,31 @@
 
     iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->view:Landroid/view/View;
 
-    sget v1, Lcom/tencent/mm/a$i;->adlist:I
+    const v1, 0x7f070156
 
     invoke-virtual {v0, v1}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/c/a;->chD:Landroid/view/View;
+    iput-object v0, p0, Lcom/tencent/mm/ui/c/a;->cyN:Landroid/view/View;
 
-    new-instance v0, Lcom/tencent/mm/ui/c/g;
+    new-instance v0, Lcom/tencent/mm/ui/c/d;
 
-    invoke-direct {v0}, Lcom/tencent/mm/ui/c/g;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/ui/c/d;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/c/a;->iBe:Lcom/tencent/mm/ui/c/g;
+    iput-object v0, p0, Lcom/tencent/mm/ui/c/a;->kAb:Lcom/tencent/mm/ui/c/d;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->iBe:Lcom/tencent/mm/ui/c/g;
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->kAb:Lcom/tencent/mm/ui/c/d;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/c/a;->chD:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/ui/c/a;->cyN:Landroid/view/View;
 
-    iput-object v1, v0, Lcom/tencent/mm/ui/c/g;->iBj:Landroid/view/View;
+    iput-object v1, v0, Lcom/tencent/mm/ui/c/d;->kAg:Landroid/view/View;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/c/a;->iBe:Lcom/tencent/mm/ui/c/g;
+    iget-object v1, p0, Lcom/tencent/mm/ui/c/a;->kAb:Lcom/tencent/mm/ui/c/d;
 
     iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->view:Landroid/view/View;
 
-    sget v2, Lcom/tencent/mm/a$i;->ad_close:I
+    const v2, 0x7f070157
 
     invoke-virtual {v0, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -80,23 +80,23 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, v1, Lcom/tencent/mm/ui/c/g;->iBk:Landroid/widget/Button;
+    iput-object v0, v1, Lcom/tencent/mm/ui/c/d;->kAh:Landroid/widget/Button;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->iBe:Lcom/tencent/mm/ui/c/g;
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->kAb:Lcom/tencent/mm/ui/c/d;
 
-    iget-object v0, v0, Lcom/tencent/mm/ui/c/g;->iBk:Landroid/widget/Button;
+    iget-object v0, v0, Lcom/tencent/mm/ui/c/d;->kAh:Landroid/widget/Button;
 
-    new-instance v1, Lcom/tencent/mm/ui/c/b;
+    new-instance v1, Lcom/tencent/mm/ui/c/a$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/c/b;-><init>(Lcom/tencent/mm/ui/c/a;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/c/a$1;-><init>(Lcom/tencent/mm/ui/c/a;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->chD:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->cyN:Landroid/view/View;
 
-    new-instance v1, Lcom/tencent/mm/ui/c/c;
+    new-instance v1, Lcom/tencent/mm/ui/c/a$2;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/c/c;-><init>(Lcom/tencent/mm/ui/c/a;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/c/a$2;-><init>(Lcom/tencent/mm/ui/c/a;)V
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -112,7 +112,7 @@
 
     .prologue
     .line 32
-    sget v0, Lcom/tencent/mm/a$k;->adlist_item:I
+    const v0, 0x7f0a004e
 
     return v0
 .end method
@@ -122,12 +122,12 @@
 
     .prologue
     .line 116
-    iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->chD:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->cyN:Landroid/view/View;
 
     if-eqz v0, :cond_0
 
     .line 117
-    iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->chD:Landroid/view/View;
+    iget-object v0, p0, Lcom/tencent/mm/ui/c/a;->cyN:Landroid/view/View;
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setVisibility(I)V
 

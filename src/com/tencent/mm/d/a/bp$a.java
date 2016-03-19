@@ -2,7 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class bp$a
 {
-  public int op;
+  public boolean Jq = false;
+  public String alN;
+  public String auQ;
 }
 
 /* Location:

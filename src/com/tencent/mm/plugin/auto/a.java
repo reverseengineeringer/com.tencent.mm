@@ -1,23 +1,23 @@
 package com.tencent.mm.plugin.auto;
 
-import com.tencent.mm.pluginsdk.i;
-import com.tencent.mm.pluginsdk.j;
-import com.tencent.mm.pluginsdk.k;
+import com.tencent.mm.pluginsdk.f;
+import com.tencent.mm.pluginsdk.g;
+import com.tencent.mm.pluginsdk.h;
 
 public final class a
-  implements k
+  implements h
 {
-  public static j bWW;
-  public static i bWX;
+  public static g coa;
+  public static f cob;
   
-  public final void a(i parami)
+  public final void a(f paramf)
   {
-    bWX = parami;
+    cob = paramf;
   }
   
-  public final void a(j paramj)
+  public final void a(g paramg)
   {
-    bWW = paramj;
+    coa = paramg;
   }
 }
 

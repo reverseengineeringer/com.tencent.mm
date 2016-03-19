@@ -1,12 +1,12 @@
 package com.tencent.mm.compatible.a;
 
-import com.tencent.mm.compatible.util.h;
+import com.tencent.mm.compatible.util.e;
 
 public final class a
 {
   public static boolean a(int paramInt, a parama)
   {
-    if (h.bT(paramInt))
+    if (e.bU(paramInt))
     {
       parama.run();
       return true;

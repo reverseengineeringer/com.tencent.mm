@@ -1,40 +1,45 @@
 package com.tencent.smtt.a;
 
-import java.security.MessageDigest;
+import android.text.TextUtils;
+import java.lang.reflect.Method;
 
 public final class j
 {
-  public static String aE(String paramString)
+  private static Class lUT;
+  private static Method lUU;
+  
+  static
   {
-    if (paramString == null) {}
-    for (;;)
+    try
     {
-      return null;
-      try
-      {
-        paramString = paramString.getBytes();
-        Object localObject = MessageDigest.getInstance("MD5");
-        ((MessageDigest)localObject).update(paramString);
-        paramString = ((MessageDigest)localObject).digest();
-        if ((paramString != null) && (paramString.length > 0))
-        {
-          localObject = new StringBuffer(paramString.length * 2);
-          int i = 0;
-          while (i < paramString.length)
-          {
-            if ((paramString[i] & 0xFF) < 16) {
-              ((StringBuffer)localObject).append("0");
-            }
-            ((StringBuffer)localObject).append(Long.toString(paramString[i] & 0xFF, 16));
-            i += 1;
-          }
-          paramString = ((StringBuffer)localObject).toString();
-          return paramString;
-        }
-      }
-      catch (Exception paramString) {}
+      Class localClass = Class.forName("android.os.SystemProperties");
+      lUT = localClass;
+      lUU = localClass.getDeclaredMethod("get", new Class[] { String.class, String.class });
+      return;
     }
-    return null;
+    catch (Throwable localThrowable) {}
+  }
+  
+  public static String cJ(String paramString1, String paramString2)
+  {
+    if (TextUtils.isEmpty(paramString1)) {
+      return paramString2;
+    }
+    return cK(paramString1, paramString2);
+  }
+  
+  private static String cK(String paramString1, String paramString2)
+  {
+    if ((lUT == null) || (lUU == null)) {
+      return paramString2;
+    }
+    try
+    {
+      paramString1 = (String)lUU.invoke(lUT, new Object[] { paramString1, paramString2 });
+      return paramString1;
+    }
+    catch (Throwable paramString1) {}
+    return paramString2;
   }
 }
 

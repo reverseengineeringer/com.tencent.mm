@@ -5,7 +5,7 @@ import android.view.accessibility.AccessibilityNodeInfo;
 class a$c
   extends a.a
 {
-  public final void b(Object paramObject, int paramInt)
+  public final void c(Object paramObject, int paramInt)
   {
     ((AccessibilityNodeInfo)paramObject).setMovementGranularities(paramInt);
   }
@@ -20,17 +20,17 @@ class a$c
     ((AccessibilityNodeInfo)paramObject).setAccessibilityFocused(paramBoolean);
   }
   
-  public final int t(Object paramObject)
+  public final int w(Object paramObject)
   {
     return ((AccessibilityNodeInfo)paramObject).getMovementGranularities();
   }
   
-  public final boolean u(Object paramObject)
+  public final boolean x(Object paramObject)
   {
     return ((AccessibilityNodeInfo)paramObject).isVisibleToUser();
   }
   
-  public final boolean v(Object paramObject)
+  public final boolean y(Object paramObject)
   {
     return ((AccessibilityNodeInfo)paramObject).isAccessibilityFocused();
   }

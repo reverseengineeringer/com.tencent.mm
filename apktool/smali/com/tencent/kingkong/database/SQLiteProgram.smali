@@ -33,6 +33,7 @@
 
     sput-object v0, Lcom/tencent/kingkong/database/SQLiteProgram;->EMPTY_STRING_ARRAY:[Ljava/lang/String;
 
+    .line 30
     return-void
 .end method
 

@@ -2,13 +2,13 @@ package com.tencent.mm.ui.tools.gridviewheaders;
 
 public final class c$c
 {
-  protected int cHs;
-  protected int jwf;
+  protected int dfq;
+  protected int lyW;
   
   protected c$c(c paramc, int paramInt1, int paramInt2)
   {
-    cHs = paramInt1;
-    jwf = paramInt2;
+    dfq = paramInt1;
+    lyW = paramInt2;
   }
 }
 

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract Y(Ljava/lang/Object;)V
+.method public abstract Z(Ljava/lang/Object;)V
 .end method

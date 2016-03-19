@@ -1,12 +1,18 @@
-.class public final Lcom/tencent/mm/a/b;
+.class public Lcom/tencent/mm/a/b;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field private amF:Ljavax/crypto/Cipher;
+# static fields
+.field static akp:Lcom/tencent/mm/sdk/platformtools/aa;
 
-.field private amG:Ljavax/crypto/Cipher;
+
+# instance fields
+.field akm:Ljava/io/File;
+
+.field private akn:Ljava/util/concurrent/locks/ReentrantLock;
+
+.field private ako:Ljava/util/concurrent/locks/Condition;
 
 
 # direct methods
@@ -14,156 +20,201 @@
     .locals 4
 
     .prologue
-    .line 19
+    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 21
-    :try_start_0
-    new-instance v0, Ljavax/crypto/spec/DESKeySpec;
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
-    const-string/jumbo v1, "UTF8"
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    invoke-virtual {p1, v1}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljavax/crypto/spec/DESKeySpec;-><init>([B)V
+    iput-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
 
     .line 22
-    const-string/jumbo v1, "DES"
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
 
-    invoke-static {v1}, Ljavax/crypto/SecretKeyFactory;->getInstance(Ljava/lang/String;)Ljavax/crypto/SecretKeyFactory;
-
-    move-result-object v1
-
-    invoke-virtual {v1, v0}, Ljavax/crypto/SecretKeyFactory;->generateSecret(Ljava/security/spec/KeySpec;)Ljavax/crypto/SecretKey;
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->newCondition()Ljava/util/concurrent/locks/Condition;
 
     move-result-object v0
 
-    .line 23
-    new-instance v1, Ljavax/crypto/spec/IvParameterSpec;
-
-    const-string/jumbo v2, "manifest"
-
-    const-string/jumbo v3, "UTF8"
-
-    invoke-virtual {v2, v3}, Ljava/lang/String;->getBytes(Ljava/lang/String;)[B
-
-    move-result-object v2
-
-    invoke-direct {v1, v2}, Ljavax/crypto/spec/IvParameterSpec;-><init>([B)V
-
-    .line 25
-    const-string/jumbo v2, "DES/CBC/PKCS5Padding"
-
-    invoke-static {v2}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
-
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/tencent/mm/a/b;->amF:Ljavax/crypto/Cipher;
+    iput-object v0, p0, Lcom/tencent/mm/a/b;->ako:Ljava/util/concurrent/locks/Condition;
 
     .line 26
-    iget-object v2, p0, Lcom/tencent/mm/a/b;->amF:Ljavax/crypto/Cipher;
+    const-class v1, Lcom/tencent/mm/a/b;
 
-    const/4 v3, 0x1
+    monitor-enter v1
 
-    invoke-virtual {v2, v3, v0, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+    .line 27
+    :try_start_0
+    sget-object v0, Lcom/tencent/mm/a/b;->akp:Lcom/tencent/mm/sdk/platformtools/aa;
+
+    if-nez v0, :cond_0
 
     .line 28
-    const-string/jumbo v2, "DES/CBC/PKCS5Padding"
+    new-instance v0, Landroid/os/HandlerThread;
 
-    invoke-static {v2}, Ljavax/crypto/Cipher;->getInstance(Ljava/lang/String;)Ljavax/crypto/Cipher;
+    const-string/jumbo v2, "I/O Worker"
 
-    move-result-object v2
-
-    iput-object v2, p0, Lcom/tencent/mm/a/b;->amG:Ljavax/crypto/Cipher;
+    invoke-direct {v0, v2}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
     .line 29
-    iget-object v2, p0, Lcom/tencent/mm/a/b;->amG:Ljavax/crypto/Cipher;
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->start()V
 
-    const/4 v3, 0x2
+    .line 30
+    new-instance v2, Lcom/tencent/mm/sdk/platformtools/aa;
 
-    invoke-virtual {v2, v3, v0, v1}, Ljavax/crypto/Cipher;->init(ILjava/security/Key;Ljava/security/spec/AlgorithmParameterSpec;)V
+    invoke-virtual {v0}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
+
+    move-result-object v0
+
+    invoke-direct {v2, v0}, Lcom/tencent/mm/sdk/platformtools/aa;-><init>(Landroid/os/Looper;)V
+
+    sput-object v2, Lcom/tencent/mm/a/b;->akp:Lcom/tencent/mm/sdk/platformtools/aa;
+
+    .line 32
+    :cond_0
+    monitor-exit v1
     :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     .line 33
+    new-instance v0, Ljava/io/File;
+
+    invoke-direct {v0, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_1
+
+    iput-object v0, p0, Lcom/tencent/mm/a/b;->akm:Ljava/io/File;
+
+    .line 34
     :goto_0
     return-void
 
     .line 32
-    :catch_0
+    :catchall_0
     move-exception v0
+
+    :try_start_1
+    monitor-exit v1
+    :try_end_1
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    throw v0
+
+    .line 33
+    :cond_1
+    const-string/jumbo v0, "!44@/B4Tb64lLpKXBaxGdtxV+BEoZ2+3MD7CYjuHi5HpPHU="
+
+    const-string/jumbo v1, "create new file %s"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    aput-object p1, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    sget-object v0, Lcom/tencent/mm/a/b;->akp:Lcom/tencent/mm/sdk/platformtools/aa;
+
+    new-instance v1, Lcom/tencent/mm/a/b$1;
+
+    invoke-direct {v1, p0, p1}, Lcom/tencent/mm/a/b$1;-><init>(Lcom/tencent/mm/a/b;Ljava/lang/String;)V
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->post(Ljava/lang/Runnable;)Z
 
     goto :goto_0
 .end method
 
-
-# virtual methods
-.method public final ax(Ljava/lang/String;)Ljava/lang/String;
-    .locals 3
+.method static synthetic a(Lcom/tencent/mm/a/b;)Ljava/util/concurrent/locks/ReentrantLock;
+    .locals 1
 
     .prologue
-    .line 56
-    const/4 v0, 0x0
+    .line 17
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
 
+    return-object v0
+.end method
+
+.method static synthetic b(Lcom/tencent/mm/a/b;)Ljava/util/concurrent/locks/Condition;
+    .locals 1
+
+    .prologue
+    .line 17
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->ako:Ljava/util/concurrent/locks/Condition;
+
+    return-object v0
+.end method
+
+
+# virtual methods
+.method public final kk()Ljava/io/File;
+    .locals 2
+
+    .prologue
+    .line 74
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
+
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->lock()V
+
+    .line 76
+    :goto_0
     :try_start_0
-    invoke-static {p1, v0}, Landroid/util/Base64;->decode(Ljava/lang/String;I)[B
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->akm:Ljava/io/File;
 
-    move-result-object v0
+    if-nez v0, :cond_0
 
-    .line 57
-    iget-object v1, p0, Lcom/tencent/mm/a/b;->amG:Ljavax/crypto/Cipher;
+    .line 77
+    const-string/jumbo v0, "!44@/B4Tb64lLpKXBaxGdtxV+BEoZ2+3MD7CYjuHi5HpPHU="
 
-    invoke-virtual {v1, v0}, Ljavax/crypto/Cipher;->doFinal([B)[B
+    const-string/jumbo v1, "getFile await"
 
-    move-result-object v1
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 58
-    new-instance v0, Ljava/lang/String;
+    .line 78
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->ako:Ljava/util/concurrent/locks/Condition;
 
-    const-string/jumbo v2, "UTF8"
-
-    invoke-direct {v0, v1, v2}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Condition;->await()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 63
-    :goto_0
-    return-object v0
+    goto :goto_0
 
-    .line 59
+    .line 82
     :catch_0
     move-exception v0
 
-    .line 61
-    new-instance v1, Ljava/lang/StringBuilder;
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
 
-    const-string/jumbo v2, "[des]"
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    .line 85
+    :goto_1
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->akm:Ljava/io/File;
 
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    return-object v0
 
-    move-result-object v1
+    .line 82
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
 
-    const-string/jumbo v2, "|"
+    invoke-virtual {v0}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    goto :goto_1
 
-    move-result-object v1
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/a/b;->akn:Ljava/util/concurrent/locks/ReentrantLock;
 
-    move-result-object v0
+    invoke-virtual {v1}, Ljava/util/concurrent/locks/ReentrantLock;->unlock()V
 
-    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    goto :goto_0
+    throw v0
 .end method

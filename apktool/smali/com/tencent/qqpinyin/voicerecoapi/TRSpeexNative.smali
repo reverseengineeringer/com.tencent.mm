@@ -25,11 +25,11 @@
 .method public native nativeTRSpeexDecodeRelease(I)I
 .end method
 
-.method public native nativeTRSpeexEncode(I[BII[B)I
+.method native nativeTRSpeexEncode(I[BII[B)I
 .end method
 
-.method public native nativeTRSpeexInit()I
+.method native nativeTRSpeexInit()I
 .end method
 
-.method public native nativeTRSpeexRelease(I)I
+.method native nativeTRSpeexRelease(I)I
 .end method

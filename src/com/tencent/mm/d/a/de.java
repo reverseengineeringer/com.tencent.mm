@@ -1,33 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class de
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a azd = new a();
-  public b aze = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a awE = new a();
   
   public de()
   {
-    id = "GenFingerPrintRsaKey";
-    hXT = atO;
+    id = "ExitTrackRoom";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean azf = false;
-    public int azg = 0;
-    public String azh;
-  }
-  
-  public static final class b
-  {
-    public boolean azi = false;
-    public String azj;
-    public String azk;
+    public String username;
   }
 }
 

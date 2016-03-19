@@ -8,7 +8,7 @@
     .locals 0
 
     .prologue
-    .line 27
+    .line 29
     invoke-direct {p0}, Lcom/google/android/search/verification/client/SearchActionVerificationClientService;-><init>()V
 
     return-void
@@ -16,30 +16,47 @@
 
 
 # virtual methods
-.method public final g(Landroid/content/Intent;)Z
+.method public final a(Landroid/content/Intent;Z)Z
     .locals 10
 
     .prologue
-    const/4 v6, 0x1
+    const/4 v7, 0x1
 
-    const/4 v7, 0x0
+    const/4 v6, 0x0
 
-    .line 33
+    .line 35
+    if-nez p2, :cond_0
+
+    .line 36
+    const-string/jumbo v0, "!44@/B4Tb64lLpLSrwD15DBHzy6rNDXwSklAPjSWE563slU="
+
+    const-string/jumbo v1, "Action is not verified"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    move v0, v6
+
+    .line 52
+    :goto_0
+    return v0
+
+    .line 39
+    :cond_0
     const-string/jumbo v0, "com.google.android.voicesearch.extra.RECIPIENT_CONTACT_CHAT_ID"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 34
+    .line 40
     const-string/jumbo v0, "android.intent.extra.TEXT"
 
     invoke-virtual {p1, v0}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 35
-    invoke-static {v8}, Lcom/tencent/mm/pluginsdk/a;->oV(Ljava/lang/String;)Ljava/lang/String;
+    .line 41
+    invoke-static {v8}, Lcom/tencent/mm/pluginsdk/a;->sy(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
@@ -47,36 +64,36 @@
 
     move-result-object v1
 
-    invoke-static {v1}, Lcom/tencent/mm/a/e;->n([B)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/a/g;->m([B)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 36
-    invoke-static {}, Lcom/tencent/mm/modelfriend/ay;->yB()Lcom/tencent/mm/modelfriend/h;
+    .line 42
+    invoke-static {}, Lcom/tencent/mm/modelfriend/ah;->zq()Lcom/tencent/mm/modelfriend/c;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/modelfriend/h;->gw(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/g;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/modelfriend/c;->hr(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/b;
 
     move-result-object v1
 
-    .line 37
-    invoke-virtual {v1}, Lcom/tencent/mm/modelfriend/g;->getUsername()Ljava/lang/String;
+    .line 43
+    invoke-virtual {v1}, Lcom/tencent/mm/modelfriend/b;->getUsername()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 38
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/l$a;->ayt()Lcom/tencent/mm/pluginsdk/l$j;
+    .line 44
+    invoke-static {}, Lcom/tencent/mm/pluginsdk/i$a;->aOV()Lcom/tencent/mm/pluginsdk/i$l;
 
     move-result-object v2
 
-    invoke-static {v1}, Lcom/tencent/mm/model/w;->ey(Ljava/lang/String;)I
+    invoke-static {v1}, Lcom/tencent/mm/model/i;->eK(Ljava/lang/String;)I
 
     move-result v3
 
-    invoke-interface {v2, v1, v0, v3}, Lcom/tencent/mm/pluginsdk/l$j;->i(Ljava/lang/String;Ljava/lang/String;I)V
+    invoke-interface {v2, v1, v0, v3}, Lcom/tencent/mm/pluginsdk/i$l;->u(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 41
+    .line 47
     :try_start_0
     const-string/jumbo v0, "com.google.android.voicesearch.extra.RECIPIENT_CONTACT_URI"
 
@@ -84,18 +101,18 @@
 
     move-result-object v1
 
-    .line 42
+    .line 48
     const-string/jumbo v0, "/"
 
     invoke-virtual {v1, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    if-eqz v0, :cond_1
+    if-eqz v0, :cond_2
 
     array-length v2, v0
 
-    if-lez v2, :cond_1
+    if-lez v2, :cond_2
 
     array-length v2, v0
 
@@ -105,12 +122,12 @@
 
     move-object v5, v0
 
-    :goto_0
-    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    :goto_1
+    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_2
+    if-eqz v0, :cond_3
 
     const-string/jumbo v0, "!44@/B4Tb64lLpLSrwD15DBHzy6rNDXwSklAPjSWE563slU="
 
@@ -128,22 +145,60 @@
 
     aput-object v8, v3, v1
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 46
-    :cond_0
-    :goto_1
-    return v6
-
-    .line 42
     :cond_1
+    :goto_2
+    move v0, v7
+
+    .line 52
+    goto :goto_0
+
+    .line 48
+    :cond_2
     const-string/jumbo v0, ""
 
     move-object v5, v0
 
-    goto :goto_0
+    goto :goto_1
 
-    :cond_2
+    :cond_3
+    const-string/jumbo v0, "android.permission.READ_CONTACTS"
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/pluginsdk/g/a;->aL(Landroid/content/Context;Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_4
+
+    const-string/jumbo v0, "!44@/B4Tb64lLpLSrwD15DBHzy6rNDXwSklAPjSWE563slU="
+
+    const-string/jumbo v1, "no contacts permission"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_2
+
+    .line 49
+    :catch_0
+    move-exception v0
+
+    .line 50
+    const-string/jumbo v1, "!44@/B4Tb64lLpLSrwD15DBHzy6rNDXwSklAPjSWE563slU="
+
+    const-string/jumbo v2, "updateContactMarked error"
+
+    new-array v3, v6, [Ljava/lang/Object;
+
+    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    goto :goto_2
+
+    .line 48
+    :cond_4
+    :try_start_1
     invoke-virtual {p0}, Lcom/tencent/mm/modelvoiceaction/VoiceActionService;->getContentResolver()Landroid/content/ContentResolver;
 
     move-result-object v0
@@ -192,13 +247,13 @@
 
     move-result-object v1
 
-    if-eqz v1, :cond_4
+    if-eqz v1, :cond_6
 
     invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
 
     move-result v0
 
-    if-lez v0, :cond_4
+    if-lez v0, :cond_6
 
     invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
 
@@ -250,11 +305,11 @@
 
     move-result v0
 
-    if-lez v0, :cond_3
+    if-lez v0, :cond_5
 
-    move v0, v6
+    move v0, v7
 
-    :goto_2
+    :goto_3
     const-string/jumbo v2, "!44@/B4Tb64lLpLSrwD15DBHzy6rNDXwSklAPjSWE563slU="
 
     const-string/jumbo v3, "updateContactMarked: %b"
@@ -271,47 +326,28 @@
 
     aput-object v0, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    :goto_3
-    if-eqz v1, :cond_0
+    :goto_4
+    if-eqz v1, :cond_1
 
     invoke-interface {v1}, Landroid/database/Cursor;->close()V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto/16 :goto_1
+    goto/16 :goto_2
 
-    .line 43
-    :catch_0
-    move-exception v0
+    :cond_5
+    move v0, v6
 
-    .line 44
-    const-string/jumbo v1, "!44@/B4Tb64lLpLSrwD15DBHzy6rNDXwSklAPjSWE563slU="
+    goto :goto_3
 
-    const-string/jumbo v2, "updateContactMarked error"
-
-    new-array v3, v7, [Ljava/lang/Object;
-
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto/16 :goto_1
-
-    :cond_3
-    move v0, v7
-
-    .line 42
-    goto :goto_2
-
-    :cond_4
-    :try_start_1
+    :cond_6
     const-string/jumbo v0, "!44@/B4Tb64lLpLSrwD15DBHzy6rNDXwSklAPjSWE563slU="
 
     const-string/jumbo v2, "updateContactMarked: false"
 
-    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    goto :goto_3
+    goto :goto_4
 .end method

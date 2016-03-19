@@ -1,10 +1,18 @@
 package com.tencent.mm.modelgeo;
 
-import android.os.Parcelable.Creator;
-
-final class a
-  implements Parcelable.Creator
-{}
+public abstract interface a
+{
+  public abstract void a(a parama);
+  
+  public abstract void b(a parama);
+  
+  public abstract void c(a parama);
+  
+  public static abstract interface a
+  {
+    public abstract boolean a(boolean paramBoolean, float paramFloat1, float paramFloat2, int paramInt, double paramDouble1, double paramDouble2);
+  }
+}
 
 /* Location:
  * Qualified Name:     com.tencent.mm.modelgeo.a

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bm
-  extends a.c
+  extends a.e
 {
   public a$bm()
   {
-    super("openMyDeviceProfile", "openMyDeviceProfile", 145, false);
+    super("getWXDeviceTicket", "getWXDeviceTicket", 125, true);
   }
 }
 

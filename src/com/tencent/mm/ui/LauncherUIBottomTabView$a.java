@@ -6,11 +6,11 @@ import android.widget.TextView;
 
 public final class LauncherUIBottomTabView$a
 {
-  View ipn;
-  TabIconView ipo;
-  TextView ipp;
-  TextView ipq;
-  ImageView ipr;
+  View koh;
+  TabIconView koi;
+  TextView koj;
+  TextView kok;
+  ImageView kol;
   
   protected LauncherUIBottomTabView$a(LauncherUIBottomTabView paramLauncherUIBottomTabView) {}
 }

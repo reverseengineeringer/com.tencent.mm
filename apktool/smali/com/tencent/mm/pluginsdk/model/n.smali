@@ -1,56 +1,134 @@
-.class final Lcom/tencent/mm/pluginsdk/model/n;
+.class public final Lcom/tencent/mm/pluginsdk/model/n;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Ljava/lang/Runnable;
-
 
 # instance fields
-.field final synthetic fqr:[Ljava/lang/Object;
+.field public auy:Ljava/lang/String;
 
-.field final synthetic gLp:Lcom/tencent/mm/pluginsdk/model/m;
+.field private iAt:I
+
+.field public iAu:Ljava/lang/String;
+
+.field public iAv:Ljava/lang/String;
+
+.field public iAw:Ljava/lang/String;
+
+.field public iAx:I
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/pluginsdk/model/m;[Ljava/lang/Object;)V
+.method constructor <init>(ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
     .locals 0
 
     .prologue
-    .line 29
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/model/n;->gLp:Lcom/tencent/mm/pluginsdk/model/m;
-
-    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/n;->fqr:[Ljava/lang/Object;
-
+    .line 61
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
+    .line 62
+    iput p1, p0, Lcom/tencent/mm/pluginsdk/model/n;->iAt:I
+
+    .line 63
+    iput-object p2, p0, Lcom/tencent/mm/pluginsdk/model/n;->auy:Ljava/lang/String;
+
+    .line 64
+    iput-object p3, p0, Lcom/tencent/mm/pluginsdk/model/n;->iAu:Ljava/lang/String;
+
+    .line 65
+    iput p6, p0, Lcom/tencent/mm/pluginsdk/model/n;->iAx:I
+
+    .line 66
+    iput-object p4, p0, Lcom/tencent/mm/pluginsdk/model/n;->iAv:Ljava/lang/String;
+
+    .line 67
+    iput-object p5, p0, Lcom/tencent/mm/pluginsdk/model/n;->iAw:Ljava/lang/String;
+
+    .line 68
     return-void
 .end method
 
 
 # virtual methods
-.method public final run()V
-    .locals 3
+.method public final toString()Ljava/lang/String;
+    .locals 2
 
     .prologue
-    .line 33
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/model/n;->gLp:Lcom/tencent/mm/pluginsdk/model/m;
+    .line 81
+    new-instance v0, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/model/m;->Gq()Ljava/lang/Object;
+    const-string/jumbo v1, "id:"
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/model/n;->iAt:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
-    .line 34
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/n;->gLp:Lcom/tencent/mm/pluginsdk/model/m;
+    const-string/jumbo v1, ";productId:"
 
-    iget-object v1, v1, Lcom/tencent/mm/pluginsdk/model/m;->handler:Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    new-instance v2, Lcom/tencent/mm/pluginsdk/model/o;
+    move-result-object v0
 
-    invoke-direct {v2, p0, v0}, Lcom/tencent/mm/pluginsdk/model/o;-><init>(Lcom/tencent/mm/pluginsdk/model/n;Ljava/lang/Object;)V
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/n;->auy:Ljava/lang/String;
 
-    invoke-virtual {v1, v2}, Lcom/tencent/mm/sdk/platformtools/ac;->post(Ljava/lang/Runnable;)Z
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 41
-    return-void
+    move-result-object v0
+
+    const-string/jumbo v1, ";full:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/n;->iAu:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, ";productState:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/model/n;->iAx:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, ";priceCurrencyCode:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/n;->iAv:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v1, ";priceAmountMicros:"
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/model/n;->iAw:Ljava/lang/String;
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    return-object v0
 .end method

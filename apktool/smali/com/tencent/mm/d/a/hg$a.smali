@@ -15,13 +15,7 @@
 
 
 # instance fields
-.field public aEE:Ljava/lang/String;
-
-.field public content:Ljava/lang/String;
-
-.field public flags:I
-
-.field public type:I
+.field public aCW:I
 
 
 # direct methods

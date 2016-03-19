@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$an
-  extends a.c
+  extends a.e
 {
   public a$an()
   {
-    super("getWXDeviceTicket", "getWXDeviceTicket", 125, true);
+    super("getBrandWCPayBindCardRequest", "get_brand_WCPay_bind_card_request", 58, true);
   }
 }
 

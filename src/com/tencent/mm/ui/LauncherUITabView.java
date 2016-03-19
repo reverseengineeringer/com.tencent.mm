@@ -7,7 +7,9 @@ import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
+import android.os.Message;
 import android.util.AttributeSet;
+import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
@@ -16,37 +18,72 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
-import com.tencent.mm.a.f;
-import com.tencent.mm.a.g;
-import com.tencent.mm.a.n;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.d.a.gn;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class LauncherUITabView
   extends RelativeLayout
-  implements d
+  implements c
 {
-  private long dzL = 0L;
-  protected int gWq = 0;
-  private d.a ioN;
-  private int ipd = -1;
-  protected View.OnClickListener ipe = new ch(this);
-  private ac ipf = new ci(this);
-  private int ipg = 0;
-  private int iph = 0;
-  private int ipi = 0;
-  private boolean ipj = false;
-  private int ipk = 0;
-  private boolean ipl = false;
-  private int ips;
-  private Bitmap ipt;
-  private ImageView ipu;
-  private Matrix ipv = new Matrix();
-  protected a ipw;
-  protected a ipx;
-  protected a ipy;
-  protected a ipz;
+  private long erA = 0L;
+  protected int feV = 0;
+  private c.a knH;
+  private int knX = -1;
+  protected View.OnClickListener knY = new View.OnClickListener()
+  {
+    private final long hjY = 300L;
+    
+    public final void onClick(View paramAnonymousView)
+    {
+      int i = ((Integer)paramAnonymousView.getTag()).intValue();
+      if ((LauncherUITabView.a(LauncherUITabView.this) == i) && (i == 0) && (System.currentTimeMillis() - LauncherUITabView.b(LauncherUITabView.this) <= 300L))
+      {
+        u.v("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "onMainTabDoubleClick");
+        LauncherUITabView.c(LauncherUITabView.this).removeMessages(0);
+        com.tencent.mm.sdk.c.a.jUF.j(new gn());
+        LauncherUITabView.a(LauncherUITabView.this, System.currentTimeMillis());
+        LauncherUITabView.a(LauncherUITabView.this, i);
+        return;
+      }
+      if (LauncherUITabView.d(LauncherUITabView.this) != null)
+      {
+        if ((i != 0) || (LauncherUITabView.a(LauncherUITabView.this) != 0))
+        {
+          LauncherUITabView.a(LauncherUITabView.this, System.currentTimeMillis());
+          LauncherUITabView.a(LauncherUITabView.this, i);
+          LauncherUITabView.d(LauncherUITabView.this).gr(i);
+          return;
+        }
+        LauncherUITabView.c(LauncherUITabView.this).sendEmptyMessageDelayed(0, 300L);
+      }
+      LauncherUITabView.a(LauncherUITabView.this, System.currentTimeMillis());
+      LauncherUITabView.a(LauncherUITabView.this, i);
+      u.w("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "on tab click, index %d, but listener is null", new Object[] { (Integer)paramAnonymousView.getTag() });
+    }
+  };
+  private aa knZ = new aa()
+  {
+    public final void handleMessage(Message paramAnonymousMessage)
+    {
+      u.v("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "onMainTabClick");
+      LauncherUITabView.d(LauncherUITabView.this).gr(0);
+    }
+  };
+  private int koa = 0;
+  private int kob = 0;
+  private int koc = 0;
+  private boolean kod = false;
+  private int koe = 0;
+  private boolean kof = false;
+  private int kom;
+  private Bitmap kon;
+  private ImageView koo;
+  private Matrix kop = new Matrix();
+  protected a koq;
+  protected a kor;
+  protected a kos;
+  protected a kot;
   
   public LauncherUITabView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -63,233 +100,233 @@ public class LauncherUITabView
   private void init()
   {
     LinearLayout localLinearLayout = new LinearLayout(getContext());
-    localLinearLayout.setBackgroundResource(a.f.white);
+    localLinearLayout.setBackgroundResource(2131231100);
     localLinearLayout.setId(2307141);
     localLinearLayout.setOrientation(0);
     addView(localLinearLayout, new RelativeLayout.LayoutParams(-1, -2));
-    ipu = new ImageView(getContext());
-    ipu.setImageMatrix(ipv);
-    ipu.setScaleType(ImageView.ScaleType.MATRIX);
-    ipu.setId(2307142);
-    Object localObject = new RelativeLayout.LayoutParams(-1, a.fromDPToPix(getContext(), 3));
+    koo = new ImageView(getContext());
+    koo.setImageMatrix(kop);
+    koo.setScaleType(ImageView.ScaleType.MATRIX);
+    koo.setId(2307142);
+    Object localObject = new RelativeLayout.LayoutParams(-1, com.tencent.mm.aw.a.fromDPToPix(getContext(), 3));
     ((RelativeLayout.LayoutParams)localObject).addRule(8, 2307141);
-    addView(ipu, (ViewGroup.LayoutParams)localObject);
-    localObject = nf(0);
-    ipB.setText(a.n.main_chat);
-    LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(0, getResources().getDimensionPixelSize(a.g.topTabbarHeight));
+    addView(koo, (ViewGroup.LayoutParams)localObject);
+    localObject = pY(0);
+    kov.setText(2131427774);
+    LinearLayout.LayoutParams localLayoutParams = new LinearLayout.LayoutParams(0, getResources().getDimensionPixelSize(2131034628));
     weight = 1.0F;
-    localLinearLayout.addView(ipB, localLayoutParams);
-    ipw = ((a)localObject);
-    localObject = nf(1);
-    ipB.setText(a.n.main_contact);
-    localLayoutParams = new LinearLayout.LayoutParams(0, getResources().getDimensionPixelSize(a.g.topTabbarHeight));
+    localLinearLayout.addView(kov, localLayoutParams);
+    koq = ((a)localObject);
+    localObject = pY(1);
+    kov.setText(2131427775);
+    localLayoutParams = new LinearLayout.LayoutParams(0, getResources().getDimensionPixelSize(2131034628));
     weight = 1.0F;
-    localLinearLayout.addView(ipB, localLayoutParams);
-    ipx = ((a)localObject);
-    localObject = nf(2);
-    ipB.setText(a.n.main_addcontact);
-    localLayoutParams = new LinearLayout.LayoutParams(0, getResources().getDimensionPixelSize(a.g.topTabbarHeight));
+    localLinearLayout.addView(kov, localLayoutParams);
+    kor = ((a)localObject);
+    localObject = pY(2);
+    kov.setText(2131427776);
+    localLayoutParams = new LinearLayout.LayoutParams(0, getResources().getDimensionPixelSize(2131034628));
     weight = 1.0F;
-    localLinearLayout.addView(ipB, localLayoutParams);
-    ipy = ((a)localObject);
-    localObject = nf(3);
-    ipB.setText(a.n.main_more);
-    localLayoutParams = new LinearLayout.LayoutParams(0, getResources().getDimensionPixelSize(a.g.topTabbarHeight));
+    localLinearLayout.addView(kov, localLayoutParams);
+    kos = ((a)localObject);
+    localObject = pY(3);
+    kov.setText(2131427777);
+    localLayoutParams = new LinearLayout.LayoutParams(0, getResources().getDimensionPixelSize(2131034628));
     weight = 1.0F;
-    localLinearLayout.addView(ipB, localLayoutParams);
-    ipz = ((a)localObject);
+    localLinearLayout.addView(kov, localLayoutParams);
+    kot = ((a)localObject);
   }
   
-  private a nf(int paramInt)
+  private a pY(int paramInt)
   {
     a locala = new a();
-    ipB = new MMTabView(getContext(), paramInt);
-    ipB.setTag(Integer.valueOf(paramInt));
-    ipB.setOnClickListener(ipe);
+    kov = new MMTabView(getContext(), paramInt);
+    kov.setTag(Integer.valueOf(paramInt));
+    kov.setOnClickListener(knY);
     return locala;
   }
   
-  public final void aJK()
+  public final void aZw()
   {
-    if ((ipw == null) || (ipx == null) || (ipy == null) || (ipz == null)) {
+    if ((koq == null) || (kor == null) || (kos == null) || (kot == null)) {
       return;
     }
-    ipw.ipB.aLx();
-    ipx.ipB.aLx();
-    ipy.ipB.aLx();
-    ipz.ipB.aLx();
+    koq.kov.bbl();
+    kor.kov.bbl();
+    kos.kov.bbl();
+    kot.kov.bbl();
   }
   
-  public final void c(int paramInt, float paramFloat)
+  public final void b(int paramInt, float paramFloat)
   {
-    ipv.setTranslate(ips * (paramInt + paramFloat), 0.0F);
-    ipu.setImageMatrix(ipv);
+    kop.setTranslate(kom * (paramInt + paramFloat), 0.0F);
+    koo.setImageMatrix(kop);
   }
   
-  public final void eQ(boolean paramBoolean)
+  public final void gS(boolean paramBoolean)
   {
-    ipj = paramBoolean;
-    ipy.ipB.fj(paramBoolean);
+    kod = paramBoolean;
+    kos.kov.hm(paramBoolean);
   }
   
-  public final void eR(boolean paramBoolean)
+  public final void gT(boolean paramBoolean)
   {
-    ipl = paramBoolean;
-    ipz.ipB.fj(paramBoolean);
+    kof = paramBoolean;
+    kot.kov.hm(paramBoolean);
   }
   
   public int getContactTabUnread()
   {
-    return iph;
+    return kob;
   }
   
   public int getCurIdx()
   {
-    return gWq;
+    return feV;
   }
   
   public int getFriendTabUnread()
   {
-    return ipi;
+    return koc;
   }
   
   public int getMainTabUnread()
   {
-    return ipg;
+    return koa;
   }
   
   public boolean getSettingsPoint()
   {
-    return ipl;
+    return kof;
   }
   
   public int getSettingsTabUnread()
   {
-    return ipk;
+    return koe;
   }
   
   public boolean getShowFriendPoint()
   {
-    return ipj;
-  }
-  
-  public final void mU(int paramInt)
-  {
-    t.d("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "updateMainTabUnread %d", new Object[] { Integer.valueOf(paramInt) });
-    ipg = paramInt;
-    if (paramInt > 0)
-    {
-      if (paramInt > 99)
-      {
-        ipw.ipB.setUnread(getContext().getString(a.n.unread_count_overt_100));
-        return;
-      }
-      ipw.ipB.setUnread(String.valueOf(paramInt));
-      return;
-    }
-    ipw.ipB.setUnread(null);
-  }
-  
-  public final void mV(int paramInt)
-  {
-    iph = paramInt;
-    if (paramInt > 0)
-    {
-      if (paramInt > 99)
-      {
-        ipx.ipB.setUnread(getContext().getString(a.n.unread_count_overt_100));
-        return;
-      }
-      ipx.ipB.setUnread(String.valueOf(paramInt));
-      return;
-    }
-    ipx.ipB.setUnread(null);
-  }
-  
-  public final void mW(int paramInt)
-  {
-    ipi = paramInt;
-    if (paramInt > 0)
-    {
-      if (paramInt > 99)
-      {
-        ipy.ipB.setUnread(getContext().getString(a.n.unread_count_overt_100));
-        return;
-      }
-      ipy.ipB.setUnread(String.valueOf(paramInt));
-      return;
-    }
-    ipy.ipB.setUnread(null);
-  }
-  
-  public final void mX(int paramInt)
-  {
-    ipk = paramInt;
-    if (paramInt > 0)
-    {
-      if (paramInt > 99)
-      {
-        ipz.ipB.setUnread(getContext().getString(a.n.unread_count_overt_100));
-        return;
-      }
-      ipz.ipB.setUnread(String.valueOf(paramInt));
-      return;
-    }
-    ipz.ipB.setUnread(null);
+    return kod;
   }
   
   protected void onLayout(boolean paramBoolean, int paramInt1, int paramInt2, int paramInt3, int paramInt4)
   {
     super.onLayout(paramBoolean, paramInt1, paramInt2, paramInt3, paramInt4);
-    t.d("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "on layout, width %d", new Object[] { Integer.valueOf(paramInt3 - paramInt1) });
-    ips = ((paramInt3 - paramInt1) / 4);
-    paramInt2 = ips;
-    if ((ipt == null) || (ipt.getWidth() != paramInt2)) {
-      if (ipt != null) {
-        break label175;
+    u.d("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "on layout, width %d", new Object[] { Integer.valueOf(paramInt3 - paramInt1) });
+    kom = ((paramInt3 - paramInt1) / 4);
+    paramInt2 = kom;
+    if ((kon == null) || (kon.getWidth() != paramInt2)) {
+      if (kon != null) {
+        break label172;
       }
     }
-    label175:
-    for (paramInt1 = -1;; paramInt1 = ipt.getWidth())
+    label172:
+    for (paramInt1 = -1;; paramInt1 = kon.getWidth())
     {
-      t.w("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "sharp width changed, from %d to %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
-      ipt = Bitmap.createBitmap(paramInt2, a.fromDPToPix(getContext(), 3), Bitmap.Config.ARGB_8888);
-      new Canvas(ipt).drawColor(getResources().getColor(a.f.wechat_green));
-      c(gWq, 0.0F);
-      ipu.setImageBitmap(ipt);
-      setTo(gWq);
+      u.w("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "sharp width changed, from %d to %d", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+      kon = Bitmap.createBitmap(paramInt2, com.tencent.mm.aw.a.fromDPToPix(getContext(), 3), Bitmap.Config.ARGB_8888);
+      new Canvas(kon).drawColor(getResources().getColor(2131231161));
+      b(feV, 0.0F);
+      koo.setImageBitmap(kon);
+      setTo(feV);
       return;
     }
   }
   
-  public void setOnTabClickListener(d.a parama)
+  public final void pP(int paramInt)
   {
-    ioN = parama;
+    u.d("!44@/B4Tb64lLpKf6BwZaHy6XtTBtHJGvRAE6ZpOmb+TUBQ=", "updateMainTabUnread %d", new Object[] { Integer.valueOf(paramInt) });
+    koa = paramInt;
+    if (paramInt > 0)
+    {
+      if (paramInt > 99)
+      {
+        koq.kov.setUnread(getContext().getString(2131431112));
+        return;
+      }
+      koq.kov.setUnread(String.valueOf(paramInt));
+      return;
+    }
+    koq.kov.setUnread(null);
+  }
+  
+  public final void pQ(int paramInt)
+  {
+    kob = paramInt;
+    if (paramInt > 0)
+    {
+      if (paramInt > 99)
+      {
+        kor.kov.setUnread(getContext().getString(2131431112));
+        return;
+      }
+      kor.kov.setUnread(String.valueOf(paramInt));
+      return;
+    }
+    kor.kov.setUnread(null);
+  }
+  
+  public final void pR(int paramInt)
+  {
+    koc = paramInt;
+    if (paramInt > 0)
+    {
+      if (paramInt > 99)
+      {
+        kos.kov.setUnread(getContext().getString(2131431112));
+        return;
+      }
+      kos.kov.setUnread(String.valueOf(paramInt));
+      return;
+    }
+    kos.kov.setUnread(null);
+  }
+  
+  public final void pS(int paramInt)
+  {
+    koe = paramInt;
+    if (paramInt > 0)
+    {
+      if (paramInt > 99)
+      {
+        kot.kov.setUnread(getContext().getString(2131431112));
+        return;
+      }
+      kot.kov.setUnread(String.valueOf(paramInt));
+      return;
+    }
+    kot.kov.setUnread(null);
+  }
+  
+  public void setOnTabClickListener(c.a parama)
+  {
+    knH = parama;
   }
   
   public void setTo(int paramInt)
   {
-    gWq = paramInt;
-    MMTabView localMMTabView = ipw.ipB;
+    feV = paramInt;
+    MMTabView localMMTabView = koq.kov;
     if (paramInt == 0)
     {
-      localColorStateList = getResources().getColorStateList(a.f.wechat_green);
+      localColorStateList = getResources().getColorStateList(2131231161);
       localMMTabView.setTextColor(localColorStateList);
-      localMMTabView = ipx.ipB;
+      localMMTabView = kor.kov;
       if (paramInt != 1) {
         break label150;
       }
-      localColorStateList = getResources().getColorStateList(a.f.wechat_green);
+      localColorStateList = getResources().getColorStateList(2131231161);
       label57:
       localMMTabView.setTextColor(localColorStateList);
-      localMMTabView = ipy.ipB;
+      localMMTabView = kos.kov;
       if (paramInt != 2) {
         break label164;
       }
-      localColorStateList = getResources().getColorStateList(a.f.wechat_green);
+      localColorStateList = getResources().getColorStateList(2131231161);
       label86:
       localMMTabView.setTextColor(localColorStateList);
-      localMMTabView = ipz.ipB;
+      localMMTabView = kot.kov;
       if (paramInt != 3) {
         break label178;
       }
@@ -297,24 +334,24 @@ public class LauncherUITabView
     label150:
     label164:
     label178:
-    for (ColorStateList localColorStateList = getResources().getColorStateList(a.f.wechat_green);; localColorStateList = getResources().getColorStateList(a.f.launcher_tab_text_selector))
+    for (ColorStateList localColorStateList = getResources().getColorStateList(2131231161);; localColorStateList = getResources().getColorStateList(2131231241))
     {
       localMMTabView.setTextColor(localColorStateList);
-      dzL = System.currentTimeMillis();
-      ipd = gWq;
+      erA = System.currentTimeMillis();
+      knX = feV;
       return;
-      localColorStateList = getResources().getColorStateList(a.f.launcher_tab_text_selector);
+      localColorStateList = getResources().getColorStateList(2131231241);
       break;
-      localColorStateList = getResources().getColorStateList(a.f.launcher_tab_text_selector);
+      localColorStateList = getResources().getColorStateList(2131231241);
       break label57;
-      localColorStateList = getResources().getColorStateList(a.f.launcher_tab_text_selector);
+      localColorStateList = getResources().getColorStateList(2131231241);
       break label86;
     }
   }
   
   protected final class a
   {
-    MMTabView ipB;
+    MMTabView kov;
     
     protected a() {}
   }

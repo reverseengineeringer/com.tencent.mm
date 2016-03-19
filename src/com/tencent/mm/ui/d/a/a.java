@@ -1,21 +1,22 @@
 package com.tencent.mm.ui.d.a;
 
+import android.os.Bundle;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
 
 public final class a
 {
-  d jln;
+  c lqE;
   
-  public a(d paramd)
+  public a(c paramc)
   {
-    jln = paramd;
+    lqE = paramc;
   }
   
   public static abstract interface a
   {
-    public abstract void AA(String paramString);
+    public abstract void Gp(String paramString);
     
     public abstract void a(FileNotFoundException paramFileNotFoundException);
     

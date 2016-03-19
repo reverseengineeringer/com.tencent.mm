@@ -15,9 +15,11 @@
 
 
 # instance fields
-.field public data:[B
+.field public atF:I
 
-.field public mac:Ljava/lang/String;
+.field public aut:Ljava/lang/String;
+
+.field public auu:Z
 
 
 # direct methods

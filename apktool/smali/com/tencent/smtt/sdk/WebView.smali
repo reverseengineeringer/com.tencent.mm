@@ -2,6 +2,9 @@
 .super Landroid/widget/FrameLayout;
 .source "SourceFile"
 
+# interfaces
+.implements Landroid/view/View$OnLongClickListener;
+
 
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
@@ -15,11 +18,15 @@
 
 
 # static fields
+.field public static final GETPVERROR:I = -0x1
+
 .field public static NIGHT_MODE_ALPHA:I = 0x0
 
 .field public static final NIGHT_MODE_COLOR:I = -0x1000000
 
 .field public static final NORMAL_MODE_ALPHA:I = 0xff
+
+.field public static final SCHEME_DEBUG_TBS:Ljava/lang/String; = "http://debugtbs.qq.com"
 
 .field public static final SCHEME_GEO:Ljava/lang/String; = "geo:0,0?q="
 
@@ -27,63 +34,126 @@
 
 .field public static final SCHEME_TEL:Ljava/lang/String; = "tel:"
 
-.field private static jLj:Lcom/tencent/smtt/a/s;
+.field public static TBS_DEBUG_INSTALL_ONLINE:Ljava/lang/String;
 
-.field private static jLk:Ljava/lang/reflect/Method;
+.field private static bzN:Landroid/content/Context;
 
-.field private static jLn:Landroid/graphics/Paint;
+.field private static final lTK:Ljava/util/concurrent/locks/Lock;
 
-.field private static jLo:Z
+.field private static lTL:Ljava/io/OutputStream;
+
+.field static lTX:Z
+
+.field private static lTZ:Lcom/tencent/smtt/a/p;
+
+.field private static lUa:Ljava/lang/reflect/Method;
+
+.field private static lUb:Ljava/lang/String;
+
+.field private static lUh:Landroid/graphics/Paint;
+
+.field private static lUi:Z
+
+.field public static mSysWebviewCreated:Z
 
 
 # instance fields
-.field private final LOG_TAG:Ljava/lang/String;
+.field private lTM:Z
 
-.field private jLd:Z
+.field private lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
-.field private jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+.field private lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-.field private jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+.field private lTP:Lcom/tencent/smtt/sdk/WebSettings;
 
-.field private jLg:Lcom/tencent/smtt/sdk/WebSettings;
+.field lTQ:I
 
-.field jLh:I
+.field private lTR:Z
 
-.field private jLi:Z
+.field private lTS:Landroid/widget/CheckBox;
 
-.field private final jLl:Ljava/lang/String;
+.field private lTT:Landroid/widget/CheckBox;
 
-.field private final jLm:Ljava/lang/String;
+.field private lTU:Landroid/widget/Button;
 
-.field private jLp:Ljava/lang/Object;
+.field private lTV:Landroid/widget/Button;
+
+.field private lTW:Z
+
+.field private lTY:Lcom/tencent/smtt/sdk/WebViewClient;
+
+.field private final lUc:I
+
+.field private final lUd:I
+
+.field private final lUe:I
+
+.field private final lUf:Ljava/lang/String;
+
+.field private final lUg:Ljava/lang/String;
+
+.field private lUj:Ljava/lang/Object;
+
+.field private lUk:Landroid/view/View$OnLongClickListener;
 
 .field private mContext:Landroid/content/Context;
 
-.field public mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+.field public mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
+
+.field private final or:Ljava/lang/String;
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     .prologue
-    const/4 v0, 0x0
+    const/4 v2, 0x0
 
-    .line 370
-    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->jLj:Lcom/tencent/smtt/a/s;
+    const/4 v1, 0x0
 
-    .line 818
-    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->jLk:Ljava/lang/reflect/Method;
+    .line 135
+    new-instance v0, Ljava/util/concurrent/locks/ReentrantLock;
 
-    .line 1999
-    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->jLn:Landroid/graphics/Paint;
+    invoke-direct {v0}, Ljava/util/concurrent/locks/ReentrantLock;-><init>()V
 
-    .line 2000
+    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->lTK:Ljava/util/concurrent/locks/Lock;
+
+    .line 136
+    sput-object v1, Lcom/tencent/smtt/sdk/WebView;->lTL:Ljava/io/OutputStream;
+
+    .line 268
+    sput-object v1, Lcom/tencent/smtt/sdk/WebView;->bzN:Landroid/content/Context;
+
+    .line 277
+    const-string/jumbo v0, "tbsdebug_install_online_"
+
+    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->TBS_DEBUG_INSTALL_ONLINE:Ljava/lang/String;
+
+    .line 282
+    sput-boolean v2, Lcom/tencent/smtt/sdk/WebView;->lTX:Z
+
+    .line 495
+    sput-object v1, Lcom/tencent/smtt/sdk/WebView;->lTZ:Lcom/tencent/smtt/a/p;
+
+    .line 1552
+    sput-object v1, Lcom/tencent/smtt/sdk/WebView;->lUa:Ljava/lang/reflect/Method;
+
+    .line 2353
+    sput-object v1, Lcom/tencent/smtt/sdk/WebView;->lUb:Ljava/lang/String;
+
+    .line 2615
+    sput-boolean v2, Lcom/tencent/smtt/sdk/WebView;->mSysWebviewCreated:Z
+
+    .line 2852
+    sput-object v1, Lcom/tencent/smtt/sdk/WebView;->lUh:Landroid/graphics/Paint;
+
+    .line 2853
     const/4 v0, 0x1
 
-    sput-boolean v0, Lcom/tencent/smtt/sdk/WebView;->jLo:Z
+    sput-boolean v0, Lcom/tencent/smtt/sdk/WebView;->lUi:Z
 
-    .line 2001
+    .line 2854
     const/16 v0, 0x99
 
     sput v0, Lcom/tencent/smtt/sdk/WebView;->NIGHT_MODE_ALPHA:I
@@ -95,12 +165,12 @@
     .locals 1
 
     .prologue
-    .line 247
+    .line 288
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lcom/tencent/smtt/sdk/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 248
+    .line 289
     return-void
 .end method
 
@@ -108,12 +178,12 @@
     .locals 1
 
     .prologue
-    .line 252
+    .line 293
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lcom/tencent/smtt/sdk/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 253
+    .line 294
     return-void
 .end method
 
@@ -121,12 +191,12 @@
     .locals 1
 
     .prologue
-    .line 257
+    .line 298
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lcom/tencent/smtt/sdk/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;IZ)V
 
-    .line 258
+    .line 299
     return-void
 .end method
 
@@ -139,7 +209,7 @@
     .prologue
     const/16 v9, 0xb
 
-    const/4 v6, -0x1
+    const/4 v3, -0x1
 
     const/4 v8, 0x1
 
@@ -147,46 +217,73 @@
 
     const/4 v1, 0x0
 
-    .line 269
+    .line 310
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 69
+    .line 90
     const-string/jumbo v0, "WebView"
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->LOG_TAG:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->or:Ljava/lang/String;
 
-    .line 236
-    iput-boolean v7, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 263
+    iput-boolean v7, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
-    .line 239
-    iput-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLg:Lcom/tencent/smtt/sdk/WebSettings;
+    .line 266
+    iput-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTP:Lcom/tencent/smtt/sdk/WebSettings;
 
-    .line 240
+    .line 267
     iput-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
 
-    .line 241
-    iput v7, p0, Lcom/tencent/smtt/sdk/WebView;->jLh:I
+    .line 269
+    iput v7, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
 
-    .line 242
-    iput-boolean v7, p0, Lcom/tencent/smtt/sdk/WebView;->jLi:Z
+    .line 270
+    iput-boolean v7, p0, Lcom/tencent/smtt/sdk/WebView;->lTR:Z
 
-    .line 1970
+    .line 276
+    iput-boolean v7, p0, Lcom/tencent/smtt/sdk/WebView;->lTW:Z
+
+    .line 284
+    iput-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTY:Lcom/tencent/smtt/sdk/WebViewClient;
+
+    .line 2588
+    iput v8, p0, Lcom/tencent/smtt/sdk/WebView;->lUc:I
+
+    .line 2589
+    const/4 v0, 0x2
+
+    iput v0, p0, Lcom/tencent/smtt/sdk/WebView;->lUd:I
+
+    .line 2590
+    const/4 v0, 0x3
+
+    iput v0, p0, Lcom/tencent/smtt/sdk/WebView;->lUe:I
+
+    .line 2823
     const-string/jumbo v0, "javascript:document.getElementsByTagName(\'HEAD\').item(0).removeChild(document.getElementById(\'QQBrowserSDKNightMode\'));"
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLl:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lUf:Ljava/lang/String;
 
-    .line 1971
+    .line 2824
     const-string/jumbo v0, "javascript:var style = document.createElement(\'style\');style.type=\'text/css\';style.id=\'QQBrowserSDKNightMode\';style.innerHTML=\'html,body{background:none !important;background-color: #1d1e2a !important;}html *{background-color: #1d1e2a !important; color:#888888 !important;border-color:#3e4f61 !important;text-shadow:none !important;box-shadow:none !important;}a,a *{border-color:#4c5b99 !important; color:#2d69b3 !important;text-decoration:none !important;}a:visited,a:visited *{color:#a600a6 !important;}a:active,a:active *{color:#5588AA !important;}input,select,textarea,option,button{background-image:none !important;color:#AAAAAA !important;border-color:#4c5b99 !important;}form,div,button,span{background-color:#1d1e2a !important; border-color:#4c5b99 !important;}img{opacity:0.5}\';document.getElementsByTagName(\'HEAD\').item(0).appendChild(style);"
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLm:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lUg:Ljava/lang/String;
 
-    .line 2088
-    iput-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLp:Ljava/lang/Object;
+    .line 2942
+    iput-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lUj:Ljava/lang/Object;
 
-    .line 271
+    .line 2944
+    iput-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lUk:Landroid/view/View$OnLongClickListener;
+
+    .line 318
     if-nez p1, :cond_0
 
-    .line 273
+    .line 321
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
+
+    sput-boolean v0, Lcom/tencent/smtt/sdk/WebView;->lTX:Z
+
+    .line 322
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Invalid context argument"
@@ -195,197 +292,208 @@
 
     throw v0
 
-    .line 276
+    .line 325
     :cond_0
-    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->jLj:Lcom/tencent/smtt/a/s;
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lTZ:Lcom/tencent/smtt/a/p;
 
     if-nez v0, :cond_1
 
-    .line 278
-    invoke-static {p1}, Lcom/tencent/smtt/a/s;->eW(Landroid/content/Context;)Lcom/tencent/smtt/a/s;
+    .line 327
+    invoke-static {p1}, Lcom/tencent/smtt/a/p;->fT(Landroid/content/Context;)Lcom/tencent/smtt/a/p;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->jLj:Lcom/tencent/smtt/a/s;
+    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->lTZ:Lcom/tencent/smtt/a/p;
 
-    .line 280
+    .line 329
     :cond_1
-    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->jLj:Lcom/tencent/smtt/a/s;
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lTZ:Lcom/tencent/smtt/a/p;
 
-    iget-boolean v0, v0, Lcom/tencent/smtt/a/s;->jMh:Z
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
-
-    move-result v0
+    iget-boolean v0, v0, Lcom/tencent/smtt/a/p;->lVn:Z
 
     if-eqz v0, :cond_2
 
-    .line 282
+    .line 331
     const-string/jumbo v0, "WebView"
 
     const-string/jumbo v2, "sys WebView: debug.conf force syswebview"
 
-    invoke-static {v0, v2, v8}, Lcom/tencent/smtt/a/u;->k(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-static {v0, v2, v8}, Lcom/tencent/smtt/a/r;->l(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 283
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->aUa()V
+    .line 335
+    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->blj()V
 
-    .line 286
+    .line 338
     :cond_2
     invoke-direct {p0, p1}, Lcom/tencent/smtt/sdk/WebView;->init(Landroid/content/Context;)V
 
-    .line 287
+    .line 339
     iput-object p1, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
 
-    .line 288
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 341
+    if-eqz p1, :cond_3
 
-    if-eqz v0, :cond_9
-
-    .line 290
-    invoke-static {v8}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    .line 342
+    invoke-virtual {p1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->bzN:Landroid/content/Context;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/aa;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+    .line 344
+    :cond_3
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
-    const-string/jumbo v2, "com.tencent.tbs.tbsshell.WebCoreProxy"
+    if-eqz v0, :cond_d
 
-    const-string/jumbo v3, "createSDKWebview"
-
-    new-array v4, v8, [Ljava/lang/Class;
-
-    const-class v5, Landroid/content/Context;
-
-    aput-object v5, v4, v7
-
-    new-array v5, v8, [Ljava/lang/Object;
-
-    aput-object p1, v5, v7
-
-    invoke-virtual {v0, v2, v3, v4, v5}, Lcom/tencent/smtt/export/external/DexLoader;->invokeStaticMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    .line 346
+    invoke-static {v8}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    if-nez v0, :cond_5
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
 
-    move-object v0, v1
+    move-result-object v0
 
-    :goto_0
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/t;->createSDKWebview(Landroid/content/Context;)Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
-    .line 292
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    move-result-object v0
 
-    if-eqz v0, :cond_3
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 349
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+
+    if-eqz v0, :cond_4
+
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    if-nez v0, :cond_6
+    if-nez v0, :cond_7
 
-    .line 294
-    :cond_3
+    .line 351
+    :cond_4
     const-string/jumbo v0, "WebView"
 
     const-string/jumbo v2, "sys WebView: failed to createTBSWebview"
 
-    invoke-static {v0, v2, v8}, Lcom/tencent/smtt/a/u;->k(Ljava/lang/String;Ljava/lang/String;Z)V
+    invoke-static {v0, v2, v8}, Lcom/tencent/smtt/a/r;->l(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 295
-    iput-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 352
+    iput-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
-    .line 296
-    iput-boolean v7, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 353
+    iput-boolean v7, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
-    .line 297
-    invoke-static {}, Lcom/tencent/smtt/sdk/l;->aUq()Lcom/tencent/smtt/sdk/l;
-
-    move-result-object v0
-
-    const/16 v2, 0x12d
-
-    invoke-virtual {v0, p1, v2, v1}, Lcom/tencent/smtt/sdk/l;->a(Landroid/content/Context;ILjava/lang/Throwable;)V
-
-    .line 298
-    invoke-static {}, Lcom/tencent/smtt/sdk/l;->aUq()Lcom/tencent/smtt/sdk/l;
+    .line 354
+    invoke-static {}, Lcom/tencent/smtt/sdk/h;->bly()Lcom/tencent/smtt/sdk/h;
 
     move-result-object v0
 
-    const/16 v2, 0x195
+    const/16 v1, 0x12d
 
-    invoke-virtual {v0, p1, v2, v1}, Lcom/tencent/smtt/sdk/l;->a(Landroid/content/Context;ILjava/lang/Throwable;)V
+    invoke-virtual {v0, p1, v1}, Lcom/tencent/smtt/sdk/h;->N(Landroid/content/Context;I)V
 
-    .line 299
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->aUa()V
+    .line 355
+    invoke-static {}, Lcom/tencent/smtt/sdk/h;->bly()Lcom/tencent/smtt/sdk/h;
 
-    .line 300
+    move-result-object v0
+
+    const/16 v1, 0x195
+
+    invoke-virtual {v0, p1, v1}, Lcom/tencent/smtt/sdk/h;->N(Landroid/content/Context;I)V
+
+    .line 359
+    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->blj()V
+
+    .line 360
     invoke-direct {p0, p1}, Lcom/tencent/smtt/sdk/WebView;->init(Landroid/content/Context;)V
 
-    .line 301
+    .line 361
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/q;->fr(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    .line 362
     new-instance v0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-direct {v0, p0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    .line 302
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 367
+    :goto_0
+    const-string/jumbo v0, "WebView"
 
-    invoke-virtual {v0, v8}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setFocusableInTouchMode(Z)V
+    const-string/jumbo v1, "SystemWebView Created Success! #1"
 
-    .line 303
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/r;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 368
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+
+    invoke-virtual {v0, v8}, Landroid/webkit/WebView;->setFocusableInTouchMode(Z)V
+
+    .line 369
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-direct {v1, v6, v6}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v1, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     invoke-virtual {p0, v0, v1}, Lcom/tencent/smtt/sdk/WebView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 306
+    .line 372
     :try_start_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v0, v9, :cond_4
+    if-lt v0, v9, :cond_5
 
-    .line 307
+    .line 373
     const-string/jumbo v0, "searchBoxJavaBridge_"
 
     invoke-virtual {p0, v0}, Lcom/tencent/smtt/sdk/WebView;->removeJavascriptInterface(Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 368
-    :cond_4
+    .line 378
+    :cond_5
     :goto_1
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
+
+    sput-boolean v0, Lcom/tencent/smtt/sdk/WebView;->lTX:Z
+
+    .line 465
+    :goto_2
     return-void
 
-    .line 290
-    :cond_5
-    check-cast v0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 365
+    :cond_6
+    new-instance v0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+
+    invoke-direct {v0, p0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;)V
+
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     goto :goto_0
 
-    .line 316
-    :cond_6
+    .line 384
+    :cond_7
     const-string/jumbo v0, "WebView"
 
     const-string/jumbo v2, "X5 WebView Created Success!!"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/r;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 317
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 385
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
@@ -393,8 +501,11 @@
 
     invoke-virtual {v0, v8}, Landroid/view/View;->setFocusableInTouchMode(Z)V
 
-    .line 318
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 386
+    invoke-direct {p0, p2}, Lcom/tencent/smtt/sdk/WebView;->setAttributeForX5(Landroid/util/AttributeSet;)V
+
+    .line 387
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
@@ -402,12 +513,12 @@
 
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
 
-    invoke-direct {v2, v6, v6}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+    invoke-direct {v2, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
 
     invoke-virtual {p0, v0, v2}, Lcom/tencent/smtt/sdk/WebView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 321
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 390
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     new-instance v2, Lcom/tencent/smtt/sdk/b;
 
@@ -415,8 +526,8 @@
 
     invoke-interface {v0, v2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setDownloadListener(Lcom/tencent/smtt/export/external/interfaces/DownloadListener;)V
 
-    .line 322
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 391
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
@@ -424,13 +535,15 @@
 
     new-instance v3, Lcom/tencent/smtt/sdk/WebView$1;
 
-    invoke-static {v7}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v7}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/aa;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
 
     const-string/jumbo v4, "com.tencent.tbs.tbsshell.WebCoreProxy"
 
@@ -444,102 +557,188 @@
 
     move-result-object v0
 
-    if-nez v0, :cond_8
+    if-nez v0, :cond_c
 
     move-object v0, v1
 
-    :goto_2
+    :goto_3
     invoke-direct {v3, p0, v0}, Lcom/tencent/smtt/sdk/WebView$1;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewClientExtension;)V
 
     invoke-interface {v2, v3}, Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;->setWebViewClientExtension(Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewClientExtension;)V
 
-    .line 349
-    :goto_3
+    .line 434
+    :goto_4
     :try_start_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v0, v9, :cond_7
+    if-lt v0, v9, :cond_8
 
-    .line 350
+    .line 435
     const-string/jumbo v0, "searchBoxJavaBridge_"
 
     invoke-virtual {p0, v0}, Lcom/tencent/smtt/sdk/WebView;->removeJavascriptInterface(Ljava/lang/String;)V
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 355
-    :cond_7
-    :goto_4
-    invoke-static {v8}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    .line 440
+    :cond_8
+    :goto_5
+    const-string/jumbo v0, "com.tencent.mobileqq"
 
-    invoke-static {}, Lcom/tencent/smtt/sdk/a;->aTZ()I
+    iget-object v2, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v2
+
+    iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->useSoftWare(I)Z
+    if-nez v0, :cond_9
+
+    const-string/jumbo v0, "com.tencent.mm"
+
+    iget-object v2, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v2}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v2
+
+    iget-object v2, v2, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_4
+    if-eqz v0, :cond_a
 
-    .line 359
+    .line 445
+    :cond_9
+    invoke-static {v8}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
+
+    invoke-static {}, Lcom/tencent/smtt/sdk/d;->useSoftWare()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_a
+
+    .line 446
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    if-lt v0, v9, :cond_4
+    if-lt v0, v9, :cond_a
 
-    .line 361
+    .line 448
     invoke-virtual {p0, v8, v1}, Lcom/tencent/smtt/sdk/WebView;->setLayerType(ILandroid/graphics/Paint;)V
 
-    goto :goto_1
+    .line 455
+    :cond_a
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
 
-    .line 322
-    :cond_8
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/q;->fr(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_b
+
+    .line 456
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->bzN:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/q;->fx(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    .line 457
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/k;->eX(Landroid/content/Context;)Z
+
+    .line 462
+    :cond_b
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
+
+    sput-boolean v0, Lcom/tencent/smtt/sdk/WebView;->lTX:Z
+
+    goto/16 :goto_2
+
+    .line 391
+    :cond_c
     check-cast v0, Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewClientExtension;
 
-    goto :goto_2
+    goto :goto_3
 
-    .line 336
-    :cond_9
-    iput-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 412
+    :cond_d
+    iput-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
-    .line 337
-    iput-boolean v7, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 413
+    iput-boolean v7, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
-    .line 338
-    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->aUa()V
+    .line 414
+    invoke-static {}, Lcom/tencent/smtt/sdk/QbSdk;->blj()V
 
-    .line 339
+    .line 415
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/q;->fr(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_e
+
+    .line 416
+    new-instance v0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+
+    invoke-direct {v0, p0, p1, p2}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;Landroid/util/AttributeSet;)V
+
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+
+    .line 421
+    :goto_6
+    const-string/jumbo v0, "WebView"
+
+    const-string/jumbo v2, "SystemWebView Created Success! #2"
+
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/r;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 422
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+
+    invoke-virtual {v0, v8}, Landroid/webkit/WebView;->setFocusableInTouchMode(Z)V
+
+    .line 423
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+
+    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {v2, v3, v3}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, v0, v2}, Lcom/tencent/smtt/sdk/WebView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 425
+    invoke-virtual {p0, v1}, Lcom/tencent/smtt/sdk/WebView;->setDownloadListener(Lcom/tencent/smtt/sdk/DownloadListener;)V
+
+    goto/16 :goto_4
+
+    .line 419
+    :cond_e
     new-instance v0, Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     invoke-direct {v0, p0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;)V
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    .line 340
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
-
-    invoke-virtual {v0, v8}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setFocusableInTouchMode(Z)V
-
-    .line 341
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
-
-    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
-
-    invoke-direct {v2, v6, v6}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
-
-    invoke-virtual {p0, v0, v2}, Lcom/tencent/smtt/sdk/WebView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
-
-    .line 343
-    invoke-virtual {p0, v1}, Lcom/tencent/smtt/sdk/WebView;->setDownloadListener(Lcom/tencent/smtt/sdk/DownloadListener;)V
-
-    goto :goto_3
+    goto :goto_6
 
     :catch_0
     move-exception v0
 
-    goto :goto_4
+    goto/16 :goto_5
 
-    .line 312
     :catch_1
     move-exception v0
 
@@ -550,7 +749,7 @@
     .locals 6
 
     .prologue
-    .line 263
+    .line 304
     const/4 v4, 0x0
 
     move-object v0, p0
@@ -565,21 +764,31 @@
 
     invoke-direct/range {v0 .. v5}, Lcom/tencent/smtt/sdk/WebView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;ILjava/util/Map;Z)V
 
-    .line 264
+    .line 305
     return-void
+.end method
+
+.method static synthetic a(Lcom/tencent/smtt/a/p;)Lcom/tencent/smtt/a/p;
+    .locals 0
+
+    .prologue
+    .line 86
+    sput-object p0, Lcom/tencent/smtt/sdk/WebView;->lTZ:Lcom/tencent/smtt/a/p;
+
+    return-object p0
 .end method
 
 .method static synthetic a(Lcom/tencent/smtt/sdk/WebView;IIII)V
     .locals 0
 
     .prologue
-    .line 66
+    .line 86
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/WebView;->onScrollChanged(IIII)V
 
     return-void
 .end method
 
-.method static synthetic a(Lcom/tencent/smtt/sdk/WebView;Landroid/view/View;)Z
+.method private aR(Landroid/view/View;)Z
     .locals 6
 
     .prologue
@@ -587,8 +796,8 @@
 
     const/4 v1, 0x0
 
-    .line 66
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLp:Ljava/lang/Object;
+    .line 3109
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lUj:Ljava/lang/Object;
 
     const-string/jumbo v2, "onLongClick"
 
@@ -602,18 +811,21 @@
 
     aput-object p1, v4, v1
 
-    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
+    .line 3111
     if-eqz v0, :cond_0
 
+    .line 3112
     check-cast v0, Ljava/lang/Boolean;
 
     invoke-virtual {v0}, Ljava/lang/Boolean;->booleanValue()Z
 
     move-result v0
 
+    .line 3114
     :goto_0
     return v0
 
@@ -623,31 +835,11 @@
     goto :goto_0
 .end method
 
-.method static synthetic aLG()Z
-    .locals 1
-
-    .prologue
-    .line 66
-    sget-boolean v0, Lcom/tencent/smtt/sdk/WebView;->jLo:Z
-
-    return v0
-.end method
-
-.method static synthetic aUU()Landroid/graphics/Paint;
-    .locals 1
-
-    .prologue
-    .line 66
-    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->jLn:Landroid/graphics/Paint;
-
-    return-object v0
-.end method
-
 .method static synthetic b(Lcom/tencent/smtt/sdk/WebView;)Landroid/content/Context;
     .locals 1
 
     .prologue
-    .line 66
+    .line 86
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
 
     return-object v0
@@ -657,10 +849,198 @@
     .locals 0
 
     .prologue
-    .line 66
+    .line 86
     invoke-virtual {p0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/WebView;->onScrollChanged(IIII)V
 
     return-void
+.end method
+
+.method private bmb()V
+    .locals 3
+
+    .prologue
+    .line 1453
+    new-instance v0, Lcom/tencent/smtt/sdk/WebView$9;
+
+    invoke-direct {v0, p0}, Lcom/tencent/smtt/sdk/WebView$9;-><init>(Lcom/tencent/smtt/sdk/WebView;)V
+
+    const-wide/16 v1, 0xc8
+
+    invoke-virtual {p0, v0, v1, v2}, Lcom/tencent/smtt/sdk/WebView;->postDelayed(Ljava/lang/Runnable;J)Z
+
+    .line 1467
+    return-void
+.end method
+
+.method static bmc()V
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x3
+
+    const/4 v4, 0x1
+
+    .line 3197
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->bzN:Landroid/content/Context;
+
+    if-nez v0, :cond_1
+
+    .line 3235
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 3201
+    :cond_1
+    invoke-static {v4}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
+
+    move-result-object v0
+
+    .line 3203
+    sget-boolean v1, Lcom/tencent/smtt/sdk/d;->lRF:Z
+
+    if-nez v1, :cond_0
+
+    .line 3208
+    sget-object v1, Lcom/tencent/smtt/sdk/WebView;->bzN:Landroid/content/Context;
+
+    invoke-static {v1}, Lcom/tencent/smtt/sdk/i;->eT(Landroid/content/Context;)Lcom/tencent/smtt/sdk/i;
+
+    move-result-object v1
+
+    .line 3209
+    invoke-virtual {v1}, Lcom/tencent/smtt/sdk/i;->blG()I
+
+    move-result v2
+
+    .line 3210
+    const/4 v3, 0x2
+
+    if-ne v2, v3, :cond_2
+
+    .line 3211
+    invoke-virtual {v1}, Lcom/tencent/smtt/sdk/i;->blF()I
+
+    move-result v0
+
+    .line 3212
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->If(Ljava/lang/String;)V
+
+    .line 3213
+    invoke-static {}, Lcom/tencent/smtt/sdk/d;->blp()Z
+
+    goto :goto_0
+
+    .line 3217
+    :cond_2
+    invoke-virtual {v1}, Lcom/tencent/smtt/sdk/i;->blB()I
+
+    move-result v3
+
+    .line 3218
+    if-ne v3, v4, :cond_3
+
+    .line 3219
+    invoke-virtual {v1}, Lcom/tencent/smtt/sdk/i;->blA()I
+
+    move-result v0
+
+    .line 3220
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->If(Ljava/lang/String;)V
+
+    .line 3221
+    invoke-static {}, Lcom/tencent/smtt/sdk/d;->blp()Z
+
+    goto :goto_0
+
+    .line 3228
+    :cond_3
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    if-eq v2, v5, :cond_4
+
+    if-ne v3, v5, :cond_0
+
+    .line 3232
+    :cond_4
+    invoke-static {}, Lcom/tencent/smtt/sdk/d;->blo()I
+
+    move-result v0
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->If(Ljava/lang/String;)V
+
+    .line 3233
+    invoke-static {}, Lcom/tencent/smtt/sdk/d;->blp()Z
+
+    goto :goto_0
+.end method
+
+.method static synthetic bmd()Lcom/tencent/smtt/a/p;
+    .locals 1
+
+    .prologue
+    .line 86
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lTZ:Lcom/tencent/smtt/a/p;
+
+    return-object v0
+.end method
+
+.method static synthetic bme()Z
+    .locals 1
+
+    .prologue
+    .line 86
+    sget-boolean v0, Lcom/tencent/smtt/sdk/WebView;->lUi:Z
+
+    return v0
+.end method
+
+.method static synthetic bmf()Landroid/graphics/Paint;
+    .locals 1
+
+    .prologue
+    .line 86
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUh:Landroid/graphics/Paint;
+
+    return-object v0
+.end method
+
+.method static synthetic c(Lcom/tencent/smtt/sdk/WebView;)Z
+    .locals 1
+
+    .prologue
+    .line 86
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTW:Z
+
+    return v0
+.end method
+
+.method static synthetic d(Lcom/tencent/smtt/sdk/WebView;)Landroid/widget/LinearLayout;
+    .locals 1
+
+    .prologue
+    .line 86
+    invoke-direct {p0}, Lcom/tencent/smtt/sdk/WebView;->getDebugSettingsView()Landroid/widget/LinearLayout;
+
+    move-result-object v0
+
+    return-object v0
 .end method
 
 .method public static disablePlatformNotifications()V
@@ -671,31 +1051,43 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 679
-    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    .line 846
+    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    iget-boolean v0, v0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+
+    move-result v0
 
     if-nez v0, :cond_1
 
-    .line 681
+    .line 848
     :cond_0
     const-string/jumbo v0, "android.webkit.WebView"
 
     const-string/jumbo v1, "disablePlatformNotifications"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->bU(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->cL(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 684
+    .line 851
     :cond_1
+    return-void
+.end method
+
+.method static synthetic e(Lcom/tencent/smtt/sdk/WebView;)V
+    .locals 0
+
+    .prologue
+    .line 86
+    invoke-direct {p0}, Lcom/tencent/smtt/sdk/WebView;->bmb()V
+
     return-void
 .end method
 
@@ -707,32 +1099,817 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 665
-    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    .line 832
+    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    iget-boolean v0, v0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+
+    move-result v0
 
     if-nez v0, :cond_1
 
-    .line 667
+    .line 834
     :cond_0
     const-string/jumbo v0, "android.webkit.WebView"
 
     const-string/jumbo v1, "enablePlatformNotifications"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->bU(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->cL(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 669
+    .line 836
     :cond_1
     return-void
+.end method
+
+.method static synthetic f(Lcom/tencent/smtt/sdk/WebView;)V
+    .locals 4
+
+    .prologue
+    .line 86
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lTZ:Lcom/tencent/smtt/a/p;
+
+    if-nez v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/smtt/a/p;->fT(Landroid/content/Context;)Lcom/tencent/smtt/a/p;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->lTZ:Lcom/tencent/smtt/a/p;
+
+    :cond_0
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lTZ:Lcom/tencent/smtt/a/p;
+
+    invoke-virtual {v0}, Lcom/tencent/smtt/a/p;->bmv()Z
+
+    move-result v0
+
+    new-instance v1, Landroid/app/AlertDialog$Builder;
+
+    iget-object v2, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v1, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    const-string/jumbo v2, "\u63d0\u793a"
+
+    invoke-virtual {v1, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    const-string/jumbo v2, "\u786e\u5b9a"
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v1, v2, v3}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+
+    if-eqz v0, :cond_1
+
+    const-string/jumbo v0, "\u6210\u529f!"
+
+    invoke-virtual {v1, v0}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    :goto_0
+    invoke-virtual {v1}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/app/AlertDialog;->show()V
+
+    return-void
+
+    :cond_1
+    const-string/jumbo v0, "Ooops, \u5931\u8d25\u4e86!"
+
+    invoke-virtual {v1, v0}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+
+    goto :goto_0
+.end method
+
+.method private static fE(Landroid/content/Context;)Z
+    .locals 2
+
+    .prologue
+    .line 470
+    :try_start_0
+    invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 471
+    const-string/jumbo v1, "com.tencent.mobileqq"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    move-result v0
+
+    if-ltz v0, :cond_0
+
+    .line 472
+    const/4 v0, 0x1
+
+    .line 474
+    :goto_0
+    return v0
+
+    :catch_0
+    move-exception v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method private static fF(Landroid/content/Context;)I
+    .locals 8
+
+    .prologue
+    const/4 v0, -0x1
+
+    .line 2998
+    invoke-static {p0}, Lcom/tencent/smtt/sdk/m;->fo(Landroid/content/Context;)Ljava/io/FileOutputStream;
+
+    move-result-object v4
+
+    .line 2999
+    if-nez v4, :cond_1
+
+    .line 3050
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 3000
+    :cond_1
+    invoke-static {v4}, Lcom/tencent/smtt/sdk/m;->a(Ljava/io/FileOutputStream;)Ljava/nio/channels/FileLock;
+
+    move-result-object v5
+
+    .line 3001
+    if-eqz v5, :cond_0
+
+    .line 3004
+    sget-object v1, Lcom/tencent/smtt/sdk/WebView;->lTK:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->tryLock()Z
+
+    move-result v1
+
+    .line 3005
+    if-eqz v1, :cond_6
+
+    .line 3006
+    const/4 v3, 0x0
+
+    .line 3009
+    :try_start_0
+    const-string/jumbo v1, "tbs"
+
+    const/4 v2, 0x0
+
+    invoke-virtual {p0, v1, v2}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
+
+    move-result-object v1
+
+    .line 3010
+    new-instance v6, Ljava/io/File;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    sget-object v2, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "core_private"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "pv.db"
+
+    invoke-direct {v6, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3011
+    invoke-virtual {v6}, Ljava/io/File;->exists()Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_2
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    move-result v1
+
+    if-nez v1, :cond_2
+
+    .line 3012
+    sget-object v1, Lcom/tencent/smtt/sdk/WebView;->lTK:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 3043
+    invoke-static {v5, v4}, Lcom/tencent/smtt/sdk/m;->a(Ljava/nio/channels/FileLock;Ljava/io/FileOutputStream;)V
+
+    goto :goto_0
+
+    .line 3014
+    :cond_2
+    :try_start_1
+    new-instance v1, Ljava/util/Properties;
+
+    invoke-direct {v1}, Ljava/util/Properties;-><init>()V
+
+    .line 3015
+    new-instance v2, Ljava/io/FileInputStream;
+
+    invoke-direct {v2, v6}, Ljava/io/FileInputStream;-><init>(Ljava/io/File;)V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+
+    .line 3016
+    :try_start_2
+    invoke-virtual {v1, v2}, Ljava/util/Properties;->load(Ljava/io/InputStream;)V
+
+    .line 3017
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+
+    .line 3018
+    const-string/jumbo v3, "PV"
+
+    invoke-virtual {v1, v3}, Ljava/util/Properties;->getProperty(Ljava/lang/String;)Ljava/lang/String;
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_5
+    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+
+    move-result-object v1
+
+    .line 3019
+    if-nez v1, :cond_3
+
+    .line 3020
+    :try_start_3
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_3
+    .catch Ljava/io/IOException; {:try_start_3 .. :try_end_3} :catch_0
+
+    .line 3041
+    :goto_1
+    sget-object v1, Lcom/tencent/smtt/sdk/WebView;->lTK:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 3043
+    invoke-static {v5, v4}, Lcom/tencent/smtt/sdk/m;->a(Ljava/nio/channels/FileLock;Ljava/io/FileOutputStream;)V
+
+    goto :goto_0
+
+    .line 3035
+    :catch_0
+    move-exception v1
+
+    .line 3037
+    const-string/jumbo v2, "getTbsCorePV"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v6, "TbsInstaller--getTbsCorePV IOException="
+
+    invoke-direct {v3, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/IOException;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Lcom/tencent/smtt/a/r;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_1
+
+    .line 3023
+    :cond_3
+    :try_start_4
+    invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
+
+    move-result v1
+
+    .line 3025
+    const-string/jumbo v3, "getTbsCorePV"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v7, "mpv ="
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v3, v6}, Lcom/tencent/smtt/a/r;->i(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_4
+    .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_5
+    .catchall {:try_start_4 .. :try_end_4} :catchall_1
+
+    .line 3026
+    :try_start_5
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_5
+    .catch Ljava/io/IOException; {:try_start_5 .. :try_end_5} :catch_1
+
+    .line 3041
+    :goto_2
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lTK:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v0}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 3043
+    invoke-static {v5, v4}, Lcom/tencent/smtt/sdk/m;->a(Ljava/nio/channels/FileLock;Ljava/io/FileOutputStream;)V
+
+    move v0, v1
+
+    goto/16 :goto_0
+
+    .line 3035
+    :catch_1
+    move-exception v0
+
+    .line 3037
+    const-string/jumbo v2, "getTbsCorePV"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v6, "TbsInstaller--getTbsCorePV IOException="
+
+    invoke-direct {v3, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/io/IOException;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v3, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v2, v0}, Lcom/tencent/smtt/a/r;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_2
+
+    .line 3027
+    :catch_2
+    move-exception v1
+
+    move-object v2, v3
+
+    .line 3029
+    :goto_3
+    :try_start_6
+    const-string/jumbo v3, "getTbsCorePV"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v7, "TbsInstaller--getTbsCorePV Exception="
+
+    invoke-direct {v6, v7}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v6, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v3, v1}, Lcom/tencent/smtt/a/r;->i(Ljava/lang/String;Ljava/lang/String;)V
+    :try_end_6
+    .catchall {:try_start_6 .. :try_end_6} :catchall_1
+
+    .line 3030
+    if-eqz v2, :cond_4
+
+    .line 3034
+    :try_start_7
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_7
+    .catch Ljava/io/IOException; {:try_start_7 .. :try_end_7} :catch_3
+
+    .line 3041
+    :cond_4
+    :goto_4
+    sget-object v1, Lcom/tencent/smtt/sdk/WebView;->lTK:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 3043
+    invoke-static {v5, v4}, Lcom/tencent/smtt/sdk/m;->a(Ljava/nio/channels/FileLock;Ljava/io/FileOutputStream;)V
+
+    goto/16 :goto_0
+
+    .line 3035
+    :catch_3
+    move-exception v1
+
+    .line 3037
+    const-string/jumbo v2, "getTbsCorePV"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v6, "TbsInstaller--getTbsCorePV IOException="
+
+    invoke-direct {v3, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/IOException;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Lcom/tencent/smtt/a/r;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_4
+
+    .line 3032
+    :catchall_0
+    move-exception v0
+
+    move-object v2, v3
+
+    :goto_5
+    if-eqz v2, :cond_5
+
+    .line 3034
+    :try_start_8
+    invoke-virtual {v2}, Ljava/io/FileInputStream;->close()V
+    :try_end_8
+    .catch Ljava/io/IOException; {:try_start_8 .. :try_end_8} :catch_4
+
+    .line 3041
+    :cond_5
+    :goto_6
+    sget-object v1, Lcom/tencent/smtt/sdk/WebView;->lTK:Ljava/util/concurrent/locks/Lock;
+
+    invoke-interface {v1}, Ljava/util/concurrent/locks/Lock;->unlock()V
+
+    .line 3043
+    invoke-static {v5, v4}, Lcom/tencent/smtt/sdk/m;->a(Ljava/nio/channels/FileLock;Ljava/io/FileOutputStream;)V
+
+    throw v0
+
+    .line 3035
+    :catch_4
+    move-exception v1
+
+    .line 3037
+    const-string/jumbo v2, "getTbsCorePV"
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v6, "TbsInstaller--getTbsCorePV IOException="
+
+    invoke-direct {v3, v6}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v1}, Ljava/io/IOException;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v2, v1}, Lcom/tencent/smtt/a/r;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_6
+
+    .line 3047
+    :cond_6
+    invoke-static {v5, v4}, Lcom/tencent/smtt/sdk/m;->a(Ljava/nio/channels/FileLock;Ljava/io/FileOutputStream;)V
+
+    goto/16 :goto_0
+
+    .line 3032
+    :catchall_1
+    move-exception v0
+
+    goto :goto_5
+
+    .line 3027
+    :catch_5
+    move-exception v1
+
+    goto :goto_3
+.end method
+
+.method static fG(Landroid/content/Context;)V
+    .locals 4
+
+    .prologue
+    const/4 v3, 0x0
+
+    .line 3058
+    invoke-static {p0}, Lcom/tencent/smtt/sdk/WebView;->fF(Landroid/content/Context;)I
+
+    move-result v0
+
+    .line 3059
+    const/4 v1, -0x1
+
+    if-eq v0, v1, :cond_3
+
+    .line 3061
+    add-int/lit8 v0, v0, 0x1
+
+    .line 3062
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "PV="
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 3068
+    :goto_0
+    const-string/jumbo v1, "tbs"
+
+    invoke-virtual {p0, v1, v3}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
+
+    move-result-object v1
+
+    .line 3069
+    new-instance v2, Ljava/io/File;
+
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v3, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    sget-object v3, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    const-string/jumbo v3, "core_private"
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    const-string/jumbo v3, "pv.db"
+
+    invoke-direct {v2, v1, v3}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3070
+    :try_start_0
+    invoke-virtual {v2}, Ljava/io/File;->getParentFile()Ljava/io/File;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/io/File;->mkdirs()Z
+
+    .line 3076
+    invoke-virtual {v2}, Ljava/io/File;->isFile()Z
+
+    move-result v1
+
+    if-eqz v1, :cond_0
+
+    invoke-virtual {v2}, Ljava/io/File;->exists()Z
+
+    move-result v1
+
+    if-nez v1, :cond_1
+
+    .line 3077
+    :cond_0
+    invoke-virtual {v2}, Ljava/io/File;->createNewFile()Z
+
+    .line 3082
+    :cond_1
+    new-instance v1, Ljava/io/FileOutputStream;
+
+    const/4 v3, 0x0
+
+    invoke-direct {v1, v2, v3}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;Z)V
+
+    .line 3084
+    sput-object v1, Lcom/tencent/smtt/sdk/WebView;->lTL:Ljava/io/OutputStream;
+
+    invoke-virtual {v0}, Ljava/lang/String;->getBytes()[B
+
+    move-result-object v0
+
+    invoke-virtual {v1, v0}, Ljava/io/OutputStream;->write([B)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 3087
+    :try_start_1
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lTL:Ljava/io/OutputStream;
+
+    if-eqz v0, :cond_2
+
+    .line 3088
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lTL:Ljava/io/OutputStream;
+
+    invoke-virtual {v0}, Ljava/io/OutputStream;->flush()V
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
+
+    .line 3092
+    :cond_2
+    :goto_1
+    return-void
+
+    .line 3065
+    :cond_3
+    const-string/jumbo v0, "PV=1"
+
+    goto :goto_0
+
+    .line 3087
+    :catchall_0
+    move-exception v0
+
+    :try_start_2
+    sget-object v1, Lcom/tencent/smtt/sdk/WebView;->lTL:Ljava/io/OutputStream;
+
+    if-eqz v1, :cond_4
+
+    .line 3088
+    sget-object v1, Lcom/tencent/smtt/sdk/WebView;->lTL:Ljava/io/OutputStream;
+
+    invoke-virtual {v1}, Ljava/io/OutputStream;->flush()V
+
+    :cond_4
+    throw v0
+    :try_end_2
+    .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
+
+    .line 3092
+    :catch_0
+    move-exception v0
+
+    goto :goto_1
+.end method
+
+.method private static fH(Landroid/content/Context;)V
+    .locals 4
+
+    .prologue
+    .line 3096
+    :try_start_0
+    const-string/jumbo v0, "tbs"
+
+    const/4 v1, 0x0
+
+    invoke-virtual {p0, v0, v1}, Landroid/content/Context;->getDir(Ljava/lang/String;I)Ljava/io/File;
+
+    move-result-object v0
+
+    .line 3097
+    new-instance v1, Ljava/io/File;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v2, Ljava/io/File;->separator:Ljava/lang/String;
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v2, "core_private"
+
+    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    const-string/jumbo v2, "pv.db"
+
+    invoke-direct {v1, v0, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 3098
+    invoke-virtual {v1}, Ljava/io/File;->exists()Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 3106
+    :goto_0
+    return-void
+
+    .line 3101
+    :cond_0
+    invoke-virtual {v1}, Ljava/io/File;->delete()Z
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_0
+
+    .line 3102
+    :catch_0
+    move-exception v0
+
+    .line 3104
+    const-string/jumbo v1, "getTbsCorePV"
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v3, "TbsInstaller--getTbsCorePV Exception="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v0}, Ljava/lang/Exception;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    invoke-static {v1, v0}, Lcom/tencent/smtt/a/r;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    goto :goto_0
 .end method
 
 .method public static findAddress(Ljava/lang/String;)Ljava/lang/String;
@@ -741,27 +1918,29 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1196
-    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    .line 1930
+    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    iget-boolean v0, v0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+
+    move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1198
+    .line 1932
     invoke-static {p0}, Landroid/webkit/WebView;->findAddress(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1203
+    .line 1937
     :goto_0
     return-object v0
 
@@ -771,57 +1950,63 @@
     goto :goto_0
 .end method
 
-.method public static getCrashExtraMessage(Landroid/content/Context;)Ljava/lang/String;
-    .locals 7
+.method static synthetic g(Lcom/tencent/smtt/sdk/WebView;)Landroid/widget/CheckBox;
+    .locals 1
 
     .prologue
-    .line 2190
-    new-instance v0, Ljava/lang/StringBuilder;
+    .line 86
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTS:Landroid/widget/CheckBox;
 
-    const-string/jumbo v1, "tbs_core_version:"
+    return-object v0
+.end method
 
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+.method public static getCrashExtraMessage(Landroid/content/Context;)Ljava/lang/String;
+    .locals 9
+
+    .prologue
+    const/4 v8, 0x0
+
+    const/4 v0, 0x0
+
+    .line 3161
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    const-string/jumbo v2, "tbs_core_version:"
+
+    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
     invoke-static {p0}, Lcom/tencent/smtt/sdk/QbSdk;->getTbsVersion(Landroid/content/Context;)I
 
-    move-result v1
+    move-result v2
 
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ";tbs_sdk_version:"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-static {p0}, Lcom/tencent/smtt/sdk/QbSdk;->getTbsSdkVersion(Landroid/content/Context;)I
-
-    move-result v1
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, ";"
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
     move-result-object v1
 
-    .line 2193
-    invoke-static {p0}, Lcom/tencent/smtt/sdk/z;->eG(Landroid/content/Context;)Z
+    const-string/jumbo v2, ";tbs_sdk_version:25434"
 
-    move-result v0
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    if-eqz v0, :cond_0
+    move-result-object v1
 
-    .line 2194
+    const-string/jumbo v2, ";"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 3164
+    invoke-static {p0}, Lcom/tencent/smtt/sdk/q;->fr(Landroid/content/Context;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 3165
     new-instance v0, Ljava/lang/StringBuilder;
 
     const-string/jumbo v2, "nothing return ^-^."
@@ -836,50 +2021,56 @@
 
     move-result-object v0
 
-    .line 2203
+    .line 3174
     :goto_0
     return-object v0
 
-    .line 2196
+    .line 3167
     :cond_0
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2197
-    const/4 v0, 0x1
+    .line 3168
+    const/4 v3, 0x1
 
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v3}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
-    move-result-object v0
+    move-result-object v3
 
-    iget-object v3, v0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    iget-object v4, v3, Lcom/tencent/smtt/sdk/d;->lRy:Lcom/tencent/smtt/sdk/t;
 
-    if-nez v3, :cond_1
+    if-eqz v4, :cond_1
 
+    sget-boolean v4, Lcom/tencent/smtt/sdk/QbSdk;->lRk:Z
+
+    if-eqz v4, :cond_3
+
+    :cond_1
     const-string/jumbo v0, "system webview get nothing..."
 
+    :cond_2
     :goto_1
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2198
+    .line 3169
     const-string/jumbo v0, "\n"
 
     invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2199
+    .line 3170
     invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2201
+    .line 3172
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
 
     const/16 v1, 0x2000
 
-    if-le v0, v1, :cond_3
+    if-le v0, v1, :cond_6
 
-    .line 2202
+    .line 3173
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
@@ -892,42 +2083,780 @@
 
     goto :goto_0
 
-    .line 2197
-    :cond_1
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    .line 3168
+    :cond_3
+    iget-object v3, v3, Lcom/tencent/smtt/sdk/d;->lRy:Lcom/tencent/smtt/sdk/t;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/aa;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+    iget-object v4, v3, Lcom/tencent/smtt/sdk/t;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
 
-    const-string/jumbo v3, "com.tencent.smtt.util.CrashTracker"
+    const-string/jumbo v5, "com.tencent.smtt.util.CrashTracker"
 
-    const-string/jumbo v4, "getCrashExtraInfo"
+    const-string/jumbo v6, "getCrashExtraInfo"
 
-    const/4 v5, 0x0
+    new-array v7, v8, [Ljava/lang/Object;
 
-    const/4 v6, 0x0
+    invoke-virtual {v4, v5, v6, v0, v7}, Lcom/tencent/smtt/export/external/DexLoader;->invokeStaticMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    new-array v6, v6, [Ljava/lang/Object;
+    move-result-object v4
 
-    invoke-virtual {v0, v3, v4, v5, v6}, Lcom/tencent/smtt/export/external/DexLoader;->invokeStaticMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    iget-object v3, v3, Lcom/tencent/smtt/sdk/t;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+
+    const-string/jumbo v5, "com.tencent.mtt.video.internal.media.WonderPlayer"
+
+    const-string/jumbo v6, "getVersion"
+
+    new-array v7, v8, [Ljava/lang/Object;
+
+    invoke-virtual {v3, v5, v6, v0, v7}, Lcom/tencent/smtt/export/external/DexLoader;->invokeStaticMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    if-eqz v4, :cond_4
+
+    if-eqz v3, :cond_5
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v0
 
+    const-string/jumbo v4, " ReaderPackName="
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v4, Lcom/tencent/smtt/sdk/p;->lTn:Ljava/lang/String;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v4, " ReaderPackVersion="
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v4, Lcom/tencent/smtt/sdk/p;->lTo:Ljava/lang/String;
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v4, " WonderPlayVersion="
+
+    invoke-virtual {v0, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-static {v3}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    :cond_4
+    :goto_2
     if-nez v0, :cond_2
 
     const-string/jumbo v0, "X5 core get nothing..."
 
-    :cond_2
-    check-cast v0, Ljava/lang/String;
-
-    check-cast v0, Ljava/lang/String;
-
     goto :goto_1
 
-    .line 2203
-    :cond_3
+    :cond_5
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-static {v4}, Ljava/lang/String;->valueOf(Ljava/lang/Object;)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v3, " ReaderPackName="
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/tencent/smtt/sdk/p;->lTn:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    const-string/jumbo v3, " ReaderPackVersion="
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    sget-object v3, Lcom/tencent/smtt/sdk/p;->lTo:Ljava/lang/String;
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_2
+
+    .line 3174
+    :cond_6
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v0
+
+    goto/16 :goto_0
+.end method
+
+.method private getDebugSettingsView()Landroid/widget/LinearLayout;
+    .locals 11
+
+    .prologue
+    const/high16 v10, 0x40a00000    # 5.0f
+
+    const/high16 v9, 0x3f000000    # 0.5f
+
+    .line 1285
+    const/4 v1, 0x0
+
+    .line 1289
+    :try_start_0
+    new-instance v0, Landroid/widget/LinearLayout;
+
+    iget-object v2, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v0, v2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 1290
+    :try_start_1
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v1}, Landroid/content/Context;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Landroid/content/res/Resources;->getDisplayMetrics()Landroid/util/DisplayMetrics;
+
+    move-result-object v1
+
+    iget v1, v1, Landroid/util/DisplayMetrics;->density:F
+
+    .line 1292
+    const/4 v2, -0x1
+
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
+
+    .line 1293
+    const/4 v2, 0x1
+
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    .line 1294
+    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v3, -0x1
+
+    const/4 v4, -0x1
+
+    invoke-direct {v2, v3, v4}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1297
+    new-instance v2, Landroid/widget/TextView;
+
+    iget-object v3, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v2, v3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 1298
+    const-string/jumbo v3, "TBS\u8c03\u8bd5\u9009\u9879\u8bbe\u7f6e"
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1299
+    const v3, -0xff0100
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 1300
+    mul-float v3, v10, v1
+
+    add-float/2addr v3, v9
+
+    float-to-int v3, v3
+
+    int-to-float v3, v3
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextSize(F)V
+
+    .line 1301
+    new-instance v3, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v4, -0x2
+
+    const/4 v5, -0x2
+
+    invoke-direct {v3, v4, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v2, v3}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1303
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1306
+    new-instance v2, Landroid/widget/LinearLayout;
+
+    iget-object v3, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v2, v3}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    .line 1307
+    const/4 v3, 0x1
+
+    invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    .line 1308
+    new-instance v3, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v4, -0x1
+
+    const/4 v5, -0x2
+
+    invoke-direct {v3, v4, v5}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1311
+    new-instance v3, Landroid/widget/TextView;
+
+    iget-object v4, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v3, v4}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 1312
+    const-string/jumbo v4, "\u8bf7\u9009\u62e9\u4ee5\u4e0b\u6d4b\u8bd5\u9009\u9879"
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1313
+    const/high16 v4, -0x1000000
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 1314
+    mul-float v4, v10, v1
+
+    add-float/2addr v4, v9
+
+    float-to-int v4, v4
+
+    int-to-float v4, v4
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setTextSize(F)V
+
+    .line 1315
+    new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v5, -0x1
+
+    const/4 v6, -0x2
+
+    invoke-direct {v4, v5, v6}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1316
+    invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1319
+    new-instance v3, Landroid/widget/CheckBox;
+
+    iget-object v4, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v3, v4}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;)V
+
+    .line 1320
+    const-string/jumbo v4, "\u5f3a\u5236\u4f7f\u7528\u7cfb\u7edf\u5185\u6838"
+
+    invoke-virtual {v3, v4}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1321
+    const/high16 v4, -0x1000000
+
+    invoke-virtual {v3, v4}, Landroid/widget/CheckBox;->setTextColor(I)V
+
+    .line 1322
+    new-instance v4, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v5, -0x2
+
+    const/4 v6, -0x2
+
+    invoke-direct {v4, v5, v6}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v3, v4}, Landroid/widget/CheckBox;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1323
+    invoke-virtual {v2, v3}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1326
+    new-instance v4, Landroid/widget/CheckBox;
+
+    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v4, v5}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;)V
+
+    .line 1327
+    const-string/jumbo v5, "\u5f3a\u5236\u8d70\u4ee3\u7406(QProxy)"
+
+    invoke-virtual {v4, v5}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1328
+    const/high16 v5, -0x1000000
+
+    invoke-virtual {v4, v5}, Landroid/widget/CheckBox;->setTextColor(I)V
+
+    .line 1329
+    new-instance v5, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v6, -0x2
+
+    const/4 v7, -0x2
+
+    invoke-direct {v5, v6, v7}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v4, v5}, Landroid/widget/CheckBox;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1331
+    invoke-virtual {v2, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1334
+    new-instance v5, Landroid/widget/LinearLayout;
+
+    iget-object v6, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v5, v6}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    .line 1335
+    const/4 v6, 0x0
+
+    invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    .line 1336
+    new-instance v6, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v7, -0x2
+
+    const/4 v8, -0x2
+
+    invoke-direct {v6, v7, v8}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .line 1337
+    const/high16 v7, 0x41000000    # 8.0f
+
+    mul-float/2addr v7, v1
+
+    add-float/2addr v7, v9
+
+    float-to-int v7, v7
+
+    iput v7, v6, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    .line 1338
+    invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1341
+    new-instance v6, Landroid/widget/Button;
+
+    iget-object v7, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v6, v7}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
+
+    iput-object v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTU:Landroid/widget/Button;
+
+    .line 1342
+    iget-object v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTU:Landroid/widget/Button;
+
+    const-string/jumbo v7, "\u786e\u5b9a"
+
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1343
+    new-instance v6, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v7, -0x2
+
+    const/high16 v8, 0x42700000    # 60.0f
+
+    mul-float/2addr v8, v1
+
+    add-float/2addr v8, v9
+
+    float-to-int v8, v8
+
+    invoke-direct {v6, v7, v8}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .line 1344
+    mul-float v7, v10, v1
+
+    add-float/2addr v7, v9
+
+    float-to-int v7, v7
+
+    iput v7, v6, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    .line 1345
+    iget-object v7, p0, Lcom/tencent/smtt/sdk/WebView;->lTU:Landroid/widget/Button;
+
+    invoke-virtual {v7, v6}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1346
+    iget-object v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTU:Landroid/widget/Button;
+
+    invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1349
+    new-instance v6, Landroid/widget/Button;
+
+    iget-object v7, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v6, v7}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
+
+    iput-object v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTV:Landroid/widget/Button;
+
+    .line 1350
+    iget-object v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTV:Landroid/widget/Button;
+
+    const-string/jumbo v7, "\u6062\u590d\u539f\u59cb\u8bbe\u7f6e"
+
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1351
+    new-instance v6, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v7, -0x2
+
+    const/high16 v8, 0x42700000    # 60.0f
+
+    mul-float/2addr v8, v1
+
+    add-float/2addr v8, v9
+
+    float-to-int v8, v8
+
+    invoke-direct {v6, v7, v8}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .line 1352
+    const/high16 v7, 0x41700000    # 15.0f
+
+    mul-float/2addr v7, v1
+
+    add-float/2addr v7, v9
+
+    float-to-int v7, v7
+
+    iput v7, v6, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    .line 1353
+    mul-float v7, v10, v1
+
+    add-float/2addr v7, v9
+
+    float-to-int v7, v7
+
+    iput v7, v6, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    .line 1354
+    iget-object v7, p0, Lcom/tencent/smtt/sdk/WebView;->lTV:Landroid/widget/Button;
+
+    invoke-virtual {v7, v6}, Landroid/widget/Button;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1355
+    iget-object v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTV:Landroid/widget/Button;
+
+    invoke-virtual {v5, v6}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1356
+    invoke-virtual {v2, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1357
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1360
+    new-instance v2, Landroid/widget/TextView;
+
+    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v2, v5}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
+
+    .line 1361
+    const-string/jumbo v5, "\u8c03\u8bd5\u9009\u9879\u7684\u5f53\u524d\u72b6\u6001"
+
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1362
+    const v5, -0x777778
+
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setTextColor(I)V
+
+    .line 1363
+    mul-float v5, v10, v1
+
+    add-float/2addr v5, v9
+
+    float-to-int v5, v5
+
+    int-to-float v5, v5
+
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setTextSize(F)V
+
+    .line 1364
+    new-instance v5, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v6, -0x2
+
+    const/4 v7, -0x2
+
+    invoke-direct {v5, v6, v7}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .line 1365
+    const/high16 v6, 0x41c80000    # 25.0f
+
+    mul-float/2addr v6, v1
+
+    add-float/2addr v6, v9
+
+    float-to-int v6, v6
+
+    iput v6, v5, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    .line 1366
+    invoke-virtual {v2, v5}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1367
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1370
+    new-instance v2, Landroid/widget/LinearLayout;
+
+    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v2, v5}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    .line 1371
+    const/4 v5, -0x1
+
+    invoke-virtual {v2, v5}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
+
+    .line 1372
+    const/4 v5, 0x1
+
+    invoke-virtual {v2, v5}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    .line 1373
+    new-instance v5, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v6, -0x2
+
+    const/4 v7, -0x2
+
+    invoke-direct {v5, v6, v7}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .line 1374
+    mul-float v6, v10, v1
+
+    add-float/2addr v6, v9
+
+    float-to-int v6, v6
+
+    iput v6, v5, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
+
+    .line 1375
+    invoke-virtual {v2, v5}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1378
+    new-instance v5, Landroid/widget/CheckBox;
+
+    iget-object v6, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v5, v6}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;)V
+
+    iput-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTS:Landroid/widget/CheckBox;
+
+    .line 1379
+    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTS:Landroid/widget/CheckBox;
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v5, v6}, Landroid/widget/CheckBox;->setClickable(Z)V
+
+    .line 1380
+    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTS:Landroid/widget/CheckBox;
+
+    const-string/jumbo v6, "\u5f3a\u5236\u4f7f\u7528\u7cfb\u7edf\u5185\u6838"
+
+    invoke-virtual {v5, v6}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1381
+    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTS:Landroid/widget/CheckBox;
+
+    const v6, -0x777778
+
+    invoke-virtual {v5, v6}, Landroid/widget/CheckBox;->setTextColor(I)V
+
+    .line 1382
+    new-instance v5, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v6, -0x2
+
+    const/4 v7, -0x2
+
+    invoke-direct {v5, v6, v7}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .line 1383
+    mul-float v6, v10, v1
+
+    add-float/2addr v6, v9
+
+    float-to-int v6, v6
+
+    iput v6, v5, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    .line 1384
+    iget-object v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTS:Landroid/widget/CheckBox;
+
+    invoke-virtual {v6, v5}, Landroid/widget/CheckBox;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1385
+    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTS:Landroid/widget/CheckBox;
+
+    invoke-virtual {v2, v5}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1388
+    new-instance v5, Landroid/widget/CheckBox;
+
+    iget-object v6, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-direct {v5, v6}, Landroid/widget/CheckBox;-><init>(Landroid/content/Context;)V
+
+    iput-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTT:Landroid/widget/CheckBox;
+
+    .line 1389
+    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTT:Landroid/widget/CheckBox;
+
+    const/4 v6, 0x0
+
+    invoke-virtual {v5, v6}, Landroid/widget/CheckBox;->setClickable(Z)V
+
+    .line 1390
+    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTT:Landroid/widget/CheckBox;
+
+    const-string/jumbo v6, "\u5f3a\u5236\u8d70\u4ee3\u7406(QProxy)"
+
+    invoke-virtual {v5, v6}, Landroid/widget/CheckBox;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1391
+    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTT:Landroid/widget/CheckBox;
+
+    const v6, -0x777778
+
+    invoke-virtual {v5, v6}, Landroid/widget/CheckBox;->setTextColor(I)V
+
+    .line 1392
+    new-instance v5, Landroid/widget/FrameLayout$LayoutParams;
+
+    const/4 v6, -0x2
+
+    const/4 v7, -0x2
+
+    invoke-direct {v5, v6, v7}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    .line 1393
+    mul-float/2addr v1, v10
+
+    add-float/2addr v1, v9
+
+    float-to-int v1, v1
+
+    iput v1, v5, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
+
+    .line 1394
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTT:Landroid/widget/CheckBox;
+
+    invoke-virtual {v1, v5}, Landroid/widget/CheckBox;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1395
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTT:Landroid/widget/CheckBox;
+
+    invoke-virtual {v2, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1396
+    invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
+
+    .line 1399
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTU:Landroid/widget/Button;
+
+    new-instance v2, Lcom/tencent/smtt/sdk/WebView$7;
+
+    invoke-direct {v2, p0, v3, v4}, Lcom/tencent/smtt/sdk/WebView$7;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/widget/CheckBox;Landroid/widget/CheckBox;)V
+
+    invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 1429
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTV:Landroid/widget/Button;
+
+    new-instance v2, Lcom/tencent/smtt/sdk/WebView$8;
+
+    invoke-direct {v2, p0}, Lcom/tencent/smtt/sdk/WebView$8;-><init>(Lcom/tencent/smtt/sdk/WebView;)V
+
+    invoke-virtual {v1, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 1439
+    invoke-direct {p0}, Lcom/tencent/smtt/sdk/WebView;->bmb()V
+    :try_end_1
+    .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 1442
+    :goto_0
+    return-object v0
+
+    :catch_0
+    move-exception v0
+
+    move-object v0, v1
+
+    goto :goto_0
+
+    :catch_1
+    move-exception v1
 
     goto :goto_0
 .end method
@@ -938,7 +2867,7 @@
     .end annotation
 
     .prologue
-    .line 1396
+    .line 2135
     const-class v1, Lcom/tencent/smtt/sdk/WebView;
 
     monitor-enter v1
@@ -946,7 +2875,7 @@
     const/4 v0, 0x0
 
     :try_start_0
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
@@ -954,26 +2883,28 @@
 
     const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    iget-boolean v0, v0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
+
+    move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1398
+    .line 2137
     const-string/jumbo v0, "android.webkit.WebView"
 
     const-string/jumbo v2, "getPluginList"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->bU(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->cL(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     move-result-object v0
 
-    .line 1403
+    .line 2142
     :goto_0
     monitor-exit v1
 
@@ -984,7 +2915,7 @@
 
     goto :goto_0
 
-    .line 1396
+    .line 2135
     :catchall_0
     move-exception v0
 
@@ -997,7 +2928,7 @@
     .locals 1
 
     .prologue
-    .line 1692
+    .line 2500
     invoke-static {p0}, Lcom/tencent/smtt/sdk/QbSdk;->getTbsVersion(Landroid/content/Context;)I
 
     move-result v0
@@ -1009,10 +2940,13 @@
     .locals 1
 
     .prologue
-    .line 2212
+    .line 3186
+    invoke-static {}, Lcom/tencent/smtt/sdk/WebView;->bmc()V
+
+    .line 3188
     const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
@@ -1020,7 +2954,7 @@
 
     move-result v0
 
-    .line 2213
+    .line 3189
     return v0
 .end method
 
@@ -1028,35 +2962,184 @@
     .locals 1
 
     .prologue
-    .line 1701
-    invoke-static {p0}, Lcom/tencent/smtt/sdk/QbSdk;->getTbsSdkVersion(Landroid/content/Context;)I
-
-    move-result v0
+    .line 2509
+    const/16 v0, 0x635a
 
     return v0
+.end method
+
+.method static synthetic h(Lcom/tencent/smtt/sdk/WebView;)Landroid/widget/CheckBox;
+    .locals 1
+
+    .prologue
+    .line 86
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTT:Landroid/widget/CheckBox;
+
+    return-object v0
 .end method
 
 .method private init(Landroid/content/Context;)V
     .locals 1
 
     .prologue
-    .line 375
+    .line 500
     const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    .line 376
+    .line 501
     invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/d;->init(Landroid/content/Context;)V
 
-    .line 377
-    iget-boolean v0, v0, Lcom/tencent/smtt/sdk/d;->jJm:Z
+    .line 502
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->bln()Z
 
-    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    move-result v0
 
-    .line 379
+    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
+
+    .line 505
     return-void
+.end method
+
+.method private setAttributeForX5(Landroid/util/AttributeSet;)V
+    .locals 5
+
+    .prologue
+    const/4 v0, 0x0
+
+    .line 2594
+    if-eqz p1, :cond_2
+
+    .line 2595
+    :try_start_0
+    invoke-interface {p1}, Landroid/util/AttributeSet;->getAttributeCount()I
+
+    move-result v1
+
+    .line 2596
+    :goto_0
+    if-ge v0, v1, :cond_2
+
+    .line 2597
+    invoke-interface {p1, v0}, Landroid/util/AttributeSet;->getAttributeName(I)Ljava/lang/String;
+
+    move-result-object v2
+
+    const-string/jumbo v3, "scrollbars"
+
+    invoke-virtual {v2, v3}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_0
+
+    .line 2598
+    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v2
+
+    const v3, 0x10100de
+
+    invoke-virtual {v2, v3}, Landroid/content/res/Resources;->getIntArray(I)[I
+
+    move-result-object v2
+
+    .line 2599
+    const/4 v3, -0x1
+
+    invoke-interface {p1, v0, v3}, Landroid/util/AttributeSet;->getAttributeIntValue(II)I
+
+    move-result v3
+
+    .line 2600
+    const/4 v4, 0x1
+
+    aget v4, v2, v4
+
+    if-ne v3, v4, :cond_1
+
+    .line 2601
+    iget-object v2, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+
+    invoke-interface {v2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->setVerticalScrollBarEnabled(Z)V
+
+    .line 2602
+    iget-object v2, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+
+    invoke-interface {v2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->setHorizontalScrollBarEnabled(Z)V
+
+    .line 2596
+    :cond_0
+    :goto_1
+    add-int/lit8 v0, v0, 0x1
+
+    goto :goto_0
+
+    .line 2603
+    :cond_1
+    const/4 v4, 0x2
+
+    aget v4, v2, v4
+
+    if-ne v3, v4, :cond_3
+
+    .line 2604
+    iget-object v2, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+
+    invoke-interface {v2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->setVerticalScrollBarEnabled(Z)V
+
+    goto :goto_1
+
+    .line 2612
+    :catch_0
+    move-exception v0
+
+    .line 2613
+    :cond_2
+    return-void
+
+    .line 2605
+    :cond_3
+    const/4 v4, 0x3
+
+    aget v2, v2, v4
+
+    if-ne v3, v2, :cond_0
+
+    .line 2606
+    iget-object v2, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+
+    invoke-interface {v2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
+
+    move-result-object v2
+
+    const/4 v3, 0x0
+
+    invoke-virtual {v2, v3}, Landroid/view/View;->setHorizontalScrollBarEnabled(Z)V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    goto :goto_1
 .end method
 
 .method public static declared-synchronized setSysDayOrNight(Z)V
@@ -1065,53 +3148,53 @@
     .prologue
     const/16 v3, 0xff
 
-    .line 2008
+    .line 2861
     const-class v1, Lcom/tencent/smtt/sdk/WebView;
 
     monitor-enter v1
 
     :try_start_0
-    sget-boolean v0, Lcom/tencent/smtt/sdk/WebView;->jLo:Z
+    sget-boolean v0, Lcom/tencent/smtt/sdk/WebView;->lUi:Z
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     if-ne p0, v0, :cond_1
 
-    .line 2031
+    .line 2884
     :cond_0
     :goto_0
     monitor-exit v1
 
     return-void
 
-    .line 2009
+    .line 2862
     :cond_1
     :try_start_1
-    sput-boolean p0, Lcom/tencent/smtt/sdk/WebView;->jLo:Z
+    sput-boolean p0, Lcom/tencent/smtt/sdk/WebView;->lUi:Z
 
-    .line 2011
-    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->jLn:Landroid/graphics/Paint;
+    .line 2864
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUh:Landroid/graphics/Paint;
 
     if-nez v0, :cond_2
 
-    .line 2014
+    .line 2867
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    .line 2015
-    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->jLn:Landroid/graphics/Paint;
+    .line 2868
+    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->lUh:Landroid/graphics/Paint;
 
     const/high16 v2, -0x1000000
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 2018
+    .line 2871
     :cond_2
     if-nez p0, :cond_3
 
-    .line 2020
-    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->jLn:Landroid/graphics/Paint;
+    .line 2873
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUh:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
 
@@ -1121,8 +3204,8 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 2022
-    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->jLn:Landroid/graphics/Paint;
+    .line 2875
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUh:Landroid/graphics/Paint;
 
     sget v2, Lcom/tencent/smtt/sdk/WebView;->NIGHT_MODE_ALPHA:I
 
@@ -1132,7 +3215,7 @@
 
     goto :goto_0
 
-    .line 2008
+    .line 2861
     :catchall_0
     move-exception v0
 
@@ -1140,10 +3223,10 @@
 
     throw v0
 
-    .line 2026
+    .line 2879
     :cond_3
     :try_start_2
-    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->jLn:Landroid/graphics/Paint;
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUh:Landroid/graphics/Paint;
 
     invoke-virtual {v0}, Landroid/graphics/Paint;->getAlpha()I
 
@@ -1151,8 +3234,8 @@
 
     if-eq v0, v3, :cond_0
 
-    .line 2028
-    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->jLn:Landroid/graphics/Paint;
+    .line 2881
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUh:Landroid/graphics/Paint;
 
     const/16 v2, 0xff
 
@@ -1167,14 +3250,14 @@
     .locals 5
 
     .prologue
-    .line 822
+    .line 1556
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x13
 
     if-lt v0, v1, :cond_0
 
-    .line 826
+    .line 1560
     :try_start_0
     const-string/jumbo v0, "android.webkit.WebView"
 
@@ -1182,7 +3265,7 @@
 
     move-result-object v0
 
-    .line 827
+    .line 1561
     const/4 v1, 0x1
 
     new-array v1, v1, [Ljava/lang/Class;
@@ -1193,27 +3276,27 @@
 
     aput-object v3, v1, v2
 
-    .line 828
+    .line 1562
     const-string/jumbo v2, "setWebContentsDebuggingEnabled"
 
     invoke-virtual {v0, v2, v1}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 829
-    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->jLk:Ljava/lang/reflect/Method;
+    .line 1563
+    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->lUa:Ljava/lang/reflect/Method;
 
     if-eqz v0, :cond_0
 
-    .line 831
-    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->jLk:Ljava/lang/reflect/Method;
+    .line 1565
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUa:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 832
-    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->jLk:Ljava/lang/reflect/Method;
+    .line 1566
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUa:Ljava/lang/reflect/Method;
 
     const/4 v1, 0x0
 
@@ -1233,16 +3316,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 840
+    .line 1574
     :cond_0
     :goto_0
     return-void
 
-    .line 836
+    .line 1570
     :catch_0
     move-exception v0
 
-    .line 838
+    .line 1572
     const-string/jumbo v1, "QbSdk"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1263,153 +3346,34 @@
 
     move-result-object v0
 
-    invoke-static {v1, v0}, Lcom/tencent/smtt/a/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v0}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method final aUT()V
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x3
-
-    const/4 v4, 0x1
-
-    .line 2220
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
-
-    if-nez v0, :cond_1
-
-    .line 2258
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 2224
-    :cond_1
-    invoke-static {v4}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
-
-    move-result-object v0
-
-    .line 2226
-    invoke-static {}, Lcom/tencent/smtt/sdk/d;->aUf()Z
-
-    move-result v1
-
-    if-nez v1, :cond_0
-
-    .line 2231
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
-
-    invoke-static {v1}, Lcom/tencent/smtt/sdk/m;->em(Landroid/content/Context;)Lcom/tencent/smtt/sdk/m;
-
-    move-result-object v1
-
-    .line 2232
-    invoke-virtual {v1}, Lcom/tencent/smtt/sdk/m;->aUy()I
-
-    move-result v2
-
-    .line 2233
-    const/4 v3, 0x2
-
-    if-ne v2, v3, :cond_2
-
-    .line 2234
-    invoke-virtual {v1}, Lcom/tencent/smtt/sdk/m;->aUx()I
-
-    move-result v0
-
-    .line 2235
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->Cd(Ljava/lang/String;)V
-
-    .line 2236
-    invoke-static {}, Lcom/tencent/smtt/sdk/d;->aUg()Z
-
-    goto :goto_0
-
-    .line 2240
-    :cond_2
-    invoke-virtual {v1}, Lcom/tencent/smtt/sdk/m;->aUt()I
-
-    move-result v3
-
-    .line 2241
-    if-ne v3, v4, :cond_3
-
-    .line 2242
-    invoke-virtual {v1}, Lcom/tencent/smtt/sdk/m;->aUs()I
-
-    move-result v0
-
-    .line 2243
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->Cd(Ljava/lang/String;)V
-
-    .line 2244
-    invoke-static {}, Lcom/tencent/smtt/sdk/d;->aUg()Z
-
-    goto :goto_0
-
-    .line 2251
-    :cond_3
-    iget-boolean v0, v0, Lcom/tencent/smtt/sdk/d;->jJm:Z
-
-    if-nez v0, :cond_0
-
-    if-eq v2, v5, :cond_4
-
-    if-ne v3, v5, :cond_0
-
-    .line 2255
-    :cond_4
-    invoke-static {}, Lcom/tencent/smtt/sdk/d;->aUe()I
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->Cd(Ljava/lang/String;)V
-
-    .line 2256
-    invoke-static {}, Lcom/tencent/smtt/sdk/d;->aUg()Z
-
-    goto :goto_0
-.end method
-
 .method public addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
     .locals 1
 
     .prologue
-    .line 1364
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2103
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1365
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2104
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1, p2}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2}, Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 1368
+    .line 2107
     :goto_0
     return-void
 
-    .line 1367
+    .line 2106
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
 
@@ -1420,29 +3384,29 @@
     .locals 5
 
     .prologue
-    .line 2148
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 3119
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 2149
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 3120
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->addView(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->addView(Landroid/view/View;)V
 
-    .line 2163
+    .line 3134
     :goto_0
     return-void
 
-    .line 2152
+    .line 3123
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2155
+    .line 3126
     :try_start_0
     const-string/jumbo v1, "addView"
 
@@ -1456,16 +3420,16 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-static {v0, v1, v2}, Lcom/tencent/smtt/a/m;->c(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
-    .line 2156
+    .line 3127
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 2157
+    .line 3128
     const/4 v2, 0x1
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -1480,7 +3444,7 @@
 
     goto :goto_0
 
-    .line 2162
+    .line 3133
     :catch_0
     move-exception v0
 
@@ -1491,24 +3455,24 @@
     .locals 1
 
     .prologue
-    .line 859
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1593
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 860
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1594
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->canGoBack()Z
+    invoke-virtual {v0}, Landroid/webkit/WebView;->canGoBack()Z
 
     move-result v0
 
-    .line 862
+    .line 1596
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->canGoBack()Z
 
@@ -1521,24 +3485,24 @@
     .locals 1
 
     .prologue
-    .line 891
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1625
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 892
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1626
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->canGoBackOrForward(I)Z
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->canGoBackOrForward(I)Z
 
     move-result v0
 
-    .line 894
+    .line 1628
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->canGoBackOrForward(I)Z
 
@@ -1551,24 +3515,24 @@
     .locals 1
 
     .prologue
-    .line 875
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1609
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 876
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1610
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->canGoForward()Z
+    invoke-virtual {v0}, Landroid/webkit/WebView;->canGoForward()Z
 
     move-result v0
 
-    .line 878
+    .line 1612
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->canGoForward()Z
 
@@ -1585,37 +3549,37 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1460
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2199
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_2
 
-    .line 1462
+    .line 2201
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xb
 
     if-lt v0, v2, :cond_1
 
-    .line 1464
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2203
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v2, "canZoomIn"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1465
+    .line 2204
     if-nez v0, :cond_0
 
     move v0, v1
 
-    .line 1470
+    .line 2209
     :goto_0
     return v0
 
-    .line 1465
+    .line 2204
     :cond_0
     check-cast v0, Ljava/lang/Boolean;
 
@@ -1628,12 +3592,12 @@
     :cond_1
     move v0, v1
 
-    .line 1467
+    .line 2206
     goto :goto_0
 
-    .line 1470
+    .line 2209
     :cond_2
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->canZoomIn()Z
 
@@ -1650,37 +3614,37 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1497
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2236
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_2
 
-    .line 1499
+    .line 2238
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xb
 
     if-lt v0, v2, :cond_1
 
-    .line 1501
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2240
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v2, "canZoomOut"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1502
+    .line 2241
     if-nez v0, :cond_0
 
     move v0, v1
 
-    .line 1507
+    .line 2246
     :goto_0
     return v0
 
-    .line 1502
+    .line 2241
     :cond_0
     check-cast v0, Ljava/lang/Boolean;
 
@@ -1693,12 +3657,12 @@
     :cond_1
     move v0, v1
 
-    .line 1504
+    .line 2243
     goto :goto_0
 
-    .line 1507
+    .line 2246
     :cond_2
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->canZoomOut()Z
 
@@ -1713,38 +3677,38 @@
     .end annotation
 
     .prologue
-    .line 936
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1670
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 938
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1672
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "capturePicture"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 939
+    .line 1673
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 942
+    .line 1676
     :goto_0
     return-object v0
 
-    .line 939
+    .line 1673
     :cond_0
     check-cast v0, Landroid/graphics/Picture;
 
     goto :goto_0
 
-    .line 942
+    .line 1676
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->capturePicture()Landroid/graphics/Picture;
 
@@ -1757,23 +3721,23 @@
     .locals 1
 
     .prologue
-    .line 1108
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1842
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1109
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1843
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->clearCache(Z)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->clearCache(Z)V
 
-    .line 1112
+    .line 1846
     :goto_0
     return-void
 
-    .line 1111
+    .line 1845
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->clearCache(Z)V
 
@@ -1784,23 +3748,23 @@
     .locals 1
 
     .prologue
-    .line 1116
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1850
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1117
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1851
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->clearFormData()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->clearFormData()V
 
-    .line 1120
+    .line 1854
     :goto_0
     return-void
 
-    .line 1119
+    .line 1853
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->clearFormData()V
 
@@ -1811,23 +3775,23 @@
     .locals 1
 
     .prologue
-    .line 1124
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1858
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1125
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1859
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->clearHistory()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->clearHistory()V
 
-    .line 1128
+    .line 1862
     :goto_0
     return-void
 
-    .line 1127
+    .line 1861
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->clearHistory()V
 
@@ -1841,23 +3805,23 @@
     .end annotation
 
     .prologue
-    .line 1229
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1963
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1230
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1964
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->clearMatches()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->clearMatches()V
 
-    .line 1233
+    .line 1967
     :goto_0
     return-void
 
-    .line 1232
+    .line 1966
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->clearMatches()V
 
@@ -1868,23 +3832,23 @@
     .locals 1
 
     .prologue
-    .line 1132
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1866
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1133
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1867
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->clearSslPreferences()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->clearSslPreferences()V
 
-    .line 1136
+    .line 1870
     :goto_0
     return-void
 
-    .line 1135
+    .line 1869
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->clearSslPreferences()V
 
@@ -1897,25 +3861,25 @@
     .end annotation
 
     .prologue
-    .line 924
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1658
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 925
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1659
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "clearView"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 928
+    .line 1662
     :goto_0
     return-void
 
-    .line 927
+    .line 1661
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->clearView()V
 
@@ -1926,23 +3890,23 @@
     .locals 1
 
     .prologue
-    .line 1555
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2294
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1556
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2295
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->computeScroll()V
 
-    .line 1559
+    .line 2298
     :goto_0
     return-void
 
-    .line 1558
+    .line 2297
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->computeScroll()V
 
@@ -1953,13 +3917,13 @@
     .locals 1
 
     .prologue
-    .line 1140
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1874
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_0
 
-    .line 1141
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 1875
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->copyBackForwardList()Lcom/tencent/smtt/export/external/interfaces/IX5WebBackForwardList;
 
@@ -1969,14 +3933,14 @@
 
     move-result-object v0
 
-    .line 1143
+    .line 1877
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->copyBackForwardList()Landroid/webkit/WebBackForwardList;
+    invoke-virtual {v0}, Landroid/webkit/WebView;->copyBackForwardList()Landroid/webkit/WebBackForwardList;
 
     move-result-object v0
 
@@ -1988,35 +3952,41 @@
 .end method
 
 .method public destroy()V
-    .locals 6
+    .locals 7
 
     .prologue
+    const/4 v6, 0x0
+
     const/4 v1, 0x1
 
-    .line 544
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLi:Z
+    .line 693
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTR:Z
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_3
 
-    .line 546
-    iput-boolean v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLi:Z
+    iget v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
 
-    .line 547
+    if-eqz v0, :cond_3
+
+    .line 695
+    iput-boolean v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTR:Z
+
+    .line 696
     const-string/jumbo v1, ""
 
-    .line 548
+    .line 697
     const-string/jumbo v2, ""
 
-    .line 549
+    .line 698
     const-string/jumbo v3, ""
 
-    .line 550
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 699
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_0
 
-    .line 552
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 701
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
@@ -2026,47 +3996,93 @@
 
     move-result-object v0
 
-    .line 553
+    .line 702
     if-eqz v0, :cond_0
 
-    .line 555
+    .line 704
     const-string/jumbo v1, "guid"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 556
+    .line 705
     const-string/jumbo v2, "qua2"
 
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 557
+    .line 706
     const-string/jumbo v3, "lc"
 
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 560
+    .line 710
     :cond_0
+    const-string/jumbo v0, "com.qzone"
+
+    iget-object v4, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v4
+
+    iget-object v4, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 711
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
 
-    iget v4, p0, Lcom/tencent/smtt/sdk/WebView;->jLh:I
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/WebView;->fF(Landroid/content/Context;)I
 
-    iget-boolean v5, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    move-result v0
+
+    .line 712
+    const/4 v4, -0x1
+
+    if-ne v0, v4, :cond_1
+
+    iget v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    :cond_1
+    iput v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    .line 713
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/WebView;->fH(Landroid/content/Context;)V
+
+    .line 716
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    iget v4, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    iget-boolean v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     invoke-static/range {v0 .. v5}, Lcom/tencent/smtt/sdk/a/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 563
-    :cond_1
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 718
+    iput v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
 
-    if-nez v0, :cond_4
+    .line 719
+    iput-boolean v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTR:Z
 
-    .line 586
+    .line 732
+    :cond_3
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
+
+    if-nez v0, :cond_6
+
+    .line 753
     :try_start_0
     const-string/jumbo v0, "android.webkit.WebViewClassic"
 
@@ -2074,7 +4090,7 @@
 
     move-result-object v0
 
-    .line 587
+    .line 754
     const-string/jumbo v1, "fromWebView"
 
     const/4 v2, 0x1
@@ -2091,12 +4107,12 @@
 
     move-result-object v1
 
-    .line 588
+    .line 755
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 589
+    .line 756
     const/4 v2, 0x0
 
     const/4 v3, 0x1
@@ -2105,7 +4121,7 @@
 
     const/4 v4, 0x0
 
-    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     aput-object v5, v3, v4
 
@@ -2113,57 +4129,57 @@
 
     move-result-object v1
 
-    .line 590
-    if-eqz v1, :cond_2
+    .line 757
+    if-eqz v1, :cond_4
 
-    .line 592
+    .line 759
     const-string/jumbo v2, "mListBoxDialog"
 
     invoke-virtual {v0, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v0
 
-    .line 593
+    .line 760
     const/4 v2, 0x1
 
     invoke-virtual {v0, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 594
+    .line 761
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 598
-    if-eqz v0, :cond_2
+    .line 765
+    if-eqz v0, :cond_4
 
-    .line 600
+    .line 767
     check-cast v0, Landroid/app/Dialog;
 
-    .line 602
+    .line 769
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/app/Dialog;->setOnCancelListener(Landroid/content/DialogInterface$OnCancelListener;)V
 
-    .line 603
+    .line 770
     const-string/jumbo v1, "android.app.Dialog"
 
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v2
 
-    .line 604
+    .line 771
     const-string/jumbo v1, "CANCEL"
 
     invoke-virtual {v2, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    .line 605
+    .line 772
     const/4 v3, 0x1
 
     invoke-virtual {v1, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 606
+    .line 773
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
@@ -2174,38 +4190,38 @@
 
     move-result v1
 
-    .line 608
+    .line 775
     const-string/jumbo v3, "mListenersHandler"
 
     invoke-virtual {v2, v3}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v2
 
-    .line 609
+    .line 776
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 610
+    .line 777
     invoke-virtual {v2, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/os/Handler;
 
-    .line 612
+    .line 779
     invoke-virtual {v0, v1}, Landroid/os/Handler;->removeMessages(I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 618
-    :cond_2
+    .line 785
+    :cond_4
     :goto_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->destroy()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->destroy()V
 
-    .line 624
+    .line 791
     :try_start_1
     const-string/jumbo v0, "android.webkit.BrowserFrame"
 
@@ -2213,19 +4229,19 @@
 
     move-result-object v0
 
-    .line 625
+    .line 792
     const-string/jumbo v1, "sConfigCallback"
 
     invoke-virtual {v0, v1}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    .line 626
+    .line 793
     const/4 v0, 0x1
 
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 627
+    .line 794
     const/4 v0, 0x0
 
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2234,66 +4250,66 @@
 
     check-cast v0, Landroid/content/ComponentCallbacks;
 
-    .line 629
-    if-eqz v0, :cond_3
+    .line 796
+    if-eqz v0, :cond_5
 
-    .line 631
+    .line 798
     const/4 v2, 0x0
 
     const/4 v3, 0x0
 
     invoke-virtual {v1, v2, v3}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 633
+    .line 800
     const-string/jumbo v1, "android.view.ViewRoot"
 
     invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 634
+    .line 801
     const-string/jumbo v2, "sConfigCallbacks"
 
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
 
     move-result-object v1
 
-    .line 635
+    .line 802
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 636
+    .line 803
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v1
 
-    .line 637
-    if-eqz v1, :cond_3
+    .line 804
+    if-eqz v1, :cond_5
 
-    .line 639
+    .line 806
     check-cast v1, Ljava/util/List;
 
-    .line 640
+    .line 807
     monitor-enter v1
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 642
+    .line 809
     :try_start_2
     invoke-interface {v1, v0}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 643
+    .line 810
     monitor-exit v1
 
-    .line 655
-    :cond_3
+    .line 822
+    :cond_5
     :goto_1
     return-void
 
-    .line 643
+    .line 810
     :catchall_0
     move-exception v0
 
@@ -2306,15 +4322,15 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
-    .line 650
+    .line 817
     :catch_0
     move-exception v0
 
     goto :goto_1
 
-    .line 654
-    :cond_4
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 821
+    :cond_6
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->destroy()V
 
@@ -2330,23 +4346,23 @@
     .locals 1
 
     .prologue
-    .line 1237
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1971
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1238
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1972
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->documentHasImages(Landroid/os/Message;)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->documentHasImages(Landroid/os/Message;)V
 
-    .line 1241
+    .line 1975
     :goto_0
     return-void
 
-    .line 1240
+    .line 1974
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->documentHasImages(Landroid/os/Message;)V
 
@@ -2363,13 +4379,13 @@
 
     const/4 v4, 0x0
 
-    .line 1528
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2267
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1530
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2269
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "dumpViewHierarchyWithProperties"
 
@@ -2393,39 +4409,39 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1537
+    .line 2276
     :goto_0
     return-void
 
-    .line 1535
+    .line 2274
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->dumpViewHierarchyWithProperties(Ljava/io/BufferedWriter;I)V
 
     goto :goto_0
 .end method
 
-.method public evaluateJavascript(Ljava/lang/String;Lcom/tencent/smtt/sdk/ab;)V
+.method public evaluateJavascript(Ljava/lang/String;Lcom/tencent/smtt/sdk/u;)V
     .locals 5
 
     .prologue
-    .line 1654
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2462
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_1
 
-    .line 1658
+    .line 2466
     :try_start_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 1659
+    .line 2467
     const-string/jumbo v1, "evaluateJavascript"
 
     const/4 v2, 0x2
@@ -2440,21 +4456,21 @@
 
     const/4 v3, 0x1
 
-    const-class v4, Lcom/tencent/smtt/sdk/ab;
+    const-class v4, Landroid/webkit/ValueCallback;
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-static {v0, v1, v2}, Lcom/tencent/smtt/a/m;->c(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 1660
+    .line 2468
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 1661
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 2469
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
@@ -2476,12 +4492,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1682
+    .line 2490
     :cond_0
     :goto_0
     return-void
 
-    .line 1665
+    .line 2473
     :catch_0
     move-exception v0
 
@@ -2489,7 +4505,7 @@
 
     goto :goto_0
 
-    .line 1669
+    .line 2477
     :cond_1
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -2497,7 +4513,7 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 1673
+    .line 2481
     :try_start_1
     const-string/jumbo v0, "android.webkit.WebView"
 
@@ -2505,7 +4521,7 @@
 
     move-result-object v0
 
-    .line 1674
+    .line 2482
     const/4 v1, 0x2
 
     new-array v1, v1, [Ljava/lang/Class;
@@ -2522,20 +4538,20 @@
 
     aput-object v3, v1, v2
 
-    .line 1675
+    .line 2483
     const-string/jumbo v2, "evaluateJavascript"
 
     invoke-virtual {v0, v2, v1}, Ljava/lang/Class;->getDeclaredMethod(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v0
 
-    .line 1676
+    .line 2484
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 1677
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2485
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const/4 v2, 0x2
 
@@ -2571,13 +4587,13 @@
 
     const/4 v1, 0x0
 
-    .line 1185
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1919
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 1187
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1921
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v2, "findAll"
 
@@ -2591,20 +4607,20 @@
 
     aput-object p1, v4, v1
 
-    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1188
+    .line 1922
     if-nez v0, :cond_0
 
     move v0, v1
 
-    .line 1191
+    .line 1925
     :goto_0
     return v0
 
-    .line 1188
+    .line 1922
     :cond_0
     check-cast v0, Ljava/lang/Integer;
 
@@ -2614,9 +4630,9 @@
 
     goto :goto_0
 
-    .line 1191
+    .line 1925
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->findAll(Ljava/lang/String;)I
 
@@ -2636,20 +4652,20 @@
 
     const/4 v4, 0x0
 
-    .line 1210
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1944
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 1212
+    .line 1946
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
-    .line 1213
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1947
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "findAllAsync"
 
@@ -2663,16 +4679,16 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1219
+    .line 1953
     :cond_0
     :goto_0
     return-void
 
-    .line 1218
+    .line 1952
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->findAllAsync(Ljava/lang/String;)V
 
@@ -2689,13 +4705,13 @@
 
     const/4 v4, 0x0
 
-    .line 1541
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2280
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1543
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2282
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "findHierarchyView"
 
@@ -2719,18 +4735,18 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/View;
 
-    .line 1548
+    .line 2287
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->findHierarchyView(Ljava/lang/String;I)Landroid/view/View;
 
@@ -2746,23 +4762,23 @@
     .end annotation
 
     .prologue
-    .line 1173
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1907
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1174
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1908
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->findNext(Z)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->findNext(Z)V
 
-    .line 1177
+    .line 1911
     :goto_0
     return-void
 
-    .line 1176
+    .line 1910
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->findNext(Z)V
 
@@ -2773,23 +4789,23 @@
     .locals 1
 
     .prologue
-    .line 1435
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2174
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1436
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2175
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1, p2}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->flingScroll(II)V
+    invoke-virtual {v0, p1, p2}, Landroid/webkit/WebView;->flingScroll(II)V
 
-    .line 1439
+    .line 2178
     :goto_0
     return-void
 
-    .line 1438
+    .line 2177
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->flingScroll(II)V
 
@@ -2802,25 +4818,25 @@
     .end annotation
 
     .prologue
-    .line 1100
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1834
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1101
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1835
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "freeMemory"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1104
+    .line 1838
     :goto_0
     return-void
 
-    .line 1103
+    .line 1837
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->freeMemory()V
 
@@ -2831,24 +4847,24 @@
     .locals 1
 
     .prologue
-    .line 497
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 642
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 498
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 643
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getCertificate()Landroid/net/http/SslCertificate;
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getCertificate()Landroid/net/http/SslCertificate;
 
     move-result-object v0
 
-    .line 500
+    .line 645
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getCertificate()Landroid/net/http/SslCertificate;
 
@@ -2861,24 +4877,24 @@
     .locals 1
 
     .prologue
-    .line 1042
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1776
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1043
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1777
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getContentHeight()I
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getContentHeight()I
 
     move-result v0
 
-    .line 1045
+    .line 1779
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getContentHeight()I
 
@@ -2891,30 +4907,30 @@
     .locals 2
 
     .prologue
-    .line 1050
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1784
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 1052
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1786
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "getContentWidth"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1053
+    .line 1787
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 1057
+    .line 1791
     :goto_0
     return v0
 
-    .line 1053
+    .line 1787
     :cond_0
     check-cast v0, Ljava/lang/Integer;
 
@@ -2924,9 +4940,9 @@
 
     goto :goto_0
 
-    .line 1057
+    .line 1791
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getContentWidth()I
 
@@ -2939,24 +4955,24 @@
     .locals 1
 
     .prologue
-    .line 1026
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1760
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1027
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1761
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getFavicon()Landroid/graphics/Bitmap;
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getFavicon()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1029
+    .line 1763
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getFavicon()Landroid/graphics/Bitmap;
 
@@ -2969,30 +4985,30 @@
     .locals 2
 
     .prologue
-    .line 976
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1710
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 977
+    .line 1711
     new-instance v0, Lcom/tencent/smtt/sdk/WebView$HitTestResult;
 
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getHitTestResult()Landroid/webkit/WebView$HitTestResult;
+    invoke-virtual {v1}, Landroid/webkit/WebView;->getHitTestResult()Landroid/webkit/WebView$HitTestResult;
 
     move-result-object v1
 
     invoke-direct {v0, v1}, Lcom/tencent/smtt/sdk/WebView$HitTestResult;-><init>(Landroid/webkit/WebView$HitTestResult;)V
 
-    .line 979
+    .line 1713
     :goto_0
     return-object v0
 
     :cond_0
     new-instance v0, Lcom/tencent/smtt/sdk/WebView$HitTestResult;
 
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getHitTestResult()Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$HitTestResult;
 
@@ -3007,24 +5023,24 @@
     .locals 1
 
     .prologue
-    .line 535
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 680
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 536
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 681
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1, p2}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getHttpAuthUsernamePassword(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
+    invoke-virtual {v0, p1, p2}, Landroid/webkit/WebView;->getHttpAuthUsernamePassword(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 538
+    .line 683
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getHttpAuthUsernamePassword(Ljava/lang/String;Ljava/lang/String;)[Ljava/lang/String;
 
@@ -3040,24 +5056,24 @@
     .end annotation
 
     .prologue
-    .line 1010
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1744
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1011
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1745
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getOriginalUrl()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getOriginalUrl()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1013
+    .line 1747
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getOriginalUrl()Ljava/lang/String;
 
@@ -3070,24 +5086,24 @@
     .locals 1
 
     .prologue
-    .line 1034
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1768
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1035
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1769
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getProgress()I
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getProgress()I
 
     move-result v0
 
-    .line 1037
+    .line 1771
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getProgress()I
 
@@ -3102,77 +5118,140 @@
     .end annotation
 
     .prologue
-    .line 948
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1682
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 950
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1684
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "getScale"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 951
+    .line 1685
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
+    .line 1688
     :goto_0
+    return v0
+
+    .line 1685
+    :cond_0
+    check-cast v0, Ljava/lang/Float;
+
     invoke-virtual {v0}, Ljava/lang/Float;->floatValue()F
 
     move-result v0
 
-    .line 954
-    :goto_1
-    return v0
-
-    .line 951
-    :cond_0
-    check-cast v0, Ljava/lang/Float;
-
     goto :goto_0
 
-    .line 954
+    .line 1688
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getScale()F
 
     move-result v0
 
-    goto :goto_1
+    goto :goto_0
+.end method
+
+.method public getScrollBarDefaultDelayBeforeFade()I
+    .locals 1
+
+    .prologue
+    .line 3368
+    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getScrollBarDefaultDelayBeforeFade()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getScrollBarFadeDuration()I
+    .locals 1
+
+    .prologue
+    .line 3373
+    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getScrollBarFadeDuration()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getScrollBarSize()I
+    .locals 1
+
+    .prologue
+    .line 3378
+    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getScrollBarSize()I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public getScrollBarStyle()I
+    .locals 1
+
+    .prologue
+    .line 3383
+    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getView()Landroid/view/View;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/view/View;->getScrollBarStyle()I
+
+    move-result v0
+
+    return v0
 .end method
 
 .method public getSettings()Lcom/tencent/smtt/sdk/WebSettings;
     .locals 2
 
     .prologue
-    .line 1384
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLg:Lcom/tencent/smtt/sdk/WebSettings;
+    .line 2123
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTP:Lcom/tencent/smtt/sdk/WebSettings;
 
     if-eqz v0, :cond_0
 
-    .line 1385
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLg:Lcom/tencent/smtt/sdk/WebSettings;
+    .line 2124
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTP:Lcom/tencent/smtt/sdk/WebSettings;
 
-    .line 1390
+    .line 2129
     :goto_0
     return-object v0
 
-    .line 1387
+    .line 2126
     :cond_0
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_1
 
-    .line 1388
+    .line 2127
     new-instance v0, Lcom/tencent/smtt/sdk/WebSettings;
 
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getSettings()Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;
 
@@ -3180,15 +5259,15 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/smtt/sdk/WebSettings;-><init>(Lcom/tencent/smtt/export/external/interfaces/IX5WebSettings;)V
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLg:Lcom/tencent/smtt/sdk/WebSettings;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTP:Lcom/tencent/smtt/sdk/WebSettings;
 
     goto :goto_0
 
-    .line 1390
+    .line 2129
     :cond_1
     new-instance v0, Lcom/tencent/smtt/sdk/WebSettings;
 
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     invoke-virtual {v1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getSettings()Landroid/webkit/WebSettings;
 
@@ -3196,7 +5275,7 @@
 
     invoke-direct {v0, v1}, Lcom/tencent/smtt/sdk/WebSettings;-><init>(Landroid/webkit/WebSettings;)V
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLg:Lcom/tencent/smtt/sdk/WebSettings;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTP:Lcom/tencent/smtt/sdk/WebSettings;
 
     goto :goto_0
 .end method
@@ -3205,20 +5284,20 @@
     .locals 1
 
     .prologue
-    .line 1619
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2427
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1620
+    .line 2428
     const/4 v0, 0x0
 
-    .line 1621
+    .line 2429
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
@@ -3235,7 +5314,7 @@
     .locals 1
 
     .prologue
-    .line 2080
+    .line 2933
     sget v0, Lcom/tencent/smtt/sdk/WebView;->NIGHT_MODE_ALPHA:I
 
     return v0
@@ -3245,15 +5324,15 @@
     .locals 1
 
     .prologue
-    .line 1751
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2559
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1753
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2561
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    .line 1755
+    .line 2563
     :goto_0
     return-object v0
 
@@ -3267,24 +5346,24 @@
     .locals 1
 
     .prologue
-    .line 1018
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1752
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1019
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1753
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getTitle()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getTitle()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1021
+    .line 1755
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getTitle()Ljava/lang/String;
 
@@ -3297,24 +5376,24 @@
     .locals 1
 
     .prologue
-    .line 1000
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1734
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1001
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1735
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getUrl()Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getUrl()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 1003
+    .line 1737
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getUrl()Ljava/lang/String;
 
@@ -3327,20 +5406,20 @@
     .locals 1
 
     .prologue
-    .line 1574
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2313
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1575
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2314
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    .line 1577
+    .line 2316
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
@@ -3353,30 +5432,30 @@
     .locals 2
 
     .prologue
-    .line 484
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 629
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 486
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 631
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "getVisibleTitleHeight"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 487
+    .line 632
     if-nez v0, :cond_0
 
     const/4 v0, 0x0
 
-    .line 491
+    .line 636
     :goto_0
     return v0
 
-    .line 487
+    .line 632
     :cond_0
     check-cast v0, Ljava/lang/Integer;
 
@@ -3386,9 +5465,9 @@
 
     goto :goto_0
 
-    .line 491
+    .line 636
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getVisibleTitleHeight()I
 
@@ -3401,20 +5480,20 @@
     .locals 1
 
     .prologue
-    .line 1640
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2448
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1641
+    .line 2449
     const/4 v0, 0x0
 
-    .line 1642
+    .line 2450
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
@@ -3431,13 +5510,13 @@
     .locals 1
 
     .prologue
-    .line 455
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 600
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_0
 
-    .line 457
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 602
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
@@ -3447,14 +5526,14 @@
 
     move-result v0
 
-    .line 461
+    .line 606
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getScrollX()I
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getScrollX()I
 
     move-result v0
 
@@ -3465,13 +5544,13 @@
     .locals 2
 
     .prologue
-    .line 471
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 616
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_0
 
-    .line 473
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 618
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
@@ -3481,26 +5560,26 @@
 
     move-result v0
 
-    .line 478
+    .line 623
     :goto_0
     return v0
 
-    .line 477
+    .line 622
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "getWebScrollY"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 478
+    .line 623
     if-nez v0, :cond_1
 
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->getScrollY()I
+    invoke-virtual {v0}, Landroid/webkit/WebView;->getScrollY()I
 
     move-result v0
 
@@ -3520,20 +5599,20 @@
     .locals 1
 
     .prologue
-    .line 1647
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2455
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1648
+    .line 2456
     const/4 v0, 0x0
 
-    .line 1649
+    .line 2457
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
@@ -3550,8 +5629,8 @@
     .locals 1
 
     .prologue
-    .line 1773
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 2581
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     return-object v0
 .end method
@@ -3560,20 +5639,20 @@
     .locals 1
 
     .prologue
-    .line 1612
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2420
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1613
+    .line 2421
     const/4 v0, 0x0
 
-    .line 1614
+    .line 2422
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
@@ -3588,28 +5667,28 @@
     .end annotation
 
     .prologue
-    .line 1444
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2183
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1446
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2185
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "getZoomControls"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Landroid/view/View;
 
-    .line 1450
+    .line 2189
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getZoomControls()Landroid/view/View;
 
@@ -3622,23 +5701,23 @@
     .locals 1
 
     .prologue
-    .line 867
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1601
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 868
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1602
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->goBack()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->goBack()V
 
-    .line 871
+    .line 1605
     :goto_0
     return-void
 
-    .line 870
+    .line 1604
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->goBack()V
 
@@ -3649,23 +5728,23 @@
     .locals 1
 
     .prologue
-    .line 899
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1633
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 900
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1634
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->goBackOrForward(I)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->goBackOrForward(I)V
 
-    .line 903
+    .line 1637
     :goto_0
     return-void
 
-    .line 902
+    .line 1636
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->goBackOrForward(I)V
 
@@ -3676,23 +5755,23 @@
     .locals 1
 
     .prologue
-    .line 883
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1617
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 884
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1618
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->goForward()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->goForward()V
 
-    .line 887
+    .line 1621
     :goto_0
     return-void
 
-    .line 886
+    .line 1620
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->goForward()V
 
@@ -3703,23 +5782,23 @@
     .locals 1
 
     .prologue
-    .line 967
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1701
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 968
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1702
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->invokeZoomPicker()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->invokeZoomPicker()V
 
-    .line 971
+    .line 1705
     :goto_0
     return-void
 
-    .line 970
+    .line 1704
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->invokeZoomPicker()V
 
@@ -3730,8 +5809,8 @@
     .locals 1
 
     .prologue
-    .line 2075
-    sget-boolean v0, Lcom/tencent/smtt/sdk/WebView;->jLo:Z
+    .line 2928
+    sget-boolean v0, Lcom/tencent/smtt/sdk/WebView;->lUi:Z
 
     return v0
 .end method
@@ -3742,37 +5821,37 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1475
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2214
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_2
 
-    .line 1478
+    .line 2217
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0xb
 
     if-lt v0, v2, :cond_1
 
-    .line 1480
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2219
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v2, "isPrivateBrowsingEnabled"
 
-    invoke-static {v0, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v2}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 1481
+    .line 2220
     if-nez v0, :cond_0
 
     move v0, v1
 
-    .line 1487
+    .line 2226
     :goto_0
     return v0
 
-    .line 1481
+    .line 2220
     :cond_0
     check-cast v0, Ljava/lang/Boolean;
 
@@ -3785,12 +5864,12 @@
     :cond_1
     move v0, v1
 
-    .line 1483
+    .line 2222
     goto :goto_0
 
-    .line 1487
+    .line 2226
     :cond_2
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->isPrivateBrowsingEnable()Z
 
@@ -3803,23 +5882,23 @@
     .locals 1
 
     .prologue
-    .line 771
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1505
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 772
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1506
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/WebView;->loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 775
+    .line 1509
     :goto_0
     return-void
 
-    .line 774
+    .line 1508
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->loadData(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -3830,13 +5909,13 @@
     .locals 6
 
     .prologue
-    .line 779
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1513
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 780
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1514
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     move-object v1, p1
 
@@ -3848,15 +5927,15 @@
 
     move-object v5, p5
 
-    invoke-virtual/range {v0 .. v5}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual/range {v0 .. v5}, Landroid/webkit/WebView;->loadDataWithBaseURL(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 783
+    .line 1517
     :goto_0
     return-void
 
-    .line 782
+    .line 1516
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     move-object v1, p1
 
@@ -3877,23 +5956,36 @@
     .locals 1
 
     .prologue
-    .line 753
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 928
+    if-eqz p1, :cond_0
 
-    if-nez v0, :cond_0
+    invoke-virtual {p0, p1}, Lcom/tencent/smtt/sdk/WebView;->showDebugView(Ljava/lang/String;)Z
 
-    .line 754
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    move-result v0
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->loadUrl(Ljava/lang/String;)V
+    if-eqz v0, :cond_1
 
-    .line 758
+    .line 939
+    :cond_0
     :goto_0
     return-void
 
-    .line 756
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 934
+    :cond_1
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
+
+    if-nez v0, :cond_2
+
+    .line 935
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+
+    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->loadUrl(Ljava/lang/String;)V
+
+    goto :goto_0
+
+    .line 937
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->loadUrl(Ljava/lang/String;)V
 
@@ -3907,31 +5999,43 @@
     .end annotation
 
     .prologue
-    .line 743
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 912
+    if-eqz p1, :cond_0
 
-    if-nez v0, :cond_1
+    invoke-virtual {p0, p1}, Lcom/tencent/smtt/sdk/WebView;->showDebugView(Ljava/lang/String;)Z
 
-    .line 744
+    move-result v0
+
+    if-eqz v0, :cond_1
+
+    .line 923
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 917
+    :cond_1
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
+
+    if-nez v0, :cond_2
+
+    .line 918
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x8
 
     if-lt v0, v1, :cond_0
 
-    .line 745
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 919
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     invoke-virtual {v0, p1, p2}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->loadUrl(Ljava/lang/String;Ljava/util/Map;)V
 
-    .line 749
-    :cond_0
-    :goto_0
-    return-void
+    goto :goto_0
 
-    .line 748
-    :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 922
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->loadUrl(Ljava/lang/String;Ljava/util/Map;)V
 
@@ -3939,35 +6043,41 @@
 .end method
 
 .method protected onDetachedFromWindow()V
-    .locals 6
+    .locals 7
 
     .prologue
-    .line 1583
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLi:Z
+    const/4 v6, 0x0
 
-    if-nez v0, :cond_1
+    .line 2322
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTR:Z
 
-    .line 1585
+    if-nez v0, :cond_3
+
+    iget v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    if-eqz v0, :cond_3
+
+    .line 2324
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLi:Z
+    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTR:Z
 
-    .line 1586
+    .line 2325
     const-string/jumbo v1, ""
 
-    .line 1587
+    .line 2326
     const-string/jumbo v2, ""
 
-    .line 1588
+    .line 2327
     const-string/jumbo v3, ""
 
-    .line 1589
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2328
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_0
 
-    .line 1591
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 2330
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
@@ -3977,71 +6087,159 @@
 
     move-result-object v0
 
-    .line 1592
+    .line 2331
     if-eqz v0, :cond_0
 
-    .line 1594
+    .line 2333
     const-string/jumbo v1, "guid"
 
     invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 1595
+    .line 2334
     const-string/jumbo v2, "qua2"
 
     invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 1596
+    .line 2335
     const-string/jumbo v3, "lc"
 
     invoke-virtual {v0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1599
+    .line 2339
     :cond_0
+    const-string/jumbo v0, "com.qzone"
+
+    iget-object v4, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v4
+
+    iget-object v4, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    .line 2340
     iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
 
-    iget v4, p0, Lcom/tencent/smtt/sdk/WebView;->jLh:I
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/WebView;->fF(Landroid/content/Context;)I
 
-    iget-boolean v5, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    move-result v0
+
+    .line 2341
+    const/4 v4, -0x1
+
+    if-ne v0, v4, :cond_1
+
+    iget v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    :cond_1
+    iput v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    .line 2342
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/WebView;->fH(Landroid/content/Context;)V
+
+    .line 2345
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    iget v4, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    iget-boolean v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     invoke-static/range {v0 .. v5}, Lcom/tencent/smtt/sdk/a/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 1601
-    :cond_1
+    .line 2347
+    iput v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    .line 2348
+    iput-boolean v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTR:Z
+
+    .line 2350
+    :cond_3
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 1602
+    .line 2351
     return-void
+.end method
+
+.method public onLongClick(Landroid/view/View;)Z
+    .locals 1
+
+    .prologue
+    .line 2949
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lUk:Landroid/view/View$OnLongClickListener;
+
+    if-eqz v0, :cond_1
+
+    .line 2950
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lUk:Landroid/view/View$OnLongClickListener;
+
+    invoke-interface {v0, p1}, Landroid/view/View$OnLongClickListener;->onLongClick(Landroid/view/View;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 2952
+    invoke-direct {p0, p1}, Lcom/tencent/smtt/sdk/WebView;->aR(Landroid/view/View;)Z
+
+    move-result v0
+
+    .line 2957
+    :goto_0
+    return v0
+
+    .line 2954
+    :cond_0
+    const/4 v0, 0x1
+
+    goto :goto_0
+
+    .line 2957
+    :cond_1
+    invoke-direct {p0, p1}, Lcom/tencent/smtt/sdk/WebView;->aR(Landroid/view/View;)Z
+
+    move-result v0
+
+    goto :goto_0
 .end method
 
 .method public onPause()V
     .locals 2
 
     .prologue
-    .line 1079
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1813
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1080
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1814
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "onPause"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1083
+    .line 1817
     :goto_0
     return-void
 
-    .line 1082
+    .line 1816
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->onPause()V
 
@@ -4052,53 +6250,322 @@
     .locals 2
 
     .prologue
-    .line 1087
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1821
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1088
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1822
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "onResume"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 1091
+    .line 1825
     :goto_0
     return-void
 
-    .line 1090
+    .line 1824
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->onResume()V
 
     goto :goto_0
 .end method
 
+.method protected onSizeChanged(IIII)V
+    .locals 3
+    .annotation build Landroid/annotation/TargetApi;
+        value = 0xb
+    .end annotation
+
+    .prologue
+    const/4 v2, 0x2
+
+    .line 483
+    invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->onSizeChanged(IIII)V
+
+    .line 484
+    sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v1, 0x15
+
+    if-lt v0, v1, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/WebView;->fE(Landroid/content/Context;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->isHardwareAccelerated()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    if-lez p1, :cond_0
+
+    if-lez p2, :cond_0
+
+    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getLayerType()I
+
+    move-result v0
+
+    if-eq v0, v2, :cond_0
+
+    .line 491
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+
+    invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
+
+    move-result-object v0
+
+    if-eqz v0, :cond_0
+
+    .line 492
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+
+    invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-virtual {v0, v2, v1}, Landroid/view/View;->setLayerType(ILandroid/graphics/Paint;)V
+
+    .line 494
+    :cond_0
+    return-void
+.end method
+
+.method protected onVisibilityChanged(Landroid/view/View;I)V
+    .locals 7
+
+    .prologue
+    const/4 v6, 0x0
+
+    .line 2363
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    if-nez v0, :cond_0
+
+    .line 2364
+    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onVisibilityChanged(Landroid/view/View;I)V
+
+    .line 2410
+    :goto_0
+    return-void
+
+    .line 2368
+    :cond_0
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUb:Ljava/lang/String;
+
+    if-nez v0, :cond_1
+
+    .line 2369
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v0}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v0
+
+    .line 2370
+    iget-object v0, v0, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    sput-object v0, Lcom/tencent/smtt/sdk/WebView;->lUb:Ljava/lang/String;
+
+    .line 2374
+    :cond_1
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUb:Ljava/lang/String;
+
+    if-eqz v0, :cond_3
+
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUb:Ljava/lang/String;
+
+    const-string/jumbo v1, "com.tencent.mm"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_2
+
+    sget-object v0, Lcom/tencent/smtt/sdk/WebView;->lUb:Ljava/lang/String;
+
+    const-string/jumbo v1, "com.tencent.mobileqq"
+
+    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_3
+
+    .line 2376
+    :cond_2
+    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onVisibilityChanged(Landroid/view/View;I)V
+
+    goto :goto_0
+
+    .line 2381
+    :cond_3
+    if-eqz p2, :cond_7
+
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTR:Z
+
+    if-nez v0, :cond_7
+
+    iget v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    if-eqz v0, :cond_7
+
+    .line 2382
+    const/4 v0, 0x1
+
+    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTR:Z
+
+    .line 2383
+    const-string/jumbo v1, ""
+
+    .line 2384
+    const-string/jumbo v2, ""
+
+    .line 2385
+    const-string/jumbo v3, ""
+
+    .line 2386
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
+
+    if-eqz v0, :cond_4
+
+    .line 2387
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+
+    invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;->getSdkQBStatisticsInfo()Landroid/os/Bundle;
+
+    move-result-object v0
+
+    .line 2389
+    if-eqz v0, :cond_4
+
+    .line 2390
+    const-string/jumbo v1, "guid"
+
+    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    .line 2391
+    const-string/jumbo v2, "qua2"
+
+    invoke-virtual {v0, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    .line 2392
+    const-string/jumbo v3, "lc"
+
+    invoke-virtual {v0, v3}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v3
+
+    .line 2396
+    :cond_4
+    const-string/jumbo v0, "com.qzone"
+
+    iget-object v4, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-virtual {v4}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
+
+    move-result-object v4
+
+    iget-object v4, v4, Landroid/content/pm/ApplicationInfo;->packageName:Ljava/lang/String;
+
+    invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_6
+
+    .line 2397
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/WebView;->fF(Landroid/content/Context;)I
+
+    move-result v0
+
+    .line 2398
+    const/4 v4, -0x1
+
+    if-ne v0, v4, :cond_5
+
+    iget v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    :cond_5
+    iput v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    .line 2399
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/WebView;->fH(Landroid/content/Context;)V
+
+    .line 2402
+    :cond_6
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    iget v4, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    iget-boolean v5, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
+
+    invoke-static/range {v0 .. v5}, Lcom/tencent/smtt/sdk/a/b;->a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IZ)V
+
+    .line 2405
+    iput v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTQ:I
+
+    .line 2406
+    iput-boolean v6, p0, Lcom/tencent/smtt/sdk/WebView;->lTR:Z
+
+    .line 2409
+    :cond_7
+    invoke-super {p0, p1, p2}, Landroid/widget/FrameLayout;->onVisibilityChanged(Landroid/view/View;I)V
+
+    goto/16 :goto_0
+.end method
+
 .method public overlayHorizontalScrollbar()Z
     .locals 1
 
     .prologue
-    .line 413
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 558
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 414
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 559
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->overlayHorizontalScrollbar()Z
+    invoke-virtual {v0}, Landroid/webkit/WebView;->overlayHorizontalScrollbar()Z
 
     move-result v0
 
-    .line 416
+    .line 561
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->overlayHorizontalScrollbar()Z
 
@@ -4111,26 +6578,26 @@
     .locals 1
 
     .prologue
-    .line 421
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 566
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_0
 
-    .line 423
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 568
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->overlayVerticalScrollbar()Z
 
     move-result v0
 
-    .line 427
+    .line 572
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->overlayVerticalScrollbar()Z
+    invoke-virtual {v0}, Landroid/webkit/WebView;->overlayVerticalScrollbar()Z
 
     move-result v0
 
@@ -4141,24 +6608,24 @@
     .locals 2
 
     .prologue
-    .line 915
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1649
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 916
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1650
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->pageDown(Z)Z
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->pageDown(Z)Z
 
     move-result v0
 
-    .line 918
+    .line 1652
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     const/4 v1, -0x1
 
@@ -4173,24 +6640,24 @@
     .locals 2
 
     .prologue
-    .line 907
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1641
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 908
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1642
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->pageUp(Z)Z
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->pageUp(Z)Z
 
     move-result v0
 
-    .line 910
+    .line 1644
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     const/4 v1, -0x1
 
@@ -4205,23 +6672,23 @@
     .locals 1
 
     .prologue
-    .line 1063
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1797
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1064
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1798
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->pauseTimers()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->pauseTimers()V
 
-    .line 1067
+    .line 1801
     :goto_0
     return-void
 
-    .line 1066
+    .line 1800
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->pauseTimers()V
 
@@ -4235,23 +6702,23 @@
     .end annotation
 
     .prologue
-    .line 763
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1497
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 764
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1498
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1, p2}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->postUrl(Ljava/lang/String;[B)V
+    invoke-virtual {v0, p1, p2}, Landroid/webkit/WebView;->postUrl(Ljava/lang/String;[B)V
 
-    .line 767
+    .line 1501
     :goto_0
     return-void
 
-    .line 766
+    .line 1500
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->postUrl(Ljava/lang/String;[B)V
 
@@ -4268,13 +6735,13 @@
 
     const/4 v5, 0x0
 
-    .line 1410
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2149
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1412
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2151
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "refreshPlugins"
 
@@ -4292,15 +6759,15 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1418
+    .line 2157
     :goto_0
     return-void
 
-    .line 1416
+    .line 2155
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->refreshPlugins(Z)V
 
@@ -4311,23 +6778,23 @@
     .locals 1
 
     .prologue
-    .line 851
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1585
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 852
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1586
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->reload()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->reload()V
 
-    .line 855
+    .line 1589
     :goto_0
     return-void
 
-    .line 854
+    .line 1588
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->reload()V
 
@@ -4345,20 +6812,20 @@
 
     const/4 v4, 0x0
 
-    .line 1373
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2112
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1374
+    .line 2113
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_1
 
-    .line 1375
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2114
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "removeJavascriptInterface"
 
@@ -4372,16 +6839,16 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1380
+    .line 2119
     :cond_0
     :goto_0
     return-void
 
-    .line 1379
+    .line 2118
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->removeJavascriptInterface(Ljava/lang/String;)V
 
@@ -4392,29 +6859,29 @@
     .locals 5
 
     .prologue
-    .line 2170
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 3141
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 2171
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 3142
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->removeView(Landroid/view/View;)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->removeView(Landroid/view/View;)V
 
-    .line 2185
+    .line 3156
     :goto_0
     return-void
 
-    .line 2174
+    .line 3145
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2177
+    .line 3148
     :try_start_0
     const-string/jumbo v1, "removeView"
 
@@ -4428,16 +6895,16 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-static {v0, v1, v2}, Lcom/tencent/smtt/a/m;->c(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
-    .line 2178
+    .line 3149
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 2179
+    .line 3150
     const/4 v2, 0x1
 
     new-array v2, v2, [Ljava/lang/Object;
@@ -4452,7 +6919,7 @@
 
     goto :goto_0
 
-    .line 2184
+    .line 3155
     :catch_0
     move-exception v0
 
@@ -4463,26 +6930,26 @@
     .locals 2
 
     .prologue
-    .line 434
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 579
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_2
 
-    .line 436
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 581
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v1
 
-    .line 437
+    .line 582
     instance-of v0, v1, Landroid/view/ViewGroup;
 
     if-eqz v0, :cond_1
 
     move-object v0, v1
 
-    .line 439
+    .line 584
     check-cast v0, Landroid/view/ViewGroup;
 
     if-ne p1, p0, :cond_0
@@ -4492,32 +6959,32 @@
 
     move-result v0
 
-    .line 445
+    .line 590
     :goto_1
     return v0
 
     :cond_0
     move-object v1, p1
 
-    .line 439
+    .line 584
     goto :goto_0
 
-    .line 441
+    .line 586
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 445
+    .line 590
     :cond_2
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     if-ne p1, p0, :cond_3
 
-    iget-object p1, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object p1, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     :cond_3
-    invoke-virtual {v0, p1, p2, p3}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z
+    invoke-virtual {v0, p1, p2, p3}, Landroid/webkit/WebView;->requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z
 
     move-result v0
 
@@ -4528,23 +6995,23 @@
     .locals 1
 
     .prologue
-    .line 984
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1718
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 985
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1719
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->requestFocusNodeHref(Landroid/os/Message;)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->requestFocusNodeHref(Landroid/os/Message;)V
 
-    .line 988
+    .line 1722
     :goto_0
     return-void
 
-    .line 987
+    .line 1721
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->requestFocusNodeHref(Landroid/os/Message;)V
 
@@ -4555,23 +7022,23 @@
     .locals 1
 
     .prologue
-    .line 992
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1726
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 993
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1727
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->requestImageRef(Landroid/os/Message;)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->requestImageRef(Landroid/os/Message;)V
 
-    .line 996
+    .line 1730
     :goto_0
     return-void
 
-    .line 995
+    .line 1729
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->requestImageRef(Landroid/os/Message;)V
 
@@ -4590,13 +7057,13 @@
 
     const/4 v1, 0x0
 
-    .line 721
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 888
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 723
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 890
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v2, "restorePicture"
 
@@ -4616,20 +7083,20 @@
 
     aput-object p2, v4, v5
 
-    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 724
+    .line 891
     if-nez v0, :cond_0
 
     move v0, v1
 
-    .line 728
+    .line 895
     :goto_0
     return v0
 
-    .line 724
+    .line 891
     :cond_0
     check-cast v0, Ljava/lang/Boolean;
 
@@ -4639,9 +7106,9 @@
 
     goto :goto_0
 
-    .line 728
+    .line 895
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->restorePicture(Landroid/os/Bundle;Ljava/io/File;)Z
 
@@ -4654,15 +7121,15 @@
     .locals 1
 
     .prologue
-    .line 734
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 901
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 735
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 902
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->restoreState(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->restoreState(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
 
     move-result-object v0
 
@@ -4670,12 +7137,12 @@
 
     move-result-object v0
 
-    .line 737
+    .line 904
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->restoreState(Landroid/os/Bundle;)Lcom/tencent/smtt/export/external/interfaces/IX5WebBackForwardList;
 
@@ -4692,23 +7159,23 @@
     .locals 1
 
     .prologue
-    .line 1071
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1805
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1072
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1806
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->resumeTimers()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->resumeTimers()V
 
-    .line 1075
+    .line 1809
     :goto_0
     return-void
 
-    .line 1074
+    .line 1808
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->resumeTimers()V
 
@@ -4729,13 +7196,13 @@
 
     const/4 v4, 0x0
 
-    .line 515
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 660
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 518
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 663
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "savePassword"
 
@@ -4761,15 +7228,15 @@
 
     aput-object p3, v3, v6
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 523
+    .line 668
     :goto_0
     return-void
 
-    .line 522
+    .line 667
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->savePassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -4788,13 +7255,13 @@
 
     const/4 v1, 0x0
 
-    .line 707
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 874
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 709
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 876
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v2, "savePicture"
 
@@ -4814,20 +7281,20 @@
 
     aput-object p2, v4, v5
 
-    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 710
+    .line 877
     if-nez v0, :cond_0
 
     move v0, v1
 
-    .line 714
+    .line 881
     :goto_0
     return v0
 
-    .line 710
+    .line 877
     :cond_0
     check-cast v0, Ljava/lang/Boolean;
 
@@ -4837,9 +7304,9 @@
 
     goto :goto_0
 
-    .line 714
+    .line 881
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->savePicture(Landroid/os/Bundle;Ljava/io/File;)Z
 
@@ -4852,15 +7319,15 @@
     .locals 1
 
     .prologue
-    .line 698
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 865
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 699
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 866
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->saveState(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->saveState(Landroid/os/Bundle;)Landroid/webkit/WebBackForwardList;
 
     move-result-object v0
 
@@ -4868,12 +7335,12 @@
 
     move-result-object v0
 
-    .line 701
+    .line 868
     :goto_0
     return-object v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->saveState(Landroid/os/Bundle;)Lcom/tencent/smtt/export/external/interfaces/IX5WebBackForwardList;
 
@@ -4897,20 +7364,20 @@
 
     const/4 v4, 0x0
 
-    .line 788
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1522
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 789
+    .line 1523
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
 
-    .line 790
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1524
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "saveWebArchive"
 
@@ -4924,23 +7391,23 @@
 
     aput-object p1, v3, v4
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 795
+    .line 1529
     :cond_0
     :goto_0
     return-void
 
-    .line 794
+    .line 1528
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->saveWebArchive(Ljava/lang/String;)V
 
     goto :goto_0
 .end method
 
-.method public saveWebArchive(Ljava/lang/String;ZLcom/tencent/smtt/sdk/ab;)V
+.method public saveWebArchive(Ljava/lang/String;ZLcom/tencent/smtt/sdk/u;)V
     .locals 8
     .annotation build Landroid/annotation/TargetApi;
         value = 0xb
@@ -4955,20 +7422,20 @@
 
     const/4 v4, 0x0
 
-    .line 800
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1534
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 801
+    .line 1535
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0xb
 
     if-lt v0, v1, :cond_0
 
-    .line 802
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1536
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "saveWebArchive"
 
@@ -4982,7 +7449,7 @@
 
     aput-object v3, v2, v5
 
-    const-class v3, Lcom/tencent/smtt/sdk/ab;
+    const-class v3, Landroid/webkit/ValueCallback;
 
     aput-object v3, v2, v6
 
@@ -4998,16 +7465,16 @@
 
     aput-object p3, v3, v6
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 808
+    .line 1542
     :cond_0
     :goto_0
     return-void
 
-    .line 807
+    .line 1541
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2, p3}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->saveWebArchive(Ljava/lang/String;ZLandroid/webkit/ValueCallback;)V
 
@@ -5018,26 +7485,26 @@
     .locals 1
 
     .prologue
-    .line 1564
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2303
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1565
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2304
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setBackgroundColor(I)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->setBackgroundColor(I)V
 
-    .line 1569
+    .line 2308
     :goto_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 1570
+    .line 2309
     return-void
 
-    .line 1567
+    .line 2306
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setBackgroundColor(I)V
 
@@ -5050,23 +7517,23 @@
     .end annotation
 
     .prologue
-    .line 506
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 651
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 507
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 652
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setCertificate(Landroid/net/http/SslCertificate;)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->setCertificate(Landroid/net/http/SslCertificate;)V
 
-    .line 510
+    .line 655
     :goto_0
     return-void
 
-    .line 509
+    .line 654
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setCertificate(Landroid/net/http/SslCertificate;)V
 
@@ -5077,24 +7544,24 @@
     .locals 1
 
     .prologue
-    .line 2043
+    .line 2896
     :try_start_0
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_0
 
-    .line 2045
+    .line 2898
     invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getSettingsExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebSettingsExtension;
 
     move-result-object v0
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebSettingsExtension;->setDayOrNight(Z)V
 
-    .line 2049
+    .line 2902
     :cond_0
     invoke-static {p1}, Lcom/tencent/smtt/sdk/WebView;->setSysDayOrNight(Z)V
 
-    .line 2052
+    .line 2905
     invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getView()Landroid/view/View;
 
     move-result-object v0
@@ -5103,11 +7570,11 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2055
+    .line 2908
     :goto_0
     return-void
 
-    .line 2054
+    .line 2907
     :catch_0
     move-exception v0
 
@@ -5118,27 +7585,27 @@
     .locals 2
 
     .prologue
-    .line 1272
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2007
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1274
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2009
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    new-instance v1, Lcom/tencent/smtt/sdk/WebView$3;
+    new-instance v1, Lcom/tencent/smtt/sdk/WebView$11;
 
-    invoke-direct {v1, p0, p1}, Lcom/tencent/smtt/sdk/WebView$3;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/DownloadListener;)V
+    invoke-direct {v1, p0, p1}, Lcom/tencent/smtt/sdk/WebView$11;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/DownloadListener;)V
 
     invoke-virtual {v0, v1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setDownloadListener(Landroid/webkit/DownloadListener;)V
 
-    .line 1295
+    .line 2034
     :goto_0
     return-void
 
-    .line 1293
+    .line 2032
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     new-instance v1, Lcom/tencent/smtt/sdk/b;
 
@@ -5156,35 +7623,35 @@
     .end annotation
 
     .prologue
-    .line 1150
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1884
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 1152
+    .line 1886
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x10
 
     if-lt v0, v1, :cond_0
 
-    .line 1154
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1888
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    new-instance v1, Lcom/tencent/smtt/sdk/WebView$2;
+    new-instance v1, Lcom/tencent/smtt/sdk/WebView$10;
 
-    invoke-direct {v1, p0, p1}, Lcom/tencent/smtt/sdk/WebView$2;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$FindListener;)V
+    invoke-direct {v1, p0, p1}, Lcom/tencent/smtt/sdk/WebView$10;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$FindListener;)V
 
     invoke-virtual {v0, v1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setFindListener(Landroid/webkit/WebView$FindListener;)V
 
-    .line 1168
+    .line 1902
     :cond_0
     :goto_0
     return-void
 
-    .line 1166
+    .line 1900
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setFindListener(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$FindListener;)V
 
@@ -5195,23 +7662,23 @@
     .locals 1
 
     .prologue
-    .line 396
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 541
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 397
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 542
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setHorizontalScrollbarOverlay(Z)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->setHorizontalScrollbarOverlay(Z)V
 
-    .line 400
+    .line 545
     :goto_0
     return-void
 
-    .line 399
+    .line 544
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setHorizontalScrollbarOverlay(Z)V
 
@@ -5222,23 +7689,23 @@
     .locals 1
 
     .prologue
-    .line 527
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 672
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 528
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 673
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setHttpAuthUsernamePassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+    invoke-virtual {v0, p1, p2, p3, p4}, Landroid/webkit/WebView;->setHttpAuthUsernamePassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 531
+    .line 676
     :goto_0
     return-void
 
-    .line 530
+    .line 675
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1, p2, p3, p4}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setHttpAuthUsernamePassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -5249,23 +7716,23 @@
     .locals 1
 
     .prologue
-    .line 959
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1693
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 960
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1694
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setInitialScale(I)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->setInitialScale(I)V
 
-    .line 963
+    .line 1697
     :goto_0
     return-void
 
-    .line 962
+    .line 1696
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setInitialScale(I)V
 
@@ -5280,13 +7747,13 @@
 
     const/4 v5, 0x0
 
-    .line 2067
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2920
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_0
 
-    .line 2069
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 2922
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     const-string/jumbo v1, "setLongPressTextExtensionMenu"
 
@@ -5304,9 +7771,9 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2071
+    .line 2924
     :cond_0
     return-void
 .end method
@@ -5321,13 +7788,13 @@
 
     const/4 v5, 0x0
 
-    .line 1425
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2164
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1427
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2166
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     const-string/jumbo v1, "setMapTrackballToArrowKeys"
 
@@ -5345,15 +7812,15 @@
 
     aput-object v4, v3, v5
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1431
+    .line 2170
     :goto_0
     return-void
 
-    .line 1430
+    .line 2169
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setMapTrackballToArrowKeys(Z)V
 
@@ -5364,31 +7831,31 @@
     .locals 2
 
     .prologue
-    .line 688
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 855
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 689
+    .line 856
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/4 v1, 0x3
 
     if-lt v0, v1, :cond_0
 
-    .line 690
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 857
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setNetworkAvailable(Z)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->setNetworkAvailable(Z)V
 
-    .line 694
+    .line 861
     :cond_0
     :goto_0
     return-void
 
-    .line 693
+    .line 860
     :cond_1
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setNetworkAvailable(Z)V
 
@@ -5399,53 +7866,58 @@
     .locals 3
 
     .prologue
-    .line 2092
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2964
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 2094
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2966
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
-    .line 2134
+    .line 2992
     :goto_0
     return-void
 
-    .line 2098
+    .line 2970
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2101
+    .line 2973
     :try_start_0
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lUj:Ljava/lang/Object;
+
+    if-nez v1, :cond_1
+
+    .line 2974
     const-string/jumbo v1, "getListenerInfo"
 
     const/4 v2, 0x0
 
     new-array v2, v2, [Ljava/lang/Class;
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
+    invoke-static {v0, v1, v2}, Lcom/tencent/smtt/a/m;->c(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;
 
     move-result-object v1
 
-    .line 2102
+    .line 2975
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 2103
+    .line 2976
     const/4 v2, 0x0
 
     invoke-virtual {v1, v0, v2}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 2104
+    .line 2977
     invoke-virtual {v0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v1
@@ -5456,34 +7928,34 @@
 
     move-result-object v1
 
-    .line 2105
+    .line 2978
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 2106
+    .line 2979
     invoke-virtual {v1, v0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLp:Ljava/lang/Object;
+    iput-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lUj:Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2115
+    .line 2989
+    :cond_1
+    iput-object p1, p0, Lcom/tencent/smtt/sdk/WebView;->lUk:Landroid/view/View$OnLongClickListener;
+
+    .line 2990
     invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    new-instance v1, Lcom/tencent/smtt/sdk/WebView$6;
-
-    invoke-direct {v1, p0, p1}, Lcom/tencent/smtt/sdk/WebView$6;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/view/View$OnLongClickListener;)V
-
-    invoke-virtual {v0, v1}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    invoke-virtual {v0, p0}, Landroid/view/View;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
 
     goto :goto_0
 
-    .line 2111
+    .line 2985
     :catch_0
     move-exception v0
 
@@ -5494,14 +7966,14 @@
     .locals 1
 
     .prologue
-    .line 1778
+    .line 2586
     invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getView()Landroid/view/View;
 
     move-result-object v0
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 1779
+    .line 2587
     return-void
 .end method
 
@@ -5511,53 +7983,53 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1318
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2057
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_1
 
-    .line 1320
+    .line 2059
     if-nez p1, :cond_0
 
-    .line 1321
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2060
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     invoke-virtual {v0, v1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setPictureListener(Landroid/webkit/WebView$PictureListener;)V
 
-    .line 1360
+    .line 2099
     :goto_0
     return-void
 
-    .line 1324
+    .line 2063
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    new-instance v1, Lcom/tencent/smtt/sdk/WebView$4;
+    new-instance v1, Lcom/tencent/smtt/sdk/WebView$12;
 
-    invoke-direct {v1, p0, p1}, Lcom/tencent/smtt/sdk/WebView$4;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/WebView$PictureListener;)V
+    invoke-direct {v1, p0, p1}, Lcom/tencent/smtt/sdk/WebView$12;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/WebView$PictureListener;)V
 
     invoke-virtual {v0, v1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setPictureListener(Landroid/webkit/WebView$PictureListener;)V
 
     goto :goto_0
 
-    .line 1338
+    .line 2077
     :cond_1
     if-nez p1, :cond_2
 
-    .line 1339
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 2078
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, v1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setPictureListener(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$PictureListener;)V
 
     goto :goto_0
 
-    .line 1342
+    .line 2081
     :cond_2
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
-    new-instance v1, Lcom/tencent/smtt/sdk/WebView$5;
+    new-instance v1, Lcom/tencent/smtt/sdk/WebView$13;
 
-    invoke-direct {v1, p0, p1}, Lcom/tencent/smtt/sdk/WebView$5;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/WebView$PictureListener;)V
+    invoke-direct {v1, p0, p1}, Lcom/tencent/smtt/sdk/WebView$13;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/WebView$PictureListener;)V
 
     invoke-interface {v0, v1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setPictureListener(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase$PictureListener;)V
 
@@ -5568,13 +8040,13 @@
     .locals 1
 
     .prologue
-    .line 384
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 529
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_0
 
-    .line 386
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 531
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
@@ -5582,15 +8054,15 @@
 
     invoke-virtual {v0, p1}, Landroid/view/View;->setScrollBarStyle(I)V
 
-    .line 392
+    .line 537
     :goto_0
     return-void
 
-    .line 390
+    .line 535
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setScrollBarStyle(I)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->setScrollBarStyle(I)V
 
     goto :goto_0
 .end method
@@ -5599,10 +8071,10 @@
     .locals 0
 
     .prologue
-    .line 2085
+    .line 2938
     sput p1, Lcom/tencent/smtt/sdk/WebView;->NIGHT_MODE_ALPHA:I
 
-    .line 2086
+    .line 2939
     return-void
 .end method
 
@@ -5610,7 +8082,7 @@
     .locals 0
 
     .prologue
-    .line 1740
+    .line 2548
     return-void
 .end method
 
@@ -5618,23 +8090,23 @@
     .locals 1
 
     .prologue
-    .line 405
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 550
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 406
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 551
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setVerticalScrollbarOverlay(Z)V
+    invoke-virtual {v0, p1}, Landroid/webkit/WebView;->setVerticalScrollbarOverlay(Z)V
 
-    .line 409
+    .line 554
     :goto_0
     return-void
 
-    .line 408
+    .line 553
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0, p1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setVerticalScrollbarOverlay(Z)V
 
@@ -5647,14 +8119,14 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1706
+    .line 2514
     invoke-virtual {p1}, Landroid/content/Context;->getApplicationInfo()Landroid/content/pm/ApplicationInfo;
 
     move-result-object v1
 
     iget-object v1, v1, Landroid/content/pm/ApplicationInfo;->processName:Ljava/lang/String;
 
-    .line 1707
+    .line 2515
     const-string/jumbo v2, "com.tencent.android.qqdownloader"
 
     invoke-virtual {v1, v2}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -5663,29 +8135,29 @@
 
     if-eqz v1, :cond_1
 
-    .line 1709
-    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 2517
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     if-eqz v1, :cond_1
 
-    .line 1711
+    .line 2519
     new-instance v1, Landroid/os/Bundle;
 
     invoke-direct {v1}, Landroid/os/Bundle;-><init>()V
 
-    .line 1713
+    .line 2521
     if-eqz p2, :cond_0
 
-    .line 1715
+    .line 2523
     const-string/jumbo v2, "DefaultVideoScreen"
 
     const/4 v3, 0x2
 
     invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1722
+    .line 2530
     :goto_0
-    iget-object v2, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v2, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v2}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
@@ -5695,11 +8167,11 @@
 
     invoke-interface {v2, v3, v1}, Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;->invokeMiscMethod(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Object;
 
-    .line 1728
+    .line 2536
     :goto_1
     return v0
 
-    .line 1719
+    .line 2527
     :cond_0
     const-string/jumbo v2, "DefaultVideoScreen"
 
@@ -5707,7 +8179,7 @@
 
     goto :goto_0
 
-    .line 1728
+    .line 2536
     :cond_1
     const/4 v0, 0x0
 
@@ -5722,36 +8194,38 @@
 
     const/4 v1, 0x0
 
-    .line 1299
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2038
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_2
 
-    .line 1301
-    iget-object v3, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 2040
+    iget-object v3, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     if-nez p1, :cond_0
 
     :goto_0
     invoke-interface {v3, v1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setWebChromeClient(Lcom/tencent/smtt/export/external/interfaces/IX5WebChromeClient;)V
 
-    .line 1307
+    .line 2046
     :goto_1
     return-void
 
-    .line 1301
+    .line 2040
     :cond_0
     new-instance v2, Lcom/tencent/smtt/sdk/e;
 
     const/4 v0, 0x1
 
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/aa;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+    move-result-object v0
+
+    iget-object v0, v0, Lcom/tencent/smtt/sdk/t;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
 
     const-string/jumbo v4, "com.tencent.tbs.tbsshell.WebCoreProxy"
 
@@ -5781,14 +8255,14 @@
 
     goto :goto_2
 
-    .line 1305
+    .line 2044
     :cond_2
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     if-nez p1, :cond_3
 
     :goto_3
-    invoke-virtual {v0, v1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
+    invoke-virtual {v0, v1}, Landroid/webkit/WebView;->setWebChromeClient(Landroid/webkit/WebChromeClient;)V
 
     goto :goto_1
 
@@ -5804,18 +8278,18 @@
     .locals 1
 
     .prologue
-    .line 1633
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2441
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1636
+    .line 2444
     :goto_0
     return-void
 
-    .line 1635
+    .line 2443
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
@@ -5826,15 +8300,15 @@
     goto :goto_0
 .end method
 
-.method public setWebViewCallbackClient(Lcom/tencent/smtt/sdk/ad;)V
+.method public setWebViewCallbackClient(Lcom/tencent/smtt/sdk/x;)V
     .locals 3
 
     .prologue
-    .line 1260
-    iput-object p1, p0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/ad;
+    .line 1995
+    iput-object p1, p0, Lcom/tencent/smtt/sdk/WebView;->mWebViewCallbackClient:Lcom/tencent/smtt/sdk/x;
 
-    .line 1262
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1997
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-eqz v0, :cond_0
 
@@ -5844,19 +8318,19 @@
 
     if-eqz v0, :cond_0
 
-    .line 1264
+    .line 1999
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1265
+    .line 2000
     const-string/jumbo v1, "flag"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1266
+    .line 2001
     invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
     move-result-object v1
@@ -5865,113 +8339,94 @@
 
     invoke-interface {v1, v2, v0}, Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;->invokeMiscMethod(Ljava/lang/String;Landroid/os/Bundle;)Ljava/lang/Object;
 
-    .line 1268
+    .line 2003
     :cond_0
     return-void
 .end method
 
 .method public setWebViewClient(Lcom/tencent/smtt/sdk/WebViewClient;)V
-    .locals 8
+    .locals 3
 
     .prologue
-    const/4 v7, 0x0
+    const/4 v0, 0x0
 
-    const/4 v1, 0x0
+    .line 1979
+    iput-object p1, p0, Lcom/tencent/smtt/sdk/WebView;->lTY:Lcom/tencent/smtt/sdk/WebViewClient;
 
-    .line 1245
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1980
+    iget-boolean v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
-    if-eqz v0, :cond_2
+    if-eqz v1, :cond_1
 
-    .line 1247
-    iget-object v3, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 1982
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     if-nez p1, :cond_0
 
     :goto_0
-    invoke-interface {v3, v1}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setWebViewClient(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewClient;)V
+    invoke-interface {v1, v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setWebViewClient(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewClient;)V
 
-    .line 1255
+    .line 1990
     :goto_1
     return-void
 
-    .line 1247
+    .line 1982
     :cond_0
-    new-instance v2, Lcom/tencent/smtt/sdk/h;
+    new-instance v0, Lcom/tencent/smtt/sdk/f;
 
-    const/4 v0, 0x1
+    const/4 v2, 0x1
 
-    invoke-static {v0}, Lcom/tencent/smtt/sdk/d;->gn(Z)Lcom/tencent/smtt/sdk/d;
+    invoke-static {v2}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
 
-    move-result-object v0
+    move-result-object v2
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/d;->jJk:Lcom/tencent/smtt/sdk/aa;
+    invoke-virtual {v2}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
 
-    iget-object v0, v0, Lcom/tencent/smtt/sdk/aa;->mDexLoader:Lcom/tencent/smtt/export/external/DexLoader;
+    move-result-object v2
 
-    const-string/jumbo v4, "com.tencent.tbs.tbsshell.WebCoreProxy"
+    invoke-virtual {v2}, Lcom/tencent/smtt/sdk/t;->bma()Lcom/tencent/smtt/export/external/interfaces/IX5WebViewClient;
 
-    const-string/jumbo v5, "createDefaultX5WebViewClient"
+    move-result-object v2
 
-    new-array v6, v7, [Ljava/lang/Class;
-
-    new-array v7, v7, [Ljava/lang/Object;
-
-    invoke-virtual {v0, v4, v5, v6, v7}, Lcom/tencent/smtt/export/external/DexLoader;->invokeStaticMethod(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v0
-
-    if-nez v0, :cond_1
-
-    move-object v0, v1
-
-    :goto_2
-    invoke-direct {v2, v0, p0, p1}, Lcom/tencent/smtt/sdk/h;-><init>(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewClient;Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/WebViewClient;)V
-
-    move-object v1, v2
+    invoke-direct {v0, v2, p0, p1}, Lcom/tencent/smtt/sdk/f;-><init>(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewClient;Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/WebViewClient;)V
 
     goto :goto_0
 
+    .line 1987
     :cond_1
-    check-cast v0, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewClient;
+    iget-object v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    goto :goto_2
+    if-nez p1, :cond_2
 
-    .line 1252
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
-
-    if-nez p1, :cond_3
-
-    :goto_3
-    invoke-virtual {v0, v1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
+    :goto_2
+    invoke-virtual {v1, v0}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
     goto :goto_1
 
-    :cond_3
-    new-instance v1, Lcom/tencent/smtt/sdk/SystemWebViewClient;
+    :cond_2
+    new-instance v0, Lcom/tencent/smtt/sdk/SystemWebViewClient;
 
-    invoke-direct {v1, p0, p1}, Lcom/tencent/smtt/sdk/SystemWebViewClient;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/WebViewClient;)V
+    invoke-direct {v0, p0, p1}, Lcom/tencent/smtt/sdk/SystemWebViewClient;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/WebViewClient;)V
 
-    goto :goto_3
+    goto :goto_2
 .end method
 
 .method public setWebViewClientExtension(Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewClientExtension;)V
     .locals 1
 
     .prologue
-    .line 1626
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2434
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1629
+    .line 2437
     :goto_0
     return-void
 
-    .line 1628
+    .line 2436
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getX5WebViewExtension()Lcom/tencent/smtt/export/external/extension/interfaces/IX5WebViewExtension;
 
@@ -5986,18 +8441,305 @@
     .locals 0
 
     .prologue
-    .line 1765
-    iput-object p1, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    .line 2573
+    iput-object p1, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
-    .line 1766
+    .line 2574
     return-void
+.end method
+
+.method public showDebugView(Ljava/lang/String;)Z
+    .locals 10
+
+    .prologue
+    const/4 v9, -0x1
+
+    const/4 v0, 0x0
+
+    const/4 v1, 0x1
+
+    .line 954
+    if-nez p1, :cond_1
+
+    .line 1280
+    :cond_0
+    :goto_0
+    return v0
+
+    .line 959
+    :cond_1
+    const-string/jumbo v2, "javascript:"
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_2
+
+    .line 961
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTW:Z
+
+    goto :goto_0
+
+    .line 965
+    :cond_2
+    const-string/jumbo v2, "http://debugtbs.qq.com"
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    const-string/jumbo v2, "http://debugtbs.qq.com/"
+
+    invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
+
+    move-result v2
+
+    if-nez v2, :cond_3
+
+    .line 968
+    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getView()Landroid/view/View;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v0}, Landroid/view/View;->setVisibility(I)V
+
+    .line 971
+    iget-boolean v2, p0, Lcom/tencent/smtt/sdk/WebView;->lTW:Z
+
+    if-eqz v2, :cond_0
+
+    .line 973
+    invoke-virtual {p0, v1}, Lcom/tencent/smtt/sdk/WebView;->removeViewAt(I)V
+
+    .line 974
+    iput-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTW:Z
+
+    goto :goto_0
+
+    .line 979
+    :cond_3
+    const-string/jumbo v2, "webview"
+
+    const-string/jumbo v3, "showDebugView..."
+
+    invoke-static {v2, v3}, Lcom/tencent/smtt/a/r;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 982
+    iget-boolean v2, p0, Lcom/tencent/smtt/sdk/WebView;->lTW:Z
+
+    if-eqz v2, :cond_4
+
+    move v0, v1
+
+    .line 983
+    goto :goto_0
+
+    .line 986
+    :cond_4
+    iget-object v2, p0, Lcom/tencent/smtt/sdk/WebView;->mContext:Landroid/content/Context;
+
+    .line 989
+    invoke-virtual {p0}, Lcom/tencent/smtt/sdk/WebView;->getView()Landroid/view/View;
+
+    move-result-object v3
+
+    const/4 v4, 0x4
+
+    invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
+
+    .line 992
+    iget-object v3, p0, Lcom/tencent/smtt/sdk/WebView;->lTY:Lcom/tencent/smtt/sdk/WebViewClient;
+
+    if-nez v3, :cond_5
+
+    .line 993
+    new-instance v3, Lcom/tencent/smtt/sdk/WebViewClient;
+
+    invoke-direct {v3}, Lcom/tencent/smtt/sdk/WebViewClient;-><init>()V
+
+    .line 994
+    iget-boolean v4, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
+
+    if-eqz v4, :cond_6
+
+    .line 995
+    iget-object v4, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+
+    new-instance v5, Lcom/tencent/smtt/sdk/f;
+
+    invoke-static {v1}, Lcom/tencent/smtt/sdk/d;->is(Z)Lcom/tencent/smtt/sdk/d;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/tencent/smtt/sdk/d;->blm()Lcom/tencent/smtt/sdk/t;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Lcom/tencent/smtt/sdk/t;->bma()Lcom/tencent/smtt/export/external/interfaces/IX5WebViewClient;
+
+    move-result-object v6
+
+    invoke-direct {v5, v6, p0, v3}, Lcom/tencent/smtt/sdk/f;-><init>(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewClient;Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/WebViewClient;)V
+
+    invoke-interface {v4, v5}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->setWebViewClient(Lcom/tencent/smtt/export/external/interfaces/IX5WebViewClient;)V
+
+    .line 1002
+    :cond_5
+    :goto_1
+    new-instance v3, Landroid/widget/LinearLayout;
+
+    invoke-direct {v3, v2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
+
+    .line 1003
+    const v4, -0x777778
+
+    invoke-virtual {v3, v4}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
+
+    .line 1004
+    invoke-virtual {v3, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
+
+    .line 1007
+    new-instance v4, Landroid/widget/Button;
+
+    invoke-direct {v4, v2}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
+
+    .line 1008
+    const-string/jumbo v5, "\u5b89\u88c5\u672c\u5730TBS\u5185\u6838"
+
+    invoke-virtual {v4, v5}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1009
+    new-instance v5, Lcom/tencent/smtt/sdk/WebView$2;
+
+    invoke-direct {v5, p0, v2}, Lcom/tencent/smtt/sdk/WebView$2;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;)V
+
+    invoke-virtual {v4, v5}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 1060
+    new-instance v5, Landroid/widget/Button;
+
+    invoke-direct {v5, v2}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
+
+    .line 1063
+    const-string/jumbo v6, "\u5b89\u88c5\u7ebf\u4e0aTBS\u5185\u6838"
+
+    invoke-virtual {v5, v6}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1064
+    new-instance v6, Lcom/tencent/smtt/sdk/WebView$3;
+
+    invoke-direct {v6, p0, v2}, Lcom/tencent/smtt/sdk/WebView$3;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;)V
+
+    invoke-virtual {v5, v6}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 1106
+    new-instance v6, Lcom/tencent/smtt/sdk/WebView$4;
+
+    invoke-direct {v6, p0, v2, v5}, Lcom/tencent/smtt/sdk/WebView$4;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;Landroid/widget/Button;)V
+
+    sput-object v6, Lcom/tencent/smtt/sdk/QbSdk;->mTbsListenerDebug:Lcom/tencent/smtt/sdk/n;
+
+    .line 1214
+    new-instance v6, Landroid/widget/Button;
+
+    invoke-direct {v6, v2}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
+
+    .line 1215
+    const-string/jumbo v7, "\u6e05\u9664TBS\u5185\u6838"
+
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1216
+    new-instance v7, Lcom/tencent/smtt/sdk/WebView$5;
+
+    invoke-direct {v7, p0, v2}, Lcom/tencent/smtt/sdk/WebView$5;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/content/Context;)V
+
+    invoke-virtual {v6, v7}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 1239
+    new-instance v7, Landroid/widget/Button;
+
+    invoke-direct {v7, v2}, Landroid/widget/Button;-><init>(Landroid/content/Context;)V
+
+    .line 1240
+    const-string/jumbo v8, "TBS\u9009\u9879\u8bbe\u7f6e"
+
+    invoke-virtual {v7, v8}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1241
+    new-instance v8, Lcom/tencent/smtt/sdk/WebView$6;
+
+    invoke-direct {v8, p0, v3}, Lcom/tencent/smtt/sdk/WebView$6;-><init>(Lcom/tencent/smtt/sdk/WebView;Landroid/widget/LinearLayout;)V
+
+    invoke-virtual {v7, v8}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 1262
+    invoke-virtual {v3, v4, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
+
+    .line 1263
+    invoke-virtual {v3, v5, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
+
+    .line 1264
+    const/4 v0, 0x2
+
+    invoke-virtual {v3, v6, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
+
+    .line 1265
+    const/4 v0, 0x3
+
+    invoke-virtual {v3, v7, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;I)V
+
+    .line 1268
+    new-instance v0, Landroid/widget/ScrollView;
+
+    invoke-direct {v0, v2}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
+
+    .line 1269
+    new-instance v2, Landroid/view/ViewGroup$LayoutParams;
+
+    invoke-direct {v2, v9, v9}, Landroid/view/ViewGroup$LayoutParams;-><init>(II)V
+
+    invoke-virtual {v0, v3, v2}, Landroid/widget/ScrollView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1273
+    new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
+
+    invoke-direct {v2, v9, v9}, Landroid/widget/FrameLayout$LayoutParams;-><init>(II)V
+
+    invoke-virtual {p0, v0, v2}, Lcom/tencent/smtt/sdk/WebView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
+
+    .line 1276
+    invoke-virtual {v3}, Landroid/widget/LinearLayout;->requestFocus()Z
+
+    .line 1277
+    iput-boolean v1, p0, Lcom/tencent/smtt/sdk/WebView;->lTW:Z
+
+    .line 1280
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTW:Z
+
+    goto/16 :goto_0
+
+    .line 997
+    :cond_6
+    iget-object v4, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+
+    new-instance v5, Lcom/tencent/smtt/sdk/SystemWebViewClient;
+
+    invoke-direct {v5, p0, v3}, Lcom/tencent/smtt/sdk/SystemWebViewClient;-><init>(Lcom/tencent/smtt/sdk/WebView;Lcom/tencent/smtt/sdk/WebViewClient;)V
+
+    invoke-virtual {v4, v5}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
+
+    goto/16 :goto_1
 .end method
 
 .method public showFindDialog(Ljava/lang/String;Z)Z
     .locals 1
 
     .prologue
-    .line 1223
+    .line 1957
     const/4 v0, 0x0
 
     return v0
@@ -6007,23 +8749,23 @@
     .locals 1
 
     .prologue
-    .line 812
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 1546
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 813
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 1547
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->stopLoading()V
+    invoke-virtual {v0}, Landroid/webkit/WebView;->stopLoading()V
 
-    .line 816
+    .line 1550
     :goto_0
     return-void
 
-    .line 815
+    .line 1549
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->stopLoading()V
 
@@ -6034,39 +8776,39 @@
     .locals 2
 
     .prologue
-    .line 2371
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 3350
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 2372
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 3351
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->super_computeScroll()V
 
-    .line 2380
+    .line 3359
     :goto_0
     return-void
 
-    .line 2375
+    .line 3354
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2377
+    .line 3356
     :try_start_0
     const-string/jumbo v1, "super_computeScroll"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/p;->c(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/m;->b(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 2379
+    .line 3358
     :catch_0
     move-exception v0
 
@@ -6079,31 +8821,31 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2320
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 3299
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 2321
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 3300
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->super_dispatchTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 2331
+    .line 3310
     :goto_0
     return v0
 
-    .line 2324
+    .line 3303
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2326
+    .line 3305
     :try_start_0
     const-string/jumbo v2, "super_dispatchTouchEvent"
 
@@ -6125,11 +8867,11 @@
 
     aput-object p1, v4, v5
 
-    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 2328
+    .line 3307
     if-nez v0, :cond_1
 
     move v0, v1
@@ -6147,7 +8889,7 @@
 
     goto :goto_0
 
-    .line 2331
+    .line 3310
     :catch_0
     move-exception v0
 
@@ -6162,31 +8904,31 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2337
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 3316
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 2338
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 3317
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->super_onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 2348
+    .line 3327
     :goto_0
     return v0
 
-    .line 2341
+    .line 3320
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2343
+    .line 3322
     :try_start_0
     const-string/jumbo v2, "super_onInterceptTouchEvent"
 
@@ -6208,11 +8950,11 @@
 
     aput-object p1, v4, v5
 
-    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 2345
+    .line 3324
     if-nez v0, :cond_1
 
     move v0, v1
@@ -6230,7 +8972,7 @@
 
     goto :goto_0
 
-    .line 2348
+    .line 3327
     :catch_0
     move-exception v0
 
@@ -6243,29 +8985,29 @@
     .locals 6
 
     .prologue
-    .line 2304
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 3283
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 2305
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 3284
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->super_onOverScrolled(IIZZ)V
 
-    .line 2315
+    .line 3294
     :goto_0
     return-void
 
-    .line 2308
+    .line 3287
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2310
+    .line 3289
     :try_start_0
     const-string/jumbo v1, "super_onOverScrolled"
 
@@ -6333,13 +9075,13 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 2314
+    .line 3293
     :catch_0
     move-exception v0
 
@@ -6350,29 +9092,29 @@
     .locals 6
 
     .prologue
-    .line 2265
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 3244
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 2266
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 3245
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->super_onScrollChanged(IIII)V
 
-    .line 2276
+    .line 3255
     :goto_0
     return-void
 
-    .line 2269
+    .line 3248
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2271
+    .line 3250
     :try_start_0
     const-string/jumbo v1, "super_onScrollChanged"
 
@@ -6440,13 +9182,13 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 2275
+    .line 3254
     :catch_0
     move-exception v0
 
@@ -6459,31 +9201,31 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2354
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 3333
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 2355
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 3334
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     invoke-virtual {v0, p1}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->super_onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 2365
+    .line 3344
     :goto_0
     return v0
 
-    .line 2358
+    .line 3337
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2360
+    .line 3339
     :try_start_0
     const-string/jumbo v2, "super_onTouchEvent"
 
@@ -6505,11 +9247,11 @@
 
     aput-object p1, v4, v5
 
-    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v2, v3, v4}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 2362
+    .line 3341
     if-nez v0, :cond_1
 
     move v0, v1
@@ -6527,7 +9269,7 @@
 
     goto :goto_0
 
-    .line 2365
+    .line 3344
     :catch_0
     move-exception v0
 
@@ -6540,13 +9282,13 @@
     .locals 10
 
     .prologue
-    .line 2283
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 3262
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 2284
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 3263
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
     move v1, p1
 
@@ -6570,19 +9312,19 @@
 
     move-result v0
 
-    .line 2297
+    .line 3276
     :goto_0
     return v0
 
-    .line 2289
+    .line 3268
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->getView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2291
+    .line 3270
     :try_start_0
     const-string/jumbo v1, "super_overScrollBy"
 
@@ -6720,11 +9462,11 @@
 
     aput-object v5, v3, v4
 
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/p;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0, v1, v2, v3}, Lcom/tencent/smtt/a/m;->a(Ljava/lang/Object;Ljava/lang/String;[Ljava/lang/Class;[Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
-    .line 2294
+    .line 3273
     if-nez v0, :cond_1
 
     const/4 v0, 0x0
@@ -6742,7 +9484,7 @@
 
     goto/16 :goto_0
 
-    .line 2297
+    .line 3276
     :catch_0
     move-exception v0
 
@@ -6755,44 +9497,44 @@
     .locals 2
 
     .prologue
-    .line 1974
-    sget-boolean v0, Lcom/tencent/smtt/sdk/WebView;->jLo:Z
+    .line 2827
+    sget-boolean v0, Lcom/tencent/smtt/sdk/WebView;->lUi:Z
 
     if-ne p1, v0, :cond_0
 
-    .line 1988
+    .line 2841
     :goto_0
     return-void
 
-    .line 1976
+    .line 2829
     :cond_0
-    sput-boolean p1, Lcom/tencent/smtt/sdk/WebView;->jLo:Z
+    sput-boolean p1, Lcom/tencent/smtt/sdk/WebView;->lUi:Z
 
     if-eqz p1, :cond_1
 
-    .line 1978
+    .line 2831
     const-string/jumbo v0, "QB_SDK"
 
     const-string/jumbo v1, "deleteNightMode"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1979
+    .line 2832
     const-string/jumbo v0, "javascript:document.getElementsByTagName(\'HEAD\').item(0).removeChild(document.getElementById(\'QQBrowserSDKNightMode\'));"
 
     invoke-virtual {p0, v0}, Lcom/tencent/smtt/sdk/WebView;->loadUrl(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1984
+    .line 2837
     :cond_1
     const-string/jumbo v0, "QB_SDK"
 
     const-string/jumbo v1, "nightMode"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1985
+    .line 2838
     const-string/jumbo v0, "javascript:var style = document.createElement(\'style\');style.type=\'text/css\';style.id=\'QQBrowserSDKNightMode\';style.innerHTML=\'html,body{background:none !important;background-color: #1d1e2a !important;}html *{background-color: #1d1e2a !important; color:#888888 !important;border-color:#3e4f61 !important;text-shadow:none !important;box-shadow:none !important;}a,a *{border-color:#4c5b99 !important; color:#2d69b3 !important;text-decoration:none !important;}a:visited,a:visited *{color:#a600a6 !important;}a:active,a:active *{color:#5588AA !important;}input,select,textarea,option,button{background-image:none !important;color:#AAAAAA !important;border-color:#4c5b99 !important;}form,div,button,span{background-color:#1d1e2a !important; border-color:#4c5b99 !important;}img{opacity:0.5}\';document.getElementsByTagName(\'HEAD\').item(0).appendChild(style);"
 
     invoke-virtual {p0, v0}, Lcom/tencent/smtt/sdk/WebView;->loadUrl(Ljava/lang/String;)V
@@ -6804,31 +9546,31 @@
     .locals 2
 
     .prologue
-    .line 1991
+    .line 2844
     const-string/jumbo v0, "QB_SDK"
 
     const-string/jumbo v1, "switchToNightMode 01"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1992
-    sget-boolean v0, Lcom/tencent/smtt/sdk/WebView;->jLo:Z
+    .line 2845
+    sget-boolean v0, Lcom/tencent/smtt/sdk/WebView;->lUi:Z
 
     if-nez v0, :cond_0
 
-    .line 1994
+    .line 2847
     const-string/jumbo v0, "QB_SDK"
 
     const-string/jumbo v1, "switchToNightMode"
 
-    invoke-static {v0, v1}, Lcom/tencent/smtt/a/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/smtt/a/r;->e(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1995
+    .line 2848
     const-string/jumbo v0, "javascript:var style = document.createElement(\'style\');style.type=\'text/css\';style.id=\'QQBrowserSDKNightMode\';style.innerHTML=\'html,body{background:none !important;background-color: #1d1e2a !important;}html *{background-color: #1d1e2a !important; color:#888888 !important;border-color:#3e4f61 !important;text-shadow:none !important;box-shadow:none !important;}a,a *{border-color:#4c5b99 !important; color:#2d69b3 !important;text-decoration:none !important;}a:visited,a:visited *{color:#a600a6 !important;}a:active,a:active *{color:#5588AA !important;}input,select,textarea,option,button{background-image:none !important;color:#AAAAAA !important;border-color:#4c5b99 !important;}form,div,button,span{background-color:#1d1e2a !important; border-color:#4c5b99 !important;}img{opacity:0.5}\';document.getElementsByTagName(\'HEAD\').item(0).appendChild(style);"
 
     invoke-virtual {p0, v0}, Lcom/tencent/smtt/sdk/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 1997
+    .line 2850
     :cond_0
     return-void
 .end method
@@ -6837,24 +9579,24 @@
     .locals 1
 
     .prologue
-    .line 1512
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2251
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1513
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2252
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->zoomIn()Z
+    invoke-virtual {v0}, Landroid/webkit/WebView;->zoomIn()Z
 
     move-result v0
 
-    .line 1515
+    .line 2254
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->zoomIn()Z
 
@@ -6867,24 +9609,24 @@
     .locals 1
 
     .prologue
-    .line 1520
-    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLd:Z
+    .line 2259
+    iget-boolean v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTM:Z
 
     if-nez v0, :cond_0
 
-    .line 1521
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLf:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
+    .line 2260
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTO:Lcom/tencent/smtt/sdk/WebView$SystemWebView;
 
-    invoke-virtual {v0}, Lcom/tencent/smtt/sdk/WebView$SystemWebView;->zoomOut()Z
+    invoke-virtual {v0}, Landroid/webkit/WebView;->zoomOut()Z
 
     move-result v0
 
-    .line 1523
+    .line 2262
     :goto_0
     return v0
 
     :cond_0
-    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->jLe:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
+    iget-object v0, p0, Lcom/tencent/smtt/sdk/WebView;->lTN:Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;
 
     invoke-interface {v0}, Lcom/tencent/smtt/export/external/interfaces/IX5WebViewBase;->zoomOut()Z
 

@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private jzE:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+.field private dtS:Ljava/lang/String;
 
-.field private mPath:Ljava/lang/String;
+.field private lBI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
 
 # direct methods
@@ -22,7 +22,7 @@
 
 
 # virtual methods
-.method protected final HX()I
+.method protected final Kj()I
     .locals 1
 
     .prologue
@@ -37,7 +37,7 @@
 
     .prologue
     .line 111
-    sget v0, Lcom/tencent/mm/a$k;->main_sight_forward_view:I
+    const v0, 0x7f0a0508
 
     return v0
 .end method
@@ -63,24 +63,13 @@
     invoke-virtual {v0, v1, v1}, Landroid/view/Window;->setFlags(II)V
 
     .line 40
-    iget-object v0, p0, Landroid/support/v7/app/ActionBarActivity;->jy:Landroid/support/v7/app/a;
+    iget-object v0, p0, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
 
-    invoke-virtual {v0}, Landroid/support/v7/app/a;->bf()Landroid/support/v7/app/ActionBar;
+    invoke-virtual {v0}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
 
     move-result-object v0
 
     invoke-virtual {v0}, Landroid/support/v7/app/ActionBar;->hide()V
-
-    .line 43
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SightForwardUI;->getIntent()Landroid/content/Intent;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "sight_local_path"
-
-    const-string/jumbo v2, "/sdcard/Movies/test.mp4"
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     .line 45
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SightForwardUI;->getIntent()Landroid/content/Intent;
@@ -93,12 +82,12 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->mPath:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->dtS:Ljava/lang/String;
 
     .line 46
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->mPath:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->dtS:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/base/c;->pX(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/base/c;->tW(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -111,11 +100,11 @@
 
     new-array v2, v8, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->mPath:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->dtS:Ljava/lang/String;
 
     aput-object v3, v2, v7
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 48
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SightForwardUI;->finish()V
@@ -126,7 +115,7 @@
 
     .line 52
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v0
 
@@ -137,7 +126,7 @@
 
     const-string/jumbo v1, "acc not ready"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 54
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SightForwardUI;->finish()V
@@ -154,21 +143,21 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/ah/ac;->bl(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/an/n;->bn(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 58
-    invoke-static {}, Lcom/tencent/mm/ah/v;->BY()Lcom/tencent/mm/ah/ac;
+    invoke-static {}, Lcom/tencent/mm/an/j;->Ea()Lcom/tencent/mm/an/n;
 
-    invoke-static {v0}, Lcom/tencent/mm/ah/ac;->ij(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/an/n;->jL(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 59
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->mPath:Ljava/lang/String;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->dtS:Ljava/lang/String;
 
-    invoke-static {v1, v0}, Lcom/tencent/mm/a/c;->j(Ljava/lang/String;Ljava/lang/String;)J
+    invoke-static {v1, v0}, Lcom/tencent/mm/a/e;->o(Ljava/lang/String;Ljava/lang/String;)J
 
     move-result-wide v1
 
@@ -187,13 +176,13 @@
 
     new-array v3, v3, [Ljava/lang/Object;
 
-    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->mPath:Ljava/lang/String;
+    iget-object v4, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->dtS:Ljava/lang/String;
 
     aput-object v4, v3, v7
 
     aput-object v0, v3, v8
 
-    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 61
     invoke-virtual {p0}, Lcom/tencent/mm/ui/transmit/SightForwardUI;->finish()V
@@ -202,7 +191,7 @@
 
     .line 64
     :cond_2
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->mPath:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->dtS:Ljava/lang/String;
 
     .line 65
     const-string/jumbo v0, "!32@/B4Tb64lLpJDO2pGf7Sjg0zBm2PqUu1g"
@@ -211,14 +200,14 @@
 
     new-array v2, v8, [Ljava/lang/Object;
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->mPath:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->dtS:Ljava/lang/String;
 
     aput-object v3, v2, v7
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 67
-    sget v0, Lcom/tencent/mm/a$i;->forward_view:I
+    const v0, 0x7f070f70
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/transmit/SightForwardUI;->findViewById(I)Landroid/view/View;
 
@@ -226,31 +215,31 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->jzE:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+    iput-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->lBI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->jzE:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->lBI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
-    new-instance v1, Lcom/tencent/mm/ui/transmit/af;
+    new-instance v1, Lcom/tencent/mm/ui/transmit/SightForwardUI$1;
 
-    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/transmit/af;-><init>(Lcom/tencent/mm/ui/transmit/SightForwardUI;)V
+    invoke-direct {v1, p0}, Lcom/tencent/mm/ui/transmit/SightForwardUI$1;-><init>(Lcom/tencent/mm/ui/transmit/SightForwardUI;)V
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->setIMainSightViewCallback(Lcom/tencent/mm/plugin/sight/encode/ui/l;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->setIMainSightViewCallback(Lcom/tencent/mm/plugin/sight/encode/ui/b;)V
 
     .line 104
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->jzE:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->lBI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->mPath:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->dtS:Ljava/lang/String;
 
-    iput-object p0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->flw:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iput-object p0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->flK:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCG:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/a/e;->aE(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/a/g;->aC(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fls:Ljava/lang/String;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCn:Ljava/lang/String;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -258,9 +247,9 @@
 
     const v0, 0x3faaaaab
 
-    iput v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->flL:F
+    iput v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCH:F
 
-    sget v0, Lcom/tencent/mm/a$i;->camera_video_view:I
+    const v0, 0x7f070f44
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->findViewById(I)Landroid/view/View;
 
@@ -274,41 +263,41 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fla:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fla:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    sget v4, Lcom/tencent/mm/pluginsdk/i/a;->gNS:I
+    sget v4, Lcom/tencent/mm/pluginsdk/l/a;->iFk:I
 
     invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setTargetWidth(I)V
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fla:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    iget v4, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->flL:F
+    iget v4, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCH:F
 
     invoke-virtual {v0, v4}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setFixPreviewRate(F)V
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fla:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
     invoke-virtual {v0, v7}, Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;->setVisibility(I)V
 
-    sget v0, Lcom/tencent/mm/a$i;->top_virtual_actionbar:I
+    const v0, 0x7f070f05
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->flg:Landroid/view/View;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCc:Landroid/view/View;
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->flg:Landroid/view/View;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCc:Landroid/view/View;
 
     new-instance v4, Landroid/widget/RelativeLayout$LayoutParams;
 
     const/4 v5, -0x1
 
-    iget-object v6, p0, Landroid/support/v7/app/ActionBarActivity;->jy:Landroid/support/v7/app/a;
+    iget-object v6, p0, Landroid/support/v7/app/ActionBarActivity;->iF:Landroid/support/v7/app/a;
 
-    invoke-virtual {v6}, Landroid/support/v7/app/a;->bf()Landroid/support/v7/app/ActionBar;
+    invoke-virtual {v6}, Landroid/support/v7/app/a;->aP()Landroid/support/v7/app/ActionBar;
 
     move-result-object v6
 
@@ -320,47 +309,47 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    sget v0, Lcom/tencent/mm/a$i;->main_sight_close:I
+    const v0, 0x7f070f07
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fld:Landroid/view/View;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCa:Landroid/view/View;
 
-    sget v0, Lcom/tencent/mm/a$i;->main_sight_send:I
-
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->findViewById(I)Landroid/view/View;
-
-    move-result-object v0
-
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fle:Landroid/view/View;
-
-    sget v0, Lcom/tencent/mm/a$i;->camera_shadow:I
+    const v0, 0x7f070f08
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->findViewById(I)Landroid/view/View;
 
     move-result-object v0
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->flj:Landroid/view/View;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->eXt:Landroid/view/View;
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fld:Landroid/view/View;
+    const v0, 0x7f070ef9
 
-    new-instance v4, Lcom/tencent/mm/plugin/sight/encode/ui/af;
+    invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->findViewById(I)Landroid/view/View;
 
-    invoke-direct {v4, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/af;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;)V
+    move-result-object v0
+
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCf:Landroid/view/View;
+
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCa:Landroid/view/View;
+
+    new-instance v4, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$1;
+
+    invoke-direct {v4, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$1;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;)V
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fle:Landroid/view/View;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->eXt:Landroid/view/View;
 
-    new-instance v4, Lcom/tencent/mm/plugin/sight/encode/ui/ag;
+    new-instance v4, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$2;
 
-    invoke-direct {v4, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/ag;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;)V
+    invoke-direct {v4, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$2;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;)V
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->ake()V
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->awI()V
 
     const-string/jumbo v0, "!44@/B4Tb64lLpKAfMIFnYldsz1A02UYN/YVEbaF1ExyUNI="
 
@@ -380,17 +369,17 @@
 
     aput-object v2, v4, v7
 
-    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 105
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->jzE:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->lBI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
-    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->akd()V
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->awH()V
 
     .line 106
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->jzE:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->lBI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fkY:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
     if-nez v0, :cond_3
 
@@ -406,11 +395,11 @@
 
     int-to-float v0, v0
 
-    iget v3, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->flL:F
+    iget v3, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCH:F
 
     div-float v3, v0, v3
 
-    sget v0, Lcom/tencent/mm/a$i;->select_contact_root:I
+    const v0, 0x7f070f03
 
     invoke-virtual {v1, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->findViewById(I)Landroid/view/View;
 
@@ -418,11 +407,11 @@
 
     check-cast v0, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fkY:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iput-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fkY:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    iget-object v4, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->flw:Lcom/tencent/mm/ui/MMFragmentActivity;
+    iget-object v4, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCr:Lcom/tencent/mm/ui/MMFragmentActivity;
 
     iget v5, v2, Landroid/util/DisplayMetrics;->heightPixels:I
 
@@ -434,11 +423,11 @@
 
     iget v2, v2, Landroid/util/DisplayMetrics;->heightPixels:I
 
-    invoke-virtual {v0, v4, v3, v1, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->a(Lcom/tencent/mm/ui/MMFragmentActivity;ILandroid/widget/AdapterView$OnItemClickListener;Lcom/tencent/mm/plugin/sight/encode/ui/k;)V
+    invoke-virtual {v0, v4, v3, v1, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->a(Lcom/tencent/mm/ui/MMFragmentActivity;ILandroid/widget/AdapterView$OnItemClickListener;Lcom/tencent/mm/plugin/sight/encode/ui/a;)V
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fkY:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    sget v2, Lcom/tencent/mm/a$i;->search_view:I
+    const v2, 0x7f070962
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->findViewById(I)Landroid/view/View;
 
@@ -446,9 +435,9 @@
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->setSearchView(Landroid/view/View;)V
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fkY:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    sget v2, Lcom/tencent/mm/a$i;->empty_bg:I
+    const v2, 0x7f070f01
 
     invoke-virtual {v1, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->findViewById(I)Landroid/view/View;
 
@@ -456,18 +445,18 @@
 
     invoke-virtual {v0, v2}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->setEmptyBgView(Landroid/view/View;)V
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fkY:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gBV:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->setMainSightContentView(Lcom/tencent/mm/plugin/sight/encode/ui/k;)V
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightSelectContactView;->setMainSightContentView(Lcom/tencent/mm/plugin/sight/encode/ui/a;)V
 
     :cond_3
-    invoke-virtual {v1, v8}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->db(Z)V
+    invoke-virtual {v1, v8}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->eL(Z)V
 
-    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fla:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
+    iget-object v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gBX:Lcom/tencent/mm/plugin/sight/encode/ui/SightCameraView;
 
-    new-instance v2, Lcom/tencent/mm/plugin/sight/encode/ui/ah;
+    new-instance v2, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$3;
 
-    invoke-direct {v2, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/ah;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;)V
+    invoke-direct {v2, v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView$3;-><init>(Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;)V
 
     const-wide/16 v3, 0x32
 
@@ -484,7 +473,7 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onPause()V
 
     .line 123
-    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->jzE:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->lBI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
     invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->onPause()V
 
@@ -500,9 +489,9 @@
     invoke-super {p0}, Lcom/tencent/mm/ui/MMActivity;->onResume()V
 
     .line 117
-    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->jzE:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/transmit/SightForwardUI;->lBI:Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;
 
-    iget-boolean v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->flt:Z
+    iget-boolean v0, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCo:Z
 
     if-nez v0, :cond_0
 
@@ -511,21 +500,21 @@
     :goto_0
     if-eqz v0, :cond_1
 
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v2, "SightSendResult"
 
-    iget-object v3, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fly:Lcom/tencent/mm/sdk/c/e;
+    iget-object v3, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCt:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v2, v3}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v2, "SightSendResult"
 
-    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->fly:Lcom/tencent/mm/sdk/c/e;
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->gCt:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v2, v1}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 118
     :goto_1
@@ -538,7 +527,7 @@
     goto :goto_0
 
     :cond_1
-    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->Mp()V
+    invoke-virtual {v1}, Lcom/tencent/mm/plugin/sight/encode/ui/MainSightForwardContainerView;->Qo()V
 
     goto :goto_1
 .end method

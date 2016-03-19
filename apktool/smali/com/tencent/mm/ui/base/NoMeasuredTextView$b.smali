@@ -15,35 +15,35 @@
 
 
 # instance fields
-.field final iKD:Landroid/graphics/Rect;
+.field final kJQ:Landroid/graphics/Rect;
 
-.field iKE:Landroid/graphics/drawable/Drawable;
+.field kJR:Landroid/graphics/drawable/Drawable;
 
-.field iKF:Landroid/graphics/drawable/Drawable;
+.field kJS:Landroid/graphics/drawable/Drawable;
 
-.field iKG:Landroid/graphics/drawable/Drawable;
+.field kJT:Landroid/graphics/drawable/Drawable;
 
-.field iKH:Landroid/graphics/drawable/Drawable;
+.field kJU:Landroid/graphics/drawable/Drawable;
 
-.field iKI:I
+.field kJV:I
 
-.field iKJ:I
+.field kJW:I
 
-.field iKK:I
+.field kJX:I
 
-.field iKL:I
+.field kJY:I
 
-.field iKM:I
+.field kJZ:I
 
-.field iKN:I
+.field kKa:I
 
-.field iKO:I
+.field kKb:I
 
-.field iKP:I
+.field kKc:I
 
-.field iKQ:I
+.field kKd:I
 
-.field final synthetic iKR:Lcom/tencent/mm/ui/base/NoMeasuredTextView;
+.field final synthetic kKe:Lcom/tencent/mm/ui/base/NoMeasuredTextView;
 
 
 # direct methods
@@ -52,7 +52,7 @@
 
     .prologue
     .line 241
-    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKR:Lcom/tencent/mm/ui/base/NoMeasuredTextView;
+    iput-object p1, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kKe:Lcom/tencent/mm/ui/base/NoMeasuredTextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -61,7 +61,7 @@
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->iKD:Landroid/graphics/Rect;
+    iput-object v0, p0, Lcom/tencent/mm/ui/base/NoMeasuredTextView$b;->kJQ:Landroid/graphics/Rect;
 
     return-void
 .end method

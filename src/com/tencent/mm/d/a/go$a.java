@@ -1,10 +1,8 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.storage.ar;
-
 public final class go$a
 {
-  public ar aub;
+  public boolean atf;
 }
 
 /* Location:

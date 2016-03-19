@@ -1,29 +1,29 @@
 package com.tencent.mm.protocal.b;
 
 public final class ok
-  extends com.tencent.mm.al.a
+  extends com.tencent.mm.at.a
 {
-  public double akA;
-  public double akz;
+  public int joh;
+  public int joi;
   
   protected final int a(int paramInt, Object... paramVarArgs)
   {
     if (paramInt == 0)
     {
       paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
-      paramVarArgs.a(1, akA);
-      paramVarArgs.a(2, akz);
+      paramVarArgs.ci(1, joh);
+      paramVarArgs.ci(2, joi);
       return 0;
     }
     if (paramInt == 1) {
-      return a.a.a.b.b.a.pS(1) + 8 + 0 + (a.a.a.b.b.a.pS(2) + 8);
+      return a.a.a.a.cg(1, joh) + 0 + a.a.a.a.cg(2, joi);
     }
     if (paramInt == 2)
     {
-      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], hfZ);
-      for (paramInt = com.tencent.mm.al.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.al.a.a(paramVarArgs)) {
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
         if (!super.a(paramVarArgs, this, paramInt)) {
-          paramVarArgs.aVo();
+          paramVarArgs.bog();
         }
       }
       return 0;
@@ -37,10 +37,10 @@ public final class ok
       default: 
         return -1;
       case 1: 
-        akA = jMD.readDouble();
+        joh = maU.jC();
         return 0;
       }
-      akz = jMD.readDouble();
+      joi = maU.jC();
       return 0;
     }
     return -1;

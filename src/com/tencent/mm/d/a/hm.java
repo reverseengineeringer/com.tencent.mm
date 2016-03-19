@@ -1,32 +1,28 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.app.Activity;
+import android.os.Bundle;
+import com.tencent.mm.sdk.c.b;
 
 public final class hm
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aEM = new a();
-  public b aEN = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDi = new a();
   
   public hm()
   {
-    id = "ShakeAcceptCouponCard";
-    hXT = atO;
+    id = "NotifyDealQBarStrResult";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aEO;
-    public String aEP;
-    public int aEQ = 0;
-  }
-  
-  public static final class b
-  {
-    public String aEO;
-    public boolean azi = false;
+    public int aDg = 0;
+    public Bundle aDj;
+    public String asW;
+    public Activity asX;
   }
 }
 

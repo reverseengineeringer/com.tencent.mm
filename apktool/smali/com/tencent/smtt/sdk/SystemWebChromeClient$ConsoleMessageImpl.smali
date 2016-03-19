@@ -32,10 +32,10 @@
     .locals 1
 
     .prologue
-    .line 358
+    .line 389
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 359
+    .line 390
     invoke-virtual {p1}, Landroid/webkit/ConsoleMessage;->messageLevel()Landroid/webkit/ConsoleMessage$MessageLevel;
 
     move-result-object v0
@@ -50,28 +50,28 @@
 
     iput-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mMessageLevel:Lcom/tencent/smtt/export/external/interfaces/ConsoleMessage$MessageLevel;
 
-    .line 360
+    .line 391
     invoke-virtual {p1}, Landroid/webkit/ConsoleMessage;->message()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mMessage:Ljava/lang/String;
 
-    .line 361
+    .line 392
     invoke-virtual {p1}, Landroid/webkit/ConsoleMessage;->sourceId()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mSourceId:Ljava/lang/String;
 
-    .line 362
+    .line 393
     invoke-virtual {p1}, Landroid/webkit/ConsoleMessage;->lineNumber()I
 
     move-result v0
 
     iput v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mLineNumber:I
 
-    .line 363
+    .line 394
     return-void
 .end method
 
@@ -79,24 +79,24 @@
     .locals 1
 
     .prologue
-    .line 365
+    .line 396
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 366
+    .line 397
     sget-object v0, Lcom/tencent/smtt/export/external/interfaces/ConsoleMessage$MessageLevel;->LOG:Lcom/tencent/smtt/export/external/interfaces/ConsoleMessage$MessageLevel;
 
     iput-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mMessageLevel:Lcom/tencent/smtt/export/external/interfaces/ConsoleMessage$MessageLevel;
 
-    .line 367
+    .line 398
     iput-object p1, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mMessage:Ljava/lang/String;
 
-    .line 368
+    .line 399
     iput-object p2, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mSourceId:Ljava/lang/String;
 
-    .line 369
+    .line 400
     iput p3, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mLineNumber:I
 
-    .line 370
+    .line 401
     return-void
 .end method
 
@@ -106,7 +106,7 @@
     .locals 1
 
     .prologue
-    .line 389
+    .line 420
     iget v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mLineNumber:I
 
     return v0
@@ -116,7 +116,7 @@
     .locals 1
 
     .prologue
-    .line 379
+    .line 410
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mMessage:Ljava/lang/String;
 
     return-object v0
@@ -126,7 +126,7 @@
     .locals 1
 
     .prologue
-    .line 374
+    .line 405
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mMessageLevel:Lcom/tencent/smtt/export/external/interfaces/ConsoleMessage$MessageLevel;
 
     return-object v0
@@ -136,7 +136,7 @@
     .locals 1
 
     .prologue
-    .line 384
+    .line 415
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$ConsoleMessageImpl;->mSourceId:Ljava/lang/String;
 
     return-object v0

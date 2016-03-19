@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static joa:Lcom/tencent/mm/ui/f/b;
+.field private static ltr:Lcom/tencent/mm/ui/f/b;
 
-.field private static job:Lcom/tencent/mm/ui/f/b;
+.field private static lts:Lcom/tencent/mm/ui/f/b;
 
 
 # direct methods
@@ -33,18 +33,18 @@
     move-result-object v3
 
     .line 55
-    invoke-static {p0}, Lcom/tencent/mm/ui/f/b;->dQ(Landroid/content/Context;)Lcom/tencent/mm/ui/f/b;
+    invoke-static {p0}, Lcom/tencent/mm/ui/f/b;->ex(Landroid/content/Context;)Lcom/tencent/mm/ui/f/b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/ui/f/a;->joa:Lcom/tencent/mm/ui/f/b;
+    sput-object v0, Lcom/tencent/mm/ui/f/a;->ltr:Lcom/tencent/mm/ui/f/b;
 
     .line 56
-    invoke-static {p0}, Lcom/tencent/mm/ui/f/b;->dQ(Landroid/content/Context;)Lcom/tencent/mm/ui/f/b;
+    invoke-static {p0}, Lcom/tencent/mm/ui/f/b;->ex(Landroid/content/Context;)Lcom/tencent/mm/ui/f/b;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/ui/f/a;->job:Lcom/tencent/mm/ui/f/b;
+    sput-object v0, Lcom/tencent/mm/ui/f/a;->lts:Lcom/tencent/mm/ui/f/b;
 
     .line 58
     new-array v4, v7, [I
@@ -103,7 +103,7 @@
     sub-int/2addr v0, v1
 
     .line 72
-    sget-object v6, Lcom/tencent/mm/ui/f/a;->joa:Lcom/tencent/mm/ui/f/b;
+    sget-object v6, Lcom/tencent/mm/ui/f/a;->ltr:Lcom/tencent/mm/ui/f/b;
 
     invoke-virtual {v6, v0}, Lcom/tencent/mm/ui/f/b;->setHeight(I)V
 
@@ -152,12 +152,12 @@
     sub-int/2addr v0, v4
 
     .line 75
-    sget-object v4, Lcom/tencent/mm/ui/f/a;->job:Lcom/tencent/mm/ui/f/b;
+    sget-object v4, Lcom/tencent/mm/ui/f/a;->lts:Lcom/tencent/mm/ui/f/b;
 
     invoke-virtual {v4, v0}, Lcom/tencent/mm/ui/f/b;->setHeight(I)V
 
     .line 77
-    sget-object v0, Lcom/tencent/mm/ui/f/a;->joa:Lcom/tencent/mm/ui/f/b;
+    sget-object v0, Lcom/tencent/mm/ui/f/a;->ltr:Lcom/tencent/mm/ui/f/b;
 
     const/16 v4, 0x30
 
@@ -166,7 +166,7 @@
     invoke-virtual {v0, v3, v4, v2, v1}, Lcom/tencent/mm/ui/f/b;->showAtLocation(Landroid/view/View;III)V
 
     .line 78
-    sget-object v0, Lcom/tencent/mm/ui/f/a;->job:Lcom/tencent/mm/ui/f/b;
+    sget-object v0, Lcom/tencent/mm/ui/f/a;->lts:Lcom/tencent/mm/ui/f/b;
 
     const/16 v1, 0x50
 
@@ -251,41 +251,41 @@
     const/4 v1, -0x1
 
     .line 85
-    sget-object v0, Lcom/tencent/mm/ui/f/a;->joa:Lcom/tencent/mm/ui/f/b;
+    sget-object v0, Lcom/tencent/mm/ui/f/a;->ltr:Lcom/tencent/mm/ui/f/b;
 
     if-eqz v0, :cond_0
 
     .line 86
-    sget-object v0, Lcom/tencent/mm/ui/f/a;->joa:Lcom/tencent/mm/ui/f/b;
+    sget-object v0, Lcom/tencent/mm/ui/f/a;->ltr:Lcom/tencent/mm/ui/f/b;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/f/b;->setAnimationStyle(I)V
 
     .line 87
-    sget-object v0, Lcom/tencent/mm/ui/f/a;->joa:Lcom/tencent/mm/ui/f/b;
+    sget-object v0, Lcom/tencent/mm/ui/f/a;->ltr:Lcom/tencent/mm/ui/f/b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/f/b;->dismiss()V
 
     .line 88
-    sput-object v2, Lcom/tencent/mm/ui/f/a;->joa:Lcom/tencent/mm/ui/f/b;
+    sput-object v2, Lcom/tencent/mm/ui/f/a;->ltr:Lcom/tencent/mm/ui/f/b;
 
     .line 91
     :cond_0
-    sget-object v0, Lcom/tencent/mm/ui/f/a;->job:Lcom/tencent/mm/ui/f/b;
+    sget-object v0, Lcom/tencent/mm/ui/f/a;->lts:Lcom/tencent/mm/ui/f/b;
 
     if-eqz v0, :cond_1
 
     .line 92
-    sget-object v0, Lcom/tencent/mm/ui/f/a;->job:Lcom/tencent/mm/ui/f/b;
+    sget-object v0, Lcom/tencent/mm/ui/f/a;->lts:Lcom/tencent/mm/ui/f/b;
 
     invoke-virtual {v0, v1}, Lcom/tencent/mm/ui/f/b;->setAnimationStyle(I)V
 
     .line 93
-    sget-object v0, Lcom/tencent/mm/ui/f/a;->job:Lcom/tencent/mm/ui/f/b;
+    sget-object v0, Lcom/tencent/mm/ui/f/a;->lts:Lcom/tencent/mm/ui/f/b;
 
     invoke-virtual {v0}, Lcom/tencent/mm/ui/f/b;->dismiss()V
 
     .line 94
-    sput-object v2, Lcom/tencent/mm/ui/f/a;->job:Lcom/tencent/mm/ui/f/b;
+    sput-object v2, Lcom/tencent/mm/ui/f/a;->lts:Lcom/tencent/mm/ui/f/b;
 
     .line 96
     :cond_1

@@ -9,14 +9,14 @@ final class a$b
   
   public final void onChanged()
   {
-    hT.hL = true;
-    hT.notifyDataSetChanged();
+    hb.gT = true;
+    hb.notifyDataSetChanged();
   }
   
   public final void onInvalidated()
   {
-    hT.hL = false;
-    hT.notifyDataSetInvalidated();
+    hb.gT = false;
+    hb.notifyDataSetInvalidated();
   }
 }
 

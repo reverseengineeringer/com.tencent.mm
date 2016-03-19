@@ -30,7 +30,7 @@
     return-void
 .end method
 
-.method public static qF()I
+.method public static qB()I
     .locals 15
 
     .prologue
@@ -44,7 +44,7 @@
 
     .line 54
     :try_start_0
-    invoke-static {}, Lcom/tencent/mm/compatible/util/j;->getDataDirectory()Ljava/io/File;
+    invoke-static {}, Lcom/tencent/mm/compatible/util/g;->getDataDirectory()Ljava/io/File;
 
     move-result-object v0
 
@@ -135,7 +135,7 @@
 
     aput-object v0, v13, v8
 
-    invoke-static {v11, v12, v13}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v11, v12, v13}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 64
     cmp-long v0, v6, v2
@@ -179,7 +179,7 @@
 
     const-string/jumbo v5, "get db spare space error"
 
-    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     move-wide v4, v0
 

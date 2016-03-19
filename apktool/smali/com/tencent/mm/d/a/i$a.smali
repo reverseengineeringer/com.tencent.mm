@@ -15,11 +15,9 @@
 
 
 # instance fields
-.field public auf:Landroid/support/v4/app/aa$f;
+.field public ask:Lcom/tencent/mm/storage/ag;
 
-.field public title:Ljava/lang/String;
-
-.field public username:Ljava/lang/String;
+.field public asl:Lcom/tencent/mm/n/a$a;
 
 
 # direct methods

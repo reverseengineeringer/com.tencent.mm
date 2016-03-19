@@ -7,7 +7,7 @@
 
 
 # static fields
-.field private static gKT:Lcom/tencent/mm/pluginsdk/e/b;
+.field private static izD:Lcom/tencent/mm/pluginsdk/e/b;
 
 
 # direct methods
@@ -18,7 +18,7 @@
     .line 16
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/e/b;->gKT:Lcom/tencent/mm/pluginsdk/e/b;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/e/b;->izD:Lcom/tencent/mm/pluginsdk/e/b;
 
     return-void
 .end method
@@ -27,18 +27,18 @@
     .locals 0
 
     .prologue
-    .line 40
+    .line 41
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
 .end method
 
-.method public static ayH()Lcom/tencent/mm/pluginsdk/e/b;
+.method public static aPj()Lcom/tencent/mm/pluginsdk/e/b;
     .locals 1
 
     .prologue
-    .line 36
-    sget-object v0, Lcom/tencent/mm/pluginsdk/e/b;->gKT:Lcom/tencent/mm/pluginsdk/e/b;
+    .line 37
+    sget-object v0, Lcom/tencent/mm/pluginsdk/e/b;->izD:Lcom/tencent/mm/pluginsdk/e/b;
 
     if-nez v0, :cond_0
 
@@ -46,18 +46,18 @@
 
     invoke-direct {v0}, Lcom/tencent/mm/pluginsdk/e/b;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/e/b;->gKT:Lcom/tencent/mm/pluginsdk/e/b;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/e/b;->izD:Lcom/tencent/mm/pluginsdk/e/b;
 
-    .line 37
+    .line 38
     :cond_0
-    sget-object v0, Lcom/tencent/mm/pluginsdk/e/b;->gKT:Lcom/tencent/mm/pluginsdk/e/b;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/e/b;->izD:Lcom/tencent/mm/pluginsdk/e/b;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final F(Landroid/app/Activity;)Z
+.method public final O(Landroid/app/Activity;)Z
     .locals 6
 
     .prologue
@@ -66,7 +66,7 @@
     const/4 v1, 0x0
 
     .line 20
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->getContext()Landroid/content/Context;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
     move-result-object v0
 
@@ -114,7 +114,7 @@
 
     move-result-object v4
 
-    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 22
     if-eqz v0, :cond_2
@@ -133,7 +133,7 @@
 
     if-nez v3, :cond_2
 
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aER()Ljava/lang/String;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUJ()Ljava/lang/String;
 
     move-result-object v3
 
@@ -179,6 +179,14 @@
 
     invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    const-string/jumbo v3, "plugin.offline"
+
+    invoke-virtual {v0, v3}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+
     move-result v0
 
     if-eqz v0, :cond_2
@@ -186,7 +194,7 @@
     :cond_0
     move v0, v1
 
-    .line 32
+    .line 33
     :goto_1
     return v0
 
@@ -199,6 +207,6 @@
     :cond_2
     move v0, v2
 
-    .line 32
+    .line 33
     goto :goto_1
 .end method

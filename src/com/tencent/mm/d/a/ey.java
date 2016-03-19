@@ -1,17 +1,31 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.app.Activity;
+import com.tencent.mm.sdk.c.b;
 
 public final class ey
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a azH = new a();
+  public b azI = new b();
   
   public ey()
   {
-    id = "NotifyTimelineList";
-    hXT = atO;
+    id = "GestureProtect";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public Activity asX;
+    public int azJ;
+  }
+  
+  public static final class b
+  {
+    public Object data = Integer.valueOf(0);
   }
 }
 

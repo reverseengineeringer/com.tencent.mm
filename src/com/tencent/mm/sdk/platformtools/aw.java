@@ -1,44 +1,67 @@
 package com.tencent.mm.sdk.platformtools;
 
-import android.content.res.AssetFileDescriptor;
-import android.media.MediaPlayer;
-import android.media.MediaPlayer.OnCompletionListener;
+import android.os.SystemClock;
+import java.util.ArrayList;
 
-final class aw
-  implements MediaPlayer.OnCompletionListener
+public final class aw
 {
-  aw(String paramString, AssetFileDescriptor paramAssetFileDescriptor, av.a parama) {}
+  private String jXU;
+  private boolean jXV;
+  ArrayList jXW;
+  ArrayList jXX;
+  private String mTag;
   
-  public final void onCompletion(MediaPlayer paramMediaPlayer)
+  public aw(String paramString1, String paramString2)
   {
-    int j = -1;
-    if (paramMediaPlayer == null) {}
-    for (int i = -1;; i = paramMediaPlayer.hashCode())
+    mTag = paramString1;
+    jXU = paramString2;
+    jXV = false;
+    if (!jXV)
     {
-      t.i("!32@/B4Tb64lLpLlVGlG0LwhNkUNSz1Jl26Q", "play completion mp:%d  path:%s", new Object[] { Integer.valueOf(i), evG });
-      try
-      {
-        iav.close();
-        if (paramMediaPlayer != null) {
-          paramMediaPlayer.release();
-        }
-        if (iaw != null) {
-          iaw.mk();
-        }
-        return;
+      if (jXW != null) {
+        break label61;
       }
-      catch (Exception localException)
-      {
-        if (paramMediaPlayer != null) {
-          break;
-        }
-      }
+      jXW = new ArrayList();
+      jXX = new ArrayList();
     }
-    for (i = j;; i = paramMediaPlayer.hashCode())
+    for (;;)
     {
-      t.e("!32@/B4Tb64lLpLlVGlG0LwhNkUNSz1Jl26Q", "play mp:%d fd close failed path:%s e:%s", new Object[] { Integer.valueOf(i), evG, localException.getMessage() });
-      break;
+      addSplit(null);
+      return;
+      label61:
+      jXW.clear();
+      jXX.clear();
     }
+  }
+  
+  public final void addSplit(String paramString)
+  {
+    if (jXV) {
+      return;
+    }
+    long l = SystemClock.elapsedRealtime();
+    jXW.add(Long.valueOf(l));
+    jXX.add(paramString);
+  }
+  
+  public final void dumpToLog()
+  {
+    if (jXV) {
+      return;
+    }
+    u.d(mTag, jXU + ": begin");
+    long l2 = ((Long)jXW.get(0)).longValue();
+    int i = 1;
+    long l1 = l2;
+    while (i < jXW.size())
+    {
+      l1 = ((Long)jXW.get(i)).longValue();
+      String str = (String)jXX.get(i);
+      long l3 = ((Long)jXW.get(i - 1)).longValue();
+      u.d(mTag, jXU + ":      " + (l1 - l3) + " ms, " + str);
+      i += 1;
+    }
+    u.d(mTag, jXU + ": end, " + (l1 - l2) + " ms");
   }
 }
 

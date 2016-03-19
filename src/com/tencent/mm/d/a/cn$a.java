@@ -1,10 +1,10 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.protocal.b.zr;
-
 public final class cn$a
 {
-  public zr ayl;
+  public String alN;
+  public String auQ;
+  public byte[] data;
 }
 
 /* Location:

@@ -2,7 +2,7 @@ package com.tencent.mm.pluginsdk.model;
 
 public abstract interface g$a
 {
-  public abstract void a(p paramp);
+  public abstract void a(j paramj);
 }
 
 /* Location:

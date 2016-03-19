@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public avk:Ljava/lang/String;
+.field public aAU:[B
 
 
 # direct methods

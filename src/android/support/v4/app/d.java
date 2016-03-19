@@ -2,18 +2,9 @@ package android.support.v4.app;
 
 import android.view.View;
 
-final class d
-  implements h
+abstract interface d
 {
-  d(Fragment paramFragment) {}
-  
-  public final View findViewById(int paramInt)
-  {
-    if (bJ.mView == null) {
-      throw new IllegalStateException("Fragment does not have a view");
-    }
-    return bJ.mView.findViewById(paramInt);
-  }
+  public abstract View findViewById(int paramInt);
 }
 
 /* Location:

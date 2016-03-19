@@ -3,14 +3,15 @@ package com.tencent.mm.app.plugin;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.a.n;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.model.ad;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.storage.ao;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.model.k;
+import com.tencent.mm.model.k.a;
+import com.tencent.mm.model.n;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.storage.ad;
 
 @URISpanHandlerSet.a
 class URISpanHandlerSet$HttpUriSpanHandler
@@ -21,58 +22,80 @@ class URISpanHandlerSet$HttpUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
-    Object localObject;
+    Object localObject1;
     if (type == 1)
     {
-      paramah.c(ao.class);
-      localObject = ad.t("@" + url, URISpanHandlerSet.a(apd).getString(a.n.group_domainmail_suffix));
-      if (paramf == null) {
-        break label170;
+      paramg.c(ad.class);
+      localObject1 = n.F("@" + url, URISpanHandlerSet.a(ang).getString(2131427397));
+      if (paramb == null) {
+        break label334;
       }
     }
-    label163:
-    label170:
-    for (paramf = (String)paramf.a(paramah);; paramf = null)
+    label327:
+    label334:
+    for (paramb = (String)paramb.a(paramg);; paramb = null)
     {
-      if ((localObject == null) || (!cqF))
+      Object localObject2;
+      if ((localObject1 == null) || (!aur))
       {
-        localObject = url;
-        paramah = (ah)localObject;
-        if (!((String)localObject).toLowerCase().startsWith("http")) {
-          paramah = "http://" + (String)localObject;
+        localObject2 = url;
+        localObject1 = localObject2;
+        if (!((String)localObject2).toLowerCase().startsWith("http")) {
+          localObject1 = "http://" + (String)localObject2;
         }
-        localObject = new Intent();
-        ((Intent)localObject).putExtra("rawUrl", paramah);
-        if (!bn.iW(paramf)) {
-          break label163;
+        localObject2 = new Intent();
+        ((Intent)localObject2).putExtra("rawUrl", (String)localObject1);
+        if ((data != null) && ((data instanceof Integer))) {
+          ((Intent)localObject2).putExtra("geta8key_scene", ((Integer)data).intValue());
+        }
+        paramg = gZd;
+        if (!ay.kz(paramg))
+        {
+          Object localObject3 = k.sW().eU(paramg);
+          if (localObject3 != null)
+          {
+            localObject1 = ((k.a)localObject3).getString("prePublishId", null);
+            String str = ((k.a)localObject3).getString("preUsername", null);
+            localObject3 = ((k.a)localObject3).getString("preChatName", null);
+            ((Intent)localObject2).putExtra("reportSessionId", paramg);
+            ((Intent)localObject2).putExtra("KPublisherId", (String)localObject1);
+            ((Intent)localObject2).putExtra("geta8key_username", (String)localObject3);
+            ((Intent)localObject2).putExtra("pre_username", str);
+            ((Intent)localObject2).putExtra("prePublishId", (String)localObject1);
+            ((Intent)localObject2).putExtra("preUsername", str);
+            ((Intent)localObject2).putExtra("preChatName", (String)localObject3);
+          }
+        }
+        if (!ay.kz(paramb)) {
+          break label327;
         }
       }
-      for (paramah = null;; paramah = paramf)
+      for (paramg = null;; paramg = paramb)
       {
-        ((Intent)localObject).putExtra("geta8key_username", paramah);
-        c.c(URISpanHandlerSet.a(apd), "webview", ".ui.tools.WebViewUI", (Intent)localObject);
+        ((Intent)localObject2).putExtra("geta8key_username", paramg);
+        c.c(URISpanHandlerSet.a(ang), "webview", ".ui.tools.WebViewUI", (Intent)localObject2);
         return true;
       }
       return false;
     }
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     if (paramString.trim().toLowerCase().startsWith("http")) {
-      return new ah(paramString, 1, null);
+      return new g(paramString, 1, null);
     }
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[] { 1 };
   }

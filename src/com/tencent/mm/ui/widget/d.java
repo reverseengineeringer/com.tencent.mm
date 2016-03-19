@@ -1,43 +1,35 @@
 package com.tencent.mm.ui.widget;
 
-import android.view.animation.Animation;
-import android.view.animation.Animation.AnimationListener;
+import android.graphics.Canvas;
+import android.graphics.Paint;
+import android.graphics.Paint.FontMetricsInt;
+import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.text.style.ImageSpan;
 
-final class d
-  implements Animation.AnimationListener
+public final class d
+  extends ImageSpan
 {
-  d(MMSwitchBtn.b paramb, MMSwitchBtn paramMMSwitchBtn) {}
+  public int lEY = 0;
   
-  public final void onAnimationEnd(Animation paramAnimation)
+  public d(Drawable paramDrawable)
   {
-    boolean bool2 = true;
-    boolean bool3 = MMSwitchBtn.a(jBn.jBl);
-    if (jBn.direction == 1)
-    {
-      bool1 = true;
-      if (bool3 != bool1)
-      {
-        paramAnimation = jBn.jBl;
-        if (jBn.direction != 1) {
-          break label96;
-        }
-      }
-    }
-    label96:
-    for (boolean bool1 = bool2;; bool1 = false)
-    {
-      MMSwitchBtn.a(paramAnimation, bool1);
-      jBn.jBl.post(new e(this));
-      MMSwitchBtn.c(jBn.jBl);
-      return;
-      bool1 = false;
-      break;
-    }
+    super(paramDrawable, 1);
   }
   
-  public final void onAnimationRepeat(Animation paramAnimation) {}
-  
-  public final void onAnimationStart(Animation paramAnimation) {}
+  public final void draw(Canvas paramCanvas, CharSequence paramCharSequence, int paramInt1, int paramInt2, float paramFloat, int paramInt3, int paramInt4, int paramInt5, Paint paramPaint)
+  {
+    paramCharSequence = getDrawable();
+    paramCanvas.save();
+    paramInt2 = paramInt5 - getBoundsbottom + lEY;
+    paramInt1 = paramInt2;
+    if (mVerticalAlignment == 1) {
+      paramInt1 = paramInt2 - getFontMetricsIntdescent;
+    }
+    paramCanvas.translate(paramFloat, paramInt1);
+    paramCharSequence.draw(paramCanvas);
+    paramCanvas.restore();
+  }
 }
 
 /* Location:

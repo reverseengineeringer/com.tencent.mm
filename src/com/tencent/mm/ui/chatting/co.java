@@ -1,174 +1,112 @@
 package com.tencent.mm.ui.chatting;
 
-import android.content.Intent;
-import android.view.ContextMenu;
-import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.aj.c;
-import com.tencent.mm.d.a.du;
-import com.tencent.mm.d.b.aq;
-import com.tencent.mm.m.a.a;
-import com.tencent.mm.model.br;
-import com.tencent.mm.platformtools.ad;
-import com.tencent.mm.pluginsdk.model.app.i;
-import com.tencent.mm.pluginsdk.model.app.p;
-import com.tencent.mm.sdk.c.a;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.storage.ar;
-import com.tencent.mm.ui.cn;
-import com.tencent.mm.ui.ef;
-import com.tencent.mm.ui.transmit.MsgRetransmitUI;
+import android.view.View.OnCreateContextMenuListener;
+import android.view.View.OnLongClickListener;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.model.c;
+import com.tencent.mm.model.i;
+import com.tencent.mm.platformtools.t;
+import com.tencent.mm.plugin.report.service.h;
+import com.tencent.mm.pluginsdk.ui.chat.ChatFooter;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.e;
+import com.tencent.mm.storage.f;
+import com.tencent.mm.ui.j;
+import com.tencent.mm.ui.o;
+import com.tencent.mm.ui.tools.m;
 
 final class co
-  extends cf.b
+  implements View.OnLongClickListener
 {
-  private ChattingUI.a iUg;
+  private View.OnCreateContextMenuListener fNB;
+  private ChattingUI.a kTe;
   
-  public co()
+  public co(View.OnCreateContextMenuListener paramOnCreateContextMenuListener, ChattingUI.a parama)
   {
-    super(61);
+    kTe = parama;
+    fNB = paramOnCreateContextMenuListener;
   }
   
-  public final View a(LayoutInflater paramLayoutInflater, View paramView)
+  public final boolean onLongClick(View paramView)
   {
-    Object localObject;
-    if ((paramView != null) && (paramView.getTag() != null) && ((paramView.getTag() instanceof m)))
+    Object localObject2;
+    int i;
+    Object localObject1;
+    if ((paramView.getTag() instanceof dg))
     {
-      localObject = paramView;
-      if (getTagtype == dJX) {}
-    }
-    else
-    {
-      localObject = new ds(paramLayoutInflater, a.k.chatting_item_from_coupon_card);
-      ((View)localObject).setTag(new m(dJX).av((View)localObject));
-    }
-    return (View)localObject;
-  }
-  
-  public final void a(cf.a parama, int paramInt, ChattingUI.a parama1, ar paramar, String paramString)
-  {
-    iUg = parama1;
-    m localm = (m)parama;
-    paramString = bn.xO(field_content);
-    if (paramString != null) {}
-    for (paramString = a.a.r(paramString, field_reserved);; paramString = null)
-    {
-      localm.a(paramString, field_imgPath, hfF);
-      paramar = new nv(paramar, iBB, paramInt, null, 0, (byte)0);
-      iUc.setTag(paramar);
-      iUc.setOnClickListener(iTH.iWu);
-      if (hfF) {
-        iUc.setOnLongClickListener(iTH.iWw);
-      }
-      return;
-    }
-  }
-  
-  public final boolean a(ContextMenu paramContextMenu, View paramView, ar paramar)
-  {
-    int i = getTagposition;
-    paramView = field_content;
-    if (paramView == null) {
-      return true;
-    }
-    paramView = a.a.dr(iUg.aJ(paramView, field_isSend));
-    if (paramView == null) {
-      return true;
-    }
-    if (i.i(i.V(appId, false))) {
-      paramContextMenu.add(i, 111, 0, iUg.getString(a.n.retransmit));
-    }
-    switch (type)
-    {
-    }
-    do
-    {
-      return true;
-    } while ((bnb != 5) && (bnb != 6) && (bnb != 2));
-    if (bnb != 2) {
-      paramContextMenu.clear();
-    }
-    paramContextMenu.add(i, 100, 0, iUg.getString(a.n.chatting_long_click_menu_delete_msg));
-    return false;
-  }
-  
-  public final boolean a(MenuItem paramMenuItem, ChattingUI.a parama, ar paramar)
-  {
-    switch (paramMenuItem.getItemId())
-    {
-    }
-    do
-    {
-      do
+      localObject2 = (dg)paramView.getTag();
+      i = kTe.faQ.getSelectionStart();
+      if (eLV == 1)
       {
-        return false;
-        parama = bn.xO(field_content);
-        paramMenuItem = null;
-        if (parama != null) {
-          paramMenuItem = a.a.dr(parama);
-        }
-        if (paramMenuItem != null) {
-          p.ur(aqm);
-        }
-        br.E(field_msgId);
-        return false;
-        Object localObject = parama.aJ(field_content, field_isSend);
-        paramMenuItem = new Intent(ipQ.iqj, MsgRetransmitUI.class);
-        paramMenuItem.putExtra("Retr_Msg_content", (String)localObject);
-        localObject = a.a.dr((String)localObject);
-        if ((localObject != null) && (16 == type)) {
-          paramMenuItem.putExtra("Retr_Msg_Type", 14);
-        }
-        for (;;)
+        if (!kTe.kYO)
         {
-          paramMenuItem.putExtra("Retr_Msg_Id", field_msgId);
-          parama.startActivity(paramMenuItem);
-          return false;
-          paramMenuItem.putExtra("Retr_Msg_Type", 2);
+          u.w("!56@/B4Tb64lLpKwUcOR+EdWcs898bVRTUAq4Hc4B1PyPp4X6wigfq4Eow==", "ChattingUI disable Touch NOW!!!");
+          return true;
         }
-        paramMenuItem = bn.xO(field_content);
-      } while (paramMenuItem == null);
-      paramMenuItem = a.a.dr(paramMenuItem);
-    } while (paramMenuItem == null);
-    switch (type)
-    {
-    default: 
-      return false;
-    }
-    parama = new du();
-    azU.azV = azV;
-    azU.azW = field_msgId;
-    azU.azX = field_talker;
-    a.hXQ.g(parama);
-    return false;
-  }
-  
-  public final boolean a(View paramView, ChattingUI.a parama, ar paramar)
-  {
-    paramView = field_content;
-    if (paramView == null) {}
-    do
-    {
-      do
-      {
-        return false;
-        paramView = a.a.dr(paramView);
-      } while (paramView == null);
-      switch (type)
-      {
-      default: 
-        return false;
+        if ((i.dn(kTe.getTalkerUserName())) || (kTe.kYH))
+        {
+          h.fUJ.g(10976, new Object[] { Integer.valueOf(0), Integer.valueOf(1), Integer.valueOf(0) });
+          localObject1 = ah.tD().rw().DT(aCm);
+          if (kTe.kYH) {
+            localObject1 = kTe.dY(ajh);
+          }
+        }
       }
-    } while (ad.iW(azV));
-    paramar = new Intent();
-    paramar.setFlags(65536);
-    paramar.putExtra("key_card_app_msg", azV);
-    paramar.putExtra("key_from_scene", bnb);
-    c.c(ipQ.iqj, "card", ".ui.CardDetailUI", paramar);
-    return true;
+    }
+    for (;;)
+    {
+      localObject2 = new StringBuffer(kTe.faQ.getLastText());
+      ((StringBuffer)localObject2).insert(i, "@" + (String)localObject1 + ' ');
+      kTe.faQ.i(((StringBuffer)localObject2).toString(), ((String)localObject1).length() + i + 2, true);
+      kTe.kYO = false;
+      kTe.faQ.setMode(1);
+      paramView.postDelayed(new Runnable()
+      {
+        public final void run()
+        {
+          akYO = true;
+        }
+      }, 2000L);
+      return true;
+      localObject1 = AtSomeoneUI.a((e)localObject1, ajh);
+      if (t.kz((String)localObject1))
+      {
+        localObject1 = i.dW(ajh);
+        continue;
+        if ((!i.dZ(kTe.getTalkerUserName())) || (kTe.getTalkerUserName().contains("@"))) {
+          break;
+        }
+        h.fUJ.g(10976, new Object[] { Integer.valueOf(0), Integer.valueOf(1), Integer.valueOf(1) });
+        if ((kTe.iID) && (!kTe.kYH)) {}
+        for (localObject1 = kTe.dY(ajh);; localObject1 = i.dW(ajh))
+        {
+          localObject2 = new StringBuffer(kTe.faQ.getLastText());
+          ((StringBuffer)localObject2).insert(i, (String)localObject1);
+          kTe.faQ.i(((StringBuffer)localObject2).toString(), ((String)localObject1).length() + i, true);
+          kTe.kYO = false;
+          kTe.faQ.setMode(1);
+          paramView.postDelayed(new Runnable()
+          {
+            public final void run()
+            {
+              akYO = true;
+            }
+          }, 2000L);
+          return true;
+        }
+        if (eLV == 9) {
+          break;
+        }
+        paramView.setOnCreateContextMenuListener(fNB);
+        localObject1 = kTe;
+        if (dRJ == null) {
+          dRJ = new m(koJ.kpc);
+        }
+        dRJ.b(paramView, fNB, fby);
+        return true;
+      }
+    }
   }
 }
 

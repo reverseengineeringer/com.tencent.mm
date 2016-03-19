@@ -1,50 +1,62 @@
-.class final Lcom/tencent/mm/ui/tools/n;
-.super Landroid/os/AsyncTask;
+.class public final Lcom/tencent/mm/ui/tools/n;
+.super Lcom/tencent/mm/ui/tools/s;
 .source "SourceFile"
 
 
+# annotations
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/ui/tools/n$a;
+    }
+.end annotation
+
+
 # instance fields
-.field final synthetic czx:I
+.field private hI:Landroid/view/LayoutInflater;
 
-.field final synthetic dUL:Landroid/content/Intent;
+.field private hbI:Z
 
-.field private filePath:Ljava/lang/String;
+.field public hle:Lcom/tencent/mm/ui/base/n$c;
 
-.field final synthetic joB:Ljava/lang/String;
+.field public hlf:Lcom/tencent/mm/ui/base/n$d;
 
-.field final synthetic joC:Lcom/tencent/mm/ui/tools/k$a;
+.field private hlg:Lcom/tencent/mm/ui/base/l;
 
-.field final synthetic joE:Landroid/app/Activity;
+.field public lwM:Lcom/tencent/mm/ui/base/n$a;
 
-.field private joy:Landroid/app/ProgressDialog;
+.field public lwN:Lcom/tencent/mm/ui/base/n$b;
 
-.field private joz:Z
-
-.field private uri:Landroid/net/Uri;
-
-.field final synthetic val$intent:Landroid/content/Intent;
+.field private lwR:Lcom/tencent/mm/ui/tools/n$a;
 
 
 # direct methods
-.method constructor <init>(Landroid/content/Intent;Landroid/app/Activity;Ljava/lang/String;Lcom/tencent/mm/ui/tools/k$a;Landroid/content/Intent;I)V
-    .locals 0
+.method public constructor <init>(Landroid/content/Context;)V
+    .locals 1
 
     .prologue
-    .line 140
-    iput-object p1, p0, Lcom/tencent/mm/ui/tools/n;->dUL:Landroid/content/Intent;
+    .line 35
+    invoke-direct {p0, p1}, Lcom/tencent/mm/ui/tools/s;-><init>(Landroid/content/Context;)V
 
-    iput-object p2, p0, Lcom/tencent/mm/ui/tools/n;->joE:Landroid/app/Activity;
+    .line 27
+    const/4 v0, 0x1
 
-    iput-object p3, p0, Lcom/tencent/mm/ui/tools/n;->joB:Ljava/lang/String;
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/n;->hbI:Z
 
-    iput-object p4, p0, Lcom/tencent/mm/ui/tools/n;->joC:Lcom/tencent/mm/ui/tools/k$a;
+    .line 37
+    invoke-static {p1}, Lcom/tencent/mm/ui/p;->ee(Landroid/content/Context;)Landroid/view/LayoutInflater;
 
-    iput-object p5, p0, Lcom/tencent/mm/ui/tools/n;->val$intent:Landroid/content/Intent;
+    move-result-object v0
 
-    iput p6, p0, Lcom/tencent/mm/ui/tools/n;->czx:I
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hI:Landroid/view/LayoutInflater;
 
-    invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
+    .line 38
+    new-instance v0, Lcom/tencent/mm/ui/base/l;
 
+    invoke-direct {v0}, Lcom/tencent/mm/ui/base/l;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hlg:Lcom/tencent/mm/ui/base/l;
+
+    .line 39
     return-void
 .end method
 
@@ -52,230 +64,221 @@
     .locals 1
 
     .prologue
-    .line 140
-    const/4 v0, 0x1
-
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/n;->joz:Z
+    .line 21
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/n;->hbI:Z
 
     return v0
 .end method
 
-.method private varargs aRt()Ljava/lang/Integer;
-    .locals 5
+.method static synthetic b(Lcom/tencent/mm/ui/tools/n;)Lcom/tencent/mm/ui/base/l;
+    .locals 1
 
     .prologue
-    const/4 v4, 0x0
+    .line 21
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hlg:Lcom/tencent/mm/ui/base/l;
 
-    .line 170
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->uri:Landroid/net/Uri;
+    return-object v0
+.end method
 
-    if-nez v0, :cond_0
+.method static synthetic c(Lcom/tencent/mm/ui/tools/n;)Landroid/view/LayoutInflater;
+    .locals 1
 
-    .line 180
-    :goto_0
-    return-object v4
+    .prologue
+    .line 21
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hI:Landroid/view/LayoutInflater;
 
-    .line 174
+    return-object v0
+.end method
+
+.method static synthetic d(Lcom/tencent/mm/ui/tools/n;)Lcom/tencent/mm/ui/base/n$a;
+    .locals 1
+
+    .prologue
+    .line 21
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->lwM:Lcom/tencent/mm/ui/base/n$a;
+
+    return-object v0
+.end method
+
+.method static synthetic e(Lcom/tencent/mm/ui/tools/n;)Lcom/tencent/mm/ui/base/n$b;
+    .locals 1
+
+    .prologue
+    .line 21
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->lwN:Lcom/tencent/mm/ui/base/n$b;
+
+    return-object v0
+.end method
+
+.method static synthetic f(Lcom/tencent/mm/ui/tools/n;)Ljava/lang/CharSequence;
+    .locals 2
+
+    .prologue
+    .line 21
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hlg:Lcom/tencent/mm/ui/base/l;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/l;->lW:Ljava/lang/CharSequence;
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hlg:Lcom/tencent/mm/ui/base/l;
+
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/l;->lW:Ljava/lang/CharSequence;
+
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
+
+    move-result v0
+
+    if-nez v0, :cond_1
+
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->uri:Landroid/net/Uri;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->mContext:Landroid/content/Context;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/e;->m(Landroid/net/Uri;)Landroid/graphics/Bitmap;
-
-    move-result-object v0
-
-    .line 175
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/n;->joB:Ljava/lang/String;
-
-    invoke-static {v1, v0}, Lcom/tencent/mm/ui/tools/k;->u(Ljava/lang/String;Landroid/graphics/Bitmap;)Ljava/lang/String;
+    invoke-virtual {v0}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
 
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/n;->filePath:Ljava/lang/String;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    const v1, 0x7f0b0dde
 
-    goto :goto_0
+    invoke-virtual {v0, v1}, Landroid/content/res/Resources;->getString(I)Ljava/lang/String;
 
-    .line 177
-    :catch_0
-    move-exception v0
+    move-result-object v0
 
-    .line 178
-    const-string/jumbo v1, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    :goto_0
+    return-object v0
 
-    const-string/jumbo v2, "doInBackground"
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hlg:Lcom/tencent/mm/ui/base/l;
 
-    const/4 v3, 0x0
-
-    new-array v3, v3, [Ljava/lang/Object;
-
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/l;->lW:Ljava/lang/CharSequence;
 
     goto :goto_0
 .end method
 
 
 # virtual methods
-.method protected final synthetic doInBackground([Ljava/lang/Object;)Ljava/lang/Object;
-    .locals 1
+.method protected final Li()Landroid/widget/BaseAdapter;
+    .locals 2
 
     .prologue
-    .line 140
-    invoke-direct {p0}, Lcom/tencent/mm/ui/tools/n;->aRt()Ljava/lang/Integer;
+    .line 195
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->lwR:Lcom/tencent/mm/ui/tools/n$a;
 
-    move-result-object v0
+    if-nez v0, :cond_0
+
+    .line 196
+    new-instance v0, Lcom/tencent/mm/ui/tools/n$a;
+
+    const/4 v1, 0x0
+
+    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/ui/tools/n$a;-><init>(Lcom/tencent/mm/ui/tools/n;B)V
+
+    iput-object v0, p0, Lcom/tencent/mm/ui/tools/n;->lwR:Lcom/tencent/mm/ui/tools/n$a;
+
+    .line 198
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->lwR:Lcom/tencent/mm/ui/tools/n$a;
 
     return-object v0
 .end method
 
-.method protected final synthetic onPostExecute(Ljava/lang/Object;)V
-    .locals 5
+.method public final bH()Z
+    .locals 2
 
     .prologue
-    .line 140
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/n;->joz:Z
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->filePath:Ljava/lang/String;
-
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
-
-    move-result v0
-
-    if-nez v0, :cond_1
-
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->joC:Lcom/tencent/mm/ui/tools/k$a;
+    .line 60
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hle:Lcom/tencent/mm/ui/base/n$c;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->val$intent:Landroid/content/Intent;
+    .line 61
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hle:Lcom/tencent/mm/ui/base/n$c;
 
-    const-string/jumbo v1, "CropImage_OutputPath"
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/n;->hlg:Lcom/tencent/mm/ui/base/l;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/n;->joC:Lcom/tencent/mm/ui/tools/k$a;
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/n$c;->a(Lcom/tencent/mm/ui/base/l;)V
 
-    iget-object v3, p0, Lcom/tencent/mm/ui/tools/n;->filePath:Ljava/lang/String;
-
-    invoke-interface {v2, v3}, Lcom/tencent/mm/ui/tools/k$a;->rG(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
-
+    .line 63
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->val$intent:Landroid/content/Intent;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hlg:Lcom/tencent/mm/ui/base/l;
 
-    const-string/jumbo v1, "CropImage_ImgPath"
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/l;->lW:Ljava/lang/CharSequence;
 
-    iget-object v2, p0, Lcom/tencent/mm/ui/tools/n;->filePath:Ljava/lang/String;
+    if-eqz v0, :cond_1
 
-    invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hlg:Lcom/tencent/mm/ui/base/l;
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->joE:Landroid/app/Activity;
+    iget-object v0, v0, Lcom/tencent/mm/ui/base/l;->lW:Ljava/lang/CharSequence;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/n;->val$intent:Landroid/content/Intent;
+    invoke-interface {v0}, Ljava/lang/CharSequence;->length()I
 
-    iget v2, p0, Lcom/tencent/mm/ui/tools/n;->czx:I
+    move-result v0
 
-    invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->startActivityForResult(Landroid/content/Intent;I)V
+    if-lez v0, :cond_1
+
+    const/4 v0, 0x1
 
     :goto_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->joy:Landroid/app/ProgressDialog;
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/n;->hbI:Z
 
-    invoke-virtual {v0}, Landroid/app/ProgressDialog;->dismiss()V
+    .line 64
+    invoke-super {p0}, Lcom/tencent/mm/ui/tools/s;->bH()Z
 
-    return-void
+    move-result v0
 
+    return v0
+
+    .line 63
     :cond_1
-    const-string/jumbo v0, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
-
-    const-string/jumbo v1, "onPostExecute error, filePath:%s"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    iget-object v4, p0, Lcom/tencent/mm/ui/tools/n;->filePath:Ljava/lang/String;
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method protected final onPreExecute()V
-    .locals 5
+.method public final onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)V
+    .locals 2
 
     .prologue
-    const/4 v4, 0x0
+    .line 71
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/n;->hbI:Z
 
-    .line 151
-    :try_start_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->dUL:Landroid/content/Intent;
+    if-eqz v0, :cond_0
 
-    invoke-virtual {v0}, Landroid/content/Intent;->getData()Landroid/net/Uri;
+    if-nez p3, :cond_0
 
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/n;->uri:Landroid/net/Uri;
-
-    .line 153
-    const/4 v0, 0x0
-
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/tools/n;->joz:Z
-
-    .line 154
-    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->joE:Landroid/app/Activity;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/n;->joE:Landroid/app/Activity;
-
-    sget v2, Lcom/tencent/mm/a$n;->app_tip:I
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    iget-object v1, p0, Lcom/tencent/mm/ui/tools/n;->joE:Landroid/app/Activity;
-
-    sget v2, Lcom/tencent/mm/a$n;->app_getting_img:I
-
-    invoke-virtual {v1, v2}, Landroid/app/Activity;->getString(I)Ljava/lang/String;
-
-    move-result-object v1
-
-    const/4 v2, 0x1
-
-    new-instance v3, Lcom/tencent/mm/ui/tools/o;
-
-    invoke-direct {v3, p0}, Lcom/tencent/mm/ui/tools/o;-><init>(Lcom/tencent/mm/ui/tools/n;)V
-
-    invoke-static {v0, v1, v2, v3}, Lcom/tencent/mm/ui/base/h;->a(Landroid/content/Context;Ljava/lang/String;ZLandroid/content/DialogInterface$OnCancelListener;)Lcom/tencent/mm/ui/base/bn;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/ui/tools/n;->joy:Landroid/app/ProgressDialog;
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    .line 165
+    .line 84
     :goto_0
     return-void
 
-    .line 162
-    :catch_0
-    move-exception v0
+    .line 75
+    :cond_0
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/tools/n;->hbI:Z
 
-    .line 163
-    const-string/jumbo v1, "!44@/B4Tb64lLpL3WgZWB2MnffCdxn0I3bAMmtDdvU5PFPM="
+    if-eqz v0, :cond_1
 
-    const-string/jumbo v2, "onPreExecute"
+    .line 76
+    add-int/lit8 p3, p3, -0x1
 
-    new-array v3, v4, [Ljava/lang/Object;
+    .line 79
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hlf:Lcom/tencent/mm/ui/base/n$d;
 
-    invoke-static {v1, v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    if-eqz v0, :cond_2
+
+    .line 80
+    iget-object v0, p0, Lcom/tencent/mm/ui/tools/n;->hlf:Lcom/tencent/mm/ui/base/n$d;
+
+    iget-object v1, p0, Lcom/tencent/mm/ui/tools/n;->hlg:Lcom/tencent/mm/ui/base/l;
+
+    invoke-virtual {v1, p3}, Lcom/tencent/mm/ui/base/l;->getItem(I)Landroid/view/MenuItem;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, p3}, Lcom/tencent/mm/ui/base/n$d;->d(Landroid/view/MenuItem;I)V
+
+    .line 83
+    :cond_2
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/tools/n;->dismiss()V
 
     goto :goto_0
 .end method

@@ -1,30 +1,30 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ix
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGf = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aFh = new a();
+  public b aFi = new b();
   
   public ix()
   {
-    id = "UINotify";
-    hXT = atO;
+    id = "RadarSayHiMsg";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int auA;
-    public boolean auv = false;
-    public int auw;
-    public int aux;
-    public int auy;
-    public String auz;
-    public String desc;
-    public String url;
+    public String apb;
+    public String axY;
+  }
+  
+  public static final class b
+  {
+    public boolean atR = false;
   }
 }
 

@@ -2,7 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class n$a
 {
-  public int auk = 0;
+  public boolean asw;
 }
 
 /* Location:

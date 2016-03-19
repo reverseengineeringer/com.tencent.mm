@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field private fhX:Ljava/lang/ref/WeakReference;
+.field private gyD:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
@@ -33,7 +33,7 @@
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->fhX:Ljava/lang/ref/WeakReference;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->gyD:Ljava/lang/ref/WeakReference;
 
     .line 52
     return-void
@@ -44,14 +44,14 @@
 
     .prologue
     .line 40
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->fhX:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->gyD:Ljava/lang/ref/WeakReference;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final aJ(II)V
+.method public final aB(II)V
     .locals 7
 
     .prologue
@@ -62,7 +62,7 @@
     const/4 v5, 0x0
 
     .line 56
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->fhX:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->gyD:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -75,7 +75,7 @@
 
     const-string/jumbo v1, "onGetVideoSizeEnd, textureView is null, do clear"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 58
     invoke-virtual {p0}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->clear()V
@@ -104,10 +104,10 @@
 
     aput-object v3, v2, v6
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 62
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->fhX:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->gyD:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -122,7 +122,7 @@
     .line 63
     iget v2, v1, Landroid/view/ViewGroup$LayoutParams;->height:I
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->fhX:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->gyD:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -141,7 +141,7 @@
     if-eq v2, v0, :cond_1
 
     .line 64
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->fhX:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->gyD:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -156,7 +156,7 @@
     iput v0, v1, Landroid/view/ViewGroup$LayoutParams;->width:I
 
     .line 65
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->fhX:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->gyD:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -197,17 +197,17 @@
 
     aput-object v4, v3, v6
 
-    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 67
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ad;->isMainThread()Z
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/ab;->isMainThread()Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->fhX:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->gyD:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -220,7 +220,7 @@
     .line 78
     :cond_1
     :goto_1
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->fhX:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->gyD:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -232,7 +232,7 @@
 
     move-result-object v1
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->fhX:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->gyD:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -244,7 +244,7 @@
 
     move-result v2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->fhX:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;->gyD:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -261,27 +261,27 @@
     move-result-object v0
 
     .line 80
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b;->fhd:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/decode/a/b;->gxj:Landroid/graphics/Bitmap;
 
     goto/16 :goto_0
 
     .line 70
     :cond_2
-    new-instance v0, Lcom/tencent/mm/plugin/sight/decode/ui/d;
+    new-instance v0, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b$1;
 
-    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/plugin/sight/decode/ui/d;-><init>(Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;Landroid/view/ViewGroup$LayoutParams;)V
+    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b$1;-><init>(Lcom/tencent/mm/plugin/sight/decode/ui/SightPlayTextureView$b;Landroid/view/ViewGroup$LayoutParams;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->g(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
 
     goto :goto_1
 .end method
 
-.method protected final ajo()I
+.method protected final avI()I
     .locals 1
 
     .prologue
     .line 46
-    sget v0, Lcom/tencent/mm/a$a;->sight_loop:I
+    const v0, 0x7f020040
 
     return v0
 .end method

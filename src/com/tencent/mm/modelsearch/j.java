@@ -1,77 +1,31 @@
 package com.tencent.mm.modelsearch;
 
-import com.tencent.mm.plugin.report.service.KVReportJni.IDKeyDataInfo;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.ArrayList;
+import android.database.Cursor;
+import com.tencent.kingkong.database.SQLiteStatement;
 
-public final class j
+public abstract interface j
 {
-  public static void a(String paramString, boolean paramBoolean, int paramInt1, int paramInt2)
-  {
-    if (paramInt2 == 0)
-    {
-      if (paramBoolean)
-      {
-        com.tencent.mm.plugin.report.service.j.eJZ.f(11062, new Object[] { paramString, Integer.valueOf(3), Integer.valueOf(1) });
-        return;
-      }
-      if (paramInt1 > 0)
-      {
-        com.tencent.mm.plugin.report.service.j.eJZ.f(11062, new Object[] { paramString, Integer.valueOf(2), Integer.valueOf(1) });
-        return;
-      }
-      com.tencent.mm.plugin.report.service.j.eJZ.f(11062, new Object[] { paramString, Integer.valueOf(1), Integer.valueOf(1) });
-      return;
-    }
-    switch (paramInt2)
-    {
-    default: 
-      paramInt2 = 0;
-    }
-    while (paramBoolean)
-    {
-      com.tencent.mm.plugin.report.service.j.eJZ.f(11062, new Object[] { paramString, Integer.valueOf(3), Integer.valueOf(paramInt2) });
-      return;
-      paramInt2 = 2;
-      continue;
-      paramInt2 = 3;
-      continue;
-      paramInt2 = 4;
-      continue;
-      paramInt2 = 5;
-      continue;
-      paramInt2 = 6;
-    }
-    if (paramInt1 > 0)
-    {
-      com.tencent.mm.plugin.report.service.j.eJZ.f(11062, new Object[] { paramString, Integer.valueOf(2), Integer.valueOf(paramInt2) });
-      return;
-    }
-    com.tencent.mm.plugin.report.service.j.eJZ.f(11062, new Object[] { paramString, Integer.valueOf(1), Integer.valueOf(paramInt2) });
-  }
+  public abstract boolean X(int paramInt1, int paramInt2);
   
-  public static void h(int paramInt, long paramLong)
-  {
-    t.v("!44@/B4Tb64lLpKLxeMowbLUcAFldVd3xo5jMHEnkiX3cRU=", "reportIDKey: type=%d time=%d", new Object[] { Integer.valueOf(paramInt), Long.valueOf(paramLong) });
-    switch (paramInt)
-    {
-    default: 
-      return;
-    }
-    Object localObject = new KVReportJni.IDKeyDataInfo();
-    ((KVReportJni.IDKeyDataInfo)localObject).SetID(79);
-    ((KVReportJni.IDKeyDataInfo)localObject).SetKey(paramInt + 1);
-    ((KVReportJni.IDKeyDataInfo)localObject).SetValue((int)paramLong);
-    KVReportJni.IDKeyDataInfo localIDKeyDataInfo = new KVReportJni.IDKeyDataInfo();
-    localIDKeyDataInfo.SetID(79);
-    localIDKeyDataInfo.SetKey(paramInt + 2);
-    localIDKeyDataInfo.SetValue(1);
-    ArrayList localArrayList = new ArrayList();
-    localArrayList.add(localObject);
-    localArrayList.add(localIDKeyDataInfo);
-    localObject = com.tencent.mm.plugin.report.service.j.eJZ;
-    com.tencent.mm.plugin.report.service.j.d(localArrayList, false);
-  }
+  public abstract void beginTransaction();
+  
+  public abstract void commit();
+  
+  public abstract SQLiteStatement compileStatement(String paramString);
+  
+  public abstract long d(long paramLong1, long paramLong2);
+  
+  public abstract void e(long paramLong1, long paramLong2);
+  
+  public abstract void execSQL(String paramString);
+  
+  public abstract void execSQL(String paramString, Object[] paramArrayOfObject);
+  
+  public abstract boolean iB(String paramString);
+  
+  public abstract boolean inTransaction();
+  
+  public abstract Cursor rawQuery(String paramString, String[] paramArrayOfString);
 }
 
 /* Location:

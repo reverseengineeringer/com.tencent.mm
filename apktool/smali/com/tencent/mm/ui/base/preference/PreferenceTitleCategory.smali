@@ -38,16 +38,14 @@
     invoke-direct {p0, p1, p2, p3}, Lcom/tencent/mm/ui/base/preference/PreferenceCategory;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
     .line 22
-    invoke-virtual {p0}, Lcom/tencent/mm/ui/base/preference/PreferenceTitleCategory;->getLayoutResource()I
+    iget v0, p0, Lcom/tencent/mm/ui/base/preference/Preference;->kMt:I
 
-    move-result v0
-
-    sget v1, Lcom/tencent/mm/a$k;->mm_preference_info_normaltext:I
+    const v1, 0x7f0a0589
 
     if-eq v0, v1, :cond_0
 
     .line 23
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_info_bigtext:I
+    const v0, 0x7f0a0590
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/preference/PreferenceTitleCategory;->setLayoutResource(I)V
 

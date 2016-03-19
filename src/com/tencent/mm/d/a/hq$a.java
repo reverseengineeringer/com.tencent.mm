@@ -2,9 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class hq$a
 {
-  public String azV;
-  public long azW;
-  public String azX;
+  public String ajh;
+  public String aji;
+  public int type;
 }
 
 /* Location:

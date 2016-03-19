@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private eqt:Landroid/widget/ImageView;
-
-.field public gJC:Landroid/view/View$OnClickListener;
-
-.field private gYc:Landroid/graphics/Bitmap;
+.field private fAr:Landroid/widget/ImageView;
 
 .field private height:I
+
+.field private iOu:Landroid/graphics/Bitmap;
+
+.field public iyh:Landroid/view/View$OnClickListener;
 
 
 # direct methods
@@ -40,7 +40,7 @@
     iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->height:I
 
     .line 36
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference:I
+    const v0, 0x7f0a05d6
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->setLayoutResource(I)V
 
@@ -58,12 +58,12 @@
     invoke-super {p0, p1}, Lcom/tencent/mm/ui/base/preference/Preference;->onBindView(Landroid/view/View;)V
 
     .line 78
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->eqt:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->fAr:Landroid/widget/ImageView;
 
     if-nez v0, :cond_0
 
     .line 79
-    sget v0, Lcom/tencent/mm/a$i;->image_headimg:I
+    const v0, 0x7f070ee7
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -71,42 +71,42 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->eqt:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->fAr:Landroid/widget/ImageView;
 
     .line 82
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->gJC:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->iyh:Landroid/view/View$OnClickListener;
 
     if-eqz v0, :cond_1
 
     .line 83
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->eqt:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->fAr:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->gJC:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->iyh:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 86
     :cond_1
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->gYc:Landroid/graphics/Bitmap;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->iOu:Landroid/graphics/Bitmap;
 
     if-eqz v0, :cond_2
 
     .line 87
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->eqt:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->fAr:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->gYc:Landroid/graphics/Bitmap;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->iOu:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
     .line 88
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->gYc:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->iOu:Landroid/graphics/Bitmap;
 
     .line 91
     :cond_2
-    sget v0, Lcom/tencent/mm/a$i;->mm_preference_ll_id:I
+    const v0, 0x7f07069a
 
     invoke-virtual {p1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -141,7 +141,7 @@
     move-result-object v1
 
     .line 48
-    sget v0, Lcom/tencent/mm/a$i;->content:I
+    const v0, 0x7f0700c1
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -155,12 +155,12 @@
     .line 51
     iget-object v2, p0, Lcom/tencent/mm/ui/base/preference/Preference;->mContext:Landroid/content/Context;
 
-    sget v3, Lcom/tencent/mm/a$k;->mm_preference_content_headimg:I
+    const v3, 0x7f0a04c8
 
     invoke-static {v2, v3, v0}, Landroid/view/View;->inflate(Landroid/content/Context;ILandroid/view/ViewGroup;)Landroid/view/View;
 
     .line 52
-    sget v0, Lcom/tencent/mm/a$i;->image_headimg:I
+    const v0, 0x7f070ee7
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -168,28 +168,28 @@
 
     check-cast v0, Landroid/widget/ImageView;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->eqt:Landroid/widget/ImageView;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->fAr:Landroid/widget/ImageView;
 
     .line 53
     return-object v1
 .end method
 
-.method public final r(Landroid/graphics/Bitmap;)V
+.method public final q(Landroid/graphics/Bitmap;)V
     .locals 1
 
     .prologue
     .line 65
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->gYc:Landroid/graphics/Bitmap;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->iOu:Landroid/graphics/Bitmap;
 
     .line 67
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->eqt:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->fAr:Landroid/widget/ImageView;
 
     if-eqz v0, :cond_0
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->eqt:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->fAr:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
@@ -199,7 +199,7 @@
 
     .line 70
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->gYc:Landroid/graphics/Bitmap;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/preference/HeadImgPreference;->iOu:Landroid/graphics/Bitmap;
 
     goto :goto_0
 .end method

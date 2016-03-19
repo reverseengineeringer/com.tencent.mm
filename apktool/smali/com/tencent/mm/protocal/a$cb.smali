@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$cb;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -16,20 +16,18 @@
 
 # direct methods
 .method public constructor <init>()V
-    .locals 4
+    .locals 3
 
     .prologue
-    .line 634
-    const-string/jumbo v0, "sendAppMessage"
+    const/4 v2, 0x0
 
-    const-string/jumbo v1, "send_app_msg"
+    .line 930
+    const-string/jumbo v0, "log"
 
-    const/4 v2, 0x6
+    const-string/jumbo v1, ""
 
-    const/4 v3, 0x1
+    invoke-direct {p0, v0, v1, v2, v2}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
-
-    .line 635
+    .line 931
     return-void
 .end method

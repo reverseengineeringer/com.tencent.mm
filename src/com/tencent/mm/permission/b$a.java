@@ -2,19 +2,19 @@ package com.tencent.mm.permission;
 
 final class b$a
 {
-  public int bUI;
-  public int bUJ;
-  public int bUK;
-  public int bUL;
-  public int bUM;
+  public int clF;
+  public int clG;
+  public int clH;
+  public int clI;
+  public int clJ;
   
   public b$a(int paramInt1, int paramInt2, int paramInt3, int paramInt4, int paramInt5)
   {
-    bUI = paramInt1;
-    bUJ = paramInt2;
-    bUK = paramInt3;
-    bUL = paramInt4;
-    bUM = paramInt5;
+    clF = paramInt1;
+    clG = paramInt2;
+    clH = paramInt3;
+    clI = paramInt4;
+    clJ = paramInt5;
   }
 }
 

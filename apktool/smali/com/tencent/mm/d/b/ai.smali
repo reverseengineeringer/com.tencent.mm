@@ -1,276 +1,144 @@
 .class public abstract Lcom/tencent/mm/d/b/ai;
-.super Lcom/tencent/mm/sdk/g/ae;
+.super Lcom/tencent/mm/sdk/h/c;
 .source "SourceFile"
 
 
 # static fields
-.field private static final aHH:I
+.field private static final aLG:I
 
-.field public static final aHq:[Ljava/lang/String;
+.field public static final aLn:[Ljava/lang/String;
 
-.field private static final aIR:I
+.field private static final aMf:I
 
-.field private static final aKK:I
+.field private static final aMk:I
 
-.field private static final aLe:I
+.field private static final aQR:I
 
-.field private static final aUI:I
+.field private static final aWT:I
 
-.field private static final aUJ:I
+.field private static final aXA:I
 
-.field private static final aUK:I
-
-.field private static final aUL:I
-
-.field private static final aUM:I
-
-.field private static final aUN:I
-
-.field private static final aUO:I
-
-.field private static final aUP:I
-
-.field private static final aUQ:I
-
-.field private static final aUR:I
-
-.field private static final aUS:I
-
-.field private static final aUT:I
-
-.field private static final aUU:I
+.field private static final aXz:I
 
 
 # instance fields
-.field private aID:Z
+.field private aLN:Z
 
-.field private aKw:Z
+.field private aLS:Z
 
-.field private aLa:Z
+.field private aQB:Z
 
-.field private aUA:Z
+.field private aWR:Z
 
-.field private aUB:Z
+.field private aXx:Z
 
-.field private aUC:Z
+.field private aXy:Z
 
-.field private aUD:Z
+.field public field_content:Ljava/lang/String;
 
-.field private aUE:Z
+.field public field_localId:J
 
-.field private aUF:Z
+.field public field_subtype:I
 
-.field private aUG:Z
+.field public field_tagContent:Ljava/lang/String;
 
-.field private aUH:Z
+.field public field_time:J
 
-.field private aUv:Z
-
-.field private aUw:Z
-
-.field private aUx:Z
-
-.field private aUy:Z
-
-.field private aUz:Z
-
-.field public field_big_url:Ljava/lang/String;
-
-.field public field_contecttype:Ljava/lang/String;
-
-.field public field_googlecgistatus:I
-
-.field public field_googlegmail:Ljava/lang/String;
-
-.field public field_googleid:Ljava/lang/String;
-
-.field public field_googleitemid:Ljava/lang/String;
-
-.field public field_googlename:Ljava/lang/String;
-
-.field public field_googlenamepy:Ljava/lang/String;
-
-.field public field_googlephotourl:Ljava/lang/String;
-
-.field public field_nickname:Ljava/lang/String;
-
-.field public field_nicknameqp:Ljava/lang/String;
-
-.field public field_ret:I
-
-.field public field_small_url:Ljava/lang/String;
-
-.field public field_status:I
-
-.field public field_username:Ljava/lang/String;
-
-.field public field_usernamepy:Ljava/lang/String;
+.field public field_type:I
 
 
 # direct methods
 .method static constructor <clinit>()V
-    .locals 1
+    .locals 3
 
     .prologue
     .line 10
-    const/4 v0, 0x0
+    const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
 
-    sput-object v0, Lcom/tencent/mm/d/b/ai;->aHq:[Ljava/lang/String;
+    const/4 v1, 0x0
 
-    .line 134
-    const-string/jumbo v0, "googleid"
+    const-string/jumbo v2, "CREATE INDEX IF NOT EXISTS FavSearchInfo_Content_Index ON FavSearchInfo(content)"
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    aput-object v2, v0, v1
 
-    move-result v0
+    const/4 v1, 0x1
 
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUI:I
+    const-string/jumbo v2, "CREATE INDEX IF NOT EXISTS FavSearchInfo_TagContent_Index ON FavSearchInfo(tagContent)"
 
-    .line 135
-    const-string/jumbo v0, "googlename"
+    aput-object v2, v0, v1
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
+    const/4 v1, 0x2
 
-    move-result v0
+    const-string/jumbo v2, "CREATE INDEX IF NOT EXISTS FavSearchInfo_SubType_Index ON FavSearchInfo(subtype)"
 
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUJ:I
+    aput-object v2, v0, v1
 
-    .line 136
-    const-string/jumbo v0, "googlephotourl"
+    sput-object v0, Lcom/tencent/mm/d/b/ai;->aLn:[Ljava/lang/String;
 
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUK:I
-
-    .line 137
-    const-string/jumbo v0, "googlegmail"
+    .line 67
+    const-string/jumbo v0, "localId"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUL:I
+    sput v0, Lcom/tencent/mm/d/b/ai;->aWT:I
 
-    .line 138
-    const-string/jumbo v0, "username"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ai;->aKK:I
-
-    .line 139
-    const-string/jumbo v0, "nickname"
+    .line 68
+    const-string/jumbo v0, "content"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ai;->aLe:I
+    sput v0, Lcom/tencent/mm/d/b/ai;->aMk:I
 
-    .line 140
-    const-string/jumbo v0, "nicknameqp"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUM:I
-
-    .line 141
-    const-string/jumbo v0, "usernamepy"
+    .line 69
+    const-string/jumbo v0, "tagContent"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUN:I
+    sput v0, Lcom/tencent/mm/d/b/ai;->aXz:I
 
-    .line 142
-    const-string/jumbo v0, "small_url"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUO:I
-
-    .line 143
-    const-string/jumbo v0, "big_url"
+    .line 70
+    const-string/jumbo v0, "time"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUP:I
+    sput v0, Lcom/tencent/mm/d/b/ai;->aQR:I
 
-    .line 144
-    const-string/jumbo v0, "ret"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUQ:I
-
-    .line 145
-    const-string/jumbo v0, "status"
+    .line 71
+    const-string/jumbo v0, "type"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ai;->aIR:I
+    sput v0, Lcom/tencent/mm/d/b/ai;->aMf:I
 
-    .line 146
-    const-string/jumbo v0, "googleitemid"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUR:I
-
-    .line 147
-    const-string/jumbo v0, "googlecgistatus"
+    .line 72
+    const-string/jumbo v0, "subtype"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUS:I
+    sput v0, Lcom/tencent/mm/d/b/ai;->aXA:I
 
-    .line 148
-    const-string/jumbo v0, "contecttype"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUT:I
-
-    .line 149
-    const-string/jumbo v0, "googlenamepy"
-
-    invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
-
-    move-result v0
-
-    sput v0, Lcom/tencent/mm/d/b/ai;->aUU:I
-
-    .line 150
+    .line 73
     const-string/jumbo v0, "rowid"
 
     invoke-virtual {v0}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    sput v0, Lcom/tencent/mm/d/b/ai;->aHH:I
+    sput v0, Lcom/tencent/mm/d/b/ai;->aLG:I
 
     return-void
 .end method
@@ -282,57 +150,241 @@
     const/4 v0, 0x1
 
     .line 7
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/g/ae;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/c;-><init>()V
 
-    .line 29
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUv:Z
+    .line 22
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aWR:Z
 
-    .line 31
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUw:Z
+    .line 24
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aLS:Z
 
-    .line 33
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUx:Z
+    .line 26
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aXx:Z
 
-    .line 35
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUy:Z
+    .line 28
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aQB:Z
 
-    .line 37
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aKw:Z
+    .line 30
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aLN:Z
 
-    .line 39
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aLa:Z
-
-    .line 41
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUz:Z
-
-    .line 43
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUA:Z
-
-    .line 45
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUB:Z
-
-    .line 47
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUC:Z
-
-    .line 49
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUD:Z
-
-    .line 51
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aID:Z
-
-    .line 53
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUE:Z
-
-    .line 55
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUF:Z
-
-    .line 57
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUG:Z
-
-    .line 59
-    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aUH:Z
+    .line 32
+    iput-boolean v0, p0, Lcom/tencent/mm/d/b/ai;->aXy:Z
 
     return-void
+.end method
+
+.method public static lY()Lcom/tencent/mm/sdk/h/c$a;
+    .locals 6
+
+    .prologue
+    const/4 v5, 0x6
+
+    .line 34
+    new-instance v0, Lcom/tencent/mm/sdk/h/c$a;
+
+    invoke-direct {v0}, Lcom/tencent/mm/sdk/h/c$a;-><init>()V
+
+    .line 35
+    new-array v1, v5, [Ljava/lang/reflect/Field;
+
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->ceD:[Ljava/lang/reflect/Field;
+
+    .line 36
+    const/4 v1, 0x7
+
+    new-array v1, v1, [Ljava/lang/String;
+
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    .line 37
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    .line 38
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x0
+
+    const-string/jumbo v4, "localId"
+
+    aput-object v4, v2, v3
+
+    .line 39
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "localId"
+
+    const-string/jumbo v4, "LONG PRIMARY KEY "
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 40
+    const-string/jumbo v2, " localId LONG PRIMARY KEY "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 41
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 42
+    const-string/jumbo v2, "localId"
+
+    iput-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYw:Ljava/lang/String;
+
+    .line 43
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x1
+
+    const-string/jumbo v4, "content"
+
+    aput-object v4, v2, v3
+
+    .line 44
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "content"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 45
+    const-string/jumbo v2, " content TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 46
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 47
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x2
+
+    const-string/jumbo v4, "tagContent"
+
+    aput-object v4, v2, v3
+
+    .line 48
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "tagContent"
+
+    const-string/jumbo v4, "TEXT"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 49
+    const-string/jumbo v2, " tagContent TEXT"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 50
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 51
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x3
+
+    const-string/jumbo v4, "time"
+
+    aput-object v4, v2, v3
+
+    .line 52
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "time"
+
+    const-string/jumbo v4, "LONG"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 53
+    const-string/jumbo v2, " time LONG"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 54
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 55
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x4
+
+    const-string/jumbo v4, "type"
+
+    aput-object v4, v2, v3
+
+    .line 56
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "type"
+
+    const-string/jumbo v4, "INTEGER"
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 57
+    const-string/jumbo v2, " type INTEGER"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 58
+    const-string/jumbo v2, ", "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 59
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const/4 v3, 0x5
+
+    const-string/jumbo v4, "subtype"
+
+    aput-object v4, v2, v3
+
+    .line 60
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->jYx:Ljava/util/Map;
+
+    const-string/jumbo v3, "subtype"
+
+    const-string/jumbo v4, "INTEGER default \'0\' "
+
+    invoke-interface {v2, v3, v4}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    .line 61
+    const-string/jumbo v2, " subtype INTEGER default \'0\' "
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    .line 62
+    iget-object v2, v0, Lcom/tencent/mm/sdk/h/c$a;->blR:[Ljava/lang/String;
+
+    const-string/jumbo v3, "rowid"
+
+    aput-object v3, v2, v5
+
+    .line 63
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, v0, Lcom/tencent/mm/sdk/h/c$a;->jYy:Ljava/lang/String;
+
+    .line 65
+    return-object v0
 .end method
 
 
@@ -341,19 +393,19 @@
     .locals 5
 
     .prologue
-    .line 153
+    .line 76
     invoke-interface {p1}, Landroid/database/Cursor;->getColumnNames()[Ljava/lang/String;
 
     move-result-object v1
 
-    .line 154
+    .line 77
     if-nez v1, :cond_1
 
-    .line 210
+    .line 103
     :cond_0
     return-void
 
-    .line 155
+    .line 78
     :cond_1
     const/4 v0, 0x0
 
@@ -362,520 +414,146 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 156
+    .line 79
     aget-object v3, v1, v0
 
     invoke-virtual {v3}, Ljava/lang/String;->hashCode()I
 
     move-result v3
 
-    .line 157
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUI:I
+    .line 80
+    sget v4, Lcom/tencent/mm/d/b/ai;->aWT:I
 
     if-ne v4, v3, :cond_3
 
-    .line 158
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+    .line 81
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-object v3
+    move-result-wide v3
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_googleid:Ljava/lang/String;
+    iput-wide v3, p0, Lcom/tencent/mm/d/b/ai;->field_localId:J
 
-    .line 155
+    .line 82
+    const/4 v3, 0x1
+
+    iput-boolean v3, p0, Lcom/tencent/mm/d/b/ai;->aWR:Z
+
+    .line 78
     :cond_2
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 160
+    .line 84
     :cond_3
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUJ:I
+    sget v4, Lcom/tencent/mm/d/b/ai;->aMk:I
 
     if-ne v4, v3, :cond_4
 
-    .line 161
+    .line 85
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_googlename:Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_content:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 163
+    .line 87
     :cond_4
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUK:I
+    sget v4, Lcom/tencent/mm/d/b/ai;->aXz:I
 
     if-ne v4, v3, :cond_5
 
-    .line 164
+    .line 88
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v3
 
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_googlephotourl:Ljava/lang/String;
+    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_tagContent:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 166
+    .line 90
     :cond_5
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUL:I
+    sget v4, Lcom/tencent/mm/d/b/ai;->aQR:I
 
     if-ne v4, v3, :cond_6
 
-    .line 167
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_googlegmail:Ljava/lang/String;
-
-    goto :goto_1
-
-    .line 169
-    :cond_6
-    sget v4, Lcom/tencent/mm/d/b/ai;->aKK:I
-
-    if-ne v4, v3, :cond_7
-
-    .line 170
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_username:Ljava/lang/String;
-
-    goto :goto_1
-
-    .line 172
-    :cond_7
-    sget v4, Lcom/tencent/mm/d/b/ai;->aLe:I
-
-    if-ne v4, v3, :cond_8
-
-    .line 173
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_nickname:Ljava/lang/String;
-
-    goto :goto_1
-
-    .line 175
-    :cond_8
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUM:I
-
-    if-ne v4, v3, :cond_9
-
-    .line 176
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_nicknameqp:Ljava/lang/String;
-
-    goto :goto_1
-
-    .line 178
-    :cond_9
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUN:I
-
-    if-ne v4, v3, :cond_a
-
-    .line 179
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_usernamepy:Ljava/lang/String;
-
-    goto :goto_1
-
-    .line 181
-    :cond_a
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUO:I
-
-    if-ne v4, v3, :cond_b
-
-    .line 182
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_small_url:Ljava/lang/String;
-
-    goto :goto_1
-
-    .line 184
-    :cond_b
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUP:I
-
-    if-ne v4, v3, :cond_c
-
-    .line 185
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_big_url:Ljava/lang/String;
-
-    goto :goto_1
-
-    .line 187
-    :cond_c
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUQ:I
-
-    if-ne v4, v3, :cond_d
-
-    .line 188
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v3
-
-    iput v3, p0, Lcom/tencent/mm/d/b/ai;->field_ret:I
-
-    goto :goto_1
-
-    .line 190
-    :cond_d
-    sget v4, Lcom/tencent/mm/d/b/ai;->aIR:I
-
-    if-ne v4, v3, :cond_e
-
-    .line 191
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v3
-
-    iput v3, p0, Lcom/tencent/mm/d/b/ai;->field_status:I
-
-    goto :goto_1
-
-    .line 193
-    :cond_e
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUR:I
-
-    if-ne v4, v3, :cond_f
-
-    .line 194
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_googleitemid:Ljava/lang/String;
-
-    .line 195
-    const/4 v3, 0x1
-
-    iput-boolean v3, p0, Lcom/tencent/mm/d/b/ai;->aUE:Z
-
-    goto/16 :goto_1
-
-    .line 197
-    :cond_f
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUS:I
-
-    if-ne v4, v3, :cond_10
-
-    .line 198
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v3
-
-    iput v3, p0, Lcom/tencent/mm/d/b/ai;->field_googlecgistatus:I
-
-    goto/16 :goto_1
-
-    .line 200
-    :cond_10
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUT:I
-
-    if-ne v4, v3, :cond_11
-
-    .line 201
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_contecttype:Ljava/lang/String;
-
-    goto/16 :goto_1
-
-    .line 203
-    :cond_11
-    sget v4, Lcom/tencent/mm/d/b/ai;->aUU:I
-
-    if-ne v4, v3, :cond_12
-
-    .line 204
-    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    iput-object v3, p0, Lcom/tencent/mm/d/b/ai;->field_googlenamepy:Ljava/lang/String;
-
-    goto/16 :goto_1
-
-    .line 206
-    :cond_12
-    sget v4, Lcom/tencent/mm/d/b/ai;->aHH:I
-
-    if-ne v4, v3, :cond_2
-
-    .line 207
+    .line 91
     invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
 
     move-result-wide v3
 
-    iput-wide v3, p0, Lcom/tencent/mm/d/b/ai;->ibV:J
+    iput-wide v3, p0, Lcom/tencent/mm/d/b/ai;->field_time:J
 
-    goto/16 :goto_1
+    goto :goto_1
+
+    .line 93
+    :cond_6
+    sget v4, Lcom/tencent/mm/d/b/ai;->aMf:I
+
+    if-ne v4, v3, :cond_7
+
+    .line 94
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v3
+
+    iput v3, p0, Lcom/tencent/mm/d/b/ai;->field_type:I
+
+    goto :goto_1
+
+    .line 96
+    :cond_7
+    sget v4, Lcom/tencent/mm/d/b/ai;->aXA:I
+
+    if-ne v4, v3, :cond_8
+
+    .line 97
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v3
+
+    iput v3, p0, Lcom/tencent/mm/d/b/ai;->field_subtype:I
+
+    goto :goto_1
+
+    .line 99
+    :cond_8
+    sget v4, Lcom/tencent/mm/d/b/ai;->aLG:I
+
+    if-ne v4, v3, :cond_2
+
+    .line 100
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
+
+    move-result-wide v3
+
+    iput-wide v3, p0, Lcom/tencent/mm/d/b/ai;->jYv:J
+
+    goto :goto_1
 .end method
 
-.method public final mA()Landroid/content/ContentValues;
+.method public final lX()Landroid/content/ContentValues;
     .locals 5
 
     .prologue
-    .line 213
+    .line 106
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 215
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUv:Z
+    .line 108
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aWR:Z
 
     if-eqz v1, :cond_0
 
-    .line 216
-    const-string/jumbo v1, "googleid"
+    .line 109
+    const-string/jumbo v1, "localId"
 
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_googleid:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 219
-    :cond_0
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUw:Z
-
-    if-eqz v1, :cond_1
-
-    .line 220
-    const-string/jumbo v1, "googlename"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_googlename:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 223
-    :cond_1
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUx:Z
-
-    if-eqz v1, :cond_2
-
-    .line 224
-    const-string/jumbo v1, "googlephotourl"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_googlephotourl:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 227
-    :cond_2
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUy:Z
-
-    if-eqz v1, :cond_3
-
-    .line 228
-    const-string/jumbo v1, "googlegmail"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_googlegmail:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 231
-    :cond_3
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aKw:Z
-
-    if-eqz v1, :cond_4
-
-    .line 232
-    const-string/jumbo v1, "username"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_username:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 235
-    :cond_4
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aLa:Z
-
-    if-eqz v1, :cond_5
-
-    .line 236
-    const-string/jumbo v1, "nickname"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_nickname:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 239
-    :cond_5
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUz:Z
-
-    if-eqz v1, :cond_6
-
-    .line 240
-    const-string/jumbo v1, "nicknameqp"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_nicknameqp:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 243
-    :cond_6
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUA:Z
-
-    if-eqz v1, :cond_7
-
-    .line 244
-    const-string/jumbo v1, "usernamepy"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_usernamepy:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 247
-    :cond_7
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUB:Z
-
-    if-eqz v1, :cond_8
-
-    .line 248
-    const-string/jumbo v1, "small_url"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_small_url:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 251
-    :cond_8
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUC:Z
-
-    if-eqz v1, :cond_9
-
-    .line 252
-    const-string/jumbo v1, "big_url"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_big_url:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 255
-    :cond_9
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUD:Z
-
-    if-eqz v1, :cond_a
-
-    .line 256
-    const-string/jumbo v1, "ret"
-
-    iget v2, p0, Lcom/tencent/mm/d/b/ai;->field_ret:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 259
-    :cond_a
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aID:Z
-
-    if-eqz v1, :cond_b
-
-    .line 260
-    const-string/jumbo v1, "status"
-
-    iget v2, p0, Lcom/tencent/mm/d/b/ai;->field_status:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 263
-    :cond_b
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUE:Z
-
-    if-eqz v1, :cond_c
-
-    .line 264
-    const-string/jumbo v1, "googleitemid"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_googleitemid:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 267
-    :cond_c
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUF:Z
-
-    if-eqz v1, :cond_d
-
-    .line 268
-    const-string/jumbo v1, "googlecgistatus"
-
-    iget v2, p0, Lcom/tencent/mm/d/b/ai;->field_googlecgistatus:I
-
-    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v2
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
-
-    .line 271
-    :cond_d
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUG:Z
-
-    if-eqz v1, :cond_e
-
-    .line 272
-    const-string/jumbo v1, "contecttype"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_contecttype:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 275
-    :cond_e
-    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aUH:Z
-
-    if-eqz v1, :cond_f
-
-    .line 276
-    const-string/jumbo v1, "googlenamepy"
-
-    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_googlenamepy:Ljava/lang/String;
-
-    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 279
-    :cond_f
-    iget-wide v1, p0, Lcom/tencent/mm/d/b/ai;->ibV:J
-
-    const-wide/16 v3, 0x0
-
-    cmp-long v1, v1, v3
-
-    if-lez v1, :cond_10
-
-    .line 280
-    const-string/jumbo v1, "rowid"
-
-    iget-wide v2, p0, Lcom/tencent/mm/d/b/ai;->ibV:J
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/ai;->field_localId:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -883,7 +561,105 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
 
-    .line 282
-    :cond_10
+    .line 112
+    :cond_0
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aLS:Z
+
+    if-eqz v1, :cond_1
+
+    .line 113
+    const-string/jumbo v1, "content"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_content:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 116
+    :cond_1
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aXx:Z
+
+    if-eqz v1, :cond_2
+
+    .line 117
+    const-string/jumbo v1, "tagContent"
+
+    iget-object v2, p0, Lcom/tencent/mm/d/b/ai;->field_tagContent:Ljava/lang/String;
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 120
+    :cond_2
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aQB:Z
+
+    if-eqz v1, :cond_3
+
+    .line 121
+    const-string/jumbo v1, "time"
+
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/ai;->field_time:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 124
+    :cond_3
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aLN:Z
+
+    if-eqz v1, :cond_4
+
+    .line 125
+    const-string/jumbo v1, "type"
+
+    iget v2, p0, Lcom/tencent/mm/d/b/ai;->field_type:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 128
+    :cond_4
+    iget-boolean v1, p0, Lcom/tencent/mm/d/b/ai;->aXy:Z
+
+    if-eqz v1, :cond_5
+
+    .line 129
+    const-string/jumbo v1, "subtype"
+
+    iget v2, p0, Lcom/tencent/mm/d/b/ai;->field_subtype:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 132
+    :cond_5
+    iget-wide v1, p0, Lcom/tencent/mm/d/b/ai;->jYv:J
+
+    const-wide/16 v3, 0x0
+
+    cmp-long v1, v1, v3
+
+    if-lez v1, :cond_6
+
+    .line 133
+    const-string/jumbo v1, "rowid"
+
+    iget-wide v2, p0, Lcom/tencent/mm/d/b/ai;->jYv:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 135
+    :cond_6
     return-object v0
 .end method

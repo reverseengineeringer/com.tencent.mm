@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static gMX:Ljava/util/Vector;
+.field private static iCf:Ljava/util/Vector;
 
-.field private static gMY:Lcom/tencent/mm/pluginsdk/model/downloader/r;
+.field private static iCg:Lcom/tencent/mm/pluginsdk/model/downloader/k;
 
 
 # direct methods
@@ -19,7 +19,7 @@
 
     invoke-direct {v0}, Ljava/util/Vector;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->gMX:Ljava/util/Vector;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->iCf:Ljava/util/Vector;
 
     return-void
 .end method
@@ -34,14 +34,14 @@
     return-void
 .end method
 
-.method public static a(Lcom/tencent/mm/pluginsdk/model/downloader/r;)V
+.method public static a(Lcom/tencent/mm/pluginsdk/model/downloader/k;)V
     .locals 1
 
     .prologue
     .line 16
     if-eqz p0, :cond_0
 
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->gMX:Ljava/util/Vector;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->iCf:Ljava/util/Vector;
 
     invoke-virtual {v0, p0}, Ljava/util/Vector;->contains(Ljava/lang/Object;)Z
 
@@ -50,7 +50,7 @@
     if-nez v0, :cond_0
 
     .line 17
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->gMX:Ljava/util/Vector;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->iCf:Ljava/util/Vector;
 
     invoke-virtual {v0, p0}, Ljava/util/Vector;->add(Ljava/lang/Object;)Z
 
@@ -59,52 +59,52 @@
     return-void
 .end method
 
-.method public static azr()V
+.method public static aPZ()V
     .locals 1
 
     .prologue
     .line 32
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->gMY:Lcom/tencent/mm/pluginsdk/model/downloader/r;
+    sput-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->iCg:Lcom/tencent/mm/pluginsdk/model/downloader/k;
 
     .line 33
     return-void
 .end method
 
-.method static synthetic azs()Ljava/util/Vector;
+.method static synthetic aQa()Ljava/util/Vector;
     .locals 1
 
     .prologue
     .line 8
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->gMX:Ljava/util/Vector;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->iCf:Ljava/util/Vector;
 
     return-object v0
 .end method
 
-.method static synthetic azt()Lcom/tencent/mm/pluginsdk/model/downloader/r;
+.method static synthetic aQb()Lcom/tencent/mm/pluginsdk/model/downloader/k;
     .locals 1
 
     .prologue
     .line 8
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->gMY:Lcom/tencent/mm/pluginsdk/model/downloader/r;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->iCg:Lcom/tencent/mm/pluginsdk/model/downloader/k;
 
     return-object v0
 .end method
 
-.method public static b(Lcom/tencent/mm/pluginsdk/model/downloader/r;)V
+.method public static b(Lcom/tencent/mm/pluginsdk/model/downloader/k;)V
     .locals 1
 
     .prologue
     .line 22
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->gMX:Ljava/util/Vector;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->iCf:Ljava/util/Vector;
 
     if-eqz v0, :cond_0
 
     if-eqz p0, :cond_0
 
     .line 23
-    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->gMX:Ljava/util/Vector;
+    sget-object v0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->iCf:Ljava/util/Vector;
 
     invoke-virtual {v0, p0}, Ljava/util/Vector;->remove(Ljava/lang/Object;)Z
 
@@ -113,12 +113,12 @@
     return-void
 .end method
 
-.method public static c(Lcom/tencent/mm/pluginsdk/model/downloader/r;)V
+.method public static c(Lcom/tencent/mm/pluginsdk/model/downloader/k;)V
     .locals 0
 
     .prologue
     .line 28
-    sput-object p0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->gMY:Lcom/tencent/mm/pluginsdk/model/downloader/r;
+    sput-object p0, Lcom/tencent/mm/pluginsdk/model/downloader/a;->iCg:Lcom/tencent/mm/pluginsdk/model/downloader/k;
 
     .line 29
     return-void
@@ -126,11 +126,11 @@
 
 
 # virtual methods
-.method public final cg(J)V
+.method public final cX(J)V
     .locals 5
 
     .prologue
-    .line 54
+    .line 71
     const-string/jumbo v0, "!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A=="
 
     const-string/jumbo v1, "notifyTaskRemoved: %d"
@@ -147,24 +147,24 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 55
-    new-instance v0, Lcom/tencent/mm/pluginsdk/model/downloader/c;
+    .line 72
+    new-instance v0, Lcom/tencent/mm/pluginsdk/model/downloader/a$3;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/tencent/mm/pluginsdk/model/downloader/c;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;J)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/tencent/mm/pluginsdk/model/downloader/a$3;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;J)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->g(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
 
-    .line 68
+    .line 85
     return-void
 .end method
 
-.method public final ch(J)V
+.method public final cY(J)V
     .locals 5
 
     .prologue
-    .line 88
+    .line 105
     const-string/jumbo v0, "!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A=="
 
     const-string/jumbo v1, "notifyTaskFailed: %d"
@@ -181,20 +181,20 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 89
-    new-instance v0, Lcom/tencent/mm/pluginsdk/model/downloader/e;
+    .line 106
+    new-instance v0, Lcom/tencent/mm/pluginsdk/model/downloader/a$5;
 
-    invoke-direct {v0, p0, p1, p2}, Lcom/tencent/mm/pluginsdk/model/downloader/e;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;J)V
+    invoke-direct {v0, p0, p1, p2}, Lcom/tencent/mm/pluginsdk/model/downloader/a$5;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;J)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->g(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
 
-    .line 102
+    .line 119
     return-void
 .end method
 
-.method public final h(JLjava/lang/String;)V
+.method public final k(JLjava/lang/String;)V
     .locals 5
 
     .prologue
@@ -219,24 +219,24 @@
 
     aput-object p3, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 38
-    new-instance v0, Lcom/tencent/mm/pluginsdk/model/downloader/b;
+    new-instance v0, Lcom/tencent/mm/pluginsdk/model/downloader/a$1;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/model/downloader/b;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;JLjava/lang/String;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/model/downloader/a$1;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;JLjava/lang/String;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->g(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
 
     .line 51
     return-void
 .end method
 
-.method public final i(JLjava/lang/String;)V
+.method public final l(JLjava/lang/String;)V
     .locals 5
 
     .prologue
-    .line 71
+    .line 88
     const-string/jumbo v0, "!56@/B4Tb64lLpKVQlIh1YRBXzdWPJKtG776lZ8EhHWW4u4+NDTrwItS9A=="
 
     const-string/jumbo v1, "notifyTaskFinished: %d"
@@ -253,15 +253,15 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 72
-    new-instance v0, Lcom/tencent/mm/pluginsdk/model/downloader/d;
+    .line 89
+    new-instance v0, Lcom/tencent/mm/pluginsdk/model/downloader/a$4;
 
-    invoke-direct {v0, p0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/model/downloader/d;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;JLjava/lang/String;)V
+    invoke-direct {v0, p0, p1, p2, p3}, Lcom/tencent/mm/pluginsdk/model/downloader/a$4;-><init>(Lcom/tencent/mm/pluginsdk/model/downloader/a;JLjava/lang/String;)V
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ad;->g(Ljava/lang/Runnable;)V
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
 
-    .line 85
+    .line 102
     return-void
 .end method

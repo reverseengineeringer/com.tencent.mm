@@ -15,9 +15,7 @@
 
 
 # instance fields
-.field public avD:Z
-
-.field public avE:Ljava/lang/String;
+.field public atV:Ljava/lang/Object;
 
 
 # direct methods
@@ -25,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 21
+    .line 18
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

@@ -1,67 +1,91 @@
-.class final Lcom/tencent/mm/pluginsdk/ui/i;
-.super Lcom/tencent/mm/sdk/platformtools/ac;
+.class public final Lcom/tencent/mm/pluginsdk/ui/i;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# instance fields
-.field final synthetic gPB:Lcom/tencent/mm/pluginsdk/ui/EmojiView;
-
-
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/pluginsdk/ui/EmojiView;)V
-    .locals 0
+.method public static cR(Landroid/content/Context;)Z
+    .locals 4
 
     .prologue
-    .line 131
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/i;->gPB:Lcom/tencent/mm/pluginsdk/ui/EmojiView;
+    .line 63
+    const-string/jumbo v0, "network_doctor_shown"
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
-
-    return-void
-.end method
-
-
-# virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 1
-
-    .prologue
-    .line 133
-    iget v0, p1, Landroid/os/Message;->what:I
-
-    .line 134
-    packed-switch v0, :pswitch_data_0
-
-    .line 147
-    :cond_0
-    :goto_0
-    return-void
-
-    .line 136
-    :pswitch_0
-    invoke-static {}, Lcom/tencent/mm/pluginsdk/ui/EmojiView;->aco()Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/z;->CQ(Ljava/lang/String;)Z
 
     move-result v0
 
-    if-eqz v0, :cond_0
+    if-nez v0, :cond_0
 
-    .line 137
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/i;->gPB:Lcom/tencent/mm/pluginsdk/ui/EmojiView;
+    .line 64
+    const/4 v0, 0x0
 
-    invoke-static {v0}, Lcom/tencent/mm/pluginsdk/ui/EmojiView;->a(Lcom/tencent/mm/pluginsdk/ui/EmojiView;)V
+    .line 76
+    :goto_0
+    return v0
 
-    .line 138
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/i;->gPB:Lcom/tencent/mm/pluginsdk/ui/EmojiView;
+    .line 67
+    :cond_0
+    const v0, 0x7f0b0ea9
 
-    invoke-virtual {v0}, Lcom/tencent/mm/pluginsdk/ui/EmojiView;->invalidate()V
+    const v1, 0x7f0b0ddd
+
+    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/i$2;
+
+    invoke-direct {v2, p0}, Lcom/tencent/mm/pluginsdk/ui/i$2;-><init>(Landroid/content/Context;)V
+
+    const/4 v3, 0x0
+
+    invoke-static {p0, v0, v1, v2, v3}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;IILandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
+
+    .line 76
+    const/4 v0, 0x1
 
     goto :goto_0
+.end method
 
-    .line 134
-    nop
+.method public static s(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)Z
+    .locals 7
 
-    :pswitch_data_0
-    .packed-switch 0x3e9
-        :pswitch_0
-    .end packed-switch
+    .prologue
+    .line 22
+    const-string/jumbo v0, "wap_reporter_shown"
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/z;->CQ(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_0
+
+    .line 23
+    const/4 v0, 0x0
+
+    .line 35
+    :goto_0
+    return v0
+
+    .line 26
+    :cond_0
+    const v1, 0x7f0b0ea8
+
+    const v2, 0x7f0b0ddd
+
+    const v3, 0x7f0b0dfb
+
+    const v4, 0x7f0b0de4
+
+    new-instance v5, Lcom/tencent/mm/pluginsdk/ui/i$1;
+
+    invoke-direct {v5, p0, p1, p2}, Lcom/tencent/mm/pluginsdk/ui/i$1;-><init>(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
+
+    const/4 v6, 0x0
+
+    move-object v0, p0
+
+    invoke-static/range {v0 .. v6}, Lcom/tencent/mm/ui/base/g;->a(Landroid/content/Context;IIIILandroid/content/DialogInterface$OnClickListener;Landroid/content/DialogInterface$OnClickListener;)Lcom/tencent/mm/ui/base/h;
+
+    .line 35
+    const/4 v0, 0x1
+
+    goto :goto_0
 .end method

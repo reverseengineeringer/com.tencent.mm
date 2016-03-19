@@ -3,189 +3,206 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/plugin/sight/encode/a/a;
+.implements Lcom/tencent/mm/plugin/sight/encode/a/b;
 
 
 # annotations
-.annotation build Landroid/annotation/TargetApi;
-    value = 0x10
+.annotation system Ldalvik/annotation/MemberClasses;
+    value = {
+        Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+    }
 .end annotation
 
 
 # instance fields
-.field arG:Lcom/tencent/mm/c/b/g;
+.field gAA:I
 
-.field fiU:I
+.field gAB:I
 
-.field fiV:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
+.field private gAC:Landroid/hardware/Camera$PreviewCallback;
 
-.field fiW:Lcom/tencent/mm/sdk/platformtools/ac;
+.field gAr:Lcom/tencent/mm/plugin/sight/encode/a/a;
 
-.field fiY:Landroid/media/MediaCodec;
+.field gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
 
-.field private fiZ:Landroid/media/MediaFormat;
+.field gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-.field private fja:Landroid/media/MediaCodec$BufferInfo;
+.field gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-.field fjb:J
+.field gAv:Ljava/lang/String;
 
-.field fjc:I
+.field private gAw:I
 
-.field fjd:I
+.field private gAx:F
 
-.field fje:J
+.field private gAy:I
 
-.field fjf:J
+.field private gAz:I
 
-.field private final fjg:I
+.field gfD:Ljava/lang/String;
 
-.field private fjh:I
-
-.field fji:Z
-
-.field fjj:I
-
-.field fjk:Z
-
-.field fjl:Z
-
-.field fjm:Ljava/lang/Object;
-
-.field fjn:Lcom/tencent/mm/plugin/sight/encode/a/a$b;
-
-.field fjo:Lcom/tencent/mm/sdk/platformtools/ac;
-
-.field fjp:Ljava/lang/Runnable;
+.field mFileName:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 4
+    .locals 5
 
     .prologue
-    const/4 v3, 0x0
+    const v4, 0x61a80
 
-    const/4 v2, 0x0
+    const/16 v3, 0x140
 
-    .line 24
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    const/16 v2, 0xf0
 
-    .line 36
-    const-wide/16 v0, 0x0
-
-    iput-wide v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjb:J
-
-    .line 45
-    const/16 v0, 0x64
-
-    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjg:I
-
-    .line 48
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fji:Z
-
-    .line 50
-    iput-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiV:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
-
-    .line 52
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/f;
-
-    invoke-static {}, Lcom/tencent/mm/model/ax;->td()Lcom/tencent/mm/sdk/platformtools/ad;
-
-    move-result-object v1
-
-    iget-object v1, v1, Lcom/tencent/mm/sdk/platformtools/ad;->hZl:Landroid/os/HandlerThread;
-
-    invoke-virtual {v1}, Landroid/os/HandlerThread;->getLooper()Landroid/os/Looper;
-
-    move-result-object v1
-
-    invoke-direct {v0, p0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/f;-><init>(Lcom/tencent/mm/plugin/sight/encode/a/e;Landroid/os/Looper;)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiW:Lcom/tencent/mm/sdk/platformtools/ac;
-
-    .line 62
-    iput-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->arG:Lcom/tencent/mm/c/b/g;
+    const/4 v1, 0x0
 
     .line 67
-    new-array v0, v2, [B
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjm:Ljava/lang/Object;
+    .line 31
+    const-string/jumbo v0, ""
 
-    .line 71
-    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/g;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAv:Ljava/lang/String;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/a/g;-><init>(Lcom/tencent/mm/plugin/sight/encode/a/e;)V
+    .line 32
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAw:I
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjp:Ljava/lang/Runnable;
+    .line 33
+    const/4 v0, 0x0
 
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAx:F
+
+    .line 35
+    iput v3, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAy:I
+
+    .line 36
+    iput v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAz:I
+
+    .line 37
+    iput v4, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAA:I
+
+    .line 39
+    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAB:I
+
+    .line 41
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/e$1;
+
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/sight/encode/a/e$1;-><init>(Lcom/tencent/mm/plugin/sight/encode/a/e;)V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAC:Landroid/hardware/Camera$PreviewCallback;
+
+    .line 68
+    iput v3, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAy:I
+
+    .line 69
+    iput v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAz:I
+
+    .line 70
+    iput v4, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAA:I
+
+    .line 72
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/i;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/a/i;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
+
+    .line 73
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/f;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/a/f;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
+
+    .line 74
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avC()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    .line 75
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/d;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/a/d;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAr:Lcom/tencent/mm/plugin/sight/encode/a/a;
+
+    .line 79
+    :goto_0
     return-void
+
+    .line 77
+    :cond_0
+    new-instance v0, Lcom/tencent/mm/plugin/sight/encode/a/c;
+
+    invoke-direct {v0}, Lcom/tencent/mm/plugin/sight/encode/a/c;-><init>()V
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAr:Lcom/tencent/mm/plugin/sight/encode/a/a;
+
+    goto :goto_0
 .end method
 
-
-# virtual methods
-.method public final A(ILjava/lang/String;)I
-    .locals 8
+.method private clear()V
+    .locals 7
 
     .prologue
-    const/4 v7, 0x2
-
-    const/4 v6, 0x0
-
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 84
-    iput p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiU:I
+    .line 200
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
 
-    .line 85
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->arG:Lcom/tencent/mm/c/b/g;
+    iget v3, v0, Lcom/tencent/mm/plugin/sight/encode/a/i;->gBb:I
 
-    if-eqz v0, :cond_0
+    .line 201
+    if-gez v3, :cond_1
 
-    .line 86
-    const-string/jumbo v3, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
+    .line 202
+    const-string/jumbo v0, "!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg=="
 
-    const-string/jumbo v4, "call init, before pcmRecorder stop, stopCallback null ? %B"
+    const-string/jumbo v1, "call clear, but bufID error"
 
-    new-array v5, v1, [Ljava/lang/Object;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjn:Lcom/tencent/mm/plugin/sight/encode/a/a$b;
-
-    if-nez v0, :cond_3
-
-    move v0, v1
-
+    .line 213
+    :cond_0
     :goto_0
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    return-void
+
+    .line 205
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/i;->stop()V
+
+    .line 206
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAr:Lcom/tencent/mm/plugin/sight/encode/a/a;
+
+    const/4 v4, 0x0
+
+    invoke-interface {v0, v4}, Lcom/tencent/mm/plugin/sight/encode/a/a;->a(Lcom/tencent/mm/plugin/sight/encode/a/a$b;)I
+
+    .line 207
+    const-string/jumbo v4, "!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg=="
+
+    const-string/jumbo v5, "ashutest::clear bufID %d, encodeRunnable null ? %B, markCancel %B"
+
+    const/4 v0, 0x3
+
+    new-array v6, v0, [Ljava/lang/Object;
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    aput-object v0, v5, v2
+    aput-object v0, v6, v2
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    .line 87
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->arG:Lcom/tencent/mm/c/b/g;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/c/b/g;->ml()Z
-
-    .line 89
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-
-    if-eqz v0, :cond_1
-
-    .line 90
-    const-string/jumbo v3, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
-
-    const-string/jumbo v4, "call init, before audioEncoder stop, stopCallback null ? %B"
-
-    new-array v5, v1, [Ljava/lang/Object;
-
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjn:Lcom/tencent/mm/plugin/sight/encode/a/a$b;
-
-    if-nez v0, :cond_4
+    if-nez v0, :cond_3
 
     move v0, v1
 
@@ -194,291 +211,569 @@
 
     move-result-object v0
 
-    aput-object v0, v5, v2
+    aput-object v0, v6, v1
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    const/4 v0, 0x2
 
-    .line 91
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
+    if-eqz v1, :cond_2
 
-    .line 92
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->release()V
+    iget-boolean v2, v1, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAK:Z
 
-    .line 93
-    iput-object v6, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-
-    .line 94
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjn:Lcom/tencent/mm/plugin/sight/encode/a/a$b;
-
-    if-eqz v0, :cond_1
-
-    .line 95
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjn:Lcom/tencent/mm/plugin/sight/encode/a/a$b;
-
-    invoke-interface {v0}, Lcom/tencent/mm/plugin/sight/encode/a/a$b;->ajH()V
-
-    .line 96
-    iput-object v6, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjn:Lcom/tencent/mm/plugin/sight/encode/a/a$b;
-
-    .line 112
-    :cond_1
-    iput v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjj:I
-
-    .line 113
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjk:Z
-
-    .line 114
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjl:Z
-
-    .line 115
-    iput-object v6, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjn:Lcom/tencent/mm/plugin/sight/encode/a/a$b;
-
-    .line 116
-    new-instance v0, Lcom/tencent/mm/c/b/g;
-
-    sget v3, Lcom/tencent/mm/plugin/sight/base/a;->fgL:I
-
-    const/4 v4, 0x5
-
-    invoke-direct {v0, v3, v4}, Lcom/tencent/mm/c/b/g;-><init>(II)V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->arG:Lcom/tencent/mm/c/b/g;
-
-    .line 117
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->arG:Lcom/tencent/mm/c/b/g;
-
-    const/16 v3, 0x80
-
-    invoke-virtual {v0, v3}, Lcom/tencent/mm/c/b/g;->aL(I)V
-
-    .line 118
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->arG:Lcom/tencent/mm/c/b/g;
-
-    invoke-virtual {v0, v2}, Lcom/tencent/mm/c/b/g;->al(Z)V
-
-    .line 119
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->arG:Lcom/tencent/mm/c/b/g;
-
-    new-instance v3, Lcom/tencent/mm/plugin/sight/encode/a/h;
-
-    invoke-direct {v3, p0}, Lcom/tencent/mm/plugin/sight/encode/a/h;-><init>(Lcom/tencent/mm/plugin/sight/encode/a/e;)V
-
-    iput-object v3, v0, Lcom/tencent/mm/c/b/g;->aso:Lcom/tencent/mm/c/b/g$a;
-
-    .line 158
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjo:Lcom/tencent/mm/sdk/platformtools/ac;
-
-    if-nez v0, :cond_5
-
-    .line 159
-    const-string/jumbo v0, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
-
-    const-string/jumbo v3, "create pcm control handler"
-
-    invoke-static {v0, v3}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 160
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
-
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjo:Lcom/tencent/mm/sdk/platformtools/ac;
-
-    .line 167
     :cond_2
-    :goto_2
-    const-string/jumbo v0, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
+    invoke-static {v2}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
-    const-string/jumbo v3, "sample rate %d, audio rate %d"
+    move-result-object v1
 
-    new-array v4, v7, [Ljava/lang/Object;
+    aput-object v1, v6, v0
 
-    sget v5, Lcom/tencent/mm/plugin/sight/base/a;->fgL:I
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->v(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    .line 209
+    invoke-virtual {p0, v3}, Lcom/tencent/mm/plugin/sight/encode/a/e;->kZ(I)Z
 
-    move-result-object v5
+    move-result v0
 
-    aput-object v5, v4, v2
+    if-nez v0, :cond_0
 
-    sget v5, Lcom/tencent/mm/plugin/sight/base/a;->fgM:I
+    .line 210
+    const-string/jumbo v0, "clear"
 
-    invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+    invoke-static {v0}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->releaseRecorderBufferRef(Ljava/lang/String;)V
 
-    move-result-object v5
+    .line 211
+    invoke-static {v3}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->releaseDataBufferRef(I)V
 
-    aput-object v5, v4, v1
-
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 170
-    :try_start_0
-    new-instance v0, Landroid/media/MediaCodec$BufferInfo;
-
-    invoke-direct {v0}, Landroid/media/MediaCodec$BufferInfo;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fja:Landroid/media/MediaCodec$BufferInfo;
-
-    .line 171
-    new-instance v0, Landroid/media/MediaFormat;
-
-    invoke-direct {v0}, Landroid/media/MediaFormat;-><init>()V
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiZ:Landroid/media/MediaFormat;
-
-    .line 172
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiZ:Landroid/media/MediaFormat;
-
-    const-string/jumbo v1, "mime"
-
-    const-string/jumbo v3, "audio/mp4a-latm"
-
-    invoke-virtual {v0, v1, v3}, Landroid/media/MediaFormat;->setString(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 173
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiZ:Landroid/media/MediaFormat;
-
-    const-string/jumbo v1, "aac-profile"
-
-    const/4 v3, 0x2
-
-    invoke-virtual {v0, v1, v3}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    .line 174
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiZ:Landroid/media/MediaFormat;
-
-    const-string/jumbo v1, "sample-rate"
-
-    sget v3, Lcom/tencent/mm/plugin/sight/base/a;->fgL:I
-
-    invoke-virtual {v0, v1, v3}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    .line 175
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiZ:Landroid/media/MediaFormat;
-
-    const-string/jumbo v1, "channel-count"
-
-    const/4 v3, 0x1
-
-    invoke-virtual {v0, v1, v3}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    .line 176
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiZ:Landroid/media/MediaFormat;
-
-    const-string/jumbo v1, "bitrate"
-
-    sget v3, Lcom/tencent/mm/plugin/sight/base/a;->fgM:I
-
-    invoke-virtual {v0, v1, v3}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
-
-    .line 178
-    const-string/jumbo v0, "audio/mp4a-latm"
-
-    invoke-static {v0}, Landroid/media/MediaCodec;->createEncoderByType(Ljava/lang/String;)Landroid/media/MediaCodec;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-
-    .line 179
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiZ:Landroid/media/MediaFormat;
-
-    const/4 v3, 0x0
-
-    const/4 v4, 0x0
-
-    const/4 v5, 0x1
-
-    invoke-virtual {v0, v1, v3, v4, v5}, Landroid/media/MediaCodec;->configure(Landroid/media/MediaFormat;Landroid/view/Surface;Landroid/media/MediaCrypto;I)V
-
-    .line 180
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->start()V
-    :try_end_0
-    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 197
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fji:Z
-
-    .line 200
-    :goto_3
-    return v2
+    goto :goto_0
 
     :cond_3
     move v0, v2
 
-    .line 86
-    goto/16 :goto_0
+    .line 207
+    goto :goto_1
+.end method
 
-    :cond_4
-    move v0, v2
 
-    .line 90
-    goto/16 :goto_1
+# virtual methods
+.method public final a(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
+    .locals 6
 
-    .line 161
-    :cond_5
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjo:Lcom/tencent/mm/sdk/platformtools/ac;
+    .prologue
+    const/4 v1, 0x0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/sdk/platformtools/ac;->getLooper()Landroid/os/Looper;
+    .line 414
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
+
+    const-string/jumbo v3, "!56@/B4Tb64lLpKqlKwF1ffTCwg004KTnhCXKcRjvlWyYsav9U7R7fFEGA=="
+
+    const-string/jumbo v4, "add media status callback, hashcode %d"
+
+    const/4 v0, 0x1
+
+    new-array v5, v0, [Ljava/lang/Object;
+
+    if-nez p1, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    aput-object v0, v5, v1
 
-    move-result-object v3
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    if-eq v0, v3, :cond_2
+    iget-object v0, v2, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAP:Lcom/tencent/mm/sdk/platformtools/aa;
 
-    .line 162
-    const-string/jumbo v0, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
+    iget-object v1, v2, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAP:Lcom/tencent/mm/sdk/platformtools/aa;
 
-    const-string/jumbo v3, "error pcm control handler looper[%s, %s], recreate handler"
+    const/16 v2, 0x102
 
-    new-array v4, v7, [Ljava/lang/Object;
+    invoke-virtual {v1, v2, p1}, Lcom/tencent/mm/sdk/platformtools/aa;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
 
-    iget-object v5, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjo:Lcom/tencent/mm/sdk/platformtools/ac;
+    move-result-object v1
 
-    invoke-virtual {v5}, Lcom/tencent/mm/sdk/platformtools/ac;->getLooper()Landroid/os/Looper;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->sendMessage(Landroid/os/Message;)Z
 
-    move-result-object v5
+    .line 415
+    return-void
 
-    aput-object v5, v4, v2
+    .line 414
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
 
-    invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
+    move-result v0
 
-    move-result-object v5
+    goto :goto_0
+.end method
 
-    aput-object v5, v4, v1
+.method public final a(Lcom/tencent/mm/plugin/sight/encode/a/b$b;)V
+    .locals 1
 
-    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    .prologue
+    .line 449
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-    .line 164
-    new-instance v0, Lcom/tencent/mm/sdk/platformtools/ac;
+    invoke-virtual {v0, p1}, Lcom/tencent/mm/plugin/sight/encode/a/f;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$b;)V
 
-    invoke-direct {v0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
+    .line 450
+    return-void
+.end method
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjo:Lcom/tencent/mm/sdk/platformtools/ac;
+.method public final awo()Z
+    .locals 2
 
-    goto/16 :goto_2
+    .prologue
+    .line 396
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-    .line 181
-    :catch_0
-    move-exception v0
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzO:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-    .line 182
-    :try_start_1
-    const-string/jumbo v1, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/f;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$b;)V
 
-    const-string/jumbo v3, "start aac encoder error: %s"
+    .line 397
+    const/4 v0, 0x0
+
+    return v0
+.end method
+
+.method public final awp()J
+    .locals 2
+
+    .prologue
+    .line 374
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
+
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/i;->awy()J
+
+    move-result-wide v0
+
+    return-wide v0
+.end method
+
+.method public final awq()Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+    .locals 1
+
+    .prologue
+    .line 369
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
+
+    iget-object v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAN:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+
+    return-object v0
+.end method
+
+.method public final awr()V
+    .locals 5
+
+    .prologue
+    const/4 v4, 0x0
+
+    .line 424
+    const-string/jumbo v0, "!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg=="
+
+    const-string/jumbo v1, "request start, last status %s"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
+
+    iget-object v3, v3, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAN:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+
+    aput-object v3, v2, v4
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 425
+    iput v4, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAw:I
+
+    .line 426
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
+
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzL:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/f;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$b;)V
+
+    .line 427
+    return-void
+.end method
+
+.method public final aws()F
+    .locals 1
+
+    .prologue
+    .line 444
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAx:F
+
+    return v0
+.end method
+
+.method public final awt()Landroid/hardware/Camera$PreviewCallback;
+    .locals 1
+
+    .prologue
+    .line 379
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAC:Landroid/hardware/Camera$PreviewCallback;
+
+    return-object v0
+.end method
+
+.method public final b(Lcom/tencent/mm/plugin/sight/encode/a/b$a;)V
+    .locals 6
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 419
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
+
+    const-string/jumbo v3, "!56@/B4Tb64lLpKqlKwF1ffTCwg004KTnhCXKcRjvlWyYsav9U7R7fFEGA=="
+
+    const-string/jumbo v4, "remove media status callback, hashcode %d"
+
+    const/4 v0, 0x1
+
+    new-array v5, v0, [Ljava/lang/Object;
+
+    if-nez p1, :cond_0
+
+    move v0, v1
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v0
+
+    aput-object v0, v5, v1
+
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    iget-object v0, v2, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAP:Lcom/tencent/mm/sdk/platformtools/aa;
+
+    iget-object v1, v2, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAP:Lcom/tencent/mm/sdk/platformtools/aa;
+
+    const/16 v2, 0x103
+
+    invoke-virtual {v1, v2, p1}, Lcom/tencent/mm/sdk/platformtools/aa;->obtainMessage(ILjava/lang/Object;)Landroid/os/Message;
+
+    move-result-object v1
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/sdk/platformtools/aa;->sendMessage(Landroid/os/Message;)Z
+
+    .line 420
+    return-void
+
+    .line 419
+    :cond_0
+    invoke-virtual {p1}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public final bk(Ljava/lang/String;Ljava/lang/String;)V
+    .locals 0
+
+    .prologue
+    .line 385
+    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gfD:Ljava/lang/String;
+
+    .line 386
+    iput-object p2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->mFileName:Ljava/lang/String;
+
+    .line 392
+    return-void
+.end method
+
+.method public final cancel()V
+    .locals 2
+
+    .prologue
+    .line 217
+    const-string/jumbo v0, "!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg=="
+
+    const-string/jumbo v1, "ashutest::cancel"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 218
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/a/e;->clear()V
+
+    .line 219
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
+
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzN:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/f;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$b;)V
+
+    .line 220
+    return-void
+.end method
+
+.method public final getDuration()I
+    .locals 1
+
+    .prologue
+    .line 431
+    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAw:I
+
+    div-int/lit16 v0, v0, 0x3e8
+
+    return v0
+.end method
+
+.method public final getFrameCount()I
+    .locals 1
+
+    .prologue
+    .line 436
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
+
+    if-eqz v0, :cond_0
+
+    .line 437
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
+
+    iget v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/i;->gBc:I
+
+    .line 439
+    :goto_0
+    return v0
+
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+.end method
+
+.method public final getRecordPath()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 409
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAv:Ljava/lang/String;
+
+    return-object v0
+.end method
+
+.method public final initialize(I)V
+    .locals 14
+
+    .prologue
+    .line 85
+    const-string/jumbo v1, "!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg=="
+
+    const-string/jumbo v2, "initialize: talker[%s], encodeThread null[%B], encodeThreadFinish[%B]"
+
+    const/4 v0, 0x3
+
+    new-array v3, v0, [Ljava/lang/Object;
+
+    const/4 v0, 0x0
+
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gfD:Ljava/lang/String;
+
+    aput-object v4, v3, v0
+
+    const/4 v4, 0x1
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x1
+
+    :goto_0
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    aput-object v0, v3, v4
+
+    const/4 v4, 0x2
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    if-nez v0, :cond_1
+
+    const/4 v0, 0x1
+
+    :goto_1
+    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v0
+
+    aput-object v0, v3, v4
+
+    invoke-static {v1, v2, v3}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 88
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAL:Z
+
+    if-nez v0, :cond_2
+
+    .line 89
+    const-string/jumbo v0, "!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg=="
+
+    const-string/jumbo v1, "ERROR, status, wait last encode thread finish!!! MUST NOT BE HERE"
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 174
+    :goto_2
+    return-void
+
+    .line 85
+    :cond_0
+    const/4 v0, 0x0
+
+    goto :goto_0
+
+    :cond_1
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAL:Z
+
+    goto :goto_1
+
+    .line 93
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gfD:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5
+
+    .line 94
+    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->avA()Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAv:Ljava/lang/String;
+
+    .line 104
+    :goto_3
+    new-instance v1, Landroid/hardware/Camera$CameraInfo;
+
+    invoke-direct {v1}, Landroid/hardware/Camera$CameraInfo;-><init>()V
+
+    .line 106
+    const/4 v0, 0x0
+
+    .line 108
+    :try_start_0
+    invoke-static {p1, v1}, Landroid/hardware/Camera;->getCameraInfo(ILandroid/hardware/Camera$CameraInfo;)V
+    :try_end_0
+    .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 114
+    :goto_4
+    const/16 v2, 0x5a
+
+    .line 116
+    if-nez v0, :cond_3
+
+    iget v0, v1, Landroid/hardware/Camera$CameraInfo;->orientation:I
+
+    const/16 v1, 0x10e
+
+    if-ne v0, v1, :cond_3
+
+    .line 117
+    const/16 v2, 0x10e
+
+    .line 120
+    :cond_3
+    sget v0, Lcom/tencent/mm/pluginsdk/l/a;->iFl:I
+
+    sget v1, Lcom/tencent/mm/pluginsdk/l/a;->iFk:I
+
+    sget v3, Lcom/tencent/mm/pluginsdk/l/a;->iFk:I
+
+    sget v4, Lcom/tencent/mm/pluginsdk/l/a;->iFk:I
+
+    iget v5, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAz:I
+
+    mul-int/2addr v4, v5
+
+    iget v5, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAy:I
+
+    div-int/2addr v4, v5
+
+    iget v5, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAy:I
+
+    iget v6, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAz:I
+
+    const/high16 v7, 0x41c00000    # 24.0f
+
+    iget v8, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAA:I
+
+    sget v9, Lcom/tencent/mm/plugin/sight/base/a;->gwQ:I
+
+    const/16 v10, 0x8
+
+    const/4 v11, 0x2
+
+    const/high16 v12, 0x41b80000    # 23.0f
+
+    const/4 v13, 0x1
+
+    invoke-static/range {v0 .. v13}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->initDataBufferRef(IIIIIIIFIIIIFI)I
+
+    move-result v0
+
+    .line 130
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
+
+    if-gez v0, :cond_6
+
+    const-string/jumbo v1, "!44@/B4Tb64lLpJYfkm+3BfBr630hXwybmHsot/c0pFER9s="
+
+    const-string/jumbo v2, "init error, yuv buffer id error"
+
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 131
+    :goto_5
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAr:Lcom/tencent/mm/plugin/sight/encode/a/a;
+
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAv:Ljava/lang/String;
+
+    invoke-static {v2}, Lcom/tencent/mm/plugin/sight/base/c;->tT(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v1, v0, v2}, Lcom/tencent/mm/plugin/sight/encode/a/a;->R(ILjava/lang/String;)I
+
+    move-result v1
+
+    if-gez v1, :cond_4
+
+    .line 133
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAr:Lcom/tencent/mm/plugin/sight/encode/a/a;
+
+    instance-of v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/d;
+
+    .line 134
+    const-string/jumbo v2, "!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg=="
+
+    const-string/jumbo v3, "init aac encoder error, is MediaCodec Type ? %B"
 
     const/4 v4, 0x1
 
@@ -486,167 +781,242 @@
 
     const/4 v5, 0x0
 
-    invoke-virtual {v0}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
+    invoke-static {v1}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v6
 
     aput-object v6, v4, v5
 
-    invoke-static {v1, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->e(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 183
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-    :try_end_1
-    .catchall {:try_start_1 .. :try_end_1} :catchall_0
+    .line 135
+    if-eqz v1, :cond_4
 
-    if-eqz v1, :cond_6
+    .line 137
+    new-instance v1, Lcom/tencent/mm/plugin/sight/encode/a/c;
 
-    .line 185
-    :try_start_2
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
+    invoke-direct {v1}, Lcom/tencent/mm/plugin/sight/encode/a/c;-><init>()V
 
-    invoke-virtual {v1}, Landroid/media/MediaCodec;->stop()V
+    iput-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAr:Lcom/tencent/mm/plugin/sight/encode/a/a;
 
-    .line 186
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
+    .line 138
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAr:Lcom/tencent/mm/plugin/sight/encode/a/a;
 
-    invoke-virtual {v1}, Landroid/media/MediaCodec;->release()V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
-    .catchall {:try_start_2 .. :try_end_2} :catchall_1
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAv:Ljava/lang/String;
 
-    .line 190
-    const/4 v0, 0x0
+    invoke-static {v2}, Lcom/tencent/mm/plugin/sight/base/c;->tT(Ljava/lang/String;)Ljava/lang/String;
 
-    :try_start_3
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
+    move-result-object v2
 
-    .line 194
+    invoke-interface {v1, v0, v2}, Lcom/tencent/mm/plugin/sight/encode/a/a;->R(ILjava/lang/String;)I
+
+    .line 141
+    :cond_4
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAr:Lcom/tencent/mm/plugin/sight/encode/a/a;
+
+    new-instance v2, Lcom/tencent/mm/plugin/sight/encode/a/e$2;
+
+    invoke-direct {v2, p0, v0}, Lcom/tencent/mm/plugin/sight/encode/a/e$2;-><init>(Lcom/tencent/mm/plugin/sight/encode/a/e;I)V
+
+    invoke-interface {v1, v2}, Lcom/tencent/mm/plugin/sight/encode/a/a;->a(Lcom/tencent/mm/plugin/sight/encode/a/a$a;)I
+
+    move-result v0
+
+    .line 169
+    if-eqz v0, :cond_7
+
+    .line 170
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
+
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzQ:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/f;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$b;)V
+
+    goto/16 :goto_2
+
+    .line 96
+    :cond_5
+    invoke-static {}, Lcom/tencent/mm/an/j;->Ea()Lcom/tencent/mm/an/n;
+
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->mFileName:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/an/n;->jL(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAv:Ljava/lang/String;
+
+    goto/16 :goto_3
+
+    .line 109
+    :catch_0
+    move-exception v0
+
+    .line 110
+    const-string/jumbo v2, "!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg=="
+
+    const-string/jumbo v3, "getCameraInfo failed."
+
+    const/4 v4, 0x0
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    invoke-static {v2, v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 111
+    const/4 v0, 0x1
+
+    goto/16 :goto_4
+
+    .line 130
     :cond_6
-    :goto_4
-    invoke-static {}, Lcom/tencent/mm/plugin/sight/base/c;->ajj()V
-    :try_end_3
-    .catchall {:try_start_3 .. :try_end_3} :catchall_0
+    iput v0, v1, Lcom/tencent/mm/plugin/sight/encode/a/i;->gBb:I
 
-    .line 195
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fji:Z
+    const/4 v2, 0x0
 
-    const/4 v2, -0x1
+    iput v2, v1, Lcom/tencent/mm/plugin/sight/encode/a/i;->gBc:I
 
-    goto :goto_3
+    const-wide/16 v2, 0x0
 
-    .line 187
-    :catch_1
-    move-exception v1
+    iput-wide v2, v1, Lcom/tencent/mm/plugin/sight/encode/a/i;->cJQ:J
 
-    .line 188
-    :try_start_4
-    const-string/jumbo v3, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
+    goto :goto_5
 
-    const-string/jumbo v4, "try to stop aac encoder error: %s"
+    .line 172
+    :cond_7
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-    const/4 v5, 0x1
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzR:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-    new-array v5, v5, [Ljava/lang/Object;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/f;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$b;)V
 
-    const/4 v6, 0x0
-
-    invoke-virtual {v1}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v1
-
-    aput-object v1, v5, v6
-
-    invoke-static {v3, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_4
-    .catchall {:try_start_4 .. :try_end_4} :catchall_1
-
-    .line 190
-    const/4 v0, 0x0
-
-    :try_start_5
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-    :try_end_5
-    .catchall {:try_start_5 .. :try_end_5} :catchall_0
-
-    goto :goto_4
-
-    .line 195
-    :catchall_0
-    move-exception v0
-
-    iput-boolean v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fji:Z
-
-    throw v0
-
-    .line 190
-    :catchall_1
-    move-exception v0
-
-    const/4 v1, 0x0
-
-    :try_start_6
-    iput-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-
-    throw v0
-    :try_end_6
-    .catchall {:try_start_6 .. :try_end_6} :catchall_0
+    goto/16 :goto_2
 .end method
 
-.method public final a(Lcom/tencent/mm/plugin/sight/encode/a/a$a;)I
-    .locals 2
+.method final kZ(I)Z
+    .locals 3
 
     .prologue
-    const/4 v0, -0x1
+    const/4 v0, 0x1
 
-    .line 205
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiV:Lcom/tencent/mm/plugin/sight/encode/a/a$a;
+    .line 177
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    .line 206
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->arG:Lcom/tencent/mm/c/b/g;
+    if-eqz v1, :cond_2
 
-    if-nez v1, :cond_1
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    .line 210
+    iget-boolean v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAL:Z
+
+    if-nez v1, :cond_2
+
+    .line 178
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    iget-boolean v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAI:Z
+
+    if-nez v1, :cond_0
+
+    .line 182
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    const/4 v2, 0x0
+
+    iput-object v2, v1, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->aID:Ljava/lang/Runnable;
+
+    .line 183
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    iput-boolean v0, v1, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAK:Z
+
+    .line 184
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    iput-boolean v0, v1, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAJ:Z
+
+    .line 185
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    invoke-static {v1}, Lcom/tencent/mm/sdk/i/e;->remove(Ljava/lang/Runnable;)Z
+
+    .line 187
     :cond_0
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAM:Ljava/lang/Object;
+
+    monitor-enter v1
+
+    .line 188
+    :try_start_0
+    const-string/jumbo v2, "clear"
+
+    invoke-static {v2}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->releaseRecorderBufferRef(Ljava/lang/String;)V
+
+    .line 189
+    invoke-static {p1}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->releaseDataBufferRef(I)V
+
+    .line 190
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    iget v2, v2, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAF:I
+
+    if-eq v2, p1, :cond_1
+
+    .line 191
+    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    iget v2, v2, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAF:I
+
+    invoke-static {v2}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->releaseDataBufferRef(I)V
+
+    .line 193
+    :cond_1
+    monitor-exit v1
+
+    .line 196
     :goto_0
     return v0
 
-    .line 209
-    :cond_1
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->arG:Lcom/tencent/mm/c/b/g;
+    .line 193
+    :catchall_0
+    move-exception v0
 
-    invoke-virtual {v1}, Lcom/tencent/mm/c/b/g;->mr()Z
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    move-result v1
+    throw v0
 
-    if-eqz v1, :cond_0
-
+    .line 196
+    :cond_2
     const/4 v0, 0x0
 
     goto :goto_0
 .end method
 
-.method public final a(Lcom/tencent/mm/plugin/sight/encode/a/a$b;)I
-    .locals 7
+.method public final m(Ljava/lang/Runnable;)V
+    .locals 11
 
     .prologue
+    const/4 v10, 0x3
+
+    const/4 v9, 0x2
+
     const/4 v1, 0x1
 
     const/4 v2, 0x0
 
-    .line 215
-    const-string/jumbo v3, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
+    .line 224
+    const-string/jumbo v3, "!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg=="
 
-    const-string/jumbo v4, "call stop, pcmRecorder null[%B], old stopCallback null[%B]new stopCallback null[%B], pcmMarkStop[%B]"
+    const-string/jumbo v4, "ashutest::stop, encodeThread null ? %B, has trigger finish ? %B, has finish callback ? %B"
 
-    const/4 v0, 0x4
+    new-array v5, v10, [Ljava/lang/Object;
 
-    new-array v5, v0, [Ljava/lang/Object;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->arG:Lcom/tencent/mm/c/b/g;
-
-    if-nez v0, :cond_0
+    if-nez v0, :cond_1
 
     move v0, v1
 
@@ -657,11 +1027,11 @@
 
     aput-object v0, v5, v2
 
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjn:Lcom/tencent/mm/plugin/sight/encode/a/a$b;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    if-nez v0, :cond_1
+    if-nez v0, :cond_2
 
-    move v0, v1
+    move v0, v2
 
     :goto_1
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
@@ -670,405 +1040,257 @@
 
     aput-object v0, v5, v1
 
-    const/4 v6, 0x2
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    if-nez p1, :cond_2
+    if-nez v0, :cond_3
 
-    move v0, v1
+    move v0, v2
 
     :goto_2
     invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
 
     move-result-object v0
 
-    aput-object v0, v5, v6
+    aput-object v0, v5, v9
 
-    const/4 v0, 0x3
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-boolean v6, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjk:Z
+    .line 228
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    invoke-static {v6}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+    if-eqz v0, :cond_4
 
-    move-result-object v6
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    aput-object v6, v5, v0
+    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAI:Z
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    if-eqz v0, :cond_4
 
-    .line 218
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->arG:Lcom/tencent/mm/c/b/g;
+    .line 229
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    if-nez v0, :cond_3
+    iget-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAM:Ljava/lang/Object;
 
-    .line 219
-    const/4 v2, -0x1
+    monitor-enter v1
 
-    .line 230
-    :goto_3
-    return v2
+    .line 235
+    :try_start_0
+    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/ab;->j(Ljava/lang/Runnable;)V
 
+    .line 236
+    monitor-exit v1
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    .line 268
     :cond_0
-    move v0, v2
-
-    .line 215
-    goto :goto_0
+    :goto_3
+    return-void
 
     :cond_1
     move v0, v2
 
-    goto :goto_1
+    .line 224
+    goto :goto_0
 
     :cond_2
-    move v0, v2
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAI:Z
+
+    goto :goto_1
+
+    :cond_3
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
+
+    iget-boolean v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAJ:Z
 
     goto :goto_2
 
-    .line 221
-    :cond_3
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjm:Ljava/lang/Object;
-
-    monitor-enter v3
-
-    .line 222
-    :try_start_0
-    iput-object p1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjn:Lcom/tencent/mm/plugin/sight/encode/a/a$b;
-
-    .line 223
-    iget-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjl:Z
-
-    if-eqz v0, :cond_4
-
-    if-eqz p1, :cond_4
-
-    .line 224
-    const-string/jumbo v0, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
-
-    const-string/jumbo v4, "has stop, directly call stop callback"
-
-    invoke-static {v0, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 225
-    invoke-interface {p1}, Lcom/tencent/mm/plugin/sight/encode/a/a$b;->ajH()V
-
-    .line 226
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjn:Lcom/tencent/mm/plugin/sight/encode/a/a$b;
-
-    .line 228
-    :cond_4
-    monitor-exit v3
-    :try_end_0
-    .catchall {:try_start_0 .. :try_end_0} :catchall_0
-
-    .line 229
-    iput-boolean v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjk:Z
-
-    goto :goto_3
-
-    .line 228
+    .line 236
     :catchall_0
     move-exception v0
 
     :try_start_1
-    monitor-exit v3
+    monitor-exit v1
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
     throw v0
-.end method
 
-.method public final ajE()I
-    .locals 1
+    .line 237
+    :cond_4
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
 
-    .prologue
-    .line 355
-    iget v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiU:I
+    iget v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/i;->gBb:I
 
-    return v0
-.end method
+    .line 240
+    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
 
-.method public final ajF()V
-    .locals 1
+    iget v3, v3, Lcom/tencent/mm/plugin/sight/encode/a/i;->gBc:I
 
-    .prologue
-    .line 235
-    const/4 v0, 0x1
+    int-to-float v3, v3
 
-    iput-boolean v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fji:Z
+    const/high16 v4, 0x447a0000    # 1000.0f
 
-    .line 236
-    return-void
-.end method
+    mul-float/2addr v3, v4
 
-.method final q(IZ)V
-    .locals 6
+    iget-object v4, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
 
-    .prologue
-    const/4 v5, 0x0
+    invoke-virtual {v4}, Lcom/tencent/mm/plugin/sight/encode/a/i;->awy()J
 
-    .line 282
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
+    move-result-wide v4
 
-    if-nez v0, :cond_0
+    long-to-float v4, v4
 
-    .line 283
-    const-string/jumbo v0, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
+    div-float/2addr v3, v4
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    .line 241
+    const-string/jumbo v4, "!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg=="
 
-    const-string/jumbo v2, "drain audio encoder error, encoder is null, end:"
+    const-string/jumbo v5, "on mux main sight stop, bufID %d, frameCount %d, duration %dms, %.6ffps"
 
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    const/4 v6, 0x4
 
-    invoke-virtual {v1, p2}, Ljava/lang/StringBuilder;->append(Z)Ljava/lang/StringBuilder;
+    new-array v6, v6, [Ljava/lang/Object;
 
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 347
-    :goto_0
-    return-void
-
-    .line 287
-    :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->getOutputBuffers()[Ljava/nio/ByteBuffer;
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 290
-    :cond_1
-    :goto_1
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
+    aput-object v0, v6, v2
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fja:Landroid/media/MediaCodec$BufferInfo;
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
 
-    const-wide/16 v3, 0x64
+    iget v0, v0, Lcom/tencent/mm/plugin/sight/encode/a/i;->gBc:I
 
-    invoke-virtual {v1, v2, v3, v4}, Landroid/media/MediaCodec;->dequeueOutputBuffer(Landroid/media/MediaCodec$BufferInfo;J)I
+    invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    move-result v1
+    move-result-object v0
 
-    iput v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjh:I
+    aput-object v0, v6, v1
 
-    .line 291
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjh:I
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
 
-    const/4 v2, -0x1
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/i;->awy()J
 
-    if-ne v1, v2, :cond_3
+    move-result-wide v7
 
-    .line 293
-    if-nez p2, :cond_2
+    invoke-static {v7, v8}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
-    .line 294
-    const-string/jumbo v0, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
+    move-result-object v0
 
-    const-string/jumbo v1, "no output available. aborting drain"
+    aput-object v0, v6, v9
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v3}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
-    goto :goto_0
+    move-result-object v0
 
-    .line 297
-    :cond_2
-    const-string/jumbo v1, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
+    aput-object v0, v6, v10
 
-    const-string/jumbo v2, "no output available, spinning to await EOS"
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    .line 243
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
 
-    goto :goto_1
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/i;->awy()J
 
-    .line 299
-    :cond_3
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjh:I
+    move-result-wide v4
 
-    const/4 v2, -0x3
+    long-to-int v0, v4
 
-    if-eq v1, v2, :cond_0
+    iput v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAw:I
 
-    .line 301
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjh:I
+    .line 244
+    iput v3, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAx:F
 
-    const/4 v2, -0x2
+    .line 246
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAs:Lcom/tencent/mm/plugin/sight/encode/a/i;
 
-    if-eq v1, v2, :cond_1
+    invoke-virtual {v0}, Lcom/tencent/mm/plugin/sight/encode/a/i;->stop()V
 
-    .line 309
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjh:I
+    .line 247
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAr:Lcom/tencent/mm/plugin/sight/encode/a/a;
 
-    if-gez v1, :cond_4
+    new-instance v2, Lcom/tencent/mm/plugin/sight/encode/a/e$3;
 
-    .line 310
-    const-string/jumbo v1, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
+    invoke-direct {v2, p0}, Lcom/tencent/mm/plugin/sight/encode/a/e$3;-><init>(Lcom/tencent/mm/plugin/sight/encode/a/e;)V
 
-    new-instance v2, Ljava/lang/StringBuilder;
+    invoke-interface {v0, v2}, Lcom/tencent/mm/plugin/sight/encode/a/a;->a(Lcom/tencent/mm/plugin/sight/encode/a/a$b;)I
 
-    const-string/jumbo v3, "unexpected result from encoder.dequeueOutputBuffer: "
+    .line 257
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    if-eqz v0, :cond_5
 
-    iget v3, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjh:I
+    .line 258
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+    iput v3, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAH:F
 
-    move-result-object v2
+    .line 259
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAw:I
 
-    move-result-object v2
+    iput v2, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->duration:I
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->v(Ljava/lang/String;Ljava/lang/String;)V
+    .line 260
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    goto :goto_1
+    iput-object p1, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->aID:Ljava/lang/Runnable;
 
-    .line 314
-    :cond_4
-    iget v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjh:I
+    .line 261
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    aget-object v1, v0, v1
+    iput-boolean v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/e$a;->gAI:Z
 
-    .line 315
-    if-nez v1, :cond_5
+    .line 262
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAu:Lcom/tencent/mm/plugin/sight/encode/a/e$a;
 
-    .line 316
-    new-instance v0, Ljava/lang/RuntimeException;
+    invoke-static {v0}, Lcom/tencent/mm/sdk/i/e;->remove(Ljava/lang/Runnable;)Z
 
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "encoderOutputBuffer "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjh:I
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, " was null"
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-direct {v0, v1}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/String;)V
-
-    throw v0
-
-    .line 320
+    .line 265
     :cond_5
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fja:Landroid/media/MediaCodec$BufferInfo;
+    sget-object v0, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzO:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-    iget v2, v2, Landroid/media/MediaCodec$BufferInfo;->flags:I
+    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-    and-int/lit8 v2, v2, 0x2
+    iget-object v1, v1, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAN:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-    if-eqz v2, :cond_6
+    if-eq v0, v1, :cond_0
 
-    .line 324
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fja:Landroid/media/MediaCodec$BufferInfo;
+    .line 266
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-    iput v5, v2, Landroid/media/MediaCodec$BufferInfo;->size:I
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzN:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-    .line 327
-    :cond_6
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fja:Landroid/media/MediaCodec$BufferInfo;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/plugin/sight/encode/a/f;->b(Lcom/tencent/mm/plugin/sight/encode/a/b$b;)V
 
-    iget v2, v2, Landroid/media/MediaCodec$BufferInfo;->size:I
+    goto/16 :goto_3
+.end method
 
-    if-eqz v2, :cond_7
+.method public final reset()V
+    .locals 2
 
-    .line 330
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fja:Landroid/media/MediaCodec$BufferInfo;
+    .prologue
+    .line 402
+    const-string/jumbo v0, "!56@/B4Tb64lLpJV3Mq7v6RQYsw9iU1fZo0D98YOy+68WsfQ+QfCSKBitg=="
 
-    iget v2, v2, Landroid/media/MediaCodec$BufferInfo;->offset:I
+    const-string/jumbo v1, "reset"
 
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 331
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fja:Landroid/media/MediaCodec$BufferInfo;
+    .line 403
+    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->gAt:Lcom/tencent/mm/plugin/sight/encode/a/f;
 
-    iget v2, v2, Landroid/media/MediaCodec$BufferInfo;->offset:I
+    sget-object v1, Lcom/tencent/mm/plugin/sight/encode/a/b$b;->gzN:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-    iget-object v3, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fja:Landroid/media/MediaCodec$BufferInfo;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/sight/encode/a/f;->gAN:Lcom/tencent/mm/plugin/sight/encode/a/b$b;
 
-    iget v3, v3, Landroid/media/MediaCodec$BufferInfo;->size:I
+    .line 404
+    invoke-direct {p0}, Lcom/tencent/mm/plugin/sight/encode/a/e;->clear()V
 
-    add-int/2addr v2, v3
-
-    invoke-virtual {v1, v2}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
-
-    .line 333
-    iget-object v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fja:Landroid/media/MediaCodec$BufferInfo;
-
-    iget v2, v2, Landroid/media/MediaCodec$BufferInfo;->size:I
-
-    invoke-static {p1, v1, v2}, Lcom/tencent/mm/plugin/sight/base/SightVideoJNI;->writeAACData(ILjava/nio/ByteBuffer;I)V
-
-    .line 336
-    :cond_7
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-
-    iget v2, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fjh:I
-
-    invoke-virtual {v1, v2, v5}, Landroid/media/MediaCodec;->releaseOutputBuffer(IZ)V
-
-    .line 338
-    iget-object v1, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fja:Landroid/media/MediaCodec$BufferInfo;
-
-    iget v1, v1, Landroid/media/MediaCodec$BufferInfo;->flags:I
-
-    and-int/lit8 v1, v1, 0x4
-
-    if-eqz v1, :cond_1
-
-    .line 339
-    if-nez p2, :cond_8
-
-    .line 340
-    const-string/jumbo v0, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
-
-    const-string/jumbo v1, "reached end of stream unexpectedly"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    goto/16 :goto_0
-
-    .line 342
-    :cond_8
-    const-string/jumbo v0, "!44@/B4Tb64lLpIkWKsiUG1uw6WiRfwCbqHG4lrsijxPNLk="
-
-    const-string/jumbo v1, "do stop audio encoder"
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 343
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->stop()V
-
-    .line 344
-    iget-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-
-    invoke-virtual {v0}, Landroid/media/MediaCodec;->release()V
-
-    .line 345
-    const/4 v0, 0x0
-
-    iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/a/e;->fiY:Landroid/media/MediaCodec;
-
-    goto/16 :goto_0
+    .line 405
+    return-void
 .end method

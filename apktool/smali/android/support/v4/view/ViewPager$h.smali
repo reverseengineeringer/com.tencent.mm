@@ -51,13 +51,13 @@
 
     check-cast v1, Landroid/support/v4/view/ViewPager$LayoutParams;
 
-    iget-boolean v2, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->hx:Z
+    iget-boolean v2, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->gF:Z
 
-    iget-boolean v3, v1, Landroid/support/v4/view/ViewPager$LayoutParams;->hx:Z
+    iget-boolean v3, v1, Landroid/support/v4/view/ViewPager$LayoutParams;->gF:Z
 
     if-eq v2, v3, :cond_1
 
-    iget-boolean v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->hx:Z
+    iget-boolean v0, v0, Landroid/support/v4/view/ViewPager$LayoutParams;->gF:Z
 
     if-eqz v0, :cond_0
 

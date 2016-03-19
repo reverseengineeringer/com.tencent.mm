@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$bn
-  extends a.c
+  extends a.e
 {
   public a$bn()
   {
-    super("openProductView", "open_product_view", 59, true);
+    super("hasEmoticon", "has_emoticon", 9, false);
   }
 }
 

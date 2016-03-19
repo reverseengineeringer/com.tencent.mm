@@ -4,10 +4,10 @@ import java.lang.ref.WeakReference;
 
 final class a$a
 {
-  public WeakReference bUd;
-  public WeakReference bUe;
-  public long bUf;
-  public long bUg = 0L;
+  public WeakReference ckZ;
+  public WeakReference cla;
+  public long clb;
+  public long clc = 0L;
   
   private a$a(a parama) {}
 }

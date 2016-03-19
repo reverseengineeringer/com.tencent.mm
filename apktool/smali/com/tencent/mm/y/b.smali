@@ -1,134 +1,88 @@
-.class final Lcom/tencent/mm/y/b;
-.super Ljava/lang/Object;
+.class public final Lcom/tencent/mm/y/b;
+.super Lcom/tencent/mm/sdk/h/g;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/sdk/platformtools/aj$a;
+
+# static fields
+.field public static final aoY:[Ljava/lang/String;
 
 
 # instance fields
-.field final synthetic bCz:Lcom/tencent/mm/y/a;
+.field bCw:Lcom/tencent/mm/az/g;
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/y/a;)V
+.method static constructor <clinit>()V
+    .locals 3
+
+    .prologue
+    .line 13
+    const/4 v0, 0x1
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    const/4 v1, 0x0
+
+    const-string/jumbo v2, "CREATE TABLE IF NOT EXISTS getcontactinfov2 ( username text  PRIMARY KEY , inserttime long  , type int  , lastgettime int  , reserved1 int  , reserved2 int  , reserved3 text  , reserved4 text  ) "
+
+    aput-object v2, v0, v1
+
+    sput-object v0, Lcom/tencent/mm/y/b;->aoY:[Ljava/lang/String;
+
+    return-void
+.end method
+
+.method public constructor <init>(Lcom/tencent/mm/az/g;)V
     .locals 0
 
     .prologue
-    .line 65
-    iput-object p1, p0, Lcom/tencent/mm/y/b;->bCz:Lcom/tencent/mm/y/a;
+    .line 49
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/h/g;-><init>()V
 
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+    .line 50
+    iput-object p1, p0, Lcom/tencent/mm/y/b;->bCw:Lcom/tencent/mm/az/g;
 
+    .line 51
     return-void
 .end method
 
 
 # virtual methods
-.method public final lO()Z
-    .locals 10
+.method public final hD(Ljava/lang/String;)Z
+    .locals 6
 
     .prologue
-    .line 68
-    iget-object v0, p0, Lcom/tencent/mm/y/b;->bCz:Lcom/tencent/mm/y/a;
-
-    iget v0, v0, Lcom/tencent/mm/y/a;->bCw:I
-
-    invoke-static {v0}, Landroid/net/TrafficStats;->getUidRxBytes(I)J
-
-    move-result-wide v0
-
-    .line 69
-    iget-object v2, p0, Lcom/tencent/mm/y/b;->bCz:Lcom/tencent/mm/y/a;
-
-    iget v2, v2, Lcom/tencent/mm/y/a;->bCw:I
-
-    invoke-static {v2}, Landroid/net/TrafficStats;->getUidTxBytes(I)J
-
-    move-result-wide v2
-
-    .line 71
-    iget-object v4, p0, Lcom/tencent/mm/y/b;->bCz:Lcom/tencent/mm/y/a;
-
-    iget-wide v4, v4, Lcom/tencent/mm/y/a;->bCu:J
-
-    sub-long v4, v0, v4
-
-    iget-object v6, p0, Lcom/tencent/mm/y/b;->bCz:Lcom/tencent/mm/y/a;
-
-    iget-wide v6, v6, Lcom/tencent/mm/y/a;->bCv:J
-
-    sub-long v6, v2, v6
-
-    add-long/2addr v4, v6
-
-    .line 72
-    const-string/jumbo v6, "!44@/B4Tb64lLpIIg7zAXvxzP2DKDVA2S8s32QCNeB5uDSg="
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v8, "delta of data: "
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    const-wide/16 v8, 0x400
-
-    div-long v8, v4, v8
-
-    invoke-virtual {v7, v8, v9}, Ljava/lang/StringBuilder;->append(J)Ljava/lang/StringBuilder;
-
-    move-result-object v7
-
-    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v7
-
-    invoke-static {v6, v7}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 73
-    const-wide/16 v6, 0x5000
-
-    cmp-long v4, v4, v6
-
-    if-gtz v4, :cond_0
-
-    .line 74
-    iget-object v0, p0, Lcom/tencent/mm/y/b;->bCz:Lcom/tencent/mm/y/a;
+    const/4 v0, 0x1
 
     const/4 v1, 0x0
 
-    iput-boolean v1, v0, Lcom/tencent/mm/y/a;->bCt:Z
+    .line 136
+    iget-object v2, p0, Lcom/tencent/mm/y/b;->bCw:Lcom/tencent/mm/az/g;
 
-    .line 75
-    iget-object v0, p0, Lcom/tencent/mm/y/b;->bCz:Lcom/tencent/mm/y/a;
+    const-string/jumbo v3, "getcontactinfov2"
 
-    invoke-virtual {v0}, Lcom/tencent/mm/y/a;->start()V
+    const-string/jumbo v4, "username= ?"
 
-    .line 81
+    new-array v5, v0, [Ljava/lang/String;
+
+    aput-object p1, v5, v1
+
+    invoke-virtual {v2, v3, v4, v5}, Lcom/tencent/mm/az/g;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
+
+    move-result v2
+
+    .line 137
+    if-lez v2, :cond_0
+
+    .line 138
+    invoke-virtual {p0, p1}, Lcom/tencent/mm/y/b;->DI(Ljava/lang/String;)V
+
+    .line 141
     :goto_0
-    const/4 v0, 0x1
-
     return v0
 
-    .line 77
     :cond_0
-    iget-object v4, p0, Lcom/tencent/mm/y/b;->bCz:Lcom/tencent/mm/y/a;
-
-    iput-wide v0, v4, Lcom/tencent/mm/y/a;->bCu:J
-
-    .line 78
-    iget-object v0, p0, Lcom/tencent/mm/y/b;->bCz:Lcom/tencent/mm/y/a;
-
-    iput-wide v2, v0, Lcom/tencent/mm/y/a;->bCv:J
-
-    .line 79
-    iget-object v0, p0, Lcom/tencent/mm/y/b;->bCz:Lcom/tencent/mm/y/a;
-
-    iget-object v0, v0, Lcom/tencent/mm/y/a;->bCy:Lcom/tencent/mm/sdk/platformtools/aj;
-
-    const-wide/16 v1, 0x3e8
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/aj;->cA(J)V
+    move v0, v1
 
     goto :goto_0
 .end method

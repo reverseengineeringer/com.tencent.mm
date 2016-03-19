@@ -4,8 +4,8 @@
 
 
 # virtual methods
-.method public abstract a(Lcom/tencent/mm/pluginsdk/location/c;)V
+.method public abstract a(Lcom/tencent/mm/pluginsdk/location/b;)V
 .end method
 
-.method public abstract a(Ljava/lang/String;Lcom/tencent/mm/pluginsdk/location/c;)V
+.method public abstract a(Ljava/lang/String;Lcom/tencent/mm/pluginsdk/location/b;)V
 .end method

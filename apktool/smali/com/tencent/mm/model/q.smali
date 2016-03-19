@@ -1,30 +1,17 @@
-.class final Lcom/tencent/mm/model/q;
+.class public interface abstract Lcom/tencent/mm/model/q;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
-# interfaces
-.implements Lcom/tencent/mm/ar/g$b;
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 1354
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method
-
 
 # virtual methods
-.method public final lW()[Ljava/lang/String;
-    .locals 1
+.method public abstract a(Lcom/tencent/mm/model/r;)V
+.end method
 
-    .prologue
-    .line 1357
-    sget-object v0, Lcom/tencent/mm/ac/b;->aqU:[Ljava/lang/String;
+.method public abstract b(Lcom/tencent/mm/model/r;)V
+.end method
 
-    return-object v0
+.method public abstract mr()V
+.end method
+
+.method public abstract ms()V
 .end method

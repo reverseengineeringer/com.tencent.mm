@@ -10,9 +10,9 @@ import com.tencent.kingkong.AbstractCursor;
 public final class d
   extends AbstractCursor
 {
-  public SparseArray bkO;
-  public int bkP = 3000;
-  public int bkQ;
+  public SparseArray bvr;
+  public int bvs = 3000;
+  public int bvt;
   public final int columnCount;
   private final String[] columnNames;
   
@@ -20,7 +20,7 @@ public final class d
   {
     columnNames = paramArrayOfString;
     columnCount = paramArrayOfString.length;
-    bkO = new SparseArray();
+    bvr = new SparseArray();
   }
   
   public d(String[] paramArrayOfString, byte paramByte)
@@ -36,14 +36,14 @@ public final class d
     if (mPos < 0) {
       throw new CursorIndexOutOfBoundsException("Before first row.");
     }
-    if (mPos >= bkQ) {
+    if (mPos >= bvt) {
       throw new CursorIndexOutOfBoundsException("After last row.");
     }
-    int i = mPos / bkP;
+    int i = mPos / bvs;
     int j = mPos;
-    int k = bkP;
+    int k = bvs;
     int m = columnCount;
-    return ((Object[])bkO.get(i))[(j % k * m + paramInt)];
+    return ((Object[])bvr.get(i))[(j % k * m + paramInt)];
   }
   
   public final void copyStringToBuffer(int paramInt, CharArrayBuffer paramCharArrayBuffer) {}
@@ -64,7 +64,7 @@ public final class d
   
   public final int getCount()
   {
-    return bkQ;
+    return bvt;
   }
   
   public final double getDouble(int paramInt)
@@ -151,7 +151,7 @@ public final class d
   
   public final class a
   {
-    private Object[] bkR;
+    private Object[] bvu;
     private final int endIndex;
     private int index;
     
@@ -159,15 +159,15 @@ public final class d
     {
       index = paramInt1;
       endIndex = paramInt2;
-      bkR = paramArrayOfObject;
+      bvu = paramArrayOfObject;
     }
     
-    public final a T(Object paramObject)
+    public final a U(Object paramObject)
     {
       if (index == endIndex) {
         throw new CursorIndexOutOfBoundsException("No more columns left.");
       }
-      Object[] arrayOfObject = bkR;
+      Object[] arrayOfObject = bvu;
       int i = index;
       index = (i + 1);
       arrayOfObject[i] = paramObject;

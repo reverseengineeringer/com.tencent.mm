@@ -1,38 +1,68 @@
 package com.tencent.mm.ui.tools.gridviewheaders;
 
 import android.database.DataSetObserver;
-import java.util.List;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ListAdapter;
 
-final class d
-  extends DataSetObserver
+public final class d
+  extends BaseAdapter
+  implements b
 {
-  d(c paramc) {}
-  
-  public final void onChanged()
+  private DataSetObserver gY = new DataSetObserver()
   {
-    int i = 0;
-    c localc = jwc;
-    mCount = 0;
-    int j = jvY.aSz();
-    if (j == 0) {
-      mCount = jvY.getCount();
-    }
-    for (;;)
+    public final void onChanged()
     {
-      jwc.notifyDataSetChanged();
-      return;
-      while (i < j)
-      {
-        mCount += jvY.oT(i) + cOq;
-        i += 1;
-      }
+      notifyDataSetChanged();
     }
+    
+    public final void onInvalidated()
+    {
+      notifyDataSetInvalidated();
+    }
+  };
+  private ListAdapter lzw;
+  
+  public d(ListAdapter paramListAdapter)
+  {
+    lzw = paramListAdapter;
+    paramListAdapter.registerDataSetObserver(gY);
   }
   
-  public final void onInvalidated()
+  public final View a(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    c.a(jwc).clear();
-    jwc.notifyDataSetInvalidated();
+    return null;
+  }
+  
+  public final int biU()
+  {
+    return 0;
+  }
+  
+  public final int getCount()
+  {
+    return lzw.getCount();
+  }
+  
+  public final Object getItem(int paramInt)
+  {
+    return lzw.getItem(paramInt);
+  }
+  
+  public final long getItemId(int paramInt)
+  {
+    return lzw.getItemId(paramInt);
+  }
+  
+  public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
+  {
+    return lzw.getView(paramInt, paramView, paramViewGroup);
+  }
+  
+  public final int rT(int paramInt)
+  {
+    return 0;
   }
 }
 

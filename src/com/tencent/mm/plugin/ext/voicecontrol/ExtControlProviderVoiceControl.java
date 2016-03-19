@@ -3,132 +3,198 @@ package com.tencent.mm.plugin.ext.voicecontrol;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.database.MatrixCursor;
 import android.net.Uri;
-import com.tencent.mm.d.b.k;
+import com.tencent.mm.a.e;
+import com.tencent.mm.at.b;
+import com.tencent.mm.compatible.a.a.a;
+import com.tencent.mm.d.b.p;
+import com.tencent.mm.model.ah;
 import com.tencent.mm.plugin.ext.provider.ExtContentProviderBase;
-import com.tencent.mm.protocal.b.au;
-import com.tencent.mm.protocal.b.aw;
-import com.tencent.mm.protocal.b.ay;
-import com.tencent.mm.protocal.b.az;
-import com.tencent.mm.protocal.b.ba;
-import com.tencent.mm.protocal.b.bb;
-import com.tencent.mm.protocal.b.bc;
-import com.tencent.mm.q.a.c;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.ad;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.protocal.b.bg;
+import com.tencent.mm.protocal.b.bi;
+import com.tencent.mm.protocal.b.bj;
+import com.tencent.mm.protocal.b.bk;
+import com.tencent.mm.protocal.b.bl;
+import com.tencent.mm.protocal.b.bm;
+import com.tencent.mm.protocal.b.bn;
+import com.tencent.mm.protocal.b.bo;
+import com.tencent.mm.r.a.c;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.ab;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.storage.k;
 import com.tencent.mm.storage.q;
 import java.util.LinkedList;
 
 public class ExtControlProviderVoiceControl
   extends ExtContentProviderBase
-  implements com.tencent.mm.q.d
+  implements com.tencent.mm.r.d
 {
-  private static final String[] dbj = { "retCode" };
   private Context context;
-  private String[] dbn = null;
-  private int dbo = -1;
-  private int dcj = 4;
-  private long dck;
-  private long dcl;
-  private long dcm;
-  com.tencent.mm.pluginsdk.d.a.a dcn = new com.tencent.mm.pluginsdk.d.a.a();
+  private String[] dKH = null;
+  private int dKI = -1;
+  private int dLF = 4;
+  private long dLG;
+  private long dLH;
+  private long dLI;
+  com.tencent.mm.pluginsdk.d.a.a dLJ = new com.tencent.mm.pluginsdk.d.a.a();
+  private long dLK = 0L;
+  private boolean dLL;
+  private com.qq.wx.voice.embed.recognizer.c dLM = new com.qq.wx.voice.embed.recognizer.c()
+  {
+    public final void a(com.qq.wx.voice.embed.recognizer.a paramAnonymousa)
+    {
+      if (paramAnonymousa == null) {
+        u.w("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "localVoiceControl onGetResult restult is null");
+      }
+      do
+      {
+        return;
+        u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "localVoiceControl use time2:%s,text: %s,name: %s", new Object[] { Long.valueOf(System.currentTimeMillis() - ExtControlProviderVoiceControl.b(ExtControlProviderVoiceControl.this)), text, name });
+      } while (ay.kz(name));
+      ExtControlProviderVoiceControl.c(ExtControlProviderVoiceControl.this);
+      ExtControlProviderVoiceControl.b(ExtControlProviderVoiceControl.this, name);
+    }
+    
+    public final void aF(int paramAnonymousInt)
+    {
+      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "localVoiceControl onGetError:%s", new Object[] { Integer.valueOf(paramAnonymousInt) });
+    }
+  };
   
   public ExtControlProviderVoiceControl(String[] paramArrayOfString, int paramInt, Context paramContext)
   {
-    dbn = paramArrayOfString;
-    dbo = paramInt;
+    dKH = paramArrayOfString;
+    dKI = paramInt;
     context = paramContext;
   }
   
-  private static boolean a(f paramf, int paramInt1, int paramInt2)
+  private static boolean a(a parama, int paramInt1, int paramInt2)
   {
-    if (paramf == null)
+    if (parama == null)
     {
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue netscene null");
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue netscene null");
       return false;
     }
-    if (dcA == null)
+    if (dLY == null)
     {
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue uploadCmd null");
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue uploadCmd null");
       return false;
     }
-    if (dcA.hjN == null)
+    if (dLY.iYv == null)
     {
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue UploadCtx null");
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue UploadCtx null");
       return false;
     }
-    new ba();
-    Object localObject = dcA;
-    hjN.hjW = paramInt1;
-    hjN.hjX = paramInt2;
-    byte[] arrayOfByte = com.tencent.mm.a.c.d(dcz, paramInt1, paramInt2);
-    t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue %s, startPos=%s, dataLen=%s", new Object[] { Integer.valueOf(dcw), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
+    new bm();
+    Object localObject = dLY;
+    iYv.iYE = paramInt1;
+    iYv.iYF = paramInt2;
+    byte[] arrayOfByte = e.d(dLX, paramInt1, paramInt2);
+    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue %s, startPos=%s, dataLen=%s", new Object[] { Integer.valueOf(dLU), Integer.valueOf(paramInt1), Integer.valueOf(paramInt2) });
     if ((arrayOfByte == null) || (arrayOfByte.length <= 0))
     {
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] buf empty, %s", new Object[] { dcz });
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] buf empty, %s", new Object[] { dLX });
       return false;
     }
-    hjU = com.tencent.mm.al.b.au(arrayOfByte);
-    localObject = new f(dcw, appId, bsm, dcz, (ba)localObject);
-    bsn = bsn;
-    com.tencent.mm.model.ax.tm().d((j)localObject);
+    iYC = b.aH(arrayOfByte);
+    localObject = new a(dLU, appId, bEp, dLX, (bm)localObject);
+    bEq = bEq;
+    ah.tE().d((j)localObject);
     return true;
   }
   
   public static boolean a(String paramString1, int paramInt1, int paramInt2, int paramInt3, int paramInt4, String paramString2)
   {
-    int i = com.tencent.mm.a.c.ay(paramString2);
-    bc localbc = new bc();
-    hjY = paramInt1;
-    hjZ = paramInt2;
-    hka = paramInt3;
-    hkb = paramInt4;
-    bb localbb = new bb();
-    hjV = i;
-    hjW = 0;
-    if (i <= 16384) {
-      hjX = i;
-    }
-    for (byte[] arrayOfByte = com.tencent.mm.a.c.d(paramString2, 0, i);; arrayOfByte = com.tencent.mm.a.c.d(paramString2, 0, 16384))
+    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "uploadVoiceStart ");
+    Object localObject1;
+    if (paramInt1 != 4)
     {
-      t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoice appId=%s, FileType=%s, EncodeType=%s, sampleRate=%s, bps=%s, fileLen=%s, limit=%s", new Object[] { paramString1, Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Integer.valueOf(paramInt4), Integer.valueOf(i), Integer.valueOf(16384) });
-      if ((arrayOfByte != null) && (arrayOfByte.length > 0)) {
+      localObject2 = paramString2 + ".speex";
+      new com.tencent.mm.c.c.d();
+      localObject1 = localObject2;
+      if (!com.tencent.mm.c.c.d.r(paramString2, (String)localObject2))
+      {
+        u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] decodePCMToSpeex error,pcmPath:%s,speexFilePath:%s", new Object[] { paramString2, localObject2 });
+        return false;
+      }
+    }
+    else
+    {
+      localObject1 = paramString2;
+    }
+    int i = e.aw((String)localObject1);
+    Object localObject2 = new bo();
+    iYG = 4;
+    iYH = 4;
+    iYI = paramInt3;
+    iYJ = paramInt4;
+    bn localbn = new bn();
+    iYD = i;
+    iYE = 0;
+    if (i <= 16384) {
+      iYF = i;
+    }
+    for (paramString2 = e.d((String)localObject1, 0, i);; paramString2 = e.d((String)localObject1, 0, 16384))
+    {
+      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoice appId=%s, FileType=%s, EncodeType=%s, sampleRate=%s, bps=%s, fileLen=%s, limit=%s", new Object[] { paramString1, Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), Integer.valueOf(paramInt3), Integer.valueOf(paramInt4), Integer.valueOf(i), Integer.valueOf(16384) });
+      if ((paramString2 != null) && (paramString2.length > 0)) {
         break;
       }
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] buf empty");
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] buf empty");
       return false;
-      hjX = 16384;
+      iYF = 16384;
     }
-    ba localba = new ba();
-    hjT = localbc;
-    hjN = localbb;
-    hjU = com.tencent.mm.al.b.au(arrayOfByte);
-    paramInt1 = bn.DM().hashCode();
+    bm localbm = new bm();
+    iYB = ((bo)localObject2);
+    iYv = localbn;
+    iYC = b.aH(paramString2);
+    paramInt1 = ay.FS().hashCode();
     if (paramInt1 != Integer.MIN_VALUE) {}
     for (paramInt1 = Math.abs(paramInt1);; paramInt1 = Integer.MIN_VALUE)
     {
-      paramString1 = new f(paramInt1, paramString1, i, paramString2, localba);
-      com.tencent.mm.model.ax.tm().d(paramString1);
+      paramString1 = new a(paramInt1, paramString1, i, (String)localObject1, localbm);
+      ah.tE().d(paramString1);
       return true;
     }
   }
   
-  public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
+  private void nV(final String paramString)
   {
-    t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] onSceneEnd errType=%s, errCode=%s, errMsg=%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
+    k localk = ah.tD().rq().Ep(paramString);
+    if ((localk == null) || (!com.tencent.mm.h.a.ce(field_type)))
+    {
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] username is not contact, countDown");
+      dLF = 5;
+      dLJ.countDown();
+      return;
+    }
+    com.tencent.mm.compatible.a.a.a(11, new a.a()
+    {
+      public final void run()
+      {
+        ExtControlProviderVoiceControl.c(ExtControlProviderVoiceControl.this, paramString);
+      }
+    });
+    dLF = 1;
+    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] jump to chattingUI : %s, countDown", new Object[] { paramString });
+    dLJ.countDown();
+  }
+  
+  public final void a(int paramInt1, int paramInt2, final String paramString, j paramj)
+  {
+    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] onSceneEnd errType=%s, errCode=%s, errMsg=%s", new Object[] { Integer.valueOf(paramInt1), Integer.valueOf(paramInt2), paramString });
     if (paramj == null)
     {
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] scene null, countDown");
-      dcj = 7;
-      dcn.countDown();
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] scene null, countDown");
+      dLF = 7;
+      dLJ.countDown();
     }
-    f localf;
-    label390:
-    label395:
+    final a locala;
+    label408:
+    label413:
     do
     {
       do
@@ -138,263 +204,295 @@ public class ExtControlProviderVoiceControl
           return;
           if ((paramInt1 != 0) || (paramInt2 != 0))
           {
-            t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] errType、errCode not ok, countDown");
-            dcj = 7;
-            dcn.countDown();
+            u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] errType、errCode not ok, countDown");
+            dLF = 7;
+            dLJ.countDown();
             return;
           }
-          t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] scene.getType()=%s", new Object[] { Integer.valueOf(paramj.getType()) });
+          u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] scene.getType()=%s", new Object[] { Integer.valueOf(paramj.getType()) });
         } while (paramj.getType() != 985);
-        localf = (f)paramj;
-        paramString = (f)paramj;
-        if ((apJ != null) && (apJ.bsU.btb != null)) {}
-        for (paramString = (aw)apJ.bsU.btb; paramString == null; paramString = null)
+        if (dLL)
         {
-          t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] resp null, countDown");
-          dcj = 7;
-          dcn.countDown();
+          u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] localVoiceControlSucess, no need to process");
           return;
         }
-        dcx = hjG;
-        paramInt1 = axw;
-        if (hjG == null)
+        locala = (a)paramj;
+        paramString = (a)paramj;
+        if ((anN != null) && (anN.bEX.bFf != null)) {}
+        for (paramString = (bi)anN.bEX.bFf; paramString == null; paramString = null)
+        {
+          u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] resp null, countDown");
+          dLF = 7;
+          dLJ.countDown();
+          return;
+        }
+        dLV = iYo;
+        paramInt1 = axD;
+        if (iYo == null)
         {
           paramj = "null";
-          t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] opCode=%s, resp.Cookies=%s", new Object[] { Integer.valueOf(paramInt1), paramj });
-          if (axw != 1) {
-            break label390;
+          u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] opCode=%s, resp.Cookies=%s", new Object[] { Integer.valueOf(paramInt1), paramj });
+          if (axD != 1) {
+            break label408;
           }
         }
         for (paramInt1 = 1;; paramInt1 = 0)
         {
           if (paramInt1 == 0) {
-            break label564;
+            break label582;
           }
-          if (hjN == null) {
-            t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] resp.UploadCtx is null");
+          if (iYv == null) {
+            u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] resp.UploadCtx is null");
           }
-          t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadMode resp: Interval=%s, Timeout=%s, StartPos=%s, DataLen=%s", new Object[] { Integer.valueOf(hjL), Integer.valueOf(hjM), Integer.valueOf(hjN.hjW), Integer.valueOf(hjN.hjX) });
-          if (hjN.hjW < bsm) {
-            break label395;
+          u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadMode resp: Interval=%s, Timeout=%s, StartPos=%s, DataLen=%s", new Object[] { Integer.valueOf(iYt), Integer.valueOf(iYu), Integer.valueOf(iYv.iYE), Integer.valueOf(iYv.iYF) });
+          if (iYv.iYE < bEp) {
+            break label413;
           }
-          ad.c(new b(this, localf, paramString), hjL);
+          ab.e(new Runnable()
+          {
+            public final void run()
+            {
+              u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] getResultMode getVoiceControlResult");
+              a locala = locala;
+              int i = paramStringiYu;
+              u.i("!56@/B4Tb64lLpJog02z7cuAvbpQZOkPhbyQv1jPueeOaTaQWzkct9X9+w==", "[voiceControl] setGetResultTimeOut %s", new Object[] { Integer.valueOf(i) });
+              dMa = i;
+              a(localadLU, localaappId, localadLV);
+            }
+          }, iYt);
           return;
-          paramj = new String(hjG.hga);
+          paramj = new String(iYo.iTS);
           break;
         }
-        t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] continue upload voice");
-        if ((hjN.hjW != 0) && (hjN.hjW == bsn))
+        u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] continue upload voice");
+        if ((iYv.iYE != 0) && (iYv.iYE == bEq))
         {
-          t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] avoid duplicate doscene");
+          u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] avoid duplicate doscene");
           return;
         }
-        bsn = hjN.hjW;
-        if (hjN.hjW + hjN.hjX >= bsm) {
+        bEq = iYv.iYE;
+        if (iYv.iYE + iYv.iYF >= bEp) {
           break;
         }
-      } while (a(localf, hjN.hjW, hjN.hjX));
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue fail, countDown");
-      dcj = 4;
-      dcn.countDown();
+      } while (a(locala, iYv.iYE, iYv.iYF));
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue fail, countDown");
+      dLF = 4;
+      dLJ.countDown();
       return;
-    } while (a(localf, hjN.hjW, bsm - hjN.hjW));
-    t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue fail, countDown");
-    dcj = 4;
-    dcn.countDown();
+    } while (a(locala, iYv.iYE, bEp - iYv.iYE));
+    u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] uploadVoiceContinue fail, countDown");
+    dLF = 4;
+    dLJ.countDown();
     return;
-    label564:
-    label575:
+    label582:
+    label593:
     long l1;
-    if (axw == 2)
+    if (axD == 2)
     {
       paramInt1 = 1;
       if (paramInt1 == 0) {
-        break label665;
+        break label683;
       }
-      t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "");
-      l1 = System.currentTimeMillis() - dcD;
-      if (l1 <= dcC) {
-        break label667;
+      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "");
+      l1 = System.currentTimeMillis() - dMb;
+      if (l1 <= dMa) {
+        break label685;
       }
-      t.w("!56@/B4Tb64lLpJog02z7cuAvbpQZOkPhbyQv1jPueeOaTaQWzkct9X9+w==", "[voiceControl] isGetResultTimeOut %s, %s", new Object[] { Long.valueOf(l1), Integer.valueOf(dcC) });
+      u.w("!56@/B4Tb64lLpJog02z7cuAvbpQZOkPhbyQv1jPueeOaTaQWzkct9X9+w==", "[voiceControl] isGetResultTimeOut %s, %s", new Object[] { Long.valueOf(l1), Integer.valueOf(dMa) });
     }
     for (paramInt1 = 1;; paramInt1 = 0)
     {
       if (paramInt1 == 0) {
-        break label704;
+        break label722;
       }
-      dcj = 6;
-      dcn.countDown();
+      dLF = 6;
+      dLJ.countDown();
       return;
       paramInt1 = 0;
-      break label575;
-      label665:
+      break label593;
+      label683:
       break;
-      label667:
-      t.i("!56@/B4Tb64lLpJog02z7cuAvbpQZOkPhbyQv1jPueeOaTaQWzkct9X9+w==", "[voiceControl] time %s, %s", new Object[] { Long.valueOf(l1), Integer.valueOf(dcC) });
+      label685:
+      u.i("!56@/B4Tb64lLpJog02z7cuAvbpQZOkPhbyQv1jPueeOaTaQWzkct9X9+w==", "[voiceControl] time %s, %s", new Object[] { Long.valueOf(l1), Integer.valueOf(dMa) });
     }
-    label704:
-    if (hjO != null) {
-      t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] getResultMode resp VoiceId=%s, RecognizeRet=%s", new Object[] { Integer.valueOf(hjO.hjH), Integer.valueOf(hjO.hjP) });
+    label722:
+    if (iYw != null) {
+      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] getResultMode resp VoiceId=%s, RecognizeRet=%s", new Object[] { Integer.valueOf(iYw.iYp), Integer.valueOf(iYw.iYx) });
     }
-    if ((hjO == null) || (hjO.hjP != 0))
+    if ((iYw == null) || (iYw.iYx != 0))
     {
-      if (System.currentTimeMillis() - dcm >= hjL)
+      if (System.currentTimeMillis() - dLI >= iYt)
       {
-        ad.g(new c(this, localf));
+        ab.j(new Runnable()
+        {
+          public final void run()
+          {
+            a(localadLU, localaappId, localadLV);
+          }
+        });
         return;
       }
-      long l2 = hjL - (System.currentTimeMillis() - dcm);
+      long l2 = iYt - (System.currentTimeMillis() - dLI);
       l1 = l2;
-      if (l2 > hjL) {
-        l1 = hjL;
+      if (l2 > iYt) {
+        l1 = iYt;
       }
-      ad.c(new d(this, localf), l1);
-      return;
-    }
-    if (hjO.hjQ == null)
-    {
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] SearchContactResultInfo null, countDown");
-      dcj = 5;
-      dcn.countDown();
-      return;
-    }
-    if ((hjO.hjQ.hjR == null) || (hjO.hjQ.hjR.size() <= 0))
-    {
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] SearchContactResultInfo.Items null, countDown");
-      dcj = 5;
-      dcn.countDown();
-      return;
-    }
-    if (hjO.hjQ.hjR.size() == 0)
-    {
-      dcj = 5;
-      dcn.countDown();
-      return;
-    }
-    if (hjO.hjQ.hjR.size() == 1)
-    {
-      paramString = hjO.hjQ.hjR.get(0)).hjS;
-      paramj = com.tencent.mm.model.ax.tl().ri().yM(paramString);
-      if ((paramj == null) || (!com.tencent.mm.h.a.cd(field_type)))
+      ab.e(new Runnable()
       {
-        t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] username is not contact, countDown");
-        dcj = 5;
-        dcn.countDown();
-        return;
-      }
-      com.tencent.mm.compatible.a.a.a(11, new e(this, paramString));
-      dcj = 1;
-      t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] jump to chattingUI : %s, countDown", new Object[] { paramString });
-      dcn.countDown();
+        public final void run()
+        {
+          a(localadLU, localaappId, localadLV);
+        }
+      }, l1);
       return;
     }
-    paramj = new String[hjO.hjQ.hjR.size()];
+    if (iYw.iYy == null)
+    {
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] SearchContactResultInfo null, countDown");
+      dLF = 5;
+      dLJ.countDown();
+      return;
+    }
+    if ((iYw.iYy.iYz == null) || (iYw.iYy.iYz.size() <= 0))
+    {
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] SearchContactResultInfo.Items null, countDown");
+      dLF = 5;
+      dLJ.countDown();
+      return;
+    }
+    if (iYw.iYy.iYz.size() == 0)
+    {
+      dLF = 5;
+      dLJ.countDown();
+      return;
+    }
+    if (iYw.iYy.iYz.size() == 1)
+    {
+      nV(iYw.iYy.iYz.get(0)).iYA);
+      return;
+    }
+    paramj = new String[iYw.iYy.iYz.size()];
     paramInt1 = 0;
     while (paramInt1 < paramj.length)
     {
-      paramj[paramInt1] = hjO.hjQ.hjR.get(paramInt1)).hjS;
-      t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] resp result item: %s", new Object[] { paramj[paramInt1] });
+      paramj[paramInt1] = iYw.iYy.iYz.get(paramInt1)).iYA;
+      u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] resp result item: %s", new Object[] { paramj[paramInt1] });
       paramInt1 += 1;
     }
     paramString = new Intent();
     paramString.putExtra("VoiceSearchResultUI_Resultlist", paramj);
-    paramString.putExtra("VoiceSearchResultUI_VoiceId", dcw);
+    paramString.putExtra("VoiceSearchResultUI_VoiceId", dLU);
     paramString.putExtra("VoiceSearchResultUI_IsVoiceControl", true);
     paramString.setFlags(67108864);
     paramString.putExtra("VoiceSearchResultUI_ShowType", 1);
-    com.tencent.mm.aj.c.a(context, ".ui.voicesearch.VoiceSearchResultUI", paramString);
-    t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] scene end countDown");
-    dcj = 1;
-    dcn.countDown();
+    com.tencent.mm.ar.c.a(context, ".ui.voicesearch.VoiceSearchResultUI", paramString);
+    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] scene end countDown");
+    dLF = 1;
+    dLJ.countDown();
   }
   
-  public final boolean a(int paramInt, String paramString, com.tencent.mm.al.b paramb)
+  public final boolean a(int paramInt, String paramString, b paramb)
   {
-    t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] getVoiceControlResult voiceId=%s, appId=%s", new Object[] { Integer.valueOf(paramInt), paramString });
-    if (dcl == 0L) {
-      dcl = System.currentTimeMillis();
+    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] getVoiceControlResult voiceId=%s, appId=%s", new Object[] { Integer.valueOf(paramInt), paramString });
+    if (dLH == 0L) {
+      dLH = System.currentTimeMillis();
     }
-    dcm = System.currentTimeMillis();
-    au localau = new au();
-    hjG = paramb;
-    paramString = new f(paramInt, paramString, localau, dcl);
-    com.tencent.mm.model.ax.tm().d(paramString);
+    dLI = System.currentTimeMillis();
+    bg localbg = new bg();
+    iYo = paramb;
+    paramString = new a(paramInt, paramString, localbg, dLH);
+    ah.tE().d(paramString);
     return true;
   }
   
-  public Cursor query(Uri paramUri, String[] paramArrayOfString1, String paramString1, String[] paramArrayOfString2, String paramString2)
+  public Cursor query(final Uri paramUri, final String[] paramArrayOfString1, final String paramString1, final String[] paramArrayOfString2, final String paramString2)
   {
-    t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] query(), ApiId=%s", new Object[] { Integer.valueOf(dbo) });
-    dck = 0L;
-    dcl = 0L;
-    a(paramUri, context, dbo, dbn);
+    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] query(), ApiId=%s", new Object[] { Integer.valueOf(dKI) });
+    dLG = 0L;
+    dLH = 0L;
+    a(paramUri, context, dKI, dKH);
     if (paramUri == null)
     {
-      fN(3);
-      return null;
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "uri == null");
+      gK(3);
+      return gL(2);
     }
     long l1 = System.currentTimeMillis();
-    if ((bn.iW(dbr)) || (bn.iW(PI())))
+    if ((ay.kz(dKL)) || (ay.kz(Vw())))
     {
-      fN(3);
-      return null;
+      u.w("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "wrong args");
+      gK(3);
+      return gL(2);
     }
     long l2 = System.currentTimeMillis();
     long l3 = System.currentTimeMillis();
     long l4 = System.currentTimeMillis();
-    if (!bh(context))
+    if (!bx(context))
     {
-      t.w("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "invalid appid ! return null");
-      fN(2);
-      paramUri = new MatrixCursor(dbj);
-      paramUri.addRow(new Object[] { Integer.valueOf(8) });
-      return paramUri;
+      u.w("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "invalid appid ! return null");
+      gK(2);
+      return gL(8);
     }
-    t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[extApiCost][voiceControl] getAppIdAndPkg = %s, checkIsLogin = %s", new Object[] { Long.valueOf(l2 - l1), Long.valueOf(l4 - l3) });
-    switch (dbo)
+    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[extApiCost][voiceControl] getAppIdAndPkg = %s, checkIsLogin = %s", new Object[] { Long.valueOf(l2 - l1), Long.valueOf(l4 - l3) });
+    switch (dKI)
     {
     default: 
-      fN(3);
-      return null;
+      gK(3);
+      return gL(2);
     }
+    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "voiceControl");
     if ((paramArrayOfString2 == null) || (paramArrayOfString2.length < 4))
     {
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] wrong args");
-      fN(3);
-      dcj = 2;
-      paramUri = new MatrixCursor(dbj);
-      paramUri.addRow(new Object[] { Integer.valueOf(dcj) });
-      fN(0);
-      return paramUri;
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] wrong args");
+      gK(3);
+      dLF = 2;
+      return gL(dLF);
     }
     paramUri = paramArrayOfString2[0];
     paramArrayOfString1 = paramArrayOfString2[1];
     paramString1 = paramArrayOfString2[2];
     paramString2 = paramArrayOfString2[3];
     paramArrayOfString2 = paramArrayOfString2[4];
-    t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] args: %s, %s, %s, %s %s", new Object[] { paramUri, paramArrayOfString1, paramString1, paramString2, paramArrayOfString2 });
-    if ((bn.iW(paramUri)) || (bn.iW(paramArrayOfString1)) || (bn.iW(paramString1)) || (bn.iW(paramString2)) || (bn.iW(paramArrayOfString2)))
+    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] args: %s, %s, %s, %s %s", new Object[] { paramUri, paramArrayOfString1, paramString1, paramString2, paramArrayOfString2 });
+    if ((ay.kz(paramUri)) || (ay.kz(paramArrayOfString1)) || (ay.kz(paramString1)) || (ay.kz(paramString2)) || (ay.kz(paramArrayOfString2)))
     {
-      fN(3);
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] wrong args");
-      return null;
+      gK(3);
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] wrong args");
+      return gL(2);
     }
-    if (!com.tencent.mm.a.c.az(paramArrayOfString2))
+    if (!e.ax(paramArrayOfString2))
     {
-      t.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] speex file not exist");
-      fN(3);
-      return null;
+      u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] speex file not exist");
+      gK(3);
+      return gL(2);
     }
-    dck = System.currentTimeMillis();
-    com.tencent.mm.model.ax.tm().a(985, this);
-    dcn.b(13000L, new a(this, paramUri, paramArrayOfString1, paramString1, paramString2, paramArrayOfString2));
-    t.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[extApiCost][voiceControl] finish uploadVoice = %s, getResult = %s", new Object[] { Long.valueOf(dcl - dck), Long.valueOf(System.currentTimeMillis() - dcl) });
-    com.tencent.mm.model.ax.tm().b(985, this);
-    paramUri = new MatrixCursor(dbj);
-    paramUri.addRow(new Object[] { Integer.valueOf(dcj) });
-    fN(0);
-    return paramUri;
+    dLG = System.currentTimeMillis();
+    ah.tE().a(985, this);
+    dLJ.b(13000L, new Runnable()
+    {
+      public final void run()
+      {
+        int i = ay.getInt(paramUri, 4);
+        if (i == 1) {
+          ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.this, paramArrayOfString2);
+        }
+        for (;;)
+        {
+          if (!ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.this), i, ay.getInt(paramArrayOfString1, 4), ay.getInt(paramString1, 16000), ay.getInt(paramString2, 16), paramArrayOfString2))
+          {
+            u.e("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] !ok countDown");
+            ExtControlProviderVoiceControl.a(ExtControlProviderVoiceControl.this, 4);
+            dLJ.countDown();
+          }
+          return;
+          u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[voiceControl] not pcm, don't run localVoiceControl");
+        }
+      }
+    });
+    u.i("!64@/B4Tb64lLpJFxJd9/gj/+enQegK8Jw+noZdF2oAqpiMPHailweaaKrkPJ+YI84zH", "[extApiCost][voiceControl] finish uploadVoice = %s, getResult = %s", new Object[] { Long.valueOf(dLH - dLG), Long.valueOf(System.currentTimeMillis() - dLH) });
+    ah.tE().b(985, this);
+    gK(0);
+    return gL(dLF);
   }
 }
 

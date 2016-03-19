@@ -1,23 +1,45 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import android.os.Bundle;
+import com.tencent.mm.sdk.c.b;
+import org.json.JSONArray;
 
 public final class hw
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aFe = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aDD = new a();
+  public b aDE = new b();
   
   public hw()
   {
-    id = "SnsPostSuccess";
-    hXT = atO;
+    id = "NotifyWNNoteWebviewOperation";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public long aFd = -1L;
+    public int aDA = 0;
+    public String aDF;
+    public String aDG;
+    public JSONArray aDH;
+    public String aDI;
+    public long aDJ = 0L;
+    public String aDK;
+    public String aDL;
+    public String aDv;
+    public Bundle aDz;
+    public int ayx = 0;
+    public int ayy = 0;
+    public Context context;
+    public int type = 0;
+  }
+  
+  public static final class b
+  {
+    public int ret = 0;
   }
 }
 

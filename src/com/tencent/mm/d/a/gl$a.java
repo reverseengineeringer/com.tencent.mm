@@ -1,10 +1,10 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.storage.ar;
-
 public final class gl$a
 {
-  public ar aub;
+  public String aBB;
+  public int aBC = 1;
+  public int auE;
 }
 
 /* Location:

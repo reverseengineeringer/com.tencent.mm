@@ -4,12 +4,12 @@
 
 
 # direct methods
-.method public static pB()I
+.method public static pr()I
     .locals 2
 
     .prologue
     .line 16
-    invoke-static {}, Lcom/tencent/mm/g/h;->qa()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
 
     move-result-object v0
 
@@ -21,7 +21,7 @@
 
     const/16 v1, 0x2000
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -30,12 +30,12 @@
     return v0
 .end method
 
-.method public static pC()I
+.method public static ps()I
     .locals 2
 
     .prologue
     .line 20
-    invoke-static {}, Lcom/tencent/mm/g/h;->qa()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
 
     move-result-object v0
 
@@ -47,7 +47,7 @@
 
     const/16 v1, 0x7d0
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -56,12 +56,12 @@
     return v0
 .end method
 
-.method public static pD()I
+.method public static pt()I
     .locals 2
 
     .prologue
     .line 24
-    invoke-static {}, Lcom/tencent/mm/g/h;->qa()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
 
     move-result-object v0
 
@@ -73,7 +73,7 @@
 
     const/16 v1, 0x3e8
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -82,12 +82,12 @@
     return v0
 .end method
 
-.method public static pE()I
+.method public static pu()I
     .locals 2
 
     .prologue
     .line 28
-    invoke-static {}, Lcom/tencent/mm/g/h;->qa()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
 
     move-result-object v0
 
@@ -99,7 +99,7 @@
 
     const v1, 0x186a0
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
@@ -108,12 +108,36 @@
     return v0
 .end method
 
-.method public static pF()I
+.method public static pv()I
+    .locals 2
+
+    .prologue
+    .line 36
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "InputLimitSendEmotionWidth"
+
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/g/e;->getValue(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    const/16 v1, 0x400
+
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static pw()I
     .locals 2
 
     .prologue
     .line 46
-    invoke-static {}, Lcom/tencent/mm/g/h;->qa()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
 
     move-result-object v0
 
@@ -125,19 +149,19 @@
 
     const/high16 v1, 0x1900000
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/bn;->getInt(Ljava/lang/String;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/ay;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public static pG()Ljava/lang/String;
+.method public static px()Ljava/lang/String;
     .locals 2
 
     .prologue
     .line 71
-    invoke-static {}, Lcom/tencent/mm/g/h;->qa()Lcom/tencent/mm/g/e;
+    invoke-static {}, Lcom/tencent/mm/g/h;->pS()Lcom/tencent/mm/g/e;
 
     move-result-object v0
 

@@ -1,24 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.storage.ar;
+import com.tencent.mm.sdk.c.b;
 
 public final class go
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDP = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBF = new a();
   
   public go()
   {
-    id = "ResendVoiceRemindMsg";
-    hXT = atO;
+    id = "ManualAuth";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public ar aub;
+    public boolean atf;
   }
 }
 

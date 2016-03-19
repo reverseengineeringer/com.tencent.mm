@@ -4,7 +4,7 @@
 
 
 # static fields
-.field private static bib:Ljava/util/Map;
+.field private static bsz:Ljava/util/Map;
 
 
 # direct methods
@@ -15,12 +15,12 @@
     .line 20
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     return-void
 .end method
 
-.method private static c(C)Z
+.method private static b(C)Z
     .locals 1
 
     .prologue
@@ -46,7 +46,7 @@
     goto :goto_0
 .end method
 
-.method private static cU(Ljava/lang/String;)Ljava/lang/String;
+.method private static cY(Ljava/lang/String;)Ljava/lang/String;
     .locals 2
 
     .prologue
@@ -70,7 +70,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/d/m;->c(C)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/d/m;->b(C)Z
 
     move-result v0
 
@@ -109,7 +109,7 @@
     goto :goto_1
 .end method
 
-.method private static cV(Ljava/lang/String;)Ljava/lang/String;
+.method private static cZ(Ljava/lang/String;)Ljava/lang/String;
     .locals 3
 
     .prologue
@@ -125,7 +125,7 @@
 
     move-result v0
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/d/m;->c(C)Z
+    invoke-static {v0}, Lcom/tencent/mm/compatible/d/m;->b(C)Z
 
     move-result v0
 
@@ -192,21 +192,44 @@
     return-object v0
 .end method
 
-.method public static oA()Ljava/lang/String;
+.method public static oo()Ljava/util/Map;
+    .locals 1
+
+    .prologue
+    .line 23
+    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
+
+    if-nez v0, :cond_0
+
+    .line 24
+    invoke-static {}, Lcom/tencent/mm/compatible/d/m;->ou()Ljava/util/HashMap;
+
+    move-result-object v0
+
+    sput-object v0, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
+
+    .line 26
+    :cond_0
+    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
+
+    return-object v0
+.end method
+
+.method public static op()Ljava/lang/String;
     .locals 3
 
     .prologue
     .line 30
-    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
     .line 31
-    invoke-static {}, Lcom/tencent/mm/compatible/d/m;->oF()Ljava/util/HashMap;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/m;->ou()Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     .line 33
     :cond_0
@@ -220,7 +243,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 35
-    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     const-string/jumbo v2, "Features"
 
@@ -236,7 +259,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 37
-    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     const-string/jumbo v2, "Processor"
 
@@ -252,7 +275,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 39
-    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     const-string/jumbo v2, "CPU architecture"
 
@@ -268,7 +291,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 41
-    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     const-string/jumbo v2, "Hardware"
 
@@ -284,7 +307,7 @@
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     .line 43
-    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     const-string/jumbo v2, "Serial"
 
@@ -302,32 +325,32 @@
     return-object v0
 .end method
 
-.method public static oB()Z
+.method public static oq()Z
     .locals 3
 
     .prologue
     const/4 v0, 0x1
 
     .line 51
-    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     if-nez v1, :cond_0
 
     .line 52
-    invoke-static {}, Lcom/tencent/mm/compatible/d/m;->oF()Ljava/util/HashMap;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/m;->ou()Ljava/util/HashMap;
 
     move-result-object v1
 
-    sput-object v1, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sput-object v1, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     .line 54
     :cond_0
-    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     if-eqz v1, :cond_3
 
     .line 55
-    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v1, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     const-string/jumbo v2, "Features"
 
@@ -370,7 +393,7 @@
     goto :goto_0
 .end method
 
-.method public static oC()Z
+.method public static or()Z
     .locals 4
 
     .prologue
@@ -391,7 +414,7 @@
     :goto_0
     if-eqz v2, :cond_1
 
-    invoke-static {}, Lcom/tencent/mm/compatible/d/m;->oB()Z
+    invoke-static {}, Lcom/tencent/mm/compatible/d/m;->oq()Z
     :try_end_0
     .catch Ljava/lang/IncompatibleClassChangeError; {:try_start_0 .. :try_end_0} :catch_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
@@ -426,7 +449,7 @@
 
     new-array v1, v1, [Ljava/lang/Object;
 
-    invoke-static {v2, v0, v3, v1}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v0, v3, v1}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 77
     new-instance v1, Ljava/lang/IncompatibleClassChangeError;
@@ -454,30 +477,30 @@
     goto :goto_1
 .end method
 
-.method public static oD()Z
+.method public static os()Z
     .locals 4
 
     .prologue
     .line 86
-    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     if-nez v0, :cond_0
 
     .line 87
-    invoke-static {}, Lcom/tencent/mm/compatible/d/m;->oF()Ljava/util/HashMap;
+    invoke-static {}, Lcom/tencent/mm/compatible/d/m;->ou()Ljava/util/HashMap;
 
     move-result-object v0
 
-    sput-object v0, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     .line 89
     :cond_0
-    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     if-eqz v0, :cond_1
 
     .line 90
-    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bsz:Ljava/util/Map;
 
     const-string/jumbo v1, "CPU architecture"
 
@@ -502,7 +525,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 92
     if-eqz v0, :cond_1
@@ -515,12 +538,12 @@
     if-lez v1, :cond_1
 
     .line 95
-    invoke-static {v0}, Lcom/tencent/mm/compatible/d/m;->cU(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/compatible/d/m;->cY(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     .line 96
-    invoke-static {v0}, Lcom/tencent/mm/compatible/d/m;->cV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v0}, Lcom/tencent/mm/compatible/d/m;->cZ(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
@@ -546,7 +569,7 @@
 
     move-result-object v2
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
@@ -571,7 +594,7 @@
     goto :goto_0
 .end method
 
-.method public static oE()I
+.method public static ot()I
     .locals 2
 
     .prologue
@@ -584,9 +607,9 @@
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
     .line 134
-    new-instance v1, Lcom/tencent/mm/compatible/d/n;
+    new-instance v1, Lcom/tencent/mm/compatible/d/m$a;
 
-    invoke-direct {v1}, Lcom/tencent/mm/compatible/d/n;-><init>()V
+    invoke-direct {v1}, Lcom/tencent/mm/compatible/d/m$a;-><init>()V
 
     invoke-virtual {v0, v1}, Ljava/io/File;->listFiles(Ljava/io/FileFilter;)[Ljava/io/File;
 
@@ -609,7 +632,7 @@
     goto :goto_0
 .end method
 
-.method public static oF()Ljava/util/HashMap;
+.method public static ou()Ljava/util/HashMap;
     .locals 7
 
     .prologue
@@ -737,7 +760,7 @@
 
     new-array v5, v5, [Ljava/lang/Object;
 
-    invoke-static {v3, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v0, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->printErrStackTrace(Ljava/lang/String;Ljava/lang/Throwable;Ljava/lang/String;[Ljava/lang/Object;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
@@ -801,27 +824,4 @@
     move-exception v1
 
     goto :goto_2
-.end method
-
-.method public static oz()Ljava/util/Map;
-    .locals 1
-
-    .prologue
-    .line 23
-    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
-
-    if-nez v0, :cond_0
-
-    .line 24
-    invoke-static {}, Lcom/tencent/mm/compatible/d/m;->oF()Ljava/util/HashMap;
-
-    move-result-object v0
-
-    sput-object v0, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
-
-    .line 26
-    :cond_0
-    sget-object v0, Lcom/tencent/mm/compatible/d/m;->bib:Ljava/util/Map;
-
-    return-object v0
 .end method

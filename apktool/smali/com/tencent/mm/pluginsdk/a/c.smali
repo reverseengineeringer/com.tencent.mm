@@ -3,7 +3,7 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/pluginsdk/l$j;
+.implements Lcom/tencent/mm/pluginsdk/i$l;
 
 
 # direct methods
@@ -11,7 +11,7 @@
     .locals 0
 
     .prologue
-    .line 7
+    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 19
+    .line 21
     return-void
 .end method
 
@@ -31,22 +31,30 @@
     .locals 0
 
     .prologue
-    .line 31
+    .line 33
     return-void
 .end method
 
-.method public final a(Ljava/lang/String;[BLjava/lang/String;)V
+.method public final a(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IILcom/tencent/mm/protocal/b/ask;ZZ)V
     .locals 0
 
     .prologue
-    .line 25
+    .line 36
     return-void
 .end method
 
-.method public final i(Ljava/lang/String;Ljava/lang/String;I)V
+.method public final a(Ljava/lang/String;[BLjava/lang/String;Ljava/lang/String;)V
     .locals 0
 
     .prologue
-    .line 13
+    .line 27
+    return-void
+.end method
+
+.method public final u(Ljava/lang/String;Ljava/lang/String;I)V
+    .locals 0
+
+    .prologue
+    .line 15
     return-void
 .end method

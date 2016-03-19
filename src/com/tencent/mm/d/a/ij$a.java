@@ -2,8 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class ij$a
 {
-  public String aFz;
-  public int axw = 0;
+  public boolean aEd;
 }
 
 /* Location:

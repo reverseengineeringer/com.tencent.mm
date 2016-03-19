@@ -2,76 +2,77 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
+import com.tencent.mm.sdk.h.c.a;
+import java.lang.reflect.Field;
+import java.util.Map;
 
 public abstract class ai
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aIR;
-  private static final int aKK;
-  private static final int aLe;
-  private static final int aUI = "googleid".hashCode();
-  private static final int aUJ = "googlename".hashCode();
-  private static final int aUK = "googlephotourl".hashCode();
-  private static final int aUL = "googlegmail".hashCode();
-  private static final int aUM;
-  private static final int aUN;
-  private static final int aUO;
-  private static final int aUP;
-  private static final int aUQ;
-  private static final int aUR;
-  private static final int aUS;
-  private static final int aUT;
-  private static final int aUU;
-  private boolean aID = true;
-  private boolean aKw = true;
-  private boolean aLa = true;
-  private boolean aUA = true;
-  private boolean aUB = true;
-  private boolean aUC = true;
-  private boolean aUD = true;
-  private boolean aUE = true;
-  private boolean aUF = true;
-  private boolean aUG = true;
-  private boolean aUH = true;
-  private boolean aUv = true;
-  private boolean aUw = true;
-  private boolean aUx = true;
-  private boolean aUy = true;
-  private boolean aUz = true;
-  public String field_big_url;
-  public String field_contecttype;
-  public int field_googlecgistatus;
-  public String field_googlegmail;
-  public String field_googleid;
-  public String field_googleitemid;
-  public String field_googlename;
-  public String field_googlenamepy;
-  public String field_googlephotourl;
-  public String field_nickname;
-  public String field_nicknameqp;
-  public int field_ret;
-  public String field_small_url;
-  public int field_status;
-  public String field_username;
-  public String field_usernamepy;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = { "CREATE INDEX IF NOT EXISTS FavSearchInfo_Content_Index ON FavSearchInfo(content)", "CREATE INDEX IF NOT EXISTS FavSearchInfo_TagContent_Index ON FavSearchInfo(tagContent)", "CREATE INDEX IF NOT EXISTS FavSearchInfo_SubType_Index ON FavSearchInfo(subtype)" };
+  private static final int aMf;
+  private static final int aMk;
+  private static final int aQR;
+  private static final int aWT = "localId".hashCode();
+  private static final int aXA;
+  private static final int aXz;
+  private boolean aLN = true;
+  private boolean aLS = true;
+  private boolean aQB = true;
+  private boolean aWR = true;
+  private boolean aXx = true;
+  private boolean aXy = true;
+  public String field_content;
+  public long field_localId;
+  public int field_subtype;
+  public String field_tagContent;
+  public long field_time;
+  public int field_type;
   
   static
   {
-    aKK = "username".hashCode();
-    aLe = "nickname".hashCode();
-    aUM = "nicknameqp".hashCode();
-    aUN = "usernamepy".hashCode();
-    aUO = "small_url".hashCode();
-    aUP = "big_url".hashCode();
-    aUQ = "ret".hashCode();
-    aIR = "status".hashCode();
-    aUR = "googleitemid".hashCode();
-    aUS = "googlecgistatus".hashCode();
-    aUT = "contecttype".hashCode();
-    aUU = "googlenamepy".hashCode();
+    aMk = "content".hashCode();
+    aXz = "tagContent".hashCode();
+    aQR = "time".hashCode();
+    aMf = "type".hashCode();
+    aXA = "subtype".hashCode();
+  }
+  
+  public static c.a lY()
+  {
+    c.a locala = new c.a();
+    ceD = new Field[6];
+    blR = new String[7];
+    StringBuilder localStringBuilder = new StringBuilder();
+    blR[0] = "localId";
+    jYx.put("localId", "LONG PRIMARY KEY ");
+    localStringBuilder.append(" localId LONG PRIMARY KEY ");
+    localStringBuilder.append(", ");
+    jYw = "localId";
+    blR[1] = "content";
+    jYx.put("content", "TEXT");
+    localStringBuilder.append(" content TEXT");
+    localStringBuilder.append(", ");
+    blR[2] = "tagContent";
+    jYx.put("tagContent", "TEXT");
+    localStringBuilder.append(" tagContent TEXT");
+    localStringBuilder.append(", ");
+    blR[3] = "time";
+    jYx.put("time", "LONG");
+    localStringBuilder.append(" time LONG");
+    localStringBuilder.append(", ");
+    blR[4] = "type";
+    jYx.put("type", "INTEGER");
+    localStringBuilder.append(" type INTEGER");
+    localStringBuilder.append(", ");
+    blR[5] = "subtype";
+    jYx.put("subtype", "INTEGER default '0' ");
+    localStringBuilder.append(" subtype INTEGER default '0' ");
+    blR[6] = "rowid";
+    jYy = localStringBuilder.toString();
+    return locala;
   }
   
   public final void c(Cursor paramCursor)
@@ -87,138 +88,57 @@ public abstract class ai
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aUI != k) {
-        break label60;
+      if (aWT != k) {
+        break label65;
       }
-      field_googleid = paramCursor.getString(i);
+      field_localId = paramCursor.getLong(i);
+      aWR = true;
     }
     for (;;)
     {
       i += 1;
       break label20;
       break;
-      label60:
-      if (aUJ == k)
-      {
-        field_googlename = paramCursor.getString(i);
-      }
-      else if (aUK == k)
-      {
-        field_googlephotourl = paramCursor.getString(i);
-      }
-      else if (aUL == k)
-      {
-        field_googlegmail = paramCursor.getString(i);
-      }
-      else if (aKK == k)
-      {
-        field_username = paramCursor.getString(i);
-      }
-      else if (aLe == k)
-      {
-        field_nickname = paramCursor.getString(i);
-      }
-      else if (aUM == k)
-      {
-        field_nicknameqp = paramCursor.getString(i);
-      }
-      else if (aUN == k)
-      {
-        field_usernamepy = paramCursor.getString(i);
-      }
-      else if (aUO == k)
-      {
-        field_small_url = paramCursor.getString(i);
-      }
-      else if (aUP == k)
-      {
-        field_big_url = paramCursor.getString(i);
-      }
-      else if (aUQ == k)
-      {
-        field_ret = paramCursor.getInt(i);
-      }
-      else if (aIR == k)
-      {
-        field_status = paramCursor.getInt(i);
-      }
-      else if (aUR == k)
-      {
-        field_googleitemid = paramCursor.getString(i);
-        aUE = true;
-      }
-      else if (aUS == k)
-      {
-        field_googlecgistatus = paramCursor.getInt(i);
-      }
-      else if (aUT == k)
-      {
-        field_contecttype = paramCursor.getString(i);
-      }
-      else if (aUU == k)
-      {
-        field_googlenamepy = paramCursor.getString(i);
-      }
-      else if (aHH == k)
-      {
-        ibV = paramCursor.getLong(i);
+      label65:
+      if (aMk == k) {
+        field_content = paramCursor.getString(i);
+      } else if (aXz == k) {
+        field_tagContent = paramCursor.getString(i);
+      } else if (aQR == k) {
+        field_time = paramCursor.getLong(i);
+      } else if (aMf == k) {
+        field_type = paramCursor.getInt(i);
+      } else if (aXA == k) {
+        field_subtype = paramCursor.getInt(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aUv) {
-      localContentValues.put("googleid", field_googleid);
+    if (aWR) {
+      localContentValues.put("localId", Long.valueOf(field_localId));
     }
-    if (aUw) {
-      localContentValues.put("googlename", field_googlename);
+    if (aLS) {
+      localContentValues.put("content", field_content);
     }
-    if (aUx) {
-      localContentValues.put("googlephotourl", field_googlephotourl);
+    if (aXx) {
+      localContentValues.put("tagContent", field_tagContent);
     }
-    if (aUy) {
-      localContentValues.put("googlegmail", field_googlegmail);
+    if (aQB) {
+      localContentValues.put("time", Long.valueOf(field_time));
     }
-    if (aKw) {
-      localContentValues.put("username", field_username);
+    if (aLN) {
+      localContentValues.put("type", Integer.valueOf(field_type));
     }
-    if (aLa) {
-      localContentValues.put("nickname", field_nickname);
+    if (aXy) {
+      localContentValues.put("subtype", Integer.valueOf(field_subtype));
     }
-    if (aUz) {
-      localContentValues.put("nicknameqp", field_nicknameqp);
-    }
-    if (aUA) {
-      localContentValues.put("usernamepy", field_usernamepy);
-    }
-    if (aUB) {
-      localContentValues.put("small_url", field_small_url);
-    }
-    if (aUC) {
-      localContentValues.put("big_url", field_big_url);
-    }
-    if (aUD) {
-      localContentValues.put("ret", Integer.valueOf(field_ret));
-    }
-    if (aID) {
-      localContentValues.put("status", Integer.valueOf(field_status));
-    }
-    if (aUE) {
-      localContentValues.put("googleitemid", field_googleitemid);
-    }
-    if (aUF) {
-      localContentValues.put("googlecgistatus", Integer.valueOf(field_googlecgistatus));
-    }
-    if (aUG) {
-      localContentValues.put("contecttype", field_contecttype);
-    }
-    if (aUH) {
-      localContentValues.put("googlenamepy", field_googlenamepy);
-    }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

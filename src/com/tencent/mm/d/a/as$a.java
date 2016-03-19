@@ -1,11 +1,10 @@
 package com.tencent.mm.d.a;
 
+import android.content.Context;
+
 public final class as$a
 {
-  public String anZ;
-  public String avC;
-  public String avt;
-  public int type;
+  public Context context;
 }
 
 /* Location:

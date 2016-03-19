@@ -3,31 +3,28 @@ package com.tencent.mm.sdk.f;
 import android.os.Bundle;
 
 public final class b
-  extends com.tencent.mm.sdk.d.b
 {
-  public String gvZ;
-  public String hXZ;
-  public String hYc;
-  
-  public final int getType()
+  public static final class a
+    extends com.tencent.mm.sdk.e.b
   {
-    return 5;
-  }
-  
-  public final void m(Bundle paramBundle)
-  {
-    super.m(paramBundle);
-    paramBundle.putString("_wxapi_payresp_prepayid", gvZ);
-    paramBundle.putString("_wxapi_payresp_returnkey", hYc);
-    paramBundle.putString("_wxapi_payresp_extdata", hXZ);
-  }
-  
-  public final void n(Bundle paramBundle)
-  {
-    super.n(paramBundle);
-    gvZ = paramBundle.getString("_wxapi_payresp_prepayid");
-    hYc = paramBundle.getString("_wxapi_payresp_returnkey");
-    hXZ = paramBundle.getString("_wxapi_payresp_extdata");
+    public String azq;
+    
+    public final int getType()
+    {
+      return 14;
+    }
+    
+    public final void l(Bundle paramBundle)
+    {
+      super.l(paramBundle);
+      paramBundle.putString("_wxapi_create_chatroom_ext_msg", azq);
+    }
+    
+    public final void m(Bundle paramBundle)
+    {
+      super.m(paramBundle);
+      azq = paramBundle.getString("_wxapi_create_chatroom_ext_msg");
+    }
   }
 }
 

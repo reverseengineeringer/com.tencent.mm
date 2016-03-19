@@ -1,254 +1,378 @@
 package android.support.v7.app;
 
-import android.os.Bundle;
-import android.support.v7.internal.view.b;
-import android.support.v7.internal.view.menu.q;
-import android.view.ActionMode;
-import android.view.ActionMode.Callback;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.MotionEvent;
+import android.content.Context;
+import android.content.res.Resources.Theme;
+import android.graphics.drawable.Drawable;
+import android.support.v7.internal.view.a;
+import android.support.v7.internal.widget.ActionBarContainer;
+import android.support.v7.internal.widget.ActionBarContextView;
+import android.support.v7.internal.widget.ActionBarOverlayLayout;
+import android.support.v7.internal.widget.ActionBarView;
+import android.support.v7.internal.widget.ScrollingTabContainerView;
+import android.util.TypedValue;
+import android.view.ContextThemeWrapper;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
-import android.view.Window;
-import android.view.Window.Callback;
-import android.view.WindowManager.LayoutParams;
-import android.view.accessibility.AccessibilityEvent;
+import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import com.tencent.mm.sdk.platformtools.aa;
+import java.util.ArrayList;
 
-final class e
-  extends a
+class e
+  extends ActionBar
 {
-  Menu jP;
+  private ArrayList ce = new ArrayList();
+  private ActionBarActivity iG;
+  private Context iZ;
+  private ActionBarOverlayLayout ja;
+  private ActionBarContainer jb;
+  private ViewGroup jc;
+  private ActionBarView jd;
+  private ActionBarContextView je;
+  private ActionBarContainer jf;
+  private ScrollingTabContainerView jg;
+  private int jh = -1;
+  private boolean ji;
+  private ArrayList jj = new ArrayList();
+  private int jk;
+  private boolean jl;
+  private int jm = 0;
+  private boolean jn;
+  private boolean jo;
+  boolean jp;
+  private boolean jq = true;
+  private boolean jr;
+  private ActionBar.a js;
+  Context mContext;
+  final aa mHandler = new aa();
   
-  e(ActionBarActivity paramActionBarActivity)
+  public e(ActionBarActivity paramActionBarActivity, ActionBar.a parama)
   {
-    super(paramActionBarActivity);
-  }
-  
-  public final void L()
-  {
-    jP = null;
-  }
-  
-  public final void addContentView(View paramView, ViewGroup.LayoutParams paramLayoutParams)
-  {
-    jz.b(paramView, paramLayoutParams);
-  }
-  
-  public final ActionBar be()
-  {
-    return new h(jz, jz);
-  }
-  
-  public final void bg() {}
-  
-  public final boolean bh()
-  {
-    return false;
-  }
-  
-  public final void e(CharSequence paramCharSequence) {}
-  
-  public final void onActionModeFinished(ActionMode paramActionMode)
-  {
-    new b(bj(), paramActionMode);
-  }
-  
-  public final void onActionModeStarted(ActionMode paramActionMode)
-  {
-    new b(bj(), paramActionMode);
-  }
-  
-  public final void onCreate(Bundle paramBundle)
-  {
-    if ("splitActionBarWhenNarrow".equals(bi())) {
-      jz.getWindow().setUiOptions(1, 1);
+    iG = paramActionBarActivity;
+    mContext = paramActionBarActivity;
+    js = parama;
+    paramActionBarActivity = iG;
+    ja = ((ActionBarOverlayLayout)paramActionBarActivity.findViewById(2131169542));
+    if (ja != null) {
+      ja.setActionBar(this);
     }
-    super.onCreate(paramBundle);
-    if (jC) {
-      jz.requestWindowFeature(8);
+    jd = ((ActionBarView)paramActionBarActivity.findViewById(2131169535));
+    je = ((ActionBarContextView)paramActionBarActivity.findViewById(2131169536));
+    jb = ((ActionBarContainer)paramActionBarActivity.findViewById(2131169534));
+    jc = ((ViewGroup)paramActionBarActivity.findViewById(2131169543));
+    if (jc == null) {
+      jc = jb;
     }
-    if (jD) {
-      jz.requestWindowFeature(9);
+    jf = ((ActionBarContainer)paramActionBarActivity.findViewById(2131169537));
+    if ((jd == null) || (je == null) || (jb == null)) {
+      throw new IllegalStateException(getClass().getSimpleName() + " can only be used with a compatible window decor layout");
     }
-    paramBundle = jz.getWindow();
-    paramBundle.setCallback(new a(paramBundle.getCallback()));
-  }
-  
-  public final boolean onCreatePanelMenu(int paramInt, Menu paramMenu)
-  {
-    if ((paramInt == 0) || (paramInt == 8))
+    jd.setContextView(je);
+    if (jd.bO())
     {
-      if (jP == null) {
-        jP = q.c(paramMenu);
+      i = 1;
+      jk = i;
+      if ((jd.getDisplayOptions() & 0x4) == 0) {
+        break label346;
       }
-      return jz.a(paramInt, jP);
     }
-    return jz.a(paramInt, paramMenu);
+    label346:
+    for (int i = 1;; i = 0)
+    {
+      if (i != 0) {
+        ji = true;
+      }
+      paramActionBarActivity = a.m(mContext);
+      if ((paramActionBarActivity.aZ()) || (i != 0)) {
+        bool = true;
+      }
+      setHomeButtonEnabled(bool);
+      o(paramActionBarActivity.aY());
+      paramActionBarActivity = iG.getTitle();
+      jd.setTitle(paramActionBarActivity);
+      return;
+      i = 0;
+      break;
+    }
   }
   
-  public final View onCreatePanelView(int paramInt)
+  private void setDisplayOptions(int paramInt1, int paramInt2)
   {
-    return null;
+    int i = jd.getDisplayOptions();
+    if ((paramInt2 & 0x4) != 0) {
+      ji = true;
+    }
+    jd.setDisplayOptions(i & (paramInt2 ^ 0xFFFFFFFF) | paramInt1 & paramInt2);
   }
   
-  public final boolean onMenuItemSelected(int paramInt, MenuItem paramMenuItem)
+  public final void aJ()
   {
-    MenuItem localMenuItem = paramMenuItem;
-    if (paramInt == 0) {
-      localMenuItem = q.i(paramMenuItem);
-    }
-    return jz.a(paramInt, localMenuItem);
+    setCustomView(LayoutInflater.from(getThemedContext()).inflate(2131363238, jd, false));
   }
   
-  public final void onPostResume() {}
-  
-  public final boolean onPreparePanel(int paramInt, View paramView, Menu paramMenu)
+  public final void aK()
   {
-    if ((paramInt == 0) || (paramInt == 8)) {
-      return jz.a(paramInt, paramView, jP);
-    }
-    return jz.a(paramInt, paramView, paramMenu);
+    jd.setIcon(2130968578);
   }
   
-  public final void onStop() {}
-  
-  public final void setContentView(int paramInt)
+  public final void aL()
   {
-    jz.w(paramInt);
+    setDisplayOptions(0, 2);
   }
   
-  public final void setContentView(View paramView)
+  public final void aM()
   {
-    jz.D(paramView);
+    setDisplayOptions(16, 16);
   }
   
-  public final void setContentView(View paramView, ViewGroup.LayoutParams paramLayoutParams)
+  final void aW()
   {
-    jz.a(paramView, paramLayoutParams);
+    int k = 1;
+    int j = 1;
+    boolean bool1 = jn;
+    boolean bool2 = jo;
+    label77:
+    Animation localAnimation;
+    if ((!jp) && ((bool1) || (bool2)))
+    {
+      i = 0;
+      if (i == 0) {
+        break label169;
+      }
+      if (!jq)
+      {
+        jq = true;
+        jc.clearAnimation();
+        if (jc.getVisibility() != 0)
+        {
+          if (!aX()) {
+            break label164;
+          }
+          i = j;
+          if (i != 0)
+          {
+            localAnimation = AnimationUtils.loadAnimation(mContext, 2130837608);
+            jc.startAnimation(localAnimation);
+          }
+          jc.setVisibility(0);
+          if ((jf != null) && (jf.getVisibility() != 0))
+          {
+            if (i != 0)
+            {
+              localAnimation = AnimationUtils.loadAnimation(mContext, 2130837611);
+              jf.startAnimation(localAnimation);
+            }
+            jf.setVisibility(0);
+          }
+        }
+      }
+    }
+    label164:
+    label169:
+    do
+    {
+      do
+      {
+        return;
+        i = 1;
+        break;
+        i = 0;
+        break label77;
+      } while (!jq);
+      jq = false;
+      jc.clearAnimation();
+    } while (jc.getVisibility() == 8);
+    if (aX()) {}
+    for (int i = k;; i = 0)
+    {
+      if (i != 0)
+      {
+        localAnimation = AnimationUtils.loadAnimation(mContext, 2130837607);
+        jc.startAnimation(localAnimation);
+      }
+      jc.setVisibility(8);
+      if ((jf == null) || (jf.getVisibility() == 8)) {
+        break;
+      }
+      if (i != 0)
+      {
+        localAnimation = AnimationUtils.loadAnimation(mContext, 2130837606);
+        jf.startAnimation(localAnimation);
+      }
+      jf.setVisibility(8);
+      return;
+    }
   }
   
-  public final boolean x(int paramInt)
+  boolean aX()
   {
-    return jz.requestWindowFeature(5);
+    return jr;
   }
   
-  final class a
-    implements Window.Callback
+  public final View getCustomView()
   {
-    final Window.Callback jQ;
-    
-    public a(Window.Callback paramCallback)
+    return jd.getCustomNavigationView();
+  }
+  
+  public final int getDisplayOptions()
+  {
+    return jd.getDisplayOptions();
+  }
+  
+  public final int getHeight()
+  {
+    return jb.getHeight();
+  }
+  
+  public final Context getThemedContext()
+  {
+    int i;
+    if (iZ == null)
     {
-      jQ = paramCallback;
+      TypedValue localTypedValue = new TypedValue();
+      mContext.getTheme().resolveAttribute(2130772115, localTypedValue, true);
+      i = resourceId;
+      if (i == 0) {
+        break label61;
+      }
     }
-    
-    public final boolean dispatchGenericMotionEvent(MotionEvent paramMotionEvent)
-    {
-      return jQ.dispatchGenericMotionEvent(paramMotionEvent);
+    label61:
+    for (iZ = new ContextThemeWrapper(mContext, i);; iZ = mContext) {
+      return iZ;
     }
-    
-    public final boolean dispatchKeyEvent(KeyEvent paramKeyEvent)
+  }
+  
+  public final CharSequence getTitle()
+  {
+    return jd.getTitle();
+  }
+  
+  public void hide()
+  {
+    if (!jn)
     {
-      return jQ.dispatchKeyEvent(paramKeyEvent);
+      jn = true;
+      aW();
     }
-    
-    public final boolean dispatchKeyShortcutEvent(KeyEvent paramKeyEvent)
+  }
+  
+  public final boolean isShowing()
+  {
+    return jq;
+  }
+  
+  final void o(boolean paramBoolean)
+  {
+    boolean bool = true;
+    jl = paramBoolean;
+    int i;
+    label46:
+    label65:
+    ActionBarView localActionBarView;
+    if (!jl)
     {
-      return jQ.dispatchKeyShortcutEvent(paramKeyEvent);
+      jd.setEmbeddedTabView(null);
+      jb.setTabContainer(jg);
+      if (jd.getNavigationMode() != 2) {
+        break label113;
+      }
+      i = 1;
+      if (jg != null)
+      {
+        if (i == 0) {
+          break label118;
+        }
+        jg.setVisibility(0);
+      }
+      localActionBarView = jd;
+      if ((jl) || (i == 0)) {
+        break label130;
+      }
     }
-    
-    public final boolean dispatchPopulateAccessibilityEvent(AccessibilityEvent paramAccessibilityEvent)
+    label113:
+    label118:
+    label130:
+    for (paramBoolean = bool;; paramBoolean = false)
     {
-      return jQ.dispatchPopulateAccessibilityEvent(paramAccessibilityEvent);
+      localActionBarView.setCollapsable(paramBoolean);
+      return;
+      jb.setTabContainer(null);
+      jd.setEmbeddedTabView(jg);
+      break;
+      i = 0;
+      break label46;
+      jg.setVisibility(8);
+      break label65;
     }
-    
-    public final boolean dispatchTouchEvent(MotionEvent paramMotionEvent)
+  }
+  
+  public final void p(boolean paramBoolean)
+  {
+    jr = paramBoolean;
+    if (!paramBoolean)
     {
-      return jQ.dispatchTouchEvent(paramMotionEvent);
+      jc.clearAnimation();
+      if (jf != null) {
+        jf.clearAnimation();
+      }
     }
-    
-    public final boolean dispatchTrackballEvent(MotionEvent paramMotionEvent)
+  }
+  
+  public final void setBackgroundDrawable(Drawable paramDrawable)
+  {
+    jb.setPrimaryBackground(paramDrawable);
+  }
+  
+  public final void setCustomView(View paramView)
+  {
+    jd.setCustomNavigationView(paramView);
+  }
+  
+  public final void setDisplayHomeAsUpEnabled(boolean paramBoolean)
+  {
+    if (paramBoolean) {}
+    for (int i = 4;; i = 0)
     {
-      return jQ.dispatchTrackballEvent(paramMotionEvent);
+      setDisplayOptions(i, 4);
+      return;
     }
-    
-    public final void onActionModeFinished(ActionMode paramActionMode)
-    {
-      jQ.onActionModeFinished(paramActionMode);
-      e.this.onActionModeFinished(paramActionMode);
+  }
+  
+  public final void setDisplayOptions(int paramInt)
+  {
+    if ((paramInt & 0x4) != 0) {
+      ji = true;
     }
-    
-    public final void onActionModeStarted(ActionMode paramActionMode)
+    jd.setDisplayOptions(paramInt);
+  }
+  
+  public final void setDisplayShowTitleEnabled(boolean paramBoolean)
+  {
+    if (paramBoolean) {}
+    for (int i = 8;; i = 0)
     {
-      jQ.onActionModeStarted(paramActionMode);
-      e.this.onActionModeStarted(paramActionMode);
+      setDisplayOptions(i, 8);
+      return;
     }
-    
-    public final void onAttachedToWindow()
+  }
+  
+  public final void setHomeButtonEnabled(boolean paramBoolean)
+  {
+    jd.setHomeButtonEnabled(paramBoolean);
+  }
+  
+  public final void setLogo(Drawable paramDrawable)
+  {
+    jd.setLogo(paramDrawable);
+  }
+  
+  public void show()
+  {
+    if (jn)
     {
-      jQ.onAttachedToWindow();
-    }
-    
-    public final void onContentChanged()
-    {
-      jQ.onContentChanged();
-    }
-    
-    public final boolean onCreatePanelMenu(int paramInt, Menu paramMenu)
-    {
-      return jQ.onCreatePanelMenu(paramInt, paramMenu);
-    }
-    
-    public final View onCreatePanelView(int paramInt)
-    {
-      return jQ.onCreatePanelView(paramInt);
-    }
-    
-    public final void onDetachedFromWindow()
-    {
-      jQ.onDetachedFromWindow();
-    }
-    
-    public final boolean onMenuItemSelected(int paramInt, MenuItem paramMenuItem)
-    {
-      return jQ.onMenuItemSelected(paramInt, paramMenuItem);
-    }
-    
-    public final boolean onMenuOpened(int paramInt, Menu paramMenu)
-    {
-      return jQ.onMenuOpened(paramInt, paramMenu);
-    }
-    
-    public final void onPanelClosed(int paramInt, Menu paramMenu)
-    {
-      jQ.onPanelClosed(paramInt, paramMenu);
-    }
-    
-    public final boolean onPreparePanel(int paramInt, View paramView, Menu paramMenu)
-    {
-      return jQ.onPreparePanel(paramInt, paramView, paramMenu);
-    }
-    
-    public final boolean onSearchRequested()
-    {
-      return jQ.onSearchRequested();
-    }
-    
-    public final void onWindowAttributesChanged(WindowManager.LayoutParams paramLayoutParams)
-    {
-      jQ.onWindowAttributesChanged(paramLayoutParams);
-    }
-    
-    public final void onWindowFocusChanged(boolean paramBoolean)
-    {
-      jQ.onWindowFocusChanged(paramBoolean);
-    }
-    
-    public final ActionMode onWindowStartingActionMode(ActionMode.Callback paramCallback)
-    {
-      return jQ.onWindowStartingActionMode(paramCallback);
+      jn = false;
+      aW();
     }
   }
 }

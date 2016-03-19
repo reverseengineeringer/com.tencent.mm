@@ -12,28 +12,25 @@
 
 
 # virtual methods
-.method public abstract DA()Ljava/lang/String;
+.method public abstract FF()Ljava/lang/String;
 .end method
 
-.method public abstract DB()Ljava/lang/String;
+.method public abstract FG()Ljava/lang/String;
 .end method
 
-.method public abstract DC()Z
+.method public abstract FH()Ljava/lang/String;
 .end method
 
-.method public abstract DD()Z
+.method public abstract FI()Z
 .end method
 
-.method public abstract DE()Landroid/graphics/Bitmap;
+.method public abstract FJ()Z
 .end method
 
-.method public abstract DF()V
+.method public abstract FK()Landroid/graphics/Bitmap;
 .end method
 
-.method public abstract Dy()Ljava/lang/String;
-.end method
-
-.method public abstract Dz()Ljava/lang/String;
+.method public abstract FL()V
 .end method
 
 .method public abstract a(Landroid/graphics/Bitmap;Lcom/tencent/mm/platformtools/j$a;)Landroid/graphics/Bitmap;
@@ -42,5 +39,8 @@
 .method public abstract a(Lcom/tencent/mm/platformtools/j$a;Ljava/lang/String;)V
 .end method
 
-.method public abstract r(Ljava/lang/String;Z)V
+.method public abstract getCacheKey()Ljava/lang/String;
+.end method
+
+.method public abstract v(Ljava/lang/String;Z)V
 .end method

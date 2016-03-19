@@ -2,137 +2,85 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class o
-  extends ae
+  extends c
 {
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aIR;
-  private static final int aIl;
-  private static final int aKK;
-  private static final int aNT = "msgCount".hashCode();
-  private static final int aNU;
-  private static final int aNV;
-  private static final int aNW;
-  private static final int aNX;
-  private static final int aNY;
-  private static final int aNZ;
-  private static final int aOa;
-  private static final int aOb;
-  private static final int aOc;
-  private static final int aOd;
-  private static final int aOe;
-  private static final int aOf;
-  private static final int aOg;
-  private static final int aOh;
-  private static final int aOi;
-  private static final int aOj;
-  private boolean aHT = false;
-  private boolean aID = false;
-  private boolean aKw = false;
-  private boolean aNC = false;
-  private boolean aND = false;
-  private boolean aNE = false;
-  private boolean aNF = false;
-  private boolean aNG = false;
-  private boolean aNH = false;
-  private boolean aNI = false;
-  private boolean aNJ = false;
-  private boolean aNK = false;
-  private boolean aNL = false;
-  private boolean aNM = false;
-  private boolean aNN = false;
-  private boolean aNO = false;
-  private boolean aNP = false;
-  private boolean aNQ = false;
-  public boolean aNR = false;
-  public boolean aNS = false;
-  public int field_atCount;
-  public int field_attrflag;
-  public int field_chatmode;
-  public String field_content;
-  public long field_conversationTime;
-  private String field_customNotify;
-  public String field_digest;
-  public String field_digestUser;
-  public String field_editingMsg;
-  public long field_flag;
-  private int field_hasTrunc;
-  public int field_isSend;
-  public int field_msgCount;
-  public String field_msgType;
-  public String field_parentRef;
-  public int field_showTips;
-  public long field_sightTime;
-  public int field_status;
-  public int field_unReadCount;
-  public String field_username;
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int aRA;
+  private static final int aRB;
+  private static final int aRC;
+  private static final int aRD;
+  private static final int aRE;
+  private static final int aRF;
+  private static final int aRG;
+  private static final int aRH;
+  private static final int aRI;
+  private static final int aRJ;
+  private static final int aRK;
+  private static final int aRL;
+  private static final int aRM;
+  private static final int aRN;
+  private static final int aRO;
+  private static final int aRx = "chatroomname".hashCode();
+  private static final int aRy = "addtime".hashCode();
+  private static final int aRz = "memberlist".hashCode();
+  private boolean aRf = true;
+  private boolean aRg = true;
+  private boolean aRh = true;
+  private boolean aRi = true;
+  private boolean aRj = true;
+  private boolean aRk = true;
+  private boolean aRl = true;
+  private boolean aRm = true;
+  private boolean aRn = true;
+  private boolean aRo = true;
+  private boolean aRp = true;
+  private boolean aRq = true;
+  private boolean aRr = true;
+  private boolean aRs = true;
+  private boolean aRt = true;
+  private boolean aRu = true;
+  private boolean aRv = true;
+  private boolean aRw = true;
+  public long field_addtime;
+  public int field_chatroomdataflag;
+  public String field_chatroomname;
+  public String field_chatroomnick;
+  public String field_chatroomnotice;
+  public String field_chatroomnoticeEditor;
+  public int field_chatroomnoticeNewVersion;
+  public int field_chatroomnoticeOldVersion;
+  public long field_chatroomnoticePublishTime;
+  public String field_displayname;
+  public int field_isShowname;
+  public String field_memberlist;
+  public long field_modifytime;
+  public byte[] field_roomdata;
+  public int field_roomflag;
+  public String field_roomowner;
+  public String field_selfDisplayName;
+  public int field_style;
   
   static
   {
-    aKK = "username".hashCode();
-    aNU = "unReadCount".hashCode();
-    aNV = "chatmode".hashCode();
-    aIR = "status".hashCode();
-    aNW = "isSend".hashCode();
-    aNX = "conversationTime".hashCode();
-    aIl = "content".hashCode();
-    aNY = "msgType".hashCode();
-    aNZ = "customNotify".hashCode();
-    aOa = "showTips".hashCode();
-    aOb = "flag".hashCode();
-    aOc = "digest".hashCode();
-    aOd = "digestUser".hashCode();
-    aOe = "hasTrunc".hashCode();
-    aOf = "parentRef".hashCode();
-    aOg = "attrflag".hashCode();
-    aOh = "editingMsg".hashCode();
-    aOi = "atCount".hashCode();
-    aOj = "sightTime".hashCode();
-  }
-  
-  public final void be(int paramInt)
-  {
-    field_msgCount = paramInt;
-    aNC = true;
-  }
-  
-  public final void bf(int paramInt)
-  {
-    field_unReadCount = paramInt;
-    aND = true;
-  }
-  
-  public final void bg(int paramInt)
-  {
-    field_chatmode = paramInt;
-    aNE = true;
-  }
-  
-  public final void bh(int paramInt)
-  {
-    field_isSend = paramInt;
-    aNF = true;
-  }
-  
-  public final void bi(int paramInt)
-  {
-    field_showTips = paramInt;
-    aNJ = true;
-  }
-  
-  public final void bj(int paramInt)
-  {
-    field_hasTrunc = paramInt;
-    aNN = true;
-  }
-  
-  public final void bk(int paramInt)
-  {
-    field_attrflag = paramInt;
-    aNP = true;
+    aRA = "displayname".hashCode();
+    aRB = "chatroomnick".hashCode();
+    aRC = "roomflag".hashCode();
+    aRD = "roomowner".hashCode();
+    aRE = "roomdata".hashCode();
+    aRF = "isShowname".hashCode();
+    aRG = "selfDisplayName".hashCode();
+    aRH = "style".hashCode();
+    aRI = "chatroomdataflag".hashCode();
+    aRJ = "modifytime".hashCode();
+    aRK = "chatroomnotice".hashCode();
+    aRL = "chatroomnoticeNewVersion".hashCode();
+    aRM = "chatroomnoticeOldVersion".hashCode();
+    aRN = "chatroomnoticeEditor".hashCode();
+    aRO = "chatroomnoticePublishTime".hashCode();
   }
   
   public final void c(Cursor paramCursor)
@@ -148,249 +96,122 @@ public abstract class o
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aNT != k) {
-        break label60;
+      if (aRx != k) {
+        break label65;
       }
-      field_msgCount = paramCursor.getInt(i);
+      field_chatroomname = paramCursor.getString(i);
+      aRf = true;
     }
     for (;;)
     {
       i += 1;
       break label20;
       break;
-      label60:
-      if (aKK == k)
-      {
-        field_username = paramCursor.getString(i);
-        aKw = true;
-      }
-      else if (aNU == k)
-      {
-        field_unReadCount = paramCursor.getInt(i);
-      }
-      else if (aNV == k)
-      {
-        field_chatmode = paramCursor.getInt(i);
-      }
-      else if (aIR == k)
-      {
-        field_status = paramCursor.getInt(i);
-      }
-      else if (aNW == k)
-      {
-        field_isSend = paramCursor.getInt(i);
-      }
-      else if (aNX == k)
-      {
-        field_conversationTime = paramCursor.getLong(i);
-      }
-      else if (aIl == k)
-      {
-        field_content = paramCursor.getString(i);
-      }
-      else if (aNY == k)
-      {
-        field_msgType = paramCursor.getString(i);
-      }
-      else if (aNZ == k)
-      {
-        field_customNotify = paramCursor.getString(i);
-      }
-      else if (aOa == k)
-      {
-        field_showTips = paramCursor.getInt(i);
-      }
-      else if (aOb == k)
-      {
-        field_flag = paramCursor.getLong(i);
-      }
-      else if (aOc == k)
-      {
-        field_digest = paramCursor.getString(i);
-      }
-      else if (aOd == k)
-      {
-        field_digestUser = paramCursor.getString(i);
-      }
-      else if (aOe == k)
-      {
-        field_hasTrunc = paramCursor.getInt(i);
-      }
-      else if (aOf == k)
-      {
-        field_parentRef = paramCursor.getString(i);
-      }
-      else if (aOg == k)
-      {
-        field_attrflag = paramCursor.getInt(i);
-      }
-      else if (aOh == k)
-      {
-        field_editingMsg = paramCursor.getString(i);
-      }
-      else if (aOi == k)
-      {
-        field_atCount = paramCursor.getInt(i);
-      }
-      else if (aOj == k)
-      {
-        field_sightTime = paramCursor.getLong(i);
-      }
-      else if (aHH == k)
-      {
-        ibV = paramCursor.getLong(i);
+      label65:
+      if (aRy == k) {
+        field_addtime = paramCursor.getLong(i);
+      } else if (aRz == k) {
+        field_memberlist = paramCursor.getString(i);
+      } else if (aRA == k) {
+        field_displayname = paramCursor.getString(i);
+      } else if (aRB == k) {
+        field_chatroomnick = paramCursor.getString(i);
+      } else if (aRC == k) {
+        field_roomflag = paramCursor.getInt(i);
+      } else if (aRD == k) {
+        field_roomowner = paramCursor.getString(i);
+      } else if (aRE == k) {
+        field_roomdata = paramCursor.getBlob(i);
+      } else if (aRF == k) {
+        field_isShowname = paramCursor.getInt(i);
+      } else if (aRG == k) {
+        field_selfDisplayName = paramCursor.getString(i);
+      } else if (aRH == k) {
+        field_style = paramCursor.getInt(i);
+      } else if (aRI == k) {
+        field_chatroomdataflag = paramCursor.getInt(i);
+      } else if (aRJ == k) {
+        field_modifytime = paramCursor.getLong(i);
+      } else if (aRK == k) {
+        field_chatroomnotice = paramCursor.getString(i);
+      } else if (aRL == k) {
+        field_chatroomnoticeNewVersion = paramCursor.getInt(i);
+      } else if (aRM == k) {
+        field_chatroomnoticeOldVersion = paramCursor.getInt(i);
+      } else if (aRN == k) {
+        field_chatroomnoticeEditor = paramCursor.getString(i);
+      } else if (aRO == k) {
+        field_chatroomnoticePublishTime = paramCursor.getLong(i);
+      } else if (aLG == k) {
+        jYv = paramCursor.getLong(i);
       }
     }
   }
   
-  public final void cb(String paramString)
-  {
-    field_msgType = paramString;
-    aNH = true;
-  }
-  
-  public final void cc(String paramString)
-  {
-    field_digest = paramString;
-    aNL = true;
-  }
-  
-  public final void cd(String paramString)
-  {
-    field_digestUser = paramString;
-    aNM = true;
-  }
-  
-  public final void ce(String paramString)
-  {
-    field_parentRef = paramString;
-    aNO = true;
-  }
-  
-  public final void cf(String paramString)
-  {
-    field_editingMsg = paramString;
-    aNQ = true;
-  }
-  
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aNC) {
-      localContentValues.put("msgCount", Integer.valueOf(field_msgCount));
+    if (field_chatroomname == null) {
+      field_chatroomname = "";
     }
-    if (field_username == null) {
-      field_username = "";
+    if (aRf) {
+      localContentValues.put("chatroomname", field_chatroomname);
     }
-    if (aKw) {
-      localContentValues.put("username", field_username);
+    if (aRg) {
+      localContentValues.put("addtime", Long.valueOf(field_addtime));
     }
-    if (aND) {
-      localContentValues.put("unReadCount", Integer.valueOf(field_unReadCount));
+    if (aRh) {
+      localContentValues.put("memberlist", field_memberlist);
     }
-    if (aNE) {
-      localContentValues.put("chatmode", Integer.valueOf(field_chatmode));
+    if (aRi) {
+      localContentValues.put("displayname", field_displayname);
     }
-    if (aID) {
-      localContentValues.put("status", Integer.valueOf(field_status));
+    if (aRj) {
+      localContentValues.put("chatroomnick", field_chatroomnick);
     }
-    if (aNF) {
-      localContentValues.put("isSend", Integer.valueOf(field_isSend));
+    if (aRk) {
+      localContentValues.put("roomflag", Integer.valueOf(field_roomflag));
     }
-    if (aNG) {
-      localContentValues.put("conversationTime", Long.valueOf(field_conversationTime));
+    if (aRl) {
+      localContentValues.put("roomowner", field_roomowner);
     }
-    if (field_content == null) {
-      field_content = "";
+    if (aRm) {
+      localContentValues.put("roomdata", field_roomdata);
     }
-    if (aHT) {
-      localContentValues.put("content", field_content);
+    if (aRn) {
+      localContentValues.put("isShowname", Integer.valueOf(field_isShowname));
     }
-    if (field_msgType == null) {
-      field_msgType = "";
+    if (aRo) {
+      localContentValues.put("selfDisplayName", field_selfDisplayName);
     }
-    if (aNH) {
-      localContentValues.put("msgType", field_msgType);
+    if (aRp) {
+      localContentValues.put("style", Integer.valueOf(field_style));
     }
-    if (field_customNotify == null) {
-      field_customNotify = "";
+    if (aRq) {
+      localContentValues.put("chatroomdataflag", Integer.valueOf(field_chatroomdataflag));
     }
-    if (aNI) {
-      localContentValues.put("customNotify", field_customNotify);
+    if (aRr) {
+      localContentValues.put("modifytime", Long.valueOf(field_modifytime));
     }
-    if (aNJ) {
-      localContentValues.put("showTips", Integer.valueOf(field_showTips));
+    if (aRs) {
+      localContentValues.put("chatroomnotice", field_chatroomnotice);
     }
-    if (aNK) {
-      localContentValues.put("flag", Long.valueOf(field_flag));
+    if (aRt) {
+      localContentValues.put("chatroomnoticeNewVersion", Integer.valueOf(field_chatroomnoticeNewVersion));
     }
-    if (field_digest == null) {
-      field_digest = "";
+    if (aRu) {
+      localContentValues.put("chatroomnoticeOldVersion", Integer.valueOf(field_chatroomnoticeOldVersion));
     }
-    if (aNL) {
-      localContentValues.put("digest", field_digest);
+    if (aRv) {
+      localContentValues.put("chatroomnoticeEditor", field_chatroomnoticeEditor);
     }
-    if (field_digestUser == null) {
-      field_digestUser = "";
+    if (aRw) {
+      localContentValues.put("chatroomnoticePublishTime", Long.valueOf(field_chatroomnoticePublishTime));
     }
-    if (aNM) {
-      localContentValues.put("digestUser", field_digestUser);
-    }
-    if (aNN) {
-      localContentValues.put("hasTrunc", Integer.valueOf(field_hasTrunc));
-    }
-    if (aNO) {
-      localContentValues.put("parentRef", field_parentRef);
-    }
-    if (aNP) {
-      localContentValues.put("attrflag", Integer.valueOf(field_attrflag));
-    }
-    if (field_editingMsg == null) {
-      field_editingMsg = "";
-    }
-    if (aNQ) {
-      localContentValues.put("editingMsg", field_editingMsg);
-    }
-    if (aNR) {
-      localContentValues.put("atCount", Integer.valueOf(field_atCount));
-    }
-    if (aNS) {
-      localContentValues.put("sightTime", Long.valueOf(field_sightTime));
-    }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
-  }
-  
-  public final void r(long paramLong)
-  {
-    field_conversationTime = paramLong;
-    aNG = true;
-  }
-  
-  public final void s(long paramLong)
-  {
-    field_flag = paramLong;
-    aNK = true;
-  }
-  
-  public final void setContent(String paramString)
-  {
-    field_content = paramString;
-    aHT = true;
-  }
-  
-  public final void setStatus(int paramInt)
-  {
-    field_status = paramInt;
-    aID = true;
-  }
-  
-  public final void setUsername(String paramString)
-  {
-    field_username = paramString;
-    aKw = true;
   }
 }
 

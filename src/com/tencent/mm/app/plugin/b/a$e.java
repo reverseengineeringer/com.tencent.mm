@@ -1,51 +1,51 @@
 package com.tencent.mm.app.plugin.b;
 
-import com.tencent.mm.c.b.n;
-import com.tencent.mm.d.a.bx;
-import com.tencent.mm.d.a.bx.a;
-import com.tencent.mm.d.a.bx.b;
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.sdk.c.e;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.c.b.h;
+import com.tencent.mm.d.a.do;
+import com.tencent.mm.d.a.do.a;
+import com.tencent.mm.d.a.do.b;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.c.c;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 public final class a$e
-  extends e
+  extends c
 {
-  String apy = "";
-  n apz;
+  String anC = "";
+  h anD;
   
   public a$e()
   {
     super(0);
   }
   
-  public final boolean a(d paramd)
+  public final boolean a(b paramb)
   {
-    if (!(paramd instanceof bx))
+    if (!(paramb instanceof do))
     {
-      t.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
+      u.f("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "mismatched event");
       return false;
     }
-    paramd = (bx)paramd;
-    if (axj.op == 1)
+    paramb = (do)paramb;
+    if (axq.op == 1)
     {
-      if (apz == null) {
-        apz = new n(aa.getContext(), false);
+      if (anD == null) {
+        anD = new h(y.getContext(), false);
       }
-      axk.auM = apz.bj(axj.username);
-      apy = apz.getFileName();
-      t.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], ret = [%s]", new Object[] { Integer.valueOf(axj.op), Boolean.valueOf(axk.auM) });
+      axr.atR = anD.bl(axq.username);
+      anC = anD.getFileName();
+      u.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], ret = [%s]", new Object[] { Integer.valueOf(axq.op), Boolean.valueOf(axr.atR) });
     }
     for (;;)
     {
       return true;
-      if ((axj.op == 2) && (apz != null))
+      if ((axq.op == 2) && (anD != null))
       {
-        axk.apy = apy;
-        axk.auM = apz.ma();
-        t.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], fileName = [%s], ret = [%s]", new Object[] { Integer.valueOf(axj.op), apy, Boolean.valueOf(axk.auM) });
-        apy = "";
+        axr.anC = anC;
+        axr.atR = anD.lv();
+        u.d("!44@/B4Tb64lLpIAhUt0Bg2QThuc37pqTsjLtAkd+Z5MTHc=", "data.op = [%s], fileName = [%s], ret = [%s]", new Object[] { Integer.valueOf(axq.op), anC, Boolean.valueOf(axr.atR) });
+        anC = "";
       }
     }
   }

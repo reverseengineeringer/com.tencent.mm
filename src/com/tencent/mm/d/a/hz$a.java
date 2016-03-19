@@ -1,9 +1,10 @@
 package com.tencent.mm.d.a;
 
+import java.util.ArrayList;
+
 public final class hz$a
 {
-  public String id;
-  public int type = 0;
+  public ArrayList azP;
 }
 
 /* Location:

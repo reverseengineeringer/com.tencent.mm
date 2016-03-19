@@ -25,9 +25,9 @@
     .line 25
     const/16 v2, 0x8
 
-    new-instance v3, Lcom/tencent/mm/compatible/i/c;
+    new-instance v3, Lcom/tencent/mm/compatible/i/b$1;
 
-    invoke-direct {v3, v1}, Lcom/tencent/mm/compatible/i/c;-><init>(Landroid/content/Intent;)V
+    invoke-direct {v3, v1}, Lcom/tencent/mm/compatible/i/b$1;-><init>(Landroid/content/Intent;)V
 
     invoke-static {v2, v3}, Lcom/tencent/mm/compatible/a/a;->a(ILcom/tencent/mm/compatible/a/a$a;)Z
 

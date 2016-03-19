@@ -4,18 +4,20 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AbsListView;
+import android.widget.AbsListView.OnScrollListener;
 import android.widget.ListView;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MMLoadMoreListView
   extends ListView
 {
-  public View cMI = null;
-  private a iGf = null;
-  private boolean iGg = false;
-  private TextView iGh;
+  public View dmo = null;
+  private a kFo = null;
+  private boolean kFp = false;
+  private TextView kFq;
+  private boolean kFr = false;
   
   public MMLoadMoreListView(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -31,60 +33,86 @@ public class MMLoadMoreListView
   
   private void init()
   {
-    if (cMI == null)
+    if (dmo == null)
     {
-      aMR();
-      addFooterView(cMI);
-      cMI.setVisibility(8);
+      bcF();
+      addFooterView(dmo);
+      dmo.setVisibility(8);
     }
   }
   
-  public final void aMR()
+  public final void bcF()
   {
-    cMI = View.inflate(getContext(), a.k.mm_footerview, null);
-    iGh = ((TextView)cMI.findViewById(a.i.footer_tips));
-    cMI.setVisibility(8);
+    dmo = View.inflate(getContext(), 2131363231, null);
+    kFq = ((TextView)dmo.findViewById(2131169467));
+    dmo.setVisibility(8);
   }
   
-  public final void aMS()
+  public final void bcG()
   {
-    iGg = true;
-    setOnScrollListener(new bh(this));
-  }
-  
-  public final void aMT()
-  {
-    if (cMI != null)
+    kFp = true;
+    setOnScrollListener(new AbsListView.OnScrollListener()
     {
-      iGh.setVisibility(8);
-      cMI.setVisibility(8);
+      public final void onScroll(AbsListView paramAnonymousAbsListView, int paramAnonymousInt1, int paramAnonymousInt2, int paramAnonymousInt3)
+      {
+        if ((paramAnonymousInt1 == 0) && (getChildAt(0) != null) && (getChildAt(0).getTop() == getPaddingTop())) {
+          MMLoadMoreListView.a(MMLoadMoreListView.this, true);
+        }
+        for (;;)
+        {
+          u.d("MMLoadMoreListView", "newpoi scroll2Top %s", new Object[] { MMLoadMoreListView.b(MMLoadMoreListView.this) });
+          return;
+          MMLoadMoreListView.a(MMLoadMoreListView.this, false);
+        }
+      }
+      
+      public final void onScrollStateChanged(AbsListView paramAnonymousAbsListView, int paramAnonymousInt)
+      {
+        if ((paramAnonymousAbsListView.getLastVisiblePosition() == paramAnonymousAbsListView.getCount() - 1) && (MMLoadMoreListView.a(MMLoadMoreListView.this) != null)) {
+          MMLoadMoreListView.a(MMLoadMoreListView.this).agj();
+        }
+      }
+    });
+  }
+  
+  public final void bcH()
+  {
+    if (dmo != null)
+    {
+      kFq.setVisibility(8);
+      dmo.setVisibility(8);
     }
   }
   
-  public final void aMU()
+  public final void bcI()
   {
-    iGh.setVisibility(0);
-    cMI.setVisibility(0);
+    kFq.setVisibility(0);
+    dmo.setVisibility(0);
+  }
+  
+  public boolean getScroll2Top()
+  {
+    return kFr;
   }
   
   public void setFooterTips(String paramString)
   {
-    iGh.setText(paramString);
+    kFq.setText(paramString);
   }
   
   public void setOnFootrClickListener(View.OnClickListener paramOnClickListener)
   {
-    iGh.setOnClickListener(paramOnClickListener);
+    kFq.setOnClickListener(paramOnClickListener);
   }
   
   public void setOnLoadMoreListener(a parama)
   {
-    iGf = parama;
+    kFo = parama;
   }
   
   public static abstract interface a
   {
-    public abstract void Xl();
+    public abstract void agj();
   }
 }
 

@@ -1,31 +1,23 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class fp
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aCp = new a();
-  public b aCq = new b();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aAu = new a();
   
   public fp()
   {
-    id = "PublishScanCodeResult";
-    hXT = atO;
+    id = "GetSnsResume";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public int aCr = 0;
-    public String aCs;
-    public int aqq = 0;
-  }
-  
-  public static final class b
-  {
-    public int ret = 0;
+    public boolean aAv = false;
   }
 }
 

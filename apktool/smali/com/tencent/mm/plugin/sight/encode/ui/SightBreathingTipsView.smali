@@ -45,7 +45,7 @@
 
     move-result-object v0
 
-    sget v1, Lcom/tencent/mm/a$a;->sight_breathing_tips_anim:I
+    const v1, 0x7f02003e
 
     invoke-static {v0, v1}, Landroid/view/animation/AnimationUtils;->loadAnimation(Landroid/content/Context;I)Landroid/view/animation/Animation;
 
@@ -54,7 +54,7 @@
     iput-object v0, p0, Lcom/tencent/mm/plugin/sight/encode/ui/SightBreathingTipsView;->mAnimation:Landroid/view/animation/Animation;
 
     .line 38
-    sget v0, Lcom/tencent/mm/a$h;->sight_breathing_tips:I
+    const v0, 0x7f0405a8
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/plugin/sight/encode/ui/SightBreathingTipsView;->setBackgroundResource(I)V
 

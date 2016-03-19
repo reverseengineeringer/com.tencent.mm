@@ -2,14 +2,14 @@ package com.tencent.mm.ui.account;
 
 import com.google.android.search.verification.client.SearchActionVerificationClientActivity;
 import com.tencent.mm.modelvoiceaction.VoiceActionService;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class VoiceActionActivity
   extends SearchActionVerificationClientActivity
 {
-  public final Class ko()
+  public final Class jy()
   {
-    t.d("!44@/B4Tb64lLpLSrwD15DBHz3qpZDyGbD/O9K0SQlnlgV0=", "getServiceClass");
+    u.d("!44@/B4Tb64lLpLSrwD15DBHz3qpZDyGbD/O9K0SQlnlgV0=", "getServiceClass");
     return VoiceActionService.class;
   }
 }

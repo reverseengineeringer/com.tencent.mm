@@ -15,7 +15,7 @@
 
 
 # instance fields
-.field public auu:Ljava/lang/String;
+.field public aDn:I
 
 
 # direct methods

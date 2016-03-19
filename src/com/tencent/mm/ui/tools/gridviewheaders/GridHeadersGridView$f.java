@@ -2,18 +2,18 @@ package com.tencent.mm.ui.tools.gridviewheaders;
 
 class GridHeadersGridView$f
 {
-  private int gRB;
+  private int drS;
   
   private GridHeadersGridView$f(GridHeadersGridView paramGridHeadersGridView) {}
   
-  public final void aAl()
+  public final void SC()
   {
-    gRB = GridHeadersGridView.b(jwB);
+    drS = GridHeadersGridView.b(lzs);
   }
   
-  public final boolean aAm()
+  public final boolean SD()
   {
-    return (jwB.hasWindowFocus()) && (GridHeadersGridView.c(jwB) == gRB);
+    return (lzs.hasWindowFocus()) && (GridHeadersGridView.c(lzs) == drS);
   }
 }
 

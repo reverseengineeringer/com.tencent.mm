@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$m
-  extends a.c
+  extends a.e
 {
   public a$m()
   {
-    super("chooseImage", "chooseImage", 104, true);
+    super("cancelAddEmoticon", "cancel_add_emoticon", 10, false);
   }
 }
 

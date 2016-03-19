@@ -1,26 +1,26 @@
 package com.tencent.mm.booter;
 
-import com.tencent.mm.sdk.platformtools.ao.a;
-import com.tencent.mm.sdk.platformtools.t;
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import com.tencent.mm.sdk.platformtools.f;
+import com.tencent.mm.sdk.platformtools.u;
 
-final class b
-  implements ao.a
+public final class b
 {
-  b(a parama) {}
-  
-  public final void bt(int paramInt)
+  public static boolean q(Context paramContext, String paramString)
   {
-    switch (paramInt)
+    if (((!paramString.equals("noop")) || ((f.jVe) && (f.jVd))) && (paramContext.getSharedPreferences("system_config_prefs", 4).getBoolean("settings_fully_exit", true)))
     {
-    default: 
-      return;
-    case 0: 
-      t.v("!44@/B4Tb64lLpI7uCMufYgkMolJsZYezO/Lsg5Y9fbkrg4=", "call end");
-      bbK.mM();
-      return;
+      u.i("!44@/B4Tb64lLpIzvC/moQitzF+fhNaOymSkEyY1qkrbh9E=", "fully exited, no need to start service");
+      return false;
     }
-    t.v("!44@/B4Tb64lLpI7uCMufYgkMolJsZYezO/Lsg5Y9fbkrg4=", "call start");
-    bbK.mN();
+    u.d("!44@/B4Tb64lLpIzvC/moQitzF+fhNaOymSkEyY1qkrbh9E=", "ensure service running, type=" + paramString);
+    Intent localIntent = new Intent(paramContext, CoreService.class);
+    localIntent.setFlags(268435456);
+    localIntent.putExtra("START_TYPE", paramString);
+    paramContext.startService(localIntent);
+    return true;
   }
 }
 

@@ -1,9 +1,20 @@
-.class Lcom/tencent/kingkong/database/SQLiteConnectionPool$1;
+.class final Lcom/tencent/kingkong/database/SQLiteConnectionPool$1;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 # interfaces
 .implements Lcom/tencent/kingkong/support/CancellationSignal$OnCancelListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/tencent/kingkong/database/SQLiteConnectionPool;->waitForConnection(Ljava/lang/String;ILcom/tencent/kingkong/support/CancellationSignal;)Lcom/tencent/kingkong/database/SQLiteConnection;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
 
 
 # instance fields
@@ -34,7 +45,7 @@
 
 
 # virtual methods
-.method public onCancel()V
+.method public final onCancel()V
     .locals 3
 
     .prologue

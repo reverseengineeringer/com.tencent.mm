@@ -1,64 +1,68 @@
 package com.tencent.mm.storage;
 
-import com.tencent.mm.sdk.g.ae.a;
+import com.tencent.mm.sdk.h.c.a;
 import java.lang.reflect.Field;
 import java.util.Map;
 
 public final class a
   extends com.tencent.mm.d.b.a
 {
-  protected static ae.a aqp;
-  private Map icR = null;
+  protected static c.a aot;
+  private Map jZY = null;
   
   static
   {
-    ae.a locala = new ae.a();
-    bNX = new Field[8];
-    bbY = new String[9];
+    c.a locala = new c.a();
+    ceD = new Field[9];
+    blR = new String[10];
     StringBuilder localStringBuilder = new StringBuilder();
-    bbY[0] = "layerId";
-    ibX.put("layerId", "TEXT PRIMARY KEY ");
+    blR[0] = "layerId";
+    jYx.put("layerId", "TEXT PRIMARY KEY ");
     localStringBuilder.append(" layerId TEXT PRIMARY KEY ");
     localStringBuilder.append(", ");
-    ibW = "layerId";
-    bbY[1] = "business";
-    ibX.put("business", "TEXT");
+    jYw = "layerId";
+    blR[1] = "business";
+    jYx.put("business", "TEXT");
     localStringBuilder.append(" business TEXT");
     localStringBuilder.append(", ");
-    bbY[2] = "expId";
-    ibX.put("expId", "TEXT");
+    blR[2] = "expId";
+    jYx.put("expId", "TEXT");
     localStringBuilder.append(" expId TEXT");
     localStringBuilder.append(", ");
-    bbY[3] = "sequence";
-    ibX.put("sequence", "LONG");
+    blR[3] = "sequence";
+    jYx.put("sequence", "LONG");
     localStringBuilder.append(" sequence LONG");
     localStringBuilder.append(", ");
-    bbY[4] = "startTime";
-    ibX.put("startTime", "LONG");
+    blR[4] = "prioritylevel";
+    jYx.put("prioritylevel", "INTEGER default '0' ");
+    localStringBuilder.append(" prioritylevel INTEGER default '0' ");
+    localStringBuilder.append(", ");
+    blR[5] = "startTime";
+    jYx.put("startTime", "LONG");
     localStringBuilder.append(" startTime LONG");
     localStringBuilder.append(", ");
-    bbY[5] = "endTime";
-    ibX.put("endTime", "LONG");
+    blR[6] = "endTime";
+    jYx.put("endTime", "LONG");
     localStringBuilder.append(" endTime LONG");
     localStringBuilder.append(", ");
-    bbY[6] = "needReport";
-    ibX.put("needReport", "INTEGER");
+    blR[7] = "needReport";
+    jYx.put("needReport", "INTEGER");
     localStringBuilder.append(" needReport INTEGER");
     localStringBuilder.append(", ");
-    bbY[7] = "rawXML";
-    ibX.put("rawXML", "TEXT default '' ");
+    blR[8] = "rawXML";
+    jYx.put("rawXML", "TEXT default '' ");
     localStringBuilder.append(" rawXML TEXT default '' ");
-    bbY[8] = "rowid";
-    ibY = localStringBuilder.toString();
-    aqp = locala;
+    blR[9] = "rowid";
+    jYy = localStringBuilder.toString();
+    aot = locala;
   }
   
-  public final Map aGa()
+  public final Map aWf()
   {
-    if (icR == null) {
-      icR = com.tencent.mm.model.c.a.fl(field_rawXML);
+    if (jZY == null) {
+      jZY = com.tencent.mm.model.c.a.fF(field_rawXML);
     }
-    return icR;
+    return jZY;
   }
   
   public final boolean isValid()
@@ -67,9 +71,9 @@ public final class a
     return (l > field_startTime) && (l < field_endTime);
   }
   
-  protected final ae.a lX()
+  protected final c.a ls()
   {
-    return aqp;
+    return aot;
   }
 }
 

@@ -15,15 +15,15 @@
 
 
 # instance fields
-.field bII:Ljava/lang/String;
+.field aEy:Ljava/lang/String;
 
-.field bKi:J
+.field bDq:J
 
-.field bKj:J
+.field cae:J
 
-.field final synthetic bKk:Lcom/tencent/mm/modelsearch/a/a;
+.field caf:J
 
-.field brm:J
+.field final synthetic cag:Lcom/tencent/mm/modelsearch/a/a;
 
 
 # direct methods
@@ -31,8 +31,8 @@
     .locals 0
 
     .prologue
-    .line 248
-    iput-object p1, p0, Lcom/tencent/mm/modelsearch/a/a$a;->bKk:Lcom/tencent/mm/modelsearch/a/a;
+    .line 244
+    iput-object p1, p0, Lcom/tencent/mm/modelsearch/a/a$a;->cag:Lcom/tencent/mm/modelsearch/a/a;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,7 +43,7 @@
     .locals 0
 
     .prologue
-    .line 248
+    .line 244
     invoke-direct {p0, p1}, Lcom/tencent/mm/modelsearch/a/a$a;-><init>(Lcom/tencent/mm/modelsearch/a/a;)V
 
     return-void

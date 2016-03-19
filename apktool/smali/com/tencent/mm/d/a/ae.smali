@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/d/a/ae;
-.super Lcom/tencent/mm/sdk/c/d;
+.super Lcom/tencent/mm/sdk/c/b;
 .source "SourceFile"
 
 
@@ -12,13 +12,13 @@
 
 
 # static fields
-.field public static atN:Z
+.field public static arQ:Z
 
-.field public static atO:Z
+.field public static arR:Z
 
 
 # instance fields
-.field public auV:Lcom/tencent/mm/d/a/ae$a;
+.field public att:Lcom/tencent/mm/d/a/ae$a;
 
 
 # direct methods
@@ -29,10 +29,10 @@
     const/4 v0, 0x0
 
     .line 6
-    sput-boolean v0, Lcom/tencent/mm/d/a/ae;->atN:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ae;->arQ:Z
 
     .line 7
-    sput-boolean v0, Lcom/tencent/mm/d/a/ae;->atO:Z
+    sput-boolean v0, Lcom/tencent/mm/d/a/ae;->arR:Z
 
     return-void
 .end method
@@ -42,23 +42,23 @@
 
     .prologue
     .line 8
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/d;-><init>()V
+    invoke-direct {p0}, Lcom/tencent/mm/sdk/c/b;-><init>()V
 
     .line 13
     new-instance v0, Lcom/tencent/mm/d/a/ae$a;
 
     invoke-direct {v0}, Lcom/tencent/mm/d/a/ae$a;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/d/a/ae;->auV:Lcom/tencent/mm/d/a/ae$a;
+    iput-object v0, p0, Lcom/tencent/mm/d/a/ae;->att:Lcom/tencent/mm/d/a/ae$a;
 
     .line 8
-    const-string/jumbo v0, "DeletePackage"
+    const-string/jumbo v0, "CheckIPCallIsStarted"
 
     iput-object v0, p0, Lcom/tencent/mm/d/a/ae;->id:Ljava/lang/String;
 
-    sget-boolean v0, Lcom/tencent/mm/d/a/ae;->atO:Z
+    sget-boolean v0, Lcom/tencent/mm/d/a/ae;->arR:Z
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ae;->hXT:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/ae;->jUI:Z
 
     return-void
 .end method

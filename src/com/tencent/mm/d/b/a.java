@@ -2,34 +2,37 @@ package com.tencent.mm.d.b;
 
 import android.content.ContentValues;
 import android.database.Cursor;
-import com.tencent.mm.sdk.g.ae;
+import com.tencent.mm.sdk.h.c;
 
 public abstract class a
-  extends ae
+  extends c
 {
-  private static final int aHA = "business".hashCode();
-  private static final int aHB = "expId".hashCode();
-  private static final int aHC = "sequence".hashCode();
-  private static final int aHD = "startTime".hashCode();
-  private static final int aHE = "endTime".hashCode();
-  private static final int aHF = "needReport".hashCode();
-  private static final int aHG = "rawXML".hashCode();
-  private static final int aHH = "rowid".hashCode();
-  public static final String[] aHq = new String[0];
-  private static final int aHz = "layerId".hashCode();
-  private boolean aHr = true;
-  private boolean aHs = true;
-  private boolean aHt = true;
-  private boolean aHu = true;
-  private boolean aHv = true;
-  private boolean aHw = true;
-  private boolean aHx = true;
-  private boolean aHy = true;
+  private static final int aLA = "sequence".hashCode();
+  private static final int aLB = "prioritylevel".hashCode();
+  private static final int aLC = "startTime".hashCode();
+  private static final int aLD = "endTime".hashCode();
+  private static final int aLE = "needReport".hashCode();
+  private static final int aLF = "rawXML".hashCode();
+  private static final int aLG = "rowid".hashCode();
+  public static final String[] aLn = new String[0];
+  private static final int aLx = "layerId".hashCode();
+  private static final int aLy = "business".hashCode();
+  private static final int aLz = "expId".hashCode();
+  private boolean aLo = true;
+  private boolean aLp = true;
+  private boolean aLq = true;
+  private boolean aLr = true;
+  private boolean aLs = true;
+  private boolean aLt = true;
+  private boolean aLu = true;
+  private boolean aLv = true;
+  private boolean aLw = true;
   public String field_business;
   public long field_endTime;
   public String field_expId;
   public String field_layerId;
   public boolean field_needReport;
+  public int field_prioritylevel;
   public String field_rawXML;
   public long field_sequence;
   public long field_startTime;
@@ -47,11 +50,11 @@ public abstract class a
     if (i < j)
     {
       k = arrayOfString[i].hashCode();
-      if (aHz != k) {
+      if (aLx != k) {
         break label65;
       }
       field_layerId = paramCursor.getString(i);
-      aHr = true;
+      aLo = true;
     }
     for (;;)
     {
@@ -59,29 +62,33 @@ public abstract class a
       break label20;
       break;
       label65:
-      if (aHA == k)
+      if (aLy == k)
       {
         field_business = paramCursor.getString(i);
       }
-      else if (aHB == k)
+      else if (aLz == k)
       {
         field_expId = paramCursor.getString(i);
       }
-      else if (aHC == k)
+      else if (aLA == k)
       {
         field_sequence = paramCursor.getLong(i);
       }
-      else if (aHD == k)
+      else if (aLB == k)
+      {
+        field_prioritylevel = paramCursor.getInt(i);
+      }
+      else if (aLC == k)
       {
         field_startTime = paramCursor.getLong(i);
       }
-      else if (aHE == k)
+      else if (aLD == k)
       {
         field_endTime = paramCursor.getLong(i);
       }
       else
       {
-        if (aHF == k)
+        if (aLE == k)
         {
           if (paramCursor.getInt(i) != 0) {}
           for (boolean bool = true;; bool = false)
@@ -90,47 +97,50 @@ public abstract class a
             break;
           }
         }
-        if (aHG == k) {
+        if (aLF == k) {
           field_rawXML = paramCursor.getString(i);
-        } else if (aHH == k) {
-          ibV = paramCursor.getLong(i);
+        } else if (aLG == k) {
+          jYv = paramCursor.getLong(i);
         }
       }
     }
   }
   
-  public final ContentValues mA()
+  public final ContentValues lX()
   {
     ContentValues localContentValues = new ContentValues();
-    if (aHr) {
+    if (aLo) {
       localContentValues.put("layerId", field_layerId);
     }
-    if (aHs) {
+    if (aLp) {
       localContentValues.put("business", field_business);
     }
-    if (aHt) {
+    if (aLq) {
       localContentValues.put("expId", field_expId);
     }
-    if (aHu) {
+    if (aLr) {
       localContentValues.put("sequence", Long.valueOf(field_sequence));
     }
-    if (aHv) {
+    if (aLs) {
+      localContentValues.put("prioritylevel", Integer.valueOf(field_prioritylevel));
+    }
+    if (aLt) {
       localContentValues.put("startTime", Long.valueOf(field_startTime));
     }
-    if (aHw) {
+    if (aLu) {
       localContentValues.put("endTime", Long.valueOf(field_endTime));
     }
-    if (aHx) {
+    if (aLv) {
       localContentValues.put("needReport", Boolean.valueOf(field_needReport));
     }
     if (field_rawXML == null) {
       field_rawXML = "";
     }
-    if (aHy) {
+    if (aLw) {
       localContentValues.put("rawXML", field_rawXML);
     }
-    if (ibV > 0L) {
-      localContentValues.put("rowid", Long.valueOf(ibV));
+    if (jYv > 0L) {
+      localContentValues.put("rowid", Long.valueOf(jYv));
     }
     return localContentValues;
   }

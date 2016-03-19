@@ -2,20 +2,20 @@ package com.tencent.qqpinyin.voicerecoapi;
 
 public final class c
 {
-  private int bRp;
-  private TRVADNative jIO = new TRVADNative();
-  private int jIP;
+  private int cig;
+  private TRVADNative lQQ = new TRVADNative();
+  private int lQR;
   
   public c()
   {
-    bRp = 500000;
-    jIP = 10000000;
+    cig = 500000;
+    lQR = 10000000;
   }
   
   public c(int paramInt)
   {
-    bRp = paramInt;
-    jIP = 5000000;
+    cig = paramInt;
+    lQR = 5000000;
   }
   
   public final void a(short[] paramArrayOfShort, int paramInt, a parama)
@@ -31,21 +31,21 @@ public final class c
       label60:
       try
       {
-        switch (jIO.mfeSendData(paramArrayOfShort, paramInt))
+        switch (lQQ.mfeSendData(paramArrayOfShort, paramInt))
         {
         case 1: 
-          jIQ = 0;
+          lQS = 0;
         }
       }
       finally {}
-      jIU = ((int)d1);
-      new StringBuilder("volumn��").append(jIU);
+      lQW = ((int)d1);
+      new StringBuilder("volumn��").append(lQW);
       break;
-      jIQ = 1;
+      lQS = 1;
       break label187;
-      jIQ = 2;
+      lQS = 2;
       break label187;
-      jIQ = 3;
+      lQS = 3;
       int j;
       label187:
       do
@@ -72,18 +72,18 @@ public final class c
   
   public final int start()
   {
-    int j = jIO.mfeInit(bRp, jIP);
+    int j = lQQ.mfeInit(cig, lQR);
     int i = j;
     if (j == 0)
     {
-      j = jIO.mfeOpen();
+      j = lQQ.mfeOpen();
       i = j;
       if (j == 0)
       {
-        j = jIO.mfeEnableNoiseDetection(true);
+        j = lQQ.mfeEnableNoiseDetection(true);
         i = j;
         if (j == 0) {
-          i = jIO.mfeStart();
+          i = lQQ.mfeStart();
         }
       }
     }
@@ -95,14 +95,14 @@ public final class c
   
   public final int stop()
   {
-    int j = jIO.mfeStop();
+    int j = lQQ.mfeStop();
     int i = j;
     if (j == 0)
     {
-      j = jIO.mfeClose();
+      j = lQQ.mfeClose();
       i = j;
       if (j == 0) {
-        i = jIO.mfeExit();
+        i = lQQ.mfeExit();
       }
     }
     if (i == 0) {
@@ -113,11 +113,11 @@ public final class c
   
   public static final class a
   {
-    public int jIQ = 0;
-    public int jIR = 256;
-    public int jIS = 512;
-    private int jIT = 0;
-    public int jIU = 0;
+    public int lQS = 0;
+    public int lQT = 256;
+    public int lQU = 512;
+    private int lQV = 0;
+    public int lQW = 0;
   }
 }
 

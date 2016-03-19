@@ -3,84 +3,124 @@
 .source "SourceFile"
 
 
-# instance fields
-.field public biG:I
-
-.field public biH:I
-
-.field public biI:I
-
-.field public biJ:I
-
-.field public biK:I
+# static fields
+.field private static bth:Lcom/tencent/mm/compatible/d/u;
 
 
 # direct methods
-.method public constructor <init>()V
+.method static constructor <clinit>()V
     .locals 1
 
     .prologue
-    .line 30
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 14
-    const v0, 0xc3500
-
-    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->biG:I
-
-    .line 20
-    const v0, 0xea60
-
-    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->biH:I
-
-    .line 27
-    const v0, 0x5f5e100
-
-    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->biI:I
-
-    .line 45
-    const/16 v0, 0x3e8
-
-    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->biJ:I
-
-    .line 51
+    .line 25
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->biK:I
+    sput-object v0, Lcom/tencent/mm/compatible/d/u;->bth:Lcom/tencent/mm/compatible/d/u;
 
-    .line 31
-    invoke-virtual {p0}, Lcom/tencent/mm/compatible/d/u;->reset()V
-
-    .line 32
     return-void
 .end method
 
-
-# virtual methods
-.method public final reset()V
-    .locals 1
+.method public static oN()I
+    .locals 4
 
     .prologue
-    .line 35
-    const v0, 0xc3500
+    const/4 v2, 0x1
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->biG:I
+    const/4 v1, 0x0
 
-    .line 36
-    const v0, 0xea60
+    .line 83
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->getContext()Landroid/content/Context;
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->biH:I
+    move-result-object v0
 
-    .line 37
-    const/16 v0, 0x3e8
+    .line 84
+    const-string/jumbo v3, "connectivity"
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->biJ:I
+    invoke-virtual {v0, v3}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    .line 38
-    const/4 v0, 0x0
+    move-result-object v0
 
-    iput v0, p0, Lcom/tencent/mm/compatible/d/u;->biK:I
+    check-cast v0, Landroid/net/ConnectivityManager;
 
-    .line 39
-    return-void
+    .line 85
+    invoke-virtual {v0}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
+
+    move-result-object v0
+
+    .line 87
+    if-nez v0, :cond_0
+
+    move v0, v1
+
+    .line 116
+    :goto_0
+    return v0
+
+    .line 90
+    :cond_0
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getSubtype()I
+
+    move-result v3
+
+    .line 91
+    invoke-virtual {v0}, Landroid/net/NetworkInfo;->getType()I
+
+    move-result v0
+
+    if-ne v0, v2, :cond_1
+
+    move v0, v2
+
+    .line 92
+    goto :goto_0
+
+    .line 94
+    :cond_1
+    packed-switch v3, :pswitch_data_0
+
+    :pswitch_0
+    move v0, v1
+
+    .line 116
+    goto :goto_0
+
+    .line 98
+    :pswitch_1
+    const/4 v0, 0x4
+
+    goto :goto_0
+
+    .line 106
+    :pswitch_2
+    const/4 v0, 0x3
+
+    goto :goto_0
+
+    .line 113
+    :pswitch_3
+    const/4 v0, 0x2
+
+    goto :goto_0
+
+    .line 94
+    :pswitch_data_0
+    .packed-switch 0x1
+        :pswitch_3
+        :pswitch_3
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_2
+        :pswitch_3
+        :pswitch_0
+        :pswitch_0
+        :pswitch_0
+        :pswitch_3
+        :pswitch_2
+        :pswitch_1
+        :pswitch_1
+        :pswitch_1
+        :pswitch_0
+        :pswitch_2
+    .end packed-switch
 .end method

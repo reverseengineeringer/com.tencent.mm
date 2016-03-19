@@ -9,9 +9,45 @@ import android.view.accessibility.AccessibilityNodeInfo;
 class a$a
   extends a.d
 {
-  public Object a(a parama)
+  public Object a(final a parama)
   {
-    return new e(new b(this, parama));
+    new b.1(new b.a()
+    {
+      public final void b(View paramAnonymousView, Object paramAnonymousObject)
+      {
+        parama.a(paramAnonymousView, new android.support.v4.view.a.a(paramAnonymousObject));
+      }
+      
+      public final boolean dispatchPopulateAccessibilityEvent(View paramAnonymousView, AccessibilityEvent paramAnonymousAccessibilityEvent)
+      {
+        return a.dispatchPopulateAccessibilityEvent(paramAnonymousView, paramAnonymousAccessibilityEvent);
+      }
+      
+      public final void onInitializeAccessibilityEvent(View paramAnonymousView, AccessibilityEvent paramAnonymousAccessibilityEvent)
+      {
+        parama.onInitializeAccessibilityEvent(paramAnonymousView, paramAnonymousAccessibilityEvent);
+      }
+      
+      public final void onPopulateAccessibilityEvent(View paramAnonymousView, AccessibilityEvent paramAnonymousAccessibilityEvent)
+      {
+        parama.onPopulateAccessibilityEvent(paramAnonymousView, paramAnonymousAccessibilityEvent);
+      }
+      
+      public final boolean onRequestSendAccessibilityEvent(ViewGroup paramAnonymousViewGroup, View paramAnonymousView, AccessibilityEvent paramAnonymousAccessibilityEvent)
+      {
+        return parama.onRequestSendAccessibilityEvent(paramAnonymousViewGroup, paramAnonymousView, paramAnonymousAccessibilityEvent);
+      }
+      
+      public final void sendAccessibilityEvent(View paramAnonymousView, int paramAnonymousInt)
+      {
+        a.sendAccessibilityEvent(paramAnonymousView, paramAnonymousInt);
+      }
+      
+      public final void sendAccessibilityEventUnchecked(View paramAnonymousView, AccessibilityEvent paramAnonymousAccessibilityEvent)
+      {
+        a.sendAccessibilityEventUnchecked(paramAnonymousView, paramAnonymousAccessibilityEvent);
+      }
+    });
   }
   
   public final void a(Object paramObject, View paramView, int paramInt)
@@ -21,7 +57,7 @@ class a$a
   
   public final void a(Object paramObject, View paramView, android.support.v4.view.a.a parama)
   {
-    parama = hD;
+    parama = gL;
     ((View.AccessibilityDelegate)paramObject).onInitializeAccessibilityNodeInfo(paramView, (AccessibilityNodeInfo)parama);
   }
   
@@ -35,7 +71,7 @@ class a$a
     return ((View.AccessibilityDelegate)paramObject).onRequestSendAccessibilityEvent(paramViewGroup, paramView, paramAccessibilityEvent);
   }
   
-  public final Object aw()
+  public final Object ae()
   {
     return new View.AccessibilityDelegate();
   }

@@ -1,26 +1,37 @@
 package com.tencent.mm.ui.chatting;
 
-import android.widget.AbsListView;
-import android.widget.AbsListView.OnScrollListener;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.ArrayList;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 
 final class j
-  implements AbsListView.OnScrollListener
+  extends aa.a
 {
-  j(AppAttachFileListUI paramAppAttachFileListUI) {}
+  protected TextView dVa;
+  protected TextView dVy;
+  protected ProgressBar fGG;
+  protected TextView kQE;
+  protected ImageView kQK;
   
-  public final void onScroll(AbsListView paramAbsListView, int paramInt1, int paramInt2, int paramInt3) {}
-  
-  public final void onScrollStateChanged(AbsListView paramAbsListView, int paramInt)
+  public j(int paramInt)
   {
-    if ((paramInt == 0) && (!AppAttachFileListUI.b(iRp)) && (AppAttachFileListUI.c(iRp)) && (paramAbsListView.getLastVisiblePosition() == AppAttachFileListUI.d(iRp).getCount()))
-    {
-      t.d("!44@/B4Tb64lLpKndQxFPEClvZ8VNQkxuaR5yXnPRtm8QDc=", "need to add item");
-      paramInt = AppAttachFileListUI.a(iRp).size();
-      new AppAttachFileListUI.a(iRp, (byte)0).execute(new Integer[] { Integer.valueOf(paramInt), Integer.valueOf(20) });
-      AppAttachFileListUI.e(iRp);
-    }
+    super(paramInt);
+  }
+  
+  public final j aA(View paramView)
+  {
+    super.aC(paramView);
+    dVy = ((TextView)paramView.findViewById(2131165262));
+    fGG = ((ProgressBar)paramView.findViewById(2131165399));
+    kQK = ((ImageView)paramView.findViewById(2131165314));
+    dVa = ((TextView)paramView.findViewById(2131165410));
+    kQE = ((TextView)paramView.findViewById(2131165432));
+    gjr = ((TextView)paramView.findViewById(2131165268));
+    edK = ((CheckBox)paramView.findViewById(2131165186));
+    dMC = paramView.findViewById(2131165187);
+    return this;
   }
 }
 

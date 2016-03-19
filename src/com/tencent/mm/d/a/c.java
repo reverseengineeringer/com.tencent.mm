@@ -1,24 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 import com.tencent.mm.ui.MMActivity;
 
 public final class c
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a atS = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a arV = new a();
   
   public c()
   {
     id = "AccountExpired";
-    hXT = atO;
+    jUI = arR;
   }
   
   public static final class a
   {
-    public MMActivity atT;
+    public MMActivity arW;
     public int errCode;
     public int errType;
   }

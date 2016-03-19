@@ -15,21 +15,23 @@
 
 
 # instance fields
-.field public ayC:J
+.field public Jq:Z
+
+.field public mac:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 2
+    .locals 1
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
-    const-wide/16 v0, 0x0
+    .line 16
+    const/4 v0, 0x0
 
-    iput-wide v0, p0, Lcom/tencent/mm/d/a/cu$a;->ayC:J
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/cu$a;->Jq:Z
 
     return-void
 .end method

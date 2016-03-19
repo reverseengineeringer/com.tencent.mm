@@ -12,9 +12,9 @@
 
 
 # instance fields
-.field public final avf:Ljava/lang/String;
+.field public final aut:Ljava/lang/String;
 
-.field public final bje:I
+.field public final btG:I
 
 .field public final name:Ljava/lang/String;
 
@@ -31,9 +31,9 @@
 
     .prologue
     .line 51
-    new-instance v0, Lcom/tencent/mm/compatible/loader/f;
+    new-instance v0, Lcom/tencent/mm/compatible/loader/PluginDescription$1;
 
-    invoke-direct {v0}, Lcom/tencent/mm/compatible/loader/f;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/compatible/loader/PluginDescription$1;-><init>()V
 
     sput-object v0, Lcom/tencent/mm/compatible/loader/PluginDescription;->CREATOR:Landroid/os/Parcelable$Creator;
 
@@ -52,7 +52,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/p;->R(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/k;->S(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -65,7 +65,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/p;->R(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/k;->S(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -78,20 +78,20 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/p;->R(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/k;->S(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Ljava/lang/String;
 
-    iput-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->avf:Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->aut:Ljava/lang/String;
 
     .line 68
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-static {v0}, Lcom/tencent/mm/compatible/util/p;->R(Ljava/lang/Object;)Ljava/lang/Object;
+    invoke-static {v0}, Lcom/tencent/mm/compatible/util/k;->S(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
@@ -111,7 +111,7 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->bje:I
+    iput v0, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->btG:I
 
     .line 71
     return-void
@@ -154,7 +154,7 @@
 
     const/4 v2, 0x2
 
-    iget-object v3, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->avf:Ljava/lang/String;
+    iget-object v3, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->aut:Ljava/lang/String;
 
     aput-object v3, v1, v2
 
@@ -176,7 +176,7 @@
 
     const/4 v2, 0x5
 
-    iget v3, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->bje:I
+    iget v3, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->btG:I
 
     invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -206,7 +206,7 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
     .line 45
-    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->avf:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->aut:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
@@ -221,7 +221,7 @@
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
     .line 48
-    iget v0, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->bje:I
+    iget v0, p0, Lcom/tencent/mm/compatible/loader/PluginDescription;->btG:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 

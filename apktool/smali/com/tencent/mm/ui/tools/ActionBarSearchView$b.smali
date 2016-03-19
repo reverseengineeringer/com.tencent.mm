@@ -15,8 +15,14 @@
 
 
 # virtual methods
-.method public abstract aRq()V
+.method public abstract AD(Ljava/lang/String;)V
 .end method
 
-.method public abstract uM(Ljava/lang/String;)V
+.method public abstract Gf()V
+.end method
+
+.method public abstract bim()V
+.end method
+
+.method public abstract bin()V
 .end method

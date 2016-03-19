@@ -4,13 +4,13 @@
 
 
 # instance fields
-.field private dCd:F
+.field private eua:F
 
-.field private gWl:F
+.field private iMM:F
 
-.field private gWm:F
+.field private iMN:F
 
-.field private gWn:Landroid/graphics/Paint;
+.field private iMO:Landroid/graphics/Paint;
 
 
 # direct methods
@@ -42,7 +42,7 @@
     return-void
 .end method
 
-.method private as(Ljava/lang/String;I)V
+.method private aI(Ljava/lang/String;I)V
     .locals 9
 
     .prologue
@@ -67,7 +67,7 @@
 
     aput-object v3, v2, v7
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 55
     if-gtz p2, :cond_0
@@ -91,22 +91,22 @@
     sub-int v1, v0, v1
 
     .line 59
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->dCd:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->eua:F
 
     .line 60
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWn:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMO:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
     .line 61
     :goto_1
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWl:F
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMM:F
 
     cmpl-float v2, v0, v2
 
     if-lez v2, :cond_1
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWn:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMO:Landroid/graphics/Paint;
 
     invoke-virtual {v2, p1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
@@ -124,14 +124,14 @@
     sub-float/2addr v0, v2
 
     .line 63
-    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWl:F
+    iget v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMM:F
 
     cmpg-float v2, v0, v2
 
     if-gtz v2, :cond_2
 
     .line 64
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWl:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMM:F
 
     .line 69
     :cond_1
@@ -149,7 +149,7 @@
 
     aput-object v5, v4, v6
 
-    iget v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->dCd:F
+    iget v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->eua:F
 
     invoke-static {v5}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
@@ -157,7 +157,7 @@
 
     aput-object v5, v4, v7
 
-    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWn:Landroid/graphics/Paint;
+    iget-object v5, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMO:Landroid/graphics/Paint;
 
     invoke-virtual {v5, p1}, Landroid/graphics/Paint;->measureText(Ljava/lang/String;)F
 
@@ -177,7 +177,7 @@
 
     aput-object v1, v4, v5
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 70
     invoke-virtual {p0, v6, v0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->setTextSize(IF)V
@@ -186,7 +186,7 @@
 
     .line 67
     :cond_2
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWn:Landroid/graphics/Paint;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMO:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
@@ -212,13 +212,13 @@
 
     const/16 v1, 0x8
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v0
 
     int-to-float v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWl:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMM:F
 
     .line 43
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->getContext()Landroid/content/Context;
@@ -227,23 +227,23 @@
 
     const/16 v1, 0x16
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/ao/a;->fromDPToPix(Landroid/content/Context;I)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/aw/a;->fromDPToPix(Landroid/content/Context;I)I
 
     move-result v0
 
     int-to-float v0, v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWm:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMN:F
 
     .line 45
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWn:Landroid/graphics/Paint;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMO:Landroid/graphics/Paint;
 
     .line 46
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWn:Landroid/graphics/Paint;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMO:Landroid/graphics/Paint;
 
     invoke-virtual {p0}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->getPaint()Landroid/text/TextPaint;
 
@@ -256,21 +256,21 @@
 
     move-result v0
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->dCd:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->eua:F
 
     .line 48
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->dCd:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->eua:F
 
-    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWl:F
+    iget v1, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMM:F
 
     cmpg-float v0, v0, v1
 
     if-gtz v0, :cond_0
 
     .line 49
-    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->gWm:F
+    iget v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->iMN:F
 
-    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->dCd:F
+    iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->eua:F
 
     .line 51
     :cond_0
@@ -288,7 +288,7 @@
 
     const-string/jumbo v1, "on size changed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 84
     if-eq p1, p3, :cond_0
@@ -302,7 +302,7 @@
 
     move-result-object v0
 
-    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->as(Ljava/lang/String;I)V
+    invoke-direct {p0, v0, p1}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->aI(Ljava/lang/String;I)V
 
     .line 87
     :cond_0
@@ -318,7 +318,7 @@
 
     const-string/jumbo v1, "on text changed"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 77
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/TextView;->onTextChanged(Ljava/lang/CharSequence;III)V
@@ -332,7 +332,7 @@
 
     move-result v1
 
-    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->as(Ljava/lang/String;I)V
+    invoke-direct {p0, v0, v1}, Lcom/tencent/mm/pluginsdk/ui/musicplayer/AutoSizeTextView;->aI(Ljava/lang/String;I)V
 
     .line 79
     return-void

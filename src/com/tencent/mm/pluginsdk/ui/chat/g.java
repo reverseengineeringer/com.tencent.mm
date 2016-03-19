@@ -1,17 +1,11 @@
 package com.tencent.mm.pluginsdk.ui.chat;
 
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-
 final class g
-  implements DialogInterface.OnClickListener
 {
-  g(e parame) {}
-  
-  public final void onClick(DialogInterface paramDialogInterface, int paramInt)
-  {
-    paramDialogInterface.dismiss();
-  }
+  public String ayz;
+  public long edh;
+  public long iMi;
+  public String iMj;
 }
 
 /* Location:

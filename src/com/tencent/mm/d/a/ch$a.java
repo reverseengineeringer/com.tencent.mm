@@ -2,9 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class ch$a
 {
-  public int axP = -1;
-  public long axQ = 0L;
-  public String username;
+  public String alN;
+  public String auQ;
+  public byte[] data;
 }
 
 /* Location:

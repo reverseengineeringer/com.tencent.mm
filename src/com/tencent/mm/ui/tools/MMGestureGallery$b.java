@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface MMGestureGallery$b
 {
-  public abstract void aAb();
+  public abstract void ahv();
 }
 
 /* Location:

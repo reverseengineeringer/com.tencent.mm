@@ -15,9 +15,7 @@
 
 
 # instance fields
-.field public aCC:I
-
-.field public aDK:Ljava/lang/String;
+.field public ig:Z
 
 
 # direct methods
@@ -28,10 +26,10 @@
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 16
+    .line 15
     const/4 v0, 0x0
 
-    iput v0, p0, Lcom/tencent/mm/d/a/hi$a;->aCC:I
+    iput-boolean v0, p0, Lcom/tencent/mm/d/a/hi$a;->ig:Z
 
     return-void
 .end method

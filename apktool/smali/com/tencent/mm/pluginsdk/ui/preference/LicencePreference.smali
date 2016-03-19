@@ -4,15 +4,15 @@
 
 
 # instance fields
-.field private gYf:Landroid/widget/CheckBox;
+.field private iOA:Z
 
-.field private gYg:Landroid/widget/Button;
+.field private iOB:Landroid/view/View$OnClickListener;
 
-.field private gYh:Ljava/lang/String;
+.field private iOx:Landroid/widget/CheckBox;
 
-.field private gYi:Z
+.field private iOy:Landroid/widget/Button;
 
-.field private gYj:Landroid/view/View$OnClickListener;
+.field private iOz:Ljava/lang/String;
 
 
 # direct methods
@@ -39,10 +39,10 @@
     .line 34
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->gYi:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->iOA:Z
 
     .line 27
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_licence:I
+    const v0, 0x7f0a04f9
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->setLayoutResource(I)V
 
@@ -55,7 +55,7 @@
 
     .prologue
     .line 15
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->gYj:Landroid/view/View$OnClickListener;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->iOB:Landroid/view/View$OnClickListener;
 
     return-object v0
 .end method
@@ -83,7 +83,7 @@
     move-result-object v1
 
     .line 41
-    sget v0, Lcom/tencent/mm/a$i;->agree_cb:I
+    const v0, 0x7f07071c
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -91,10 +91,10 @@
 
     check-cast v0, Landroid/widget/CheckBox;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->gYf:Landroid/widget/CheckBox;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->iOx:Landroid/widget/CheckBox;
 
     .line 42
-    sget v0, Lcom/tencent/mm/a$i;->agree_btn:I
+    const v0, 0x7f07071e
 
     invoke-virtual {v1, v0}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -102,38 +102,38 @@
 
     check-cast v0, Landroid/widget/Button;
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->gYg:Landroid/widget/Button;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->iOy:Landroid/widget/Button;
 
     .line 43
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->gYg:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->iOy:Landroid/widget/Button;
 
-    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/preference/n;
+    new-instance v2, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference$1;
 
-    invoke-direct {v2, p0}, Lcom/tencent/mm/pluginsdk/ui/preference/n;-><init>(Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;)V
+    invoke-direct {v2, p0}, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;)V
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
     .line 52
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->gYh:Ljava/lang/String;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->iOz:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
     .line 53
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->gYg:Landroid/widget/Button;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->iOy:Landroid/widget/Button;
 
-    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->gYh:Ljava/lang/String;
+    iget-object v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->iOz:Ljava/lang/String;
 
     invoke-virtual {v0, v2}, Landroid/widget/Button;->setText(Ljava/lang/CharSequence;)V
 
     .line 56
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->gYf:Landroid/widget/CheckBox;
+    iget-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->iOx:Landroid/widget/CheckBox;
 
-    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->gYi:Z
+    iget-boolean v2, p0, Lcom/tencent/mm/pluginsdk/ui/preference/LicencePreference;->iOA:Z
 
     invoke-virtual {v0, v2}, Landroid/widget/CheckBox;->setChecked(Z)V
 

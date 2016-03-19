@@ -1,69 +1,94 @@
 package com.tencent.mm.ui.bindlinkedin;
 
 import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.MenuItem;
+import android.view.MenuItem.OnMenuItemClickListener;
 import android.widget.EditText;
 import android.widget.TextView;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.a.n;
-import com.tencent.mm.aa.b;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelfriend.ae;
-import com.tencent.mm.modelfriend.ay;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.q.l;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.ad.b;
+import com.tencent.mm.ar.c;
+import com.tencent.mm.model.h;
+import com.tencent.mm.modelfriend.t;
+import com.tencent.mm.r.d;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.base.h;
-import com.tencent.mm.ui.cn.b;
+import com.tencent.mm.ui.base.g;
+import com.tencent.mm.ui.j.b;
 
 public class InviteLinkedInFriendUI
   extends MMActivity
   implements d
 {
-  private Dialog fEJ = null;
-  private b iOC = null;
-  private EditText iOD = null;
-  private EditText iOE = null;
-  private String iOF = null;
-  private String iOG = null;
-  private String iOH = null;
+  private Dialog elG = null;
+  private b kNQ = null;
+  private EditText kNR = null;
+  private EditText kNS = null;
+  private String kNT = null;
+  private String kNU = null;
+  private String kNV = null;
   
-  protected final void DV()
+  protected final void Gb()
   {
-    a(new s(this));
-    iOF = getIntent().getStringExtra("intent.key.linkedin.id");
-    iOD = ((EditText)findViewById(a.i.invite_title_edit_text));
-    iOE = ((EditText)findViewById(a.i.invite_edit_text));
-    iOG = getIntent().getStringExtra("intent.key.linkedin.from.name");
-    iOH = bn.iV(getIntent().getStringExtra("intent.key.linkedin.to.name"));
-    Object localObject = String.format(getString(a.n.linkedin_invite_friend_title), new Object[] { bn.iV(iOG) });
-    iOD.setText((CharSequence)localObject);
-    iOD.setHint((CharSequence)localObject);
-    iOD.addTextChangedListener(new a((byte)0));
-    iOD.clearFocus();
-    localObject = com.tencent.mm.model.v.rT();
-    String str1 = com.tencent.mm.model.v.rS();
-    String str2 = getString(a.n.linkedin_invite_friend_hint);
-    String str3 = bn.iV(iOH);
-    if (bn.iW((String)localObject)) {
+    b(new MenuItem.OnMenuItemClickListener()
+    {
+      public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+      {
+        finish();
+        return true;
+      }
+    });
+    kNT = getIntent().getStringExtra("intent.key.linkedin.id");
+    kNR = ((EditText)findViewById(2131169191));
+    kNS = ((EditText)findViewById(2131169192));
+    kNU = getIntent().getStringExtra("intent.key.linkedin.from.name");
+    kNV = ay.ky(getIntent().getStringExtra("intent.key.linkedin.to.name"));
+    Object localObject = String.format(getString(2131428809), new Object[] { ay.ky(kNU) });
+    kNR.setText((CharSequence)localObject);
+    kNR.setHint((CharSequence)localObject);
+    kNR.addTextChangedListener(new a((byte)0));
+    kNR.clearFocus();
+    localObject = h.sd();
+    String str1 = h.sc();
+    String str2 = getString(2131428811);
+    String str3 = ay.ky(kNV);
+    if (ay.kz((String)localObject)) {
       localObject = str1;
     }
     for (;;)
     {
       localObject = String.format(str2, new Object[] { str3, localObject });
-      iOE.setText((CharSequence)localObject);
-      iOE.setHint((CharSequence)localObject);
-      iOE.addTextChangedListener(new a((byte)0));
-      iOE.clearFocus();
-      a(2, getString(a.n.linkedin_invite_friend_send), new t(this), cn.b.iqR);
-      Xh();
-      localObject = (TextView)findViewById(a.i.invite_title_text_view);
+      kNS.setText((CharSequence)localObject);
+      kNS.setHint((CharSequence)localObject);
+      kNS.addTextChangedListener(new a((byte)0));
+      kNS.clearFocus();
+      a(2, getString(2131428812), new MenuItem.OnMenuItemClickListener()
+      {
+        public final boolean onMenuItemClick(MenuItem paramAnonymousMenuItem)
+        {
+          if ((InviteLinkedInFriendUI.a(InviteLinkedInFriendUI.this).getText().toString().trim().length() > 0) && (InviteLinkedInFriendUI.b(InviteLinkedInFriendUI.this).getText().toString().trim().length() > 0))
+          {
+            InviteLinkedInFriendUI.a(InviteLinkedInFriendUI.this, new b(InviteLinkedInFriendUI.c(InviteLinkedInFriendUI.this), InviteLinkedInFriendUI.a(InviteLinkedInFriendUI.this).getText().toString(), InviteLinkedInFriendUI.b(InviteLinkedInFriendUI.this).getText().toString()));
+            com.tencent.mm.model.ah.tE().d(InviteLinkedInFriendUI.d(InviteLinkedInFriendUI.this));
+            InviteLinkedInFriendUI.a(InviteLinkedInFriendUI.this, g.a(InviteLinkedInFriendUI.this, getString(2131431101), false, new DialogInterface.OnCancelListener()
+            {
+              public final void onCancel(DialogInterface paramAnonymous2DialogInterface) {}
+            }));
+          }
+          return false;
+        }
+      }, j.b.kpJ);
+      age();
+      localObject = (TextView)findViewById(2131169190);
       ((TextView)localObject).setFocusable(true);
       ((TextView)localObject).setFocusableInTouchMode(true);
       ((TextView)localObject).requestFocus();
@@ -74,53 +99,91 @@ public class InviteLinkedInFriendUI
   
   public final void a(int paramInt1, int paramInt2, String paramString, j paramj)
   {
-    if (fEJ != null)
+    if (elG != null)
     {
-      fEJ.dismiss();
-      fEJ = null;
+      elG.dismiss();
+      elG = null;
     }
     if ((paramInt1 == 0) && (paramInt2 == 0))
     {
-      com.tencent.mm.sdk.platformtools.t.d("!44@/B4Tb64lLpKrZa84cfNw0U3hfN9RVIOUCExlyxSgXhc=", "[oneliang][onSceneEnd]:ok");
-      ay.yK().gE(iOF);
+      u.d("!44@/B4Tb64lLpKrZa84cfNw0U3hfN9RVIOUCExlyxSgXhc=", "[oneliang][onSceneEnd]:ok");
+      com.tencent.mm.modelfriend.ah.zz().hB(kNT);
       finish();
       return;
     }
     if (paramInt2 == 2)
     {
-      fEJ = h.a(this, false, getString(a.n.linkedin_add_friend_rebind), "", getString(a.n.linkedin_add_friend_bind_account), getString(a.n.linkedin_add_friend_cancel), new v(this), new w(this));
+      elG = g.a(this, false, getString(2131428805), "", getString(2131428806), getString(2131428804), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          paramAnonymousDialogInterface = new Intent();
+          paramAnonymousDialogInterface.putExtra("rawUrl", "http://www.linkedin.com/bind/plugin/");
+          paramAnonymousDialogInterface.putExtra("geta8key_username", h.sc());
+          paramAnonymousDialogInterface.putExtra("geta8key_scene", 17);
+          c.a(InviteLinkedInFriendUI.this, "webview", "com.tencent.mm.plugin.webview.ui.tools.WebViewUI", paramAnonymousDialogInterface, 100);
+        }
+      }, new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          if (paramAnonymousDialogInterface != null) {
+            paramAnonymousDialogInterface.dismiss();
+          }
+        }
+      });
       return;
     }
     if (paramInt2 == 4)
     {
-      fEJ = h.a(this, getString(a.n.linkedin_invite_friend_invite_overquota), "", new x(this));
+      elG = g.a(this, getString(2131428813), "", new DialogInterface.OnClickListener()
+      {
+        public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+        {
+          if (paramAnonymousDialogInterface != null) {
+            paramAnonymousDialogInterface.dismiss();
+          }
+        }
+      });
       return;
     }
-    fEJ = h.a(this, false, getString(a.n.linkedin_invite_friend_failure), "", getString(a.n.linkedin_add_friend_retry), getString(a.n.linkedin_add_friend_cancel), new y(this), new z(this));
+    elG = g.a(this, false, getString(2131428814), "", getString(2131428802), getString(2131428804), new DialogInterface.OnClickListener()new DialogInterface.OnClickListener
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        com.tencent.mm.model.ah.tE().d(InviteLinkedInFriendUI.d(InviteLinkedInFriendUI.this));
+      }
+    }, new DialogInterface.OnClickListener()
+    {
+      public final void onClick(DialogInterface paramAnonymousDialogInterface, int paramAnonymousInt)
+      {
+        com.tencent.mm.model.ah.tE().c(InviteLinkedInFriendUI.d(InviteLinkedInFriendUI.this));
+      }
+    });
   }
   
   protected final int getLayoutId()
   {
-    return a.k.invite_linkedin_friend;
+    return 2131363101;
   }
   
   public void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    nh(a.n.invite_friends_by_linkedin);
-    DV();
+    qb(2131429169);
+    Gb();
   }
   
   protected void onPause()
   {
-    ax.tm().b(677, this);
+    com.tencent.mm.model.ah.tE().b(677, this);
     super.onPause();
   }
   
   protected void onResume()
   {
     super.onResume();
-    ax.tm().a(677, this);
+    com.tencent.mm.model.ah.tE().a(677, this);
   }
   
   private final class a
@@ -140,10 +203,10 @@ public class InviteLinkedInFriendUI
       }
       if ((i == 0) || (j == 0))
       {
-        fe(false);
+        bC(false);
         return;
       }
-      fe(true);
+      bC(true);
     }
     
     public final void beforeTextChanged(CharSequence paramCharSequence, int paramInt1, int paramInt2, int paramInt3) {}

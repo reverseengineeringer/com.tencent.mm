@@ -1,24 +1,24 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class ka
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aHm = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGx = new a();
+  public b aGy = new b();
   
   public ka()
   {
-    id = "WearVoipController";
-    hXT = atO;
+    id = "ResetCardRetryCounter";
+    jUI = arR;
   }
   
-  public static final class a
-  {
-    public int ave;
-  }
+  public static final class a {}
+  
+  public static final class b {}
 }
 
 /* Location:

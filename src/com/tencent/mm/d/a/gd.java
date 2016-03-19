@@ -1,26 +1,27 @@
 package com.tencent.mm.d.a;
 
-import android.widget.EditText;
-import com.tencent.mm.pluginsdk.ui.a.a;
-import com.tencent.mm.sdk.c.d;
+import android.content.Context;
+import com.tencent.mm.sdk.c.b;
+import com.tencent.mm.sdk.modelmsg.WXMediaMessage;
 
 public final class gd
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDC = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBb = new a();
   
   public gd()
   {
-    id = "RegistSpenBuddy";
-    hXT = atO;
+    id = "Launch3RdApp";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public a aDD;
-    public EditText aDE;
+    public WXMediaMessage aBc;
+    public String appId;
+    public Context context;
   }
 }
 

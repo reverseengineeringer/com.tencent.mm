@@ -1,23 +1,14 @@
 package com.tencent.mm.pluginsdk.ui.musicplayer;
 
-import android.content.res.Resources;
-import android.view.MenuItem;
-import android.view.MenuItem.OnMenuItemClickListener;
-import com.tencent.mm.a.c;
-import com.tencent.mm.ui.MMActivity;
-import com.tencent.mm.ui.base.h;
-import com.tencent.mm.ui.cn;
-
-final class c
-  implements MenuItem.OnMenuItemClickListener
+public final class c
 {
-  c(b paramb) {}
-  
-  public final boolean onMenuItemClick(MenuItem paramMenuItem)
+  public static String AL(String paramString)
   {
-    paramMenuItem = gXk.cwT.getResources().getStringArray(a.c.music_player_menus);
-    h.a(gXk.cwT.ipQ.iqj, "", paramMenuItem, "", new d(this));
-    return true;
+    if (paramString == null) {}
+    for (int i = -1; i < 0; i = paramString.indexOf("#p=")) {
+      return null;
+    }
+    return paramString.substring(i + 3);
   }
 }
 

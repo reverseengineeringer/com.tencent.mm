@@ -9,7 +9,7 @@ import android.text.method.TransformationMethod;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
-import com.tencent.mm.a.p;
+import com.tencent.mm.R.b;
 import java.util.Locale;
 
 public class CompatTextView
@@ -23,7 +23,7 @@ public class CompatTextView
   public CompatTextView(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, a.p.CompatTextView, paramInt, 0);
+    paramAttributeSet = paramContext.obtainStyledAttributes(paramAttributeSet, R.b.CompatTextView, paramInt, 0);
     boolean bool = paramAttributeSet.getBoolean(0, false);
     paramAttributeSet.recycle();
     if (bool) {
@@ -34,17 +34,17 @@ public class CompatTextView
   private static final class a
     implements TransformationMethod
   {
-    private final Locale gm;
+    private final Locale fu;
     
     public a(Context paramContext)
     {
-      gm = getResourcesgetConfigurationlocale;
+      fu = getResourcesgetConfigurationlocale;
     }
     
     public final CharSequence getTransformation(CharSequence paramCharSequence, View paramView)
     {
       if (paramCharSequence != null) {
-        return paramCharSequence.toString().toUpperCase(gm);
+        return paramCharSequence.toString().toUpperCase(fu);
       }
       return null;
     }

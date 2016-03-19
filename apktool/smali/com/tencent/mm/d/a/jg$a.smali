@@ -15,23 +15,18 @@
 
 
 # instance fields
-.field public aGu:Ljava/util/List;
+.field public azM:Ljava/lang/String;
 
-.field public auW:I
+.field public filePath:Ljava/lang/String;
 
 
 # direct methods
 .method public constructor <init>()V
-    .locals 1
+    .locals 0
 
     .prologue
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    .line 15
-    const/4 v0, -0x1
-
-    iput v0, p0, Lcom/tencent/mm/d/a/jg$a;->auW:I
 
     return-void
 .end method

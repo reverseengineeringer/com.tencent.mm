@@ -1,26 +1,26 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.sdk.c.b;
 
 public final class jp
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aGF = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGi = new a();
   
   public jp()
   {
-    id = "VoipCheckIsDeviceUsing";
-    hXT = atO;
+    id = "ReportDelGameMsg";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public boolean aGG = false;
-    public boolean aGH = false;
-    public boolean aGI = false;
-    public String aqX;
+    public String aGj;
+    public String alS;
+    public String appId;
+    public String mediaTagName;
   }
 }
 

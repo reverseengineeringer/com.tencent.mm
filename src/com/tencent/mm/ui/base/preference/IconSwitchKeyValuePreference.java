@@ -4,14 +4,13 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
 import com.tencent.mm.sdk.platformtools.BackwardSupportUtil.b;
-import com.tencent.mm.ui.tools.gg;
+import com.tencent.mm.ui.tools.t;
 
 public class IconSwitchKeyValuePreference
   extends IconPreference
 {
-  private TextView enQ;
+  private TextView fxO;
   private int status = 0;
   
   public IconSwitchKeyValuePreference(Context paramContext, AttributeSet paramAttributeSet)
@@ -24,45 +23,45 @@ public class IconSwitchKeyValuePreference
     super(paramContext, paramAttributeSet, paramInt);
   }
   
-  private void Nq()
+  private void MB()
   {
-    if (enQ == null) {
+    if (fxO == null) {
       return;
     }
     int i = BackwardSupportUtil.b.a(mContext, 2.0F);
-    enQ.setTextColor(gg.dT(mContext));
+    fxO.setTextColor(t.eA(mContext));
     if (status == 0)
     {
-      enQ.setCompoundDrawablesWithIntrinsicBounds(a.h.status_accountunkey, 0, 0, 0);
-      enQ.setCompoundDrawablePadding(i);
+      fxO.setCompoundDrawablesWithIntrinsicBounds(2130903551, 0, 0, 0);
+      fxO.setCompoundDrawablePadding(i);
       return;
     }
     if (status == 1)
     {
-      enQ.setCompoundDrawablesWithIntrinsicBounds(a.h.status_accountkey, 0, 0, 0);
-      enQ.setCompoundDrawablePadding(i);
+      fxO.setCompoundDrawablesWithIntrinsicBounds(2130903445, 0, 0, 0);
+      fxO.setCompoundDrawablePadding(i);
       return;
     }
     if (status == 2)
     {
-      enQ.setCompoundDrawablesWithIntrinsicBounds(a.h.status_accountkey_off, 0, 0, 0);
-      enQ.setCompoundDrawablePadding(i);
+      fxO.setCompoundDrawablesWithIntrinsicBounds(2130903573, 0, 0, 0);
+      fxO.setCompoundDrawablePadding(i);
       return;
     }
-    enQ.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
-  }
-  
-  public final void nS(int paramInt)
-  {
-    status = paramInt;
-    Nq();
+    fxO.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0);
   }
   
   public final void onBindView(View paramView)
   {
     super.onBindView(paramView);
-    enQ = ((TextView)paramView.findViewById(16908304));
-    Nq();
+    fxO = ((TextView)paramView.findViewById(16908304));
+    MB();
+  }
+  
+  public final void qR(int paramInt)
+  {
+    status = paramInt;
+    MB();
   }
 }
 

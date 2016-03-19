@@ -1,27 +1,29 @@
 package com.tencent.mm.ui.account;
 
-import android.view.MotionEvent;
-import android.view.View;
-import android.view.View.OnTouchListener;
-import android.widget.TextView;
-import com.tencent.mm.a.i;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnCancelListener;
+import android.content.DialogInterface.OnClickListener;
+import android.content.DialogInterface.OnDismissListener;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.r.j;
+import com.tencent.mm.r.m;
+import com.tencent.mm.ui.applet.SecurityImage;
+import com.tencent.mm.ui.applet.SecurityImage.b;
+import com.tencent.mm.ui.base.g;
 
-final class b
-  implements View.OnTouchListener
+public abstract class b
+  extends SecurityImage.b
 {
-  b(a parama) {}
+  SecurityImage kqh = null;
+  j krH = null;
   
-  public final boolean onTouch(View paramView, MotionEvent paramMotionEvent)
+  public final void bby()
   {
-    if (paramMotionEvent.getAction() == 0) {
-      ((TextView)paramView.findViewById(a.i.alias_tv)).setTextColor(-10395295);
-    }
-    while (paramMotionEvent.getAction() != 1) {
-      return false;
-    }
-    ((TextView)paramView.findViewById(a.i.alias_tv)).setTextColor(-1);
-    return false;
+    ah.tE().d(d(krH, ""));
   }
+  
+  public abstract j d(j paramj, String paramString);
 }
 
 /* Location:

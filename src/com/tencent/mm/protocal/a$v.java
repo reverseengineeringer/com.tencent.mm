@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$v
-  extends a.c
+  extends a.e
 {
   public a$v()
   {
-    super("downloadVoice", "downloadVoice", 103, true);
+    super("clickSnsMusicPlayButton", "", 10000, false);
   }
 }
 

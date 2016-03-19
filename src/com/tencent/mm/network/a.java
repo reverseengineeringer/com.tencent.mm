@@ -1,78 +1,123 @@
 package com.tencent.mm.network;
 
-import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
-import com.tencent.mm.plugin.report.service.j;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.a.g;
+import com.tencent.mm.model.ai;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.r;
+import com.tencent.mm.sdk.platformtools.u;
+import java.nio.ByteBuffer;
 import java.util.HashMap;
 import java.util.Map;
 
 public final class a
-  extends l.a
-  implements k
+  extends d.a
+  implements c
 {
-  private Map bRA = new HashMap();
-  private byte[] bRw;
-  private a bRx = null;
-  byte[] bRy;
-  String bRz;
-  private byte[] buo;
+  byte[] bGA;
+  private byte[] cin;
+  private a cio = null;
+  byte[] cip;
+  String ciq;
+  private Map cir = new HashMap();
+  private boolean foreground = true;
   private int uin;
   String username;
   
   public a(a parama)
   {
-    bRx = parama;
-    CA();
+    cio = parama;
+    EH();
   }
   
-  private void CA()
+  private void EH()
   {
-    buo = bn.iX(aa.getContext().getSharedPreferences("server_id_prefs", 0).getString("server_id", ""));
+    bGA = ay.kA(ai.tU().getString("server_id", ""));
   }
   
-  public final boolean CB()
+  private String EI()
   {
-    return (bRw != null) && (bRw.length > 0);
+    try
+    {
+      Object localObject = ByteBuffer.allocate(4096);
+      ((ByteBuffer)localObject).put(cin).put(cip).put(bGA).putInt(uin).put(ciq.getBytes()).put(username.getBytes());
+      localObject = g.m(((ByteBuffer)localObject).array());
+      return (String)localObject;
+    }
+    catch (Exception localException) {}
+    return "";
+  }
+  
+  private void clear()
+  {
+    username = null;
+    cin = null;
+    bGA = null;
+    uin = 0;
+    cip = null;
+    ciq = null;
+  }
+  
+  public final int A(byte[] paramArrayOfByte)
+  {
+    long l = ay.FS();
+    if (vS())
+    {
+      u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker parseBuf Error : isLogin == true ");
+      return -2;
+    }
+    try
+    {
+      r localr = new r();
+      int i = localr.aS(paramArrayOfByte);
+      if (i != 0)
+      {
+        u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker parseBuf Error : initParse: %s", new Object[] { Integer.valueOf(i) });
+        return -3;
+      }
+      username = localr.getString();
+      ciq = localr.getString();
+      uin = localr.getInt();
+      bGA = localr.getBuffer();
+      cip = localr.getBuffer();
+      cin = localr.getBuffer();
+      paramArrayOfByte = localr.getString();
+      if ((ay.kz(paramArrayOfByte)) || (!paramArrayOfByte.equals(EI())))
+      {
+        clear();
+        u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker parseBuf Error : checksum failed");
+        return -4;
+      }
+      u.i("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker parseBuf finish time:%s  md5:%s", new Object[] { Long.valueOf(ay.an(l)), paramArrayOfByte });
+      return 0;
+    }
+    catch (Exception paramArrayOfByte)
+    {
+      clear();
+      u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker parseBuf exception:%s", new Object[] { ay.b(paramArrayOfByte) });
+    }
+    return -5;
   }
   
   public final void F(byte[] paramArrayOfByte)
   {
-    if (paramArrayOfByte == null) {}
-    for (String str1 = "";; str1 = bn.aI(paramArrayOfByte))
-    {
-      SharedPreferences localSharedPreferences = aa.getContext().getSharedPreferences("server_id_prefs", 0);
-      localSharedPreferences.edit().putString("server_id", str1).commit();
-      String str2 = localSharedPreferences.getString("server_id", "");
-      if (!str2.equals(str1))
-      {
-        localSharedPreferences.edit().putString("server_id", str1).commit();
-        j.eJZ.f(11969, new Object[] { Integer.valueOf(bn.c(Integer.valueOf(uin))), str1, str2 });
-        t.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "summerauth svrId2 save failed! auth new[%s], old from sp[%s]", new Object[] { str1, str2 });
-      }
-      buo = paramArrayOfByte;
-      t.i("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "oreh setCookie %s", new Object[] { str1 });
-      t.appenderFlush();
-      return;
-    }
+    bGA = paramArrayOfByte;
   }
   
   public final void G(byte[] paramArrayOfByte)
   {
-    bRy = paramArrayOfByte;
+    cip = paramArrayOfByte;
   }
   
-  public final void e(String paramString, byte[] paramArrayOfByte)
+  public final void aN(boolean paramBoolean)
   {
-    bRA.put(paramString, paramArrayOfByte);
+    foreground = paramBoolean;
+    u.i("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "somr accinfo setForegroundMuteRoom :%b", new Object[] { Boolean.valueOf(foreground) });
   }
   
-  public final byte[] fM(String paramString)
+  public final void ba(int paramInt)
   {
-    return (byte[])bRA.get(paramString);
+    uin = paramInt;
   }
   
   public final String getUsername()
@@ -80,33 +125,43 @@ public final class a
     return username;
   }
   
-  public final void i(byte[] paramArrayOfByte, int paramInt)
+  public final byte[] gf(String paramString)
   {
-    bRw = paramArrayOfByte;
-    uin = paramInt;
-    if (bRx != null) {
-      CB();
-    }
-    t.d("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "summerauth update session info: session:%s, uin:%d stack:[%s]", new Object[] { bn.xZ(bn.aG(paramArrayOfByte)), Integer.valueOf(paramInt), bn.aFH() });
+    return (byte[])cir.get(paramString);
   }
   
-  public final int qY()
+  public final void h(String paramString, byte[] paramArrayOfByte)
   {
-    return uin;
+    cir.put(paramString, paramArrayOfByte);
+  }
+  
+  public final void i(byte[] paramArrayOfByte, int paramInt)
+  {
+    cin = paramArrayOfByte;
+    uin = paramInt;
+    if (cio != null) {
+      vS();
+    }
+    u.d("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "summerauth update session info: session:%s, uin:%d stack:[%s]", new Object[] { ay.Dz(ay.I(paramArrayOfByte)), Integer.valueOf(paramInt), ay.aVJ() });
+  }
+  
+  public final void kj(String paramString)
+  {
+    ciq = paramString;
   }
   
   public final void reset()
   {
-    t.i("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "reset accinfo");
+    u.i("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "reset accinfo");
     username = "";
-    bRw = new byte[0];
-    CA();
+    cin = new byte[0];
+    EH();
     uin = 0;
   }
   
-  public final byte[] sY()
+  public final int rg()
   {
-    return bRw;
+    return uin;
   }
   
   public final void setUsername(String paramString)
@@ -116,22 +171,90 @@ public final class a
   
   public final String toString()
   {
-    String str = "AccInfo:\n" + "|-uin     =" + qY() + "\n";
+    String str = "AccInfo:\n" + "|-uin     =" + rg() + "\n";
     str = str + "|-user    =" + getUsername() + "\n";
-    str = str + "|-wxuser  =" + bRz + "\n";
-    str = str + "|-session =" + bn.aG(sY()) + "\n";
-    str = str + "|-ecdhkey =" + bn.aG(vy()) + "\n";
-    return str + "`-cookie  =" + bn.aG(vx());
+    str = str + "|-wxuser  =" + wo() + "\n";
+    str = str + "|-session =" + ay.I(tq()) + "\n";
+    str = str + "|-ecdhkey =" + ay.I(vT()) + "\n";
+    return str + "`-cookie  =" + ay.I(vR());
   }
   
-  public final byte[] vx()
+  public final byte[] tq()
   {
-    return buo;
+    return cin;
   }
   
-  public final byte[] vy()
+  public final byte[] vR()
   {
-    return bRy;
+    return bGA;
+  }
+  
+  public final boolean vS()
+  {
+    return (cin != null) && (cin.length > 0);
+  }
+  
+  public final byte[] vT()
+  {
+    return cip;
+  }
+  
+  public final boolean vU()
+  {
+    return foreground;
+  }
+  
+  public final byte[] vV()
+  {
+    long l = ay.FS();
+    int i;
+    if (ay.kz(username)) {
+      i = 0;
+    }
+    while (i == 0)
+    {
+      u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker getCacheBuffer Error : isCacheValid== false");
+      return null;
+      if (ay.J(cin)) {
+        i = 0;
+      } else if (ay.J(bGA)) {
+        i = 0;
+      } else if ((uin == 0) || (uin == -1)) {
+        i = 0;
+      } else if (ay.J(cip)) {
+        i = 0;
+      } else if (ay.kz(ciq)) {
+        i = 0;
+      } else {
+        i = 1;
+      }
+    }
+    try
+    {
+      Object localObject = new r();
+      ((r)localObject).aUv();
+      ((r)localObject).CL(username);
+      ((r)localObject).CL(ciq);
+      ((r)localObject).po(uin);
+      ((r)localObject).aT(bGA);
+      ((r)localObject).aT(cip);
+      ((r)localObject).aT(cin);
+      String str = EI();
+      ((r)localObject).CL(str);
+      localObject = ((r)localObject).aUw();
+      u.i("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker getCacheBuffer finish time:%s buflen:%s md5:%s", new Object[] { Long.valueOf(ay.an(l)), Integer.valueOf(localObject.length), str });
+      return (byte[])localObject;
+    }
+    catch (Exception localException)
+    {
+      u.e("!32@/B4Tb64lLpLEGVwVFEpAHtYagi0L0qIw", "AccInfoCacheInWorker getCacheBuffer exception:%s", new Object[] { ay.b(localException) });
+    }
+    return null;
+  }
+  
+  public final String wo()
+  {
+    return ciq;
   }
   
   public static abstract interface a {}

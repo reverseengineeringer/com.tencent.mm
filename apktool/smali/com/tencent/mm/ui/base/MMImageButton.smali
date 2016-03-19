@@ -4,9 +4,9 @@
 
 
 # instance fields
-.field private azQ:Landroid/widget/ImageView;
+.field private aAF:Landroid/widget/ImageView;
 
-.field private ekd:Landroid/widget/TextView;
+.field private ftN:Landroid/widget/TextView;
 
 
 # direct methods
@@ -47,13 +47,13 @@
 
     invoke-direct {v1, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMImageButton;->azQ:Landroid/widget/ImageView;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMImageButton;->aAF:Landroid/widget/ImageView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMImageButton;->azQ:Landroid/widget/ImageView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMImageButton;->aAF:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->azQ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->aAF:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMImageButton;->addView(Landroid/view/View;)V
 
@@ -67,35 +67,35 @@
 
     invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iput-object v1, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
-    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v1, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setClickable(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setFocusable(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setFocusableInTouchMode(Z)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
-    sget v1, Lcom/tencent/mm/a$f;->mm_title_btn_text:I
+    const v1, 0x7f08021b
 
-    invoke-static {p1, v1}, Lcom/tencent/mm/ao/a;->t(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
+    invoke-static {p1, v1}, Lcom/tencent/mm/aw/a;->x(Landroid/content/Context;I)Landroid/content/res/ColorStateList;
 
     move-result-object v1
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(Landroid/content/res/ColorStateList;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/ui/base/MMImageButton;->addView(Landroid/view/View;)V
 
@@ -113,12 +113,12 @@
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setEnabled(Z)V
 
     .line 119
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
 
     .line 120
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->azQ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->aAF:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setEnabled(Z)V
 
@@ -131,19 +131,19 @@
 
     .prologue
     .line 67
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->azQ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->aAF:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
     .line 68
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->azQ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->aAF:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
     .line 69
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
@@ -162,7 +162,7 @@
 
     move-result-object v0
 
-    invoke-static {v0, p1}, Lcom/tencent/mm/ao/a;->u(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
+    invoke-static {v0, p1}, Lcom/tencent/mm/aw/a;->y(Landroid/content/Context;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
@@ -177,19 +177,19 @@
 
     .prologue
     .line 79
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(I)V
 
     .line 80
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 81
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->azQ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->aAF:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
 
@@ -204,19 +204,19 @@
 
     .prologue
     .line 73
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 74
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ekd:Landroid/widget/TextView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->ftN:Landroid/widget/TextView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
     .line 75
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->azQ:Landroid/widget/ImageView;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/MMImageButton;->aAF:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
 

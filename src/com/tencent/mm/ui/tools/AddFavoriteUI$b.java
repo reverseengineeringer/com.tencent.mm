@@ -2,7 +2,7 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface AddFavoriteUI$b
 {
-  public abstract void aRs();
+  public abstract void bir();
 }
 
 /* Location:

@@ -3,17 +3,17 @@
 .source "SourceFile"
 
 # interfaces
-.implements Lcom/tencent/mm/model/au;
+.implements Lcom/tencent/mm/model/ae;
 
 
 # static fields
-.field private static drH:Ljava/util/HashMap;
+.field private static ehO:Ljava/util/HashMap;
 
 
 # instance fields
-.field private eKe:Lcom/tencent/mm/plugin/safedevice/a/d;
+.field private fUR:Lcom/tencent/mm/plugin/safedevice/a/d;
 
-.field private eKf:Lcom/tencent/mm/sdk/c/e;
+.field private fUS:Lcom/tencent/mm/sdk/c/c;
 
 
 # direct methods
@@ -27,7 +27,7 @@
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     .line 48
-    sput-object v0, Lcom/tencent/mm/plugin/safedevice/a/f;->drH:Ljava/util/HashMap;
+    sput-object v0, Lcom/tencent/mm/plugin/safedevice/a/f;->ehO:Ljava/util/HashMap;
 
     const-string/jumbo v1, "SAFE_DEVICE_INFO_TABLE"
 
@@ -39,9 +39,9 @@
 
     move-result-object v1
 
-    new-instance v2, Lcom/tencent/mm/plugin/safedevice/a/g;
+    new-instance v2, Lcom/tencent/mm/plugin/safedevice/a/f$1;
 
-    invoke-direct {v2}, Lcom/tencent/mm/plugin/safedevice/a/g;-><init>()V
+    invoke-direct {v2}, Lcom/tencent/mm/plugin/safedevice/a/f$1;-><init>()V
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -57,21 +57,21 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 57
-    new-instance v0, Lcom/tencent/mm/plugin/safedevice/a/h;
+    new-instance v0, Lcom/tencent/mm/plugin/safedevice/a/f$2;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/safedevice/a/h;-><init>(Lcom/tencent/mm/plugin/safedevice/a/f;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/plugin/safedevice/a/f$2;-><init>(Lcom/tencent/mm/plugin/safedevice/a/f;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKf:Lcom/tencent/mm/sdk/c/e;
+    iput-object v0, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUS:Lcom/tencent/mm/sdk/c/c;
 
     return-void
 .end method
 
-.method private static aft()Lcom/tencent/mm/plugin/safedevice/a/f;
+.method private static aqB()Lcom/tencent/mm/plugin/safedevice/a/f;
     .locals 3
 
     .prologue
     .line 23
-    invoke-static {}, Lcom/tencent/mm/model/ax;->sS()Lcom/tencent/mm/model/dh;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tk()Lcom/tencent/mm/model/bc;
 
     move-result-object v0
 
@@ -81,7 +81,7 @@
 
     move-result-object v1
 
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/dh;->fb(Ljava/lang/String;)Lcom/tencent/mm/model/au;
+    invoke-virtual {v0, v1}, Lcom/tencent/mm/model/bc;->fu(Ljava/lang/String;)Lcom/tencent/mm/model/ae;
 
     move-result-object v0
 
@@ -96,7 +96,7 @@
     invoke-direct {v0}, Lcom/tencent/mm/plugin/safedevice/a/f;-><init>()V
 
     .line 26
-    invoke-static {}, Lcom/tencent/mm/model/ax;->sS()Lcom/tencent/mm/model/dh;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tk()Lcom/tencent/mm/model/bc;
 
     move-result-object v1
 
@@ -106,74 +106,74 @@
 
     move-result-object v2
 
-    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/model/dh;->a(Ljava/lang/String;Lcom/tencent/mm/model/au;)Z
+    invoke-virtual {v1, v2, v0}, Lcom/tencent/mm/model/bc;->a(Ljava/lang/String;Lcom/tencent/mm/model/ae;)Z
 
     .line 29
     :cond_0
     return-object v0
 .end method
 
-.method public static afu()Lcom/tencent/mm/plugin/safedevice/a/d;
+.method public static aqC()Lcom/tencent/mm/plugin/safedevice/a/d;
     .locals 3
 
     .prologue
     .line 33
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    iget v0, v0, Lcom/tencent/mm/model/b;->uin:I
+    iget v0, v0, Lcom/tencent/mm/model/c;->uin:I
 
     if-nez v0, :cond_0
 
     .line 34
-    new-instance v0, Lcom/tencent/mm/model/a;
+    new-instance v0, Lcom/tencent/mm/model/b;
 
-    invoke-direct {v0}, Lcom/tencent/mm/model/a;-><init>()V
+    invoke-direct {v0}, Lcom/tencent/mm/model/b;-><init>()V
 
     throw v0
 
     .line 37
     :cond_0
-    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->aft()Lcom/tencent/mm/plugin/safedevice/a/f;
+    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->aqB()Lcom/tencent/mm/plugin/safedevice/a/f;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKe:Lcom/tencent/mm/plugin/safedevice/a/d;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUR:Lcom/tencent/mm/plugin/safedevice/a/d;
 
     if-nez v0, :cond_1
 
     .line 38
-    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->aft()Lcom/tencent/mm/plugin/safedevice/a/f;
+    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->aqB()Lcom/tencent/mm/plugin/safedevice/a/f;
 
     move-result-object v0
 
     new-instance v1, Lcom/tencent/mm/plugin/safedevice/a/d;
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    iget-object v2, v2, Lcom/tencent/mm/model/b;->bnN:Lcom/tencent/mm/ar/g;
+    iget-object v2, v2, Lcom/tencent/mm/model/c;->bzA:Lcom/tencent/mm/az/g;
 
-    invoke-direct {v1, v2}, Lcom/tencent/mm/plugin/safedevice/a/d;-><init>(Lcom/tencent/mm/sdk/g/af;)V
+    invoke-direct {v1, v2}, Lcom/tencent/mm/plugin/safedevice/a/d;-><init>(Lcom/tencent/mm/sdk/h/d;)V
 
-    iput-object v1, v0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKe:Lcom/tencent/mm/plugin/safedevice/a/d;
+    iput-object v1, v0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUR:Lcom/tencent/mm/plugin/safedevice/a/d;
 
     .line 41
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->aft()Lcom/tencent/mm/plugin/safedevice/a/f;
+    invoke-static {}, Lcom/tencent/mm/plugin/safedevice/a/f;->aqB()Lcom/tencent/mm/plugin/safedevice/a/f;
 
     move-result-object v0
 
-    iget-object v0, v0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKe:Lcom/tencent/mm/plugin/safedevice/a/d;
+    iget-object v0, v0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUR:Lcom/tencent/mm/plugin/safedevice/a/d;
 
     return-object v0
 .end method
 
 
 # virtual methods
-.method public final aJ(I)V
+.method public final aN(I)V
     .locals 0
 
     .prologue
@@ -186,40 +186,40 @@
 
     .prologue
     .line 90
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "UpdateLocalSafeDevice"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKf:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUS:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 91
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "UpdateLocalVerifySwitch"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKf:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUS:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 92
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "GetSafeDeviceName"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKf:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUS:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 93
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "GetSafeDeviceType"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKf:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUS:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->a(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 94
     return-void
@@ -233,55 +233,55 @@
     return-void
 .end method
 
-.method public final lT()Ljava/util/HashMap;
+.method public final lo()Ljava/util/HashMap;
     .locals 1
 
     .prologue
     .line 80
-    sget-object v0, Lcom/tencent/mm/plugin/safedevice/a/f;->drH:Ljava/util/HashMap;
+    sget-object v0, Lcom/tencent/mm/plugin/safedevice/a/f;->ehO:Ljava/util/HashMap;
 
     return-object v0
 .end method
 
-.method public final lU()V
+.method public final lp()V
     .locals 3
 
     .prologue
     .line 102
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "UpdateLocalSafeDevice"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKf:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUS:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 103
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "UpdateLocalVerifySwitch"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKf:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUS:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 104
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "GetSafeDeviceName"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKf:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUS:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 105
-    sget-object v0, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    sget-object v0, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
 
     const-string/jumbo v1, "GetSafeDeviceType"
 
-    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->eKf:Lcom/tencent/mm/sdk/c/e;
+    iget-object v2, p0, Lcom/tencent/mm/plugin/safedevice/a/f;->fUS:Lcom/tencent/mm/sdk/c/c;
 
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->b(Ljava/lang/String;Lcom/tencent/mm/sdk/c/e;)Z
+    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/sdk/c/a;->c(Ljava/lang/String;Lcom/tencent/mm/sdk/c/c;)Z
 
     .line 106
     return-void

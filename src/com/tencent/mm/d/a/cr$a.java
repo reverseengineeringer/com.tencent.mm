@@ -2,9 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class cr$a
 {
-  public int ayE;
-  public long id = 0L;
-  public String path;
+  public String alN;
+  public boolean awk;
+  public int direction;
 }
 
 /* Location:

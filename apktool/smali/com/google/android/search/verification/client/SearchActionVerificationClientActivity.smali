@@ -16,7 +16,7 @@
 
 
 # virtual methods
-.method public abstract ko()Ljava/lang/Class;
+.method public abstract jy()Ljava/lang/Class;
 .end method
 
 .method protected final onCreate(Landroid/os/Bundle;)V
@@ -29,7 +29,7 @@
     .line 18
     new-instance v0, Landroid/content/Intent;
 
-    invoke-virtual {p0}, Lcom/google/android/search/verification/client/SearchActionVerificationClientActivity;->ko()Ljava/lang/Class;
+    invoke-virtual {p0}, Lcom/google/android/search/verification/client/SearchActionVerificationClientActivity;->jy()Ljava/lang/Class;
 
     move-result-object v1
 

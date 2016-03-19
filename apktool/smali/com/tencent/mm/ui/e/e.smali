@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final jnx:[Ljava/lang/String;
+.field public static final lsQ:[Ljava/lang/String;
 
 
 # direct methods
@@ -12,7 +12,7 @@
     .locals 3
 
     .prologue
-    .line 80
+    .line 81
     const/4 v0, 0x3
 
     new-array v0, v0, [Ljava/lang/String;
@@ -35,7 +35,7 @@
 
     aput-object v2, v0, v1
 
-    sput-object v0, Lcom/tencent/mm/ui/e/e;->jnx:[Ljava/lang/String;
+    sput-object v0, Lcom/tencent/mm/ui/e/e;->lsQ:[Ljava/lang/String;
 
     return-void
 .end method

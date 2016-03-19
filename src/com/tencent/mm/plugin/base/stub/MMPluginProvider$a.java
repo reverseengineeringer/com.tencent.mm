@@ -6,7 +6,7 @@ public abstract class MMPluginProvider$a
 {
   private Context context = null;
   
-  public boolean aZ(Context paramContext)
+  public boolean bp(Context paramContext)
   {
     context = paramContext;
     return true;

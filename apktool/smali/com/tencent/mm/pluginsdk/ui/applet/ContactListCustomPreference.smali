@@ -6,11 +6,11 @@
 # instance fields
 .field background:I
 
-.field dhS:Landroid/view/View$OnClickListener;
+.field fSm:Landroid/view/View$OnClickListener;
 
-.field private gDW:Landroid/view/View;
+.field private final iJe:Landroid/view/View$OnTouchListener;
 
-.field private final gSV:Landroid/view/View$OnTouchListener;
+.field private inG:Landroid/view/View;
 
 
 # direct methods
@@ -27,14 +27,14 @@
     iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->background:I
 
     .line 23
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/ac;
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/applet/ac;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->gSV:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->iJe:Landroid/view/View$OnTouchListener;
 
     .line 32
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_contact_list_custom:I
+    const v0, 0x7f0a04cb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->setLayoutResource(I)V
 
@@ -55,14 +55,14 @@
     iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->background:I
 
     .line 23
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/ac;
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/applet/ac;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->gSV:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->iJe:Landroid/view/View$OnTouchListener;
 
     .line 37
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_contact_list_custom:I
+    const v0, 0x7f0a04cb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->setLayoutResource(I)V
 
@@ -83,14 +83,14 @@
     iput v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->background:I
 
     .line 23
-    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/ac;
+    new-instance v0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference$1;
 
-    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/applet/ac;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;)V
+    invoke-direct {v0, p0}, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference$1;-><init>(Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;)V
 
-    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->gSV:Landroid/view/View$OnTouchListener;
+    iput-object v0, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->iJe:Landroid/view/View$OnTouchListener;
 
     .line 42
-    sget v0, Lcom/tencent/mm/a$k;->mm_preference_contact_list_custom:I
+    const v0, 0x7f0a04cb
 
     invoke-virtual {p0, v0}, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->setLayoutResource(I)V
 
@@ -110,18 +110,18 @@
     check-cast v0, Landroid/view/ViewGroup;
 
     .line 68
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->gDW:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->inG:Landroid/view/View;
 
     if-eqz v1, :cond_1
 
     .line 69
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->gDW:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->inG:Landroid/view/View;
 
     if-eqz v1, :cond_1
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->gDW:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->inG:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -129,7 +129,7 @@
 
     if-eqz v1, :cond_0
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->gDW:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->inG:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -140,15 +140,15 @@
     invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViews()V
 
     :cond_0
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->gDW:Landroid/view/View;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->inG:Landroid/view/View;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->dhS:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->fSm:Landroid/view/View$OnClickListener;
 
     if-eqz v1, :cond_3
 
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->dhS:Landroid/view/View$OnClickListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->fSm:Landroid/view/View$OnClickListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
@@ -170,7 +170,7 @@
 
     .line 69
     :cond_3
-    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->gSV:Landroid/view/View$OnTouchListener;
+    iget-object v1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->iJe:Landroid/view/View$OnTouchListener;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
@@ -190,7 +190,7 @@
 
     .line 53
     :cond_0
-    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->gDW:Landroid/view/View;
+    iput-object p1, p0, Lcom/tencent/mm/pluginsdk/ui/applet/ContactListCustomPreference;->inG:Landroid/view/View;
 
     goto :goto_0
 .end method

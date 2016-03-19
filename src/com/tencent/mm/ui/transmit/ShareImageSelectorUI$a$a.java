@@ -2,13 +2,13 @@ package com.tencent.mm.ui.transmit;
 
 final class ShareImageSelectorUI$a$a
 {
-  int jzA;
-  int jzB;
+  int lBE;
+  int lBF;
   
   public ShareImageSelectorUI$a$a(ShareImageSelectorUI.a parama, int paramInt1, int paramInt2)
   {
-    jzA = paramInt1;
-    jzB = paramInt2;
+    lBE = paramInt1;
+    lBF = paramInt2;
   }
 }
 

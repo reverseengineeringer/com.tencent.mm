@@ -5,8 +5,6 @@ import android.view.View;
 
 public abstract interface a$b
 {
-  public abstract void a(Object paramObject, int paramInt);
-  
   public abstract void a(Object paramObject, Rect paramRect);
   
   public abstract void a(Object paramObject, CharSequence paramCharSequence);
@@ -23,7 +21,7 @@ public abstract interface a$b
   
   public abstract void b(Object paramObject, boolean paramBoolean);
   
-  public abstract Object c(Object paramObject);
+  public abstract void c(Object paramObject, int paramInt);
   
   public abstract void c(Object paramObject, Rect paramRect);
   
@@ -33,8 +31,6 @@ public abstract interface a$b
   
   public abstract void c(Object paramObject, boolean paramBoolean);
   
-  public abstract int d(Object paramObject);
-  
   public abstract void d(Object paramObject, Rect paramRect);
   
   public abstract void d(Object paramObject, View paramView);
@@ -43,15 +39,13 @@ public abstract interface a$b
   
   public abstract void d(Object paramObject, boolean paramBoolean);
   
-  public abstract CharSequence e(Object paramObject);
-  
   public abstract void e(Object paramObject, boolean paramBoolean);
   
-  public abstract CharSequence f(Object paramObject);
+  public abstract Object f(Object paramObject);
   
   public abstract void f(Object paramObject, boolean paramBoolean);
   
-  public abstract CharSequence g(Object paramObject);
+  public abstract int g(Object paramObject);
   
   public abstract void g(Object paramObject, boolean paramBoolean);
   
@@ -59,13 +53,13 @@ public abstract interface a$b
   
   public abstract void h(Object paramObject, boolean paramBoolean);
   
+  public abstract CharSequence i(Object paramObject);
+  
   public abstract void i(Object paramObject, boolean paramBoolean);
   
-  public abstract boolean i(Object paramObject);
+  public abstract CharSequence j(Object paramObject);
   
-  public abstract boolean j(Object paramObject);
-  
-  public abstract boolean k(Object paramObject);
+  public abstract CharSequence k(Object paramObject);
   
   public abstract boolean l(Object paramObject);
   
@@ -81,15 +75,21 @@ public abstract interface a$b
   
   public abstract boolean r(Object paramObject);
   
-  public abstract void s(Object paramObject);
+  public abstract boolean s(Object paramObject);
   
-  public abstract int t(Object paramObject);
+  public abstract boolean t(Object paramObject);
   
   public abstract boolean u(Object paramObject);
   
-  public abstract boolean v(Object paramObject);
+  public abstract void v(Object paramObject);
   
-  public abstract String w(Object paramObject);
+  public abstract int w(Object paramObject);
+  
+  public abstract boolean x(Object paramObject);
+  
+  public abstract boolean y(Object paramObject);
+  
+  public abstract String z(Object paramObject);
 }
 
 /* Location:

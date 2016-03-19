@@ -2,7 +2,6 @@ package com.tencent.mm.ui.base.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import com.tencent.mm.a.k;
 
 public class SummaryBelowPreference
   extends Preference
@@ -15,7 +14,7 @@ public class SummaryBelowPreference
   public SummaryBelowPreference(Context paramContext, AttributeSet paramAttributeSet, int paramInt)
   {
     super(paramContext, paramAttributeSet, paramInt);
-    setLayoutResource(a.k.mm_preference_summary_below);
+    setLayoutResource(2131363172);
   }
 }
 

@@ -1,13 +1,13 @@
 package com.tencent.mm.sandbox;
 
-import com.tencent.mm.protocal.b.adm;
+import com.tencent.mm.protocal.b.alq;
 
 public abstract interface b$a
   extends a
 {
-  public abstract void A(int paramInt1, int paramInt2);
+  public abstract void J(int paramInt1, int paramInt2);
   
-  public abstract void a(int paramInt1, int paramInt2, adm paramadm);
+  public abstract void a(int paramInt1, int paramInt2, alq paramalq);
 }
 
 /* Location:

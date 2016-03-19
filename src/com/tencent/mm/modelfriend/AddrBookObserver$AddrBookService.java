@@ -6,18 +6,36 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
 import android.os.IBinder;
-import com.tencent.mm.model.ax;
-import com.tencent.mm.modelsimple.e;
-import com.tencent.mm.sdk.platformtools.aa;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.d.a.fx;
+import com.tencent.mm.model.ah;
+import com.tencent.mm.modelsimple.d;
+import com.tencent.mm.sdk.platformtools.u;
+import com.tencent.mm.sdk.platformtools.y;
 
 public class AddrBookObserver$AddrBookService
   extends Service
 {
-  public static boolean btp = false;
-  public static boolean bye = false;
-  public static String byh = "key_sync_session";
-  private c.b byi = new b(this);
+  public static boolean bFv = false;
+  public static boolean bLk = false;
+  public static String bLm = "key_sync_session";
+  private a.b bLn = new a.b()
+  {
+    public final void aU(boolean paramAnonymousBoolean)
+    {
+      if (!paramAnonymousBoolean)
+      {
+        u.v("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onSyncEnd not sync succ, do not upload");
+        stopSelf();
+        AddrBookObserver.AddrBookService.bLk = false;
+        return;
+      }
+      System.currentTimeMillis();
+      ac localac = new ac(m.yK(), m.yJ());
+      ah.tE().d(localac);
+      stopSelf();
+      AddrBookObserver.AddrBookService.bLk = false;
+    }
+  };
   
   public IBinder onBind(Intent paramIntent)
   {
@@ -30,74 +48,76 @@ public class AddrBookObserver$AddrBookService
     if (paramIntent == null) {}
     for (boolean bool = true;; bool = false)
     {
-      t.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "service start intent:%b", new Object[] { Boolean.valueOf(bool) });
+      u.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "service start intent:%b", new Object[] { Boolean.valueOf(bool) });
       if (paramIntent != null) {
         break;
       }
-      t.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "intent == null, stop service");
+      u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "intent == null, stop service");
       stopSelf();
       return 2;
     }
-    float f1 = paramIntent.getFloatExtra(byh, -1.0F);
+    float f1 = paramIntent.getFloatExtra(bLm, -1.0F);
     if (f1 == -1.0F)
     {
-      t.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onStartCommand session == -1, stop service");
+      u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onStartCommand session == -1, stop service");
       stopSelf();
       return 2;
     }
-    paramIntent = aa.getContext().getSharedPreferences(aa.aES(), 0);
-    float f2 = paramIntent.getFloat(byh, 0.0F);
+    paramIntent = y.getContext().getSharedPreferences(y.aUK(), 0);
+    float f2 = paramIntent.getFloat(bLm, 0.0F);
     if (f2 == f1)
     {
-      t.d("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onStartCommand session the same : %f", new Object[] { Float.valueOf(f2) });
+      u.d("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onStartCommand session the same : %f", new Object[] { Float.valueOf(f2) });
       stopSelf();
       return 2;
     }
-    paramIntent.edit().putFloat(byh, f1).commit();
-    t.d("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onStartCommand new session:%f", new Object[] { Float.valueOf(f1) });
-    if (btp)
+    paramIntent.edit().putFloat(bLm, f1).commit();
+    u.d("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "onStartCommand new session:%f", new Object[] { Float.valueOf(f1) });
+    if (bFv)
     {
-      t.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "service canceled");
-      btp = false;
+      u.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "service canceled");
+      bFv = false;
       stopSelf();
       return 2;
     }
-    if (ax.sO())
+    if (ah.tg())
     {
-      t.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "[onStartCommand] getCode is null, stop service");
+      u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "[onStartCommand] getCode is null, stop service");
       stopSelf();
       return 2;
     }
-    ax.tr();
+    ah.tJ();
     try
     {
-      if (!ax.qZ())
+      if (!ah.rh())
       {
-        t.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "account not ready, stop sync");
+        u.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "account not ready, stop sync");
         stopSelf();
         return 2;
       }
     }
     catch (Exception paramIntent)
     {
-      t.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "AddrBookService onStart [%s]", new Object[] { paramIntent.getMessage() });
+      u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "AddrBookService onStart [%s]", new Object[] { paramIntent.getMessage() });
       stopSelf();
       return 2;
     }
-    if ((w.xP()) && (!w.xL()))
+    paramIntent = new fx();
+    com.tencent.mm.sdk.c.a.jUF.j(paramIntent);
+    if ((m.yG()) && (!m.yC()))
     {
-      t.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "start sync");
-      if (!e.aJ(this))
+      u.i("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "start sync");
+      if (!d.aZ(this))
       {
-        bye = true;
-        c.a(byi);
+        bLk = true;
+        a.a(bLn);
         return 2;
       }
-      t.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "requestSync false, stop service");
+      u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "requestSync false, stop service");
       stopSelf();
       return 2;
     }
-    t.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "can not sync addr book now, stop service");
+    u.e("!44@/B4Tb64lLpKsaaaeu1U1LiDGJh8a1cNtheqJurwgkrQ=", "can not sync addr book now, stop service");
     stopSelf();
     return 2;
   }

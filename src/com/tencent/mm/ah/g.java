@@ -1,100 +1,54 @@
 package com.tencent.mm.ah;
 
-import android.graphics.BitmapFactory.Options;
-import com.tencent.mm.modelcdntran.keep_SceneResult;
-import com.tencent.mm.network.m;
-import com.tencent.mm.network.r;
-import com.tencent.mm.network.w;
-import com.tencent.mm.protocal.b.afd;
-import com.tencent.mm.protocal.b.afe;
-import com.tencent.mm.protocal.b.ajz;
-import com.tencent.mm.q.a;
-import com.tencent.mm.q.a.a;
-import com.tencent.mm.q.a.b;
-import com.tencent.mm.q.d;
-import com.tencent.mm.q.j;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.e;
-import com.tencent.mm.sdk.platformtools.t;
-import java.util.LinkedList;
-
 public final class g
-  extends j
-  implements r
+  extends com.tencent.mm.at.a
 {
-  private d apI;
-  private a apJ;
-  private long bOt = -1L;
-  private ab bOu = null;
-  private keep_SceneResult bOv = null;
-  private String clientId = "";
+  public int bXH;
+  public int bXP;
+  public int bXQ;
   
-  public g(long paramLong, ab paramab, keep_SceneResult paramkeep_SceneResult, String paramString)
+  protected final int a(int paramInt, Object... paramVarArgs)
   {
-    t.i("!56@/B4Tb64lLpK+IBX8XDgnvjJqBS0zjOQ5j32SrkRHL4BeQ0SV+wNwPA==", "massSendId %d, clientId %s", new Object[] { Long.valueOf(paramLong), paramString });
-    bOt = paramLong;
-    bOu = paramab;
-    bOv = paramkeep_SceneResult;
-    clientId = paramString;
-  }
-  
-  public final int a(m paramm, d paramd)
-  {
-    int i = 0;
-    apI = paramd;
-    paramd = new a.a();
-    bsW = new afd();
-    bsX = new afe();
-    uri = "/cgi-bin/micromsg-bin/sendsight";
-    bsV = 245;
-    apJ = paramd.vh();
-    paramd = (afd)apJ.bsT.btb;
-    bmd = bOv.field_aesKey;
-    fvk = clientId;
-    avf = bOu.aEX;
-    hMI = bOu.bPl;
-    v.BY();
-    Object localObject = ac.ik(bOu.getFileName());
-    BitmapFactory.Options localOptions = e.xd((String)localObject);
-    if (localOptions != null)
+    if (paramInt == 0)
     {
-      bmc = outWidth;
-      bmb = outHeight;
+      paramVarArgs = (a.a.a.c.a)paramVarArgs[0];
+      paramVarArgs.ci(1, bXH);
+      paramVarArgs.ci(2, bXP);
+      paramVarArgs.ci(3, bXQ);
+      return 0;
     }
-    for (;;)
+    if (paramInt == 1) {
+      return a.a.a.a.cg(1, bXH) + 0 + a.a.a.a.cg(2, bXP) + a.a.a.a.cg(3, bXQ);
+    }
+    if (paramInt == 2)
     {
-      hMH = bOu.bPh;
-      localObject = bn.U(bOu.bPt, "").split(",");
-      if ((localObject != null) && (localObject.length > 0)) {
-        break;
+      paramVarArgs = new a.a.a.a.a((byte[])paramVarArgs[0], iTR);
+      for (paramInt = com.tencent.mm.at.a.a(paramVarArgs); paramInt > 0; paramInt = com.tencent.mm.at.a.a(paramVarArgs)) {
+        if (!super.a(paramVarArgs, this, paramInt)) {
+          paramVarArgs.bog();
+        }
       }
-      t.e("!56@/B4Tb64lLpK+IBX8XDgnvjJqBS0zjOQ5j32SrkRHL4BeQ0SV+wNwPA==", "cdn upload video done, massSendId[%d], split username fail", new Object[] { Long.valueOf(bOt) });
-      return -1;
-      t.w("!56@/B4Tb64lLpK+IBX8XDgnvjJqBS0zjOQ5j32SrkRHL4BeQ0SV+wNwPA==", "sight send getImageOptions for thumb failed path:%s", new Object[] { localObject });
+      return 0;
     }
-    int j = localObject.length;
-    while (i < j)
+    if (paramInt == 3)
     {
-      localOptions = localObject[i];
-      ajz localajz = new ajz();
-      username = localOptions;
-      hMG.add(localajz);
-      i += 1;
+      a.a.a.a.a locala = (a.a.a.a.a)paramVarArgs[0];
+      g localg = (g)paramVarArgs[1];
+      switch (((Integer)paramVarArgs[2]).intValue())
+      {
+      default: 
+        return -1;
+      case 1: 
+        bXH = maU.jC();
+        return 0;
+      case 2: 
+        bXP = maU.jC();
+        return 0;
+      }
+      bXQ = maU.jC();
+      return 0;
     }
-    url = bOv.field_fileId;
-    bPl = bOu.bsm;
-    return a(paramm, apJ, this);
-  }
-  
-  public final void a(int paramInt1, int paramInt2, int paramInt3, String paramString, w paramw, byte[] paramArrayOfByte)
-  {
-    t.i("!56@/B4Tb64lLpK+IBX8XDgnvjJqBS0zjOQ5j32SrkRHL4BeQ0SV+wNwPA==", "cdntra onGYNetEnd errtype:" + paramInt2 + " errcode:" + paramInt3 + " useCdnTransClientId:" + clientId + " massSendId " + bOt);
-    apI.a(paramInt2, paramInt3, paramString, this);
-  }
-  
-  public final int getType()
-  {
-    return 245;
+    return -1;
   }
 }
 

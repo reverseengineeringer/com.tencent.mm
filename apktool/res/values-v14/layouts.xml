@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <item type="layout" name="ey">r/x/ey.xml</item>
-    <item type="layout" name="fq">r/x/fq.xml</item>
+    <item type="layout" name="ai">r/a2/ai.xml</item>
+    <item type="layout" name="d7">r/a2/d7.xml</item>
 </resources>

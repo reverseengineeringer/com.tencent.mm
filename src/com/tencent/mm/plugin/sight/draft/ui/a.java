@@ -1,14 +1,14 @@
 package com.tencent.mm.plugin.sight.draft.ui;
 
-import com.tencent.mm.ah.m;
+import com.tencent.mm.an.f;
 
 public abstract interface a
 {
-  public abstract void a(m paramm);
+  public abstract void a(f paramf);
   
   public abstract void a(b.d paramd);
   
-  public abstract void ajw();
+  public abstract void awc();
 }
 
 /* Location:

@@ -8,11 +8,11 @@ import java.util.LinkedList;
 
 public final class g
 {
-  private static a jny = new a();
+  private static a lsR = new a();
   
   public static h a(int paramInt1, Context paramContext, h.c paramc, int paramInt2)
   {
-    Iterator localIterator = jnyjnB.iterator();
+    Iterator localIterator = lsRlsU.iterator();
     while (localIterator.hasNext())
     {
       b localb = (b)localIterator.next();
@@ -26,7 +26,7 @@ public final class g
   public static LinkedList a(HashSet paramHashSet, Context paramContext, h.c paramc, int paramInt)
   {
     LinkedList localLinkedList = new LinkedList();
-    Iterator localIterator = jnyjnB.iterator();
+    Iterator localIterator = lsRlsU.iterator();
     while (localIterator.hasNext())
     {
       b localb = (b)localIterator.next();
@@ -39,48 +39,48 @@ public final class g
   
   public static void a(f paramf)
   {
-    a locala = jny;
-    jnz = paramf;
-    jnA = true;
+    a locala = lsR;
+    lsS = paramf;
+    lsT = true;
   }
   
   public static void a(b paramb)
   {
-    a locala = jny;
-    int j = jnB.size();
+    a locala = lsR;
+    int j = lsU.size();
     int i = 0;
     while (i < j)
     {
-      if (((b)jnB.get(i)).getType() == paramb.getType()) {
+      if (((b)lsU.get(i)).getType() == paramb.getType()) {
         return;
       }
       i += 1;
     }
-    jnB.add(paramb);
-    Collections.sort(jnB);
+    lsU.add(paramb);
+    Collections.sort(lsU);
   }
   
-  public static void aRi()
+  public static void bie()
   {
-    a locala = jny;
-    if (jnz != null)
+    a locala = lsR;
+    if (lsS != null)
     {
-      jnz.ahc();
-      jnz = null;
+      lsS.aso();
+      lsS = null;
     }
-    jnA = false;
+    lsT = false;
   }
   
-  public static f aRj()
+  public static f bif()
   {
-    return jnyjnz;
+    return lsRlsS;
   }
   
-  public static void ou(int paramInt)
+  public static void rQ(int paramInt)
   {
-    a locala = jny;
+    a locala = lsR;
     Object localObject = null;
-    Iterator localIterator = jnB.iterator();
+    Iterator localIterator = lsU.iterator();
     if (localIterator.hasNext())
     {
       b localb = (b)localIterator.next();
@@ -94,7 +94,7 @@ public final class g
     {
       break;
       if (localObject != null) {
-        jnB.remove(localObject);
+        lsU.remove(localObject);
       }
       return;
     }
@@ -102,9 +102,9 @@ public final class g
   
   public static final class a
   {
-    boolean jnA;
-    LinkedList jnB = new LinkedList();
-    f jnz;
+    f lsS;
+    boolean lsT;
+    LinkedList lsU = new LinkedList();
   }
   
   public static abstract interface b

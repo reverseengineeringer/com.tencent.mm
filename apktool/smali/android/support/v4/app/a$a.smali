@@ -1,4 +1,4 @@
-.class final Landroid/support/v4/app/a$a;
+.class public interface abstract Landroid/support/v4/app/a$a;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
@@ -9,38 +9,6 @@
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x18
+    accessFlags = 0x609
     name = "a"
 .end annotation
-
-
-# instance fields
-.field aC:Landroid/support/v4/app/a$a;
-
-.field aD:Landroid/support/v4/app/a$a;
-
-.field aE:I
-
-.field aF:Landroid/support/v4/app/Fragment;
-
-.field aG:I
-
-.field aH:I
-
-.field aI:I
-
-.field aJ:I
-
-.field aK:Ljava/util/ArrayList;
-
-
-# direct methods
-.method constructor <init>()V
-    .locals 0
-
-    .prologue
-    .line 187
-    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
-
-    return-void
-.end method

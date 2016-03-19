@@ -1,5 +1,5 @@
 .class public final Lcom/tencent/mm/protocal/a$r;
-.super Lcom/tencent/mm/protocal/a$c;
+.super Lcom/tencent/mm/protocal/a$e;
 .source "SourceFile"
 
 
@@ -19,17 +19,17 @@
     .locals 4
 
     .prologue
-    .line 963
-    const-string/jumbo v0, "connectToWiFi"
+    .line 1275
+    const-string/jumbo v0, "chooseInvoice"
 
-    const-string/jumbo v1, "connecttowifi"
+    const-string/jumbo v1, "chooseInvoice"
 
-    const/16 v2, 0x47
+    const/16 v2, 0xca
 
-    const/4 v3, 0x0
+    const/4 v3, 0x1
 
-    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$c;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
+    invoke-direct {p0, v0, v1, v2, v3}, Lcom/tencent/mm/protocal/a$e;-><init>(Ljava/lang/String;Ljava/lang/String;IZ)V
 
-    .line 964
+    .line 1276
     return-void
 .end method

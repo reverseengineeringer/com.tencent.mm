@@ -1,27 +1,27 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
-import com.tencent.mm.storage.ar;
+import com.tencent.mm.af.a;
+import com.tencent.mm.protocal.b.aeo;
+import com.tencent.mm.sdk.c.b;
 
 public final class gs
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
-  public a aDV = new a();
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aBQ = new a();
   
   public gs()
   {
-    id = "RevokeMsg";
-    hXT = atO;
+    id = "MusicPlayer";
+    jUI = arR;
   }
   
   public static final class a
   {
-    public String aDW;
-    public ar aDX;
-    public ar aDs;
-    public long axb = 0L;
+    public aeo aBN;
+    public a aBR;
+    public int action;
   }
 }
 

@@ -13,12 +13,12 @@ final class ScrollingTabContainerView$a
   
   public final int getCount()
   {
-    return ScrollingTabContainerView.a(rP).getChildCount();
+    return ScrollingTabContainerView.a(qS).getChildCount();
   }
   
   public final Object getItem(int paramInt)
   {
-    return ((ScrollingTabContainerView.TabView)ScrollingTabContainerView.a(rP).getChildAt(paramInt)).getTab();
+    return ((ScrollingTabContainerView.TabView)ScrollingTabContainerView.a(qS).getChildAt(paramInt)).getTab();
   }
   
   public final long getItemId(int paramInt)
@@ -29,10 +29,10 @@ final class ScrollingTabContainerView$a
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
     if (paramView == null) {
-      return ScrollingTabContainerView.a(rP, (ActionBar.c)getItem(paramInt));
+      return ScrollingTabContainerView.a(qS, (ActionBar.c)getItem(paramInt));
     }
     paramViewGroup = (ScrollingTabContainerView.TabView)paramView;
-    rQ = ((ActionBar.c)getItem(paramInt));
+    qT = ((ActionBar.c)getItem(paramInt));
     paramViewGroup.update();
     return paramView;
   }

@@ -1,17 +1,25 @@
 package com.tencent.mm.d.a;
 
-import com.tencent.mm.sdk.c.d;
+import com.tencent.mm.modelsns.SnsAdClick;
+import com.tencent.mm.sdk.c.b;
 
 public final class jr
-  extends d
+  extends b
 {
-  public static boolean atN = false;
-  public static boolean atO = false;
+  public static boolean arQ = false;
+  public static boolean arR = false;
+  public a aGn = new a();
   
   public jr()
   {
-    id = "WalletCloseProgress";
-    hXT = atO;
+    id = "ReportSns";
+    jUI = arR;
+  }
+  
+  public static final class a
+  {
+    public SnsAdClick aGg;
+    public int aGo;
   }
 }
 

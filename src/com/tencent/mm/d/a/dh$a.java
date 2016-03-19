@@ -1,10 +1,15 @@
 package com.tencent.mm.d.a;
 
-import java.util.ArrayList;
+import android.content.Context;
 
 public final class dh$a
 {
-  public ArrayList azs;
+  public String[] asa;
+  public int awK = -1;
+  public String awL;
+  public Context context;
+  public int op = 0;
+  public String[] selectionArgs;
 }
 
 /* Location:

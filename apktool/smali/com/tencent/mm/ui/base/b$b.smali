@@ -18,7 +18,7 @@
 
 
 # instance fields
-.field public iCj:Ljava/lang/ref/WeakReference;
+.field public kBn:Ljava/lang/ref/WeakReference;
 
 
 # direct methods
@@ -53,7 +53,7 @@
     const/4 v1, 0x0
 
     .line 157
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/b$b;->iCj:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/b$b;->kBn:Ljava/lang/ref/WeakReference;
 
     if-nez v0, :cond_0
 
@@ -62,7 +62,7 @@
 
     const-string/jumbo v1, "swipe invoke fail, callbackRef NULL!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 172
     :goto_0
@@ -70,7 +70,7 @@
 
     .line 161
     :cond_0
-    iget-object v0, p0, Lcom/tencent/mm/ui/base/b$b;->iCj:Ljava/lang/ref/WeakReference;
+    iget-object v0, p0, Lcom/tencent/mm/ui/base/b$b;->kBn:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v0}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
 
@@ -86,7 +86,7 @@
 
     const-string/jumbo v1, "swipe invoke fail, callback NULL!"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     goto :goto_0
 
@@ -115,7 +115,7 @@
 
     .line 171
     :cond_2
-    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/b$a;->fr(Z)V
+    invoke-interface {v0, v1}, Lcom/tencent/mm/ui/base/b$a;->hu(Z)V
 
     goto :goto_0
 .end method

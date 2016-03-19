@@ -2,7 +2,7 @@ package com.tencent.mm.storage;
 
 final class h$a
 {
-  public String bqD = null;
+  public String bCF = null;
   public int type = -1;
   
   public final boolean equals(Object paramObject)
@@ -18,12 +18,12 @@ final class h$a
         } while (!(paramObject instanceof a));
         paramObject = (a)paramObject;
       } while (type != type);
-      if (bqD != null) {
+      if (bCF != null) {
         break;
       }
-    } while (bqD != null);
+    } while (bCF != null);
     return true;
-    return bqD.equals(bqD);
+    return bCF.equals(bCF);
   }
 }
 

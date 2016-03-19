@@ -29,16 +29,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 27
+    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 28
+    .line 29
     iput-object v0, p0, Lcom/tencent/mm/compatible/i/a$a;->filename:Ljava/lang/String;
 
-    .line 29
+    .line 30
     iput-object v0, p0, Lcom/tencent/mm/compatible/i/a$a;->bitmap:Landroid/graphics/Bitmap;
 
-    .line 30
+    .line 31
     const/4 v0, 0x0
 
     iput v0, p0, Lcom/tencent/mm/compatible/i/a$a;->duration:I

@@ -7,37 +7,32 @@ import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.tencent.mm.a.h;
-import com.tencent.mm.a.i;
-import com.tencent.mm.a.k;
-import com.tencent.mm.ao.a;
-import com.tencent.mm.ar.g;
-import com.tencent.mm.modelfriend.ac;
-import com.tencent.mm.modelfriend.ay;
-import com.tencent.mm.modelfriend.m;
-import com.tencent.mm.modelfriend.n;
-import com.tencent.mm.p.c;
-import com.tencent.mm.pluginsdk.ui.d.i;
-import com.tencent.mm.ui.cj;
-import com.tencent.mm.ui.cj.a;
+import com.tencent.mm.aw.a;
+import com.tencent.mm.az.g;
+import com.tencent.mm.modelfriend.ah;
+import com.tencent.mm.modelfriend.h;
+import com.tencent.mm.modelfriend.r;
+import com.tencent.mm.pluginsdk.ui.d.e;
+import com.tencent.mm.q.b;
+import com.tencent.mm.ui.i.a;
 
 public final class InviteFacebookFriendsUI$a
-  extends cj
+  extends com.tencent.mm.ui.i
 {
-  String bXL;
-  private boolean[] bXM;
-  private int[] bzf;
+  private int[] bMl;
+  String coW;
+  private boolean[] coX;
   
-  public InviteFacebookFriendsUI$a(Context paramContext, cj.a parama)
+  public InviteFacebookFriendsUI$a(Context paramContext, i.a parama)
   {
-    super(paramContext, new m());
-    ipJ = parama;
+    super(paramContext, new h());
+    koC = parama;
   }
   
-  public final long[] Ea()
+  public final long[] Gj()
   {
     int m = 0;
-    Object localObject = bXM;
+    Object localObject = coX;
     int n = localObject.length;
     int i = 0;
     int k;
@@ -54,10 +49,10 @@ public final class InviteFacebookFriendsUI$a
     i = m;
     if (j < getCount())
     {
-      if (bXM[j] == 0) {
+      if (coX[j] == 0) {
         break label102;
       }
-      localObject[i] = getItemaMO;
+      localObject[i] = getItemaSw;
       i += 1;
     }
     label102:
@@ -69,10 +64,10 @@ public final class InviteFacebookFriendsUI$a
     }
   }
   
-  public final void Eb()
+  public final void Gk()
   {
-    n localn = ay.yC();
-    String str = bXL;
+    com.tencent.mm.modelfriend.i locali = ah.zr();
+    String str = coW;
     StringBuilder localStringBuilder = new StringBuilder();
     localStringBuilder.append(" where facebookfriend.status = 102 ");
     if ((str != null) && (str.length() > 0))
@@ -82,24 +77,24 @@ public final class InviteFacebookFriendsUI$a
       localStringBuilder.append("facebookfriend.nickname like '%" + str + "%' or ");
       localStringBuilder.append("facebookfriend.username like '%" + str + "%' ) ");
     }
-    setCursor(bqt.rawQuery("select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend  " + localStringBuilder.toString() + " order by  case when status = 100 then 0  when status = 102 then 3  when status = 101 then 1 else 2 end  , nicknamepyinitial", null));
-    bzf = new int[getCount()];
-    bXM = new boolean[getCount()];
+    setCursor(bCw.rawQuery("select facebookfriend.fbid,facebookfriend.fbname,facebookfriend.fbimgkey,facebookfriend.status,facebookfriend.username,facebookfriend.nickname,facebookfriend.nicknamepyinitial,facebookfriend.nicknamequanpin,facebookfriend.sex,facebookfriend.personalcard,facebookfriend.province,facebookfriend.city,facebookfriend.signature,facebookfriend.alias,facebookfriend.type,facebookfriend.email from facebookfriend  " + localStringBuilder.toString() + " order by  case when status = 100 then 0  when status = 102 then 3  when status = 101 then 1 else 2 end  , nicknamepyinitial", null));
+    bMl = new int[getCount()];
+    coX = new boolean[getCount()];
     super.notifyDataSetChanged();
   }
   
-  protected final void Ec()
+  protected final void Gl()
   {
-    Eb();
+    Gk();
   }
   
-  public final void dR(int paramInt)
+  public final void ep(int paramInt)
   {
-    if ((paramInt < 0) || (paramInt >= bXM.length)) {
+    if ((paramInt < 0) || (paramInt >= coX.length)) {
       return;
     }
-    boolean[] arrayOfBoolean = bXM;
-    if (bXM[paramInt] == 0) {}
+    boolean[] arrayOfBoolean = coX;
+    if (coX[paramInt] == 0) {}
     for (int i = 1;; i = 0)
     {
       arrayOfBoolean[paramInt] = i;
@@ -110,48 +105,48 @@ public final class InviteFacebookFriendsUI$a
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    m localm = (m)getItem(paramInt);
+    h localh = (h)getItem(paramInt);
     Bitmap localBitmap;
     if (paramView == null)
     {
       paramViewGroup = new a();
-      paramView = View.inflate(context, a.k.facebook_invite_friend_item, null);
-      bXN = ((ImageView)paramView.findViewById(a.i.contactitem_avatar_iv));
-      bzm = ((TextView)paramView.findViewById(a.i.qq_friend_name));
-      bXO = ((TextView)paramView.findViewById(a.i.invite_friends_open_already_state));
-      bXP = ((CheckBox)paramView.findViewById(a.i.inviteqqfriends_send_cb));
+      paramView = View.inflate(context, 2131362447, null);
+      coY = ((ImageView)paramView.findViewById(2131167114));
+      bMs = ((TextView)paramView.findViewById(2131167115));
+      coZ = ((TextView)paramView.findViewById(2131167116));
+      cpa = ((CheckBox)paramView.findViewById(2131167117));
       paramView.setTag(paramViewGroup);
-      bzm.setText(i.a(context, localm.xE(), bzm.getTextSize()));
-      localBitmap = c.fq(aMO);
+      bMs.setText(e.a(context, localh.yw(), bMs.getTextSize()));
+      localBitmap = b.fK(aSw);
       if (localBitmap != null) {
-        break label217;
+        break label211;
       }
-      bXN.setImageDrawable(a.u(context, a.h.mini_avatar));
+      coY.setImageDrawable(a.y(context, 2130903473));
     }
     for (;;)
     {
-      bXP.setChecked(bXM[paramInt]);
-      if (!ay.yF().gD(Long.toString(aMO))) {
-        break label229;
+      cpa.setChecked(coX[paramInt]);
+      if (!ah.zu().hA(Long.toString(aSw))) {
+        break label223;
       }
-      bXO.setVisibility(0);
+      coZ.setVisibility(0);
       return paramView;
       paramViewGroup = (a)paramView.getTag();
       break;
-      label217:
-      bXN.setImageBitmap(localBitmap);
+      label211:
+      coY.setImageBitmap(localBitmap);
     }
-    label229:
-    bXO.setVisibility(8);
+    label223:
+    coZ.setVisibility(8);
     return paramView;
   }
   
   public static final class a
   {
-    ImageView bXN;
-    TextView bXO;
-    CheckBox bXP;
-    TextView bzm;
+    TextView bMs;
+    ImageView coY;
+    TextView coZ;
+    CheckBox cpa;
   }
 }
 

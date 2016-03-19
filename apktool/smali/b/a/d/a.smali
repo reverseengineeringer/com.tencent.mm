@@ -4,17 +4,17 @@
 
 
 # instance fields
-.field public final hDq:Ljava/lang/String;
+.field public final jwt:Ljava/lang/String;
 
-.field public final jPp:Ljava/lang/String;
+.field public final mdB:Ljava/lang/String;
 
-.field public final jPq:Ljava/lang/String;
+.field public final mdC:Ljava/lang/String;
 
-.field public final jPr:Ljava/lang/String;
+.field public final mdD:Ljava/lang/String;
 
-.field public final jPt:Lb/a/d/h;
+.field public final mdF:Lb/a/d/h;
 
-.field private final jPu:Ljava/io/OutputStream;
+.field private final mdG:Ljava/io/OutputStream;
 
 
 # direct methods
@@ -26,22 +26,22 @@
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     .line 26
-    iput-object p1, p0, Lb/a/d/a;->jPp:Ljava/lang/String;
+    iput-object p1, p0, Lb/a/d/a;->mdB:Ljava/lang/String;
 
     .line 27
-    iput-object p2, p0, Lb/a/d/a;->jPq:Ljava/lang/String;
+    iput-object p2, p0, Lb/a/d/a;->mdC:Ljava/lang/String;
 
     .line 28
-    iput-object p3, p0, Lb/a/d/a;->jPr:Ljava/lang/String;
+    iput-object p3, p0, Lb/a/d/a;->mdD:Ljava/lang/String;
 
     .line 29
-    iput-object p4, p0, Lb/a/d/a;->jPt:Lb/a/d/h;
+    iput-object p4, p0, Lb/a/d/a;->mdF:Lb/a/d/h;
 
     .line 30
-    iput-object p5, p0, Lb/a/d/a;->hDq:Ljava/lang/String;
+    iput-object p5, p0, Lb/a/d/a;->jwt:Ljava/lang/String;
 
     .line 31
-    iput-object p6, p0, Lb/a/d/a;->jPu:Ljava/io/OutputStream;
+    iput-object p6, p0, Lb/a/d/a;->mdG:Ljava/io/OutputStream;
 
     .line 32
     return-void
@@ -49,12 +49,12 @@
 
 
 # virtual methods
-.method public final lx(Ljava/lang/String;)V
+.method public final oa(Ljava/lang/String;)V
     .locals 3
 
     .prologue
     .line 66
-    iget-object v0, p0, Lb/a/d/a;->jPu:Ljava/io/OutputStream;
+    iget-object v0, p0, Lb/a/d/a;->mdG:Ljava/io/OutputStream;
 
     if-eqz v0, :cond_0
 
@@ -79,7 +79,7 @@
 
     .line 71
     :try_start_0
-    iget-object v1, p0, Lb/a/d/a;->jPu:Ljava/io/OutputStream;
+    iget-object v1, p0, Lb/a/d/a;->mdG:Ljava/io/OutputStream;
 
     const-string/jumbo v2, "UTF8"
 

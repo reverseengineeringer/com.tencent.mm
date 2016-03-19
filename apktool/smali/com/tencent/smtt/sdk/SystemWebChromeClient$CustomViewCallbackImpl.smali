@@ -28,15 +28,15 @@
     .locals 0
 
     .prologue
-    .line 407
+    .line 438
     iput-object p1, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$CustomViewCallbackImpl;->this$0:Lcom/tencent/smtt/sdk/SystemWebChromeClient;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 408
+    .line 439
     iput-object p2, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$CustomViewCallbackImpl;->mCustomViewCallback:Landroid/webkit/WebChromeClient$CustomViewCallback;
 
-    .line 409
+    .line 440
     return-void
 .end method
 
@@ -46,11 +46,11 @@
     .locals 1
 
     .prologue
-    .line 412
+    .line 443
     iget-object v0, p0, Lcom/tencent/smtt/sdk/SystemWebChromeClient$CustomViewCallbackImpl;->mCustomViewCallback:Landroid/webkit/WebChromeClient$CustomViewCallback;
 
     invoke-interface {v0}, Landroid/webkit/WebChromeClient$CustomViewCallback;->onCustomViewHidden()V
 
-    .line 413
+    .line 444
     return-void
 .end method

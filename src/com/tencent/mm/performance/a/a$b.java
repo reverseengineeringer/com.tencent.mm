@@ -12,72 +12,72 @@ class a$b
   
   public void callActivityOnCreate(Activity paramActivity, Bundle paramBundle)
   {
-    a.a(bTA, paramActivity, paramBundle, true);
-    a.a(bTA).callActivityOnCreate(paramActivity, paramBundle);
-    a.a(bTA, paramActivity, paramBundle, false);
+    a.a(ckw, paramActivity, paramBundle, true);
+    a.a(ckw).callActivityOnCreate(paramActivity, paramBundle);
+    a.a(ckw, paramActivity, paramBundle, false);
   }
   
   public void callActivityOnDestroy(Activity paramActivity)
   {
-    a.f(bTA, paramActivity, true);
-    a.a(bTA).callActivityOnDestroy(paramActivity);
-    a.f(bTA, paramActivity, false);
+    a.f(ckw, paramActivity, true);
+    a.a(ckw).callActivityOnDestroy(paramActivity);
+    a.f(ckw, paramActivity, false);
   }
   
   public void callActivityOnNewIntent(Activity paramActivity, Intent paramIntent)
   {
-    a.a(bTA, paramActivity, paramIntent, true);
-    a.a(bTA).callActivityOnNewIntent(paramActivity, paramIntent);
-    a.a(bTA, paramActivity, paramIntent, false);
+    a.a(ckw, paramActivity, paramIntent, true);
+    a.a(ckw).callActivityOnNewIntent(paramActivity, paramIntent);
+    a.a(ckw, paramActivity, paramIntent, false);
   }
   
   public void callActivityOnPause(Activity paramActivity)
   {
-    a.b(bTA, paramActivity, true);
-    a.a(bTA).callActivityOnPause(paramActivity);
-    a.b(bTA, paramActivity, false);
+    a.b(ckw, paramActivity, true);
+    a.a(ckw).callActivityOnPause(paramActivity);
+    a.b(ckw, paramActivity, false);
   }
   
   public void callActivityOnRestart(Activity paramActivity)
   {
-    a.d(bTA, paramActivity, true);
-    a.a(bTA).callActivityOnRestart(paramActivity);
-    a.d(bTA, paramActivity, false);
+    a.d(ckw, paramActivity, true);
+    a.a(ckw).callActivityOnRestart(paramActivity);
+    a.d(ckw, paramActivity, false);
   }
   
   public void callActivityOnRestoreInstanceState(Activity paramActivity, Bundle paramBundle)
   {
-    a.c(bTA, paramActivity, paramBundle, true);
-    a.a(bTA).callActivityOnRestoreInstanceState(paramActivity, paramBundle);
-    a.c(bTA, paramActivity, paramBundle, false);
+    a.c(ckw, paramActivity, paramBundle, true);
+    a.a(ckw).callActivityOnRestoreInstanceState(paramActivity, paramBundle);
+    a.c(ckw, paramActivity, paramBundle, false);
   }
   
   public void callActivityOnResume(Activity paramActivity)
   {
-    a.a(bTA, paramActivity, true);
-    a.a(bTA).callActivityOnResume(paramActivity);
-    a.a(bTA, paramActivity, false);
+    a.a(ckw, paramActivity, true);
+    a.a(ckw).callActivityOnResume(paramActivity);
+    a.a(ckw, paramActivity, false);
   }
   
   public void callActivityOnSaveInstanceState(Activity paramActivity, Bundle paramBundle)
   {
-    a.b(bTA, paramActivity, paramBundle, true);
-    a.a(bTA).callActivityOnSaveInstanceState(paramActivity, paramBundle);
-    a.b(bTA, paramActivity, paramBundle, false);
+    a.b(ckw, paramActivity, paramBundle, true);
+    a.a(ckw).callActivityOnSaveInstanceState(paramActivity, paramBundle);
+    a.b(ckw, paramActivity, paramBundle, false);
   }
   
   public void callActivityOnStart(Activity paramActivity)
   {
-    a.c(bTA, paramActivity, true);
-    a.a(bTA).callActivityOnStart(paramActivity);
-    a.c(bTA, paramActivity, false);
+    a.c(ckw, paramActivity, true);
+    a.a(ckw).callActivityOnStart(paramActivity);
+    a.c(ckw, paramActivity, false);
   }
   
   public void callActivityOnStop(Activity paramActivity)
   {
-    a.e(bTA, paramActivity, true);
-    a.a(bTA).callActivityOnStop(paramActivity);
-    a.e(bTA, paramActivity, false);
+    a.e(ckw, paramActivity, true);
+    a.a(ckw).callActivityOnStop(paramActivity);
+    a.e(ckw, paramActivity, false);
   }
 }
 

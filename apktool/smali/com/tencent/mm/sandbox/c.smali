@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static hVN:Lcom/tencent/mm/sandbox/c;
+.field private static jSA:Lcom/tencent/mm/sandbox/c;
 
-.field private static hVO:Ljava/util/Map;
+.field private static jSB:Ljava/util/Map;
 
 
 # direct methods
@@ -17,14 +17,14 @@
     .line 11
     const/4 v0, 0x0
 
-    sput-object v0, Lcom/tencent/mm/sandbox/c;->hVN:Lcom/tencent/mm/sandbox/c;
+    sput-object v0, Lcom/tencent/mm/sandbox/c;->jSA:Lcom/tencent/mm/sandbox/c;
 
     .line 24
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    sput-object v0, Lcom/tencent/mm/sandbox/c;->hVO:Ljava/util/Map;
+    sput-object v0, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
 
     return-void
 .end method
@@ -72,10 +72,10 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 28
-    sget-object v0, Lcom/tencent/mm/sandbox/c;->hVO:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -96,7 +96,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Lcom/tencent/mm/sandbox/c;->hVO:Ljava/util/Map;
+    sget-object v2, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->size()I
 
@@ -110,7 +110,7 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 30
     return-void
@@ -159,10 +159,10 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     .line 34
-    sget-object v0, Lcom/tencent/mm/sandbox/c;->hVO:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
 
     invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -179,7 +179,7 @@
 
     invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    sget-object v2, Lcom/tencent/mm/sandbox/c;->hVO:Ljava/util/Map;
+    sget-object v2, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
 
     invoke-interface {v2}, Ljava/util/Map;->size()I
 
@@ -193,10 +193,10 @@
 
     move-result-object v1
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 37
-    sget-object v0, Lcom/tencent/mm/sandbox/c;->hVO:Ljava/util/Map;
+    sget-object v0, Lcom/tencent/mm/sandbox/c;->jSB:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->size()I
 
@@ -216,10 +216,10 @@
 
     const-string/jumbo v1, "Sandbox exit Now."
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 40
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/t;->appenderFlushSync()V
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/u;->appenderFlushSync()V
 
     .line 43
     :cond_0

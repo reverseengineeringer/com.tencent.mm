@@ -14,4 +14,4 @@
 
 
 # static fields
-.field public static blO:Lcom/tencent/mm/lan_cs/Server$a;
+.field public static bwO:Lcom/tencent/mm/lan_cs/Server$a;

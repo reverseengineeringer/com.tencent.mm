@@ -1,1613 +1,690 @@
 .class public final Lcom/tencent/mm/modelfriend/h;
-.super Lcom/tencent/mm/sdk/g/ao;
+.super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# static fields
-.field public static final aqU:[Ljava/lang/String;
-
-
 # instance fields
-.field public final bqt:Lcom/tencent/mm/ar/g;
+.field aSD:I
+
+.field aSE:Ljava/lang/String;
+
+.field aSF:Ljava/lang/String;
+
+.field aSG:Ljava/lang/String;
+
+.field aSu:I
+
+.field public aSw:J
+
+.field private aSx:Ljava/lang/String;
+
+.field aji:Ljava/lang/String;
+
+.field aou:I
+
+.field bLF:Ljava/lang/String;
+
+.field bLG:Ljava/lang/String;
+
+.field bMf:Ljava/lang/String;
+
+.field bMg:I
+
+.field baB:Ljava/lang/String;
+
+.field public status:I
+
+.field private type:I
+
+.field username:Ljava/lang/String;
 
 
 # direct methods
-.method static constructor <clinit>()V
+.method public constructor <init>()V
     .locals 3
 
     .prologue
-    .line 23
-    const/4 v0, 0x3
+    const/4 v2, 0x0
 
-    new-array v0, v0, [Ljava/lang/String;
+    .line 86
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    const/4 v1, 0x0
+    .line 65
+    const/4 v0, -0x1
 
-    const-string/jumbo v2, "CREATE TABLE IF NOT EXISTS addr_upload2 ( id int  PRIMARY KEY , md5 text  , peopleid text  , uploadtime long  , realname text  , realnamepyinitial text  , realnamequanpin text  , username text  , nickname text  , nicknamepyinitial text  , nicknamequanpin text  , type int  , moblie text  , email text  , status int  , reserved1 text  , reserved2 text  , reserved3 int  , reserved4 int , lvbuf BLOG , showhead int  ) "
+    iput v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
 
-    aput-object v2, v0, v1
+    .line 87
+    const-wide/16 v0, 0x0
 
-    const/4 v1, 0x1
+    iput-wide v0, p0, Lcom/tencent/mm/modelfriend/h;->aSw:J
 
-    const-string/jumbo v2, "CREATE INDEX IF NOT EXISTS upload_time_index ON addr_upload2 ( uploadtime ) "
+    const-string/jumbo v0, ""
 
-    aput-object v2, v0, v1
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bMf:Ljava/lang/String;
 
-    const/4 v1, 0x2
+    iput v2, p0, Lcom/tencent/mm/modelfriend/h;->bMg:I
 
-    const-string/jumbo v2, "CREATE INDEX IF NOT EXISTS addr_upload_user_index ON addr_upload2 ( username ) "
+    iput v2, p0, Lcom/tencent/mm/modelfriend/h;->status:I
 
-    aput-object v2, v0, v1
+    const-string/jumbo v0, ""
 
-    sput-object v0, Lcom/tencent/mm/modelfriend/h;->aqU:[Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->username:Ljava/lang/String;
 
-    return-void
-.end method
+    const-string/jumbo v0, ""
 
-.method public constructor <init>(Lcom/tencent/mm/ar/g;)V
-    .locals 7
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aji:Ljava/lang/String;
 
-    .prologue
-    const/4 v2, 0x1
+    const-string/jumbo v0, ""
 
-    const/4 v0, 0x0
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bLF:Ljava/lang/String;
 
-    .line 41
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/g/ao;-><init>()V
+    const-string/jumbo v0, ""
 
-    .line 42
-    iput-object p1, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bLG:Ljava/lang/String;
 
-    .line 43
-    const-string/jumbo v3, "addr_upload2"
+    iput v2, p0, Lcom/tencent/mm/modelfriend/h;->aSu:I
 
-    new-instance v1, Ljava/lang/StringBuilder;
+    iput v2, p0, Lcom/tencent/mm/modelfriend/h;->aSD:I
 
-    const-string/jumbo v4, "PRAGMA table_info( "
+    const-string/jumbo v0, ""
 
-    invoke-direct {v1, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSF:Ljava/lang/String;
 
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    const-string/jumbo v0, ""
 
-    move-result-object v1
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSG:Ljava/lang/String;
 
-    const-string/jumbo v4, " )"
+    const-string/jumbo v0, ""
 
-    invoke-virtual {v1, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSE:Ljava/lang/String;
 
-    move-result-object v1
+    const-string/jumbo v0, ""
 
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->baB:Ljava/lang/String;
 
-    move-result-object v1
+    iput v2, p0, Lcom/tencent/mm/modelfriend/h;->type:I
 
-    const/4 v4, 0x0
+    const-string/jumbo v0, ""
 
-    invoke-virtual {p1, v1, v4}, Lcom/tencent/mm/ar/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSx:Ljava/lang/String;
 
-    move-result-object v4
-
-    move v1, v0
-
-    :cond_0
-    :goto_0
-    invoke-interface {v4}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v5
-
-    if-eqz v5, :cond_2
-
-    const-string/jumbo v5, "name"
-
-    invoke-interface {v4, v5}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
-
-    move-result v5
-
-    if-ltz v5, :cond_0
-
-    invoke-interface {v4, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v5
-
-    const-string/jumbo v6, "lvbuf"
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v6
-
-    if-eqz v6, :cond_1
-
-    move v1, v2
-
-    goto :goto_0
-
-    :cond_1
-    const-string/jumbo v6, "showhead"
-
-    invoke-virtual {v6, v5}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
-
-    move-result v5
-
-    if-eqz v5, :cond_0
-
-    move v0, v2
-
-    goto :goto_0
-
-    :cond_2
-    invoke-interface {v4}, Landroid/database/Cursor;->close()V
-
-    if-nez v1, :cond_3
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "Alter table "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, " add lvbuf BLOB "
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-virtual {p1, v3, v1}, Lcom/tencent/mm/ar/g;->bx(Ljava/lang/String;Ljava/lang/String;)Z
-
-    :cond_3
-    if-nez v0, :cond_4
-
-    new-instance v0, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v1, "Alter table "
-
-    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v1, " add showhead int "
-
-    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p1, v3, v0}, Lcom/tencent/mm/ar/g;->bx(Ljava/lang/String;Ljava/lang/String;)Z
-
-    .line 44
-    :cond_4
+    .line 88
     return-void
 .end method
 
 
 # virtual methods
-.method public final K(J)Lcom/tencent/mm/modelfriend/g;
-    .locals 4
+.method public final c(Landroid/database/Cursor;)V
+    .locals 2
 
     .prologue
-    .line 400
-    new-instance v0, Lcom/tencent/mm/modelfriend/g;
-
-    invoke-direct {v0}, Lcom/tencent/mm/modelfriend/g;-><init>()V
-
-    .line 401
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "select addr_upload2.id,addr_upload2.md5,addr_upload2.peopleid,addr_upload2.uploadtime,addr_upload2.realname,addr_upload2.realnamepyinitial,addr_upload2.realnamequanpin,addr_upload2.username,addr_upload2.nickname,addr_upload2.nicknamepyinitial,addr_upload2.nicknamequanpin,addr_upload2.type,addr_upload2.moblie,addr_upload2.email,addr_upload2.status,addr_upload2.reserved1,addr_upload2.reserved2,addr_upload2.reserved3,addr_upload2.reserved4,addr_upload2.lvbuf,addr_upload2.showhead from addr_upload2 WHERE id="
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1, p2}, Ljava/lang/Long;->toString(J)Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const/16 v2, 0x3b
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 402
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    const/4 v3, 0x0
-
-    invoke-virtual {v2, v1, v3}, Lcom/tencent/mm/ar/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 403
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 404
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelfriend/g;->c(Landroid/database/Cursor;)V
-
-    .line 406
-    :cond_0
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    .line 407
-    return-object v0
-.end method
-
-.method public final a(Ljava/lang/String;Lcom/tencent/mm/modelfriend/g;)I
-    .locals 8
-
-    .prologue
+    .line 110
     const/4 v0, 0x0
 
-    .line 209
-    invoke-virtual {p2}, Lcom/tencent/mm/modelfriend/g;->mA()Landroid/content/ContentValues;
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getLong(I)J
 
-    move-result-object v1
+    move-result-wide v0
 
-    .line 211
-    invoke-virtual {v1}, Landroid/content/ContentValues;->size()I
+    iput-wide v0, p0, Lcom/tencent/mm/modelfriend/h;->aSw:J
 
-    move-result v2
+    .line 111
+    const/4 v0, 0x1
 
-    if-lez v2, :cond_0
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
-    .line 212
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
+    move-result-object v0
 
-    const-string/jumbo v3, "addr_upload2"
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bMf:Ljava/lang/String;
 
-    const-string/jumbo v4, "id=?"
+    .line 112
+    const/4 v0, 0x2
 
-    const/4 v5, 0x1
-
-    new-array v5, v5, [Ljava/lang/String;
-
-    new-instance v6, Ljava/lang/StringBuilder;
-
-    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {p1}, Lcom/tencent/mm/modelfriend/g;->gt(Ljava/lang/String;)I
-
-    move-result v7
-
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v6
-
-    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v6
-
-    aput-object v6, v5, v0
-
-    invoke-virtual {v2, v3, v1, v4, v5}, Lcom/tencent/mm/ar/g;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    .line 215
-    :cond_0
-    if-lez v0, :cond_1
+    iput v0, p0, Lcom/tencent/mm/modelfriend/h;->bMg:I
 
-    .line 217
-    invoke-virtual {p2}, Lcom/tencent/mm/modelfriend/g;->xq()Ljava/lang/String;
+    .line 113
+    const/4 v0, 0x3
 
-    move-result-object v1
-
-    invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_2
-
-    .line 218
-    const/4 v1, 0x5
-
-    invoke-virtual {p0, v1, p0, p1}, Lcom/tencent/mm/modelfriend/h;->b(ILcom/tencent/mm/sdk/g/ao;Ljava/lang/Object;)V
-
-    .line 219
-    const/4 v1, 0x2
-
-    invoke-virtual {p2}, Lcom/tencent/mm/modelfriend/g;->xq()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-virtual {p0, v1, p0, v2}, Lcom/tencent/mm/modelfriend/h;->b(ILcom/tencent/mm/sdk/g/ao;Ljava/lang/Object;)V
-
-    .line 225
-    :cond_1
-    :goto_0
-    return v0
-
-    .line 221
-    :cond_2
-    const/4 v1, 0x3
-
-    invoke-virtual {p0, v1, p0, p1}, Lcom/tencent/mm/modelfriend/h;->b(ILcom/tencent/mm/sdk/g/ao;Ljava/lang/Object;)V
-
-    goto :goto_0
-.end method
-
-.method public final gv(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/g;
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 316
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
-
-    move-result v1
-
-    if-eqz v1, :cond_0
-
-    .line 329
-    :goto_0
-    return-object v0
-
-    .line 320
-    :cond_0
-    new-instance v1, Lcom/tencent/mm/modelfriend/g;
-
-    invoke-direct {v1}, Lcom/tencent/mm/modelfriend/g;-><init>()V
-
-    .line 321
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "select addr_upload2.id,addr_upload2.md5,addr_upload2.peopleid,addr_upload2.uploadtime,addr_upload2.realname,addr_upload2.realnamepyinitial,addr_upload2.realnamequanpin,addr_upload2.username,addr_upload2.nickname,addr_upload2.nicknamepyinitial,addr_upload2.nicknamequanpin,addr_upload2.type,addr_upload2.moblie,addr_upload2.email,addr_upload2.status,addr_upload2.reserved1,addr_upload2.reserved2,addr_upload2.reserved3,addr_upload2.reserved4,addr_upload2.lvbuf,addr_upload2.showhead from addr_upload2 where addr_upload2.username=\""
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1}, Lcom/tencent/mm/sdk/platformtools/bn;->iU(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v3, "\""
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    .line 322
-    iget-object v3, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    invoke-virtual {v3, v2, v0}, Lcom/tencent/mm/ar/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    .line 323
-    const-string/jumbo v2, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "get addrUpload :"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string/jumbo v4, ", resCnt:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 324
-    invoke-interface {v0}, Landroid/database/Cursor;->getCount()I
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 325
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 326
-    invoke-virtual {v1, v0}, Lcom/tencent/mm/modelfriend/g;->c(Landroid/database/Cursor;)V
-
-    .line 328
-    :cond_1
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    move-object v0, v1
-
-    .line 329
-    goto :goto_0
-.end method
-
-.method public final gw(Ljava/lang/String;)Lcom/tencent/mm/modelfriend/g;
-    .locals 5
-
-    .prologue
-    const/4 v0, 0x0
-
-    .line 411
-    if-eqz p1, :cond_0
-
-    invoke-virtual {p1}, Ljava/lang/String;->length()I
-
-    move-result v1
-
-    if-gtz v1, :cond_1
-
-    .line 424
-    :cond_0
-    :goto_0
-    return-object v0
-
-    .line 415
-    :cond_1
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "select addr_upload2.id,addr_upload2.md5,addr_upload2.peopleid,addr_upload2.uploadtime,addr_upload2.realname,addr_upload2.realnamepyinitial,addr_upload2.realnamequanpin,addr_upload2.username,addr_upload2.nickname,addr_upload2.nicknamepyinitial,addr_upload2.nicknamequanpin,addr_upload2.type,addr_upload2.moblie,addr_upload2.email,addr_upload2.status,addr_upload2.reserved1,addr_upload2.reserved2,addr_upload2.reserved3,addr_upload2.reserved4,addr_upload2.lvbuf,addr_upload2.showhead from addr_upload2 where addr_upload2.id=\""
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {p1}, Lcom/tencent/mm/modelfriend/g;->gt(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "\""
-
-    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    .line 416
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    invoke-virtual {v2, v1, v0}, Lcom/tencent/mm/ar/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 417
-    const-string/jumbo v2, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    new-instance v3, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v4, "get addrUpload :"
-
-    invoke-direct {v3, v4}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v3, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string/jumbo v4, ", resCnt:"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
-
-    move-result v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v3
-
-    invoke-static {v2, v3}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 418
-    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
-
-    move-result v2
-
-    if-eqz v2, :cond_2
-
-    .line 419
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 420
-    new-instance v0, Lcom/tencent/mm/modelfriend/g;
-
-    invoke-direct {v0}, Lcom/tencent/mm/modelfriend/g;-><init>()V
-
-    .line 421
-    invoke-virtual {v0, v1}, Lcom/tencent/mm/modelfriend/g;->c(Landroid/database/Cursor;)V
-
-    .line 423
-    :cond_2
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-.end method
-
-.method public final gx(Ljava/lang/String;)Ljava/util/List;
-    .locals 4
-
-    .prologue
-    .line 502
-    const-string/jumbo v0, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    new-instance v1, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v2, "sql : "
-
-    invoke-direct {v1, v2}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v1, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v1
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 503
-    new-instance v0, Ljava/util/LinkedList;
-
-    invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
-
-    .line 504
-    const-string/jumbo v1, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, "sql : "
-
-    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 505
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v1, p1, v2}, Lcom/tencent/mm/ar/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    .line 506
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    .line 507
-    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
-
-    move-result v2
-
-    if-gtz v2, :cond_0
-
-    .line 508
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    .line 517
-    :goto_0
-    return-object v0
-
-    .line 512
-    :cond_0
-    new-instance v2, Lcom/tencent/mm/modelfriend/g;
-
-    invoke-direct {v2}, Lcom/tencent/mm/modelfriend/g;-><init>()V
-
-    .line 513
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/modelfriend/g;->c(Landroid/database/Cursor;)V
-
-    .line 514
-    invoke-interface {v0, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
-
-    .line 515
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToNext()Z
-
-    move-result v2
-
-    if-nez v2, :cond_0
-
-    .line 516
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-.end method
-
-.method public final n(Ljava/util/List;)Z
-    .locals 13
-
-    .prologue
-    .line 123
-    if-eqz p1, :cond_0
-
-    invoke-interface {p1}, Ljava/util/List;->size()I
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
 
-    if-gtz v0, :cond_1
+    iput v0, p0, Lcom/tencent/mm/modelfriend/h;->status:I
 
-    .line 124
-    :cond_0
-    const/4 v0, 0x0
+    .line 114
+    const/4 v0, 0x4
 
-    .line 172
-    :goto_0
-    return v0
-
-    .line 126
-    :cond_1
-    new-instance v4, Lcom/tencent/mm/sdk/platformtools/bl;
-
-    const-string/jumbo v0, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    const-string/jumbo v1, "transaction"
-
-    invoke-direct {v4, v0, v1}, Lcom/tencent/mm/sdk/platformtools/bl;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 127
-    const-string/jumbo v0, "transation begin"
-
-    invoke-virtual {v4, v0}, Lcom/tencent/mm/sdk/platformtools/bl;->addSplit(Ljava/lang/String;)V
-
-    .line 128
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ar/g;->cN(J)J
-
-    move-result-wide v5
-
-    .line 129
-    const/4 v1, 0x1
-
-    .line 131
-    const/4 v0, 0x0
-
-    move v3, v0
-
-    :goto_1
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-ge v3, v0, :cond_a
-
-    .line 132
-    invoke-interface {p1, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    check-cast v0, Lcom/tencent/mm/modelfriend/g;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->username:Ljava/lang/String;
 
-    .line 133
-    if-eqz v0, :cond_5
+    .line 115
+    const/4 v0, 0x5
 
-    .line 134
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->xq()Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v7, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v8, "select addr_upload2.id,addr_upload2.md5,addr_upload2.peopleid,addr_upload2.uploadtime,addr_upload2.realname,addr_upload2.realnamepyinitial,addr_upload2.realnamequanpin,addr_upload2.username,addr_upload2.nickname,addr_upload2.nicknamepyinitial,addr_upload2.nicknamequanpin,addr_upload2.type,addr_upload2.moblie,addr_upload2.email,addr_upload2.status,addr_upload2.reserved1,addr_upload2.reserved2,addr_upload2.reserved3,addr_upload2.reserved4,addr_upload2.lvbuf,addr_upload2.showhead from addr_upload2  where addr_upload2.id = \""
-
-    invoke-direct {v7, v8}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-static {v2}, Lcom/tencent/mm/modelfriend/g;->gt(Ljava/lang/String;)I
-
-    move-result v2
-
-    invoke-virtual {v7, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    const-string/jumbo v7, "\""
-
-    invoke-virtual {v2, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v2
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v7, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v7, v2, v8}, Lcom/tencent/mm/ar/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v7
-
-    if-nez v7, :cond_2
-
-    const/4 v2, 0x0
-
-    :goto_2
-    if-nez v2, :cond_6
-
-    .line 137
-    const/4 v2, -0x1
-
-    iput v2, v0, Lcom/tencent/mm/modelfriend/g;->aqq:I
-
-    .line 138
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->mA()Landroid/content/ContentValues;
-
-    move-result-object v2
-
-    .line 139
-    iget-object v7, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    const-string/jumbo v8, "addr_upload2"
-
-    const-string/jumbo v9, "id"
-
-    invoke-virtual {v7, v8, v9, v2}, Lcom/tencent/mm/ar/g;->insert(Ljava/lang/String;Ljava/lang/String;Landroid/content/ContentValues;)J
-
-    move-result-wide v7
-
-    long-to-int v2, v7
-
-    .line 140
-    const/4 v7, -0x1
-
-    if-ne v2, v7, :cond_4
-
-    .line 141
-    const-string/jumbo v2, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    const-string/jumbo v3, "batchSet insert failed, num:%s email:%s"
-
-    const/4 v7, 0x2
-
-    new-array v7, v7, [Ljava/lang/Object;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->xy()Ljava/lang/String;
-
-    move-result-object v9
-
-    aput-object v9, v7, v8
-
-    const/4 v8, 0x1
-
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->xz()Ljava/lang/String;
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    aput-object v0, v7, v8
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aji:Ljava/lang/String;
 
-    invoke-static {v2, v3, v7}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+    .line 116
+    const/4 v0, 0x6
 
-    move v0, v1
-
-    .line 169
-    :goto_3
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    invoke-virtual {v1, v5, v6}, Lcom/tencent/mm/ar/g;->cO(J)I
-
-    .line 170
-    const-string/jumbo v1, "transation end"
-
-    invoke-virtual {v4, v1}, Lcom/tencent/mm/sdk/platformtools/bl;->addSplit(Ljava/lang/String;)V
-
-    .line 171
-    invoke-virtual {v4}, Lcom/tencent/mm/sdk/platformtools/bl;->dumpToLog()V
-
-    goto/16 :goto_0
-
-    .line 134
-    :cond_2
-    :try_start_1
-    invoke-interface {v7}, Landroid/database/Cursor;->getCount()I
-
-    move-result v2
-
-    if-lez v2, :cond_3
-
-    const/4 v2, 0x1
-
-    :goto_4
-    invoke-interface {v7}, Landroid/database/Cursor;->close()V
-    :try_end_1
-    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
-
-    goto :goto_2
-
-    .line 165
-    :catch_0
-    move-exception v0
-
-    .line 166
-    const-string/jumbo v1, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bLF:Ljava/lang/String;
+
+    .line 117
+    const/4 v0, 0x7
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 167
-    const/4 v0, 0x0
-
-    goto :goto_3
-
-    .line 134
-    :cond_3
-    const/4 v2, 0x0
-
-    goto :goto_4
-
-    .line 145
-    :cond_4
-    const/4 v2, 0x2
-
-    :try_start_2
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->xq()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v2, p0, v0}, Lcom/tencent/mm/modelfriend/h;->b(ILcom/tencent/mm/sdk/g/ao;Ljava/lang/Object;)V
-
-    .line 131
-    :cond_5
-    :goto_5
-    add-int/lit8 v0, v3, 0x1
-
-    move v3, v0
-
-    goto/16 :goto_1
-
-    .line 147
-    :cond_6
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->xq()Ljava/lang/String;
-
-    move-result-object v2
-
-    invoke-static {v2}, Lcom/tencent/mm/modelfriend/g;->gt(Ljava/lang/String;)I
-
-    move-result v7
-
-    .line 148
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->mA()Landroid/content/ContentValues;
-
-    move-result-object v8
-
-    .line 149
-    const/4 v2, 0x0
-
-    .line 150
-    invoke-virtual {v8}, Landroid/content/ContentValues;->size()I
-
-    move-result v9
-
-    if-lez v9, :cond_7
-
-    .line 151
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    const-string/jumbo v9, "addr_upload2"
-
-    const-string/jumbo v10, "id=?"
-
-    const/4 v11, 0x1
-
-    new-array v11, v11, [Ljava/lang/String;
-
-    const/4 v12, 0x0
-
-    invoke-static {v7}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
-
-    move-result-object v7
-
-    aput-object v7, v11, v12
-
-    invoke-virtual {v2, v9, v8, v10, v11}, Lcom/tencent/mm/ar/g;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
-
-    move-result v2
-
-    .line 153
-    :cond_7
-    if-nez v2, :cond_8
-
-    .line 154
-    const-string/jumbo v2, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    const-string/jumbo v7, "batchSet update result=0, num:%s email:%s"
-
-    const/4 v8, 0x2
-
-    new-array v8, v8, [Ljava/lang/Object;
-
-    const/4 v9, 0x0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->xy()Ljava/lang/String;
-
-    move-result-object v10
-
-    aput-object v10, v8, v9
-
-    const/4 v9, 0x1
-
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->xz()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v8, v9
-
-    invoke-static {v2, v7, v8}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    goto :goto_5
-
-    .line 156
-    :cond_8
-    if-gez v2, :cond_9
-
-    .line 157
-    const-string/jumbo v2, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    const-string/jumbo v3, "batchSet update failed, num:%s email:%s"
-
-    const/4 v7, 0x2
-
-    new-array v7, v7, [Ljava/lang/Object;
-
-    const/4 v8, 0x0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->xy()Ljava/lang/String;
-
-    move-result-object v9
-
-    aput-object v9, v7, v8
-
-    const/4 v8, 0x1
-
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->xz()Ljava/lang/String;
-
-    move-result-object v0
-
-    aput-object v0, v7, v8
-
-    invoke-static {v2, v3, v7}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    move v0, v1
-
-    .line 158
-    goto/16 :goto_3
-
-    .line 162
-    :cond_9
-    const/4 v2, 0x3
-
-    invoke-virtual {v0}, Lcom/tencent/mm/modelfriend/g;->xq()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v2, p0, v0}, Lcom/tencent/mm/modelfriend/h;->b(ILcom/tencent/mm/sdk/g/ao;Ljava/lang/Object;)V
-    :try_end_2
-    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
-
-    goto :goto_5
-
-    :cond_a
-    move v0, v1
-
-    .line 168
-    goto/16 :goto_3
-.end method
-
-.method public final o(Ljava/util/List;)Z
-    .locals 14
-
-    .prologue
-    const/4 v1, 0x1
-
-    const/4 v2, 0x0
-
-    .line 93
-    invoke-interface {p1}, Ljava/util/List;->size()I
-
-    move-result v0
-
-    if-gtz v0, :cond_0
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bLG:Ljava/lang/String;
 
     .line 118
-    :goto_0
-    return v2
+    const/16 v0, 0x8
 
-    .line 96
-    :cond_0
-    new-instance v3, Lcom/tencent/mm/sdk/platformtools/bl;
-
-    const-string/jumbo v0, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    const-string/jumbo v4, "delete transaction"
-
-    invoke-direct {v3, v0, v4}, Lcom/tencent/mm/sdk/platformtools/bl;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 97
-    const-string/jumbo v0, "begin"
-
-    invoke-virtual {v3, v0}, Lcom/tencent/mm/sdk/platformtools/bl;->addSplit(Ljava/lang/String;)V
-
-    .line 98
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v4
-
-    invoke-virtual {v4}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v4
-
-    invoke-virtual {v0, v4, v5}, Lcom/tencent/mm/ar/g;->cN(J)J
-
-    move-result-wide v4
-
-    .line 101
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :cond_1
-    :goto_1
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/modelfriend/h;->aSu:I
+
+    .line 119
+    const/16 v0, 0x9
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/modelfriend/h;->aSD:I
+
+    .line 120
+    const/16 v0, 0xa
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSF:Ljava/lang/String;
+
+    .line 121
+    const/16 v0, 0xb
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSG:Ljava/lang/String;
+
+    .line 122
+    const/16 v0, 0xc
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSE:Ljava/lang/String;
+
+    .line 123
+    const/16 v0, 0xd
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->baB:Ljava/lang/String;
+
+    .line 124
+    const/16 v0, 0xe
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getInt(I)I
+
+    move-result v0
+
+    iput v0, p0, Lcom/tencent/mm/modelfriend/h;->type:I
+
+    .line 125
+    const/16 v0, 0xf
+
+    invoke-interface {p1, v0}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
+
+    move-result-object v0
+
+    iput-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSx:Ljava/lang/String;
+
+    .line 126
+    return-void
+.end method
+
+.method public final getUsername()Ljava/lang/String;
+    .locals 1
+
+    .prologue
+    .line 225
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->username:Ljava/lang/String;
+
+    if-nez v0, :cond_0
+
+    const-string/jumbo v0, ""
+
+    :goto_0
+    return-object v0
+
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->username:Ljava/lang/String;
+
+    goto :goto_0
+.end method
+
+.method public final lX()Landroid/content/ContentValues;
+    .locals 4
+
+    .prologue
+    .line 129
+    new-instance v1, Landroid/content/ContentValues;
+
+    invoke-direct {v1}, Landroid/content/ContentValues;-><init>()V
+
+    .line 130
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit8 v0, v0, 0x1
+
+    if-eqz v0, :cond_0
+
+    .line 131
+    const-string/jumbo v0, "fbid"
+
+    iget-wide v2, p0, Lcom/tencent/mm/modelfriend/h;->aSw:J
+
+    invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Long;)V
+
+    .line 133
+    :cond_0
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit8 v0, v0, 0x2
+
+    if-eqz v0, :cond_1
+
+    .line 134
+    const-string/jumbo v0, "fbname"
+
+    invoke-virtual {p0}, Lcom/tencent/mm/modelfriend/h;->yw()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 136
+    :cond_1
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit8 v0, v0, 0x4
 
     if-eqz v0, :cond_2
 
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 137
+    const-string/jumbo v0, "fbimgkey"
 
-    move-result-object v0
+    iget v2, p0, Lcom/tencent/mm/modelfriend/h;->bMg:I
 
-    check-cast v0, Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 102
-    if-eqz v0, :cond_1
+    move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-virtual {v1, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    move-result v7
-
-    if-lez v7, :cond_1
-
-    .line 103
-    iget-object v7, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    const-string/jumbo v8, "addr_upload2"
-
-    const-string/jumbo v9, "id =?"
-
-    const/4 v10, 0x1
-
-    new-array v10, v10, [Ljava/lang/String;
-
-    const/4 v11, 0x0
-
-    new-instance v12, Ljava/lang/StringBuilder;
-
-    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {v0}, Lcom/tencent/mm/modelfriend/g;->gt(Ljava/lang/String;)I
-
-    move-result v13
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v12
-
-    aput-object v12, v10, v11
-
-    invoke-virtual {v7, v8, v9, v10}, Lcom/tencent/mm/ar/g;->delete(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/String;)I
-
-    move-result v7
-
-    .line 106
-    const-string/jumbo v8, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    new-instance v9, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v10, "delete addr_upload2 md5 :"
-
-    invoke-direct {v9, v10}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v9, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    const-string/jumbo v10, ", res:"
-
-    invoke-virtual {v9, v10}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v9
-
-    invoke-virtual {v9}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-static {v8, v9}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 108
-    if-lez v7, :cond_1
-
-    const/4 v7, 0x5
-
-    invoke-virtual {p0, v7, p0, v0}, Lcom/tencent/mm/modelfriend/h;->b(ILcom/tencent/mm/sdk/g/ao;Ljava/lang/Object;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_1
-
-    .line 111
-    :catch_0
-    move-exception v0
-
-    move v0, v2
-
-    .line 115
-    :goto_2
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    invoke-virtual {v1, v4, v5}, Lcom/tencent/mm/ar/g;->cO(J)I
-
-    .line 116
-    const-string/jumbo v1, "end"
-
-    invoke-virtual {v3, v1}, Lcom/tencent/mm/sdk/platformtools/bl;->addSplit(Ljava/lang/String;)V
-
-    .line 117
-    invoke-virtual {v3}, Lcom/tencent/mm/sdk/platformtools/bl;->dumpToLog()V
-
-    move v2, v0
-
-    .line 118
-    goto/16 :goto_0
-
+    .line 139
     :cond_2
-    move v0, v1
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
 
-    .line 113
-    goto :goto_2
-.end method
-
-.method public final p(Ljava/util/List;)Z
-    .locals 14
-
-    .prologue
-    .line 176
-    new-instance v3, Lcom/tencent/mm/sdk/platformtools/bl;
-
-    const-string/jumbo v0, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    const-string/jumbo v1, "set uploaded transaction"
-
-    invoke-direct {v3, v0, v1}, Lcom/tencent/mm/sdk/platformtools/bl;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 177
-    const-string/jumbo v0, "transation begin"
-
-    invoke-virtual {v3, v0}, Lcom/tencent/mm/sdk/platformtools/bl;->addSplit(Ljava/lang/String;)V
-
-    .line 178
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    invoke-static {}, Ljava/lang/Thread;->currentThread()Ljava/lang/Thread;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Ljava/lang/Thread;->getId()J
-
-    move-result-wide v1
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ar/g;->cN(J)J
-
-    move-result-wide v4
-
-    .line 179
-    const/4 v1, 0x1
-
-    .line 181
-    :try_start_0
-    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
-
-    move-result-object v6
-
-    :cond_0
-    :goto_0
-    invoke-interface {v6}, Ljava/util/Iterator;->hasNext()Z
-
-    move-result v0
+    and-int/lit8 v0, v0, 0x8
 
     if-eqz v0, :cond_3
 
-    invoke-interface {v6}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+    .line 140
+    const-string/jumbo v0, "status"
 
-    move-result-object v0
+    iget v2, p0, Lcom/tencent/mm/modelfriend/h;->status:I
 
-    check-cast v0, Ljava/lang/String;
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
-    .line 182
-    if-eqz v0, :cond_0
+    move-result-object v2
 
-    invoke-virtual {v0}, Ljava/lang/String;->length()I
+    invoke-virtual {v1, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    move-result v2
-
-    if-lez v2, :cond_0
-
-    .line 183
-    new-instance v2, Lcom/tencent/mm/modelfriend/g;
-
-    invoke-direct {v2}, Lcom/tencent/mm/modelfriend/g;-><init>()V
-
-    .line 186
-    const/16 v7, 0x8
-
-    iput v7, v2, Lcom/tencent/mm/modelfriend/g;->aqq:I
-
-    .line 187
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/bn;->DL()J
-
-    move-result-wide v7
-
-    iput-wide v7, v2, Lcom/tencent/mm/modelfriend/g;->byx:J
-
-    .line 188
-    invoke-virtual {v2}, Lcom/tencent/mm/modelfriend/g;->mA()Landroid/content/ContentValues;
-
-    move-result-object v7
-
-    .line 189
-    const/4 v2, 0x0
-
-    .line 190
-    invoke-virtual {v7}, Landroid/content/ContentValues;->size()I
-
-    move-result v8
-
-    if-lez v8, :cond_1
-
-    .line 191
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    const-string/jumbo v8, "addr_upload2"
-
-    const-string/jumbo v9, "id=?"
-
-    const/4 v10, 0x1
-
-    new-array v10, v10, [Ljava/lang/String;
-
-    const/4 v11, 0x0
-
-    new-instance v12, Ljava/lang/StringBuilder;
-
-    invoke-direct {v12}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-static {v0}, Lcom/tencent/mm/modelfriend/g;->gt(Ljava/lang/String;)I
-
-    move-result v13
-
-    invoke-virtual {v12, v13}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v12
-
-    aput-object v12, v10, v11
-
-    invoke-virtual {v2, v8, v7, v9, v10}, Lcom/tencent/mm/ar/g;->update(Ljava/lang/String;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
-
-    move-result v2
-
-    .line 193
-    :cond_1
-    const-string/jumbo v7, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    const-string/jumbo v9, "local contact uploaded : "
-
-    invoke-direct {v8, v9}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
-
-    invoke-virtual {v8, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    const-string/jumbo v8, ", update result: "
-
-    invoke-virtual {v0, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v7, v0}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;)V
-    :try_end_0
-    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
-
-    goto :goto_0
-
-    .line 195
-    :catch_0
-    move-exception v0
-
-    .line 196
-    const-string/jumbo v1, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    invoke-virtual {v0}, Ljava/lang/Exception;->getMessage()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-static {v1, v0}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 197
-    const/4 v0, 0x0
-
-    .line 199
-    :goto_1
-    iget-object v1, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    invoke-virtual {v1, v4, v5}, Lcom/tencent/mm/ar/g;->cO(J)I
-
-    .line 200
-    const-string/jumbo v1, "transation end"
-
-    invoke-virtual {v3, v1}, Lcom/tencent/mm/sdk/platformtools/bl;->addSplit(Ljava/lang/String;)V
-
-    .line 201
-    invoke-virtual {v3}, Lcom/tencent/mm/sdk/platformtools/bl;->dumpToLog()V
-
-    .line 202
-    if-eqz v0, :cond_2
-
-    .line 203
-    const/4 v1, 0x3
-
-    const/4 v2, 0x0
-
-    invoke-virtual {p0, v1, p0, v2}, Lcom/tencent/mm/modelfriend/h;->b(ILcom/tencent/mm/sdk/g/ao;Ljava/lang/Object;)V
-
-    .line 205
-    :cond_2
-    return v0
-
+    .line 142
     :cond_3
-    move v0, v1
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
 
-    .line 198
-    goto :goto_1
+    and-int/lit8 v0, v0, 0x10
+
+    if-eqz v0, :cond_4
+
+    .line 143
+    const-string/jumbo v0, "username"
+
+    invoke-virtual {p0}, Lcom/tencent/mm/modelfriend/h;->getUsername()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 145
+    :cond_4
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit8 v0, v0, 0x20
+
+    if-eqz v0, :cond_5
+
+    .line 146
+    const-string/jumbo v0, "nickname"
+
+    invoke-virtual {p0}, Lcom/tencent/mm/modelfriend/h;->ym()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 148
+    :cond_5
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit8 v0, v0, 0x40
+
+    if-eqz v0, :cond_6
+
+    .line 149
+    const-string/jumbo v2, "nicknamepyinitial"
+
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bLF:Ljava/lang/String;
+
+    if-nez v0, :cond_10
+
+    const-string/jumbo v0, ""
+
+    :goto_0
+    invoke-virtual {v1, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 151
+    :cond_6
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit16 v0, v0, 0x80
+
+    if-eqz v0, :cond_7
+
+    .line 152
+    const-string/jumbo v2, "nicknamequanpin"
+
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bLG:Ljava/lang/String;
+
+    if-nez v0, :cond_11
+
+    const-string/jumbo v0, ""
+
+    :goto_1
+    invoke-virtual {v1, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 154
+    :cond_7
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit16 v0, v0, 0x100
+
+    if-eqz v0, :cond_8
+
+    .line 155
+    const-string/jumbo v0, "sex"
+
+    iget v2, p0, Lcom/tencent/mm/modelfriend/h;->aSu:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 157
+    :cond_8
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit16 v0, v0, 0x200
+
+    if-eqz v0, :cond_9
+
+    .line 158
+    const-string/jumbo v0, "personalcard"
+
+    iget v2, p0, Lcom/tencent/mm/modelfriend/h;->aSD:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 160
+    :cond_9
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit16 v0, v0, 0x400
+
+    if-eqz v0, :cond_a
+
+    .line 161
+    const-string/jumbo v2, "province"
+
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSF:Ljava/lang/String;
+
+    if-nez v0, :cond_12
+
+    const-string/jumbo v0, ""
+
+    :goto_2
+    invoke-virtual {v1, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 163
+    :cond_a
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit16 v0, v0, 0x800
+
+    if-eqz v0, :cond_b
+
+    .line 164
+    const-string/jumbo v2, "city"
+
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSG:Ljava/lang/String;
+
+    if-nez v0, :cond_13
+
+    const-string/jumbo v0, ""
+
+    :goto_3
+    invoke-virtual {v1, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 166
+    :cond_b
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit16 v0, v0, 0x1000
+
+    if-eqz v0, :cond_c
+
+    .line 167
+    const-string/jumbo v2, "signature"
+
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSE:Ljava/lang/String;
+
+    if-nez v0, :cond_14
+
+    const-string/jumbo v0, ""
+
+    :goto_4
+    invoke-virtual {v1, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 169
+    :cond_c
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit16 v0, v0, 0x2000
+
+    if-eqz v0, :cond_d
+
+    .line 170
+    const-string/jumbo v2, "alias"
+
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->baB:Ljava/lang/String;
+
+    if-nez v0, :cond_15
+
+    const-string/jumbo v0, ""
+
+    :goto_5
+    invoke-virtual {v1, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 172
+    :cond_d
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    and-int/lit16 v0, v0, 0x4000
+
+    if-eqz v0, :cond_e
+
+    .line 173
+    const-string/jumbo v0, "type"
+
+    iget v2, p0, Lcom/tencent/mm/modelfriend/h;->type:I
+
+    invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v0, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
+
+    .line 175
+    :cond_e
+    iget v0, p0, Lcom/tencent/mm/modelfriend/h;->aou:I
+
+    const v2, 0x8000
+
+    and-int/2addr v0, v2
+
+    if-eqz v0, :cond_f
+
+    .line 176
+    const-string/jumbo v2, "email"
+
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSx:Ljava/lang/String;
+
+    if-nez v0, :cond_16
+
+    const-string/jumbo v0, ""
+
+    :goto_6
+    invoke-virtual {v1, v2, v0}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
+
+    .line 178
+    :cond_f
+    return-object v1
+
+    .line 149
+    :cond_10
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bLF:Ljava/lang/String;
+
+    goto/16 :goto_0
+
+    .line 152
+    :cond_11
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bLG:Ljava/lang/String;
+
+    goto/16 :goto_1
+
+    .line 161
+    :cond_12
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSF:Ljava/lang/String;
+
+    goto :goto_2
+
+    .line 164
+    :cond_13
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSG:Ljava/lang/String;
+
+    goto :goto_3
+
+    .line 167
+    :cond_14
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSE:Ljava/lang/String;
+
+    goto :goto_4
+
+    .line 170
+    :cond_15
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->baB:Ljava/lang/String;
+
+    goto :goto_5
+
+    .line 176
+    :cond_16
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aSx:Ljava/lang/String;
+
+    goto :goto_6
 .end method
 
-.method public final xC()Ljava/util/List;
-    .locals 6
+.method public final ym()Ljava/lang/String;
+    .locals 1
 
     .prologue
-    const/4 v5, 0x1
+    .line 233
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aji:Ljava/lang/String;
 
-    const/4 v4, 0x0
+    if-nez v0, :cond_0
 
-    .line 448
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
+    const-string/jumbo v0, ""
 
-    const-string/jumbo v1, "select addr_upload2.moblie , addr_upload2.md5 from addr_upload2 where addr_upload2.type = 0"
-
-    const/4 v2, 0x0
-
-    invoke-virtual {v0, v1, v2}, Lcom/tencent/mm/ar/g;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v0
-
-    .line 449
-    new-instance v1, Ljava/util/LinkedList;
-
-    invoke-direct {v1}, Ljava/util/LinkedList;-><init>()V
-
-    .line 450
     :goto_0
-    invoke-interface {v0}, Landroid/database/Cursor;->moveToNext()Z
+    return-object v0
 
-    move-result v2
-
-    if-eqz v2, :cond_0
-
-    .line 451
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/String;
-
-    invoke-interface {v0, v4}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v2, v4
-
-    invoke-interface {v0, v5}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
-
-    move-result-object v3
-
-    aput-object v3, v2, v5
-
-    invoke-interface {v1, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->aji:Ljava/lang/String;
 
     goto :goto_0
-
-    .line 453
-    :cond_0
-    invoke-interface {v0}, Landroid/database/Cursor;->close()V
-
-    .line 454
-    return-object v1
 .end method
 
-.method protected final xD()Z
-    .locals 5
+.method public final yw()Ljava/lang/String;
+    .locals 1
 
     .prologue
-    const/4 v0, 0x1
+    .line 201
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bMf:Ljava/lang/String;
 
-    const/4 v1, 0x0
+    if-nez v0, :cond_0
 
-    .line 522
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    if-eqz v2, :cond_0
-
-    iget-object v2, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    invoke-virtual {v2}, Lcom/tencent/mm/ar/g;->aFN()Z
-
-    move-result v2
-
-    if-eqz v2, :cond_1
-
-    .line 523
-    :cond_0
-    const-string/jumbo v2, "!44@/B4Tb64lLpL3lTzROgXSiaEB/XXrrgblbOVxZH2OfNk="
-
-    const-string/jumbo v3, "shouldProcessEvent db is close :%s"
-
-    new-array v4, v0, [Ljava/lang/Object;
-
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    if-nez v0, :cond_2
-
-    const-string/jumbo v0, "null"
+    const-string/jumbo v0, ""
 
     :goto_0
-    aput-object v0, v4, v1
+    return-object v0
 
-    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    move v0, v1
-
-    .line 526
-    :cond_1
-    return v0
-
-    .line 523
-    :cond_2
-    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bqt:Lcom/tencent/mm/ar/g;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ar/g;->aFN()Z
-
-    move-result v0
-
-    invoke-static {v0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v0
+    :cond_0
+    iget-object v0, p0, Lcom/tencent/mm/modelfriend/h;->bMf:Ljava/lang/String;
 
     goto :goto_0
 .end method

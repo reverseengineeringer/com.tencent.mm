@@ -2,9 +2,7 @@ package com.tencent.mm.d.a;
 
 public final class du$a
 {
-  public String azV;
-  public long azW;
-  public String azX;
+  public long avg;
 }
 
 /* Location:

@@ -2,7 +2,9 @@ package com.tencent.mm.ui.tools;
 
 public abstract interface k$a
 {
-  public abstract String rG(String paramString);
+  public abstract void biD();
+  
+  public abstract void onAnimationEnd();
 }
 
 /* Location:

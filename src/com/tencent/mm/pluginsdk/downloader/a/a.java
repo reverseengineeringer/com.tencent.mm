@@ -2,8 +2,8 @@ package com.tencent.mm.pluginsdk.downloader.a;
 
 public abstract class a
 {
-  public static final String[] gKG = { "shoot" };
-  public volatile int gKF = a.gKH;
+  public static final String[] izq = { "shoot" };
+  public volatile int izp = a.izr;
   
   public static enum a {}
 }

@@ -1,11 +1,11 @@
 package com.tencent.mm.protocal;
 
 public final class a$ak
-  extends a.c
+  extends a.e
 {
   public a$ak()
   {
-    super("getTransferMoneyRequest", "get_transfer_money_request", 74, true);
+    super("openEmotionUrl", "openEmotionUrl", 20000, false);
   }
 }
 

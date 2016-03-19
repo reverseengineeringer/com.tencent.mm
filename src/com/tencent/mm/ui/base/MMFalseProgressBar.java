@@ -2,22 +2,43 @@ package com.tencent.mm.ui.base;
 
 import android.content.Context;
 import android.os.Looper;
+import android.os.Message;
 import android.util.AttributeSet;
 import android.widget.ProgressBar;
-import com.tencent.mm.sdk.platformtools.ac;
-import com.tencent.mm.sdk.platformtools.al;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.aa;
+import com.tencent.mm.sdk.platformtools.ah;
+import com.tencent.mm.sdk.platformtools.u;
 
 public class MMFalseProgressBar
   extends ProgressBar
 {
-  private boolean iEm = false;
-  private float iEn = 0.0F;
-  private float iEo;
-  private float iEp;
-  private float iEq;
-  private float iEr;
-  private ac mHandler = new am(this, Looper.getMainLooper());
+  private float kDA;
+  private float kDB;
+  private boolean kDw = false;
+  private float kDx = 0.0F;
+  private float kDy;
+  private float kDz;
+  private aa mHandler = new aa(Looper.getMainLooper())
+  {
+    public final void handleMessage(Message paramAnonymousMessage)
+    {
+      switch (what)
+      {
+      default: 
+        return;
+      case 1000: 
+        MMFalseProgressBar.a(MMFalseProgressBar.this);
+        return;
+      case 1001: 
+        MMFalseProgressBar.b(MMFalseProgressBar.this);
+        return;
+      case 1002: 
+        MMFalseProgressBar.c(MMFalseProgressBar.this);
+        return;
+      }
+      MMFalseProgressBar.d(MMFalseProgressBar.this);
+    }
+  };
   
   public MMFalseProgressBar(Context paramContext, AttributeSet paramAttributeSet)
   {
@@ -32,7 +53,7 @@ public class MMFalseProgressBar
   
   public final void finish()
   {
-    t.d("!44@/B4Tb64lLpIgFH7tRrb7XIDRWwDi3rpMvhPURIsL2LQ=", "[cpan] finish");
+    u.d("!44@/B4Tb64lLpIgFH7tRrb7XIDRWwDi3rpMvhPURIsL2LQ=", "[cpan] finish");
     if (mHandler != null) {
       mHandler.sendEmptyMessage(1002);
     }
@@ -40,26 +61,26 @@ public class MMFalseProgressBar
   
   public final void start()
   {
-    t.d("!44@/B4Tb64lLpIgFH7tRrb7XIDRWwDi3rpMvhPURIsL2LQ=", "[cpan] start");
-    if (iEm) {}
+    u.d("!44@/B4Tb64lLpIgFH7tRrb7XIDRWwDi3rpMvhPURIsL2LQ=", "[cpan] start");
+    if (kDw) {}
     for (;;)
     {
       return;
-      iEm = true;
-      if (al.dc(getContext()))
+      kDw = true;
+      if (ah.dF(getContext()))
       {
-        iEo = 4.0F;
-        iEp = 1.0F;
-        iEq = 0.3F;
+        kDy = 4.0F;
+        kDz = 1.0F;
+        kDA = 0.3F;
       }
-      for (iEr = 50.0F; mHandler != null; iEr = 50.0F)
+      for (kDB = 50.0F; mHandler != null; kDB = 50.0F)
       {
         mHandler.sendEmptyMessage(1000);
         mHandler.sendEmptyMessage(1001);
         return;
-        iEo = 2.0F;
-        iEp = 0.5F;
-        iEq = 0.15F;
+        kDy = 2.0F;
+        kDz = 0.5F;
+        kDA = 0.15F;
       }
     }
   }

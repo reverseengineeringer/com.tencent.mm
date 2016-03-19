@@ -1,8 +1,11 @@
 package com.tencent.mm.d.a;
 
+import android.content.Context;
+
 public final class aq$a
 {
-  public boolean avw = false;
+  public String atQ;
+  public Context context;
 }
 
 /* Location:

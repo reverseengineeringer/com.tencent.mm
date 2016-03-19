@@ -15,7 +15,13 @@
 
 
 # instance fields
-.field public Kr:Z
+.field public auy:Ljava/lang/String;
+
+.field public auz:Ljava/lang/String;
+
+.field public progress:I
+
+.field public status:I
 
 
 # direct methods
@@ -23,13 +29,16 @@
     .locals 1
 
     .prologue
+    const/4 v0, 0x0
+
     .line 14
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 15
-    const/4 v0, 0x0
+    .line 16
+    iput v0, p0, Lcom/tencent/mm/d/a/bj$a;->status:I
 
-    iput-boolean v0, p0, Lcom/tencent/mm/d/a/bj$a;->Kr:Z
+    .line 17
+    iput v0, p0, Lcom/tencent/mm/d/a/bj$a;->progress:I
 
     return-void
 .end method

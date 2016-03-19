@@ -3,10 +3,10 @@ package com.tencent.mm.app.plugin;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import com.tencent.mm.pluginsdk.n;
-import com.tencent.mm.pluginsdk.ui.applet.ah;
-import com.tencent.mm.pluginsdk.ui.d.f;
-import com.tencent.mm.sdk.platformtools.bn;
+import com.tencent.mm.pluginsdk.l;
+import com.tencent.mm.pluginsdk.ui.applet.g;
+import com.tencent.mm.pluginsdk.ui.d.b;
+import com.tencent.mm.sdk.platformtools.ay;
 import com.tencent.mm.ui.ExposeWithProofUI;
 
 @URISpanHandlerSet.a
@@ -18,44 +18,45 @@ class URISpanHandlerSet$ExposeUriSpanHandler
     super(paramURISpanHandlerSet);
   }
   
-  final boolean a(ah paramah, f paramf)
+  final boolean a(g paramg, b paramb)
   {
     Intent localIntent;
     if (type == 31)
     {
       localIntent = new Intent();
-      paramah = (String)paramf.a(paramah);
-      localIntent.putExtra("k_username", paramah);
-      if ((bn.iW(paramah)) || (!paramah.endsWith("@chatroom"))) {
-        break label106;
+      paramg = (String)paramb.a(paramg);
+      localIntent.putExtra("k_username", paramg);
+      if ((ay.kz(paramg)) || (!paramg.endsWith("@chatroom"))) {
+        break label115;
       }
     }
-    label106:
+    label115:
     for (int i = 36;; i = 39)
     {
+      localIntent.putExtra("k_need_step_two", true);
       localIntent.putExtra("k_expose_scene", i);
       localIntent.putExtra("k_from_profile", true);
-      localIntent.setClass(URISpanHandlerSet.a(apd), ExposeWithProofUI.class);
-      URISpanHandlerSet.a(apd).startActivity(localIntent);
+      localIntent.setClass(URISpanHandlerSet.a(ang), ExposeWithProofUI.class);
+      URISpanHandlerSet.a(ang).startActivity(localIntent);
       return true;
       return false;
     }
   }
   
-  final boolean a(String paramString, boolean paramBoolean, n paramn, Bundle paramBundle)
+  final boolean a(String paramString, boolean paramBoolean, l paraml, Bundle paramBundle)
   {
     return false;
   }
   
-  final ah aZ(String paramString)
+  final g bb(String paramString)
   {
     if (paramString.trim().toLowerCase().equals("weixin://expose/")) {
-      return new ah(paramString, 31, null);
+      return new g(paramString, 31, null);
     }
     return null;
   }
   
-  final int[] lL()
+  final int[] lg()
   {
     return new int[] { 31 };
   }

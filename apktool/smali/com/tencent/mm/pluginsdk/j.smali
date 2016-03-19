@@ -1,202 +1,120 @@
-.class public interface abstract Lcom/tencent/mm/pluginsdk/j;
+.class public final Lcom/tencent/mm/pluginsdk/j;
 .super Ljava/lang/Object;
 .source "SourceFile"
 
 
-# annotations
-.annotation runtime Ljava/lang/Deprecated;
-.end annotation
+# direct methods
+.method public static c(DDDD)D
+    .locals 12
 
+    .prologue
+    .line 49
+    const-wide v0, 0x400921fb54442d18L    # Math.PI
 
-# virtual methods
-.method public abstract a(Ljava/lang/Runnable;Lcom/tencent/mm/ui/MMActivity;IILandroid/content/Intent;)Lcom/tencent/mm/ui/base/aa;
-.end method
+    mul-double/2addr v0, p0
 
-.method public abstract a(Landroid/app/Activity;Landroid/content/Intent;I)V
-.end method
+    const-wide v2, 0x4066800000000000L    # 180.0
 
-.method public abstract a(Landroid/app/Activity;Landroid/content/Intent;Landroid/content/Intent;Ljava/lang/String;ILcom/tencent/mm/ui/tools/k$a;)V
-.end method
+    div-double/2addr v0, v2
 
-.method public abstract a(Landroid/content/Context;Landroid/content/Intent;Landroid/content/Intent;)V
-.end method
+    .line 50
+    const-wide v2, 0x400921fb54442d18L    # Math.PI
 
-.method public abstract a(Landroid/content/Intent;ILandroid/app/Activity;)V
-.end method
+    mul-double v2, v2, p4
 
-.method public abstract a(Landroid/content/Intent;ILcom/tencent/mm/ui/MMActivity;Landroid/content/Intent;)V
-.end method
+    const-wide v4, 0x4066800000000000L    # 180.0
 
-.method public abstract a(Landroid/content/Intent;Landroid/app/Activity;)V
-.end method
+    div-double/2addr v2, v4
 
-.method public abstract a(Landroid/content/Intent;Landroid/app/Activity;I)V
-.end method
+    .line 51
+    sub-double v4, v0, v2
 
-.method public abstract a(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    .line 52
+    sub-double v6, p2, p6
 
-.method public abstract a(Landroid/content/Intent;Lcom/tencent/mm/ui/MMActivity$a;Lcom/tencent/mm/ui/MMActivity;)V
-.end method
+    const-wide v8, 0x400921fb54442d18L    # Math.PI
 
-.method public abstract a(Landroid/content/Intent;Lcom/tencent/mm/ui/MMActivity;)V
-.end method
+    mul-double/2addr v6, v8
 
-.method public abstract a(Lcom/tencent/mm/ui/MMActivity;Ljava/lang/String;Lcom/tencent/mm/sdk/modelmsg/WXMediaMessage;Ljava/lang/String;Ljava/lang/String;)V
-.end method
+    const-wide v8, 0x4066800000000000L    # 180.0
 
-.method public abstract a(Lcom/tencent/mm/ui/MMWizardActivity;Landroid/content/Intent;)V
-.end method
+    div-double/2addr v6, v8
 
-.method public abstract a(ZZLandroid/content/Context;Ljava/lang/String;II)V
-.end method
+    .line 53
+    const-wide/high16 v8, 0x4000000000000000L    # 2.0
 
-.method public varargs abstract a(Landroid/content/Context;Ljava/lang/String;[Ljava/lang/Object;)Z
-.end method
+    const-wide/high16 v10, 0x4000000000000000L    # 2.0
 
-.method public abstract aa(Landroid/content/Context;)Lcom/tencent/mm/ui/base/aa;
-.end method
+    div-double/2addr v4, v10
 
-.method public abstract ab(Landroid/content/Context;)Landroid/content/Intent;
-.end method
+    invoke-static {v4, v5}, Ljava/lang/Math;->sin(D)D
 
-.method public abstract ac(Landroid/content/Context;)V
-.end method
+    move-result-wide v4
 
-.method public abstract ad(Landroid/content/Context;)V
-.end method
+    const-wide/high16 v10, 0x4000000000000000L    # 2.0
 
-.method public abstract b(Landroid/content/Context;Landroid/content/Intent;)V
-.end method
+    invoke-static {v4, v5, v10, v11}, Ljava/lang/Math;->pow(DD)D
 
-.method public abstract b(Landroid/content/Intent;Landroid/app/Activity;)V
-.end method
+    move-result-wide v4
 
-.method public abstract b(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    invoke-static {v0, v1}, Ljava/lang/Math;->cos(D)D
 
-.method public abstract b(Lcom/tencent/mm/ui/MMWizardActivity;Landroid/content/Intent;)V
-.end method
+    move-result-wide v0
 
-.method public abstract b(Landroid/content/Context;Ljava/lang/String;Landroid/os/Bundle;)Z
-.end method
+    invoke-static {v2, v3}, Ljava/lang/Math;->cos(D)D
 
-.method public abstract c(Landroid/content/Context;Landroid/content/Intent;)V
-.end method
+    move-result-wide v2
 
-.method public abstract c(Landroid/content/Intent;Landroid/app/Activity;)V
-.end method
+    mul-double/2addr v0, v2
 
-.method public abstract c(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    const-wide/high16 v2, 0x4000000000000000L    # 2.0
 
-.method public abstract c(Ljava/lang/String;Landroid/content/Context;)V
-.end method
+    div-double v2, v6, v2
 
-.method public abstract c(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-.end method
+    invoke-static {v2, v3}, Ljava/lang/Math;->sin(D)D
 
-.method public abstract cancelNotification(Ljava/lang/String;)V
-.end method
+    move-result-wide v2
 
-.method public abstract d(Landroid/content/Context;Landroid/content/Intent;)V
-.end method
+    const-wide/high16 v6, 0x4000000000000000L    # 2.0
 
-.method public abstract d(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    invoke-static {v2, v3, v6, v7}, Ljava/lang/Math;->pow(DD)D
 
-.method public abstract e(Landroid/content/Context;Landroid/content/Intent;)V
-.end method
+    move-result-wide v2
 
-.method public abstract e(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    mul-double/2addr v0, v2
 
-.method public abstract f(Landroid/content/Context;Landroid/content/Intent;)V
-.end method
+    add-double/2addr v0, v4
 
-.method public abstract f(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    invoke-static {v0, v1}, Ljava/lang/Math;->sqrt(D)D
 
-.method public abstract g(Landroid/content/Context;Landroid/content/Intent;)V
-.end method
+    move-result-wide v0
 
-.method public abstract g(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    invoke-static {v0, v1}, Ljava/lang/Math;->asin(D)D
 
-.method public abstract h(Landroid/content/Context;Landroid/content/Intent;)V
-.end method
+    move-result-wide v0
 
-.method public abstract h(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    mul-double/2addr v0, v8
 
-.method public abstract i(Landroid/content/Context;Landroid/content/Intent;)V
-.end method
+    .line 55
+    const-wide v2, 0x415854a640000000L    # 6378137.0
 
-.method public abstract i(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    mul-double/2addr v0, v2
 
-.method public abstract j(Landroid/content/Context;Landroid/content/Intent;)V
-.end method
+    .line 56
+    const-wide v2, 0x40c3880000000000L    # 10000.0
 
-.method public abstract j(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    mul-double/2addr v0, v2
 
-.method public abstract k(Landroid/content/Context;Landroid/content/Intent;)V
-.end method
+    invoke-static {v0, v1}, Ljava/lang/Math;->round(D)J
 
-.method public abstract k(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    move-result-wide v0
 
-.method public abstract l(Landroid/content/Context;Landroid/content/Intent;)V
-.end method
+    const-wide/16 v2, 0x2710
 
-.method public abstract l(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
+    div-long/2addr v0, v2
 
-.method public abstract lq()V
-.end method
+    long-to-double v0, v0
 
-.method public abstract m(Landroid/content/Context;Ljava/lang/String;)V
-.end method
-
-.method public abstract m(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract n(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract o(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract p(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract q(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract r(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract s(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract t(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract u(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract v(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract w(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract x(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract y(Landroid/content/Intent;Landroid/content/Context;)V
-.end method
-
-.method public abstract z(Landroid/content/Intent;Landroid/content/Context;)V
+    .line 57
+    return-wide v0
 .end method

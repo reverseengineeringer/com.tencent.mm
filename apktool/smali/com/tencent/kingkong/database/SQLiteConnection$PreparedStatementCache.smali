@@ -23,13 +23,12 @@
     .locals 0
 
     .prologue
-    .line 1432
+    .line 1440
     iput-object p1, p0, Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatementCache;->this$0:Lcom/tencent/kingkong/database/SQLiteConnection;
 
-    .line 1433
+    .line 1439
     invoke-direct {p0, p2}, Lcom/tencent/kingkong/support/LruCache;-><init>(I)V
 
-    .line 1434
     return-void
 .end method
 
@@ -39,29 +38,29 @@
     .locals 7
 
     .prologue
-    .line 1446
+    .line 1452
     const-string/jumbo v0, "MicroMsg.kkdb.SQLiteConnection"
 
     const-string/jumbo v1, "  Prepared statement cache:"
 
     invoke-static {v0, v1}, Lcom/tencent/kingkong/support/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1447
+    .line 1453
     invoke-virtual {p0}, Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatementCache;->snapshot()Ljava/util/Map;
 
     move-result-object v1
 
-    .line 1448
+    .line 1454
     invoke-interface {v1}, Ljava/util/Map;->isEmpty()Z
 
     move-result v0
 
     if-nez v0, :cond_2
 
-    .line 1449
+    .line 1455
     const/4 v0, 0x0
 
-    .line 1450
+    .line 1456
     invoke-interface {v1}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v1
@@ -79,11 +78,11 @@
 
     if-nez v0, :cond_0
 
-    .line 1466
+    .line 1472
     :goto_1
     return-void
 
-    .line 1450
+    .line 1456
     :cond_0
     invoke-interface {v3}, Ljava/util/Iterator;->next()Ljava/lang/Object;
 
@@ -93,26 +92,26 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 1451
+    .line 1457
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v0
 
     check-cast v0, Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;
 
-    .line 1452
+    .line 1458
     iget-boolean v4, v0, Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;->mInCache:Z
 
     if-eqz v4, :cond_1
 
-    .line 1453
+    .line 1459
     invoke-interface {v1}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Ljava/lang/String;
 
-    .line 1454
+    .line 1460
     const-string/jumbo v4, "MicroMsg.kkdb.SQLiteConnection"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -131,7 +130,7 @@
 
     move-result-object v5
 
-    .line 1455
+    .line 1461
     iget v6, v0, Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;->mStatementPtr:I
 
     invoke-static {v6}, Ljava/lang/Integer;->toHexString(I)Ljava/lang/String;
@@ -142,7 +141,7 @@
 
     move-result-object v5
 
-    .line 1456
+    .line 1462
     const-string/jumbo v6, ", numParameters="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -155,7 +154,7 @@
 
     move-result-object v5
 
-    .line 1457
+    .line 1463
     const-string/jumbo v6, ", type="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -168,7 +167,7 @@
 
     move-result-object v5
 
-    .line 1458
+    .line 1464
     const-string/jumbo v6, ", readOnly="
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -181,7 +180,7 @@
 
     move-result-object v0
 
-    .line 1459
+    .line 1465
     const-string/jumbo v5, ", sql=\""
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -207,10 +206,10 @@
 
     move-result-object v0
 
-    .line 1454
+    .line 1460
     invoke-static {v4, v0}, Lcom/tencent/kingkong/support/Log;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1461
+    .line 1467
     :cond_1
     add-int/lit8 v0, v2, 0x1
 
@@ -218,7 +217,7 @@
 
     goto/16 :goto_0
 
-    .line 1464
+    .line 1470
     :cond_2
     const-string/jumbo v0, "MicroMsg.kkdb.SQLiteConnection"
 
@@ -249,23 +248,23 @@
     .locals 1
 
     .prologue
-    .line 1439
+    .line 1445
     const/4 v0, 0x0
 
     iput-boolean v0, p3, Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;->mInCache:Z
 
-    .line 1440
+    .line 1446
     iget-boolean v0, p3, Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;->mInUse:Z
 
     if-nez v0, :cond_0
 
-    .line 1441
+    .line 1447
     iget-object v0, p0, Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatementCache;->this$0:Lcom/tencent/kingkong/database/SQLiteConnection;
 
     # invokes: Lcom/tencent/kingkong/database/SQLiteConnection;->finalizePreparedStatement(Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
     invoke-static {v0, p3}, Lcom/tencent/kingkong/database/SQLiteConnection;->access$0(Lcom/tencent/kingkong/database/SQLiteConnection;Lcom/tencent/kingkong/database/SQLiteConnection$PreparedStatement;)V
 
-    .line 1443
+    .line 1449
     :cond_0
     return-void
 .end method

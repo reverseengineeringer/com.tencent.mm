@@ -1,13 +1,8 @@
 package com.tencent.mm.d.a;
 
-import java.util.List;
-
 public final class em$b
 {
-  public boolean aBc = false;
-  public List aBd;
-  public int aBe = -1;
-  public int axw = 0;
+  public boolean atf = false;
 }
 
 /* Location:

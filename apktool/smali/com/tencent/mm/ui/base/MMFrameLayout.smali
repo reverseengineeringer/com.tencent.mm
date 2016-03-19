@@ -4,7 +4,7 @@
 
 
 # instance fields
-.field private iEK:Z
+.field private kDU:Z
 
 
 # direct methods
@@ -18,7 +18,7 @@
     .line 10
     const/4 v0, 0x0
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFrameLayout;->iEK:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFrameLayout;->kDU:Z
 
     .line 14
     return-void
@@ -41,7 +41,7 @@
     move v1, v0
 
     :goto_0
-    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFrameLayout;->iEK:Z
+    iget-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFrameLayout;->kDU:Z
 
     if-nez v0, :cond_1
 
@@ -89,7 +89,7 @@
     :cond_1
     const/4 v0, 0x1
 
-    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFrameLayout;->iEK:Z
+    iput-boolean v0, p0, Lcom/tencent/mm/ui/base/MMFrameLayout;->kDU:Z
 
     .line 40
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V

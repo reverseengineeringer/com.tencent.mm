@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <bool name="a">false</bool>
-    <bool name="b">true</bool>
+    <bool name="b">false</bool>
     <bool name="c">true</bool>
-    <bool name="d">false</bool>
-    <bool name="e">false</bool>
-    <bool name="f">true</bool>
+    <bool name="d">true</bool>
+    <bool name="e">true</bool>
+    <bool name="f">false</bool>
 </resources>

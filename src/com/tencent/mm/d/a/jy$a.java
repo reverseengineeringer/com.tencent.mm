@@ -1,9 +1,10 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.storage.ag;
+
 public final class jy$a
 {
-  public String[] aHj;
-  public int ave;
+  public ag ask;
 }
 
 /* Location:

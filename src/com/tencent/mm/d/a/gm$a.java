@@ -1,8 +1,10 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.sdk.c.b;
+
 public final class gm$a
 {
-  public int aDN = -1;
+  public b aBE;
 }
 
 /* Location:

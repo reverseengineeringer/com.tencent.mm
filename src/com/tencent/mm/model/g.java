@@ -1,14 +1,19 @@
 package com.tencent.mm.model;
 
-import com.tencent.mm.ar.g.b;
-import com.tencent.mm.storage.ba;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-final class g
-  implements g.b
+public final class g
 {
-  public final String[] lW()
+  public static String b(String paramString, long paramLong)
   {
-    return ba.aqU;
+    String str = new SimpleDateFormat("ssHHmmMMddyy").format(new Date(paramLong));
+    if ((paramString != null) && (paramString.length() > 1)) {}
+    for (paramString = str + com.tencent.mm.a.g.m(paramString.getBytes()).substring(0, 7);; paramString = str + "fffffff")
+    {
+      paramString = paramString + String.format("%04x", new Object[] { Long.valueOf(paramLong % 65535L) });
+      return paramString + (paramLong % 7L + 100L);
+    }
   }
 }
 

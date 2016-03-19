@@ -6,7 +6,7 @@
 # static fields
 .field private static TAG:Ljava/lang/String;
 
-.field private static bkp:I
+.field private static buP:I
 
 
 # direct methods
@@ -14,16 +14,210 @@
     .locals 1
 
     .prologue
-    .line 29
+    .line 32
     const-string/jumbo v0, "!44@/B4Tb64lLpKR3MWtFvfaICy4XC1GqRhc7pOb2Fus2EQ="
 
     sput-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
 
-    .line 119
+    .line 122
     const/4 v0, -0x1
 
-    sput v0, Lcom/tencent/mm/g/g;->bkp:I
+    sput v0, Lcom/tencent/mm/g/g;->buP:I
 
+    return-void
+.end method
+
+.method public static D(II)V
+    .locals 5
+
+    .prologue
+    .line 100
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 101
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "settings_active_begin_time_hour"
+
+    invoke-interface {v1, v2, p0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 102
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "settings_active_begin_time_min"
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 105
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 106
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "settings_active_begin_time_hour"
+
+    invoke-interface {v1, v2, p0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 107
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "settings_active_begin_time_min"
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 108
+    sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveActiveBegine: %d:%d"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 109
+    return-void
+.end method
+
+.method public static E(II)V
+    .locals 5
+
+    .prologue
+    .line 112
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 113
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "settings_active_end_time_hour"
+
+    invoke-interface {v1, v2, p0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 114
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "settings_active_end_time_min"
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 116
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 117
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "settings_active_end_time_hour"
+
+    invoke-interface {v1, v2, p0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 118
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "settings_active_end_time_min"
+
+    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 119
+    sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveActiveEnd: %d:%d"
+
+    const/4 v2, 0x2
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 120
     return-void
 .end method
 
@@ -31,152 +225,8 @@
     .locals 5
 
     .prologue
-    .line 69
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEU()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 70
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_shake"
-
-    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 72
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 73
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_shake"
-
-    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 74
-    sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveIsShake: %B"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 75
-    return-void
-.end method
-
-.method public static aB(Z)V
-    .locals 5
-
-    .prologue
-    .line 88
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEU()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 89
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_active_time_full"
-
-    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 91
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 92
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_active_time_full"
-
-    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 93
-    sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveIsActiveTime: %B"
-
-    const/4 v2, 0x1
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 94
-    return-void
-.end method
-
-.method public static aw(Z)V
-    .locals 5
-
-    .prologue
-    .line 36
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEU()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 37
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_new_msg_notification"
-
-    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
     .line 39
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -193,7 +243,25 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 41
+    .line 42
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 43
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "settings_new_msg_notification"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 44
     sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveNewMsgNotification: %B"
@@ -210,36 +278,18 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 42
+    .line 45
     return-void
 .end method
 
-.method public static ax(Z)V
+.method public static aB(Z)V
     .locals 5
 
     .prologue
-    .line 45
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEU()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 46
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_show_detail"
-
-    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
     .line 48
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -256,7 +306,25 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 50
+    .line 51
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 52
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "settings_show_detail"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 53
     sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveIsShowDetail: %B"
@@ -273,22 +341,22 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 51
+    .line 54
     return-void
 .end method
 
-.method public static ay(Z)V
+.method public static aC(Z)V
     .locals 5
 
     .prologue
-    .line 54
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
+    .line 57
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 55
+    .line 58
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -301,7 +369,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 56
+    .line 59
     sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "[NOTIFICATION SETTINGS]is notification by system: %B"
@@ -318,36 +386,18 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 57
+    .line 60
     return-void
 .end method
 
-.method public static az(Z)V
+.method public static aD(Z)V
     .locals 5
 
     .prologue
-    .line 60
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEU()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 61
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_sound"
-
-    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
     .line 63
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -364,7 +414,25 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 65
+    .line 66
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 67
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "settings_sound"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 68
     sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveIsSound: %B"
@@ -381,73 +449,257 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 66
+    .line 69
     return-void
 .end method
 
-.method public static b(Lcom/tencent/mm/storage/ar;)I
+.method public static aE(Z)V
     .locals 5
 
     .prologue
-    const/4 v2, 0x0
+    .line 72
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
 
-    .line 243
-    iget-object v3, p0, Lcom/tencent/mm/d/b/aq;->aWP:Ljava/lang/String;
+    move-result-object v0
 
-    .line 244
-    iget-object v0, p0, Lcom/tencent/mm/d/b/aq;->field_talker:Ljava/lang/String;
+    .line 73
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
-    invoke-static {v0}, Lcom/tencent/mm/model/w;->dP(Ljava/lang/String;)Z
+    move-result-object v0
+
+    const-string/jumbo v1, "settings_shake"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 75
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 76
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "settings_shake"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 77
+    sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveIsShake: %B"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 78
+    return-void
+.end method
+
+.method public static aF(Z)V
+    .locals 5
+
+    .prologue
+    .line 91
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 92
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "settings_active_time_full"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 94
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 95
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "settings_active_time_full"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 96
+    sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
+
+    const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveIsActiveTime: %B"
+
+    const/4 v2, 0x1
+
+    new-array v2, v2, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 97
+    return-void
+.end method
+
+.method public static b(Lcom/tencent/mm/storage/ag;)I
+    .locals 7
+
+    .prologue
+    const/4 v1, 0x0
+
+    .line 246
+    iget-object v0, p0, Lcom/tencent/mm/d/b/bg;->field_talker:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/model/i;->ea(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    move v1, v2
+    move v2, v1
 
-    .line 245
+    .line 248
     :goto_0
-    invoke-static {v3}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    if-eqz p0, :cond_2
+
+    iget-wide v3, p0, Lcom/tencent/mm/d/b/bg;->field_bizChatId:J
+
+    const-wide/16 v5, -0x1
+
+    cmp-long v0, v3, v5
+
+    if-eqz v0, :cond_2
+
+    iget-object v0, p0, Lcom/tencent/mm/d/b/bg;->field_talker:Ljava/lang/String;
+
+    invoke-static {v0}, Lcom/tencent/mm/t/n;->gW(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_2
 
-    .line 262
-    :cond_0
-    :goto_1
-    return v1
-
-    .line 244
-    :cond_1
-    const/4 v0, 0x3
-
-    move v1, v0
-
-    goto :goto_0
-
-    .line 248
-    :cond_2
-    const-string/jumbo v0, "msgsource"
-
-    const/4 v4, 0x0
-
-    invoke-static {v3, v0, v4}, Lcom/tencent/mm/sdk/platformtools/p;->z(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+    .line 249
+    invoke-static {}, Lcom/tencent/mm/t/aj;->xH()Lcom/tencent/mm/t/e;
 
     move-result-object v0
 
-    .line 249
-    if-eqz v0, :cond_0
+    iget-wide v3, p0, Lcom/tencent/mm/d/b/bg;->field_bizChatId:J
+
+    invoke-virtual {v0, v3, v4}, Lcom/tencent/mm/t/e;->Q(J)Lcom/tencent/mm/t/d;
+
+    move-result-object v0
+
+    .line 250
+    invoke-virtual {v0}, Lcom/tencent/mm/t/d;->wt()Z
+
+    move-result v3
+
+    if-nez v3, :cond_2
+
+    const/4 v3, 0x1
+
+    invoke-virtual {v0, v3}, Lcom/tencent/mm/t/d;->cU(I)Z
+
+    move-result v0
+
+    if-eqz v0, :cond_2
+
+    move v0, v2
+
+    .line 275
+    :cond_0
+    :goto_1
+    return v0
+
+    .line 246
+    :cond_1
+    const/4 v2, 0x3
+
+    goto :goto_0
+
+    .line 255
+    :cond_2
+    iget-object v0, p0, Lcom/tencent/mm/d/b/bg;->bcG:Ljava/lang/String;
+
+    .line 256
+    invoke-static {v0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
+
+    move-result v3
+
+    if-eqz v3, :cond_3
+
+    move v0, v2
+
+    .line 257
+    goto :goto_1
+
+    .line 260
+    :cond_3
+    const-string/jumbo v3, "msgsource"
+
+    const/4 v4, 0x0
+
+    invoke-static {v0, v3, v4}, Lcom/tencent/mm/sdk/platformtools/q;->J(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/util/Map;
+
+    move-result-object v0
+
+    .line 261
+    if-eqz v0, :cond_4
 
     invoke-interface {v0}, Ljava/util/Map;->isEmpty()Z
 
     move-result v3
 
-    if-nez v3, :cond_0
+    if-eqz v3, :cond_5
 
-    .line 253
+    :cond_4
+    move v0, v2
+
+    .line 262
+    goto :goto_1
+
+    .line 266
+    :cond_5
     :try_start_0
     const-string/jumbo v3, ".msgsource.tips"
 
@@ -463,62 +715,58 @@
 
     move-result v0
 
-    .line 259
-    and-int/lit8 v1, v0, 0x1
+    .line 272
+    and-int/lit8 v2, v0, 0x1
 
-    if-nez v1, :cond_3
+    if-nez v2, :cond_0
 
-    and-int/lit8 v1, v0, 0x2
+    and-int/lit8 v2, v0, 0x2
 
-    if-eqz v1, :cond_3
+    if-eqz v2, :cond_0
 
-    :goto_2
-    move v1, v2
+    move v0, v1
 
-    .line 262
+    .line 273
     goto :goto_1
 
-    .line 255
+    .line 268
     :catch_0
     move-exception v0
 
+    move v0, v2
+
     goto :goto_1
-
-    :cond_3
-    move v2, v0
-
-    goto :goto_2
 .end method
 
-.method public static bY(I)V
+.method public static bZ(I)V
     .locals 5
 
     .prologue
-    .line 121
-    sget v0, Lcom/tencent/mm/g/g;->bkp:I
+    .line 124
+    sget v0, Lcom/tencent/mm/g/g;->buP:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    sget v0, Lcom/tencent/mm/g/g;->bkp:I
+    sget v0, Lcom/tencent/mm/g/g;->buP:I
 
     if-ne v0, p0, :cond_0
 
-    .line 128
+    .line 131
     :goto_0
     return-void
 
-    .line 124
+    .line 127
     :cond_0
-    sput p0, Lcom/tencent/mm/g/g;->bkp:I
+    sput p0, Lcom/tencent/mm/g/g;->buP:I
 
-    .line 125
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
+    .line 128
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 126
+    .line 129
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -531,7 +779,7 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 127
+    .line 130
     sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "[NOTIFICATION SETTINGS]save UserStatus: %d"
@@ -548,21 +796,47 @@
 
     aput-object v4, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     goto :goto_0
 .end method
 
-.method public static bZ(I)V
-    .locals 2
+.method public static c(Lcom/tencent/mm/storage/ag;)Z
+    .locals 1
 
     .prologue
-    .line 156
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
+    .line 389
+    if-nez p0, :cond_0
+
+    .line 390
+    const/4 v0, 0x0
+
+    .line 393
+    :goto_0
+    return v0
+
+    :cond_0
+    invoke-static {}, Lcom/tencent/mm/model/h;->sc()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 157
+    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/ag;->EP(Ljava/lang/String;)Z
+
+    move-result v0
+
+    goto :goto_0
+.end method
+
+.method public static ca(I)V
+    .locals 2
+
+    .prologue
+    .line 159
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 160
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
@@ -575,41 +849,15 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 158
+    .line 161
     return-void
 .end method
 
-.method public static c(Lcom/tencent/mm/storage/ar;)Z
+.method public static cb(I)Z
     .locals 1
 
     .prologue
-    .line 376
-    if-nez p0, :cond_0
-
-    .line 377
-    const/4 v0, 0x0
-
-    .line 380
-    :goto_0
-    return v0
-
-    :cond_0
-    invoke-static {}, Lcom/tencent/mm/model/v;->rS()Ljava/lang/String;
-
-    move-result-object v0
-
-    invoke-virtual {p0, v0}, Lcom/tencent/mm/storage/ar;->zu(Ljava/lang/String;)Z
-
-    move-result v0
-
-    goto :goto_0
-.end method
-
-.method public static ca(I)Z
-    .locals 1
-
-    .prologue
-    .line 217
+    .line 220
     const/16 v0, 0x32
 
     if-eq p0, v0, :cond_0
@@ -630,30 +878,12 @@
     goto :goto_0
 .end method
 
-.method public static dc(Ljava/lang/String;)V
+.method public static di(Ljava/lang/String;)V
     .locals 4
 
     .prologue
-    .line 78
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEU()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 79
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings.ringtone"
-
-    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
     .line 81
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -670,7 +900,25 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 83
+    .line 84
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 85
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    const-string/jumbo v1, "settings.ringtone"
+
+    invoke-interface {v0, v1, p0}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v0
+
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 86
     sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveSoundTone: %s"
@@ -683,48 +931,48 @@
 
     aput-object p0, v2, v3
 
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 85
+    .line 88
     return-void
 .end method
 
-.method public static dd(Ljava/lang/String;)Z
+.method public static dj(Ljava/lang/String;)Z
     .locals 3
 
     .prologue
     const/4 v0, 0x1
 
-    .line 222
-    new-instance v1, Lcom/tencent/mm/d/a/jq;
-
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/jq;-><init>()V
-
-    .line 223
-    iget-object v2, v1, Lcom/tencent/mm/d/a/jq;->aGJ:Lcom/tencent/mm/d/a/jq$a;
-
-    iput v0, v2, Lcom/tencent/mm/d/a/jq$a;->axE:I
-
-    .line 224
-    iget-object v2, v1, Lcom/tencent/mm/d/a/jq;->aGJ:Lcom/tencent/mm/d/a/jq$a;
-
-    iput-object p0, v2, Lcom/tencent/mm/d/a/jq$a;->content:Ljava/lang/String;
-
     .line 225
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    new-instance v1, Lcom/tencent/mm/d/a/nv;
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->g(Lcom/tencent/mm/sdk/c/d;)Z
+    invoke-direct {v1}, Lcom/tencent/mm/d/a/nv;-><init>()V
 
     .line 226
-    iget-object v1, v1, Lcom/tencent/mm/d/a/jq;->aGK:Lcom/tencent/mm/d/a/jq$b;
+    iget-object v2, v1, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
 
-    iget v1, v1, Lcom/tencent/mm/d/a/jq$b;->type:I
+    iput v0, v2, Lcom/tencent/mm/d/a/nv$a;->axL:I
+
+    .line 227
+    iget-object v2, v1, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+
+    iput-object p0, v2, Lcom/tencent/mm/d/a/nv$a;->content:Ljava/lang/String;
+
+    .line 228
+    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 229
+    iget-object v1, v1, Lcom/tencent/mm/d/a/nv;->aKf:Lcom/tencent/mm/d/a/nv$b;
+
+    iget v1, v1, Lcom/tencent/mm/d/a/nv$b;->type:I
 
     const/4 v2, 0x2
 
     if-eq v1, v2, :cond_0
 
-    sget-object v1, Lcom/tencent/mm/storage/ar;->ifZ:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/storage/ag;->kfG:Ljava/lang/String;
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -742,42 +990,42 @@
     goto :goto_0
 .end method
 
-.method public static de(Ljava/lang/String;)Z
+.method public static dk(Ljava/lang/String;)Z
     .locals 3
 
     .prologue
     const/4 v0, 0x1
 
-    .line 231
-    new-instance v1, Lcom/tencent/mm/d/a/jq;
-
-    invoke-direct {v1}, Lcom/tencent/mm/d/a/jq;-><init>()V
-
-    .line 232
-    iget-object v2, v1, Lcom/tencent/mm/d/a/jq;->aGJ:Lcom/tencent/mm/d/a/jq$a;
-
-    iput v0, v2, Lcom/tencent/mm/d/a/jq$a;->axE:I
-
-    .line 233
-    iget-object v2, v1, Lcom/tencent/mm/d/a/jq;->aGJ:Lcom/tencent/mm/d/a/jq$a;
-
-    iput-object p0, v2, Lcom/tencent/mm/d/a/jq$a;->content:Ljava/lang/String;
-
     .line 234
-    sget-object v2, Lcom/tencent/mm/sdk/c/a;->hXQ:Lcom/tencent/mm/sdk/c/a;
+    new-instance v1, Lcom/tencent/mm/d/a/nv;
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->g(Lcom/tencent/mm/sdk/c/d;)Z
+    invoke-direct {v1}, Lcom/tencent/mm/d/a/nv;-><init>()V
 
     .line 235
-    iget-object v1, v1, Lcom/tencent/mm/d/a/jq;->aGK:Lcom/tencent/mm/d/a/jq$b;
+    iget-object v2, v1, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
 
-    iget v1, v1, Lcom/tencent/mm/d/a/jq$b;->type:I
+    iput v0, v2, Lcom/tencent/mm/d/a/nv$a;->axL:I
+
+    .line 236
+    iget-object v2, v1, Lcom/tencent/mm/d/a/nv;->aKe:Lcom/tencent/mm/d/a/nv$a;
+
+    iput-object p0, v2, Lcom/tencent/mm/d/a/nv$a;->content:Ljava/lang/String;
+
+    .line 237
+    sget-object v2, Lcom/tencent/mm/sdk/c/a;->jUF:Lcom/tencent/mm/sdk/c/a;
+
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/sdk/c/a;->j(Lcom/tencent/mm/sdk/c/b;)Z
+
+    .line 238
+    iget-object v1, v1, Lcom/tencent/mm/d/a/nv;->aKf:Lcom/tencent/mm/d/a/nv$b;
+
+    iget v1, v1, Lcom/tencent/mm/d/a/nv$b;->type:I
 
     const/4 v2, 0x3
 
     if-eq v1, v2, :cond_0
 
-    sget-object v1, Lcom/tencent/mm/storage/ar;->ifY:Ljava/lang/String;
+    sget-object v1, Lcom/tencent/mm/storage/ag;->kfF:Ljava/lang/String;
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -795,137 +1043,37 @@
     goto :goto_0
 .end method
 
-.method public static df(Ljava/lang/String;)I
-    .locals 6
-
-    .prologue
-    const/4 v5, 0x0
-
-    const/4 v0, 0x0
-
-    .line 325
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
-
-    move-result v1
-
-    if-nez v1, :cond_1
-
-    const-string/jumbo v1, "!44@/B4Tb64lLpJN/RyYD3u7HBEKGpQXNnnJUPdv5kg2FEI="
-
-    const-string/jumbo v2, "get total unread, but has not set uin"
-
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    :cond_0
-    :goto_0
-    return v0
-
-    :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
-
-    move-result-object v1
-
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rl()Lcom/tencent/mm/storage/t;
-
-    move-result-object v1
-
-    new-instance v2, Ljava/lang/StringBuilder;
-
-    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v3, "select unReadCount"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    const-string/jumbo v3, " from rconversation where username"
-
-    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string/jumbo v4, " = \'"
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-virtual {v3, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string/jumbo v4, "\' AND ( parentRef is "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    sget-object v4, Lcom/tencent/mm/i/a;->bkH:Ljava/lang/String;
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    const-string/jumbo v4, " or parentRef = \'\' ) "
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v3
-
-    invoke-static {v5}, Lcom/tencent/mm/sdk/platformtools/bn;->iV(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v2
-
-    iget-object v1, v1, Lcom/tencent/mm/storage/t;->aqT:Lcom/tencent/mm/sdk/g/af;
-
-    invoke-interface {v1, v2, v5}, Lcom/tencent/mm/sdk/g/af;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
-
-    move-result-object v1
-
-    if-eqz v1, :cond_2
-
-    invoke-interface {v1}, Landroid/database/Cursor;->getCount()I
-
-    move-result v2
-
-    if-lez v2, :cond_2
-
-    invoke-interface {v1}, Landroid/database/Cursor;->moveToFirst()Z
-
-    invoke-interface {v1, v0}, Landroid/database/Cursor;->getInt(I)I
-
-    move-result v0
-
-    :cond_2
-    if-eqz v1, :cond_0
-
-    invoke-interface {v1}, Landroid/database/Cursor;->close()V
-
-    goto :goto_0
-.end method
-
-.method public static dg(Ljava/lang/String;)Z
+.method public static dl(Ljava/lang/String;)I
     .locals 1
 
     .prologue
-    .line 330
-    invoke-static {p0}, Lcom/tencent/mm/storage/k;->yx(Ljava/lang/String;)Z
+    .line 338
+    const/4 v0, 0x0
+
+    invoke-static {p0, v0}, Lcom/tencent/mm/model/j;->E(Ljava/lang/String;Ljava/lang/String;)I
 
     move-result v0
 
     return v0
 .end method
 
-.method public static dh(Ljava/lang/String;)Z
+.method public static dm(Ljava/lang/String;)Z
+    .locals 1
+
+    .prologue
+    .line 343
+    invoke-static {p0}, Lcom/tencent/mm/storage/k;->Ec(Ljava/lang/String;)Z
+
+    move-result v0
+
+    return v0
+.end method
+
+.method public static dn(Ljava/lang/String;)Z
     .locals 2
 
     .prologue
-    .line 334
+    .line 347
     invoke-virtual {p0}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object v0
@@ -939,24 +1087,24 @@
     return v0
 .end method
 
-.method public static di(Ljava/lang/String;)Z
+.method public static do(Ljava/lang/String;)Z
     .locals 1
 
     .prologue
-    .line 366
-    invoke-static {p0}, Lcom/tencent/mm/model/w;->eB(Ljava/lang/String;)Z
+    .line 379
+    invoke-static {p0}, Lcom/tencent/mm/model/i;->eN(Ljava/lang/String;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    invoke-static {p0}, Lcom/tencent/mm/model/w;->dh(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/model/i;->dn(Ljava/lang/String;)Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    invoke-static {p0}, Lcom/tencent/mm/model/w;->eA(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/model/i;->eM(Ljava/lang/String;)Z
 
     move-result v0
 
@@ -974,18 +1122,18 @@
     goto :goto_0
 .end method
 
-.method public static dj(Ljava/lang/String;)I
+.method public static dp(Ljava/lang/String;)I
     .locals 6
 
     .prologue
     const/4 v0, 0x0
 
-    .line 371
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    .line 384
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lcom/tencent/mm/model/b;->rl()Lcom/tencent/mm/storage/t;
+    invoke-virtual {v1}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
 
     move-result-object v1
 
@@ -1001,7 +1149,7 @@
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/bn;->iW(Ljava/lang/String;)Z
+    invoke-static {p0}, Lcom/tencent/mm/sdk/platformtools/ay;->kz(Ljava/lang/String;)Z
 
     move-result v3
 
@@ -1036,13 +1184,13 @@
 
     aput-object v2, v5, v0
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v1, v1, Lcom/tencent/mm/storage/t;->aqT:Lcom/tencent/mm/sdk/g/af;
+    iget-object v1, v1, Lcom/tencent/mm/storage/s;->aoX:Lcom/tencent/mm/sdk/h/d;
 
     const/4 v3, 0x0
 
-    invoke-interface {v1, v2, v3}, Lcom/tencent/mm/sdk/g/af;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-interface {v1, v2, v3}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
@@ -1065,12 +1213,12 @@
     return v0
 .end method
 
-.method public static pQ()Z
+.method public static pI()Z
     .locals 3
 
     .prologue
-    .line 151
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
+    .line 154
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -1082,20 +1230,20 @@
 
     move-result v0
 
-    .line 152
-    invoke-static {v0}, Lcom/tencent/mm/model/b;->cu(I)Z
+    .line 155
+    invoke-static {v0}, Lcom/tencent/mm/model/c;->cv(I)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public static pR()Z
+.method public static pJ()Z
     .locals 3
 
     .prologue
-    .line 161
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
+    .line 164
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
@@ -1107,15 +1255,15 @@
 
     move-result v0
 
-    .line 162
-    invoke-static {v0}, Lcom/tencent/mm/model/v;->cv(I)Z
+    .line 165
+    invoke-static {v0}, Lcom/tencent/mm/model/h;->cw(I)Z
 
     move-result v0
 
     return v0
 .end method
 
-.method public static pS()V
+.method public static pK()V
     .locals 16
 
     .prologue
@@ -1125,13 +1273,13 @@
 
     const/4 v13, 0x1
 
-    .line 166
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEU()Landroid/content/SharedPreferences;
+    .line 169
+    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/y;->aUM()Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 167
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
+    .line 170
+    invoke-static {}, Lcom/tencent/mm/g/g;->pe()Landroid/content/SharedPreferences;
 
     move-result-object v1
 
@@ -1139,105 +1287,105 @@
 
     move-result-object v1
 
-    .line 169
+    .line 172
     const-string/jumbo v2, "settings_new_msg_notification"
 
     invoke-interface {v0, v2, v13}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
 
-    .line 171
+    .line 174
     const-string/jumbo v3, "settings_new_msg_notification"
 
     invoke-interface {v1, v3, v2}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 173
+    .line 176
     const-string/jumbo v3, "settings_show_detail"
 
     invoke-interface {v0, v3, v13}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v3
 
-    .line 174
+    .line 177
     const-string/jumbo v4, "settings_show_detail"
 
     invoke-interface {v1, v4, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 176
+    .line 179
     const-string/jumbo v4, "settings_sound"
 
     invoke-interface {v0, v4, v13}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v4
 
-    .line 177
+    .line 180
     const-string/jumbo v5, "settings_sound"
 
     invoke-interface {v1, v5, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 179
+    .line 182
     const-string/jumbo v5, "settings.ringtone"
 
-    sget-object v6, Lcom/tencent/mm/g/g;->bke:Ljava/lang/String;
+    sget-object v6, Lcom/tencent/mm/g/g;->buD:Ljava/lang/String;
 
     invoke-interface {v0, v5, v6}, Landroid/content/SharedPreferences;->getString(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 180
+    .line 183
     const-string/jumbo v6, "settings.ringtone"
 
     invoke-interface {v1, v6, v5}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 182
+    .line 185
     const-string/jumbo v6, "settings_shake"
 
     invoke-interface {v0, v6, v13}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v6
 
-    .line 183
+    .line 186
     const-string/jumbo v7, "settings_shake"
 
     invoke-interface {v1, v7, v6}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 185
+    .line 188
     const-string/jumbo v7, "settings_active_time_full"
 
     invoke-interface {v0, v7, v13}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v7
 
-    .line 186
+    .line 189
     const-string/jumbo v8, "settings_active_time_full"
 
     invoke-interface {v1, v8, v7}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 188
+    .line 191
     const-string/jumbo v8, "settings_active_begin_time_hour"
 
     invoke-interface {v0, v8, v15}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v8
 
-    .line 189
+    .line 192
     const-string/jumbo v9, "settings_active_begin_time_hour"
 
     invoke-interface {v1, v9, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 191
+    .line 194
     const-string/jumbo v9, "settings_active_begin_time_min"
 
     invoke-interface {v0, v9, v14}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v9
 
-    .line 192
+    .line 195
     const-string/jumbo v10, "settings_active_begin_time_min"
 
     invoke-interface {v1, v10, v9}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 194
+    .line 197
     const-string/jumbo v10, "settings_active_end_time_hour"
 
     const/16 v11, 0x17
@@ -1246,27 +1394,27 @@
 
     move-result v10
 
-    .line 195
+    .line 198
     const-string/jumbo v11, "settings_active_end_time_hour"
 
     invoke-interface {v1, v11, v10}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 197
+    .line 200
     const-string/jumbo v11, "settings_active_end_time_min"
 
     invoke-interface {v0, v11, v14}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 198
+    .line 201
     const-string/jumbo v11, "settings_active_end_time_min"
 
     invoke-interface {v1, v11, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 200
+    .line 203
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 203
+    .line 206
     sget-object v1, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
 
     const-string/jumbo v11, "notification config copyDefault, newMsgNotification: %B, showDetail: %B, isSound: %B, ringTone: %s, isShake: %B, isActiveTime: %B, begin: %d:%d, end: %d:Td"
@@ -1345,49 +1493,49 @@
 
     aput-object v0, v12, v2
 
-    invoke-static {v1, v11, v12}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v1, v11, v12}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    .line 204
+    .line 207
     return-void
 .end method
 
-.method public static pT()I
+.method public static pL()I
     .locals 2
 
     .prologue
-    .line 271
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    .line 284
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 272
+    .line 285
     sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "getUnReadTalkerCount, but mmcore not ready"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 273
-    const/4 v0, 0x0
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 286
+    const/4 v0, 0x0
+
+    .line 299
     :goto_0
     return v0
 
-    .line 275
+    .line 288
     :cond_0
-    sget-object v0, Lcom/tencent/mm/model/w;->boe:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/model/i;->bzW:Ljava/lang/String;
 
-    invoke-static {v0}, Lcom/tencent/mm/model/x;->eG(Ljava/lang/String;)I
+    invoke-static {v0}, Lcom/tencent/mm/model/j;->eS(Ljava/lang/String;)I
 
     move-result v0
 
     goto :goto_0
 .end method
 
-.method public static pU()Ljava/util/List;
+.method public static pM()Ljava/util/List;
     .locals 9
 
     .prologue
@@ -1397,10 +1545,10 @@
 
     const/4 v7, 0x0
 
-    .line 291
-    sget-object v1, Lcom/tencent/mm/model/w;->boe:Ljava/lang/String;
+    .line 304
+    sget-object v1, Lcom/tencent/mm/model/i;->bzW:Ljava/lang/String;
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v2
 
@@ -1410,18 +1558,18 @@
 
     const-string/jumbo v2, "get Total Unread Talker T, but has not set uin"
 
-    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v1, v2}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
     :cond_0
     :goto_0
     return-object v0
 
     :cond_1
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/b;->rl()Lcom/tencent/mm/storage/t;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
 
     move-result-object v2
 
@@ -1445,7 +1593,7 @@
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/bn;->iV(Ljava/lang/String;)Ljava/lang/String;
+    invoke-static {v1}, Lcom/tencent/mm/sdk/platformtools/ay;->ky(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
@@ -1467,7 +1615,7 @@
 
     move-result-object v4
 
-    sget-object v5, Lcom/tencent/mm/i/a;->bkH:Ljava/lang/String;
+    sget-object v5, Lcom/tencent/mm/i/a;->bvk:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1509,11 +1657,11 @@
 
     aput-object v3, v6, v7
 
-    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v4, v5, v6}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    iget-object v2, v2, Lcom/tencent/mm/storage/t;->aqT:Lcom/tencent/mm/sdk/g/af;
+    iget-object v2, v2, Lcom/tencent/mm/storage/s;->aoX:Lcom/tencent/mm/sdk/h/d;
 
-    invoke-interface {v2, v3, v0}, Lcom/tencent/mm/sdk/g/af;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-interface {v2, v3, v0}, Lcom/tencent/mm/sdk/h/d;->rawQuery(Ljava/lang/String;[Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v2
 
@@ -1540,7 +1688,7 @@
 
     aput-object v6, v5, v7
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
     invoke-interface {v2, v7}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
@@ -1559,15 +1707,15 @@
 
     if-eqz v0, :cond_0
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/b;->rl()Lcom/tencent/mm/storage/t;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rt()Lcom/tencent/mm/storage/s;
 
     move-result-object v2
 
-    invoke-virtual {v2, v1}, Lcom/tencent/mm/storage/t;->zf(Ljava/lang/String;)Landroid/database/Cursor;
+    invoke-virtual {v2, v1}, Lcom/tencent/mm/storage/s;->EJ(Ljava/lang/String;)Landroid/database/Cursor;
 
     move-result-object v1
 
@@ -1582,11 +1730,11 @@
 
     if-nez v2, :cond_5
 
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lcom/tencent/mm/model/b;->ri()Lcom/tencent/mm/storage/q;
+    invoke-virtual {v2}, Lcom/tencent/mm/model/c;->rq()Lcom/tencent/mm/storage/q;
 
     move-result-object v2
 
@@ -1594,13 +1742,13 @@
 
     move-result-object v3
 
-    invoke-virtual {v2, v3}, Lcom/tencent/mm/storage/q;->yM(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
+    invoke-virtual {v2, v3}, Lcom/tencent/mm/storage/q;->Ep(Ljava/lang/String;)Lcom/tencent/mm/storage/k;
 
     move-result-object v2
 
     if-eqz v2, :cond_4
 
-    iget v3, v2, Lcom/tencent/mm/d/b/k;->aMV:I
+    iget v3, v2, Lcom/tencent/mm/d/b/p;->aSC:I
 
     if-nez v3, :cond_4
 
@@ -1610,15 +1758,15 @@
 
     new-array v5, v8, [Ljava/lang/Object;
 
-    invoke-virtual {v2}, Lcom/tencent/mm/storage/k;->qC()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/tencent/mm/storage/k;->qy()Ljava/lang/String;
 
     move-result-object v6
 
     aput-object v6, v5, v7
 
-    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/t;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+    invoke-static {v3, v4, v5}, Lcom/tencent/mm/sdk/platformtools/u;->d(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
 
-    invoke-virtual {v2}, Lcom/tencent/mm/storage/k;->qC()Ljava/lang/String;
+    invoke-virtual {v2}, Lcom/tencent/mm/storage/k;->qy()Ljava/lang/String;
 
     move-result-object v2
 
@@ -1635,66 +1783,66 @@
     goto/16 :goto_0
 .end method
 
-.method public static pV()I
+.method public static pN()I
     .locals 2
 
     .prologue
-    .line 300
-    invoke-static {}, Lcom/tencent/mm/model/ax;->qZ()Z
+    .line 313
+    invoke-static {}, Lcom/tencent/mm/model/ah;->rh()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 301
+    .line 314
     sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
 
     const-string/jumbo v1, "getUnReadMsgCoun, but mmcore not ready"
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->w(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->w(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 302
+    .line 315
     const/4 v0, 0x0
 
-    .line 320
+    .line 333
     :goto_0
     return v0
 
-    .line 305
+    .line 318
     :cond_0
-    sget-object v0, Lcom/tencent/mm/model/w;->boe:Ljava/lang/String;
+    sget-object v0, Lcom/tencent/mm/model/i;->bzW:Ljava/lang/String;
 
     const/4 v1, 0x0
 
-    invoke-static {v0, v1}, Lcom/tencent/mm/model/x;->a(Ljava/lang/String;Ljava/util/List;)I
+    invoke-static {v0, v1}, Lcom/tencent/mm/model/j;->a(Ljava/lang/String;Ljava/util/List;)I
 
     move-result v0
 
     goto :goto_0
 .end method
 
-.method public static pW()I
+.method public static pO()I
     .locals 1
 
     .prologue
-    .line 358
-    invoke-static {}, Lcom/tencent/mm/model/x;->sF()I
+    .line 371
+    invoke-static {}, Lcom/tencent/mm/model/j;->sV()I
 
     move-result v0
 
     return v0
 .end method
 
-.method public static pX()Z
+.method public static pP()Z
     .locals 3
 
     .prologue
-    .line 395
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    .line 408
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1719,16 +1867,16 @@
     return v0
 .end method
 
-.method public static pY()Z
+.method public static pQ()Z
     .locals 3
 
     .prologue
-    .line 400
-    invoke-static {}, Lcom/tencent/mm/model/ax;->tl()Lcom/tencent/mm/model/b;
+    .line 413
+    invoke-static {}, Lcom/tencent/mm/model/ah;->tD()Lcom/tencent/mm/model/c;
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lcom/tencent/mm/model/b;->rf()Lcom/tencent/mm/storage/h;
+    invoke-virtual {v0}, Lcom/tencent/mm/model/c;->rn()Lcom/tencent/mm/storage/h;
 
     move-result-object v0
 
@@ -1751,198 +1899,4 @@
     move-result v0
 
     return v0
-.end method
-
-.method public static v(II)V
-    .locals 5
-
-    .prologue
-    .line 97
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEU()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 98
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "settings_active_begin_time_hour"
-
-    invoke-interface {v1, v2, p0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 99
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_active_begin_time_min"
-
-    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 102
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 103
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "settings_active_begin_time_hour"
-
-    invoke-interface {v1, v2, p0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 104
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_active_begin_time_min"
-
-    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 105
-    sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveActiveBegine: %d:%d"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 106
-    return-void
-.end method
-
-.method public static w(II)V
-    .locals 5
-
-    .prologue
-    .line 109
-    invoke-static {}, Lcom/tencent/mm/sdk/platformtools/aa;->aEU()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 110
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "settings_active_end_time_hour"
-
-    invoke-interface {v1, v2, p0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 111
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_active_end_time_min"
-
-    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 113
-    invoke-static {}, Lcom/tencent/mm/g/g;->po()Landroid/content/SharedPreferences;
-
-    move-result-object v0
-
-    .line 114
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    const-string/jumbo v2, "settings_active_end_time_hour"
-
-    invoke-interface {v1, v2, p0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v1
-
-    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 115
-    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    const-string/jumbo v1, "settings_active_end_time_min"
-
-    invoke-interface {v0, v1, p1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v0
-
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 116
-    sget-object v0, Lcom/tencent/mm/g/g;->TAG:Ljava/lang/String;
-
-    const-string/jumbo v1, "[NOTIFICATION SETTINGS]double write : saveActiveEnd: %d:%d"
-
-    const/4 v2, 0x2
-
-    new-array v2, v2, [Ljava/lang/Object;
-
-    const/4 v3, 0x0
-
-    invoke-static {p0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    const/4 v3, 0x1
-
-    invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
-
-    move-result-object v4
-
-    aput-object v4, v2, v3
-
-    invoke-static {v0, v1, v2}, Lcom/tencent/mm/sdk/platformtools/t;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
-
-    .line 117
-    return-void
 .end method

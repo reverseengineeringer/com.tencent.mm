@@ -11,28 +11,28 @@ import android.widget.WrapperListAdapter;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-final class HeaderGridView$c
+public final class HeaderGridView$c
   implements Filterable, WrapperListAdapter
 {
-  int cOq = 1;
-  ArrayList iCW;
-  final DataSetObservable iCZ = new DataSetObservable();
-  boolean iDa;
-  private final boolean iDb;
-  private final ListAdapter qI;
+  int dgj = 1;
+  ArrayList kBZ;
+  public final DataSetObservable kCc = new DataSetObservable();
+  boolean kCd;
+  private final boolean kCe;
+  private final ListAdapter pL;
   
   public HeaderGridView$c(ArrayList paramArrayList, ListAdapter paramListAdapter)
   {
-    qI = paramListAdapter;
-    iDb = (paramListAdapter instanceof Filterable);
+    pL = paramListAdapter;
+    kCe = (paramListAdapter instanceof Filterable);
     if (paramArrayList == null) {
       throw new IllegalArgumentException("headerViewInfos cannot be null");
     }
-    iCW = paramArrayList;
-    iDa = L(iCW);
+    kBZ = paramArrayList;
+    kCd = O(kBZ);
   }
   
-  private static boolean L(ArrayList paramArrayList)
+  private static boolean O(ArrayList paramArrayList)
   {
     if (paramArrayList != null)
     {
@@ -48,21 +48,21 @@ final class HeaderGridView$c
   
   public final boolean areAllItemsEnabled()
   {
-    return (qI == null) || ((iDa) && (qI.areAllItemsEnabled()));
+    return (pL == null) || ((kCd) && (pL.areAllItemsEnabled()));
   }
   
   public final int getCount()
   {
-    if (qI != null) {
-      return iCW.size() * cOq + qI.getCount();
+    if (pL != null) {
+      return kBZ.size() * dgj + pL.getCount();
     }
-    return iCW.size() * cOq;
+    return kBZ.size() * dgj;
   }
   
   public final Filter getFilter()
   {
-    if (iDb) {
-      return ((Filterable)qI).getFilter();
+    if (kCe) {
+      return ((Filterable)pL).getFilter();
     }
     return null;
   }
@@ -70,13 +70,13 @@ final class HeaderGridView$c
   public final Object getItem(int paramInt)
   {
     Object localObject2 = null;
-    int i = iCW.size() * cOq;
+    int i = kBZ.size() * dgj;
     Object localObject1;
     if (paramInt < i)
     {
       localObject1 = localObject2;
-      if (paramInt % cOq == 0) {
-        localObject1 = iCW.get(paramInt / cOq)).data;
+      if (paramInt % dgj == 0) {
+        localObject1 = kBZ.get(paramInt / dgj)).data;
       }
     }
     do
@@ -86,20 +86,20 @@ final class HeaderGridView$c
         return localObject1;
         paramInt -= i;
         localObject1 = localObject2;
-      } while (qI == null);
+      } while (pL == null);
       localObject1 = localObject2;
-    } while (paramInt >= qI.getCount());
-    return qI.getItem(paramInt);
+    } while (paramInt >= pL.getCount());
+    return pL.getItem(paramInt);
   }
   
   public final long getItemId(int paramInt)
   {
-    int i = iCW.size() * cOq;
-    if ((qI != null) && (paramInt >= i))
+    int i = kBZ.size() * dgj;
+    if ((pL != null) && (paramInt >= i))
     {
       paramInt -= i;
-      if (paramInt < qI.getCount()) {
-        return qI.getItemId(paramInt);
+      if (paramInt < pL.getCount()) {
+        return pL.getItemId(paramInt);
       }
     }
     return -1L;
@@ -107,19 +107,19 @@ final class HeaderGridView$c
   
   public final int getItemViewType(int paramInt)
   {
-    int i = iCW.size() * cOq;
-    if ((paramInt < i) && (paramInt % cOq != 0))
+    int i = kBZ.size() * dgj;
+    if ((paramInt < i) && (paramInt % dgj != 0))
     {
-      if (qI != null) {
-        return qI.getViewTypeCount();
+      if (pL != null) {
+        return pL.getViewTypeCount();
       }
       return 1;
     }
-    if ((qI != null) && (paramInt >= i))
+    if ((pL != null) && (paramInt >= i))
     {
       paramInt -= i;
-      if (paramInt < qI.getCount()) {
-        return qI.getItemViewType(paramInt);
+      if (paramInt < pL.getCount()) {
+        return pL.getItemViewType(paramInt);
       }
     }
     return -2;
@@ -127,11 +127,11 @@ final class HeaderGridView$c
   
   public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    int i = iCW.size() * cOq;
+    int i = kBZ.size() * dgj;
     if (paramInt < i)
     {
-      ViewGroup localViewGroup = iCW.get(paramInt / cOq)).iCX;
-      if (paramInt % cOq == 0) {
+      ViewGroup localViewGroup = kBZ.get(paramInt / dgj)).kCa;
+      if (paramInt % dgj == 0) {
         return localViewGroup;
       }
       localView = paramView;
@@ -143,8 +143,8 @@ final class HeaderGridView$c
       return localView;
     }
     paramInt -= i;
-    if ((qI != null) && (paramInt < qI.getCount())) {
-      return qI.getView(paramInt, paramView, paramViewGroup);
+    if ((pL != null) && (paramInt < pL.getCount())) {
+      return pL.getView(paramInt, paramView, paramViewGroup);
     }
     View localView = paramView;
     if (paramView == null) {
@@ -156,56 +156,56 @@ final class HeaderGridView$c
   
   public final int getViewTypeCount()
   {
-    if (qI != null) {
-      return qI.getViewTypeCount() + 1;
+    if (pL != null) {
+      return pL.getViewTypeCount() + 1;
     }
     return 2;
   }
   
   public final ListAdapter getWrappedAdapter()
   {
-    return qI;
+    return pL;
   }
   
   public final boolean hasStableIds()
   {
-    if (qI != null) {
-      return qI.hasStableIds();
+    if (pL != null) {
+      return pL.hasStableIds();
     }
     return false;
   }
   
   public final boolean isEmpty()
   {
-    return ((qI == null) || (qI.isEmpty())) && (iCW.size() == 0);
+    return ((pL == null) || (pL.isEmpty())) && (kBZ.size() == 0);
   }
   
   public final boolean isEnabled(int paramInt)
   {
-    int i = iCW.size() * cOq;
+    int i = kBZ.size() * dgj;
     if (paramInt < i) {
-      return (paramInt % cOq == 0) && (iCW.get(paramInt / cOq)).isSelectable);
+      return (paramInt % dgj == 0) && (kBZ.get(paramInt / dgj)).isSelectable);
     }
     paramInt -= i;
-    if ((qI != null) && (paramInt < qI.getCount())) {
-      return qI.isEnabled(paramInt);
+    if ((pL != null) && (paramInt < pL.getCount())) {
+      return pL.isEnabled(paramInt);
     }
     return false;
   }
   
   public final void registerDataSetObserver(DataSetObserver paramDataSetObserver)
   {
-    iCZ.registerObserver(paramDataSetObserver);
-    if (qI != null) {
-      qI.registerDataSetObserver(paramDataSetObserver);
+    kCc.registerObserver(paramDataSetObserver);
+    if (pL != null) {
+      pL.registerDataSetObserver(paramDataSetObserver);
     }
   }
   
   public final void unregisterDataSetObserver(DataSetObserver paramDataSetObserver)
   {
-    iCZ.unregisterObserver(paramDataSetObserver);
-    if (qI != null) {
-      qI.unregisterDataSetObserver(paramDataSetObserver);
+    kCc.unregisterObserver(paramDataSetObserver);
+    if (pL != null) {
+      pL.unregisterDataSetObserver(paramDataSetObserver);
     }
   }
 }

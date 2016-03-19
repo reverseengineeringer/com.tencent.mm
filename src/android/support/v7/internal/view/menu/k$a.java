@@ -1,45 +1,95 @@
 package android.support.v7.internal.view.menu;
 
-import android.support.v4.view.h;
-import android.view.ActionProvider;
-import android.view.SubMenu;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import java.util.ArrayList;
 
-class k$a
-  extends ActionProvider
+final class k$a
+  extends BaseAdapter
 {
-  final h nu;
+  private int lI = -1;
+  private f mN;
   
-  public k$a(k paramk, h paramh)
+  public k$a(k paramk, f paramf)
   {
-    super(mContext);
-    nu = paramh;
-    if (k.a(paramk)) {
-      nu.a(new l(this, paramk));
+    mN = paramf;
+    bo();
+  }
+  
+  private void bo()
+  {
+    h localh = cmO).mf;
+    if (localh != null)
+    {
+      ArrayList localArrayList = k.c(mO).bw();
+      int j = localArrayList.size();
+      int i = 0;
+      while (i < j)
+      {
+        if ((h)localArrayList.get(i) == localh)
+        {
+          lI = i;
+          return;
+        }
+        i += 1;
+      }
+    }
+    lI = -1;
+  }
+  
+  public final h B(int paramInt)
+  {
+    if (k.a(mO)) {}
+    for (ArrayList localArrayList = mN.bw();; localArrayList = mN.bu())
+    {
+      int i = paramInt;
+      if (lI >= 0)
+      {
+        i = paramInt;
+        if (paramInt >= lI) {
+          i = paramInt + 1;
+        }
+      }
+      return (h)localArrayList.get(i);
     }
   }
   
-  public boolean hasSubMenu()
+  public final int getCount()
   {
-    return false;
-  }
-  
-  public View onCreateActionView()
-  {
-    if (k.a(nv)) {
-      nv.bW();
+    if (k.a(mO)) {}
+    for (ArrayList localArrayList = mN.bw(); lI < 0; localArrayList = mN.bu()) {
+      return localArrayList.size();
     }
-    return nu.onCreateActionView();
+    return localArrayList.size() - 1;
   }
   
-  public boolean onPerformDefaultAction()
+  public final long getItemId(int paramInt)
   {
-    return false;
+    return paramInt;
   }
   
-  public void onPrepareSubMenu(SubMenu paramSubMenu)
+  public final View getView(int paramInt, View paramView, ViewGroup paramViewGroup)
   {
-    nv.a(paramSubMenu);
+    if (paramView == null) {
+      paramView = k.b(mO).inflate(2131363314, paramViewGroup, false);
+    }
+    for (;;)
+    {
+      paramViewGroup = (m.a)paramView;
+      if (mO.lD) {
+        ((ListMenuItemView)paramView).setForceShowIcon(true);
+      }
+      paramViewGroup.a(B(paramInt));
+      return paramView;
+    }
+  }
+  
+  public final void notifyDataSetChanged()
+  {
+    bo();
+    super.notifyDataSetChanged();
   }
 }
 

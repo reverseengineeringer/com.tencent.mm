@@ -7,29 +7,29 @@ import java.lang.reflect.Method;
 
 final class SearchView$a
 {
-  Method sU;
-  Method sV;
-  private Method sW;
-  Method sX;
+  Method rX;
+  Method rY;
+  private Method rZ;
+  Method sa;
   
   SearchView$a()
   {
     try
     {
-      sU = AutoCompleteTextView.class.getDeclaredMethod("doBeforeTextChanged", new Class[0]);
-      sU.setAccessible(true);
+      rX = AutoCompleteTextView.class.getDeclaredMethod("doBeforeTextChanged", new Class[0]);
+      rX.setAccessible(true);
       try
       {
-        sV = AutoCompleteTextView.class.getDeclaredMethod("doAfterTextChanged", new Class[0]);
-        sV.setAccessible(true);
+        rY = AutoCompleteTextView.class.getDeclaredMethod("doAfterTextChanged", new Class[0]);
+        rY.setAccessible(true);
         try
         {
-          sW = AutoCompleteTextView.class.getMethod("ensureImeVisible", new Class[] { Boolean.TYPE });
-          sW.setAccessible(true);
+          rZ = AutoCompleteTextView.class.getMethod("ensureImeVisible", new Class[] { Boolean.TYPE });
+          rZ.setAccessible(true);
           try
           {
-            sX = InputMethodManager.class.getMethod("showSoftInputUnchecked", new Class[] { Integer.TYPE, ResultReceiver.class });
-            sX.setAccessible(true);
+            sa = InputMethodManager.class.getMethod("showSoftInputUnchecked", new Class[] { Integer.TYPE, ResultReceiver.class });
+            sa.setAccessible(true);
             return;
           }
           catch (NoSuchMethodException localNoSuchMethodException1) {}
@@ -52,10 +52,10 @@ final class SearchView$a
   
   final void a(AutoCompleteTextView paramAutoCompleteTextView)
   {
-    if (sW != null) {}
+    if (rZ != null) {}
     try
     {
-      sW.invoke(paramAutoCompleteTextView, new Object[] { Boolean.valueOf(true) });
+      rZ.invoke(paramAutoCompleteTextView, new Object[] { Boolean.valueOf(true) });
       return;
     }
     catch (Exception paramAutoCompleteTextView) {}

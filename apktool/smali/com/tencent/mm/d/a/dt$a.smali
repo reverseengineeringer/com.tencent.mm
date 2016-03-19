@@ -15,19 +15,7 @@
 
 
 # instance fields
-.field public aub:Lcom/tencent/mm/storage/ar;
-
-.field public azQ:Landroid/widget/ImageView;
-
-.field public azR:Landroid/widget/ImageView;
-
-.field public azS:Landroid/widget/ProgressBar;
-
-.field public azT:I
-
-.field public h:I
-
-.field public w:I
+.field public anC:Ljava/lang/String;
 
 
 # direct methods

@@ -15,5 +15,5 @@
 
 
 # virtual methods
-.method public abstract it(I)V
+.method public abstract kk(I)V
 .end method

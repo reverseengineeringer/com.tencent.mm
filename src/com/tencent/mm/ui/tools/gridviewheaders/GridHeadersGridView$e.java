@@ -6,7 +6,7 @@ final class GridHeadersGridView$e
   extends GridHeadersGridView.f
   implements Runnable
 {
-  int gRA;
+  int drR;
   
   private GridHeadersGridView$e(GridHeadersGridView paramGridHeadersGridView)
   {
@@ -15,7 +15,7 @@ final class GridHeadersGridView$e
   
   public final void run()
   {
-    if (jwB.ql) {}
+    if (lzs.pp) {}
     View localView;
     GridHeadersGridView localGridHeadersGridView;
     do
@@ -25,17 +25,17 @@ final class GridHeadersGridView$e
         do
         {
           return;
-        } while ((jwB.jwy == null) || (jwB.jwy.getCount() <= 0) || (gRA == -1) || (gRA >= jwB.jwy.getCount()) || (!aAm()));
-        localView = jwB.oX(gRA);
+        } while ((lzs.lzp == null) || (lzs.lzp.getCount() <= 0) || (drR == -1) || (drR >= lzs.lzp.getCount()) || (!SD()));
+        localView = lzs.rX(drR);
       } while (localView == null);
-      localGridHeadersGridView = jwB;
-      GridHeadersGridView.a(jwB, gRA);
-    } while (jwt == null);
+      localGridHeadersGridView = lzs;
+      GridHeadersGridView.a(lzs, drR);
+    } while (lzk == null);
     localGridHeadersGridView.playSoundEffect(0);
     if (localView != null) {
       localView.sendAccessibilityEvent(1);
     }
-    jwt.L(localView);
+    lzk.L(localView);
   }
 }
 

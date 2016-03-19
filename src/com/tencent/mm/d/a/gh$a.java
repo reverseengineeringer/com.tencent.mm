@@ -1,8 +1,13 @@
 package com.tencent.mm.d.a;
 
+import com.tencent.mm.storage.ag;
+
 public final class gh$a
 {
-  public int atZ = 1;
+  public int aBl = 0;
+  public boolean aBs = false;
+  public String ajI;
+  public ag ask;
 }
 
 /* Location:

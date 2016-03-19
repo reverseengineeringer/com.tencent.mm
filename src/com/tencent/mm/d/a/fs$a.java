@@ -2,8 +2,8 @@ package com.tencent.mm.d.a;
 
 public final class fs$a
 {
-  public String aCG;
-  public long azW;
+  public String aAB;
+  public String aAC;
 }
 
 /* Location:

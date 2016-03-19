@@ -2,7 +2,9 @@ package com.tencent.mm.d.a;
 
 public final class gx$a
 {
-  public byte[] aEe;
+  public boolean aBY = false;
+  public String aCm;
+  public int aCp;
 }
 
 /* Location:

@@ -1,16 +1,16 @@
 package android.support.v4.a.a;
 
-import android.support.v4.view.h;
-import android.support.v4.view.k.e;
+import android.support.v4.view.d;
+import android.support.v4.view.g.e;
 import android.view.MenuItem;
 import android.view.View;
 
 public abstract interface b
   extends MenuItem
 {
-  public abstract b a(h paramh);
+  public abstract b a(d paramd);
   
-  public abstract b a(k.e parame);
+  public abstract b a(g.e parame);
   
   public abstract boolean collapseActionView();
   

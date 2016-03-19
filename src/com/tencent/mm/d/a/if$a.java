@@ -1,11 +1,13 @@
 package com.tencent.mm.d.a;
 
+import android.content.Context;
+
 public final class if$a
 {
-  public long aFt;
-  public String aFu;
-  public int axw;
-  public String funcName;
+  public int aDW;
+  public Context context;
+  public String extraInfo;
+  public int jumpType;
 }
 
 /* Location:

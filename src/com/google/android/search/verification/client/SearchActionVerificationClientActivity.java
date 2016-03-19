@@ -7,12 +7,12 @@ import android.os.Bundle;
 public abstract class SearchActionVerificationClientActivity
   extends Activity
 {
-  public abstract Class ko();
+  public abstract Class jy();
   
   protected final void onCreate(Bundle paramBundle)
   {
     super.onCreate(paramBundle);
-    paramBundle = new Intent(this, ko());
+    paramBundle = new Intent(this, jy());
     paramBundle.putExtra("SearchActionVerificationClientExtraIntent", getIntent());
     startService(paramBundle);
     finish();

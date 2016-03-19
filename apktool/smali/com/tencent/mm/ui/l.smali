@@ -1,74 +1,117 @@
-.class final Lcom/tencent/mm/ui/l;
-.super Lcom/tencent/mm/sdk/platformtools/ac;
+.class public abstract Lcom/tencent/mm/ui/l;
+.super Ljava/lang/Object;
 .source "SourceFile"
+
+# interfaces
+.implements Landroid/view/View$OnClickListener;
 
 
 # instance fields
-.field final synthetic imi:Lcom/tencent/mm/ui/DataTransferUI;
+.field private gEh:J
 
 
 # direct methods
-.method constructor <init>(Lcom/tencent/mm/ui/DataTransferUI;)V
-    .locals 0
+.method public constructor <init>()V
+    .locals 2
 
     .prologue
-    .line 32
-    iput-object p1, p0, Lcom/tencent/mm/ui/l;->imi:Lcom/tencent/mm/ui/DataTransferUI;
+    .line 21
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    invoke-direct {p0}, Lcom/tencent/mm/sdk/platformtools/ac;-><init>()V
+    .line 30
+    const-wide/16 v0, -0x1
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/l;->gEh:J
 
     return-void
 .end method
 
 
 # virtual methods
-.method public final handleMessage(Landroid/os/Message;)V
-    .locals 2
+.method public abstract ahu()V
+.end method
+
+.method public onClick(Landroid/view/View;)V
+    .locals 8
 
     .prologue
-    .line 36
-    iget-object v0, p0, Lcom/tencent/mm/ui/l;->imi:Lcom/tencent/mm/ui/DataTransferUI;
+    const-wide/16 v6, 0xbb8
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/DataTransferUI;->a(Lcom/tencent/mm/ui/DataTransferUI;)Lcom/tencent/mm/ui/base/bn;
+    .line 33
+    const-string/jumbo v0, "!44@/B4Tb64lLpJiPTFK0tOc/yuccXsWkaBUNjBHYFZnDVQ="
 
-    move-result-object v0
+    const-string/jumbo v1, "button onclick"
 
-    if-eqz v0, :cond_0
+    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;)V
 
-    iget-object v0, p0, Lcom/tencent/mm/ui/l;->imi:Lcom/tencent/mm/ui/DataTransferUI;
+    .line 35
+    iget-wide v0, p0, Lcom/tencent/mm/ui/l;->gEh:J
 
-    invoke-static {v0}, Lcom/tencent/mm/ui/DataTransferUI;->a(Lcom/tencent/mm/ui/DataTransferUI;)Lcom/tencent/mm/ui/base/bn;
+    const-wide/16 v2, -0x1
 
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/bn;->isShowing()Z
-
-    move-result v0
+    cmp-long v0, v0, v2
 
     if-eqz v0, :cond_0
-
-    .line 37
-    const-string/jumbo v0, "!32@/B4Tb64lLpJAUoyR9+C90Nd9wv/xRLUz"
-
-    const-string/jumbo v1, "dialog has shown for a long time, auto dismiss it..."
-
-    invoke-static {v0, v1}, Lcom/tencent/mm/sdk/platformtools/t;->e(Ljava/lang/String;Ljava/lang/String;)V
-
-    .line 38
-    iget-object v0, p0, Lcom/tencent/mm/ui/l;->imi:Lcom/tencent/mm/ui/DataTransferUI;
-
-    invoke-static {v0}, Lcom/tencent/mm/ui/DataTransferUI;->a(Lcom/tencent/mm/ui/DataTransferUI;)Lcom/tencent/mm/ui/base/bn;
-
-    move-result-object v0
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/base/bn;->dismiss()V
-
-    .line 39
-    iget-object v0, p0, Lcom/tencent/mm/ui/l;->imi:Lcom/tencent/mm/ui/DataTransferUI;
-
-    invoke-virtual {v0}, Lcom/tencent/mm/ui/DataTransferUI;->finish()V
 
     .line 41
-    :cond_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    iget-wide v2, p0, Lcom/tencent/mm/ui/l;->gEh:J
+
+    sub-long/2addr v0, v2
+
+    const-wide/32 v2, 0xf4240
+
+    div-long/2addr v0, v2
+
+    .line 42
+    cmp-long v2, v0, v6
+
+    if-gez v2, :cond_0
+
+    .line 43
+    const-string/jumbo v2, "!44@/B4Tb64lLpJiPTFK0tOc/yuccXsWkaBUNjBHYFZnDVQ="
+
+    const-string/jumbo v3, "click time limited limitetime:%d, delaytime:%d"
+
+    const/4 v4, 0x2
+
+    new-array v4, v4, [Ljava/lang/Object;
+
+    const/4 v5, 0x0
+
+    invoke-static {v0, v1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v0
+
+    aput-object v0, v4, v5
+
+    const/4 v0, 0x1
+
+    invoke-static {v6, v7}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
+
+    move-result-object v1
+
+    aput-object v1, v4, v0
+
+    invoke-static {v2, v3, v4}, Lcom/tencent/mm/sdk/platformtools/u;->i(Ljava/lang/String;Ljava/lang/String;[Ljava/lang/Object;)V
+
+    .line 59
+    :goto_0
     return-void
+
+    .line 47
+    :cond_0
+    invoke-static {}, Ljava/lang/System;->nanoTime()J
+
+    move-result-wide v0
+
+    iput-wide v0, p0, Lcom/tencent/mm/ui/l;->gEh:J
+
+    .line 48
+    invoke-virtual {p0}, Lcom/tencent/mm/ui/l;->ahu()V
+
+    goto :goto_0
 .end method

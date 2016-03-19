@@ -2,26 +2,26 @@ package com.tencent.mm.remoteservice;
 
 import android.os.Bundle;
 import android.os.Parcelable;
-import com.tencent.mm.sdk.platformtools.bn;
-import com.tencent.mm.sdk.platformtools.t;
+import com.tencent.mm.sdk.platformtools.ay;
+import com.tencent.mm.sdk.platformtools.u;
 import java.io.Serializable;
 import java.lang.reflect.Method;
 import java.util.LinkedList;
 import java.util.List;
 
 public class a
-  extends c.a
+  extends b.a
 {
-  private final f dOS;
-  protected RemoteService hVi;
-  public c hVj;
+  private final d eRe;
+  protected RemoteService jRR;
+  public b jRS;
   
-  public a(f paramf)
+  public a(d paramd)
   {
-    dOS = paramf;
+    eRe = paramd;
   }
   
-  private static Bundle h(Object... paramVarArgs)
+  private static Bundle l(Object... paramVarArgs)
   {
     Bundle localBundle = new Bundle();
     int j = paramVarArgs.length;
@@ -47,36 +47,43 @@ public class a
   
   public Object CLIENT_CALL(String paramString, Object... paramVarArgs)
   {
-    paramVarArgs = h(paramVarArgs);
+    paramVarArgs = l(paramVarArgs);
     try
     {
-      hVj.onCallback(paramString, paramVarArgs, true);
+      jRS.onCallback(paramString, paramVarArgs, true);
       return paramVarArgs.get("result_key");
     }
     catch (Exception paramString)
     {
       for (;;)
       {
-        t.e("!44@/B4Tb64lLpKH0xQPqIE+t1LJp5X4HQlGk5nmgkD8N7c=", "exception:%s", new Object[] { bn.a(paramString) });
+        u.e("!44@/B4Tb64lLpKH0xQPqIE+t1LJp5X4HQlGk5nmgkD8N7c=", "exception:%s", new Object[] { ay.b(paramString) });
       }
     }
   }
   
-  public Object REMOTE_CALL(String paramString, Object... paramVarArgs)
+  public Object REMOTE_CALL(final String paramString, final Object... paramVarArgs)
   {
-    if (dOS.isConnected())
+    if (eRe.isConnected())
     {
-      paramVarArgs = h(paramVarArgs);
-      dOS.a(this, paramString, paramVarArgs);
+      paramVarArgs = l(paramVarArgs);
+      eRe.a(this, paramString, paramVarArgs);
       return paramVarArgs.get("result_key");
     }
-    dOS.j(new b(this, paramVarArgs, paramString));
+    eRe.q(new Runnable()
+    {
+      public final void run()
+      {
+        Bundle localBundle = a.m(paramVarArgs);
+        a.a(a.this).a(a.this, paramString, localBundle);
+      }
+    });
     return null;
   }
   
   public void onCallback(String paramString, Bundle paramBundle, boolean paramBoolean)
   {
-    t.d("!44@/B4Tb64lLpKH0xQPqIE+t1LJp5X4HQlGk5nmgkD8N7c=", "class:%s, method:%s, clientCall:%B", new Object[] { getClass().getName(), paramString, Boolean.valueOf(paramBoolean) });
+    u.d("!44@/B4Tb64lLpKH0xQPqIE+t1LJp5X4HQlGk5nmgkD8N7c=", "class:%s, method:%s, clientCall:%B", new Object[] { getClass().getName(), paramString, Boolean.valueOf(paramBoolean) });
     String str = null;
     for (;;)
     {
@@ -99,7 +106,7 @@ public class a
       catch (Exception paramString)
       {
         int j;
-        t.e("!44@/B4Tb64lLpKH0xQPqIE+t1LJp5X4HQlGk5nmgkD8N7c=", "exception:%s", new Object[] { bn.a(paramString) });
+        u.e("!44@/B4Tb64lLpKH0xQPqIE+t1LJp5X4HQlGk5nmgkD8N7c=", "exception:%s", new Object[] { ay.b(paramString) });
         return;
       }
       if (((Method)localObject).isAnnotationPresent(paramString))
@@ -126,7 +133,7 @@ public class a
       if (localObject != null) {
         if (paramBoolean)
         {
-          paramString = h.class;
+          paramString = e.class;
           continue;
           label220:
           i += 1;
@@ -136,7 +143,7 @@ public class a
         }
         else
         {
-          paramString = i.class;
+          paramString = f.class;
         }
       }
     }

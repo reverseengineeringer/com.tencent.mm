@@ -78,7 +78,7 @@
 
     move-result-object v0
 
-    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->yf(Ljava/lang/String;)V
+    invoke-static {v0}, Loicq/wlogin_sdk/tools/util;->DG(Ljava/lang/String;)V
 
     .line 39
     const/4 v0, 0x0
